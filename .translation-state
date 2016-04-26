@@ -7958,9 +7958,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\README.8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "484ead26264626efff78aa1cc509cb45598d93cd": {
@@ -21557,9 +21557,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-activating-rights-management.3b346eedc4fa7e44d9e8e3ebdcf35998aed6a6d3.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "3034f10214efe573d807c948a01ec3eeed8ab231": {
@@ -21589,9 +21589,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-alice-gets-email-notification.7871f42760bab00713522823270ca725563e1392.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "45b4a27dd78e162ef6518c27f01b327bb5028a02": {
@@ -21621,9 +21621,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-alice-shares-protected-attachment.b016bef14721920c0011760e532459415e9f8cac.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "b1e4a4d4abbb0c8e8ceb7582b3fe517ec9221705": {
@@ -21653,9 +21653,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-an-external-email-protected-by-dlp-and-azure-rms.8d8272546063680d383c6228e155836b976039a9.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "29bce2188a2c58cb1ed3ee7c5268e5f6878e43ce": {
@@ -21685,9 +21685,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-an-unprotected-email-internal-.dcb8f90d9c996967f0392eec07340a2dc689dc04.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "e94e3c2e7da575391e1f41bfacd3cb30afa1249d": {
@@ -21717,9 +21717,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-a-sharepoint-protected-document.cbea6663d25ee237c21116f54997920abe9664bf.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "98f1e69294d629f5a7519e7969e43d2516515442": {
@@ -21749,9 +21749,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-available-settings-for-rms-templates.8d092af963ab5f5d2786e4a4c915df2acef4bb60.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "22f53d1799bac5fc5d141fcf148ae96aa800ba55": {
@@ -21781,9 +21781,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-bob-opens-the-attachment-on-his-ipad.6e9cfbb1514550e1e700039ea41e3c541f9a8ef0.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "128b3a846a9e1d93c7bd3b1e759394273d39c39b": {
@@ -21813,9 +21813,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-bob-sees-the-email-on-his-ipad.e104f22a0fd6b30e1b77863c814a5c568166b792.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "1342588899ec0c3d37c9872bd04f84c1d147082c": {
@@ -21845,9 +21845,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-confidential-report-accidentally-sent-to-wrong-person.bb2e3254a5da6829a316209d805d505e4fbe5191.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "07a3a371342176c9d288f9c8f6cd6575d9745e9f": {
@@ -21877,9 +21877,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-configuring-dlp-for-azure-rms.0ffa8b25bca7a601b5ba13c986a184bdd0ea7966.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "bfb2402667dc9618e45b19e661db3bf57d386a62": {
@@ -21909,9 +21909,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-configuring-fci-for-the-marketing-classification.52b3f565db3f7d03e2ab91602d6d0272e4b2513d.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "e191c5f7d7702a89a863c5e9615aebcd4538f7ce": {
@@ -21941,9 +21941,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-enabling-irm-for-a-library.0b95ede4734f3c5193647addb4c1bf9ead00a670.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "4741a62f4bf353fbaff50b7c94243b1fff9b798d": {
@@ -21973,9 +21973,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-enabling-irm-on-sharepoint-online.9951303c272117a497f52a8ed1a97a9d004f5bee.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "89241adb9abe69c22db1d023aff71e6f0d780cef": {
@@ -22005,9 +22005,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-installing-and-configuring-the-rms-connector-for-fci.437be3eae4d64d55073ab005d0532aa54a2de3b3.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "5e373920f084f84e7b933b41e434b1a49afc9bce": {
@@ -22037,9 +22037,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-rms-templates-in-the-azure-management-portal.4355e3b7cdd84badae5a648bea197d3831e935d8.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "356d335b7f134e64083be36aef0d693b266fda5c": {
@@ -22069,9 +22069,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\full-screen-picture-select-rms-templates-in-applications,-such-as-file-explorer-and-word.95231739e1efdb2ef33e1b61c955c8dab44ef8ed.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "2911d29ee28629aee9ceef28abd889dec64ec239": {
@@ -31896,9 +31896,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\test-configuring-usage-rights-for-azure-rights-management.52e087eac7fea8bb0bc901dca01de065200e95bb.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "139bd74fa5d6d7906bdf189ea0b1f2f755ffbbb2": {
@@ -44235,9 +44235,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\understand-explore.6c056e9eaf595609545e18189ab50a66b1026927.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "308db9a9091556e3a1f2797fa788f1b02c2ee8b2": {
@@ -46988,8 +46988,8 @@
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\template.b006790476dbcdf21de424a37ab76fc1c60acbcf.ja-jp.xlf",
-      "ArchiveFileCommit": "f37f2de63dabacc6b15a15454b4759a1f7e60799",
-      "ArchiveFileDateTime": "2016-04-26T04:28:40.6382254Z",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "18d42566f6bd25c3b021cab350554a1a4dfb2604": {
@@ -47046,9 +47046,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart.8ee616af0ce716d8099343e22f634602c8998418.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "598baef06cbffb2537db9e7d7ca63ccc88e72180": {
@@ -47076,9 +47076,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart-intro.618d49cefb25d097a1cd0b628ca9754ba4aa1166.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "9fd45edd9f4e8105a4201bbc5b028ac1d0d85189": {
@@ -47106,9 +47106,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart-step1.41edcad844b427b528459b53adc4961b815ef396.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "ba8040f85dd2c4566f01051bf1b797d4fbb7de47": {
@@ -47136,9 +47136,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart-step2.ad493c93b2772e695af1d1d7b11391ac6418728e.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "9eba1d69a160d1cd727da49057ef3bd67fe59853": {
@@ -47166,9 +47166,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart-step3.8ce871088aa6e76e93d7f4d9294ece5b3a665137.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "a9bd0b0dbddedf8ea4bf010e08bd3ce56f132fcd": {
@@ -47196,9 +47196,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart-step4.2d941150c8a9f8661ac61fc9fbc1d39999f0e4f0.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "b0b4e99c45185cc8290231647b497d588b62bf46": {
@@ -47226,9 +47226,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-quickstart-step5.8a58764ce2b42ae18af49129ce961f5157da0d50.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "14b77d4a15c960ca0d5ac8a603761ca278a73d32": {
@@ -47256,9 +47256,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\test-configure-custom-templates-for-azure-rights-management.c4a0f05c9a16eeb92b24b4bef2ea5e274453caa6.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "ecd891d32fd96f330f391b9e6e261ee6e2359c17": {
@@ -47286,9 +47286,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "e370cff2bef72657c0e03e11bd671f6eba7dd029": {
@@ -47316,9 +47316,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\test-planning-and-implementing-your-azure-rights-management-tenant-key.54f914b0336045ca977e97e125807a3b88293ee3.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "7a99d58c2d232c64ecb2a0723cc4054d75c7717d": {
@@ -47346,9 +47346,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\test-requirements-for-azure-rights-management.3bb21c3c2e997218aa70047abe111245eb2dd4df.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "8090a1f7000c45c5cdbf0717c40d0cec6d366026": {
@@ -47706,9 +47706,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-for-individuals-take-control.ee7df1a349d3d5fcec790aeda447cab03ce1d1d7.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "5698fb3a007647adf28192885d54b3c9c53857bd": {
@@ -47735,9 +47735,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-for-individuals-user-sign-up.ce2485a16dd4a281312e3ff106634a34e0c40122.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "be7dd546f55b04ae95722a3f59fb14cd3b63e376": {
@@ -47767,9 +47767,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\sharing-app-support.d22acd026ac8372818f79cb9da2e71421fd83ede.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "ecf03df19ba9944c2b22f77fb351b005dc2906a3": {
@@ -47796,9 +47796,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\TOC.132273379247391752a00ca59e2585345cd61252.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "72ef7fb746eec2264f7443f894aa35611696bf9b": {
@@ -47825,9 +47825,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "e02fc19adaa0169d607dabd22b376a5e36c42f66": {
@@ -47854,9 +47854,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\what-is-azure-rms.f4b9b8e91b932f13e4d659f2727fa33ad3d1aaa1.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "0fa0f5c4377a272cecad174ad9aa70dfc7cc7299": {
@@ -48878,9 +48878,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\rms-for-individuals.0951e682afe9e7d147e7732b5e7731d5fa9a6099.ja-jp.xlf",
+      "ArchiveFileCommit": "dc01c980f492c4fecf9f1a20de220151846258a0",
+      "ArchiveFileDateTime": "2016-04-26T04:45:20.7779242Z",
       "ArchiveException": null
     },
     "6294fdbca6e3017aa83e3c593b9ba21ad765e60a": {
