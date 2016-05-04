@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "fde0db0fec26615041b83c46645884bfbe192a1b",
-  "LastTranslatedCommit": null,
+  "LastTranslatedCommit": "89539440a18b61dccf34f746b7fac5eada1f66e9",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -40700,14 +40700,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "89539440a18b61dccf34f746b7fac5eada1f66e9",
+      "TargetFilePath": "Azure-RMSDocs\\develop\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.5737e89bf7e557bc4138eda9235ce2b0053d819d.ja-jp.xlf",
+      "HandbackFileCommit": "54fac3255eceb28a036b742735f6b1534549704a",
+      "HandbackDateTime": "2016-05-04T02:26:57.6273953Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-05-04T02:26:57.6273953Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.5737e89bf7e557bc4138eda9235ce2b0053d819d.ja-jp.xlf",
       "ArchiveFileCommit": "318727b6ba64c50837206ea25a9a23b2262c19f0",
       "ArchiveFileDateTime": "2016-04-26T04:23:23.6072438Z",
