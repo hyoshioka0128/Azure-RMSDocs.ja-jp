@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [scratch\test-migrating-from-ad-rms-to-azure-rights-management.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/27660fc7a954a18d7ef7b9144dd5445d3c3a9d87/scratch/test-migrating-from-ad-rms-to-azure-rights-management.md) | InSyncHandedBackSuccess | [Details](#ecd891d32fd96f330f391b9e6e261ee6e2359c17428)
 
 ## Item Details
-##### <a name='ecd891d32fd96f330f391b9e6e261ee6e2359c17428'></a> Source: [scratch\test-migrating-from-ad-rms-to-azure-rights-management.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/27660fc7a954a18d7ef7b9144dd5445d3c3a9d87/scratch/test-migrating-from-ad-rms-to-azure-rights-management.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [scratch\test-migrating-from-ad-rms-to-azure-rights-management.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/03a6bb6d2713745c3b056d1d30fb2db191b4e29d/scratch/test-migrating-from-ad-rms-to-azure-rights-management.md)
-* Handoff File: [test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/751e45fc9a0895872b63cc44de01754f23fc3b51/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf)
-* Handoff Datetime: 2016-04-21 23:34:38
-* Handoff Reason: Include
-* Archive File: [test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/dc01c980f492c4fecf9f1a20de220151846258a0/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf)
-* Archive Datetime: 2016-04-26 04:45:20
-* Handback File: [test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/02175cf0e2e2b956d52507a03c121e37eab25e69/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/test-migrating-from-ad-rms-to-azure-rights-management.28dc33417edde8babe3af32188f6e8ff3d7b8b13.ja-jp.xlf)
-* Handback Datetime: 2016-05-09 13:03:18
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
