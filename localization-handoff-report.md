@@ -1,16 +1,13 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 5
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [Azure-RMSDocs\Develop\ADAL-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a26a1debf504fb5e4aeddf4f1ad99202d7c20834/Azure-RMSDocs/Develop/ADAL-authentication.md) | HandedOffFailed | [Details](#0068d338348b4edb9db561bee0545ed50fed029a43)
  [Azure-RMSDocs\Develop\android-namespaces.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0a4f8aa90f7cf79099922ea7d128a0e1a34f38d1/Azure-RMSDocs/Develop/android-namespaces.md) | HandedOffFailed | [Details](#55f17d42165d2b6b5e1765a81bf7d799a14e996a46)
- [Azure-RMSDocs\develop\android-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6bfe923868b9ad648386c5ce2786b3beb1e9fc0c/Azure-RMSDocs/develop/android-sdk.md) | OutofSyncHandedBackSuccess | [Details](#a13d8ce327f15f4b94162770b7a881e1a6746a2b47)
- [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6bfe923868b9ad648386c5ce2786b3beb1e9fc0c/Azure-RMSDocs/develop/api-reference-4-2.md) | HandedOffSuccess | [Details](#25894ed446911a55481d0f2ac628db2f46e477f649)
- [Azure-RMSDocs\develop\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/62596a9a81e024ea81035283ebe7e837e20043c7/Azure-RMSDocs/develop/TOC.md) | HandedOffSuccess | [Details](#4ae9d03b68562ca347ded23d045985cea318e9f2101)
 
 ## Item Details
 ##### <a name='0068d338348b4edb9db561bee0545ed50fed029a43'></a> Source: [Azure-RMSDocs\Develop\ADAL-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/a26a1debf504fb5e4aeddf4f1ad99202d7c20834/Azure-RMSDocs/Develop/ADAL-authentication.md)
@@ -33,45 +30,6 @@
 * Handoff Datetime: 0001-01-01 00:00:00
 * Handoff Reason: Ignored
 * Handoff Error: [handoff_transform_failed](#55f17d42165d2b6b5e1765a81bf7d799a14e996a46handoff_transform_failed)
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a13d8ce327f15f4b94162770b7a881e1a6746a2b47'></a> Source: [Azure-RMSDocs\develop\android-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6bfe923868b9ad648386c5ce2786b3beb1e9fc0c/Azure-RMSDocs/develop/android-sdk.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/11581eff6ba68532a65968c2295202fe4a4200b3/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.ja-jp.xlf)
-* Handoff Datetime: 2016-05-10 22:58:35
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\android-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/03a6bb6d2713745c3b056d1d30fb2db191b4e29d/Azure-RMSDocs/develop/android-sdk.md)
-* Current Handback File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/02175cf0e2e2b956d52507a03c121e37eab25e69/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.ja-jp.xlf)
-* Current Handback Datetime: 2016-05-09 13:03:18
-* [Back to Top](#report-top)
-
-##### <a name='25894ed446911a55481d0f2ac628db2f46e477f649'></a> Source: [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6bfe923868b9ad648386c5ce2786b3beb1e9fc0c/Azure-RMSDocs/develop/api-reference-4-2.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/11581eff6ba68532a65968c2295202fe4a4200b3/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.ja-jp.xlf)
-* Handoff Datetime: 2016-05-10 22:58:35
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='4ae9d03b68562ca347ded23d045985cea318e9f2101'></a> Source: [Azure-RMSDocs\develop\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/62596a9a81e024ea81035283ebe7e837e20043c7/Azure-RMSDocs/develop/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.13a398ad10575ec470dbe9e6b9feae83865839a4.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/11581eff6ba68532a65968c2295202fe4a4200b3/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/TOC.13a398ad10575ec470dbe9e6b9feae83865839a4.ja-jp.xlf)
-* Handoff Datetime: 2016-05-10 22:58:35
-* Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
