@@ -386,30 +386,6 @@
   "d59fe83d8d47cb5ba39323a7cd66c57fe9393ab0": [
     "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
   ],
-  "8a45e1930f3fae75d0b9d3e037ea095f202fbe49": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "08c9a5972882d0b874ea41805ad33b89484dea08": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "475a26d45b4e383c41938490a36786db1b18b7a9": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "b0009aa001044a4fae2a188b295697c164ef7c54": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "20bb5ff254cb575e9766afac598c34e2a972b8bc": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "cf88c046c99bfbebce47dfe6ab11863fe3201cf7": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "f935777e86e11fa80c0d7b00dd504a6b6487f5b9": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
-  "e08656f63f5a1dbd057de79766d6d5c08a629947": [
-    "Azure-RMSDocs\\understand-explore\\how-does-it-work.md"
-  ],
   "71a1f2684025efe63720bafe2b90ccad3a6a90e7": [
     "Azure-RMSDocs\\get-started\\scenario-executives-email.md"
   ],
@@ -866,19 +842,10 @@
   "1f0e1a3822c0c5a5ce793f2466f04a7c7ce2c864": [
     "Azure-RMSDocs\\develop\\ad-rms-overview.md"
   ],
-  "f9dea7cc934b91eadd85afbab53f00a3724d4e97": [
-    "Azure-RMSDocs\\develop\\ad-rms-overview.md"
-  ],
   "906c83731188838ca516b8159581b64c60a4a42e": [
     "Azure-RMSDocs\\develop\\ad-rms-server.md"
   ],
   "da4e4d76fe1feab901231b74c70ea198f80a5b1c": [
-    "Azure-RMSDocs\\develop\\ad-rms-server.md"
-  ],
-  "118a758a90d38f85e6392e918661d1532e11f02f": [
-    "Azure-RMSDocs\\develop\\ad-rms-server.md"
-  ],
-  "88211a567bf0e04a5a020565d1f6c276737d12af": [
     "Azure-RMSDocs\\develop\\ad-rms-server.md"
   ],
   "acd0692102c43baff0a92360e0ddbe1259ad9b4f": [
@@ -891,9 +858,6 @@
     "Azure-RMSDocs\\develop\\android-code.md"
   ],
   "b6efbda3f4cc814e76b93ca1b7e11ca1df0a26c8": [
-    "Azure-RMSDocs\\develop\\android-code.md"
-  ],
-  "e59dd5d38b1c89e685c8f4d061ee20487e9b84eb": [
     "Azure-RMSDocs\\develop\\android-code.md"
   ],
   "a13d8ce327f15f4b94162770b7a881e1a6746a2b": [
@@ -954,12 +918,6 @@
     "Azure-RMSDocs\\develop\\application-types.md"
   ],
   "bd2085f16afa59b2c48a273c6656bd136a5eaa87": [
-    "Azure-RMSDocs\\develop\\application-types.md"
-  ],
-  "1aa8418a4039bd60897550eb72c6afacad54e43f": [
-    "Azure-RMSDocs\\develop\\application-types.md"
-  ],
-  "5d96c537d8e098c60f0d2fe723bd44e315a7fe67": [
     "Azure-RMSDocs\\develop\\application-types.md"
   ],
   "261abdeaa0aa70ae7240b6ceddc9d09440f0b48e": [
@@ -1163,12 +1121,6 @@
   "513ca8f478b24688bcf26de1742778335280833d": [
     "Azure-RMSDocs\\develop\\getting-started-with-ad-rms-2-0.md"
   ],
-  "99714ab34027e5dab3c3b955089e259aa7eb4869": [
-    "Azure-RMSDocs\\develop\\getting-started-with-ad-rms-2-0.md"
-  ],
-  "403bc7b481490a4ecbc0e503e58b4fd36ef08235": [
-    "Azure-RMSDocs\\develop\\getting-started-with-ad-rms-2-0.md"
-  ],
   "ee9285bbcd7c26b2f635ab78d084183614c6b1d1": [
     "Azure-RMSDocs\\develop\\how-to-build-your-first-application.md"
   ],
@@ -1176,12 +1128,6 @@
     "Azure-RMSDocs\\develop\\how-to-build-your-first-application.md"
   ],
   "c06293226acf414026fe31d6478be5041f70912d": [
-    "Azure-RMSDocs\\develop\\how-to-build-your-first-application.md"
-  ],
-  "b6091efb1575a56a07f3d8e2f6cb5ad7690fe4d1": [
-    "Azure-RMSDocs\\develop\\how-to-build-your-first-application.md"
-  ],
-  "c386ee9317aad13b1b84f1a16513c293e788dcea": [
     "Azure-RMSDocs\\develop\\how-to-build-your-first-application.md"
   ],
   "b834178c6d104f72b4ddc4cca5752baca51e3c47": [
@@ -1223,9 +1169,6 @@
   "3ee55855f2b43cb2b089bec316e0999518da451b": [
     "Azure-RMSDocs\\develop\\how-to-enable-email-notification.md"
   ],
-  "46e9c2b30f2eac122a0a3b7e69d25bea2f45c17f": [
-    "Azure-RMSDocs\\develop\\how-to-enable-email-notification.md"
-  ],
   "5b55c9e6e1c68eb5ad14a701dd1a139d1b4328ff": [
     "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
   ],
@@ -1236,12 +1179,6 @@
     "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
   ],
   "c9ce38c316cef967f989621a33c2b4c425fbeb1c": [
-    "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
-  ],
-  "1593a4196015cc041cfc014c9407bdd96da6b11c": [
-    "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
-  ],
-  "f8bafa0490b36b5f37d481c4208031bdfd8fd7c8": [
     "Azure-RMSDocs\\develop\\how-to-install-and-configure-an-rms-server.md"
   ],
   "8335fcb1402ea4a15af9c67d26fa7e2498108f0a": [
@@ -1275,15 +1212,6 @@
     "Azure-RMSDocs\\develop\\how-to-set-up-your-test-environment.md"
   ],
   "e1f7eb97f2a90a4819ae9048ce2d1fc79e11e56c": [
-    "Azure-RMSDocs\\develop\\how-to-set-up-your-test-environment.md"
-  ],
-  "d43535f3eb4535b7094c11681b32ede5a293dfc8": [
-    "Azure-RMSDocs\\develop\\how-to-set-up-your-test-environment.md"
-  ],
-  "7a53910f9a06b1952370d815ec00bf233ff6a607": [
-    "Azure-RMSDocs\\develop\\how-to-set-up-your-test-environment.md"
-  ],
-  "5132eb31c304b17a494eae82d0294a5dc89cf1ba": [
     "Azure-RMSDocs\\develop\\how-to-set-up-your-test-environment.md"
   ],
   "df55cb44e7101e8e12ceeb4c0cc1e8e9b9f975dc": [
