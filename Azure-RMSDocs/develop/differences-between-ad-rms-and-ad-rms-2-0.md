@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ee4989d6-3903-4ed2-ac62-d5692e2ef494
-
+ms.assetid: 622D5C6E-07D5-4C71-A99D-9823C1FE6936
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # SDK の優れている点
 このトピックでは、権利保護に対応したアプリケーションの作成に必要な開発者の作業量の観点から、元の [Active Directory Rights Management サービス SDK](https://msdn.microsoft.com/library/Cc530379) と比べて Rights Management Services SDK 2.1 が大幅に改良された点について説明します。
 
@@ -53,6 +51,6 @@ AD RMS SDK は Msdrm.dll でクライアントによって公開される機能�
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

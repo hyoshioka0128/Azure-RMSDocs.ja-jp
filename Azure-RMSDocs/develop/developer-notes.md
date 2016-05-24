@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 65c2f3d1-0852-41fa-a95a-53dcec787680
-
+ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# 開発者向け注意事項
+# 開発者向け注意事項
 
 このセクションでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。 このセクションのシナリオは Rights Management サービス SDK 2.1 のこのリリースに固有のシナリオであり、将来のリリースで変更される可能性があります。
 
@@ -49,6 +48,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

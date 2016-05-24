@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 1a2ae9f2-709f-47fe-b16c-76140dd27740
-
+ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 作業開始
 
 この Microsoft Rights Management SDK 4.2 リリースでは、最初のアプリケーションをすばやく開発するために、各オペレーティング システム/プラットフォームの開発環境のセットアップ ガイドを使用します。 次の手順を行って、権限保護対応アプリケーションの作成を開始します。
@@ -61,6 +59,6 @@ ms.suite: ems
   |[コミュニティのリソース](community-resources.md)|Active Directory Rights Management サービスは、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

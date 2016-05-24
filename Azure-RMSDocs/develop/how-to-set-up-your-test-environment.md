@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 4d32682c-754d-4e30-977d-95b08e0662cc
-
+ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # テスト環境のセットアップ
 
 権限保護対応アプリケーションは、さまざまなサーバー オプションを指定してテストできます。
@@ -51,7 +49,7 @@ RMS サーバーに対してアプリケーションをテストする場合、2
 -   **1-box AD RMS ISV 環境でアプリケーションを実行する**。 Windows Server 2012、Windows Server 2008 R2、または Windows Server 2008 を実行し、Hyper-V がインストールされている場合は、AD RMS 1-box VHD を使用して仮想マシンを作成することにより、1-box AD RMS ISV 環境をデプロイできます。 1-box AD RMS ISV 環境の RMS サーバーは運用前として構成されています。この環境には Active Directory Rights Management サービス クライアント 2.1 もインストールされています。 RMS サーバーとクライアントのレジストリ設定が既に構成されています。 アプリケーションをテストするには、1-box 環境が展開されている仮想マシンで実行します。
 -   **運用前として構成され、ネットワークに展開されている RMS サーバーに対してアプリケーションを実行する**。 この場合は、アプリケーションを実行するコンピューターに AD RMS Client 2.1 をインストールして構成する必要もあります。 この方法については、「[Configure client (クライアントの構成)](how-to-configure-the-ad-rms-client-2-0.md)」を参照してください。 RMS サーバーをデプロイし、運用前として構成する方法については、「[サーバーのインストールと構成](how-to-install-and-configure-an-rms-server.md)」を参照してください。
 
-### 関連項目
+## 関連項目
 
 * [How-to use (使用方法)](how-to-use-msipc.md)
 * [AD RMS SDK ウェビナーに関するダウンロード ページ](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
@@ -67,6 +65,6 @@ RMS サーバーに対してアプリケーションをテストする場合、2
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

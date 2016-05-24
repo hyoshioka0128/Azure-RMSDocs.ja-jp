@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 43b611a8-2cc0-49a8-9db9-e81321c38f7a
-
+ms.assetid: 834B7242-31D3-4275-A892-CFE95A61E29E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 権限保護対応アプリケーションのテスト
 
 このトピックでは、Rights Management サービス SDK 2.1 の権限保護対応アプリケーションのテストを実行するために必要な手順について説明します。
@@ -107,7 +105,7 @@ Rights Management Services (RMS) アプリケーションは、保護された�
 
     コンピューターにクライアントを構成する方法については、「[Configure the client](how-to-configure-the-ad-rms-client-2-0.md)」 (クライアントの構成) を参照してください。 RMS サーバーのインストールについては、「[サーバーのインストールと構成](how-to-install-and-configure-an-rms-server.md)」を参照してください。
 
-### 関連項目
+## 関連項目
 
 * [How-to use (使用方法)](how-to-use-msipc.md)
 * [クライアントの構成](how-to-configure-the-ad-rms-client-2-0.md)
@@ -125,6 +123,6 @@ Rights Management Services (RMS) アプリケーションは、保護された�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

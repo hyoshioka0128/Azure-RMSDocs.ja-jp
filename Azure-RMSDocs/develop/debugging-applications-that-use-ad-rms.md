@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: caf031ca-4876-4d42-9fbc-8638f579fb38
-
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 権限保護対応アプリケーションのデバッグ
 
 このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
@@ -34,7 +32,7 @@ ms.suite: ems
 
 Rights Management サービス SDK 2.1 では、ランタイムの開発者バージョンでのアンチデバッグ機能のチェックは無効になっています。
 
-デバッグ トレースは、次のレジストリ キーを使用して有効にすることができます  (デバッグ トレースを無効にするには、値を 0 に変更します)。このリリースでは、デバッグを実行するのに何も必要ありません。
+デバッグ トレースは、次のレジストリ キーを使用して有効にすることができます (デバッグ トレースを無効にするには、値を 0 に変更します)。このリリースでは、デバッグを実行するのに何も必要ありません。
 
 ```
 HKEY_LOCAL_MACHINE
@@ -72,7 +70,7 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
  
 
-### 関連項目
+## 関連項目
 
 * [使用方法](how-to-use-msipc.md)
  
@@ -83,6 +81,6 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

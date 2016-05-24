@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 00674664-22ed-44da-adb8-61f25c44aa6c
-
+ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # ファイル API の構成
 
 
@@ -57,7 +55,7 @@ ms.suite: ems
 
 - ワイルドカード文字 "*" を使用できます。ただし、特定の拡張子の設定は、ワイルドカードの設定よりも優先されます。 ワイルドカード文字は、Microsoft Office ファイルの設定には影響しません。これらは、ファイルの種類ごとに明示的に無効する必要があります。
 - 拡張子がないファイルを指定するには、"." を使用します。
-- 特定のファイル拡張子のキーを指定する場合は、"." 文字を指定しないでください。たとえば、.txt ファイルの設定を指定するには、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` を使用します  (`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT` を使用しないでください)。
+- 特定のファイル拡張子のキーを指定する場合は、"." 文字を指定しないでください。たとえば、.txt ファイルの設定を指定するには、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` を使用します (`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT` を使用しないでください)。
 
 保護の動作を指定するには、*Encryption* 値をキーに設定します。 *Encryption* 値が設定されていない場合は、ファイルの種類の既定の動作が実行されます。
 
@@ -151,7 +149,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-### 関連項目
+## 関連項目
 
 * [Developer notes (開発者向け注意事項)](developer-notes.md)
 * [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
@@ -163,6 +161,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

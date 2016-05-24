@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: deb9a110-c098-4834-8319-05d5a28a0ccd
-
+ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # サポートされるファイル形式
 
 File API は、ネイティブ形式と Pfile 形式をサポートしています。
@@ -39,7 +37,7 @@ File API の現在のバージョンは、Microsoft Office ファイルに対す
 
 管理者は、レジストリ キーを設定して、ファイル名拡張子に基づいてファイルを保護するかどうか、およびその方法を構成することができます。 File API を使用してファイルの保護を構成する方法の詳細については、「[File API configuration (File API の構成)](file-api-configuration.md)」を参照してください。
 
-### 関連項目
+## 関連項目
 
 * [開発者向け注意事項](developer-notes.md)
 * [File API の構成](file-api-configuration.md)
@@ -51,6 +49,6 @@ File API の現在のバージョンは、Microsoft Office ファイルに対す
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

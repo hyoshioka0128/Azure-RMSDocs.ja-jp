@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c73fde39-6e16-470c-800e-59ab04c78f5f
-
+ms.assetid: 09BA148C-7D1E-43C8-92EA-24BBB6EFDB19
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 運用環境のアプリケーションへの署名
 
 このトピックでは、運用モードのアプリケーションに署名するプロセスについて説明します。
@@ -67,7 +65,7 @@ Microsoft から運用証明書を受信すると、次のファイルがある�
 
     -   *YourAppName*.exe.man は、必ず *YourAppName*.exe と同じディレクトリに配置してください。
 
-### 関連項目
+## 関連項目
 
 * [使用方法](how-to-use-msipc.md)
 * [権限保護対応アプリケーションのテスト](running-your-first-application.md)
@@ -79,6 +77,6 @@ Microsoft から運用証明書を受信すると、次のファイルがある�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
