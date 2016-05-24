@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 376c08d9-51e8-46c9-b2d2-426f648f7e4d
-
+ms.assetid: F5CD72F6-D49A-4121-866F-3182CD980875
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 運用環境への切り替え
 
 このセクションでは、テスト済みのアプリケーションを運用環境にリリースするためのプロセスについて説明します。
@@ -53,7 +51,7 @@ ms.suite: ems
   このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順をおって各操作を説明します。
  
 
-### 関連項目
+## 関連項目
 
 * [概要](ad-rms-overview.md)
 * [使用方法](how-to-use-msipc.md)
@@ -62,6 +60,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

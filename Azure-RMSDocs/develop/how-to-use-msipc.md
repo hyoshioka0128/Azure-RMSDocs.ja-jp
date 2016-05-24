@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 03d4fa22-0de4-400f-935d-e347d5890680
-
+ms.assetid: 186A9740-D812-4440-B28A-6968B2D8898C
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 使用方法
 
 次のトピックでは、Rights Management サービス SDK 2.1 を使用してアプリケーションの情報保護を実装するための主要なタスクについて説明します。
@@ -38,7 +36,7 @@ ms.suite: ems
   このセクションでは、テスト済みのアプリケーションを運用環境にリリースするためのプロセスについて説明します。
  
 
-### 関連項目
+## 関連項目
 
 * [概要](ad-rms-overview.md)
 * [使用方法](how-to-use-msipc.md)
@@ -47,6 +45,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
