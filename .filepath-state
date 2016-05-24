@@ -326,18 +326,6 @@
   "6e9dd25fe9c6173dfa93570e511c47d5d9fa3c1d": [
     "Azure-RMSDocs\\develop\\understanding-usage-restrictions.md"
   ],
-  "a52e1daf2c6d42f28e6b9dba11a58c37e86cb4bf": [
-    "Azure-RMSDocs\\develop\\understanding-usage-restrictions.md"
-  ],
-  "bdd6238f88c31a995d786ac4b6edd5615ce57013": [
-    "Azure-RMSDocs\\develop\\understanding-usage-restrictions.md"
-  ],
-  "79e1600217e77d4932dee41f48f4c59c987ed659": [
-    "Azure-RMSDocs\\develop\\understanding-usage-restrictions.md"
-  ],
-  "cf1d420c1bff4ed134ec87ad23338dadec55ae3b": [
-    "Azure-RMSDocs\\develop\\understanding-usage-restrictions.md"
-  ],
   "3227bba7b43e6200ed9214d22ce265f02b8d216e": [
     "Azure-RMSDocs\\develop\\usage-restriction-reference.md"
   ],
@@ -402,12 +390,6 @@
     "Azure-RMSDocs\\develop\\ad-rms-client.md"
   ],
   "b1aede1ac483fca0cfbb61694485520a335695b3": [
-    "Azure-RMSDocs\\develop\\ad-rms-concepts-nav.md"
-  ],
-  "1892377a6efbcc38bbd7a1cf8315d0b9d0207a9b": [
-    "Azure-RMSDocs\\develop\\ad-rms-concepts-nav.md"
-  ],
-  "1724b28400400b05df30784a014221dcc00100d1": [
     "Azure-RMSDocs\\develop\\ad-rms-concepts-nav.md"
   ],
   "8471f0f2682a721d839a18bf1bbc3b937c2d113e": [
@@ -530,19 +512,7 @@
   "1476cfafbc3ecf619e66fee22f657c1714deffe8": [
     "Azure-RMSDocs\\develop\\community-resources.md"
   ],
-  "6d8a64e4e28bcf2aa7d38897744752ea46e430c4": [
-    "Azure-RMSDocs\\develop\\community-resources.md"
-  ],
-  "32417af0749b9c6cb4948eae0a14232ea9c1e63d": [
-    "Azure-RMSDocs\\develop\\community-resources.md"
-  ],
   "7832f87febd6d9f87a3975c2084caca7aa73b9fc": [
-    "Azure-RMSDocs\\develop\\core-concepts.md"
-  ],
-  "091e05c354b36e15bb8d000edb8f7cd5e0e828db": [
-    "Azure-RMSDocs\\develop\\core-concepts.md"
-  ],
-  "2e95e3f1be444671d9057b0902f089ee5f341a25": [
     "Azure-RMSDocs\\develop\\core-concepts.md"
   ],
   "ee4cc0f741921f6e4bfcc216281cc6b63deb4ad1": [
@@ -674,15 +644,6 @@
   "e696d5c73233959038becc81abe770cb1bad5895": [
     "Azure-RMSDocs\\develop\\how-to-use-msipc.md"
   ],
-  "4aacd173ecf05e790b2e58e8a5a1930e106064ed": [
-    "Azure-RMSDocs\\develop\\how-to-use-msipc.md"
-  ],
-  "4f01c4cf5f412b8059e7b76b8acb972e1e74d994": [
-    "Azure-RMSDocs\\develop\\how-to-use-msipc.md"
-  ],
-  "13967a39654095037d25600ddd2681d1b7c84d4d": [
-    "Azure-RMSDocs\\develop\\how-to-use-msipc.md"
-  ],
   "98a2220c1b2d2f7c62673b8d860962d8c208c5ae": [
     "Azure-RMSDocs\\develop\\index.md"
   ],
@@ -752,12 +713,6 @@
   "e9a3f95c8ff289380dc62994e4f719bc174c4900": [
     "Azure-RMSDocs\\develop\\overview.md"
   ],
-  "dabfd39de6471682a77e736088f47c4da870cd6b": [
-    "Azure-RMSDocs\\develop\\overview.md"
-  ],
-  "547704e622d81391cd4bc050f07ad10f6195d4a7": [
-    "Azure-RMSDocs\\develop\\overview.md"
-  ],
   "a12be14d42b0d3212ac61038591701a7a4a23ff5": [
     "Azure-RMSDocs\\develop\\release-notes.md"
   ],
@@ -782,15 +737,6 @@
   "b4de8458ace7a70b27120189ee821729836cc97e": [
     "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
   ],
-  "6908213dd8002fec63d7f184a9cfe4aec857d44d": [
-    "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
-  ],
-  "e726c010192211f0787fafb737793ca1ac2dc452": [
-    "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
-  ],
-  "186dcbf929e637c73fae447c474f9812caacded4": [
-    "Azure-RMSDocs\\develop\\setting-the-api-security-mode-api-mode.md"
-  ],
   "4bb013f420b02a10e306d92624683c48ceb2582f": [
     "Azure-RMSDocs\\develop\\setup-developer-environment.md"
   ],
@@ -803,22 +749,7 @@
   "baf08d04f836e5aa406f125a7029bc43297f5df1": [
     "Azure-RMSDocs\\develop\\supported-platforms.md"
   ],
-  "c32f1fe5f4dc040724f8342ea17ee0d6a9eeb4af": [
-    "Azure-RMSDocs\\develop\\supported-platforms.md"
-  ],
-  "979043d59c72c54e1896e4d2c3db291863607d1a": [
-    "Azure-RMSDocs\\develop\\supported-platforms.md"
-  ],
   "39ad7b9fa52e1a066b56c552ec33e7e8bb1e696c": [
-    "Azure-RMSDocs\\develop\\switching-to-the-production-environment.md"
-  ],
-  "e6babee95132b48f86690eeb3bfd26e502123d5b": [
-    "Azure-RMSDocs\\develop\\switching-to-the-production-environment.md"
-  ],
-  "3a56f304bdf1a05c7e5fd8716a5791c9510c8c17": [
-    "Azure-RMSDocs\\develop\\switching-to-the-production-environment.md"
-  ],
-  "5b543e6733a8a7ffdf9ff3f2d4e5261b3bea4189": [
     "Azure-RMSDocs\\develop\\switching-to-the-production-environment.md"
   ],
   "cb8c91db044eb8cee39661994191c261bdbdb8ce": [
