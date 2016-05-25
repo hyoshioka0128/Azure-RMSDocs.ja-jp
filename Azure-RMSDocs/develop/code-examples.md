@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b2fce5e9-0b71-40c9-a325-1ff8afef9252
-
+ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # コード例
 
 Microsoft Rights Management SDK 4.2 には、いくつかのサポートされているオペレーティング システム向けのコード例と実用的なプロジェクトが含まれています。
@@ -51,6 +49,6 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

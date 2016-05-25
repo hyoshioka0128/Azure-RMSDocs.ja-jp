@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c1eb27e1-1d58-4899-9c6d-6e53bc92889e
-
+ms.assetid: C827E6B8-8CF2-4C86-AF97-60D66851827E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # SDK のインストール
 
 このトピックでは、開発者ツールをインストールする方法について説明します。
@@ -43,7 +41,7 @@ ms.suite: ems
 
 "setup\_sdk.exe" によってシステムにインストールされるファイルの詳細については、「[開発環境ファイル](sdk-elements.md)」を参照してください。
 
-### 関連項目
+## 関連項目
 
 * [使用方法](how-to-use-msipc.md)
 * [開発環境ファイル](sdk-elements.md)
@@ -55,6 +53,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

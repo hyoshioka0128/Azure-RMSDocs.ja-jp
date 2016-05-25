@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: aca520e1-ea56-4405-8d79-953a7b430bb4
-
+ms.assetid: 2BD4F55D-BA88-4516-86FB-E2E6535D1690
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Linux API リファレンス
 
 Linux の各種オペレーティング システムのサポート用の API リファレンスは GitHub でホストされています: [C++ 用の RMS SDK](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)。 詳細については、「[作業開始](get-started.md)」を参照してください。
@@ -38,6 +36,6 @@ Linux の各種オペレーティング システムのサポート用の API �
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

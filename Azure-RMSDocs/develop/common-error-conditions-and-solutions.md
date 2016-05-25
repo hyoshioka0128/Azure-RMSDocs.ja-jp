@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ac6453e1-e24f-480e-99bd-02ba9a49f468
-
+ms.assetid: A5B95EB8-3528-4CFF-86FC-166613A5F4A3
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 一般的なエラー状況とソリューション
 このトピックでは、Rights Management サービス SDK 2.1 開発者ツールを使用する場合に発生する可能性のある最も一般的なエラー メッセージについて説明します。 また、該当するエラーの修正に推奨される操作も提供します。
 
@@ -76,6 +74,6 @@ RMS SDK 2.1 の製品版をデバッグする必要がある場合は、次の�
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

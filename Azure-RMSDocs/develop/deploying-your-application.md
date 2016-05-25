@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 08cb33e0-7df5-4855-a05b-159e6532f3ca
-
+ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # アプリケーションのデプロイ
 
 
@@ -105,6 +103,6 @@ AD RMS クライアント 2.1 は、Windows オペレーティング システ�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

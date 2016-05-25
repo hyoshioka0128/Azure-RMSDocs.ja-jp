@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 749146d4-a49d-47dc-a43a-d37d96310e18
-
+ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # アプリケーションの種類
 
 
@@ -60,7 +58,7 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 アプリケーションの保護の詳細については、「[Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)」を参照してください。
 
-### 関連項目
+## 関連項目
 
 * [Developer concepts (開発者の概念)](ad-rms-concepts-nav.md)
 * [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
@@ -75,6 +73,6 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

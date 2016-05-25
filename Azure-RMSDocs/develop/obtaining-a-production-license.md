@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 013f9d75-0b66-44a8-9b01-d05b44a5ea0c
-
+ms.assetid: 6749817E-FF34-4384-BF63-39AEA5C372CA
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 運用環境ライセンスの取得
 
 Rights Management サービス SDK 2.1 を使用して開発されたアプリケーションを解放するには、運用環境の使用許諾契約を申請して、運用証明書を取得する必要があります。
@@ -43,8 +41,6 @@ Azure RMS での実行に関する詳細については、「[クラウド ベ�
 運用環境の使用許諾契約書に申請することで、証明書を取得できます。
 
 ## 運用環境の使用許諾契約書の要求
-
-![](../media/wedge.gif)
 
 -   [RMLA@microsoft.com](mailto:rmla@microsoft.com) に電子メール メッセージを送信 し、次の情報を含めます。
 
@@ -83,7 +79,7 @@ Azure RMS での実行に関する詳細については、「[クラウド ベ�
 
 ## 関連項目
 
-* [How-to use (使用方法)](how-to-use-msipc.md)
+* [使用方法](how-to-use-msipc.md)
 * [権限保護対応アプリケーションのテスト](running-your-first-application.md)
  
 
@@ -93,6 +89,6 @@ Azure RMS での実行に関する詳細については、「[クラウド ベ�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

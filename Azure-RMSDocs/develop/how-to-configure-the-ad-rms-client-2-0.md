@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 58051d42-5a0a-4b65-9e02-bcdbf17d3262
-
+ms.assetid: 74C342BF-0F79-486D-AED7-C53230DE5FA7
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # クライアントの構成
 
 このトピックでは、Active Directory Rights Management サービス クライアント 2.1 を構成する方法を説明します。
@@ -117,7 +115,7 @@ ms.suite: ems
 
 このトピックのガイダンスは包括的なものではありません。 AD RMS クライアント 2.1 の構成方法について詳しくは、「[RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)」 (RMS クライアント 2.0 のデプロイに関する注意事項) をご覧ください。
 
-### 関連項目
+## 関連項目
 
 
 * [How-to use (使用方法)](how-to-use-msipc.md)
@@ -131,6 +129,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

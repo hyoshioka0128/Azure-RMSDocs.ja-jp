@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 6f53c7e5-bbe2-4619-83b0-cdc620b3af14
-
+ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 利用規約
 
 Rights Management サービスに固有の用語定義のコレクション。
@@ -51,6 +49,6 @@ PFile 形式は Microsoft Rights Management SDK 4.2 の設計方法で埋め込�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
