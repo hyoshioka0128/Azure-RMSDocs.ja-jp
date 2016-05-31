@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS の機能の 詳細
+
+*適用対象: Azure Rights Management、Office 365*
+
 Azure RMS の動作について理解しておく 1 つの重要な点は、Rights Management サービス (および Microsoft) は情報保護プロセスの一部としてユーザーのデータを見たり保存したりしないことです。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。 Azure RMS は、単純に、承認されたユーザーおよびサービス以外のものが文書のデータを読めないようにします。
 
 -   データは、アプリケーション レベルで暗号化されており、そのドキュメントの承認済みの使用を定義するポリシーが含まれています。
@@ -37,7 +40,7 @@ Azure RMS の動作について理解しておく 1 つの重要な点は、Righ
 
 Azure RMS が暗号化および復号化、承認、制限の適用を行う保護プロセス全体を通じて、秘密の調合は Azure に送信されません。
 
-![](../media/AzRMS_SecretColaFormula_final.png)
+![Azure RMS がファイルを保護する方法](../media/AzRMS_SecretColaFormula_final.png)
 
 処理の詳細については、この記事の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
@@ -63,7 +66,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 - コンテンツ キーは、組織の RSA キー (Azure RMS テナント キー) によってドキュメントのポリシーの一部として保護されます。このポリシーも、ドキュメントの作成者によって署名されます。 このテナント キーは、Azure RMS によって組織のために保護されているすべてのドキュメントおよび電子メールで共通です。このキーは、ユーザー管理のテナント キー (BYOK (Bring Your Own Key) と呼ばれます) を組織が使用している場合、Azure RMS 管理者だけが変更できます。 
 
-    このテナント キーは、Microsoft のオンライン サービスによって、高度に制御された環境で、厳しい監視の下に保護されています。 ユーザー管理のテナント キー (BYOK) を使用すると、各 Azure リージョンでハイエンド ハードウェア セキュリティ モジュール (HSM) のアレイが使用され、このセキュリティが強化されます。どのような状況でも、キーが抽出、エクスポート、または共有されることはありません。 テナント キーおよび BYOK の詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
+    このテナント キーは、Microsoft のオンライン サービスによって、高度に制御された環境で、厳しい監視の下に保護されています。 ユーザー管理のテナント キー (BYOK) を使用すると、各 Azure リージョンでハイエンド ハードウェア セキュリティ モジュール (HSM) のアレイが使用され、このセキュリティが強化されます。どのような状況でも、キーが抽出、エクスポート、または共有されることはありません。 テナント キーおよび BYOK の詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。.
 
 - Windows デバイスに送信されるライセンスと証明書は、クライアントのデバイス秘密キーによって保護されます。このキーは、デバイスのユーザーが初めて Azure RMS を使用したときに作成されます。 一方、この秘密キーは、クライアント上の DPAPI によって保護されます。DPAPI は、ユーザーのパスワードから派生したキーを使用して、これらのシークレットを保護します。 モバイル デバイスでは、キーは 1 回しか使われず、クライアントに格納されないため、これらのキーをデバイス上で保護する必要はありません。 
 
@@ -80,13 +83,13 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure RMS �
 ### ユーザー環境の初期化
 ユーザーが Windows コンピューターでコンテンツを保護したり保護されているコンテンツを消費したりできるためには、その前にデバイスでユーザー環境を準備する必要があります。 これは 1 回限りのプロセスであり、ユーザーがコンテンツの保護または保護されたコンテンツの消費を行おうとしたときに、ユーザーの介入なしに自動的に行われます。
 
-![](../media/AzRMS.png)
+![RMS クライアントのアクティブ化 - 手順 1](../media/AzRMS.png)
 
 **手順 1 の処理**: コンピューターの RMS クライアントは、最初に Azure RMS に接続し、Azure Active Directory アカウントを使用してユーザーを認証します。
 
 ユーザーのアカウントが Azure Active Directory と統合されている場合、この認証は自動的に行われ、ユーザーが資格情報の入力を求められることはありません。|
 
-![](../media/AzRMS_useractivation2.png)
+![RMS クライアントのアクティブ化 - 手順 2](../media/AzRMS_useractivation2.png)
 
 **手順 2 の処理**: ユーザー認証の後、接続は組織の RMS テナントに自動的にリダイレクトされます。RMS テナントは、保護されたコンテンツの消費およびコンテンツのオフライン保護のためにユーザーが Azure RMS の認証を受けられるように証明書を発行します。
 
@@ -95,17 +98,17 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure RMS �
 ### コンテンツの保護
 ユーザーがドキュメントを保護するとき、RMS クライアントは保護されていないドキュメントに対して次の操作を実行します。
 
-![](../media/AzRMS_documentprotection1.png)
+![RMS ドキュメントの保護 - 手順 1](../media/AzRMS_documentprotection1.png)
 
 **手順 1 の処理**: RMS クライアントは、ランダムなキー (コンテンツ キー) を作成し、このキーを使用して、AES 対称暗号化アルゴリズムでドキュメントを暗号化します。
 
-![](../media/AzRMS_documentprotection2.png)
+![RMS ドキュメントの保護 - 手順 2](../media/AzRMS_documentprotection2.png)
 
 **手順 2 の処理**: その後、RMS クライアントは、テンプレートに基づき、またはドキュメントに特定の権限を指定することにより、ドキュメントのポリシーを含む証明書を作成します。 このポリシーには、異なるユーザーまたはグループに対する権限、および有効期限などのその他の制限が含まれています。
 
 RMS クライアントは、ユーザー環境の初期化時に取得した組織のキーを使用して、ポリシーおよび対称コンテンツ キーを暗号化します。 また、RMS クライアントは、ユーザーの環境が初期化されたときに取得したユーザーの証明書でポリシーに署名します。|
 
-![](../media/AzRMS_documentprotection3.png)
+![RMS ドキュメントの保護 - 手順 3](../media/AzRMS_documentprotection3.png)
 
 **手順 3 の処理**: 最後に、RMS クライアントは前に暗号化したドキュメントの本文と共にポリシーをファイルに埋め込みます。これらすべてが、保護されたドキュメントを構成します。
 
@@ -114,17 +117,17 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 ### コンテンツの消費
 ユーザーが保護されたドキュメントを消費しようとすると、RMS クライアントは最初に Azure RMS サービスにアクセスを要求します。
 
-![](../media/AzRMS_documentconsumption1.png)
+![RMS ドキュメントの使用 - 手順 1](../media/AzRMS_documentconsumption1.png)
 
 **手順 1 の処理**: 認証されたユーザーは、ドキュメントのポリシーとユーザーの証明書を Azure RMS に送信します。 サービスはポリシーを復号化して評価し、ユーザーがドキュメントに対して設定している権限のリストを作成します (ある場合)。
 
-![](../media/AzRMS_documentconsumption2.png)
+![RMS ドキュメントの使用 - 手順 2](../media/AzRMS_documentconsumption2.png)
 
 **手順 2 の処理**: その後、サービスは、復号化されたポリシーから AES コンテンツ キーを抽出します。 このキーは、要求で取得されたユーザーの公開 RSA キーで暗号化されます。
 
 再暗号化されたコンテンツ キーは、ユーザー権利のリストと共に暗号化された使用ライセンスに埋め込まれて、RMS クライアントに返されます。
 
-![](../media/AzRMS_documentconsumption3.png)
+![RMS ドキュメントの使用 - 手順 3](../media/AzRMS_documentconsumption3.png)
 
 **手順 3 の処理**: 最後に、RMS クライアントは暗号化された使用ライセンスを取得し、独自のユーザー秘密キーで暗号化を解除します。 これにより、RMS クライアントは必要に応じてドキュメント本文の暗号化を解除し、画面に表示できます。
 
@@ -145,14 +148,14 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 Azure RMS の詳細については、**概要と詳細**のセクションの他の記事を使用してください。たとえば、既存のアプリケーションと Azure RMS を統合して情報保護ソリューションを提供する方法を確認するには、「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照してください。 
 
-「[Azure Rights Management の用語](../get-started/terminology.md)」を確認して、Azure RMS の構成や使用で目にする用語を理解できるようにします。また、デプロイを開始する前に、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」も確認しておいてください。 すぐに自分で試してみる場合は、「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」をご利用ください。
+「[Azure Rights Management の用語](../get-started/terminology.md)」を確認して、Azure RMS の構成や使用で目にする用語を理解できるようにします。また、デプロイを開始する前に、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」も確認しておいてください。 すぐに自分で試してみる場合は、「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」をご利用ください。.
 
 Azure RMS を組織にデプロイする準備ができたら、「[Azure Rights Management の展開ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイメントの手順と具体的な操作手順へのリンクを参照してください。
 
 > [!TIP]
-> 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
+> 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。.
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

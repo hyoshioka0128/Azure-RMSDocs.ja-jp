@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Azure Rights Management の迅速なデプロイ ガイド
+
+*適用対象: Azure Rights Management、Office 365*
+
 このガイドは、「**デプロイと使用**」セクションの構成情報を補足するもので、実装する具体的なシナリオを一覧から選択することにより、Azure Rights Management (Azure RMS) を迅速にデプロイして使用する際に役立ちます。
 
 シナリオには、管理者向けの指示とそれに伴うエンド ユーザー向けのドキュメントの両方が用意されています。 エンド ユーザーにこのドキュメント (指示やお知らせ) を配布する前に、まずドキュメントをビジネス要件および既存のワーク フローに合わせてカスタマイズする必要があります。 一連の指示やお知らせの例では、最終的なエンド ユーザー マニュアルの体裁を示します。
@@ -36,8 +39,7 @@ ms.suite: ems
 
 これらのソリューションをロールアウトする前に、会社のデータを保護するための変更を行うこと、そのためにエンド ユーザーからの変更が必要な場合があることをエンド ユーザーに広く告知することができます。 次の表の後に、通信の例を示します。
 
-> [!NOTE]
-> このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
+> [!NOTE] このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
 
 ## Azure RMS のシナリオ
 Azure RMS を短時間でデプロイし、ビジネス上の特定の問題に対処するには、ビジネス上の目標に最も一致するシナリオを選択し、必要に応じてカスタマイズします。
@@ -130,7 +132,7 @@ Azure RMS を短時間でデプロイし、ビジネス上の特定の問題に�
 ## ロールアウトする前のユーザーへのアナウンス
 次の通信メッセージの例を使用して、Azure RMS をデプロイするには一定の変更が伴うということをユーザーに通知できます。 次のテキストをコピーして貼り付け、組織のリーダーシップ チームの誰か、可能であれば、最高経営責任者から、すべてのユーザーに電子メールで送信します。 このテキストに変更を加え、ユーザーおよび組織により関連性の高い内容にすることを検討してください。
 
-![](../media/AzRMS_ExampleBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例のバナー](../media/AzRMS_ExampleBanner.png)
 
 ### データを保護するために加える変更
 誤ってパートナーに送信されたドキュメントへのアクセスをブロックしたいと思ったことはありますか。 送信した最新の製品ニュースを顧客が読んだかどうかを知りたいと思ったことはありますか。 見せてはいけない相手に送信される心配なく、機密の製品情報を共有する必要がありますか。
@@ -139,7 +141,7 @@ IT部門は Microsoft Azure Rights Management (Azure RMS) をエンタープラ�
 
 たとえば、共有するドキュメントを追跡する (および必要に応じて、取り消す) には、ドキュメント追跡サイトを使用します。
 
-![](../media/AzRMS_Tutorial_5_Screenshots.png)
+![Azure RMS のドキュメントの追跡のスクリーンショット](../media/AzRMS_Tutorial_5_Screenshots.png)
 
 このしくみを紹介する 2 分間のビデオ「[Azure RMS のドキュメントの追跡と取り消し](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)」をご覧ください。
 
@@ -149,6 +151,6 @@ IT部門は Microsoft Azure Rights Management (Azure RMS) をエンタープラ�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

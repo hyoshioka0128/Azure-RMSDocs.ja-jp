@@ -2,7 +2,7 @@
 # required metadata
 
 title: 使用制限のリファレンス | Azure RMS
-description:
+description: 使用制限は、このトピックに示す定数によって定義されます。
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 5c1b0de6-e6d6-4ec9-b810-017fd606866e
-
+ms.assetid: 16E36039-0FD6-4A0A-82C8-2C9DB19D27DD
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# 使用制限のリファレンス
+# 使用制限のリファレンス
 
 使用制限は、このトピックに示す定数によって定義されます。
 
@@ -55,6 +54,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

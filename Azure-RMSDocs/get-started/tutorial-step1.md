@@ -6,7 +6,7 @@ description: 5 つの手順を実行するだけで 15 分もかからずに組�
 keywords:
 author: Cabailey
 manager: mbaldwin
-ms.date: 04/287/2016
+ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -14,20 +14,22 @@ ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
 
 # optional metadata
 
-ROBOTS: 
-audience:
-ms.devlang:
+#ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
 
 
 # Azure RMS のクイック スタート: 手順 1. Rights Management サービスのアクティブ化
+
+*適用対象: Azure Rights Management、Office 365*
+
 
 移動: 
 > [!div class="op_single_selector"]
@@ -39,15 +41,15 @@ ms.custom:
 - [手順 5. ドキュメントを追跡する](tutorial-step5.md)
 
 
-![](../media/AzRMS_QuickStartSteps1.PNG)
+![Azure RMS のクイック スタート チュートリアルの手順 1](../media/AzRMS_QuickStartSteps1.PNG)
 
 Azure Rights Management をサポートするサブスクリプションを所有している場合でも、既定はサービスが無効になっています。 アクティブ化するには、Office 365 管理センターまたは Azure クラシック ポータルを使用します。
 
--   Azure Rights Management が含まれている Office 365 サブスクリプションを所有している場合、または所有している Office 365 サブスクリプションに Azure Rights Management が含まれていないものの、Azure RMS Premium 用のサブスクリプションを所有している場合: **Office 365 管理センターを使用します**。
+-   Azure Rights Management が含まれている Office 365 サブスクリプションを所有している場合、または所有している Office 365 サブスクリプションに Azure Rights Management が含まれていないものの、Azure RMS Premium 用のサブスクリプションを所有している場合: **Office 365 管理センターを使用します**。.
 
--   Office 365 サブスクリプションを所有していない場合: **Azure クラシック ポータルを使用します**。
+-   Office 365 サブスクリプションを所有していない場合: **Azure クラシック ポータルを使用します**。.
 
-![](../media/AzRMS_Tutorial_1_Screenshots.png)
+![チュートリアルの手順 1 のスクリーンショット](../media/AzRMS_Tutorial_1_Screenshots.png)
 
 ### Office 365 クラシック管理センターから Rights Management をアクティブ化するには
 
@@ -56,17 +58,17 @@ Azure Rights Management をサポートするサブスクリプションを所�
 2.  Office 365 管理センターが自動的に表示されない場合は、左上のアプリ ランチャー アイコンを選択し、**[管理]** を選択します。 [ **管理** ] タイルは、Office 365 管理者に対してのみ表示されます。
 
     > [!TIP]
-    > 管理センターのヘルプについては、「 [Office 365 管理センターについて - 管理者向けヘルプ](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547)」を参照してください。
+    > 管理センターのヘルプについては、「[Office 365 管理センターについて - 管理者向けヘルプ](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547)」を参照してください。.
 
-3.  左ペインで、 **[サービス設定]**を展開します。
+3.  左ペインで、**[サービス設定]** を展開します。.
 
-4.  [ **Rights Management**] をクリックします。
+4.  **[Rights Management]** をクリックします。.
 
-5.  [ **RIGHTS MANAGEMENT** ] ページで、[ **管理**] をクリックします。
+5.  **[RIGHTS MANAGEMENT]** ページで、**[管理]** をクリックします。.
 
-6.  **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]**をクリックします。
+6.  **[RIGHTS MANAGEMENT]** ページで、**[アクティブ化]** をクリックします。.
 
-7.  **[Rights Management をアクティブ化しますか?]**というメッセージが表示されたら、 **[アクティブ化]**をクリックします。
+7.  **[Rights Management をアクティブ化しますか?]** というメッセージが表示されたら、**[アクティブ化]** をクリックします。.
 
 " **Rights Management はアクティブ化されています** " というテキストと、非アクティブ化するオプションが表示されます (このページの手動更新が必要になる場合があります)。
 
@@ -76,13 +78,13 @@ Azure Rights Management をサポートするサブスクリプションを所�
 
 1.  [Azure クラシック ポータル](http://go.microsoft.com/fwlink/p/?LinkID=275081)に移動し、サインインします。
 
-2.  左ペインで、[ **ACTIVE DIRECTORY**] をクリックします。
+2.  左ペインで、**[ACTIVE DIRECTORY]** をクリックします。.
 
-3.  [ **Active Directory** ] ページで、[ **RIGHTS MANAGEMENT**] をクリックします。
+3.  **[Active Directory]** ページで、**[RIGHTS MANAGEMENT]** をクリックします。.
 
 4.  [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] で管理するディレクトリを選択し、**[アクティブ化]** をクリックして、操作を確定します。
 
-これで、[ **Rights Management のステータス** ] に [ **アクティブ** ] と表示され、[ **アクティブ化** ] オプションが [ **非アクティブ化**] に置き換えられます。
+**[Rights Management のステータス]** に **[アクティブ]** と表示され、**[アクティブ化]** オプションが **[非アクティブ化]** に置き換えられます。.
 
 ポータルでは Rights Management の他のオプションを構成できますが、このチュートリアルではその必要がないため、Azure クラシック ポータルを閉じてかまいません。
 
@@ -100,6 +102,6 @@ Azure Rights Management をサポートするサブスクリプションを所�
 [« 概要](quick-start-tutorial.md)
 [手順 2 »](tutorial-step2.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

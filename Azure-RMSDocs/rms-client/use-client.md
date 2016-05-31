@@ -26,7 +26,12 @@ ms.suite: ems
 ---
 
 # Rights Management (RMS) クライアント
-組織のデータの保護に役立つオンプレミス (AD RMS) およびクラウド (Azure RMS) での Rights Management サービスで使用できるRights Management (RMS) クライアントに関する情報については、次のドキュメントを使用してください。
+
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+
+Microsoft Rights Management サービスはクライアント/サーバー型のソリューションです。コンピューターやモバイル デバイスで実行されるアプリケーションと RMS クライアントが統合され、RMS サービスがクラウド (Azure RMS) かオンプレミス (AD RMS) に配置されます。 RMS クライアントは、Office アプリケーション、RMS 共有アプリケーション、ソフトウェア ベンダー製の RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、単体でインストールすることもできます。開発者が RMS 保護を基幹業務アプリケーションに統合したり、管理者またはパワー ユーザーが RMS 保護ツールでファイルを一括保護したりする場合、単体インストールを実行できます。
+
+Rights Management (RMS) クライアントのデプロイ方法と使用方法の詳細については、次のドキュメントを参照してください。Rights Management (RMS) クライアントを Azure RMS や AD RMS と共に使用し、組織のデータを保護できます。
 
 - [RMS クライアントのデプロイに関する注意事項](client-deployment-notes.md)
 
@@ -39,9 +44,10 @@ ms.suite: ems
 
 コミュニティやサポート オプションなどの他のリソースについては、[Microsoft Rights Management サービス](https://www.microsoft.com/rms)の Web サイトを参照してください。
 
+## 関連項目
+[Azure RMS と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)
 
 
-
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

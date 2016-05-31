@@ -12,7 +12,6 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a22e6bd0-8ce8-45b4-9a32-273126ab831e
-
 # optional metadata
 
 #ROBOTS:
@@ -28,14 +27,16 @@ ms.suite: ems
 # 開発者ガイド
 
 ## 概要 ##
-Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、iOS/OS X、Windows デバイスと Linux 用)、**Microsoft Rights Management SDK 2.1** (Windows デスクトップ クライアント用)、**AD RMS SDK** (置き換えられました) の 3 つの世代をご利用いただけるようになりました。
+このガイドでは、Rights Management SDK のスイートと、サポートされているすべてのプラットフォームの増え続けているツール セットおよびコード サンプルについて説明します。 
 
 ## ソフトウェア開発キット ##
+次の表で概説する 3 つの世代の RMS SDK をご利用いただけるようになりました。
+
 | SDK | 説明 |
 |------|---------|
 | [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Android、iOS、Mac OS X、Windows Phone/RT、および Linux/C++ のデバイス アプリで Microsoft Rights Management サービスを使用して情報を保護できるようにするための、軽量な開発エクスペリエンスを提供する次世代のシンプルなツール セット。 |
 | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | Windows デスクトップ アプリケーションの開発者およびサーバー ベースのソリューション プロバイダーのための強力な SDK オファリングです。その製品の著作権を管理できるようにします。|
-|[AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379(v=vs.85).aspx)|** 注 ** - AD RMS SDK は Msdrm.dll でクライアントによって公開される機能を活用し、Windows Server 2012、Windows 8、Windows Server 2008 R2、Windows 7、Windows Server 2008、および Windows Vista で使用できます。 今後のバージョンでは変更されるか、利用できなくなる場合もあります。 代わりに、Msdrm.dll でクライアントによって公開される機能を活用する、Microsoft Rights Management サービス SDK 2.1 を使用してください。|
+|[AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379(v=vs.85).aspx)|**注** - AD RMS SDK は Msdrm.dll でクライアントによって公開される機能を活用し、Windows Server 2012、Windows 8、Windows Server 2008 R2、Windows 7、Windows Server 2008、および Windows Vista で使用できます。 今後のバージョンでは変更されるか、利用できなくなる場合もあります。 代わりに、Msdrm.dll でクライアントによって公開される機能を活用する、Microsoft Rights Management サービス SDK 2.1 を使用してください。|
 |[AD RMS スクリプト API](https://msdn.microsoft.com/en-us/library/bb968797(v=vs.85).aspx)| AD RMS インストールを管理するスクリプトを作成するために使用|
 
 ## コード サンプルとツール
@@ -76,6 +77,6 @@ Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、i
 - [サンプル アプリケーション](https://github.com/Azure-Samples/active-directory-dotnet-rms-windowsstore) - Windows ストア アプリケーション用 Microsoft RMS SDK v4.1 のサンプルには、プラットフォームの基本的なドキュメントの使用例が提供されています。
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

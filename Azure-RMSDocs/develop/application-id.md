@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 834c5943-a724-4322-9035-060c1112fe22
-
+ms.assetid: 0fe9dc-bc91-4018-b28d-2db293a3eaa2
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 方法: Azure アプリケーション ID を取得する
 
 Microsoft Rights Management SDK 4.2 を使って RMS 対応アプリを作成するには、RMS チームとの契約を作成する必要があります。
@@ -39,7 +37,7 @@ MS RMS SDK 4.2 を使って RMS 対応アプリを作成し、リリースする
 アプリ ID を作成し、使用に関する RMS チームとの契約に署名するには、次の手順を使用します。
 
 -   [Azure でアプリ ID を作成する方法](https://msdn.microsoft.com/en-us/library/azure/dn132599.aspx)に関するページのガイダンスに従ってアプリ ID を作成します。
--   "アプリ ID" を <askipteam@microsoft.com> に送信して、RMLA プロセスを開始することを RMS チームに連絡します。
+-   "アプリ ID" を <askipteam@microsoft.com> に送信して、RMLA プロセスを開始することを RMS チームに連絡します。.
 -   RMLA に署名し、RMS チームに返送します。
 -   RMLA に署名したら、*clientID* パラメーターを介して認証ライブラリを呼び出すときにアプリケーション ID を渡します。
 
@@ -64,6 +62,6 @@ MS RMS SDK 4.2 を使って RMS 対応アプリを作成し、リリースする
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

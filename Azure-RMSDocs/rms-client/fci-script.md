@@ -26,10 +26,13 @@ ms.suite: ems
 ---
 
 # ファイル サーバー リソース マネージャー FCI を使用する Azure RMS 保護のための Windows PowerShell スクリプト
-このページには、[Windows Server ファイル分類インフラストラクチャでの RMS の保護](configure-fci.md)に関するページに説明されているサンプル スクリプトが含まれています。このスクリプトをコピーし、編集してください。
 
-*&#42;&#42;免責事項&#42;&#42;: このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 This sample*
-*このサンプル スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。*
+*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
+
+このページには、「[Windows Server ファイル分類インフラストラクチャでの RMS の保護](configure-fci.md)」ページで説明されているサンプル スクリプトが含まれています。このスクリプトをコピーし、編集してください。.
+
+*&#42;&#42;免責事項&#42;&#42;: このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 このサンプル *
+*スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。*
 
 ```
 <#
@@ -174,9 +177,9 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 
 ---
 
-「[Windows Server ファイル分類インフラストラクチャでの RMS の保護](configure-fci.md)」に戻ります。
+「[Windows Server ファイル分類インフラストラクチャでの RMS の保護](configure-fci.md)」に戻ります。.
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

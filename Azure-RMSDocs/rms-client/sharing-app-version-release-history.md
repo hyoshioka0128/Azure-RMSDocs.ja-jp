@@ -26,12 +26,15 @@ ms.suite: ems
 ---
 
 # Rights Management 共有アプリケーション: バージョン リリース履歴
+
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+
 Rights Management チームは、Rights Management 共有アプリケーションの修正プログラムと新機能を定期的に更新しています。 次の情報を使用して、リリースの新機能や変更内容をご確認ください。 最新のリリースは一番上に表示されます。
 
 2015 年 1 月 1 日より前のバージョンは表示されません。
 
 > [!NOTE]
-> RMS 共有アプリケーションに関するフィードバックまたはご質問については、 [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)まで電子メール メッセージをお送りください。
+> RMS 共有アプリケーションに関するフィードバックまたはご質問については、[AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question) まで電子メール メッセージをお送りください。.
 
 ## バージョン 1.0.2004.0
 **リリース日**: 2015 年 12 月 11 日
@@ -59,7 +62,7 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 -   Azure RMS 用の多要素認証 (MFA) をサポートするようになりました。それにより、最新の認証を利用するアプリケーションの Microsoft サインイン アシスタントへの依存関係が削除されました。
 
-    詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」の「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms)」セクションを参照してください。
+    詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」の「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms)」セクションを参照してください。.
 
 ## バージョン 1.0.1784.0
 **リリース日**: 2015 年 7 月 30 日
@@ -81,7 +84,7 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 **新機能**:
 
--   ドキュメントの追跡と取り消しをサポートします。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。
+-   ドキュメントの追跡と取り消しをサポートします。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。.
 
 -   **[保護ファイルの共有]**を選んだ場合のテンプレートのサポート:
 
@@ -91,7 +94,7 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
     -   **[すべてのデバイスで使用を許可する]** と **[使用制限を強制する]**のオプションが表示されなくなりました。 代わりに、ファイルの種類によって **[一般保護]** が自動的に選択されます。
 
-    詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックス オプション](sharing-app-dialog-box.md)」を参照してください。
+    詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックス オプション](sharing-app-dialog-box.md)」を参照してください。.
 
 ## バージョン 1.0.1667.0
 **リリース日**: 2015 年 1 月 19 日
@@ -106,10 +109,10 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 **新機能**:
 
--   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。
+-   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

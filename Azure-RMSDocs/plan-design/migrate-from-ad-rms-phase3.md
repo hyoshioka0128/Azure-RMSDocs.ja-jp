@@ -28,7 +28,10 @@ ms.suite: ems
 
 # 移行フェーズ 3 - サービス構成のサポート
 
-AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 6. から手順 7. を説明します。
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+
+
+AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 6. から手順 7. を説明します。.
 
 
 ## 手順 6.  IRM と Exchange Online の統合を構成する
@@ -49,7 +52,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 最後にこの手順では、電子メール メッセージを保護するために使用されていた複数の TPD を Azure RMS にインポートした場合、Exchange Server コンピューター上のレジストリを手動で編集して、RMS コネクタにすべての TPD URL をリダイレクトする必要があります。
 
 > [!NOTE]
-> 開始する前に、「[Azure Rights Management をサポートするオンプレミス サーバー](../get-started/requirements-servers.md)」で、RMS コネクタがサポートしているオンプレミス サーバーのバージョンを確認してください。
+> 開始する前に、「[Azure RMS をサポートするオンプレミス サーバー](../get-started/requirements-servers.md)」で、Azure RMS をサポートするオンプレミス サーバーのバージョンを確認してください。.
 
 ### Exchange サーバーで IRM を無効にし、AD RMS の構成を削除する
 
@@ -79,19 +82,19 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
-6.  各 Exchange サーバーで、たとえば管理者としてコマンド プロンプトを実行して「**iisreset**」と入力し、IIS をリセットします。
+6.  各 Exchange サーバーで、管理者としてコマンド プロンプトを実行して **iisreset** と入力し、IIS をリセットします。.
 
 ### SharePoint サーバーで IRM を無効にし、AD RMS の構成を削除する
 
 1.  RMS で保護されたライブラリからドキュメントがチェックアウトされていないことを確認します。 ある場合、この手順の最後でそれらにアクセスできなくなります。
 
-2.  SharePoint サーバーの全体管理 Web サイトの **[サイド リンク バー]** セクションで、 **[セキュリティ]**をクリックします。
+2.  SharePoint サーバーの全体管理 Web サイトの **[サイド リンク バー]** セクションで、**[セキュリティ]** をクリックします。.
 
-3.  **[セキュリティ]** ページの **[情報ポリシー]** セクションで、 **[Information Rights Management の構成]**をクリックします。
+3.  **[セキュリティ]** ページの **[情報ポリシー]** セクションで、**[Information Rights Management の構成]** をクリックします。.
 
-4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、 **[このサーバーでは IRM を使用しない]**を選択して、 **[OK]**をクリックします。
+4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、**[このサーバーでは IRM を使用しない]** を選択して、**[OK]** をクリックします。.
 
-5.  各 SharePoint サーバー コンピューターで、\ProgramData\Microsoft\MSIPC\Server\*&lt;SharePoint サーバーを実行するアカウントの SID&gt;* フォルダーの内容を削除します。
+5.  各 SharePoint サーバー コンピューターで、SharePoint サーバーを実行するアカウントの \ProgramData\Microsoft\MSIPC\Server\*&lt;SID フォルダーの内容を削除します。&gt;*.
 
 #### RMS コネクタのインストールと構成
 
@@ -103,7 +106,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
     これらのレジストリの編集を行うときは、次の手順を使用します。
 
-    -   *ConnectorFQDN* は、DNS で定義したコネクタの名前に置き換えます。 たとえば、 **rmsconnector.contoso.com**です。
+    -   *ConnectorFQDN* は、DNS で定義したコネクタの名前に置き換えます。 たとえば、**rmsconnector.contoso.com** です。.
 
     -   オンプレミス サーバーとの通信に HTTP または HTTPS のどちらを使用するようにコネクタを構成しているかにより、コネクタの URL に HTTP または HTTPS プレフィックスを使用してください。
 
@@ -216,8 +219,8 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 以上の手順を完了した後、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」の「**次のステップ**」セクションに進むことができます。
 
 ## 次のステップ
-移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。
+移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。.
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

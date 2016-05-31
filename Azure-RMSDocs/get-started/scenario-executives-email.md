@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # シナリオ - 役員が安全に特権情報を交換できるようにする
+
+*適用対象: Azure Rights Management、Office 365*
+
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。 メールと添付ファイルは、Azure Rights Management によって自動的に保護されます。
 
 必要に応じて、役員が、他のユーザーに転送する前の確認などの目的で、保護されていない電子メールを他の役員に送信する必要がある場合に指定できる例外 をルールに追加することも可能です (たとえば、電子メール メッセージの件名に「保護しない (Do Not Protect)」の省略形として DNP を指定するなど)。
@@ -39,7 +42,7 @@ ms.suite: ems
 -   役員には、保護されていない電子メールを他の役員に送信する必要がある場合に、自分でルールをオーバーライドする手段があります。
 
 ## デプロイの手順
-![](../media/AzRMS_AdminBanner.png)
+![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
@@ -48,10 +51,10 @@ ms.suite: ems
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />**役員**という名前のメールが有効なグループ: すべての役員はこのグループのメンバーです<br /><br />**RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
+|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **役員**という名前のメールが有効なグループ: すべての役員はこのグループのメンバーです。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Rights Management テナント キーを計画して実装する](https://technet.microsoft.com/library/dn440580.aspx)|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|次のいずれかの構成:<br /><br />Azure Rights Management の Exchange Online が有効になっている<br /><br />RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
+|次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
 |この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」<br /><br />Exchange 2013 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.150%29.asp)」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)」|
 
@@ -100,27 +103,27 @@ ms.suite: ems
 
 3.  *&lt;電子メール ドメイン&gt;* を組織の電子メール ドメイン名に置き換えます。
 
-4.  *&lt;連絡先の詳細&gt;* を、Web サイト リンク、電子メール アドレス、電話番号など、ユーザーがヘルプ デスクに連絡を取るための方法を示す手順に置き換えます。
+4.  *&lt;連絡先の詳細&gt;* は、Web サイト リンク、電子メール アドレス、電話番号など、ユーザーがヘルプ デスクに連絡を取るための方法を示す手順に置き換えます。
 
 5.  必要に応じてお知らせに変更を加え、変更したお知らせをユーザーに送信します。
 
 ドキュメントの例では、カスタマイズ後、このお知らせがユーザーにどのように表示されるかを示します。
 
-![](../media/AzRMS_UsersBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
 ### IT からのお知らせ： &lt;組織名&gt; の役員メールが自動的に保護されるようになりました
 今後、社内の他の &lt;組織名&gt; の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を &lt;組織名&gt; の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
-&lt;組織名&gt; の別の役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@&lt;emaildomain&gt;) 宛てに送信するようにしてください。
+&lt;組織名&gt; の別の役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*名前*@&lt;電子メール ドメイン&gt;) 宛てに送信するようにしてください。
 
 **サポートが必要な場合は、**
 
--   ヘルプ デスクに問い合わせる: &lt;連絡先の詳細&gt;
+-   ヘルプ デスクに問い合わせる: &lt;連絡先の詳細&gt;&gt;
 
 ### ユーザー ドキュメントの例
-![](../media/AzRMS_ExampleBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 #### IT からのお知らせ：VanArsdel の役員メールが自動的に保護されるようになりました
 今後、VanArsdel の他の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
@@ -135,6 +138,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

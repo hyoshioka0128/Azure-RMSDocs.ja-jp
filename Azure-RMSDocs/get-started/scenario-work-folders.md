@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する
+
+*適用対象: Azure Rights Management、Office 365*
+
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、[ワーク フォルダー](https://technet.microsoft.com/library/dn265974.aspx)内の Office ドキュメントに永続的な保護を適用します。 ワーク フォルダーでは、Windows Server を実行しているファイル サーバー用のロール サービスを使用して、ユーザーが PC やデバイスから一貫した方法で作業ファイルにアクセスできるようにします。 ワーク フォルダーにはファイルを保護するための独自の暗号化が用意されていますが、ワーク フォルダー環境の外にファイルが移動されると、この保護は失われます。 たとえば、ユーザーが同期されたファイルをコピーして、IT 部門の管理下にないストレージに保存する場合や、ファイルが他のユーザーにメールで送信される場合などです。
 
 Azure Rights Management が提供する追加の保護では、組織外のユーザーがファイルを表示できないようにすることで、予期しないデータの損失を防ぎます。 そのためには、組み込みの既定の権利ポリシー テンプレートのいずれかを使用できます。 ただし、このシナリオをデプロイする前に、ユーザーが組織外のユーザーとこれらのファイルを共有しなければならない場合があるかどうかを検討してください。 たとえば、ドラフトの価格表で作業をした後、ユーザーが別の組織の顧客に最終版をメールで送信する場合などです。 ワーク フォルダーの既定の Rights Management テンプレートを使用する場合、他の組織の顧客は、メールで送信されたこのドキュメントを読むことができませんでした。 この要件を満たすには、ユーザーがファイルに新しい権利ポリシーを適用できるようにするカスタム テンプレートを作成します。これにより、メールで指定するユーザーに対するすべての従業員の元の制限が置き換えられます。
@@ -46,7 +49,7 @@ Azure Rights Management が提供する追加の保護では、組織外のユ�
 -   権利ポリシー テンプレートに指定されていないユーザー (たとえば、別の組織のユーザー) と共有するファイルの場合、ユーザーは新しい権利ポリシーを適用して、元の権限ポリシーによる保護を置き換える必要があります。
 
 ## デプロイの手順
-![](../media/AzRMS_AdminBanner.png)
+![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
@@ -57,7 +60,7 @@ Azure Rights Management が提供する追加の保護では、組織外のユ�
 |---------------|--------------------------------|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、ワーク フォルダーを使用するすべてのユーザーに必要です。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|次のいずれかです。<br /><br />新しい権利ポリシーの適用を許可しない既定のテンプレートをすべてのユーザーに対して使用する: 既定のテンプレート "**&lt;組織名&gt; - 社外秘**" をアーカイブしていない<br /><br />ユーザーが新しい権利ポリシーを適用するために適したカスタム テンプレートを使用する: カスタム テンプレートを作成するための手順を使用する|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
+|次のいずれかです。<br /><br />- 新しい権利ポリシーの適用を許可しない既定のテンプレートをすべてのユーザーに対して使用する: 既定のテンプレート "**&lt;組織名&gt; - 社外秘**" をアーカイブしていない<br /><br />- ユーザーが新しい権利ポリシーを適用するために適したカスタム テンプレートを使用する: カスタム テンプレートを作成するための手順を使用する|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
 |Rights Management コネクタがインストール済みで、Windows Server コンピューター用に承認され、**FCI Server** のロール用に構成されている。|[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 
@@ -125,6 +128,6 @@ Azure Rights Management を使用して保護するファイルを組織外の�
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

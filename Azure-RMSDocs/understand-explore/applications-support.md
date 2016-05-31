@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -25,10 +25,12 @@ ms.suite: ems
 
 ---
 
-# アプリケーションで Azure Rights Management をサポートする方法
+# アプリケーションによる Azure Rights Management のサポート
+
+*適用対象: Azure Rights Management、Office 365*
+
 次の情報は、幅広く使用されているエンド ユーザー アプリケーション (Office アプリケーション、Word、Excel、PowerPoint、Outlook など) およびサービス (Exchange、SharePoint など) が Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用して、組織のデータの保護を可能にする方法を理解する場合に役立ちます。 
-> [!NOTE]
-> [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) によってサポートされるアプリケーションとバージョンを確認するには、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
+> [!NOTE][!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) によってサポートされるアプリケーションとバージョンを確認するには、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
 
 場合によっては、構成するポリシーに従って情報保護が自動的に適用されます。 たとえば、SharePoint ライブラリ、分類されたファイル、Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合は、ユーザーが、テンプレートを選択するか特定のオプションを選択して、アプリケーションから情報保護を自分で適用する必要があります。 たとえば、ユーザーが電子メールでファイルを共有する場合や、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限することでファイルをその場で保護する場合などがこれに該当します。
 
@@ -38,8 +40,16 @@ ms.suite: ems
 
 Azure RMS 用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
-> [!TIP]
-> Azure RMS を使用するアプリケーションの例とスクリーンショットについては、「[Azure RMS in action: What administrators and users see (Azure RMS の動作: 管理者およびユーザーに対する表示)](what-admins-users-see.md)」を参照してください。
+> [!TIP]Azure RMS を使用するアプリケーションの例とスクリーンショットについては、「[Azure RMS の動作:管理者およびユーザーに対する表示](what-admins-users-see.md)」を参照してください。
+
+検索サービスは、さまざまな方法で Rights Management と統合できます。 たとえば、 
+
+- Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの RMS で保護された電子メールが検索結果に自動的に表示されようにします。 
+
+- SharePoint Online と SharePoint Server は、ダウンロード時にのみファイルに RMS 保護を適用します。つまり、SharePoint でのインデックス作成と検索結果は、このドキュメント保護ソリューションによる影響を受けません。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前に RMS でファイルを保護します。
+
+- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、RMS で保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルは含まれませんが、機密データを含むファイルは PC にサインインまたは接続する他のユーザーに対する検索結果に表示されないことが保証されます。 
+
 
 
 ## 次のステップ
@@ -56,6 +66,6 @@ Azure RMS 用にこれらのアプリケーションを構成する方法の詳�
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS の要件: Azure RMS をサポートするクライアント デバイス
+
+*適用対象: Azure Rights Management、Office 365*
+
 次のセクションでは、Azure Rights Management (Azure RMS) をサポートするデバイスについて説明します。
 
 ## コンピューター
@@ -59,6 +62,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

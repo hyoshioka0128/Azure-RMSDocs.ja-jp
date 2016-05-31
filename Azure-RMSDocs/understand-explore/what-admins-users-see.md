@@ -27,28 +27,31 @@ ms.suite: ems
 
 
 # Azure RMS の動作:管理者およびユーザーに対する表示
+
+*適用対象: Azure Rights Management、Office 365*
+
 この記事では、Azure Rights Management (Azure RMS) を使用する場合に管理者とユーザーに表示される内容と、機密情報を保護する方法についての一般的な例をいくつか紹介します。
 
 > [!NOTE]
 > Azure RMS がデータを保護するこれらすべての例で、適用される保護によって所有者がメンバーではないグループにアクセス許可が付与される場合、または適用される保護に有効期限が含まれる場合であっても、コンテンツの所有者は引き続きデータ (ファイルまたは電子メール) に完全にアクセスできます。
-> 
+>
 > 同様に、IT 部門は、管理者が指定する許可されたユーザーまたはサービスに委任されたアクセスを付与する Rights Management のスーパー ユーザー機能を使用することで、制限なく保護されたデータに常にアクセスできます。 さらに、IT 部門は保護されているデータの使用状況を追跡および監視できます (だれがいつデータにアクセスしているかなど)。
 
-動作している RMS の他のスクリーンショットやビデオについては、[Microsoft Rights Management サービス ポータル](http://www.microsoft.com/rms)と [Microsoft Rights Management (RMS) チーム ブログ](http://blogs.technet.com/b/rms)をご覧ください。
+動作している RMS の他のスクリーンショットやビデオについては、[Microsoft Rights Management サービス ポータル](http://www.microsoft.com/rms)と [Microsoft Rights Management (RMS) チーム ブログ](http://blogs.technet.com/b/rms)をご覧ください。.
 
 ## Rights Management のアクティブ化と構成
 Windows PowerShell を使用して Azure RMS をアクティブ化および構成できますが、管理ポータルを使用する法が簡単です。 サービスをアクティブ化するとすぐに、2 つの既定のテンプレートが作成されます。管理者とユーザーはこれを選択して迅速かつ簡単にファイルに情報保護を適用できます。 ただし、追加のオプションと設定用に独自のカスタム テンプレートを作成することもできます。
 
-![](../media/AzRMS_StoryboardActivate_small1.png)
+![手順 1 で管理者に表示される内容](../media/AzRMS_StoryboardActivate_small1.png)
 
 
 **ステップ 1 で管理者に表示される内容:** Office 365 管理センター (1 番目の画像) または Azure クラシック ポータル (2 番目の画像) を使用して、RMS をアクティブ化できます。<br /><br />ワンクリックでアクティブ化し、さらにワンクリックで確認すると、組織内の管理者とユーザーに対する情報の保護が有効になります。
 
 ---
 
-![](../media/AzRMS_TemplatesPortal_small.png)
+![手順 2 で管理者に表示される内容](../media/AzRMS_TemplatesPortal_small.png)
 
-**ステップ 2 で管理者に表示される内容:** アクティブ化の後、2 つの権限ポリシー テンプレートが自動的に組織で使用可能になります。 1 つのテンプレートは読み取り専用 (名前に「**社外秘、表示のみ**」が含まれるもの) で、もう 1 つは読み取りおよび変更アクセス用 (**社外秘**) です。
+**ステップ 2 で管理者に表示される内容:** アクティブ化の後、2 つの権限ポリシー テンプレートが自動的に組織で使用可能になります。 1 つのテンプレートは読み取り専用 (名前に**社外秘、表示のみ**が含まれるもの) で、もう 1 つは読み取りおよび変更アクセス用 (**社外秘**) です。).
 
 これらのテンプレートをファイルまたは電子メールに適用すると、アクセスは組織内のユーザーに制限されます。 部外者に会社のデータがリークするのを防ぐにはこれが非常に迅速かつ簡単な方法です。
 
@@ -59,13 +62,13 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 ---
 
-![](../media/AzRMS_TemplatesSettings3.png)
+![手順 3 で管理者に表示される内容](../media/AzRMS_TemplatesSettings3.png)
 
 **ステップ 3 で管理者に表示される内容:** オフライン アクセス、有効期限の設定、そのテンプレートをすぐに発行する (Rights Management をサポートするアプリケーションで表示されるようにする) かどうかは、独自のテンプレートを作成する場合に使用可能な構成設定の一部です。
 
 ---
 
-![](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
+![手順 4 で管理者に表示される内容](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
 
 **ステップ 4 でユーザーに表示される内容:** これらのテンプレートを発行すると、ユーザーはファイル エクスプローラーや Microsoft Word などのアプリケーションでそれを選択できます。
 
@@ -77,9 +80,9 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
-- 詳細な手順については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」および「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」をご覧ください。
+- 詳細な手順については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」および「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」をご覧ください。.
 
-- ユーザーの重要な企業ファイル保護の詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」をご覧ください。
+- ユーザーの重要な企業ファイル保護の詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」をご覧ください。.
 
 次に、管理者がテンプレートを適用してファイルやメディアの情報保護を自動的に構成する方法の例を示します。
 
@@ -89,23 +92,23 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 ファイルに分類の値を適用する方法は複数あります。 たとえば、ファイルの内容を検査し、それに応じて機密性や個人情報などの組み込みの分類を適用できます。 ただし、この例では、管理者は [ **Marketing Promotions** ] フォルダーに保存されているすべてのユーザー文書に自動的に適用されている **Marketing** のカスタム分類を作成します。 このフォルダーは、Marketing グループのメンバーにアクセスを制限する NTFS アクセス許可で保護されていますが、そのグループのだれかがファイルを移動または電子メールで送信すると、アクセス許可が失われることがわかっています。 その後は、承認されていないユーザーがファイル内の情報にアクセスできます。
 
-![](../media/AzRMS_FCI_ConnectorSmall.png)
+![手順 1 で管理者に表示される内容](../media/AzRMS_FCI_ConnectorSmall.png)
 
 **ステップ 1 で管理者に表示される内容:** 管理者は、Rights Management (RMS) コネクタをインストールして構成します。これは、オンプレミス サーバーと Azure RMS との間のリレーとして機能します。
 
 ---
 
-![](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
+![手順 2 で管理者に表示される内容](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
 
 **ステップ 2 で管理者に表示される内容:** ファイル サーバーで、管理者は [**Marketing Promotions**] フォルダーのすべてのユーザー ファイルが RMS 暗号化で保護される **Marketing** として自動的に分類されるように分類ルールとタスクを構成します。
 
-最初の例で作成したカスタム RMS テンプレートを選択します。これは、Sales and Marketing 部門のメンバーにアクセスを制限します。 **営業およびマーケティング - 読み取りと印刷のみ**。
+最初の例で作成したカスタム RMS テンプレートを選択します。これは、Sales and Marketing 部門のメンバーにアクセスを制限します。**営業およびマーケティング - 読み取りと印刷のみ**。.
 
 その結果、そのフォルダー内のすべてのドキュメントは自動的に Marketing 分類で構成され、Sales and Marketing RMS テンプレートで保護されます。
 
 ---
 
-![](../media/AzRMS_FCI_EmailSmall.png)
+![手順 3 で管理者に表示される内容](../media/AzRMS_FCI_EmailSmall.png)
 
 **ステップ 3 でユーザーに表示される内容:** RMS がアクセス権のない人へ機密情報のリークを防ぐ方法:
 
@@ -116,7 +119,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
-- 詳細な手順については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」をご覧ください。
+- 詳細な手順については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」をご覧ください。.
 
 ## Exchange Online とデータ損失防止ポリシーによる電子メールの自動的な保護
 
@@ -124,7 +127,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 この例では、管理者は個人情報データの保護に関する米国の規制への準拠を組織が維持するのに役立つポリシーを構成しますが、他のコンプライアンス規制または管理者が定義するカスタム ルースに対して構成することもできます。
 
-![](../media/AzRMS_DLPExample1.png)
+![手順 1 で管理者に表示される内容](../media/AzRMS_DLPExample1.png)
 
 **ステップ 1 で管理者に表示される内容:** Exchange 管理センターで、**U.S.Personally Identifiable Information (PII) Data** という名前の Exchange テンプレートを使用して、新しい DLP ポリシーを構成します。 このテンプレートは、社会保障番号や免許証番号などの情報を電子メール メッセージで検索します。
 
@@ -134,13 +137,13 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 ---
 
-![](../media/AzRMS_DLPUnprotectedEmail_small.png)
+![手順 2 で管理者に表示される内容](../media/AzRMS_DLPUnprotectedEmail_small.png)
 
 **ステップ 2 でユーザーに表示される内容:** 採用担当マネージャーは最近採用された従業員の社会保障番号を含む電子メール メッセージを書きます。 彼は人事部門の Sherrie にこの電子メール メッセージを送信します。
 
 ---
 
-![](../media/AzRMS_DLPProtectedEmail_small.png)
+![手順 3 で管理者に表示される内容](../media/AzRMS_DLPProtectedEmail_small.png)
 
 **ステップ 3 でユーザーに表示される内容:** この電子メール メッセージが組織の外部に送信または転送された場合、DLP ルールが権限保護を自動的に適用します。
 
@@ -150,9 +153,9 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
--   Azure RMS が Exchange Online と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management のサポート](applications-support.md)」の「[Exchange Online と Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server)」セクションをご覧ください。
+-   Azure RMS が Exchange Online と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management のサポート](applications-support.md)」の「[Exchange Online と Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server)」セクションをご覧ください。.
 
--   Azure RMS 用に Exchange Online を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションをご覧ください。
+-   Azure RMS 用に Exchange Online を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションをご覧ください。.
 
 ## SharePoint Online と保護されたライブラリでのファイルの自動保護
 
@@ -160,13 +163,13 @@ SharePoint Online と保護されたライブラリを使用してドキュメ�
 
 この例では、Contoso の SharePoint 管理者が、編集とバージョン管理のためにドキュメントを集中的に保管してチェックアウトするライブラリを各部署に対して作成しています。 たとえば、Sales 用、Marketing 用、Human Resources 用などのライブラリがあります。 これらの保護されたライブラリのいずれかで新しいドキュメントをアップロードまたは作成すると、そのドキュメントはライブラリの保護を継承し (権限ポリシー テンプレートを選択する必要はありません)、SharePoint ライブラリの外に移動された場合であっても自動的に保護が維持されます。
 
-![](../media/AzRMS_StoryboardSPO_small1.png)
+![手順 1 で管理者に表示される内容](../media/AzRMS_StoryboardSPO_small1.png)
 
 **ステップ 1 で管理者に表示される内容:** 管理者は、SharePoint サイトに対して Information Rights Management を有効にします。
 
 ---
 
-![](../media/AzRMS_StoryboardSPO_small2.png)
+![手順 2 で管理者に表示される内容](../media/AzRMS_StoryboardSPO_small2.png)
 
 **ステップ 2 で管理者に表示される内容:** 次に、ライブラリの Rights Management を有効にします。 その他のオプションはありますが、通常、必要なのはこの単純な設定のみです。
 
@@ -174,7 +177,7 @@ SharePoint Online と保護されたライブラリを使用してドキュメ�
 
 ---
 
-![](../media/AzRMS_StoryboardSPO_small3.png)
+![手順 3 で管理者に表示される内容](../media/AzRMS_StoryboardSPO_small3.png)
 
 **ステップ 3 でユーザーに表示される内容:** 営業部門のユーザーがライブラリからこの営業レポートをチェックアウトするときは、それがアクセス制限で保護されたドキュメントであることが、上部の情報バナーではっきりと示されます。
 
@@ -184,9 +187,9 @@ SharePoint Online と保護されたライブラリを使用してドキュメ�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
--   Azure RMS が SharePoint と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management のサポート](applications-support.md)」の「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションをご覧ください。
+-   Azure RMS が SharePoint と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management のサポート](applications-support.md)」の「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションをご覧ください。.
 
--   Azure RMS 用に SharePoint を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[SharePoint Online と OneDrive for Business: IRM 構成](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションをご覧ください。
+-   Azure RMS 用に SharePoint を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[SharePoint Online と OneDrive for Business: IRM 構成](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションをご覧ください。.
 
 ## ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有
 
@@ -196,7 +199,7 @@ SharePoint Online と保護されたライブラリを使用してドキュメ�
 
 この例では、Contoso の Alice が、機密の Word 文書を Fabrikam の Bob に電子メールで送信します。 Bob は iPad でドキュメントを読みますが、iPhone、Android タブレットまたはフォン、Mac コンピューター、Windows Phone またはコンピューターでも同じように簡単に読むことができます。
 
-![](../media/AzRMS_StoryboardEmail_small1.png)
+![手順 1 でユーザーに表示される内容](../media/AzRMS_StoryboardEmail_small1.png)
 
 **ステップ 1 でユーザーに表示される内容:** Alice は、Windows PC で標準の電子メール メッセージを作成し、ドキュメントを添付します。
 
@@ -206,7 +209,7 @@ Alice は、Bob がドキュメントの表示と編集だけを許可し、コ�
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small2.png)
+![手順 2 でユーザーに表示される内容](../media/AzRMS_StoryboardEmail_small2.png)
 
 **ステップ 2 でユーザーに表示される内容:** Bob は、電子メールを iPad で見ます。
 
@@ -214,7 +217,7 @@ Alice のメッセージと添付ファイルに加えて、サインアップ�
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small3.png)
+![手順 3 でユーザーに表示される内容](../media/AzRMS_StoryboardEmail_small3.png)
 
 **ステップ 3 でユーザーに表示される内容:** Bob は添付ファイルを開封できるようになります。 Bob は最初に、彼が目的の受信者であることを確認するサインインを求められます。
 
@@ -222,7 +225,7 @@ Bob がドキュメントを表示すると、ドキュメントの表示と編�
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small4.png)
+![手順 4 でユーザーに表示される内容](../media/AzRMS_StoryboardEmail_small4.png)
 
 **ステップ 4 でユーザーに表示される内容:** Bob が送信されたドキュメントを正常に開いてアクセスすると、Alice はそのことを伝える電子メール メッセージを受け取ります。
 
@@ -232,7 +235,7 @@ Bob が電子メールと添付ファイルを転送した場合、他のユー�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
-- 詳細な手順については、[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-protect-by-email.md) の「[電子メールで共有するファイルを保護する](../rms-client/sharing-app-view-use-files.md)」と「[保護されたファイルを表示して使用する](../rms-client/sharing-app-user-guide.md)」をご覧ください。
+- 詳細な手順については、[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)の「[電子メールで共有するファイルを保護する](../rms-client/sharing-app-protect-by-email.md)」と「[保護されたファイルを表示して使用する](../rms-client/sharing-app-view-use-files.md)」をご覧ください。.
 
 - 「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」にはこのシナリオの詳細な手順が含まれています。
 
@@ -240,6 +243,7 @@ Bob が電子メールと添付ファイルを転送した場合、他のユー�
 
 Azure RMS の機能の例をいくつか説明しましたが、そのしくみに関心があるかもしれません。 Azure RMS の動作の技術情報については、「[Azure RMS の機能の詳細](how-does-it-work.md)」をご覧ください。
 
-<!--HONumber=Apr16_HO3-->
+
+<!--HONumber=Apr16_HO4-->
 
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: 証明書チェーンについて | Azure RMS
-description:
+description: 権限保護対応アプリケーションには、公開キーのペアと、信頼のルートにある Microsoft の証明書につながる証明書チェーンが必要です。
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 14694cb0-adc4-4c2f-aff5-22aa132777df
-
+ms.assetid: 6AEA2162-82BF-4867-9285-111CD3FCD2F6
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# 証明書チェーンについて
+# 証明書チェーンについて
 
 権限保護対応アプリケーションを開発するには、公開キーのペアと、信頼のルートにある Microsoft の証明書につながる証明書チェーンが必要です。
 
@@ -49,7 +48,7 @@ ms.suite: ems
 
 証明書チェーンの使用とアプリケーションの署名の詳細については、「[Switching to the production environment (運用環境への切り替え)](switching-to-the-production-environment.md)」をご覧ください。
 
-### 関連項目
+## 関連項目
 
 * [開発者の概念](ad-rms-concepts-nav.md)
 * [Switching to the production environment (運用環境への切り替え)](switching-to-the-production-environment.md)
@@ -58,6 +57,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

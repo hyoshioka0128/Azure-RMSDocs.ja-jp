@@ -26,7 +26,10 @@ ms.suite: ems
 ---
 
 # Azure Rights Management コネクタのインストールと構成
-Azure Rights Management (RMS) コネクタをインストールして構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 1 から手順 4 を説明します。
+
+*適用対象: Azure Rights Management、Office 365*
+
+Azure Rights Management (RMS) コネクタをインストールして構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」の手順 1 から手順 4 を説明します。.
 
 作業を開始する前に、このデプロイの[前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector)を確認してください。
 
@@ -38,7 +41,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
     > [!NOTE]
     > テナント (Office 365 テナントまたは Azure AD テナント) ごとに 1 つの RMS コネクタをインストールします (複数のサーバーにインストールして高可用性を確保します)。 Active Directory RMS とは異なり、RMS コネクタを各フォレストにインストールする必要はありません。
 
-2.  [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から RMS コネクタのソース ファイルをダウンロードします。
+2.  [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から RMS コネクタのソース ファイルをダウンロードします。.
 
     RMS コネクタをインストールするには、RMSConnectorSetup.exe をダウンロードしてください。
 
@@ -50,9 +53,9 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 
 3.  RMS コネクタをインストールするコンピューター上で、 **RMSConnectorSetup.exe** を管理者権限で実行します。
 
-4.  [Microsoft Rights Management コネクタ セットアップ] の [ようこそ] ページで、 **[Microsoft Rights Management コネクタをコンピューターにインストールする]**を選択し、 **[次へ]**をクリックします。
+4.  [Microsoft Rights Management コネクタ セットアップ] の [ようこそ] ページで、**[Microsoft Rights Management コネクタをコンピューターにインストールする]** を選択し、**[次へ]** をクリックします。.
 
-5.  RMS コネクタのライセンス条項を読んで同意したら、 **[次へ]**をクリックします。
+5.  RMS コネクタのライセンス条項を読んで同意したら、**[次へ]** をクリックします。.
 
 続行するには、RMS コネクタを構成するためのアカウントとパスワードを入力します。
 
@@ -74,7 +77,7 @@ RMS コネクタを構成する前に、RMS コネクタを構成するのに十
     > [!NOTE]
     > Microsoft RMS コネクタ管理者のアカウントを使用する場合は、最初に次の手順を実行して、RMS コネクタの管理者ロールを割り当てる必要があります。
     >
-    > 1.  RMS コネクタをインストールしたコンピューターに、Rights Management 用の Windows PowerShell をダウンロードしてインストールします。 詳細については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
+    > 1.  RMS コネクタをインストールしたコンピューターに、Rights Management 用の Windows PowerShell をダウンロードしてインストールします。 詳細については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。.
     >
     >     **[管理者として実行]** コマンドで Windows PowerShell を起動し、[Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) コマンドを使用して Azure RMS サービスに接続します。
     >
@@ -108,7 +111,7 @@ RMS コネクタのインストール プロセスでは、すべての前提条
 
 -   最初のコネクタをインストールした段階では、 **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択しないでください。 このオプションは、2 つ目 (または最後) の RMS コネクタをインストールした後に選択します。 代わりに、少なくとも 1 つの他のコンピューターで、ウィザードをもう一度実行してください。 2 つ以上のコネクタをインストールする必要があります。
 
--   2 つ目 (または最後) のコネクタをインストールした後で、 **[コネクタ管理者コンソールを起動してサーバーを承認する]**を選択します。
+-   2 つ目 (または最後) のコネクタをインストールした後で、**[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択します。.
 
 > [!TIP]
 > この時点で、検証テストを実行して、RMS コネクタ用の Web サービスが機能しているかどうかを確認できます。
@@ -128,7 +131,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 -   複数のサーバーを 1 つのエントリとして追加するには、Active Directory のセキュリティ グループや配布グループ、または複数のサーバーで使用されているサービス アカウントを指定します。 この構成を使用すると、サーバーのグループは同じ RMS 証明書を共有し、グループに属するすべてのサーバーは、グループ内の各サーバーが保護しているコンテンツの所有者と見なされます。 管理オーバーヘッドを最小限に抑えるため、個々のサーバー単位ではなく、この単一グループ構成を使用して組織の Exchange サーバーまたは SharePoint サーバー ファームを承認することを推奨します。
 
-**[コネクタの使用が許可されているサーバー]** ページで **[追加]**をクリックします。
+**[コネクタの使用が許可されているサーバー]** ページで **[追加]** をクリックします。.
 
 > [!NOTE]
 > サーバーの承認は、サービスまたはサーバーのコンピューター アカウントの ServerCertification.asmx に NTFS アクセス許可を手動で適用して、Exchange アカウントにユーザー スーパー権限を手動で付与する AD RMS 構成に対する Azure RMS の同等の構成です。 コネクタでは、ServerCertification.asmx に NTFS アクセス許可を適用する必要はありません。
@@ -147,7 +150,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
     -   SharePoint 2010 サーバーが (サービス アカウントを使用しないで) ローカル システムとして実行するように構成されている場合は、Active Directory ドメイン サービスにセキュリティ グループを手動で作成し、この構成でのサーバーのコンピューター名オブジェクトを、このグループに追加します。
 
-    -   SharePoint サーバーがサービス アカウントを使用するように構成されている場合は (SharePoint 2010 の場合は推奨される方法、SharePoint 2013 の場合は唯一のオプション)、次のようにします。
+    -   SharePoint サーバーがサービス アカウントを使用するように構成されている場合は (SharePoint 2010 の場合は推奨される方法、SharePoint 2016 と SharePoint 2013 の場合は唯一のオプション)、次のようにします。
 
         1.  SharePoint サーバーの全体管理サービスを実行するサービス アカウントを追加して、SharePoint を管理者コンソールから構成できるようにします。
 
@@ -158,7 +161,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 -   ファイル分類インフラストラクチャを使用するファイル サーバーの場合、関連するサービスはローカル システム アカウントとして実行されるため、ファイル サーバーのコンピューター アカウント (SERVERNAME$ など)、またはこれらのコンピューター アカウントを含むグループを承認する必要があります。
 
-一覧へのサーバーの追加が完了したら、 **[閉じる]**をクリックします。
+一覧へのサーバーの追加が完了したら、**[閉じる]** をクリックします。.
 
 次に、RMS コネクタがインストールされているサーバーの負荷分散を構成する必要があります (未構成の場合)。また、これらのサーバーと承認されたサーバーの間の接続に HTTPS を使用するかどうかを検討します。
 
@@ -170,7 +173,7 @@ RMS コネクタの 2 つ目または最後のインスタンスをインスト�
 > [!IMPORTANT]
 > コネクタを使用するように Exchange サーバーまたは SharePoint サーバーを構成した後は、この名前を変更しないことをお勧めします。名前を変更すると、これらのサーバーですべての IRM 構成を消去し、再構成する必要があります。
 
-DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 このためには、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、「[Load Balancing Deployment Guide (負荷分散デプロイ ガイド)](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)」を参照してください。
+DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 このためには、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、「[Load Balancing Deployment Guide](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)」 (負荷分散デプロイ ガイド) を参照してください。.
 
 次の設定を使用して、NLB クラスターを構成します。
 
@@ -235,12 +238,12 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 
 -   64 ビット コンピューターの場合: RMSConnectorSetup.exe
 
-これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
+これらのファイルをまだダウンロードしていない場合は、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。.
 
 
 ## 次のステップ
-RMS コネクタのインストールと構成が完了したので、コネクタを使用するためにオンプレミス サーバーを構成することができます。 「[Configuring servers for the Azure Rights Management connector (Azure Rights Management コネクタ用にサーバーを構成する)](configure-servers-rms-connector.md)」に進みます。
+RMS コネクタのインストールと構成が完了したので、コネクタを使用するためにオンプレミス サーバーを構成することができます。 「[Configuring servers for the Azure Rights Management connector (Azure Rights Management コネクタ用にサーバーを構成する)](configure-servers-rms-connector.md)」に進みます。.
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

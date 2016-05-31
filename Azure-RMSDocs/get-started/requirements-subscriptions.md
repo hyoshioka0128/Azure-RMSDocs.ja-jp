@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション
+
+*適用対象: Azure Rights Management、Office 365*
+
 Azure Rights Management (Azure RMS) を使用するには、組織は次のサブスクリプションの少なくとも 1 つと、ユーザー、ファイル、および電子メール メッセージを保護するサービスの十分な数のライセンスを用意する必要があります。 ユーザー (ファイルや電子メール メッセージの所有者) に保護を適用できるサービスがある場合、そのようなユーザーにはこれらのライセンスの 1 つが必要になります。 この保護されたデータを利用するだけであれば (読み取りや編集など)、ライセンスは必要ありません。
 
 -   Office 365
@@ -94,6 +97,6 @@ Enterprise Mobility Suite サブスクリプションについて詳しくは、
 ## 次のステップ
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

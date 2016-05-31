@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: afe062d5-a507-45e5-a4ec-613f9c46772e
-
+ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Android のコード例
 
 このトピックでは、Android バージョンの RMS SDK の重要なコード要素について説明します。
@@ -43,11 +41,11 @@ ms.suite: ems
 
 ### シナリオ: RMS 保護ファイルを使用する
 
--   **手順 1**: [**ProtectedFileInputStream**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) を作成する
+-   **手順 1**: [**ProtectedFileInputStream**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) を作成する
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: [**ProtectedFileInputStream**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) オブジェクトをインスタンス化し、[**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) を使用してサービス認証を実装するその作成メソッドを呼び出してトークンを取得します。それには、パラメーター *mRmsAuthCallback* として **AuthenticationRequestCallback** インスタンスを MSIPC API に渡します。 以下のコード例セクションの末尾近くの [**ProtectedFileInputStream.create**](/rights-management/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_method) の呼び出しを参照してください。
+    **説明**: [**ProtectedFileInputStream**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) オブジェクトをインスタンス化し、[**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) を使用してサービス認証を実装するその作成メソッドを呼び出してトークンを取得します。それには、パラメーター *mRmsAuthCallback* として **AuthenticationRequestCallback** インスタンスを MSIPC API に渡します。 以下のコード例セクションの末尾近くの [**ProtectedFileInputStream.create**](/rights-management/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_method) の呼び出しを参照してください。
 
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
         {
@@ -534,7 +532,7 @@ ms.suite: ems
 
     **ソース**: *MsipcTaskFragment.java*
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [**UserRights**](/rights-management/sdk/4.2/api/android/userrights#msipcthin2_userrights_class_java) と [**PolicyDescriptor**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java) からのユーザー入力を使用して作成されます。
+    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [**UserRights**](/rights-management/sdk/4.2/api/android/userrights#msipcthin2_userrights_class_java) と [**PolicyDescriptor**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java) からのユーザー入力を使用して作成されます。
 
 
 
@@ -639,6 +637,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

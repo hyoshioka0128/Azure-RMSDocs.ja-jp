@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Rights Management 共有アプリケーションをダウンロードしてインストールする
+
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+
 RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「[ローカル管理者ではなく、かつ Office 2010 を使用している場合](#if-you-are-not-a-local-administrator-and-use-office-2010)」を参照してください。
 
 ## Rights Management 共有アプリケーションをダウンロードしてインストールするには
@@ -34,7 +37,7 @@ RMS 共有アプリケーションをインストールするのにローカル�
 
 2.  [ **コンピューター** ] セクションで、 **Windows 用 RMS アプリケーション** のアイコンをクリックして、Microsoft Rights Management 共有アプリケーションをインストールする **Setup.exe** ファイルを保存します。
 
-3.  ダウンロードされた Setup.exe ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。
+3.  ダウンロードされた Setup.exe ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、[**はい**] をクリックします。.
 
 4.  [ **Microsoft RMS のセットアップ** ] ページで、[ **次へ**] をクリックし、インストールが完了するまで待機します。
 
@@ -65,13 +68,13 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [作業内容](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## 参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

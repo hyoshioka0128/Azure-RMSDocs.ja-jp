@@ -26,9 +26,12 @@ ms.suite: ems
 ---
 
 # Azure Rights Management テナント キーに対する操作
+
+*適用対象: Azure Rights Management、Office 365*
+
 組織のテナント キー トポロジ (Microsoft が管理またはお客様が管理) に応じて、実装後の Microsoft Azure Rights Management (Azure RMS) テナント キーに対する制御および責任のレベルは異なります。
 
-独自のテナント キーを自分で管理する場合、これは一般に BYOK (Bring Your Own Key) と呼ばれます。 このシナリオの詳細のほか、2 つのテナント キー トポロジから選択する方法については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
+独自のテナント キーを自分で管理する場合、これは一般に BYOK (Bring Your Own Key) と呼ばれます。 このシナリオの詳細のほか、2 つのテナント キー トポロジから選択する方法については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。.
 
 次の表に、Azure RMS テナント キーの選択したトポロジに応じて実行できる操作を示します。
 
@@ -51,6 +54,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

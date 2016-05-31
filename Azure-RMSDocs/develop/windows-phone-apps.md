@@ -2,7 +2,7 @@
 # required metadata
 
 title: Windows Phone のセットアップ | Azure RMS
-description:
+description: Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 71119aa7-ffc6-46e0-82ae-0b3b614c2cad
-
+ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Windows Phone のセットアップ
+# Windows Phone のセットアップ
 
 
 Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
@@ -58,16 +57,16 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 -   **[ファイル]** をクリックします。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
 -   **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C\#]**、**[空のアプリケーション (Windows Phone)]** の順に選択し、**[OK]** をクリックします。
 
-    ![](../media/wpsetup-newproj.png)
+    ![新規プロジェクトの作成](../media/wpsetup-newproj.png)
 
 -   ソリューション エクスプローラーでプロジェクトを右クリックし、**[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
 
-    ![](../media/wpsetup-addref.png)
+    ![参照の追加](../media/wpsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスの左下で **[参照]** をクリックし、パッケージを解凍したフォルダー内にある *Microsoft.RightsManagment.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、**[Windows 8.1]** -& gt; **[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** チェック ボックスをオンにして、この参照を追加する必要があります。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** チェック ボックスをオンにして、この参照を追加する必要があります。
 
-    ![](../media/wpsetup-refmngr.png)
+    ![拡張機能の追加](../media/wpsetup-refmngr.png)
 
 -   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、**[機能]** タブに移動して追加します。
 
@@ -97,6 +96,6 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -26,7 +26,10 @@ ms.suite: ems
 
 ---
 # 移行フェーズ 2 - クライアント側の構成
-AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 5. を説明します。
+
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+
+AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 5. を説明します。.
 
 
 ## 手順 5.  Azure RMS を使用するようにクライアントを再構成する
@@ -46,7 +49,7 @@ Windows クライアントの場合:
 
 モバイル デバイス クライアントおよび Mac コンピューターの場合:
 
--   [AD RMS モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
+-   [AD RMS モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。.
 
 #### 移行スクリプトによって行われる変更
 ここでは、移行スクリプトが行う変更について説明します。 この情報は、参照用、トラブルシューティング用、または変更を自分で行いたい場合に使用できます。
@@ -91,10 +94,10 @@ Redirect_OnPrem.cmd:
 
     -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
 
-    各エントリには、**https://OldRMSserverURL/_wmcs/licensing** の REG_SZ 値が含まれ、**https://&lt;YourTenantURL&gt;/_wmcs/licensing** という形式のデータが含まれます。
+    各エントリには、**https://OldRMSserverURL/_wmcs/licensing** の REG_SZ 値が含まれ、**https://&lt;YourTenantURL&gt;/_wmcs/licensing** という形式のデータが含まれます。.
 
     > [!NOTE]
-    > *&lt;YourTenantURL&gt;* の形式は、**{GUID}.rms.[リージョン].aadrm.com** です。
+    > *&lt;YourTenantURL&gt;* の形式は、**{GUID}.rms.[Region].aadrm.com** です。.
     > 
     > 例: 5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
     > 
@@ -102,8 +105,8 @@ Redirect_OnPrem.cmd:
 
 
 ## 次のステップ
-移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
+移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。.
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

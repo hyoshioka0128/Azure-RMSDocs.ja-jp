@@ -1,32 +1,20 @@
 ---
-# required metadata
+# 必須のメタデータ
 
-title: Azure RMS のクイック スタート チュートリアル - 手順 4. | Azure RMS
-description: 5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの 4 番目の手順。
-keywords:
-author: Cabailey
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: get-started-article
-ms.prod: azure
-ms.service: rights-management
-ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
+タイトル: Azure RMS のクイック スタート チュートリアル - 手順 4 | Azure RMS description: 5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの 4 番目の手順。
+keywords: author: cabailey manager: mbaldwin ms.date: 04/28/2016 ms.topic: get-started-article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
 
-# optional metadata
+# 任意のメタデータ
 
-ROBOTS: 
-audience:
-ms.devlang:
-ms.reviewer: esaggese
-ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ROBOTS: audience: ms.devlang: ms.reviewer: esaggese ms.suite: ems ms.tgt_pltfrm: ms.technology: ms.custom:
 
 ---
 
 
 # Azure RMS のクイック スタート: 手順 4. 電子メールで送信したドキュメントを開くよう受信者に依頼する
+
+*適用対象: Azure Rights Management、Office 365*
+
 
 移動: 
 > [!div class="op_single_selector"]
@@ -38,18 +26,18 @@ ms.custom:
 - [手順 5. ドキュメントを追跡する](tutorial-step5.md)
 
 
-![](../media/AzRMS_QuickStartSteps4.PNG)
+![Azure RMS のクイック スタート チュートリアルの手順 4](../media/AzRMS_QuickStartSteps4.PNG)
 
 受信者は、電子メールの添付ファイルとして送信された保護対象のドキュメントを読むために、多くのデバイスを使用できます。 これらのデバイスには、iPad、iPhone、Android タブレットや携帯電話、Mac コンピューター、Windows コンピューターが含まれます。
 
 送信した電子メール メッセージを読むよう受信者に依頼します。 受信者には電子メールのメッセージが表示されますが、その前に次のテキストが表示されます。
 
-**送信者が Microsoft RMS で添付ファイルを保護しました。それらを開くには、**[サインイン](http://aka.ms/rms)する
-      **必要があります。**
+**送信者が Microsoft RMS で添付ファイルを保護しました。それらを開くには、**[サインイン](http://aka.ms/rms)
+      **する必要があります。**
 
 リンクをクリックすると、手順に移動し、RMS 共有アプリケーションをインストールして、必要に応じて無料アカウントにサインアップするよう指示されます。 無料アカウントでは、受信者に個人用 RMS のサブスクリプションが付与されます。これにより、組織が Azure RMS を所有していない場合でも、承認されたユーザーが、保護されたドキュメントを必ず読むことができます。 受信者は、これから説明する手順を使用して、保護された添付ファイルを読むことができます。
 
-![](../media/AzRMS_Tutorial_4_Screenshots.png)
+![チュートリアルの手順 4 のスクリーンショット](../media/AzRMS_Tutorial_4_Screenshots.png)
 
 ### 保護されたドキュメントの添付ファイルを表示するには
 
@@ -72,10 +60,9 @@ ms.custom:
 |電子メール メッセージに添付されている 2 つのバージョンのファイルについて|[自動的に作成される .ppdf ファイルとは](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
 
 
->[!div class="step-by-step"]
-[« 手順 3](tutorial-step3.md)
+>[!div class="step-by-step"] [« 手順 3](tutorial-step3.md)
 [手順 5 »](tutorial-step5.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

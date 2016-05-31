@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS の要件: Azure RMS をサポートするオンプレミス サーバー
+
+*適用対象: Azure Rights Management、Office 365*
+
 Azure RMS コネクタを使用する場合、次のオンプレミス サーバー製品で Azure RMS がサポートされます。このコネクタがオンプレミス サーバーと Azure RMS との通信インターフェイス (リレー) として動作します。 さらに、この構成では Active Directory フォレストと Azure Active Directory とのディレクトリ同期を構成する必要があります。
 
 -   **Exchange Server**:
@@ -38,6 +41,8 @@ Azure RMS コネクタを使用する場合、次のオンプレミス サーバ
     -   Exchange Server 2010
 
 -   **Office SharePoint Server**:
+
+    -   Office SharePoint Server 2016
 
     -   Office SharePoint Server 2013
 
@@ -62,6 +67,6 @@ RMS コネクタは、Windows Server 2012 R2、Windows Server 2012、および W
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

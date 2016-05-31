@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 9728c135-0e7f-4f5c-95ba-1db79e418080
-
+ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Android のセットアップ
+# Android のセットアップ
 
 Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
@@ -34,7 +33,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 -   [必要条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring_your_development_environment_)
--   [関連項目](#see_also)
+-   [参照](#see_also)
 
 ## 必要条件
 
@@ -73,28 +72,28 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 -   Eclipse の開発環境を開きます。
 -   Android アプリケーション プロジェクトを新規作成するには、**[File]** メニューで **[New]**、**[Project]** の順にクリックし、**[Android Application Project]** を選択します。
 
-    ![](../media/Android-setup-01c.png)
+    ![新しい Android アプリケーションを作成する](../media/Android-setup-01c.png)
 
 -   アプリケーション名を入力します。 アプリケーション名に基づいて、プロジェクト名とパッケージ名が入力されます。
 -   **[Next]** をクリックし、ワークスペースを作成する場所を選択します。
 
-    ![](../media/Android-setup-02a.jpg)
+    ![アプリケーション名を入力する](../media/Android-setup-02a.jpg)
 
 -   **[Next]** をクリックし、アプリのアイコンを選択します。
 
-    ![](../media/Android-setup-03.png)
+    ![アプリのアイコンを選択する](../media/Android-setup-03.png)
 
 -   **[Next]** をクリックし、**[Blank Activity]** を選択してアクティビティを作成します。
 
-    ![](../media/Android-setup-04.png)
+    ![アクティビティを作成する](../media/Android-setup-04.png)
 
 -   **[Next]** をクリックし、アクティビティの名前を指定します。 *MainActivity* は既定の名前のままにし、レイアウト名を *activity\_main* にします。
 
-    ![](../media/Android-setup-05a.jpg)
+    ![アクティビティの名前を指定する](../media/Android-setup-05a.jpg)
 
 -   **[Finish]** をクリックします。
 
-    ![](../media/Android-setup-06.jpg)
+    ![作成を終了する](../media/Android-setup-06.jpg)
 
 -   プロジェクトがメイン アクティビティ クラス *MainActivity.java* と共に作成されました。
 
@@ -105,21 +104,21 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     Eclipse で **[File]** をクリックします。 **[File]** メニューの **[Import]** をクリックします。 **[Import]** ダイアログ ボックスで、**[Android / Existing Android Code into Workspace]** を選択します。
 
-    ![](../media/Android-setup-07.png)
+    ![ワークスペースにインポートする](../media/Android-setup-07.png)
 
 -   **[Next]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
 
-    ![](../media/Android-setup-08c.jpg)
+    ![フォルダーに移動して選択する](../media/Android-setup-08c.jpg)
 
 -   **[Finish]** をクリックすると、SDK プロジェクトが、以前に作成したアプリケーションの兄弟として表示されます。
 
-    ![](../media/Android-setup-09.jpg)
+    ![SDK プロジェクトがアプリケーションの兄弟として表示される](../media/Android-setup-09.jpg)
 
 -   **プロジェクト** アイコンを右クリックし、プロジェクトのプロパティを表示します。
 -   **[Android]** タブに移動します。
 -   **[Add]** をクリックして、ワークスペースから *com.microsoft.rightsmanagement* ライブラリを選択します。
 
-    ![](../media/Android-setup-10b.jpg)
+    ![ライブラリを追加する](../media/Android-setup-10b.jpg)
 
 -   **[OK]** をクリックします。
 
@@ -127,14 +126,14 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     アクセス許可を追加するには、**[Add]** をクリックして、**[Uses Permissions]** を選択します。
 
-    ![](../media/Android-setup-11d.jpg)
+    ![アクセス許可を追加する](../media/Android-setup-11d.jpg)
 
 -   マニフェストを検証するには、テキスト エディターのビューでマニフェストを表示します。 次の行が表示されていることを確認してください。
 
 
     <uses-sdk
-         android:minSdkVersion="15"
-         android:targetSdkVersion="19"/>
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission/>
@@ -152,13 +151,13 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 [Developer terms and concepts (開発者の用語と概念)](core-concepts.md)
 
-[Android API リファレンス](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+[Android API リファレンス](android-namespaces.md)
 
  
 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

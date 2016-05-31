@@ -28,13 +28,16 @@ ms.suite: ems
 
 # Rights Management コネクタのレジストリ設定
 
+*適用対象: Azure Rights Management、Office 365*
+
+
 次のセクションの表は、Exchange、SharePoint、または Windows Server を実行しているサーバー上で、[RMS コネクタ](deploy-rms-connector.md)を使用するようにサーバーを構成するレジストリ設定を手動で追加または確認する場合にのみ使用してください。 これらのサーバーを構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。
 
 これらの設定を使用する場合の手順:
 
 -   *MicrosoftRMSURL* は、組織の Microsoft RMS サービスの URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
+    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。.
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
@@ -44,7 +47,7 @@ ms.suite: ems
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
--   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
+-   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、**rmsconnector.contoso.com** です。.
 
 -   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、このトピックの「[HTTPS を使用するための RMS コネクタの構成](deploy-rms-connector.md#BKMK_ConfiguringHTTPS)」セクションを参照してください。 Microsoft RMS の URL では常に HTTPS が使用されます。
 
@@ -149,7 +152,7 @@ ms.suite: ems
 - https://*ConnectorFQDN*
 
 
-## SharePoint 2013 のレジストリ設定
+## SharePoint 2016 または SharePoint 2013 のレジストリ設定
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -219,6 +222,6 @@ ms.suite: ems
 
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

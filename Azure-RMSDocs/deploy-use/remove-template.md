@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # テンプレートの削除 (アーカイブ)
+
+*適用対象: Azure Rights Management、Office 365*
+
 既定のテンプレートは、削除することはできませんが、アーカイブしてユーザーに表示されないようにすることはできます。
 
 同様に、カスタム テンプレートを発行した後で、ユーザーが表示できないようにする場合は、テンプレートを編集し、 **[構成]** ページから **[アーカイブ]** 、 **[保存]** の順に選択します。 または、 **[テンプレート]** ページからテンプレートを選択し、 **[アーカイブ]**を選択します。
@@ -41,9 +44,9 @@ ms.suite: ems
 
 
 
-## 参照
+## 関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Azure Rights Management の利用状況をログに記録して分析する
+
+*適用対象: Azure Rights Management、Office 365*
+
 このトピックでは、Azure Rights Management (Azure RMS) で使用状況ログを使用する方法について説明します。 Azure Rights Management サービスは、組織のために処理したすべての要求のログを記録します。このログには、組織内のユーザーからの要求、Rights Management 管理者が実行した操作、Azure Rights Management デプロイをサポートするために Microsoft オペレーターが実行した操作などが含まれます。
 
 これらの Azure Rights Management ログを使用すると、次のビジネス シナリオをサポートできます。
@@ -44,8 +47,7 @@ ms.suite: ems
 
     情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 Azure Rights Management およびログを使用すれば、このような質問に答えることができます。保護されているコンテンツを使用するユーザーが Azure Rights Management で保護されているドキュメントおよび画像を開くには、常に Rights Management ライセンスを取得する必要があるためです。これは、ファイルがメールで転送されたり、USB ドライブなどのストレージ デバイスにコピーされたりした場合も同様です。 このため、Azure Rights Management を使用してデータを保護していれば、Azure Rights Management ログを科学捜査上の分析のための最終的な情報源として活用できます。
 
-> [!NOTE]
-> Azure Rights Management の管理タスクのログ記録だけに関心があり、Rights Management の利用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell コマンドレットを使用できます。
+> [!NOTE] Azure Rights Management の管理タスクのログ記録だけに関心があり、Rights Management の利用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell コマンドレットを使用できます。
 > 
 > Azure クラシック ポータルを通じて、**RMS の概要**、**RMS のアクティブ ユーザー**、**RMS デバイス プラットフォーム**、**RMS アプリケーションの使用状況**など、概要レベルの使用状況レポートを使用することもできます。 Azure クラシック ポータルからこれらのレポートにアクセスするには、**[Active Directory]** をクリックし、ディレクトリを選択して開いてから、**[レポート]** をクリックします。
 
@@ -54,8 +56,7 @@ ms.suite: ems
 ## Azure Rights Management の使用状況ログを有効にする方法
 2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure RMS サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 
 
-> [!NOTE]
-> ログ ストレージやログ機能に対する追加費用は発生しません。
+> [!NOTE] ログ ストレージやログ機能に対する追加費用は発生しません。
 > 
 > 2016 年 2 月より前に Azure RMS の使用状況ログを使用するには、Azure のサブスクリプションのほか、Azure 上に十分なストレージが必要でしたが、これらが不要になります。
 
@@ -151,7 +152,7 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
 |owner-email|文字列|ドキュメントの所有者の電子メール アドレス。|alice@contoso.com|
 |issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |Template-id|文字列|ドキュメントを保護するために使用されるテンプレートの ID。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|文字列|保護されたドキュメントのファイル名。|TopSecretDocument.docx|
+|File-name|文字列|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。|TopSecretDocument.docx|
 |Date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
 |c-info|文字列|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
@@ -161,7 +162,7 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
 
 -   値 **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**。
 
-    これは、Office 365 サービス (Exchange Online や SharePoint Online など) が要求を行っていることを示します。 この文字列で、 *&lt;YourTenantID&gt;* はテナントの GUID、 *&lt;region&gt;* はテナントが登録されている地域です。 たとえば、 **na** は北アメリカを表し、 **eu** はヨーロッパを表し、 **ap** はアジアを表します。
+    これは、Office 365 サービス (Exchange Online や SharePoint Online など) が要求を行っていることを示します。 この文字列で、*&lt;YourTenantID&gt;* はテナントの GUID、*&lt;region&gt;* はテナントが登録されている地域です。 たとえば、 **na** は北アメリカを表し、 **eu** はヨーロッパを表し、 **ap** はアジアを表します。
 
 -   RMS コネクタを使用している場合
 
@@ -228,6 +229,6 @@ Azure Rights Management 用 Windows PowerShell の使用の詳細については
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

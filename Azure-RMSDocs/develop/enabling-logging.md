@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b0aafe75-19c9-47dc-bbba-cf4287399c6e
-
+ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # 方法: エラーとパフォーマンスのログを有効にする
 Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードを 1 つのデバイス プロパティで管理します。
 
@@ -85,14 +83,14 @@ Microsoft への診断ログとパフォーマンス ログの自動アップロ
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-オプションの設定の詳細については、「[CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptionss)」を参照してください。
+オプションの設定の詳細については、「[CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions)」を参照してください。
 
 現在のログ コントロール フラグ設定を取得する
 
     CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
 
 
-**注**: 上記の Windows コード スニペットは C++ で記述されています。 C\# の場合は、 構文の "::" を "." に置き換えてください。
+**注**: 上記の Windows コード スニペットは C++ で記述されています。 C\# の場合は、構文の "::" を  "." に置き換えてください。
 
 **Linux/C++** - この SDK には、他のプラットフォームほど大規模ではないいくつかの基本的なログ記録機能が含まれています。 詳細については、「[RMS SDK for portable C++ (移植可能 C++ のための RMS SDK)](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting)」の "README.md" の「**Troubleshooting (トラブルシューティング)**」セクションを参照してください。
 
@@ -101,6 +99,6 @@ Microsoft への診断ログとパフォーマンス ログの自動アップロ
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

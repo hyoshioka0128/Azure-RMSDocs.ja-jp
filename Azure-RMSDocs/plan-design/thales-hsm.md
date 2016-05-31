@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Thales HSM と Microsoft の追加手順に関する詳細
+
+*適用対象: Azure Rights Management、Office 365*
+
 Azure RMS では Thales HSM を使用して、独自のテナント キーを管理するとき (BYOK (Bring Your Own Key) シナリオ) にキーを保護します。
 
 Thales e-Security は、金融サービス、ハイテク、製造業、政府、テクノロジ分野にデータ暗号化とサイバー セキュリティ ソリューションを提供する世界的リーダーです。 Thales のソリューションは 40 年にわたって企業や政府の情報を保護してきた実績があり、エネルギー/航空宇宙業界のトップ 5 社のうち 4 社、22 の NATO 加盟国で使用され、世界中の決済処理の 80% 超が保護されています。
@@ -36,6 +39,6 @@ Microsoft は Thales と共に HSM の最新技術の強化に取り組んでき
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

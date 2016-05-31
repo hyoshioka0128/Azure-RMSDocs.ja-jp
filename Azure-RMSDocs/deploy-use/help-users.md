@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する
+
+*適用対象: Azure Rights Management、Office 365*
+
 Azure Rights Management (Azure RMS) を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
 -   **エンド ユーザーへの情報**
@@ -40,13 +43,13 @@ Azure Rights Management (Azure RMS) を組織に合わせてデプロイして�
 
 -   **管理者への情報**
 
-    一部のアプリケーションは、管理者が構成したポリシーおよび設定を使用して、情報保護を自動的に適用します。 これらのアプリケーションの場合、これらのアプリケーションおよびサービスを管理する他の管理者に対して指示を提供する必要があります。 詳細については、[「アプリケーションで Azure Rights Management をサポートする方法](../understand-explore/applications-support.md)」と「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
+    一部のアプリケーションは、管理者が構成したポリシーおよび設定を使用して、情報保護を自動的に適用します。 これらのアプリケーションの場合、これらのアプリケーションおよびサービスを管理する他の管理者に対して指示を提供する必要があります。 詳細については、「[アプリケーションで Azure Rights Management をサポートする方法](../understand-explore/applications-support.md)」と「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。.
 
 -   **ヘルプ デスクの情報:**
 
     ヘルプ デスクの最も便利なツールの 1 つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
 
-    保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure RMS の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。
+    保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure RMS の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。.
 
     また、ユーザーから報告される可能性がある、いくつかの典型的な問題を以下に示します。
 
@@ -56,7 +59,7 @@ Azure Rights Management (Azure RMS) を組織に合わせてデプロイして�
 
     -   **コンテンツの保護または使用に関する問題**
 
-        使用するアプリケーションに対する適切な指示をユーザーが受けていること、またユーザーが Azure RMS でサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
+        使用するアプリケーションに対する適切な指示をユーザーが受けていること、またユーザーが Azure RMS でサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。.
 
         コンテンツの保護または使用を試みる際にユーザーにエラーが表示される場合は、Azure RMS ユーザーとして [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) を実行するよう依頼します。
 
@@ -69,9 +72,9 @@ Azure Rights Management (Azure RMS) を組織に合わせてデプロイして�
 
 RMS 共有アプリケーションを使用すると、ユーザーが重要なドキュメントを簡単に保護できるようになるだけでなく、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることができます。
 
-Windows コンピューター用のこのアプリケーションの使用方法については、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」を参照してください。
+Windows コンピューター用のこのアプリケーションの使用方法については、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」を参照してください。.
 
-モバイル デバイスの場合は、「 [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn451248)」をご覧ください。
+モバイル デバイスの場合は、「[モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn451248)」を参照してください。.
 
 > [!TIP]
 > スクリーンショット付きの概要レベルのサンプル シナリオについては、「[Users safely share attachments with mobile users (ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有)](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users)」を参照してください。
@@ -99,7 +102,7 @@ Azure RMS を使用しており、Rights Management 共有アプリケーショ
 
 1.  Outlook で、組織内の受信者宛ての新しい電子メール メッセージを作成します。
 
-2.  [ **オプション** ] タブの [ **アクセス許可**] をクリックし、オプションを選択します。 例: **[転送不可]**、**[&lt;会社名&gt; - 社外秘]**、**[&lt;会社名&gt; - 社外秘、表示のみ]**。
+2.  [ **オプション** ] タブの [ **アクセス許可**] をクリックし、オプションを選択します。 たとえば、[**転送不可**]、[**&lt;会社名&gt; - 社外秘**]、[**&lt;会社名&gt; - 社外秘、表示のみ**] です。.
 
 3.  メッセージを送信します。
 
@@ -109,7 +112,7 @@ Azure RMS を使用しており、Rights Management 共有アプリケーショ
 
 1.  Outlook Web App で、組織内の受信者宛ての新しい電子メール メッセージを作成します。
 
-2.  [  **…**]、[ **アクセス許可の設定**] の順位クリックして、オプションを選択します。 例: **[転送不可]**、**[Do Not Reply All]** (全員に返信禁止)、**[&lt;会社名&gt; - 社外秘]** または **[&lt;会社名&gt; - 社外秘、表示のみ]**。
+2.  [  **…**]、[ **アクセス許可の設定**] の順位クリックして、オプションを選択します。 たとえば、[**転送不可**]、[**全員に返信禁止**]、[**&lt;会社名&gt; - 社外秘**]、[**&lt;会社名&gt; - 社外秘、表示のみ**] です。.
 
 3.  メッセージを送信します。
 
@@ -118,6 +121,6 @@ Azure RMS を使用しており、Rights Management 共有アプリケーショ
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

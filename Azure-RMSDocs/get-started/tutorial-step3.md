@@ -4,29 +4,32 @@
 title: Azure RMS のクイック スタート チュートリアル - 手順 3. | Azure RMS
 description: 5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの 3 番目の手順。
 keywords:
-author: Cabailey
+author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
 
 # optional metadata
 
-ROBOTS: 
-audience:
-ms.devlang:
+#ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
 
 # Azure RMS のクイック スタート: 手順 3. 電子メールによる保護対象のドキュメントの送信
+
+*適用対象: Azure Rights Management、Office 365*
+
 
 移動: 
 > [!div class="op_single_selector"]
@@ -42,7 +45,7 @@ ms.custom:
 
 これで、電子メールでこのドキュメントを安全に共有する準備ができました。
 
-![](../media/AzRMS_Tutorial_3_Screenshots.png)
+![Azure RMS のクイック スタート チュートリアルの手順 3](../media/AzRMS_Tutorial_3_Screenshots.png)
 
 ### 電子メールで、ドキュメントを安全に共有するには
 
@@ -80,10 +83,9 @@ ms.custom:
 |**[保護ファイルの共有]** ダイアログ ボックスのオプションについて|[Rights Management 共有アプリケーションのダイアログ ボックス オプション](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"]
-[« 手順 2](tutorial-step2.md)
+>[!div class="step-by-step"] [« 手順 2](tutorial-step2.md)
 [手順 4 »](tutorial-step4.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

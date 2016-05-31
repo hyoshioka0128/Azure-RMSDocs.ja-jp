@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,13 +26,16 @@ ms.suite: ems
 ---
 
 # AD RMS から Azure Rights Management への移行
+
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+
 Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Rights Management (Azure RMS) に移行するには、次の命令セットを使用します。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure RMS を使用します。
 
 この AD RMS の移行が組織にとって適切かどうかわからない場合は、次のようにしてください。
 
 -   Azure RMS の概要、Azure RMS で解決できるビジネス上の問題、管理者およびユーザーから見た Azure RMS、Azure RMS のしくみについては、「[Azure Active Directory Rights Management の概要](../understand-explore/what-is-azure-rms.md)」を参照してください
 
--   Azure RMS と AD RMS の比較については、「[Azure Rights Management と AD RMS を構成する](../understand-explore/compare-azure-rms-ad-rms.md)」を参照してください。
+-   Azure RMS と AD RMS の比較については、「[Azure Rights Management と AD RMS を構成する](../understand-explore/compare-azure-rms-ad-rms.md)」を参照してください。.
 
 ## AD RMS から Azure RMS への移行の前提条件
 Azure RMS への移行を始める前に、次の前提条件が満たされていること、および制限事項を理解していることを確認してください。
@@ -46,7 +49,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
     - Windows Server 2008 R2 (x64)
 
-    - Windows Server 2012 (x64)
+    - Windows Server 2012 (x64)
 
     - Windows Server 2012 R2 (x64)
 
@@ -63,7 +66,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 - **Azure RMS テナント (非アクティブ) など、Azure RMS を実行するためのすべての要件**
 
-    「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
+    「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。.
 
     AD RMS からの移行を行うには、その前に Azure RMS テナントを用意しておく必要がありますが、移行前に Rights Management サービスをアクティブにしないことをお勧めします。 アクティブ化は、AD RMS からキーとテンプレートをエクスポートし、それらを Azure RMS にインポートした後で、移行プロセスによって行われます。 ただし、Azure RMS が既にアクティブ化されている場合でも、AD RMS から移行することはできます。
 
@@ -74,7 +77,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
     - Azure Active Directory でのメールが有効なグループ
 
-    「[Azure Rights Management の準備を行う](prepare.md)」を参照してください。
+    「[Azure Rights Management の準備を行う](prepare.md)」を参照してください。.
 
 
 - **AD RMS で Exchange Server** (たとえば、トランスポート ルールと Outlook Web Access) または SharePoint Server の Information Rights Management (IRM) 機能を使用していた場合:
@@ -88,7 +91,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 制限事項:
 
--   移行プロセスは、サーバー ライセンス証明書 (SLC) キーから Azure RMS のハードウェア セキュリティ モジュール (HSM) への移行をサポートしていますが、Exchange Online では現時点ではこの構成はサポートされていません。 Azure RMS への移行後に Exchange Online で完全な IRM 機能を使用する場合は、ご使用の Azure RMS テナント キーが[マイクロソフトによって管理](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-)される必要があります。 または、Azure RMS テナントがユーザーにより管理される場合 (BYOK)、Exchange Online では IRM の機能を制限付きで実行できます。 Exchange Online と Azure RMS の使用の詳細については、これらの移行手順の「[手順 6: IRM と Exchange Online の統合を構成する](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online)」を参照してください。
+-   移行プロセスは、サーバー ライセンス証明書 (SLC) キーから Azure RMS のハードウェア セキュリティ モジュール (HSM) への移行をサポートしていますが、Exchange Online では現時点ではこの構成はサポートされていません。 Azure RMS への移行後に Exchange Online で完全な IRM 機能を使用する場合は、ご使用の Azure RMS テナント キーが[マイクロソフトによって管理](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-)される必要があります。 または、Azure RMS テナントがユーザーにより管理される場合 (BYOK)、Exchange Online では IRM の機能を制限付きで実行できます。 Exchange Online と Azure RMS の使用の詳細については、「[手順 6. これらの移行手順の「](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online)IRM と Exchange Online の統合を構成する」を参照してください。
 
 -   Azure RMS でサポートされていないソフトウェアおよびクライアントは、Azure RMS によって保護されているコンテンツを保護したり使用したりすることはできません。 記事「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
 
@@ -167,7 +170,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 [**フェーズ 4 - 移行後のタスク**](migrate-from-ad-rms-phase4.md )
 
-- **手順: AD RMS の使用を停止する**
+- **手順 8. AD RMS の使用を停止する**
 
     すべてのクライアントが Azure RMS を使用していて、AD RMS サーバーにアクセスしていないことを確認した後、AD RMS のデプロイの使用を停止できます。
 
@@ -178,10 +181,10 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 
 ## 次のステップ
-移行を開始するには「[フェーズ 1 - サーバー側の構成](migrate-from-ad-rms-phase1.md)」に進みます。
+移行を開始するには「[フェーズ 1 - サーバー側の構成](migrate-from-ad-rms-phase1.md)」に進みます。.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

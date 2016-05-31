@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,10 +26,13 @@ ms.suite: ems
 ---
 
 # Azure Rights Management に関してよく寄せられる質問
+
+*適用対象: Azure Rights Management、Office 365*
+
 Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) に関してよく寄せられる質問をいくつか紹介します。
 
 ## Azure RMS のデプロイの要件と、デプロイを開始する方法について教えてください。
-最初に「[Azure Rights Management の要件](requirements-azure-rms.md)」を確認してください。使用可能なクラウド サブスクリプション、オンプレミス サーバーで Azure RMS を使用する方法、現時点でサポートされていないデプロイ シナリオ、Azure RMS をサポートするデバイスとアプリケーションについての情報と、ファイアウォールまたはプロキシ サーバーの IP アドレスとドメイン名の一覧へのリンクが記載されています。 また、この「作業の開始」セクションに含まれる他の記事および「**理解と調査**」セクションを確認すると、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] による組織のデータ保護とアプリケーション連携のしくみや、オンプレミス バージョンの Active Directory Rights Management との比較結果について基本的な知識を得ることができ、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] に固有の用語と略語について理解することができます。
+最初に「[Azure Rights Management の要件](requirements-azure-rms.md)」を確認してください。使用可能なクラウド サブスクリプション、オンプレミス サーバーで Azure RMS を使用する方法、現時点でサポートされていないデプロイ シナリオ、Azure RMS をサポートするデバイスとアプリケーションについての情報と、ファイアウォールまたはプロキシ サーバーの IP アドレスとドメイン名の一覧へのリンクが記載されています。 また、この「**作業の開始**」セクションに含まれる他の記事および「**理解と調査**」セクションを確認すると、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] による組織のデータ保護とアプリケーション連携のしくみや、オンプレミス バージョンの Active Directory Rights Management との比較結果について基本的な知識を得ることができ、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] に固有の用語と略語について理解することができます。
 
 ## ファイルを Azure RMS で保護するには、クラウドに置いておく必要があるのでしょうか?
 よくある誤解ですが、そのようなことはありません。 Azure Rights Management サービス (および Microsoft) では、情報保護の一環としてユーザーのデータを閲覧したり、保存したりすることはありません。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。 
@@ -39,7 +42,7 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 ## Azure RMS はオンプレミス サーバーと統合できますか。
 はい。 Azure RMS は、Exchange Server、SharePoint、Windows ファイル サーバーなどのオンプレミス サーバーと統合できます。 統合するには、[Rights Management コネクタ](../deploy-use/deploy-rms-connector.md)を使用します。 または、Windows Server でファイル分類インフラストラクチャ (FC) を使用することのみを目的とされている場合は、[RMS 保護コマンドレット](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx)を使用できます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)を使用して、よりシームレスな認証方法をユーザーに提供できます。
 
-必要に応じて、Azure RMS で XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure RMS での証明書の使用方法については、記事「[Azure RMS の機能の詳細](../understand-explore/how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを 参照してください。
+必要に応じて、Azure RMS で XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure RMS での証明書の使用方法については、記事「[Azure RMS の機能の詳細](../understand-explore/how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
 ## 一部のユーザーが Exchange Online 上の Exchange に、他のユーザーが Exchange Server 上の Exchange に登録されているハイブリッド デプロイメント構成です。この構成は、Azure RMS でサポートされていますか。
 はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できるようになることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](../deploy-use/activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](../deploy-use/deploy-rms-connector.md) Exchange Server 用に構成します。
@@ -88,6 +91,10 @@ Azure RMS はすべてのファイルの種類をサポートできます。 テ
 
 Azure RMS でネイティブでサポートされるファイル名拡張子の一覧については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」の「[サポートされているファイルの種類とファイル名拡張子](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。 一覧に含まれないファイル名拡張子は、一般保護をこれらのファイルに自動的に適用する RMS 共有アプリケーションを使用することによってサポートされます。
 
+## RMS で保護されている Office ドキュメントを開いた場合、関連付けられた一時ファイルも RMS で保護されたものになりますか。
+
+いいえ。 このシナリオでは、関連付けられている一時ファイルには元のドキュメントのデータは含まれず、ユーザーがファイルを開いているときに入力したもののみが含まれます。 元のファイルとは異なり、一時ファイルは明らかに共有用に設計されておらず、BitLocker や EFS などのローカル セキュリティ コントロールによって保護されデバイス上に残ります。
+
 ## AD RMS からの移行はいつサポートされますか。
 当初、Azure RMS は AD RMS などの Rights Management のオンプレミス デプロイからの移行をサポートしていませんでした。 ただし、現在ではサポートしています。
 
@@ -99,7 +106,7 @@ Azure RMS でネイティブでサポートされるファイル名拡張子の�
 ただし、会社のポリシーでハードウェア セキュリティ モジュール (HSM) を使用する必要があり、そのために Azure RMS をデプロイできない場合は、Azure RMS をデプロイし、Exchange の RMS 機能を減らして BYOK を併用する方法があります。 詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[BYOK の料金と制限事項](../plan-design/byok-price-restrictions.md)」を参照してください。
 
 ## 必要な機能があるのですが、SharePoint で保護されたライブラリには使用できないようです。この機能のサポートは予定されていますか。
-現在のところ、SharePoint は、IRM で保護されたライブラリを使用して、RMS で保護されたドキュメントをサポートしています。IRM で保護されたライブラリは、カスタム テンプレート、ドキュメントの追跡などの機能をサポートしていません。  詳細については、記事「[Office applications and services (Office アプリケーションとサービス)](../understand-explore/office-apps-services-support.md)」の「[SharePoint Online and SharePoint Server (SharePoint Online と SharePoint Server)](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションを参照してください。
+現在のところ、SharePoint は、IRM で保護されたライブラリを使用して、RMS で保護されたドキュメントをサポートしています。IRM で保護されたライブラリは、カスタム テンプレート、ドキュメントの追跡などの機能をサポートしていません。 詳細については、記事「[Office applications and services (Office アプリケーションとサービス)](../understand-explore/office-apps-services-support.md)」の「[SharePoint Online and SharePoint Server (SharePoint Online と SharePoint Server)](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションを参照してください。
 
 まだサポートされていない機能に関心がある場合は、 [RMS チーム ブログ](http://blogs.technet.com/b/rms/)のお知らせに注意してください。
 
@@ -144,7 +151,7 @@ Azure RMS は他のサービスをサポートし、また、他のサービス�
 
 **セキュリティ、コンプライアンス、監査:**
 
-記事「[Azure RMS が解決する問題の種類](../understand-explore/azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements)」のセクションを 参照してください。 さらに
+記事「[Azure RMS が解決する問題の種類](../understand-explore/azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
 
 -   Azure RMS の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
 
@@ -179,12 +186,11 @@ Azure RMS は他のサービスをサポートし、また、他のサービス�
 
 この FAQ ページは定期的に更新されます。新しい情報は [Microsoft Rights Management (RMS) Team](http://blogs.technet.com/b/rms/) ブログ上の月次のドキュメント更新発表に一覧表示されます。
 
-> [!TIP]
-> ブログの [docs タグ](http://blogs.technet.com/b/rms/archive/tags/docs/) を使用すると、ドキュメントのお知らせを簡単に見つけることができます。
+> [!TIP] ブログの [docs タグ](http://blogs.technet.com/b/rms/archive/tags/docs/)を使用すると、ドキュメントのお知らせを簡単に見つけることができます。
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

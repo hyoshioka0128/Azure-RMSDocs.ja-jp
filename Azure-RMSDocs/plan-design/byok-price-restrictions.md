@@ -27,13 +27,16 @@ ms.suite: ems
 
 # BYOK の料金と制限事項
 
+*適用対象: Azure Rights Management、Office 365*
+
+
 IT 部門が管理する Azure サブスクリプションを持つ組織は無料で BYOK を使用でき、その使用状況をログに記録できます。 個人用 RMS を使用する組織は BYOK やログを構成するテナント管理者がいないので、これらの機能を使用できません。
 
 
 > [!NOTE]
-> 個人用 RMS の詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
+> 個人用 RMS の詳細については、「[個人向け RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。.
 
-![](../media/RMS_BYOK_noExchange.png)
+![BYOK は Exchange Online をサポートしていません](../media/RMS_BYOK_noExchange.png)
 
 BYOK とログは、Azure RMS と統合されたすべてのアプリケーションでシームレスに動作します。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
@@ -57,12 +60,12 @@ AD RMS から Azure RMS に移行している場合は、信頼された発行�
 
 ## 次のステップ
 
-独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」を参照してください。
+独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」を参照してください。.
 
 テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Rights Management テナント キーを計画して実装する」の「[次のステップ](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

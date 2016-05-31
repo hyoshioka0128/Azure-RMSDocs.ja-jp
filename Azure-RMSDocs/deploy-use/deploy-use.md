@@ -27,7 +27,10 @@ ms.reviewer: mbaldwin
 
 # Azure Rights Management のデプロイと使用
 
+*適用対象: Azure Rights Management、Office 365*
 
-<!--HONumber=Apr16_HO3-->
+
+
+<!--HONumber=Apr16_HO4-->
 
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: コンテンツの追跡 | Azure RMS
-description:
+description: ドキュメント追跡を実装するための基本的なガイダンス
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ca08e01f-690d-46f4-ae0f-a880cc29dabc
-
+ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
 
 #ROBOTS:
@@ -25,9 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# コンテンツの追跡
-
-\[一部の情報はプレリリース版に関連するもので、製品版としてリリースされる前に大幅に変更される可能性があります。 Microsoft はここで提供する情報について、明示または黙示を問わず、保証いたしません。\]
+# コンテンツの追跡
 
 このトピックでは、Rights Management サービス SDK 2.1 で保護されたコンテンツのドキュメント追跡を実装するための基本的なガイダンスを提供します。
 
@@ -120,7 +117,7 @@ ms.suite: ems
                               sendLicenseRegistrationNotificationEmail);
 
 
-### 関連項目
+## 関連項目
 
 
 * [**ライセンス メタデータ プロパティの種類**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types)
@@ -137,6 +134,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

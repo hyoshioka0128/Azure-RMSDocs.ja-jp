@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Azure Rights Management のクイック スタート チュートリアル
+
+*適用対象: Azure Rights Management、Office 365*
+
 移動: 
 > [!div class="op_single_selector"]
 - [手順 1. Azure RMS をアクティブ化する](tutorial-step1.md)
@@ -36,7 +39,7 @@ ms.suite: ems
 
 このチュートリアルを使用すると、わずか 5 つの手順で、組織の Microsoft Azure Rights Management (Azure RMS) を簡単に試すことができます。かかる時間は、手順全体で 15 分未満です。 ここでは、サービスをアクティブ化し、機密性の高いドキュメントを別の組織のユーザーに安全に電子メールで送信します。さらに、そのドキュメントをユーザーが開いたかどうかを追跡します。 機密性の高いドキュメントを電子メールで送信するときには、転送時にドキュメントが暗号化されます。送信したドキュメントは、送信者が設定したアクセス許可を使って送信先のユーザーだけが読み取ることができます。
 
-![](../media/AzRMS_QuickStartStepsAll.PNG)
+![Azure RMS のクイック スタート チュートリアルの全手順](../media/AzRMS_QuickStartStepsAll.PNG)
 
 このチュートリアルは、IT 管理者やコンサルタントが組織向けの情報保護ソリューションとして Azure Rights Management を評価する際の支援を目的としたものです。 運用環境では、サービスをアクティブ化する手順は管理者が行い、ドキュメントを送信する手順はエンド ユーザーが行います。 別の組織のユーザーに機密性の高いドキュメントを安全に送信する際のシナリオの全容を示すために、このチュートリアルではどちらの手順も説明しています。 このチュートリアルに関してお困りのことがある場合には、 [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) まで電子メール メッセージをお送りください。サポートいたします。
 
@@ -52,13 +55,12 @@ ms.suite: ems
 
 では、始めましょう。
 
->[!div class="step-by-step"]
-[手順 1 »](tutorial-step1.md)
+>[!div class="step-by-step"] [手順 1 »](tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

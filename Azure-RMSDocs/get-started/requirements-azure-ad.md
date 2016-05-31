@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Azure RMS の要件: Azure AD ディレクトリ
 
+*適用対象: Azure Rights Management、Office 365*
+
+
 Azure Rights Management (Azure RMS) を使用するには、Azure AD ディレクトリが必要です。 このディレクトリの組織アカウントを使用して Azure クラシック ポータルにサインインします。ここでは、たとえば、Rights Management テンプレートを構成および管理することができます。
 
 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。[Azure の「はじめに」](https://account.windowsazure.com/organization)ページにアクセスし、指示に従ってください。
@@ -39,8 +42,7 @@ Azure Rights Management (Azure RMS) を使用するには、Azure AD ディレ�
 
 Azure AD ディレクトリをオンプレミス AD フォレストと統合する場合は、「[Integrating your on-premises identities with Azure Active Directory (オンプレミス ID と Azure Active Directory の統合)](/active-directory/active-directory-aadconnect)」を参照してください。
 
-> [!NOTE]
-> AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
+> [!NOTE] AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
 > 
 > -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
@@ -69,7 +71,7 @@ Azure RMS で多要素認証 (MFA) を使用するには、次のうち 1 つ以
 
 -   統合テナント (オンプレミスのフェデレーション サーバー) の場合:
 
-    -   使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば AD FS を使用している場合は、TechNet の記事「[AD FS の追加の認証方法の構成](https://technet.microsoft.com/library/dn758113.aspx)」を参照してください。
+    -   使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば AD FS を使用している場合は、TechNet の記事「[AD FS の追加の認証方法の構成](https://technet.microsoft.com/library/dn758113.aspx)」をご覧ください。
 
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 
@@ -78,6 +80,6 @@ Azure RMS で多要素認証 (MFA) を使用するには、次のうち 1 つ以
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

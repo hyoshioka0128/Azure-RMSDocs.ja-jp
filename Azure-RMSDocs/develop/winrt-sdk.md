@@ -2,7 +2,7 @@
 # required metadata
 
 title: Windows ストアのセットアップ | Azure RMS
-description:
+description: Windows Store アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c2684152-7d52-4636-916d-15720f4e3346
-
+ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Windows ストアのセットアップ
 
 Windows ストア アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
@@ -34,8 +32,8 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4.
 
 -   [必要条件](#prerequisites)
 -   [省略可能](#optional)
--   [開発環境の構成](#configuring_your_development_environment)
--   [参照](#see_also)
+-   [開発環境の構成](#configuring-your-development-environment)
+-   [参照](#see-also)
 
 ## 必要条件
 
@@ -61,16 +59,16 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 -   **[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。
 -   **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C\#]**、**[空のアプリケーション (Windows)]** の順にクリックし、**[OK]** をクリックします。
 
-    ![](../media/winrtsetup-newproj.png)
+    ![新規プロジェクトの作成](../media/winrtsetup-newproj.png)
 
 -   **ソリューション エクスプローラー**でプロジェクトを右クリックし、**[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
 
-    ![](../media/winrtsetup-addref.png)
+    ![参照の追加](../media/winrtsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスで **[参照]** をクリックし、SDK パッケージを解凍したフォルダー内にある *Microsoft.RightsManagement.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、**[Windows 8.1]**、**[拡張機能]** の順に選択し、**[Windows Visual C++ Runtime Package for Windows]** チェック ボックスをオンにして、この参照を追加する必要があります。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** チェック ボックスをオンにして、この参照を追加する必要があります。
 
-    ![](../media/winrtsetup-refmngr.png)
+    ![拡張機能の追加](../media/winrtsetup-refmngr.png)
 
 -   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、**[機能]** タブに移動して追加します。
 
@@ -91,6 +89,6 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 [Windows API リファレンス](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

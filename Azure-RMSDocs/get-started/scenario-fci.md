@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # シナリオ - ファイル サーバー共有上のファイルを保護する
+
+*適用対象: Azure Rights Management、Office 365*
+
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。
 
 次の手順では、既定のテンプレートのいずれかを使用して、すべての使用権限を持つすべての従業員にアクセスを限定します。 ただし、必要に応じて、既定のテンプレートを使用する代わりにカスタム テンプレートを構成して、アクセスと使用権限を詳細に制限できます。
@@ -39,7 +42,7 @@ ms.suite: ems
 -   すべてのファイルには、スケジュールに従って保護が再適用され、権利ポリシー テンプレートに対する変更は保護されたファイルに適用されます。
 
 ## デプロイの手順
-![](../media/AzRMS_AdminBanner.png)
+![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
@@ -50,7 +53,7 @@ ms.suite: ems
 |---------------|--------------------------------|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management によって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|次のいずれかです。<br /><br />すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
+|次のいずれかです。<br /><br />- すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />- 特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |RMS 保護ツールをダウンロードして Azure RMS の前提条件を構成済みである|ツールと前提条件をダウンロードする手順: [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Azure RMS の追加の前提条件を構成する (サービス プリンシパル アカウントなど): [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -70,7 +73,7 @@ ms.suite: ems
     ```
     Get-RMSTemplate
     ```
-    すべての使用権限を持つすべての従業員にアクセスを限定する既定のテンプレートを使用するには、"**&lt;組織名&gt; - 社外秘**" という名前のテンプレートを探します。 たとえば、"**VanArsdel, Ltd - 社外秘**" のようになります。
+    すべての使用権限を持つすべての従業員にアクセスを限定する既定のテンプレートを使用するには、"**&lt;組織名&gt; - 社外秘**" という名前のテンプレートを探します。 たとえば、"**VanArsdel, Ltd - 社外秘**" を選択します。
 
 4.  「[Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx)」の手順に従います。
 
@@ -99,9 +102,9 @@ ms.suite: ems
 
 ドキュメントの例では、カスタマイズ後、これらの手順がユーザーにどのように表示されるかを示します。
 
-![](../media/AzRMS_UsersBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### &lt;ファイル サーバー共有&gt; から &lt;ファイルの種類&gt; を編集する方法
+### &lt;ファイル サーバー共有&gt; から &lt;ファイルの種類&gt; を編集する方法&gt;
 
 1.  ファイルをダブルクリックして開きます。 資格情報が要求される場合があります。
 
@@ -125,10 +128,10 @@ ms.suite: ems
 
 -   ヘルプ デスクに問い合わせる
 
-    -   *&lt;連絡先の詳細&gt;*
+    -   *&lt;連絡先詳細&gt;*
 
 ### カスタマイズされたユーザー ドキュメントの例
-![](../media/AzRMS_ExampleBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 #### ProjectNextGen 共有から CAD 図面を編集する方法
 
@@ -140,7 +143,7 @@ ms.suite: ems
 
 4.  ファイルを編集するには、最初にファイルを保存して、ファイル名拡張子 .pfile を削除します。
 
-    -   **[ファイル]** &gt; **[名前を付けて保存]**
+    -   **ファイル** &gt; **名前を付けて保存**
 
     -   ファイル名の末尾から **.pfile** を削除して、**[OK]** をクリックします。
 
@@ -158,6 +161,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

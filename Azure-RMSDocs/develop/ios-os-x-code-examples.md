@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 705942bb-639d-4582-942e-0ec061843d48
-
+ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # iOS/OS X のコード例
 
 このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
@@ -44,7 +42,7 @@ ms.suite: ems
 
 - **手順 1**. [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) オブジェクトを作成します。
 
- **説明**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) オブジェクトをインスタンス化します。[**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を使用してサービス認証を実装するその作成メソッドを介して、**MSAuthenticationCallback** のインスタンスをパラメーター *authenticationCallback* として MSIPC API に渡してトークンを取得します。 次のコード例セクションの [**protectedDataWithProtectedFile**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) の呼び出しに注目してください。
+ **説明**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) オブジェクトをインスタンス化します。[**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を使用してサービス認証を実装するその作成メソッドを介して、**MSAuthenticationCallback** のインスタンスをパラメーター *authenticationCallback* として MSIPC API に渡してトークンを取得します。 次のコード例セクションの [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) の呼び出しに注目してください。
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -117,7 +115,7 @@ ms.suite: ems
 
 ### シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
-このシナリオは、初めにテンプレートの一覧 [**MSTemplateDescriptor**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
+このシナリオは、初めにテンプレートの一覧 [**MSTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
 -   **手順 1**. テンプレートの一覧を取得します。
 
@@ -290,6 +288,6 @@ ms.suite: ems
 
  
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

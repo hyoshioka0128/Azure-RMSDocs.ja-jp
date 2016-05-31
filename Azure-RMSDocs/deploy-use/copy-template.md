@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # テンプレートをコピーする
+
+*適用対象: Azure Rights Management、Office 365*
+
 既存のテンプレートとよく似た設定の新しいテンプレートを作成する場合、 **[テンプレート]** ページで元のテンプレートを選択し、 **[コピー]**をクリックして、一意の名前を指定し、必要な変更を加えます。
 
 > [!IMPORTANT]
@@ -36,9 +39,9 @@ ms.suite: ems
 
 
 
-## 参照
+## 関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 1f726c6a-68a5-421f-8ed9-9cbb051c205b
-
+ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
 このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/en-us/library/jj585016.aspx)」を参照してください。
@@ -177,7 +175,7 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
 
 アプリケーションでの Azure Rights Management 使用の有効化に必要な手順が完了しました。
 
-### 関連項目
+## 関連項目
 
 * [Developer concepts (開発者の概念)](ad-rms-concepts-nav.md)
 * [Azure Rights Management の概要](https://technet.microsoft.com/en-us/library/jj585016.aspx)
@@ -199,6 +197,6 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

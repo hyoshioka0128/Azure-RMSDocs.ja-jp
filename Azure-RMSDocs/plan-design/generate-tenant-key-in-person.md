@@ -27,6 +27,9 @@ ms.suite: ems
 
 # テナント キーを生成して転送する – 持参
 
+*適用対象: Azure Rights Management、Office 365*
+
+
 [独自のテナント キーを管理する](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-)ことを選択し、テナント キーをインターネット経由で転送するのではなく、持参する場合は、以下の手順を行います。
 
 ## テナント キーの生成
@@ -39,7 +42,7 @@ ms.suite: ems
 -   [手順 3:新しいキーの作成](#step-3-create-a-new-key)
 
 ### 手順 1.Thales HSM を設定したワークステーションを準備する
-Windows コンピューターに nCipher (Thales) サポート ソフトウェアをインストールします。 そのコンピューターに Thales HSM をアタッチします。 Thales ツールがパス上にあるようにします。 詳細については、Thales HSM に付属のユーザー ガイドを参照するか、または Thales 社の Web サイトの Azure RMS に関するページ ( [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)) にアクセスしてください。
+Windows コンピューターに nCipher (Thales) サポート ソフトウェアをインストールします。 そのコンピューターに Thales HSM をアタッチします。 Thales ツールがパス上にあるようにします。 詳細については、Thales HSM に付属のユーザー ガイドを参照するか、または Thales 社の Web サイトの Azure RMS に関するページ ([http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)) にアクセスしてください。.
 
 ### 手順 2:セキュリティ ワールドの作成
 コマンド プロンプトを起動し、Thales 社が提供する new-world プログラムを実行します。
@@ -153,6 +156,6 @@ cngimport --import –M --key=contosokey --appname=simple contosokey
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

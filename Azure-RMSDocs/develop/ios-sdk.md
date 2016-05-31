@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 23f64fc8-d0f3-49ee-8d8a-b34ef26878a7
-
+ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# iOS および OS X のセットアップ
+# iOS および OS X のセットアップ
 
 iOS および OS X アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
@@ -67,41 +66,41 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 -   新しいプロジェクトを作成するために、**[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
 -   **[Single View Application (単一枠ビュー アプリケーション)]** を選択します。
 
-    ![](../media/iOS-Project.png)
+    ![新しいプロジェクトの作成](../media/iOS-Project.png)
 
 -   新しいプロジェクトの名前および識別子を入力します。
 
-    ![](../media/iOS-project-options.png)
+    ![プロジェクトの命名](../media/iOS-project-options.png)
 
 -   **[次へ]** をクリックして、プロジェクトの場所を選択します。
 -   iOS フレームワークの **MSRightsManagement** フレームワークを追加するために、.framework フォルダーを SDK のインストール フォルダーから**プロジェクト ナビゲーター**の **Frameworks** セクションにドラッグします。
 
-    ![](../media/ios-add-dependencies-01a.png)
+    ![場所の設定](../media/ios-add-dependencies-01a.png)
 
 -   **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンをクリックし、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
 
     この操作により、コピーを作成する代わりに、SDK のインストール フォルダーへの参照を保持します。
 
-    ![](../media/iOS-create-groups.png)
+    ![SDK のインストール フォルダーへの参照の設定](../media/iOS-create-groups.png)
 
 -   リソース バンドルの MS RMS SDK 4.2 を追加するために、MSRightsManagementResources.bundle ファイルを MSRightsManagement.framework/Resources フォルダーからプロジェクト ナビゲーターの **Frameworks** セクションにドラッグします。
 
-    ![](../media/iOS-add-resource-bundle-02a.png)
+    ![リソース バンドルの追加](../media/iOS-add-resource-bundle-02a.png)
 
 -   フレームワークをコピーしたときと同様に、**[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
 -   SDK は、**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security** などの他のフレームワークに依存しています。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
 
     **UIKit** と **Foundation** フレームワークが必要ですが、通常は既定で表示されます。
 
-    ![](../media/iOS-add-libraries.png)
+    ![リソースの追加](../media/iOS-add-libraries.png)
 
 -   ターゲットの **[ビルド設定]** の **[Other Linker Flags (その他のリンカー フラグ)]** に **- ObjC** フラグを追加します。
 
-    ![](../media/iOS-linker-flags.png)
+    ![ビルド設定の追加](../media/iOS-linker-flags.png)
 
 -   これで、**プロジェクト ナビゲーター**はこのツリーのようになります。
 
-    ![](../media/iOS-verify-setup-01a.png)
+    ![プロジェクトの確認](../media/iOS-verify-setup-01a.png)
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
@@ -123,6 +122,6 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

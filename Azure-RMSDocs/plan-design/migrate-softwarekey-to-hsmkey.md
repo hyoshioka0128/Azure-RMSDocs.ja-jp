@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: 手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行 | Azure RMS
+title: 手順 2.&colon; ソフトウェアで保護されているキーから HSM で保護されているキーへの移行 | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -27,9 +27,12 @@ ms.suite: ems
 
 # 手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
+*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+
+
 これらの手順は [AD RMS から Azure Rights Management への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーがソフトウェアで保護されているときに HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。 
 
-これが目的の構成シナリオでない場合は、「[Step 2.Export configuration data from AD RMS and import it to Azure RMS (手順 2. AD RMS から構成データをエクスポートし、それを Azure RMS にインポートする)](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms)」に戻り、別の構成を選択してください。
+選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms)、別の構成を選択します。
 
 3 段階の手順で AD RMS 構成を Azure RMS にインポートし、結果は顧客管理 (BYOK) の Azure RMS テナント キーです。
 
@@ -105,11 +108,11 @@ SLC を HSM ベースのキーとして抽出したので、パッケージ化�
     Disconnect-AadrmService
     ```
 
-以上で「[Step 3. Activate your RMS tenant (手順 3. RMS テナントをアクティブ化する)](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration)」に進む準備が完了しました。
+以上で「[手順 3. RMS テナントをアクティブ化する](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

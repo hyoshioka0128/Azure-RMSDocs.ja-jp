@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Azure Rights Management のカスタム テンプレートを構成する
+
+*適用対象: Azure Rights Management、Office 365*
+
 [Azure Rights Management (Azure RMS) をアクティブ化](activate-service.md)した後で、ユーザーは 2 つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルにポリシーを簡単に適用できるようになります。 これらの 2 つのテンプレートには、次の権限ポリシーの制限があります。
 
 -   保護されたコンテンツの読み取り専用の表示
@@ -69,6 +72,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

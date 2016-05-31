@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # シナリオ - 重要度の高い (いくつかの) ファイルを保護する
+
+*適用対象: Azure Rights Management、Office 365*
+
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。 通常、これらのファイルには、少数のユーザーだけがアクセスできるようにする必要があります。 たとえば、会社を代表する食品のレシピや、指定した日付より前に公開してはならない企業買収のプランなどです。
 
 この手順は、次の一連の状況に適しています。
@@ -43,7 +46,7 @@ ms.suite: ems
 -   管理者は、どのユーザーがいつファイルにアクセスするかを追跡し、必要に応じてアクセスを取り消す必要があります。
 
 ## デプロイの手順
-![](../media/AzRMS_AdminBanner.png)
+![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
@@ -52,7 +55,7 @@ ms.suite: ems
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />**特権アクセス**という名前のメールが有効なグループ: これらの機密性の高いドキュメントにアクセスできる必要のある少数のユーザーが含まれます。<br /><br />**IT コンプライアンス マネージャー**という名前のメールが有効なグループ: 電子情報開示、監視、および監査が職務のユーザーが含まれます。<br /><br />**RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
+|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **特権アクセス**という名前のメールが有効なグループ: これらの機密性の高いドキュメントにアクセスできる必要のある少数のユーザーが含まれます。<br /><br />- **IT コンプライアンス マネージャー**という名前のメールが有効なグループ: 電子情報開示、監視、および監査が職務のユーザーが含まれます。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
 |Rights Management 共有アプリケーションは Windows コンピューターにデプロイされるため、次のセクションで説明されているように、これらのファイルをその場で保護できます。|[Rights Management 共有アプリケーションをダウンロードしてインストールする](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
@@ -91,8 +94,7 @@ ms.suite: ems
 
 ファイルをその場で保護する方法について詳しくは、「[Rights Management 共有アプリケーションを使用してデバイス上のファイルを保護する (その場で保護)](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx)」をご覧ください。
 
-> [!TIP]
-> 保護対象のファイル数が多すぎてこの手動プロセスでは対応できない場合は、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)を使用し、テンプレートを適用してファイルを包括的に保護することを検討してください。
+> [!TIP] 保護対象のファイル数が多すぎてこの手動プロセスでは対応できない場合は、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)を使用し、テンプレートを適用してファイルを包括的に保護することを検討してください。
 
 ### ファイルへのアクセスを監視し、必要に応じてアクセスを取り消すには
 
@@ -115,7 +117,7 @@ ms.suite: ems
 
 ドキュメントの例では、カスタマイズ後、このお知らせがユーザーにどのように表示されるかを示します。
 
-![](../media/AzRMS_UsersBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
 ### IT からのお知らせ: &lt;組織名&gt; の極秘ドキュメントの保護
 次のファイルには非常に高いレベルの保護が適用されているため、&lt;制限されたユーザー&gt; だけがファイルにアクセスして変更を行うことができます。 ファイルを不正アクセスから保護するために、アプリケーションはユーザーがファイルを開くたびに自動的に承認を要求します。したがって、ファイルを開くにはインターネットに接続する必要があり、資格情報が要求される場合があります。
@@ -131,7 +133,7 @@ ms.suite: ems
 -   これらのファイルにアクセスできない場合や、ファイル内に疑わしい変更が見つかった場合は、&lt;アクションと連絡先の詳細&gt;。
 
 #### カスタマイズされたユーザー ドキュメントの例
-![](../media/AzRMS_ExampleBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 ##### IT からのお知らせ: VanArsdel の極秘ドキュメントの保護
 次のファイルには非常に高いレベルの保護が適用されているため、このメール メッセージの宛先行に含まれるユーザーだけがファイルにアクセスして変更を行うことができます。 ファイルを不正アクセスから保護するために、アプリケーションはユーザーがファイルを開くたびに自動的に承認を要求します。したがって、ファイルを開くにはインターネットに接続する必要があり、資格情報が要求される場合があります。
@@ -150,6 +152,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

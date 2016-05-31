@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # シナリオ - 別の組織のユーザーと Office ファイルを共有する
+
+*適用対象: Azure Rights Management、Office 365*
+
 このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。 たとえば、Office ファイルが、パートナー向けの価格表、販売店向けの製品一覧、配信タイムラインと潜在的な顧客の一覧が含まれる、Word 文書、Excel スプレッドシート、または PowerPoint プレゼンテーションであるとします。 ユーザーが手順に従って操作を行えば、電子メール メッセージに添付されるファイルは Azure Rights Management によって保護されます。
 
 このシナリオは、次の一連の状況に適してします。
@@ -39,7 +42,7 @@ ms.suite: ems
 -   従業員は、外部のユーザーがこのドキュメントを開いた日時を知りたいと考えている可能性があります。
 
 ## デプロイの手順
-![](../media/AzRMS_AdminBanner.png)
+![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認してください。
 
@@ -57,9 +60,9 @@ ms.suite: ems
 ## ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
 
-1.  *&lt;name of Office document type&gt;* を、ユーザーが送信するドキュメントの種類に置き換えます。 「Word 文書」や「Excel スプレッドシート」ではなく、「価格表」、「配信時刻」、または「入札プロポーザル」など作業フローに特有の表現またはなじみの表現を使用します。 より具体的な表現を使用することで、ユーザーがこれらのドキュメントを操作するときに手順に従う可能性が大きくなります。
+1.  *&lt;Office ドキュメントの種類の名前&gt;* を、ユーザーが送信するドキュメントの種類に置き換えます。 「Word 文書」や「Excel スプレッドシート」ではなく、「価格表」、「配信時刻」、または「入札プロポーザル」など作業フローに特有の表現またはなじみの表現を使用します。 より具体的な表現を使用することで、ユーザーがこれらのドキュメントを操作するときに手順に従う可能性が大きくなります。
 
-2.  *&lt;連絡先の詳細&gt;* を、Web サイト リンク、電子メール アドレス、電話番号など、ユーザーがヘルプ デスクに連絡を取るための方法を示す手順に置き換えます。
+2.  *&lt;連絡先の詳細&gt;* は、Web サイト リンク、電子メール アドレス、電話番号など、ユーザーがヘルプ デスクに連絡を取るための方法を示す手順に置き換えます。
 
 3.  **その他の推奨の変更:**
 
@@ -71,38 +74,37 @@ ms.suite: ems
 
     -   これらのステップに、有効期限の設定は含まれません。 特定の期日以降にこの情報が使用されないようにする場合は、もう 1 つステップを追加して適切な有効期限 (たとえば、電子メール メッセージを送信してから 90 日) を設定します。
 
-    > [!NOTE]
-    > ユーザーが選択できる各オプションの詳細については、「 [Rights Management 共有アプリケーションのダイアログ ボックスのオプション](https://technet.microsoft.com/library/dn574738.aspx)」を参照してください
+    > [!NOTE] ユーザーが選択できる各オプションの詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックスのオプション](https://technet.microsoft.com/library/dn574738.aspx)」を参照してください
 
 4.  必要に応じて手順に変更を加え、変更した手順をユーザーに送信します。
 
 ドキュメントの例では、カスタマイズ後、これらの手順がユーザーにどのように表示されるかを示します。
 
-![](../media/AzRMS_UsersBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### &lt;name of Office document type&gt; を共有する方法
+### &lt;Office ドキュメントの種類の名前> を共有する方法&gt;
 
-1.  1 つまたは複数の電子メール アドレスを指定して電子メール メッセージを作成し、それに *&lt;name of Office document type&gt;* を添付します。 次に、[ **メッセージ** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
+1.  1 つまたは複数の電子メール アドレスを指定して電子メール メッセージを作成し、それに *&lt;Office ドキュメントの種類の名前&gt;* を添付します。 次に、[ **メッセージ** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Outlook を使用して Office ドキュメントを共有する方法のスクリーンショット](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  [ **保護ファイルの共有** ] ダイアログ ボックスで、[ **閲覧者 – 表示のみ**] を選択します。
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![[保護ファイルの共有] ダイアログ ボックスの [閲覧者 – 表示のみ]](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  [ **これらのドキュメントへのアクセスをすぐに取り消せるようにする**] を選択します
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![[保護ファイルの共有] ダイアログ ボックス - すぐに取り消す](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  [ **他のユーザーがこのドキュメントを開こうとしたら電子メールで通知する**] を選択します
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![[保護ファイルの共有] ダイアログ ボックス - 電子メールで通知する](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  [ **今すぐ送信**] をクリックします。
 
-[ **宛先**]、[ **CC**]、または [ **BCC** ] 行上のだれかがこの電子メールを受け取ると、受信者には、添付された *&lt;name of Office document type&gt;*の読み取り手順を示すメッセージが表示されます。 このドキュメントは、iPad、iPhone、Android タブレットと携帯電話、Mac コンピューター、Windows コンピューターなど多くのデバイスで読み取ることができます。
+[**宛先**]、[**CC**]、または [**BCC**] 行上のだれかがこの電子メールを受け取ると、受信者には、添付された *&lt;Office ドキュメントの種類の名前&gt;* の読み取り手順を示すメッセージが表示されます。 このドキュメントは、iPad、iPhone、Android タブレットと携帯電話、Mac コンピューター、Windows コンピューターなど多くのデバイスで読み取ることができます。
 
-添付した &lt;name of Office document type&gt; を受信者が開いたかどうか、さらにそれをいつ開いたか追跡するには、 [ドキュメントの追跡ポータル](https://track.azurerms.com/) を使用します。 受信者が &lt;name of Office document type&gt; を開いたことを確認したらすぐに、フォローアップ電話をかけることを検討します。
+添付した &lt;Office ドキュメントの種類の名前&gt; を受信者が開いたかどうか、さらにそれをいつ開いたか追跡するには、[ドキュメントの追跡ポータル](https://track.azurerms.com/) を使用します。 受信者が &lt;Office ドキュメントの種類の名前&gt; を開いたことを確認したらすぐに、フォローアップ電話をかけることを検討します。
 
 **サポートが必要な場合は、**
 
@@ -114,28 +116,28 @@ ms.suite: ems
 
 -   ヘルプ デスクに問い合わせる
 
-    -   *&lt;連絡先の詳細&gt;*
+    -   *&lt;連絡先詳細&gt;*
 
 ### カスタマイズされたユーザー ドキュメントの例
-![](../media/AzRMS_ExampleBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 #### 顧客と価格表を共有する方法
 
 1.  1 つまたは複数の電子メール アドレスを指定して電子メール メッセージを作成し、メッセージを入力し、電子メール メッセージに最新の価格表を添付します。 次に、[ **メッセージ** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Outlook を使用して Office ドキュメントを共有する方法のスクリーンショット](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  [ **保護ファイルの共有** ] ダイアログ ボックスで、[ **閲覧者 – 表示のみ**] を選択します。
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![[保護ファイルの共有] ダイアログ ボックスの [閲覧者 – 表示のみ]](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  [ **これらのドキュメントへのアクセスをすぐに取り消せるようにする**] を選択します
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![[保護ファイルの共有] ダイアログ ボックス - すぐに取り消す](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  [ **他のユーザーがこのドキュメントを開こうとしたら電子メールで通知する**] を選択します
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![[保護ファイルの共有] ダイアログ ボックス - 電子メールで通知する](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  [ **今すぐ送信**] をクリックします。
 
@@ -157,6 +159,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

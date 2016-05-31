@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # シナリオ – 社外秘の電子メールを送信する
+
+*適用対象: Azure Rights Management、Office 365*
+
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。 たとえば、別の組織の誰かまたは個人用の電子メール アカウントに電子メール メッセージを転送するとします。 電子メールと添付ファイルは、Azure Rights Management とユーザーが電子メール クライアントから選択するテンプレートによって保護されます。
 
 このシナリオを実現する最も簡単な方法は、組み込まれている既定のテンプレートを使用して、組織内のすべてのユーザーへのアクセスを自動的に制限することですが、 必要に応じて、ユーザーのサブセットに対するアクセスを制限するなどのカスタム テンプレートを作成したり、その他の制限 (読み取り専用や有効期限など) を設定したり、電子メール クライアントの [進む] ボタンを無効にしたりすることで、制限を強化することができます。
@@ -44,7 +47,7 @@ ms.suite: ems
 -   ユーザーは電子メール クライアントからテンプレートを手動で選択する必要がある。
 
 ## デプロイの手順
-![](../media/AzRMS_AdminBanner.png)
+![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認してください。
 
@@ -56,8 +59,8 @@ ms.suite: ems
 |Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Rights Management テナント キーを計画して実装する](https://technet.microsoft.com/library/dn440580.aspx)|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|次のいずれかです。<br /><br />Azure Rights Management の Exchange Online が有効になっている<br /><br />RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
-|既定の Azure Rights Management テンプレート **&lt; 組織 &gt; - 社外秘** をアーカイブしていない。 または、より厳しい制限を設定する、あるいは組織内のユーザーのサブセットのみが保護された電子メールを読み取ることができるようにする必要があるため、この目的でカスタム テンプレートを構成した。|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)<br /><br />ヒント: より制限の厳しい使用ポリシーを組織内のすべてのユーザーに対して設定する必要がある場合、最初から新しいテンプレートを作成するのではなく、既定のテンプレートをコピーして編集します。<br /><br />このシナリオの電子メール クライアントでは、更新されたテンプレートはすぐには最新の情報に更新されません。 詳細については、構成テンプレートに関する記事「Azure Rights Management のカスタム テンプレートを構成する」の「 [ユーザー用のテンプレートの更新](https://technet.microsoft.com/library/dn642472.aspx) 」を参照してください。|
+|次のいずれかです。<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
+|既定の Azure Rights Management テンプレート **&lt;組織&gt; - 社外秘** をアーカイブしていない。 または、より厳しい制限を設定する、あるいは組織内のユーザーのサブセットのみが保護された電子メールを読み取ることができるようにする必要があるため、この目的でカスタム テンプレートを構成した。|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)<br /><br />ヒント: より制限の厳しい使用ポリシーを組織内のすべてのユーザーに対して設定する必要がある場合、最初から新しいテンプレートを作成するのではなく、既定のテンプレートをコピーして編集します。<br /><br />このシナリオの電子メール クライアントでは、更新されたテンプレートはすぐには最新の情報に更新されません。 詳細については、構成テンプレートに関する記事「Azure Rights Management のカスタム テンプレートを構成する」の「 [ユーザー用のテンプレートの更新](https://technet.microsoft.com/library/dn642472.aspx) 」を参照してください。|
 |保護された電子メールを送信するユーザーが Outlook 2013、Outlook 2016、または Outlook Web Access を持っている。<br /><br />電子メールを受信するユーザーが Azure Rights Management をサポートする電子メール クライアントを持っている。|Outlook 2010 を使用できますが、[Windows 用の Rights Management 共有アプリケーションをインストール](https://technet.microsoft.com/library/dn339003.aspx) し、それに従ってユーザーの手順を調整する必要があります。<br /><br />Azure Rights Management をサポートする電子メールの一覧については、「[Azure Rights Management の要件](https://technet.microsoft.com/library/dn655136.aspx)」の 「[クライアント デバイスの機能](https://technet.microsoft.com/library/dn655136.aspx)」の表の「**電子メール**」列を参照してください。|
 
 ## ユーザー ドキュメントの手順
@@ -65,11 +68,11 @@ ms.suite: ems
 
 1.  *&lt;組織名&gt;* のすべてのインスタンスを組織の名前に置き換えます。
 
-2.  *&lt;組織名 - 社外秘&gt;* のすべてのインスタンスを既定のテンプレートまたはカスタム テンプレートの名前に置き換えます。
+2.  *&lt;組織名&gt;* - 社外秘のすべてのインスタンスを既定のテンプレートまたはカスタム テンプレートの名前に置き換えます。
 
 3.  組織のテンプレート名が表示されるように、スクリーン ショットを置き換えます。
 
-4.  *&lt;連絡先の詳細&gt;* を、Web サイト リンク、電子メール アドレス、電話番号など、ユーザーがヘルプ デスクに連絡を取るための方法を示す手順に置き換えます。
+4.  *&lt;連絡先の詳細&gt;* は、Web サイト リンク、電子メール アドレス、電話番号など、ユーザーがヘルプ デスクに連絡を取るための方法を示す手順に置き換えます。
 
 5.  **その他の推奨の変更:**
 
@@ -93,25 +96,25 @@ ms.suite: ems
 
 ドキュメントの例では、カスタマイズ後、これらの手順がユーザーにどのように表示されるかを示します。
 
-![](../media/AzRMS_UsersBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
 ### Outlook を使用して社外秘情報を含む電子メールを送信する方法
 
-1.  Outlook で新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、*&lt; 組織名&gt;* からユーザーまたはグループを選択します。
+1.  Outlook で新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、*&lt;組織名&gt;* からユーザーまたはグループを選択します。
 
-2.  **[オプション]** タブの **[アクセス許可]** をクリックし、**[&lt;組織名 - 社外秘&gt;]** を選択します。
+2.  **[オプション]** タブの **[アクセス許可]** をクリックし、**&lt;[組織名 - 社外秘]&gt;** を選択します。
 
-    ![](../media/AzRMS_OutlookTemplate.PNG)
+    ![Outlook を使用して社外秘情報を含む電子メールを送信する方法のスクリーンショット](../media/AzRMS_OutlookTemplate.PNG)
 
 3.  メッセージを送信します。
 
 ### Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
 
-1.  Outlook Web アプリで新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から *&lt; 組織名&gt;* ユーザーまたはグループを選択します。
+1.  Outlook Web アプリで新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から *&lt;組織名&gt;* ユーザーまたはグループを選択します。
 
-2.  **[…]** をクリックし、**[アクセス権の設定]** をクリックし、**[&lt;組織名 - 社外秘&gt;]** を選択します。
+2.  **[…]** をクリックし、**[アクセス権の設定]** をクリックし、**&lt;[組織名 - 社外秘]&gt;** を選択します。
 
-    ![](../media/AzRMS_OWATemplate.png)
+    ![Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法のスクリーンショット](../media/AzRMS_OWATemplate.png)
 
 3.  メッセージを送信します。
 
@@ -123,10 +126,10 @@ ms.suite: ems
 
 -   ヘルプ デスクに問い合わせる
 
-    -   *&lt;連絡先の詳細&gt;*
+    -   *&lt;連絡先詳細&gt;*
 
 ### カスタマイズされたユーザー ドキュメントの例
-![](../media/AzRMS_ExampleBanner.png)
+![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 #### Outlook を使用して社外秘情報を含む電子メールを送信する方法
 
@@ -134,7 +137,7 @@ ms.suite: ems
 
 2.  **[オプション]** タブの **[アクセス許可]** をクリックし、**[VanArsdel, Ltd - 社外秘]** を選択します。
 
-    ![](../media/AzRMS_OutlookTemplate.PNG)
+    ![Outlook を使用して社外秘情報を含む電子メールを送信する方法のスクリーンショット](../media/AzRMS_OutlookTemplate.PNG)
 
 3.  メッセージを送信します。
 
@@ -144,7 +147,7 @@ ms.suite: ems
 
 2.  **[…]** をクリックし、**[アクセス権の設定]** をクリックし、**[VanArsdel, Ltd - 社外秘]** を選択します。
 
-    ![](../media/AzRMS_OWATemplate.png)
+    ![Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法のスクリーンショット](../media/AzRMS_OWATemplate.png)
 
 3.  メッセージを送信します。
 
@@ -160,6 +163,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 
