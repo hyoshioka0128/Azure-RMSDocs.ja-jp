@@ -28,7 +28,7 @@ ms.suite: ems
 
 # 第 1 レベルの見出し
 
-[GitHub](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md) でこのファイルのマークダウンを参照してください。[EM Pilot スタイル ガイド](https://worldready.cloudapp.net/Styleguide/Edit?id=2781&topicid=36931)のマークダウン リファレンスを参照してください。 
+[GitHub](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md) でこのファイルのマークダウンを参照してください。[EM Pilot スタイル ガイド](https://worldready.cloudapp.net/Styleguide/Edit?id=2781&topicid=36931)のマークダウン リファレンスを参照してください。. 
 
 ## 第 2 レベルの見出し
 ### 第 3 レベルの見出し
@@ -118,11 +118,11 @@ ms.suite: ems
 
 ### インライン コード
 
-これは `in-line code` の例です。
+これは  の例です。 `in-line code`.
 
 ## 引用
 
-> 干ばつは 1000 万年も続き、恐竜の治世はとうに終わっていた。 ここ、赤道地帯、いつの日かアフリカと呼ばれるようになる大陸では、生存の戦いは熾烈なクライマックスを迎えていたが、勝者はまだ現れてはいなかった。 この乾燥した不毛の大地では、小さなもの、すばしこいもの、どう猛なもののみ栄えることができ、また生存の望みをつなぐことができた。
+> 干ばつは 1000 万年も続き、恐竜の治世はとうに終わっていた。 ここ、赤道地帯、いずれアフリカと呼ばれるようになる大陸では、生存の戦いは熾烈なクライマックスを迎えていたが、勝者はまだ現れていなかった。 この乾燥した不毛の大地では、小さなもの、すばしこいもの、どう猛なもののみ栄えることができ、また生存の望みをつなぐことができた。
 
 ## 画像
 
@@ -165,6 +165,18 @@ ms.suite: ems
 [ボタン リンク](/azure-rms/index.html)
 
 ### セレクター
+
+手順の概要: [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [bar](./develop/developer-notes.md)
+
+手順の概要: > [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [bar](./develop/developer-notes.md)
+
+
+
+
 > [!div class="op_single_selector"]
 - [foo](./develop/developers-guide.md)
 - [bar](./develop/developer-notes.md)
@@ -179,6 +191,6 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
