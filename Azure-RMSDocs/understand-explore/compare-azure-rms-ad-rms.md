@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Rights Management と AD RMS を比較する | Azure RMS
+title: Azure Rights Management と AD RMS の比較 | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Azure Rights Management と AD RMS を構成する
+# Azure Rights Management と AD RMS の比較
 
 *適用対象: Active Directory Rights Management サービス、Azure Rights Management、Office 365*
 
