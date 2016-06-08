@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\understand-explore\compare-azure-rms-ad-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/332e102cb27854314b93a71bfeae82a95c9a7812/Azure-RMSDocs/understand-explore/compare-azure-rms-ad-rms.md) | InSyncHandedBackSuccess | [Details](#8635402989db0f83017151910013ca460011b392387)
 
 ## Item Details
+##### <a name='8635402989db0f83017151910013ca460011b392387'></a> Source: [Azure-RMSDocs\understand-explore\compare-azure-rms-ad-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/332e102cb27854314b93a71bfeae82a95c9a7812/Azure-RMSDocs/understand-explore/compare-azure-rms-ad-rms.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\understand-explore\compare-azure-rms-ad-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/cf7f189cd6a0502aacf308e067acec8c1af85afc/Azure-RMSDocs/understand-explore/compare-azure-rms-ad-rms.md)
+* Handoff File: [compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/2fbeb415500117aeb15a6a75c55f8a6bf1bfe3f5/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.ja-jp.xlf)
+* Handoff Datetime: 2016-05-20 21:12:10
+* Handoff Reason: Include
+* Archive File: [compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/fe979741c59abd5426a17536d38f0d3333fb397e/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.ja-jp.xlf)
+* Archive Datetime: 2016-05-21 18:43:07
+* Handback File: [compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/f9b85427394ee4400307dd6bebfad1758c09aba1/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/compare-azure-rms-ad-rms.4805b567858dd2f4067e44738d85aea3757b387c.ja-jp.xlf)
+* Handback Datetime: 2016-06-08 09:05:20
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
