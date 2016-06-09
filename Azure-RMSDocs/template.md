@@ -182,7 +182,7 @@ ms.assetid: [GET ONE FROM guidgenerator.com]
 
 ### リンクされた画像
 
-[![aリンク画像のテキスト(./media/AzRMS_elements.png)](https://azure.microsoft.com) 
+[![aリンク画像のテキスト](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
 
 ### アニメーション GIF
 
