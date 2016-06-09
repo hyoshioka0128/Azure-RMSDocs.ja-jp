@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\get-started\tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/tutorial-step4.md) | InSyncHandedBackSuccess | [Details](#19f536e8d0353c7b0ccbd4de3df646352dc2d748124)
 
 ## Item Details
+##### <a name='19f536e8d0353c7b0ccbd4de3df646352dc2d748124'></a> Source: [Azure-RMSDocs\get-started\tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/tutorial-step4.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\get-started\tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/59a563bdd1fc07ad8899fc793565b802b59270c3/Azure-RMSDocs/get-started/tutorial-step4.md)
+* Handoff File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/2006b16358bedc22e008baf192d51caef7ef08d4/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.ja-jp.xlf)
+* Handoff Datetime: 2016-05-12 00:55:58
+* Handoff Reason: Include
+* Archive File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/fe979741c59abd5426a17536d38f0d3333fb397e/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.ja-jp.xlf)
+* Archive Datetime: 2016-05-21 18:43:07
+* Handback File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/8ea14670260bc73729fac10c87af7b126194a007/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.ja-jp.xlf)
+* Handback Datetime: 2016-06-09 18:11:53
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
