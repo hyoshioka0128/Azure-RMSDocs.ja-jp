@@ -1,11 +1,39 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\develop\application-types.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/872bb0c20db2ef8d661d321598a2b1fe61d69316/Azure-RMSDocs/develop/application-types.md) | InSyncHandedBackSuccess | [Details](#a27d1921336a795df5a3c91b36b97846e74cca3449)
+ [Azure-RMSDocs\develop\supported-file-formats.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b5fbbf637a34371a676a6cba169cc0268ce5e541/Azure-RMSDocs/develop/supported-file-formats.md) | InSyncHandedBackSuccess | [Details](#58efe60d6066f2e9761aea8d66d83711e68ab64289)
 
 ## Item Details
+##### <a name='a27d1921336a795df5a3c91b36b97846e74cca3449'></a> Source: [Azure-RMSDocs\develop\application-types.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/872bb0c20db2ef8d661d321598a2b1fe61d69316/Azure-RMSDocs/develop/application-types.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\application-types.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/f6543543f174c14c77713c51f7e1b5b535af7f16/Azure-RMSDocs/develop/application-types.md)
+* Handoff File: [application-types.5529d6304d7ccf1da4927e0cf8d7dde13087edd5.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/0eda1bb3b5da3077990912974914a8496c3c4e18/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/application-types.5529d6304d7ccf1da4927e0cf8d7dde13087edd5.ja-jp.xlf)
+* Handoff Datetime: 2016-06-09 01:50:46
+* Handoff Reason: Include
+* Archive File: [application-types.5529d6304d7ccf1da4927e0cf8d7dde13087edd5.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/4c7c308e0fae14ff91586273e69c0c1655ec099b/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/application-types.5529d6304d7ccf1da4927e0cf8d7dde13087edd5.ja-jp.xlf)
+* Archive Datetime: 2016-06-09 02:40:49
+* Handback File: [application-types.5529d6304d7ccf1da4927e0cf8d7dde13087edd5.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/df101591e7304b572f0d320bb00922a8fd6c2d89/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/application-types.5529d6304d7ccf1da4927e0cf8d7dde13087edd5.ja-jp.xlf)
+* Handback Datetime: 2016-06-09 04:22:20
+* [Back to Top](#report-top)
+
+##### <a name='58efe60d6066f2e9761aea8d66d83711e68ab64289'></a> Source: [Azure-RMSDocs\develop\supported-file-formats.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b5fbbf637a34371a676a6cba169cc0268ce5e541/Azure-RMSDocs/develop/supported-file-formats.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\supported-file-formats.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/f6543543f174c14c77713c51f7e1b5b535af7f16/Azure-RMSDocs/develop/supported-file-formats.md)
+* Handoff File: [supported-file-formats.83f465b683a3a9e84807ca6c767af23e8ab9a55f.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/0eda1bb3b5da3077990912974914a8496c3c4e18/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/supported-file-formats.83f465b683a3a9e84807ca6c767af23e8ab9a55f.ja-jp.xlf)
+* Handoff Datetime: 2016-06-09 01:50:46
+* Handoff Reason: Include
+* Archive File: [supported-file-formats.83f465b683a3a9e84807ca6c767af23e8ab9a55f.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/4c7c308e0fae14ff91586273e69c0c1655ec099b/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/supported-file-formats.83f465b683a3a9e84807ca6c767af23e8ab9a55f.ja-jp.xlf)
+* Archive Datetime: 2016-06-09 02:40:49
+* Handback File: [supported-file-formats.83f465b683a3a9e84807ca6c767af23e8ab9a55f.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/df101591e7304b572f0d320bb00922a8fd6c2d89/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/supported-file-formats.83f465b683a3a9e84807ca6c767af23e8ab9a55f.ja-jp.xlf)
+* Handback Datetime: 2016-06-09 04:22:20
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
