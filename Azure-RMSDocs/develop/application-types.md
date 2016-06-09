@@ -37,7 +37,6 @@ Rights Management サービス SDK 2.1 では、次のアプリケーション�
 
 ### サーバー モード アプリケーション
 
-
 *サーバー モード*は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止*アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)を参照してください。
 
 アプリケーションで*サーバー モード*を使用する場合は、RMS サーバーをサイレント認証する必要があります。 *クライアント モード*とは異なり、サイレント認証に失敗した場合にも、RMS SDK 2.1 は資格情報プロンプトを開きません。 また、*サーバー モード*で実行しているときは、アプリケーション マニフェストも必要ありません。
@@ -60,19 +59,12 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 ## 関連項目
 
-* [Developer concepts (開発者の概念)](ad-rms-concepts-nav.md)
 * [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 * [IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)
 * [Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)
 * [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
- 
-
- 
 
 
-
-
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

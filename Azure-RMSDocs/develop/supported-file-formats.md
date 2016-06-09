@@ -46,9 +46,6 @@ File API の現在のバージョンは、Microsoft Office ファイルに対す
  
 
 
-
-
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 
