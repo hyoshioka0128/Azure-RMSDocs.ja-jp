@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # テスト環境のセットアップ
 
 権限保護対応アプリケーションは、さまざまなサーバー オプションを指定してテストできます。
@@ -65,6 +65,6 @@ RMS サーバーに対してアプリケーションをテストする場合、2
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # コード サンプル
 
 このトピックでは、MSDN ダウンロード センターから入手できる Rights Management サービス SDK 2.1 を使用するサンプルのセットを示します。
@@ -57,6 +57,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

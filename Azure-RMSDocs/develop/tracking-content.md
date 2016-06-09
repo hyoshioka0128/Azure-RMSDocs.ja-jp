@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # コンテンツの追跡
 
 このトピックでは、Rights Management サービス SDK 2.1 で保護されたコンテンツのドキュメント追跡を実装するための基本的なガイダンスを提供します。
@@ -134,6 +134,6 @@ ms.suite: ems
  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

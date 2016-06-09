@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # 権限保護対応アプリケーションのデバッグ
 
 このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
@@ -81,6 +81,6 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

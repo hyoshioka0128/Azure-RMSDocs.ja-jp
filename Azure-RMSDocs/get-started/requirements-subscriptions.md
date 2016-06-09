@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/25/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -86,17 +86,18 @@ Azure Rights Management Premium サブスクリプションについて詳しく
 ## エンタープライズ モビリティ スイート サブスクリプション
 [30 日間の無料試用版](http://go.microsoft.com/fwlink/?LinkId=615385)
 
-このサブスクリプションは、Azure Active Directory Premium、Windows Intune、および Azure Rights Management を組み合わせて使用する組織向けに設計されています。 Office で Azure Rights Management を使用する場合のサポートは、Azure Rights Management Premium サブスクリプションを使用する場合と同じです。 
-Enterprise Mobility Suite サブスクリプションについて詳しくは、「[Microsoft Enterprise モビリティの概要](http://go.microsoft.com/fwlink/?LinkId=615386)」を参照してください。
+このサブスクリプションは、Azure Active Directory Premium、Windows Intune、および Azure Rights Management を組み合わせて使用する組織向けに設計されています。 Office で Azure Rights Management を使用する場合のサポートは、Azure Rights Management Premium サブスクリプションを使用する場合と同じです。 Enterprise Mobility Suite サブスクリプションについて詳しくは、「[Microsoft Enterprise モビリティの概要](http://go.microsoft.com/fwlink/?LinkId=615386)」を参照してください。
 
 ## 個人用 RMS サブスクリプション
 このサブスクリプションは、Azure RMS または AD RMS を展開していない組織の個人ユーザー向けに設計されています。 このようなユーザーが Azure RMS を使用して、組織によって保護されているコンテンツを読んだり、各自のコンテンツを保護したりできます。
 
-詳細については、「[個人向け RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
+これは Office 365 管理ポータルに **Rights Management Adhoc** として一覧表示されるか、自動的にユーザーに割り当てられることがあります。 このライセンスをユーザーに手動で割り当てたり、組織の Azure RMS を管理するために使用したりしないでください。 
+
+詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
 ## 次のステップ
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO5-->
 
 

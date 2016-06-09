@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
 このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/en-us/library/jj585016.aspx)」を参照してください。
@@ -44,8 +44,7 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
 -   [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) を設定します。
 
 
-    int mode = IPC_API_MODE_SERVER;
-    IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
+    int mode = IPC_API_MODE_SERVER; IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
 **注** 詳細については、「[Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
@@ -53,7 +52,7 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
      
 
 -   次の手順は、[**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) 構造体のインスタンスを作成するためのセットアップです。**pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) メンバーに Azure Rights Management サービスの接続情報を設定します。
--   [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) 構造体のインスタンスを作成するときは、対称キーのサービス ID 作成時にメモした情報使用して (このトピックで既に示した前提条件を参照してください)、**wszServicePrincipal**、**wszBposTenantId**、および **cbKey** パラメーターを設定します。
+-   [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) 構造体のインスタンスを作成するときは、対称キーのサービス ID 作成時にメモした情報使用して (このトピックで既に示した前提条件を参照してください)、**wszServicePrincipal**、**wszBposTenantId**、**cbKey** パラメーターを設定します。
 
 **注** 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 この指定には、[**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) または [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist) の [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) パラメーターを使用します。
 
@@ -67,21 +66,15 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
 **注** Powershell コマンドレットを使用するには、テナントの管理者でなければなりません。
 
 
--   Powershell を起動し、次のコマンドを実行してキーを生成します。
-            `Import-Module MSOnline`
-            `Connect-MsolService` (管理者の資格情報を入力します)
-            `New-MsolServicePrincipal` (表示名を入力します)
+-   PowerShell を起動し、次のコマンドを実行してキー         `Import-Module MSOnline`
+            `Connect-MsolService` (管理者資格情報を入力)         `New-MsolServicePrincipal` (表示名を入力) を生成します。
 -   対称キーの生成後、キー自体と **AppPrincipalId** を含むキーに関する情報が出力されます。
 
 
 
-    The following symmetric key was created as one was not supplied
-    ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
+    The following symmetric key was created as one was not supplied ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
 
-    DisplayName : RMSTestApp
-    ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963}
-    ObjectId : 0ee53770-ec86-409e-8939-6d8239880518
-    AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
+    DisplayName : RMSTestApp ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963} ObjectId : 0ee53770-ec86-409e-8939-6d8239880518 AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
 
@@ -103,12 +96,10 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
 
     // サービス作成時の情報を各メンバーに設定します。
-    symKey.wszBase64Key = 「サービス プリンシパル キー」;
-    symKey.wszAppPrincipalId = 「アプリケーションのプリンシパル ID」;
-    symKey.wszBposTenantId = 「テナント ID」;
+    symKey.wszBase64Key = "your service principal key"; symKey.wszAppPrincipalId = "your app principal identifier"; symKey.wszBposTenantId = "your tenent identifier";
 
 
-詳細については、[**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) を参照してください。
+詳細については、「[**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key)」を参照してください。
 
 -   [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) インスタンスを含む、[**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) 構造体のインスタンスを作成します。
 
@@ -141,15 +132,9 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
     [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) を呼び出して、同じ [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) インスタンスに渡します。
 
 
-    PCIPC_TIL pTemplates = NULL;
-    IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
+    PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
 
-    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),
-           IPC_GTL_FLAG_FORCE_DOWNLOAD,
-           0,
-           &promptCtx,
-           NULL,
-           &pTemplates);
+    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
 
 
 -   このトピック前半のテンプレートを使用して、[**IpcfEncrcyptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile) を呼び出して、同じ [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) インスタンスに渡します。
@@ -197,6 +182,6 @@ Azure RMS で RMS SDK 2.1 のサービス アプリケーションを使用す�
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

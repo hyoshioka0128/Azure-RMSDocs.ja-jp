@@ -23,9 +23,9 @@ ms.suite: ems
 #ms.custom:
 
 ---
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 
 # AD RMS サーバー
-
 このトピックでは、RMS サーバーの目的と機能について説明します。
 
 Rights Management サービス (RMS) のサーバー コンポーネントは、[Microsoft インターネット インフォメーション サービス](http://www.iis.net/overview) (IIS) で実行される一連の Web サービスによって実装されます。 Azure の RMS を使用してクラウド ベースの実装を使用することもできます。 Azure Rights Management サービス使用の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
@@ -65,6 +65,6 @@ Rights Management サービス (RMS) のサーバー コンポーネントは、
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

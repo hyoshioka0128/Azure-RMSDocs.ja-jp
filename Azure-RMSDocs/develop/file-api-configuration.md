@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# ファイル API の構成
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
+# File API の構成
 
 
 ファイルの API の動作は、レジストリの設定を使用して構成できます。
@@ -75,7 +75,7 @@ ms.suite: ems
 - *Pfile*: PFile 暗号化が使用されます。 暗号化されたファイルでは、元の拡張子に .pfile が追加されます。 たとえば、.txt ファイルを暗号化すると、拡張子は .txt.pfile になります。
 
 
-> [AZURE.NOTE] この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が "Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
+> [AZURE.NOTE] この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が &quot;Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
 
 その他の値を設定する場合や、値を設定しない場合は、既定の動作が実行されます。
 
@@ -151,7 +151,7 @@ HKEY_LOCAL_MACHINE
 
 ## 関連項目
 
-* [Developer notes (開発者向け注意事項)](developer-notes.md)
+* [開発者向け注意事項](developer-notes.md)
 * [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
  
 
@@ -161,6 +161,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

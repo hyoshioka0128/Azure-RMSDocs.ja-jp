@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # クライアント
 
 このトピックでは、Active Directory Rights Management サービス クライアント 2.1 の用途と機能について説明します。
@@ -51,6 +51,6 @@ Rights Management サービス SDK 2.1 は、AD RMS クライアント 2.1 で�
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
