@@ -595,14 +595,14 @@
 
 ##### <a name='607de5e4699d654a4b7895bacde8f18a9707f8a112'></a> Source: [Azure-RMSDocs\deploy-use\configure-office-apps.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/configure-office-apps.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\deploy-use\configure-office-apps.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/fdb7ca666226a2cb37607f3575a7170487862c38/Azure-RMSDocs/deploy-use/configure-office-apps.md)
+* Target File: [Azure-RMSDocs\deploy-use\configure-office-apps.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/4b574b66ce67c128b77ce85885a3bae5be501c62/Azure-RMSDocs/deploy-use/configure-office-apps.md)
 * Handoff File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/c61ea5218a925daadc1df1400649e8041f10ed42/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf)
 * Handoff Datetime: 2016-04-27 21:33:12
 * Handoff Reason: Include
 * Archive File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/fe979741c59abd5426a17536d38f0d3333fb397e/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf)
 * Archive Datetime: 2016-05-21 18:43:07
-* Handback File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7fd365391f9b57e149319bb44dfb5a367a848538/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf)
-* Handback Datetime: 2016-05-31 10:16:25
+* Handback File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/ef79fdea748aef2f6124547e0c154f147a5e7f34/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf)
+* Handback Datetime: 2016-06-10 20:20:08
 * [Back to Top](#report-top)
 
 ##### <a name='79171b5931b69ca18d2a2cbe321d5d5887903da214'></a> Source: [Azure-RMSDocs\deploy-use\configure-servers-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0b07ecc88b1d2d344f0984d4a805cc033996cc4d/Azure-RMSDocs/deploy-use/configure-servers-rms-connector.md)
