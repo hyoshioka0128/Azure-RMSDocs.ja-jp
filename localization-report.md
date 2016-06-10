@@ -10,8 +10,8 @@
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 33
-[ In Sync Handback Files ](#insync-handback-success-list)| 166
-[ Ignored Files ](#ignored-list)| 66
+[ In Sync Handback Files ](#insync-handback-success-list)| 165
+[ Ignored Files ](#ignored-list)| 67
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -359,7 +359,6 @@
  [Azure-RMSDocs\understand-explore\sharing-app-support.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/sharing-app-support.md) | InSyncHandedBackSuccess | [Details](#02f1cf60bdafe748f16d9defa1c8b0cc8a61efb0385)
  [Azure-RMSDocs\understand-explore\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab77d92f758a8d5a68c34ba3a4bfbbfc2f35bd34/Azure-RMSDocs/understand-explore/TOC.md) | InSyncHandedBackSuccess | [Details](#63a685b29629c7ee120c0c925956e18b52abd1bf386)
  [Azure-RMSDocs\understand-explore\understand-explore.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/understand-explore.md) | InSyncHandedBackSuccess | [Details](#63635d13f95219bd900d8ecdd0ca0738c5ebca4a387)
- [Azure-RMSDocs\understand-explore\what-admins-users-see.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/what-admins-users-see.md) | InSyncHandedBackSuccess | [Details](#6283b1be421a2ffb6261f4921d973df7a1270d08388)
  [Azure-RMSDocs\understand-explore\what-is-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e2de70fcbe0b284368b1e52c34f42d1cf4554edd/Azure-RMSDocs/understand-explore/what-is-azure-rms.md) | InSyncHandedBackSuccess | [Details](#6fe5759a790a728da7a16453e5b3ab5d523bb9fd389)
  [template.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/template.md) | InSyncHandedBackSuccess | [Details](#e6106b0b5a5aa1039f7cbf5a35589216c5e540f3392)
 
@@ -429,6 +428,7 @@
  [Azure-RMSDocs\plan-design\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/Azure-RMSDocs/plan-design/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda333)
  [Azure-RMSDocs\rms-client\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/Azure-RMSDocs/rms-client/docfx.json) | Ignored | [Details](#4d71e2080736b2c006f55499860b48b080c7afb5349)
  [Azure-RMSDocs\rms-client\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/Azure-RMSDocs/rms-client/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda352)
+ [Azure-RMSDocs\understand-explore\what-admins-users-see.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/Azure-RMSDocs/understand-explore/what-admins-users-see.md) | Ignored | [Details](#fe0dbdafdd0e094039864b389575b5b5306f39d4388)
  [license.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/license.md) | Ignored | [Details](#fc0612997fdfe01bdee7ee9daa01144dfd0143dd390)
  [README.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/README.md) | Ignored | [Details](#8b38ac1bf813dc8840b1522ce23fddf8de3997c3391)
  [UpdateSubmodule.ps1](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/UpdateSubmodule.ps1) | Ignored | [Details](#42442e5f8d7f09fba90a865e184aacc3f8489143393)
@@ -5314,16 +5314,16 @@
 * Handback Datetime: 2016-05-31 10:16:25
 * [Back to Top](#report-top)
 
-##### <a name='6283b1be421a2ffb6261f4921d973df7a1270d08388'></a> Source: [Azure-RMSDocs\understand-explore\what-admins-users-see.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/what-admins-users-see.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\understand-explore\what-admins-users-see.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/fdb7ca666226a2cb37607f3575a7170487862c38/Azure-RMSDocs/understand-explore/what-admins-users-see.md)
-* Handoff File: [what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/c61ea5218a925daadc1df1400649e8041f10ed42/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf)
-* Handoff Datetime: 2016-04-27 21:33:12
-* Handoff Reason: Include
-* Archive File: [what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/fe979741c59abd5426a17536d38f0d3333fb397e/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf)
-* Archive Datetime: 2016-05-21 18:43:07
-* Handback File: [what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7fd365391f9b57e149319bb44dfb5a367a848538/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/what-admins-users-see.ed551eb4c239f9a81972d333e5434f8dd11d8198.ja-jp.xlf)
-* Handback Datetime: 2016-05-31 10:16:25
+##### <a name='fe0dbdafdd0e094039864b389575b5b5306f39d4388'></a> Source: [Azure-RMSDocs\understand-explore\what-admins-users-see.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6ce8df95592de0e7985e012310d8e062abf72eee/Azure-RMSDocs/understand-explore/what-admins-users-see.md)
+* Status: Ignored
+* Target File: 
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 ##### <a name='6fe5759a790a728da7a16453e5b3ab5d523bb9fd389'></a> Source: [Azure-RMSDocs\understand-explore\what-is-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e2de70fcbe0b284368b1e52c34f42d1cf4554edd/Azure-RMSDocs/understand-explore/what-is-azure-rms.md)
