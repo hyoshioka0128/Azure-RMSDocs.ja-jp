@@ -1,30 +1,20 @@
 ---
-# required metadata
+# 必須のメタデータ
 
-title: API のセキュリティ モードの設定 | Azure RMS
-description: File API アプリケーションをどのセキュリティ モードで実行するかを選択します。
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
-# optional metadata
+タイトル: 方法: API セキュリティ モードの設定 | Azure RMS の説明: File API アプリケーションをどのセキュリティ モードで実行するかを選択します。
+keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
+# 任意のメタデータ
 
-#ROBOTS:
-audience: developer
+#ロボット:
+対象者: 開発者
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
-# API のセキュリティ モードの設定
+
+# 方法: API セキュリティ モードの設定
 
 [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) 関数を使用して、File API アプリケーションをどのセキュリティ モードで実行するかを選択できます。
 
@@ -34,12 +24,9 @@ ms.suite: ems
 
 **重要**: セキュリティ モードは、他の Rights Management サービス SDK 2.1 関数を呼び出す前に設定する必要があります。 セキュリティ モードは、設定後に現在のプロセスに対して変更することはできません。
 
- 
-
 ## 関連項目
 
 * [アプリケーションの種類](application-types.md)
-* [開発者の概念](ad-rms-concepts-nav.md)
 * [**API mode values (API のモード値)**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
 * [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
  
@@ -47,9 +34,6 @@ ms.suite: ems
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

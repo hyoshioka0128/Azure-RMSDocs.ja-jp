@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
-# File API の構成
+
+# ファイル API の構成
 
 
 ファイルの API の動作は、レジストリの設定を使用して構成できます。
@@ -40,46 +40,45 @@ ms.suite: ems
 
 以降のセクションでは、暗号化を制御するキーおよびキーの値について説明します。
 
-
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
-*種類*: キー
+**種類**: キー
 
-*説明*: ファイル API の一般的な構成が含まれています。
+**説明**: ファイル API の一般的な構成が含まれています。
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
-*種類: キー
+**種類**: キー
 
-*説明: 特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
+**説明**: 特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
 
 - ワイルドカード文字 "*" を使用できます。ただし、特定の拡張子の設定は、ワイルドカードの設定よりも優先されます。 ワイルドカード文字は、Microsoft Office ファイルの設定には影響しません。これらは、ファイルの種類ごとに明示的に無効する必要があります。
 - 拡張子がないファイルを指定するには、"." を使用します。
 - 特定のファイル拡張子のキーを指定する場合は、"." 文字を指定しないでください。たとえば、.txt ファイルの設定を指定するには、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` を使用します (`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT` を使用しないでください)。
 
-保護の動作を指定するには、*Encryption* 値をキーに設定します。 *Encryption* 値が設定されていない場合は、ファイルの種類の既定の動作が実行されます。
+保護の動作を指定するには、**Encryption** 値をキーに設定します。 **Encryption** 値が設定されていない場合は、ファイルの種類の既定の動作が実行されます。
 
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
-*種類: REG_SZ*
+**種類**: REG_SZ
 
-*説明: 次の 3 つの値のいずれかが含まれています。
+**説明**: 次の 3 つの値のいずれかが含まれています。
 
-- *Off*: 暗号化が無効です。
+- **Off**: 暗号化が無効です。
 
-> [AZURE.NOTE] この設定は、解読には影響しません。 ユーザーが EXTRACT 権限を持っている限り、ネイティブ保護と PFile 保護のどちらを使用して暗号化されたファイルでも解読できます。
+> [AZURE.NOTE] この設定は、解読には影響しません。 ユーザーが **EXTRACT** 権限を持っている限り、ネイティブ保護と PFile 保護のどちらを使用して暗号化されたファイルでも解読できます。
 
-- *Native*: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p**zzz** になります。**zzz** は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
+- **Native**: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p*zzz* になります。*zzz* は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
 
-- *Pfile*: PFile 暗号化が使用されます。 暗号化されたファイルでは、元の拡張子に .pfile が追加されます。 たとえば、.txt ファイルを暗号化すると、拡張子は .txt.pfile になります。
+- **Pfile**: PFile 暗号化が使用されます。 暗号化されたファイルでは、元の拡張子に .pfile が追加されます。 たとえば、.txt ファイルを暗号化すると、拡張子は .txt.pfile になります。
 
 
 > [AZURE.NOTE] この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が &quot;Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
 
 その他の値を設定する場合や、値を設定しない場合は、既定の動作が実行されます。
 
-## 各ファイル形式の既定の動作**
+## 各ファイル形式の既定の動作
 
 -   **Office ファイル** ネイティブ暗号化が有効になります。
 -   **txt、xml、jpg、jpeg、pdf、png、tiff、bmp、gif、giff、jpe、jfif、jif ファイル** ネイティブ暗号化が有効になります (xxx は pxxx になります)。
@@ -106,7 +105,7 @@ ms.suite: ems
 
 **その他のすべてのファイル形式**
 
--   保護の種類 = Pfile: sample.*zzz* を暗号化すると、sample.*zzz*.pfile という名前になります。zzz は元のファイル拡張子です。
+-   保護の種類 = Pfile: sample.*zzz* を暗号化すると、sample.*zzz*.pfile という名前になります。*zzz* は元のファイル拡張子です。
 -   Off: 暗号化を無効にします。
 
 ### 例
@@ -158,9 +157,6 @@ HKEY_LOCAL_MACHINE
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

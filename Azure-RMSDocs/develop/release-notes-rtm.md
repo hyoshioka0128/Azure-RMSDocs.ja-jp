@@ -23,16 +23,28 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
+
 # リリース ノート
 
 このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
+
+- [2016 年 2 月の最新情報 - SDK 文書更新](#new-for-the-february-2016-sdk-documentation-update)
+- [2015 年 12 月更新](#december-2015-update)
+- [2015 年 5 月の更新](#may-2015-update)
+- [2015 年 4 月の更新](#april-2015-update)
+- [2015 年 1 月の更新](#january-2015-update)
+- [2014 年 10 月の更新](#october-2014-update)
+- [2014 年 7 月の更新](#july-2014-update)
+- [開発者向けの重要な注意事項](#important-developer-notes)
+- [よく寄せられる質問](#frequently-asked-questions)
+- [関連項目](#related-topics)
 
 ## 2016 年 2 月の最新情報 - SDK 文書更新
 
 >[!Note]  このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
 
-- **認証フローの改善** - [Azure Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/) 経由の OAuth2 トークン ベース認証を使用します。 このプロセスとその API 拡張機能の詳細については、「[ADAL authentication for your RMS enabled application](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx)」 (RMS 対応アプリケーションの ADAL 認証)を参照してください。
+- **認証フローの改善** - [Azure Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/) 経由の OAuth2 トークン ベース認証を使用します。 このプロセスとその API 拡張機能の詳細については、「[ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md)」 (RMS 対応アプリケーションの ADAL 認証) を参照してください。
+
 - **ADAL の更新** Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は以下を利用できるようになります。
 
  - 多要素認証を使用する
@@ -44,14 +56,13 @@ ms.suite: ems
 
 ## 2015 年 12 月更新
 
--   以下を含む一部の領域のパフォーマンスが向上しました。
+- 以下を含む一部の領域のパフォーマンスが向上しました。
+    - ライセンス専用のサーバーを使用する場合は、プライマリのライセンス サーバーから発行します。
+    - ネットワーク接続がない場合に RMS SDK 2.1 が失敗するまでの時間が短縮されています。
 
-    ライセンス専用のサーバーを使用する場合は、プライマリのライセンス サーバーから発行します。
-
-    ネットワーク接続がない場合に RMS SDK 2.1 が失敗するまでの時間が短縮されています。
-
--   エラー メッセージやトラブルシューティングを向上させる多くの更新があります。
--   [サポートされているプラットフォーム](supported-platforms.md)一覧も更新されました。
+- エラー メッセージやトラブルシューティングを向上させる多くの更新があります。
+- [サポートされているプラットフォーム](supported-platforms.md)一覧も更新されました。
+- 運用前環境の必要性とアプリケーション マニフェストの使用は RMS SDK 2.1 から削除されています。 この開発者向けドキュメント セットのこれらのセクションは削除されており、ドキュメントは全体的に簡素になり、再編成されています。
 
 ## 2015 年 5 月の更新
 
@@ -63,8 +74,6 @@ ms.suite: ems
 -   **暗号化の種類** – 暗号化パッケージの選択の API レベルでの制御をサポートします。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
 
     **注**  API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**  フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
-
-     
 
 -   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [**API モード値**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
 -   **ログ**は、ファイルと Event Tracing for Windows メソッドの両方で実装されました。
@@ -96,8 +105,6 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     **注**  ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべてのトピックに、"**暫定的なものであり、変更される可能性があります**" と記載されています。
 
-     
-
     -   [**IpcfOpenFileOnHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
     -   [**IpcfOpenFileOnILockBytes**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
     -   [**IpcfGetFileProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
@@ -112,8 +119,6 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 -   **コンテンツ ID** は、**IPC\_LI\_CONTENT\_ID** プロパティを使用して書き込み可能になりました。 詳細については、「[**License property types**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)」 (ライセンスのプロパティの種類) を参照してください。
 -   **運用マニフェストの要件** – RMS 対応のアプリケーション/サービスをサーバー モードで実行する場合には、マニフェストは不要になりました。 詳細については、「[Application types](application-types.md)」 (アプリケーションの種類) を参照してください。
 -   **ドキュメントの更新**
-
-    **再構成** - 「[How-to use](how-to-use-msipc.md)」 (使用方法) の説明を作成し、環境の設定とアプリケーションのテスト手順の順序を明確にしています。
 
     **ベスト プラクティスのテスト** – Azure RMS でテストする前にオンプレミス サーバーを使用する場合のガイダンスを追加しました。 詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
@@ -135,11 +140,15 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     Active Directory Rights Management サービスのファイル API は、ファイル API の追加により次の利点と機能を提供します。
 
-    機密データを自動化された方法で保護することが可能であり、さまざまなファイル形式で使用される Information Rights Management (IRM) の実装の詳細を知る必要はありません。
+      - 機密データを自動化された方法で保護することが可能であり、さまざまなファイル形式で使用される Information Rights Management (IRM) の実装の詳細を知る必要はありません。
 
-    Microsoft Office ファイル、Portable Document Format (PDF) ファイル、および他の一部のファイルの種類は、ネイティブ保護を使用して保護することができます。 ネイティブ保護で保護できるファイルの種類の一覧については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
+      - Microsoft Office ファイル、Portable Document Format (PDF) ファイル、および他の一部のファイルの種類は、ネイティブ保護を使用して保護することができます。 ネイティブ保護で保護できるファイルの種類の一覧については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
 
-    システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
+      - システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
+
+    ファイル API は、[IpcfDecryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)、[IpcfEncryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)、[IpcfGetSerializedLicenseFromFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile)、[IpcfIsFileEncrypted](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted) という 4 つの新機能を介して実装されます。
+
+    ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
 
 -   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
@@ -159,9 +168,10 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 **A**: 既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序でを検索し、使用可能な最初の値を取得します。
 
-1 – ユーザーが指定した LCID。
-2 – システム ロケール LCID。
-3 – Rights Management サーバー (RMS) テンプレートで指定された、使用可能な最初の言語。
+    1 - User preferred LCID.
+    2 - System locale LCID.
+    3 - The first available language specified in the Rights Management Server (RMS) template.
+
 名前と説明を取得できない場合、エラーが返されます。 名前と説明は、1 つの LCID に 1 つだけ存在できます。
 
 ## 関連項目
@@ -181,6 +191,6 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

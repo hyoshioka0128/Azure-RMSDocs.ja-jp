@@ -23,14 +23,14 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
+
 # Visual Studio の構成
 
 このトピックでは、Rights Management サービス SDK 2.1 を使用するように Visual Studio プロジェクトを構成する方法について説明します。
 
 ## 必要条件
 
--   [SDK のインストール](create-your-first-rights-aware-application.md)
+-   [SDK のインストール](install-the-rms-sdk.md)
 
 **手順**
 
@@ -75,16 +75,12 @@ ms.suite: ems
 
 ## 関連項目
 
-* [使用方法](how-to-use-msipc.md)
-* [SDK のインストール](create-your-first-rights-aware-application.md)
+* [SDK のインストール](install-the-rms-sdk.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

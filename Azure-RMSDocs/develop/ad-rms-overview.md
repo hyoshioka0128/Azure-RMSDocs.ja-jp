@@ -23,14 +23,16 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
+
 # 概要
 
 Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。 コンテンツの所有者は、権限を有効にしたアプリケーションを通じて、そのコンテンツを開く、変更する、印刷する、転送する、などの操作を実行できるユーザーを定義することができます。
 
 ## 概要
 
-AD RMS は、[サーバー](ad-rms-server.md) コンポーネントと[クライアント](ad-rms-client.md) コンポーネントの両方で構成されます。 サーバー コンポーネントには、Windows Server 2008 R2 など、Windows Server 上で実行される複数の Web サービスや、Azure の RMS Web サービスを通じてクラウド経由で実行される Web サービスが含まれます。 クライアント コンポーネントは、クライアントまたはサーバーのオペレーティング システムで実行でき、アプリケーションでコンテンツの暗号化と復号化、テンプレートと失効リストの取得、サーバーからのライセンスと証明書の入手、およびその他の関連する権限管理タスクを有効にする機能が含まれています。
+AD RMS は、[サーバー](ad-rms-server.md) コンポーネントと[クライアント](ad-rms-client.md) コンポーネントの両方で構成されます。 Azure または Windows Server で実行されるサーバーは、複数の Web サービスで構成されます。
+
+[クライアント](ad-rms-client.md) コンポーネントは、クライアントまたはサーバーのオペレーティング システムで実行でき、アプリケーションでコンテンツの暗号化と復号化、テンプレートと失効リストの取得、サーバーからのライセンスと証明書の入手、およびその他の関連する権限管理タスクを有効にする機能が含まれています。
 
 詳細については、「[Application types (アプリケーションの種類)](application-types.md)」を参照してください。
 
@@ -44,24 +46,26 @@ Rights Management サービス SDK 2.1 に基づいて構築したアプリケ�
 
 AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳細については、[AD RMS の IT Pro ドキュメント](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)に関する TechNet のコンテンツを参照してください。
 
-開始する方法については、「[Getting started (はじめに)](getting-started-with-ad-rms-2-0.md)」を参照してください。
+このセクションの残りのトピックでは、RMS アーキテクチャとその実装について説明します。
+
+## このセクションの内容
+
+| トピック | 説明 |
+|-------|-------------|
+|[クライアント](ad-rms-client.md) |このトピックでは、Rights Management Service Client 2.1 の用途と機能について説明します。 |
+|[サーバー](ad-rms-server.md) | このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。|
+
 
 ## 関連項目
 
-* [AD RMS の概念](application-types.md)
-* [AD RMS と AD RMS 2.1 の違い](differences-between-ad-rms-and-ad-rms-2-0.md)
-* [概要](getting-started-with-ad-rms-2-0.md)
+* [RMS の概念](application-types.md)
+* [作業開始](getting-started-with-ad-rms-2-0.md)
 * [AD RMS の IT Pro ドキュメント](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)
-* [サーバー](ad-rms-server.md)
-* [クライアント](ad-rms-client.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

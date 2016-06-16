@@ -49,9 +49,7 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
 |[概要](getting-started-with-ad-rms-2-0.md)|RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。|
 |[リリース ノート](release-notes-rtm.md)|このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
 |[コード サンプル](samples.md)|このトピックでは、MSDN ダウンロード センターから入手できる RMS SDK 2.1 を使用するサンプルのセットを示します。|
-|[使用方法](how-to-use-msipc.md)|RMS SDK 2.1 を使用するシナリオとタスクのステップ バイ ステップのガイダンスです。|
 |[開発者向け注意事項](developer-notes.md)|このセクションでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。|
-|[開発者の概念](ad-rms-concepts-nav.md)|このセクションのトピックでは、RMS における重要な概念について説明します。|
 |[API reference](/rights-management/sdk/2.1/api/win/constants)|このセクションには、すべての API 要素に関するリファレンス情報を説明するトピックが含まれています。|
 
  
@@ -66,6 +64,6 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

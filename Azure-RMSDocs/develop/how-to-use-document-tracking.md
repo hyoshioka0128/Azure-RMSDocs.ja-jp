@@ -1,75 +1,158 @@
 ---
-# required metadata
+# 必須のメタデータ
 
-title: 方法&#58; ドキュメント追跡を使用する | Azure RMS
-description: ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
-# optional metadata
+タイトル: 方法: ドキュメント追跡の有効化と取り消し | Azure RMS の説明: ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。
+keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
+# 任意のメタデータ
 
-#ROBOTS:
-audience: developer
+#ロボット:
+対象者: 開発者
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# 方法: ドキュメント追跡を使用する
+# 方法: ドキュメント追跡の有効化と取り消し
 
-ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。
+このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
 
-## ドキュメント追跡メタデータの管理
+## ドキュメント追跡を実装する手順
 
-ドキュメント追跡をサポートする各オペレーティング システムは、似たような実装を持ちます。 これには、メタデータを表すプロパティのセット、ユーザー ポリシー作成メソッドに追加される新しいパラメーター、ドキュメント追跡サービスで追跡するポリシーを登録するためのメソッドが含まれます。
+手順 1 と 2 では、追跡するドキュメントを有効にします。 手順 3 では、保護ドキュメントを追跡するか、取り消す目的で、アプリ ユーザーがドキュメント追跡サイトにアクセスできるようにします。
+
+1. ドキュメント追跡メタデータを追加する
+2. RMS サービスでドキュメントを登録する
+3. [使用の追跡] ボタンをアプリに追加する
+
+導入の詳しい手順は以下のようになります。
+
+## 1.ドキュメント追跡メタデータを追加する
+
+ドキュメント追跡は、Rights Management システムの機能です。 ドキュメントの保護プロセス中に特定のメタデータを追加することにより、追跡用のいくつかのオプションを提供する追跡サービス ポータルにドキュメントを登録できます。
+
+これらの API を使用して、ドキュメント追跡メタデータと共にコンテンツのライセンスを追加または更新します。
+
 
 運用上、ドキュメント追跡に必要なプロパティは、**コンテンツ名**と**通知の種類**のみです。
 
-特定のコンテンツに対してドキュメント追跡をセットアップするための手順を次に示します。
 
--   **ライセンス メタデータ** オブジェクトを作成します。
+- [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
 
-    詳細については、[**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) または [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) に関する説明を参照してください。
+  すべてのメタデータ プロパティを設定することをお勧めします。 種類ごとの一覧を以下に示します。
 
--   **コンテンツ名**と**通知の種類**を設定します。 必須のプロパティはこれらのプロパティのみです。
+  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)」を参照してください。
 
-    詳細については、プラットフォームの適切なライセンス メタデータ クラスのプロパティ アクセス メソッド ([**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) または [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc)) に関する説明を参照してください。
+  - **IPC_MD_CONTENT_PATH**
 
--   ポリシーの種類 (テンプレートまたはアドホック):
+    追跡対象のドキュメントの識別に使用します。 完全パスが使用できない場合は、ファイル名のみを指定します。
 
-    -   テンプレート ベースのドキュメント追跡の場合は、**ユーザー ポリシー** オブジェクトを作成し、ライセンス メタデータをパラメーターとして渡します。
+  - **IPC_MD_CONTENT_NAME**
 
-        詳細については、[**UserPolicy.create**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) と [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc) に関する説明を参照してください。
+    追跡対象のドキュメントの名前の識別に使用します。
 
-    -   アドホック ベースのドキュメントの追跡の場合は、**ライセンス メタデータ** プロパティを**ポリシー記述子**オブジェクトに設定します。
+  - **IPC_MD_NOTIFICATION_TYPE**
 
-        詳細については、[**PolicyDescriptor.getLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java)、[**PolicyDescriptor.setLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) および [**MSPolicyDescriptor.licenseMetadata**](/rights-management/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc) に関する説明を参照してください。
+    通知を送信するタイミングの指定に使用します。 詳細については、「Notification type (通知の種類)」を参照してください。
 
-    **注**: ライセンス メタデータ オブジェクトは、特定のユーザー ポリシーのドキュメント追跡の設定プロセス中に直接アクセスできる唯一のオブジェクトです。 ユーザー ポリシー オブジェクトが作成されると、関連付けられているライセンス メタデータにアクセスできなくなります。つまり、ライセンス メタデータの値を変更しても効果はありません。
+  - **IPC_MD_NOTIFICATION_PREFERENCE**
 
-     
+    通知の種類の指定に使用します。 詳細については、「Notification preference (通知の基本設定)」を参照してください。
 
--   ドキュメント追跡のためのプラットフォーム登録メソッドを呼び出します。
+  - **IPC_MD_DATE_MODIFIED**
 
-    [**MSUserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) または [**UserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) に関する説明を参照してください。
+    ユーザーが [保存] をクリックするたびに、この日付を設定することをお勧めします。
 
- 
+  - **IPC_MD_DATE_CREATED**
 
- 
+    ファイルの作成日の設定に使用します。
+
+- [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+
+これらの API から適切なものを使用して、ファイルまたはストリームにメタデータを追加します。
+
+- [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+
+最後に、この API を使用して、追跡対象のドキュメントを追跡システムに登録します。
+
+- [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 
+## 2.RMS サービスでドキュメントを登録する
+
+ドキュメント追跡メタデータの設定と追跡システムに登録するための呼び出しの例を表すコード スニペットを次に示します。
+
+      C++
+      HRESULT hr = S_OK;
+      LPCWSTR wszOutputFile = NULL;
+      wstring wszWorkingFile;
+      IPC_LICENSE_METADATA md = {0};
+
+      md.cbSize = sizeof(IPC_LICENSE_METADATA);
+      md.dwNotificationType = IPCD_CT_NOTIFICATION_TYPE_ENABLED;
+      md.dwNotificationPreference = IPCD_CT_NOTIFICATION_PREF_DIGEST;
+      //file origination date, current time for this example
+      md.ftDateCreated = GetCurrentTime();
+      md.ftDateModified = GetCurrentTime();
+
+      LOGSTATUS_EX(L"Encrypt file with official template...");
+
+      hr =IpcfEncryptFileWithMetadata( wszWorkingFile.c_str(),
+                               m_wszTestTemplateID.c_str(),
+                               IPCF_EF_TEMPLATE_ID,
+                               0,
+                               NULL,
+                               NULL,
+                               &md,
+                               &wszOutputFile);
+
+     /* This will contain the serialized license */
+     PIPC_BUFFER pSerializedLicense;
+
+     /* the context to use for the call */
+     PCIPC_PROMPT_CTX pContext;
+
+     wstring wstrContentName(“MyDocument.txt”);
+     bool sendLicenseRegistrationNotificationEmail = FALSE;
+
+     hr = IpcRegisterLicense( pSerializedLicense,
+                        0,
+                        pContext,
+                        wstrContentName.c_str(),
+                        sendLicenseRegistrationNotificationEmail);
+
+## **[使用の追跡]** ボタンをアプリに追加する
+
+**[使用の追跡]** UI アイテムをアプリに追加する作業は、次のいずれかの URL 形式の使用と同じように簡単です。
+
+- コンテンツ ID の使用
+  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) または [IpcGetSerializedLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](/rights-management/sdk/2.1/api/win/constants#msipc_license_property_types)」 (ライセンスのプロパティの種類) を参照してください。
+  - メタデータの **ContentId** と **Issuer** については、次の形式を使用します。 `https://track.azurerms.com/#/{ContentId}/{Issuer}`
+
+    例 - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
+
+- そのメタデータにアクセスできない場合 (すなわち、保護されていないバージョンのドキュメントを調べている)、次の形式で **Content_Name** を使用できます。 `https://track.azurerms.com/#/?q={ContentName}`
+
+  例 - https://track.azurerms.com/#/?q=Secret!.txt
+
+このクライアントでは、適切な URL でブラウザーを開く必要があります。 RMS ドキュメント追跡ポータルが認証と必要なリダイレクトを処理します。
+
+## 関連項目
+
+* [ライセンス メタデータ プロパティの種類](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
+* [通知の基本設定](/rights-management/sdk/2.1/api/win/constants#msipc_notification_preference)
+* [通知の種類](/rights-management/sdk/2.1/api/win/constants#msipc_notification_type)
+* [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

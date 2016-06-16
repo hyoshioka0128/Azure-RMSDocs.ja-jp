@@ -23,25 +23,33 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
 # 概要
 
-Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。 このプラットフォームでは、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
+Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は RMS サーバーまたは Azure RMS を介して RMS 情報保護を利用するアプリケーションを作成できます。 このプラットフォームでは、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
 
 ## RMS SDK 2.1 の概要
 
-以下のセクションをお読みください。
+このトピックでは、テスト環境で権限保護対応アプリケーションをセットアップおよび実行するためのプロセスについて説明します。 次のトピックでは、開発環境をセットアップする方法について説明しています。これらのトピックは、推奨されるタスクの実行順序に従って紹介されています。
 
--   コンテンツの保護に RMS SDK 2.1 を使用する理由
--   基本原則
+## このセクションの内容
+
+| トピック | 説明 |
+|-------|-------------|
+| [リリース ノート](release-notes-rtm.md) | このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
+| [SDK のインストール](install-the-rms-sdk.md) | このトピックでは、開発者ツールをインストールする方法について説明します。|
+| [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | このトピックでは、RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する手順について説明します。|
+| [アプリケーションの開発](developing-your-application.md) | このトピックでは、RMS 対応アプリケーションの中心部分について基本的なことを説明します。独自のアプリケーションを開発する際に基礎となります。|
+| [アプリケーションのテスト](running-your-first-application.md) |このトピックでは、アプリケーション テストを設定する方法について説明します。|
+| [運用環境にデプロイする](deploying-your-application.md) |このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて順を追って各操作を説明します。|
+
+開始したら、他のいくつかの [RMS サンプル](samples.md)を確認してください。 その後は、「[RMS 開発者のコーナー](http://blogs.msdn.com/b/rms/)」で最新情報を入手ください。
+
 
 これらのトピックのガイダンスに従って、RMS SDK 2.1 を使用してみてください。
 
--   [SDK のインストール](create-your-first-rights-aware-application.md)
+-   [SDK のインストール](install-the-rms-sdk.md)
 -   [権限保護対応アプリケーションのテスト](running-your-first-application.md)
 -   [IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)
-
-開始したら、他のいくつかの [RMS サンプル](samples.md)を確認してください。 その後は、「[RMS 開発者のコーナー](http://blogs.msdn.com/b/rms/)」で最新情報を入手ください。
 
 ### コンテンツの保護に RMS SDK 2.1 を使用する理由
 
@@ -65,19 +73,15 @@ RMS SDK 2.1 では、重要なクライアントおよびサーバー プラッ�
 
 * [AD RMS samples (AD RMS サンプル)](samples.md)
 * [AD RMS 開発者のコーナー](http://blogs.msdn.com/b/rms/)
-* [SDK のインストール](create-your-first-rights-aware-application.md)
+* [SDK のインストール](install-the-rms-sdk.md)
 * [IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)
 * [概要](ad-rms-overview.md)
 * [サポートされているプラットフォーム](supported-platforms.md)
-* [権限保護対応アプリケーションのテスト](running-your-first-application.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

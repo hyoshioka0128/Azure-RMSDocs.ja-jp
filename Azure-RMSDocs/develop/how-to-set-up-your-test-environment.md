@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: テスト環境のセットアップ | Azure RMS
-description: 権限保護対応アプリケーションは、さまざまなサーバー オプションを指定してテストできます。
+title: アプリケーションのテスト | Azure RMS
+description: アプリケーションのテストを設定する方法
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -23,48 +23,42 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
-# テスト環境のセットアップ
 
-権限保護対応アプリケーションは、さまざまなサーバー オプションを指定してテストできます。
+# アプリケーションのテスト
 
-**重要** ベスト プラクティスとして、はじめに AD RMS サーバーに対して AD RMS 運用前環境で Rights Management サービス SDK 2.1 アプリケーションをテストすることをお勧めします。 その後で、顧客に Azure RMS サービスでのアプリケーションの使用を勧める場合は、その環境でのテストに移行します。 詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
+このトピックでは、アプリケーション テストを設定する方法について説明します。
 
- 
+## 手順
 
-### 必要条件
+### 手順 1: テストの設定
 
--   [SDK のインストール](create-your-first-rights-aware-application.md)
+Windows Server で実行されている Azure RMS または RMS サーバーをテストできます。Azure RMS のテストから始めることをお勧めします。その後、デプロイに必要であれば、RMS サーバーをテストしてください。
 
-手順
+1. Azure RMS でテストする方法については、「[方法: ADAL 認証の使用](how-to-use-adal-authentication,md)」を参照してください。
+2. RMS サーバーでテストする方法については、「[方法: RMS サーバーをインストールし、構成する](how-to-install-and-configure-an-rms-server.md)」を参照してください。
+3. 以下では、開発者向けランタイムのインストール方法について説明しています。
 
-### 手順 1: テスト環境をセットアップする
+   Rights Management Service Client 2.1 がアプリケーションのテストを実行するコンピューターにインストールされている必要があります。
+   - 開発コンピューター以外のコンピューターでアプリケーションをテストする場合は、[AD RMS クライアント ダウンロード ページ](http://www.microsoft.com/en-us/download/details.aspx?id=38396)からそのコンピューターに RMS クライアント 2.1 をインストールできます。
+   - 開発コンピューターでアプリケーションをテストする場合は、Rights Management サービス SDK 2.1 を既にインストールしています。 この時点で、RMS クライアント 2.1 がサイレント インストールされています。
 
-権限保護対応アプリケーションをテストするには、運用前として構成した RMS サーバーに対してそのアプリケーションを実行する必要があります。 運用前 RMS サーバーでは、運用前/ISV 証明書階層を使用してファイルを暗号化および解読します。
+    RMS SDK 2.1 のインストール方法については、「[SDK のインストール](create-your-first-rights-aware-application.md)」を参照してください。
 
-AD RMS 証明書階層の詳細については、「[Understanding certificate chains (証明書チェーンについて)](understanding-certificate-chains.md)」を参照してください。
+## 解説
 
-RMS サーバーに対してアプリケーションをテストする場合、2 つのオプションがあります。
+このトピックのガイダンスは包括的なものではありません。 RMS クライアント 2.1 の構成方法について詳しくは、「[RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)」 (RMS クライアント 2.1 のデプロイに関する注意事項) をご覧ください。
 
--   **1-box AD RMS ISV 環境でアプリケーションを実行する**。 Windows Server 2012、Windows Server 2008 R2、または Windows Server 2008 を実行し、Hyper-V がインストールされている場合は、AD RMS 1-box VHD を使用して仮想マシンを作成することにより、1-box AD RMS ISV 環境をデプロイできます。 1-box AD RMS ISV 環境の RMS サーバーは運用前として構成されています。この環境には Active Directory Rights Management サービス クライアント 2.1 もインストールされています。 RMS サーバーとクライアントのレジストリ設定が既に構成されています。 アプリケーションをテストするには、1-box 環境が展開されている仮想マシンで実行します。
--   **運用前として構成され、ネットワークに展開されている RMS サーバーに対してアプリケーションを実行する**。 この場合は、アプリケーションを実行するコンピューターに AD RMS Client 2.1 をインストールして構成する必要もあります。 この方法については、「[Configure client (クライアントの構成)](how-to-configure-the-ad-rms-client-2-0.md)」を参照してください。 RMS サーバーをデプロイし、運用前として構成する方法については、「[サーバーのインストールと構成](how-to-install-and-configure-an-rms-server.md)」を参照してください。
+### 関連項目
 
-## 関連項目
-
-* [How-to use (使用方法)](how-to-use-msipc.md)
-* [AD RMS SDK ウェビナーに関するダウンロード ページ](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
-* [Configure client (クライアントの構成)](how-to-configure-the-ad-rms-client-2-0.md)
+* [RMS サーバーをインストールし、構成する方法](how-to-install-and-configure-an-rms-server.md)
+* [方法: ADAL 認証の使用](how-to-use-adal-authentication,md)
 * [SDK のインストール](create-your-first-rights-aware-application.md)
-* [サーバーのインストールと構成](how-to-install-and-configure-an-rms-server.md)
-* [Understanding certificate chains (証明書チェーンについて)](understanding-certificate-chains.md)
+* [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

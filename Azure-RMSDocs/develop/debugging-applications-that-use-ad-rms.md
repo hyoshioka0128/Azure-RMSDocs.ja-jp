@@ -1,30 +1,20 @@
 ---
-# required metadata
+# 必須のメタデータ
 
-title: 権限保護対応アプリケーションのデバッグ | Azure RMS
-description: このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# optional metadata
+タイトル: 方法: 権限保護対応アプリケーションのデバッグ | Azure RMS の説明: 次のトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
+keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# 任意のメタデータ
 
-#ROBOTS:
-audience: developer
+#ロボット:
+対象者: 開発者
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** この SDK コンテンツは最新のものではありません。 しばらくの間、[最新版](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx)の文書は MSDN でご覧ください。 **
-# 権限保護対応アプリケーションのデバッグ
+
+# 方法: 権限保護対応アプリケーションのデバッグ
 
 このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
 
@@ -33,6 +23,7 @@ ms.suite: ems
 Rights Management サービス SDK 2.1 では、ランタイムの開発者バージョンでのアンチデバッグ機能のチェックは無効になっています。
 
 デバッグ トレースは、次のレジストリ キーを使用して有効にすることができます (デバッグ トレースを無効にするには、値を 0 に変更します)。このリリースでは、デバッグを実行するのに何も必要ありません。
+
 
 ```
 HKEY_LOCAL_MACHINE
@@ -72,15 +63,11 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 ## 関連項目
 
-* [使用方法](how-to-use-msipc.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
