@@ -30,7 +30,7 @@ ms.suite: ems
 
 **Azure RMS** - Azure Rights Management サービス使用の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
-> [AZURE.IMPORTANT] Azure RMS を介してアプリケーションを開発し、テストすることをお勧めします。
+> [!IMPORTANT] Azure RMS を介してアプリケーションを開発し、テストすることをお勧めします。
 
 **Windows Server** - RMS オンプレミス サーバーでは、Windows Server 2008 以降、RMS サービスをロールとして追加することで、そのインストールと構成ができます。 以前のオペレーティング システムにサービスをインストールするには、Microsoft ダウンロード センターから [Microsoft Windows Rights Management サービス Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909) をダウンロードします。
 

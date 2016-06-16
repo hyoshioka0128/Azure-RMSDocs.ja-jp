@@ -28,17 +28,6 @@ ms.suite: ems
 
 このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
 
-- [2016 年 2 月の最新情報 - SDK 文書更新](#new-for-the-february-2016-sdk-documentation-update)
-- [2015 年 12 月更新](#december-2015-update)
-- [2015 年 5 月の更新](#may-2015-update)
-- [2015 年 4 月の更新](#april-2015-update)
-- [2015 年 1 月の更新](#january-2015-update)
-- [2014 年 10 月の更新](#october-2014-update)
-- [2014 年 7 月の更新](#july-2014-update)
-- [開発者向けの重要な注意事項](#important-developer-notes)
-- [よく寄せられる質問](#frequently-asked-questions)
-- [関連項目](#related-topics)
-
 ## 2016 年 2 月の最新情報 - SDK 文書更新
 
 >[!Note]  このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
