@@ -21,11 +21,10 @@
 #### [iOS/OS X のコード例](ios-os-x-code-examples.md)
 #### [コミュニティのリソース](community-resources.md)
 ### [開発者ガイドと用語](core-concepts.md)
-#### [方法: アプリに認証を追加する](authentication-integration.md)
-#### [方法: エラーとパフォーマンスのログを有効にする](enabling-logging.md)
-#### [方法: Azure アプリケーション ID を取得する](application-id.md)
-#### [方法: 組み込み権限を使用する](built-in-rights-usage-restriction-reference.md)
-#### [方法: ドキュメント追跡を使用する](how-to-use-document-tracking.md)
+#### [Azure AD でアプリの登録と RMS の有効化を行う方法](authentication-integration.md)
+#### [エラーとパフォーマンスのログを有効にする方法](enabling-logging.md)
+#### [組み込み権限を使用する方法](built-in-rights-usage-restriction-reference.md)
+#### [ドキュメント追跡を使用する方法](how-to-use-document-tracking.md)
 #### [利用規約](terms.md)
 ### [API reference](api-reference-4-2.md)
 #### [Android API リファレンス](android-namespaces.md)
@@ -60,8 +59,14 @@
 #### [サポートされているプラットフォーム](supported-platforms.md)
 #### [使用制限について](understanding-usage-restrictions.md)
 #### [使用制限のリファレンス](usage-restriction-reference.md)
+### [API リファレンス](api-reference-2-1.md)
+#### [定数](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
+#### [データ型](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/data types)
+#### [関数](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
+#### [構造体](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
+#### [エラー コード](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

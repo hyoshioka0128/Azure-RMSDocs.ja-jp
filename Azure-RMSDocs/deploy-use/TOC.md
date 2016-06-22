@@ -22,6 +22,7 @@
 ### [コネクタのインストールと構成](install-configure-rms-connector.md)
 ### [サーバーの構成](configure-servers-rms-connector.md)
 #### [レジストリの設定](rms-connector-registry-settings.md)
+### [コネクタの監視](monitor-rms-connector.md)
 ## [Azure RMS の確認](verify.md)
 ## [ユーザーにファイルを保護するためのヘルプを提供する](help-users.md)
 ## [ログ記録と使用状況の分析](log-analyze-usage.md)
@@ -35,6 +36,6 @@
 # [アプリの開発とカスタマイズ](/rights-management/develop/developers-guide)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 
