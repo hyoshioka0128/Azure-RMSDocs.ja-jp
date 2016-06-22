@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Office アプリ: クライアントの構成 | Azure RMS
+title: "Office アプリ: クライアントの構成 | Azure RMS"
 description:
 keywords:
 author: cabailey

@@ -1,14 +1,25 @@
 ---
-# 必須のメタデータ
+# required metadata
 
-タイトル: 方法: 権限保護対応アプリケーションのデバッグ | Azure RMS の説明: 次のトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# 任意のメタデータ
+title:
+How-to: debug a rights-enabled application | Azure RMS
+description: The following topic shows how to debug your application and use the Windows Event Log.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# optional metadata
 
-#ロボット:
-対象者: 開発者
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

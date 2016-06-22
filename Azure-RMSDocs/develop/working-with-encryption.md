@@ -1,13 +1,25 @@
 ---
-# 必須のメタデータ
+# required metadata
 
-タイトル: 方法: 暗号化設定の使用 | Azure RMS の説明: この記事では、暗号化パッケージについて説明します keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# 任意のメタデータ
+title:
+How-to: work with encryption settings | Azure RMS
+description: This article orients you to our encryption packages
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
+# optional metadata
 
-#ロボット:
-対象者: 開発者
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

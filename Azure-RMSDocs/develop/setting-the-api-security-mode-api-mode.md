@@ -1,14 +1,25 @@
 ---
-# 必須のメタデータ
+# required metadata
 
-タイトル: 方法: API セキュリティ モードの設定 | Azure RMS の説明: File API アプリケーションをどのセキュリティ モードで実行するかを選択します。
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
-# 任意のメタデータ
+title:
+How-to: set the API security mode | Azure RMS
+description: Choose which security mode your File API application runs.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
+# optional metadata
 
-#ロボット:
-対象者: 開発者
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

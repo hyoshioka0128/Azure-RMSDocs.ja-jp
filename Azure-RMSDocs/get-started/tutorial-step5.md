@@ -1,12 +1,28 @@
 ---
-# 必須のメタデータ
+# required metadata
 
-タイトル: Azure RMS のクイック スタート チュートリアル - 手順 5 | Azure RMS description: 5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの最後の手順。
-keywords: author: cabailey manager: mbaldwin ms.date: 05/09/2016 ms.topic: get-started-article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
+title: "Azure RMS のクイック スタート チュートリアル - 手順 5 | AZURE RMS"
+description: "5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの最後の手順。"
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 05/09/2016
+ms.topic: get-started-article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
 
-# 任意のメタデータ
+# optional metadata
 
-ROBOTS: audience: ms.devlang: ms.reviewer: esaggese ms.suite: ems ms.tgt_pltfrm: ms.technology: ms.custom:
+ROBOTS:
+audience:
+ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+ms.tgt_pltfrm:
+ms.technology:
+ms.custom:
 
 ---
 

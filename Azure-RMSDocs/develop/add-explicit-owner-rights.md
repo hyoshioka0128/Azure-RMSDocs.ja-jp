@@ -1,14 +1,25 @@
 ---
-# 必須のメタデータ
+# required metadata
 
-タイトル: 方法: 明示的な所有者権限の追加 | Azure RMS の説明: アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
-# 任意のメタデータ
+title:
+How-to: add explicit owner rights | Azure RMS
+description: Your application should explicitly add "Owner" rights when creating a license from scratch.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
+# optional metadata
 
-#ロボット:
-対象者: 開発者
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
