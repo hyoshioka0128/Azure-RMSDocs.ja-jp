@@ -1,9 +1,8 @@
 ---
 # required metadata
 
-title:
-How-to: work with encryption settings | Azure RMS
-description: This article orients you to our encryption packages
+title: 暗号化設定を操作する方法 | Azure RMS
+description: この記事では、暗号化パッケージについて説明しています
 keywords:
 author: bruceperlerms
 manager: mbaldwin

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 
 > [!IMPORTANT]
-> [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の使用を開始していて (サービスがアクティブになっている)、Office 2010 を実行するユーザーが存在する場合は、以下の手順を実行する前に、Microsoft カスタマー サポート サービス (CSS) にお問い合わせください。 シナリオと要件により、制限事項があったり追加の手順を行うことで BYOK を使用することができます。
+> [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の使用を開始していて (サービスがアクティブになっている)、Office 2010 を実行するユーザーが存在する場合は、以下の手順を実行する前に、[Microsoft サポートにお問い合わせください](../get-started/information-support#to-contact-microsoft-support)。 シナリオと要件により、制限事項があったり追加の手順を行うことで BYOK を使用することができます。
 > 
-> キーの処理に関して組織固有のポリシーがある場合も CSS にお問い合わせください。
+> キーの処理に関して組織固有のポリシーがある場合も [Microsoft サポートにお問い合わせください](../get-started/information-support#to-contact-microsoft-support)。
 
 ### BYOK の前提条件
 次の表に BYOK (Bring Your Own Key) の前提条件を示します。
@@ -114,7 +114,7 @@ Microsoft でテナント キーを管理することになった場合、キー
     > [!NOTE]
     > テナント キーは、暗号化されていてアクセス制御レベル権限で保護されているので、信頼されないコンピューターとネットワークを経由して安全に移動できます。このため、テナント キーはお客様の HSM と Microsoft の Azure RMS 用 HSM 内でのみ使用可能になります。 ツールセットで提供されるスクリプトを使用してセキュリティ対策を確認できます。また、Thales 側の動作の詳細については、次を参照してください。「 [RMS クラウドでのハードウェア キー管理](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud)」
 
--   **持参:** これを行うには、マイクロソフト カスタマー サポート サービス (CSS) に連絡して Azure RMS 用のキーの転送を予約する必要があります。 米国ワシントン州レドモンドにある Microsoft のオフィスまでお越しいただき、テナント キーを Azure RMS セキュリティ ワールドに転送する必要があります。
+-   **持参:** これを行うには、[Microsoft サポートに連絡](../get-started/information-support#to-contact-microsoft-support)して Azure RMS 用のキーの転送を予約する必要があります。 米国ワシントン州レドモンドにある Microsoft のオフィスまでお越しいただき、テナント キーを Azure RMS セキュリティ ワールドに転送する必要があります。
 
 操作方法に関する手順については、テナント キーを生成してインターネット経由で転送するか、持参するかを選択します。 
 
@@ -148,6 +148,6 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

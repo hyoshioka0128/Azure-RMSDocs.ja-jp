@@ -34,7 +34,7 @@ ms.suite: ems
 
 Windows Server で実行されている Azure RMS または RMS サーバーをテストできます。Azure RMS のテストから始めることをお勧めします。その後、デプロイに必要であれば、RMS サーバーをテストしてください。
 
-1. Azure RMS でテストする方法については、「[方法: ADAL 認証の使用](how-to-use-adal-authentication,md)」を参照してください。
+1. Azure RMS でテストする方法については、「[方法: ADAL 認証の使用](how-to-use-adal-authentication.md)」を参照してください。
 2. RMS サーバーでテストする方法については、「[方法: RMS サーバーをインストールし、構成する](how-to-install-and-configure-an-rms-server.md)」を参照してください。
 3. 以下では、開発者向けランタイムのインストール方法について説明しています。
 

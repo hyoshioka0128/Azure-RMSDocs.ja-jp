@@ -1,9 +1,8 @@
 ---
 # required metadata
 
-title:
-How-to: install, configure and test with an RMS server | Azure RMS
-description: Install and configure and RMS Sever for testing your rights-enabled application.
+title: RMS サーバーをインストールし、構成し、それでテストする方法 | Azure RMS
+description: 権限保護対応アプリケーションのテスト用に RMS Server をインストールおよび構成します。
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -66,7 +65,7 @@ ms.suite: ems
 
     RMS サーバーでテストするには、サーバー側の検出とクライアント側の検出のいずれかを構成し、Rights Management Service Client 2.1 を有効にして RMS サーバーを検出し、通信を確立します。
 
-    >![NOTE] Azure RMS でテストするとき、検出構成は必要ありません。
+    > [!Note] Azure RMS でテストするとき、検出構成は必要ありません。
 
   - サーバー側の検出では、管理者が Active Directory により RMS ルート クラスターに対してサービス接続ポイント (SCP) を登録すると、クライアントは Active Directory にクエリを実行して SCP を検出し、サーバーとの接続を確立します。
   - クライアント側の検出では、RMS クライアント 2.1 が実行されるコンピューター上のレジストリに RMS サービス検出の設定を構成します。 これにより、RMS クライアント 2.1 が RMS サーバーを使用するように設定されます。 これらの設定がある場合、サーバー側の検出は実行されません。

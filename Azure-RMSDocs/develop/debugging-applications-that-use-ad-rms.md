@@ -1,9 +1,8 @@
 ---
 # required metadata
 
-title:
-How-to: debug a rights-enabled application | Azure RMS
-description: The following topic shows how to debug your application and use the Windows Event Log.
+title: 権限保護対応アプリケーションをデバッグする方法 | Azure RMS
+description: このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
 keywords:
 author: bruceperlerms
 manager: mbaldwin

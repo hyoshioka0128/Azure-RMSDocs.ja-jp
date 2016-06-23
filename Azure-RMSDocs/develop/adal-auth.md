@@ -29,11 +29,11 @@ ms.suite: ems
 
 このトピックでは、Azure ADAL 基盤の認証を構成する手順について説明します。
 
-## 内部認証
+## Azure 認証のセットアップ
 
 以下のものが必要です。
 
-- [Microsoft Azure のサブスクリプション](https://azure.microsoft.com/en-us/) (無料評価版で十分です)。
+- [Microsoft Azure のサブスクリプション](https://azure.microsoft.com/en-us/) (無料試用版で十分です)。 詳細については、「[How users sing up for RMS for individuals (ユーザーが個人向け RMS にサインアップする方法)](../understand-explore/rms-for-individuals-user-sign-up.md)」を参照してください。
 - Microsoft Azure Rights Management のサブスクリプション (無料の[個人向け RMS](https://technet.microsoft.com/en-us/library/dn592127.aspx) アカウントで十分です)。
 
 > [!NOTE] IT 管理者に、Microsoft Azure Rights Management のサブスクリプションがあるかどうかを問い合わせ、以下の手順の実行を依頼します。 組織にサブスクリプションがない場合、IT 管理者に作成してもらいます。 また、IT 管理者は、*Microsoft アカウント* (Hotmail など) ではなく、*職場または学校アカウント*でサブスクライブする必要があります。

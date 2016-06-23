@@ -1,9 +1,8 @@
 ---
 # required metadata
 
-title:
-How-to: enable your service application to work with cloud based RMS | Azure RMS
-description: This topic outlines steps for setting up your service application to use Azure Rights Management.
+title: クラウド ベース RMS でサービス アプリケーション使用を有効化する方法 | Azure RMS
+description: このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。
 keywords:
 author: bruceperlerms
 manager: mbaldwin

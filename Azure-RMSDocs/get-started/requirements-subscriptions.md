@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2016
+ms.date: 06/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -49,6 +49,8 @@ Azure RMS のライセンスについて他に質問はありますか? 「[Azur
 ## Office 365 サブスクリプション
 [30 日間無料試用版: Enterprise E3](http://go.microsoft.com/fwlink/p/?LinkID=403802)
 
+[30 日間無料試用版: Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279)
+
 このサブスクリプションは、Office Online Services と、その Information Rights Management (IRM) 機能 (Azure RMS を使用) を使用する組織向けに設計されています。 ただし、Office 365 サブスクリプションには Azure RMS を含まないものもあります。
 
 Subscription  |IRM を含む 
@@ -84,7 +86,7 @@ Azure Rights Management Premium サブスクリプションについて詳しく
 例外として、評価版サブスクリプションを取得する前に組織が個人向け RMS サブスクリプションを通して Azure RMS を使用していた場合に限り、期限切れでアクセスが失われることはありません。 この場合、評価版サブスクリプションの期限が切れた後も保護されていたコンテンツへのアクセスは保持されます。
 
 ## エンタープライズ モビリティ スイート サブスクリプション
-[30 日間の無料試用版](http://go.microsoft.com/fwlink/?LinkId=615385)
+[30 日間の無料試用版](https://portal.office.com/Signup/Signup.aspx?OfferId=2E63A04D-BE0B-4A0F-A8CF-407C1C299221&dl=EMS)
 
 このサブスクリプションは、Azure Active Directory Premium、Windows Intune、および Azure Rights Management を組み合わせて使用する組織向けに設計されています。 Office で Azure Rights Management を使用する場合のサポートは、Azure Rights Management Premium サブスクリプションを使用する場合と同じです。 Enterprise Mobility Suite サブスクリプションについて詳しくは、「[Microsoft Enterprise モビリティの概要](http://go.microsoft.com/fwlink/?LinkId=615386)」を参照してください。
 
@@ -98,6 +100,6 @@ Azure Rights Management Premium サブスクリプションについて詳しく
 ## 次のステップ
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO2-->
 
 

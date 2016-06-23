@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -30,7 +30,7 @@ ms.suite: ems
 *適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
 
 
-Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーを構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」の手順 5 を説明します。.
+Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーを構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 5 を説明します。
 
 作業を開始する前に、RMS コネクタをインストールして構成し、コネクタを使用するサーバーに適用される[前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector)をチェックしておいてください。
 
@@ -83,8 +83,7 @@ RMS コネクタのインストールと構成が完了したら、Rights Manage
 
 ---
 
-> [!IMPORTANT]
-> いずれの場合でも、前提条件を手動でインストールし、Rights Management を使用するように Exchange、SharePoint、およびファイル分類インフラストラクチャを構成する必要があります。
+> [!IMPORTANT] いずれの場合でも、前提条件を手動でインストールし、Rights Management を使用するように Exchange、SharePoint、およびファイル分類インフラストラクチャを構成する必要があります。
 
 ほとんどの場合、Microsoft RMS コネクタ用のサーバー構成ツールを使用した自動構成が推奨されます。手動構成よりも効率良く確実に構成できるためです。
 
@@ -92,7 +91,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 
 ### Microsoft RMS コネクタ用のサーバー構成ツールの使用方法
 
-1.  Microsoft RMS コネクタ用のサーバー構成ツールのスクリプト (GenConnectorConfig.ps1) をまだダウンロードしていない場合は、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)からダウンロードできます。.
+1.  Microsoft RMS コネクタ用のサーバー構成ツールのスクリプト (GenConnectorConfig.ps1) をまだダウンロードしていない場合は、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)からダウンロードできます。
 
 2.  ツールを実行するコンピューターに GenConnectorConfig.ps1 ファイルを保存します。 ツールをローカルで実行する場合、これは RMS コネクタと通信するように構成したサーバーである必要があります。 そうでない場合は、任意のコンピューターに保存できます。
 
@@ -115,8 +114,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 
 スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、https://connector.contoso.com のように入力します。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
-> [!IMPORTANT]
-> このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
+> [!IMPORTANT] このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
 
 各サービス タイプに固有の情報については、次のセクションを参照してください。
 
@@ -188,10 +186,9 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 
 -   SharePoint Server 2010
 
-また、SharePoint 2016 または SharePoint 2013 を実行しているサーバーでは、RMS コネクタでサポートされているバージョンの MSIPC クライアント 2.1 も実行されている必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。.
+また、SharePoint 2016 または SharePoint 2013 を実行しているサーバーでは、RMS コネクタでサポートされているバージョンの MSIPC クライアント 2.1 も実行されている必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。
 
-> [!WARNING]
-> MSIPC 2.1 クライアントには複数のバージョンがあるため、必ずバージョン 1.0.2004.0 以降を使用します。
+> [!WARNING] MSIPC 2.1 クライアントには複数のバージョンがあるため、バージョン 1.0.2004.0 以降を使用していることを確認してください。
 >
 > クライアントのバージョンを確認するには、MSIPC.dll のバージョン番号を確認します。このファイルは、**\Program Files\Active Directory Rights Management Services Client 2.1** にあります。 プロパティ ダイアログ ボックスに、MSIPC 2.1 クライアントのバージョン番号が表示されます。
 
@@ -248,19 +245,13 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 3.  RMS Encryption を使用してドキュメントを保護する分類ロールとファイル管理タスクを作成し、自動的に RMS ポリシーを適用するように RMS テンプレートを指定します。 詳細については、Windows Server ドキュメント ライブラリの「 [ファイル サーバー リソース マネージャーの概要](http://technet.microsoft.com/library/hh831701.aspx) 」を参照してください。
 
 ## 次のステップ
-RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーが構成されました。IT 管理者とユーザーは、Azure RMS を使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、RMS 共有アプリケーションをデプロイします。これによって、Office 用のアドオンがインストールされ、ファイル エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。.
+RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーが構成されました。IT 管理者とユーザーは、Azure RMS を使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、RMS 共有アプリケーションをデプロイします。これによって、Office 用のアドオンがインストールされ、ファイル エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
 
-また、RMS コネクタの監視や組織での Azure RMS 使用状況の監視を行うために、次の機能を使用することを検討してください。
+[Azure Rights Management のデプロイロードマップ ](../plan-design/deployment-roadmap.md) を使用して、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] をユーザーおよび管理者にロールアウトする前にその他の構成手順が必要かどうかを判断します。
 
--   組み込みの **Microsoft Rights Management コネクタ** パフォーマンス カウンター
-
--   [RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)。RMS コネクタ オプションを使用し、コネクタの正常性を監視し、構成問題を特定します。
-
--   [Azure Rights Management の利用状況をログに記録して分析する](log-analyze-usage.md)
-
-[Azure Rights Management のデプロイロードマップ ](../plan-design/deployment-roadmap.md) を使用して、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] をユーザーおよび管理者にロールアウトする前にその他の構成手順が必要かどうかを判断します。 
+RMS コネクタを監視するには、「[Azure Rights Management コネクタを監視する](monitor-rms-connector.md)」を参照してください。 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

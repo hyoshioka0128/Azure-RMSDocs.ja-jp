@@ -32,7 +32,7 @@ ms.suite: ems
 
 このトピックの説明は IPCHelloWorld というサンプル アプリケーションに基づき、権限保護対応アプリケーションの基本的な概念とコードの理解に役立ちます。 Microsoft Connect から IPCHellowWorld の完全なサンプル アプリケーション [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) をダウンロードできます。
 
->AZURE.NOTE Rights Management サービス SDK 2.1 では IPCHelloWorld プロジェクトは既に構成されています。 RMS SDK 2.1 を使用する新しいプロジェクトを構成する方法については、「[Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)」を参照してください。
+> [!Note] Rights Management サービス SDK 2.1 では IPCHelloWorld プロジェクトは既に構成されています。 RMS SDK 2.1 を使用する新しいプロジェクトを構成する方法については、「[Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)」を参照してください。
 
 ## MSIPC.dll の読み込み
 
