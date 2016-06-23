@@ -131,7 +131,7 @@ ms.suite: ems
 
 ### リンクされた画像
 
-[![a[リンク画像のテキスト](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
+[![aリンク画像のテキスト](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
 
 ### アニメーション GIF
 ![アニメーション GIF](./media/hololens.gif)
