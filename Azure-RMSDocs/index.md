@@ -21,7 +21,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <section id="hero-content">
       <h1>Azure Rights Management のドキュメント</h1>
       <h2>Azure Rights Management (Azure RMS) のデプロイと管理方法 Rights Management を使用すると、電子メール、ドキュメント、その他の機密データの情報をすぐ保護できます。</h2>
-      <h3>Azure RMS を初めて使いますか? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">製品サイトを参照する &rarr;</a></h3>
+      <h3>Azure RMS を初めて使いますか? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">製品サイトを参照する &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>実践する準備はできていますか?</p>
@@ -224,6 +224,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 </article>
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
