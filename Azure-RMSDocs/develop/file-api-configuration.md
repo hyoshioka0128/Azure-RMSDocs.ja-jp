@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: ファイル API の構成 | Azure RMS
-description: ファイルの API の動作は、レジストリの設定を使用して構成できます。
-keywords:
+title: "ファイル API の構成 | Azure RMS"
+description: "ファイルの API の動作は、レジストリの設定を使用して構成できます。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 46b1fe5a0c4f138db65072d14489a5d588015df7
+
 
 ---
 
@@ -67,14 +63,16 @@ ms.suite: ems
 
 - **Off**: 暗号化が無効です。
 
-> [!Note] この設定は、解読には影響しません。 ユーザーが **EXTRACT** 権限を持っている限り、ネイティブ保護と PFile 保護のどちらを使用して暗号化されたファイルでも解読できます。
+> [!Note] 
+> この設定は、解読には影響しません。 ユーザーが **EXTRACT** 権限を持っている限り、ネイティブ保護と PFile 保護のどちらを使用して暗号化されたファイルでも解読できます。
 
 - **Native**: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p*zzz* になります。*zzz* は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
 
 - **Pfile**: PFile 暗号化が使用されます。 暗号化されたファイルでは、元の拡張子に .pfile が追加されます。 たとえば、.txt ファイルを暗号化すると、拡張子は .txt.pfile になります。
 
 
-> [!Note] この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が &quot;Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
+> [!Note] 
+> この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が &quot;Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
 
 その他の値を設定する場合や、値を設定しない場合は、既定の動作が実行されます。
 
@@ -157,6 +155,7 @@ HKEY_LOCAL_MACHINE
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

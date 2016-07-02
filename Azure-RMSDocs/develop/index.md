@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: RMS 開発者ガイド |Azure RMS
-description: Rights Management SDK の 3 つの世代をご利用いただけるようになりました。
-keywords:
+title: "RMS 開発者ガイド |Azure RMS"
+description: "Rights Management SDK の 3 つの世代をご利用いただけるようになりました。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 6f8a475907347e545eb3ea46fecc04013fa74c5e
+
 
 ---
 
@@ -49,12 +44,13 @@ Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、i
 | [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows デスクトップ|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) および 2.x SDK 以降のバージョン|**IpcAzureApp** は、Azure Blob Storage のデータを保護するために Azure アプリケーションで RMS SDK を使用する方法をデモンストレーションするサンプルです。|
 | [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows デスクトップ|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) および 2.x SDK 以降のバージョン|**RmsDocumentInspector** は、コンテンツ ID やユーザー権限などの、RMS で保護されているファイルに関する情報を得られるツールです。|
 | [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows デスクトップ|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) および 2.x SDK 以降のバージョン|**RmsFileWatcher** は、ファイル システムのディレクトリを監視し、すべての変更 (ファイルの追加や変更) に RMS 保護ポリシーを適用する Windows アプリケーションを構築する方法を示すサンプルです。|
-| [iOS/OS X の使用シナリオ](https://msdn.microsoft.com/en-us/library/dn758307(v=vs.85).aspx) |iOS / OS X|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|RMS SDK に慣れるための重要な開発シナリオを表す **Objective C** のコード例です。 Microsoft によって保護されたファイル形式の使用例、カスタムの保護されたファイル形式の使用例、カスタムの UI コントロールの使用例などがあります。|
+| [iOS/OS X の使用シナリオ](https://msdn.microsoft.com/library/dn758307(v=vs.85).aspx) |iOS / OS X|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|RMS SDK に慣れるための重要な開発シナリオを表す **Objective C** のコード例です。 Microsoft によって保護されたファイル形式の使用例、カスタムの保護されたファイル形式の使用例、カスタムの UI コントロールの使用例などがあります。|
 | [UI ライブラリおよびサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|GitHub の **UI ライブラリおよび iOS 用のサンプル アプリ**です。標準 UI をすぐに使いはじめてご自分のアプリで再利用できます。|
 | [UI ライブラリおよびサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|GitHub の **UI ライブラリおよび Android 用のサンプル アプリ**です。標準 UI をすぐに使いはじめてご自分のアプリで再利用できます。|
 | [Android の使用シナリオ](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|RMS SDK に慣れるための重要な開発シナリオを表す **Java のコード例**です。 Microsoft によって保護されたファイル形式の使用例、カスタムの保護されたファイル形式の使用例、カスタムの UI コントロールの使用例などがあります。|
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
