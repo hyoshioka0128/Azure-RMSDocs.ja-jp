@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: AD RMS サーバー |Azure RMS
-description: Rights Management サービス (RMS) のサーバー コンポーネントは、Microsoft インターネット インフォメーション サービスで実行される一連の Web サービスによって実装されます。
-keywords:
+title: "AD RMS サーバー |Azure RMS"
+description: "Rights Management サービス (RMS) のサーバー コンポーネントは、Microsoft インターネット インフォメーション サービスで実行される一連の Web サービスによって実装されます。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 2b7c99e3adafde7140d7997364ec2643ba79a2ac
+
 
 ---
 
@@ -30,7 +26,8 @@ ms.suite: ems
 
 **Azure RMS** - Azure Rights Management サービス使用の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
-> [!IMPORTANT] Azure RMS を介してアプリケーションを開発し、テストすることをお勧めします。
+> [!IMPORTANT] 
+> Azure RMS を介してアプリケーションを開発し、テストすることをお勧めします。
 
 **Windows Server** - RMS オンプレミス サーバーでは、Windows Server 2008 以降、RMS サービスをロールとして追加することで、そのインストールと構成ができます。 以前のオペレーティング システムにサービスをインストールするには、Microsoft ダウンロード センターから [Microsoft Windows Rights Management サービス Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909) をダウンロードします。
 
@@ -60,6 +57,7 @@ ms.suite: ems
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

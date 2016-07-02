@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: アプリケーションのデプロイ | Azure RMS
-description: このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順を追って各操作を説明します。
-keywords:
+title: "アプリケーションのデプロイ | Azure RMS"
+description: "このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順を追って各操作を説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
+ms.openlocfilehash: 902721ae3e69afd144c552b8ee0a916958e80afc
+
 
 ---
 
@@ -84,7 +80,8 @@ RMS クライアント 2.1 は、(オンプレミスでインストールされ�
 RMS クライアント 2.1 は、Windows オペレーティング システムのコンポーネントではありません。 RMS クライアント 2.1 は、個別のダウンロードとして提供されています。使用許諾契約書を確認して承諾することで、サードパーティ製ソフトウェアと一緒に自由に配布できるため、クライアントは環境内の RMS サーバーを使用してデプロイすることで、権利保護されたコンテンツにアクセスできるようになります。
 
 
-> [!IMPORTANT] AD RMS クライアント 2.1 はアーキテクチャ固有であり、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
+> [!IMPORTANT]
+> AD RMS クライアント 2.1 はアーキテクチャ固有であり、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
 
 
 ## RMS クライアント 2.1 のインストールの選択
@@ -137,6 +134,7 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
