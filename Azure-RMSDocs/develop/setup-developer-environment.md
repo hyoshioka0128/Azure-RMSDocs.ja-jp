@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 開発環境のセットアップ | Azure RMS
-description: 特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する方法について説明します。
-keywords:
+title: "開発環境のセットアップ | Azure RMS"
+description: "特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する方法について説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
+ms.openlocfilehash: 4bb013f420b02a10e306d92624683c48ceb2582f
+
 
 ---
 
@@ -43,6 +39,7 @@ ms.suite: ems
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
