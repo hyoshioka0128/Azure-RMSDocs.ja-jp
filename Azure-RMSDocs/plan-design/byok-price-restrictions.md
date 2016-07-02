@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: BYOK の料金と制限事項 | Azure RMS
-description:
-keywords:
+title: "BYOK の料金と制限事項 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
+
 
 ---
 
@@ -34,7 +28,7 @@ IT 部門が管理する Azure サブスクリプションを持つ組織は無�
 
 
 > [!NOTE]
-> 個人用 RMS の詳細については、「[個人向け RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。.
+> 個人用 RMS の詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
 ![BYOK は Exchange Online をサポートしていません](../media/RMS_BYOK_noExchange.png)
 
@@ -60,12 +54,13 @@ AD RMS から Azure RMS に移行している場合は、信頼された発行�
 
 ## 次のステップ
 
-独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」を参照してください。.
+独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」を参照してください。
 
 テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Rights Management テナント キーを計画して実装する」の「[次のステップ](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
