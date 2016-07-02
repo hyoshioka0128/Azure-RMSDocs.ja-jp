@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure RMS の機能の詳細 | Azure RMS
-description:
-keywords:
+title: "Azure RMS の機能の詳細 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5d825d6c8b2c8b7a9c34ac940c5a08439a9ae562
+ms.openlocfilehash: 505f2c94bb4fd056b4d2f51c147c6b0b84efac00
+
 
 ---
 
@@ -77,7 +71,8 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure RMS �
 
 ユーザー環境が初期化された後、ユーザーはそのコンピューターでドキュメントを保護したり、保護されているドキュメントを消費したりできます。
 
-> [!NOTE] このユーザーが別の Windows コンピューターに移動する場合、または別のユーザーがこの同じ Windows コンピューターを使用する場合は、初期化プロセスが繰り返されます。
+> [!NOTE]
+> このユーザーが別の Windows コンピューターに移動する場合、または別のユーザーがこの同じ Windows コンピューターを使用する場合は、初期化プロセスが繰り返されます。
 
 ### ユーザー環境の初期化
 ユーザーが Windows コンピューターでコンテンツを保護したり保護されているコンテンツを消費したりできるためには、その前にデバイスでユーザー環境を準備する必要があります。 これは 1 回限りのプロセスであり、ユーザーがコンテンツの保護または保護されたコンテンツの消費を行おうとしたときに、ユーザーの介入なしに自動的に行われます。
@@ -151,9 +146,11 @@ Azure RMS の詳細については、**概要と詳細**のセクションの他
 
 Azure RMS を組織にデプロイする準備ができたら、「[Azure Rights Management の展開ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイメントの手順と具体的な操作手順へのリンクを参照してください。
 
-> [!TIP] 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
+> [!TIP]
+> 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
