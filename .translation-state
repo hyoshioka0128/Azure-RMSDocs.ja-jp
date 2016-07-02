@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "3de05f5783e864e7700c154d6deb062f24322320",
-  "LastTranslatedCommit": "a66f3b1b68a79cd7f899c8d08560e3954ebc886a",
+  "LastTranslatedCommit": "10c3d4e877a5eea493dd4ce74170ff00fc2e16cc",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -66896,7 +66896,7 @@
       "TargetFilePath": "Azure-RMSDocs\\deploy-use\\configure-office-apps.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf",
       "HandbackFileCommit": "65e7cebecfec2539fae60c643abd524b1994ca38",
-      "HandbackDateTime": "2016-07-02T08:08:57.60009Z",
+      "HandbackDateTime": "2016-07-02T08:18:15.2500004Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf failed.",
@@ -66906,7 +66906,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 2,
+      "HandbackFailureTimes": 3,
       "UpdatedDateTime": "2016-06-22T12:14:23.8607284Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\archive\\configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.ja-jp.xlf",
       "ArchiveFileCommit": "d6d2f5a4b6c2fee23d21c92360a25303b9786617",
