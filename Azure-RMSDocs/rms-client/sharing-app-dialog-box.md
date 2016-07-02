@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーションのダイアログ ボックス オプション | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーションのダイアログ ボックス オプション | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+
 
 ---
 
@@ -57,11 +51,11 @@ ms.suite: ems
 -   **ファイルを一般的に保護する**と、権限のないユーザーはファイルを開けなくなります。 ただし、権限を持つユーザーがファイルを開いた後は、保護されていないファイルを他のユーザーに転送したり、他のユーザーがアクセスできる場所に保存したりすることができます。 そのファイルに対して持っているアクセス許可を示すメッセージが表示され、そのアクセス許可を守るように求められますが、この保護は強制されません。 さらに、ファイルを一般的に保護すると、承認よりも細かいアクセス許可を制限できません。 たとえば、コンテンツを表示のみや印刷不可に制限することができません。
 
     > [!NOTE]
-    > 一般的に保護されたファイルのファイル名拡張子は常に **.pfile** です。.
+    > 一般的に保護されたファイルのファイル名拡張子は常に **.pfile**です。
 
 -   比較として、Rights Management の**組み込み (ネイティブ) 保護**と、それをサポートするアプリケーション (Office ファイルなど) を使用する場合、ファイルが他のユーザーに送信されたり、別の場所に保存されたりした場合でも、ファイルに保護が適用されます。 また、このようなファイルを保護する場合、読み取り専用などの厳しいアクセス許可を使用したり、編集はできても印刷やコピーができないアクセス許可を使用したりできます。 たとえば、 **[レビュー担当者 - 表示のみ]**を選んで、コンテンツが編集、印刷、コピーされないようにすることができます。
 
-詳細については、「[Rights Management 共有アプリケーション管理ガイド](sharing-app-admin-guide.md)」の「[保護のレベル - ネイティブと汎用](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)」セクションを参照してください。.
+詳細については、「[Rights Management 共有アプリケーション管理ガイド](sharing-app-admin-guide.md)」の「[保護のレベル - ネイティブと汎用](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)」セクションを参照してください。
 
 ## 自動的に作成される .ppdf ファイルとは
 
@@ -84,6 +78,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

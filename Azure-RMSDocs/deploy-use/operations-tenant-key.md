@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure Rights Management テナント キーに対する操作 | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management テナント キーに対する操作 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 44408fd8f9da73d8050e0938aa1cc9bc76688bed
+
 
 ---
 
@@ -31,7 +25,7 @@ ms.suite: ems
 
 組織のテナント キー トポロジ (Microsoft が管理またはお客様が管理) に応じて、実装後の Microsoft Azure Rights Management (Azure RMS) テナント キーに対する制御および責任のレベルは異なります。
 
-独自のテナント キーを自分で管理する場合、これは一般に BYOK (Bring Your Own Key) と呼ばれます。 このシナリオの詳細のほか、2 つのテナント キー トポロジから選択する方法については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。.
+独自のテナント キーを自分で管理する場合、これは一般に BYOK (Bring Your Own Key) と呼ばれます。 このシナリオの詳細のほか、2 つのテナント キー トポロジから選択する方法については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
 
 次の表に、Azure RMS テナント キーの選択したトポロジに応じて実行できる操作を示します。
 
@@ -54,6 +48,7 @@ ms.suite: ems
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
