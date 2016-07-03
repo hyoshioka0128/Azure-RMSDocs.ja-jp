@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: Azure AD でアプリの登録と RMS の有効化を行う方法 | Azure RMS
-description: RMS 対応アプリケーションのユーザー認証の基本について説明します。
-keywords:
+title: "Azure AD でアプリの登録と RMS の有効化を行う方法 | Azure RMS"
+description: "RMS 対応アプリケーションのユーザー認証の基本について説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/15/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 34a82f31b5da46a59627ff559deb46c8445fcdf2
+
 
 ---
 
@@ -53,7 +49,8 @@ ms.suite: ems
 -   [Windows Azure Active Directory 認証ライブラリ (ADAL) (dotnet 向け)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Linux SDK の場合、ADAL ライブラリは SDK ソースでパッケージ化されます ([Github](https://github.com/AzureAD/rms-sdk-for-cpp) で入手可能)。
 
->[!NOTE]  他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
+>[!NOTE]  
+> 他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
 
 ### 認証パラメーター
 
@@ -66,13 +63,15 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 また、前述の Azure ポータルでの登録手順で取得したものです。
 - **リダイレクト URI** – 認証コードの対象の URI で認証ライブラリを指定します。 iOS および Android では、特定の形式が必要になります。 これらの形式については、ADAL の対応する GitHub リポジトリの README ファイルで説明されています。 この値は、前述の Azure ポータルでの登録手順で取得したものです。
 
->[!NOTE] **範囲**は現在使用されていませんが、今後の使用のために予約されています。
+>[!NOTE] 
+> **範囲**は現在使用されていませんが、今後の使用のために予約されています。
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
+>[!NOTE] 
+> アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
 
 ### 認証コールバックの実装の例
 **認証コード例** - この SDK には、認証コールバックの使用を示すコード例が含まれています。 ご参考のためにここに、また以下のリンクされたトピックでいくつかのコード例を紹介します。
@@ -271,6 +270,7 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
  
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

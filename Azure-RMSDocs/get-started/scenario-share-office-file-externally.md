@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: シナリオ - 別の組織のユーザーと Office ファイルを共有する | Azure RMS
-description:
-keywords:
+title: "シナリオ - 別の組織のユーザーと Office ファイルを共有する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+
 
 ---
 
@@ -74,7 +68,8 @@ ms.suite: ems
 
     -   これらのステップに、有効期限の設定は含まれません。 特定の期日以降にこの情報が使用されないようにする場合は、もう 1 つステップを追加して適切な有効期限 (たとえば、電子メール メッセージを送信してから 90 日) を設定します。
 
-    > [!NOTE] ユーザーが選択できる各オプションの詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックスのオプション](https://technet.microsoft.com/library/dn574738.aspx)」を参照してください
+    > [!NOTE]
+    > ユーザーが選択できる各オプションの詳細については、「 [Rights Management 共有アプリケーションのダイアログ ボックスのオプション](https://technet.microsoft.com/library/dn574738.aspx)」を参照してください
 
 4.  必要に応じて手順に変更を加え、変更した手順をユーザーに送信します。
 
@@ -159,6 +154,7 @@ ms.suite: ems
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: お客様が管理 - テナント キーのライフサイクル操作 | Azure RMS
-description:
-keywords:
+title: "お客様が管理 - テナント キーのライフサイクル操作 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 496edca2e2323e17216858e2ab4844fdb0aa1fb0
+
 
 ---
 
@@ -63,7 +57,7 @@ BYOK を使用する場合、テナント キーを Azure RMS からエクスポ
 
 |インシデントの説明|考えられる対応|
 |------------------------|-------------------|
-|テナント キーが漏れています。|テナント キーを再入力します。 「[テナント キーを再入力します](#re-key-your-tenant-key)」を参照してください。.|
+|テナント キーが漏れています。|テナント キーを再入力します。 「[テナント キーを再入力します](#re-key-your-tenant-key)」を参照してください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを更新するように指示します。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|マイクロソフトは回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure RMS を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
@@ -71,6 +65,7 @@ BYOK を使用する場合、テナント キーを Azure RMS からエクスポ
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
