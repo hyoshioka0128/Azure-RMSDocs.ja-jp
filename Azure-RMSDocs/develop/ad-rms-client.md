@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: クライアント | Azure RMS
-description: AD RMS クライアント 2.1 は、情報へのアクセスと情報の使用を保護するために設計されたクライアント コンピューター向けのソフトウェアです。
-keywords:
+title: "クライアント | Azure RMS"
+description: "AD RMS クライアント 2.1 は、情報へのアクセスと情報の使用を保護するために設計されたクライアント コンピューター向けのソフトウェアです。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 24322775b689ad0508979853fd06b2d33fc33cc1
+
 
 ---
 
@@ -34,7 +29,7 @@ RMS クライアント 2.1 は、ユーザーが保護された (暗号化され
 
 Rights Management Service SDK 2.1 は、RMS クライアント 2.1 で動作します。 RMS SDK 2.1 上で構築された権限保護対応アプリケーションは、RMS クライアント 2.1 を使用する必要があります。
 
-詳細については、[RMS クライアント 2.1 に関する TechNet のドキュメント](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)を参照してください。
+詳細については、[RMS クライアント 2.1 に関する TechNet のドキュメント](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx)を参照してください。
 
 ## 関連項目
 
@@ -46,6 +41,7 @@ Rights Management Service SDK 2.1 は、RMS クライアント 2.1 で動作し�
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

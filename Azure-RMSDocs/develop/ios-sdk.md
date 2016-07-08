@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: iOS および OS X のセットアップ |Azure RMS
-description: iOS および OS X アプリケーションは RMS SDK 4.2 を使用して、AAD RM リソースを使用することでそのアプリケーション内で統合情報保護を有効にできます。
-keywords:
+title: "iOS および OS X のセットアップ |Azure RMS"
+description: "iOS および OS X アプリケーションは RMS SDK 4.2 を使用して、AAD RM リソースを使用することでそのアプリケーション内で統合情報保護を有効にできます。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 821fe1c361dc38b1e33ac66208122de165d02020
+
 
 ---
 
@@ -51,7 +46,7 @@ iOS および OS X アプリケーションは Microsoft Rights Management SDK 4
 
     この SDK は、iOS 7.0 および OS X 10.8 以降を対象とする開発に使用できます。
 
--   認証ライブラリ: [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx) を使用することをお勧めします。 ただし、OAuth 2.0 をサポートしている他の認証ライブラリも使用できます。
+-   認証ライブラリ: [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) を使用することをお勧めします。 ただし、OAuth 2.0 をサポートしている他の認証ライブラリも使用できます。
 
     詳細については、「[ADAL for iOS (iOS 用の ADAL)](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios)」または「[ADAL for OS X (OS X 用の ADAL)](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)」を参照してください。
 
@@ -122,6 +117,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

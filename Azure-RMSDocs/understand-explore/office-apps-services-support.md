@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Office アプリケーションおよびサービス | Azure RMS
-description:
-keywords:
+title: "Office アプリケーションおよびサービス | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 99eb67f6296ad1782c787aabb73a28458c02f367
+ms.openlocfilehash: affb37cc3b991609f5de51370485b10fed932421
+
 
 ---
 
@@ -33,9 +27,9 @@ ms.suite: ems
 エンド ユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で Microsoft Azure Rights Management を使用して、組織のデータを保護できます。
 
 ## Office アプリケーション:Word、Excel、PowerPoint、Outlook
-これらのアプリケーションでは、Information Rights Management (IRM) を使用することで Rights Management がネイティブでサポートされ、ユーザーは保存済みドキュメントまたは送信される電子メール メッセージに保護を適用できます。 ユーザーは、テンプレートを適用するか、アクセス、権限、および使用制限の細かくカスタマイズされた設定を選択できます。 
+これらのアプリケーションでは、Information Rights Management (IRM) を使用することで Rights Management がネイティブでサポートされ、ユーザーは保存済みドキュメントまたは送信される電子メール メッセージに保護を適用できます。 ユーザーは、テンプレートを適用するか、Word、Excel、PowerPoint の場合にはアクセス、権限、および使用制限の細かくカスタマイズされた設定を選択できます。 
 
-たとえば、ユーザーは、組織内のユーザーのみがアクセスできるようにファイルを構成することも、ファイルの編集の可否、読み取り専用への制限、印刷防止などを制御することもできます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を (ユーザーが直接またはテンプレートの適用により) 構成できます。 Outlook の場合、ユーザーは、[ **転送不可** ] オプションを選択して、データの漏えいを防ぐこともできます。
+たとえば、ユーザーは、組織内のユーザーのみがアクセスできるように Word 文書を構成することも、Excel スプレッドシートの編集の可否、読み取り専用への制限、印刷防止などを制御することもできます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を (ユーザーが直接またはテンプレートの適用により) 構成できます。 Outlook の場合、ユーザーは、テンプレートを選択できるだけでなく、[**転送不可**] オプションを選択して、データの漏えいを防ぐこともできます。
 
 ## Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用する場合、追加の情報保護ソリューションを提供する Information Rights Management (IRM) 統合を使用できます。
@@ -52,7 +46,7 @@ Exchange Online または Exchange Server を使用する場合、追加の情�
 
 -   **Office 365 メッセージ暗号化** 。トランスポート ルールを使用して暗号化された電子メールを社外のユーザーに送信し、Outlook Web App に似たブラウザーのインターフェイスで電子メールを読み取ります。 会社の暗号化された電子メールの免責事項のテキストとヘッダーのテキストをカスタマイズすることが可能で、会社のロゴを追加することもできます。 詳細については、Office Web サイトの「[Office 365 Message Encryption](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx)」を参照してください。
 
-Exchange Server を使用する場合は、オンプレミス サーバーと RMS クラウド サービスの間のリレーとして機能する RMS コネクタを配置することで、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] と情報保護機能を使用できます。 詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」を参照してください。.
+Exchange Server を使用する場合は、オンプレミス サーバーと RMS クラウド サービスの間のリレーとして機能する RMS コネクタを配置することで、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] と情報保護機能を使用できます。 詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」を参照してください。
 
 ## SharePoint Online と SharePoint Server
 SharePoint Online または SharePoint Server を使用する場合に Information Rights Management (IRM) 統合を使用すると、管理者がリストやライブラリを保護し、ユーザーがドキュメントをチェックアウトしたときに、指定した情報保護ポリシーに従って許可されたユーザーのみがファイルを表示および使用できるようにファイルが保護されます。 たとえば、ファイルが読み取り専用のときに、テキストのコピーを無効にし、ローカル コピーの保存やファイルの印刷を防止することができます。
@@ -61,7 +55,7 @@ SharePoint Online または SharePoint Server を使用する場合に Informati
 
 最初に SharePoint の IRM サービスを有効にする必要があります。 次に、ライブラリに対して Information Rights Management を指定します。 SharePoint Online と OneDrive for Business の場合、ユーザーは OneDrive for Business ライブラリに対しても Information Rights Management を指定できます。 SharePoint は権限ポリシー テンプレートを使用しませんが、SharePoint にはテンプレートで指定できる設定とほとんど同じでユーザーが選択できる構成設定があります。
 
-SharePoint Server を使用する場合は、オンプレミス サーバーと RMS クラウド サービスの間のリレーとして機能する RMS コネクタを配置することで、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] と情報保護機能を使用できます。 詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」を参照してください。.
+SharePoint Server を使用する場合は、オンプレミス サーバーと RMS クラウド サービスの間のリレーとして機能する RMS コネクタを配置することで、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] と情報保護機能を使用できます。 詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」を参照してください。
 
 > [!NOTE]
 > 現在のところ、SharePoint で IRM を使用する場合、いくつかの制限があります。
@@ -76,8 +70,9 @@ SharePoint での Azure RMS の使用について詳しくは、Office のブロ
 
 ## 次のステップ
 
-「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照して、他のアプリケーションおよびサービスで Azure Rights Management をサポートする方法について確認してください。.
+「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照して、他のアプリケーションおよびサービスで Azure Rights Management をサポートする方法について確認してください。
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO1-->
 
 

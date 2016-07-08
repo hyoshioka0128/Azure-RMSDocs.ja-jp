@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: テンプレートの更新 | Azure RMS
-description:
-keywords:
+title: "テンプレートの更新 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/06/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 771f4139b09cccc05f2d1ee52c76b99467c70446
+ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
+
 
 ---
 
@@ -34,17 +28,17 @@ Azure RMS を使用する場合、テンプレートは自動的にクライア�
 
 |アプリケーションまたはサービス|変更後のテンプレートの更新方法|
 |--------------------------|---------------------------------------------|
-|Exchange Online|テンプレートを更新するには、手動構成が必要です。<br /><br />構成手順については、以下の「[Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates)」セクションを参照してください。.|
+|Exchange Online|テンプレートを更新するには、手動構成が必要です。<br /><br />構成手順については、以下の「[Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates)」セクションを参照してください。|
 |Office 365|自動更新 - 追加の手順は必要ありません。|
-|Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />このスケジュールより前に強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。.|
-|Office 2010|ユーザーがログオンしたときに更新されます。<br /><br />強制的に更新するには、ログオフしてもう一度ログオンするようにユーザーに依頼します。 または、以下の「 [Office 2010 のみ:変更されたカスタム テンプレートを強制的に更新する方法](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template)」セクションをご覧ください。.|
+|Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />このスケジュールより前に強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
+|Office 2010|ユーザーがログオンしたときに更新されます。<br /><br />強制的に更新するには、ログオフしてもう一度ログオンするようにユーザーに依頼します。 または、以下の「[Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
 RMS 共有アプリケーションを使用している モバイル デバイスの場合、テンプレートは自動的にダウンロードされるので (必要な場合はさらに更新されます)、追加の構成は必要ありません。
 
 ## Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
 Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
 
 > [!NOTE]
-> Exchange Online で Windows PowerShell を使用する方法の詳細については、「[Exchange Online による PowerShell の使用](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx)」を参照してください。.
+> Exchange Online で Windows PowerShell を使用する方法の詳細については、「[Exchange Online による PowerShell の使用](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx)」を参照してください。
 
 テンプレートを変更するたびにこの手順を実行する必要があります。
 
@@ -144,7 +138,7 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
     > [!TIP]
         > レジストリ パスの <*MicrosoftRMS_FQDN*> は、Microsoft RMS サービスの FQDN を指します。 この値を確認するには:
 
-    > 1.  Azure RMS 用の [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。.
+    > 1.  Azure RMS 用の [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
     > 2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
     > 
     >     例: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
@@ -192,6 +186,7 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 ## 参照
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

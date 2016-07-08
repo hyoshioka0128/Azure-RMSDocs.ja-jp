@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Android のセットアップ | Azure RMS
-description: Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
-keywords:
+title: "Android のセットアップ | Azure RMS"
+description: "Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 30fad88ff664e2df935c8f2cfd28f8b1fe251f67
+
 
 ---
 
@@ -50,7 +45,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
     この SDK は、Android 4.0.3 (API レベル 15) 以降を対象とする開発に使用できます。
 
--   認証ライブラリ: [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx) を使用することをお勧めします。 ただし、OAuth 2.0 をサポートしている他の認証ライブラリも使用できます。
+-   認証ライブラリ: [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) を使用することをお勧めします。 ただし、OAuth 2.0 をサポートしている他の認証ライブラリも使用できます。
 
     詳細については、「[ADAL for iOS ](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)」 (iOS 用の ADAL) を参照してください。
 
@@ -106,7 +101,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![ワークスペースにインポートする](../media/Android-setup-07.png)
 
--   **[Next]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
+-    **[次へ]**をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
 
     ![フォルダーに移動して選択する](../media/Android-setup-08c.jpg)
 
@@ -120,7 +115,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![ライブラリを追加する](../media/Android-setup-10b.jpg)
 
--   **[OK]** をクリックします。
+-   **[OK]**をクリックします。
 
     MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
 
@@ -131,12 +126,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 -   マニフェストを検証するには、テキスト エディターのビューでマニフェストを表示します。 次の行が表示されていることを確認してください。
 
 
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="19"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission/>
+    <uses-sdk      android:minSdkVersion="15"      android:targetSdkVersion="19"/> <uses-permission android:name="android.permission.INTERNET"/> <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <uses-permission/>
 
 
 **注**  SDK では *android.support.v4* が使用されます。
@@ -158,6 +148,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

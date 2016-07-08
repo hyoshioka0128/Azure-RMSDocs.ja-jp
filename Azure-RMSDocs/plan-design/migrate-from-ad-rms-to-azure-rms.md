@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: AD RMS から Azure Rights Management への移行 | Azure RMS
-description:
-keywords:
+title: "AD RMS から Azure Rights Management への移行 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
+ms.openlocfilehash: b33839ff5ce0d30082f58ff96eb81215b716e46d
+
 
 ---
 
@@ -101,7 +95,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 -   外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションしている場合は、同時にまたは可能な限り速やかにパートナーも Azure RMS に移行する必要があります。 移行前に AD RMS を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
 
-    パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 支援が必要な場合は、[Microsoft サポートに連絡](../get-started/information-support#support-options-and-community-resources)してください。
+    パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 支援が必要な場合は、[Microsoft サポートに連絡](../get-started/information-support.md#support-options-and-community-resources)してください。
 
 ## AD RMS から Azure RMS への移行手順の概要
 
@@ -185,6 +179,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

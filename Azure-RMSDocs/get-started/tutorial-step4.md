@@ -1,28 +1,26 @@
 ---
-# required metadata
-
-title: "Azure RMS のクイック スタート チュートリアル - 手順 4 | AZURE RMS"
+title: "Azure RMS のクイック スタート チュートリアル - 手順 4. | Azure RMS"
 description: "5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの 4 番目の手順。"
-keywords:
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.technology: techgroup-identity
+ms.technology: 
 ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
-
-# optional metadata
-
-ROBOTS:
-audience:
-ms.devlang:
+ROBOTS: 
+audience: 
+ms.devlang: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ms.tgt_pltfrm: 
+ms.custom: 
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
+
 
 ---
 
@@ -76,9 +74,11 @@ ms.custom:
 |電子メール メッセージに添付されている 2 つのバージョンのファイルについて|[自動的に作成される .ppdf ファイルとは](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
 
 
->[!div class="step-by-step"] [« 手順 3](tutorial-step3.md)
+>[!div class="step-by-step"]
+[« 手順 3](tutorial-step3.md)
 [手順 5 »](tutorial-step5.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

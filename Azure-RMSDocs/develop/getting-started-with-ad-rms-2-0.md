@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: 概要 | Azure RMS
-description: RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。
-keywords:
+title: "概要 | Azure RMS"
+description: "RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: cbdb969e9910142f49b078069fc578059f9d8785
+ms.openlocfilehash: 81541dbadabe3417299f47447384934373275e75
+
 
 ---
 # 概要
@@ -39,17 +35,17 @@ Rights Management サービス SDK 2.1 プラットフォームを使用する�
 | [SDK のインストール](install-the-rms-sdk.md) | このトピックでは、開発者ツールをインストールする方法について説明します。|
 | [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | このトピックでは、RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する手順について説明します。|
 | [アプリケーションの開発](developing-your-application.md) | このトピックでは、RMS 対応アプリケーションの中心部分について基本的なことを説明します。独自のアプリケーションを開発する際に基礎となります。|
-| [アプリケーションのテスト](running-your-first-application.md) |このトピックでは、アプリケーション テストを設定する方法について説明します。|
+| [アプリケーションのテスト](how-to-set-up-your-test-environment.md) |このトピックでは、アプリケーション テストを設定する方法について説明します。|
 | [運用環境にデプロイする](deploying-your-application.md) |このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて順を追って各操作を説明します。|
-
-開始したら、他のいくつかの [RMS サンプル](samples.md)を確認してください。 その後は、「[RMS 開発者のコーナー](http://blogs.msdn.com/b/rms/)」で最新情報を入手ください。
 
 
 これらのトピックのガイダンスに従って、RMS SDK 2.1 を使用してみてください。
 
--   [SDK のインストール](install-the-rms-sdk.md)
--   [権限保護対応アプリケーションのテスト](running-your-first-application.md)
--   [IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)
+- [SDK のインストール](install-the-rms-sdk.md)
+- [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
+- [アプリケーションの開発](developing-your-application.md)
+- [アプリケーションのテスト](how-to-set-up-your-test-environment.md)
+- [運用環境にデプロイする](deploying-your-application.md)
 
 ### コンテンツの保護に RMS SDK 2.1 を使用する理由
 
@@ -71,17 +67,15 @@ RMS SDK 2.1 では、重要なクライアントおよびサーバー プラッ�
 
 ## 関連項目
 
-* [AD RMS samples (AD RMS サンプル)](samples.md)
+* [RMS 開発者ガイド](developers-guide.md)
 * [AD RMS 開発者のコーナー](http://blogs.msdn.com/b/rms/)
-* [SDK のインストール](install-the-rms-sdk.md)
-* [IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)
-* [概要](ad-rms-overview.md)
-* [サポートされているプラットフォーム](supported-platforms.md)
+
  
 
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

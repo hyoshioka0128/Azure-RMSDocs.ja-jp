@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Azure Rights Management の利用状況をログに記録して分析する | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management の利用状況をログに記録して分析する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8
+ms.openlocfilehash: 845a47f526754f291c27a3c2bbd80af736b44992
+
 
 ---
 
@@ -47,7 +41,8 @@ ms.suite: ems
 
     情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 Azure Rights Management およびログを使用すれば、このような質問に答えることができます。保護されているコンテンツを使用するユーザーが Azure Rights Management で保護されているドキュメントおよび画像を開くには、常に Rights Management ライセンスを取得する必要があるためです。これは、ファイルがメールで転送されたり、USB ドライブなどのストレージ デバイスにコピーされたりした場合も同様です。 このため、Azure Rights Management を使用してデータを保護していれば、Azure Rights Management ログを科学捜査上の分析のための最終的な情報源として活用できます。
 
-> [!NOTE] Azure Rights Management の管理タスクのログ記録だけに関心があり、Rights Management の利用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell コマンドレットを使用できます。
+> [!NOTE]
+> Azure Rights Management の管理タスクのログ記録だけに関心があり、Rights Management の利用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell コマンドレットを使用できます。
 > 
 > Azure クラシック ポータルを通じて、**RMS の概要**、**RMS のアクティブ ユーザー**、**RMS デバイス プラットフォーム**、**RMS アプリケーションの使用状況**など、概要レベルの使用状況レポートを使用することもできます。 Azure クラシック ポータルからこれらのレポートにアクセスするには、**[Active Directory]** をクリックし、ディレクトリを選択して開いてから、**[レポート]** をクリックします。
 
@@ -56,7 +51,8 @@ ms.suite: ems
 ## Azure Rights Management の使用状況ログを有効にする方法
 2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure RMS サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 
 
-> [!NOTE] ログ ストレージやログ機能に対する追加費用は発生しません。
+> [!NOTE]
+> ログ ストレージやログ機能に対する追加費用は発生しません。
 > 
 > 2016 年 2 月より前に Azure RMS の使用状況ログを使用するには、Azure のサブスクリプションのほか、Azure 上に十分なストレージが必要でしたが、これらが不要になります。
 
@@ -143,17 +139,17 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
 |--------------|-----------------|---------------|-----------------|
 |date|日付|要求が処理された UTC 日付。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。|2013-06-25|
 |time|時刻|要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。|21:59:28|
-|row-id|テキスト|このログ レコードの固有 GUID。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
+|row-id|テキスト|このログ レコードの固有 GUID。 値が存在しない場合は、correlation-id の値を使用してエントリを識別します。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|名前|要求された RMS API の名前。|AcquireLicense|
-|user-id|文字列|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 要求の種類が匿名の場合、値は ”です。|‘joe@contoso。com’|
-|結果|文字列|要求が正常に処理された場合は‘Success’ です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|‘Success’|
+|user-id|文字列|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。|‘joe@contoso。com’|
+|結果|文字列型|要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|'Success'|
 |correlation-id|テキスト|特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|テキスト|保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|文字列|ドキュメントの所有者の電子メール アドレス。|alice@contoso.com|
 |issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|Template-id|文字列|ドキュメントを保護するために使用されるテンプレートの ID。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|文字列|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。|TopSecretDocument.docx|
-|Date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
+|template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|文字列型|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。|TopSecretDocument.docx|
+|date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
 |c-info|文字列|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
 
@@ -166,7 +162,7 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
 
 -   RMS コネクタを使用している場合
 
-    このコネクタから要求は、RMS コネクタのインストール時に RMS が自動的に生成したサービス プリンシパル名でログに記録されます。
+    このコネクタからの要求は、RMS コネクタのインストール時に自動的に生成されたサービス プリンシパル名 **Aadrm_S-1-7-0** でログに記録されます。
 
 #### 一般的な要求の種類
 Azure Rights Management には多くの要求の種類がありますが、次の表に一般的に使用される要求の種類を示します。
@@ -181,7 +177,7 @@ Azure Rights Management には多くの要求の種類がありますが、次�
 |BECreateEndUserLicenseV1|モバイル デバイスから、エンド ユーザー ライセンスを作成するための呼び出しが行われます。|
 |BEGetAllTemplatesV1|モバイル デバイス (バックエンド) から、すべてのテンプレートを取得するための呼び出しが行われます。|
 |Certify|クライアントが保護のために内容を証明しています。|
-|Decrypt|クライアントが RMS で保護されているコンテンツを復号化しようとしています。|
+|KMSPDecrypt|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 顧客管理のテナント キー (BYOK) にのみ適用されます。|
 |DeleteTemplateById|Azure クラシック ポータルから、テンプレート ID でテンプレートを削除するための呼び出しが行われます。|
 |ExportTemplateById|Azure クラシック ポータルから、テンプレート ID に基づいてテンプレートをエクスポートするための呼び出しが行われます。|
 |FECreateEndUserLicenseV1|AcquireLicense 要求と同じですが、要求元はモバイル デバイスです。|
@@ -199,7 +195,7 @@ Azure Rights Management には多くの要求の種類がありますが、次�
 |ServerCertify|RMS 対応クライアント (SharePoint など) から、サーバーを認証するための呼び出しが行われます。|
 |SetUsageLogFeatureState|使用状況ログを有効にするための呼び出しが行われます。|
 |SetUsageLogStorageAccount|Azure RMS ログの場所を指定するための呼び出しが行われます。|
-|SignDigest|署名にキーが使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
+|KMSPSignDigest|署名に顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
 |UpdateTemplate|Azure クラシック ポータルから、既存のテンプレートを更新するための呼び出しが行われます。|
 
 ## Windows PowerShell の参照情報
@@ -229,6 +225,7 @@ Azure Rights Management 用 Windows PowerShell の使用の詳細については
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

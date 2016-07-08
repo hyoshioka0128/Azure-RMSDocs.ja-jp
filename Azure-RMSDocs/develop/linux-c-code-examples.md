@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Linux のコード例 | Azure RMS
-description: このトピックでは、Linux バージョンの RMS SDK の重要なシナリオとコード要素について説明します。
-keywords:
+title: "Linux のコード例 | Azure RMS"
+description: "このトピックでは、Linux バージョンの RMS SDK の重要なシナリオとコード要素について説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 79e58b8092ea7cb057229d4c464d79f3694296e6
+ms.openlocfilehash: ace7103cfb44d84a7dd6bf64f57c2a47530117e0
+
 
 ---
 
@@ -32,7 +28,7 @@ ms.suite: ems
 
 ## シナリオ: 保護されたファイルから保護ポリシー情報にアクセスする
 
-**RMS 保護ファイルを開いて読み取ります。**
+**RMS 保護ファイルを開いて読み取ります**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、*ConvertFromPFile* を呼び出してから (次のコード例を参照)、保護ポリシー名、説明、およびコンテンツの有効期日を読み取ります。
@@ -100,7 +96,7 @@ ms.suite: ems
     outFile-&gt;close();
     }
 
-**保護されたファイル ストリームを作成します。**
+**保護されたファイル ストリームを作成します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: この方法では、SDK メソッド、*ProtectedFileStream::Aquire* を通じて渡されたサポートするストリームから保護ファイル ストリームを作成します。これは、呼び出し元に返されます。
@@ -152,7 +148,7 @@ ms.suite: ems
 
 ## シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
-**ユーザーが選択したテンプレートを使用してファイルを保護します。**
+**ユーザーが選択したテンプレートを使用してファイルを保護します**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFileTemplates* を呼び出して保護します (次のコード例を参照)。
@@ -205,13 +201,7 @@ ms.suite: ems
     
     AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
     }
-   catch (const rmsauth::Exception&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
-    outFile-&gt;close();
-    remove(fileOut.c_str());
-    }
-    catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+   catch (const rmsauth::Exception&amp; e) { AddLog(&quot;ERROR: &quot;, e.error().c_str()); outFile-&gt;close(); remove(fileOut.c_str()); } catch (const rmscore::exceptions::RMSException&amp; e) { AddLog(&quot;ERROR: &quot;, e.what());
     
     outFile-&gt;close();
     remove(fileOut.c_str());
@@ -221,7 +211,7 @@ ms.suite: ems
     }
 
 
-**テンプレートから作成されたポリシーを使用してファイルを保護します。**
+**テンプレートから作成されたポリシーを使用してファイルを保護します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: ユーザーに関連付けられたテンプレートの一覧がフェッチされ、選択したテンプレートがポリシーの作成に使用されます。このポリシーを使用してファイルを保護します。
@@ -254,7 +244,7 @@ ms.suite: ems
     }
     }
 
-**ポリシーを指定してファイルを保護します。**
+**ポリシーを指定してファイルを保護します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: 特定のポリシーを使用して保護されたファイル ストリームを作成し、そのファイルを保護します。
@@ -298,7 +288,7 @@ ms.suite: ems
 
 ## シナリオ: カスタム保護を使用してファイルを保護する
 
-**カスタム保護を使用してファイルを保護します。**
+**カスタム保護を使用してファイルを保護します**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、ユーザーから権限情報を収集し、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFilePredefinedRights* を呼び出して保護します (次のコード例を参照)。
@@ -381,7 +371,7 @@ ms.suite: ems
     }
 
 
-**ユーザーが選択した権限を指定して保護ポリシーを作成します。**
+**ユーザーが選択した権限を指定して保護ポリシーを作成します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **説明**: ポリシー記述子を作成し、ユーザーの権限情報を使ってこれを入力し、このポリシー記述子を使用してユーザー ポリシーを作成します。 このポリシーを使用して *ConvertToPFileUsingPolicy* への呼び出しにより選択したファイルを保護します (このトピックの前のセクションの説明を参照)。
@@ -522,8 +512,7 @@ ms.suite: ems
     auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
 
 
-**手順 2**: **rmsauth::AuthenticationContext** オブジェクトを作成します。
-説明: Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
+**手順 2**: **rmsauth::AuthenticationContext** オブジェクトを作成します。説明: Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
 
 **C++**:
 
@@ -533,8 +522,7 @@ ms.suite: ems
                               FileCachePtr);
 
 
-**手順 3**: **authContext** オブジェクトの **aquireToken** メソッドを呼び出し、次のパラメーターを指定します。
-説明:
+**手順 3**: **authContext** オブジェクトの **aquireToken** メソッドを呼び出し、次のパラメーターを指定します。説明:
 
 -   *要求されるリソース* - アクセスする必要のある保護されたリソース
 -   *クライアントの一意な ID* - 通常は GUID
@@ -552,8 +540,7 @@ ms.suite: ems
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**手順 4**: 結果からアクセス トークンを取得します。
-説明: **result-&gt; accessToken()** メソッドを呼び出します
+**手順 4**: 結果からアクセス トークンを取得します。説明: **result-&gt; accessToken()** メソッドを呼び出します。
 
 **注**  いずれかの認証ライブラリ メソッドにより **rmsauth::Exception** が発生する場合があります
 
@@ -561,16 +548,14 @@ ms.suite: ems
 **UI なしの oAuth2 認証トークンの取得**
 **ソース**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します。
-説明: キャッシュのパスを設定するか、既定値を使用できます
+**手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します。説明: キャッシュのパスを設定するか、既定値を使用できます。
 
 **C++**:
 
     auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
 
 
-**手順 2**: **UserCredential** オブジェクトを作成します
-説明: *ユーザー ログイン*と*パスワード*を指定します
+**手順 2**: **UserCredential** オブジェクトを作成します。説明: *ユーザー ログイン*と*パスワード*を指定します。
 
 **C++**:
 
@@ -578,8 +563,7 @@ ms.suite: ems
                                                  &quot;SomePass&quot;);
 
 
-**手順 3**: **rmsauth::AuthenticationContext** オブジェクトを作成します
-説明: Azure *証明機関 URI* と *FileCache* オブジェクトを指定します
+**手順 3**: **rmsauth::AuthenticationContext** オブジェクトを作成します。説明: Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
 
 **C++**:
 
@@ -602,13 +586,13 @@ ms.suite: ems
                 userCred);
 
 
-**手順 5**: 結果からアクセス トークンを取得します
-説明: **result-&gt; accessToken()** メソッドを呼び出します
+**手順 5**: 結果からアクセス トークンを取得します。説明: **result-&gt; accessToken()** メソッドを呼び出します。
 
 **注**  いずれかの認証ライブラリ メソッドにより **rmsauth::Exception** が発生する場合があります
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Azure Rights Management の使用権限を構成する | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management の使用権限を構成する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
+ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
+
 
 ---
 
@@ -65,7 +58,7 @@ Azure Rights Management (Azure RMS) を使用してファイルまたは電子�
 
 **AD RMS テンプレートでの名前**: *保存*
 
-**API の定数または値**: IPC_GENERIC_WRITEL"EDIT"
+**API の定数または値**: IPC_GENERIC_WRITE L"EDIT"
 
 Office アプリケーションで、この権限はドキュメントを変更することもユーザーに許可します。
 
@@ -83,7 +76,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前**: 実装されていません。
 
-**API の定数または値**: IPC_GENERIC_COMMENTL"COMMENT
+**API の定数または値**: IPC_GENERIC_COMMENT L"COMMENT
 
 この権限は SDK で使用でき、Windows PowerShell の RMS 保護モジュールでアドホック ポリシーとして使用できます。また、いくつかのソフトウェア ベンダーのアプリケーションに実装されています。 ただし広く使用されてはおらず、Office アプリケーションでは現在のところサポートされていません。
 
@@ -101,7 +94,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前**: *エクスポート (名前を付けて保存)*
 
-**API の定数または値**: IPC_GENERIC_EXPORTL"EXPORT"
+**API の定数または値**: IPC_GENERIC_EXPORT L"EXPORT"
 
 この権限は、アプリケーションでその他のエクスポート オプション ( *[OneNote に送る]*など) を実行することもユーザーに許可します。
 
@@ -119,7 +112,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前**: *転送*
 
-**API の定数または値:** IPC_EMAIL_FORWARDL"FORWARD"
+**API の定数または値:** IPC_EMAIL_FORWARD L"FORWARD"
 
 転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。
 
@@ -137,7 +130,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前**: *フルコントロール*
 
-**API の定数または値**: IPC_GENERIC_ALLL"OWNER"
+**API の定数または値**: IPC_GENERIC_ALL L"OWNER"
 
 保護を削除する機能が含まれます。
 
@@ -155,7 +148,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前:** *印刷*
 
-**API の定数または値**: IPC_GENERIC_PRINTL"PRINT"
+**API の定数または値**: IPC_GENERIC_PRINT L"PRINT
 
 ---
 
@@ -187,7 +180,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前:** *全員に返信*
 
-**API の定数または値:** IPC_EMAIL_REPLYALLL"REPLYALL"
+**API の定数または値:** IPC_EMAIL_REPLYALL L"REPLYALL"
 
 ---
 
@@ -203,7 +196,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前**: *表示*
 
-**API の定数または値**: IPC_GENERIC_READL"VIEW"
+**API の定数または値**: IPC_GENERIC_READ L"VIEW"
 
 ---
 
@@ -219,7 +212,7 @@ Office アプリケーションで、この権限はドキュメントを変更�
 
 **AD RMS テンプレートでの名前**: *Extract*
 
-**API の定数または値:** IPC_GENERIC_EXTRACTL"EXTRACT"
+**API の定数または値:** IPC_GENERIC_EXTRACT L"EXTRACT"
 
 一部のアプリケーションでは、ドキュメント全体を保護されていない形式で保存することも許可されます。
 
@@ -293,6 +286,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 用語 | Azure RMS
-description: Rights Management サービスに固有の用語定義のコレクション。
-keywords:
+title: "用語 | Azure RMS"
+description: "Rights Management サービスに固有の用語定義のコレクション。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 5779cc10503ad7afe997e031a467021b513fc510
+
 
 ---
 
@@ -29,7 +24,7 @@ ms.suite: ems
 Rights Management サービスに固有の用語定義のコレクション。
 
 **非推奨のアルゴリズム**  
-以前のコンテンツ保護スキーム、具体的には電子クックブック暗号モード (ECB) を参照するものを実装するモーダル設定。 この SDK では、この設定を使用して、[AD Rights Management サービス SDK](https://msdn.microsoft.com/en-us/library/windows/desktop/cc530379.aspx) で使用される MSDRM ライブラリと互換性のあるライセンスを生成できます。
+以前のコンテンツ保護スキーム、具体的には電子クックブック暗号モード (ECB) を参照するものを実装するモーダル設定。 この SDK では、この設定を使用して、[AD Rights Management サービス SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) で使用される MSDRM ライブラリと互換性のあるライセンスを生成できます。
 
 この設定を使用すると、顧客のコンテンツ保護の標準に準拠しない方法で、アプリケーションがコンテンツを保護する可能性があります。
 
@@ -49,6 +44,7 @@ PFile 形式は Microsoft Rights Management SDK 4.2 の設計方法で埋め込�
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

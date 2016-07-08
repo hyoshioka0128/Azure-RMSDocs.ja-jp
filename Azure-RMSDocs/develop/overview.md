@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 概要 | Azure RMS
-description: AD RMS および Azure RMS は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。
-keywords:
+title: "概要 | Azure RMS"
+description: "AD RMS および Azure RMS は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 417888c5445d702b1f700a8e717fbb746593efc6
+
 
 ---
 
@@ -50,7 +45,7 @@ MS RMS SDK 4.2 には、次のような便利な新機能があります。
 
 -   **再設計された API** – MS RMS SDK 4.2 API は可能な限りわかりやすくなるように再設計されているため、開発者は最低限の労力で API のシンプルかつ透過的な暗号化および暗号化解除を利用できます。
 -   **AD RMS および Azure RMS のハイブリッド サポート** – 1 つの RMS 対応アプリで、AD RMS サーバー (AD RMS のモバイル デバイス拡張機能を使用) と Azure RMS サービスの両方からのコンテンツを使用および保護できます。 MS RMS SDK 4.2 は、IT 管理者が構成できる関連エンドポイントを透過的に検出します。
--   **独自の認証ライブラリの使用** – ユーザーは、アプリ開発者として MS RMS SDK 4.2 で使用する認証ライブラリを選択できます。 MS RMS SDK 4.2 によって、認証ライブラリが [Azure AD 認証ライブラリ](https://msdn.microsoft.com/en-us/library/jj573266.aspx)かユーザーの組織のカスタム ライブラリかによって認証スタックが分離されるため、ユーザーはニーズに最も適したライブラリを選択することができます。
+-   **独自の認証ライブラリの使用** – ユーザーは、アプリ開発者として MS RMS SDK 4.2 で使用する認証ライブラリを選択できます。 MS RMS SDK 4.2 によって、認証ライブラリが [Azure AD 認証ライブラリ](https://msdn.microsoft.com/library/jj573266.aspx)かユーザーの組織のカスタム ライブラリかによって認証スタックが分離されるため、ユーザーはニーズに最も適したライブラリを選択することができます。
 -   **独自のユーザー インターフェイスの使用** - MS RMS SDK 4.2 では、カスタマイズしたユーザー インターフェイスを実装できるようになりました。 保護されたコンテンツを使用しているときのコンテンツの保護およびテンプレートの選択からアクセス許可の変更まで、MS RMS SDK 4.2 によってアプリの組み込み UI を強制されることはありません。 ただし、希望する場合は、 [GitHub アカウント](https://github.com/AzureAD/)からすべてのプラットフォームに対して Microsoft RMS の UI ライブラリを使用できます。
 -   **保護されたコンテンツへのオフライン アクセス** – MS RMS SDK 4.2 は、インターネット接続がない場合でも、保護されているコンテンツへのアクセスをユーザーに許可します。 MS RMS SDK 4.2 では保護されているコンテンツの使用ポリシーが安全にキャッシュされるため、ユーザーは RMS で保護されたデータにオフラインでアクセスできます。
 
@@ -70,6 +65,7 @@ MS RMS SDK 4.2 には、次のような便利な新機能があります。
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

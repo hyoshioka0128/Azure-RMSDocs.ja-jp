@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure RMS のクイック スタート チュートリアル - 手順 3. | Azure RMS
-description: 5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの 3 番目の手順。
-keywords:
+title: "Azure RMS のクイック スタート チュートリアル - 手順 3. | Azure RMS"
+description: "5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの 3 番目の手順。"
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
+
 
 ---
 
@@ -83,9 +77,11 @@ ms.suite: ems
 |**[保護ファイルの共有]** ダイアログ ボックスのオプションについて|[Rights Management 共有アプリケーションのダイアログ ボックス オプション](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"] [« 手順 2](tutorial-step2.md)
+>[!div class="step-by-step"]
+[« 手順 2](tutorial-step2.md)
 [手順 4 »](tutorial-step4.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
