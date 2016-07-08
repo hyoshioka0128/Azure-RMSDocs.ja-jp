@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md) | OutofSyncHandedBackSuccess | [Details](#eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586)
 
 ## Item Details
-##### <a name='eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586'></a> Source: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/c4c4d3fbf7496629440aa11c67b2e4cc6aa0cf41/Azure-RMSDocs/develop/release-notes.md)
-* Handoff File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/2d83daf12d219fa197e6487bf83d8627af520af2/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Handoff Datetime: 2016-07-08 07:18:35
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/b2c81f522e13b9b1ed383d4e3094772be46fbf54/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Handback Datetime: 2016-07-08 04:29:11
-* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/b2c81f522e13b9b1ed383d4e3094772be46fbf54/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 07:27:16
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
