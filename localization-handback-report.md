@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md) | InSyncHandedBackSuccess | [Details](#eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586)
 
 ## Item Details
-##### <a name='eccc0ba9c13e0c35c8d0c8877ce92f9b99e8383586'></a> Source: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/release-notes.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\release-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/c4c4d3fbf7496629440aa11c67b2e4cc6aa0cf41/Azure-RMSDocs/develop/release-notes.md)
-* Handoff File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/a1f9676754d559647787b0fda9ab244e7d03e82c/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Handoff Datetime: 2016-06-23 20:57:39
-* Handoff Reason: Include
-* Archive File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/d6d2f5a4b6c2fee23d21c92360a25303b9786617/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/archive/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Archive Datetime: 2016-07-01 23:51:17
-* Handback File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/b2c81f522e13b9b1ed383d4e3094772be46fbf54/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Handback Datetime: 2016-07-08 04:29:11
-* Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/759cc61aef82a78f5ba0846e1b3ec64c8b300d96/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.ja-jp.xlf)
-* Bilingual Datetime: 2016-06-16 10:20:11
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
