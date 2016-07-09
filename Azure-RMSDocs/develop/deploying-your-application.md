@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
-ms.openlocfilehash: 902721ae3e69afd144c552b8ee0a916958e80afc
+ms.sourcegitcommit: 982021a2e972023b04e6483348a7c27aa029e198
+ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
 
 
 ---
 
-# 運用前環境にデプロイする
+# 運用環境にデプロイする
 
 
 このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順を追って各操作を説明します。
@@ -135,6 +135,6 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

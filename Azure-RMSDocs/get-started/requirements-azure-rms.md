@@ -12,6 +12,7 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 50ebcd71336baeb68687e2d0c1ff1f0608925761
 ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
 
@@ -43,7 +44,8 @@ ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
 
 このシナリオに関する追加の Azure RMS 要件については、「[Azure Rights Management をサポートするオンプレミス サーバー](requirements-servers.md)」を参照してください。
 
-> [!IMPORTANT] 次のデプロイ シナリオはサポートされていません。
+> [!IMPORTANT]
+> 次のデプロイ シナリオはサポートされていません。
 > 
 > -   同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Rights Management への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照)。
 > 
@@ -54,6 +56,6 @@ ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

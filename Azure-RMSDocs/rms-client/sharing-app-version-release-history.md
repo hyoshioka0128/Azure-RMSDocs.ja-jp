@@ -12,6 +12,7 @@ ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
 ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
 
@@ -26,7 +27,8 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 2015 年 1 月 1 日より前のバージョンは表示されません。
 
-> [!NOTE] RMS 共有アプリケーションに関するフィードバックまたはご質問については、[AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question) まで電子メール メッセージをお送りください。
+> [!NOTE]
+> RMS 共有アプリケーションに関するフィードバックまたはご質問については、 [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)まで電子メール メッセージをお送りください。
 
 ## バージョン 1.0.2191.0
 **リリース日**: 2016 年 6 月 16 日
@@ -120,6 +122,6 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
