@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "a278657a3cc8b75a8ec3347aa6084506f94e1e6f",
+  "LastProcessedCommit": "00cda5edc244cfe4478f8036e9dd0ef538cd4678",
   "LastTranslatedCommit": "9682657e85247cdef00cb6b7e03475646f2b1845",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
@@ -82420,6 +82420,41 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\infoprotect-tutorial-step4.e05b067bb63bbb103b67887740ea0bb6b9044c40.ja-jp.xlf",
       "HandoffFileCommit": "7dff56dab018f354fa67c673dcde63bfc9cdae9a",
       "HandoffDateTime": "2016-07-12T17:21:52.4958699Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "224b7ee1570ba0aa71f587aee84336e4ae8f650d": {
+      "FileHash": "224b7ee1570ba0aa71f587aee84336e4ae8f650d",
+      "SourceFileCommit": "e96aad3494ce8a87c492df2e77135a350e9ffce5",
+      "SourceFilePath": "Azure-RMSDocs\\information-protection\\infoprotect-tutorial-step2.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "Azure-RMSDocs\\information-protection\\infoprotect-tutorial-step2.md"
+      ],
+      "HasMetadata": true,
+      "TranslationType": 1,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\infoprotect-tutorial-step2.f341a35dbadb0646385d9254b7f3d8f30823b35b.ja-jp.xlf",
+      "HandoffFileCommit": "b8a2bef21a954c0930ae13c5ba2db27191791bce",
+      "HandoffDateTime": "2016-07-12T21:22:07.6304311Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
