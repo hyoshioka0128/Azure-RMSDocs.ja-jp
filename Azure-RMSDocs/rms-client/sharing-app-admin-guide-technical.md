@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Microsoft Rights Management 共有アプリケーションの技術的概要 | Azure RMS
-description:
-keywords:
+title: "Microsoft Rights Management 共有アプリケーションの技術的概要 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 4f63cb7911661104113d19ecd84ef7c80a874408
+
 
 ---
 
@@ -66,7 +60,8 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 
 一般的に保護されているファイルの場合、元のファイル名拡張子は常に .pfile に変わります。
 
-> [!WARNING] ファイル名拡張子に基づいて検査とアクションを実行するファイアウォール、Web プロキシ、またはセキュリティ ソフトウェアがある場合は、新しいファイル名拡張子をサポートするようにそれらの再構成が必要になる場合があります。
+> [!WARNING]
+> ファイル名拡張子に基づいて検査とアクションを実行するファイアウォール、Web プロキシ、またはセキュリティ ソフトウェアがある場合は、新しいファイル名拡張子をサポートするようにそれらの再構成が必要になる場合があります。
 
 |元のファイル名拡張子|RMS で保護されたファイル名拡張子|
 |--------------------------------|-------------------------------------|
@@ -144,6 +139,7 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
