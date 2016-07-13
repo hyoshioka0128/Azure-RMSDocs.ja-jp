@@ -893,8 +893,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.ja-jp.xlf)
 * Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/operations-microsoft-managed-tenant-key.1128a69c06be9836b7e8e311b5dea4f8647d0797.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='44408fd8f9da73d8050e0938aa1cc9bc76688bed32'></a> Source: [Azure-RMSDocs\deploy-use\operations-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/operations-tenant-key.md)
@@ -1368,8 +1368,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.ja-jp.xlf)
 * Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='e75ec6c04afd171552697f79deb33ad2cfe2c4e165'></a> Source: [Azure-RMSDocs\develop\how-to-build-your-first-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/how-to-build-your-first-application.md)
@@ -1581,8 +1581,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [linux-c-code-examples.862ce623c8be3e7b5f679a61e0d570fc42c31a4a.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/linux-c-code-examples.862ce623c8be3e7b5f679a61e0d570fc42c31a4a.ja-jp.xlf)
 * Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [linux-c-code-examples.862ce623c8be3e7b5f679a61e0d570fc42c31a4a.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/linux-c-code-examples.862ce623c8be3e7b5f679a61e0d570fc42c31a4a.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [linux-c-code-examples.862ce623c8be3e7b5f679a61e0d570fc42c31a4a.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/linux-c-code-examples.862ce623c8be3e7b5f679a61e0d570fc42c31a4a.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='d6920b8ce09b39d98da9e9c197b17a1f13d21c8e80'></a> Source: [Azure-RMSDocs\develop\linux-setup.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/linux-setup.md)
@@ -1823,8 +1823,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.ja-jp.xlf)
 * Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/windows-phone-apps.9c8662d9cb263a7405d6cd1ce1113b424a277fc7.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='0b8e0fb6d872506ac3529bd137286f0e8fa562ee97'></a> Source: [Azure-RMSDocs\develop\winrt-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f7dd88d90357c99c69fe4fdde67c1544595e02f8/Azure-RMSDocs/develop/winrt-sdk.md)
@@ -2183,8 +2183,8 @@
 * Current Target File: [Azure-RMSDocs\get-started\tutorial-step2.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/a9404a8496d883d4b917b7d3226f6d725b608df7/Azure-RMSDocs/get-started/tutorial-step2.md)
 * Current Handback File: [tutorial-step2.327de0269970446f6490579a206d301f3b28893e.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/tutorial-step2.327de0269970446f6490579a206d301f3b28893e.ja-jp.xlf)
 * Current Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [tutorial-step2.327de0269970446f6490579a206d301f3b28893e.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/tutorial-step2.327de0269970446f6490579a206d301f3b28893e.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [tutorial-step2.327de0269970446f6490579a206d301f3b28893e.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/tutorial-step2.327de0269970446f6490579a206d301f3b28893e.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='efe389db839f3f70e9cdb9138f6749e2bd2e029f122'></a> Source: [Azure-RMSDocs\get-started\tutorial-step3.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/tutorial-step3.md)
@@ -5188,8 +5188,8 @@
 * Current Target File: [Azure-RMSDocs\plan-design\generate-tenant-key-internet.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/a9404a8496d883d4b917b7d3226f6d725b608df7/Azure-RMSDocs/plan-design/generate-tenant-key-internet.md)
 * Current Handback File: [generate-tenant-key-internet.eba48d544f3a36c7c3262cffcea3e525550d42ea.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/generate-tenant-key-internet.eba48d544f3a36c7c3262cffcea3e525550d42ea.ja-jp.xlf)
 * Current Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [generate-tenant-key-internet.eba48d544f3a36c7c3262cffcea3e525550d42ea.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/generate-tenant-key-internet.eba48d544f3a36c7c3262cffcea3e525550d42ea.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [generate-tenant-key-internet.eba48d544f3a36c7c3262cffcea3e525550d42ea.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/generate-tenant-key-internet.eba48d544f3a36c7c3262cffcea3e525550d42ea.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda355'></a> Source: [Azure-RMSDocs\plan-design\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ab97a58053c34edbda0d3fb089840b20f9f33ffe/Azure-RMSDocs/plan-design/md.style)
@@ -5301,8 +5301,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [migrate-softwarekey-to-hsmkey.271a5c6cd15a275cd93409cd748219c3e330b1b9.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/migrate-softwarekey-to-hsmkey.271a5c6cd15a275cd93409cd748219c3e330b1b9.ja-jp.xlf)
 * Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [migrate-softwarekey-to-hsmkey.271a5c6cd15a275cd93409cd748219c3e330b1b9.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/migrate-softwarekey-to-hsmkey.271a5c6cd15a275cd93409cd748219c3e330b1b9.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [migrate-softwarekey-to-hsmkey.271a5c6cd15a275cd93409cd748219c3e330b1b9.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/migrate-softwarekey-to-hsmkey.271a5c6cd15a275cd93409cd748219c3e330b1b9.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='a739da3fbebc8dfa4c6715fd64ccd72f87d2a686363'></a> Source: [Azure-RMSDocs\plan-design\migrate-softwarekey-to-softwarekey.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/bb152f428c8e0b9a065035aaad2de6353265a562/Azure-RMSDocs/plan-design/migrate-softwarekey-to-softwarekey.md)
@@ -5674,8 +5674,8 @@
 * Current Target File: [Azure-RMSDocs\rms-client\sharing-app-view-use-files.md](https://github.com/Microsoft/Azure-RMSDocs-pr.ja-jp/blob/a9404a8496d883d4b917b7d3226f6d725b608df7/Azure-RMSDocs/rms-client/sharing-app-view-use-files.md)
 * Current Handback File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.ja-jp.xlf)
 * Current Handback Datetime: 2016-07-13 21:26:41
-* Bilingual File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/07634bbf02463f515a00afb703a58871df7f2f8e/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/sharing-app-view-use-files.14145eb3fbee2618bd134969eefdf42303c26dcc.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-13 22:02:00
 * [Back to Top](#report-top)
 
 ##### <a name='39eebe7e99fce0eae612f87726764c6810351b77388'></a> Source: [Azure-RMSDocs\rms-client\sharing-app-windows.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/rms-client/sharing-app-windows.md)
