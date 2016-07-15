@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "947b99dd137e4b6c88a5c5420486fb10a90941a9",
+  "LastProcessedCommit": "a0f71b3579480945087ffdea1b323da129da1de5",
   "LastTranslatedCommit": "982007f26f1658ff22ef4cf9f750ee36c4c63c6b",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
@@ -83342,6 +83342,41 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\faq.b147013c6b8c2df0f18408c2316c67980bca10e5.ja-jp.xlf",
       "HandoffFileCommit": "8dc202d8f5ac3539b25a3b8815642c8956845b00",
       "HandoffDateTime": "2016-07-14T23:26:19.169141Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "bbf6ff6e3468068a916a34e7845adca55d227049": {
+      "FileHash": "bbf6ff6e3468068a916a34e7845adca55d227049",
+      "SourceFileCommit": "dead74ceb6ad0a4b51355ee776d987afd9376a68",
+      "SourceFilePath": "Azure-RMSDocs\\information-protection\\faq.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "Azure-RMSDocs\\information-protection\\faq.md"
+      ],
+      "HasMetadata": true,
+      "TranslationType": 1,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\faq.b147013c6b8c2df0f18408c2316c67980bca10e5.ja-jp.xlf",
+      "HandoffFileCommit": "ac30e4b5bd026d9c9a98b55fa870b5c6f95d4f8f",
+      "HandoffDateTime": "2016-07-15T01:29:44.4720468Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,

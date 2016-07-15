@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ca6495e767afac32ad883d2c355bdcab97049c9b/Azure-RMSDocs/information-protection/faq.md) | HandedOffSuccess | [Details](#c7a7b6b3ec8a139a9ac52cb8d35f4c2c0ef4c352154)
+ [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/dead74ceb6ad0a4b51355ee776d987afd9376a68/Azure-RMSDocs/information-protection/faq.md) | HandedOffSuccess | [Details](#bbf6ff6e3468068a916a34e7845adca55d227049154)
 
 ## Item Details
-##### <a name='c7a7b6b3ec8a139a9ac52cb8d35f4c2c0ef4c352154'></a> Source: [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ca6495e767afac32ad883d2c355bdcab97049c9b/Azure-RMSDocs/information-protection/faq.md)
+##### <a name='bbf6ff6e3468068a916a34e7845adca55d227049154'></a> Source: [Azure-RMSDocs\information-protection\faq.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/dead74ceb6ad0a4b51355ee776d987afd9376a68/Azure-RMSDocs/information-protection/faq.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [faq.b147013c6b8c2df0f18408c2316c67980bca10e5.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/8dc202d8f5ac3539b25a3b8815642c8956845b00/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/faq.b147013c6b8c2df0f18408c2316c67980bca10e5.ja-jp.xlf)
-* Handoff Datetime: 2016-07-14 23:26:19
+* Handoff File: [faq.b147013c6b8c2df0f18408c2316c67980bca10e5.ja-jp.xlf](https://github.com/Microsoft/EM.handoff/blob/ac30e4b5bd026d9c9a98b55fa870b5c6f95d4f8f/ol-handoff/Microsoft/Azure-RMSDocs-pr.ja-jp/master/faq.b147013c6b8c2df0f18408c2316c67980bca10e5.ja-jp.xlf)
+* Handoff Datetime: 2016-07-15 01:29:44
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
