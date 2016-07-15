@@ -70182,8 +70182,8 @@
       "ArchiveFileDateTime": "2016-07-01T23:51:17.9499893Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf",
-      "BilingualFileCommit": "7fd365391f9b57e149319bb44dfb5a367a848538",
-      "BilingualDateTime": "2016-06-16T10:20:11.1172546Z",
+      "BilingualFileCommit": "d8bdb47346a082f34c582b8a27ebdd077da3f269",
+      "BilingualDateTime": "2016-07-15T11:03:52.0725867Z",
       "BilingualException": null
     },
     "df006a27c97884c47c9bb5fb04bfa181a13b7443": {
@@ -75967,8 +75967,8 @@
       "ArchiveFileDateTime": "2016-07-01T23:51:17.9499893Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf",
-      "BilingualFileCommit": "9f1c451d42c659881a39428dd12736ffe38ba26d",
-      "BilingualDateTime": "2016-07-02T08:04:06.8782033Z",
+      "BilingualFileCommit": "d8bdb47346a082f34c582b8a27ebdd077da3f269",
+      "BilingualDateTime": "2016-07-15T11:03:52.0725867Z",
       "BilingualException": null
     },
     "54fc5037eaaa5c9ae2557aa6e4c67aa99a4143e6": {
@@ -76002,8 +76002,8 @@
       "ArchiveFileDateTime": "2016-07-01T23:51:17.9499893Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf",
-      "BilingualFileCommit": "c538a260409b8e67541b331c3bccdbdbd52d673d",
-      "BilingualDateTime": "2016-07-03T01:15:26.5418905Z",
+      "BilingualFileCommit": "d8bdb47346a082f34c582b8a27ebdd077da3f269",
+      "BilingualDateTime": "2016-07-15T11:03:52.0725867Z",
       "BilingualException": null
     },
     "1a255629c8ced8cbc5f5e2d94b00e9cb1be3223f": {
@@ -80806,8 +80806,8 @@
       "ArchiveFileDateTime": "2016-07-01T23:51:17.9499893Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf",
-      "BilingualFileCommit": "7d9bdb6428767d04b6bae343af954c1e8b1f489c",
-      "BilingualDateTime": "2016-07-08T14:23:47.5497536Z",
+      "BilingualFileCommit": "d8bdb47346a082f34c582b8a27ebdd077da3f269",
+      "BilingualDateTime": "2016-07-15T11:03:52.0725867Z",
       "BilingualException": null
     },
     "c97899681e8767a7b4daebe16d1c2091ee65f3a8": {
@@ -81055,8 +81055,8 @@
       "ArchiveFileDateTime": "2016-07-01T23:51:17.9499893Z",
       "ArchiveException": null,
       "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.ja-jp\\master\\migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf",
-      "BilingualFileCommit": "7d9bdb6428767d04b6bae343af954c1e8b1f489c",
-      "BilingualDateTime": "2016-07-08T14:23:47.5497536Z",
+      "BilingualFileCommit": "d8bdb47346a082f34c582b8a27ebdd077da3f269",
+      "BilingualDateTime": "2016-07-15T11:03:52.0725867Z",
       "BilingualException": null
     },
     "b33839ff5ce0d30082f58ff96eb81215b716e46d": {

@@ -1390,8 +1390,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf)
 * Handback Datetime: 2016-07-15 10:44:29
-* Bilingual File: [how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/9f1c451d42c659881a39428dd12736ffe38ba26d/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-02 08:04:06
+* Bilingual File: [how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.ee0d6e4793d84f56530614f919af0cf682e59684.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-15 11:03:52
 * [Back to Top](#report-top)
 
 ##### <a name='54fc5037eaaa5c9ae2557aa6e4c67aa99a4143e667'></a> Source: [Azure-RMSDocs\develop\how-to-enable-email-notification.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b2234f2209962d3dfda10958e740e04a5e5a4f13/Azure-RMSDocs/develop/how-to-enable-email-notification.md)
@@ -1404,8 +1404,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf)
 * Handback Datetime: 2016-07-15 10:44:29
-* Bilingual File: [how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/c538a260409b8e67541b331c3bccdbdbd52d673d/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-03 01:15:26
+* Bilingual File: [how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-enable-email-notification.c2f4d3a38ff7c52da92beba7acda36c3bbc88d24.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-15 11:03:52
 * [Back to Top](#report-top)
 
 ##### <a name='b97743d9a5c90cb46b39b4d8a462aa1acd64dfe168'></a> Source: [Azure-RMSDocs\develop\how-to-install-and-configure-an-rms-server.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/d56c6636cb7a33f104bc3901355c3601266ad30c/Azure-RMSDocs/develop/how-to-install-and-configure-an-rms-server.md)
@@ -1418,8 +1418,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf)
 * Handback Datetime: 2016-07-15 10:44:29
-* Bilingual File: [how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/how-to-install-and-configure-an-rms-server.69e93f9b8b64e371d90b89ca814bf2d030f22a0e.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-15 11:03:52
 * [Back to Top](#report-top)
 
 ##### <a name='cf86b07ba057d8999a156ae397ff7200b12a3f5e69'></a> Source: [Azure-RMSDocs\develop\how-to-set-up-your-test-environment.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b01f009ec3dffbb3fe671da8a19929e53c67fb79/Azure-RMSDocs/develop/how-to-set-up-your-test-environment.md)
@@ -5247,8 +5247,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf)
 * Handback Datetime: 2016-07-15 10:44:29
-* Bilingual File: [migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7d9bdb6428767d04b6bae343af954c1e8b1f489c/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf)
-* Bilingual Datetime: 2016-07-08 14:23:47
+* Bilingual File: [migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/migrate-from-ad-rms-phase4.b09b73c5db23510b4121b90f156a091d4d8d1564.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-15 11:03:52
 * [Back to Top](#report-top)
 
 ##### <a name='8ef46d68594a6e559e050f846a844f566ff8770d360'></a> Source: [Azure-RMSDocs\plan-design\migrate-from-ad-rms-to-azure-rms.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/67129d6cdac124947fc07aa4d42523686227752e/Azure-RMSDocs/plan-design/migrate-from-ad-rms-to-azure-rms.md)
@@ -5887,8 +5887,8 @@
 * Archive Datetime: 2016-07-01 23:51:17
 * Handback File: [rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf)
 * Handback Datetime: 2016-07-15 10:44:29
-* Bilingual File: [rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/7fd365391f9b57e149319bb44dfb5a367a848538/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf)
-* Bilingual Datetime: 2016-06-16 10:20:11
+* Bilingual File: [rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf](https://github.com/Microsoft/EM.handback/blob/d8bdb47346a082f34c582b8a27ebdd077da3f269/ol-handback/Microsoft/Azure-RMSDocs-pr.ja-jp/master/rms-for-individuals-identify-sign-up.0196c18d512eec730403b7c481c72e33be5aa85f.ja-jp.xlf)
+* Bilingual Datetime: 2016-07-15 11:03:52
 * [Back to Top](#report-top)
 
 ##### <a name='df006a27c97884c47c9bb5fb04bfa181a13b7443402'></a> Source: [Azure-RMSDocs\understand-explore\rms-for-individuals-take-control.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/understand-explore/rms-for-individuals-take-control.md)
