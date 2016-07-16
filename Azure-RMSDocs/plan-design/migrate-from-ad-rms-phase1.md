@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: AD RMS から Azure Rights Management への移行 - フェーズ 1 | Azure RMS
-description:
-keywords:
+title: "AD RMS から Azure Rights Management への移行 - フェーズ 1 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: defe008a9b78026ccac584bb06762228456a2916
+
 
 ---
 
@@ -47,7 +41,8 @@ Microsoft ダウンロード センターに移動し、 [Azure Rights Managemen
 ### 構成データを AD RMS からエクスポートする
 すべての AD RMS クラスター上の、組織のコンテンツを保護していたすべての信頼された発行ドメインに対して、次の手順を実行します。 ライセンス専用クラスターでこれを実行する必要はありません。
 
-> [!NOTE] Windows Server 2003 Rights Management を使用している場合は、これらの手順ではなく、「[Windows RMS から異なるインフラストラクチャの AD RMS への移行](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx)」の記事の「[SLC、TUD、TPD、および RMS の秘密キーのエクスポート](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx)」の手順を実行してください。
+> [!NOTE]
+> Windows Server 2003 Rights Management を使用している場合は、これらの手順ではなく、「[Windows RMS から異なるインフラストラクチャの AD RMS への移行](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx)」の記事の「[SLC、TUD、TPD、および RMS の秘密キーのエクスポート](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx)」の手順を実行してください。
 
 #### 構成データ (信頼された発行ドメインの情報) をエクスポートするには
 
@@ -80,7 +75,8 @@ Microsoft ダウンロード センターに移動し、 [Azure Rights Managemen
 
 -   外部暗号プロバイダーを使用して保護されたパスワード。
 
-> [!NOTE] AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「[AD RMS でのハードウェア セキュリティ モジュールの使用](http://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
+> [!NOTE]
+> AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「 [AD RMS でのハードウェア セキュリティ モジュールの使用](http://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
 
 Azure RMS テナント キー トポロジには、テナント キーをマイクロソフトが管理するか (**マイクロソフト管理**) またはユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 顧客管理の Azure RMS テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、記事「[Azure Rights Management テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
@@ -98,7 +94,8 @@ Azure RMS テナント キー トポロジには、テナント キーをマイ�
 |外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、暗号プロバイダーのサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
 これらの手順を開始する前に、信頼された発行ドメインをエクスポートしたときに作成した .xml ファイルにアクセスできることを確認します。 たとえば、これらは AD RMS サーバーからインターネットに接続されたワークステーションに移動する USB ドライブに保存されている可能性があります。
 
-> [!NOTE] ただし、これらのファイルを保存する場合、データにはプライベート キーが含まれているため、安全な方法でファイルを保護してください。
+> [!NOTE]
+> ただし、このデータは秘密キーを含むので、これらのファイルを保存し、セキュリティのベスト プラクティスを使用して保護します。
 
 
 手順 2 を完了するには、移行パスに応じた手順を選択します。 
@@ -120,27 +117,51 @@ Azure RMS テナント キー トポロジには、テナント キーをマイ�
 
 Azure RMS テナントが既にアクティブ化されていて、前述のようなコンピューターを識別できる場合は、手順 5 の説明に従って、それらのコンピューターで CleanUpRMS_RUN_Elevated.cmd スクリプトを実行してください。 このスクリプトを実行すると、それらのコンピューターで強制的にユーザーの環境が再初期化されるため、更新されたテナント キーとインポートされたテンプレートがダウンロードされます。
 
+さらに、移行後に使用するカスタム テンプレートを作成した場合は、それをエクスポートしてインポートする必要があります。 これについては次の手順で説明します。 
+
 ## 手順 4. インポートされたテンプレートを構成する
 インポートしたテンプレートは **アーカイブ済み**という既定の状態なので、ユーザーが Azure RMS でこれらのテンプレートを使用できるようにする場合は、この状態を **公開済み** に変更する必要があります。
 
-また、AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure RMS にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure RMS 用の同等グループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<テナント名>.onmicrosoft.com** です。 たとえば Contoso では、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
+AD RMS からインポートしたテンプレートの外観と動作は、Azure クラシック ポータルで作成するカスタム テンプレートと同じです。 インポートしたテンプレートを公開に変更し、ユーザーがアプリケーションからそれらを表示して選択できるようにする方法は、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
-お使いの AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、サンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS (Windows PowerShell を使用した AD RMS の管理)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」を参照してください。
+新しくインポートしたテンプレートを公開するだけでなく、移行を続ける前に行う必要があるテンプレートの重要な変更が 2 つあります。 移行プロセス中のユーザーに対するエクスペリエンスを一貫したものにするため、インポートしたテンプレートに変更を加えないでください。また、Azure RMS に付属する 2 つの既定のテンプレートを公開したり、この時点で新しいテンプレートを作成したりしないでください。 代わりに、移行プロセスが完了するまで待ち、AD RMS サーバーを使用停止にします。
+
+この手順で必要な場合があるテンプレートの変更:
+
+- 移行前に Azure RMS でカスタム テンプレートを作成した場合は、手動でエクスポートしてインポートする必要があります。
+
+- AD RMS のテンプレートが **ANYONE** グループを使用していた場合は、同等のグループと権限を手動で追加する必要があります。
+
+## 移行前にカスタム テンプレートを作成した場合の手順
+
+Azure RMS をアクティブ化する前でも後でも、移行前にカスタム テンプレートを作成した場合は、**公開済み**に設定してあっても、移行後にユーザーはテンプレートを使用できません。 ユーザーが使用できるようにするには、最初に次のようにする必要があります。 
+
+1. [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx) を実行して、そのようなテンプレートを識別し、テンプレート ID を記録しておきます。 
+
+2. Azure RMS PowerShell コマンドレット [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx) を使用して、テンプレートをエクスポートします。
+
+3. Azure RMS PowerShell コマンドレット [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx) を使用して、テンプレートをインポートします。
+
+その後は、移行後に作成した他のテンプレートと同様に、これらのテンプレートを発行したりアーカイブしたりできます。
+
+
+## AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
+
+AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure RMS にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure RMS 用の同等グループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<テナント名>.onmicrosoft.com** です。 たとえば Contoso では、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
+
+AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS (Windows PowerShell を使用した AD RMS の管理)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」を参照してください。
 
 Azure クラシック ポータルの既定の権限ポリシー テンプレートの 1 つをコピーした場合、組織の自動作成されたグループが表示され、その後 **[権限]** ページで **[ユーザー名]** を特定できます。 ただし、手動で作成またはインポートしたテンプレートに Azure クラシック ポータルを使用してこのグループを追加することはできないため、代わりに次の Azure RMS PowerShell オプションのいずれかを使用する必要があります。
 
--   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) PowerShell コマンドレットを使用して、"AllStaff" グループおよび権限を権限定義オブジェクトとして定義し、ANYONE グループに加えて元のテンプレートで既に権限を付与されていた他の各グループまたはユーザーに対してこのコマンドを再度実行します。 その後、[Set-AadrmTemplateProperty](https://msdn.microsoft.com/en-us/library/azure/dn727076.aspx) コマンドレットを使用して、これらの権限定義オブジェクトをテンプレートに追加します。
+-   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) PowerShell コマンドレットを使用して、"AllStaff" グループおよび権限を権限定義オブジェクトとして定義し、ANYONE グループに加えて元のテンプレートで既に権限を付与されていた他の各グループまたはユーザーに対してこのコマンドを再度実行します。 その後、[Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) コマンドレットを使用して、これらの権限定義オブジェクトをテンプレートに追加します。
 
 -   [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) コマンドレットを使用して、テンプレートを .XML ファイルにエクスポートします。このファイルを編集して、"AllStaff" グループおよび権限を既存のグループおよび権限に追加してから、[Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) コマンドレットを使用してこの変更を Azure RMS にインポートします。
 
-> [!NOTE] この同等グループ "AllStaff" は、AD RMS の ANYONE グループとまったく同じではありません。"AllStaff" グループには、Azure テナントのすべてのユーザーが含まれます。一方、ANYONE グループには、認証されたすべてのユーザーが含まれ、組織外のユーザーが含まれる場合があります。
+> [!NOTE]
+> この同等グループ "AllStaff" は、AD RMS の ANYONE グループとまったく同じではありません。"AllStaff" グループには、Azure テナントのすべてのユーザーが含まれます。一方、ANYONE グループには、認証されたすべてのユーザーが含まれ、組織外のユーザーが含まれる場合があります。
 > 
 > こうしうた 2 つのグループの違いにより、"AllStaff" グループだけでなく外部ユーザーも追加しなければならない場合があります。 グループの外部の電子メール アドレスは、現在サポートされていません。
 
-AD RMS からインポートしたテンプレートの外観と動作は、Azure クラシック ポータルで作成するカスタム テンプレートと同じです。 インポートしたテンプレートを公開に変更し、ユーザーがアプリケーションからそれらを表示して選択したり、テンプレートにその他の変更を加えたりできるようにする方法は、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
-
-> [!TIP]
-> 移行プロセス中のユーザーに対するエクスペリエンスを一貫したものにするため、これらの 2 つの変更以外に、インポートしたテンプレートを変更しないでください。また、Azure RMS に付属する既定のテンプレートを 2 つ公開したり、この時点で新しいテンプレートを作成したりしないでください。 代わりに、移行プロセスが完了するまで待ち、AD RMS サーバーを使用停止にします。
 
 ### ANYONE グループを含む AD RMS テンプレートを識別するためのサンプル Windows PowerShell スクリプト
 このセクションに含まれるサンプル スクリプトを使用すると、前のセクションで説明したように、ANYONE グループが定義されている AD RMS テンプレートを識別できます。
@@ -185,6 +206,7 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO2-->
 
 

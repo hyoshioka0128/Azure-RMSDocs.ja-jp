@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+
 
 ---
 
@@ -37,7 +31,7 @@ RMS 共有アプリケーションをインストールするのにローカル�
 
 2.  [ **コンピューター** ] セクションで、 **Windows 用 RMS アプリケーション** のアイコンをクリックして、Microsoft Rights Management 共有アプリケーションをインストールする **Setup.exe** ファイルを保存します。
 
-3.  ダウンロードされた Setup.exe ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、[**はい**] をクリックします。.
+3.  ダウンロードされた Setup.exe ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。
 
 4.  [ **Microsoft RMS のセットアップ** ] ページで、[ **次へ**] をクリックし、インストールが完了するまで待機します。
 
@@ -75,6 +69,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

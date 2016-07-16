@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure Active Directory Rights Management の概要 | Azure RMS
-description:
-keywords:
+title: "Azure Active Directory Rights Management の概要 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e2de70fcbe0b284368b1e52c34f42d1cf4554edd
+ms.openlocfilehash: 6fe5759a790a728da7a16453e5b3ab5d523bb9fd
+
 
 ---
 
@@ -43,7 +37,7 @@ Azure Rights Management (Azure RMS) は、さまざまな課題が伴う現代�
 次の図は、Azure RMS がオンプレミスのサーバーやサービスに加えて Office 365 の Rights Management ソリューションとしても機能するしくみを示します。 この図に示しているように、エンド ユーザーの間でよく使用される Windows、Mac OS、iOS、Android のデバイスや Windows Phone もサポートします。
 
 > [!NOTE]
-Azure RMS は、Office 365、Enterprise Mobility Suite、Azure RMS Premium など、さまざまなクラウド サブスクリプションと共に使用できます。 詳細については、[Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)に関するページを参照してください。.
+Azure RMS は、Office 365、Enterprise Mobility Suite、Azure RMS Premium など、さまざまなクラウド サブスクリプションと共に使用できます。 詳細については、[Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)に関するページを参照してください。
 
 ![Azure RMS のしくみ](../media/AzRMS_elements.png)
 
@@ -59,14 +53,15 @@ Azure RMS の詳細については、次を参照してください。
 
 
 
-すぐに自分で Azure RMS を試してみる場合は、「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」をご利用ください。.
+すぐに自分で Azure RMS を試してみる場合は、「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」をご利用ください。
 
 ただし、Azure RMS を組織にデプロイする準備ができたら、「[Azure Rights Management のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
 
 > [!TIP]
-> 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。.
+> 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

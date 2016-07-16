@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: テナント キーを生成して転送する - 持参 | Azure RMS
-description:
-keywords:
+title: "テナント キーを生成して転送する - 持参 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 1acc66e9a73b100268ed722391a0a87651c64abc
+
 
 ---
 
@@ -42,7 +36,7 @@ ms.suite: ems
 -   [手順 3:新しいキーの作成](#step-3-create-a-new-key)
 
 ### 手順 1.Thales HSM を設定したワークステーションを準備する
-Windows コンピューターに nCipher (Thales) サポート ソフトウェアをインストールします。 そのコンピューターに Thales HSM をアタッチします。 Thales ツールがパス上にあるようにします。 詳細については、Thales HSM に付属のユーザー ガイドを参照するか、または Thales 社の Web サイトの Azure RMS に関するページ ([http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)) にアクセスしてください。.
+Windows コンピューターに nCipher (Thales) サポート ソフトウェアをインストールします。 そのコンピューターに Thales HSM をアタッチします。 Thales ツールがパス上にあるようにします。 詳細については、Thales HSM に付属のユーザー ガイドを参照するか、または Thales 社の Web サイトの Azure RMS に関するページ ( [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)) にアクセスしてください。
 
 ### 手順 2:セキュリティ ワールドの作成
 コマンド プロンプトを起動し、Thales 社が提供する new-world プログラムを実行します。
@@ -156,6 +150,7 @@ cngimport --import –M --key=contosokey --appname=simple contosokey
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 個人用 RMS 向けに作成されたアカウントを管理者が制御する方法 | Azure RMS
-description:
-keywords:
+title: "個人用 RMS 向けに作成されたアカウントを管理者が制御する方法 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
+
 
 ---
 
@@ -49,9 +43,10 @@ Azure ディレクトリ内のユーザー アカウントを制御する、ま�
 
 ## 次のステップ
 
-管理者ではないユーザーが個人用 RMS 向けに自分のアカウントを Azure Active Directory に作成できる場合、ユーザーがこの操作を行っているかどうかを確認するには、どうすればよいでしょうか。  「[ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法](rms-for-individuals-identify-sign-up.md)」を参照してください。.
+管理者ではないユーザーが個人用 RMS 向けに自分のアカウントを Azure Active Directory に作成できる場合、ユーザーがこの操作を行っているかどうかを確認するには、どうすればよいでしょうか。  「[ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法](rms-for-individuals-identify-sign-up.md)」を参照してください。
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

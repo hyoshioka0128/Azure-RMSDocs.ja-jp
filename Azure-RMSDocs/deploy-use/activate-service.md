@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure Rights Management をアクティブにする | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management をアクティブにする | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/16/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bf5e3561ef24d8f44e791ff7bdc8450a73f79705
+ms.openlocfilehash: d66e4e6bca253bc2bf9d12ba22ed0202cba2edaf
+
 
 ---
 
@@ -58,7 +52,8 @@ Azure RMS をアクティブ化した後は、組織内のすべてのユーザ�
 ## 段階的デプロイのオンボーディング コントロールの構成
 すべてのユーザーが Azure RMS を使用してすぐにファイルを保護できるようにしたくない場合は、 [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Windows PowerShell コマンドを使用してユーザー オンボーディング コントロールを構成できます このコマンドを実行するのは、Azure RMS をアクティブ化する前と後のどちらでもかまいません。
 
-> [!IMPORTANT] このコマンドを使用するには、バージョン **2.1.0.0** 以降の [Azure RMS Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)が必要です。
+> [!IMPORTANT]
+> このコマンドを使用するには、バージョン **2.1.0.0** 以降の [Azure RMS Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)が必要です。
 >
 > インストールされているバージョンを確認するには、**(Get-Module aadrm –ListAvailable).Version** を実行します。
 
@@ -86,6 +81,7 @@ Exchange Online や SharePoint Online などの Office サービスの Informati
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

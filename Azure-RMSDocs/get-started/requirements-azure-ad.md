@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure RMS の要件&#58; Azure AD ディレクトリ | Azure RMS
-description:
-keywords:
+title: "Azure RMS の要件&#58; Azure AD ディレクトリ | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 75b2414cc360704deb6107d6c0038f5b0bf7fa70
+
 
 ---
 
@@ -42,7 +36,8 @@ Azure Rights Management (Azure RMS) を使用するには、Azure AD ディレ�
 
 Azure AD ディレクトリをオンプレミス AD フォレストと統合する場合は、「[Integrating your on-premises identities with Azure Active Directory (オンプレミス ID と Azure Active Directory の統合)](/active-directory/active-directory-aadconnect)」を参照してください。
 
-> [!NOTE] AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
+> [!NOTE]
+> AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
 > 
 > -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
@@ -80,6 +75,7 @@ Azure RMS で多要素認証 (MFA) を使用するには、次のうち 1 つ以
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

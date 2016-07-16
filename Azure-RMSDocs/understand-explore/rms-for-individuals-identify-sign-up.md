@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法 | Azure RMS
-description:
-keywords:
+title: "ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: e577366be26f7296079751e72fb6531b9e28c504
+
 
 ---
 
@@ -38,10 +32,11 @@ ms.suite: ems
 
 -   System Center Configuration Manager などのシステム管理ソリューションを使用して、インストール済みのソフトウェアと使用中のソフトウェアのインベントリを作成します。 Rights Management 共有アプリケーションの実行には、 **ipviewer.exe** プログラムが使用されています。また、 [アプリケーションを無料でダウンロードしてインストール](http://go.microsoft.com/fwlink/?LinkId=303970) し、このアプリケーションに関するその他の特性を確認して、ソフトウェア インベントリで利用することができます。
 
--   Rights Management 共有アプリケーションによって作成されるファイル名拡張子を監視します。 .pfile と .ppdf ファイル名拡張子は最もわかりやすい例ですが、他のファイルでは、Rights Management がネイティブで保護しているときに元のファイル名拡張子が変更される場合があります。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](http://technet.microsoft.com/library/dn339003.aspx)」の「[サポートされているファイルの種類とファイル名拡張子](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。.
+-   Rights Management 共有アプリケーションによって作成されるファイル名拡張子を監視します。 .pfile と .ppdf ファイル名拡張子は最もわかりやすい例ですが、他のファイルでは、Rights Management がネイティブで保護しているときに元のファイル名拡張子が変更される場合があります。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](http://technet.microsoft.com/library/dn339003.aspx)」の「[サポートされているファイルの種類とファイル名拡張子](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

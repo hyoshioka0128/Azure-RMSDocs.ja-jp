@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure Rights Management の迅速なデプロイ ガイド | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management の迅速なデプロイ ガイド | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 01c2436218e0d7fd80a31cdc037d9dc8933e42f2
+
 
 ---
 
@@ -39,7 +33,8 @@ ms.suite: ems
 
 これらのソリューションをロールアウトする前に、会社のデータを保護するための変更を行うこと、そのためにエンド ユーザーからの変更が必要な場合があることをエンド ユーザーに広く告知することができます。 次の表の後に、通信の例を示します。
 
-> [!NOTE] このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
+> [!NOTE]
+> このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
 
 ## Azure RMS のシナリオ
 Azure RMS を短時間でデプロイし、ビジネス上の特定の問題に対処するには、ビジネス上の目標に最も一致するシナリオを選択し、必要に応じてカスタマイズします。
@@ -151,6 +146,7 @@ IT部門は Microsoft Azure Rights Management (Azure RMS) をエンタープラ�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,28 +1,21 @@
 ---
-# required metadata
-
-title: AD RMS から Azure Rights Management への移行 - フェーズ 4 | Azure RMS
-description:
-keywords:
+title: "AD RMS から Azure Rights Management への移行 - フェーズ 4 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
+ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+
 
 ---
 
@@ -49,7 +42,7 @@ AD RMS サーバーの使用を停止した後、Azure クラシック ポータ
 
 Azure RMS テナント キーを更新するには:
 
--   Azure RMS テナント キーが Microsoft によって管理されている場合: これを行うには、[Microsoft サポート](../get-started/information-support#to-contact-microsoft-support)に連絡し、**Azure RMS テナント キーを更新する要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
+-   Azure RMS テナント キーが Microsoft によって管理されている場合: これを行うには、[Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**Azure RMS テナント キーを更新する要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
 
 -   Azure RMS テナント キーが顧客管理 (BYOK) である場合: BYOK 手順を繰り返して、インターネット経由または手動で新しいキーを生成および作成します。
 
@@ -61,6 +54,7 @@ Azure RMS テナント キーの管理の詳細については、「[Azure Right
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

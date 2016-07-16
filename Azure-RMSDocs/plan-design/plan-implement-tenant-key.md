@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Azure Rights Management テナント キーを計画して実装する | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management テナント キーを計画して実装する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f01d57759ab80b4946c07a627269550c80114131
+ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
+
 
 ---
 
@@ -81,9 +75,9 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 
 > [!IMPORTANT]
-> [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の使用を開始していて (サービスがアクティブになっている)、Office 2010 を実行するユーザーが存在する場合は、以下の手順を実行する前に、[Microsoft サポートにお問い合わせください](../get-started/information-support#to-contact-microsoft-support)。 シナリオと要件により、制限事項があったり追加の手順を行うことで BYOK を使用することができます。
+> [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の使用を開始していて (サービスがアクティブになっている)、Office 2010 を実行するユーザーが存在する場合は、以下の手順を実行する前に、[Microsoft サポートにお問い合わせください](../get-started/information-support.md#to-contact-microsoft-support)。 シナリオと要件により、制限事項があったり追加の手順を行うことで BYOK を使用することができます。
 > 
-> キーの処理に関して組織固有のポリシーがある場合も [Microsoft サポートにお問い合わせください](../get-started/information-support#to-contact-microsoft-support)。
+> キーの処理に関して組織固有のポリシーがある場合も [Microsoft サポートにお問い合わせください](../get-started/information-support.md#to-contact-microsoft-support)。
 
 ### BYOK の前提条件
 次の表に BYOK (Bring Your Own Key) の前提条件を示します。
@@ -114,7 +108,7 @@ Microsoft でテナント キーを管理することになった場合、キー
     > [!NOTE]
     > テナント キーは、暗号化されていてアクセス制御レベル権限で保護されているので、信頼されないコンピューターとネットワークを経由して安全に移動できます。このため、テナント キーはお客様の HSM と Microsoft の Azure RMS 用 HSM 内でのみ使用可能になります。 ツールセットで提供されるスクリプトを使用してセキュリティ対策を確認できます。また、Thales 側の動作の詳細については、次を参照してください。「 [RMS クラウドでのハードウェア キー管理](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud)」
 
--   **持参:** これを行うには、[Microsoft サポートに連絡](../get-started/information-support#to-contact-microsoft-support)して Azure RMS 用のキーの転送を予約する必要があります。 米国ワシントン州レドモンドにある Microsoft のオフィスまでお越しいただき、テナント キーを Azure RMS セキュリティ ワールドに転送する必要があります。
+-   **持参:** これを行うには、[Microsoft サポートに連絡](../get-started/information-support.md#to-contact-microsoft-support)して Azure RMS 用のキーの転送を予約する必要があります。 米国ワシントン州レドモンドにある Microsoft のオフィスまでお越しいただき、テナント キーを Azure RMS セキュリティ ワールドに転送する必要があります。
 
 操作方法に関する手順については、テナント キーを生成してインターネット経由で転送するか、持参するかを選択します。 
 
@@ -136,9 +130,9 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 2.  使用状況のログを使用することを検討します。このログには RMS で実行されるすべてのトランザクションが記録されます。
 
-    テナント キーを自主管理する場合、ログにはテナント キーの使用に関する情報が記録されます。 Excel で表示される次のログ ファイルの例を参照してください。[Request Types] の [ **Decrypt** ] および [ **SignDigest** ] は、テナント キーが使用されていることを示しています。
+    テナント キーを自主管理する場合、ログにはテナント キーの使用に関する情報が記録されます。 Excel で表示されるログ ファイルで次のスニペットを参照してください。[Request Types] の [**KMSPDecrypt**] および [**KMSPSignDigest**] は、テナント キーが使用されていることを示しています。
 
-    ![Excel のログ ファイル、テナント キーが使用されていることがわかる](../media/RMS_Logging.gif)
+    ![Excel のログ ファイル、テナント キーが使用されていることがわかる](../media/RMS_Logging.png)
 
     使用状況ログの詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
@@ -148,6 +142,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 

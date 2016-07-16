@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management によって保護されたファイルを表示して使用する | Azure RMS
-description:
-keywords:
+title: "Rights Management によって保護されたファイルを表示して使用する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b
+
 
 ---
 
@@ -36,10 +30,10 @@ ms.suite: ems
 >
 > 組織が Azure Rights Management (Azure RMS) または AD RMS を使用していない場合は、RMS で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを要求できます。
 >
-> -   このアカウントを申請するには、[個人向け RMS](http://go.microsoft.com/fwlink/?LinkId=309469) を申請するリンクをクリックします。.
+> -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
 >
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
-> -   詳細については、「[個人向け RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。.
+> -   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
 ## 保護されたファイルを表示するには
 ファイル エクスプローラーまたは添付ファイルを含む電子メール メッセージを使用して、保護されたファイルをダブルクリックし、要求された場合は資格情報を入力します。
@@ -59,7 +53,7 @@ ms.suite: ems
 
     ![RMS 共有アプリケーションの使用時に電子メールで共有される pfile のダイアログ ボックス](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **ファイルの拡張子が *.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) です)**
+- **ファイルの拡張子が *.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) である**
 
     ファイルは、読み取り専用コピーとしてネイティブに保護されています。
 
@@ -89,9 +83,9 @@ Rights Management でサポートされるファイル名拡張子の完全な�
 
     たとえば、ファイルがファイル名 document.vsdx.pfile を使用して保護された場合、ファイルを表示し、ファイル エクスプローラーで document.vsdx としてファイルを保存します。
 
-    新しいファイルは保護されていません。 ファイルを保護する場合は、手動で行う必要があります。 手順については、「[Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)](sharing-app-protect-in-place.md)」を参照してください。.
+    新しいファイルは保護されていません。 ファイルを保護する場合は、手動で行う必要があります。 手順については、「[Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)](sharing-app-protect-in-place.md)」を参照してください。
 
-- **ファイルの拡張子が *.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) です)**
+- **ファイルの拡張子が *.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) である**
 
     ファイルを表示することだけができ、ファイルの名前変更または移動を行っても、ファイルの保護は維持されます。
 
@@ -113,6 +107,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

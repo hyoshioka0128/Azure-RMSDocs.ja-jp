@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Microsoft が管理 - テナント キーのライフサイクル操作 | Azure RMS
-description:
-keywords:
+title: "Microsoft が管理 - テナント キーのライフサイクル操作 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: feb41356a2ef074679e60ce4bb7b1d6ee910371c
+
 
 ---
 
@@ -42,7 +36,7 @@ Azure RMS のサブスクリプションを解除すると、Azure RMS はテナ
 
 -   テナント キーのマスター コピー (あなたが所有するコピー) の盗難が疑われています。
 
-テナント キーを更新するには、[Microsoft サポート](../get-started/information-support#to-contact-microsoft-support)に連絡し、**Azure RMS テナント キーを更新する要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
+テナント キーを更新するには、[Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**Azure RMS テナント キーを更新する要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
 
 テナント キーを再入力すると、新しいコンテンツは新しいテナント キーの利用により保護されます。 これは段階的に行われます。そのため、一定期間、一部の新しいコンテンツは引き続き以前のテナント キーで保護されます。 以前に保護されたコンテンツは以前のテナント キーで引き続き保護されます。 このシナリオをサポートするために、Azure RMS は以前のテナント キーを保有します。そのため、古いコンテンツのライセンスを発行できます。
 
@@ -54,7 +48,7 @@ Azure RMS の構成およびテナント キーをエクスポートするには
 
 ### 手順 1:エクスポートを開始する
 
--   これを行うには、[Microsoft サポートに連絡](../get-started/information-support#to-contact-microsoft-support)し、**Azure RMS キーのエクスポートの要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 標準サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
+-   これを行うには、[Microsoft サポートに連絡](../get-started/information-support.md#to-contact-microsoft-support)し、**Azure RMS キーのエクスポートの要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 標準サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
 
 ### 手順 2:検証が完了するまで待機する
 
@@ -97,13 +91,14 @@ Azure RMS の構成およびテナント キーをエクスポートするには
 
 |インシデントの説明|考えられる対応|
 |------------------------|-------------------|
-|テナント キーが漏れています。|テナント キーを再入力します。 この記事の「[テナント キーを再入力します](operations-tenant-key#re-key-your-tenant-key)」セクションを参照してください。|
+|テナント キーが漏れています。|テナント キーを再入力します。 この記事の「[テナント キーを再入力します](operations-microsoft-managed-tenant-key.md#re-key-your-tenant-key)」セクションを参照してください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|マイクロソフトは回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure RMS を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 概要 | Azure RMS
-description: Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。
-keywords:
+title: "概要 | Azure RMS"
+description: "Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 37f3bc2308caaa8fd5e5c7fc8c56b6dc4d076b97
+
 
 ---
 
@@ -44,7 +40,7 @@ Rights Management サービス SDK 2.1 に基づいて構築したアプリケ�
 -   ユーザーの ID に基づいて、ドキュメントの表示、印刷、または編集の権限を有効にすることを望むオンライン ドキュメント ライブラリの所有者。
 -   表示と編集の権限を特定のユーザーに制限する社内の Web サイトに従業員の機密情報を公開することを望む企業。
 
-AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳細については、[AD RMS の IT Pro ドキュメント](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)に関する TechNet のコンテンツを参照してください。
+AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳細については、[AD RMS の IT Pro ドキュメント](https://TechNet.Microsoft.Com/library/cc771234.aspx)に関する TechNet のコンテンツを参照してください。
 
 このセクションの残りのトピックでは、RMS アーキテクチャとその実装について説明します。
 
@@ -66,6 +62,7 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO2-->
 
 

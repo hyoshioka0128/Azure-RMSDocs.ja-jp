@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: シナリオ - 重要度の高い (いくつかの) ファイルを保護する | Azure RMS
-description:
-keywords:
+title: "シナリオ - 重要度の高い (いくつかの) ファイルを保護する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+
 
 ---
 
@@ -94,7 +88,8 @@ ms.suite: ems
 
 ファイルをその場で保護する方法について詳しくは、「[Rights Management 共有アプリケーションを使用してデバイス上のファイルを保護する (その場で保護)](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx)」をご覧ください。
 
-> [!TIP] 保護対象のファイル数が多すぎてこの手動プロセスでは対応できない場合は、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)を使用し、テンプレートを適用してファイルを包括的に保護することを検討してください。
+> [!TIP]
+> 保護対象のファイル数が多すぎてこの手動プロセスでは対応できない場合は、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)を使用し、テンプレートを適用してファイルを包括的に保護することを検討してください。
 
 ### ファイルへのアクセスを監視し、必要に応じてアクセスを取り消すには
 
@@ -152,6 +147,7 @@ ms.suite: ems
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

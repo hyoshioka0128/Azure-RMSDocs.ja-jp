@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーション管理者ガイド | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーション管理者ガイド | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
+
 
 ---
 
@@ -31,18 +25,18 @@ ms.suite: ems
 *適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 
-企業ネットワークで Microsoft Rights Management 共有アプリケーションを担当している場合や、「[Rights Management 共有アプリケーション ガイド](sharing-app-user-guide.md)」または「[FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971)」 (Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ) よりも詳細な技術情報が必要な場合は、以下の情報を使用してください。.
+企業ネットワークで Microsoft Rights Management 共有アプリケーションを担当している場合や、「[Rights Management sharing application user guide (Rights Management 共有アプリケーション ガイド](sharing-app-user-guide.md))」または「[FAQ for Microsoft Rights Management Sharing Application for Windows (Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ)](http://go.microsoft.com/fwlink/?LinkId=303971)」よりも詳細な技術情報が必要な場合は、以下の情報を使用してください。
 
-RMS 共有アプリケーションは Azure RMS での作業に最適です。このデプロイメント構成では、別の組織のユーザーへの保護された添付ファイルの送信、および電子メール通知やドキュメントの追跡と取り消しなどのオプションがサポートされているためです。  ただし、いくつかの制限はあるものの、オンプレミス バージョンの AD RMS でも使用できます。 Azure RMS と AD RMS でサポートされている機能の包括的な比較については、「[Azure Rights Management と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。 AD RMS を所有していて、Azure RMS に移行する場合は、「[AD RMS から Azure Rights Management に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。.
+RMS 共有アプリケーションは Azure RMS での作業に最適です。このデプロイメント構成では、別の組織のユーザーへの保護された添付ファイルの送信、および電子メール通知やドキュメントの追跡と取り消しなどのオプションがサポートされているためです。  ただし、いくつかの制限はあるものの、オンプレミス バージョンの AD RMS でも使用できます。 Azure RMS と AD RMS でサポートされている機能の包括的な比較については、「[Azure Rights Management と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。 AD RMS を所有していて、Azure RMS に移行する場合は、「[AD RMS から Azure Rights Management に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
 
 ## Microsoft Rights Management 共有アプリケーションの自動デプロイ
 Windows 版の RMS 共有アプリケーションはスクリプト化されたインストールをサポートするため、企業のデプロイメントに適しています。
 
-インストールの前提条件は、コンピューターで Windows 7 Service Pack 1 以降のバージョンを実行していることと、Microsoft Framework Version 4.0 以降がインストールされていることだけです。 Microsoft .NET Framework 4.0 をインストールする必要がある場合は、[Microsoft ダウンロード センターからダウンロードしてインストール](http://www.microsoft.com/download/details.aspx?id=17718)できます。.
+インストールの前提条件は、コンピューターで Windows 7 Service Pack 1 以降のバージョンを実行していることと、Microsoft Framework Version 4.0 以降がインストールされていることだけです。 Microsoft .NET Framework 4.0 をインストールする必要がある場合は、 [Microsoft ダウンロード センターからダウンロードしてインストール](http://www.microsoft.com/download/details.aspx?id=17718)できます。
 
 ### RMS 共有アプリケーションを自動デプロイメント用にダウンロードするには
 
-1.  Microsoft ダウンロード センターの「[Windows 用 Microsoft Rights Management 共有アプリケーション](http://www.microsoft.com/download/details.aspx?id=40857)」ページに移動して、[**ダウンロード**] をクリックします。.
+1.  Microsoft ダウンロード センターの「 [Windows 用 Microsoft Rights Management 共有アプリケーション](http://www.microsoft.com/download/details.aspx?id=40857) 」ページに移動して、[ **ダウンロード**] をクリックします。
 
 2.  必要なファイルを選択してダウンロードします。 次の 2 つのクライアント インストール パッケージがあります。1 つは Windows 64 ビット (Microsoft Rights Management 共有アプリケーション x64.zip)、もう 1 つは Windows 32 ビット (Microsoft Rights Management 共有アプリケーション x86.zip) です。
 
@@ -79,7 +73,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 > [!NOTE]
 > これらのシナリオにおいて、組織で AD RMS を実行している場合、ユーザーは Azure RMS を使用している他の組織から保護されたコンテンツを受信できますが、Azure RMS を使用している組織のユーザーに保護されたコンテンツを送信することはできません。 ただし、組織が Azure RMS を実行している場合、ユーザーは保護されたコンテンツを他の組織との間で送受信することができます。
 
-各手順のインストールを完了するには、コンピューターを再起動する必要があります。 **shutdown /i** のようなコマンドを使用して、自動再起動を開始できます。.
+各手順のインストールを完了するには、コンピューターを再起動する必要があります。 **shutdown /i** のようなコマンドを使用して、自動再起動を開始できます。
 
 ### Office 2016 または Office 2013 用 RMS 共有アプリケーションおよび Azure RMS または Active Directory RMS をデプロイするには
 
@@ -97,7 +91,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     1.  ローカル管理者アカウントを使用して、コンピューターにログインします。
 
-    2.  そのコンピューターで、[Microsoft Online サインイン アシスタントをダウンロードしてインストールします](http://www.microsoft.com/download/details.aspx?id=28177)。.
+    2.  そのコンピューターで、 [Microsoft Online サインイン アシスタントをダウンロードしてインストールします](http://www.microsoft.com/download/details.aspx?id=28177)。
 
     3.  次のコマンドを実行し、証明サービスの URL を画面に表示します。次に、これをコピーして、この後の手順のために保存します。
 
@@ -322,9 +316,9 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 ## 自動更新の抑制
 既定では、新しいバージョンの RMS 共有アプリケーションがある場合、ユーザーに通知され、ダウンロードを求めるメッセージが表示されます。 次のレジストリを編集すると、この通知が表示されないようにすることができます。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** に移動し、まだ存在していない場合は、**RmsSharingApp** という名前の新しいキーを作成します。.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** に移動し、まだ存在していない場合は、**RmsSharingApp** という名前の新しいキーを作成します。
 
-2.  **RmsSharingApp** を選択し、新しい DWORD 値の **AllowUpdatePrompt** を作成して、その値を **0** に設定します。.
+2.  **RmsSharingApp**を選択し、新しい DWORD 値の **AllowUpdatePrompt**を作成して、その値を **0**に設定します。
 
 RMS 共有アプリケーションは、WSUS ではサポートされていないため、次の手法を使用して、すべてのユーザーにデプロイする前に RMS 共有アプリケーションの新しいバージョンをテストできます。
 
@@ -335,9 +329,9 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 3.  テストが完了し、問題を解決したら、このガイドの自動デプロイメントの手順を使用して、すべてのユーザーに最新バージョンをデプロイします。
 
 ## Azure RMS のみ:ドキュメント追跡の構成
-[ドキュメント追跡をサポートするサブスクリプション](https://technet.microsoft.com/en-us/dn858608)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。  ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。.
+[ドキュメント追跡をサポートするサブスクリプション](https://technet.microsoft.com/dn858608)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。  ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
 
-これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure RMS モジュールが必要です。  インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。.
+これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure RMS モジュールが必要です。  インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 > [!TIP]
 > 事前にモジュールをダウンロードしてインストールしてある場合は、次のコマンドレットを実行してバージョン番号を確認します。 `(Get-Module aadrm –ListAvailable).Version`
@@ -358,7 +352,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 ## AD RMS のみ: 組織内での複数の電子メール ドメインのサポート
 AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユーザーが複数の電子メール ドメインを保有している場合は、次のレジストリ編集を行います。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** に移動し、まだ存在していない場合は、**RmsSharingApp** という名前の新しいキーを作成します。.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** に移動し、まだ存在していない場合は、**RmsSharingApp** という名前の新しいキーを作成します。
 
 2.  **RmsSharingApp** を選択し、**FederatedDomains** という名前の新しい複数文字列値を作成して、組織で使用されるドメインとすべてのサブドメインを追加します。 ワイルドカードはサポートされません。
 
@@ -368,10 +362,11 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 
 
 ## 次のステップ
-保護レベルの違い (ネイティブとジェネリック)、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法などを説明する追加の技術情報については、「[Microsoft Rights Management 共有アプリケーションの技術的概要](sharing-app-admin-guide-technical.md)」をご覧ください。.
+保護レベルの違い (ネイティブとジェネリック)、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法などを説明する追加の技術情報については、「[Technical overview for the Rights Management sharing application (Rights Management 共有アプリケーションの技術概要)](sharing-app-admin-guide-technical.md)」をご覧ください。
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 手順 2.&colon; ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行 | Azure RMS
-description:
-keywords:
+title: "手順 2.&colon; ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
+ms.openlocfilehash: a739da3fbebc8dfa4c6715fd64ccd72f87d2a686
+
 
 ---
 
@@ -33,7 +27,7 @@ ms.suite: ems
 
 これらの手順は [AD RMS から Azure Rights Management への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーがソフトウェアで保護されているときにソフトウェアで保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。 
 
-選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms)、別の構成を選択します。
+選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms)、別の構成を選択します。
 
 AD RMS 構成を Azure RMS にインポートするには次の手順を使用します。結果は Microsoft 管理の Azure RMS テナント キーです。
 
@@ -44,7 +38,7 @@ AD RMS 構成を Azure RMS にインポートするには次の手順を使用�
     > [!TIP]
     > 事前にモジュールをダウンロードしてインストールしてある場合は、次のコマンドレットを実行してバージョン番号を確認します。 `(Get-Module aadrm -ListAvailable).Version`
 
-    インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。.
+    インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 2.  [ **管理者として実行** ] オプションを選択して Windows PowerShell を起動し、 [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) コマンドレットを使用して Azure RMS サービスに接続します。
 
@@ -70,10 +64,11 @@ AD RMS 構成を Azure RMS にインポートするには次の手順を使用�
     Disconnect-AadrmService
     ```
 
-以上で「[手順 3. RMS テナントをアクティブ化する](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+以上で「[手順 3. RMS テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant)」に進む準備が完了しました。
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

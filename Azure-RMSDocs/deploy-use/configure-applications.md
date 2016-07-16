@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure Rights Management 用にアプリケーションを構成する | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management 用にアプリケーションを構成する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 8fe934c51e852791d19fbb336deaf9cd7be9817b
+
 
 ---
 
@@ -32,12 +26,12 @@ ms.suite: ems
 > [!NOTE]
 > ここでは、Azure Rights Management をデプロイした IT 管理者やコンサルタント向けの情報を紹介しています。 特定のアプリケーション用の Rights Management の使用方法、または権利保護されたファイルを開く方法に関するユーザー向けヘルプや情報をお探しの場合は、アプリケーションに付属しているヘルプとガイダンスを使用してください。
 >
-> たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「 **Rights Management** 」や「 **IRM**」などの検索語句を入力します。 Windows 用の RMS 共有アプリケーションの場合は、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」を参照してください。.
+> たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「 **Rights Management** 」や「 **IRM**」などの検索語句を入力します。 Windows 用の RMS 共有アプリケーションの場合は、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」を参照してください。
 
-組織に Azure Rights Management (Azure RMS) をデプロイしたら、次の情報を使用して、Azure RMS をサポートするようにアプリケーションとサービスを構成します。 これらの構成には、Word 2013 や Word 2010、および Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスが含まれます。 これらのアプリケーションおよびサービスで Rights Management をサポートする方法については、「[アプリケーションで Azure Rights Management をサポートする方法](../understand-explore/applications-support.md)」を参照してください。.
+組織に Azure Rights Management (Azure RMS) をデプロイしたら、次の情報を使用して、Azure RMS をサポートするようにアプリケーションとサービスを構成します。 これらの構成には、Word 2013 や Word 2010、および Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスが含まれます。 これらのアプリケーションおよびサービスで Rights Management をサポートする方法については、「[アプリケーションで Azure Rights Management をサポートする方法](../understand-explore/applications-support.md)」を参照してください。
 
 > [!IMPORTANT]
-> サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。.
+> サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
 
 -   [Office 365: クライアントとオンライン サービスの構成](configure-office365.md)
 
@@ -58,10 +52,10 @@ ms.suite: ems
     -   [モバイル プラットフォーム用 RMS 共有アプリケーション: インストールと管理](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
 
 
-Exchange Server や SharePoint Server などのオンプレミス サーバーを構成する場合は、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。.
+Exchange Server や SharePoint Server などのオンプレミス サーバーを構成する場合は、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 > [!TIP]
-> Azure RMS を使用するように構成されたアプリケーションの概要レベルの例とスクリーンショットについては、「[Azure RMS の動作: 管理者およびユーザーに対する表示](../understand-explore/what-admins-users-see.md)」を参照してください。.
+> Azure RMS を使用するように構成されたアプリケーションの概要レベルの例とスクリーンショットについては、「[Azure RMS の動作: 管理者およびユーザーに対する表示](../understand-explore/what-admins-users-see.md)」を参照してください。
 
 
 これらのアプリケーションおよびサービスに加えて、RMS API をサポートする他のアプリケーションがあります。 このカテゴリには、RMS SDK を使用して社内で作成された基幹業務アプリケーション、および RMS SDK を使用して作成されたソフトウェア ベンダー製アプリケーションが含まれます。 これらのアプリケーションについては、アプリケーション付属の手順を参照してください。
@@ -80,6 +74,7 @@ Azure Rights Management をサポートするためにアプリケーション�
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

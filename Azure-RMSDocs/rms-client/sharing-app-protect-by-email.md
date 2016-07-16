@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: ea7f186e01606ca5e487bdfaab87d1eb0f2f41d3
+
 
 ---
 
@@ -37,7 +31,7 @@ Azure RMS を使用している場合は、共有によって保護されてい�
 
 -   保護された添付ファイルをだれかが開こうとするときに、電子メールを受け取るオプションを選択します。 ファイルにアクセスされるたびに、ファイルを開こうとしたユーザー、試みられた日時、および試みが成功したか (正常に認証された) 失敗したかが通知されます。
 
--   ドキュメント追跡サイトを使用します。 ドキュメント追跡サイトでファイルへのアクセスを取り消すことにより、ファイルの共有を停止することもできます。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。.
+-   ドキュメント追跡サイトを使用します。 ドキュメント追跡サイトでファイルへのアクセスを取り消すことにより、ファイルの共有を停止することもできます。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。
 
 ## Outlook の使用:電子メールで共有するファイルを保護するには
 
@@ -45,9 +39,9 @@ Azure RMS を使用している場合は、共有によって保護されてい�
 
     ![RMS 共有アプリケーション用 Outlook アドイン](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
-    このボタンが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。.
+    このボタンが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 
-2.  [[share protected (保護ファイルの共有)]](sharing-app-dialog-box.md) ダイアログ ボックスでこのファイルに必要なオプションを指定し、**[Send Now (今すぐ送信)]** をクリックします。.
+2.  [[share protected] (保護ファイルの共有) ダイアログ ボックス](sharing-app-dialog-box.md)でこのファイルに必要なオプションを指定し、**[Send Now]** (今すぐ送信) をクリックします。
 
 ### 電子メールで共有するファイルを保護する他の方法
 Outlook を使用して保護されたファイルを共有する以外に、以下の方法を使用することもできます。
@@ -68,9 +62,9 @@ Outlook を使用して保護されたファイルを共有する以外に、以
 
         ![Office ツールバー アドイン](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
-    これらの保護用オプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。.
+    これらの保護用オプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 
-2.  [[share protected (保護ファイルの共有)]](sharing-app-dialog-box.md) ダイアログ ボックスでこのファイルに必要なオプションを指定し、**[送信]** をクリックします。.
+2.  [[share protected] (保護ファイルの共有) ダイアログ ボックス](sharing-app-dialog-box.md)でこのファイルに必要なオプションを指定し、**[送信]** をクリックします。
 
 3.  すぐにファイルが保護されていることを示すダイアログ ボックスが表示される場合があります。その後、添付ファイルは Microsoft RMS で保護されていて表示するにはサインインする必要があることを受信者に伝える、自動的に作成される電子メール メッセージが表示されます。 受信者がサインインへのリンクをクリックすると、受信者が保護された添付ファイルを開くことができることを確認するための手順とリンクが表示されます。
 
@@ -98,6 +92,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
