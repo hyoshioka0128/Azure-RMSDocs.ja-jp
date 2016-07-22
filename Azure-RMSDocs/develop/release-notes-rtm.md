@@ -178,6 +178,6 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

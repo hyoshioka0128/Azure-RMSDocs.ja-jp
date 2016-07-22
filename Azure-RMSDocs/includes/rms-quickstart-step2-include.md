@@ -27,6 +27,6 @@ Rights Management 共有アプリケーション ("RMS 共有アプリ" とも�
 |ネイティブの保護と汎用的な保護の違いを理解するには   →|[一般的な保護と組み込みの (ネイティブ) 保護の違い](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

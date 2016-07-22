@@ -54,6 +54,6 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

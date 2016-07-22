@@ -40,6 +40,6 @@ Azure RMS を組織にデプロイする準備ができたら、[Azure Rights Ma
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -43,6 +43,6 @@ Azure Rights Management は当初、*Windows Azure Active Directory Rights Manag
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

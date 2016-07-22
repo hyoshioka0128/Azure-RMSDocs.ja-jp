@@ -66,6 +66,6 @@ BYOK を使用する場合、テナント キーを Azure RMS からエクスポ
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -42,6 +42,6 @@ ms.openlocfilehash: f0e958c0fbae8dcf74761481c646c7aa837d5ebb
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

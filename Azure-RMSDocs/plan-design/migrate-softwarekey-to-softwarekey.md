@@ -69,6 +69,6 @@ AD RMS 構成を Azure RMS にインポートするには次の手順を使用�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

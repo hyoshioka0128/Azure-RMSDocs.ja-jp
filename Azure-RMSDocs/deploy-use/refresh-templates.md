@@ -187,6 +187,6 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

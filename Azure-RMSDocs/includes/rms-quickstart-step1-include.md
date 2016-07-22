@@ -55,6 +55,6 @@ Azure Rights Management をサポートするサブスクリプションを所�
 |既定のテンプレートの情報と、新しいカスタム テンプレートを作成する方法について   →|[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

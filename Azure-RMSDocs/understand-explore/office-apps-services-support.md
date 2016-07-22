@@ -73,6 +73,6 @@ SharePoint での Azure RMS の使用について詳しくは、Office のブロ
 「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照して、他のアプリケーションおよびサービスで Azure Rights Management をサポートする方法について確認してください。
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

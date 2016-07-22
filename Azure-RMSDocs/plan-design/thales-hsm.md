@@ -34,6 +34,6 @@ Microsoft は Thales と共に HSM の最新技術の強化に取り組んでき
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

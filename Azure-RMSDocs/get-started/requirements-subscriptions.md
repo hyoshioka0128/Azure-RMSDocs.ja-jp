@@ -95,6 +95,6 @@ Azure Rights Management Premium サブスクリプションについて詳しく
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

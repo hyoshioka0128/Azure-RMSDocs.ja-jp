@@ -1,6 +1,6 @@
 ---
 title: "明示的な所有者権限の追加方法 | Azure RMS"
-description: "アプリケーションでは、最初からライセンスを作成するときに、\"所有者\" 権限を明示的に追加する必要があります。"
+description: "アプリケーションでは、最初からライセンスを作成するときに、&quot;所有者&quot; 権限を明示的に追加する必要があります。"
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
@@ -116,6 +116,6 @@ ms.openlocfilehash: b4eec28ef5e0a44c5c60f88558b6168bce9718b2
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

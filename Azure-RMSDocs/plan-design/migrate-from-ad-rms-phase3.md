@@ -215,6 +215,6 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -55,6 +55,6 @@ Azure RMS テナント キーの管理の詳細については、「[Azure Right
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -42,6 +42,6 @@
 |[ **保護ファイルの共有** ] ダイアログ ボックスのオプションについて   →|[Rights Management 共有アプリケーションのダイアログ ボックス オプション](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

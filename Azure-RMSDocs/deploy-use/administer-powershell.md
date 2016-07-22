@@ -54,6 +54,6 @@ Azure RMS と AD RMS の両方をサポートする補完的な Windows PowerShe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

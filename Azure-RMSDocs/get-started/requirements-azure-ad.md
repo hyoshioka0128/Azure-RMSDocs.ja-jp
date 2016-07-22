@@ -76,6 +76,6 @@ Azure RMS で多要素認証 (MFA) を使用するには、次のうち 1 つ以
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

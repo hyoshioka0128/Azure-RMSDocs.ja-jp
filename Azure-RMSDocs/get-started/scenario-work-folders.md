@@ -123,6 +123,6 @@ Azure Rights Management を使用して保護するファイルを組織外の�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
