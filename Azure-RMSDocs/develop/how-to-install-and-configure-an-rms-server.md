@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: RMS サーバーをインストールし、構成し、それでテストする方法 | Azure RMS
-description: 権限保護対応アプリケーションのテスト用に RMS Server をインストールおよび構成します。
-keywords:
+title: "RMS サーバーをインストールし、構成し、それでテストする方法 | Azure RMS"
+description: "権限保護対応アプリケーションのテスト用に RMS Server をインストールおよび構成します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d56c6636cb7a33f104bc3901355c3601266ad30c
+ms.openlocfilehash: b97743d9a5c90cb46b39b4d8a462aa1acd64dfe1
+
 
 ---
 
@@ -65,12 +61,13 @@ ms.suite: ems
 
     RMS サーバーでテストするには、サーバー側の検出とクライアント側の検出のいずれかを構成し、Rights Management Service Client 2.1 を有効にして RMS サーバーを検出し、通信を確立します。
 
-    > [!Note] Azure RMS でテストするとき、検出構成は必要ありません。
+    > [!Note]
+    > Azure RMS でテストするとき、検出構成は必要ありません。
 
   - サーバー側の検出では、管理者が Active Directory により RMS ルート クラスターに対してサービス接続ポイント (SCP) を登録すると、クライアントは Active Directory にクエリを実行して SCP を検出し、サーバーとの接続を確立します。
   - クライアント側の検出では、RMS クライアント 2.1 が実行されるコンピューター上のレジストリに RMS サービス検出の設定を構成します。 これにより、RMS クライアント 2.1 が RMS サーバーを使用するように設定されます。 これらの設定がある場合、サーバー側の検出は実行されません。
 
-  クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)」 (RMS クライアント 2.0 のデプロイに関する注意事項) を参照してください。
+  クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS クライアントのデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
 1. **EnterpriseCertification**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
@@ -80,9 +77,11 @@ ms.suite: ems
 2. **EnterprisePublishing**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
->[!NOTE] 既定では、これらのキーはレジストリに存在しないため、作成する必要があります。
+>[!NOTE] 
+> 既定では、これらのキーはレジストリに存在しないため、作成する必要があります。
 
->[!IMPORTANT] 64 ビット バージョンの Windows で 32 ビット アプリケーションを実行する場合は、これらのキーを次のキーの場所に設定する必要があります。<p>
+>[!IMPORTANT] 
+> 64 ビット バージョンの Windows で 32 ビット アプリケーションを実行する場合は、これらのキーを次のキーの場所に設定する必要があります。<p>
   ```    
   HKEY_LOCAL_MACHINE
     SOFTWARE
@@ -96,6 +95,7 @@ ms.suite: ems
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

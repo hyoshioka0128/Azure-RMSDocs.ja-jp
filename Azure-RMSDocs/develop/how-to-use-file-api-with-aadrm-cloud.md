@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: クラウド ベース RMS でサービス アプリケーション使用を有効化する方法 | Azure RMS
-description: このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。
-keywords:
+title: "クラウド ベース RMS でサービス アプリケーション使用を有効化する方法 | Azure RMS"
+description: "このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,24 +10,22 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 4c3625676c7e794ef133c75881f666bae80e0513
+ms.openlocfilehash: ad8c41c9f3f3515a817d508d8f5a8953daf4b440
+
 
 ---
 
 # 方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
-このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/en-us/library/jj585016.aspx)」を参照してください。
+このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)」を参照してください。
 
 **重要**  
-Rights Management Services SDK 2.1 サービスを Azure RMS で利用するには、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](/rights-management/get-started/requirements-subscriptions.md)」を参照してください。
+Rights Management Services SDK 2.1 サービスを Azure RMS で利用するには、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。
 
 ## 必要条件
 
@@ -176,6 +172,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

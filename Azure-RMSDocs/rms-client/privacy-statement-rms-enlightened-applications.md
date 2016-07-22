@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: RMS 対応アプリケーションの Microsoft Rights Management のプライバシーに関する声明 | Azure RMS
-description:
-keywords:
+title: "RMS 対応アプリケーションの Microsoft Rights Management のプライバシーに関する声明 | Azure RMS"
+description: 
+keywords: 
 author: msmbaldwin
 manager: msmbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 751e5e05-fbe2-4769-a5df-1362c0db2108
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8e8b1dabe3ba2894bec9a87e6d34123d833c699b
+ms.openlocfilehash: 500701acb03aa9f049cc995f14e544e07556bc4f
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 適用対象:アプリケーションに組み込まれている Microsoft Rights Management 機能
 
 > [!NOTE]
-> このプライバシーに関する声明は他の言語でも提供されています。[Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=41668)から利用できます。.
+> このプライバシーに関する声明は他の言語でも提供されています。 [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=41668)から利用できます。
 
 Microsoft は、お客様のニーズに合ったパフォーマンス、機能、利便性を兼ね備えたパーソナル コンピューティングのためのソフトウェアを提供する一方で、お客様のプライバシーを保護することに万全を期しています。 このプライバシーに関する声明では、Microsoft Rights Management クライアント ソフトウェアまたはサービス、およびこの声明を表示またはリンクするその他のマイクロソフト製品またはサービスにおけるデータの収集と使用について説明しています。
 
@@ -53,7 +47,7 @@ Rights Management 機能は、クライアント コンピューターとモバ�
 Microsoft Rights Management 対応アプリケーションによってマイクロソフトが収集した、またはマイクロソフトに送信された情報は、米国またはマイクロソフト、その関連会社、子会社、あるいはサービスプロバイダーが拠点を構えるその他の国で保管および処理されることがあります。 マイクロソフトは、欧州連合、欧州経済地域、およびスイスからのデータの収集、使用、および保存に関して、米国商務省が規定するセーフ ハーバー フレームワークを遵守しています。
 
 ## Microsoft Update
-Windows で Microsoft Rights Management 対応アプリケーションを使用する場合、Microsoft Update に参加することができます。 Microsoft Update (MU) は、マイクロソフトのソフトウェア (Windows 用 Microsoft Rights Management クライアントなど) の更新プログラムを提供するサービスです。 収集される情報、その用途、および設定の変更方法に関する詳細については、「[Update サービスの個人情報保護方針](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)」を参照してください。).
+Windows で Microsoft Rights Management 対応アプリケーションを使用する場合、Microsoft Update に参加することができます。 Microsoft Update (MU) は、マイクロソフトのソフトウェア (Windows 用 Microsoft Rights Management クライアントなど) の更新プログラムを提供するサービスです。 収集される情報、その用途、および設定の変更方法に関する詳細については、「 [Update サービスの個人情報保護方針](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142))」を参照してください。
 
 選択/制御: サイレント インストールの場合、Microsoft Rights Management 対応アプリケーションは Windows デスクトップに適用される同じ MU 設定に従います。 ユーザー インストールで、MU が有効でない場合は、インストール中に MU を有効にすることを許可するプロンプトが表示されることがあります。 有効にすると、これらの MU 設定がすべての Windows ベースのアプリケーションに適用されます。
 
@@ -65,6 +59,7 @@ Microsoft では、製品やサービスの変更およびお客様のフィー�
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: カスタム テンプレートを作成、構成、発行する | Azure RMS
-description:
-keywords:
+title: "カスタム テンプレートを作成、構成、発行する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/30/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6a2989f4a6d919d9a2a3d301467353f052bd10ea
+ms.openlocfilehash: d67caf4ebbe19e4f67061d006da1fdedea0d5761
+
 
 ---
 
@@ -66,7 +60,8 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 
         4.  Rights Management をまだアクティブ化していない場合は、最初に **[アクティブ化]** をクリックして、操作を確認します。
 
-            > [!NOTE] 詳細については、「[Rights Management をアクティブにする](activate-service.md)」を参照してください。
+            > [!NOTE]
+            > 詳細については、「[Rights Management をアクティブにする](activate-service.md)」を参照してください。
 
 2.  新しいテンプレートの作成:
 
@@ -169,6 +164,7 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 ## 関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-<!--HONumber=May16_HO5-->
+
+<!--HONumber=Jun16_HO4-->
 
 

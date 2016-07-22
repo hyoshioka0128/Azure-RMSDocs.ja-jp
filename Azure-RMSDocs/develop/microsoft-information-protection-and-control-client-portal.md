@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management サービス SDK 2.1 | Azure RMS
-description: RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS または Azure RMS を使用して情報保護を提供するアプリケーションを作成できます。
-keywords:
+title: "Rights Management サービス SDK 2.1 | Azure RMS"
+description: "RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS または Azure RMS を使用して情報保護を提供するアプリケーションを作成できます。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 44D3EB62-7A60-45D9-BA7E-45A06E7D598F
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: cbdb969e9910142f49b078069fc578059f9d8785
+ms.openlocfilehash: bbe381054648a6b68818f3964f6cfefd5da0829c
+
 
 ---
 
@@ -45,10 +41,8 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
 |トピック|説明|
 |-----|--------|
 |[概要](ad-rms-overview.md)|Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。|
-|[この SDK の優れている点](differences-between-ad-rms-and-ad-rms-2-0.md)|RMS SDK 2.1 は、元の Rights Management サービス SDK に対して大幅に改良が加えられたバージョンです。|
-|[概要](getting-started-with-ad-rms-2-0.md)|RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。|
+|[はじめに](getting-started-with-ad-rms-2-0.md)|RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。|
 |[リリース ノート](release-notes-rtm.md)|このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
-|[コード サンプル](samples.md)|このトピックでは、MSDN ダウンロード センターから入手できる RMS SDK 2.1 を使用するサンプルのセットを示します。|
 |[開発者向け注意事項](developer-notes.md)|このセクションでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。|
 |[API reference](api-reference-2-1.md)|このセクションには、すべての API 要素に関するリファレンス情報を説明するトピックが含まれています。|
 
@@ -64,6 +58,7 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

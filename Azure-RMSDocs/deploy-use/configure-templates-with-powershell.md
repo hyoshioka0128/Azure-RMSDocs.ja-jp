@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: カスタム テンプレート用の PowerShell リファレンス |Azure RMS
-description:
-keywords:
+title: "カスタム テンプレート用の PowerShell リファレンス |Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
+
 
 ---
 
@@ -35,7 +29,8 @@ Azure クラシック ポータルでテンプレートを作成および管理�
 
 エクスポートとインポートを使用して、カスタム テンプレートをバックアップおよび復元することもできます。ベスト プラクティスとして、意図しない変更を行った場合に以前のバージョンに簡単に戻すことができるように、カスタム テンプレートを定期的にバックアップします。
 
-> [!IMPORTANT] Windows PowerShell を使用して Azure RMS 権限ポリシー テンプレートを作成および管理するには、[Azure RMS 用の Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)のバージョン 2.0.0.0 以降が必要です。
+> [!IMPORTANT]
+> Windows PowerShell を使用して Azure RMS 権限ポリシー テンプレートを作成および管理するには、 [Azure RMS 用の Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)のバージョン 2.0.0.0 以降が必要です。
 > 
 > 既にこの PowerShell モジュールがインストールされている場合は、PowerShell ウィンドウで次のコマンドを実行してバージョン番号を確認してください。 `(Get-Module aadrm -ListAvailable).Version`
 
@@ -64,6 +59,7 @@ Azure クラシック ポータルでテンプレートを作成および管理�
 ## 関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

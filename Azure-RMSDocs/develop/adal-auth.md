@@ -1,27 +1,22 @@
 ---
-# required metadata
-
-title: Azure RMS の ADAL 認証を構成する | Azure RMS
-description: Azure ADAL 基盤の認証を構成する手順について説明します。
+title: "Azure RMS の ADAL 認証を構成する | Azure RMS"
+description: "Azure ADAL 基盤の認証を構成する手順について説明します。"
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
-
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 9b912a2a66838dc6e6a3b227bcfe4ac589fe06c1
+
 
 ---
 
@@ -36,7 +31,8 @@ ms.suite: ems
 - [Microsoft Azure のサブスクリプション](https://azure.microsoft.com/en-us/) (無料試用版で十分です)。 詳細については、「[How users sing up for RMS for individuals (ユーザーが個人向け RMS にサインアップする方法)](../understand-explore/rms-for-individuals-user-sign-up.md)」を参照してください。
 - Microsoft Azure Rights Management のサブスクリプション (無料の[個人向け RMS](https://technet.microsoft.com/en-us/library/dn592127.aspx) アカウントで十分です)。
 
-> [!NOTE] IT 管理者に、Microsoft Azure Rights Management のサブスクリプションがあるかどうかを問い合わせ、以下の手順の実行を依頼します。 組織にサブスクリプションがない場合、IT 管理者に作成してもらいます。 また、IT 管理者は、*Microsoft アカウント* (Hotmail など) ではなく、*職場または学校アカウント*でサブスクライブする必要があります。
+> [!NOTE] 
+> IT 管理者に、Microsoft Azure Rights Management のサブスクリプションがあるかどうかを問い合わせ、以下の手順の実行を依頼します。 組織にサブスクリプションがない場合、IT 管理者に作成してもらいます。 また、IT 管理者は、*Microsoft アカウント* (Hotmail など) ではなく、*職場または学校アカウント*でサブスクライブする必要があります。
 
 Microsoft Azure にサインアップした後:
 
@@ -81,11 +77,13 @@ Microsoft Azure にサインアップした後:
 
 ![[構成] を選択する](../media/ConfigYourApp.png)
 
->[!NOTE] **[クライアント ID]** と **[リダイレクト URI]** をコピーし、後で RMS クライアントを構成するときのために保存します。
+>[!NOTE] 
+> **[クライアント ID]** と **[リダイレクト URI]** をコピーし、後で RMS クライアントを構成するときのために保存します。
 
 - アプリケーション設定下部で **[他のアプリケーションに対するアクセス許可]** の **[アプリケーションの追加]** ボタンを選択します。
 
->[!NOTE] Windows Azure Active Directory に表示される **[デリゲートされたアクセス許可]** は既定では正しく、オプションは 1 つだけ選択します。そのオプションは **[サインインとユーザー プロファイルの読み取り]** になります。
+>[!NOTE] 
+> Windows Azure Active Directory に表示される **[デリゲートされたアクセス許可]** は既定では正しく、オプションは 1 つだけ選択します。そのオプションは **[サインインとユーザー プロファイルの読み取り]** になります。
 
 ![[アプリケーションの追加] を選択する](../media/PermissionsToOtherBtn.png)
 
@@ -110,6 +108,7 @@ Microsoft Azure にサインアップした後:
 ![[保存] を選択する](../media/SaveApplication.png)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す | Azure RMS
-description:
-keywords:
+title: "RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 9d5c9558e809779940fac095a789730d5e5924e6
+
 
 ---
 
@@ -43,11 +37,11 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 
 -   電子メール通知を構成する場合:[ **設定** ] をクリックして、ドキュメントがアクセスされたときに電子メールを送信するかどうか、および送信方法を選択します。
 
--   ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合: [ヘルプ] アイコンをクリックして、「[ドキュメント追跡の FAQ](http://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。.
+-   ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合:[ヘルプ] アイコンをクリックして、「 [ドキュメント追跡の FAQ](http://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。
 
 ## Office を使用したドキュメント追跡サイトへのアクセス
 
--   Office アプリケーション、Word、Excel、PowerPoint の場合: [**ホーム**] タブの [**RMS**] グループで、[**保護ファイルの共有**] をクリックし、[**使用の追跡**] をクリックします。.
+-   Office アプリケーション、Word、Excel、PowerPoint の場合:[ **ホーム** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有**] をクリックし、[ **使用の追跡**] をクリックします。
 
     ![RMS 共有アプリケーションの使用時に Office アプリケーションから使用状況を追跡する ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
@@ -55,7 +49,7 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 
     ![[RMS 共有アプリケーションの使用時に Outlook から使用状況を追跡する] を選択する ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-これらの RMS のオプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。.
+これらの RMS のオプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 
 ### ドキュメントを追跡して取り消すための他の方法
 Windows コンピューターで Office アプリケーションを使用してドキュメントを追跡するだけでなく、以下の代替策を使用することもできます。
@@ -68,7 +62,7 @@ Windows コンピューターで Office アプリケーションを使用して�
 
 #### Web ブラウザーを使用したドキュメント追跡サイトへのアクセス
 
--   サポートされているブラウザーを使用して、[ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)に移動します。.
+-   サポートされているブラウザーを使用して、 [ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)に移動します。
 
     サポートされているブラウザー:Internet Explorer バージョン 10 以降の使用が推奨されますが、次のいずれかのブラウザーを使用してドキュメント追跡サイトを使用することもできます。
 
@@ -105,6 +99,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

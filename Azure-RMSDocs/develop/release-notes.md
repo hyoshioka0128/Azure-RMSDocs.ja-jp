@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: 新機能とリリース ノート | Azure RMS
-description: 重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。
-keywords:
+title: "新機能とリリース ノート | Azure RMS"
+description: "重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: eccc0ba9c13e0c35c8d0c8877ce92f9b99e83835
+
 
 ---
 
@@ -29,7 +25,8 @@ ms.suite: ems
 ## 新機能
 Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一段と簡素化され、柔軟性が向上しています。 このトピックでは、重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。
 
--   [2015 年 12 月の更新の新しい点](#new_for_our_december_2015_update)
+-   [2016 年 6 月の新機能](#new_for_June_2016)
+-   [2015 年 12 月の更新](#december_2015_update)
 -   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july_2015_update_-_adds_support_for_linux___c___development)
 -   [2015 年 5 月の更新 – ログの制御を追加](#may_2015_update_-_adds_logging_control)
 -   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february_2015_update_-_adds_windows_store_application_support)
@@ -38,7 +35,15 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 -   [リリース ノート](#release-notes)
 -   [よく寄せられる質問](#frequently_asked_questions)
 
-### 2015 年 12 月の更新の新しい点
+### 2016 年 6 月の新機能
+
+- **先進認証のサポート** - Active Directory Authentication Library (ADAL) ベースのサインインが RMS 対応アプリに導入されます。 これによって利用可能になるサインイン機能としては、多要素認証 (MFA)、SAML ベースのサードパーティ ID プロバイダーと RMS クライアント アプリケーションの組み合わせ、スマート カードや証明書をベースとする認証などがあります。また、RMS 対応アプリで基本認証プロトコルを使用する必要がなくなります。
+- **ドキュメント追跡のサポート** -開発するアプリの中でドキュメントを保護するときに、ドキュメント追跡を有効化できるようになりました。 
+- パフォーマンスの向上
+- バグの修正
+
+
+### 2015 年 12 月の更新
 
 このリリースでは、デバイス用の RMS SDK はバージョン 4.2 であり、以下の機能が追加されています。
 
@@ -124,7 +129,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   **AD RMS のサポート** – 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
 -   **オフラインで使用** – エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
--   **認証の分離** – 開発者は、独自の認証ライブラリ (または推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/en-us/library/jj573266.aspx)) を Azure RMS と AD RMS に使用できます。
+-   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) を使用することもできます)。
 -   **UI の分離** – 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
 -   **再設計された API** – RMS の一貫性のある動作により、開発者は最低限の労力で API のシンプルかつ透過的な暗号化および暗号化解除を利用できます。
 
@@ -142,9 +147,9 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     **ソリューション** – アプリケーションが Android API への複数インスタンスの呼び出しを許可しないようにします。
 
--   [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** メソッドを *array.length* の値と異なるサイズで使用すると、その後 SDK でそのコンテンツを使用できません。
+-   [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** メソッドを使用するときに、長さが *array.length* の値と異なっていると、後で SDK を使用してコンテンツを使用することができません。
 
-    **ソリューション** – これは既知の問題です。 この現象を軽減するには、**byte \[\]** 配列に length パラメーターと同じ長さの値を渡すか、[**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)** メソッドを使用します。
+    **ソリューション** – これは既知の問題です。 対策としては、**byte \[\]** 配列に渡す長さの値は常に length パラメーターと同じにするか、[**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)** メソッドを使用します。
 
 **iOS および OS X**
 
@@ -227,6 +232,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

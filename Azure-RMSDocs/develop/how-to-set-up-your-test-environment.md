@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: アプリケーションのテスト | Azure RMS
-description: アプリケーションのテストを設定する方法
-keywords:
+title: "アプリケーションのテスト | Azure RMS"
+description: "アプリケーションのテストを設定する方法"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b01f009ec3dffbb3fe671da8a19929e53c67fb79
+ms.openlocfilehash: cf86b07ba057d8999a156ae397ff7200b12a3f5e
+
 
 ---
 
@@ -42,7 +38,7 @@ Windows Server で実行されている Azure RMS または RMS サーバーを�
    - 開発コンピューター以外のコンピューターでアプリケーションをテストする場合は、[AD RMS クライアント ダウンロード ページ](http://www.microsoft.com/en-us/download/details.aspx?id=38396)からそのコンピューターに RMS クライアント 2.1 をインストールできます。
    - 開発コンピューターでアプリケーションをテストする場合は、Rights Management サービス SDK 2.1 を既にインストールしています。 この時点で、RMS クライアント 2.1 がサイレント インストールされています。
 
-    RMS SDK 2.1 のインストール方法については、「[SDK のインストール](create-your-first-rights-aware-application.md)」を参照してください。
+    RMS SDK 2.1 のインストール方法については、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
 
 ## 解説
 
@@ -51,14 +47,15 @@ Windows Server で実行されている Azure RMS または RMS サーバーを�
 ### 関連項目
 
 * [RMS サーバーをインストールし、構成する方法](how-to-install-and-configure-an-rms-server.md)
-* [方法: ADAL 認証の使用](how-to-use-adal-authentication,md)
-* [SDK のインストール](create-your-first-rights-aware-application.md)
+* [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)
+* [SDK のインストール](install-the-rms-sdk.md)
 * [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
  
 
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

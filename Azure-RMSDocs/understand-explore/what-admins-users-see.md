@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: 管理者とユーザーに表示される内容 | Azure RMS
-description:
-keywords:
+title: "管理者とユーザーに表示される内容 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 213d077a65abd5115b7e0491dfc9cd8145752b23
+
 
 ---
 
@@ -32,11 +26,12 @@ ms.suite: ems
 
 この記事では、Azure Rights Management (Azure RMS) を使用する場合に管理者とユーザーに表示される内容と、機密情報を保護する方法についての一般的な例をいくつか紹介します。
 
-> [!NOTE] Azure RMS がデータを保護するこれらすべての例で、適用される保護によって所有者がメンバーではないグループにアクセス許可が付与される場合、または適用される保護に有効期限が含まれる場合であっても、コンテンツの所有者は引き続きデータ (ファイルまたは電子メール) に完全にアクセスできます。
+> [!NOTE]
+> Azure RMS がデータを保護するこれらすべての例で、適用される保護によって所有者がメンバーではないグループにアクセス許可が付与される場合、または適用される保護に有効期限が含まれる場合であっても、コンテンツの所有者は引き続きデータ (ファイルまたは電子メール) に完全にアクセスできます。
 >
 > 同様に、IT 部門は、管理者が指定する許可されたユーザーまたはサービスに委任されたアクセスを付与する Rights Management のスーパー ユーザー機能を使用することで、制限なく保護されたデータに常にアクセスできます。 さらに、IT 部門は保護されているデータの使用状況を追跡および監視できます (だれがいつデータにアクセスしているかなど)。
 
-動作している RMS の他のスクリーンショットやビデオについては、[Microsoft Rights Management サービス ポータル](http://www.microsoft.com/rms)と [Microsoft Rights Management (RMS) チーム ブログ](http://blogs.technet.com/b/rms)をご覧ください。
+実際の RMS の動作を紹介するスクリーンショットやビデオは、「[Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)」(エンタープライズ モビリティおよびセキュリティ ブログ) をご覧ください。
 
 ## Rights Management のアクティブ化と構成
 Windows PowerShell を使用して Azure RMS をアクティブ化および構成できますが、管理ポータルを使用する法が簡単です。 サービスをアクティブ化するとすぐに、2 つの既定のテンプレートが作成されます。管理者とユーザーはこれを選択して迅速かつ簡単にファイルに情報保護を適用できます。 ただし、追加のオプションと設定用に独自のカスタム テンプレートを作成することもできます。
@@ -246,6 +241,7 @@ Bob が電子メールと添付ファイルを転送した場合、他のユー�
 Azure RMS の機能の例をいくつか説明しましたが、そのしくみに関心があるかもしれません。 Azure RMS の動作の技術情報については、「[Azure RMS の機能の詳細](how-does-it-work.md)」をご覧ください。
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

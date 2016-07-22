@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: RMS コネクタのレジストリ設定 | Azure RMS
-description:
-keywords:
+title: "RMS コネクタのレジストリ設定 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: ff90f009f9fda90171bbeeb2a7bb421376d4695c
+
 
 ---
 
@@ -37,7 +31,7 @@ ms.suite: ems
 
 -   *MicrosoftRMSURL* は、組織の Microsoft RMS サービスの URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。.
+    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
@@ -47,7 +41,7 @@ ms.suite: ems
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
--   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、**rmsconnector.contoso.com** です。.
+-   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
 
 -   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、このトピックの「[HTTPS を使用するための RMS コネクタの構成](deploy-rms-connector.md#BKMK_ConfiguringHTTPS)」セクションを参照してください。 Microsoft RMS の URL では常に HTTPS が使用されます。
 
@@ -222,6 +216,7 @@ ms.suite: ems
 
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーション&colon; バージョン リリース履歴 | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーション&colon; バージョン リリース履歴 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
+ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+
 
 ---
 
@@ -34,7 +28,21 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 2015 年 1 月 1 日より前のバージョンは表示されません。
 
 > [!NOTE]
-> RMS 共有アプリケーションに関するフィードバックまたはご質問については、[AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question) まで電子メール メッセージをお送りください。.
+> RMS 共有アプリケーションに関するフィードバックまたはご質問については、 [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)まで電子メール メッセージをお送りください。
+
+## バージョン 1.0.2191.0
+**リリース日**: 2016 年 6 月 16 日
+
+**修正内容**:
+
+- ドキュメント追跡サイトに、追跡対象の各ドキュメントの正確なビューの数が表示されるようになりました。
+
+- すべてのロケールのテンプレートがユーザーに表示されるようになりました。
+
+- PowerPoint ファイルで [保護ファイルの共有] を使用した後、ファイルのローカル バージョンの変更が正しく保存されるようになりました。
+
+- いくつかの軽微なバグと、エラー メッセージが改善されました。
+
 
 ## バージョン 1.0.2004.0
 **リリース日**: 2015 年 12 月 11 日
@@ -62,7 +70,7 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 -   Azure RMS 用の多要素認証 (MFA) をサポートするようになりました。それにより、最新の認証を利用するアプリケーションの Microsoft サインイン アシスタントへの依存関係が削除されました。
 
-    詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」の「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms)」セクションを参照してください。.
+    詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」の「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms)」セクションを参照してください。
 
 ## バージョン 1.0.1784.0
 **リリース日**: 2015 年 7 月 30 日
@@ -84,7 +92,7 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 **新機能**:
 
--   ドキュメントの追跡と取り消しをサポートします。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。.
+-   ドキュメントの追跡と取り消しをサポートします。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。
 
 -   **[保護ファイルの共有]**を選んだ場合のテンプレートのサポート:
 
@@ -94,7 +102,7 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
     -   **[すべてのデバイスで使用を許可する]** と **[使用制限を強制する]**のオプションが表示されなくなりました。 代わりに、ファイルの種類によって **[一般保護]** が自動的に選択されます。
 
-    詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックス オプション](sharing-app-dialog-box.md)」を参照してください。.
+    詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックス オプション](sharing-app-dialog-box.md)」を参照してください。
 
 ## バージョン 1.0.1667.0
 **リリース日**: 2015 年 1 月 19 日
@@ -109,10 +117,11 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 **新機能**:
 
--   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。.
+-   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

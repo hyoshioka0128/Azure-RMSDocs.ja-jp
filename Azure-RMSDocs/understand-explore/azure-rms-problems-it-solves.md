@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure RMS が解決する問題の種類 | Azure RMS
-description:
-keywords:
+title: "Azure RMS が解決する問題の種類 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e84de6afd80196d4237499718af45c64788c408d
+ms.openlocfilehash: 2863c98390b8fda528c4fe3a1b2ebce3510763b4
+
 
 ---
 
@@ -46,7 +40,8 @@ ms.suite: ems
 |シンプルで柔軟なポリシーを作成する能力|√ [権限ポリシーのカスタム テンプレート](../deploy-use/configure-custom-templates.md)を使用すると、管理者はポリシーを簡単に適用でき、ユーザーは適切なレベルの保護を各ドキュメントに適用してアクセスを組織内のユーザーに制限できます。<br /><br />たとえば、全社的戦略が記載された書類を全従業員が共有する場合、社内の全従業員に読み取り専用ポリシーを適用することが考えられます。 また、財務報告など、より機密性の高いドキュメントについては、アクセスを経営幹部にのみ制限することが考えられます。|
 |広範なアプリケーションのサポート|√ Azure RMS は Microsoft Office のアプリケーションやサービスと緊密に統合されており、RMS 共有アプリケーションを使用することで他のアプリケーションにもサポートを広げることができます。<br /><br />√ [Microsoft Rights Management SDK](../develop/developers-guide.md#software-development-kits) は、Azure RMS をサポートするカスタム アプリケーションを作成するための API を社内開発者やソフトウェア ベンダーに提供します。<br /><br />詳細については、「[RMS API をサポートするその他のアプリケーション](api-support.md)」を参照してください。|
 |IT 部門がデータの制御を維持する必要がある|√ 組織は独自のテナント キーを管理し、"[Bring Your Own Key](../plan-design/plan-implement-tenant-key.md)" (BYOK) ソリューションを利用し、ハードウェア セキュリティ モジュール (HSM) にテナント キーを保存することを選択できます。<br /><br />√ 監査と[使用状況の記録](../deploy-use/log-analyze-usage.md)に対応しています。分析してビジネスに必要な洞察に活用したり、誤用を監視したり、(情報の漏えいが発生した場合) 裁判分析を実行したりできます。<br /><br />√ [スーパー ユーザー機能](../deploy-use/configure-super-users.md)を利用した委任アクセスにより、退職者によって保護されたドキュメントであっても、IT 部門は保護されたコンテンツに常にアクセスできます。 これに対し、ピア ツー ピアの暗号化ソリューションでは、企業データにアクセスできなくなるおそれがあります。<br /><br />√ Azure AD Connect などの[ディレクトリ同期ツール](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)を使用して、オンプレミスの Active Directory アカウントに対して共通の ID をサポートするために [Azure RMS が必要とするディレクトリの属性のみ](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms)を同期します。<br /><br />√ AD FS を使用して、パスワードをクラウドにレプリケートすることなくシングル サインオンを有効にします。<br /><br />√ 組織は常に、以前に Azure RMS によって保護されていたコンテンツへのアクセスを失わずに、Azure RMS の使用を停止できます。 使用停止オプションの詳細については、「[Azure Rights Management の使用停止と非アクティブ化](../deploy-use/decommission-deactivate.md)」を参照してください。 さらに、Active Directory Rights Management サービス (AD RMS) をデプロイした組織は、以前に AD RMS によって保護されていたデータへのアクセスを失わずに [Azure RMS に移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)できます。|
-> [!TIP] オンプレミス版の Rights Management である Active Directory Rights Management サービス (AD RMS) の知識がある場合は、「[Azure Rights Management と AD RMS を比較する](compare-azure-rms-ad-rms.md)」の比較表も参照してください。
+> [!TIP]
+> オンプレミス版の Rights Management である Active Directory Rights Management サービス (AD RMS) の知識がある場合は、「[Azure Rights Management と AD RMS を比較する](compare-azure-rms-ad-rms.md)」の比較表も参照してください。
 
 ## セキュリティ、コンプライアンス、および規制の要件
 Azure RMS は、セキュリティ、コンプライアンス、規制に関する次の要件をサポートします。
@@ -77,6 +72,7 @@ Azure RMS は、セキュリティ、コンプライアンス、規制に関す�
 
 Azure RMS の動作に関する技術的な詳細については、「[How does Azure RMS work (Azure RMS の機能の詳細)](how-does-it-work.md)」を参照してください。 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

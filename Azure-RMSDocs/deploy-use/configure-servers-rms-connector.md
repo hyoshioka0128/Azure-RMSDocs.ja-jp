@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure Rights Management コネクタ用にサーバーを構成する | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management コネクタ用にサーバーを構成する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/08/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0b07ecc88b1d2d344f0984d4a805cc033996cc4d
+ms.openlocfilehash: 79171b5931b69ca18d2a2cbe321d5d5887903da2
+
 
 ---
 
@@ -83,7 +77,8 @@ RMS コネクタのインストールと構成が完了したら、Rights Manage
 
 ---
 
-> [!IMPORTANT] いずれの場合でも、前提条件を手動でインストールし、Rights Management を使用するように Exchange、SharePoint、およびファイル分類インフラストラクチャを構成する必要があります。
+> [!IMPORTANT]
+> いずれの場合でも、前提条件を手動でインストールし、Rights Management を使用するように Exchange、SharePoint、およびファイル分類インフラストラクチャを構成する必要があります。
 
 ほとんどの場合、Microsoft RMS コネクタ用のサーバー構成ツールを使用した自動構成が推奨されます。手動構成よりも効率良く確実に構成できるためです。
 
@@ -114,7 +109,8 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 
 スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、https://connector.contoso.com のように入力します。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
-> [!IMPORTANT] このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
+> [!IMPORTANT]
+> このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
 
 各サービス タイプに固有の情報については、次のセクションを参照してください。
 
@@ -188,7 +184,8 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 
 また、SharePoint 2016 または SharePoint 2013 を実行しているサーバーでは、RMS コネクタでサポートされているバージョンの MSIPC クライアント 2.1 も実行されている必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。
 
-> [!WARNING] MSIPC 2.1 クライアントには複数のバージョンがあるため、バージョン 1.0.2004.0 以降を使用していることを確認してください。
+> [!WARNING]
+> MSIPC 2.1 クライアントには複数のバージョンがあるため、必ずバージョン 1.0.2004.0 以降を使用します。
 >
 > クライアントのバージョンを確認するには、MSIPC.dll のバージョン番号を確認します。このファイルは、**\Program Files\Active Directory Rights Management Services Client 2.1** にあります。 プロパティ ダイアログ ボックスに、MSIPC 2.1 クライアントのバージョン番号が表示されます。
 
@@ -252,6 +249,7 @@ RMS コネクタのインストールと構成が完了し、RMS コネクタを
 RMS コネクタを監視するには、「[Azure Rights Management コネクタを監視する](monitor-rms-connector.md)」を参照してください。 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

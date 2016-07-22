@@ -1,28 +1,26 @@
 ---
-# required metadata
-
-title: "Azure RMS のクイック スタート チュートリアル - 手順 5 | AZURE RMS"
+title: "Azure RMS のクイック スタート チュートリアル - 手順 5. | Azure RMS"
 description: "5 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Rights Management を簡単に試すことができるチュートリアルの最後の手順。"
-keywords:
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.technology: techgroup-identity
+ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
-
-# optional metadata
-
-ROBOTS:
-audience:
-ms.devlang:
+ROBOTS: 
+audience: 
+ms.devlang: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ms.tgt_pltfrm: 
+ms.custom: 
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+
 
 ---
 
@@ -83,7 +81,8 @@ Azure RMS を組織にデプロイする準備ができたら、[Azure Rights Ma
 
 あるいは、特定のシナリオ、関連構成手順、エンド ユーザー文書の一覧が必要な場合、「[Azure Rights Management の迅速なデプロイ ガイド](../get-started/rapid-deployment-guide.md)」を参照してください。
 
->[!div class="step-by-step"] [概要](quick-start-tutorial.md)
+>[!div class="step-by-step"]
+[概要](quick-start-tutorial.md)
 [手順 1](tutorial-step1.md)
 [手順 2](tutorial-step2.md)
 [手順 3](tutorial-step3.md)
@@ -91,6 +90,7 @@ Azure RMS を組織にデプロイする準備ができたら、[Azure Rights Ma
 *手順 5*
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

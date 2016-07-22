@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する | Azure RMS
-description:
-keywords:
+title: "ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
+ms.openlocfilehash: d48616cb638522e6cda61e7ae96db9480fc14099
+
 
 ---
 
@@ -35,7 +29,8 @@ Azure Rights Management (Azure RMS) を組織に合わせてデプロイして�
 
     機密情報が含まれるドキュメントおよび電子メールを保護する方法とタイミングについて知らせます。 ユーザーが全く新しいプロセスを導入するのではなく、既に理解しているプロセスに対して追加の手順を組み込むことができるように、可能な限り、既存のワークフローに対してこの情報を提供します。 組織のビジネスに固有のメリット (およびリスク) を知らせ、どのようなときにファイルおよび電子メールを保護する必要があるかについてのガイダンスを提供します。 [カスタム テンプレート](configure-custom-templates.md)を構成した場合、ユーザーがテンプレートの名前と説明だけでは適切なテンプレートを選択できないときにどのテンプレートを選択すればよいのかについてのガイダンスを提供します。
 
-    > [!TIP] エンドユーザー向けの例示ビデオ:
+    > [!TIP]
+    > エンドユーザー向けの例示ビデオ:
     >
     > -   [Azure RMS のユーザー エクスペリエンス](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Azure RMS のドキュメントの追跡と取り消し](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
@@ -75,12 +70,14 @@ Windows コンピューター用のこのアプリケーションの使用方法
 
 モバイル デバイスの場合は、「 [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn451248)」をご覧ください。
 
-> [!TIP] スクリーンショットを含む、大まかなサンプル シナリオが必要な場合、「[ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users)」を参照してください。
+> [!TIP]
+> スクリーンショットを含む、大まかなサンプル シナリオが必要な場合、「[ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users)」を参照してください。
 
 ## Office 365、Office 2016、または Office 2013 での情報保護の使用
 Azure RMS を使用しており、Rights Management 共有アプリケーションをインストールしていない場合、ファイルを簡単に保護するために使用できる、リボンの **[保護ファイルの共有]** ボタンまたはエクスプローラーの **[Protect in-place]** (保護済み) が表示されません。 これらのユーザーについては、次のような指示に従う必要があります。
 
-> [!TIP] これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
+> [!TIP]
+> これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
 #### Word 2013 でドキュメントを保護するには
 
@@ -88,7 +85,8 @@ Azure RMS を使用しており、Rights Management 共有アプリケーショ
 
 2.  [ **ファイル** ] メニューから [ **情報**]、[ **文書の保護**]、[ **アクセスの制限**] の順にクリックし、テンプレートを選択して適切な使用権限を簡単に適用するか、または [ **アクセスの制限** ] を選択して使用権限を自分で選択します。
 
-    > [!NOTE] 初めて Rights Management を使用した場合は、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスに接続され、Office IRM クライアントを構成するための資格情報を要求されます。
+    > [!NOTE]
+    > 初めて Rights Management を使用した場合は、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスに接続され、Office IRM クライアントを構成するための資格情報を要求されます。
 
 3.  ファイルを保存します。
 
@@ -117,6 +115,7 @@ Azure RMS を使用しており、Rights Management 共有アプリケーショ
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

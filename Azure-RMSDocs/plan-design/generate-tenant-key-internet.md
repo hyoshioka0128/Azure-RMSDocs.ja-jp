@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: テナント キーを生成して転送する – インターネット経由 | Azure RMS
-description:
-keywords:
+title: "テナント キーを生成して転送する – インターネット経由 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
+
 
 ---
 
@@ -48,7 +42,7 @@ ms.suite: ems
 > [!NOTE]
 > この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が 2.1.0.0 以上であることを確認します。 `(Get-Module aadrm -ListAvailable).Version`
 
-インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。.
+インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 ### 手順 2:Azure Active Directory テナント ID を取得する
 [ **管理者として実行** ] オプションを指定して Windows PowerShell を起動し、次のコマンドを実行します。
@@ -85,15 +79,15 @@ Microsoft ダウンロード センターにアクセスし、ご利用の地域
 |アジア|AzureRMS-BYOK-tools-AsiaPacific.zip|
 ツールセットの構成内容は次のとおりです。
 
--   キー交換のキー (KEK) パッケージ。名前の先頭に **BYOK-KEK-pkg-** が付きます。.
+-   キー交換のキー (KEK) パッケージ。名前の先頭に **BYOK-KEK-pkg-** が付きます。
 
--   セキュリティ ワールド パッケージ。名前の先頭に **BYOK-SecurityWorld-pkg-** が付きます。.
+-   セキュリティ ワールド パッケージ。名前の先頭に **BYOK-SecurityWorld-pkg-** が付きます。
 
--   Python スクリプト。名前は **verifykeypackage.py** です。.
+-   Python スクリプト。名前は **verifykeypackage.py**です。
 
 -   コマンド ライン実行可能ファイル (**KeyTransferRemote.exe**)、メタデータ ファイル (**KeyTransferRemote.exe.config**)、および関連 DLL。
 
--   Visual C++ 再頒布可能パッケージ。名前は **vcredist_x64.exe** です。.
+-   Visual C++ 再頒布可能パッケージ。名前は **vcredist_x64.exe** です。
 
 パッケージを USB ドライブまたはその他のポータブル ストレージにコピーします。
 
@@ -112,7 +106,7 @@ Thales ツールがパス **(%nfast_home%\bin** と **%nfast_home%\python\bin**)
 ```
 set PATH=%PATH%;”%nfast_home%\bin”;”%nfast_home%\python\bin”
 ```
-詳細については、Thales HSM に付属のユーザー ガイドを参照するか、または Thales 社の Web サイトの Azure RMS に関するページ ([http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)) にアクセスしてください。.
+詳細については、Thales HSM に付属のユーザー ガイドを参照するか、または Thales 社の Web サイトの Azure RMS に関するページ ( [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)) にアクセスしてください。
 
 ### 手順 2:未接続ワークステーションに BYOK ツールセットをインストールする
 USB ドライブまたはその他のポータブル ストレージから BYOK ツールセット パッケージをコピーし、次を実行します。
@@ -188,7 +182,7 @@ new-world.exe --initialize --cipher-suite=DLf1024s160mRijndael --module=1 --acs-
 
 2.  検証が成功したことを示す次のメッセージが表示されることを確認します: **結果:成功**
 
-このスクリプトでは署名者の Thales ルート キーまでのチェーンが検証されます。 このルート キーのハッシュはスクリプトに埋め込まれていて、値は **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**です。 また、[Thales の Web サイト](http://www.thalesesec.com/)でも、別途この値を確認できます。.
+このスクリプトでは署名者の Thales ルート キーまでのチェーンが検証されます。 このルート キーのハッシュはスクリプトに埋め込まれていて、値は **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**です。 また、 [Thales の Web サイト](http://www.thalesesec.com/)でも、別途この値を確認できます。
 
 RMS テナント キーとなる新しいキーを作成する準備ができました。
 
@@ -269,11 +263,11 @@ cngimport --import -M --key=contosokey --appname=simple contosokey
         KeyTransferRemote.exe -ModifyAcls -KeyAppName simple -KeyIdentifier contosokey -ExchangeKeyPackage BYOK-KEK-pkg-AP-1 -NewSecurityWorldPackage BYOK-SecurityWorld-pkg-AP-1
         ```
 
-このコマンドを実行するときは、*contosokey* を「*テナント キーの生成*」セクションの「[手順 1.セキュリティ ワールドの作成](##step-1-create-a-security-world)」で指定した値に置き換えます。
+このコマンドを実行するときは、*contosokey* を「*テナント キーの生成*」セクションの「[手順 1. セキュリティ ワールドの作成](#step-1-create-a-security-world)」で指定した値に置き換えます。
 
 セキュリティ ワールド ACS カードの挿入が求められます。また、指定した場合は、パスワードまたは PIN も求められます。
 
-コマンドが完了すると、**Result: SUCCESS** と表示され、権限が制限されたテナント キーのコピーが、key_xferacId_*&lt;contosokey&gt;* という名前のファイルに保存されます。.
+コマンドが完了すると、**Result: SUCCESS** と表示され、権限が制限されたテナント キーのコピーが、key_xferacId_*&lt;contosokey&gt;* という名前のファイルに保存されます。
 
 ### 手順 2:キーの新しいコピーを検証する
 オプションで、Thales ユーティリティを実行して新しいテナント キーの最小の権限を確認します。
@@ -290,7 +284,7 @@ cngimport --import -M --key=contosokey --appname=simple contosokey
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-これらのコマンドを実行するときは、*contosokey* を「*テナント キーの生成*」セクションの「[手順 1.セキュリティ ワールドの作成](##step-1-create-a-security-world)」で指定した値に置き換えます。
+このコマンドを実行するときは、*contosokey* を「*テナント キーの生成*」セクションの「[手順 1. セキュリティ ワールドの作成](#step-1-create-a-security-world)」で指定した値に置き換えます。
 
 ### 手順 3:Microsoft のキー交換のキーを使用してキーを暗号化する
 地域に応じて次のいずれかのコマンドを実行します。
@@ -315,7 +309,7 @@ cngimport --import -M --key=contosokey --appname=simple contosokey
 
 このコマンドを実行する際は、次の指示に従ってください。
 
--   *contosokey* を、「*テナント キーの生成*」セクションの「[手順 1.セキュリティ ワールドの作成](##step-1-create-a-security-world)」でキーの生成に使用した ID に置き換えます。
+-   *contosokey* を、「*テナント キーの生成*」セクションの「[手順 1. セキュリティ ワールドの作成](#step-1-create-a-security-world)」でキーの生成に使用した ID に置き換えます。
 
 -   *GUID* を、「*インターネット接続ワークステーションを準備する*」セクションの「[手順 2:Azure Active Directory テナント ID を取得する](#step-2-get-your-azure-active-directory-tenant-id)」で取得した Azure Active Directory テナント ID に置き換えます。
 
@@ -383,6 +377,7 @@ Get-AadrmKeys
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

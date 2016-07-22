@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーションの使用によるファイルからの保護の削除 | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーションの使用によるファイルからの保護の削除 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 78ceb74a3dd8492ac5c754eea179525cae819fd0
+
 
 ---
 
@@ -42,7 +36,7 @@ RMS 共有アプリケーションを使用して、保護されていたファ�
 
     資格情報が要求される場合があります。
 
-注: これらのオプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。.
+注: これらのオプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 
 元の保護されたファイル (たとえば、Sample.ptxt) が削除され、同じ名前を持つが、保護されていないファイル名拡張子 (たとえば、Sample.txt) のファイルで置き換えられます。
 
@@ -57,6 +51,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

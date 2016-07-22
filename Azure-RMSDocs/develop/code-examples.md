@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: コード例 | Azure RMS
-description: RMS SDK 4.2 には、いくつかのサポートされているオペレーティング システム向けのコード例と実用的なプロジェクトが含まれています。
-keywords:
+title: "コード例 | Azure RMS"
+description: "RMS SDK 4.2 には、いくつかのサポートされているオペレーティング システム向けのコード例と実用的なプロジェクトが含まれています。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
+ms.openlocfilehash: b46c9eae435dda222606e9bfe7b45b0cb4b1e821
+
 
 ---
 
@@ -49,6 +45,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

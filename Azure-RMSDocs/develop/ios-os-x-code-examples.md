@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: iOS/OS X のコード例 | Azure RMS
-description: このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
-keywords:
+title: "iOS/OS X のコード例 | Azure RMS"
+description: "このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b73c83b91a6b00e44ff6c8fe7f8e954bd9713e34
+ms.openlocfilehash: 66bb1b58cba19d0fe8bc2ec0d3720c0b040f8378
+
 
 ---
 
@@ -40,9 +36,9 @@ ms.suite: ems
 ###シナリオ: RMS 保護ファイルを使用する
 
 
-- **手順 1**. [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) オブジェクトを作成します。
+- **手順 1**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) オブジェクトを作成します。
 
- **説明**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) オブジェクトをインスタンス化します。[**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を使用してサービス認証を実装するその作成メソッドを介して、**MSAuthenticationCallback** のインスタンスをパラメーター *authenticationCallback* として MSIPC API に渡してトークンを取得します。 次のコード例セクションの [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) の呼び出しに注目してください。
+ **説明**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) の呼び出しに注目してください。
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -288,6 +284,7 @@ ms.suite: ems
 
  
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: シナリオ - 役員が安全に特権情報を交換できるようにする | Azure RMS
-description:
-keywords:
+title: "シナリオ - 役員が安全に特権情報を交換できるようにする | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+
 
 ---
 
@@ -56,7 +50,7 @@ ms.suite: ems
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
-|この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」<br /><br />Exchange 2013 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.150%29.asp)」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)」|
+|この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」<br /><br />Exchange 2013 の場合: 「[トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)」|
 
 ### 役員用のカスタム テンプレートを構成するには
 
@@ -138,6 +132,7 @@ ms.suite: ems
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO2-->
 
 

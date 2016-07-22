@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護) | Azure RMS
-description:
-keywords:
+title: "Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護) | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 7cf6ecb95374c080b9b2e94f948ec53ea5e6bb46
+
 
 ---
 
@@ -29,10 +23,10 @@ ms.suite: ems
 
 *適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
-インプレースのファイルを保護する場合は、元の保護されていないファイルを置き換えます。 次に、その場所にファイルを残したまま別のフォルダーやデバイスにコピーするか、ファイルのあるフォルダーを共有すると、ファイルは保護されたままになります。 エクスプローラーまたは Office アプリケーションから直接、電子メールで保護されたファイルを共有することをお勧めしますが、保護されたファイルを電子メール メッセージに添付することもできます (「[Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)」を参照してください)。).
+インプレースのファイルを保護する場合は、元の保護されていないファイルを置き換えます。 次に、その場所にファイルを残したまま別のフォルダーやデバイスにコピーするか、ファイルのあるフォルダーを共有すると、ファイルは保護されたままになります。 エクスプローラーまたは Office アプリケーションから直接、電子メールで保護されたファイルを共有することをお勧めしますが、保護されたファイルを電子メール メッセージに添付することもできます (「[Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)」を参照してください)。
 
 > [!TIP]
-> ファイルを保護しようとするとエラーが表示される場合は、「[FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971)」 (Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ) をご覧ください。.
+> ファイルを保護しようとするとエラーが表示される場合は、「 [Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ](http://go.microsoft.com/fwlink/?LinkId=303971)」をご覧ください。
 
 ## デバイス上のファイルを保護するには (インプレースの保護)
 
@@ -41,7 +35,7 @@ ms.suite: ems
     ![[保護済み] メニュー オプション](../media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
-    > **[RMS による保護]** オプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていないか、コンピューターを再起動してインストールを完了させる必要がある場合があります。 RMS 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。.
+    > **[RMS による保護]** オプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていないか、コンピューターを再起動してインストールを完了させる必要がある場合があります。 RMS 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 
 2.  以下のいずれかを実行します。
 
@@ -51,13 +45,13 @@ ms.suite: ems
 
         ポリシー テンプレートを選ぶと、複数のファイルとフォルダーも保護できます。 1 つのフォルダーを選ぶと、そのフォルダー内のすべてのファイルが自動的に選択されて保護されますが、そのフォルダー内に新たに作成したファイルは自動的に保護されません。
 
-    -   **[カスタム アクセス許可]**を選びます。テンプレートで必要なレベルの保護を指定できない場合や、保護オプションを自分で明示的に設定する場合は、このオプションを選びます。 [[保護の追加] ダイアログ ボックス](sharing-app-dialog-box.md)で、このファイルに必要なオプションを指定し、**[適用]** をクリックします。.
+    -   **[カスタム アクセス許可]**を選びます。テンプレートで必要なレベルの保護を指定できない場合や、保護オプションを自分で明示的に設定する場合は、このオプションを選びます。 [[保護の追加] ダイアログ ボックス](sharing-app-dialog-box.md)で、このファイルに必要なオプションを指定し、**[適用]** をクリックします。
 
 3.  ファイルが保護されていることを確認するダイアログ ボックスがすぐに表示されると、エクスプローラーにフォーカスが戻ります。 選んだファイルやファイルが保護されるようになりました。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Rights Management の保護のロック アイコンの付いた新しいファイルに置き換えられます。 たとえば、
 
     ![RMS 共有アプリケーションのロック アイコン付き保護ファイル](../media/ADRMS_MSRMSApp_Pfile.png)
 
-後でファイルから保護を削除する必要がある場合は、「[Rights Management 共有アプリケーションの使用によるファイルからの保護の削除](sharing-app-remove-protection.md)」を参照してください。.
+後でファイルから保護を削除する必要がある場合は、「[Rights Management 共有アプリケーションの使用によるファイルからの保護の削除](sharing-app-remove-protection.md)」を参照してください。
 
 ## 例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
@@ -70,6 +64,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

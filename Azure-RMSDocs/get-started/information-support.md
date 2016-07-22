@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Azure Rights Management の情報とサポート | Azure RMS
-description:
-keywords:
+title: "Azure Rights Management の情報とサポート | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/13/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6052afabe4894f8129e9eebc93705b219e6ed875
+ms.openlocfilehash: a8f5852d965abe2f2654aa236bfd9ea49a62aa84
+
 
 ---
 
@@ -42,7 +36,8 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 ## Rights Management 製品グループ ブログ
 Rights Management 製品グループは、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)と協力して、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] および関連する技術の技術情報と新規情報を提供しています。 これらのブログには、製品ドキュメントの補足やサポート情報が投稿されます。
 
-> [!TIP] Azure RMS または AD RMS 用のアプリケーションを開発している場合、[Active Directory Rights Management Services (AD RMS) 開発者のコーナー ブログ](http://blogs.msdn.com/b/rms/)もお勧めです。
+> [!TIP]
+> Azure RMS または AD RMS 用のアプリケーションを開発している場合、[Active Directory Rights Management Services (AD RMS) 開発者のコーナー ブログ](https://blogs.msdn.microsoft.com/rms/)もお勧めです。
 
 ## サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。
@@ -71,7 +66,15 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 トラブルシューティング:
 
-- [RMS Analyzer ツール](http://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして実行します。 このツールの詳細については、ダウンロード ページの **[詳細]** と **[インストール手順]** を参照してください。 
+- 機能について質問がある場合は、[よく寄せられる質問](faqs.md)のページで既に回答されているかどうかを確認してください。
+
+- Azure RMS のサポート ポリシーについて質問がある場合は、定期的に更新される「[要件](requirements-azure-rms.md)」の情報を参照してください。
+
+- エンドユーザー、ヘルプ デスク、および Azure RMS を使用するサービスとアプリケーションを構成する管理者をサポートするための情報については、「[ユーザーにファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」を参照してください。
+
+- オンプレミスのサーバー用に RMS コネクタをデプロイした場合は、[監視](../deploy-use/monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
+
+- 自動チェック、自動修復、およびトレースについては、[RMS アナライザー ツール](http://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして実行してください。 このツールの詳細については、ダウンロード ページの **[詳細]** と **[インストール手順]** を参照してください。 
 
 ### コミュニティのリソース
 
@@ -83,6 +86,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

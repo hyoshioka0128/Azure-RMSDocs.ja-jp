@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: コミュニティのリソース | Azure RMS
-description: AD RMS は、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。
-keywords:
+title: "コミュニティのリソース | Azure RMS"
+description: "AD RMS は、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6b5bc9612ac17a2d6905200383d9b8df4c504efe
+ms.openlocfilehash: 1476cfafbc3ecf619e66fee22f657c1714deffe8
+
 
 ---
 
@@ -53,6 +49,7 @@ Microsoft Connect にまだ登録していない場合は、次の手順に従�
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
