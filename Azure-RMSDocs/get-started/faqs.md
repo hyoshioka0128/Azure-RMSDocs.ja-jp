@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b73c83b91a6b00e44ff6c8fe7f8e954bd9713e34
-ms.openlocfilehash: a3ed9e8de496741fae8904481edb1177762a12c0
+ms.sourcegitcommit: e89c59716eef7fbdea415b41b1adfa54b0c16689
+ms.openlocfilehash: bd53b73452f444ac8529a8b8b613e76d8cc234a1
 
 
 ---
@@ -198,9 +198,14 @@ Azure RMS は他のサービスをサポートし、また、他のサービス�
 
 -   Office 365 ライブラリ: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
+## 新しい分類およびラベル付け機能の最新情報は何ですか?
+
+Azure Information Protection のこの機能は現在パブリック プレビュー状態です。 試してみてください。利用可能なリソースの一覧については、「[Azure Information Protection (プレビュー) とは](../information-protection/what-is-information-protection.md)」を参照してください。
+
+
 ## 新しいリリースが Azure RMS ですぐに利用できるようになると聞きました。いつリリースされますか?
 
-技術文書には今後のリリースに関する情報は含まれません。 この種の情報およびリリースの通知については、[Enterprise Mobility and Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)を参照し、Twitter の [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) から最新の情報を入手してください。 Office のリリースにご興味がある場合は、[Office ブログ](https://blogs.office.com/)も確認してください。
+技術文書には今後のリリースに関する情報は含まれません。 この種の情報およびリリースの通知については、[Enterprise Mobility and Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)を参照し、Twitter の [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) から最新の情報を入手してください。 Office のリリースに興味がある場合は、[Office ブログ](https://blogs.office.com/)も確認してください。
 
 ## 質問がここに含まれていない場合は、どうすればよいですか
 「[Azure Rights Management の情報とサポート](information-support.md)」に一覧表示されているリンクとリソースを使用します。
@@ -219,6 +224,6 @@ Azure RMS は他のサービスをサポートし、また、他のサービス�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

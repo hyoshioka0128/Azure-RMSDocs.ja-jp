@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 7d6e1d818c8eb4f6d2e4e7d320e44c7f159eabb4
+ms.sourcegitcommit: 0e9551db57cc1295f20368535267ca5a901ae9f2
+ms.openlocfilehash: a95b9679578f6786bd883884cd5c5f84cb6db739
 
 
 ---
@@ -31,7 +31,8 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 |アクティブ化|[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスを有効化して、組織がドキュメントや電子メールに情報保護を追加できるようにします。 この操作により、Exchange Online と SharePoint Online の Rights Management 機能も有効になります。|
 |Active Directory Rights Management サービス|*AD RMS*という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した情報保護機能により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
-|Azure の権限管理|*Azure RMS*という略称で呼ばれることもあります。<br /><br />Azure サービスの 1 つで、暗号化とドキュメント、ファイル、電子メールを保護するポリシーによって情報保護機能を提供します。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />*Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />*RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
+|Azure Information Protection|現在プレビュー状態であるこのサービスは、分類、ラベル付け、保護を使用して、ドキュメントと電子メールを保護します。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
+|Azure Rights Management|*Azure RMS*という略称で呼ばれることもあります。<br /><br />Azure サービスの 1 つで、暗号化とドキュメント、ファイル、電子メールを保護するポリシーによって情報保護機能を提供します。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />*Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />*RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
 |Azure RMS|*Azure Rights Management*をご覧ください。|
 |BYOK|*Bring Your Own Key*をご覧ください。|
 |Bring Your Own Key|*BYOK*という略称で呼ばれることもあります。<br /><br />組織が [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の独自のテナント キーを生成および管理するときに選択する構成オプションです。|
@@ -71,6 +72,6 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

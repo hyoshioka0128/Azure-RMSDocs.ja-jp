@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6a2989f4a6d919d9a2a3d301467353f052bd10ea
-ms.openlocfilehash: d67caf4ebbe19e4f67061d006da1fdedea0d5761
+ms.sourcegitcommit: 5737594c679be0702761014425e104e5eade59f3
+ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
 
 
 ---
@@ -26,6 +26,8 @@ ms.openlocfilehash: d67caf4ebbe19e4f67061d006da1fdedea0d5761
 
 
 カスタム テンプレートは、Azure クラシック ポータルで作成および管理します。 この作業は、Azure クラシック ポータルから直接行うことができます。また、Office 365 管理センターにサインインして Rights Management の **[高度な機能]** を選択し、Azure クラシック ポータルにリダイレクトすることもできます。
+
+Azure クラシック ポータルでテンプレートを作成および管理するには、グローバル管理者である必要があります。 Azure RMS のグローバル管理者ロールを他のユーザーに割り当ててある場合は、そのユーザーもテンプレートを作成および管理できますが、[PowerShell](configure-templates-with-powershell.md) を使用する必要があります。 詳細については、「[Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)」を参照してください。 
 
 Rights Management のテンプレートを作成、構成、およびパブリッシュするには、次の手順を使用します。
 
@@ -115,7 +117,7 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 
 8.  [次へ] ボタンをクリックし、部門別テンプレートのアプリケーション互換性を構成する必要があるかどうかを決定します。 必要がある場合、 **[アプリケーションの互換性]**をクリックし、チェック ボックスをオンにして **[完了]**をクリックします。
 
-    アプリケーションの互換性を構成する必要があるのはなぜでしょうか。 アプリケーションの一部では部門別テンプレートがサポートされません。 サポートするには、テンプレートをダウンロードする前に、アプリケーションは RMS サービスで認証する必要があります。 認証プロセスが行われない場合、既定では、部門別テンプレートはダウンロードされません。 この動作は上書きできます。その場合、すべての部門別テンプレートがダウンロードされるように指定し、アプリケーション互換性を構成し、 **[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェックボックスを選択します。
+    アプリケーションの互換性を構成する必要があるのはなぜでしょうか。 アプリケーションの一部では部門別テンプレートがサポートされません。 サポートするには、テンプレートをダウンロードする前に、アプリケーションは RMS サービスで認証する必要があります。 認証プロセスが行われない場合、既定では、部門別テンプレートはダウンロードされません。 この動作は上書きできます。その場合、すべての部門別テンプレートがダウンロードされるように指定し、アプリケーション互換性を構成し、 **[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** ボックスを選択します。
 
     たとえば、人事部門の例で部門別テンプレートのアプリケーション互換性を構成しない場合、RMS 共有アプリケーションの使用時に人事部門のユーザーにのみ部門別テンプレートが表示されますが、Exchange Server 2013 の Outlook Web Access (OWA) の使用時にはどのユーザーにも部門別テンプレートは表示されません。Exchange OWA と Exchange ActiveSync は部門別テンプレートを現在サポートしていないためです。 アプリケーション互換性を構成し、この既定の動作を上書きする場合、RMS 共有アプリケーションの使用時に、人事部門のユーザーにのみ、部門別テンプレートが表示されるが、Outlook Web Access (OWA) の使用時は、すべてのユーザーに部門別テンプレートが表示されます。 ユーザーが Exchange Online の OWA または Exchange ActiveSync を使用する場合は、Exchange Online でのテンプレートの状態 (アーカイブまたは公開済み) に基づいて、すべてのユーザーに部門別テンプレートが表示されるか、どのユーザーにも部門別テンプレートは表示されません。
 
@@ -165,6 +167,6 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

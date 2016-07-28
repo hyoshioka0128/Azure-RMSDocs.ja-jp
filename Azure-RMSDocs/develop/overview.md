@@ -1,10 +1,10 @@
 ---
-title: "概要 | Azure RMS"
+title: "概要 - RMS SDK 4.2 | Azure RMS"
 description: "AD RMS および Azure RMS は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。"
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -14,18 +14,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 417888c5445d702b1f700a8e717fbb746593efc6
+ms.sourcegitcommit: 5afdf526fe9f8486c6a778eebf10899e0bd9f839
+ms.openlocfilehash: d55a16d7ff6f11db3c02d3494dcdd088bffc8500
 
 
 ---
 
 # 概要
 
-
-Microsoft Rights Management サービス (AD RMS および Azure RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。 コンテンツの所有者は、権限を有効にしたアプリケーションを通じて、そのコンテンツを開く、変更する、印刷する、転送する、などの操作を実行できるユーザーを定義することができます。
-
-Microsoft Rights Management SDK 4.2 は、複数のプラットフォームで使用できる、クライアント コンピューターおよびデバイス向けに ”権限が有効になった” アプリケーションからの情報へのアクセスおよび使用を保護するために設計されている Software Developer Kit (SDK) またはフレームワークです。 これらのプラットフォーム用の SDK によって、デジタル コンテンツの保護と使用、テンプレートの取得、サーバーからのポリシーの取得、およびその他の関連する権限関連タスクの実行を行うための単純な API がアプリケーション開発者に提供されます。
+Microsoft Rights Management SDK 4.2 は情報保護テクノロジであり、複数のプラットフォームで利用できます。  クライアント コンピューターおよびデバイス向けに "権限が有効になった" アプリケーションからの情報へのアクセスおよび使用を保護するために設計されている Software Developer Kit (SDK) またはフレームワークを提供します。 これらのプラットフォーム用の SDK によって、デジタル コンテンツの保護と使用、テンプレートの取得、サーバーからのポリシーの取得、およびその他の関連する権限関連タスクの実行を行うための単純な API がアプリケーション開発者に提供されます。
 
 現在サポートされているプラットフォームの詳細については、[Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) の開発者ドキュメント ポータルを参照してください。
 
@@ -67,6 +64,6 @@ MS RMS SDK 4.2 には、次のような便利な新機能があります。
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

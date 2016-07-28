@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
+ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
+ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
 企業ネットワークで Microsoft Rights Management 共有アプリケーションを担当している場合や、「[Rights Management sharing application user guide (Rights Management 共有アプリケーション ガイド](sharing-app-user-guide.md))」または「[FAQ for Microsoft Rights Management Sharing Application for Windows (Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ)](http://go.microsoft.com/fwlink/?LinkId=303971)」よりも詳細な技術情報が必要な場合は、以下の情報を使用してください。
 
 RMS 共有アプリケーションは Azure RMS での作業に最適です。このデプロイメント構成では、別の組織のユーザーへの保護された添付ファイルの送信、および電子メール通知やドキュメントの追跡と取り消しなどのオプションがサポートされているためです。  ただし、いくつかの制限はあるものの、オンプレミス バージョンの AD RMS でも使用できます。 Azure RMS と AD RMS でサポートされている機能の包括的な比較については、「[Azure Rights Management と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。 AD RMS を所有していて、Azure RMS に移行する場合は、「[AD RMS から Azure Rights Management に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
+
+Rights Management 共有アプリケーションの技術的概要、ネイティブ保護とジェネリック保護についての情報、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法については、「[Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細](sharing-app-admin-guide-technical.md)」を参照してください。 
 
 ## Microsoft Rights Management 共有アプリケーションの自動デプロイ
 Windows 版の RMS 共有アプリケーションはスクリプト化されたインストールをサポートするため、企業のデプロイメントに適しています。
@@ -116,13 +118,13 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         > [!NOTE]
         > このコマンドでは、Azure の資格情報の入力が求められる場合があります。 コンピューターがドメインに参加していない場合は、入力が求められます。 コンピューターがドメインに参加している場合は、キャッシュされた資格情報をツールで使用できる場合があります。
 
-2.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権で次のコマンドを実行します。
+2.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権を使用して次のコマンドを 1 回実行します。
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  RMS 共有アプリケーションをインストールする各コンピューターで、ユーザーは次のコマンドを実行する必要があります (昇格した特権は必要ありません)。 これを行うにはさまざまな方法があります。たとえば、コマンド (電子メール メッセージ内のリンクやヘルプ デスク ポータル上のリンクなど) の実行をユーザーに依頼したり、ログオン スクリプトに追加したりします。
+3.  RMS 共有アプリケーションをインストールする各コンピューターで、そのコンピューターの各ユーザーは次のコマンドを実行する必要があります (昇格した特権は必要ありません)。 これを行うにはさまざまな方法があります。たとえば、コマンド (電子メール メッセージ内のリンクやヘルプ デスク ポータル上のリンクなど) の実行をユーザーに依頼したり、ログオン スクリプトに追加したりします。
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -367,6 +369,6 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

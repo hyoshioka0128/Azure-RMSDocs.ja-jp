@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/16/2016
+ms.date: 07/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
-ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
+ms.sourcegitcommit: 4d6e0af200410b5af4e290ee0e6f94725916ecde
+ms.openlocfilehash: e9f2fe16494af2286d8ed77d0894bb5229e7c246
 
 
 ---
@@ -245,8 +245,8 @@ Office アプリケーションで、この権限はドキュメントを変更�
 |---------------------|----------------|---------------------------------|
 |表示者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、返信、全員に返信|
 |レビュー担当者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、権限の変更、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、権限の変更、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
+|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
+|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
 
 ----
 
@@ -289,6 +289,6 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

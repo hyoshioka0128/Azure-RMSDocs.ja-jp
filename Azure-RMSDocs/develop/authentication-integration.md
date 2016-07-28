@@ -4,7 +4,7 @@ description: "RMS 対応アプリケーションのユーザー認証の基本�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 07/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
-ms.openlocfilehash: 34a82f31b5da46a59627ff559deb46c8445fcdf2
+ms.sourcegitcommit: 04454886841fe7b3482d10e1e32422f28d1c434f
+ms.openlocfilehash: fbe12e339d3fb8fc62aabc34aaa9f5f043e95de9
 
 
 ---
@@ -29,6 +29,9 @@ ms.openlocfilehash: 34a82f31b5da46a59627ff559deb46c8445fcdf2
 
 ## Azure ポータルでの登録
 まず、Azure ポータルでアプリの登録を構成するためのガイド「[Configure Azure RMS for ADAL authentication (Azure RMS の ADAL 認証を構成する)](adal-auth.md)」に従ってください。 後で使用するために、このプロセスでの**クライアント ID** と**リダイレクト URI** をコピーして保存しておいてください。
+
+## Rights Management License Agreement (RMLA) に同意する
+アプリケーションを展開する前に、Microsoft Rights Management チームとの RMLA に同意する必要があります。 詳細については、「[運用環境にデプロイする](deploying-your-application.md)」トピックの「運用環境の使用許諾契約書の要求」セクションを参照してください。
 
 ## アプリのユーザー認証の実装
 各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。
@@ -271,6 +274,6 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 50ebcd71336baeb68687e2d0c1ff1f0608925761
-ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
+ms.sourcegitcommit: 2fab331a26e18730e9cc64a24c0501b7ae21aa1b
+ms.openlocfilehash: f225d8579e2440d2eb00a4f821a78727b6442fdd
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
 |Azure AD ディレクトリ|RMS のユーザー認証をサポートするために組織で Azure AD ディレクトリが必要です。 また、オンプレミスのディレクトリ (AD DS) のユーザー アカウントを使用する場合は、ディレクトリ統合も構成する必要があります。<br /><br />必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure RMS で Multi-Factor Authentication (MFA) がサポートされます。<br /><br />詳細については、「[Azure AD ディレクトリ](requirements-azure-ad.md)」を参照してください。|
 |クライアント デバイス|ユーザーは RMS をサポートするオペレーティング システムを実行するクライアント デバイス (コンピューターまたはモバイル デバイス) を持っている必要があります。<br /><br />詳細については、「[Azure RMS をサポートするクライアント デバイス](requirements-client-devices.md)」を参照してください。|
 |アプリケーション|ユーザーは、RMS をサポートするアプリケーションを実行する必要があります。<br /><br />詳細については、[Azure RMS をサポートするアプリケーション](requirements-applications.md)に関するセクションを参照してください。|
-|インターネットと依存クラウド サービスへの接続をサポートするインフラストラクチャ|特定の接続を許可するように構成する必要があるファイアウォールまたは同様の介在するネットワーク デバイスがある場合は、「[Office 365 URL および IP アドレス範囲](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)」を参照してください。<br /><br />「**Office 365 ポータルと共有**」セクションと「**Office 365 の認証と ID**」セクション内の URL と IP アドレスのリストは、Office 365 ポータル、Azure Active Directory リソース、および Azure Rights Management に適用されます。 RSS フィードを購読して最新の情報を入手するにはこの記事の手順を使用してください。<br /><br />Office の記事の情報に加えて、Azure RMS に固有の要件は以下のとおりです。<br /><br />- TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、Azure RMS との通信を保護するのに RMS クライアントが Microsoft が管理する CA と使用する証明書のピン留めが解除されます。<br /><br />- 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。|
+|インターネットと依存クラウド サービスへの接続をサポートするインフラストラクチャ|特定の接続を許可するように構成する必要があるファイアウォールまたは同様の介在するネットワーク デバイスがある場合は、Office 記事「[Office 365 URL および IP アドレス範囲](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)」の「[Office 365 ポータルと共有](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_Portal-identity)」セクションで **Azure Rights Management (RMS)** に関する情報を参照してください。<br /><br />RSS フィードを購読して最新の情報を入手するには、この Office 記事の手順を使用してください。<br /><br />Office の記事の情報に加えて、Azure RMS に固有の要件は以下のとおりです。<br /><br />- TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、Azure RMS との通信を保護するのに RMS クライアントが Microsoft が管理する CA と使用する証明書のピン留めが解除されます。<br /><br />- 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。|
 
 オンプレミス サーバーで Azure RMS を使用する場合は、以下の製品がサポートされます。
 
@@ -56,6 +56,6 @@ ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

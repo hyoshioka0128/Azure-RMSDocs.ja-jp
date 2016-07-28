@@ -1,9 +1,9 @@
 ---
 asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
-title: "Azure Rights Management のドキュメント"
+title: "Azure Rights Management のドキュメント - RMS のドキュメント | Microsoft ドキュメント"
 description: "Azure Rights Management の技術ドキュメント"
-keywords: rights management documentation, rms documentation, Azure RMS documentation
+keywords: "Rights Management のドキュメント、RMS のドキュメント、Azure RMS のドキュメント"
 author: msmbaldwin
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -14,15 +14,15 @@ ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 translationtype: Human Translation
-ms.sourcegitcommit: 80de3ab273c090f466fc381390d84b8f7b90f6f4
-ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
+ms.sourcegitcommit: e5a1860afff2682cce093523b33c9e99b93d446d
+ms.openlocfilehash: 57b04bccfd2f650c24875d20baf89040c69ab0f6
 
 
 ---
-# Azure Rights Management のドキュメント
+# Azure Rights Management (RMS) のドキュメント
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management のドキュメント</h1>
+      <h1>Azure Rights Management (RMS) のドキュメント</h1>
       <h2>Azure Rights Management (Azure RMS) のデプロイと管理方法 Rights Management を使用すると、電子メール、ドキュメント、その他の機密データの情報をすぐ保護できます。</h2>
       <h3>Azure RMS を初めて使いますか? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">製品サイトを参照する &rarr;</a></h3>
     </section>
@@ -36,11 +36,12 @@ ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
       <h2 class="section-heading"><span class="icon icon-warning"></span> おすすめコンテンツ</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="./understand-explore/what-is-azure-rms.md">Azure Active Directory Rights Management の概要</a></li>
+          <li><mark><b>新しい</b></mark> <a href="./information-protection/what-is-information-protection.md"> Azure Information Protection (プレビュー)</a></li>
+          <li><a href="./understand-explore/what-is-azure-rms.md">Azure Rights Management とは</a></li>
           <li><a href="./get-started/quick-start-tutorial.md">Azure RMS のクイック スタート チュートリアル</a></li>
-          <li><a href="./get-started/rapid-deployment-guide.md">Azure RMS の迅速なデプロイ ガイド</a></li>
         </ul>
         <ul class="column column-half">
+          <li><a href="./get-started/rapid-deployment-guide.md">Azure RMS の迅速なデプロイ ガイド</a></li>
           <li><a href="./plan-design/deployment-roadmap.md">Azure RMS のデプロイ ロードマップ</a></li>
           <li><a href="./develop/developers-guide.md">アプリケーションを Azure RMS と統合</a></li>
         </ul>
@@ -214,6 +215,39 @@ ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
                 </li>
               </ul>
             </section>
+          <li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="./information-protection/what-is-information-protection.md">
+                <div class="title column-third">
+                  <span class="step-number"> 6</span>
+                  <p>Azure Information Protection (プレビュー)</p>
+                </div>
+                <p class="description column-two-thirds">Azure Information Protection (現在プレビュー中) を使用すると、データを分類、ラベル付け、保護できます。
+                </p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="./information-protection/what-is-information-protection.md">
+                    <h3>Azure Information Protection とは</h3>
+                    <p>Azure Rights Management (RMS) および Secure Islands の分類およびラベル付けテクノロジと連動する Azure Information Protection について説明します。</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./information-protection/infoprotect-quick-start-tutorial.md">
+                    <h3>Azure Information Protection クイック スタート チュートリアル</h3>
+                    <p>わずか 4 つの手順で Azure Information Protection を使い始めることができます。</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./information-protection/faq.md">
+                    <h3>Azure Information Protection についてよく寄せられる質問</h3>
+                    <p>Azure Information Protection に関してよく寄せられる質問にお答えします。</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
           </li>
         </ul>
       </section>
@@ -228,6 +262,6 @@ ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
