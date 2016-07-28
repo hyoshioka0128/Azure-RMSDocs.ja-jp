@@ -1,7 +1,7 @@
 ---
 title: "Azure RMS の ADAL 認証を構成する | Azure RMS"
 description: "Azure ADAL 基盤の認証を構成する手順について説明します。"
-keywords: authentication, RMS, ADAL
+keywords: "認証、RMS、ADAL"
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
@@ -109,6 +109,6 @@ Microsoft Azure にサインアップした後:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

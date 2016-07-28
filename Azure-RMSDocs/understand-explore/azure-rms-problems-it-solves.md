@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e84de6afd80196d4237499718af45c64788c408d
-ms.openlocfilehash: 2863c98390b8fda528c4fe3a1b2ebce3510763b4
+ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
+ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: 2863c98390b8fda528c4fe3a1b2ebce3510763b4
 
 |要件または問題|Azure RMS による解決方法|
 |--------------------------|-----------------------|
-|あらゆる種類のファイルを保護する|√ 以前の Rights Management の実装では、ネイティブ保護を使用して、Office ファイルのみを保護できました。 ここで、[汎用的な保護](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)とは、あらゆる種類のファイルがサポートされることを意味します。|
+|あらゆる種類のファイルを保護する|√ 以前の Rights Management の実装では、ネイティブ保護を使用して、Office ファイルのみを保護できました。 ここで、[汎用的な保護](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)とは、あらゆる種類のファイルがサポートされることを意味します。|
 |あらゆる場所のファイルを保護する|√ ファイルがある場所に保存されると ([保護済み](../rms-client/sharing-app-protect-in-place.md))、クラウド ストレージ サービスなど、IT の制御下にないストレージにファイルがコピーされる場合でも、保護は維持されます。|
 |電子メールによるファイル共有をセキュリティで保護する|√ ファイルが電子メールで共有されるとき ([保護された共有](../rms-client/sharing-app-protect-by-email.md))、ファイルは電子メール メッセージの添付ファイルとして保護されます。保護された添付ファイルを開く方法に関する指示が与えられます。 電子メール テキストは暗号化されないので、受信者は常にこの手順を読むことができます。 ただし、添付されたドキュメントは保護されているので、電子メールまたはドキュメントが他の人に転送されたとしても、承認済みのユーザーのみがドキュメントを開くことができます。|
 |監査と監視|√ 保護されたファイルが組織外部に出た後も、ファイルの[使用状況を監査および監視](../deploy-use/log-analyze-usage.md)できます。<br /><br />たとえば、Contoso, Ltd の社員が Fabrikam, Inc. の 3 人の社員と共同プロジェクトに携わっていて、読み取り専用の保護ドキュメントをこの 3 人に電子メールで送信するとします。 Azure RMS の監査機能は次の情報を提供できます。<br /><br />- Fabrikam 社内の指定されたユーザーがドキュメントを開いたかどうか、および開いた日時。<br /><br />- ドキュメントが転送されたり他のユーザーがアクセスできる共有場所に保存されたりして、指定外のユーザーがドキュメントを開こうとしたかどうか (試みは失敗します)。<br /><br />- 指定されたユーザーがドキュメントを印刷または変更しようとしたかどうか (試みは失敗します)。|
@@ -73,6 +73,6 @@ Azure RMS は、セキュリティ、コンプライアンス、規制に関す�
 Azure RMS の動作に関する技術的な詳細については、「[How does Azure RMS work (Azure RMS の機能の詳細)](how-does-it-work.md)」を参照してください。 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

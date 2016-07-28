@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
 
 
 ---
@@ -32,14 +32,14 @@ ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
 
 選択できるオプション以外に、次の点についても説明します。
 
--   [自動的に作成される .ppdf ファイルとは](#what-s-the-ppdf-file-that-s-automatically-created-)
+-   [自動的に作成される .ppdf ファイルとは](#what-s-the-ppdf-file-that-s-automatically-created)
 
--   [一般的な保護と組み込みの (ネイティブ) 保護の違い](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)
+-   [一般的な保護と組み込みの (ネイティブ) 保護の違い](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |オプション|説明|
 |----------|---------------|
 |**ユーザー**|まだ Outlook の電子メール アドレスを指定していない場合は、ファイルを開くことができるようにするユーザーの電子メール アドレスを入力します。<br /><br />RMS 共有アプリではすべての電子メール アドレスがサポートされるわけではないことに注意してください。<br /><br />組織でオンプレミス バージョンの Rights Management (AD RMS) を使用している場合、指定できる電子メール アドレスは、組織内のユーザーに制限されます。 このとき、外部の電子メール アドレスを指定しようとすると、会社の設定により会社内でのみ保護されたコンテンツの共有が許可されているというメッセージが表示されます。 <br /><br /> 組織で Azure RMS を使用する場合は、組織内のユーザー用、または別の組織のユーザー用の電子メール アドレスを指定することができます。<br /><br />例: **janetm@contoso.com; p.dover@fabrikam.com**<br /><br />現在、個人の電子メール アドレスは RMS 共有アプリでサポートされていません。|
-|**一般保護**|このオプションをオンにすると、選んだファイルをネイティブ保護できなくなります。 詳細については、 このページの「[一般的な保護と組み込みの (ネイティブ) 保護の違い](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)」をご覧ください。|
+|**一般保護**|このオプションをオンにすると、選んだファイルをネイティブ保護できなくなります。 詳細については、 このページの「[一般的な保護と組み込みの (ネイティブ) 保護の違い](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)」をご覧ください。|
 |**表示者 – 表示のみ**<br /><br />**レビュー担当者 - 表示と編集**<br /><br />**共同作成者 - 表示、編集、コピー、印刷**<br /><br />**共同所有者 - すべてのアクセス許可**<br /><br />注: これらすべてのオプション名の前には、地球を示す丸いアイコンが表示されます。 このアイコンは、通常、別組織の相手に添付ファイルを送信するときに、これらのオプションのいずれかを選んだ場合に表示されます。|保護ドキュメントの権限を定義する場合は、これらのオプションのいずれかを選びます。 各オプションをクリックすると、説明が表示されます。<br /><br />これらのオプションのいずれかを選ぶと、 **[ユーザー]** で指定した相手のみに、ドキュメントを開いて使用する権限が付与されます。 たとえば、他の人に転送すると、その相手はドキュメントを開くことができません。|
 |管理者が構成するポリシー テンプレート。<br /><br />たとえば、会社名が Contoso, Ltd の場合、"**Contoso, Ltd - 社外秘、表示のみ**" となります。<br /><br />注: これらすべてのオプション名の前には、オフィスの建物を示す四角形のアイコンが表示されます。 このアイコンは、通常、組織内の相手に添付ファイルを送信するときに、これらのオプションのいずれかを選んだ場合に表示されます。|組織のために働いている相手とドキュメントを共有すると、管理者が構成した使用可能なポリシー テンプレートが表示されます。 組織の外部でドキュメントを共有しない場合は、これらのいずれかを選びます。<br /><br />これらのオプションのいずれかを選ぶと、管理者がドキュメントの権限と開くことができるユーザーを定義します。|
 |**ドキュメントの有効期限**|このオプションは、時間が重要なファイルに対してのみ選びます。選択されたユーザーは、指定した日付の後にこのファイルを開くことはできません。 自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 指定した日付の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。<br /><br />管理者が構成したポリシー テンプレートを選んだ場合、このオプションは使用できません。|
@@ -71,7 +71,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## 参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
@@ -79,6 +79,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

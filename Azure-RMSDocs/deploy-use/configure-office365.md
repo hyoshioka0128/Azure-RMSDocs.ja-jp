@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 7a2436a6ebb17e4336f1321b8f3742e34ea59689
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 3592fb7c386eaeddc839c11a494f94d9b7564472
 
 
 ---
@@ -114,7 +114,7 @@ Exchange Online を構成して Azure RMS をサポートするには、Exchange
     Remove-PSSession $Session
     ```
 
-ユーザーは、Azure RMS を使用して、電子メール メッセージを保護できるようになりました。 たとえば、Outlook Web App で、拡張メニュー ( **...** ) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの一つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
+ユーザーは、Azure RMS を使用して、電子メール メッセージを保護できるようになりました。 たとえば、Outlook Web App で、拡張メニュー ( **...** ) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの 1 つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
 
 > [!IMPORTANT]
 > Azure RMS 用の新規 [カスタム テンプレート](configure-custom-templates.md) を作成する、またはテンプレートを更新する場合は常に、次の Exchange Online の PowerShell コマンドを実行して (必要に応じて手順 2 および 3 を最初に実行します)、これらの変更を Exchange Online に同期します。 `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -559,7 +559,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
     3.  `$webUrls` を探し、例の値をユーザーの OneDrive for Business Web URL に置き換え、必要に応じてエントリを追加または削除します。
 
-        または、スクリプトのコメントを参考にして、構成する必要のあるすべての URL を含む .CSV ファイルをインポートして、この配列を置き換えます。  自動的に URL を検索して抽出し、この .CSV ファイルを作成する、別のサンプル スクリプトが提供されています。 これを行う準備ができたら、これらの手順を実行した直後に「[すべての OneDrive for Business URL を .CSV ファイルに出力するための追加スクリプト](#BKMK_Script_OD4B_URLS)」セクションを展開します。
+        または、スクリプトのコメントを参考にして、構成する必要のあるすべての URL を含む .CSV ファイルをインポートして、この配列を置き換えます。  自動的に URL を検索して抽出し、この .CSV ファイルを作成する、別のサンプル スクリプトが提供されています。 これを行う準備ができたら、これらの手順を実行した直後に「[すべての OneDrive for Business URL を .CSV ファイルに出力するための追加スクリプト](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file)」セクションの手順を実行します。
 
         ユーザーの OneDrive for Business の Web URL の形式は、https://*&lt;テナント名&gt;*-my.sharepoint.com/personal/*&lt;ユーザー名&gt;*_*&lt;テナント名&gt;*_com です。
 
@@ -569,7 +569,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
     5.  `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 
-5.  スクリプトを保存し、署名します。 スクリプトに署名しない場合は (より安全)、署名されていないスクリプトを実行するようにコンピューターで Windows PowerShell を構成する必要があります。 そのためには、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy Unrestricted**」と入力します。 ただし、この構成を使用すると署名されていないすべてのスクリプトを実行できます (セキュリティが低下) 。
+5.  スクリプトを保存し、署名します。 スクリプトに署名しない場合は (より安全)、署名されていないスクリプトを実行するようにコンピューターで Windows PowerShell を構成する必要があります。 そのためには、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy Unrestricted**」と入力します。 ただし、この構成を使用すると署名されていないすべてのスクリプトを実行できます (セキュリティが低下)。
 
     Windows PowerShell スクリプトへの署名の詳細については、PowerShell のドキュメント ライブラリの「 [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) 」を参照してください。
 
@@ -1106,6 +1106,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

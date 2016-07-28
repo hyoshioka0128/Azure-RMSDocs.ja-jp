@@ -1,7 +1,7 @@
 ---
 title: "RMS 対応アプリケーションの ADAL 認証 | Azure RMS"
 description: "ADAL での認証プロセスの概要を説明します。"
-keywords: authentication, RMS, ADAL
+keywords: "認証、RMS、ADAL"
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
@@ -124,6 +124,6 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b
+ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
+ms.openlocfilehash: cd19be1c0319a3d2a4609030c0114b07b461c1d8
 
 
 ---
@@ -41,7 +41,7 @@ ms.openlocfilehash: c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b
 ファイル名拡張子が異なる 2 つのバージョンのファイルが表示される場合、拡張子が .ppdf のファイルは、他のファイルが開かない場合にのみ開いてください。 .ppdf バージョンを開くことができない場合は、最初に [RMS 共有アプリケーション](install-sharing-app.md)をインストールします。このアプリケーションは、.ppdf ファイル名拡張子を持つファイルを開く方法を認識しています。
 
 > [!NOTE]
-> 詳細については、「[自動的に作成される .ppdf ファイルとは](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)」を参照してください。
+> 詳細については、「[自動的に作成される .ppdf ファイルとは](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)」を参照してください。
 
 ファイルを開く方法はファイルが保護された方法によって異なり、ファイルが保護された方法はファイル名拡張子を見るとわかります。 いずれの場合も、ファイルを開くと監査される場合があり、保護されている限り監査された状態のままになります。 さらに、ファイルが電子メールの添付ファイルとして送信された場合、ファイルを開くたびに送信者に電子メールで通知される可能性があります。
 
@@ -101,13 +101,13 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## 参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

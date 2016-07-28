@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: RMS コネクタのレジストリ設定 | Azure RMS
-description:
-keywords:
+title: "RMS コネクタのレジストリ設定 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 935c354f9bcd3be23a953cdeb08c7860257637d6
+ms.openlocfilehash: 5099a10a183f1c78595794511654226265e740c8
+
 
 ---
 
@@ -37,7 +31,7 @@ ms.suite: ems
 
 -   *MicrosoftRMSURL* は、組織の Microsoft RMS サービスの URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。.
+    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
@@ -47,9 +41,9 @@ ms.suite: ems
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
--   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、**rmsconnector.contoso.com** です。.
+-   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
 
--   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、このトピックの「[HTTPS を使用するための RMS コネクタの構成](deploy-rms-connector.md#BKMK_ConfiguringHTTPS)」セクションを参照してください。 Microsoft RMS の URL では常に HTTPS が使用されます。
+-   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、「[HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)」セクションを参照してください。 Microsoft RMS の URL では常に HTTPS が使用されます。
 
 
 ## Exchange 2016 または Exchange 2013 のレジストリ設定
@@ -222,6 +216,7 @@ ms.suite: ems
 
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

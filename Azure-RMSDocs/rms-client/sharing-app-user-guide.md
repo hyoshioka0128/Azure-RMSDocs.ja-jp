@@ -13,8 +13,8 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 46e5d3c9ea001d2fa157187a8b78c2dc3e6516f3
+ms.sourcegitcommit: 384a58f32aae8c7d908392e7fd9a1629bc05cdff
+ms.openlocfilehash: d3727eb963532e03137aea2140293fa9c5821db2
 
 
 ---
@@ -43,29 +43,31 @@ Windows 用 Microsoft Rights Management (RMS) 共有アプリケーションは�
 
 ## 作業内容
 > [!NOTE]
-> サポートされているファイルの種類や、エンタープライズ ネットワークにこのアプリケーションをインストールする方法など、詳細な技術情報については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」を参照してください。
+> [サポートされているファイルの種類](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)や、[エンタープライズ ネットワークにこのアプリケーションをインストールする方法](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)など、詳細な技術情報については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」を参照してください。
 
--   [共有アプリケーションのダウンロードとインストール](install-sharing-app.md)
+- [共有アプリケーションのダウンロードとインストール](install-sharing-app.md)
 
--   [デバイス上のファイルを保護 (保護済み)](sharing-app-protect-in-place.md)
+- [デバイス上のファイルを保護 (保護済み)](sharing-app-protect-in-place.md)
 
--   [電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)
+- [電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)
 
--   [ドキュメントを追跡および取り消す](sharing-app-track-revoke.md)
+- [保護されたファイルに対するアクセス許可を変更する](sharing-app-reprotect-files.md)
 
--   [保護されているファイルの表示と使用](sharing-app-view-use-files.md)
+- [ドキュメントを追跡および取り消す](sharing-app-track-revoke.md)
 
--   [ファイルからの保護の削除](sharing-app-remove-protection.md)
+- [保護されているファイルの表示と使用](sharing-app-view-use-files.md)
 
--   [キーボード ショートカット](sharing-app-keyboard-shortcuts.md)
+- [ファイルからの保護の削除](sharing-app-remove-protection.md)
 
--   [ダイアログ ボックスで設定を指定する](sharing-app-dialog-box.md)
+- [キーボード ショートカット](sharing-app-keyboard-shortcuts.md)
 
-
-
-
+- [ダイアログ ボックスで設定を指定する](sharing-app-dialog-box.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+
+
+<!--HONumber=Jul16_HO3-->
 
 

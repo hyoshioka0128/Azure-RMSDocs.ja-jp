@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: b33839ff5ce0d30082f58ff96eb81215b716e46d
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 8ef46d68594a6e559e050f846a844f566ff8770d
 
 
 ---
@@ -85,7 +85,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 制限事項:
 
--   移行プロセスは、サーバー ライセンス証明書 (SLC) キーから Azure RMS のハードウェア セキュリティ モジュール (HSM) への移行をサポートしていますが、Exchange Online では現時点ではこの構成はサポートされていません。 Azure RMS への移行後に Exchange Online で完全な IRM 機能を使用する場合は、ご使用の Azure RMS テナント キーが[マイクロソフトによって管理](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-)される必要があります。 または、Azure RMS テナントがユーザーにより管理される場合 (BYOK)、Exchange Online では IRM の機能を制限付きで実行できます。 Exchange Online と Azure RMS の使用の詳細については、「[手順 6. これらの移行手順の「](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online)IRM と Exchange Online の統合を構成する」を参照してください。
+-   移行プロセスは、サーバー ライセンス証明書 (SLC) キーから Azure RMS のハードウェア セキュリティ モジュール (HSM) への移行をサポートしていますが、Exchange Online では現時点ではこの構成はサポートされていません。 Azure RMS への移行後に Exchange Online で完全な IRM 機能を使用する場合は、ご使用の Azure RMS テナント キーが[マイクロソフトによって管理](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok)される必要があります。 または、Azure RMS テナントがユーザーにより管理される場合 (BYOK)、Exchange Online では IRM の機能を制限付きで実行できます。 Exchange Online と Azure RMS の使用の詳細については、「[手順 6. これらの移行手順の「](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online)IRM と Exchange Online の統合を構成する」を参照してください。
 
 -   Azure RMS でサポートされていないソフトウェアおよびクライアントは、Azure RMS によって保護されているコンテンツを保護したり使用したりすることはできません。 記事「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
 
@@ -180,6 +180,6 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

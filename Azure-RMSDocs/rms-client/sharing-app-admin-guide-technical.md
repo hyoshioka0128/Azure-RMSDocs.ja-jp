@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,14 +13,14 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 4f63cb7911661104113d19ecd84ef7c80a874408
+ms.sourcegitcommit: 09effc3dfb238370563981defdcf3c3b4cffcaae
+ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
 
 
 ---
 
 
-# Microsoft Rights Management 共有アプリケーションの技術的概要
+# Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細
 
 *適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -140,6 +140,6 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

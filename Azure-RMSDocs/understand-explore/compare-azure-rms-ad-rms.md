@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 8635402989db0f83017151910013ca460011b392
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ce79ec40cbd8ca3796a17920d27dc3872cd40842
 
 
 ---
@@ -54,7 +54,7 @@ Azure RMS の主な違い:
 |2 つの既定の権利ポリシー テンプレートが用意されています。これらのテンプレートは、コンテンツのアクセスを組織に制限します。一方のテンプレートは保護されたコンテンツの読み取り専用の表示を提供し、もう一方のテンプレートは保護されたコンテンツの書き込みまたは変更アクセス許可を提供します。<br /><br />ユーザーのサブセットのみが見ることのできる部門テンプレートを含む独自のカスタム テンプレートを作成することもできます。 詳細については、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。<br /><br />また、テンプレートで不十分な場合は、独自のアクセス許可セットを定義できます。|既定の権限ポリシー テンプレートがない場合は、作成してから配布する必要があります。 詳細については、「 [AD RMS ポリシー テンプレートに関する考慮事項](http://go.microsoft.com/fwlink/?LinkId=154765)」を参照してください。<br /><br />また、テンプレートで不十分な場合は、独自のアクセス許可セットを定義できます。|
 |サポートされる Microsoft Office の最小バージョンは Office 2010 であり、このバージョンでは [RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)が必要です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされていません|サポートされる最小バージョンは Microsoft Office is Office 2007 です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされています|
 |Windows、Mac コンピューター、モバイル デバイス用の [RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)をサポートします。<br /><br />また、RMS 共有アプリケーションは次の機能をサポートします。<br /><br />- 別組織のユーザーとの共有。<br /><br />- 電子メール通知。保護された添付ファイルをだれかが開こうとすると、送信者に通知されます。<br /><br />- ユーザー用のドキュメント追跡サイト。ドキュメントを失効させる機能があります。|Windows、Mac コンピューター、モバイル デバイス用の [RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)をサポートします。 ただし、別組織のユーザーとの共有、電子メール通知、ドキュメント追跡サイトとユーザーがドキュメントを失効させる機能はサポートされていません。|
-|RMS 共有アプリケーションを使用する場合、[ネイティブ保護または汎用的な保護](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)を使用して、すべてのファイルの種類を保護できます。<br /><br />他のアプリケーションについては、[クライアント デバイスの対応表](../get-started/requirements-client-devices.md#client-device-capabilities)を参照してください。|RMS 共有アプリケーションを使用する場合、[ネイティブ保護または汎用的な保護](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)を使用して、すべてのファイルの種類を保護できます。<br /><br />他のアプリケーションについては、[クライアント デバイスの対応表](../get-started/requirements-client-devices.md#client-device-capabilities)を参照してください。|
+|RMS 共有アプリケーションを使用する場合、[ネイティブ保護または汎用的な保護](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)を使用して、すべてのファイルの種類を保護できます。<br /><br />他のアプリケーションについては、「[Azure RMS の要件: アプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|RMS 共有アプリケーションを使用する場合、[ネイティブ保護または汎用的な保護](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)を使用して、すべてのファイルの種類を保護できます。<br /><br />他のアプリケーションについては、「[Azure RMS の要件: アプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|
 |Windows クライアントのサポートされる最小バージョンは Windows 7 です。|Windows クライアントのサポートされる最小バージョンは Windows Vista Service Pack 2 です。|
 |モバイル デバイスのサポートには、Windows Phone、Android、iOS、および Windows RT が含まれます。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でもサポートされます。|モバイル デバイスのサポート対象には、Windows Phone、Android、iOS、Windows RT が含まれます。モバイル デバイスを使用するには、[Active Directory Rights Management サービスのモバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)が必要です。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でサポートされます。|
 |コンピューターとモバイル デバイス用の多要素認証 (MFA) をサポートします。<br /><br />詳細については、「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms)」を参照してください。|IIS が証明書を要求するように構成されている場合は、スマート カード認証をサポートします。|
@@ -76,6 +76,6 @@ AD RMS から Azure RMS に移行する場合は、「[Migrating from AD RMS to 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

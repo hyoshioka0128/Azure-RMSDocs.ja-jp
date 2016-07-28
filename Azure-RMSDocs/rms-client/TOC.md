@@ -10,11 +10,12 @@
 ### [Windows 用 Rights Management 共有アプリケーション](sharing-app-windows.md)
 #### [Rights Management 共有アプリケーション: バージョン リリース履歴](sharing-app-version-release-history.md)
 #### [Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)
-##### [技術的概要](sharing-app-admin-guide-technical.md)
+##### [技術的概要と保護の詳細](sharing-app-admin-guide-technical.md)
 #### [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 ##### [ダウンロードしてインストール](install-sharing-app.md)
 ##### [デバイス上のファイルを保護する](sharing-app-protect-in-place.md)
 ##### [電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)
+##### [保護されたファイルに対するアクセス許可を変更する](sharing-app-reprotect-files.md)
 ##### [ドキュメントを追跡および取り消す](sharing-app-track-revoke.md)
 ##### [保護されているファイルを表示して使用する](sharing-app-view-use-files.md)
 ##### [保護を解除する](sharing-app-remove-protection.md)
@@ -22,8 +23,9 @@
 ##### [ダイアログ ボックスのオプション](sharing-app-dialog-box.md)
 ### [RMS 対応アプリケーションの Microsoft Rights Management のプライバシーに関する声明](privacy-statement-rms-enlightened-applications.md)
 # [アプリの開発とカスタマイズ](/rights-management/develop/developers-guide)
+# [Azure Information Protection (プレビュー)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

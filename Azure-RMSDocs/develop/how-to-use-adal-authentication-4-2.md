@@ -1,7 +1,7 @@
 ---
 title: "Azure ポータルを使用して RMS 認証用に構成する |Azure RMS"
 description: "ADAL での認証プロセスの概要を説明します。"
-keywords: authentication, RMS, ADAL
+keywords: "認証、RMS、ADAL"
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/14/2016
@@ -62,6 +62,6 @@ Azure ADAL を有効にするモバイル クライアント コード用のサ�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

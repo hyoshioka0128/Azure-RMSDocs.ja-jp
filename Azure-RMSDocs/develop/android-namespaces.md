@@ -1,7 +1,7 @@
 ---
 title: "Android 名前空間 | Azure RMS"
 description: "Android API には 2 つの名前空間があります。"
-keywords: RMS, Android
+keywords: "RMS、Android"
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -32,6 +32,6 @@ Android API には、主要な機能と例外に対応する 2 つの名前空�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
