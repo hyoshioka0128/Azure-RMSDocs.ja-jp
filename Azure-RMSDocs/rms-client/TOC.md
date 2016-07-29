@@ -21,11 +21,10 @@
 ##### [保護を解除する](sharing-app-remove-protection.md)
 ##### [キーボード ショートカット](sharing-app-keyboard-shortcuts.md)
 ##### [ダイアログ ボックスのオプション](sharing-app-dialog-box.md)
-### [RMS 対応アプリケーションの Microsoft Rights Management のプライバシーに関する声明](privacy-statement-rms-enlightened-applications.md)
 # [アプリの開発とカスタマイズ](/rights-management/develop/developers-guide)
 # [Azure Information Protection (プレビュー)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

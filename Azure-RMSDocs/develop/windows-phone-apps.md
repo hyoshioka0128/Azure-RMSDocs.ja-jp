@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 90552435666b8f25c893fcffe8c8cf3355a5942d
-ms.openlocfilehash: 136d6e9d0c45a9779f87e32eed8288fe8ee3a622
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 1728a094dfaa869ae490e86d10ffe5ebcf4bfa5d
 
 
 ---
@@ -28,8 +28,8 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
 -   [必要条件](#prerequisites)
--   [開発環境の構成](#configuring_your_development_environment)
--   [参照](#see_also)
+-   [開発環境の構成](#configuring-your-development-environment)
+-   [参照](#see-also)
 
 ## 必要条件
 
@@ -93,6 +93,6 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
