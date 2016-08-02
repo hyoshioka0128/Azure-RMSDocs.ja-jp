@@ -4,7 +4,7 @@ description: "ファイルが Rights Management によって保護されてい�
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51050497fe128d94e069d0ac010435bea5623af2
-ms.openlocfilehash: 985d3d2f1151b50fcde8f8bb916e984e1de71b00
+ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
+ms.openlocfilehash: 492f651f9234a8428a0f39da93b332a552894993
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: 985d3d2f1151b50fcde8f8bb916e984e1de71b00
 >
 > 同様に、アクセス許可を追加または削除する場合は、追加または削除するアクセス許可だけを指定することはできず、ユーザーに付与するすべてのアクセス許可を指定する必要があります。
 
-保護しなおすファイルの所有者には (たとえば、共有アプリケーションを使用してファイルをもともと保護していた場合)、ファイルを保護しなおすためのアクセス許可が自動的に付与されます。 所有者ではない場合は、保護対象のファイルに現在設定されているアクセス許可に応じて、ファイルを保護しなおすアクセス許可が付与される場合と、付与されない場合があります。 
+保護しなおすファイルの所有者には (たとえば、共有アプリケーションを使用してファイルをもともと保護していた場合)、ファイルを保護しなおすためのアクセス許可が自動的に付与されます。 所有者ではない場合は、保護対象のファイルに現在設定されているアクセス許可に応じて、ファイルを保護しなおすアクセス許可が付与される場合と、付与されない場合があります。 ファイルを保護しなおすには、[フル コントロールの使用権限](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions)が必要です。
 
 たとえば、他のユーザーが Rights Management 共有アプリケーションを使用してファイルを保護していて、あるユーザーが属しているグループと、カスタム アクセス許可として**共同所有者**を指定した場合、そのユーザーはファイルを保護しなおすことができます。 一方、あるユーザーの名前またはそのユーザーが属しているグループを指定していない場合、または**レビュー担当者 - 表示および編集**を選択した場合、またはそのユーザーにアクセス許可を付与しないテンプレートを選択した場合は、そのユーザーはファイルを保護しなおせません。 確認する最も簡単な方法は、ファイルを保護しなおしてみることです。
 
@@ -96,6 +96,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
