@@ -62,7 +62,7 @@ Azure Information Protection クライアントをインストールして Word 
 
 ##  次のステップ
 
-既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開きなおしてから、Azure Information Protection で使用してみてください。
+既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開き直してから、Azure Information Protection で使用してみてください。
 
 たとえば、Information Protection バーの既定のタイトル **[Sensitivity]** (秘密度) を別のタイトルに変更できます。 ツール ヒント、ラベルの色、ラベルの順序、ラベルの名前を変更できます。 新しいラベルを作成し、独自の自動規則を定義できます。 サイズと色を構成したり、方向を斜めから水平に変更したりして、透かしを微調整できます。
 
