@@ -3,22 +3,24 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 4 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: e80ea074fb1f6e571b846969b15c08cf7108b11c
-ms.openlocfilehash: dcb34eb8bfee6232d32245634dc56f717257b644
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
 
 
 ---
 
 # 手順 4: 分類、ラベル付け、保護の動作を確認する 
 
-*適用対象: Azure Information Protection プレビュー*
+>*適用対象: Azure Information Protection プレビュー*
+
+**[この情報は暫定的なものであり、変更されることがあります。 ]**
 
 Azure Information Protection クライアントをインストールして Word 文書を開いたので、構成したポリシーを使用して簡単に文書のラベル付けと保護を始められることを確認できます。
 
@@ -62,7 +64,7 @@ Azure Information Protection クライアントをインストールして Word 
 
 ##  次のステップ
 
-既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開き直してから、Azure Information Protection で使用してみてください。
+既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開きなおしてから、Azure Information Protection で使用してみてください。
 
 たとえば、Information Protection バーの既定のタイトル **[Sensitivity]** (秘密度) を別のタイトルに変更できます。 ツール ヒント、ラベルの色、ラベルの順序、ラベルの名前を変更できます。 新しいラベルを作成し、独自の自動規則を定義できます。 サイズと色を構成したり、方向を斜めから水平に変更したりして、透かしを微調整できます。
 
@@ -75,6 +77,6 @@ Azure ポータルで Information Protection ポリシーの設定を変更す�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

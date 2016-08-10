@@ -13,8 +13,18 @@
 ### [手順 3: クライアントのインストール](infoprotect-tutorial-step3.md)
 ### [手順 4: 動作の確認](infoprotect-tutorial-step4.md)
 ## [よく寄せられる質問](faq.md)
+## [ポリシーの構成](configure-policy.md)
+### [既定のポリシー](configure-policy-default.md)
+### [グローバル設定の構成](configure-policy-settings.md)
+### [新しいラベルの作成](configure-policy-new-label.md)
+### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
+### [ラベルの変更](configure-policy-change-label.md)
+### [保護の適用](configure-policy-protection.md)
+### [視覚的なマーキングの構成](configure-policy-markings.md)
+### [条件の構成](configure-policy-classification.md)
+## [クライアントのインストール](info-protect-client.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

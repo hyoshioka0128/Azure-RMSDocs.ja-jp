@@ -3,22 +3,24 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができるチュートリアルの概要を説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/16/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: cac95dec84f99d2e6caa3458dc8284defe2324bc
-ms.openlocfilehash: 7dc988365c1fa86827d1a7edc33c0a2eb6180f0e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
 
 
 ---
 
 # Azure Information Protection のクイック スタート チュートリアル 
 
-*適用対象: Azure Information Protection プレビュー*
+>*適用対象: Azure Information Protection プレビュー*
+
+**[この情報は暫定的なものであり、変更されることがあります。 ]**
 
 このチュートリアルを使用すると、4 つの手順を実行するだけで 15 分もかからずに組織の Azure Information Protection プレビューを簡単に試すことができます。 必要に応じて、Azure Rights Management サービスをアクティブ化し、既定の Azure Information Protection ポリシーを確認および変更し、Azure Information Protection クライアントをインストールし、Word 文書を使用して分類、ラベル付け、および保護の例を参照できます。
 
@@ -38,7 +40,7 @@ ms.openlocfilehash: 7dc988365c1fa86827d1a7edc33c0a2eb6180f0e
 
 - Rights Management サービスをアクティブ化する必要がある場合は、Office 365 管理センターまたは Azure クラシック ポータルにサインインするためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
 
-- Windows (Windows 7 Service Pack 1 以降) を実行し、Office 2016、Office 2013 Service Pack 1 または Office 2010 がインストールされているコンピューター。 
+- Windows (Windows 7 Service Pack 1 以降) を実行し、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 がインストールされているコンピューター。 
 
 - Active Directory Rights Management サービス (AD RMS) が組織にデプロイされている場合: コンピューターは AD RMS を以前に使用していないワークグループ コンピューターである必要があります。 これは、ドキュメントを保護し、テンプレートが Azure Rights Management からのみダウンロードされるようにする場合に必要です。 AD RMS と Azure RMS への同時接続はサポートされていません。 移行については、「[AD RMS から Azure Rights Management への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。   
 
@@ -51,6 +53,6 @@ ms.openlocfilehash: 7dc988365c1fa86827d1a7edc33c0a2eb6180f0e
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

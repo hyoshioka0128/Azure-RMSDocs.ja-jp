@@ -3,22 +3,24 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行して約 10 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 1 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/291/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 78f0f07271414fb646f996e7273343f2abf8852b
-ms.openlocfilehash: 633b24d0c23cbbee88a2647aaa9defe376ccb40e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 128952778ec317584e558e409961e2921c4ecd07
 
 
 ---
 
 # 手順 1.Rights Management サービスの有効化
  
-*適用対象: Azure Information Protection プレビュー*
+>*適用対象: Azure Information Protection プレビュー*
+
+**[この情報は暫定的なものであり、変更されることがあります。 ]**
 
 > [!NOTE]
 >データの分類のみを行い、Azure Rights Management で保護しない場合、またはテナントで Azure Rights Management を既にアクティブ化してある場合は、このまま[次の手順](infoprotect-tutorial-step2.md)に進んでください。 
@@ -84,6 +86,6 @@ Azure Rights Management がアクティブ化されていると、分類した�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 
