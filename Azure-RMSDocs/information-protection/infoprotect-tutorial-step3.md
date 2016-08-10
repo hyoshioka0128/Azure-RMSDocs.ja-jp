@@ -3,22 +3,24 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 3 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 7f85c673cd1e8055d6a27dcc49b5da18a7e12f98
-ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
 
 
 ---
 
 # 手順 3: Azure Information Protection クライアントをインストールする 
 
-*適用対象: Azure Information Protection プレビュー*
+>*適用対象: Azure Information Protection プレビュー*
+
+**[この情報は暫定的なものであり、変更されることがあります。 ]**
 
 この手順では、Azure Information Protection クライアントをインストールし、構成したポリシーが Windows PC にダウンロードされて、Office アプリケーションにラベルが表示されるようにします。 
 
@@ -32,7 +34,7 @@ ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
 
     - **[ホーム]** タブの新しい **[Protection]** (保護) グループと **[Protect]** (保護) ボタン。
 
-        **[Protect]** (保護)、**[Help and feedback]** (ヘルプとフィードバック) の順にクリックし、**[Microsoft Azure Information Protection]** ダイアログ ボックスでクライアントのステータスを確認します。 **[Information Protection policy is installed]** (Information Protection ポリシーはインストールされています) というメッセージと最新の接続時刻が表示されます。 表示されているユーザー名がテナントの正しいものであることを確認します。
+        **[Protect]** (保護)、 > **[Help and feedback]** (ヘルプとフィードバック) の順にクリックし、**[Microsoft Azure Information Protection]** ダイアログ ボックスでクライアントのステータスを確認します。 **[Information Protection policy is installed]** (Information Protection ポリシーはインストールされています) というメッセージと最新の接続時刻が表示されます。 表示されているユーザー名がテナントの正しいものであることを確認します。
 
     - リボンの下に新しい Information Protection バーが表示されます。 **[Sensitivity]** (秘密度) というタイトルと、構成した既定のラベル **[Internal]** (内部) が表示されます。 
 
@@ -41,11 +43,16 @@ ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
 
 最後の手順に進んで分類、ラベル付け、および保護の動作を確認できる状態になりました。
 
+|必要な詳細情報|追加情報|
+|--------------------------------|--------------------------|
+|クライアントのインストールについて|[Azure Information Protection クライアントのインストール](info-protect-client.md)|
+
+
 >[!div class="step-by-step"]
 [&#171; 手順 2](infoprotect-tutorial-step2.md)
 [手順 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 
