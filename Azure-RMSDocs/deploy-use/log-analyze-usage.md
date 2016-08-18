@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8
-ms.openlocfilehash: 845a47f526754f291c27a3c2bbd80af736b44992
+ms.sourcegitcommit: 2082620eb152aa88af4141b88985adce22769168
+ms.openlocfilehash: fbf614bf7b30165a78f6312267243ad6fdb81435
 
 
 ---
@@ -100,7 +100,7 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 #### Azure RMS 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
 
 
-ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure RMS 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) コマンドレットを使用して古いログをダウンロードできます。 例:
+ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure RMS 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) コマンドレットを使用して古いログをダウンロードできます。 たとえば、
 
 - 使用可能なログを E:\logs フォルダーにダウンロードするには:  `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -131,7 +131,7 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
 
 3 番目の行には、タブで区切られたフィールド名が列挙されます。
 
-**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip**
+**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
 
 後続の各行はログ レコードです。 フィールド値の順序は前の行と同じで、タブで区切られます。 フィールドを解釈するには、次の表を参照してください。
 
@@ -152,6 +152,7 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
 |date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
 |c-info|文字列|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
+
 
 #### user-id フィールドの例外
 通常、user-id フィールドは要求を行ったユーザーを示しますが、値が実際のユーザーにマップされない例外が 2 つあります。
@@ -174,29 +175,42 @@ Azure Rights Management には多くの要求の種類がありますが、次�
 |AcquireTemplates|テンプレート ID に基づいてテンプレートを取得するための呼び出しが行われました。|
 |AcquireTemplateInformation|サービスからテンプレートの ID を取得するための呼び出しが行われました。|
 |AddTemplate|Azure クラシック ポータルから、テンプレートを追加するための呼び出しが行われます。|
+|AllDocsCsv|ドキュメント追跡サイトから呼び出し、**[すべてのドキュメント]** ページから CSV ファイルをダウンロードします。|
 |BECreateEndUserLicenseV1|モバイル デバイスから、エンド ユーザー ライセンスを作成するための呼び出しが行われます。|
 |BEGetAllTemplatesV1|モバイル デバイス (バックエンド) から、すべてのテンプレートを取得するための呼び出しが行われます。|
 |Certify|クライアントが保護のために内容を証明しています。|
 |KMSPDecrypt|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 顧客管理のテナント キー (BYOK) にのみ適用されます。|
 |DeleteTemplateById|Azure クラシック ポータルから、テンプレート ID でテンプレートを削除するための呼び出しが行われます。|
+|DocumentEventsCsv|ドキュメント追跡サイトから呼び出し、単一ドキュメントの .CSV ファイルをダウンロードします。|
 |ExportTemplateById|Azure クラシック ポータルから、テンプレート ID に基づいてテンプレートをエクスポートするための呼び出しが行われます。|
 |FECreateEndUserLicenseV1|AcquireLicense 要求と同じですが、要求元はモバイル デバイスです。|
 |FECreatePublishingLicenseV1|Certify および GetClientLicensorCert の組み合わせと同じですが、要求元はモバイル クライアントです。|
 |FEGetAllTemplates|モバイル デバイス (フロントエンド) から、テンプレートを取得するための呼び出しが行われます。|
+|GetAllDocs|ドキュメント追跡サイトから呼び出し、ユーザーの **[すべてのドキュメント]** ページを読み込むか、テナントのすべてのドキュメントを検索します。 この値は、admin-action フィールドと acting-as-admin フィールドで使用します。<br /><br />- admin-action が空: ユーザーには、自分のドキュメントの **[すべてのドキュメント]** ページが表示されます。<br /><br />- admin-action が true で acting-as-user が空: 管理者には、テナントのすべてのテナントが表示されます。<br /><br />- admin-action が true で acting-as-user が空ではない: 管理者には、ユーザーの **[すべてのドキュメント]** ページが表示されます。|
 |GetAllTemplates|Azure クラシック ポータルから、すべてのテンプレートを取得するための呼び出しが行われます。|
 |GetClientLicensorCert|クライアントは Windows ベースのコンピューターから発行元証明書 (後でコンテンツの保護に使用する) を要求しています。|
 |GetConfiguration|Azure RMS テナントの構成を取得するために、Azure PowerShell コマンドレットが呼ばれます。|
 |GetConnectorAuthorizations|RMS コネクタから、構成をクラウドから取得するための呼び出しが行われます。|
+|GetRecipients|ドキュメント追跡サイトから呼び出し、単一ドキュメントのリスト ビューに移動します。|
+|GetSingle|ドキュメント追跡サイトから呼び出し、**[シングル ドキュメント]** ページに移動します。|
 |GetTenantFunctionalState|Azure クラシック ポータルが、Azure RMS がアクティブかどうかを調べています。|
 |GetTemplateById|Azure クラシック ポータルから、テンプレート ID を指定してテンプレートを取得するための呼び出しが行われます。|
 |ExportTemplateById|Azure クラシック ポータルから、テンプレート ID を指定してテンプレートをエクスポートするための呼び出しが行われています。|
 |FindServiceLocationsForUser|Certify または AcquireLicense の呼び出しに使用される URL を照会するための呼び出しが行われます。|
+|LoadEventsForMap|ドキュメント追跡サイトから呼び出し、単一ドキュメントのマップ ビューに移動します。|
+|LoadEventsForSummary|ドキュメント追跡サイトから呼び出し、単一ドキュメントのタイムライン ビューに移動します。|
+|LoadEventsForTimeline|ドキュメント追跡サイトから呼び出し、単一ドキュメントのマップ ビューに移動します。|
 |ImportTemplate|Azure クラシック ポータルから、テンプレートをインポートするための呼び出しが行われます。|
+|RevokeAccess|ドキュメント追跡サイトから呼び出し、ドキュメントを取り消します。|
+|SearchUsers |ドキュメント追跡サイトから呼び出し、テナント内のすべてのユーザーを検索します。|
 |ServerCertify|RMS 対応クライアント (SharePoint など) から、サーバーを認証するための呼び出しが行われます。|
 |SetUsageLogFeatureState|使用状況ログを有効にするための呼び出しが行われます。|
 |SetUsageLogStorageAccount|Azure RMS ログの場所を指定するための呼び出しが行われます。|
-|KMSPSignDigest|署名に顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
+|SignDigest|署名にキーが使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
+|UpdateNotificationSettings|ドキュメント追跡サイトから呼び出し、単一ドキュメントの通知設定を変更します。|
 |UpdateTemplate|Azure クラシック ポータルから、既存のテンプレートを更新するための呼び出しが行われます。|
+
+
 
 ## Windows PowerShell の参照情報
 2016 年 2 月以降、Azure RMS 使用状況ログに必要となる唯一の Windows PowerShell コマンドレットは、[Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) です。 
@@ -226,6 +240,6 @@ Azure Rights Management 用 Windows PowerShell の使用の詳細については
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO1-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
 
 
 ---
@@ -39,11 +39,11 @@ Azure Information Protection のプレビュー リリースに関して質問�
 
 プレビューでは新しい **Premium P2 サービス プラン**を試せること、および自動ラベル付けや推奨ラベル付けなどの一部の高度な機能は一般公開されている現在のリリースでは使用できない場合があることに注意してください。 各種サービス プラン (Azure Information Protection Premium P1 および Azure Information Protection Premium P2) については、「[Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/)」 (Enterprise Mobility とセキュリティの概要) を参照してください。
 
-このプレビュー リリースには次の制限があります。 追加機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内に注意してください。
+このプレビュー リリースには次の制限があります。 追加機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。
 
 - 分類とラベル付けには集中的なログはありません。
 
-- ラベル名とツール ヒントは英語でのみサポートされます。
+- ラベル名とツール ヒントは 1 言語でのみサポートされます。
 
 - 自動分類の条件は、語句またはパターンでなければなりません。
 
@@ -61,11 +61,11 @@ Azure Information Protection のプレビュー リリースに関して質問�
 
 Azure ポータルで Azure Information Protection のポリシーを構成するには、Azure サブスクリプションが必要です。 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。「[Microsoft Azure はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
 
-サブスクリプションの要件が変更される場合は、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)でお知らせします。
+サブスクリプションの要件が変更される場合は、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)でお知らせします。
 
 ## Azure Information Protection プレビューを試すにはグローバル管理者である必要がありますか?
 
-プレビュー リリースに限り、Azure によって認証されたすべてのユーザーがテナントの Azure Information Protection ポリシーを Azure ポータルで表示および構成できます。
+プレビュー リリースに限り、Azure によって認証されたすべてのユーザーは、Azure ポータルで、テナントの Azure Information Protection ポリシーの分類とラベルを表示および構成できます。 ただし、Azure Rights Management テンプレートを適用するラベルを構成するには、Azure Active Directory のグローバル管理者としてサインインする必要があります。
 
 [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもプレビューを試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試用できますが、ラベルの変更または新規追加には Azure ポータルにサインインする必要があります。 
 
@@ -74,7 +74,7 @@ Azure ポータルで Azure Information Protection のポリシーを構成す�
 
 ## Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
-Azure Information Protection はクラウド ベースのソリューションです。 ハイブリッド シナリオに興味がある場合は、askipteam@microsoft.com 宛てに電子メールを送って Information Protection チームにお問い合わせください。
+Azure Information Protection はクラウド ベースのソリューションです。 ハイブリッド シナリオで Azure Information Protection をデプロイする方法に興味がある場合は、askipteam@microsoft.com 宛てに電子メールを送って Information Protection チームにお問い合わせください。
 
 ## Azure Information Protection はどのクライアント プラットフォームとアプリケーションをサポートしますか?
 
@@ -150,7 +150,11 @@ Azure Information Protection は分類に永続的メタデータを使用し、
 
 ## Azure Information Protection では、ドキュメントの追跡と失効はどのように行われますか?
 
-Azure Information Protection を使用して分類および保護されたファイルのドキュメントの追跡は、現在の Azure Rights Management の場合と同じように行われます。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)」を参照してください。
+Azure Information Protection を使用して分類および保護されたファイルのドキュメントの追跡は、現在の Azure Rights Management と RMS 共有アプリケーションの場合と同じように行われます。 また、Azure Information Protection クライアント (バージョン 1.0.233 以降) を使用してドキュメント追跡サイトにもアクセスできます。 
+
+- Office アプリケーションの **[ホーム]** タブの **[保護]** グループで、**[保護]** > **[使用の追跡]** をクリックします。 
+
+詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)」を参照してください。
 
 ## ユーザーが構成したポリシーを Azure Information Protection はどのように適用しますか?
 
@@ -184,6 +188,6 @@ Azure Information Protection によって分類されたファイルおよび電
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

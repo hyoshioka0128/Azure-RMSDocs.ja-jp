@@ -3,15 +3,15 @@ title: "Azure Information Protection のグローバル ポリシー設定を構
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 508161474bf6fd7406668de3976206947de254de
 
 
 ---
@@ -29,11 +29,11 @@ ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
 
 設定を構成するには:
 
-1. [Azure ポータル](https://portal.azure.com)にサインインします。
- 
-2. ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+    
+    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-3. **[Azure Information Protection]** ブレードで、次のグローバル設定を構成します。
+2. **[Azure Information Protection]** ブレードで、次のグローバル設定を構成します。
 
     - **All documents and emails must have a label** (すべてのドキュメントと電子メールにラベルを設定する必要があります): このオプションを **[オン]** に設定した場合は、すべての保存されるドキュメントと送信される電子メールにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。 
 
@@ -49,9 +49,9 @@ ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
 
     このオプションは、サブラベルには適用されません。
 
-4. 変更を保存するには、**[保存]** をクリックします。
+3. 変更を保存するには、**[保存]** をクリックします。
 
-5. 他のユーザーが変更を表示できるようにするには、**[公開]** をクリックします。
+4. 他のユーザーが変更を表示できるようにするには、**[公開]** をクリックします。
 
 ## 次のステップ
 
@@ -68,6 +68,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

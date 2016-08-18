@@ -20,11 +20,12 @@
 ### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
 ### [ラベルの変更](configure-policy-change-label.md)
 ### [保護の適用](configure-policy-protection.md)
+#### [HYOK の制限事項](configure-adrms-restrictions.md)
 ### [視覚的なマーキングの構成](configure-policy-markings.md)
 ### [条件の構成](configure-policy-classification.md)
 ## [クライアントのインストール](info-protect-client.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

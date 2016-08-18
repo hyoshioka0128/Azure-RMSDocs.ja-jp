@@ -3,15 +3,15 @@ title: "Rights Management による保護を適用するようにラベルを構
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 00b4cd2b1e7b1196cedd39d7052db534e781bb13
-ms.openlocfilehash: 7a20b59c404959c4ec209e8c29ac61ab71233e87
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 798fb423ff8dab3e9777a33e7b2c483bceb81016
 
 
 ---
@@ -22,47 +22,48 @@ ms.openlocfilehash: 7a20b59c404959c4ec209e8c29ac61ab71233e87
 
 **[この情報は暫定的なものであり、変更されることがあります。 ]**
 
-暗号化ポリシー、ID ポリシー、および承認ポリシーによってデータ損失を防止する Azure Rights Management を使用することで、最も機密性の高いドキュメントや電子メールを保護することができます。 この保護は、Rights Management テンプレートを使用するようにラベルを構成したときに適用されます。 
+暗号化ポリシー、ID ポリシー、および承認ポリシーによってデータ損失を防止する Rights Management サービスを使用することで、最も機密性の高いドキュメントや電子メールを保護することができます。 この保護は、Rights Management テンプレートを使用するようにラベルを構成したときに適用されます。 
 
-テンプレートは、Azure Rights Management をアクティブ化したときに自動的に作成される既定のいずれかのテンプレート、またはカスタム テンプレートのどちらも使用できます。 部門別テンプレートはサポートされていますが、保護は、ドキュメントまたは電子メールの作成者がテンプレートの構成範囲内にある場合にのみ適用されます。 ユーザーがその範囲外である場合は、Azure Information Protection でラベルを適用できないことを示すメッセージが表示されます。
+テンプレートは、Azure Rights Management をアクティブ化したときに自動的に作成される既定のいずれかのテンプレート、またはカスタム テンプレートのどちらも使用できます。 Azure Rights Management の部門別テンプレートはサポートされていますが、保護は、ドキュメントまたは電子メールの作成者がテンプレートの構成範囲内にある場合にのみ適用されます。 ユーザーがその範囲外である場合は、Azure Information Protection でラベルを適用できないことを示すメッセージが表示されます。
 
 ## 保護のしくみ
 
-Azure Rights Management によって保護されるドキュメントまたは電子メールは、保存時および送信時に暗号化され、権限のあるユーザーのみが暗号化を解除できます。 この暗号化は、ドキュメントまたは電子メールの名前が変更された場合でも維持されます。 さらに、次の例のように、使用権限と制限を構成できます。
+Rights Management によって保護されるドキュメントまたは電子メールは、保存時および送信時に暗号化され、権限のあるユーザーのみが暗号化を解除できます。 この暗号化は、ドキュメントまたは電子メールの名前が変更された場合でも維持されます。 さらに、次の例のように、使用権限と制限を構成できます。
 
-- 組織内のユーザーのみがドキュメントまたは電子メールを開くことができます。
+- 組織内のユーザーのみが社外秘のドキュメントまたは電子メールを開くことができます。
 
-- マーケティング部門のユーザーのみがドキュメントまたは電子メールの編集と印刷を実行でき、組織内の他のすべてのユーザーはそれらの表示のみを実行できます。
+- マーケティング部門のユーザーのみが宣伝の通知ドキュメントまたは電子メールの編集と印刷を実行でき、組織内の他のすべてのユーザーはそれらの閲覧のみを実行できます。
 
-- ユーザーは電子メールを転送できません。
+- ユーザーは、社内の再編成に関するニュースを含む電子メールを転送できません。
 
-- ビジネス パートナーに送信されるドキュメントまたは電子メールは、指定日以降は開くことができません。
+- ビジネス パートナーに送信される現在の価格表は、指定日以降は開くことができません。
 
-テンプレートおよびこれらの使用権限と制限を構成する方法の詳細については、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
+Azure Rights Management テンプレートおよびこれらの使用権限と制限を構成する方法の詳細については、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
 Azure Rights Management とそのしくみの詳細については、[Azure Rights Management の概要に関するページ](../understand-explore/what-is-azure-rms.md)を参照してください。
 
 > [!IMPORTANT]
-> Rights Management による保護を適用するようにラベルを構成するには、組織に対して Azure Rights Management サービスをアクティブにする必要があります。 この手順をまだ行っていない場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
+> Azure Rights Management による保護を適用するようにラベルを構成するには、組織に対して Azure Rights Management サービスをアクティブにする必要があります。 この手順をまだ行っていない場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
 
 
 ## Rights Management による保護を適用するようにラベルを構成するには
 
-1. [Azure ポータル](https://portal.azure.com)にサインインします。
- 
-2. ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+1. [Azure ポータル](https://portal.azure.com)にグローバル管理者としてサインインしていない場合はサインインし、Azure Rights Management テンプレートを取得できるようにします。 次に、**[Azure Information Protection]** ブレードに移動します。 
 
-3. **[Azure Information Protection]** ブレードで、Rights Management による保護を適用するように構成するラベルを選択します。
+    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-4. **[ラベル]** ブレードで、**[Set RMS template for protecting documents and emails containing this label]** (このラベルを含むドキュメントおよび電子メールを保護するための RMS テンプレートを設定する) セクションで、以下を構成します。
+2. **[Azure Information Protection]** ブレードで、Rights Management による保護を適用するように構成するラベルを選択します。
 
-    - **[Select RMS template from]** (RMS テンプレートの選択元) が表示される場合: **[Azure RMS]** を選択します。 
+3. **[ラベル]** ブレードの **[Set RMS template for protecting documents and emails containing this label]** (このラベルを含むドキュメントおよび電子メールを保護するための RMS テンプレートを設定する) セクションで、**[RMS テンプレートの選択]** を **[Azure RMS]** または **[AD RMS (プレビュー)]** に設定します。
     
-        **[AD RMS]** および関連する構成オプションは、マイクロソフトのサポートなしで選択しないでください。 Azure Information Protection の Active Directory Rights Management サービスによるテストをご希望の場合は、askipteam@microsoft.com にメールをお送りください。 
+    ほとんどの場合は、**[Azure RMS]** を選択します。 AD RMS 構成 ("*Hold Your Own Key*" (HYOK) とも呼ばれます) に付随する前提条件と制限事項を読み、理解してから、AD RMS を選択してください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
     
-    - **[RMS テンプレートの選択]**: ドロップダウン ボックスをクリックし、このラベルでドキュメントと電子メールを保護するために使用するテンプレートを選択します。
+4. Azure RMS を選択した場合: **[RMS テンプレートの選択]**: ドロップダウン ボックスをクリックし、このラベルでドキュメントと電子メールを保護するために使用するテンプレートを選択します。
 
-        > [!NOTE] **[ラベル]** ブレードを開いた後で新しいテンプレートを作成した場合は、このブレードを閉じて手順 3 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
+    > [!NOTE] 
+    > **[ラベル]** ブレードを開いた後で新しいテンプレートを作成した場合は、このブレードを閉じて手順 2 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
+    
+5. AD RMS を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。
 
 5. **[保存]** をクリックします。
 
@@ -74,6 +75,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

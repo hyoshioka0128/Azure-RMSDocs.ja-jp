@@ -3,15 +3,15 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行するだけで 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができるチュートリアルの概要を説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
+ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
+ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
 
 
 ---
@@ -38,11 +38,9 @@ ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
   > [!TIP] 
   > サブスクリプションの取得プロセスの完了までに時間がかかる可能性があるため、取得が必要な場合は、事前に済ませてください。
 
-- Rights Management サービスをアクティブ化する必要がある場合は、Office 365 管理センターまたは Azure クラシック ポータルにサインインするためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
+- Rights Management サービスをアクティブ化するか、Azure ポータルで Azure RMS テンプレートを選択する必要がある場合、Office 365 管理センターまたは Azure クラシック ポータルにサインインするためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
 
 - Windows (Windows 7 Service Pack 1 以降) を実行し、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 がインストールされているコンピューター。 
-
-- Active Directory Rights Management サービス (AD RMS) が組織にデプロイされている場合: コンピューターは AD RMS を以前に使用していないワークグループ コンピューターである必要があります。 これは、ドキュメントを保護し、テンプレートが Azure Rights Management からのみダウンロードされるようにする場合に必要です。 AD RMS と Azure RMS への同時接続はサポートされていません。 移行については、「[AD RMS から Azure Rights Management への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。   
 
 では、始めましょう。
 
@@ -53,6 +51,6 @@ ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

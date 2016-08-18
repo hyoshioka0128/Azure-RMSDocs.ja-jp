@@ -3,15 +3,15 @@ title: "Azure Information Protection 用の視覚的なマーキングのラベ�
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9f2d28e4f162891497a7b0518322338628118b9d
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
 
 
 ---
@@ -36,23 +36,41 @@ ms.openlocfilehash: 9f2d28e4f162891497a7b0518322338628118b9d
 
     - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。
 
+- ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。 
+
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. [Azure ポータル](https://portal.azure.com)にサインインします。
- 
-2. ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+    
+    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-3. **[Azure Information Protection]** ブレードで、視覚的なマーキングを構成するラベルを選択します。
+2. **[Azure Information Protection]** ブレードで、視覚的なマーキングを構成するラベルを選択します。
 
-4. **[ラベル]** ブレードで、**[Set visual marking (such as header or footer)]** (視覚的なマーキングの設定 (ヘッダーやフッターなど)) セクション、目的の視覚的なマーカーの設定を構成した後、**[保存]** をクリックします。
+3. **[ラベル]** ブレードで、**[Set visual marking (such as header or footer)]** (視覚的なマーキングの設定 (ヘッダーやフッターなど)) セクション、目的の視覚的なマーカーの設定を構成した後、**[保存]** をクリックします。
 
     - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、色、およびヘッダーの配置を指定します。
-
+    
     - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、色、および配置を指定します。
+    
+    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、色、および配置を指定します。 
 
-    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、色、および配置を指定します。
+4. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-5. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+## テキスト文字列に変数を使用する
+
+ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
+
+- `${Item.Label}` 選択したラベル
+
+- `${Item.Name}` ファイル名または電子メールの件名
+
+- `${Item.Location}` ファイル パス
+
+- `${User.Name}` ドキュメントまたは電子メールの所有者
+
+- `${Event.DateTime}` 選択したラベルが設定された日時 
+    
+例: Secret ラベル フッターに `Document: ${item.name} Sensitivity: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx Sensitivity: Secret** になります。
 
 ## 次のステップ
 
@@ -62,6 +80,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -3,15 +3,15 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
-ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
+ms.sourcegitcommit: 09cb56aaa0d7d97073623c518aa331d591a376e3
+ms.openlocfilehash: 65d758635b77ee7d6c423a1400a7621e8e05b14d
 
 
 ---
@@ -24,13 +24,20 @@ ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
-1. [Azure ポータル](https://portal.azure.com)にサインインします。
+1. [Azure ポータル](https://portal.azure.com)にサインインします。 保護だけでなく、分類とラベルもテストする場合、Azure Rights Management テンプレートを取得するためにグローバル管理者としてサインインします。
  
-2. ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+2. ハブ メニューの操作: **[新規]** > **[セキュリティ + ID]** > **[Azure Information Protection (プレビュー)]** > **[作成]** をクリックします。
 
-- **Azure Information Protection** のメイン ブレードが開き、自動的に作成される既定の Information Protection ポリシーが表示されます。 この既定のポリシーには、分類用のラベルとして、**[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には 2 つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
+    **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[参照]** リストからサービスを選択できるようになります。 
 
-- 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) にはビジュアル マーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 さらに、3 つのグローバル設定は設定されていないので、すべてのドキュメントと電子メールにラベルは必要なく、既定のラベルはなく、ユーザーが秘密度レベルを下げるときに理由を示す必要はありません。
+    > [!TIP] 
+    > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときに参照手順をスキップできるようにします。
+
+3.  **Azure Information Protection** のメイン ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
+    
+    - 分類用のラベル: **[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には 2 つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
+
+    - 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) ラベルには視覚的なマーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 さらに、3 つのグローバル設定は設定されていないので、すべてのドキュメントと電子メールにラベルは必要なく、既定のラベルはなく、ユーザーが秘密度レベルを下げるときに理由を示す必要はありません。
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy.png)
 
@@ -42,7 +49,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 次に、ラベルの 1 つ **[Confidential]** (機密) の設定を変更します。
 
-1. **[Confidential]** (機密) ラベル エントリをクリックします。
+1. **[Confidential]** (機密) ラベルをクリックします。
 
 2. **[Label: Confidential]** (ラベル: 機密) ブレードに、各ラベルで使用できる設定が表示されます。 次のように変更します。
 
@@ -90,6 +97,6 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

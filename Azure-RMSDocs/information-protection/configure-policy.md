@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: d4b0685176407fe3a0ff14408a1381e960033afe
+ms.sourcegitcommit: 781632c5a28377339431cd6537b1b9e11d0a3259
+ms.openlocfilehash: 0e31053a83c30d8552cfb78914d0d13baac25f42
 
 
 ---
@@ -31,7 +31,7 @@ Azure Information Protection のプレビュー リリース中に Azure Informa
 
 1. [Azure ポータル](https://portal.azure.com)にサインインします。
 
-2. ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
+2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「 **Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
     **[Azure Information Protection]** ブレードが表示され、ここで、次の要素を含む Azure Information Protection ポリシーを構成できます。
 
@@ -81,6 +81,6 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

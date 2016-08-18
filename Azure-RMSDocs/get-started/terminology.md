@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/10/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e9551db57cc1295f20368535267ca5a901ae9f2
-ms.openlocfilehash: a95b9679578f6786bd883884cd5c5f84cb6db739
+ms.sourcegitcommit: 75f868c4428e7b434e6a115a3e70508c3ff7f93d
+ms.openlocfilehash: 1a45457548d8cba6424e92bc18ef085d095742f3
 
 
 ---
@@ -32,10 +32,10 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 |Active Directory Rights Management サービス|*AD RMS*という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した情報保護機能により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
 |Azure Information Protection|現在プレビュー状態であるこのサービスは、分類、ラベル付け、保護を使用して、ドキュメントと電子メールを保護します。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
-|Azure Rights Management|*Azure RMS*という略称で呼ばれることもあります。<br /><br />Azure サービスの 1 つで、暗号化とドキュメント、ファイル、電子メールを保護するポリシーによって情報保護機能を提供します。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />*Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />*RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
+|Azure Rights Management|*Azure RMS*という略称で呼ばれることもあります。<br /><br />Azure サービスの 1 つで、暗号化とドキュメント、ファイル、電子メールを保護するポリシーによって情報保護機能を提供します。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
 |Azure RMS|*Azure Rights Management*をご覧ください。|
 |BYOK|*Bring Your Own Key*をご覧ください。|
-|Bring Your Own Key|*BYOK*という略称で呼ばれることもあります。<br /><br />組織が [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の独自のテナント キーを生成および管理するときに選択する構成オプションです。|
+|Bring Your Own Key|*BYOK*という略称で呼ばれることもあります。<br /><br />組織が [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の独自のテナント キーを生成および管理するときに選択する構成およびトポロジ オプションです。|
 |コンテンツ キー|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] を使用して保護されている各ドキュメントまたは電子メールに対して RMS 対応アプリケーションが作成する一意のキーです。情報漏えいの危険性を減らすのに役立ちます。|
 |使用処理|読み取りや使用のために、[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] で保護されているファイルのロックを解除する操作。|
 |非アクティブ化|Rights Management サービスを無効化します。組織は [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用できなくなります。|
@@ -44,6 +44,8 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 |エンタープライズ権限管理|業界標準の一般的な用語です。暗号化ツールとポリシー承認ツールを組み合わせて組織の機密情報や重要情報を保護する製品やソリューションを説明する際によく使用されます。 Microsoft Rights Management は、エンタープライズ権限管理 (ERM) ソリューションの一例です。|
 |ERM|*エンタープライズ権限管理*をご覧ください。|
 |一般保護|任意のファイルの種類を暗号化し、承認されていないユーザーがそのファイルを開けないようにする保護レベル。 ファイルを開いた後は暗号化が解除され、[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をネイティブでサポートしていないアプリケーションで使用できます。|
+|HYOK|「*Hold Your Own Key*」を参照してください。|
+|Hold Your Own Key|*HYOK* という略称で呼ばれることもあります。<br /><br />通常は規制やコンプライアンス上の理由から、キーをオンプレミスで生成および保存する組織の構成およびトポロジ オプション。|
 |情報保護|*IP*という略称で呼ばれることもあります。<br /><br />業界標準の一般的な用語です。データやファイルを未承認のアクセスから保護することを指します。これらのデータやファイルは、電子メールやドキュメント共有によって組織の外部に移動しても引き続き保護されます。 Microsoft Rights Management は、情報保護 (IP) ソリューションの一例です。|
 |Information Rights Management|*IRM*という略称で呼ばれることもあります。<br /><br />Exchange Server、Word、および SharePoint Online などの Office サービスと共に使用される用語で、Rights Management をサポートする機能を説明します。|
 |IRM|*Information Rights Management*をご覧ください。|
@@ -72,6 +74,6 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

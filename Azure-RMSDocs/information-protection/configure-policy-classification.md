@@ -3,15 +3,15 @@ title: "Azure Information Protection 用の自動および推奨分類の条件�
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9da6bf3687242793002976c3514bda068effd8d7
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 80c201dcf316a5aa5e123645d47c6741f8b61f05
 
 
 ---
@@ -49,15 +49,15 @@ ms.openlocfilehash: 9da6bf3687242793002976c3514bda068effd8d7
 
 ## ラベルの推奨または自動分類を構成するには
 
-1. 次の Azure Information Protection 用の特別なリンクを使用して Azure ポータルにサインインしていることを確認します: https://portal.azure.com/?microsoft_azure_informationprotection=true
- 
-2. ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+    
+    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-3. **[Azure Information Protection]** ブレードで、自動または推奨分類を構成するラベルを選択します。
+2. **[Azure Information Protection]** ブレードで、自動または推奨分類を構成するラベルを選択します。
 
-4. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
+3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
-5. **[条件]** ブレードで、定義済みの条件を使用する場合は **[組み込み]** を、独自の条件を指定する場合は **[カスタム]** を選択した後、**[保存]** をクリックします。
+4. **[条件]** ブレードで、定義済みの条件を使用する場合は **[組み込み]** を、独自の条件を指定する場合は **[カスタム]** を選択した後、**[保存]** をクリックします。
 
     - **[組み込み]** を選択した場合: 使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
         
@@ -67,13 +67,13 @@ ms.openlocfilehash: 9da6bf3687242793002976c3514bda068effd8d7
         
     **出現オプションの例**: 組み込みの社会保障番号オプションを選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[Count occurrences with unique values only]** (一意の値のみを持つ出現回数のカウント) を **[オン]** に設定した場合、この条件には適合しません。このオプションを **[オフ]** に設定した場合、条件に適合します。
 
-6. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
+5. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
 
     - 自動分類または推奨分類を選択します。**[Select how this label is applied: automatically or recommended to user]** (ラベルの適用方法を選択してください: 自動またはユーザーに推奨) で、**[自動]** または **[推奨]** を選択します。
 
     - ユーザー プロンプトまたはポリシー ヒント用のテキストを指定します。既定のテキストを維持するか、独自の文字列を指定します。
 
-7. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+6. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 ## 組み込み条件に関する情報
 
@@ -225,6 +225,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

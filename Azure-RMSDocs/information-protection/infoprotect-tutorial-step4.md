@@ -3,15 +3,15 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 4 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: a36433167462275e91059f9eb3a2141ffa2797d5
 
 
 ---
@@ -28,7 +28,7 @@ Azure Information Protection クライアントをインストールして Word 
 
 ### 既定のラベルを手動で変更するには:
 
-- Information Protection バーで、**[Internal]** (内部) の横にある [Edit label] (ラベルの編集) アイコンをクリックします。 使用できるラベルが表示されます。 **[Personal]** (個人) を選択すると、分類レベルを下げる理由の入力を求められます。 **[This file no longer requires that classification]** (このファイルをこの分類にする必要がなくなりました) を選択し、**[Confirm]** (確認) をクリックします。  
+- Information Protection バーで **[Personal]** (個人) を選択すると、分類レベルを下げる理由の入力を求められます。 **[This file no longer requires that classification]** (このファイルをこの分類にする必要がなくなりました) を選択し、**[Confirm]** (確認) をクリックします。  
 
     **[Sensitivity]** (秘密度) の値が **[Personal]** (個人) に変わります。
 
@@ -36,7 +36,7 @@ Azure Information Protection クライアントをインストールして Word 
 
 ### 分類を完全に削除するには:
 
-- Information Protection バーで、**[Personal]** (個人) の横にある [Edit label] (ラベルの編集) アイコンをクリックします。 使用できるラベルが表示されます。 今度は、いずれかのラベルを選択するのではなく、[Remove label] (ラベルの削除) アイコンをクリックします。 **[OK]** をクリックして確認し、このアクションの理由を入力します。  
+- Information Protection バーで、**[Personal]** (個人) の横にある **[Edit label]** (ラベルの編集) アイコンをクリックします。 使用できるラベルが表示されます。 今度は、いずれかのラベルを選択するのではなく、**[Remove label]** (ラベルの削除) アイコンをクリックします。 **[OK]** をクリックして確認し、このアクションの理由を入力します。  
 
     **[Sensitivity]** (秘密度) の値が **[Not set]** (非設定) に変わります。既定のラベルが設定されていない場合も、最初はこのように表示されます。
 
@@ -77,6 +77,6 @@ Azure ポータルで Information Protection ポリシーの設定を変更す�
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 
