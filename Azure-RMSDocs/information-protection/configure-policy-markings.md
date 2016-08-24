@@ -3,15 +3,15 @@ title: "Azure Information Protection 用の視覚的なマーキングのラベ�
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
+ms.sourcegitcommit: b5e7fecca7aeb61221dc1f61aa3e202936b8c042
+ms.openlocfilehash: 2b4f464fa51e0743cb1ce0726c7feb31146b5128
 
 
 ---
@@ -60,17 +60,19 @@ ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}` 選択したラベル
+- `${Item.Label}` 選択したラベル。 例: Internal
 
-- `${Item.Name}` ファイル名または電子メールの件名
+- `${Item.Name}` ファイル名または電子メールの件名。 例: JulySales.docx
 
-- `${Item.Location}` ファイル パス
+- `${Item.Location}` ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` ドキュメントまたは電子メールの所有者
+- `${User.Name}` ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone
 
-- `${Event.DateTime}` 選択したラベルが設定された日時 
+- `${User.PrincipalName}` ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
+
+- `${Event.DateTime}` 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
     
-例: Secret ラベル フッターに `Document: ${item.name} Sensitivity: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx Sensitivity: Secret** になります。
+例: Secret ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: Secret** になります。
 
 ## 次のステップ
 
@@ -80,6 +82,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

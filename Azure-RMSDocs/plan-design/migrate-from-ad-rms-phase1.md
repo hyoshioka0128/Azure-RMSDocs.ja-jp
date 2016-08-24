@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/23/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: defe008a9b78026ccac584bb06762228456a2916
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: efe129422348fb30ce7686a5602cb29a1b46d36d
 
 
 ---
@@ -27,9 +27,12 @@ AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 1 で
 
 
 ## 手順 1: Azure Rights Management Administration Tool をダウンロードする
-Microsoft ダウンロード センターに移動し、 [Azure Rights Management Administration Tool](http://go.microsoft.com/fwlink/?LinkId=257721)をダウンロードします。このファイルには、Windows PowerShell 用の Azure RMS 管理モジュールが含まれています。
+Microsoft ダウンロード センターに移動し、[Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721) をダウンロードします。このファイルには、Windows PowerShell 用の Azure RMS 管理モジュールが含まれています。
 
 ツールをインストールします。 手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
+
+> [!NOTE]
+> この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が 2.5.0.0 以上であることを確認します。 `(Get-Module aadrm -ListAvailable).Version`
 
 ## 手順 2. AD RMS から構成データをエクスポートし、それを Azure RMS にインポートする
 この手順は、2 段階の処理です。
@@ -39,10 +42,20 @@ Microsoft ダウンロード センターに移動し、 [Azure Rights Managemen
 2.  構成データを Azure RMS にインポートします。 現在の AD RMS のデプロイ構成と、Azure RMS テナント キーに対する優先トポロジに応じて、この手順のプロセスは異なります。
 
 ### 構成データを AD RMS からエクスポートする
-すべての AD RMS クラスター上の、組織のコンテンツを保護していたすべての信頼された発行ドメインに対して、次の手順を実行します。 ライセンス専用クラスターでこれを実行する必要はありません。
 
-> [!NOTE]
-> Windows Server 2003 Rights Management を使用している場合は、これらの手順ではなく、「[Windows RMS から異なるインフラストラクチャの AD RMS への移行](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx)」の記事の「[SLC、TUD、TPD、および RMS の秘密キーのエクスポート](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx)」の手順を実行してください。
+> [!IMPORTANT]
+> この手順を実行する前に、まず、Azure RMS の要件として、AD RMS サーバーが暗号化モード 2 で実行されていることを確認します。
+> 
+> 暗号化モードを確認するには
+> 
+> - Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
+> 
+> - AD RMS のすべてのサポート対象バージョンの場合: [RMS アナライザー](https://www.microsoft.com/en-us/download/details.aspx?id=46437)と **AD RMS 管理**オプションを使用して、**RMS サービス情報**の暗号モードを表示します。
+> 
+> 暗号モードの値が **2** であることを確認します。 そうでない場合は、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」の暗号化モード 2 を有効にする手順を参照してください。
+
+
+すべての AD RMS クラスター上の、組織のコンテンツを保護していたすべての信頼された発行ドメインに対して、次の手順を実行します。 ライセンス専用クラスターでこれを実行する必要はありません。
 
 #### 構成データ (信頼された発行ドメインの情報) をエクスポートするには
 
@@ -60,7 +73,7 @@ Microsoft ダウンロード センターに移動し、 [Azure Rights Managemen
 
     -   信頼されたドメイン ファイルを RMS バージョン 1.0 で保存するチェック ボックスをオンにしないでください。
 
-信頼された発行ドメインをすべてエクスポートしたら、このデータを Thales から Azure RMS ハードウェア セキュリティ モジュール (HMS) にインポートする手順を開始できます。 詳細については、 
+信頼された発行ドメインをすべてエクスポートしたら、このデータを Azure RMS にインポートする手順を開始できます。
 
 ### 構成データを Azure RMS にインポートする
 正確な手順は、現在の AD RMS のデプロイ構成と、Azure RMS テナント キーの優先トポロジによって異なります。
@@ -78,18 +91,18 @@ Microsoft ダウンロード センターに移動し、 [Azure Rights Managemen
 > [!NOTE]
 > AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「 [AD RMS でのハードウェア セキュリティ モジュールの使用](http://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
 
-Azure RMS テナント キー トポロジには、テナント キーをマイクロソフトが管理するか (**マイクロソフト管理**) またはユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 顧客管理の Azure RMS テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、記事「[Azure Rights Management テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+Azure RMS テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 顧客管理の Azure RMS テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、記事「[Azure Rights Management テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 > [!IMPORTANT]
-> 現在、Exchange Online は Azure RMS BYOK と互換性がありません。  移行後に BYOK を使用し、Exchange Online を使用する場合は、この構成により Exchange Online の IRM 機能が制限されることを理解しておきます。 「[BYOK の料金と制限事項](byok-price-restrictions.md)」の情報は、移行に最適な Azure RMS テナント キー トポロジの選択に役立ちます。
+> 現在、Exchange Online は Azure RMS の BYOK と互換性がありません。  移行後に BYOK を使用し、Exchange Online を使用する場合は、この構成により Exchange Online の IRM 機能が制限されることを理解しておきます。 「[BYOK の料金と制限事項](byok-price-restrictions.md)」の情報は、移行に最適な Azure RMS テナント キー トポロジの選択に役立ちます。
 
 次の表を参考にして、移行に使用する手順を識別してください。 記載されていない組み合わせはサポートされません。
 
 |現在の AD RMS のデプロイ|選択する Azure RMS テナント キー トポロジ|移行手順|
 |-----------------------------|----------------------------------------|--------------------------|
 |AD RMS データベースでのパスワード保護|マイクロソフト管理|後で説明される「**ソフトウェアで保護されたキーからソフトウェアで保護されたキーへの移行**」の手順を参照してください。<br /><br />これは最も簡単な移行パスであり、Azure RMS に構成データを転送するだけで済みます。|
-|Thales nShield ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護|お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />BYOK ツールセットが必要であり、キーをオンプレミス HSM から Azure RMS HSM に転送した後、構成データを Azure RMS に転送する 2 つの手順で行います。|
-|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|後で説明される「**ソフトウェアで保護されたキーから HSM で保護されたキー**への移行」の手順を参照してください。<br /><br />BYOK ツールセットが必要であり、最初にソフトウェア キーを抽出してオンプレミス HSM にインポートし、オンプレミス HSM から Azure RMS HSM にキーを転送した後、最後に構成データを Azure RMS に転送する 3 つの手順で行います。|
+|Thales nShield ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護|お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、3 つの一連の手順を実行する必要があります (最初にオンプレミスの HSM から Azure Key Vault の HSM にキーを転送し、次に Azure RMS がテナント キーを使用するのを承認し、最後に構成データを Azure RMS に転送する)。|
+|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|後で説明される「**ソフトウェアで保護されたキーから HSM で保護されたキー**への移行」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の 4 つの手順を実行する必要があります (最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure RMS HSM にキーを転送し、さらに Key Vault データを Azure RMS に転送し、最後に構成データを Azure RMS に転送する)。|
 |Thales 以外のサプライヤーのハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護|お客様が管理 (BYOK)|この HSM から Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
 |外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、暗号プロバイダーのサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
 これらの手順を開始する前に、信頼された発行ドメインをエクスポートしたときに作成した .xml ファイルにアクセスできることを確認します。 たとえば、これらは AD RMS サーバーからインターネットに接続されたワークステーションに移動する USB ドライブに保存されている可能性があります。
@@ -101,9 +114,9 @@ Azure RMS テナント キー トポロジには、テナント キーをマイ�
 手順 2 を完了するには、移行パスに応じた手順を選択します。 
 
 
-- [ソフトウェア キーからソフトウェア キーへ](migrate-softwarekey-to-softwarekey.md)
-- [HSM キーから HSM キーへ](migrate-hsmkey-to-hsmkey.md)
-- [ソフトウェア キーから HSM キーへ](migrate-softwarekey-to-hsmkey.md)
+- [ソフトウェアで保護されているキーからソフトウェアで保護されているキーへ](migrate-softwarekey-to-softwarekey.md)
+- [HSM で保護されているキーから HSM で保護されているキーへ](migrate-hsmkey-to-hsmkey.md)
+- [ソフトウェアで保護されているキーから HSM で保護されているキーへ](migrate-softwarekey-to-hsmkey.md)
 
 
 ## 手順 3. RMS テナントをアクティブ化する
@@ -166,7 +179,7 @@ Azure クラシック ポータルの既定の権限ポリシー テンプレー
 ### ANYONE グループを含む AD RMS テンプレートを識別するためのサンプル Windows PowerShell スクリプト
 このセクションに含まれるサンプル スクリプトを使用すると、前のセクションで説明したように、ANYONE グループが定義されている AD RMS テンプレートを識別できます。
 
-**免責事項:** このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 このサンプル スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。*
+**免責事項:** このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 このサンプル スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。
 
 ```
 import-module adrmsadmin 
@@ -207,6 +220,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

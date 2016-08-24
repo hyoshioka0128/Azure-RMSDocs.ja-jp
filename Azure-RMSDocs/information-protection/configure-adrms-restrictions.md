@@ -3,15 +3,15 @@ title: "HYOK の制限事項 | Azure Rights Management"
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: cfab76a97034b58eec8dfdbdc82cc1037a647d11
-ms.openlocfilehash: 95f64c00c28fb52a0bd7d78a997705f7ed515557
+ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
+ms.openlocfilehash: 1cbf6bd6c209a8aafd1db61422ce03b628aaec07
 
 
 ---
@@ -51,9 +51,13 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
 
 - AD RMS の構成:
     
+    - Windows Server 2012 R2 の最小バージョン: 運用環境では必須ですが、テストまたは評価を目的とする場合は、Windows Server 2008 R2 Service Pack 1 の最小バージョンを使用できます。
+    
     - 単一の AD RMS ルート クラスター。
     
-    - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx)。
+    - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスターの暗号化モードのバージョンと、その全体的な正常性を確認するには、[RMS アナライザー ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)を使用します。   
+    
+    - 接続先のクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように AD RMS サーバーが構成されている: 運用環境では必須ですが、テストまたは評価目的の場合は必須ではありません。
     
     - 構成済みの権利テンプレート。
 
@@ -66,7 +70,9 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
 - [Azure Information Protection クライアント](info-protect-client.md)のバージョンが **1.0.233.0** 以降。
 
 > [!IMPORTANT]
-> このシナリオが提供する高い確実性を実現するために、AD RMS サーバーは DMZ に配置せず、適切に管理されているコンピューター (たとえば、モバイル デバイスやワークグループ コンピューター以外のコンピューター) からのみ使用することをお勧めします。
+> このシナリオが提供する高い確実性を実現するために、AD RMS サーバーは DMZ に配置せず、適切に管理されているコンピューター (たとえば、モバイル デバイスやワークグループ コンピューター以外のコンピューター) からのみ使用することをお勧めします。 
+> 
+> また、AD RMS クラスターでハードウェア セキュリティ モジュール (HSM) を使用することをお勧めします。これを使用すれば、AD RMS のデプロイが侵入または侵害されても、サーバー ライセンサー証明書 (SLC) の秘密キーが公開または盗難されることはありません。 
 
 AD RMS のデプロイの情報と手順については、Windows Server ライブラリの「[Active Directory Rights Management Services の概要](https://technet.microsoft.com/library/hh831364.aspx)」を参照してください。 
 
@@ -89,6 +95,6 @@ AD RMS の保護のラベルを構成するには、「[Rights Management によ
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

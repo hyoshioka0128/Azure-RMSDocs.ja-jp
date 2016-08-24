@@ -3,15 +3,15 @@ title: "Rights Management による保護を適用するようにラベルを構
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 798fb423ff8dab3e9777a33e7b2c483bceb81016
+ms.sourcegitcommit: e11a5a836d6a410ba49ac17cfe95d8530ecb785f
+ms.openlocfilehash: 60738c310a3e7c734bfe3e48e16535ed3be05bb4
 
 
 ---
@@ -63,11 +63,15 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
     > [!NOTE] 
     > **[ラベル]** ブレードを開いた後で新しいテンプレートを作成した場合は、このブレードを閉じて手順 2 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
     
-5. AD RMS を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。
+    部門別テンプレートを選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
+    
+    - 構成されたテンプレート範囲の外にいるユーザー、または Azure Rights Management 保護の適用から除外されているユーザーは、引き続きラベルを確認できますが、適用することはできません。 それらのユーザーがラベルを選択した場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
+    
+5. AD RMS を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。 [詳細情報](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-5. **[保存]** をクリックします。
+6. **[保存]** をクリックします。
 
-6. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+7. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 ## 次のステップ
 
@@ -75,6 +79,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 
