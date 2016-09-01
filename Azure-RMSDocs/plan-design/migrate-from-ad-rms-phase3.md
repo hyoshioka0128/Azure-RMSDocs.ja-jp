@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 6d3cb53fb199bb880a0e61d2b964f297e547a027
 
 
 ---
@@ -42,7 +42,7 @@ AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 で
 ## 手順 7. RMS コネクタをデプロイする
 AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使用していた場合、最初にこれらのサーバーで IRM を無効にし、AD RMS の構成を削除する必要があります。 次に、Rights Management (RMS) コネクタをデプロイします。これは、オンプレミス サーバーと Azure RMS の間の通信インターフェイス (リレー) として機能します。
 
-最後にこの手順では、電子メール メッセージを保護するために使用されていた複数の TPD を Azure RMS にインポートした場合、Exchange Server コンピューター上のレジストリを手動で編集して、RMS コネクタにすべての TPD URL をリダイレクトする必要があります。
+最後にこの手順では、電子メール メッセージを保護するために使用されていた複数の AD RMS データ構成ファイル (.xml) を Azure RMS にインポートした場合、Exchange Server コンピューター上のレジストリを手動で編集して、RMS コネクタにすべての信頼された発行ドメインの URL をリダイレクトする必要があります。
 
 > [!NOTE]
 > 開始する前に、「[Azure Rights Management をサポートするオンプレミス サーバー](../get-started/requirements-servers.md)」で、RMS コネクタがサポートしているオンプレミス サーバーのバージョンを確認してください。
@@ -95,7 +95,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 #### Exchange のみで複数の TPD の場合:レジストリを編集します。
 
--   各 Exchange サーバーで、インポートした各追加 TPD に対して次のレジストリ キーを手動で追加し、TPD の URL を RMS コネクタにリダイレクトします。 これらのレジストリ エントリは移行に固有であり、Microsoft RMS コネクタ用のサーバー構成ツールでは追加されません。
+-   各 Exchange サーバーで、インポートした追加の構成データファイル (.xml) ごとに次のレジストリ キーを手動で追加し、信頼された発行ドメインの URL を RMS コネクタにリダイレクトします。 これらのレジストリ エントリは移行に固有であり、Microsoft RMS コネクタ用のサーバー構成ツールでは追加されません。
 
     これらのレジストリの編集を行うときは、次の手順を使用します。
 
@@ -215,6 +215,6 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

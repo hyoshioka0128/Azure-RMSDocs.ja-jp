@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 21fac7d684f2d544ab97f5ca6eb7faaaca3e9d26
 
 
 ---
@@ -36,25 +36,24 @@ AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 4 で
 AD RMS サーバーの使用を停止した後、Azure クラシック ポータルでテンプレートをレビューして統合しユーザーの選択肢を減らしたり、再構成したり、新しいテンプレートを追加したりできます。 これは、既定のテンプレートを発行する絶好のタイミングでもあります。 詳細については、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
 ## 手順 9.  Azure RMS テナント キーを更新する
-これは、AD RMS デプロイで RMS Cryptographic Mode 1 を使用していた場合、移行が完了したときに必要な手順です。キーの更新により RMS Cryptographic Mode 2 を使用する新しいテナント キーが作成されるためです。 Cryptographic Mode 1 での Azure RMS の使用は、移行プロセス中にのみサポートされます。
+この手順は、選択したテナント キー トポロジが顧客管理 (Azure Key Vault での BYOK) ではなくマイクロソフト管理である場合にのみ適用されます。
 
-この手順は省略可能ですが、移行が完了したとき、RMS Cryptographic Mode 2 で実行していた場合でも推奨されます。AD RMS キーに対する潜在的なセキュリティ侵害から Azure RMS テナント キーをセキュリティで保護するのに役立ちます。 Azure RMS テナント キーを更新すると ("キーのローリング" とも呼ばれます)、新しいキーが作成され、元のキーがアーカイブされます。 ただし、キーの移動には数週間かかりすぐには完了しないので、元のキーの侵害が疑われるまで待たず、移行が完了したらすぐに Azure RMS テナント キーを更新してください。
+この手順は省略できます。ただし、Azure RMS テナント キーが Microsoft によって管理されていて、AD RMS から移行済みである場合は、実行することをお勧めします。 このシナリオでのキーの更新は、AD RMS キーに対する潜在的なセキュリティ侵害から Azure RMS テナント キーを保護するのに役立ちます。
 
-Azure RMS テナント キーを更新するには:
+Azure RMS テナント キーを更新すると ("キーのローリング" とも呼ばれます)、新しいキーが作成され、元のキーがアーカイブされます。 ただし、キーの移動には数週間かかりすぐには完了しないので、元のキーの侵害が疑われるまで待たず、移行が完了したらすぐに Azure RMS テナント キーを更新してください。
 
--   Azure RMS テナント キーが Microsoft によって管理されている場合: これを行うには、[Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**Azure RMS テナント キーを更新する要求で Azure Rights Management サポート ケース**を開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
+マイクロソフト管理の Azure RMS テナント キーを更新するには、[Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**AD RMS からの移行後の Azure RMS テナント キーの更新要求に関する Azure Rights Management サポート ケース**に関するページを開きます。 自分が Azure RMS テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
 
--   Azure RMS テナント キーが顧客管理 (BYOK) である場合: BYOK 手順を繰り返して、インターネット経由または手動で新しいキーを生成および作成します。
-
-Azure RMS テナント キーの管理の詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 
 ## 次のステップ
+
+RMS テナント キーの管理の詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 
 移行が完了した後は、[デプロイ ロードマップ](deployment-roadmap.md)を参照して、必要になる可能性があるその他のデプロイ タスクを確認します。
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

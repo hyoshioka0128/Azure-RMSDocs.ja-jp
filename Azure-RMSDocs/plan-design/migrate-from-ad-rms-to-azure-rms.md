@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 8ef46d68594a6e559e050f846a844f566ff8770d
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 65371b9a3b210743fc160dbad38333ccb12671e6
 
 
 ---
@@ -35,30 +35,31 @@ Active Directory Rights Management サービス (AD RMS) のデプロイを Azur
 Azure RMS への移行を始める前に、次の前提条件が満たされていること、および制限事項を理解していることを確認してください。
 
 
-- **サポートされる RMS のデプロイ**
+- **サポートされる RMS のデプロイ:**
+    
+    - AD RMS の次のリリースでは、Azure RMS への移行をサポートします。
+    
+        - Windows Server 2008 R2 (x64)
+        
+        - Windows Server 2012 (x64)
+        
+        - Windows Server 2012 R2 (x64)
+        
+    - 暗号化モード 2:
+    
+        - Azure RMS への移行を開始する前に、AD RMS サーバーとクライアントを暗号化モード 2 で実行する必要があります。 詳細については、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」を参照してください。
+        
+    - すべての有効な AD RMS トポロジがサポートされます。
+    
+        - 単一フォレスト、単一 RMS クラスター
+        
+        - 単一フォレスト、複数のライセンス専用 RMS クラスター
+        
+        - 複数フォレスト、複数 RMS クラスター
+        
+    注: 既定では、複数の RMS クラスターが 1 つの Azure RMS テナントに移行します。 個別の Azure RMS テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数の Azure RMS テナントにインポートすることはできません。
 
-    Windows Server 2008 から Windows Server 2012 R2 までの AD RMS のすべてのリリースは、Azure RMS への移行をサポートします。
-
-    - Windows Server 2008 (x86 または x64)
-
-    - Windows Server 2008 R2 (x64)
-
-    - Windows Server 2012 (x64)
-
-    - Windows Server 2012 R2 (x64)
-
-    すべての有効な AD RMS トポロジがサポートされます。
-
-    - 単一フォレスト、単一 RMS クラスター
-
-    - 単一フォレスト、複数のライセンス専用 RMS クラスター
-
-    - 複数フォレスト、複数 RMS クラスター
-
-    **注**: 既定では、複数の RMS クラスターが 1 つの Azure RMS テナントに移行します。 異なる RMS テナントが必要な場合は、異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数の Azure RMS テナントにインポートすることはできません。
-
-
-- **Azure RMS テナント (非アクティブ) など、Azure RMS を実行するためのすべての要件**
+- **Azure RMS テナント (非アクティブ) など、Azure RMS を実行するためのすべての要件:**
 
     「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
 
@@ -82,6 +83,10 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
     移行プロセス中にサービスが中断するのはこのときだけです。
 
+- **HSM で保護されたキーを使用して自主的に Azure RMS テナント キーを管理する場合**:
+
+    - このオプション構成では、Azure Key Vault と、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。 
+
 
 制限事項:
 
@@ -100,7 +105,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 ## AD RMS から Azure RMS への移行手順の概要
 
 
-9 つの移行手順は 4 つのフェーズに分けることができ、異なるタイミングに異なる管理者が実行できます。
+移行手順は 4 つのフェーズに分けることができ、異なるタイミングに異なる管理者が実行できます。
 
 [**フェーズ 1 - AD RMS のサーバー側の構成**](migrate-from-ad-rms-phase1.md)
 
@@ -118,11 +123,11 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
     - **HSM で保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS 用の HSM により保存されているキーを、顧客管理の Azure RMS テナント キーに移行します (“Bring Your Own Key” つまり BYOK シナリオ)。 これには、オンプレミス Thales HSM から Azure RMS HSM にキーを転送する追加手順が必要です。 HSM で保護されている既存のキーは、モジュールで保護する必要があります。OCS で保護されているキーは、BYOK ツールセットでサポートされていません。
+        AD RMS 用の HSM により保存されているキーを、顧客管理の Azure RMS テナント キーに移行します (“Bring Your Own Key” つまり BYOK シナリオ)。 これには、オンプレミスの Thales HSM から Azure Key Vault にキーを転送し、Azure RMS にこのキーの使用を承認する追加手順が必要です。 HSM で保護されている既存のキーは、モジュールで保護する必要があります。OCS で保護されているキーは、Rights Management サービスでサポートされていません。
 
     - **ソフトウェアで保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure RMS テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェア キーを抽出してオンプレミス HSM にインポートした後、オンプレミス Thales HSM から Azure RMS HSM にキーを転送する追加手順が必要になるため、必要な構成はこの方法が最も多くなります。
+        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure RMS テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェア キーを抽出してオンプレミス HSM にインポートした後、オンプレミス Thales HSM から Azure Key Vault HSM にキーを転送し、キーを格納するキー コンテナーの使用を Azure RMS に承認する追加手順が必要になるため、必要な構成はこの方法が最も多くなります。
 
 - **手順 3. Azure RMS テナントをアクティブ化する**
 
@@ -171,7 +176,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 - **手順 9: Azure RMS テナント キーを更新する**
 
-    この手順は、移行前に Cryptographic Mode 2 を実行していなかった場合に必要であり、必須ではありませんが、Azure RMS テナント キーのセキュリティを保護するためすべての移行に対して推奨されます。
+    この手順は省略できますが、手順 2 で Azure RMS テナント キー トポロジとして "マイクロソフト管理" を選択した場合は、実行することを推奨します。 選択した Azure RMS テナント キー トポロジが顧客管理 (BYOK) である場合、この手順は適用できません。
 
 
 ## 次のステップ
@@ -180,6 +185,6 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f01d57759ab80b4946c07a627269550c80114131
-ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
+ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
+ms.openlocfilehash: ee7b9b5f251856f102651f1e8f379f7bbacea77e
 
 
 ---
@@ -41,21 +41,21 @@ ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
 ## テナント キー トポロジを選択する:Microsoft による管理 (既定) または自主管理 (BYOK)
 組織に最適なテナント キー トポロジを決定します。 既定では、Azure RMS でテナント キーが生成され、テナント キー ライフサイクルのほとんどの側面が管理されます。 これは、管理オーバーヘッドが最も少なくて済むシンプルな方法です。 多くの場合、テナント キーの存在を意識することすらありません。 Azure RMS にサインアップすれば、それ以外のキー管理プロセスは Microsoft によって処理されます。
 
-または、独自のテナント キーを作成してオンプレミスでマスター コピーを保持するなど、テナント キーを完全に制御する必要がある場合があります。 多くの場合、このシナリオは BYOK (Bring Your Own Key) と呼ばれます。 この方法では、次の状況が発生します。
+または、[Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用して、テナント キーを完全に管理することもできます。 このシナリオでは、テナント キーを作成して、社内でマスター コピーを保持する必要があります。 多くの場合、このシナリオは BYOK (Bring Your Own Key) と呼ばれます。 この方法では、次の状況が発生します。
 
-1.  社内で IT ポリシーに沿ってテナント キーを作成します。
+1.  社内で IT ポリシーとセキュリティ ポリシーに沿ってテナント キーを作成します。
 
-2.  そのテナント キーを社内のハードウェア セキュリティ モジュール (HSM) から Microsoft が所有し管理する HSM にセキュリティで保護した状態で転送します。 このプロセス全体で、テナント キーがハードウェア保護境界の外に置かれることはありません。
+2.  Azure Key Vault を使用して、そのテナント キーを社内のハードウェア セキュリティ モジュール (HSM) から Microsoft が所有し管理する HSM にセキュリティで保護した状態で転送します。 このプロセス全体で、テナント キーがハードウェア保護境界の外に置かれることはありません。
 
-3.  テナント キーを Microsoft に転送するときは、Thales HSM により常時保護されます。 Microsoft は Thales と連携してテナント キーが Microsoft の HSM から抽出できないようにしています。
+3.  テナント キーを Microsoft に転送するときは、Azure Key Vault により常時保護されます。
 
 オプションとして、テナント キーの使用状況と使用時期を正確に把握するために Azure RMS のほぼリアルタイムの使用状況ログを使用することもできます。
 
 > [!NOTE]
-> 追加の保護措置として、Azure RMS では北米、EMEA (欧州、中東、およびアフリカ)、およびアジアのデータ センターで独立したセキュリティ ワールドを使用しています。 テナント キーを自主管理する場合、キーは、RMS テナントが登録されている地域のセキュリティ ワールドに関連付けられています。 たとえば、欧州のお客様のテナント キーを北米やアジアのデータセンターで使用することはできません。
+> 追加の保護措置として、Azure Key Vault では北米、EMEA (欧州、中東、アフリカ)、アジアなどの地域のデータ センターで独立したセキュリティ ドメインを使用しています。 また、Microsoft Azure Germany や Azure Government など、さまざまな Azure のインスタンスが対象になります。 テナント キーを自主管理する場合、キーは、RMS テナントが登録されている地域またはインスタンスのセキュリティ ドメインに関連付けられています。 たとえば、欧州のお客様のテナント キーを北米やアジアのデータセンターで使用することはできません。
 
 ## テナント キーのライフサイクル
-Microsoft でテナント キーを管理することになった場合、キー ライフサイクル操作の大半を Microsoft で行います。 ただし、テナント キーを自主管理することになった場合、キー ライフサイクル操作の多くといくつかの追加の手順を自社で行う必要があります。
+Microsoft でテナント キーを管理することになった場合、キー ライフサイクル操作の大半を Microsoft で行います。 ただし、テナント キーを自主管理することになった場合、Azure Key Vault でキー ライフサイクル操作の多くといくつかの追加の手順を自社で行う必要があります。
 
 この 2 つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
 
@@ -63,7 +63,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 2 番目の図では、テナント キーを自主管理する場合に必要な追加の手順を示しています。
 
-![Azure RMS テナント キー ライフサイクル - 自主管理](../media/RMS_BYOK_onprem.png)
+![Azure RMS テナント キー ライフサイクル - 自主管理](../media/RMS_BYOK_onprem4.png)
 
 テナント キーを Microsoft で管理する場合、キーの生成に関する操作は不要です。「[次のステップ](plan-implement-tenant-key.md#next-steps)」に進んでください。
 
@@ -86,34 +86,28 @@ Microsoft でテナント キーを管理することになった場合、キー
 |---------------|--------------------|
 |Azure RMS をサポートするサブスクリプション。|利用可能なサブスクリプションの詳細については、「[Cloud subscriptions that support Azure RMS (Azure RMS をサポートするクラウド サブスクリプション)](../get-started/requirements-subscriptions.md)」を参照してください。|
 |個人向け RMS または Exchange Online は使用しないでください。 または、Exchange Online を使用する場合は、この構成で BYOK を使用することには制限があることをご理解ください。|BYOK の現在の制限事項の詳細については、「[BYOK の料金と制限事項](byok-price-restrictions.md)」を参照してください。<br /><br />**重要**: 現在、BYOK には Exchange Online との互換性がありません。|
-|Thales HSM、スマートカード、サポート ソフトウェア。<br /><br />**注**: ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure RMS への移行を行う場合は、Thales ドライバーのバージョンが 11.62 以降である必要があります。|Thales ハードウェア セキュリティ モジュールにアクセスでき、Thales HSM の基本的な操作知識を持っている必要があります。 互換性のあるモジュールの一覧について、または HSM を持っていない場合の購入方法については、「 [Thales ハードウェア セキュリティ モジュール](http://www.thales-esecurity.com/msrms/buy) 」を参照してください。|
-|テナント キーを物理的ではなくインターネット経由で米国レドモンドに送信する場合: 3 つの要件があります。<br /><br />1: Windows 7 以降の Windows オペレーティング システムと Thales nShield ソフトウェア バージョン 11.62 以降をインストールしたオフライン x64 ワークステーション。<br /><br />このワークステーションで Windows 7 を実行する場合、 [Microsoft .NET Framework 4.5 をインストール](http://go.microsoft.com/fwlink/?LinkId=225702)する必要があります。<br /><br />2: インターネットに接続し、Windows 7 以降の Windows オペレーティング システムをインストールしたワークステーション。<br /><br />3: 空き容量が 16 MB 以上ある USB ドライブまたはポータブル ストレージ デバイス。|テナント キーをレドモンドまで持参する場合、この前提条件は不要です。<br /><br />セキュリティ上の理由から、最初のワークステーションはネットワークに接続しないことを推奨します。 ただし、これはプログラムを使用して適用できるものではありません。<br /><br />注: 次の手順では、この最初のワークステーションを**未接続ワークステーション**と呼んでいます。<br /><br />また、テナント キーが実稼働ネットワーク用である場合、ツールセットのダウンロードとテナント キーのアップロードには、別の予備のワークステーションを使用することを推奨します。 ただし、テスト目的では、最初の 1 つと同じワークステーションを使用することができます。<br /><br />注: 次の手順では、この予備のワークステーションを**インターネット接続ワークステーション**と呼んでいます。|
+|Key Vault の BYOK のすべての前提条件の一覧。|Azure Key Vault のドキュメントの「[BYOK の前提条件](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok)」を参照してください。 <br /><br />**注**: ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure RMS への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
+|Windows PowerShell 用の Azure RMS 管理モジュール。|インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。 <br /><br />この Windows PowerShell モジュールを既にインストールしている場合は、次のコマンドを実行してバージョン番号が **2.5.0.0** 以上であることを確認します。 `(Get-Module aadrm -ListAvailable).Version`|
 
-独自のテナント キーを生成して使用する手順は、インターネット経由で行うか、持参するかで異なります。
+Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使用する方法については、[Thales の Web サイト](https://www.thales-esecurity.com/msrms/cloud)を参照してください。
 
--   **インターネット経由:** この場合、ツールセットのダウンロードと使用、および Windows PowerShell コマンドレットなど、追加の構成手順が必要になります。 ただし、テナント キーを Microsoft の施設まで物理的に輸送する必要はありません。 セキュリティは次の方法で確保されます。
+独自のテナント キーを生成し Azure Key Vault に転送するには、Azure Key Vault のドキュメントの「[Azure Key Vault の HSM 保護キーを生成し、転送する方法](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/)」に記載された手順に従ってください。
 
-    -   オフライン ワークステーションからテナント キーを生成します。これにより攻撃を受ける可能性が小さくなります。
+キーが Key Vault に転送されると、キーには Key Vault でキー ID が付与されます。キー ID は、資格情報コンテナーの名前、キー コンテナー、キーの名前、キーのバージョンが含まれる URL です。 例: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** このキーの使用を Azure RMS に指示するために、この URL を指定する必要があります。
 
-    -   テナント キーはキー交換のキー (KEK) で暗号化されます。これにより、Azure RMS HSM に送信されるまで暗号化された状態になります。 暗号化されたテナント キーのみが、元のワークステーションから移動します。
+ただし、Azure RMS がこのキーを使用できるようにするために、事前に Azure RMS が組織のキー コンテナーを使用することを承認しておく必要があります。 そのために、Azure Key Vault 管理者は、Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) を使用して、Azure RMS サービス プリンシパル **Microsoft.Azure.RMS** にアクセス許可を付与する必要があります。 たとえば、
 
-    -   ツールでテナント キーのプロパティを設定し、テナント キーを Azure RMS セキュリティ ワールドに関連付けます。 このため、Azure RMS HSM がテナント キーを受信して暗号化を解除すると、これらの HSM のみがそのテナント キーを使用できます。 テナント キーをエクスポートすることはできません。 この関連付けは Thales HSM により適用されます。
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
-    -   テナント キーの暗号化に使用されるキー交換のキー (KEK) は、Azure RMS HSM 内部で生成され、エクスポートすることはできません。 HSM では、KEK の明確なバージョンを HSM 外部に示すことはありません。 また、ツールセットには、KEK がエクスポート不可能であることと Thales によって製造された真正の HSM 内部で生成されたことを示す、Thales からの証明書が含まれています。
+このキーを組織の Azure RMS テナント キーとして使用するように、Azure RMS を構成できるようになりました。 Azure RMS コマンドレットを使用して、まず Azure RMS に接続し、サインインします。
 
-    -   ツールセットには、Azure RMS セキュリティ ワールドも Thales によって製造された真正の HSM で生成されたことを示す、Thales からの証明書が含まれています。 これにより、Microsoft が真正のハードウェアを使用していることが証明されます。
+    Connect-AadrmService
 
-    -   Microsoft では地域別に独立した KEK と独立したセキュリティ ワールドを使用します。これにより、テナント キーが暗号化された地域内のデータ センターのみでテナント キーを使用できることが保証されます。 たとえば、欧州のお客様のテナント キーを北米やアジアのデータ センターで使用することはできません。
+次に、[Use-AadrmKeyVaultKey コマンドレット](https://msdn.microsoft.com/library/azure/mt759829.aspx)を実行して、キー URL を指定します。 たとえば、
 
-    > [!NOTE]
-    > テナント キーは、暗号化されていてアクセス制御レベル権限で保護されているので、信頼されないコンピューターとネットワークを経由して安全に移動できます。このため、テナント キーはお客様の HSM と Microsoft の Azure RMS 用 HSM 内でのみ使用可能になります。 ツールセットで提供されるスクリプトを使用してセキュリティ対策を確認できます。また、Thales 側の動作の詳細については、次を参照してください。「 [RMS クラウドでのハードウェア キー管理](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud)」
+    Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
--   **持参:** これを行うには、[Microsoft サポートに連絡](../get-started/information-support.md#to-contact-microsoft-support)して Azure RMS 用のキーの転送を予約する必要があります。 米国ワシントン州レドモンドにある Microsoft のオフィスまでお越しいただき、テナント キーを Azure RMS セキュリティ ワールドに転送する必要があります。
-
-操作方法に関する手順については、テナント キーを生成してインターネット経由で転送するか、持参するかを選択します。 
-
-- [インターネット経由](generate-tenant-key-internet.md)
-- [持参](generate-tenant-key-in-person.md)
+キーの URL が Azure RMS で正しく設定されていることを、Azure Key Vault で確認する必要がある場合は、[Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) を実行して、キーの URL を表示します。
 
 
 ## 次のステップ
@@ -122,15 +116,15 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 1.  テナント キーの使用を開始します。
 
-    -   まだの場合はこの段階で Rights Management をアクティブにして、組織が RMS の使用を開始できるようにする必要があります。 ユーザーはすぐにテナント キーの使用を開始します (Microsoft による管理または自主管理)。
+    -   まだの場合はこの段階で Rights Management をアクティブにして、組織が RMS の使用を開始できるようにする必要があります。 ユーザーはすぐにテナント キーの使用を開始します (Azure Key Vault の Microsoft による管理または顧客管理)。
 
         アクティブ化の詳細については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
 
     -   既に Rights Management をアクティブにしていてテナント キーを自主管理する場合、ユーザーは古いテナント キーから新しいテナント キーへと段階的に移行します。この段階的な移行が完了するまで数週間かかることがあります。 古いテナント キーで保護されていたドキュメントやファイルは、権限のあるユーザーが引き続きアクセスできます。
 
-2.  使用状況のログを使用することを検討します。このログには RMS で実行されるすべてのトランザクションが記録されます。
+2.  使用状況のログを使用することを検討します。このログには Azure Rights Management で実行されるすべてのトランザクションが記録されます。
 
-    テナント キーを自主管理する場合、ログにはテナント キーの使用に関する情報が記録されます。 Excel で表示されるログ ファイルで次のスニペットを参照してください。[Request Types] の [**KMSPDecrypt**] および [**KMSPSignDigest**] は、テナント キーが使用されていることを示しています。
+    テナント キーを自主管理する場合、ログにはテナント キーの使用に関する情報が記録されます。 Excel で表示されるログ ファイルで次のスニペットを参照してください。要求の種類である **KeyVaultDecryptRequest** および **KeyVaultSignRequest** では、テナント キーが使用されています。
 
     ![Excel のログ ファイル、テナント キーが使用されていることがわかる](../media/RMS_Logging.png)
 
@@ -143,6 +137,6 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

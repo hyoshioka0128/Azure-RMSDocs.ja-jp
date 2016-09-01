@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: ece615912d69eda78107c60245620ed36c0affd2
 
 
 ---
@@ -24,7 +24,9 @@ ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
 *適用対象: Azure Rights Management、Office 365*
 
 
-IT 部門が管理する Azure サブスクリプションを持つ組織は無料で BYOK を使用でき、その使用状況をログに記録できます。 個人用 RMS を使用する組織は BYOK やログを構成するテナント管理者がいないので、これらの機能を使用できません。
+Azure Rights Management が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしでキーの使用状況ログを記録することができます。 ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
+
+個人用の RMS を使用して無料のアカウントにサインアップしているユーザーがいる場合、この構成では BYOK および使用状況ログの記録を構成するテナント管理者がいないので、これらの機能を使用することはできません。
 
 
 > [!NOTE]
@@ -32,9 +34,9 @@ IT 部門が管理する Azure サブスクリプションを持つ組織は無�
 
 ![BYOK は Exchange Online をサポートしていません](../media/RMS_BYOK_noExchange.png)
 
-BYOK とログは、Azure RMS と統合されたすべてのアプリケーションでシームレスに動作します。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
+BYOK と使用状況ログの記録は、Azure RMS と統合されたすべてのアプリケーションでシームレスに動作します。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
-例外が 1 つあります。現時点では、 **Azure RMS BYOK には Exchange Online との互換性がありません**。  Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
+例外が 1 つあります。現時点では、 **Azure RMS BYOK には Exchange Online との互換性がありません**。 Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
 
 -   Outlook Web Access の保護された電子メールや保護された添付ファイルは表示できません。
 
@@ -48,7 +50,7 @@ BYOK とログは、Azure RMS と統合されたすべてのアプリケーシ�
 
 Exchange Online 用に制限された RMS 機能を使用して Azure RMS BYOK を使用する場合、RMS は Windows の Outlook および Mac の電子メール クライアント、および Exchange ActiveSync IRM を使用していないその他の電子メール クライアントで動作します。
 
-AD RMS から Azure RMS に移行している場合は、信頼された発行ドメイン (TPD) として (これは Exchange 用語での BYOK で、Azure RMS BYOK とは別のものです)、キーを Exchange Online にインポートしています。 この場合、Exchange Online から TPD を削除して、テンプレートとポリシーの競合を防ぐ必要があります。 詳細については、Exchange Online コマンドレット ライブラリの「[Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx)」を参照してください。
+AD RMS から Azure RMS への移行を行う場合、信頼された発行ドメイン (TPD) としてキーが Exchange Online にインポートされていることがあります (これを Exchange の用語では BYOK と呼びますが、Azure Key Vault の BYOK とは別のものです)。 この場合、Exchange Online から TPD を削除して、テンプレートとポリシーの競合を防ぐ必要があります。 詳細については、Exchange Online コマンドレット ライブラリの「[Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx)」を参照してください。
 
 場合によっては、Exchange Online の Azure RMS BYOK の例外は、実際には問題にならないこともあります。 たとえば、BYOK とログ作成を必要とする組織は、データ アプリケーション (Exchange、SharePoint、Office) をオンプレミスで実行し、Azure RMS を使用するのは、オンプレミス AD RMS では簡単に使用できない機能 (他社とのコラボレーションやモバイル クライアントからのアクセスなど) を使用するためです。 BYOK とログ作成はこのシナリオで問題なく動作し、組織は Azure RMS サブスクリプションを完全に制御できます。
 
@@ -61,6 +63,6 @@ AD RMS から Azure RMS に移行している場合は、信頼された発行�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

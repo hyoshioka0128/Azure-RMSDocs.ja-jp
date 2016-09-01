@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 496edca2e2323e17216858e2ab4844fdb0aa1fb0
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 9bff4e1380dfa3fabab1e8cb9317f3dd31b05a77
 
 
 ---
@@ -27,10 +27,13 @@ ms.openlocfilehash: 496edca2e2323e17216858e2ab4844fdb0aa1fb0
 Azure Rights Management のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) は、次のセクションでこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
 ## テナント キーを取り消します
+Azure Key Vault では、Azure RMS テナント キーが格納されたキー コンテナーに対するアクセス許可を変更して、Azure RMS がキーにアクセスできないようにすることができます。 ただし、これを行うと、以前に Azure RMS で保護したドキュメントや電子メールを誰も開けなくなります。
+
 Azure RMS のサブスクリプションを解除すると、Azure RMS はテナント キーの使用を停止します。ユーザー側の操作は必要ありません。
 
+
 ## テナント キーを再入力します
-再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを利用し、コンピューターの RMS 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 例:
+再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを利用し、コンピューターの RMS 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 たとえば、
 
 -   あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
@@ -38,15 +41,15 @@ Azure RMS のサブスクリプションを解除すると、Azure RMS はテナ
 
 テナント キーを再入力すると、新しいコンテンツは新しいテナント キーの利用により保護されます。 これは段階的に行われます。そのため、一定期間、一部の新しいコンテンツは引き続き以前のテナント キーで保護されます。 以前に保護されたコンテンツは以前のテナント キーで引き続き保護されます。 このシナリオをサポートするために、Azure RMS は以前のテナント キーを保有します。そのため、古いコンテンツのライセンスを発行できます。
 
-テナント キーを再入力するには、「[Azure Rights Management テナント キーを計画して実装する](..\plan-design\plan-implement-tenant-key.md)」トピックの「[BYOK (Bring Your Own Key) の実装](..\plan-design\plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」セクションの手順に従って、インターネットで、または本人が直接新しいキーを生成および作成してください。
+テナント キーを再入力するには、最初に Key Vault で Azure RMS テナント キーを再入力します。 次に、Add-AadrmKeyVaultKey コマンドレットをもう一度実行して、新しいキー URL を指定します。
 
 ## テナント キーをバックアップ/復旧します
 テナント キーのバックアップは自分で行う必要があります。 Thales HSM でテナント キーを生成した場合、キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップするだけです。
 
-「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[Implementing bring your own key (BYOK) (BYOK (Bring Your Own Key) の実装)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」セクションの手順に従ってキーを転送した場合、Azure RMS はトークン化されたキー ファイルを保持して Azure RMS ノードの障害から保護します。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure RMS はこれを取得することができません。
+「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[Implementing bring your own key (BYOK) (BYOK (Bring Your Own Key) の実装)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」セクションの手順に従ってキーを転送してあるので、Key Vault はトークン化されたキー ファイルを保持して任意のサービス ノードの障害から保護します。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
 
 ## テナント キーをエクスポートします
-BYOK を使用する場合、テナント キーを Azure RMS からエクスポートできません。 Azure RMS 内のコピーは回復不可能です。 このキーを削除し、使用できなくする場合は、Microsoft カスタマー サービス サポート (CSS) にお問い合わせください。
+BYOK を使用する場合、テナント キーを Azure Key Vault または Azure RMS からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 
 
 ## 侵害に反応します
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の HSM 技術、現在のキー長、アルゴリズムに脆弱性が見つかる可能性があります。
@@ -60,12 +63,12 @@ BYOK を使用する場合、テナント キーを Azure RMS からエクスポ
 |テナント キーが漏れています。|テナント キーを再入力します。 「[テナント キーを再入力します](#re-key-your-tenant-key)」を参照してください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを更新するように指示します。|
-|RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|マイクロソフトは回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure RMS を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
+|RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure RMS を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
 
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 
