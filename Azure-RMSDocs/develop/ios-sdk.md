@@ -14,15 +14,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
-ms.openlocfilehash: ae1af4a1cddc904fd4800f1a3900e3c7c4d073ed
+ms.sourcegitcommit: a0659fda129f6de5e7b52c89f4d1f9d73d11df45
+ms.openlocfilehash: bdc173fb9cb9b749d75b08df3cc9554acd6f6386
 
 
 ---
 
 # iOS および OS X のセットアップ
 
-iOS および OS X アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
+iOS および OS X アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Rights Management (Azure RMS) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
@@ -32,7 +32,7 @@ iOS および OS X アプリケーションは Microsoft Rights Management SDK 4
 -   [必要条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
--   [参照](#see-also)
+-   [関連項目](#see-also)
 
 ## 必要条件
 
@@ -100,7 +100,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
-### 参照
+### 関連項目
 
 * [作業開始](get-started.md)
 
@@ -119,6 +119,6 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
