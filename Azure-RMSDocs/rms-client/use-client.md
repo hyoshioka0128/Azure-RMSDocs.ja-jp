@@ -1,12 +1,11 @@
 ---
 title: "Rights Management (RMS) クライアント | Azure RMS"
-description: 
-keywords: 
+description: "Microsoft Rights Management サービスはクライアント/サーバー型のソリューションです。コンピューターやモバイル デバイスで実行されるアプリケーションと RMS クライアントが統合され、RMS サービスがクラウド (Azure RMS) かオンプレミス (AD RMS) に配置されます。 RMS クライアントは、Office アプリケーション、RMS 共有アプリケーション、ソフトウェア ベンダー製の RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、単体でインストールすることもできます。開発者が RMS 保護を基幹業務アプリケーションに統合したり、管理者またはパワー ユーザーが RMS 保護ツールでファイルを一括保護したりする場合、単体インストールを実行できます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
@@ -14,15 +13,15 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c21202793dca90edda943082fcd718bdf7397ca
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 234095a733633462ba1a221a5ac6e1e1d47df12b
 
 
 ---
 
 # Rights Management (RMS) クライアント
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 Microsoft Rights Management サービスはクライアント/サーバー型のソリューションです。コンピューターやモバイル デバイスで実行されるアプリケーションと RMS クライアントが統合され、RMS サービスがクラウド (Azure RMS) かオンプレミス (AD RMS) に配置されます。 RMS クライアントは、Office アプリケーション、RMS 共有アプリケーション、ソフトウェア ベンダー製の RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、単体でインストールすることもできます。開発者が RMS 保護を基幹業務アプリケーションに統合したり、管理者またはパワー ユーザーが RMS 保護ツールでファイルを一括保護したりする場合、単体インストールを実行できます。
 
@@ -44,6 +43,6 @@ Rights Management (RMS) クライアントのデプロイ方法と使用方法�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

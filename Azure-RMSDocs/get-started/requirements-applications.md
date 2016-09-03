@@ -1,20 +1,19 @@
 ---
 title: "Azure RMS の要件&#58; アプリケーション | Azure RMS"
-description: 
-keywords: 
+description: "次のテーブルを使用して、Azure RMS をネイティブにサポートするアプリケーションを特定します。RMS API を使用することで RMS はこれらのアプリケーションと緊密に統合され、使用制限がサポートされます。 このようなアプリケーションは RMS 対応とも呼ばれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/15/2016
+ms.date: 08/19/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b02be530af8ee1bc1e5d5f16275d2fb28e2134b7
-ms.openlocfilehash: a885ab6deaf874a8c66623c34eddc2b2778e0005
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d3408f954381978287852dd74a38c5903f583dda
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: a885ab6deaf874a8c66623c34eddc2b2778e0005
 
 # Azure RMS の要件: アプリケーション
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 次のテーブルを使用して、Azure RMS をネイティブにサポートするアプリケーションを特定します。RMS API を使用することで RMS はこれらのアプリケーションと緊密に統合され、使用制限がサポートされます。 このようなアプリケーションは RMS 対応とも呼ばれます。
@@ -42,7 +41,7 @@ ms.openlocfilehash: a885ab6deaf874a8c66623c34eddc2b2778e0005
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office モバイル アプリ (Azure RMS のみ) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />Siemens JT2Go: JT ファイル (Windows 10 のみ)|
 |**iOS**|iPad および iPhone 用 Office [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)<br /><br />TITUS Docs|Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online (Azure RMS のみ) [[2]](#footnote-2)<br /><br />Office Mobile [[1]](#footnote-1)|GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) と [[7]](#footnote-7)<br /><br />Samsung Email (S3 以降) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS のみ) [[1]](#footnote-1)|GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) と [[7]](#footnote-7)<br /><br />Samsung Email (S3 以降) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
 |**OS X**|Office 2011 (AD RMS のみ)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|Outlook 2011 (AD RMS のみ)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
 |**[Windows] 10 Mobile**|Office モバイル アプリ (Azure RMS のみ)[[1]](#footnote-1)|サポートされていません|Citrix WorxMail [[6]](#footnote-6)<br /><br />Outlook メール|サポートされていません|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|サポートされていません|Outlook 2013 RT<br /><br />Windows 用メール アプリケーション<br /><br />Windows メール [[4]](#footnote-4)|Siemens JT2Go: JT ファイル|
@@ -148,6 +147,6 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 Azure RMS で最も一般的に使用されるアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

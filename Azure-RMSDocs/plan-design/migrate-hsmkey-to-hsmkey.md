@@ -1,27 +1,26 @@
 ---
 title: "手順 2.&colon; HSM で保護されているキーから HSM で保護されているキーへの移行 | Azure RMS"
-description: 
-keywords: 
+description: "これらの手順は AD RMS から Azure Rights Management への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 86f7bd025824b23c8eecdb05b62d83204ae1ccb4
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 690729d16358b7b997d9cd1fd8cabed22ce78df4
 
 
 ---
 
 # 手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
 
 
 これらの手順は [AD RMS から Azure Rights Management への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。 
@@ -95,6 +94,6 @@ Azure RMS テナント キーは Azure Key Vault によって格納され管理�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

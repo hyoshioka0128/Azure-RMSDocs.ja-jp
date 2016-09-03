@@ -1,20 +1,19 @@
 ---
 title: "Azure RMS が解決する問題の種類 | Azure RMS"
-description: 
-keywords: 
+description: "次の表を使用して、組織が抱えるビジネス上の要件や問題を特定し、Azure RMS による対処方法を説明します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
-ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: 7aec5c26acb78cd85eee614a603745f3ee5938a2
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
 
 # Azure RMS が解決する問題の種類
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 次の表を使用して、組織が抱えるビジネス上の要件や問題を特定し、Azure RMS による対処方法を説明します。
 
@@ -73,6 +72,6 @@ Azure RMS は、セキュリティ、コンプライアンス、規制に関す�
 Azure RMS の動作に関する技術的な詳細については、「[How does Azure RMS work (Azure RMS の機能の詳細)](how-does-it-work.md)」を参照してください。 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

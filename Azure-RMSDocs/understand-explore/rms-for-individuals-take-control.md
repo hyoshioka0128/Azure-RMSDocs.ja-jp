@@ -1,20 +1,19 @@
 ---
 title: "個人用 RMS 向けに作成されたアカウントを管理者が制御する方法 | Azure RMS"
-description: 
-keywords: 
+description: "組織の個人用 RMS サブスクリプションを有料のサブスクリプションに切り替えない場合でも、組織用に作成された Azure ディレクトリのユーザー アカウントを次の方法で制御できます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: a900622fcce4a0a1431f47647709584e404a7f8c
 
 
 ---
@@ -23,7 +22,7 @@ ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
 
 # 個人用 RMS 向けに作成されたアカウントを管理者が制御する方法
 
-*適用対象: Azure Rights Management*
+>*適用対象: Azure Rights Management*
 
 
 組織の個人用 RMS サブスクリプションを有料のサブスクリプションに切り替えない場合でも、組織用に作成された Azure ディレクトリのユーザー アカウントを次の方法で制御できます。
@@ -47,6 +46,6 @@ Azure ディレクトリ内のユーザー アカウントを制御する、ま�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

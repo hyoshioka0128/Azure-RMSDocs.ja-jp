@@ -1,27 +1,26 @@
 ---
 title: "AD RMS から Azure Rights Management への移行 | Azure RMS"
-description: 
-keywords: 
+description: "Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Rights Management (Azure RMS) に移行するには、次の命令セットを使用します。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure RMS を使用します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 65371b9a3b210743fc160dbad38333ccb12671e6
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: bead12db04e6fcf2f9e4af5148d3f8a4ef4089da
 
 
 ---
 
 # AD RMS から Azure Rights Management への移行
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
 
 Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Rights Management (Azure RMS) に移行するには、次の命令セットを使用します。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure RMS を使用します。
 
@@ -185,6 +184,6 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

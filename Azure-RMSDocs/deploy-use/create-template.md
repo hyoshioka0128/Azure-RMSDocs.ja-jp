@@ -1,20 +1,19 @@
 ---
 title: "カスタム テンプレートを作成、構成、発行する | Azure RMS"
-description: 
-keywords: 
+description: "カスタム テンプレートは、Azure クラシック ポータルで作成および管理します。 この作業は、Azure クラシック ポータルから直接行うことができます。また、Office 365 管理センターにサインインして Rights Management の [高度な機能] を選択し、Azure クラシック ポータルにリダイレクトすることもできます。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5737594c679be0702761014425e104e5eade59f3
-ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
 
 # カスタム テンプレートを作成、構成、発行する
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 カスタム テンプレートは、Azure クラシック ポータルで作成および管理します。 この作業は、Azure クラシック ポータルから直接行うことができます。また、Office 365 管理センターにサインインして Rights Management の **[高度な機能]** を選択し、Azure クラシック ポータルにリダイレクトすることもできます。
@@ -139,7 +138,7 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 
     次に、次の設定を変更するかどうかを確認します。
 
-    |Setting|詳細情報|
+    |設定|説明|
     |-----------|--------------------|
     |**[コンテンツの有効期限]**|このテンプレートによって保護されているファイルを開けなくなる日付またはそれまでの日数を定義します。 日付を指定するか、保護がファイルに適用された時点からの日数を指定することができます。<br /><br />日付を指定する場合は、現在のタイム ゾーンの午前 0 時から有効になります。|
     |**[オフライン アクセス]**|この設定を使用して、ユーザーがインターネットに接続されていないときに保護されたファイルを開ける必要がある要件に対して、セキュリティ要件のバランスを取ります。<br /><br />インターネットに接続されていないときにコンテンツを使用できないように指定するか、コンテンツが指定された日数のみ利用できるように指定した場合、そのしきい値に達すると、ユーザーは再認証される必要があり、アクセスがログに記録されます。 この場合、ユーザーの資格情報がキャッシュされていない場合、ユーザーはファイルを開く前にサインインするように要求されます。<br /><br />再認証に加えて、ポリシーおよびユーザー グループのメンバーシップが再評価されます。 つまり、ユーザーが最後にファイルにアクセスした後にポリシーまたはグループ メンバーシップが変更された場合、ユーザーが同じファイルにアクセスしたときに異なる結果になる可能性があります。|
@@ -167,6 +166,6 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

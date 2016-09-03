@@ -1,20 +1,19 @@
 ---
 title: "Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション | Azure RMS"
-description: 
-keywords: 
+description: "RMS 共有アプリケーションは、無料でダウンロードできるアプリケーションであり、Office 2010 のサポートには必須で、Windows コンピューター、Mac コンピューター、モバイル デバイスにも推奨されます。 利点の 1 つとして、Rights Management をネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 02f1cf60bdafe748f16d9defa1c8b0cc8a61efb0
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 6304c5c29e2dab176fb9d5a617e1467af00ab504
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 02f1cf60bdafe748f16d9defa1c8b0cc8a61efb0
 
 # Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 RMS 共有アプリケーションは、無料でダウンロードできるアプリケーションであり、Office 2010 のサポートには必須で、Windows コンピューター、Mac コンピューター、モバイル デバイスにも推奨されます。 利点の 1 つとして、[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)」の「[保護のレベル – ネイティブと汎用](../rms-client/sharing-app-admin-guide.md)」セクションを参照してください。
 
@@ -59,6 +58,6 @@ Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Manage
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

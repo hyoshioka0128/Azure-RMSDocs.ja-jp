@@ -4,9 +4,9 @@ description: "5 つの手順を実行するだけで 15 分もかからずに組
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5884914e2ff69c4db40d4e874541f42b9a0e7df5
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
 
 # Azure RMS のクイック スタート: 手順 5. 保護されているドキュメントの追跡
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 移動: 
@@ -44,7 +44,7 @@ ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
 > [!NOTE]
 > この手順では、ドキュメント追跡をサポートするサブスクリプションが必要です。 サブスクリプションにドキュメント追跡が含まれているかどうかを確認するには、 [Rights Management Services (RMS) 製品の比較](https://technet.microsoft.com/dn858608.aspx)に関するページを参照してください。
 
-この手順は省略可能ですが、ほとんどのユーザーが宛先に送信した添付ファイルが開かれたかどうか、また、開かれた時間と場所を知りたいと考えています。 例:
+この手順は省略可能ですが、ほとんどのユーザーが宛先に送信した添付ファイルが開かれたかどうか、また、開かれた時間と場所を知りたいと考えています。 たとえば、
 
 -   指定した時間までに、相手から返答を受けたいと考えている場合、ドキュメント追跡サイトを使用すると、締め切りが近づいているのに相手がドキュメント開いていないことがわかります。 タイミングよく催促するために、フォローアップの電子メールを送信するか、電話します。
 
@@ -56,7 +56,7 @@ ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
 
 1.  Outlook を使用して、[ **ホーム** ] タブの [ **RMS** ] グループで [ **使用の追跡**] をクリックします。
 
-2.  [ **条件に従って保護し、共有する** ] ページが表示された場合は、[ **サインイン** ] をクリックし、ユーザー名とパスワードをもう一度入力します。
+2.  [**条件に従って保護および共有する**] ページが表示された場合は、[**サインイン**] をクリックし、ユーザー名とパスワードをもう一度入力します。
 
 3.  **[共有ドキュメント]** ページに、電子メールに添付されたドキュメント **Confidential.docx** が表示されます。 この時点では、このドキュメントは表示される唯一のファイルですが、共有するドキュメントの数を増やすと、一覧が拡張されます。
 
@@ -91,6 +91,6 @@ Azure RMS を組織にデプロイする準備ができたら、[Azure Rights Ma
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

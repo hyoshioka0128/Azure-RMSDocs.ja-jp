@@ -1,20 +1,19 @@
 ---
 title: "カスタム テンプレート用の PowerShell リファレンス |Azure RMS"
-description: 
-keywords: 
+description: "Azure クラシック ポータルでテンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 4874e6061bb9b8781fc2ad02c80dba38084f4747
 
 
 ---
@@ -23,7 +22,7 @@ ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
 
 # カスタム テンプレート用の PowerShell リファレンス
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 Azure クラシック ポータルでテンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。
 
@@ -60,6 +59,6 @@ Azure クラシック ポータルでテンプレートを作成および管理�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

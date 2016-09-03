@@ -1,27 +1,26 @@
 ---
 title: "手順 2.&colon; ソフトウェアで保護されているキーから HSM で保護されているキーへの移行 | Azure RMS"
-description: 
-keywords: 
+description: "これらの手順は AD RMS から Azure Rights Management への移行パスの一部であり、AD RMS キーがソフトウェアで保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: bd93e781da7dc34c18e236a90a03dbc8fb012a1c
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: e470b5b5542536e812749f77353aaf34922d4985
 
 
 ---
 
 # 手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
 
 
 これらの手順は [AD RMS から Azure Rights Management への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーがソフトウェアで保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。 
@@ -164,6 +163,6 @@ SLC キーが抽出され、オンプレミスの HSM にインポートされ�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

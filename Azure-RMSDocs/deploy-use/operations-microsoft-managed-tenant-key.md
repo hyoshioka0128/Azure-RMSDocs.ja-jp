@@ -1,20 +1,19 @@
 ---
 title: "Microsoft が管理 - テナント キーのライフサイクル操作 | Azure RMS"
-description: 
-keywords: 
+description: "Microsoft が Azure Rights Management のテナント キーを管理する場合 (既定)、次のセクションを使用してこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。"
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: feb41356a2ef074679e60ce4bb7b1d6ee910371c
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 1eafab8e36c44bfd98ae613d8094d3510f18038e
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: feb41356a2ef074679e60ce4bb7b1d6ee910371c
 
 # Microsoft が管理: テナント キーのライフサイクル操作
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 Microsoft が Azure Rights Management のテナント キーを管理する場合 (既定)、次のセクションを使用してこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
@@ -30,7 +29,7 @@ Microsoft が Azure Rights Management のテナント キーを管理する場�
 Azure RMS のサブスクリプションを解除すると、Azure RMS はテナント キーの使用を停止します。ユーザー側の操作は必要ありません。
 
 ## テナント キーを再入力します
-再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを利用し、コンピューターの RMS 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 例:
+再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを利用し、コンピューターの RMS 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 たとえば、
 
 -   あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
@@ -63,7 +62,7 @@ Azure RMS の構成およびテナント キーをエクスポートするには
     ```
     この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 たとえば、**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** と **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
 
-    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 例:
+    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 たとえば、
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
@@ -99,6 +98,6 @@ Azure RMS の構成およびテナント キーをエクスポートするには
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

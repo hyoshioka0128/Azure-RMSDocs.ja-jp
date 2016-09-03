@@ -1,27 +1,26 @@
 ---
 title: "AD RMS から Azure Rights Management への移行 - フェーズ 1 | Azure RMS"
-description: 
-keywords: 
+description: "AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 1 では、次の情報を活用してください。 これらの手順では、「AD RMS から Azure Rights Management への移行」の手順 1 から手順 4 について説明します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: efe129422348fb30ce7686a5602cb29a1b46d36d
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d4e5502568147a51025434ad78cbfdede3eb3207
 
 
 ---
 
 # 移行フェーズ 1 - AD RMS のサーバー側の構成
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
 
 AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 1 では、次の情報を活用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から手順 4 を説明します。
 
@@ -220,6 +219,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

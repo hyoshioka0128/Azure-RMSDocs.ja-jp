@@ -4,9 +4,9 @@ description: "このトピックでは、権利保護に対応したアプリケ
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 982021a2e972023b04e6483348a7c27aa029e198
-ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3b6ff46581921f69c47cad3d6d879c53320b9126
 
 
 ---
@@ -23,15 +23,11 @@ ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
 # 運用環境にデプロイする
 
 
-このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順を追って各操作を説明します。
+このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順をおって各操作を説明します。
 
 ## 運用環境の使用許諾契約書の要求
 
  Rights Management サービス SDK 2.1 を使用して開発されたアプリケーションを解放するには、運用環境の使用許諾契約を申請して、運用証明書を取得する必要があります。
-
-> [!IMPORTANT]
-> Azure ベースの RMS でクライアント アプリケーションを実行する場合は、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。
-> Azure RMS での実行に関する詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 運用環境の使用許諾契約書に申請することで、証明書を取得できます。
 
@@ -116,7 +112,8 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 
 > [!IMPORTANT]
-> Azure RMS で RMS SDK 2.1 クライアント アプリケーションを実行するには、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。
+> Azure ベースの RMS でクライアント アプリケーションを実行する場合は、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。
+> Azure RMS での実行に関する詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 -   Microsoft ダウンロード センターから [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/en-us/download/details.aspx?id=28177)をダウンロードします。
 -   権利保護に対応したアプリケーションのデプロイにこのサービスを選択する前提条件チェックが含まれていることを確認します。
@@ -135,6 +132,6 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

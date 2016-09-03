@@ -4,9 +4,9 @@ description: "Linux オペレーティング システムの一部のエディ�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
-ms.openlocfilehash: 310ee66374157f946df6876b31859313f74275ae
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 74bd74f1db92c97740b4031b726a0396ecbfb93f
 
 
 ---
@@ -27,7 +27,7 @@ Linux オペレーティング システムの一部のエディションで Mic
 
 -   [サポートされるオペレーティング システム](#supported-operating-systems)
 -   [ビルド方法および使用方法](#how-to-build-and-use)
--   [参照](#see-also)
+-   [関連項目](#see-also)
 
 ## サポートされるオペレーティング システム
 
@@ -43,7 +43,7 @@ Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **注**: Lib とサンプルは Windows と 
 -   [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
 -   [How to install and use app on user systems (ユーザー システムにアプリをインストールして使用する方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
 
-## 参照
+## 関連項目
 
 * [作業開始](get-started.md)
 
@@ -60,6 +60,6 @@ Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **注**: Lib とサンプルは Windows と 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

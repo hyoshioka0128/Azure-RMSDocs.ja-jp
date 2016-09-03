@@ -1,27 +1,26 @@
 ---
 title: "Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護 | Azure RMS"
-description: 
-keywords: 
+description: "この記事では、Rights Management (RMS) クライアントと RMS 保護ツールを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fc1835b60c4c75b81f106011849940ba2e77164
-ms.openlocfilehash: afb00e010df25dea5f3c3cad23824f773de59b18
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 431eb994070391a78b0b8e34b1afb668f0981f0f
 
 
 ---
 
 # Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
-*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
 
 この記事では、Rights Management (RMS) クライアントと RMS 保護ツールを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
@@ -303,6 +302,6 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

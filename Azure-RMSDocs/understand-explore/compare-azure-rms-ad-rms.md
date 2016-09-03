@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management と AD RMS の比較 | Azure RMS"
-description: 
-keywords: 
+description: "Active Directory Rights Management サービス (AD RMS) を理解している、または以前にデプロイしたことがある場合、Azure RMS には機能や要件の面でどのような違いがあるのか疑問に思われるかもしれません。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: ce79ec40cbd8ca3796a17920d27dc3872cd40842
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 7dd888f28e5f4d307a1f96203516d3b058541ba5
 
 
 ---
 
 # Azure Rights Management と AD RMS の比較
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Office 365*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Office 365*
 
 Active Directory Rights Management サービス (AD RMS) を理解している、または以前にデプロイしたことがある場合、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) には機能や要件の面でどのような違いがあるのか疑問に思われるかもしれません。 
 
@@ -76,6 +75,6 @@ AD RMS から Azure RMS に移行する場合は、「[Migrating from AD RMS to 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

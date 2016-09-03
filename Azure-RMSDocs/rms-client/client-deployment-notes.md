@@ -1,27 +1,26 @@
 ---
 title: "RMS クライアントのデプロイに関する注意事項 | Azure RMS"
-description: 
-keywords: 
+description: "Rights Management サービス クライアント (RMS クライアント) バージョン 2 は、MSIPC クライアントとも呼ばれます。 Microsoft Rights Management サービスと通信する Windows コンピューター (オンプレミスまたはクラウド) 用のソフトウェアであり、組織内または管理対象外の組織内における、アプリケーションとデバイスを行き来する情報へのアクセスや使用を保護することができます。 RMS クライアントは Windows 用 Rights Management 共有アプリケーションに付属していますが、必要に応じてダウンロードすることもできます。これはライセンス契約書に同意すれば、サードパーティ製ソフトウェアと一緒に自由に配布できます。これにより、クライアントは Rights Management サービスで保護済みのコンテンツを保護して使用することができます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2bd8aba91b9b65777c2319baea848e8313cbccda
-ms.openlocfilehash: ffddda9a144b23b64b54df4fe4d25ec62600599d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 6d80958fe4d56458b7dee48e7475a37de8a102bd
 
 
 ---
 
 # RMS クライアントのデプロイに関する注意事項
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 7 SP1、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Vista*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 7 SP1、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Vista*
 
 Rights Management サービス クライアント (RMS クライアント) バージョン 2 は、MSIPC クライアントとも呼ばれます。 Microsoft Rights Management サービスと通信する Windows コンピューター (オンプレミスまたはクラウド) 用のソフトウェアで、組織内または管理対象外組織内における、アプリケーションとデバイスを行き来する情報へのアクセスや使用を保護することができます。 RMS クライアントは [Windows 用 Rights Management 共有アプリケーション](sharing-app-windows.md)に付属していますが、[必要に応じてダウンロード](http://www.microsoft.com/download/details.aspx?id=38396)することもできます。これはライセンス契約書に同意すれば、サードパーティ製ソフトウェアと一緒に自由に配布できます。これにより、クライアントは Rights Management サービスにより保護されたコンテンツを保護して使用することができます。
 
@@ -239,6 +238,6 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

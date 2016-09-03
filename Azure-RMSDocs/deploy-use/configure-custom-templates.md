@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management のカスタム テンプレートを構成する | Azure RMS"
-description: 
-keywords: 
+description: "Azure Rights Management (Azure RMS) をアクティブ化した後で、ユーザーは 2 つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルにポリシーを簡単に適用できるようになります。 これらの 2 つのテンプレートには、次の権限ポリシーの制限があります。"
 author: cabailey
 manager: mbaldwin
 ms.date: 06/03/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e72b68c03ee7da58adaff96f3f4611a227214b0
-ms.openlocfilehash: 26afa04c5041d0b8c952d3d6b3da5a2215acda87
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 83db5e11a4603523d7c4a86921fbdafb5f6fbfb5
 
 
 ---
 
 # Azure Rights Management のカスタム テンプレートを構成する
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 [Azure Rights Management (Azure RMS) をアクティブ化](activate-service.md)した後で、ユーザーは 2 つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルにポリシーを簡単に適用できるようになります。 これらの 2 つのテンプレートには、次の権限ポリシーの制限があります。
 
@@ -67,6 +66,6 @@ ms.openlocfilehash: 26afa04c5041d0b8c952d3d6b3da5a2215acda87
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

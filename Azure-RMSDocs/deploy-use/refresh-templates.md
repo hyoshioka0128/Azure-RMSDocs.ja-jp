@@ -1,20 +1,19 @@
 ---
 title: "テンプレートの更新 | Azure RMS"
-description: 
-keywords: 
+description: "Azure RMS を使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 771f4139b09cccc05f2d1ee52c76b99467c70446
-ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
 
 # ユーザー用のテンプレートの更新
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 Azure RMS を使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。
 
@@ -72,7 +71,7 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
     > [!NOTE]
     > TPD 名を確認するには、[Get-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200707%28v=exchg.160%29.aspx) コマンドレットを使用できます。
 
-3.  テンプレートが正常にインポートされたことを確認するには、数分待ってから、[Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) コマンドレットを実行します。このとき、Type には All を設定します。 例:
+3.  テンプレートが正常にインポートされたことを確認するには、数分待ってから、[Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) コマンドレットを実行します。このとき、Type には All を設定します。 たとえば、
 
     ```
     Get-RMSTemplate -TrustedPublishingDomain "RMS Online - 1" -Type All
@@ -187,6 +186,6 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

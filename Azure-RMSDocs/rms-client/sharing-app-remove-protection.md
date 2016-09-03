@@ -1,27 +1,26 @@
 ---
 title: "Rights Management 共有アプリケーションの使用によるファイルからの保護の削除 | Azure RMS"
-description: 
-keywords: 
+description: "RMS 共有アプリケーションを使用して、保護されていたファイルから保護を削除する (つまり、ファイルの保護を解除する) には、エクスプローラーの [保護の削除] を使用します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 4aea0c89e5d97a7a0190962e073f0b4bc95bef25
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: b94cd999fef2186ddf67a0e6cebc3349a3586538
 
 
 ---
 
 # Rights Management 共有アプリケーションの使用によるファイルからの保護の削除
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションを使用して、保護されていたファイルから保護を削除する (つまり、ファイルの保護を解除する) には、エクスプローラーの [ **保護の削除** ] を使用します。
 
@@ -52,6 +51,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

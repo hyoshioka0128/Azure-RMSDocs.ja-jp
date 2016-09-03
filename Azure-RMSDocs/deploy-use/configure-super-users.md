@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成 | Azure RMS"
-description: 
-keywords: 
+description: "Microsoft Azure RMS のスーパー ユーザー機能により、承認されたユーザーとサービスは、Azure RMS によって保護されている組織のデータをいつでも読み取り、検査することができます。 さらに必要に応じて、保護を削除したり、以前に適用されていた保護を変更したりできます。 スーパー ユーザーは常に、組織の RMS テナントによって付与されたすべての使用ライセンスに対して完全な所有者権限を持ちます。 この機能は 'データに対する推論' と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 0ca9b8d9643f5489c100fa3aa614e89cd396df52
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
 
 
 ---
 
 # Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) のスーパー ユーザー機能により、承認されたユーザーとサービスは、Azure RMS によって保護されている組織のデータをいつでも読み取り、検査することができます。 さらに必要に応じて、保護を削除したり、以前に適用されていた保護を変更したりできます。 スーパー ユーザーは常に、組織の RMS テナントによって付与されたすべての使用ライセンスに対して完全な所有者権限を持ちます。 この機能は “データに対する推論” と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。 たとえば、次のいずれかのシナリオでこの機能を使用することがあります。
 
@@ -72,6 +71,6 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

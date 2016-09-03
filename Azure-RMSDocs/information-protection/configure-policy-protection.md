@@ -1,17 +1,16 @@
 ---
 title: "Rights Management による保護を適用するようにラベルを構成する方法 | Azure Rights Management"
-description: 
-author: cabailey
+description: "暗号化ポリシー、ID ポリシー、および承認ポリシーによってデータ損失を防止する Rights Management サービスを使用することで、最も機密性の高いドキュメントや電子メールを保護することができます。 この保護は、Rights Management テンプレートを使用するようにラベルを構成したときに適用されます。"
 manager: mbaldwin
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: e11a5a836d6a410ba49ac17cfe95d8530ecb785f
-ms.openlocfilehash: 60738c310a3e7c734bfe3e48e16535ed3be05bb4
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
 
 
 ---
@@ -79,6 +78,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
