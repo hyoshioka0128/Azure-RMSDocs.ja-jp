@@ -1,27 +1,26 @@
 ---
 title: "BYOK の料金と制限事項 | Azure RMS"
-description: 
-keywords: 
+description: "Azure Rights Management が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしでキーの使用状況ログを記録することができます。 ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、Azure Key Vault の価格に関するページを参照してください。"
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: ece615912d69eda78107c60245620ed36c0affd2
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 8505032a2a12f84c245e834e71d0b7b0d12e894f
 
 
 ---
 
 # BYOK の料金と制限事項
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 Azure Rights Management が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしでキーの使用状況ログを記録することができます。 ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
@@ -63,6 +62,6 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -6,7 +6,7 @@ author: bruceperlerms
 manager: mbaldwin
 ms.date: 07/11/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5afdf526fe9f8486c6a778eebf10899e0bd9f839
-ms.openlocfilehash: 53571aff357bbc0cdcb44ce9b403c68719abbaff
+ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
+ms.openlocfilehash: df0ea8669038f458bc3d8fbf1c704bc5b6815e1d
 
 
 ---
@@ -28,7 +28,7 @@ AD RMS は、[サーバー](ad-rms-server.md) コンポーネントと[クライ
 
 [クライアント](ad-rms-client.md) コンポーネントは、クライアントまたはサーバーのオペレーティング システムで実行でき、アプリケーションでコンテンツの暗号化と復号化、テンプレートと失効リストの取得、サーバーからのライセンスと証明書の入手、およびその他の関連する権限管理タスクを有効にする機能が含まれています。
 
-詳細については、「[Application types (アプリケーションの種類)](application-types.md)」を参照してください。
+詳細については、「[Application types](application-types.md)」 (アプリケーションの種類) を参照してください。
 
 Rights Management サービス SDK 2.1 に基づいて構築したアプリケーションを適用できるシナリオの一部を次に示します。
 
@@ -61,6 +61,6 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

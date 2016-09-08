@@ -4,9 +4,9 @@ description: "Android アプリケーションは Microsoft Rights Management SD
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
-ms.openlocfilehash: 4ff6328c0be4cd217390ee802e53e93c90f41c99
+ms.sourcegitcommit: de012d0d85bff0e33fef0b4c53291a997d4b4e89
+ms.openlocfilehash: f89ed307eae4ee14f2e463f7fb6d7e2bd07eccd0
 
 
 ---
@@ -28,8 +28,8 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 -   [必要条件](#prerequisites)
 -   [省略可能](#optional)
--   [開発環境の構成](#configuring-your-development-environment_)
--   [参照](#see-also)
+-   [開発環境の構成](#configuring-your-development-environment)
+-   [関連項目](#see-also)
 
 ## 必要条件
 
@@ -102,7 +102,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![ワークスペースにインポートする](../media/Android-setup-07.png)
 
--    **[次へ]**をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
+-   **[Next]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
 
     ![フォルダーに移動して選択する](../media/Android-setup-08c.jpg)
 
@@ -140,7 +140,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 [新機能](release-notes.md)
 
-[Developer terms and concepts (開発者の用語と概念)](core-concepts.md)
+[開発者の用語と概念](core-concepts.md)
 
 [Android API リファレンス](android-namespaces.md)
 
@@ -150,6 +150,6 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

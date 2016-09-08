@@ -4,17 +4,17 @@ description: "5 つの手順を実行するだけで 15 分もかからずに組
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 62b2303074ccf2b23e29a5770f51b003c8f97780
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
 
 # Azure RMS のクイック スタート: 手順 3. 電子メールによる保護対象のドキュメントの送信
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 移動: 
@@ -45,11 +45,11 @@ ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
 
 1.  Outlook を使用して、新しいメッセージを作成し、作成したファイルを添付します。
 
-2.  [ **宛先** ] ボックスで、1 つ以上の仕事用の電子メール アドレスを入力します。 必ず **janetm@contoso.com** または **p.dover@fabrikam.com** のような仕事用の電子メール アドレスを指定してください。現時点では、Azure Rights Management は、自宅で使用するインターネット プロバイダーの個人用の電子メール アドレスをサポートしていないためです。 Azure Rights Management を送信先のユーザーも使用しているかどうかを気にする必要はありません。
+2.  **[宛先]** ボックスで、1 つ以上の仕事用のメール アドレスを入力します。 必ず **janetm@contoso.com** または **p.dover@fabrikam.com** のような仕事用の電子メール アドレスを指定してください。現時点では、Azure Rights Management は、自宅で使用するインターネット プロバイダーの個人用の電子メール アドレスをサポートしていないためです。 Azure Rights Management を送信先のユーザーも使用しているかどうかを気にする必要はありません。
 
 3.  「  **機密ドキュメント** 」のような件名を入力し、本文に「 **この機密ドキュメントを読んでください。ただし、他の人とは共有しないでください。**」のような短いメッセージを入力します。
 
-4.  次に、[ **RMS** ] グループの [ **メッセージ** ] タブで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
+4.  次に、[**RMS**] グループの [**メッセージ**] タブで、[**保護ファイルの共有**] をクリックし、もう一度 [**保護ファイルの共有**] をクリックします。
 
 5.  [ **保護ファイルの共有** ] ダイアログ ボックスで次の操作を実行します。
 
@@ -65,7 +65,7 @@ ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
 
         このオプションを選択すると、受信者は添付ファイルを開くにあたり、必ずインターネットに接続していなければならなくなります。ただし、送信者が後からドキュメントを取り消した場合に、受信者がそのドキュメントを開こうとしても、開けなくすることができるという利点があります。 このオプションを選択しなかった場合には、受信者はインターネットに接続しなくてもドキュメントを開くことができます。ただし、送信者が後からドキュメントを取り消した場合に、取り消しが有効になるまで遅延が発生する可能性があるという欠点があります。
 
-    4.  [ **今すぐ送信**] をクリックします。
+    4.  [**今すぐ送信**] をクリックします。
 
         ファイルが添付された電子メールは、指定した電子メール アドレスに送信されます。 電子メール メッセージ以外にも、受信者には Azure Rights Management によって保護された添付ドキュメントを読むための手順が表示されます。
 
@@ -82,6 +82,6 @@ ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
 [手順 4 »](tutorial-step4.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

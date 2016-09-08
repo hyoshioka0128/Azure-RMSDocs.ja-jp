@@ -1,27 +1,26 @@
 ---
 title: "Rights Management 共有アプリケーションのダイアログ ボックス オプション | Azure RMS"
-description: 
-keywords: 
+description: "ここでは、RMS 共有アプリケーションの [保護の追加] ダイアログ ボックスまたは [保護ファイルの共有] ダイアログ ボックスでオプションを指定する場合に役立つ情報について説明します。 このダイアログ ボックスは、共有するファイルを保護するとき、またはインプレースでファイルを保護してカスタム アクセス許可を選ぶときに表示されます。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: aa0f5456d17564183317e3e693ae63adb8c597c5
 
 
 ---
 
 # Rights Management 共有アプリケーションのダイアログ ボックス オプション
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 ここでは、RMS 共有アプリケーションの **[保護の追加]** ダイアログ ボックスまたは **[保護ファイルの共有]** ダイアログ ボックスでオプションを指定する場合に役立つ情報について説明します。 このダイアログ ボックスは、[共有するファイルを保護するとき](sharing-app-protect-by-email.md)、または[インプレースでファイルを保護](sharing-app-protect-in-place.md)してカスタム アクセス許可を選ぶときに表示されます。
 
@@ -79,6 +78,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

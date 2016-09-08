@@ -1,27 +1,26 @@
 ---
 title: "Rights Management 共有アプリケーション&colon; バージョン リリース履歴 | Azure RMS"
-description: 
-keywords: 
+description: "Rights Management チームは、Rights Management 共有アプリケーションの修正プログラムと新機能を定期的に更新しています。 次の情報で、リリースの新機能や変更内容をご確認ください。 最新のリリースは一番上に表示されます。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e1b7dedd8556f3ccdb1642681cc4e1e5b1d09ccf
-ms.openlocfilehash: ee2860da964b52bc41c0aea219110453f024b954
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 060324fd6f0a87839ff267b540b9e5024498c242
 
 
 ---
 
 # Rights Management 共有アプリケーション: バージョン リリース履歴
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 Rights Management チームは、Rights Management 共有アプリケーションの修正プログラムと新機能を定期的に更新しています。 次の情報を使用して、リリースの新機能や変更内容をご確認ください。 最新のリリースは一番上に表示されます。
 
@@ -132,6 +131,6 @@ Rights Management チームは、Rights Management 共有アプリケーショ�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

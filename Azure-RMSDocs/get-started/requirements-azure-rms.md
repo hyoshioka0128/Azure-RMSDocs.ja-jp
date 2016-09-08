@@ -1,32 +1,31 @@
 ---
 title: "Azure Rights Management の要件 | Azure RMS"
-description: 
-keywords: 
+description: "組織に Microsoft Azure Rights Management (Azure RMS) をデプロイするには、以下の要件を満たしていることを確認してください。 Azure Rights Management のデプロイのロードマップを使用して、組織の Rights Management をデプロイできます。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fab331a26e18730e9cc64a24c0501b7ae21aa1b
-ms.openlocfilehash: f225d8579e2440d2eb00a4f821a78727b6442fdd
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: d56eb077ef76e1869c7d90141f1b35c1bdbfe9fa
 
 
 ---
 
 # Azure Rights Management の要件
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 組織に Microsoft Azure Rights Management (Azure RMS) をデプロイするには、以下の要件を満たしていることを確認してください。 [Azure Rights Management のデプロイのロードマップ](../plan-design/deployment-roadmap.md)を使用して、組織の Rights Management をデプロイできます。
 
-|要件|詳細情報|
+|要件|説明|
 |---------------|--------------------|
 |RMS のクラウド サブスクリプション|RMS をサポートするクラウド サブスクリプションが組織で必要です。<br /><br />ライセンス情報については、「[Cloud subscriptions that support Azure RMS (Azure RMS をサポートするクラウド サブスクリプション)](requirements-subscriptions.md)」を参照してください。|
 |Azure AD ディレクトリ|RMS のユーザー認証をサポートするために組織で Azure AD ディレクトリが必要です。 また、オンプレミスのディレクトリ (AD DS) のユーザー アカウントを使用する場合は、ディレクトリ統合も構成する必要があります。<br /><br />必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure RMS で Multi-Factor Authentication (MFA) がサポートされます。<br /><br />詳細については、「[Azure AD ディレクトリ](requirements-azure-ad.md)」を参照してください。|
@@ -56,6 +55,6 @@ ms.openlocfilehash: f225d8579e2440d2eb00a4f821a78727b6442fdd
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

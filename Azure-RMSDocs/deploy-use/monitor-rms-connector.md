@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management コネクタを監視する | Azure RMS"
-description: 
-keywords: 
+description: "RMS コネクタをインストールして構成した後、以下の方法と情報を使用すると、コネクタと組織の Azure RMS の使用を監視するのに役立ちます。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/08/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f8e23e8bcbfb25092cb31f7af76d17239f3063a7
-ms.openlocfilehash: 32c3c93d55bd82f45fa7a081e55ae7ebe8f5956f
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 11079a491cf9feade86713ef02ccdce79019577a
 
 
 ---
 
 # Azure Rights Management コネクタを監視する
 
-*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
 
 RMS コネクタをインストールして構成した後、以下の方法と情報を使用すると、コネクタと組織の Azure RMS の使用を監視するのに役立ちます。
 
@@ -195,6 +194,6 @@ Rights Management サービスのアナライザー ツールを使用すると�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

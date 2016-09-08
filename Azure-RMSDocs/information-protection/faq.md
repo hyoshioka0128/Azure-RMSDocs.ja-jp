@@ -1,20 +1,19 @@
 ---
 title: "Azure Information Protection プレビューに関してよく寄せられる質問 | Azure Information Protection"
-description: 
-keywords: 
+description: "Azure Information Protection のプレビュー リリースに関して質問がある場合は、 ここで回答を探してみてください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
-ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
 
 
 ---
@@ -57,7 +56,7 @@ Azure Information Protection のプレビュー リリースに関して質問�
 
 ## Azure Information Protection を試すにはどのようなサブスクリプションが必要ですか?
 
-プレビュー リリースでは、Azure Rights Management を含む任意のサブスクリプションを使用できます。 Azure Information Protection はすべてのリージョンで使用できます。 使用できるサブスクリプション オプションの詳細と無料試用版へのリンクについては、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。
+プレビュー リリースでは、任意の Office 365 のサブスクリプションを使用することができます。これには、Azure Rights Management を使用した Office ドキュメントや電子メールの保護が含まれます。 Azure Information Protection はすべてのリージョンで使用できます。 使用できるサブスクリプション オプションの詳細と無料試用版へのリンクについては、Azure RMS の要件に関するドキュメントの「[Office 365 サブスクリプション](../get-started/requirements-subscriptions.md#office-365-subscription)」セクションを参照してください。
 
 Azure ポータルで Azure Information Protection のポリシーを構成するには、Azure サブスクリプションが必要です。 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。「[Microsoft Azure はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
 
@@ -188,6 +187,6 @@ Azure Information Protection によって分類されたファイルおよび電
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure RMS"
-description: 
-keywords: 
+description: "RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「ローカル管理者ではなく、かつ Office 2010 を使用している場合」を参照してください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: bda09df1ff51565a4bbf501161c7a4f8cdbbfe22
 
 
 ---
 
 # Rights Management 共有アプリケーションをダウンロードしてインストールする
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「[ローカル管理者ではなく、かつ Office 2010 を使用している場合](#if-you-are-not-a-local-administrator-and-use-office-2010)」を参照してください。
 
@@ -62,7 +61,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## 参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
@@ -70,6 +69,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

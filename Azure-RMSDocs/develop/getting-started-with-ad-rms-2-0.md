@@ -6,7 +6,7 @@ author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cbdb969e9910142f49b078069fc578059f9d8785
-ms.openlocfilehash: 81541dbadabe3417299f47447384934373275e75
+ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
+ms.openlocfilehash: 0f50bc77ba7a7f730dda5ef278f21a8d6f0311c4
 
 
 ---
-# 概要
+# はじめに
 
 Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は RMS サーバーまたは Azure RMS を介して RMS 情報保護を利用するアプリケーションを作成できます。 このプラットフォームでは、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
 
@@ -33,7 +33,7 @@ Rights Management サービス SDK 2.1 プラットフォームを使用する�
 |-------|-------------|
 | [リリース ノート](release-notes-rtm.md) | このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
 | [SDK のインストール](install-the-rms-sdk.md) | このトピックでは、開発者ツールをインストールする方法について説明します。|
-| [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | このトピックでは、RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する手順について説明します。|
+| [Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | このトピックでは、RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する手順について説明します。|
 | [アプリケーションの開発](developing-your-application.md) | このトピックでは、RMS 対応アプリケーションの中心部分について基本的なことを説明します。独自のアプリケーションを開発する際に基礎となります。|
 | [アプリケーションのテスト](how-to-set-up-your-test-environment.md) |このトピックでは、アプリケーション テストを設定する方法について説明します。|
 | [運用環境にデプロイする](deploying-your-application.md) |このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて順を追って各操作を説明します。|
@@ -42,7 +42,7 @@ Rights Management サービス SDK 2.1 プラットフォームを使用する�
 これらのトピックのガイダンスに従って、RMS SDK 2.1 を使用してみてください。
 
 - [SDK のインストール](install-the-rms-sdk.md)
-- [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
+- [Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 - [アプリケーションの開発](developing-your-application.md)
 - [アプリケーションのテスト](how-to-set-up-your-test-environment.md)
 - [運用環境にデプロイする](deploying-your-application.md)
@@ -76,6 +76,6 @@ RMS SDK 2.1 では、重要なクライアントおよびサーバー プラッ�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

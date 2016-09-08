@@ -1,27 +1,26 @@
 ---
 title: "シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する | Azure RMS"
-description: 
-keywords: 
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 35ad445e229eac3feeca5522a41b9e3b25fd1180
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 1fdb62af06a3011e1102df0df3f9b61bcdc67edd
 
 
 ---
 
 # シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、[ワーク フォルダー](https://technet.microsoft.com/library/dn265974.aspx)内の Office ドキュメントに永続的な保護を適用します。 ワーク フォルダーでは、Windows Server を実行しているファイル サーバー用のロール サービスを使用して、ユーザーが PC やデバイスから一貫した方法で作業ファイルにアクセスできるようにします。 ワーク フォルダーにはファイルを保護するための独自の暗号化が用意されていますが、ワーク フォルダー環境の外にファイルが移動されると、この保護は失われます。 たとえば、ユーザーが同期されたファイルをコピーして、IT 部門の管理下にないストレージに保存する場合や、ファイルが他のユーザーにメールで送信される場合などです。
 
@@ -123,6 +122,6 @@ Azure Rights Management を使用して保護するファイルを組織外の�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
