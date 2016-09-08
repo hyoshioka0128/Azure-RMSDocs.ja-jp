@@ -1,27 +1,26 @@
 ---
 title: "RMS API をサポートするその他のアプリケーション - インストールと構成 | Azure RMS"
-description: 
-keywords: 
+description: "次の情報は、組織のデータを保護するために Azure Rights Management (Azure RMS) で他のアプリケーションがどのようにサポートされるかを理解するのに役立ちます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: bb69cda94bf611712eb5b4a74d9ec25d1749da3a
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: d94494160df269d6a583c3152769f84ec51f886e
 
 
 ---
 
 # RMS API をサポートするその他のアプリケーション
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 次の情報は、組織のデータを保護するために Azure Rights Management (Azure RMS) で他のアプリケーションがどのようにサポートされるかを理解するのに役立ちます。
 
@@ -34,6 +33,6 @@ RMS SDK を使用すると、社内開発者が、[!INCLUDE[aad_rightsmanagement
 「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照して、他のアプリケーションとサービスで Azure Rights Management をサポートする方法について確認してください。
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "AD RMS から Azure Rights Management への移行 - フェーズ 3 | Azure RMS"
-description: 
-keywords: 
+description: "AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「AD RMS から Azure Rights Management への移行」の手順 6. から手順 7. について説明します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 6d3cb53fb199bb880a0e61d2b964f297e547a027
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: cc605ff22c205846186f7e3ec819ecd826dba4a6
 
 
 ---
 
 # 移行フェーズ 3 - サービス構成のサポート
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
 
 
 AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 6. から手順 7. を説明します。
@@ -215,6 +214,6 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

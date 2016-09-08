@@ -1,17 +1,16 @@
 ---
 title: "Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法 | Azure Rights Management"
-description: 
-author: cabailey
+description: "ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。"
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: b5e7fecca7aeb61221dc1f61aa3e202936b8c042
-ms.openlocfilehash: 2b4f464fa51e0743cb1ce0726c7feb31146b5128
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: c73b6e3fe114625c16a7c2e799162902ba26e4cf
 
 
 ---
@@ -82,6 +81,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

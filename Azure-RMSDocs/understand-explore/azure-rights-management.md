@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management の概要 | Azure RMS"
-description: 
-keywords: 
+description: "Microsoft Azure Rights Management (Azure RMS) は、組織の機密情報を不正なアクセスから保護して、機密情報の使用方法を制御するのに役立ちます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fdedb0f1064e98500d3b4edcee283c514851d446
-ms.openlocfilehash: a8c9a55977a285cd30872beeb160b07ce02edcce
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: b6589429693854b73228b2d90de1a787f03663ff
 
 
 ---
 
 # Azure Rights Management の概要
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 Microsoft Azure Rights Management (Azure RMS) は、組織の機密情報を未承認のアクセスから保護して、機密情報がどのように使用されるかを制御するのに役立ちます。 Azure Rights Management はクラウド サービスであり、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) に統合されますが、 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。 
 
@@ -40,6 +39,6 @@ Azure Rights Management の別名をご存じですか。 [サービスの代替
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

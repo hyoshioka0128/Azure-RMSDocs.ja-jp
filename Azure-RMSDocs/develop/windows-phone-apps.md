@@ -4,9 +4,9 @@ description: "Windows Phone アプリケーションは Microsoft Rights Managem
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
-ms.openlocfilehash: 1728a094dfaa869ae490e86d10ffe5ebcf4bfa5d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: b2f7233b91852dae0fe619720b84bd395547a05c
 
 
 ---
@@ -29,7 +29,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 -   [必要条件](#prerequisites)
 -   [開発環境の構成](#configuring-your-development-environment)
--   [参照](#see-also)
+-   [関連項目](#see-also)
 
 ## 必要条件
 
@@ -68,7 +68,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 これで、独自の Windows Phone アプリを作成する準備が整いました。
 
-### 参照
+### 関連項目
 
 [作業開始](get-started.md)
 
@@ -93,6 +93,6 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

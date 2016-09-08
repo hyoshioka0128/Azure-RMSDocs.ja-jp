@@ -1,20 +1,19 @@
 ---
 title: "管理者とユーザーに表示される内容 | Azure RMS"
-description: 
-keywords: 
+description: "この記事では、Azure Rights Management (Azure RMS) を使用する場合に管理者とユーザーに表示される内容と、機密情報を保護する方法についての一般的な例をいくつか紹介します。"
 author: cabailey
 manager: mbaldwin
 ms.date: 06/28/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: 213d077a65abd5115b7e0491dfc9cd8145752b23
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 4a2f473c657b7fe27e2a6d42000fd540c49e8895
 
 
 ---
@@ -22,14 +21,14 @@ ms.openlocfilehash: 213d077a65abd5115b7e0491dfc9cd8145752b23
 
 # Azure RMS の動作:管理者およびユーザーに対する表示
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 この記事では、Azure Rights Management (Azure RMS) を使用する場合に管理者とユーザーに表示される内容と、機密情報を保護する方法についての一般的な例をいくつか紹介します。
 
 > [!NOTE]
 > Azure RMS がデータを保護するこれらすべての例で、適用される保護によって所有者がメンバーではないグループにアクセス許可が付与される場合、または適用される保護に有効期限が含まれる場合であっても、コンテンツの所有者は引き続きデータ (ファイルまたは電子メール) に完全にアクセスできます。
 >
-> 同様に、IT 部門は、管理者が指定する許可されたユーザーまたはサービスに委任されたアクセスを付与する Rights Management のスーパー ユーザー機能を使用することで、制限なく保護されたデータに常にアクセスできます。 さらに、IT 部門は保護されているデータの使用状況を追跡および監視できます (だれがいつデータにアクセスしているかなど)。
+> 同様に、IT 部門は、管理者が指定する許可されたユーザーやサービスに委任されたアクセス権を付与する Rights Management のスーパー ユーザー機能を使用することで、制限なく保護されたデータに常にアクセスできます。 さらに、IT 部門は保護されているデータの使用状況を追跡および監視できます (だれがいつデータにアクセスしているかなど)。
 
 実際の RMS の動作を紹介するスクリーンショットやビデオは、「[Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)」(エンタープライズ モビリティおよびセキュリティ ブログ) をご覧ください。
 
@@ -242,6 +241,6 @@ Azure RMS の機能の例をいくつか説明しましたが、そのしくみ�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management の使用権限を構成する | Azure RMS"
-description: 
-keywords: 
+description: "Azure Rights Management (Azure RMS) を使用してファイルまたは電子メールに対して保護を設定し、テンプレートは使用しない場合、使用権限を自分で構成する必要があります。 また、Azure RMS 用のカスタム テンプレートを構成する場合は、ユーザー、管理者、または構成済みのサービスによってテンプレートが選択されたときに自動的に適用される使用権限を選択します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
-ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
+ms.sourcegitcommit: e1f1bef9ce87dcffb8d3da920f19198aa253e8e6
+ms.openlocfilehash: bbfb00822a03609f5b81808e1e1c4cad8c02be0b
 
 
 ---
 
 # Azure Rights Management の使用権限を構成する
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 Azure Rights Management (Azure RMS) を使用してファイルまたは電子メールに対して保護を設定し、テンプレートは使用しない場合、使用権限を自分で構成する必要があります。 また、Azure RMS 用のカスタム テンプレートを構成する場合は、ユーザー、管理者、または構成済みのサービスによってテンプレートが選択されたときに自動的に適用される使用権限を選択します。 たとえば、Azure クラシック ポータルでは、使用権限の論理的なグループを構成するロールを選ぶことも、個別の権限を構成することもできます。
 
@@ -40,7 +39,7 @@ Azure Rights Management (Azure RMS) を使用してファイルまたは電子�
 |共通名: **転送** <br /><br />ポリシーでのエンコード: **FORWARD**|電子メール メッセージの転送、 **[宛先]** 、 **[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。|Office カスタム権限: **転送不可**標準ポリシーを使用すると拒否されます。<br /><br />Azure クラシック ポータルでの名前: **転送**<br /><br />AD RMS テンプレートでの名前: **転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |共通名: **フル コントロール** <br /><br />ポリシーでのエンコード: **OWNER**|ドキュメントに対するすべての権限を付与します。利用可能なすべての操作を実行できます。<br /><br />ドキュメントの保護解除と再保護の能力も含まれます。|Office カスタム権限: **フル コントロール** カスタム オプション。<br /><br />Azure クラシック ポータルでの名前: **フル コントロール**<br /><br />AD RMS テンプレートでの名前: **フル コントロール** <br /><br />API の定数または値: `IPC_GENERIC_ALL L"OWNER"`|
 |共通名: **印刷** <br /><br />ポリシーでのエンコード: **PRINT**|コンテンツを印刷するオプションを有効にします。|Office カスタム権限: カスタム アクセス許可の**コンテンツの印刷**オプション。 受信者単位の設定ではありません。<br /><br />Azure クラシック ポータルでの名前: **印刷**<br /><br />AD RMS テンプレートでの名前: **印刷** <br /><br />API の定数または値: `IPC_GENERIC_PRINT L"PRINT"`|
-|共通名: **返信** <br /><br />ポリシーでのエンコード: **PRINT**|メール クライアントの **[返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行に対する変更は許可しません。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **返信**<br /><br />AD RMS テンプレートでの名前: **返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLY`|
+|共通名: **返信** <br /><br />ポリシーでのエンコード: **REPLY**|メール クライアントの **[返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行に対する変更は許可しません。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **返信**<br /><br />AD RMS テンプレートでの名前: **返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLY`|
 |共通名: **全員に返信** <br /><br />ポリシーでのエンコード: **REPLYALL**|メール クライアントの **[全員に返信]** オプションを有効にします。ただし、 **[宛先]** または **[CC]** 行への受信者の追加はユーザーに許可しません。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **全員に返信**<br /><br />AD RMS テンプレートでの名前: **全員に返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |共通名: **表示、開く、読み取り** <br /><br />ポリシーでのエンコード: **VIEW**|ドキュメントを開き、内容を表示することをユーザーに許可します。|Office カスタム権限: **読み取り**カスタムポリシー、**表示**オプション。<br /><br />Azure クラシック ポータルでの名前: **表示**<br /><br />AD RMS テンプレートでの名前: **全員に返信** <br /><br />API の定数または値: `IPC_GENERIC_READ L"VIEW"`|
 |共通名: **コピー** <br /><br />ポリシーでのエンコード: **EXTRACT**|ドキュメントのデータ (画面キャプチャを含む) を同じドキュメントまたは別のドキュメントにコピーするオプションを有効にします。<br /><br />一部のアプリケーションでは、ドキュメント全体を保護されていない形式で保存することも許可されます。|Office カスタム権限: **[閲覧の権限を持つユーザーが、コンテンツをコピーすることを許可する]** カスタム ポリシー オプションと同様。<br /><br />Azure クラシック ポータルでの名前: **コンテンツのコピーと抽出**<br /><br />AD RMS テンプレートでの名前: **Extract** <br /><br />API の定数または値: `IPC_GENERIC_EXTRACT L"EXTRACT"`|
@@ -102,6 +101,6 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

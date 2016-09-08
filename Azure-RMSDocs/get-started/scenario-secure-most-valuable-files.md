@@ -1,27 +1,26 @@
 ---
 title: "シナリオ - 重要度の高い (いくつかの) ファイルを保護する | Azure RMS"
-description: 
-keywords: 
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
 
 
 ---
 
 # シナリオ - 重要度の高い (いくつかの) ファイルを保護する
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。 通常、これらのファイルには、少数のユーザーだけがアクセスできるようにする必要があります。 たとえば、会社を代表する食品のレシピや、指定した日付より前に公開してはならない企業買収のプランなどです。
 
@@ -148,6 +147,6 @@ ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: "手順 2.&colon; ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行 | Azure RMS"
-description: 
-keywords: 
+description: "これらの手順は AD RMS から Azure Rights Management への移行パスの一部であり、AD RMS キーがソフトウェアで保護されているときにソフトウェアで保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。"
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 9cd66efad548a4ddef4e6032b0ce7fc817a95c31
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 6597bf4ea54f640c30e98b30363323d874e32c43
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 9cd66efad548a4ddef4e6032b0ce7fc817a95c31
 
 # 手順 2. ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
 
 
 これらの手順は [AD RMS から Azure Rights Management への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーがソフトウェアで保護されているときにソフトウェアで保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。 
@@ -71,6 +70,6 @@ AD RMS 構成を Azure RMS にインポートするには次の手順を使用�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

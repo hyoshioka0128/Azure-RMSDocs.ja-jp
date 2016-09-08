@@ -1,27 +1,26 @@
 ---
 title: "Office 365 クラシック管理センターから Azure Rights Management をアクティブ化する方法 | Azure RMS"
-description: 
-keywords: 
+description: "Office 365 管理センターのクラシック (オリジナル) バージョンを使用している場合は、次の手順を使用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4b7539ab311d782c3987a8fd74940aad72e65b
-ms.openlocfilehash: 657fb47485ce0e86fab800f8ab981e6dfbd9ee11
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 27667ed6c205cfa93b2d985722637255ddbd6072
 
 
 ---
 
 # Office 365 クラシック管理センターから Azure Rights Management をアクティブ化する方法
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 
 Office 365 管理センターのクラシック (オリジナル) バージョンを使用している場合は、次の手順を使用します。
@@ -54,6 +53,6 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: "Microsoft Rights Management 共有アプリケーションの技術的概要 | Azure RMS"
-description: 
-keywords: 
+description: "Microsoft Rights Management 共有アプリケーションは、Microsoft Windows およびその他のプラットフォーム用のオプションのダウンロード可能なアプリケーションであり、次の機能を備えています。"
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09effc3dfb238370563981defdcf3c3b4cffcaae
-ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d5e1c7969d2125c4f66d6dcea3bde0c81a7de1f3
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
 
 # Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細
 
-*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 
 Microsoft Rights Management 共有アプリケーションは、Microsoft Windows およびその他のプラットフォーム用のオプションのダウンロード可能なアプリケーションであり、次の機能を備えています。
@@ -68,7 +67,7 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 |.txt|。ptxt|
 |。xml|。pxml|
 |。jpg|。pjpg|
-|。jpeg|。ppng|
+|。jpeg|.ppng|
 |。pdf|。ppdf|
 |。png|。ppng|
 |.tif|.ptif|
@@ -134,12 +133,12 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 -   **Off**:保護のブロック
 
-## 参照
+## 関連項目
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

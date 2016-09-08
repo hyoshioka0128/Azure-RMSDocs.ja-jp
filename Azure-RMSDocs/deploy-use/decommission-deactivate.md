@@ -1,27 +1,26 @@
 ---
 title: "Azure Rights Management の使用停止と非アクティブ化 | Azure RMS"
-description: 
-keywords: 
+description: "(Azure RMS) を使用すると、組織でコンテンツを保護するかどうかをいつでも制御できます。また、この情報保護ソリューションの使用をやめた場合でも、以前に保護されていたコンテンツにアクセスできなくなることはありません。 以前に保護されていたコンテンツに引き続きアクセスする必要がない場合、サービスを無効にして Azure Rights Management のサブスクリプションの有効期限を終わらせることができます。 たとえば、これは、サービスを運用環境にデプロイする前のテストが完了した場合も該当します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c114336551417fdbf1503ffc8350e3fc28e9c95
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 40e4997f67a078ec781f1e7800599554858777a8
 
 
 ---
 
 # Azure Rights Management の使用停止と非アクティブ化
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) を使用すると、組織がコンテンツを保護するかどうかをいつでも制御できます。また、この情報保護ソリューションの使用をやめた場合でも、以前に保護されていたコンテンツから締め出されることはありません。 以前に保護されていたコンテンツに引き続きアクセスする必要がない場合、サービスを無効にして Azure Rights Management のサブスクリプションの有効期限を終わらせることができます。 たとえば、これは、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を運用環境にデプロイする前のテストが完了した場合も該当します。
 
@@ -92,6 +91,6 @@ Azure Rights Management テナント キーがある場合は、オンプレミ�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

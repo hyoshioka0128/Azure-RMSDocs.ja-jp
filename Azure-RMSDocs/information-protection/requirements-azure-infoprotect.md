@@ -1,20 +1,19 @@
 ---
 title: "Azure Information Protection の要件 | Azure RMS"
-description: 
-keywords: 
+description: "Azure Information Protection のプレビュー リリースを評価するには、次の前提条件が満たされていることを確認してください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aa4353e5-c5b0-47f6-a6f9-87d13e8f075f
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c0652e05576ab28d7b77380ab1b8aa0ca2d3e479
-ms.openlocfilehash: e3eb845af4e2cfec43c63c9625163f62c83cf954
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: cc1ec2b2544ac368821155b7e0c3c0e179982d1d
 
 
 ---
@@ -29,7 +28,7 @@ Azure Information Protection のプレビュー リリースを評価するに�
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Azure RMS を含むクラウド サブスクリプション|組織には Rights Management をサポートするクラウド サブスクリプションが必要です。<br /><br />詳細および無料試用版へのリンクについては、「[Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。|
+|Azure Rights Management を含む Office 365 のサブスクリプション|たとえば、Office 365 E3、E4、または E5 のサブスクリプションです。<br /><br />使用できるサブスクリプション オプションの詳細と無料試用版へのリンクについては、Azure RMS の要件に関するドキュメントの「[Office 365 サブスクリプション](../get-started/requirements-subscriptions.md#office-365-subscription)」セクションを参照してください。|
 |Azure AD ディレクトリ|組織には Azure RMS および Azure Information Protection のユーザー認証をサポートするための Azure AD ディレクトリが必要です。 また、オンプレミスのディレクトリ (AD DS) のユーザー アカウントを使用する場合は、ディレクトリ統合も構成する必要があります。<br /><br />必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure RMS で Multi-Factor Authentication (MFA) がサポートされます。<br /><br />詳細については、「[Azure AD ディレクトリ](../get-started/requirements-azure-ad.md)」を参照してください。Azure RMS についての情報は Azure Information Protection にも当てはまります。|
 |クライアント デバイス|このプレビューでは、次のクライアント デバイスがサポートされます。<br /><br />- Windows 10 (x86、x64)<br /><br />- Windows 8.1 (x86、x64)<br /><br />- Windows 8 (x86、x64)<br /><br />- Windows 7 Service Pack 1 (x86、x64)<br /><br />データを保護する場合、Azure Rights Management をサポートする同じデバイス (Windows、Mac、iOS、Android) でデータを使用できます。 デバイスおよびサポートされるバージョンの詳細は、「[Azure RMS の要件: Azure RMS をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」を参照してください。|
 |アプリケーション|プレビュー リリースおよび一般公開 (GA) では、Azure Information Protection は次の Office スイートの Office アプリケーション **Word**、**Excel**、**PowerPoint**、**Outlook** で作成されたファイルと電子メールのラベル付けと保護をサポートします。<br /><br />- Office Professional Plus 2016<br /><br />- Office Professional Plus 2013 Service Pack 1<br /><br />- Office Professional Plus 2010<br /><br />一般公開の後、PDF、オーディオ、ビデオ、画像などの他のファイル タイプを Azure Information Protection がサポートするようになる時期については、[Enterprise Mobility and Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)で確認してください。|
@@ -42,6 +41,6 @@ Azure Information Protection のプレビュー リリースを評価するに�
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

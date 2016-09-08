@@ -1,27 +1,26 @@
 ---
 title: "個人用 RMS と Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "個人用 RMS は組織内のユーザーを対象にした無料のセルフサービス サブスクリプションです。Microsoft Azure Rights Management (Azure RMS) によって保護された機密ファイルが組織内のユーザーに送信されているものの、IT 部門が Azure でそれらのユーザーのアカウントを管理していないために、該当するユーザーを認証できないという場合に使用できます。 たとえば、IT 部門が Office 365 を所有しておらず、Azure サービスも使用していない場合が挙げられます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 6a27d5a2a1bad24521a551465fd9324f2a826376
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
 
 
 ---
 
 # 個人用 RMS と Azure Rights Management
 
-*適用対象: Azure Rights Management*
+>*適用対象: Azure Rights Management*
 
 個人用 RMS は組織内のユーザーを対象にした無料のセルフサービス サブスクリプションです。Microsoft Azure Rights Management (Azure RMS) によって保護された機密ファイルが組織内のユーザーに送信されているものの、IT 部門が Azure でそれらのユーザーのアカウントを管理していないために、該当するユーザーを認証できないという場合に使用できます。 たとえば、IT 部門が Office 365 を所有しておらず、Azure サービスも使用していない場合が挙げられます。
 
@@ -42,6 +41,6 @@ Windows コンピューター上で Rights Management 共有アプリケーシ�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

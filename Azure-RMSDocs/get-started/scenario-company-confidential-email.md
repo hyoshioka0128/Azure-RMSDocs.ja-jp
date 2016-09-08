@@ -1,27 +1,26 @@
 ---
 title: "シナリオ – 社外秘の電子メールを送信する | Azure RMS"
-description: 
-keywords: 
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: b6f3b06485dda81be2a36035fea7477f4061a8e9
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: e3245f7fb15f7081dbe4552eb9734a4915d1b6f1
 
 
 ---
 
 # シナリオ – 社外秘の電子メールを送信する
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。 たとえば、別の組織の誰かまたは個人用の電子メール アカウントに電子メール メッセージを転送するとします。 電子メールと添付ファイルは、Azure Rights Management とユーザーが電子メール クライアントから選択するテンプレートによって保護されます。
 
@@ -32,7 +31,7 @@ ms.openlocfilehash: b6f3b06485dda81be2a36035fea7477f4061a8e9
 > 
 > たとえば、Bob は、Marketing グループにファイルの保存とコンテンツの編集のカスタム権限を適用し、転送権限を含めないカスタム テンプレートを使用して、Alice に電子メールを送信します。 Alice は他のユーザーに電子メールを転送できませんが、電子メール メッセージと添付ファイルを USB ドライブまたはファイル サーバー共有に保存できます。これらのファイルへのアクセス権がある Marketing グループのメンバーは、ファイルを読み取り、編集することができます。 Marketing グループ以外のユーザーは、コンテンツを開くことができません。
 
-この手順は、次の一連の状況に適してします。
+この手順は、次の一連の状況に適しています。
 
 -   組織内では各ユーザーが他のユーザーと情報を共有できるようにし、組織外のユーザーとは情報を共有できないようにする必要がある。
 
@@ -158,6 +157,6 @@ ms.openlocfilehash: b6f3b06485dda81be2a36035fea7477f4061a8e9
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

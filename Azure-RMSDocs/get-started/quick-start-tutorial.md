@@ -4,24 +4,24 @@ description: "5 つの手順を実行するだけで 15 分もかからずに組
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: c828ba3d4156c0115a012d10b375caee0d5e5c10
 
 
 ---
 
 # Azure Rights Management のクイック スタート チュートリアル
 
-*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Rights Management、Office 365*
 
 移動: 
 > [!div class="op_single_selector"]
@@ -35,7 +35,7 @@ ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
 
 ![Azure RMS のクイック スタート チュートリアルの全手順](../media/AzRMS_QuickStartStepsAll.PNG)
 
-このチュートリアルは、IT 管理者やコンサルタントが組織向けの情報保護ソリューションとして Azure Rights Management を評価する際の支援を目的としたものです。 運用環境では、サービスをアクティブ化する手順は管理者が行い、ドキュメントを送信する手順はエンド ユーザーが行います。 別の組織のユーザーに機密性の高いドキュメントを安全に送信する際のシナリオの全容を示すために、このチュートリアルではどちらの手順も説明しています。 このチュートリアルに関してお困りのことがある場合には、 [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) まで電子メール メッセージをお送りください。サポートいたします。
+このチュートリアルは、IT 管理者やコンサルタントが組織向けの情報保護ソリューションとして Azure Rights Management を評価する際の支援を目的としたものです。 運用環境では、サービスをアクティブ化する手順は管理者が行い、ドキュメントを送信する手順はエンド ユーザーが行います。 別の組織のユーザーに機密性の高いドキュメントを安全に送信する際のシナリオの全容を示すために、このチュートリアルではどちらの手順も説明しています。 このチュートリアルに関してお困りのことがある場合には、[AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) までメール メッセージをお送りください。サポートいたします。
 
 このチュートリアルでは、以下のものが必要です。
 
@@ -57,6 +57,6 @@ ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
