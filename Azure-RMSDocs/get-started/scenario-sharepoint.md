@@ -1,9 +1,9 @@
 ---
 title: "シナリオ - SharePoint に保存されているドキュメントを管理する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。 たとえばドキュメントは、偶発的またはユーザーの故意による漏えいから自動的に保護され、ドキュメントがダウンロードや同期された後でも、コンテンツへのアクセスをブロックすることができます。 保護するファイルの例としては、組織内での共同作業用の設計文書や企画、その他の成果物などがあります。 SharePoint で保護されたライブラリを構成すると、SharePoint 内の Office ファイルは Azure Rights Management によって保護されます。"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: f0dfe895820d33eab1d3a69c92e881287072f554
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
 
 
 ---

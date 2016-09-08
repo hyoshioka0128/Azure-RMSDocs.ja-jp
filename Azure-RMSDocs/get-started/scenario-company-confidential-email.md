@@ -1,9 +1,9 @@
 ---
 title: "シナリオ – 社外秘の電子メールを送信する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。 たとえば、別の組織の誰かまたは個人用の電子メール アカウントに電子メール メッセージを転送するとします。 電子メールと添付ファイルは、Azure Rights Management とユーザーが電子メール クライアントから選択するテンプレートによって保護されます。"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 4bda209d2f66bb3a3ca1639a7ddfcfc3bccf51b1
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: e3245f7fb15f7081dbe4552eb9734a4915d1b6f1
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: "シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。 ワーク フォルダーでは、Windows Server を実行しているファイル サーバー用のロール サービスを使用して、ユーザーが PC やデバイスから一貫した方法で作業ファイルにアクセスできるようにします。 ワーク フォルダーにはファイルを保護するための独自の暗号化が用意されていますが、ワーク フォルダー環境の外にファイルが移動されると、この保護は失われます。"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: ce61f22be934ec9817a22737417514468b5c6528
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 1fdb62af06a3011e1102df0df3f9b61bcdc67edd
 
 
 ---

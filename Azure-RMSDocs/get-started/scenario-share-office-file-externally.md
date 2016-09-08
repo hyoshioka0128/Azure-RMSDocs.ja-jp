@@ -1,9 +1,9 @@
 ---
 title: "シナリオ - 別の組織のユーザーと Office ファイルを共有する | Azure RMS"
-description: "このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。 たとえば、Office ファイルが、パートナー向けの価格表、販売店向けの製品一覧、配信タイムラインと潜在的な顧客の一覧が含まれる、Word 文書、Excel スプレッドシート、または PowerPoint プレゼンテーションであるとします。 ユーザーが手順に従って操作を行えば、電子メール メッセージに添付されるファイルは Azure Rights Management によって保護されます。"
+description: "このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 
 ---
