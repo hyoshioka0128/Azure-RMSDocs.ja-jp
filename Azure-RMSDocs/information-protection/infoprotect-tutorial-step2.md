@@ -1,17 +1,17 @@
 ---
-title: "Azure Information Protection クイック スタート チュートリアル手順 2 | Azure Rights Management"
+title: "Azure Information Protection クイック スタート チュートリアル手順 2 | Azure Information Protection"
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 679d03c499ccdd044444c73ebef8f59b281278cd
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 
 ---
@@ -37,7 +37,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     - 分類用のラベル: **[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には 2 つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
 
-    - 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) ラベルには視覚的なマーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 さらに、3 つのグローバル設定は設定されていないので、すべてのドキュメントと電子メールにラベルは必要なく、既定のラベルはなく、ユーザーが秘密度レベルを下げるときに理由を示す必要はありません。
+    - 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) ラベルには視覚的なマーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 さらに、3 つのグローバル設定は設定されていないので、すべてのドキュメントと電子メールにラベルは必要なく、既定のラベルはなく、ユーザーが分類の秘密度を下げるときに理由を示す必要はありません。
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy.png)
 
@@ -45,7 +45,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 -  **[Select the default label]** (既定のレベルを選択): これを **[Internal]** (内部) に設定します。
 
-- **[Users must provide justification when lowering the sensitivity level]** (秘密度レベルを下げるときは妥当性を示す必要があります): これを **[On]** (オン) に設定します。
+- **Users must provide justification to set a lower classification label, remove a label, or remove protection** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります): これを**[On]** (オン) に設定します。
 
 次に、ラベルの 1 つ **[Confidential]** (機密) の設定を変更します。
 
@@ -97,6 +97,6 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

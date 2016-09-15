@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 0dcaf13afb1802c2301c9516b2602aa2f6b7ce7e
+ms.sourcegitcommit: 4141cadf67dc479116c802f9340ba222140194a3
+ms.openlocfilehash: 2d965086fa44d98e8236a6bbd2515fb3afac3f05
 
 
 ---
@@ -26,10 +26,12 @@ ms.openlocfilehash: 0dcaf13afb1802c2301c9516b2602aa2f6b7ce7e
 
 ## 概要
 
-このトピックの説明は IPCHelloWorld というサンプル アプリケーションに基づき、権限保護対応アプリケーションの基本的な概念とコードの理解に役立ちます。 Microsoft Connect から IPCHellowWorld の完全なサンプル アプリケーション [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) をダウンロードできます。
+このトピックの説明は、*IPCHelloWorld* というサンプル アプリケーションに基づいており、権限保護対応アプリケーションの基本的な概念とコードの理解に役立ちます。 *IPCHelloWorld* プロジェクトは既に、Rights Management サービス SDK 2.1 に合わせて構成されています。 RMS SDK 2.1 を使用する新しいプロジェクトを構成する方法については、「[Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)」を参照してください。
 
-> [!Note] 
-> Rights Management サービス SDK 2.1 では IPCHelloWorld プロジェクトは既に構成されています。 RMS SDK 2.1 を使用する新しいプロジェクトを構成する方法については、「[Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)」を参照してください。
+*IPCHellowWorld* サンプル アプリケーション全体 ([Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)) を Microsoft Connect からダウンロードできます。
+> [!Note]
+> Microsoft Connect にアクセスするときにエラーが発生した場合は、ユーザー登録されていない可能性があります。 登録するには、[Connect](http://connect.microsoft.com) に移動して Microsoft アカウントでサインインし、[ディレクトリ] をクリックし、Rights Management Services を見つけて [参加] をクリックします。
+
 
 ## MSIPC.dll の読み込み
 
@@ -185,6 +187,6 @@ RMS テンプレートでは、データを保護するために使用するポ�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

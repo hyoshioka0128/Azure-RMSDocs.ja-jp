@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection のグローバル ポリシー設定を構成する方法 | Azure Rights Management"
+title: "Azure Information Protection のグローバル ポリシー設定を構成する方法 | Azure Information Protection"
 description: "Azure Information Protection ポリシーには、すべてのユーザーとすべてのデバイスに適用される次の 3 つの設定があります。"
 manager: mbaldwin
 ms.date: 08/08/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: c48f5488e49a54b970f76012e0f2f17fe4158691
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 872ea7da6f3b72a355a73c8b0589beda86ded20d
 
 
 ---
@@ -42,7 +42,7 @@ ms.openlocfilehash: c48f5488e49a54b970f76012e0f2f17fe4158691
 
     - **Select the default label** (既定のラベルを選択します): このオプションを設定した場合、ラベルを持たないドキュメントや電子メールに割り当てるラベルを選択します。 サブラベルがあるラベルは、既定値として設定することはできません。 
 
-    - **Users must provide justification when lowering the sensitivity level ** (秘密度レベルを下げるときは妥当性を示す必要があります): このオプションを **[オン]** に設定し、ユーザーが既存のドキュメントまたは電子メールのラベルを秘密度レベルが低いラベルに変更する (たとえば **[秘密]** から **[パブリック]** に変更する) 場合は、この操作の理由を求めるプロンプトが表示されます。 たとえば、ユーザーは、「このドキュメントにはもう秘密情報が含まれていない」という説明を入力します。 この操作と妥当性の説明は、次のローカルの Windows イベント ログに記録されます: **[アプリケーション]**  >  **[Microsoft Azure Information Protection]**  
+    - **Users must provide justification to set a lower classification label, remove a label, or remove protection** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります): このオプションが **[オン]** に設定されているときは、ユーザーがこれらの操作を行うと (たとえば **[Secret]** (秘密) ラベルを **[Personal]** (個人用) に変更)、その操作の理由を入力する画面が表示されます。 たとえば、ユーザーは、「このドキュメントにはもう秘密情報が含まれていない」という説明を入力します。 この操作と妥当性の説明は、次のローカルの Windows イベント ログに記録されます: **[アプリケーション]**  >  **[Microsoft Azure Information Protection]**  
 
     ![新しい分類が下位の場合の Azure Information Protection のプロンプト](../media/info-protect-lower-justification.png)
 
@@ -67,6 +67,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

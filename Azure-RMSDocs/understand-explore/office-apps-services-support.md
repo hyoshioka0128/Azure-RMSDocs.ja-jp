@@ -1,9 +1,9 @@
 ---
 title: "Office アプリケーションおよびサービス | Azure RMS"
-description: "エンドユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で Microsoft Azure Rights Management を使用して、組織のデータを保護できます。"
+description: "エンド ユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で Microsoft Azure Rights Management を使用して、組織のデータを保護する方法について説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 93dde9494a430526ebd26e1d5123ad44901ffcbb
+ms.sourcegitcommit: f0871436caef79187349d700d190564b08cc9e46
+ms.openlocfilehash: 1e1a52e637671d857fac22c51a635e726fa99b01
 
 
 ---
@@ -61,7 +61,6 @@ SharePoint Server を使用する場合は、オンプレミス サーバーと 
 > 
 > -   Azure クラシック ポータルで管理する既定のテンプレートまたはカスタム テンプレートは使用できません。
 > -   ファイル名拡張子が保護された PDF ファイルのための .PPDF であるファイルはサポートされていません。 ファイル名拡張子が .PDF で、RMS がネイティブで保護しているファイルは、RMS をネイティブでサポートする PDF リーダーを使用する場合にサポートされます。
-> -   モバイル デバイスの Office では RMS がまだサポートされていないため、RMS で保護されているファイルを表示するにはこれらのデバイスでブラウザーを使用する必要があり、ファイルは読み取り専用です。
 
 Azure RMS は、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「 [OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx) 」を参照してください。
 
@@ -72,6 +71,6 @@ SharePoint での Azure RMS の使用について詳しくは、Office のブロ
 「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照して、他のアプリケーションおよびサービスで Azure Rights Management をサポートする方法について確認してください。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
