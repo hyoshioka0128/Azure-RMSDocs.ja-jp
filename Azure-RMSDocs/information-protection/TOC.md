@@ -24,8 +24,9 @@
 ### [視覚的なマーキングの構成](configure-policy-markings.md)
 ### [条件の構成](configure-policy-classification.md)
 ## [クライアントのインストール](info-protect-client.md)
+## [Azure Information Protection のソフトウェア ライセンス条項](aip-software-license-terms.md)
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

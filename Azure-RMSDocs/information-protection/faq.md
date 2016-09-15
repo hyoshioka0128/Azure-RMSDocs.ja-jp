@@ -3,7 +3,7 @@ title: "Azure Information Protection プレビューに関してよく寄せら�
 description: "Azure Information Protection のプレビュー リリースに関して質問がある場合は、 ここで回答を探してみてください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
+ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
+ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
 
 
 ---
@@ -82,7 +82,7 @@ Azure Information Protection はクラウド ベースのソリューション�
 
 ## コンピューターはどのような方法および更新頻度で Azure Information Protection からポリシー情報を取得しますか?
 
-ユーザーが Office アプリケーションを開くたびに、Azure Information Protection クライアントは Azure Information Protection ポリシーの新しいバージョンがあるかどうかを確認します。 新しいバージョンがある場合、クライアントは HTTPS リンクによりデータを保護してポリシーをダウンロードします。 
+ユーザーが Office アプリケーションを開くたびに、Azure Information Protection クライアントは Azure Information Protection ポリシーの新しいバージョンがあるかどうかを確認します。 これに加えて、Office アプリケーションが 24 時間ごとに自動的に確認します。 新しいバージョンがある場合、クライアントは HTTPS リンクによりデータを保護してポリシーをダウンロードします。 
 
 新しい Azure Information Protection ポリシーの発行時に Office アプリケーションの複数のインスタンスが読み込まれる場合、ポリシーの最新バージョンを取得するためにすべてのインスタンスを閉じる必要があります。 たとえば、2 つの Word 文書を開いていて、更新された Azure Information Protection ポリシーを一方の文書でのみテストするには、両方の Word 文書を閉じて、最新のポリシーで使用する文書を再度開きます。
 
@@ -129,7 +129,7 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 ## ユーザーに分類レベルを変更する理由の説明を求めることはできますか?
 
-はい。 ユーザーに分類を変更する理由の説明を求めるには、Azure ポータルで **[Users must provide justification when lowering the sensitivity level]** (秘密度レベルを下げるときは妥当性を示す必要があります) オプションを **[On]** (オン) に設定します。 このように設定すると、ユーザーのアクションと理由が、ローカル Windows イベント ログの **[アプリケーション]**  >  **[Microsoft Azure Information Protection]** に記録されます。
+はい。 分類を変更する理由をユーザーに入力させるには、Azure ポータルで **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) オプションを **[On]** (オン) に設定します。 このように設定すると、ユーザーのアクションと理由が、ローカル Windows イベント ログの **[アプリケーション]**  >  **[Microsoft Azure Information Protection]** に記録されます。
 
 ## 分類された後のコンテンツを自動的に保護するにはどうすればよいですか?
 
@@ -187,6 +187,6 @@ Azure Information Protection によって分類されたファイルおよび電
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

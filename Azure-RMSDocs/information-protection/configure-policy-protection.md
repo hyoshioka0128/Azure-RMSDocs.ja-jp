@@ -1,5 +1,5 @@
 ---
-title: "Rights Management による保護を適用するようにラベルを構成する方法 | Azure Rights Management"
+title: "Rights Management による保護を適用するようにラベルを構成する方法 | Azure Information Protection"
 description: "暗号化ポリシー、ID ポリシー、および承認ポリシーによってデータ損失を防止する Rights Management サービスを使用することで、最も機密性の高いドキュメントや電子メールを保護することができます。 この保護は、Rights Management テンプレートを使用するようにラベルを構成したときに適用されます。"
 manager: mbaldwin
 ms.date: 08/15/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
 
 
 ---
@@ -57,7 +57,7 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
     
     ほとんどの場合は、**[Azure RMS]** を選択します。 AD RMS 構成 ("*Hold Your Own Key*" (HYOK) とも呼ばれます) に付随する前提条件と制限事項を読み、理解してから、AD RMS を選択してください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
     
-4. Azure RMS を選択した場合: **[RMS テンプレートの選択]**: ドロップダウン ボックスをクリックし、このラベルでドキュメントと電子メールを保護するために使用するテンプレートを選択します。
+4. Azure RMS を選択した場合: **[RMS テンプレートの選択]** ドロップダウン ボックスをクリックし、このラベルを持つドキュメントや電子メールの保護に使用するテンプレートまたは権限管理オプションを選択します。
 
     > [!NOTE] 
     > **[ラベル]** ブレードを開いた後で新しいテンプレートを作成した場合は、このブレードを閉じて手順 2 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
@@ -78,6 +78,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

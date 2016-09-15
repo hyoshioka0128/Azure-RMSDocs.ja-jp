@@ -1,17 +1,17 @@
 ---
-title: "Azure Information Protection クイック スタート チュートリアル手順 4 | Azure Rights Management"
+title: "Azure Information Protection クイック スタート チュートリアル手順 4 | Azure Information Protection"
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 4 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 6d93723a6f7aaffec8d18cf289bff0752b53a2c9
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 2c04c749ff73050dc8a15dd984c33f700e3e6ed5
 
 
 ---
@@ -32,7 +32,7 @@ Azure Information Protection クライアントをインストールして Word 
 
     **[Sensitivity]** (秘密度) の値が **[Personal]** (個人) に変わります。
 
-    ![Azure Information Protection クイック スタート チュートリアル手順 4 - レベルを下げる理由の確認要求](../media/confirm-lowering.png)
+    ![Azure Information Protection クイック スタート チュートリアル手順 4 - レベルを下げる理由の確認要求](../media/info-protect-lower-justification.png)
 
 ### 分類を完全に削除するには:
 
@@ -77,6 +77,6 @@ Azure ポータルで Information Protection ポリシーの設定を変更す�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
