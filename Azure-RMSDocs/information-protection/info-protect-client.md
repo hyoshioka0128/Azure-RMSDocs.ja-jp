@@ -1,16 +1,16 @@
 ---
-title: "Azure Information Protection クライアントのインストール | Azure Rights Management"
-description: "Azure Information Protection を使ってドキュメントや電子メール メッセージを分類するには、まず Azure Information Protection クライアントをインストールする必要があります。 インストールすると、組織の分類ラベルを表示する Information Protection バーがお使いの Office アプリケーションに追加され、また、[保護] という名前のボタンの付いた、新しい保護グループが [ホーム] タブに表示されます (Word、Excel、PowerPoint)。"
+title: "Azure Information Protection クライアントのインストール | Azure Information Protection"
+description: "Office アプリケーションに Information Protection バーを追加して、ドキュメントや電子メールに分類ラベルを選択できるようにするクライアントのインストール手順です。"
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: ab8388e03803d32a6891785f905a1ddef796bc25
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: f8d4b7f154ab8b47cded0dd2f315dba33664c7ff
 
 
 ---
@@ -34,7 +34,7 @@ Azure Information Protection クライアントを [Microsoft ダウンロード
 
 ## Azure Information Protection クライアントを手動でインストールするには
 
-1. [クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)したら、**AZInfoProtection.exe** を実行し、指示に従ってクライアントをインストールします。 このインストールには、ローカルの管理アクセス許可が必要です。
+1. [クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)したら、**AzInfoProtection.exe** を実行し、指示に従ってクライアントをインストールします。 このインストールには、ローカルの管理アクセス許可が必要です。
 
     Office 365 または Azure Active Directory に接続できないが、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。 
 
@@ -42,14 +42,21 @@ Azure Information Protection クライアントを [Microsoft ダウンロード
 
 ## ユーザー向けに Azure Information Protection クライアントをインストールするには
 
-- Azure Information Protection クライアントのインストールをスクリプト化および自動化するには、AZInfoProtection.exe をパッケージ化して、標準の [Windows インストーラー (msiexec) コマンド ライン オプション](https://technet.microsoft.com/library/cc759262(v=ws.10).aspx)を使用します。
+- スクリプトを作成し、コマンド ライン オプションを使用して Azure Information Protection クライアントのインストールを自動化することができます。 インストール オプションを参照するには、`AzInfoProtection.exe /help` を実行してください。
 
-    たとえば、作成するパッケージ化されたバージョンの名前が InfoProtect.msi で、クライアントをサイレント インストールするには、次のコマンドを使用します:  `msiexec /qn InfoProtection.msi`
+    たとえば、サイレント モードでクライアントをインストールするには、以下の手順に従ってください。 `AzInfoProtection.exe /passive | quiet`
 
 
 ## Azure Information Protection クライアントをアンインストールするには
 
+次のどの方法も使用できます。
+
 - コントロール パネルを使って、プログラムをアンインストールします。**[Microsoft Azure Information Protection]**  >  **[アンインストール]** をクリックします。
+
+- **AzInfoProtection.exe** を再実行し、**[セットアップの変更]** ページの **[アンインストール]** をクリックします。 
+
+- [実行] `AzInfoProtection.exe /uninstall`
+
 
 ## インストール、接続の状態を確認するには、または問題を報告するには
 
@@ -88,6 +95,6 @@ Information Protection バー上のラベルを変更するには、Azure Inform
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

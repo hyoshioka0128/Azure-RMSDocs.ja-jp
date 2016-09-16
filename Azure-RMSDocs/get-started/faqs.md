@@ -3,7 +3,7 @@ title: "Azure Rights Management に関してよく寄せられる質問 | Azure 
 description: "Microsoft Azure Rights Management (Azure RMS) に関してよく寄せられる質問をいくつか紹介します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 906e544cc3c9be6ba475502e3cdb93f2e047da7f
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
 
 
 ---
@@ -121,7 +121,7 @@ Azure RMS でネイティブでサポートされるファイル名拡張子の�
 詳細については、「[AD RMS から Azure Rights Management への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
 ## BYOK と Azure RMS を併用したいのですが、BYOK は Exchange Online と互換性がないと知りました。何かアドバイスはありますか。
-現在のこの制限で、Azure RMS のデプロイメントを延期しないでください。 Exchange Online をお持ちで、Bring Your Own Key (BYOK) を使用する場合は、当面 Azure RMS を既定のキー管理モード (キーの生成と管理を Microsoft で行う) でデプロイすることをお勧めします。 この方法を採用すると、重要なファイルと電子メールを保護する機能をすぐに活用し、後で (たとえば Exchange Online が BYOK をサポートするようになったときなどに) BYOK に移行することができます。
+現在のこの制限で、Azure RMS のデプロイメントを延期しないでください。 Exchange Online をお持ちで、Bring Your Own Key (BYOK) を使用する場合は、当面 Azure RMS を既定のキー管理モード (キーの生成と管理を Microsoft で行う) でデプロイすることをお勧めします。 この方法を採用すると、重要なファイルと電子メールを保護する機能をすぐに活用し、後で (たとえば Exchange Online が BYOK をサポートするようになったときなどに) BYOK に移行することができます。 BYOK に移行した後も、前に保護したドキュメントや電子メールには、アーカイブされたキーを使用して引き続きアクセスできます。
 
 ただし、会社のポリシーでハードウェア セキュリティ モジュール (HSM) を使用する必要があり、そのために Azure RMS をデプロイできない場合は、Azure RMS をデプロイし、Exchange の RMS 機能を減らして BYOK を併用する方法があります。 詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[BYOK の料金と制限事項](../plan-design/byok-price-restrictions.md)」を参照してください。
 
@@ -145,7 +145,7 @@ Azure RMS (Office 365、Azure RMS Premium、および Enterprise Mobility Suite)
 
 Azure RMS (個人用の RMS) をサポートする無料サブスクリプションは、Azure RMS で保護されているコンテンツの使用をサポートしています。 詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## 無料の Azure RMS サブスクリプション (個人用 RMS) に関する技術情報 (たとえば、そのしくみ、アカウントを制御する方法、使用できないドメイン) はどこで入手できますか。
+## 無料の Azure RMS サブスクリプション (個人用 RMS) に関する技術情報 (たとえば、このプロセスのしくみや、作成されたアカウントを管理者が制御する方法) はどこで入手できますか。
 これらの質問に対する回答については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」および関連する記事を参照してください。
 
 ## 退職した従業員が保護していたファイルにアクセスするには、どうすればよいですか。
@@ -223,6 +223,6 @@ Azure Information Protection のこの機能は現在パブリック プレビ�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -1,17 +1,17 @@
 ---
-title: "Azure Information Protection クイック スタート チュートリアル手順 3 | Azure Rights Management"
+title: "Azure Information Protection クイック スタート チュートリアル手順 3 | Azure Information Protection"
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 3 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 320cd688ba5aabcb966009907d568033149953e3
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: f5e15870a3a67f67261db9c3d1d735c126f48ee2
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 320cd688ba5aabcb966009907d568033149953e3
 
 1. Office がインストールされている PC で (ただし、Word は現在開かれていません)、Microsoft ダウンロード センターから [Azure Information Protection クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。 
 
-2. **AZInfoProtection.exe** を実行し、指示に従ってクライアントをインストールします。
+2. **AzInfoProtection.exe** を実行し、指示に従ってクライアントをインストールします。
 
     このチュートリアルでは、デモ ポリシーをインストールするオプションを選択するかどうかは関係ありません。デモ ポリシーをインストールしても、先に構成したポリシーが Azure からダウンロードされてデモ ポリシーを置き換えます。 ただし、Azure Information Protection に接続しないで既定のラベルを試したいだけの場合は、デモ ポリシー オプションを使用してもかまいません。 
 
@@ -52,6 +52,6 @@ ms.openlocfilehash: 320cd688ba5aabcb966009907d568033149953e3
 [手順 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
