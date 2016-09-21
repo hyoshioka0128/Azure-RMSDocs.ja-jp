@@ -2,15 +2,15 @@
 title: "Rights Management による保護を適用するようにラベルを構成する方法 | Azure Information Protection"
 description: "暗号化ポリシー、ID ポリシー、および承認ポリシーによってデータ損失を防止する Rights Management サービスを使用することで、最も機密性の高いドキュメントや電子メールを保護することができます。 この保護は、Rights Management テンプレートを使用するようにラベルを構成したときに適用されます。"
 manager: mbaldwin
-ms.date: 08/15/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
+ms.sourcegitcommit: fc390680918a08405e914a858c64bb723efa5580
+ms.openlocfilehash: ca1534801facc6273d481cc99f23ec8acd5341d1
 
 
 ---
@@ -47,9 +47,9 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
 
 ## Rights Management による保護を適用するようにラベルを構成するには
 
-1. [Azure ポータル](https://portal.azure.com)にグローバル管理者としてサインインしていない場合はサインインし、Azure Rights Management テンプレートを取得できるようにします。 次に、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure ポータル](https://portal.azure.com)にグローバル管理者としてサインインしていない場合は、新しいブラウザーのウィンドウを開いてサインインし、Azure Rights Management テンプレートを取得できるようにします。 次に、**[Azure Information Protection]** ブレードに移動します。 
 
-    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. **[Azure Information Protection]** ブレードで、Rights Management による保護を適用するように構成するラベルを選択します。
 
@@ -57,15 +57,22 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
     
     ほとんどの場合は、**[Azure RMS]** を選択します。 AD RMS 構成 ("*Hold Your Own Key*" (HYOK) とも呼ばれます) に付随する前提条件と制限事項を読み、理解してから、AD RMS を選択してください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
     
-4. Azure RMS を選択した場合: **[RMS テンプレートの選択]** ドロップダウン ボックスをクリックし、このラベルを持つドキュメントや電子メールの保護に使用するテンプレートまたは権限管理オプションを選択します。
+4. Azure RMS を選択した場合: **[RMS テンプレートの選択]** ドロップダウン ボックスをクリックし、このラベルを持つドキュメントや電子メールの保護に使用する[テンプレート](../deploy-use/configure-custom-templates.md)または権限管理オプションを選択します。
+    
+    オプションについての詳細:
+    
+    - **[ラベル]** ブレードを開いた後で新しいテンプレートを作成しましたか? このブレードを閉じて手順 2 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
+    
+    - **[部門別テンプレート]**を選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
+    
+        - 構成されたテンプレート範囲の外にいるユーザー、または Azure Rights Management 保護の適用から除外されているユーザーは、引き続きラベルを確認できますが、適用することはできません。 それらのユーザーがラベルを選択した場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
+        
+    - **[保護の削除]** を選択する場合:
+        
+        - このオプションを持つラベルを適用するには、ユーザーは Rights Management による保護を削除する権限を持っている必要があります。 このオプションでは **[エクスポート]** (Office ドキュメント用) または **[フル コントロール]** [使用権限](../deploy-use/configure-usage-rights.md)を持っている、Rights Management の所有者 (自動的にフル コントロール使用権限が付与されています) である、または[Azure Rights Management のスーパー ユーザー](../deploy-use/configure-super-users.md)である必要があります。 既定の権限管理テンプレートには、ユーザーに保護を削除させる使用権限は含まれません。 
 
-    > [!NOTE] 
-    > **[ラベル]** ブレードを開いた後で新しいテンプレートを作成した場合は、このブレードを閉じて手順 2 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
-    
-    部門別テンプレートを選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
-    
-    - 構成されたテンプレート範囲の外にいるユーザー、または Azure Rights Management 保護の適用から除外されているユーザーは、引き続きラベルを確認できますが、適用することはできません。 それらのユーザーがラベルを選択した場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
-    
+            ユーザーが Rights Management による保護を削除する権限を持たずに **[保護の削除]** オプションを持つラベルを選択する場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
+
 5. AD RMS を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。 [詳細情報](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
 6. **[保存]** をクリックします。
@@ -78,6 +85,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
