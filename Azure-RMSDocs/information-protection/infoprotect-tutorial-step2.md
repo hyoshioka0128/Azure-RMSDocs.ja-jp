@@ -73,7 +73,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 3. **[Label: Confidential]** (ラベル: 機密) ブレードでは、**[CONDITION NAME]** (条件名) に **[Credit Card Number]** (クレジット カード番号) と表示され、**[OCCURRENCES]** (出現回数) に **1** が設定されています。
 
-4. **[Select how this label is applied] (このラベルの適用方法を選択)** は **[Recommended] (推奨)** のままにします。
+4. **[Select how this label is applied (このラベルの適用方法を選択)]** は **[Recommended (推奨)]** のままにします。
 
 5. **[Enter notes for internal housekeeping]** (内部ハウスキーピング処理向けのメモを入力) ボックスに、「**For testing purposes only**」 (テスト用のみ) と入力します。
 
