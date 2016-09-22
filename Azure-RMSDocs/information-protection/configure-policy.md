@@ -12,8 +12,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 1dd3c09f5bf6a38eb3d82bfa3f7a756f5237eab6
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: ba7acf835439d059874e0512997b2b591193f0c3
 
 
 ---
@@ -28,9 +28,9 @@ ms.openlocfilehash: 1dd3c09f5bf6a38eb3d82bfa3f7a756f5237eab6
 
 Azure Information Protection のプレビュー リリース中に Azure Information Protection ポリシーを構成するには:
 
-1. [Azure ポータル](https://portal.azure.com)にサインインします。
+1. 新しいブラウザー ウィンドウで、[Azure ポータル](https://portal.azure.com)にサインインします。
 
-2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「 **Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
+2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
     **[Azure Information Protection]** ブレードが表示され、ここで、次の要素を含む Azure Information Protection ポリシーを構成できます。
 
@@ -80,6 +80,6 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

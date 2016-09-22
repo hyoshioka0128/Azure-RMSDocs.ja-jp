@@ -1,17 +1,17 @@
 ---
-title: "Azure Information Protection とは | Azure Rights Management"
-description: "Azure Information Protection サービス (現在はプレビュー) の概要"
+title: "Azure Information Protection とは | Azure Information Protection"
+description: "Azure Information Protection サービス (現在はプレビュー) の概要です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 95f6467b5181184cf0bb402a6ad450c3a1780a52
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 3152ef095d39dab4cd2c11594b8d01dffe536ecc
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 95f6467b5181184cf0bb402a6ad450c3a1780a52
 
 Azure Information Protection を使用すると、ドキュメントや電子メールの分類、ラベル付け、保護を行うことができます。 このデータを分類すると、永続的なラベルがデータに追加されて、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 永続的なラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 最も機密性の高いデータについては、Azure Rights Management の暗号化ポリシー、ID ポリシー、認証ポリシーを併用してデータの損失を防ぐこともできます。 
 
-エンド ユーザーの場合、Office アプリケーションに Information Protection バーを追加するだけで、Azure Information Protection を既存のワークフローと簡単に統合できます。 
+エンド ユーザー向けには、Azure Information Protection を既存のワークフローと簡単に統合できるように、Information Protection バーが Office アプリケーションに追加されます。 
 
 - お知らせ: [Azure Information Protection – パブリック プレビューを使用できます](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now/)
 
@@ -44,6 +44,6 @@ Azure Information Protection を使用すると、ドキュメントや電子メ
 「[Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md)」 (Azure Information Protection のクイック スタート チュートリアル) で説明されているように、4 つの簡単な手順で Azure Information Protection を使い始めることができます。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

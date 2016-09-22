@@ -1,9 +1,9 @@
 ---
 title: "個人用 RMS 向けに作成されたアカウントを管理者が制御する方法 | Azure RMS"
-description: "組織の個人用 RMS サブスクリプションを有料のサブスクリプションに切り替えない場合でも、組織用に作成された Azure ディレクトリのユーザー アカウントを次の方法で制御できます。"
+description: "組織の個人向け RMS サブスクリプションを有料のサブスクリプションに切り替えない場合に、Azure Active Directory でユーザー アカウントを制御する方法について説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: a900622fcce4a0a1431f47647709584e404a7f8c
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
 
 
 ---
@@ -31,9 +31,9 @@ ms.openlocfilehash: a900622fcce4a0a1431f47647709584e404a7f8c
 
 -   ユーザーがサインアップして個人用 RMS サブスクリプションで Azure Rights Management を使用するのを防ぐことができます。 通常、この方法には利点がほとんどありません。ユーザーは保護なしでファイルを共有するか (会社に対してリスクが生じる可能性があります)、または IT 部門がデータにアクセスできない別のファイル保護メカニズムを使用するかのいずれかを選択することになるためです。 それでも、ユーザーがサインアップできず個人用 RMS を使用できないようにする場合は、Azure での組織のディレクトリの所有権を取得した後に、次のいずれかの操作を実行してください。
 
-    -   すべてのユーザーが、セルフサービス サブスクリプション (個人用 RMS を含む) にサインアップできないようにします。  現時点で、これをサービス別に設定することはできません。設定はセルフサービス プロセスを使用するすべての Azure サブスクリプションに適用されます。 これを行うには、Azure Active Directory 用 Windows PowerShell モジュールの [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) コマンドレットで **AllowAdHocSubscriptions** パラメーターを false に設定します。 例: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
+    -   すべてのユーザーが、セルフサービス サブスクリプション (個人用 RMS を含む) にサインアップできないようにします。  現時点で、これをサービス別に設定することはできません。設定はセルフサービス プロセスを使用するすべての Azure サブスクリプションに適用されます。 このようにするには、Azure Active Directory 用 PowerShell モジュールの [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) コマンドレットで **AllowAdHocSubscriptions** パラメーターを false に設定します。 例: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
 
-    -   ユーザーが Azure に新しいアカウントを作成できないようにします。つまり、Azure に既にアカウントを持っているユーザーしかセルフサービス サブスクリプション (個人用 RMS を含む) にサインアップできないようにします。  これを行うには、Azure Active Directory 用 Windows PowerShell モジュールの [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) コマンドレットで **AllowEmailVerifiedUsers** パラメーターを false に設定します。 例: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
+    -   ユーザーが Azure に新しいアカウントを作成できないようにします。つまり、Azure に既にアカウントを持っているユーザーしかセルフサービス サブスクリプション (個人用 RMS を含む) にサインアップできないようにします。  このようにするには、Azure Active Directory 用 PowerShell モジュールの [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) コマンドレットで **AllowEmailVerifiedUsers** パラメーターを false に設定します。 例: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
 
     -   Active Directory ドメイン サービス インフラストラクチャと Azure Active Directory を同期します。 この操作により、ユーザーが個人用 RMS などのセルフサービス サブスクリプションにサインアップしても新しいアカウントが作成されなくなり、Azure ディレクトリに作成済みのアカウントを削除または無効にすることができます。
 
@@ -46,6 +46,6 @@ Azure ディレクトリ内のユーザー アカウントを制御する、ま�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

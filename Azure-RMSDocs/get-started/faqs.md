@@ -3,7 +3,7 @@ title: "Azure Rights Management に関してよく寄せられる質問 | Azure 
 description: "Microsoft Azure Rights Management (Azure RMS) に関してよく寄せられる質問をいくつか紹介します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 906e544cc3c9be6ba475502e3cdb93f2e047da7f
+ms.sourcegitcommit: 62b72d2debef3421fea4f0e70beed67e5364d7d3
+ms.openlocfilehash: 99b5e4ea74cd6f76a2409d89c3db5d8672b63055
 
 
 ---
@@ -121,7 +121,7 @@ Azure RMS でネイティブでサポートされるファイル名拡張子の�
 詳細については、「[AD RMS から Azure Rights Management への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
 ## BYOK と Azure RMS を併用したいのですが、BYOK は Exchange Online と互換性がないと知りました。何かアドバイスはありますか。
-現在のこの制限で、Azure RMS のデプロイメントを延期しないでください。 Exchange Online をお持ちで、Bring Your Own Key (BYOK) を使用する場合は、当面 Azure RMS を既定のキー管理モード (キーの生成と管理を Microsoft で行う) でデプロイすることをお勧めします。 この方法を採用すると、重要なファイルと電子メールを保護する機能をすぐに活用し、後で (たとえば Exchange Online が BYOK をサポートするようになったときなどに) BYOK に移行することができます。
+現在のこの制限で、Azure RMS のデプロイメントを延期しないでください。 Exchange Online をお持ちで、Bring Your Own Key (BYOK) を使用する場合は、当面 Azure RMS を既定のキー管理モード (キーの生成と管理を Microsoft で行う) でデプロイすることをお勧めします。 この方法を採用すると、重要なファイルと電子メールを保護する機能をすぐに活用し、後で (たとえば Exchange Online が BYOK をサポートするようになったときなどに) BYOK に移行することができます。 BYOK に移行した後も、前に保護したドキュメントや電子メールには、アーカイブされたキーを使用して引き続きアクセスできます。
 
 ただし、会社のポリシーでハードウェア セキュリティ モジュール (HSM) を使用する必要があり、そのために Azure RMS をデプロイできない場合は、Azure RMS をデプロイし、Exchange の RMS 機能を減らして BYOK を併用する方法があります。 詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[BYOK の料金と制限事項](../plan-design/byok-price-restrictions.md)」を参照してください。
 
@@ -145,7 +145,7 @@ Azure RMS (Office 365、Azure RMS Premium、および Enterprise Mobility Suite)
 
 Azure RMS (個人用の RMS) をサポートする無料サブスクリプションは、Azure RMS で保護されているコンテンツの使用をサポートしています。 詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## 無料の Azure RMS サブスクリプション (個人用 RMS) に関する技術情報 (たとえば、そのしくみ、アカウントを制御する方法、使用できないドメイン) はどこで入手できますか。
+## 無料の Azure RMS サブスクリプション (個人用 RMS) に関する技術情報 (たとえば、このプロセスのしくみや、作成されたアカウントを管理者が制御する方法) はどこで入手できますか。
 これらの質問に対する回答については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」および関連する記事を参照してください。
 
 ## 退職した従業員が保護していたファイルにアクセスするには、どうすればよいですか。
@@ -165,37 +165,8 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 名前や外観に反して、**[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、コピー、印刷、添付ファイルの保存の制限を含む権限の集まりであり、それらに加え、電子メールの転送が制限されます。 権限は、選択した受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「[Azure Rights Management の使用権限を構成する](../deploy-use/configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
 
 ## 法律、法令遵守、SLA など、Azure RMS に関するサポート情報はどこで入手できますか。
-Azure RMS は他のサービスをサポートし、また、他のサービスに依存しています。 Azure RMS サービスの使用方法以外で、Azure RMS の関連情報をお探しの場合は、以下のリソースを参照してください。
 
-**法律およびプライバシー:**
-
--   Microsoft Azure の契約情報について: [Microsoft Azure の契約](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**セキュリティ、コンプライアンス、監査:**
-
-記事「[Azure RMS が解決する問題の種類](../understand-explore/azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
-
--   Azure RMS の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
-
--   FIPS 140 について: [FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**サービス レベル アグリーメント:**
-
--   主なリージョンごとの Azure RMS のサービス レベル アグリーメント: [製品ライセンスの検索ページからダウンロード](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-    - たとえば、北米向けの 2016 年 3 月のサービス レベル アグリーメントをダウンロードするには、**[OnlineSvcsConsolidatedSLA(WW)(English)(March2016)]** をクリックします。
-
--   Azure Active Directory のサービス レベル アグリーメント: [サービス レベル アグリーメント](http://azure.microsoft.com/support/legal/sla/)
-
-**ドキュメント:**
-
--   Azure Active Directory のドキュメント サイト: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Azure Active Directory ライブラリ: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Office 365 ライブラリ: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+「[Azure Rights Management のコンプライアンスとサポート情報](../understand-explore/compliance.md)」を参照してください。
 
 ## 新しい分類およびラベル付け機能の最新情報は何ですか?
 
@@ -223,6 +194,6 @@ Azure Information Protection のこの機能は現在パブリック プレビ�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

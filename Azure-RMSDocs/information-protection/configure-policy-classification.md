@@ -1,16 +1,16 @@
 ---
-title: "Azure Information Protection 用の自動および推奨分類の条件を構成する方法 | Azure Rights Management"
+title: "Azure Information Protection 用の自動および推奨分類の条件を構成する方法 | Azure Information Protection"
 description: "ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。"
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 98e8efd574d7e9689da426028d26f528cd6042a4
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
  
 - 推奨分類は、Word、Excel、および PowerPoint でファイルが保存されるときに適用されます。
 
-条件を構成するときに、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 条件について詳しくは、「[組み込み条件に関する情報](#information-about-the-built-in-conditions)」セクションを参照してください。
+条件を構成するときに、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 これらの条件は、ドキュメントや電子メールの本文とヘッダーおよびフッターに適用されます。 条件について詳しくは、「[組み込み条件に関する情報](#information-about-the-built-in-conditions)」セクションを参照してください。
 
 複数のラベルへの適用時の複数条件の評価方法:
 
@@ -48,9 +48,9 @@ ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
 
 ## ラベルの推奨または自動分類を構成するには
 
-1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウでサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
-    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. **[Azure Information Protection]** ブレードで、自動または推奨分類を構成するラベルを選択します。
 
@@ -224,6 +224,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

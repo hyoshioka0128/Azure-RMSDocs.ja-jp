@@ -1,9 +1,9 @@
 ---
 title: "ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法 | Azure RMS"
-description: "ユーザーが個人用 RMS にサインアップしたかどうかを、管理者はどのようにして知ることができるでしょうか。 次の方法のいずれかを使用する場合もあれば、組み合わせて使用する場合もあります。"
+description: "管理者は、ユーザーが個人用 RMS にサインアップ済みかどうかを調べるときに、この記事で紹介する方法のいずれか 1 つ、または複数を組み合わせて使用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: dc8c0a69078ffa3be87a5fb02bf86d9afe2dc27e
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 6a8a6ac7aae7c8e370af47e1d39a9f69acc1e12c
 
 
 ---
@@ -36,6 +36,6 @@ ms.openlocfilehash: dc8c0a69078ffa3be87a5fb02bf86d9afe2dc27e
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
