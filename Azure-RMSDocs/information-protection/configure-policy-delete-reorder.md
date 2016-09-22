@@ -2,15 +2,15 @@
 title: "Azure Information Protection のラベルを削除または順序変更する方法 | Azure Information Protection"
 description: "Azure Information Protection ポリシー内に構成することで、Information Protection バーに表示されるラベルを削除または順序変更することができます。"
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 14863f7fcd4df2e8baaddc7837649fa3efe59019
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 0283706733a61e2ccf88552b23ec67a7f755b8da
 
 
 ---
@@ -35,9 +35,9 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 これらの変更を行うには、次の手順を実行します。
 
-1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウでサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
-    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. **[Azure Information Protection]** ブレードで、目的 (ラベルを削除、無効化、または順序変更) に応じて、次のいずれかの操作を行います。
 
@@ -57,6 +57,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -3,15 +3,15 @@ title: "Azure Information Protection クイック スタート チュートリ�
 description: "4 つの手順を実行して 15 分もかからずに組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
+ms.sourcegitcommit: ba0f05619e1d13e16b8d4f6d86231b89e9326726
+ms.openlocfilehash: 9dfbeb4c887c619d07b11be0da304ac4f4e7d4a9
 
 
 ---
@@ -24,14 +24,14 @@ ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
-1. [Azure ポータル](https://portal.azure.com)にサインインします。 保護だけでなく、分類とラベルもテストする場合、Azure Rights Management テンプレートを取得するためにグローバル管理者としてサインインします。
+1. 新しいブラウザー ウィンドウで、[Azure ポータル](https://portal.azure.com)にサインインします。 保護だけでなく、分類とラベルもテストする場合、Azure Rights Management テンプレートを取得するためにグローバル管理者としてサインインします。
  
 2. ハブ メニューの操作: **[新規]** > **[セキュリティ + ID]** > **[Azure Information Protection (プレビュー)]** > **[作成]** をクリックします。
 
-    **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[参照]** リストからサービスを選択できるようになります。 
+    **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[その他のサービス]** リストからサービスを選択できるようになります。 
 
     > [!TIP] 
-    > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときに参照手順をスキップできるようにします。
+    > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
 
 3.  **Azure Information Protection** のメイン ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
     
@@ -53,7 +53,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[Label: Confidential]** (ラベル: 機密) ブレードに、各ラベルで使用できる設定が表示されます。 次のように変更します。
 
-    a. Azure Rights Management をアクティブ化済みの場合: **[Set RMS template for protecting documents and emails containing this label]** (このラベルを含むドキュメントおよび電子メールを保護するための RMS テンプレートを設定する) セクションで、**[Select RMS template from]** (RMS テンプレートの選択元) が表示されたら、既定値の **[Azure RMS]** のままにします。 次に **[RMS テンプレートの選択]** のドロップダウン ボックスをクリックし、既定のテンプレート **[\<your organization name> - Confidential]** (<組織名> - 機密) を選択します。 たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 この既定の Azure Rights Management テンプレートを無効にしてある場合は、代わりのテンプレートを選択します。 ただし、部門テンプレートを選択する場合は、アカウントがスコープに含まれることを確認します。
+    a. Azure Rights Management をアクティブ化済みの場合: **[Set RMS template for protecting documents and emails containing this label]** (このラベルを含むドキュメントおよび電子メールを保護するための RMS テンプレートを設定する) セクションで、**[Select RMS template from]** (RMS テンプレートの選択元) を、既定値の **[Azure RMS]** のままにします。 次に **[RMS テンプレートの選択]** のドロップダウン ボックスをクリックし、既定のテンプレート **[\<your organization name> - Confidential]** (<組織名> - 機密) を選択します。 たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 この既定の Azure Rights Management テンプレートを無効にしてある場合は、代わりのテンプレートを選択します。 ただし、部門テンプレートを選択する場合は、アカウントがスコープに含まれることを確認します。
     
     Azure Rights Management をアクティブ化していない場合は、このオプションを使用することはできません。
     
@@ -73,7 +73,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 3. **[Label: Confidential]** (ラベル: 機密) ブレードでは、**[CONDITION NAME]** (条件名) に **[Credit Card Number]** (クレジット カード番号) と表示され、**[OCCURRENCES]** (出現回数) に **1** が設定されています。
 
-4. **[Select how this label is applied] (このラベルの適用方法を選択)** は **[Recommended] (推奨)** のままにします。
+4. **[Select how this label is applied (このラベルの適用方法を選択)]** は **[Recommended (推奨)]** のままにします。
 
 5. **[Enter notes for internal housekeeping]** (内部ハウスキーピング処理向けのメモを入力) ボックスに、「**For testing purposes only**」 (テスト用のみ) と入力します。
 
@@ -97,6 +97,6 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

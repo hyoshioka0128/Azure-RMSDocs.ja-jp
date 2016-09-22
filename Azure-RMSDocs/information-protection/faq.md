@@ -3,7 +3,7 @@ title: "Azure Information Protection プレビューに関してよく寄せら�
 description: "Azure Information Protection のプレビュー リリースに関して質問がある場合は、 ここで回答を探してみてください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
-ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 39334a5cc18f1b45eabd7cf5b4f9b891fb10a5e6
 
 
 ---
@@ -143,6 +143,10 @@ Azure ポータルで Azure Rights Management テンプレートを選択する�
 
 現在はビジュアル マーキング、保護、条件を両方のレベルで設定できますが、サブレベルを使用するときは、これらの設定をサブレベルのみで構成します。 親ラベルとそのサブレベルで同じ設定を構成した場合は、サブレベルの設定が優先されます。
 
+## 電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
+
+いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は添付ファイルに適用されます。
+
 ## DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
 Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 ファイルでは、このメタデータはカスタム プロパティに格納されます。電子メールでは、この情報は電子メールのヘッダーに含まれます。
@@ -187,6 +191,6 @@ Azure Information Protection によって分類されたファイルおよび電
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: "AD RMS から Azure Rights Management への移行 - フェーズ 2 | Azure RMS"
-description: "AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「AD RMS から Azure Rights Management への移行」の手順 5. について説明します。"
+description: "AD RMS から Azure Rights Management (Azure RMS) への移行手順 5 が含まれる、AD RMS から Azure RMS への移行のフェーズ 2 です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 8e1e44eca132b3fd3c83894544d01c180db8735e
+ms.sourcegitcommit: 4184c8b78d8ca6beb88efad79e0372367c523f2f
+ms.openlocfilehash: 2d8abaec220074531724ce4e95b4aefe23d0b2d6
 
 
 ---
@@ -46,7 +46,7 @@ Windows クライアントの場合:
 
             reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
 
-    - **Redirect_Onprem.cmd** の場合 - `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` という行を探し、そのすぐ下に、次の 2 行を追加します。
+    - **Redirect_Onprem.cmd** の場合 - `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` という行を探し、そのすぐ下に、次の 2 行を追加します。
 
             reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
 
@@ -131,6 +131,6 @@ Redirect_OnPrem.cmd:
 移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

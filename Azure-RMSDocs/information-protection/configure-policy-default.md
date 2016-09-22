@@ -1,16 +1,16 @@
 ---
-title: "Azure Information Protection の既定のポリシー | Azure Rights Management"
-description: "以下では、Azure Information Protection の既定のポリシーの構成方法を説明します。 既定のポリシーを変更した場合、これらの値を参照して、ポリシーを既定値に戻すことができます。"
+title: "既定の Azure Information Protection ポリシー | Azure Information Protection"
+description: "Azure Information Protection の既定のポリシーの構成方法について説明します。 既定のポリシーを変更した場合、これらの値を参照して、ポリシーを既定値に戻すことができます。"
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 89b7a8cb0ca893d4ce29540ef054e19409bd75eb
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 61020ccae0842f404c8e989fc349ea404e98f9a3
 
 
 ---
@@ -44,8 +44,8 @@ ms.openlocfilehash: 89b7a8cb0ca893d4ce29540ef054e19409bd75eb
 
 |Label|ツールヒント|Settings|
 |-------------------------------|---------------------------|-----------------|
-|*秘密* > すべての会社|このデータには、すべての会社の従業員に対して許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
-|*秘密* > マイ グループ|このデータには、従業員グループに対してのみ許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
+|秘密 \ 会社全体|このデータには、すべての会社の従業員に対して許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
+|秘密 \ マイ グループ|このデータには、従業員グループに対してのみ許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
 
 ## グローバル設定
 
@@ -53,7 +53,7 @@ ms.openlocfilehash: 89b7a8cb0ca893d4ce29540ef054e19409bd75eb
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
 |Select the default label (既定のラベルを選択する)|None|
-|Users must provide justification when lowering the sensitivity level (秘密度レベルを下げるときは妥当性を示す必要がある) (機密からパブリックに変更する場合など)|オフ|
+|Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 
 
 ## 次のステップ
@@ -62,6 +62,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

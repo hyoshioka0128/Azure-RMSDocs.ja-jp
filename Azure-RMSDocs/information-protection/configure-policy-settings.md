@@ -2,15 +2,15 @@
 title: "Azure Information Protection のグローバル ポリシー設定を構成する方法 | Azure Information Protection"
 description: "Azure Information Protection ポリシーには、すべてのユーザーとすべてのデバイスに適用される次の 3 つの設定があります。"
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 872ea7da6f3b72a355a73c8b0589beda86ded20d
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: d4e96321069b27ed832af3bfb6d995e0d3c5d450
 
 
 ---
@@ -28,9 +28,9 @@ ms.openlocfilehash: 872ea7da6f3b72a355a73c8b0589beda86ded20d
 
 設定を構成するには:
 
-1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウでサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
-    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. **[Azure Information Protection]** ブレードで、次のグローバル設定を構成します。
 
@@ -67,6 +67,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

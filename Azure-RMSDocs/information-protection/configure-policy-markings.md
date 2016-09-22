@@ -2,15 +2,15 @@
 title: "Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法 | Azure Information Protection"
 description: "ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。"
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: d70bfbe658b1c7d9a5a91c925a554974423699a7
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 999a0937bf741514ae8ee5ef819d4ab901c3304b
 
 
 ---
@@ -39,9 +39,9 @@ ms.openlocfilehash: d70bfbe658b1c7d9a5a91c925a554974423699a7
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. [Azure ポータル](https://portal.azure.com)にまだサインインしていない場合はサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウでサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
-    たとえば、ハブ メニューで **[参照]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. **[Azure Information Protection]** ブレードで、視覚的なマーキングを構成するラベルを選択します。
 
@@ -81,6 +81,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
