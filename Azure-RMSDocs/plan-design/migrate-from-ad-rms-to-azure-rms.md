@@ -1,9 +1,9 @@
 ---
 title: "AD RMS から Azure Rights Management への移行 | Azure RMS"
-description: "Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Rights Management (Azure RMS) に移行するには、次の命令セットを使用します。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure RMS を使用します。"
+description: "Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Rights Management (Azure RMS) に移行するための手順です。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure RMS を使用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: bead12db04e6fcf2f9e4af5148d3f8a4ef4089da
+ms.sourcegitcommit: 5c20772240961bdd3052e55a19eaca21ef7da003
+ms.openlocfilehash: 01c107979265abf0d34060eccf09ca32c0086ab8
 
 
 ---
@@ -46,7 +46,7 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
         
     - 暗号化モード 2:
     
-        - Azure RMS への移行を開始する前に、AD RMS サーバーとクライアントを暗号化モード 2 で実行する必要があります。 詳細については、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」を参照してください。
+        - Azure RMS への移行を開始する前に、AD RMS サーバーとクライアントを暗号化モード 2 で実行する必要があります。 現在のサーバー ライセンサー証明書 (SLC) キーは暗号化モード 2 を使用している必要がありますが、以前のキーが暗号化モード 1 を使用するように構成されていた場合も、Azure RMS ではアーカイブされたキーとしてサポートされます。 暗号化モードの詳細と暗号化モード 2 への移行方法については、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」を参照してください。
         
     - すべての有効な AD RMS トポロジがサポートされます。
     
@@ -184,6 +184,6 @@ Azure RMS への移行を始める前に、次の前提条件が満たされて�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
