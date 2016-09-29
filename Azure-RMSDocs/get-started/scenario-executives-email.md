@@ -3,7 +3,7 @@ title: "シナリオ - 役員が安全に特権情報を交換できるように
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 1ec54b54197471f8cccaf6ae83ae8e592da30cae
+ms.sourcegitcommit: 3b0b165f594da47c090f7822afed2a80541b71e8
+ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
 
 
 ---
@@ -49,7 +49,7 @@ ms.openlocfilehash: 1ec54b54197471f8cccaf6ae83ae8e592da30cae
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
-|この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」<br /><br />Exchange 2013 の場合: 「[トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)」|
+|この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: [メール フローやトランスポート ルール](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Exchange 2013 の場合: 「[トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432(v=exchg.141))」|
 
 ### 役員用のカスタム テンプレートを構成するには
 
@@ -132,6 +132,6 @@ ms.openlocfilehash: 1ec54b54197471f8cccaf6ae83ae8e592da30cae
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

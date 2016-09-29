@@ -1,9 +1,9 @@
 ---
 title: "Azure Rights Management テナント キーを計画して実装する | Azure RMS"
-description: "この記事の情報は、Azure RMS での Rights Management (RMS) テナント キーに関する計画作成および管理に役立ちます。 たとえば、マイクロソフトがテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。"
+description: "Azure RMS での Rights Management (RMS) テナント キーに関する計画作成および管理に役立つ情報です。 たとえば、マイクロソフトがテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 0e3e77073898e2ae9f84f555183fb6fcbc7d2d8a
 
 
 ---
@@ -64,7 +64,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 ![Azure RMS テナント キー ライフサイクル - 自主管理](../media/RMS_BYOK_onprem4.png)
 
-テナント キーを Microsoft で管理する場合、キーの生成に関する操作は不要です。「[次のステップ](plan-implement-tenant-key.md#next-steps)」に進んでください。
+テナント キーを Microsoft で管理する場合、キーの生成に関する操作は不要です。「[次のステップ](plan-implement-tenant-key.md#next-steps)」に進んでください。  
 
 テナント キーを自主管理する場合、詳細については以下のセクションを参照してください。
 
@@ -74,7 +74,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 
 > [!IMPORTANT]
-> [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の使用を開始していて (サービスがアクティブになっている)、Office 2010 を実行するユーザーが存在する場合は、以下の手順を実行する前に、[Microsoft サポートにお問い合わせください](../get-started/information-support.md#to-contact-microsoft-support)。 シナリオと要件により、制限事項があったり追加の手順を行うことで BYOK を使用することができます。
+> Microsoft によって管理されるテナント キーを使用して Azure RMS を使用開始していて、テナント キーを (BYOK に移動して) 管理したい場合、以前保護されていたドキュメントや電子メールには、アーカイブされたキーを使用して引き続きアクセスできます。 ただし、Office 2010 を実行しているユーザーがいる場合、これらの手順を実行する前に [Microsoft サポートにお問い合わせください](../get-started/information-support.md#to-contact-microsoft-support)。 これらのコンピューターには、追加の構成手順が必要です。
 > 
 > キーの処理に関して組織固有のポリシーがある場合も [Microsoft サポートにお問い合わせください](../get-started/information-support.md#to-contact-microsoft-support)。
 
@@ -96,7 +96,7 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 ただし、Azure RMS がこのキーを使用できるようにするために、事前に Azure RMS が組織のキー コンテナーを使用することを承認しておく必要があります。 そのために、Azure Key Vault 管理者は、Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) を使用して、Azure RMS サービス プリンシパル **Microsoft.Azure.RMS** にアクセス許可を付与する必要があります。 たとえば、
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 このキーを組織の Azure RMS テナント キーとして使用するように、Azure RMS を構成できるようになりました。 Azure RMS コマンドレットを使用して、まず Azure RMS に接続し、サインインします。
 
@@ -136,6 +136,6 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

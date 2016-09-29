@@ -1,9 +1,9 @@
 ---
 title: "手順 2.&colon; HSM で保護されているキーから HSM で保護されているキーへの移行 | Azure RMS"
-description: "これらの手順は AD RMS から Azure Rights Management への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用されます。"
+description: "AD RMS から Azure Rights Management への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Rights Management に移行する場合にのみ適用される手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 690729d16358b7b997d9cd1fd8cabed22ce78df4
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 539ad9db29f7795d3f56655a64f49532ef6ff6e8
 
 
 ---
@@ -55,7 +55,7 @@ Azure RMS テナント キーは Azure Key Vault によって格納され管理�
     
     たとえば、Azure RMS 用に作成したキー コンテナーの名前が contoso-byok-ky、リソース グループの名前が contoso-byok-rg である場合は、次のコマンドを実行します。
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 
 これで、Azure RMS に対して Azure Key Vault の HSM キーが準備されたので、AD RMS 構成データをインポートできます。
@@ -94,6 +94,6 @@ Azure RMS テナント キーは Azure Key Vault によって格納され管理�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
