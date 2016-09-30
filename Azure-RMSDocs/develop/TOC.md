@@ -1,4 +1,4 @@
-# [理解と調査](/rights-management/understand-explore/azure-rights-management)
+# [理解と調査](/rights-management/understand-explore/what-is-information-protection)
 # [作業の開始](/rights-management/get-started/requirements-azure-rms)
 # [計画と設計](/rights-management/plan-design/deployment-roadmap)
 # [サービスのデプロイと使用](/rights-management/deploy-use/activate-service)
@@ -38,7 +38,7 @@
 ### [作業開始](getting-started-with-ad-rms-2-0.md)
 #### [リリース ノート](release-notes-rtm.md)
 #### [SDK のインストール](install-the-rms-sdk.md)
-#### [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
+#### [Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 #### [アプリケーションの開発](developing-your-application.md)
 #### [アプリケーションのテスト](how-to-set-up-your-test-environment.md)
 #### [運用環境にデプロイする](deploying-your-application.md)
@@ -54,10 +54,10 @@
 #### [方法: API セキュリティ モードの設定](setting-the-api-security-mode-api-mode.md)
 #### [方法: 暗号化設定の操作](working-with-encryption.md)
 #### [アプリケーションの種類](application-types.md)
-#### [File API の構成](file-api-configuration.md)
+#### [ファイル API の構成](file-api-configuration.md)
 #### [サポートされるファイル形式](supported-file-formats.md)
 #### [サポートされているプラットフォーム](supported-platforms.md)
-#### [使用制限について](understanding-usage-restrictions.md)
+#### [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
 #### [使用制限のリファレンス](usage-restriction-reference.md)
 ### [API リファレンス](api-reference-2-1.md)
 #### [定数](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
@@ -65,9 +65,8 @@
 #### [関数](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
 #### [構造体](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
 #### [エラー コード](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
-# [Azure Information Protection (プレビュー)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

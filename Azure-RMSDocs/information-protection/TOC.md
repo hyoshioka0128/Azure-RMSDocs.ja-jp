@@ -1,32 +1,12 @@
-# [理解と調査](/rights-management/understand-explore/azure-rights-management)
+# [理解と調査](/rights-management/understand-explore/what-is-azure-information-protection)
 # [作業の開始](/rights-management/get-started/requirements-azure-rms)
 # [計画と設計](/rights-management/plan-design/deployment-roadmap)
 # [サービスのデプロイと使用](/rights-management/deploy-use/activate-service)
 # [クライアントのデプロイと使用](/rights-management/rms-client/use-client)
 # [アプリの開発とカスタマイズ](/rights-management/develop/developers-guide)
-# [Azure Information Protection (プレビュー)](what-is-information-protection.md)
-## [Azure Information Protection とは](what-is-information-protection.md)
-## [要件](requirements-azure-infoprotect.md)
-## [クイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)
-### [手順 1.Rights Management サービスの有効化](infoprotect-tutorial-step1.md)
-### [手順 2: ポリシーの構成と公開](infoprotect-tutorial-step2.md)
-### [手順 3: クライアントのインストール](infoprotect-tutorial-step3.md)
-### [手順 4: 動作の確認](infoprotect-tutorial-step4.md)
-## [よく寄せられる質問](faq.md)
-## [ポリシーの構成](configure-policy.md)
-### [既定のポリシー](configure-policy-default.md)
-### [グローバル設定の構成](configure-policy-settings.md)
-### [新しいラベルの作成](configure-policy-new-label.md)
-### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
-### [ラベルの変更](configure-policy-change-label.md)
-### [保護の適用](configure-policy-protection.md)
-#### [HYOK の制限事項](configure-adrms-restrictions.md)
-### [視覚的なマーキングの構成](configure-policy-markings.md)
-### [条件の構成](configure-policy-classification.md)
-## [クライアントのインストール](info-protect-client.md)
-## [Azure Information Protection のソフトウェア ライセンス条項](aip-software-license-terms.md)
+# [Azure Information Protection (プレビュー)](/rights-management/understand-explore/what-is-azure-information-protection)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 
