@@ -1,28 +1,28 @@
 ---
-title: "シナリオ - ファイル サーバー共有上のファイルを保護する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。"
+title: "シナリオ - ファイル サーバー共有上のファイルを保護する | Azure Information Protection"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
 
 
 ---
 
 # シナリオ - ファイル サーバー共有上のファイルを保護する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。
+このシナリオおよびサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。
 
 次の手順では、既定のテンプレートのいずれかを使用して、すべての使用権限を持つすべての従業員にアクセスを限定します。 ただし、必要に応じて、既定のテンプレートを使用する代わりにカスタム テンプレートを構成して、アクセスと使用権限を詳細に制限できます。
 
@@ -44,10 +44,10 @@ ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management によって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|次のいずれかです。<br /><br />- すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />- 特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
-|Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management によって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。|[Azure Information Protection の準備](../plan-design/prepare.md)|
+|次のいずれかです。<br /><br />- すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />- 特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
+|Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |RMS 保護ツールをダウンロードして Azure RMS の前提条件を構成済みである|ツールと前提条件をダウンロードする手順: [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Azure RMS の追加の前提条件を構成する (サービス プリンシパル アカウントなど): [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
 ### ファイル分類インフラストラクチャで Azure RMS とファイル サーバー リソース マネージャーを使用してすべてのファイルを保護するようにファイル サーバーを構成する
@@ -68,7 +68,7 @@ ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
     ```
     すべての使用権限を持つすべての従業員にアクセスを限定する既定のテンプレートを使用するには、"**&lt;組織名&gt; - 社外秘**" という名前のテンプレートを探します。 たとえば、"**VanArsdel, Ltd - 社外秘**" を選択します。
 
-4.  「[Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx)」の手順に従います。
+4.  「[Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護](../rms-client/configure-fci.md)」の手順に従います。
 
     次の手順には、ファイル サーバー リソース マネージャーでカスタムの実行可能ファイルとして実行するように指定する Windows PowerShell スクリプトが含まれています。 また、この手順には、Azure Rights Management によってファイルが保護されていることを確認する方法も含まれています。
 
@@ -117,7 +117,7 @@ ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
 
 -   追加情報:
 
-    -   [保護されているファイルの表示と使用](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [保護されているファイルの表示と使用](../rms-client/sharing-app-view-use-files.md)
 
 -   ヘルプ デスクに問い合わせる
 
@@ -148,13 +148,13 @@ ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
 
 -   追加情報:
 
-    -   [保護されているファイルの表示と使用](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [保護されているファイルの表示と使用](../rms-client/sharing-app-view-use-files.md)
 
 -   ヘルプ デスク helpdesk@vanarsdelltd.com にお問い合わせください。
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

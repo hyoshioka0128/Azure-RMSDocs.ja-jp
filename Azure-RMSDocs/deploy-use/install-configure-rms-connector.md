@@ -1,26 +1,26 @@
 ---
-title: "Azure Rights Management コネクタのインストールと構成 |Azure RMS"
-description: "Azure Rights Management (RMS) コネクタをインストールして構成するには、次の情報を活用してください。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 1 から手順 4 について説明します。"
+title: "Azure Rights Management コネクタのインストールと構成 | Azure Information Protection"
+description: "Azure Rights Management (RMS) コネクタをインストールして構成するための情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 1 から手順 4 について説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9160188f6e905db7ef95365a0cc5cfbcb7522101
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 4af8d8b5f95edc7bd95fda93b26da98ee00b5075
 
 
 ---
 
 # Azure Rights Management コネクタのインストールと構成
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 Azure Rights Management (RMS) コネクタをインストールして構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 1 から手順 4 を説明します。
 
@@ -240,6 +240,6 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 RMS コネクタのインストールと構成が完了したので、コネクタを使用するためにオンプレミス サーバーを構成することができます。 「[Configuring servers for the Azure Rights Management connector (Azure Rights Management コネクタ用にサーバーを構成する)](configure-servers-rms-connector.md)」に進みます。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

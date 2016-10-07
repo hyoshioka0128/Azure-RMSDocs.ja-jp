@@ -1,28 +1,28 @@
 ---
-title: "ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する | Azure RMS"
-description: "Azure Rights Management (Azure RMS) を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。"
+title: "Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ| Azure Information Protection"
+description: "Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 329b9cb2fd6507638924f836eb6dffe8ffca43d1
+ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
+ms.openlocfilehash: 56bb2e90f9d1ecb7c925ab22cf1dba16246876f7
 
 
 ---
 
-# ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する
+# Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-Azure Rights Management (Azure RMS) を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
+Azure Information Protection を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
 -   **エンド ユーザーへの情報**
 
@@ -36,23 +36,23 @@ Azure Rights Management (Azure RMS) を組織に合わせてデプロイして�
 
 -   **管理者への情報**
 
-    一部のアプリケーションは、管理者が構成したポリシーおよび設定を使用して、情報保護を自動的に適用します。 これらのアプリケーションの場合、これらのアプリケーションおよびサービスを管理する他の管理者に対して指示を提供する必要があります。 詳細については、[「アプリケーションで Azure Rights Management をサポートする方法](../understand-explore/applications-support.md)」と「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
+    一部のアプリケーションは、管理者が構成したポリシーおよび設定を使用して、情報保護を自動的に適用します。 これらのアプリケーションの場合、これらのアプリケーションおよびサービスを管理する他の管理者に対して指示を提供する必要があります。 詳細については、[「アプリケーションによる Azure Rights Management サービスのサポート](../understand-explore/applications-support.md)」と「[Azure Rights Management サービス用にアプリケーションを構成する](configure-applications.md)」を参照してください。
 
 -   **ヘルプ デスクの情報:**
 
     ヘルプ デスクの最も便利なツールの 1 つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
 
-    保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure RMS の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。
+    保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。
 
     また、ユーザーから報告される可能性がある、いくつかの典型的な問題を以下に示します。
 
     -   **サインインのヘルプ**
 
-        Azure RMS がユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 これには、Office 365 テナントまたは Azure Active Directory テナントに関連付けられているユーザーの企業または学校のアカウントおよびパスワードを使用します。 Microsoft アカウント (以前の Microsoft Live ID) または個人用の電子メール アカウントではありません。これらは現在 Azure RMS ではサポートされていません。 ユーザーおよびヘルプ デスクには、これらのアプリケーションおよび Azure RMS を使用するときに資格情報を要求された場合、どのアカウントを使用すればいいのかについてのガイダンスを提供します。
+        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 これには、Office 365 テナントまたは Azure Active Directory テナントに関連付けられているユーザーの企業または学校のアカウントおよびパスワードを使用します。 Microsoft アカウント (以前の Microsoft Live ID) または個人用の電子メール アカウントではありません。これらは現在 Azure Rights Management サービスではサポートされていません。 ユーザーおよびヘルプ デスクには、これらのアプリケーションおよび Azure Rights Management サービスを使用するときに資格情報を要求された場合、どのアカウントを使用すればいいのかについてのガイダンスを提供します。
 
     -   **コンテンツの保護または使用に関する問題**
 
-        使用するアプリケーションに対する適切な指示をユーザーが受けていること、またユーザーが Azure RMS でサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
+        使用するアプリケーションに対する適切な指示をユーザーが受けていること、またユーザーが Azure Rights Management サービスでサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
 
         コンテンツの保護または使用を試みる際にユーザーにエラーが表示される場合は、Azure RMS ユーザーとして [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) を実行するよう依頼します。
 
@@ -61,7 +61,7 @@ Azure Rights Management (Azure RMS) を組織に合わせてデプロイして�
 次のセクションでは、機密のドキュメントおよび電子メールを保護する際に役立つアプリケーション固有の情報を示します。
 
 ## Rights Management 共有アプリケーションによる情報保護の使用
-ユーザーが Office 2010 を使用している場合、コンテンツを保護し、保護されているコンテンツを使用するには Rights Management (RMS) 共有アプリケーションが必要です。さらに、このアプリケーションは Azure RMS をサポートするすべてのコンピューターおよびモバイル デバイスに推奨されます。
+ユーザーが Office 2010 を使用している場合、コンテンツを保護し、保護されているコンテンツを使用するには Rights Management (RMS) 共有アプリケーションが必要になることがあります。さらに、このアプリケーションは Azure Rights Management サービスをサポートするすべてのコンピューターおよびモバイル デバイスに推奨されます。
 
 RMS 共有アプリケーションを使用すると、ユーザーが重要なドキュメントを簡単に保護できるようになるだけでなく、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることができます。
 
@@ -73,7 +73,7 @@ Windows コンピューター用のこのアプリケーションの使用方法
 > スクリーンショットを含む、大まかなサンプル シナリオが必要な場合、「[ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users)」を参照してください。
 
 ## Office 365、Office 2016、または Office 2013 での情報保護の使用
-Azure RMS を使用しており、Rights Management 共有アプリケーションをインストールしていない場合、ファイルを簡単に保護するために使用できる、リボンの **[保護ファイルの共有]** ボタンまたはエクスプローラーの **[Protect in-place]** (保護済み) が表示されません。 これらのユーザーについては、次のような指示に従う必要があります。
+Azure Rights Management サービスを使用しており、Rights Management 共有アプリケーションをインストールしていない場合、ファイルを簡単に保護するために使用できる、リボンの **[保護ファイルの共有]** ボタンまたはエクスプローラーの **[Protect in-place]** (保護済み) が表示されません。 これらのユーザーについては、次のような指示に従う必要があります。
 
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
@@ -115,6 +115,6 @@ Azure RMS を使用しており、Rights Management 共有アプリケーショ
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

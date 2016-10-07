@@ -1,28 +1,28 @@
 ---
-title: "シナリオ - 別の組織のユーザーと Office ファイルを共有する | Azure RMS"
-description: "このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。"
+title: "シナリオ - 別の組織のユーザーと Office ファイルを共有する | Azure Information Protection"
+description: "このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
+ms.sourcegitcommit: 03bd68b03d423908e7fbe89efb6aac6773283f2f
+ms.openlocfilehash: 1e8ba22c5fdcf3f17b3cec0a99444975c03ec008
 
 
 ---
 
 # シナリオ - 別の組織のユーザーと Office ファイルを共有する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。 たとえば、Office ファイルが、パートナー向けの価格表、販売店向けの製品一覧、配信タイムラインと潜在的な顧客の一覧が含まれる、Word 文書、Excel スプレッドシート、または PowerPoint プレゼンテーションであるとします。 ユーザーが手順に従って操作を行えば、電子メール メッセージに添付されるファイルは Azure Rights Management によって保護されます。
+このシナリオとサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。 たとえば、Office ファイルが、パートナー向けの価格表、販売店向けの製品一覧、配信タイムラインと潜在的な顧客の一覧が含まれる、Word 文書、Excel スプレッドシート、または PowerPoint プレゼンテーションであるとします。 ユーザーが手順に従って操作を行えば、電子メール メッセージに添付されるファイルは Azure Rights Management によって保護されます。
 
 このシナリオは、次の一連の状況に適してします。
 
@@ -44,11 +44,11 @@ ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
+|Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Information Protection の準備](https://technet.microsoft.com/library/jj585029.aspx)|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|ユーザーは Office 2013 の Outlook を使用する|ユーザーが Office 2010 を使用している場合は、スクリーン ショットを対応するバージョンに置き換えて、図とユーザーに表示される内容とが一致するようにします。|
-|Azure RMS サブスクリプションにドキュメントの追跡が含まれている|Azure RMS のサブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />サブスクリプションのサポートを確認するには [Rights Management サービス (RMS) オファリングの比較](https://technet.microsoft.com/dn858608)|
+|Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|ユーザーは Office 2013 の Outlook を使用する|ユーザーが Office 2016 または Office 2010 を使用している場合は、スクリーン ショットを対応するバージョンに置き換えて、図とユーザーに表示される内容とが一致するようにします。|
+|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)で提供されるサブスクリプション情報を参照してください。|
 
 ## ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
@@ -104,9 +104,9 @@ ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 -   追加情報:
 
-    -   [電子メールで共有するファイルを保護する](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [電子メールで共有するファイルを保護する](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [ドキュメントを追跡して取り消す](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [ドキュメントを追跡して取り消す](../rms-client/sharing-app-track-revoke.md)
 
 -   ヘルプ デスクに問い合わせる
 
@@ -143,9 +143,9 @@ ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 -   追加情報:
 
-    -   [電子メールで共有するファイルを保護する](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [電子メールで共有するファイルを保護する](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [ドキュメントを追跡して取り消す](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [ドキュメントを追跡して取り消す](../rms-client/sharing-app-track-revoke.md)
 
 -   ヘルプ デスクに問い合わせる
 
@@ -154,6 +154,6 @@ ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

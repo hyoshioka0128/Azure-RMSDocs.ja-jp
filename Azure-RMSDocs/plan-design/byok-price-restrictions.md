@@ -1,26 +1,26 @@
 ---
-title: "BYOK の料金と制限事項 | Azure RMS"
-description: "Azure Rights Management が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしでキーの使用状況ログを記録することができます。 ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、Azure Key Vault の価格に関するページを参照してください。"
+title: "BYOK の料金と制限事項 | Azure Information Protection"
+description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 8505032a2a12f84c245e834e71d0b7b0d12e894f
+ms.sourcegitcommit: 36e392d7e9a2fc8cec0419a3e66f92b42137bc72
+ms.openlocfilehash: 3ed4f3c770c1c34d2bda7481d8ca405c51d3fe8c
 
 
 ---
 
 # BYOK の料金と制限事項
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 
 Azure Rights Management が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしでキーの使用状況ログを記録することができます。 ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
@@ -33,7 +33,7 @@ Azure Rights Management が含まれているサブスクリプションを所�
 
 ![BYOK は Exchange Online をサポートしていません](../media/RMS_BYOK_noExchange.png)
 
-BYOK と使用状況ログの記録は、Azure RMS と統合されたすべてのアプリケーションでシームレスに動作します。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
+BYOK と使用状況のログ記録は、Azure Information Protection が使用する Azure Rights Management サービス (Azure RMS) と統合されたすべてのアプリケーションでシームレスに利用できます。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
 例外が 1 つあります。現時点では、 **Azure RMS BYOK には Exchange Online との互換性がありません**。 Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
 
@@ -62,6 +62,6 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

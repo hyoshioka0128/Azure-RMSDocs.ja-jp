@@ -1,19 +1,19 @@
 ---
-title: "テンプレートの更新 | Azure RMS"
-description: "Azure RMS を使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。"
+title: "テンプレートの更新 | Azure Information Protection"
+description: "Azure Rights Management サービスを使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 2870edc314f3ee6f6e3b8937cbe5b653092c5910
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
 
 # ユーザー用のテンプレートの更新
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-Azure RMS を使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。
+Azure Information Protection の Azure Rights Management サービスを使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。
 
 |アプリケーションまたはサービス|変更後のテンプレートの更新方法|
 |--------------------------|---------------------------------------------|
@@ -31,7 +31,7 @@ Azure RMS を使用する場合、テンプレートは自動的にクライア�
 |Office 365|自動更新 - 追加の手順は必要ありません。|
 |Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />このスケジュールより前に強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
 |Office 2010|ユーザーがログオンしたときに更新されます。<br /><br />強制的に更新するには、ログオフしてもう一度ログオンするようにユーザーに依頼します。 または、以下の「[Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
-RMS 共有アプリケーションを使用している モバイル デバイスの場合、テンプレートは自動的にダウンロードされるので (必要な場合はさらに更新されます)、追加の構成は必要ありません。
+RMS 共有アプリケーションを使用しているモバイル デバイスの場合、テンプレートは自動的にダウンロードされるので (必要な場合はさらに更新されます)、追加の構成は必要ありません。
 
 ## Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
 Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
@@ -186,6 +186,6 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

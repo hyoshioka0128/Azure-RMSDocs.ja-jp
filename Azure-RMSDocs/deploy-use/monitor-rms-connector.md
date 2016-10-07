@@ -1,28 +1,28 @@
 ---
-title: "Azure Rights Management コネクタを監視する | Azure RMS"
-description: "RMS コネクタをインストールして構成した後、以下の方法と情報を使用すると、コネクタと組織の Azure RMS の使用を監視するのに役立ちます。"
+title: "Azure Rights Management コネクタを監視する | Azure Information Protection"
+description: "Azure Information Protection からコネクタと組織の Azure Rights Management サービスの使用を監視するのに役立つ情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/08/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 11079a491cf9feade86713ef02ccdce79019577a
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 954d8b7b62b35f5fdd29e115681d9d5c0da69a86
 
 
 ---
 
 # Azure Rights Management コネクタを監視する
 
->*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
 
-RMS コネクタをインストールして構成した後、以下の方法と情報を使用すると、コネクタと組織の Azure RMS の使用を監視するのに役立ちます。
+RMS コネクタをインストールして構成した後、以下の方法と情報を使用すると、Azure Information Protection からコネクタと組織の Azure Rights Management サービスの使用を監視するのに役立ちます。
 
 ## アプリケーション イベント ログ エントリ
 
@@ -32,10 +32,10 @@ RMS コネクタは、アプリケーション イベント ログを使用し�
 
 HTTPS を使用するようにコネクタを構成していない場合は、クライアントがセキュリティで保護されていない (HTTP) 接続を使用していることを示す警告 ID 2002 が表示されます。
 
-コネクタが Azure RMS への接続に失敗した場合は、通常、エラー 3001 が表示されます。 たとえば、その原因として、DNS の問題や、RMS コネクタを実行している 1 つ以上のサーバーでインターネットにアクセスできないことが考えられます。 
+コネクタが Azure Rights Management サービスへの接続に失敗した場合は、通常、エラー 3001 が表示されます。 たとえば、その原因として、DNS の問題や、RMS コネクタを実行している 1 つ以上のサーバーでインターネットにアクセスできないことが考えられます。 
 
 > [!TIP]
-> RMS コネクタ サーバーが Azure RMS に接続できない場合、その理由の多くが Web プロキシの構成によるものです。
+> RMS コネクタ サーバーが Azure Rights Management サービスに接続できない場合、その理由の多くが Web プロキシの構成によるものです。
 
 詳細については、すべてのイベント ログ エントリと同様に、メッセージも詳しく調べてください。
 
@@ -59,7 +59,7 @@ HTTPS を使用するようにコネクタを構成していない場合は、�
 
 **Microsoft RMS コネクタ Web サービスが停止しました。**
 
-このイベントは、通常の操作の結果として、RMS コネクタが停止したときに記録されます。 たとえば、IIS が再起動したか、コンピューターがシャット ダウンされた場合などです。 
+このイベントは、通常の操作の結果として、RMS コネクタが停止したときに記録されます。 たとえば、IIS が再起動したか、コンピューターがシャットダウンされた場合などです。 
 
 ----
 
@@ -83,7 +83,7 @@ HTTPS を使用するようにコネクタを構成していない場合は、�
 
 **承認されたアカウントの一覧が更新されました。**
 
-このイベントは、RMS コネクタの使用が承認されているアカウントの最新の一覧 (既存のアカウントとすべての変更) を RMS コネクタがダウンロードしたときに記録されます。 RMS コネクタが Azure RMS と通信できる場合、この一覧は 15 分ごとにダウンロードされます。
+このイベントは、RMS コネクタの使用が承認されているアカウントの最新の一覧 (既存のアカウントとすべての変更) を RMS コネクタがダウンロードしたときに記録されます。 RMS コネクタが Azure Rights Management サービスと通信できる場合、この一覧は 15 分ごとにダウンロードされます。
 
 ----
 
@@ -99,7 +99,7 @@ HTTPS を使用するようにコネクタを構成していない場合は、�
 
 **Microsoft RMS コネクタへの承認されていないアクセス試行です。**
 
-このイベントは、アカウントが RMS コネクタに接続しようとして失敗したときに記録されます。 この警告の最も一般的な理由は、RMS コネクタが Azure RMS からダウンロードする承認されたアカウントの一覧に、接続を行うアカウントが含まれていないことです。 たとえば、最新の一覧がまだダウンロードされていない (ダウンロードは 15 分ごとに発生します) か、アカウントが一覧に含まれていません。 
+このイベントは、アカウントが RMS コネクタに接続しようとして失敗したときに記録されます。 この警告の最も一般的な理由は、RMS コネクタが Azure Rights Management サービスからダウンロードする承認されたアカウントの一覧に、接続を行うアカウントが含まれていないことです。 たとえば、最新の一覧がまだダウンロードされていない (ダウンロードは 15 分ごとに発生します) か、アカウントが一覧に含まれていません。 
 
 RMS コネクタを使用するように構成されているサーバーと同じサーバーにそのコネクタをインストールしたことが原因である場合もあります。 たとえば、Exchange Server を実行するサーバーに RMS コネクタをインストールして、Exchange アカウントにそのコネクタを使用することを承認したとします。 しかし、この構成はサポートされません。RMS コネクタが接続を試みてもアカウントを正しく識別できないためです。
 
@@ -155,9 +155,7 @@ HTTPS 接続用の RMS コネクタを構成する方法については、「[HT
 
 ## パフォーマンス カウンター
 
-RMS コネクタをインストールすると、**Microsoft Rights Management コネクタ**のパフォーマンス カウンターが自動的に作成されます。これらは、コネクタ経由での Azure RMS の使用のパフォーマンスを監視するために便利です。 
-
-たとえば、ドキュメントや電子メールを保護しているとき、または保護されているドキュメントや電子メールを開いているときに頻繁に遅延が発生する場合は、パフォーマンス カウンターを調べると、遅延の原因がコネクタでの処理時間であるか、Azure RMS での処理時間であるか、ネットワーク遅延であるかを判断できます。 遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
+RMS コネクタをインストールすると、**Microsoft Rights Management コネクタ**のパフォーマンス カウンターが自動的に作成されます。これらは、コネクタ経由での Azure Rights Management サービスの使用のパフォーマンスを監視するために便利です。 たとえば、ドキュメントや電子メールを保護しているとき、または保護されているドキュメントや電子メールを開いているときに頻繁に遅延が発生する場合は、パフォーマンス カウンターを調べると、遅延の原因がコネクタでの処理時間であるか、Azure Rights Management サービスでの処理時間であるか、ネットワーク遅延であるかを判断できます。 遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
@@ -194,6 +192,6 @@ Rights Management サービスのアナライザー ツールを使用すると�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

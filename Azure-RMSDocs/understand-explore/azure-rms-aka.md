@@ -1,47 +1,51 @@
 ---
-title: "Azure Rights Management の別名 | Azure RMS"
-description: "Azure Rights Management は Azure でサービスとして実行されるため Azure Rights Management サービスとも呼ばれますが、「サービス」という用語は多くの場合省略されます。 これは Active Directory Rights Management Services (AD RMS) のクラウド バージョンであり、当初は Windows Rights Management Services (Windows RMS) としてリリースされていました。"
+title: "Azure Information Protection の別名 | Azure Information Protection"
+description: "Azure Information Protection は何度も名前が変更されており、以前の名前で知られている可能性があります。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 3e9ecf77ec3e8e5c1246f587cdb583b7631d634e
+ms.sourcegitcommit: 7ca9476d99457c814755b118660743b27ad78dbc
+ms.openlocfilehash: 104b1c1fab17499299f263b0dc6397f708e3c56a
 
 
 ---
 
 
-# Azure Rights Management の別名
+# Azure Information Protection の別名
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
+Azure Information Protection とは、*Azure Rights Management サービス*として知られていた Azure Rights Management の名前変更されたクラウド ベースのソリューションです。 前の製品の略称 RMS が広く認知されていたため、Azure Rights Management は多くの場合 ***Azure RMS*** と略されます。
 
-Azure Rights Management は Azure でサービスとして実行されるため *Azure Rights Management サービス*とも呼ばれますが、「サービス」という用語は多くの場合省略されます。 これは *Active Directory Rights Management Services* (AD RMS) のクラウド バージョンであり、当初は *Windows Rights Management Services* (Windows RMS) としてリリースされていました。
+Azure Information Protection は、2016 年の 10 月に一般公開されるとアナウンスされています。 これでは、組織の文書や電子メールの権限管理を保護するのみでなく、分類およびラベル付けが可能になります。 保護は、Azure Rights Management サービスを使用して実行されます。 ごく一部の文書や電子メールを、オンプレミスのキーを使用して保護する必要がある場合、権限管理テクノロジのオンプレミス バージョンである *Active Directory Rights Management サービス* (AD RMS) を使用して実行できます。 このオンプレミス版の製品は、当初 *Windows Rights Management サービス* (Windows RMS) としてリリースされました。
 
-RMS という用語はよく知られた省略形であるため、Azure Rights Management は多くの場合 ***Azure RMS*** と略されます。
-
-Azure Rights Management は当初、*Windows Azure Active Directory Rights Management* (多くの場合、Windows Azure AD Rights Management と省略されます) という名前でした。その後 Windows Azure Rights Management となり、現在は Azure Rights Management という名前になっています。
-
-*Information Rights Management* という表記が使用されることもあります (多くの場合、*IRM* と省略されます)。 これは Rights Management を Office に実装したものであり、Azure RMS と AD RMS の両方をサポートできます。  Azure RMS はリリース当初、Office 365 でのみ使用可能でした (たとえば Office 365 E3 サブスクリプションなど)。 現在は、Enterprise Mobility Suite (EMS) などその他のサブスクリプションでもご利用いただけます。また、Office 2016、Office 2013、Office 2010、オンプレミス バージョンの SharePoint や Exchange をサポートしています。Azure RMS を使えば、あらゆるファイルタイプを保護できます。 詳細については、「[アプリケーションで Azure Rights Management をサポートする方法](applications-support.md)」を参照してください。
+Azure Rights Management の他の名前: このサービスは、当初 *Windows Azure Active Directory Rights Management* (よく Windows Azure AD Rights Management と省略されます) であり、その後 Windows Azure Rights Management となり、Azure Rights Management となりました。
 
 また場合によっては、 *Microsoft Rights Management*や *Microsoft Rights Management サービス*もご確認いただけます。これらは Azure RMS や AD RMS 両方を含む総称です。  Azure Rights Management が正式にリリースされた際、オンプレミスの旧システムと比べてそのデプロイメントの容易さを強調し、"*新しい Microsoft RMS*" という表現が使用されることがあり、人気を博しました。
 
+*Information Rights Management* (よく *IRM* と省略されます) という用語をご覧になったことがありますか? これは Rights Management を Office に実装したものであり、Azure RMS と AD RMS の両方をサポートできます。 Azure RMS はリリース当初、Office 365 でのみ使用可能でした (たとえば Office 365 E3 サブスクリプションなど)。 次いで、Azure RMS テクノロジは、保護のみでなく、文書の追跡と失効をサポートする Enterprise Mobility Suite (EMS) など、他のサブスクリプションにも拡大されました。 新しい SDK と、これを使用するアプリケーション (Rights Management 共有アプリケーションなど) のリリースにより、Azure RMS と AD RMS で、Office ファイルだけでなくすべての種類のファイルを保護できるようになりました。 
+
 > [!TIP]
-> これらの用語 (およびその他の用語) は、「[Azure Rights Management の用語](../get-started/terminology.md)」で確認できます。
+> これらの製品とサービス名、および関連する用語は「[Azure Rights Management の用語](../get-started/terminology.md)」にあります。
 
-企業の情報保護ソリューションとして、Microsoft Rights Management サービスはデジタル著作権管理 (DRM) ソリューションは提供していません。このソリューションは通常、デジタル ソフトウェアの違法な流通を防ぐものです。 
+現在、Azure RMS による保護は、Azure Information Protection に含まれるようになり、スタンドアロン サービスまたはセキュリティ スイート (Enterprise Mobility + Security スイート (EMS) または Secure Productive Enterprise スイート (SPE)) の一部として購入できるようになりました。 Azure RMS テクノロジは、Office 製品やサービスにもまだ存在しています。
+
+Azure Information Protection の購入および評価方法、またはサブスクリプション プラン別の異なる機能の詳細については、[Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) のサイトを参照してください。
+
+> [!NOTE]
+> 企業の情報保護ソリューションである Azure Information Protection および Microsoft Rights Management サービスでは、主にデジタル ソフトウェアの違法な配布を防ぐ、デジタル著作権管理 (DRM) ソリューションは提供していません。 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

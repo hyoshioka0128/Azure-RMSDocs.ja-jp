@@ -1,28 +1,28 @@
 ---
-title: "Azure Rights Management コネクタをデプロイする | Azure RMS"
-description: "Azure Rights Management (RMS) コネクタを デプロイする方法について説明します。RMS コネクタにより、Microsoft Exchange Server または Microsoft SharePoint Server を使用する既存のオンプレミス デプロイ、または Windows Server とファイル分類インフラストラクチャ (FCI) 機能を実行するファイル サーバーの情報が保護されます。"
+title: "Azure Rights Management コネクタをデプロイする | Azure Information Protection"
+description: "RMS コネクタをデプロイする手順について説明します。RMS コネクタは、Exchange Server、SharePoint Server、または Windows Server とファイル分類インフラストラクチャ (FCI) を使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/09/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a96018818f81787720021b661db10e818f388772
-ms.openlocfilehash: 2d962f168dafb1b8c207fa6b5d353a6a3ea4d1b2
+ms.sourcegitcommit: 54901b9091a87349bc9d182bf3e2924f4046b30e
+ms.openlocfilehash: 63d900232613c264e8d8481fb43bc585e7cd6886
 
 
 ---
 
 # Azure Rights Management コネクタをデプロイする
 
->*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
 
-ここでは、Azure Rights Management コネクタについて説明してから、このコネクタを適切にデプロイする方法について説明します。 このコネクタを利用すると、既にオンプレミスでデプロイされている **Microsoft Exchange Server**、**SharePoint Server**、またはファイル サーバー (Windows Server と**ファイル分類インフラストラクチャ** (FCI) 機能を実行していること) のデータを保護することができます。
+ここでは、Azure Rights Management コネクタについて説明してから、このコネクタを適切にデプロイする方法について説明します。 このコネクタは、Microsoft **Exchange Server**、**SharePoint Server**、または Windows Server と**ファイル分類インフラストラクチャ** (FCI) を実行するファイル サーバーを使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。
 
 > [!TIP]
 > スクリーンショット付きの概要レベルのサンプル シナリオについては、「[Azure RMS in action (Azure RMS の動作)](../understand-explore/what-admins-users-see.md)」の「[Automatically protecting files on file servers running Windows Server and File Classification Infrastructure (Windows Server およびファイル分類インフラストラクチャを実行しているファイル サーバー上のファイルの自動的な保護)](../understand-explore/what-admins-users-see.md#automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure)」セクションを参照してください。
@@ -30,7 +30,7 @@ ms.openlocfilehash: 2d962f168dafb1b8c207fa6b5d353a6a3ea4d1b2
 ## Microsoft Rights Management コネクタの概要
 Microsoft Rights Management (RMS) コネクタを使用すると、既存のオンプレミス サーバーで Information Rights Management (IRM) 機能とクラウドベースの Microsoft Rights Management サービス (Azure RMS) を迅速に使用できるようになります。 この機能により、IT 担当者およびユーザーは、組織の内外にあるドキュメントや画像を簡単に保護することができます。追加のインフラストラクチャをインストールしたり、他の組織との間に信頼関係を確立したりする必要はありません。 
 
-RMS コネクタはコンパクトなサービスであり、Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2 を実行しているサーバーにオンプレミスでインストールできます。 コネクタは、物理コンピューター上だけでなく、Azure IaaS VM などの仮想マシン上でも実行できます。 デプロイされたコネクタは、次の図に示すように、オンプレミス サーバーとクラウド サービスとの間の通信インターフェイス (リレー) の役割を果たします。
+RMS コネクタはコンパクトなサービスであり、Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2 を実行しているサーバーにオンプレミスでインストールできます。 コネクタは、物理コンピューター上だけでなく、Azure IaaS VM などの仮想マシン上でも実行できます。 デプロイされたコネクタは、次の図に示すように、オンプレミス サーバーとクラウド サービスとの間の通信インターフェイス (リレー) の役割を果たします。 矢印は、ネットワーク接続が開始される方向を示しています。
 
 ![RMS コネクタ アーキテクチャの概要](../media/RMS_connector.png)
 
@@ -97,6 +97,6 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 手順 1: [Azure Rights Management コネクタのインストールと構成](install-configure-rms-connector.md) に進みます。
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

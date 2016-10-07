@@ -1,27 +1,27 @@
 ---
-title: "Rights Management によって保護されたファイルのアクセス許可を変更する | Azure RMS"
+title: "Rights Management によって保護されたファイルのアクセス許可を変更する | Azure Information Protection"
 description: "ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。"
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 
 
 ---
 
 # Rights Management によって保護されたファイルのアクセス許可を変更する
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。
 
@@ -62,9 +62,9 @@ ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
     ファイルを保護しなおすアクセス許可がある場合は、ファイルが保護されていることを確認するダイアログ ボックスがすぐに表示され、エクスプローラーにフォーカスが戻ります。 選んだファイルが指定したアクセス許可で保護されるようになります。 
 
 > [!NOTE]
-> RMS は、ファイルを保護しなおす前にまず、そのファイルに対してその操作を実行する権限をユーザーが持っていることを確認する必要があります。それには、ユーザー名とパスワードを調べます。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
+> Rights Management サービスは、ファイルを保護しなおす前にまず、そのファイルに対してその操作を実行する権限をユーザーが持っていることを確認する必要があります。それには、ユーザー名とパスワードを調べます。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 >
-> 組織が Azure Rights Management (Azure RMS) または AD RMS を使用していない場合は、RMS で保護されたファイルを使用できるように資格情報を受け付ける無料のアカウントを要求できます。
+> 組織が Azure Information Protection または AD RMS を使用していない場合は、RMS で保護されたファイルを使用できるように資格情報を受け付ける無料のアカウントを要求できます。
 >
 > -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
 >
@@ -96,6 +96,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

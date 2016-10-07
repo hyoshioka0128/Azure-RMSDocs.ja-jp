@@ -1,26 +1,26 @@
 ---
-title: "個人用 RMS にサインアップする方法 | Azure RMS"
+title: "個人用 RMS にサインアップする方法 | Azure Information Protection"
 description: "この無料アカウントのサインアップ手順、およびこのプロセスがどのように機能するかについての技術情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bd53bde0bfa9b44203b9d2f0f429265a013476c
-ms.openlocfilehash: 25c2ddac40c9eff78101cfaf42d4398be4e8a5cc
+ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
+ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
 
 
 ---
 
 # 個人用 RMS にサインアップする方法
 
->*適用対象: Azure Rights Management*
+>*適用対象: Azure Information Protection*
 
 この無料アカウントにサインアップするには、[Microsoft Azure Rights Management のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスし、職場のメール アドレスを入力してリクエストを送信します。 このサインアップ ページは一般的に、受信した電子メール メッセージに保護された添付ファイルが付いている場合に、そのメールに記載されたサインアップ方法に従ってアクセスされるものです。 Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了できます。 これが完了したときに表示されるページから、各種デバイス用の共有アプリケーションをダウンロードできます。このページには他にも、ユーザー ガイドへのリンクや、Rights Management による保護をネイティブでサポートするアプリケーションの最新の一覧へのリンクもあります。 
 
@@ -97,6 +97,6 @@ ms.openlocfilehash: 25c2ddac40c9eff78101cfaf42d4398be4e8a5cc
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

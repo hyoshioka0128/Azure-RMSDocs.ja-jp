@@ -1,28 +1,28 @@
 ---
-title: "Azure Rights Management のコンプライアンスとサポート情報 | Azure RMS"
-description: "法律、コンプライアンス、SLA を含むサポート情報を紹介します。"
+title: "コンプライアンスとサポート情報 | Azure Information Protection"
+description: "法律、コンプライアンス、SLA を含む Azure Information Protection のサポート情報を紹介します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83b9aa53f0a53e8ab26543e5e4b6540061cc13bf
-ms.openlocfilehash: 2cfbae5139a82369df863feccc88f6425509ea98
+ms.sourcegitcommit: 784e8a1f53df10ee66595b1268a4d9a1f0cdc9b0
+ms.openlocfilehash: 5fbc0af13f1acdbd6b7a1a267c9d2be2b90b8a1b
 
 
 ---
 
 
 
-# Azure Rights Management のコンプライアンスとサポート情報
+# Azure Information Protection のコンプライアンスとサポート情報
 
-Azure Rights Management (Azure RMS) は他のサービスをサポートし、また、他のサービスに依存しています。 Azure RMS サービスの使用方法以外で、Azure RMS の関連情報をお探しの場合は、以下のリソースを参照してください。
+Azure Information Protection は他のサービスをサポートし、また、他のサービスに依存しています。 Azure Information Protection サービスの使用方法以外で、Azure Information Protection の関連情報をお探しの場合は、以下のリソースを参照してください。
 
 ## 法律およびプライバシー
 
@@ -34,13 +34,13 @@ Azure Rights Management (Azure RMS) は他のサービスをサポートし、�
 
 記事「[Azure RMS が解決する問題の種類](../understand-explore/azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
 
-- Azure RMS の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
+- Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
 
 - FIPS 140 について: [FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 ## サービス レベル アグリーメント
 
-- 主なリージョンごとの Azure RMS のサービス レベル アグリーメント: [製品ライセンスの検索ページからダウンロード](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- 主なリージョンごとの Azure Information Protection のサービス レベル アグリーメント: [製品ライセンスの検索ページからダウンロード](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
 
     - たとえば、北米向けの 2016 年 3 月のサービス レベル アグリーメントをダウンロードするには、**[OnlineSvcsConsolidatedSLA(WW)(English)(March2016)]** をクリックします。
 
@@ -55,6 +55,6 @@ Azure Rights Management (Azure RMS) は他のサービスをサポートし、�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

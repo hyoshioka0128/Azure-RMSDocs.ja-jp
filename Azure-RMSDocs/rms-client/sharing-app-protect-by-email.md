@@ -1,32 +1,32 @@
 ---
-title: "Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する | Azure RMS"
-description: "電子メールで共有しているファイルを保護すると、元のファイルの新しいバージョンが作成されます。 元のファイルは保護されない状態のままになり、新しいバージョンは保護されて、送信する電子メールに自動的に添付されます。"
+title: "Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する | Azure Information Protection"
+description: "安全に電子メールでドキュメントを共有するための手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9becbab6612e49e285774e2e8742d6448b11a041
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
 
 
 ---
 
 # Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 電子メールで共有しているファイルを保護すると、元のファイルの新しいバージョンが作成されます。 元のファイルは保護されない状態のままになり、新しいバージョンは保護されて、送信する電子メールに自動的に添付されます。
 
-場合によっては (Microsoft Word、Excel、PowerPoint で作成されたファイル)、RMS 共有アプリケーションは電子メール メッセージに添付する 2 つのバージョンのファイルを作成します。 2 番目のバージョンのファイルは **.ppdf** というファイル名拡張子で、ファイルの PDF シャドウ コピーです。 このバージョンのファイルを使用すると、受信者は、作成に使われたものと同じアプリケーションがインストールされていなくても、常にファイルを読み取ることができます。 受信者が電子メールをモバイル デバイスで読んでいて、添付ファイルを表示したいときに、このようなことはよくあります。 ファイルを開くために必要なものは、RMS 共有アプリケーションだけです。 その場合、受信者は添付ファイルを読むことはできますが、RMS をサポートするアプリケーションを使用してもう 1 つのバージョンのファイルを開くまでは、添付ファイルを変更することはできません。
+場合によっては (Microsoft Word、Excel、PowerPoint で作成されたファイル)、RMS 共有アプリケーションは電子メール メッセージに添付する 2 つのバージョンのファイルを作成します。 2 番目のバージョンのファイルは **.ppdf** というファイル名拡張子で、ファイルの PDF シャドウ コピーです。 このバージョンのファイルを使用すると、受信者は、作成に使われたものと同じアプリケーションがインストールされていなくても、常にファイルを読み取ることができます。 受信者が電子メールをモバイル デバイスで読んでいて、添付ファイルを表示したいときに、このようなことはよくあります。 ファイルを開くために必要なものは、RMS 共有アプリケーションだけです。 その場合、受信者は添付ファイルを読むことはできますが、Rights Management サービスをサポートするアプリケーションを使用してもう 1 つのバージョンのファイルを開くまでは、添付ファイルを変更することはできません。
 
-Azure RMS を使用している場合は、共有によって保護されているファイルを追跡できます。
+Azure Information Protection を使用している場合は、共有によって保護されているファイルを追跡できます。
 
 -   保護された添付ファイルをだれかが開こうとするときに、電子メールを受け取るオプションを選択します。 ファイルにアクセスされるたびに、ファイルを開こうとしたユーザー、試みられた日時、および試みが成功したか (正常に認証された) 失敗したかが通知されます。
 
@@ -69,7 +69,7 @@ Outlook を使用して保護されたファイルを共有する以外に、以
 
     例:
 
-    ![Azure RMS の電子メール メッセージ](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![Azure Information Protection の電子メール メッセージ](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     詳細: [自動的に作成される .ppdf ファイルとは](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
 
@@ -92,6 +92,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

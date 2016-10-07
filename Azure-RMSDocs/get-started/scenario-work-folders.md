@@ -1,28 +1,28 @@
 ---
-title: "シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。"
+title: "シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する | Azure Information Protection"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 1fdb62af06a3011e1102df0df3f9b61bcdc67edd
+ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
+ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
 
 
 ---
 
 # シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、[ワーク フォルダー](https://technet.microsoft.com/library/dn265974.aspx)内の Office ドキュメントに永続的な保護を適用します。 ワーク フォルダーでは、Windows Server を実行しているファイル サーバー用のロール サービスを使用して、ユーザーが PC やデバイスから一貫した方法で作業ファイルにアクセスできるようにします。 ワーク フォルダーにはファイルを保護するための独自の暗号化が用意されていますが、ワーク フォルダー環境の外にファイルが移動されると、この保護は失われます。 たとえば、ユーザーが同期されたファイルをコピーして、IT 部門の管理下にないストレージに保存する場合や、ファイルが他のユーザーにメールで送信される場合などです。
+このシナリオおよびサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、[ワーク フォルダー](https://technet.microsoft.com/library/dn265974.aspx)内の Office ドキュメントに永続的な保護を適用します。 ワーク フォルダーでは、Windows Server を実行しているファイル サーバー用のロール サービスを使用して、ユーザーが PC やデバイスから一貫した方法で作業ファイルにアクセスできるようにします。 ワーク フォルダーにはファイルを保護するための独自の暗号化が用意されていますが、ワーク フォルダー環境の外にファイルが移動されると、この保護は失われます。 たとえば、ユーザーが同期されたファイルをコピーして、IT 部門の管理下にないストレージに保存する場合や、ファイルが他のユーザーにメールで送信される場合などです。
 
 Azure Rights Management が提供する追加の保護では、組織外のユーザーがファイルを表示できないようにすることで、予期しないデータの損失を防ぎます。 そのためには、組み込みの既定の権利ポリシー テンプレートのいずれかを使用できます。 ただし、このシナリオをデプロイする前に、ユーザーが組織外のユーザーとこれらのファイルを共有しなければならない場合があるかどうかを検討してください。 たとえば、ドラフトの価格表で作業をした後、ユーザーが別の組織の顧客に最終版をメールで送信する場合などです。 ワーク フォルダーの既定の Rights Management テンプレートを使用する場合、他の組織の顧客は、メールで送信されたこのドキュメントを読むことができませんでした。 この要件を満たすには、ユーザーがファイルに新しい権利ポリシーを適用できるようにするカスタム テンプレートを作成します。これにより、メールで指定するユーザーに対するすべての従業員の元の制限が置き換えられます。
 
@@ -51,11 +51,11 @@ Azure Rights Management が提供する追加の保護では、組織外のユ�
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、ワーク フォルダーを使用するすべてのユーザーに必要です。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|次のいずれかです。<br /><br />- 新しい権利ポリシーの適用を許可しない既定のテンプレートをすべてのユーザーに対して使用する: 既定のテンプレート "**&lt;組織名&gt; - 社外秘**" をアーカイブしていない<br /><br />- ユーザーが新しい権利ポリシーを適用するために適したカスタム テンプレートを使用する: カスタム テンプレートを作成するための手順を使用する|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
-|Rights Management コネクタがインストール済みで、Windows Server コンピューター用に承認され、**FCI Server** のロール用に構成されている。|[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)|
-|Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、ワーク フォルダーを使用するすべてのユーザーに必要です。|[Azure Information Protection の準備](../plan-design/prepare.md)|
+|次のいずれかです。<br /><br />- 新しい権利ポリシーの適用を許可しない既定のテンプレートをすべてのユーザーに対して使用する: 既定のテンプレート "**&lt;組織名&gt; - 社外秘**" をアーカイブしていない<br /><br />- ユーザーが新しい権利ポリシーを適用するために適したカスタム テンプレートを使用する: カスタム テンプレートを作成するための手順を使用する|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
+|Rights Management コネクタがインストール済みで、Windows Server コンピューター用に承認され、**FCI Server** のロール用に構成されている。|[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)|
+|Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
 ### ユーザーが組織外でワーク フォルダーのファイルを共有できるようにカスタム権利ポリシー テンプレートを構成する
 
@@ -115,13 +115,13 @@ Azure Rights Management を使用して保護するファイルを組織外の�
 このシナリオ用に記述されたカスタム テンプレートを構成した場合、情報バーには次のようなテンプレートの説明が表示されます。**このコンテンツは、ワーク フォルダーで保護され、会社の従業員のみに制限されます。このコンテンツを組織外のユーザーと共有するには、ドキュメントをメール メッセージに添付して、保護ファイルの共有機能を使用します。** この説明は組織外でファイルを共有する方法の概要を示しますが、ユーザーは (特に最初の数回については) ファイルを共有するための詳細な手順が必要になる場合があります。 この追加のシナリオをサポートするには、「[シナリオ - 別の組織のユーザーと Office ファイルを共有する](scenario-share-office-file-externally.md)」に示す管理者とエンド ユーザーの手順を使用します。
 
 > [!TIP]
-> これらの手順でカスタム テンプレートを使用しない場合は (IT 部門が監視していないときにユーザーが組織外でファイルを共有できないようにするため)、共有の要件が正当であれば、ビジネスに最適なメカニズムを使用してその要件に対応できることをヘルプ デスクに伝えておく必要があります。 たとえば、[スーパー ユーザー](https://technet.microsoft.com/library/mt147272.aspx)は、要求元のユーザーにフル コントロール権限を付与する新しいテンプレートをコンテンツに適用することが可能であったため、次に保護ファイルの共有機能を使用できます。
+> これらの手順でカスタム テンプレートを使用しない場合は (IT 部門が監視していないときにユーザーが組織外でファイルを共有できないようにするため)、共有の要件が正当であれば、ビジネスに最適なメカニズムを使用してその要件に対応できることをヘルプ デスクに伝えておく必要があります。 たとえば、[スーパー ユーザー](../deploy-use/configure-super-users.md)は、要求元のユーザーにフル コントロール権限を付与する新しいテンプレートをコンテンツに適用することが可能であったため、次に保護ファイルの共有機能を使用できます。
 > 
-> 一定の期間が経過した後、このような要求が多数検出された場合は、特定のユーザー (マネージャーやヘルプ デスクなど) にのみ共同所有者オプションを許可し、標準ユーザーには共同作成者または適切であると判断した[権限](https://technet.microsoft.com/library/mt169423.aspx)を付与する、このシナリオ用の独自のカスタム テンプレートを定義できます。
+> 一定の期間が経過した後、このような要求が多数検出された場合は、特定のユーザー (マネージャーやヘルプ デスクなど) にのみ共同所有者オプションを許可し、標準ユーザーには共同作成者または適切であると判断した[権限](../deploy-use/configure-usage-rights.md)を付与する、このシナリオ用の独自のカスタム テンプレートを定義できます。
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

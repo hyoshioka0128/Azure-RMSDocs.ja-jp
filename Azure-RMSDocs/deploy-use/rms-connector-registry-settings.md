@@ -1,19 +1,19 @@
 ---
-title: "RMS コネクタのレジストリ設定 | Azure RMS"
-description: "次のセクションの表は、Exchange、SharePoint、または Windows Server を実行しているサーバー上で、RMS コネクタを使用するようにサーバーを構成するレジストリ設定を手動で追加または確認する場合にのみ使用してください。 これらのサーバーを構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。"
+title: "RMS コネクタのレジストリ設定 | Azure Information Protection"
+description: "RMS コネクタを使用するサーバーでのレジストリ設定に関する情報です。 これらの設定を構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
 
 # Rights Management コネクタのレジストリ設定
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 
 次のセクションの表は、Exchange、SharePoint、または Windows Server を実行しているサーバー上で、[RMS コネクタ](deploy-rms-connector.md)を使用するようにサーバーを構成するレジストリ設定を手動で追加または確認する場合にのみ使用してください。 これらのサーバーを構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。
@@ -216,6 +216,6 @@ ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

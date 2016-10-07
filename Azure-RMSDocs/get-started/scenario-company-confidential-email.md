@@ -1,28 +1,28 @@
 ---
-title: "シナリオ – 社外秘の電子メールを送信する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。"
+title: "シナリオ – 社外秘の電子メールを送信する | Azure Information Protection"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: e3245f7fb15f7081dbe4552eb9734a4915d1b6f1
+ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
+ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
 
 
 ---
 
 # シナリオ – 社外秘の電子メールを送信する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。 たとえば、別の組織の誰かまたは個人用の電子メール アカウントに電子メール メッセージを転送するとします。 電子メールと添付ファイルは、Azure Rights Management とユーザーが電子メール クライアントから選択するテンプレートによって保護されます。
+このシナリオおよびサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。 たとえば、別の組織の誰かまたは個人用の電子メール アカウントに電子メール メッセージを転送するとします。 電子メールと添付ファイルは、Azure Rights Management とユーザーが電子メール クライアントから選択するテンプレートによって保護されます。
 
 このシナリオを実現する最も簡単な方法は、組み込まれている既定のテンプレートを使用して、組織内のすべてのユーザーへのアクセスを自動的に制限することですが、 必要に応じて、ユーザーのサブセットに対するアクセスを制限するなどのカスタム テンプレートを作成したり、その他の制限 (読み取り専用や有効期限など) を設定したり、電子メール クライアントの [進む] ボタンを無効にしたりすることで、制限を強化することができます。
 
@@ -49,12 +49,12 @@ ms.openlocfilehash: e3245f7fb15f7081dbe4552eb9734a4915d1b6f1
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Rights Management テナント キーを計画して実装する](https://technet.microsoft.com/library/dn440580.aspx)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|次のいずれかです。<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
-|既定の Azure Rights Management テンプレート **&lt;組織&gt; - 社外秘** をアーカイブしていない。 または、より厳しい制限を設定する、あるいは組織内のユーザーのサブセットのみが保護された電子メールを読み取ることができるようにする必要があるため、この目的でカスタム テンプレートを構成した。|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)<br /><br />ヒント: より制限の厳しい使用ポリシーを組織内のすべてのユーザーに対して設定する必要がある場合、最初から新しいテンプレートを作成するのではなく、既定のテンプレートをコピーして編集します。<br /><br />このシナリオの電子メール クライアントでは、更新されたテンプレートはすぐには最新の情報に更新されません。 詳細については、構成テンプレートに関する記事「Azure Rights Management のカスタム テンプレートを構成する」の「 [ユーザー用のテンプレートの更新](https://technet.microsoft.com/library/dn642472.aspx) 」を参照してください。|
-|保護された電子メールを送信するユーザーが Outlook 2013、Outlook 2016、または Outlook Web Access を持っている。<br /><br />電子メールを受信するユーザーが Azure Rights Management をサポートする電子メール クライアントを持っている。|Outlook 2010 を使用できますが、[Windows 用の Rights Management 共有アプリケーションをインストール](https://technet.microsoft.com/library/dn339003.aspx) し、それに従ってユーザーの手順を調整する必要があります。<br /><br />Azure Rights Management をサポートする電子メールの一覧については、「[Azure Rights Management の要件](https://technet.microsoft.com/library/dn655136.aspx)」の 「[クライアント デバイスの機能](https://technet.microsoft.com/library/dn655136.aspx)」の表の「**電子メール**」列を参照してください。|
+|Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Information Protection の準備](../plan-design/prepare.md)|
+|Azure Information Protection テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)|
+|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|次のいずれかです。<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md)」 (Office 365: クライアントとオンライン サービスの構成) の「**Exchange Online: IRM configuration**」 (Exchange Online: IRM 構成) セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」|
+|既定の Azure Rights Management テンプレート **&lt;組織&gt; - 社外秘** をアーカイブしていない。 または、より厳しい制限を設定する、あるいは組織内のユーザーのサブセットのみが保護された電子メールを読み取ることができるようにする必要があるため、この目的でカスタム テンプレートを構成した。|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)<br /><br />ヒント: より制限の厳しい使用ポリシーを組織内のすべてのユーザーに対して設定する必要がある場合、最初から新しいテンプレートを作成するのではなく、既定のテンプレートをコピーして編集します。<br /><br />このシナリオの電子メール クライアントでは、更新されたテンプレートはすぐには最新の情報に更新されません。 詳細については、「[ユーザー用のテンプレートの更新](../deploy-use/refresh-templates.md)」を参照してください。|
+|保護された電子メールを送信するユーザーが Outlook 2013、Outlook 2016、または Outlook Web Access を持っている。<br /><br />電子メールを受信するユーザーが Azure Rights Management をサポートする電子メール クライアントを持っている。|Outlook 2010 を使用できますが、[Windows 用の Rights Management 共有アプリケーションをインストール](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) し、それに従ってユーザーの手順を調整する必要があります。<br /><br />Azure Rights Management をサポートする電子メールの一覧については、「[Azure RMS の要件: アプリケーション](../get-started/requirements-applications.md)」の表の「**電子メール**」列を参照してください。|
 
 ## ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
@@ -157,6 +157,6 @@ ms.openlocfilehash: e3245f7fb15f7081dbe4552eb9734a4915d1b6f1
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

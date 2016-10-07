@@ -1,47 +1,49 @@
 ---
-title: "Azure RMS の要件&#58; アプリケーション | Azure RMS"
-description: "次のテーブルを使用して、Azure RMS をネイティブにサポートするアプリケーションを特定します。RMS API を使用することで RMS はこれらのアプリケーションと緊密に統合され、使用制限がサポートされます。 このようなアプリケーションは RMS 対応とも呼ばれます。"
+title: "アプリケーションでのデータ保護のサポート | Azure Information Protection"
+description: "Azure Information Protection から Azure Rights Management サービスをネイティブにサポートするために、RMS API を使用するアプリケーションを特定します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/19/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d3408f954381978287852dd74a38c5903f583dda
+ms.sourcegitcommit: a809edc63801912e836878e9205643d7d52188f1
+ms.openlocfilehash: 872e962bc4c08000fea9f81d48dece28a39d91dd
 
 
 ---
 
 
-# Azure RMS の要件: アプリケーション
+# Azure Rights Management データ保護をサポートするアプリケーション
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 
-次のテーブルを使用して、Azure RMS をネイティブにサポートするアプリケーションを特定します。RMS API を使用することで RMS はこれらのアプリケーションと緊密に統合され、使用制限がサポートされます。 このようなアプリケーションは RMS 対応とも呼ばれます。
+次の表を使用して、Azure Information Protection のデータ保護を提供する、Azure Rights Management サービス (Azure RMS) をネイティブでサポートするアプリケーションを特定します。 
+
+これらのアプリケーションでは、Rights Management サポートは、使用制限をサポートするために Rights Management API を使用して密接に統合されています。 このようなアプリケーションは RMS 対応とも呼ばれます。
 
 別途明記されていない限り、サポートされる機能は Azure RMS と AD RMS の両方に適用されます。 また、iOS、Android、OS X、Windows Phone 8.1 で AD RMS をサポートするには、[Active Directory Rights Management サービス モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)が必要です。
 
 表の列に関する情報
 
--   **保護された PDF**: このファイルの拡張子は .ppdf です。RMS 共有アプリケーションを使用して Office ファイルや PDF ファイルを電子メールで共有すると、自動的に作成されます。 RMS 共有アプリケーションには、保護された PDF ファイル用のリーダーが含まれています。 以前に Azure RMS または AD RMS を使用して保護された PDF ファイルを作成していた場合は、Windows、iOS、および Android デバイス上で Foxit Reader および Nitro Pro を使用して、引き続きこれらのファイルを読み取ることができます。
+-   **保護された PDF**: このファイルの拡張子は .ppdf です。RMS 共有アプリケーションを使用して Office ファイルや PDF ファイルを電子メールで共有すると、自動的に作成されます。 RMS 共有アプリケーションと iOS 用および Android 用の Azure Information Protection アプリには、保護された PDF ファイル用のリーダーが含まれています。 以前に Azure RMS または AD RMS を使用して保護された PDF ファイルを作成していた場合は、Windows、iOS、および Android デバイス上で Foxit Reader および Nitro Pro を使用して、引き続きこれらのファイルを読み取ることができます。
 
 -   **電子メール:** 表示されている電子メール クライアントは、電子メール メッセージを保護できるので、添付されているファイルも自動的に保護されます。 このシナリオでは、クライアントのプレビュー機能で、許可された受信者に対して保護されたコンテンツ (メッセージと添付ファイル) を表示できます。 ただし、電子メール メッセージが保護さておらず、添付ファイルが保護されている場合、クライアントのプレビュー機能では、許可された受信者に対する場合も保護された添付ファイルを表示できません。
 
--   **他のファイルの種類**: テキスト ファイルと画像ファイルには、.txt、.xml、.jpg、.jpeg などのファイル名拡張子が付いているファイルがあります。 これらのファイルでは、RMS によりネイティブで保護された後に、ファイル名拡張子が変更され、読み取り専用になります。 ネイティブで保護できないファイルでは、RMS によって一般的に保護された後に、ファイル名拡張子が .pfile になります。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
+-   **他のファイルの種類**: テキスト ファイルと画像ファイルには、.txt、.xml、.jpg、.jpeg などのファイル名拡張子が付いているファイルがあります。 これらのファイルでは、Rights Management によりネイティブで保護された後に、ファイル名拡張子が変更され、読み取り専用になります。 ネイティブで保護できないファイルでは、Rights Management によって一般的に保護された後に、ファイル名拡張子が .pfile になります。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
 
 
 |**デバイス オペレーティング システム**|Word、Excel、PowerPoint|保護された PDF|電子メール|他のファイルの種類|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office モバイル アプリ (Azure RMS のみ) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />Siemens JT2Go: JT ファイル (Windows 10 のみ)|
-|**iOS**|iPad および iPhone 用 Office [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)<br /><br />TITUS Docs|Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS のみ) [[1]](#footnote-1)|GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) と [[7]](#footnote-7)<br /><br />Samsung Email (S3 以降) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
+|**iOS**|iPad および iPhone 用 Office [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Azure Information Protection アプリ [[1]](#footnote-1): テキスト、画像、pfile<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS のみ) [[1]](#footnote-1)|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) と [[7]](#footnote-7)<br /><br />Samsung Email (S3 以降) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Azure Information Protection アプリ [[1]](#footnote-1): テキスト、画像、pfile|
 |**OS X**|Office 2011 (AD RMS のみ)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|Outlook 2011 (AD RMS のみ)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
 |**[Windows] 10 Mobile**|Office モバイル アプリ (Azure RMS のみ)[[1]](#footnote-1)|サポートされていません|Citrix WorxMail [[6]](#footnote-6)<br /><br />Outlook メール|サポートされていません|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|サポートされていません|Outlook 2013 RT<br /><br />Windows 用メール アプリケーション<br /><br />Windows メール [[4]](#footnote-4)|Siemens JT2Go: JT ファイル|
@@ -49,27 +51,27 @@ ms.openlocfilehash: d3408f954381978287852dd74a38c5903f583dda
 |**Blackberry 10**|サポートされていません|サポートされていません|Blackberry の電子メール [[4]](#footnote-4)|サポートされていません|
 
 
-###### 脚注 1:
+##### 脚注 1:
 保護されたコンテンツの表示をサポートします。
 
-###### 脚注 2: 
+##### 脚注 2: 
 SharePoint Online、OneDrive for Business、Outlook Web Access での保護されたコンテンツの表示をサポートします。
 
-###### 脚注 3:
+##### 脚注 3:
 受信者が Exchange On-Premises にメールボックスを所有していて、保護された電子メールを受信した場合、このコンテンツは、Outlook などの機能の豊富な電子メール クライアントでのみ開くことができます。  このコンテンツは Outlook Web Access から開くことはできません。
 
-###### 脚注 4:
+##### 脚注 4:
 Exchange ActiveSync IRM を使用します。Exchange の管理者が有効にする必要があります。 ユーザーは保護された電子メール メッセージを表示、返信、全員に返信することができますが、新しい電子メール メッセージを自身で保護することはできません。
 
 受信者が Exchange On-premises にメールボックスを所有していて、Exchange を使用している別の組織から保護された電子メールを受信した場合、このコンテンツは、Outlook などの機能豊富な電子メール クライアントでのみ開くことができます。  このコンテンツは、Exchange Active Sync IRM を使用するデバイスから開くことはできません。
 
-###### 脚注 5:
+##### 脚注 5:
 保護されたドキュメントの表示と編集をサポートします。 詳細については、Office ブログの投稿「[Azure Rights Management support comes to Office for iPad and iPhone (Azure Rights Management による iPad および iPone 用 Office 向けのサポート)](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)」を参照してください。
 
-###### 脚注 6:
+##### 脚注 6:
 詳細については、「[Citrix product documentation for WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html)」 (Citrix の WorxMail 向け製品文書) を参照してください。
 
-###### 脚注 7:
+##### 脚注 7:
 詳細については、Office ブログの投稿「[OWA for Android now available on select devices (一部のデバイスで OWA for Android が利用可能になりました)](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)」を参照してください。
 
 ## Azure RMS による Office のサポートの詳細
@@ -90,6 +92,14 @@ Azure RMS と Office Professional Plus 2010 または Office Professional 2010:
 
 - Windows 10 ではサポートされていません
 
+## iOS 用および Android 用の Azure Information Protection アプリに関する詳細
+
+iOS 用および Android 用の Azure Information Protection アプリは、これらのデバイスの RMS 共有アプリに置き換わります。 同様の機能を提供し、さらに SharePoint Online 上の権利で保護された電子メール メッセージおよび権利で保護された PDF ファイルをサポートします。
+
+使用している iOS デバイスや Android デバイスが Microsoft Intune で登録された場合、ポリシーで管理されているアプリを使用して、このアプリをデプロイおよび管理できます。 詳細については、Intune のドキュメントの「[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune コンソールでモバイル アプリケーション管理ポリシーを構成およびデプロイする)](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」を参照してください。 この Intune ドキュメントの手順 2 では、ポリシーで管理されているアプリを発行するためにこの手順を使用します。
+
+詳細については、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ](../rms-client/mobile-app-faq.md)」をご覧ください。
+
 
 ## Rights Management 共有アプリケーションの詳細
 
@@ -103,15 +113,10 @@ Windows 用 Rights Management 共有アプリケーションの詳細につい�
 
 -   [Microsoft Rights Management のページ](http://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して関連アプリをダウンロードする
 
--   Microsoft Intune を使用している場合は、ポリシー管理型アプリを使用して、アプリをデプロイおよび管理できます。 
-
-    -   Intune で登録されている iOS および Android デバイスについては、「[Microsoft Intune でモバイル アプリケーション管理ポリシーを使用してデータを保護する](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」をご覧ください。
-
-    -   Intune で登録されていない Android デバイスについては、「[Microsoft Intune でのモバイル アプリ管理ポリシーの作成および展開](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)」をご覧ください。
-
 -   [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](https://technet.microsoft.com/dn451248)
 
-
+> [!NOTE]
+> iOS 用および Android 用の RMS 共有アプリケーションは、Azure Information Protection アプリに置き換わっています。
 
 ## Azure RMS をサポートしている他のアプリケーションの詳細
 
@@ -140,13 +145,13 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 
 
 ## 次のステップ
-その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
+その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
-これらの最も一般的に使用されるアプリケーションが Azure RMS をサポートする方法の詳細については、「[アプリケーションで Azure Rights Management をサポートする方法](../understand-explore/applications-support.md)」を参照してください。
+これらの最も一般的に使用されるアプリケーションが Azure RMS をサポートする方法の詳細については、「[アプリケーションによる Azure Rights Management サービスのサポート](../understand-explore/applications-support.md)」をご覧ください。
 
 Azure RMS で最も一般的に使用されるアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

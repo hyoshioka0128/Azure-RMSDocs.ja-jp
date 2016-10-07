@@ -1,34 +1,34 @@
 ---
-title: "シナリオ - 重要度の高い (いくつかの) ファイルを保護する | Azure RMS"
+title: "シナリオ - 重要度の高い (いくつかの) ファイルを保護する | Azure Information Protection"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
+ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
+ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
 
 
 ---
 
 # シナリオ - 重要度の高い (いくつかの) ファイルを保護する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。 通常、これらのファイルには、少数のユーザーだけがアクセスできるようにする必要があります。 たとえば、会社を代表する食品のレシピや、指定した日付より前に公開してはならない企業買収のプランなどです。
+このシナリオおよびサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。 通常、これらのファイルには、少数のユーザーだけがアクセスできるようにする必要があります。 たとえば、会社を代表する食品のレシピや、指定した日付より前に公開してはならない企業買収のプランなどです。
 
 この手順は、次の一連の状況に適しています。
 
 -   保護対象の少数のファイルを特定済みである。
 
--   ファイルの形式が Rights Management をサポートする Office ファイル形式のいずれかである。 その他のファイルの形式 (たとえば、CAD ファイル) の場合は、それらの形式が Azure RMS をサポートすることを確認し、Azure RMS をネイティブにサポートするアプリケーションをデプロイしてください。 詳しくは、「[アプリケーションで Azure Rights Management をサポートする方法](https://technet.microsoft.com/library/jj585004.aspx)」をご覧ください。
+-   ファイルの形式が Rights Management をサポートする Office ファイル形式のいずれかである。 その他のファイルの形式 (たとえば、CAD ファイル) の場合は、それらの形式が Azure RMS をサポートすることを確認し、Azure RMS をネイティブにサポートするアプリケーションをデプロイしてください。 詳細については、「[アプリケーションによる Azure Rights Management サービスのサポート](../understand-explore/applications-support.md)」を参照してください。
 
 -   ファイルには、少数のユーザーだけがアクセスできるようにする必要がある機密性の高い情報が含まれています。
 
@@ -48,12 +48,12 @@ ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **特権アクセス**という名前のメールが有効なグループ: これらの機密性の高いドキュメントにアクセスできる必要のある少数のユーザーが含まれます。<br /><br />- **IT コンプライアンス マネージャー**という名前のメールが有効なグループ: 電子情報開示、監視、および監査が職務のユーザーが含まれます。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
-|Rights Management 共有アプリケーションは Windows コンピューターにデプロイされるため、次のセクションで説明されているように、これらのファイルをその場で保護できます。|[Rights Management 共有アプリケーションをダウンロードしてインストールする](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
+|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **特権アクセス**という名前のメールが有効なグループ: これらの機密性の高いドキュメントにアクセスできる必要のある少数のユーザーが含まれます。<br /><br />- **IT コンプライアンス マネージャー**という名前のメールが有効なグループ: 電子情報開示、監視、および監査が職務のユーザーが含まれます。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Information Protection の準備](../plan-design/deployment-roadmap.md)|
+|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|次に示すようにカスタム テンプレートを構成した|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
+|Rights Management 共有アプリケーションは Windows コンピューターにデプロイされるため、次のセクションで説明されているように、これらのファイルをその場で保護できます。|[Rights Management 共有アプリケーションをダウンロードしてインストールする](../rms-client/install-sharing-app.md)|
 |許可されているユーザーが最小バージョンの Office 2013 をインストール済みである|Office 2010 を使用しているユーザーは、Rights Management 共有アプリケーションもインストールする必要があります。|
-|Azure RMS サブスクリプションにドキュメントの追跡が含まれている|Azure RMS のサブスクリプションにドキュメントの追跡と取り消しが含まれていない場合は、ドキュメント追跡サイトを使用して、これらのドキュメントにアクセスするユーザーを確認し、必要に応じてアクセスを取り消すことができません。 この場合は、ドキュメント追跡がサポートされているサブスクリプションを購入するか、この制限を受け入れます。 Azure RMS の[使用状況ログ](https://technet.microsoft.com/library/dn529121.aspx)機能の使用も検討してください。この機能では、どのユーザーがいつ各ファイルにアクセスしたかなどの情報が提供されるため、潜在的な疑わしい動作の検出に役立ちます。<br /><br />サブスクリプションのサポートを確認するには [Rights Management サービス (RMS) オファリングの比較](https://technet.microsoft.com/dn858608)|
+|Azure RMS サブスクリプションにドキュメントの追跡が含まれている|Azure RMS のサブスクリプションにドキュメントの追跡と取り消しが含まれていない場合は、ドキュメント追跡サイトを使用して、これらのドキュメントにアクセスするユーザーを確認し、必要に応じてアクセスを取り消すことができません。 この場合は、ドキュメント追跡がサポートされているサブスクリプションを購入するか、この制限を受け入れます。 Azure RMS の[使用状況ログ](../deploy-use/log-analyze-usage.md)機能の使用も検討してください。この機能では、どのユーザーがいつ各ファイルにアクセスしたかなどの情報が提供されるため、潜在的な疑わしい動作の検出に役立ちます。<br /><br />Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)で提供されるサブスクリプション情報を参照してください。|
 
 ### カスタム テンプレートを構成するには
 
@@ -85,7 +85,7 @@ ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
 
 5.  他のフォルダーにも保護対象のファイルがある場合は、フォルダーごとに手順 1 ～ 4 を繰り返します。
 
-ファイルをその場で保護する方法について詳しくは、「[Rights Management 共有アプリケーションを使用してデバイス上のファイルを保護する (その場で保護)](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx)」をご覧ください。
+ファイルをその場で保護する方法について詳しくは、「[Rights Management 共有アプリケーションを使用してデバイス上のファイルを保護する (その場で保護)](../rms-client/sharing-app-protect-in-place.md)」をご覧ください。
 
 > [!TIP]
 > 保護対象のファイル数が多すぎてこの手動プロセスでは対応できない場合は、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)を使用し、テンプレートを適用してファイルを包括的に保護することを検討してください。
@@ -147,6 +147,6 @@ ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

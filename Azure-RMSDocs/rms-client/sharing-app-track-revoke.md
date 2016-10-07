@@ -1,34 +1,34 @@
 ---
-title: "RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す | Azure RMS"
-description: "RMS 共有アプリケーションを使用してドキュメントを保護すると、組織が Active Directory Rights Management サービスではなく Azure Rights Management を使用している場合は、保護されているドキュメントをユーザーがどのように使用しているかを追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。 これを行うには、Windows コンピューター、Mac コンピューター、タブレット、携帯電話からアクセスできるドキュメント追跡サイトを使用します。"
+title: "RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す | Azure Information Protection"
+description: "RMS 共有アプリケーションを使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
+ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
+ms.openlocfilehash: b8cc9dd2984f7853e1fbacebbb4f6934f918200e
 
 
 ---
 
 # RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す
 
->*適用対象: Azure Rights Management、Windows 10、Windows 7 P1、Windows 8、Windows 8.1*
+>*適用対象: Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
-RMS 共有アプリケーションを使用してドキュメントを保護すると、組織が Active Directory Rights Management サービスではなく Azure Rights Management を使用している場合は、保護されているドキュメントをユーザーがどのように使用しているかを追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。 これを行うには、Windows コンピューター、Mac コンピューター、タブレット、携帯電話からアクセスできる**ドキュメント追跡サイト**を使用します。
+RMS 共有アプリケーションを使用してドキュメントを保護すると、組織が Active Directory Rights Management サービスではなく Azure Information Protection を使用している場合は、保護されているドキュメントをユーザーがどのように使用しているかを追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。 これを行うには、Windows コンピューター、Mac コンピューター、タブレット、携帯電話からアクセスできる**ドキュメント追跡サイト**を使用します。
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-このサイトにアクセスしたら、サインインしてドキュメントを追跡します。 [ドキュメント追跡および失効をサポートするサブスクリプション](https://technet.microsoft.com/dn858608.aspx)が組織にあり、このサブスクリプションのライセンスが割り当てられている場合は、保護したファイルを開こうとしたユーザーおよび成功した (正常に認証された) かどうかを確認できます。 ユーザーがドキュメントへのアクセスを試みるたびに、その時間と場所がわかります。 さらに
+このサイトにアクセスしたら、サインインしてドキュメントを追跡します。 [ドキュメント追跡および失効をサポートするサブスクリプション](https://go.microsoft.com/fwlink/?LinkId=827589)が組織にあり、このサブスクリプションのライセンスが割り当てられている場合は、保護したファイルを開こうとしたユーザーおよび成功した (正常に認証された) かどうかを確認できます。 ユーザーがドキュメントへのアクセスを試みるたびに、その時間と場所がわかります。 さらに
 
 -   ドキュメントの共有を停止する必要がある場合:[ **アクセスの取り消し**] をクリックし、ドキュメントが引き続き使用できる期間を確認して、これまで共有されていたドキュメントへのアクセスを取り消したことをユーザーに通知するかどうかを決定し、カスタマイズしたメッセージを提供します。 ドキュメントの共有を取り消しても共有していたドキュメントが削除されるわけではありませんが、これまでアクセスの権限があったユーザーがそのドキュメントを開くことはできなくなります。
 
@@ -36,7 +36,7 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 
 -   電子メール通知を構成する場合:[ **設定** ] をクリックして、ドキュメントがアクセスされたときに電子メールを送信するかどうか、および送信方法を選択します。
 
-- 他のユーザーの共有したドキュメントを追跡し、取り消す場合: Azure RMS の管理者は、[管理者] アイコンをクリックして、他のユーザーのドキュメントを追跡し、取り消すことができます。 このアイコンは管理者にのみ表示されます。
+- 他のユーザーの共有したドキュメントを追跡し、取り消す場合: Azure Information Protection の管理者は、[管理者] アイコンをクリックして、他のユーザーのドキュメントを追跡し、取り消すことができます。 このアイコンは管理者にのみ表示されます。
 
 -   ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合:[ヘルプ] アイコンをクリックして、「 [ドキュメント追跡の FAQ](http://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。
 
@@ -53,7 +53,7 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 これらの RMS のオプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 
 > [!NOTE] 
-> プレビュー バージョンの [Azure Information Protection クライアント](../information-protection/info-protect-client.md) (バージョン 1.0.233 以降) をインストールした場合、**[保護]** ボタンを使用してドキュメント追跡サイトにアクセスすることもできます。 
+> [Azure Information Protection クライアント](../rms-client/info-protect-client.md)をインストールした場合、**[保護]** ボタンを使用してドキュメント追跡サイトにアクセスすることもできます。 
 > 
 > - Office アプリケーションの **[ホーム]** タブの **[保護]** グループで、**[保護]** > **[使用の追跡]** をクリックします。 
 
@@ -106,6 +106,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
