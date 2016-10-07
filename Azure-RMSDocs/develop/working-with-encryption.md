@@ -4,18 +4,18 @@ description: "Azure RMS の暗号化パッケージおよび暗号化パッケ�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83c4eb741c484018a2837840465aca3276c785c1
-ms.openlocfilehash: b128a9adf75ae8558a33181f63881e2243e840bb
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
 
 
 ---
@@ -40,7 +40,7 @@ ms.openlocfilehash: b128a9adf75ae8558a33181f63881e2243e840bb
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (非推奨アルゴリズムとも呼ばれます)
 
-暗号化パッケージ フラグ (「[**Preferred encryption (推奨される暗号化)**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption)」を参照) は新しいライセンス プロパティ フラグ (**IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**) と併用できます。
+暗号化パッケージ フラグ (「[**Preferred encryption (推奨される暗号化)**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption)」を参照) は新しいライセンス プロパティ フラグ (**IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**) と併用できます。
 
 新しいライセンス プロパティの使用方法を示すいくつかの単純なコード スニペットは次のとおりです。
 
@@ -103,6 +103,6 @@ API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開と
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 
