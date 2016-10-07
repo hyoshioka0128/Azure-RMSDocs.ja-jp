@@ -3,7 +3,7 @@ title: "Azure Rights Management の使用権限を構成する | Azure Informati
 description: "Azure Information Protection から Azure Rights Management サービスを使用してファイルまたは電子メールを保護するときに使用される、特定の権限を確認してください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: a11d027789a63ae845812068e34f527f15a02314
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 0b160fff849b9f8bda71fd6ccf07d8fb07487b13
 
 
 ---
@@ -96,11 +96,11 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 ## 関連項目
-[Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
+[Azure Rights Management サービスのカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

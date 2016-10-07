@@ -3,7 +3,7 @@ title: "シナリオ - ファイル サーバー共有上のファイルを保�
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 
 ---
@@ -46,7 +46,7 @@ ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
 |---------------|--------------------------------|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management によって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。|[Azure Information Protection の準備](../plan-design/prepare.md)|
-|次のいずれかです。<br /><br />- すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />- 特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
+|次のいずれかです。<br /><br />- すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />- 特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |RMS 保護ツールをダウンロードして Azure RMS の前提条件を構成済みである|ツールと前提条件をダウンロードする手順: [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Azure RMS の追加の前提条件を構成する (サービス プリンシパル アカウントなど): [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -155,6 +155,6 @@ ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

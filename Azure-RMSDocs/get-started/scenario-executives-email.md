@@ -3,7 +3,7 @@ title: "シナリオ - 役員が安全に特権情報を交換できるように
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
 
 ---
@@ -48,7 +48,7 @@ ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
 |Azure Information Protection テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)|
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」情報を参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」|
-|次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
+|次に示すようにカスタム テンプレートを構成した|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: [メール フローやトランスポート ルール](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Exchange 2013 の場合: 「[トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432(v=exchg.141))」|
 
 ### 役員用のカスタム テンプレートを構成するには
@@ -132,6 +132,6 @@ ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
