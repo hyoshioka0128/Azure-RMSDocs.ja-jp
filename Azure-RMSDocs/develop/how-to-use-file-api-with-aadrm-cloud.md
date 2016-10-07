@@ -4,18 +4,18 @@ description: "このトピックでは、Azure Rights Management を使用する
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: b41c7fb422689086a76c004e9f80999178590f3d
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 1e95ce00c96fb0ee0d53ce4865a566a00cf62076
 
 
 ---
@@ -34,8 +34,8 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 ## Azure Rights Management サービスへの接続
 
--   [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) を呼び出します。
--   [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) を設定します。
+-   [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) を呼び出します。
+-   [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) を設定します。
 
         C++
         int mode = IPC_API_MODE_SERVER;
@@ -45,10 +45,10 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
   **注** 詳細については、「[Setting the API security mode (API セキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
      
--   次の手順は、[**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) 構造体のインスタンスを作成するためのセットアップです。**pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) メンバーに Azure Rights Management サービスの接続情報を設定します。
--   対称キーのサービス ID 作成時にメモした情報 (前述の前提条件の項を参照してください) を使用して、[**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) 構造体のインスタンスを作成するときに **wszServicePrincipal**、**wszBposTenantId**、**cbKey** パラメーターを設定します。
+-   次の手順は、[**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) 構造体のインスタンスを作成するためのセットアップです。**pcCredential** ([**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) メンバーに Azure Rights Management サービスの接続情報を設定します。
+-   対称キーのサービス ID 作成時にメモした情報 (前述の前提条件の項を参照してください) を使用して、[**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) 構造体のインスタンスを作成するときに **wszServicePrincipal**、**wszBposTenantId**、**cbKey** パラメーターを設定します。
 
-**注** 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 この指定には、[**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) または [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist) の [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) パラメーターを使用します。
+**注** 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 この指定には、[**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) または [**IpcGetTemplateIssuerList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist) の [**IPC\_CONNECTION\_INFO**](/information-protection/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) パラメーターを使用します。
 
 ## 対称キーの生成と必要な情報の収集
 
@@ -81,7 +81,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
     `Get-AadrmConfiguration`
 
 
--   [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) のインスタンスを作成して、いくつかのメンバーを設定します。
+-   [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) のインスタンスを作成して、いくつかのメンバーを設定します。
 
     // キーの構造を作成します。
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
@@ -90,9 +90,9 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
     symKey.wszBase64Key = "your service principal key"; symKey.wszAppPrincipalId = "your app principal identifier"; symKey.wszBposTenantId = "your tenent identifier";
 
 
-詳細については、「[**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)」を参照してください。
+詳細については、「[**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)」を参照してください。
 
--   [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) 構造体のインスタンスを作成します。この中に [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) インスタンスが格納されます。
+-   [**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) 構造体のインスタンスを作成します。この中に [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) インスタンスが格納されます。
 
 **注** *connectionInfo* メンバーには、直前に `Get-AadrmConfiguration` を呼び出したときの URL が設定され、ここではそのフィールド名を示します。
 
@@ -120,7 +120,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 ### テンプレートの識別と暗号化
 
 -   暗号化に使用するテンプレートを選択します
-    [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) を呼び出して、同じ [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) インスタンスに渡します。
+    [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) を呼び出して、同じ [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) インスタンスに渡します。
 
 
     PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
@@ -128,9 +128,9 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
     hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
 
 
--   このトピック前半のテンプレートを使用して、[**IpcfEncrcyptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile) を呼び出して、同じ [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) インスタンスに渡します。
+-   このトピック前半のテンプレートを使用して、[**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile) を呼び出して、同じ [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) インスタンスに渡します。
 
-[**IpcfEncrcyptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile) の使用例:
+[**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile) の使用例:
 
     LPCWSTR wszContentTemplateId = pTemplates->aTi[0].wszID;
     hr = IpcfEncryptFile(wszInputFilePath,
@@ -141,7 +141,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
            NULL,
            &wszOutputFilePath);
 
-[**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile) の使用例:
+[**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile) の使用例:
 
     hr = IpcfDecryptFile(wszInputFilePath,
            IPCF_DF_FLAG_DEFAULT,
@@ -156,23 +156,23 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 * [Azure Rights Management の概要](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)
 * [ACS を介したサービス ID 作成のページ](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
-* [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
-* [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
-* [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
-* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
-* [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
-* [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
-* [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
-* [**IpcfEncrcyptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
-* [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcCreateLicenseFromTemplateID**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromtemplateid)
+* [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
+* [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+* [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
+* [**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
+* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
+* [**IpcGetTemplateIssuerList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
+* [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
+* [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
+* [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
+* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
+* [**IpcCreateLicenseFromTemplateID**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromtemplateid)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
