@@ -1,6 +1,6 @@
 # [理解と調査](/information-protection/understand-explore/what-is-information-protection)
 # [作業の開始](requirements-azure-rms.md)
-## [要件](requirements-azure-rms.md)
+## [要件](requirements.md)
 ### [Azure Active Directory の要件](requirements-azure-ad.md)
 ### [クライアント デバイスでのデータ保護のサポート](requirements-client-devices.md)
 ### [アプリケーションでのデータ保護のサポート](requirements-applications.md)
