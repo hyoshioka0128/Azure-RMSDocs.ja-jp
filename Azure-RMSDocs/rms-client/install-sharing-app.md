@@ -1,26 +1,26 @@
 ---
-title: "Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure RMS"
-description: "RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「ローカル管理者ではなく、かつ Office 2010 を使用している場合」を参照してください。"
+title: "Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure Information Protection"
+description: "Windows 用 RMS 共有アプリケーションを対話形式でインストールし、他のユーザーとドキュメントを安全に共有できるようにするための手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: bda09df1ff51565a4bbf501161c7a4f8cdbbfe22
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
 
 
 ---
 
 # Rights Management 共有アプリケーションをダウンロードしてインストールする
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「[ローカル管理者ではなく、かつ Office 2010 を使用している場合](#if-you-are-not-a-local-administrator-and-use-office-2010)」を参照してください。
 
@@ -44,13 +44,13 @@ RMS 共有アプリケーションをインストールするのにローカル�
 ## ローカル管理者ではなく、かつ Office 2010 を使用している場合
 コンピューターへのサインイン時にローカルの管理者権限を持っておらず、かつセットアップ時に Office 2010 がインストールされていることが検出される場合、この構成では一部のシナリオがうまくいかないことを示す警告メッセージが表示されます。 シナリオは次のとおりです。
 
--   組織が RMS のオンプレミス バージョンではなく Azure RMS を使用している場合
+-   組織で、オンプレミス版の Rights Management ではなく、Azure Information Protection から Azure Rights Management サービスを使用する場合
 
     -   Office の Information Rights Management (IRM) の機能は利用できません。 たとえば、メールの **[転送不可]** オプションや、Word と Excel の **[ファイル]** メニューから設定できる **[アクセスの制限]** アクセス許可は利用できません。 リボンの [保護ファイルの共有] オプションやエクスプローラーの右クリック オプションを使用できます。
 
--   組織が Azure RMS ではなく RMS のオンプレミス バージョンを使用している場合
+-   組織で、Azure Information Protection から Azure Rights Management サービスではなく、オンプレミス版の Rights Management を使用する場合
 
-    -   Azure RMS を使用している他の組織の人間から送信された、保護されたドキュメントを読み取ることはできません。
+    -   Azure Rights Management サービスを使用している他の組織のユーザーから送信された、保護されたドキュメントを読み取ることはできません。
 
 ローカル管理者でなくとも、Office 365 または Office 2013 を使用している場合は、このメッセージが表示されません。これらのシナリオはサポートされています。
 
@@ -69,6 +69,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

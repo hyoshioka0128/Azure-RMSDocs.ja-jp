@@ -4,18 +4,18 @@ description: "このトピックでは、Android バージョンの RMS SDK の�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 809a79e38a010687d4fac402cb53416359dda0d2
 
 
 ---
@@ -37,11 +37,11 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 ### シナリオ: RMS 保護ファイルを使用する
 
--   **手順 1**: [**ProtectedFileInputStream**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) を作成する
+-   **手順 1**: [**ProtectedFileInputStream**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) を作成する
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: [**ProtectedFileInputStream**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) オブジェクトをインスタンス化し、[**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) を使用してサービス認証を実装するその作成メソッドを呼び出してトークンを取得します。それには、パラメーター *mRmsAuthCallback* として **AuthenticationRequestCallback** インスタンスを MSIPC API に渡します。 以下のコード例セクションの末尾近くの [**ProtectedFileInputStream.create**](/rights-management/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_method) の呼び出しを参照してください。
+    **説明**: [**ProtectedFileInputStream**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedfileinputstream_class_java) オブジェクトをインスタンス化し、[**AuthenticationRequestCallback**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) を使用してサービス認証を実装するその作成メソッドを呼び出してトークンを取得します。それには、パラメーター *mRmsAuthCallback* として **AuthenticationRequestCallback** インスタンスを MSIPC API に渡します。 以下のコード例セクションの末尾近くの [**ProtectedFileInputStream.create**](/information-protection/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_method) の呼び出しを参照してください。
 
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
         {
@@ -106,7 +106,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: この手順では、例の認証パラメーターで [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) を実装するために ADAL を使用します。 ADAL の使用の詳細については、「[Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx)」 (Azure AD 認証ライブラリ (ADAL)) を参照してください。
+    **説明**: この手順では、例の認証パラメーターで [**AuthenticationRequestCallback**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) を実装するために ADAL を使用します。 ADAL の使用の詳細については、「[Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx)」 (Azure AD 認証ライブラリ (ADAL)) を参照してください。
 
 
         class MsipcAuthenticationCallback implements AuthenticationRequestCallback
@@ -182,7 +182,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
                       }
 
 
--   **手順 3**: [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) の [**accessCheck**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_accesscheck_method_java) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
+-   **手順 3**: [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) の [**accessCheck**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_accesscheck_method_java) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
 
     **ソース**: *TextEditorFragment.java*
 
@@ -201,7 +201,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 このシナリオは、はじめにテンプレートの一覧を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
--   **手順 1**: [**TemplateDescriptor**](/rights-management/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_class_java) オブジェクトを使用してテンプレートの一覧を取得する
+-   **手順 1**: [**TemplateDescriptor**](/information-protection/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_class_java) オブジェクトを使用してテンプレートの一覧を取得する
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -232,7 +232,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
       }
 
 
--    **手順 2**: 一覧の最初のテンプレートを使用して [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) を作成する
+-    **手順 2**: 一覧の最初のテンプレートを使用して [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) を作成する
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -264,7 +264,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
       }
 
 
--    **手順 3**: [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java) を作成して、コンテンツを書き込む
+-    **手順 3**: [**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java) を作成して、コンテンツを書き込む
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -323,7 +323,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 ### シナリオ: カスタム保護ファイルを開く
 
--   **手順 1**: *serializedContentPolicy* から [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) を作成する
+-   **手順 1**: *serializedContentPolicy* から [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) を作成する
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -365,7 +365,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 
 
--    **手順 2**: **手順 1** の [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) を使用して、[**CustomProtectedInputStream**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) を作成する
+-    **手順 2**: **手順 1** の [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) を使用して、[**CustomProtectedInputStream**](/information-protection/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) を作成する
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -419,7 +419,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
       CustomProtectedInputStream.create(userPolicy, inputStream,                                 encryptedContentLength,                                 customProtectedInputStreamCreationCallback); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) {  ... } catch (IOException e) {  ... }
 
 
--    **手順 3**: [**CustomProtectedInputStream**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) から *mDecryptedContent* にコンテンツを読み取り、閉じる
+-    **手順 3**: [**CustomProtectedInputStream**](/information-protection/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) から *mDecryptedContent* にコンテンツを読み取り、閉じる
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -442,7 +442,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
     **ソース**: *MsipcTaskFragment.java*
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [**UserRights**](/rights-management/sdk/4.2/api/android/userrights#msipcthin2_userrights_class_java) と [**PolicyDescriptor**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java) からのユーザー入力を使用して作成されます。
+    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [**UserRights**](/information-protection/sdk/4.2/api/android/userrights#msipcthin2_userrights_class_java) と [**PolicyDescriptor**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java) からのユーザー入力を使用して作成されます。
 
 
 
@@ -452,7 +452,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 
 
--    **手順 2**: ポリシー記述子 *selectedDescriptor* からカスタムの [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) を作成する
+-    **手順 2**: ポリシー記述子 *selectedDescriptor* からカスタムの [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) を作成する
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -461,7 +461,7 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 
 
--   **手順 3**: [**CustomProtectedOutputStream**](/rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_class_java) を作成してコンテンツを書き込み、閉じる
+-   **手順 3**: [**CustomProtectedOutputStream**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_class_java) を作成してコンテンツを書き込み、閉じる
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -530,6 +530,6 @@ ms.openlocfilehash: aabb3d79049c257cc979e929aa5ed9bbc4673cde
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

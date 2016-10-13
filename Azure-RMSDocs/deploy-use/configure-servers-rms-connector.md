@@ -1,26 +1,26 @@
 ---
-title: "Azure Rights Management コネクタ用にサーバーを構成する | Azure RMS"
-description: "Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーを構成するには、次の情報を活用してください。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 5 について説明します。"
+title: "Azure Rights Management コネクタ用にサーバーを構成する | Azure Information Protection"
+description: "Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーの構成に役立つ情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 5 について説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d2b15dac1f2b2163ff72d80c97ca0d5da44fd13c
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 825103c8857d2db4f0a37570d10fd88361eae274
 
 
 ---
 
 # Azure Rights Management コネクタ用にサーバーを構成する
 
->*適用対象: Azure Rights Management、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
 
 
 Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーを構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 5 を説明します。
@@ -29,7 +29,7 @@ Azure Rights Management (RMS) コネクタを使用するオンプレミス サ�
 
 
 ## RMS コネクタを使用するためのサーバーの構成
-RMS コネクタのインストールと構成が完了したら、Rights Management を使用し、コネクタを使って Azure RMS に接続するオンプレミス サーバーを構成することができます。 つまり、次のサーバーを構成します。
+RMS コネクタのインストールと構成が完了したら、Azure Rights Management サービスに接続し、コネクタを使ってこの保護テクノロジを使用するオンプレミス サーバーを構成することができます。 つまり、次のサーバーを構成します。
 
 -   **Exchange 2016 および Exchange 2013** の場合: クライアント アクセス サーバーおよびメールボックス サーバー
 
@@ -249,6 +249,6 @@ RMS コネクタを監視するには、「[Azure Rights Management コネクタ
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

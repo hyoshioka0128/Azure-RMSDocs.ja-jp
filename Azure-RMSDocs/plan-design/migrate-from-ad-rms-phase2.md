@@ -1,30 +1,30 @@
 ---
-title: "AD RMS から Azure Rights Management への移行 - フェーズ 2 | Azure RMS"
-description: "AD RMS から Azure Rights Management (Azure RMS) への移行手順 5 が含まれる、AD RMS から Azure RMS への移行のフェーズ 2 です。"
+title: "AD RMS から Azure Rights Management への移行 - フェーズ 2 | Azure Information Protection"
+description: "AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 5 が含まれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/09/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4184c8b78d8ca6beb88efad79e0372367c523f2f
-ms.openlocfilehash: 2d8abaec220074531724ce4e95b4aefe23d0b2d6
+ms.sourcegitcommit: 3f9a7ceee318fee5414e02af7927256e74800a16
+ms.openlocfilehash: 113636139f0ff6e47a5b5c0467dfe8616c641e04
 
 
 ---
 # 移行フェーズ 2 - クライアント側の構成
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
-AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 5. を説明します。
+AD RMS から Azure Information Protection への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 5 を説明します。
 
 
-## 手順 5.  Azure RMS を使用するようにクライアントを再構成する
+## 手順 5. Azure Information Protection を使用するようにクライアントを再構成する
 Windows クライアントの場合:
 
 1.  [移行スクリプトをダウンロードする](https://go.microsoft.com/fwlink/?LinkId=524619):
@@ -33,9 +33,9 @@ Windows クライアントの場合:
 
     -   Redirect_OnPrem.cmd
 
-    これらのスクリプトは、AD RMS ではなく Azure RMS サービスを使用するように Windows コンピューター上の構成をリセットします。
+    これらのスクリプトは、AD RMS ではなく Azure Information Protection サービスを使用するように Windows コンピューター上の構成をリセットします。
 
-2.  リダイレクト スクリプト (Redirect_OnPrem.cmd) の指示に従って、新しい Azure RMS テナントをポイントするようにスクリプトを変更します。
+2.  リダイレクト スクリプト (Redirect_OnPrem.cmd) の指示に従って、新しい Azure Information Protection テナントをポイントするようにスクリプトを変更します。
 
     > [!IMPORTANT]
     > この手順では、**adrms** および **adrms.contoso.com** のアドレス例を、実際の AD RMS サーバーのアドレスに置き換える必要があります。 これを行うときは、アドレスの前または後に余計なスペースが入らないように注意してください。余計なスペースがあると、移行スクリプトが中断し、問題の根本原因の特定が非常に困難になります。 編集ツールによっては、テキストを貼り付けた後でスペースが自動的に追加されることがあります。
@@ -131,6 +131,6 @@ Redirect_OnPrem.cmd:
 移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

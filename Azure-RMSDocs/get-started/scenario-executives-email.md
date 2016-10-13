@@ -1,30 +1,30 @@
 ---
-title: "シナリオ - 役員が安全に特権情報を交換できるようにする | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
+title: "シナリオ - 役員が安全に特権情報を交換できるようにする | Azure Information Protection"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b0b165f594da47c090f7822afed2a80541b71e8
-ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
 
 ---
 
 # シナリオ - 役員が安全に特権情報を交換できるようにする
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。 メールと添付ファイルは、Azure Rights Management によって自動的に保護されます。
+このシナリオおよびサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。 メールと添付ファイルは、Azure Rights Management によって自動的に保護されます。
 
-必要に応じて、役員が、他のユーザーに転送する前の確認などの目的で、保護されていない電子メールを他の役員に送信する必要がある場合に指定できる例外 をルールに追加することも可能です (たとえば、電子メール メッセージの件名に「保護しない (Do Not Protect)」の省略形として DNP を指定するなど)。
+必要に応じて、役員が、他のユーザーに転送する前の確認などの目的で、保護されていない電子メールを他の役員に送信する必要がある場合に指定できる例外をルールに追加することも可能です (たとえば、電子メール メッセージの件名に「保護しない (Do Not Protect)」の省略形として DNP を指定するなど)。
 
 この手順は、次の一連の状況に適してします。
 
@@ -44,11 +44,11 @@ ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **役員**という名前のメールが有効なグループ: すべての役員はこのグループのメンバーです。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Rights Management テナント キーを計画して実装する](https://technet.microsoft.com/library/dn440580.aspx)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Azure Rights Management 用にアプリケーションを構成する](https://technet.microsoft.com/library/jj585031.aspx)」トピックの「**Exchange Online: IRM 構成**」セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)」|
-|次に示すようにカスタム テンプレートを構成した|[Azure Rights Management のカスタム テンプレートを構成する](https://technet.microsoft.com/library/dn642472.aspx)|
+|Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **役員**という名前のメールが有効なグループ: すべての役員はこのグループのメンバーです。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Information Protection の準備](../plan-design/prepare.md)|
+|Azure Information Protection テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)|
+|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」情報を参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」|
+|次に示すようにカスタム テンプレートを構成した|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: [メール フローやトランスポート ルール](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Exchange 2013 の場合: 「[トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432(v=exchg.141))」|
 
 ### 役員用のカスタム テンプレートを構成するには
@@ -132,6 +132,6 @@ ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

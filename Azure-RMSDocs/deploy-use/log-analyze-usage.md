@@ -1,68 +1,68 @@
 ---
-title: "Azure Rights Management の利用状況をログに記録して分析する | Azure RMS"
-description: "このトピックでは、Azure Rights Management (Azure RMS) で使用状況ログを使用する方法について説明します。 Azure Rights Management サービスは、組織のために処理したすべての要求のログを記録します。このログには、組織内のユーザーからの要求、Rights Management 管理者が実行した操作、Azure Rights Management デプロイをサポートするために Microsoft オペレーターが実行した操作などが含まれます。"
+title: "Azure Rights Management サービスの使用状況をログに記録して分析する | Azure Information Protection"
+description: "Azure Rights Management (Azure RMS) で使用状況のログを使用する方法の詳細および手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
-ms.openlocfilehash: 868656f84f39db20f0aee8d148b00af15849fda5
+ms.sourcegitcommit: e33f1e54c21507999d30dcee2ce63c8eb2d69895
+ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
 
 
 ---
 
-# Azure Rights Management の利用状況をログに記録して分析する
+# Azure Rights Management サービスの使用状況をログに記録して分析する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このトピックでは、Azure Rights Management (Azure RMS) で使用状況ログを使用する方法について説明します。 Azure Rights Management サービスは、組織のために処理したすべての要求のログを記録します。このログには、組織内のユーザーからの要求、Rights Management 管理者が実行した操作、Azure Rights Management デプロイをサポートするために Microsoft オペレーターが実行した操作などが含まれます。
+この情報は、Azure Information Protection からの Azure Rights Management サービスの使用状況ログの使用方法を理解するのに役立ちます。 このサービスでは、組織のドキュメントや電子メールのデータ保護が提供され、ユーザーからの要求、このサービスの管理者が行う操作、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが行う操作を含め、すべての要求をログに記録することができます。
 
-これらの Azure Rights Management ログを使用すると、次のビジネス シナリオをサポートできます。
+これらの Azure Rights Management サービス ログを使用すれば、次のビジネス シナリオをサポートできます。
 
 -   **ビジネス情報を分析する**
 
-    Azure Rights Management で生成されるログを、選択したリポジトリ (データベース、オンライン分析処理 (OLAP) システム、MapReduce システムなど) にインポートすることによって、情報を分析してレポートを生成できます。 たとえば、RMS で保護されているデータにだれがアクセスしているかを識別できます。 RMS で保護されているどのデータにアクセスしているか、どのデバイスから、およびどの場所からアクセスしているかを特定できます。 また、保護されているコンテンツを正常に読むことができたかどうかを調べることができます。 さらに、保護されている重要なドキュメントを読んだユーザーを識別することもできます。
+    Azure Rights Management サービスで生成されるログを、選択したリポジトリ (データベース、オンライン分析処理 (OLAP) システム、MapReduce システムなど) にインポートすることによって、情報を分析してレポートを生成できます。 たとえば、保護されているデータにだれがアクセスしているかを識別できます。 保護されているどのデータにアクセスしているか、どのデバイスから、およびどの場所からアクセスしているかを特定できます。 また、保護されているコンテンツを正常に読むことができたかどうかを調べることができます。 さらに、保護されている重要なドキュメントを読んだユーザーを識別することもできます。
 
 -   **不正使用を監視する**
 
-    Azure Rights Management のログ情報はほぼリアルタイムに提供されるため、組織での Rights Management の使用状況を途切れなく監視できます。 ログの 99.9% は、RMS が操作を実行してから 15 分以内に提供されます。
+    Azure Rights Management のログ情報はほぼリアルタイムに提供されるため、会社での Rights Management サービスの使用状況を継続的に監視できます。 ログの 99.9% は、操作を開始してから 15 分以内にサービスで使用できます。
 
-    たとえば、RMS で保護されているデータを標準勤務時間外に読むユーザーの数が突然増加した場合に警告を受け取りたい場合があります。この場合、悪意のあるユーザーが競合他社に売り渡すために情報を収集している可能性があります。 また、明らかに同じユーザーが短時間に 2 つの異なる IP アドレスからデータにアクセスした場合、これはユーザー アカウントが侵害されたことを示している可能性があります。
+    たとえば、保護されているデータを標準勤務時間外に読むユーザーの数が突然増加した場合に警告を受け取りたい場合があります。この場合、悪意のあるユーザーが競合他社に売り渡すために情報を収集している可能性があります。 また、明らかに同じユーザーが短時間に 2 つの異なる IP アドレスからデータにアクセスした場合、これはユーザー アカウントが侵害されたことを示している可能性があります。
 
 -   **フォレンジック分析の実行**
 
-    情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 Azure Rights Management およびログを使用すれば、このような質問に答えることができます。保護されているコンテンツを使用するユーザーが Azure Rights Management で保護されているドキュメントおよび画像を開くには、常に Rights Management ライセンスを取得する必要があるためです。これは、ファイルがメールで転送されたり、USB ドライブなどのストレージ デバイスにコピーされたりした場合も同様です。 このため、Azure Rights Management を使用してデータを保護していれば、Azure Rights Management ログを科学捜査上の分析のための最終的な情報源として活用できます。
+    情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 このログを使用すれば、このような質問に答えることができます。保護されているコンテンツを使用するユーザーが Azure Rights Management サービスで保護されているドキュメントおよび画像を開くには、常に Rights Management ライセンスを取得する必要があるためです。これは、ファイルが電子メールで転送されたり、USB ドライブなどのストレージ デバイスにコピーされたりした場合も同様です。 このため、Azure Rights Management サービスを使用してデータを保護していれば、これらのログをフォレンジック分析のための最終的な情報源として活用できます。
 
 > [!NOTE]
-> Azure Rights Management の管理タスクのログ記録だけに関心があり、Rights Management の利用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell コマンドレットを使用できます。
+> Azure Rights Management サービスの管理タスクのログ記録だけに関心があり、Rights Management サービスの使用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell コマンドレットを使用できます。
 > 
 > Azure クラシック ポータルを通じて、**RMS の概要**、**RMS のアクティブ ユーザー**、**RMS デバイス プラットフォーム**、**RMS アプリケーションの使用状況**など、概要レベルの使用状況レポートを使用することもできます。 Azure クラシック ポータルからこれらのレポートにアクセスするには、**[Active Directory]** をクリックし、ディレクトリを選択して開いてから、**[レポート]** をクリックします。
 
 次のセクションでは、Azure Rights Management の使用状況ログの詳細について説明します。
 
 ## Azure Rights Management の使用状況ログを有効にする方法
-2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure RMS サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 
+2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure Rights Management サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 
 
 > [!NOTE]
 > ログ ストレージやログ機能に対する追加費用は発生しません。
 > 
-> 2016 年 2 月より前に Azure RMS の使用状況ログを使用するには、Azure のサブスクリプションのほか、Azure 上に十分なストレージが必要でしたが、これらが不要になります。
+> 2016 年 2 月より前に Azure Rights Management の使用状況ログを使用するには、Azure のサブスクリプションのほか、Azure 上に十分なストレージが必要でしたが、これらが不要になります。
 
 
 
 ## Azure Rights Management の使用状況ログにアクセスして使用する方法
-Azure Rights Management は、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
+Azure Rights Management サービスは、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
 
 Azure Rights Management 操作の実行後、ログがストレージ アカウントに書き込まれるまで若干時間がかかります。 ほとんどのログは 15 分以内に表示されます。 ログはローカル ストレージ (ローカル フォルダー、データベース、MapReduce リポジトリなど) にダウンロードすることをお勧めします。
 
-使用状況ログをダウンロードするには、Windows PowerShell の Azure RMS 管理モジュールを使用します。 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。 この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が **2.4.0.0** 以上であることを確認します。 `(Get-Module aadrm -ListAvailable).Version` 
+使用状況ログをダウンロードするには、Windows PowerShell の Azure Rights Management 管理モジュールを使用します。 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。 この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が **2.4.0.0** 以上であることを確認します。 `(Get-Module aadrm -ListAvailable).Version` 
 
 ### PowerShell を使用して使用状況ログをダウンロードするには
 
@@ -96,10 +96,10 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 >
 > たとえば、次のコマンドを実行すると、すべての情報を .log ファイル形式にインポートできます。 `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### Azure RMS 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
+#### Azure Rights Management 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
 
 
-ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure RMS 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) コマンドレットを使用して古いログをダウンロードできます。 たとえば、
+ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) コマンドレットを使用して古いログをダウンロードできます。 たとえば、
 
 - 使用可能なログを E:\logs フォルダーにダウンロードするには:  `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -107,17 +107,17 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 
 次のいずれかに該当する場合は、Get-AadrmUsageLog コマンドレットを使用してログをダウンロードする必要はありません。
 
--  2016 年 2 月 22 日以前に Azure Rights Management をアクティブ化したが、使用状況ログの機能は有効にしていない。
+-  2016 年 2 月 22 日以前に Azure Rights Management サービスをアクティブ化したが、使用状況ログの機能は有効にしていない。
 
-- 2016 年 2 月 22 日より後に Azure Rights Management をアクティブ化した。
+- 2016 年 2 月 22 日より後に Azure Rights Management サービスをアクティブ化した。
 
 ## Azure Rights Management の使用状況ログを解釈する方法
 Azure Rights Management の使用状況ログを解釈するには、次の情報を活用してください。
 
 ### ログ シーケンス
-Azure Rights Management は、ログを一連の BLOB として書き込みます。 
+Azure Rights Management サービスは、ログを一連の BLOB として書き込みます。 
 
-ログ内の各エントリには、UTC のタイムスタンプがあります。 Azure Rights Management は複数のデータ センターにまたがる複数のサーバー上で実行されるため、タイムスタンプで並べ替えられたログであっても、それらが順序どおりではないように見える場合があります。 しかし、その差はわずかであり、通常 1 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
+ログ内の各エントリには、UTC のタイムスタンプがあります。 Azure Rights Management サービスは複数のデータ センターにまたがる複数のサーバー上で実行されるため、タイムスタンプで並べ替えられたログであっても、それらが順序どおりではないように見える場合があります。 しかし、その差はわずかであり、通常 1 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
 
 ### BLOB の形式
 各 BLOB は、W3C 拡張ログ形式です。 BLOB は、次の 2 行で始まります。
@@ -165,7 +165,7 @@ Azure Rights Management は、ログを一連の BLOB として書き込みま�
     このコネクタからの要求は、RMS コネクタのインストール時に自動的に生成されたサービス プリンシパル名 **Aadrm_S-1-7-0** でログに記録されます。
 
 #### 一般的な要求の種類
-Azure Rights Management には多くの要求の種類がありますが、次の表に一般的に使用される要求の種類を示します。
+Azure Rights Management サービスには多くの要求の種類がありますが、次の表に最も一般的に使用される要求の種類をいくつか示します。
 
 |要求の種類|説明|
 |----------------|---------------|
@@ -192,10 +192,10 @@ Azure Rights Management には多くの要求の種類がありますが、次�
 |GetConnectorAuthorizations|RMS コネクタから、構成をクラウドから取得するための呼び出しが行われます。|
 |GetRecipients|ドキュメント追跡サイトから呼び出し、単一ドキュメントのリスト ビューに移動します。|
 |GetSingle|ドキュメント追跡サイトから呼び出し、**[シングル ドキュメント]** ページに移動します。|
-|GetTenantFunctionalState|Azure クラシック ポータルが、Azure RMS がアクティブかどうかを調べています。|
+|GetTenantFunctionalState|Azure クラシック ポータルが、Azure Rights Management サービスがアクティブかどうかを調べています。|
 |GetTemplateById|Azure クラシック ポータルから、テンプレート ID を指定してテンプレートを取得するための呼び出しが行われます。|
 |KeyVaultDecryptRequest|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 Azure Key Vault の顧客管理のテナント キー (BYOK) にのみ適用されます。|
-|KeyVaultGetKeyInfoRequest|Azure Key Vault でAzure RMS テナント キーとして使用するように指定したキーがアクセス可能であり、既に使用されていないことを確認する呼び出しを行います。|
+|KeyVaultGetKeyInfoRequest|Azure Key Vault で Azure Information Protection テナント キーとして使用するように指定したキーがアクセス可能であり、既に使用されていないことを確認する呼び出しを行います。|
 |KeyVaultSignDigest|署名に Azure Key Vault の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
 |KMSPDecrypt|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 従来の顧客管理のテナント キー (BYOK) にのみ適用されます。|
 |KMSPSignDigest|署名に従来の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
@@ -207,15 +207,15 @@ Azure Rights Management には多くの要求の種類がありますが、次�
 |SearchUsers |ドキュメント追跡サイトから呼び出し、テナント内のすべてのユーザーを検索します。|
 |ServerCertify|RMS 対応クライアント (SharePoint など) から、サーバーを認証するための呼び出しが行われます。|
 |SetUsageLogFeatureState|使用状況ログを有効にするための呼び出しが行われます。|
-|SetUsageLogStorageAccount|Azure RMS ログの場所を指定するための呼び出しが行われます。|
+|SetUsageLogStorageAccount|Azure Rights Management サービス ログの場所を指定するための呼び出しが行われます。|
 |UpdateNotificationSettings|ドキュメント追跡サイトから呼び出し、単一ドキュメントの通知設定を変更します。|
 |UpdateTemplate|Azure クラシック ポータルから、既存のテンプレートを更新するための呼び出しが行われます。|
 
 
 ## Windows PowerShell の参照情報
-2016 年 2 月以降、Azure RMS 使用状況ログに必要となる唯一の Windows PowerShell コマンドレットは、[Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) です。 
+2016 年 2 月以降、Azure Rights Management 使用状況ログに必要となる唯一の Windows PowerShell コマンドレットは、[Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) です。 
 
-この変更の前は次のコマンドレットが Azure RMS 使用状況ログに必要でしたが、現在は推奨されていません。  
+この変更の前は次のコマンドレットが Azure Rights Management 使用状況ログに必要でしたが、現在は推奨されていません。  
 
 -   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
 
@@ -231,15 +231,15 @@ Azure Rights Management には多くの要求の種類がありますが、次�
 
 -   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
 
-Azure RMS ログが変更される以前から独自の Azure ストレージにログがある場合は、従来どおりこれらの古いコマンドレット (Get-AadrmUsageLog と Get-AadrmUsageLogLastCounterValue) を使用してダウンロードすることができます。 ただし、新しい使用状況ログはすべて新しい Azure RMS ストレージに書き込まれるため、Get-AadrmUserLog を使用してダウンロードする必要があります。
+Azure Rights Management ログが変更される以前から独自の Azure ストレージにログがある場合は、従来どおりこれらの古いコマンドレット (Get-AadrmUsageLog と Get-AadrmUsageLogLastCounterValue) を使用してダウンロードすることができます。 ただし、新しい使用状況ログはすべて新しい Azure RMS ストレージに書き込まれるため、Get-AadrmUserLog を使用してダウンロードする必要があります。
 
-Azure Rights Management 用 Windows PowerShell の使用の詳細については、「[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)」を参照してください。
-
-
+Azure Rights Management サービス用 Windows PowerShell の使用の詳細については、「[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)」を参照してください。
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+<!--HONumber=Sep16_HO4-->
 
 

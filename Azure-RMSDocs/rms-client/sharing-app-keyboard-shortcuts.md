@@ -1,26 +1,26 @@
 ---
-title: "Rights Management 共有アプリケーションでキーボード ショートカットを使用する | Azure RMS"
-description: "RMS 共有アプリケーションを使用する場合、Alt キーを押すと使用可能なアクセス キーが表示され、次に Alt + アクセス キーを押すとオプションを選択できます。"
+title: "Rights Management 共有アプリケーションでキーボード ショートカットを使用する | Azure Information Protection"
+description: "Windows で RMS 共有アプリケーションを使用する場合のキーボード ショートカットについての説明です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 640e318c2c12bc1e2044163b2d9201c912345806
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 0e39640a5c48f5d924fed6ee7bf6de34bf195e56
 
 
 ---
 
 # Rights Management 共有アプリケーションでキーボード ショートカットを使用する
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションを使用する場合、**Alt** キーを押して使用可能なアクセス キーを確認し、**Alt** + アクセス キーを押してオプションを選択します。
 
@@ -40,6 +40,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

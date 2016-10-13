@@ -1,9 +1,10 @@
-# [理解と調査](/rights-management/understand-explore/azure-rights-management)
-# [作業の開始](/rights-management/get-started/requirements-azure-rms)
-# [計画と設計](/rights-management/plan-design/deployment-roadmap)
-# [サービスのデプロイと使用](/rights-management/deploy-use/activate-service)
+# [理解と調査](/information-protection/understand-explore/what-is-information-protection)
+# [作業の開始](/information-protection/get-started/requirements-azure-rms)
+# [計画と設計](/information-protection/plan-design/deployment-roadmap)
+# [サービスのデプロイと使用](/information-protection/deploy-use/activate-service)
 # [クライアントのデプロイと使用](use-client.md)
 ## [Rights Management クライアント](use-client.md)
+### [Azure Information Protection クライアントのインストール](info-protect-client.md)
 ### [RMS クライアントのデプロイに関する注意事項](client-deployment-notes.md)
 ### [Windows Server FCI での RMS 保護](configure-fci.md)
 #### [PowerShell スクリプト](fci-script.md)
@@ -16,15 +17,14 @@
 ##### [デバイス上のファイルを保護する](sharing-app-protect-in-place.md)
 ##### [電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)
 ##### [保護されたファイルに対するアクセス許可を変更する](sharing-app-reprotect-files.md)
-##### [ドキュメントを追跡および取り消す](sharing-app-track-revoke.md)
+##### [ドキュメントを追跡して取り消す](sharing-app-track-revoke.md)
 ##### [保護されているファイルを表示して使用する](sharing-app-view-use-files.md)
 ##### [保護を解除する](sharing-app-remove-protection.md)
 ##### [キーボード ショートカット](sharing-app-keyboard-shortcuts.md)
 ##### [ダイアログ ボックスのオプション](sharing-app-dialog-box.md)
-# [アプリの開発とカスタマイズ](/rights-management/develop/developers-guide)
-# [Azure Information Protection (プレビュー)](/rights-management/information-protection/what-is-information-protection)
+# [アプリの開発とカスタマイズ](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

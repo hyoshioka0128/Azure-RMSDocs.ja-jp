@@ -4,18 +4,18 @@ description: "このトピックでは、iOS/OS X バージョンの RMS SDK の
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: c4595105b4e33a4f047fd7c89c8361de6ca32d43
 
 
 ---
@@ -36,9 +36,9 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
 ###シナリオ: RMS 保護ファイルを使用する
 
 
-- **手順 1**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) オブジェクトを作成します。
+- **手順 1**: [**MSProtectedData**](/information-protection/sdk/4.2/api/iOS/msprotecteddata) オブジェクトを作成します。
 
- **説明**: [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) の呼び出しに注目してください。
+ **説明**: [**MSProtectedData**](/information-protection/sdk/4.2/api/iOS/msprotecteddata) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[**MSAuthenticationCallback**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [**protectedDataWithProtectedFile**](/information-protection/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) の呼び出しに注目してください。
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -56,7 +56,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
 
 - **手順 2**. Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
 
-  **説明**: この手順では、例の認証パラメーターで [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
+  **説明**: この手順では、例の認証パラメーターで [**MSAuthenticationCallback**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
 
       // AuthenticationCallback holds the necessary information to retrieve an access token.
       @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
@@ -95,7 +95,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
                           }];
        }
 
--   **手順 3**. [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) オブジェクトの [**accessCheck**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_accesscheck_method_objc) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
+-   **手順 3**. [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) オブジェクトの [**accessCheck**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_accesscheck_method_objc) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
 
         - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
         {
@@ -111,7 +111,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
 
 ### シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
-このシナリオは、初めにテンプレートの一覧 [**MSTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
+このシナリオは、初めにテンプレートの一覧 [**MSTemplateDescriptor**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
 -   **手順 1**. テンプレートの一覧を取得します。
 
@@ -125,7 +125,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
                                    }];
         }
 
--   **手順 2**. 一覧の最初のテンプレートを使用して [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を作成します。
+-   **手順 2**. 一覧の最初のテンプレートを使用して [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を作成します。
 
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -140,7 +140,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
             }];
         }
 
--   **手順 3**. [**MSMutableProtectedData**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msmutableprotecteddata_interface_objc) を作成し、コンテンツを書き込みます。
+-   **手順 3**. [**MSMutableProtectedData**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msmutableprotecteddata_interface_objc) を作成し、コンテンツを書き込みます。
 
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
         {
@@ -157,7 +157,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
 ### シナリオ: カスタム保護ファイルを開く
 
 
--   **手順 1**. *serializedContentPolicy* から [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を作成します。
+-   **手順 1**. *serializedContentPolicy* から [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を作成します。
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -185,7 +185,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
             }];
          }
 
--   **手順 2**. **手順 1.** の [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を使用して [**MSCustomProtectedData**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mscustomprotecteddata_interface_objc) を作成し、読み取りを行います。
+-   **手順 2**. **手順 1.** の [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を使用して [**MSCustomProtectedData**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_mscustomprotecteddata_interface_objc) を作成し、読み取りを行います。
 
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
@@ -217,7 +217,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
 
 -   **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [**MSUserRights**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserrights_interface_objc) と [**MSPolicyDescriptor**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) からのユーザー入力を使用して作成されます。
+    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [**MSUserRights**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserrights_interface_objc) と [**MSPolicyDescriptor**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) からのユーザー入力を使用して作成されます。
 
         + (void)policyDescriptor
         {
@@ -228,7 +228,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を作成します。
+-   **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) を作成します。
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
@@ -242,7 +242,7 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
             }];
         }
 
--   **手順 3**. [**MSMutableCustomProtectedData**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msmutablecustomprotecteddata_interface_objc) を作成してコンテンツを書き込み、閉じます。
+-   **手順 3**. [**MSMutableCustomProtectedData**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msmutablecustomprotecteddata_interface_objc) を作成してコンテンツを書き込み、閉じます。
 
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {
@@ -285,6 +285,6 @@ ms.openlocfilehash: 600d5e2fe9bf99ddac8385c845e0703d31631c59
  
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

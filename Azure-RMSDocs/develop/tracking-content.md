@@ -4,10 +4,10 @@ description: "コンテンツのドキュメント追跡機能を導入する方
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
@@ -16,8 +16,8 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: 83c4eb741c484018a2837840465aca3276c785c1
-ms.openlocfilehash: e669c10fff99124966d3f60f5bbf28776b76f85d
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
 
 
 ---
@@ -48,12 +48,12 @@ ms.openlocfilehash: e669c10fff99124966d3f60f5bbf28776b76f85d
 運用上、ドキュメント追跡に必要なプロパティは、**コンテンツ名**と**通知の種類**のみです。
 
 
-- [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
 
   すべてのメタデータ プロパティを設定することをお勧めします。 種類ごとの一覧を以下に示します。
 
-  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)」を参照してください。
+  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)」を参照してください。
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -79,16 +79,16 @@ ms.openlocfilehash: e669c10fff99124966d3f60f5bbf28776b76f85d
 
     ファイルの作成日の設定に使用します。
 
-- [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
 
 これらの API から適切なものを使用して、ファイルまたはストリームにメタデータを追加します。
 
-- [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
 
 最後に、この API を使用して、追跡対象のドキュメントを追跡システムに登録します。
 
-- [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 
 ## 2.RMS サービスでドキュメントを登録する
@@ -139,7 +139,7 @@ ms.openlocfilehash: e669c10fff99124966d3f60f5bbf28776b76f85d
 **[使用の追跡]** UI アイテムをアプリに追加する作業は、次のいずれかの URL 形式の使用と同じように簡単です。
 
 - コンテンツ ID の使用
-  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) または [IpcGetSerializedLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](/rights-management/sdk/2.1/api/win/constants#msipc_license_property_types)」 (ライセンスのプロパティの種類) を参照してください。
+  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) または [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types)」 (ライセンスのプロパティの種類) を参照してください。
   - メタデータの **ContentId** と **Issuer** については、次の形式を使用します。 `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     例 - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
@@ -152,20 +152,20 @@ ms.openlocfilehash: e669c10fff99124966d3f60f5bbf28776b76f85d
 
 ## 関連項目
 
-* [ライセンス メタデータ プロパティの種類](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [通知の基本設定](/rights-management/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [通知の種類](/rights-management/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [ライセンス メタデータ プロパティの種類](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
+* [通知の基本設定](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
+* [通知の種類](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
+* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
  
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

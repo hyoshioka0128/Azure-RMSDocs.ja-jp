@@ -4,18 +4,18 @@ description: "ADAL での認証プロセスの概要を説明します。"
 keywords: "認証、RMS、ADAL"
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2680b399-febb-4bd6-b844-ac3d1e69aca4
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: cf247d4c3ffc751ac143f2bed0d69acf87afb941
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: eb9cea79d9e5a7902839d34d9b4f13bdefe5a5d3
 
 
 ---
@@ -62,6 +62,6 @@ Azure ADAL を有効にするモバイル クライアント コード用のサ�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

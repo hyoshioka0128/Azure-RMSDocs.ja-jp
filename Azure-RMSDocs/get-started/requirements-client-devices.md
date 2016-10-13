@@ -1,32 +1,32 @@
 ---
-title: "Azure RMS の要件&#58; クライアント デバイス | Azure RMS"
-description: "次のセクションでは、Azure Rights Management (Azure RMS) をサポートするデバイスについて説明します。"
+title: "クライアント デバイスでのデータ保護のサポート | Azure Information Protection"
+description: "Azure Information Protection から Azure Rights Management サービスをサポートするデバイスを特定します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 5fe3470fd7a05d8c2c72312e73e2a773c704ad0f
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
 
 
 ---
 
 
-# Azure RMS の要件: Azure RMS をサポートするクライアント デバイス
+# Azure Rights Management データ保護をサポートするクライアント デバイス
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-次のセクションでは、Azure Rights Management (Azure RMS) をサポートするデバイスについて説明します。
+次のセクションを使用して、Azure Information Protection のデータ保護を提供する、Azure Rights Management サービスをサポートするデバイスを特定します。
 
 ## コンピューター
-次のコンピューター オペレーティング システムで Azure Rights Management がサポートされています。
+次のコンピューター オペレーティング システムで Azure Rights Management サービスがサポートされています。
 
 -   **Windows 7** (x86、x64)
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: 5fe3470fd7a05d8c2c72312e73e2a773c704ad0f
 -   **Mac OS X**: Mac OS X 10.8 (Mountain Lion) 以降
 
 ## モバイル デバイス
-次のモバイル デバイス オペレーティング システムで Azure Rights Management がサポートされています。
+次のモバイル デバイス オペレーティング システムで Azure Rights Management サービスがサポートされています。
 
 -   **Windows Phone**: Windows Phone 8.1
 
@@ -51,11 +51,11 @@ ms.openlocfilehash: 5fe3470fd7a05d8c2c72312e73e2a773c704ad0f
 
 
 ## 次のステップ
-その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
+その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
