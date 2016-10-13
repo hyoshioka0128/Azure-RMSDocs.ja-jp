@@ -1,50 +1,48 @@
 ---
-title: "AD RMS から Azure Rights Management への移行 - フェーズ 3 | Azure RMS"
-description: "AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「AD RMS から Azure Rights Management への移行」の手順 6. から手順 7. について説明します。"
-author: cabailey
-manager: mbaldwin
-ms.date: 08/17/2016
+title: "AD RMS から Azure Information Protection に移行する - フェーズ 3 | Azure Information Protection"
+description: "AD RMS から Azure Information Protection への移行のフェーズ 3 には、手順 6 ～ 7 が含まれます。"
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: cc605ff22c205846186f7e3ec819ecd826dba4a6
+ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
+ms.openlocfilehash: 8f7f27f3b9def4b38f5de45b9d9686208a4f5283
 
 
 ---
 
 # 移行フェーズ 3 - サービス構成のサポート
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
 
-AD RMS から Azure Rights Management (Azure RMS) への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Rights Management への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 6. から手順 7. を説明します。
+AD RMS から Azure Information Protection への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 6 から手順 7 を説明します。
 
 
 ## 手順 6.  IRM と Exchange Online の統合を構成する
 
-事前に AD RMS から Exchange Online に TDP をインポートしていた場合、この TDP を削除して、Azure RMS に移行した後にテンプレートおよびポリシーが競合しないようにする必要があります。 これを行うには、Exchange Online から [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) コマンドレットを使用します。
+事前に AD RMS から Exchange Online に TDP をインポートしていた場合、この TDP を削除して、Azure Information Protection に移行した後にテンプレートおよびポリシーが競合しないようにする必要があります。 これを行うには、Exchange Online から [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) コマンドレットを使用します。
 
-**マイクロソフト管理の**Azure RMS テナント キー トポロジを選択した場合:
+**マイクロソフト管理の** Azure Information Protection テナント キー トポロジを選択した場合:
 
--   記事「[Office 365: Configuration for clients and online services (Office 365: クライアントとオンライン サービスの構成)](../deploy-use/configure-office365.md)」の「[Exchange Online: IRM configuration (Exchange Online: IRM 構成)](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションを参照してください。 このセクションには、Exchange Online サービスに接続して、Azure RMS からテナント キーをインポートし、Exchange Online の IRM 機能を有効にするために実行する、一般的なコマンドが含まれています。 次の手順を完了した後は、Exchange Online で RMS のすべての機能を使用できます。
+-   記事「[Office 365: Configuration for clients and online services (Office 365: クライアントとオンライン サービスの構成)](../deploy-use/configure-office365.md)」の「[Exchange Online: IRM configuration (Exchange Online: IRM 構成)](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションを参照してください。 このセクションには、Exchange Online サービスに接続して、Azure Information Protection からテナント キーをインポートし、Exchange Online の IRM 機能を有効にするために実行する、一般的なコマンドが含まれています。 次の手順を完了した後は、Exchange Online で Azure Rights Management 保護のすべての機能を使用できます。
 
-**顧客管理 (BYOK)** の Azure RMS テナント キー トポロジを選択した場合:
+**顧客管理 (BYOK)** の Azure Information Protection テナント キー トポロジを選択した場合:
 
--   「[BYOK の料金と制限事項](byok-price-restrictions.md)」の説明のとおり、Exchange Online では RMS の機能を制限付きで使用できます。
+-   「[BYOK の料金と制限事項](byok-price-restrictions.md)」の説明のとおり、Exchange Online では Rights Management 保護の機能を制限付きで使用できます。
 
 ## 手順 7. RMS コネクタをデプロイする
-AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使用していた場合、最初にこれらのサーバーで IRM を無効にし、AD RMS の構成を削除する必要があります。 次に、Rights Management (RMS) コネクタをデプロイします。これは、オンプレミス サーバーと Azure RMS の間の通信インターフェイス (リレー) として機能します。
+AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使用していた場合、最初にこれらのサーバーで IRM を無効にし、AD RMS の構成を削除する必要があります。 次に、Rights Management (RMS) コネクタをデプロイします。これは、オンプレミス サーバーと Azure Information Protection の保護サービスの間の通信インターフェイス (リレー) として機能します。
 
-最後にこの手順では、電子メール メッセージを保護するために使用されていた複数の AD RMS データ構成ファイル (.xml) を Azure RMS にインポートした場合、Exchange Server コンピューター上のレジストリを手動で編集して、RMS コネクタにすべての信頼された発行ドメインの URL をリダイレクトする必要があります。
+最後にこの手順では、電子メール メッセージを保護するために使用されていた複数の AD RMS データ構成ファイル (.xml) を Azure Information Protection にインポートした場合、Exchange Server コンピューター上のレジストリを手動で編集して、RMS コネクタにすべての信頼された発行ドメインの URL をリダイレクトする必要があります。
 
 > [!NOTE]
-> 開始する前に、「[Azure Rights Management をサポートするオンプレミス サーバー](../get-started/requirements-servers.md)」で、RMS コネクタがサポートしているオンプレミス サーバーのバージョンを確認してください。
+> 開始する前に、「[Azure RMS をサポートするオンプレミス サーバー](../get-started/requirements-servers.md)」で、Azure Rights Management サービスがサポートしているオンプレミス サーバーのバージョンを確認してください。
 
 ### Exchange サーバーで IRM を無効にし、AD RMS の構成を削除する
 
@@ -214,6 +212,6 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,19 +1,19 @@
 ---
-title: "カスタム テンプレート用の PowerShell リファレンス |Azure RMS"
-description: "Azure クラシック ポータルでテンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
+title: "カスタム テンプレート用の PowerShell リファレンス |Azure Information Protection"
+description: "Azure クラシック ポータルで権限管理テンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 5068021b504e9f943c0d4e57f13d58fc5cb5d391
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 3a213388584424871304778f3df36f7d49b370bd
 
 
 ---
@@ -22,14 +22,14 @@ ms.openlocfilehash: 5068021b504e9f943c0d4e57f13d58fc5cb5d391
 
 # カスタム テンプレート用の PowerShell リファレンス
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-Azure クラシック ポータルでテンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。
+Azure クラシック ポータルで権限管理テンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。
 
 エクスポートとインポートを使用して、カスタム テンプレートをバックアップおよび復元することもできます。ベスト プラクティスとして、意図しない変更を行った場合に以前のバージョンに簡単に戻すことができるように、カスタム テンプレートを定期的にバックアップします。
 
 > [!IMPORTANT]
-> Windows PowerShell を使用して Azure RMS 権限ポリシー テンプレートを作成および管理するには、 [Azure RMS 用の Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)のバージョン 2.0.0.0 以降が必要です。
+> Windows PowerShell を使用して Azure Rights Management テンプレートを作成および管理するには、[Azure RMS 用の Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)のバージョン 2.0.0.0 以降が必要です。
 > 
 > 既にこの PowerShell モジュールがインストールされている場合は、PowerShell ウィンドウで次のコマンドを実行してバージョン番号を確認してください。 `(Get-Module aadrm -ListAvailable).Version`
 
@@ -59,6 +59,6 @@ Azure クラシック ポータルでテンプレートを作成および管理�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

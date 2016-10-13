@@ -1,26 +1,26 @@
 ---
-title: "Office 365 クラシック管理センターから Azure Rights Management をアクティブ化する方法 | Azure RMS"
-description: "Office 365 管理センターのクラシック (オリジナル) バージョンを使用している場合は、次の手順を使用します。"
+title: "Office 365 クラシック管理センターから Azure Rights Management をアクティブ化する方法 | Azure Information Protection"
+description: "Office 365 管理センターのクラシック (オリジナル) バージョンにアクセスできる場合の、Azure Rights Management サービスのアクティブ化手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 27667ed6c205cfa93b2d985722637255ddbd6072
+ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
+ms.openlocfilehash: 8e2b4befc9acd2f50472169b8195d2510fa22be8
 
 
 ---
 
 # Office 365 クラシック管理センターから Azure Rights Management をアクティブ化する方法
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 
 Office 365 管理センターのクラシック (オリジナル) バージョンを使用している場合は、次の手順を使用します。
@@ -37,9 +37,9 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
 4.  [ **Rights Management**] をクリックします。
 
     > [!NOTE]
-    >このオプションが表示されない場合は、サービス プランまたは製品バージョンに [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] が含まれていないためであることが考えられます。
+    >このオプションが表示されない場合、サービス プランまたは製品バージョンが Azure Information Protection の Azure Rights Management サービスを含んでいないことが考えられます。
     >
-    >[Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)に関するページの情報を基に、RMS のサポートを確認してください。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
+    >サブスクリプションに Azure Rights Management が含まれていることを確認するには、[サブスクリプション情報](https://go.microsoft.com/fwlink/?LinkId=827589)を参照してください。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
 
 5. [ **RIGHTS MANAGEMENT** ] ページで、[ **管理**] をクリックします。
 
@@ -53,6 +53,6 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

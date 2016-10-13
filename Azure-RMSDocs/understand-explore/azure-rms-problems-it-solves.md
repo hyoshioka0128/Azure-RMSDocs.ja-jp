@@ -1,19 +1,19 @@
 ---
-title: "Azure RMS が解決する問題の種類 | Azure RMS"
-description: "次の表を使用して、組織が抱えるビジネス上の要件や問題を特定し、Azure RMS による対処方法を説明します。"
+title: "Azure RMS が解決する問題の種類 | Azure Information Protection"
+description: "組織が抱える情報保護の要件や問題を識別し、Azure RMS テクノロジでそれらをどのように解決できるかを理解します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
-ms.openlocfilehash: 7aec5c26acb78cd85eee614a603745f3ee5938a2
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 03ada045291115a6cc47353fed36ed9db7a23668
 
 
 ---
@@ -21,13 +21,15 @@ ms.openlocfilehash: 7aec5c26acb78cd85eee614a603745f3ee5938a2
 
 # Azure RMS が解決する問題の種類
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-次の表を使用して、組織が抱えるビジネス上の要件や問題を特定し、Azure RMS による対処方法を説明します。
+次の表は、文書や電子メールの保護で組織が抱えるビジネス上の要件や問題、および Azure RMS テクノロジでのその対処方法に関する説明です。
+
+Azure RMS は、[Azure Information Protection](what-is-information-protection.md) が使用する保護テクノロジです。
 
 |要件または問題|Azure RMS による解決方法|
 |--------------------------|-----------------------|
-|あらゆる種類のファイルを保護する|√ 以前の Rights Management の実装では、ネイティブ保護を使用して、Office ファイルのみを保護できました。 ここで、[汎用的な保護](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)とは、あらゆる種類のファイルがサポートされることを意味します。|
+|あらゆる種類のファイルを保護する|√ 初期の Rights Management の実装では、ネイティブ保護を使用して、Office ファイルのみを保護できました。 ここで、[汎用的な保護](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)とは、あらゆる種類のファイルがサポートされることを意味します。|
 |あらゆる場所のファイルを保護する|√ ファイルがある場所に保存されると ([保護済み](../rms-client/sharing-app-protect-in-place.md))、クラウド ストレージ サービスなど、IT の制御下にないストレージにファイルがコピーされる場合でも、保護は維持されます。|
 |電子メールによるファイル共有をセキュリティで保護する|√ ファイルが電子メールで共有されるとき ([保護された共有](../rms-client/sharing-app-protect-by-email.md))、ファイルは電子メール メッセージの添付ファイルとして保護されます。保護された添付ファイルを開く方法に関する指示が与えられます。 電子メール テキストは暗号化されないので、受信者は常にこの手順を読むことができます。 ただし、添付されたドキュメントは保護されているので、電子メールまたはドキュメントが他の人に転送されたとしても、承認済みのユーザーのみがドキュメントを開くことができます。|
 |監査と監視|√ 保護されたファイルが組織外部に出た後も、ファイルの[使用状況を監査および監視](../deploy-use/log-analyze-usage.md)できます。<br /><br />たとえば、Contoso, Ltd の社員が Fabrikam, Inc. の 3 人の社員と共同プロジェクトに携わっていて、読み取り専用の保護ドキュメントをこの 3 人に電子メールで送信するとします。 Azure RMS の監査機能は次の情報を提供できます。<br /><br />- Fabrikam 社内の指定されたユーザーがドキュメントを開いたかどうか、および開いた日時。<br /><br />- ドキュメントが転送されたり他のユーザーがアクセスできる共有場所に保存されたりして、指定外のユーザーがドキュメントを開こうとしたかどうか (試みは失敗します)。<br /><br />- 指定されたユーザーがドキュメントを印刷または変更しようとしたかどうか (試みは失敗します)。|
@@ -72,6 +74,6 @@ Azure RMS は、セキュリティ、コンプライアンス、規制に関す�
 Azure RMS の動作に関する技術的な詳細については、「[How does Azure RMS work (Azure RMS の機能の詳細)](how-does-it-work.md)」を参照してください。 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

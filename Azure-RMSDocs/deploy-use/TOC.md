@@ -1,6 +1,6 @@
-# [理解と調査](/rights-management/understand-explore/azure-rights-management)
-# [作業の開始](/rights-management/get-started/requirements-azure-rms)
-# [計画と設計](/rights-management/plan-design/deployment-roadmap)
+# [理解と調査](/information-protection/understand-explore/what-is-information-protection)
+# [作業の開始](/information-protection/get-started/requirements-azure-rms)
+# [計画と設計](/information-protection/plan-design/deployment-roadmap)
 # [サービスのデプロイと使用](activate-service.md)
 ## [サービスのアクティブ化](activate-service.md)
 ### [Office 365 管理センター プレビュー](activate-office365-preview.md)
@@ -18,12 +18,22 @@
 ### [RMS 共有アプリ](configure-sharing-app.md)
 ## [使用権限の構成](configure-usage-rights.md)
 ## [探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)
+## [Information Protection ポリシーの構成](configure-policy.md)
+### [既定のポリシー](configure-policy-default.md)
+### [グローバル設定の構成](configure-policy-settings.md)
+### [新しいラベルの作成](configure-policy-new-label.md)
+### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
+### [ラベルの変更](configure-policy-change-label.md)
+### [保護の適用](configure-policy-protection.md)
+#### [HYOK の制限事項](configure-adrms-restrictions.md)
+### [視覚的なマーキングの構成](configure-policy-markings.md)
+### [条件の構成](configure-policy-classification.md)
 ## [RMS コネクタのデプロイ](deploy-rms-connector.md)
 ### [コネクタのインストールと構成](install-configure-rms-connector.md)
 ### [サーバーの構成](configure-servers-rms-connector.md)
 #### [レジストリの設定](rms-connector-registry-settings.md)
 ### [コネクタの監視](monitor-rms-connector.md)
-## [Azure RMS の確認](verify.md)
+## [Azure Rights Management サービスの検証](verify.md)
 ## [ユーザーにファイルを保護するためのヘルプを提供する](help-users.md)
 ## [ログ記録と使用状況の分析](log-analyze-usage.md)
 ## [テナント キーに対する操作](operations-tenant-key.md)
@@ -32,11 +42,11 @@
 ## [使用停止と非アクティブ化](decommission-deactivate.md)
 ## [PowerShell での管理](administer-powershell.md)
 ### [Azure RMS 用 Windows PowerShell をインストールする](install-powershell.md)
-# [クライアントのデプロイと使用](/rights-management/rms-client/use-client)
-# [アプリの開発とカスタマイズ](/rights-management/develop/developers-guide)
-# [Azure Information Protection (プレビュー)](/rights-management/information-protection/what-is-information-protection)
+# [クライアントのデプロイと使用](/information-protection/rms-client/use-client)
+# [アプリの開発とカスタマイズ](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jul16_HO3-->
+
+<!--HONumber=Sep16_HO4-->
 
 

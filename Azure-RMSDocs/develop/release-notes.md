@@ -3,18 +3,18 @@ title: "新機能とリリース ノート | Azure RMS"
 description: "重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。"
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/16/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 141e9c2315fb9fa7b3e8969b9076ab778b37bfe6
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: da4dce1c44cd79e90e7d232f74f194b734dea0f6
 
 
 ---
@@ -48,29 +48,29 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
 -   ドキュメント追跡 (IOS/OS X および Android オペレーティング システムでは RMS オンラインのみ)
 
-    iOS/OS X の場合の詳細および使用ガイダンスについては、情報を追跡し、追加ドキュメントの登録を追跡するメソッドを提供する [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) の [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) クラスを参照してください。 Android 用にも [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) および [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) と同様の機能が追加されています。
+    iOS/OS X の場合の詳細および使用ガイダンスについては、情報を追跡し、追加ドキュメントの登録を追跡するメソッドを提供する [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) の [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) クラスを参照してください。 Android 用にも [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) および [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) と同様の機能が追加されています。
 
     ドキュメント追跡機能の詳細については、「[**How to: Use document tracking**](how-to-use-document-tracking.md)」 (方法: ドキュメント追跡を使用する) を参照してください。
 
 -   Android API の非同期バージョンに相当する一連の同期メソッド。
 
-    [**CustomProtectedInputStream.create 同期メソッド**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_create_synchronous_method_java)
+    [**CustomProtectedInputStream.create 同期メソッド**](/information-protection/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_create_synchronous_method_java)
 
-    [**CustomProtectedOutputStream.create 同期メソッド**](/rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
+    [**CustomProtectedOutputStream.create 同期メソッド**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
 
-    [**ProtectedFileInputStream.create 同期メソッド**](/rights-management/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_synchronous_method)
+    [**ProtectedFileInputStream.create 同期メソッド**](/information-protection/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_synchronous_method)
 
-    [**ProtectedFileOutputStream.create 同期メソッド**](/rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
+    [**ProtectedFileOutputStream.create 同期メソッド**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
 
-    [**TemplateDescriptor.getTemplates 同期メソッド**](/rights-management/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_gettemplates_synchronous_method_java)
+    [**TemplateDescriptor.getTemplates 同期メソッド**](/information-protection/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_gettemplates_synchronous_method_java)
 
-    [**UserPolicy.acquire 同期メソッド**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_acquire_synchronous_method_java)
+    [**UserPolicy.acquire 同期メソッド**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_acquire_synchronous_method_java)
 
-    [**UserPolicy.create (PolicyDescriptor...) 同期メソッド**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_policydescriptor_______synchronous_method_java)
+    [**UserPolicy.create (PolicyDescriptor...) 同期メソッド**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_policydescriptor_______synchronous_method_java)
 
-    [**UserPolicy.create (TempalteDescriptor…) 同期メソッド**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_templatedescriptor_______synchronous_method_java)
+    [**UserPolicy.create (TempalteDescriptor…) 同期メソッド**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_templatedescriptor_______synchronous_method_java)
 
--   Android API に新しい [**ProtectedBuffer**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedbuffer_class) クラスを追加
+-   Android API に新しい [**ProtectedBuffer**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedbuffer_class) クラスを追加
 -   エラー メッセージやトラブルシューティングを向上させる更新プログラム
 -   暗号化操作の重要なパフォーマンスの向上
 
@@ -90,7 +90,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     アプリケーションの暗号化および復号化を独立して、並列的に実行できます。
 
-    詳細については、「[**MSProtector**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msprotector_class_objc)」を参照してください。
+    詳細については、「[**MSProtector**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msprotector_class_objc)」を参照してください。
 
     ログ レベルの制御の設定が可能になりました。
 
@@ -98,7 +98,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     キャッシュ クリアのサポートが追加されました。
 
-    詳細については、「[**MSProtection:resetStateWithCompletionBlock**](/rights-management/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc)」を参照してください。
+    詳細については、「[**MSProtection:resetStateWithCompletionBlock**](/information-protection/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc)」を参照してください。
 
 ### 2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
 
@@ -114,11 +114,11 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   *ユーザーの同意*を処理するための Android および iOS/OS SDK API 拡張により、SDK の動作をユーザーが確認できるようになりました。 現在、サポートされている同意タイプは、ドキュメント追跡、および不明な AD RMS サービス URL へのアクセスです。
 
-    詳細については、Android API バージョンの [**ConsentCallback インターフェイス**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_consentcallback_interface_java) を例として参照してください。
+    詳細については、Android API バージョンの [**ConsentCallback インターフェイス**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_consentcallback_interface_java) を例として参照してください。
 
 -   iOS 8 および OS X 10.10 (Yosemite) がサポートされるようになりました。 Xcode 6 で必要ないくつかのプロパティ名も変更されました。
 
-    たとえば、MSUserPolicy.name が [**MSUserPolicy.policyName**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_name_property_objc) に変更されました。
+    たとえば、MSUserPolicy.name が [**MSUserPolicy.policyName**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_name_property_objc) に変更されました。
 
 ## リリース ノート
 
@@ -146,9 +146,9 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     **ソリューション** – アプリケーションが Android API への複数インスタンスの呼び出しを許可しないようにします。
 
--   [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** メソッドを使用するときに、長さが *array.length* の値と異なっていると、後で SDK を使用してコンテンツを使用することができません。
+-   [**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** メソッドを使用するときに、長さが *array.length* の値と異なっていると、後で SDK を使用してコンテンツを使用することができません。
 
-    **ソリューション** – これは既知の問題です。 対策としては、**byte \[\]** 配列に渡す長さの値は常に length パラメーターと同じにするか、[**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)** メソッドを使用します。
+    **ソリューション** – これは既知の問題です。 対策としては、**byte \[\]** 配列に渡す長さの値は常に length パラメーターと同じにするか、[**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)** メソッドを使用します。
 
 **iOS および OS X**
 
@@ -174,8 +174,8 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     次のメソッドは同時に実行しないでください。 実行の完了を監視するには、説明に従って完了ブロック アプローチを使用します。
 
-    - [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
-    - [**customProtectedDataWithPolicy**](/rights-management/sdk/4.2/api/iOS/mscustomprotecteddata#msipcthin2_mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
+    - [**protectedDataWithProtectedFile**](/information-protection/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
+    - [**customProtectedDataWithPolicy**](/information-protection/sdk/4.2/api/iOS/mscustomprotecteddata#msipcthin2_mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
 
 
 
@@ -232,6 +232,6 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

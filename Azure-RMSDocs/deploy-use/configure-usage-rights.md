@@ -1,28 +1,28 @@
 ---
-title: "Azure Rights Management の使用権限を構成する | Azure RMS"
-description: "Azure Rights Management (Azure RMS) を使用してファイルまたは電子メールに対して保護を設定し、テンプレートは使用しない場合、使用権限を自分で構成する必要があります。 また、Azure RMS 用のカスタム テンプレートを構成する場合は、ユーザー、管理者、または構成済みのサービスによってテンプレートが選択されたときに自動的に適用される使用権限を選択します。"
+title: "Azure Rights Management の使用権限を構成する | Azure Information Protection"
+description: "Azure Information Protection から Azure Rights Management サービスを使用してファイルまたは電子メールを保護するときに使用される、特定の権限を確認してください。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e1f1bef9ce87dcffb8d3da920f19198aa253e8e6
-ms.openlocfilehash: bbfb00822a03609f5b81808e1e1c4cad8c02be0b
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 0b160fff849b9f8bda71fd6ccf07d8fb07487b13
 
 
 ---
 
 # Azure Rights Management の使用権限を構成する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-Azure Rights Management (Azure RMS) を使用してファイルまたは電子メールに対して保護を設定し、テンプレートは使用しない場合、使用権限を自分で構成する必要があります。 また、Azure RMS 用のカスタム テンプレートを構成する場合は、ユーザー、管理者、または構成済みのサービスによってテンプレートが選択されたときに自動的に適用される使用権限を選択します。 たとえば、Azure クラシック ポータルでは、使用権限の論理的なグループを構成するロールを選ぶことも、個別の権限を構成することもできます。
+Azure Information Protection から Azure Rights Management サービスを使用してファイルまたは電子メールに対して保護を設定し、テンプレートは使用しない場合、使用権限を自分で構成する必要があります。 また、Azure Rights Management 用のカスタム テンプレートを構成する場合は、ユーザー、管理者、または構成済みのサービスによってテンプレートが選択されたときに自動的に適用される使用権限を選択します。 たとえば、Azure クラシック ポータルでは、使用権限の論理的なグループを構成するロールを選ぶことも、個別の権限を構成することもできます。
 
 この記事では、使用しているアプリケーションに対して必要な使用権限を構成する際に役立つ情報を提供すると共に、それらの権限がアプリケーションによってどのように解釈されるのかを説明します。
 
@@ -77,7 +77,7 @@ Windows 用 Rights Management 共有アプリケーションには適用され�
 
 Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** という 1 つの追加の情報権限保護オプションがあります。 
 
-このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、Azure RMS のテンプレートを表示し、管理するとき、Azure クラシック ポータルには表示されません。 **[転送不可]** オプションは権限の集合であり、ユーザーが電子メール受信者に動的に適用します。
+このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、Azure Rights Management のテンプレートを表示し、管理するとき、Azure クラシック ポータルには表示されません。 **[転送不可]** オプションは権限の集合であり、ユーザーが電子メール受信者に動的に適用します。
 
 **[転送不可]** オプションが電子メールに適用されるとき、受信者は電子メールを転送したり、印刷したり、コピーしたり、添付ファイルを保存したり、別名で保存したりできません。 たとえば、Outlook クライアントでは、[転送] ボタンが利用できなくなり、**[名前を付けて保存]**、**[添付ファイルの保存]**、**[印刷]** メニュー オプションが利用できなくなり、**[宛先]**、**[Ccc]**、**[Bcc]** ボックスの受信者を追加したり、変更したりできなくなります。
 
@@ -96,11 +96,11 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 ## 関連項目
-[Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
+[Azure Rights Management サービスのカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: "Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成 | Azure RMS"
-description: "Microsoft Azure RMS のスーパー ユーザー機能により、承認されたユーザーとサービスは、Azure RMS によって保護されている組織のデータをいつでも読み取り、検査することができます。 さらに必要に応じて、保護を削除したり、以前に適用されていた保護を変更したりできます。 スーパー ユーザーは常に、組織の RMS テナントによって付与されたすべての使用ライセンスに対して完全な所有者権限を持ちます。 この機能は 'データに対する推論' と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
+title: "Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成 | Azure Information Protection"
+description: "Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は 'データに対する推論' と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d2ae8df5895b1cf1985420be25abac36fe2689b7
 
 
 ---
 
 # Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) のスーパー ユーザー機能により、承認されたユーザーとサービスは、Azure RMS によって保護されている組織のデータをいつでも読み取り、検査することができます。 さらに必要に応じて、保護を削除したり、以前に適用されていた保護を変更したりできます。 スーパー ユーザーは常に、組織の RMS テナントによって付与されたすべての使用ライセンスに対して完全な所有者権限を持ちます。 この機能は “データに対する推論” と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。 たとえば、次のいずれかのシナリオでこの機能を使用することがあります。
+Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能によって、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 さらに必要に応じて、保護を削除したり、以前に適用されていた保護を変更したりできます。 スーパー ユーザーは常に、組織の Azure Information Protection テナントによって付与されたすべての使用ライセンスに対して完全な所有者権限を持ちます。 この機能は “データに対する推論” と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。 たとえば、次のいずれかのシナリオでこの機能を使用することがあります。
 
 -   退職した従業員によって保護されたファイルを読み取る必要がある。
 
@@ -43,13 +43,13 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 
 スーパー ユーザー機能のセキュリティ ベスト プラクティス:
 
--   Office 365 または Azure RMS テナントのグローバル管理者が割り当てられている管理者、または [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx) コマンドレットを使用して、GlobalAdministrator ロールが割り当てられている管理者を制限し、監視します。 これらのユーザーは、スーパー ユーザー機能を有効にし、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができ、組織で保護するすべてのファイルを複合化できます。
+-   Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx) コマンドレットを使用して、GlobalAdministrator ロールが割り当てられている管理者を制限し、監視します。 これらのユーザーは、スーパー ユーザー機能を有効にし、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができ、組織で保護するすべてのファイルを複合化できます。
 
 -   スーパー ユーザーとして割り当てられた個々のユーザーおよびサービス アカウントを表示するには、[Get-AadrmSuperUser コマンドレット](https://msdn.microsoft.com/library/azure/dn629408.aspx)を使用します。 スーパー ユーザー グループが構成されているかどうかを確認するには、[Get-AadrmSuperUser](https://msdn.microsoft.com/library/azure/mt653942.aspx) コマンドレットと標準的なユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを調べます。 すべての管理アクションと同様に、スーパー機能の有効化や無効化、およびスーパー ユーザーの追加や削除はログに記録され、 [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) コマンドを使用して監査できます。 スーパー ユーザーがファイルを復号化すると、この操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
 
 -   日常的なサービスでスーパー ユーザー機能を必要としない場合は、必要なときにのみ有効にし、 [Disable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629428.aspx) コマンドレットを使用して、再度無効にします。
 
-次のログの抜粋に、Get-AadrmAdminLog コマンドレットの使用によるいくつかのエントリの例を示します。 この例では、Contoso 社の管理者は、スーパー ユーザー機能が無効になっていることを確認し、スーパー ユーザーとして Richard Simone を追加します。Richard が Azure RMS 用に構成された唯一のスーパー ユーザーであることを確認してから、Richard は退職した従業員によって保護されたいくつかのファイルを復号化できるようにスーパー ユーザー機能を有効にします。
+次のログの抜粋に、Get-AadrmAdminLog コマンドレットの使用によるいくつかのエントリの例を示します。 この例では、Contoso 社の管理者は、スーパー ユーザー機能が無効になっていることを確認し、スーパー ユーザーとして Richard Simone を追加します。Richard が Azure Rights Management サービス用に構成された唯一のスーパー ユーザーであることを確認してから、Richard は退職した従業員によって保護されたいくつかのファイルを復号化できるようにスーパー ユーザー機能を有効にします。
 
 `2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
@@ -65,12 +65,12 @@ Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_m
 これらのコマンドレットの詳細については、「 [RMS 保護コマンドレット](https://msdn.microsoft.com/library/azure/mt433195.aspx)」を参照してください。
 
 > [!NOTE]
-> RMS 保護ツールに付属する RMS Protection PowerShell モジュールはメインの [Azure Rights Management 用 Windows PowerShell モジュール](administer-powershell.md)とは異なり、それを補足するものです。 RMS 保護モジュールは、Azure RMS と AD RMS の両方をサポートします。
+> RMS 保護ツールに付属する RMS Protection PowerShell モジュールはメインの [Azure Rights Management 用 Windows PowerShell モジュール](administer-powershell.md)とは異なり、それを補足するものです。 RMS 保護モジュールは、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS) と、Active Directory Rights Management サービス (AD RMS) の両方をサポートしています。
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

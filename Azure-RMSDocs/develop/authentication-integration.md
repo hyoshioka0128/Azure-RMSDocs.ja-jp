@@ -4,18 +4,18 @@ description: "RMS 対応アプリケーションのユーザー認証の基本�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 07/07/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 87ffcdaeaae80efa23c0ed7e7ce95ac7f63c62e0
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 2f4e0d1990362ab50d90b1a31c3b5db45d2fcdd1
 
 
 ---
@@ -36,9 +36,9 @@ ms.openlocfilehash: 87ffcdaeaae80efa23c0ed7e7ce95ac7f63c62e0
 ## アプリのユーザー認証の実装
 各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。
 
-- Android - [AuthenticationRequestCallback](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) および [AuthenticationCompletionCallback](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) インターフェイス。
-- iOS / OS X - [MSAuthenticationCallback](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) プロトコル。
--  Windows Phone / Window RT - [IAuthenticationCallback](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) インターフェイス。
+- Android - [AuthenticationRequestCallback](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) および [AuthenticationCompletionCallback](/information-protection/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) インターフェイス。
+- iOS / OS X - [MSAuthenticationCallback](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) プロトコル。
+-  Windows Phone / Window RT - [IAuthenticationCallback](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) インターフェイス。
 - Linux - [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) インターフェイス。
 
 ### 認証に使用するライブラリ
@@ -274,6 +274,6 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

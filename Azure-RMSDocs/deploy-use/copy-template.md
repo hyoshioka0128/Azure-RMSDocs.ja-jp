@@ -1,19 +1,19 @@
 ---
-title: "テンプレートをコピーする | Azure RMS"
-description: "既存のテンプレートとよく似た設定の新しいテンプレートを作成する場合、 [テンプレート] ページで元のテンプレートを選択し、[コピー] をクリックして、一意の名前を指定し、必要な変更を加えます。"
+title: "テンプレートのコピー | Azure Information Protection"
+description: "既存のテンプレートとよく似た設定の新しいテンプレートを簡単に作成するための、テンプレートのコピー手順について説明します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f329ce49-e044-4c11-821d-5496d83c1bb3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: e5d7fea3b0c3c9fcc3546752b5483b9c97a917e9
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 5248a7a5b90e956d4121d95e0b82a941a20d4e8f
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: e5d7fea3b0c3c9fcc3546752b5483b9c97a917e9
 
 # テンプレートをコピーする
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 既存のテンプレートとよく似た設定の新しいテンプレートを作成する場合、 **[テンプレート]** ページで元のテンプレートを選択し、 **[コピー]**をクリックして、一意の名前を指定し、必要な変更を加えます。
 
@@ -36,6 +36,6 @@ ms.openlocfilehash: e5d7fea3b0c3c9fcc3546752b5483b9c97a917e9
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

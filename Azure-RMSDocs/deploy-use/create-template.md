@@ -1,19 +1,19 @@
 ---
-title: "カスタム テンプレートを作成、構成、発行する | Azure RMS"
-description: "カスタム テンプレートは、Azure クラシック ポータルで作成および管理します。 この作業は、Azure クラシック ポータルから直接行うことができます。また、Office 365 管理センターにサインインして Rights Management の [高度な機能] を選択し、Azure クラシック ポータルにリダイレクトすることもできます。"
+title: "カスタム テンプレートを作成、構成、発行する | Azure Information Protection"
+description: "カスタム テンプレートを Azure クラシック ポータルで作成および管理するための手順です。 テンプレートを使用すると、エンドユーザーおよびその他の管理者は、ドキュメントや電子メールを保護する適切なポリシーを簡単に適用できます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 30cd611e128217b2760e66b3391a0702ae0ed7a6
 
 
 ---
@@ -21,12 +21,12 @@ ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
 
 # カスタム テンプレートを作成、構成、発行する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 
 カスタム テンプレートは、Azure クラシック ポータルで作成および管理します。 この作業は、Azure クラシック ポータルから直接行うことができます。また、Office 365 管理センターにサインインして Rights Management の **[高度な機能]** を選択し、Azure クラシック ポータルにリダイレクトすることもできます。
 
-Azure クラシック ポータルでテンプレートを作成および管理するには、グローバル管理者である必要があります。 Azure RMS のグローバル管理者ロールを他のユーザーに割り当ててある場合は、そのユーザーもテンプレートを作成および管理できますが、[PowerShell](configure-templates-with-powershell.md) を使用する必要があります。 詳細については、「[Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)」を参照してください。 
+Azure クラシック ポータルでテンプレートを作成および管理するには、グローバル管理者である必要があります。 Azure Rights Management サービスのグローバル管理者ロールを他のユーザーに割り当ててある場合は、そのユーザーもテンプレートを作成および管理できますが、[PowerShell](configure-templates-with-powershell.md) を使用する必要があります。 詳細については、「[Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)」を参照してください。 
 
 Rights Management のテンプレートを作成、構成、およびパブリッシュするには、次の手順を使用します。
 
@@ -45,9 +45,9 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
         4.  **[rights management]** セクションで、 **[高度な機能]**をクリックします。
 
             > [!NOTE]
-            > Rights Management をアクティブ化していない場合は、最初に **[アクティブ化]** をクリックして操作を確認します。 詳細については、「[Rights Management をアクティブにする](activate-service.md)」を参照してください。
+            > Rights Management サービスをアクティブ化していない場合は、最初に **[アクティブ化]** をクリックして操作を確認します。 詳細については、「[Rights Management をアクティブにする](activate-service.md)」を参照してください。
             > 
-            > **[高度な機能]** をまだクリックしてない場合は、Rights Management をアクティブにした後、画面の指示に従って、Azure クラシック ポータルへのアクセスに必要な無料の Azure サブスクリプションを取得します。
+            > **[高度な機能]** をまだクリックしていない場合は、Rights Management をアクティブにした後、画面の指示に従って、Azure クラシック ポータルへのアクセスに必要な無料の Azure サブスクリプションを取得します。
 
             **[高度な機能]** をクリックすると、Azure クラシック ポータルが読み込まれ、ここで組織の Azure Active Directory の **[RIGHTS MANAGEMENT]** を管理できます。
 
@@ -166,6 +166,6 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

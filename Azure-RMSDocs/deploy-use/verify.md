@@ -1,28 +1,28 @@
 ---
-title: "Azure Rights Management を確認する | Azure RMS"
-description: "Azure RMS をアクティブ化し、組織に必要な追加の構成手順を実行した後、1 つのユーザー アカウントを使用してファイルまたは電子メール メッセージを保護し、次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、サービスが想定どおりに動作していることを確認できます。"
+title: "Azure Rights Management を確認する | Azure Information Protection"
+description: "1 つのアカウントを使用してファイルまたは電子メール メッセージを保護し、次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、サービスが想定どおりに動作していることを確認できます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: b24fa3540e4e9b9cc02ba3bcd83f5864ce8674d6
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 665adbee40f5c1653a3c046231c5df450ee78c5f
 
 
 ---
 
 # Azure Rights Management を確認する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) をアクティブ化し、組織に必要な追加の構成手順を実行した後、1 つのユーザー アカウントを使用してファイルまたは電子メール メッセージを保護します。次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、サービスが想定どおりに動作していることを確認できます。
+Azure Information Protection の Azure Rights Management サービスをアクティブ化し、組織に必要な追加の構成手順を実行した後で、1 つのアカウントを使用してファイルまたは電子メール メッセージを保護し、次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、保護サービスが想定どおりに動作していることを確認できます。
 
 このテストを行うには、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](help-users.md)」の情報を使用できます。
 
@@ -33,13 +33,13 @@ ms.openlocfilehash: b24fa3540e4e9b9cc02ba3bcd83f5864ce8674d6
 
 ## 次のステップ
 
-使用状況ログを使用して、組織での情報保護の使用状況を監視することができます。 詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
+使用状況ログを使用することで、組織がどのように Azure Rights Management サービスを使用しているか監視することができます。 詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
 
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

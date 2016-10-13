@@ -1,19 +1,19 @@
 ---
 title: "Azure RMS の要件&#58; クラウド サブスクリプション | Azure RMS"
-description: "Azure Rights Management (Azure RMS) を使用するには、組織は次のサブスクリプションの少なくとも 1 つと、ユーザー、ファイル、および電子メール メッセージを保護するサービスの十分な数のライセンスを用意する必要があります。 ユーザー (ファイルや電子メール メッセージの所有者) に保護を適用できるサービスがある場合、そのようなユーザーにはこれらのライセンスの 1 つが必要になります。 この保護されたデータを利用するだけであれば (読み取りや編集など)、ライセンスは必要ありません。"
+description: "組織内で Azure Rights Management (Azure RMS) のデプロイに使用できるサブスクリプションを識別します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 4cac0f039e69e31943bb8773d0761f7e654cc940
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: e0c6c9300096a3130cc59406208d51bbafc9e35b
 
 
 ---
@@ -48,15 +48,15 @@ Azure RMS のライセンスについて他に質問はありますか? 「[Azur
 
 Subscription  |IRM を含む 
 ------------- | ------------- |
-Office 365 Business Essentials|×|
-Office 365 Business Premium|×|
-Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|× <br /><br /> ×|
+Office 365 Business Essentials|いいえ|
+Office 365 Business Premium|[いいえ]|
+Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|[いいえ] <br /><br /> [いいえ]|
 Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes <br /><br /> ○ <br /><br /> Yes|
 Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|[はい] <br /><br /> ○ <br /><br /> Yes|
 Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes <br /><br /> [はい]|
-Office 365 Enterprise K1|×|
-SharePoint プラン 1 <br /><br /> SharePoint プラン 2|× <br /><br /> ×|
-Exchange Online プラン 1 <br /><br /> Exchange Online プラン 2|× <br /><br /> ×|
+Office 365 Enterprise K1|いいえ|
+SharePoint プラン 1 <br /><br /> SharePoint プラン 2|いいえ <br /><br /> いいえ|
+Exchange Online プラン 1 <br /><br /> Exchange Online プラン 2|いいえ <br /><br /> いいえ|
 
 
 ## Azure Rights Management Premium サブスクリプション
@@ -94,6 +94,6 @@ Azure Rights Management Premium サブスクリプションについて詳しく
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

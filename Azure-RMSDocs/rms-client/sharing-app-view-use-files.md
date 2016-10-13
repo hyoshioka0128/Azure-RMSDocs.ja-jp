@@ -1,33 +1,33 @@
 ---
-title: "Rights Management によって保護されたファイルを表示して使用する | Azure RMS"
-description: "Rights Management (RMS) 共有アプリケーションがコンピューターにインストールされている場合は、ダブルクリックするだけで保護されたファイルを表示できます。 ファイルは電子メール メッセージの添付ファイルの場合もあれば、ファイル エクスプローラーで表示されるファイルの場合もあります。"
+title: "Rights Management によって保護されたファイルを表示して使用する | Azure Information Protection"
+description: "保護されたファイルを表示して使用する手順です。Rights Management (RMS) 共有アプリケーションがインストールされている必要があります。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 78810a639c2360707b628423bb68b2f05e8c5b56
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
 
 
 ---
 
 # Rights Management によって保護されたファイルを表示して使用する
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 [Rights Management (RMS) 共有アプリケーションがコンピューターにインストールされている場合は](install-sharing-app.md)、ダブルクリックするだけで保護されたファイルを表示できます。 ファイルは電子メール メッセージの添付ファイルの場合もあれば、ファイル エクスプローラーで表示されるファイルの場合もあります。
 
 > [!NOTE]
-> 保護されたファイルを表示するには、先にユーザーがファイルを表示する権限を持つことを RMS が確認する必要があります。それには、ユーザー名とパスワードを調べます。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
+> 保護されたファイルを表示するには、先にユーザーがファイルを表示する権限を持つことを Rights Management サービスが確認する必要があります。それには、ユーザー名とパスワードを調べます。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 >
-> 組織が Azure Rights Management (Azure RMS) または AD RMS を使用していない場合は、RMS で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを要求できます。
+> 組織が Azure Information Protection または AD RMS を使用していない場合は、RMS で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを要求できます。
 >
 > -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
 >
@@ -68,7 +68,7 @@ ms.openlocfilehash: 78810a639c2360707b628423bb68b2f05e8c5b56
 
 
 
-Rights Management でサポートされるファイル名拡張子の完全な一覧については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[サポートされているファイルの種類とファイル名拡張子](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。 ファイル名拡張子が一覧にない場合は、Web 検索を使用して、別のアプリケーションでサポートされているファイル名拡張子であるかどうかを確認します。
+Rights Management サービスでサポートされるファイル名拡張子の完全な一覧については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[サポートされているファイルの種類とファイル名拡張子](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。 ファイル名拡張子が一覧にない場合は、Web 検索を使用して、別のアプリケーションでサポートされているファイル名拡張子であるかどうかを確認します。
 
 > [!NOTE]
 > Rights Management でファイルが保護されていることを確認した後、ファイルが開かない場合は、[RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして使用します。 ツールの指示に従って、保護されたドキュメントが開かない原因となっている可能性のあるコンピューターの問題を確認します。
@@ -90,7 +90,7 @@ Rights Management でサポートされるファイル名拡張子の完全な�
 
 - **その他のファイル名拡張子を持つファイル**
 
-    これらのファイルを使用するには、Rights Management を認識するアプリケーションがデバイスに必要です。 これらのアプリケーションは RMS 対応アプリケーションと呼ばれます。 Office 2016、Office 2013、および Office 2010 のアプリケーション (Word、Excel、PowerPoint、Outlook など) は、Rights Management 対応アプリケーションの例です。 ただし、他のソフトウェア会社のアプリケーションやユーザー独自の基幹業務アプリケーションなど、Microsoft 以外のアプリケーションも、Rights Management 対応である場合があります。
+    これらのファイルを使用するには、Rights Management 保護を認識するアプリケーションがデバイスに必要です。 これらのアプリケーションは RMS 対応アプリケーションと呼ばれます。 Office 2016、Office 2013、および Office 2010 のアプリケーション (Word、Excel、PowerPoint、Outlook など) は、Rights Management 対応アプリケーションの例です。 ただし、他のソフトウェア会社のアプリケーションやユーザー独自の基幹業務アプリケーションなど、Microsoft 以外のアプリケーションも、Rights Management 対応である場合があります。
 
     Rights Management 対応のアプリケーションは、他の Rights Management 対応アプリケーションによって保護されているファイルを開く方法を認識しています。 また、Rights Management 対応アプリケーションは、ユーザーがファイルを編集したり、別のファイル名や別の場所に保存したりしても、ファイルに適用された保護を維持します。 Rights Management 対応アプリケーションを使用すると、ユーザーはファイルに現在適用されているアクセス許可に従ってファイルを使用できます。ユーザーがファイルを使用するためのアクセス許可を持っている場合、ファイルを使用できます。 たとえば、ファイルを編集できても印刷はできません。
 
@@ -107,6 +107,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

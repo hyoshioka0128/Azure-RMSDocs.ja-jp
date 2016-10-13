@@ -1,29 +1,29 @@
 ---
-title: "Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法 | Azure RMS"
-description: "Azure ポータルにアクセスできる場合は、次の手順を使用してください。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Rights Management Premium のサブスクリプションがある場合。"
+title: "Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法 | Azure Information Protection"
+description: "Azure ポータルにアクセスできる場合に、Azure Rights Management サービスをアクティブ化する手順です。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 573aa437d8449212bd2f22b532342e4c7e3a1be6
+ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
+ms.openlocfilehash: a553ea57bd4b396b7629dc24aea9f76b4a2a5e5a
 
 
 ---
 
 # Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法
 
->*適用対象: Azure Rights Management*
+>*適用対象: Azure Information Protection*
 
 
-Azure ポータルにアクセスできる場合は、次の手順を使用してください。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Rights Management Premium のサブスクリプションがある場合。
+Azure ポータルにアクセスできる場合は、次の手順を使用してください。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。
 
 > [!TIP]
 > [Azure RMS をアクティブ化する方法](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)に関する 2 分間のビデオをご覧ください。
@@ -37,9 +37,9 @@ Azure ポータルにアクセスできる場合は、次の手順を使用し�
 4.  [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] で管理するディレクトリを選択し、**[アクティブ化]** をクリックして、操作を確定します。
 
     > [!NOTE]
-    >アクティブ化エラーが表示される場合、サービス プランまたは製品バージョンに [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] が含まれていないためであることが考えられます。
+    >アクティブ化でエラーが発生する場合、サービス プランまたは製品バージョンが Azure Information Protection の Azure Rights Management サービスを含んでいないことが考えられます。
     >
-    >[Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)に関するページの情報を基に、RMS のサポートを確認してください。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
+    >サブスクリプションに Azure Rights Management が含まれていることを確認するには、[サブスクリプション情報](https://go.microsoft.com/fwlink/?LinkId=827589)を参照してください。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
 
 
 これで、[ **Rights Management のステータス** ] に [ **アクティブ** ] と表示され、[ **アクティブ化** ] オプションが [ **非アクティブ化**] に置き換えられます。
@@ -58,6 +58,6 @@ Azure ポータルにアクセスできる場合は、次の手順を使用し�
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

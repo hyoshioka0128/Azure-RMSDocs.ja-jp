@@ -4,18 +4,18 @@ description: "ファイルの API の動作は、レジストリの設定を使�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 8232137fb52b03a30513b132b02251f3cc01079a
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
 
 
 ---
@@ -82,7 +82,7 @@ ms.openlocfilehash: 8232137fb52b03a30513b132b02251f3cc01079a
 -   **txt、xml、jpg、jpeg、pdf、png、tiff、bmp、gif、giff、jpe、jfif、jif ファイル** ネイティブ暗号化が有効になります (xxx は pxxx になります)。
 -   **その他のすべてのファイル** 暗号化は保護されたファイル (pfile) に対応します (xxx は xxx.pfile になります)。
 
-暗号化を試行したファイルの種類がブロックされている場合は、[**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes) エラーが発生します。
+暗号化を試行したファイルの種類がブロックされている場合は、[**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes) エラーが発生します。
 
 ### ファイル API - ファイルのサポートの詳細
 
@@ -149,13 +149,13 @@ HKEY_LOCAL_MACHINE
 ## 関連項目
 
 * [開発者向け注意事項](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
+* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

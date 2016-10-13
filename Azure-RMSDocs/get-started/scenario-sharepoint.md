@@ -1,28 +1,28 @@
 ---
-title: "シナリオ - SharePoint に保存されているドキュメントを管理する | Azure RMS"
-description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。"
+title: "シナリオ - SharePoint に保存されているドキュメントを管理する | Azure Information Protection"
+description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: e0e6442e077d6899cbbf88ae2889908e93592815
 
 
 ---
 
 # シナリオ - SharePoint に保存されているドキュメントを管理する
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。 たとえばドキュメントは、偶発的またはユーザーの故意による漏えいから自動的に保護され、ドキュメントがダウンロードや同期された後でも、コンテンツへのアクセスをブロックすることができます。 保護するファイルの例としては、組織内での共同作業用の設計文書や企画、その他の成果物などがあります。 SharePoint で保護されたライブラリを構成すると、SharePoint 内の Office ファイルは Azure Rights Management によって保護されます。
+このシナリオおよびサポート ユーザー ドキュメントでは、Azure Information Protection から Azure Rights Management 技術を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。 たとえばドキュメントは、偶発的またはユーザーの故意による漏えいから自動的に保護され、ドキュメントがダウンロードや同期された後でも、コンテンツへのアクセスをブロックすることができます。 保護するファイルの例としては、組織内での共同作業用の設計文書や企画、その他の成果物などがあります。 SharePoint で保護されたライブラリを構成すると、SharePoint 内の Office ファイルは Azure Rights Management によって保護されます。
 
 この手順は、次の一連の状況に適しています。
 
@@ -42,9 +42,9 @@ ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Rights Management の準備を行う](https://technet.microsoft.com/library/jj585029.aspx)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
-|SharePoint サーバーを使用する場合:RMS コネクタをデプロイし、SharePoint 用に構成する|[Azure Rights Management コネクタをデプロイする](https://technet.microsoft.com/library/dn375964.aspx)|
+|Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Information Protection の準備](../plan-design/prepare.md)|
+|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|SharePoint サーバーを使用する場合:RMS コネクタをデプロイし、SharePoint 用に構成する|[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)|
 |保護する SharePoint サイトのアクセス許可を構成する|[リスト、ライブラリ、フォルダー、ドキュメント、またはリスト アイテムのアクセス許可を管理する](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Information Rights Management をリストまたはライブラリに適用する](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 |SharePoint を IRM と保護されたライブラリ用に構成する|[SharePoint 管理センターにおける Information Rights Management (IRM) の設定](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Information Rights Management をリストまたはライブラリに適用する](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
@@ -105,6 +105,6 @@ ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

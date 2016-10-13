@@ -1,29 +1,28 @@
 ---
-title: "Azure RMS の要件&#58; Azure AD ディレクトリ | Azure RMS"
-description: "Azure Rights Management (Azure RMS) を使用するには、Azure AD ディレクトリが必要です。 このディレクトリの組織アカウントを使用して Azure クラシック ポータルにサインインします。ここでは、たとえば、Rights Management テンプレートを構成および管理することができます。"
+title: "Azure Active Directory の要件 | Azure Information Protection"
+description: "ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/29/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 8083c2f7e4cfdbf65748007ae21a48a49a56599f
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 5be497b09ed1b1342747508611a1cc06ad0edf02
 
 
 ---
 
-# Azure RMS の要件: Azure AD ディレクトリ
+# Azure Information Protection の Azure Active Directory の要件
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
-
-Azure Rights Management (Azure RMS) を使用するには、Azure AD ディレクトリが必要です。 このディレクトリの組織アカウントを使用して Azure クラシック ポータルにサインインします。ここでは、たとえば、Rights Management テンプレートを構成および管理することができます。
+Azure Information Protection を使用するには、Azure AD ディレクトリが必要です。 このディレクトリの組織アカウントを使用して Azure クラシック ポータルにサインインします。ここでは、たとえば、Rights Management テンプレートを構成および管理することができます。
 
 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。[Azure の「はじめに」](https://account.windowsazure.com/organization)ページにアクセスし、指示に従ってください。
 
@@ -40,8 +39,8 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 > 
 > -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
-## 多要素認証 (MFA) と Azure RMS
-Azure RMS で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
+## 多要素認証 (MFA) と Azure Information Protection
+Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
 
@@ -70,11 +69,11 @@ Azure RMS で多要素認証 (MFA) を使用するには、次のうち 1 つ以
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 
 ## 次のステップ
-その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
+その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

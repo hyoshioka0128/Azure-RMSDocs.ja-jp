@@ -1,33 +1,31 @@
 ---
-title: "Azure Active Directory Rights Management の概要 | Azure RMS"
-description: "Azure Rights Management (Azure RMS) は、さまざまな課題が伴う現代の業務環境のなかで組織のデータを守るための情報保護ソリューションです。"
+title: "Azure Rights Management とは | Azure Information Protection"
+description: "Azure Rights Management (Azure RMS) とは、Azure Information Protection が使用する保護テクノロジです。"
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: f6f2b382766ea91ed463c18655efb07d206213af
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 21e8bd7bb4b749e0f086a0108bb89778f2d3ce73
 
 
 ---
 
-# Azure Active Directory Rights Management の概要
+# Azure Rights Management とは
 
->*適用対象: Azure Rights Management、Office 365*
+>*適用対象: Azure Information Protection、Office 365*
 
 
-Azure Rights Management (Azure RMS) は、さまざまな課題が伴う現代の業務環境のなかで組織のデータを守るための情報保護ソリューションです。
+Azure Rights Management (Azure RMS) とは、[Azure Information Protection](what-is-information-protection.md) が使用する保護テクノロジです。
 
-この課題とはたとえば、インターネット接続の必要性、職場へのユーザー私物デバイスの持ち込み、外出先や自宅から会社データへのアクセス、重要なビジネス パートナーとの間での機密情報の共有があります。 ユーザーは日常業務の一環として電子メール、ファイル共有サイト、およびクラウド サービスを使用することで情報を共有しています。 このようなシナリオでは、企業データを保護しつつユーザーがこれまでどおり作業を効率的に行えるようにしたい場合、従来型のセキュリティ制御 (アクセス制御リストや NTFS アクセス許可など) やファイアウォールの効果は限定的です。
-
-対照的に、Azure RMS ならば、このようなシナリオのすべてにおいて会社の機密情報を保護できます。 暗号化、ID、承認のポリシーを使用して、ファイルや電子メールを保護します。また、複数のデバイス (携帯電話、タブレット、および PC) をカバーできます。 データが組織の外に出ても継続的に保護されるので、情報を組織の内外で保護できます。
+このクラウドベースのサービスでは、暗号化、ID、承認のポリシーを使用して、ファイルや電子メールを保護します。また、多数のデバイス (携帯電話、タブレット、および PC) で使用できます。 データが組織の外に出ても継続的に保護されるので、情報を組織の内外で保護できます。
 
 たとえば、ドキュメントはパートナー企業に電子メールで送信されたり、クラウド ドライブに保存されたりします。 Azure RMS が提供する持続的な保護により、企業データがセキュリティで保護されるだけでなく、法定コンプライアンス、法的証拠開示要件、または一般的な情報管理の効率化が促進されます。
 
@@ -36,7 +34,7 @@ Azure Rights Management (Azure RMS) は、さまざまな課題が伴う現代�
 次の図は、Azure RMS がオンプレミスのサーバーやサービスに加えて Office 365 の Rights Management ソリューションとしても機能するしくみを示します。 この図に示しているように、エンド ユーザーの間でよく使用される Windows、Mac OS、iOS、Android のデバイスや Windows Phone もサポートします。
 
 > [!NOTE]
-Azure RMS は、Office 365、Enterprise Mobility Suite、Azure RMS Premium など、さまざまなクラウド サブスクリプションと共に使用できます。 詳細については、[Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)に関するページを参照してください。
+Azure RMS を使用した保護はさまざまなクラウド サブスクリプションに含まれており、さまざまな機能をサポートしています。 詳細については、[Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) のマーケティング サイトを参照してください。
 
 ![Azure RMS のしくみ](../media/AzRMS_elements.png)
 
@@ -54,13 +52,13 @@ Azure RMS の詳細については、次を参照してください。
 
 すぐに自分で Azure RMS を試してみる場合は、「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」をご利用ください。
 
-ただし、Azure RMS を組織にデプロイする準備ができたら、「[Azure Rights Management のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
+ただし、Azure Information Protection を組織にデプロイする準備ができたら、「[Azure Rights Management のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
 
 > [!TIP]
 > 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

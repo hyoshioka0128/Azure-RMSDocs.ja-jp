@@ -1,26 +1,26 @@
 ---
-title: "Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護) | Azure RMS"
-description: "インプレースのファイルを保護する場合は、元の保護されていないファイルを置き換えます。 次に、その場所にファイルを残したまま別のフォルダーやデバイスにコピーするか、ファイルのあるフォルダーを共有すると、ファイルは保護されたままになります。 エクスプローラーまたは Office アプリケーションから直接、保護されたファイルを電子メールで共有することをお勧めしますが、保護されたファイルを電子メール メッセージに添付することもできます。"
+title: "Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護) | Azure Information Protection"
+description: "コンピューター、サーバー、または別のストレージ デバイスにファイルを安全に格納する方法についての手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 55f5f9dd0dd90bfa98798b4fc0b4cb4bd3c90076
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
 
 
 ---
 
 # Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 インプレースのファイルを保護する場合は、元の保護されていないファイルを置き換えます。 次に、その場所にファイルを残したまま別のフォルダーやデバイスにコピーするか、ファイルのあるフォルダーを共有すると、ファイルは保護されたままになります。 エクスプローラーまたは Office アプリケーションから直接、電子メールで保護されたファイルを共有することをお勧めしますが、保護されたファイルを電子メール メッセージに添付することもできます (「[Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)」を参照してください)。
 
@@ -66,6 +66,6 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
