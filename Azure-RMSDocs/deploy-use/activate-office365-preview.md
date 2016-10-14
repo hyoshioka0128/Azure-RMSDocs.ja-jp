@@ -3,7 +3,7 @@ title: "Office 365 管理センター プレビューから Azure Rights Managem
 description: "Office 365 管理センターの新しいプレビュー バージョン (Office 365 管理センター プレビュー) にアクセスできる場合の、Azure Rights Management サービス向けのアクティブ化手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: 9f6df7542a96fc04873eff452db4e7b5606e989e
+ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
+ms.openlocfilehash: ca1547a6ff00b7100cd52c34938bf6e088085f8a
 
 
 ---
@@ -41,9 +41,9 @@ Office 365 管理センターの新しいプレビュー バージョン (**Offi
     - 検索するには、**[ホーム]** ページの検索ボックスで、「**著作権管理**」と入力し、検索結果から **[Microsoft Azure rights management settings]** をクリックします。
 
         > [!NOTE]
-        >このオプションに移動する場合、ディスプレイによっては、このオプションを表示するのに画面をスクロールする必要がある場合があります。 ただし、このページの一覧に表示されない場合や検索結果が返されない場合は、お客様のサービス プランまたは製品バージョンに Azure Information Protection の Azure Rights Management サービスが含まれていないことが考えられます。
+        >このオプションに移動する場合、ディスプレイによっては、このオプションを表示するのに画面をスクロールする必要がある場合があります。 ただし、このページの一覧に表示されない場合や検索結果が返されない場合は、お客様のサービス プランに Azure Information Protection の Azure Rights Management サービスが含まれていないことが考えられます。
         >
-        >サブスクリプションに Azure Rights Management が含まれていることを確認するには、[サブスクリプション情報](https://go.microsoft.com/fwlink/?LinkId=827589)を参照してください。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
+        >Azure Rights Management サービスをアクティブ化するには、[Azure Information Protection Premium プラン](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
 
 4. **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]**をクリックします。
 
@@ -58,6 +58,6 @@ Office 365 管理センターの新しいプレビュー バージョン (**Offi
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

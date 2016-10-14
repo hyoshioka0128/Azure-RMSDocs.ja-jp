@@ -3,7 +3,7 @@ title: "Azure Rights Management テナント キーを計画して実装する |
 description: "Azure Information Protection テナント キーに関する計画および管理に役立つ情報です。 Microsoft がテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
-ms.openlocfilehash: 967eda9a180f24bc847b55d4315c97dfabb90714
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 70f4b178d2814683551574f4e777213eea914477
 
 
 ---
@@ -127,7 +127,7 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
     ![Excel のログ ファイル、テナント キーが使用されていることがわかる](../media/RMS_Logging.png)
 
-    使用状況ログの詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
+    使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
 3.  テナント キーを維持管理します。
 
@@ -136,6 +136,6 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

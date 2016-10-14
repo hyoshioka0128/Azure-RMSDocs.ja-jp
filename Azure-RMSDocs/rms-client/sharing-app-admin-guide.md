@@ -3,7 +3,7 @@ title: "Rights Management 共有アプリケーション管理者ガイド | Azu
 description: "Windows 用 Microsoft Rights Management 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの手順および情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7ca9476d99457c814755b118660743b27ad78dbc
-ms.openlocfilehash: 73fd286c8112392bf7cb93468a27188aae6c22de
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 4a551f198b0469f82c14120c0c6f2bb7d055afe9
 
 
 ---
@@ -382,7 +382,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 また、ユーザーと管理者がドキュメント追跡サイトを使用する方法をログに記録する要求の種類もあります。 たとえば、**RevokeAccess** は、ユーザーまたはユーザーの代理の管理者が、ドキュメント追跡サイトでドキュメントを取り消した場合の要求の種類です。 この要求の種類と AdminAction フィールドを組み合わせて、ユーザーが自分のドキュメントを取り消したか (AdminAction フィールドが空)、管理者がユーザーの代理でドキュメントを取り消したか (AdminAction が true) を判断できます。
 
 
-使用状況ログの詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
+使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
 ## AD RMS のみ: 組織内での複数の電子メール ドメインのサポート
 AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユーザーが複数の電子メール ドメインを保有している場合は、次のレジストリ編集を行います。
@@ -402,6 +402,6 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

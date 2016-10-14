@@ -1,9 +1,9 @@
 ---
-title: "AD RMS から Azure Rights Management への移行 - フェーズ 2 | Azure Information Protection"
+title: "AD RMS から Azure Information Protection への移行 - フェーズ 2 | Azure Information Protection"
 description: "AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 5 が含まれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f9a7ceee318fee5414e02af7927256e74800a16
-ms.openlocfilehash: 113636139f0ff6e47a5b5c0467dfe8616c641e04
+ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
+ms.openlocfilehash: c10e8b46fae2158e561421e8e5090d0cd9edbb83
 
 
 ---
@@ -131,6 +131,6 @@ Redirect_OnPrem.cmd:
 移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

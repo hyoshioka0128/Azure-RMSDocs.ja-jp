@@ -3,7 +3,7 @@ title: "Azure Information Protection の管理情報とサポート | Azure Info
 description: "新しいリリース、サポート オプション、および Microsoft に連絡して問題を報告する方法などの情報を含む、管理者向けリソース。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 10/04/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40fadcda8a92b3427f46183a5e13e5ea5f689930
-ms.openlocfilehash: 9d8a711e43cf9e8003ebc4e1c87d4e1e996ddeb2
+ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
+ms.openlocfilehash: 1ca9b1d4b3af81a892e001c639ad79ac931233be
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: 9d8a711e43cf9e8003ebc4e1c87d4e1e996ddeb2
 |… サービスについて推奨されるドキュメントを参照する →|[Azure Information Protection ドキュメント](https://docs.microsoft.com/information-protection/)の開始ページを使用します。|
 |… ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する →| [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)に電子メールを送信します|
 |… 製品グループからの Information Protection に関するツイートおよびドキュメントの更新に関するお知らせを受け取る →|Microsoft Information Protection チームのリーダーである Dan Plastina をフォローします。  [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)を参照してください|
-|… サブスクリプション情報とサポート対象の機能を確認する →|Azure Information Protection サイトの[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)を使用します。|
+|… サブスクリプション情報とサポート対象の機能を確認する →|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)」を参照してください。|
 
 
 ## 新しいリリースについての情報
@@ -88,6 +88,6 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: "iOS 用および Android 用の Azure Information Protection アプリの使用に役立つよく寄せられる質問"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
-ms.openlocfilehash: 42368b8ee50acf09c6af45182ace1f159a4e5f02
+ms.sourcegitcommit: fd11b55ec8ee11f594c33a5a46694d83b2db6953
+ms.openlocfilehash: ff2b28d9774682abbe77b484b097ea51709a3234
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 42368b8ee50acf09c6af45182ace1f159a4e5f02
 
 ## Azure Information Protection アプリを使ってできる操作
 
-このアプリでは、権利で保護された電子メール メッセージ (.rpmsg ファイル) を表示できます (ただし、新規作成や返答を行うことはできません)。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイル、およびその他の .pfile として保護されたファイル形式を表示できます (ただし、新規作成や編集を行うことはできません)。 
+このアプリでは、権利で保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイル、およびその他の .pfile として保護されたファイル形式を表示できます。 現時点では、このアプリを使用して、保護されたメール メッセージを新規作成したり、メール メッセージに返信したり、保護されたファイルを作成または編集したりすることはできません。
 
 ## SharePoint の保護されているライブラリと OneDrive For Business にある PDF ファイルを開くことはできますか。
 
@@ -64,6 +64,6 @@ ms.openlocfilehash: 42368b8ee50acf09c6af45182ace1f159a4e5f02
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

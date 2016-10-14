@@ -3,7 +3,7 @@ title: "Office 365 クラシック管理センターから Azure Rights Manageme
 description: "Office 365 管理センターのクラシック (オリジナル) バージョンにアクセスできる場合の、Azure Rights Management サービスのアクティブ化手順です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: 8e2b4befc9acd2f50472169b8195d2510fa22be8
+ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
+ms.openlocfilehash: 69ee78823c2a0500596dec24f44ecba8329af516
 
 
 ---
@@ -39,7 +39,7 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
     > [!NOTE]
     >このオプションが表示されない場合、サービス プランまたは製品バージョンが Azure Information Protection の Azure Rights Management サービスを含んでいないことが考えられます。
     >
-    >サブスクリプションに Azure Rights Management が含まれていることを確認するには、[サブスクリプション情報](https://go.microsoft.com/fwlink/?LinkId=827589)を参照してください。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
+    >Azure Rights Management サービスをアクティブ化するには、[Azure Information Protection Premium プラン](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。 この問題でサポートが必要な場合は、 [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)宛てに電子メール メッセージを送信してください。
 
 5. [ **RIGHTS MANAGEMENT** ] ページで、[ **管理**] をクリックします。
 
@@ -53,6 +53,6 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
