@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: e47c5331f49c62a00617f40b1af7ffdc4a89dcfd
+ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
+ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
 
 
 ---
@@ -61,8 +61,6 @@ ms.openlocfilehash: e47c5331f49c62a00617f40b1af7ffdc4a89dcfd
 Active Directory Rights Management ライセンス契約 (ADRMLA) チームは、電子メールによる要求には 3 営業日以内に応答します。郵送で要求を送信した場合、応答にかかる期間はそれより長くなります。 応答には、使用許諾契約書用紙と詳細な手順が含まれます。 契約書のすべてのページを読み、署名してから ADRMLA チームに返送してください。 使用許諾契約書のフォントを変更したり、段落の書式を変更したりしないでください。
 
 ADRMLA チームから受信した手順に従ってください。 この手順では、証明書要求を満たすために必要なデジタル情報の項目が一覧表示されます。 この手順に従うことにより、遅延を減らすことができます。
-
-運用証明書が作成されると、ADRMLA チームによってユーザーに転送されます。 証明書への ADRMLA チームの応答は、電子メールの場合は最大で 15 営業日、郵送の場合はそれより長くかかる場合があることに注意してください。
 
 
 ## Rights Management Service Client 2.1 のインストールのオプションと要件
@@ -132,6 +130,6 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
