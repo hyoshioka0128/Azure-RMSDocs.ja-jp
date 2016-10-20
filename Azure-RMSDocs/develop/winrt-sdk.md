@@ -82,7 +82,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Windows API リファレンス](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
 
 
 

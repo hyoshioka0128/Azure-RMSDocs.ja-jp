@@ -78,7 +78,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 [Windows Phone の開発](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Windows API リファレンス](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
