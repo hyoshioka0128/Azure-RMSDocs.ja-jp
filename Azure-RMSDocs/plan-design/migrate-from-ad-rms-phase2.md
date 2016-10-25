@@ -3,7 +3,7 @@ title: "AD RMS から Azure Information Protection への移行 - フェーズ 2
 description: "AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 5 が含まれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
-ms.openlocfilehash: c10e8b46fae2158e561421e8e5090d0cd9edbb83
+ms.sourcegitcommit: 25f7c2e5eb226fcf7c30026a37a767e559a522ad
+ms.openlocfilehash: 810e540e02db0b4a142471dd89e30663bd61f22c
 
 
 ---
@@ -39,6 +39,8 @@ Windows クライアントの場合:
 
     > [!IMPORTANT]
     > この手順では、**adrms** および **adrms.contoso.com** のアドレス例を、実際の AD RMS サーバーのアドレスに置き換える必要があります。 これを行うときは、アドレスの前または後に余計なスペースが入らないように注意してください。余計なスペースがあると、移行スクリプトが中断し、問題の根本原因の特定が非常に困難になります。 編集ツールによっては、テキストを貼り付けた後でスペースが自動的に追加されることがあります。
+    >
+    > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、https:// rms.treyresearch.net:443/_wmcs/licensing となっている必要があります。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、**[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、https://rms.treyresearch.net**:443** などとします。
 
 3. Office 2016 を使用している場合: スクリプトは Office 2016 の構成を含むようにまだ更新されていないため、このバージョンの Office を使用している場合は、スクリプトを手動で更新する必要があります。
 
@@ -131,6 +133,6 @@ Redirect_OnPrem.cmd:
 移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

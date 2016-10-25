@@ -3,15 +3,15 @@ title: "Azure Information Protection とは | Azure Information Protection"
 description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 590f12e0c6c6122a6bc0a559940870c18f0e2d39
-ms.openlocfilehash: 350a3cb877674208b4c560bb841135904aee1136
+ms.sourcegitcommit: 0098fa28313561e99f39e2539e20c8a6bc0207f7
+ms.openlocfilehash: eaaa08a99b3c065422dd8b0bc01d89ead15e9d49
 
 
 ---
@@ -84,9 +84,21 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- ビデオ プレゼンテーション:
+- ビデオの概要
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+
+    さらに、Microsoft Ignite 2016 では Azure Information Protection に関する多くのオンデマンド セッションが提供されます。
+
+    - [BRK2127: データを安全に保護し共有するために包括的な ID ベースのソリューションを採用する](https://myignite.microsoft.com/videos?q=BRK2127)
+    
+    - [THR2107: Azure Information Protection を使用して安全に共同作業を行う](https://myignite.microsoft.com/videos?q=THR2107)
+    
+    - [THR2108: Azure Information Protection を使用してデータを包括的に保護する](https://myignite.microsoft.com/videos?q=THR2108)
+    
+    - [BRK3095: 分類、ラベル付け、保護によって永続的なデータ保護が実現されるしくみを説明する](https://myignite.microsoft.com/videos?q=BRK3095)
+    
+    - [BRK2128: Microsoft Office 365 と Azure Information Protection を利用してセキュリティで保護された電子メールを送信する](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
 ## 次のステップ
@@ -96,6 +108,6 @@ Azure Information Protection は、Azure Information Protection クライアン�
 Azure Rights Management または Azure Information Protection の別名 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

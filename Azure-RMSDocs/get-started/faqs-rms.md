@@ -3,7 +3,7 @@ title: "Azure Information Protection のデータ保護サービス、Azure Righ
 description: "Azure Information Protection のデータ保護サービス、Azure Rights Management (Azure RMS) に関してよく寄せられる質問の一部"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 114dfd2a0f19205432771b5dc17ddcb60f7ec44b
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 874836e1a0abc9bbb3f5d881980ba0d5dfe30869
 
 
 ---
@@ -94,7 +94,7 @@ Azure AD Premium の機能では、[属性ベースのルール](https://azure.m
 
 
 ## Azure RMS でサポートされているデバイスとファイルの種類を教えてください。
-Azure Rights Management サービスをサポートするデバイスの一覧については、「[Azure RMS の要件: Azure RMS をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」を参照してください。 サポートされるデバイスによっては一部の Rights Management 機能がサポートされていないため、「[Azure RMS の要件: アプリケーション](../get-started/requirements-applications.md)」の表も確認してください。
+Azure Rights Management サービスをサポートするデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」をご覧ください。 サポートされるデバイスによっては一部の Rights Management 機能がサポートされていないため、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表も確認してください。
 
 Azure Rights Management サービスはあらゆる種類のファイルに対応しています。 テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、他のいくつかのアプリケーションのファイルの種類については、Azure Rights Management は暗号化と権限の適用 (アクセス許可) の両方を含むネイティブな保護を提供します。 他のすべてのアプリケーションとファイルの種類については、ファイルのカプセル化と、ユーザーにファイルを開く権限があるかどうかを確認する認証という一般的な保護機能が提供されます。
 
@@ -145,6 +145,6 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 
