@@ -3,7 +3,7 @@ title: "Azure Information Protection に関してよく寄せられる質問 | A
 description: "Azure Information Protection とそのデータ保護サービス、Azure Rights Management (Azure RMS) に関してよく寄せられる質問の一部"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c1279e6f2420711f921a8ccae256a80d619e8566
-ms.openlocfilehash: ef4bcd4d4cadc760763d193e082b2faa99b1b2ce
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: d869514a126302522030cfb395b49112c48442dc
 
 
 ---
@@ -31,7 +31,9 @@ Azure Information Protection、または Azure Rights Management サービス (A
 Azure Information Protection では、組織の文書や電子メールを分類、ラベル付け、保護できます。 保護テクノロジでは、Azure Information Protection のコンポーネントになった、Azure Rights Management サービスが利用されます。
 
 ## Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。
-Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)にあるサブスクリプション情報を参照してください。
+Azure Information Protection サイトの[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)と[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を参照してください。 
+
+Rights Management を含む Office 365 サブスクリプションをお持ちの場合は、**機能**ページから [Azure Information Protection ライセンス データシート](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をダウンロードしてください。
 
 ## 新しいリリースが Azure Information Protection ですぐに利用できるようになると聞きました。いつリリースされますか?
 
@@ -49,7 +51,7 @@ Azure Information Protection の[価格設定ページ](https://go.microsoft.com
 
 - [データ保護に関してよく寄せられる質問](faqs-rms.md)
 
-回答が得られない場合、「[Azure Rights Management の情報とサポート](information-support.md)」に一覧表示されているリンクとリソースを使用します。
+回答が得られない場合、「[Azure Information Protection の情報とサポート](information-support.md)」に一覧表示されているリンクとリソースを使用します。
 
 さらに、FAQ がエンドユーザー向けに用意されています。
 
@@ -65,6 +67,6 @@ Azure Information Protection の[価格設定ページ](https://go.microsoft.com
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

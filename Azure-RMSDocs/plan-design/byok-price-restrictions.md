@@ -3,7 +3,7 @@ title: "BYOK の料金と制限事項 | Azure Information Protection"
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 36e392d7e9a2fc8cec0419a3e66f92b42137bc72
-ms.openlocfilehash: 3ed4f3c770c1c34d2bda7481d8ca405c51d3fe8c
+ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
+ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
 
 
 ---
@@ -23,9 +23,34 @@ ms.openlocfilehash: 3ed4f3c770c1c34d2bda7481d8ca405c51d3fe8c
 >*適用対象: Azure Information Protection、Office 365*
 
 
-Azure Rights Management が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしでキーの使用状況ログを記録することができます。 ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
+Azure Information Protection が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしで[キーの使用状況ログを記録](../deploy-use/log-analyze-usage.md)することができます。 
 
-個人用の RMS を使用して無料のアカウントにサインアップしているユーザーがいる場合、この構成では BYOK および使用状況ログの記録を構成するテナント管理者がいないので、これらの機能を使用することはできません。
+ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
+
+Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを専用のサブスクリプションで使用することで、それが Azure Rights Management サービスのみで使用されるようにすることをお勧めします。 
+
+## Azure Key Vault を使用する利点
+
+追加的な保証として Azure Information Protection 使用状況ログを使用することに加えて、これと [Azure Key Vault のログ記録](https://azure.microsoft.com/documentation/articles/key-vault-logging/) との相互参照を行って、Azure Rights Management サービスのみでこのキーが使用されていることを個別に監視することができます。 必要な場合、キー コンテナーに対するアクセス許可を削除することにより、キーへのアクセスをすぐに取り消すことができます。
+
+Azure Information Protection テナント キーに Azure Key Vault を使用するその他の利点:
+
+- Azure Key Vault は一元的なキー管理ソリューションであり、暗号化を使用するさまざまなクラウドベースのサービスおよびオンプレミス サービスに対して一貫した管理ソリューションを実現します。
+
+- Azure Key Vault では、キー管理のためのさまざまな組み込みのインターフェイス (PowerShell、CLI、REST API、Azure ポータルなど) をサポートしています。 監視などの特定のタスク用に最適化された機能を提供するために、Key Vault には他のサービスやツールも統合されています。 たとえば、Operations Management Suite から Log Analytics を介してキーの使用状況ログを分析したり、指定した条件が満たされたときにアラートを設定したりすることができます。
+
+- Azure Key Vault では、セキュリティのベスト プラクティスとして認識されている役割の分離を実現しています。 Azure Information Protection の管理者は、データ分類とデータ保護の管理に専念し、Azure Key Vault の管理者は、暗号化キーの管理と、セキュリティまたはコンプライアンスで必要となる特別なポリシーの管理に専念することができます。
+
+- 組織によっては、マスター キーが存在する必要がある場合、制限を設けているところがあります。 多くの Azure リージョンでサービスが提供されているため、Azure Key Vault ではマスター キーの保存先について高度な制御を行います。 現在、28 の Azure リージョンの中から選択することができ、この数は増える予定です。 詳細については、Azure サイトの [リージョン別の利用可能な製品] (https://azure.microsoft.com/regions/services/) ページを参照してください。
+
+Azure Key Vault では、キーの管理ができるだけでなく、セキュリティ管理者は同じ管理エクスペリエンスによって、暗号化を使用する他のサービスやアプリケーションの証明書やシークレット (パスワードなど) を格納し、アクセスし、管理することができます。 
+
+Azure Key Vault の詳細については、「[Azure Key Vault とは](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
+
+
+## BYOK を使用する場合の制限
+
+個人用の RMS を使用して無料のアカウントにサインアップしているユーザーがいる場合、この構成では BYOK または使用状況ログの記録を構成するテナント管理者がいないので、これらの機能を使用することはできません。
 
 
 > [!NOTE]
@@ -62,6 +87,6 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

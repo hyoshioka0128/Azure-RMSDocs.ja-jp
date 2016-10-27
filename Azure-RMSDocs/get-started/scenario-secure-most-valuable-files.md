@@ -3,7 +3,7 @@ title: "シナリオ - 重要度の高い (いくつかの) ファイルを保�
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
 
 
 ---
@@ -53,7 +53,7 @@ ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |Rights Management 共有アプリケーションは Windows コンピューターにデプロイされるため、次のセクションで説明されているように、これらのファイルをその場で保護できます。|[Rights Management 共有アプリケーションをダウンロードしてインストールする](../rms-client/install-sharing-app.md)|
 |許可されているユーザーが最小バージョンの Office 2013 をインストール済みである|Office 2010 を使用しているユーザーは、Rights Management 共有アプリケーションもインストールする必要があります。|
-|Azure RMS サブスクリプションにドキュメントの追跡が含まれている|Azure RMS のサブスクリプションにドキュメントの追跡と取り消しが含まれていない場合は、ドキュメント追跡サイトを使用して、これらのドキュメントにアクセスするユーザーを確認し、必要に応じてアクセスを取り消すことができません。 この場合は、ドキュメント追跡がサポートされているサブスクリプションを購入するか、この制限を受け入れます。 Azure RMS の[使用状況ログ](../deploy-use/log-analyze-usage.md)機能の使用も検討してください。この機能では、どのユーザーがいつ各ファイルにアクセスしたかなどの情報が提供されるため、潜在的な疑わしい動作の検出に役立ちます。<br /><br />Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)で提供されるサブスクリプション情報を参照してください。|
+|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合は、ドキュメント追跡サイトを使用して、これらのドキュメントにアクセスするユーザーを確認し、必要に応じてアクセスを取り消すことができません。 この場合は、ドキュメント追跡がサポートされているサブスクリプションを購入するか、この制限を受け入れます。 Azure Rights Management サービスの[使用状況ログ](../deploy-use/log-analyze-usage.md)機能の使用も検討してください。この機能では、どのユーザーがいつ各ファイルにアクセスしたかなどの情報が提供されるため、潜在的な疑わしい動作の検出に役立ちます。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
 
 ### カスタム テンプレートを構成するには
 
@@ -147,6 +147,6 @@ ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

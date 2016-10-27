@@ -3,7 +3,7 @@ title: "個人用 RMS にサインアップする方法 | Azure Information Prot
 description: "この無料アカウントのサインアップ手順、およびこのプロセスがどのように機能するかについての技術情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 
 ---
@@ -83,7 +83,7 @@ ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
 
     -   会社が所有するデータの電子情報開示を実行し、必要に応じて、Rights Management を使用して保護されているファイルの暗号化を解除できます。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」を参照してください。
 
-    -   組織で使用された Rights Management のアクティビティをすべてログに記録できます。 この機能は非常に有用であり、保護されたファイルの監視や、それらのファイルに正常にアクセスしているユーザーの監視だけでなく、未承認のユーザーが保護されたファイルへのアクセスを試行している不審な行為を特定することもできます。 詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
+    -   組織で使用された Rights Management のアクティビティをすべてログに記録できます。 この機能は非常に有用であり、保護されたファイルの監視や、それらのファイルに正常にアクセスしているユーザーの監視だけでなく、未承認のユーザーが保護されたファイルへのアクセスを試行している不審な行為を特定することもできます。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
     -   保護されたドキュメントの追跡および取り消しの機能が [Azure RMS サブスクリプション](https://technet.microsoft.com/dn858608)でサポートされている場合、ユーザーはそれらの機能を使用できます。 詳細については、「[RMS 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」の「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)」を参照してください。
 
@@ -97,6 +97,6 @@ ms.openlocfilehash: 362ea0d002e25c830c9e50ac7f1956f1e9ea8bb7
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

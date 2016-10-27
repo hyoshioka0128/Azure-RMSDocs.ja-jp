@@ -3,7 +3,7 @@ title: "Azure Rights Management コネクタを監視する | Azure Information 
 description: "Azure Information Protection からコネクタと組織の Azure Rights Management サービスの使用を監視するのに役立つ情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 954d8b7b62b35f5fdd29e115681d9d5c0da69a86
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
 
 
 ---
@@ -171,7 +171,7 @@ Rights Management サービスのアナライザー ツールを使用すると�
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してこれを実行すると、ログのユーザー ID フィールドには、RMS コネクタに自動的に作成されるサービス プリンシパル名 **Aadrm_S-1-7-0** が含まれます。
 
-使用状況ログの詳細については、「[Azure Rights Management の利用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
+使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
 
 診断のためにより詳細なログ記録が必要な場合は、Windows Sysinternals の [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) を使用し、IIS の既定のサイト用の web.config ファイルを変更して RMS コネクタに対するトレースを有効にすることができます。 このためには、次の操作を行います。
 
@@ -192,6 +192,6 @@ Rights Management サービスのアナライザー ツールを使用すると�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

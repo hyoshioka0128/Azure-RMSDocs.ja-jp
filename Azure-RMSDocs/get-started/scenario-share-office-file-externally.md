@@ -3,7 +3,7 @@ title: "シナリオ - 別の組織のユーザーと Office ファイルを共�
 description: "このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 03bd68b03d423908e7fbe89efb6aac6773283f2f
-ms.openlocfilehash: 1e8ba22c5fdcf3f17b3cec0a99444975c03ec008
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 
 ---
@@ -48,7 +48,7 @@ ms.openlocfilehash: 1e8ba22c5fdcf3f17b3cec0a99444975c03ec008
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |ユーザーは Office 2013 の Outlook を使用する|ユーザーが Office 2016 または Office 2010 を使用している場合は、スクリーン ショットを対応するバージョンに置き換えて、図とユーザーに表示される内容とが一致するようにします。|
-|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)で提供されるサブスクリプション情報を参照してください。|
+|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
 
 ## ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
@@ -154,6 +154,6 @@ ms.openlocfilehash: 1e8ba22c5fdcf3f17b3cec0a99444975c03ec008
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

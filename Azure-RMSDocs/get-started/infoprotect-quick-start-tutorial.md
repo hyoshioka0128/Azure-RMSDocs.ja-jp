@@ -3,15 +3,15 @@ title: "クイック スタート チュートリアル | Azure Information Prot
 description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルです。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: e67fe1e6b63be679ae62bb45359db98df59386da
-ms.openlocfilehash: 3022ef92a04351c76c370ed31b519425923cfa04
+ms.sourcegitcommit: 4f5f7670ce1897a6436e511057fc714c839a8f00
+ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
 
 
 ---
@@ -29,8 +29,10 @@ ms.openlocfilehash: 3022ef92a04351c76c370ed31b519425923cfa04
 ## 必要条件 
 このチュートリアルでは、以下のものが必要です。
 
-- 分類、ラベル付け、および保護のための Azure Information Protection を含むサブスクリプション。 このチュートリアルには、自動化データ分類などのいくつかの高度な機能、ユーザー推奨事項、ドキュメント追跡サイトが含まれます。 サブスクリプションでこれらの機能がサポートされていることを確認してください。 詳細については、Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)で提供されるサブスクリプション情報を参照してください。
-
+- 分類、ラベル付け、および保護のための Azure Information Protection を含むサブスクリプション。 このチュートリアルには、自動化データ分類などのいくつかの高度な機能、ユーザー推奨事項、ドキュメント追跡サイトが含まれます。 サブスクリプションでこれらの機能がサポートされていることを確認してください。 詳細については、Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)」を参照してください。
+    
+    これらの機能のサブスクリプションをお持ちでない場合は、[Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) の無料評価版にサインアップすることができます。
+    
 - Azure のサブスクリプション。Azure ポータルにアクセスして Azure Information Protection ポリシーを構成するために必要です。 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。「[Microsoft Azure はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
 
   > [!TIP] 
@@ -49,6 +51,6 @@ ms.openlocfilehash: 3022ef92a04351c76c370ed31b519425923cfa04
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
