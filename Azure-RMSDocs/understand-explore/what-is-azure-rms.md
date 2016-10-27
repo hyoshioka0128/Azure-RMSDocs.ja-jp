@@ -3,7 +3,7 @@ title: "Azure Rights Management とは | Azure Information Protection"
 description: "Azure Rights Management (Azure RMS) とは、Azure Information Protection が使用する保護テクノロジです。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 21e8bd7bb4b749e0f086a0108bb89778f2d3ce73
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 3582aaba72347e8374f6cb856f52cd129bb83d3e
 
 
 ---
@@ -52,13 +52,13 @@ Azure RMS の詳細については、次を参照してください。
 
 すぐに自分で Azure RMS を試してみる場合は、「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」をご利用ください。
 
-ただし、Azure Information Protection を組織にデプロイする準備ができたら、「[Azure Rights Management のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
+ただし、Azure Information Protection を組織にデプロイする準備ができたら、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
 
 > [!TIP]
-> 追加情報やサポートが必要な場合は、「[Azure Rights Management の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
+> 追加情報やサポートが必要な場合は、「[Azure Information Protection の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

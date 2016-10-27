@@ -3,7 +3,7 @@ title: "管理者とユーザーに表示される内容 | Azure Information Pro
 description: "Azure Rights Management (Azure RMS) テクノロジを使用する場合に管理者とユーザーに表示される内容と、機密情報を保護する方法についての一般的な例をいくつか紹介します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: d1f7b24861848f536a80a8b8889a44b41049e40b
+ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
+ms.openlocfilehash: 4cc2522a03d1d6003d60e9c87fb8bab3c1454df4
 
 
 ---
@@ -73,9 +73,9 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
-- 詳細な手順については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」および「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」をご覧ください。
+- 詳細な手順については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」および「[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」をご覧ください。
 
-- ユーザーの重要な企業ファイル保護の詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」をご覧ください。
+- ユーザーの重要な企業ファイル保護の詳細については、「[Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ](../deploy-use/help-users.md)」をご覧ください。
 
 次に、管理者がテンプレートを適用してファイルやメディアの情報保護を自動的に構成する方法の例を示します。
 
@@ -149,7 +149,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
--   Azure RMS が Exchange Online と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management のサポート](applications-support.md)」の「[Exchange Online と Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server)」セクションをご覧ください。
+-   Azure RMS が Exchange Online と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」の「[Exchange Online と Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server)」セクションをご覧ください。
 
 -   Azure RMS 用に Exchange Online を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションをご覧ください。
 
@@ -183,7 +183,7 @@ SharePoint Online と保護されたライブラリを使用してドキュメ�
 
 **このシナリオに関するその他の詳細については、以下もご覧ください。**
 
--   Azure RMS が SharePoint と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management のサポート](applications-support.md)」の「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションをご覧ください。
+-   Azure RMS が SharePoint と連携する方法の詳細については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」の「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションをご覧ください。
 
 -   Azure RMS 用に SharePoint を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[SharePoint Online と OneDrive for Business: IRM 構成](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションをご覧ください。
 
@@ -241,6 +241,6 @@ Azure RMS の機能の例をいくつか説明しましたが、そのしくみ�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

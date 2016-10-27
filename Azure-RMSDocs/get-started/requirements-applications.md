@@ -3,7 +3,7 @@ title: "アプリケーションでのデータ保護のサポート | Azure Inf
 description: "Azure Information Protection から Azure Rights Management サービスをネイティブにサポートするために、RMS API を使用するアプリケーションを特定します。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a809edc63801912e836878e9205643d7d52188f1
-ms.openlocfilehash: 872e962bc4c08000fea9f81d48dece28a39d91dd
+ms.sourcegitcommit: 451952f7d0c293db2c9d4f5040ef0e14aa973866
+ms.openlocfilehash: a9b0fcddf9b11a8ab2d105ca5fc778831913bb72
 
 
 ---
@@ -58,12 +58,12 @@ ms.openlocfilehash: 872e962bc4c08000fea9f81d48dece28a39d91dd
 SharePoint Online、OneDrive for Business、Outlook Web Access での保護されたコンテンツの表示をサポートします。
 
 ##### 脚注 3:
-受信者が Exchange On-Premises にメールボックスを所有していて、保護された電子メールを受信した場合、このコンテンツは、Outlook などの機能の豊富な電子メール クライアントでのみ開くことができます。  このコンテンツは Outlook Web Access から開くことはできません。
+受信者が保護された電子メールを受信したが、メール サーバーとして Exchange を使用していない場合、または送信者が別の組織に属している場合、このコンテンツは Outlook のような機能が豊富なメール クライアントでしか開くことができません。 このコンテンツは Outlook Web Access から開くことはできません。
 
 ##### 脚注 4:
 Exchange ActiveSync IRM を使用します。Exchange の管理者が有効にする必要があります。 ユーザーは保護された電子メール メッセージを表示、返信、全員に返信することができますが、新しい電子メール メッセージを自身で保護することはできません。
 
-受信者が Exchange On-premises にメールボックスを所有していて、Exchange を使用している別の組織から保護された電子メールを受信した場合、このコンテンツは、Outlook などの機能豊富な電子メール クライアントでのみ開くことができます。  このコンテンツは、Exchange Active Sync IRM を使用するデバイスから開くことはできません。
+受信者が保護された電子メールを受信したが、メール サーバーとして Exchange を使用していない場合、または送信者が別の組織に属している場合、このコンテンツは Outlook のような機能が豊富なメール クライアントでしか開くことができません。 このコンテンツは、Outlook Web Access から開くことも、Exchange Active Sync IRM を使用してモバイル メール クライアントから開くこともできません。
 
 ##### 脚注 5:
 保護されたドキュメントの表示と編集をサポートします。 詳細については、Office ブログの投稿「[Azure Rights Management support comes to Office for iPad and iPhone (Azure Rights Management による iPad および iPone 用 Office 向けのサポート)](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)」を参照してください。
@@ -152,6 +152,6 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 Azure RMS で最も一般的に使用されるアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

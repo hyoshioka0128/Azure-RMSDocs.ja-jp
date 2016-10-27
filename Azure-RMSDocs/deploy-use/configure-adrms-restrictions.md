@@ -2,15 +2,15 @@
 title: "HYOK の制限事項 | Azure Information Protection"
 description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: a99ba607af883d79108829953edbb859a5ea21ae
-ms.openlocfilehash: 5f1bb3fa981938ccefa23737cf222d4caa516aa4
+ms.sourcegitcommit: 821f4c0bfbad4c88bea0fbe26807f8e50677069b
+ms.openlocfilehash: 44a7dc786b678844e58f2a60204853d86c8750a7
 
 
 ---
@@ -44,7 +44,7 @@ Azure RMS は、Microsoft または自社 ("Bring Your Own Key" (BYOK) シナリ
 
 ラベルに AD RMS の保護を使用する場合、Azure RMS の保護よりも、ユーザーに認識されにくくなります。 AD RMS の保護には制限事項があるため、AD RMS の保護を適用するラベルをユーザーが選択する場合の明確な指針を示すようにしてください。
 
-## 制限事項
+## HYOK を使用するときの制限事項
 
 Azure RMS による保護を使うときの利点は得られないことに加えて、AD RMS による保護を Azure Information Protection とともに使う場合は次のような制限が課せられます。
 
@@ -102,6 +102,6 @@ AD RMS の保護のラベルを構成するには、「[Rights Management によ
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

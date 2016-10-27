@@ -4,7 +4,7 @@ description: "Microsoft Rights Management SDK 2.1 は、Windows クライアン�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -23,11 +23,11 @@ ms.openlocfilehash: bb20d796e5a852aa9da224cbf218b9a166a9dbd8
 # API reference
 
 Microsoft Rights Management SDK 2.1 は、Windows クライアントの RMS 有効化をサポートしています。 詳細については、[リリース ノート](release-notes-rtm.md)を参照してください。
-- [定数](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/constants)
-- [データ型](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/data types)
-- [関数](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/functions)
-- [構造体](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/structures)
-- [エラー コード](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/Error codes)
+- [定数](https://msdn.microsoft.com/library/hh535291.aspx)
+- [データ型](https://msdn.microsoft.com/library/hh535288.aspx)
+- [関数](https://msdn.microsoft.com/library/hh535289.aspx)
+- [構造体](https://msdn.microsoft.com/library/hh535294.aspx)
+- [エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
 

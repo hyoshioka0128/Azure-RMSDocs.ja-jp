@@ -142,7 +142,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 [開発者の用語と概念](core-concepts.md)
 
-[Android API リファレンス](android-namespaces.md)
+[Android API リファレンス](https://msdn.microsoft.com/library/dn758245.aspx)
 
  
 

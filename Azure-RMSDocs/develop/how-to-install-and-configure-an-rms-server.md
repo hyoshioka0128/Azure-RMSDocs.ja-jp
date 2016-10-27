@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: ea8ef9108afc01b5046d523cfc8394d81689638b
+ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
+ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
 
 ---
@@ -69,13 +69,27 @@ ms.openlocfilehash: ea8ef9108afc01b5046d523cfc8394d81689638b
 
   クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS クライアントのデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
-1. **EnterpriseCertification**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
+1. **、**
 
-  **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterpriseCertification
 
-2. **EnterprisePublishing**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+   **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+
+2. **(Default) 値をダブルクリックし、**
+
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterprisePublishing
+                  
+   **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > 既定では、これらのキーはレジストリに存在しないため、作成する必要があります。
@@ -96,6 +110,6 @@ ms.openlocfilehash: ea8ef9108afc01b5046d523cfc8394d81689638b
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

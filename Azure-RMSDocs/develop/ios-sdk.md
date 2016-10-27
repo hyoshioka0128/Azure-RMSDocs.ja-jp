@@ -108,14 +108,11 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 * [Developer terms and concepts (開発者の用語と概念)](core-concepts.md)
 
-* [iOS / OS X API Reference (iOS / OS X API リファレンス)](/information-protection/sdk/4.2/api/ios/ios)
+* [iOS / OS X API Reference (iOS / OS X API リファレンス)](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
  
-
-
-
 
 
 

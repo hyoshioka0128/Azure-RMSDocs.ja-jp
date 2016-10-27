@@ -3,7 +3,7 @@ title: "シナリオ – 社外秘の電子メールを送信する | Azure Info
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 
 ---
@@ -54,7 +54,7 @@ ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
 |Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |次のいずれかです。<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md)」 (Office 365: クライアントとオンライン サービスの構成) の「**Exchange Online: IRM configuration**」 (Exchange Online: IRM 構成) セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」|
 |既定の Azure Rights Management テンプレート **&lt;組織&gt; - 社外秘** をアーカイブしていない。 または、より厳しい制限を設定する、あるいは組織内のユーザーのサブセットのみが保護された電子メールを読み取ることができるようにする必要があるため、この目的でカスタム テンプレートを構成した。|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)<br /><br />ヒント: より制限の厳しい使用ポリシーを組織内のすべてのユーザーに対して設定する必要がある場合、最初から新しいテンプレートを作成するのではなく、既定のテンプレートをコピーして編集します。<br /><br />このシナリオの電子メール クライアントでは、更新されたテンプレートはすぐには最新の情報に更新されません。 詳細については、「[ユーザー用のテンプレートの更新](../deploy-use/refresh-templates.md)」を参照してください。|
-|保護された電子メールを送信するユーザーが Outlook 2013、Outlook 2016、または Outlook Web Access を持っている。<br /><br />電子メールを受信するユーザーが Azure Rights Management をサポートする電子メール クライアントを持っている。|Outlook 2010 を使用できますが、[Windows 用の Rights Management 共有アプリケーションをインストール](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) し、それに従ってユーザーの手順を調整する必要があります。<br /><br />Azure Rights Management をサポートする電子メールの一覧については、「[Azure RMS の要件: アプリケーション](../get-started/requirements-applications.md)」の表の「**電子メール**」列を参照してください。|
+|保護された電子メールを送信するユーザーが Outlook 2013、Outlook 2016、または Outlook Web Access を持っている。<br /><br />電子メールを受信するユーザーが Azure Rights Management をサポートする電子メール クライアントを持っている。|Outlook 2010 を使用できますが、[Windows 用の Rights Management 共有アプリケーションをインストール](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) し、それに従ってユーザーの手順を調整する必要があります。<br /><br />Azure Rights Management をサポートする電子メール クライアントの一覧については、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表の「**電子メール**」列を参照してください。|
 
 ## ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
@@ -157,6 +157,6 @@ ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
