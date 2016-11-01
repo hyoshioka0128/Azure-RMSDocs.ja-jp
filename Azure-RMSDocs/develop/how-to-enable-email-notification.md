@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 45724e633e1d31f17782e30713584fe3d3b281b1
+ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
+ms.openlocfilehash: 411c549cc865914c6e35ececad99da0a0d46c5d4
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 45724e633e1d31f17782e30713584fe3d3b281b1
 
 電子メール通知を使用すると、保護されたコンテンツがアクセスされたたときに、そのコンテンツの所有者に通知することができます。
 
-任意のライセンスの電子メール通知をセットアップするには、プロパティの型パラメーター *dwPropID* を [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)、アプリケーション データ フィールドの形式を [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list) として [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) を使用します。
+任意のライセンスの電子メール通知をセットアップするには、プロパティの型パラメーター *dwPropID* を [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)、アプリケーション データ フィールドの形式を [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx) として [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) を使用します。
 
     C++
 
@@ -34,14 +34,14 @@ ms.openlocfilehash: 45724e633e1d31f17782e30713584fe3d3b281b1
 
     // lcid field set to 0 causes the default lcid to be used
 
-    propertyValuePairs[0] = {&quot;MS.Conetent.Name&quot;, 0, &quot;FinancialReport.docx&quot;};
-    propertyValuePairs[1] = {&quot;MS.Notify.Enabled&quot;,0 , &quot;true&quot;};
-    propertyValuePairs[2] = {&quot;MS.Notify.Culture&quot;,0 , “en-US”};
+    propertyValuePairs[0] = {"MS.Conetent.Name", 0, "FinancialReport.docx"};
+    propertyValuePairs[1] = {"MS.Notify.Enabled",0 , "true"};
+    propertyValuePairs[2] = {"MS.Notify.Culture",0 , “en-US”};
 
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-        
+
 
 次の表に RMS 電子メール通知の、アプリケーション データ フィールド、プロパティの名前と値のペアを示します。
 
@@ -58,15 +58,15 @@ ms.openlocfilehash: 45724e633e1d31f17782e30713584fe3d3b281b1
 
 ## 関連項目
 
-* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
-* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)
-* [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list)
+- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
+- [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
+- [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 
