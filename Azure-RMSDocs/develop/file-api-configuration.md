@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
+ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
+ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 
 ---
@@ -63,7 +63,7 @@ ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
 
 - **Off**: 暗号化が無効です。
 
-> [!Note] 
+> [!Note]
 > この設定は、解読には影響しません。 ユーザーが **EXTRACT** 権限を持っている限り、ネイティブ保護と PFile 保護のどちらを使用して暗号化されたファイルでも解読できます。
 
 - **Native**: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p*zzz* になります。*zzz* は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
@@ -71,7 +71,7 @@ ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
 - **Pfile**: PFile 暗号化が使用されます。 暗号化されたファイルでは、元の拡張子に .pfile が追加されます。 たとえば、.txt ファイルを暗号化すると、拡張子は .txt.pfile になります。
 
 
-> [!Note] 
+> [!Note]
 > この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が &quot;Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
 
 その他の値を設定する場合や、値を設定しない場合は、既定の動作が実行されます。
@@ -82,7 +82,7 @@ ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
 -   **txt、xml、jpg、jpeg、pdf、png、tiff、bmp、gif、giff、jpe、jfif、jif ファイル** ネイティブ暗号化が有効になります (xxx は pxxx になります)。
 -   **その他のすべてのファイル** 暗号化は保護されたファイル (pfile) に対応します (xxx は xxx.pfile になります)。
 
-暗号化を試行したファイルの種類がブロックされている場合は、[**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes) エラーが発生します。
+暗号化を試行したファイルの種類がブロックされている場合は、[IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) エラーが発生します。
 
 ### ファイル API - ファイルのサポートの詳細
 
@@ -148,14 +148,14 @@ HKEY_LOCAL_MACHINE
 
 ## 関連項目
 
-* [開発者向け注意事項](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
+- [開発者向け注意事項](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

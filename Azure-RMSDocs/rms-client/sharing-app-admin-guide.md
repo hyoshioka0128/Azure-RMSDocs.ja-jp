@@ -3,7 +3,7 @@ title: "Rights Management 共有アプリケーション管理者ガイド | Azu
 description: "Windows 用 Microsoft Rights Management 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの手順および情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 4a551f198b0469f82c14120c0c6f2bb7d055afe9
+ms.sourcegitcommit: e5decd2df9135317f2e0da4951a177211342d7ac
+ms.openlocfilehash: e66f0ac6e596840ad940c51db41dbc6f91139e51
 
 
 ---
@@ -170,7 +170,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 ### RMS 共有アプリケーションおよび Office アドインのみをインストールするには
 
-1.  次のコマンドを使用して、AD RMS クライアントと RMS 共有アプリケーションをインストールします。
+1.  次のコマンドを使用してログ ファイルを作成する既存のフォルダーを指定して、AD RMS クライアントと RMS 共有アプリケーションをインストールします。
 
     -   64 ビット Windows の場合:
 
@@ -184,9 +184,11 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         X86\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "<log file path and name>"
         ```
 
-    例: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    たとえば、 `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    
+    このコマンドが正常に実行されない場合でも、**/quiet** パラメーターによりエラー メッセージは表示されません。 インストールが失敗した理由をトラブルシューティングするには、/quiet なしでコマンドを再実行して、エラー メッセージを表示します。
 
-2.  次のコマンドを使用して、Office アドインをインストールします。
+2.  次のコマンドを使用してログ ファイルを作成する既存のフォルダーを指定して、Office アドインをインストールします。
 
     -   64 ビット版の Office の場合:
 
@@ -200,7 +202,9 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x86\Setup.msi" /L*v "<log file path and name>"
         ```
 
-    例: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    たとえば、 `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    
+    このコマンドが正常に実行されない場合でも、**/quiet** パラメーターによりエラー メッセージは表示されません。 インストールが失敗した理由をトラブルシューティングするには、/quiet なしでコマンドを再実行して、エラー メッセージを表示します。
 
 成功したかどうかを確認するには、このトピックの[インストールの成功の確認](#verifying-installation-success)セクションをご覧ください。
 
@@ -402,6 +406,6 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

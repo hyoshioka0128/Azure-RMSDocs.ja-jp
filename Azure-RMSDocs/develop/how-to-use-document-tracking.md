@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3d5d920f628bc39c4c280afa53be0b7199433803
+ms.sourcegitcommit: 04234755fabb10794f5be7c4fc658573bebf6e70
+ms.openlocfilehash: 616d5dd088665abf6e7d435978b021b10c5ac3f5
 
 
 ---
@@ -32,38 +32,33 @@ ms.openlocfilehash: 3d5d920f628bc39c4c280afa53be0b7199433803
 
 特定のコンテンツに対してドキュメント追跡をセットアップするための手順を次に示します。
 
--   **ライセンス メタデータ** オブジェクトを作成します。
+-   **ライセンス メタデータ** オブジェクトを作成してから、**コンテンツ名**と**通知タイプ**を設定します。 必須のプロパティはこれらのプロパティのみです。
+   - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
+   -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
 
-    詳細については、[**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) または [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) に関する説明を参照してください。
+ポリシーの種類 (テンプレートまたはアドホック) を選択します。
+- テンプレート ベースのドキュメント追跡の場合は、**ユーザー ポリシー** オブジェクトを作成し、ライセンス メタデータをパラメーターとして渡します。
+  - Android - [UserPolicy.create](https://msdn.microsoft.com/library/dn790887.aspx)
+  - iOS - [MSUserPolicy.userPolicyWithTemplateDescriptor](https://msdn.microsoft.com/library/dn790808.aspx)
 
--   **コンテンツ名**と**通知の種類**を設定します。 必須のプロパティはこれらのプロパティのみです。
-
-    詳細については、プラットフォームの適切なライセンス メタデータ クラスのプロパティ アクセス メソッド ([**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) または [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc)) に関する説明を参照してください。
-
--   ポリシーの種類 (テンプレートまたはアドホック):
-
-    -   テンプレート ベースのドキュメント追跡の場合は、**ユーザー ポリシー** オブジェクトを作成し、ライセンス メタデータをパラメーターとして渡します。
-
-        詳細については、[**UserPolicy.create**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) と [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc) に関する説明を参照してください。
-
-    -   アドホック ベースのドキュメントの追跡の場合は、**ライセンス メタデータ** プロパティを**ポリシー記述子**オブジェクトに設定します。
-
-        詳細については、[**PolicyDescriptor.getLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java)、[**PolicyDescriptor.setLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) および [**MSPolicyDescriptor.licenseMetadata**](/information-protection/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc) に関する説明を参照してください。
+- アドホック ベースのドキュメントの追跡の場合は、**ライセンス メタデータ** プロパティを**ポリシー記述子**オブジェクトに設定します。
+  - Android - [PolicyDescriptor.setLicenseMetadata](https://msdn.microsoft.com/library/mt573698.aspx)
+  - iOS -  [MSPolicyDescriptor.licenseMetadata](https://msdn.microsoft.com/library/mt573693.aspx)
 
     **注**: ライセンス メタデータ オブジェクトは、特定のユーザー ポリシーのドキュメント追跡の設定プロセス中に直接アクセスできる唯一のオブジェクトです。 ユーザー ポリシー オブジェクトが作成されると、関連付けられているライセンス メタデータにアクセスできなくなります。つまり、ライセンス メタデータの値を変更しても効果はありません。
 
      
 
--   ドキュメント追跡のためのプラットフォーム登録メソッドを呼び出します。
-
-    [**MSUserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) または [**UserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) に関する説明を参照してください。
-
- 
+-   最後に、ドキュメント追跡のためのプラットフォーム登録メソッドを呼び出します。
+  - Android - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) または [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx)
+  - iOS - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)
 
  
 
+ 
 
 
-<!--HONumber=Sep16_HO5-->
+
+<!--HONumber=Oct16_HO3-->
 
 

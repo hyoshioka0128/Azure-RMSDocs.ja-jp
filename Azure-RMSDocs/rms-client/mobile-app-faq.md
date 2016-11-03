@@ -4,7 +4,7 @@ description:
 keywords: "iOS 用および Android 用の Azure Information Protection アプリの使用に役立つよく寄せられる質問"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7ca40550f16dff0cc4979eb029d9eb7dd68414f
-ms.openlocfilehash: da77d799128e110679c972629fa9f816487ccb4f
+ms.sourcegitcommit: c03bcfc5590035ab0d51cb3b4f2b7196db458ea3
+ms.openlocfilehash: 1829557b41d2c49ac661cbde96f69dda2ccc5b19
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: da77d799128e110679c972629fa9f816487ccb4f
 
 ## Azure Information Protection アプリを使ってできる操作
 
-お使いの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合、このアプリを使うと、権利が保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 また、このアプリでは、権利が保護された PDF ファイル、権利が保護された画像ファイルやテキスト ファイル、および汎用的に保護されたファイル (拡張子が .pfile のファイル) を表示することもできます。 現時点では、このアプリを使用して、保護されたメール メッセージを新規作成したり、メール メッセージに返信したり、保護されたファイルを作成または編集したりすることはできません。
+お使いの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合、このアプリを使うと、権利が保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルを表示することもできます。 現時点では、このアプリを使用して、保護されたメール メッセージを新規作成したり、メール メッセージに返信したり、保護されたファイルを作成または編集したりすることはできません。
 
 ## SharePoint の保護されているライブラリと OneDrive For Business にある PDF ファイルを開くことはできますか。
 
@@ -43,7 +43,7 @@ ms.openlocfilehash: da77d799128e110679c972629fa9f816487ccb4f
 
 - **権利が保護された PDF ファイル**: Windows コンピューターの Rights Management 共有アプリケーションまたは Rights Management をネイティブにサポートする PDF アプリケーションを使用して、権利が保護された PDF ファイルを電子メールの添付ファイルとして自分自身に送信します。 または、自分の電子メール アドレスを使用し、SharePoint で保護されたライブラリに PDF ファイルをアップロードして共有します。
 
-- **.ptxt、.pjpg、.pfile**: Windows コンピューターの Rights Management 共有アプリケーションと [[保護ファイルの共有]](sharing-app-protect-by-email.md) オプションを使用して、保護されたファイルを電子メールの添付ファイルとして自分自身に送信します。 テストのために使用できるすべてのファイルの種類の一覧については、Rights Management 共有アプリケーション管理者ガイドの「[サポートされているファイルの種類とファイル名拡張子](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションの最初の表を参照してください。 
+- **.ptxt、.pjpg、.ppng**: Windows コンピューターの Rights Management 共有アプリケーションと [[保護ファイルの共有]](sharing-app-protect-by-email.md) オプションを使用して、保護されたファイルを電子メールの添付ファイルとして自分自身に送信します。 テストのために使用できるすべてのファイルの種類の一覧については、Rights Management 共有アプリケーション管理者ガイドの「[サポートされているファイルの種類とファイル名拡張子](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションの最初の表を参照してください。 
 
 これらのファイルを Azure Information Protection ビューアー アプリで表示するには、電子メールの添付ファイルまたはリンクをタップします。 ファイルを開くアプリの選択を求められたら、**[AIP Viewer]** (AIP ビューアー) アプリを選択します。 職場または学校アカウントでサインインするように求められます。 正常に認証されると、Azure Information Protection アプリで電子メールまたはファイルが表示されて読めるようになります。
 
@@ -58,14 +58,6 @@ ms.openlocfilehash: da77d799128e110679c972629fa9f816487ccb4f
 ## このアプリで開くことができるファイル拡張子
 
 .rpmsg、.pdf、.ppdf、.pjpg、.ptxt、およびその他のいくつかのテキストと画像ファイル形式を開くことができます。
-
-## 保護されている .pfile を表示する前に同意が必要な理由
-
-次の内容を認識していることを確認するために同意が必要です。
-
-- ドキュメントの所有者は、お客様が権限を遵守することを想定しています。
-
-- このコンテンツをサード パーティのアプリケーションで開くと、監査されます。
 
 ##  このアプリに関するフィードバックを提供する方法
 

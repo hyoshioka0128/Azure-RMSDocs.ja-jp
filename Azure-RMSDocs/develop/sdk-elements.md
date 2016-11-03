@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: fa85dde3f578f51efa57af78e211d3e712378b61
+ms.sourcegitcommit: 4e96ba043584c5d8c140d6804c72cf63362f58c5
+ms.openlocfilehash: a251723b6c42058091d57067724e89a1816bcaa1
 
 
 ---
@@ -43,9 +43,9 @@ Rights Management サービス SDK 2.1 には、次のファイルが含まれ�
 |Ipcerror.h|\inc|RMS SDK 2.1 によってエクスポートされたパブリック エラー コードが含まれています。|
 |Ipcfile.h|\inc|RMS SDK 2.1 によってエクスポートされた File API インターフェイスが含まれています。|
 |Msipc.lib|\lib|RMS SDK 2.1 を使用して x86 アプリケーションを構築するときにリンクするライブラリ。|
-|Msipc_s.lib|\lib|x86 アプリケーション用の [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) のエントリ ポイントを提供します。|
+|Msipc_s.lib|\lib|x86 アプリケーション用の [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) のエントリ ポイントを提供します。|
 |Msipc.lib|\lib\x64|RMS SDK 2.1 を使用して x64 アプリケーションを構築するときにリンクするライブラリ。|
-|Msipc_s.lib|\lib\x64|x64 アプリケーション用の [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) のエントリ ポイントを提供します。|
+|Msipc_s.lib|\lib\x64|x64 アプリケーション用の [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) のエントリ ポイントを提供します。|
 |Genmanifest.exe|\tools|RMS 対応アプリケーションの開発時に使用するマニフェストを生成します。|
  
 
@@ -55,6 +55,6 @@ Rights Management サービス SDK 2.1 には、次のファイルが含まれ�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 
