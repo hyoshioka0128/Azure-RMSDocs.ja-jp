@@ -4,7 +4,7 @@ description: "Azure RMS の暗号化パッケージおよび暗号化パッケ�
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
+ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
+ms.openlocfilehash: 0ad53fa82f288153f259870b0022378815f097a8
 
 
 ---
@@ -40,13 +40,13 @@ ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (非推奨アルゴリズムとも呼ばれます)
 
-暗号化パッケージ フラグ (「[**Preferred encryption (推奨される暗号化)**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption)」を参照) は新しいライセンス プロパティ フラグ (**IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**) と併用できます。
+暗号化パッケージ フラグ (「[Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx)」(推奨される暗号化) を参照) はライセンス プロパティ フラグ (*IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*) と併用できます。
 
 新しいライセンス プロパティの使用方法を示すいくつかの単純なコード スニペットは次のとおりです。
 
 ## 非推奨のアルゴリズム
 
-API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、このフラグを使用して既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに使用するため、引き続き機能します。
+API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、このフラグを使用して既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに使用するため、引き続き機能します。
 
 フラグを 1 つ変更するだけで、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 次のコード スニペットの例をご覧ください。
 
@@ -84,7 +84,7 @@ API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開と
 この例は*非推奨アルゴリズム*をサポートする新しい方法も示しています。
 
     C++
-    
+
     hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
                                     0,
                                     NULL,
@@ -103,6 +103,6 @@ API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開と
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

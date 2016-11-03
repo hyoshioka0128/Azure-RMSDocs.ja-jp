@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
+ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
+ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 すべての RMS 対応アプリケーションは、使用制限を適用する必要があります。 使用制限とは、ユーザーが操作 (例: ドキュメントの印刷) を実行しようとしたが、 その操作を実行するための権限 (例: 印刷権限) がドキュメントの RMS ポリシーによって付与されていない 状態です。
 
-ドキュメントに対するユーザーのアクセス許可は、[**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck) 機能を使用して照会できます。
+ドキュメントに対するユーザーのアクセス許可は、[IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx) 機能を使用して照会できます。
 
 ## Understanding usage restrictions (使用制限について)
 
@@ -48,7 +48,7 @@ ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 ## 関連項目
 
-* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [使用制限のリファレンス](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

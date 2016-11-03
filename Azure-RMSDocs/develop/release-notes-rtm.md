@@ -4,7 +4,7 @@ description:
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 703a30d1dc48856c896cc9763cbf6ea947773d2a
+ms.sourcegitcommit: 1f65f42b54fbca1a0436a0f1f6cc9be60a5e3c68
+ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
 
 
 ---
@@ -52,7 +52,7 @@ ms.openlocfilehash: 703a30d1dc48856c896cc9763cbf6ea947773d2a
 
 ## 2015 年 5 月の更新
 
--   **サービス アプリケーションとクラウド ベースの RMS** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についてのトピックが更新され、この情報取得の処理に関するガイダンスが用意されました。 この更新については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
+-   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についてのトピックが更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 ## 2015 年 4 月の更新
 
@@ -61,13 +61,13 @@ ms.openlocfilehash: 703a30d1dc48856c896cc9763cbf6ea947773d2a
 
     **注**  API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**  フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
 
--   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [**API モード値**](/information-protection/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
+-   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [API モード値](https://msdn.microsoft.com/library/hh535236.aspx) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
 -   **ログ**は、ファイルと Event Tracing for Windows メソッドの両方で実装されました。
 -   **Windows 7 SP1 または Windows Server 2008 R2 コンピューター**を実行している場合は、「開発者向けの重要な注意事項」の下の記述を参照してください。
 
 ## 2015 年 1 月の更新
 
--   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポート されるファイル形式) を参照してください。
+-   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポートされるファイル形式) を参照してください。
 -   **ログの強化による診断の向上** – 確認する必要があるメッセージが**エラー**または**警告**のログ レベルで表示されます。 表示されている例外など、他のすべてのメッセージは**情報**としてログに記録されます。
 
     詳細情報が失われないようにするために、この方法を選択しました。 これにより、重要なメッセージだけが警告レベルで表示されるようになりました。
@@ -89,20 +89,20 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     このリリースで追加された関数:
 
-    **注**  ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべてのトピックに、"**暫定的なものであり、変更される可能性があります**" と記載されています。
+    **注** - ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべてのトピックに、"**暫定的なものであり、変更される可能性があります**" と記載されています。
 
-    -   [**IpcfOpenFileOnHandle**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
-    -   [**IpcfOpenFileOnILockBytes**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
-    -   [**IpcfGetFileProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
-    -   [**IpcfLogicalFileRangeToRawFileRange**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcflogicalfilerangetorawfilerange)
-    -   [**IpcfReadFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfreadfile)
-    -   [**IpcfSetEndOfFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfsetendoffile)
-    -   [**IpcfWriteFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfwritefile)
+    -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
+    -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
+    -   [IpcfGetFileProperty](https://msdn.microsoft.com/library/dn771749.aspx)
+    -   [IpcfLogicalFileRangeToRawFileRange](https://msdn.microsoft.com/library/dn771750.aspx)
+    -   [IpcfReadFile](https://msdn.microsoft.com/library/dn771753.aspx)
+    -   [IpcfSetEndOfFile](https://msdn.microsoft.com/library/dn771754.aspx)
+    -   [IpcfWriteFile](https://msdn.microsoft.com/library/dn771756.aspx)
 
 ## 2014 年 4 月の更新
 
 -   **ファイル API のメモリ使用率** (特に大規模な PFile の場合) が大幅に改善されました。
--   **コンテンツ ID** は、**IPC\_LI\_CONTENT\_ID** プロパティを使用して書き込み可能になりました。 詳細については、「[**License property types**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)」 (ライセンスのプロパティの種類) を参照してください。
+-   **コンテンツ ID** は、**IPC\_LI\_CONTENT\_ID** プロパティを使用して書き込み可能になりました。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
 -   **運用マニフェストの要件** – RMS 対応のアプリケーション/サービスをサーバー モードで実行する場合には、マニフェストは不要になりました。 詳細については、「[Application types](application-types.md)」 (アプリケーションの種類) を参照してください。
 -   **ドキュメントの更新**
 
@@ -132,17 +132,17 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
       - システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
 
-    ファイル API は、[IpcfDecryptFile](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)、[IpcfEncryptFile](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)、[IpcfGetSerializedLicenseFromFile](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile)、[IpcfIsFileEncrypted](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted) という 4 つの新機能を介して実装されます。
+    ファイル API は、[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx) という 4 つの新機能を介して実装されます。
 
     ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
 
 -   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
-    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
+    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
 
--   **問題**: アプリケーションがハンドルを使用して、同じウィンドウに対して [**IpcProtectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) または [**IpcUnprotectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) を 2 回呼び出した場合、RMS SDK 2.1 は **HRESULT** にエラーを返します。
+-   **問題**: アプリケーションがハンドルを使用して、同じウィンドウに対して [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) または [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) を 2 回呼び出した場合、RMS SDK 2.1 は **HRESULT** にエラーを返します。
 
-    **ソリューション**: この問題に対する具体的なガイダンスについては、[**IpcProtectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) および [**IpcUnprotectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) の「解説」を参照してください。
+    **ソリューション**: この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
 
 -   **問題**: 複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
 
@@ -160,24 +160,13 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 名前と説明を取得できない場合、エラーが返されます。 名前と説明は、1 つの LCID に 1 つだけ存在できます。
 
-## 関連項目
 
-* [概要](ad-rms-overview.md)
-* [明示的な所有者権限の追加](add-explicit-owner-rights.md)
-* [ファイル API の構成](file-api-configuration.md)
-* [**IpcfGetSerializedLicenseFromFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile)
-* [**IpcfEncryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
-* [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
-* [**IpcfIsFileEncrypted**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted)
-* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcProtectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcprotectwindow)
-* [**IpcUnprotectWindow**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -3,7 +3,7 @@ title: "Azure Information Protection のデータ保護サービス、Azure Righ
 description: "Azure Information Protection のデータ保護サービス、Azure Rights Management (Azure RMS) に関してよく寄せられる質問の一部"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 874836e1a0abc9bbb3f5d881980ba0d5dfe30869
+ms.sourcegitcommit: ec8609217db42a2cf0b3f89367cf4dee6ccb77de
+ms.openlocfilehash: ae25f5af9784b0de92626dbfe65d4358359b4bd9
 
 
 ---
@@ -129,6 +129,18 @@ Azure RMS のスーパー ユーザー機能を使用してください。スー
 
 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」を参照してください。
 
+## ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
+
+はい。 このメッセージは、その特定のファイルの使用ライセンスを反映します。 使用ライセンスは、保護されたファイルや電子メール メッセージを開くユーザーに付与されるドキュメントごとの証明書です。 この証明書は、ファイルや電子メール メッセージに対するユーザーの権限のほか、コンテンツを暗号化する際に使用される暗号化キー、ドキュメントのポリシー内で別途定義されるアクセス制限を含んでいます。 使用ライセンスの有効期間が切れた場合に、そのファイルまたは電子メール メッセージを開くには、Azure Rights Management サービスに再度、ユーザーの資格情報を送信する必要があります。 
+
+ファイルを取り消すと、そのアクションは、Azure Rights Management サービスにユーザーを認証する場合にのみ適用できます。 そのため、ファイルに 30 日間の使用ライセンス有効期間があり、ユーザーが既にそのドキュメントを開いている場合、ユーザーは引き続きその使用ライセンスの期間中はドキュメントにアクセスすることができます。 使用ライセンスの期限が切れた後は、ドキュメントが取り消されているため、ユーザーのアクセスが拒否される時点で、ユーザーの再認証が必要になります。
+
+テナントの使用ライセンス有効期間の既定値は 30 日間であり、この値は PowerShell のコマンドレット [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx) を使用することで構成できます。 この設定は、カスタム テンプレートでより制限の厳しい設定によって上書きできます。 
+
+テナント設定およびテンプレート設定は、ユーザーが RMS 共有アプリケーションを使用して、オプション **[これらのドキュメントへのアクセスをすぐに取り消せるようにする]** を選択すると上書きできます。 この設定により、実際には使用ライセンスの有効期間が 0 に設定されます。 
+
+使用ライセンスのしくみの情報および例については、[Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx) の詳細な説明を参照してください。
+
 ## Rights Management は画面キャプチャを防止できますか。
 Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows Phone) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピー**の[使用権限](../deploy-use/configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 これに対して、iOS や Mac のデバイスでは、画面キャプチャを禁止するアプリが認められていません。また、(Outlook Web App や Office Online を使用しているなどの場合に) ブラウザーでの画面キャプチャを禁止することも不可能です。
 
@@ -145,6 +157,6 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

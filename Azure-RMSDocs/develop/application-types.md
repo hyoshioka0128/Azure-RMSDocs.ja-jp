@@ -4,7 +4,7 @@ description: "このトピックでは、権限保護対応として作成でき
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dac322fedd1ac23660abb3b79261e8339ffd81ca
+ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
+ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
 
 
 ---
@@ -29,7 +29,7 @@ Rights Management サービス SDK 2.1 では、次のアプリケーション�
 
 ## 単純なアプリケーション
 
-単純なアプリケーションには、指定されたファイルを暗号化するために作成されたコマンド ライン ツールなどがあります。 権限保護に対応する単純なアプリケーションの例については「[IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)」を参照してください。
+単純なアプリケーションには、指定されたファイルを暗号化するために作成されたコマンド ライン ツールなどがあります。 単純な権限保護対応アプリケーションの例は、「[アプリケーションの開発](developing-your-application.md)」で説明されている *IPCHelloWorld* の実装を参照してください。
 
 ### サーバー モード アプリケーション
 
@@ -55,13 +55,13 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 ## 関連項目
 
-* [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld - サンプル アプリケーション](how-to-build-your-first-application.md)
-* [Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)
-* [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
+- [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [アプリケーションの開発](developing-your-application.md)
+- [Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)
+- [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

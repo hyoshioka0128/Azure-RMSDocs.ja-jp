@@ -3,7 +3,7 @@ title: "Azure Rights Management テナント キーを計画して実装する |
 description: "Azure Information Protection テナント キーに関する計画および管理に役立つ情報です。 Microsoft がテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 70f4b178d2814683551574f4e777213eea914477
+ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
+ms.openlocfilehash: ed35e72a5dbe23aba0817640075d34fd01bd269d
 
 
 ---
@@ -94,7 +94,7 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 キーが Key Vault に転送されると、キーには Key Vault でキー ID が付与されます。キー ID は、資格情報コンテナーの名前、キー コンテナー、キーの名前、キーのバージョンが含まれる URL です。 例: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** この URL を指定して、Azure Information Protection から Azure Rights Management サービスにこのキーを使用するように指示する必要があります。
 
-ただし、Azure Information Protection では、Azure Rights Management サービスが組織のキー コンテナーにあるキーを使用することを承認されてからのみ、このキーを使用することができます。 そのために、Azure Key Vault 管理者は、Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) を使用して、Azure Rights Management サービス プリンシパル **Microsoft.Azure.RMS** にアクセス許可を付与する必要があります。 たとえば、
+ただし、Azure Information Protection では、Azure Rights Management サービスが組織のキー コンテナーにあるキーを使用することを承認されてからのみ、このキーを使用することができます。 そのために、Azure Key Vault 管理者は、Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) を使用して、Azure Rights Management サービス プリンシパル **Microsoft.Azure.RMS** にアクセス許可を付与する必要があります。 たとえば、
 
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
@@ -106,7 +106,7 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
-キーの URL が Azure RMS サービスで正しく設定されていることを、Azure Key Vault で確認する必要がある場合は、[Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) を実行して、キーの URL を表示します。
+キーの URL が Azure RMS サービスで正しく設定されていることを、Azure Key Vault で確認する必要がある場合は、[Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) を実行して、キーの URL を表示します。
 
 
 ## 次のステップ
@@ -136,6 +136,6 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 
