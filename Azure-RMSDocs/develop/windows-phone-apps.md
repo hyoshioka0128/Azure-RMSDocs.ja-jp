@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: 790f0d847c57b9e13d9074298b3e89584dc24760
 
 
 ---
 
-# Windows Phone のセットアップ
+# <a name="windows-phone-setup"></a>Windows Phone のセットアップ
 
 
 Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
@@ -31,7 +31,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 
 
 開発システムには、以下のソフトウェアが必要です。
@@ -46,7 +46,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 [Windows Phone の開発](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)の詳細については、Windows Phone デベロッパー センターでご確認ください。
 
-## 開発環境の構成
+## <a name="configuring-your-development-environment"></a>開発環境の構成
 
 
 -   *Visual Studio* を開きます。
@@ -60,7 +60,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
     ![参照の追加](../media/wpsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスの左下で **[参照]** をクリックし、パッケージを解凍したフォルダー内にある *Microsoft.RightsManagment.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** チェック ボックスをオンにして、この参照を追加する必要があります。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/wpsetup-refmngr.png)
 
@@ -68,7 +68,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 これで、独自の Windows Phone アプリを作成する準備が整いました。
 
-### 関連項目
+### <a name="see-also"></a>関連項目
 
 [作業開始](get-started.md)
 
@@ -93,6 +93,6 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

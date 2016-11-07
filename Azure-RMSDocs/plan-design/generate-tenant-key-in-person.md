@@ -18,13 +18,13 @@ ms.openlocfilehash: 4f8b32fa7961b3d59911cc279ac30a7c497deb5f
 
 ---
 
-# テナント キーを生成して転送する - 持参 | RETIRED CONTENT
+# <a name="generate-and-transfer-your-tenant-key-in-person-retired-content"></a>テナント キーを生成して転送する - 持参 | RETIRED CONTENT
 
 >*適用対象: Azure Rights Management、Office 365*
 
 Azure Rights Management では顧客管理テナントキー (Bring Your Own Key (BYOK) とも呼ばれる) に対して Azure Key Vault が使用されるようになったので、この記事の情報は必要なくなり、削除されました。 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -18,7 +18,7 @@ ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
 
 ---
 
-# Azure Rights Management コネクタ用にサーバーを構成する
+# <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
 >*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
 
@@ -28,7 +28,7 @@ Azure Rights Management (RMS) コネクタを使用するオンプレミス サ�
 作業を開始する前に、RMS コネクタをインストールして構成し、コネクタを使用するサーバーに適用される[前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector)をチェックしておいてください。
 
 
-## RMS コネクタを使用するためのサーバーの構成
+## <a name="configuring-servers-to-use-the-rms-connector"></a>RMS コネクタを使用するためのサーバーの構成
 RMS コネクタのインストールと構成が完了したら、Azure Rights Management サービスに接続し、コネクタを使ってこの保護テクノロジを使用するオンプレミス サーバーを構成することができます。 つまり、次のサーバーを構成します。
 
 -   **Exchange 2016 および Exchange 2013** の場合: クライアント アクセス サーバーおよびメールボックス サーバー
@@ -43,7 +43,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 ---
 
-**Microsoft RMS コネクタ用のサーバー構成ツールを使用した自動構成**
+**Microsoft RMS コネクタ用のサーバー構成ツールを使用した自動構成:**
 
 - 利点:
 
@@ -59,7 +59,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 ---
 
-**レジストリの編集による手動構成**
+**レジストリの編集による手動構成:**
 
 - 利点:
 
@@ -83,7 +83,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 Exchange または SharePoint を実行しており、AD RMS を使用するように構成済みの場合、これらのサーバーの構成を変更した後に再起動する必要があります。 Rights Management 用に初めて構成する場合は、サーバーを再起動する必要はありません。 ファイル分類インフラストラクチャを使用するようにファイル サーバーを構成している場合、構成の変更後に、必ず再起動する必要があります。
 
-### Microsoft RMS コネクタ用のサーバー構成ツールの使用方法
+### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Microsoft RMS コネクタ用のサーバー構成ツールの使用方法
 
 1.  Microsoft RMS コネクタ用のサーバー構成ツールのスクリプト (GenConnectorConfig.ps1) をまだダウンロードしていない場合は、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)からダウンロードできます。
 
@@ -126,7 +126,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 >
 > いずれの場合も、コネクタを使用するように構成されていない別のコンピューターにクライアント アプリケーションをインストールする必要があります。 そうすれば、クライアント アプリケーションで RMS が直接使用されるようになります。
 
-## コネクタを使用するための Exchange サーバーの構成
+## <a name="configuring-an-exchange-server-to-use-the-connector"></a>コネクタを使用するための Exchange サーバーの構成
 次の Exchange ロールは RMS コネクタと通信します。
 
 -   Exchange 2016 および Exchange 2013 の場合: クライアント アクセス サーバーおよびメールボックス サーバー
@@ -146,7 +146,7 @@ RMS コネクタを使用するには、サーバーで実行されている Exc
 > [!IMPORTANT]
 > これらのバージョン、またはより新しいバージョンの Exchange および RMS クライアントがインストールされていない場合、コネクタを使用するように Exchange を構成することはできません。 続行する前に、これらのバージョンがインストールされていることを確認してください。
 
-### コネクタを使用するように Exchange サーバーを構成するには
+### <a name="to-configure-exchange-servers-to-use-the-connector"></a>コネクタを使用するように Exchange サーバーを構成するには
 
 1. RMS コネクタ管理ツールと「[RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)」セクションからの情報を使用して、Exchange サーバーに RMS コネクタを使用する権限が付与されていることを確認します。 Exchange が RMS コネクタを使用できるようにするには、この構成が必要です。
 
@@ -168,7 +168,7 @@ RMS コネクタを使用するには、サーバーで実行されている Exc
     > 既定では、**Set-IRMConfiguration -InternalLicensingEnabled $true** を実行すると、IRM はメールボックスだけでなく Outlook Web App とモバイル デバイスに対しても自動的に有効にされます。 ただし、管理者はさまざまなレベルで IRM を無効にできます (例: クライアント アクセス サーバー、Outlook Web App 仮想ディレクトリまたは Outlook Web App メールボックス ポリシー、モバイル デバイス メールボックス ポリシー)。 ユーザーが、Outlook クライアントでは Azure RMS テンプレートを見ることができるのに、Outlook Web App (1 日待った後) またはモバイル デバイスではテンプレートを見ることができない場合は、関連する設定を調べて IRM が無効ではないことを確認します。 詳細については、Exchange のドキュメントの「[クライアント アクセス サーバーで Information Rights Management を有効または無効にする](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx)」を参照してください。 
 
 
-## コネクタを使用するための SharePoint サーバーの構成
+## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>コネクタを使用するための SharePoint サーバーの構成
 次の SharePoint ロールは RMS コネクタと通信します。
 
 -   フロントエンド SharePoint Web サーバー (全体管理サーバーをホストするサーバーを含みます)
@@ -190,7 +190,7 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 
 SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 のサポートが含まれる MSDRM クライアントのバージョンがインストールされている必要があります。 Windows Server 2008 でサポートされている最小バージョンは修正プログラムに含まれており、「 [Windows Server 2008 R2 および Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](http://support.microsoft.com/kb/2627272)」からダウンロードできます。Windows Server 2008 R2 用の最小バージョンは、「 [Windows 7 または Windows Server 2008 R2 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](http://support.microsoft.com/kb/2627273)」からダウンロードできます。 Windows Server 2012 と Windows Server 2012 R2 は、暗号化モード 2 をネイティブでサポートしています。
 
-### コネクタを使用するように SharePoint サーバーを構成するには
+### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>コネクタを使用するように SharePoint サーバーを構成するには
 
 1. RMS コネクタ管理ツールと「[RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)」セクションからの情報を使用して、SharePoint サーバーに RMS コネクタを使用する権限が付与されていることを確認します。 Exchange が RMS コネクタを使用できるようにするには、この構成が必要です。
 
@@ -215,14 +215,14 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
     SharePoint ファームで IRM が有効になったら、各ライブラリの [ **ライブラリの設定** ] ページにある [ **Information Rights Management** ] オプションを使用して、個々のライブラリで IRM を有効にできます。
 
 
-## コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成
+## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成
 RMS コネクタとファイル分類インフラストラクチャを使用して Office ドキュメントを保護する場合は、ファイル サーバーで次のいずれかのオペレーティング システムが実行されている必要があります。
 
 -   Windows Server 2012 R2
 
 -   Windows Server 2012
 
-### コネクタを使用するようにファイル サーバーを構成するには
+### <a name="to-configure-file-servers-to-use-the-connector"></a>コネクタを使用するようにファイル サーバーを構成するには
 
 1.  RMS コネクタ管理ツールと [RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) セクションからの情報を使用して、ファイルサーバーに RMS コネクタを使用する権限が付与されていることを確認します。 Exchange が RMS コネクタを使用できるようにするには、この構成が必要です。
 
@@ -240,7 +240,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 
 3.  RMS Encryption を使用してドキュメントを保護する分類ロールとファイル管理タスクを作成し、自動的に RMS ポリシーを適用するように RMS テンプレートを指定します。 詳細については、Windows Server ドキュメント ライブラリの「 [ファイル サーバー リソース マネージャーの概要](http://technet.microsoft.com/library/hh831701.aspx) 」を参照してください。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーが構成されました。IT 管理者とユーザーは、Azure RMS を使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、RMS 共有アプリケーションをデプロイします。これによって、Office 用のアドオンがインストールされ、ファイル エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
 
 「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」を参照して、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] をユーザーおよび管理者にロールアウトする前にその他の構成手順が必要かどうかを判断します。
@@ -249,6 +249,6 @@ RMS コネクタを監視するには、「[Azure Rights Management コネクタ
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

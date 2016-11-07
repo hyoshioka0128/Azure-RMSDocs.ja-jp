@@ -20,7 +20,7 @@ ms.openlocfilehash: 561ed44582fe2c73cf40ac082bf67e91d37fb351
 
 ---
 
-# Linux のセットアップ
+# <a name="linux-setup"></a>Linux のセットアップ
 
 
 Linux オペレーティング システムの一部のエディションで Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできるようになりました。
@@ -29,21 +29,21 @@ Linux オペレーティング システムの一部のエディションで Mic
 -   [ビルド方法および使用方法](#how-to-build-and-use)
 -   [関連項目](#see-also)
 
-## サポートされるオペレーティング システム
+## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 
 
 Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **注**: Lib とサンプルは Windows と OSX でも正常にコンパイルされていますが、現時点では完全にはサポートされていません。
 
  
 
-## ビルド方法および使用方法
+## <a name="how-to-build-and-use"></a>ビルド方法および使用方法
 
 この SDK について 2 つのガイダンス トピックが GitHub でホストされており、SDK のビルドと使用に関する基本的なガイダンスを入手できます。
 
 -   [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
 -   [How to install and use app on user systems (ユーザー システムにアプリをインストールして使用する方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 
 * [作業開始](get-started.md)
 
@@ -60,6 +60,6 @@ Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **注**: Lib とサンプルは Windows と 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

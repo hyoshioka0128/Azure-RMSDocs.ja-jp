@@ -19,7 +19,7 @@ ms.openlocfilehash: a823d79a9305569962ee165b6eadf1d5384c0c0b
 ---
 
 
-# ユーザー用のテンプレートの更新
+# <a name="refreshing-templates-for-users"></a>ユーザー用のテンプレートの更新
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -33,7 +33,7 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 |Office 2010|ユーザーがログオンしたときに更新されます。<br /><br />強制的に更新するには、ログオフしてもう一度ログオンするようにユーザーに依頼します。 または、以下の「[Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
 RMS 共有アプリケーションを使用しているモバイル デバイスの場合、テンプレートは自動的にダウンロードされるので (必要な場合はさらに更新されます)、追加の構成は必要ありません。
 
-## Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
+## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
 Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
 
 > [!NOTE]
@@ -41,7 +41,7 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
 
 テンプレートを変更するたびにこの手順を実行する必要があります。
 
-### Exchange Online 用のテンプレートを更新するには
+### <a name="to-update-templates-for-exchange-online"></a>Exchange Online 用のテンプレートを更新するには
 
 1.  Exchange Online で Windows PowerShell を使用し、サービスに接続します。
 
@@ -94,13 +94,13 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
+## <a name="office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
 Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有アプリケーションを実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
 
 > [!WARNING]
-> レジストリ エディターを誤って使用すると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
+> レジストリ エディターを誤って使用すると、重大な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
 
-### 自動スケジュールを変更するには
+### <a name="to-change-the-automatic-schedule"></a>自動スケジュールを変更するには
 
 1.  レジストリ エディターを使用して、次のレジストリ値のいずれかを作成し設定します。
 
@@ -124,7 +124,7 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
 2.  テンプレートを直ちに更新する場合は、次の手順に進みます。 それ以外の場合は、Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
-### 直ちに更新するには
+### <a name="to-force-an-immediate-refresh"></a>直ちに更新するには
 
 1.  レジストリ エディターを使用して、 **LastUpdatedTime** 値のデータを削除します。 たとえば、"**2015-04-20T15:52**" と表示されている場合は、この 2015-04-20T15:52 を削除して、何も表示されていない状態にします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
 
@@ -149,13 +149,13 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
 3.  Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
-## Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法
+## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法
 Office 2010 を実行するコンピューター上でレジストリを編集することで、ユーザーがログオフしてもう一度ログオンするまで待たなくても、変更されたテンプレートがコンピューター上で更新されるように値を設定できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
 
 > [!WARNING]
-> レジストリ エディターを誤って使用すると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
+> レジストリ エディターを誤って使用すると、重大な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
 
-### 更新頻度を変更するには
+### <a name="to-change-the-update-frequency"></a>更新頻度を変更するには
 
 1.  レジストリ エディターを使用して、 **UpdateFrequency** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (日数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の表を使用します。
 
@@ -167,7 +167,7 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 
 2.  テンプレートを直ちに更新する場合は、次の手順に進みます。 それ以外の場合は、Office アプリケーションを再起動します。
 
-### 直ちに更新するには
+### <a name="to-force-an-immediate-refresh"></a>直ちに更新するには
 
 1.  レジストリ エディターを使用して、 **LastUpdatedTime** 値のデータを削除します。 たとえば、"**2015-04-20T15:52**" と表示されている場合は、この 2015-04-20T15:52 を削除して、何も表示されていない状態にします。 このレジストリ値データを削除する際にレジストリ パスを検索するには、次の表を使用します。
 
@@ -182,10 +182,10 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 
 3.  Office アプリケーションを再起動します。
 
-## 参照
+## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

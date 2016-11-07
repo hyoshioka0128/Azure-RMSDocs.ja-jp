@@ -20,19 +20,19 @@ ms.openlocfilehash: 28b85313e278455391040797ea2886bd9247abe2
 
 ---
 
-# 方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
+# <a name="howto-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
 このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)」を参照してください。
 
 **重要**  
 Rights Management Services SDK 2.1 サービスを Azure RMS で利用するには、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../get-started/requirements-subscriptions.md)」を参照してください。
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 
 -   RMS SDK 2.1 をインストールして構成する必要があります。 詳細については、[RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)を参照してください。
 -   対称キーのオプションを使用するかその他の方法で、[ACS を介してサービス ID を作成](https://msdn.microsoft.com/en-us/library/gg185924.aspx)して、その処理中にキー情報をメモします。
 
-## Azure Rights Management サービスへの接続
+## <a name="connecting-to-the-azure-rights-management-service"></a>Azure Rights Management サービスへの接続
 
 -   [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) を呼び出します。
 -   [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) を設定します。
@@ -50,9 +50,9 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 **注** - 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 これを行うには、*pConnectionInfo* パラメーターの [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) または [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx) に [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) を入力します。
 
-## 対称キーの生成と必要な情報の収集
+## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>対称キーの生成と必要な情報の収集
 
-### 対称キーを生成する手順
+### <a name="instructions-to-generate-a-symmetric-key"></a>対称キーを生成する手順
 
 -   [Microsoft Online サインイン アシスタント](http://go.microsoft.com/fwlink/p/?LinkID=286152)をインストールします。
 -   [Azure AD PowerShell モジュール](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi)をインストールします。
@@ -78,7 +78,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
       AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
-### **TenantBposId** と **URL** を調べる手順
+### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>**TenantBposId** と **URL** を調べる手順
 
 -   [Azure RMS PowerShell モジュール](https://technet.microsoft.com/en-us/library/jj585012.aspx)をインストールします。
 -   Powershell を起動し、次のコマンドを実行してテナントの RMS 構成を取得します。
@@ -128,7 +128,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
     promptCtx.hCancelEvent = NULL;
     promptCtx.pcCredential = &cred;
 
-### テンプレートの識別と暗号化
+### <a name="identify-a-template-and-then-encrypt"></a>テンプレートの識別と暗号化
 
 -   暗号化に使用するテンプレートを選択します
     [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) を呼び出して、[IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) の同じインスタンスに渡します。
@@ -162,11 +162,11 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 アプリケーションでの Azure Rights Management 使用の有効化に必要な手順が完了しました。
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
-* [Azure Rights Management の概要](https://technet.microsoft.com/en-us/library/jj585016.aspx)
-* [RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)
-* [ACS を介したサービス ID 作成のページ](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
+* [Azure Rights Management の作業の開始](https://technet.microsoft.com/en-us/library/jj585016.aspx)
+* [RMS SDK 2.1 の概要](getting-started-with-ad-rms-2-0.md)
+* [ACS を介したサービス ID の作成](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
 * [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
@@ -184,6 +184,6 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
