@@ -3,7 +3,7 @@ title: "Rights Management 共有アプリケーションのダイアログ ボ�
 description: "RMS 共有アプリケーションの [保護の追加] ダイアログ ボックスまたは [保護ファイルの共有] ダイアログ ボックスでオプションを指定する場合に役立つ情報です。 このダイアログ ボックスは、共有するファイルを保護するとき、またはインプレースでファイルを保護してカスタム アクセス許可を選ぶときに表示されます。"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 25e93f993ef76d0bce61f925c58cc667ccacf7b8
-ms.openlocfilehash: c28651342c3048b783880f8ea3b12acd56d973a2
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 97766046526db5148f03873343a2fb3840392c6a
 
 
 ---
@@ -54,7 +54,7 @@ ms.openlocfilehash: c28651342c3048b783880f8ea3b12acd56d973a2
 
 -   比較として、Rights Management の**組み込み (ネイティブ) 保護**と、それをサポートするアプリケーション (Office ファイルなど) を使用する場合、ファイルが他のユーザーに送信されたり、別の場所に保存されたりした場合でも、ファイルに保護が適用されます。 また、このようなファイルを保護する場合、読み取り専用などの厳しいアクセス許可を使用したり、編集はできても印刷やコピーができないアクセス許可を使用したりできます。 たとえば、 **[レビュー担当者 - 表示のみ]**を選んで、コンテンツが編集、印刷、コピーされないようにすることができます。
 
-詳細については、「[Rights Management 共有アプリケーション管理ガイド](sharing-app-admin-guide.md)」の「[保護のレベル - ネイティブと汎用](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)」セクションを参照してください。
+詳細については、「[Rights Management 共有アプリケーション管理ガイド](sharing-app-admin-guide.md)」の「[保護のレベル - ネイティブと汎用](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)」セクションを参照してください。
 
 ## <a name="whats-the-ppdf-file-thats-automatically-created"></a>自動的に作成される .ppdf ファイルとは
 

@@ -3,7 +3,7 @@ title: "お客様が管理 - テナント キーのライフサイクル操作 |
 description: "Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) に関連するライフサイクル操作についての情報です。"
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: c879d4de6b8b99c401b36e03dd3b16dc8b722344
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 
 
 ---
@@ -45,7 +45,7 @@ Azure Information Protection のサブスクリプションをキャンセルす
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 テナント キーのバックアップは自分で行う必要があります。 Thales HSM でテナント キーを生成した場合、キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップするだけです。
 
-「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[Implementing bring your own key (BYOK) (BYOK (Bring Your Own Key) の実装)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」セクションの手順に従ってキーを転送してあるので、Key Vault はトークン化されたキー ファイルを保持して任意のサービス ノードの障害から保護します。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
+「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[Implementing bring your own key (BYOK) (BYOK (Bring Your Own Key) の実装)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」セクションの手順に従ってキーを転送してあるので、Key Vault はトークン化されたキー ファイルを保持して任意のサービス ノードの障害から保護します。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
 
 ## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
 BYOK を使用する場合、テナント キーを Azure Key Vault または Azure Information Protection からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 
