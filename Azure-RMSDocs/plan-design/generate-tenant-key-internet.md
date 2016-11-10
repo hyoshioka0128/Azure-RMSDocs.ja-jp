@@ -19,7 +19,7 @@ ms.openlocfilehash: c2a272cc27a45f7fda8279394fcb681b70dea81b
 ---
 
 
-# テナント キーを生成して転送する – インターネット経由 | RETIRED CONTENT
+# <a name="generate-and-transfer-your-tenant-key-over-the-internet-retired-content"></a>テナント キーを生成して転送する – インターネット経由 | RETIRED CONTENT
 
 >*適用対象: Azure Rights Management、Office 365*
 
@@ -27,6 +27,6 @@ Azure Rights Management では顧客管理テナントキー (Bring Your Own Key
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 763e99e40bbe329305e97757e87d10b048cc62e9
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: c3dfa23a4bb03aec3ad9eae835382040a5347006
 
 
 ---
 
-# Windows ストアのセットアップ
+# <a name="windows-store-setup"></a>Windows ストアのセットアップ
 
 Windows ストア アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
@@ -31,7 +31,7 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4.
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 
 
 開発システムには、以下のソフトウェアが必要です。
@@ -44,11 +44,11 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4.
 
 [新機能](release-notes.md)に関するトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
-## 省略可能
+## <a name="optional"></a>省略可能
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します - [Windows ストア アプリ用の UI ライブラリ](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore)。 Windows ストア アプリのサンプル アプリケーションも提供しています - [Windows ストア用の RMS サンプル アプリケーション](https://github.com/AzureADSamples/rms-samples-for-windowsstore)。
 
-## 開発環境の構成
+## <a name="configuring-your-development-environment"></a>開発環境の構成
 
 
 -   Visual Studio を開きます。
@@ -62,7 +62,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
     ![参照の追加](../media/winrtsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスで **[参照]** をクリックし、SDK パッケージを解凍したフォルダー内にある *Microsoft.RightsManagement.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** チェック ボックスをオンにして、この参照を追加する必要があります。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/winrtsetup-refmngr.png)
 
@@ -70,7 +70,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 これで、新しい独自の Windows ストア アプリを作成する準備が整いました。
 
-### 関連項目
+### <a name="see-also"></a>関連項目
 
 [作業開始](get-started.md)
 
@@ -86,6 +86,6 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -20,13 +20,13 @@ ms.openlocfilehash: 719077671664dda3102949609874c569a691bbb8
 
 ---
 
-# アプリケーションのテスト
+# <a name="testing-your-application"></a>アプリケーションのテスト
 
 このトピックでは、アプリケーション テストを設定する方法について説明します。
 
-## 手順
+## <a name="instructions"></a>手順
 
-### 手順 1: テストの設定
+### <a name="step-1-setup-for-testing"></a>手順 1: テストの設定
 
 Windows Server で実行されている Azure RMS または RMS サーバーをテストできます。Azure RMS のテストから始めることをお勧めします。その後、デプロイに必要であれば、RMS サーバーをテストしてください。
 
@@ -40,13 +40,13 @@ Windows Server で実行されている Azure RMS または RMS サーバーを�
 
     RMS SDK 2.1 のインストール方法については、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
 
-## 解説
+## <a name="remarks"></a>解説
 
 このトピックのガイダンスは包括的なものではありません。 RMS クライアント 2.1 の構成方法について詳しくは、「[RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)」 (RMS クライアント 2.1 のデプロイに関する注意事項) をご覧ください。
 
-### 関連項目
+### <a name="related-topics"></a>関連項目
 
-* [RMS サーバーをインストールし、構成する方法](how-to-install-and-configure-an-rms-server.md)
+* [RMS サーバーをインストールして構成する方法](how-to-install-and-configure-an-rms-server.md)
 * [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)
 * [SDK のインストール](install-the-rms-sdk.md)
 * [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
@@ -56,6 +56,6 @@ Windows Server で実行されている Azure RMS または RMS サーバーを�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

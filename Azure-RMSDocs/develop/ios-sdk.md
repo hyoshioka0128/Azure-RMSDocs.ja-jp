@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
+ms.sourcegitcommit: 7c0b885c35dcac0237788a69486d8f736c97c0c4
+ms.openlocfilehash: 96b71d26461559aa8e53960e7e8f3f748b7ebb1d
 
 
 ---
 
-# iOS および OS X のセットアップ
+# <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 
 iOS および OS X アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Rights Management (Azure RMS) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
@@ -34,7 +34,7 @@ iOS および OS X アプリケーションは Microsoft Rights Management SDK 4
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -53,11 +53,11 @@ iOS および OS X アプリケーションは Microsoft Rights Management SDK 4
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## 省略可能
+## <a name="optional"></a>省略可能
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for iOS (iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)」参照。
 
-## 開発環境の構成
+## <a name="configuring-your-development-environment"></a>開発環境の構成
 
 -   新しいプロジェクトを作成するために、**[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
 -   **[Single View Application (単一枠ビュー アプリケーション)]** を選択します。
@@ -100,22 +100,22 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
-### 関連項目
+### <a name="see-also"></a>関連項目
 
 * [作業開始](get-started.md)
 
 * [新機能](release-notes.md)
 
-* [Developer terms and concepts (開発者の用語と概念)](core-concepts.md)
+* [開発者の用語と概念](core-concepts.md)
 
-* [iOS / OS X API Reference (iOS / OS X API リファレンス)](https://msdn.microsoft.com/library/dn758306.aspx)
-
- 
+* [iOS / OS X API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
+ 
 
 
-<!--HONumber=Sep16_HO5-->
+
+<!--HONumber=Nov16_HO1-->
 
 
