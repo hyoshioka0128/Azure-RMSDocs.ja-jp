@@ -12,13 +12,13 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33f1e54c21507999d30dcee2ce63c8eb2d69895
-ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
 
 
 ---
 
-# Azure Rights Management サービスの使用状況をログに記録して分析する
+# <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -47,7 +47,7 @@ ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
 
 次のセクションでは、Azure Rights Management の使用状況ログの詳細について説明します。
 
-## Azure Rights Management の使用状況ログを有効にする方法
+## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Azure Rights Management の使用状況ログを有効にする方法
 2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure Rights Management サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 
 
 > [!NOTE]
@@ -57,14 +57,14 @@ ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
 
 
 
-## Azure Rights Management の使用状況ログにアクセスして使用する方法
+## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Azure Rights Management の使用状況ログにアクセスして使用する方法
 Azure Rights Management サービスは、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
 
 Azure Rights Management 操作の実行後、ログがストレージ アカウントに書き込まれるまで若干時間がかかります。 ほとんどのログは 15 分以内に表示されます。 ログはローカル ストレージ (ローカル フォルダー、データベース、MapReduce リポジトリなど) にダウンロードすることをお勧めします。
 
-使用状況ログをダウンロードするには、Windows PowerShell の Azure Rights Management 管理モジュールを使用します。 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。 この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が **2.4.0.0** 以上であることを確認します。 `(Get-Module aadrm -ListAvailable).Version` 
+使用状況ログをダウンロードするには、Windows PowerShell の Azure Rights Management 管理モジュールを使用します。 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。 この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が **2.4.0.0** 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version` 
 
-### PowerShell を使用して使用状況ログをダウンロードするには
+### <a name="to-download-your-usage-logs-by-using-powershell"></a>PowerShell を使用して使用状況ログをダウンロードするには
 
 1.  **[管理者として実行]** オプションを選択して Windows PowerShell を起動し、[Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) コマンドレットを使用して Azure Rights Management サービスに接続します。
 
@@ -80,30 +80,30 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 
     たとえば、E: ドライブに Logs という名前のフォルダーを作成した場合は、次のようになります。
     
-    * 特定の日付 (2016/2/1 など) のログをダウンロードするには、次のコマンドを実行します。 `Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
+    * 特定の日付 (たとえば 2016/2/1) のログをダウンロードするには、次のコマンドを実行します。`Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
     
-    * 日付範囲 (2016/2/1 ～ 2016/2/14 など) を指定してログをダウンロードするには、次のコマンドを実行します。 `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
+    * 特定の日付範囲 (たとえば 2016/2/1 から 2016/2/14 まで) のログをダウンロードするには、次のコマンドを実行します。`Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
 この例のように日付のみを指定すると、時刻はローカル時刻の 00 時 00 分 00 秒と見なされて UTC に変換されます。 -fromdate パラメーターまたは -todate パラメーター (たとえば、-fordate "2/1/2016 15:00:00") を使用して時刻を指定すると、日付と時刻は UTC に変換されます。 Get-AadrmUserLog コマンドは、その UTC の時間帯のログを取得します。
 
 ダウンロード対象に 1 日未満を指定することはできません。
 
-既定では、このコマンドレットは、ログをダウンロードするときに 3 つのスレッドを使用します。 十分なネットワーク帯域幅があり、ログをダウンロードする際に必要な時間を短縮したい場合は、- NumberOfThreads パラメーターを使用します。このパラメーターは、1 ～ 32 の値をサポートします。 たとえば、次のコマンドを実行すると、コマンドレットは 10 個のスレッドを生成してログをダウンロードします。 `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
+既定では、このコマンドレットは、ログをダウンロードするときに 3 つのスレッドを使用します。 十分なネットワーク帯域幅があり、ログをダウンロードする際に必要な時間を短縮したい場合は、- NumberOfThreads パラメーターを使用します。このパラメーターは、1 ～ 32 の値をサポートします。 たとえば、次のコマンドを実行すると、ログをダウンロードするためのスレッドが 10 個生成されます。`Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
 
 
 > [!TIP]
 > [Microsoft のログ パーサー](https://www.microsoft.com/download/details.aspx?id=24659)を利用して、ダウンロードしたすべてのログ ファイルを CSV 形式で集計できます。このログ パーサーは既知のさまざまなログ形式間で変換を行うためのツールです。 また、このツールを使用すると、データを SYSLOG 形式に変換したり、データベースにインポートしたりできます。 このツールをインストールしたら、`LogParser.exe /?` を実行してこのツールのヘルプおよび使い方を表示します。 
 >
-> たとえば、次のコマンドを実行すると、すべての情報を .log ファイル形式にインポートできます。 `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
+> たとえば、次のコマンドを実行すると、すべての情報を .log ファイル形式にインポートできます。`logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### Azure Rights Management 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
+#### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Azure Rights Management 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
 
 
 ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) コマンドレットを使用して古いログをダウンロードできます。 たとえば、
 
-- 使用可能なログを E:\logs フォルダーにダウンロードするには:  `Get-AadrmUsageLog -Path "E:\Logs"`
+- すべてのログを E:\logs フォルダーにダウンロードするには: `Get-AadrmUsageLog -Path "E:\Logs"`
     
-- 特定の範囲の BLOB をダウンロードするには:  `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
+- 特定の範囲の BLOB をダウンロードするには: `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
 
 次のいずれかに該当する場合は、Get-AadrmUsageLog コマンドレットを使用してログをダウンロードする必要はありません。
 
@@ -111,15 +111,15 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 
 - 2016 年 2 月 22 日より後に Azure Rights Management サービスをアクティブ化した。
 
-## Azure Rights Management の使用状況ログを解釈する方法
+## <a name="how-to-interpret-your-azure-rights-management-usage-logs"></a>Azure Rights Management の使用状況ログを解釈する方法
 Azure Rights Management の使用状況ログを解釈するには、次の情報を活用してください。
 
-### ログ シーケンス
+### <a name="the-log-sequence"></a>ログ シーケンス
 Azure Rights Management サービスは、ログを一連の BLOB として書き込みます。 
 
 ログ内の各エントリには、UTC のタイムスタンプがあります。 Azure Rights Management サービスは複数のデータ センターにまたがる複数のサーバー上で実行されるため、タイムスタンプで並べ替えられたログであっても、それらが順序どおりではないように見える場合があります。 しかし、その差はわずかであり、通常 1 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
 
-### BLOB の形式
+### <a name="the-blob-format"></a>BLOB の形式
 各 BLOB は、W3C 拡張ログ形式です。 BLOB は、次の 2 行で始まります。
 
 **#Software: RMS**
@@ -140,12 +140,12 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 |time|時刻|要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。|21:59:28|
 |row-id|テキスト|このログ レコードの固有 GUID。 値が存在しない場合は、correlation-id の値を使用してエントリを識別します。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|名前|要求された RMS API の名前。|AcquireLicense|
-|user-id|文字列|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。|‘joe@contoso。com’|
+|user-id|文字列|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。|‘joe@contoso.com’|
 |結果|文字列型|要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|'Success'|
 |correlation-id|テキスト|特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|テキスト|保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|文字列|ドキュメントの所有者の電子メール アドレス。|alice@contoso.com|
-|issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com または FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|文字列型|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。|TopSecretDocument.docx|
 |date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
@@ -153,7 +153,7 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
 
 
-#### user-id フィールドの例外
+#### <a name="exceptions-for-the-userid-field"></a>user-id フィールドの例外
 通常、user-id フィールドは要求を行ったユーザーを示しますが、値が実際のユーザーにマップされない例外が 2 つあります。
 
 -   値 **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**。
@@ -164,7 +164,7 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 
     このコネクタからの要求は、RMS コネクタのインストール時に自動的に生成されたサービス プリンシパル名 **Aadrm_S-1-7-0** でログに記録されます。
 
-#### 一般的な要求の種類
+#### <a name="typical-request-types"></a>一般的な要求の種類
 Azure Rights Management サービスには多くの要求の種類がありますが、次の表に最も一般的に使用される要求の種類をいくつか示します。
 
 |要求の種類|説明|
@@ -212,7 +212,7 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |UpdateTemplate|Azure クラシック ポータルから、既存のテンプレートを更新するための呼び出しが行われます。|
 
 
-## Windows PowerShell の参照情報
+## <a name="windows-powershell-reference"></a>Windows PowerShell の参照情報
 2016 年 2 月以降、Azure Rights Management 使用状況ログに必要となる唯一の Windows PowerShell コマンドレットは、[Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) です。 
 
 この変更の前は次のコマンドレットが Azure Rights Management 使用状況ログに必要でしたが、現在は推奨されていません。  
@@ -240,6 +240,6 @@ Azure Rights Management サービス用 Windows PowerShell の使用の詳細に
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

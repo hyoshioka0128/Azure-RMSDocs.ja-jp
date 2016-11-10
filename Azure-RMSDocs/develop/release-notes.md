@@ -3,7 +3,7 @@ title: "新機能とリリース ノート | Azure RMS"
 description: "重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。"
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,28 +13,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81cbe287b67e2a1598efdd2a816913f147c7ff7b
-ms.openlocfilehash: f3d4b1ba0da3530121aa81056238533f0dcbed2f
+ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
+ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
 
 
 ---
 
-# 新機能とリリース ノート
+# <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
-## 新機能
-Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一段と簡素化され、柔軟性が向上しています。 このトピックでは、重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。
+## <a name="whats-new"></a>新機能
+Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一段と簡素化され、柔軟性が向上しています。 このトピックでは、このバージョンの RMS SDK の重要な変更点と機能の概要を示します。
 
--   [2016 年 6 月の新機能](#new-for-June-2016)
--   [2015 年 12 月の更新](#december-2015-update)
--   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july-2015-update-adds-support-for-linux-c-developm)
--   [2015 年 5 月の更新 – ログの制御を追加](#may-2015-update-adds-logging-control)
--   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february-2015-update-adds-windows-store-application-support)
--   [2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加](#january-2015-update-adds-winphone-platform-support)
--   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
--   [リリース ノート](#release-notes)
--   [よく寄せられる質問](#frequently-asked-questions)
-
-### 2016 年 6 月の新機能
+### <a name="new-for-june-2016"></a>2016 年 6 月の新機能
 
 - **先進認証のサポート** - Active Directory Authentication Library (ADAL) ベースのサインインが RMS 対応アプリに導入されます。 これによって利用可能になるサインイン機能としては、多要素認証 (MFA)、SAML ベースのサードパーティ ID プロバイダーと RMS クライアント アプリケーションの組み合わせ、スマート カードや証明書をベースとする認証などがあります。また、RMS 対応アプリで基本認証プロトコルを使用する必要がなくなります。
 - **ドキュメント追跡のサポート** -開発するアプリの中でドキュメントを保護するときに、ドキュメント追跡を有効化できるようになりました。
@@ -42,7 +32,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 - バグの修正
 
 
-### 2015 年 12 月の更新
+### <a name="december-2015-update"></a>2015 年 12 月の更新
 
 このリリースでは、デバイス用の RMS SDK はバージョン 4.2 であり、以下の機能が追加されています。
 
@@ -66,7 +56,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     [UserPolicy.acquire 同期メソッド](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [UserPolicy.create (PolicyDescriptor...) 同期メソッド**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [UserPolicy.create (PolicyDescriptor…) 同期メソッド**](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [UserPolicy.create (TempalteDescriptor…) 同期メソッド](https://msdn.microsoft.com/library/mt631386.aspx)
 
@@ -74,7 +64,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 -   エラー メッセージやトラブルシューティングを向上させる更新プログラム
 -   暗号化操作の重要なパフォーマンスの向上
 
-### 2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加
+### <a name="july-2015-update-adds-support-for-linux-c-development"></a>2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加
 
 このリリースでは、以下が追加されています。
 
@@ -82,7 +72,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     詳細については、「[作業開始](get-started.md)」を参照してください。
 
-### 2015 年 5 月の更新 – ログの制御を追加
+### <a name="may-2015-update-adds-logging-control"></a>2015 年 5 月の更新 – ログの制御を追加
 
 このリリースでは、以下のサポートが追加されています。
 
@@ -100,15 +90,15 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     詳細については、「[MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx)」を参照してください。
 
-### 2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
+### <a name="february-2015-update-adds-windows-store-application-support"></a>2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
 
 このリリースでは、Windows ストア アプリケーションのサポートを追加し、RMS SDK 4.1 の Windows Phone、Android、および iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
-### 2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加
+### <a name="january-2015-update-adds-winphone-platform-support"></a>2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加
 
 このリリースでは、Windows Phone オペレーティング システムのサポートを追加し、RMS SDK 4.1 の Android 版および iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
-### 2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード
+### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード
 
 RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple iOS/OS X に以下の新機能が追加されています。
 
@@ -120,7 +110,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     たとえば、MSUserPolicy.name が [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx) に変更されました。
 
-## リリース ノート
+## <a name="release-notes"></a>リリース ノート
 
 このセクションでは、開発者が知っておくと便利な、Microsoft Rights Management SDK 4.x API の現在および以前のリリースに関する情報をまとめています。
 
@@ -181,7 +171,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **注**  MDI アプリケーションは、iOS API ではサポートされていません。
 
-## よく寄せられる質問
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **すべてのプラットフォーム**
 
@@ -191,7 +181,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **Q**: SDK およびサンプル アプリケーションを試すために新しい組織のテナントを取得するにはどうすればよいですか。
 
-**A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> まで電子メールを送信してください。
+**A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
 **Q**: ドキュメントにテスト階層についての説明が見当たりません。 これはなぜでしょうか。
 
@@ -220,7 +210,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 
-**OS x**
+**OS X**
 
 **Q**: サンプル アプリケーションのフレームワークは Xcode 5 に対応していますが、Xcode 4.6 でも使用できますか。
 
@@ -232,6 +222,6 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
