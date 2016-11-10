@@ -3,6 +3,7 @@ title: "クラウド ベース RMS でサービス アプリケーション使�
 description: "このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

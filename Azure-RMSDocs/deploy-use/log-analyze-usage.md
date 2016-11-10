@@ -2,6 +2,7 @@
 title: "Azure Rights Management サービスの使用状況をログに記録して分析する | Azure Information Protection"
 description: "Azure Rights Management (Azure RMS) で使用状況のログを使用する方法の詳細および手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

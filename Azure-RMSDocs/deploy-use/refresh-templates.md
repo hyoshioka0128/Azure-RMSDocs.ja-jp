@@ -2,6 +2,7 @@
 title: "テンプレートの更新 | Azure Information Protection"
 description: "Azure Rights Management サービスを使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
 ms.topic: article

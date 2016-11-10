@@ -3,6 +3,7 @@ title: "方法&#58; 組み込み権限の使用 | Azure RMS"
 description: "RMS SDK 4.2 の組み込み権限と、その制限に従うことでアプリケーションによって適用される使用制限について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -22,13 +23,13 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 
 ---
 
-# 方法: 組み込み権限の使用
+# <a name="how-to-use-builtin-rights"></a>方法: 組み込み権限の使用
 
 このトピックでは、Microsoft Rights Management SDK 4.2 の組み込み権限と、その制限に従うことでアプリケーションによって適用される使用制限について説明します。 組み込み権限、一般的な権限、編集可能なドキュメントの権限、電子メール権限、オペレーティング システムによる説明とその値を次に示します。
 
 **注** – Linux SDK の場合の詳細については、*rights.h* のソース ファイルを参照してください。
 
-## 一般的な権限
+## <a name="common-rights"></a>一般的な権限
 
 **すべて** – すべての一般的な権限のコレクション。
 - Android: [CommonRights.All](https://msdn.microsoft.com/library/dn758258.aspx)
@@ -51,7 +52,7 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 
  
 
-## 編集可能なドキュメントの権限
+## <a name="editable-document-rights"></a>編集可能なドキュメントの権限
 **すべて** – 編集可能なすべてのドキュメント権限を含むコレクション。
 - Android: [EditableDocumentRights.All](https://msdn.microsoft.com/library/dn758284.aspx)
 - iOS および OS X: [MSEditableDocumentRights all](https://msdn.microsoft.com/library/dn758318.aspx)
@@ -93,7 +94,7 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 
  
 
-## 電子メール権限
+## <a name="email-rights"></a>電子メール権限
 
 **すべて** – すべての電子メール権限を含むコレクション。
 - Android: [EmailRights.All](https://msdn.microsoft.com/library/dn758285.aspx)

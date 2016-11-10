@@ -3,6 +3,7 @@ title: "Linux API リファレンス | Azure RMS"
 description: "Linux の各種オペレーティング システムのサポート用の API リファレンスは GitHub でホストされています。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 12d7f276a489284586f45d34407ecc48b1b4b2ce
 
 ---
 
-# Linux API リファレンス
+# <a name="linux-api-reference"></a>Linux API リファレンス
 
 Linux の各種オペレーティング システムのサポート用の API リファレンスは GitHub でホストされています: [C++ 用の RMS SDK](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)。 詳細については、「[作業開始](get-started.md)」を参照してください。
 
