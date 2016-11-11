@@ -2,6 +2,7 @@
 title: "Rights Management 共有アプリケーションの使用によるファイルからの保護の削除 | Azure Information Protection"
 description: "それまで RMS 共有アプリケーションを使用して保護されていたファイルから保護を除去する (ファイルから保護を削除する) ための手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: ceb726e47c4eb9413b7d7eb5b1469e2a99992dda
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3ef47e5dea1c6b56127e231ba6dba774c31cca90
 
 
 ---
 
-# Rights Management 共有アプリケーションの使用によるファイルからの保護の削除
+# <a name="remove-protection-from-a-file-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションの使用によるファイルからの保護の削除
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -27,7 +28,7 @@ RMS 共有アプリケーションを使用して、保護されていたファ�
 > [!IMPORTANT]
 > 保護を削除するには、ファイルの所有者である必要があります。
 
-## ファイルから保護を削除するには
+## <a name="to-remove-protection-from-a-file"></a>ファイルから保護を削除するには
 
 1.  エクスプローラーで、ファイル (たとえば、Sample.ptxt) を右クリックし、**[RMS による保護]** を選択して、**[Protect in-place]** (保護済み) をクリックしてから、**[保護の解除]** をクリックします。
 
@@ -39,18 +40,18 @@ RMS 共有アプリケーションを使用して、保護されていたファ�
 
 元の保護されたファイル (たとえば、Sample.ptxt) が削除され、同じ名前を持つが、保護されていないファイル名拡張子 (たとえば、Sample.txt) のファイルで置き換えられます。
 
-## 例とその他の説明
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
