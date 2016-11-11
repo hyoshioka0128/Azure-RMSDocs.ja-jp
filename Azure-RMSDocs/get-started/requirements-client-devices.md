@@ -2,6 +2,7 @@
 title: "クライアント デバイスでのデータ保護のサポート | Azure Information Protection"
 description: "Azure Information Protection から Azure Rights Management サービスをサポートするデバイスを特定します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,20 +13,20 @@ ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
-ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 587aaff16ce57cd39ce5dc7eb30fd21f37442cda
 
 
 ---
 
 
-# Azure Rights Management データ保護をサポートするクライアント デバイス
+# <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするクライアント デバイス
 
 >*適用対象: Azure Information Protection、Office 365*
 
 次のセクションを使用して、Azure Information Protection のデータ保護を提供する、Azure Rights Management サービスをサポートするデバイスを特定します。
 
-## コンピューター
+## <a name="computers"></a>コンピューター
 次のコンピューター オペレーティング システムで Azure Rights Management サービスがサポートされています。
 
 -   **Windows 7** (x86、x64)
@@ -38,7 +39,7 @@ ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
 
 -   **Mac OS X**: Mac OS X 10.8 (Mountain Lion) 以降
 
-## モバイル デバイス
+## <a name="mobile-devices"></a>モバイル デバイス
 次のモバイル デバイス オペレーティング システムで Azure Rights Management サービスがサポートされています。
 
 -   **Windows Phone**: Windows Phone 8.1
@@ -50,12 +51,12 @@ ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
 -   **Windows タブレット**: Windows 10 Mobile および Windows 8.1 RT
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Azure Rights Management サービスの使用停止と非アクティブ化 | Azure Information Protection"
 description: "Azure Information Protection からこの情報保護サービスを今後使用しないと決定した場合の詳細および手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 57ae18a479e06084e1266276a4420a5092c23b8d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 865913eae3e0956c18d2caef4e68ab1dc07d74de
 
 
 ---
 
-# Azure Rights Management の使用停止と非アクティブ化
+# <a name="decommissioning-and-deactivating-azure-rights-management"></a>Azure Rights Management の使用停止と非アクティブ化
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -47,13 +48,13 @@ Azure Information Protection テナント キーがある場合は、オンプ�
 
 組織の Azure Rights Management サービスを無効にする用意ができたら、次の手順に従います。
 
-## Rights Management の非アクティブ化
+## <a name="deactivating-rights-management"></a>Rights Management の非アクティブ化
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を非アクティブ化するには、次のいずれかの手順を使用します。
 
 > [!TIP]
 > Windows PowerShell の [Disable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629422.aspx) コマンドレットを使用して [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] を非アクティブ化することもできます。
 
-#### Office 365 管理センターから Rights Management を非アクティブ化するには
+#### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Rights Management を非アクティブ化するには
 
 1.  Office 365 デプロイの管理者である[職場または学校のアカウントで Office 365 にサインイン](https://portal.office.com/) します。
 
@@ -74,7 +75,7 @@ Azure Information Protection テナント キーがある場合は、オンプ�
 
 [ **Rights Management がアクティブ化されていません** ] というテキストとアクティブ化するオプションが表示されます。
 
-#### Azure クラシック ポータルから Rights Management を非アクティブ化するには
+#### <a name="to-deactivate-rights-management-from-the-azure-classic-portal"></a>Azure クラシック ポータルから Rights Management を非アクティブ化するには
 
 1.  [Azure クラシック ポータル](http://go.microsoft.com/fwlink/p/?LinkID=275081)にサインインします。
 
@@ -91,6 +92,6 @@ Azure Information Protection テナント キーがある場合は、オンプ�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
