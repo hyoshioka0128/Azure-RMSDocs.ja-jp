@@ -64,7 +64,7 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
