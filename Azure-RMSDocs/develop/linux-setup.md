@@ -3,6 +3,7 @@ title: "Linux のセットアップ | Azure RMS"
 description: "Linux オペレーティング システムの一部のエディションで Microsoft Rights Management SDK 4.2 を使用できるようになりました。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

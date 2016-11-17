@@ -3,6 +3,7 @@ title: "Android のコード例 |Azure RMS"
 description: "このトピックでは、Android バージョンの RMS SDK の重要なコード要素について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,14 +21,14 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 ---
 
-# Android のコード例
+# <a name="android-code-examples"></a>Android のコード例
 
 このトピックでは、Android バージョンの RMS SDK の重要なコード要素について説明します。
 
 **注** 以下のコード例と説明では、クライアント プロセスを参照するために MSIPC (Microsoft Information Protection and Control) という用語を使用します。
 
 
-## Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
+## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
 
 この SDK を理解する上で重要な開発シナリオを表す大規模なサンプル アプリケーションのコード例を次に示します。 これらのコード例では、保護ファイルと呼ばれる Microsoft Protected File 形式の使用例、カスタム保護ファイル形式の使用例、およびカスタムの UI コントロールの使用例を示します。
 
@@ -35,7 +36,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 サンプル アプリケーション *MSIPCSampleApp* は、この Android オペレーティング システム用の SDK で使用可能です。 このサンプル アプリケーションにアクセスするには、GitHub の [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) を参照してください。
 
-### シナリオ: RMS 保護ファイルを使用する
+### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ: RMS 保護ファイルを使用する
 
 -   **手順 1**. [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) を作成します。
 
@@ -197,7 +198,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
                 }
 
 
-### シナリオ: テンプレートを使用して新しい保護ファイルを作成する
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
 このシナリオは、はじめにテンプレートの一覧を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
@@ -321,7 +322,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 
 
-### シナリオ: カスタム保護ファイルを開く
+### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
 -   **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
@@ -436,7 +437,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
         buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 -   **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
 

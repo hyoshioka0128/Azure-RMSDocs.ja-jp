@@ -3,6 +3,7 @@ title: "開発者ガイドと用語 | Azure RMS"
 description: "RMS SDK 4.2 は、AD RMS 情報保護を利用する AD RMS 対応アプリケーションを可能な限りシンプルに構築できるようにすることに重点を置いています。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 2ac4ca3e505d78758a01516f66f1e5f4ff4b17b6
 
 ---
 
-# 開発者ガイドと用語
+# <a name="developer-guidance-and-terms"></a>開発者ガイドと用語
 Microsoft Rights Management SDK 4.2 は、Active Directory Right Management サービス (AD RMS) を利用する AD RMS 対応アプリケーションを可能な限りシンプルに構築できるようにすることに重点を置いています。
 
 RMS 対応アプリケーションを開発するためのデザイン プロセスについては、次のトピックが参考になります。

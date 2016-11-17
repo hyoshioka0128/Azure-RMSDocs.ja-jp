@@ -2,6 +2,7 @@
 title: "Rights Management API をサポートするその他のアプリケーション - インストールと構成 | Azure Information Protection"
 description: "組織のデータを保護するために Azure Information Protection の Azure Rights Management サービスが他のアプリケーションをどのようにサポートするかを理解します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 0ee1e316310df889f87b1bc7932d8970abae140f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 28e81e174e1b1a39928fa47f9155c40e769b633f
 
 
 ---
 
-# Rights Management API をサポートするその他のアプリケーション
+# <a name="other-applications-that-support-the-rights-management-apis"></a>Rights Management API をサポートするその他のアプリケーション
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -28,11 +29,11 @@ Rights Management SDK を使用すると、社内開発者が、Azure Rights Man
 
 同様に、多くのソフトウェア ベンダーが情報保護ソリューションを提供するアプリケーションを提供しています。これらは ERM (Enterprise Rights Management) 製品とも呼ばれます。 一般的な例は、特定のプラットフォームで Azure Rights Management サービスをサポートする PDF リーダーです。 「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」にある表を使用して Rights Management をサポートするアプリケーション (RMS 対応アプリケーション) を特定してから、Web 検索を使用してそのアプリケーションを購入またはダウンロードすることができます。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 他のアプリケーションおよびサービスで Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

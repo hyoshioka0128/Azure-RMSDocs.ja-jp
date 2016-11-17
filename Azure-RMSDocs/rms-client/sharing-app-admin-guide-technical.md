@@ -2,6 +2,7 @@
 title: "Microsoft Rights Management 共有アプリケーションの技術的概要 | Azure Information Protection"
 description: "Windows 用 RMS 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの技術的な詳細です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -2,6 +2,7 @@
 title: "テンプレートの削除 | Azure Information Protection"
 description: "既定のテンプレートは、削除することはできませんが、アーカイブしてユーザーに表示されないようにすることはできます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: 42935ce2-879c-4168-aef9-9a88f72b15b2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: e9af6dcf237ec0136101835ceff56e79e01f3b3c
 
 
 ---
 
 
-# テンプレートの削除 (アーカイブ)
+# <a name="remove-archive-templates"></a>テンプレートの削除 (アーカイブ)
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -29,7 +30,7 @@ ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
 
 既定のテンプレートは編集できないので、これらのテンプレートをアーカイブするには、 **[テンプレート]** ページの **[アーカイブ]** オプションを使用する必要があります。 Outlook の **[転送不可]** オプションをアーカイブすることはできません。
 
-## 既定のテンプレートを削除するには
+## <a name="to-remove-a-default-template"></a>既定のテンプレートを削除するには
 
 -   **[テンプレート]** ページで、既定のテンプレートを選択し、 **[アーカイブ]**をクリックします。
 
@@ -37,10 +38,10 @@ ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
 
 
 
-## 参照
+## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

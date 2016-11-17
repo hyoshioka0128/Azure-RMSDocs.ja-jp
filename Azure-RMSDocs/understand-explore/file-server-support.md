@@ -2,6 +2,7 @@
 title: "Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバー | Azure Information Protection"
 description: "Office ドキュメントを自動的に保護する RMS コネクタを配置するときに、Windows Server ファイル分類インフラストラクチャがどのように Azure RMS で使用されるかについて説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 64c718f91d1d2f516bcac6dd949eef5ef379a306
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
 
 
 ---
 
 
-# Windows Server を実行するファイル サーバーとファイル分類インフラストラクチャ (FCI) の使用
+# <a name="file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci"></a>Windows Server を実行するファイル サーバーとファイル分類インフラストラクチャ (FCI) の使用
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -36,13 +37,13 @@ Office ファイル用 RMS コネクタをデプロイおよび構成する方�
 
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 アプリケーションとサービスが Azure RMS をサポートする方法を理解したら、Azure RMS と、Rights Management のオンプレミス バージョンである Active Directory Rights Management サービス (AD RMS) とを比較してみることをお勧めします。 機能、要件、およびセキュリティ制御の比較については、「[Azure Rights Management と AD RMS を比較する](compare-azure-rms-ad-rms.md)」を参照してください。
 
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

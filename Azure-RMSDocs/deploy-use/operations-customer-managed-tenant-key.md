@@ -2,6 +2,7 @@
 title: "お客様が管理 - テナント キーのライフサイクル操作 | Azure Information Protection"
 description: "Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) に関連するライフサイクル操作についての情報です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

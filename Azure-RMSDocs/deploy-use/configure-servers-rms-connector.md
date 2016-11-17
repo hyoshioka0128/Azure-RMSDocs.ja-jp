@@ -2,6 +2,7 @@
 title: "Azure Rights Management コネクタ用にサーバーを構成する | Azure Information Protection"
 description: "Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーの構成に役立つ情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 5 について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

@@ -2,6 +2,7 @@
 title: "新機能とリリース ノート | Azure RMS"
 description: "重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。"
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article

@@ -2,6 +2,7 @@
 title: "Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure Information Protection"
 description: "Windows 用 RMS 共有アプリケーションを対話形式でインストールし、他のユーザーとドキュメントを安全に共有できるようにするための手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f1553ebd64f174128e41f55b66582e8791ce9133
 
 
 ---
 
-# Rights Management 共有アプリケーションをダウンロードしてインストールする
+# <a name="download-and-install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションをダウンロードしてインストールする
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「[ローカル管理者ではなく、かつ Office 2010 を使用している場合](#if-you-are-not-a-local-administrator-and-use-office-2010)」を参照してください。
 
-## Rights Management 共有アプリケーションをダウンロードしてインストールするには
+## <a name="to-download-and-install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションをダウンロードしてインストールするには
 
 1.  Microsoft Web サイトの [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
 
@@ -41,7 +42,7 @@ RMS 共有アプリケーションをインストールするのにローカル�
 
 これで、ファイルの保護を開始したり、他のユーザーが保護しているファイルを読み取ったりする準備ができました。
 
-## ローカル管理者ではなく、かつ Office 2010 を使用している場合
+## <a name="if-you-are-not-a-local-administrator-and-use-office-2010"></a>ローカル管理者ではなく、かつ Office 2010 を使用している場合
 コンピューターへのサインイン時にローカルの管理者権限を持っておらず、かつセットアップ時に Office 2010 がインストールされていることが検出される場合、この構成では一部のシナリオがうまくいかないことを示す警告メッセージが表示されます。 シナリオは次のとおりです。
 
 -   組織で、オンプレミス版の Rights Management ではなく、Azure Information Protection から Azure Rights Management サービスを使用する場合
@@ -56,19 +57,19 @@ RMS 共有アプリケーションをインストールするのにローカル�
 
 このような既知の制限はありますが、インストールを続行できます。 また、インストールを中止することもできます。その場合、手順 3. で Setup.exe を実行するときに **[管理者として実行]** オプションを使用して再実行するか、管理者にインストールしてもらうように依頼できます。 管理者は、インストールが自動的に行われるように[このインストールをスクリプト化](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)できます。
 
-## 例とその他の説明
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
+## <a name="see-also"></a>関連項目
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

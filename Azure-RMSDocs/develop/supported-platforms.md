@@ -3,6 +3,7 @@ title: "サポートされているプラットフォーム | Azure RMS"
 description: "このトピックでは、Rights Management サービス SDK 2.1 でサポートされているクライアントとサーバー プラットフォームを識別します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,11 +21,11 @@ ms.openlocfilehash: eb20483bd3a2be60e1b9fcee173ebeabcb5b6d93
 
 ---
 
-# サポートされているプラットフォーム
+# <a name="supported-platforms"></a>サポートされているプラットフォーム
 
 このトピックでは、Rights Management サービス SDK 2.1 でサポートされているクライアントとサーバー プラットフォームを識別します。
 
-## サポートされているプラットフォーム
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
 -   Windows 10
 -   Windows Server 2012 R2

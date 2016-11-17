@@ -2,6 +2,7 @@
 title: "Azure Rights Management を確認する | Azure Information Protection"
 description: "1 つのアカウントを使用してファイルまたは電子メール メッセージを保護し、次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、サービスが想定どおりに動作していることを確認できます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
-ms.openlocfilehash: e39cb95419fd661be6c0f4838aafdcb02ed684cf
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8d10bc4aeeed6f5b3d150f6e765c6457f5741409
 
 
 ---
 
-# Azure Rights Management サービスの検証
+# <a name="verifying-the-azure-rights-management-service"></a>Azure Rights Management サービスの検証
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -31,7 +32,7 @@ Azure Information Protection の Azure Rights Management サービスをアク�
 > [!TIP]
 > さらにサポートが必要な場合は、「[Azure Information Protection の情報とサポート](../get-started/information-support.md)」の「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」セクションを参照してください。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 使用状況ログを使用することで、組織がどのように Azure Rights Management サービスを使用しているか監視することができます。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
 
@@ -40,6 +41,6 @@ Azure Information Protection の Azure Rights Management サービスをアク�
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

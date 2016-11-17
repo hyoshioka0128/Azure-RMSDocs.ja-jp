@@ -3,6 +3,7 @@ title: "Rights Management によって保護されたファイルのアクセス
 description: "ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。"
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 
 
 ---
 
-# Rights Management によって保護されたファイルのアクセス許可を変更する
+# <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルのアクセス許可を変更する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -38,7 +39,7 @@ ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 
 ファイルが保護されないようにすべてのアクセス許可を完全に削除する場合は、「[ファイルからの保護の削除](sharing-app-remove-protection.md)」を参照してください。
 
-## ファイルを現在の場所で保護しなおすには
+## <a name="to-reprotect-a-file-inplace"></a>ファイルを現在の場所で保護しなおすには
 
 1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
 
@@ -71,7 +72,7 @@ ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
 > -   詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## 電子メールで送信したファイルを保護しなおすには
+## <a name="to-reprotect-a-file-that-you-have-emailed"></a>電子メールで送信したファイルを保護しなおすには
 
 電子メールで送信したファイルのアクセス許可を変更する場合は、次のようにします。
 
@@ -84,18 +85,18 @@ ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
     電子メールで送信したファイルを無効にする方法は、「[ドキュメントを追跡して取り消す](sharing-app-track-revoke.md)」を参照してください。
 
 
-## 例とその他の説明
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
