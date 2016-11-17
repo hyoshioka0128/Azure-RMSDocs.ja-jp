@@ -3,6 +3,7 @@ title: "ドキュメント追跡を使用する方法 | Azure RMS"
 description: "ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,11 +21,11 @@ ms.openlocfilehash: 616d5dd088665abf6e7d435978b021b10c5ac3f5
 
 ---
 
-# 方法: ドキュメント追跡を使用する
+# <a name="how-to-use-document-tracking"></a>方法: ドキュメント追跡を使用する
 
 ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。
 
-## ドキュメント追跡メタデータの管理
+## <a name="managing-document-tracking-metadata"></a>ドキュメント追跡メタデータの管理
 
 ドキュメント追跡をサポートする各オペレーティング システムは、似たような実装を持ちます。 これには、メタデータを表すプロパティのセット、ユーザー ポリシー作成メソッドに追加される新しいパラメーター、ドキュメント追跡サービスで追跡するポリシーを登録するためのメソッドが含まれます。
 

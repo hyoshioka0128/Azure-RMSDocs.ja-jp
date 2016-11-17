@@ -3,6 +3,7 @@ title: "iOS/OS X のコード例 | Azure RMS"
 description: "このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
 
 ---
 
-# iOS/OS X のコード例
+# <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
 このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
 
@@ -28,12 +29,12 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
 
 
 
-## Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
+## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
 
 
 この SDK を理解するうえで重要な開発シナリオを表す大規模なサンプル アプリケーションの **Objective C** コード例を次に示します。 これらのコード例では、保護ファイルと呼ばれる Microsoft Protected File 形式の使用例、カスタム保護ファイル形式の使用例、およびカスタムの UI コントロールの使用例を示します。
 
-### シナリオ: RMS 保護ファイルを使用する
+### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ: RMS 保護ファイルを使用する
 
 
 - **手順 1**. [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを作成します。
@@ -109,7 +110,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
             }
         }
 
-### シナリオ: テンプレートを使用して新しい保護ファイルを作成する
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
 このシナリオは、初めにテンプレートの一覧 [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
@@ -154,7 +155,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
             }];
         }
 
-### シナリオ: カスタム保護ファイルを開く
+### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
 
 -   **手順 1**. *serializedContentPolicy* から [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
@@ -212,7 +213,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
             }];
          }
 
-### シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 
 -   **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。

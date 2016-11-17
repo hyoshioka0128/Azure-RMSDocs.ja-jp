@@ -2,6 +2,7 @@
 title: "Rights Management 共有アプリケーションのダイアログ ボックス オプション | Azure Information Protection"
 description: "RMS 共有アプリケーションの [保護の追加] ダイアログ ボックスまたは [保護ファイルの共有] ダイアログ ボックスでオプションを指定する場合に役立つ情報です。 このダイアログ ボックスは、共有するファイルを保護するとき、またはインプレースでファイルを保護してカスタム アクセス許可を選ぶときに表示されます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

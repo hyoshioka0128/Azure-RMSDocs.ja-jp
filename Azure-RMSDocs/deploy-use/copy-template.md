@@ -2,6 +2,7 @@
 title: "テンプレートのコピー | Azure Information Protection"
 description: "既存のテンプレートとよく似た設定の新しいテンプレートを簡単に作成するための、テンプレートのコピー手順について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: f329ce49-e044-4c11-821d-5496d83c1bb3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 5248a7a5b90e956d4121d95e0b82a941a20d4e8f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: e0945e9ab719fd4b686c3fb7932891ed92fa31c6
 
 
 ---
 
 
-# テンプレートをコピーする
+# <a name="copy-a-template"></a>テンプレートをコピーする
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -32,10 +33,10 @@ ms.openlocfilehash: 5248a7a5b90e956d4121d95e0b82a941a20d4e8f
 
 
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

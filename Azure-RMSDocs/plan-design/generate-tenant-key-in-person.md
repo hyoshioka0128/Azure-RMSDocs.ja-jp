@@ -2,6 +2,7 @@
 title: "テナント キーを生成して転送する – 持参&#58; RETIRED CONTENT | Azure RMS"
 description: "Azure Rights Management では顧客管理テナントキー (Bring Your Own Key (BYOK) とも呼ばれる) に対して Azure Key Vault が使用されるようになったので、この記事の情報は必要なくなり、削除されました。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

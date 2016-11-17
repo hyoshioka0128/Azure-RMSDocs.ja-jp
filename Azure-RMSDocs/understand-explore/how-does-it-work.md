@@ -2,6 +2,7 @@
 title: "Azure RMS の機能 | Azure Information Protection"
 description: "Azure RMS の機能、Azure RMS で使用される暗号化制御、およびこのプロセスがどのように機能するかについてのステップ バイ ステップの図を詳細に説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

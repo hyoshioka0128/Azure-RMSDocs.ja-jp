@@ -1,7 +1,8 @@
 ---
 title: "Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成 | Azure Information Protection"
-description: "Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は 'データに対する推論' と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
+description: "Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は &quot;データに対する推論&quot; と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: d2ae8df5895b1cf1985420be25abac36fe2689b7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 70c74678ec0ef0b583b2784177520d0ea8a5b7e8
 
 
 ---
 
-# Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
+# <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -59,7 +60,7 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 `2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
-## スーパー ユーザーのスクリプト作成オプション
+## <a name="scripting-options-for-super-users"></a>スーパー ユーザーのスクリプト作成オプション
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] のスーパー ユーザーが割り当てられているだれかが、複数の場所で、複数のファイルから保護を削除することが必要になる場合がよくあります。 これは手動で行うことができますが、スクリプト化するとより効率的に (そしてより確実に) 行うことができます。 そのためには、 [RMS 保護ツールをダウンロード](http://www.microsoft.com/en-us/download/details.aspx?id=47256)します。 次に、[Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) コマンドレットを使用し、必要に応じて、[Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) コマンドレットも使用します。
 
 これらのコマンドレットの詳細については、「 [RMS 保護コマンドレット](https://msdn.microsoft.com/library/azure/mt433195.aspx)」を参照してください。
@@ -71,6 +72,6 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "コンプライアンスとサポート情報 | Azure Information Protection"
 description: "法律、コンプライアンス、SLA を含む Azure Information Protection のサポート情報を紹介します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,17 +21,17 @@ ms.openlocfilehash: 5fbc0af13f1acdbd6b7a1a267c9d2be2b90b8a1b
 
 
 
-# Azure Information Protection のコンプライアンスとサポート情報
+# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
 Azure Information Protection は他のサービスをサポートし、また、他のサービスに依存しています。 Azure Information Protection サービスの使用方法以外で、Azure Information Protection の関連情報をお探しの場合は、以下のリソースを参照してください。
 
-## 法律およびプライバシー
+## <a name="legal-and-privacy"></a>法律およびプライバシー
 
 - Microsoft Azure の契約情報について: [Microsoft Azure の契約](http://azure.microsoft.com/support/legal/subscription-agreement/)
 
 - Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](http://azure.microsoft.com/support/legal/privacy-statement/)
 
-## セキュリティ、コンプライアンス、監査
+## <a name="security-compliance-and-auditing"></a>セキュリティ、コンプライアンス、監査
 
 記事「[Azure RMS が解決する問題の種類](../understand-explore/azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
 
@@ -38,7 +39,7 @@ Azure Information Protection は他のサービスをサポートし、また、
 
 - FIPS 140 について: [FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
 
-## サービス レベル アグリーメント
+## <a name="service-level-agreements"></a>サービス レベル アグリーメント
 
 - 主なリージョンごとの Azure Information Protection のサービス レベル アグリーメント: [製品ライセンスの検索ページからダウンロード](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
 
@@ -46,7 +47,7 @@ Azure Information Protection は他のサービスをサポートし、また、
 
 -   Azure Active Directory のサービス レベル アグリーメント: [サービス レベル アグリーメント](http://azure.microsoft.com/support/legal/sla/)
 
-## ドキュメント
+## <a name="documentation"></a>ドキュメント
 
 - Azure Active Directory のドキュメント: [Azure Active Directory](/active-directory/)
 

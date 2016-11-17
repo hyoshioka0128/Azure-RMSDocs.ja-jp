@@ -2,6 +2,7 @@
 title: "Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護) | Azure Information Protection"
 description: "コンピューター、サーバー、または別のストレージ デバイスにファイルを安全に格納する方法についての手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
 
 
 ---
 
-# Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
+# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -27,7 +28,7 @@ ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
 > [!TIP]
 > ファイルを保護しようとするとエラーが表示される場合は、「 [Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ](http://go.microsoft.com/fwlink/?LinkId=303971)」をご覧ください。
 
-## デバイス上のファイルを保護するには (インプレースの保護)
+## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>デバイス上のファイルを保護するには (インプレースの保護)
 
 1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
 
@@ -54,18 +55,18 @@ ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
 
 後でファイルから保護を削除する必要がある場合は、「[Rights Management 共有アプリケーションの使用によるファイルからの保護の削除](sharing-app-remove-protection.md)」を参照してください。
 
-## 例とその他の説明
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
