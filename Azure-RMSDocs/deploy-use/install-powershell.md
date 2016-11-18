@@ -2,6 +2,7 @@
 title: "Azure Rights Management 用 Windows PowerShell をインストールする | Azure Information Protection"
 description: "Azure Information Protection から Azure Rights Management サービス用 Windows PowerShell をインストールする手順です。 このモジュールの名前は AADRM です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 97c53d92755ebcadee7de2e32750c00b285224dd
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c114059e99f3caed4fa5e2c48fe0428cb5847f68
 
 
 ---
 
-# Azure Rights Management 用 Windows PowerShell をインストールする
+# <a name="installing-windows-powershell-for-azure-rights-management"></a>Azure Rights Management 用 Windows PowerShell をインストールする
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -26,7 +27,7 @@ ms.openlocfilehash: 97c53d92755ebcadee7de2e32750c00b285224dd
 
 この PowerShell モジュールを使用すると、インターネットに接続され、次のセクションでリストする前提条件を満たす任意のコンピューターを使って、コマンドラインから Azure Rights Management サービスを管理できます。 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 用の Windows PowerShell は、自動化のためのスクリプトをサポートし、高度な構成シナリオのために必要になる場合があります。 管理タスクと、モジュールがサポートする構成に関する詳細については、「[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)」を参照してください。
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 次の表に、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 用の Windows PowerShell をインストールして使用するための前提条件を示します。
 
 |要件|詳細情報|
@@ -41,7 +42,7 @@ ms.openlocfilehash: 97c53d92755ebcadee7de2e32750c00b285224dd
 > Rights Management 管理モジュールの以前のバージョンがインストールされている場合は、最新バージョンをインストールする前に、[**プログラムと機能**] を使用して **Windows Azure AD Rights Management の管理**をアンインストールしてください。
 
 
-## Rights Management 管理モジュールのインストール方法
+## <a name="how-to-install-the-rights-management-administration-module"></a>Rights Management 管理モジュールのインストール方法
 
 1.  Microsoft ダウンロード センターに移動し、[Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721) をダウンロードします。これには、Windows PowerShell 用の [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 管理モジュールが含まれています。
 
@@ -51,7 +52,7 @@ ms.openlocfilehash: 97c53d92755ebcadee7de2e32750c00b285224dd
 
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 用の Windows PowerShell がインストールされます。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 使用可能なコマンドレットを確認するには、[ **管理者として実行** ] オプションを使用して、Windows PowerShell を起動し、次のように入力します。
 
 ```
@@ -70,11 +71,11 @@ Get-Command -Module aadrm
 > [!NOTE]
 > Azure Rights Management サービスがまだアクティブ化されていない場合は、サービスに接続した後で、[Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx) コマンドレットを使用してアクティブ化することができます。
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 [Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

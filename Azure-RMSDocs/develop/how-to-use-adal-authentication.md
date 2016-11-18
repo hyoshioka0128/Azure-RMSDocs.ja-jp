@@ -3,6 +3,7 @@ title: "RMS 対応アプリケーションの ADAL 認証 | Azure RMS"
 description: "ADAL での認証プロセスの概要を説明します。"
 keywords: "認証、RMS、ADAL"
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3ed49cf7dddb72783ecd3bf1e89454d805552743
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 25b9f1c7ee6ad2eb1d642a72713e0dd24703c2bc
 
 
 ---
 
-# 方法: ADAL 認証の使用
+# <a name="howto-use-adal-authentication"></a>方法: ADAL 認証の使用
 
 Azure Active Directory Authentication Library (ADAL) を利用し、アプリに対して Azure RMS で認証を実行する。
 
@@ -30,7 +31,7 @@ Microsoft Online サインイン アシスタントではなく、ADAL 認証を
 - コンピューターの管理者特権なしで RMS 2.1 クライアントをインストールする
 - Windows 10 向けアプリケーションの認定
 
-## 2 つの認証方法
+## <a name="two-approaches-to-authentication"></a>2 つの認証方法
 
 このトピックでは、2 種類の認証方法とそれに対応するコード例を示します。
 
@@ -38,22 +39,22 @@ Microsoft Online サインイン アシスタントではなく、ADAL 認証を
 
   認証が必要なときに RMS クライアントに ADAL 認証プロンプトを表示させる場合は、この方法を使用します。 アプリケーションの構成方法の詳細については、「内部認証」セクションを参照してください。
 
-  > [!Note] 
+  > [!Note]
   > 現在、アプリケーションがサインイン アシスタント付きの AD RMS SDK 2.1 を使用している場合は、アプリケーション移行パスとして内部認証方法を使用することをお勧めします。
 
 - **外部認証** - アプリケーションによって管理される OAuth 認証。
 
   アプリケーションで独自の OAuth 認証を管理する場合は、この方法を使用します。 この方法では、認証が必要なとき、RMS クライアントはアプリケーション定義のコールバックを実行します。 詳細な例については、このトピックの最後の「外部認証」を参照してください。
 
-  > [!Note] 
+  > [!Note]
   > 外部認証は、ユーザーを変更できるということではありません。RMS クライアントは、常に特定の RMS テナントの既定のユーザーを使用します。
 
-## 内部認証
+## <a name="internal-authentication"></a>内部認証
 
 1. 「[Configure Azure RMS for ADAL authentication](adal-auth.md)」 (Azure RMS の ADAL 認証を構成する) の Azure 構成手順に従い、その後、次のアプリ初期化手順に戻ります。
 2. RMS SDK 2.1 で提供される内部 ADAL 認証を使用するようにアプリケーションを構成する準備が整いました。
 
-RMS クライアントを構成するには、[IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) の呼び出しの直後に [IpcSetGlobalProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) に呼び出しを追加し、RMS クライアントを構成します。 次のコード スニペットを例として使用できます。
+RMS クライアントを構成するには、[IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) の呼び出しの直後に [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) に呼び出しを追加し、RMS クライアントを構成します。 次のコード スニペットを例として使用できます。
 
       C++
       IpcInitialize();
@@ -67,7 +68,7 @@ RMS クライアントを構成するには、[IpcInitialize](/information-prote
         //Handle the error
       }
 
-## 外部認証
+## <a name="external-authentication"></a>外部認証
 
 独自の認証トークンの管理方法のコード例を次に示します。
 C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Parameters, __out wstring wstrToken) throw();
@@ -109,21 +110,21 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
           return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
       }
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
-* [データ型](/information-protection/sdk/2.1/api/win/data%20types)
-* [Environment properties (環境プロパティ)](/information-protection/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
-* [IpcCreateOAuth2Token](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
-* [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-* [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [IPC_CREDENTIAL](/information-protection/sdk/2.1/api/win/IPC_CREDENTIAL)
-* [IPC_NAME_VALUE_LIST](/information-protection/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
-* [IPC_OAUTH2_CALLBACK_INFO](/information-protection/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
-* [IPC_PROMPT_CTX](/information-protection/sdk/2.1/api/win/IPC_PROMPT_CTX)
-* [IPC_AAD_APPLICATION_ID](/information-protection/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
+- [データ型](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Environment properties (環境プロパティ)](https://msdn.microsoft.com/library/hh535247.aspx)
+- [IpcCreateOAuth2Token](https://msdn.microsoft.com/library/mt661866.aspx)
+- [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
+- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
+- [IPC_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
+- [IPC_NAME_VALUE_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
+- [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
+- [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
+- [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "クイック スタート チュートリアル | Azure Information Protection"
 description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルです。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 4f5f7670ce1897a6436e511057fc714c839a8f00
-ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
 
 
 ---
 
-# Azure Information Protection のクイック スタート チュートリアル 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
 >*適用対象: Azure Information Protection*
 
@@ -26,7 +27,7 @@ ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
 
 このチュートリアルの実行や Azure Information Protection の使用に関して問題がある場合、または他のユーザーの意見を知りたい場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)を参照してください。
 
-## 必要条件 
+## <a name="prerequisites"></a>必要条件 
 このチュートリアルでは、以下のものが必要です。
 
 - 分類、ラベル付け、および保護のための Azure Information Protection を含むサブスクリプション。 このチュートリアルには、自動化データ分類などのいくつかの高度な機能、ユーザー推奨事項、ドキュメント追跡サイトが含まれます。 サブスクリプションでこれらの機能がサポートされていることを確認してください。 詳細については、Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)」を参照してください。
@@ -51,6 +52,6 @@ ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する | Azure Information Protection"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
 
 
 ---
 
-# シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する
+# <a name="scenario-configure-work-folders-for-persistent-protection"></a>シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -41,23 +42,23 @@ Azure Rights Management が提供する追加の保護では、組織外のユ�
 
 -   権利ポリシー テンプレートに指定されていないユーザー (たとえば、別の組織のユーザー) と共有するファイルの場合、ユーザーは新しい権利ポリシーを適用して、元の権限ポリシーによる保護を置き換える必要があります。
 
-## デプロイの手順
+## <a name="deployment-instructions"></a>デプロイの手順
 ![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
-## このシナリオの要件
+## <a name="requirements-for-this-scenario"></a>このシナリオの要件
 このシナリオの手順を実行するには、次の要件を満たしている必要があります。
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|Rights Management がアクティブ化されている|[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、ワーク フォルダーを使用するすべてのユーザーに必要です。|[Azure Information Protection の準備](../plan-design/prepare.md)|
 |次のいずれかです。<br /><br />- 新しい権利ポリシーの適用を許可しない既定のテンプレートをすべてのユーザーに対して使用する: 既定のテンプレート "**&lt;組織名&gt; - 社外秘**" をアーカイブしていない<br /><br />- ユーザーが新しい権利ポリシーを適用するために適したカスタム テンプレートを使用する: カスタム テンプレートを作成するための手順を使用する|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |Rights Management コネクタがインストール済みで、Windows Server コンピューター用に承認され、**FCI Server** のロール用に構成されている。|[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
-### ユーザーが組織外でワーク フォルダーのファイルを共有できるようにカスタム権利ポリシー テンプレートを構成する
+### <a name="configuring-the-custom-rights-policy-template-so-that-users-can-share-work-folders-files-outside-the-organization"></a>ユーザーが組織外でワーク フォルダーのファイルを共有できるようにカスタム権利ポリシー テンプレートを構成する
 
 1.  Azure クラシック ポータルにサインインし、Azure Rights Management テンプレートに移動します。
 
@@ -79,7 +80,7 @@ Azure Rights Management が提供する追加の保護では、組織外のユ�
 
 5.  テンプレートを保存します。
 
-### Office ファイルに永続的な保護を適用するようにワーク フォルダーを構成する
+### <a name="configuring-work-folders-to-apply-persistent-protection-to-office-file"></a>Office ファイルに永続的な保護を適用するようにワーク フォルダーを構成する
 
 1.  ローカルに保存されたファイルがファイル サーバー フォルダーと同期されるように (*同期共有*と呼ばれます)、ユーザーのワーク フォルダーを実装します。 ファイル サーバーでの同期共有を Rights Management コネクタを実行する同じサーバーに配置することはできません。
 
@@ -109,7 +110,7 @@ Azure Rights Management が提供する追加の保護では、組織外のユ�
 
 4.  ファイル分類インフラストラクチャを使用してファイルを選択的に保護する場合は、分類規則とスケジュールを構成し、この分類プロパティを条件として含めるようにファイル管理タスクを変更します。
 
-## ユーザー ドキュメントの手順
+## <a name="user-documentation-instructions"></a>ユーザー ドキュメントの手順
 Azure Rights Management を使用して保護するファイルを組織外のユーザーと共有する必要がなければ、ワーク フォルダーを使用するための手順を除く追加の手順をユーザーに提供しなくてもよい場合があります。 Azure Rights Management と既定のテンプレートで保護されるファイルをユーザーが開くと、ファイルは通常どおりに Office で開きます。唯一の違いとして、ユーザーの認証が求められる場合があります。内部ユーザーのみを対象とする機密情報がコンテンツに含まれていることを通知する情報バーがドキュメントの上部に表示されます。
 
 このシナリオ用に記述されたカスタム テンプレートを構成した場合、情報バーには次のようなテンプレートの説明が表示されます。**このコンテンツは、ワーク フォルダーで保護され、会社の従業員のみに制限されます。このコンテンツを組織外のユーザーと共有するには、ドキュメントをメール メッセージに添付して、保護ファイルの共有機能を使用します。** この説明は組織外でファイルを共有する方法の概要を示しますが、ユーザーは (特に最初の数回については) ファイルを共有するための詳細な手順が必要になる場合があります。 この追加のシナリオをサポートするには、「[シナリオ - 別の組織のユーザーと Office ファイルを共有する](scenario-share-office-file-externally.md)」に示す管理者とエンド ユーザーの手順を使用します。
@@ -122,6 +123,6 @@ Azure Rights Management を使用して保護するファイルを組織外の�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

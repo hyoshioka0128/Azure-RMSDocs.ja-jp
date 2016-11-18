@@ -3,6 +3,7 @@ title: "ファイル API の構成 | Azure RMS"
 description: "ファイルの API の動作は、レジストリの設定を使用して構成できます。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
-ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 02ba5c914553e8ade9b6cf43e1e2349b91fdaa1b
 
 
 ---
 
-# ファイル API の構成
+# <a name="file-api-configuration"></a>ファイル API の構成
 
 
 ファイルの API の動作は、レジストリの設定を使用して構成できます。
@@ -32,17 +33,17 @@ ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 サポートされているファイル形式について詳しくは、このトピックの「**ファイル API - ファイルのサポートの詳細**」をご覧ください。
 
-## キー、キーの値、種類、および説明
+## <a name="keykey-value-types-and-descriptions"></a>キー、キーの値、種類、および説明
 
 以降のセクションでは、暗号化を制御するキーおよびキーの値について説明します。
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotection"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
 **種類**: キー
 
 **説明**: ファイル API の一般的な構成が含まれています。
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotectionltextgt"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
 **種類**: キー
 
@@ -55,7 +56,7 @@ ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 保護の動作を指定するには、**Encryption** 値をキーに設定します。 **Encryption** 値が設定されていない場合は、ファイルの種類の既定の動作が実行されます。
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotectionltextgtencryption"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
 **種類**: REG_SZ
 
@@ -76,7 +77,7 @@ ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 その他の値を設定する場合や、値を設定しない場合は、既定の動作が実行されます。
 
-## 各ファイル形式の既定の動作
+## <a name="default-behavior-for-different-file-formats"></a>各ファイル形式の既定の動作
 
 -   **Office ファイル** ネイティブ暗号化が有効になります。
 -   **txt、xml、jpg、jpeg、pdf、png、tiff、bmp、gif、giff、jpe、jfif、jif ファイル** ネイティブ暗号化が有効になります (xxx は pxxx になります)。
@@ -84,7 +85,7 @@ ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 暗号化を試行したファイルの種類がブロックされている場合は、[IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) エラーが発生します。
 
-### ファイル API - ファイルのサポートの詳細
+### <a name="file-api-file-support-details"></a>ファイル API - ファイルのサポートの詳細
 
 すべてのファイルの種類 (拡張子) に対してネイティブ サポートを追加できます。 たとえば、拡張子 &lt;ext&gt; (Office 以外) では、その拡張子の管理者の構成が "NATIVE" の場合、\*.p&lt;ext&gt; が使用されます。
 
@@ -106,7 +107,7 @@ ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 -   保護の種類 = Pfile: sample.*zzz* を暗号化すると、sample.*zzz*.pfile という名前になります。*zzz* は元のファイル拡張子です。
 -   Off: 暗号化を無効にします。
 
-### 例
+### <a name="examples"></a>例
 
 次の設定は、txt ファイルの PFile 暗号化を有効にします。 Office ファイルには (既定で) ネイティブ保護が適用され、txt ファイルには PFile 保護が適用され、その他のすべてのファイルの保護は (既定で) ブロックされます。
 
@@ -146,7 +147,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 - [開発者向け注意事項](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
@@ -156,6 +157,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

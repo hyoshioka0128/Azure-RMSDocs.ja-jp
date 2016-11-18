@@ -2,6 +2,7 @@
 title: "クイック スタート チュートリアル手順 3 | Azure Information Protection"
 description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 3 です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: b5c87669c965d1e67b47dcfbd8ba97f1da41d104
-ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 496f086d4db43a69ef0acca579b290286a5b9e5b
 
 
 ---
 
-# 手順 3: クライアントとアプリケーションをインストールする 
+# <a name="step-3-install-the-client-and-application"></a>手順 3: クライアントとアプリケーションをインストールする 
 
 >*適用対象: Azure Information Protection*
 
@@ -27,7 +28,7 @@ ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
 これらのインストールは両方とも Office アプリケーションと統合されます。現時点では、これらを個別にインストールする必要があります。
 
 
-## Azure Information Protection クライアントのインストール
+## <a name="install-the-azure-information-protection-client"></a>Azure Information Protection クライアントのインストール
 
 1. Office がインストールされている PC で (ただし、Word は現在開かれていません)、Microsoft ダウンロード センターから [Azure Information Protection クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。 
 
@@ -35,7 +36,7 @@ ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
 
     このチュートリアルでは、デモ ポリシーをインストールするオプションを選択するかどうかは関係ありません。デモ ポリシーをインストールしても、先に構成したポリシーが Azure からダウンロードされてデモ ポリシーを置き換えます。 ただし、Azure Information Protection に接続しないで既定のラベルを試したいだけの場合は、デモ ポリシー オプションを使用してもかまいません。 
 
-## Rights Management 共有アプリケーションのインストール 
+## <a name="install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションのインストール 
 
 1. Microsoft Web サイトの [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
 
@@ -44,7 +45,7 @@ ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
 3. [ **Microsoft RMS のセットアップ** ] ページで、[ **次へ**] をクリックし、インストールが完了するまで待機します。 その後、コンピューターの再起動を求められた場合は **[再起動]** をクリックします。インストールを完了する場合は、**[閉じる]** をクリックします。
 
 
-## インストールを確認する
+## <a name="verify-the-installations"></a>インストールを確認する
 
 Word で新しい空白の文書を開き、これらのインストールが正常に行われたことを確認します (この時点では文書を保存しないでください)。 ユーザー名とパスワードの入力を求められたら、グローバル管理者アカウントの詳細を入力します。 
 
@@ -74,6 +75,6 @@ Word で新しい空白の文書を開き、これらのインストールが正
 [手順 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

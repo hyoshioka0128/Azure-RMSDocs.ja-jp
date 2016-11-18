@@ -2,6 +2,7 @@
 title: "Azure Rights Management コネクタのインストールと構成 | Azure Information Protection"
 description: "Azure Rights Management (RMS) コネクタをインストールして構成するための情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 1 から手順 4 について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 4af8d8b5f95edc7bd95fda93b26da98ee00b5075
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: babd3b14cba61aa49cb448c1d132b279dc9ad5da
 
 
 ---
 
-# Azure Rights Management コネクタのインストールと構成
+# <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -27,7 +28,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 作業を開始する前に、このデプロイの[前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector)を確認してください。
 
 
-## RMS コネクタのインストール
+## <a name="installing-the-rms-connector"></a>RMS コネクタのインストール
 
 1.  RMS コネクタを実行するコンピューター (2 つ以上) を決定します。 前提条件で表示されている最小限の仕様を満たしている必要があります。
 
@@ -52,7 +53,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 
 続行するには、RMS コネクタを構成するためのアカウントとパスワードを入力します。
 
-## 資格情報の入力
+## <a name="entering-credentials"></a>資格情報の入力
 RMS コネクタを構成する前に、RMS コネクタを構成するのに十分な特権を持つアカウントの資格情報を入力する必要があります。 たとえば、「**admin@contoso.com**」と入力してから、このアカウントのパスワードを指定します。
 
 このパスワードには文字の制限があります。 アンパサンド (**&**)、左山かっこ (**[**)、右山かっこ (**]**)、二重引用符 (**"**)、アポストロフィ (**'**) が含まれるパスワードを使用することはできません。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にログインできたとしても、RMS コネクタの認証は失敗し、「このユーザー名とパスワードの組み合わせは正しくありません。」というエラー メッセージが表示されます。 これがパスワードに対するメッセージである場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
@@ -115,7 +116,7 @@ RMS コネクタのインストール プロセスでは、すべての前提条
 
 RMS コネクタをアンインストールする必要がある場合は、ウィザードを再実行してアンインストール オプションを選択します。
 
-## RMS コネクタを使用するサーバーの承認
+## <a name="authorizing-servers-to-use-the-rms-connector"></a>RMS コネクタを使用するサーバーの承認
 2 台以上のコンピューターに RMS コネクタをインストールしたら、RMS コネクタを使用するサーバーとサービスを承認することができます。 たとえば、Exchange Server 2013 や SharePoint Server 2013 を実行しているサーバーがあるとします。
 
 これらのサーバーを定義するには、RMS コネクタ管理ツールを実行して、許可されているサーバーの一覧にエントリを追加します。 このツールは、Microsoft Rights Management コネクタ セットアップ ウィザードの最終ページで **[コネクタ管理コンソールを起動してサーバーを承認する]** を選択して実行するか、またはウィザードとは別に実行することができます。
@@ -132,7 +133,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 > サーバーの承認は、サービスまたはサーバーのコンピューター アカウントの ServerCertification.asmx に NTFS アクセス許可を手動で適用して、Exchange アカウントにユーザー スーパー権限を手動で付与する AD RMS 構成に対する Azure RMS の同等の構成です。 コネクタでは、ServerCertification.asmx に NTFS アクセス許可を適用する必要はありません。
 
 
-### 許可されたサーバーの一覧へのサーバーの追加
+### <a name="add-a-server-to-the-list-of-allowed-servers"></a>許可されたサーバーの一覧へのサーバーの追加
 **[コネクタの使用をサーバーに許可]** ページで、承認するオブジェクトの名前を入力するか、または承認するオブジェクトを参照して指定します。
 
 正しいオブジェクトを承認することが重要です。 サーバーでコネクタを使用するには、オンプレミス サービス (Exchange や SharePoint など) を実行するアカウントを選択して承認する必要があります。 たとえば、構成済みのサービス アカウントとしてサービスが実行されている場合、そのサービス アカウントの名前を一覧に追加します。 ローカル システムとしてサービスが実行されている場合は、コンピューター オブジェクトの名前 (SERVERNAME$ など) を追加します。 ベスト プラクティスとして、これらのアカウントが含まれるグループを作成し、個々のサーバー名の代わりにそのグループを指定することを推奨します。
@@ -160,7 +161,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 次に、RMS コネクタがインストールされているサーバーの負荷分散を構成する必要があります (未構成の場合)。また、これらのサーバーと承認されたサーバーの間の接続に HTTPS を使用するかどうかを検討します。
 
-## 負荷分散と高可用性の構成
+## <a name="configuring-load-balancing-and-high-availability"></a>負荷分散と高可用性の構成
 RMS コネクタの 2 つ目または最後のインスタンスをインストールしたら、コネクタ URL のサーバー名を定義して負荷分散システムを構成します。
 
 コネクタ URL のサーバー名には、管理している名前空間内で任意の名前を指定できます。 たとえば、DNS システムに **rmsconnector.contoso.com** に対するエントリを作成して、このエントリで負荷分散システムの IP アドレスを使用するように構成できます。 この名前に特別な要件はありません。また、コネクタ サーバー自体での構成は不要です。 Exchange サーバーと SharePoint サーバーがインターネット経由でコネクタと通信する場合を除き、この名前はインターネット上で解決する必要はありません。
@@ -182,7 +183,7 @@ DNS で名前を作成して IP アドレスを構成したら、そのアドレ
 
 (RMS コネクタ サービスを実行しているサーバーの) 負荷分散システム用に定義したこの名前は、組織の RMS コネクタ名です。この名前は、後で Azure RMS を使用するオンプレミス サーバーを構成するときに使用します。
 
-## HTTPS を使用するための RMS コネクタの構成
+## <a name="configuring-the-rms-connector-to-use-https"></a>HTTPS を使用するための RMS コネクタの構成
 > [!NOTE]
 > この構成手順は省略可能ですが、セキュリティ強化のために推奨されます。
 
@@ -199,10 +200,10 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 > -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web サーバー (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[インターネット サーバー証明書を構成する (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx)」を参照してください。
 > -   証明書を使用するように IIS を構成するには、TechNet の「[Web サーバー (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[サイトにバインドを追加する (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx)」を参照してください。
 
-## Web プロキシ サーバーを使用するための RMS コネクタの構成
+## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Web プロキシ サーバーを使用するための RMS コネクタの構成
 コネクタ サーバーが配置されているネットワークがインターネットに直接接続されておらず、インターネットに発信アクセスを行うために Web プロキシ サーバーの手動構成が必要な場合、これらのサーバーのレジストリで RMS コネクタを構成する必要があります。
 
-#### Web プロキシ サーバーを使用するように RMS コネクタを構成するには
+#### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>Web プロキシ サーバーを使用するように RMS コネクタを構成するには
 
 1.  RMS コネクタが実行されている各サーバーで、レジストリ エディター (Regedit など) を開きます。
 
@@ -214,7 +215,7 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 
 4.  レジストリ エディターを閉じて、サーバーを再起動するか、または IISReset コマンドを実行して IIS を再起動します。
 
-## 管理用コンピューターへの RMS コネクタ管理ツールのインストール
+## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>管理用コンピューターへの RMS コネクタ管理ツールのインストール
 RMS コネクタがインストールされていないコンピューターで RMS コネクタ管理ツールを実行するには、次の要件を満たす必要があります。
 
 -   次のいずれかの OS を搭載している物理または仮想コンピューター: Windows Server 2012 または Windows Server 2012 R2 (すべてのエディション)、Windows Server 2008 R2 または Windows Server 2008 R2 Service Pack 1 (すべてのエディション)、Windows 8.1、Windows 8、または Windows 7。
@@ -236,10 +237,10 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 RMS コネクタのインストールと構成が完了したので、コネクタを使用するためにオンプレミス サーバーを構成することができます。 「[Configuring servers for the Azure Rights Management connector (Azure Rights Management コネクタ用にサーバーを構成する)](configure-servers-rms-connector.md)」に進みます。
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

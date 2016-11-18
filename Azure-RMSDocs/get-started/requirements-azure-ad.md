@@ -2,6 +2,7 @@
 title: "Azure Active Directory の要件 | Azure Information Protection"
 description: "ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/29/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
-ms.openlocfilehash: 5be497b09ed1b1342747508611a1cc06ad0edf02
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
 
 
 ---
 
-# Azure Information Protection の Azure Active Directory の要件
+# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -28,9 +29,9 @@ Azure Information Protection を使用するには、Azure AD ディレクトリ
 
 詳細については、Azure Active Directory ドキュメントの次のリソースを参照してください。
 
--   [What is Azure AD Directory? (Azure AD ディレクトリとは)](/active-directory/active-directory-whatis)
+-   [Azure AD ディレクトリとは](/active-directory/active-directory-whatis)
 
--   [How Azure subscriptions are associated with Azure Active Directory (Azure サブスクリプションを Azure Active Directory に関連付ける方法)](/active-directory/active-directory-how-subscriptions-associated-directory)
+-   [Azure サブスクリプションを Azure Active Directory に関連付ける方法](/active-directory/active-directory-how-subscriptions-associated-directory)
 
 Azure AD ディレクトリをオンプレミス AD フォレストと統合する場合は、「[Integrating your on-premises identities with Azure Active Directory (オンプレミス ID と Azure Active Directory の統合)](/active-directory/active-directory-aadconnect)」を参照してください。
 
@@ -39,7 +40,7 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 > 
 > -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
-## 多要素認証 (MFA) と Azure Information Protection
+## <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
 Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
@@ -68,12 +69,12 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

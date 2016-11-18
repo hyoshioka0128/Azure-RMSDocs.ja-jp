@@ -3,6 +3,7 @@ title: "RMS サーバーをインストールし、構成し、それでテス�
 description: "権限保護対応アプリケーションのテスト用に RMS Server をインストールおよび構成します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
-ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 47f9cf725b864ee22afc7605702992b08cb686dc
 
 
 ---
 
-# 方法: RMS サーバーをインストールし、構成し、それでテストする
+# <a name="howto-install-configure-and-test-with-an-rms-server"></a>方法: RMS サーバーをインストールし、構成し、それでテストする
 
 このトピックでは、権限保護対応アプリケーションをテストするために、RMS サーバーまたは Azure RMS に接続する手順について説明します。
  
-## 手順
+## <a name="instructions"></a>手順
 
-### 手順 1: RMS サーバーをセットアップする
+### <a name="step-1-setup-your-rms-server"></a>手順 1: RMS サーバーをセットアップする
 
 次の手順で RMS サーバーをセットアップする方法について説明します。この手順には、次が含まれています。
 
@@ -69,7 +70,7 @@ ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
   クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS クライアントのデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
-1. **、**
+1. **EnterpriseCertification**
 
         HKEY_LOCAL_MACHINE
           SOFTWARE
@@ -80,7 +81,7 @@ ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
    **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
-2. **(Default) 値をダブルクリックし、**
+2. **EnterprisePublishing**
 
         HKEY_LOCAL_MACHINE
           SOFTWARE
@@ -110,6 +111,6 @@ ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

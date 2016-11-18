@@ -2,6 +2,7 @@
 title: "シナリオ – 社外秘の電子メールを送信する | Azure Information Protection"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、組織内の各ユーザーが、組織の部外者が読み取ることのできない安全な方法で電子メールによる通信を送信できるようにします。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 
 ---
 
-# シナリオ – 社外秘の電子メールを送信する
+# <a name="scenario-send-a-companyconfidential-email"></a>シナリオ – 社外秘の電子メールを送信する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -39,24 +40,24 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 -   ユーザーは電子メール クライアントからテンプレートを手動で選択する必要がある。
 
-## デプロイの手順
+## <a name="deployment-instructions"></a>デプロイの手順
 ![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認してください。
 
-## このシナリオの要件
+## <a name="requirements-for-this-scenario"></a>このシナリオの要件
 このシナリオの手順を実行するには、次の要件を満たしている必要があります。
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
 |Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Information Protection の準備](../plan-design/prepare.md)|
 |Azure Information Protection テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|Rights Management がアクティブ化されている|[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |次のいずれかです。<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md)」 (Office 365: クライアントとオンライン サービスの構成) の「**Exchange Online: IRM configuration**」 (Exchange Online: IRM 構成) セクションを参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」|
 |既定の Azure Rights Management テンプレート **&lt;組織&gt; - 社外秘** をアーカイブしていない。 または、より厳しい制限を設定する、あるいは組織内のユーザーのサブセットのみが保護された電子メールを読み取ることができるようにする必要があるため、この目的でカスタム テンプレートを構成した。|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)<br /><br />ヒント: より制限の厳しい使用ポリシーを組織内のすべてのユーザーに対して設定する必要がある場合、最初から新しいテンプレートを作成するのではなく、既定のテンプレートをコピーして編集します。<br /><br />このシナリオの電子メール クライアントでは、更新されたテンプレートはすぐには最新の情報に更新されません。 詳細については、「[ユーザー用のテンプレートの更新](../deploy-use/refresh-templates.md)」を参照してください。|
 |保護された電子メールを送信するユーザーが Outlook 2013、Outlook 2016、または Outlook Web Access を持っている。<br /><br />電子メールを受信するユーザーが Azure Rights Management をサポートする電子メール クライアントを持っている。|Outlook 2010 を使用できますが、[Windows 用の Rights Management 共有アプリケーションをインストール](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) し、それに従ってユーザーの手順を調整する必要があります。<br /><br />Azure Rights Management をサポートする電子メール クライアントの一覧については、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表の「**電子メール**」列を参照してください。|
 
-## ユーザー ドキュメントの手順
+## <a name="user-documentation-instructions"></a>ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
 
 1.  *&lt;組織名&gt;* のすべてのインスタンスを組織の名前に置き換えます。
@@ -91,7 +92,7 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### Outlook を使用して社外秘情報を含む電子メールを送信する方法
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Outlook を使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook で新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、*&lt;組織名&gt;* からユーザーまたはグループを選択します。
 
@@ -101,7 +102,7 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 3.  メッセージを送信します。
 
-### Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook Web アプリで新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から *&lt;組織名&gt;* ユーザーまたはグループを選択します。
 
@@ -115,16 +116,16 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 ユーザーは受信した電子メールを他のユーザーに転送できますが、転送された電子メールを読むことができるのは *&lt;組織名&gt;* のユーザーのみです。 Office ドキュメントを添付した場合、その添付ファイルを別の場所に別の名前で保存しても、同様に保護されます。 ただし、正常に認証されたユーザーは、その電子メールまたは添付ファイルの内容をコピーして貼り付けたり、印刷したりすることができます。 このような操作を防止し、より制限の厳しい保護を必要とする場合は、ヘルプ デスクに問い合わせてください。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
 -   ヘルプ デスクに問い合わせる
 
     -   *&lt;連絡先詳細&gt;*
 
-### カスタマイズされたユーザー ドキュメントの例
+### <a name="example-customized-user-documentation"></a>カスタマイズされたユーザー ドキュメントの例
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
-#### Outlook を使用して社外秘情報を含む電子メールを送信する方法
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Outlook を使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook で新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から VanArsdel ユーザーまたはグループを選択します。
 
@@ -134,7 +135,7 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 3.  メッセージを送信します。
 
-#### Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook Web アプリで新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から VanArsdel ユーザーまたはグループを選択します。
 
@@ -148,7 +149,7 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 ユーザーは受信した電子メールを他のユーザーに転送できますが、転送された電子メールを読むことができるのは VanArsdel のユーザーのみです。 Office ドキュメントを添付した場合、その添付ファイルを別の場所に別の名前で保存しても、同様に保護されます。 ただし、正常に認証されたユーザーは、その電子メールまたは添付ファイルの内容をコピーして貼り付けたり、印刷したりすることができます。 このような操作を防止し、より制限の厳しい保護を必要とする場合は、ヘルプ デスクに問い合わせてください。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
 -   ヘルプ デスクに問い合わせる
 
@@ -157,6 +158,6 @@ ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

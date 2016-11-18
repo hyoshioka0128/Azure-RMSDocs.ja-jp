@@ -3,6 +3,7 @@ title: "リリース ノート | Azure RMS"
 description: 
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/20/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f65f42b54fbca1a0436a0f1f6cc9be60a5e3c68
-ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 
 ---
 
-# リリース ノート
+# <a name="release-notes"></a>リリース ノート
 
 このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
 
-## 2016 年 2 月の最新情報 - SDK 文書更新
+## <a name="new-for-the-february-2016-sdk-documentation-update"></a>2016 年 2 月の最新情報 - SDK 文書更新
 
 >[!Note]
 > このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
@@ -40,7 +41,7 @@ ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
 - **Microsoft Online サインイン アシスタント (SIA) と RMS SDK のサポートがなくなります。** サポートの停止後、SIA は 6 か月間使用できます。
 
 
-## 2015 年 12 月更新
+## <a name="december-2015-update"></a>2015 年 12 月更新
 
 - 以下を含む一部の領域のパフォーマンスが向上しました。
     - ライセンス専用のサーバーを使用する場合は、プライマリのライセンス サーバーから発行します。
@@ -50,11 +51,11 @@ ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
 - [サポートされているプラットフォーム](supported-platforms.md)一覧も更新されました。
 - 運用前環境の必要性とアプリケーション マニフェストの使用は RMS SDK 2.1 から削除されています。 この開発者向けドキュメント セットのこれらのセクションは削除されており、ドキュメントは全体的に簡素になり、再編成されています。
 
-## 2015 年 5 月の更新
+## <a name="may-2015-update"></a>2015 年 5 月の更新
 
 -   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についてのトピックが更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
-## 2015 年 4 月の更新
+## <a name="april-2015-update"></a>2015 年 4 月の更新
 
 -   一連の新しい API で**ドキュメント追跡** が可能になりました。 詳細については、「[Tracking Content](tracking-content.md)」 (コンテンツの追跡) を参照してください。
 -   **暗号化の種類** – 暗号化パッケージの選択の API レベルでの制御をサポートします。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
@@ -65,7 +66,7 @@ ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
 -   **ログ**は、ファイルと Event Tracing for Windows メソッドの両方で実装されました。
 -   **Windows 7 SP1 または Windows Server 2008 R2 コンピューター**を実行している場合は、「開発者向けの重要な注意事項」の下の記述を参照してください。
 
-## 2015 年 1 月の更新
+## <a name="january-2015-update"></a>2015 年 1 月の更新
 
 -   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポートされるファイル形式) を参照してください。
 -   **ログの強化による診断の向上** – 確認する必要があるメッセージが**エラー**または**警告**のログ レベルで表示されます。 表示されている例外など、他のすべてのメッセージは**情報**としてログに記録されます。
@@ -75,12 +76,12 @@ ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
 -   **会社テンプレートの取得** – ユーザーからのレポートやフィードバックに基づき、テンプレート取得コードが大幅に修正されました。
 -   強化されたローカライズの整合性
 
-## 2014 年 10 月の更新
+## <a name="october-2014-update"></a>2014 年 10 月の更新
 
 -   SDK のファイル API のコンポーネントの既定の動作が更新されました。 詳細については、「 [ファイル API の構成](file-api-configuration.md)」を参照してください。
 -   新機能の電子メール通知については、開発者向け注意事項のトピック「[電子メール通知の有効化](how-to-enable-email-notification.md)」を参照してください。
 
-## 2014 年 7 月の更新
+## <a name="july-2014-update"></a>2014 年 7 月の更新
 
 SDK のファイル API のコンポーネントが拡張され、次の機能が提供されるようになりました。
 
@@ -99,7 +100,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
     -   [IpcfSetEndOfFile](https://msdn.microsoft.com/library/dn771754.aspx)
     -   [IpcfWriteFile](https://msdn.microsoft.com/library/dn771756.aspx)
 
-## 2014 年 4 月の更新
+## <a name="april-2014-update"></a>2014 年 4 月の更新
 
 -   **ファイル API のメモリ使用率** (特に大規模な PFile の場合) が大幅に改善されました。
 -   **コンテンツ ID** は、**IPC\_LI\_CONTENT\_ID** プロパティを使用して書き込み可能になりました。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
@@ -108,15 +109,15 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     **ベスト プラクティスのテスト** – Azure RMS でテストする前にオンプレミス サーバーを使用する場合のガイダンスを追加しました。 詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
-## 開発者向けの重要な注意事項
+## <a name="important-developer-notes"></a>開発者向けの重要な注意事項
 
--   **あらゆるファイルの種類のネイティブ サポート**
+-   **すべてのファイルの種類のネイティブ サポート**
 
     Rights Management サービス SDK 2.1 のこのリリースでは、あらゆるファイルの種類 (拡張子) のネイティブ サポートを追加できます。 たとえば、拡張子 &lt;ext&gt; (Office 以外および pdf) では、その拡張子の管理者の構成が "NATIVE" の場合、\*.p&lt;ext&gt; が使用されます。
 
     サポートされているファイルの種類の詳細については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
 
--   **Windows 7 SP1 および Windows Server 2008 R2 SP1 コンピューター**に更新プログラム [KB2533623](https://support.microsoft.com/en-us/kb/2533623) が適用されていない場合、office ファイルを保護する際に "パラメーターが正しくありません。 エラー コード 0x80070057" というエラーが発生することがあります。 このエラーが表示された場合は、更新プログラムをインストールしてやり直してください。 それでも問題が解決しない場合は、RMS SDK ベータ フィードバック (<rmcstbeta@microsoft.com>) にお問い合わせください。
+-   **Windows 7 SP1 および Windows Server 2008 R2 SP1 コンピューター**に更新プログラム [KB2533623](https://support.microsoft.com/en-us/kb/2533623) が適用されていない場合、office ファイルを保護する際に "パラメーターが正しくありません。 エラー コード 0x80070057" というエラーが発生することがあります。 このエラーが表示された場合は、更新プログラムをインストールしてやり直してください。 それでも問題が解決しない場合は、RMS SDK ベータ フィードバック エイリアス(<rmcstbeta@microsoft.com>) にお問い合わせください。
 
     **注**  2015 年 4 月のリリース時点で、この更新プログラムのインストール プロセスにチェックが追加されました。
 
@@ -148,7 +149,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     **ソリューション**: Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
 
-## よく寄せられる質問
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **Q**: LCID パラメーターを受け取る関数では、既定の言語の動作はどうなるでしょうか。
 
@@ -167,6 +168,6 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

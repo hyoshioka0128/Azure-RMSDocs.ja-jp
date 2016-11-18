@@ -2,6 +2,7 @@
 title: "クイック スタート チュートリアル手順 1 | Azure Information Protection"
 description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: c8cad9c4b6efe2630843bcb1618ecd535670e0fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
 
 
 ---
 
-# 手順 2: Azure Information Protection ポリシーを構成して公開する
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
 >*適用対象: Azure Information Protection*
 
@@ -39,7 +40,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy.png)
 
-## 既定のテンプレートと理由を求めるプロンプトのグローバル設定の変更
+## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>既定のテンプレートと理由を求めるプロンプトのグローバル設定の変更
 
 このチュートリアルでは 2 つのグローバル設定を変更し、どのように動作するかを確認します。
 
@@ -47,7 +48,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) で、これを**[On]** (オン) に設定します。
 
-## 分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
 
 次に、ラベルの 1 つ **[Confidential]** (機密) の設定を変更します。
 
@@ -121,6 +122,6 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

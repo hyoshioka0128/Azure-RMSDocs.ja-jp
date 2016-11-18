@@ -2,6 +2,7 @@
 title: "AD RMS から Azure Information Protection への移行 - フェーズ 2 | Azure Information Protection"
 description: "AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 5 が含まれます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 25f7c2e5eb226fcf7c30026a37a767e559a522ad
-ms.openlocfilehash: 810e540e02db0b4a142471dd89e30663bd61f22c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ca8d2ccb68b96095fccf9d55b9cb9392d3a455ec
 
 
 ---
-# 移行フェーズ 2 - クライアント側の構成
+# <a name="migration-phase-2-clientside-configuration"></a>移行フェーズ 2 - クライアント側の構成
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
 AD RMS から Azure Information Protection への移行フェーズ 2 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 5 を説明します。
 
 
-## 手順 5. Azure Information Protection を使用するようにクライアントを再構成する
+## <a name="step-5-reconfigure-clients-to-use-azure-information-protection"></a>手順 5. Azure Information Protection を使用するようにクライアントを再構成する
 Windows クライアントの場合:
 
 1.  [移行スクリプトをダウンロードする](https://go.microsoft.com/fwlink/?LinkId=524619):
@@ -76,7 +77,7 @@ Windows クライアントの場合:
 
     -  [AD RMS モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
 
-#### 移行スクリプトによって行われる変更
+#### <a name="changes-made-by-the-migration-scripts"></a>移行スクリプトによって行われる変更
 ここでは、移行スクリプトが行う変更について説明します。 この情報は、参照用、トラブルシューティング用、または変更を自分で行いたい場合に使用できます。
 
 CleanUpRMS_RUN_Elevated.cmd:
@@ -129,10 +130,10 @@ Redirect_OnPrem.cmd:
     > Azure RMS の **Get-AadrmConfiguration** コマンドレットを実行するときに [RightsManagementServiceId](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) 値を識別することによって、この値を見つけることができます。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

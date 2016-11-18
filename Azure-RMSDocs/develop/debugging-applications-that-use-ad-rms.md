@@ -3,6 +3,7 @@ title: "権限保護対応アプリケーションをデバッグする方法 | 
 description: "このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
 
 
 ---
 
-# 方法: 権限保護対応アプリケーションのデバッグ
+# <a name="howto-debug-a-rightsenabled-application"></a>方法: 権限保護対応アプリケーションのデバッグ
 
 このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
 
-## アプリケーションのデバッグ
+## <a name="debugging-your-application"></a>アプリケーションのデバッグ
 
 Rights Management サービス SDK 2.1 では、ランタイムの開発者バージョンでのアンチデバッグ機能のチェックは無効になっています。
 
@@ -41,7 +42,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-### Windows イベント ログを使用したアプリケーションのログ記録
+### <a name="application-logging-by-using-the-windows-event-log"></a>Windows イベント ログを使用したアプリケーションのログ記録
 
 イベント ログの名前は "Microsoft-RMS-MSIPC/Debug" です。 これは、Windows イベント ビューアーでログが表示される場所が "アプリケーションとサービス ログ\\Microsoft\\RMS\\MSIPC\\Debug" であることを意味します。
 
@@ -67,7 +68,7 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
  
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
  
 
@@ -75,6 +76,6 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

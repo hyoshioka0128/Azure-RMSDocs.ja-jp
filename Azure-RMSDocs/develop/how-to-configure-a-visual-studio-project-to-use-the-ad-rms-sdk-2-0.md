@@ -3,6 +3,7 @@ title: "Visual Studio の構成 | Azure RMS"
 description: "RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する手順。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,23 +15,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 28286a4c8a5fcc602afba5975cfe5133e8b6c55b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 91efe573952d70613b3d52c7ee879da5c807da8e
 
 
 ---
 
-# Configure Visual Studio (Visual Studio の構成)
+# <a name="configure-visual-studio"></a>Configure Visual Studio (Visual Studio の構成)
 
 このトピックでは、Rights Management サービス SDK 2.1 を使用するように Visual Studio プロジェクトを構成する方法について説明します。
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 
 -   [SDK のインストール](install-the-rms-sdk.md)
 
 **手順**
 
-### 手順 1. RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する
+### <a name="step-1-configure-a-visual-studio-project-to-use-rms-sdk-21"></a>手順 1. RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する
 
 ここでは、Microsoft Visual Studio 2010 に固有の手順を紹介します。 Microsoft Visual Studio の別のバージョンを使用している場合、設定ダイアログ ボックスが多少異なる場合があります。
 
@@ -69,7 +70,7 @@ ms.openlocfilehash: 28286a4c8a5fcc602afba5975cfe5133e8b6c55b
 
     ![[ソリューション エクスプローラー] の [リソース ファイル] フィールド](../media/original_file_name.png)
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 * [SDK のインストール](install-the-rms-sdk.md)
  
@@ -78,6 +79,6 @@ ms.openlocfilehash: 28286a4c8a5fcc602afba5975cfe5133e8b6c55b
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 
