@@ -1,6 +1,8 @@
 ---
 title: "HYOK の制限事項 | Azure Information Protection"
 description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: article
@@ -9,17 +11,17 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 821f4c0bfbad4c88bea0fbe26807f8e50677069b
-ms.openlocfilehash: 44a7dc786b678844e58f2a60204853d86c8750a7
+ms.sourcegitcommit: f1bf7377e5e8079025dff638a185c825256a5cc7
+ms.openlocfilehash: 3a563eccb37cfd660c28fd2308749d1e71771f23
 
 
 ---
 
-# AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
+# <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
 >*適用対象: Azure Information Protection*
 
-**[ この機能はまだ暫定的で、情報は変更される可能性があります。 ]**
+**[この機能はまだ暫定的で、情報は変更される可能性があります。]**
 
 最も機密性の高いドキュメントや電子メールを保護する場合、通常、次のような利点がある Azure Rights Management 保護を適用します。
 
@@ -44,7 +46,7 @@ Azure RMS は、Microsoft または自社 ("Bring Your Own Key" (BYOK) シナリ
 
 ラベルに AD RMS の保護を使用する場合、Azure RMS の保護よりも、ユーザーに認識されにくくなります。 AD RMS の保護には制限事項があるため、AD RMS の保護を適用するラベルをユーザーが選択する場合の明確な指針を示すようにしてください。
 
-## HYOK を使用するときの制限事項
+## <a name="limitations-when-using-hyok"></a>HYOK を使用するときの制限事項
 
 Azure RMS による保護を使うときの利点は得られないことに加えて、AD RMS による保護を Azure Information Protection とともに使う場合は次のような制限が課せられます。
 
@@ -54,7 +56,7 @@ Azure RMS による保護を使うときの利点は得られないことに加�
 
     "転送不可" オプションがラベルによって、またはユーザーの手動設定によって適用されている場合に、このオプションを Azure Rights Management サービスによって適用するつもりであっても、AD RMS デプロイによって適用される可能性があります。 このシナリオでは、外部の共有相手は "転送不可" オプションが指定されたメール メッセージを開くことができなくなります。
 
-## HYOK の要件
+## <a name="requirements-for-hyok"></a>HYOK の要件
 
 Azure Information Protection に AD RMS の保護を適用する場合、AD RMS のデプロイが次の要件を満たしていることを確認してください。
 
@@ -84,7 +86,7 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
 AD RMS のデプロイの情報と手順については、Windows Server ライブラリの「[Active Directory Rights Management Services の概要](https://technet.microsoft.com/library/hh831364.aspx)」を参照してください。 
 
 
-## Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
+## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
 
 AD RMS の保護のラベルを構成する場合、AD RMS クラスターのテンプレート GUID とライセンス URL を指定する必要があります。 これらの情報は、いずれも Active Directory Rights Management サービス コンソールから確認することができます。
 
@@ -94,7 +96,7 @@ AD RMS の保護のラベルを構成する場合、AD RMS クラスターのテ
     
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 このプレビュー機能の詳細については、ブログ投稿のお知らせ「[Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/)」(HYOK (Hold Your Own Key) による Azure Information Protection) を参照してください。
 
@@ -102,6 +104,6 @@ AD RMS の保護のラベルを構成するには、「[Rights Management によ
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

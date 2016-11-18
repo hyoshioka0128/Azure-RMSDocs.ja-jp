@@ -2,6 +2,7 @@
 title: "Azure Information Protection とは | Azure Information Protection"
 description: "Azure Information Protection サービスの概要です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 0098fa28313561e99f39e2539e20c8a6bc0207f7
-ms.openlocfilehash: eaaa08a99b3c065422dd8b0bc01d89ead15e9d49
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b26db0aae458a897710cd19e05753ad159004aa0
 
 
 ---
 
-# Azure Information Protection とは
+# <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
 >*適用対象: Azure Information Protection*
 
@@ -28,7 +29,7 @@ Azure Information Protection とは、組織が文書や電子メールを、分
 
 コンテンツを分類し (オプションで保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
 
-## ラベルによる分類のしくみ
+## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
 
 Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 永続的なラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 (データ損失防止ソリューションなどの) その他のサービスが分類を識別して適切なアクションを取れるように、ファイルと電子メールのヘッダーにはクリア テキストでメタデータが追加されます。 
 
@@ -37,7 +38,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](../media/example-email-footer-header.png)
 
 
-## データ保護のしくみ
+## <a name="how-data-is-protected"></a>データ保護のしくみ
 
 保護テクノロジには *Azure Rights Management* (しばしば Azure RMS と略される) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
 
@@ -45,7 +46,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 これらの保護タスクは、*Rights Management テンプレート*を使用して単純化および合理化できます。
 
-### Rights Management テンプレート
+### <a name="rights-management-templates"></a>Rights Management テンプレート
 
 Azure Rights Management サービスを有効にすると直ちに、組織内のユーザーがデータにアクセスすることを制限する 2 つのテンプレートが既定で作成されます。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 より制限を厳しく制御する、これらの既定のテンプレートを補うカスタム テンプレートを独自で構成することも可能です。
 
@@ -61,7 +62,7 @@ Azure Rights Management サービスを有効にすると直ちに、組織内�
 
 Azure Rights Management での保護のしくみの詳細については、「[Azure Rights Management とは](what-is-azure-rms.md)」を参照してください。
 
-## エンド ユーザーのワークフローとの統合
+## <a name="integration-with-end-user-workflows"></a>エンド ユーザーのワークフローとの統合
 
 Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、最初の図のように Information Protection バーをインストールします。 Excel、PowerPoint、および Outlook にも同じバーが追加されます。 たとえば、
 
@@ -72,7 +73,7 @@ Azure Information Protection は、Azure Information Protection クライアン�
 ユーザーが保護されている文書を電子メールで共有する場合、これらの文書にアクセスしているユーザーやいつアクセスされているかを文書の追跡サイトから監視することができます。 不正使用が疑われる場合、これらの文書に対するアクセスを取り消すことも可能です。
 
 
-## Azure Information Protection の参考資料
+## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 
 - お知らせ: [Azure Information Protection が一般公開されました](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
 
@@ -101,13 +102,13 @@ Azure Information Protection は、Azure Information Protection クライアン�
     - [BRK2128: Microsoft Office 365 と Azure Information Protection を利用してセキュリティで保護された電子メールを送信する](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 「[Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md)」 (Azure Information Protection のクイック スタート チュートリアル) で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。
 
 Azure Rights Management または Azure Information Protection の別名 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

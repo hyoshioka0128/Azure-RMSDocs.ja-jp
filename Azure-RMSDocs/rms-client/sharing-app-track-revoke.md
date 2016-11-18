@@ -2,6 +2,7 @@
 title: "RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す | Azure Information Protection"
 description: "RMS 共有アプリケーションを使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
-ms.openlocfilehash: 1cd55e9c6200876a4d9921e3b60eb8fb58845d0c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3b5b19ab2dfdf6b797f55134f3063948dcab33d5
 
 
 ---
 
-# RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す
+# <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す
 
 >*適用対象: Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -40,7 +41,7 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 
 -   ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合:[ヘルプ] アイコンをクリックして、「 [ドキュメント追跡の FAQ](http://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。
 
-## Office を使用したドキュメント追跡サイトへのアクセス
+## <a name="using-office-to-access-the-document-tracking-site"></a>Office を使用したドキュメント追跡サイトへのアクセス
 
 -   Office アプリケーション、Word、Excel、PowerPoint の場合:[ **ホーム** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有**] をクリックし、[ **使用の追跡**] をクリックします。
 
@@ -57,7 +58,7 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 > 
 > - Office アプリケーションの **[ホーム]** タブの **[保護]** グループで、**[保護]** > **[使用の追跡]** をクリックします。 
 
-### ドキュメントを追跡して取り消すための他の方法
+### <a name="other-ways-to-track-and-revoke-your-documents"></a>ドキュメントを追跡して取り消すための他の方法
 Windows コンピューターで Office アプリケーションを使用してドキュメントを追跡するだけでなく、以下の代替策を使用することもできます。
 
 -   **Web ブラウザーの使用**:この方法は、サポートされているすべてのデバイスで機能します。
@@ -66,7 +67,7 @@ Windows コンピューターで Office アプリケーションを使用して�
 
 -   **Outlook 電子メール メッセージの使用**:この方法は、Windows コンピューターで機能します。
 
-#### Web ブラウザーを使用したドキュメント追跡サイトへのアクセス
+#### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Web ブラウザーを使用したドキュメント追跡サイトへのアクセス
 
 -   サポートされているブラウザーを使用して、 [ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)に移動します。
 
@@ -82,30 +83,30 @@ Windows コンピューターで Office アプリケーションを使用して�
 
     -   Google Chrome:バージョン 18 以降
 
-#### エクスプローラーを使用したドキュメント追跡サイトへのアクセス
+#### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>エクスプローラーを使用したドキュメント追跡サイトへのアクセス
 
 -   ファイルを右クリックし、**[RMS による保護]** を選択して、**[使用の追跡]** を選択します。
 
     ![[RMS 共有アプリケーションの使用時に Explorer から使用状況を追跡する] を選択する](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
-#### Outlook 電子メール メッセージを使用したドキュメント追跡サイトへのアクセス
+#### <a name="using-an-outlook-email-message-to-access-the-doc-tracking-site"></a>Outlook 電子メール メッセージを使用したドキュメント追跡サイトへのアクセス
 
 -   電子メール メッセージの [ **メッセージ** ] タブで、[  **RMS** ] グループの [ **保護ファイルの共有**] をクリックし、[ **使用の追跡**] をクリックします。
 
     ![[RMS 共有アプリケーションの使用時に Outlook から使用状況を追跡する] を選択する](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
-## 例とその他の説明
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

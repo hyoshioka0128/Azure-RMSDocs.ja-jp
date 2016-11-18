@@ -3,6 +3,7 @@ title: "概要 - RMS SDK 2.1 | Azure RMS"
 description: "Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 82441858230e179a08bfa74e0f6aaf9ed17a62fb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 816d665314fb77931433e36420b54c3ab6f689b9
 
 
 ---
 
-# 概要
+# <a name="overview"></a>概要
 
 Rights Management サービス SDK 2.1 は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。 コンテンツの所有者は、権限を有効にしたアプリケーションを通じて、そのコンテンツを開く、変更する、印刷する、転送する、などの操作を実行できるユーザーを定義することができます。
 
@@ -42,7 +43,7 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 
 このセクションの残りのトピックでは、RMS アーキテクチャとその実装について説明します。
 
-## このセクションの内容
+## <a name="in-this-section"></a>このセクションの内容
 
 | トピック | 説明 |
 |-------|-------------|
@@ -50,7 +51,7 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 |[サーバー](ad-rms-server.md) | このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。|
 
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 * [RMS の概念](application-types.md)
 * [作業開始](getting-started-with-ad-rms-2-0.md)
@@ -61,6 +62,6 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

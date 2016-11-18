@@ -2,8 +2,9 @@
 title: "Azure Rights Management をアクティブにする | Azure Information Protection"
 description: "この情報保護ソリューションをサポートするアプリケーションとサービスを使用して、組織の重要な文書や電子メールの保護を開始するには、Azure Rights Management をアクティブにする必要があります。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +13,8 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 06c71229427743e9669baee1fdbb41f175180b0f
+ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
+ms.openlocfilehash: 51bc2c66cfce9f50b0d876fb1066d740f570d27d
 
 
 ---
@@ -40,19 +41,19 @@ Azure Rights Management をアクティブにした後は、組織内のすべ�
 - [Office 365 管理センター - クラシック](activate-office365-classic.md)
 - [Azure クラシック ポータル](activate-azure-classic.md)
 
-または、Window PowerShell を使用して [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をアクティブ化することもできます。
+または、PowerShell を使用して [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をアクティブ化することもできます。
 
 1. Azure Rights Management Administration Tool をインストールすると、Azure Rights Management 管理モジュールがインストールされます。 手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
-2. Windows PowerShell セッションから [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) を実行し、メッセージが表示されたら、Azure Information Protection テナントのグローバル管理者アカウントの詳細を指定します。
+2. PowerShell セッションから [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) を実行し、メッセージが表示されたら、Azure Information Protection テナントのグローバル管理者アカウントの詳細を指定します。
 
 3. [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx) を実行して、Azure Rights Management サービスをアクティブ化します。
 
 ## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>段階的デプロイのオンボーディング コントロールの構成
-すべてのユーザーが Azure Rights Management を使用してすぐにファイルを保護できるようにしたくない場合は、[Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Windows PowerShell コマンドを使用してユーザー オンボーディング コントロールを構成できます。 このコマンドを実行するのは、Azure Rights Management サービスをアクティブ化する前と後のどちらでもかまいません。
+すべてのユーザーが Azure Rights Management を使用してすぐにファイルを保護できるようにしたくない場合は、[Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) PowerShell コマンドを使用してユーザー オンボーディング コントロールを構成できます。 このコマンドを実行するのは、Azure Rights Management サービスをアクティブ化する前と後のどちらでもかまいません。
 
 > [!IMPORTANT]
-> このコマンドを使用するには、バージョン **2.1.0.0** 以降の [Azure Rights Management Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)が必要です。
+> このコマンドを使用するには、バージョン **2.1.0.0** 以降の [Azure Rights Management PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)が必要です。
 >
 > インストールされているバージョンを確認するには、**(Get-Module aadrm –ListAvailable).Version** を実行します。
 
@@ -61,13 +62,16 @@ Azure Rights Management をアクティブにした後は、組織内のすべ�
 ```
 Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
 ```
-この構成オプションでは、グループを指定する必要があります。個々 のユーザーを指定することはできません。
+この構成オプションでは、グループを指定する必要があります。個々 のユーザーを指定することはできません。 グループのオブジェクト ID を取得するには、Azure AD PowerShell を使用します。たとえば、[バージョン 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) のモジュールについては、[Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) コマンドを使用します。
 
 または、Azure Information Protection を使用するライセンスがあるユーザーのみがコンテンツを保護できるようにする場合は、次のコマンドを使用します。
 
 ```
 Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 ```
+
+このコマンドレットとその他の例の詳細については、[Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx) ヘルプを参照してください。
+
 これらのオンボーディング コントロールを使用するときは、保護されたコンテンツを組織内のすべてのユーザーがいつでも使用できますが、コンテンツを保護できるのは組織内の一部のユーザーのみとなり、それ以外のユーザーは情報保護を自分でクライアント アプリケーションから適用することはできません。 たとえば、そのようなユーザーの Office クライアントには、Azure Rights Management がアクティブになると自動的に公開される既定のテンプレートや管理者が構成したカスタム テンプレートは表示されません。  Exchange などのサーバー側のアプリケーションには、Rights Management と統合された場合に同じ結果を達成するための、独自のユーザー単位コントロールを実装する機能があります。
 
 
@@ -81,6 +85,6 @@ Exchange Online や SharePoint Online などの Office サービスの Informati
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "使用制限について | Azure RMS"
 description: "すべての RMS 対応アプリケーションは、使用制限を適用する必要があります。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
-ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cc383728d487cac45e59ef34ca43ba47c4db237b
 
 
 ---
 
-# Understanding usage restrictions (使用制限について)
+# <a name="understanding-usage-restrictions"></a>Understanding usage restrictions (使用制限について)
 
 すべての RMS 対応アプリケーションは、使用制限を適用する必要があります。 使用制限とは、ユーザーが操作 (例: ドキュメントの印刷) を実行しようとしたが、 その操作を実行するための権限 (例: 印刷権限) がドキュメントの RMS ポリシーによって付与されていない 状態です。
 
 ドキュメントに対するユーザーのアクセス許可は、[IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx) 機能を使用して照会できます。
 
-## Understanding usage restrictions (使用制限について)
+## <a name="understanding-usage-restrictions"></a>Understanding usage restrictions (使用制限について)
 
 -   標準の RMS 権限について理解する
 
@@ -46,7 +47,7 @@ ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
 
     特定の権限の適用方法については、「[Usage restriction reference (使用制限のリファレンス)](usage-restriction-reference.md)」を参照してください。
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [使用制限のリファレンス](usage-restriction-reference.md)
@@ -56,6 +57,6 @@ ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

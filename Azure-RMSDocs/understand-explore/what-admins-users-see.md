@@ -2,6 +2,7 @@
 title: "管理者とユーザーに表示される内容 | Azure Information Protection"
 description: "Azure Rights Management (Azure RMS) テクノロジを使用する場合に管理者とユーザーに表示される内容と、機密情報を保護する方法についての一般的な例をいくつか紹介します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
-ms.openlocfilehash: 4cc2522a03d1d6003d60e9c87fb8bab3c1454df4
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5708529be090dc2d2dcd58b728e046eceff26865
 
 
 ---
 
 
-# Azure RMS の動作:管理者およびユーザーに対する表示
+# <a name="azure-rms-in-action-what-administrators-and-users-see"></a>Azure RMS の動作:管理者およびユーザーに対する表示
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -32,7 +33,7 @@ ms.openlocfilehash: 4cc2522a03d1d6003d60e9c87fb8bab3c1454df4
 
 実際の RMS の動作を紹介するスクリーンショットやビデオは、「[Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)」(エンタープライズ モビリティおよびセキュリティ ブログ) をご覧ください。
 
-## Rights Management のアクティブ化と構成
+## <a name="activating-and-configuring-rights-management"></a>Rights Management のアクティブ化と構成
 Windows PowerShell を使用して Azure RMS をアクティブ化および構成できますが、管理ポータルを使用する法が簡単です。 サービスをアクティブ化するとすぐに、2 つの既定のテンプレートが作成されます。管理者とユーザーはこれを選択して迅速かつ簡単にファイルに情報保護を適用できます。 ただし、追加のオプションと設定用に独自のカスタム テンプレートを作成することもできます。
 
 ![手順 1 で管理者に表示される内容](../media/AzRMS_StoryboardActivate_small1.png)
@@ -79,7 +80,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 次に、管理者がテンプレートを適用してファイルやメディアの情報保護を自動的に構成する方法の例を示します。
 
-## Windows Server およびファイル分類インフラストラクチャを実行しているファイル サーバー上のファイルの自動的な保護
+## <a name="automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure"></a>Windows Server およびファイル分類インフラストラクチャを実行しているファイル サーバー上のファイルの自動的な保護
 
 この例では、少なくとも Windows Server 2012 を搭載し、ファイル分類インフラストラクチャを使用するように構成されているファイル サーバー上のファイルを、Azure RMS を使用して自動的に保護する方法を示します。
 
@@ -114,7 +115,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 - 詳細な手順については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」をご覧ください。
 
-## Exchange Online とデータ損失防止ポリシーによる電子メールの自動的な保護
+## <a name="automatically-protecting-emails-with-exchange-online-and-data-loss-prevention-policies"></a>Exchange Online とデータ損失防止ポリシーによる電子メールの自動的な保護
 
 前の例では、機密情報が含まれるファイルを自動的に保護する方法を示しました。では、情報がファイルではなく電子メール メッセージに含まれる場合はどうでしょうか。 今度は、Exchange Online のデータ損失防止 (DLP) ポリシーの出番です。この機能は、情報の保護を適用するようにユーザーに促すか (ポリシーのヒントを使用)、または自動的に適用します (トランスポート ルールを使用)。
 
@@ -153,7 +154,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 -   Azure RMS 用に Exchange Online を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションをご覧ください。
 
-## SharePoint Online と保護されたライブラリでのファイルの自動保護
+## <a name="automatically-protecting-files-with-sharepoint-online-and-protected-libraries"></a>SharePoint Online と保護されたライブラリでのファイルの自動保護
 
 SharePoint Online と保護されたライブラリを使用してドキュメントを簡単に保護する方法を示します。
 
@@ -187,7 +188,7 @@ SharePoint Online と保護されたライブラリを使用してドキュメ�
 
 -   Azure RMS 用に SharePoint を構成する手順の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」の「[SharePoint Online と OneDrive for Business: IRM 構成](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションをご覧ください。
 
-## ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有
+## <a name="users-safely-share-attachments-with-mobile-users"></a>ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有
 
 前の例では、管理者が機密データに情報保護を自動的に適用する方法を説明しました。 ただし、ユーザーが自分でこの保護を適用する必要がある場合があります。 たとえば、別の組織のパートナーと共同作業を行っている場合、前の例では取り上げられていない状況または特別な状況において、カスタム アクセス許可またはテンプレートで定義されていない設定が必要になります。 このような場合、ユーザーは RMS テンプレートを自分で適用したり、カスタムのアクセス許可を構成したりできます。
 
@@ -235,12 +236,12 @@ Bob が電子メールと添付ファイルを転送した場合、他のユー�
 
 - 「[Azure Rights Management のクイック スタート チュートリアル](../get-started/quick-start-tutorial.md)」にはこのシナリオの詳細な手順が含まれています。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 Azure RMS の機能の例をいくつか説明しましたが、そのしくみに関心があるかもしれません。 Azure RMS の動作の技術情報については、「[Azure RMS の機能の詳細](how-does-it-work.md)」をご覧ください。
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Windows 用 Rights Management 共有アプリケーション | Azure Information Protection"
 description: "Windows 用 Rights Management 共有アプリケーションの情報リソースです。 これは無償でダウンロード可能なアプリケーションであり、Active Directory Rights Management サービス (AD RMS) または Azure Information Protection を使用している組織、および独自の情報保護インフラストラクチャを持たないが、Azure Information Protection を使用する他の組織が保護したコンテンツを使用したい組織を対象とするアプリケーションです。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
-ms.openlocfilehash: 4151d5d27f4297d3b9e02d45d0168c1933f3abc9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: abb1f0e1786aadbf3e9ab4b6a1679afeb32bedf1
 
 
 ---
 
-# Windows 用 Rights Management 共有アプリケーション
+# <a name="rights-management-sharing-application-for-windows"></a>Windows 用 Rights Management 共有アプリケーション
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
 
@@ -35,12 +36,12 @@ Windows 用 Rights Management 共有アプリケーション (単に「RMS 共�
 > 
 > Mac コンピューターと Windows Phone の場合: 「[モバイルおよび Mac プラットフォーム用 Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn451248)」
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 [Windows 用 Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn467883)
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

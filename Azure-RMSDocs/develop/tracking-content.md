@@ -3,6 +3,7 @@ title: "ドキュメント追跡の有効化と取り消しを行う方法 | Azu
 description: "コンテンツのドキュメント追跡機能を導入する方法の基本的な説明、ならびにメタデータ更新のサンプル コードとアプリの [使用の追跡] ボタンのサンプルコードを紹介します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -16,19 +17,17 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
 
 
 ---
 
-# コンテンツの追跡
-
-# 方法: ドキュメント追跡の有効化と取り消し
+# <a name="howto-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
 このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
 
-## ドキュメント追跡を実装する手順
+## <a name="steps-to-implement-document-tracking"></a>ドキュメント追跡を実装する手順
 
 手順 1 と 2 では、追跡するドキュメントを有効にします。 手順 3 では、保護ドキュメントを追跡するか、取り消す目的で、アプリ ユーザーがドキュメント追跡サイトにアクセスできるようにします。
 
@@ -38,7 +37,7 @@ ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
 
 導入の詳しい手順は以下のようになります。
 
-## 1.ドキュメント追跡メタデータを追加する
+## <a name="1-add-document-tracking-metadata"></a>1.ドキュメント追跡メタデータを追加する
 
 ドキュメント追跡は、Rights Management システムの機能です。 ドキュメントの保護プロセス中に特定のメタデータを追加することにより、追跡用のいくつかのオプションを提供する追跡サービス ポータルにドキュメントを登録できます。
 
@@ -48,12 +47,12 @@ ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
 運用上、ドキュメント追跡に必要なプロパティは、**コンテンツ名**と**通知の種類**のみです。
 
 
-- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
 
   すべてのメタデータ プロパティを設定することをお勧めします。 種類ごとの一覧を以下に示します。
 
-  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)」を参照してください。
+  詳細については、「[License metadata property types (ライセンス メタデータ プロパティの種類)](https://msdn.microsoft.com/library/dn974062.aspx)」を参照してください。
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -79,19 +78,19 @@ ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
 
     ファイルの作成日の設定に使用します。
 
-- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
 
 これらの API から適切なものを使用して、ファイルまたはストリームにメタデータを追加します。
 
-- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 
 最後に、この API を使用して、追跡対象のドキュメントを追跡システムに登録します。
 
-- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## 2.RMS サービスでドキュメントを登録する
+## <a name="2-register-the-document-with-the-rms-service"></a>2.RMS サービスでドキュメントを登録する
 
 ドキュメント追跡メタデータの設定と追跡システムに登録するための呼び出しの例を表すコード スニペットを次に示します。
 
@@ -134,38 +133,38 @@ ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
 
-## **[使用の追跡]** ボタンをアプリに追加する
+## <a name="add-a-track-usage-button-to-your-app"></a>**[使用の追跡]** ボタンをアプリに追加する
 
 **[使用の追跡]** UI アイテムをアプリに追加する作業は、次のいずれかの URL 形式の使用と同じように簡単です。
 
 - コンテンツ ID の使用
-  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) または [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types)」 (ライセンスのプロパティの種類) を参照してください。
-  - メタデータの **ContentId** と **Issuer** については、次の形式を使用します。 `https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) または [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
+  - メタデータの **ContentId** と **Issuer** については、次の形式を使用します。`https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     例 - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- そのメタデータにアクセスできない場合 (すなわち、保護されていないバージョンのドキュメントを調べている)、次の形式で **Content_Name** を使用できます。 `https://track.azurerms.com/#/?q={ContentName}`
+- そのメタデータにアクセスできない場合 (すなわち、保護されていないバージョンのドキュメントを調べている)、次の形式で **Content_Name** を使用できます。`https://track.azurerms.com/#/?q={ContentName}`
 
   例 - https://track.azurerms.com/#/?q=Secret!.txt
 
 このクライアントでは、適切な URL でブラウザーを開く必要があります。 RMS ドキュメント追跡ポータルが認証と必要なリダイレクトを処理します。
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
-* [ライセンス メタデータ プロパティの種類](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [通知の基本設定](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [通知の種類](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [ライセンス メタデータ プロパティの種類](https://msdn.microsoft.com/library/dn974062.aspx)
+* [通知の基本設定](https://msdn.microsoft.com/library/dn974063.aspx)
+* [通知の種類](https://msdn.microsoft.com/library/dn974064.aspx)
+* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

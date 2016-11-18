@@ -3,6 +3,7 @@ title: "用語 | Azure RMS"
 description: "Rights Management サービスに固有の用語定義のコレクション。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cf12a824d3d56ca2df234ba0732d0c4eaae6358e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8d6a7553123d36f5a08665949e6417d83bd3912e
 
 
 ---
 
-# 利用規約
+# <a name="terms"></a>利用規約
 
 Rights Management サービスに固有の用語定義のコレクション。
 
@@ -46,6 +47,6 @@ PFile 形式は Microsoft Rights Management SDK 4.2 の設計方法で埋め込�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 
