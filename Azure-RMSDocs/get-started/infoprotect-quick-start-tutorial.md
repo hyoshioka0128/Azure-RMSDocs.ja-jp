@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
+ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
+ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 
 
 ---
@@ -41,7 +41,7 @@ ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
 
 - Azure ポータルにサインインして Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
 
-- Windows (Windows 7 Service Pack 1 以降) を実行し、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 がインストールされているコンピューター。 
+- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 がインストールされている必要があります。 
 
 では、始めましょう。
 

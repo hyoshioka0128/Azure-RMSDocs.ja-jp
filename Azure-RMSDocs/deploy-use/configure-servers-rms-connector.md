@@ -4,7 +4,7 @@ description: "Azure Rights Management (RMS) コネクタを使用するオンプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
+ms.sourcegitcommit: afbaf9bfc2b898d8dece415a26045ec52f7deaac
+ms.openlocfilehash: 15d017cda5e390a6fd2b639ef451a15422981ae4
 
 
 ---
@@ -40,7 +40,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 -   **ファイル分類インフラストラクチャの場合**:ファイル リソース マネージャーをインストールした Windows Server コンピューター
 
-この構成にはレジストリの設定が必要です。 レジストリの構成は、Microsoft RMS コネクタのサーバー構成ツールを使用することによって自動で、 またはレジストリを編集することによって手動で行うことができます。
+この構成にはレジストリの設定が必要です。 レジストリの構成は、Microsoft RMS コネクタのサーバー構成ツールを使用することによって自動で、またはレジストリを編集することによって手動で行うことができます。
 
 ---
 
@@ -142,10 +142,16 @@ RMS コネクタを使用するには、サーバーで実行されている Exc
 
 -   Exchange 2010 Service Pack 3 ロールアップ更新プログラム 6 を適用した Exchange Server 2010
 
-さらに、RMS 暗号化モード 2 のサポートが含まれる RMS クライアントのバージョンをサーバーにインストールする必要があります。 Windows Server 2008 でサポートされている最小バージョンは修正プログラムに含まれており、「 [Windows Server 2008 R2 および Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](http://support.microsoft.com/kb/2627272)」からダウンロードできます。 Windows Server 2008 R2 用の最小バージョンは、「 [Windows 7 または Windows Server 2008 R2 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](http://support.microsoft.com/kb/2627273)」からダウンロードできます。 Windows Server 2012 と Windows Server 2012 R2 は、暗号化モード 2 をネイティブでサポートしています。
+さらに、これらのサーバーには、RMS 暗号化モード 2 をサポートするバージョン 1 の RMS クライアント (別名 MSDRM) が存在する必要があります。 どの Windows オペレーティング システムにも MSDRM クライアントは含まれていますが、初期のバージョンのクライアントは暗号化モード 2 をサポートしていませんでした。 Exchange サーバーのオペレーティング システムが Windows Server 2012 以上ならば、特に対応は必要ありません。オペレーティング システムとともにインストールされる RMS クライアントは、暗号化モード 2 をネイティブでサポートしているためです。 
+
+Exchange サーバーのオペレーティング システムがこれよりも前のバージョンである場合は、インストール済みの RMS クライアントのバージョンが暗号化モード 2 をサポートしていることを確認してください。 これを行うには、インストール済みのファイル Windows\System32\Msdrm.dll のバージョンを、次のサポート技術情報記事に記載されているバージョン番号と比較します。 インストール済みのバージョン番号が、記載されているバージョン番号以上ならば、特に対応は必要ありません。 インストール済みのバージョン番号がそれよりも低い場合は、その記事から修正プログラムをダウンロードしてインストールしてください。
+
+- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
+
+- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
-> これらのバージョン、またはより新しいバージョンの Exchange および RMS クライアントがインストールされていない場合、コネクタを使用するように Exchange を構成することはできません。 続行する前に、これらのバージョンがインストールされていることを確認してください。
+> ここに示したバージョン以降の Exchange と MSDRM クライアントがインストールされていない場合は、コネクタを使用するように Exchange を構成することはできません。 続行する前に、これらのバージョンがインストールされていることを確認してください。
 
 ### <a name="to-configure-exchange-servers-to-use-the-connector"></a>コネクタを使用するように Exchange サーバーを構成するには
 
@@ -182,7 +188,7 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 
 -   SharePoint Server 2010
 
-また、SharePoint 2016 または SharePoint 2013 を実行しているサーバーでは、RMS コネクタでサポートされているバージョンの MSIPC クライアント 2.1 も実行されている必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。
+また、SharePoint 2016 または SharePoint 2013 を実行しているサーバーでは、RMS コネクタでサポートされているバージョンの MSIPC クライアント 2.1 も実行されている必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。
 
 > [!WARNING]
 > MSIPC 2.1 クライアントには複数のバージョンがあるため、必ずバージョン 1.0.2004.0 以降を使用します。
@@ -250,6 +256,6 @@ RMS コネクタを監視するには、「[Azure Rights Management コネクタ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

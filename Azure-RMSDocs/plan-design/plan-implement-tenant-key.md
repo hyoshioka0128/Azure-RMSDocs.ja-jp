@@ -4,7 +4,7 @@ description: "Azure Information Protection テナント キーに関する計画
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
-ms.openlocfilehash: afcef2843336e022e63e7895ac3c0488d0aa0e2a
+ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
+ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
 
 
 ---
@@ -97,9 +97,9 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 キーが Key Vault に転送されると、キーには Key Vault でキー ID が付与されます。キー ID は、キーの資格情報コンテナーの名前、キー コンテナー、キーの名前、キーのバージョンが含まれる URL です。 例: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** この URL を指定して、Azure Information Protection から Azure Rights Management サービスにこのキーを使用するように指示する必要があります。
 
-ただし、Azure Information Protection では、Azure Rights Management サービスが組織のキー コンテナーにあるキーを使用することを承認されてからのみ、このキーを使用することができます。 そのために、Azure Key Vault 管理者は、Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) を使用して、Azure Rights Management サービス プリンシパル **Microsoft.Azure.RMS** にアクセス許可を付与する必要があります。 たとえば、
+ただし、Azure Information Protection では、Azure Rights Management サービスが組織のキー コンテナーにあるキーを使用することを承認されてからのみ、このキーを使用することができます。 このようにするには、Azure Key Vault 管理者が Key Vault PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) を使用して Azure Rights Management サービス プリンシパルにアクセス許可を付与します。このときに GUID 00000012-0000-0000-c000-000000000000 を使用します。 次に例を示します。
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 このキーを組織の Azure Information Protection テナント キーとして使用するように、Azure Information Protection を構成できるようになったとします。 Azure RMS コマンドレットを使用するには、まず Azure Rights Management サービスに接続してサインインします。
 

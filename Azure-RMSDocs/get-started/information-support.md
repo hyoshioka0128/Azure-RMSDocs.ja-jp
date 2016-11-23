@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2016
+ms.date: 11/11/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 4f0e3fbfd5caee7a5ea3fc40d8519a5e34d78cb5
+ms.sourcegitcommit: 757b0e1a65d54f81b00c6513ee85ded4fe753684
+ms.openlocfilehash: 37f42c4b9f4e4b41e96b3e1e6a74a6c3d7deb254
 
 
 ---
@@ -33,8 +33,10 @@ ms.openlocfilehash: 4f0e3fbfd5caee7a5ea3fc40d8519a5e34d78cb5
 |サブスクリプション情報とサポート対象の機能を確認する →|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)」を参照してください。|
 
 
-## <a name="information-about-new-releases"></a>新しいリリースについての情報
-Information Protection 製品グループは、新しいリリースと更新プログラムに関するお知らせを [Enterprise Mobility + Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)に投稿します。 これらのブログには、製品ドキュメントの補足やサポート情報が投稿されます。
+## <a name="information-about-new-releases-and-updated-documentation"></a>新しいリリースとドキュメントの更新に関する情報
+Information Protection 製品チームは、新しいリリースと更新プログラムに関するお知らせを [Enterprise Mobility + Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services)に投稿します。 これらのブログには、製品ドキュメントの補足やサポート情報が投稿されます。
+
+毎月末に、ドキュメントの変更の要約が "**Azure Information Protection Documentation Update for \<月、年>**" というタイトルで投稿されます。 この投稿には、コンテンツ タイプのタグとして [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) が付けられており、新しいリリースに関するドキュメントの更新情報のほかに、既存のリリースに関する訂正と補足も含まれています。
 
 > [!TIP]
 > Microsoft Rights Management サービス (Azure RMS または AD RMS) を使用するアプリケーションを開発している場合、[Active Directory Rights Management Services (AD RMS) 開発者のコーナー ブログ](https://blogs.msdn.microsoft.com/rms/)もお勧めです。
@@ -60,7 +62,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 その他のサポート オプションについては、Microsoft 連絡先担当者にお問い合わせください。 
 
-### <a name="selfhelp"></a>セルフヘルプ
+### <a name="self-help"></a>セルフヘルプ
 
 オンデマンド ビデオ:
 
@@ -82,7 +84,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 ### <a name="community-resources"></a>コミュニティのリソース
 
--   [Yammer: Azure Information Protection](http://www.yammer.com/AskIPTeam)
+-   [Yammer: Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
 -   [フォーラム:Microsoft RMS (クラウド)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
 

@@ -1,25 +1,27 @@
 ---
 title: "グローバル ポリシー設定を構成する方法 | Azure Information Protection"
 description: "Azure Information Protection ポリシーには、すべてのユーザーとすべてのデバイスに適用される次の 3 つの設定があります。"
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: e1d0c25995c45d72c1467aa1ff8043ca225a8156
+ms.sourcegitcommit: 8fa2ed9ff9ebe5c850ab5681e4dcc1f3d3c676b3
+ms.openlocfilehash: de5f5fbddb84e4444751e9fefbfe6ec3fe3e45e4
 
 
 ---
 
-# Azure Information Protection のグローバル ポリシー設定を構成する方法
+# <a name="how-to-configure-the-global-policy-settings-for-azure-information-protection"></a>Azure Information Protection のグローバル ポリシー設定を構成する方法
 
 >*適用対象: Azure Information Protection*
 
-すべてのユーザーとすべてのデバイスに適用される Azure Information Protection ポリシーには、次の 3 つの設定があります。
+Azure Information Protection ポリシーの中に次の 4 つの設定があり、すべてのユーザーとすべてのデバイスに適用されます。
 
 ![Azure Information Protection ポリシーのグローバル設定](../media/info-protect-policy-settings.png)
 
@@ -46,15 +48,17 @@ ms.openlocfilehash: e1d0c25995c45d72c1467aa1ff8043ca225a8156
 
     このオプションは、サブラベルには適用されません。
 
+    - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page** (Azure Information Protection クライアントの "詳細情報" Web ページ用のカスタム URL を指定する): このリンクは、**[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで**[保護]** > **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
+    
+    たとえば、ヘルプ デスク用に、クライアントのインストールと使用の方法が記載されている Microsoft のドキュメント ページ (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) や、リリース バージョン情報のページ (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**) を指定します。 あるいは、ユーザー向けの Web ページを独自に作成して、ヘルプ デスクへの連絡方法を掲載したり、ラベルを使用する手順をユーザーに説明するビデオを公開したりすることが考えられます。
+
 3. 変更を保存するには、**[保存]** をクリックします。
 
 4. 他のユーザーが変更を表示できるようにするには、**[公開]** をクリックします。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
-Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organization-s-policy)」セクションのリンクを使用してください。  
-
-
+Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
 
 
@@ -65,6 +69,8 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO3-->
 
 

@@ -4,7 +4,7 @@ description: "組織の Azure Information Protection を準備、実装、管理
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 884a4528da6fa79d92f39fa08860773bcc5552d3
+ms.sourcegitcommit: 1551b5dc3c5c9740721e3de01d086185966b6016
+ms.openlocfilehash: ce1ed30122b3bff5b045dfbec65c257d348f0122
 
 
 ---
@@ -44,6 +44,9 @@ ms.openlocfilehash: 884a4528da6fa79d92f39fa08860773bcc5552d3
 
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>手順 1: サブスクリプションを確認し、ユーザー ライセンスを割り当てる
 Azure Information Protection サイトの[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)と[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を見て、必要な機能を含むサブスクリプションを組織が所有していることを確認します。 次に、文書や電子メールを分類し、ラベルを付け、保護する各ユーザーにこのサブスクリプションのライセンスを割り当てます。
+
+注: ユーザー ライセンスを無料の個人用 RMS サブスクリプションから手動で割り当てることや、このライセンスを組織の Azure Rights Management サービスの管理目的で使用することはしないでください。 このようなライセンスは、Office 365 管理センターに **Rights Management Adhoc** と表示されるとともに、Azure AD PowerShell コマンドレット [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) を実行したときに **RIGHTSMANAGEMENT_ADHOC** と表示されます。 個人用 RMS サブスクリプションが自動的に付与されてユーザーに割り当てられるしくみの詳細については、「[個人用 RMS と Azure Information Protection](../understand-explore/rms-for-individuals.md)」を参照してください。
+
 
 ### <a name="step-2-prepare-your-tenant-account-to-use-azure-information-protection"></a>手順 2: Azure Information Protection を使用するためのテナント アカウントを用意する
 Azure Information Protection の使用を開始する前に、次の準備を行います。
@@ -130,6 +133,9 @@ Azure Rights Management サービスの使用を開始するとき、Windows Pow
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-azure-rights-management"></a>手順 1:Azure Rights Management を含むサブスクリプションがあることを確認します。
 Azure Information Protection サイトの[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)と[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を見て、必要な機能を含むサブスクリプションを組織が所有していることを確認します。 次に、Azure Rights Management サービスを利用して文書や電子メールを保護する、組織内の各ユーザーにこのサブスクリプションのライセンスを割り当てます。
 
+注: ユーザー ライセンスを無料の個人用 RMS サブスクリプションから手動で割り当てることや、このライセンスを組織の Azure Rights Management サービスの管理目的で使用することはしないでください。 このようなライセンスは、Office 365 管理センターに **Rights Management Adhoc** と表示されるとともに、Azure AD PowerShell コマンドレット [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) を実行したときに **RIGHTSMANAGEMENT_ADHOC** と表示されます。 個人用 RMS サブスクリプションが自動的に付与されてユーザーに割り当てられるしくみの詳細については、「[個人用 RMS と Azure Information Protection](../understand-explore/rms-for-individuals.md)」を参照してください。
+
+
 ### <a name="step-2-prepare-your-tenant-account-to-use-the-azure-rights-management-service"></a>手順 2: Azure Rights Management サービスを使用するためにテナント アカウントを準備する
 [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] を使用する前に、次の準備を行います。
 
@@ -184,6 +190,6 @@ Azure Rights Management サービスの使用を開始するとき、Windows Pow
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
