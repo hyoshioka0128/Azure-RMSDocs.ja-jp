@@ -3,6 +3,7 @@ title: "明示的な所有者権限の追加方法 | Azure RMS"
 description: Your application should explicitly add "Owner" rights when creating a license from scratch.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8be965d76578c28457eee207b56e5da83f7eb468
-ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2fa260480eaa26a529a058b597657216572b4cb8
 
 
 ---
 
-# 方法: 明示的な所有者権限の追加
+# <a name="howto-add-explicit-owner-rights"></a>方法: 明示的な所有者権限の追加
 
 アプリケーションでは、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。
 
-## 必要条件
+## <a name="prerequisites"></a>必要条件
 
 アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使ってライセンス ハンドルを作成するときは、所有者に完全な権限 (アクセス許可) も明示的に付与する必要があります。
 
@@ -33,9 +34,9 @@ ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
 
 次のコード例には、特定の権限を作成して特定のライセンスに割り当てるための手順のみが示されています。
 
-## 手順
+## <a name="instructions"></a>手順
  
-## 手順 1: シナリオ例
+## <a name="step-1-example-scenario"></a>手順 1: シナリオ例
 
 この例では、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って作成したライセンスに必要な権限を追加しています。 この例は、権限の作成のほか、権限リストを使用したライセンスへの権限の割り当てを示しています。
 
@@ -105,7 +106,7 @@ ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
 
 
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 - [開発者向け注意事項](developer-notes.md)
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
@@ -116,6 +117,6 @@ ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

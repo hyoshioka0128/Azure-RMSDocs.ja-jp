@@ -3,6 +3,7 @@ title: "Linux のコード例 | Azure RMS"
 description: "このトピックでは、Linux バージョンの RMS SDK の重要なシナリオとコード要素について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cb0ce6cc8f4740ffc04b36b02392bed2c5f5490c
 
 
 ---
 
-# Linux のコード例
+# <a name="linux-code-examples"></a>Linux のコード例
 
 このトピックでは、Linux バージョンの RMS SDK の重要なシナリオとコード要素について説明します。
 
 次のコード スニペットは、サンプル アプリケーション、*rms\_sample* および *rmsauth\_sample* からのものです。 詳しくは、GitHub リポジトリの「[サンプル](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples)」をご覧ください。
 
-## シナリオ: 保護されたファイルから保護ポリシー情報にアクセスする
+## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>シナリオ: 保護されたファイルから保護ポリシー情報にアクセスする
 
 **RMS 保護ファイルを開いて読み取ります**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -146,7 +147,7 @@ ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
       return fsResult;
     }
 
-## シナリオ: テンプレートを使用して新しい保護ファイルを作成する
+## <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
 **ユーザーが選択したテンプレートを使用してファイルを保護します**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -286,7 +287,7 @@ ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
     
 
 
-## シナリオ: カスタム保護を使用してファイルを保護する
+## <a name="scenario-protect-a-file-using-custom-protection"></a>シナリオ: カスタム保護を使用してファイルを保護する
 
 **カスタム保護を使用してファイルを保護します**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -403,7 +404,7 @@ ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
     
 
-## WorkerThread - サポート メソッド
+## <a name="workerthread-a-supporting-method"></a>WorkerThread - サポート メソッド
 
 
 *WorkerThread()* メソッドは、上のシナリオ例の 2 つ (**保護されたファイル ストリームの作成**および**ポリシーを指定してファイルを保護**) によって、次の方法で呼び出されます。
@@ -498,7 +499,7 @@ ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
     }
 
 
-## シナリオ: RMS 認証
+## <a name="scenario-rms-authentication"></a>シナリオ: RMS 認証
 
 次の例は、2 つの異なる認証方法 (UI を使用、または使用せずに Azure 認証 oAuth2 トークンを取得) を示しています。
 **UI を使用した oAuth2 認証トークンの取得**
@@ -593,6 +594,6 @@ ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: "アプリケーションの種類 | Azure RMS"
 description: "このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/20/2016
 ms.topic: article
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
-ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 20a0906561a79e0826b47981425ae121f07f3d26
 
 
 ---
 
-# アプリケーションの種類
+# <a name="application-types"></a>アプリケーションの種類
 
 
 このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。
 
 Rights Management サービス SDK 2.1 では、次のアプリケーションの種類が現在サポートされています。
 
-## 単純なアプリケーション
+## <a name="simple-applications"></a>単純なアプリケーション
 
 単純なアプリケーションには、指定されたファイルを暗号化するために作成されたコマンド ライン ツールなどがあります。 単純な権限保護対応アプリケーションの例は、「[アプリケーションの開発](developing-your-application.md)」で説明されている *IPCHelloWorld* の実装を参照してください。
 
-### サーバー モード アプリケーション
+### <a name="server-mode-applications"></a>サーバー モード アプリケーション
 
 *サーバー モード*は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止*アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)を参照してください。
 
@@ -39,7 +40,7 @@ Rights Management サービス SDK 2.1 では、次のアプリケーション�
 
 API のセキュリティ モード設定の詳細については、「[Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
-### リッチ クライアント アプリケーション
+### <a name="rich-client-applications"></a>リッチ クライアント アプリケーション
 
 リッチ クライアント アプリケーションでは、ユーザーはグラフィカル ユーザー インターフェイス (GUI) を介してデータを表示および操作できます。 多くの場合、この GUI に表示されるデータは価値が高く、盗難されたり、誤って開示されたりすると問題になるデータです。 通常、情報の保護により既存のシナリオの強化がサポートされますが、情報の保護はこのアプリケーションを開発する主な目的ではありません。
 
@@ -53,7 +54,7 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 アプリケーションの保護の詳細については、「[Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)」を参照してください。
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 - [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 - [アプリケーションの開発](developing-your-application.md)
@@ -62,6 +63,6 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

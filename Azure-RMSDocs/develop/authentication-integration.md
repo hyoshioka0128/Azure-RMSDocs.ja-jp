@@ -3,8 +3,9 @@ title: "Azure AD でアプリの登録と RMS の有効化を行う方法 | Azur
 description: "RMS 対応アプリケーションのユーザー認証の基本について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,34 +15,34 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 2f4e0d1990362ab50d90b1a31c3b5db45d2fcdd1
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 96bf5f830c09bb6b2dd781e749a6ee6eaffdba31
 
 
 ---
 
-# Azure AD でアプリの登録と RMS の有効化を行う方法
+# <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
 このトピックでは、Azure ポータルによるアプリ登録と RMS 有効化の基本事項を説明した後、Azure Active Directory Authentication Library (ADAL) によるユーザー認証について説明します。
 
-## ユーザー認証とは
+## <a name="what-is-user-authentication"></a>ユーザー認証とは
 ユーザー認証は、デバイス アプリケーションと RMS インフラストラクチャ間の通信を確立するために不可欠な手順です。 この認証プロセスでは、標準の OAuth 2.0 プロトコルを使用します。これには、現在のユーザーと認証要求に関する重要な情報が必要になります。
 
-## Azure ポータルでの登録
+## <a name="registration-via-azure-portal"></a>Azure ポータルでの登録
 まず、Azure ポータルでアプリの登録を構成するためのガイド「[Configure Azure RMS for ADAL authentication (Azure RMS の ADAL 認証を構成する)](adal-auth.md)」に従ってください。 後で使用するために、このプロセスでの**クライアント ID** と**リダイレクト URI** をコピーして保存しておいてください。
 
-## Rights Management License Agreement (RMLA) に同意する
+## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Rights Management License Agreement (RMLA) に同意する
 アプリケーションを展開する前に、Microsoft Rights Management チームとの RMLA に同意する必要があります。 詳細については、「[運用環境にデプロイする](deploying-your-application.md)」トピックの「運用環境の使用許諾契約書の要求」セクションを参照してください。
 
-## アプリのユーザー認証の実装
+## <a name="implement-user-authentication-for-your-app"></a>アプリのユーザー認証の実装
 各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。
 
-- Android - [AuthenticationRequestCallback](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) および [AuthenticationCompletionCallback](/information-protection/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) インターフェイス。
-- iOS / OS X - [MSAuthenticationCallback](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) プロトコル。
--  Windows Phone / Window RT - [IAuthenticationCallback](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) インターフェイス。
+- Android - [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) および [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx) インターフェイス。
+- iOS / OS X - [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) プロトコル。
+-  Windows Phone / Window RT - [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx) インターフェイス。
 - Linux - [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) インターフェイス。
 
-### 認証に使用するライブラリ
+### <a name="what-library-to-use-for-authentication"></a>認証に使用するライブラリ
 認証コールバックを実装するには、適切なライブラリをダウンロードして、それを使用するように開発環境を構成する必要があります。 これらのプラットフォーム用の ADAL ライブラリが GitHub に用意されています。
 
 次の各リソースには、環境をセットアップして、ライブラリを使用するためのガイダンスが含まれています。
@@ -55,7 +56,7 @@ ms.openlocfilehash: 2f4e0d1990362ab50d90b1a31c3b5db45d2fcdd1
 >[!NOTE]  
 > 他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
 
-### 認証パラメーター
+### <a name="authentication-parameters"></a>認証パラメーター
 
 ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証するために、いくつかの情報を必要とします。 これらの情報は標準の OAuth 2.0 パラメーターであり、一般にどの Azure AD アプリにも求められます。 ADAL 使用法の現行のガイドラインについては、前に記載された対応する Github リポジトリの README ファイルをご覧ください。
 
@@ -66,7 +67,7 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 また、前述の Azure ポータルでの登録手順で取得したものです。
 - **リダイレクト URI** – 認証コードの対象の URI で認証ライブラリを指定します。 iOS および Android では、特定の形式が必要になります。 これらの形式については、ADAL の対応する GitHub リポジトリの README ファイルで説明されています。 この値は、前述の Azure ポータルでの登録手順で取得したものです。
 
->[!NOTE] 
+>[!NOTE]
 > **範囲**は現在使用されていませんが、今後の使用のために予約されています。
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
@@ -76,7 +77,7 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 >[!NOTE] 
 > アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
 
-### 認証コールバックの実装の例
+### <a name="what-should-an-authentication-callback-implementation-look-like"></a>認証コールバックの実装の例
 **認証コード例** - この SDK には、認証コールバックの使用を示すコード例が含まれています。 ご参考のためにここに、また以下のリンクされたトピックでいくつかのコード例を紹介します。
 
 **Android ユーザー認証** - 詳しくは、「[Android のコード例](android-code.md)、最初のシナリオの**ステップ 2**、「RMS 保護ファイルを使用する」をご覧ください。
@@ -274,6 +275,6 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

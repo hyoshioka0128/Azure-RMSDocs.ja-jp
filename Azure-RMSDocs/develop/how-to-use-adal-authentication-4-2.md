@@ -3,6 +3,7 @@ title: "Azure ポータルを使用して RMS 認証用に構成する |Azure RM
 description: "ADAL での認証プロセスの概要を説明します。"
 keywords: "認証、RMS、ADAL"
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,22 +15,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: eb9cea79d9e5a7902839d34d9b4f13bdefe5a5d3
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0bea42f0de08dc521828ccfe3cbff85e32c74aca
 
 
 ---
 
-# 方法: Azure ポータルを使用して RMS 認証用に構成する
+# <a name="how-to-use-azure-portal-to-configure-for-rms-authentication"></a>方法: Azure ポータルを使用して RMS 認証用に構成する
 
 Azure Active Directory Authentication Library (ADAL) を利用し、アプリに対して Azure RMS で認証を実行する。
 
 この方法を使用するには、アプリケーションで独自の OAuth 認証を管理する必要があります。 この方法では、認証が必要なとき、RMS クライアントはアプリケーション定義のコールバックを実行します。
 
-## Azure ポータルによる構成
+## <a name="configure-via-azure-portal"></a>Azure ポータルによる構成
 まず、Azure ポータルで構成するためのガイド「[Configure Azure RMS for ADAL authentication (Azure RMS の ADAL 認証を構成する)](adal-auth.md)」に従ってください。 後で使用するために、このプロセスでの*クライアント ID* と*リダイレクト URI* をコピーして保存しておいてください。
 
-## コード サンプル
+## <a name="code-sample"></a>コード サンプル
 Azure ADAL を有効にするモバイル クライアント コード用のサンプルから、コードの一部を以下に示します。 詳細については、[MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp) で完全なサンプルを参照してください。
 
        /**
@@ -55,13 +56,13 @@ Azure ADAL を有効にするモバイル クライアント コード用のサ�
        }
 
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 - [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 - [Azure RMS の ADAL 認証を構成する](adal-auth.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

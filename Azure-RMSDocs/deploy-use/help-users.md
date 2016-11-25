@@ -2,6 +2,7 @@
 title: "Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ| Azure Information Protection"
 description: "Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
-ms.openlocfilehash: 56bb2e90f9d1ecb7c925ab22cf1dba16246876f7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
 
 
 ---
 
-# Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
+# <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -60,7 +61,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 次のセクションでは、機密のドキュメントおよび電子メールを保護する際に役立つアプリケーション固有の情報を示します。
 
-## Rights Management 共有アプリケーションによる情報保護の使用
+## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションによる情報保護の使用
 ユーザーが Office 2010 を使用している場合、コンテンツを保護し、保護されているコンテンツを使用するには Rights Management (RMS) 共有アプリケーションが必要になることがあります。さらに、このアプリケーションは Azure Rights Management サービスをサポートするすべてのコンピューターおよびモバイル デバイスに推奨されます。
 
 RMS 共有アプリケーションを使用すると、ユーザーが重要なドキュメントを簡単に保護できるようになるだけでなく、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることができます。
@@ -72,13 +73,13 @@ Windows コンピューター用のこのアプリケーションの使用方法
 > [!TIP]
 > スクリーンショットを含む、大まかなサンプル シナリオが必要な場合、「[ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users)」を参照してください。
 
-## Office 365、Office 2016、または Office 2013 での情報保護の使用
+## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Office 365、Office 2016、または Office 2013 での情報保護の使用
 Azure Rights Management サービスを使用しており、Rights Management 共有アプリケーションをインストールしていない場合、ファイルを簡単に保護するために使用できる、リボンの **[保護ファイルの共有]** ボタンまたはエクスプローラーの **[Protect in-place]** (保護済み) が表示されません。 これらのユーザーについては、次のような指示に従う必要があります。
 
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
-#### Word 2013 でドキュメントを保護するには
+#### <a name="to-protect-a-document-in-word-2013"></a>Word 2013 でドキュメントを保護するには
 
 1.  Microsoft Word で、新しいドキュメントを作成します。
 
@@ -91,7 +92,7 @@ Azure Rights Management サービスを使用しており、Rights Management �
 
 他のユーザーがドキュメントを開いている場合、それらのユーザーが最初に認証されます。 ドキュメントを開く権限がない場合、ドキュメントは開きません。 ドキュメントを開く権限がある場合、そのユーザーに対して指定された制限付き使用権限でドキュメントが開きます。 たとえば、使用権限が "表示のみ" の場合、ユーザーは別の場所にコピーした場合でもドキュメントを編集または保存できません。 使用権限は、制限バナーを使用してドキュメントの上部に表示されます。 このバナーには、ドキュメントに適用されるアクセス許可やそれらを表示するためのリンクが表示される場合があります。
 
-#### Outlook 2013 および Exchange Online を使用して電子メール メッセージを保護するには
+#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Outlook 2013 および Exchange Online を使用して電子メール メッセージを保護するには
 
 1.  Outlook で、組織内の受信者宛ての新しい電子メール メッセージを作成します。
 
@@ -101,7 +102,7 @@ Azure Rights Management サービスを使用しており、Rights Management �
 
 保護されている文書の表示と同様に、受信者が電子メール メッセージを受け取るとき、受信者は最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに指定された制限付き使用権によってメッセージが開きます。 たとえば、[ **転送不可**] を選択した場合、リボンの転送ボタンは使用できません。
 
-#### Outlook Web App を使用して電子メール メッセージを保護するには
+#### <a name="to-protect-an-email-message-using-the-outlook-web-app"></a>Outlook Web App を使用して電子メール メッセージを保護するには
 
 1.  Outlook Web App で、組織内の受信者宛ての新しい電子メール メッセージを作成します。
 
@@ -115,6 +116,6 @@ Azure Rights Management サービスを使用しており、Rights Management �
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

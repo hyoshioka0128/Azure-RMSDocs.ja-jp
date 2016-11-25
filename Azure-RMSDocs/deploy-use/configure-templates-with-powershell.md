@@ -2,6 +2,7 @@
 title: "カスタム テンプレート用の PowerShell リファレンス |Azure Information Protection"
 description: "Azure クラシック ポータルで権限管理テンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 3a213388584424871304778f3df36f7d49b370bd
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: aad5bc49b15b32c74352d5c9d6d48cd4f1f3cf9c
 
 
 ---
 
 
 
-# カスタム テンプレート用の PowerShell リファレンス
+# <a name="powershell-reference-for-custom-templates"></a>カスタム テンプレート用の PowerShell リファレンス
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -31,7 +32,7 @@ Azure クラシック ポータルで権限管理テンプレートを作成お�
 > [!IMPORTANT]
 > Windows PowerShell を使用して Azure Rights Management テンプレートを作成および管理するには、[Azure RMS 用の Windows PowerShell モジュール](http://go.microsoft.com/fwlink/?LinkId=257721)のバージョン 2.0.0.0 以降が必要です。
 > 
-> 既にこの PowerShell モジュールがインストールされている場合は、PowerShell ウィンドウで次のコマンドを実行してバージョン番号を確認してください。 `(Get-Module aadrm -ListAvailable).Version`
+> 既にこの PowerShell モジュールがインストールされている場合は、PowerShell ウィンドウで次のコマンドを実行してバージョン番号を確認してください。`(Get-Module aadrm -ListAvailable).Version`
 
 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
 
@@ -39,13 +40,13 @@ Azure クラシック ポータルで権限管理テンプレートを作成お�
 
 -   [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx)
 
--   [Expまたはt-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
+-   [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
 
 -   [Get-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727079.aspx)
 
 -   [Get-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727081.aspx)
 
--   [Impまたはt-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
+-   [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
 
 -   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)
 
@@ -55,10 +56,10 @@ Azure クラシック ポータルで権限管理テンプレートを作成お�
 
 
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

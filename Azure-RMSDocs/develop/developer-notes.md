@@ -3,6 +3,7 @@ title: "開発者ガイドと情報 | Azure RMS"
 description: "このトピックでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 593b8b505b8bd241c301c95ee6280f93f14901b9
-ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 
 
 ---
 
-# 開発者ガイドと情報
+# <a name="developer-guidance-and-information"></a>開発者ガイドと情報
 
 このセクションでは、いくつかの重要な開発シナリオについて説明し、この SDK による開発に関する基本情報を提供します。 このセクションのシナリオは Rights Management サービス SDK 2.1 のこのリリースに固有のシナリオであり、将来のリリースで変更される可能性があります。
 - [方法: ADAL 認証の使用](how-to-use-adal-authentication.md) - Azure Active Directory Authentication Library (ADAL) を利用し、アプリに対して Azure RMS で認証を実行する。
@@ -40,7 +41,7 @@ ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
 - [使用制限のリファレンス](usage-restriction-reference.md) - 使用制限は、このトピックに示す定数によって定義されます。
 
  
-## 関連項目
+## <a name="related-topics"></a>関連項目
 * [概要](ad-rms-overview.md)
  
 
@@ -48,6 +49,6 @@ ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

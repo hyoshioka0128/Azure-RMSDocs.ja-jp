@@ -3,6 +3,7 @@ title: "アプリケーションのデプロイ | Azure RMS"
 description: "このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順を追って各操作を説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,18 +15,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
-ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f565294366bdfd06be7fc25ef781eb4900929484
 
 
 ---
 
-# 運用環境にデプロイする
+# <a name="deploy-into-production"></a>運用環境にデプロイする
 
 
 このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順をおって各操作を説明します。
 
-## 運用環境の使用許諾契約書の要求
+## <a name="request-a-production-license-agreement"></a>運用環境の使用許諾契約書の要求
 
  Rights Management サービス SDK 2.1 を使用して開発されたアプリケーションを解放するには、運用環境の使用許諾契約を申請して、運用証明書を取得する必要があります。
 
@@ -63,11 +64,11 @@ Active Directory Rights Management ライセンス契約 (ADRMLA) チームは�
 ADRMLA チームから受信した手順に従ってください。 この手順では、証明書要求を満たすために必要なデジタル情報の項目が一覧表示されます。 この手順に従うことにより、遅延を減らすことができます。
 
 
-## Rights Management Service Client 2.1 のインストールのオプションと要件
+## <a name="installation-options-and-requirements-for-rights-management-service-client-21"></a>Rights Management Service Client 2.1 のインストールのオプションと要件
 
 RMS SDK 2.1 を使用するため、Active Directory Rights Management サービス Client 2.1 をエンドユーザーのコンピューターにデプロイする必要があります。
 
-### RMS クライアント 2.1
+### <a name="rms-client-21"></a>RMS クライアント 2.1
 
 RMS クライアント 2.1 は、(オンプレミスでインストールされるか、Microsoft のデータセンターにインストールされているかにかかわらず) RMS を使用するアプリケーション経由でやり取りされる情報のアクセスと使用を保護することを目的として、クライアント コンピューター向けに設計されたソフトウェアです。
 
@@ -78,9 +79,9 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 > AD RMS クライアント 2.1 はアーキテクチャ固有であり、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
 
 
-## RMS クライアント 2.1 のインストールの選択
+## <a name="rms-client-21-installation-choices"></a>RMS クライアント 2.1 のインストールの選択
 
--   **RMS クライアント 2.1 の再配布**
+-   **RRMS クライアント 2.1 の再配布**
 
     RMS クライアント インストーラー パッケージは、お使いのアプリケーションまたは推奨されるインストール テクノロジによるソリューションを使用してバンドルすることをお勧めします。 RMS クライアントは自由に再配布でき、他のアプリケーションや IT ソリューションにバンドルできます。
 
@@ -99,7 +100,7 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
     クライアントが存在する場合は、アプリケーションのインストールを続行します。
 
-## アプリケーションで Azure Rights Management サービスを有効にする
+## <a name="enabling-azure-rights-management-services-with-your-application"></a>アプリケーションで Azure Rights Management サービスを有効にする
 
 > [!NOTE]
 > 認証用に新しい ADAL モデルに移行した場合は、SIA をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
@@ -119,17 +120,17 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 アプリケーションによる Azure Rights Management サービスでの RMS の使用を有効にする方法の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」をご覧ください。
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 * [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Rights Management を構成する](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
-* [クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
+* [クラウド ベース RMS でのアプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
  
 
  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

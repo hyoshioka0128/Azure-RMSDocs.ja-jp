@@ -3,6 +3,7 @@ title: "開発環境のセットアップ | Azure RMS"
 description: "特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する方法について説明します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 185b67b50b7ded0ff28998f5a59be6b216abd0f9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b369c480cc9841a7c8d92f95af3319e0e49f43d0
 
 
 ---
 
-# 開発環境のセットアップ
+# <a name="setup-developer-environment"></a>開発環境のセットアップ
 
 次のトピックでは、特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する方法について説明します。
 
@@ -40,6 +41,6 @@ ms.openlocfilehash: 185b67b50b7ded0ff28998f5a59be6b216abd0f9
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

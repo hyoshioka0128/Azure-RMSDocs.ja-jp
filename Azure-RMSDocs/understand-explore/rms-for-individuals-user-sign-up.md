@@ -2,8 +2,9 @@
 title: "個人用 RMS にサインアップする方法 | Azure Information Protection"
 description: "この無料アカウントのサインアップ手順、およびこのプロセスがどのように機能するかについての技術情報です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,32 +13,32 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
 
 ---
 
-# 個人用 RMS にサインアップする方法
+# <a name="how-users-sign-up-for-rms-for-individuals"></a>個人用 RMS にサインアップする方法
 
 >*適用対象: Azure Information Protection*
 
-この無料アカウントにサインアップするには、[Microsoft Azure Rights Management のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスし、職場のメール アドレスを入力してリクエストを送信します。 このサインアップ ページは一般的に、受信した電子メール メッセージに保護された添付ファイルが付いている場合に、そのメールに記載されたサインアップ方法に従ってアクセスされるものです。 Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了できます。 これが完了したときに表示されるページから、各種デバイス用の共有アプリケーションをダウンロードできます。このページには他にも、ユーザー ガイドへのリンクや、Rights Management による保護をネイティブでサポートするアプリケーションの最新の一覧へのリンクもあります。 
+この無料アカウントにサインアップするには、[Microsoft Azure Information Protection のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスし、職場のメール アドレスを入力してリクエストを送信します。 このサインアップ ページは一般的に、受信した電子メール メッセージに保護された添付ファイルが付いている場合に、そのメールに記載されたサインアップ方法に従ってアクセスされるものです。 Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了できます。 これが完了したときに表示されるページから、各種デバイス用の共有アプリケーションをダウンロードできます。このページには他にも、ユーザー ガイドへのリンクや、Rights Management による保護をネイティブでサポートするアプリケーションの最新の一覧へのリンクもあります。 
 
-## 個人用 RMS にサインアップするには
+## <a name="to-sign-up-for-rms-for-individuals"></a>個人用 RMS にサインアップするには
 
-1.  Windows または Mac のコンピューター、またはモバイル デバイスを使用して [Microsoft Azure Rights Management のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスします。
+1.  Windows または Mac のコンピューター、またはモバイル デバイスを使用して [Microsoft Azure Information Protection のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスします。
 
-2.  組織で使用している電子メール アドレス ( **janetm@contoso.com** または **p.dover@fabrikam.com**など) を入力します。
+2.  組織で使用している電子メール アドレス (**janetm@contoso.com** または **p.dover@fabrikam.com** など) を入力します。
 
     > [!IMPORTANT]
     > 個人用の電子メール アカウントはサポートされていないため、Microsoft アカウント (以前の Microsoft Live ID アカウント) や、自宅で使用するインターネット プロバイダーから提供されている他の個人アカウントは入力しないてください。
 
 3.  [**サインアップ**] をクリックします。
 
-    Microsoft は、電子メール アドレスを使用して、組織が [Azure RMS を含む有料サブスクリプション](../get-started/requirements-subscriptions.md)を既に所有しているかどうかを確認します。 組織が所有している場合、個人用 RMS は必要ないので、すぐにサインインされ、個人用 RMS へのセルフサービス サインアップは取り消されます。 Azure RMS の有料のサブスクリプションが見つからない場合は、次の手順に進みます。
+    Microsoft では、ユーザーの電子メール アドレスを使用して、[Azure Information Protection の有料サブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)、または [Azure Resource Manager を使用したデータ保護を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をユーザーの組織が既に利用しているかどうかを確認しています。 組織が所有している場合、個人用 RMS は必要ないので、すぐにサインインされ、個人用 RMS へのセルフサービス サインアップは取り消されます。 有料のサブスクリプションが見つからない場合は、次の手順に進みます。
 
-4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は「**Microsoft Azure Rights Management のサインアップ完了**」です。
+4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム ((support@email.microsoftonline.com)) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 
 5.  このメールが届いたら、[**はい、私です**] をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
 
@@ -47,7 +48,7 @@ ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 アカウントの作成が完了しました。ファイルの保護を開始したり、他のユーザーが保護しているファイルを読み取ったりすることができます。 ファイルを保護するときや保護されたファイルを読み取るときにサインイン画面が表示された場合は、個人用 RMS のアカウントを作成するときに指定したものと同じ電子メール アドレスとパスワードを入力します。
 
-## サインアップ プロセスの技術概要
+## <a name="technical-overview-of-the-signup-process"></a>サインアップ プロセスの技術概要
 個人用 RMS では、ユーザーの認証に Microsoft のクラウド ベースの技術を使用するその他のサービスによって使用される、セルフサービスのサインアップ プロセスが使用されます。
 
 組織が Office 365 サブスクリプションまたは Azure サブスクリプションを保有していない場合にユーザーが個人用 RMS にサインアップすると、Azure にユーザーを認証するディレクトリがなく、バックグラウンドでは次が発生します。
@@ -87,16 +88,16 @@ ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
     -   保護されたドキュメントの追跡および取り消しの機能が [Azure RMS サブスクリプション](https://technet.microsoft.com/dn858608)でサポートされている場合、ユーザーはそれらの機能を使用できます。 詳細については、「[RMS 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」の「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)」を参照してください。
 
-    -   BYOK (Bring Your Own Key) ソリューションを実装して、組織の IT ポリシーに従って Azure Rights Management のテナント キーをオンプレミスで生成し、そのキーをハードウェア セキュリティ モジュール (HSM) を使用して Microsoft に安全に転送することができます。 詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
+    -   BYOK (Bring Your Own Key) ソリューションを実装して、組織の IT ポリシーに従って Azure Rights Management のテナント キーをオンプレミスで生成し、そのキーをハードウェア セキュリティ モジュール (HSM) を使用して Microsoft に安全に転送することができます。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 「[個人用 RMS 向けに作成されたアカウントを管理者が制御する方法](rms-for-individuals-take-control.md)」を参照してください。
 
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

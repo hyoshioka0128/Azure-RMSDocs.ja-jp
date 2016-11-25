@@ -2,8 +2,9 @@
 title: "手順 2.&colon; HSM で保護されているキーから HSM で保護されているキーへの移行 | Azure Information Protection"
 description: "この手順は、AD RMS から Azure Information Protection への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/14/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +13,20 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
-ms.openlocfilehash: 8d9538cb2663edce5fc343ed9710032505c15293
+ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
+ms.openlocfilehash: 9db60e1e841cd1f821501d402986dbd05a577f6f
 
 
 ---
 
-# 手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
+# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
 
 
 この手順は、[AD RMS から Azure Information Protection への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。 
 
-選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms)、別の構成を選択します。
+選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)、別の構成を選択します。
 
 > [!NOTE]
 > これらの手順は、AD RMS キーがモジュールで保護されていることを前提としています。 これは、最も一般的なケースです。 
@@ -41,7 +42,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 > Azure Key Vault の構成手順を実行する予定であるが、この Azure サービスに慣れていない場合は、最初に「[Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)」 (Azure Key Vault の概要) を参照することをお勧めします。 
 
 
-## パート 1: Azure Key Vault に HSM キーを転送する
+## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>パート 1: Azure Key Vault に HSM キーを転送する
 
 これらの手順は、Azure Key Vault の管理者によって実行されます。
 
@@ -51,16 +52,16 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
-2. インターネットに接続されたワークステーションでの PowerShell セッションで、[Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) コマンドレットを使用して、Azure Information Protection テナント キーを保存するキー コンテナーへの Microsoft.Azure.RMS という名前のサービス プリンシパルによるアクセスを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
+2. インターネットに接続されたワークステーションでの PowerShell セッションで、[Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) コマンドレットを使用して、Azure Information Protection テナント キーを格納するキー コンテナーへの Azure Rights Management サービス プリンシパルによるアクセスを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
     
     たとえば、Azure Information Protection 用に作成したキー コンテナーの名前が contoso-byok-ky、リソース グループの名前が contoso-byok-rg である場合は、次のコマンドを実行します。
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 
 これで、Azure Information Protection から Azure Rights Management サービスに対して Azure Key Vault の HSM キーが準備されたので、AD RMS 構成データをインポートできます。
 
-## パート 2: 構成データを Azure Information Protection にインポートする
+## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>パート 2: 構成データを Azure Information Protection にインポートする
 
 これらの手順は、Azure Information Protection の管理者によって実行されます。
 
@@ -89,11 +90,11 @@ Azure Information Protection テナント キーは Azure Key Vault によって
     > [!NOTE]
     > Azure Key Vault で Azure Information Protection テナント キーが使用しているキーを後で確認する必要がある場合は、Azure RMS コマンドレット [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) を使用します。
 
-以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant)」に進む準備ができました。
+以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

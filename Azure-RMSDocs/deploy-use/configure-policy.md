@@ -2,6 +2,7 @@
 title: "ポリシーの構成 | Azure Information Protection"
 description: "分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 472541f32c429eea34ea0afb76905bee8abf9747
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
 
 
 ---
 
-# Azure Information Protection ポリシーの構成
+# <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
 >*適用対象: Azure Information Protection*
 
@@ -51,7 +52,7 @@ Azure Information Protection には[既定のポリシー](configure-policy-defa
 
 Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する Azure Information Protection ポリシーに変更をダウンロードします。
 
-## 組織のポリシーの構成
+## <a name="configuring-your-organizations-policy"></a>組織のポリシーの構成
 
 次の情報を使用して、Azure Information Protection ポリシーを構成します。
 
@@ -71,13 +72,13 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

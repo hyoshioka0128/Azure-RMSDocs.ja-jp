@@ -3,6 +3,7 @@ title: "作業開始 | Azure RMS"
 description: "最初のアプリケーションをすばやく開発するために、各オペレーティング システム/プラットフォームの開発環境のセットアップ ガイドを使用します。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d4373ed4a0909c5c0c4dceb51f98ace1977cb6f7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 6e05b2c7444b5440d80bf5c4764b5ada554bbdc7
 
 
 ---
 
-# 作業開始
+# <a name="get-started"></a>作業開始
 
 この Microsoft Rights Management SDK 4.2 リリースでは、最初のアプリケーションをすばやく開発するために、各オペレーティング システム/プラットフォームの開発環境のセットアップ ガイドを使用します。 次の手順を行って、権限保護対応アプリケーションの作成を開始します。
 
@@ -56,6 +57,6 @@ ms.openlocfilehash: d4373ed4a0909c5c0c4dceb51f98ace1977cb6f7
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "シナリオ - 別の組織のユーザーと Office ファイルを共有する | Azure Information Protection"
 description: "このシナリオとサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ユーザーが別の組織のユーザーに Office ファイルを安全に電子メールで送信できるようにします。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 24b4e542a437a824c6783b02bde5bfb848cdeb3a
 
 
 ---
 
-# シナリオ - 別の組織のユーザーと Office ファイルを共有する
+# <a name="scenario-share-an-office-file-with-users-in-another-organization"></a>シナリオ - 別の組織のユーザーと Office ファイルを共有する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -34,23 +35,23 @@ ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 -   従業員は、外部のユーザーがこのドキュメントを開いた日時を知りたいと考えている可能性があります。
 
-## デプロイの手順
+## <a name="deployment-instructions"></a>デプロイの手順
 ![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認してください。
 
-## このシナリオの要件
+## <a name="requirements-for-this-scenario"></a>このシナリオの要件
 このシナリオのユーザー用の手順が役立つようにするには、次のことが必要です。
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
 |Office 365 または Azure Active Directory のアカウントとグループを準備した|[Azure Information Protection の準備](https://technet.microsoft.com/library/jj585029.aspx)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
+|Rights Management がアクティブ化されている|[Azure Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |ユーザーは Office 2013 の Outlook を使用する|ユーザーが Office 2016 または Office 2010 を使用している場合は、スクリーン ショットを対応するバージョンに置き換えて、図とユーザーに表示される内容とが一致するようにします。|
 |Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
 
-## ユーザー ドキュメントの手順
+## <a name="user-documentation-instructions"></a>ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
 
 1.  *&lt;Office ドキュメントの種類の名前&gt;* を、ユーザーが送信するドキュメントの種類に置き換えます。 「Word 文書」や「Excel スプレッドシート」ではなく、「価格表」、「配信時刻」、または「入札プロポーザル」など作業フローに特有の表現またはなじみの表現を使用します。 より具体的な表現を使用することで、ユーザーがこれらのドキュメントを操作するときに手順に従う可能性が大きくなります。
@@ -76,7 +77,7 @@ ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### &lt;Office ドキュメントの種類の名前> を共有する方法&gt;
+### <a name="how-to-share-a-ltname-of-office-document-typegt"></a>&lt;Office ドキュメントの種類の名前&gt; を共有する方法
 
 1.  1 つまたは複数の電子メール アドレスを指定して電子メール メッセージを作成し、それに *&lt;Office ドキュメントの種類の名前&gt;* を添付します。 次に、[ **メッセージ** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
 
@@ -100,7 +101,7 @@ ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 添付した &lt;Office ドキュメントの種類の名前&gt; を受信者が開いたかどうか、さらにそれをいつ開いたか追跡するには、[ドキュメントの追跡ポータル](https://track.azurerms.com/) を使用します。 受信者が &lt;Office ドキュメントの種類の名前&gt; を開いたことを確認したらすぐに、フォローアップ電話をかけることを検討します。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
 -   追加情報:
 
@@ -112,10 +113,10 @@ ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
     -   *&lt;連絡先詳細&gt;*
 
-### カスタマイズされたユーザー ドキュメントの例
+### <a name="example-customized-user-documentation"></a>カスタマイズされたユーザー ドキュメントの例
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
-#### 顧客と価格表を共有する方法
+#### <a name="how-to-share-a-price-list-with-your-customer"></a>顧客と価格表を共有する方法
 
 1.  1 つまたは複数の電子メール アドレスを指定して電子メール メッセージを作成し、メッセージを入力し、電子メール メッセージに最新の価格表を添付します。 次に、[ **メッセージ** ] タブの [ **RMS** ] グループで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
 
@@ -139,7 +140,7 @@ ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 添付した価格表を受信者が開いたかどうか、さらにそれをいつ開いたか追跡するには、 [ドキュメントの追跡ポータル](https://track.azurerms.com/) を使用します。 受信者が価格表を開いたことを確認したらすぐに、フォローアップ電話をかけることを検討します。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
 -   追加情報:
 
@@ -154,6 +155,6 @@ ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

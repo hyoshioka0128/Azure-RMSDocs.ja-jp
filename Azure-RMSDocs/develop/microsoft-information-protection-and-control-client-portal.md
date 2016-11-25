@@ -3,6 +3,7 @@ title: "Rights Management サービス SDK 2.1 | Azure RMS"
 description: "RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS または Azure RMS を使用して情報保護を提供するアプリケーションを作成できます。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 5972599c568091d39e8a6974648022c4835af1bb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 20699fe6a0f5d1e989ee767a5710a3272718f064
 
 
 ---
 
-# Rights Management サービス SDK 2.1
+# <a name="rights-management-services-sdk-21"></a>Rights Management サービス SDK 2.1
 
-## 目的
+## <a name="purpose"></a>目的
 
 Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は Rights Management サービス (RMS) または Azure Rights Management を使用して情報保護を提供するアプリケーションを作成できます。 RMS SDK 2.1 では、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
 
-### 対象となる開発者
+### <a name="developer-audience"></a>対象となる開発者
 
 RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 のダウンロード ページ](http://www.microsoft.com/en-us/download/details.aspx?id=38397)で入手できます。RMS SDK 2.1 は、デジタル資産での権限管理を実現し、それらの資産の使用条件を適用するカスタム アプリケーションを作成するために使用します。 C++ プログラミング言語の知識が必要です。
 
@@ -34,7 +35,7 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
 
 よく寄せられる質問に対する回答については、[RMS の FAQ](http://aka.ms/adrmsfaq )の開発者向けセクションを参照してください。
 
-### 実行時の要件
+### <a name="runtime-requirements"></a>実行時の要件
 
 特定のプログラミング要素の実行時の要件については、その要素のリファレンス トピックの要件に関するセクションを参照してください。
 
@@ -44,11 +45,11 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
 |[はじめに](getting-started-with-ad-rms-2-0.md)|RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。|
 |[リリース ノート](release-notes-rtm.md)|このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
 |[開発者向け注意事項](developer-notes.md)|このセクションでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。|
-|[API reference](api-reference-2-1.md)|このセクションには、すべての API 要素に関するリファレンス情報を説明するトピックが含まれています。|
+|[API リファレンス](api-reference-2-1.md)|このセクションには、すべての API 要素に関するリファレンス情報を説明するトピックが含まれています。|
 
  
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 * [RMS SDK 2.1 のダウンロード ページ](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
 * [RMS Developer's Corner (RMS 開発者のコーナー)](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
@@ -59,6 +60,6 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 の�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法 | Azure Information Protection"
 description: "Azure ポータルにアクセスできる場合に、Azure Rights Management サービスをアクティブ化する手順です。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
-ms.openlocfilehash: 74aac58a7b523f98ef627831830577d4fde7d5af
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: fe806c1c2b3f3284b905602a3a10deb79d91425e
 
 
 ---
 
-# Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法
+# <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -44,20 +45,20 @@ Azure ポータルにアクセスできる場合は、次の手順を使用し�
 
 これで、[ **Rights Management のステータス** ] に [ **アクティブ** ] と表示され、[ **アクティブ化** ] オプションが [ **非アクティブ化**] に置き換えられます。
 
-## Azure クラシック ポータルでの Rights Management のステータス値および説明
+## <a name="rights-management-status-values-and-descriptions-in-the-azure-classic-portal"></a>Azure クラシック ポータルでの Rights Management のステータス値および説明
 [ **アクティブ** ] ステータス (Rights Management サービスが有効化され、使用できる状態にあることを示す) の他に、[ **非アクティブ**]、[ **利用不可**]、または [ **許可されていません**] が表示される場合もあります。
 
 |ステータス値|説明|
 |----------------|---------------|
-|**アクティブ**|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] は有効になっていて、使用できる状態にあります。|
+|**アクティブ**|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] は有効化され、使用できる様態にあります。|
 |**非アクティブ**|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] は、無効になっているので、組織がファイルを保護できるようにするにはアクティブ化する必要があります。|
 |**利用不可**|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] サービスはダウンしています。 後でもう一度やり直してください。|
 |**許可されていません**|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] サービスのステータスを表示する権限がありません。 たとえば、アカウントがロックアウトされているか、または選択したテナントのグローバル管理者になっていません。|
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

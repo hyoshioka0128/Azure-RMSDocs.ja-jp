@@ -2,8 +2,9 @@
 title: "Rights Management 共有アプリケーション管理者ガイド | Azure Information Protection"
 description: "Windows 用 Microsoft Rights Management 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの手順および情報です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 11/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +13,14 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e5decd2df9135317f2e0da4951a177211342d7ac
-ms.openlocfilehash: e66f0ac6e596840ad940c51db41dbc6f91139e51
+ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
+ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
 
 
 ---
 
 
-# Rights Management 共有アプリケーション管理者ガイド
+# <a name="rights-management-sharing-application-administrator-guide"></a>Rights Management 共有アプリケーション管理者ガイド
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -30,12 +31,12 @@ RMS 共有アプリケーションは Azure Information Protection での作業�
 
 Rights Management 共有アプリケーションの技術的概要、ネイティブ保護とジェネリック保護についての情報、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法については、「[Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細](sharing-app-admin-guide-technical.md)」を参照してください。 
 
-## Microsoft Rights Management 共有アプリケーションの自動デプロイ
+## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの自動デプロイ
 Windows 版の RMS 共有アプリケーションはスクリプト化されたインストールをサポートするため、企業のデプロイメントに適しています。
 
 インストールの前提条件は、コンピューターで Windows 7 Service Pack 1 以降のバージョンを実行していることと、Microsoft Framework Version 4.0 以降がインストールされていることだけです。 Microsoft .NET Framework 4.0 をインストールする必要がある場合は、 [Microsoft ダウンロード センターからダウンロードしてインストール](http://www.microsoft.com/download/details.aspx?id=17718)できます。
 
-### RMS 共有アプリケーションを自動デプロイメント用にダウンロードするには
+### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>RMS 共有アプリケーションを自動デプロイメント用にダウンロードするには
 
 1.  Microsoft ダウンロード センターの「 [Windows 用 Microsoft Rights Management 共有アプリケーション](http://www.microsoft.com/download/details.aspx?id=40857) 」ページに移動して、[ **ダウンロード**] をクリックします。
 
@@ -59,7 +60,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     ユーザーが Office 2016 または Office 2013 を実行しており、組織では Azure Information Protection または Active Directory RMS を使用していて、ユーザーが Azure Information Protection または Active Directory RMS を使用している他の組織と共同作業を行っている。
 
--   **Office 2010 と Azure Information Protection**
+-   **Office 2010 および Azure Information Protection**
 
     ユーザーが Office 2010 を実行しており、組織では Azure Information Protection を使用していて、ユーザーが Azure Information Protection または Active Directory RMS を使用している他の組織と共同作業を行っている。
 
@@ -76,7 +77,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 各手順のインストールを完了するには、コンピューターを再起動する必要があります。 **shutdown /i** のようなコマンドを使用して、自動再起動を開始できます。
 
-### Office 2016 または Office 2013 用 RMS 共有アプリケーションおよび Azure Information Protection または Active Directory RMS をデプロイするには
+### <a name="to-deploy-the-rms-sharing-application-for-office-2016-or-office-2013-and-azure-information-protection-or-active-directory-rms"></a>Office 2016 または Office 2013 用 RMS 共有アプリケーションおよび Azure Information Protection または Active Directory RMS をデプロイするには
 
 -   RMS 共有アプリケーションと関連コンポーネントをインストールする各コンピューターで、昇格した特権で次のコマンドを実行します。
 
@@ -86,7 +87,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 成功したかどうかを確認するには、このトピックの[インストールの成功の確認](#verifying-installation-success)セクションをご覧ください。
 
-### Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection をデプロイするには
+### <a name="to-deploy-the-rms-sharing-application-for-office-2010-and-azure-information-protection"></a>Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection をデプロイするには
 
 1.  Azure Active Directory Rights Management 準備ツールを実行して組織の証明サービスの URL を取得できるように、Office 365 または Azure Active Directory テナントのグローバル管理者である必要があります。 このツールは、1 台のコンピューターで 1 回のみ実行する必要があります。 RMS 共有アプリケーションを各コンピューターにインストールする場合は、証明サービスの URL を使用します。
 
@@ -131,7 +132,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 成功したかどうかを確認するには、このトピックの[インストールの成功の確認](#verifying-installation-success)セクションをご覧ください。
 
-### Office 2010 用 RMS 共有アプリケーションおよび Active Directory RMS をデプロイするには
+### <a name="to-deploy-the-rms-sharing-application-for-office-2010-and-active-directory-rms"></a>Office 2010 用 RMS 共有アプリケーションおよび Active Directory RMS をデプロイするには
 
 1.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権で次のコマンドを実行します。
 
@@ -168,7 +169,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 成功したかどうかを確認するには、このトピックの[インストールの成功の確認](#verifying-installation-success)セクションをご覧ください。
 
-### RMS 共有アプリケーションおよび Office アドインのみをインストールするには
+### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>RMS 共有アプリケーションおよび Office アドインのみをインストールするには
 
 1.  次のコマンドを使用してログ ファイルを作成する既存のフォルダーを指定して、AD RMS クライアントと RMS 共有アプリケーションをインストールします。
 
@@ -184,7 +185,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         X86\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "<log file path and name>"
         ```
 
-    たとえば、 `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    例: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
     このコマンドが正常に実行されない場合でも、**/quiet** パラメーターによりエラー メッセージは表示されません。 インストールが失敗した理由をトラブルシューティングするには、/quiet なしでコマンドを再実行して、エラー メッセージを表示します。
 
@@ -202,16 +203,16 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x86\Setup.msi" /L*v "<log file path and name>"
         ```
 
-    たとえば、 `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    例: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
     このコマンドが正常に実行されない場合でも、**/quiet** パラメーターによりエラー メッセージは表示されません。 インストールが失敗した理由をトラブルシューティングするには、/quiet なしでコマンドを再実行して、エラー メッセージを表示します。
 
 成功したかどうかを確認するには、このトピックの[インストールの成功の確認](#verifying-installation-success)セクションをご覧ください。
 
-## インストールの成功の確認
+## <a name="verifying-installation-success"></a>インストールの成功の確認
 インストール ログ ファイルを使用して、インストールの成功を確認することができます。
 
-### Office 2016 または Office 2013 用 RMS 共有アプリケーションおよび Azure Information Protection または Active Directory RMS のインストールの成功を確認するには
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office-2016-or-office-2013-and-azure-information-protection-or-active-directory-rms"></a>Office 2016 または Office 2013 用 RMS 共有アプリケーションおよび Azure Information Protection または Active Directory RMS のインストールの成功を確認するには
 
 -   Setup.exe コマンドの成功を確認するには、各コンピューターで、インストール ログ ファイル **RMInstaller.log** を *%temp%\RMS_installer_&lt;guid&gt;* フォルダーで探し、終了コードを確認します。
 
@@ -219,7 +220,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     ログ ファイル名の例: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
-### Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection のインストールの成功を確認するには
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office-2010-and-azure-information-protection"></a>Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection のインストールの成功を確認するには
 
 1.  Setup.exe コマンドの成功を確認するには、各コンピューターで、インストール ログ ファイル **RMInstaller.log** を *%temp%\RMS_installer_&lt;guid&gt;* フォルダーで探し、終了コードを確認します。
 
@@ -241,7 +242,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     **CLC-alice@isvtenant999.onmicrosoft.com-{1b9cfccf;k5b11;k4a10;kac15;k29b2b6980f4c}.drm**
 
-### Office 2010 用 RMS 共有アプリケーションおよび Active Directory RMS のインストールの成功を確認するには
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office-2010-and-active-directory-rms"></a>Office 2010 用 RMS 共有アプリケーションおよび Active Directory RMS のインストールの成功を確認するには
 
 1.  Setup.exe コマンドの成功を確認するには、各コンピューターで、インストール ログ ファイルを *%temp%\RMS_installer_&lt;guid&gt;* フォルダーで探し、終了コードを確認します。
 
@@ -272,28 +273,28 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
         DefaultUser="&lt;default_user&gt;"
 
-### RMS 共有アプリケーションおよび Office アドインのみのインストールの成功を確認するには
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>RMS 共有アプリケーションおよび Office アドインのみのインストールの成功を確認するには
 
 1.  Setup_ipviewer.exe コマンドの成功を確認するには、インストール ログ ファイルでテキスト「**インストールの成功またはエラーの状態 0**」を探します。
 
     インストールの成功を示す行の例:
 
-    **MSI (s) (F0:B8) [14:19:57:854]:Product:Active Directory Rights Management Services Client 2.1 -- Installation completed successfully.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Product: Active Directory Rights Management Services Client 2.1 -- Installation completed successfully.**
 
-    **MSI (s) (F0:B8) [14:19:57:854]:Windows Installer installed the product. Product Name:Active Directory Rights Management Services Client 2.1. Product Version:1.0.1179.1. Product Language:1033. 製造元:Microsoft Corporation. Installation success or error status:0.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer installed the product.Product Name:Active Directory Rights Management Services Client 2.1.Product Version:1.0.1179.1.Product Language:1033.製造元:Microsoft Corporation.Installation success or error status: 0.**
 
 2.  Office アドインの成功を確認するには、各コンピューターのインストール ログ ファイルでテキスト「**インストールの成功またはエラーの状態 0**」を探します。
 
     インストールの成功を示す行の例:
 
-    **MSI (s) (9C:88) [18:49:04:007]:Product:Microsoft RMS Office Addins -- Installation completed successfully.**
+    **MSI (s) (9C:88) [18:49:04:007]: Product: Microsoft RMS Office Addins -- Installation completed successfully.**
 
-    **MSI (s) (9C:88) [18:49:04:007]:Windows Installer installed the product. Product Name:Microsoft RMS Office Addins. Product Version:1.0.7. Product Language:1033. 製造元:Microsoft. Installation success or error status:0.**
+    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer installed the product.Product Name:Microsoft RMS Office Addins.Product Version:1.0.7.Product Language:1033.製造元:Microsoft.Installation success or error status: 0.**
 
-## アンインストール コマンド
+## <a name="uninstall-commands"></a>アンインストール コマンド
 これらのデプロイメントに必要なすべてのインストール コマンドで、アンインストール コマンドがサポートされているわけではありません。 AD RMS クライアントと、共有アプリケーションをアンインストールし、Office アドインをアンインストールすることができます。 これらの要素をアンインストールするには、次のコマンドを使用します。
 
-### AD RMS クライアントおよび RMS 共有アプリケーションをアンインストールするには
+### <a name="to-uninstall-the-ad-rms-client-and-the-rms-sharing-application"></a>AD RMS クライアントおよび RMS 共有アプリケーションをアンインストールするには
 
 -   次のコマンドを使用します。
 
@@ -309,7 +310,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### Office アドインをアンインストールするには
+### <a name="to-uninstall-the-office-addin"></a>Office アドインをアンインストールするには
 
 -   次のコマンドを使用します。
 
@@ -325,7 +326,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         msiexec /x \x86\Setup.msi /quiet
         ```
 
-## 自動更新の抑制
+## <a name="suppressing-automatic-updates"></a>自動更新の抑制
 既定では、新しいバージョンの RMS 共有アプリケーションがある場合、ユーザーに通知され、ダウンロードを求めるメッセージが表示されます。 次のレジストリを編集すると、この通知が表示されないようにすることができます。
 
 1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** に移動し、まだ存在していない場合は、**RmsSharingApp** という名前の新しいキーを作成します。
@@ -340,13 +341,13 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 3.  テストが完了し、問題を解決したら、このガイドの自動デプロイメントの手順を使用して、すべてのユーザーに最新バージョンをデプロイします。
 
-## Azure Information Protection のみ: ドキュメントの追跡の構成
-[ドキュメント追跡をサポートするサブスクリプション](https://technet.microsoft.com/dn858608)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
+## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection のみ: ドキュメントの追跡の構成
+[ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
 
 これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure Information Protection モジュールが必要です。 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 > [!TIP]
-> 事前にモジュールをダウンロードしてインストールしてある場合は、次のコマンドレットを実行してバージョン番号を確認します。 `(Get-Module aadrm –ListAvailable).Version`
+> 事前にモジュールをダウンロードしてインストールしてある場合は、`(Get-Module aadrm –ListAvailable).Version` を実行してバージョン番号を確認します。
 
 次の URL はドキュメント追跡で使用されるため、許可する必要があります (たとえば、セキュリティ強化を有効にして Internet Explorer を使用する場合は、信頼済みサイトに追加します):
 
@@ -361,7 +362,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 -   https://&#42;.microsoftonline-p.com
 
-### ユーザーのドキュメントの追跡と取り消し
+### <a name="tracking-and-revoking-documents-for-users"></a>ユーザーのドキュメントの追跡と取り消し
 
 ユーザーは、ドキュメント追跡サイトにサインインすると、RMS 共有アプリケーションを使用して共有したドキュメントを追跡し、取り消すことができます。 Azure Information Protection の管理者 (グローバル管理者) としてサインインすると、ページの右上にある [管理者] アイコンをクリックして管理者モードに切り替え、組織内のユーザーが共有しているドキュメントを表示することができます。
 
@@ -375,7 +376,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 
 
-### ドキュメント追跡サイトの使用状況のログ記録
+### <a name="usage-logging-for-the-document-tracking-site"></a>ドキュメント追跡サイトの使用状況のログ記録
 
 使用状況ログ ファイルの 2 つのフィールド **AdminAction** と **ActingAsUser** は、ドキュメント追跡に適用できます。
 
@@ -388,7 +389,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
-## AD RMS のみ: 組織内での複数の電子メール ドメインのサポート
+## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>AD RMS のみ: 組織内での複数の電子メール ドメインのサポート
 AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユーザーが複数の電子メール ドメインを保有している場合は、次のレジストリ編集を行います。
 
 1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC** に移動し、まだ存在していない場合は、**RmsSharingApp** という名前の新しいキーを作成します。
@@ -400,12 +401,12 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 このレジストリ変更を行わないと、ユーザーは、組織の他のユーザーによって保護されたコンテンツを使用できなくなる可能性があります。 Azure Information Protection を使用する場合、このレジストリ編集は必要ありません。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 保護レベルの違い (ネイティブとジェネリック)、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法などを説明する追加の技術情報については、「[Technical overview for the Rights Management sharing application (Rights Management 共有アプリケーションの技術概要)](sharing-app-admin-guide-technical.md)」をご覧ください。
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
