@@ -2,6 +2,7 @@
 title: "シナリオ - 役員が安全に特権情報を交換できるようにする | Azure Information Protection"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 
 
 ---
 
-# シナリオ - 役員が安全に特権情報を交換できるようにする
+# <a name="scenario-executives-securely-exchange-privileged-information"></a>シナリオ - 役員が安全に特権情報を交換できるようにする
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -34,24 +35,24 @@ ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
 -   役員には、保護されていない電子メールを他の役員に送信する必要がある場合に、自分でルールをオーバーライドする手段があります。
 
-## デプロイの手順
+## <a name="deployment-instructions"></a>デプロイの手順
 ![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
-## このシナリオの要件
+## <a name="requirements-for-this-scenario"></a>このシナリオの要件
 このシナリオの手順を実行するには、次の要件を満たしている必要があります。
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
 |Office 365 または Azure Active Directory のアカウントとグループ<br /><br />- **役員**という名前のメールが有効なグループ: すべての役員はこのグループのメンバーです。<br /><br />- **RMS 管理者**という名前のメールが有効なグループ: Azure RMS を構成するすべての管理者はこのグループのメンバーです。|[Azure Information Protection の準備](../plan-design/prepare.md)|
 |Azure Information Protection テナント キーは、マイクロソフトによって管理されています。BYOK は使用しません|[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|Rights Management がアクティブ化されている|[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |次のいずれかの構成:<br /><br />- Azure Rights Management の Exchange Online が有効になっている<br /><br />- RMS コネクタがインストールされ、Exchange On-Premises に構成されている|Exchange Online の場合: 「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」情報を参照してください。<br /><br />Exchange On-Premises の場合: 「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」|
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |この記事で後述されているとおりに、IRM のトランスポート保護ルールを構成した|Exchange Online の場合: [メール フローやトランスポート ルール](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Exchange 2013 の場合: 「[トランスポート保護ルールを作成する](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))」<br /><br />Exchange 2010 の場合: 「 [トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432(v=exchg.141))」|
 
-### 役員用のカスタム テンプレートを構成するには
+### <a name="to-configure-the-custom-template-for-executives"></a>役員用のカスタム テンプレートを構成するには
 
 1.  Azure クラシック ポータルで次の操作を行います。Azure Rights Management 用の新しいカスタム テンプレートを作成し、次の値と設定を含めます。
 
@@ -69,7 +70,7 @@ ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
     Import-RMSTrustedPublishingDomain -Name "RMS Online -1" -RefreshTemplates -RMSOnline
     ```
 
-### IRM のトランスポート ルールを構成するには
+### <a name="to-configure-the-transport-rule-for-irm"></a>IRM のトランスポート ルールを構成するには
 
 -   手順に関する情報の表に記載されている Exchange のドキュメントに従って、次の設定でトランスポート ルールを作成します。
 
@@ -83,7 +84,7 @@ ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
     -   ルールが **[強制]** に構成されていることを確認します。
 
-## ユーザー ドキュメントの手順
+## <a name="user-documentation-instructions"></a>ユーザー ドキュメントの手順
 電子メールの件名に **DNP** または例外を示す任意の単語や語句を指定する方法についての手順を示す必要がない場合は、役員とやりとりする電子メールを保護するためにユーザーが行う操作は特にないため、このシナリオでユーザーに伝える手順はありません。 メール メッセージと添付ファイルは、役員グループのメンバーのみがアクセスできるよう自動的に保護されます。
 
 ただし、役員が送受信するメールが自動的に保護されていることと、それによるメール使用の制限について、役員とヘルプデスクに通知しておく必要があります。 たとえば、メールや添付ファイルを他のユーザーに転送した場合、それらを正常に閲覧することはできません。 DNP (または同等の語句) を構成した場合は、Exchange 管理者が操作しなくても役員が自分で例外をオーバーライドできるようにするために、ヘルプ デスクがこの構成を認識していることを確認します。
@@ -104,34 +105,34 @@ ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
 
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### IT からのお知らせ： &lt;組織名&gt; の役員メールが自動的に保護されるようになりました
+### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>IT からのお知らせ： &lt;組織名&gt; の役員メールが自動的に保護されるようになりました
 今後、社内の他の &lt;組織名&gt; の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を &lt;組織名&gt; の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
 &lt;組織名&gt; の別の役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*名前*@&lt;電子メール ドメイン&gt;) 宛てに送信するようにしてください。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
--   ヘルプ デスクに問い合わせる: &lt;連絡先の詳細&gt;&gt;
+-   ヘルプ デスクに問い合わせる: &lt;連絡先の詳細&gt;
 
-### ユーザー ドキュメントの例
+### <a name="example-user-documentation"></a>ユーザー ドキュメントの例
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
-#### IT からのお知らせ：VanArsdel の役員メールが自動的に保護されるようになりました
+#### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>IT からのお知らせ：VanArsdel の役員メールが自動的に保護されるようになりました
 今後、VanArsdel の他の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を VanArsdel の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
-別の VanArsdel 役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@vanarsdelltd.com) 宛てに送信するようにしてください。
+別の VanArsdel 役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@vanarsdelltd.com)) 宛てに送信するようにしてください。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
--   ヘルプ デスク helpdesk@vanarsdelltd.com にお問い合わせください。
-
-
+-   ヘルプ デスクに問い合わせるhelpdesk@vanarsdelltd.com
 
 
-<!--HONumber=Oct16_HO1-->
+
+
+<!--HONumber=Nov16_HO2-->
 
 

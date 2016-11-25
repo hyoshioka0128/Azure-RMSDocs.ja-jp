@@ -3,8 +3,9 @@ title: "クイック スタート チュートリアル手順 5 | Azure Informat
 description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 5 です。"
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +14,14 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1af9f3b3451bf8ceafbaf3cddd2b26c37fe9d597
-ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
+ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
+ms.openlocfilehash: b8b973766852fcace6e070e73fa87072ad4b3524
 
 
 ---
 
 
-# 手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
+# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
 
 >*適用対象: Azure Information Protection*
 
@@ -28,7 +29,7 @@ ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
 
 これで、電子メールでこのドキュメントを安全に共有する準備ができました。 
 
-## 電子メールで、ドキュメントを安全に共有するには
+## <a name="to-safely-share-your-document-by-email"></a>電子メールで、ドキュメントを安全に共有するには
 
 1.  Word で文書を開きます。 既定のラベルの **[Internal]** (内部) が再び自動的に適用されていることがわかります。 
 
@@ -68,13 +69,13 @@ ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
 
 保護されたドキュメントを送信したので、受信者に電子メールを受信するまで待って、受信したら開くよう依頼できます。 ただし、Word は終了しないでください。最後の手順で共有ドキュメントを追跡する際にもう一度使用します。
 
-## 電子メールで送信したドキュメントを開くよう受信者に依頼する
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>電子メールで送信したドキュメントを開くよう受信者に依頼する
 
 受信者は、電子メールの添付ファイルとして送信された保護対象のドキュメントを読むために、多くのデバイスを使用できます。 これらのデバイスには、iPad、iPhone、Android タブレットや携帯電話、Mac コンピューター、Windows コンピューターが含まれます。
 
 送信した電子メール メッセージを読むよう受信者に依頼します。 Rights Management で保護されている添付ファイルを初めて受信したと想定し、受信者に手順のリンクをクリックするよう依頼します。 そうすると、[[Microsoft RMS へようこそ]](https://portal.azurerms.com/#/rmshelp)  ページが表示され、RMS 共有アプリケーションをインストールして、必要に応じて無料アカウントにサインアップするための手順が示されます。 その後、保護された添付ファイルを読み取れるようになります。
 
-### 受信者用の手順: 保護されたドキュメントの添付ファイルを表示するには
+### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>受信者用の手順: 保護されたドキュメントの添付ファイルを表示するには
 
 1. 添付ファイルのいずれかを開き、ドキュメントを読みます。
     
@@ -86,7 +87,7 @@ ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
     
         - ファイル名拡張子が **.ppdf** のドキュメントを開きます。
 
-2.  ユーザー名とパスワードの入力を求められたら、電子メールと添付ファイルの送信に使われた電子メール アドレスと同じ形式で自分のユーザー名を入力します。 たとえば、**janetm@contoso.com** や **p.dover@fabrikam.com** です。 パスワードには、個人用 RMS にサインアップするときに指定したパスワードを入力します。 組織に Office 365 などのクラウド サービスがあるか、Azure が使用されている場合には、通常の作業パスワードを入力します。
+2.  ユーザー名とパスワードの入力を求められたら、電子メールと添付ファイルの送信に使われた電子メール アドレスと同じ形式で自分のユーザー名を入力します。 たとえば、**janetm@contoso.com** や **p.dover@fabrikam.com** のようになります。 パスワードには、個人用 RMS にサインアップするときに指定したパスワードを入力します。 組織に Office 365 などのクラウド サービスがあるか、Azure が使用されている場合には、通常の作業パスワードを入力します。
 
 3. 開いたドキュメントの内容を読みます。 このテキストは、読み取り専用であるため、内容を変更することはできません。
 
@@ -94,7 +95,7 @@ ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
 
 これで、受信者が添付ファイルを開き、必要に応じて、他のユーザーに転送したので、このアクティビティを報告する電子メール通知を受け取ることができます。 ただし、電子メール メッセージは時間の経過と共に失われやすくなるため、ドキュメントにアクセスしたユーザーを追跡する優れた方法として、ドキュメント追跡サイトを使用できます。ドキュメント追跡サイトについては、最後の手順で説明しています。
 
-## 保護されているドキュメントを追跡するには
+## <a name="to-track-your-protected-document"></a>保護されているドキュメントを追跡するには
 
 1.  Word に戻り、**[ホーム]** タブの **[RMS]** グループで、**[保護ファイルの共有]** をクリックし、メニューの **[使用の追跡]** をクリックします。
 
@@ -120,11 +121,11 @@ ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
 |--------------------------------|--------------------------|
 |電子メールで共有するファイルを保護するためのすべての手順、および別の方法|[Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する](../rms-client/sharing-app-protect-by-email.md)|
 |**[保護ファイルの共有]** ダイアログ ボックスのオプションについて|[Rights Management 共有アプリケーションのダイアログ ボックス オプション](../rms-client/sharing-app-dialog-box.md)|
-|他のユーザーがサインアップする無料のアカウントについて|[個人用 RMS と Azure Rights Managemenet](../understand-explore/rms-for-individuals.md)|
+|他のユーザーがサインアップする無料のアカウントについて|[個人用 RMS および Azure Rights Managemenet](../understand-explore/rms-for-individuals.md)|
 |ドキュメント追跡サイトの使用について|[ドキュメントを追跡して取り消す](../rms-client/sharing-app-track-revoke.md)
 
 
-## 次の手順
+## <a name="next-steps"></a>次の手順
 
 既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開き直してから、Azure Information Protection で使用してみてください。
 
@@ -133,6 +134,6 @@ ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
 Azure Information Protection に関して[よく寄せられる質問](faqs.md)をいくつか読み、他のドキュメントの記事をいくつか探索すると役立つ場合があります。 ただし、組織の Azure Information Protection をデプロイを開始する準備ができている場合は、[Azure Information Protection のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)に進む必要があります。 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

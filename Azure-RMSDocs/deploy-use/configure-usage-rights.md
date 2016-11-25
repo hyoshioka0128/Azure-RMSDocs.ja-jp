@@ -2,6 +2,7 @@
 title: "Azure Rights Management の使用権限を構成する | Azure Information Protection"
 description: "Azure Information Protection から Azure Rights Management サービスを使用してファイルまたは電子メールを保護するときに使用される、特定の権限を確認してください。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 0b160fff849b9f8bda71fd6ccf07d8fb07487b13
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 16dbee4b90f7c1e5b5c64c751d0c38e6cbccc036
 
 
 ---
 
-# Azure Rights Management の使用権限を構成する
+# <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -26,7 +27,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 この記事では、使用しているアプリケーションに対して必要な使用権限を構成する際に役立つ情報を提供すると共に、それらの権限がアプリケーションによってどのように解釈されるのかを説明します。
 
-## 使用権限と説明
+## <a name="usage-rights-and-descriptions"></a>使用権限と説明
 次の表では、Rights Management がサポートする使用権限を一覧表示して説明します。さらに、これらを使用し、解釈する方法も示します。 これらの権限は、表示または参照される使用権限がどのように表示される可能性があるかを示す**一般的な名前**によって一覧表示されます。通常、コード内で使用される単一ワード値 (**ポリシーでのエンコード**の値) のより親しみやすいバージョンとして表示されます。 **API の定数または値**は、MSIPC API 呼び出しの SDK 名であり、使用権限があるかどうかを確認したり、ポリシーに使用権利を追加したりする RMS 対応アプリケーションを記述するときに使用されます。
 
 
@@ -47,7 +48,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 
 
-## アクセス許可レベルに含まれる権限
+## <a name="rights-included-in-permissions-levels"></a>アクセス許可レベルに含まれる権限
 
 一部のアプリケーションは、通常は一緒に使用される使用権限を選択しやすくために、使用権限をまとめてアクセス許可レベルにグループ化します。 これらのアクセス許可レベルは、役割ベースのオプションを選択できるように、ユーザーからの複雑さのレベルを抽象化するのに役立ちます。  たとえば、**レビュー担当者** や **共同作成者** などがあります。 多くの場合、これらのオプションではユーザーに対して権限の概要が表示されますが、前の表に記載されているすべての権限が含まれるとは限りません。
 
@@ -62,10 +63,10 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 ----
 
-###### 脚注 1:
+###### <a name="footnote-1"></a>脚注 1:
 Windows 用 Rights Management 共有アプリケーションには適用されません
 
-## 既定のテンプレートに含まれる権限
+## <a name="rights-included-in-the-default-templates"></a>既定のテンプレートに含まれる権限
 既定のテンプレートに含まれる権限は、次のとおりです。
 
 |表示名|含まれる権限 (共通名)|
@@ -73,7 +74,7 @@ Windows 用 Rights Management 共有アプリケーションには適用され�
 |&lt;*組織名*&gt; *- 社外秘、表示のみ*|表示、開く、読み取り|
 |&lt;*組織名*&gt; *- 社外秘*|表示、開く、保存、コンテンツの編集、権限の表示、マクロの許可、転送、返信、全員に返信|
 
-## 電子メールの [転送不可] オプション
+## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
 Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** という 1 つの追加の情報権限保護オプションがあります。 
 
@@ -95,12 +96,12 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 
-## 関連項目
+## <a name="see-also"></a>関連項目
 [Azure Rights Management サービスのカスタム テンプレートを構成する](configure-custom-templates.md)
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

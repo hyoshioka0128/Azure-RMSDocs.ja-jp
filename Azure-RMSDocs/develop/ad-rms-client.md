@@ -3,6 +3,7 @@ title: "クライアント | Azure RMS"
 description: "AD RMS クライアント 2.1 は、情報へのアクセスと情報の使用を保護するために設計されたクライアント コンピューター向けのソフトウェアです。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 099c27d0bc94503101adc04d1e398ff1eeb4d916
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1c8d69af23ce094520bac491246a158510a948bb
 
 
 ---
 
-# クライアント
+# <a name="client"></a>クライアント
 
 このトピックでは、Rights Management Service Client 2.1 の用途と機能について説明します。
 
@@ -32,7 +33,7 @@ Rights Management Service SDK 2.1 は、RMS クライアント 2.1 で動作し�
 
 詳細については、[RMS クライアント 2.1 に関する TechNet のドキュメント](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx)を参照してください。
 
-## 関連項目
+## <a name="related-topics"></a>関連項目
 
 * [概要](ad-rms-overview.md)
 * [クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
@@ -43,6 +44,6 @@ Rights Management Service SDK 2.1 は、RMS クライアント 2.1 で動作し�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

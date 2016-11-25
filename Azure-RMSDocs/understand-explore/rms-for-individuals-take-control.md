@@ -2,6 +2,7 @@
 title: "個人用 RMS 向けに作成されたアカウントを管理者が制御する方法 | Azure Information Protection"
 description: "組織の個人向け RMS サブスクリプションを有料のサブスクリプションに切り替えない場合に、Azure Active Directory でユーザー アカウントを制御する方法について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
 
 
 ---
 
 
 
-# 個人用 RMS 向けに作成されたアカウントを管理者が制御する方法
+# <a name="how-administrators-can-control-the-accounts-created-for-rms-for-individuals"></a>個人用 RMS 向けに作成されたアカウントを管理者が制御する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -40,12 +41,12 @@ ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
 Azure ディレクトリ内のユーザー アカウントを制御する、またはユーザーによる個人用 RMS へのサインアップを防ぐには、Azure サブスクリプションがあり、ディレクトリを所有している必要があります。 Azure サブスクリプションをまだ持っていない場合は、無料のサブスクリプションを取得できます。 セルフサービス プロセス中にディレクトリが自動作成された場合は、ディレクトリの作成時に使用されたドメインの所有権を取得します。 Azure にディレクトリを既に所有しているが、組織で使用する新しいドメインがユーザーによって指定された場合、そのドメインを既存のディレクトリにマージしてください。 詳細については、「 [Azure のセルフ サービス サインアップについて](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)」の説明をご覧ください。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 管理者ではないユーザーが個人用 RMS 向けに自分のアカウントを Azure Active Directory に作成できる場合、ユーザーがこの操作を行っているかどうかを確認するには、どうすればよいでしょうか。  「[ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法](rms-for-individuals-identify-sign-up.md)」を参照してください。
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

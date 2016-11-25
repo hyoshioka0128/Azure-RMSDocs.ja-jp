@@ -2,6 +2,7 @@
 title: "RMS コネクタのレジストリ設定 | Azure Information Protection"
 description: "RMS コネクタを使用するサーバーでのレジストリ設定に関する情報です。 これらの設定を構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
 
 
 ---
 
 
-# Rights Management コネクタのレジストリ設定
+# <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -45,7 +46,7 @@ ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 -   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、「[HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)」セクションを参照してください。 Microsoft RMS の URL では常に HTTPS が使用されます。
 
 
-## Exchange 2016 または Exchange 2013 のレジストリ設定
+## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Exchange 2016 または Exchange 2013 のレジストリ設定
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -96,7 +97,7 @@ ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 - https://*ConnectorFQDN*
 
 
-## Exchange 2010 のレジストリ設定
+## <a name="exchange-2010-registry-settings"></a>Exchange 2010 のレジストリ設定
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -145,7 +146,7 @@ ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 - https://*ConnectorFQDN*
 
 
-## SharePoint 2016 または SharePoint 2013 のレジストリ設定
+## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>SharePoint 2016 または SharePoint 2013 のレジストリ設定
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -192,7 +193,7 @@ ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 
 
 
-## ファイル サーバーとファイル分類インフラストラクチャのレジストリ設定
+## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>ファイル サーバーとファイル分類インフラストラクチャのレジストリ設定
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
@@ -216,6 +217,6 @@ ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

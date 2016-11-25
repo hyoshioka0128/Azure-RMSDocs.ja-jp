@@ -2,6 +2,7 @@
 title: "個人用 RMS と Azure Information Protection | Azure Information Protection"
 description: "組織内のユーザーを対象にした無料のセルフサービス サブスクリプションである個人向け RMS に関する情報です。Azure Rights Management サービスによって保護された機密ファイルが組織内のユーザーに送信されているものの、IT 部門が Azure でそれらのユーザーのアカウントを管理していないために、該当するユーザーを認証できないという場合に使用できます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d27417bf90dab8c7e8654c68d204dad6297fa0d
-ms.openlocfilehash: 5ce322224da9052b1fa5a3e3d995bbb52e079797
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f89374ec327f51f3e8354aec57f0c0da9ddac585
 
 
 ---
 
-# 個人用 RMS と Azure Information Protection
+# <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
 >*適用対象: Azure Information Protection*
 
@@ -35,12 +36,12 @@ Windows コンピューター上で Rights Management 共有アプリケーシ�
 
 個人用 RMS は、Azure Active Directory でサポートされているセルフサービス サインアップの一例です。 セルフサービス サインアップのしくみの詳細については、Azure Active Directory ドキュメントの「[Azure のセルフサービス サインアップについて](/active-directory/active-directory-self-service-signup)」を参照してください。 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 詳しい手順と背景で実行されている処理の技術的概要については、「[個人用 RMS にサインアップする方法](rms-for-individuals-user-sign-up.md)」を参照してください。 
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

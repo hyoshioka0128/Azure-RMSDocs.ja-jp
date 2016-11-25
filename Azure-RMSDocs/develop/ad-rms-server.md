@@ -3,6 +3,7 @@ title: "AD RMS サーバー |Azure RMS"
 description: "Rights Management サービス (RMS) のサーバー コンポーネントは、Microsoft インターネット インフォメーション サービスで実行される一連の Web サービスによって実装されます。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 498a06a65d61417600cd5501a0d04935cb733c37
 
 
 ---
 
-# サーバー
+# <a name="server"></a>サーバー
 
 このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。
 
@@ -42,7 +43,7 @@ ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
 |事前証明 | サーバーがユーザーに代わって *Rights Account Certificate* を要求できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 |サービス ロケーター | アカウント証明サービス、ライセンス サービス、および発行サービスの URL を Active Directory に提供し、RMS クライアントがこれらのサービスを検出できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 
-## 関連項目 ##
+## <a name="related-topics"></a>関連項目 ##
 * [概要](ad-rms-overview.md)
 * [Microsoft インターネット インフォメーション サービス](http://www.iis.net/overview)
 * [クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
@@ -58,6 +59,6 @@ ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Azure Rights Management サービスのアプリケーションを構成する | Azure Information Protection"
 description: "Azure Information Protection 用の Azure Rights Management 保護サービスをサポートするように、管理者がアプリケーションとサービスを構成する手順について説明します。 たとえば、Word 2013 や Word 2010 などの Office アプリケーション、および Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスが含まれます。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9dee9e7c925258ffd3cd9e783582733e9518d3fa
-ms.openlocfilehash: d141bf56515853f7b6fddda1ddf150b8d3730b78
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c4b510dac964d0703b7eba8266a244f40b83f403
 
 
 ---
 
-# Azure Rights Management 用にアプリケーションを構成する
+# <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -36,11 +37,11 @@ ms.openlocfilehash: d141bf56515853f7b6fddda1ddf150b8d3730b78
 
     -   [Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)
 
-    -   [SharePoint Online と OneDrive for Business:IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online と OneDrive for Business: IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
 
 - [Office アプリケーション: クライアントの構成](configure-office-apps.md)
 
-    -   [Office 2016 と Office 2013:](configure-office-apps.md#office-2016-and-office-2013)
+    -   [Office 2016 と Office 2013](configure-office-apps.md#office-2016-and-office-2013)
 
     -   [Office 2010](configure-office-apps.md#office-2010)
 
@@ -59,7 +60,7 @@ Exchange Server や SharePoint Server などのオンプレミス サーバー�
 
 これらのアプリケーションおよびサービスに加えて、Rights Management API をサポートする他のアプリケーションがあります。 このカテゴリには、Rights Management SDK を使用して社内で作成された基幹業務アプリケーション、および Rights Management SDK を使用して作成されたソフトウェア ベンダー製アプリケーションが含まれます。 これらのアプリケーションについては、アプリケーション付属の手順を参照してください。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 Azure Rights Management サービスをサポートするためにアプリケーションを構成したら、[Azure Information Protection のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)を使用して、Azure Information Protection をユーザーおよび管理者にロールアウトする前に行う他の構成手順があるかどうかを確認します。 他の手順を実行する必要がない場合は、次の操作に関する情報が役に立ちます。
 
 - [Azure Rights Management サービスの検証](verify.md)
@@ -74,6 +75,6 @@ Azure Rights Management サービスをサポートするためにアプリケ�
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

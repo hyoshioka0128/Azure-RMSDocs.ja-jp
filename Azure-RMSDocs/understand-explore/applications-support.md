@@ -2,6 +2,7 @@
 title: "アプリケーションによる Azure Rights Management サービスのサポート| Azure Information Protection"
 description: "幅広く使用されているエンド ユーザー アプリケーション (Office アプリケーション、Word、Excel、PowerPoint、Outlook など) およびサービス (Exchange、SharePoint など) で、Azure Information Protection の Azure Rights Management を使用して組織の文書や電子メールを保護する方法について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9dee9e7c925258ffd3cd9e783582733e9518d3fa
-ms.openlocfilehash: 3d2f95f2a20782897be293162d901ae0ffac421a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: fdb862b0d4f3d0a6b3411b38a314e28b5f1f9edc
 
 
 ---
 
-# アプリケーションによる Azure Rights Management サービスのサポート
+# <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -47,7 +48,7 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 次の各アプリケーションで Azure Rights Management をサポートする方法について説明します。
 
@@ -55,13 +56,13 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 -   [Office アプリケーションおよびサービス](office-apps-services-support.md)
 
--   [Windows Server を実行するファイル サーバーとファイル分類インフラストラクチャ (FCI) の使用](file-server-support.md)
+-   [Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバー](file-server-support.md)
 
 -   [RMS API をサポートするその他のアプリケーション](api-support.md)
 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "シナリオ - ファイル サーバー共有上のファイルを保護する | Azure Information Protection"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ファイル サーバー上のすべてのファイルを包括的に保護します。これにより、ファイルがコピーされ、IT 部門の制御下にないストレージに保存されたり、他のユーザーに電子メールで送信されたりする場合でも、組織の従業員だけがファイルにアクセスできるようになります。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 31957f12d363746a7a48580e043b477ab09cb823
 
 
 ---
 
-# シナリオ - ファイル サーバー共有上のファイルを保護する
+# <a name="scenario-protect-files-on-a-file-server-share"></a>シナリオ - ファイル サーバー共有上のファイルを保護する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -34,23 +35,23 @@ ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 -   すべてのファイルには、スケジュールに従って保護が再適用され、権利ポリシー テンプレートに対する変更は保護されたファイルに適用されます。
 
-## デプロイの手順
+## <a name="deployment-instructions"></a>デプロイの手順
 ![Azure RMS の迅速なデプロイのための管理者手順](../media/AzRMS_AdminBanner.png)
 
 ユーザー ドキュメントを参照する前に、次の要件を満たしていることを確認し、サポートされる手順に従ってください。
 
-## このシナリオの要件
+## <a name="requirements-for-this-scenario"></a>このシナリオの要件
 このシナリオの手順を実行するには、次の要件を満たしている必要があります。
 
 |要件|詳細情報が必要な場合|
 |---------------|--------------------------------|
-|Rights Management がアクティブ化されている|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|Rights Management がアクティブ化されている|[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management によって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。|[Azure Information Protection の準備](../plan-design/prepare.md)|
 |次のいずれかです。<br /><br />- すべてのユーザーに対して既定のテンプレートを使用する: 既定の "&lt;組織名&gt; - 社外秘" をアーカイブしていない<br /><br />- 特定のユーザーに対してカスタム テンプレートを使用する: このカスタム テンプレートを作成して発行済みである|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |RMS 保護ツールをダウンロードして Azure RMS の前提条件を構成済みである|ツールと前提条件をダウンロードする手順: [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Azure RMS の追加の前提条件を構成する (サービス プリンシパル アカウントなど): [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
-### ファイル分類インフラストラクチャで Azure RMS とファイル サーバー リソース マネージャーを使用してすべてのファイルを保護するようにファイル サーバーを構成する
+### <a name="configuring-a-file-server-to-protect-all-files-by-using-azure-rms-and-file-server-resource-manager-with-file-classification-infrastructure"></a>ファイル分類インフラストラクチャで Azure RMS とファイル サーバー リソース マネージャーを使用してすべてのファイルを保護するようにファイル サーバーを構成する
 
 1.  Windows PowerShell セッションを開始します。 このセッションを管理者として実行する必要はありません。
 
@@ -72,7 +73,7 @@ ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
     次の手順には、ファイル サーバー リソース マネージャーでカスタムの実行可能ファイルとして実行するように指定する Windows PowerShell スクリプトが含まれています。 また、この手順には、Azure Rights Management によってファイルが保護されていることを確認する方法も含まれています。
 
-## ユーザー ドキュメントの手順
+## <a name="user-documentation-instructions"></a>ユーザー ドキュメントの手順
 保護するファイルが Office ファイルのみであれば、保護されたファイルに関する手順をユーザーに提供しなくてもよい場合があります。 許可されているユーザーがこれらのドキュメントを開くと、ドキュメントは通常どおり Office で開きます。唯一の違いは、ユーザーが認証を求められる可能性があることです。ドキュメントの上部には、ドキュメントが保護されていることを通知する情報バーが表示されることがあります。
 
 保護されたファイルのファイル名拡張子が **.ppdf** の場合や、保護されたテキスト ファイルまたはイメージ ファイル (たとえば、ファイル名拡張子が **.ptxt** や **.pjpg**) である場合、これらのファイルは読み取り専用になり、編集できません。 ユーザーは、RMS 共有アプリケーション ビューアーを使用してファイルを表示できます。このビューアーは、これらの種類のファイル用に自動的に読み込まれます。 これらのファイルは、Azure RMS によってネイティブに保護されます。ファイル自体が読み取り専用であるため、指定したテンプレートからすべてのポリシー設定を適用します (使用権限を除く)。 これらの種類のファイルを保護することがわかっている場合を除き、このシナリオのユーザーの手順が必要になる可能性は高くありませんが、これらのファイルを編集できない理由をユーザーに説明しなければならない場合があることをヘルプ デスクに通知しておいてください。
@@ -97,7 +98,7 @@ ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### &lt;ファイル サーバー共有&gt; から &lt;ファイルの種類&gt; を編集する方法&gt;
+### <a name="how-to-edit-lttype-of-filegt-from-the-ltfile-server-sharegt"></a>&lt;ファイル サーバー共有&gt; から &lt;ファイルの種類&gt; を編集する方法
 
 1.  ファイルをダブルクリックして開きます。 資格情報が要求される場合があります。
 
@@ -113,7 +114,7 @@ ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 ファイルは定期的に保護され、ファイル名拡張子 .pfile が再び追加されるため、これらの手順を繰り返す必要があります。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
 -   追加情報:
 
@@ -123,10 +124,10 @@ ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
     -   *&lt;連絡先詳細&gt;*
 
-### カスタマイズされたユーザー ドキュメントの例
+### <a name="example-customized-user-documentation"></a>カスタマイズされたユーザー ドキュメントの例
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
-#### ProjectNextGen 共有から CAD 図面を編集する方法
+#### <a name="how-to-edit-cad-drawings-from-the-projectnextgen-share"></a>ProjectNextGen 共有から CAD 図面を編集する方法
 
 1.  ファイルをダブルクリックして開きます。 資格情報が要求される場合があります。
 
@@ -144,17 +145,17 @@ ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 ファイルは定期的に保護され、ファイル名拡張子 .pfile が再び追加されるため、これらの手順を繰り返す必要があります。
 
-**サポートが必要な場合は、**
+**サポートが必要ですか?**
 
 -   追加情報:
 
     -   [保護されているファイルの表示と使用](../rms-client/sharing-app-view-use-files.md)
 
--   ヘルプ デスク helpdesk@vanarsdelltd.com にお問い合わせください。
+-   ヘルプ デスクに問い合わせるhelpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

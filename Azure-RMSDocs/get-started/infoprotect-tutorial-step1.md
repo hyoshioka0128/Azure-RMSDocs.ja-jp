@@ -2,6 +2,7 @@
 title: "クイック スタート チュートリアル手順 1 | Azure Information Protection"
 description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 1 です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: 247ab8dd5a47f9370f03fbd5badd7c78784d20b5
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: edb98a61d247b51319a1eb172f9978e3d64d0e1b
 
 
 ---
 
-# 手順 1.Rights Management サービスの有効化
+# <a name="step-1-activate-the-rights-management-service"></a>手順 1.Rights Management サービスの有効化
  
 >*適用対象: Azure Information Protection*
 
@@ -29,7 +30,7 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure ポータルにアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
 
-## Rights Management サービスをアクティブにするには
+## <a name="to-activate-the-rights-management-service"></a>Rights Management サービスをアクティブにするには
 
 1. 新しいブラウザー ウィンドウを開き、Office 365 管理者用の [Rights Management アクティブ化ページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx)に直接移動します。
     
@@ -47,7 +48,7 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
-|Rights Management のアクティブ化について|[Rights Management をアクティブにする](../deploy-use/activate-service.md)|
+|Rights Management のアクティブ化について|[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)|
 |既定のテンプレートの情報と、新しいカスタム テンプレートを作成する方法について|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 
 >[!div class="step-by-step"]
@@ -56,6 +57,6 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

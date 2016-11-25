@@ -2,6 +2,7 @@
 title: "Azure Information Protection の迅速なデプロイ ガイド | Azure Information Protection"
 description: "Azure Information Protection をよりすばやくデプロイして使用し、組織のデータを保護するために使用できるガイドです。 特定のシナリオの一覧から実装するシナリオを選択して開始します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 
 ---
 
-# Azure Rights Management の迅速なデプロイ ガイド
+# <a name="rapid-deployment-guide-for-azure-rights-management"></a>Azure Rights Management の迅速なデプロイ ガイド
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -35,7 +36,7 @@ ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
 > [!NOTE]
 > このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
 
-## Azure Information Protection のシナリオ
+## <a name="scenarios-for-azure-information-protection"></a>Azure Information Protection のシナリオ
 Azure Information Protection を短時間でデプロイし、ビジネス上の特定の問題に対処するには、ビジネス上の目標に最も一致するシナリオを選択し、必要に応じてカスタマイズします。
 
 
@@ -123,12 +124,12 @@ Azure Information Protection を短時間でデプロイし、ビジネス上の
 
 
 
-## ロールアウトする前のユーザーへのアナウンス
+## <a name="announcement-for-users-before-rollout"></a>ロールアウトする前のユーザーへのアナウンス
 次の通信メッセージの例を使用して、Azure Information Protection をデプロイするには一定の変更が伴うということをユーザーに通知できます。 次のテキストをコピーして貼り付け、組織のリーダーシップ チームの誰か、可能であれば、最高経営責任者から、すべてのユーザーに電子メールで送信します。 このテキストに変更を加え、ユーザーおよび組織により関連性の高い内容にすることを検討してください。
 
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例のバナー](../media/AzRMS_ExampleBanner.png)
 
-### データを保護するために加える変更
+### <a name="changes-were-making-to-safeguard-our-data"></a>データを保護するために加える変更
 誤ってパートナーに送信されたドキュメントへのアクセスをブロックしたいと思ったことはありますか。 送信した最新の製品ニュースを顧客が読んだかどうかを知りたいと思ったことはありますか。 見せてはいけない相手に送信される心配なく、機密の製品情報を共有する必要がありますか。
 
 IT 部門は Microsoft Azure Information Protection をエンタープライズ データ保護ソリューションとして実装する際の一定の変更をロールアウトしているため、以上のことが間もなく可能になります。 これらのソリューションの多くでは、ユーザーが特に何もしなくても必要な保護が自動的に適用されますが、 変更が必要な場合には、IT 部門が情報および指示を送信し、質問や問題があるユーザーはヘルプ デスクのサポートを受けることができます。
@@ -146,6 +147,6 @@ IT 部門は Microsoft Azure Information Protection をエンタープライズ 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
