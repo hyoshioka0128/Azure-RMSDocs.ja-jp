@@ -4,7 +4,7 @@ description: "Azure Information Protection のプレビュー リリースに関
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: a05b33f5085bf31d4ef1e6a606322fda8b0febe7
+ms.sourcegitcommit: 9d4338a1c89f2a94c744b8f5cc99bce1e54e7dec
+ms.openlocfilehash: 028468e7f4bbcff53187a947038926fbf9af1498
 
 
 ---
@@ -126,7 +126,7 @@ Azure ポータルで Rights Management テンプレートを選択すること�
 
 ## <a name="can-a-file-be-classified-with-two-different-classifications"></a>1 つのファイルを 2 つの異なる分類に分類できますか?
 
-必要な場合は、サブラベルを作成して、特定の秘密度ラベルのサブカテゴリを適切に記述できます。 たとえば、主ラベル [**Secret**] (社内秘) に対して、[**Secret \ Legal**] (社内秘 - 法務) や [**Secret \ Finance**] (社内秘 -財務) などのサブラベルを作成できます。 その後、異なるサブラベルに対し、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートを適用できます。
+必要な場合は、サブラベルを作成して、特定の秘密度ラベルのサブカテゴリを適切に記述できます。 たとえば、主ラベル 「**Secret**」 (社内秘) に対して、「**Secret \ Legal**」 (社内秘 - 法務) や 「**Secret \ Finance**」 (社内秘 - 財務) などのサブラベルを作成できます。 その後、異なるサブラベルに対し、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートを適用できます。
 
 現在はビジュアル マーキング、保護、条件を両方のレベルで設定できますが、サブレベルを使用するときは、これらの設定をサブレベルのみで構成します。 親ラベルとそのサブレベルで同じ設定を構成した場合は、サブレベルの設定が優先されます。
 
@@ -152,6 +152,26 @@ Azure Information Protection クライアントの配布を制御することで
 
 Azure Information Protection によって分類されたファイルおよび電子メールは、Azure Information Protection クライアントのインストールの有無に関係なく、すべてのユーザーが使用または編集できます。 
 
+## <a name="how-do-i-sign-in-as-a-different-user"></a>別のユーザーとしてサインインする方法
+
+通常、運用環境では、Azure Information Protection クライアントを使用しているときに別のユーザーとしてサインインする必要はありません。 ただし、複数のテナントがある場合はこのようなサインインが必要になることがあります。 たとえば、組織が使用する Office 365 や Azure テナントに加えてテスト テナントがある場合などです。
+
+現在サインインしているアカウントを確認するには、**[Microsoft Azure Information Protection]** ダイアログ ボックスを使用します。Office アプリケーションを開き、**[ホーム]** タブの **[保護]** グループで、**[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 アカウント名が **[クライアント ステータス]** セクションに表示されます。
+
+特に、管理者アカウントを使用している場合は、表示されるサインイン アカウントのドメイン名を必ず確認してください。 たとえば、2 つのテナントに "admin" アカウントがある場合、アカウント名は正しくてもドメインを間違えてサインインするという失敗が起こりやすくなります。 このような状況では、Azure Information Protection ポリシーのダウンロードが失敗したり、目的のラベルや機能が表示されなかったりする可能性があります。
+
+別のユーザーとしてサインインするには、レジストリを正しく編集する必要があります。
+
+1. レジストリ エディターを使用して **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** キーを削除します。
+
+2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
+
+補足:
+
+- Azure Rights Management サービスの環境を再初期化 (ブートストラップ) するには、[RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)の **[リセット]** オプションを使用します。
+
+- 現在ダウンロードされている Azure Information Protection ポリシーを削除するには、%localappdata%\Microsoft\MSIP フォルダーから **Policy.msip** ファイルを削除します。
+
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Azure Information Protection の問題を報告またはフィードバックを送信するにはどうすればよいですか。
 
 Azure Information Protection に問題があり、クライアントの現行リリースを使用している場合: お使いの Office アプリケーションの **[ホーム]** タブの **[保護]** グループで、**[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[フィードバックの送信]** をクリックします。 これにより、Information Protection チームに電子メールが送信され、問題の診断に役立つ PC のログ ファイルが自動的に添付されます。 
@@ -159,6 +179,6 @@ Azure Information Protection に問題があり、クライアントの現行リ
 質問やご意見がある場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)を使用してください。 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

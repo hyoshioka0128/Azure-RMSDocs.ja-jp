@@ -4,15 +4,15 @@ description: "Office アプリケーションに Information Protection バー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
-ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
+ms.sourcegitcommit: 0b9d796b8908a42a7aceb95f3c3319028e9a9dbe
+ms.openlocfilehash: d12916a0b60e27592c3917ab5421196392156506
 
 
 ---
@@ -67,7 +67,7 @@ Azure Information Protection クライアントは、Microsoft Update カタロ�
 
     - **[クライアント ステータス]** セクションの **[バージョン]** 値を使用して、インストールが成功したことを確認します。 また、クライアントが組織の Azure Information Protection サービスに最後に接続した時間と、Azure Information Protection ポリシーが最後にインストールまたは更新された時間を確認します。 クライアントはサービスへの接続時に、現在のポリシーからの変更を見つけると最新のポリシーを自動的にダウンロードします。 表示された時刻以降にポリシーを変更している場合は、Office アプリケーションを閉じて再度開きます。
     
-        Azure Information Protection に対するユーザー認証に使用するアカウントを識別する表示ユーザー名も確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントに一致する必要があります。
+        Azure Information Protection に対するユーザー認証に使用するアカウントを識別する表示ユーザー名も確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントと一致し、Azure Information Protection 用に構成されたテナントに属している必要があります。
 
     - **[ヘルプとフィードバック]** セクション: **詳細情報リンク**の既定のリンク先は [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) Web サイトですが、独自の URL を指定できます。この指定は、Azure Information Protection ポリシーの中の[グローバル設定](../deploy-use/configure-policy-settings.md)の 1 つとして行います。
         
@@ -117,6 +117,6 @@ Information Protection バー上のラベルを変更するには、Azure Inform
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

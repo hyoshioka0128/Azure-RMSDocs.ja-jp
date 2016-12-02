@@ -22,11 +22,11 @@
 #### [コミュニティのリソース](community-resources.md)
 ### [開発者ガイドと用語](core-concepts.md)
 #### [Azure AD でアプリの登録と RMS の有効化を行う方法](authentication-integration.md)
-#### [エラーとパフォーマンスのログを有効にする方法](enabling-logging.md)
-#### [組み込み権限を使用する方法](built-in-rights-usage-restriction-reference.md)
-#### [ドキュメント追跡を使用する方法](how-to-use-document-tracking.md)
+#### [方法: エラーとパフォーマンスのログを有効にする](enabling-logging.md)
+#### [方法: 組み込み権限の使用](built-in-rights-usage-restriction-reference.md)
+#### [方法: ドキュメント追跡を使用する](how-to-use-document-tracking.md)
 #### [利用規約](terms.md)
-### [API reference](api-reference-4-2.md)
+### [API リファレンス](api-reference-4-2.md)
 #### [Android API リファレンス](https://msdn.microsoft.com/library/dn758245.aspx)
 #### [Linux API リファレンス](linux-c-api-reference.md)
 #### [iOS / OS X API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)
@@ -38,7 +38,7 @@
 ### [作業開始](getting-started-with-ad-rms-2-0.md)
 #### [リリース ノート](release-notes-rtm.md)
 #### [SDK のインストール](install-the-rms-sdk.md)
-#### [Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
+#### [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 #### [アプリケーションの開発](developing-your-application.md)
 #### [アプリケーションのテスト](how-to-set-up-your-test-environment.md)
 #### [運用環境にデプロイする](deploying-your-application.md)
@@ -50,15 +50,15 @@
 #### [方法: ドキュメント追跡の有効化と取り消し](tracking-content.md)
 #### [方法: 電子メール通知の有効化](how-to-enable-email-notification.md)
 #### [方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
-#### [方法: RMS サーバーをインストールし、構成する](how-to-install-and-configure-an-rms-server.md)
+#### [RMS サーバーをインストールして構成する方法](how-to-install-and-configure-an-rms-server.md)
 #### [方法: API セキュリティ モードの設定](setting-the-api-security-mode-api-mode.md)
 #### [方法: 暗号化設定の操作](working-with-encryption.md)
 #### [アプリケーションの種類](application-types.md)
 #### [ファイル API の構成](file-api-configuration.md)
+#### [セキュリティ ガイド](security-guidelines.md)
 #### [サポートされるファイル形式](supported-file-formats.md)
 #### [サポートされているプラットフォーム](supported-platforms.md)
 #### [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
-#### [使用制限のリファレンス](usage-restriction-reference.md)
 ### [API リファレンス](api-reference-2-1.md)
 #### [定数](https://msdn.microsoft.com/library/hh535291.aspx)
 #### [データ型](https://msdn.microsoft.com/library/hh535288.aspx)
@@ -67,6 +67,6 @@
 #### [エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

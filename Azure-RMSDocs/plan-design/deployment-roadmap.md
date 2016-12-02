@@ -4,7 +4,7 @@ description: "組織の Azure Information Protection を準備、実装、管理
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1551b5dc3c5c9740721e3de01d086185966b6016
-ms.openlocfilehash: ce1ed30122b3bff5b045dfbec65c257d348f0122
+ms.sourcegitcommit: 1fb57d2317cc632a44a87f3ce7140ce737c240e0
+ms.openlocfilehash: 9cc05664480ba0e5fa090db96afbcef73c318e07
 
 
 ---
@@ -98,6 +98,8 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 1. Azure Information Protection ポリシーを更新し、データ保護を適用する
     
     1 つまたは複数のラベルで Rights Management 保護を適用できるように、Azure Information Protection ポリシーを変更します。 詳しくは、「[Rights Management による保護を適用するためのラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
+    
+    Exchange が Information Rights Management (IRM) 用に構成されていない場合でも、ユーザーは Outlook で Rights Management による保護を適用するラベルを適用できます。 ただし、Exchange が IRM 用に構成されるまで、組織は Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 この追加の構成は、Exchange Online の手順 3、および Exchange オンプレミスの手順 6 に含まれています。 
 
 2. Rights Management 共有アプリケーションのデプロイ
     
@@ -190,6 +192,6 @@ Azure Rights Management サービスの使用を開始するとき、Windows Pow
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

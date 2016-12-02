@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
+ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
+ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
 
 
 ---
@@ -35,10 +35,10 @@ ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 - [方法: 暗号化設定の操作](working-with-encryption.md) - このトピックでは、Microsoft の暗号化パッケージとその使い方を示すいくつかのコード スニペットを紹介します。
 - 「[Application types (アプリケーションの種類)](application-types.md)」- このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。
 - [File API configuration (File API の構成)](file-api-configuration.md) - File API の動作は、レジストリの設定を使用して構成できます。
+- [Security guidelines (セキュリティのガイドライン)](security-guidelines.md) - アプリケーション開発者に、AIP エコシステム内で有効な位置付けと方向を示しています。
 - [サポートされるファイル形式](supported-file-formats.md) - File API は、ネイティブ形式と Pfile 形式をサポートしています。
 - [サポートされているプラットフォーム](supported-platforms.md): このトピックでは、RMS SDK 2.1 でサポートされているクライアントとサーバー プラットフォームを識別します。
-- 「[使用制限について](understanding-usage-restrictions.md)」- すべての RMS 対応アプリケーションは、使用制限を適用する必要があります。
-- [使用制限のリファレンス](usage-restriction-reference.md) - 使用制限は、このトピックに示す定数によって定義されます。
+- [使用制限について](understanding-usage-restrictions.md) - すべての RMS 対応アプリケーションは、このトピックに記載されている定数で定義されている使用制限を適用する必要があります。
 
  
 ## <a name="related-topics"></a>関連項目
@@ -49,6 +49,6 @@ ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
