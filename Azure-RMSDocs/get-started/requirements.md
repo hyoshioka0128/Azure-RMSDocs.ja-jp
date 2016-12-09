@@ -13,8 +13,8 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 25d60ee3f6debf8e28c039862e6a9b1f544d92ce
-ms.openlocfilehash: dfadaa6941aa967511f19fd56ff90c78c62184a5
+ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
+ms.openlocfilehash: 68cb09011d66322948b956e9a369e65bca3d107f
 
 
 ---
@@ -35,7 +35,7 @@ ms.openlocfilehash: dfadaa6941aa967511f19fd56ff90c78c62184a5
 
 オンプレミス サーバーで Azure Information Protection から Azure Rights Management サービスを使用する必要がある場合、次の製品がサポートされます。
 
--   Exchange Server
+-   Exchange Server
 
 -   SharePoint Server
 
@@ -50,11 +50,14 @@ ms.openlocfilehash: dfadaa6941aa967511f19fd56ff90c78c62184a5
 > 
 > [AD RMS から Azure Information Protection への移行](http://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](http://msdn.microsoft.com/library/azure/dn629429.aspx)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](../deploy-use/decommission-deactivate.md)」をご覧ください。
 
+## <a name="comments"></a>コメント
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

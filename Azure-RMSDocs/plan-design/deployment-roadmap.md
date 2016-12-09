@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1fb57d2317cc632a44a87f3ce7140ce737c240e0
-ms.openlocfilehash: 9cc05664480ba0e5fa090db96afbcef73c318e07
+ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
+ms.openlocfilehash: b4b701d6a88bea91e2adbe7e002f01929d388e91
 
 
 ---
@@ -188,10 +188,12 @@ Windows ベースのファイル サーバーで、ファイル分類インフ�
 ### <a name="step-5-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>手順 5: 必要に応じてテナント アカウントの Rights Management サービスを管理する
 Azure Rights Management サービスの使用を開始するとき、Windows PowerShell のモジュールが管理変更のスクリプト化または自動化に役立つことがあります。 詳細については、「[Windows PowerShell を使用した Azure Rights Management サービスの管理](../deploy-use/administer-powershell.md)」を参照してください。
 
+## <a name="comments"></a>コメント
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 
