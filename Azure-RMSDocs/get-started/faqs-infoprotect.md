@@ -4,7 +4,7 @@ description: "Azure Information Protection のプレビュー リリースに関
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d4338a1c89f2a94c744b8f5cc99bce1e54e7dec
-ms.openlocfilehash: 028468e7f4bbcff53187a947038926fbf9af1498
+ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
+ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
 
 
 ---
@@ -35,13 +35,7 @@ Azure Information Protection クライアントでは、Information Protection �
 
 現在のリリースには次の制限があります。 追加機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。
 
-- ラベルを適用できるのは、Office のファイルの種類と Outlook の電子メール メッセージのみです。
-
-- Office アドインのラベルは、Azure Information Protection クライアントがインストールされているすべてのユーザーに表示されます。
-
 - ラベル名とツール ヒントは 1 言語でのみサポートされます。
-
-- Windows エクスプローラーからはファイルを分類できません。
 
 - 分類とラベル付けには集中的なログはありません。
 
@@ -53,6 +47,9 @@ Azure Information Protection クライアントでは、Information Protection �
 
 - パートナー向けおよび開発者向けの SDK はありません。
 
+以前記載されていた制限事項の一部が、プレビューで利用可能になりました。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection December preview now available (Azure Information Protection の 12 月のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)」を参照してください。
+
+
 ## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>Azure Information Protection を試すにはグローバル管理者である必要がありますか。
 
 Azure Information Protection ポリシーを構成するには、Azure Active Directory のグローバル管理者として Azure ポータルにサインインする必要があります。
@@ -61,7 +58,7 @@ Azure Information Protection ポリシーを構成するには、Azure Active Di
 
 ## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Azure ポータルのオプションが P1 か P2 かを確認するにはどうすればよいですか?
 
-**Azure Information Protection Premium 1 (P1)** サブスクリプションに含まれる機能か、**Azure Information Protection Premium 2 (P2)** サブスクリプションに含まれる機能かを確認するには、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を参照してください。
+**Azure Information Protection Premium 1 (P1)** サブスクリプションに含まれる機能か、**Azure Information Protection Premium 2 (P2)** サブスクリプションに含まれる機能かを確認するには、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を参照してください。 ただし、一般的なガイドとして、自動分類や Hold Your Own Key (HYOK) などの高度な機能は、Azure Information Protection Premium 2 のサブスクリプションに固有です。
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
@@ -80,10 +77,6 @@ Azure Information Protection はファイルと電子メールに永続的なラ
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>分類できるのは新しいデータのみですか、既存のデータも分類できますか?
 
 Azure Information Protection ポリシーのアクションは、ドキュメントの保存時および電子メールの送信時に、新規コンテンツおよび既存コンテンツへの変更の両方に対して反映されます。 
-
-分類したいファイルを保存してある場合は、Office アプリケーションで開いて保存するだけです。 
-
-現時点では、スキャンおよび分類の適用を一括して行うことはできず、Office アプリケーションで各ドキュメントを開いて保存する必要があります。 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Azure Information Protection を分類のみに使用し、暗号化の適用と使用権限の制限が行われないようにすることはできますか?
 
@@ -116,7 +109,7 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 ## <a name="can-i-prompt-users-to-justify-why-they-are-changing-the-classification-level"></a>ユーザーに分類レベルを変更する理由の説明を求めることはできますか?
 
-はい。 分類を変更する理由をユーザーに入力させるには、Azure ポータルで **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) オプションを **[On]** (オン) に設定します。 このように設定すると、ユーザーのアクションと理由が、ローカル Windows イベント ログの **[アプリケーション]**  >  **[Microsoft Azure Information Protection]** に記録されます。
+はい。 分類を変更する理由をユーザーに入力させるには、Azure ポータルで **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) オプションを **[On]** (オン) に設定します。 このように設定すると、ユーザーのアクションと理由が、ローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Microsoft Azure Information Protection]** に記録されます。
 
 ## <a name="how-can-i-automatically-protect-the-content-after-its-been-classified"></a>分類された後のコンテンツを自動的に保護するにはどうすればよいですか?
 
@@ -134,6 +127,32 @@ Azure ポータルで Rights Management テンプレートを選択すること�
 
 いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は添付ファイルに適用されます。
 
+## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
+
+Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら 2 つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、プレビュー バージョンの Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
+
+Outlook Web アプリは Azure Information Protection の分類および保護をネイティブでサポートしていませんが、この同じ手法を使って、デスクトップの Outlook クライアントだけでなく、この電子メール クライアントでもラベルを使用することができます。
+
+このソリューションを実現するには: 
+
+1. [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell コマンドレットを使用して、Azure Information Protection ポリシーのラベル名にマップする名前プロパティでメッセージの分類を作成します。 
+
+2. 各ラベルの Exchange トランスポート ルールを作成します。メッセージのプロパティに構成した分類が含まれる場合はルールを適用し、メッセージ ヘッダーを設定するメッセージ プロパティを変更します。 
+
+    メッセージ ヘッダーについては、Azure Information Protection ラベルを使って分類した Office ファイルのプロパティを調べることによって、指定する情報を見つけます。 **MSIP_Label_<GUID>_Enabled** の形式のファイル プロパティを識別し、メッセージ ヘッダーにこの文字列を指定して、ヘッダー値を **True** に指定します。 たとえば、メッセージ ヘッダーは次の文字列のようになります。**MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+
+
+ユーザーが Outlook Web Access アプリまたは Rights Management による保護をサポートするモバイル デバイス クライアントを使用すると、次のことが起こります。 
+
+- ユーザーが Exchange のメッセージ分類を選択して電子メールを送信します。
+
+- Exchange ルールにより Exchange の分類が検出され、ルールに従ってメッセージ ヘッダーが変更されて、Azure Information Protection の分類が追加されます。
+
+- プレビュー バージョンの Azure Information Protection クライアントを実行する受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベル、および対応する電子メールのヘッダー、フッター、または透かしが表示されます。 
+
+Azure Information Protection ラベルが Rights Management による保護を適用する場合は、メッセージ セキュリティを変更するオプションを選択してルールの構成に追加し、Rights Management による保護を適用して、RMS テンプレートまたは [転送不可] オプションを選択します。
+
+
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
 Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 ファイルでは、このメタデータはカスタム プロパティに格納されます。電子メールでは、この情報は電子メールのヘッダーに含まれます。
@@ -148,7 +167,7 @@ Azure Information Protection を使用して分類および保護されたファ
 
 ## <a name="can-i-control-which-users-can-use-azure-information-protection-to-classify-and-protect-content"></a>Azure Information Protection を使用してコンテンツを分類および保護できるユーザーを制御できますか?
 
-Azure Information Protection クライアントの配布を制御することで、データを分類および保護するユーザーを制限できます。 
+Azure Information Protection クライアントの配布を制御することで、データを分類および保護するユーザーを制限できます。 [スコープ ポリシー](../deploy-use\configure-policy-scope.md)を構成するときに、指定したユーザーだけに新しいラベルを追加します。 
 
 Azure Information Protection によって分類されたファイルおよび電子メールは、Azure Information Protection クライアントのインストールの有無に関係なく、すべてのユーザーが使用または編集できます。 
 
@@ -179,6 +198,6 @@ Azure Information Protection に問題があり、クライアントの現行リ
 質問やご意見がある場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)を使用してください。 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

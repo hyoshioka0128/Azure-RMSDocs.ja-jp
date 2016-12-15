@@ -1,21 +1,23 @@
 ---
 title: "自動および推奨分類の条件を構成する方法 | Azure Information Protection"
 description: "ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。"
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 
 ---
 
-# Azure Information Protection 用の自動および推奨分類の条件を構成する方法
+# <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -44,13 +46,15 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 
 この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、バーを閉じることでその推奨を無効にすることができます。
 
-## ラベルの推奨または自動分類を構成するには
+## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>ラベルの推奨または自動分類を構成するには
 
 1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[Azure Information Protection]** ブレードで、自動または推奨分類を構成するラベルを選択します。
+2. 自動分類または推奨される分類用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy:Global (ポリシー:グローバル)]** ブレードで変更するラベルを選択して **[ラベル]** ブレードで変更を行い、必要に応じてその後のブレードで設定を行います。 
+
+     構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。  
 
 3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
@@ -72,7 +76,7 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 
 6. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-## 組み込み条件に関する情報
+## <a name="information-about-the-built-in-conditions"></a>組み込み条件に関する情報
 
 プレビュー期間中は、次の条件を選択できます。
 
@@ -87,7 +91,7 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 - [国際銀行口座番号 (IBAN)](#international-banking-account-number-iban)
 
 
-### SWIFT コード
+### <a name="swift-code"></a>SWIFT コード
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
@@ -113,7 +117,7 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 ----
 
 
-### クレジット カード番号
+### <a name="credit-card-number"></a>クレジット カード番号
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
@@ -136,7 +140,7 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 
 ----
 
-### ABA 銀行コード
+### <a name="aba-routing-number"></a>ABA 銀行コード
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
@@ -173,7 +177,7 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 
 ----
 
-### 米国社会保障番号 (SSN)
+### <a name="usa-social-security-number-ssn"></a>米国社会保障番号 (SSN)
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
@@ -199,7 +203,7 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 
 ----
 
-### 国際銀行口座番号 (IBAN)
+### <a name="international-banking-account-number-iban"></a>国際銀行口座番号 (IBAN)
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
@@ -213,15 +217,15 @@ ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
 - **GB29 NWBK 6016 1331 9268 19 IBAN**
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
-Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organization-s-policy)」セクションのリンクを使用してください。  
-
-
+Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

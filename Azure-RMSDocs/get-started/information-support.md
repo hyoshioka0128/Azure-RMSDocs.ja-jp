@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 757b0e1a65d54f81b00c6513ee85ded4fe753684
-ms.openlocfilehash: 37f42c4b9f4e4b41e96b3e1e6a74a6c3d7deb254
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
 
 
 ---
@@ -36,7 +36,7 @@ ms.openlocfilehash: 37f42c4b9f4e4b41e96b3e1e6a74a6c3d7deb254
 ## <a name="information-about-new-releases-and-updated-documentation"></a>新しいリリースとドキュメントの更新に関する情報
 Information Protection 製品チームは、新しいリリースと更新プログラムに関するお知らせを [Enterprise Mobility + Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services)に投稿します。 これらのブログには、製品ドキュメントの補足やサポート情報が投稿されます。
 
-毎月末に、ドキュメントの変更の要約が "**Azure Information Protection Documentation Update for \<月、年>**" というタイトルで投稿されます。 この投稿には、コンテンツ タイプのタグとして [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) が付けられており、新しいリリースに関するドキュメントの更新情報のほかに、既存のリリースに関する訂正と補足も含まれています。
+毎月末に、ドキュメントの変更の要約が "**Azure Information Protection Documentation Update for \<月 年>**" というタイトルで投稿されます。 この投稿には、コンテンツ タイプのタグとして [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) が付けられており、新しいリリースに関するドキュメントの更新情報のほかに、既存のリリースに関する訂正と補足も含まれています。
 
 > [!TIP]
 > Microsoft Rights Management サービス (Azure RMS または AD RMS) を使用するアプリケーションを開発している場合、[Active Directory Rights Management Services (AD RMS) 開発者のコーナー ブログ](https://blogs.msdn.microsoft.com/rms/)もお勧めです。
@@ -93,6 +93,6 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
