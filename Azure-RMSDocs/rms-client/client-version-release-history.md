@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 45ca64c8338de3f4b192c61eb437b4acdbb8d799
-ms.openlocfilehash: cdd987bf0670f9e5ef7519119aa886573cf14924
+ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
+ms.openlocfilehash: fe6491f413b928a85b2a181ee22cfe17f39149ef
 
 
 ---
@@ -25,7 +25,9 @@ ms.openlocfilehash: cdd987bf0670f9e5ef7519119aa886573cf14924
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 Azure Information Protection クライアントは Microsoft Update カタログ (カテゴリ: **Azure Information Protection**) に含まれており、いつでも [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から最新バージョンをダウンロードできます。
 
-次の情報を使用して、リリースの新機能や変更内容をご確認ください。 最新のリリースは一番上に表示されます。 一般公開前のバージョンは記載されていません。 
+次の情報を使用して、リリースの新機能や変更内容をご確認ください。 最新のリリースは一番上に表示されます。 一般公開前のバージョンは記載されていません。
+
+現行リリースに加えて、Azure Information Protection クライアントの**プレビュー** バージョンが利用可能になりました。こちらのバージョンは Microsoft ダウンロード センターからのみダウンロードできます。 プレビュー バージョンでは Windows 用 Rights Management 共有アプリケーションと同じ機能が提供され、エクスプローラーの右クリック オプションと保護されたファイルのビューアーもご利用いただけます。 詳細については、[ブログ投稿のお知らせ](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)と暫定版ドキュメント「[Azure Information Protection ユーザー ガイド](client-user-guide.md)」を参照してください。
 
 > [!NOTE]
 > 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、まず最新リリースで問題が起きないかを確認してください。
@@ -62,6 +64,6 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
