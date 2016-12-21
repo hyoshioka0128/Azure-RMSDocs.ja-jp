@@ -39,9 +39,9 @@ Office 365 管理センターの新しいプレビュー バージョン (**Offi
 
     プレビュー バージョンの使用が初めてで、関連する構成オプションも見たいという場合はナビゲーションがお勧めです。プレビュー バージョンに慣れていて、Azure Rights Management の起動を即座に行いたい場合は、検索機能の使用がお勧めです。 ナビゲーション指示と表示内容が一致しない場合は、管理センターのプレビュー バージョンを使用中に、検索オプションを使用する必要が生じる場合もあります。
 
-    - 移動方法: **[設定]** > **[Services & add-ins] (サービスとアドイン)** > **[Microsoft Azure Information Protection]** > **[Manage Microsoft Azure Information Protection settings] (Microsoft Azure Information Protection 設定の管理)**
+    - 移動方法: **[設定]** > **「Services & add-ins」 (サービスとアドイン)** > **[Microsoft Azure Information Protection]** > **「Manage Microsoft Azure Information Protection settings」 (Microsoft Azure Information Protection 設定の管理)**
 
-    - 検索方法: **[ホーム]** ページの検索ボックスで、「**情報保護**」と入力し、検索結果から **[Microsoft Azure Information Protection]**、**[Manage Microsoft Azure Information Protection settings] (Microsoft Azure Information Protection 設定の管理)** の順にクリックします。 検索結果が返されない場合は、「**著作権管理**」と入力し、検索結果から **[Microsoft Azure rights management settings]** をクリックします。
+    - 検索方法: **[ホーム]** ページの検索ボックスで、「**情報保護**」と入力し、検索結果から **[Microsoft Azure Information Protection]**、**「Manage Microsoft Azure Information Protection settings」 (Microsoft Azure Information Protection 設定の管理)** の順にクリックします。 検索結果が返されない場合は、「**著作権管理**」と入力し、検索結果から **[Microsoft Azure rights management settings]** をクリックします。
 
         > [!NOTE]
         >このオプションに移動する場合、ディスプレイによっては、このオプションを表示するのに画面をスクロールする必要がある場合があります。 ただし、このページの一覧に表示されない場合や検索結果が返されない場合は、お客様のサービス プランに Azure Information Protection の Azure Rights Management サービスが含まれていないことが考えられます。
