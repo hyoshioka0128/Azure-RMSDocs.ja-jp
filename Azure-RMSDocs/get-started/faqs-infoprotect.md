@@ -4,7 +4,7 @@ description: "Azure Information Protection のプレビュー リリースに関
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
+ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
+ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
 
 
 ---
@@ -76,11 +76,13 @@ Azure Information Protection はファイルと電子メールに永続的なラ
 
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>分類できるのは新しいデータのみですか、既存のデータも分類できますか?
 
-Azure Information Protection ポリシーのアクションは、ドキュメントの保存時および電子メールの送信時に、新規コンテンツおよび既存コンテンツへの変更の両方に対して反映されます。 
+Azure Information Protection ポリシーのアクションは、ドキュメントの保存時および電子メールの送信時に、新規コンテンツおよび既存コンテンツへの変更の両方に対して反映されます。
+
+プレビュー クライアントがある場合は、ファイル エクスプローラーから既存のファイルをすばやく分類 (および必要に応じて、保護) することもできます。 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Azure Information Protection を分類のみに使用し、暗号化の適用と使用権限の制限が行われないようにすることはできますか?
 
-はい。 ラベルの適用だけを行うように Azure Information Protection ポリシーを構成できます。 実際、このような使い方が、ドキュメントまたは電子メールのサブセットのみを保護する必要がある、特別なデータ管理を必要とするデプロイ ネットワークのほとんどのケースであると思われます。
+はい。 ファイルの種類でこの操作がサポートされている場合は、保護なしで、分類のみを適用するように Azure Information Protection ポリシーを構成することができます。 実際、このような使い方が、ドキュメントまたは電子メールのサブセットのみを保護する必要がある、特別なデータ管理を必要とするデプロイ ネットワークのほとんどのケースであると思われます。
 
 ## <a name="how-does-automatic-classification-work"></a>自動分類はどのように行われますか?
 
@@ -100,7 +102,7 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 ## <a name="can-i-force-all-documents-to-be-classified"></a>強制的にすべてのドキュメントを分類できますか?
 
-はい。 ユーザーに保存するすべてのファイルを分類するよう要求するには、Azure ポータルで、**[All documents and emails must have a label]** (すべてのドキュメントとメールにラベルが必要) オプションを **[On]** (オン) に設定します。 
+はい。 ユーザーに保存するすべてのファイルを分類するよう要求するには、Azure Portal で、**[すべてのドキュメントとメールにラベルを付ける]** を**オン**に設定するポリシーを構成します。 
 
 ## <a name="can-i-remove-classification-from-a-file"></a>ファイルから分類を削除できますか?
 
@@ -117,11 +119,13 @@ Azure ポータルで Rights Management テンプレートを選択すること�
 
 この例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」を参照してください。 詳しくは、「[Rights Management による保護を適用するためのラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
 
-## <a name="can-a-file-be-classified-with-two-different-classifications"></a>1 つのファイルを 2 つの異なる分類に分類できますか?
+## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
-必要な場合は、サブラベルを作成して、特定の秘密度ラベルのサブカテゴリを適切に記述できます。 たとえば、主ラベル 「**Secret**」 (社内秘) に対して、「**Secret \ Legal**」 (社内秘 - 法務) や 「**Secret \ Finance**」 (社内秘 - 財務) などのサブラベルを作成できます。 その後、異なるサブラベルに対し、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートを適用できます。
+ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
 
-現在はビジュアル マーキング、保護、条件を両方のレベルで設定できますが、サブレベルを使用するときは、これらの設定をサブレベルのみで構成します。 親ラベルとそのサブレベルで同じ設定を構成した場合は、サブレベルの設定が優先されます。
+たとえば、**Secret** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Secret** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか 1 つのみです。 したがって、表示されるラベル セットは **Secret \ Legal** のようになります。 そのファイルのメタデータには、**Secret** のカスタム テキスト プロパティーが 1 つ、**Legal** のカスタム テキスト プロパティーが 1 つ、さらに両方の値 (**Secret Legal**) を含むものが含まれます。 
+
+サブラベルを使用する場合は、プライマリ ラベルでビジュアル マーキング、保護、および条件を構成しないでください。 サブレベルを使用する場合は、サブラベルのみにこれらの設定を構成してください。 プライマリ ラベルとそのサブラベルでこれらの設定を構成した場合は、サブラベルの設定が優先されます。
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
@@ -152,6 +156,9 @@ Outlook Web アプリは Azure Information Protection の分類および保護�
 
 Azure Information Protection ラベルが Rights Management による保護を適用する場合は、メッセージ セキュリティを変更するオプションを選択してルールの構成に追加し、Rights Management による保護を適用して、RMS テンプレートまたは [転送不可] オプションを選択します。
 
+リバース マッピングを行うようにトランスポート ルールを構成することもできます。Azure Information Protection ラベルが検出された場合は、対応する Exchange メッセージ分類を設定します。 このためには、次の操作を行います。
+
+- Azure Information Protection のラベルごとに、**msip_labels** ヘッダーにラベル名 (**Confidential** など) が含まれている場合に適用されるトランスポート ルールを作成し、このラベルにマップするメッセージ分類を適用します。
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
@@ -198,6 +205,6 @@ Azure Information Protection に問題があり、クライアントの現行リ
 質問やご意見がある場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)を使用してください。 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
