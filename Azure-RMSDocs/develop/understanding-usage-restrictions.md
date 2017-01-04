@@ -73,10 +73,7 @@ ms.openlocfilehash: 07c6c6f918cc0e629583eb177222417dc420ea71
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 
- 
-
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO4-->

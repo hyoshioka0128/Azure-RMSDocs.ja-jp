@@ -74,6 +74,7 @@ Azure Information Protection は、テナント キーが Microsoft によって
 ## <a name="next-steps"></a>次のステップ
 AD RMS から Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
