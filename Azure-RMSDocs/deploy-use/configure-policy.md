@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
 
 
 ---
@@ -31,11 +31,11 @@ Azure Information Protection ポリシーを構成するには:
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    **[Azure Information Protection]** ブレードが表示され、ここで、次の要素を含む Azure Information Protection ポリシーを構成できます。
-
-    - ユーザーの Office アプリケーションで、Information Protection バーに表示されるタイトルとツールヒント。
+    **[Azure Information Protection]** ブレードが表示され、すべてのユーザーが取得するグローバルな 　Information Protection ポリシーのブレードが自動的に開きます。 ブレードには、構成できる次の要素が含まれています。
 
     - 管理者とユーザーがドキュメントと電子メールを分類するために使用できるラベル。
+
+    - ユーザーの Office アプリケーションで、Information Protection バーに表示されるタイトルとツールヒント。
 
     - ユーザーがドキュメントの保存と電子メールの送信を行ったときに分類を実行するオプション。
 
@@ -43,6 +43,7 @@ Azure Information Protection ポリシーを構成するには:
 
     - ユーザーが元のレベルよりも低い秘密度レベルのラベルを選択したときに、理由を示すことをユーザーに要求するオプション。
 
+    - ユーザーにカスタム ヘルプ リンクを提供するオプション。
 
 Azure Information Protection には[既定のポリシー](configure-policy-default.md)が付属しています。このポリシーには、**[個人用]**、**[パブリック]**、**[内部]**、**[機密]**、および **[秘密]**というラベルが含まれています。 これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。
 
@@ -58,7 +59,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [Information Protection の既定のポリシー](configure-policy-default.md)
 
-- [グローバル ポリシー設定を構成する方法](configure-policy-settings.md)
+- [ポリシー設定を構成する方法](configure-policy-settings.md)
 
 - [新しいラベルを作成する方法](configure-policy-new-label.md)
 
@@ -72,6 +73,8 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)
 
+- [スコープ ポリシーを使用して特定のユーザーのポリシーを構成する方法](configure-policy-scope.md)
+
 ## <a name="next-steps"></a>次のステップ
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
@@ -79,6 +82,6 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

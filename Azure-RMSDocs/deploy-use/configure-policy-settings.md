@@ -1,27 +1,27 @@
 ---
-title: "グローバル ポリシー設定を構成する方法 | Azure Information Protection"
-description: "Azure Information Protection ポリシーには、すべてのユーザーとすべてのデバイスに適用される次の 3 つの設定があります。"
+title: "ポリシー設定を構成する方法 | Azure Information Protection"
+description: "すべてのユーザーとデバイスに適用される Azure Information Protection ポリシーを設定します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 8fa2ed9ff9ebe5c850ab5681e4dcc1f3d3c676b3
-ms.openlocfilehash: de5f5fbddb84e4444751e9fefbfe6ec3fe3e45e4
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 9611b1fb11a66bbe1bd2b717d3c16bec6f944874
 
 
 ---
 
-# <a name="how-to-configure-the-global-policy-settings-for-azure-information-protection"></a>Azure Information Protection のグローバル ポリシー設定を構成する方法
+# <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
 >*適用対象: Azure Information Protection*
 
-Azure Information Protection ポリシーの中に次の 4 つの設定があり、すべてのユーザーとすべてのデバイスに適用されます。
+Information Protection バーに表示されるタイトルとツールヒントのほかに、Azure Information Protection ポリシーには、すべてのユーザーとデバイスに適用される次の 4 つの設定があります。
 
 ![Azure Information Protection ポリシーのグローバル設定](../media/info-protect-policy-settings.png)
 
@@ -32,7 +32,7 @@ Azure Information Protection ポリシーの中に次の 4 つの設定があり
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[Azure Information Protection]** ブレードで、次のグローバル設定を構成します。
+2. 構成する設定をすべてのユーザーに適用する場合は、次のグローバル設定を **[Policy:Global]**(ポリシー:グローバル) ブレードで構成します。
 
     - **All documents and emails must have a label** (すべてのドキュメントと電子メールにラベルを設定する必要があります): このオプションを **[オン]** に設定した場合は、すべての保存されるドキュメントと送信される電子メールにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。 
 
@@ -49,12 +49,14 @@ Azure Information Protection ポリシーの中に次の 4 つの設定があり
     このオプションは、サブラベルには適用されません。
 
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page** (Azure Information Protection クライアントの "詳細情報" Web ページ用のカスタム URL を指定する): このリンクは、**[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで**[保護]** > **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
-    
-    たとえば、ヘルプ デスク用に、クライアントのインストールと使用の方法が記載されている Microsoft のドキュメント ページ (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) や、リリース バージョン情報のページ (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**) を指定します。 あるいは、ユーザー向けの Web ページを独自に作成して、ヘルプ デスクへの連絡方法を掲載したり、ラベルを使用する手順をユーザーに説明するビデオを公開したりすることが考えられます。
+        
+        たとえば、ヘルプ デスク用に、クライアントのインストールと使用の方法が記載されている Microsoft のドキュメント ページ (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) や、リリース バージョン情報のページ (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**) を指定します。 あるいは、ユーザー向けの Web ページを独自に作成して、ヘルプ デスクへの連絡方法を掲載したり、ラベルを使用する手順をユーザーに説明するビデオを公開したりすることが考えられます。
+        
+     [スコープ ポリシー](configure-policy-scope.md)を作成した場合は、指定されたユーザーにこれらの設定を上書きすることができます。 スコープ ポリシーでこれらの設定を構成するには、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
 
 3. 変更を保存するには、**[保存]** をクリックします。
 
-4. 他のユーザーが変更を表示できるようにするには、**[公開]** をクリックします。
+4. ユーザーが変更を使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -71,6 +73,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

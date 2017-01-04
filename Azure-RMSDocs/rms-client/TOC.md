@@ -5,6 +5,7 @@
 # [クライアントのデプロイと使用](use-client.md)
 ## [Rights Management クライアント](use-client.md)
 ### [Azure Information Protection クライアントのインストール](info-protect-client.md)
+#### [Azure Information Protection クライアント: バージョン リリース履歴](client-version-release-history.md)
 ### [RMS クライアントのデプロイに関する注意事項](client-deployment-notes.md)
 ### [Windows Server FCI での RMS 保護](configure-fci.md)
 #### [PowerShell スクリプト](fci-script.md)
@@ -22,9 +23,14 @@
 ##### [保護を解除する](sharing-app-remove-protection.md)
 ##### [キーボード ショートカット](sharing-app-keyboard-shortcuts.md)
 ##### [ダイアログ ボックスのオプション](sharing-app-dialog-box.md)
+### [Azure Information Protection ユーザー ガイド - プレビュー](client-user-guide.md)
+#### [Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)
+#### [ファイルや電子メールを分類して保護する](client-classify-protect.md)
+#### [ドキュメントを追跡して取り消す](client-track-revoke.md)
+#### [保護されているファイルを開く](client-view-use-files.md)
 # [アプリの開発とカスタマイズ](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

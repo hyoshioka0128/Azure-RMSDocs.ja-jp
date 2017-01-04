@@ -4,15 +4,15 @@ description: "約 30 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: bce1682624b040545d30ca1cc426e4e2f8c38018
-ms.openlocfilehash: 7ba1566a81ca9a3ac45f340f69d3c9e933f015ff
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
 
 
 ---
@@ -32,17 +32,21 @@ Azure Information Protection には構成しないで使用できる既定のポ
     > [!TIP] 
     > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
 
-3.  **Azure Information Protection** のメイン ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
+3.  自動的に表示される **[Policy: Global]**(ポリシー:グローバル) ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
     
     - 分類用のラベル: **[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には 2 つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
 
-    - 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) ラベルには視覚的なマーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 さらに、4 つのグローバル設定は設定されていません。つまり、すべてのドキュメントと電子メールはラベルが必須ではなく、既定のラベルはなく、ユーザーがラベルを変更するときに理由を示す必要はなく、クライアントのカスタム ヘルプ リンクも設定されていません。
-
-    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy.png)
+    - 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) ラベルには視覚的なマーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 
+    
+    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-labels.png)
+    
+    さらに、一部のグローバル ポリシーの設定は設定されていません。つまり、すべてのドキュメントと電子メールはラベルが必須ではなく、既定のラベルはなく、ユーザーがラベルを変更するときに理由を示す必要はなく、クライアントのカスタム ヘルプ リンクも設定されていません。
+    
+    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-settings.png)
 
 ## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>既定のテンプレートと理由を求めるプロンプトのグローバル設定の変更
 
-このチュートリアルでは 2 つのグローバル設定を変更し、どのように動作するかを確認します。
+このチュートリアルでは 2 つのグローバル ポリシーの設定を変更し、どのように動作するかを確認します。
 
 1. **[Select the default label]** (既定のレベルを選択) で、これを **[Internal]** (内部) に設定します。
 
@@ -102,11 +106,11 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - メモを入力する](../media/step2-type-notes.png)
 
-8. この **[Label: Confidential]** (ラベル: 機密) ブレードで **[保存]** をクリックします。 次に、メインの **[Azure Information Protection]** ブレードで **[保存]** をクリックします。
+8. この **[Label: Confidential]** (ラベル: 機密) ブレードで **[保存]** をクリックします。 次に、**[Policy: Global]**(ポリシー: グローバル) ブレードで **[保存]** を再度クリックします。
 
-9. 変更を行って保存したので、ユーザーがそれを使用できるようにします。そのためには、**[Publish]** (発行) をクリックし、**[Yes]** (はい) をクリックして確定します。
+    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー構成済み](../media/info-protect-policy-configured.png)
 
-![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー構成済み](../media/info-protect-policy-configured.png)
+9. 変更を行って保存したので、ユーザーがそれを使用できるようにします。そのためには、最初の **[Azure Information Protection]** ブレードで、**[公開]** をクリックし、**[はい]** をクリックして確定します。
 
 Azure ポータルを閉じても、開いたままにしておきこのチュートリアルが終わった後でさらにオプションを構成してみてもかまいません。
 
@@ -122,6 +126,6 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

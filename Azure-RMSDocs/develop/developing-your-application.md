@@ -1,192 +1,238 @@
 ---
-title: "アプリケーションの開発 | Azure RMS"
-description: "RMS SDK 2.1 を利用したアプリケーションの開発方法に関する説明"
+title: "アプリケーションの開発 | Azure Information Protection"
+description: "AIP によるドキュメントの保護を実装する基本的なコンソール アプリのガイダンスです。"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 6e2b85bc8069de7060211df4d53be7f24ae44e3e
+ms.sourcegitcommit: 7e2f4cfead53bd34673c1ebb85b9d966b8f6f848
+ms.openlocfilehash: 90b6ecd2860214c9b1f26ab9aad421390de8d6ff
 
 
 ---
 
-# アプリケーションの開発
+# <a name="developing-your-application"></a>アプリケーションの開発
 
-このトピックでは、RMS 対応アプリケーションの中心部分について基本的なことを説明します。独自のアプリケーションを開発する際に基礎となります。
+この例では、Azure Information Protection サービス (AIP) と連携する簡単なコンソール アプリケーションを作成します。  保護するドキュメントのパスを入力し、アドホック ポリシーまたは Azure テンプレートを使用してドキュメントを保護する手順を説明します。 アプリケーションは入力に従って正しいポリシーを適用し、情報が保護されたドキュメントを作成します。 使用するサンプル コードは、[Azure IP テスト アプリケーション](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test)および Github を参照してください。
 
-## 概要
+## <a name="sample-app-prerequisites"></a>サンプル アプリの前提条件
+- **オペレーティング システム**: Windows 10、Windows 8、Windows 7、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012 のいずれか
+- **プログラミング言語**: C# (.NET Framework 3.0 以降)
+- **開発環境**: Visual Studio 2015 (およびそれ以降)
 
-このトピックの説明は、*IPCHelloWorld* というサンプル アプリケーションに基づいており、権限保護対応アプリケーションの基本的な概念とコードの理解に役立ちます。 *IPCHelloWorld* プロジェクトは既に、Rights Management サービス SDK 2.1 に合わせて構成されています。 RMS SDK 2.1 を使用する新しいプロジェクトを構成する方法については、「[Configure Visual Studio (Visual Studio の構成)](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)」を参照してください。
+## <a name="setting-up-your-azure-configuration"></a>Azure 構成のセットアップ
 
-*IPCHellowWorld* サンプル アプリケーション全体 ([Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)) を Microsoft Connect からダウンロードできます。
-> [!Note]
-> Microsoft Connect にアクセスするときにエラーが発生した場合は、ユーザー登録されていない可能性があります。 登録するには、[Connect](http://connect.microsoft.com) に移動して Microsoft アカウントでサインインし、[ディレクトリ] をクリックし、Rights Management Services を見つけて [参加] をクリックします。
+このアプリ用に Azure をセットアップするには、テナント ID、対称キー、およびアプリケーションのプリンシパル ID を作成する必要があります。
 
+### <a name="azure-ad-tenant-configuration"></a>Azure AD テナントの構成
 
-## MSIPC.dll の読み込み
+Azure Information Protection 用に Azure AD 環境を構成するには、「[Rights Management をアクティブにする](https://docs.microsoft.com/en-us/information-protection/deploy-use/activate-service)」のガイダンスに従ってください。
 
-RMS SDK 2.1 の関数を呼び出すには、最初に [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) 関数を呼び出して MSIPC.dll を読み込む必要があります。
+サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 「[Windows PowerShell を使用した Azure Rights Management サービスの管理](https://docs.microsoft.com/en-us/information-protection/deploy-use/administer-powershell)」に従って、これを行ってください。
 
-        C++
-        hr = IpcInitialize();
-        if (FAILED(hr)) {
-          wprintf(L"Failed to initialize MSIPC. Are you sure the runtime is installed?\n");
-          goto exit;
-        }
+### <a name="getting-your-tenant-id"></a>テナント ID を取得する
 
-## テンプレートの列挙
+- 管理者として PowerShell を実行します。
+- RMS モジュールをインポートします: `Import-Module AADRM`
+- 割り当てられたユーザーの資格情報でサービスに接続します: `Connect-AadrmService –Verbose`
+- RMS が有効になっていることを確認します: `Enable-AADRM`
+- `Get-AadrmConfiguration` を実行してテナント ID を取得します。
 
-RMS テンプレートでは、データを保護するために使用するポリシー、つまり、データやその権限へのアクセスを許可するユーザーを定義します。 RMS テンプレートは、RMS サーバーにインストールされます。
+>BPOS ID (テナント ID) 値を記録します。 後の手順でこの値が必要になります。
 
-次のコードでは、既定の RMS サーバーから使用できる RMS テンプレートを列挙します。
+*出力例*
+![コマンドレットの出力](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-      C++
-      hr = IpcGetTemplateList(NULL, 0, 0, NULL, NULL, &pcTil);
+- サービスから切断します: `Disconnect-AadrmService`
 
-      if (FAILED(hr)) {
-        DisplayError(L"IpcGetTemplateList failed", hr);
-        goto exit;
-      }
+### <a name="create-a-service-principal"></a>サービス プリンシパルの作成
+サービス プリンシパルを作成するには、次の手順に従います。
+> サービス プリンシパルは、アクセス制御のためにグローバルに構成された資格情報です。サービス プリンシパルを使用するサービスでは、Microsoft Azure AD による認証および Microsoft Azure AD Rights Management を使用した情報の保護が可能になります。
 
-この呼び出しは、既定のサーバーにインストールされている RMS テンプレートを取得して、その結果を *pcTil* 変数が指す [IPC_TIL](/information-protection/sdk/2.1/api/win/ipc_til#msipc_ipc_til) 構造体に読み込み、読み込んだテンプレートを表示します。
+- 管理者として PowerShell を実行します。
+- `Import-Module MSOnline` を使用して Microsoft Azure AD モジュールをインポートします。
+- 割り当てられたユーザーの資格情報でオンライン サービスに接続します: `Connect-MsolService`
+- `New-MsolServicePrincipal` を実行して、新しいサービス プリンシパルを作成します。
+- サービス プリンシパルの名前を入力します。
+> 後で使用するために、対称キーとアプリケーションのプリンシパル ID を記録します。
 
-      C++
-      if (0 == pcTil->cTi) {
-        wprintf(L"*** No templates configured for your RMS server ***\n\n");
-        wprintf(L"\\------------------------------------------------------\n\n");
-        goto exit;
-      }
+*出力例*
+![コマンドレットの出力](../media/develop/output-of-NewMsolServicePrincipal.png)
 
-      for (DWORD dw = 0; dw < pcTil->cTi; dw++) {
-        wprintf(L"Template #%d:\n", dw);
-        wprintf(L"    Name:         %s\n", pcTil->aTi[dw].wszName);
-        wprintf(L"    Description:  %s\n", pcTil->aTi[dw].wszDescription);
-        wprintf(L"    Issued by:    %s\n", pcTil->aTi[dw].wszIssuerDisplayName);
-        wprintf(L"\n");
-      }
+- アプリケーションのプリンシパル ID、対称キー、およびテナント ID をアプリケーションの App.config ファイルに追加します。
 
-## ライセンスのシリアル化
+*App.config ファイルの例*
+![コマンドレットの出力](../media/develop/example-App.config-file.png)
 
-任意のデータを保護するには、ライセンスをシリアル化し、コンテンツ キーを取得する必要があります。 コンテンツ キーは、機密データの暗号化に使用されます。 通常、シリアル化されたライセンスは、暗号化されたデータにアタッチされ、保護されたデータのコンシューマーに使用されます。 コンシューマーは、コンテンツを解読して、コンテンツに関連付けられたポリシーを取得するためのコンテンツ キーを取得するには、シリアル化されたライセンスを使用して [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey) 関数を呼び出す必要があります。
-
-わかりやすくするために、[IpcGetTemplateList](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) によって返される最初の RMS テンプレートを使用してライセンスをシリアル化します。
-
-通常は、ユーザーが目的のテンプレートを選択できるように、ユーザー インターフェイス ダイアログを使用します。
-
-      C++
-      hr = IpcSerializeLicense((LPCVOID)pcTil->aTi[0].wszID, IPC_SL_TEMPLATE_ID,
-        0, NULL, &hContentKey, &pSerializedLicense);
-
-      if (FAILED(hr)) {
-        DisplayError(L"IpcSerializeLicense failed", hr);
-        goto exit;
-      }
-
-これにより、コンテンツ キー *hContentKey* とシリアル化されたライセンス *pSerializedLicense* を取得しました。これらは、保護されたデータにアタッチする必要があります。
+- *ClientID* と *RedirectUri* は、Azure にアプリケーションを登録したときに入手できます。 Azure にアプリケーションを登録する方法、および *ClientID* と *RedirectUri* の取得方法の詳細については、「[Azure RMS の ADAL 認証を構成する](adal-auth.md)」を参照してください。
 
 
-## データの保護
+## <a name="design-summary"></a>設計の概要
+次の図は、作成するアプリのアーキテクチャとプロセス フローを示しています。図の下には手順を示しています。
+![設計の概要](../media/develop/design-summary.png)
 
-[IpcEncrypt](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt) 関数を使用して機密データを暗号化する準備ができました。 最初に、暗号化されたデータがどれぐらいのサイズになるかを **IpcEncrypt** 関数で確認する必要があります。
+1. ユーザーは次を入力します。
+  - 保護されるファイルのパス。
+  - テンプレートを選択するか、またはアドホック ポリシーを作成します。
+2. アプリケーションが AIP による認証を要求します。
+3. AIP が認証を確認します。
+4. アプリケーションが AIP のテンプレートを要求します。
+5. AIP が事前に定義されたテンプレートを返します。
+6. アプリケーションは、指定された場所の指定されたファイルを検索します。
+7. アプリケーションは、そのファイルに AIP 保護ポリシーを適用します。
 
-      C++
-      cbText = (DWORD)(sizeof(WCHAR)*(wcslen(wszText)+1));
-      hr = IpcEncrypt(hContentKey, 0, TRUE, (PBYTE)wszText, cbText,
-        NULL, 0, &cbEncrypted);
+## <a name="how-the-code-works"></a>コードのしくみ
 
-      if (FAILED(hr)) {
-        DisplayError(L"IpcEncrypt failed", hr);
-        goto exit;
-      }
+サンプルでは、Iprotect.cs ファイルを使用してソリューションの Azure IP テストを開始します。 Azure IP テストは C# コンソール アプリケーションであり、他の AIP 対応アプリケーションと同様に、`main()` メソッドで示されるように *MSIPC.dll* の読み込みで開始します。
 
-ここでは、保護しようとしているプレーン テキストが wszText に含まれています。 [IpcEncrypt](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt) 関数が、暗号化されたデータのサイズを *cbEncrypted* パラメーターに返します。
+    //Loads MSIPC.dll
+    SafeNativeMethods.IpcInitialize();
+    SafeNativeMethods.IpcSetAPIMode(APIMode.Server);
 
-ここで、暗号化されたデータ用のメモリを割り当てます。
+Azure への接続に必要なパラメーターを読み込みます。
 
-      C++
-      pbEncrypted = (PBYTE)LocalAlloc(LPTR, cbEncrypted);
+    //Loads credentials for the service principal from App.Config
+    SymmetricKeyCredential symmetricKeyCred = new SymmetricKeyCredential();
+    symmetricKeyCred.AppPrincipalId = ConfigurationManager.AppSettings["AppPrincipalId"];
+    symmetricKeyCred.Base64Key = ConfigurationManager.AppSettings["Base64Key"];
+    symmetricKeyCred.BposTenantId = ConfigurationManager.AppSettings["BposTenantId"];
 
-      if (NULL == pbEncrypted) {
-        wprintf(L"Out of memory\n");
-        goto exit;
-      }
+コンソール アプリケーションにファイルのパスを入力すると、アプリケーションはドキュメントが既に暗号化されているかどうかを確認します。 このメソッドは **SafeFileApiNativeMethods** クラスです。
 
-これで、実際の暗号化を行うことができます。
+    var checkEncryptionStatus = SafeFileApiNativeMethods.IpcfIsFileEncrypted(filePath);
 
-      C++
-      hr = IpcEncrypt(hContentKey, 0, TRUE, (PBYTE)wszText, cbText,
-        pbEncrypted, cbEncrypted, &cbEncrypted);
+ドキュメントが暗号化されていない場合は、プロンプトで入力された選択に従ってドキュメントの暗号化処理が行われます。
 
-      if (FAILED(hr)) {
-        DisplayError(L"IpcEncrypt failed", hr);
-        goto exit;
-      }
-
-この手順により、暗号化されたデータ *pbEncrypted* とシリアル化されたライセンス *pSerializedLicense* を取得しました。これらは、データを解読するコンシューマーが使用します。
-
-## エラー処理
-
-このサンプル アプリケーション全体で、*DisplayError* 関数を使用してエラーを処理しています。
-
-      C++
-      void DisplayError(LPCWSTR wszErrorInfo, HRESULT hrError)
+    if (!checkEncryptionStatus.ToString().ToLower().Contains(alreadyEncrypted))
+    {
+      if (method == EncryptionMethod1)
       {
-        LPCWSTR wszErrorMessageText = NULL;
+        //Encrypt a file via AIP template
+        ProtectWithTemplate(symmetricKeyCred, filePath);
 
-        if (SUCCEEDED(IpcGetErrorMessageText(hrError, 0, &wszErrorMessageText))) {
-          wprintf(L"%s: 0x%08X (%s)\n", wszErrorInfo, hrError, wszErrorMessageText);
+      }
+      else if (method == EncryptionMethod2)
+      {
+        //Encrypt a file using ad-hoc policy
+        ProtectWithAdHocPolicy(symmetricKeyCred, filePath);
+      }
+
+テンプレート オプションによる保護では、サーバーからテンプレートの一覧が取得され、選択するオプションがユーザーに提供されます。
+>テンプレートを変更していない場合は、AIP から既定のテンプレートを取得します。
+
+     public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
+     {
+       // Gets the available templates for this tenant             
+       Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
+           false, true, null, null, symmetricKeyCredential);
+
+       //Requests tenant template to use for encryption
+       Console.WriteLine("Please select the template you would like to use to encrypt the file.");
+
+       //Outputs templates available for selection
+       int counter = 0;
+       for (int i = 0; i < templates.Count; i++)
+       {
+         counter++;
+         Console.WriteLine(counter + ". " + templates.ElementAt(i).Name + "\n" +
+             templates.ElementAt(i).Description);
+       }
+
+       //Parses template selection
+       string input = Console.ReadLine();
+       int templateSelection;
+       bool parseResult = Int32.TryParse(input, out templateSelection);
+
+       //Returns error if no template selection is entered
+       if (parseResult)
+       {
+         //Ensures template value entered is valid
+         if (0 < templateSelection && templateSelection <= counter)
+         {
+           templateSelection -= templateSelection;
+
+           // Encrypts the file using the selected template             
+           TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
+
+           string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
+               selectedTemplateInfo.TemplateId,
+               SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST, true, false, true, null,
+               symmetricKeyCredential);
+          }
         }
-        else {
-          wprintf(L"%s: 0x%08X\n", wszErrorInfo, hrError);
-        }
       }
 
-*DisplayError* 関数は、[IpcGetErrorMessageText](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext) 関数を使用して、対応するエラー コードからエラー メッセージを取得し、標準出力に出力します。
+アドホック ポリシーを選択した場合、アプリケーションのユーザーは権限を持つユーザーのメール アドレスを入力する必要があります。 このセクションでは、**IpcCreateLicenseFromScratch()** メソッドを使用し、テンプレートに新しいポリシーを適用してライセンスが作成されます。
 
-## クリーンアップ
+    if (issuerDisplayName.Trim() != "")
+    {
+      // Gets the available issuers of rights policy templates.              
+      // The available issuers is a list of RMS servers that this user has already contacted.
+      try
+      {
+        Collection<TemplateIssuer> templateIssuers = SafeNativeMethods.IpcGetTemplateIssuerList(
+                                                        null,
+                                                        true,
+                                                        false,
+                                                        false, true, null, symmetricKeyCredential);
 
-終了する前に、割り当てられているすべてのリソースを解放する必要があります。
+        // Creates the policy and associates the chosen user rights with it             
+        SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
+                                                            templateIssuers.ElementAt(0));
+        SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
+        SafeNativeMethods.IpcSetLicenseUserRightsList(handle, userRights);
+        SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture,
+                                                                policyName,
+                                                                policyDescription,
+                                                                issuerDisplayName,
+                                                                false));
 
-      C++
-      if (NULL != pbEncrypted) {
-        LocalFree((HLOCAL)pbEncrypted);
-      }
+        //Encrypts the file using the ad hoc policy             
+        string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
+                                       filePath,
+                                       handle,
+                                       SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST,
+                                       true,
+                                       false,
+                                       true,
+                                       null,
+                                       symmetricKeyCredential);
+       }
+    }
 
-      if (NULL != pSerializedLicense) {
-        IpcFreeMemory((LPVOID)pSerializedLicense);
-      }
+## <a name="user-interaction-example"></a>ユーザー操作の例
 
-      if (NULL != hContentKey) {
-        IpcCloseHandle((IPC_HANDLE)hContentKey);
-      }
+すべて作成して実行すると、アプリケーションの出力は次のようになります。
 
-      if (NULL != pcTil) {
-        IpcFreeMemory((LPVOID)pcTil);
-      }
+1.暗号化方法の選択を求められます。
+![アプリの出力 - 手順 1](../media/develop/app-output-1.png)
 
-## 関連項目
+2. 保護されるファイルのパスを入力するよう求められます。
+![アプリの出力 - 手順 2](../media/develop/app-output-2.png)
 
-- [開発者ガイドと情報](developer-notes.md)
-- [IpcEncrypt](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt)
-- [IpcGetErrorMessageText](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)
-- [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-- [IpcGetTemplateList](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
-- [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-- [IPC_TIL](/information-protection/sdk/2.1/api/win/ipc_til#msipc_ipc_til)
-- [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
+3. ライセンス所有者のメール アドレスを入力するよう求められます (この所有者は、Azure AD テナントでグローバル管理者の権限を持つ必要があります)。
+![アプリの出力 - 手順 3](../media/develop/app-output-3.png)
+
+4. ファイルへのアクセス権を持つユーザーのメール アドレスを入力します (メール アドレスはスペースで区切る必要があります)。
+![アプリの出力 - 手順 4](../media/develop/app-output-4.png)
+
+5. 承認されたユーザーに与えられる権限の一覧から選択します。
+![アプリの出力 - 手順 5](../media/develop/app-output-5.png)
+
+6. 最後に、ポリシーのメタデータの一部 (ポリシー名、説明、および発行者 (Azure AD テナント) の表示名) を入力します。![アプリの出力 - 手順 6](../media/develop/app-output-6.png)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 
