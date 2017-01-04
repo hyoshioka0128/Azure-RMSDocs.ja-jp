@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,13 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2db4041d7839d32a4d8f0bd468aa114d45665c27
+ms.sourcegitcommit: 750919e3d8be88a1a1028d83c89ece55ea4e8690
+ms.openlocfilehash: 65ab175da5c5ab74090bf6bdb88af766dc55e334
 
 
 ---
 
-# <a name="migration-phase-1-serverside-configuration-for-ad-rms"></a>移行フェーズ 1 - AD RMS のサーバー側の構成
+# <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>移行フェーズ 1 - AD RMS のサーバー側の構成
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
@@ -74,6 +74,11 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
     -   信頼されたドメイン ファイルを RMS バージョン 1.0 で保存するチェック ボックスをオンにしないでください。
 
 信頼された発行ドメインをすべてエクスポートしたら、このデータを Azure Information Protection にインポートする手順を開始できます。
+
+信頼された発行ドメインには、保護済みのファイルの暗号化を解除するキーが含まれているので、現在アクティブな信頼された発行ドメインだけではなく、すべての信頼された発行ドメインをエクスポートすること (そして後で Azure にインポートすること) が重要です。
+
+たとえば、暗号化モード 1 から暗号化モード 2 に AD RMS サーバーをアップグレードする場合、信頼された発行ドメインが複数になります。 移行の最後に、暗号化モード 1 を使用してアーカイブされたキーを含む信頼された発行ドメインをエクスポートおよびインポートしない場合、ユーザーは暗号化モード 1 キーで保護されていたコンテンツを開けなくなります。
+
 
 ### <a name="import-the-configuration-data-to-azure-information-protection"></a>構成データを Azure Information Protection にインポートする
 正確な手順は、現在の AD RMS のデプロイ構成と、Azure Information Protection テナント キーの優先トポロジによって異なります。
@@ -220,6 +225,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

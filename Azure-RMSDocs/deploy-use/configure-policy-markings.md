@@ -1,21 +1,23 @@
 ---
 title: "視覚的なマーキングのラベルを構成する方法 | Azure Information Protection"
 description: "ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。"
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
+ms.sourcegitcommit: 81c0f97d1684091753b68e93e8b9c06f0d713264
+ms.openlocfilehash: 70d9feb8e45c1a6a266529997434dcc1e9f7899d
 
 
 ---
 
-# Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
+# <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -41,7 +43,9 @@ ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[Azure Information Protection]** ブレードで、視覚的なマーキングを構成するラベルを選択します。
+2. 視覚的なマーキング用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy:Global]**(ポリシー:グローバル) ブレードで変更するラベルを選択します。 
+
+     構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
 
 3. **[ラベル]** ブレードで、**[Set visual marking (such as header or footer)]** (視覚的なマーキングの設定 (ヘッダーやフッターなど)) セクション、目的の視覚的なマーカーの設定を構成した後、**[保存]** をクリックします。
 
@@ -53,32 +57,32 @@ ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
 
 4. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-## テキスト文字列に変数を使用する
+## <a name="using-variables-in-the-text-string"></a>テキスト文字列に変数を使用する
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}` 選択したラベル。 例: Internal
+- `${Item.Label}`: 選択したラベル。 例: Internal
 
-- `${Item.Name}` ファイル名または電子メールの件名。 例: JulySales.docx
+- `${Item.Name}`: ファイル名または電子メールの件名。 例: JulySales.docx
 
-- `${Item.Location}` ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
+- `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone
+- `${User.Name}`: ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone
 
-- `${User.PrincipalName}` ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
+- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
+- `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
     
 例: Secret ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: Secret** になります。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
-Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organization-s-policy)」セクションのリンクを使用してください。  
-
-
+Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

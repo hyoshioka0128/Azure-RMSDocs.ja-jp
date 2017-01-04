@@ -85,7 +85,7 @@ ms.openlocfilehash: 913373504e34321556a1cdd34ea2744d8477f562
 
 暗号化を試行したファイルの種類がブロックされている場合は、[IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) エラーが発生します。
 
-### <a name="file-api-file-support-details"></a>ファイル API - ファイルのサポートの詳細
+### <a name="file-api---file-support-details"></a>ファイル API - ファイルのサポートの詳細
 
 すべてのファイルの種類 (拡張子) に対してネイティブ サポートを追加できます。 たとえば、拡張子 &lt;ext&gt; (Office 以外) では、その拡張子の管理者の構成が "NATIVE" の場合、\*.p&lt;ext&gt; が使用されます。
 
@@ -151,10 +151,8 @@ HKEY_LOCAL_MACHINE
 
 - [開発者向け注意事項](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO3-->

@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 16dbee4b90f7c1e5b5c64c751d0c38e6cbccc036
+ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
+ms.openlocfilehash: 46c15d7594110d48f34b1648b2afb17738712720
 
 
 ---
@@ -36,7 +36,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |共通名: **コンテンツの編集、編集** <br /><br />ポリシーでのエンコード: **DOCEDIT**|アプリケーション内のコンテンツの変更、並べ替え、書式設定、またはフィルター処理をユーザーに許可します。 編集済みのコピーを保存する権限は付与されません。|Office カスタム権限: **変更**と**フルコントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツの編集**<br /><br />AD RMS テンプレートでの名前: **編集** <br /><br />API の定数または値: 該当なし。|
 |共通名: **保存** <br /><br />ポリシーでのエンコード: **EDIT**|ドキュメントを現在の場所に保存することをユーザーに許可します。<br /><br />Office アプリケーションで、この権限はドキュメントを変更することもユーザーに許可します。|Office カスタム権限: **変更**と**フルコントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **ファイルの保存**<br /><br />AD RMS テンプレートでの名前: **保存** <br /><br />API の定数または値: `IPC_GENERIC_WRITE L"EDIT"`|
 |共通名: **コメント** <br /><br />ポリシーでのエンコード: **COMMENT**|コンテンツに注釈やコメントを追加するオプションを有効にします。<br /><br />この権限は SDK で使用でき、Windows PowerShell の RMS 保護モジュールでアドホック ポリシーとして使用できます。また、いくつかのソフトウェア ベンダーのアプリケーションに実装されています。 ただし広く使用されてはおらず、Office アプリケーションでは現在のところサポートされていません。|Office カスタム権限: 実装されていません。 <br /><br />Azure クラシック ポータルでの名前: 実装されていません。<br /><br />AD RMS テンプレートでの名前: 実装されていません。 <br /><br />API の定数または値: `IPC_GENERIC_COMMENT L"COMMENT`|
-|共通名: **名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード: **EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 Office ドキュメントの場合は、保護しないでファイルを保存できます。<br /><br />この権限は、アプリケーションでその他のエクスポート オプション ( **[OneNote に送る]**など) を実行することもユーザーに許可します。|Office カスタム権限: **変更**と**フルコントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツのエクスポート (名前を付けて保存)**<br /><br />AD RMS テンプレートでの名前: **エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
+|共通名: **名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード: **EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 Office ドキュメントと Azure Information Protection クライアントについては、ファイルを保護なしで保存できます。<br /><br />この権限は、アプリケーションでその他のエクスポート オプション ( **[OneNote に送る]**など) を実行することもユーザーに許可します。|Office カスタム権限: **変更**と**フルコントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツのエクスポート (名前を付けて保存)**<br /><br />AD RMS テンプレートでの名前: **エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
 |共通名: **転送** <br /><br />ポリシーでのエンコード: **FORWARD**|電子メール メッセージの転送、 **[宛先]** 、 **[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。|Office カスタム権限: **転送不可**標準ポリシーを使用すると拒否されます。<br /><br />Azure クラシック ポータルでの名前: **転送**<br /><br />AD RMS テンプレートでの名前: **転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |共通名: **フル コントロール** <br /><br />ポリシーでのエンコード: **OWNER**|ドキュメントに対するすべての権限を付与します。利用可能なすべての操作を実行できます。<br /><br />ドキュメントの保護解除と再保護の能力も含まれます。|Office カスタム権限: **フル コントロール** カスタム オプション。<br /><br />Azure クラシック ポータルでの名前: **フル コントロール**<br /><br />AD RMS テンプレートでの名前: **フル コントロール** <br /><br />API の定数または値: `IPC_GENERIC_ALL L"OWNER"`|
 |共通名: **印刷** <br /><br />ポリシーでのエンコード: **PRINT**|コンテンツを印刷するオプションを有効にします。|Office カスタム権限: カスタム アクセス許可の**コンテンツの印刷**オプション。 受信者単位の設定ではありません。<br /><br />Azure クラシック ポータルでの名前: **印刷**<br /><br />AD RMS テンプレートでの名前: **印刷** <br /><br />API の定数または値: `IPC_GENERIC_PRINT L"PRINT"`|
@@ -56,15 +56,19 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 |アクセス許可レベル|アプリケーション|含まれる権限 (共通名)|
 |---------------------|----------------|---------------------------------|
-|表示者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、返信、全員に返信|
-|レビュー担当者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
+|表示者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、返信、全員に返信|
+|レビュー担当者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、保存、コンテンツの編集、編集、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
+|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[2]](#footnote-2)、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
+|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
 
 ----
 
 ###### <a name="footnote-1"></a>脚注 1:
-Windows 用 Rights Management 共有アプリケーションには適用されません
+Windows 用 Rights Management 共有アプリケーションまたは Windows 用 Azure Information Protection クライアント (プレビュー) には適用されません。
+
+###### <a name="footnote-2"></a>脚注 2:
+Windows 用 Azure Information Protection クライアント (プレビュー) には含まれていません。 このクライアントでは、エクスポートの使用権限に保護を削除する能力が含まれています。
+
 
 ## <a name="rights-included-in-the-default-templates"></a>既定のテンプレートに含まれる権限
 既定のテンプレートに含まれる権限は、次のとおりです。
@@ -102,6 +106,6 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

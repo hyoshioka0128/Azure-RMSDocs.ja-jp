@@ -20,7 +20,7 @@
 ## [探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)
 ## [Information Protection ポリシーの構成](configure-policy.md)
 ### [既定のポリシー](configure-policy-default.md)
-### [グローバル設定の構成](configure-policy-settings.md)
+### [ポリシー設定の構成](configure-policy-settings.md)
 ### [新しいラベルの作成](configure-policy-new-label.md)
 ### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
 ### [ラベルの変更](configure-policy-change-label.md)
@@ -28,6 +28,7 @@
 #### [HYOK の制限事項](configure-adrms-restrictions.md)
 ### [視覚的なマーキングの構成](configure-policy-markings.md)
 ### [条件の構成](configure-policy-classification.md)
+### [スコープ ポリシーの構成](configure-policy-scope.md)
 ## [RMS コネクタのデプロイ](deploy-rms-connector.md)
 ### [コネクタのインストールと構成](install-configure-rms-connector.md)
 ### [サーバーの構成](configure-servers-rms-connector.md)
@@ -47,6 +48,6 @@
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection からコネクタと組織の Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
+ms.sourcegitcommit: e5939bb469af198a74d81724c5417eb63db7732b
+ms.openlocfilehash: bf73a79218fa8dba2b90115d0c1573a29f791023
 
 
 ---
@@ -162,9 +162,11 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 ## <a name="rms-analyzer"></a>RMS アナライザー
 
-Rights Management サービスのアナライザー ツールを使用すると、コネクタの正常性を監視し、構成の問題を特定できます。
+このツールには現状でもサポート機能がありますが、Rights Management Serviceのアナライザー ツールを使用すると、コネクタの正常性を監視し、構成の問題を特定できます。 このツールをまだダウンロードしていない場合は、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=46437)から入手できます。 
 
-このツールをまだダウンロードしていない場合は、[ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=46437)からダウンロードし、インターネットにアクセスしていて RMS コネクタに接続できる任意のコンピューターにインストールすることができます。 ツールを実行し、**[ようこそ]** ページで **[Azure RMS コネクタ]** オプションを選択します。
+そのワークロードのコネクタの使用が許可されたアカウントを使用して、RMS コネクタ用に構成したサーバーのいずれかにサインインします。 たとえば、Exchange 用に RMS コネクタを構成した場合、RMS コネクタの構成ツールで Exchange 用に承認したアカウントのいずれかを使用して、そのサーバーにサインインします。 次に、**[管理者として実行]** オプションを選択し、RMS アナライザー ツールを実行します。
+
+ツールを読み込んだら、**[ようこそ]** ページで **[Azure RMS コネクタ]** オプションを選択します。 RMS コネクタの URL をアクティブなアドレスとして入力し、緑色の矢印をクリックします。 テナントの詳細が表示されると、コネクタが Azure Rights Management サービスに正常に接続できることが確認されます。 この最初のテストが失敗した場合は、プロキシ サーバーの構成とサーバーのトラフィックを妨げている可能性があるファイアウォールを確認します。 テナントの詳細が正常に表示されたら、続いてそのサーバーのワークロードの診断テストを実行し、サポートされているバージョン番号、前提条件、およびレジストリ設定などを確認できます。
 
 その他の情報と手順については、ダウンロード ページの **[詳細]** と **[インストール手順]** を参照してください。
 
@@ -193,6 +195,6 @@ Rights Management サービスのアナライザー ツールを使用すると�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

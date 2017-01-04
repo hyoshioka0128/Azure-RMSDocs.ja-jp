@@ -4,7 +4,7 @@ description: "Azure Information Protection テナント キーに関する計画
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 12/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
-ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
+ms.sourcegitcommit: f0403d85406cc8642654569958e3482a5d991352
+ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
 
 
 ---
@@ -112,7 +112,7 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 > [!IMPORTANT]
 > この例では、"aaaabbbbcccc111122223333" は使用するキーのバージョンです。 バージョンを指定しない場合は、現在のバージョンのキーが警告なしで使用され、機能するコマンドが表示されます。 ただし、Key Vault のキーを後で更新 (新たに) する場合、AadrmKeyVaultKey コマンドをもう一度実行する場合でも、Azure Rights Management サービスはテナントの機能を停止します。
 >
->このコマンドを実行する場合は、キー名だけでなく、キーのバージョンを指定することを確認してください。
+>このコマンドを実行する場合は、キー名だけでなく、キーのバージョンを指定することを確認してください。 Azure Key Vault コマンドの [Get AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey) を使用して、現在のキーのバージョン番号を取得できます。 例: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
 キーの URL が Azure RMS サービスで正しく設定されていることを、Azure Key Vault で確認する必要がある場合は、[Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) を実行して、キーの URL を表示します。
 
@@ -144,6 +144,6 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

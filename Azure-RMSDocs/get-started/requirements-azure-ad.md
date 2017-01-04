@@ -4,7 +4,7 @@ description: "ユーザーを正常に認証できるように、Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 12/07/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
+ms.sourcegitcommit: a38b4f201a05ece08f06b18797a146adecf59053
+ms.openlocfilehash: 1246bfcf3a389e2dcd7a9ef922c3f40150611640
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
 
 Azure Information Protection を使用するには、Azure AD ディレクトリが必要です。 このディレクトリの組織アカウントを使用して Azure クラシック ポータルにサインインします。ここでは、たとえば、Rights Management テンプレートを構成および管理することができます。
 
-組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。[Azure の「はじめに」](https://account.windowsazure.com/organization)ページにアクセスし、指示に従ってください。
+組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。 「[Azure - はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
 
 詳細については、Azure Active Directory ドキュメントの次のリソースを参照してください。
 
@@ -35,12 +35,17 @@ Azure Information Protection を使用するには、Azure AD ディレクトリ
 
 Azure AD ディレクトリをオンプレミス AD フォレストと統合する場合は、「[Integrating your on-premises identities with Azure Active Directory (オンプレミス ID と Azure Active Directory の統合)](/active-directory/active-directory-aadconnect)」を参照してください。
 
-> [!NOTE]
-> AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
-> 
-> -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
+### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ 
 
-## <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
+Office 2010 を実行しているコンピューターの場合: 
+
+- ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
+
+AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
+
+- 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
+
+## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
 Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
@@ -75,6 +80,6 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

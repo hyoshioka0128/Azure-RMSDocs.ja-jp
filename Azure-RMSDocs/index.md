@@ -13,17 +13,17 @@ ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 translationtype: Human Translation
-ms.sourcegitcommit: cd24268839fac6c42a3214e5e1bb012f61b5ffff
-ms.openlocfilehash: eab242611a9b5557e8c1056b1c093a4070f6f202
+ms.sourcegitcommit: a7de2b462362b1fe595856c71694eab149ec09b6
+ms.openlocfilehash: 035327cdfc771bae7ff36dca1a7a888223222252
 
 
 ---
-# Azure Information Protection のドキュメント
+# <a name="azure-information-protection-documentation"></a>Azure Information Protection のドキュメント
 <article id="main">
     <section id="hero-content">
       <h1>Azure Information Protection のドキュメント</h1>
       <h2>Azure Information Protection (以前の Azure Rights Management または RMS) をデプロイし、管理する方法について説明します。 組織の電子メールや文書に分類、ラベル付け、保護を適用するサービスの利用をすぐに開始できます。</h2>
-      <h3>Azure Information Protection は初めてですか。 <a href="https://www.microsoft.com/en-us/cloud-platform/azure-information-protection" target="_blank">製品サイトを参照する &rarr;</a></h3>
+      <h3>Azure Information Protection は初めてですか。 <a href="https://www.microsoft.com/en-us/cloud-platform/azure-information-protection" target="_blank">製品サイトを参照する&rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>実践する準備はできていますか?</p>
@@ -35,12 +35,15 @@ ms.openlocfilehash: eab242611a9b5557e8c1056b1c093a4070f6f202
       <h2 class="section-heading"><span class="icon icon-warning"></span> おすすめコンテンツ</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>NEW</b></mark> <a href="./deploy-use/configure-policy-scope.md">スコープ ポリシーを構成する方法 (プレビュー)</a></li>
+          <li><mark><b>NEW</b></mark> <a href="./rms-client/client-user-guide.md">ユーザー ガイド (プレビュー)</a></li>
+          <li><a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Microsoft Ignite 2016 の Azure Information Protection セッション</a></li>
           <li><a href="./understand-explore/what-is-information-protection.md">Azure Information Protection とは</a></li>
-          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Azure Information Protection のクイック スタート チュートリアル</a></li>
-          <li><a href="./get-started/faqs.md">Azure Information Protection に関してよく寄せられる質問</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="./plan-design/deployment-roadmap.md">Azure Information Protection デプロイ ロードマップ</a></li>
+          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Azure Information Protection のクイック スタート チュートリアル</a></li>
+          <li><a href="./get-started/faqs.md">Azure Information Protection に関してよく寄せられる質問</a></li>
+      <li><a href="./plan-design/deployment-roadmap.md">Azure Information Protection デプロイ ロードマップ</a></li>
           <li><a href="./develop/developers-guide.md">Azure Information Protection 開発者ガイド</a></li>
           <li><a href="./rms-client/info-protect-client.md">Azure Information Protection クライアントのインストール</a></li>
         </ul>
@@ -219,13 +222,13 @@ ms.openlocfilehash: eab242611a9b5557e8c1056b1c093a4070f6f202
     <aside class="alert alert-social">
       <p>Azure Information Protection を最新の状態に維持する <ol class="action-list">
         <li><a href="http://blogs.technet.com/b/rms/" target="_blank" class="button-bordered button-translucent">Azure Information Protection チームの公式ブログ</a></li>
-        <li><a href="https://twitter.com/TheRMSGuy" target="_blank" class="button-bordered button-translucent">Twitter で @TheRMSGuy をフォローする</a></li>
+        <li><a href="https://twitter.com/TheRMSGuy" target="_blank" class="button-bordered button-translucent">Twitter の @TheRMSGuy</a></li>
       </ol>
     </aside>
 </article>
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
