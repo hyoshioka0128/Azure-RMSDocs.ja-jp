@@ -8,9 +8,9 @@ Azure Rights Management をサポートするサブスクリプションを所�
 
 ![Azure クラシック ポータル](../media/AzRMS_Tutorial_1_Screenshots.png)
 
-#### Office 365 管理センターから Rights Management をアクティブにするには
+#### <a name="to-activate-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Rights Management をアクティブにするには
 
-1.  [Office 365 ポータル](https://portal.office.com/) に移動して、職場または学校のアカウントでサインインします。
+1.  [Office 365 ポータル](https://portal.office.com/)に移動して、職場または学校のアカウントでサインインします。
 
 2.  Office 365 管理センターが自動的に表示されない場合は、左上のアプリ ランチャー アイコンを選択し、**[管理]** を選択します。 [ **管理** ] タイルは、Office 365 管理者に対してのみ表示されます。
 
@@ -29,13 +29,13 @@ Azure Rights Management をサポートするサブスクリプションを所�
 
 " **Rights Management はアクティブ化されています** " というテキストと、非アクティブ化するオプションが表示されます (このページの手動更新が必要になる場合があります)。
 
-この時点では、[ **高度な機能**] をクリックしないでください。 クリックすると、Azure クラシック ポータルに移動し、テンプレートを構成できますが、今回のチュートリアルではその必要はありません。 このため、Office 365 管理センターを閉じてかまいません。
+この時点では、[**高度な機能**] をクリックしないでください。 クリックすると、Azure クラシック ポータルに移動し、テンプレートを構成できますが、今回のチュートリアルではその必要はありません。 このため、Office 365 管理センターを閉じてかまいません。
 
-#### Azure ポータルから Rights Management をアクティブ化するには
+#### <a name="to-activate-rights-management-from-the-azure-portal"></a>Azure ポータルから Rights Management をアクティブ化するには
 
 1.  [Azure クラシック ポータル](http://go.microsoft.com/fwlink/p/?LinkID=275081)に移動し、サインインします。
 
-2.  左ペインで、[ **ACTIVE DIRECTORY**] をクリックします。
+2.  左ペインで、[**ACTIVE DIRECTORY**] をクリックします。
 
 3.  [ **Active Directory** ] ページで、[ **RIGHTS MANAGEMENT**] をクリックします。
 
@@ -51,10 +51,10 @@ Azure Rights Management をサポートするサブスクリプションを所�
 
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
-|Rights Management をアクティブ化する方法と、サービスがアクティブ化された際にファイルの保護や電子メールの送信が可能なユーザーを制御する方法について   →|[Rights Management をアクティブにする](../deploy-use/activate-azure-classic.md)|
+|Rights Management をアクティブ化する方法と、サービスがアクティブ化された際にファイルの保護や電子メールの送信が可能なユーザーを制御する方法について   →|[Azure Rights Management をアクティブにする](../deploy-use/activate-azure-classic.md)|
 |既定のテンプレートの情報と、新しいカスタム テンプレートを作成する方法について   →|[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
