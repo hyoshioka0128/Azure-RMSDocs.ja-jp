@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7df62371ba4a2eea0227c731cf90b3454993f533
-ms.openlocfilehash: 28b85313e278455391040797ea2886bd9247abe2
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9431ae301ea91b71287c6a8462cf5fee42b5b71a
 
 
 ---
 
-# <a name="howto-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
+# <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
 このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)」を参照してください。
 
@@ -179,12 +179,10 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 * [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx)
 * [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
 * [IpcCreateLicenseFromTemplateID](https://msdn.microsoft.com/library/hh535257.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

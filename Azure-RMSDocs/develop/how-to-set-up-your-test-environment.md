@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 719077671664dda3102949609874c569a691bbb8
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 65ac5120e58ea6a212c09f7c2dd278356d0778b1
 
 
 ---
@@ -51,12 +51,10 @@ Windows Server で実行されている Azure RMS または RMS サーバーを�
 * [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)
 * [SDK のインストール](install-the-rms-sdk.md)
 * [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

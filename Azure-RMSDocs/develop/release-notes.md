@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
-ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: febd7d90a1a762de73894724f3cf3401aec0d7b9
 
 
 ---
@@ -65,7 +65,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 -   エラー メッセージやトラブルシューティングを向上させる更新プログラム
 -   暗号化操作の重要なパフォーマンスの向上
 
-### <a name="july-2015-update-adds-support-for-linux-c-development"></a>2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加
+### <a name="july-2015-update---adds-support-for-linux--c-development"></a>2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加
 
 このリリースでは、以下が追加されています。
 
@@ -73,7 +73,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     詳細については、「[作業開始](get-started.md)」を参照してください。
 
-### <a name="may-2015-update-adds-logging-control"></a>2015 年 5 月の更新 – ログの制御を追加
+### <a name="may-2015-update---adds-logging-control"></a>2015 年 5 月の更新 – ログの制御を追加
 
 このリリースでは、以下のサポートが追加されています。
 
@@ -91,15 +91,15 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
     詳細については、「[MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx)」を参照してください。
 
-### <a name="february-2015-update-adds-windows-store-application-support"></a>2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
+### <a name="february-2015-update---adds-windows-store-application-support"></a>2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
 
 このリリースでは、Windows ストア アプリケーションのサポートを追加し、RMS SDK 4.1 の Windows Phone、Android、および iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
-### <a name="january-2015-update-adds-winphone-platform-support"></a>2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加
+### <a name="january-2015-update---adds-winphone-platform-support"></a>2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加
 
 このリリースでは、Windows Phone オペレーティング システムのサポートを追加し、RMS SDK 4.1 の Android 版および iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
-### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード
+### <a name="october-2014-update---upgrade-to-microsoft-rms-sdk-41"></a>2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード
 
 RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple iOS/OS X に以下の新機能が追加されています。
 
@@ -217,12 +217,9 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: OS X SDK は Xcode 4.6 以降のみ、および OS X 10.8 以降で動作します。
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

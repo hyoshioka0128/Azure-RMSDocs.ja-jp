@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
-ms.openlocfilehash: 0ad53fa82f288153f259870b0022378815f097a8
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca54dd3ceece96c03de140fcfc3202afdd94796a
 
 
 ---
 
-# <a name="howto-work-with-encryption-settings"></a>方法: 暗号化設定の操作
+# <a name="how-to-work-with-encryption-settings"></a>方法: 暗号化設定の操作
 
 このトピックでは、暗号化パッケージについて概説し、その使い方を示すいくつかのコード スニペットを紹介します。
 
@@ -63,7 +63,7 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                                     &amp;pLicenseHandle);
 
 
-## <a name="protect-files-with-aes128-cbc4k"></a>AES 128 CBC4K によるファイルの保護
+## <a name="protect-files-with-aes-128-cbc4k"></a>AES 128 CBC4K によるファイルの保護
 
     C++
 
@@ -80,7 +80,7 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                            &amp;dwEncryptionMode);
 
 
-## <a name="protect-files-with-aes128-ecb-deprecated-algorithms"></a>AES 128 ECB (非推奨アルゴリズム) によるファイルの保護
+## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>AES 128 ECB (非推奨アルゴリズム) によるファイルの保護
 
 この例は*非推奨アルゴリズム*をサポートする新しい方法も示しています。
 
@@ -98,12 +98,10 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
 
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
