@@ -65,6 +65,6 @@ Information Protection バーで、**[Personal]** (個人) の横にある **[Ed
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
