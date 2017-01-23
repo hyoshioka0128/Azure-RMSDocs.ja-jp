@@ -4,15 +4,15 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: e4ed4513728180179876ff49797f96e9f0f785b3
+ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
+ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
 
 
 ---
@@ -66,6 +66,8 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
     
     - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスターの暗号化モードのバージョンと、その全体的な正常性を確認するには、[RMS アナライザー ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)を使用します。   
     
+    - サービス接続ポイント (SCP) が Active Directory に登録されていない: SCP は、AD RMS 保護と Azure Information Protection が併用されるときは使用されません。 AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](../rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。
+    
     - 接続先のクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように AD RMS サーバーが構成されている: 運用環境では必須ですが、テストまたは評価目的の場合は必須ではありません。
     
     - 構成済みの権利テンプレート。
@@ -100,8 +102,9 @@ AD RMS の保護のラベルを構成する場合、AD RMS クラスターのテ
 
 AD RMS の保護のラベルを構成するには、「[Rights Management による保護を適用するためのラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

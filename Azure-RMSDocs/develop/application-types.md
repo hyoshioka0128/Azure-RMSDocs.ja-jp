@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 20a0906561a79e0826b47981425ae121f07f3d26
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 22c0525adf64c6b3a7fa4ecd51573aef8e31b5bb
 
 
 ---
@@ -61,8 +61,9 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 - [Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)
 - [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

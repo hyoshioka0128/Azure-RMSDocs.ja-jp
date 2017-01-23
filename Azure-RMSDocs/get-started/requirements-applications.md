@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 12/16/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ffe5949c080073f8acaadd7780b2c68b4b155f8
-ms.openlocfilehash: 1381a93b3a4f262c1747fa136467132137421ecb
+ms.sourcegitcommit: 115708d10b3504e77a5e469b4df93262c067ae0c
+ms.openlocfilehash: 9947c6e8b8fe78f262dbfa129f8490489d119dd2
 
 
 ---
@@ -76,7 +76,7 @@ iOS では保護されたドキュメントの表示と編集をサポートし�
 詳細については、Office ブログの投稿「[OWA for Android now available on select devices (一部のデバイスで OWA for Android が利用可能になりました)](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)」を参照してください。
 
 ###### <a name="footnote-8"></a>脚注 8
-詳細については、Enterprise and Mobility ブログの投稿「SealPath brings RMS protection to AutoCAD (SealPath によって AutoCAD に RMS の保護がもたらされます)」(https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/) を参照してください。
+詳細については、Enterprise and Mobility ブログの投稿、「[SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)」 (SealPath で導入される AutoCAD の RMS 保護) を参照してください。
 
 
 ## <a name="more-information-about-azure-rms-support-for-office"></a>Azure RMS による Office のサポートの詳細
@@ -166,7 +166,9 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 
 Azure RMS で最も一般的に使用されるアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO3-->
 
 
