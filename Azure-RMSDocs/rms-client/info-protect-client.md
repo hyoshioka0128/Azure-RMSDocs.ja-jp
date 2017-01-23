@@ -4,15 +4,15 @@ description: "Office アプリケーションに Information Protection バー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: 71972b0a057b1958dfa5e5b4af41b65d5080a086
+ms.sourcegitcommit: bd3cbea29183c39abaa66aa5dcec8a14ad0b0757
+ms.openlocfilehash: bccddf228b33bcd8d36ef6af55dea9015cad34d0
 
 
 ---
@@ -31,21 +31,77 @@ Azure Information Protection クライアントを [Microsoft ダウンロード
 
 クライアントをインストールする前に、「[Azure Information Protection の要件](../get-started/requirements-azure-rms.md)」で Azure Information Protection クライアントに必要なオペレーティング システムのバージョンとアプリケーションがあることを確認してください。 また、プレビュー バージョンのクライアントについては、Windows 7 SP1 を実行しているコンピューターには [KB 2533623](https://support.microsoft.com/en-us/kb/2533623) が必要ですが、こちらはクライアントのインストール後にインストールできます。 この更新プログラムが必要でインストールされていない場合は、インストールが求められます。
 
+
 ## <a name="to-install-the-azure-information-protection-client-manually"></a>Azure Information Protection クライアントを手動でインストールするには
 
-1. [クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)したら、**AzInfoProtection.exe** などの実行可能ファイルを実行し、指示に従ってクライアントをインストールします。 このインストールには、ローカルの管理アクセス許可が必要です。
+> [!NOTE]
+> このインストールには、ローカルの管理アクセス許可が必要です。
 
-    Office 365 または Azure Active Directory に接続できないが、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。 
+    
+1. [クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)したら、**AzInfoProtection.exe** などの実行可能ファイルを実行し、指示に従ってクライアントをインストールします。
+    
+    Office 365 または Azure Active Directory に接続できないが、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、**デモ ポリシー**をインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。
+    
+    インストール内容の詳細:
 
-2. Azure Information Protection クライアントの使用を開始するには: コンピューターで Office 2010 が実行されている場合は、コンピューターを再起動します。 その他のバージョンの Office では、すべての Office アプリケーションを再起動します。
+    - 一般公開バージョンでは、Office アプリケーションの Azure Information Protection バーがインストールされます。 
+    
+    - クライアントの最新プレビュー バージョンでは、Office アプリケーションの Azure Information Protection バー、エクスプローラーの右クリック オプション、保護ファイルのビューアー、ファイルを一括で分類し、保護するための Windows PowerShell コマンドレットがインストールされます。 
+        
+        パラメーター **PowerShellOnly=true** を指定することで、PowerShell モジュール (RMSProtection) だけをインストールできます。 例: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true`
+
+2. インストールを完了するには: 
+
+    - お使いのコンピューターが Office 2010 を実行する場合は、コンピューターを再起動します。 
+        
+        **プレビュー バージョンのクライアントをインストールした場合**: コンピューターを再起動するほか、Azure Information Protection バーを使用する Office アプリケーション (Word など) を開き、初回使用時に更新するレジストリについてのプロンプトを確認します。 [サービス検索](../rms-client/client-deployment-notes.md#rms-service-discovery)はレジストリ キーの設定に使用されます。 
+    
+    - その他のバージョンの Office では、すべての Office アプリケーションを再起動します。 
+        
+        **プレビュー バージョンのクライアントをインストールした場合**: Office アプリケーションを再起動するほか、エクスプローラーも閉じて、もう一度起動します。
 
 ## <a name="to-install-the-azure-information-protection-client-for-users"></a>ユーザー向けに Azure Information Protection クライアントをインストールするには
 
-スクリプトを作成し、コマンド ライン オプションを使用して Azure Information Protection クライアントのインストールを自動化することができます。 インストール オプションを表示するには、**/help** を付けて実行可能ファイルを実行します。 たとえば、`AzInfoProtection.exe /help` と指定します。
+スクリプトを作成し、コマンド ライン オプションを使用して Azure Information Protection クライアントのインストールを自動化することができます。 インストール オプションを表示するには、**/help** を付けて実行可能ファイルを実行します。 例: `AzInfoProtection.exe /help`
 
-サイレント モードでクライアントをインストールするには、`AzInfoProtection.exe /passive | quiet` を実行します。
+クライアントの一般公開バージョンのサイレント インストールの例: `AzInfoProtection.exe /quiet`
+
+プレビュー クライアントにおける PowerShell モジュールのサイレント インストールの例: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true /quiet`
+
+Office 2010 を実行するコンピューターにプレビュー バージョンのクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合は、**ServiceLocation** パラメーターを指定します。 詳細については、次のセクションを参照してください。
 
 一般公開バージョンの Azure Information Protection クライアントは、Microsoft Update カタログにも含まれているので、カタログを使用する任意のソフトウェア更新プログラム サービスを使用して、クライアントをインストールおよび更新することができます。 プレビュー バージョンのクライアントは Microsoft Update カタログに含まれていません。
+
+### <a name="preview-version-and-office-2010-only"></a>プレビュー バージョンと Office 2010 のみ
+
+プレビュー バージョンのクライアントと Office 2010 については、ユーザーのクライアントをインストールするとき、Azure Rights Management サービスの ServiceLocation パラメーターと URL を指定します。 このパラメーターと値により、次のレジストリ キーが作成され、設定されます。
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+
+次の手順で、ServiceLocation パラメーターに指定する値を特定します。 
+
+#### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
+
+1. PowerShell セッションから、最初に [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) を実行し、管理者の資格情報を指定して Azure Rights Management サービスに接続します。 [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration) を実行します。 
+ 
+    Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
+
+2. 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
+
+    例: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+
+3. この値から、**/_wmcs/licensing** 文字列を削除します。 例: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+
+    残りの文字列は、ServiceLocation パラメーターに指定する値です。
+
+Office 2010 と Azure RMS のクライアントのサイレント インストールの例: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Azure Information Protection クライアントをアンインストールするには
 
@@ -164,8 +220,9 @@ Information Protection バー上のラベルを変更するには、Azure Inform
 
 クライアントのリリース バージョン情報を確認するには、「[バージョン リリース履歴](client-version-release-history.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
