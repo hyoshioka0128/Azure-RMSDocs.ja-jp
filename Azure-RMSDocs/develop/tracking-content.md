@@ -17,13 +17,13 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 1e1bf622bfae4d2cca3b30798dbf6cb5c794e24a
 
 
 ---
 
-# <a name="howto-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
+# <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
 このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
 
@@ -161,10 +161,10 @@ ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
 * [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 * [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
- 
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

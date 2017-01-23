@@ -6,7 +6,7 @@ Rights Management 共有アプリケーション ("RMS 共有アプリ" とも�
 
 ![RMS のインストールのスクリーンショット](../media/AzRMS_Tutorial_2_Screenshots.png)
 
-#### Rights Management 共有アプリケーションをダウンロードしてインストールするには
+#### <a name="to-download-and-install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションをダウンロードしてインストールするには
 
 1.  Microsoft Web サイトの [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
 
@@ -14,7 +14,7 @@ Rights Management 共有アプリケーション ("RMS 共有アプリ" とも�
 
 3.  ローカルにインストールする場合は、ダウンロードした Setup.exe ファイルの実行に管理者アカウントを使用する必要があります。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。
 
-4.  [ **Microsoft RMS のセットアップ** ] ページで、[ **次へ**] をクリックし、インストールが完了するまで待機します。
+4.  [**Microsoft RMS のセットアップ**] ページで、[**次へ**] をクリックし、インストールが完了するまで待機します。
 
 5.  インストールの完了時、再起動を求められた場合は [ **再起動** ] をクリックします。または [  **閉じる** ] をクリックしてインストールを完了します。
 
@@ -24,9 +24,9 @@ Rights Management 共有アプリケーション ("RMS 共有アプリ" とも�
 |--------------------------------|--------------------------|
 |Windows 用 Rights Management 共有アプリケーションのローカル インストールとユーザーの手順について   →|[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)|
 |Windows 用 Rights Management 共有アプリケーションのスクリプト化したインストールと技術情報の詳細について   →|[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)|
-|ネイティブの保護と汎用的な保護の違いを理解するには   →|[一般的な保護と組み込みの (ネイティブ) 保護の違い](../rms-client/sharing-app-dialog-box.md)|
+|ネイティブの保護と汎用的な保護の違いを理解するには   →|[一般保護と組み込みの (ネイティブ) 保護の違い](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

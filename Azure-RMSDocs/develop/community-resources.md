@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: cd203a651362564e2f2275051f61f86b3bee6703
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 91d2dc461ecdb2f15b7bfc93b38a4937c4322f3a
 
 
 ---
@@ -40,17 +40,9 @@ Microsoft Connect にまだ登録していない場合は、次の手順に従�
 -   "**Rights Management サービス**" を検索します。
 -   **[参加]** をクリックして登録します。
 
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

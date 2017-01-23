@@ -17,13 +17,13 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-TableVsFlatList-20160805
 translationtype: Human Translation
-ms.sourcegitcommit: dc40edaf8856ece3c40d1bfc4674a357f2c055ea
-ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 710d543b99c6226a350b26a1f1facf124a548485
 
 
 ---
 
-# <a name="how-to-use-builtin-rights"></a>方法: 組み込み権限の使用
+# <a name="how-to-use-built-in-rights"></a>方法: 組み込み権限の使用
 
 このトピックでは、Microsoft Rights Management SDK 4.2 の組み込み権限と、その制限に従うことでアプリケーションによって適用される使用制限について説明します。 組み込み権限、一般的な権限、編集可能なドキュメントの権限、電子メール権限、オペレーティング システムによる説明とその値を次に示します。
 
@@ -136,14 +136,9 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 - Windows ストアおよび Windows Phone: [EmailRights.ReplyAll](https://msdn.microsoft.com/library/microsoft.rightsmanagement.emailrights.replyall.aspx)
 - Linux: [EmailRights::ReplyAll](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

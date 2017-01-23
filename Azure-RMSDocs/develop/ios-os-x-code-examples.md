@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: faa1f33d1151a2d4700cc64556510994c708a414
-ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
 
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
 
 
 この SDK を理解するうえで重要な開発シナリオを表す大規模なサンプル アプリケーションの **Objective C** コード例を次に示します。 これらのコード例では、保護ファイルと呼ばれる Microsoft Protected File 形式の使用例、カスタム保護ファイル形式の使用例、およびカスタムの UI コントロールの使用例を示します。
@@ -213,7 +213,7 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 
 -   **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。
@@ -280,8 +280,9 @@ ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
             }];
           }
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

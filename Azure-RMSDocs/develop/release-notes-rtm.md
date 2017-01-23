@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
 
-## <a name="new-for-the-february-2016-sdk-documentation-update"></a>2016 年 2 月の最新情報 - SDK 文書更新
+## <a name="new-for-the-february-2016---sdk-documentation-update"></a>2016 年 2 月の最新情報 - SDK 文書更新
 
 >[!Note]
 > このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
@@ -161,13 +161,9 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 名前と説明を取得できない場合、エラーが返されます。 名前と説明は、1 つの LCID に 1 つだけ存在できます。
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
