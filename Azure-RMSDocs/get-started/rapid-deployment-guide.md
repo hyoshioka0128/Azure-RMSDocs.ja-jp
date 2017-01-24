@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 
 ---
@@ -140,13 +140,14 @@ IT 部門は Microsoft Azure Information Protection をエンタープライズ 
 
 このしくみを紹介する 2 分間のビデオ「[Azure RMS のドキュメントの追跡と取り消し](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)」をご覧ください。
 
-この組織の最も重要な資産の 1 つは、私たちが日常的に生成、保存、および使用しているデータです。 こうしたデータは、競争力を獲得し、業績を上げるために役立ちます。 そのため、データの管理を維持し、必要のない人がデータにアクセスできないようにすることが重要です。
+この組織の最も重要な資産の&1; つは、私たちが日常的に生成、保存、および使用しているデータです。 こうしたデータは、競争力を獲得し、業績を上げるために役立ちます。 そのため、データの管理を維持し、必要のない人がデータにアクセスできないようにすることが重要です。
 
 このソリューションを実装することにより、重要なデータを保護し、データを管理するためのツールを利用することができます。 これらの変更の実装にご協力いただきありがとうございます。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

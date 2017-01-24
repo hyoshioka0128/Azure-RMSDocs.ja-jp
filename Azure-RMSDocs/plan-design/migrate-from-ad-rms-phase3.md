@@ -13,13 +13,13 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1bf7377e5e8079025dff638a185c825256a5cc7
-ms.openlocfilehash: fba8e46993e414fe63414f7240779f5939166c4a
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0ad1df8a8343052a85f85b94e0413fe0a0265d4b
 
 
 ---
 
-# <a name="migration-phase-3-supporting-services-configuration"></a>移行フェーズ 3 - サービス構成のサポート
+# <a name="migration-phase-3---supporting-services-configuration"></a>移行フェーズ 3 - サービス構成のサポート
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
@@ -27,7 +27,7 @@ ms.openlocfilehash: fba8e46993e414fe63414f7240779f5939166c4a
 AD RMS から Azure Information Protection への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 6 から手順 7 を説明します。
 
 
-## <a name="step-6-configure-irm-integration-for-exchange-online"></a>手順 6.  IRM と Exchange Online の統合を構成する
+## <a name="step-6-configure-irm-integration-for-exchange-online"></a>手順 6. IRM と Exchange Online の統合を構成する
 
 事前に AD RMS から Exchange Online に TDP をインポートしていた場合、この TDP を削除して、Azure Information Protection に移行した後にテンプレートおよびポリシーが競合しないようにする必要があります。 これを行うには、Exchange Online から [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) コマンドレットを使用します。
 
@@ -214,7 +214,9 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 ## <a name="next-steps"></a>次のステップ
 移行を続行するには、「[移行フェーズ 4 - 移行後のタスク](migrate-from-ad-rms-phase4.md)」に進んでください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 
