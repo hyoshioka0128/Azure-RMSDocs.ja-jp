@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f0403d85406cc8642654569958e3482a5d991352
-ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 433a655870556ed045273713f6773f36c3d86fc1
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
 この記事の情報は、Azure Information Protection テナント キーに関する計画および管理に役立ちます。 たとえば、マイクロソフトがテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。
 
 > [!NOTE]
-> Azure Information Protection テナント キーのオンプレミスに相当するものは、サーバー ライセンサー証明書 (SLC) キーと呼ばれます。 Azure Information Protection では、Azure Information Protection のサブスクリプションがある組織ごとに 1 つ以上のキーを保持します。 組織で Azure Information Protection に対して使用されるキー (ユーザー キー、コンピューター キー、ドキュメント暗号化キーなど) は、すべて暗号化されて Azure Information Protection テナント キーにチェーンされます。
+> Azure Information Protection テナント キーのオンプレミスに相当するものは、サーバー ライセンサー証明書 (SLC) キーと呼ばれます。 Azure Information Protection では、Azure Information Protection のサブスクリプションがある組織ごとに&1; つ以上のキーを保持します。 組織で Azure Information Protection に対して使用されるキー (ユーザー キー、コンピューター キー、ドキュメント暗号化キーなど) は、すべて暗号化されて Azure Information Protection テナント キーにチェーンされます。
 
 **概要:** 次の表は、推奨されるテナント キー トポロジのクイック ガイドとして使用してください。 詳細については、別のドキュメントを参照してください。
 
@@ -57,7 +57,7 @@ Microsoft 管理のテナント キーを使用して Azure Information Protecti
 ## <a name="the-tenant-key-lifecycle"></a>テナント キーのライフサイクル
 Microsoft でテナント キーを管理することになった場合、キー ライフサイクル操作の大半を Microsoft で行います。 ただし、テナント キーを自主管理することになった場合、Azure Key Vault でキー ライフサイクル操作の多くといくつかの追加の手順を自社で行う必要があります。
 
-この 2 つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
+この&2; つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
 
 ![Azure Information Protection テナント キー ライフサイクル - Microsoft が既定で管理](../media/RMS_BYOK_cloud.png)
 
@@ -141,9 +141,10 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
     詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

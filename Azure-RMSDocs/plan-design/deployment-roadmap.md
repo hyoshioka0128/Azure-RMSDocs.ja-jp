@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
-ms.openlocfilehash: b4b701d6a88bea91e2adbe7e002f01929d388e91
+ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
+ms.openlocfilehash: 75f8eb2843005f23fd359d6a4fce073abecbfe0a
 
 
 ---
@@ -81,7 +81,7 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 
 1. マイクロソフトでテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 現時点では、Exchange Online を使用する場合、BYOK は使用できない点に注意してください。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-2. インターネットにアクセスできる 1 つ以上のコンピューターで [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 向けの Windows PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービス用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
+2. インターネットにアクセスできる&1; つ以上のコンピューターで [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 向けの Windows PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービス用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 3. 現在、オンプレミスの Rights Management サービスを使用している場合: キー、テンプレート、URL をクラウドに移行する統合を実行します。 詳細については、「[AD RMS から Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
@@ -145,7 +145,7 @@ Azure Information Protection サイトの[サブスクリプション情報](htt
 
 2. マイクロソフトでテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 現時点では、Exchange Online を使用する場合、BYOK は使用できない点に注意してください。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-3. インターネットにアクセスできる 1 つ以上のコンピューターで [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 向けの Windows PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
+3. インターネットにアクセスできる&1; つ以上のコンピューターで [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 向けの Windows PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 4. 現在、オンプレミスの Rights Management サービスを使用している場合: キー、テンプレート、URL をクラウドに移行する統合を実行します。 詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
@@ -188,12 +188,10 @@ Windows ベースのファイル サーバーで、ファイル分類インフ�
 ### <a name="step-5-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>手順 5: 必要に応じてテナント アカウントの Rights Management サービスを管理する
 Azure Rights Management サービスの使用を開始するとき、Windows PowerShell のモジュールが管理変更のスクリプト化または自動化に役立つことがあります。 詳細については、「[Windows PowerShell を使用した Azure Rights Management サービスの管理](../deploy-use/administer-powershell.md)」を参照してください。
 
-## <a name="comments"></a>コメント
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

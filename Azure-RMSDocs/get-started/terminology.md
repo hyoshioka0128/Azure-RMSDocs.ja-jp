@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d2fc307bb531ab434e0bc43a22f7403555ef03f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: a5706c9cf8b81ec761865a800761c69584659578
 
 
 ---
@@ -29,7 +29,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |--------|--------------|
 |AADRM|Azure Rights Management 用の Windows PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management という名前だったときに、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の非公式な略語から派生したサービスです。|
 |アクティブ化|[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスを有効化して、組織がドキュメントや電子メールを保護できるようにします。 この操作により、Exchange Online と SharePoint Online の Rights Management 機能も有効になります。|
-|Active Directory Rights Management サービス|*AD RMS*という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
+|Active Directory Rights Management サービス|*AD RMS*という略称で呼ばれることもあります。<br /><br />Windows Server の役割の&1; つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
 |Azure Information Protection|分類、ラベル付け、保護を使用してドキュメントと電子メールを保護するクラウドベースのサービスです。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
 |Azure Rights Management|*Azure RMS*という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
@@ -69,11 +69,10 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |保護の解除|ファイルや電子メール メッセージから、暗号化、ID、アクセス制御ポリシーを使用してデータを保護していた権限管理の制御を削除します。|
 |ライセンスの使用|権限管理サービスで保護されているファイルや電子メール メッセージを開くユーザーに付与されるドキュメントごとの証明書です。 この証明書は、ファイルや電子メール メッセージに対するユーザーの権限のほか、コンテンツを暗号化する際に使用される暗号化キー、ドキュメントのポリシー内で別途定義されるアクセス制限を含んでいます。|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

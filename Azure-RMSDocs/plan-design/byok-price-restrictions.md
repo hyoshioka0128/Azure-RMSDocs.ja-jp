@@ -1,9 +1,10 @@
 ---
 title: "BYOK の料金と制限事項 | Azure Information Protection"
-description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
+description: "Azure RMS でお客様が管理するキーを使用する場合 (Bring Your Own Key または BYOK と呼ばれます) は、制限事項を確認してください。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +13,24 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
-ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 2e8a00d4c8d38387645d015d3f69a4d568fc9683
 
 
 ---
 
-# BYOK の料金と制限事項
+# <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
 >*適用対象: Azure Information Protection、Office 365*
 
 
-Azure Information Protection が含まれているサブスクリプションを所有する組織は、Azure Key Vault の顧客管理のキー (BYOK) を使用できる共に、追加料金なしで[キーの使用状況ログを記録](../deploy-use/log-analyze-usage.md)することができます。 
+Azure Information Protection が含まれているサブスクリプションを所有する組織は、追加料金なしで、顧客管理のキー (BYOK) を使用し、[キーの使用状況ログを記録](../deploy-use/log-analyze-usage.md)するように Azure Information Protection テナントを構成することができます。 
 
-ただし、Azure Key Vault を使用するには、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
+キーは Azure Key Vault に格納する必要があります。Azure Key Vault には有料 (または試用版) の Azure サブスクリプションが必要です。また、HSM で保護されたキーをサポートするには、Azure Key Vault Premium サービス層を使用する必要があります。 HSM で保護されたキーを Azure Key Vault で使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
 
 Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを専用のサブスクリプションで使用することで、それが Azure Rights Management サービスのみで使用されるようにすることをお勧めします。 
 
-## Azure Key Vault を使用する利点
+## <a name="benefits-of-using-azure-key-vault"></a>Azure Key Vault を使用する利点
 
 追加的な保証として Azure Information Protection 使用状況ログを使用することに加えて、これと [Azure Key Vault のログ記録](https://azure.microsoft.com/documentation/articles/key-vault-logging/) との相互参照を行って、Azure Rights Management サービスのみでこのキーが使用されていることを個別に監視することができます。 必要な場合、キー コンテナーに対するアクセス許可を削除することにより、キーへのアクセスをすぐに取り消すことができます。
 
@@ -48,7 +49,7 @@ Azure Key Vault では、キーの管理ができるだけでなく、セキュ�
 Azure Key Vault の詳細については、「[Azure Key Vault とは](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
 
 
-## BYOK を使用する場合の制限
+## <a name="restrictions-when-using-byok"></a>BYOK を使用する場合の制限
 
 個人用の RMS を使用して無料のアカウントにサインアップしているユーザーがいる場合、この構成では BYOK または使用状況ログの記録を構成するテナント管理者がいないので、これらの機能を使用することはできません。
 
@@ -60,7 +61,7 @@ Azure Key Vault の詳細については、「[Azure Key Vault とは](https://a
 
 BYOK と使用状況のログ記録は、Azure Information Protection が使用する Azure Rights Management サービス (Azure RMS) と統合されたすべてのアプリケーションでシームレスに利用できます。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
-例外が 1 つあります。現時点では、 **Azure RMS BYOK には Exchange Online との互換性がありません**。 Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
+例外が&1; つあります。現時点では、 **Azure RMS BYOK には Exchange Online との互換性がありません**。 Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
 
 -   Outlook Web Access の保護された電子メールや保護された添付ファイルは表示できません。
 
@@ -78,15 +79,16 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 
 場合によっては、Exchange Online の Azure RMS BYOK の例外は、実際には問題にならないこともあります。 たとえば、BYOK とログ作成を必要とする組織は、データ アプリケーション (Exchange、SharePoint、Office) をオンプレミスで実行し、Azure RMS を使用するのは、オンプレミス AD RMS では簡単に使用できない機能 (他社とのコラボレーションやモバイル クライアントからのアクセスなど) を使用するためです。 BYOK とログ作成はこのシナリオで問題なく動作し、組織は Azure RMS サブスクリプションを完全に制御できます。
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
-独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)」を参照してください。
+独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」を参照してください。
 
 テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Rights Management テナント キーを計画して実装する」の「[次のステップ](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

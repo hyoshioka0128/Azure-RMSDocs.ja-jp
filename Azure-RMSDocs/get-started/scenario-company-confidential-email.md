@@ -13,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 3c5576936c07d3921ef8fd70f9542e62383d0751
 
 
 ---
 
-# <a name="scenario-send-a-companyconfidential-email"></a>シナリオ – 社外秘の電子メールを送信する
+# <a name="scenario---send-a-company-confidential-email"></a>シナリオ – 社外秘の電子メールを送信する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -92,7 +92,7 @@ ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Outlook を使用して社外秘情報を含む電子メールを送信する方法
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Outlook を使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook で新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、*&lt;組織名&gt;* からユーザーまたはグループを選択します。
 
@@ -102,7 +102,7 @@ ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 3.  メッセージを送信します。
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook Web アプリで新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から *&lt;組織名&gt;* ユーザーまたはグループを選択します。
 
@@ -125,7 +125,7 @@ ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 ### <a name="example-customized-user-documentation"></a>カスタマイズされたユーザー ドキュメントの例
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Outlook を使用して社外秘情報を含む電子メールを送信する方法
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Outlook を使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook で新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から VanArsdel ユーザーまたはグループを選択します。
 
@@ -135,7 +135,7 @@ ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 3.  メッセージを送信します。
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Outlook Web アプリを使用して社外秘情報を含む電子メールを送信する方法
 
 1.  Outlook Web アプリで新しい電子メール メッセージを作成し、必要な添付ファイルを追加し、アドレス帳から VanArsdel ユーザーまたはグループを選択します。
 
@@ -155,9 +155,10 @@ ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
     -   電子メール: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

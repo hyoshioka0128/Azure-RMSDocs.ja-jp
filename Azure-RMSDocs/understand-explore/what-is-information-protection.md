@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: dfcaa9a1fef0a4a2011f1385d849c4c2887a022e
-ms.openlocfilehash: ab8aa40f0ed3947264de9d07cd6fa7a7030a6964
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: c0ea97dc29855ad46271dac251c804ca602cee69
 
 
 ---
@@ -48,7 +48,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
-Azure Rights Management サービスを有効にすると直ちに、組織内のユーザーがデータにアクセスすることを制限する 2 つのテンプレートが既定で作成されます。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 より制限を厳しく制御する、これらの既定のテンプレートを補うカスタム テンプレートを独自で構成することも可能です。
+Azure Rights Management サービスを有効にすると直ちに、組織内のユーザーがデータにアクセスすることを制限する&2; つのテンプレートが既定で作成されます。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 より制限を厳しく制御する、これらの既定のテンプレートを補うカスタム テンプレートを独自で構成することも可能です。
 
 これらのテンプレートをラベル構成の一部にすると、文書 (または電子メール メッセージ) に特定のラベルが適用されると、データの分類と自動での保護が同時にされるようにすることができます。 Azure Rights Management テクノロジをサポートする製品およびサービスのユーザーや管理者が、テンプレートを選択することもできます。
 
@@ -108,11 +108,9 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 Azure Rights Management または Azure Information Protection の別名 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
 
-## <a name="comments"></a>コメント
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

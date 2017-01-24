@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca792464e616ad08370e065a0a99405740ec1e3f
 
 
 ---
@@ -47,11 +47,12 @@ Azure Information Protection ポリシー内に構成することで、Informati
 
 ラベルに実行できるオプションを構成する方法や、Azure Information Protection ポリシーのその他の設定について詳しくは、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

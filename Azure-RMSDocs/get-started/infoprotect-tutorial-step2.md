@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 00d78bf12a7f400b3dfa7e35ada25177170e2d23
 
 
 ---
@@ -34,7 +34,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 3.  自動的に表示される **[Policy: Global]**(ポリシー:グローバル) ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
     
-    - 分類用のラベル: **[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には 2 つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
+    - 分類用のラベル: **[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には&2; つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
 
     - 既定の設定 **[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) ラベルには視覚的なマーキング (フッター、ヘッダー、透かしなど) が構成されており、どのラベルにも保護が設定されていないことに注意してください。 
     
@@ -46,7 +46,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 ## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>既定のテンプレートと理由を求めるプロンプトのグローバル設定の変更
 
-このチュートリアルでは 2 つのグローバル ポリシーの設定を変更し、どのように動作するかを確認します。
+このチュートリアルでは&2; つのグローバル ポリシーの設定を変更し、どのように動作するかを確認します。
 
 1. **[Select the default label]** (既定のレベルを選択) で、これを **[Internal]** (内部) に設定します。
 
@@ -54,7 +54,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 ## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
 
-次に、ラベルの 1 つ **[Confidential]** (機密) の設定を変更します。
+次に、ラベルの&1; つ **[Confidential]** (機密) の設定を変更します。
 
 1. **[Confidential]** (機密) ラベルをクリックします。 
     
@@ -125,7 +125,9 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [&#171; 手順 1](infoprotect-tutorial-step1.md)
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

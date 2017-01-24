@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
 
 
 ---
@@ -35,7 +35,7 @@ ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
 
     Azure Rights Management のログ情報はほぼリアルタイムに提供されるため、会社での Rights Management サービスの使用状況を継続的に監視できます。 ログの 99.9% は、操作を開始してから 15 分以内にサービスで使用できます。
 
-    たとえば、保護されているデータを標準勤務時間外に読むユーザーの数が突然増加した場合に警告を受け取りたい場合があります。この場合、悪意のあるユーザーが競合他社に売り渡すために情報を収集している可能性があります。 また、明らかに同じユーザーが短時間に 2 つの異なる IP アドレスからデータにアクセスした場合、これはユーザー アカウントが侵害されたことを示している可能性があります。
+    たとえば、保護されているデータを標準勤務時間外に読むユーザーの数が突然増加した場合に警告を受け取りたい場合があります。この場合、悪意のあるユーザーが競合他社に売り渡すために情報を収集している可能性があります。 また、明らかに同じユーザーが短時間に&2; つの異なる IP アドレスからデータにアクセスした場合、これはユーザー アカウントが侵害されたことを示している可能性があります。
 
 -   **フォレンジック分析の実行**
 
@@ -59,7 +59,7 @@ ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
 
 
 ## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Azure Rights Management の使用状況ログにアクセスして使用する方法
-Azure Rights Management サービスは、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
+Azure Rights Management サービスは、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の&1; つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
 
 Azure Rights Management 操作の実行後、ログがストレージ アカウントに書き込まれるまで若干時間がかかります。 ほとんどのログは 15 分以内に表示されます。 ログはローカル ストレージ (ローカル フォルダー、データベース、MapReduce リポジトリなど) にダウンロードすることをお勧めします。
 
@@ -87,9 +87,9 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 
 この例のように日付のみを指定すると、時刻はローカル時刻の 00 時 00 分 00 秒と見なされて UTC に変換されます。 -fromdate パラメーターまたは -todate パラメーター (たとえば、-fordate "2/1/2016 15:00:00") を使用して時刻を指定すると、日付と時刻は UTC に変換されます。 Get-AadrmUserLog コマンドは、その UTC の時間帯のログを取得します。
 
-ダウンロード対象に 1 日未満を指定することはできません。
+ダウンロード対象に&1; 日未満を指定することはできません。
 
-既定では、このコマンドレットは、ログをダウンロードするときに 3 つのスレッドを使用します。 十分なネットワーク帯域幅があり、ログをダウンロードする際に必要な時間を短縮したい場合は、- NumberOfThreads パラメーターを使用します。このパラメーターは、1 ～ 32 の値をサポートします。 たとえば、次のコマンドを実行すると、ログをダウンロードするためのスレッドが 10 個生成されます。`Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
+既定では、このコマンドレットは、ログをダウンロードするときに&3; つのスレッドを使用します。 十分なネットワーク帯域幅があり、ログをダウンロードする際に必要な時間を短縮したい場合は、- NumberOfThreads パラメーターを使用します。このパラメーターは、1 ～ 32 の値をサポートします。 たとえば、次のコマンドを実行すると、ログをダウンロードするためのスレッドが 10 個生成されます。`Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
 
 
 > [!TIP]
@@ -118,16 +118,16 @@ Azure Rights Management の使用状況ログを解釈するには、次の情�
 ### <a name="the-log-sequence"></a>ログ シーケンス
 Azure Rights Management サービスは、ログを一連の BLOB として書き込みます。 
 
-ログ内の各エントリには、UTC のタイムスタンプがあります。 Azure Rights Management サービスは複数のデータ センターにまたがる複数のサーバー上で実行されるため、タイムスタンプで並べ替えられたログであっても、それらが順序どおりではないように見える場合があります。 しかし、その差はわずかであり、通常 1 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
+ログ内の各エントリには、UTC のタイムスタンプがあります。 Azure Rights Management サービスは複数のデータ センターにまたがる複数のサーバー上で実行されるため、タイムスタンプで並べ替えられたログであっても、それらが順序どおりではないように見える場合があります。 しかし、その差はわずかであり、通常&1; 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
 
 ### <a name="the-blob-format"></a>BLOB の形式
-各 BLOB は、W3C 拡張ログ形式です。 BLOB は、次の 2 行で始まります。
+各 BLOB は、W3C 拡張ログ形式です。 BLOB は、次の&2; 行で始まります。
 
 **#Software: RMS**
 
 **#Version: 1.1**
 
-最初の行は、これらが Azure Rights Management ログであることを示します。 2 番目の行は、BLOB の残りの部分がバージョン 1.1 の仕様に準拠していることを示します。 これらのログを解析するアプリケーションでは、上の 2 つの行を検証してから BLOB の残りを解析することをお勧めします。
+最初の行は、これらが Azure Rights Management ログであることを示します。 2 番目の行は、BLOB の残りの部分がバージョン 1.1 の仕様に準拠していることを示します。 これらのログを解析するアプリケーションでは、上の&2; つの行を検証してから BLOB の残りを解析することをお勧めします。
 
 3 番目の行には、タブで区切られたフィールド名が列挙されます。
 
@@ -154,8 +154,8 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
 
 
-#### <a name="exceptions-for-the-userid-field"></a>user-id フィールドの例外
-通常、user-id フィールドは要求を行ったユーザーを示しますが、値が実際のユーザーにマップされない例外が 2 つあります。
+#### <a name="exceptions-for-the-user-id-field"></a>user-id フィールドの例外
+通常、user-id フィールドは要求を行ったユーザーを示しますが、値が実際のユーザーにマップされない例外が&2; つあります。
 
 -   値 **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**。
 
@@ -197,9 +197,9 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |GetTemplateById|Azure クラシック ポータルから、テンプレート ID を指定してテンプレートを取得するための呼び出しが行われます。|
 |KeyVaultDecryptRequest|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 Azure Key Vault の顧客管理のテナント キー (BYOK) にのみ適用されます。|
 |KeyVaultGetKeyInfoRequest|Azure Key Vault で Azure Information Protection テナント キーとして使用するように指定したキーがアクセス可能であり、既に使用されていないことを確認する呼び出しを行います。|
-|KeyVaultSignDigest|署名に Azure Key Vault の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
+|KeyVaultSignDigest|署名に Azure Key Vault の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに&1; 回呼び出されます。|
 |KMSPDecrypt|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 従来の顧客管理のテナント キー (BYOK) にのみ適用されます。|
-|KMSPSignDigest|署名に従来の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
+|KMSPSignDigest|署名に従来の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに&1; 回呼び出されます。|
 |LoadEventsForMap|ドキュメント追跡サイトから呼び出し、単一ドキュメントのマップ ビューに移動します。|
 |LoadEventsForSummary|ドキュメント追跡サイトから呼び出し、単一ドキュメントのタイムライン ビューに移動します。|
 |LoadEventsForTimeline|ドキュメント追跡サイトから呼び出し、単一ドキュメントのマップ ビューに移動します。|
@@ -236,11 +236,12 @@ Azure Rights Management ログが変更される以前から独自の Azure ス�
 
 Azure Rights Management サービス用 Windows PowerShell の使用の詳細については、「[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

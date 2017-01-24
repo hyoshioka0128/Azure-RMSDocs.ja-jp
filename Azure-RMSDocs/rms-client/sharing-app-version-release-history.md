@@ -2,8 +2,9 @@
 title: "Rights Management 共有アプリケーション&colon; バージョン リリース履歴 | Azure Information Protection"
 description: "Windows 用 Rights Management 共有アプリケーションのリリースにおける新機能や変更点について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: aded487e9d7f7bc8341c7f6e1d6ac4e673b55c56
 
 
 ---
 
-# Rights Management 共有アプリケーション: バージョン リリース履歴
+# <a name="rights-management-sharing-application-version-release-history"></a>Rights Management 共有アプリケーション: バージョン リリース履歴
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -29,7 +30,7 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 > [!NOTE]
 > RMS 共有アプリケーションに関するフィードバックまたはご質問については、 [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)まで電子メール メッセージをお送りください。
 
-## バージョン 1.0.2217.0
+## <a name="version-1022170"></a>バージョン 1.0.2217.0
 
 **リリース日**: 2016 年 7 月 13 日
 
@@ -39,7 +40,7 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 
 
-## バージョン 1.0.2191.0
+## <a name="version-1021910"></a>バージョン 1.0.2191.0
 **リリース日**: 2016 年 6 月 16 日
 
 **修正内容**:
@@ -53,7 +54,7 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 - いくつかの軽微なバグと、エラー メッセージが改善されました。
 
 
-## バージョン 1.0.2004.0
+## <a name="version-1020040"></a>バージョン 1.0.2004.0
 **リリース日**: 2015 年 12 月 11 日
 
 **修正内容**:
@@ -72,16 +73,16 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
     Office 2010 を実行している標準ユーザーの場合は、いくつか制限があります。 詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」の「[ローカル管理者ではなく、かつ Office 2010 を使用している場合](install-sharing-app.md#if-you-are-not-a-local-administrator-and-use-office-2010)」セクションを参照してください。
 
-## バージョン 1.0.1908.0
+## <a name="version-1019080"></a>バージョン 1.0.1908.0
 **リリース日**: 2015 年 9 月 16 日
 
 **修正内容**:
 
 -   Azure RMS 用の多要素認証 (MFA) をサポートするようになりました。それにより、最新の認証を利用するアプリケーションの Microsoft サインイン アシスタントへの依存関係が削除されました。
 
-    詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」の「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms)」セクションを参照してください。
+    詳細については、「[Azure Information Protection の Azure Active Directory の要件](../get-started/requirements-azure-ad.md)」の「[多要素認証 (MFA) と Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection)」セクションを参照してください。
 
-## バージョン 1.0.1784.0
+## <a name="version-1017840"></a>バージョン 1.0.1784.0
 **リリース日**: 2015 年 7 月 30 日
 
 **修正内容**:
@@ -90,7 +91,7 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 -   少数の回帰とマイナー バグ。
 
-## バージョン 1.0.1770.0
+## <a name="version-1017700"></a>バージョン 1.0.1770.0
 **リリース日**: 2015 年 4 月 25 日
 
 **修正内容**:
@@ -113,7 +114,7 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
     詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックス オプション](sharing-app-dialog-box.md)」を参照してください。
 
-## バージョン 1.0.1667.0
+## <a name="version-1016670"></a>バージョン 1.0.1667.0
 **リリース日**: 2015 年 1 月 19 日
 
 **修正内容**:
@@ -128,9 +129,10 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 -   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

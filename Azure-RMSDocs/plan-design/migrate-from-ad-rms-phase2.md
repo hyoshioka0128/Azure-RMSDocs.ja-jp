@@ -13,12 +13,12 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ca8d2ccb68b96095fccf9d55b9cb9392d3a455ec
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 197ff53d64889487c457f574a235c76821fcf61a
 
 
 ---
-# <a name="migration-phase-2-clientside-configuration"></a>移行フェーズ 2 - クライアント側の構成
+# <a name="migration-phase-2---client-side-configuration"></a>移行フェーズ 2 - クライアント側の構成
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
@@ -49,7 +49,7 @@ Windows クライアントの場合:
 
             reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
 
-    - **Redirect_Onprem.cmd** の場合 - `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` という行を探し、そのすぐ下に、次の 2 行を追加します。
+    - **Redirect_Onprem.cmd** の場合 - `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` という行を探し、そのすぐ下に、次の&2; 行を追加します。
 
             reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
 
@@ -133,7 +133,9 @@ Redirect_OnPrem.cmd:
 ## <a name="next-steps"></a>次のステップ
 移行を続行するには、「[移行フェーズ 3 - サービス構成のサポート](migrate-from-ad-rms-phase3.md)」に進んでください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

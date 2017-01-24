@@ -13,14 +13,14 @@ ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: e4bf159cea6298e5a5577a2fa4de3dd3beeb47d9
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: c46ee88b18cabab7a8a32d5c971c1fad72ec162e
 
 
 ---
 
 
-# <a name="onpremises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
+# <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -62,8 +62,9 @@ Rights Management コネクタは、Windows Server 2012 R2、Windows Server 2012
 ## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

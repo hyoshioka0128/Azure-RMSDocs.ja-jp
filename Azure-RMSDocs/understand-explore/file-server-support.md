@@ -13,8 +13,8 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
 
 
 ---
@@ -40,10 +40,11 @@ Office ファイル用 RMS コネクタをデプロイおよび構成する方�
 ## <a name="next-steps"></a>次のステップ
 アプリケーションとサービスが Azure RMS をサポートする方法を理解したら、Azure RMS と、Rights Management のオンプレミス バージョンである Active Directory Rights Management サービス (AD RMS) とを比較してみることをお勧めします。 機能、要件、およびセキュリティ制御の比較については、「[Azure Rights Management と AD RMS を比較する](compare-azure-rms-ad-rms.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

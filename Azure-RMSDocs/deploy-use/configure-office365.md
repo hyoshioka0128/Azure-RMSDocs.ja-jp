@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 6c71f9b140fa52ab65dab76297a8763b3a980512
+ms.sourcegitcommit: 15bd23bb727937193cb51e732586d4c334357c04
+ms.openlocfilehash: 9c3839a6a6077470e54fb9df437f34abfb0bde78
 
 
 ---
@@ -48,14 +48,14 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
     サインインするには、次のように入力します。
 
     ```
-    $Cred = Get-Credential
+    $UserCredential = Get-Credential
     ```
     [ **Windows PowerShell 資格情報要求** ] ダイアログ ボックスで、Office 365 のユーザー名とパスワードを入力します。
 
-3.  Exchange Online サービスに接続するには、次の 2 つのコマンドを実行します。
+3.  Exchange Online サービスに接続するには、次の&2; つのコマンドを実行します。
 
     ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
     ```
@@ -119,7 +119,7 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
     Remove-PSSession $Session
     ```
 
-ユーザーは、Active Rights Management サービスを使用して電子メール メッセージを保護できるようになります。 たとえば、Outlook Web App で、拡張メニュー ( **...** ) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの 1 つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
+ユーザーは、Active Rights Management サービスを使用して電子メール メッセージを保護できるようになります。 たとえば、Outlook Web App で、拡張メニュー ( **...** ) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの&1; つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
 
 > [!IMPORTANT]
 > Azure Rights Management 用の新規 [カスタム テンプレート](configure-custom-templates.md) を作成する、またはテンプレートを更新する場合は常に、次の Exchange Online の PowerShell コマンドを実行して (必要に応じて手順 2 および 3 を最初に実行します)、これらの変更を Exchange Online に同期します。`Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -1108,9 +1108,10 @@ function Add-CredentialToCredentialCache
 Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

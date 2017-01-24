@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 1f7647fd41ba71b4cda4c942d86b6dbfe9c870f8
 
 
 ---
@@ -28,8 +28,8 @@ ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
 |目的|.. 操作内容:|
 |----------------|---------------|
 |サービスについて推奨されるドキュメントを参照する →|[Azure Information Protection ドキュメント](https://docs.microsoft.com/information-protection/)の開始ページを使用します。|
-|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する →| [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)に電子メールを送信します|
-|製品グループからの Information Protection に関するツイートおよびドキュメントの更新に関するお知らせを受け取る →|Microsoft Information Protection チームのリーダーである Dan Plastina をフォローします。 [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) を参照してください|
+|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する →|[askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)に電子メールを送信します|
+|製品グループからの Information Protection に関するツイートおよびドキュメントの更新に関するお知らせを受け取る →|Microsoft Information Protection チームのリーダーである Dan Plastina をフォローします。 [Dan Plastina @DanPlastina](https://twitter.com/DanPlastina) を参照してください|
 |サブスクリプション情報とサポート対象の機能を確認する →|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)」を参照してください。|
 
 
@@ -90,9 +90,10 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 -   [フォーラム:ユーザー向け RMS (アプリケーション)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

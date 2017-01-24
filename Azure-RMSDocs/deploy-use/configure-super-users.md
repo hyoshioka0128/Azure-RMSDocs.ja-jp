@@ -13,8 +13,8 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 70c74678ec0ef0b583b2784177520d0ea8a5b7e8
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d2c7c5307ad1ea8866b40e9daa29634496f9323c
 
 
 ---
@@ -68,10 +68,11 @@ Azure Information Protection からの Azure Rights Management サービスの�
 > [!NOTE]
 > RMS 保護ツールに付属する RMS Protection PowerShell モジュールはメインの [Azure Rights Management 用 Windows PowerShell モジュール](administer-powershell.md)とは異なり、それを補足するものです。 RMS 保護モジュールは、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS) と、Active Directory Rights Management サービス (AD RMS) の両方をサポートしています。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

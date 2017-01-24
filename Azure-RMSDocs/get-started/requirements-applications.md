@@ -169,6 +169,6 @@ Azure RMS で最も一般的に使用されるアプリケーションを構成�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

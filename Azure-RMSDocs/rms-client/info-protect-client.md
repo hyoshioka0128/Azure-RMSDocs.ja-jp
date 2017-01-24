@@ -27,7 +27,7 @@ Azure Information Protection を使ってドキュメントや電子メール �
 
 ![Azure Information Protection バーと既定のポリシー](../media/info-protect-bar-default.png)
 
-Azure Information Protection クライアントを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードします。 現時点では、一般公開 (GA) バージョンとプレビュー バージョンをインストールすることができます。 プレビュー バージョンには評価の目的で新しい機能が含まれており、変更される可能性があります。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection December preview now available (Azure Information Protection の 12 月のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)」を参照してください。
+Azure Information Protection クライアントを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードします。 現時点では、一般公開 (GA) バージョンとプレビュー バージョンをインストールすることができます。 プレビュー バージョンには評価の目的で新しい機能が含まれており、変更される可能性があります。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection December preview now available (Azure Information Protection の&12; 月のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)」を参照してください。
 
 クライアントをインストールする前に、「[Azure Information Protection の要件](../get-started/requirements-azure-rms.md)」で Azure Information Protection クライアントに必要なオペレーティング システムのバージョンとアプリケーションがあることを確認してください。 また、プレビュー バージョンのクライアントについては、Windows 7 SP1 を実行しているコンピューターには [KB 2533623](https://support.microsoft.com/en-us/kb/2533623) が必要ですが、こちらはクライアントのインストール後にインストールできます。 この更新プログラムが必要でインストールされていない場合は、インストールが求められます。
 
@@ -124,7 +124,7 @@ Office 2010 と Azure RMS のクライアントのサイレント インスト�
     
         Azure Information Protection に対するユーザー認証に使用するアカウントを識別する表示ユーザー名も確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントと一致し、Azure Information Protection 用に構成されたテナントに属している必要があります。
 
-    - **[ヘルプとフィードバック]** セクション: **詳細情報リンク**の既定のリンク先は [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) Web サイトですが、独自の URL を指定できます。この指定は、Azure Information Protection ポリシーの中の[ポリシー設定](../deploy-use/configure-policy-settings.md)の 1 つとして行います。
+    - **[ヘルプとフィードバック]** セクション: **詳細情報リンク**の既定のリンク先は [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) Web サイトですが、独自の URL を指定できます。この指定は、Azure Information Protection ポリシーの中の[ポリシー設定](../deploy-use/configure-policy-settings.md)の&1; つとして行います。
         
         **[フィードバックの送信]** リンクを使用すると、クライアントのログが Information Protection チームへの電子メール メッセージに自動的に添付され、問題の調査に使用されます。 
     
@@ -223,6 +223,6 @@ Information Protection バー上のラベルを変更するには、Azure Inform
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

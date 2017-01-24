@@ -13,8 +13,8 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: b4ba043aa351b4b6b118a83bd5fe54898ea17492
 
 
 ---
@@ -41,7 +41,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 -   **ヘルプ デスクの情報:**
 
-    ヘルプ デスクの最も便利なツールの 1 つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
+    ヘルプ デスクの最も便利なツールの&1; つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
 
     保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。
 
@@ -112,10 +112,11 @@ Azure Rights Management サービスを使用しており、Rights Management �
 
 保護されている文書の表示と同様に、受信者が電子メール メッセージを受け取るとき、受信者は最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに指定された制限付き使用権によってメッセージが開きます。 たとえば、[ **転送不可**] を選択した場合、[ **全員に返信** ] ボタンは使用できません。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

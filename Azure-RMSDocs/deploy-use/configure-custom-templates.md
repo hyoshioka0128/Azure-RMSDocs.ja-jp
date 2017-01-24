@@ -13,8 +13,8 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: bab64fcb5f4ac208bfc7f1f385c558a77e9eb796
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
 
 >*適用対象: Azure Information Protection、Office 365*
 
-Azure Rights Management サービスを[アクティブ化](activate-service.md)すると、ユーザーは 2 つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルに権限管理ポリシーを簡単に適用できるようになります。 これらの 2 つのテンプレートには、次の権限ポリシーの制限があります。
+Azure Rights Management サービスを[アクティブ化](activate-service.md)すると、ユーザーは&2; つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルに権限管理ポリシーを簡単に適用できるようになります。 これらの&2; つのテンプレートには、次の権限ポリシーの制限があります。
 
 -   保護されたコンテンツの読み取り専用の表示
 
@@ -63,10 +63,11 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 
 -   [PowerShell を使用してテンプレートを管理する方法](configure-templates-with-powershell.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

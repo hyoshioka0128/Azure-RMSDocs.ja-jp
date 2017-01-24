@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: b3d801eb0f02361cc58b5f6fbf1303d58a6ad722
 
 
 ---
@@ -144,7 +144,7 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
-1. 次のフレーズの少なくとも 1 つ: **aba**、**rtn**、**routing number** 
+1. 次のフレーズの少なくとも&1; つ: **aba**、**rtn**、**routing number** 
 
 2. ABA 銀行コード。書式設定された、または書式設定されていないパターンの 9 桁の数字: 
 
@@ -181,17 +181,17 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
-1. 次のフレーズの少なくとも 1 つ: **ssn**、**social security**、**ssid**、**ss#** 
+1. 次のフレーズの少なくとも&1; つ: **ssn**、**social security**、**ssid**、**ss#** 
 
 2. 社会保障番号: 書式設定された、または書式設定されていないパターンの 9 桁の数字:
 
     - **書式設定あり**: 
     
-        - 次の書式の 9 桁の数字: ddd-dd-dddd または ddd dd dddd 
+        - 次の書式の&9; 桁の数字: ddd-dd-dddd または ddd dd dddd 
         
     - **書式設定なし**: 
     
-        - 次の書式の 9 桁の数字: ddddddddd 
+        - 次の書式の&9; 桁の数字: ddddddddd 
 
 
 テスト用の例:
@@ -221,11 +221,12 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

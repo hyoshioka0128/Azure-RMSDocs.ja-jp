@@ -13,13 +13,13 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
 
 
 ---
 
-# <a name="scenario-secure-your-most-few-valuable-files"></a>シナリオ - 重要度の高い (いくつかの) ファイルを保護する
+# <a name="scenario---secure-your-most-few-valuable-files"></a>シナリオ - 重要度の高い (いくつかの) ファイルを保護する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -64,13 +64,13 @@ ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
 
     -   権限: メールが有効なグループ**特権アクセス**に**共同作成者**の権限を付与します。
 
-    -   スコープ: メールが有効な 3 つのグループ**特権アクセス**、**IT コンプライアンス マネージャー**、および **RMS 管理者**を選択します。
+    -   スコープ: メールが有効な&3; つのグループ**特権アクセス**、**IT コンプライアンス マネージャー**、および **RMS 管理者**を選択します。
 
     -   オフライン アクセス: **インターネットに接続している場合のみコンテンツを利用できます**
 
 2.  新しいテンプレートを発行します。
 
-### <a name="to-protect-the-files-inplace"></a>ファイルをその場で保護するには
+### <a name="to-protect-the-files-in-place"></a>ファイルをその場で保護するには
 
 1.  ファイル エクスプローラーで、保護対象のファイルを含む最初のフォルダーに移動します。
 
@@ -145,9 +145,9 @@ ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
 
 -   これらのファイルにアクセスできない場合や、ファイル内に疑わしい変更が見つかった場合は、IT 部門からお送りした保護済みのメール メッセージに記載されている 24 時間対応のサポート エスカレーション窓口にお問い合わせください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
