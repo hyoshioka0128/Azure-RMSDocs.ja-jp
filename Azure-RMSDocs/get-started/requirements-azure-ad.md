@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a38b4f201a05ece08f06b18797a146adecf59053
-ms.openlocfilehash: 1246bfcf3a389e2dcd7a9ef922c3f40150611640
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 95d50707c362244972f286943abf9a07e3cedf38
 
 
 ---
@@ -46,7 +46,7 @@ AD FS または同等な認証プロバイダーを使用してオンプレミ�
 - 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
-Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
+Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち&1; つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
 
@@ -77,9 +77,10 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 ## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

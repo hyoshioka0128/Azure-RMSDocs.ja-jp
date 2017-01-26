@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
-ms.openlocfilehash: 46c15d7594110d48f34b1648b2afb17738712720
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8b3926bf9e985eb8954449b0e88d0d953f4fb339
 
 
 ---
@@ -80,7 +80,7 @@ Windows 用 Azure Information Protection クライアント (プレビュー) �
 
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
-Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** という 1 つの追加の情報権限保護オプションがあります。 
+Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** という&1; つの追加の情報権限保護オプションがあります。 
 
 このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、Azure Rights Management のテンプレートを表示し、管理するとき、Azure クラシック ポータルには表示されません。 **[転送不可]** オプションは権限の集合であり、ユーザーが電子メール受信者に動的に適用します。
 
@@ -103,9 +103,11 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 ## <a name="see-also"></a>関連項目
 [Azure Rights Management サービスのカスタム テンプレートを構成する](configure-custom-templates.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

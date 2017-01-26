@@ -14,8 +14,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: c0bfd99229e4d93c91fe8f9efafd887aa7562328
 
 
 ---
@@ -39,7 +39,7 @@ ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 
 ファイルが保護されないようにすべてのアクセス許可を完全に削除する場合は、「[ファイルからの保護の削除](sharing-app-remove-protection.md)」を参照してください。
 
-## <a name="to-reprotect-a-file-inplace"></a>ファイルを現在の場所で保護しなおすには
+## <a name="to-re-protect-a-file-in-place"></a>ファイルを現在の場所で保護しなおすには
 
 1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
 
@@ -72,7 +72,7 @@ ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
 > -   詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>電子メールで送信したファイルを保護しなおすには
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>電子メールで送信したファイルを保護しなおすには
 
 電子メールで送信したファイルのアクセス許可を変更する場合は、次のようにします。
 
@@ -95,8 +95,9 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,13 +13,13 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9ae44cf7beba0f4af3078eedeac352e9792d497c
 
 
 ---
 
-# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -28,7 +28,7 @@ ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
 > [!TIP]
 > ファイルを保護しようとするとエラーが表示される場合は、「 [Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ](http://go.microsoft.com/fwlink/?LinkId=303971)」をご覧ください。
 
-## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>デバイス上のファイルを保護するには (インプレースの保護)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>デバイス上のファイルを保護するには (インプレースの保護)
 
 1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
 
@@ -65,8 +65,9 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

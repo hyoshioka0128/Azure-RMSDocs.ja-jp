@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
 
 
 ---
@@ -89,7 +89,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 ### <a name="to-deploy-the-rms-sharing-application-for-office-2010-and-azure-information-protection"></a>Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection をデプロイするには
 
-1.  Azure Active Directory Rights Management 準備ツールを実行して組織の証明サービスの URL を取得できるように、Office 365 または Azure Active Directory テナントのグローバル管理者である必要があります。 このツールは、1 台のコンピューターで 1 回のみ実行する必要があります。 RMS 共有アプリケーションを各コンピューターにインストールする場合は、証明サービスの URL を使用します。
+1.  Azure Active Directory Rights Management 準備ツールを実行して組織の証明サービスの URL を取得できるように、Office 365 または Azure Active Directory テナントのグローバル管理者である必要があります。 このツールは、1 台のコンピューターで&1; 回のみ実行する必要があります。 RMS 共有アプリケーションを各コンピューターにインストールする場合は、証明サービスの URL を使用します。
 
     1.  ローカル管理者アカウントを使用して、コンピューターにログインします。
 
@@ -118,7 +118,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         > [!NOTE]
         > このコマンドでは、Azure の資格情報の入力が求められる場合があります。 コンピューターがドメインに参加していない場合は、入力が求められます。 コンピューターがドメインに参加している場合は、キャッシュされた資格情報をツールで使用できる場合があります。
 
-2.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権を使用して次のコマンドを 1 回実行します。
+2.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権を使用して次のコマンドを&1; 回実行します。
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
@@ -169,7 +169,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 成功したかどうかを確認するには、このトピックの[インストールの成功の確認](#verifying-installation-success)セクションをご覧ください。
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>RMS 共有アプリケーションおよび Office アドインのみをインストールするには
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>RMS 共有アプリケーションおよび Office アドインのみをインストールするには
 
 1.  次のコマンドを使用してログ ファイルを作成する既存のフォルダーを指定して、AD RMS クライアントと RMS 共有アプリケーションをインストールします。
 
@@ -253,7 +253,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 2.  aadrmprep.exe コマンドの成功を確認するには、各コンピューターのインストール ログ ファイルで、 **aadrmprep.exe exited with status SUCCESS**というテキストを探します。
 
     > [!NOTE]
-    > 場合によっては、このインストールは 2 回実行され、1 回目に失敗し、2 回目に成功することがあります。
+    > 場合によっては、このインストールは&2; 回実行され、1 回目に失敗し、2 回目に成功することがあります。
 
     このツールによって変更されたレジストリを手動で確認する場合、変更は次のとおりです。
 
@@ -273,7 +273,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>RMS 共有アプリケーションおよび Office アドインのみのインストールの成功を確認するには
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>RMS 共有アプリケーションおよび Office アドインのみのインストールの成功を確認するには
 
 1.  Setup_ipviewer.exe コマンドの成功を確認するには、インストール ログ ファイルでテキスト「**インストールの成功またはエラーの状態 0**」を探します。
 
@@ -310,7 +310,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>Office アドインをアンインストールするには
+### <a name="to-uninstall-the-office-add-in"></a>Office アドインをアンインストールするには
 
 -   次のコマンドを使用します。
 
@@ -378,7 +378,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 ### <a name="usage-logging-for-the-document-tracking-site"></a>ドキュメント追跡サイトの使用状況のログ記録
 
-使用状況ログ ファイルの 2 つのフィールド **AdminAction** と **ActingAsUser** は、ドキュメント追跡に適用できます。
+使用状況ログ ファイルの&2; つのフィールド **AdminAction** と **ActingAsUser** は、ドキュメント追跡に適用できます。
 
 **AdminAction** - このフィールドは、管理者が管理者モードでドキュメント追跡サイトを使用した場合 (たとえば、ユーザーの代理でドキュメントを取り消した場合や、ドキュメントが共有された時間を確認した場合) に true になります。 ユーザーがドキュメント追跡サイトにサインインすると、このフィールドは空になります。
 
@@ -404,9 +404,10 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 ## <a name="next-steps"></a>次のステップ
 保護レベルの違い (ネイティブとジェネリック)、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法などを説明する追加の技術情報については、「[Technical overview for the Rights Management sharing application (Rights Management 共有アプリケーションの技術概要)](sharing-app-admin-guide-technical.md)」をご覧ください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

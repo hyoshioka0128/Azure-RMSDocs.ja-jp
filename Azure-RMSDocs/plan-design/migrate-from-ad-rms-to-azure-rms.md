@@ -2,8 +2,9 @@
 title: "AD RMS から Azure Information Protection への移行 | Azure Information Protection"
 description: "Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Information Protection に移行する方法を説明します。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure Information Protection を使用します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb240b92a86bfc37685556ba2ce71b9eea56ae88
-ms.openlocfilehash: c3e926b48dfc66da71e4e3f16f9359b3cb8322c6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 30a154d67db81441cd48c56681ddb6552fc4cd18
 
 
 ---
 
-# AD RMS から Azure Information Protection への移行
+# <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
@@ -30,7 +31,19 @@ Active Directory Rights Management サービス (AD RMS) のデプロイを Azur
 
 -   Azure Information Protection と AD RMS の比較については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。
 
-## AD RMS から Azure Information Protection への移行の前提条件
+## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Azure Information Protection に移行する前に推奨されるドキュメント
+
+必須ではありませんが、移行を開始する前に次のドキュメントを参照し、移行手順に関連するテクノロジのしくみを理解することが推奨されます。
+
+- [Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md): クラウドで SLC キーと同等のキーを Microsoft が管理するか (既定)、ユーザーが管理するか ("Bring Your Own Key" (BYOK) 構成) という、Azure Information Protection テナントで利用できるキー管理オプションについて説明しています。 
+
+- [RMS サービスの検出](../rms-client/client-deployment-notes.md#rms-service-discovery): RMS クライアントのデプロイに関する注意事項のこのセクションでは、サービスの検出の順序が**レジストリ** > **SCP** > **クラウド**であることを説明しています。 SCP がインストールされている環境の移行プロセスでは、SCP から返される AD RMS クラスターを使用しないように、レジストリ設定で Azure Information Protection テナントのクライアントを構成します。
+
+- [Microsoft Rights Management コネクタの概要](../deploy-use/deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): RMS コネクタに関するドキュメントのこのセクションでは、オンプレミス サービスから Azure Rights Management サービスに接続してドキュメントと電子メールを保護する方法について説明しています。
+
+また、AD RMS のしくみを理解している場合、「[Azure RMS の機能の詳細](../understand-explore/how-does-it-work.md)」を参照して、クラウド バージョンで同じテクノロジ プロセスと異なるテクノロジ プロセスを特定することもできます。
+
+## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行の前提条件
 Azure Information Protection への移行を始める前に、次の前提条件が満たされていること、および制限事項を理解していることを確認してください。
 
 - **サポートされる RMS のデプロイ:**
@@ -42,6 +55,8 @@ Azure Information Protection への移行を始める前に、次の前提条件
         - Windows Server 2012 (x64)
         
         - Windows Server 2012 R2 (x64)
+        
+        - Windows Server 2016 (x64)
         
     - 暗号化モード 2:
 
@@ -57,7 +72,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
         
         - 複数フォレスト、複数 RMS クラスター
         
-    注: 既定では、複数の RMS クラスターが 1 つの Azure Information Protection テナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数の Azure Information Protection テナントにインポートすることはできません。
+    注: 既定では、複数の RMS クラスターが&1; つの Azure Information Protection テナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数の Azure Information Protection テナントにインポートすることはできません。
 
 - **Azure Information Protection テナント (非アクティブ) など、Azure Information Protection を実行するためのすべての要件:**
 
@@ -102,18 +117,18 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
     パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 支援が必要な場合は、[Microsoft サポートに連絡](../get-started/information-support.md#support-options-and-community-resources)してください。
 
-## AD RMS から Azure Information Protection への移行手順の概要
+## <a name="overview-of-the-steps-for-migrating-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行手順の概要
 
 
 移行手順は 4 つのフェーズに分けることができ、異なるタイミングに異なる管理者が実行できます。
 
-[**フェーズ 1 - AD RMS のサーバー側の構成**](migrate-from-ad-rms-phase1.md)
+[**フェーズ 1: AD RMS のサーバー側の構成**](migrate-from-ad-rms-phase1.md)
 
 - **手順 1: Azure RMS 管理ツールをダウンロードする**
 
     移行プロセスでは、Azure RMS 管理ツールと共にインストールされる Azure RMS モジュールから、1 つ以上の Windows PowerShell コマンドレットを実行する必要があります。
 
-- **手順 2. AD RMS から構成データをエクスポートし、それを Azure Information Protection にインポートする**
+- **手順 2:AD RMS から構成データをエクスポートし、それを Azure Information Protection にインポートする**
 
     構成データ (キー、テンプレート、URL) を AD RMS から XML ファイルにエクスポートした後、Import-AadrmTpd Windows PowerShell コマンドレットを使用してそのファイルを Azure Information Protection から Azure Rights Management サービスにアップロードします。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
 
@@ -129,16 +144,16 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
         AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェア キーを抽出してオンプレミス HSM にインポートした後、オンプレミス Thales HSM から Azure Key Vault HSM にキーを転送し、キーを格納するキー コンテナーの使用を Azure Rights Management サービスに承認する追加手順が必要になるため、必要な構成はこの方法が最も多くなります。
 
-- **手順 3. Azure Information Protection テナントをアクティブ化する**
+- **手順 3:Azure Information Protection テナントをアクティブ化する**
 
     可能であれば、インポート処理の前ではなく後に、この手順を実行します。
 
-- **手順 4. インポートされたテンプレートを構成する**
+- **手順 4:インポートされたテンプレートを構成する**
 
     権限ポリシー テンプレートをインポートするときに、それらの状態がアーカイブされます。 ユーザーが権限ポリシー テンプレートを表示および使用できるようにする場合は、Azure クラシック ポータルでテンプレートの状態を公開に変更する必要があります。
 
 
-[**フェーズ 2 - クライアント側の構成**](migrate-from-ad-rms-phase2.md)
+[**フェーズ 2: クライアント側の構成**](migrate-from-ad-rms-phase2.md)
 
 
 - **手順 5: Azure Information Protection を使用するようにクライアントを再構成する**
@@ -148,7 +163,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
     また、iOS 搭載の携帯電話や iPad、Android 端末およびタブレット、Windows Phone、Mac コンピューターなどのモバイル デバイスをサポートする[モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイした場合、これらのクライアントが AD RMS を使用するようにリダイレクトした SRV レコードを DNS から削除する必要があります。
 
 
-[**フェーズ 3 - サポート サービスの構成**](migrate-from-ad-rms-phase3.md)
+[**フェーズ 3: サポート サービスの構成**](migrate-from-ad-rms-phase3.md)
 
 
 - **手順 6: IRM と Exchange Online の統合を構成する**
@@ -167,9 +182,9 @@ Azure Information Protection への移行を始める前に、次の前提条件
     - ファイル分類インフラストラクチャ (FCI) を実行している Windows Server
 
 
-[**フェーズ 4 - 移行後のタスク**](migrate-from-ad-rms-phase4.md )
+[**フェーズ 4: 移行後のタスク**](migrate-from-ad-rms-phase4.md )
 
-- **手順 8. AD RMS の使用を停止する**
+- **手順 8: AD RMS の使用を停止する**
 
     すべてのクライアントが Azure Information Protection を使用していて、AD RMS サーバーにアクセスしていないことを確認した後、AD RMS のデプロイの使用を停止できます。
 
@@ -179,12 +194,13 @@ Azure Information Protection への移行を始める前に、次の前提条件
     この手順は省略できますが、手順 2 で Azure Information Protection テナント キー トポロジとして "マイクロソフト管理" を選択した場合は、実行することを推奨します。 選択した Azure Information Protection テナント キー トポロジが顧客管理 (BYOK) である場合、この手順は適用できません。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 移行を開始するには「[フェーズ 1 - サーバー側の構成](migrate-from-ad-rms-phase1.md)」に進みます。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

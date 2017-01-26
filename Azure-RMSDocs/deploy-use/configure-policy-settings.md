@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 9611b1fb11a66bbe1bd2b717d3c16bec6f944874
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d0f94713674bf5e8eb71c177819bc7a7192575e4
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 9611b1fb11a66bbe1bd2b717d3c16bec6f944874
 
 >*適用対象: Azure Information Protection*
 
-Information Protection バーに表示されるタイトルとツールヒントのほかに、Azure Information Protection ポリシーには、すべてのユーザーとデバイスに適用される次の 4 つの設定があります。
+Information Protection バーに表示されるタイトルとツールヒントのほかに、Azure Information Protection ポリシーには、すべてのユーザーとデバイスに適用される次の&4; つの設定があります。
 
 ![Azure Information Protection ポリシーのグローバル設定](../media/info-protect-policy-settings.png)
 
@@ -62,17 +62,10 @@ Information Protection バーに表示されるタイトルとツールヒント
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-
-
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

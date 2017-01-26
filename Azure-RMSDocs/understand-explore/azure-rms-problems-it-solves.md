@@ -13,8 +13,8 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a8332cf2402139046ba4f1ca13c4b2bb9a333a1
-ms.openlocfilehash: 6f29595f87b3cb7aa57d7037bad96ddca5fc7ea0
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: d7b97a810e113cfeed1c115b8a75dba36f06745c
 
 
 ---
@@ -37,7 +37,7 @@ Azure RMS は、[Azure Information Protection](what-is-information-protection.md
 |Windows コンピューターに限らず、広く使用されるデバイスをすべてサポートする|√ [サポートされるデバイス](../get-started/requirements-client-devices.md)には次のものが含まれます。<br /><br />- Windows コンピューターと携帯電話<br /><br />- Mac コンピューター<br /><br />- iOS タブレットと携帯電話<br /><br />- Android タブレットと携帯電話|
 |企業間のコラボレーションをサポートする|√ Azure RMS はクラウド サービスであるため、保護されたコンテンツを他の組織と共有する前に、信頼関係を明示的に構成する必要がありません。 相手組織が Office 365 または Azure AD ディレクトリを既に導入している場合、組織間のコラボレーションは自動的にサポートされます。 導入していない場合、無料の[個人用 RMS](rms-for-individuals.md) サブスクリプションに登録できます。|
 |オンプレミスのサービスや Office 365 をサポートする|√  Azure RMS は [Office 365 とシームレスに](office-apps-services-support.md)連携します。[RMS コネクタ](../deploy-use/deploy-rms-connector.md)をデプロイすると、Azure RMS を次のオンプレミス サービスと使用することもできます。<br /><br />- Exchange Server<br /><br />- SharePoint Server<br /><br />- ファイル分類インフラストラクチャを実行する Windows Server|
-|簡単なアクティブ化|√ ユーザーに対して [Rights Management サービスをアクティブ化](../deploy-use/activate-service.md)するために必要なのは、Azure クラシック ポータルで 2 回クリックすることだけです。|
+|簡単なアクティブ化|√ ユーザーに対して [Rights Management サービスをアクティブ化](../deploy-use/activate-service.md)するために必要なのは、Azure クラシック ポータルで&2; 回クリックすることだけです。|
 |必要に応じて組織全体でスケーリングする能力|√ Azure RMS はクラウド サービスとして動作し、Azure の柔軟性を活かしてスケールアップおよびスケールアウトするため、追加のオンプレミス サーバーをプロビジョニングまたはデプロイする必要がありません。|
 |シンプルで柔軟なポリシーを作成する能力|√ [権限ポリシーのカスタム テンプレート](../deploy-use/configure-custom-templates.md)を使用すると、管理者はポリシーを簡単に適用でき、ユーザーは適切なレベルの保護を各ドキュメントに適用してアクセスを組織内のユーザーに制限できます。<br /><br />たとえば、全社的戦略が記載された書類を全従業員が共有する場合、社内の全従業員に読み取り専用ポリシーを適用することが考えられます。 また、財務報告など、より機密性の高いドキュメントについては、アクセスを経営幹部にのみ制限することが考えられます。|
 |広範なアプリケーションのサポート|√ Azure RMS は Microsoft Office のアプリケーションやサービスと緊密に統合されており、RMS 共有アプリケーションを使用することで他のアプリケーションにもサポートを広げることができます。<br /><br />√ [Azure Information Protection SDK](../develop/developers-guide.md) は、Azure  Information Protection をサポートするカスタム アプリケーションを作成するための API を社内開発者やソフトウェア ベンダーに提供します。<br /><br />詳細については、「[RMS API をサポートするその他のアプリケーション](api-support.md)」を参照してください。|
@@ -72,9 +72,11 @@ Azure RMS は、セキュリティ、コンプライアンス、規制に関す�
 
 管理者とユーザーから見た Azure RMS については、「[Azure RMS in action (Azure RMS の動作)](what-admins-users-see.md)」を参照してください。
 
-Azure RMS の動作に関する技術的な詳細については、「[How does Azure RMS work (Azure RMS の機能の詳細)](how-does-it-work.md)」を参照してください。 
+Azure RMS の動作に関する技術的な詳細については、「[How does Azure RMS work (Azure RMS の機能の詳細)](how-does-it-work.md)」を参照してください。
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

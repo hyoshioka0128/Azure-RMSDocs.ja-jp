@@ -13,8 +13,8 @@ ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 5708529be090dc2d2dcd58b728e046eceff26865
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: c6640d832c95b326a19a0924a426e96a49a82754
 
 
 ---
@@ -45,7 +45,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 ![手順 2 で管理者に表示される内容](../media/AzRMS_TemplatesPortal_small.png)
 
-**ステップ 2 で管理者に表示される内容:** アクティブ化の後、2 つの権限ポリシー テンプレートが自動的に組織で使用可能になります。 1 つのテンプレートは読み取り専用 (名前に「**社外秘、表示のみ**」が含まれるもの) で、もう 1 つは読み取りおよび変更アクセス用 (**社外秘**) です。
+**ステップ 2 で管理者に表示される内容:** アクティブ化の後、2 つの権限ポリシー テンプレートが自動的に組織で使用可能になります。 1 つのテンプレートは読み取り専用 (名前に「**社外秘、表示のみ**」が含まれるもの) で、もう&1; つは読み取りおよび変更アクセス用 (**社外秘**) です。
 
 これらのテンプレートをファイルまたは電子メールに適用すると、アクセスは組織内のユーザーに制限されます。 部外者に会社のデータがリークするのを防ぐにはこれが非常に迅速かつ簡単な方法です。
 
@@ -240,8 +240,9 @@ Bob が電子メールと添付ファイルを転送した場合、他のユー�
 
 Azure RMS の機能の例をいくつか説明しましたが、そのしくみに関心があるかもしれません。 Azure RMS の動作の技術情報については、「[Azure RMS の機能の詳細](how-does-it-work.md)」をご覧ください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

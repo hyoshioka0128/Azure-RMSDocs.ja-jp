@@ -13,14 +13,14 @@ ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 49df2de156d5859d9192d8b179e4ba7ef2d653ea
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0aad5eeb88dd471ece1bf6425a4efe8050bbdf2c
 
 
 ---
 
 
-# <a name="microsoftmanaged-tenant-key-lifecycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
+# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -29,10 +29,10 @@ Microsoft が Azure Information Protection のテナント キーを管理する
 ## <a name="revoke-your-tenant-key"></a>テナント キーを取り消します
 Azure Information Protection のサブスクリプションをキャンセルすると、Azure Information Protection ではお客様のテナント キーの使用を停止します。操作を行う必要はありません。
 
-## <a name="rekey-your-tenant-key"></a>テナント キーを再入力します
+## <a name="re-key-your-tenant-key"></a>テナント キーを再入力します
 再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを使用し、コンピューターの Rights Management 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 たとえば、
 
--   あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
+-   あなたの会社が&2; つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
 -   テナント キーのマスター コピー (あなたが所有するコピー) の盗難が疑われています。
 
@@ -44,7 +44,7 @@ Azure Information Protection のサブスクリプションをキャンセルす
 テナント キーのバックアップは Microsoft が行うため、ユーザーの操作は必要ありません。
 
 ## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
-Azure Information Protection の構成およびテナント キーをエクスポートするには、次の 3 つの手順に従います。
+Azure Information Protection の構成およびテナント キーをエクスポートするには、次の&3; つの手順に従います。
 
 ### <a name="step-1-initiate-export"></a>手順 1:エクスポートを開始する
 
@@ -68,7 +68,7 @@ Azure Information Protection の構成およびテナント キーをエクス�
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    このコマンドの出力は 2 つのファイルです。一方のファイルにはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、他方のファイルにはパスワードで保護された TPD 自体が含まれています。 AadrmTpd.exe -createkey コマンドを実行した場合、相互参照のため、どちらのファイルの GUID も公開キーおよび秘密キー ファイルと同じになります。
+    このコマンドの出力は&2; つのファイルです。一方のファイルにはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、他方のファイルにはパスワードで保護された TPD 自体が含まれています。 AadrmTpd.exe -createkey コマンドを実行した場合、相互参照のため、どちらのファイルの GUID も公開キーおよび秘密キー ファイルと同じになります。
 
     -   Password-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt
 
@@ -95,10 +95,11 @@ Azure Information Protection の構成およびテナント キーをエクス�
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Information Protection を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

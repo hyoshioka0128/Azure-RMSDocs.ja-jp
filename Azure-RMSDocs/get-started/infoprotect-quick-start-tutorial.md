@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
-ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 
 ---
@@ -37,7 +37,7 @@ ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 - Azure のサブスクリプション。Azure ポータルにアクセスして Azure Information Protection ポリシーを構成するために必要です。 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。「[Microsoft Azure はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
 
   > [!TIP] 
-  > サブスクリプションの取得プロセスの完了までに時間がかかる可能性があるため、これらのサブスクリプションを 1 つ以上取得する必要がある場合は、事前に済ませてください。
+  > サブスクリプションの取得プロセスの完了までに時間がかかる可能性があるため、これらのサブスクリプションを&1; つ以上取得する必要がある場合は、事前に済ませてください。
 
 - Azure ポータルにサインインして Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
 
@@ -48,10 +48,11 @@ ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 >[!div class="step-by-step"]
 [&#187; 手順 1](infoprotect-tutorial-step1.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

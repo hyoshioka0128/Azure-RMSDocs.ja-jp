@@ -2,8 +2,9 @@
 title: "Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する | Azure Information Protection"
 description: "安全に電子メールでドキュメントを共有するための手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +13,19 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 7b8fe306b82e0eb964106b3ab3b890d1a115037d
 
 
 ---
 
-# Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する
+# <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 電子メールで共有しているファイルを保護すると、元のファイルの新しいバージョンが作成されます。 元のファイルは保護されない状態のままになり、新しいバージョンは保護されて、送信する電子メールに自動的に添付されます。
 
-場合によっては (Microsoft Word、Excel、PowerPoint で作成されたファイル)、RMS 共有アプリケーションは電子メール メッセージに添付する 2 つのバージョンのファイルを作成します。 2 番目のバージョンのファイルは **.ppdf** というファイル名拡張子で、ファイルの PDF シャドウ コピーです。 このバージョンのファイルを使用すると、受信者は、作成に使われたものと同じアプリケーションがインストールされていなくても、常にファイルを読み取ることができます。 受信者が電子メールをモバイル デバイスで読んでいて、添付ファイルを表示したいときに、このようなことはよくあります。 ファイルを開くために必要なものは、RMS 共有アプリケーションだけです。 その場合、受信者は添付ファイルを読むことはできますが、Rights Management サービスをサポートするアプリケーションを使用してもう 1 つのバージョンのファイルを開くまでは、添付ファイルを変更することはできません。
+場合によっては (Microsoft Word、Excel、PowerPoint で作成されたファイル)、RMS 共有アプリケーションは電子メール メッセージに添付する&2; つのバージョンのファイルを作成します。 2 番目のバージョンのファイルは **.ppdf** というファイル名拡張子で、ファイルの PDF シャドウ コピーです。 このバージョンのファイルを使用すると、受信者は、作成に使われたものと同じアプリケーションがインストールされていなくても、常にファイルを読み取ることができます。 受信者が電子メールをモバイル デバイスで読んでいて、添付ファイルを表示したいときに、このようなことはよくあります。 ファイルを開くために必要なものは、RMS 共有アプリケーションだけです。 その場合、受信者は添付ファイルを読むことはできますが、Rights Management サービスをサポートするアプリケーションを使用してもう&1; つのバージョンのファイルを開くまでは、添付ファイルを変更することはできません。
 
 Azure Information Protection を使用している場合は、共有によって保護されているファイルを追跡できます。
 
@@ -32,7 +33,7 @@ Azure Information Protection を使用している場合は、共有によって
 
 -   ドキュメント追跡サイトを使用します。 ドキュメント追跡サイトでファイルへのアクセスを取り消すことにより、ファイルの共有を停止することもできます。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。
 
-## Outlook の使用:電子メールで共有するファイルを保護するには
+## <a name="using-outlook-to-protect-a-file-that-you-share-by-email"></a>Outlook の使用:電子メールで共有するファイルを保護するには
 
 1.  電子メール メッセージを作成してファイルを添付します。 次に、[ **RMS** ] グループの [ **メッセージ** ] タブで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
 
@@ -42,14 +43,14 @@ Azure Information Protection を使用している場合は、共有によって
 
 2.  [[share protected] (保護ファイルの共有) ダイアログ ボックス](sharing-app-dialog-box.md)でこのファイルに必要なオプションを指定し、**[Send Now]** (今すぐ送信) をクリックします。
 
-### 電子メールで共有するファイルを保護する他の方法
+### <a name="other-ways-to-protect-a-file-that-you-share-by-email"></a>電子メールで共有するファイルを保護する他の方法
 Outlook を使用して保護されたファイルを共有する以外に、以下の方法を使用することもできます。
 
 -   エクスプローラーから:この方法はすべてのファイルに対して使用できます。
 
 -   Office アプリケーションから: この方法は、Office アドインを使用することによって RMS 共有アプリケーションがサポートするアプリケーションで機能するため、リボンに **[RMS]** グループが表示されます。
 
-#### エクスプローラーまたは Office アプリケーションの使用:電子メールで共有するファイルを保護するには
+#### <a name="using-file-explorer-or-an-office-application-to-protect-a-file-that-you-share-by-email"></a>エクスプローラーまたは Office アプリケーションの使用:電子メールで共有するファイルを保護するには
 
 1.  以下のいずれかのオプションを使用します。
 
@@ -71,7 +72,7 @@ Outlook を使用して保護されたファイルを共有する以外に、以
 
     ![Azure Information Protection の電子メール メッセージ](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    詳細: [自動的に作成される .ppdf ファイルとは](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
+    詳細: [自動的に作成される .ppdf ファイルとは](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 4.  省略可能:この電子メール メッセージの内容は自由に変更できます。 たとえば、メッセージの件名またはテキストを追加または変更できます。
 
@@ -80,18 +81,19 @@ Outlook を使用して保護されたファイルを共有する以外に、以
 
 5.  電子メール メッセージを送信します。
 
-## 例とその他の説明
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 
