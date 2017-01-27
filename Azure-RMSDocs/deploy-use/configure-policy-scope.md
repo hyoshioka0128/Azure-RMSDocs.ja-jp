@@ -4,7 +4,7 @@ description: "特定のユーザーに対して異なる設定やラベルを構
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
-ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 
 ---
@@ -42,7 +42,7 @@ Azure Information Protection のスコープ ポリシーを構成するには:
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    最初の **[Azure Information Protection]** ブレードで、**[Add a new policy (PREVIEW) (新しいポリシーの追加 (プレビュー))]** を選択します。 グローバル ポリシーの更新を示すために使用される 2 番目のブレードが表示されて、新しいスコープ ポリシーを構成できます。
+    最初の **[Azure Information Protection]** ブレードで、**[Add a new policy (PREVIEW) (新しいポリシーの追加 (プレビュー))]** を選択します。 グローバル ポリシーの更新を示すために使用される&2; 番目のブレードが表示されて、新しいスコープ ポリシーを構成できます。
 
 3. Azure Portal で管理者のみに表示されるポリシー名と説明を指定します。 この名前はテナントで一意である必要があります。 **[Specify which users/groups get this policy (このポリシーを取得するユーザー/グループの指定)]** をクリックし、その後のブレードでこのポリシーを取得するユーザーとグループを検索して選択します。 このスコープ ポリシーで構成したラベルと設定は、選択したユーザーにのみ適用されます。 
 
@@ -54,15 +54,19 @@ Azure Information Protection のスコープ ポリシーを構成するには:
 
 6. スコープ ポリシーの変更が完了したら、最初の **[Azure Information Protection]** ブレードで、このスコープ ポリシーの適用される順序が正しいことを確認します。 これは、複数のスコープ ポリシーに対して同じユーザーを選択した場合に重要になります。 **[公開]** をクリックします。 
 
-Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認します。 変更があった場合は、そのユーザーに適用されるグローバル ポリシーまたはスコープ ポリシーに変更をダウンロードします。
+Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時、またはエクスプローラーが開かれたときに常に変更の有無を確認します。 変更があった場合、クライアントはそのユーザーに適用されるグローバル ポリシーまたはスコープ ポリシーに変更をダウンロードします。
+
+> [!TIP]
+> スコープ ポリシーを保存したら、最初の **[Azure Information Protection]** ブレードで **[Cross Policy Editor] (クロス ポリシー エディター)** を使用して、Azure Information Protection ポリシーのすべてのラベルを表示および再構成できます。 この方法では、複数のポリシー (グローバル ポリシーおよびすべてのスコープ ポリシー) のラベルを簡単に比較できます。 ただし、このエディターでは、ラベルの追加または順序変更や、ポリシー設定の表示または構成を行うことはできません。
 
 ## <a name="next-steps"></a>次のステップ
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

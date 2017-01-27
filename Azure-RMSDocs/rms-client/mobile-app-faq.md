@@ -5,7 +5,7 @@ keywords: "iOS 用および Android 用の Azure Information Protection アプ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 01/06/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
+ms.sourcegitcommit: f478f65eecb47b6d0f41ece413ce576b6935b916
+ms.openlocfilehash: 9a03ccf3326b51f5c9c19102a1e9d003562cead6
 
 
 ---
@@ -33,6 +33,16 @@ ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive For Business にある PDF ファイルを開くことはできますか。
 
 はい。SharePoint と OneDrive for Business によって、他のユーザーがお客様と共有している保護された PDF ファイルを開くことができます。 リンクをタップし、このアプリを選択してファイルを自分用に開きます。 
+
+## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>モバイル デバイスで Azure Information Protection アプリを実行するには
+
+Azure Information Protection アプリには、**iOS 8** 以降または **Android 4.4** 以降が必要になります。
+
+これらのバージョン以降を搭載している場合は、モバイル デバイスにアプリをインストールして実行できます。
+
+- モバイル デバイスが Microsoft Intune で管理されている場合は、ポータル サイトから Azure Information Protection アプリをインストールできます。
+
+- モバイル デバイスが Microsoft Intune で管理されていない、または Azure Information Protection アプリをポータル サイトで入手できない場合は、iTunes ストアや Google Play ストアから直接インストールするか、[Azure Information Protection のダウンロード ページ](https://portal.azurerms.com/#/download)の **[モバイル デバイス]** セクションから iOS または Android のアイコンをクリックしてアプリをインストールすることができます。 
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>ビューアー アプリを開始するにはどうすればよいですか。
 
@@ -60,8 +70,9 @@ ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
 
 質問を [Yammer サイト](https://www.yammer.com/AskIPTeam) に投稿するか、または [情報保護チームに電子メールを送信](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app)してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

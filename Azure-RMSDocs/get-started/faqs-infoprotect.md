@@ -4,7 +4,7 @@ description: "Azure Information Protection のプレビュー リリースに関
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
-ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8bb0058940eaf1663ec82b38bc37c33400ea8b87
 
 
 ---
@@ -35,7 +35,7 @@ Azure Information Protection クライアントでは、Information Protection �
 
 現在のリリースには次の制限があります。 追加機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。
 
-- ラベル名とツール ヒントは 1 言語でのみサポートされます。
+- ラベル名とツール ヒントは&1; 言語でのみサポートされます。
 
 - 分類とラベル付けには集中的なログはありません。
 
@@ -47,7 +47,7 @@ Azure Information Protection クライアントでは、Information Protection �
 
 - パートナー向けおよび開発者向けの SDK はありません。
 
-以前記載されていた制限事項の一部が、プレビューで利用可能になりました。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection December preview now available (Azure Information Protection の 12 月のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)」を参照してください。
+以前記載されていた制限事項の一部が、プレビューで利用可能になりました。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection December preview now available (Azure Information Protection の&12; 月のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)」を参照してください。
 
 
 ## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>Azure Information Protection を試すにはグローバル管理者である必要がありますか。
@@ -121,9 +121,9 @@ Azure ポータルで Rights Management テンプレートを選択すること�
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
-ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
+ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに&1; つのラベルのみです。したがって、多くの場合、適用できる分類は&1; つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に&2; つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで&2; つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
 
-たとえば、**Secret** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Secret** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか 1 つのみです。 したがって、表示されるラベル セットは **Secret \ Legal** のようになります。 そのファイルのメタデータには、**Secret** のカスタム テキスト プロパティーが 1 つ、**Legal** のカスタム テキスト プロパティーが 1 つ、さらに両方の値 (**Secret Legal**) を含むものが含まれます。 
+たとえば、**Secret** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Secret** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか&1; つのみです。 したがって、表示されるラベル セットは **Secret \ Legal** のようになります。 そのファイルのメタデータには、**Secret** のカスタム テキスト プロパティーが&1; つ、**Legal** のカスタム テキスト プロパティーが&1; つ、さらに両方の値 (**Secret Legal**) を含むものが含まれます。 
 
 サブラベルを使用する場合は、プライマリ ラベルでビジュアル マーキング、保護、および条件を構成しないでください。 サブレベルを使用する場合は、サブラベルのみにこれらの設定を構成してください。 プライマリ ラベルとそのサブラベルでこれらの設定を構成した場合は、サブラベルの設定が優先されます。
 
@@ -133,7 +133,7 @@ Azure ポータルで Rights Management テンプレートを選択すること�
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 
-Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら 2 つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、プレビュー バージョンの Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
+Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら&2; つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、プレビュー バージョンの Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
 
 Outlook Web アプリは Azure Information Protection の分類および保護をネイティブでサポートしていませんが、この同じ手法を使って、デスクトップの Outlook クライアントだけでなく、この電子メール クライアントでもラベルを使用することができます。
 
@@ -188,7 +188,7 @@ Azure Information Protection によって分類されたファイルおよび電
 
 別のユーザーとしてサインインするには、レジストリを正しく編集する必要があります。
 
-1. レジストリ エディターを使用して **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** キーを削除します。
+1. レジストリ エディターを使用して **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** 値を削除します。
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
 
@@ -204,7 +204,9 @@ Azure Information Protection に問題があり、クライアントの現行リ
 
 質問やご意見がある場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)を使用してください。 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

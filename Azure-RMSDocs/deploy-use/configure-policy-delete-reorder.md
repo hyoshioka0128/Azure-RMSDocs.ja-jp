@@ -4,15 +4,15 @@ description: "Azure Information Protection ポリシー内に構成すること�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d8e0f53d85ee7a02ee7fef66eaf76ce6551535d2
 
 
 ---
@@ -27,7 +27,7 @@ Azure Information Protection ポリシー内に構成することで、Informati
 
 ドキュメントや電子メールに適用されているラベルを削除してから Azure Information Protection ポリシーを公開すると、そのラベルは、Azure Information Protection クライアントによって次回開かれたときに自動的にドキュメントや電子メールから削除されます。
 
-ラベルは維持するが Information Protection バーに表示されないようにする場合は、ラベルを削除するのではなく、単に無効にすることができます。
+ラベルを削除するのではなく、その前に無効にするかどうかを検討してください。 ドキュメントや電子メールに適用されているラベルを無効にすると、適用されているラベルはこれらのドキュメントや電子メールからは削除されませんが、ユーザーが Information Protection バーで選択できるラベルとしては表示されなくなります。 ラベルを無効にすれば、ユーザーに後でラベルを選択させる必要が生じたときのために元の構成を保持することもでき、この場合は再度有効化するだけで済みます。
 
 Information Protection バーにラベルが論理的な流れで表示されるように、ラベルの順序を設定します。 たとえば、最も秘密度が低いラベルが最初に、最も秘密度が高いラベルが最後に表示されるようにラベルを秘密度で順序付けできます。 既定のポリシーの構成については、[こちら](configure-policy-default.md)をご覧ください。
 
@@ -57,10 +57,11 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
