@@ -20,7 +20,7 @@ ms.openlocfilehash: 1b5268a13538df1537dbf3ea6f66eeda2b5e2292
 ---
 
 
-# <a name="azure-information-protection-also-known-as-"></a>Azure Information Protection の別名
+# <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection の別名
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -47,6 +47,6 @@ Azure Information Protection の購入および評価方法、またはサブス
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
