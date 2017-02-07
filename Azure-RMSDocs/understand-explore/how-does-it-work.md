@@ -4,7 +4,7 @@ description: "Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 01/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 91a5485b2860edf6f2095027e1c0d69ec96141d7
+ms.sourcegitcommit: d47648a1e03a4da5eb6088932544d9e34ca4ae7a
+ms.openlocfilehash: 42583d3ed7fb0fd5df85699c56fe7abe41093546
 
 
 ---
@@ -77,13 +77,13 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights
 ### <a name="initializing-the-user-environment"></a>ユーザー環境の初期化
 ユーザーが Windows コンピューターでコンテンツを保護したり保護されているコンテンツを消費したりできるためには、その前にデバイスでユーザー環境を準備する必要があります。 これは&1; 回限りのプロセスであり、ユーザーがコンテンツの保護または保護されたコンテンツの消費を行おうとしたときに、ユーザーの介入なしに自動的に行われます。
 
-![RMS クライアントのアクティブ化 - 手順 1](../media/AzRMS.png)
+![RMS クライアントのアクティブ化フロー - 手順 1、クライアントの認証](../media/AzRMS.png)
 
 **手順 1 の処理**: コンピューターの RMS クライアントは、最初に Azure Rights Management サービスに接続し、Azure Active Directory アカウントを使用してユーザーを認証します。
 
 ユーザーのアカウントが Azure Active Directory と統合されている場合、この認証は自動的に行われ、ユーザーが資格情報の入力を求められることはありません。
 
-![RMS クライアントのアクティブ化 - 手順 2](../media/AzRMS_useractivation2.png)
+![RMS クライアントのアクティブ化 - 手順 2、証明書がクライアントにダウンロードされる](../media/AzRMS_useractivation2.png)
 
 **手順 2 の処理**: ユーザー認証の後、接続は組織の Azure Information Protection テナントに自動的にリダイレクトされます。このテナントは、保護されたコンテンツの消費およびコンテンツのオフライン保護のためにユーザーが Azure Rights Management サービスの認証を受けられるように証明書を発行します。
 
@@ -92,17 +92,17 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights
 ### <a name="content-protection"></a>コンテンツの保護
 ユーザーがドキュメントを保護するとき、RMS クライアントは保護されていないドキュメントに対して次の操作を実行します。
 
-![RMS ドキュメントの保護 - 手順 1](../media/AzRMS_documentprotection1.png)
+![RMS ドキュメントの保護 - 手順 1、ドキュメントが暗号化される](../media/AzRMS_documentprotection1.png)
 
 **手順 1 の処理**: RMS クライアントは、ランダムなキー (コンテンツ キー) を作成し、このキーを使用して、AES 対称暗号化アルゴリズムでドキュメントを暗号化します。
 
-![RMS ドキュメントの保護 - 手順 2](../media/AzRMS_documentprotection2.png)
+![RMS ドキュメントの保護 - 手順 2、ポリシーが作成される](../media/AzRMS_documentprotection2.png)
 
 **手順 2 の処理**: その後、RMS クライアントは、テンプレートに基づき、またはドキュメントに特定の権限を指定することにより、ドキュメントのポリシーを含む証明書を作成します。 このポリシーには、異なるユーザーまたはグループに対する権限、および有効期限などのその他の制限が含まれています。
 
 RMS クライアントは、ユーザー環境の初期化時に取得した組織のキーを使用して、ポリシーおよび対称コンテンツ キーを暗号化します。 また、RMS クライアントは、ユーザーの環境が初期化されたときに取得したユーザーの証明書でポリシーに署名します。
 
-![RMS ドキュメントの保護 - 手順 3](../media/AzRMS_documentprotection3.png)
+![RMS ドキュメントの保護 - 手順 3、ポリシーがドキュメントに埋め込まれる](../media/AzRMS_documentprotection3.png)
 
 **手順 3 の処理**: 最後に、RMS クライアントは前に暗号化したドキュメントの本文と共にポリシーをファイルに埋め込みます。これらすべてが、保護されたドキュメントを構成します。
 
@@ -111,21 +111,25 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 ### <a name="content-consumption"></a>コンテンツの消費
 ユーザーが保護されたドキュメントを消費しようとすると、RMS クライアントは最初に Azure Rights Management サービスにアクセスを要求します。
 
-![RMS ドキュメントの使用 - 手順 1](../media/AzRMS_documentconsumption1.png)
+![RMS ドキュメントの消費 - 手順 1、ユーザーが認証され、権限のリストを取得する](../media/AzRMS_documentconsumption1.png)
 
 **手順 1 の処理**: 認証されたユーザーは、ドキュメントのポリシーとユーザーの証明書を Azure Rights Management サービスに送信します。 サービスはポリシーを復号化して評価し、ユーザーがドキュメントに対して設定している権限のリストを作成します (ある場合)。
 
-![RMS ドキュメントの使用 - 手順 2](../media/AzRMS_documentconsumption2.png)
+![RMS ドキュメントの消費 - 手順 2、使用ライセンスがクライアントに返される](../media/AzRMS_documentconsumption2.png)
 
 **手順 2 の処理**: その後、サービスは、復号化されたポリシーから AES コンテンツ キーを抽出します。 このキーは、要求で取得されたユーザーの公開 RSA キーで暗号化されます。
 
 再暗号化されたコンテンツ キーは、ユーザー権利のリストと共に暗号化された使用ライセンスに埋め込まれて、RMS クライアントに返されます。
 
-![RMS ドキュメントの使用 - 手順 3](../media/AzRMS_documentconsumption3.png)
+![RMS ドキュメントの消費 - 手順 3、ドキュメントが復号化され、権限が適用される](../media/AzRMS_documentconsumption3.png)
 
 **手順 3 の処理**: 最後に、RMS クライアントは暗号化された使用ライセンスを取得し、独自のユーザー秘密キーで暗号化を解除します。 これにより、RMS クライアントは必要に応じてドキュメント本文の暗号化を解除し、画面に表示できます。
 
 また、クライアントは権限のリストを復号化してアプリケーションに渡します。アプリケーションはユーザー インターフェイスにそれらの権限を適用します。
+
+> [!NOTE]
+> 組織の外部にいるユーザーが保護しているコンテンツを消費する場合でも、消費フローは同じです。 このシナリオでの変更点は、ユーザーの認証方法です。 詳細については、「[保護されたドキュメントを社外のユーザーと共有する場合、そのユーザーはどのようにして認証されますか。](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)」を参照してください。
+
 
 ### <a name="variations"></a>バリエーション
 前のチュートリアルでは標準的なシナリオをカバーしましたが、いくつかのバリエーションがあります。
@@ -152,6 +156,6 @@ Azure Rights Management サービスの詳細については、**概要と詳細
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 
