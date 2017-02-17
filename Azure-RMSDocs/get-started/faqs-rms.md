@@ -13,8 +13,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eb9b9c1308abe6b1b5803cba7ba254d54cbac812
-ms.openlocfilehash: d3d11dba936ca8901b701008e55df8d73be8bded
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 181357691df02c8532a6f28eef689dcacdfd937f
 
 
 ---
@@ -34,7 +34,7 @@ Azure Information Protection のデータ保護サービス、Azure Rights Manag
 
 Microsoft はさまざまなシナリオでのデータ保護に合わせて多数の暗号化技術を提供していますが、多くの場合はデータ保護のシナリオが相互補完的です。 たとえば、Office 365 の暗号化は Office 365 に保存される静止状態のデータが対象ですが、Azure Information Protection の Azure Rights Management サービスは独立してユーザーのデータを暗号化するものであり、データは格納されている場所や伝送方法にかかわらず保護されます。
 
-これらの暗号化技術は互いに補完するものであり、使用するには各技術を個別に有効化して構成する必要があります。 このときに、暗号化のキーを独自に用意するという選択が可能な場合があり、このようなシナリオは "BYOK" (Bring Your Own Key) とも呼ばれます。 暗号化技術の 1 つについて BYOK を有効にしても、それ以外の技術に影響することはありません。 たとえば、BYOK を Azure Information Protection に使用するが、それ以外の暗号化技術に対しては使用しないということも、その逆も可能です。 使用されるキーが暗号化技術ごとに異なるか同一であるかは、管理者が各サービスの暗号化オプションをどのように構成するかによって決まります。
+これらの暗号化技術は互いに補完するものであり、使用するには各技術を個別に有効化して構成する必要があります。 このときに、暗号化のキーを独自に用意するという選択が可能な場合があり、このようなシナリオは "BYOK" (Bring Your Own Key) とも呼ばれます。 暗号化技術の&1; つについて BYOK を有効にしても、それ以外の技術に影響することはありません。 たとえば、BYOK を Azure Information Protection に使用するが、それ以外の暗号化技術に対しては使用しないということも、その逆も可能です。 使用されるキーが暗号化技術ごとに異なるか同一であるかは、管理者が各サービスの暗号化オプションをどのように構成するかによって決まります。
 
 ## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Azure Rights Management サービスとオンプレミス サービスを統合できますか。
 はい。 Azure Rights Management は、Exchange Server、SharePoint、Windows ファイル サーバーなどのオンプレミス サーバーと統合できます。 統合するには、[Rights Management コネクタ](../deploy-use/deploy-rms-connector.md)を使用します。 または、Windows Server でファイル分類インフラストラクチャ (FCI) を使用することのみを目的とされている場合は、[RMS 保護コマンドレット](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx)を使用できます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)を使用して、よりシームレスな認証方法をユーザーに提供できます。
@@ -43,7 +43,7 @@ Microsoft はさまざまなシナリオでのデータ保護に合わせて多�
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Azure RMS と統合するサード パーティのソリューションに関する情報はどこで入手できますか?
 
-既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、またはそのソリューションを実装しており、リストは急増し続けています。 [Enterprise Mobility and Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)に役立つ情報が掲載されています。また Twitter の [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) からも最新の情報が入手できます。 なお、具体的なご質問は、Information Protection チーム (askipteam@microsoft.com.) までメールでメッセージをお送りください。
+既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、またはそのソリューションを実装しており、リストは急増し続けています。 [Enterprise Mobility and Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)に役立つ情報が掲載されています。また Twitter の [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) からも最新の情報が入手できます。 なお、具体的なご質問は、Information Protection チーム (askipteam@microsoft.com) までメールでメッセージをお送りください。
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>RMS コネクタには管理パックまたは同様の監視メカニズムがありますか?
 
@@ -51,7 +51,7 @@ Rights Management コネクタは情報、警告、およびエラー メッセ�
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?
 
-Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Rights Management サービスのすべての管理タスクを実行できます。 ただし、他のユーザーに管理者権限を割り当てる場合は、Azure RMS の PowerShell コマンドレット [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx) を使用して行うことができます。 この管理ロールは、ユーザー アカウントまたはグループごとに割り当てることができます。 使用できるロールは、**グローバル管理者**と**コネクタ管理者**の 2 つです。 
+Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Rights Management サービスのすべての管理タスクを実行できます。 ただし、他のユーザーに管理者権限を割り当てる場合は、Azure RMS の PowerShell コマンドレット [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx) を使用して行うことができます。 この管理ロールは、ユーザー アカウントまたはグループごとに割り当てることができます。 使用できるロールは、**グローバル管理者**と**コネクタ管理者**の&2; つです。 
 
 ロールの名前からわかるように、1 番目のロールは Azure Rights Management のすべての管理タスクを実行する権限を付与します (他のクラウド サービスのグローバル管理者には付与しません)、2 番目のロールは Rights Management (RMS) コネクタのみを実行する権限を付与します。
 
@@ -76,7 +76,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 はい。Azure Rights Management サービスには、このシナリオのためのユーザー オンボーディング コントロールがあります。 詳細については、記事「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の「[段階的デプロイのオンボーディング コントロールの構成](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」のセクションを参照してください。
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>ユーザーが、保護されたドキュメントを特定の組織と共有しないようにすることはできますか。
-データ保護に Azure Rights Management サービスを使用する最大の利点の 1 つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
+データ保護に Azure Rights Management サービスを使用する最大の利点の&1; つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
 
 ユーザーが特定の組織とのドキュメントの安全な共有を防止するような管理オプションはありません。 たとえば、信頼していない組織や、競合先の組織をブロックするとします。 Azure Rights Management サービスがこれらの組織のユーザーに保護されたドキュメントを送信しないようにしても意味がありません。その場合、ユーザーはドキュメントを保護されていないまま共有することになり、おそらくこれはこのシナリオにおいて最も望ましくない状況です。 たとえば、これらの組織のユーザーと社外秘ドキュメントを共有しているユーザーを識別することはできませんが、ドキュメント (または電子メール) が Azure Rights Management サービスで保護されていれば、これが可能になります。
 
@@ -86,7 +86,7 @@ Azure Rights Management サービスは、常にユーザー認証に Azure Acti
 このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成されたパスワード、多要素認証 (MFA)、フェデレーション、Active Directory Domain Services で作成されたパスワードを使用してから、Azure Active Directory に同期される場合があります。
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
-はい。 エンドユーザー (と管理者) がアプリケーションから選択できるカスタム テンプレートを作成すると、指定した定義済みのポリシーを使用して、すばやく簡単に情報保護を適用できます。 テンプレートの設定の 1 つに、コンテンツにアクセス可能なユーザーの設定があります。組織内のグループとユーザー、および組織外のユーザーを指定できます。
+はい。 エンドユーザー (と管理者) がアプリケーションから選択できるカスタム テンプレートを作成すると、指定した定義済みのポリシーを使用して、すばやく簡単に情報保護を適用できます。 テンプレートの設定の&1; つに、コンテンツにアクセス可能なユーザーの設定があります。組織内のグループとユーザー、および組織外のユーザーを指定できます。
 
 組織外のユーザーを指定するには、テンプレートを構成するとき、Azure クラシック ポータルで選択したグループに連絡先として追加します。 あるいは、[Azure Rights Management 用 Windows PowerShell モジュール](../deploy-use/install-powershell.md)を使用します。
 
@@ -151,7 +151,7 @@ Azure RMS のスーパー ユーザー機能を使用してください。スー
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
 Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows Phone) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピー**の[使用権限](../deploy-use/configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 これに対して、iOS や Mac のデバイスでは、画面キャプチャを禁止するアプリが認められていません。また、(Outlook Web App や Office Online を使用しているなどの場合に) ブラウザーでの画面キャプチャを禁止することも不可能です。
 
-画面のキャプチャを禁止しておくと、不注意や不測の出来事により機密性の高い情報が漏洩してしまう事態を避けることができます。 ただし、画面に表示されるデータをユーザーが共有するにはさまざまな方法があり、スクリーン ショットを保存する方法はその 1 つにすぎません。 たとえば、表示される情報を共有しようとするユーザーは、カメラ付き携帯電話を使用して写真を撮影したり、データを再入力したり、単に口頭で他者に伝達することができます。
+画面のキャプチャを禁止しておくと、不注意や不測の出来事により機密性の高い情報が漏洩してしまう事態を避けることができます。 ただし、画面に表示されるデータをユーザーが共有するにはさまざまな方法があり、スクリーン ショットを保存する方法はその&1; つにすぎません。 たとえば、表示される情報を共有しようとするユーザーは、カメラ付き携帯電話を使用して写真を撮影したり、データを再入力したり、単に口頭で他者に伝達することができます。
 
 このように、あらゆるプラットフォームとソフトウェアが Rights Management API をサポートしており、かつ画面キャプチャをブロックできたとしても、テクノロジだけでデータの漏洩を防ぐことができるわけではありません。 Rights Management は、承認および使用ポリシーを使用して重要なデータを保護するのに役立つものの、このエンタープライズ権限管理ソリューションは、他の管理手段と共に使用する必要があります。 たとえば、物理的なセキュリティを実装したり、組織のデータへのアクセスが承認されているユーザーを慎重に検査および監視したり、共有してはならないデータを理解できるようにユーザーの教育に投資したりすることです。
 
@@ -159,11 +159,12 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 
 名前や外観に反して、**[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、コピー、印刷、添付ファイルの保存の制限を含む権限の集まりであり、それらに加え、電子メールの転送が制限されます。 権限は、選択した受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「[Azure Rights Management の使用権限を構成する](../deploy-use/configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

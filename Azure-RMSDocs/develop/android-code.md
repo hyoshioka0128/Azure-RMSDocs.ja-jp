@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 503a99f01335f3085b5d13c9faaf0a6f05063490
-ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 847d19feaea442da66296565f0ffb5b0663ad170
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 **注** 以下のコード例と説明では、クライアント プロセスを参照するために MSIPC (Microsoft Information Protection and Control) という用語を使用します。
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
 
 この SDK を理解する上で重要な開発シナリオを表す大規模なサンプル アプリケーションのコード例を次に示します。 これらのコード例では、保護ファイルと呼ばれる Microsoft Protected File 形式の使用例、カスタム保護ファイル形式の使用例、およびカスタムの UI コントロールの使用例を示します。
 
@@ -200,7 +200,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
-このシナリオは、はじめにテンプレートの一覧を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
+このシナリオは、はじめにテンプレートの一覧を取得し、最初の&1; つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
 -   **手順 1**. [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) オブジェクトを使用してテンプレートの一覧を取得します。
 
@@ -437,7 +437,7 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
         buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 -   **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
 
@@ -524,13 +524,9 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
           …
         }
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

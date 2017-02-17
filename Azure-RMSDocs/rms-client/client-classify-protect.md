@@ -4,7 +4,7 @@ description: "ドキュメントや電子メールを分類して保護する方
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e6d4cc50259b9d9bb73a75c648f9e6915562accf
-ms.openlocfilehash: e1d61fbe1d74a4a57d9a1fdf518aeb0242d0f7ad
+ms.sourcegitcommit: 171a47f9c22dec24f72f8f21392d6577efd807a5
+ms.openlocfilehash: d050629999c3a886eb8d422f4f38c22d586e0824
 
 
 ---
@@ -31,7 +31,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
-Azure Information Protection バーを使用して、構成されているラベルを 1 つ選択します。 たとえば、
+Azure Information Protection バーを使用して、構成されているラベルを&1; つ選択します。 たとえば、
 
 ![Azure Information Protection バーの例](../media/info-protect-bar-not-set-callout.png)
 
@@ -53,17 +53,17 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 ラベルが (使用できず) 選択できない場合は、選択されたファイルで分類はサポートされませんが、ファイルを保護することはできます。
 
-3. ファイルを保護するには、管理者の定義した保護設定の中から選択したラベルに使用する設定 (**選択された分類レベルに基づく自動設定**) を選択するか、または独自の設定 (**カスタムのアクセス許可による上書き**) を指定します。
+3. 選択したラベルに対し管理者から指定されている保護設定を使用するのではなく、独自の保護設定を指定する場合は、**[Protect with custom permissions] (カスタムのアクセス許可による保護)** を選択します。
     
-    上書きオプションでは、選択したラベルには管理者が定義したいずれの保護設定も使用されず、 代わりに独自の保護設定を指定します。 
+    指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わります。  
 
-4. 上書きオプションを選択した場合は、次の項目を指定します。
+4. カスタムのアクセス許可オプションを選択した場合は、次の項目を指定します。
 
     - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選択します。
     
     - **ユーザーの選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザーやグループについては、アドレス帳を使用して検索と選択ができます。 別の組織のユーザーについては、完全なメール アドレスを指定する必要があります。 個人用のメールアドレスは現在サポートされていないため、仕事用のメール アドレスを使用してください。
         
-    - **アクセスの有効期限**: ファイルの期間が限定されていて、指定された日付を過ぎた後は指定されたユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 選択した日付の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
+    - **Expire access on (アクセスの有効期限)**: ファイルの期間が限定されていて、指定された日付を過ぎた後は指定されたユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 選択した日付の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
 
 5. **[適用]**、**[閉じる]** の順にクリックします。
 
@@ -108,9 +108,10 @@ Rights Management サービスを使用した保護は、「[ファイル API �
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
