@@ -13,8 +13,8 @@ ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 364891123720daaacacbea1b382b7d101d75cd1a
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
 
 **[このバージョンのクライアントはプレビュー段階にあり、変更される可能性があります。]**
 
-[Azure Information Protection クライアントがコンピューターにインストールされている](install-client-app.md)場合は、 電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーのファイルをダブルクリックしたり、ファイルへのリンクをクリックして保護されたファイルを開くだけで、ファイルを表示することができます。
+[Azure Information Protection クライアントがコンピューターにインストールされている](install-client-app.md)場合は、保護されたファイルを開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
 > [!NOTE]
 > 保護されたファイルを表示するには、先にユーザーがファイルを表示する権限を持つことを Rights Management サービスが確認する必要があります。それには、ユーザー名とパスワードを調べます。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
@@ -64,8 +64,9 @@ ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
