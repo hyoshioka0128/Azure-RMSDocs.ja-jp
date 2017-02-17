@@ -13,7 +13,7 @@
 ## [クイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)
 ### [手順 1: サービスをアクティブ化する](infoprotect-tutorial-step1.md)
 ### [手順 2: ポリシーの構成と公開](infoprotect-tutorial-step2.md)
-### [手順 3: クライアントとアプリケーションをインストールする](infoprotect-tutorial-step3.md)
+### [手順 3: クライアントのインストール](infoprotect-tutorial-step3.md)
 ### [手順 4: ラベル付け、分類、保護の動作を確認する](infoprotect-tutorial-step4.md)
 ### [手順 5: 保護ファイルの共有および追跡の動作を確認する](infoprotect-tutorial-step5.md)
 ## [迅速なデプロイ ガイド](rapid-deployment-guide.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

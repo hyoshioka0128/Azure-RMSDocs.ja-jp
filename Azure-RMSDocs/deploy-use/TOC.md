@@ -15,6 +15,7 @@
 ## [アプリケーションの構成](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Office アプリ](configure-office-apps.md)
+### [Azure Information Protection クライアント](configure-client.md)
 ### [RMS 共有アプリ](configure-sharing-app.md)
 ## [使用権限の構成](configure-usage-rights.md)
 ## [探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)
@@ -48,6 +49,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
