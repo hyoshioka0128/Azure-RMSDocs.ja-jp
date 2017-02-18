@@ -1,6 +1,6 @@
 ---
 title: "明示的な所有者権限の追加方法 | Azure RMS"
-description: Your application should explicitly add "Owner" rights when creating a license from scratch.
+description: "アプリケーションでは、最初からライセンスを作成するときに、&quot;所有者&quot; 権限を明示的に追加する必要があります。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -40,7 +40,7 @@ ms.openlocfilehash: 337c819436e3675eb0ba745717d700002d5184b0
 
 この例では、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って作成したライセンスに必要な権限を追加しています。 この例は、権限の作成のほか、権限リストを使用したライセンスへの権限の割り当てを示しています。
 
-次の 2 つの権限が次のユーザーに追加されます。
+次の&2; つの権限が次のユーザーに追加されます。
 
 -   *読み取り*アクセス許可が joe@contoso.com に割り当てられます。
 -   *完全な*アクセス許可が mary\_kay@contoso.com に割り当てられます。
@@ -115,6 +115,6 @@ ms.openlocfilehash: 337c819436e3675eb0ba745717d700002d5184b0
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
