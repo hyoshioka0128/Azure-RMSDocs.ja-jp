@@ -4,27 +4,27 @@ description: "Azure Information Protection ポリシーを構成して公開す�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 38ecc425-9bab-4e70-9436-eccbef0e3113
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8eeae0f256cbad3f96740e470044521a7e81925d
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: 141a483deed13ceed8dc28a5110136a0686595f3
 
 
 ---
 
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成 
 
->*適用対象: Azure Information Protection プレビュー*
+>*適用対象: Azure Information Protection*
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
