@@ -4,7 +4,7 @@ description: "Azure Information Protection からの Azure Rights Management サ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d2c7c5307ad1ea8866b40e9daa29634496f9323c
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: bb7b459456fd8fb43997f73b39880d7110f92442
 
 
 ---
@@ -52,27 +52,29 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 次のログの抜粋に、Get-AadrmAdminLog コマンドレットの使用によるいくつかのエントリの例を示します。 この例では、Contoso 社の管理者は、スーパー ユーザー機能が無効になっていることを確認し、スーパー ユーザーとして Richard Simone を追加します。Richard が Azure Rights Management サービス用に構成された唯一のスーパー ユーザーであることを確認してから、Richard は退職した従業員によって保護されたいくつかのファイルを復号化できるようにスーパー ユーザー機能を有効にします。
 
-`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
+`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
+`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
 
-`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
+`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
 
 ## <a name="scripting-options-for-super-users"></a>スーパー ユーザーのスクリプト作成オプション
-[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] のスーパー ユーザーが割り当てられているだれかが、複数の場所で、複数のファイルから保護を削除することが必要になる場合がよくあります。 これは手動で行うことができますが、スクリプト化するとより効率的に (そしてより確実に) 行うことができます。 そのためには、 [RMS 保護ツールをダウンロード](http://www.microsoft.com/en-us/download/details.aspx?id=47256)します。 次に、[Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) コマンドレットを使用し、必要に応じて、[Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) コマンドレットも使用します。
+[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] のスーパー ユーザーが割り当てられているだれかが、複数の場所で、複数のファイルから保護を削除することが必要になる場合がよくあります。 これは手動で行うことができますが、スクリプト化するとより効率的に (そしてより確実に) 行うことができます。 この場合、[Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) コマンドレットを使用し、必要に応じて [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) コマンドレットも使用します。 
 
-これらのコマンドレットの詳細については、「 [RMS 保護コマンドレット](https://msdn.microsoft.com/library/azure/mt433195.aspx)」を参照してください。
+分類と保護を使用している場合、[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) を使用して、保護を適用しない新しいラベルを適用したり、保護を適用したラベルを削除したりすることもできます。 
+
+これらのコマンドレットの詳細については、「Azure Information Protection クライアント管理者ガイド」の「[Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md)」(PowerShell と Azure Information Protection クライアントの使用) を参照してください。
 
 > [!NOTE]
-> RMS 保護ツールに付属する RMS Protection PowerShell モジュールはメインの [Azure Rights Management 用 Windows PowerShell モジュール](administer-powershell.md)とは異なり、それを補足するものです。 RMS 保護モジュールは、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS) と、Active Directory Rights Management サービス (AD RMS) の両方をサポートしています。
+> AIP モジュールは、RMS 保護ツールでインストールされる RMS 保護 PowerShell モジュールを置き換えます。 これらのモジュールは、[Azure Rights Management 用のメインの Windows PowerShell モジュール](administer-powershell.md)とは異なり、補足するものです。 AIP モジュールは、Azure Information Protection、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS) と、Active Directory Rights Management サービス (AD RMS) をサポートしています。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

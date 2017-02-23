@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 10c7d307cceb1ca5f1b9bf857fdbe9aea0dc321d
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
 
 
 ---
@@ -31,7 +31,7 @@ Azure Information Protection ポリシーを構成するには:
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    **[Azure Information Protection]** ブレードが表示され、すべてのユーザーが取得するグローバルな 　Information Protection ポリシーのブレードが自動的に開きます。 ブレードには、構成できる次の要素が含まれています。
+    **[Azure Information Protection]** ブレードが表示されます。ここから **[グローバル]** ポリシーを開いてすべてのユーザーを取得できます。 また、必要に応じて、スコープ ポリシーを追加し、編集することもできます。 **[グローバル]** Azure Information Protection ポリシーには、構成可能な次の要素があります。
 
     - 管理者とユーザーがドキュメントと電子メールを分類するために使用できるラベル。
 
@@ -83,6 +83,6 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

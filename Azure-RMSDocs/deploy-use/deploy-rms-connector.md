@@ -4,7 +4,7 @@ description: "RMS コネクタをデプロイする手順について説明し�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,15 +13,15 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: eaa1d7a0a74fa68f9bf1d15f348dbb45d14cee9a
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
 
 
 ---
 
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
->*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Information Protection、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 ここでは、Azure Rights Management コネクタについて説明してから、このコネクタを適切にデプロイする方法について説明します。 このコネクタは、Microsoft **Exchange Server**、**SharePoint Server**、または Windows Server と**ファイル分類インフラストラクチャ** (FCI) を実行するファイル サーバーを使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。
 
@@ -31,7 +31,7 @@ ms.openlocfilehash: eaa1d7a0a74fa68f9bf1d15f348dbb45d14cee9a
 ## <a name="overview-of-the-microsoft-rights-management-connector"></a>Microsoft Rights Management コネクタの概要
 Microsoft Rights Management (RMS) コネクタを使用すると、既存のオンプレミス サーバーで Information Rights Management (IRM) 機能とクラウドベースの Microsoft Rights Management サービス (Azure RMS) を迅速に使用できるようになります。 この機能により、IT 担当者およびユーザーは、組織の内外にあるドキュメントや画像を簡単に保護することができます。追加のインフラストラクチャをインストールしたり、他の組織との間に信頼関係を確立したりする必要はありません。 
 
-RMS コネクタはコンパクトなサービスであり、Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2 を実行しているサーバーにオンプレミスでインストールできます。 コネクタは、物理コンピューター上だけでなく、Azure IaaS VM などの仮想マシン上でも実行できます。 デプロイされたコネクタは、次の図に示すように、オンプレミス サーバーとクラウド サービスとの間の通信インターフェイス (リレー) の役割を果たします。 矢印は、ネットワーク接続が開始される方向を示しています。
+RMS コネクタはコンパクトなサービスであり、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2 を実行しているサーバーにオンプレミスでインストールできます。 コネクタは、物理コンピューター上だけでなく、Azure IaaS VM などの仮想マシン上でも実行できます。 デプロイされたコネクタは、次の図に示すように、オンプレミス サーバーとクラウド サービスとの間の通信インターフェイス (リレー) の役割を果たします。 矢印は、ネットワーク接続が開始される方向を示しています。
 
 ![RMS コネクタ アーキテクチャの概要](../media/RMS_connector.png)
 
@@ -41,7 +41,7 @@ RMS コネクタはコンパクトなサービスであり、Windows Server 2012
 RMS コネクタでサポートされるオンプレミス サーバーは、Exchange Server と SharePoint Server、また、Windows Server を実行しておりファイル分類インフラストラクチャ (フォルダー内の Office ドキュメントを分類してポリシーを適用します) を使用するファイル サーバーです。 
 
 > [!NOTE]
-> Office ドキュメントだけでなく、すべての種類のファイルをファイル分類インフラストラクチャで保護したい場合は、RMS コネクタではなく [RMS 保護コマンドレット](https://msdn.microsoft.com/library/azure/mt433195.aspx)を使用してください。
+> Office ドキュメントだけでなく、複数の種類のファイルをファイル分類インフラストラクチャで保護したい場合は、RMS コネクタではなく [AzureInformationProtection コマンドレット](/powershell/azureinformationprotection/vlatest/aip)を使用してください。
 
 これらのオンプレミス サーバーのうち、どのバージョンが RMS コネクタでサポートされるかについては、「[Azure RMS をサポートするオンプレミス サーバー](..\get-started\requirements-servers.md)」をご覧ください。
 
@@ -64,7 +64,7 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 |Rights Management (RMS) サービスがアクティブ化されている|[Azure Rights Management をアクティブにする](activate-service.md)|
 |オンプレミス Active Directory フォレストと Azure Active Directory の間のディレクトリ同期|RMS をアクティブ化した後に、Azure Active Directory を構成して Active Directory データベース内のユーザーおよびグループを使用できるようにする必要があります。<br /><br />**重要**: RMS コネクタが動作するためには、テスト ネットワークに対してもこのディレクトリ同期手順を実行する必要があります。 Office 365 および Azure Active Directory では、Azure Active Directory で手動作成したアカウントを使用できますが、このコネクタでは、Azure Active Directory のアカウントが Active Directory Domain Services と同期している必要があります。手動によるパスワードの同期では不十分です。<br /><br />詳細については、次のリソースを参照してください。<br /><br />[オンプレミス ID と Azure Active Directory の統合](/active-directory/active-directory-aadconnect)<br /><br />[ハイブリッド ID ディレクトリ統合ツールの比較](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)|
 |省略可能ですが、推奨されます:<br /><br />オンプレミス Active Directory と Azure Active Directory の間でのフェデレーションの有効化|オンプレミス ディレクトリと Azure Active Directory の間で ID フェデレーションを有効にすることができます。 この構成により、RMS サービスへのシングル サインオンを使用して、よりシームレスなユーザー エクスペリエンスを提供できます。 シングル サインオンを使用できない場合、ユーザーは、権限で保護されたコンテンツを使用する前に資格情報の入力を求められます。<br /><br />Active Directory Domain Services と Azure Active Directory の間で、Active Directory フェデレーション サービス (AD FS) を使用したフェデレーションを構成する手順については、Windows Server ライブラリの「 [チェックリスト:AD FS を使用してシングル サインオンを実装および管理する](http://technet.microsoft.com/library/jj205462.aspx) 」をご覧ください。|
-|RMS コネクタをインストールする&2; 台以上のメンバー コンピューター:<br /><br />- 次のいずれかのオペレーティング システムが搭載されている 64 ビットの物理または仮想コンピューター: Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2。<br /><br />- 1 GB 以上の RAM。<br /><br />- 64 GB 以上のディスク領域。<br /><br />-&1; つ以上のネットワーク インターフェイス。<br /><br />- 認証が不要な、ファイアウォール (または Web プロキシ) 経由のインターネット アクセス。<br /><br />- 所属するフォレストまたはドメインが、RMS コネクタを使用する Exchange または SharePoint サーバーが含まれている組織内の他のフォレストと信頼関係にあること。|フォールト トレランスと高可用性を構成するには、RMS コネクタを&2; 台以上のコンピューターにインストールする必要があります。<br /><br />**ヒント**: Outlook Web Access、または Exchange ActiveSync IRM を使用するモバイル デバイスを使用しており、Azure RMS で保護されているメールと添付ファイルへのアクセスを維持する必要がある場合、負荷分散されたコネクタ サーバー グループをデプロイして高可用性を確保することをお勧めします。<br /><br />専用サーバーでコネクタを実行する必要はありませんが、コネクタを使用するサーバーとは別のコンピューターにインストールする必要があります。<br /><br />**重要**: Exchange Server または SharePoint Server が実行されているコンピューター、およびファイル分類インフラストラクチャ用に構成されたファイル サーバーには、コネクタをインストールしないでください。そうしないと、これらのサービスの機能を Azure RMS で使用できなくなります。 また、このコネクタをドメイン コントローラーにインストールしないでください。|
+|RMS コネクタをインストールする&2; 台以上のメンバー コンピューター:<br /><br />- 次のいずれかのオペレーティング システムが搭載されている 64 ビットの物理または仮想コンピューター: Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2。<br /><br />- 1 GB 以上の RAM。<br /><br />- 64 GB 以上のディスク領域。<br /><br />-&1; つ以上のネットワーク インターフェイス。<br /><br />- 認証が不要な、ファイアウォール (または Web プロキシ) 経由のインターネット アクセス。<br /><br />- 所属するフォレストまたはドメインが、RMS コネクタを使用する Exchange または SharePoint サーバーが含まれている組織内の他のフォレストと信頼関係にあること。|フォールト トレランスと高可用性を構成するには、RMS コネクタを&2; 台以上のコンピューターにインストールする必要があります。<br /><br />**ヒント**: Outlook Web Access、または Exchange ActiveSync IRM を使用するモバイル デバイスを使用しており、Azure RMS で保護されているメールと添付ファイルへのアクセスを維持する必要がある場合、負荷分散されたコネクタ サーバー グループをデプロイして高可用性を確保することをお勧めします。<br /><br />専用サーバーでコネクタを実行する必要はありませんが、コネクタを使用するサーバーとは別のコンピューターにインストールする必要があります。<br /><br />**重要**: Exchange Server または SharePoint Server が実行されているコンピューター、およびファイル分類インフラストラクチャ用に構成されたファイル サーバーには、コネクタをインストールしないでください。そうしないと、これらのサービスの機能を Azure RMS で使用できなくなります。 また、このコネクタをドメイン コントローラーにインストールしないでください。|
 
 ## <a name="steps-to-deploy-the-rms-connector"></a>RMS コネクタをデプロイする手順
 
@@ -100,6 +100,6 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

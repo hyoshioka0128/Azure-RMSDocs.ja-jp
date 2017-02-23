@@ -4,7 +4,7 @@ description: "ユーザーを正常に認証できるように、Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 95d50707c362244972f286943abf9a07e3cedf38
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: ecb85e8fd2f09579536782f00a1babddb9466c54
 
 
 ---
@@ -52,9 +52,13 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
     -   Office 2013 をお持ちの場合、[2015 年 6 月 9 日付 Office 2013 用更新プログラム (KB3054853)](https://support.microsoft.com/kb/3054853) を必ずインストールしてください。 この更新プログラムの詳細や、Active Directory 認証ライブラリ (ADAL) を使用した最新の認証による Office 2013 へのサインインの詳細については、Office ブログの「[Office 2013 modern authentication public preview announced (Office 2013 最新認証パブリック プレビューの公開)](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)」を参照してください。
 
+- Azure Information Protection クライアント:
+
+    - Windows、iOS および Android 用の [Azure Information Protection クライアント](../rms-client/aip-client.md)では、常に、MFA がサポートされており、最小バージョンは不要です。 
+
 -   Windows 用 Rights Management 共有アプリケーション:
 
-    -   最小バージョン 1.0.1908.0 がインストールされている必要があります。バージョンはコントロール パネルの [プログラムと機能] で確認できます。 共有アプリケーションの詳細については、「[Windows 用 Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md)」を参照してください。
+    -   最小バージョン 1.0.1908.0 がインストールされている必要があります。バージョンはコントロール パネルの [プログラムと機能] で確認できます。 現在、Rights Management 共有アプリケーションは Azure Information Protection クライアントに置き換わっていることに注意してください。 共有アプリケーションの詳細については、「[Windows 用 Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md)」を参照してください。
 
 -   モバイル デバイス用や Mac コンピューター用の Rights Management 共有アプリ:
 
@@ -81,6 +85,6 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

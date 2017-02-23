@@ -4,7 +4,7 @@ description: "Microsoft Azure Information Protection に関連する単語、フ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a5706c9cf8b81ec761865a800761c69584659578
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: 70657eb86ac3aeb53b8fb9983a33905100ca92b8
 
 
 ---
@@ -50,7 +50,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |Information Rights Management|*IRM*という略称で呼ばれることもあります。<br /><br />Exchange Server、Word、および SharePoint Online などの Office サービスと共に使用される用語で、Microsoft Rights Management サービスをサポートする機能を説明します。|
 |IRM|*Information Rights Management*をご覧ください。|
 |MSDRM|RMS クライアント 1.0 を指す用語として使用されることがあります。新しいクライアントでは、MSIPC という名前に置き換えられています。 この古いクライアントでは、RMS SDK 1.0 を使用して開発されたアプリケーションと、Office 2010 および Office 2007、Exchange 2010 および Exchange 2013、SharePoint 2010 および SharePoint 2007 をサポートしています。|
-|MSIPC|RMS クライアント 2.0 を指す用語として使用されることがあります。古い RMS クライアントの MSDRM を置き換えるものです。 この新しいクライアントでは、RMS SDK 2.0 を使用して開発されたアプリケーションと、Office 2016、Office 2013、SharePoint 2013、RMS 共有アプリケーションをサポートしています。|
+|MSIPC|RMS クライアント 2.0 を指す用語として使用されることがあります。古い RMS クライアントの MSDRM を置き換えるものです。 この新しいクライアントでは、RMS SDK 2.0 を使用して開発されたアプリケーションと、Office 2016 と Office 2013、SharePoint 2013、RMS 共有アプリケーション、および Azure Information Protection クライアントをサポートしています。|
 |ネイティブ保護|すべての対応アプリケーションで使用できる保護レベル。承認されていないユーザーがファイルを開けないようにするだけでなく、読み取り専用や印刷不可など、より厳格なポリシーを適用できます。 また、ファイルが他のユーザーに転送されたり、他のユーザーがアクセスできる公開された場所に保存された場合でも、ファイルに対する保護は維持されます。|
 |.pfile|権限管理サービスが一般的に保護するすべてのファイルに付けられるファイル名拡張子。|
 |。ppdf|電子メールで共有するためにファイル (Word、Excel、PowerPoint、または PDF) の PDF コピーが権限管理サービスによって自動的に作成されるときに付けられるファイル名拡張子。この拡張子を持つファイルは、あらゆるデバイスで読み取ることができます (編集はできません)。|
@@ -59,7 +59,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |publish|未承認のアクセスおよび使用を防ぐためにファイルを保護する操作。|
 |Rights Management コネクタ|Exchange Server や SharePoint などのオンプレミス サービスで Azure Rights Management サービスを使用してデータを保護するためにデプロイできる送信プロキシ リレー。|
 |Rights Management サービス|クラウド バージョンの [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) とオンプレミス バージョンの [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS) の両方で使用される一般的な用語です。|
-|Rights Management 共有アプリケーション|任意でダウンロードできる、Windows および主要なモバイル デバイス向けのアプリケーション。インプレース ファイルや電子メールで送信されたファイルを安全に共有できます。|
+|Rights Management 共有アプリケーション|現在は、Azure Information Protection クライアント (インプレース ファイルや電子メールで送信されたファイルを安全に共有できる、Windows および主要なモバイル デバイス向けのオプションのアプリケーション) で置き換えられています。|
 |RMS|*Rights Management サービス*をご覧ください。|
 |RMS コネクタ|*Rights Management コネクタ*をご覧ください。|
 |個人用 RMS|ユーザーの組織が Office 365 または Azure Active Directory のサブスクリプションを保有していない場合にユーザーが [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] を使用するための無料のサブスクリプション。|
@@ -73,6 +73,6 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

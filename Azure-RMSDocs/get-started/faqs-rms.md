@@ -4,7 +4,7 @@ description: "Azure Information Protection のデータ保護サービス、Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 181357691df02c8532a6f28eef689dcacdfd937f
+ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
+ms.openlocfilehash: f0fb23195983771fb7e19a626adc78ca28faa1a7
 
 
 ---
@@ -86,9 +86,9 @@ Azure Rights Management サービスは、常にユーザー認証に Azure Acti
 このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成されたパスワード、多要素認証 (MFA)、フェデレーション、Active Directory Domain Services で作成されたパスワードを使用してから、Azure Active Directory に同期される場合があります。
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
-はい。 エンドユーザー (と管理者) がアプリケーションから選択できるカスタム テンプレートを作成すると、指定した定義済みのポリシーを使用して、すばやく簡単に情報保護を適用できます。 テンプレートの設定の&1; つに、コンテンツにアクセス可能なユーザーの設定があります。組織内のグループとユーザー、および組織外のユーザーを指定できます。
+はい。 エンドユーザー (と管理者) がアプリケーションから選択できるカスタム テンプレートを作成すると、指定した定義済みのポリシーを使用して、すばやく簡単に情報保護を適用できます。 テンプレートの設定の&1; つに、コンテンツにアクセス可能なユーザーの設定があります。組織内のグループとユーザー、および組織外のユーザーとグループを指定できます。 
 
-組織外のユーザーを指定するには、テンプレートを構成するとき、Azure クラシック ポータルで選択したグループに連絡先として追加します。 あるいは、[Azure Rights Management 用 Windows PowerShell モジュール](../deploy-use/install-powershell.md)を使用します。
+組織外のユーザーを指定するには、テンプレートを構成するとき、Azure クラシック ポータルで選択したグループに連絡先として追加します。 組織外のグループを指定するには、[Azure Rights Management 用 Windows PowerShell モジュール](../deploy-use/install-powershell.md)を使用する必要があります。個々の外部ユーザーだけでなく、別組織の全ユーザーを指定することもできます。
 
 -   **権限定義オブジェクトを使用してテンプレートを作成または更新する**。    権限定義オブジェクトで外部電子メール アドレスおよびその権限を指定し、これを使用してテンプレートを作成または更新します。 [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) コマンドレットを使用して権限定義オブジェクト指定し、変数を作成してから、[Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) コマンドレット (新しいテンプレート用) または [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) コマンドレット (既存のテンプレートを変更する場合) を使用して、この変数を -RightsDefinition パラメーターに指定します。 ただし、これらのユーザーを既存のテンプレートに追加する場合は、外部ユーザーだけでなく、テンプレートに既存のグループの権限定義オブジェクトを定義する必要があります。
 
@@ -97,15 +97,12 @@ Azure Rights Management サービスは、常にユーザー認証に Azure Acti
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Azure RMS で Azure AD の動的なグループを使用できますか。
 Azure AD Premium の機能では、[属性ベースのルール](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)を指定することによってグループの動的メンバーシップを構成できます。 Azure AD でセキュリティ グループを作成する場合、このグループの種類では動的メンバーシップがサポートされますが、電子メール アドレスはサポートされないため、Azure Rights Management サービスで使用することはできません。 ただし、動的メンバーシップをサポートし、メールが有効な新しいグループの種類を Azure AD で作成できるようになりました。 Azure クラシック ポータルで新しいグループを追加する場合は、**グループの種類**として **Office 365 の "プレビュー"** を選択できます。 このグループではメールが有効なため、Azure Rights Management 保護で使用できます。
 
-オプション名が明確に表示されているため、この新しいグループの種類は、必要な追加機能および使用する新しいドキュメントと共にプレビュー段階のままです。 その間に、Azure Rights Management 保護でこの新しいグループの種類を使用できることを確認する必要があります。
-
-
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Azure RMS でサポートされているデバイスとファイルの種類を教えてください。
 Azure Rights Management サービスをサポートするデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」をご覧ください。 サポートされるデバイスによっては一部の Rights Management 機能がサポートされていないため、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表も確認してください。
 
 Azure Rights Management サービスはあらゆる種類のファイルに対応しています。 テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、他のいくつかのアプリケーションのファイルの種類については、Azure Rights Management は暗号化と権限の適用 (アクセス許可) の両方を含むネイティブな保護を提供します。 他のすべてのアプリケーションとファイルの種類については、ファイルのカプセル化と、ユーザーにファイルを開く権限があるかどうかを確認する認証という一般的な保護機能が提供されます。
 
-Azure Rights Management でネイティブでサポートされるファイル名拡張子の一覧については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」の「[サポートされているファイルの種類とファイル名拡張子](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。 一覧に含まれないファイル名拡張子は、一般保護をこれらのファイルに自動的に適用する RMS 共有アプリケーションを使用することによってサポートされます。
+Azure Rights Management でネイティブでサポートされているファイル名拡張子の一覧については、「[File types supported by the Azure Information Protection client](../rms-client/client-admin-guide-file-types.md)」(Azure Information Protection クライアントでサポートされるファイルの種類) を参照してください。 一覧に含まれないファイル名拡張子は、汎用的な保護をこれらのファイルに自動的に適用する Azure Information Protection クライアントを使用することによってサポートされます。
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>RMS で保護されている Office ドキュメントを開いた場合、関連付けられた一時ファイルも RMS で保護されたものになりますか。
 
@@ -144,8 +141,6 @@ Azure RMS のスーパー ユーザー機能を使用してください。スー
 
 テナントの使用ライセンス有効期間の既定値は 30 日間であり、この値は PowerShell のコマンドレット [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx) を使用することで構成できます。 この設定は、カスタム テンプレートでより制限の厳しい設定によって上書きできます。 
 
-テナント設定およびテンプレート設定は、ユーザーが RMS 共有アプリケーションを使用して、オプション **[これらのドキュメントへのアクセスをすぐに取り消せるようにする]** を選択すると上書きできます。 この設定により、実際には使用ライセンスの有効期間が 0 に設定されます。 
-
 使用ライセンスのしくみの情報および例については、[Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx) の詳細な説明を参照してください。
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
@@ -165,6 +160,6 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a471dd917aab193ddfe5a58cbfa4f5082e6a049d
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: f69fd9629afaafbf6f78b52f65b3bb69eaf19c9e
 
 
 ---
@@ -29,17 +29,17 @@ ms.openlocfilehash: a471dd917aab193ddfe5a58cbfa4f5082e6a049d
 ## <a name="office-2016-and-office-2013"></a>Office 2016 と Office 2013:
 これらの最近のバージョンの Office では、Azure Rights Management サービスをネイティブでサポートしているため、クライアント コンピューターを構成しなくても、Word、Excel、PowerPoint、Outlook、Outlook Web App などのアプリケーションで Information Rights Management (IRM) 機能がサポートされます。 すべてのユーザーは、各自の [!INCLUDE[o365_1](../includes/o365_1_md.md)] 資格情報を使用して Office アプリケーションにサインインするだけで、ファイルや電子メールを保護したり、他のユーザーが保護しているファイルや電子メールを使用することができます。
 
-ただし、これらのアプリケーションに加えて Rights Management 共有アプリケーションを使用することをお勧めします。そうすることで、ユーザーは Office アドインの利点を活用することができます。 詳細については、「[Rights Management 共有アプリケーション: クライアントでのインストールと構成](configure-sharing-app.md)」を参照してください。
+ただし、これらのアプリケーションを Azure Information Protection クライアントで補完して、ユーザーが Office アドインを利用し、追加のファイルの種類をサポートできるようにすることをお勧めします。 詳細については、「[Azure Information Protection client: Installation and configuration for clients](configure-client.md)」(Azure Information Protection クライアント: クライアントのインストールと構成) を参照してください。
 
 ## <a name="office-2010"></a>Office 2010
-クライアント コンピューターの Office 2010 で Azure Rights Management サービスを使用するには、Windows 用 Rights Management 共有アプリケーションをインストールしている必要があります。 他の構成は必要ありません。ユーザーが各自の [!INCLUDE[o365_1](../includes/o365_1_md.md)] 資格情報でサインインしさえすれば、ファイルを保護したり、他のユーザーによって保護されたファイルを使用したりできます。
+クライアント コンピューターの Office 2010 で Azure Rights Management サービスを使用するには、Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションをインストールしている必要があります。 他の構成は必要ありません。ユーザーが各自の [!INCLUDE[o365_1](../includes/o365_1_md.md)] 資格情報でサインインしさえすれば、ファイルを保護したり、他のユーザーによって保護されたファイルを使用したりできます。
 
-Rights Management 共有アプリケーションの詳細については、「[Rights Management 共有アプリケーション: クライアントでのインストールと構成](configure-sharing-app.md)」を参照してください。
+Azure Information Protection クライアントの詳細については、「[Azure Information Protection client: Installation and configuration for clients](configure-client.md)」(Azure Information Protection クライアント: クライアントのインストールと構成) を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

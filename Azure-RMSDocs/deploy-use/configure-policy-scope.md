@@ -4,7 +4,7 @@ description: "特定のユーザーに対して異なる設定やラベルを構
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
 
 
 ---
@@ -23,9 +23,7 @@ ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 >*適用対象: Azure Information Protection*
 
-**[この機能はプレビュー段階にあり、変更される可能性があります。]**
-
-[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストール済みのコンピューターに Azure Information Protection ポリシーがダウンロードされた場合、すべてのユーザーは既定のポリシーの設定とラベル、またはグローバル ポリシー用に構成された変更を取得します。 特定のユーザーに対して異なる設定やラベルを構成してこれらを補うには、特定のユーザーに構成された**スコープ ポリシー** (現在プレビュー段階) を作成する必要があります。
+[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストール済みのコンピューターに Azure Information Protection ポリシーがダウンロードされた場合、すべてのユーザーは既定のポリシーの設定とラベル、またはグローバル ポリシー用に構成された変更を取得します。 特定のユーザーに対して異なる設定やラベルを構成してこれらを補うには、特定のユーザーに構成された**スコープ ポリシー**を作成する必要があります。
 
 すべてのユーザーは、Information Protection バーに表示されるタイトルとツールヒント、グローバル設定、およびグローバル ラベルを含むグローバル ポリシーを受信します。 特定のユーザーに対してスコープ ポリシーがあらかじめ構成されている場合、これらのユーザーは追加の設定とラベルを受信します。 
 
@@ -42,7 +40,7 @@ Azure Information Protection のスコープ ポリシーを構成するには:
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    最初の **[Azure Information Protection]** ブレードで、**[Add a new policy (PREVIEW) (新しいポリシーの追加 (プレビュー))]** を選択します。 グローバル ポリシーの更新を示すために使用される&2; 番目のブレードが表示されて、新しいスコープ ポリシーを構成できます。
+    最初の **[Azure Information Protection]** ブレードで、**[新しいポリシーの追加]** を選択します。 グローバル ポリシーの更新を示すために使用される&2; 番目のブレードが表示されて、新しいスコープ ポリシーを構成できます。
 
 3. Azure Portal で管理者のみに表示されるポリシー名と説明を指定します。 この名前はテナントで一意である必要があります。 **[Specify which users/groups get this policy (このポリシーを取得するユーザー/グループの指定)]** をクリックし、その後のブレードでこのポリシーを取得するユーザーとグループを検索して選択します。 このスコープ ポリシーで構成したラベルと設定は、選択したユーザーにのみ適用されます。 
 
@@ -67,6 +65,6 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

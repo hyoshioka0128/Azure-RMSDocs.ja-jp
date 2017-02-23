@@ -4,15 +4,15 @@ description: "Azure Information Protection による AD RMS 保護を選択し�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
-ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: afb676dc133c23123cd3cce6d3c6367b4e80911a
 
 
 ---
@@ -35,7 +35,7 @@ Azure RMS は、Microsoft または自社 ("Bring Your Own Key" (BYOK) シナリ
 
 一方、オンプレミスにホストされているキーを使用して、一部のドキュメントと電子メールを保護する場合があります。 たとえば、規制や準拠のために必要な場合があります。 
 
-この構成は、"Hold Your Own Key" (HYOK) とも呼ばれ、有効な Active Directory Rights Management サービス (AD RMS) デプロイがある場合に Azure Information Protection でサポートされます。次のセクションでは、その要件について説明します。 この機能はまだプレビュー段階です。
+この構成は、"Hold Your Own Key" (HYOK) とも呼ばれ、有効な Active Directory Rights Management サービス (AD RMS) デプロイがある場合に Azure Information Protection でサポートされます。次のセクションでは、その要件について説明します。
 
 この HYOK シナリオでは、権利ポリシーとそのポリシーを保護する組織の秘密キーの管理と保存はオンプレミスで行われますが、ラベル付けと分類の Azure Information Protection ポリシーの管理と保存は Azure で行われます。 Azure RMS の保護と同様に、AD RMS で保護する情報は、クラウドに送信されません。
 
@@ -98,13 +98,13 @@ AD RMS の保護のラベルを構成する場合、AD RMS クラスターのテ
 
 ## <a name="next-steps"></a>次のステップ
 
-このプレビュー機能の詳細については、ブログ投稿のお知らせ「[Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/)」(HYOK (Hold Your Own Key) による Azure Information Protection) を参照してください。
+この機能の詳細については、ブログ投稿のお知らせ「[Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/)」(HYOK (Hold Your Own Key) による Azure Information Protection) を参照してください。
 
 AD RMS の保護のラベルを構成するには、「[Rights Management による保護を適用するためのラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

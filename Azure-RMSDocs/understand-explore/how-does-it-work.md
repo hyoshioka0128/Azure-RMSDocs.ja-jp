@@ -4,7 +4,7 @@ description: "Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/27/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47648a1e03a4da5eb6088932544d9e34ca4ae7a
-ms.openlocfilehash: 42583d3ed7fb0fd5df85699c56fe7abe41093546
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: 0ff5deaaea73b7354d2b251c3ce9c768debd2269
 
 
 ---
@@ -52,7 +52,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 ###### <a name="footnote-1"></a>脚注 1: 
 
-ファイルの拡張子が .ppdf のとき、またはファイルが保護されたテキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のときは、汎用的な保護およびネイティブ保護のために Rights Management 共有アプリケーションは&256; ビットを使用します。
+ファイルの拡張子が .ppdf のとき、またはファイルが保護されたテキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のときは、汎用的な保護およびネイティブ保護のために Azure Information Protection クライアントと Rights Management 共有アプリケーションは&256; ビットを使用します。
 
 暗号化キーの格納とセキュリティ保護のしくみ
 
@@ -140,7 +140,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 -   **汎用的な保護 (.pfile)**:Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
 
--   **保護された PDF (.ppdf)**: Azure Rights Management サービスは、Office ファイルをネイティブに保護するときは、そのファイルのコピーも作成して同じ方法で保護します。 唯一の違いは、ファイルのコピーが PPDF ファイル形式であり、RMS 共有アプリケーションは表示するために開く方法だけを認識していることです。 このシナリオでは、保護された添付ファイルを電子メールで送信できます。モバイル デバイスの受信者は、モバイル デバイスに保護された Office ファイルをネイティブにサポートするアプリがない場合であっても、常にファイルを読むことができます。
+-   **保護された PDF (.ppdf)**: Azure Rights Management サービスは、Office ファイルをネイティブに保護するときは、そのファイルのコピーも作成して同じ方法で保護します。 唯一の違いは、ファイルのコピーが PPDF ファイル形式であり、Azure Information Protection クライアント ビューアーと RMS 共有アプリケーションは表示するために開く方法だけを認識していることです。 このシナリオでは、保護された添付ファイルを電子メールで送信できます。モバイル デバイスの受信者は、モバイル デバイスに保護された Office ファイルをネイティブにサポートするアプリがない場合であっても、常にファイルを読むことができます。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -156,6 +156,6 @@ Azure Rights Management サービスの詳細については、**概要と詳細
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 

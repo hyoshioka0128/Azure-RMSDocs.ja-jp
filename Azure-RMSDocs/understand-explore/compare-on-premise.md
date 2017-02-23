@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) を理解
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 9ef82e670e8239194d3111c4a6d75e2727034104
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 1357e2d4f2065f02209b861d00eab133039e2c5a
 
 
 ---
@@ -33,13 +33,13 @@ Azure Information Protection の主な違いの一部:
 
 - **モバイル デバイスの組み込みサポート**: Azure RMS でモバイル デバイスや Mac コンピューターをサポートする場合でも、デプロイを変更する必要はありません。 AD RMS でこれらのデバイスをサポートするには、モバイル デバイス拡張機能をインストールし、フェデレーション用に AD FS を構成して、パブリック DNS サービスの追加レコードを作成する必要があります。
 
-- **既定のテンプレート**: Azure Information Protection では、保護サービスをアクティブ化すると 2 つの既定テンプレートが作成されるため、すぐにとても簡単に重要なデータの保護を開始できます。 AD RMS には既定のテンプレートはありません。
+- **既定のテンプレート**: Azure Information Protection では、保護サービスをアクティブ化すると&2; つの既定テンプレートが作成されるため、すぐにとても簡単に重要なデータの保護を開始できます。 AD RMS には既定のテンプレートはありません。
 
 - **部門別テンプレート**: Azure Information Protection では、ユーザーが作成する追加テンプレートの構成設定として、部門別テンプレートがサポートされています。 この設定を使用するとクライアント アプリケーション (Office アプリケーションなど) でテンプレートを表示できるユーザーを指定でき、さまざまなユーザー グループに対して定義されている適切なポリシーを簡単に選択できます。 AD RMS では、部門別テンプレートはサポートされていません。
 
-- **ドキュメントの追跡、失効、電子メール通知**: Azure Information Protection は RMS 共有アプリでこれらの機能をサポートしていますが、AD RMS はサポートしていません。
+- **ドキュメントの追跡と取り消し**: Azure Information Protection は Azure Information Protection クライアントでこれらの機能をサポートしていますが、AD RMS はサポートしていません。
 
-- **分類とラベル付け**: Azure Information Protection は、Office アプリケーションと統合されている Azure Information Protection バーでこれらの機能をサポートしていますが、AD RMS ではサポートされていません。
+- **分類とラベル付け**: Azure Information Protection は、Office アプリケーションおよびエクスプローラーと統合されている Azure Information Protection クライアントでこれらの機能をサポートしていますが、AD RMS ではサポートされていません。
 
 
 さらに、Azure Information Protection はクラウド サービスであるため、オンプレミスのサーバー ベースのソリューションより速く新しい機能や修正を提供できます。 Windows Server 2016 では AD RMS の新機能は計画されていません。
@@ -54,15 +54,15 @@ Azure Information Protection の主な違いの一部:
 |Exchange Online や SharePoint Online などの Microsoft Online Services および Office 365 で Information Rights Management (IRM) 機能をサポートします。<br /><br />さらに、Exchange Server、SharePoint Server などのオンプレミスの Microsoft サーバー製品、および Windows Server とファイル分類インフラストラクチャ (FCI) を実行するファイル サーバーもサポートします。|Exchange Server、SharePoint Server などのオンプレミスの Microsoft サーバー製品、および Windows Server とファイル分類インフラストラクチャ (FCI) を実行するファイル サーバーもサポートします。|
 |組織と任意の組織のユーザー間の暗黙的な信頼関係を有効にします。 これは、ユーザーが [!INCLUDE[o365_1](../includes/o365_1_md.md)] または [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用しているか、ユーザーが個人用 RMS にサインアップしているときに、同じ組織または異なる組織のユーザー間で保護されたコンテンツを共有できることを意味します。|信頼関係は、信頼されたユーザー ドメイン (TUD) または Active Directory フェデレーション サービス (AD FS) を使用して作成したフェデレーションによる信頼関係を使用して、2 つの組織間で直接のポイントツーポイントの関係で明示的に定義される必要があります。|
 |2 つの既定の権利ポリシー テンプレートが用意されています。これらのテンプレートは、コンテンツのアクセスを組織に制限します。一方のテンプレートは保護されたコンテンツの読み取り専用の表示を提供し、もう一方のテンプレートは保護されたコンテンツの書き込みまたは変更アクセス許可を提供します。<br /><br />ユーザーのサブセットのみが見ることのできる部門テンプレートを含む独自のカスタム テンプレートを作成することもできます。 詳細については、「[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。<br /><br />また、テンプレートで不十分な場合は、独自のアクセス許可セットを定義できます。|既定の権限ポリシー テンプレートがない場合は、作成してから配布する必要があります。 詳細については、「 [AD RMS ポリシー テンプレートに関する考慮事項](http://go.microsoft.com/fwlink/?LinkId=154765)」を参照してください。<br /><br />また、テンプレートで不十分な場合は、独自のアクセス許可セットを定義できます。|
-|サポートされる Microsoft Office の最小バージョンは Office 2010 であり、このバージョンでは [RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)が必要です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされていません|サポートされる最小バージョンは Microsoft Office is Office 2007 です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされています|
-|Windows、Mac コンピューター、モバイル デバイス用の [RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)をサポートします。<br /><br />また、RMS 共有アプリケーションは次の機能をサポートします。<br /><br />- 別組織のユーザーとの共有。<br /><br />- 電子メール通知。保護された添付ファイルをだれかが開こうとすると、送信者に通知されます。<br /><br />- ユーザー用のドキュメント追跡サイト。ドキュメントを失効させる機能があります。|Windows、Mac コンピューター、モバイル デバイス用の [RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)をサポートします。 ただし、別組織のユーザーとの共有、電子メール通知、ドキュメント追跡サイトとユーザーがドキュメントを失効させる機能はサポートされていません。|
-|RMS 共有アプリケーションを使用する場合、[ネイティブ保護または汎用的な保護](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)を使用して、すべてのファイルの種類を保護できます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|RMS 共有アプリケーションを使用する場合、[ネイティブ保護または汎用的な保護](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)を使用して、すべてのファイルの種類を保護できます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|
-|Windows クライアントのサポートされる最小バージョンは Windows 7 です。|Windows クライアントのサポートされる最小バージョンは Windows Vista Service Pack 2 です。|
+|サポートされる Microsoft Office の最小バージョンは Office 2010 であり、このバージョンでは [Azure Information Protection クライアント](../rms-client/aip-client.md)または RMS 共有アプリケーションが必要です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされていません|サポートされる最小バージョンは Microsoft Office is Office 2007 です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされています|
+|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](../rms-client/aip-client.md)をサポートしています。 RMS 共有アプリでは、Mac コンピューターと Windows Phone が引き続きサポートされます。<br /><br />また、Azure Information Protection クライアントには次のものが含まれます。<br /><br />- 別組織のユーザーとの共有。<br /><br />- ユーザー用のドキュメント追跡サイト。ドキュメントを失効させる機能があります。|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](../rms-client/aip-client.md)をサポートしています。 RMS 共有アプリでは、Mac コンピューターと Windows Phone が引き続きサポートされます。 ただし、別組織のユーザーとの共有、ドキュメント追跡サイトとユーザーがドキュメントを失効させる機能はサポートされていません。|
+|Azure Information Protection クライアントを使用すると、ほとんどの[ファイルの種類](../rms-client/client-admin-guide-file-types.md)を分類し、保護することができます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|Azure Information Protection クライアントを使用すると、ほとんどの[ファイルの種類](../rms-client/client-admin-guide-file-types.md)を保護することができます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|
+|Windows クライアントのサポートされる最小バージョンは Windows 7 SP1 です。|Windows クライアントのサポートされる最小バージョンは Windows Vista Service Pack 2 です。|
 |モバイル デバイスのサポートには、Windows Phone、Android、iOS、および Windows RT が含まれます。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でもサポートされます。|モバイル デバイスのサポート対象には、Windows Phone、Android、iOS、Windows RT が含まれます。モバイル デバイスを使用するには、[Active Directory Rights Management サービスのモバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)が必要です。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でサポートされます。|
 |コンピューターとモバイル デバイス用の多要素認証 (MFA) をサポートします。<br /><br />詳細については、「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection)」を参照してください。|IIS が証明書を要求するように構成されている場合は、スマート カード認証をサポートします。|
 |追加の構成なしで Cryptographic Mode 2 をサポートします。これによりキー長と暗号化アルゴリズムのセキュリティが強化されます。<br /><br />セキュリティに関する比較について質問がある場合は、この記事の「[署名と暗号化のための暗号化制御](#cryptographic-controls-for-signing-and-encryption)」セクションと「[AD RMS Cryptographic Modes (AD RMS の暗号化モード)](http://go.microsoft.com/fwlink/?LinkId=266659)」を参照してください。|既定で Cryptographic Mode 1 をサポートし、セキュリティを強化するために Cryptographic Mode 2 をサポートするには追加の構成が必要です。<br /><br />セキュリティに関する比較について質問がある場合は、この記事の「[署名と暗号化のための暗号化制御](#cryptographic-controls-for-signing-and-encryption)」セクションと「[AD RMS Cryptographic Modes (AD RMS の暗号化モード)](http://go.microsoft.com/fwlink/?LinkId=266659)」を参照してください。|
 |AD RMS から、および必要な場合は AD RMS への、移行のサポート:<br /><br />- [AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)<br /><br />- [Azure Information Protection の使用停止と非アクティブ化](../deploy-use/decommission-deactivate.md)|Azure Information Protection からの移行と Azure Information Protection への移行をサポートします。<br /><br />- [Azure Rights Management の使用停止と非アクティブ化](../deploy-use/decommission-deactivate.md)<br /><br />- [AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)|
-|コンテンツを保護するには Azure Information Protection ライセンスが必要です。 Azure Information Protection で保護されたコンテンツを使用するには、Azure Information Protection ライセンスは必要ありません (別組織のユーザーも含まれます)。<br /><br />詳細については、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|AD RMS によってコンテンツを保護し、保護されたコンテンツを使用するには、RMS ライセンスが必要です。<br /><br />AD RMS のライセンスの概要については、「 [Client Access Licenses and Management Licenses (クライアント管理ライセンスとアクセス ライセンス)](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) 」を参照してください。具体的な情報については、マイクロソフト パートナーまたはマイクロソフトの担当者に問い合わせてください。|
+|コンテンツを保護するには、Azure Information Protection ライセンスまたは Azure Rights Management ライセンスと Office 365 が必要です。 Azure Information Protection で保護されたコンテンツを使用するには、ライセンスは必要ありません (別組織のユーザーも含まれます)。<br /><br />詳細については、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|AD RMS によってコンテンツを保護し、保護されたコンテンツを使用するには、RMS ライセンスが必要です。<br /><br />AD RMS のライセンスの概要については、「 [Client Access Licenses and Management Licenses (クライアント管理ライセンスとアクセス ライセンス)](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) 」を参照してください。具体的な情報については、マイクロソフト パートナーまたはマイクロソフトの担当者に問い合わせてください。|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>署名と暗号化のための暗号化制御
 Azure Information Protection は常に、すべての公開キーの暗号化に RSA 2048 を使用し、署名操作に SHA 256 を使用します。 これに対し、AD RMS は、RSA 1024 および RSA 2048 をサポートし、署名操作用に SHA 1 または SHA 256 をサポートします。
@@ -79,6 +79,6 @@ AD RMS から Azure Information Protection に移行する場合は、「[AD RMS
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

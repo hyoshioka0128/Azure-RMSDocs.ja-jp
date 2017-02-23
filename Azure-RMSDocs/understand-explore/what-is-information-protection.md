@@ -4,15 +4,15 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: c0ea97dc29855ad46271dac251c804ca602cee69
+ms.sourcegitcommit: 4d20462f190042e1ac8d674123296f65c66d9921
+ms.openlocfilehash: 50b83f165dfbcf9b5f66ae8bfc596d1aa910f10d
 
 
 ---
@@ -54,7 +54,7 @@ Azure Rights Management サービスを有効にすると直ちに、組織内�
 
 この例では、Azure ポータルから Azure Information Protection ポリシーを構成するときに、ラベルのテンプレートを選択する方法を示します。
 
-![Azure ポータルでテンプレートを選択する場合の例](../media/templates-infoprotection-callouts.png)
+![Azure ポータルでテンプレートを選択する場合の例](../media/info-protect-template-callout.png)
 
 この同じテンプレートは、Azure Rights Management テクノロジをサポートする Exchange Online のメール フローのルールを構成する Exchange 管理センターからも選択できます。
 
@@ -66,11 +66,21 @@ Azure Rights Management での保護のしくみの詳細については、「[A
 
 Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、最初の図のように Information Protection バーをインストールします。 Excel、PowerPoint、および Outlook にも同じバーが追加されます。 たとえば、
 
-![Excel の Azure Information Protection バーの例](../media/excel2013-infoprotect-bar2.png)
+![Excel の Azure Information Protection バーの例](../media/excel2016-infoprotect-bar.png)
 
 この Information Protection バーにより、エンド ユーザーは、適切な分類ラベルを選択でき、必要に応じてこれらのラベルにより、文書や電子メールを自動で保護することもできるようになります。
 
-ユーザーが保護されている文書を電子メールで共有する場合、これらの文書にアクセスしているユーザーやいつアクセスされているかを文書の追跡サイトから監視することができます。 不正使用が疑われる場合、これらの文書に対するアクセスを取り消すことも可能です。
+追加のファイルの種類を分類して保護し、複数のファイルを一度にサポートするには、次のようにして、エクスプローラーからファイルまたはフォルダーを右クリックします。
+
+![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
+
+エクスプローラーから **[分類して保護する]** メニュー オプションを選択すると、Office デスクトップ アプリで Information Protection バーを使用する場合と同じように、ラベルを選択することができます。 必要に応じて、独自のカスタム アクセス許可を設定することもできます。
+
+パワー ユーザー (および管理者) は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 これを行う PowerShell コマンドは、クライアントと共に自動的に含まれますが、PowerShell モジュールを個別にインストールすることもできます。
+
+ドキュメントが保護されたら、ユーザーと管理者はドキュメント追跡サイトを使用して、これらのドキュメントに誰がいつアクセスしているかを監視することができます。 不正使用が疑われる場合は、これらのドキュメントに対するアクセスを取り消すこともできます。
+
+![ドキュメント追跡サイトの [アクセスの取り消し] アイコン](../media/tracking-site-revoke-access-icon.png)
 
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
@@ -111,6 +121,6 @@ Azure Rights Management または Azure Information Protection の別名 [サー
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

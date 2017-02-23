@@ -4,7 +4,7 @@ description: "使用権限のテンプレートを構成および管理するた
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bab64fcb5f4ac208bfc7f1f385c558a77e9eb796
+ms.sourcegitcommit: efab4cdc455237b4bb064252dfe6702ec40539d2
+ms.openlocfilehash: a5a27e9d1d12381b7c4c945596480171f7265552
 
 
 ---
@@ -37,7 +37,7 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 
     -   特定の権限:コンテンツの表示、ファイルの保存、コンテンツの編集、割り当てられた権限の表示、Macro の許可、転送、返信、全員に返信
 
-さらに、[RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)を使用して、ユーザーが独自のアクセス許可のセットを定義することができます。 また、Outlook クライアントおよび Outlook Web Access の場合、ユーザーは [[転送不可]](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) オプションを選択できます。
+また、ユーザーは [Azure Information Protection クライアント](../rms-client/aip-client.md)を使用して独自のアクセス許可を定義できます。 また、Outlook クライアントおよび Outlook Web Access の場合、ユーザーは [[転送不可]](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) オプションを選択できます。
 
 多くの組織では、既定のテンプレートで十分です。 ただし、独自のカスタム権限ポリシー テンプレートを作成する必要がある場合は、作成できます。 カスタム テンプレートを作成する理由として、次のようなケースが考えられます。
 
@@ -68,6 +68,6 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

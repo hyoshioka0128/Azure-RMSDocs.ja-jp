@@ -1,18 +1,18 @@
 ---
 title: "クイック スタート チュートリアル | Azure Information Protection"
-description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルです。"
+description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルです。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 4d61cf28be8e41cad20ff2dbc3be2c71eac9d2ad
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 >*適用対象: Azure Information Protection*
 
-このチュートリアルを使用すると、5 つの手順を実行するだけで約 30 分で Azure Information Protection を簡単に試すことができます。 このチュートリアルは、Azure Information Protection で提供される機能のいくつかを簡単に紹介するガイドなしデモとして設計されています。 使用可能な機能がすべて含まれているわけではなく、組織用のデプロイ ガイドとして使用するものではありません。 組織向けの Azure Information Protection をデプロイする場合は、[デプロイ ロードマップ ドキュメント](../plan-design/deployment-roadmap.md)を参照してください。 
+このチュートリアルを使用すると、5 つの手順を実行するだけで約 20 分で Azure Information Protection を簡単に試すことができます。 このチュートリアルは、Azure Information Protection で提供される機能のいくつかを簡単に紹介するガイドなしデモとして設計されています。 使用可能な機能がすべて含まれているわけではなく、組織用のデプロイ ガイドとして使用するものではありません。 組織向けの Azure Information Protection をデプロイする場合は、[デプロイ ロードマップ ドキュメント](../plan-design/deployment-roadmap.md)を参照してください。 
 
-このチュートリアルは、IT 管理者やコンサルタントが組織向けのエンタープライズ情報保護ソリューションとして Azure Information Protection を評価する際の支援を目的としたものです。 運用環境では、Information Protection ポリシーの構成、およびユーザー用のクライアントとアプリケーションのインストールに関する手順は、管理者が行います。 ドキュメントにラベルを付け、電子メールでドキュメントを安全に共有し、それを追跡する手順は、エンドユーザーが行います。 このチュートリアルにはこれらの手順がすべて含まれており、組織のデータの分類、ラベル付け、保護に関する標準的なエンド ツー エンド シナリオが示されています。 
+このチュートリアルは、IT 管理者やコンサルタントが組織向けのエンタープライズ情報保護ソリューションとして Azure Information Protection を評価する際の支援を目的としたものです。 運用環境では、Information Protection ポリシーの構成、およびユーザー用のクライアントのインストールに関する手順は、管理者が行います。 ドキュメントにラベルを付け、電子メールでドキュメントを安全に共有し、それを追跡する手順は、エンドユーザーが行います。 このチュートリアルにはこれらの手順がすべて含まれており、組織のデータの分類、ラベル付け、保護に関する標準的なエンド ツー エンド シナリオが示されています。 
 
 このチュートリアルの実行や Azure Information Protection の使用に関して問題がある場合、または他のユーザーの意見を知りたい場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)を参照してください。
 
@@ -53,6 +53,6 @@ ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

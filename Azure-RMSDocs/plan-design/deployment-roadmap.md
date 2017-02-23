@@ -4,7 +4,7 @@ description: "組織の Azure Information Protection を準備、実装、管理
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
-ms.openlocfilehash: 75f8eb2843005f23fd359d6a4fce073abecbfe0a
+ms.sourcegitcommit: 617ce3204296a4f9a7affc2750684871d60be65e
+ms.openlocfilehash: d2888a1612e1c3521773deae7b49049c702137b4
 
 
 ---
@@ -59,7 +59,7 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 
 分類決定をサポートするために必要な変更を行うには、既定の Azure Information Protection ラベルを再構成します。 ユーザーによる手動ラベル付けのポリシーを構成し、適用するラベルとタイミングを説明するユーザー ガイダンスを記述します。 Azure Information Protection ポリシーの構成方法については、「[Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)」を参照してください。
 
-次に、ユーザーの Azure Information Protection クライアントをデプロイし、ユーザー トレーニングとラベルの選択に関する指示を与えます。 クライアントのインストールに関する詳細については、「[Azure Information Protection クライアントのインストール](../rms-client/info-protect-client.md)」を参照してください。
+次に、ユーザーの Azure Information Protection クライアントをデプロイし、ユーザー トレーニングとラベルの選択に関する指示を与えます。 クライアントのインストールとサポートの詳細については、「[Azure Information Protection クライアント管理者ガイド](../rms-client/client-admin-guide.md)」を参照してください。
 
 しばらくしてユーザーが文書や電子メールのラベル付けに慣れたら、さらに高度な構成を導入します。 次のようなものが含まれます。
 
@@ -101,28 +101,30 @@ Azure Information Protection の使用を開始する前に、次の準備を行
     
     Exchange が Information Rights Management (IRM) 用に構成されていない場合でも、ユーザーは Outlook で Rights Management による保護を適用するラベルを適用できます。 ただし、Exchange が IRM 用に構成されるまで、組織は Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 この追加の構成は、Exchange Online の手順 3、および Exchange オンプレミスの手順 6 に含まれています。 
 
-2. Rights Management 共有アプリケーションのデプロイ
-    
-    電子メールで文書を安全に共有し、ファイルを適所で保護し、保護した共有文書を追跡できるように、ユーザーの Rights Management 共有アプリケーションをインストールします。 このアプリケーションのユーザー トレーニングを行います。 詳細については、「[Windows 用 Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md)」を参照してください。
-
-3. IRM のために Office のアプリケーションとサービスを構成する
+2. IRM のために Office のアプリケーションとサービスを構成する
     
     SharePoint Online または Exchange Online の Information Rights Management (IRM) 機能のために Office のアプリケーションとサービスを構成します。 詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
-4. データ回復のスーパー ユーザー機能を構成する
+3. データ回復のスーパー ユーザー機能を構成する
     
     Azure Rights Management によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」を参照してください。
 
-5. ファイルを一括保護する 
+4. ファイルを一括して分類および保護する (必要な場合)
     
-    すべての種類のファイルを一括で保護したり保護解除したりする場合、RMS Protection PowerShell モジュールを使用する RMS 保護ツールをインストールします。 詳細については、「 [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/mt433195.aspx)」を参照してください。
+    ファイルの分類と保護と、分類と保護の削除に使用する PowerShell コマンドレットは、Azure Information Protection クライアントと共に自動的にインストールされます。 詳細については、管理者ガイドの「[Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
 
 6. オンプレミス サーバーのコネクタをデプロイする
     
     Azure Rights Management サービスで使用するオンプレミスのサービスがある場合は、Rights Management コネクタをインストールして構成します。 詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」を参照してください。
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>手順 4: データ保護ソリューションを使用し、監視する
-これでデータを保護し、組織で Rights Management を使用する方法を記録する準備が整いました。 このデプロイ段階の詳細については、「[Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ](../deploy-use/help-users.md)」と「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
+データを保護し、構成したラベルと Rights Management データ保護を会社がどのように使用しているかをログに記録する準備が整いました。 このデプロイ フェーズのサポートの詳細については、以下を参照してください。
+
+- [Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ](../deploy-use/help-users.md)
+
+-  [Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)
+
+- [クライアント ファイルおよび使用状況ログの記録](../rms-client/client-admin-guide-files-and-logging.md)
 
 Windows ベースのファイル サーバーで、ファイル分類インフラストラクチャを使用してファイルを自動的に保護することに関する情報は、「[Windows Server ファイル分類インフラストラクチャ (FCI) での RMS 保護](../rms-client/configure-fci.md)」を参照してください。
 
@@ -157,11 +159,11 @@ Azure Information Protection サイトの[サブスクリプション情報](htt
 
 -   組織での Rights Management の使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
-### <a name="step-3-configure-your-applications-and-services-for-rights-management"></a>手順 3:Rights Management 用にアプリケーションとサービスを構成する
+### <a name="step-3-install-the-client-and-configure-applications-and-services-for-rights-management"></a>手順 3: クライアントをインストールし、Rights Management のアプリケーションとサービスを構成する
 
-1. Rights Management 共有アプリケーションのデプロイ
+1. Azure Information Protection クライアントのデプロイ
     
-    電子メールで文書を安全に共有し、ファイルを適所で保護し、保護した共有文書を追跡できるように、ユーザーの Rights Management 共有アプリケーションをインストールします。 このアプリケーションのユーザー トレーニングを行います。 詳細については、「[Windows 用 Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md)」を参照してください。
+    Office 2010 のサポート、Office ドキュメントと電子メール以外のファイルの保護、保護されたドキュメントの追跡には、ユーザーに Azure Information Protection をインストールします。 このクライアントのユーザー トレーニングを行います。 詳細については、「[Azure Information Protection client for Windows](../rms-client/aip-client.md)」(Windows 用 Azure Information Protection クライアント) を参照してください。
 
 2. IRM のために Office のアプリケーションとサービスを構成する
     
@@ -171,9 +173,9 @@ Azure Information Protection サイトの[サブスクリプション情報](htt
     
     Azure Rights Management によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」を参照してください。
 
-4. ファイルを一括保護する 
+4. ファイルを一括して保護する (必要な場合) 
     
-    すべての種類のファイルを一括で保護したり保護解除したりする場合、RMS Protection PowerShell モジュールを使用する RMS 保護ツールをインストールします。 詳細については、「 [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/mt433195.aspx)」を参照してください。
+    複数のファイルの種類を一括して保護する、または一括して保護を解除する PowerShell コマンドレットは、Azure Information Protection クライアントと共に自動的にインストールされます。 詳細については、管理者ガイドの「[Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
 
 5. オンプレミス サーバーのコネクタをデプロイする
     
@@ -192,6 +194,6 @@ Azure Rights Management サービスの使用を開始するとき、Windows Pow
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

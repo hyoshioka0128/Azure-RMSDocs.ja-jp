@@ -5,7 +5,7 @@ keywords: "iOS 用および Android 用の Azure Information Protection アプ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/06/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f478f65eecb47b6d0f41ece413ce576b6935b916
-ms.openlocfilehash: 9a03ccf3326b51f5c9c19102a1e9d003562cead6
+ms.sourcegitcommit: 0dc8e4d772ef65e3425203e78c5e569f4e107b8e
+ms.openlocfilehash: a6900a6dadd0c323958f42ff441cbcf936a0f582
 
 
 ---
@@ -30,9 +30,11 @@ ms.openlocfilehash: 9a03ccf3326b51f5c9c19102a1e9d003562cead6
 
 お使いの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合、このアプリを使うと、権利が保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルを表示することもできます。 現時点では、このアプリを使用して、保護されたメール メッセージを新規作成したり、メール メッセージに返信したり、保護されたファイルを作成または編集したりすることはできません。
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive For Business にある PDF ファイルを開くことはできますか。
+## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive for Business にある PDF ファイルを開くことはできますか。
 
 はい。SharePoint と OneDrive for Business によって、他のユーザーがお客様と共有している保護された PDF ファイルを開くことができます。 リンクをタップし、このアプリを選択してファイルを自分用に開きます。 
+
+このアプリで、SharePoint と OneDrive for Business の外部で保護されている PDF ファイル (保護されている PDF ファイルと .ppdf ファイル) を開くこともできます。
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>モバイル デバイスで Azure Information Protection アプリを実行するには
 
@@ -73,6 +75,6 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

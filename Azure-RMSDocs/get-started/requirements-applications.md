@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/16/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 115708d10b3504e77a5e469b4df93262c067ae0c
-ms.openlocfilehash: 9947c6e8b8fe78f262dbfa129f8490489d119dd2
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: c6d978133142ffc935cce9dc56669d812c80e3af
 
 
 ---
@@ -33,16 +33,16 @@ ms.openlocfilehash: 9947c6e8b8fe78f262dbfa129f8490489d119dd2
 
 表の列に関する情報
 
--   **保護された PDF**: このファイルの拡張子は .ppdf です。RMS 共有アプリケーションを使用して Office ファイルや PDF ファイルを電子メールで共有すると、自動的に作成されます。 RMS 共有アプリケーション、iOS 用および Android 用の Azure Information Protection アプリ、Windows 用 Azure Information Protection クライアント (プレビュー) には、保護された PDF ファイル用のリーダーが含まれています。 以前に Azure RMS または AD RMS を使用して保護された PDF ファイルを作成していた場合は、Windows、iOS、および Android デバイス上で Foxit Reader および Nitro Pro を使用して、引き続きこれらのファイルを読み取ることができます。
+-   **保護された PDF**: このファイルの拡張子は .ppdf です。RMS 共有アプリケーションを使用して Office ファイルや PDF ファイルを電子メールで共有すると、自動的に作成されます。 RMS 共有アプリケーション、iOS 用および Android 用の Azure Information Protection アプリ、Windows 用 Azure Information Protection クライアントには、保護された PDF ファイル用のリーダーが含まれています。 以前に Azure RMS または AD RMS を使用して保護された PDF ファイルを作成していた場合は、Windows、iOS、および Android デバイス上で Foxit Reader および Nitro Pro を使用して、引き続きこれらのファイルを読み取ることができます。
 
 -   **電子メール:** 表示されている電子メール クライアントは、電子メール メッセージを保護できるので、添付されているファイルも自動的に保護されます。 このシナリオでは、クライアントのプレビュー機能で、許可された受信者に対して保護されたコンテンツ (メッセージと添付ファイル) を表示できます。 ただし、電子メール メッセージが保護さておらず、添付ファイルが保護されている場合、クライアントのプレビュー機能では、許可された受信者に対する場合も保護された添付ファイルを表示できません。
 
--   **他のファイルの種類**: テキスト ファイルと画像ファイルには、.txt、.xml、.jpg、.jpeg などのファイル名拡張子が付いているファイルがあります。 これらのファイルでは、Rights Management によりネイティブで保護された後に、ファイル名拡張子が変更され、読み取り専用になります。 ネイティブで保護できないファイルでは、Rights Management によって一般的に保護された後に、ファイル名拡張子が .pfile になります。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
+-   **他のファイルの種類**: テキスト ファイルと画像ファイルには、.txt、.xml、.jpg、.jpeg などのファイル名拡張子が付いているファイルがあります。 これらのファイルでは、Rights Management によりネイティブで保護された後に、ファイル名拡張子が変更され、読み取り専用になります。 ネイティブで保護できないファイルでは、Rights Management によって一般的に保護された後に、ファイル名拡張子が .pfile になります。 詳細については、Azure Information Protection クライアント管理者ガイドの[サポートされるファイルの種類](../rms-client/client-admin-guide-file-types.md)に関する記述を参照してください。
 
 
 |**デバイス オペレーティング システム**|Word、Excel、PowerPoint|保護された PDF|電子メール|他のファイルの種類|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office モバイル アプリ (Azure RMS のみ) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Windows 用 Azure Information Protection クライアント (プレビュー)<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Windows 用 Azure Information Protection クライアント (プレビュー): テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン [[8]](#footnote-8): .dwg<br />|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office モバイル アプリ (Azure RMS のみ) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Windows 用 Azure Information Protection クライアント <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン [[8]](#footnote-8): .dwg<br />|
 |**iOS**|iPad および iPhone 用 Office [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Azure Information Protection アプリ [[1]](#footnote-1): テキスト、画像<br /><br />TITUS Docs: Pfile|
 |**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS のみ) [[1]](#footnote-1)|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) と [[7]](#footnote-7)<br /><br />Samsung Email (S3 以降) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Azure Information Protection アプリ [[1]](#footnote-1): テキスト、画像|
 |**OS X**|Office 2011 (AD RMS のみ)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|Outlook 2011 (AD RMS のみ)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
@@ -95,7 +95,7 @@ Office のすべてのエディション (Office 2007 を除く) で、保護さ
 
 Azure RMS と Office Professional Plus 2010 または Office Professional 2010:
 
-- Windows 用 Rights Management 共有アプリケーションが必要です
+- Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションが必要です。
 
 - Windows 10 ではサポートされていません
 
@@ -110,28 +110,34 @@ iOS 用および Android 用の Azure Information Protection アプリは、こ�
 詳細については、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ](../rms-client/mobile-app-faq.md)」をご覧ください。
 
 
-## <a name="more-information-about-the-azure-information-protection-client-for-windows-preview"></a>Windows 用 Azure Information Protection クライアント (プレビュー) に関する詳細
+## <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアントの詳細
 
-Azure Information Protection クライアントのプレビュー バージョンは、評価とフィードバックを目的としています。 Windows 用の既存の Rights Management 共有アプリケーションと置き換えられます。 
+現在、Windows 用 Rights Management 共有アプリケーションは、このクライアントに置き換わっています。 
 
-プレビュー バージョンのクライアントの詳細については、[ブログ投稿のお知らせ](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)と[プレビュー ユーザー ガイド](../rms-client/client-user-guide.md)を参照してください。
+詳細については、次のリソースを参照してください。
+
+- [Azure Information Protection クライアント管理者ガイド](../rms-client/client-admin-guide.md)
+
+- [Azure Information Protection クライアントユーザー ガイド](../rms-client/client-user-guide.md)
+
+- [iOS 用と Android 用の Azure Information Protection の FAQ](../rms-client/mobile-app-faq.md)
+
+[Microsoft Azure Information Protection のページ](http://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して関連アプリをダウンロードします。
 
 ## <a name="more-information-about-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションの詳細
 
-Windows 用 Rights Management 共有アプリケーションの詳細については、以下のリソースを参照してください。
+このアプリケーションは Azure Information Protection クライアントに置き換えられます。 Mac コンピューターや Windows Phone のモバイル デバイスではまだ必要です。 
+
+詳細については、次のリソースを参照してください。
 
 -   [Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)
 
 -   [Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)
 
-モバイル プラットフォーム用 Rights Management 共有アプリケーションの詳細については、以下のリソースを参照してください。
-
--   [Microsoft Rights Management のページ](http://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して関連アプリをダウンロードする
-
 -   [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](https://technet.microsoft.com/dn451248)
 
-> [!NOTE]
-> iOS 用および Android 用の RMS 共有アプリケーションは、Azure Information Protection アプリに置き換わっています。
+[Microsoft Azure Information Protection のページ](http://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して、Mac コンピューター用と Windows Phone 用のアプリをダウンロードします。
+
 
 ## <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Azure Information Protection をサポートしている他のアプリケーションの詳細
 
@@ -153,7 +159,7 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 
 -   XPS ビューアー
  
-また、RMS 共有アプリケーションには次の制限事項があります。
+さらに、RMS 共有アプリケーションと Azure Information Protection クライアントには次の制限があります。
 
 -   Windows コンピューターの場合: Windows 7 Service Pack 1 以降が必要です
 
@@ -169,6 +175,6 @@ Azure RMS で最も一般的に使用されるアプリケーションを構成�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

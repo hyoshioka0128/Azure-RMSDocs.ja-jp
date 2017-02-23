@@ -1,18 +1,18 @@
 ---
-title: "クイック スタート チュートリアル手順 1 | Azure Information Protection"
-description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
+title: "クイック スタート チュートリアル手順 2 | Azure Information Protection"
+description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 00d78bf12a7f400b3dfa7e35ada25177170e2d23
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
 
 
 ---
@@ -32,7 +32,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     > [!TIP] 
     > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
 
-3.  自動的に表示される **[Policy: Global]**(ポリシー:グローバル) ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
+3.  Azure Information Protection ブレードで、**[グローバル]** をクリックして **[Policy: Global]** (ポリシー: グローバル) ブレードを確認します。このブレードには、自動的に作成される既定の Information Protection ポリシーが表示されます。
     
     - 分類用のラベル: **[Personal]** (個人)、**[Public]** (公開)、**[Internal]** (内部)、**[Confidential]** (機密)、**[Secret]** (社内秘) が含まれます。 各ラベルの用途については、それぞれのツール ヒントを読んでください。 **[Secret]** (社内秘) には&2; つのサブグループ **[All-Employees]** (全従業員) と **[My-Group]** (自分のグループ) があります。これらは、分類にサブカテゴリを設定する方法の例を示しています。
 
@@ -114,7 +114,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 Azure ポータルを閉じても、開いたままにしておきこのチュートリアルが終わった後でさらにオプションを構成してみてもかまいません。
 
-これで既定のポリシーの確認と変更が終わりました。次の手順では Azure Information Protection クライアントと Rights Management 共有アプリケーションをインストールします。
+既定のポリシーの確認と変更が済んだので、次の手順では Azure Information Protection をインストールします。
 
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
@@ -128,6 +128,6 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

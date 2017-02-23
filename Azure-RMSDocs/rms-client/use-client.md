@@ -4,7 +4,7 @@ description: "Microsoft Azure Information Protection は、組織のデータを
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,15 +14,15 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
-ms.openlocfilehash: 11f4be72cfe1ab50286254bd4de18b66def0a6cb
+ms.sourcegitcommit: 190b5d2a25dc9479aa2ba34fd884795e0de40238
+ms.openlocfilehash: f52f3e04f41e33828bd9a9c5c1aad3ef460b2d23
 
 
 ---
 
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
->*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、Azure Rights Management、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
 Azure Information Protection は、組織の文書や電子メールを保護するクライアント/サーバー型のソリューションです。
 
@@ -32,17 +32,19 @@ Azure Information Protection は、組織の文書や電子メールを保護す
 
 Azure Information Protection クライアントは、保護に加え、分類およびラベル付けも行います。 このクライアントは Office アプリケーションと統合できますが、別にインストールする必要があります。
 
-Rights Management (RMS) クライアントは、Office アプリケーション、RMS 共有アプリケーション、ソフトウェア ベンダー製の RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、単体でインストールすることもできます。開発者が Rights Management 保護を基幹業務アプリケーションに統合したり、管理者またはパワー ユーザーが RMS 保護ツールでファイルを一括保護したりする場合、単体インストールを実行できます。
+Rights Management (RMS) クライアントは、Office アプリケーション、Azure Information Protection クライアント、ソフトウェア ベンダー製の RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、開発者が Rights Management 保護を基幹業務アプリケーションに統合する場合などは単体インストールを実行できます。
 
 組織のデータを保護する Azure Information Protection および Active Directory Rights Management サービスと一緒に使用する、これらのクライアントのデプロイ方法と使用方法の詳細については、次のドキュメントを参照してください。
 
-- [Azure Information Protection クライアントのインストール](info-protect-client.md)
+- [Azure Information Protection クライアント](AIP-client.md)
 
 - [RMS クライアントのデプロイに関する注意事項](client-deployment-notes.md)
 
 - [Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護](configure-fci.md)
 
 - [Windows 用 Rights Management 共有アプリケーション](sharing-app-windows.md)
+
+Windows 用 Rights Management 共有アプリケーションと RMS 保護ツールは、現在、Azure Information Protection クライアントに置き換わっていることに注意してください。 
 
 
 ## <a name="see-also"></a>関連項目
@@ -51,6 +53,6 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

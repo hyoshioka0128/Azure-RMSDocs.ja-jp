@@ -4,7 +4,7 @@ description: "Rights Management サービス クライアント (RMS クライ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/28/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
 
 Rights Management サービス クライアント (RMS クライアント) バージョン 2 は、MSIPC クライアントとも呼ばれます。 Microsoft Rights Management サービスと通信する Windows コンピューター (オンプレミスまたはクラウド) 用のソフトウェアで、組織内または管理対象外組織内における、アプリケーションとデバイスを行き来する情報へのアクセスや使用を保護することができます。 
 
-RMS クライアントは [Windows 用 Rights Management 共有アプリケーション](sharing-app-windows.md)に付属していますが、[必要に応じてダウンロード](http://www.microsoft.com/download/details.aspx?id=38396)することもできます。これはライセンス契約書に同意すれば、サードパーティ製ソフトウェアと一緒に自由に配布できます。これにより、クライアントは Rights Management サービスで保護済みのコンテンツを保護して使用することができます。
+RMS クライアントは [Windows 用 Azure Information Protection クライアント](aip-client.md)に付属していますが、[必要に応じてダウンロード](http://www.microsoft.com/download/details.aspx?id=38396)することもできます。これはライセンス契約書に同意すれば、サードパーティ製ソフトウェアと一緒に自由に配布できます。これにより、クライアントは Rights Management サービスで保護済みのコンテンツを保護して使用することができます。
 
 
 ## <a name="redistributing-the-rms-client"></a>RMS クライアントの再配布
@@ -94,7 +94,7 @@ RMS クライアントは、x86 および x64 のコンピューティング プ
 次のセクションには、RMS クライアントに関する設定情報が含まれています。 この情報は、RMS クライアントを使用するアプリケーションまたはサービスに問題がある場合に役に立つ場合があります。
 
 > [!NOTE]
-> 一部の設定は、RMS 対応アプリケーションが、クライアント モードのアプリケーション (Microsoft Word、Outlook、RMS 共有アプリケーションなど)、またはサーバー モードのアプリケーション (SharePoint および Exchange など) として実行するかどうかによって変わります。 次の表では、これらの設定は **クライアント モード** と **サーバー モード**として区別されています。
+> 一部の設定は、RMS 対応アプリケーションが、クライアント モードのアプリケーション (Microsoft Word、Outlook、Azure Information Protection クライアントとエクスプローラーなど)、またはサーバー モードのアプリケーション (SharePoint および Exchange など) として実行するかどうかによって変わります。 次の表では、これらの設定は **クライアント モード** と **サーバー モード**として区別されています。
 
 ### <a name="where-the-rms-client-stores-licenses-on-client-computers"></a>RMS クライアントのライセンスはクライアント コンピューターのどこに保存されますか。
 RMS クライアントのライセンスはローカル ディスクに格納されます。また、Windows レジストリにも一部の情報がキャッシュされます。
@@ -261,6 +261,6 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

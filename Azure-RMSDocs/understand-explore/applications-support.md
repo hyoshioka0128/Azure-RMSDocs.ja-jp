@@ -4,7 +4,7 @@ description: "幅広く使用されているエンド ユーザー アプリケ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: f3e0be224f2a9e587f5be1bbdbbdb3e81b7a4bca
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 53a77c0e312f44fe2210ed19ead6dedeb36a5a78
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: f3e0be224f2a9e587f5be1bbdbbdb3e81b7a4bca
 > [!NOTE]
 > Azure Rights Management サービスをサポートするアプリケーションおよびバージョンを確認するには、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」をご覧ください。
 
-管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリ、分類されたファイル、Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合は、エンド ユーザーが、テンプレートを選択するか特定のオプションを選択して、アプリケーションから情報保護を自分で適用する必要があります。 たとえば、ユーザーが電子メールでファイルを共有する場合や、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限することでファイルをその場で保護する場合などがこれに該当します。
+管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリや Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合は、エンド ユーザー自身がアプリケーションから情報の保護を適用する必要があります。たとえば、テンプレートを適用するように構成されている分類ラベルを選ぶか、テンプレートを直接選ぶか、または特定のオプションを選びます。 ユーザーによる保護の適用は、ユーザーが共有するファイルを保護していて、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限する場合に一般的です。
 
 テンプレートを使用すると、ユーザー (およびポリシーを構成する管理者) が、簡単に正しいレベルの保護を適用し、組織内のユーザーにアクセスを制限することができます。 Azure Rights Management サービスには、2 つの既定のテンプレートが付属していますが、カスタム テンプレートを作成すると、個別のオプションを指定する時間を減らすことができます。 詳細については、「[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
@@ -64,6 +64,6 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

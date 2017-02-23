@@ -1,10 +1,10 @@
 ---
 title: "分類とラベル付けに関してよく寄せられる質問 | Azure Information Protection"
-description: "Azure Information Protection のプレビュー リリースに関して質問がある場合は、 ここで回答を探してみてください。"
+description: "Azure Information Protection の現在のリリースに関して質問がある場合は、 ここで回答を探してみてください。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8bb0058940eaf1663ec82b38bc37c33400ea8b87
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: ad94507f4aea48172ed3c3f74f6d12e3c67cc18e
 
 
 ---
@@ -27,7 +27,9 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 ## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Azure Information Protection の分類機能はどのように使用しますか。
 
-Azure Information Protection クライアントでは、Information Protection バーが Microsoft Office アプリケーションに追加されました。このバーを使うと、データに割り当てられている分類ラベルを表示および変更できます。 分類は、手動、ユーザーへの推奨、または自動で適用されます。 指定した分類に対して、Rights Management サービスを使用してデータを保護できます。  
+Azure Information Protection クライアントでは、Information Protection バーが Microsoft Office アプリケーションに追加されました。このバーを使うと、分類ラベルを表示し、Office ドキュメントと電子メールに分類ラベルを割り当てることができます。
+
+機密データが検出されたときに、既定、手動、推奨値、または自動的に分類を適用できます。 これらのラベルで、Rights Management サービスを使用して自動的にデータを保護することもできます。 Office ドキュメントと電子メールだけでなく、エクスプローラーで&1; つのファイル、複数のファイル、または&1; つのフォルダーを右クリックして、他のファイルも分類し、保護することができます。 または、PowerShell を使用してコマンド ラインから分類と保護を一括してすばやく実行することもできます。
 
 分類のラベルと動作は、Azure ポータルで構成します。 既定の組み込みポリシーを使用して Azure Information Protection を非常に短時間で評価したり、独自のポリシーを完全にカスタマイズしたりできます。 ユーザーに表示される分類ラベルの色、名称、順序を変更できます。 ツール ヒントおよびヘッダー、フッター、透かしなどの分類のビジュアル マーキングを構成することもできます。
 
@@ -47,7 +49,7 @@ Azure Information Protection クライアントでは、Information Protection �
 
 - パートナー向けおよび開発者向けの SDK はありません。
 
-以前記載されていた制限事項の一部が、プレビューで利用可能になりました。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection December preview now available (Azure Information Protection の&12; 月のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)」を参照してください。
+前述の制限の一部は、新しいクライアントの&2; 月リリースで使用できるようになりました。 詳細については、ブログの投稿のお知らせを参照してください。
 
 
 ## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>Azure Information Protection を試すにはグローバル管理者である必要がありますか。
@@ -78,7 +80,7 @@ Azure Information Protection はファイルと電子メールに永続的なラ
 
 Azure Information Protection ポリシーのアクションは、ドキュメントの保存時および電子メールの送信時に、新規コンテンツおよび既存コンテンツへの変更の両方に対して反映されます。
 
-プレビュー クライアントがある場合は、ファイル エクスプローラーから既存のファイルをすばやく分類 (および必要に応じて、保護) することもできます。 
+最新バージョンのクライアントがある場合は、エクスプローラーから既存のファイルをすばやく分類 (および必要に応じて、保護) することもできます。 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Azure Information Protection を分類のみに使用し、暗号化の適用と使用権限の制限が行われないようにすることはできますか?
 
@@ -90,7 +92,7 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 この例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」を参照してください。 
 
-分類の精度は、条件に基づく分類ルールの構成方法によって異なります。 現時点では、条件はテキスト パターンと正規表現をサポートしています。 プレビュー中に使用できる各オプションの説明と、テスト用に推奨されるいくつかの例については、「[Azure Information Protection の自動および推奨分類の条件を構成する方法](../deploy-use/configure-policy-classification.md)」を参照してください。 検出は、ドキュメントの保存時または電子メールの送信時に実行されます。
+分類の精度は、条件に基づく分類ルールの構成方法によって異なります。 現時点では、条件はテキスト パターンと正規表現をサポートしています。 使用できる各オプションの説明と、テスト用に推奨されるいくつかの例については、「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](../deploy-use/configure-policy-classification.md)」を参照してください。 検出は、ドキュメントの保存時または電子メールの送信時に実行されます。
 
 最適なユーザー エクスペリエンスおよびビジネス継続性の確保のためには、完全自動アクションではなく、ユーザー推奨アクションで始めることをお勧めします。 このようにすると、ユーザーは、ラベル付けまたは保護のアクションを受け入れることも、これらの推奨アクションをオーバーライドすることもできます。   
 
@@ -106,8 +108,7 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 ## <a name="can-i-remove-classification-from-a-file"></a>ファイルから分類を削除できますか?
 
-はい。 ファイルから分類を削除するには、Office アプリケーションでファイルを開き、Information Protection バーの **[ラベルの編集]** アイコンをクリックして、**[ラベルの削除]** アイコンの順にクリックし、**[OK]** をクリックしてアクションを確認します。 
-
+はい。 詳細については、ユーザー ガイドの「[Remove classification labels and protection from files and emails](../rms-client/client-remove-label-protection.md)」(ファイルと電子メールから分類ラベルと保護を削除する) を参照してください。 
 
 ## <a name="can-i-prompt-users-to-justify-why-they-are-changing-the-classification-level"></a>ユーザーに分類レベルを変更する理由の説明を求めることはできますか?
 
@@ -133,7 +134,7 @@ Azure ポータルで Rights Management テンプレートを選択すること�
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 
-Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら&2; つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、プレビュー バージョンの Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
+Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら&2; つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
 
 Outlook Web アプリは Azure Information Protection の分類および保護をネイティブでサポートしていませんが、この同じ手法を使って、デスクトップの Outlook クライアントだけでなく、この電子メール クライアントでもラベルを使用することができます。
 
@@ -152,7 +153,7 @@ Outlook Web アプリは Azure Information Protection の分類および保護�
 
 - Exchange ルールにより Exchange の分類が検出され、ルールに従ってメッセージ ヘッダーが変更されて、Azure Information Protection の分類が追加されます。
 
-- プレビュー バージョンの Azure Information Protection クライアントを実行する受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベル、および対応する電子メールのヘッダー、フッター、または透かしが表示されます。 
+- Azure Information Protection クライアントを実行する受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベル、および対応する電子メールのヘッダー、フッター、または透かしが表示されます。 
 
 Azure Information Protection ラベルが Rights Management による保護を適用する場合は、メッセージ セキュリティを変更するオプションを選択してルールの構成に追加し、Rights Management による保護を適用して、RMS テンプレートまたは [転送不可] オプションを選択します。
 
@@ -166,11 +167,9 @@ Azure Information Protection は分類に永続的メタデータを使用し、
 
 ## <a name="how-does-document-tracking-and-revocation-work-for-azure-information-protection"></a>Azure Information Protection では、ドキュメントの追跡と失効はどのように行われますか?
 
-Azure Information Protection を使用して分類および保護されたファイルのドキュメントの追跡は、Azure Rights Management 保護や RMS 共有アプリケーションと連動します。 また、Azure Information Protection クライアント (バージョン 1.0.233 以降) を使用してドキュメント追跡サイトにもアクセスできます。 
+Azure Information Protection を使用して分類および保護するファイルのドキュメント追跡は、最新リリースの Azure Information Protection クライアント (バージョン 1.3.155.2 以降) で使用できます。 
 
-- Office アプリケーションの **[ホーム]** タブの **[保護]** グループで、**[保護]** > **[使用の追跡]** をクリックします。 
-
-詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)」を参照してください。
+詳細については、「[Azure Information Protection を使用して保護されたドキュメントを追跡および取り消す](../rms-client/client-track-revoke.md)」を参照してください。
 
 ## <a name="can-i-control-which-users-can-use-azure-information-protection-to-classify-and-protect-content"></a>Azure Information Protection を使用してコンテンツを分類および保護できるユーザーを制御できますか?
 
@@ -200,13 +199,15 @@ Azure Information Protection によって分類されたファイルおよび電
 
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Azure Information Protection の問題を報告またはフィードバックを送信するにはどうすればよいですか。
 
-Azure Information Protection に問題があり、クライアントの現行リリースを使用している場合: お使いの Office アプリケーションの **[ホーム]** タブの **[保護]** グループで、**[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[フィードバックの送信]** をクリックします。 これにより、Information Protection チームに電子メールが送信され、問題の診断に役立つ PC のログ ファイルが自動的に添付されます。 
+テクニカル サポートの場合は、標準のサポート チャネルを使用するか、[Microsoft サポートに問い合わせ](information-support.md#to-contact-microsoft-support)てください。
 
-質問やご意見がある場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)を使用してください。 
+改善や新機能の提案などのフィードバックについては、Office アプリケーションの **[ホーム]** タブの **[保護]** グループで **[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[フィードバックの送信]** をクリックします。 これにより、Information Protection チームに電子メールが送信され、PC のログ ファイルが自動的に添付されます。 
+
+[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

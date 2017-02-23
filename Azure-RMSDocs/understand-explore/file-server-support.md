@@ -4,7 +4,7 @@ description: "Office ドキュメントを自動的に保護する RMS コネク
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: dd94145bc2a6f338bb8a8c0ac0712ed1c86517d4
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
 
 ファイル分類インフラストラクチャを使用するように Windows Server を構成すると、このファイル サーバー リソース マネージャーの機能でローカル ファイルをスキャンし、機密データが含まれているかどうかを判断することができます。 この条件を満たすファイルには、管理者が定義する分類プロパティのタグが付けられます。 その後で、ファイル分類インフラストラクチャが分類に従って自動操作を実行できます。 これらの操作には、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用した情報保護の適用や Rights Management コネクタ (RMS コネクタとも呼びます) のデプロイなどがあります。 これにより Office ファイルは Azure RMS によって自動的に保護されます。
 
-すべてのファイルの種類を保護する場合は、RMS コネクタを使用せずに、代わりに、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)でコマンドレットを使用して Windows PowerShell スクリプトを実行できます。
+すべてのファイルの種類を保護する場合は、RMS コネクタを使用せずに、代わりに、[Azure Information Protection モジュール](../rms-client/client-admin-guide-powershell.md)でコマンドレットを使用する Windows PowerShell スクリプトを実行できます。
 
 この分類ポリシーは、完全に構成可能で拡張性が高いので、承認されていないユーザーおよび承認されたユーザーからの潜在的なデータの漏えいを防止できます。 管理者がファイルにアクセスする必要がないようなポリシーを構成できるので、ネットワーク管理者からのデータ漏えいのリスクも減らすことができます。
 
@@ -45,6 +45,6 @@ Office ファイル用 RMS コネクタをデプロイおよび構成する方�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

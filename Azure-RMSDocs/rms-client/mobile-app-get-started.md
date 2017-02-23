@@ -5,7 +5,7 @@ keywords: "iOS 用および Android 用の Azure Information Protection アプ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: b2fb20fb4613c688a8ab956fbe91d62041801959
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: 32e0315a8a4e6515b0b89b85afefa1bb17591e0b
 
 
 ---
@@ -32,9 +32,9 @@ ms.openlocfilehash: b2fb20fb4613c688a8ab956fbe91d62041801959
     
     別のデバイスを使用して、モバイル デバイスからアクセスできる権利が保護された電子メール メッセージを自分自身に送信します。 たとえば、Windows コンピューターから Outlook を使用します。 Rights Management をネイティブにサポートする電子メール クライアントの一覧については、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」ページの「電子メール」列を参照してください。
 
-- **権利が保護された PDF ファイル**: Windows コンピューターの Rights Management 共有アプリケーションまたは Rights Management をネイティブにサポートする PDF アプリケーションを使用して、権利が保護された PDF ファイルを電子メールの添付ファイルとして自分自身に送信します。 または、自分の電子メール アドレスを使用し、SharePoint で保護されたライブラリに PDF ファイルをアップロードして共有します。
+- **権利が保護された PDF ファイル**: Windows コンピューターから Azure Information Protection クライアントを使用して、[PDF ファイルを保護](client-classify-protect.md)し、この権利が保護された PDF ファイルを電子メールの添付ファイルとして自分自身に送信します。 または、自分の電子メール アドレスを使用し、SharePoint で保護されたライブラリに PDF ファイルをアップロードして共有します。
 
-- **.ptxt、.pjpg、.ppng**: Windows コンピューターの Rights Management 共有アプリケーションと [[保護ファイルの共有]](sharing-app-protect-by-email.md) オプションを使用して、保護されたファイルを電子メールの添付ファイルとして自分自身に送信します。 テストのために使用できるすべてのファイルの種類の一覧については、Rights Management 共有アプリケーション管理者ガイドの「[サポートされているファイルの種類とファイル名拡張子](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションの最初の表を参照してください。 
+- **.ptxt、.pjpg、.ppng**: Windows コンピューターから Azure Information Protection クライアントを使用して、テキストまたはイメージ ファイルを保護し、この保護されたファイルを電子メールの添付ファイルとして自分自身に送信します。 テストのために使用できるファイルの種類の全リストについては、Azure Information Protection クライアント管理ガイドの「[保護に対してサポートされるファイルの種類と、そのファイル名拡張子](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions)」セクションを参照してください。 
 
 これらのファイルを Azure Information Protection ビューアー アプリで表示するには、電子メールの添付ファイルまたはリンクをタップします。 ファイルを開くアプリの選択を求められたら、**[AIP Viewer]** (AIP ビューアー) アプリを選択します。 職場または学校アカウントでサインインするように求められます。 正常に認証されると、Azure Information Protection アプリで電子メールまたはファイルが表示されて読めるようになります。
 
@@ -47,6 +47,6 @@ ms.openlocfilehash: b2fb20fb4613c688a8ab956fbe91d62041801959
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

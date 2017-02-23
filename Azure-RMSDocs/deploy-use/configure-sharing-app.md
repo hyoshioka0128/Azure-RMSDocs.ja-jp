@@ -4,7 +4,7 @@ description: "Rights Management (RMS) 共有アプリケーションの Windows 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0d15a232bc1f0b1bce94e48c7e9c6f6b9419b5dd
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: cffebd2ac11f78b20b125bfd7eabca83a6ba0363
 
 
 ---
@@ -23,21 +23,22 @@ ms.openlocfilehash: 0d15a232bc1f0b1bce94e48c7e9c6f6b9419b5dd
 
 >*適用対象: Azure Information Protection、Office 365*
 
-Rights Management (RMS) 共有アプリケーションは、Azure Rights Management サービスと Office 2010 を使用するクライアント コンピューターに必要です。また、Azure Information Protection からの Azure Rights Management サービスをサポートするすべてのコンピューターとモバイル デバイスに推奨されます。 RMS 共有アプリケーションにより Office アドインがインストールされて Office アプリケーションが統合されるので、ユーザーは簡単にファイルや電子メールをリボンから直接保護できます。 RMS 共有アプリケーションでは、Azure Rights Management サービスがネイティブでサポートしていないファイルに汎用的な保護を適用することで、すべてのファイルの種類を保護することもできます。また、ドキュメント追跡サイトにより、ユーザーが保護したドキュメントを追跡したり、取り消したりすることもできます。
+> [!IMPORTANT]
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](../rms-client/aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2018 年 1 月 31 日に停止されます。 
+ 
+RMS 共有アプリケーションは Office 2010 の認証をサポートしています。また、Office アドインをインストールして Office アプリケーションと統合することで、ユーザーは簡単にファイルや電子メールをリボンから直接保護できます。 また、このアプリケーションでは、Azure Rights Management サービスがネイティブでサポートしていないファイルに汎用的な保護を適用することで、すべてのファイルの種類を保護することもできます。また、ドキュメント追跡サイトにより、ユーザーが保護したドキュメントを追跡したり、取り消したりすることもできます。
 
 ## <a name="the-rms-sharing-application-for-windows-installation-and-configuration"></a>Windows 用 RMS 共有アプリケーション: インストールと構成
-エンタープライズ デプロイで Windows 用 RMS 共有アプリケーションをインストールして構成する場合は、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
+企業で Windows 用 RMS 共有アプリケーションをインストールして構成する場合は、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)」を参照してください。
 
-> [!TIP]
-> 単一のコンピューターで RMS 共有アプリケーションを簡単にインストールしてテストしたい場合は、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」の「[Rights Management 共有アプリケーションをダウンロードしてインストールする](../rms-client/install-sharing-app.md)」を参照してください。
+このアプリケーションは Microsoft Azure Information Protection ページからダウンロードする必要はなくなりました。Windows コンピューターのリンクで、Azure Information Protection クライアントをダウンロードできます。 
+
 
 ## <a name="the-rms-sharing-application-for-mobile-platforms-installation-and-management"></a>モバイル プラットフォーム用 RMS 共有アプリケーション: インストールと管理
-モバイル プラットフォームで RMS 共有アプリケーションをインストールするには、 [Microsoft Rights Management ページ](http://go.microsoft.com/fwlink/?LinkId=303970)のリンクを使用して該当するアプリをダウンロードできます。 Azure Rights Management サービスとこのアプリを使用するには、構成は必要ありません。
+[Microsoft Azure Information Protection ページ](https://go.microsoft.com/fwlink/?LinkId=303970)から、Mac コンピューターおよび Windows Phone デバイス用 RMS 共有アプリをダウンロードおよびインストールできます。 
 
-> [!NOTE]
-> iOS 用および Android 用の RMS 共有アプリケーションは、Azure Information Protection アプリに置き換わっています。
+このページから iOS および Android 用の RMS 共有アプリはダウンロードできなくなりました。これらのモバイル デバイス用のリンクでは、Azure Information Protection クライアントがダウンロードされます。 
 
-**Microsoft Intune を所有している場合**: Azure Information Protection アプリには Microsoft Intune App Software Development Kit が含まれているため、Intune で iOS デバイスや Android デバイスを登録していると、これらのデバイス用の Azure Information Protection アプリをデプロイおよび管理できます。 詳細については、Intune のドキュメントの「[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune コンソールでモバイル アプリケーション管理ポリシーを構成およびデプロイする)](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」を参照してください。 手順 2. として、手順に従ってポリシー管理型アプリを発行します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
@@ -45,6 +46,6 @@ Rights Management (RMS) 共有アプリケーションは、Azure Rights Managem
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

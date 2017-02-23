@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection の迅速なデプロイ ガイド | Azure Information Protection"
-description: "Azure Information Protection をよりすばやくデプロイして使用し、組織のデータを保護するために使用できるガイドです。 特定のシナリオの一覧から実装するシナリオを選択して開始します。"
+title: "Azure Rights Management の迅速なデプロイ ガイド | Azure Information Protection"
+description: "Azure Rights Management サービスをよりすばやくデプロイして使用し、組織のデータを保護するために使用できるガイドです。 特定のシナリオの一覧から実装するシナリオを選択して開始します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
 
 
 ---
@@ -23,7 +23,10 @@ ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 >*適用対象: Azure Information Protection、Office 365*
 
-このガイドは、「**デプロイと使用**」セクションの構成情報を補足するもので、実装する具体的なシナリオを一覧から選択することにより、Azure Information Protection を迅速にデプロイして使用する場合に役立ちます。
+このガイドは、「**デプロイと使用**」セクションの構成情報を補足するもので、Azure Information Protection から Azure Rights Management サービスを使用する保護のみのソリューションを迅速にデプロイする場合に役立ちます。 特定のシナリオの一覧から実装するシナリオを選択します。
+
+> [!NOTE]
+> 現時点では、保護のみに関するシナリオはガイドに含まれていますが、分類や保護または Azure Information Protection クライアントに関するシナリオは含まれていません。 
 
 シナリオには、管理者向けの指示とそれに伴うエンド ユーザー向けのドキュメントの両方が用意されています。 エンド ユーザーにこのドキュメント (指示やお知らせ) を配布する前に、まずドキュメントをビジネス要件および既存のワーク フローに合わせてカスタマイズする必要があります。 一連の指示やお知らせの例では、最終的なエンド ユーザー マニュアルの体裁を示します。
 
@@ -33,8 +36,7 @@ ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 これらのソリューションをロールアウトする前に、会社のデータを保護するための変更を行うこと、そのためにエンド ユーザーからの変更が必要な場合があることをエンド ユーザーに広く告知することができます。 次の表の後に、通信の例を示します。
 
-> [!NOTE]
-> このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
+このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
 
 ## <a name="scenarios-for-azure-information-protection"></a>Azure Information Protection のシナリオ
 Azure Information Protection を短時間でデプロイし、ビジネス上の特定の問題に対処するには、ビジネス上の目標に最も一致するシナリオを選択し、必要に応じてカスタマイズします。
@@ -148,6 +150,6 @@ IT 部門は Microsoft Azure Information Protection をエンタープライズ 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

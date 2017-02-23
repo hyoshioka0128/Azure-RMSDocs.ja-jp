@@ -1,6 +1,6 @@
 ---
 title: "クイック スタート チュートリアル手順 1 | Azure Information Protection"
-description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 1 です。"
+description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 1 です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
+ms.sourcegitcommit: 420da63412f10431d29c01bad317c69cf72b66ad
+ms.openlocfilehash: a2631af6bf972a8c88d37e42149b90fb96f71763
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
 > [!NOTE]
 >テナントの Azure Rights Management サービスを既にアクティブ化している場合は、直接、[次の手順](infoprotect-tutorial-step2.md)に進んでください。 
 
-Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータル間の移動を含め、このサービスをアクティブ化するさまざまな方法があります。
+Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータル間の移動を含め、このサービスをアクティブ化するさまざまな方法があります。
 
 このチュートリアルでは、Office 365 管理者用のアクティブ化ページに直接移動します。このページは、Office 365 クラシック ポータルと Office 365 管理センター プレビューの場合と同じです。 
 
@@ -59,6 +59,6 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
