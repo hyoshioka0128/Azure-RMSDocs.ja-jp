@@ -4,15 +4,15 @@ description: "暗号化ポリシー、ID ポリシー、および承認ポリシ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 659f8d79a0ed0146fb94040ab7328e7b9530460a
+ms.sourcegitcommit: f71b5d98d03453ee49ea177fcb894c28f0f2688f
+ms.openlocfilehash: 9224cdbd5c7e1aa1453328150b903db386af2322
 
 
 ---
@@ -51,41 +51,52 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
 - オンプレミスの Exchange の場合: [RMS コネクタを展開し、Exchange サーバーを構成する](../deploy-use/deploy-rms-connector.md)必要があります。 
 
 
-## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Rights Management による保護を適用するようにラベルを構成するには
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護にラベルを構成するには
 
 1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウを開き、全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
 
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 構成するラベルがすべてのユーザーに適用される場合は、**[Policy:Global]**(ポリシー:グローバル) ブレードで変更するラベルを選択します。 
+2. 構成するラベルがすべてのユーザーに適用される場合は、**[Azure Information Protection]** ブレードから **[Global]** (全体) を選択します。 ただし、構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、代わりにそのスコープ ポリシーを選択します。
 
-     構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
+3. **[ポリシー]** ブレードで、構成するラベルを選択すると、**[ラベル]** ブレードが開きます。 
 
-3. **[ラベル]** ブレードの **[このラベルを含むドキュメントやメールを保護する RMS テンプレートの設定]** セクションで、**[RMS テンプレートの選択]** を **[Azure RMS]** または **[AD RMS]** に設定します。
+4. **[ラベル]** ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけます。 
     
-    ほとんどの場合は、**[Azure RMS]** を選択します。 AD RMS 構成 ("*Hold Your Own Key*" (HYOK) とも呼ばれます) に付随する前提条件と制限事項を読み、理解してから、AD RMS を選択してください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
+    アクセス許可を適用する場合は **[保護]** を、電子メールまたはドキュメントに適用されている可能性がある保護を削除する場合は **[保護の削除]** を選択します。
+
+    - **[保護]** を選択した場合は、手順 5 に移動します。
+    - **[保護の削除]** を選択した場合は、手順 11 に移動します。
+
+5. **[保護]** を選択した場合、**[保護]** バーをクリックすると、**[アクセス許可]** ブレードが開きます。
     
-4. Azure RMS を選択した場合: **[RMS テンプレートの選択]** ドロップダウン ボックスをクリックし、このラベルを持つドキュメントや電子メールの保護に使用する[テンプレート](../deploy-use/configure-custom-templates.md)または権限管理オプションを選択します。
+    ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar.png)
+
+6. **[アクセス許可]** ブレードで、**[Azure RMS]** または **[HYOK (AD RMS)]** を選択します。 
     
-    オプションについての詳細:
+    ほとんどの場合、アクセス許可の設定には **[Azure RMS]** を選択します。 この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限事項を読み、理解するまでは **[HYOK (AD RMS)]** を選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
     
-    - **[ラベル]** ブレードを開いた後で新しいテンプレートを作成しましたか? このブレードを閉じて手順 2 に戻ります。新しく作成したテンプレートが Azure から取得され、選択できるようになります。
+7. 電子メールにこの Outlook オプションを設定する場合は **[転送しない]** を、または **[テンプレートの選択]** のどちらかを選択してください。 
     
-    - **[部門別テンプレート]**を選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
+8. **[Azure RMS]** で **[テンプレートの選択]** を選択した場合、ドロップ ダウン ボックスをクリックし、このラベルでドキュメントと電子メールを保護するために使用する[テンプレート](../deploy-use/configure-custom-templates.md)を選択します。
     
-        - 構成されたテンプレート範囲の外にいるユーザー、または Azure Rights Management 保護の適用から除外されているユーザーは、引き続きラベルを確認できますが、適用することはできません。 それらのユーザーがラベルを選択した場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
-        
-            スコープ ポリシーを構成する場合でも、すべてのテンプレートが常に表示されることに注意してください。 たとえば、マーケティング グループのスコープ ポリシーを構成しているとします。 選択可能な Azure RMS テンプレートは、マーケティング グループにスコープされたテンプレートに制限されることはなく、選択されたユーザーが使用できない部門別のテンプレートを選択することが可能です。 構成を簡単にしてトラブルシューティングを最小限に抑えるために、部門別テンプレートの名前がスコープ ポリシーのラベルに一致するように名前を付けることを考慮してください。 
+    **[部門別テンプレート]**を選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
+    
+    - 構成されたテンプレート範囲の外にいるユーザー、または Azure Rights Management 保護の適用から除外されているユーザーは、引き続きラベルを確認できますが、適用することはできません。 それらのユーザーがラベルを選択した場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
+    
+        スコープ ポリシーを構成する場合でも、すべてのテンプレートが常に表示されることに注意してください。 たとえば、マーケティング グループのスコープ ポリシーを構成しているとします。 選択可能な Azure RMS テンプレートは、マーケティング グループにスコープされたテンプレートに制限されることはなく、選択されたユーザーが使用できない部門別のテンプレートを選択することが可能です。 構成を簡単にしてトラブルシューティングを最小限に抑えるために、部門別テンプレートの名前がスコープ ポリシーのラベルに一致するように名前を付けることを考慮してください。 
             
-    - **[保護の削除]** を選択する場合:
-        
-        - このオプションを持つラベルを適用するには、ユーザーは Rights Management による保護を削除する権限を持っている必要があります。 このオプションでは **[エクスポート]** (Office ドキュメント用) または **[フル コントロール]** [使用権限](../deploy-use/configure-usage-rights.md)を持っている、Rights Management の所有者 (自動的にフル コントロール使用権限が付与されています) である、または[Azure Rights Management のスーパー ユーザー](../deploy-use/configure-super-users.md)である必要があります。 既定の権限管理テンプレートには、ユーザーに保護を削除させる使用権限は含まれません。 
+9. **[HYOK (AD RMS)]** で **[テンプレートの選択]** を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。 [詳細情報](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-            ユーザーが Rights Management による保護を削除する権限を持たずに **[保護の削除]** オプションを持つラベルを選択する場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
+10. **[完了]** をクリックして **[アクセス許可]** ブレードを閉じ、選択した **[転送しない]** または選択したテンプレートが **[ラベル]** ブレードの **[保護]** バーに表示されていることを確認します。
 
-5. AD RMS を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。 [詳細情報](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
+11. **[保護の削除]** を選択する場合:
+    
+    このオプションを持つラベルを適用するには、ユーザーは Rights Management による保護を削除する権限を持っている必要があります。 このオプションでは **[エクスポート]** (Office ドキュメント用) または **[フル コントロール]** [使用権限](../deploy-use/configure-usage-rights.md)を持っている、Rights Management の所有者 (自動的にフル コントロール使用権限が付与されています) である、または[Azure Rights Management のスーパー ユーザー](../deploy-use/configure-super-users.md)である必要があります。 既定の権限管理テンプレートには、ユーザーに保護を削除させる使用権限は含まれません。 
+    
+    ユーザーが Rights Management による保護を削除する権限を持たずに **[保護の削除]** オプションを持つラベルを選択する場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
 
-6. **[保存]** をクリックします。
+6. **[ラベル]** ブレードで、**[保存]** をクリックします。
 
 7. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
@@ -96,6 +107,6 @@ Azure Information Protection ポリシーの構成の詳細については、「
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 
