@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection の用語 | Azure Information Protection"
+title: "Azure Information Protection の用語"
 description: "Microsoft Azure Information Protection に関連する単語、フレーズ、略語で混乱していませんか。 Azure Information Protection に固有の用語と略語、およびこのサービスのコンテキストで使用されるときに特定の意味を持つ用語と略語の定義については以下を参照してください。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
-ms.openlocfilehash: 70657eb86ac3aeb53b8fb9983a33905100ca92b8
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a5cfa773d440e92fe9d3e88e242dfb25f7174400
 
 
 ---
@@ -73,6 +73,6 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

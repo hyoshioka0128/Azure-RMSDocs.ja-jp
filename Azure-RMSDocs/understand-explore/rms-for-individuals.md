@@ -1,5 +1,5 @@
 ---
-title: "個人用 RMS と Azure Information Protection | Azure Information Protection"
+title: "個人用 RMS と Azure Information Protection"
 description: "組織内のユーザーを対象にした無料のセルフサービス サブスクリプションである個人向け RMS に関する情報です。Azure Rights Management サービスによって保護された機密ファイルが組織内のユーザーに送信されているものの、IT 部門が Azure でそれらのユーザーのアカウントを管理していないために、該当するユーザーを認証できないという場合に使用できます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9453354687b4b469989f0fe33d4abce0bde21570
-ms.openlocfilehash: 327e68131c8d432887a682c83a6e30f6c83c1a8e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
 
 
 ---
@@ -43,6 +43,6 @@ Azure Information Protection クライアントを使用してファイルを保
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

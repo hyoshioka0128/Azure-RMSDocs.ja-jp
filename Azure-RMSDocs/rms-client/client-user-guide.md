@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection ユーザー ガイド | Azure Information Protection"
+title: "Azure Information Protection ユーザー ガイド"
 description: "Windows 用 Azure Information Protection クライアントは、電子メールが転送されたりドキュメントが別の場所に保存されている場合でも、重要なドキュメントや電子メールを閲覧すべきでないユーザーから保護するうえで役立ちます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f8d41ff31b4512ea4c9335ce1ca243095526db84
-ms.openlocfilehash: 1303546ebc5073c0370c1da685cb4f1a74e3e7e1
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3facc7898e048af6f715410c73c43309419bf957
 
 
 ---
@@ -50,6 +50,6 @@ Windows 用 Azure Information Protection クライアントは、電子メール
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
