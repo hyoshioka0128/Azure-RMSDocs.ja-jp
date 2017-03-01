@@ -1,5 +1,5 @@
 ---
-title: "分類とラベル付けに関してよく寄せられる質問 | Azure Information Protection"
+title: "分類とラベル付けに関してよく寄せられる質問 - AIP"
 description: "Azure Information Protection の現在のリリースに関して質問がある場合は、 ここで回答を探してみてください。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: ad94507f4aea48172ed3c3f74f6d12e3c67cc18e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: dfa89dc4c216807fdebd57dce202a7983a18d9fb
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,7 +32,7 @@ Azure Information Protection クライアントでは、Information Protection �
 
 機密データが検出されたときに、既定、手動、推奨値、または自動的に分類を適用できます。 これらのラベルで、Rights Management サービスを使用して自動的にデータを保護することもできます。 Office ドキュメントと電子メールだけでなく、エクスプローラーで&1; つのファイル、複数のファイル、または&1; つのフォルダーを右クリックして、他のファイルも分類し、保護することができます。 または、PowerShell を使用してコマンド ラインから分類と保護を一括してすばやく実行することもできます。
 
-分類のラベルと動作は、Azure ポータルで構成します。 既定の組み込みポリシーを使用して Azure Information Protection を非常に短時間で評価したり、独自のポリシーを完全にカスタマイズしたりできます。 ユーザーに表示される分類ラベルの色、名称、順序を変更できます。 ツール ヒントおよびヘッダー、フッター、透かしなどの分類のビジュアル マーキングを構成することもできます。
+分類のラベルと動作は、Azure Portal で構成します。 既定の組み込みポリシーを使用して Azure Information Protection を非常に短時間で評価したり、独自のポリシーを完全にカスタマイズしたりできます。 ユーザーに表示される分類ラベルの色、名称、順序を変更できます。 ツール ヒントおよびヘッダー、フッター、透かしなどの分類のビジュアル マーキングを構成することもできます。
 
 「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」に従えば、わずか数分でこの動作を確認できます。
 
@@ -54,11 +55,11 @@ Azure Information Protection クライアントでは、Information Protection �
 
 ## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>Azure Information Protection を試すにはグローバル管理者である必要がありますか。
 
-Azure Information Protection ポリシーを構成するには、Azure Active Directory のグローバル管理者として Azure ポータルにサインインする必要があります。
+Azure Information Protection ポリシーを構成するには、Azure Active Directory のグローバル管理者として Azure Portal にサインインする必要があります。
 
-ただし、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもラベル機能を試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試用できますが、ラベルの変更または新規追加には Azure ポータルにサインインする必要があります。 
+ただし、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもラベル機能を試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試用できますが、ラベルの変更または新規追加には Azure Portal にサインインする必要があります。 
 
-## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Azure ポータルのオプションが P1 か P2 かを確認するにはどうすればよいですか?
+## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Azure Portal のオプションが P1 か P2 かを確認するにはどうすればよいですか?
 
 **Azure Information Protection Premium 1 (P1)** サブスクリプションに含まれる機能か、**Azure Information Protection Premium 2 (P2)** サブスクリプションに含まれる機能かを確認するには、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を参照してください。 ただし、一般的なガイドとして、自動分類や Hold Your Own Key (HYOK) などの高度な機能は、Azure Information Protection Premium 2 のサブスクリプションに固有です。
 
@@ -88,7 +89,7 @@ Azure Information Protection ポリシーのアクションは、ドキュメン
 
 ## <a name="how-does-automatic-classification-work"></a>自動分類はどのように行われますか?
 
-Azure ポータルでは、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。
+Azure Portal では、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。
 
 この例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」を参照してください。 
 
@@ -98,7 +99,7 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 ## <a name="can-azure-information-protection-prompt-users-to-classify-files-themselves-rather-than-use-automatic-classification"></a>Azure Information Protection では、自動分類を使用するのではなく、自分でファイルを分類するようにユーザーに要求できますか? 
 
-はい。 Azure ポータルで自動分類または推奨のどちらを使うかを構成できます。**[Select how this label is applied: automatically or recommended to user]** (このラベルの適用方法を選択: 自動または推奨) オプションを **[Recommended]** (推奨) に設定すると、ユーザーに対して推奨が行われます。
+はい。 Azure Portal で自動分類または推奨のどちらを使うかを構成できます。**[Select how this label is applied: automatically or recommended to user]** (このラベルの適用方法を選択: 自動または推奨) オプションを **[Recommended]** (推奨) に設定すると、ユーザーに対して推奨が行われます。
 
 この例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」を参照してください。  
 
@@ -112,13 +113,13 @@ Azure ポータルでは、"クレジット カード番号" や "米国社会�
 
 ## <a name="can-i-prompt-users-to-justify-why-they-are-changing-the-classification-level"></a>ユーザーに分類レベルを変更する理由の説明を求めることはできますか?
 
-はい。 分類を変更する理由をユーザーに入力させるには、Azure ポータルで **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) オプションを **[On]** (オン) に設定します。 このように設定すると、ユーザーのアクションと理由が、ローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Microsoft Azure Information Protection]** に記録されます。
+はい。 分類を変更する理由をユーザーに入力させるには、Azure Portal で **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) オプションを **[On]** (オン) に設定します。 このように設定すると、ユーザーのアクションと理由が、ローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Microsoft Azure Information Protection]** に記録されます。
 
 ## <a name="how-can-i-automatically-protect-the-content-after-its-been-classified"></a>分類された後のコンテンツを自動的に保護するにはどうすればよいですか?
 
-Azure ポータルで Rights Management テンプレートを選択することにより、指定した分類レベルに従ってコンテンツを自動的に保護できます。
+Azure Portal で Rights Management テンプレートを選択することにより、指定した分類レベルに従ってコンテンツを自動的に保護できます。
 
-この例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」を参照してください。 詳しくは、「[Rights Management による保護を適用するためのラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
+この例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」を参照してください。 詳しくは、「[Rights Management による保護を適用するようにラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
@@ -206,8 +207,3 @@ Azure Information Protection によって分類されたファイルおよび電
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

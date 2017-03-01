@@ -1,5 +1,5 @@
 ---
-title: "Azure RMS が解決する問題の種類 | Azure Information Protection"
+title: "Azure Rights Management が解決する問題 - AIP"
 description: "組織が抱える要件や問題を明らかにし、Azure RMS テクノロジでそれらをどのように解決できるかを理解します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 949cbe07234f78ca046aec1fc2590adf86f00a06
-ms.openlocfilehash: 40f242c31553545651794e6e5a8f744963bb541b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 5051ed614d8611c89e037ea633f15b7f0f344020
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -75,8 +76,3 @@ Azure Rights Management は、セキュリティ、コンプライアンス、�
 Azure Rights Management サービスの動作に関する技術的な詳細については、「[Azure RMS の機能の詳細](how-does-it-work.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

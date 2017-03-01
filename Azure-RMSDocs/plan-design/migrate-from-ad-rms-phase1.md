@@ -1,10 +1,10 @@
 ---
-title: "AD RMS から Azure Information Protection に移行する - フェーズ 1 | Azure Information Protection"
+title: "AD RMS から Azure Information Protection への移行 - フェーズ 1"
 description: "AD RMS から Azure Information Protection への移行のフェーズ 1 には、手順 1 ～ 4 が含まれます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 774ea4fe8bb5e0ae7335bb3c106b57393167ee39
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -165,7 +166,7 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ## <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure Information Protection にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure Information Protection の同等のグループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com** です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
+AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure Information Protection にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure Information Protection 用の同等グループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<テナント名>.onmicrosoft.com** です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
 
 AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS (Windows PowerShell を使用した AD RMS の管理)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」を参照してください。
 
@@ -223,9 +224,4 @@ Remove-PSDrive MyRmsAdmin -force
 「[フェーズ 2 - クライアント側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

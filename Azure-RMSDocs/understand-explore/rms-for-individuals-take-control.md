@@ -1,10 +1,10 @@
 ---
-title: "個人用 RMS 向けに作成されたアカウントを管理者が制御する方法 | Azure Information Protection"
+title: "個人用 RMS 用に作成されたアカウントを制御する - AIP"
 description: "組織の個人向け RMS サブスクリプションを有料のサブスクリプションに切り替えない場合に、Azure Active Directory でユーザー アカウントを制御する方法について説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 19b71ee6016971e1d989db8961b8b77a50fd0124
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ff8cd150ce438a7b9ad5203dfb6d9d01c1a0d85a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -46,8 +47,3 @@ Azure ディレクトリ内のユーザー アカウントを制御する、ま�
 管理者ではないユーザーが個人用 RMS 向けに自分のアカウントを Azure Active Directory に作成できる場合、ユーザーがこの操作を行っているかどうかを確認するには、どうすればよいでしょうか。  「[ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法](rms-for-individuals-identify-sign-up.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

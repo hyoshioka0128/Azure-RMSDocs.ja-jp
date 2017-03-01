@@ -1,5 +1,5 @@
 ---
-title: "クイック スタート チュートリアル手順 5 | Azure Information Protection"
+title: "クイック スタート チュートリアルの手順 5 - AIP"
 description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 5 です。"
 keywords: 
 author: cabailey
@@ -14,8 +14,9 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 7d8efb8d590e75979c98f14951f2cda389e58c4c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 351ba4f71ac36194494ed315466522120a61692c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -129,8 +130,3 @@ ms.openlocfilehash: 7d8efb8d590e75979c98f14951f2cda389e58c4c
 Azure Information Protection に関して[よく寄せられる質問](faqs.md)をいくつか読み、他のドキュメントの記事をいくつか探索すると役立つ場合があります。 ただし、組織の Azure Information Protection をデプロイを開始する準備ができている場合は、[Azure Information Protection のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)に進む必要があります。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

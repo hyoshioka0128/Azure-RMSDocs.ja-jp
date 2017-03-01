@@ -1,5 +1,5 @@
 ---
-title: "アプリケーションでのデータ保護のサポート | Azure Information Protection"
+title: "アプリケーションでの RMS データ保護のサポート - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスをネイティブにサポートするために、RMS API を使用するアプリケーションを特定します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: c6d978133142ffc935cce9dc56669d812c80e3af
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d8a3c8a054412280df341edd4078294c3e05979e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -173,8 +174,3 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 Azure RMS で最も一般的に使用されるアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

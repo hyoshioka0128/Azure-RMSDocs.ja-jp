@@ -1,5 +1,5 @@
 ---
-title: "自動および推奨分類の条件を構成する方法 | Azure Information Protection"
+title: "Azure Information Protection ラベルの条件を構成する"
 description: "ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。"
 author: cabailey
 ms.author: cabailey
@@ -11,8 +11,9 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: 2178e8257c67ff8272b5cf359d3cccc60e519762
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -48,7 +49,7 @@ ms.openlocfilehash: 2178e8257c67ff8272b5cf359d3cccc60e519762
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>ラベルの推奨または自動分類を構成するには
 
-1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
@@ -223,10 +224,5 @@ Azure Information Protection ポリシーの構成の詳細については、「
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

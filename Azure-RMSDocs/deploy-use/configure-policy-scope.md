@@ -1,5 +1,5 @@
 ---
-title: "スコープ ポリシーの構成 | Azure Information Protection"
+title: "Azure Information Protection のスコープ ポリシーの構成"
 description: "特定のユーザーに対して異なる設定やラベルを構成するには、Azure Information Protection のスコープ ポリシーを構成する必要があります。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e2112ca081ed0520330355734bb0913e4a612c66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
 
 Azure Information Protection のスコープ ポリシーを構成するには:
 
-1. 新しいブラウザー ウィンドウで、全体管理者として [Azure ポータル](https://portal.azure.com)にサインインします。
+1. 新しいブラウザー ウィンドウで、全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
@@ -62,9 +63,4 @@ Azure Information Protection クライアントは、サポート対象の Offic
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

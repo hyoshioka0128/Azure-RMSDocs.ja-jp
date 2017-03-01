@@ -1,5 +1,5 @@
 ---
-title: "Azure Rights Management サービスのアプリケーションを構成する | Azure Information Protection"
+title: "Azure Rights Management 用にアプリケーションを構成する - AIP"
 description: "Azure Information Protection 用の Azure Rights Management 保護サービスをサポートするように、管理者がアプリケーションとサービスを構成する手順について説明します。 たとえば、Word 2013 や Word 2010 などの Office アプリケーション、および Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスが含まれます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: e3c8356b2780bae81e69b1d6e258323e194e5bab
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 8161315fcb3c3beb40b5273db799a5a3f37e4a7e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -70,10 +71,5 @@ Azure Rights Management サービスをサポートするためにアプリケ�
 - [Azure Information Protection テナント キーに対する操作](operations-tenant-key.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

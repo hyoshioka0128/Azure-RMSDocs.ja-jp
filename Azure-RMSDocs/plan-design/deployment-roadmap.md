@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection デプロイ ロードマップ | Azure Information Protection"
+title: "Azure Information Protection デプロイ ロードマップ"
 description: "組織の Azure Information Protection を準備、実装、管理するには、これらの手順に従ってください。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 617ce3204296a4f9a7affc2750684871d60be65e
-ms.openlocfilehash: d2888a1612e1c3521773deae7b49049c702137b4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4128188d0fba56a5b61fe16a6f0128ec2dc24c4a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -97,7 +98,7 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 
 1. Azure Information Protection ポリシーを更新し、データ保護を適用する
     
-    1 つまたは複数のラベルで Rights Management 保護を適用できるように、Azure Information Protection ポリシーを変更します。 詳しくは、「[Rights Management による保護を適用するためのラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
+    1 つまたは複数のラベルで Rights Management 保護を適用できるように、Azure Information Protection ポリシーを変更します。 詳しくは、「[Rights Management による保護を適用するようにラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
     
     Exchange が Information Rights Management (IRM) 用に構成されていない場合でも、ユーザーは Outlook で Rights Management による保護を適用するラベルを適用できます。 ただし、Exchange が IRM 用に構成されるまで、組織は Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 この追加の構成は、Exchange Online の手順 3、および Exchange オンプレミスの手順 6 に含まれています。 
 
@@ -191,9 +192,4 @@ Windows ベースのファイル サーバーで、ファイル分類インフ�
 Azure Rights Management サービスの使用を開始するとき、Windows PowerShell のモジュールが管理変更のスクリプト化または自動化に役立つことがあります。 詳細については、「[Windows PowerShell を使用した Azure Rights Management サービスの管理](../deploy-use/administer-powershell.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

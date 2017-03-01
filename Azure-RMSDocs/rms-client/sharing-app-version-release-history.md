@@ -1,10 +1,10 @@
 ---
-title: "Rights Management 共有アプリケーション&colon; バージョン リリース履歴 | Azure Information Protection"
+title: "RMS 共有アプリケーション&colon; バージョン リリース履歴 - AIP"
 description: "Windows 用 Rights Management 共有アプリケーションのリリースにおける新機能や変更点について説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: aded487e9d7f7bc8341c7f6e1d6ac4e673b55c56
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 811c89ef6922f6939e7a7d13ed707c6ebe6aafd6
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -130,9 +131,4 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 -   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

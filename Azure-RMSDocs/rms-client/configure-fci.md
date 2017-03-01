@@ -1,5 +1,5 @@
 ---
-title: "Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護 | Azure Information Protection"
+title: "Windows Server FCI での Azure RMS 保護 - AIP"
 description: "Rights Management (RMS) クライアントと RMS 保護ツールを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成するための手順です。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06419438281e0d5a0b976e506d45be2b4eaaef70
-ms.openlocfilehash: da7ab2f9fcd3919cd7143a407e54d2270449760d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 58a0f117100ff5d19dfd6fee2ac4dd61c6bea36b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -287,9 +288,4 @@ PowerShell スクリプトをカスタム タスクとして使用してフォ�
 そのためには、同じスクリプトとおそらく異なるテンプレートを使用する新しいファイル管理タスクを作成し、構成した分類プロパティの条件を構成する必要があります。 たとえば、前に構成した条件 ([**RMS** ] プロパティ、[ **EQUAL**]、[ **はい**]) の代わりに、[ **個人の身元を特定する情報** ] プロパティを選択し、[ **演算子** ] を [ **EQUAL** ] に、[ **値** ]を [ **高**] に設定します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

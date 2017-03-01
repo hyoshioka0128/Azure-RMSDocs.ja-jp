@@ -1,5 +1,5 @@
 ---
-title: "Azure RMS の機能 | Azure Information Protection"
+title: "Azure RMS の機能 - Azure Information Protection"
 description: "Azure RMS の機能、Azure RMS で使用される暗号化制御、およびこのプロセスがどのように機能するかについてのステップ バイ ステップの図を詳細に説明します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
-ms.openlocfilehash: 0ff5deaaea73b7354d2b251c3ce9c768debd2269
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3140f678c29771fc3328e312bc7e55d309554e66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -154,8 +155,3 @@ Azure Rights Management サービスの詳細については、**概要と詳細
 > 追加情報やサポートが必要な場合は、「[Azure Information Protection の情報とサポート](../get-started/information-support.md)」のリソースとリンクをご利用ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

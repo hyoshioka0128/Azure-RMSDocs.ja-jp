@@ -1,5 +1,5 @@
 ---
-title: "Windows PowerShell を使用した Azure Rights Management サービスの管理 | Azure Information Protection"
+title: "PowerShell を使用した Azure Rights Management の管理 - AIP"
 description: "Azure Information Protection の Azure Rights Management (AADRM) の PowerShell モジュールを使用して、組織でこのサービスを管理する方法について説明します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16d6a8a00db28c23fd650a1b8beba00333ba6ea4
-ms.openlocfilehash: f9aa0d5910ba4868878ae54c446793bfc031d3c2
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 085dc82fcb9632bfdf4fb1b14ca5c632846e81d0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -57,10 +58,5 @@ PowerShell を使って、Azure Information Protection のために Azure Rights
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

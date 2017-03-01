@@ -1,10 +1,10 @@
 ---
-title: "シナリオ - SharePoint に保存されているドキュメントを管理する | Azure Information Protection"
+title: "AIP シナリオ - SharePoint に保存されているドキュメントを管理する"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1c25f1c8792f7d6d99930dd01c3f3c92a56bbd8a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d5d1c818323a3723f6837ebe8fedd4995efb467
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -104,8 +105,3 @@ ms.openlocfilehash: 1c25f1c8792f7d6d99930dd01c3f3c92a56bbd8a
 -   ヘルプ デスクに問い合わせるhelpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

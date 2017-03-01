@@ -1,18 +1,19 @@
 ---
-title: "クイック スタート チュートリアル手順 1 | Azure Information Protection"
+title: "クイック スタート チュートリアルの手順 1 - AIP"
 description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 1 です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 420da63412f10431d29c01bad317c69cf72b66ad
-ms.openlocfilehash: a2631af6bf972a8c88d37e42149b90fb96f71763
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 7046a82d83c7bf3197dc2e7cea51f4af0be03a56
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,7 +29,7 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 このチュートリアルでは、Office 365 管理者用のアクティブ化ページに直接移動します。このページは、Office 365 クラシック ポータルと Office 365 管理センター プレビューの場合と同じです。 
 
-このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure ポータルにアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
+このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure Portal にアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
 
 ## <a name="to-activate-the-rights-management-service"></a>Rights Management サービスをアクティブにするには
 
@@ -56,9 +57,4 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 [手順 2 &#187;](infoprotect-tutorial-step2.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

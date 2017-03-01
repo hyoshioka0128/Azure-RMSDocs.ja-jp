@@ -1,10 +1,10 @@
 ---
-title: "Microsoft が管理 - テナント キーのライフサイクル操作 | Azure Information Protection"
+title: "Microsoft が管理 - AIP テナント キーのライフサイクル操作"
 description: "Microsoft が Azure Information Protection のテナント キーを管理する場合 (既定) に関連するライフサイクル操作に関する詳細です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0aad5eeb88dd471ece1bf6425a4efe8050bbdf2c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: caacc4174ddb63e9c9091c0df294b93cf947a7c4
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -96,10 +97,5 @@ Azure Information Protection の構成およびテナント キーをエクス�
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Information Protection を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

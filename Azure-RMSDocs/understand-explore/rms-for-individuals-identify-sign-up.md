@@ -1,5 +1,5 @@
 ---
-title: "ユーザーが個人用 RMS にサインアップしているかどうかを確認する方法 | Azure Information Protection"
+title: "ユーザーを個人用 RMS にサインアップさせる - AIP"
 description: "ユーザーが個人用 RMS にサインアップしたかどうかを、管理者はどのようにして知ることができるでしょうか。 この記事で説明している方法、または方法の組み合わせを使用できます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5dae8412277be37cd3ff8cfe76c71a8109277146
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e696bf596255b5e28aa5589cfc18715f100c5b07
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,8 +36,3 @@ ms.openlocfilehash: 5dae8412277be37cd3ff8cfe76c71a8109277146
 -   Azure Information Protection クライアントまたは Rights Management 共有アプリケーションによって作成されるファイル名拡張子に注意してください。 .pfile と .ppdf ファイル名拡張子は最もわかりやすい例ですが、他のファイルでは、Rights Management サービスがネイティブで保護しているときに元のファイル名拡張子が変更される場合があります。 詳細については、Azure Information Protection クライアント管理者ガイドの[保護できるファイルの種類](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection)に関する記述を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

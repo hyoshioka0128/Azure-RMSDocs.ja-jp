@@ -1,5 +1,5 @@
 ---
-title: "カスタム テンプレートを作成、構成、発行する | Azure Information Protection"
+title: "Azure RMS カスタム テンプレートの構成と発行"
 description: "カスタム テンプレートを Azure クラシック ポータルで作成および管理するための手順です。 テンプレートを使用すると、エンドユーザーおよびその他の管理者は、ドキュメントや電子メールを保護する適切なポリシーを簡単に適用できます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
-ms.openlocfilehash: 66158f74951e7226482e58cf94e4249486b4dc7b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ebc0ad13952f2036f997fc5ba9207f02d1571021
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -163,8 +164,3 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

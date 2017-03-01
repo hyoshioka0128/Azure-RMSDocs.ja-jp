@@ -1,10 +1,10 @@
 ---
-title: "シナリオ - 永続的な保護を提供するためにワーク フォルダーを構成する | Azure Information Protection"
+title: "AIP シナリオ - RMS 保護のためにワーク フォルダーを構成する"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、ワーク フォルダー内の Office ドキュメントに永続的な保護を適用します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 942b9bfffbd4a43c922ada87220f4eecb78f1d11
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1fa655cd91746d8e5c19f6a9eca0d93a3be8fb23
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -121,8 +122,3 @@ Azure Rights Management を使用して保護するファイルを組織外の�
 > 一定の期間が経過した後、このような要求が多数検出された場合は、特定のユーザー (マネージャーやヘルプ デスクなど) にのみ共同所有者オプションを許可し、標準ユーザーには共同作成者または適切であると判断した[権限](../deploy-use/configure-usage-rights.md)を付与する、このシナリオ用の独自のカスタム テンプレートを定義できます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

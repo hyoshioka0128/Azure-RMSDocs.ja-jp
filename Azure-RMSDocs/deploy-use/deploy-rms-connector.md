@@ -1,5 +1,5 @@
 ---
-title: "Azure Rights Management コネクタをデプロイする | Azure Information Protection"
+title: "Rights Management コネクタをデプロイする - AIP"
 description: "RMS コネクタをデプロイする手順について説明します。RMS コネクタは、Exchange Server、SharePoint Server、または Windows Server とファイル分類インフラストラクチャ (FCI) を使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 93246a239476331f8fc117560c8ce45420eea674
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -98,8 +99,3 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 手順 1: [Azure Rights Management コネクタのインストールと構成](install-configure-rms-connector.md) に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

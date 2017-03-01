@@ -1,10 +1,10 @@
 ---
-title: "Office 365 管理センター プレビューから Azure Rights Management をアクティブ化する方法 | Azure Information Protection"
+title: "Office 365 管理センター プレビューで Azure RMS をアクティブ化する - AIP"
 description: "Office 365 管理センターの新しいプレビュー バージョン (Office 365 管理センター プレビュー) にアクセスできる場合の、Azure Rights Management サービス向けのアクティブ化手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8f5a2ff7cf82795c46b065ff96c4b83167afa099
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: bef1ed0e38beadbd86868e8be3535f32b22382df
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -59,9 +60,4 @@ Office 365 管理センターの新しいプレビュー バージョン (**Offi
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

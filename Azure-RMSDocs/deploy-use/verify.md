@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management を確認する | Azure Information Protection"
+title: "Azure Rights Management を確認する - AIP"
 description: "1 つのアカウントを使用してファイルまたは電子メール メッセージを保護し、次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、サービスが想定どおりに動作していることを確認できます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ec1bdd126c53405af62069d8f440b51e5bb4aad7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 50da38ee5e852d72458845a97ebe005f4949d265
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -38,10 +39,5 @@ Azure Information Protection の Azure Rights Management サービスをアク�
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

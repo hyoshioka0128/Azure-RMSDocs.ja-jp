@@ -1,5 +1,5 @@
 ---
-title: "Azure Rights Management サービスのカスタム テンプレートを構成する | Azure Information Protection"
+title: "Azure RMS のカスタム テンプレートを構成する - AIP"
 description: "使用権限のテンプレートを構成および管理するための管理者用の情報および手順です。 テンプレートを使用すると、ユーザーおよび他の管理者は、承認されたユーザーにアクセスが制限されている機密ファイルにポリシーを簡単に適用できます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: efab4cdc455237b4bb064252dfe6702ec40539d2
-ms.openlocfilehash: a5a27e9d1d12381b7c4c945596480171f7265552
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -64,10 +65,5 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 -   [PowerShell を使用してテンプレートを管理する方法](configure-templates-with-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

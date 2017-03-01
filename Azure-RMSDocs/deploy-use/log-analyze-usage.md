@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management サービスの使用状況をログに記録して分析する | Azure Information Protection"
+title: "Azure RMS サービスの使用状況をログに記録して分析する - AIP"
 description: "Azure Rights Management (Azure RMS) で使用状況のログを使用する方法の詳細および手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 89c0cae4b0549a0dd86ede26ef3eed0f09200419
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -146,7 +147,7 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 |correlation-id|テキスト|特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|テキスト|保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|文字列|ドキュメントの所有者の電子メール アドレス。|alice@contoso.com|
-|issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com または FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|文字列型|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。|TopSecretDocument.docx|
 |date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
@@ -238,10 +239,5 @@ Azure Rights Management サービス用 Windows PowerShell の使用の詳細に
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

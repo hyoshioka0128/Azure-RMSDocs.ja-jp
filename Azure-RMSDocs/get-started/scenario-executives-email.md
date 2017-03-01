@@ -1,10 +1,10 @@
 ---
-title: "シナリオ - 役員が安全に特権情報を交換できるようにする | Azure Information Protection"
+title: "AIP シナリオ - 役員が特権情報を交換できるようにする"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: cb7cbe24589030e5fd1b2b2f9589f47e3f0b780e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -124,16 +125,11 @@ ms.openlocfilehash: cb7cbe24589030e5fd1b2b2f9589f47e3f0b780e
 
 これらのメールの情報を VanArsdel の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
-別の VanArsdel 役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@vanarsdelltd.com)) 宛てに送信するようにしてください。
+別の VanArsdel 役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@vanarsdelltd.com) 宛てに送信するようにしてください。
 
 **サポートが必要ですか?**
 
 -   ヘルプ デスクに問い合わせるhelpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

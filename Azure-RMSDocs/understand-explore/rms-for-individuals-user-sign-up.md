@@ -1,5 +1,5 @@
 ---
-title: "個人用 RMS にサインアップする方法 | Azure Information Protection"
+title: "個人用 RMS にサインアップする方法 - AIP"
 description: "この無料アカウントのサインアップ手順、およびこのプロセスがどのように機能するかについての技術情報です。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
 
     Microsoft では、ユーザーの電子メール アドレスを使用して、[Azure Information Protection の有料サブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)、または [Azure Resource Manager を使用したデータ保護を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をユーザーの組織が既に利用しているかどうかを確認しています。 組織が所有している場合、個人用 RMS は必要ないので、すぐにサインインされ、個人用 RMS へのセルフサービス サインアップは取り消されます。 有料のサブスクリプションが見つからない場合は、次の手順に進みます。
 
-4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム ((support@email.microsoftonline.com)) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
+4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 
 5.  このメールが届いたら、[**はい、私です**] をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
 
@@ -95,8 +96,3 @@ ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
 「[個人用 RMS 向けに作成されたアカウントを管理者が制御する方法](rms-for-individuals-take-control.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

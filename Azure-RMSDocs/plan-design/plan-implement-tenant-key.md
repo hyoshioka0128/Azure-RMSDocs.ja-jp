@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management テナント キーを計画して実装する | Azure Information Protection"
+title: "Azure Information Protection テナント キー"
 description: "Azure Information Protection テナント キーに関する計画および管理に役立つ情報です。 Microsoft がテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 433a655870556ed045273713f6773f36c3d86fc1
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d2e667f78eeccecb0bd837a9020ff188f67fb50
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -85,8 +86,8 @@ Microsoft でテナント キーを管理することになった場合、キー
 |要件|詳細情報|
 |---------------|--------------------|
 |Azure Information Protection をサポートするサブスクリプション。|使用可能なサブスクリプションの詳細については、Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)をご覧ください。|
-|個人向け RMS または Exchange Online は使用しないでください。 または、Exchange Online を使用する場合は、この構成で BYOK を使用することには制限があることをご理解ください。|BYOK の現在の制限事項の詳細については、「[BYOK の料金と制限事項](byok-price-restrictions.md)」を参照してください。<br /><br />**重要**: 現在、BYOK には Exchange Online との互換性がありません。|
-|有料または試用版の Azure サブスクリプションなど、Key Vault BYOK のすべての前提条件。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok)」を参照してください。 <br /><br /> Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには、次のように [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) の PowerShell コマンドレットを使用します。 <br /><br /> 1.次のコマンドを使用し、Azure PowerShell セッションを開始して Azure アカウントにサインインします。`Login-AzureRmAccount`<br /><br />2.次のように入力し、サブスクリプションの名前と ID、テナント ID、有効な状態の値が表示されることを確認します。`Get-AzureRmSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注**: BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
+|個人向け RMS または Exchange Online は使用しないでください。<br /><br /> または、Exchange Online を使用する場合は、この構成で BYOK を使用することには制限があることをご理解ください。|BYOK の現在の制限事項の詳細については、「[BYOK の料金と制限事項](byok-price-restrictions.md)」を参照してください。<br /><br />**重要**: 現在、BYOK には Exchange Online との互換性がありません。|
+|既存の Azure Information Protection テナント向けの有料または試用版の Azure サブスクリプションなど、Key Vault BYOK のすべての前提条件。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok)」を参照してください。 <br /><br /> Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには、次のように [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) の PowerShell コマンドレットを使用します。 <br /><br /> 1.**[管理者として実行]** オプションで Azure PowerShell セッションを開始し、次のコマンドを使用して、Azure Information Protection のテナントの全体管理者としてサインインします。`Login-AzureRmAccount`<br /><br />2.次のように入力し、サブスクリプションの名前と ID、Azure Information Protection テナント ID、有効な状態の値が表示されることを確認します。`Get-AzureRmSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注**: BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
 |Windows PowerShell 用の Azure Rights Management 管理モジュール。|インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。 <br /><br />この Windows PowerShell モジュールを既にインストールしている場合は、次のコマンドを実行してバージョン番号が **2.5.0.0** 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version`|
 
 Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使用する方法については、[Thales の Web サイト](https://www.thales-esecurity.com/msrms/cloud)を参照してください。
@@ -142,9 +143,4 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
     詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -1,10 +1,10 @@
 ---
-title: "BYOK の料金と制限事項 | Azure Information Protection"
+title: "BYOK の料金と制限事項 - Azure Information Protection"
 description: "Azure RMS でお客様が管理するキーを使用する場合 (Bring Your Own Key または BYOK と呼ばれます) は、制限事項を確認してください。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2e8a00d4c8d38387645d015d3f69a4d568fc9683
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: c05521faed2cd8a7f9d32d81cd6899161e858153
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Azure Information Protection テナント キーに Azure Key Vault を使用す
 
 - Azure Key Vault は一元的なキー管理ソリューションであり、暗号化を使用するさまざまなクラウドベースのサービスおよびオンプレミス サービスに対して一貫した管理ソリューションを実現します。
 
-- Azure Key Vault では、キー管理のためのさまざまな組み込みのインターフェイス (PowerShell、CLI、REST API、Azure ポータルなど) をサポートしています。 監視などの特定のタスク用に最適化された機能を提供するために、Key Vault には他のサービスやツールも統合されています。 たとえば、Operations Management Suite から Log Analytics を介してキーの使用状況ログを分析したり、指定した条件が満たされたときにアラートを設定したりすることができます。
+- Azure Key Vault では、キー管理のためのさまざまな組み込みのインターフェイス (PowerShell、CLI、REST API、Azure Portal など) をサポートしています。 監視などの特定のタスク用に最適化された機能を提供するために、Key Vault には他のサービスやツールも統合されています。 たとえば、Operations Management Suite から Log Analytics を介してキーの使用状況ログを分析したり、指定した条件が満たされたときにアラートを設定したりすることができます。
 
 - Azure Key Vault では、セキュリティのベスト プラクティスとして認識されている役割の分離を実現しています。 Azure Information Protection の管理者は、データ分類とデータ保護の管理に専念し、Azure Key Vault の管理者は、暗号化キーの管理と、セキュリティまたはコンプライアンスで必要となる特別なポリシーの管理に専念することができます。
 
@@ -86,9 +87,4 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Rights Management テナント キーを計画して実装する」の「[次のステップ](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

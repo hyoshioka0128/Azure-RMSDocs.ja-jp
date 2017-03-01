@@ -1,10 +1,10 @@
 ---
-title: "シナリオ - 重要度の高い (いくつかの) ファイルを保護する | Azure Information Protection"
+title: "AIP シナリオ - 重要度の高い (いくつかの) ファイルを保護する"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management を使用して、重要度が高いと判断したいくつかのファイルを手動でカスタム保護します。これにより、不正なアクセスからの最高レベルの保護が実現します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -146,8 +147,3 @@ ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
 -   これらのファイルにアクセスできない場合や、ファイル内に疑わしい変更が見つかった場合は、IT 部門からお送りした保護済みのメール メッセージに記載されている 24 時間対応のサポート エスカレーション窓口にお問い合わせください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

@@ -1,10 +1,10 @@
 ---
-title: "AD RMS から Azure Information Protection への移行 | Azure Information Protection"
+title: "AD RMS から Azure Information Protection への移行"
 description: "Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Information Protection に移行する方法を説明します。 移行後もユーザーは AD RMS を使用して保護されていたドキュメントや電子メール メッセージにアクセスでき、新しく保護されるコンテンツは Azure Information Protection を使用します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 30a154d67db81441cd48c56681ddb6552fc4cd18
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -198,9 +199,4 @@ Azure Information Protection への移行を始める前に、次の前提条件
 移行を開始するには「[フェーズ 1 - サーバー側の構成](migrate-from-ad-rms-phase1.md)」に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

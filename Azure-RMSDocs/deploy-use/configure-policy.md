@@ -1,10 +1,10 @@
 ---
-title: "ポリシーの構成 | Azure Information Protection"
+title: "Azure Information Protection ポリシーを構成する"
 description: "分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
-ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
 
 Azure Information Protection ポリシーを構成するには:
 
-1. 新しいブラウザー ウィンドウで、全体管理者として [Azure ポータル](https://portal.azure.com)にサインインします。
+1. 新しいブラウザー ウィンドウで、全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
@@ -67,7 +68,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [既存のラベルを変更またはカスタマイズする方法](configure-policy-change-label.md)
 
-- [保護を適用するようにラベルを構成する方法](configure-policy-protection.md)
+- [保護用ラベルの構成方法](configure-policy-protection.md)
 
 - [視覚的なマーキングを適用するようにラベルを構成する方法](configure-policy-markings.md)
 
@@ -80,9 +81,4 @@ Azure Information Protection クライアントは、サポート対象の Offic
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

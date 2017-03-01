@@ -1,10 +1,10 @@
 ---
-title: "手順 2.&colon; HSM で保護されているキーから HSM で保護されているキーへの移行 | Azure Information Protection"
+title: "HSM で保護されているキーから HSM で保護されているキーへの移行 - AIP"
 description: "この手順は、AD RMS から Azure Information Protection への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 4d140edf04ec6703e58f320b5b4be55c0ebfbd45
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d0bb1cad20acdc16ee47c4a970a0cc095d07dc75
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -93,9 +94,4 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

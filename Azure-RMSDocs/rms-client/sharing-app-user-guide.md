@@ -1,5 +1,5 @@
 ---
-title: "Rights Management 共有アプリケーション ユーザー ガイド | Azure Information Protection"
+title: "RMS 共有アプリケーション ユーザー ガイド - AIP"
 description: "Windows 用 Microsoft Rights Management (RMS) 共有アプリケーションは、重要なドキュメントや画像を、それらを表示してはならないユーザーから保護するために役立ちます。それらを電子メールで送信したり、別のデバイスに保存したりする場合でも同様です。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 1acc6563f8b5da498cb58db46a93160a1fa94022
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -68,10 +69,5 @@ Windows 用 Microsoft Rights Management (RMS) 共有アプリケーションは�
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

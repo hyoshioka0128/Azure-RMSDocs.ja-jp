@@ -1,5 +1,5 @@
 ---
-title: "Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ| Azure Information Protection"
+title: "Azure RMS を使用してユーザーによるファイル保護を支援する - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 0af15bf3238d020b1ee45b45bc780256c88b5e55
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -109,10 +110,5 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 保護されている文書の表示と同様に、受信者が電子メール メッセージを受け取るとき、受信者は最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに指定された制限付き使用権によってメッセージが開きます。 たとえば、[ **転送不可**] を選択した場合、[ **全員に返信** ] ボタンは使用できません。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

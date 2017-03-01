@@ -1,10 +1,10 @@
 ---
-title: "Microsoft Rights Management 共有アプリケーションの技術的概要 | Azure Information Protection"
+title: "RMS 共有アプリケーションの技術概要 - AIP"
 description: "Windows 用 RMS 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの技術的な詳細です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 770be3f7423f8d47439096393bba7464629646c5
-ms.openlocfilehash: b90a0e1ab363c1d7f87d0b1a18503da641bf7cfb
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 532a379aa303e65d111d6ba0e360f34082b25014
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -65,27 +66,26 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 
 |元のファイル名拡張子|RMS で保護されたファイル名拡張子|
 |--------------------------------|-------------------------------------|
-|.txt|。ptxt|
-|。xml|。pxml|
-|。jpg|。pjpg|
-|。jpeg|.ppng|
-|。pdf|。ppdf|
-|。png|。ppng|
+|.txt|.ptxt|
+|.xml|.pxml|
+|.jpg|.pjpg|
+|.jpeg|.ppng|
+|.pdf|.ppdf|
+|.png|.ppng|
 |.tif|.ptif|
-|。tiff|。ptiff|
-|。bmp|。pbmp|
-|。gif|。pgif|
-|。giff|。pgiff|
-|。jpe|。pjpe|
-|。jfif|。pjfif|
-|。jt|。pjt|
+|.tiff|.ptiff|
+|.bmp|.pbmp|
+|.gif|.pgif|
+|.jpe|.pjpe|
+|.jfif|.pjfif|
+|.jt|。pjt|
 ¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 
 Microsoft Office 2016、Office 2013 および Office 2010 の Microsoft Rights Management 共有アプリケーションでネイティブにサポートされているファイルの種類を次の表にリストします。 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
 
 |Office でサポートされているファイルの種類|Office でサポートされているファイルの種類|
 |----------------------------------|----------------------------------|
-|。doc<br /><br />。docm<br /><br />。docx<br /><br />。dot<br /><br />。dotm<br /><br />。dotx<br /><br />。potm<br /><br />。potx<br /><br />。pps<br /><br />。ppsm<br /><br />。ppsx<br /><br />。ppt<br /><br />。pptm|。pptx<br /><br />。thmx<br /><br />。xla<br /><br />。xlam<br /><br />。xls<br /><br />。xlsb<br /><br />。xlt<br /><br />。xlsm<br /><br />。xlsx<br /><br />。xltm<br /><br />。xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
 ### <a name="changing-the-default-protection-level-of-files"></a>ファイルの既定の保護レベルの変更
 RMS 共有アプリケーションがファイルを保護する方法は、レジストリを編集して変更することができます。 たとえば、ネイティブ保護をサポートするファイルを、RMS 共有アプリケーションで一般的に保護されるように強制できます。
@@ -138,9 +138,4 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

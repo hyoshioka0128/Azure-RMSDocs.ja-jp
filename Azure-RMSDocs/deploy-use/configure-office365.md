@@ -1,5 +1,5 @@
 ---
-title: "Office 365&colon; クライアントとオンライン サービスの構成 | Azure Information Protection"
+title: "Office 365&colon; クライアントとオンライン サービスの構成 - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスで使用する Office 365 を構成するための、管理者向けの情報と手順です。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 2b90ba203c8d1874eab193d24d16117af2442449
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f0f486620f4b13dc8d94fee742eec2f8e4753d78
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -1112,9 +1113,4 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

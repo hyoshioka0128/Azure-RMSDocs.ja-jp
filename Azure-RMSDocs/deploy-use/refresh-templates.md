@@ -1,5 +1,5 @@
 ---
-title: "テンプレートの更新 | Azure Information Protection"
+title: "Azure RMS テンプレートの更新 - AIP"
 description: "Azure Rights Management サービスを使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 15bd23bb727937193cb51e732586d4c334357c04
-ms.openlocfilehash: 325c64b211ed52bdb11685af00507aef2aa85312
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 84056058eedccf354cefb86792d92949bcfb22e8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -187,8 +188,3 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

@@ -1,5 +1,5 @@
 ---
-title: "クライアント | Azure Information Protection"
+title: "Azure Information Protection クライアント"
 description: "Microsoft Azure Information Protection は、組織のデータを保護するクライアント/サーバー型のソリューションです。 クライアント (Azure Information Protection クライアントまたは Rights Management クライアント) は、コンピューターおよびモバイル デバイスで実行するアプリケーションに統合されます。"
 author: cabailey
 ms.author: cabailey
@@ -14,8 +14,9 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 190b5d2a25dc9479aa2ba34fd884795e0de40238
-ms.openlocfilehash: f52f3e04f41e33828bd9a9c5c1aad3ef460b2d23
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 5b17d639382238ce4669bc02beadb80570b5ca6f
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -51,8 +52,3 @@ Windows 用 Rights Management 共有アプリケーションと RMS 保護ツー
 [Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

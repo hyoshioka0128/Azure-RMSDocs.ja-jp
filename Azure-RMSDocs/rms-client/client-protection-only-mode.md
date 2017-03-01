@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection クライアントの保護のみモード"
+title: "Azure Information Protection の保護のみのモード"
 description: "保護のみモードで Azure Information Protection クライアントを実行しているユーザーの情報。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bc81b8587e999e6cbb036942e1c5d37e1e2b319b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 55254496b23e49fe7e2dbd19721a824739004b21
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -50,9 +51,4 @@ Azure Information Protection ポリシーがない Azure Information Protection 
 - Office アプリからドキュメント追跡サイトにアクセスします。 ただし、このサイトからドキュメントを追跡して取り消すには、有効なサブスクリプションを持っている必要があります。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

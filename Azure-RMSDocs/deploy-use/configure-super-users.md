@@ -1,5 +1,5 @@
 ---
-title: "Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成 | Azure Information Protection"
+title: "Azure Rights Management のスーパー ユーザーを構成する - AIP"
 description: "Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は &quot;データに対する推論&quot; と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bb7b459456fd8fb43997f73b39880d7110f92442
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -71,10 +72,5 @@ Azure Information Protection からの Azure Rights Management サービスの�
 > AIP モジュールは、RMS 保護ツールでインストールされる RMS 保護 PowerShell モジュールを置き換えます。 これらのモジュールは、[Azure Rights Management 用のメインの Windows PowerShell モジュール](administer-powershell.md)とは異なり、補足するものです。 AIP モジュールは、Azure Information Protection、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS) と、Active Directory Rights Management サービス (AD RMS) をサポートしています。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

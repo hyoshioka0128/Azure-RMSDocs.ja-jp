@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection クライアントでサポートされるファイルの種類 | Azure Information Protection"
+title: "Azure Information Protection でサポートされるファイルの種類"
 description: "Windows 用 Azure Information Protection クライアントを担当する管理者のために、サポートされるファイルの種類、ファイル名拡張子、保護のレベルに関する技術の詳細について説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f4503c7383f9ffd9dc7e5cd3c676ec929bdc2802
-ms.openlocfilehash: c556769aa34282063ae10190202a746eee33abe6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 107bac4e318c08d4fdc6d24fc88a6f7cbe5c0a74
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -92,7 +93,6 @@ Azure Information Protection クライアントによってネイティブにサ
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
@@ -176,9 +176,4 @@ Azure Information Protection クライアントによってサポートされる
 - [PowerShell コマンド](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection の管理情報とサポート | Azure Information Protection"
+title: "Azure Information Protection の管理者用の情報とサポート"
 description: "新しいリリース、サポート オプション、および Microsoft に連絡して問題を報告する方法などの情報を含む、管理者向けリソース。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1f7647fd41ba71b4cda4c942d86b6dbfe9c870f8
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: cb0a66071937ed5afdf1f86833bbc47bdb4ddd50
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -52,7 +53,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 その他のお客様は、Azure Information Protection の入手方法に応じて、以下のサポート チャネルをご利用ください。
 
-- **Azure Information Protection Premium** (スタンドアロン): [Azure ポータルでサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 このオプションを使用するには、Azure サブスクリプションと Azure サポート プランが必要です。 詳細については、「[お客様向けの Azure サポート](https://azure.microsoft.com/support/plans/)」を参照してください。 
+- **Azure Information Protection Premium** (スタンドアロン): [Azure Portal でサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 このオプションを使用するには、Azure サブスクリプションと Azure サポート プランが必要です。 詳細については、「[お客様向けの Azure サポート](https://azure.microsoft.com/support/plans/)」を参照してください。 
 
 - **Azure Information Protection と Office 365 サブスクリプション**: 「[一般法人向け Office 365 のサポートへのお問い合わせ - 管理者向けヘルプ](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照して、電話番号と、Office 365 管理ポータルによるサポートへの問い合わせ方法をご確認ください。 
 
@@ -91,9 +92,4 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 -   [フォーラム:ユーザー向け RMS (アプリケーション)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

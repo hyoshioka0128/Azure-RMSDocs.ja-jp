@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection クライアントをダウンロードしてインストールする | Azure Information Protection"
+title: "Azure Information Protection クライアントをダウンロードしてインストールする"
 description: "ユーザーが Windows 用 Azure Information Protection クライアントをインストールし、ドキュメントと電子メールを分類および保護するための手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 633f3dfe12828a21943bb5faf6ad9f69b98fc70b
-ms.openlocfilehash: 303ca72fa8753e417b4a06b4cad475559295eb2a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,19 +32,22 @@ ms.openlocfilehash: 303ca72fa8753e417b4a06b4cad475559295eb2a
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Azure Information Protection クライアントをダウンロードしてインストールするには    
 
-1.  Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。    
-2. **Azure Information Protection クライアント**の Windows アイコンをクリックし、Azure Information Protection クライアントをインストールするための **AzInfoProtection.exe** ファイルを保存します。     
+1.  Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
 
-2. ダウンロードされた実行可能ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。    
+    このページには、使用する可能性のあるあらゆる一般的なデバイスへのリンクが含まれているので、保護されたファイルを開くのに必要なビューアー アプリを簡単にダウンロードすることができます。 ここではクライアントを完全にインストールして、ファイルのラベル付けと保護ができるようにします。 
 
-3. **Azure Information Protection クライアントのインストール** ページで、     
+2. **Azure Information Protection クライアント** セクションを見つけて、Windows アイコンをクリックします。 **[ダウンロード]** をクリックし、**AzInfoProtection.exe** ファイルを保存します。     
+
+3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。    
+
+4. **Azure Information Protection クライアントのインストール** ページで、     
     - クラウドに接続できない場合に、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。    
 
     - ライセンス条項および使用条件を読み、**[同意する]** をクリックします。    
 
-4. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。    
+5. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。    
 
-3. **[閉じる]** をクリックします。 Azure Information Protection クライアントの使用を開始する前に次の操作を行います。    
+6. **[閉じる]** をクリックします。 Azure Information Protection クライアントの使用を開始する前に次の操作を行います。    
 
     - コンピューターで Office 2010 を実行している場合、コンピューターを再起動し、最後の手順として次のセクションに進みます。    
         
@@ -69,9 +73,4 @@ ms.openlocfilehash: 303ca72fa8753e417b4a06b4cad475559295eb2a
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

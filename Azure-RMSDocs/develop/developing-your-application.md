@@ -1,11 +1,11 @@
 ---
-title: "アプリケーションの開発 | Azure Information Protection"
+title: "アプリケーションの開発"
 description: "AIP によるドキュメントの保護を実装する基本的なコンソール アプリのガイダンスです。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,8 +15,9 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: e8d9c52df769056fcbe3af5a623dcbc0f8de8271
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -229,11 +230,6 @@ Azure への接続に必要なパラメーターを読み込みます。
 5. 承認されたユーザーに与えられる権限の一覧から選択します。
 ![アプリの出力 - 手順 5](../media/develop/app-output-5.png)
 
-6. 最後に、ポリシーのメタデータの一部 (ポリシー名、説明、および発行者 (Azure AD テナント) の表示名) を入力します。![アプリの出力 - 手順 6](../media/develop/app-output-6.png)
+6. 最後に、ポリシーのメタデータの一部 (ポリシー名、説明、発行者 (Azure AD テナント) の表示名) を入力します。![アプリの出力 - 手順 6](../media/develop/app-output-6.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

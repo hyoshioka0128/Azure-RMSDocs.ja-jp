@@ -1,5 +1,5 @@
 ---
-title: "iOS 用および Android 用の Azure Information Protection アプリの開始 | Azure Information Protection"
+title: "はじめに - iOS用および Android 用の AIP アプリ"
 description: 
 keywords: "iOS 用および Android 用の Azure Information Protection アプリで電子メールやファイルを表示する方法"
 author: cabailey
@@ -14,8 +14,9 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
-ms.openlocfilehash: 32e0315a8a4e6515b0b89b85afefa1bb17591e0b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 14f0d3ba1c01f0fd1b68d2b793e2bb5c8ee9906e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -45,8 +46,3 @@ ms.openlocfilehash: 32e0315a8a4e6515b0b89b85afefa1bb17591e0b
 その他の質問については、[Yammer サイト](https://www.yammer.com/AskIPTeam) にアクセスするか、または[情報保護チームに電子メールを送信](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app)してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

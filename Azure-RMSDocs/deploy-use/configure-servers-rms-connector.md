@@ -1,5 +1,5 @@
 ---
-title: "Azure Rights Management コネクタ用にサーバーを構成する | Azure Information Protection"
+title: "Configure servers for the Rights Management コネクタ用にサーバーを構成する - AIP"
 description: "Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーの構成に役立つ情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 5 について説明します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
-ms.openlocfilehash: faff30ed2115307ff51afc24db8d08233eee9d14
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 8837b6187aee8bc041df7185527470297e913f49
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -257,8 +258,3 @@ Exchange トランスポート ルールまたは Windows Server FCI と共に�
 RMS コネクタを監視するには、「[Azure Rights Management コネクタを監視する](monitor-rms-connector.md)」を参照してください。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

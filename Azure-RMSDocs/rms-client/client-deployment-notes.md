@@ -1,5 +1,5 @@
 ---
-title: "RMS クライアントのデプロイに関する注意事項 | Azure Information Protection"
+title: "RMS クライアントのデプロイに関する注意事項 - Azure Information Protection"
 description: "Rights Management サービス クライアント (RMS クライアント) バージョン 2 (別称 MSIPC クライアント) の再配布、インストール、サポートされるオペレーティング システム、レジストリ設定、およびサービス検出に関する情報について説明します。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a68bf7fe02836a9a2267834435c9d5de5595478e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -259,8 +260,3 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 6.  レジストリ エディターを閉じます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

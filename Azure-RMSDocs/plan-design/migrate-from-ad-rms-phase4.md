@@ -1,5 +1,5 @@
 ---
-title: "AD RMS から Azure Information Protection への移行 - フェーズ 4 | Azure Information Protection"
+title: "AD RMS から Azure Information Protection への移行 - フェーズ 4"
 description: "AD RMS から Azure Information Protection への移行のフェーズ 4 には、手順 8 ～ 9 が含まれます。"
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e45bbfe0fc2b064d987016cac8af8c4f57d465c9
-ms.openlocfilehash: e10b271872935b7903a3e1bcfe2e8287e693c613
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fc45ae10101460ea46bf2aa599b213a772eb5626
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -62,9 +63,4 @@ Azure Information Protection テナント キーの管理の詳細について�
 移行が完了した後は、[デプロイ ロードマップ](deployment-roadmap.md)を参照して、必要になる可能性があるその他のデプロイ タスクを確認します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

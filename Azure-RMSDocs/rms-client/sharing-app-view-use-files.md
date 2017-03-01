@@ -1,10 +1,10 @@
 ---
-title: "Rights Management によって保護されたファイルを表示して使用する | Azure Information Protection"
+title: "RMS で保護されたファイルを RMS 共有アプリケーションで開く - AIP"
 description: "保護されたファイルを表示して使用する手順です。Rights Management (RMS) 共有アプリケーションがインストールされている必要があります。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 92df54a09513de4a8ea2c42779679f1d76a1607e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -107,8 +108,3 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
