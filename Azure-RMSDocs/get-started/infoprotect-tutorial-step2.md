@@ -4,15 +4,16 @@ description: "約 20 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
-ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
+ms.sourcegitcommit: ad6116cb5eb71d699aeb732b0c19d7ee77eb4d1f
+ms.openlocfilehash: 4284cfb26aa4ff9f94eca823c7f41a01e51885f2
+ms.lasthandoff: 02/17/2017
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
 
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
-1. 新しいブラウザー ウィンドウで、テナントのグローバル管理者として [Azure ポータル](https://portal.azure.com)にサインインします。
+1. 新しいブラウザー ウィンドウで、テナントのグローバル管理者として [Azure Portal](https://portal.azure.com)にサインインします。
 
 2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 **[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選択します。 **[Azure Information Protection]** ブレードで** [作成]** をクリックします。
 
@@ -60,9 +61,15 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     これで、新しい **[Label: Confidential]** (ラベル: 機密) ブレードに、各ラベルで使用できる設定が表示されます。 
 
-2. **[Label: Confidential]** (ラベル: 機密) ブレードで、**[Set RMS template for protecting documents and emails containing this label]** (このラベルを含むドキュメントおよび電子メールを保護するための RMS テンプレートを設定する) セクションを見つけます。
+2. **[Label: Confidential]** (ラベル: 機密) ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントやメールのアクセス許可の設定) セクションを見つけます。
+
+    **[保護]** バーをクリックします。
     
-    **[Select RMS template from]** (RMS テンプレートの選択) オプションについては、既定値の **Azure RMS** のままにします。 次に **[RMS テンプレートの選択]** のドロップダウン ボックスをクリックし、既定のテンプレート **[\<your organization name> - Confidential]** (<組織名> - 機密) を選択します。 
+    ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar.png) 
+    
+    この操作により、**[アクセス許可]** ブレードが開きます。
+    
+3. **[アクセス許可]** ブレードで **[Azure RMS]** および **[テンプレートの選択]** が選択されていることを確認し、ドロップダウン ボックスをクリックして既定のテンプレート **[\<your organization name> - Confidential]** を選択します。     
     
     たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
     
@@ -70,7 +77,9 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     この既定の Azure Rights Management テンプレートを無効にしてある場合は、代わりのテンプレートを選択します。 ただし、部門テンプレートを選択する場合は、アカウントがスコープに含まれることを確認します。
     
-3. **[Set visual marking]** (視覚的なマーキングの設定) セクションを見つけます。
+4. **[完了]** をクリックして変更を保存し、**[アクセス許可]** ブレードを閉じます。
+
+5. **[Label: Confidential]** (ラベル: 機密) ブレードに戻り、**[視覚的なマーキングの設定] ** セクションを見つけます。
     
     **[Documents with this label have a watermark]** (このラベルのあるドキュメントに透かしを付ける) 設定では、**[On]** (オン) をクリックし、**[Text]** (テキスト) ボックスに組織の名前を入力します。 たとえば、以下のように「**VanArsdel, Ltd**」と入力します。 
     
@@ -78,7 +87,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     透かしのサイズ、色、レイアウトは変更できますが、ここでは既定値のままにしておきます。
     
-4. **[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションを見つけます。
+6. **[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションを見つけます。
     
     **[Add a new condition]** (新しい条件を追加する) をクリックし、**[Condition]** (条件) ブレードで次のように選択します。
     
@@ -94,25 +103,25 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     **[Save]** (保存) をクリックして、**[Label: Confidential]** (ラベル: 機密) ブレードに戻ります。
 
-5. **[Label: Confidential]** (ラベル: 機密) ブレードでは、以下のように、**[CONDITION NAME]** (条件名) に **[Credit Card Number]** (クレジット カード番号) と表示され、**[OCCURRENCES]** (出現回数) に **1** が設定されています。
+7. **[Label: Confidential]** (ラベル: 機密) ブレードでは、以下のように、**[CONDITION NAME]** (条件名) に **[Credit Card Number]** (クレジット カード番号) と表示され、**[OCCURRENCES]** (出現回数) に **1** が設定されています。
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - クレジット カードの条件を構成する](../media/step2-see-condition.png)
 
-6. **[Select how this label is applied]** (このラベルの適用方法を選択) は既定値の **[推奨]** のままにしておきます。既定のポリシー ヒントは変更しないでください。
+8. **[Select how this label is applied]** (このラベルの適用方法を選択) は既定値の **[推奨]** のままにしておきます。既定のポリシー ヒントは変更しないでください。
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - [Recommended] (推奨) 分類](../media/step2-keep-recommended.png)
 
-7. **[Enter notes for internal housekeeping]** (内部ハウスキーピング処理向けのメモを入力) ボックスに、「**For testing purposes only**」 (テスト用のみ) と入力します。
+9. **[Enter notes for internal housekeeping]** (内部ハウスキーピング処理向けのメモを入力) ボックスに、「**For testing purposes only**」 (テスト用のみ) と入力します。
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - メモを入力する](../media/step2-type-notes.png)
 
-8. この **[Label: Confidential]** (ラベル: 機密) ブレードで **[保存]** をクリックします。 次に、**[Policy: Global]**(ポリシー: グローバル) ブレードで **[保存]** を再度クリックします。
+10. この **[Label: Confidential]** (ラベル: 機密) ブレードで **[保存]** をクリックします。 次に、**[Policy: Global]**(ポリシー: グローバル) ブレードで **[保存]** を再度クリックします。
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー構成済み](../media/info-protect-policy-configured.png)
 
-9. 変更を行って保存したので、ユーザーがそれを使用できるようにします。そのためには、最初の **[Azure Information Protection]** ブレードで、**[公開]** をクリックし、**[はい]** をクリックして確定します。
+11. 変更を行って保存したので、ユーザーがそれを使用できるようにします。そのためには、最初の **[Azure Information Protection]** ブレードで、**[公開]** をクリックし、**[はい]** をクリックして確定します。
 
-Azure ポータルを閉じても、開いたままにしておきこのチュートリアルが終わった後でさらにオプションを構成してみてもかまいません。
+Azure Portal を閉じても、開いたままにしておきこのチュートリアルが終わった後でさらにオプションを構成してみてもかまいません。
 
 既定のポリシーの確認と変更が済んだので、次の手順では Azure Information Protection をインストールします。
 
@@ -126,8 +135,3 @@ Azure ポータルを閉じても、開いたままにしておきこのチュ�
 [手順 3 &#187;](infoprotect-tutorial-step3.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-
