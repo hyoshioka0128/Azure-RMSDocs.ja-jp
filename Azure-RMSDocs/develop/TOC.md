@@ -46,6 +46,7 @@
 ##### [Azure RMS の ADAL 認証を構成する](adal-auth.md)
 #### [方法: 明示的な所有者権限の追加](add-explicit-owner-rights.md)
 #### [方法: 権限保護対応アプリケーションのデバッグ](debugging-applications-that-use-ad-rms.md)
+#### [方法: アプリのデプロイ](how-to-deploy-app.md)
 #### [方法: ドキュメント追跡の有効化と取り消し](tracking-content.md)
 #### [方法: 電子メール通知の有効化](how-to-enable-email-notification.md)
 #### [方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
@@ -65,8 +66,3 @@
 #### [構造体](https://msdn.microsoft.com/library/hh535294.aspx)
 #### [エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
 ## [利用規約](terms.md) 
-
-
-<!--HONumber=Jan17_HO4-->
-
-
