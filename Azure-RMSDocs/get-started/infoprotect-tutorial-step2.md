@@ -1,19 +1,19 @@
 ---
-title: "クイック スタート チュートリアル手順 2 | Azure Information Protection"
+title: "クイック スタート チュートリアルの手順 2 - AIP"
 description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: ad6116cb5eb71d699aeb732b0c19d7ee77eb4d1f
-ms.openlocfilehash: 4284cfb26aa4ff9f94eca823c7f41a01e51885f2
-ms.lasthandoff: 02/17/2017
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 39dfa8a1c4dabf32f8b62f08a674152f41a5b96a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -63,7 +63,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[Label: Confidential]** (ラベル: 機密) ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントやメールのアクセス許可の設定) セクションを見つけます。
 
-    **[保護]** バーをクリックします。
+    **保護**オプションを選択
     
     ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar.png) 
     
