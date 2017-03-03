@@ -17,6 +17,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 61efd11cde36c5f2507a91112cfc3711c1bedfca
 ms.openlocfilehash: 9735b9c1d05f2512eab1a11808dc5911e26174be
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -42,8 +43,3 @@ The Azure Information Protection SDK 4.2 は、複数のオペレーティング
 * [作業開始](get-started.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
