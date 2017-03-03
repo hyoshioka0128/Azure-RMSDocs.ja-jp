@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fec4ca2541b28fd9d91286fceaee0466fc445364
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
+ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -77,7 +77,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 - Azure Information Protection クライアントがインストールされている場合にユーザーが Office アプリケーションから実行できる診断テストとリセット オプションがあります。この機能を使用するには、[**ホーム**] タブの [**保護**] グループで [**保護**] をクリックし、[**ヘルプとフィードバック**]、[**診断の実行**] の順にクリックします。 
 
-    このオプションの詳細については、クライアントのインストールに関するドキュメントで「[To verify installation, connection status, or send feedback](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback)」(インストール、接続状態を確認するには、または問題を報告するには) を参照してください。
+    このオプションの詳細については、クライアントのインストールに関するドキュメントで「[To verify installation, connection status, or send feedback](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback)」(インストール、接続状態を確認するには、または問題を報告するには) を参照してください。
 
 ## <a name="version-11230"></a>バージョン 1.1.23.0
 
