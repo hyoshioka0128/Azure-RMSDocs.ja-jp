@@ -16,6 +16,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
 ms.openlocfilehash: 85cd61e564b066458618c02b4ac20cddf6b7e183
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -51,8 +52,3 @@ Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、i
 | [Android の使用シナリオ](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|RMS SDK に慣れるための重要な開発シナリオを表す **Java のコード例**です。 Microsoft によって保護されたファイル形式の使用例、カスタムの保護されたファイル形式の使用例、カスタムの UI コントロールの使用例などがあります。|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
