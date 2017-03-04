@@ -37,8 +37,3 @@
 ##### [キーボード ショートカット](sharing-app-keyboard-shortcuts.md)
 ##### [ダイアログ ボックスのオプション](sharing-app-dialog-box.md)
 # [アプリの開発とカスタマイズ](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Feb17_HO2-->
-
-
