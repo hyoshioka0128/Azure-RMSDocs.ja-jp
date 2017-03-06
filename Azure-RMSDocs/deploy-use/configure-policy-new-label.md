@@ -4,7 +4,7 @@ description: "Azure Information Protection にはカスタマイズできる既�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -37,8 +37,7 @@ Azure Information Protection ポリシーに新しいラベルを追加するに
     - 新しいラベルを作成するには: **[Add a new label]** (新しいラベルの追加) をクリックします。
 
     - 新しいサブラベルを作成するには: サブラベルを作成するラベルを右クリックするかコンテキスト メニュー (**...**) をクリックし、**[Add a sub-label]** (サブラベルの追加) をクリックします。
-
-
+    
      追加する新しいラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
 
 3. **[ラベル]** または **[サブラベル]** ブレードで、新しいラベルに適用するオプションを選択し、**[保存]** をクリックします。
