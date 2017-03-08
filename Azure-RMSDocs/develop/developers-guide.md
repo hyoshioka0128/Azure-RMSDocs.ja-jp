@@ -4,7 +4,7 @@ description: "開発者は Azure Information Protection を使用して、すべ
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb4f9bf0c38e25045fcd1a01deaa993bc862c8
-ms.openlocfilehash: 7f3c9f95ea86655d04e385eee7fd9c8cc0096ce9
+ms.sourcegitcommit: 9a8b37f8e4e6d3a22c5ae4b43ffb82bfd0482037
+ms.openlocfilehash: ee257e733177077caaf3cf3b579a1b3718479121
+ms.lasthandoff: 02/10/2017
 
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
@@ -35,7 +36,7 @@ ms.openlocfilehash: 7f3c9f95ea86655d04e385eee7fd9c8cc0096ce9
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) は、RMS 対応の DLP サンプル アプリケーションです。DLP RMS 対応アプリケーションで制限付きコンテンツを保護および使用するために RMS FILE API を使用して実行する必要がある基本的な手順がわかります。
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) は、Azure BLOB ストレージのデータを保護するために Azure アプリケーションで RMS SDK を使用する方法をデモンストレーションするサンプルです。
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) は、ファイル システムのディレクトリを監視し、すべての変更 (ファイルの追加や変更) に RMS 保護ポリシーを適用する Windows アプリケーションを構築する方法を示すサンプルです。
-- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/EncryptFilesInDir) は、ディレクトリを入力として受け取り、そのディレクトリ内のすべてのファイルのみを再帰なしに保護するシンプルなコンソール アプリケーションです。
+- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) は、ディレクトリを入力として受け取り、そのディレクトリ内のすべてのファイルのみを再帰なしに保護するシンプルなコンソール アプリケーションです。
 
 ## <a name="powershell-guides"></a>PowerShell ガイド
 
@@ -65,7 +66,12 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 次のガイドでは、一般的なツールを使用したアプリケーション開発環境のセットアップ手順を、OS ごとに説明します。
 
-|[![iOS および OSX のセットアップ](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android のセットアップ](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone のセットアップ](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows サービスのセットアップ](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux のセットアップ](../media/develop/linux-icon.png)](linux-setup.md) |
+[![iOS および OSX のセットアップ](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Android のセットアップ](../media/develop/android-icon.png)](android-sdk.md)
+[![Windows Phone のセットアップ](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Windows サービスのセットアップ](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Linux のセットアップ](../media/develop/linux-icon.png)](linux-setup.md)
+
 
 ## <a name="how-tos"></a>手順ガイド
 
@@ -74,8 +80,10 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 ### <a name="general"></a>全般
 
 - [方法: ドキュメント追跡の有効化と取り消し (サービス)](tracking-content.md)
+- [クライアントを展開する方法](../rms-client/client-deployment-notes.md)
 - [方法: RMS サーバーをインストールして構成する (サービス)](how-to-install-and-configure-an-rms-server.md)
 - [方法: ドキュメント追跡を使用する (ユーザー)](how-to-use-document-tracking.md)
+
 
 ### <a name="security-and-authentication"></a>セキュリティと認証
 
@@ -135,8 +143,3 @@ Microsoft の Dan Plastina が、[Azure Information Protection の概要](https:
 - [Azure Information Protection の用語 - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
