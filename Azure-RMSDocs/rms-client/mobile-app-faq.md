@@ -1,11 +1,11 @@
 ---
-title: "iOS 用および Android 用の Azure Information Protection アプリに関する FAQ | Azure Information Protection"
+title: "iOS 用と Android 用の Azure Information Protection アプリに関する FAQ"
 description: 
 keywords: "iOS 用および Android 用の Azure Information Protection アプリの使用に役立つよく寄せられる質問"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4ac26b3faa61f3a19e71f7f1d1d257c2ded934c7
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -30,9 +31,21 @@ ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
 
 お使いの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合、このアプリを使うと、権利が保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルを表示することもできます。 現時点では、このアプリを使用して、保護されたメール メッセージを新規作成したり、メール メッセージに返信したり、保護されたファイルを作成または編集したりすることはできません。
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive For Business にある PDF ファイルを開くことはできますか。
+## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive for Business にある PDF ファイルを開くことはできますか。
 
 はい。SharePoint と OneDrive for Business によって、他のユーザーがお客様と共有している保護された PDF ファイルを開くことができます。 リンクをタップし、このアプリを選択してファイルを自分用に開きます。 
+
+このアプリで、SharePoint と OneDrive for Business の外部で保護されている PDF ファイル (保護されている PDF ファイルと .ppdf ファイル) を開くこともできます。
+
+## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>モバイル デバイスで Azure Information Protection アプリを実行するには
+
+Azure Information Protection アプリには、**iOS 8** 以降または **Android 4.4** 以降が必要になります。
+
+これらのバージョン以降を搭載している場合は、モバイル デバイスにアプリをインストールして実行できます。
+
+- モバイル デバイスが Microsoft Intune で管理されている場合は、ポータル サイトから Azure Information Protection アプリをインストールできます。
+
+- モバイル デバイスが Microsoft Intune で管理されていない、または Azure Information Protection アプリをポータル サイトで入手できない場合は、iTunes ストアや Google Play ストアから直接インストールするか、[Azure Information Protection のダウンロード ページ](https://portal.azurerms.com/#/download)の **[モバイル デバイス]** セクションから iOS または Android のアイコンをクリックしてアプリをインストールすることができます。 
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>ビューアー アプリを開始するにはどうすればよいですか。
 
@@ -60,8 +73,4 @@ ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
 
 質問を [Yammer サイト](https://www.yammer.com/AskIPTeam) に投稿するか、または [情報保護チームに電子メールを送信](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app)してください。
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

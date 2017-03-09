@@ -1,18 +1,19 @@
 ---
-title: "ラベルを削除または順序変更する方法 | Azure Information Protection"
+title: "Azure Information Protection ラベルの削除または順序変更"
 description: "Azure Information Protection ポリシー内に構成することで、Information Protection バーに表示されるラベルを削除または順序変更することができます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: df667a8580af71d808752d569a6148852faec82c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ Azure Information Protection ポリシー内に構成することで、Informati
 
 ドキュメントや電子メールに適用されているラベルを削除してから Azure Information Protection ポリシーを公開すると、そのラベルは、Azure Information Protection クライアントによって次回開かれたときに自動的にドキュメントや電子メールから削除されます。
 
-ラベルは維持するが Information Protection バーに表示されないようにする場合は、ラベルを削除するのではなく、単に無効にすることができます。
+ラベルを削除するのではなく、その前に無効にするかどうかを検討してください。 ドキュメントや電子メールに適用されているラベルを無効にすると、適用されているラベルはこれらのドキュメントや電子メールからは削除されませんが、ユーザーが Information Protection バーで選択できるラベルとしては表示されなくなります。 ラベルを無効にすれば、ユーザーに後でラベルを選択させる必要が生じたときのために元の構成を保持することもでき、この場合は再度有効化するだけで済みます。
 
 Information Protection バーにラベルが論理的な流れで表示されるように、ラベルの順序を設定します。 たとえば、最も秘密度が低いラベルが最初に、最も秘密度が高いラベルが最後に表示されるようにラベルを秘密度で順序付けできます。 既定のポリシーの構成については、[こちら](configure-policy-default.md)をご覧ください。
 
@@ -37,7 +38,7 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 これらの変更を行うには、次の手順を実行します。
 
-1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
@@ -57,10 +58,6 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Rights Management によって保護されたファイルを表示して使用する | Azure Information Protection"
+title: "AIP クライアントでの保護されたファイルの表示と使用"
 description: "Azure Information Protection クライアントがインストールされている必要がある保護されたファイルの表示および使用手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 408b57c5ff5ce3688763ef7b4c4b87b123ca4ea3
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,27 +24,40 @@ ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
-**[このバージョンのクライアントはプレビュー段階にあり、変更される可能性があります。]**
+多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
-[Azure Information Protection クライアントがコンピューターにインストールされている](install-client-app.md)場合は、 電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーのファイルをダブルクリックしたり、ファイルへのリンクをクリックして保護されたファイルを開くだけで、ファイルを表示することができます。
+ファイルが開かない場合、**Azure Information Protection ビューアー**を使用して開くことができます。 このビューアーは、Azure Information Protection クライアントの一部として自動的にインストールされますが、別にインストールすることもできます。 クライアントとビューアーの両方のクライアントは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページからインストールできます。 クライアントのインストールの詳細については、「[Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
 
 > [!NOTE]
-> 保護されたファイルを表示するには、先にユーザーがファイルを表示する権限を持つことを Rights Management サービスが確認する必要があります。それには、ユーザー名とパスワードを調べます。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
->
-> 組織に使用できるクラウドベースのアカウント (Office 365 または Azure 用) がなく、AD RMS を使用していない場合は、Rights Management で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを申請できます。
->
-> -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
->
->     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
-> -   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
+> クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。
+> 
+> - Azure Information Protection
+> 
+> - Azure Rights Management
+> 
+> - Active Directory Rights Management サービス 
+> 
+> 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
+
+## <a name="prompts-for-authentication"></a>認証のプロンプト
+
+保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
+
+組織に使用できるクラウド ベースのアカウント (Office 365 または Azure 用) がなく、同等のオンプレミス バージョン (AD RMS) を使用していない場合は、Rights Management で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを申請できます。
+
+-   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
+    
+    サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
+    
+-   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
 ## <a name="to-view-and-use-a-protected-file"></a>保護されているファイルを表示して使用するには
 
-1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を要求された場合は、**[Azure Information Protection ビューア (プレビュー)]** を選択します。 
+1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、**[Azure Information Protection ビューアー]** を選択します。 
 
 2. **[サインイン]** または **[サインアップ]** ページが表示されたら、**[サインイン]** をクリックして資格情報を入力します。 保護されたファイルが添付ファイルとして送信されてきた場合は、ファイルの送信に使用されたものと同じメール アドレスを指定するようにします。
     
-    承認されるアカウントがない場合は、このページの上部のメモを参照してください。 無料アカウントにサインアップして手順に戻ります。
+    承認されているアカウントがない場合は、このページの「[認証のプロンプト](#prompts-for-authentication)」を参照してください。 無料アカウントにサインアップして手順に戻ります。
 
 3. 読み取り専用バージョンのファイルは、**Azure Information Protection Viewer (Azure Information Protection ビューアー)** で開きます。 十分なアクセス許可がある場合は、ファイルの印刷および編集ができます。 
 
@@ -60,12 +74,9 @@ ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
 
 
 ## <a name="other-instructions"></a>その他の手順
-操作方法に関する手順については、「Azure Information Protection ユーザー ガイド」の次のセクションを参照してください。
+他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management テナント キーに対する操作 | Azure Information Protection"
+title: "Azure Information Protection テナント キーに対する操作"
 description: "Azure Information Protection テナント キーに関するさまざまなレベルの制御および責任について確認してください。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2a46c750034267bc2e69c35f5ac9c134aed0461b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0895050d1bc0528f9ab230bdeac9e2a3ee787b31
 
 
 ---
@@ -43,12 +43,10 @@ Azure Key Vault で独自のテナント キーを自分で管理する場合、
 - [Microsoft が管理するテナント キー](operations-microsoft-managed-tenant-key.md)
 - [お客様が管理するテナント キー](operations-customer-managed-tenant-key.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

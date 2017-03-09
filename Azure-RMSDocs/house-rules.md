@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection の Microsoft ドキュメント サイトに対する顧客コメントの内部ルール | Azure Information Protection"
+title: "ユーザー コメントの内部ルール - AIP"
 description: "Azure Information Protection ドキュメントの Livefyre コメントとサイドバーのスコープと意図。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4347e1759c1690436eb37482831c97b93ac8fd5a
-ms.openlocfilehash: 958135678a9b48ca59b3d377439f5cf4b3d1efd7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 587c4f188603f49605191a15d71180441f16e3c9
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="house-rules-for-customer-comments-on-the-documentation-site-for-azure-information-protection"></a>Azure Information Protection のドキュメント サイトに対する顧客コメントの内部ルール
+# <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Azure Information Protection のドキュメントに対するコメントの内部ルール
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -40,10 +41,5 @@ ms.openlocfilehash: 958135678a9b48ca59b3d377439f5cf4b3d1efd7
 「[Azure Information Protection の情報とサポート](./get-started/information-support.md)」でその他のリソースも参照してください。 
 
 注: Microsoft 従業員の場合は、内部通信チャネルを使用してください。
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

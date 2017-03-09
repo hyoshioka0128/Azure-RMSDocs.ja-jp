@@ -1,10 +1,10 @@
 ---
-title: "オンプレミス サーバーでのデータ保護のサポート | Azure Information Protection"
+title: "Azure RMS データ保護に関するサーバー サポート - AIP"
 description: "Rights Management コネクタを使用して、Azure Information Protection から Azure Rights Management サービスを使用できるオンプレミス サーバー製品を特定します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +13,15 @@ ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: e4bf159cea6298e5a5577a2fa4de3dd3beeb47d9
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 22beea6ab33d6f3fc0c36ff136dd1bc44714a997
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
 
-# <a name="onpremises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
+# <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -51,19 +52,15 @@ Azure Rights Management コネクタを使用すると、次のオンプレミ�
     -   Windows Server 2012
 
     > [!NOTE]
-    > Windows Server 2008 R2 を実行するファイル サーバーには、Rights Management の保護を適用する組み込みのファイル管理タスク アクションがないため、このシナリオには Rights Management コネクタを使用できません。 ただし、Azure RMS を使用してファイルを保護できる実行可能ファイルまたはスクリプトを実行するカスタムのファイル管理タスクを構成する場合、これらのオペレーティング システムでファイル分類インフラストラクチャと Azure RMS を使用できます。 たとえば、[RMS Protection コマンドレット](https://msdn.microsoft.com/library/azure/mt433195.aspx)を使用する Windows PowerShell スクリプトなどがあります。
+    > Windows Server 2008 R2 を実行するファイル サーバーには、Rights Management の保護を適用する組み込みのファイル管理タスク アクションがないため、このシナリオには Rights Management コネクタを使用できません。 ただし、Azure RMS を使用してファイルを保護できる実行可能ファイルまたはスクリプトを実行するカスタムのファイル管理タスクを構成する場合、これらのオペレーティング システムでファイル分類インフラストラクチャと Azure RMS を使用できます。 たとえば、[AzureInformationProtection コマンドレット](/powershell/azureinformationprotection/vlatest/aip)を使用する Windows PowerShell スクリプトなどがあります。
     > 
     > 最新の Windows Server を実行しているサーバーでこれらのコマンドレットを使うこともできます。この場合、すべてのファイル タイプが保護されるという利点があります。 RMS コネクタでは Office ファイルのみ保護されます。 操作手順については、「[Windows Server ファイル分類インフラストラクチャ &#40;FCI&#41; での RMS の保護](../rms-client/configure-fci.md)」を参照してください。
 
-Rights Management コネクタは、Windows Server 2012 R2、Windows Server 2012、および Windows Server 2008 R2 でサポートされています。
+Rights Management コネクタは、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、および Windows Server 2008 R2 でサポートされています。
 
 これらのオンプレミス サーバーで Rights Management コネクタを構成する方法の詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」をご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Rights Management の要件](requirements-azure-rms.md)」を参照してください。
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,11 +1,11 @@
 ---
-title: "Rights Management によって保護されたファイルのアクセス許可を変更する | Azure Information Protection"
+title: "RMS で保護されたファイルに対するアクセス許可を変更する - AIP"
 description: "ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。"
 keywords: 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3290b9436f75c2d0d37c401dd2e0be11bcf2d554
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -39,7 +40,7 @@ ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 
 ファイルが保護されないようにすべてのアクセス許可を完全に削除する場合は、「[ファイルからの保護の削除](sharing-app-remove-protection.md)」を参照してください。
 
-## <a name="to-reprotect-a-file-inplace"></a>ファイルを現在の場所で保護しなおすには
+## <a name="to-re-protect-a-file-in-place"></a>ファイルを現在の場所で保護しなおすには
 
 1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
 
@@ -72,7 +73,7 @@ ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
 > -   詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>電子メールで送信したファイルを保護しなおすには
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>電子メールで送信したファイルを保護しなおすには
 
 電子メールで送信したファイルのアクセス許可を変更する場合は、次のようにします。
 
@@ -95,8 +96,4 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

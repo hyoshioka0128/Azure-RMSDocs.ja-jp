@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection クライアント&colon; バージョン リリース履歴 | Azure Information Protection"
+title: "Azure Information Protection クライアント&colon; バージョン リリース履歴"
 description: "Windows 用 Azure Information Protection クライアントのリリースの新機能と変更点について説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: fe6491f413b928a85b2a181ee22cfe17f39149ef
+ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
+ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -27,12 +28,38 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 次の情報を使用して、リリースの新機能や変更内容をご確認ください。 最新のリリースは一番上に表示されます。 一般公開前のバージョンは記載されていません。
 
-現行リリースに加えて、Azure Information Protection クライアントの**プレビュー** バージョンが利用可能になりました。こちらのバージョンは Microsoft ダウンロード センターからのみダウンロードできます。 プレビュー バージョンでは Windows 用 Rights Management 共有アプリケーションと同じ機能が提供され、エクスプローラーの右クリック オプションと保護されたファイルのビューアーもご利用いただけます。 詳細については、[ブログ投稿のお知らせ](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)と暫定版ドキュメント「[Azure Information Protection ユーザー ガイド](client-user-guide.md)」を参照してください。
-
 > [!NOTE]
 > 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、まず最新リリースで問題が起きないかを確認してください。
 >  
-> 問題が解決しない場合は、Office アプリケーションを開き、**[ホーム]** タブの**保護**グループで、**[保護]**、**[ヘルプとフィードバック]** の順にクリックします。 **[フィードバックの送信]** リンクをクリックします。これを使用して、調査用に Information Protection チームに送信される電子メール メッセージにクライアント ログを自動的にアタッチできます。 サポート オプションについては、「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」の情報を参照してください。
+> 問題が解決しない場合は、「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
+
+## <a name="version-131552"></a>バージョン 1.3.155.2
+
+**リリース日**: 2017 年 2 月 8 日
+
+**新しい要件**:
+
+[Microsoft .NET Framework]
+
+- このバージョンの Azure Information Protection クライアントでは、Microsoft .NET Framework 4.6.2 の最小バージョンが必要になります。これがない場合、インストーラーでダウンロードとインストールが試行されます。 Azure Information Protection クライアントのインストールが完了した後に、コンピューターの再起動が必要な場合があります。
+
+- Azure Information Protection ビューアーを別にインストールする場合は、Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。これがない場合、インストーラーではダウンロードまたはインストールされません。
+
+**新機能**:
+
+- Windows 用 Rights Management 共有アプリケーションと Azure Information Protection クライアントの機能を組み合わせた新しい統合クライアント。 主な機能:
+    
+    - エクスプローラーと統合され、(右クリックで) ラベルと保護を適用できるようになりました。 サポートされるファイル形式が追加され、複数ファイルを選択できるようになりました。
+    - 保護されたドキュメント (SharePoint の保護された PDF を含む) のビューアー。
+    - ローカルまたはネットワーク共有に保存されているファイルのラベルを取得または設定する PowerShell コマンドレット。 これらのコマンドレットと共に、RMS 保護ツール (RMSProtection モジュール) に付属していたコマンドレットもインストールされます。
+    - 適用されたラベル、適用方法、適用者などの情報を記録するクライアント使用状況ログ。
+
+このクライアント バージョンは、最初に 2016 年 12 月に発表されたプレビュー クライアントの[一般公開リリース](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/)です。 このバージョンのクライアントの詳細については、次のガイドを参照してください。
+
+- [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
+
+- [Azure Information Protection ユーザー ガイド](client-user-guide.md)
+
 
 ## <a name="version-1240"></a>バージョン 1.2.4.0
 
@@ -50,7 +77,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 - Azure Information Protection クライアントがインストールされている場合にユーザーが Office アプリケーションから実行できる診断テストとリセット オプションがあります。この機能を使用するには、[**ホーム**] タブの [**保護**] グループで [**保護**] をクリックし、[**ヘルプとフィードバック**]、[**診断の実行**] の順にクリックします。 
 
-    このオプションの詳細については、クライアントのインストールに関するドキュメントで「[インストール、接続の状態を確認するには、または問題を報告するには](info-protect-client.md#to-verify-installation-connection-status-or-report-a-problem)」を参照してください。
+    このオプションの詳細については、クライアントのインストールに関するドキュメントで「[To verify installation, connection status, or send feedback](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback)」(インストール、接続状態を確認するには、または問題を報告するには) を参照してください。
 
 ## <a name="version-11230"></a>バージョン 1.1.23.0
 
@@ -60,10 +87,11 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 ## <a name="next-steps"></a>次のステップ
 
-クライアントのインストールに関する詳細については、「[Azure Information Protection クライアントのインストール](info-protect-client.md)」を参照してください。
+クライアントのインストールの詳細:
+
+- ユーザー向け: [クライアントをダウンロードしてインストールする](install-client-app.md)
+
+- 管理者向け: [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
 
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

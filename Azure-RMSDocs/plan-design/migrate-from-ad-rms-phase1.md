@@ -1,10 +1,10 @@
 ---
-title: "AD RMS から Azure Information Protection に移行する - フェーズ 1 | Azure Information Protection"
+title: "AD RMS から Azure Information Protection への移行 - フェーズ 1"
 description: "AD RMS から Azure Information Protection への移行のフェーズ 1 には、手順 1 ～ 4 が含まれます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 750919e3d8be88a1a1028d83c89ece55ea4e8690
-ms.openlocfilehash: 65ab175da5c5ab74090bf6bdb88af766dc55e334
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -96,7 +97,7 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
 > [!NOTE]
 > AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「 [AD RMS でのハードウェア セキュリティ モジュールの使用](http://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
 
-Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 顧客管理の Azure Information Protection テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の&2; つのオプションがあります。 顧客管理の Azure Information Protection テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 > [!IMPORTANT]
 > 現在、Exchange Online は Azure Information Protection の BYOK と互換性がありません。 移行後に BYOK を使用し、Exchange Online を使用する場合は、この構成により Exchange Online の IRM 機能が制限されることを理解しておきます。 「[BYOK の料金と制限事項](byok-price-restrictions.md)」の情報は、移行に最適な Azure Information Protection テナント キー トポロジの選択に役立ちます。
@@ -107,7 +108,7 @@ Azure Information Protection テナント キー トポロジには、テナン�
 |-----------------------------|----------------------------------------|--------------------------|
 |AD RMS データベースでのパスワード保護|マイクロソフト管理|後で説明される「**ソフトウェアで保護されたキーからソフトウェアで保護されたキーへの移行**」の手順を参照してください。<br /><br />これは最も簡単な移行パスであり、Azure Information Protection に構成データを転送するだけで済みます。|
 |Thales nShield ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護|お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、3 つの一連の手順を実行する必要があります。最初にオンプレミスの HSM から Azure Key Vault の HSM にキーを転送し、次に Azure Information Protection からの Azure Rights Management サービスがテナント キーを使用するのを承認し、最後に構成データを Azure Information Protection に転送します。|
-|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|後で説明される「**ソフトウェアで保護されたキーから HSM で保護されたキー**への移行」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の 4 つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
+|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|後で説明される「**ソフトウェアで保護されたキーから HSM で保護されたキー**への移行」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の&4; つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
 |Thales 以外のサプライヤーのハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護|お客様が管理 (BYOK)|この HSM から Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
 |外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、暗号プロバイダーのサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
 これらの手順を開始する前に、信頼された発行ドメインをエクスポートしたときに作成した .xml ファイルにアクセスできることを確認します。 たとえば、これらは AD RMS サーバーからインターネットに接続されたワークステーションに移動する USB ドライブに保存されている可能性があります。
@@ -142,7 +143,7 @@ Azure Information Protection テナントが既にアクティブ化されてい
 
 AD RMS からインポートしたテンプレートの外観と動作は、Azure クラシック ポータルで作成するカスタム テンプレートと同じです。 インポートしたテンプレートを公開に変更し、ユーザーがアプリケーションからそれらを表示して選択できるようにする方法は、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
-新しくインポートしたテンプレートを公開するだけでなく、移行を続ける前に行う必要があるテンプレートの重要な変更が 2 つあります。 移行プロセス中のユーザーに対するエクスペリエンスを一貫したものにするため、インポートしたテンプレートに変更を加えないでください。また、Azure Information Protection に付属する 2 つの既定のテンプレートを公開したり、この時点で新しいテンプレートを作成したりしないでください。 代わりに、移行プロセスが完了するまで待ち、AD RMS サーバーを使用停止にします。
+新しくインポートしたテンプレートを公開するだけでなく、移行を続ける前に行う必要があるテンプレートの重要な変更が&2; つあります。 移行プロセス中のユーザーに対するエクスペリエンスを一貫したものにするため、インポートしたテンプレートに変更を加えないでください。また、Azure Information Protection に付属する&2; つの既定のテンプレートを公開したり、この時点で新しいテンプレートを作成したりしないでください。 代わりに、移行プロセスが完了するまで待ち、AD RMS サーバーを使用停止にします。
 
 この手順で必要な場合があるテンプレートの変更:
 
@@ -165,11 +166,11 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ## <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure Information Protection にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure Information Protection の同等のグループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com** です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
+AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure Information Protection にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure Information Protection 用の同等グループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<テナント名>.onmicrosoft.com** です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
 
 AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS (Windows PowerShell を使用した AD RMS の管理)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」を参照してください。
 
-Azure クラシック ポータルの既定の権限ポリシー テンプレートの 1 つをコピーした場合、組織の自動作成されたグループが表示され、その後 **[権限]** ページで **[ユーザー名]** を特定できます。 ただし、手動で作成またはインポートしたテンプレートに Azure クラシック ポータルを使用してこのグループを追加することはできないため、代わりに次の Azure RMS PowerShell オプションのいずれかを使用する必要があります。
+Azure クラシック ポータルの既定の権限ポリシー テンプレートの&1; つをコピーした場合、組織の自動作成されたグループが表示され、その後 **[権限]** ページで **[ユーザー名]** を特定できます。 ただし、手動で作成またはインポートしたテンプレートに Azure クラシック ポータルを使用してこのグループを追加することはできないため、代わりに次の Azure RMS PowerShell オプションのいずれかを使用する必要があります。
 
 -   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) PowerShell コマンドレットを使用して、"AllStaff" グループおよび権限を権限定義オブジェクトとして定義し、ANYONE グループに加えて元のテンプレートで既に権限を付与されていた他の各グループまたはユーザーに対してこのコマンドを再度実行します。 その後、[Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) コマンドレットを使用して、これらの権限定義オブジェクトをテンプレートに追加します。
 
@@ -178,7 +179,7 @@ Azure クラシック ポータルの既定の権限ポリシー テンプレー
 > [!NOTE]
 > この同等グループ "AllStaff" は、AD RMS の ANYONE グループとまったく同じではありません。"AllStaff" グループには、Azure テナントのすべてのユーザーが含まれます。一方、ANYONE グループには、認証されたすべてのユーザーが含まれ、組織外のユーザーが含まれる場合があります。
 > 
-> こうしうた 2 つのグループの違いにより、"AllStaff" グループだけでなく外部ユーザーも追加しなければならない場合があります。 グループの外部の電子メール アドレスは、現在サポートされていません。
+> こうしうた&2; つのグループの違いにより、"AllStaff" グループだけでなく外部ユーザーも追加しなければならない場合があります。 グループの外部の電子メール アドレスは、現在サポートされていません。
 
 
 ### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>ANYONE グループを含む AD RMS テンプレートを識別するためのサンプル Windows PowerShell スクリプト
@@ -222,9 +223,5 @@ Remove-PSDrive MyRmsAdmin -force
 ## <a name="next-steps"></a>次のステップ
 「[フェーズ 2 - クライアント側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
 
-
-
-
-<!--HONumber=Nov16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -1,10 +1,10 @@
 ---
-title: "Office 365&colon; クライアントとオンライン サービスの構成 | Azure Information Protection"
+title: "Office 365&colon; クライアントとオンライン サービスの構成 - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスで使用する Office 365 を構成するための、管理者向けの情報と手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 6c71f9b140fa52ab65dab76297a8763b3a980512
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f0f486620f4b13dc8d94fee742eec2f8e4753d78
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: 6c71f9b140fa52ab65dab76297a8763b3a980512
 
 Office 365 では、Azure Information Protection からの Azure Rights Management サービスをネイティブでサポートしているため、クライアント コンピューターを構成しなくても、Word、Excel、PowerPoint、Outlook、Outlook Web App などのアプリケーションで Information Rights Management (IRM) 機能がサポートされます。 すべてのユーザーは、各自の [!INCLUDE[o365_1](../includes/o365_1_md.md)] 資格情報を使用して Office アプリケーションにサインインするだけで、ファイルや電子メールを保護したり、他のユーザーが保護しているファイルや電子メールを使用することができます。
 
-ただし、これらのアプリケーションに加えて Rights Management 共有アプリケーションを使用することをお勧めします。そうすることで、ユーザーは Office アドインの利点を活用することができます。 詳細については、「[Rights Management 共有アプリケーション: クライアントでのインストールと構成](configure-sharing-app.md)」を参照してください。
+ただし、これらのアプリケーションを Azure Information Protection クライアントで補完して、ユーザーが Office アドインを利用し、追加のファイルの種類をサポートできるようにすることをお勧めします。 詳細については、「[Azure Information Protection client: Installation and configuration for clients](configure-client.md)」(Azure Information Protection クライアント: クライアントのインストールと構成) を参照してください。
 
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: IRM 構成
 Exchange Online を構成して Azure Rights Management サービスをサポートするには、Exchange Online で Information Rights Management (IRM) サービスを構成する必要があります。 これを行うには、Windows PowerShell を使用して (個別のモジュールをインストールする必要はありません)、[Exchange Online 用 PowerShell コマンド](https://technet.microsoft.com/library/jj200677.aspx)を実行します。
@@ -48,14 +49,14 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
     サインインするには、次のように入力します。
 
     ```
-    $Cred = Get-Credential
+    $UserCredential = Get-Credential
     ```
     [ **Windows PowerShell 資格情報要求** ] ダイアログ ボックスで、Office 365 のユーザー名とパスワードを入力します。
 
-3.  Exchange Online サービスに接続するには、次の 2 つのコマンドを実行します。
+3.  Exchange Online サービスに接続するには、次の&2; つのコマンドを実行します。
 
     ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
     ```
@@ -119,7 +120,7 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
     Remove-PSSession $Session
     ```
 
-ユーザーは、Active Rights Management サービスを使用して電子メール メッセージを保護できるようになります。 たとえば、Outlook Web App で、拡張メニュー ( **...** ) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの 1 つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
+ユーザーは、Active Rights Management サービスを使用して電子メール メッセージを保護できるようになります。 たとえば、Outlook Web App で、拡張メニュー ( **...** ) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの&1; つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
 
 > [!IMPORTANT]
 > Azure Rights Management 用の新規 [カスタム テンプレート](configure-custom-templates.md) を作成する、またはテンプレートを更新する場合は常に、次の Exchange Online の PowerShell コマンドを実行して (必要に応じて手順 2 および 3 を最初に実行します)、これらの変更を Exchange Online に同期します。`Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -141,6 +142,9 @@ IRM 機能を有効にするために Exchange Online を構成する詳細な�
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online と OneDrive for Business:IRM 構成
 SharePoint Online と OneDrive for Business を Azure Rights Management サービスをサポートするように構成するには、最初に SharePoint 管理センターを使用して、SharePoint Online の Information Rights Management (IRM) サービスを有効にする必要があります。 これで、サイトの所有者は SharePoint リストとドキュメント ライブラリを IRM で保護でき、ユーザーは OneDrive for Business ライブラリを IRM で保護することができます。それらの場所に保存されたドキュメント、および他のユーザーと共有しているドキュメントが、自動的に Azure Rights Management サービスで保護されるようになります。
+
+> [!NOTE]
+> SharePoint と OneDrive for Business 用の IRM で保護されたライブラリは、古い同期クライアントである OneDrive for Business 同期クライアント (Groove.exe) を使用していない限り、オンライン ダウンロードをサポートしています。 現在、新しい [OneDrive 同期クライアント (OneDrive.exe)](https://support.office.com/article/Enable-users-to-sync-SharePoint-files-with-the-new-OneDrive-sync-client-22e1f635-fb89-49e0-a176-edab26f69614) は、Rights Management 保護をサポートしていません。 
 
 SharePoint Online 用の Information Rights Management (IRM) サービスを有効にするには、Office Web サイトの次の手順を参照してください。
 
@@ -1108,9 +1112,5 @@ function Add-CredentialToCredentialCache
 Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

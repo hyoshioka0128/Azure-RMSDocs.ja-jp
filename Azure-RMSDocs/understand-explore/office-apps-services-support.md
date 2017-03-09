@@ -1,9 +1,10 @@
 ---
-title: "Office アプリケーションおよびサービス | Azure Information Protection"
+title: "Azure Information Protection を使用した Office アプリとサービス"
 description: "エンド ユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で Azure Rights Management サービスを使用して、組織のデータを保護する方法について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,25 +13,28 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: ddf5e5d6064263489d44b4b1f3de394c471c90bb
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3e77cebd642b2b9e983f5cbc81e43e1cc437dc5d
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
 
-# Office アプリケーションおよびサービス
+# <a name="office-applications-and-services"></a>Office アプリケーションおよびサービス
 
 >*適用対象: Azure Information Protection、Office 365*
 
 エンド ユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で、Azure Information Protection から Azure Rights Management サービスを使用して、組織のデータを保護することができます。
 
-## Office アプリケーション:Word、Excel、PowerPoint、Outlook
+## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office アプリケーション:Word、Excel、PowerPoint、Outlook
 これらのアプリケーションでは、Information Rights Management (IRM) を使用することで Rights Management がネイティブでサポートされ、ユーザーは保存済みドキュメントまたは送信される電子メール メッセージに保護を適用できます。 ユーザーは、テンプレートを適用するか、Word、Excel、PowerPoint の場合にはアクセス、権限、および使用制限の細かくカスタマイズされた設定を選択できます。 
 
 たとえば、ユーザーは、組織内のユーザーのみがアクセスできるように Word 文書を構成することも、Excel スプレッドシートの編集の可否、読み取り専用への制限、印刷防止などを制御することもできます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を (ユーザーが直接またはテンプレートの適用により) 構成できます。 Outlook の場合、ユーザーは、テンプレートを選択できるだけでなく、[**転送不可**] オプションを選択して、データの漏えいを防ぐこともできます。
 
-## Exchange Online と Exchange Server
+これらのアプリケーションでは、IRM のネイティブ サポートに加え、[Azure Information Protection クライアント](../rms-client/aip-client.md )と共にインストールされる Azure Information Protection バーもサポートされます。 このバーにはラベルが表示されます。これにより、ユーザーは機密データを含むドキュメントや電子メールに Rights Management 保護をより簡単に自動で適用することができます。
+
+## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用する場合、追加の情報保護ソリューションを提供する Information Rights Management (IRM) 統合を使用できます。
 
 -   **Exchange ActiveSync IRM** 。モバイル デバイスで、保護された電子メール メッセージを保護および使用することができます。
@@ -47,7 +51,7 @@ Exchange Online または Exchange Server を使用する場合、追加の情�
 
 Exchange Server を使用する場合は、オンプレミス サーバーと Azure Rights Management サービスの間のリレーとして機能する RMS コネクタをデプロイすることで、Azure Rights Management サービスと情報保護機能を使用できます。 詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」を参照してください。
 
-## SharePoint Online と SharePoint Server
+## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online と SharePoint Server
 SharePoint Online または SharePoint Server を使用する場合に Information Rights Management (IRM) 統合を使用すると、管理者がリストやライブラリを保護し、ユーザーがドキュメントをチェックアウトしたときに、指定した情報保護ポリシーに従って許可されたユーザーのみがファイルを表示および使用できるようにファイルが保護されます。 たとえば、ファイルが読み取り専用のときに、テキストのコピーを無効にし、ローカル コピーの保存やファイルの印刷を防止することができます。
 
 リストとライブラリについては、情報保護は常にエンド ユーザーではなく管理者によって適用されます。 また、個別のファイルではなくコンテナー内のすべてのドキュメントのリストまたはライブラリのレベルで適用されます。  SharePoint Online を使用する場合、ユーザーは OneDrive for Business ライブラリにも IRM を適用できます。
@@ -59,19 +63,16 @@ SharePoint Server を使用する場合は、オンプレミス サーバーと 
 > [!NOTE]
 > 現在のところ、SharePoint で IRM を使用する場合、いくつかの制限があります。
 > 
-> -   Azure クラシック ポータルで管理する既定のテンプレートまたはカスタム テンプレートは使用できません。
-> -   ファイル名拡張子が保護された PDF ファイルのための .PPDF であるファイルはサポートされていません。 ファイル名拡張子が .PDF で、Rights Management がネイティブで保護しているファイルは、Rights Management をネイティブでサポートする PDF リーダーを使用する場合にサポートされます。
-> -   モバイル デバイスの Office では Rights Management がまだサポートされていないため、Rights Management で保護されているファイルを表示するにはこれらのデバイスでブラウザーを使用する必要があり、ファイルは読み取り専用です。
+> - Azure クラシック ポータルで管理する既定のテンプレートまたはカスタム テンプレートは使用できません。
+> - ファイル名拡張子が保護された PDF ファイルのための .PPDF であるファイルはサポートされていません。 ファイル名拡張子が .PDF で、Rights Management がネイティブで保護しているファイルは、Rights Management をネイティブでサポートする PDF リーダーを使用する場合にサポートされます。
 
-Azure RMS は、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
+
+Azure Rights Management は、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 
 SharePoint での Azure Rights Management サービスの使用については、Office のブログの次の投稿をご覧ください: [What’s New with Information Rights Management in SharePoint and SharePoint Online](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/) (SharePoint および SharePoint Online における Information Rights Management の新機能)
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 
 他のアプリケーションおよびサービスで Azure Information Protection からの Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」をご覧ください。
 
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

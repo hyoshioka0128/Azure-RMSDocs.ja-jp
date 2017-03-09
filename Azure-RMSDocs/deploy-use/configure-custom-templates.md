@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management サービスのカスタム テンプレートを構成する | Azure Information Protection"
+title: "Azure RMS のカスタム テンプレートを構成する - AIP"
 description: "使用権限のテンプレートを構成および管理するための管理者用の情報および手順です。 テンプレートを使用すると、ユーザーおよび他の管理者は、承認されたユーザーにアクセスが制限されている機密ファイルにポリシーを簡単に適用できます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
 
 >*適用対象: Azure Information Protection、Office 365*
 
-Azure Rights Management サービスを[アクティブ化](activate-service.md)すると、ユーザーは 2 つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルに権限管理ポリシーを簡単に適用できるようになります。 これらの 2 つのテンプレートには、次の権限ポリシーの制限があります。
+Azure Rights Management サービスを[アクティブ化](activate-service.md)すると、ユーザーは&2; つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルに権限管理ポリシーを簡単に適用できるようになります。 これらの&2; つのテンプレートには、次の権限ポリシーの制限があります。
 
 -   保護されたコンテンツの読み取り専用の表示
 
@@ -37,7 +38,7 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 
     -   特定の権限:コンテンツの表示、ファイルの保存、コンテンツの編集、割り当てられた権限の表示、Macro の許可、転送、返信、全員に返信
 
-さらに、[RMS 共有アプリケーション](../rms-client/sharing-app-windows.md)を使用して、ユーザーが独自のアクセス許可のセットを定義することができます。 また、Outlook クライアントおよび Outlook Web Access の場合、ユーザーは [[転送不可]](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) オプションを選択できます。
+また、ユーザーは [Azure Information Protection クライアント](../rms-client/aip-client.md)を使用して独自のアクセス許可を定義できます。 また、Outlook クライアントおよび Outlook Web Access の場合、ユーザーは [[転送不可]](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) オプションを選択できます。
 
 多くの組織では、既定のテンプレートで十分です。 ただし、独自のカスタム権限ポリシー テンプレートを作成する必要がある場合は、作成できます。 カスタム テンプレートを作成する理由として、次のようなケースが考えられます。
 
@@ -63,10 +64,6 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 
 -   [PowerShell を使用してテンプレートを管理する方法](configure-templates-with-powershell.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

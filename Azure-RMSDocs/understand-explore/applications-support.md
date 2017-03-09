@@ -1,10 +1,10 @@
 ---
-title: "アプリケーションによる Azure Rights Management サービスのサポート| Azure Information Protection"
+title: "アプリによる Azure Rights Management のサポート - AIP"
 description: "幅広く使用されているエンド ユーザー アプリケーション (Office アプリケーション、Word、Excel、PowerPoint、Outlook など) およびサービス (Exchange、SharePoint など) で、Azure Information Protection の Azure Rights Management を使用して組織の文書や電子メールを保護する方法について説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: fdb862b0d4f3d0a6b3411b38a314e28b5f1f9edc
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 7553e2719195448c71653ead9950f92bac3928c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: fdb862b0d4f3d0a6b3411b38a314e28b5f1f9edc
 > [!NOTE]
 > Azure Rights Management サービスをサポートするアプリケーションおよびバージョンを確認するには、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」をご覧ください。
 
-管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリ、分類されたファイル、Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合は、エンド ユーザーが、テンプレートを選択するか特定のオプションを選択して、アプリケーションから情報保護を自分で適用する必要があります。 たとえば、ユーザーが電子メールでファイルを共有する場合や、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限することでファイルをその場で保護する場合などがこれに該当します。
+管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリや Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合は、エンド ユーザー自身がアプリケーションから情報の保護を適用する必要があります。たとえば、テンプレートを適用するように構成されている分類ラベルを選ぶか、テンプレートを直接選ぶか、または特定のオプションを選びます。 ユーザーによる保護の適用は、ユーザーが共有するファイルを保護していて、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限する場合に一般的です。
 
 テンプレートを使用すると、ユーザー (およびポリシーを構成する管理者) が、簡単に正しいレベルの保護を適用し、組織内のユーザーにアクセスを制限することができます。 Azure Rights Management サービスには、2 つの既定のテンプレートが付属していますが、カスタム テンプレートを作成すると、個別のオプションを指定する時間を減らすことができます。 詳細については、「[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
@@ -60,9 +61,5 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 -   [RMS API をサポートするその他のアプリケーション](api-support.md)
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

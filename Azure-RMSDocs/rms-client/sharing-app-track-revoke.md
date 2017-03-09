@@ -1,10 +1,10 @@
 ---
-title: "RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す | Azure Information Protection"
+title: "RMS 共有アプリケーションを使用したドキュメントの追跡と取り消し - AIP"
 description: "RMS 共有アプリケーションを使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3b5b19ab2dfdf6b797f55134f3063948dcab33d5
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 36a25c44105d4fa0e8820f99b0b1c7c1568062ec
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -105,8 +106,4 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

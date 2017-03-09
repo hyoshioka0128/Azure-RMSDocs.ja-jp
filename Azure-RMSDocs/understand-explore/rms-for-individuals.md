@@ -1,10 +1,10 @@
 ---
-title: "個人用 RMS と Azure Information Protection | Azure Information Protection"
+title: "個人用 RMS と Azure Information Protection"
 description: "組織内のユーザーを対象にした無料のセルフサービス サブスクリプションである個人向け RMS に関する情報です。Azure Rights Management サービスによって保護された機密ファイルが組織内のユーザーに送信されているものの、IT 部門が Azure でそれらのユーザーのアカウントを管理していないために、該当するユーザーを認証できないという場合に使用できます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f89374ec327f51f3e8354aec57f0c0da9ddac585
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -25,23 +26,19 @@ ms.openlocfilehash: f89374ec327f51f3e8354aec57f0c0da9ddac585
 
 個人用 RMS は、Azure Information Protection から Azure Rights Management サービスによって保護された機密ファイルが送信されている、組織内のユーザーを対象にした無料セルフサービス サブスクリプションです。 このようなユーザーは、自分のアカウントが Azure で IT 部門によって管理されていないために認証を受けることができない場合、この無料サインアップ サービスを使用することができます。 たとえば、IT 部門が Office 365 を所有しておらず、Azure サービスも使用していない場合が挙げられます。
 
-このようなユーザーは、Azure Information Protection で使用する無料の企業または学校アカウントにサインアップし、Rights Management 共有アプリケーションをダウンロードしてインストールすることができます。 その結果、これらのユーザーは、認証され、保護されたファイルが送信されたユーザーであることが証明されるため、コンピューターまたはモバイル デバイス上で保護されたファイルを読み取ることができます。
+このようなユーザーは、Azure Information Protection で使用する無料の職場または学校アカウントにサインアップし、Azure Information Protection クライアントをダウンロードしてインストールすることができます。 その結果、これらのユーザーは、認証され、保護されたファイルが送信されたユーザーであることが証明されるため、コンピューターまたはモバイル デバイス上で保護されたファイルを読み取ることができます。
 
-Windows コンピューター上で Rights Management 共有アプリケーションを使用すれば、保存されているファイルを保護したり、保護したファイルを組織の内外の宛先に電子メールで送信したりすることができます。 それらのユーザーが送信した電子メールの受信者が属する組織も Azure でユーザー アカウントを管理していない場合、受信者も個人用 RMS アカウントにサインアップすれば、保護された電子メールの添付ファイルを読み取ることができます。
+Windows コンピューターで Azure Information Protection クライアントを使用すれば、これらのユーザーは、他のユーザーと安全に共有できるようにファイルを保護することもできます。 組織外のユーザーと共有する場合は、個人用 RMS アカウントにサインアップして保護されているファイルを読み取ることもできます。
 
 > [!IMPORTANT]
-> この無料のサブスクリプションによって、承認されたユーザーはいつでも保護されているファイルを読み取ることができます。 現在は、この無料サブスクリプションを使用して、ドキュメントを保護し、保護された電子メール メッセージを新しく作成することもできますが、保護されたコンテンツを新規作成する機能は試用目的でのみ提供されており、将来的に削除される可能性があります。 
+> この無料のサブスクリプションによって、承認されたユーザーはいつでも保護されているファイルを読み取ることができます。 現在は、この無料サブスクリプションを使用して、ドキュメントを保護することもできますが、コンテンツの保護機能は試用目的で提供されており、将来的に削除される可能性があります。 
 
-無料の Rights Management 共有アプリケーションを使用してファイルを保護する方法の詳細については、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」を参照してください。
+Azure Information Protection クライアントを使用してファイルを保護する方法の詳細については、「[Azure Information Protection ユーザー ガイド](../rms-client/client-user-guide.md)」を参照してください。
 
 個人用 RMS は、Azure Active Directory でサポートされているセルフサービス サインアップの一例です。 セルフサービス サインアップのしくみの詳細については、Azure Active Directory ドキュメントの「[Azure のセルフサービス サインアップについて](/active-directory/active-directory-self-service-signup)」を参照してください。 
 
 ## <a name="next-steps"></a>次のステップ
 詳しい手順と背景で実行されている処理の技術的概要については、「[個人用 RMS にサインアップする方法](rms-for-individuals-user-sign-up.md)」を参照してください。 
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

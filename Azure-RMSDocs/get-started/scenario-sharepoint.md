@@ -1,10 +1,10 @@
 ---
-title: "シナリオ - SharePoint に保存されているドキュメントを管理する | Azure Information Protection"
+title: "AIP シナリオ - SharePoint に保存されているドキュメントを管理する"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、SharePoint に保存されている Office ドキュメントが自分の管理下にあることを確認します。この場合、保護されたライブラリを使用します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 371e566a166dad74b55266db23e034f926942a26
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d5d1c818323a3723f6837ebe8fedd4995efb467
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-retain-control-of-documents-stored-in-sharepoint"></a>シナリオ - SharePoint に保存されているドキュメントを管理する
+# <a name="scenario---retain-control-of-documents-stored-in-sharepoint"></a>シナリオ - SharePoint に保存されているドキュメントを管理する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -103,9 +104,4 @@ ms.openlocfilehash: 371e566a166dad74b55266db23e034f926942a26
 
 -   ヘルプ デスクに問い合わせるhelpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

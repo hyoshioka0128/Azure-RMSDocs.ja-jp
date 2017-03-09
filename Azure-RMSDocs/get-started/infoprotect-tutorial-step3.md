@@ -1,31 +1,28 @@
 ---
-title: "クイック スタート チュートリアル手順 3 | Azure Information Protection"
-description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 3 です。"
+title: "クイック スタート チュートリアルの手順 3 - AIP"
+description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 3 - クライアントのインストール。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 496f086d4db43a69ef0acca579b290286a5b9e5b
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: 340cce9bec3eae7e507b5a33ebd380a38e9e7f19
+ms.lasthandoff: 03/01/2017
 
 
 ---
 
-# <a name="step-3-install-the-client-and-application"></a>手順 3: クライアントとアプリケーションをインストールする 
+# <a name="step-3-install-the-client"></a>手順 3: クライアントのインストール
 
 >*適用対象: Azure Information Protection*
 
-この手順では、まず、Azure Information Protection クライアントをインストールし、構成したポリシーが Windows PC にダウンロードされて、Office アプリケーションにラベルが表示されるようにします。
-
-次に、Rights Management 共有アプリケーションをインストールし、電子メールでドキュメントを安全に共有して、その使用方法を追跡できるようにします。 
-
-これらのインストールは両方とも Office アプリケーションと統合されます。現時点では、これらを個別にインストールする必要があります。
+この手順では、Azure Information Protection クライアントをインストールし、構成したポリシーが Windows PC にダウンロードされて、Office アプリケーションにラベルが表示されるようにします。
 
 
 ## <a name="install-the-azure-information-protection-client"></a>Azure Information Protection クライアントのインストール
@@ -36,26 +33,17 @@ ms.openlocfilehash: 496f086d4db43a69ef0acca579b290286a5b9e5b
 
     このチュートリアルでは、デモ ポリシーをインストールするオプションを選択するかどうかは関係ありません。デモ ポリシーをインストールしても、先に構成したポリシーが Azure からダウンロードされてデモ ポリシーを置き換えます。 ただし、Azure Information Protection に接続しないで既定のラベルを試したいだけの場合は、デモ ポリシー オプションを使用してもかまいません。 
 
-## <a name="install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションのインストール 
-
-1. Microsoft Web サイトの [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
-
-2. [ **コンピューター** ] セクションで、 **Windows 用 RMS アプリケーション** のアイコンをクリックして、Microsoft Rights Management 共有アプリケーションをインストールする **Setup.exe** ファイルを保存します。
-
-3. [ **Microsoft RMS のセットアップ** ] ページで、[ **次へ**] をクリックし、インストールが完了するまで待機します。 その後、コンピューターの再起動を求められた場合は **[再起動]** をクリックします。インストールを完了する場合は、**[閉じる]** をクリックします。
-
-
 ## <a name="verify-the-installations"></a>インストールを確認する
 
-Word で新しい空白の文書を開き、これらのインストールが正常に行われたことを確認します (この時点では文書を保存しないでください)。 ユーザー名とパスワードの入力を求められたら、グローバル管理者アカウントの詳細を入力します。 
+Word で新しい空白の文書を開き、インストールが正常に行われたことを確認します (この時点では文書を保存しないでください)。 ユーザー名とパスワードの入力を求められたら、グローバル管理者アカウントの詳細を入力します。 
 
-文書が読み込まれると、3 つの新機能が表示されます。
+クライアントをインストールしたのが今回が初めての場合は、**[完了しました]** というページ表示され、基本的な手順が示されます。 それを読み終えたら、**[閉じる]** をクリックします。
+
+ドキュメントが読み込まれると、2 つの新機能が表示されます。
 
 - **[ホーム]** タブの新しい **[Protection]** (保護) グループと **[Protect]** (保護) ボタン。
 
-    **[Protect]** (保護)、 > **[Help and feedback]** (ヘルプとフィードバック) の順にクリックし、**[Microsoft Azure Information Protection]** ダイアログ ボックスでクライアントのステータスを確認します。 **[Information Protection policy is installed]** (Information Protection ポリシーはインストールされています) というメッセージと最新の接続時刻が表示されます。 表示されているユーザー名がテナントの正しいものであることを確認します。
-
-- **[ホーム]** タブの新しい **[RMS]** グループと **[保護ファイルの共有]** というラベルが付いたボタン。
+    **[Protect]** (保護)、 > **[Help and feedback]** (ヘルプとフィードバック) の順にクリックし、**[Microsoft Azure Information Protection]** ダイアログ ボックスでクライアントのステータスを確認します。 **[接続ユーザー]** とユーザー名が表示されているはずです。 さらに、最終接続日時と Information Protection ポリシーのインストール日時も表示されているはずです。 表示されているユーザー名がテナントの正しいものであることを確認します。
 
 - リボンの下の新しい Information Protection バー。 **[Sensitivity]** (秘密度) というタイトルと、構成した既定のラベル **[Internal]** (内部) が表示されます。 
     
@@ -65,16 +53,12 @@ Word で新しい空白の文書を開き、これらのインストールが正
 
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
-|Azure Information Protection クライアントのインストールについて|[Azure Information Protection クライアントのインストール](../rms-client/info-protect-client.md)|
-|Rights Management 共有アプリケーションのインストールとユーザーの手順について|[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)|
-|Windows 用 Rights Management 共有アプリケーションのスクリプト化したインストールと技術情報の詳細について|[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)|
+|Azure Information Protection クライアントのインストールについて|[Azure Information Protection クライアントをダウンロードしてインストールする](../rms-client/install-client-app.md)|
+|Azure Information Protection クライアントの管理者向けの手順|[Azure Information Protection クライアント管理者ガイド](../rms-client/client-admin-guide.md)|
 
 
 >[!div class="step-by-step"]
 [&#171; 手順 2](infoprotect-tutorial-step2.md)
 [手順 4 &#187;](infoprotect-tutorial-step4.md)
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

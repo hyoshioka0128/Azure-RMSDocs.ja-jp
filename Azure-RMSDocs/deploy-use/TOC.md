@@ -15,6 +15,7 @@
 ## [アプリケーションの構成](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Office アプリ](configure-office-apps.md)
+### [Azure Information Protection クライアント](configure-client.md)
 ### [RMS 共有アプリ](configure-sharing-app.md)
 ## [使用権限の構成](configure-usage-rights.md)
 ## [探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)
@@ -24,7 +25,7 @@
 ### [新しいラベルの作成](configure-policy-new-label.md)
 ### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
 ### [ラベルの変更](configure-policy-change-label.md)
-### [保護の適用](configure-policy-protection.md)
+### [保護の構成](configure-policy-protection.md)
 #### [HYOK の制限事項](configure-adrms-restrictions.md)
 ### [視覚的なマーキングの構成](configure-policy-markings.md)
 ### [条件の構成](configure-policy-classification.md)
@@ -48,6 +49,6 @@
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "RMS 開発者ガイド |Azure RMS"
-description: "Rights Management SDK の 3 つの世代をご利用いただけるようになりました。"
+description: "Rights Management SDK の&3; つの世代をご利用いただけるようになりました。"
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,18 +14,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: effe06fa10e501a52832436de038aba2858d44a9
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 85cd61e564b066458618c02b4ac20cddf6b7e183
+ms.lasthandoff: 01/24/2017
 
 
 ---
 
-# RMS 開発者ガイド
+# <a name="rms-developers-guide"></a>RMS 開発者ガイド
 
-## 概要 ##
+## <a name="overview"></a>概要 ##
 Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、iOS/OS X、Windows デバイスと Linux 用)、**Microsoft Rights Management SDK 2.1** (Windows デスクトップ クライアント用)、**AD RMS SDK** (置き換えられました) の 3 つの世代をご利用いただけるようになりました。
 
-## ソフトウェア開発キット ##
+## <a name="software-development-kits"></a>ソフトウェア開発キット ##
 | SDK | 説明 |
 |------|---------|
 | [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Android、iOS、Mac OS X、Windows Phone/RT、および Linux/C++ のデバイス アプリで Microsoft Rights Management サービスを使用して情報を保護できるようにするための、軽量な開発エクスペリエンスを提供する次世代のシンプルなツール セット。 |
@@ -33,7 +34,7 @@ Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、i
 |[AD RMS SDK]()|**注** - AD RMS SDK は Msdrm.dll でクライアントによって公開される機能を活用し、Windows Server 2012、Windows 8、Windows Server 2008 R2、Windows 7、Windows Server 2008、および Windows Vista で使用できます。 今後のバージョンでは変更されるか、利用できなくなる場合もあります。 代わりに、Msdrm.dll でクライアントによって公開される機能を活用する、Microsoft Rights Management サービス SDK 2.1 を使用してください。|
 |[AD RMS スクリプト API]()| AD RMS インストールを管理するスクリプトを作成するために使用|
 
-## コード サンプルとツール ##
+## <a name="code-samples-and-tools"></a>コード サンプルとツール ##
 マイクロソフトが提供するこの一連の RMS コード サンプルと開発者サポート ツールは、すべてのサポートされているオペレーティング システム (Android、iOS/OS X、Windows Phone、および Windows Desktop) に対応しています。また、そのサポートされている SDK との互換性を維持するために定期的に更新されます。
 
 | 項目 | オペレーティング システム | サポートされている SDK バージョン | 説明 |
@@ -50,8 +51,4 @@ Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、i
 | [UI ライブラリおよびサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|GitHub の **UI ライブラリおよび Android 用のサンプル アプリ**です。標準 UI をすぐに使いはじめてご自分のアプリで再利用できます。|
 | [Android の使用シナリオ](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) および 4.x SDK 以降のバージョン|RMS SDK に慣れるための重要な開発シナリオを表す **Java のコード例**です。 Microsoft によって保護されたファイル形式の使用例、カスタムの保護されたファイル形式の使用例、カスタムの UI コントロールの使用例などがあります。|
 
-
-
-<!--HONumber=Sep16_HO5-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

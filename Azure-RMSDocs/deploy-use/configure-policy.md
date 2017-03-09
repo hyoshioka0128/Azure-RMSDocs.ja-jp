@@ -1,10 +1,10 @@
 ---
-title: "ポリシーの構成 | Azure Information Protection"
+title: "Azure Information Protection ポリシーを構成する"
 description: "分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,11 +28,11 @@ ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
 
 Azure Information Protection ポリシーを構成するには:
 
-1. 新しいブラウザー ウィンドウで、全体管理者として [Azure ポータル](https://portal.azure.com)にサインインします。
+1. 新しいブラウザー ウィンドウで、全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    **[Azure Information Protection]** ブレードが表示され、すべてのユーザーが取得するグローバルな 　Information Protection ポリシーのブレードが自動的に開きます。 ブレードには、構成できる次の要素が含まれています。
+    **[Azure Information Protection]** ブレードが表示されます。ここから **[グローバル]** ポリシーを開いてすべてのユーザーを取得できます。 また、必要に応じて、スコープ ポリシーを追加し、編集することもできます。 **[グローバル]** Azure Information Protection ポリシーには、構成可能な次の要素があります。
 
     - 管理者とユーザーがドキュメントと電子メールを分類するために使用できるラベル。
 
@@ -67,7 +68,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [既存のラベルを変更またはカスタマイズする方法](configure-policy-change-label.md)
 
-- [保護を適用するようにラベルを構成する方法](configure-policy-protection.md)
+- [保護用ラベルの構成方法](configure-policy-protection.md)
 
 - [視覚的なマーキングを適用するようにラベルを構成する方法](configure-policy-markings.md)
 
@@ -79,9 +80,5 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

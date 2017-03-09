@@ -1,10 +1,10 @@
 ---
-title: "Rights Management 共有アプリケーションをダウンロードしてインストールする | Azure Information Protection"
+title: "RMS 共有アプリケーションのダウンロードとインストール - AIP"
 description: "Windows 用 RMS 共有アプリケーションを対話形式でインストールし、他のユーザーとドキュメントを安全に共有できるようにするための手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f1553ebd64f174128e41f55b66582e8791ce9133
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 9c954f750c6f49d3db1bf6383efa2805f291682c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -64,12 +65,8 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

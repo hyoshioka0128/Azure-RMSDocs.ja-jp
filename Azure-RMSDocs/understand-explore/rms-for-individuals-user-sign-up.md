@@ -1,10 +1,10 @@
 ---
-title: "個人用 RMS にサインアップする方法 | Azure Information Protection"
+title: "個人用 RMS にサインアップする方法 - AIP"
 description: "この無料アカウントのサインアップ手順、およびこのプロセスがどのように機能するかについての技術情報です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
 >*適用対象: Azure Information Protection*
 
-この無料アカウントにサインアップするには、[Microsoft Azure Information Protection のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスし、職場のメール アドレスを入力してリクエストを送信します。 このサインアップ ページは一般的に、受信した電子メール メッセージに保護された添付ファイルが付いている場合に、そのメールに記載されたサインアップ方法に従ってアクセスされるものです。 Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了できます。 これが完了したときに表示されるページから、各種デバイス用の共有アプリケーションをダウンロードできます。このページには他にも、ユーザー ガイドへのリンクや、Rights Management による保護をネイティブでサポートするアプリケーションの最新の一覧へのリンクもあります。 
+この無料アカウントにサインアップするには、[Microsoft Azure Information Protection のページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)にアクセスし、職場のメール アドレスを入力してリクエストを送信します。 このサインアップ ページは一般的に、受信した電子メール メッセージに保護された添付ファイルが付いている場合に、そのメールに記載されたサインアップ方法に従ってアクセスされるものです。 Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了できます。 これが完了したときに表示されるページから、各種デバイス用の Azure Information Protection をダウンロードできます。このページには他にも、ユーザー ガイドへのリンクや、Rights Management による保護をネイティブでサポートするアプリケーションの最新の一覧へのリンクもあります。 
 
 ## <a name="to-sign-up-for-rms-for-individuals"></a>個人用 RMS にサインアップするには
 
@@ -38,17 +39,17 @@ ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
     Microsoft では、ユーザーの電子メール アドレスを使用して、[Azure Information Protection の有料サブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)、または [Azure Resource Manager を使用したデータ保護を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をユーザーの組織が既に利用しているかどうかを確認しています。 組織が所有している場合、個人用 RMS は必要ないので、すぐにサインインされ、個人用 RMS へのセルフサービス サインアップは取り消されます。 有料のサブスクリプションが見つからない場合は、次の手順に進みます。
 
-4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム ((support@email.microsoftonline.com)) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
+4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 
 5.  このメールが届いたら、[**はい、私です**] をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
 
 6.  [**最後に...**] というページが表示され、アカウントの詳細情報を入力できるようになります。 氏名とパスワードを入力し、パスワードを確認のため再入力してから [**開始**] をクリックします。
 
-7. アカウントが作成されると、新しい Microsoft Rights Management ページが表示され、ここから共有アプリケーションをダウンロードしてインストールできます。このページの [[詳細](../rms-client/sharing-app-user-guide.md)] リンクをクリックして、共有アプリケーションのユーザー ガイドを読むこともできます。
+7. アカウントが作成されると、Microsoft Azure Information Protection の新しいページが表示されます。ここで、Azure Information Protection クライアントをダウンロードしてインストールすることができます。また、[ユーザー ガイド](../rms-client/client-user-guide.md) リンクをクリックして、Windows コンピューター用の操作手順を表示することができます。
 
 アカウントの作成が完了しました。ファイルの保護を開始したり、他のユーザーが保護しているファイルを読み取ったりすることができます。 ファイルを保護するときや保護されたファイルを読み取るときにサインイン画面が表示された場合は、個人用 RMS のアカウントを作成するときに指定したものと同じ電子メール アドレスとパスワードを入力します。
 
-## <a name="technical-overview-of-the-signup-process"></a>サインアップ プロセスの技術概要
+## <a name="technical-overview-of-the-sign-up-process"></a>サインアップ プロセスの技術概要
 個人用 RMS では、ユーザーの認証に Microsoft のクラウド ベースの技術を使用するその他のサービスによって使用される、セルフサービスのサインアップ プロセスが使用されます。
 
 組織が Office 365 サブスクリプションまたは Azure サブスクリプションを保有していない場合にユーザーが個人用 RMS にサインアップすると、Azure にユーザーを認証するディレクトリがなく、バックグラウンドでは次が発生します。
@@ -60,9 +61,9 @@ ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
     既存のテナントが見つかった場合は、そのテナントが調べられ、Azure RMS のサブスクリプションを既に持っているかどうかが確認されます。 サブスクリプションが見つからない場合は、無料の個人用 RMS サブスクリプションを追加できます。
 
-2.  組織には、個人用 RMS のサブスクリプションが付与されます。 これで、そのユーザーは、Azure によって認証されるようになり、Azure Rights Management を使用してファイルを保護するとともに、他のユーザーが保護しているファイルを読み取ることができるようになります。 ファイルの保護や保護されたファイルの読み取りを行うには、無料の [Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md)など、RMS 対応アプリケーションを用意する必要があります。
+2.  組織には、個人用 RMS のサブスクリプションが付与されます。 これで、そのユーザーは、Azure によって認証されるようになり、Azure Rights Management を使用してファイルを保護するとともに、他のユーザーが保護しているファイルを読み取ることができるようになります。 ファイルの保護や保護されたファイルの読み取りを行うには、無料の [Azure Information Protection クライアント](../rms-client/aip-client.md)など、RMS 対応アプリケーションを用意する必要があります。
 
-3.  同じ組織に属する 2 人目のユーザーが個人用 RMS サブスクリプションを要求すると、組織の個人用 RMS サブスクリプションを使用して、既に作成済みの Azure ディレクトリに新しいユーザー アカウントが追加されます。 この 2 人目のユーザーは、最初のユーザーが実行できるすべての操作を実行できます (ファイルの保護と保護されたファイルの読み取り)。さらに、これらの 2 人のユーザーは既定のテンプレートをファイルに即座に適用して、組織の Azure ディレクトリのアカウントにアクセス制限を適用することができるため、セキュリティで保護された共同作業を簡単に行えるようになります。
+3.  同じ組織に属する&2; 人目のユーザーが個人用 RMS サブスクリプションを要求すると、組織の個人用 RMS サブスクリプションを使用して、既に作成済みの Azure ディレクトリに新しいユーザー アカウントが追加されます。 この&2; 人目のユーザーは、最初のユーザーが実行できるすべての操作を実行できます (ファイルの保護と保護されたファイルの読み取り)。さらに、これらの&2; 人のユーザーは既定のテンプレートをファイルに即座に適用して、組織の Azure ディレクトリのアカウントにアクセス制限を適用することができるため、セキュリティで保護された共同作業を簡単に行えるようになります。
 
 4.  同じ組織に属する以降のユーザーも同様のパターンに従い、組織の Azure ディレクトリに (新しいユーザーがサインアップすると) ユーザー アカウントが追加されます。 ディレクトリに多数のアカウントが追加されると、より多くのユーザーが同僚やパートナーとセキュリティで保護された共同作業を行うことができ、承認されていないユーザーがファイルにアクセスすべきでない場合に、そのファイルを読み取れないように簡単に設定できます。
 
@@ -94,10 +95,4 @@ ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 ## <a name="next-steps"></a>次のステップ
 「[個人用 RMS 向けに作成されたアカウントを管理者が制御する方法](rms-for-individuals-take-control.md)」を参照してください。
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

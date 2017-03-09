@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management テナント キーを計画して実装する | Azure Information Protection"
+title: "Azure Information Protection テナント キー"
 description: "Azure Information Protection テナント キーに関する計画および管理に役立つ情報です。 Microsoft がテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f0403d85406cc8642654569958e3482a5d991352
-ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d2e667f78eeccecb0bd837a9020ff188f67fb50
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
 この記事の情報は、Azure Information Protection テナント キーに関する計画および管理に役立ちます。 たとえば、マイクロソフトがテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。
 
 > [!NOTE]
-> Azure Information Protection テナント キーのオンプレミスに相当するものは、サーバー ライセンサー証明書 (SLC) キーと呼ばれます。 Azure Information Protection では、Azure Information Protection のサブスクリプションがある組織ごとに 1 つ以上のキーを保持します。 組織で Azure Information Protection に対して使用されるキー (ユーザー キー、コンピューター キー、ドキュメント暗号化キーなど) は、すべて暗号化されて Azure Information Protection テナント キーにチェーンされます。
+> Azure Information Protection テナント キーのオンプレミスに相当するものは、サーバー ライセンサー証明書 (SLC) キーと呼ばれます。 Azure Information Protection では、Azure Information Protection のサブスクリプションがある組織ごとに&1; つ以上のキーを保持します。 組織で Azure Information Protection に対して使用されるキー (ユーザー キー、コンピューター キー、ドキュメント暗号化キーなど) は、すべて暗号化されて Azure Information Protection テナント キーにチェーンされます。
 
 **概要:** 次の表は、推奨されるテナント キー トポロジのクイック ガイドとして使用してください。 詳細については、別のドキュメントを参照してください。
 
@@ -57,7 +58,7 @@ Microsoft 管理のテナント キーを使用して Azure Information Protecti
 ## <a name="the-tenant-key-lifecycle"></a>テナント キーのライフサイクル
 Microsoft でテナント キーを管理することになった場合、キー ライフサイクル操作の大半を Microsoft で行います。 ただし、テナント キーを自主管理することになった場合、Azure Key Vault でキー ライフサイクル操作の多くといくつかの追加の手順を自社で行う必要があります。
 
-この 2 つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
+この&2; つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
 
 ![Azure Information Protection テナント キー ライフサイクル - Microsoft が既定で管理](../media/RMS_BYOK_cloud.png)
 
@@ -85,8 +86,8 @@ Microsoft でテナント キーを管理することになった場合、キー
 |要件|詳細情報|
 |---------------|--------------------|
 |Azure Information Protection をサポートするサブスクリプション。|使用可能なサブスクリプションの詳細については、Azure Information Protection の[価格設定ページ](https://go.microsoft.com/fwlink/?LinkId=827589)をご覧ください。|
-|個人向け RMS または Exchange Online は使用しないでください。 または、Exchange Online を使用する場合は、この構成で BYOK を使用することには制限があることをご理解ください。|BYOK の現在の制限事項の詳細については、「[BYOK の料金と制限事項](byok-price-restrictions.md)」を参照してください。<br /><br />**重要**: 現在、BYOK には Exchange Online との互換性がありません。|
-|有料または試用版の Azure サブスクリプションなど、Key Vault BYOK のすべての前提条件。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok)」を参照してください。 <br /><br /> Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには、次のように [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) の PowerShell コマンドレットを使用します。 <br /><br /> 1.次のコマンドを使用し、Azure PowerShell セッションを開始して Azure アカウントにサインインします。`Login-AzureRmAccount`<br /><br />2.次のように入力し、サブスクリプションの名前と ID、テナント ID、有効な状態の値が表示されることを確認します。`Get-AzureRmSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注**: BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
+|個人向け RMS または Exchange Online は使用しないでください。<br /><br /> または、Exchange Online を使用する場合は、この構成で BYOK を使用することには制限があることをご理解ください。|BYOK の現在の制限事項の詳細については、「[BYOK の料金と制限事項](byok-price-restrictions.md)」を参照してください。<br /><br />**重要**: 現在、BYOK には Exchange Online との互換性がありません。|
+|既存の Azure Information Protection テナント向けの有料または試用版の Azure サブスクリプションなど、Key Vault BYOK のすべての前提条件。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok)」を参照してください。 <br /><br /> Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには、次のように [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) の PowerShell コマンドレットを使用します。 <br /><br /> 1.**[管理者として実行]** オプションで Azure PowerShell セッションを開始し、次のコマンドを使用して、Azure Information Protection のテナントの全体管理者としてサインインします。`Login-AzureRmAccount`<br /><br />2.次のように入力し、サブスクリプションの名前と ID、Azure Information Protection テナント ID、有効な状態の値が表示されることを確認します。`Get-AzureRmSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注**: BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
 |Windows PowerShell 用の Azure Rights Management 管理モジュール。|インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。 <br /><br />この Windows PowerShell モジュールを既にインストールしている場合は、次のコマンドを実行してバージョン番号が **2.5.0.0** 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version`|
 
 Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使用する方法については、[Thales の Web サイト](https://www.thales-esecurity.com/msrms/cloud)を参照してください。
@@ -141,9 +142,5 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 
     詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -1,10 +1,10 @@
 ---
-title: "手順 2&colon; ソフトウェアで保護されているキーから HSM で保護されているキーへの移行 | Azure Information Protection"
+title: "ソフトウェアで保護されているキーから HSM で保護されているキーへの移行 - AIP"
 description: "この手順は、AD RMS から Azure Information Protection への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内のソフトウェアで保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
-ms.openlocfilehash: 7a10b0f1fceca58a80145962dfaedddeea64dd64
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4126bd34615307347d387217b8ad4f39ba69cad8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 7a10b0f1fceca58a80145962dfaedddeea64dd64
 
 選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)、別の構成を選択します。
 
-これは、AD RMS 構成を Azure Information Protection にインポートする 4 段階の手順で、結果は Azure Key Vault でお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
+これは、AD RMS 構成を Azure Information Protection にインポートする&4; 段階の手順で、結果は Azure Key Vault でお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
 
 最初にサーバー ライセンサー証明書 (SLC) キーを AD RMS 構成データから抽出し、キーをオンプレミスの Thales HSM に転送します。次に、HSM キーをパッケージ化して Azure Key Vault に転送し、Azure Information Protection からの Azure Rights Management サービスによるキー コンテナーへのアクセスを承認し、構成データをインポートします。
 
@@ -49,7 +50,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     -   **テナント キーを生成して転送する – インターネット経由**: [手順 2: 未接続ワークステーションを準備する](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
-    手順に従ってテナント キーを生成しないでください。既に、エクスポートされた構成データ (.xml) ファイルに同等のものがあります。 代わりに、ツールを実行してファイルからこのキーを抽出し、オンプレミス HSM にインポートします。 ツールを実行すると、次の 2 つのファイルが作成されます。
+    手順に従ってテナント キーを生成しないでください。既に、エクスポートされた構成データ (.xml) ファイルに同等のものがあります。 代わりに、ツールを実行してファイルからこのキーを抽出し、オンプレミス HSM にインポートします。 ツールを実行すると、次の&2; つのファイルが作成されます。
 
     - キーを使用しない新しい構成データ ファイル。Azure Information Protection テナントにインポートする準備ができています。
 
@@ -159,11 +160,7 @@ SLC キーが抽出され、オンプレミスの HSM にインポートされ�
 
 以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

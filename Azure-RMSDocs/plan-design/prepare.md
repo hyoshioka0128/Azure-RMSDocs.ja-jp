@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management 保護の準備| Azure Information Protection"
+title: "Azure Rights Management 保護を準備する - AIP"
 description: "組織がドキュメントや電子メールを保護できるように、Azure Rights Management サービスを使用するためのすべての準備ができていることを確認します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: facb9bd0d21551e9170cd9be6e9abda24766f9fd
+ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
+ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -33,14 +34,14 @@ ms.openlocfilehash: facb9bd0d21551e9170cd9be6e9abda24766f9fd
 
     Exchange Online がある場合は、Exchange 管理センターを使用して、メールが有効なグループを作成し使用することができます。 AD DS があり、Azure AD と同期している場合は、セキュリティ グループまたは配布グループであるメールが有効なグループを作成して使用できます。
 
+### <a name="group-membership-caching"></a>グループ メンバーシップのキャッシュ
+
+パフォーマンス上の理由から、グループ メンバーシップは Azure Rights Management サービスによってキャッシュされます。 これは、グループ メンバーシップの変更内容が有効になるまで最長で 3 時間かかる場合があり、この期間は変わる可能性があることを意味します。 変更を加えるとき、または[カスタム テンプレート](../deploy-use/configure-custom-templates.md)の構成などの Azure Rights Management サービスの構成でグループを使用する場合や、[スーパー ユーザー機能](../deploy-use/configure-super-users.md)でグループを使用する場合にテストを行う際にはこの遅延を考慮してください。 
+
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>データ保護のための Rights Management サービスのアクティブ化
 ドキュメントや電子メールの保護を開始する準備ができたら、このテクノロジを有効にする Rights Management サービスをアクティブにします。 詳細については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

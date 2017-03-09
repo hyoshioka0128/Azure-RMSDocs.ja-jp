@@ -1,10 +1,10 @@
 ---
-title: "Rights Management 共有アプリケーションの使用によるファイルからの保護の削除 | Azure Information Protection"
+title: "RMS 共有アプリケーションを使用した保護の削除 - AIP"
 description: "それまで RMS 共有アプリケーションを使用して保護されていたファイルから保護を除去する (ファイルから保護を削除する) ための手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3ef47e5dea1c6b56127e231ba6dba774c31cca90
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 370b19894efb53604c798b38be02dda3f8804b8b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -50,8 +51,4 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

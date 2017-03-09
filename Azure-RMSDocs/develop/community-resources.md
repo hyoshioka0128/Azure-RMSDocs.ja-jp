@@ -1,11 +1,11 @@
 ---
-title: "コミュニティのリソース | Azure RMS"
-description: "AD RMS は、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。"
+title: "開発者コミュニティ リソース |Microsoft Docs"
+description: "Azure Information Protection は、拡大を続ける開発者コミュニティによる力強いサポートを受けています。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,8 +15,9 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 91d2dc461ecdb2f15b7bfc93b38a4937c4322f3a
+ms.sourcegitcommit: 91a91b55c0dad4cf83d76d18b75e6b0d91c67190
+ms.openlocfilehash: d9ec87cea94248fb0bb34856d0ff7bd343da26f0
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -25,24 +26,20 @@ ms.openlocfilehash: 91d2dc461ecdb2f15b7bfc93b38a4937c4322f3a
 
 Active Directory Rights Management サービスは、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。
 
-## <a name="ad-rms-community-resources"></a>AD RMS コミュニティのリソース
-
+## <a name="developers-blog"></a>開発者ブログ
 「[Active Directory Rights Management Services (AD RMS) Developer's Corner (Active Directory Rights Management サービス (AD RMS) 開発者のコーナー)」(ブログ)](http://blogs.msdn.com/b/rms/) は、情報保護分野の開発者のためのアクティブなハブです。
 
+## <a name="microsoft-connect"></a>Microsoft Connect
 Connect サイトの Rights Management サービスのセクションでは、最新の成果物を検索し、フィードバックを返すことができます。
 
-**注**  
-Microsoft Connect にまだ登録していない場合は、次の手順に従って登録してください。
-
--   [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com) にアクセスします。
--   Microsoft アカウントを使用してサインインします。
--   コマンド バーの **[ディレクトリ]** をクリックします。
--   "**Rights Management サービス**" を検索します。
--   **[参加]** をクリックして登録します。
+> [!NOTE]
+>
+>Microsoft Connect にまだ登録していない場合は、次の手順に従って登録してください。
+>
+>-   [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com) にアクセスします。
+>-   Microsoft アカウントを使用してサインイン
+>-   コマンド バーの **[ディレクトリ]** をクリックします。
+>-   "Rights Management サービス" を検索します。
+>-   **[参加]** をクリックして登録します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

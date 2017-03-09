@@ -1,18 +1,19 @@
 ---
-title: "自動および推奨分類の条件を構成する方法 | Azure Information Protection"
+title: "Azure Information Protection ラベルの条件を構成する"
 description: "ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -48,7 +49,7 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>ラベルの推奨または自動分類を構成するには
 
-1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
@@ -78,7 +79,7 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 ## <a name="information-about-the-built-in-conditions"></a>組み込み条件に関する情報
 
-プレビュー期間中は、次の条件を選択できます。
+以下の条件から選択できます。
 
 - [SWIFT コード](#swift-code )
 
@@ -144,7 +145,7 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
-1. 次のフレーズの少なくとも 1 つ: **aba**、**rtn**、**routing number** 
+1. 次のフレーズの少なくとも&1; つ: **aba**、**rtn**、**routing number** 
 
 2. ABA 銀行コード。書式設定された、または書式設定されていないパターンの 9 桁の数字: 
 
@@ -181,17 +182,17 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
-1. 次のフレーズの少なくとも 1 つ: **ssn**、**social security**、**ssid**、**ss#** 
+1. 次のフレーズの少なくとも&1; つ: **ssn**、**social security**、**ssid**、**ss#** 
 
 2. 社会保障番号: 書式設定された、または書式設定されていないパターンの 9 桁の数字:
 
     - **書式設定あり**: 
     
-        - 次の書式の 9 桁の数字: ddd-dd-dddd または ddd dd dddd 
+        - 次の書式の&9; 桁の数字: ddd-dd-dddd または ddd dd dddd 
         
     - **書式設定なし**: 
     
-        - 次の書式の 9 桁の数字: ddddddddd 
+        - 次の書式の&9; 桁の数字: ddddddddd 
 
 
 テスト用の例:
@@ -221,11 +222,7 @@ ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

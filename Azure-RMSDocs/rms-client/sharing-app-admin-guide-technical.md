@@ -1,10 +1,10 @@
 ---
-title: "Microsoft Rights Management 共有アプリケーションの技術的概要 | Azure Information Protection"
+title: "RMS 共有アプリケーションの技術概要 - AIP"
 description: "Windows 用 RMS 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの技術的な詳細です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 88b03e5e844e78db5dc8ac5f116d19899c5f354f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 532a379aa303e65d111d6ba0e360f34082b25014
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -43,7 +44,7 @@ RMS の 2013 年 10 月リリースでは、Office 2010 を使用してネイテ
 
 デプロイ情報については、「[Automatic deployment for the Microsoft Rights Management sharing application (Microsoft Rights Management 共有アプリケーションの自動デプロイ)](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)」を参照してください。
 
-## <a name="levels-of-protection-native-and-generic"></a>保護のレベル - ネイティブとジェネリック
+## <a name="levels-of-protection--native-and-generic"></a>保護のレベル - ネイティブとジェネリック
 Microsoft Rights Management 共有アプリケーションは、次の表に示すように、2 つの異なるレベルの保護をサポートします。
 
 |保護の種類|ネイティブ|ジェネリック|
@@ -56,7 +57,7 @@ RMS 共有アプリケーションで適用される既定の保護レベルは�
 ## <a name="supported-file-types-and-file-name-extensions"></a>サポートされているファイルの種類とファイル名拡張子
 Microsoft Rights Management 共有アプリケーションでネイティブにサポートされているファイルの種類を、次の表にリストします。 これらのファイルの種類については、ネイティブの保護が適用され、これらのファイルが読み取り専用になると、元のファイル名拡張子が変更されます。
 
-さらに、RMS 共有アプリケーションで、ユーザーが共有によって保護している Word、Excel、または PowerPoint ファイルをネイティブに保護する場合、この操作により、ファイル名は同じで、ファイル名拡張子が **.ppdf** ¹ である、元のファイルのコピーである 2 番目のファイルが自動的に作成されます。 このバージョンのファイルにより、RMS 共有アプリケーションをインストールする受信者は、常にネイティブ保護が適用されたファイルを開くことができます。
+さらに、RMS 共有アプリケーションで、ユーザーが共有によって保護している Word、Excel、または PowerPoint ファイルをネイティブに保護する場合、この操作により、ファイル名は同じで、ファイル名拡張子が **.ppdf** ¹ である、元のファイルのコピーである&2; 番目のファイルが自動的に作成されます。 このバージョンのファイルにより、RMS 共有アプリケーションをインストールする受信者は、常にネイティブ保護が適用されたファイルを開くことができます。
 
 一般的に保護されているファイルの場合、元のファイル名拡張子は常に .pfile に変わります。
 
@@ -65,27 +66,26 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 
 |元のファイル名拡張子|RMS で保護されたファイル名拡張子|
 |--------------------------------|-------------------------------------|
-|.txt|。ptxt|
-|。xml|。pxml|
-|。jpg|。pjpg|
-|。jpeg|.ppng|
-|。pdf|。ppdf|
-|。png|。ppng|
+|.txt|.ptxt|
+|.xml|.pxml|
+|.jpg|.pjpg|
+|.jpeg|.ppng|
+|.pdf|.ppdf|
+|.png|.ppng|
 |.tif|.ptif|
-|。tiff|。ptiff|
-|。bmp|。pbmp|
-|。gif|。pgif|
-|。giff|。pgiff|
-|。jpe|。pjpe|
-|。jfif|。pjfif|
-|。jt|。pjt|
+|.tiff|.ptiff|
+|.bmp|.pbmp|
+|.gif|.pgif|
+|.jpe|.pjpe|
+|.jfif|.pjfif|
+|.jt|。pjt|
 ¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 
 Microsoft Office 2016、Office 2013 および Office 2010 の Microsoft Rights Management 共有アプリケーションでネイティブにサポートされているファイルの種類を次の表にリストします。 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
 
 |Office でサポートされているファイルの種類|Office でサポートされているファイルの種類|
 |----------------------------------|----------------------------------|
-|。doc<br /><br />。docm<br /><br />。docx<br /><br />。dot<br /><br />。dotm<br /><br />。dotx<br /><br />。potm<br /><br />。potx<br /><br />。pps<br /><br />。ppsm<br /><br />。ppsx<br /><br />。ppt<br /><br />。pptm|。pptx<br /><br />。thmx<br /><br />。xla<br /><br />。xlam<br /><br />。xls<br /><br />。xlsb<br /><br />。xlt<br /><br />。xlsm<br /><br />。xlsx<br /><br />。xltm<br /><br />。xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
 ### <a name="changing-the-default-protection-level-of-files"></a>ファイルの既定の保護レベルの変更
 RMS 共有アプリケーションがファイルを保護する方法は、レジストリを編集して変更することができます。 たとえば、ネイティブ保護をサポートするファイルを、RMS 共有アプリケーションで一般的に保護されるように強制できます。
@@ -102,29 +102,29 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 また、RMS 共有アプリケーションでファイルの保護をブロックする (ネイティブ保護やジェネリック保護を適用しない) ように強制することもできます。 たとえば、内容を処理するために特定のファイルを開く必要がある自動化されたアプリケーションまたはサービスがある場合に、これが必要になることがあります。 ファイルの種類の保護をブロックすると、ユーザーは RMS 共有アプリケーションを使用して、そのファイルの種類を持つファイルを保護できなくなります。 ユーザーがこの操作を試みると、管理者が保護できないように設定したことと、ファイルを保護するには操作を取り消す必要があることを示すメッセージが表示されます。
 
-既定ではネイティブ保護が適用されるすべてのファイルにジェネリック保護を適用するように RMS 共有アプリケーションを構成するには、次のレジストリ編集を行います。
+既定ではネイティブ保護が適用されるすべてのファイルにジェネリック保護を適用するように RMS 共有アプリケーションを構成するには、次のレジストリ編集を行います。 RmsSharingApp キーまたは FileProtection キーが存在しない場合は、手動でそれらを作成する必要があることに注意してください。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: * という名前の新しいキーを作成します。
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: * という名前の新しいキーを作成します。
 
     この設定は、任意のファイル名拡張子を持つファイルを表します。
 
-2.  新しく追加されたキー HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\* の中に、新しい文字列値 (REG_SZ) を **Encryption** という名前で作成し、データ値は **Pfile** とします。
+2.  新しく追加したキー HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\\\* の中に、新しい文字列値 (REG_SZ) を **Encryption** という名前で作成し、データ値は **Pfile** とします。
 
     この設定により、RMS 共有アプリケーションはジェネリック保護を適用します。
 
-これら 2 つの設定により、RMS 共有アプリケーションは、ファイル名拡張子を持つすべてのファイルにジェネリック保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つのレジストリ編集を行う必要があります。
+これら&2; つの設定により、RMS 共有アプリケーションは、ファイル名拡張子を持つすべてのファイルにジェネリック保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で&3; つのレジストリ編集を行う必要があります。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: ファイル名拡張子の名前を持つ新しいキーを追加します (前にピリオドは付けません)。
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: ファイル名拡張子の名前を持つ新しいキーを追加します (前にピリオドは付けません)。
 
     たとえば、.docx というファイル名拡張子を持つファイルの場合、 **DOCX**という名前のキーを作成します。
 
-2.  新たに追加されたファイルの種類のキー (たとえば、**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**) で、値が **0** の **AllowPFILEEncryption** という新しい DWORD 値を作成します。
+2.  新たに追加したファイル種類のキー (たとえば、**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**) で、値が **0** の **AllowPFILEEncryption** という新しい DWORD 値を作成します。
 
-3.  新たに追加されたファイルの種類のキー (たとえば、**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**) で、値が **Native** の **Encryption** という新しい文字列値を作成します。
+3.  新たに追加したファイル種類のキー (たとえば、**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**) で、値が **Native** の **Encryption** という新しい文字列値を作成します。
 
 これらの設定の結果、RMS 共有アプリケーションでネイティブで保護される .docx というファイル名拡張子を持つファイルを除き、すべてのファイルが一般的に保護されます。
 
-例外として定義するその他のファイルの種類ごとに、これらの 3 つの手順を繰り返します。これらのファイルはネイティブ保護をサポートしており、RMS 共有アプリケーションで一般的に保護しないようにする必要があるためです。
+例外として定義するその他のファイルの種類ごとに、これらの&3; つの手順を繰り返します。これらのファイルはネイティブ保護をサポートしており、RMS 共有アプリケーションで一般的に保護しないようにする必要があるためです。
 
 次の値をサポートする **Encryption** 文字列の値を変更することで、他のシナリオで同様のレジストリ編集を行うことができます。
 
@@ -137,9 +137,5 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 ## <a name="see-also"></a>関連項目
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

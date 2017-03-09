@@ -1,10 +1,10 @@
 ---
-title: "コンプライアンスとサポート情報 | Azure Information Protection"
+title: "Azure Information Protection のコンプライアンスと情報"
 description: "法律、コンプライアンス、SLA を含む Azure Information Protection のサポート情報を紹介します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 291198ed501854de1aa7ddbfc80cd7a7f1b4849c
-ms.openlocfilehash: a853aaa993bbb5e15e6c4b80d4c6f0581b6e9090
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a7d6c5775f9f3ddedd2177054731b26443a0d2d9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -55,9 +56,5 @@ Azure Rights Management サービスの特定の認証についての情報に�
 
 - Office 365 ライブラリ: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
-
-
-
-<!--HONumber=Nov16_HO5-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
