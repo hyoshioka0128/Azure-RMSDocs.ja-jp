@@ -1,9 +1,10 @@
 ---
-title: "Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護 | Azure Information Protection"
+title: "Windows Server FCI での Azure RMS 保護 - AIP"
 description: "Rights Management (RMS) クライアントと RMS 保護ツールを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成するための手順です。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,58 +13,51 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 58a0f117100ff5d19dfd6fee2ac4dd61c6bea36b
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
+# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
 >*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
 
-この記事では、Rights Management (RMS) クライアントと RMS 保護ツールを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
+この記事では、Azure Information Protection クライアントと PowerShell を使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
-このソリューションを使用すると、Windows Server を搭載するファイル サーバー上のフォルダー内のすべてのファイルを自動的に保護したり、特定の条件に一致するファイルを自動的に保護したりすることができます。 たとえば、機密性の高い情報が含まれるものとして分類されたファイルなどです。 このソリューションは Azure Information Protection から Azure Rights Management サービスを使用してファイルを保護するため、このテクノロジを組織にデプロイしておく必要があります。
+このソリューションを使用すると、Windows Server を搭載するファイル サーバー上のフォルダー内のすべてのファイルを自動的に保護したり、特定の条件に一致するファイルを自動的に保護したりすることができます。 たとえば、機密性の高い情報が含まれるものとして分類されたファイルなどです。 このソリューションは Azure Information Protection から Azure Rights Management サービスに直接接続してファイルを保護するため、このサービスを組織にデプロイしておく必要があります。
 
 > [!NOTE]
 > Azure Information Protection にはファイル分類インフラストラクチャをサポートする[コネクタ](../deploy-use/deploy-rms-connector.md)が含まれますが、そのソリューションはネイティブな保護 (たとえば Office ファイル) のみをサポートします。
 > 
-> ファイル分類インフラストラクチャですべてのファイルの種類をサポートするには、この記事で説明するように、Windows PowerShell の **RMS 保護** モジュールを使用する必要があります。 RMS 保護コマンドレットは、RMS 共有アプリケーションのように、一般的な保護だけでなくネイティブな保護もサポートするため、すべてのファイルが保護されることを意味します。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[保護のレベル - ネイティブと汎用](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)」セクションを参照してください。
+> Windows Server のファイル分類インフラストラクチャで複数のファイルの種類をサポートするには、この記事で説明するように、PowerShell の **AzureInformationProtection** モジュールを使用する必要があります。 Azure Information Protection クライアントと同様に、Azure Information Protection コマンドレットは汎用的な保護とネイティブ保護をサポートしています。つまり、Office ドキュメント以外のファイルの種類も保護できます。 詳細については、「Azure Information Protection クライアント管理者ガイド」の「[File types supported by the Azure Information Protection client](client-admin-guide-file-types.md)」(Azure Information Protection クライアントでサポートされるファイルの種類) を参照してください。
 
 以下の手順は、Windows Server 2012 R2 または Windows Server 2012 に対するものです。 サポートされている他のバージョンの Windows を使用する場合は、バージョンの違いに合わせてこの記事で説明されている手順の調整が必要な場合があります。
 
-## Windows Server FCI での Azure Rights Management 保護の前提条件
+## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Windows Server FCI での Azure Rights Management 保護の前提条件
 次のような前提条件があります。
 
 -   ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
 
-    -   ファイル サービス ロールのロール サービスの 1 つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
+    -   ファイル サービス ロールのロール サービスの&1; つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
 
     -   Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
 
-    -   RMS 保護ツールをインストールしておきます。これには、ツールに必要なもの (RMS クライアントなど) および Azure RMS に必要なもの (サービス プリンシパル アカウントなど) も含まれます。 詳細については、「 [RMS Protection Cmdlets (RMS 保護コマンドレット)](https://msdn.microsoft.com/library/azure/mt433195.aspx)」を参照してください。
+    -   AzureInformationProtection モジュールをインストールし、Azure Rights Management の前提条件を構成しておきます。 詳細については、「[Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには、**BposTenantId**、**AppPrincipalId**、**対称キー**という値があります。
 
-    -   特定のファイル名拡張子に対する既定の RMS 保護レベル (ネイティブまたは汎用) を変更する場合は、「[File API configuration (File API の構成)](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx)」ページの説明に従ってレジストリを編集します。
+    -   特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
 
-    -   インターネット接続を設定し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 たとえば、 `netsh winhttp import proxy source=ie`
-
--   「[about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)」の説明に従って、Azure Information Protection のデプロイに関する他の前提条件を構成しておきます。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには次の値があります。
-
-    -   BposTenantId
-
-    -   AppPrincipalId
-
-    -   対称キー
+    -   インターネット接続を設定し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
 
 -   オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 このアカウント構成の詳細については、「[Azure Information Protection の準備を行う](../plan-design/prepare.md)」を参照してください。
 
--   ファイルの保護に使用する Rights Management テンプレートを特定しておきます。 [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) コマンドレットを使用して、このテンプレートの ID を確認します。
+-   ファイルの保護に使用する Rights Management テンプレートを特定しておきます。 [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用して、このテンプレートの ID を確認します。
 
-## Azure RMS 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
-Windows PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
+## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
+PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
 
-1.  Windows PowerShell スクリプトを保存する
+1.  PowerShell スクリプトを保存する
 
 2.  Rights Management (RMS) の分類プロパティを作成する
 
@@ -77,13 +71,13 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
 この手順が終了すると、選択したフォルダー内のすべてのファイルは RMS のカスタム プロパティで分類され、Rights Management によって保護されるようになります。 一部のファイルだけを選択的に保護するさらに複雑な構成の場合は、異なる分類プロパティと規則、そしてそれらのファイルだけを保護するファイル管理タスクを、作成または使用できます。
 
-### Windows PowerShell スクリプトを保存する
+### <a name="save-the-windows-powershell-script"></a>Windows PowerShell スクリプトを保存する
 
 1.  ファイル サーバー リソース マネージャーを使用して、Azure RMS 保護のための [Windows PowerShell スクリプト](fci-script.md)の内容をコピーします。 自分のコンピューターで、スクリプトの内容を **RMS-Protect-FCI.ps1** という名前のファイルに貼り付けます。
 
 2.  スクリプトを確認し、次のように変更します。
 
-    -   次の文字列を探し、Azure RMS に接続するために [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) コマンドレットで実際に使用する AppPrincipalId に置き換えます。
+    -   次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) コマンドレットで実際に使用する AppPrincipalId に置き換えます。
 
         ```
         <enter your AppPrincipalId here>
@@ -94,7 +88,7 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) コマンドレットで実際に使用する対称キーに置き換えます。
+    -   次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) コマンドレットで実際に使用する対称キーに置き換えます。
 
         ```
         <enter your key here>
@@ -105,7 +99,7 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) コマンドレットで実際に使用する BposTenantId (テナント ID) に置き換えます。
+    -   次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) コマンドレットで実際に使用する BposTenantId (テナント ID) に置き換えます。
 
         ```
         <enter your BposTenantId here>
@@ -116,12 +110,6 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-    -   サーバーが Windows Server 2012 を搭載している場合は、スクリプトの先頭で RMSProtection モジュールを手動で読み込むことが必要な場合があります。 次のコマンドを追加します ("Program Files" フォルダーが C: ドライブ以外にある場合はそれに合わせます)。
-
-        ```
-        Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
-        ```
-
 3.  スクリプトに署名します。 スクリプトに署名 (セキュリティを強化) しない場合は、スクリプトを実行するサーバーで Windows PowerShell を構成する必要があります。 たとえば、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy RemoteSigned**」と入力します。 ただし、この構成を使用すると、署名されていないすべてのスクリプトは、このサーバーに保存されている場合に実行できます (セキュリティは低下)。
 
     Windows PowerShell スクリプトへの署名の詳細については、PowerShell のドキュメント ライブラリの「 [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) 」を参照してください。
@@ -130,7 +118,7 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
 これで、ファイル サーバー リソース マネージャーの構成を開始する準備ができました。
 
-### Rights Management (RMS) の分類プロパティを作成する
+### <a name="create-a-classification-property-for-rights-management-rms"></a>Rights Management (RMS) の分類プロパティを作成する
 
 -   ファイル サーバー リソース マネージャーの [分類管理] で、新しいローカル プロパティを作成します。
 
@@ -144,7 +132,7 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
 このプロパティを使用する分類規則を作成できるようになります。
 
-### 分類規則を作成する (Classify for RMS)
+### <a name="create-a-classification-rule-classify-for-rms"></a>分類規則を作成する (Classify for RMS)
 
 -   新しい分類規則を作成します。
 
@@ -152,7 +140,7 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
         -   [**名前**]:「 **Classify for RMS**」と入力します。
 
-        -   [**有効**]:既定のオンのままにします。
+        -   [**有効**]: 既定のオンのままにします。
 
         -   **[説明]**: 「**Rights Management 用に &lt;フォルダー名&gt; フォルダーのすべてのファイルを分類する**」と入力します。
 
@@ -172,7 +160,7 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
 分類規則は手動でも実行できますが、継続的に運用する場合は、この規則を実行するスケジュールを設定し、新しいファイルが RMS プロパティで分類されるようにします。
 
-### 分類スケジュールを構成する
+### <a name="configure-the-classification-schedule"></a>分類スケジュールを構成する
 
 -   [ **自動分類** ] タブで次のように設定します。
 
@@ -180,13 +168,13 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
     -   実行するすべての分類規則のスケジュールを構成します。これには、RMS のプロパティでファイルを分類する新しい規則も含まれます。
 
-    -   [**新しいファイルの連続分類を許可する**]:新しいファイルが分類されるように、このチェック ボックスをオンにします。
+    -   **[新しいファイルの連続分類を許可する]**: 新しいファイルが分類されるように、このチェック ボックスをオンにします。
 
     -   省略可能:レポートと通知のオプションの構成など、他の必要な変更を行います。
 
 分類の構成が完了したので、ファイルに RMS 保護を適用する管理タスクを構成できます。
 
-### カスタム ファイル管理タスクを作成する (Protect files with RMS)
+### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>カスタム ファイル管理タスクを作成する (Protect files with RMS)
 
 -   [ **ファイル管理タスク**] で新しいファイル管理タスクを作成します。
 
@@ -247,11 +235,11 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
 
         -   [**実行時期**]:希望のスケジュールを構成します。
 
-            スクリプトが完了するのに十分な時間を指定します。 このソリューションはフォルダー内のすべてのファイルを保護しますが、スクリプトは、毎回、ファイルごとに 1 回実行します。 これは RMS 保護ツールがサポートするような同時にすべてのファイルを保護する方法より時間がかかりますが、FCI のファイル単位の構成の方がいっそう強力です。 たとえば、[Source File Owner Email] 変数を使用すると保護されるファイルの所有者が異なっていてもかまいません (元の所有者の維持)。また、フォルダー内のすべてのファイルではなく一部のファイルだけを選択して保護するように後で構成を変更する場合は、このファイル単位のアクションが必要になります。
+            スクリプトが完了するのに十分な時間を指定します。 このソリューションはフォルダー内のすべてのファイルを保護しますが、スクリプトは、毎回、ファイルごとに&1; 回実行します。 これは RMS 保護ツールがサポートするような同時にすべてのファイルを保護する方法より時間がかかりますが、FCI のファイル単位の構成の方がいっそう強力です。 たとえば、[Source File Owner Email] 変数を使用すると保護されるファイルの所有者が異なっていてもかまいません (元の所有者の維持)。また、フォルダー内のすべてのファイルではなく一部のファイルだけを選択して保護するように後で構成を変更する場合は、このファイル単位のアクションが必要になります。
 
         -   [**新しいファイルに対して連続実行する**]:このチェック ボックスをオンにします。
 
-### 規則とタスクを手動で実行して構成をテストする
+### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>規則とタスクを手動で実行して構成をテストする
 
 1.  分類規則を実行します。
 
@@ -277,8 +265,8 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
     > 
     > -   レポートにフォルダーのファイルの数ではなく **0** と表示されている場合は、スクリプトが実行されなかったことを示します。 まず、スクリプトを Windows PowerShell ISE に読み込んで内容を確認し、実行してエラーが表示されるかどうかを調べます。 引数を指定しないと、スクリプトは Azure RMS に接続して認証を試みます。
     > 
-    >     -   スクリプトで Azure RMS に接続できなかったことが示される場合は、そこで表示される、スクリプトで指定したサービス プリンシパル アカウントの値を確認します。  このサービス プリンシパル アカウントを作成する方法の詳細は、「 [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)」の 2 番目の前提条件を参照してください。
-    >     -   スクリプトで Azure RMS に接続できたことが示される場合は、次にサーバー上で Windows PowerShell から直接 [Get-RMSTemplate](https://msdn.microsoft.com/library/mt433197.aspx) を実行して、指定されたテンプレートを見つけることができるかどうかを確認します。 指定したテンプレートが結果に返されます。
+    >     -   スクリプトで Azure RMS に接続できなかったことが示される場合は、そこで表示される、スクリプトで指定したサービス プリンシパル アカウントの値を確認します。 このサービス プリンシパル アカウントを作成する方法については、「Azure Information Protection クライアント管理者ガイド」の「[Prerequisite 3: To protect or unprotect files without interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction)」(前提条件 3: ユーザー操作なしでファイルの保護または保護の解除を行うには) を参照してください。
+    >     -   スクリプトで Azure RMS に接続できたことが示される場合は、次にサーバー上で Windows PowerShell から直接 [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) を実行して、指定されたテンプレートを見つけることができるかどうかを確認します。 指定したテンプレートが結果に返されます。
     > -   スクリプト自体を Windows PowerShell ISE で実行してもエラーが発生しない場合は、次のように保護するファイルの名前を指定し、-OwnerEmail パラメーターを指定しないで、PowerShell セッションからスクリプトを実行してみます。
     > 
     >     ```
@@ -287,21 +275,17 @@ Windows PowerShell スクリプトをカスタム タスクとして使用して
     >     -   この Windows PowerShell セッションでスクリプトが正常に実行する場合は、ファイル管理タスク アクションでの [ **実行可能ファイル** ] と [ **引数** ] の指定を確認します。  **-OwnerEmail [Source File Owner Email]** を指定した場合は、このパラメーターを削除してみます。
     > 
     >         **-OwnerEmail [Source File Owner Email]** なしでファイル管理タスクが正常に動作する場合は、保護されていないファイルのファイル所有者として **SYSTEM** ではなくドメイン ユーザーが表示されるかどうかを確認します。  そのためには、ファイルのプロパティの **[セキュリティ]** タブの **[高度]** をクリックします。 **[所有者]** の値はファイルの **[名前]** の直後に表示されます。 また、ファイル サーバーが同じドメインまたは信頼されたドメインにあって Active Directory ドメイン サービスからユーザーの電子メール アドレスを参照することを確認します。
-    > -   正しいファイルの数がレポートで示されているにもかかわらず、ファイルが保護されていない場合は、 [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) コマンドレットを使用して手動でファイルを保護してみて、エラーが表示されるかどうかを確認します。
+    > -   正しいファイルの数がレポートで示されているにもかかわらず、ファイルが保護されていない場合は、 [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) コマンドレットを使用して手動でファイルを保護してみて、エラーが表示されるかどうかを確認します。
 
 これらのタスクが正常に動作することを確認した後、ファイル リソース マネージャーを閉じることができます。 新しいファイルが自動的に保護され、スケジュールが実行するとすべてのファイルが再び保護されます。 ファイルを再保護すると、テンプレートへの変更がファイルに適用されることが保証されます。
 
 
-## 選択的にファイルを保護するための手順の変更
+## <a name="modifying-the-instructions-to-selectively-protect-files"></a>選択的にファイルを保護するための手順の変更
 前期の手順で問題がなければ、より高度な構成用に非常に簡単に変更できます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
 
 そのためには、組み込まれている分類プロパティのいずれかを使用するか (たとえば **[Personally Identifiable Information]** (個人を特定できる情報))、新しいプロパティを作成します。 そして、このプロパティを使用する新しい規則を作成します。 たとえば、[ **コンテンツ分類子**] を選択し、[ **個人の身元を特定する情報** ] プロパティと値 [ **高**] を選択して、このプロパティ用に構成するファイルを識別する文字列または式パターンを構成します (たとえば、文字列"**Date of Birth**")。
 
 そのためには、同じスクリプトとおそらく異なるテンプレートを使用する新しいファイル管理タスクを作成し、構成した分類プロパティの条件を構成する必要があります。 たとえば、前に構成した条件 ([**RMS** ] プロパティ、[ **EQUAL**]、[ **はい**]) の代わりに、[ **個人の身元を特定する情報** ] プロパティを選択し、[ **演算子** ] を [ **EQUAL** ] に、[ **値** ]を [ **高**] に設定します。
 
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

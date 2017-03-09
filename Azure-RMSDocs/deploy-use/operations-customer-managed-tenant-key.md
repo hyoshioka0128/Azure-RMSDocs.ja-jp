@@ -1,10 +1,10 @@
 ---
-title: "お客様が管理 - テナント キーのライフサイクル操作 | Azure Information Protection"
+title: "お客様が管理: AIP テナント キーのライフサイクル操作"
 description: "Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) に関連するライフサイクル操作についての情報です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,7 +36,7 @@ Azure Information Protection のサブスクリプションをキャンセルす
 ## <a name="re-key-your-tenant-key"></a>テナント キーを再入力します
 再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを使用し、コンピューターの Rights Management 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 たとえば、
 
--   あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
+-   あなたの会社が&2; つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
 -   テナント キーのマスター コピー (あなたが所有するコピー) の盗難が疑われています。
 
@@ -65,10 +66,6 @@ BYOK を使用する場合、テナント キーを Azure Key Vault または Az
 |現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを更新するように指示します。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure Information Protection を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

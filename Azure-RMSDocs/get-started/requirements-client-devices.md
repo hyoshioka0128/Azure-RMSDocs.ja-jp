@@ -1,10 +1,10 @@
 ---
-title: "クライアント デバイスでのデータ保護のサポート | Azure Information Protection"
+title: "クライアント デバイスでのデータ保護のサポート - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスをサポートするデバイスを特定します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/06/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 587aaff16ce57cd39ce5dc7eb30fd21f37442cda
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f560ce654c611a885b54d9609405fb4b1bf7af1d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -44,9 +45,11 @@ ms.openlocfilehash: 587aaff16ce57cd39ce5dc7eb30fd21f37442cda
 
 -   **Windows Phone**: Windows Phone 8.1
 
--   **Android 端末およびタブレット**: Android 4.0.3 以降
+-   **Android 端末およびタブレット**: Android 4.4 以降
 
 -   **iPhone および iPad**: iOS 7.0 以降
+     
+    例外: iOS および Android 用の Azure Information Protection クライアントは iOS 8 以降でサポートされています。
 
 -   **Windows タブレット**: Windows 10 Mobile および Windows 8.1 RT
 
@@ -54,9 +57,5 @@ ms.openlocfilehash: 587aaff16ce57cd39ce5dc7eb30fd21f37442cda
 ## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

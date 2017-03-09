@@ -1,18 +1,19 @@
 ---
-title: "クイック スタート チュートリアル手順 1 | Azure Information Protection"
-description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 1 です。"
+title: "クイック スタート チュートリアルの手順 1 - AIP"
+description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 1 - Azure Rights Management サービスの有効化。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: edb98a61d247b51319a1eb172f9978e3d64d0e1b
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: aa1808503e92d0afeb7c0f3f7f9da446d2f13b51
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -24,11 +25,11 @@ ms.openlocfilehash: edb98a61d247b51319a1eb172f9978e3d64d0e1b
 > [!NOTE]
 >テナントの Azure Rights Management サービスを既にアクティブ化している場合は、直接、[次の手順](infoprotect-tutorial-step2.md)に進んでください。 
 
-Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータル間の移動を含め、このサービスをアクティブ化するさまざまな方法があります。
+Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータル間の移動を含め、このサービスをアクティブ化するさまざまな方法があります。
 
 このチュートリアルでは、Office 365 管理者用のアクティブ化ページに直接移動します。このページは、Office 365 クラシック ポータルと Office 365 管理センター プレビューの場合と同じです。 
 
-このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure ポータルにアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
+このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure Portal にアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
 
 ## <a name="to-activate-the-rights-management-service"></a>Rights Management サービスをアクティブにするには
 
@@ -55,8 +56,5 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 [&#171; 概要](infoprotect-quick-start-tutorial.md)
 [手順 2 &#187;](infoprotect-tutorial-step2.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

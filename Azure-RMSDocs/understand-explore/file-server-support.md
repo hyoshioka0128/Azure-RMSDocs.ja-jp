@@ -1,10 +1,10 @@
 ---
-title: "Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバー | Azure Information Protection"
+title: "FCI を使用するファイル サーバー - Azure Information Protection"
 description: "Office ドキュメントを自動的に保護する RMS コネクタを配置するときに、Windows Server ファイル分類インフラストラクチャがどのように Azure RMS で使用されるかについて説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 909ff4f7c96af65172604bb903173dd38d95dcf9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
 
 ファイル分類インフラストラクチャを使用するように Windows Server を構成すると、このファイル サーバー リソース マネージャーの機能でローカル ファイルをスキャンし、機密データが含まれているかどうかを判断することができます。 この条件を満たすファイルには、管理者が定義する分類プロパティのタグが付けられます。 その後で、ファイル分類インフラストラクチャが分類に従って自動操作を実行できます。 これらの操作には、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用した情報保護の適用や Rights Management コネクタ (RMS コネクタとも呼びます) のデプロイなどがあります。 これにより Office ファイルは Azure RMS によって自動的に保護されます。
 
-すべてのファイルの種類を保護する場合は、RMS コネクタを使用せずに、代わりに、[RMS 保護ツール](https://www.microsoft.com/en-us/download/details.aspx?id=47256)でコマンドレットを使用して Windows PowerShell スクリプトを実行できます。
+すべてのファイルの種類を保護する場合は、RMS コネクタを使用せずに、代わりに、[Azure Information Protection モジュール](../rms-client/client-admin-guide-powershell.md)でコマンドレットを使用する Windows PowerShell スクリプトを実行できます。
 
 この分類ポリシーは、完全に構成可能で拡張性が高いので、承認されていないユーザーおよび承認されたユーザーからの潜在的なデータの漏えいを防止できます。 管理者がファイルにアクセスする必要がないようなポリシーを構成できるので、ネットワーク管理者からのデータ漏えいのリスクも減らすことができます。
 
@@ -40,10 +41,6 @@ Office ファイル用 RMS コネクタをデプロイおよび構成する方�
 ## <a name="next-steps"></a>次のステップ
 アプリケーションとサービスが Azure RMS をサポートする方法を理解したら、Azure RMS と、Rights Management のオンプレミス バージョンである Active Directory Rights Management サービス (AD RMS) とを比較してみることをお勧めします。 機能、要件、およびセキュリティ制御の比較については、「[Azure Rights Management と AD RMS を比較する](compare-azure-rms-ad-rms.md)」を参照してください。
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

@@ -1,18 +1,19 @@
 ---
-title: "既存のラベルを変更またはカスタマイズする方法 | Azure Information Protection"
+title: "Azure Information Protection のラベルを変更する"
 description: "Azure Information Protection ポリシー内に構成することで、Information Protection バーに表示されるラベルを変更または改良できます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 332160a0b2403313acc66f9b196ac068e370fb5c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,7 +29,7 @@ Azure Information Protection ポリシー内に構成することで、Informati
 ラベルを変更するには、次の手順を実行します。
 
 
-1. [Azure ポータル](https://portal.azure.com)にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
@@ -47,11 +48,7 @@ Azure Information Protection ポリシー内に構成することで、Informati
 
 ラベルに実行できるオプションを構成する方法や、Azure Information Protection ポリシーのその他の設定について詳しくは、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

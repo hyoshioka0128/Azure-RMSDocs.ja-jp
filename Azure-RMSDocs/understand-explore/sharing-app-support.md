@@ -1,9 +1,10 @@
 ---
-title: "Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション | Azure Information Protection"
+title: "Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション - AIP"
 description: "Office 2010 のサポートには必須の、Windows コンピューター、Mac コンピューター、モバイル デバイスにも推奨される、無料でダウンロードできるアプリケーションとして RMS 共有アプリケーションが Azure RMS をサポートする方法について説明します。"
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +13,22 @@ ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
-ms.openlocfilehash: e4b9a13ba29820cd7a19e0b8509966f5d8195353
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3c96d8718f42dcedebba03354c149bb2b9667d66
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
 
-# Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
+# <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
 
 >*適用対象: Azure Information Protection、Office 365*
 
-RMS 共有アプリケーションは、無料でダウンロードできるアプリケーションであり、Office 2010 のサポートには必須で、Windows コンピューター、Mac コンピューター、モバイル デバイスにも推奨されます。 利点の 1 つとして、Azure Rights Management サービスをネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic)」の「[保護のレベル – ネイティブと汎用](../rms-client/sharing-app-admin-guide.md)」セクションを参照してください。
+> [!IMPORTANT]
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](../rms-client/aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2018 年 1 月 31 日に停止されます。 
+ 
+RMS 共有アプリケーションはダウンロード可能なアプリケーションであり、Windows コンピューター用の Office 2010 をサポートし、すべての Windows コンピューターとモバイル デバイスに推奨されていました。 Mac コンピューターや Windows Phone デバイスでは引き続き推奨されます。 利点の&1; つとして、Azure Rights Management サービスをネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)」の「[保護のレベル – ネイティブと汎用](../rms-client/sharing-app-admin-guide.md)」セクションを参照してください。
 
 ユーザーが RMS 共有アプリケーションを使用してファイルを保護すると、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることもできます。 これを行うには、 [ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)を使用します。
 
@@ -37,9 +42,9 @@ Windows コンピューターの場合、RMS 共有アプリケーションは�
 
 -   Office 2010 のバックエンド構成により、このスイートの Word、Excel、PowerPoint、および Outlook が Azure Rights Management サービスとシームレスに連携できるようになります。
 
-Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)ページを使用して 1 つのコンピューターにダウンロードしてインストールできますが、サイレント インストールおよびカスタム構成のためのエンタープライズ デプロイもサポートされています。 詳細については、次のリソースを参照してください。
+Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)ページを使用して&1; つのコンピューターにダウンロードしてインストールできますが、サイレント インストールおよびカスタム構成のためのエンタープライズ デプロイもサポートされています。 詳細については、次のリソースを参照してください。
 
--   [保護のレベル – ネイティブと汎用](../rms-client/sharing-app-admin-guide.md)
+-   [Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)
 
 -   [Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)
 
@@ -52,12 +57,8 @@ Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Manage
 -   Intune で登録されていない Android デバイス用のアプリを管理する。
 
 
-## 次のステップ
+## <a name="next-steps"></a>次のステップ
 他のアプリケーションおよびサービスで Azure Information Protection からの Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」をご覧ください。
 
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

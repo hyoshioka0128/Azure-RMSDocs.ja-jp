@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection の迅速なデプロイ ガイド | Azure Information Protection"
-description: "Azure Information Protection をよりすばやくデプロイして使用し、組織のデータを保護するために使用できるガイドです。 特定のシナリオの一覧から実装するシナリオを選択して開始します。"
+title: "Azure RMS の迅速なデプロイ ガイド - AIP"
+description: "Azure Rights Management サービスをよりすばやくデプロイして使用し、組織のデータを保護するために使用できるガイドです。 特定のシナリオの一覧から実装するシナリオを選択して開始します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2e50dc9d53550f35f5c589cdb1b384e0abf585e0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,7 +24,10 @@ ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 >*適用対象: Azure Information Protection、Office 365*
 
-このガイドは、「**デプロイと使用**」セクションの構成情報を補足するもので、実装する具体的なシナリオを一覧から選択することにより、Azure Information Protection を迅速にデプロイして使用する場合に役立ちます。
+このガイドは、「**デプロイと使用**」セクションの構成情報を補足するもので、Azure Information Protection から Azure Rights Management サービスを使用する保護のみのソリューションを迅速にデプロイする場合に役立ちます。 特定のシナリオの一覧から実装するシナリオを選択します。
+
+> [!NOTE]
+> 現時点では、保護のみに関するシナリオはガイドに含まれていますが、分類や保護または Azure Information Protection クライアントに関するシナリオは含まれていません。 
 
 シナリオには、管理者向けの指示とそれに伴うエンド ユーザー向けのドキュメントの両方が用意されています。 エンド ユーザーにこのドキュメント (指示やお知らせ) を配布する前に、まずドキュメントをビジネス要件および既存のワーク フローに合わせてカスタマイズする必要があります。 一連の指示やお知らせの例では、最終的なエンド ユーザー マニュアルの体裁を示します。
 
@@ -33,8 +37,7 @@ ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 これらのソリューションをロールアウトする前に、会社のデータを保護するための変更を行うこと、そのためにエンド ユーザーからの変更が必要な場合があることをエンド ユーザーに広く告知することができます。 次の表の後に、通信の例を示します。
 
-> [!NOTE]
-> このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
+このガイドについてのご質問やご意見がある場合は、このページのフィードバック メカニズムを使用するか、または [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback) まで電子メール メッセージを送信してください。
 
 ## <a name="scenarios-for-azure-information-protection"></a>Azure Information Protection のシナリオ
 Azure Information Protection を短時間でデプロイし、ビジネス上の特定の問題に対処するには、ビジネス上の目標に最も一致するシナリオを選択し、必要に応じてカスタマイズします。
@@ -140,13 +143,9 @@ IT 部門は Microsoft Azure Information Protection をエンタープライズ 
 
 このしくみを紹介する 2 分間のビデオ「[Azure RMS のドキュメントの追跡と取り消し](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)」をご覧ください。
 
-この組織の最も重要な資産の 1 つは、私たちが日常的に生成、保存、および使用しているデータです。 こうしたデータは、競争力を獲得し、業績を上げるために役立ちます。 そのため、データの管理を維持し、必要のない人がデータにアクセスできないようにすることが重要です。
+この組織の最も重要な資産の&1; つは、私たちが日常的に生成、保存、および使用しているデータです。 こうしたデータは、競争力を獲得し、業績を上げるために役立ちます。 そのため、データの管理を維持し、必要のない人がデータにアクセスできないようにすることが重要です。
 
 このソリューションを実装することにより、重要なデータを保護し、データを管理するためのツールを利用することができます。 これらの変更の実装にご協力いただきありがとうございます。
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

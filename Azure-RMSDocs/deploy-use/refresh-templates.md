@@ -1,10 +1,10 @@
 ---
-title: "テンプレートの更新 | Azure Information Protection"
+title: "Azure RMS テンプレートの更新 - AIP"
 description: "Azure Rights Management サービスを使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2cfe5fd787811cae71bb08c458bd6767e4bc35e4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 84056058eedccf354cefb86792d92949bcfb22e8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -49,13 +50,13 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
     1.  Office 365 のユーザー名とパスワードを入力します。
 
         ```
-        $Cred = Get-Credential
+        $UserCredential = Get-Credential
         ```
 
-    2.  Exchange Online サービスに接続するには、次の 2 つのコマンドを実行します。
+    2.  Exchange Online サービスに接続するには、次の&2; つのコマンドを実行します。
 
         ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
         ```
 
         ```
@@ -186,7 +187,4 @@ Office 2010 を実行するコンピューター上でレジストリを編集�
 ## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

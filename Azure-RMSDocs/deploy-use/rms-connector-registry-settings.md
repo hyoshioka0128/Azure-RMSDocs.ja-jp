@@ -1,10 +1,10 @@
 ---
-title: "RMS コネクタのレジストリ設定 | Azure Information Protection"
+title: "Rights Management コネクタのレジストリ設定 - AIP"
 description: "RMS コネクタを使用するサーバーでのレジストリ設定に関する情報です。 これらの設定を構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b894be1ef3d41a9faf6c3fd3b3fd8c5b94a62517
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -216,7 +217,4 @@ ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
 
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

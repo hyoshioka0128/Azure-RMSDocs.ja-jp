@@ -1,11 +1,11 @@
 ---
-title: "アプリケーションのデプロイ | Azure RMS"
-description: "このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順を追って各操作を説明します。"
-keywords: 
+title: "アプリケーションのデプロイ"
+description: "このトピックでは、アプリケーションのデプロイの概要について順を追って説明します。"
+keywords: "デプロイ, RMS, AIP"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,99 +15,97 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f565294366bdfd06be7fc25ef781eb4900929484
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0c16b7c6bd494a0350a511a3b415f781aecf613d
 
 
 ---
-
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
+このトピックでは、Azure Information Protection (AIP)/Rights Management サービス (RMS) 対応アプリケーションのデプロイ プロセスについて順を追って説明します。
 
-このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて概説し、順をおって各操作を説明します。
+## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
+AIP/RMS を使用して開発したアプリケーションをリリースする前に、Microsoft との正式契約を申請して締結する必要があります。
 
-## <a name="request-a-production-license-agreement"></a>運用環境の使用許諾契約書の要求
+### <a name="begin-the-process"></a>プロセスを開始する
+次の情報を記載した電子メールを **IPIA@microsoft.com** に送信して、IPIA を入手します。
 
- Rights Management サービス SDK 2.1 を使用して開発されたアプリケーションを解放するには、運用環境の使用許諾契約を申請して、運用証明書を取得する必要があります。
+**件名:** *会社名* の IPIA 申し込み
 
-運用環境の使用許諾契約書に申請することで、証明書を取得できます。
-
-[RMLA@microsoft.com](mailto:rmla@microsoft.com) に電子メール メッセージを送信 し、次の情報を含めます。
-
-- 会社の正式名称
-- 会社の住所 (市区町村、都道府県、国またはリージョン、および 郵便番号を含む)
-- 会社の宛先 (市区町村、都道府県、国またはリージョン、および 郵便番号を含む)
-- 会社の電話番号、FAX 番号
-- 会社の URL
-- 法人の国またはリージョン
-- アプリケーションまたは製品名
+電子メールの本文に、次の情報を含めます。
+- アプリケーションと製品名
 - 要求者の氏名
-- 要求者の役職または職位
 - 要求者の電子メール アドレス
 
-電子メール アカウントは必須ではありませんが、アプリケーション プロセスの通信は通常、電子メールで行われます。 Microsoft Outlook.com で無料の電子メール アカウントを取得できます。 アカウントがなく、アカウントを必要としていない場合、次のアドレスにタイプ入力した申請書を送信できます。
+### <a name="next-steps"></a>次のステップ
+IPIA 申請が受信されると、(Word 文書形式の) フォームがお客様に送信されます。
+IPIA の使用条件を確認し、次の情報をフォームに入力して **IPIA@microsoft.com** に返送します。
+- 会社の正式名称
+- 法人の都道府県または国
+- 会社の URL
+- 連絡先の電子メール アドレス
+- (省略可能) 会社の追加住所
+- 会社のアプリケーションの名前
+- アプリケーションの簡単な説明
+- *Azure テナント ID*
+- アプリケーションの*アプリ ID*
+- 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
-      Active Directory Rights Management License Agreements (ADRMLA)
+### <a name="completing-the-agreement"></a>契約を締結する
+フォームが受信されると、デジタル署名を行うための最終的な IPIA リンクがお客様に送信されます。 お客様の署名後、適切な Microsoft 担当者が署名することで、契約が締結されます。
 
-      Microsoft Corporation
+### <a name="already-have-a-signed-ipia"></a>既に署名済みの IPIA がある場合
+署名済みの IPIA が既に存在し、リリースするアプリケーション用に新しい *アプリ ID* を追加する場合は、電子メールに次の情報を記載して **IPIA@microsoft.com** に送信します。
+- 会社のアプリケーションの名前
+- アプリケーションの簡単な説明
+- Azure テナント ID (以前と同じ場合でも記載)
+- アプリケーションのアプリ ID
+- 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
-      One Microsoft Way
+電子メールの送信時には、受領の確認には最大で 72 時間かかることをご了承ください。
 
-      Redmond, WA 98052-6399
+## <a name="deploying-to-the-client-environment"></a>クライアント環境にデプロイする
 
-契約書を要求するときに、次を実行してください。
-- 契約書に表示されるため、情報は英語で入力してください。
-- 要求されるすべての情報を送信してください。 情報が不足しているか不完全な場合、要求の処理が遅れることがあります。
-
-Active Directory Rights Management ライセンス契約 (ADRMLA) チームは、電子メールによる要求には 3 営業日以内に応答します。郵送で要求を送信した場合、応答にかかる期間はそれより長くなります。 応答には、使用許諾契約書用紙と詳細な手順が含まれます。 契約書のすべてのページを読み、署名してから ADRMLA チームに返送してください。 使用許諾契約書のフォントを変更したり、段落の書式を変更したりしないでください。
-
-ADRMLA チームから受信した手順に従ってください。 この手順では、証明書要求を満たすために必要なデジタル情報の項目が一覧表示されます。 この手順に従うことにより、遅延を減らすことができます。
-
-
-## <a name="installation-options-and-requirements-for-rights-management-service-client-21"></a>Rights Management Service Client 2.1 のインストールのオプションと要件
-
-RMS SDK 2.1 を使用するため、Active Directory Rights Management サービス Client 2.1 をエンドユーザーのコンピューターにデプロイする必要があります。
+Azure Information Protection (AIP)/Rights Management サービス (RMS) ツールでビルドしたアプリケーションをデプロイするには、エンドユーザーのコンピューターに RMS クライアント 2.1 をデプロイする必要があります。
 
 ### <a name="rms-client-21"></a>RMS クライアント 2.1
+RMS クライアント 2.1 は、(オンプレミスでインストールされるか、Microsoft のデータセンターにインストールされているかにかかわらず) AIP/RMS 対応アプリケーション経由でやり取りされる情報へのアクセスと使用を保護するためのものです。
 
-RMS クライアント 2.1 は、(オンプレミスでインストールされるか、Microsoft のデータセンターにインストールされているかにかかわらず) RMS を使用するアプリケーション経由でやり取りされる情報のアクセスと使用を保護することを目的として、クライアント コンピューター向けに設計されたソフトウェアです。
-
-RMS クライアント 2.1 は、Windows オペレーティング システムのコンポーネントではありません。 RMS クライアント 2.1 は、個別のダウンロードとして提供されています。使用許諾契約書を確認して承諾することで、サードパーティ製ソフトウェアと一緒に自由に配布できるため、クライアントは環境内の RMS サーバーを使用してデプロイすることで、権利保護されたコンテンツにアクセスできるようになります。
-
+RMS クライアント 2.1 は、Windows オペレーティング システムのコンポーネントではありません。 このクライアントはオプションのダウンロードとして配信されており、使用許諾契約書を確認して承諾することでお使いのアプリケーションと一緒に自由に配布できます。
 
 > [!IMPORTANT]
-> AD RMS クライアント 2.1 はアーキテクチャ固有であり、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
+> RMS クライアント 2.1 はアーキテクチャ固有であるため、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
 
 
-## <a name="rms-client-21-installation-choices"></a>RMS クライアント 2.1 のインストールの選択
+## <a name="rms-client-21-installation-options"></a>RMS クライアント 2.1 のインストール オプション
 
--   **RRMS クライアント 2.1 の再配布**
+### <a name="creating-your-deployment-package"></a>デプロイ パッケージの作成
 
-    RMS クライアント インストーラー パッケージは、お使いのアプリケーションまたは推奨されるインストール テクノロジによるソリューションを使用してバンドルすることをお勧めします。 RMS クライアントは自由に再配布でき、他のアプリケーションや IT ソリューションにバンドルできます。
+RMS クライアント インストーラー パッケージは、お好みのインストール テクノロジを使用してアプリケーションまたはソリューションにバンドルすることをお勧めします。 RMS クライアントは自由に再配布でき、他のアプリケーションやソリューションにバンドルできます。
 
-    RMS クライアント 2.1 のインストーラーを起動し、対話形式で RMS クライアント 2.1 をインストールすることも、サイレント モードでインストールすることもできます。 統合手順は次のとおりです。
+RMS クライアント 2.1 のインストーラーを起動して対話形式で RMS クライアント 2.1 をインストールすることも、サイレント モードでインストールすることもできます。 統合手順は次のとおりです。
 
-    -   RMS クライアント 2.1 インストーラーをダウンロードする
-    -   アプリケーションのインストーラーを使用して実行する RMS クライアント 2.1 インストーラーを統合する
+-   RMS クライアント 2.1 インストーラーをダウンロードする
+-   実行する RMS クライアント 2.1 インストーラーをアプリケーションのインストーラーと統合する
 
-    RMS クライアント 2.1 をアプリケーションに統合する良い例として、RMS SDK 2.1 のインストーラー パッケージと権利保護されているフォルダー エクスプローラー パッケージの 2 つが挙げられます。 手順を理解するために、これらをご自分でインストールしてみてください。
+RMS クライアント 2.1 とアプリケーションの統合の例として、[Rights Protected Folder Explorer](https://technet.microsoft.com/en-us/library/rights-protected-folder-explorer(v=ws.10).aspx) パッケージがあります。 手順を理解するために、これをご自分でインストールしてみてください。
 
--   **RMS クライアント 2.1 をアプリケーションをインストールする際の前提条件とする**
+### <a name="make-rms-client-21-a-pre-requisite-for-your-application-install"></a>RMS クライアント 2.1 をアプリケーションをインストールする際の前提条件とする
 
-    この場合、RMS クライアント 2.1 がエンドユーザーのコンピューターに存在しない場合、アプリケーションのインストールが失敗するように前提条件を作成します。
+この場合、RMS クライアント 2.1 がエンドユーザーのコンピューターに存在しない場合、アプリケーションのインストールが失敗するように前提条件を作成します。
 
-    クライアントが存在しない場合は、RMS クライアント 2.1 のコピーをダウンロードできるサイトを知らせるエラー メッセージが表示されるようにします。
+クライアントが存在しない場合は、RMS クライアント 2.1 のコピーをダウンロードできるサイトを知らせるエラー メッセージが表示されるようにします。
 
-    クライアントが存在する場合は、アプリケーションのインストールを続行します。
+クライアントが存在する場合は、アプリケーションのインストールを続行します。
 
-## <a name="enabling-azure-rights-management-services-with-your-application"></a>アプリケーションで Azure Rights Management サービスを有効にする
+## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>アプリケーションで Azure Information Protection/Rights Management サービスを有効にする
 
 > [!NOTE]
-> 認証用に新しい ADAL モデルに移行した場合は、SIA をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
+> 認証用に新しい ADAL モデルに移行した場合は、**SIA** をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
 > あるいは、**Windows 10 のアプリケーション認定を受ける**ことができます。 - Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は多要素認証を利用したり、コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールしたりできるようになります。
 
 
-エンドユーザーが Azure Rights Management サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) と Azure Rights Management services (クラウド サービス) のどちらを使用するのかわかりません。
+エンドユーザーが Information Protection/Rights Management サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
 
 
 > [!IMPORTANT]
@@ -125,12 +123,10 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 * [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Rights Management を構成する](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
 * [クラウド ベース RMS でのアプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

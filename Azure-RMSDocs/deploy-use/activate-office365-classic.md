@@ -1,10 +1,10 @@
 ---
-title: "Office 365 クラシック管理センターから Azure Rights Management をアクティブ化する方法 | Azure Information Protection"
+title: "Office 365 クラシック管理センターで Azure RMS をアクティブ化する - AIP"
 description: "Office 365 管理センターのクラシック (オリジナル) バージョンにアクセスできる場合の、Azure Rights Management サービスのアクティブ化手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0a0741e01b6ff446b16383dbaa26b31327427237
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: caafaa9e4c38a3e4b605e582db44c6c6b0b810d4
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -53,7 +54,4 @@ Office 365 管理センターのクラシック (オリジナル) バージョ�
 ## <a name="next-steps"></a>次のステップ
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

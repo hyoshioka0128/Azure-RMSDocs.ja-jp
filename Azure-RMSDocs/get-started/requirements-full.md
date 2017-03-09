@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection の要件 - 記事の全文 | Azure Information Protection"
+title: "Azure Information Protection の要件 - 記事全文"
 description: "組織の Azure Information Protection をデプロイするための前提条件を特定します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 68b3d74d32b98f44cfdf9cf78b7a9151f16124ce
-ms.openlocfilehash: b4afd639439f0549ce38de1e63a1798d30680066
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 94259046ed2eb78bce9d7ce49a4dc3b9c99d55c3
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -71,8 +72,8 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 > 
 > -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
-### <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
-Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
+### <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
+Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち&1; つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
 
@@ -248,7 +249,7 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 
 -   Windows コンピューターの場合: Windows 7 Service Pack 1 以降が必要です
 
-## <a name="onpremises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
+## <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
 
 Azure Rights Management コネクタを使用すると、次のオンプレミス サーバー製品は Azure Information Protection でサポートされます。 このコネクタは、Office ドキュメントや電子メールを保護するために、Azure Information Protection によって使用される Azure Rights Management サービスとオンプレミス サーバーの間の通信インターフェイス (リレー) として機能します。 
 
@@ -285,9 +286,5 @@ Rights Management コネクタは、Windows Server 2012 R2、Windows Server 2012
 
 これらのオンプレミス サーバーで Rights Management コネクタを構成する方法の詳細については、「[Azure Rights Management コネクタをデプロイする](../deploy-use/deploy-rms-connector.md)」をご覧ください。
 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

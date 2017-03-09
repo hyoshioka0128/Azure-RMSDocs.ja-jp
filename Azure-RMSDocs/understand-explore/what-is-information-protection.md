@@ -1,18 +1,19 @@
 ---
-title: "Azure Information Protection とは | Azure Information Protection"
+title: "Azure Information Protection とは"
 description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: dfcaa9a1fef0a4a2011f1385d849c4c2887a022e
-ms.openlocfilehash: ab8aa40f0ed3947264de9d07cd6fa7a7030a6964
+ms.sourcegitcommit: 1085966a885d1cd8223e277be632ce6dae5de294
+ms.openlocfilehash: 61dfc23fa16b12688b79f2b7ffac645c9cc93584
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -31,7 +32,7 @@ Azure Information Protection とは、組織が文書や電子メールを、分
 
 ## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
 
-Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 永続的なラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 (データ損失防止ソリューションなどの) その他のサービスが分類を識別して適切なアクションを取れるように、ファイルと電子メールのヘッダーにはクリア テキストでメタデータが追加されます。 
+Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 (データ損失防止ソリューションなどの) その他のサービスが分類を識別して適切なアクションを取れるように、ファイルと電子メールのヘッダーにはクリア テキストでメタデータが追加されます。 
 
 たとえば、次の電子メール メッセージは "内部" と分類されています。 これが内部用であり、組織外には送信されるべきではないことをすべての受信者が視覚的に確認できるように、このラベルは電子メールのフッターに追加されます。 このラベルは、電子メール サービスがこの値を調べて、監査エントリを作成したり、組織外に送信されることを阻止するよう、電子メールのヘッダーにも埋め込まれます。
 
@@ -42,19 +43,19 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 保護テクノロジには *Azure Rights Management* (しばしば Azure RMS と略される) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
 
-この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、永続的ラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
+この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
 
 たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 これらの保護タスクは、*Rights Management テンプレート*を使用して単純化および合理化できます。
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
-Azure Rights Management サービスを有効にすると直ちに、組織内のユーザーがデータにアクセスすることを制限する 2 つのテンプレートが既定で作成されます。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 より制限を厳しく制御する、これらの既定のテンプレートを補うカスタム テンプレートを独自で構成することも可能です。
+Azure Rights Management サービスを有効にすると直ちに、組織内のユーザーがデータにアクセスすることを制限する&2; つのテンプレートが既定で作成されます。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 より制限を厳しく制御する、これらの既定のテンプレートを補うカスタム テンプレートを独自で構成することも可能です。
 
 これらのテンプレートをラベル構成の一部にすると、文書 (または電子メール メッセージ) に特定のラベルが適用されると、データの分類と自動での保護が同時にされるようにすることができます。 Azure Rights Management テクノロジをサポートする製品およびサービスのユーザーや管理者が、テンプレートを選択することもできます。
 
 この例では、Azure ポータルから Azure Information Protection ポリシーを構成するときに、ラベルのテンプレートを選択する方法を示します。
 
-![Azure ポータルでテンプレートを選択する場合の例](../media/templates-infoprotection-callouts.png)
+![Azure ポータルでテンプレートを選択する場合の例](../media/info-protect-template-callout.png)
 
 この同じテンプレートは、Azure Rights Management テクノロジをサポートする Exchange Online のメール フローのルールを構成する Exchange 管理センターからも選択できます。
 
@@ -66,11 +67,21 @@ Azure Rights Management での保護のしくみの詳細については、「[A
 
 Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、最初の図のように Information Protection バーをインストールします。 Excel、PowerPoint、および Outlook にも同じバーが追加されます。 たとえば、
 
-![Excel の Azure Information Protection バーの例](../media/excel2013-infoprotect-bar2.png)
+![Excel の Azure Information Protection バーの例](../media/excel2016-infoprotect-bar.png)
 
 この Information Protection バーにより、エンド ユーザーは、適切な分類ラベルを選択でき、必要に応じてこれらのラベルにより、文書や電子メールを自動で保護することもできるようになります。
 
-ユーザーが保護されている文書を電子メールで共有する場合、これらの文書にアクセスしているユーザーやいつアクセスされているかを文書の追跡サイトから監視することができます。 不正使用が疑われる場合、これらの文書に対するアクセスを取り消すことも可能です。
+追加のファイルの種類を分類して保護し、複数のファイルを一度にサポートするには、次のようにして、エクスプローラーからファイルまたはフォルダーを右クリックします。
+
+![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
+
+エクスプローラーから **[分類して保護する]** メニュー オプションを選択すると、Office デスクトップ アプリで Information Protection バーを使用する場合と同じように、ラベルを選択することができます。 必要に応じて、独自のカスタム アクセス許可を設定することもできます。
+
+パワー ユーザー (および管理者) は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 これを行う PowerShell コマンドは、クライアントと共に自動的に含まれますが、PowerShell モジュールを個別にインストールすることもできます。
+
+ドキュメントが保護されたら、ユーザーと管理者はドキュメント追跡サイトを使用して、これらのドキュメントに誰がいつアクセスしているかを監視することができます。 不正使用が疑われる場合は、これらのドキュメントに対するアクセスを取り消すこともできます。
+
+![ドキュメント追跡サイトの [アクセスの取り消し] アイコン](../media/tracking-site-revoke-access-icon.png)
 
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
@@ -85,9 +96,9 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- ビデオの概要
+- ビデオ: "Information Protection のヒント トップ 5"
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
     さらに、Microsoft Ignite 2016 では Azure Information Protection に関する多くのオンデマンド セッションが提供されます。
 
@@ -104,15 +115,10 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ## <a name="next-steps"></a>次のステップ
 
+ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
+
 「[Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md)」 (Azure Information Protection のクイック スタート チュートリアル) で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。
 
-Azure Rights Management または Azure Information Protection の別名 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
-
-## <a name="comments"></a>コメント
+Azure Rights Management または Azure Information Protection の別名については、 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Dec16_HO2-->
-
-

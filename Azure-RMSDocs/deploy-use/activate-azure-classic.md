@@ -1,10 +1,10 @@
 ---
-title: "Azure クラシック ポータルから Azure Rights Management をアクティブ化する方法 | Azure Information Protection"
-description: "Azure ポータルにアクセスできる場合に、Azure Rights Management サービスをアクティブ化する手順です。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。"
+title: "Azure クラシック ポータルで Azure RMS をアクティブ化する - AIP"
+description: "Azure Portal にアクセスできる場合に、Azure Rights Management サービスをアクティブ化する手順です。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: fe806c1c2b3f3284b905602a3a10deb79d91425e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 444d74c957ec6e243858fcddfaac36951c257a9d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: fe806c1c2b3f3284b905602a3a10deb79d91425e
 >*適用対象: Azure Information Protection*
 
 
-Azure ポータルにアクセスできる場合は、次の手順を使用してください。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。
+Azure Portal にアクセスできる場合は、次の手順を使用してください。 たとえば、Enterprise Mobility Suite のサブスクリプションまたは Azure Information Protection Premium のサブスクリプションがある場合です。
 
 > [!TIP]
 > [Azure RMS をアクティブ化する方法](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)に関する 2 分間のビデオをご覧ください。
@@ -58,7 +59,4 @@ Azure ポータルにアクセスできる場合は、次の手順を使用し�
 ## <a name="next-steps"></a>次のステップ
 「[Azure Rights Management をアクティブにする](activate-service.md)」に戻ります。
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

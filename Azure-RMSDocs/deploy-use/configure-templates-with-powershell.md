@@ -1,10 +1,10 @@
 ---
-title: "カスタム テンプレート用の PowerShell リファレンス |Azure Information Protection"
+title: "Azure RMS カスタム テンプレート用の PowerShell - AIP"
 description: "Azure クラシック ポータルで権限管理テンプレートを作成および管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: aad5bc49b15b32c74352d5c9d6d48cd4f1f3cf9c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fac6f2180c8b108ea237cb36d29058b4907db18a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -59,7 +60,4 @@ Azure クラシック ポータルで権限管理テンプレートを作成お�
 ## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

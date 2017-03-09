@@ -1,10 +1,10 @@
 ---
-title: "手順 2.&colon; HSM で保護されているキーから HSM で保護されているキーへの移行 | Azure Information Protection"
+title: "HSM で保護されているキーから HSM で保護されているキーへの移行 - AIP"
 description: "この手順は、AD RMS から Azure Information Protection への移行パスの一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
-ms.openlocfilehash: 5def3aa722afd29b99ef18c100d71a447c22554f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d0bb1cad20acdc16ee47c4a970a0cc095d07dc75
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,7 +32,7 @@ ms.openlocfilehash: 5def3aa722afd29b99ef18c100d71a447c22554f
 > [!NOTE]
 > これらの手順は、AD RMS キーがモジュールで保護されていることを前提としています。 これは、最も一般的なケースです。 
 
-これは、HSM キーと AD RMS 構成を Azure Information Protection にインポートする 2 段階の手順で、結果はお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
+これは、HSM キーと AD RMS 構成を Azure Information Protection にインポートする&2; 段階の手順で、結果はお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
 
 Azure Information Protection テナント キーは Azure Key Vault によって格納され管理されるので、移行のこの部分では、Azure Information Protection だけでなく、Azure Key Vault での管理も必要です。 Azure Key Vault が組織で自分以外の管理者によって管理されている場合は、その管理者と調整を行い連携してこれらの手順を完了する必要があります。
 
@@ -92,9 +93,5 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
 
-
-
-
-<!--HONumber=Nov16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

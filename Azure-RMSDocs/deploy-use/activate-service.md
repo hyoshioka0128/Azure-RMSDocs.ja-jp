@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management をアクティブにする | Azure Information Protection"
+title: "Rights Management をアクティブにする - AIP"
 description: "この情報保護ソリューションをサポートするアプリケーションとサービスを使用して、組織の重要な文書や電子メールの保護を開始するには、Azure Rights Management をアクティブにする必要があります。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
-ms.openlocfilehash: 80fd7a7ce1ac6b7a8b2867729dd3e09e9b106d9b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: dcccc07758cef4428d5ee0430f67047d645f2104
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -78,15 +79,9 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 ## <a name="next-steps"></a>次のステップ
 これで組織で [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] がアクティブになったので、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」を参照して、Azure Information Protection をユーザーおよび管理者にロールアウトする前にその他に構成が必要であるかを判断することができます。 
 
-たとえば、[カスタム テンプレート](configure-custom-templates.md)を使用してユーザーが簡単に情報保護をファイルに適用できるようにする、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用するために [Rights Management コネクタ](deploy-rms-connector.md)をインストールしてオンプレミス サーバーに接続する、すべてのデバイスですべてのファイルの種類の保護をサポートする [Rights Management](../rms-client/sharing-app-windows.md) 共有アプリケーションをデプロイする、などが考えられます。 
+たとえば、[カスタム テンプレート](configure-custom-templates.md)を使用してユーザーが簡単に情報保護をファイルに適用できるようにする、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用するために [Rights Management コネクタ](deploy-rms-connector.md)をインストールしてオンプレミス サーバーに接続する、すべてのデバイスですべてのファイルの種類の保護をサポートする [Azure Information Protection クライアント](../rms-client/aip-client.md)をデプロイする、などが考えられます。 
 
 Exchange Online や SharePoint Online などの Office サービスの Information Rights Management (IRM) 機能を使用するには、あらかじめ追加の構成手順が必要です。 お使いのアプリケーションで Rights Management サービスを使用する方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](../understand-explore/applications-support.md)」を参照してください。
 
-## <a name="comments"></a>コメント
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Dec16_HO2-->
-
-

@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ| Azure Information Protection"
+title: "Azure RMS を使用してユーザーによるファイル保護を支援する - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -41,7 +42,9 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 -   **ヘルプ デスクの情報:**
 
-    ヘルプ デスクの最も便利なツールの 1 つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
+    ヘルプ デスクの最も便利なツールの&1; つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
+    
+    ユーザーが Azure Information Protection クライアントを実行している場合、ヘルプ デスクのオペレーターはそのユーザーに **[ヘルプとフィードバック]**、**[診断の実行]** を使用し、その後でクライアントをリセットするよう求める場合があります。 ただし、RMS アナライザーとは異なり、リセットしてもユーザーがサインアウトされたり、クライアントがリブートストラップされることはなく、自動修復されません。
 
     保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。
 
@@ -61,20 +64,16 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 次のセクションでは、機密のドキュメントおよび電子メールを保護する際に役立つアプリケーション固有の情報を示します。
 
-## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションによる情報保護の使用
-ユーザーが Office 2010 を使用している場合、コンテンツを保護し、保護されているコンテンツを使用するには Rights Management (RMS) 共有アプリケーションが必要になることがあります。さらに、このアプリケーションは Azure Rights Management サービスをサポートするすべてのコンピューターおよびモバイル デバイスに推奨されます。
+## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの情報保護の使用
+Azure Information Protection クライアントは、Office 2010 を使用していて、保護されたドキュメントと電子メールを保護および使用する場合に必要になることがありますが、コンピューターとモバイル デバイスにも推奨されます。
 
-RMS 共有アプリケーションを使用すると、ユーザーが重要なドキュメントを簡単に保護できるようになるだけでなく、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることができます。
+Azure Information Protection クライアントを使用すると、ユーザーが重要なドキュメントを簡単に保護できるようになるだけでなく、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることができます。
 
-Windows コンピューター用のこのアプリケーションの使用方法については、「[Rights Management 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」を参照してください。
+この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](../rms-client/client-user-guide.md)」を参照してください。
 
-モバイル デバイスの場合は、「 [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn451248)」をご覧ください。
-
-> [!TIP]
-> スクリーンショットを含む、大まかなサンプル シナリオが必要な場合、「[ユーザーによるモバイル ユーザーとの添付ファイルの安全な共有](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users)」を参照してください。
 
 ## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Office 365、Office 2016、または Office 2013 での情報保護の使用
-Azure Rights Management サービスを使用しており、Rights Management 共有アプリケーションをインストールしていない場合、ファイルを簡単に保護するために使用できる、リボンの **[保護ファイルの共有]** ボタンまたはエクスプローラーの **[Protect in-place]** (保護済み) が表示されません。 これらのユーザーについては、次のような指示に従う必要があります。
+Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリの Azure Information Protection バー、リボンの **[保護]** ボタン、またはファイルを簡単に保護できるエクスプローラーの **[分類して保護する]** は表示されません。 これらのユーザーについては、次のような手順に従う必要があります。
 
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
@@ -112,10 +111,6 @@ Azure Rights Management サービスを使用しており、Rights Management �
 
 保護されている文書の表示と同様に、受信者が電子メール メッセージを受け取るとき、受信者は最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに指定された制限付き使用権によってメッセージが開きます。 たとえば、[ **転送不可**] を選択した場合、[ **全員に返信** ] ボタンは使用できません。
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

@@ -4,7 +4,7 @@ description: "重要な変更点と、この新しいバージョンの RMS SDK 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection

@@ -1,10 +1,10 @@
 ---
-title: "Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護) | Azure Information Protection"
+title: "RMS 共有アプリケーションを使用したインプレースの保護 - AIP"
 description: "コンピューター、サーバー、または別のストレージ デバイスにファイルを安全に格納する方法についての手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -28,7 +29,7 @@ ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
 > [!TIP]
 > ファイルを保護しようとするとエラーが表示される場合は、「 [Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ](http://go.microsoft.com/fwlink/?LinkId=303971)」をご覧ください。
 
-## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>デバイス上のファイルを保護するには (インプレースの保護)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>デバイス上のファイルを保護するには (インプレースの保護)
 
 1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
 
@@ -65,8 +66,4 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management の使用権限を構成する | Azure Information Protection"
+title: "Azure Rights Management の使用権限を構成する - AIP"
 description: "Azure Information Protection から Azure Rights Management サービスを使用してファイルまたは電子メールを保護するときに使用される、特定の権限を確認してください。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
-ms.openlocfilehash: 46c15d7594110d48f34b1648b2afb17738712720
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 34f77a0ff33a9a960e12bc53d62b38f4e6553c80
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -56,18 +57,18 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 |アクセス許可レベル|アプリケーション|含まれる権限 (共通名)|
 |---------------------|----------------|---------------------------------|
-|表示者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、返信、全員に返信|
-|レビュー担当者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、保存、コンテンツの編集、編集、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[2]](#footnote-2)、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント (プレビュー)|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
+|表示者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、返信、全員に返信|
+|レビュー担当者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
+|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[2]](#footnote-2)、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
+|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
 
 ----
 
 ###### <a name="footnote-1"></a>脚注 1:
-Windows 用 Rights Management 共有アプリケーションまたは Windows 用 Azure Information Protection クライアント (プレビュー) には適用されません。
+Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションには適用されません。
 
 ###### <a name="footnote-2"></a>脚注 2:
-Windows 用 Azure Information Protection クライアント (プレビュー) には含まれていません。 このクライアントでは、エクスポートの使用権限に保護を削除する能力が含まれています。
+Windows 用 Azure Information Protection クライアントには含まれていません。 このクライアントでは、エクスポートの使用権限に保護を削除する能力が含まれています。
 
 
 ## <a name="rights-included-in-the-default-templates"></a>既定のテンプレートに含まれる権限
@@ -80,7 +81,7 @@ Windows 用 Azure Information Protection クライアント (プレビュー) �
 
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
-Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** という 1 つの追加の情報権限保護オプションがあります。 
+Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** という&1; つの追加の情報権限保護オプションがあります。 
 
 このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、Azure Rights Management のテンプレートを表示し、管理するとき、Azure クラシック ポータルには表示されません。 **[転送不可]** オプションは権限の集合であり、ユーザーが電子メール受信者に動的に適用します。
 
@@ -103,9 +104,6 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 ## <a name="see-also"></a>関連項目
 [Azure Rights Management サービスのカスタム テンプレートを構成する](configure-custom-templates.md)
 
-
-
-
-<!--HONumber=Dec16_HO1-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

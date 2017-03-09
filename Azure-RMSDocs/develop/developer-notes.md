@@ -1,11 +1,11 @@
 ---
-title: "開発者ガイドと情報 | Azure RMS"
-description: "このトピックでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。"
+title: "Azure Information Protection SDK 2.1 開発者ガイド |Microsoft Docs"
+description: "AIP SDK 2.1 での開発の操作方法に関するトピックのコレクション"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,18 +15,20 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
-ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
+ms.sourcegitcommit: 3b56c14d4ec1faf940e8b7d350d2680625cac795
+ms.openlocfilehash: 268d474e11f70961263b1cbbcc5eca926e880416
+ms.lasthandoff: 02/28/2017
 
 
 ---
 
-# <a name="developer-guidance-and-information"></a>開発者ガイドと情報
+# <a name="developer-guidance"></a>開発者ガイド
 
 このセクションでは、いくつかの重要な開発シナリオについて説明し、この SDK による開発に関する基本情報を提供します。 このセクションのシナリオは Rights Management サービス SDK 2.1 のこのリリースに固有のシナリオであり、将来のリリースで変更される可能性があります。
 - [方法: ADAL 認証の使用](how-to-use-adal-authentication.md) - Azure Active Directory Authentication Library (ADAL) を利用し、アプリに対して Azure RMS で認証を実行する。
 - [方法: 明示的な所有者権限の追加](add-explicit-owner-rights.md) - アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx))。
 - [方法: 権限保護対応アプリケーションのデバッグ](debugging-applications-that-use-ad-rms.md) - このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
+- [方法: 顧客のテナントへのアプリのデプロイ](how-to-deploy-app.md) - Azure AD の開発テナントから Azure AD の運用テナントにアプリをデプロイする手順の概要を説明します。
 - [方法: ドキュメント追跡の有効化と取り消し](tracking-content.md) - このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
 - [方法: 電子メール通知の有効化](how-to-enable-email-notification.md) - 電子メール通知を使用すると、保護されたコンテンツがアクセスされたときに、そのコンテンツの所有者に通知することができます。
 - [方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md) - このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。
@@ -45,8 +47,3 @@ ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
 * [概要](ad-rms-overview.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Nov16_HO4-->
-
-

@@ -20,12 +20,11 @@
 #### [Linux のコード例](linux-c-code-examples.md)
 #### [iOS/OS X のコード例](ios-os-x-code-examples.md)
 #### [コミュニティのリソース](community-resources.md)
-### [開発者ガイドと用語](core-concepts.md)
+### [開発者ガイド](core-concepts.md)
 #### [Azure AD でアプリの登録と RMS の有効化を行う方法](authentication-integration.md)
 #### [方法: エラーとパフォーマンスのログを有効にする](enabling-logging.md)
 #### [方法: 組み込み権限の使用](built-in-rights-usage-restriction-reference.md)
 #### [方法: ドキュメント追跡を使用する](how-to-use-document-tracking.md)
-#### [利用規約](terms.md)
 ### [API リファレンス](api-reference-4-2.md)
 #### [Android API リファレンス](https://msdn.microsoft.com/library/dn758245.aspx)
 #### [Linux API リファレンス](linux-c-api-reference.md)
@@ -42,11 +41,12 @@
 #### [アプリケーションの開発](developing-your-application.md)
 #### [アプリケーションのテスト](how-to-set-up-your-test-environment.md)
 #### [運用環境にデプロイする](deploying-your-application.md)
-### [開発者ガイドと情報](Developer-notes.md)
+### [開発者ガイド](Developer-notes.md)
 #### [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)
 ##### [Azure RMS の ADAL 認証を構成する](adal-auth.md)
 #### [方法: 明示的な所有者権限の追加](add-explicit-owner-rights.md)
 #### [方法: 権限保護対応アプリケーションのデバッグ](debugging-applications-that-use-ad-rms.md)
+#### [方法: アプリのデプロイ](how-to-deploy-app.md)
 #### [方法: ドキュメント追跡の有効化と取り消し](tracking-content.md)
 #### [方法: 電子メール通知の有効化](how-to-enable-email-notification.md)
 #### [方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
@@ -65,8 +65,4 @@
 #### [関数](https://msdn.microsoft.com/library/hh535289.aspx)
 #### [構造体](https://msdn.microsoft.com/library/hh535294.aspx)
 #### [エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
-
-
-<!--HONumber=Jan17_HO2-->
-
-
+## [利用規約](terms.md) 

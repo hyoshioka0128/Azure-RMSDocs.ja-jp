@@ -1,11 +1,11 @@
 ---
-title: "用語 | Azure RMS"
-description: "Rights Management サービスに固有の用語定義のコレクション。"
+title: "AIP 開発者向け用語集 |Microsoft Docs"
+description: "Rights Management サービスに固有の開発者用語定義のコレクション。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,15 +15,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 38ed5a7128813f52cb62b906b0a5cef4e6d990be
+ms.sourcegitcommit: 9c0977c57ea8e85b6750fe1f5a063059ee343db9
+ms.openlocfilehash: 4ecf686d8e7e26909c8bda4a2d0df7fc61f413bb
+ms.lasthandoff: 01/24/2017
 
 
 ---
 
 # <a name="terms"></a>利用規約
 
-Rights Management サービスに固有の用語定義のコレクション。
+Azure Information Protection に固有の開発者用語定義のコレクション。
 
 **非推奨のアルゴリズム**  
 以前のコンテンツ保護スキーム、具体的には電子コードブック暗号モード (ECB) を実装するモーダル設定。 この SDK では、この設定を使用して、[AD Rights Management サービス SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) で使用される MSDRM ライブラリと互換性のあるライセンスを生成できます。
@@ -40,8 +41,3 @@ PFile 形式は Microsoft Rights Management SDK 4.2 の設計方法で埋め込�
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,10 +1,10 @@
 ---
-title: "シナリオ - 役員が安全に特権情報を交換できるようにする | Azure Information Protection"
+title: "AIP シナリオ - 役員が特権情報を交換できるようにする"
 description: "このシナリオおよびサポート ユーザー ドキュメントでは、Azure Rights Management 保護を使用して、役員がメールやメールの添付ファイルを安全に交換できるようにし、ポリシーで役員へのアクセスを特別な操作を必要とせずに自動的に制限するようにします。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-executives-securely-exchange-privileged-information"></a>シナリオ - 役員が安全に特権情報を交換できるようにする
+# <a name="scenario---executives-securely-exchange-privileged-information"></a>シナリオ - 役員が安全に特権情報を交換できるようにする
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -106,7 +107,7 @@ ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
 ### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>IT からのお知らせ： &lt;組織名&gt; の役員メールが自動的に保護されるようになりました
-今後、社内の他の &lt;組織名&gt; の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
+今後、社内の他の &lt;組織名&gt; の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員&1; 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を &lt;組織名&gt; の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
@@ -120,19 +121,15 @@ ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 #### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>IT からのお知らせ：VanArsdel の役員メールが自動的に保護されるようになりました
-今後、VanArsdel の他の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
+今後、VanArsdel の他の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員&1; 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を VanArsdel の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
-別の VanArsdel 役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@vanarsdelltd.com)) 宛てに送信するようにしてください。
+別の VanArsdel 役員に会社の機密情報を送信するときは、個人用メール アドレスではなく、職場のメール アドレス (*name*@vanarsdelltd.com) 宛てに送信するようにしてください。
 
 **サポートが必要ですか?**
 
 -   ヘルプ デスクに問い合わせるhelpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

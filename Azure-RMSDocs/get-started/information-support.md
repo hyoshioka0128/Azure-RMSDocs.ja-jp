@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection の管理情報とサポート | Azure Information Protection"
+title: "Azure Information Protection の管理者用の情報とサポート"
 description: "新しいリリース、サポート オプション、および Microsoft に連絡して問題を報告する方法などの情報を含む、管理者向けリソース。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: cb0a66071937ed5afdf1f86833bbc47bdb4ddd50
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,8 +29,8 @@ ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
 |目的|.. 操作内容:|
 |----------------|---------------|
 |サービスについて推奨されるドキュメントを参照する →|[Azure Information Protection ドキュメント](https://docs.microsoft.com/information-protection/)の開始ページを使用します。|
-|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する →| [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)に電子メールを送信します|
-|製品グループからの Information Protection に関するツイートおよびドキュメントの更新に関するお知らせを受け取る →|Microsoft Information Protection チームのリーダーである Dan Plastina をフォローします。 [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) を参照してください|
+|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する →|[askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)に電子メールを送信します|
+|製品グループからの Information Protection に関するツイートおよびドキュメントの更新に関するお知らせを受け取る →|Microsoft Information Protection チームのリーダーである Dan Plastina をフォローします。 [Dan Plastina @DanPlastina](https://twitter.com/DanPlastina) を参照してください|
 |サブスクリプション情報とサポート対象の機能を確認する →|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)」を参照してください。|
 
 
@@ -52,7 +53,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 その他のお客様は、Azure Information Protection の入手方法に応じて、以下のサポート チャネルをご利用ください。
 
-- **Azure Information Protection Premium** (スタンドアロン): [Azure ポータルでサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 このオプションを使用するには、Azure サブスクリプションと Azure サポート プランが必要です。 詳細については、「[お客様向けの Azure サポート](https://azure.microsoft.com/support/plans/)」を参照してください。 
+- **Azure Information Protection Premium** (スタンドアロン): [Azure Portal でサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 このオプションを使用するには、Azure サブスクリプションと Azure サポート プランが必要です。 詳細については、「[お客様向けの Azure サポート](https://azure.microsoft.com/support/plans/)」を参照してください。 
 
 - **Azure Information Protection と Office 365 サブスクリプション**: 「[一般法人向け Office 365 のサポートへのお問い合わせ - 管理者向けヘルプ](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照して、電話番号と、Office 365 管理ポータルによるサポートへの問い合わせ方法をご確認ください。 
 
@@ -90,9 +91,5 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 -   [フォーラム:ユーザー向け RMS (アプリケーション)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

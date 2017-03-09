@@ -1,10 +1,10 @@
 ---
-title: "Windows 用 Rights Management 共有アプリケーション | Azure Information Protection"
+title: "Windows 用 Rights Management 共有アプリケーション - AIP"
 description: "Windows 用 Rights Management 共有アプリケーションの情報リソースです。 これは無償でダウンロード可能なアプリケーションであり、Active Directory Rights Management サービス (AD RMS) または Azure Information Protection を使用している組織、および独自の情報保護インフラストラクチャを持たないが、Azure Information Protection を使用する他の組織が保護したコンテンツを使用したい組織を対象とするアプリケーションです。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: abb1f0e1786aadbf3e9ab4b6a1679afeb32bedf1
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0bcafd705949012363f1ad04193e25246bf1f412
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -22,6 +23,10 @@ ms.openlocfilehash: abb1f0e1786aadbf3e9ab4b6a1679afeb32bedf1
 # <a name="rights-management-sharing-application-for-windows"></a>Windows 用 Rights Management 共有アプリケーション
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
+
+> [!IMPORTANT]
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2018 年 1 月 31 日に停止されます。 
+
 
 Windows 用 Rights Management 共有アプリケーション (単に「RMS 共有アプリ」とも呼ばれます) は無償でダウンロード可能なアプリケーションで、[Active Directory Rights Management サービス](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) または [Azure Information Protection](../understand-explore/what-is-information-protection.md) を使用している組織、および独自の情報保護インフラストラクチャを持たないが、Azure Information Protection から Azure Rights Management サービスを使用する他の組織が保護したコンテンツを使用したい組織を対象とするアプリケーションです。
 
@@ -39,9 +44,5 @@ Windows 用 Rights Management 共有アプリケーション (単に「RMS 共�
 ## <a name="see-also"></a>関連項目
 [Windows 用 Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn467883)
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

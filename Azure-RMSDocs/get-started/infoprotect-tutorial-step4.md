@@ -1,18 +1,19 @@
 ---
-title: "クイック スタート チュートリアル手順 4 | Azure Rights Management"
-description: "約 30 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 3 です。"
+title: "クイック スタート チュートリアルの手順 4 - AIP"
+description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 4 - ラベル付けと保護の動作の確認。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bcf1e9ee7a2d6cf8fb264533f150b350ce0a9e56
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -27,15 +28,33 @@ Azure Information Protection クライアントをインストールして Word 
 
 ## <a name="to-manually-change-our-default-label"></a>既定のラベルを手動で変更するには
 
-Information Protection バーで **[Personal]** (個人) ラベルを選択すると、分類レベルを下げる理由の入力を求められます。
+Information Protection バーの **[秘密]** ラベルを選択すると、次のように、表示されるサブラベルが示されます。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - サブラベルの選択](../media/info-protect-sub-labels.png)
+
+**[会社全体]** を選択すると、バーには他のラベルは表示されなくなり、このドキュメントに対して選択したラベルが表示されるようになります。 **[秘密度]** の値が **[秘密 \ 会社全体]** に変わり、それに応じて、次のようにラベルの色も変わります。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - 選択されたサブラベル](../media/info-protect-sub-label-selected.png)
+
+Information Protection バーで、**[秘密 \ 会社全体]** の横にある **[ラベルの編集]** アイコンをクリックします。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - [ラベルの編集] アイコン](../media/info-protect-edit-label-selected.png)
+
+使用できるラベルが再び表示されます。
+
+ここで、**[個人]** ラベルを選択します。 このドキュメントに対して前に選択したラベルよりも低い分類であるラベルを選択したため、次のように、分類レベルを下げる理由の入力を求められます。
 
 ![Azure Information Protection クイック スタート チュートリアル手順 4 - レベルを下げる理由の確認要求](../media/info-protect-lower-justification.png)
 
-**[The previous label no longer applies]** (前のラベルが適合しなくなった) を選択して、**[確認]** をクリックします。 **[Sensitivity]** (秘密度) の値が **[Personal]** (個人) に変わります。
+**[The previous label no longer applies]** (前のラベルが適合しなくなった) を選択して、**[確認]** をクリックします。 **[秘密度]** の値が **[個人]** に変わり、他のラベルは再び非表示になります。
 
 ## <a name="to-remove-the-classification-completely"></a>分類を完全に削除するには
 
-Information Protection バーで、**[Personal]** (個人) の横にある **[Edit label]** (ラベルの編集) アイコンをクリックします。 使用できるラベルが表示されます。 今度は、いずれかのラベルを選択するのではなく、**[Remove label]** (ラベルの削除) アイコンをクリックします。 **[OK]** をクリックして確認し、このアクションの理由を入力します。  
+Information Protection バーで、**[ラベルの編集]** アイコンを再度クリックします。 ここでは、いずれかのラベルを選択するのではなく、**[ラベルの削除]** アイコンをクリックします。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - 削除アイコン](../media/delete-icon-from-personal.png)
+
+プロンプトが表示されたら、"この文書では分類は不要" などと入力し、**[確認]** をクリックします。  
 
 **[Sensitivity]** (秘密度) の値が **[Not set]** (非設定) に変わります。既定のラベルが設定されていない場合も、最初はこのように表示されます。
 
@@ -56,15 +75,20 @@ Information Protection バーで、**[Personal]** (個人) の横にある **[Ed
 
     文書は指定した Azure Rights Management テンプレートによっても保護されます。これは、**[ファイル]** タブをクリックして **[文書の保護]** の情報を見ることで確認できます。 既定の機密テンプレートを使用した場合は、文書が内部ユーザーに制限され (組織外のユーザーは文書を開けません)、内容をコピーまたは印刷できないという情報が表示されます。 文書の所有者は文書をコピーおよび印刷できますが、組織内の別のユーザーに文書をメール送信した場合、受信者はこれらの操作を実行できません。
 
+4. もうこのドキュメントを閉じてもかまいません。
+
 これで、分類、ラベル付け、および保護の動作を確認できました。次は、別の組織の他のユーザーと共有している場合でも文書を保護できる方法を見てみましょう。 文書の使用方法を追跡し、文書へのアクセスを取り消すこともできます。
+
+|必要な詳細情報|追加情報|
+|--------------------------------|--------------------------|
+|ファイルのラベル付けと保護に関するすべての手順 |[ファイルや電子メールを分類して保護する](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; 手順 3](infoprotect-tutorial-step3.md)
 [手順 5 &#187;](infoprotect-tutorial-step5.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO2-->
-
-
