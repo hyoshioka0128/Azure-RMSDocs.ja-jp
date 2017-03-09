@@ -1,19 +1,19 @@
 ---
 title: "クイック スタート チュートリアルの手順 2 - AIP"
-description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 2 です。"
+description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 2 - ポリシーの構成。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 39dfa8a1c4dabf32f8b62f08a674152f41a5b96a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -63,13 +63,13 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[Label: Confidential]** (ラベル: 機密) ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントやメールのアクセス許可の設定) セクションを見つけます。
 
-    **保護**オプションを選択
+    **[保護]** を選択してから、次のように **[保護]** オプションを選択します。
     
     ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar.png) 
     
-    この操作により、**[アクセス許可]** ブレードが開きます。
+    この操作により、**[保護]** ブレードが開きます。
     
-3. **[アクセス許可]** ブレードで **[Azure RMS]** および **[テンプレートの選択]** が選択されていることを確認し、ドロップダウン ボックスをクリックして既定のテンプレート **[\<your organization name> - Confidential]** を選択します。     
+3. **[保護]** ブレードで **[Azure RMS]** および **[テンプレートの選択]** が選択されていることを確認し、ドロップダウン ボックスをクリックして既定のテンプレートの **[\<組織名> - 機密]** を選択します。     
     
     たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
     
@@ -77,7 +77,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     この既定の Azure Rights Management テンプレートを無効にしてある場合は、代わりのテンプレートを選択します。 ただし、部門テンプレートを選択する場合は、アカウントがスコープに含まれることを確認します。
     
-4. **[完了]** をクリックして変更を保存し、**[アクセス許可]** ブレードを閉じます。
+4. **[OK]** をクリックして変更を保存し、**[保護]** ブレードを閉じます。
 
 5. **[Label: Confidential]** (ラベル: 機密) ブレードに戻り、**[視覚的なマーキングの設定] ** セクションを見つけます。
     

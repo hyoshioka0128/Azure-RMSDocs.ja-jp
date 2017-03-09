@@ -4,16 +4,16 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 7d5c759a6b7e206f30588926a8d480b50be20bc4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1085966a885d1cd8223e277be632ce6dae5de294
+ms.openlocfilehash: 61dfc23fa16b12688b79f2b7ffac645c9cc93584
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -32,7 +32,7 @@ Azure Information Protection とは、組織が文書や電子メールを、分
 
 ## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
 
-Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 永続的なラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 (データ損失防止ソリューションなどの) その他のサービスが分類を識別して適切なアクションを取れるように、ファイルと電子メールのヘッダーにはクリア テキストでメタデータが追加されます。 
+Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 (データ損失防止ソリューションなどの) その他のサービスが分類を識別して適切なアクションを取れるように、ファイルと電子メールのヘッダーにはクリア テキストでメタデータが追加されます。 
 
 たとえば、次の電子メール メッセージは "内部" と分類されています。 これが内部用であり、組織外には送信されるべきではないことをすべての受信者が視覚的に確認できるように、このラベルは電子メールのフッターに追加されます。 このラベルは、電子メール サービスがこの値を調べて、監査エントリを作成したり、組織外に送信されることを阻止するよう、電子メールのヘッダーにも埋め込まれます。
 
@@ -43,7 +43,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 保護テクノロジには *Azure Rights Management* (しばしば Azure RMS と略される) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
 
-この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、永続的ラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
+この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
 
 たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 これらの保護タスクは、*Rights Management テンプレート*を使用して単純化および合理化できます。
 
@@ -96,9 +96,9 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- ビデオの概要
+- ビデオ: "Information Protection のヒント トップ 5"
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
     さらに、Microsoft Ignite 2016 では Azure Information Protection に関する多くのオンデマンド セッションが提供されます。
 
@@ -115,8 +115,10 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ## <a name="next-steps"></a>次のステップ
 
+ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
+
 「[Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md)」 (Azure Information Protection のクイック スタート チュートリアル) で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。
 
-Azure Rights Management または Azure Information Protection の別名 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
+Azure Rights Management または Azure Information Protection の別名については、 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

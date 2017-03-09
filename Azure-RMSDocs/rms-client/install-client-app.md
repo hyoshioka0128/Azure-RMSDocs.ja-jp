@@ -4,7 +4,7 @@ description: "ユーザーが Windows 用 Azure Information Protection クライ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/17/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
+ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
 ms.lasthandoff: 02/24/2017
 
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 
 # <a name="download-and-install-the-azure-information-protection-client"></a>Azure Information Protection クライアントをダウンロードしてインストールする
 
-管理者が Azure Information Protection クライアントをインストールしない場合、自分でインストールできます。 このクライアントをインストールするには、PC のローカル管理者である必要があります。 
+管理者が Azure Information Protection クライアントをインストールしない場合、自分でインストールできます。 ドキュメントや電子メールにラベルを付けて保護できるように、このクライアントをインストールするには対象となる PC のローカル管理者である必要があります。
 
 さらに
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 
 1.  Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
 
-    このページには、使用する可能性のあるあらゆる一般的なデバイスへのリンクが含まれているので、保護されたファイルを開くのに必要なビューアー アプリを簡単にダウンロードすることができます。 ここではクライアントを完全にインストールして、ファイルのラベル付けと保護ができるようにします。 
+    このページには、使用する可能性のあるあらゆる一般的なデバイスへのリンクが含まれているので、保護されたファイルを開くのに必要なビューアー アプリを簡単にダウンロードすることができます。 PC のローカル管理者でない場合でも、Windows 用のビューアー アプリをインストールすることはできます。 ただし、次の手順では、クライアントを完全にインストールして、ファイルのラベル付けと保護ができるようにします。 
 
 2. **Azure Information Protection クライアント** セクションを見つけて、Windows アイコンをクリックします。 **[ダウンロード]** をクリックし、**AzInfoProtection.exe** ファイルを保存します。     
 

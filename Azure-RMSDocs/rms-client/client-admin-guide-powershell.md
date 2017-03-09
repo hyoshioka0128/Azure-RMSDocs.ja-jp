@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 865a30bb85c1e9e2f8331ae3a85960e005de5b07
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -36,6 +36,7 @@ AzureInformationProtection モジュールには、RMS 保護ツールのすべ�
 |[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|共有フォルダーで、すべてのファイルを特定のラベルで識別します。|
 |[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
 
+すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/azureinformationprotection/vlatest/aip)」 (AzureInformationProtection モジュール) を参照してください。
 
 このモジュールは、**\ProgramFiles (x86)\Microsoft Azure Information Protection** にインストールされ、このフォルダーを **PSModulePath** システム変数に追加します。 このモジュールの .dll の名前は **AIP.dll** です。
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -43,6 +43,8 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 -   **ヘルプ デスクの情報:**
 
     ヘルプ デスクの最も便利なツールの&1; つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
+    
+    ユーザーが Azure Information Protection クライアントを実行している場合、ヘルプ デスクのオペレーターはそのユーザーに **[ヘルプとフィードバック]**、**[診断の実行]** を使用し、その後でクライアントをリセットするよう求める場合があります。 ただし、RMS アナライザーとは異なり、リセットしてもユーザーがサインアウトされたり、クライアントがリブートストラップされることはなく、自動修復されません。
 
     保護されたドキュメントへの完全な権限を求める正当な要求がある場合 (従業員が組織を去った後の法務部門や管理者からの要求など)、Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用して、ヘルプ デスクにこれを要求するプロセスがあることを確認してください。
 

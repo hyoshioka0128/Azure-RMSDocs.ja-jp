@@ -4,7 +4,7 @@ description: "カスタム テンプレートを Azure クラシック ポータ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ebc0ad13952f2036f997fc5ba9207f02d1571021
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
 ms.lasthandoff: 02/24/2017
 
 
@@ -81,7 +81,9 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
     > [!NOTE]
     > 選択するユーザーまたはグループは電子メール アドレスを持っている必要があります。 運用環境ではこの条件はほとんど常に満たされますが、単純なテスト環境では、ユーザー アカウントまたはグループへの電子メール アドレスの追加が必要になることがあります。
 
-    ベスト プラクティスとして、ユーザーではなくグループを使用すると、テンプレートの管理が簡素化されます。 オンプレミスの Active Directory があり、Azure AD に同期している場合は、メールが有効なグループ (セキュリティ グループまたは配布グループ) を使用できます。 ただし、組織内のすべてのユーザーに権限を付与する場合は、複数のグループを指定するのでなく、既定のテンプレートのいずれか&1; つをコピーする方が効率的です。 詳細については、「[テンプレートをコピーする](copy-template.md)」を参照してください。
+    ベスト プラクティスとして、ユーザーではなくグループを使用すると、テンプレートの管理が簡素化されます。 ただし、グループを変更した場合、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](../plan-design/prepare.md#group-membership-caching)ことに注意してください。 
+    
+    オンプレミスの Active Directory があり、Azure AD に同期している場合は、メールが有効なグループ (セキュリティ グループまたは配布グループ) を使用できます。 組織内のすべてのユーザーに権限を付与する場合は、複数のグループを指定するのでなく、既定のテンプレートのいずれか&1; つをコピーする方が効率的です。 詳細については、「[テンプレートをコピーする](copy-template.md)」を参照してください。
 
     > [!TIP]
     > 組織の外からテンプレートにユーザー ("外部ユーザー") を追加するには、Office 365 または Exchange Online からの連絡先を含むメールが有効なグループを選択します。 組織内のユーザーに権限を割り当てる場合と同じように組織外のユーザーに権限を割り当てることができます。 たとえば、顧客に送った価格表を顧客が編集する行為を防止できます。 組織外のユーザーが Outlook Web App を利用して保護メールを閲覧する場合、メールの保護にはこのテンプレート構成を使用しないでください。

@@ -4,16 +4,16 @@ description: "Rights Management 保護を使用するようにラベルを構成
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: cd0fa432bbec97b39e7c32f0b40594840d57fb04
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5bc117cbff3226a2ee0ff375f0aa02fc3232a183
+ms.openlocfilehash: ed6bd63a945b73b792bcafcdc0d07e08e83fc344
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -74,11 +74,11 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
         
         ユーザーが Rights Management による保護を削除する権限を持たずに **[保護の削除]** オプションを持つラベルを選択する場合、次のメッセージが表示されます: **Azure Information Protection ではこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
 
-5. **[保護]** を選択した場合、**[保護]** を選択して **[アクセス許可]** ブレードを開きます。
+5. **[保護]** を選択した場合、次のように **[保護]** を選択して **[保護]** ブレードを開きます。
     
     ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar.png)
 
-6. **[アクセス許可]** ブレードで、**[Azure RMS]** または **[HYOK (AD RMS)]** を選択します。 
+6. **[保護]** ブレードで、**[Azure RMS]** または **[HYOK (AD RMS)]** を選択します。 
     
     ほとんどの場合、アクセス許可の設定には **[Azure RMS]** を選択します。 この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限事項を読み、理解するまでは **[HYOK (AD RMS)]** を選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。 HYOK (AD RMS) の構成を続行するには、手順 9 に進みます。
     
@@ -94,7 +94,7 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
             
 9. **[HYOK (AD RMS)]** で **[テンプレートの選択]** を選択した場合: AD RMS クラスターのテンプレート GUID とライセンス URL を指定します。 [詳細情報](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. **[完了]** をクリックして **[アクセス許可]** ブレードを閉じ、選択した **[転送不可]** または選択したテンプレートが **[ラベル]** ブレードの **[保護]** オプションに表示されていることを確認します。
+10. **[OK]** をクリックして **[保護]** ブレードを閉じ、選択した **[転送不可]** または選択したテンプレートが **[ラベル]** ブレードの **[保護]** オプションに表示されていることを確認します。
 
 10. **[ラベル]** ブレードで、**[保存]** をクリックします。
 

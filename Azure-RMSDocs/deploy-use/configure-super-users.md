@@ -4,7 +4,7 @@ description: "Azure Information Protection からの Azure Rights Management サ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 07236a2820e4d8d4d594eda755cb025d21b96d12
+ms.openlocfilehash: 591ca9ba080da9565e0143d887e3db179b810862
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -38,7 +38,9 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 既定で、スーパー ユーザー機能は無効であり、このロールはどのユーザーにも割り当てられていません。 これは、Exchange に Rights Management コネクタを構成すると自動的に有効にされますが、Exchange Online、SharePoint Online、または SharePoint Server を実行する標準的なサービスには必要ありません。
 
-スーパー ユーザー機能を手動で有効にする必要がある場合は、Windows PowerShell コマンドレット [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx) を使用します。次に、必要に応じて [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) コマンドレットを使用してユーザー (またはサービス アカウント) を割り当てたり、[Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx) コマンドレットを使用して、必要に応じてこのグループにユーザー (または他のグループ) を追加したりします。 
+スーパー ユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレット [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature) を使用します。次に、必要に応じて [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) コマンドレットを使用してユーザー (またはサービス アカウント) を割り当てたり、[Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup) コマンドレットを使用して、必要に応じてこのグループにユーザー (または他のグループ) を追加したりします。 
+
+スーパー ユーザーにグループを使用すると管理しやすくなりますが、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](../plan-design/prepare.md#group-membership-caching)ことに注意してください。 したがって、新しいユーザーをスーパー ユーザーとして割り当てて、すぐにコンテンツの暗号化を解除する必要がある場合には、Set-AadrmSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、Add-AadrmSuperUser を使用してユーザーを追加します。
 
 > [!NOTE]
 > [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。

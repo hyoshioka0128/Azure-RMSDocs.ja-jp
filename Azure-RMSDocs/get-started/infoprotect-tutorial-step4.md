@@ -1,19 +1,19 @@
 ---
 title: "クイック スタート チュートリアルの手順 4 - AIP"
-description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルの手順 3 です。"
+description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 4 - ラベル付けと保護の動作の確認。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 57a46c7afe34717dd4335b0f9a19bd539821fc72
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -28,15 +28,33 @@ Azure Information Protection クライアントをインストールして Word 
 
 ## <a name="to-manually-change-our-default-label"></a>既定のラベルを手動で変更するには
 
-Information Protection バーで **[Personal]** (個人) ラベルを選択すると、分類レベルを下げる理由の入力を求められます。
+Information Protection バーの **[秘密]** ラベルを選択すると、次のように、表示されるサブラベルが示されます。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - サブラベルの選択](../media/info-protect-sub-labels.png)
+
+**[会社全体]** を選択すると、バーには他のラベルは表示されなくなり、このドキュメントに対して選択したラベルが表示されるようになります。 **[秘密度]** の値が **[秘密 \ 会社全体]** に変わり、それに応じて、次のようにラベルの色も変わります。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - 選択されたサブラベル](../media/info-protect-sub-label-selected.png)
+
+Information Protection バーで、**[秘密 \ 会社全体]** の横にある **[ラベルの編集]** アイコンをクリックします。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - [ラベルの編集] アイコン](../media/info-protect-edit-label-selected.png)
+
+使用できるラベルが再び表示されます。
+
+ここで、**[個人]** ラベルを選択します。 このドキュメントに対して前に選択したラベルよりも低い分類であるラベルを選択したため、次のように、分類レベルを下げる理由の入力を求められます。
 
 ![Azure Information Protection クイック スタート チュートリアル手順 4 - レベルを下げる理由の確認要求](../media/info-protect-lower-justification.png)
 
-**[The previous label no longer applies]** (前のラベルが適合しなくなった) を選択して、**[確認]** をクリックします。 **[Sensitivity]** (秘密度) の値が **[Personal]** (個人) に変わります。
+**[The previous label no longer applies]** (前のラベルが適合しなくなった) を選択して、**[確認]** をクリックします。 **[秘密度]** の値が **[個人]** に変わり、他のラベルは再び非表示になります。
 
 ## <a name="to-remove-the-classification-completely"></a>分類を完全に削除するには
 
-Information Protection バーで、**[Personal]** (個人) の横にある **[ラベルの編集]** アイコンをクリックします。 使用できるラベルが表示されます。 今度は、いずれかのラベルを選択するのではなく、**[ラベルの削除]** アイコンをクリックします。 ここでは、"この文書では分類は不要" などと入力し、**[確認]** をクリックします。  
+Information Protection バーで、**[ラベルの編集]** アイコンを再度クリックします。 ここでは、いずれかのラベルを選択するのではなく、**[ラベルの削除]** アイコンをクリックします。
+
+![Azure Information Protection クイック スタート チュートリアル手順 4 - 削除アイコン](../media/delete-icon-from-personal.png)
+
+プロンプトが表示されたら、"この文書では分類は不要" などと入力し、**[確認]** をクリックします。  
 
 **[Sensitivity]** (秘密度) の値が **[Not set]** (非設定) に変わります。既定のラベルが設定されていない場合も、最初はこのように表示されます。
 

@@ -5,18 +5,19 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
+ms.sourcegitcommit: 8af3161946b2dfc6ea58d0565491d8e59736d565
+ms.openlocfilehash: 2f4c11f7661a814849ccea41c60edfc2ad2287e8
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -25,7 +26,13 @@ ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
 
-## <a name="new-for-the-february-2016---sdk-documentation-update"></a>2016 年 2 月の最新情報 - SDK 文書更新
+## <a name="new-for-the-february-2017---sdk-documentation-update"></a>2017 年 2 月の最新情報 - SDK 文書更新
+>[!Note]  
+> このセクションの文書更新は、SDK ダウンロード バージョン 1.03102.0221 に適用されます。
+ 
+- **データ収集** - アプリケーションのエラーとパフォーマンス情報の収集が可能になりました。 この機能は、新しいプロパティ *IPC_EI_DATA_COLLECTION_ENABLED* ([環境プロパティ](https://msdn.microsoft.com/en-us/library/hh535247.aspx)の&1; つ) で制御され、管理者がオーバーライドできます。 
+
+## <a name="february-2016---sdk-documentation-update"></a>2016 年 2 月 - SDK 文書更新
 
 >[!Note]
 > このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
@@ -53,7 +60,7 @@ ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 ## <a name="may-2015-update"></a>2015 年 5 月の更新
 
--   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についてのトピックが更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
+-   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には&3; つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についてのトピックが更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 ## <a name="april-2015-update"></a>2015 年 4 月の更新
 
@@ -68,7 +75,7 @@ ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 ## <a name="january-2015-update"></a>2015 年 1 月の更新
 
--   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポートされるファイル形式) を参照してください。
+-   **保護されたファイル (pfile) のサポート対象サイズの増加** –&1; GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポートされるファイル形式) を参照してください。
 -   **ログの強化による診断の向上** – 確認する必要があるメッセージが**エラー**または**警告**のログ レベルで表示されます。 表示されている例外など、他のすべてのメッセージは**情報**としてログに記録されます。
 
     詳細情報が失われないようにするために、この方法を選択しました。 これにより、重要なメッセージだけが警告レベルで表示されるようになりました。
@@ -133,7 +140,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
       - システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
 
-    ファイル API は、[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx) という 4 つの新機能を介して実装されます。
+    ファイル API は、[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx) という&4; つの新機能を介して実装されます。
 
     ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
 
@@ -159,11 +166,6 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
     2 - System locale LCID.
     3 - The first available language specified in the Rights Management Server (RMS) template.
 
-名前と説明を取得できない場合、エラーが返されます。 名前と説明は、1 つの LCID に 1 つだけ存在できます。
+名前と説明を取得できない場合、エラーが返されます。 名前と説明は、1 つの LCID に&1; つだけ存在できます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

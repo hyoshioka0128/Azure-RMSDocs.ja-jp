@@ -4,7 +4,7 @@ description: "Azure Rights Management (Azure RMS) で使用状況のログを使
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 89c0cae4b0549a0dd86ede26ef3eed0f09200419
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -68,7 +68,7 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>PowerShell を使用して使用状況ログをダウンロードするには
 
-1.  **[管理者として実行]** オプションを選択して Windows PowerShell を起動し、[Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) コマンドレットを使用して Azure Rights Management サービスに接続します。
+1.  **[管理者として実行]** オプションを選択して Windows PowerShell を起動し、[Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスに接続します。
 
     ```
     Connect-AadrmService
@@ -101,7 +101,7 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Azure Rights Management 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
 
 
-ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) コマンドレットを使用して古いログをダウンロードできます。 たとえば、
+ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) コマンドレットを使用して古いログをダウンロードできます。 たとえば、
 
 - すべてのログを E:\logs フォルダーにダウンロードするには: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -146,13 +146,15 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 |結果|文字列型|要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|'Success'|
 |correlation-id|テキスト|特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|テキスト|保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|文字列|ドキュメントの所有者の電子メール アドレス。|alice@contoso.com|
-|issuer|文字列|ドキュメントの発行者の電子メール アドレス。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|文字列型|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。|TopSecretDocument.docx|
-|date-published|日付|ドキュメントが保護された日付。|2015-10-15T21:37:00|
+|owner-email|文字列|ドキュメントの所有者の電子メール アドレス。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com|
+|issuer|文字列|ドキュメントの発行者の電子メール アドレス。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|文字列型|保護されたドキュメントのファイル名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|TopSecretDocument.docx|
+|date-published|日付|ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|2015-10-15T21:37:00|
 |c-info|文字列|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
+|admin-action|Bool|管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。|True|
+|acting-as-user|文字列型|管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。 |'joe@contoso.com'|
 
 
 #### <a name="exceptions-for-the-user-id-field"></a>user-id フィールドの例外

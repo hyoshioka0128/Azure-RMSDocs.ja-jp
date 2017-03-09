@@ -13,9 +13,9 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f2413580bf76f0b9b6fa52d8be381c44f9c985fe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: dccc643ae49521262d5327b4d3d98801f88b3894
+ms.openlocfilehash: ed200df12b3d0665920091c7772ed88a79143e70
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -48,12 +48,6 @@ Azure Information Protection において**独自キーを保持する** (HYOK) 
 これらの例外 (通常は、保護する必要のあるすべてのコンテンツの 10% 未満) については、組織は、オンプレミスのソリューションである Active Directory Rights Management サービスを使用して、オンプレミスのキーを作成することができます。 このソリューションでは、コンピューターはクラウドから Azure Information Protection ポリシーを取得しますが、この識別されたコンテンツはオンプレミスのキーを使用して保護することができます。
 
 HYOK の詳細についてや、制限事項の正しい理解や使用するタイミングを確認するには、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](../deploy-use/configure-adrms-restrictions.md)」を参照してください。
-
-
-## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Azure Rights Management サービスとオンプレミス サービスを統合できますか。
-はい。 Azure Rights Management は、Exchange Server、SharePoint、Windows ファイル サーバーなどのオンプレミス サーバーと統合できます。 統合するには、[Rights Management コネクタ](../deploy-use/deploy-rms-connector.md)を使用します。 または、Windows Server でファイル分類インフラストラクチャ (FCI) を使用することのみを目的とされている場合は、[RMS 保護コマンドレット](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx)を使用できます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)を使用して、よりシームレスな認証方法をユーザーに提供できます。
-
-必要に応じて、Azure Rights Management で XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](../understand-explore/how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Azure RMS と統合するサード パーティのソリューションに関する情報はどこで入手できますか?
 
@@ -135,7 +129,7 @@ Azure Rights Management でネイティブでサポートされているファ�
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>ユーザーが社内や社外の人間とファイルを安全に共有できるように SharePoint Online で OneDrive for Business を構成するには、どうすればよいですか。
 既定では、Office 365 管理者は構成しません。ユーザーが構成します。
 
-SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。  ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](../deploy-use/configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションを参照してください。
+SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](../deploy-use/configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションを参照してください。
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>正常にデプロイするためのヒントやコツがあれば教えてください。
 これまでに多数のデプロイをサポートし、顧客、パートナー、コンサルタント、サポート エンジニアから話を聞いてきた経験から言える一番のヒントは、**シンプルな権限ポリシーを設計してデプロイすること**です。
@@ -143,9 +137,7 @@ SharePoint サイト管理者が、所有する SharePoint ライブラリの IR
 Azure Information Protection では、他のユーザーと情報を安全に共有できるため、データ保護の範囲を詳細に指定することができます。 しかし、権限ポリシーはできるだけシンプルにしてください。 多くの組織にとって、Azure RMS の導入による業務上最も重要な利点は、既定の権限ポリシー テンプレートを適用して組織内のユーザーのアクセス許可を制限し、データ漏えいを防止できることです。 もちろん、印刷や編集などの操作を制限する必要があれば、より詳細なポリシーを作成することもできます。ただし、そのような細かい制限は、高レベルのセキュリティが必要なドキュメントに限定してください。最初から制限の厳しいポリシーを作成するのではなく、段階的に計画して作成していくことをお勧めします。
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>退職した従業員が保護していたファイルにアクセスするには、どうすればよいですか。
-Azure RMS のスーパー ユーザー機能を使用してください。スーパー ユーザー権限を持つユーザーは、組織の RMS テナントから付与されたすべての使用ライセンスについて、完全な所有者権限を持ちます。 また必要に応じて、スーパー ユーザー機能を使用すると、権限を持つサービスのインデックス化とファイルの検証を行うことができます。
-
-詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」を参照してください。
+[スーパー ユーザー機能](../deploy-use/configure-super-users.md)を使用してください。スーパー ユーザー権限を持つユーザーは、組織のテナントから付与されたすべての使用ライセンスについて、完全な使用権限を持ちます。 また必要に応じて、スーパー ユーザー機能を使用すると、権限を持つサービスのインデックス化とファイルの検証を行うことができます。
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
 
