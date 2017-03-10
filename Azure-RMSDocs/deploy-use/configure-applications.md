@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 8161315fcb3c3beb40b5273db799a5a3f37e4a7e
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: df08c66daa692137e60a5bd17e1f21cedbc37ec2
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -71,5 +67,4 @@ Azure Rights Management サービスをサポートするためにアプリケ�
 - [Azure Information Protection テナント キーに対する操作](operations-tenant-key.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 54976fbfdc17621b934349a5a7c997baa3c835aa
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="rights-management-sharing-application-user-guide"></a>Rights Management 共有アプリケーション ユーザー ガイド
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
@@ -68,6 +64,5 @@ Windows 用 Microsoft Rights Management (RMS) 共有アプリケーションは�
 - [ダイアログ ボックスで設定を指定する](sharing-app-dialog-box.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

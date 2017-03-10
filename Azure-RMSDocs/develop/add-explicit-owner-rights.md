@@ -14,14 +14,10 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 337c819436e3675eb0ba745717d700002d5184b0
-ms.lasthandoff: 01/28/2017
-
-
+ms.openlocfilehash: d7365dc91139d9edc38a52ba66319946470873d5
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-add-explicit-owner-rights"></a>方法: 明示的な所有者権限の追加
 
 アプリケーションでは、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。

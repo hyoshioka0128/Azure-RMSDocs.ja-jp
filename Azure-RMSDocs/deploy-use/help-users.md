@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
-ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
-ms.lasthandoff: 03/03/2017
-
-
+ms.openlocfilehash: 4b5dfe6e4c77a9b22e98cb2b7997a744730caac1
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -112,5 +108,4 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 保護されている文書の表示と同様に、受信者が電子メール メッセージを受け取るとき、受信者は最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに指定された制限付き使用権によってメッセージが開きます。 たとえば、[ **転送不可**] を選択した場合、[ **全員に返信** ] ボタンは使用できません。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
