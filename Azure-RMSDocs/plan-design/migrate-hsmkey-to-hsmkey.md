@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d0bb1cad20acdc16ee47c4a970a0cc095d07dc75
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: dc2b5e083b016953688214dddbe42f15b675641b
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
@@ -94,4 +90,3 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -14,13 +14,10 @@ ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: de5e3d831e20b06e88aedf6255a34ab5aa2bb58c
-
-
+ms.openlocfilehash: 7bb4a4f5e79b87a9111641fb414004c80b1f8533
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-enable-email-notification"></a>方法: 電子メール通知の有効化
 
 電子メール通知を使用すると、保護されたコンテンツがアクセスされたたときに、そのコンテンツの所有者に通知することができます。
@@ -64,8 +61,3 @@ ms.openlocfilehash: de5e3d831e20b06e88aedf6255a34ab5aa2bb58c
 - [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

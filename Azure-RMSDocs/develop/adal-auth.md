@@ -14,13 +14,10 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b7415265d0e27896df2bdf6a62e7c875ba681345
-ms.openlocfilehash: d51730af8a1f410ad890087200f64864eceb2268
-
-
+ms.openlocfilehash: 880f022e53aa6c12b26d2d64782521de88d29399
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="configure-your-app-for-adal-authentication"></a>ADAL 認証用のアプリの構成
 
 このトピックでは、アプリケーションを Azure Active Directory Authentication Library (ADAL) ベースの認証用に構成する手順について説明しています。
@@ -84,7 +81,7 @@ Microsoft Azure にサインアップした後:
 - アプリケーション設定下部で **[他のアプリケーションに対するアクセス許可]** の **[アプリケーションの追加]** ボタンを選択します。
 
 >[!NOTE]
-> Windows Azure Active Directory に表示される **[デリゲートされたアクセス許可]** は既定では正しく、オプションは 1 つだけ選択します。そのオプションは **[サインインとユーザー プロファイルの読み取り]** になります。
+> Windows Azure Active Directory に表示される **[デリゲートされたアクセス許可]** は既定では正しく、オプションは&1; つだけ選択します。そのオプションは **[サインインとユーザー プロファイルの読み取り]** になります。
 
 ![[アプリケーションの追加] を選択する](../media/PermissionsToOtherBtn.png)
 
@@ -105,8 +102,3 @@ Microsoft Azure にサインアップした後:
 ![[保存] を選択する](../media/SaveApplication.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

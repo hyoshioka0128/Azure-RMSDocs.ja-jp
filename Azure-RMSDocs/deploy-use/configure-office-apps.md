@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 430f390bef496b5e297ae25a03531da42954121d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 37521bad9e6e1cfb9db9741ba3c8495460a20da6
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="office-apps-configuration-for-clients"></a>Office アプリ: クライアントの構成
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -38,4 +34,3 @@ ms.lasthandoff: 02/24/2017
 Azure Information Protection クライアントの詳細については、「[Azure Information Protection client: Installation and configuration for clients](configure-client.md)」(Azure Information Protection クライアント: クライアントのインストールと構成) を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

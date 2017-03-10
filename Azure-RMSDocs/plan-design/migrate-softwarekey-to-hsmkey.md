@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4126bd34615307347d387217b8ad4f39ba69cad8
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 3b9350462f363ed365c3f37aabad79ce7338b531
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
@@ -161,6 +157,5 @@ SLC キーが抽出され、オンプレミスの HSM にインポートされ�
 以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 55254496b23e49fe7e2dbd19721a824739004b21
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 6d7aa4eb4a98db298f6a86b650b8c91a79bdc9b3
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="protection-only-mode-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントの保護のみモード
 
 Azure Information Protection ポリシーがない Azure Information Protection クライアントを実行すると、**保護のみ**モードで表示されます。 たとえば、エクスプローラーを使用し、右クリックして **[分類して保護する]** を右クリックします。
@@ -51,4 +47,3 @@ Azure Information Protection ポリシーがない Azure Information Protection 
 - Office アプリからドキュメント追跡サイトにアクセスします。 ただし、このサイトからドキュメントを追跡して取り消すには、有効なサブスクリプションを持っている必要があります。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
