@@ -4,7 +4,7 @@ description: "Rights Management (RMS) クライアントと RMS 保護ツール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 58a0f117100ff5d19dfd6fee2ac4dd61c6bea36b
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: ff8e38385e8e28991ee1da6c69b0ded244f38177
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
 >*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
@@ -44,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 
     -   Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
 
-    -   AzureInformationProtection モジュールをインストールし、Azure Rights Management の前提条件を構成しておきます。 詳細については、「[Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには、**BposTenantId**、**AppPrincipalId**、**対称キー**という値があります。
+    -   AzureInformationProtection モジュールをインストールし、Azure Rights Management の前提条件を構成しておきます。 詳細については、「[Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには、**BposTenantId**、**AppPrincipalId**、**対称キー**という値があります。 
 
     -   特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
 
@@ -52,7 +48,7 @@ ms.lasthandoff: 02/24/2017
 
 -   オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 このアカウント構成の詳細については、「[Azure Information Protection の準備を行う](../plan-design/prepare.md)」を参照してください。
 
--   ファイルの保護に使用する Rights Management テンプレートを特定しておきます。 [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用して、このテンプレートの ID を確認します。
+-   ファイル サーバーに Rights Management テンプレートをダウンロードして、ファイルを保護するテンプレート ID を識別しました。 このためには、[Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用します。 このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があります。
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
 PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
@@ -70,6 +66,8 @@ PowerShell スクリプトをカスタム タスクとして使用してフォ�
 6.  規則とタスクを手動で実行して構成をテストする
 
 この手順が終了すると、選択したフォルダー内のすべてのファイルは RMS のカスタム プロパティで分類され、Rights Management によって保護されるようになります。 一部のファイルだけを選択的に保護するさらに複雑な構成の場合は、異なる分類プロパティと規則、そしてそれらのファイルだけを保護するファイル管理タスクを、作成または使用できます。
+
+FCI で使用する Rights Management テンプレートに変更を加える場合、ファイル サーバー コンピューター上で `Get-RMSTemplate -Force` を実行して、更新されたテンプレートを取得する必要があります。 更新されたテンプレートは、新しいファイルを保護するために使用されます。 テンプレートへの変更が重要であり、ファイル サーバー上のファイルを再び保護する必要がある場合、そのファイルについてエクスポートやフル コントロールの使用権限を持つアカウントで Protect-RMSFile コマンドレットを対話的に実行することにより、これを行うことができます。 FCI で使用する新しいテンプレートを発行した場合は、このファイル サーバー コンピューター上で `Get-RMSTemplate -Force` も実行する必要があります。
 
 ### <a name="save-the-windows-powershell-script"></a>Windows PowerShell スクリプトを保存する
 
@@ -288,4 +286,3 @@ PowerShell スクリプトをカスタム タスクとして使用してフォ�
 そのためには、同じスクリプトとおそらく異なるテンプレートを使用する新しいファイル管理タスクを作成し、構成した分類プロパティの条件を構成する必要があります。 たとえば、前に構成した条件 ([**RMS** ] プロパティ、[ **EQUAL**]、[ **はい**]) の代わりに、[ **個人の身元を特定する情報** ] プロパティを選択し、[ **演算子** ] を [ **EQUAL** ] に、[ **値** ]を [ **高**] に設定します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

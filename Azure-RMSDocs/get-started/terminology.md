@@ -4,7 +4,7 @@ description: "Microsoft Azure Information Protection に関連する単語、フ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a5cfa773d440e92fe9d3e88e242dfb25f7174400
-
-
+ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -64,15 +61,10 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |RMS コネクタ|*Rights Management コネクタ*をご覧ください。|
 |個人用 RMS|ユーザーの組織が Office 365 または Azure Active Directory のサブスクリプションを保有していない場合にユーザーが [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] を使用するための無料のサブスクリプション。|
 |RMS 共有アプリ|*Rights Management 共有アプリケーション*をご覧ください。|
+|保護のみモード|ラベルを適用する Azure Information Protection ポリシーがない場合の、Azure Information Protection クライアントの操作モード。 このモードでは、分類ラベルが表示されませんが、ユーザーは Rights Management 保護を適用することができます。|
 |スーパー ユーザー|高度に信頼されている管理者グループ。権限管理サービスを使用して組織が保護しているファイルの暗号化を解除し、そのファイルにアクセスできます。 通常、法的な電子情報開示や監査チームには、このレベルのアクセス許可が必要です。|
 |テナント キー|サーバー ライセンサー証明書 (SLC) キーとも呼ばれます。<br /><br />組織に対して一意のキーであり、このテナント キーにチェーンされているすべての [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 暗号化機能を最終的に保護します。|
 |保護の解除|ファイルや電子メール メッセージから、暗号化、ID、アクセス制御ポリシーを使用してデータを保護していた権限管理の制御を削除します。|
 |ライセンスの使用|権限管理サービスで保護されているファイルや電子メール メッセージを開くユーザーに付与されるドキュメントごとの証明書です。 この証明書は、ファイルや電子メール メッセージに対するユーザーの権限のほか、コンテンツを暗号化する際に使用される暗号化キー、ドキュメントのポリシー内で別途定義されるアクセス制限を含んでいます。|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

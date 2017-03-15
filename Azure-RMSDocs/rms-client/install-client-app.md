@@ -4,7 +4,7 @@ description: "ユーザーが Windows 用 Azure Information Protection クライ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
-ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f47cad9d613517413ab5f3a61d24a4c8b9f79e15
+ms.sourcegitcommit: cbdbabd626fa5b91c418d84cd6228c9ca94a2525
+translationtype: HT
 ---
-
 # <a name="download-and-install-the-azure-information-protection-client"></a>Azure Information Protection クライアントをダウンロードしてインストールする
 
 管理者が Azure Information Protection クライアントをインストールしない場合、自分でインストールできます。 ドキュメントや電子メールにラベルを付けて保護できるように、このクライアントをインストールするには対象となる PC のローカル管理者である必要があります。
@@ -28,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 
 - Azure Information Protection クライアントでは、Microsoft .NET Framework 4.6.2 の最小バージョンが必要になります。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。
 
-- Windows 7 SP1 を使用する場合、Azure Information Protection クライアントには特定の更新プログラム [KB 2533623](https://support.microsoft.com/kb/2533623) が必要です。 この更新プログラムが必要な PC に更新プログラムがインストールされていない場合、インストールは完了しますが、Azure Information Protection クライアントのすべての機能を使用できるようにするには、この更新プログラムをインストールする必要があることを伝えるメッセージが表示されます。 
+- Windows 7 SP1 を使用する場合、Azure Information Protection クライアントには特定の更新プログラム KB 2533623 が必要です。 この更新プログラムが必要な PC にまだインストールされていない場合、インストールは完了しますが、Azure Information Protection クライアントにこの更新プログラムが必要だというメッセージが表示されます。 この更新プログラムがインストールされるまで、Azure Information Protection クライアントの機能すべてを使用できるようにはなりません。 
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Azure Information Protection クライアントをダウンロードしてインストールするには    
 
@@ -73,4 +69,3 @@ ms.lasthandoff: 02/24/2017
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-

@@ -4,27 +4,25 @@ description: "ドキュメントまたは電子メール メッセージにラ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4ddacf2be34cb7921dfbe282a0476a8cd47de2cf
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f1ac1ed3aada5d332764db962794d8d6b5428bd7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象: Azure Information Protection*
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
 
-視覚的なマーキングは、Word、Excel、および PowerPoint ドキュメントにラベルが適用されるときと、ドキュメントが保存されるときに適用されます。 電子メール メッセージでは、視覚的なマーキングは、電子メール メッセージが送信されるときに適用されます。
+視覚的なマーキングは、ラベルが適用されたときと、Word、Excel、および PowerPoint でドキュメントが保存されたときに、これらの Office アプリケーションのドキュメントに適用されます。 電子メール メッセージの場合、Outlook から電子メール メッセージが送信されたときに視覚的なマーキングが適用されます。
+
+ファイル エクスプローラーでの右クリック操作によってラベルが適用された場合は、ドキュメントに視覚的なマーキングは適用されません。 PowerShell を使用してドキュメントを分類した場合も同様です。
 
 視覚的なマーカーの追加情報:
 
@@ -81,5 +79,4 @@ ms.lasthandoff: 02/24/2017
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

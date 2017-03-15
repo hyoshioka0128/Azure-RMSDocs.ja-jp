@@ -4,7 +4,7 @@ description: "カスタム テンプレートを Azure クラシック ポータ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
-ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 9d0b71db6245e49765a0f79aaa901141a155372d
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="create-configure-and-publish-a-custom-template"></a>カスタム テンプレートを作成、構成、発行する
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -49,16 +44,16 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 
     -   [Azure クラシック ポータル](http://go.microsoft.com/fwlink/p/?LinkID=275081)から、次の手順を実行します。
 
-        1.  左ペインで、[ **ACTIVE DIRECTORY**] をクリックします。
+        1. 左ペインで、[ **ACTIVE DIRECTORY**] をクリックします。
 
-        2.  [ **Active Directory** ] ページで、[ **RIGHTS MANAGEMENT**] をクリックします。
+        2. [ **Active Directory** ] ページで、[ **RIGHTS MANAGEMENT**] をクリックします。
 
-        3.  Rights Management で管理するディレクトリを選択します。
-
-        4.  Rights Management をまだアクティブ化していない場合は、最初に **[アクティブ化]** をクリックして、操作を確認します。
+        3. **[Rights Management のステータス]** に **[非アクティブ]** と表示される場合は、**[アクティブ化]** をクリックして操作を確定します。
 
             > [!NOTE]
             > 詳細については、「[Rights Management をアクティブにする](activate-service.md)」を参照してください。
+            >
+        4. **[Rights Management のステータス]** に **[アクティブ]** と表示される場合は、お使いの Active Directory テナントの名前を選択します。
 
 2.  新しいテンプレートの作成:
 

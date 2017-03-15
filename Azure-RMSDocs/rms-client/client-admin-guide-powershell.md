@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 13bed15fa5fff020d77a4362e38903c5ca55d2ce
+ms.sourcegitcommit: cbdbabd626fa5b91c418d84cd6228c9ca94a2525
+translationtype: HT
 ---
-
-
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
@@ -235,7 +230,7 @@ Azure 北米リージョン以外での認証の場合は、レジストリを�
 
 メッセージが表示されたら、「[前提条件 3: ユーザーの介入なしにファイルを保護または保護解除するには](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction)」で説明されているように、3 つの識別子を入力します。
 
-ファイルを保護するには、先に、Rights Management テンプレートを取得して使うものを確認し、それに対応する ID 番号の一覧を確認する必要があります。 出力から、テンプレート ID をコピーできます。
+ファイルを保護するには、Rights Management テンプレートをお使いのコンピューターにダウンロードして、使用するものとそれに対応する ID 番号を確認する必要があります。 出力から、テンプレート ID をコピーできます。
 
     Get-RMSTemplate
     
@@ -301,6 +296,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     ---------                             -------------
     C:\Test.docx                          C:\Test.docx
 
+Rights Management テンプレートが変更された場合は、もう一度 `Get-RMSTemplate -force` でダウンロードしてください。 
 
 ## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management サービス
 
@@ -430,4 +426,3 @@ Azure Information Protection クライアントのサポートに必要な詳細
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
