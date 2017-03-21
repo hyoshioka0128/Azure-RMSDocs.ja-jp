@@ -1,11 +1,11 @@
 ---
-title: "ADAL 認証用のアプリの構成 |Microsoft Docs"
+title: "ADAL 認証用のアプリの構成 - AIP"
 description: "Azure ADAL 基盤の認証を使用するように Azure Information Protection アプリを構成する手順"
 keywords: "認証, RMS, ADAL, Informatin Protection,"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 880f022e53aa6c12b26d2d64782521de88d29399
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>ADAL 認証用のアプリの構成
@@ -67,7 +67,7 @@ Microsoft Azure にサインアップした後:
 ![アプリの名前を指定する](../media/TellUsInput.png)
 
 - リダイレクト URI を追加し、[次へ] を選択します。
-  リダイレクト URI は、有効な URI で、ディレクトリに対して一意である必要があります。 たとえば、`com.mycompany.myapplication://authorize` のような URI を使用します。
+  リダイレクト URI は、有効な URI で、ディレクトリに対して一意である必要があります。 たとえば、`https://contoso.azurewebsites.net/.auth/login/done` のような URI を使用します。
 
 ![リダイレクト URI を追加する](../media/RedirectURI.png)
 

@@ -1,21 +1,21 @@
 ---
-title: "アプリケーションのデプロイ"
+title: "アプリケーションのデプロイ - AIP"
 description: "このトピックでは、アプリケーションのデプロイの概要について順を追って説明します。"
 keywords: "デプロイ, RMS, AIP"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: aaff9ff7cda961ab0d61115f84197e2c5c7ef8b0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a78520f3cdf316c7264cb0ca88460858b5a2bf07
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
@@ -96,14 +96,13 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 クライアントが存在する場合は、アプリケーションのインストールを続行します。
 
-## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>アプリケーションで Azure Information Protection/Rights Management サービスを有効にする
+## <a name="enabling-azure-information-protection-services-with-your-application"></a>アプリケーションで Azure Information Protection サービスを有効にする
 
 > [!NOTE]
 > 認証用に新しい ADAL モデルに移行した場合は、**SIA** をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
 > あるいは、**Windows 10 のアプリケーション認定を受ける**ことができます。 - Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は多要素認証を利用したり、コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールしたりできるようになります。
 
-
-エンドユーザーが Information Protection/Rights Management サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
+エンドユーザーが Information Protection/サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
 
 
 > [!IMPORTANT]
@@ -113,6 +112,8 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 -   Microsoft ダウンロード センターから [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/en-us/download/details.aspx?id=28177)をダウンロードします。
 -   権利保護に対応したアプリケーションのデプロイにこのサービスを選択する前提条件チェックが含まれていることを確認します。
 -   ご自身のテストおよびエンドユーザーによるオンライン サービスの使用に関する詳細については、TechNet トピック「[Rights Management の構成](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)」をご覧ください。
+
+このガイドを使用してアプリを構成する必要もあります - [App Service アプリケーションを構成して Azure Active Directory ログインを構成する方法](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)。
 
 アプリケーションによる Azure Rights Management サービスでの RMS の使用を有効にする方法の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」をご覧ください。
 

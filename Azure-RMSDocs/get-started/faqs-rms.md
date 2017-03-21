@@ -4,7 +4,7 @@ description: "Azure Information Protection のデータ保護サービス、Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8b1d8a3df125f4d1950e4e657c535f128c6d0b3a
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 0f399afe398f5e69cebf6df5564b2ceb7d84e607
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
@@ -47,7 +47,7 @@ HYOK の詳細についてや、制限事項の正しい理解や使用するタ
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Azure RMS と統合するサード パーティのソリューションに関する情報はどこで入手できますか?
 
-既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、またはそのソリューションを実装しており、リストは急増し続けています。 [Enterprise Mobility and Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services)に役立つ情報が掲載されています。また Twitter の [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) からも最新の情報が入手できます。 なお、具体的なご質問は、Information Protection チーム (askipteam@microsoft.com) までメールでメッセージをお送りください。
+既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、またはそのソリューションを実装しており、リストは急増し続けています。 [RMS 対応ソリューション](requirements-applications.md#rms-enlightened-solutions)の一覧に役立つ情報が掲載されています。また Twitter の [Dan Plastina@TheRMSGuy](https://twitter.com/TheRMSGuy) からも最新の情報が入手できます。 なお、具体的なご質問は、Information Protection チーム (askipteam@microsoft.com) までメールでメッセージをお送りください。
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>RMS コネクタには管理パックまたは同様の監視メカニズムがありますか?
 
@@ -101,8 +101,12 @@ Azure Rights Management サービスは、常にユーザー認証に Azure Acti
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Azure RMS で Azure AD の動的なグループを使用できますか。
 Azure AD Premium の機能では、[属性ベースのルール](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)を指定することによってグループの動的メンバーシップを構成できます。 Azure AD でセキュリティ グループを作成する場合、このグループの種類では動的メンバーシップがサポートされますが、電子メール アドレスはサポートされないため、Azure Rights Management サービスで使用することはできません。 ただし、動的メンバーシップをサポートし、メールが有効な新しいグループの種類を Azure AD で作成できるようになりました。 Azure クラシック ポータルで新しいグループを追加する場合は、**グループの種類**として **Office 365 の "プレビュー"** を選択できます。 このグループではメールが有効なため、Azure Rights Management 保護で使用できます。
 
+## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>保護されたメールを Gmail または Hotmail のアカウントに送信するにはどうしますか。
+
+リファレンスまたはデモで Azure Information Protectin が Gmail アカウントまたは Hotmail アカウントに保護されたメールを送信するのを見たことがあるかもしれません。 この機能はまだプライベート プレビュー段階なので、公開プレビューとしてリリースされるまで、このドキュメントで詳細な情報は提供されません。
+
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Azure RMS でサポートされているデバイスとファイルの種類を教えてください。
-Azure Rights Management サービスをサポートするデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」をご覧ください。 サポートされるデバイスによっては一部の Rights Management 機能がサポートされていないため、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表も確認してください。
+Azure Rights Management サービスをサポートするデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」をご覧ください。 サポートされているデバイスによっては一部の Rights Management 機能がサポートされていないため、[RMS 対応のアプリケーション](../get-started/requirements-applications.md#rms-enlightened-applications)の表も確認してください。
 
 Azure Rights Management サービスはあらゆる種類のファイルに対応しています。 テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、他のいくつかのアプリケーションのファイルの種類については、Azure Rights Management は暗号化と権限の適用 (アクセス許可) の両方を含むネイティブな保護を提供します。 他のすべてのアプリケーションとファイルの種類については、ファイルのカプセル化と、ユーザーにファイルを開く権限があるかどうかを確認する認証という一般的な保護機能が提供されます。
 

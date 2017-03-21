@@ -1,21 +1,21 @@
 ---
-title: "Azure AD でアプリの登録と RMS の有効化を行う方法 | Azure RMS"
+title: "Azure AD でアプリを登録する方法 - AIP"
 description: "RMS 対応アプリケーションのユーザー認証の基本について説明します。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 0c06a498c62b61c106572e049f8ef40fdb07485f
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a98b4eb3bd7705faf268a544f4efa7ba41712816
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
@@ -28,8 +28,8 @@ translationtype: HT
 ## <a name="registration-via-azure-portal"></a>Azure ポータルでの登録
 まず、Azure ポータルでアプリの登録を構成するためのガイド「[Configure Azure RMS for ADAL authentication (Azure RMS の ADAL 認証を構成する)](adal-auth.md)」に従ってください。 後で使用するために、このプロセスでの**クライアント ID** と**リダイレクト URI** をコピーして保存しておいてください。
 
-## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Rights Management License Agreement (RMLA) に同意する
-アプリケーションを展開する前に、Microsoft Rights Management チームとの RMLA に同意する必要があります。 詳細については、「[運用環境にデプロイする](deploying-your-application.md)」トピックの「運用環境の使用許諾契約書の要求」セクションを参照してください。
+## <a name="complete-your-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を完了する
+アプリケーションを展開する前に、Microsoft Information Protection チームとの IPIA を完了する必要があります。 完全な詳細については、トピック「[運用環境にデプロイする](deploying-your-application.md)」の最初のセクションを参照してください。
 
 ## <a name="implement-user-authentication-for-your-app"></a>アプリのユーザー認証の実装
 各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。

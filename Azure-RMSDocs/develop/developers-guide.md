@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection 開発者ガイド | Microsoft Docs"
+title: "開発者ガイド - AIP"
 description: "開発者は Azure Information Protection を使用して、すべての種類のファイルを保護および管理することができます。"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea8a0f60997ca5d569f10969abfb9b010f0918da
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fbd76e377c8b11b8e64187685144010dce9bbb25
+ms.sourcegitcommit: ee432bdb6783bfe311a7ebbc9a5f20a7c2ae759c
 translationtype: HT
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
@@ -79,9 +79,9 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 - [方法: ドキュメント追跡の有効化と取り消し (サービス)](tracking-content.md)
 - [クライアントを展開する方法](../rms-client/client-deployment-notes.md)
+- [サービス アプリを別のテナントにデプロイする方法] (how-to-deploy-app.md)
 - [方法: RMS サーバーをインストールして構成する (サービス)](how-to-install-and-configure-an-rms-server.md)
 - [方法: ドキュメント追跡を使用する (ユーザー)](how-to-use-document-tracking.md)
-
 
 ### <a name="security-and-authentication"></a>セキュリティと認証
 

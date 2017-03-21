@@ -4,7 +4,7 @@ description: "Azure Rights Management サービスを使用する場合、テン
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e3f80781c9e998e3d7d0d515ed1b0b13b9656ab4
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: b1ff1345dd2b3cff8ccb5ff7b454e209403b1190
+ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
 translationtype: HT
 ---
 # <a name="refreshing-templates-for-users"></a>ユーザー用のテンプレートの更新
@@ -26,9 +26,12 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 |--------------------------|---------------------------------------------|
 |Exchange Online|テンプレートを更新するには、手動構成が必要です。<br /><br />構成手順については、以下の「[Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates)」セクションを参照してください。|
 |Office 365|自動更新 - 追加の手順は必要ありません。|
-|Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />このスケジュールより前に強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
-|Office 2010|ユーザーがログオンしたときに更新されます。<br /><br />強制的に更新するには、ログオフしてもう一度ログオンするようにユーザーに依頼します。 または、以下の「[Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
-RMS 共有アプリケーションを使用しているモバイル デバイスの場合、テンプレートは自動的にダウンロードされるので (必要な場合はさらに更新されます)、追加の構成は必要ありません。
+|Azure Information Protection クライアント|Azure Information Protection ポリシーがクライアントに更新されるたびに自動的に更新されます。<br /><br /> - Azure Information Protection バーをサポートしている Office アプリケーションが開いたとき。 <br /><br /> - ファイルまたはフォルダーを分類して保護するために右クリックしたとき。 <br /><br /> - ラベル付けおよび保護のために PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) を実行するとき。<br /><br /> - 24 時間ごと。<br /><br /> さらに、Azure Information Protection クライアントは Office と密接に統合されているため、Office 2016 または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection クライアントでも更新されます。|
+|Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />- Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />スケジュールに先立って強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
+|Office 2010|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。|
+|Office 2016 for Mac|自動更新 - 追加の手順は必要ありません。|
+|モバイル デバイス用 RMS 共有アプリ|自動更新 - 追加の手順は必要ありません。|
+
 
 ## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
 Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
@@ -146,38 +149,6 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
 3.  Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
-## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2010 のみ: 変更されたカスタム テンプレートを強制的に更新する方法
-Office 2010 を実行するコンピューター上でレジストリを編集することで、ユーザーがログオフしてもう一度ログオンするまで待たなくても、変更されたテンプレートがコンピューター上で更新されるように値を設定できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
-
-> [!WARNING]
-> レジストリ エディターを誤って使用すると、重大な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
-
-### <a name="to-change-the-update-frequency"></a>更新頻度を変更するには
-
-1.  レジストリ エディターを使用して、 **UpdateFrequency** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (日数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の表を使用します。
-
-    **レジストリ パス:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-    **種類:** REG_DWORD
-
-    **値:** UpdateFrequency
-
-2.  テンプレートを直ちに更新する場合は、次の手順に進みます。 それ以外の場合は、Office アプリケーションを再起動します。
-
-### <a name="to-force-an-immediate-refresh"></a>直ちに更新するには
-
-1.  レジストリ エディターを使用して、 **LastUpdatedTime** 値のデータを削除します。 たとえば、"**2015-04-20T15:52**" と表示されている場合は、この 2015-04-20T15:52 を削除して、何も表示されていない状態にします。 このレジストリ値データを削除する際にレジストリ パスを検索するには、次の表を使用します。
-
-    **レジストリ パス:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-    **種類:** REG_SZ
-
-    **値:** lastUpdatedTime
-
-
-2.  **%localappdata%\Microsoft\MSIPC\Templates** フォルダーとその中に含まれているすべてのファイルを削除します。
-
-3.  Office アプリケーションを再起動します。
 
 ## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)

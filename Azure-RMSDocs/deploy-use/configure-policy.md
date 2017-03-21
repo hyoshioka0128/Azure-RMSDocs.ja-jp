@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 64a3daa57d71087d11098a1e71465f17b6b8f3b7
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: faf296a92abb6636bd516e41a6e44d4580984146
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
@@ -48,7 +48,14 @@ Azure Information Protection には[既定のポリシー](configure-policy-defa
 
 目的の変更が終わったら、**[公開]** をクリックします。 
 
-Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する Azure Information Protection ポリシーに変更をダウンロードします。
+Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する最新の Azure Information Protection ポリシーに変更をダウンロードします。 ポリシーをクライアントに更新するトリガーには、他に次のものがあります。
+
+- ファイルまたはフォルダーを分類して保護するための右クリック。
+
+- ラベル付けおよび保護のための PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) の実行。
+
+- 24 時間ごと。
+
 
 ## <a name="configuring-your-organizations-policy"></a>組織のポリシーの構成
 
