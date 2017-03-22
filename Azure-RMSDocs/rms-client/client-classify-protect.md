@@ -125,7 +125,7 @@ Azure Information Protection バーを使用して、構成されているラベ
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスにラベルがない](../media/info-protect-dialog-labels-protection-only.png)
     
-3. 選択したラベルに対し管理者から指定されている保護設定を使用するのではなく、独自の保護設定を指定する場合は、**[Protect with custom permissions] (カスタムのアクセス許可による保護)** を選択します。
+3. 選択したラベルに対し管理者から指定されている保護設定を使用するのではなく、独自の保護設定を指定する場合は、**[Protect with custom permissions]\(カスタムのアクセス許可による保護)** を選択します。
     
     指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わります。  
 
