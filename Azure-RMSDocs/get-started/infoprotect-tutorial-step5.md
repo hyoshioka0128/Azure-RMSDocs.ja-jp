@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bf04b9d7c2de6fbdfe2a5c19b82343088ff8f89
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
@@ -57,7 +57,7 @@ translationtype: HT
 
     **このファイルは Microsoft Azure Information Protection で保護されています。初めてご使用になる場合は、https://aka.ms/rms-signup で手順を確認してください。** 
 
-    ![Azure Information Protection クイック スタート チュートリアル手順 5 - 電子メールによる保護ドキュメントの共有](../media/share-protected-email.png)
+    ![Azure Information Protection クイック スタート チュートリアル手順 5 - 電子メールによる保護ドキュメントの共有](../media/share-protected-emailv2.png)
 
     **[送信]** をクリックします。
 
@@ -91,7 +91,7 @@ translationtype: HT
 
 2.  **[ホーム]** タブで、**[保護]** > **[追跡と取り消し]** の順にクリックします。
 
-    ![使用の追跡オプション](../media/track-usage-callout.png)
+    ![使用の追跡オプション](../media/track-usage-calloutv2.png)
 
     これにより、ドキュメント追跡サイトに移動します。
 
