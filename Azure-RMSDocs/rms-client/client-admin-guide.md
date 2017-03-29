@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3cc1cf7f35c8cf66423c00332691c2291a8b6106
-ms.sourcegitcommit: 02e860196efca306ef9d1e61c1d89c4d8593c912
+ms.openlocfilehash: ffa336d352c60f36269cfb23236133bf1ca50d9f
+ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
@@ -35,7 +35,9 @@ Azure Information Protection クライアントには次のものが含まれま
 
 - Azure Rights Management (Azure RMS) または Active Directory Rights Management サービス (AD RMS) と通信する Rights Management クライアント。
 
-Azure Information Protection クライアントは、Azure サービス (Azure Information Protection とそのデータ保護サービス、Azure Rights Management) と併用すると最適です。 ただし、いくつか制限はありますが、オンプレミス バージョンの Rights Management である AD RMS でも使用できます。 Azure Information Protection と AD RMS でサポートされている機能の包括的な比較については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。 AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
+Azure Information Protection クライアントは、Azure サービス (Azure Information Protection とそのデータ保護サービス、Azure Rights Management) と併用すると最適です。 ただし、いくつか制限はありますが、オンプレミス バージョンの Rights Management である AD RMS でも使用できます。 Azure Information Protection と AD RMS でサポートされている機能の包括的な比較については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。 
+
+AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
 
 **このドキュメントでわからないことがある場合は**、 [Azure Information Protection についての Yammer サイト](https://www.yammer.com/AskIPTeam)をご覧ください。 
 
@@ -62,13 +64,13 @@ Azure Information Protection クライアントは、Azure サービス (Azure I
 
 次の例では、Office アプリケーションの Azure Information Protection クライアント アドオン、組織に対する分類ラベル、リボンの新しい **[保護]** ボタンが示されています。
 
-![Azure Information Protection バーと既定のポリシー](../media/info-protect-bar-default.png)
+![Azure Information Protection バーと既定のポリシー](../media/word2016-calloutsv2.png)
 
 ## <a name="how-to-install-the-azure-information-protection-client-for-users"></a>ユーザー向けに Azure Information Protection クライアントをインストールする方法
 
 クライアントをインストールする前に、「[Azure Information Protection の要件](../get-started/requirements-azure-rms.md)」で Azure Information Protection クライアントに必要なオペレーティング システムのバージョンとアプリケーションがあることを確認してください。 
 
-さらに
+Azure Information Protection クライアントの追加の前提条件:
 
 - Azure Information Protection クライアントを完全にインストールするには、既定では Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。 推奨はされていませんが、カスタム インストール パラメーターを使用してこの要件を省略できます。
 
@@ -172,7 +174,7 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 ### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
-既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../deploy-use/configure-policy-settings.md)の&1; つとしてカスタム URL の構成を行えます。
+既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../deploy-use/configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
 
 **[フィードバックの送信]** リンクを使って、Information Protection チームに提案または要求を送信します。 テクニカル サポートの場合はこのオプションを使わず、代わりに「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」をご覧ください。 
 

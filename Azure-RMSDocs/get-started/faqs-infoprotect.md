@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 854de3beea1f4b6e05461dee58cec6ca91f79034
-ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
+ms.openlocfilehash: 6af0a81b31fb0a2e5437428dc8373dd997b18406
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
@@ -28,7 +28,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 追加の分類機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
 
-- ラベル名とツール ヒントは&1; 言語でのみサポートされます。
+- ラベル名とツール ヒントは 1 言語でのみサポートされます。
 
 - 分類とラベル付けには集中的なログはありません。
 
@@ -54,9 +54,9 @@ Azure Information Protection ポリシーを構成するには、Azure Active Di
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
-ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに&1; つのラベルのみです。したがって、多くの場合、適用できる分類は&1; つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に&2; つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで&2; つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
+ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
 
-たとえば、**Secret** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Secret** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか&1; つのみです。 したがって、表示されるラベル セットは **Secret \ Legal** のようになります。 そのファイルのメタデータには、**Secret** のカスタム テキスト プロパティーが&1; つ、**Legal** のカスタム テキスト プロパティーが&1; つ、さらに両方の値 (**Secret Legal**) を含むものが含まれます。 
+たとえば、**Confidential** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Confidential** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか 1 つのみです。 したがって、表示されるラベル セットは **Confidential \ Legal** のようになります。 そのファイルのメタデータには、**Confidential** のカスタム テキスト プロパティーが 1 つ、**Legal** のカスタム テキスト プロパティーが 1 つ、さらに両方の値 (**Confidential Legal**) を含むものが含まれます。 
 
 サブラベルを使用する場合は、プライマリ ラベルでビジュアル マーキング、保護、および条件を構成しないでください。 サブレベルを使用する場合は、サブラベルのみにこれらの設定を構成してください。 プライマリ ラベルとそのサブラベルでこれらの設定を構成した場合は、サブラベルの設定が優先されます。
 
@@ -66,7 +66,7 @@ Azure Information Protection ポリシーを構成するには、Azure Active Di
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 
-Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら&2; つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
+Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら 2 つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
 
 Outlook Web アプリは Azure Information Protection の分類および保護をネイティブでサポートしていませんが、この同じ手法を使って、デスクトップの Outlook クライアントだけでなく、この電子メール クライアントでもラベルを使用することができます。
 

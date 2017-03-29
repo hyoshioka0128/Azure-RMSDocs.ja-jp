@@ -4,7 +4,7 @@ description: "Rights Management (RMS) クライアントと RMS 保護ツール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ff8e38385e8e28991ee1da6c69b0ded244f38177
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 5e1a193ab54e5d0d85e4f7a22f53ac0b9b39036c
+ms.sourcegitcommit: 047e6dfe8f44fd13585e902df5ea871b5d0adccb
 translationtype: HT
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
->*適用対象: Azure Information Protection、Windows Server 2012、Windows Server 2012 R2*
+>*適用対象: Azure Information Protection、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
 
 この記事では、Azure Information Protection クライアントと PowerShell を使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
@@ -36,7 +36,7 @@ translationtype: HT
 
 -   ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
 
-    -   ファイル サービス ロールのロール サービスの&1; つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
+    -   ファイル サービス ロールのロール サービスの 1 つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
 
     -   Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
 
@@ -233,7 +233,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   [**実行時期**]:希望のスケジュールを構成します。
 
-            スクリプトが完了するのに十分な時間を指定します。 このソリューションはフォルダー内のすべてのファイルを保護しますが、スクリプトは、毎回、ファイルごとに&1; 回実行します。 これは RMS 保護ツールがサポートするような同時にすべてのファイルを保護する方法より時間がかかりますが、FCI のファイル単位の構成の方がいっそう強力です。 たとえば、[Source File Owner Email] 変数を使用すると保護されるファイルの所有者が異なっていてもかまいません (元の所有者の維持)。また、フォルダー内のすべてのファイルではなく一部のファイルだけを選択して保護するように後で構成を変更する場合は、このファイル単位のアクションが必要になります。
+            スクリプトが完了するのに十分な時間を指定します。 このソリューションはフォルダー内のすべてのファイルを保護しますが、スクリプトは、毎回、ファイルごとに 1 回実行します。 これは RMS 保護ツールがサポートするような同時にすべてのファイルを保護する方法より時間がかかりますが、FCI のファイル単位の構成の方がいっそう強力です。 たとえば、[Source File Owner Email] 変数を使用すると保護されるファイルの所有者が異なっていてもかまいません (元の所有者の維持)。また、フォルダー内のすべてのファイルではなく一部のファイルだけを選択して保護するように後で構成を変更する場合は、このファイル単位のアクションが必要になります。
 
         -   [**新しいファイルに対して連続実行する**]:このチェック ボックスをオンにします。
 
