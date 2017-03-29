@@ -570,7 +570,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
         たとえば、contoso テナントのユーザーのユーザー名が "rsimone" である場合は、**https://contoso-my.sharepoint.com/personal/rsimone_contoso_com** と指定します。
 
-    4.  スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の ** ドキュメント ** の値は変更しないでください。
+    4.  スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の **ドキュメント** の値は変更しないでください。
 
     5.  `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 
