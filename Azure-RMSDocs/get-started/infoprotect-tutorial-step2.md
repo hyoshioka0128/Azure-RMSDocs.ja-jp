@@ -4,14 +4,14 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 7db581d07698edf50fda8379d622e35414ad3671
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
@@ -29,9 +29,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     > [!TIP] 
     > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
 
-3.  Azure Information Protection ブレードで、**[グローバル]** をクリックして **[Policy: Global (ポリシー: グローバル)]** ブレードを確認します。このブレードには、テナント用に自動的に作成される既定の Information Protection ポリシーが表示されます。
-    
-    **[Policy: Global (ポリシー: グローバル)]** ブレードで、次のことを確認します。
+3.  **[Policy: Global]** (ポリシー: グローバル) ブレードを確認します。このブレードには、テナントに自動で作成される既定の Information Protection ポリシーが自動的に開き、表示されます。
     
     - 分類用のラベル: **[Personal (個人)]**、**[Public (公開)]**、**[General (全般)]**、**[Confidential (社外秘)]**、**[Highly Confidential (非常に機密性の高い社外秘)]**。 最後の 2 つのラベルを展開すると、サブラベル **[すべての従業員]** と **[すべてのユーザー (未保護)]** が表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
     

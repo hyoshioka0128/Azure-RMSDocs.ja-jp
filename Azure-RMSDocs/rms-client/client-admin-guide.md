@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ffa336d352c60f36269cfb23236133bf1ca50d9f
-ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
+ms.openlocfilehash: 63843acfe9f7b4ded77ccbdcaaab8cb98598dd9f
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
@@ -190,20 +190,64 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 - **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC** のレジストリ キーと設定は削除されます。 このレジストリ キーの設定を構成する場合 (たとえば、AD RMS から移行しても、社内ネットワークにサービス接続ポイントがあるため、Azure Information Protection テナントへのリダイレクト設定を構成する場合)、クライアントのリセット後にレジストリ設定を構成し直す必要があります。
 
-- クライアントのリセット後に、ユーザー環境を再初期化する必要があります ("ブートストラップ" とも呼ばれます)。再初期化によって、クライアントの証明書と最新のテンプレートがダウンロードされます。 再初期化を実行するには、すべての Office インスタンスを終了し、Office アプリケーションを再起動します。 この操作で、最新の Azure Information Protection ポリシーをダウンロードしたことも確認されます。 この確認が完了するまで、診断テストは再実行しないでください。
+- クライアントをリセットした後は、クライアントの証明書と最新のテンプレートのダウンロードを行い、ユーザー環境を再初期化する必要があります。 再初期化を実行するには、すべての Office インスタンスを終了し、Office アプリケーションを再起動します。 この操作で、最新の Azure Information Protection ポリシーをダウンロードしたことも確認されます。 この確認が完了するまで、診断テストは再実行しないでください。
 
 
 ### <a name="client-status-section"></a>**クライアント ステータス** セクション
 
 **接続**の値を使って、表示されているユーザー名が Azure Information Protection 認証に使用されるアカウントを識別するか確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントと一致し、Azure Information Protection 用に構成されたテナントに属している必要があります。
 
-表示されているものとは別のユーザーでサインインする必要がある場合は、[別のユーザーとしてサインインする方法](../get-started/faqs-infoprotect.md#how-do-i-sign-in-as-a-different-user)をご覧ください。
+表示されているユーザーとは別のユーザーでサインインする必要がある場合は、このページの[別のユーザーでのサイン イン](#sign-in-as-a-different-user)セクションをご覧ください。
 
 **前回の接続**はに、クライアントが Azure Information Protection サービスに対して最後に接続した日時が表示され、**Information Protection ポリシーがインストールされた日時**の日付と時間と共に使用することで、Azure Information Protection ポリシーが最後にインストールまたは更新された日時を確認できます。 クライアントはサービスへの接続時に、現在のポリシーからの変更を見つけると最新のポリシーを自動的にダウンロードし、24 時間ごとに確認を行います。 表示された時刻以降にポリシーを変更している場合は、Office アプリケーションを閉じて再度開きます。
 
 **このクライアントには Office Professional Plus 用のライセンスがありません**というメッセージが表示された場合、Azure Information Protection クライアントはインストールされている Office のエディションが Rights Management による保護の適用をサポートしていないことを検出しています。 この検出が行われると、保護を適用するラベルは Azure Information Protection バーには表示されません。
 
 **[バージョン]** 情報を使用して、どちらのバージョンのクライアントがインストールされているか確認します。 **新機能**のリンクをクリックし、クライアントの[バージョン リリース履歴](client-version-release-history.md)を読むことで、使用しているクライアントが最新のリリースバージョンかどうかや、各バージョンの修正と新しい機能を確認できます。
+
+## <a name="custom-configurations"></a>カスタム構成
+
+特定のシナリオまたはユーザーのサブセットで必要となる可能性のある詳細構成には、次の情報を使用します。 
+
+### <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
+
+通常、運用環境では、Azure Information Protection クライアントを使用しているときに別のユーザーとしてサインインする必要はありません。 ただし、複数のテナントがある場合は管理者としてこのようなサインインが必要になることがあります。 たとえば、組織が使用する Office 365 や Azure テナントに加えてテスト テナントがある場合などです。
+
+現在サインインしているアカウントを確認するには、**[Microsoft Azure Information Protection]** ダイアログ ボックスを使用します。Office アプリケーションを開き、**[ホーム]** タブの **[保護]** グループで、**[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 アカウント名が **[クライアント ステータス]** セクションに表示されます。
+
+特に、管理者アカウントを使用している場合は、表示されるサインイン アカウントのドメイン名を必ず確認してください。 たとえば、2 つのテナントに "admin" アカウントがある場合、アカウント名は正しくてもドメインを間違えてサインインするという失敗が起こりやすくなります。 このような状況では、Azure Information Protection ポリシーのダウンロードが失敗したり、目的のラベルや機能が表示されなかったりする可能性があります。
+
+別のユーザーでサイン インする方法は以下の通りです。
+
+1. レジストリ エディターを使って **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** の値 (およびその値に関連する値) を削除します。
+
+2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
+
+補足:
+
+- シングル サインオンを使用する場合は、レジストリを編集した後に Windows からサインアウトし、別のユーザー アカウントでサインインする必要があります。 Azure Information Protection クライアントは、現在サインインしているユーザーアカウントを使用して、自動的に認証を行います。
+
+- Azure Rights Management サービスの環境を再初期化 (ブートストラップ) するには、[RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)の **[リセット]** オプションを使用します。
+
+- 現在ダウンロードされている Azure Information Protection ポリシーを削除したい場合は、**%localappdata%\Microsoft\MSIP** フォルダーから **Policy.msip** ファイルを削除します。
+
+### <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプ ローラーの [Hide the Classify and Protect] (分類の非表示と保護) メニュー オプション
+
+Azure Information Protection クライアントのバージョンが 1.3.0.0 以降である場合は、レジストリを編集することで、この詳細構成を構成することができます。 
+
+次の DWORD 値の名前を (任意の値と共に) 作成します。
+
+**HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
+
+### <a name="support-for-disconnected-computers"></a>切断されたコンピューターのサポート
+
+既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピュータをお持ちの場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 
+
+次の値の名前を検索し、値を **0** に設定します。
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+クライアントの **%localappdata%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からポリシーをエクスポートしたり、クライアントのコンピューターにエクスポートされたファイルをコピーできます。 このメソッドを使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Azure Information Protection クライアントをアンインストールするには
 

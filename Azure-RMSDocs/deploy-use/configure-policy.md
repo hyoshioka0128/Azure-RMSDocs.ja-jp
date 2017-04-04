@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b946dff4782d1b5571aa0438d1681030f0de092f
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: ec57bae71b11b6505ccb94fcdf692f215862191d
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
@@ -28,7 +28,7 @@ Azure Information Protection ポリシーを構成するには:
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    **[Azure Information Protection]** ブレードが表示されます。ここから **[グローバル]** ポリシーを開いてすべてのユーザーを取得できます。 また、必要に応じて、スコープ ポリシーを追加し、編集することもできます。 **[グローバル]** Azure Information Protection ポリシーには、構成可能な次の要素があります。
+    **[Azure Information Protection]** ブレードが読み込まれると、**[Policy: Global]** (ポリシー: グローバル) ブレードが自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集できます。 また、必要に応じて、スコープ ポリシーを追加し、編集することもできます。 Azure Information Protection ポリシーには、構成可能な次の要素があります。
 
     - 管理者とユーザーがドキュメントと電子メールを分類するために使用できるラベル。
 

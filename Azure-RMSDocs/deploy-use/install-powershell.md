@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89ba9218821b24bec09471915b8b9387f305463c
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 5dae84eea9e67be75530d69b6124b97c7c29f8a3
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="installing-windows-powershell-for-azure-rights-management"></a>Azure Rights Management 用 Windows PowerShell をインストールする
@@ -30,7 +30,7 @@ translationtype: HT
 |要件|詳細情報|
 |---------------|--------------------|
 |[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 管理モジュールをサポートする Windows のバージョン|「 **Azure Rights Management Administration Tool のダウンロード ページ** 」の [ [システム要件](http://go.microsoft.com/fwlink/?LinkId=257721)] セクションで、サポートされるオペレーティング システムの一覧を確認します。|
-|Windows PowerShell の最小バージョン:2.0|[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 管理モジュールのサポートは、Windows PowerShell 2.0 で導入されました。<br /><br />既定では、ほとんどの Windows オペレーティング システムと共にバージョン 2.0 以上の Windows PowerShell がインストールされます。 Windows PowerShell 2.0 をインストールする必要がある場合は、「 [Windows PowerShell 2.0 のインストール](http://msdn.microsoft.com/library/ff637750.aspx)」を参照してください。<br /><br />ヒント: PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。|
+|Windows PowerShell の最小バージョン:2.0<br /><br /> |既定では、ほとんどの Windows オペレーティング システムと共にバージョン 2.0 以上の Windows PowerShell がインストールされます。 このサポートされる最低バージョンをインストールする必要がある場合は、「[Windows PowerShell 2.0 のインストール](https://msdn.microsoft.com/library/ff637750.aspx)」を参照して下さい。<br /><br />ヒント: PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> この最小のバージョンがある場合は、Rights Management 管理モジュールのコマンドレットを使用する前に `Import-Module AADRM` を実行して、PowerShell セッションにモジュールを手動で読み込む必要があります。 Windows PowerShell v3 以降がある場合、モジュールは自動的に読み込まれ、この追加コマンドの入力は必要ありません。|
 |Microsoft .NET Framework の最小バージョン: 4.5<br /><br />注: 最近のオペレーティング システムには、このバージョンの Microsoft .NET Framework が付属しています。このため、手動でインストールする必要があるのは、クライアントのオペレーティング システムが Windows 8.0 よりも前のバージョンの場合か、サーバーのオペレーティング システムが Windows Server 2012 よりも前のバージョンの場合に限ります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 管理モジュールで使用されるクラスの一部で必要になります。|
 
 > [!NOTE]
@@ -50,25 +50,39 @@ translationtype: HT
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 用の Windows PowerShell がインストールされます。
 
 ## <a name="next-steps"></a>次のステップ
-使用可能なコマンドレットを確認するには、[ **管理者として実行** ] オプションを使用して、Windows PowerShell を起動し、次のように入力します。
+Windows PowerShell セッションを開始し、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。
 
 ```
-Get-Command -Module aadrm
+(Get-Module AADRM –ListAvailable).Version
 ```
-特定のコマンドレットのヘルプを表示するには、 `the Get-Help <cmdlet_name>` コマンドを使用します。
+
+注: このコマンドが失敗した場合は、最初に **Import-module AADRM** を実行します。
+
+使用可能なコマンドレットを確認するには、次のコマンドを入力します。
+
+```
+Get-Command -Module AADRM
+```
+
+`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 たとえば、
+
+```
+Get-Help Connect-AadrmService -online
+```
+
 
 詳細情報:
 
--   使用可能なすべてのコマンドレットの一覧: [Azure Rights Management コマンドレット](https://msdn.microsoft.com/library/windowsazure/dn629398.aspx)
+-   使用可能なすべてのコマンドレットの一覧: [AADRM Module](/powershell/aadrm/vlatest/rightsmanagement)
 
--   Windows PowerShell をサポートする主要な構成シナリオの一覧: [Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)
+-   PowerShell をサポートする主要な構成シナリオの一覧: [Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスを構成するコマンドを実行するには、[Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) コマンドレットを使用して前もってサービスに接続しておく必要があります。 目的の構成コマンドの実行が完了したら、 [Disconnect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629416.aspx) コマンドレットを使用してサービスとの接続を切断します。
+[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスを構成するコマンドを実行するには、[Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) コマンドレットを使用して前もってサービスに接続しておく必要があります。 
+
+構成コマンドの実行が完了したら、ベスト プラクティスとしては、[Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) コマンドレットを使用してサービスとの接続を切断します。 切断しない場合は、非アクティブ状態の後に自動的に切断されます。 この自動切断の挙動によって、PowerShell セッションで再接続が必要になる場合があります。 
 
 > [!NOTE]
-> Azure Rights Management サービスがまだアクティブ化されていない場合は、サービスに接続した後で、[Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx) コマンドレットを使用してアクティブ化することができます。
+> Azure Rights Management サービスがまだアクティブ化されていない場合は、サービスに接続した後で、[Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) コマンドレットを使用してアクティブ化することができます。
 
-## <a name="see-also"></a>関連項目
-[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

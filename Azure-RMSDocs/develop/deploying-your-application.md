@@ -14,8 +14,8 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a78520f3cdf316c7264cb0ca88460858b5a2bf07
-ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+ms.openlocfilehash: 67ec662fb54ab9fdcd06bebd01df1a228afe5fb1
+ms.sourcegitcommit: 164c9ac31beb4811bbcd4527613a5d3b57b8ac6c
 translationtype: HT
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
@@ -79,7 +79,7 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 ### <a name="creating-your-deployment-package"></a>デプロイ パッケージの作成
 
-RMS クライアント インストーラー パッケージは、お好みのインストール テクノロジを使用してアプリケーションまたはソリューションにバンドルすることをお勧めします。 RMS クライアントは自由に再配布でき、他のアプリケーションやソリューションにバンドルできます。
+RMS クライアント インストーラー パッケージは、お好みのインストール テクノロジを使用してアプリケーションまたはソリューションにバンドルすることをお勧めします。 RMS クライアントは自由に再配布が可能で、他のアプリケーションやソリューションにバンドルできます。
 
 RMS クライアント 2.1 のインストーラーを起動して対話形式で RMS クライアント 2.1 をインストールすることも、サイレント モードでインストールすることもできます。 統合手順は次のとおりです。
 
