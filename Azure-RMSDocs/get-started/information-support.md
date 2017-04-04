@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5566f7d2c3ac802f2d8078241be3057d2cb2529
-ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
+ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
@@ -49,7 +49,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 その他のお客様は、Azure Information Protection の入手方法に応じて、以下のサポート チャネルをご利用ください。
 
-- **Azure Information Protection Premium** (スタンドアロン): [Azure Portal でサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 このオプションを使用するには、Azure サブスクリプションと Azure サポート プランが必要です。 詳細については、「[お客様向けの Azure サポート](https://azure.microsoft.com/support/plans/)」を参照してください。 
+- **Azure Information Protection Premium** (スタンドアロン): [Azure Portal でサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 画面が表示されたら **[基本]** ブレードで、**[問題の種類]** は **[テクニカル]** オプションを、**[サブスクリプション]** は **[テクニカル サポートを含むサブスクリプション]** を選択します。
 
 - **Azure Information Protection と Office 365 サブスクリプション**: 「[一般法人向け Office 365 のサポートへのお問い合わせ - 管理者向けヘルプ](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照して、電話番号と、Office 365 管理ポータルによるサポートへの問い合わせ方法をご確認ください。 
 
@@ -76,6 +76,8 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 - エンドユーザー、ヘルプ デスク、および Azure Information Protection を使用するサービスとアプリケーションを構成する管理者をサポートするための情報については、「[ユーザーにファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」を参照してください。
 
 - オンプレミスのサーバー用に Rights Management コネクタをデプロイした場合は、[監視](../deploy-use/monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
+
+- Windows 用の Azure Information Protection クライアントについては、管理者ガイドの「[追加のチェックとトラブルシューティング](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting)」セクションをご覧ください。
 
 - 自動チェック、自動修復、およびトレースについては、[RMS アナライザー ツール](http://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして実行してください。 このツールの詳細については、ダウンロード ページの **[詳細]** と **[インストール手順]** を参照してください。 
 
