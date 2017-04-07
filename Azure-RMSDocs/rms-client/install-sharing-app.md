@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 9c954f750c6f49d3db1bf6383efa2805f291682c
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 6559191b86ac8b2f0ceb8c6998f02aa8cd0f2735
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションをダウンロードしてインストールする
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
@@ -69,4 +65,3 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

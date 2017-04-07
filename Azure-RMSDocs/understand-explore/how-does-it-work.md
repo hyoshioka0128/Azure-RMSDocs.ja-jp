@@ -4,7 +4,7 @@ description: "Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3140f678c29771fc3328e312bc7e55d309554e66
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 1dcdb7017be2e2bdfbefcfaa348be977ed67f8c0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -48,23 +43,32 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 |暗号化コントロール|Azure RMS での使用|
 |-|-|
 |アルゴリズム:AES<br /><br />キーの長さ: 128 ビットと 256 ビット [[1]](#footnote-1)|ドキュメントの保護|
-|アルゴリズム:RSA<br /><br />キーの長さ:2048 ビット|キーの保護|
+|アルゴリズム:RSA<br /><br />キーの長さ: 2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
 
 ###### <a name="footnote-1"></a>脚注 1: 
 
 ファイルの拡張子が .ppdf のとき、またはファイルが保護されたテキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のときは、汎用的な保護およびネイティブ保護のために Azure Information Protection クライアントと Rights Management 共有アプリケーションは&256; ビットを使用します。
 
-暗号化キーの格納とセキュリティ保護のしくみ
+###### <a name="footnote-2"></a>脚注 2:
 
-- Azure RMS は、Azure RMS によって保護されているドキュメントまたは電子メールごとに、1 つの AES キー (コンテンツ キー) を作成します。このキーはドキュメントに埋め込まれ、ドキュメントの各エディションを通じて保持されます。 
+2048 ビットは、Azure Rights Management サービスがアクティブ化されているときのキーの長さです。 1024 ビットは、省略可能な次のシナリオでサポートされています。
 
-- コンテンツ キーは、組織の RSA キー (Azure Information Protection テナント キー) によってドキュメントのポリシーの一部として保護されます。このポリシーも、ドキュメントの作成者によって署名されます。 このテナント キーは、Azure RMS によって組織のために保護されているすべてのドキュメントおよび電子メールで共通です。このキーは、ユーザー管理のテナント キー (BYOK (Bring Your Own Key) と呼ばれます) を組織が使用している場合、Azure Information Protection 管理者だけが変更できます。 
+- AD RMS クラスターが暗号化モード 1 で実行され、暗号化モード 2 にアップグレードできない場合の、オンプレミスからの移行中。
 
-    このテナント キーは、Microsoft のオンライン サービスによって、高度に制御された環境で、厳しい監視の下に保護されています。 ユーザー管理のテナント キー (BYOK) を使用すると、各 Azure リージョンでハイエンド ハードウェア セキュリティ モジュール (HSM) のアレイが使用され、このセキュリティが強化されます。どのような状況でも、キーが抽出、エクスポート、または共有されることはありません。 テナント キーおよび BYOK の詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
+- 移行前にオンプレミスで作成された、アーカイブされたキー。これにより、AD RMS で保護されたコンテンツが、Azure Rights Management への移行後も開いた状態を続行できます。
 
-- Windows デバイスに送信されるライセンスと証明書は、クライアントのデバイス秘密キーによって保護されます。このキーは、デバイスのユーザーが初めて Azure RMS を使用したときに作成されます。 一方、この秘密キーは、クライアント上の DPAPI によって保護されます。DPAPI は、ユーザーのパスワードから派生したキーを使用して、これらのシークレットを保護します。 モバイル デバイスでは、キーは&1; 回しか使われず、クライアントに格納されないため、これらのキーをデバイス上で保護する必要はありません。 
+- お客様が、Azure Key Vault を使用して独自キーの使用 (BYOK) を選択した場合。 最小キー サイズは 2048 ビットが推奨ですが、必須ではありません。
 
+### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Azure RMS 暗号化キーの格納とセキュリティ保護のしくみ
+
+Azure RMS は、Azure RMS によって保護されているドキュメントまたは電子メールごとに、1 つの AES キー (コンテンツ キー) を作成します。このキーはドキュメントに埋め込まれ、ドキュメントの各エディションを通じて保持されます。 
+
+コンテンツ キーは、組織の RSA キー (Azure Information Protection テナント キー) によってドキュメントのポリシーの一部として保護されます。このポリシーも、ドキュメントの作成者によって署名されます。 このテナント キーは、Azure Rights Management サービスによって組織のために保護されているすべてのドキュメントおよび電子メールで共通です。このキーは、ユーザー管理のテナント キー ("Bring Your Own Key" または BYOK と呼ばれます) を組織が使用している場合、Azure Information Protection 管理者にしか変更できません。 
+
+このテナント キーは、Microsoft のオンライン サービスによって、高度に制御された環境で、厳しい監視の下に保護されています。 ユーザー管理のテナント キー (BYOK) を使用すると、各 Azure リージョンでハイエンド ハードウェア セキュリティ モジュール (HSM) のアレイが使用され、このセキュリティが強化されます。どのような状況でも、キーが抽出、エクスポート、または共有されることはありません。 テナント キーおよび BYOK の詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
+
+Windows デバイスに送信されるライセンスと証明書は、クライアントのデバイス秘密キーによって保護されます。このキーは、デバイスのユーザーが初めて Azure RMS を使用したときに作成されます。 一方、この秘密キーは、クライアント上の DPAPI によって保護されます。DPAPI は、ユーザーのパスワードから派生したキーを使用して、これらのシークレットを保護します。 モバイル デバイスでは、キーは&1; 回しか使われず、クライアントに格納されないため、これらのキーをデバイス上で保護する必要はありません。 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費

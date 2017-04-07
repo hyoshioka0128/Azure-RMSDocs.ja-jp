@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 39d2fb244be91d7fc655efbdda24e4e268ac1329
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 9164ce8155f1d068ea0fa164226ff20df05da8ae
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -43,6 +39,5 @@ Azure Information Protection クライアントと Office アプリケーショ�
 **Microsoft Intune を所有している場合**: Azure Information Protection アプリには Microsoft Intune App Software Development Kit が含まれているため、Intune で iOS デバイスや Android デバイスを登録していると、これらのデバイス用の Azure Information Protection ビューアーをデプロイおよび管理できます。 詳細については、Intune のドキュメントの「[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune コンソールでモバイル アプリケーション管理ポリシーを構成およびデプロイする)](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」を参照してください。 手順 2. として、手順に従ってポリシー管理型アプリを発行します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

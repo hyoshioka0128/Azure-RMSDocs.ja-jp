@@ -4,20 +4,16 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-translationtype: Human Translation
-ms.sourcegitcommit: 1085966a885d1cd8223e277be632ce6dae5de294
-ms.openlocfilehash: 61dfc23fa16b12688b79f2b7ffac645c9cc93584
-ms.lasthandoff: 02/27/2017
-
-
+ms.openlocfilehash: fc25cd11d950199f7ccd8e4e86e4d915c7fb6a95
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
 >*適用対象: Azure Information Protection*
@@ -26,7 +22,7 @@ Azure Information Protection とは、組織が文書や電子メールを、分
 
 次の図に動作中の Azure Information Protection の例を示します。 管理者によって機密データを検出するルールが構成されています (この場合は、クレジット カード情報)。 ユーザーがクレジット カード情報を含む Word 文書を保存すると、管理者が構成した特定のラベルを適用することを推奨するカスタム ツールヒントが表示されます。文書はこれによって分類され、オプションで保護されます。 
 
-![Azure Information Protection による推奨分類の例](../media/info-protect-recommend-callouts.png)
+![Azure Information Protection による推奨分類の例](../media/info-protect-recommend-calloutsv2.png)
 
 コンテンツを分類し (オプションで保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
 
@@ -36,7 +32,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 たとえば、次の電子メール メッセージは "内部" と分類されています。 これが内部用であり、組織外には送信されるべきではないことをすべての受信者が視覚的に確認できるように、このラベルは電子メールのフッターに追加されます。 このラベルは、電子メール サービスがこの値を調べて、監査エントリを作成したり、組織外に送信されることを阻止するよう、電子メールのヘッダーにも埋め込まれます。
 
-![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](../media/example-email-footer-header.png)
+![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](../media/example-email-footerv2.png)
 
 
 ## <a name="how-data-is-protected"></a>データ保護のしくみ
@@ -67,7 +63,7 @@ Azure Rights Management での保護のしくみの詳細については、「[A
 
 Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、最初の図のように Information Protection バーをインストールします。 Excel、PowerPoint、および Outlook にも同じバーが追加されます。 たとえば、
 
-![Excel の Azure Information Protection バーの例](../media/excel2016-infoprotect-bar.png)
+![Excel の Azure Information Protection バーの例](../media/excel2016-infoprotect-barv2.png)
 
 この Information Protection バーにより、エンド ユーザーは、適切な分類ラベルを選択でき、必要に応じてこれらのラベルにより、文書や電子メールを自動で保護することもできるようになります。
 

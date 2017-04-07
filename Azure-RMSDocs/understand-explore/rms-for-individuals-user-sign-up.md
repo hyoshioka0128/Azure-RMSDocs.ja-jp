@@ -4,7 +4,7 @@ description: "この無料アカウントのサインアップ手順、および
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 12f681ccfbcd7da2192df2be057f92d31a856bda
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-users-sign-up-for-rms-for-individuals"></a>個人用 RMS にサインアップする方法
 
 >*適用対象: Azure Information Protection*
@@ -87,7 +83,7 @@ ms.lasthandoff: 02/24/2017
 
     -   組織で使用された Rights Management のアクティビティをすべてログに記録できます。 この機能は非常に有用であり、保護されたファイルの監視や、それらのファイルに正常にアクセスしているユーザーの監視だけでなく、未承認のユーザーが保護されたファイルへのアクセスを試行している不審な行為を特定することもできます。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
-    -   保護されたドキュメントの追跡および取り消しの機能が [Azure RMS サブスクリプション](https://technet.microsoft.com/dn858608)でサポートされている場合、ユーザーはそれらの機能を使用できます。 詳細については、「[RMS 共有アプリケーション ユーザー ガイド](../rms-client/sharing-app-user-guide.md)」の「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)」を参照してください。
+    -   保護されたドキュメントの追跡および取り消しの機能が[サブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)でサポートされている場合、ユーザーはそれらの機能を使用できます。 詳細については、[Azure Information Protection ユーザー ガイド](../rms-client/client-user-guide.md)の「[Track and revoke your documents (ドキュメントの追跡および取り消し)](../rms-client/client-track-revoke.md)」を参照してください。
 
     -   BYOK (Bring Your Own Key) ソリューションを実装して、組織の IT ポリシーに従って Azure Rights Management のテナント キーをオンプレミスで生成し、そのキーをハードウェア セキュリティ モジュール (HSM) を使用して Microsoft に安全に転送することができます。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
 

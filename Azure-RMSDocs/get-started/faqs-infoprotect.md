@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: ccd840fdfc702e209390ed431d24d7e47edf9930
-ms.openlocfilehash: 0ce3ba72eb8a201486eaf2ae39f5d7bf99753cad
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+translationtype: HT
 ---
-
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -32,7 +28,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 追加の分類機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
 
-- ラベル名とツール ヒントは&1; 言語でのみサポートされます。
+- ラベル名とツール ヒントは 1 言語でのみサポートされます。
 
 - 分類とラベル付けには集中的なログはありません。
 
@@ -58,9 +54,9 @@ Azure Information Protection ポリシーを構成するには、Azure Active Di
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
-ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに&1; つのラベルのみです。したがって、多くの場合、適用できる分類は&1; つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に&2; つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで&2; つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
+ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
 
-たとえば、**Secret** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Secret** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか&1; つのみです。 したがって、表示されるラベル セットは **Secret \ Legal** のようになります。 そのファイルのメタデータには、**Secret** のカスタム テキスト プロパティーが&1; つ、**Legal** のカスタム テキスト プロパティーが&1; つ、さらに両方の値 (**Secret Legal**) を含むものが含まれます。 
+たとえば、**Confidential** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Confidential** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか 1 つのみです。 したがって、表示されるラベル セットは **Confidential \ Legal** のようになります。 そのファイルのメタデータには、**Confidential** のカスタム テキスト プロパティーが 1 つ、**Legal** のカスタム テキスト プロパティーが 1 つ、さらに両方の値 (**Confidential Legal**) を含むものが含まれます。 
 
 サブラベルを使用する場合は、プライマリ ラベルでビジュアル マーキング、保護、および条件を構成しないでください。 サブレベルを使用する場合は、サブラベルのみにこれらの設定を構成してください。 プライマリ ラベルとそのサブラベルでこれらの設定を構成した場合は、サブラベルの設定が優先されます。
 
@@ -70,7 +66,7 @@ Azure Information Protection ポリシーを構成するには、Azure Active Di
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 
-Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら&2; つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
+Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 ただし、これら 2 つのソリューションを統合して、ユーザーが Outlook Web アプリを使用して電子メールを分類する場合や、一部のモバイル用メール アプリケーションで、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 Exchange が分類を追加すると、Azure Information Protection クライアントによって、その分類に対応するラベルの設定が適用されます。
 
 Outlook Web アプリは Azure Information Protection の分類および保護をネイティブでサポートしていませんが、この同じ手法を使って、デスクトップの Outlook クライアントだけでなく、この電子メール クライアントでもラベルを使用することができます。
 
@@ -101,24 +97,5 @@ Azure Information Protection ラベルが Rights Management による保護を�
 
 Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 ファイルでは、このメタデータはカスタム プロパティに格納されます。電子メールでは、この情報は電子メールのヘッダーに含まれます。
 
-## <a name="how-do-i-sign-in-as-a-different-user"></a>別のユーザーとしてサインインする方法
-
-通常、運用環境では、Azure Information Protection クライアントを使用しているときに別のユーザーとしてサインインする必要はありません。 ただし、複数のテナントがある場合はこのようなサインインが必要になることがあります。 たとえば、組織が使用する Office 365 や Azure テナントに加えてテスト テナントがある場合などです。
-
-現在サインインしているアカウントを確認するには、**[Microsoft Azure Information Protection]** ダイアログ ボックスを使用します。Office アプリケーションを開き、**[ホーム]** タブの **[保護]** グループで、**[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 アカウント名が **[クライアント ステータス]** セクションに表示されます。
-
-特に、管理者アカウントを使用している場合は、表示されるサインイン アカウントのドメイン名を必ず確認してください。 たとえば、2 つのテナントに "admin" アカウントがある場合、アカウント名は正しくてもドメインを間違えてサインインするという失敗が起こりやすくなります。 このような状況では、Azure Information Protection ポリシーのダウンロードが失敗したり、目的のラベルや機能が表示されなかったりする可能性があります。
-
-別のユーザーとしてサインインするには、レジストリを正しく編集する必要があります。
-
-1. レジストリ エディターを使用して **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** 値を削除します。
-
-2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
-
-補足:
-
-- Azure Rights Management サービスの環境を再初期化 (ブートストラップ) するには、[RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)の **[リセット]** オプションを使用します。
-
-- 現在ダウンロードされている Azure Information Protection ポリシーを削除するには、%localappdata%\Microsoft\MSIP フォルダーから **Policy.msip** ファイルを削除します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

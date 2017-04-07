@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 43f083ffaf8aefd9b79b2cb64a6408e565818b9b
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
@@ -46,7 +42,7 @@ ms.lasthandoff: 02/24/2017
 
 ファイルを開く方法はファイルが保護された方法によって異なり、ファイルが保護された方法はファイル名拡張子を見るとわかります。 いずれの場合も、ファイルを開くと監査される場合があり、保護されている限り監査された状態のままになります。 さらに、ファイルが電子メールの添付ファイルとして送信された場合、ファイルを開くたびに送信者に電子メールで通知される可能性があります。
 
-- **ファイルの拡張子は *.pfile* です**
+- **ファイルの拡張子は*.pfile* です**
 
     このファイルは一般的に保護されています。
 
@@ -54,7 +50,7 @@ ms.lasthandoff: 02/24/2017
 
     ![RMS 共有アプリケーションの使用時に電子メールで共有される pfile のダイアログ ボックス](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **ファイルの拡張子が *.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) である**
+- **ファイルの拡張子が*.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) である**
 
     ファイルは、読み取り専用コピーとしてネイティブに保護されています。
 
@@ -78,7 +74,7 @@ Rights Management サービスでサポートされるファイル名拡張子�
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>保護されているファイルを使用するには (ファイルを編集して印刷する場合など)
 保護されたファイルを開いた後、読み取り以外にも編集、コピー、印刷などを行う場合は、ファイル名拡張子に応じて次の手順に従います。
 
-- **ファイルの拡張子は *.pfile* です**
+- **ファイルの拡張子は*.pfile* です**
 
     開いているファイルを保存し、使用するアプリケーションに関連付けられている新しいファイル名拡張子を付けます。
 
@@ -86,7 +82,7 @@ Rights Management サービスでサポートされるファイル名拡張子�
 
     新しいファイルは保護されていません。 ファイルを保護する場合は、手動で行う必要があります。 手順については、「[Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)](sharing-app-protect-in-place.md)」を参照してください。
 
-- **ファイルの拡張子が *.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) である**
+- **ファイルの拡張子が*.ppdf* か、ファイルが保護されたテキストまたは画像ファイル (*.ptxt*、*.pjpg* など) である**
 
     ファイルを表示することだけができ、ファイルの名前変更または移動を行っても、ファイルの保護は維持されます。
 

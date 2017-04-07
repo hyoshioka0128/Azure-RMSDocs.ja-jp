@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ee9d92752bb2839df859d01e80d3b0ecaeb678f9
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 855523925a6f774568cdbd55a7645223d015b013
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="rights-management-sharing-application-administrator-guide"></a>Rights Management 共有アプリケーション管理者ガイド
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
@@ -408,4 +403,3 @@ AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユー�
 保護レベルの違い (ネイティブとジェネリック)、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法などを説明する追加の技術情報については、「[Technical overview for the Rights Management sharing application (Rights Management 共有アプリケーションの技術概要)](sharing-app-admin-guide-technical.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

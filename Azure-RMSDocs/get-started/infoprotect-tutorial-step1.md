@@ -4,30 +4,28 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: aa1808503e92d0afeb7c0f3f7f9da446d2f13b51
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: 8ccf0ea41e9465e10408595a3b875704baca93d2
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="step-1-activate-the-rights-management-service"></a>手順 1.Rights Management サービスの有効化
  
 >*適用対象: Azure Information Protection*
 
 > [!NOTE]
->テナントの Azure Rights Management サービスを既にアクティブ化している場合は、直接、[次の手順](infoprotect-tutorial-step2.md)に進んでください。 
+>テナントの Azure Rights Management サービスを既にアクティブ化していることがわかっている場合は、直接、[次の手順](infoprotect-tutorial-step2.md)に進んでください。 
+>
+>このサービスがアクティブ化されているかどうかわからない場合は、この手順の指示に従って確認します。
 
-Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータル間の移動を含め、このサービスをアクティブ化するさまざまな方法があります。
+Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータルの使用など、このサービスをアクティブ化するにはさまざまな方法があります。
 
-このチュートリアルでは、Office 365 管理者用のアクティブ化ページに直接移動します。このページは、Office 365 クラシック ポータルと Office 365 管理センター プレビューの場合と同じです。 
+このチュートリアルでは、直接、Office 365 管理者向け管理ポータルのアクティブ化ページに移動します。 これは、Office 365 クラシック ポータルや Office 365 管理センター プレビューのページと同じページです。 
 
 このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure Portal にアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
 
@@ -37,9 +35,11 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
     
     サインインを求められたら、Office 365 のグローバル管理者であるアカウントを使用します。
 
-2. **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]**をクリックします。
+2. **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]**をクリックします。 このボタンに**非アクティブ化**と表示される場合、サービスは既にアクティブ化されています。[次の手順](infoprotect-tutorial-step2.md)に進んでください。 
 
-3. **[Rights Management をアクティブ化しますか?]**というメッセージが表示されたら、 **[アクティブ化]**をクリックします。
+    ![Azure Information Protection クイック スタート チュートリアル手順 1 - サービスのアクティブ化](../media/info-protect-activate.png)
+
+3. **[Rights Management をアクティブ化しますか?]** というメッセージが表示されたら、**[アクティブ化]** をクリックして確認します。
 
     " **Rights Management はアクティブ化されています** " というテキストと、非アクティブ化するオプションが表示されます (このページの手動更新が必要になる場合があります)。
 
@@ -57,4 +57,3 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 [手順 2 &#187;](infoprotect-tutorial-step2.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

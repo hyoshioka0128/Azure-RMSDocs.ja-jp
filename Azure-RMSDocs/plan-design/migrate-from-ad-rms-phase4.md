@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fc45ae10101460ea46bf2aa599b213a772eb5626
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: d36f47e586ac1295dcc79e43a9e061b4c7c7fe1e
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migration-phase-4---post-migration-tasks"></a>移行フェーズ 4 - 移行後のタスク
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
@@ -47,14 +43,17 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 AD RMS サーバーの使用を停止した後、Azure クラシック ポータルでテンプレートをレビューして統合しユーザーの選択肢を減らしたり、再構成したり、新しいテンプレートを追加したりできます。 これは、既定のテンプレートを発行する絶好のタイミングでもあります。 詳細については、「[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
 ## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>手順 9. Azure Information Protection テナント キーを更新する
-この手順は、選択したテナント キー トポロジが顧客管理 (Azure Key Vault での BYOK) ではなくマイクロソフト管理である場合にのみ適用されます。
+これは、AD RMS デプロイで RMS Cryptographic Mode 1 を使用していた場合、移行が完了したときに必要な手順です。キーの更新により RMS Cryptographic Mode 2 を使用する新しいテナント キーが作成されるためです。 Cryptographic Mode 1 での Azure RMS の使用は、移行プロセス中にのみサポートされます。
 
-この手順は省略できます。ただし、Azure Information Protection テナント キーが Microsoft によって管理されていて、AD RMS から移行済みである場合は、実行することをお勧めします。 このシナリオでのキーの更新は、AD RMS キーに対する潜在的なセキュリティ侵害から Azure Information Protection テナント キーを保護するのに役立ちます。
+これは省略可能ですが、移行が完了したときに推奨される手順です。RMS 暗号化モード 2 を実行していた場合でも推奨されます。 このシナリオでのキーの更新は、AD RMS キーに対する潜在的なセキュリティ侵害から Azure Information Protection テナント キーを保護するのに役立ちます。
 
 Azure Information Protection テナント キーを更新すると ("キーのローリング" とも呼ばれます)、新しいキーが作成され、元のキーがアーカイブされます。 ただし、キーの移動には数週間かかりすぐには完了しないので、元のキーの侵害が疑われるまで待たず、移行が完了したらすぐに Azure Information Protection テナント キーを更新してください。
 
-マイクロソフト管理の Azure Information Protection テナント キーを更新するには、[Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**AD RMS からの移行後の Azure Information Protection テナント キーの更新要求に関する Azure Information Protection サポート ケース**を開きます。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
+Azure Information Protection テナント キーを更新するには:
 
+- テナント キーが Microsoft によって管理されている場合: [Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**AD RMS からの移行後の Azure Information Protection テナント キーの更新要求に関する Azure Information Protection サポート ケース**を開きます。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知する必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
+
+- テナント キーを自分で管理している場合 (BYOK): Azure Key Vault で、Azure Information Protection テナントで使用しているキーを更新し、再度 [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを実行して、新しいキー URL を指定します。 
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -63,4 +62,3 @@ Azure Information Protection テナント キーの管理の詳細について�
 移行が完了した後は、[デプロイ ロードマップ](deployment-roadmap.md)を参照して、必要になる可能性があるその他のデプロイ タスクを確認します。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

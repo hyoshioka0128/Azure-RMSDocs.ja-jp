@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: c0cbd02cf69ca8039af8f6b397cb71f140eaab50
-
-
+ms.openlocfilehash: 8f249994c2ac1cf02c4572d3f7cb8ba6566cb142
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -51,11 +48,5 @@ ms.openlocfilehash: c0cbd02cf69ca8039af8f6b397cb71f140eaab50
 > [AD RMS から Azure Information Protection への移行](http://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](http://msdn.microsoft.com/library/azure/dn629429.aspx)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](../deploy-use/decommission-deactivate.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-
-<!--HONumber=Feb17_HO4-->
 
 

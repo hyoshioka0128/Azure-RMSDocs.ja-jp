@@ -14,13 +14,10 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
-
-
+ms.openlocfilehash: 60874baeb5956c611e09901182673354d14c6eba
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
 このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
@@ -112,7 +109,7 @@ ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
-このシナリオは、初めにテンプレートの一覧 [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
+このシナリオは、初めにテンプレートの一覧 [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx) を取得し、最初の&1; つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
 -   **手順 1**. テンプレートの一覧を取得します。
 
@@ -281,8 +278,3 @@ ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
           }
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

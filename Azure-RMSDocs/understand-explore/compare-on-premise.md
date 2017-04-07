@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) を理解
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d0027fa04824b0c1172ef21da4736895965925d7
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 3ac73576f67bee8d63c714352bfa4e75413ab972
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
@@ -66,15 +62,17 @@ Azure Information Protection の主な違いの一部:
 |コンテンツを保護するには、Azure Information Protection ライセンスまたは Azure Rights Management ライセンスと Office 365 が必要です。 Azure Information Protection で保護されたコンテンツを使用するには、ライセンスは必要ありません (別組織のユーザーも含まれます)。<br /><br />詳細については、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|AD RMS によってコンテンツを保護し、保護されたコンテンツを使用するには、RMS ライセンスが必要です。<br /><br />AD RMS のライセンスの概要については、「 [Client Access Licenses and Management Licenses (クライアント管理ライセンスとアクセス ライセンス)](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) 」を参照してください。具体的な情報については、マイクロソフト パートナーまたはマイクロソフトの担当者に問い合わせてください。|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>署名と暗号化のための暗号化制御
-Azure Information Protection は常に、すべての公開キーの暗号化に RSA 2048 を使用し、署名操作に SHA 256 を使用します。 これに対し、AD RMS は、RSA 1024 および RSA 2048 をサポートし、署名操作用に SHA 1 または SHA 256 をサポートします。
+Azure Information Protection は既定で、すべての公開キーの暗号化に RSA 2048 を使用し、署名操作に SHA 256 を使用します。 これに対し、AD RMS は、RSA 1024 および RSA 2048 をサポートし、署名操作用に SHA 1 または SHA 256 をサポートします。
 
 Azure Information Protection と AD RMS のいずれも対称暗号化に AES 128 を使用しています。
 
-Azure Information Protection は、テナント キーが Microsoft によって作成および管理されるか (既定)、テナント キーを自分で管理する場合 (BYOK と呼ばれます)、FIPS 140-2 と互換性があります。 テナント キーの管理の詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
+Azure Information Protection は、テナント キーのサイズが 2048 ビットである場合に FIPS 140-2 に準拠しています。Azure Rights Management サービスがアクティブ化されたときは、これが既定です。 
+
+暗号化の制御の詳細については、「[Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」を参照してください。
+
 
 ## <a name="next-steps"></a>次のステップ
 AD RMS から Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

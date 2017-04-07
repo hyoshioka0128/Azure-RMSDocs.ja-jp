@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f0f486620f4b13dc8d94fee742eec2f8e4753d78
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 5c1fad4b9e809a597f48d3bf394f3c097ca938e7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="office-365-configuration-for-clients-and-online-services"></a>Office 365: クライアントとオンライン サービスの構成
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -574,7 +570,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
         たとえば、contoso テナントのユーザーのユーザー名が "rsimone" である場合は、**https://contoso-my.sharepoint.com/personal/rsimone_contoso_com** と指定します。
 
-    4.  スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の ** ドキュメント ** の値は変更しないでください。
+    4.  スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の **ドキュメント** の値は変更しないでください。
 
     5.  `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 
@@ -1113,4 +1109,3 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
