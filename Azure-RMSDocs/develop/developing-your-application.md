@@ -1,11 +1,11 @@
 ---
-title: "アプリケーションの開発"
+title: "アプリケーションの開発 - AIP"
 description: "AIP によるドキュメントの保護を実装する基本的なコンソール アプリのガイダンスです。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,14 +14,10 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 24689c3337361fb5e59420684ec8f5e9c723e448
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+translationtype: HT
 ---
-
 # <a name="developing-your-application"></a>アプリケーションの開発
 
 この例では、Azure Information Protection サービス (AIP) と連携する簡単なコンソール アプリケーションを作成します。  保護するドキュメントのパスを入力し、アドホック ポリシーまたは Azure テンプレートを使用してドキュメントを保護する手順を説明します。 アプリケーションは入力に従って正しいポリシーを適用し、情報が保護されたドキュメントを作成します。 使用するサンプル コードは、[Azure IP テスト アプリケーション](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test)および Github を参照してください。

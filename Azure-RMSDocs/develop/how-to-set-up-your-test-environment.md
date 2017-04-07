@@ -14,13 +14,10 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 65ac5120e58ea6a212c09f7c2dd278356d0778b1
-
-
+ms.openlocfilehash: a4306d69fd08f4839c0b02fd3e0a2acbbbc28721
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="testing-your-application"></a>アプリケーションのテスト
 
 このトピックでは、アプリケーション テストを設定する方法について説明します。
@@ -53,8 +50,3 @@ Windows Server で実行されている Azure RMS または RMS サーバーを�
 * [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

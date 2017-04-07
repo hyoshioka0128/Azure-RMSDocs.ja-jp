@@ -14,13 +14,10 @@ ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 5075e0856f81561b3e74dd52a3629cfe2dfa5dce
-
-
+ms.openlocfilehash: dedc3fa6c5cab519a0d6fe8ba835d8d92a9da276
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="client"></a>クライアント
 
 このトピックでは、Rights Management Service Client 2.1 の用途と機能について説明します。
@@ -40,8 +37,3 @@ Rights Management Service SDK 2.1 は、RMS クライアント 2.1 で動作し�
 * [RMS クライアント 2.1 に関する TechNet のドキュメント](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

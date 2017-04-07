@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: b82132d45f1d671c11355c44104dacf521e18082
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
@@ -59,12 +55,6 @@ Azure Information Protection への移行を始める前に、次の前提条件
         
         - Windows Server 2016 (x64)
         
-    - 暗号化モード 2:
-
-        - Azure Information Protection への移行を開始する前に、AD RMS サーバーとクライアントを暗号化モード 2 で実行する必要があります。
-        
-        現在のサーバー ライセンサー証明書 (SLC) キーは暗号化モード 2 を使用している必要がありますが、以前のキーが暗号化モード 1 を使用するように構成されていた場合も、Azure Information Protection ではアーカイブされたキーとしてサポートされます。 暗号化モードの詳細と暗号化モード 2 への移行方法については、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」を参照してください。
-        
     - すべての有効な AD RMS トポロジがサポートされます。
     
         - 単一フォレスト、単一 RMS クラスター
@@ -73,7 +63,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
         
         - 複数フォレスト、複数 RMS クラスター
         
-    注: 既定では、複数の RMS クラスターが&1; つの Azure Information Protection テナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数の Azure Information Protection テナントにインポートすることはできません。
+    注: 既定では、複数の AD RMS クラスターが&1; つの Azure Information Protection テナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数の Azure Information Protection テナントにインポートすることはできません。
 
 - **Azure Information Protection テナント (非アクティブ) など、Azure Information Protection を実行するためのすべての要件:**
 
@@ -104,7 +94,22 @@ Azure Information Protection への移行を始める前に、次の前提条件
     - このオプション構成では、Azure Key Vault と、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。 
 
 
-制限事項:
+### <a name="cryptographic-mode-considerations"></a>暗号化モードに関する注意事項
+
+移行に必須ではないものの、移行を開始する前に、AD RMS サーバーとクライアントを暗号化モード 2 で実行しておくことをお勧めします。 
+
+さまざまなモードとアップグレードする方法の詳細については、「[AD RMS Cryptographic Modes (AD RMS の暗号化モード)](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」を参照してください。
+
+AD RMS クラスターが 暗号化モード 1 であり、アップグレードができない場合、移行が完了したときに Azure Information Protection テナント キーを更新する必要があります。 キーの更新を行うと、暗号化モード 2 を使用する新しいテナント キーが作成されます。 暗号化モード 1 での Azure Rights Management サービスの使用は、移行プロセス中にのみサポートされます。
+
+AD RMS 暗号化モードを確認するには:
+ 
+- Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
+
+- AD RMS のすべてのサポート対象バージョンの場合: [RMS アナライザー](https://www.microsoft.com/en-us/download/details.aspx?id=46437)と **AD RMS 管理**オプションを使用して、**RMS サービス情報**の暗号モードを表示します。
+
+
+### <a name="migration-limitations"></a>移行の制限
 
 -   移行プロセスは、サーバー ライセンス証明書 (SLC) キーから Azure Information Protection のハードウェア セキュリティ モジュール (HSM) への移行をサポートしていますが、現在、Exchange Online では、Azure Information Protection によって使用されている Rights Management サービスに対してこの構成はサポートされていません。 Azure Information Protection への移行後に Exchange Online で完全な IRM 機能を使用する場合は、Azure Information Protection テナント キーが[マイクロソフトによって管理](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok)される必要があります。 または、Azure Information Protection テナントがユーザーにより管理される場合 (BYOK)、Exchange Online では IRM の機能を制限付きで実行できます。 Exchange Online と Azure Rights Management サービスの使用の詳細については、「[手順 6. これらの移行手順」の「](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online)IRM と Exchange Online の統合を構成する」を参照してください。
 
@@ -192,11 +197,10 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 - **手順 9: Azure Information Protection テナント キーを更新する**
 
-    この手順は省略できますが、手順 2 で Azure Information Protection テナント キー トポロジとして "マイクロソフト管理" を選択した場合は、実行することを推奨します。 選択した Azure Information Protection テナント キー トポロジが顧客管理 (BYOK) である場合、この手順は適用できません。
+    この手順は、移行前に暗号化モード 2 を実行していなかった場合に必要であり、Azure Information Protection テナント キーのセキュリティを保護するためすべての移行に対して、必須ではありませんが推奨されます。
 
 
 ## <a name="next-steps"></a>次のステップ
 移行を開始するには「[フェーズ 1 - サーバー側の構成](migrate-from-ad-rms-phase1.md)」に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -14,13 +14,10 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: da5a9fa1a2c2eaccb6768914a0c425983b14fdbe
-
-
+ms.openlocfilehash: 128f472eb69a52bd8a7cf2e8103ee520d83ee92c
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-debug-a-rights-enabled-application"></a>方法: 権限保護対応アプリケーションのデバッグ
 
 このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
@@ -67,8 +64,3 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 **注**: Windows イベント ビューアーで、**[表示]** メニューの **[分析およびデバッグ ログの表示]** を選択すると、MSIPC デバッグ ログが表示されます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

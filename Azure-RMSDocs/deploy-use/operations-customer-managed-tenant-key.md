@@ -4,7 +4,7 @@ description: "Azure Information Protection のテナント キーを自分で管
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 198de18664e2f94209ab3c7224e89c5a9d4c3196
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -42,7 +37,7 @@ Azure Information Protection のサブスクリプションをキャンセルす
 
 テナント キーを再入力すると、新しいコンテンツは新しいテナント キーの利用により保護されます。 これは段階的に行われます。そのため、一定期間、一部の新しいコンテンツは引き続き以前のテナント キーで保護されます。 以前に保護されたコンテンツは以前のテナント キーで引き続き保護されます。 このシナリオをサポートするために、Azure Information Protection は以前のテナント キーを保有します。そのため、古いコンテンツのライセンスを発行できます。
 
-テナント キーを再入力するには、最初に Key Vault で Azure Information Protection テナント キーを再入力します。 次に、Add-AadrmKeyVaultKey コマンドレットをもう一度実行して、新しいキー URL を指定します。
+テナント キーを再入力するには、最初に Key Vault で Azure Information Protection テナント キーを再入力します。 次に、[Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) コマンドレットをもう一度実行して、新しいキー URL を指定します。
 
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 テナント キーのバックアップは自分で行う必要があります。 Thales HSM でテナント キーを生成した場合、キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップするだけです。
@@ -67,5 +62,4 @@ BYOK を使用する場合、テナント キーを Azure Key Vault または Az
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure Information Protection を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

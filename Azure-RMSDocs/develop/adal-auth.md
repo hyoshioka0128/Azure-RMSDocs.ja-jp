@@ -1,11 +1,11 @@
 ---
-title: "ADAL 認証用のアプリの構成 |Microsoft Docs"
+title: "ADAL 認証用のアプリの構成 - AIP"
 description: "Azure ADAL 基盤の認証を使用するように Azure Information Protection アプリを構成する手順"
 keywords: "認証, RMS, ADAL, Informatin Protection,"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,13 +14,10 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b7415265d0e27896df2bdf6a62e7c875ba681345
-ms.openlocfilehash: d51730af8a1f410ad890087200f64864eceb2268
-
-
+ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+translationtype: HT
 ---
-
 # <a name="configure-your-app-for-adal-authentication"></a>ADAL 認証用のアプリの構成
 
 このトピックでは、アプリケーションを Azure Active Directory Authentication Library (ADAL) ベースの認証用に構成する手順について説明しています。
@@ -70,7 +67,7 @@ Microsoft Azure にサインアップした後:
 ![アプリの名前を指定する](../media/TellUsInput.png)
 
 - リダイレクト URI を追加し、[次へ] を選択します。
-  リダイレクト URI は、有効な URI で、ディレクトリに対して一意である必要があります。 たとえば、`com.mycompany.myapplication://authorize` のような URI を使用します。
+  リダイレクト URI は、有効な URI で、ディレクトリに対して一意である必要があります。 たとえば、`https://contoso.azurewebsites.net/.auth/login/done` のような URI を使用します。
 
 ![リダイレクト URI を追加する](../media/RedirectURI.png)
 
@@ -84,7 +81,7 @@ Microsoft Azure にサインアップした後:
 - アプリケーション設定下部で **[他のアプリケーションに対するアクセス許可]** の **[アプリケーションの追加]** ボタンを選択します。
 
 >[!NOTE]
-> Windows Azure Active Directory に表示される **[デリゲートされたアクセス許可]** は既定では正しく、オプションは 1 つだけ選択します。そのオプションは **[サインインとユーザー プロファイルの読み取り]** になります。
+> Windows Azure Active Directory に表示される **[デリゲートされたアクセス許可]** は既定では正しく、オプションは&1; つだけ選択します。そのオプションは **[サインインとユーザー プロファイルの読み取り]** になります。
 
 ![[アプリケーションの追加] を選択する](../media/PermissionsToOtherBtn.png)
 
@@ -105,8 +102,3 @@ Microsoft Azure にサインアップした後:
 ![[保存] を選択する](../media/SaveApplication.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

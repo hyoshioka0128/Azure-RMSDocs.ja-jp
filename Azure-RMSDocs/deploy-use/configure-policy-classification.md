@@ -10,14 +10,10 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: c4a0aab69ac8a01175528531fe11f17e86da9a6b
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
 >*適用対象: Azure Information Protection*
@@ -53,9 +49,9 @@ ms.lasthandoff: 02/24/2017
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 自動分類または推奨される分類用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy:Global (ポリシー:グローバル)]** ブレードで変更するラベルを選択して **[ラベル]** ブレードで変更を行い、必要に応じてその後のブレードで設定を行います。 
+2. 自動分類または推奨される分類用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy: Global (ポリシー: グローバル)]** ブレードで変更するラベルを選択して **[ラベル]** ブレードで変更を行い、必要に応じてその後のブレードで設定を行います。 
 
-     構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。  
+     構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。  
 
 3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
@@ -145,7 +141,7 @@ ms.lasthandoff: 02/24/2017
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
-1. 次のフレーズの少なくとも&1; つ: **aba**、**rtn**、**routing number** 
+1. 次のフレーズの少なくとも 1 つ: **aba**、**rtn**、**routing number** 
 
 2. ABA 銀行コード。書式設定された、または書式設定されていないパターンの 9 桁の数字: 
 
@@ -182,17 +178,17 @@ ms.lasthandoff: 02/24/2017
 
 この情報の種類は、コンテンツに以下が含まれている場合に使用します。  
 
-1. 次のフレーズの少なくとも&1; つ: **ssn**、**social security**、**ssid**、**ss#** 
+1. 次のフレーズの少なくとも 1 つ: **ssn**、**social security**、**ssid**、**ss#** 
 
 2. 社会保障番号: 書式設定された、または書式設定されていないパターンの 9 桁の数字:
 
     - **書式設定あり**: 
     
-        - 次の書式の&9; 桁の数字: ddd-dd-dddd または ddd dd dddd 
+        - 次の書式の 9 桁の数字: ddd-dd-dddd または ddd dd dddd 
         
     - **書式設定なし**: 
     
-        - 次の書式の&9; 桁の数字: ddddddddd 
+        - 次の書式の 9 桁の数字: ddddddddd 
 
 
 テスト用の例:
@@ -223,6 +219,5 @@ ms.lasthandoff: 02/24/2017
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

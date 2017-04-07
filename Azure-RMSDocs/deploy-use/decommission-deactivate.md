@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b88d4587be0549ea7364c9745c218865480a8d18
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f577337cf7ce904a82ff23b165fdc7befe319092
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Azure Rights Management の使用停止と非アクティブ化
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -57,22 +53,13 @@ Azure Information Protection テナント キーがある場合は、オンプ�
 
 #### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Rights Management を非アクティブ化するには
 
-1.  Office 365 デプロイの管理者である[職場または学校のアカウントで Office 365 にサインイン](https://portal.office.com/) します。
+1. Office 365 管理者向けの [Rights Management ページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) に移動します。
+    
+    サインインを求められたら、Office 365 のグローバル管理者であるアカウントを使用します。    
 
-2.  Office 365 管理センターが自動的に表示されない場合は、左上のアプリ ランチャー アイコンを選択し、**[管理]** を選択します。 [ **管理** ] タイルは、Office 365 管理者に対してのみ表示されます。
+2. [ **Rights Management** ] ページで、[ **非アクティブ化**] をクリックします。
 
-    > [!TIP]
-    > 管理センターのヘルプについては、「 [Office 365 管理センターについて - 管理者向けヘルプ](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547)」を参照してください。
-
-3.  左ペインで、 **[サービス設定]**を展開します。
-
-4.  [ **Rights Management**] をクリックします。
-
-5.  [ **Rights Management** ] ページで、[ **管理**] をクリックします。
-
-6.  [ **Rights Management** ] ページで、[ **非アクティブ化**] をクリックします。
-
-7.  [ **Rights Management を非アクティブ化しますか?**] というメッセージが表示されたら、[ **非アクティブ化**] をクリックします。
+3.  [ **Rights Management を非アクティブ化しますか?**] というメッセージが表示されたら、[ **非アクティブ化**] をクリックします。
 
 [ **Rights Management がアクティブ化されていません** ] というテキストとアクティブ化するオプションが表示されます。
 
@@ -82,13 +69,12 @@ Azure Information Protection テナント キーがある場合は、オンプ�
 
 2.  左ペインで、[ **ACTIVE DIRECTORY**] をクリックします。
 
-3.  [ **active directory** ] ページで、[ **RIGHTS MANAGEMENT**] をクリックします。
+3.  [ **Active Directory** ] ページで、[ **RIGHTS MANAGEMENT**] をクリックします。
 
-4.  [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] で管理するディレクトリを選択し、**[非アクティブ化]** をクリックし、操作を確定します。
+4.  正しいテナント名が選択されていることを確認してから、**[非アクティブ化]** をクリックして操作を確定します。
 
 これで、[ **Rights Management のステータス** ] に [ **非アクティブ** ] と表示され、[ **非アクティブ化** ] オプションが [ **アクティブ化**] に置き換えられます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

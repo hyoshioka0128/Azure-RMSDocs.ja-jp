@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 3dd54a7bddbb5d51baf9bb0f2f2f720a7921b939
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションのダイアログ ボックス オプション
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
@@ -78,4 +74,3 @@ Rights Management 共有アプリケーションの使用方法の例と操作�
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 90b26239979b42eadb008b11a963e35a74698910
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
-
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
@@ -29,7 +24,7 @@ Azure Information Protection クライアントをインストールすると、
 
 コマンドレットは PowerShell モジュール **AzureInformationProtection** でインストールされます。このモジュールは、RMS 保護ツールでインストールされていた RMSProtection モジュールに代わるものです。 RMSProtection ツールがインストールされているシステムに Azure Information Protection クライアントをインストールすると、RMSProtection モジュールは自動的にアンインストールされます。
 
-AzureInformationProtection モジュールには、RMS 保護ツールのすべての Rights Management コマンドレットに加えて、ラベル付け用に Azure Information Protection (AIP) サービスを使う&2; つの新しいコマンドレットが含まれます。
+AzureInformationProtection モジュールには、RMS 保護ツールのすべての Rights Management コマンドレットに加えて、ラベル付け用に Azure Information Protection (AIP) サービスを使う 2 つの新しいコマンドレットが含まれます。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -91,7 +86,7 @@ Azure Information Protection テナントがアクティブ化されていない
 
 現在はラベルを非対話形式で適用することはできませんが、非対話形式で Azure Rights Management サービスに直接接続して、ファイルを保護または保護解除することができます。
 
-サービス プリンシパルを使って、非対話形式で Azure Rights Management サービスに接続する必要があります。それには、`Set-RMSServerAuthentication` コマンドレットを使います。 Azure Rights Management サービスに直接接続するコマンドレットを実行する Windows PowerShell セッションごとに、これを行う必要があります。 このコマンドレットを実行する前に、次の&3; つの識別子があることを確認します。
+サービス プリンシパルを使って、非対話形式で Azure Rights Management サービスに接続する必要があります。それには、`Set-RMSServerAuthentication` コマンドレットを使います。 Azure Rights Management サービスに直接接続するコマンドレットを実行する Windows PowerShell セッションごとに、これを行う必要があります。 このコマンドレットを実行する前に、次の 3 つの識別子があることを確認します。
 
 - BposTenantId
 
@@ -137,9 +132,7 @@ Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマ
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
 
-Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolServicePrincipal` コマンドレットを実行することによって、またはさらに新しい Azure Active Directory バージョン 2 PowerShell モジュールの `New-AzureADServicePrincipal` を実行することによって、新しいサービス プリンシパルを作成します。 
-
-以下の手順は、Azure Active Directory の MSOnline PowerShell モジュールから New-MsolServicePrincipal を実行する場合のものです。
+Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolServicePrincipal` コマンドレットを実行することで、新しいサービス プリンシパルを作成します。 
 
 1. このモジュールがコンピューターにまだインストールされていない場合は、「[Install the Azure AD Module](/powershell/azuread/#install-the-azure-ad-module)」(Azure AD モジュールをインストールする) をご覧ください。
 
@@ -182,7 +175,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
     対称キーをコピーしておくことが特に重要です。後で完全な対称キーを取得することはできないので、わからないと、次に Azure Rights Management サービスに対する認証を行うときに新しいサービス プリンシパルを作成する必要があります。
 
-以上の手順と例から、Set-RMSServerAuthentication の実行に必要な&3; つの識別子が得られます。
+以上の手順と例から、Set-RMSServerAuthentication の実行に必要な 3 つの識別子が得られます。
 
 - テナント Id: **23976bc6-dcd4-4173-9d96-dad1f48efd42**
 
@@ -194,7 +187,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-前のコマンドで示すように&1; つのコマンドで値を指定することも、Set-RMSServerAuthentication だけを入力してプロンプトで&1; つずつ値を指定することもできます。 コマンドが完了すると、"**The RmsServerAuthentication is set to ON**" と表示されます。これは、サービス プリンシパルを使ってファイルの保護と保護解除を実行できることを意味します。
+前のコマンドで示すように 1 つのコマンドで値を指定することも、Set-RMSServerAuthentication だけを入力してプロンプトで 1 つずつ値を指定することもできます。 コマンドが完了すると、"**The RmsServerAuthentication is set to ON**" と表示されます。これは、サービス プリンシパルを使ってファイルの保護と保護解除を実行できることを意味します。
 
 このサービス プリンシパルをスーパー ユーザーにすることを検討します。このサービス プリンシパルでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準のユーザー アカウントをスーパー ユーザーとして構成するときと同じように、Azure RMS コマンドレットの [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) を使いますが、**-ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
 
@@ -213,7 +206,7 @@ Azure 北米リージョン以外での認証の場合は、レジストリを�
 
 3. **ServiceLocation** キーが表示されない場合は、レジストリのパスが **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation** となるように作成します。
 
-4. **ServiceLocation** キーに対し、**EnterpriseCertification** および **EnterprisePublishing** という名前の&2; つのキーを作成します (存在しない場合)。 
+4. **ServiceLocation** キーに対し、**EnterpriseCertification** および **EnterprisePublishing** という名前の 2 つのキーを作成します (存在しない場合)。 
     
     これらの REG_SZ キーを作成するときは、"(既定)" の名前は変更せず、値データを次のように設定します。
 
@@ -225,7 +218,7 @@ Azure 北米リージョン以外での認証の場合は、レジストリを�
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Azure Information Protection および Azure Rights Management サービスのコマンドレットを使うシナリオの例
 
-ラベルを使ってファイルを分類および保護する方が効率的です。必要なコマンドレットが [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) と [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) の&2; つだけであり、単独で、または一緒に実行できるためです。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
+ラベルを使ってファイルを分類および保護する方が効率的です。必要なコマンドレットが [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) と [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) の 2 つだけであり、単独で、または一緒に実行できるためです。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
 
 ただし、Azure Rights Management サービスに直接接続してファイルを保護または保護解除するには、通常、次に説明するように一連のコマンドレットを実行する必要があります。
 
@@ -235,7 +228,7 @@ Azure 北米リージョン以外での認証の場合は、レジストリを�
 
 メッセージが表示されたら、「[前提条件 3: ユーザーの介入なしにファイルを保護または保護解除するには](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction)」で説明されているように、3 つの識別子を入力します。
 
-ファイルを保護するには、先に、Rights Management テンプレートを取得して使うものを確認し、それに対応する ID 番号の一覧を確認する必要があります。 出力から、テンプレート ID をコピーできます。
+ファイルを保護するには、Rights Management テンプレートをお使いのコンピューターにダウンロードして、使用するものとそれに対応する ID 番号を確認する必要があります。 出力から、テンプレート ID をコピーできます。
 
     Get-RMSTemplate
     
@@ -258,7 +251,7 @@ Azure 北米リージョン以外での認証の場合は、レジストリを�
 
 Set-RMSServerAuthentication コマンドを実行しなかった場合は、自分のユーザー アカウントを使って Azure Rights Management サービスへの認証を行うことに注意してください。 ドメインに参加しているコンピューターでは、現在の資格情報が常に自動的に使われます。 ワークグループ コンピューターの場合は、Azure へのサインインを求められ、これらの資格情報は後続のコマンドのためにキャッシュされます。 このシナリオでは、後で別のユーザーとしてサインインする必要がある場合は、`Clear-RMSAuthentication` コマンドレットを使います。
 
-テンプレート ID がわかったので、`Protect-RMSFile` コマンドレットでそれを使って、フォルダー内の&1; つのファイルまたはすべてのファイルを保護できます。 たとえば、1 つのファイルだけを保護し、元のファイルを上書きする場合は、"Contoso, Ltd - Confidential" テンプレートを使います。
+テンプレート ID がわかったので、`Protect-RMSFile` コマンドレットでそれを使って、フォルダー内の 1 つのファイルまたはすべてのファイルを保護できます。 たとえば、1 つのファイルだけを保護し、元のファイルを上書きする場合は、"Contoso, Ltd - Confidential" テンプレートを使います。
 
     Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -301,6 +294,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     ---------                             -------------
     C:\Test.docx                          C:\Test.docx
 
+Rights Management テンプレートが変更された場合は、もう一度 `Get-RMSTemplate -force` でダウンロードしてください。 
 
 ## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management サービス
 
@@ -329,7 +323,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 9. **[許可]** 列で、**[読み取りと実行]** および **[読み取り]** チェック ボックスがオンになっていることを確認します。
 
-10. **[OK]** を&2; 回クリックします。
+10. **[OK]** を 2 回クリックします。
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services"></a>Active Directory Rights Management サービスにコマンドレットを使うシナリオの例
 
@@ -371,7 +365,7 @@ AzureInformationProtection モジュールをインストールするための�
     FromTemplate      : True
     FromTemplate      : True
 
-テンプレート ID がわかったので、Protect-RMSFile コマンドレットでそれを使って、フォルダー内の&1; つのファイルまたはすべてのファイルを保護できます。 たとえば、1 つのファイルだけを保護し、元のファイルを置き換える場合は、"Contoso, Ltd - Confidential" テンプレートを使います。
+テンプレート ID がわかったので、Protect-RMSFile コマンドレットでそれを使って、フォルダー内の 1 つのファイルまたはすべてのファイルを保護できます。 たとえば、1 つのファイルだけを保護し、元のファイルを置き換える場合は、"Contoso, Ltd - Confidential" テンプレートを使います。
 
     Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -430,4 +424,3 @@ Azure Information Protection クライアントのサポートに必要な詳細
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

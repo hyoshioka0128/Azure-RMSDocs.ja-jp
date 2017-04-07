@@ -1,24 +1,22 @@
 ---
-title: "アプリケーションのデプロイ"
+title: "アプリケーションのデプロイ - AIP"
 description: "このトピックでは、アプリケーションのデプロイの概要について順を追って説明します。"
 keywords: "デプロイ, RMS, AIP"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 0c16b7c6bd494a0350a511a3b415f781aecf613d
-
-
+ms.openlocfilehash: 67ec662fb54ab9fdcd06bebd01df1a228afe5fb1
+ms.sourcegitcommit: 164c9ac31beb4811bbcd4527613a5d3b57b8ac6c
+translationtype: HT
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -81,7 +79,7 @@ RMS クライアント 2.1 は、Windows オペレーティング システム�
 
 ### <a name="creating-your-deployment-package"></a>デプロイ パッケージの作成
 
-RMS クライアント インストーラー パッケージは、お好みのインストール テクノロジを使用してアプリケーションまたはソリューションにバンドルすることをお勧めします。 RMS クライアントは自由に再配布でき、他のアプリケーションやソリューションにバンドルできます。
+RMS クライアント インストーラー パッケージは、お好みのインストール テクノロジを使用してアプリケーションまたはソリューションにバンドルすることをお勧めします。 RMS クライアントは自由に再配布が可能で、他のアプリケーションやソリューションにバンドルできます。
 
 RMS クライアント 2.1 のインストーラーを起動して対話形式で RMS クライアント 2.1 をインストールすることも、サイレント モードでインストールすることもできます。 統合手順は次のとおりです。
 
@@ -98,14 +96,13 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 クライアントが存在する場合は、アプリケーションのインストールを続行します。
 
-## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>アプリケーションで Azure Information Protection/Rights Management サービスを有効にする
+## <a name="enabling-azure-information-protection-services-with-your-application"></a>アプリケーションで Azure Information Protection サービスを有効にする
 
 > [!NOTE]
 > 認証用に新しい ADAL モデルに移行した場合は、**SIA** をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
 > あるいは、**Windows 10 のアプリケーション認定を受ける**ことができます。 - Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は多要素認証を利用したり、コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールしたりできるようになります。
 
-
-エンドユーザーが Information Protection/Rights Management サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
+エンドユーザーが Information Protection/サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
 
 
 > [!IMPORTANT]
@@ -116,6 +113,8 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 -   権利保護に対応したアプリケーションのデプロイにこのサービスを選択する前提条件チェックが含まれていることを確認します。
 -   ご自身のテストおよびエンドユーザーによるオンライン サービスの使用に関する詳細については、TechNet トピック「[Rights Management の構成](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)」をご覧ください。
 
+このガイドを使用してアプリを構成する必要もあります - [App Service アプリケーションを構成して Azure Active Directory ログインを構成する方法](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)。
+
 アプリケーションによる Azure Rights Management サービスでの RMS の使用を有効にする方法の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」をご覧ください。
 
 ## <a name="related-topics"></a>関連項目
@@ -125,8 +124,3 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 * [クラウド ベース RMS でのアプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

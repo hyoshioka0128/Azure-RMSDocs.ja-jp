@@ -12,16 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a7d6c5775f9f3ddedd2177054731b26443a0d2d9
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: fe434fd6d80764b5382ff807dbf87582f07713b5
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
-
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
 Azure Information Protection は他のサービスをサポートし、また、他のサービスに依存しています。 Azure Information Protection サービスの使用方法以外で、Azure Information Protection の関連情報をお探しの場合は、以下のリソースを参照してください。
@@ -57,4 +51,3 @@ Azure Rights Management サービスの特定の認証についての情報に�
 - Office 365 ライブラリ: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

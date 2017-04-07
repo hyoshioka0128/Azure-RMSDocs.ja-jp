@@ -53,8 +53,3 @@ Azure Rights Management をサポートするサブスクリプションを所�
 |--------------------------------|--------------------------|
 |Rights Management をアクティブ化する方法と、サービスがアクティブ化された際にファイルの保護や電子メールの送信が可能なユーザーを制御する方法について   →|[Azure Rights Management をアクティブにする](../deploy-use/activate-azure-classic.md)|
 |既定のテンプレートの情報と、新しいカスタム テンプレートを作成する方法について   →|[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/create-template.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

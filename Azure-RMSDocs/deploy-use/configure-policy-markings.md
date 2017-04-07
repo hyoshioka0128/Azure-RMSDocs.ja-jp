@@ -4,27 +4,25 @@ description: "ドキュメントまたは電子メール メッセージにラ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4ddacf2be34cb7921dfbe282a0476a8cd47de2cf
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: aacdeeb9185755af90f4aa6144c47e3a9771b4e2
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象: Azure Information Protection*
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
 
-視覚的なマーキングは、Word、Excel、および PowerPoint ドキュメントにラベルが適用されるときと、ドキュメントが保存されるときに適用されます。 電子メール メッセージでは、視覚的なマーキングは、電子メール メッセージが送信されるときに適用されます。
+視覚的なマーキングは、ラベルが適用されたときと、Word、Excel、および PowerPoint でドキュメントが保存されたときに、これらの Office アプリケーションのドキュメントに適用されます。 電子メール メッセージの場合、Outlook から電子メール メッセージが送信されたときに視覚的なマーキングが適用されます。
+
+ファイル エクスプローラーでの右クリック操作によってラベルが適用された場合は、ドキュメントに視覚的なマーキングは適用されません。 PowerShell を使用してドキュメントを分類した場合も同様です。
 
 視覚的なマーカーの追加情報:
 
@@ -36,25 +34,25 @@ ms.lasthandoff: 02/24/2017
 
     - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。
 
-- ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。 
+- ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
-    
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウで全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。
+
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 視覚的なマーキング用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy:Global]**(ポリシー:グローバル) ブレードで変更するラベルを選択します。 
+2. 視覚的なマーキング用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy: Global (ポリシー: グローバル)]** ブレードで変更するラベルを選択します。
 
      構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
 
 3. **[ラベル]** ブレードで、**[Set visual marking (such as header or footer)]** (視覚的なマーキングの設定 (ヘッダーやフッターなど)) セクション、目的の視覚的なマーカーの設定を構成した後、**[保存]** をクリックします。
 
     - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、色、およびヘッダーの配置を指定します。
-    
+
     - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、色、および配置を指定します。
-    
-    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、色、および配置を指定します。 
+
+    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、色、および配置を指定します。
 
 4. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
@@ -73,13 +71,11 @@ ms.lasthandoff: 02/24/2017
 - `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
-    
-例: Secret ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: Secret** になります。
+
+例: **General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
 
 ## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-

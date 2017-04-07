@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: ec57bae71b11b6505ccb94fcdf692f215862191d
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+translationtype: HT
 ---
-
 # <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
 >*適用対象: Azure Information Protection*
@@ -32,7 +28,7 @@ Azure Information Protection ポリシーを構成するには:
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
 
-    **[Azure Information Protection]** ブレードが表示されます。ここから **[グローバル]** ポリシーを開いてすべてのユーザーを取得できます。 また、必要に応じて、スコープ ポリシーを追加し、編集することもできます。 **[グローバル]** Azure Information Protection ポリシーには、構成可能な次の要素があります。
+    **[Azure Information Protection]** ブレードが読み込まれると、**[Policy: Global]** (ポリシー: グローバル) ブレードが自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集できます。 また、必要に応じて、スコープ ポリシーを追加し、編集することもできます。 Azure Information Protection ポリシーには、構成可能な次の要素があります。
 
     - 管理者とユーザーがドキュメントと電子メールを分類するために使用できるラベル。
 
@@ -44,15 +40,24 @@ Azure Information Protection ポリシーを構成するには:
 
     - ユーザーが元のレベルよりも低い秘密度レベルのラベルを選択したときに、理由を示すことをユーザーに要求するオプション。
 
+    - 添付ファイルに基づいて、電子メール メッセージに自動的にラベルを付けるオプション。
+
     - ユーザーにカスタム ヘルプ リンクを提供するオプション。
 
-Azure Information Protection には[既定のポリシー](configure-policy-default.md)が付属しています。このポリシーには、**[個人用]**、**[パブリック]**、**[内部]**、**[機密]**、および **[秘密]**というラベルが含まれています。 これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。
+Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのラベルは、最下位の分類である個人データから、最上位の分類である非常に機密性の高い社外秘データまで、組織が通常作成して保存するあらゆるデータで使用できます。 これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。
 
 [Azure Information Protection] ブレードで変更を行ったら、**[保存]** をクリックして変更を保存します。または、**[破棄]** をクリックして、最後に保存した設定に戻します。 
 
 目的の変更が終わったら、**[公開]** をクリックします。 
 
-Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する Azure Information Protection ポリシーに変更をダウンロードします。
+Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する最新の Azure Information Protection ポリシーに変更をダウンロードします。 ポリシーをクライアントに更新するトリガーには、他に次のものがあります。
+
+- ファイルまたはフォルダーを分類して保護するための右クリック。
+
+- ラベル付けおよび保護のための PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) の実行。
+
+- 24 時間ごと。
+
 
 ## <a name="configuring-your-organizations-policy"></a>組織のポリシーの構成
 
@@ -81,4 +86,3 @@ Azure Information Protection クライアントは、サポート対象の Offic
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

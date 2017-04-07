@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: bbd5cd5be72dfe72f8312f7ee5049dec2e46ac96
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>移行フェーズ 1 - AD RMS のサーバー側の構成
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
@@ -43,18 +39,6 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
 2.  構成データを Azure Information Protection にインポートします。 現在の AD RMS のデプロイ構成と、Azure RMS テナント キーに対する優先トポロジに応じて、この手順のプロセスは異なります。
 
 ### <a name="export-the-configuration-data-from-ad-rms"></a>構成データを AD RMS からエクスポートする
-
-> [!IMPORTANT]
-> この手順を実行する前に、まず、Azure Information Protection の要件として、AD RMS サーバーが暗号化モード 2 で実行されていることを確認します。
-> 
-> 暗号化モードを確認するには
-> 
-> - Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
-> 
-> - AD RMS のすべてのサポート対象バージョンの場合: [RMS アナライザー](https://www.microsoft.com/en-us/download/details.aspx?id=46437)と **AD RMS 管理**オプションを使用して、**RMS サービス情報**の暗号モードを表示します。
-> 
-> 暗号モードの値が **2** であることを確認します。 そうでない場合は、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」の暗号化モード 2 を有効にする手順を参照してください。
-
 
 すべての AD RMS クラスター上の、組織のコンテンツを保護していたすべての信頼された発行ドメインに対して、次の手順を実行します。 ライセンス専用クラスターでこれを実行する必要はありません。
 
@@ -224,4 +208,3 @@ Remove-PSDrive MyRmsAdmin -force
 「[フェーズ 2 - クライアント側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

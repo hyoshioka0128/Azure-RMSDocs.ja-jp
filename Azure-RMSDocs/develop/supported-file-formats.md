@@ -14,13 +14,10 @@ ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 54501ba875895129db71ab001d07373b266a225d
-
-
+ms.openlocfilehash: 780a2a4dc96c602cabcec69bffd4b8584097ca7b
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="supported-file-formats"></a>サポートされるファイル形式
 
 File API は、ネイティブ形式と Pfile 形式をサポートしています。
@@ -40,8 +37,3 @@ File API の現在のバージョンは、Microsoft Office ファイルに対す
 * [ファイル API の構成](file-api-configuration.md)
  
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

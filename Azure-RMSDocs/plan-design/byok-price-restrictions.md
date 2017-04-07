@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: c05521faed2cd8a7f9d32d81cd6899161e858153
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: ab3b25ebd04565f8cd0e9236c1241f38d4a2e8b2
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -87,4 +83,3 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Rights Management テナント キーを計画して実装する」の「[次のステップ](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

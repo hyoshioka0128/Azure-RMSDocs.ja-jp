@@ -10,14 +10,10 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 332160a0b2403313acc66f9b196ac068e370fb5c
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 4111fbaf678509cfb5b961f19dcc4b62f77c7a4a
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Azure Information Protection の既存のラベルを変更またはカスタマイズする方法
 
 >*適用対象: Azure Information Protection*
@@ -33,7 +29,7 @@ Azure Information Protection ポリシー内に構成することで、Informati
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. グローバル ポリシーのラベルを変更してすべてのユーザーに適用されるようにするには、**[Policy:Global]**(ポリシー:グローバル) ブレードで変更するラベルを選択し、**[ラベル]** ブレードで変更を行い、必要に応じてその後のブレードで設定を行います。 [スコープ ポリシー](configure-policy-scope.md)のラベルを変更し、選択されたユーザーだけに適用されるようにするには、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
+2. グローバル ポリシーのラベルを変更してすべてのユーザーに適用されるようにするには、**[Policy: Global (ポリシー: グローバル)]** ブレードで変更するラベルを選択し、**[ラベル]** ブレードで変更を行い、必要に応じてその後のブレードで設定を行います。 [スコープ ポリシー](configure-policy-scope.md)のラベルを変更し、選択されたユーザーだけに適用されるようにするには、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
 
     例外は、ラベルの順序を変更する場合です。これはグローバル ポリシーまたは選択されたスコープ ポリシーのブレードで行います。ラベルを右クリックするかラベルのコンテキスト メニューを選択してから、**[上へ移動]** または **[下へ移動]** オプションを選択します。
 
@@ -49,6 +45,5 @@ Azure Information Protection ポリシー内に構成することで、Informati
 ラベルに実行できるオプションを構成する方法や、Azure Information Protection ポリシーのその他の設定について詳しくは、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

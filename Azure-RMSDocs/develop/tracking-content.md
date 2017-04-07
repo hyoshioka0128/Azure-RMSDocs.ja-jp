@@ -14,15 +14,12 @@ ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-experimental: true
+experimental: True
 experiment_id: priyamo-test-20160729
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1e1bf622bfae4d2cca3b30798dbf6cb5c794e24a
-
-
+ms.openlocfilehash: 9ed32d58df81324bbab02aec03f3038dad3925fa
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
 このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
@@ -163,8 +160,3 @@ ms.openlocfilehash: 1e1bf622bfae4d2cca3b30798dbf6cb5c794e24a
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

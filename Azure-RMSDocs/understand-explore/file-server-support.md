@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 909ff4f7c96af65172604bb903173dd38d95dcf9
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 6fc25683bde3bc640f1575d700ac2f9378cbe478
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci"></a>Windows Server を実行するファイル サーバーとファイル分類インフラストラクチャ (FCI) の使用
 
 >*適用対象: Azure Information Protection、Office 365*
@@ -42,5 +37,4 @@ Office ファイル用 RMS コネクタをデプロイおよび構成する方�
 アプリケーションとサービスが Azure RMS をサポートする方法を理解したら、Azure RMS と、Rights Management のオンプレミス バージョンである Active Directory Rights Management サービス (AD RMS) とを比較してみることをお勧めします。 機能、要件、およびセキュリティ制御の比較については、「[Azure Rights Management と AD RMS を比較する](compare-azure-rms-ad-rms.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
