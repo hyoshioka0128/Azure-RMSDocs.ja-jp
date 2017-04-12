@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
@@ -49,13 +49,17 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 その他のお客様は、Azure Information Protection の入手方法に応じて、以下のサポート チャネルをご利用ください。
 
-- **Azure Information Protection Premium** (スタンドアロン): [Azure Portal でサポートを依頼](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)します。 画面が表示されたら **[基本]** ブレードで、**[問題の種類]** は **[テクニカル]** オプションを、**[サブスクリプション]** は **[テクニカル サポートを含むサブスクリプション]** を選択します。
-
-- **Azure Information Protection と Office 365 サブスクリプション**: 「[一般法人向け Office 365 のサポートへのお問い合わせ - 管理者向けヘルプ](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照して、電話番号と、Office 365 管理ポータルによるサポートへの問い合わせ方法をご確認ください。 
-
-- **Azure Information Protection と Enterprise Mobility + Security (EMS)**: Office 365 もお持ちの場合は、[Office 365 サポート チャネル](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)をご利用いただけます。 詳細については、「[Enterprise Mobility Suite: Support FAQ (Enterprise Mobility Suite: サポート FAQ)](https://technet.microsoft.com/dn932057.aspx)」を参照してください。
-
-- **Azure Information Protection と Secure Productive Enterprise (SPE)**: [Office 365 サポート チャネル](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)をご利用いただけます。
+- **Azure Information Protection** (スタンドアロン):  
+    - Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) から **[新しいサポート要求]** を作成します。 画面が表示されたら **[基本]** ブレードで、**[問題の種類]** は **[テクニカル]** オプションを、**[サブスクリプション]** は **[テクニカル サポートを含むサブスクリプション]** を選択します。
+    
+- **Azure Information Protection と Office 365 サブスクリプション**:  
+    - [「一般法人向け Office 365 のサポートへのお問い合わせ - 管理者向けヘルプ」](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) を参照して、電話番号と、Office 365 管理ポータルによるサポートへの問い合わせ方法をご確認ください。 
+    
+- **Azure Information Protection と Enterprise Mobility + Security (EMS)**:  
+    - Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) から **[新しいサポート要求]** を作成します。 画面が表示されたら **[基本]** ブレードで、**[問題の種類]** は **[テクニカル]** オプションを、**[サブスクリプション]** は **[テクニカル サポートを含むサブスクリプション]** を選択します。
+    
+- **Azure Information Protection と Secure Productive Enterprise (SPE)**:  
+    - [Office 365 サポート チャネル](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) をご利用いただけます。
 
 その他のサポート オプションについては、Microsoft 連絡先担当者にお問い合わせください。 
 
