@@ -4,7 +4,7 @@ description: "ユーザーを正常に認証できるように、Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fa0a9351177b44b4d770e37d24aee85e1e313c2d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 729d66e8d55d045b74ac5c794cf83ddcc2848d35
+ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
@@ -36,18 +36,24 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 
 Office 2010 を実行しているコンピューターの場合: 
 
+- Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、これらのコンピューターに [Azure Information Protection クライアント](../rms-client/aip-client.md) (推奨) または [Windows 用 Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md) が必要です。
+
 - ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
+
+証明書ベースの認証 (CBA) のサポート: 
+
+- Android 5.0 以上のバージョンをご使用の場合、Android 用 Azure Information Protection アプリは証明書ベースの認証をサポートします。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
 
 AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
 
 - 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
-Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち&1; つ以上が必要です。
+Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
 
-    -   Office 2013 をお持ちの場合、[2015 年 6 月 9 日付 Office 2013 用更新プログラム (KB3054853)](https://support.microsoft.com/kb/3054853) を必ずインストールしてください。 この更新プログラムの詳細や、Active Directory 認証ライブラリ (ADAL) を使用した最新の認証による Office 2013 へのサインインの詳細については、Office ブログの「[Office 2013 modern authentication public preview announced (Office 2013 最新認証パブリック プレビューの公開)](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)」を参照してください。
+    -   Office 2013 をご使用の場合に Active Directory Authentication Library (ADAL) をサポートするには、追加の更新プログラムのインストールが必要な場合があります。 たとえば、[Office 2013 用の更新プログラム (KB3054853) (2015 年 6 月 9 日)](https://support.microsoft.com/kb/3054853) です。 この更新プログラムの詳細や、Active Directory 認証ライブラリ (ADAL) を使用した最新の認証による Office 2013 へのサインインの詳細については、Office ブログの「[Office 2013 modern authentication public preview announced (Office 2013 最新認証パブリック プレビューの公開)](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)」を参照してください。
 
 - Azure Information Protection クライアント:
 
@@ -55,7 +61,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 -   Windows 用 Rights Management 共有アプリケーション:
 
-    -   最小バージョン 1.0.1908.0 がインストールされている必要があります。バージョンはコントロール パネルの [プログラムと機能] で確認できます。 現在、Rights Management 共有アプリケーションは Azure Information Protection クライアントに置き換わっていることに注意してください。 共有アプリケーションの詳細については、「[Windows 用 Rights Management 共有アプリケーション](../rms-client/sharing-app-windows.md)」を参照してください。
+    -   最小バージョン 1.0.1908.0 がインストールされている必要があります。バージョンはコントロール パネルの [プログラムと機能] で確認できます。 現在、Rights Management 共有アプリケーションは Azure Information Protection クライアントに置き換わっていることに注意してください。 共有アプリケーションの詳細については、[「Windows 用 Rights Management 共有アプリケーション」](../rms-client/sharing-app-windows.md) を参照してください。
 
 -   モバイル デバイス用や Mac コンピューター用の Rights Management 共有アプリ:
 
