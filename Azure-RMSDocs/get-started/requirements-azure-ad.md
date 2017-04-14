@@ -4,7 +4,7 @@ description: "ユーザーを正常に認証できるように、Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 729d66e8d55d045b74ac5c794cf83ddcc2848d35
-ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
+ms.openlocfilehash: 29bc3b414a1fde17aec03702a87f4364b565b848
+ms.sourcegitcommit: 65e2d607954dfb6c7529ff200602887b71c39312
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
@@ -42,7 +42,7 @@ Office 2010 を実行しているコンピューターの場合:
 
 証明書ベースの認証 (CBA) のサポート: 
 
-- Android 5.0 以上のバージョンをご使用の場合、Android 用 Azure Information Protection アプリは証明書ベースの認証をサポートします。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
+- Android 5.0 以上のバージョンをご使用の場合、Android 用 Azure Information Protection アプリは証明書ベースの認証をサポートします。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/azure/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
 
 AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
 

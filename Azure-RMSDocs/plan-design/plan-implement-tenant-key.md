@@ -4,7 +4,7 @@ description: "Azure Information Protection テナント キーに関する計画
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 03/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fbf39c45e5c3945863a473a0afecc366b72085d2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 23dea6c33b05989aed97faa6665eb4eef0811767
+ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
 translationtype: HT
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
@@ -23,7 +23,7 @@ translationtype: HT
 この記事の情報は、Azure Information Protection テナント キーに関する計画および管理に役立ちます。 たとえば、マイクロソフトがテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。
 
 > [!NOTE]
-> Azure Information Protection テナント キーのオンプレミスに相当するものは、サーバー ライセンサー証明書 (SLC) キーと呼ばれます。 Azure Information Protection では、Azure Information Protection のサブスクリプションがある組織ごとに&1; つ以上のキーを保持します。 組織で Azure Information Protection に対して使用されるキー (ユーザー キー、コンピューター キー、ドキュメント暗号化キーなど) は、すべて暗号化されて Azure Information Protection テナント キーにチェーンされます。
+> Azure Information Protection テナント キーのオンプレミスに相当するものは、サーバー ライセンサー証明書 (SLC) キーと呼ばれます。 Azure Information Protection では、Azure Information Protection のサブスクリプションがある組織ごとに 1 つ以上のキーを保持します。 組織で Azure Information Protection に対して使用されるキー (ユーザー キー、コンピューター キー、ドキュメント暗号化キーなど) は、すべて暗号化されて Azure Information Protection テナント キーにチェーンされます。
 
 **概要:** 次の表は、推奨されるテナント キー トポロジのクイック ガイドとして使用してください。 詳細については、別のドキュメントを参照してください。
 
@@ -54,7 +54,7 @@ Microsoft 管理のテナント キーを使用して Azure Information Protecti
 ## <a name="the-tenant-key-lifecycle"></a>テナント キーのライフサイクル
 Microsoft でテナント キーを管理することになった場合、キー ライフサイクル操作の大半を Microsoft で行います。 ただし、テナント キーを自主管理することになった場合、Azure Key Vault でキー ライフサイクル操作の多くといくつかの追加の手順を自社で行う必要があります。
 
-この&2; つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
+この 2 つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
 
 ![Azure Information Protection テナント キー ライフサイクル - Microsoft が既定で管理](../media/RMS_BYOK_cloud.png)
 

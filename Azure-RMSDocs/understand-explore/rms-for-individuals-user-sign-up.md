@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 12f681ccfbcd7da2192df2be057f92d31a856bda
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 859ec4aa127b995ca9acb6409b8644a0c87d7ffd
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="how-users-sign-up-for-rms-for-individuals"></a>個人用 RMS にサインアップする方法
@@ -33,7 +33,7 @@ translationtype: HT
 
 3.  [**サインアップ**] をクリックします。
 
-    Microsoft では、ユーザーの電子メール アドレスを使用して、[Azure Information Protection の有料サブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)、または [Azure Resource Manager を使用したデータ保護を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をユーザーの組織が既に利用しているかどうかを確認しています。 組織が所有している場合、個人用 RMS は必要ないので、すぐにサインインされ、個人用 RMS へのセルフサービス サインアップは取り消されます。 有料のサブスクリプションが見つからない場合は、次の手順に進みます。
+    Microsoft では、ユーザーの電子メール アドレスを使用して、[Azure Information Protection の有料サブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)、または [Azure Resource Manager を使用したデータ保護を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をユーザーの組織が既に利用しているかどうかを確認しています。 組織が所有している場合、個人用 RMS は必要ないので、すぐにサインインされ、個人用 RMS へのセルフサービス サインアップは取り消されます。 有料のサブスクリプションが見つからない場合は、次の手順に進みます。
 
 4.  入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 
@@ -59,7 +59,7 @@ translationtype: HT
 
 2.  組織には、個人用 RMS のサブスクリプションが付与されます。 これで、そのユーザーは、Azure によって認証されるようになり、Azure Rights Management を使用してファイルを保護するとともに、他のユーザーが保護しているファイルを読み取ることができるようになります。 ファイルの保護や保護されたファイルの読み取りを行うには、無料の [Azure Information Protection クライアント](../rms-client/aip-client.md)など、RMS 対応アプリケーションを用意する必要があります。
 
-3.  同じ組織に属する&2; 人目のユーザーが個人用 RMS サブスクリプションを要求すると、組織の個人用 RMS サブスクリプションを使用して、既に作成済みの Azure ディレクトリに新しいユーザー アカウントが追加されます。 この&2; 人目のユーザーは、最初のユーザーが実行できるすべての操作を実行できます (ファイルの保護と保護されたファイルの読み取り)。さらに、これらの&2; 人のユーザーは既定のテンプレートをファイルに即座に適用して、組織の Azure ディレクトリのアカウントにアクセス制限を適用することができるため、セキュリティで保護された共同作業を簡単に行えるようになります。
+3.  同じ組織に属する 2 人目のユーザーが個人用 RMS サブスクリプションを要求すると、組織の個人用 RMS サブスクリプションを使用して、既に作成済みの Azure ディレクトリに新しいユーザー アカウントが追加されます。 この 2 人目のユーザーは、最初のユーザーが実行できるすべての操作を実行できます (ファイルの保護と保護されたファイルの読み取り)。さらに、これらの 2 人のユーザーは既定のテンプレートをファイルに即座に適用して、組織の Azure ディレクトリのアカウントにアクセス制限を適用することができるため、セキュリティで保護された共同作業を簡単に行えるようになります。
 
 4.  同じ組織に属する以降のユーザーも同様のパターンに従い、組織の Azure ディレクトリに (新しいユーザーがサインアップすると) ユーザー アカウントが追加されます。 ディレクトリに多数のアカウントが追加されると、より多くのユーザーが同僚やパートナーとセキュリティで保護された共同作業を行うことができ、承認されていないユーザーがファイルにアクセスすべきでない場合に、そのファイルを読み取れないように簡単に設定できます。
 
@@ -83,7 +83,7 @@ translationtype: HT
 
     -   組織で使用された Rights Management のアクティビティをすべてログに記録できます。 この機能は非常に有用であり、保護されたファイルの監視や、それらのファイルに正常にアクセスしているユーザーの監視だけでなく、未承認のユーザーが保護されたファイルへのアクセスを試行している不審な行為を特定することもできます。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
-    -   保護されたドキュメントの追跡および取り消しの機能が[サブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)でサポートされている場合、ユーザーはそれらの機能を使用できます。 詳細については、[Azure Information Protection ユーザー ガイド](../rms-client/client-user-guide.md)の「[Track and revoke your documents (ドキュメントの追跡および取り消し)](../rms-client/client-track-revoke.md)」を参照してください。
+    -   保護されたドキュメントの追跡および取り消しの機能が[サブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)でサポートされている場合、ユーザーはそれらの機能を使用できます。 詳細については、[Azure Information Protection ユーザー ガイド](../rms-client/client-user-guide.md)の「[Track and revoke your documents (ドキュメントの追跡および取り消し)](../rms-client/client-track-revoke.md)」を参照してください。
 
     -   BYOK (Bring Your Own Key) ソリューションを実装して、組織の IT ポリシーに従って Azure Rights Management のテナント キーをオンプレミスで生成し、そのキーをハードウェア セキュリティ モジュール (HSM) を使用して Microsoft に安全に転送することができます。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
 

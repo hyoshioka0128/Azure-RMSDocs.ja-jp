@@ -4,7 +4,7 @@ description: "組織の Azure Information Protection をデプロイするため
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f249994c2ac1cf02c4572d3f7cb8ba6566cb142
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 90cfc530d8d4289e4c614e822cd666c50db86b90
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
@@ -24,7 +24,7 @@ translationtype: HT
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Azure Information Protection のサブスクリプション|Azure Information Protection サイトの[サブスクリプション情報](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing)および[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を見て、使用する Azure Information Protection 機能を含むサブスクリプションを組織が所有していることを確認します。|
+|Azure Information Protection のサブスクリプション|Azure Information Protection サイトの[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)および[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)を見て、使用する Azure Information Protection 機能を含むサブスクリプションを組織が所有していることを確認します。|
 |Azure Active Directory|組織には Azure Information Protection のユーザー認証をサポートするための Azure Active Directory (Azure AD) が必要です。 また、オンプレミスのディレクトリ (AD DS) のユーザー アカウントを使用する場合は、ディレクトリ統合も構成する必要があります。<br /><br />必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure Information Protection で多要素認証 (MFA) がサポートされます。<br /><br />詳細については、「[Azure Information Protection の Azure Active Directory の要件](requirements-azure-ad.md)」をご覧ください。|
 |クライアント デバイス|ユーザーは Azure Information Protection をサポートするオペレーティング システムを実行するクライアント デバイス (コンピューターまたはモバイル デバイス) を所有している必要があります。<br /><br />次のデバイスでは、Azure Information Protection クライアントをサポートします。これにより、ユーザーは次の Office のドキュメントや電子メールの分類およびラベル付けを行うことができます。<br /><br />- Windows 10 (x86、x64)<br /><br />- Windows 8.1 (x86、x64)<br /><br />- Windows 8 (x86、x64)<br /><br />- Windows 7 Service Pack 1 (x86、x64)<br /><br />Azure Rights Management サービスを使用して、このクライアントがデータを保護する場合、Azure Rights Management サービスをサポートする同じデバイス (Windows、Mac、iOS、Android) からデータを使用できます。 <br /><br />Azure Rights Management サービスをサポートするデバイスの詳細については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](../get-started/requirements-client-devices.md)」をご覧ください。|
 |アプリケーション|Azure Information Protection クライアントは、次の Office スイートのいずれかの Office アプリケーション **Word**、**Excel**、**PowerPoint**、**Outlook** を使用して、ファイルと電子メールにラベルを付け、保護することができます。<br /><br /> - Office 365 ProPlus と 2016 アプリまたは 2013 アプリ (クイック実行または Windows インストーラー ベースのインストール)<br /><br />- Office Professional Plus 2016<br /><br />- Office Professional Plus 2013 Service Pack 1<br /><br />- Office Professional Plus 2010 <br /><br />データ保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。|
