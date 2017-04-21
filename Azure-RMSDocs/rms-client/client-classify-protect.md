@@ -4,7 +4,7 @@ description: "ドキュメントや電子メールを分類して保護する方
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: edc8c7227a0f2b493a64f25a26a64aef3a314e39
-ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
+ms.openlocfilehash: f461b349440043bcf5d8624731eda86968194462
+ms.sourcegitcommit: 52b7502e7049358f9fc0a418625bb460bb81479f
 translationtype: HT
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Azure Information Protection を使用してファイルや電子メールを分類して保護する
@@ -37,7 +37,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
-Azure Information Protection バーを使用して、構成されているラベルを&1; つ選択します。 
+Azure Information Protection バーを使用して、構成されているラベルを 1 つ選択します。 
 
 たとえば、次の図は、**[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 [内部] などのラベルを設定するには、**[内部]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。
 
@@ -133,7 +133,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
     - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選択します。
     
-    - **ユーザーの選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザーやグループについては、アドレス帳を使用して検索と選択ができます。 別の組織のユーザーについては、完全なメール アドレスを指定する必要があります。 個人用のメールアドレスは現在サポートされていないため、仕事用のメール アドレスを使用してください。
+    - **ユーザーの選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 現在、個人のメール アドレスはサポートされていないことに注意してください。
         
     - **アクセスの有効期限**: ファイルの期間が限定されていて、指定された日付を過ぎた後は指定されたユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 選択した日付の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
 

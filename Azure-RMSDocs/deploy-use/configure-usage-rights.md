@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b6250b94a73a0ddc9a91ef7c2615c050ba915098
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: ee29da28d75472c2c2ba5ebc3c7e89bc0b006f6d
+ms.sourcegitcommit: 941cc65fe779e87ae8027c17f433b859a5c32386
 translationtype: HT
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
@@ -34,7 +34,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |共通名: **保存** <br /><br />ポリシーでのエンコード: **EDIT**|ドキュメントを現在の場所に保存することをユーザーに許可します。<br /><br />Office アプリケーションで、この権限はドキュメントを変更することもユーザーに許可します。|Office カスタム権限: **変更**と**フルコントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **ファイルの保存**<br /><br />AD RMS テンプレートでの名前: **保存** <br /><br />API の定数または値: `IPC_GENERIC_WRITE L"EDIT"`|
 |共通名: **コメント** <br /><br />ポリシーでのエンコード: **COMMENT**|コンテンツに注釈やコメントを追加するオプションを有効にします。<br /><br />この権限は SDK で使用でき、Azure Information Protection と Windows PowerShell の RMS 保護モジュールでアドホック ポリシーとして使用できます。また、いくつかのソフトウェア ベンダーのアプリケーションに実装されています。 ただし広く使用されてはおらず、Office アプリケーションでは現在のところサポートされていません。|Office カスタム権限: 実装されていません。 <br /><br />Azure クラシック ポータルでの名前: 実装されていません。<br /><br />AD RMS テンプレートでの名前: 実装されていません。 <br /><br />API の定数または値: `IPC_GENERIC_COMMENT L"COMMENT`|
 |共通名: **名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード: **EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 Office ドキュメントと Azure Information Protection クライアントについては、ファイルを保護なしで保存できます。<br /><br />この権限は、アプリケーションでその他のエクスポート オプション ( **[OneNote に送る]**など) を実行することもユーザーに許可します。<br /><br /> 注: この権限が与えられていない場合、ユーザーが選択したファイル形式が Rights Management 保護をネイティブにサポートしていないと、Office アプリケーションでは新しい名前でドキュメントが保存されます。|Office カスタム権限: **変更**と**フルコントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツのエクスポート (名前を付けて保存)**<br /><br />AD RMS テンプレートでの名前: **エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
-|共通名: **転送** <br /><br />ポリシーでのエンコード: **FORWARD**|電子メール メッセージの転送、 **[宛先]** 、 **[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。|Office カスタム権限: **転送不可**標準ポリシーを使用すると拒否されます。<br /><br />Azure クラシック ポータルでの名前: **転送**<br /><br />AD RMS テンプレートでの名前: **転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
+|共通名: **転送** <br /><br />ポリシーでのエンコード: **FORWARD**|電子メール メッセージの転送、 **[宛先]** 、 **[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。 <br /><br />注: 別の組織に電子メールを送信する場合、受信者の Outlook クライアントまたは Outlook Web App には [転送] オプションに加えて **[コンテンツの編集]、[編集]** の権限 (一般的な名前) が必要です。|Office カスタム権限: **転送不可**標準ポリシーを使用すると拒否されます。<br /><br />Azure クラシック ポータルでの名前: **転送**<br /><br />AD RMS テンプレートでの名前: **転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |共通名: **フル コントロール** <br /><br />ポリシーでのエンコード: **OWNER**|ドキュメントに対するすべての権限を付与します。利用可能なすべての操作を実行できます。<br /><br />ドキュメントの保護解除と再保護の能力も含まれます。|Office カスタム権限: **フル コントロール** カスタム オプション。<br /><br />Azure クラシック ポータルでの名前: **フル コントロール**<br /><br />AD RMS テンプレートでの名前: **フル コントロール** <br /><br />API の定数または値: `IPC_GENERIC_ALL L"OWNER"`|
 |共通名: **印刷** <br /><br />ポリシーでのエンコード: **PRINT**|コンテンツを印刷するオプションを有効にします。|Office カスタム権限: カスタム アクセス許可の**コンテンツの印刷**オプション。 受信者単位の設定ではありません。<br /><br />Azure クラシック ポータルでの名前: **印刷**<br /><br />AD RMS テンプレートでの名前: **印刷** <br /><br />API の定数または値: `IPC_GENERIC_PRINT L"PRINT"`|
 |共通名: **返信** <br /><br />ポリシーでのエンコード: **REPLY**|メール クライアントの **[返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行に対する変更は許可しません。<br /><br />注: 別の組織に電子メールを送信する場合、受信者の Outlook クライアントまたは Outlook Web App には [返信] オプションに加えて **[コンテンツの編集]、[編集]** の権限 (一般的な名前) が必要です。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **返信**<br /><br />AD RMS テンプレートでの名前: **返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLY`|

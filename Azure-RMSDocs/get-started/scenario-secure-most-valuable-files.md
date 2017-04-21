@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f509efb599bd17d5a76c08e24a7d503394415785
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 8a0ca5fa2d7aa6f1f8f8b5ccab0a3a3bd122b50c
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---secure-your-most-few-valuable-files"></a>シナリオ - 重要度の高い (いくつかの) ファイルを保護する
@@ -51,7 +51,7 @@ translationtype: HT
 |次に示すようにカスタム テンプレートを構成した|[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)|
 |Rights Management 共有アプリケーションは Windows コンピューターにデプロイされるため、次のセクションで説明されているように、これらのファイルをその場で保護できます。|[Rights Management 共有アプリケーションをダウンロードしてインストールする](../rms-client/install-sharing-app.md)|
 |許可されているユーザーが最小バージョンの Office 2013 をインストール済みである|Office 2010 を使用しているユーザーは、Rights Management 共有アプリケーションもインストールする必要があります。|
-|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合は、ドキュメント追跡サイトを使用して、これらのドキュメントにアクセスするユーザーを確認し、必要に応じてアクセスを取り消すことができません。 この場合は、ドキュメント追跡がサポートされているサブスクリプションを購入するか、この制限を受け入れます。 Azure Rights Management サービスの[使用状況ログ](../deploy-use/log-analyze-usage.md)機能の使用も検討してください。この機能では、どのユーザーがいつ各ファイルにアクセスしたかなどの情報が提供されるため、潜在的な疑わしい動作の検出に役立ちます。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
+|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合は、ドキュメント追跡サイトを使用して、これらのドキュメントにアクセスするユーザーを確認し、必要に応じてアクセスを取り消すことができません。 この場合は、ドキュメント追跡がサポートされているサブスクリプションを購入するか、この制限を受け入れます。 Azure Rights Management サービスの[使用状況ログ](../deploy-use/log-analyze-usage.md)機能の使用も検討してください。この機能では、どのユーザーがいつ各ファイルにアクセスしたかなどの情報が提供されるため、潜在的な疑わしい動作の検出に役立ちます。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
 
 ### <a name="to-configure-the-custom-template"></a>カスタム テンプレートを構成するには
 
@@ -61,7 +61,7 @@ translationtype: HT
 
     -   権限: メールが有効なグループ**特権アクセス**に**共同作成者**の権限を付与します。
 
-    -   スコープ: メールが有効な&3; つのグループ**特権アクセス**、**IT コンプライアンス マネージャー**、および **RMS 管理者**を選択します。
+    -   スコープ: メールが有効な 3 つのグループ**特権アクセス**、**IT コンプライアンス マネージャー**、および **RMS 管理者**を選択します。
 
     -   オフライン アクセス: **インターネットに接続している場合のみコンテンツを利用できます**
 

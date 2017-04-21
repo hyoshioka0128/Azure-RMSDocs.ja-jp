@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 629717055620af93c5870fff4ef833dc7931e622
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 89c563ebcf62dc80cbda15048780adf5e414e70b
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>シナリオ - 別の組織のユーザーと Office ファイルを共有する
@@ -46,7 +46,7 @@ translationtype: HT
 |Rights Management がアクティブ化されている|[Azure Rights Management をアクティブにする](https://technet.microsoft.com/library/jj658941.aspx)|
 |Rights Management 共有アプリケーションが、Windows を実行するユーザーのコンピューターにデプロイされている|[Microsoft Rights Management 共有アプリケーションの自動デプロイ](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |ユーザーは Office 2013 の Outlook を使用する|ユーザーが Office 2016 または Office 2010 を使用している場合は、スクリーン ショットを対応するバージョンに置き換えて、図とユーザーに表示される内容とが一致するようにします。|
-|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
+|Azure Information Protection のサブスクリプションにはドキュメント追跡が含まれる|サブスクリプションにドキュメントの追跡と取り消しが含まれていない場合、ユーザーはユーザー用の手順の一部のステップを完了することができません。 このような場合は、ドキュメントの追跡と取り消しの機能をサポートするサブスクリプションを購入するか、またはユーザー手順を変更してこれらの機能を使用するステップを削除します。<br /><br />Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)に関するページを参照してください。|
 
 ## <a name="user-documentation-instructions"></a>ユーザー ドキュメントの手順
 次のテンプレートを使用して、ユーザーの手順をコピーしてエンド ユーザーの通信欄に貼り付け、環境に合わせて次の変更を行います。
