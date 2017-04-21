@@ -4,7 +4,7 @@ description: "Azure Rights Management (Azure RMS) とは、Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a85c6135be95bb51ba4ac336ab78131382232626
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 53712ee69ac7ab54feb3036ada4eb81383caf786
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
@@ -34,7 +34,7 @@ Azure Rights Management (Azure RMS) とは、[Azure Information Protection](what
 
 ![Azure RMS のしくみ](../media/AzRMS_elements.png)
 
-Azure RMS を使用した保護はさまざまなクラウド サブスクリプションに含まれており、さまざまな機能をサポートしています。 ここでは、使用できるサブスクリプションと [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) サイトでサポートされる機能の詳細情報についても説明します。
+Azure RMS を使用した保護はさまざまなクラウド サブスクリプションに含まれており、さまざまな機能をサポートしています。 ここでは、使用できるサブスクリプションと [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) サイトでサポートされる機能の詳細情報についても説明します。
 
 ## <a name="next-steps"></a>次のステップ
 
