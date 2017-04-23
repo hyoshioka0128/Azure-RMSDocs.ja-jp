@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: b6980bdcecb02471159f7873e80a05d234726d0e
-ms.sourcegitcommit: 85aaded97659bbc0a3932569aab29b1bf472fea4
+ms.openlocfilehash: 69ff30dea84717557153bbd0bf2013d3fc06d320
+ms.sourcegitcommit: 0b5aa77825463eccfb4856aa549a2dae80a1e361
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
@@ -48,15 +48,15 @@ Azure Information Protection ポリシーを構成するには、Azure Active Di
 
 [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもラベル機能を試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試用できますが、ラベルの変更または新規追加には Azure Portal にサインインする必要があります。 
 
-## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Azure Portal のオプションが P1 か P2 かを確認するにはどうすればよいですか?
+## <a name="which-options-in-the-azure-portal-are-p2"></a>Azure Portal のオプションが P2 かどうかを確認するにはどうすればよいですか?
 
-**Azure Information Protection Premium 1 (P1)** サブスクリプションに含まれる機能か、**Azure Information Protection Premium 2 (P2)** サブスクリプションに含まれる機能かを確認するには、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)を参照してください。 ただし、一般的なガイドとして、自動分類や Hold Your Own Key (HYOK) などの高度な機能は、Azure Information Protection Premium 2 のサブスクリプションに固有です。
+**Azure Information Protection Premium 2** (P2) のサブスクリプションを必要とする Azure Portal のオプションでは、そのことを示す情報ポップアップ メッセージが表示されるようになりました。 P1 および P2 のサブスクリプションに含まれる機能について詳しくは、Azure Information Protection のサイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)をご覧ください。
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
 ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
 
-たとえば、**Confidential** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Confidential** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか 1 つのみです。 したがって、表示されるラベル セットは **Confidential \ Legal** のようになります。 そのファイルのメタデータには、**Confidential** のカスタム テキスト プロパティーが 1 つ、**Legal** のカスタム テキスト プロパティーが 1 つ、さらに両方の値 (**Confidential Legal**) を含むものが含まれます。 
+たとえば、**Confidential** というラベルに、**Legal** や **Finance** などのサブラベルを含めることができます。 これらのサブラベルには、異なる分類ビジュアル マーキングと異なる Rights Management テンプレートをそれぞれ適用することができます。 ユーザーは **Confidential** ラベル自体を選択することはできません。選択できるのは、**Legal** などのそのサブラベルのいずれか 1 つのみです。 したがって、表示されるラベル セットは **Confidential \ Legal** のようになります。 そのファイルのメタデータには、**Confidential** のカスタム テキスト プロパティが 1 つ、**Legal** のカスタム テキスト プロパティが 1 つ、さらに両方の値 (**Confidential Legal**) を含むものが含まれます。 
 
 サブラベルを使用する場合は、プライマリ ラベルでビジュアル マーキング、保護、および条件を構成しないでください。 サブレベルを使用する場合は、サブラベルのみにこれらの設定を構成してください。 プライマリ ラベルとそのサブラベルでこれらの設定を構成した場合は、サブラベルの設定が優先されます。
 

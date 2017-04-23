@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: fbd76e377c8b11b8e64187685144010dce9bbb25
-ms.sourcegitcommit: ee432bdb6783bfe311a7ebbc9a5f20a7c2ae759c
+ms.openlocfilehash: 16e2137dead237e59ed1d4db9e88a2a29f9595a9
+ms.sourcegitcommit: bf103c02966357eccad0a4912851ceae6937c7b3
 translationtype: HT
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
@@ -82,6 +82,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [サービス アプリを別のテナントにデプロイする方法] (how-to-deploy-app.md)
 - [方法: RMS サーバーをインストールして構成する (サービス)](how-to-install-and-configure-an-rms-server.md)
 - [方法: ドキュメント追跡を使用する (ユーザー)](how-to-use-document-tracking.md)
+- [Azure Information Protection で対称キーを更新する方法](how-to-renew-symmetric-key.md)
 
 ### <a name="security-and-authentication"></a>セキュリティと認証
 
@@ -101,7 +102,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ## <a name="videos"></a>ビデオ
 
-Microsoft の Dan Plastina が、[Azure Information Protection の概要](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)を説明します。
+Microsoft の Dan Plastina が、[Azure Information Protection の概要](https://www.microsoft.com/cloud-platform/azure-information-protection)を説明します。
 
 これらは、Micorsoft 2016 Ignite カンファレンスのビデオです。
 

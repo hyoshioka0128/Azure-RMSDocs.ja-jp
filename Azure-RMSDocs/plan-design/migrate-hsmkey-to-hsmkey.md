@@ -4,7 +4,7 @@ description: "この手順は、AD RMS から Azure Information Protection へ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dc2b5e083b016953688214dddbe42f15b675641b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 936b6e66c7ca0f94e437b91847166b51cf939b3f
+ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
 translationtype: HT
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
@@ -23,12 +23,12 @@ translationtype: HT
 
 この手順は、[AD RMS から Azure Information Protection への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内の HSM で保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。 
 
-選択した構成シナリオでない場合、[手順 2 に戻ってください。AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)、別の構成を選択します。
+選択した構成シナリオでない場合、[手順 4 に戻り、AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)、別の構成を選択します。
 
 > [!NOTE]
 > これらの手順は、AD RMS キーがモジュールで保護されていることを前提としています。 これは、最も一般的なケースです。 
 
-これは、HSM キーと AD RMS 構成を Azure Information Protection にインポートする&2; 段階の手順で、結果はお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
+これは、HSM キーと AD RMS 構成を Azure Information Protection にインポートする 2 段階の手順で、結果はお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
 
 Azure Information Protection テナント キーは Azure Key Vault によって格納され管理されるので、移行のこの部分では、Azure Information Protection だけでなく、Azure Key Vault での管理も必要です。 Azure Key Vault が組織で自分以外の管理者によって管理されている場合は、その管理者と調整を行い連携してこれらの手順を完了する必要があります。
 
@@ -49,7 +49,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
-2. インターネットに接続されたワークステーションでの PowerShell セッションで、[Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) コマンドレットを使用して、Azure Information Protection テナント キーを格納するキー コンテナーへの Azure Rights Management サービス プリンシパルによるアクセスを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
+2. インターネットに接続されたワークステーションの PowerShell セッションで、[Set-AzureRmKeyVaultAccessPolicy](/powershell/resourcemanager/azurerm.keyvault/v2.7.0/set-azurermkeyvaultaccesspolicy) コマンドレットを使って、Azure Information Protection テナント キーを保存するキー コンテナーに Azure Rights Management サービス プリンシパルがアクセスするのを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
     
     たとえば、Azure Information Protection 用に作成したキー コンテナーの名前が contoso-byok-ky、リソース グループの名前が contoso-byok-rg である場合は、次のコマンドを実行します。
     
@@ -62,9 +62,9 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 これらの手順は、Azure Information Protection の管理者によって実行されます。
 
-1.  インターネットに接続されたワークステーションでの PowerShell セッションで、[Connnect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx) コマンドレットを使用して Azure Rights Management サービスに接続します。
+1.  インターネットに接続されたワークステーションでの PowerShell セッションで、[Connnect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスに接続します。
     
-    [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) コマンドレットを使用して、最初にエクスポートした信頼された発行ドメイン (.xml) ファイルをアップロードします。 信頼された発行ドメインが複数あるために複数の .xml ファイルがある場合は、移行後にコンテンツを保護するために Azure RMS で使用する HSM キーに対応するエクスポートされた信頼された発行ドメインが含まれるファイルを選択します。 
+    [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) コマンドレットを使用して、最初にエクスポートした信頼された発行ドメイン (.xml) ファイルをアップロードします。 信頼された発行ドメインが複数あるために複数の .xml ファイルがある場合は、移行後にコンテンツを保護するために Azure RMS で使用する HSM キーに対応するエクスポートされた信頼された発行ドメインが含まれるファイルを選択します。 
     
     このコマンドレットを実行するには、前の手順で識別されたキーの URL が必要です。
     
@@ -78,15 +78,15 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 2.  コマンドが完了したら、信頼された発行ドメインをエクスポートして作成した他の各 .xml ファイルに対して手順 1 を繰り返します。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。 ただし、これらのファイルの場合は、Import コマンドを実行するときに **-Active** を **false** に設定します。  
 
-3.  [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) コマンドレットを使用して Azure Rights Management サービスから切断します。
+3.  [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスから切断します。
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > Azure Key Vault で Azure Information Protection テナント キーが使用しているキーを後で確認する必要がある場合は、Azure RMS コマンドレット [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) を使用します。
+    > Azure Key Vault で Azure Information Protection テナント キーが使用しているキーを後で確認する必要がある場合は、Azure RMS コマンドレット [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) を使用します。
 
-以上で「[手順 3. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant)」に進む準備ができました。
+以上で「[手順 5. Azure Information Protection テナントをアクティブ化する](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)」に進む準備ができました。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
