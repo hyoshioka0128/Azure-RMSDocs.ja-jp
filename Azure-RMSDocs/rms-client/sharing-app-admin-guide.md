@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 855523925a6f774568cdbd55a7645223d015b013
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: c8f2c94da965dafd7f428b4d385253bc6dff4714
+ms.sourcegitcommit: 05b7e06e330a33936aeeef32934717f870963612
 translationtype: HT
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Rights Management 共有アプリケーション管理者ガイド
@@ -87,7 +87,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 ### <a name="to-deploy-the-rms-sharing-application-for-office-2010-and-azure-information-protection"></a>Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection をデプロイするには
 
-1.  Azure Active Directory Rights Management 準備ツールを実行して組織の証明サービスの URL を取得できるように、Office 365 または Azure Active Directory テナントのグローバル管理者である必要があります。 このツールは、1 台のコンピューターで&1; 回のみ実行する必要があります。 RMS 共有アプリケーションを各コンピューターにインストールする場合は、証明サービスの URL を使用します。
+1.  Azure Active Directory Rights Management 準備ツールを実行して組織の証明サービスの URL を取得できるように、Office 365 または Azure Active Directory テナントのグローバル管理者である必要があります。 このツールは、1 台のコンピューターで 1 回のみ実行する必要があります。 RMS 共有アプリケーションを各コンピューターにインストールする場合は、証明サービスの URL を使用します。
 
     1.  ローカル管理者アカウントを使用して、コンピューターにログインします。
 
@@ -116,7 +116,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
         > [!NOTE]
         > このコマンドでは、Azure の資格情報の入力が求められる場合があります。 コンピューターがドメインに参加していない場合は、入力が求められます。 コンピューターがドメインに参加している場合は、キャッシュされた資格情報をツールで使用できる場合があります。
 
-2.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権を使用して次のコマンドを&1; 回実行します。
+2.  RMS 共有アプリケーションをインストールする各コンピューターで、昇格した特権を使用して次のコマンドを 1 回実行します。
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
@@ -251,7 +251,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 2.  aadrmprep.exe コマンドの成功を確認するには、各コンピューターのインストール ログ ファイルで、 **aadrmprep.exe exited with status SUCCESS**というテキストを探します。
 
     > [!NOTE]
-    > 場合によっては、このインストールは&2; 回実行され、1 回目に失敗し、2 回目に成功することがあります。
+    > 場合によっては、このインストールは 2 回実行され、1 回目に失敗し、2 回目に成功することがあります。
 
     このツールによって変更されたレジストリを手動で確認する場合、変更は次のとおりです。
 
@@ -340,7 +340,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 3.  テストが完了し、問題を解決したら、このガイドの自動デプロイメントの手順を使用して、すべてのユーザーに最新バージョンをデプロイします。
 
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection のみ: ドキュメントの追跡の構成
-[ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
+[ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
 
 これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure Information Protection モジュールが必要です。 インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
@@ -376,7 +376,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 ### <a name="usage-logging-for-the-document-tracking-site"></a>ドキュメント追跡サイトの使用状況のログ記録
 
-使用状況ログ ファイルの&2; つのフィールド **AdminAction** と **ActingAsUser** は、ドキュメント追跡に適用できます。
+使用状況ログ ファイルの 2 つのフィールド **AdminAction** と **ActingAsUser** は、ドキュメント追跡に適用できます。
 
 **AdminAction** - このフィールドは、管理者が管理者モードでドキュメント追跡サイトを使用した場合 (たとえば、ユーザーの代理でドキュメントを取り消した場合や、ドキュメントが共有された時間を確認した場合) に true になります。 ユーザーがドキュメント追跡サイトにサインインすると、このフィールドは空になります。
 

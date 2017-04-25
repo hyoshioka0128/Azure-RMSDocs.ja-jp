@@ -4,7 +4,7 @@ description: "Microsoft Azure Information Protection に関連する単語、フ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 04/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 7ed60b1a2c02007668a11fdf8278bf196ee84521
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
 translationtype: HT
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
@@ -24,9 +24,9 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 |用語|定義|
 |--------|--------------|
-|AADRM|Azure Rights Management 用の Windows PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management という名前だったときに、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の非公式な略語から派生したサービスです。|
+|AADRM|Azure Rights Management サービス用の Windows PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management という名前だったときに、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] の非公式な略語から派生したものです。|
 |アクティブ化|[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] サービスを有効化して、組織がドキュメントや電子メールを保護できるようにします。 この操作により、Exchange Online と SharePoint Online の Rights Management 機能も有効になります。|
-|Active Directory Rights Management サービス|*AD RMS*という略称で呼ばれることもあります。<br /><br />Windows Server の役割の&1; つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
+|Active Directory Rights Management サービス|*AD RMS*という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
 |Azure Information Protection|分類、ラベル付け、保護を使用してドキュメントと電子メールを保護するクラウドベースのサービスです。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
 |Azure Rights Management|*Azure RMS*という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
@@ -43,6 +43,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |一般保護|任意のファイルの種類を暗号化し、承認されていないユーザーがそのファイルを開けないようにする保護レベル。 ファイルを開いた後は暗号化が解除され、[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をネイティブでサポートしていないアプリケーションで使用できます。|
 |HYOK|「*Hold Your Own Key*」を参照してください。|
 |Hold Your Own Key|*HYOK* という略称で呼ばれることもあります。<br /><br />通常は規制やコンプライアンス上の理由から、キーをオンプレミスで生成および保存する組織の構成およびトポロジ オプション。|
+|キー オブジェクト|テナント キーのコンテキストにおいて、暗号化操作のために Azure Rights Management サービスが必要とするメタデータを含むエンティティ。|
 |情報保護|*IP*という略称で呼ばれることもあります。<br /><br />業界標準の一般的な用語です。データやファイルを未承認のアクセスから保護することを指します。これらのデータやファイルは、電子メールやドキュメント共有によって組織の外部に移動しても引き続き保護されます。 Microsoft Azure Information Protection は、情報保護 (IP) ソリューションの一例です。|
 |Information Rights Management|*IRM*という略称で呼ばれることもあります。<br /><br />Exchange Server、Word、および SharePoint Online などの Office サービスと共に使用される用語で、Microsoft Rights Management サービスをサポートする機能を説明します。|
 |IRM|*Information Rights Management*をご覧ください。|
