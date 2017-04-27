@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42cdcb888656df1b623c34775bd3bfe20daee952
-ms.sourcegitcommit: 89e13f6be15a96293e0af0b2529a2e39563a63b6
+ms.openlocfilehash: adb5ad1f599c5996044ad2fce0e1e5889d81c81b
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
@@ -30,7 +30,7 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
 ツールをインストールします。 手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 > [!NOTE]
-> この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が 2.5.0.0 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version`
+> この Windows PowerShell モジュールを既にダウンロードしている場合は、`(Get-Module aadrm -ListAvailable).Version` コマンドを実行して、バージョン番号が **2.9.0.0** 以上であることを確認します。
 
 移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、**<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 

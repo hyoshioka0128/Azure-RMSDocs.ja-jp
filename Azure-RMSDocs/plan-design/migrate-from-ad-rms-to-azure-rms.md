@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89ccb599fe21c409d36b9d0ab28e274e6aedaf1e
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
+ms.openlocfilehash: b1d643cdb28f46c03e9c0c2707d44f9ff9eedcb3
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
@@ -119,10 +119,6 @@ AD RMS 暗号化モードを確認するには:
 
 -   Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
 
--   オンプレミスのキーをアーカイブとして Azure Information Protection にインポートし (インポート プロセス中に TPD をアクティブには設定しないでください)、バッチ内のユーザーを段階的に移行する場合は、AD RMS のユーザーは、移行されたユーザーにより新規に保護されたコンテンツにアクセスすることはできません。 この場合は、可能な限り短い移行時間で論理バッチ内のユーザーを移行します。これにより、関連付けられたユーザーが一緒に移行されます。
-
-    インポート処理中に TPD をアクティブにした場合は、すべてのユーザーが同じキーを使用してコンテンツを保護するため、この制限は適用されません。 すべてのユーザーを個別に自分のペースで移行できるため、この構成を使用することをお勧めします。
-
 -   AD RMS デプロイが外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションするように構成されている場合は、同時にまたは可能な限り速やかにパートナーも Azure Information Protection に移行する必要があります。 移行前に Azure Information Protection を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
 
     パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 ただし、次のセクションの計画ガイドラインを参照し、詳細を [Microsoft サポートにお問い合わせ](../get-started/information-support.md#support-options-and-community-resources)ください。
@@ -165,7 +161,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 4:AD RMS から構成データをエクスポートし、それを Azure Information Protection にインポートする**
 
-    構成データ (キー、テンプレート、URL) を AD RMS から XML ファイルにエクスポートした後、PowerShell コマンドレット Import-AadrmTpd を使ってそのファイルを Azure Information Protection から Azure Rights Management サービスにアップロードします。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
+    構成データ (キー、テンプレート、URL) を AD RMS から XML ファイルにエクスポートした後、PowerShell コマンドレット Import-AadrmTpd を使ってそのファイルを Azure Information Protection から Azure Rights Management サービスにアップロードします。 次に、Azure Rights Management サービスのテナント キーとして使用するインポート済みのサーバー ライセンサー証明書 (SLC) キーを指定します。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
 
     - **ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行**:
 
@@ -181,7 +177,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 5: Azure Rights Management サービスをアクティブにする**
 
-    可能であれば、インポート処理の前ではなく後に、この手順を実行します。
+    可能であれば、インポート処理の前ではなく後に、この手順を実行します。 インポート前にこのサービスをアクティブした場合は、追加の手順が必要になります。
 
 - **手順 6: インポートされたテンプレートを構成する**
 

@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2ef28f2db2a22a766d658294a7d68b0dc6eebb2
-ms.sourcegitcommit: 89e13f6be15a96293e0af0b2529a2e39563a63b6
+ms.openlocfilehash: f93458b5b2788aa2c7d780a9d0d2939e16221559
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
@@ -52,7 +52,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 信頼された発行ドメインをすべてエクスポートしたら、このデータを Azure Information Protection にインポートする手順を開始できます。
 
-信頼された発行ドメインには、保護済みのファイルの暗号化を解除するキーが含まれているので、現在アクティブな信頼された発行ドメインだけではなく、すべての信頼された発行ドメインをエクスポートすること (そして後で Azure にインポートすること) が重要です。
+信頼された発行ドメインには、保護済みのファイルの暗号化を解除するサーバー ライセンス証明書 (SLC) キーが含まれているため、現在アクティブな信頼された発行ドメインだけではなく、すべての信頼された発行ドメインをエクスポートすること (そして後で Azure にインポートすること) が重要です。
 
 たとえば、暗号化モード 1 から暗号化モード 2 に AD RMS サーバーをアップグレードする場合、信頼された発行ドメインが複数になります。 移行の最後に、暗号化モード 1 を使用してアーカイブされたキーを含む信頼された発行ドメインをエクスポートおよびインポートしない場合、ユーザーは暗号化モード 1 キーで保護されていたコンテンツを開けなくなります。
 
