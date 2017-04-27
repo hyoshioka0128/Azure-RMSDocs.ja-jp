@@ -1,210 +1,154 @@
 ---
 title: "AD RMS から Azure Information Protection への移行 - フェーズ 1"
-description: "AD RMS から Azure Information Protection への移行のフェーズ 1 には、手順 1 ～ 4 が含まれます。"
+description: "AD RMS から Azure Information Protection への移行のフェーズ 1 には、手順 1 から 3 が含まれます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
+ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bbd5cd5be72dfe72f8312f7ee5049dec2e46ac96
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: adb5ad1f599c5996044ad2fce0e1e5889d81c81b
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
-# <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>移行フェーズ 1 - AD RMS のサーバー側の構成
+# <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
 
-AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から手順 4 を説明します。
+AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
 
-## <a name="step-1-download-the-azure-rights-management-administration-tool"></a>手順 1: Azure Rights Management Administration Tool をダウンロードする
+## <a name="step-1-download-the-azure-rights-management-administration-tool-and-identify-your-tenant-url"></a>手順 1: Azure Rights Management Administration Tool をダウンロードし、テナントの URL を識別する
+
 Microsoft ダウンロード センターに移動し、[Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721) をダウンロードします。このファイルには、Windows PowerShell 用の Azure Rights Management 管理モジュールが含まれています。 Azure Rights Management (Azure RMS) は、Azure Information Protection のデータ保護を提供するサービスです。
 
 ツールをインストールします。 手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
 > [!NOTE]
-> この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が 2.5.0.0 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version`
+> この Windows PowerShell モジュールを既にダウンロードしている場合は、`(Get-Module aadrm -ListAvailable).Version` コマンドを実行して、バージョン番号が **2.9.0.0** 以上であることを確認します。
 
-## <a name="step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>手順 2. AD RMS から構成データをエクスポートし、それを Azure Information Protection にインポートする
-この手順は、2 段階の処理です。
+移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、**<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
-1.  信頼された発行ドメイン (TPD) を .xml ファイルにエクスポートすることによって、AD RMS から構成データをエクスポートします。 このプロセスは、すべての移行について同じです。
+例: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-2.  構成データを Azure Information Protection にインポートします。 現在の AD RMS のデプロイ構成と、Azure RMS テナント キーに対する優先トポロジに応じて、この手順のプロセスは異なります。
+### <a name="to-identify-your-azure-rights-management-service-url"></a>Azure Rights Management サービス URL を確認するには
 
-### <a name="export-the-configuration-data-from-ad-rms"></a>構成データを AD RMS からエクスポートする
+1. Azure Rights Management サービスに接続し、求められたら、テナントのグローバル管理者の資格情報を入力します。
+    
+        Connect-AadrmService
+    
+2. テナントの構成を取得します。
+    
+        Get-AadrmConfiguration
+    
+3. **LicensingIntranetDistributionPointUrl** の値をコピーし、この文字列から `/_wmcs\licensing` を除去します。 
+    
+    残った部分は Azure Information Protection テナントの Azure Rights Management サービス URL であり、以下の移行手順では "*実際のテナント URL*" と簡潔に表記されている場合が多くあります。
 
-すべての AD RMS クラスター上の、組織のコンテンツを保護していたすべての信頼された発行ドメインに対して、次の手順を実行します。 ライセンス専用クラスターでこれを実行する必要はありません。
+## <a name="step-2-prepare-for-client-migration"></a>手順 2. クライアントの移行を準備する
 
-#### <a name="to-export-the-configuration-data-trusted-publishing-domain-information"></a>構成データ (信頼された発行ドメインの情報) をエクスポートするには
+ほとんどの移行では、すべてのクライアントを一度に移行するのは実際的ではないため、少しずつクライアントを移行することがよくあります。 つまり、Azure Information Protection を使用するクライアントとまだ AD RMS を使用するクライアントが共存する期間があります。 移行前と移行後の両方のユーザーをサポートするには、オンボーディング制御を使用し、移行前のスクリプトをデプロイします。 まだ移行されていないユーザーが、Azure Rights Management を使用する移行の済んだユーザーによって保護されているコンテンツを使用できるように、移行プロセスの間はこの手順が必要です。
 
-1.  AD RMS の管理権限を持つユーザーとして AD RMS クラスターにログオンします。
+1. たとえば **AIPMigrated** といった名前のグループを作成します。 このグループは、Active Directory で作成してクラウドに同期しても、Office 365 または Azure Active Directory で作成してもかまいません。 この時点では、このグループにユーザーを割り当てないでください。 後の手順でユーザーを移行するときに、このグループに追加します。
 
-2.  AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]**を展開し、 **[信頼された発行ドメイン]**をクリックします。
+    このグループのオブジェクト ID を記録しておきます。 そのためには、Azure AD PowerShell を使います。たとえば、バージョン 1.0 のモジュールについては、[Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) コマンドを使います。 または、Azure Portal から、グループのオブジェクト ID をコピーしてもかまいません。
 
-3.  結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから [ **信頼された発行ドメインのエクスポート**] をクリックします。
+2. このグループをオンボーディング制御用に構成し、このグループのメンバーのみが Azure Rights Management を使ってコンテンツを保護できるようにします。 そのためには、PowerShell セッションで Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-4.  **[信頼された発行ドメインのエクスポート]** ダイアログ ボックスで:
+        Connect-Aadrmservice
 
-    -   **[名前を付けて保存]** をクリックし、パスとファイル名を指定して保存します。 ファイル名の拡張子としては必ず **.xml** を指定します (自動的には付加されません)。
+    その後、このグループをオンボーディング制御用に構成し、この例のオブジェクト ID を実際のグループ オブジェクト ID に置き換えて、確認を求められたら「**Y**」と入力します。
 
-    -   強いパスワードを指定して確認します。 このパスワードを覚えておいてください。後で、構成データを Azure Information Protection にインポートするときに必要になります。
+        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501"
 
-    -   信頼されたドメイン ファイルを RMS バージョン 1.0 で保存するチェック ボックスをオンにしないでください。
+3. クライアント移行スクリプトが含まれる[次のファイルをダウンロード](https://go.microsoft.com/fwlink/?LinkId=524619)します。
+    
+    **ClientMigration.zip**
+    
+4. ファイルを抽出し、**PrepareClient.cmd** の指示に従って、実際の AD RMS クラスター エクストラネット ライセンス URL のサーバー名が含まれるようにします。 
+    
+    この名前を調べるには、Active Directory Rights Management サービス コンソールで、クラスターの名前をクリックします。 **[クラスターの詳細]** で、[エクストラネット クラスターの URL] セクションの **[ライセンス]** からサーバー名をコピーします。 例: **rmscluster.contoso.com**。
 
-信頼された発行ドメインをすべてエクスポートしたら、このデータを Azure Information Protection にインポートする手順を開始できます。
+    > [!IMPORTANT]
+    > この手順では、**adrms.contoso.com** のアドレスの例を実際の AD RMS サーバーのアドレスに置き換えます。 これを行うときは、アドレスの前または後に余計なスペースが入らないように注意してください。余計なスペースがあると、移行スクリプトが中断し、問題の根本原因の特定が非常に困難になります。 編集ツールによっては、テキストを貼り付けた後でスペースが自動的に追加されることがあります。
+    >
 
-信頼された発行ドメインには、保護済みのファイルの暗号化を解除するキーが含まれているので、現在アクティブな信頼された発行ドメインだけではなく、すべての信頼された発行ドメインをエクスポートすること (そして後で Azure にインポートすること) が重要です。
+5. このスクリプトをすべての Windows コンピューターにデプロイして、クライアントの移行を始めるときに、まだ移行されていないクライアントが、Azure Rights Management サービスを使うようになっている移行の済んだクライアントによって保護されているコンテンツを使用する場合に、AD RMS と通信できるようにします。
 
-たとえば、暗号化モード 1 から暗号化モード 2 に AD RMS サーバーをアップグレードする場合、信頼された発行ドメインが複数になります。 移行の最後に、暗号化モード 1 を使用してアーカイブされたキーを含む信頼された発行ドメインをエクスポートおよびインポートしない場合、ユーザーは暗号化モード 1 キーで保護されていたコンテンツを開けなくなります。
+    グループ ポリシーまたは他のソフトウェア展開メカニズムを使って、このスクリプトを展開できます。
 
+## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>手順 3. Exchange の展開を移行用に準備する
 
-### <a name="import-the-configuration-data-to-azure-information-protection"></a>構成データを Azure Information Protection にインポートする
-正確な手順は、現在の AD RMS のデプロイ構成と、Azure Information Protection テナント キーの優先トポロジによって異なります。
+オンプレミスの Exchange または Exchange Online を使っている場合、Exchange と AD RMS デプロイを統合している可能性があります。 この手順ではそれを、既存の AD RMS の構成を使用し、Azure RMS によって保護されるコンテンツをサポートするように構成します。 
 
-現在の AD RMS のデプロイでは、次のいずれかの構成をサーバー ライセンス証明書 (SLC) キーに使用します。
+[実際のテナントの Azure Rights Management サービス URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) を確認しておき、次のコマンドの *&lt;YourTenantURL&gt;* をその値に置き換えることができるようにします。 次の一連のコマンドを、Exchange 組織ごとに 1 回実行します。
 
--   AD RMS データベースでのパスワード保護。 これが既定の構成です。
+**Exchange Online を AD RMS と統合している場合**: Exchange Online PowerShell セッションを開き、以下の PowerShell コマンドを、1 つずつ、またはスクリプトで実行します。
 
--   Thales ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護。
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation
+    $list += "<YourTenantURL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    Set-IRMConfiguration -internallicensingenabled $false
+    Set-IRMConfiguration -internallicensingenabled $true 
 
--   Thales 以外のサプライヤーのハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護。
+**オンプレミスの Exchange を AD RMS と統合している場合**: 以下の PowerShell コマンドを、1 つずつ、またはスクリプトで実行します。 
 
--   外部暗号プロバイダーを使用して保護されたパスワード。
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation
+    $list += "<YourTenantURL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    Set-IRMConfiguration -internallicensingenabled $false
+    Set-IRMConfiguration -RefreshServerCertificates
+    Set-IRMConfiguration -internallicensingenabled $true
+    IISReset
 
-> [!NOTE]
-> AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「 [AD RMS でのハードウェア セキュリティ モジュールの使用](http://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
+さらに、オンプレミスの Exchange の場合は、各 Exchange サーバーでレジストリ値を追加する必要があります。
 
-Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の&2; つのオプションがあります。 顧客管理の Azure Information Protection テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-> [!IMPORTANT]
-> 現在、Exchange Online は Azure Information Protection の BYOK と互換性がありません。 移行後に BYOK を使用し、Exchange Online を使用する場合は、この構成により Exchange Online の IRM 機能が制限されることを理解しておきます。 「[BYOK の料金と制限事項](byok-price-restrictions.md)」の情報は、移行に最適な Azure Information Protection テナント キー トポロジの選択に役立ちます。
+Exchange 2013、Exchange 2016 の場合:
 
-次の表を参考にして、移行に使用する手順を識別してください。 記載されていない組み合わせはサポートされません。
 
-|現在の AD RMS のデプロイ|選択した Azure Information Protection テナント キーのトポロジ|移行手順|
-|-----------------------------|----------------------------------------|--------------------------|
-|AD RMS データベースでのパスワード保護|マイクロソフト管理|後で説明される「**ソフトウェアで保護されたキーからソフトウェアで保護されたキーへの移行**」の手順を参照してください。<br /><br />これは最も簡単な移行パスであり、Azure Information Protection に構成データを転送するだけで済みます。|
-|Thales nShield ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護|お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、3 つの一連の手順を実行する必要があります。最初にオンプレミスの HSM から Azure Key Vault の HSM にキーを転送し、次に Azure Information Protection からの Azure Rights Management サービスがテナント キーを使用するのを承認し、最後に構成データを Azure Information Protection に転送します。|
-|AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|後で説明される「**ソフトウェアで保護されたキーから HSM で保護されたキー**への移行」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の&4; つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
-|Thales 以外のサプライヤーのハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護|お客様が管理 (BYOK)|この HSM から Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
-|外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、暗号プロバイダーのサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
-これらの手順を開始する前に、信頼された発行ドメインをエクスポートしたときに作成した .xml ファイルにアクセスできることを確認します。 たとえば、これらは AD RMS サーバーからインターネットに接続されたワークステーションに移動する USB ドライブに保存されている可能性があります。
+**レジストリ パス:**
 
-> [!NOTE]
-> ただし、このデータは秘密キーを含むので、これらのファイルを保存し、セキュリティのベスト プラクティスを使用して保護します。
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
+**種類:** Reg_SZ
 
-手順 2 を完了するには、移行パスに応じた手順を選択します。 
+**値:** https://\<実際のテナント URL\>/_wmcs/licensing
 
+**データ:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
 
-- [ソフトウェアで保護されているキーからソフトウェアで保護されているキーへ](migrate-softwarekey-to-softwarekey.md)
-- [HSM で保護されているキーから HSM で保護されているキーへ](migrate-hsmkey-to-hsmkey.md)
-- [ソフトウェアで保護されているキーから HSM で保護されているキーへ](migrate-softwarekey-to-hsmkey.md)
 
+---
 
-## <a name="step-3-activate-your-azure-information-protection-tenant"></a>手順 3. Azure Information Protection テナントをアクティブ化する
-この手順では、Azure Rights Management サービスをアクティブ化する必要があります。 詳細については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
+Exchange 2010 の場合:
 
 
-> [!TIP]
-> Office 365 サブスクリプションがある場合、Office 365 管理センターまたは Azure クラシック ポータルから Azure Rights Management サービスをアクティブ化できます。 Azure クラシック ポータルを使用することをお勧めします。この管理ポータルを使用して次の手順を完了するためです。
+**レジストリ パス:**
 
-**Azure Information Protection テナントが既にアクティブになっている場合はどうすればよいですか。** 組織の Azure Rights Management サービスが既にアクティブ化されている場合は、ユーザーが既に Azure Information Protection を使用してコンテンツを保護し、AD RMS の既存のキー (およびテンプレート) ではなく、自動的に生成されたテナント キー (および既定のテンプレート) を使用している可能性があります。 これは、イントラネット上で適切に管理されたコンピューターではほとんど起こりません。AD RMS インフラストラクチャ用に自動的に構成されるためです。 ただし、イントラネットへの接続の頻度が低いワークグループのコンピューターでは発生する可能性があります。 残念ながら、このようなコンピューターの識別は困難です。そのため、AD RMS から構成データをインポートする前に、サービスをアクティブ化しないようにお勧めします。
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-Azure Information Protection テナントが既にアクティブ化されていて、前述のようなコンピューターを識別できる場合は、手順 5 の説明に従って、それらのコンピューターで CleanUpRMS_RUN_Elevated.cmd スクリプトを実行してください。 このスクリプトを実行すると、それらのコンピューターで強制的にユーザーの環境が再初期化されるため、更新されたテナント キーとインポートされたテンプレートがダウンロードされます。
+**種類:** Reg_SZ
 
-さらに、移行後に使用するカスタム テンプレートを作成した場合は、それをエクスポートしてインポートする必要があります。 これについては次の手順で説明します。 
+**値:** https://\<実際のテナント URL\>/_wmcs/licensing
 
-## <a name="step-4-configure-imported-templates"></a>手順 4. インポートされたテンプレートを構成する
-インポートしたテンプレートは **アーカイブ済み**という既定の状態なので、ユーザーが Azure Rights Management サービスでこれらのテンプレートを使用できるようにする場合は、この状態を **公開済み** に変更する必要があります。
+**データ:** https://\<AD RMS エクストラネット ライセンス URL>/_wmcs/licensing
 
-AD RMS からインポートしたテンプレートの外観と動作は、Azure クラシック ポータルで作成するカスタム テンプレートと同じです。 インポートしたテンプレートを公開に変更し、ユーザーがアプリケーションからそれらを表示して選択できるようにする方法は、「[Azure Rights Management のカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
 
-新しくインポートしたテンプレートを公開するだけでなく、移行を続ける前に行う必要があるテンプレートの重要な変更が&2; つあります。 移行プロセス中のユーザーに対するエクスペリエンスを一貫したものにするため、インポートしたテンプレートに変更を加えないでください。また、Azure Information Protection に付属する&2; つの既定のテンプレートを公開したり、この時点で新しいテンプレートを作成したりしないでください。 代わりに、移行プロセスが完了するまで待ち、AD RMS サーバーを使用停止にします。
+---
 
-この手順で必要な場合があるテンプレートの変更:
 
-- 移行前に Azure Information Protection カスタム テンプレートを作成した場合は、手動でエクスポートしてインポートする必要があります。
+これらのコマンドを実行すると、移行前に AD RMS によって保護されたコンテンツをサポートするように構成されていた Exchange サーバーは、移行後も Azure RMS によって保護されたコンテンツをサポートします。 後の移行手順まで、引き続き AD RMS を使って保護されたコンテンツをサポートします。
 
-- AD RMS のテンプレートが **ANYONE** グループを使用していた場合は、同等のグループと権限を手動で追加する必要があります。
-
-## <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>移行前にカスタム テンプレートを作成した場合の手順
-
-Azure Rights Management サービスをアクティブ化する前でも後でも、移行前にカスタム テンプレートを作成した場合は、**公開済み**に設定してあっても、移行後にユーザーはテンプレートを使用できません。 ユーザーが使用できるようにするには、最初に次のようにする必要があります。 
-
-1. [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx) を実行して、そのようなテンプレートを識別し、テンプレート ID を記録しておきます。 
-
-2. Azure RMS PowerShell コマンドレット [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx) を使用して、テンプレートをエクスポートします。
-
-3. Azure RMS PowerShell コマンドレット [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx) を使用して、テンプレートをインポートします。
-
-その後は、移行後に作成した他のテンプレートと同様に、これらのテンプレートを発行したりアーカイブしたりできます。
-
-
-## <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
-
-AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure Information Protection にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure Information Protection 用の同等グループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<テナント名>.onmicrosoft.com** です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
-
-AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS (Windows PowerShell を使用した AD RMS の管理)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」を参照してください。
-
-Azure クラシック ポータルの既定の権限ポリシー テンプレートの&1; つをコピーした場合、組織の自動作成されたグループが表示され、その後 **[権限]** ページで **[ユーザー名]** を特定できます。 ただし、手動で作成またはインポートしたテンプレートに Azure クラシック ポータルを使用してこのグループを追加することはできないため、代わりに次の Azure RMS PowerShell オプションのいずれかを使用する必要があります。
-
--   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) PowerShell コマンドレットを使用して、"AllStaff" グループおよび権限を権限定義オブジェクトとして定義し、ANYONE グループに加えて元のテンプレートで既に権限を付与されていた他の各グループまたはユーザーに対してこのコマンドを再度実行します。 その後、[Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) コマンドレットを使用して、これらの権限定義オブジェクトをテンプレートに追加します。
-
--   [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) コマンドレットを使用して、テンプレートを .XML ファイルにエクスポートします。このファイルを編集して、"AllStaff" グループおよび権限を既存のグループおよび権限に追加してから、[Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) コマンドレットを使用してこの変更を Azure Information Protection にインポートします。
-
-> [!NOTE]
-> この同等グループ "AllStaff" は、AD RMS の ANYONE グループとまったく同じではありません。"AllStaff" グループには、Azure テナントのすべてのユーザーが含まれます。一方、ANYONE グループには、認証されたすべてのユーザーが含まれ、組織外のユーザーが含まれる場合があります。
-> 
-> こうしうた&2; つのグループの違いにより、"AllStaff" グループだけでなく外部ユーザーも追加しなければならない場合があります。 グループの外部の電子メール アドレスは、現在サポートされていません。
-
-
-### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>ANYONE グループを含む AD RMS テンプレートを識別するためのサンプル Windows PowerShell スクリプト
-このセクションに含まれるサンプル スクリプトを使用すると、前のセクションで説明したように、ANYONE グループが定義されている AD RMS テンプレートを識別できます。
-
-**免責事項:** このサンプル スクリプトは、Microsoft の標準サポート プログラムまたはサービスではサポートされません。 このサンプル スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。
-
-```
-import-module adrmsadmin 
-
-New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force 
-
-$ListofTemplates=dir MyRmsAdmin:\RightsPolicyTemplate
-
-foreach($Template in $ListofTemplates) 
-{ 
-                $templateID=$Template.id
-
-                $rights = dir MyRmsAdmin:\RightsPolicyTemplate\$Templateid\userright
-
-     $templateName=$Template.DefaultDisplayName 
-
-        if ($rights.usergroupname -eq "anyone")
-
-                         {
-                           $templateName = $Template.defaultdisplayname
-
-                           write-host "Template " -NoNewline
-
-                           write-host -NoNewline $templateName -ForegroundColor Red
-
-                           write-host " contains rights for " -NoNewline
-
-                           write-host ANYONE  -ForegroundColor Red
-                         }
- } 
-Remove-PSDrive MyRmsAdmin -force
-```
 
 
 ## <a name="next-steps"></a>次のステップ
-「[フェーズ 2 - クライアント側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
+「[フェーズ 2: サーバー側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
