@@ -4,7 +4,7 @@ description: "Azure Rights Management (Azure RMS) とは、Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 53712ee69ac7ab54feb3036ada4eb81383caf786
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
+ms.openlocfilehash: 61b549c38e3e86bc686747adb5f9ebfd1851f446
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
@@ -42,11 +42,7 @@ Azure Information Protection のこのデータ保護サービスの詳細につ
 
 -   [Azure RMS が解決する問題の種類](azure-rms-problems-it-solves.md)
 
--   [Azure RMS の動作:管理者およびユーザーに対する表示](what-admins-users-see.md)
-
 -   [Azure RMS の機能の詳細](how-does-it-work.md)
-
-
 
 ドキュメントの保護をすぐに自分で試してみる場合は、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご利用ください。 このチュートリアルでは、機密データが検出された場合にドキュメントを保護する方法が説明されています。 また、電子メールで共有するドキュメントを保護し、使用方法を追跡し、必要に応じてドキュメントへのアクセスを無効にする方法も説明されています。
 
