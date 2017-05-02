@@ -13,7 +13,7 @@
 ### [移行後のタスク](migrate-from-ad-rms-phase5.md)
 ## [テナント キーの計画と実装](plan-implement-tenant-key.md)
 ### [BYOK の料金と制限事項](byok-price-restrictions.md)
-## [Azure Information Protection の準備](prepare.md)
+## [ユーザーとグループを準備します。](prepare.md)
 # [サービスのデプロイと使用](/information-protection/deploy-use/activate-service)
 # [クライアントのデプロイと使用](/information-protection/rms-client/use-client)
 # [アプリの開発とカスタマイズ](/information-protection/develop/developers-guide)
