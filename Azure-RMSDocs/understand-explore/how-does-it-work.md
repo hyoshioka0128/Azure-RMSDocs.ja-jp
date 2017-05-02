@@ -4,7 +4,7 @@ description: "Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/03/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5f189ab5ad1df43b14fa0b6d23bf4f0eef88142
-ms.sourcegitcommit: d44105d4d45fabf0f1d90765304e4b43dd97c0fc
+ms.openlocfilehash: d3d174fabb4189d2f4ca7755b6355293261318d4
+ms.sourcegitcommit: 55d8a769084c6422f80aefc5f7c6594ea6855bfa
 translationtype: HT
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
@@ -120,7 +120,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 ![RMS ドキュメントの消費 - 手順 1、ユーザーが認証され、権限のリストを取得する](../media/AzRMS_documentconsumption1.png)
 
-**手順 1 の処理**: 認証されたユーザーは、ドキュメントのポリシーとユーザーの証明書を Azure Rights Management サービスに送信します。 サービスはポリシーを復号化して評価し、ユーザーがドキュメントに対して設定している権限のリストを作成します (ある場合)。 ユーザーを識別するには、ユーザーのアカウントと、そのユーザーがメンバーであるグループ用の Azure AD proxyAttribute を使用します。 パフォーマンス上の理由から、グループのメンバーシップは [キャッシュ](../plan-design/prepare.md#group-membership-caching) されます。
+**手順 1 の処理**: 認証されたユーザーは、ドキュメントのポリシーとユーザーの証明書を Azure Rights Management サービスに送信します。 サービスはポリシーを復号化して評価し、ユーザーがドキュメントに対して設定している権限のリストを作成します (ある場合)。 ユーザーを識別するには、ユーザーのアカウントと、そのユーザーがメンバーであるグループ用の Azure AD proxyAddress 属性を使用します。 パフォーマンス上の理由から、グループのメンバーシップは [キャッシュ](../plan-design/prepare.md#group-membership-caching) されます。
 
 ![RMS ドキュメントの消費 - 手順 2、使用ライセンスがクライアントに返される](../media/AzRMS_documentconsumption2.png)
 

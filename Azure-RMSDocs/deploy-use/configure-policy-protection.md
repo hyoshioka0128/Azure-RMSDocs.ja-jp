@@ -4,14 +4,14 @@ description: "Rights Management 保護を使用するようにラベルを構成
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 696d744ae21d8957225a24d39547493515b63d76
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 608fa9fe48667c1419736243e5c069b48828ff1b
+ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
 translationtype: HT
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
@@ -50,7 +50,7 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
 
 ## <a name="to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護にラベルを構成するには
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウを開き、全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウを開き、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
 
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
@@ -58,7 +58,7 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
 
 3. **[ポリシー]** ブレードで、構成するラベルを選択すると、**[ラベル]** ブレードが開きます。 
 
-4. **[ラベル]** ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけ、下記オプションから&1; つ選択します。
+4. **[ラベル]** ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけ、下記オプションから 1 つ選択します。
     
     - **[未構成]**: 現在、ラベルが保護を適用するように構成されており、選択したラベルにこれ以上保護を適用しない場合は、このオプションを選択します。 次に手順 10 に進みます。
     
@@ -78,9 +78,13 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
     
     ほとんどの場合、アクセス許可の設定には **[Azure RMS]** を選択します。 この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限事項を読み、理解するまでは **[HYOK (AD RMS)]** を選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。 HYOK (AD RMS) の構成を続行するには、手順 9 に進みます。
     
-7. 電子メールにこの Outlook オプションを設定する場合は **[転送しない]** を、または **[テンプレートの選択]** のどちらかを選択してください。 
+7. 電子メールを転送しない場合、**[転送不可]** を選択します。既定のテンプレートの 1 つを使用するか、自分で構成したカスタム テンプレートを使用する場合、**[Select a predefined template (定義済みテンプレートの選択)]** を選択します。このポータルで新しい保護設定を定義する場合、**[カスタム (プレビュー)]** を選択します。 
     
-8. **[Azure RMS]** で **[テンプレートの選択]** を選択した場合、ドロップ ダウン ボックスをクリックし、このラベルでドキュメントと電子メールを保護するために使用する[テンプレート](../deploy-use/configure-custom-templates.md)を選択します。
+    **[カスタム (プレビュー)]** オプションには、現在、Azure クラシック ポータルにあるほとんどの構成オプションが用意されています。 さらに、組織からあらゆるユーザーを簡単に追加したり、個々のユーザーまたはグループに、あるいはドメイン名を指定するときは別の組織のすべてのユーザーに、外部メール アドレスを指定したりできます。 
+    
+    このプレビュー構成の詳細については、「[Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/)」 (Azure 情報保護統合管理のプレビューが公開されました) というブログ投稿を参照してください。 選択できるアクセス許可の詳細については、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」を参照してください。
+    
+8. **[Azure RMS]** で **[Select a predefined template (定義済みテンプレートの選択)]** を選択した場合、ドロップ ダウン ボックスをクリックし、このラベルでドキュメントと電子メールを保護するために使用する[テンプレート](../deploy-use/configure-custom-templates.md)を選択します。
     
     **[部門別テンプレート]**を選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
     

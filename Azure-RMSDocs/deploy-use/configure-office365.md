@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 091e29319ed3b29937e57c15488234466003e46e
-ms.sourcegitcommit: 1f65f71f742063e2bebcac88f72180d3aa4318a4
+ms.openlocfilehash: e67fc5be09ca8dae0117cf644f5878d83449ee4f
+ms.sourcegitcommit: 9edcb4a55a331e02f999c78d97eb0beb21f96f07
 translationtype: HT
 ---
 # <a name="office-365-configuration-for-clients-and-online-services"></a>Office 365: クライアントとオンライン サービスの構成
@@ -25,6 +25,8 @@ Office 365 では、Azure Information Protection からの Azure Rights Manageme
 ただし、これらのアプリケーションを Azure Information Protection クライアントで補完して、ユーザーが Office アドインを利用し、追加のファイルの種類をサポートできるようにすることをお勧めします。 詳細については、「[Azure Information Protection client: Installation and configuration for clients](configure-client.md)」(Azure Information Protection クライアント: クライアントのインストールと構成) を参照してください。
 
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: IRM 構成
+Exchange Online IRM と Azure Rights Management サービスが連動するしくみについては、「**理解と調査**」セクションの「[Exchange Online と Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server)」を参照してください。
+
 Exchange Online を構成して Azure Rights Management サービスをサポートするには、Exchange Online で Information Rights Management (IRM) サービスを構成する必要があります。 これを行うには、Windows PowerShell を使用して (個別のモジュールをインストールする必要はありません)、[Exchange Online 用 PowerShell コマンド](https://technet.microsoft.com/library/jj200677.aspx)を実行します。
 
 > [!NOTE]
@@ -137,6 +139,9 @@ IRM 機能を有効にするために Exchange Online を構成する詳細な�
 メッセージの暗号化の詳細については、Exchange ライブラリの「 [Office 365 での暗号化](https://technet.microsoft.com/library/dn569286.aspx) 」を参照してください。
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online と OneDrive for Business:IRM 構成
+
+SharePoint Online IRM と Azure Rights Management サービスが連動するしくみについては、「**理解と調査**」セクションの「[SharePoint Online と SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」を参照してください。
+
 SharePoint Online と OneDrive for Business を Azure Rights Management サービスをサポートするように構成するには、最初に SharePoint 管理センターを使用して、SharePoint Online の Information Rights Management (IRM) サービスを有効にする必要があります。 これで、サイトの所有者は SharePoint リストとドキュメント ライブラリを IRM で保護でき、ユーザーは OneDrive for Business ライブラリを IRM で保護することができます。それらの場所に保存されたドキュメント、および他のユーザーと共有しているドキュメントが、自動的に Azure Rights Management サービスで保護されるようになります。
 
 > [!NOTE]
@@ -144,14 +149,14 @@ SharePoint Online と OneDrive for Business を Azure Rights Management サー�
 
 SharePoint Online 用の Information Rights Management (IRM) サービスを有効にするには、Office Web サイトの次の手順を参照してください。
 
--   [SharePoint 管理センターにおける Information Rights Management (IRM) の設定](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
+- [SharePoint 管理センターにおける Information Rights Management (IRM) の設定](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
 
 この構成は、Office 365 管理者によって行われます。
 
 ### <a name="configuring-irm-for-libraries-and-lists"></a>ライブラリとリストの IRM を構成する
 SharePoint の IRM サービスを有効にしたら、サイト所有者は SharePoint ドキュメント ライブラリとリストを IRM で保護することができます。 方法については、Office Web サイトの次の内容を参照してください。
 
--   [Information Rights Management をリストまたはライブラリに適用する](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)
+- [Information Rights Management をリストまたはライブラリに適用する](https://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)
 
 この構成は、SharePoint サイト管理者によって行われます。
 
@@ -179,9 +184,9 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 #### <a name="configuration-for-administrators"></a>管理者用の構成
 管理者は SharePoint 管理センターを使用してユーザーの OneDrive for Business 用に IRM を構成することはできませんが、Windows PowerShell を使用してこれを行うことができます。 これらのライブラリに対して IRM を有効にするには、次の手順を実行します。
 
-1.  [SharePoint Online クライアント コンポーネント SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038) をダウンロードしてインストールします。
+1.  [SharePoint Online クライアント コンポーネント SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) をダウンロードしてインストールします。
 
-2.  [SharePoint Online 管理シェル](http://www.microsoft.com/en-us/download/details.aspx?id=35588)をダウンロードしてインストールします。
+2.  [SharePoint Online 管理シェル](https://www.microsoft.com/en-us/download/details.aspx?id=35588)をダウンロードしてインストールします。
 
 3.  次のスクリプトの内容をコピーし、Set-IRMOnOneDriveForBusiness.ps1 という名前のファイルでコンピューターに保存します。
 
@@ -198,10 +203,10 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
      Script Installation Requirements:
 
        SharePoint Online Client Components SDK
-       http://www.microsoft.com/en-us/download/details.aspx?id=42038
+       https://www.microsoft.com/en-us/download/details.aspx?id=42038
 
        SharePoint Online Management Shell
-       http://www.microsoft.com/en-us/download/details.aspx?id=35588
+       https://www.microsoft.com/en-us/download/details.aspx?id=35588
 
     ======
     #>
@@ -570,7 +575,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
         たとえば、contoso テナントのユーザーのユーザー名が "rsimone" である場合は、**https://contoso-my.sharepoint.com/personal/rsimone_contoso_com** と指定します。
 
-    4.  スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の **ドキュメント** の値は変更しないでください。
+    4.  スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の  **ドキュメント**  の値は変更しないでください。
 
     5.  `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 

@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d442a9540243cd020b885f7dc2c13d999bbad868
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
+ms.openlocfilehash: 74abbe0db07a155afe500388810945a3ff5a35a5
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
@@ -209,6 +209,16 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 特定のシナリオまたはユーザーのサブセットで必要となる可能性のある詳細構成には、次の情報を使用します。 
 
+### <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>AD RMS 専用コンピューターのサインイン プロンプトが表示されないようにする
+
+既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続しようとします。 その結果、AD RMS とだけ通信するコンピューターの場合、不必要なサインイン プロンプトがユーザーに表示されます。 レジストリを編集し、このサインイン プロンプトが表示されないようにすることができます。
+
+次の値の名前を検索し、値データを **0** に設定します。
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+この設定に関係なく、Azure Information Protection クライアントは標準 [RMS サービス検索プロセス](../rms-client/client-deployment-notes.md#rms-service-discovery)に従い、その AD RMS クラスターを検出します。
+
 ### <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
 
 通常、運用環境では、Azure Information Protection クライアントを使用しているときに別のユーザーとしてサインインする必要はありません。 ただし、複数のテナントがある場合は管理者としてこのようなサインインが必要になることがあります。 たとえば、組織が使用する Office 365 や Azure テナントに加えてテスト テナントがある場合などです。
@@ -241,9 +251,7 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 ### <a name="support-for-disconnected-computers"></a>切断されたコンピューターのサポート
 
-既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピュータをお持ちの場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 
-
-次の値の名前を検索し、値を **0** に設定します。
+既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピュータをお持ちの場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 次の値の名前を検索し、値を **0** に設定します。
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
