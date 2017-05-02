@@ -4,14 +4,14 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
-ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
@@ -20,9 +20,9 @@ translationtype: HT
 
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
-1. 新しいブラウザー ウィンドウで、テナントのグローバル管理者として [Azure Portal](https://portal.azure.com)にサインインします。
+1. 新しいブラウザー ウィンドウで、テナントの全体管理者またはセキュリティ管理者として [Azure Portal](https://portal.azure.com)にサインインします。
 
-2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 **[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選択します。 **[Azure Information Protection]** ブレードで**[作成]** をクリックします。
+2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 **[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選択します。 **[Azure Information Protection]** ブレードで **[作成]** をクリックします。
 
     これによって、テナントのサービスがアクティブ化されて**[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[その他のサービス]** リストからサービスを選択できるようになります。 
 
@@ -74,7 +74,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     この操作により、**[保護]** ブレードが開きます。
     
-3. **[保護]** ブレードで **[Azure RMS]** および **[テンプレートの選択]** が選択されていることを確認し、ドロップダウン ボックスをクリックして既定のテンプレートの **[\<組織名> - 機密]** を選択します。     
+3. **[保護]** ブレードで **[Azure RMS]** および **[Select a predefined template (定義済みテンプレートの選択)]**が選択されていることを確認し、ドロップダウン ボックスをクリックして既定のテンプレートの **[\<組織名> - 機密]** を選択します。     
     
     たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
     
@@ -86,7 +86,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 構成済みの Azure RMS の保護](../media/protection-bar-configured.png)
     
-5. **[ラベル: すべての従業員]** ブレードで、**[視覚的なマーキングの設定]** セクションを見つけます。
+5. **[ラベル: すべての従業員]** ブレードで、**[視覚的なマーキングの設定]**  セクションを見つけます。
     
     **[Documents with this label have a watermark]** (このラベルのあるドキュメントに透かしを付ける) 設定では、**[On]** (オン) をクリックし、**[Text]** (テキスト) ボックスに組織の名前を入力します。 たとえば、以下のように「**VanArsdel, Ltd**」と入力します。 
     

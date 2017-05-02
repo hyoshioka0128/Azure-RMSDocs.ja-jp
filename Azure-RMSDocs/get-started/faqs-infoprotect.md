@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 69ff30dea84717557153bbd0bf2013d3fc06d320
-ms.sourcegitcommit: 0b5aa77825463eccfb4856aa549a2dae80a1e361
+ms.openlocfilehash: f35385284e40ad8e40bf9007b92b9b64b4df9280
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
@@ -44,7 +44,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>分類とラベルを構成するにはグローバル管理者である必要がありますか?
 
-Azure Information Protection ポリシーを構成するには、Azure Active Directory のグローバル管理者として Azure Portal にサインインする必要があります。
+Azure Information Protection ポリシーを構成するとき、Azure Active Directory のグローバル管理者として Azure Portal にサインインする必要がなくなりました。 また、セキュリティ管理者の役割が与えられたアカウントを利用できるようになりました。
 
 [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもラベル機能を試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試用できますが、ラベルの変更または新規追加には Azure Portal にサインインする必要があります。 
 
