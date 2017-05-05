@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
-ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+ms.openlocfilehash: fe569124494f837e770e5f1f8c6de0c2188a6e40
+ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
 translationtype: HT
 ---
 # <a name="create-configure-and-publish-a-custom-template"></a>カスタム テンプレートを作成、構成、発行する
@@ -76,9 +76,9 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
     > [!NOTE]
     > 選択するユーザーまたはグループは電子メール アドレスを持っている必要があります。 運用環境ではこの条件はほとんど常に満たされますが、単純なテスト環境では、ユーザー アカウントまたはグループへの電子メール アドレスの追加が必要になることがあります。
     > 
-    > ユーザーまたはグループを選択してからテンプレートを保存した後に電子メール アドレスを変更する場合は、計画ドキュメントの[電子メール アドレスが変更された場合の考慮事項](../plan-design/prepare.md#considerations-if-email-addresses-change)をご覧ください。 
+    > ユーザーまたはグループを選択してからテンプレートを保存した後に電子メール アドレスを変更する場合は、計画ドキュメントの[電子メール アドレスが変更された場合の考慮事項](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change)をご覧ください。 
 
-    ベスト プラクティスとして、ユーザーではなくグループを使用すると、テンプレートの管理が簡素化されます。 ただし、グループを変更した場合、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](../plan-design/prepare.md#group-membership-caching)ことに注意してください。 
+    ベスト プラクティスとして、ユーザーではなくグループを使用すると、テンプレートの管理が簡素化されます。 ただし、グループを変更した場合、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management)ことに注意してください。 
     
     オンプレミスの Active Directory があり、Azure AD に同期している場合は、メールが有効なグループ (セキュリティ グループまたは配布グループ) を使用できます。 組織内のすべてのユーザーに権限を付与する場合は、複数のグループを指定するのでなく、既定のテンプレートのいずれか 1 つをコピーする方が効率的です。 詳細については、「[テンプレートをコピーする](copy-template.md)」を参照してください。
 
