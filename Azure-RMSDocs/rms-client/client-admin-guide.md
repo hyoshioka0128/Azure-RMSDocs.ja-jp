@@ -14,7 +14,8 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: 74abbe0db07a155afe500388810945a3ff5a35a5
 ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -241,7 +242,7 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 - 現在ダウンロードされている Azure Information Protection ポリシーを削除したい場合は、**%localappdata%\Microsoft\MSIP** フォルダーから **Policy.msip** ファイルを削除します。
 
-### <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプ ローラーの [Hide the Classify and Protect] (分類の非表示と保護) メニュー オプション
+### <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプ ローラーの [Hide the Classify and Protect]\(分類の非表示と保護) メニュー オプション
 
 Azure Information Protection クライアントのバージョンが 1.3.0.0 以降である場合は、レジストリを編集することで、この詳細構成を構成することができます。 
 
