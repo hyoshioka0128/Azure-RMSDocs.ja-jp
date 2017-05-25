@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 90b26239979b42eadb008b11a963e35a74698910
-ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
-translationtype: HT
+ms.openlocfilehash: 04e04f6e3243283b98df94143773e4aa81351f48
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
 
@@ -58,21 +59,27 @@ RMSProtection モジュールと同様に、AzureInformationProtection モジュ
 組織が Azure Information Protection と Azure Rights Management のデータ保護サービスを使っている場合、または Azure Rights Management サービスだけを使っている場合は、PowerShell を使い始める前にこのセクションをお読みください。
 
 
-### <a name="prerequisites-for-aip-and-azure-rms"></a>AIP と Azure RMS の前提条件
+### <a name="prerequisites"></a>必要条件
 
 AzureInformationProtection モジュールのインストールに関する前提条件に加えて、Azure Information Protection サービスおよび Azure Rights Management データ保護サービスに関する追加の前提条件があります。
 
 1. Azure Rights Management サービスをアクティブ化する必要があります。
 
-2. 自分のアカウントを使って他のユーザーのファイルから保護を削除するには: 組織のスーパー ユーザー機能を有効にし、自分のアカウントを Azure Rights Management のスーパー ユーザーとして構成する必要があります。
+2. 自分のアカウントを使って他のユーザーのファイルから保護を削除するには: 
+    
+    - 組織のスーパー ユーザー機能を有効にし、自分のアカウントを Azure Rights Management のスーパー ユーザーとして構成する必要があります。
 
-3. ユーザーの操作なしに直接ファイルを保護または保護解除するには: サービス プリンシパル アカウントを作成し、Set-RMSServerAuthentication を実行して、このサービス プリンシパルを Azure Rights Management のスーパー ユーザーにします。
+3. ユーザー操作なしにファイルを直接保護または保護解除するには: 
+    
+    - サービス プリンシパル アカウントを作成し、Set-RMSServerAuthentication を実行して、このサービス プリンシパルを Azure Rights Management のスーパー ユーザーにします。
 
-4. 北米以外のリージョンの場合: サービスに対する認証のレジストリを編集します。
+4. 北米以外のリージョンの場合： 
+    
+    - サービスに対する認証のレジストリを編集します。
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>前提条件 1: Azure Rights Management サービスをアクティブ化する必要がある
 
-この前提条件は、データ保護をラベルを使って適用する場合、または Azure Rights Management サービスに直接接続することによって適用する場合に適用されます。 データ保護を適用するために構成されます。
+この前提条件は、ラベルを使ってデータ保護を適用する場合、または Azure Rights Management サービスに直接接続してデータ保護を適用する場合に適用されます。
 
 Azure Information Protection テナントがアクティブ化されていない場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の手順をご覧ください。
 
@@ -80,7 +87,7 @@ Azure Information Protection テナントがアクティブ化されていない
 
 他のユーザーのファイルから保護を削除する一般的なシナリオには、データの探索またはデータの回復が含まれます。 ラベルを使って保護を適用している場合は、保護を適用しない新しいラベルを設定することによって、またはラベルを削除することによって保護を削除できます。 ただし、Azure Rights Management サービスに直接接続して保護を削除することもできます。
 
-ファイルから保護を削除するには、Rights Management のアクセス許可を持っているか、スーパー ユーザーである必要があります。 データの探索またはデータの回復には、スーパー ユーザー機能が通常使われます。 この機能を有効にし、アカウントをスーパー ユーザーとして構成するには、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」をご覧ください。
+ファイルから保護を削除するには、Rights Management の使用権限を持っているか、スーパー ユーザーである必要があります。 データの探索またはデータの回復には、スーパー ユーザー機能が通常使われます。 この機能を有効にし、アカウントをスーパー ユーザーとして構成するには、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」をご覧ください。
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>前提条件 3: ユーザー操作なしにファイルを保護または保護解除するには
 
@@ -132,9 +139,12 @@ Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマ
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
 
-Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolServicePrincipal` コマンドレットを実行することで、新しいサービス プリンシパルを作成します。 
+Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolServicePrincipal` コマンドレットを実行し、次の手順に従うことで、新しいサービス プリンシパルを作成します。 
 
-1. このモジュールがコンピューターにまだインストールされていない場合は、「[Install the Azure AD Module](/powershell/azuread/#install-the-azure-ad-module)」(Azure AD モジュールをインストールする) をご覧ください。
+> [!IMPORTANT]
+> 新しい Azure AD PowerShell コマンドレット、New-AzureADServicePrincipal を使用してこのサービス プリンシパルを作成しないでください。 Azure Rights Management サービスでは、New-AzureADServicePrincipal をサポートしていません。 
+
+1. MSOnline モジュールがまだコンピューターにインストールされていない場合は、`Install-Module MSOnline` を実行します。
 
 2. **[管理者として実行]** オプションを使って、Windows PowerShell を起動します。
 
@@ -187,7 +197,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-前のコマンドで示すように 1 つのコマンドで値を指定することも、Set-RMSServerAuthentication だけを入力してプロンプトで 1 つずつ値を指定することもできます。 コマンドが完了すると、"**The RmsServerAuthentication is set to ON**" と表示されます。これは、サービス プリンシパルを使ってファイルの保護と保護解除を実行できることを意味します。
+前のコマンドで示すように 1 つのコマンドで値を指定することも、Set-RMSServerAuthentication だけを入力してプロンプトで 1 つずつ値を指定することもできます。 コマンドが完了すると "**The RmsServerAuthentication is set to ON**" と表示されます。これは、クライアントが現在「サーバー モード」で動作していることを意味します。 このメッセージでは、指定した値を使用して認証が成功したことは確認できませんが、サーバー モードへの切り替えが正常に完了したことは確認できます。
 
 このサービス プリンシパルをスーパー ユーザーにすることを検討します。このサービス プリンシパルでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準のユーザー アカウントをスーパー ユーザーとして構成するときと同じように、Azure RMS コマンドレットの [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) を使いますが、**-ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
 
@@ -301,7 +311,7 @@ Rights Management テンプレートが変更された場合は、もう一度 `
 Active Directory Rights Management サービスだけを使っている場合は、PowerShell コマンドを使ってファイルを保護または保護解除する前に、このセクションをお読みください。
 
 
-### <a name="prerequisites-for-ad-rms"></a>AD RMS の前提条件
+### <a name="prerequisites"></a>必要条件
 
 AzureInformationProtection モジュールをインストールするための前提条件に加えて、ServerCertification.asmx にアクセスするにはアカウントに読み取りと実行のアクセス許可が必要です。
 

@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 526a0ef3bcc5ebf07c4993b9e5dd602683593a45
-ms.sourcegitcommit: 85261fbc9e6ce71a2001d954cb2fc2d190695f6a
-translationtype: HT
+ms.openlocfilehash: ed06deca76ed1241f0c9b3f104fd922263c5a6cd
+ms.sourcegitcommit: dd5a63bfee309c8b68ee9f8cd071a574ab0f6b4a
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -51,20 +52,23 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 これらのアクセス許可レベルの一覧、および含まれる権限の完全な一覧については、次の表を使用してください。
 
-
 |アクセス許可レベル|アプリケーション|含まれる権限 (共通名)|
 |---------------------|----------------|---------------------------------|
-|表示者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、返信、全員に返信<br /><br />注: 電子メールの場合、電子メールの返信が添付ファイルではなく電子メール メッセージとして受信されるように、このアクセス許可レベルではなく、レビュー担当者を利用します。 レビュー担当者は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも必要になります。|
-|レビュー担当者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同作成者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[2]](#footnote-2)、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)|
-|共同所有者|Azure クラシック ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、転送 [[1]](#footnote-1)、フルコントロール|
+|表示者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br /> Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、返信、全員に返信、マクロの許可 [[1]](#footnote-1)<br /><br />注: 電子メールの場合、電子メールの返信が添付ファイルではなく電子メール メッセージとして受信されるように、このアクセス許可レベルではなく、レビュー担当者を利用します。 レビュー担当者は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも必要になります。|
+|レビュー担当者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、返信、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)、マクロの許可[[1]](#footnote-1)|
+|共同作成者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[3]](#footnote-3)、印刷、返信 [[2]](#footnote-2)、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)|
+|共同所有者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[2]](#footnote-2)、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)、フルコントロール|
 
 ----
 
 ###### <a name="footnote-1"></a>脚注 1:
-Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションには適用されません。
+
+Windows 用 Azure Information Protection クライアントの場合、この権利は、Office アプリケーションの Information Protection バーで現在必要です。
 
 ###### <a name="footnote-2"></a>脚注 2:
+Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションには適用されません。
+
+###### <a name="footnote-3"></a>脚注 3:
 Windows 用 Azure Information Protection クライアントには含まれていません。 このクライアントでは、エクスポートの使用権限に保護を削除する能力が含まれています。
 
 

@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 04/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: adb5ad1f599c5996044ad2fce0e1e5889d81c81b
-ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
-translationtype: HT
+ms.openlocfilehash: 587d24a005452874ca06b8fc179b25e91a7f0130
+ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -86,7 +87,7 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
 
 オンプレミスの Exchange または Exchange Online を使っている場合、Exchange と AD RMS デプロイを統合している可能性があります。 この手順ではそれを、既存の AD RMS の構成を使用し、Azure RMS によって保護されるコンテンツをサポートするように構成します。 
 
-[実際のテナントの Azure Rights Management サービス URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) を確認しておき、次のコマンドの *&lt;YourTenantURL&gt;* をその値に置き換えることができるようにします。 次の一連のコマンドを、Exchange 組織ごとに 1 回実行します。
+[実際のテナントの Azure Rights Management サービス URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) を確認しておき、次のコマンドの *&lt;YourTenantURL&gt;* をその値に置き換えることができるようにします。 
 
 **Exchange Online を AD RMS と統合している場合**: Exchange Online PowerShell セッションを開き、以下の PowerShell コマンドを、1 つずつ、またはスクリプトで実行します。
 
@@ -97,22 +98,9 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
     Set-IRMConfiguration -internallicensingenabled $false
     Set-IRMConfiguration -internallicensingenabled $true 
 
-**オンプレミスの Exchange を AD RMS と統合している場合**: 以下の PowerShell コマンドを、1 つずつ、またはスクリプトで実行します。 
+**オンプレミスの Exchange と AD RMS を統合している場合**: Exchange 組織ごとに、まず各 Exchange サーバーでレジストリ値を追加してから PowerShell コマンドを実行します。 
 
-    $irmConfig = Get-IRMConfiguration
-    $list = $irmConfig.LicensingLocation
-    $list += "<YourTenantURL>/_wmcs/licensing"
-    Set-IRMConfiguration -LicensingLocation $list
-    Set-IRMConfiguration -internallicensingenabled $false
-    Set-IRMConfiguration -RefreshServerCertificates
-    Set-IRMConfiguration -internallicensingenabled $true
-    IISReset
-
-さらに、オンプレミスの Exchange の場合は、各 Exchange サーバーでレジストリ値を追加する必要があります。
-
-
-Exchange 2013、Exchange 2016 の場合:
-
+Exchange 2013 と Exchange 2016 のレジストリ値:
 
 **レジストリ パス:**
 
@@ -124,11 +112,9 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **データ:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
 
-
 ---
 
-Exchange 2010 の場合:
-
+Exchange 2010 のレジストリ値:
 
 **レジストリ パス:**
 
@@ -140,12 +126,21 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **データ:** https://\<AD RMS エクストラネット ライセンス URL>/_wmcs/licensing
 
-
 ---
 
+1 つずつ、またはスクリプト内で実行する PowerShell コマンド
 
-これらのコマンドを実行すると、移行前に AD RMS によって保護されたコンテンツをサポートするように構成されていた Exchange サーバーは、移行後も Azure RMS によって保護されたコンテンツをサポートします。 後の移行手順まで、引き続き AD RMS を使って保護されたコンテンツをサポートします。
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation
+    $list += "<YourTenantURL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    Set-IRMConfiguration -internallicensingenabled $false
+    Set-IRMConfiguration -RefreshServerCertificates
+    Set-IRMConfiguration -internallicensingenabled $true
+    IISReset
 
+
+Exchange Online またはオンプレミスの Exchange に対してこれらのコマンドを実行すると、移行前に AD RMS によって保護されたコンテンツをサポートするように構成されていた Exchange 展開は、移行後も Azure RMS によって保護されたコンテンツをサポートします。 Exchange 展開では、後の移行手順まで、引き続き AD RMS を使って保護されたコンテンツをサポートします。
 
 
 ## <a name="next-steps"></a>次のステップ

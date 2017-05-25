@@ -1,10 +1,10 @@
 ---
-title: "Azure Rights Management 保護を準備する - AIP"
-description: "組織がドキュメントや電子メールを保護できるように、Azure Rights Management サービスを使用するためのすべての準備ができていることを確認します。"
+title: "Azure Information Protection 向けのユーザーとグループの準備"
+description: "分類、ラベル付け、組織のドキュメントと電子メールの保護などを開始する必要があるユーザーとグループ アカウントがあることを確認してください。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,38 +12,194 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4b074f9a9a3d72b4d1ab5810b69e92b4792b0711
-ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
-translationtype: HT
+ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
+ms.sourcegitcommit: 0e46a9687f237cf6d551c183dd006337ec835b86
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
-# <a name="preparing-for-azure-information-protection"></a>Azure Information Protection の準備
+# <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
 >*適用対象: Azure Information Protection、Office 365*
 
-組織の Azure Information Protection をデプロイする前に、次の内容が準備されていることを確認します。
+組織の Azure Information Protection を展開する前に、組織のテナントの Azure AD にユーザーとグループのアカウントがあることを確認します。
 
--   手動で作成するか、または Active Directory ドメイン サービス (AD DS) から自動的に作成および同期される、クラウド内のユーザー アカウントおよびグループ。
+ユーザーとグループ用にこれらのアカウントを作成する方法は、次を含めさまざまにあります。
 
-    オンプレミスのアカウントとグループを同期するとき、すべての属性を同期する必要はありません。 Azure Information Protection によって使用される Azure Rights Management サービス用に同期する必要がある属性の一覧については、Azure Active Directory のドキュメントの [Azure RMS に関するセクション](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms)をご覧ください。 デプロイが容易なので [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) を使用してオンプレミスのディレクトリを Azure Active Directory と接続することをお勧めしますが、同じ結果が得られる他のディレクトリ同期方法を使ってもかまいません。
+- Office 365 管理センターでユーザーを作成し、Exchange Online 管理センターでグループを作成します。
 
--   Azure Information Protection で使用する、クラウドでのメールが有効なグループ。 組み込みのグループ、または保護されたドキュメントと電子メールを使用するユーザーを含む手動で作成したグループにすることができます。
+- Azure Portal で、ユーザーとグループを作成します。
 
-    Exchange Online がある場合は、Exchange 管理センターを使用して、メールが有効なグループを作成し使用することができます。 AD DS があり、Azure AD と同期している場合は、セキュリティ グループまたは配布グループであるメールが有効なグループを作成して使用できます。
+- Azure AD PowerShell と Exchange Online コマンドレットを使用して、ユーザーとグループを作成します。
 
-### <a name="group-membership-caching"></a>グループ メンバーシップのキャッシュ
+- オンプレミスの Active Directory にユーザーとグループを作成し、それらを Azure AD と同期させます。
 
-パフォーマンス上の理由から、グループ メンバーシップは Azure Rights Management サービスによってキャッシュされます。 これは、グループ メンバーシップの変更内容が有効になるまで最長で 3 時間かかる場合があり、この期間は変わる可能性があることを意味します。 変更を加えるとき、または[カスタム テンプレート](../deploy-use/configure-custom-templates.md)の構成などの Azure Rights Management サービスの構成でグループを使用する場合や、[スーパー ユーザー機能](../deploy-use/configure-super-users.md)でグループを使用する場合にテストを行う際にはこの遅延を考慮してください。 
+- 別のディレクトリにユーザーとグループを作成し、それらを Azure AD と同期させます。
 
-### <a name="considerations-if-email-addresses-change"></a>電子メール アドレスが変更された場合の考慮事項
+この一覧にある最初の 3 つのメソッドを使用してユーザーとグループを作成するとき、ユーザーとグループは自動的に Azure AD に作成されて、Azure Information Protection でこれらのアカウントを直接使用できます。 ただし、多くの企業ネットワークでは、オンプレミスのディレクトリを使用してユーザーとグループを作成および管理します。 Azure Information Protection では、これらのアカウントを直接使用できません。Azure AD に同期する必要があります。
 
-ユーザーまたはグループの使用権限を構成して、表示名で選択すると、セクションではオブジェクトの電子メール アドレスが保存され、使用されます。 電子メール アドレスが後に変更された場合、選択したユーザーは正常に認証されません。
+## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Azure Information Protection によるユーザーとグループの使用方法
 
-電子メール アドレスが変更された場合、古い電子メール アドレスをプロキシ電子メール アドレス (エイリアスまたは代替電子メール アドレスとも呼ばれます) としてユーザーまたはグループに追加して、以前割り当てられた使用権限を保持できるようにすることをお勧めします。 それができない場合は、ユーザーまたはグループを構成から削除した後に再び選択し、更新された電子メール アドレスを保存する必要があります。その結果、新たに保護されたコンテンツで新しい電子メールアドレスが使用されます。
+Azure Information Protection でユーザーとグループを使用するシナリオは 3 通りあります。
 
-カスタムの Rights Management テンプレートには、ユーザーまたはグループを表示名から選択し、使用権限を割り当てる例が含まれています。 Azure Information Protection でカスタム アクセス許可を構成すると、表示名でユーザーとグループを選択することもできます。
+**ラベルをユーザーに割り当てる場合**: Azure Information Protection ポリシーを構成するときに、ラベルをドキュメントや電子メールに適用できるようにします。 管理者のみがこれらのユーザーとグループを選択できます。
 
-## <a name="activate-the-rights-management-service-for-data-protection"></a>データ保護のための Rights Management サービスのアクティブ化
-ドキュメントや電子メールの保護を開始する準備ができたら、このテクノロジを有効にする Rights Management サービスをアクティブにします。 詳細については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
+- 既定の Azure Information Protection ポリシーは、テナントの Azure AD にあるすべてのユーザーに対して自動的に割り当てられます。 ただし、スコープを持つポリシーを使用して、指定したユーザーまたはグループに追加のラベルを割り当てることもできます。     
+
+**使用権限とアクセス制御を割り当てる場合**: Azure Rights Management サービスを使用してドキュメントと電子メールを保護します。 管理者とユーザーが、これらのユーザーとグループを選択できます。
+
+- 使用権限は、ドキュメントや電子メールをユーザーが開くことができるかと、その使用方法を決定します。 たとえば、読み取り専用、読み取りと印刷、または読み取りと編集などができます。 
+
+- アクセス制御には、有効期限日とアクセスのためにインターネット接続が必要かどうかが含まれます。 
+
+**Azure Rights Management サービスを構成する場合**: 特定のシナリオをサポートするためであり、したがって、管理者のみがこれらのグループを選択します。 たとえば、次のような構成の例があります。
+
+- スーパー ユーザー。eDiscovery またはデータ回復で必要な場合に、指定されたサービスまたはユーザーが暗号化されたコンテンツを開くことができるようにします。
+
+- Azure Rights Management サービスの代理管理。
+
+- 段階的デプロイをサポートするオンボーディング コントロール。
+
+## <a name="azure-information-protection-requirements-for-user-accounts"></a>ユーザー アカウントに関する Azure Information Protection の要件
+
+ラベルを割り当てる場合:
+
+- Azure AD にあるすべてのユーザー アカウントは、追加のラベルをユーザーに割り当てるスコープ ポリシーを構成するために使用できます。
+
+使用権限とアクセス制御を割り当て、Azure Rights Management サービスを構成する場合:
+
+- ユーザーを承認するために Azure AD 内の 2 つの属性、**proxyAddresses** と **userPrincipalName** が使用されます。
+
+- **Azure AD proxyAddresses** 属性は、単一アカウントのすべての電子メール アドレスを格納するために使用され、さまざまな方法でデータを設定できます。 たとえば、Exchange Online メールボックスを持つ Office 365 内のユーザーであれば、この属性に格納されている電子メール アドレスを自動的に持つことになります。 代替電子メール アドレスを Office 365 ユーザーに割り当てると、それもこの属性に保存されます。 オンプレミスのアカウントから同期する電子メール アドレスでも設定できます。 
+    
+    ドメインがテナントに追加されている場合 ("確認済みドメイン")、Azure Information Protection では Azure AD proxyAddresses 属性にある任意の値を使用できます。 ドメインの確認の詳細については、以下の項目をご覧ください。
+    
+    - Azure AD: 「[Azure Active Directory へのカスタム ドメイン名の追加](/active-directory/active-directory-add-domain)」
+    
+    - Office 365: 「[ドメインとユーザーを Office 365 に追加する](https://go.microsoft.com/fwlinkid/?linkid=847121)」
+
+- **Azure AD userPrincipalName** 属性は、テナントにあるアカウントに対する値が Azure AD proxyAddresses 属性にない場合にのみ使用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスのない Office 365 のユーザーを作成する場合です。
+
+### <a name="assigning-usage-rights-and-access-controls-to-external-users"></a>使用権限とアクセス制御を外部ユーザーに割り当てる
+
+Azure Information Protection では、テナント内のユーザー用に Azure AD proxyAddresses と Azure AD userPrincipalName を使用することに加え、別のテナントのユーザーを承認するためにもこれらの属性を同様に使用します。
+
+## <a name="azure-information-protection-requirements-for-group-accounts"></a>グループ アカウントに関する Azure Information Protection の要件
+
+ラベルを割り当てる場合:
+
+- Azure AD 内の任意の種類のグループを使用して、追加のラベルをグループ メンバーに割り当てるスコープ ポリシーを構成できます。
+
+使用権限とアクセス制御を割り当てる場合:
+
+- Azure AD にある任意の種類のグループを使用できます。Azure AD には、ユーザーのテナントに対する確認済みのドメインを含む電子メール アドレスがあります。 電子メール アドレスを持つグループを、メールが有効なグループと呼ぶことがあります。 
+    
+    たとえば、メールが有効なセキュリティ グループ、配布グループ (静的または動的)、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は、電子メール アドレスを持っていない種類のグループであるため使用できません。
+
+Azure Rights Management サービスを構成する場合:
+
+- テナント内の確認済みドメインの電子メール アドレスを持つ、Azure AD にある任意の種類のグループを使用できますが、例外が 1 つあります。 その例外とは、グループを使用するためのオンボーディング コントロールを構成する場合です。この場合は、テナントの Azure AD 内のセキュリティ グループである必要があります。
+    
+- テナント内の確認済みドメインに属している、Azure AD にある任意の種類のグループ (電子メール アドレスの有無を問わない) を、Azure Rights Management サービスの代理管理に使用できます。
+
+### <a name="assigning-usage-rights-and-access-controls-to-external-groups"></a>使用権限とアクセス制御を外部グループに割り当てる
+
+Azure Information Protection では、テナント内のグループ用に Azure AD proxyAddresses を使用することに加え、別のテナントのグループを承認するためにもこの属性を同様に使用します。
+
+## <a name="using-accounts-from-active-directory-on-premises-for-azure-information-protection"></a>オンプレミスの Active Directory からのアカウントを Azure Information Protection 用に使用する
+
+オンプレミスで管理されているアカウントがあり、Azure Information Protection でこのアカウントを使用したい場合は、このアカウントを Azure AD と同期する必要があります。 展開を容易にするために、[Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) を使用することお勧めします。 ただし、任意のディレクトリ同期方式を使用して同じ結果を達成できます。
+
+アカウントを同期するとき、すべての属性を同期する必要はありません。 同期する必要がある属性の一覧については、Azure Active Directory のドキュメントの [Azure RMS に関するセクション](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms)をご覧ください。 
+
+Azure Rights Management 用の属性の一覧を見ると、ユーザーの場合は、オンプレミス AD 属性のうち、**mail**、**proxyAddresses**、**userPrincipalName** が同期用に必要であることがわかります。 **mail** と **proxyAddresses** の値が、Azure AD proxyAddresses 属性に同期されます。 詳細については、「[Azure AD に proxyAddresses 属性を反映する方法](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)」をご覧ください。
+
+## <a name="confirming-your-users-and-groups-are-prepared-for-azure-information-protection"></a>ユーザーとグループが Azure Information Protection 用に準備されたことを確認する
+
+Azure AD PowerShell を使用して、ユーザーとグループを Azure Information Protection に使用できることを確認できます。 PowerShell を使用して、それらを承認するために使用できる値を確認できます。 
+
+たとえば、Azure Active Directory の V1 PowerShell モジュール、[MSOnline](/powershell/module/msonline/?view=azureadps-1.0) を使用して、PowerShell セッションで、まず、サービスに接続し、グローバル管理者の資格情報を指定します。
+
+    Connect-MsolService
+    
+
+注: このコマンドが機能しない場合は、`Install-Module MSOnline` を実行して MSOnline モジュールをインストールできます。
+
+次に、PowerShell セッションを構成して、値を切り捨てないようにします。
+
+    $Formatenumerationlimit =-1
+
+### <a name="confirm-user-accounts-are-ready-for-azure-information-protection"></a>ユーザー アカウントが Azure Information Protection の準備ができていることを確認する
+
+ユーザー アカウントを確認するには、次のコマンドを実行します。
+
+    Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+        
+まず、Azure Information Protection で使用したいユーザーが表示されることを確認します。 
+
+次に、**ProxyAddresses** 列が設定されているかどうかをチェックします。 設定されている場合は、Azure Rights Management サービスのユーザーを承認するためにこの列の電子メールの値を使用できます。 
+
+**ProxyAddresses** 列が設定されていない場合は、**UserPrincipalName** の値が Azure Rights Management サービスのユーザーを承認するために使用されます。
+
+たとえば、 
+    
+|表示名|UserPrincipalName|ProxyAddresses
+|-------------------|-----------------|--------------------|
+|Jagannath Reddy |jagannathreddy@contoso.com|{}|
+|Ankur Roy|ankurroy@contoso.com|{SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com}|
+
+この例では、次の点に注意してください。
+
+- Jagannath Reddy のユーザー アカウントは  **jagannathreddy@contoso.com** によって承認されることになります。
+
+-  Ankur Roy のユーザー アカウントは、 **ankur.roy@contoso.com**  と  **ankur.roy@onmicrosoft.contoso.com**  を使用して承認できますが、** ankurroy@contoso.com** では承認できません。
+
+通常、UserPrincipalName の値は、ProxyAddresses フィールドにあるいずれかの値と一致します。 これは、お勧めの構成ですが、電子メール アドレスと一致するように UPN を変更できない場合は、次の手順を実行する必要があります。
+
+1. UPN 値内のドメイン名が Azure AD テナントの確認済みドメインの場合は、Azure AD 内の別の電子メール アドレスとして UPN 値を追加することで、UPN 値を Azure Information Protection のユーザー アカウントの承認に使用できるようにします。
+    
+    UPN 値内のドメイン名がテナントの確認済みドメインでない場合は、Azure Information Protection で使用できません。 ただし、グループ電子メール アドレスが検証済みドメイン名を使用している場合、このユーザーはグループのメンバーとしてまだ承認できます。
+
+2. UPN がルーティングできない場合は (たとえば、**ankurroy@contoso.local**)、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法をユーザーに指示してください。 Office のレジストリ キーを設定する必要もあります。
+    
+    詳細については、「[代替ログイン ID を構成する](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)」と「[Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online (Office アプリケーションは SharePoint のオンライン、OneDrive、 Lync オンラインの資格情報を定期的に要求する)](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)」をご覧ください。
+
+> [!TIP]
+> Export-Csv コマンドレットを使用すると、結果をスプレッド シートにエクスポートでき、インポートの検索や一括編集などの管理が容易になります。 
+> 
+> 例: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+
+### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>グループ アカウントが Azure Information Protection の準備ができていることを確認する
+
+グループ アカウントを確認するには、次のコマンドを使用します。
+         
+    Get-MsolGroup | select DisplayName, ProxyAddresses
+
+Azure Information Protection で使用したいグループが表示されることを確認します。 表示されるグループでは、**ProxyAddresses** 列内の電子メール アドレスを使用して、グループ メンバーを Azure Rights Management サービスに対して承認できます。
+
+次に、Azure Information Protection 用に使用したいユーザー (またはその他のグループ) がこのグループに含まれていることを確認します。 これを行うには、PowerShell を使用するか (たとえば、 [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0))、または管理ポータルを使用できます。 
+
+セキュリティ グループを使用する 2 つの Azure Rights Management サービスの構成シナリオでは、次の PowerShell コマンドを使用してオブジェクト ID を検索し、これらのグループを識別するために使用できる名前を表示できます。 Azure Portal を使用してこれらのグループを検索し、オブジェクト ID と表示名の値をコピーすることもできます。
+
+    Get-MsolGroup | where {$_.GroupType -eq "Security"}
+
+## <a name="considerations-for-azure-information-protection-if-email-addresses-change"></a>電子メール アドレスが変更される場合の Azure Information Protection に関する考慮事項
+
+ユーザーまたはグループの電子メール アドレスを変更する場合は、ユーザーまたはグループに 2 つ目の電子メール アドレス (プロキシ アドレス、エイリアス、または代替電子メール アドレスとも呼ぶ) として、古い電子メール アドレスを追加することをお勧めします。 これを行うと、古い電子メール アドレスは、Azure AD proxyAddresses 属性に追加されます。 このアカウントの管理によって、任意の使用権限や、古い電子メール アドレスが使用されていたときに保存されその他の構成のビジネス継続性が確保されます。 
+
+これを実施できない場合、新しい電子メール アドレスを使用するユーザーまたはグループは、以前保護されていたドキュメントと電子メール、古い値を使用するその他の誤った構成へのアクセスなどが拒否されるリスクを負います。 この場合は、構成を繰り返して、新しいメール アドレスを保存する必要があります。 
+
+グループの電子メール アドレスを変更することはまれであり、個々のユーザーではなくグループに使用権限を割り当てれば、ユーザーの電子メール アドレスが変更されても問題になりません。 このシナリオでは、使用権限は、グループの電子メール アドレスに割り当てられており、個々のユーザー電子メール アドレスにではありません。 これは、管理者がドキュメントと電子メールを保護する使用権限を構成するための最も可能性のある (およびお勧めの) 方式です。 ただし、ユーザーは個々のユーザーのカスタム アクセス許可を割り当てることのほうが一般的です。 アクセスを許可するためにユーザー アカウントとグループのいずれが使用されているのかを常時把握することはできないため、古い電子メール アドレスを 2 つ目の電子メール アドレスとして常に追加することが最も安全な方法です。
+
+## <a name="group-membership-caching-by-azure-rights-management"></a>Azure Rights Management によるグループ メンバーシップのキャッシュ
+
+パフォーマンス上の理由から、グループ メンバーシップは Azure Rights Management サービスによってキャッシュされます。 これは、これらのグループが Azure Rights Management によって使用される場合に Azure AD 内でグループ メンバーシップの変更内容が有効になるまで最長で 3 時間かかることがあり、この期間は変わる可能性があることを意味します。 
+
+使用権限の割り当て、Azure Rights Management サービスの構成など、Azure Rights Management 用にグループを使用する場合は、すべての変更や、実行するテストで、この遅延を考慮してください。 
+
+
+## <a name="next-steps"></a>次のステップ
+
+ユーザーとグループを Azure Information Protection に使用できることと、ドキュメントと電子メールの保護を開始する準備ができたことを確認したら、Rights Management サービスを有効にしてこのデータ保護サービスを有効にします。 詳細については、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
