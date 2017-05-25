@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6cb1cd8c70dff0c24125f875c91d23326538e56b
-ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
-translationtype: HT
+ms.openlocfilehash: f3bdfee3a3dfa60c7cc81a553f3c889c30134a6a
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -34,36 +35,36 @@ translationtype: HT
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Windows Server FCI での Azure Rights Management 保護の前提条件
 次のような前提条件があります。
 
--   ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
-
-    -   ファイル サービス ロールのロール サービスの 1 つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
-
-    -   Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
-
-    -   AzureInformationProtection モジュールをインストールし、Azure Rights Management の前提条件を構成しておきます。 詳細については、「[Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには、**BposTenantId**、**AppPrincipalId**、**対称キー**という値があります。 
-
-    -   特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
-
-    -   インターネット接続を設定し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
-
--   オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 このアカウント構成の詳細については、「[Azure Information Protection の準備を行う](../plan-design/prepare.md)」を参照してください。
-
--   ファイル サーバーに Rights Management テンプレートをダウンロードして、ファイルを保護するテンプレート ID を識別しました。 このためには、[Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用します。 このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があります。
+-  ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
+    
+    - ファイル サービス ロールのロール サービスの 1 つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
+    
+    - Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
+    
+    - AzureInformationProtection モジュールをインストールし、Azure Rights Management の前提条件を構成しておきます。 詳細については、「[Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには、**BposTenantId**、**AppPrincipalId**、**対称キー**という値があります。 
+    
+    - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
+    
+    - インターネット接続を設定し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
+    
+- オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」をご覧ください。
+    
+- ファイル サーバーに Rights Management テンプレートをダウンロードして、ファイルを保護するテンプレート ID を識別しました。 このためには、[Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用します。 このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があります。
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
 PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
 
-1.  PowerShell スクリプトを保存する
+1. PowerShell スクリプトを保存する
 
-2.  Rights Management (RMS) の分類プロパティを作成する
+2. Rights Management (RMS) の分類プロパティを作成する
 
-3.  分類規則を作成する (Classify for RMS)
+3. 分類規則を作成する (Classify for RMS)
 
-4.  分類スケジュールを構成する
+4. 分類スケジュールを構成する
 
-5.  カスタム ファイル管理タスクを作成する (Protect files with RMS)
+5. カスタム ファイル管理タスクを作成する (Protect files with RMS)
 
-6.  規則とタスクを手動で実行して構成をテストする
+6. 規則とタスクを手動で実行して構成をテストする
 
 この手順が終了すると、選択したフォルダー内のすべてのファイルは RMS のカスタム プロパティで分類され、Rights Management によって保護されるようになります。 一部のファイルだけを選択的に保護するさらに複雑な構成の場合は、異なる分類プロパティと規則、そしてそれらのファイルだけを保護するファイル管理タスクを、作成または使用できます。
 
@@ -74,8 +75,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 1.  ファイル サーバー リソース マネージャーを使用して、Azure RMS 保護のための [Windows PowerShell スクリプト](fci-script.md)の内容をコピーします。 自分のコンピューターで、スクリプトの内容を **RMS-Protect-FCI.ps1** という名前のファイルに貼り付けます。
 
 2.  スクリプトを確認し、次のように変更します。
-
-    -   次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) コマンドレットで実際に使用する AppPrincipalId に置き換えます。
+    
+    - 次の文字列を探し、Azure Rights Management サービスに接続するために [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) コマンドレットで実際に使用する AppPrincipalId に置き換えます。
 
         ```
         <enter your AppPrincipalId here>

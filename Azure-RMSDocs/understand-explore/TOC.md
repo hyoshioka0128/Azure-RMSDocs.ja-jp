@@ -3,7 +3,6 @@
 ### [別名](aka.md)
 ### [Azure Rights Management とは](what-is-azure-rms.md)
 #### [解決できる問題](azure-rms-problems-it-solves.md)
-#### [管理者とユーザーに表示される内容](what-admins-users-see.md)
 #### [しくみ](how-does-it-work.md)
 ## [個人用 RMS と Azure Information Protection](rms-for-individuals.md)
 ### [個人用 RMS にサインアップする方法](rms-for-individuals-user-sign-up.md)

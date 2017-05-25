@@ -4,7 +4,7 @@ description: "Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3d174fabb4189d2f4ca7755b6355293261318d4
-ms.sourcegitcommit: 55d8a769084c6422f80aefc5f7c6594ea6855bfa
-translationtype: HT
+ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
+ms.sourcegitcommit: dd5a63bfee309c8b68ee9f8cd071a574ab0f6b4a
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -105,7 +106,7 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights
 
 **手順 2 の処理**: RMS クライアントは次に、ユーザーまたはグループの[使用権限](../deploy-use/configure-usage-rights.md)や、その他の制限事項 (有効期限の日付など) が記載されたドキュメント用のポリシーを含む証明書を作成します。 コンテンツを保護する時点で、これらの設定は管理者が事前に構成または指定したテンプレート内に定義することができます ("アドホック ポリシー" とも呼ばれます)。   
 
-選択したユーザーおよびグループの識別に使用する属性は、Azure AD proxyAddress 属性です。この属性には、ユーザーまたはグループのすべての電子メール アドレスが格納されます。
+選択したユーザーとグループの識別に使用するメイン Azure AD 属性は、Azure AD ProxyAddresses 属性です。この属性には、ユーザーまたはグループのすべての電子メール アドレスが格納されます。 ただし、AD ProxyAddresses 属性に値を持たないユーザー アカウントの場合は、このユーザーの UserPrincipalName 値が代わりに使用されます。
 
 RMS クライアントは、ユーザー環境の初期化時に取得した組織のキーを使用して、ポリシーおよび対称コンテンツ キーを暗号化します。 また、RMS クライアントは、ユーザーの環境が初期化されたときに取得したユーザーの証明書でポリシーに署名します。
 
@@ -120,7 +121,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 ![RMS ドキュメントの消費 - 手順 1、ユーザーが認証され、権限のリストを取得する](../media/AzRMS_documentconsumption1.png)
 
-**手順 1 の処理**: 認証されたユーザーは、ドキュメントのポリシーとユーザーの証明書を Azure Rights Management サービスに送信します。 サービスはポリシーを復号化して評価し、ユーザーがドキュメントに対して設定している権限のリストを作成します (ある場合)。 ユーザーを識別するには、ユーザーのアカウントと、そのユーザーがメンバーであるグループ用の Azure AD proxyAddress 属性を使用します。 パフォーマンス上の理由から、グループのメンバーシップは [キャッシュ](../plan-design/prepare.md#group-membership-caching) されます。
+**手順 1 の処理**: 認証されたユーザーは、ドキュメントのポリシーとユーザーの証明書を Azure Rights Management サービスに送信します。 サービスはポリシーを復号化して評価し、ユーザーがドキュメントに対して設定している権限のリストを作成します (ある場合)。 ユーザーを識別するには、ユーザーのアカウントと、そのユーザーがメンバーであるグループ用の Azure AD ProxyAddresses 属性を使用します。 パフォーマンス上の理由から、グループのメンバーシップは [キャッシュ](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) されます。 ユーザー アカウントの Azure AD ProxyAddresses 属性に値がない場合は、Azure AD UserPrincipalName の値が代わりに使用されます。
 
 ![RMS ドキュメントの消費 - 手順 2、使用ライセンスがクライアントに返される](../media/AzRMS_documentconsumption2.png)
 
