@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: ab3b25ebd04565f8cd0e9236c1241f38d4a2e8b2
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
