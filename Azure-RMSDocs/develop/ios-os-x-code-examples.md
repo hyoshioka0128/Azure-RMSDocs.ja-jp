@@ -16,7 +16,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 60874baeb5956c611e09901182673354d14c6eba
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
