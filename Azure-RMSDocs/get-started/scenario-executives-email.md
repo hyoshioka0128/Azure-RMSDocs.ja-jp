@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 3e4b1d6115d861e692197d9cb3fc850b7574e32e
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="scenario---executives-securely-exchange-privileged-information"></a>シナリオ - 役員が安全に特権情報を交換できるようにする
 
