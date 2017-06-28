@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: dd1ecd8bd232e3079ce92eab07288ede52d3de72
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="rapid-deployment-guide-for-azure-rights-management"></a>Azure Rights Management の迅速なデプロイ ガイド
 
