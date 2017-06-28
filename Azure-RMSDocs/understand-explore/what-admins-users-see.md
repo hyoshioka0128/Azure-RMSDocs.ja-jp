@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 254386ad7cda2d3e178eb9520e6282abe609c158
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="azure-rms-in-action-what-administrators-and-users-see"></a>Azure RMS の動作:管理者およびユーザーに対する表示
 
