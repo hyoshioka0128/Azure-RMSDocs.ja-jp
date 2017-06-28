@@ -16,7 +16,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
 ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>ADAL 認証用のアプリの構成
 
