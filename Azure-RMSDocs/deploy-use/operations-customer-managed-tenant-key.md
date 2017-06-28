@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 198de18664e2f94209ab3c7224e89c5a9d4c3196
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 

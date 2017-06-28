@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 0b4e9cd5350f942203129979b05bc1344fb37aa5
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 

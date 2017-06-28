@@ -12,7 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 ms.openlocfilehash: fc25cd11d950199f7ccd8e4e86e4d915c7fb6a95
 ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
