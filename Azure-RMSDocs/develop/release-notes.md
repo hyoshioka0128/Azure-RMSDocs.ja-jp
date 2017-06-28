@@ -15,7 +15,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: acd6dc2190996787b5354407bbaedec921a5b48c
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
