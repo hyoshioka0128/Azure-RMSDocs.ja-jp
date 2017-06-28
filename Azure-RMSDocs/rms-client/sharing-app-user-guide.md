@@ -14,7 +14,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 54976fbfdc17621b934349a5a7c997baa3c835aa
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="rights-management-sharing-application-user-guide"></a>Rights Management 共有アプリケーション ユーザー ガイド
 
