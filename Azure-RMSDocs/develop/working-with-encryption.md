@@ -16,7 +16,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: bf327be47629532a716cc8239fc76d1a9ee1db46
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: ja-JP
 ---
 # <a name="how-to-work-with-encryption-settings"></a>方法: 暗号化設定の操作
 
