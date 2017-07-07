@@ -8,6 +8,7 @@
 ### [Azure Information Protection クライアント](aip-client.md)
 #### [Azure Information Protection クライアント: バージョン リリース履歴](client-version-release-history.md)
 #### [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
+##### [カスタマイズ](client-admin-guide-customizations.md)
 ##### [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
 ##### [ドキュメント追跡](client-admin-guide-document-tracking.md)
 ##### [サポートされるファイルの種類](client-admin-guide-file-types.md)
