@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 254386ad7cda2d3e178eb9520e6282abe609c158
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 365b0d16643e5fbd625034428e01aac01b5cc122
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="azure-rms-in-action-what-administrators-and-users-see"></a>Azure RMS の動作:管理者およびユーザーに対する表示
 
@@ -42,7 +43,7 @@ Windows PowerShell を使用して Azure RMS をアクティブ化および構�
 
 ![2 つの既定のテンプレートと、新しいテンプレートを作成するためのウィザードの開始が表示されている、Azure クラシック ポータルのスクリーンショット](../media/AzRMS_TemplatesPortal_small.png)
 
-**ステップ 2 で管理者に表示される内容:** アクティブ化の後、2 つの権限ポリシー テンプレートが自動的に組織で使用可能になります。 1 つのテンプレートは読み取り専用 (名前に「**社外秘、表示のみ**」が含まれるもの) で、もう&1; つは読み取りおよび変更アクセス用 (**社外秘**) です。
+**ステップ 2 で管理者に表示される内容:** アクティブ化の後、2 つの権限ポリシー テンプレートが自動的に組織で使用可能になります。 1 つのテンプレートは読み取り専用 (名前に「**社外秘、表示のみ**」が含まれるもの) で、もう 1 つは読み取りおよび変更アクセス用 (**社外秘**) です。
 
 これらのテンプレートをファイルまたは電子メールに適用すると、アクセスは組織内のユーザーに制限されます。 部外者に会社のデータがリークするのを防ぐにはこれが非常に迅速かつ簡単な方法です。
 

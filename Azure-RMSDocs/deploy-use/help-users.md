@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4b5dfe6e4c77a9b22e98cb2b7997a744730caac1
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -39,7 +40,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 -   **ヘルプ デスクの情報:**
 
-    ヘルプ デスクの最も便利なツールの&1; つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
+    ヘルプ デスクの最も便利なツールの 1 つは、 [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437)です。 ヘルプ デスクのオペレーターはこのツールを Azure RMS 管理者オプションで実行でき、ユーザーに Azure RMS ユーザー オプションで実行するよう求めることができます。 このツールは問題の識別だけではなく、発見された問題の解決や、解決されない場合にはトレース ログを記録することもできます。
     
     ユーザーが Azure Information Protection クライアントを実行している場合、ヘルプ デスクのオペレーターはそのユーザーに **[ヘルプとフィードバック]**、**[診断の実行]** を使用し、その後でクライアントをリセットするよう求める場合があります。 ただし、RMS アナライザーとは異なり、リセットしてもユーザーがサインアウトされたり、クライアントがリブートストラップされることはなく、自動修復されません。
 

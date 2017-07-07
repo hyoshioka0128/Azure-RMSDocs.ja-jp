@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dd1ecd8bd232e3079ce92eab07288ede52d3de72
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 2e50dc9d53550f35f5c589cdb1b384e0abf585e0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rapid-deployment-guide-for-azure-rights-management"></a>Azure Rights Management の迅速なデプロイ ガイド
 
@@ -140,7 +141,7 @@ IT 部門は Microsoft Azure Information Protection をエンタープライズ 
 
 このしくみを紹介する 2 分間のビデオ「[Azure RMS のドキュメントの追跡と取り消し](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)」をご覧ください。
 
-この組織の最も重要な資産の&1; つは、私たちが日常的に生成、保存、および使用しているデータです。 こうしたデータは、競争力を獲得し、業績を上げるために役立ちます。 そのため、データの管理を維持し、必要のない人がデータにアクセスできないようにすることが重要です。
+この組織の最も重要な資産の 1 つは、私たちが日常的に生成、保存、および使用しているデータです。 こうしたデータは、競争力を獲得し、業績を上げるために役立ちます。 そのため、データの管理を維持し、必要のない人がデータにアクセスできないようにすることが重要です。
 
 このソリューションを実装することにより、重要なデータを保護し、データを管理するためのツールを利用することができます。 これらの変更の実装にご協力いただきありがとうございます。
 

@@ -14,10 +14,11 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bf327be47629532a716cc8239fc76d1a9ee1db46
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 288cfbd3cb1b7ee979c760dc462bf8ef9a99686f
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="how-to-work-with-encryption-settings"></a>方法: 暗号化設定の操作
 
@@ -47,7 +48,7 @@ ms.contentlocale: ja-JP
 
 API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、このフラグを使用して既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに使用するため、引き続き機能します。
 
-フラグを&1; つ変更するだけで、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 次のコード スニペットの例をご覧ください。
+フラグを 1 つ変更するだけで、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 次のコード スニペットの例をご覧ください。
 
 ## <a name="protect-files-with-aes-256-cbc4k"></a>AES 256 CBC4K によるファイルの保護
 
@@ -61,7 +62,7 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                                     &amp;pLicenseHandle);
 
 
-## <a name="protect-files-with-aes-128-cbc4k"></a>AES&128; CBC4K によるファイルの保護
+## <a name="protect-files-with-aes-128-cbc4k"></a>AES 128 CBC4K によるファイルの保護
 
     C++
 
@@ -78,7 +79,7 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                            &amp;dwEncryptionMode);
 
 
-## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>AES&128; ECB (非推奨アルゴリズム) によるファイルの保護
+## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>AES 128 ECB (非推奨アルゴリズム) によるファイルの保護
 
 この例は*非推奨アルゴリズム*をサポートする新しい方法も示しています。
 

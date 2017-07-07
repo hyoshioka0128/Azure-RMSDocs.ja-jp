@@ -30,7 +30,7 @@
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
 |ドキュメントを追跡する手順の完全版   →|[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](../rms-client/sharing-app-track-revoke.md)|
-|ドキュメント追跡に関する&2; 分間のビデオ   →|[Azure RMS のドキュメントの追跡と取り消し](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
+|ドキュメント追跡に関する 2 分間のビデオ   →|[Azure RMS のドキュメントの追跡と取り消し](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
 |トラブルシューティングとお客様からの質問   →|[ドキュメント追跡の FAQ](https://technet.microsoft.com/dn947488)|
 
 ## <a name="next-steps"></a>次の手順

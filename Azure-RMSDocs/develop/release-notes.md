@@ -13,10 +13,11 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: acd6dc2190996787b5354407bbaedec921a5b48c
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 9fd96c934d4f7a8e09035ff7eda4517f65a27e17
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -141,7 +142,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **iOS および OS X**
 
--   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は&2; つありますが、 バグがあるため、現在 1 番目の言語仕様のローカライズは完全にはサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されますが、UI は翻訳されません。
+-   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は 2 つありますが、 バグがあるため、現在 1 番目の言語仕様のローカライズは完全にはサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されますが、UI は翻訳されません。
 
     1. ポルトガル語
 
