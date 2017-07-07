@@ -14,9 +14,11 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f93df5f204350a56f8280f299c04478cc1b5dfba
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: f7ebcb3a432a4521a71e3cc80c20b1af64e051c7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="application-types"></a>アプリケーションの種類
 
@@ -31,7 +33,7 @@ Rights Management サービス SDK 2.1 では、次のアプリケーション�
 
 ### <a name="server-mode-applications"></a>サーバー モード アプリケーション
 
-*サーバー モード*は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止*アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)を参照してください。
+*サーバー モード*は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止*アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp)を参照してください。
 
 アプリケーションで*サーバー モード*を使用する場合は、RMS サーバーをサイレント認証する必要があります。 *クライアント モード*とは異なり、サイレント認証に失敗した場合にも、RMS SDK 2.1 は資格情報プロンプトを開きません。 また、*サーバー モード*で実行しているときは、アプリケーション マニフェストも必要ありません。
 

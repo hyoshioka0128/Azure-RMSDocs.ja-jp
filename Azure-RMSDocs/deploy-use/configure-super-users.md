@@ -1,6 +1,6 @@
 ---
 title: "Azure Rights Management のスーパー ユーザーを構成する - AIP"
-description: "Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は &quot;データに対する推論&quot; と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
+description: "Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は 'データに対する推論' と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,9 +13,10 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 8b915ad2bf58352c41f1b534aa6c88f1640fb589
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
@@ -54,13 +55,13 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 次のログの抜粋に、Get-AadrmAdminLog コマンドレットの使用によるいくつかのエントリの例を示します。 この例では、Contoso 社の管理者は、スーパー ユーザー機能が無効になっていることを確認し、スーパー ユーザーとして Richard Simone を追加します。Richard が Azure Rights Management サービス用に構成された唯一のスーパー ユーザーであることを確認してから、Richard は退職した従業員によって保護されたいくつかのファイルを復号化できるようにスーパー ユーザー機能を有効にします。
 
-`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
+`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
+`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
 
-`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
+`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
 ## <a name="scripting-options-for-super-users"></a>スーパー ユーザーのスクリプト作成オプション
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] のスーパー ユーザーが割り当てられているだれかが、複数の場所で、複数のファイルから保護を削除することが必要になる場合がよくあります。 これは手動で行うことができますが、スクリプト化するとより効率的に (そしてより確実に) 行うことができます。 この場合、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用し、必要に応じて [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドレットも使用します。 

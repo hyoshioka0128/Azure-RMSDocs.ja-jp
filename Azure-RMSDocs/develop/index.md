@@ -1,6 +1,6 @@
 ---
 title: "RMS 開発者ガイド |Azure RMS"
-description: "Rights Management SDK の&3; つの世代をご利用いただけるようになりました。"
+description: "Rights Management SDK の 3 つの世代をご利用いただけるようになりました。"
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
@@ -13,9 +13,11 @@ ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c408d7a8f068e2de6616534a58161a86482a2a9c
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 899c05d233ec31db27cee058982c98d8dd809c3a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rms-developers-guide"></a>RMS 開発者ガイド
 
@@ -27,7 +29,7 @@ Rights Management SDK は、**Microsoft Rights Management SDK 4.2** (Android、i
 |------|---------|
 | [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Android、iOS、Mac OS X、Windows Phone/RT、および Linux/C++ のデバイス アプリで Microsoft Rights Management サービスを使用して情報を保護できるようにするための、軽量な開発エクスペリエンスを提供する次世代のシンプルなツール セット。 |
 | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | Windows デスクトップ アプリケーションの開発者およびサーバー ベースのソリューション プロバイダーのための強力な SDK オファリングです。その製品の著作権を管理できるようにします。|
-|[AD RMS SDK]()|**注** - AD RMS SDK は Msdrm.dll でクライアントによって公開される機能を活用し、Windows Server 2012、Windows 8、Windows Server 2008 R2、Windows 7、Windows Server 2008、および Windows Vista で使用できます。 今後のバージョンでは変更されるか、利用できなくなる場合もあります。 代わりに、Msdrm.dll でクライアントによって公開される機能を活用する、Microsoft Rights Management サービス SDK 2.1 を使用してください。|
+|[AD RMS SDK]()|** 注 ** - AD RMS SDK は Msdrm.dll でクライアントによって公開される機能を活用し、Windows Server 2012、Windows 8、Windows Server 2008 R2、Windows 7、Windows Server 2008、および Windows Vista で使用できます。 今後のバージョンでは変更されるか、利用できなくなる場合もあります。 代わりに、Msdrm.dll でクライアントによって公開される機能を活用する、Microsoft Rights Management サービス SDK 2.1 を使用してください。|
 |[AD RMS スクリプト API]()| AD RMS インストールを管理するスクリプトを作成するために使用|
 
 ## <a name="code-samples-and-tools"></a>コード サンプルとツール ##

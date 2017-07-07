@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0b4e9cd5350f942203129979b05bc1344fb37aa5
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: caacc4174ddb63e9c9091c0df294b93cf947a7c4
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
@@ -29,7 +30,7 @@ Azure Information Protection のサブスクリプションをキャンセルす
 ## <a name="re-key-your-tenant-key"></a>テナント キーを再入力します
 再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを使用し、コンピューターの Rights Management 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 たとえば、
 
--   あなたの会社が&2; つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
+-   あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
 -   テナント キーのマスター コピー (あなたが所有するコピー) の盗難が疑われています。
 
@@ -41,7 +42,7 @@ Azure Information Protection のサブスクリプションをキャンセルす
 テナント キーのバックアップは Microsoft が行うため、ユーザーの操作は必要ありません。
 
 ## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
-Azure Information Protection の構成およびテナント キーをエクスポートするには、次の&3; つの手順に従います。
+Azure Information Protection の構成およびテナント キーをエクスポートするには、次の 3 つの手順に従います。
 
 ### <a name="step-1-initiate-export"></a>手順 1:エクスポートを開始する
 
@@ -65,7 +66,7 @@ Azure Information Protection の構成およびテナント キーをエクス�
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    このコマンドの出力は&2; つのファイルです。一方のファイルにはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、他方のファイルにはパスワードで保護された TPD 自体が含まれています。 AadrmTpd.exe -createkey コマンドを実行した場合、相互参照のため、どちらのファイルの GUID も公開キーおよび秘密キー ファイルと同じになります。
+    このコマンドの出力は 2 つのファイルです。一方のファイルにはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、他方のファイルにはパスワードで保護された TPD 自体が含まれています。 AadrmTpd.exe -createkey コマンドを実行した場合、相互参照のため、どちらのファイルの GUID も公開キーおよび秘密キー ファイルと同じになります。
 
     -   Password-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt
 
