@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3e4b1d6115d861e692197d9cb3fc850b7574e32e
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="scenario---executives-securely-exchange-privileged-information"></a>シナリオ - 役員が安全に特権情報を交換できるようにする
 
@@ -104,7 +105,7 @@ ms.contentlocale: ja-JP
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントのテンプレート](../media/AzRMS_UsersBanner.png)
 
 ### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>IT からのお知らせ： &lt;組織名&gt; の役員メールが自動的に保護されるようになりました
-今後、社内の他の &lt;組織名&gt; の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員&1; 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
+今後、社内の他の &lt;組織名&gt; の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を &lt;組織名&gt; の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 
@@ -118,7 +119,7 @@ ms.contentlocale: ja-JP
 ![Azure RMS の迅速なデプロイのためのユーザー ドキュメントの例](../media/AzRMS_ExampleBanner.png)
 
 #### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>IT からのお知らせ：VanArsdel の役員メールが自動的に保護されるようになりました
-今後、VanArsdel の他の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員&1; 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
+今後、VanArsdel の他の役員にメールを送信すると、メールの内容とすべての添付ファイルが自動的に保護され、その情報の閲覧、印刷、コピーといった操作を行えるのは、受信者である社内の役員 1 人のみになります。 この制限は、メール メッセージを他のユーザーに転送したり、添付ファイルを保存したりした場合にも適用されます。 この保護は、機密情報のデータ損失を防ぐのに役立ちます。
 
 これらのメールの情報を VanArsdel の役員以外のユーザーが閲覧、編集できるようにするには、そのユーザー宛てに別途メールを送信する必要があります。 または、自動保護をオーバーライドにするには、電子メール メッセージの件名の任意の場所に **DNP** (Do Not Protect の省略形) という文字を入力します。
 

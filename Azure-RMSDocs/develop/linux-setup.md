@@ -14,9 +14,11 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d4f454fe597684c1b1c1e166ad6d6ab26dbe0deb
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: e36595f0921f19d609660824e80e46ab259882b7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="linux-setup"></a>Linux のセットアップ
 
@@ -36,7 +38,7 @@ Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **注**: Lib とサンプルは Windows と 
 
 ## <a name="how-to-build-and-use"></a>ビルド方法および使用方法
 
-この SDK について&2; つのガイダンス トピックが GitHub でホストされており、SDK のビルドと使用に関する基本的なガイダンスを入手できます。
+この SDK について 2 つのガイダンス トピックが GitHub でホストされており、SDK のビルドと使用に関する基本的なガイダンスを入手できます。
 
 -   [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
 -   [How to install and use app on user systems (ユーザー システムにアプリをインストールして使用する方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
