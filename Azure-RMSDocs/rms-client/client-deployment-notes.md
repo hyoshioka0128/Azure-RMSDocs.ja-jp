@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9b67159136de154b934f70991fcb10799a4cbbb2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: b7879dd85c2e46823cfe9c8f1f4482952a8db8aa
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
@@ -27,7 +28,7 @@ RMS クライアントは [Windows 用 Azure Information Protection クライア
 
 
 ## <a name="redistributing-the-rms-client"></a>RMS クライアントの再配布
-RMS クライアントは自由に再配布でき、他のアプリケーションや IT ソリューションにバンドルできます。 アプリケーション開発者やソリューション プロバイダーには、RMS クライアントを再配布する&2; つのオプションがあります。
+RMS クライアントは自由に再配布でき、他のアプリケーションや IT ソリューションにバンドルできます。 アプリケーション開発者やソリューション プロバイダーには、RMS クライアントを再配布する 2 つのオプションがあります。
 
 -   推奨: お使いのアプリケーションに RMS クライアントのインストーラーを組み込み、それをサイレント モード (**/quiet** スイッチ。次のセクションで詳細を説明します) で実行することをお勧めします。
 
@@ -137,7 +138,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
     REG_DWORD: AllowTrustedServersOnly
 
-    **値:**&0; 以外の値を指定すると、RMS クライアントは TrustedServers リスト、および Azure Rights Management サービスで構成されている指定されたサーバーのみを信頼します。
+    **値:** 0 以外の値を指定すると、RMS クライアントは TrustedServers リスト、および Azure Rights Management サービスで構成されている指定されたサーバーのみを信頼します。
 
 **信頼された AD RMS サーバーのリストにメンバーを追加するには**
 
@@ -168,7 +169,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
     *\<テナントの URL\>* は、**{GUID}.rms.[Region].aadrm.com** という形式です。この値は、Azure RMS の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行して **RightsManagementServiceId** 値で確認できます。
 
 > [!NOTE]
-> このサービスの検出フローには&3; つの重要な例外があります。
+> このサービスの検出フローには 3 つの重要な例外があります。
 > 
 > - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com) 。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの設定を上書きするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールする必要があります。 
 >

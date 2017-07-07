@@ -1,6 +1,6 @@
 ---
 title: "明示的な所有者権限の追加方法 | Azure RMS"
-description: "アプリケーションでは、最初からライセンスを作成するときに、&quot;所有者&quot; 権限を明示的に追加する必要があります。"
+description: "アプリケーションでは、最初からライセンスを作成するときに、\"所有者\" 権限を明示的に追加する必要があります。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,10 +14,11 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d7365dc91139d9edc38a52ba66319946470873d5
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 5d4f38e90747f67209e66def1a7b2cb03bab7e4f
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>方法: 明示的な所有者権限の追加
 
@@ -38,7 +39,7 @@ ms.contentlocale: ja-JP
 
 この例では、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って作成したライセンスに必要な権限を追加しています。 この例は、権限の作成のほか、権限リストを使用したライセンスへの権限の割り当てを示しています。
 
-次の&2; つの権限が次のユーザーに追加されます。
+次の 2 つの権限が次のユーザーに追加されます。
 
 -   *読み取り*アクセス許可が joe@contoso.com に割り当てられます。
 -   *完全な*アクセス許可が mary\_kay@contoso.com に割り当てられます。

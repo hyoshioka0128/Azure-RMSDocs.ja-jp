@@ -14,10 +14,11 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 890319e80941232af636fce6913f362ad48632f6
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 42c772b870c700da84d5dfaf04c1ac5c2cd51f96
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="file-api-configuration"></a>ファイル API の構成
 
@@ -58,7 +59,7 @@ ms.contentlocale: ja-JP
 
 **種類**: REG_SZ
 
-**説明**: 次の&3; つの値のいずれかが含まれています。
+**説明**: 次の 3 つの値のいずれかが含まれています。
 
 - **Off**: 暗号化が無効です。
 

@@ -13,9 +13,10 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
-ms.sourcegitcommit: 0e46a9687f237cf6d551c183dd006337ec835b86
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -151,7 +152,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
 - Jagannath Reddy のユーザー アカウントは  **jagannathreddy@contoso.com** によって承認されることになります。
 
--  Ankur Roy のユーザー アカウントは、 **ankur.roy@contoso.com**  と  **ankur.roy@onmicrosoft.contoso.com**  を使用して承認できますが、** ankurroy@contoso.com** では承認できません。
+-  Ankur Roy のユーザー アカウントは、 **ankur.roy@contoso.com**  と  **ankur.roy@onmicrosoft.contoso.com**  を使用して承認できますが、 **ankurroy@contoso.com** では承認できません。
 
 通常、UserPrincipalName の値は、ProxyAddresses フィールドにあるいずれかの値と一致します。 これは、お勧めの構成ですが、電子メール アドレスと一致するように UPN を変更できない場合は、次の手順を実行する必要があります。
 
