@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d7b07de1612c55a39a3552e47a0053aa6127a0e
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 3c96d8718f42dcedebba03354c149bb2b9667d66
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
 
@@ -24,7 +25,7 @@ ms.contentlocale: ja-JP
 > [!IMPORTANT]
 > **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](../rms-client/aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2018 年 1 月 31 日に停止されます。 
  
-RMS 共有アプリケーションはダウンロード可能なアプリケーションであり、Windows コンピューター用の Office 2010 をサポートし、すべての Windows コンピューターとモバイル デバイスに推奨されていました。 Mac コンピューターや Windows Phone デバイスでは引き続き推奨されます。 利点の&1; つとして、Azure Rights Management サービスをネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)」の「[保護のレベル – ネイティブと汎用](../rms-client/sharing-app-admin-guide.md)」セクションを参照してください。
+RMS 共有アプリケーションはダウンロード可能なアプリケーションであり、Windows コンピューター用の Office 2010 をサポートし、すべての Windows コンピューターとモバイル デバイスに推奨されていました。 Mac コンピューターや Windows Phone デバイスでは引き続き推奨されます。 利点の 1 つとして、Azure Rights Management サービスをネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)」の「[保護のレベル – ネイティブと汎用](../rms-client/sharing-app-admin-guide.md)」セクションを参照してください。
 
 ユーザーが RMS 共有アプリケーションを使用してファイルを保護すると、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることもできます。 これを行うには、 [ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)を使用します。
 
@@ -38,7 +39,7 @@ Windows コンピューターの場合、RMS 共有アプリケーションは�
 
 -   Office 2010 のバックエンド構成により、このスイートの Word、Excel、PowerPoint、および Outlook が Azure Rights Management サービスとシームレスに連携できるようになります。
 
-Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)ページを使用して&1; つのコンピューターにダウンロードしてインストールできますが、サイレント インストールおよびカスタム構成のためのエンタープライズ デプロイもサポートされています。 詳細については、次のリソースを参照してください。
+Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)ページを使用して 1 つのコンピューターにダウンロードしてインストールできますが、サイレント インストールおよびカスタム構成のためのエンタープライズ デプロイもサポートされています。 詳細については、次のリソースを参照してください。
 
 -   [Rights Management 共有アプリケーション管理者ガイド](../rms-client/sharing-app-admin-guide.md)
 
