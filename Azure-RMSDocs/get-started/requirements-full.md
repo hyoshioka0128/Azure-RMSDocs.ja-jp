@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11aea973a156556e14d474deae04deb97ee1dc73
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 9fc5560381cc8ff3e3b8b1780c97ab88f3dda44a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -69,7 +70,7 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 > -   最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
 ### <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
-Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち&1; つ以上が必要です。
+Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
 
