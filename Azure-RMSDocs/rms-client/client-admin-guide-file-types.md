@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/08/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,16 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ffd2ed8aa59c3d9eb1ab6d36a9ccac71d449d978
-ms.sourcegitcommit: dabea768a37aa56635b9123f628c1c2b2d6a0f55
+ms.openlocfilehash: 4f187b3fa991fb4ed3a11ded34fa663dc6b4bafc
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Azure Information Protection クライアントでサポートされるファイルの種類
+# Azure Information Protection クライアントでサポートされるファイルの種類
+<a id="file-types-supported-by-the-azure-information-protection-client" class="xliff"></a>
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012*
 
 Azure Information Protection クライアントは、次のことをドキュメントとメールに適用できます。
 
@@ -32,7 +33,8 @@ Azure Information Protection クライアントは、次のことをドキュメ
 
 以下では、サポートされているファイルの種類、さまざまな保護レベルと既定の保護レベルを変更する方法、分類と保護から自動的に除外 (スキップ) されるファイルについて説明します。
 
-## <a name="file-types-supported-for-classification-only"></a>分類のみにサポートされているファイルの種類
+## 分類のみにサポートされているファイルの種類
+<a id="file-types-supported-for-classification-only" class="xliff"></a>
 
 次のファイルの種類では分類のみがサポートされています。 その他のファイルの種類では、分類と保護の両方がサポートされます ([「分類と保護がサポートされているファイルの種類」](#supported-file-types-for-classification-and-protection) セクションを参照してください)。
 
@@ -57,7 +59,8 @@ Azure Information Protection クライアントは、次のことをドキュメ
 
 - **Digital Negative**: .dng
 
-## <a name="file-types-supported-for-protection"></a>保護がサポートされているファイルの種類
+## 保護がサポートされているファイルの種類
+<a id="file-types-supported-for-protection" class="xliff"></a>
 
 Azure Information Protection クライアントは、次の表に示すように、2 つの異なるレベルの保護をサポートします。
 
@@ -71,7 +74,23 @@ Azure Information Protection クライアントで適用される既定の保護
 
 ユーザーは、管理者によって構成されたラベルを選んで、データ保護を自動的に適用できます。または、ユーザーは、[アクセス許可レベル](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels)を使って、独自のカスタム保護設定を指定できます。 
 
-### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
+### 保護がサポートされているファイルのサイズ
+<a id="file-sizes-supported-for-protection" class="xliff"></a>
+
+Azure Information Protection クライアントが保護をサポートするファイルのサイズには上限があります。
+
+- **Office ファイル:**
+    
+    |Office アプリケーション|サポートされる最大ファイル サイズ|
+    |--------------------------------|-------------------------------------|
+    |Word 2007 (AD RMS のみでサポート)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32 ビット: 512 MB<br /><br />64 ビット: 512 MB
+    |Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます|
+    |PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます
+
+- **その他のすべてのファイル**: 1 GB
+
+### 分類と保護がサポートされているファイルの種類
+<a id="supported-file-types-for-classification-and-protection" class="xliff"></a>
 
 次の表には、Azure Information Protection クライアントによるネイティブ保護をサポートし、かつ分類も可能であるファイルの種類のサブセットを一覧表示します。 
 
@@ -85,7 +104,7 @@ Azure Information Protection クライアントで適用される既定の保護
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjpeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
@@ -104,7 +123,8 @@ Azure Information Protection クライアントで適用される既定の保護
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>ファイルの既定の保護レベルの変更
+### ファイルの既定の保護レベルの変更
+<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
 Azure Information Protection クライアントがファイルを保護する方法は、レジストリを編集して変更することができます。 たとえば、ネイティブ保護をサポートするファイルを、Azure Information Protection クライアントで一般的に保護されるように強制できます。
 
 この操作を行う必要がある理由:
@@ -153,7 +173,8 @@ Azure Information Protection クライアントがファイルを保護する方
 
 詳しくは、開発者ガイドの「[ファイル API の構成](../develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 
 
-## <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client"></a>Azure Information Protection クライアントによる分類と保護から除外されるファイルの種類
+## Azure Information Protection クライアントによる分類と保護から除外されるファイルの種類
+<a id="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client" class="xliff"></a>
 
 コンピューターの動作に不可欠なファイルをユーザーが変更しないように、一部のファイルの種類とフォルダーは分類と保護から自動的に除外されます。 このようなファイルをユーザーが分類または保護しようとすると、除外されていることを示すメッセージが表示されます。
 
@@ -166,8 +187,11 @@ Azure Information Protection クライアントがファイルを保護する方
     - \AppData (すべてのユーザー)
 
 
-## <a name="next-steps"></a>次のステップ
+## 次のステップ
+<a id="next-steps" class="xliff"></a>
 Azure Information Protection クライアントによってサポートされるファイルの種類がわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
+
+- [カスタマイズ](client-admin-guide-customizations.md)
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
 

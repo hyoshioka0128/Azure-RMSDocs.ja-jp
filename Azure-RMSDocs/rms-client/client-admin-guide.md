@@ -4,25 +4,47 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 06/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74abbe0db07a155afe500388810945a3ff5a35a5
-ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
+ms.openlocfilehash: b9873bee1754ca36724cf13ab7915952a6ea9d5c
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
+# Azure Information Protection クライアント管理者ガイド
+<a id="azure-information-protection-client-administrator-guide" class="xliff"></a>
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012*
 
+エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
-エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または「[Azure Information Protection クライアントユーザー ガイド](client-user-guide.md)」には記載されていない詳細な技術情報が必要な場合は、以下の情報を参照してください。
+たとえば、
+
+- このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
+
+- 前提条件、インストール オプションとパラメーター、検証チェックに関する情報を含む、ユーザー向けにクライアントをインストールする方法
+
+- 通常レジストリの編集が必要なカスタムの構成に対応する方法
+
+- クライアント ファイルと使用状況ログを検索する
+
+- クライアントでサポートされているファイルの種類を識別する
+
+- ユーザー用のドキュメント追跡サイトを構成して使用する
+
+- クライアントで PowerShell を使用したコマンドラインでの制御
+
+**このドキュメントでわからない問題がある場合は**、 [Azure Information Protection についての Yammer サイト](https://www.yammer.com/AskIPTeam)をご覧ください。 
+
+## Azure Information Protection クライアントの技術的概要
+<a id="technical-overview-of-the-azure-information-protection-client" class="xliff"></a>
 
 Azure Information Protection クライアントには次のものが含まれます。
 
@@ -40,10 +62,9 @@ Azure Information Protection クライアントは、Azure サービス (Azure I
 
 AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
 
-**このドキュメントでわからないことがある場合は**、 [Azure Information Protection についての Yammer サイト](https://www.yammer.com/AskIPTeam)をご覧ください。 
 
-
-## <a name="should-you-deploy-the-azure-information-protection-client"></a>Azure Information Protection クライアントのデプロイが必要な場合
+## Azure Information Protection クライアントのデプロイが必要な場合
+<a id="should-you-deploy-the-azure-information-protection-client" class="xliff"></a>
 
 次のいずれかが当てはまる場合は、Azure Information Protection クライアントをデプロイします。
 
@@ -55,7 +76,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 - ファイルを表示するネイティブ アプリケーションがインストールされていないか、ドキュメントを開くことができない場合に、保護されているドキュメントを表示したい。
 
-- エクスプローラーまたは Powershell コマンドを使って、単にファイルを保護したい。
+- エクスプローラーまたは PowerShell コマンドを使って、単にファイルを保護したい。
 
 - ユーザーと管理者が保護されたドキュメントの追跡および取り消しを行えるようにしたい。
 
@@ -67,28 +88,58 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 ![Azure Information Protection バーと既定のポリシー](../media/word2016-calloutsv2.png)
 
-## <a name="how-to-install-the-azure-information-protection-client-for-users"></a>ユーザー向けに Azure Information Protection クライアントをインストールする方法
+## ユーザー向けに Azure Information Protection クライアントをインストールする方法
+<a id="how-to-install-the-azure-information-protection-client-for-users" class="xliff"></a>
 
-クライアントをインストールする前に、「[Azure Information Protection の要件](../get-started/requirements-azure-rms.md)」で Azure Information Protection クライアントに必要なオペレーティング システムのバージョンとアプリケーションがあることを確認してください。 
+クライアントをインストールする前に、「[Azure Information Protection の要件](../get-started/requirements-azure-rms.md)」で Azure Information Protection に必要なオペレーティング システムのバージョンとアプリケーションがコンピューターにインストールされていることを確認してください。 
 
-Azure Information Protection クライアントの追加の前提条件:
+次に、Azure Information Protection クライアントに必要な追加の前提条件を確認します。
 
-- Azure Information Protection クライアントを完全にインストールするには、既定では Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。 推奨はされていませんが、カスタム インストール パラメーターを使用してこの要件を省略できます。
+### Azure Information Protection クライアントの追加の前提条件
+<a id="additional-prerequisites-for-the-azure-information-protection-client" class="xliff"></a>
 
-- Azure Information Protection ビューアーを別にインストールする場合は、Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。これがない場合、インストーラーではダウンロードまたはインストールされません。
+- Microsoft .NET Framework 4.6.2
+    
+    Azure Information Protection クライアントを完全にインストールするには、既定では Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。 推奨はされていませんが、[カスタム インストール パラメーター](#more-information-about-the-downgradedotnetrequirement-installation-parameter)を使用してこの要件を省略できます。
 
-- PowerShell モジュールには、Windows PowerShell バージョン 4.0 が必要で、以前のオペレーティング システムにインストールする必要がある場合があります。 詳細については、「[How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 インストーラーでは、この前提条件のチェックやインストールは行われません。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「**$PSVersionTable**」と入力します。
+- Microsoft .NET Framework 4.5.2
+    
+    Azure Information Protection ビューアーを別にインストールする場合は、Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。これがない場合、インストーラーではダウンロードまたはインストールされません。
 
-- Windows 7 Service Pack 1 を実行しているコンピューターには、KB 2533623 が必要です。 この更新プログラムの詳細については、「[マイクロソフト セキュリティ アドバイザリ: 安全でないライブラリの読み込みにより、リモートでコードが実行される](https://support.microsoft.com/en-us/kb/2533623)」を参照してください。 この更新プログラムは直接インストールすることもでき、また、その更新プログラムを包括する別の更新プログラムによって置き換えられることもあります。
+- Windows PowerShell バージョン 4.0
+    
+    クライアント用の PowerShell モジュールには、Windows PowerShell バージョン 4.0 が必要で、以前のオペレーティング システムにインストールする必要がある場合があります。 詳細については、「[How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 インストーラーでは、この前提条件のチェックやインストールは行われません。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。
+
+- Microsoft Online Services サインイン アシスタント 7.250.4303.0
+    
+    Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 新しいバージョンのサインイン アシスタントがある場合は、これをアンインストールしてから Azure Information Protection クライアントをインストールしてください。 たとえば、バージョンを確認し、**[コントロール パネル]** > **[プログラムと機能]** > **[プログラムのアンインストールまたは変更]** を使用して、サインイン アシスタントをアンインストールします。
+
+- KB 2533623
+    
+    Windows 7 Service Pack 1 を実行しているコンピューターには、KB 2533623 が必要です。 この更新プログラムの詳細については、「[マイクロソフト セキュリティ アドバイザリ: 安全でないライブラリの読み込みにより、リモートでコードが実行される](https://support.microsoft.com/en-us/kb/2533623)」を参照してください。 この更新プログラムは直接インストールすることもでき、また、その更新プログラムを包括する別の更新プログラムによって置き換えられることもあります。
     
     この必要な更新プログラムがインストールされていない場合、クライアントのインストールにより、インストールが必要だと警告が表示されます。 クライアントのインストール後にこの更新プログラムをインストールできますが、一部の操作はブロックされ、メッセージが再び表示されます。  
 
-> [!NOTE]
-> インストールには、ローカルの管理アクセス許可が必要です。
+> [!IMPORTANT]
+> Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
 
-Azure Information Protection クライアントは、Microsoft Update カタログにも含まれているので、カタログを使用する任意のソフトウェア更新プログラム サービスを使用して、クライアントをインストールおよび更新することができます。 
+### ユーザー向けに Azure Information Protection クライアントをインストールするオプション
+<a id="options-to-install-the-azure-information-protection-client-for-users" class="xliff"></a>
 
-1. Azure Information Protection クライアントを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードします。 
+ユーザー向けにクライアントをインストールするオプションは次の 3 つです。
+
+**Windows Update**: Azure Information Protection クライアントは、Microsoft Update カタログに含まれているため、カタログを使用する任意のソフトウェア更新プログラム サービスを使用して、クライアントをインストールおよび更新することができます。
+
+**実行可能ファイル (.exe) のバージョンのクライアントを実行する**: 対話形式またはサイレント モードで実行できるお勧めのインストール方法です。 この方法ではインストーラーが前提条件の多くを確認し、満たされていない前提条件を自動的にインストールできるため、柔軟性に優れたお勧めの方法です。 [手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
+
+**Windows インストーラー (.msi) バージョンのクライアントを展開する**: グループ ポリシー、構成マネージャー、Microsoft Intune などの一元的な展開メカニズムを使用するサイレント インストールでのみサポートされています。 Intune とモバイル デバイス管理 (MDM) で管理されている Windows 10 PC では、インストールで実行可能ファイルがサポートされていないため、この方法が必要です。 ただし、このインストール方法を使用する場合は、依存関係にあるソフトウェアの確認と、インストールまたはアンインストールを手動で行う必要があります。実行可能ファイルのインストーラーであれば、各コンピューターでインストーラーによってこの作業が実行されます。 [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+
+### 実行可能ファイルのインストーラーを使用して Azure Information Protection クライアントをインストールするには
+<a id="to-install-the-azure-information-protection-client-by-using-the-executable-installer" class="xliff"></a>
+
+Microsoft Update カタログを使用していない場合、または Intune などの一元的な展開方法を使用して .msi を展開する場合は、次の手順に従ってクライアントをインストールします。
+
+1. 実行可能ファイル バージョンの Azure Information Protection クライアントを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードします。 
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。 
 
@@ -102,7 +153,7 @@ Azure Information Protection クライアントは、Microsoft Update カタロ�
     
     - Office 2010 を実行するコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーを表示したくない場合は、**ServiceLocation** パラメーターを指定します。 [詳細情報](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement**: MICROSOFT.NET Framework 4.6.2 のバージョンの要件を省略する場合にこのパラメータを使用します。 [詳細情報](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
+    - **DowngradeDotNetRequirement**: MICROSOFT.NET Framework 4.6.2 のバージョンの要件を省略する場合にこのパラメーターを使用します。 [詳細情報](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
 3. 対話形式でインストールする場合、Office 365 または Azure Active Directory に接続できないが、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、**デモ ポリシー**をインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。
     
@@ -114,7 +165,7 @@ Azure Information Protection クライアントは、Microsoft Update カタロ�
     
     - その他のバージョンの Office では、Office アプリケーションとエクスプローラーのインスタンスをすべて再起動します。 
         
-5. 既定で %temp% フォルダに作成されるインストール ログ ファイルを確認することで、インストールが成功したか確認できます。 インストール パラメーター **/log** を使用してこの場所を変更できます。 
+5. 既定で %temp% フォルダーに作成されるインストール ログ ファイルを確認することで、インストールが成功したか確認できます。 インストール パラメーター **/log** を使用してこの場所を変更できます。 
  
     このファイルの名前は次の形式です: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
@@ -122,7 +173,8 @@ Azure Information Protection クライアントは、Microsoft Update カタロ�
     
     このログ ファイルで、次の文字列を検索します: **製品: Microsoft Azure Information Protection -- インストールを正しく完了しました。** インストールに失敗した場合、このログ ファイルには、問題の特定と解決に役立つ詳細が含まれます。
 
-### <a name="more-information-about-the-servicelocation-installation-parameter"></a>ServiceLocation インストール パラメーターの詳細について
+#### ServiceLocation インストール パラメーターの詳細について
+<a id="more-information-about-the-servicelocation-installation-parameter" class="xliff"></a>
 
 Office 2010 を使っていてローカル管理者権限を持たないユーザーのためにクライアントをインストールするときは、ServiceLocation パラメーターと Azure Rights Management サービスの URL を指定します。 このパラメーターと値により、次のレジストリ キーが作成され、設定されます。
 
@@ -136,7 +188,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 次の手順で、ServiceLocation パラメーターに指定する値を特定します。 
 
-#### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
+##### ServiceLocation パラメーターに指定する値を特定するには
+<a id="to-identify-the-value-to-specify-for-the-servicelocation-parameter" class="xliff"></a>
 
 1. PowerShell セッションから、最初に [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) を実行し、管理者の資格情報を指定して Azure Rights Management サービスに接続します。 [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration) を実行します。 
  
@@ -153,7 +206,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 Office 2010 と Azure RMS のクライアントのサイレント インストールの例: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
-### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>DowngradeDotNetRequirement インストール パラメーターの詳細について
+#### DowngradeDotNetRequirement インストール パラメーターの詳細について
+<a id="more-information-about-the-downgradedotnetrequirement-installation-parameter" class="xliff"></a>
 
 Windows Update を使用して自動アップグレードをサポートし、Office アプリケーションとの信頼性の高い統合のため、Azure Information Protection クライアントは Microsoft .NET Framework バージョン 4.6.2 を使用します。 既定では、インストールのこのバージョンを確認し、ない場合はインストールしようとします。 インストール後はコンピューターの再起動が必要です。
 
@@ -161,11 +215,36 @@ Windows Update を使用して自動アップグレードをサポートし、Of
 
 例: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
-このパラメータは、Azure Information Protection クライアントがMicrosoft .NET Framework の以前のバージョンと共に使用すると Office アプリケーションがハングする問題が報告されていることを把握したうえで注意して使用することをお勧めします。 ハングすることがある場合は、その他のトラブルシューティングを行う前に推奨されているバージョンにアップグレードしてください。 
+このパラメーターは、Azure Information Protection クライアントがMicrosoft .NET Framework の以前のバージョンと共に使用すると Office アプリケーションがハングする問題が報告されていることを把握したうえで注意して使用することをお勧めします。 ハングすることがある場合は、その他のトラブルシューティングを行う前に推奨されているバージョンにアップグレードしてください。 
 
 Windows Update を使用して Azure Information Protection クライアントを最新の状態に保っている場合は、別のソフトウェアの展開方法でクライアントを新しいバージョンに保つ必要があることにも注意してください。
 
-## <a name="additional-checks-and-troubleshooting"></a>追加のチェックとトラブルシューティング
+### .msi インストーラーを使用して Azure Information Protection クライアントをインストールするには
+<a id="to-install-the-azure-information-protection-client-by-using-the-msi-installer" class="xliff"></a>
+
+一元的な展開の場合は、Azure Information Protection クライアントの msi インストール バージョン固有の次の情報をご覧ください。 
+
+ソフトウェアの展開方法に Intune を使用する場合は、次の手順を実行するとともに、「[Microsoft Intune でアプリを追加する](/intune/deploy-use/add-apps)」をご覧ください。
+
+1. Azure Information Protection クライアントの .msi バージョンを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードします。 
+    
+    プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。 
+
+2. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
+    
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
+    |--------------------|--------------|----------------|---------------------|
+    |Office 2013|サポートされているすべてのバージョン|[KB 3054941](https://www.microsoft.com/en-us/download/details.aspx?id=49337)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
+    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
+    |Office 2010|Windows 8.1 と Windows Server 2012 R2|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB 2843630 または KB 2919355 がインストールされていない場合はインストールします|
+    |Office 2010|Windows 8 と Windows Server 2012|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
+    |Office 2010|Windows 7|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB 3125574 がインストールされていない場合はインストールします|
+    |該当なし|Windows 7|KB 2627273 <br /><br /> ファイル名に含まれるバージョン番号: v4|アンインストール|
+
+3. 既定のインストールでは、`AzInfoProtection.msi /quiet` のように、**/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。  
+
+## 追加のチェックとトラブルシューティング
+<a id="additional-checks-and-troubleshooting" class="xliff"></a>
 
 **[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
 
@@ -173,7 +252,8 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 - エクスプローラーから単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
 
-### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
+### **[ヘルプとフィードバック]** セクション
+<a id="help-and-feedback-section" class="xliff"></a>
 
 既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../deploy-use/configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
 
@@ -194,71 +274,22 @@ Windows Update を使用して Azure Information Protection クライアント�
 - クライアントをリセットした後は、クライアントの証明書と最新のテンプレートのダウンロードを行い、ユーザー環境を再初期化する必要があります。 再初期化を実行するには、すべての Office インスタンスを終了し、Office アプリケーションを再起動します。 この操作で、最新の Azure Information Protection ポリシーをダウンロードしたことも確認されます。 この確認が完了するまで、診断テストは再実行しないでください。
 
 
-### <a name="client-status-section"></a>**クライアント ステータス** セクション
+### **クライアント ステータス** セクション
+<a id="client-status-section" class="xliff"></a>
 
 **接続**の値を使って、表示されているユーザー名が Azure Information Protection 認証に使用されるアカウントを識別するか確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントと一致し、Azure Information Protection 用に構成されたテナントに属している必要があります。
 
-表示されているユーザーとは別のユーザーでサインインする必要がある場合は、このページの[別のユーザーでのサイン イン](#sign-in-as-a-different-user)セクションをご覧ください。
+表示されているユーザーとは別のユーザーでサインインする必要がある場合は、[別のユーザーでのサイン イン](client-admin-guide-customizations.md#sign-in-as-a-different-user)に関するページのカスタマイズをご覧ください。
 
-**前回の接続**はに、クライアントが Azure Information Protection サービスに対して最後に接続した日時が表示され、**Information Protection ポリシーがインストールされた日時**の日付と時間と共に使用することで、Azure Information Protection ポリシーが最後にインストールまたは更新された日時を確認できます。 クライアントはサービスへの接続時に、現在のポリシーからの変更を見つけると最新のポリシーを自動的にダウンロードし、24 時間ごとに確認を行います。 表示された時刻以降にポリシーを変更している場合は、Office アプリケーションを閉じて再度開きます。
+**前回の接続**に、クライアントが Azure Information Protection サービスに対して最後に接続した日時が表示され、**Information Protection ポリシーがインストールされた日時**の日付と時間と共に使用することで、Azure Information Protection ポリシーが最後にインストールまたは更新された日時を確認できます。 クライアントはサービスへの接続時に、現在のポリシーからの変更を見つけると最新のポリシーを自動的にダウンロードし、24 時間ごとに確認を行います。 表示された時刻以降にポリシーを変更している場合は、Office アプリケーションを閉じて再度開きます。
 
 **このクライアントには Office Professional Plus 用のライセンスがありません**というメッセージが表示された場合、Azure Information Protection クライアントはインストールされている Office のエディションが Rights Management による保護の適用をサポートしていないことを検出しています。 この検出が行われると、保護を適用するラベルは Azure Information Protection バーには表示されません。
 
 **[バージョン]** 情報を使用して、どちらのバージョンのクライアントがインストールされているか確認します。 **新機能**のリンクをクリックし、クライアントの[バージョン リリース履歴](client-version-release-history.md)を読むことで、使用しているクライアントが最新のリリースバージョンかどうかや、各バージョンの修正と新しい機能を確認できます。
 
-## <a name="custom-configurations"></a>カスタム構成
 
-特定のシナリオまたはユーザーのサブセットで必要となる可能性のある詳細構成には、次の情報を使用します。 
-
-### <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>AD RMS 専用コンピューターのサインイン プロンプトが表示されないようにする
-
-既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続しようとします。 その結果、AD RMS とだけ通信するコンピューターの場合、不必要なサインイン プロンプトがユーザーに表示されます。 レジストリを編集し、このサインイン プロンプトが表示されないようにすることができます。
-
-次の値の名前を検索し、値データを **0** に設定します。
-
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
-
-この設定に関係なく、Azure Information Protection クライアントは標準 [RMS サービス検索プロセス](../rms-client/client-deployment-notes.md#rms-service-discovery)に従い、その AD RMS クラスターを検出します。
-
-### <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
-
-通常、運用環境では、Azure Information Protection クライアントを使用しているときに別のユーザーとしてサインインする必要はありません。 ただし、複数のテナントがある場合は管理者としてこのようなサインインが必要になることがあります。 たとえば、組織が使用する Office 365 や Azure テナントに加えてテスト テナントがある場合などです。
-
-現在サインインしているアカウントを確認するには、**[Microsoft Azure Information Protection]** ダイアログ ボックスを使用します。Office アプリケーションを開き、**[ホーム]** タブの **[保護]** グループで、**[保護]** をクリックし、**[ヘルプとフィードバック]** をクリックします。 アカウント名が **[クライアント ステータス]** セクションに表示されます。
-
-特に、管理者アカウントを使用している場合は、表示されるサインイン アカウントのドメイン名を必ず確認してください。 たとえば、2 つのテナントに "admin" アカウントがある場合、アカウント名は正しくてもドメインを間違えてサインインするという失敗が起こりやすくなります。 このような状況では、Azure Information Protection ポリシーのダウンロードが失敗したり、目的のラベルや機能が表示されなかったりする可能性があります。
-
-別のユーザーでサイン インする方法は以下の通りです。
-
-1. レジストリ エディターを使って **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** の値 (およびその値に関連する値) を削除します。
-
-2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
-
-補足:
-
-- シングル サインオンを使用する場合は、レジストリを編集した後に Windows からサインアウトし、別のユーザー アカウントでサインインする必要があります。 Azure Information Protection クライアントは、現在サインインしているユーザーアカウントを使用して、自動的に認証を行います。
-
-- Azure Rights Management サービスの環境を再初期化 (ブートストラップ) するには、[RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)の **[リセット]** オプションを使用します。
-
-- 現在ダウンロードされている Azure Information Protection ポリシーを削除したい場合は、**%localappdata%\Microsoft\MSIP** フォルダーから **Policy.msip** ファイルを削除します。
-
-### <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプ ローラーの [Hide the Classify and Protect]\(分類の非表示と保護) メニュー オプション
-
-Azure Information Protection クライアントのバージョンが 1.3.0.0 以降である場合は、レジストリを編集することで、この詳細構成を構成することができます。 
-
-次の DWORD 値の名前を (任意の値と共に) 作成します。
-
-**HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
-
-### <a name="support-for-disconnected-computers"></a>切断されたコンピューターのサポート
-
-既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピュータをお持ちの場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 次の値の名前を検索し、値を **0** に設定します。
-
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
-
-クライアントの **%localappdata%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からポリシーをエクスポートしたり、クライアントのコンピューターにエクスポートされたファイルをコピーできます。 このメソッドを使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。
-
-## <a name="to-uninstall-the-azure-information-protection-client"></a>Azure Information Protection クライアントをアンインストールするには
+## Azure Information Protection クライアントをアンインストールするには
+<a id="to-uninstall-the-azure-information-protection-client" class="xliff"></a>
 
 次のどの方法も使用できます。
 
@@ -268,8 +299,11 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 - **/uninstall** を付けて実行可能ファイルを実行します。 例: `AzInfoProtection.exe /uninstall`
 
-## <a name="next-steps"></a>次のステップ
+## 次のステップ
+<a id="next-steps" class="xliff"></a>
 Azure Information Protection クライアントをインストールしたので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
+
+- [カスタマイズ](client-admin-guide-customizations.md)
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
 

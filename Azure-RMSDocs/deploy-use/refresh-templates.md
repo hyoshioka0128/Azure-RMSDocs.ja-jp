@@ -4,7 +4,7 @@ description: "Azure Rights Management サービスを使用する場合、テン
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,14 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6f02bffa99719d5cd987bc0fa9c84baabe191ec5
-ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
-translationtype: HT
+ms.openlocfilehash: 374c807862d4922679e8622ee0d0d5a16a156bb0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="refreshing-templates-for-users"></a>ユーザー用のテンプレートの更新
+# ユーザーとサービスのためのテンプレートの更新
+<a id="refreshing-templates-for-users-and-services" class="xliff"></a>
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -32,8 +35,10 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 |Office 2016 for Mac|自動更新 - 追加の手順は必要ありません。|
 |Mac コンピューター用 RMS 共有アプリ|自動更新 - 追加の手順は必要ありません。|
 
+クライアント アプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更の更新)、ダウンロードが完了し、新規または更新されたテンプレートが完全に機能するまで最大 15 分待機します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
 
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
+## Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
+<a id="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates" class="xliff"></a>
 Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
 
 > [!NOTE]
@@ -41,7 +46,8 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
 
 テンプレートを変更するたびにこの手順を実行する必要があります。
 
-### <a name="to-update-templates-for-exchange-online"></a>Exchange Online 用のテンプレートを更新するには
+### Exchange Online 用のテンプレートを更新するには
+<a id="to-update-templates-for-exchange-online" class="xliff"></a>
 
 1.  Exchange Online で Windows PowerShell を使用し、サービスに接続します。
 
@@ -94,13 +100,15 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
+## Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
+<a id="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template" class="xliff"></a>
 Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有アプリケーションを実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
 
 > [!WARNING]
 > レジストリ エディターを誤って使用すると、重大な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
 
-### <a name="to-change-the-automatic-schedule"></a>自動スケジュールを変更するには
+### 自動スケジュールを変更するには
+<a id="to-change-the-automatic-schedule" class="xliff"></a>
 
 1.  レジストリ エディターを使用して、次のレジストリ値のいずれかを作成し設定します。
 
@@ -124,7 +132,8 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
 2.  テンプレートを直ちに更新する場合は、次の手順に進みます。 それ以外の場合は、Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
-### <a name="to-force-an-immediate-refresh"></a>直ちに更新するには
+### 直ちに更新するには
+<a id="to-force-an-immediate-refresh" class="xliff"></a>
 
 1.  レジストリ エディターを使用して、 **LastUpdatedTime** 値のデータを削除します。 たとえば、"**2015-04-20T15:52**" と表示されている場合は、この 2015-04-20T15:52 を削除して、何も表示されていない状態にします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
 
@@ -150,7 +159,8 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 3.  Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
 
-## <a name="see-also"></a>関連項目
+## 関連項目
+<a id="see-also" class="xliff"></a>
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

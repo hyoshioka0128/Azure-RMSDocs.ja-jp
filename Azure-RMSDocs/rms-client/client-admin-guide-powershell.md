@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,27 +12,30 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 04e04f6e3243283b98df94143773e4aa81351f48
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.openlocfilehash: e39097a4786ddd71082eda4a5b445b3fb682f6b7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
+# Azure Information Protection クライアントでの PowerShell の使用
+<a id="using-powershell-with-the-azure-information-protection-client" class="xliff"></a>
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management Services、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012*
 
 Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされ、自動化するスクリプトを作成できるコマンドを実行してクライアントを管理できます。
 
 コマンドレットは PowerShell モジュール **AzureInformationProtection** でインストールされます。このモジュールは、RMS 保護ツールでインストールされていた RMSProtection モジュールに代わるものです。 RMSProtection ツールがインストールされているシステムに Azure Information Protection クライアントをインストールすると、RMSProtection モジュールは自動的にアンインストールされます。
 
-AzureInformationProtection モジュールには、RMS 保護ツールのすべての Rights Management コマンドレットに加えて、ラベル付け用に Azure Information Protection (AIP) サービスを使う 2 つの新しいコマンドレットが含まれます。
+AzureInformationProtection モジュールには、RMS 保護ツールのすべての Rights Management コマンドレットに加えて、ラベル付け用に Azure Information Protection (AIP) サービスを使用する 3 つの新しいコマンドレットが含まれます。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
-|[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|共有フォルダーで、すべてのファイルを特定のラベルで識別します。|
-|[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
+|[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|共有フォルダーで、すべてのファイルを特定のラベルで識別します。|
+|[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|共有フォルダーで、ファイルの内容を検査したあと、指定した条件に基づいて、ラベル付けされていないファイルに自動的にラベルを付与します。|
+|[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
 
-すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/azureinformationprotection/vlatest/aip)」 (AzureInformationProtection モジュール) を参照してください。
+すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/module/azureinformationprotection)」 (AzureInformationProtection モジュール) を参照してください。 PowerShell セッション内で、`Get-Help <cmdlet name> -online` のように入力すると最新のヘルプが表示され、英語以外のサポートされている言語でもご覧いただけます。  
 
 このモジュールは、**\ProgramFiles (x86)\Microsoft Azure Information Protection** にインストールされ、このフォルダーを **PSModulePath** システム変数に追加します。 このモジュールの .dll の名前は **AIP.dll** です。
 
@@ -54,12 +57,14 @@ RMSProtection モジュールと同様に、AzureInformationProtection モジュ
     - オンプレミス バージョンの Azure Rights Management で保護のみを使っている場合に適用: Active Directory Rights Management サービス (AD RMS)。
 
 
-## <a name="azure-information-protection-service-and-azure-rights-management-service"></a>Azure Information Protection サービスと Azure Rights Management サービス
+## Azure Information Protection サービスと Azure Rights Management サービス
+<a id="azure-information-protection-service-and-azure-rights-management-service" class="xliff"></a>
 
 組織が Azure Information Protection と Azure Rights Management のデータ保護サービスを使っている場合、または Azure Rights Management サービスだけを使っている場合は、PowerShell を使い始める前にこのセクションをお読みください。
 
 
-### <a name="prerequisites"></a>必要条件
+### 必要条件
+<a id="prerequisites" class="xliff"></a>
 
 AzureInformationProtection モジュールのインストールに関する前提条件に加えて、Azure Information Protection サービスおよび Azure Rights Management データ保護サービスに関する追加の前提条件があります。
 
@@ -77,19 +82,22 @@ AzureInformationProtection モジュールのインストールに関する前�
     
     - サービスに対する認証のレジストリを編集します。
 
-#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>前提条件 1: Azure Rights Management サービスをアクティブ化する必要がある
+#### 前提条件 1: Azure Rights Management サービスをアクティブ化する必要がある
+<a id="prerequisite-1-the-azure-rights-management-service-must-be-activated" class="xliff"></a>
 
 この前提条件は、ラベルを使ってデータ保護を適用する場合、または Azure Rights Management サービスに直接接続してデータ保護を適用する場合に適用されます。
 
 Azure Information Protection テナントがアクティブ化されていない場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の手順をご覧ください。
 
-#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>前提条件 2: 自分のアカウントを使って他のユーザーのファイルから保護を削除するには
+#### 前提条件 2: 自分のアカウントを使って他のユーザーのファイルから保護を削除するには
+<a id="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account" class="xliff"></a>
 
 他のユーザーのファイルから保護を削除する一般的なシナリオには、データの探索またはデータの回復が含まれます。 ラベルを使って保護を適用している場合は、保護を適用しない新しいラベルを設定することによって、またはラベルを削除することによって保護を削除できます。 ただし、Azure Rights Management サービスに直接接続して保護を削除することもできます。
 
 ファイルから保護を削除するには、Rights Management の使用権限を持っているか、スーパー ユーザーである必要があります。 データの探索またはデータの回復には、スーパー ユーザー機能が通常使われます。 この機能を有効にし、アカウントをスーパー ユーザーとして構成するには、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」をご覧ください。
 
-#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>前提条件 3: ユーザー操作なしにファイルを保護または保護解除するには
+#### 前提条件 3: ユーザー操作なしにファイルを保護または保護解除するには
+<a id="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction" class="xliff"></a>
 
 現在はラベルを非対話形式で適用することはできませんが、非対話形式で Azure Rights Management サービスに直接接続して、ファイルを保護または保護解除することができます。
 
@@ -103,7 +111,8 @@ Azure Information Protection テナントがアクティブ化されていない
 
 次のセクションでは、これらの識別子を取得する方法について説明します。
 
-##### <a name="to-get-the-bpostenantid"></a>BposTenantId を取得するには
+##### BposTenantId を取得するには
+<a id="to-get-the-bpostenantid" class="xliff"></a>
 
 Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマンドレットを実行します。
 
@@ -137,7 +146,8 @@ Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマ
     
         Disconnect-AadrmService
 
-##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
+##### AppPrincipalId と対称キーを取得するには
+<a id="to-get-the-appprincipalid-and-symmetric-key" class="xliff"></a>
 
 Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolServicePrincipal` コマンドレットを実行し、次の手順に従うことで、新しいサービス プリンシパルを作成します。 
 
@@ -206,7 +216,8 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 > [!NOTE]
 > 自分のアカウントを使って Azure Rights Management サービスへの認証を行う場合は、ファイルを保護または保護解除する前、またはテンプレートを取得する前に、Set-RMSServerAuthentication を実行する必要はありません。
 
-#### <a name="prerequisite-4-for-regions-outside-north-america"></a>前提条件 4: 北米以外のリージョンの場合
+#### 前提条件 4: 北米以外のリージョンの場合
+<a id="prerequisite-4-for-regions-outside-north-america" class="xliff"></a>
 
 Azure 北米リージョン以外での認証の場合は、レジストリを次のように編集する必要があります。 Azure Information Protection テナントが北米にある場合は、この手順を行う必要はありません。
 
@@ -226,7 +237,8 @@ Azure 北米リージョン以外での認証の場合は、レジストリを�
 
 5. レジストリ エディターを閉じます。 コンピューターを再起動する必要はありません。 ただし、自分のユーザー アカウントではなくサービス プリンシパル アカウントを使っている場合は、このレジストリの編集を行った後で、Set-RMSServerAuthentication コマンドを実行する必要があります。
 
-### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Azure Information Protection および Azure Rights Management サービスのコマンドレットを使うシナリオの例
+### Azure Information Protection および Azure Rights Management サービスのコマンドレットを使うシナリオの例
+<a id="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service" class="xliff"></a>
 
 ラベルを使ってファイルを分類および保護する方が効率的です。必要なコマンドレットが [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) と [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) の 2 つだけであり、単独で、または一緒に実行できるためです。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
 
@@ -306,12 +318,14 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
 
 Rights Management テンプレートが変更された場合は、もう一度 `Get-RMSTemplate -force` でダウンロードしてください。 
 
-## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management サービス
+## Active Directory Rights Management サービス
+<a id="active-directory-rights-management-services" class="xliff"></a>
 
 Active Directory Rights Management サービスだけを使っている場合は、PowerShell コマンドを使ってファイルを保護または保護解除する前に、このセクションをお読みください。
 
 
-### <a name="prerequisites"></a>必要条件
+### 必要条件
+<a id="prerequisites" class="xliff"></a>
 
 AzureInformationProtection モジュールをインストールするための前提条件に加えて、ServerCertification.asmx にアクセスするにはアカウントに読み取りと実行のアクセス許可が必要です。
 
@@ -335,7 +349,8 @@ AzureInformationProtection モジュールをインストールするための�
 
 10. **[OK]** を 2 回クリックします。
 
-### <a name="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services"></a>Active Directory Rights Management サービスにコマンドレットを使うシナリオの例
+### Active Directory Rights Management サービスにコマンドレットを使うシナリオの例
+<a id="example-scenarios-for-using-the-cmdlets-for-active-directory-rights-management-services" class="xliff"></a>
 
 権利ポリシー テンプレートを使ってフォルダー内のすべてのファイルを保護するか、1 つのファイルの保護を解除するのが、これらのコマンドレットの一般的なシナリオです。 
 
@@ -419,12 +434,15 @@ RMS の保護を適用した後でファイル名拡張子が変わっていな�
     C:\Test.docx                          C:\Test.docx
 
 
-## <a name="next-steps"></a>次のステップ
+## 次のステップ
+<a id="next-steps" class="xliff"></a>
 PowerShell セッション内でコマンドレットのヘルプを見るには、Get-Help <cmdlet name> コマンドレットを使います。<cmdlet name> は、調べるコマンドレットの名前です。 たとえば、 
 
     Get-Help Get-RMSTemplate
 
 Azure Information Protection クライアントのサポートに必要な詳細については、以下をご覧ください。
+
+- [カスタマイズ](client-admin-guide-customizations.md)
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
 

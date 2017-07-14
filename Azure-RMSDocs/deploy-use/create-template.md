@@ -4,7 +4,7 @@ description: "カスタム テンプレートを Azure クラシック ポータ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,26 +12,33 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fe569124494f837e770e5f1f8c6de0c2188a6e40
-ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
-translationtype: HT
+ms.openlocfilehash: 56a17c745ba55c2c7b97bd444be42e3554e795b9
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="create-configure-and-publish-a-custom-template"></a>カスタム テンプレートを作成、構成、発行する
+# カスタム テンプレートを作成、構成、発行する
+<a id="create-configure-and-publish-a-custom-template" class="xliff"></a>
 
 >*適用対象: Azure Information Protection、Office 365*
 
 
 カスタム テンプレートは、Azure クラシック ポータルで作成および管理します。 この作業は、Azure クラシック ポータルから直接行うことができます。また、Office 365 管理センターにサインインして Rights Management の **[高度な機能]** を選択し、Azure クラシック ポータルにリダイレクトすることもできます。
 
+> [!TIP]
+> Azure Rights Management 保護を構成するためのテンプレートおよび新しいオプションは、Azure Portal に移動しています。 この機能は現在プレビュー段階です。 詳細については、ブログ投稿でのお知らせ「[Azure Information Protection unified administration now in Preview (管理を一元化した Azure Information Protection のプレビュー版が利用可能になりました)](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/)」を参照してください。 
+
 Azure クラシック ポータルでテンプレートを作成および管理するには、グローバル管理者である必要があります。 Azure Rights Management サービスのグローバル管理者ロールを他のユーザーに割り当ててある場合は、そのユーザーもテンプレートを作成および管理できますが、[PowerShell](configure-templates-with-powershell.md) を使用する必要があります。 詳細については、「[Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)」を参照してください。 
 
 Rights Management のテンプレートを作成、構成、およびパブリッシュするには、次の手順を使用します。
 
-## <a name="to-create-a-custom-template"></a>カスタム テンプレートを作成するには
+## カスタム テンプレートを作成するには
+<a id="to-create-a-custom-template" class="xliff"></a>
 
 1.  Office 365 管理センターと Azure クラシック ポータルのどちらにサインインするかに応じて、次のいずれかを実行します。
 
-    -   **Office 365 管理センター**にサインインした場合、ナビゲーションは Office 365 管理センター プレビュー (およびそのバージョン) または Office 365 クラシック管理センターのどちらを使用しているかによって異なります。 ただし、すべてのバージョンで、[Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) のページに直接アクセスできます。 
+    -   **Office 365 管理センター**から、[Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx)のページに直接進めます。 
 
         1.  **[追加の構成]** セクションで **[高度な機能]** をクリックします。
 
@@ -67,7 +74,8 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 
 4. ここで、 **[Rights Management の使用を開始]** クイック スタート ページの **[権限ポリシー テンプレートの管理]**をクリックします。 新しく作成されたテンプレートがテンプレートの一覧に追加され、 **[アーカイブ済み]**ステータスになっています。 この段階では、テンプレートは作成されていますが構成されていないため、ユーザーには表示されません。
 
-## <a name="to-configure-and-publish-a-custom-template"></a>カスタム テンプレートを構成および発行するには
+## カスタム テンプレートを構成および発行するには
+<a id="to-configure-and-publish-a-custom-template" class="xliff"></a>
 
 1.  Azure クラシック ポータルの **[テンプレート]** ページから、新しく作成したテンプレートを選択します。
 
@@ -159,7 +167,8 @@ Rights Management のテンプレートを作成、構成、およびパブリ�
 > [!WARNING]
 > 以前に保存したテンプレートを変更した場合、クライアントのコンピューターでテンプレートが更新されるまで、クライアントにはそれらのテンプレートの変更が表示されません。 詳細については、「[ユーザー用のテンプレートの更新](refresh-templates.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## 関連項目
+<a id="see-also" class="xliff"></a>
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

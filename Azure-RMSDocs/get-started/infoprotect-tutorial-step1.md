@@ -4,17 +4,20 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 8ccf0ea41e9465e10408595a3b875704baca93d2
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.openlocfilehash: adc2baa875595d5044b47a9f014cc1381ba85dc2
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-1-activate-the-rights-management-service"></a>手順 1.Rights Management サービスの有効化
+# 手順 1.Rights Management サービスの有効化
+<a id="step-1-activate-the-rights-management-service" class="xliff"></a>
  
 >*適用対象: Azure Information Protection*
 
@@ -25,11 +28,10 @@ translationtype: HT
 
 Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータルの使用など、このサービスをアクティブ化するにはさまざまな方法があります。
 
-このチュートリアルでは、直接、Office 365 管理者向け管理ポータルのアクティブ化ページに移動します。 これは、Office 365 クラシック ポータルや Office 365 管理センター プレビューのページと同じページです。 
+このチュートリアルでは、直接、Office 365 管理者向け管理ポータルのアクティブ化ページに移動します。 ただし、このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順をご覧ください。 Azure Portal にアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
 
-このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順を参照してください。 Azure Portal にアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
-
-## <a name="to-activate-the-rights-management-service"></a>Rights Management サービスをアクティブにするには
+## Rights Management サービスをアクティブにするには
+<a id="to-activate-the-rights-management-service" class="xliff"></a>
 
 1. 新しいブラウザー ウィンドウを開き、Office 365 管理者用の [Rights Management アクティブ化ページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx)に直接移動します。
     

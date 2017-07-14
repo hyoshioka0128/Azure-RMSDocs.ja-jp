@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,12 +12,14 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+ms.openlocfilehash: 9ee487f65f417c9faaf71f3c50b5d4e35659c55f
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection クライアント: バージョン リリース履歴
+# Azure Information Protection クライアント: バージョン リリース履歴
+<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
 
 >*適用対象: Azure Information Protection*
 
@@ -32,7 +34,35 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 >  
 > 問題が解決しない場合は、「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="version-14210"></a>バージョン 1.4.21.0
+
+## バージョン 1.7.210.0
+<a id="version-172100" class="xliff"></a>
+
+**リリース日**: 2017 年 6 月 6 日
+
+このバージョンには、MSIPC バージョン 1.0.2217.1 の RMS クライアントが含まれています。
+
+**修正内容**:
+
+- 現在、ラベル付けと分類を行うすべてのコマンドレットは、インターネットに接続されておらず、Azure Information Protection ポリシーが有効になっているコンピューターでサポートされます。
+
+- 整合性を保つため、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) コマンドレットの出力パラメーターは、英語 (英国) (**IsLabelled**) から英語 (米国) (**IsLabeled**) に変更されます。 このパラメーターを検索するスクリプトまたは自動プロセスを使用している場合は、このパラメーターのスペルを更新してください。
+
+- 安定性を改善するための一般的な修正は次のとおりです。
+
+    - Outlook: クラッシュ、高いメモリ消費量、メニューの表示に関する問題を修正。
+    
+    - Word、Excel、PowerPoint: 高い CPU 使用率、サイズの大きい Excel ファイルを保存する際の表示に関する問題、またはアプリケーションが応答を停止する問題を修正。 
+    
+    また、これらのアプリケーションに関して、SharePoint Online での Office 2016 と OneDrive for Business のパフォーマンスを改善するため、ファイルを保存するとき (自動保存、またはユーザーが保存を選択したとき) ではなくファイルを閉じるときに、推奨のラベル付けを自動で行います。 同様に、**[All documents and email must have a label]\(すべてのドキュメントと電子メール アドレスにラベルが必要\)** の設定が有効になっている場合は、ファイルを閉じるとき以外にラベルを選択するように求めるメッセージが表示されることはありません。 Word 2016 と Excel 2016 で、ユーザーが **[名前を付けて保存]** オプションを選択するときは例外です。 そのときに、これらが構成されている場合は、この操作によってラベル付け動作がトリガーされます。 
+
+**新機能**:
+
+- 新しい PowerShell コマンドレット: [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification)。 このコマンドレットを実行すると、Azure Information Protection ポリシーで指定した条件に従って、ファイルの内容を検査し、ラベル付けされていないファイルに自動でラベルを付与します。
+
+
+## バージョン 1.4.21.0
+<a id="version-14210" class="xliff"></a>
 
 **リリース日**: 2017 年 3 月 15 日
 
@@ -45,7 +75,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 - ファイルを分類して保護するマップされたドライブのサポート。
 
-- ビューアーでサイズの大きいファイル (>&250; MB) のサポート。 
+- ビューアーでサイズの大きいファイル (> 250 MB) のサポート。 
 
 - HYOK が構成されている場合、Outlook は、Azure Rights Management テンプレートまたは AD RMS テンプレートを使用するように構成されたラベルを適用できます。
 
@@ -59,7 +89,8 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 - PDF ファイルの場合、ビューアーでは現在、検索、拡大、回転などのオプションがサポートされています。 これらのオプションを使用するには、ビューアーにファイルが表示された際にファイルを右クリックします。
 
 
-## <a name="version-131552"></a>バージョン 1.3.155.2
+## バージョン 1.3.155.2
+<a id="version-131552" class="xliff"></a>
 
 **リリース日**: 2017 年 2 月 8 日
 
@@ -87,7 +118,8 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 - [Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
 
-## <a name="version-1240"></a>バージョン 1.2.4.0
+## バージョン 1.2.4.0
+<a id="version-1240" class="xliff"></a>
 
 **リリース日**: 2016 年 10 月 27 日
 
@@ -105,13 +137,15 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
     このオプションの詳細については、管理者ガイドの[追加のチェックとトラブルシューティング](client-admin-guide.md#additional-checks-and-troubleshooting)セクションをご覧ください。
 
-## <a name="version-11230"></a>バージョン 1.1.23.0
+## バージョン 1.1.23.0
+<a id="version-11230" class="xliff"></a>
 
 **リリース日**: 2016 年 10 月 1 日
 
 一般公開。
 
-## <a name="next-steps"></a>次のステップ
+## 次のステップ
+<a id="next-steps" class="xliff"></a>
 
 クライアントのインストールの詳細:
 

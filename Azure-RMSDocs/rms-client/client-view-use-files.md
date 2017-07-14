@@ -1,10 +1,10 @@
 ---
-title: "AIP クライアントでの保護されたファイルの表示と使用"
-description: "Azure Information Protection クライアントがインストールされている必要がある保護されたファイルの表示および使用手順です。"
+title: "保護されたドキュメントを AIP クライアントで表示して使用する"
+description: "あらかじめ Azure Information Protection クライアントがインストールされている必要がある、保護されたドキュメントの表示および使用手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,22 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e68a0b0519cf8a613cbb8c8570eda0669e20e10b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 6d73a8651b3bea3b8773b4aba49c7d2e85873a80
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
+# Rights Management によって保護されたファイルを表示して使用する
+<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
-多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
+通常、開くだけで保護されたドキュメントを表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
-ファイルが開かない場合、**Azure Information Protection ビューアー**を使用して開くことができます。 このビューアーは、Azure Information Protection クライアントの一部として自動的にインストールされますが、別にインストールすることもできます。 クライアントとビューアーの両方のクライアントは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページからインストールできます。 クライアントのインストールの詳細については、「[Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
+ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー**で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
+
+このビューアーは、Azure Information Protection クライアントの一部として自動的にインストールされますが、個別にインストールすることもできます。 クライアントとビューアーの両方のクライアントは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページからインストールできます。 クライアントのインストールの詳細については、「[Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
 
 > [!NOTE]
 > クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。
@@ -35,7 +40,16 @@ translationtype: HT
 > 
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 
-## <a name="prompts-for-authentication"></a>認証のプロンプト
+保護されたドキュメントを開くには、アプリケーションが "RMS 対応" である必要があります。 RMS 対応アプリケーションは、たとえば Office アプリや Azure Information Protection ビューアーなどです。 種類およびサポートされるデバイス別にアプリケーションの一覧を確認するには、「[RMS-enlightened applications (RMS 対応アプリケーション)](../get-started/requirements-applications.md#rms-enlightened-applications)」の表をご覧ください。  
+## 電子メールの添付ファイルとしての Message.rpmsg
+<a id="messagerpmsg-as-an-email-attachment" class="xliff"></a>
+
+電子メールに **message.rpmsg** ファイルが添付されている場合、このファイルは保護されたドキュメントではありませんが、添付ファイルとして表示される保護された電子メール メッセージです。 Windows 用の Azure Information Protection ビューアーを使用して、Windows PC でこの保護された電子メール メッセージを表示することはできません。 表示するには、Office Outlook などの Rights Management 保護をサポートしている Windows 用の電子メール アプリケーションが必要です。 あるいは、Outlook on the web を使用することもできます。
+
+ただし、iOS または Android デバイスがあれば、Azure Information Protection アプリを使用して保護された電子メール メッセージを開くことができます。 これらのデバイス用の Azure Information Protection アプリは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) からダウンロードできます。
+
+## 認証のプロンプト
+<a id="prompts-for-authentication" class="xliff"></a>
 
 保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 
@@ -47,7 +61,8 @@ translationtype: HT
     
 -   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## <a name="to-view-and-use-a-protected-file"></a>保護されているファイルを表示して使用するには
+## 保護されたファイルを表示して使用するには
+<a id="to-view-and-use-a-protected-document" class="xliff"></a>
 
 1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、**[Azure Information Protection ビューアー]** を選択します。 
 
@@ -69,7 +84,8 @@ translationtype: HT
 > 保護されたファイルが開かない場合は、[RMS アナライザー ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして使用します。 ツールの指示に従って、保護されたドキュメントが開かない原因となっている可能性のあるコンピューターの問題を確認します。
 
 
-## <a name="other-instructions"></a>その他の手順
+## その他の手順
+<a id="other-instructions" class="xliff"></a>
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
