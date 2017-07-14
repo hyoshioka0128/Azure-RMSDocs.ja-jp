@@ -4,7 +4,7 @@ description: "Rights Management (RMS) クライアントと RMS 保護ツール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,12 +12,14 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f3bdfee3a3dfa60c7cc81a553f3c889c30134a6a
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.openlocfilehash: b56955d8a01876f4107cafa5b1b8df922c0f8ad0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
+# Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
+<a id="rms-protection-with-windows-server-file-classification-infrastructure-fci" class="xliff"></a>
 
 >*適用対象: Azure Information Protection、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
 
@@ -32,7 +34,8 @@ ms.contentlocale: ja-JP
 
 以下の手順は、Windows Server 2012 R2 または Windows Server 2012 に対するものです。 サポートされている他のバージョンの Windows を使用する場合は、バージョンの違いに合わせてこの記事で説明されている手順の調整が必要な場合があります。
 
-## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Windows Server FCI での Azure Rights Management 保護の前提条件
+## Windows Server FCI での Azure Rights Management 保護の前提条件
+<a id="prerequisites-for-azure-rights-management-protection-with-windows-server-fci" class="xliff"></a>
 次のような前提条件があります。
 
 -  ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
@@ -41,7 +44,11 @@ ms.contentlocale: ja-JP
     
     - Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
     
-    - AzureInformationProtection モジュールをインストールし、Azure Rights Management の前提条件を構成しておきます。 詳細については、「[Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。 具体的には、サービス プリンシパルを使用して Azure Rights Management サービスに接続するには、**BposTenantId**、**AppPrincipalId**、**対称キー**という値があります。 
+    - AzureInformationProtection PowerShell モジュールをインストールし、このモジュールを Azure Rights Management サービスに接続するための前提条件を構成しておきます。
+    
+    AzureInformationProtection PowerShell モジュールは、Azure Information Protection クライアントに含まれています。 インストール手順については、Azure Information Protection 管理者ガイドの「[ユーザー向けに Azure Information Protection クライアントをインストールする方法](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users)」をご覧ください。 必要であれば、`PowerShellOnly=true` パラメーターを使用して PowerShell モジュールのみをインストールできます。
+    
+    [この PowerShell モジュールを使用するための前提条件](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service)には、Azure Rights Management サービスをアクティブ化すること、サービス プリンシパルを作成すること、テナントが北米以外にある場合にレジストリを編集することが含まれます。 この記事の手順を開始する前に、これらの前提条件の説明で使われる **BposTenantId**、**AppPrincipalId**、**対称キー**の値を確認してください。 
     
     - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
     
@@ -51,7 +58,8 @@ ms.contentlocale: ja-JP
     
 - ファイル サーバーに Rights Management テンプレートをダウンロードして、ファイルを保護するテンプレート ID を識別しました。 このためには、[Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用します。 このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があります。
 
-## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
+## Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
+<a id="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection" class="xliff"></a>
 PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
 
 1. PowerShell スクリプトを保存する
@@ -70,7 +78,8 @@ PowerShell スクリプトをカスタム タスクとして使用してフォ�
 
 FCI で使用する Rights Management テンプレートに変更を加える場合、ファイル サーバー コンピューター上で `Get-RMSTemplate -Force` を実行して、更新されたテンプレートを取得する必要があります。 更新されたテンプレートは、新しいファイルを保護するために使用されます。 テンプレートへの変更が重要であり、ファイル サーバー上のファイルを再び保護する必要がある場合、そのファイルについてエクスポートやフル コントロールの使用権限を持つアカウントで Protect-RMSFile コマンドレットを対話的に実行することにより、これを行うことができます。 FCI で使用する新しいテンプレートを発行した場合は、このファイル サーバー コンピューター上で `Get-RMSTemplate -Force` も実行する必要があります。
 
-### <a name="save-the-windows-powershell-script"></a>Windows PowerShell スクリプトを保存する
+### Windows PowerShell スクリプトを保存する
+<a id="save-the-windows-powershell-script" class="xliff"></a>
 
 1.  ファイル サーバー リソース マネージャーを使用して、Azure RMS 保護のための [Windows PowerShell スクリプト](fci-script.md)の内容をコピーします。 自分のコンピューターで、スクリプトの内容を **RMS-Protect-FCI.ps1** という名前のファイルに貼り付けます。
 
@@ -117,7 +126,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 これで、ファイル サーバー リソース マネージャーの構成を開始する準備ができました。
 
-### <a name="create-a-classification-property-for-rights-management-rms"></a>Rights Management (RMS) の分類プロパティを作成する
+### Rights Management (RMS) の分類プロパティを作成する
+<a id="create-a-classification-property-for-rights-management-rms" class="xliff"></a>
 
 -   ファイル サーバー リソース マネージャーの [分類管理] で、新しいローカル プロパティを作成します。
 
@@ -131,7 +141,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 このプロパティを使用する分類規則を作成できるようになります。
 
-### <a name="create-a-classification-rule-classify-for-rms"></a>分類規則を作成する (Classify for RMS)
+### 分類規則を作成する (Classify for RMS)
+<a id="create-a-classification-rule-classify-for-rms" class="xliff"></a>
 
 -   新しい分類規則を作成します。
 
@@ -159,7 +170,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 分類規則は手動でも実行できますが、継続的に運用する場合は、この規則を実行するスケジュールを設定し、新しいファイルが RMS プロパティで分類されるようにします。
 
-### <a name="configure-the-classification-schedule"></a>分類スケジュールを構成する
+### 分類スケジュールを構成する
+<a id="configure-the-classification-schedule" class="xliff"></a>
 
 -   [ **自動分類** ] タブで次のように設定します。
 
@@ -173,7 +185,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 分類の構成が完了したので、ファイルに RMS 保護を適用する管理タスクを構成できます。
 
-### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>カスタム ファイル管理タスクを作成する (Protect files with RMS)
+### カスタム ファイル管理タスクを作成する (Protect files with RMS)
+<a id="create-a-custom-file-management-task-protect-files-with-rms" class="xliff"></a>
 
 -   [ **ファイル管理タスク**] で新しいファイル管理タスクを作成します。
 
@@ -238,7 +251,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   [**新しいファイルに対して連続実行する**]:このチェック ボックスをオンにします。
 
-### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>規則とタスクを手動で実行して構成をテストする
+### 規則とタスクを手動で実行して構成をテストする
+<a id="test-the-configuration-by-manually-running-the-rule-and-task" class="xliff"></a>
 
 1.  分類規則を実行します。
 
@@ -278,7 +292,8 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 これらのタスクが正常に動作することを確認した後、ファイル リソース マネージャーを閉じることができます。 スケジュールしたタスクが実行されると、新しいファイルは自動的に分類および保護されます。 
 
-## <a name="modifying-the-instructions-to-selectively-protect-files"></a>選択的にファイルを保護するための手順の変更
+## 選択的にファイルを保護するための手順の変更
+<a id="modifying-the-instructions-to-selectively-protect-files" class="xliff"></a>
 前期の手順で問題がなければ、より高度な構成用に非常に簡単に変更できます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
 
 そのためには、組み込まれている分類プロパティのいずれかを使用するか (たとえば **[Personally Identifiable Information]** (個人を特定できる情報))、新しいプロパティを作成します。 そして、このプロパティを使用する新しい規則を作成します。 たとえば、[ **コンテンツ分類子**] を選択し、[ **個人の身元を特定する情報** ] プロパティと値 [ **高**] を選択して、このプロパティ用に構成するファイルを識別する文字列または式パターンを構成します (たとえば、文字列"**Date of Birth**")。

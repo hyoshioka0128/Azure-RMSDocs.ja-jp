@@ -4,17 +4,20 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
+# 手順 2: Azure Information Protection ポリシーを構成して公開する
+<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
 
 >*適用対象: Azure Information Protection*
 
@@ -29,7 +32,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     > [!TIP] 
     > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
 
-3.  **[Policy: Global]** (ポリシー: グローバル) ブレードを確認します。このブレードには、テナントに自動で作成される既定の Information Protection ポリシーが自動的に開き、表示されます。
+3. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページに関する情報を確認します。 後でここに戻ることができます。 このチュートリアルでは、**[グローバル ポリシー]** をクリックして、**[Policy: Global]\(ポリシー: グローバル\)** ブレードを開きます。 このブレードはサービスの後続の接続のために自動的に開き、テナントに自動で作成される既定の Information Protection ポリシーが表示されます。
     
     - 分類用のラベル: **[Personal (個人)]**、**[Public (公開)]**、**[General (全般)]**、**[Confidential (社外秘)]**、**[Highly Confidential (非常に機密性の高い社外秘)]**。 最後の 2 つのラベルを展開すると、サブラベル **[すべての従業員]** と **[すべてのユーザー (未保護)]** が表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
     
@@ -46,7 +49,8 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-settings.png)
 
-## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>既定のラベルと理由を求めるプロンプトの設定の変更
+## 既定のラベルと理由を求めるプロンプトの設定の変更
+<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
 
 このチュートリアルでは 2 つのポリシーの設定を変更し、どのように動作するかを確認します。
 
@@ -56,7 +60,8 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) で、これを**[On]** (オン) に設定します。
 
-## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
+## 分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
+<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
 
 メイン ラベル **[社外秘]** から、サブラベルの 1 つである **[すべての従業員]** の設定を変更します。 
 

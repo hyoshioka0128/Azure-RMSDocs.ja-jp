@@ -4,18 +4,18 @@
 
 送信した電子メール メッセージを読むよう受信者に依頼します。 受信者には電子メールのメッセージが表示されますが、その前に次のテキストが表示されます。
 
-**送信者が Microsoft RMS で添付ファイルを保護しました。それらを開くには、**[サインイン](http://aka.ms/rms)
-      **する必要があります。**
+**送信者が Microsoft RMS で添付ファイルを保護しました。**それらを開くには**、** [サインイン](http://aka.ms/rms)する必要があります。
 
 リンクをクリックすると、手順に移動し、RMS 共有アプリケーションをインストールして、必要に応じて無料アカウントにサインアップするよう指示されます。 無料アカウントでは、受信者に個人用 RMS のサブスクリプションが付与されます。これにより、組織が Azure RMS を所有していない場合でも、承認されたユーザーが、保護されたドキュメントを必ず読むことができます。 受信者は、これから説明する手順を使用して、保護された添付ファイルを読むことができます。
 
 ![RM チュートリアルのスクリーンショット](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### <a name="to-view-the-protected-document-attachment"></a>保護されたドキュメントの添付ファイルを表示するには
+#### 保護されたドキュメントの添付ファイルを表示するには
+<a id="to-view-the-protected-document-attachment" class="xliff"></a>
 
-1.  Azure Rights Management により Word 文書が保護されているため、電子メール メッセージには、2 つの添付ファイルがあります。 これらは、実際には&2; つのバージョンの同じファイルですが、ファイル名拡張子は異なります。 ファイル名拡張子 **.ppdf** が付いているバージョン (**Confidential.ppdf**) を開きます。
+1.  Azure Rights Management により Word 文書が保護されているため、電子メール メッセージには、2 つの添付ファイルがあります。 これらは、実際には 2 つのバージョンの同じファイルですが、ファイル名拡張子は異なります。 ファイル名拡張子 **.ppdf** が付いているバージョン (**Confidential.ppdf**) を開きます。
 
-    デバイスに [Rights Management をサポートしているバージョンの Office](https://technet.microsoft.com/library/dn655136.aspx) がある場合、もう&1; つのバージョンのファイル (**Confidential.docx**) を開くことができます。そのため、このファイルは Word で開きます。
+    デバイスに [Rights Management をサポートしているバージョンの Office](https://technet.microsoft.com/library/dn655136.aspx) がある場合、もう 1 つのバージョンのファイル (**Confidential.docx**) を開くことができます。そのため、このファイルは Word で開きます。
 
 2.  ユーザー名とパスワードの入力を求められたら、電子メールと添付ファイルの送信に使われた電子メール アドレスと同じ形式で自分のユーザー名を入力します。 たとえば、**janetm@contoso.com** や **p.dover@fabrikam.com** のようになります。 パスワードには、個人用 RMS にサインアップするときに指定したパスワードを入力します。 または、組織が Azure RMS を所有している場合は、通常の仕事用のパスワードを入力します。
 
@@ -29,5 +29,5 @@
 |--------------------------------|--------------------------|
 |Azure Rights Management によって保護されたファイルを表示するすべての手順   →|[Rights Management によって保護されたファイルを表示して使用する](../rms-client/sharing-app-view-use-files.md)|
 |無料のサブスクリプション、個人用 RMS について   →|[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|電子メールに添付されている&2; つのバージョンのファイルについて   →|[自動的に作成される .ppdf ファイルとは](../rms-client/sharing-app-dialog-box.md)|
+|電子メールに添付されている 2 つのバージョンのファイルについて   →|[自動的に作成される .ppdf ファイルとは](../rms-client/sharing-app-dialog-box.md)|
 

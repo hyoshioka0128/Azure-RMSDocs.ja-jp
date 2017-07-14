@@ -12,12 +12,14 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2022f86a32725ef9dfcf5692b1194348f6c39f3b
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.openlocfilehash: 27ce787cbf5370634f6b1e15903cc981f08656a2
+ms.sourcegitcommit: 505a2c182bcd5a87a7dcb43b9aa1e43244f4c537
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 07/03/2017
 ---
-# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
+# Azure Information Protection の Azure Active Directory の要件
+<a id="azure-active-directory-requirements-for-azure-information-protection" class="xliff"></a>
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -33,7 +35,8 @@ Azure Information Protection を使用するには、Azure AD ディレクトリ
 
 Azure AD ディレクトリをオンプレミス AD フォレストと統合する場合は、「[Integrating your on-premises identities with Azure Active Directory (オンプレミス ID と Azure Active Directory の統合)](/active-directory/active-directory-aadconnect)」を参照してください。
 
-### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ 
+### 特定の要件があるシナリオ
+<a id="scenarios-that-have-specific-requirements" class="xliff"></a> 
 
 Office 2010 を実行しているコンピューターの場合: 
 
@@ -43,7 +46,7 @@ Office 2010 を実行しているコンピューターの場合:
 
 証明書ベースの認証 (CBA) のサポート: 
 
-- Android 5.0 以上のバージョンをご使用の場合、Android 用 Azure Information Protection アプリは証明書ベースの認証をサポートします。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/azure/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
+- iOS および Android 用の Azure Information Protection アプリでは、証明書ベースの認証をサポートしています。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/azure/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
 
 ユーザーの UPN 値がユーザーの電子メール アドレスと一致しない：
 
@@ -55,7 +58,8 @@ AD FS または同等な認証プロバイダーを使用してオンプレミ�
 
 - 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
-## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
+## 多要素認証 (MFA) と Azure Information Protection
+<a id="multi-factor-authentication-mfa-and-azure-information-protection" class="xliff"></a>
 Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
 -   Office 2013 (最小バージョン):
@@ -88,7 +92,8 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## 次のステップ
+<a id="next-steps" class="xliff"></a>
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

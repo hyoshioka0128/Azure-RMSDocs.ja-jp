@@ -4,7 +4,7 @@ description: "Azure RMS でお客様が管理するキーを使用する場合 (
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 06/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,12 +12,14 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab3b25ebd04565f8cd0e9236c1241f38d4a2e8b2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: cfc4243d15112545219f82964d09ce9ce238355d
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
+# BYOK の料金と制限事項
+<a id="byok-pricing-and-restrictions" class="xliff"></a>
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -28,7 +30,8 @@ Azure Information Protection が含まれているサブスクリプションを
 
 Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを専用のサブスクリプションで使用することで、それが Azure Rights Management サービスのみで使用されるようにすることをお勧めします。 
 
-## <a name="benefits-of-using-azure-key-vault"></a>Azure Key Vault を使用する利点
+## Azure Key Vault を使用する利点
+<a id="benefits-of-using-azure-key-vault" class="xliff"></a>
 
 追加的な保証として Azure Information Protection 使用状況ログを使用することに加えて、これと [Azure Key Vault のログ記録](https://azure.microsoft.com/documentation/articles/key-vault-logging/) との相互参照を行って、Azure Rights Management サービスのみでこのキーが使用されていることを個別に監視することができます。 必要な場合、キー コンテナーに対するアクセス許可を削除することにより、キーへのアクセスをすぐに取り消すことができます。
 
@@ -47,19 +50,16 @@ Azure Key Vault では、キーの管理ができるだけでなく、セキュ�
 Azure Key Vault の詳細については、「[Azure Key Vault とは](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
 
 
-## <a name="restrictions-when-using-byok"></a>BYOK を使用する場合の制限
-
-個人用の RMS を使用して無料のアカウントにサインアップしているユーザーがいる場合、この構成では BYOK または使用状況ログの記録を構成するテナント管理者がいないので、これらの機能を使用することはできません。
-
-
-> [!NOTE]
-> 個人用 RMS の詳細については、「[個人用 RMS と Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
-
-![BYOK は Exchange Online をサポートしていません](../media/RMS_BYOK_noExchange.png)
+## BYOK を使用する場合の制限
+<a id="restrictions-when-using-byok" class="xliff"></a>
 
 BYOK と使用状況のログ記録は、Azure Information Protection が使用する Azure Rights Management サービス (Azure RMS) と統合されたすべてのアプリケーションでシームレスに利用できます。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
-例外が&1; つあります。現時点では、 **Azure RMS BYOK には Exchange Online との互換性がありません**。 Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
+例外が 1 つあります。現時点では、**Azure RMS BYOK には Exchange Online との互換性がありません**。
+
+![BYOK は Exchange Online をサポートしていません](../media/RMS_BYOK_noExchange.png)
+
+Exchange Online を使用する場合、Azure RMS のデプロイは既定のキー管理モードのままにして、キーの作成と管理をマイクロソフトで行うことをお勧めします。 こうすれば、たとえば Exchange Online が Azure RMS BYOK をサポートする場合など、後で BYOK に変更できます。 ただし、すぐに必要な場合は、Azure RMS を BYOK でデプロイして、Exchange Online 用の RMS 機能を制限付きで使用することもできます (保護されていない電子メールと保護されていない添付ファイルは引き続き完全に機能します)。
 
 -   Outlook Web Access の保護された電子メールや保護された添付ファイルは表示できません。
 
@@ -77,7 +77,8 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 
 場合によっては、Exchange Online の Azure RMS BYOK の例外は、実際には問題にならないこともあります。 たとえば、BYOK とログ作成を必要とする組織は、データ アプリケーション (Exchange、SharePoint、Office) をオンプレミスで実行し、Azure RMS を使用するのは、オンプレミス AD RMS では簡単に使用できない機能 (他社とのコラボレーションやモバイル クライアントからのアクセスなど) を使用するためです。 BYOK とログ作成はこのシナリオで問題なく動作し、組織は Azure RMS サブスクリプションを完全に制御できます。
 
-## <a name="next-steps"></a>次のステップ
+## 次のステップ
+<a id="next-steps" class="xliff"></a>
 
 独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」を参照してください。
 

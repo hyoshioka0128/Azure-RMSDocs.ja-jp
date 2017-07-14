@@ -12,16 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27ffbc6eb9e88840f1b33c59b76bdaa5d028cc36
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d141589c9dc9d90cf3a507db77f624c849f955b5
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Azure Rights Management サービスのカスタム テンプレートを構成する
+# Azure Rights Management サービスのカスタム テンプレートを構成する
+<a id="configuring-custom-templates-for-the-azure-rights-management-service" class="xliff"></a>
 
 >*適用対象: Azure Information Protection、Office 365*
 
-Azure Rights Management サービスを[アクティブ化](activate-service.md)すると、ユーザーは&2; つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルに権限管理ポリシーを簡単に適用できるようになります。 これらの&2; つのテンプレートには、次の権限ポリシーの制限があります。
+Azure Rights Management サービスを[アクティブ化](activate-service.md)すると、ユーザーは 2 つの既定のテンプレートを自動的に使用できるようになります。これにより、組織内の承認されたユーザーにアクセスが制限されている機密ファイルに権限管理ポリシーを簡単に適用できるようになります。 これらの 2 つのテンプレートには、次の権限ポリシーの制限があります。
 
 -   保護されたコンテンツの読み取り専用の表示
 
@@ -60,6 +62,10 @@ Azure Rights Management サービスを[アクティブ化](activate-service.md)
 -   [ユーザー用のテンプレートを更新する方法](refresh-templates.md)
 
 -   [PowerShell を使用してテンプレートを管理する方法](configure-templates-with-powershell.md)
+
+> [!TIP]
+> Azure Rights Management 保護を構成するためのテンプレートおよび新しいオプションは、Azure Portal に移動しています。 この機能は現在プレビューの段階です。 詳細については、ブログ投稿のお知らせ「[Azure Information Protection unified administration now in Preview (現在プレビュー版の管理を一元化した Azure Information Protection )](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/)」を参照してください。 
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

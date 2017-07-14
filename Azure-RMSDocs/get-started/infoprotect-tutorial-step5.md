@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 05/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,14 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
+# 手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する
+<a id="step-5-see-sharing-of-protected-files-in-action-and-track-your-document" class="xliff"></a> 
 
 >*適用対象: Azure Information Protection*
 
@@ -25,7 +28,8 @@ translationtype: HT
 
 これで、電子メールでこのドキュメントを安全に共有する準備ができました。 
 
-## <a name="to-safely-share-your-document-by-email"></a>電子メールで、ドキュメントを安全に共有するには
+## 電子メールで、ドキュメントを安全に共有するには
+<a id="to-safely-share-your-document-by-email" class="xliff"></a>
 
 1. エクスプローラーで、ドキュメントを右クリックし、**[分類して保護する]** を選択します。 次のような **[分類と保護 - Azure Information Protection]** ダイアログ ボックスが開きます。
 
@@ -63,7 +67,8 @@ translationtype: HT
 
 保護されたドキュメントを送信したので、受信者に電子メールを受信するまで待って、受信したら開くよう依頼できます。 
 
-## <a name="ask-your-recipients-to-open-the-emailed-document"></a>電子メールで送信したドキュメントを開くよう受信者に依頼する
+## 電子メールで送信したドキュメントを開くよう受信者に依頼する
+<a id="ask-your-recipients-to-open-the-emailed-document" class="xliff"></a>
 
 受信者は、電子メールの添付ファイルとして送信された保護対象のドキュメントを読むために、多くのデバイスを使用できます。 これらのデバイスには、iPad、iPhone、Android タブレットや携帯電話、Mac コンピューター、Windows コンピューターが含まれます。
 
@@ -71,7 +76,8 @@ translationtype: HT
 
 **[サインアップ]** をクリックすると、Azure Information Protection で、組織が Azure Rights Management のデータ保護サービスを含むサブスクリプションを所有しているかどうかが確認されます。 所有していない場合は、無料アカウントを申し込むことができます。
 
-### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>受信者用の手順: 保護されたドキュメントの添付ファイルを表示するには
+### 受信者用の手順: 保護されたドキュメントの添付ファイルを表示するには
+<a id="instructions-for-recipient-to-view-the-protected-document-attachment" class="xliff"></a>
 
 1. Office がインストールされている PC またはモバイル デバイスで、添付ファイルを開き、ドキュメントを読みます。  
 
@@ -83,7 +89,8 @@ translationtype: HT
 
 これで、受信者が添付ファイルを開き、必要に応じて、他のユーザーに転送したので、ドキュメントを追跡することができます。
 
-## <a name="to-track-your-protected-document"></a>保護されているドキュメントを追跡するには
+## 保護されているドキュメントを追跡するには
+<a id="to-track-your-protected-document" class="xliff"></a>
 
 1.  保護され、共有されているドキュメントを開きます。 以下のように、情報バナーで、指定されているのはカスタム保護設定であることが示されます。
 
@@ -116,12 +123,13 @@ translationtype: HT
 |ドキュメント追跡サイトの使用について|[ドキュメントを追跡して取り消す](../rms-client/client-track-revoke.md)
 
 
-## <a name="next-steps"></a>次の手順
+## 次の手順
+<a id="next-steps" class="xliff"></a>
 
 既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開き直してから、Azure Information Protection で使用してみてください。
 
 さらにドキュメントを共有してみて、使用方法を追跡し、ドキュメントの失効のしくみを確認します。
 
-Azure Information Protection に関して[よく寄せられる質問](faqs.md)をいくつか読み、他のドキュメントの記事をいくつか探索すると役立つ場合があります。 ただし、組織の Azure Information Protection をデプロイを開始する準備ができている場合は、[Azure Information Protection のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)に進む必要があります。 
+その後で Azure Portal の **[クイック スタート]** ページに戻り、Azure Information Protection について[よく寄せられる質問](faqs.md)を読んだり、この他のドキュメントの記事を詳しく調べてみたりすると、役立つ情報を得られることがあります。 ただし、組織の Azure Information Protection のデプロイを開始する準備ができている場合は、[Azure Information Protection のデプロイ ロードマップ](../plan-design/deployment-roadmap.md)に進む必要があります。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

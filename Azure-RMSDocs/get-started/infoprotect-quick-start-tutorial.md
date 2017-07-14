@@ -4,17 +4,20 @@ description: "約 20 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 13dbb47088c33f72bdb0acdbb7cba1245df14f7f
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
+# Azure Information Protection のクイック スタート チュートリアル
+<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a> 
 
 >*適用対象: Azure Information Protection*
 
@@ -24,17 +27,16 @@ translationtype: HT
 
 このチュートリアルの実行や Azure Information Protection の使用に関して問題がある場合、または他のユーザーの意見を知りたい場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)を参照してください。
 
-## <a name="prerequisites"></a>必要条件 
+## 必要条件
+<a id="prerequisites" class="xliff"></a> 
 このチュートリアルでは、以下のものが必要です。
 
-- 分類、ラベル付け、および保護のための Azure Information Protection を含むサブスクリプション。 このチュートリアルには、自動化データ分類などのいくつかの高度な機能、ユーザー推奨事項、ドキュメント追跡サイトが含まれます。 サブスクリプションでこれらの機能がサポートされていることを確認してください。 詳細については、Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)」を参照してください。
+- 分類、ラベル付け、および保護のための Azure Information Protection を含むサブスクリプション。 このチュートリアルには、自動化データ分類などのいくつかの高度な機能、ユーザー推奨事項、ドキュメント追跡サイトが含まれます。 このチュートリアルで扱っているこれらの機能をサポートするサブスクリプションがあることを確認してください。 詳細については、Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)」を参照してください。
     
     これらの機能のサブスクリプションをお持ちでない場合は、[Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) の無料評価版にサインアップすることができます。
     
-- Azure のサブスクリプション。Azure ポータルにアクセスして Azure Information Protection ポリシーを構成するために必要です。 組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。「[Microsoft Azure はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
-
   > [!TIP] 
-  > サブスクリプションの取得プロセスの完了までに時間がかかる可能性があるため、これらのサブスクリプションを 1 つ以上取得する必要がある場合は、事前に済ませてください。
+  > サブスクリプションの申請プロセスの完了までに時間がかかる可能性があるため、申請が必要な場合は、事前に済ませてください。
 
 - Azure ポータルにサインインして Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
 
