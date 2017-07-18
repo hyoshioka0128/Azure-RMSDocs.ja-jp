@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection の新しいラベルを作成する方法
-<a id="how-to-create-a-new-label-for-azure-information-protection" class="xliff"></a>
+# <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Azure Information Protection の新しいラベルを作成する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -47,8 +46,7 @@ Azure Information Protection ポリシーに新しいラベルを追加するに
 
 5. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには、「[How to configure labels for different languages (他の言語用ラベルを構成する方法)](configure-policy-languages.md)」の手順に従ってください。 
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection クライアント: バージョン リリース履歴
-<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
+# <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection クライアント: バージョン リリース履歴
 
 >*適用対象: Azure Information Protection*
 
@@ -35,8 +34,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 > 問題が解決しない場合は、「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
 
-## バージョン 1.7.210.0
-<a id="version-172100" class="xliff"></a>
+## <a name="version-172100"></a>バージョン 1.7.210.0
 
 **リリース日**: 2017 年 6 月 6 日
 
@@ -61,8 +59,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 - 新しい PowerShell コマンドレット: [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification)。 このコマンドレットを実行すると、Azure Information Protection ポリシーで指定した条件に従って、ファイルの内容を検査し、ラベル付けされていないファイルに自動でラベルを付与します。
 
 
-## バージョン 1.4.21.0
-<a id="version-14210" class="xliff"></a>
+## <a name="version-14210"></a>バージョン 1.4.21.0
 
 **リリース日**: 2017 年 3 月 15 日
 
@@ -89,8 +86,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 - PDF ファイルの場合、ビューアーでは現在、検索、拡大、回転などのオプションがサポートされています。 これらのオプションを使用するには、ビューアーにファイルが表示された際にファイルを右クリックします。
 
 
-## バージョン 1.3.155.2
-<a id="version-131552" class="xliff"></a>
+## <a name="version-131552"></a>バージョン 1.3.155.2
 
 **リリース日**: 2017 年 2 月 8 日
 
@@ -118,8 +114,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 - [Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
 
-## バージョン 1.2.4.0
-<a id="version-1240" class="xliff"></a>
+## <a name="version-1240"></a>バージョン 1.2.4.0
 
 **リリース日**: 2016 年 10 月 27 日
 
@@ -137,15 +132,13 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
     このオプションの詳細については、管理者ガイドの[追加のチェックとトラブルシューティング](client-admin-guide.md#additional-checks-and-troubleshooting)セクションをご覧ください。
 
-## バージョン 1.1.23.0
-<a id="version-11230" class="xliff"></a>
+## <a name="version-11230"></a>バージョン 1.1.23.0
 
 **リリース日**: 2016 年 10 月 1 日
 
 一般公開。
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 クライアントのインストールの詳細:
 

@@ -19,8 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# 手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する
-<a id="step-5-see-sharing-of-protected-files-in-action-and-track-your-document" class="xliff"></a> 
+# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
 
 >*適用対象: Azure Information Protection*
 
@@ -28,8 +27,7 @@ ms.lasthandoff: 06/30/2017
 
 これで、電子メールでこのドキュメントを安全に共有する準備ができました。 
 
-## 電子メールで、ドキュメントを安全に共有するには
-<a id="to-safely-share-your-document-by-email" class="xliff"></a>
+## <a name="to-safely-share-your-document-by-email"></a>電子メールで、ドキュメントを安全に共有するには
 
 1. エクスプローラーで、ドキュメントを右クリックし、**[分類して保護する]** を選択します。 次のような **[分類と保護 - Azure Information Protection]** ダイアログ ボックスが開きます。
 
@@ -67,8 +65,7 @@ ms.lasthandoff: 06/30/2017
 
 保護されたドキュメントを送信したので、受信者に電子メールを受信するまで待って、受信したら開くよう依頼できます。 
 
-## 電子メールで送信したドキュメントを開くよう受信者に依頼する
-<a id="ask-your-recipients-to-open-the-emailed-document" class="xliff"></a>
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>電子メールで送信したドキュメントを開くよう受信者に依頼する
 
 受信者は、電子メールの添付ファイルとして送信された保護対象のドキュメントを読むために、多くのデバイスを使用できます。 これらのデバイスには、iPad、iPhone、Android タブレットや携帯電話、Mac コンピューター、Windows コンピューターが含まれます。
 
@@ -76,8 +73,7 @@ ms.lasthandoff: 06/30/2017
 
 **[サインアップ]** をクリックすると、Azure Information Protection で、組織が Azure Rights Management のデータ保護サービスを含むサブスクリプションを所有しているかどうかが確認されます。 所有していない場合は、無料アカウントを申し込むことができます。
 
-### 受信者用の手順: 保護されたドキュメントの添付ファイルを表示するには
-<a id="instructions-for-recipient-to-view-the-protected-document-attachment" class="xliff"></a>
+### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>受信者用の手順: 保護されたドキュメントの添付ファイルを表示するには
 
 1. Office がインストールされている PC またはモバイル デバイスで、添付ファイルを開き、ドキュメントを読みます。  
 
@@ -89,8 +85,7 @@ ms.lasthandoff: 06/30/2017
 
 これで、受信者が添付ファイルを開き、必要に応じて、他のユーザーに転送したので、ドキュメントを追跡することができます。
 
-## 保護されているドキュメントを追跡するには
-<a id="to-track-your-protected-document" class="xliff"></a>
+## <a name="to-track-your-protected-document"></a>保護されているドキュメントを追跡するには
 
 1.  保護され、共有されているドキュメントを開きます。 以下のように、情報バナーで、指定されているのはカスタム保護設定であることが示されます。
 
@@ -123,8 +118,7 @@ ms.lasthandoff: 06/30/2017
 |ドキュメント追跡サイトの使用について|[ドキュメントを追跡して取り消す](../rms-client/client-track-revoke.md)
 
 
-## 次の手順
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次の手順
 
 既定の Azure Information Protection ポリシーとそのカスタマイズ方法、および Word 文書でのラベル付けの動作を確認したので、他の設定を試し、Azure Information Protection をサポートする他の Office アプリケーション (Excel、PowerPoint、Outlook) での動作を確認してください。 Azure Information Protection クライアントをインストールしたときにこれらのアプリケーションが開かれていた場合は、いったん閉じて開き直してから、Azure Information Protection で使用してみてください。
 

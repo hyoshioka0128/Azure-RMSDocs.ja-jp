@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection を使用してファイルや電子メールを分類して保護する
-<a id="classify-and-protect-a-file-or-email-by-using-azure-information-protection" class="xliff"></a>
+# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
@@ -27,8 +26,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ただし、**エクスプローラー**を使用してファイルの分類と保護を行うこともできます。エクスプローラーは、その他のファイルの種類をサポートし、複数のファイルを一度に分類して保護するための便利な方法です。 この方法は、Office ドキュメント、PDF ファイル、テキスト ファイル、画像ファイルなどさまざまなファイルの保護をサポートしています。 
 
-### 組織外の相手と安全にファイルを共有する
-<a id="safely-share-a-file-with-people-outside-your-organization" class="xliff"></a>
+### <a name="safely-share-a-file-with-people-outside-your-organization"></a>組織外の相手と安全にファイルを共有する
 
 保護されているファイルは、他のユーザーと安全に共有できます。 たとえば、ファイルを電子メールに添付したり、SharePoint サイトから招待状を送信したりすることができます。
 
@@ -39,8 +37,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 カスタム アクセス許可でファイルを保護する場合は、標準の共有メカニズムを使用してファイルを共有します。 保護されたファイルを初めて受け取る共有相手の場合は、必要に応じて相手に表示手順を説明します。 このような相手には、「**このファイルは Microsoft Azure Information Protection で保護されています。初めて利用する場合は、[こちらの手順](https://aka.ms/rms-signup)を参照してください**」というメッセージをコピーして貼り付けることをお勧めします。
 
 
-## Office アプリを使用してドキュメントや電子メールを分類して保護する
-<a id="using-office-apps-to-classify-and-protect-your-documents-and-emails" class="xliff"></a>
+## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
 Azure Information Protection バーを使用して、構成されているラベルを 1 つ選択します。 
 
@@ -56,16 +53,13 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 - 機密データが検出された場合に特定のラベルを選択するように推奨するプロンプトを管理者が構成済み。 推奨を受け入れる (ラベルが適用される) か、拒否することができます (推奨されたラベルが適用されない)。
 
-### Azure Information Protection バーの例外
-<a id="exceptions-for-the-azure-information-protection-bar" class="xliff"></a> 
+### <a name="exceptions-for-the-azure-information-protection-bar"></a>Azure Information Protection バーの例外 
 
-##### お使いの Office アプリでこの Information Protection バーが表示されない場合
-<a id="dont-see-this-information-protection-bar-in-your-office-apps" class="xliff"></a>
+##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>お使いの Office アプリでこの Information Protection バーが表示されない場合
 
 - Azure Information Protection クライアントが[インストール](install-client-app.md)されていないか、クライアントが[保護のみモード](client-protection-only-mode.md)で実行されている可能性があります。
  
-##### 表示されるはずのラベルがバーに表示されない場合
-<a id="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar" class="xliff"></a> 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>表示されるはずのラベルがバーに表示されない場合 
 
 - 管理者が新しいラベルを構成したばかりの場合は、すべてのインスタンスの Office アプリを終了してから、開き直します。 この操作で、ラベルの変更が確認されます。
 
@@ -73,8 +67,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 - 自分のアカウントを含まない範囲のポリシーのラベルである可能性があります。 ヘルプ デスクまたは管理者に問い合わせてください。
 
-### ドキュメントのカスタム アクセス許可を設定する
-<a id="set-custom-permissions-for-a-document" class="xliff"></a>
+### <a name="set-custom-permissions-for-a-document"></a>ドキュメントのカスタム アクセス許可を設定する
 
 選択したラベルに対して管理者から指定されている保護設定を使用するのではなく、独自にドキュメントの保護設定を指定することができます。
 
@@ -97,8 +90,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 5. **[適用]** をクリックして、**"カスタム アクセス許可が適用されました"** というメッセージが表示されるまで待ちます。 次に、 **[閉じる]**をクリックします。
 
 
-### Azure Information Protection バーのショートカット キー
-<a id="keyboard-shortcuts-for-the-azure-information-protection-bar" class="xliff"></a>
+### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Azure Information Protection バーのショートカット キー
 
 キーボード ショートカットを使用して、Azure Information Protection バーにアクセスするには、次のキーの組み合わせを使用します:
 
@@ -106,8 +98,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 次に、Tab キーを使用してバーのラベルと他のコントロール (**[ラベルの非表示]** アイコンと **[ラベルの削除]** アイコン) を選択し、Enter キーで選択します。
 
-## エクスプローラーを使用してファイルを分類および保護する
-<a id="using-file-explorer-to-classify-and-protect-files" class="xliff"></a>
+## <a name="using-file-explorer-to-classify-and-protect-files"></a>エクスプローラーを使用してファイルを分類および保護する
 
 エクスプローラーを使用すると、1 つのファイル、複数のファイル、またはフォルダーをすばやく分類して保護することができます。 
 
@@ -120,8 +111,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 管理者ガイドには、サポートされるファイルの種類と自動的に除外されるファイルとフォルダーの詳細な一覧が記載されています。「[File types supported by the Azure Information Protection client](client-admin-guide-file-types.md)」(Azure Information Protection クライアントでサポートされるファイルの種類) を参照してください。
 
 
-### エクスプローラーを使用してファイルを分類および保護するには
-<a id="to-classify-and-protect-a-file-by-using-file-explorer" class="xliff"></a>
+### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類および保護するには
 
 1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 たとえば、
     
@@ -162,8 +152,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 ファイルを電子メールで送信したり、別の場所に保存した場合にも、指定した分類と保護はファイルに設定されたままです。 ファイルを保護した場合は、ユーザーによる保護されたファイルの使用状況を追跡し、必要に応じてファイルへのアクセスを取り消すことができます。 詳細については、「[Azure Information Protection を使用して保護されたドキュメントを追跡および取り消す](client-track-revoke.md)」を参照してください。 
 
 
-## その他の手順
-<a id="other-instructions" class="xliff"></a>
+## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)

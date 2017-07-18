@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# カスタム テンプレート用の PowerShell リファレンス
-<a id="powershell-reference-for-custom-templates" class="xliff"></a>
+# <a name="powershell-reference-for-custom-templates"></a>カスタム テンプレート用の PowerShell リファレンス
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -54,8 +53,7 @@ Azure クラシック ポータルで権限管理テンプレートを作成お�
 
 
 
-## 関連項目
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

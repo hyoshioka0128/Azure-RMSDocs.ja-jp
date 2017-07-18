@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection ポリシーの構成
-<a id="configuring-azure-information-protection-policy" class="xliff"></a>
+# <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
 >*適用対象: Azure Information Protection*
 
 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
 
-## サブスクリプション サポート
-<a id="subscription-support" class="xliff"></a>
+## <a name="subscription-support"></a>サブスクリプション サポート
 
 Azure Information Protection ポリシーは、さまざまなレベルのサブスクリプションをサポートします。
 
@@ -44,8 +42,7 @@ Azure Information Protection P2 サブスクリプションを必要とするオ
 
 スコープ ポリシーを構成する方法の詳細については、[スコープ ポリシーを使用して特定のユーザーのポリシーを構成する方法](configure-policy-scope.md)に関する記事を参照してください。
 
-## Azure Information Protection ポリシーを構成する方法
-<a id="how-to-configure-the-azure-information-protection-policy" class="xliff"></a>
+## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
 1. 新しいブラウザー ウィンドウで、セキュリティ管理者または全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
 
@@ -88,8 +85,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 >[!NOTE]
 >クライアントがポリシーをダウンロードしてから完全に機能するまで、数分間待機します。 待機時間はポリシーの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 ラベルの動作の結果が最新の変更と一致しない場合は、15 分待ってから再度お試しください。
 
-### 組織のポリシーの構成
-<a id="configuring-your-organizations-policy" class="xliff"></a>
+### <a name="configuring-your-organizations-policy"></a>組織のポリシーの構成
 
 次の情報を使用して、Azure Information Protection ポリシーを構成します。
 
@@ -115,8 +111,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [異なる言語のラベルを構成する方法](configure-policy-languages.md)
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 

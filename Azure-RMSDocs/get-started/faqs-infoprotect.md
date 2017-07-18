@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
-<a id="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection" class="xliff"></a>
+# <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
 >*適用対象: Azure Information Protection、Office 365*
 
 Azure Information Protection に関して、特に分類とラベル付けに関して質問はございますか。  ここで回答を探してみてください。 
 
-## Azure Information Protection の分類機能はどのように使用しますか。
-<a id="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection" class="xliff"></a>
+## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Azure Information Protection の分類機能はどのように使用しますか。
 
 「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」に従えば、わずか数分でこの動作を確認できます。
 
@@ -46,20 +44,17 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 2 月のリリースでは以前の多くの制限がなくなりました。 詳細については、[ブログの投稿のお知らせ](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/)を参照してください。
 
-## 分類とラベルを構成するにはグローバル管理者である必要がありますか?
-<a id="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels" class="xliff"></a>
+## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>分類とラベルを構成するにはグローバル管理者である必要がありますか?
 
 Azure Information Protection ポリシーを構成するとき、Azure Active Directory のグローバル管理者として Azure Portal にサインインする必要がなくなりました。 また、セキュリティ管理者の役割が与えられたアカウントを利用できるようになりました。
 
 [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもラベル機能を試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試用できますが、ラベルの変更または新規追加には Azure Portal にサインインする必要があります。 
 
-## Azure Portal のオプションが P2 かどうかを確認するにはどうすればよいですか?
-<a id="which-options-in-the-azure-portal-are-p2" class="xliff"></a>
+## <a name="which-options-in-the-azure-portal-are-p2"></a>Azure Portal のオプションが P2 かどうかを確認するにはどうすればよいですか?
 
 **Azure Information Protection Premium 2** (P2) のサブスクリプションを必要とする Azure Portal のオプションでは、そのことを示す情報ポップアップ メッセージが表示されるようになりました。 P1 および P2 のサブスクリプションに含まれる機能について詳しくは、Azure Information Protection のサイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)をご覧ください。
 
-## 1 つのファイルに複数の分類を適用することはできますか?
-<a id="can-a-file-have-more-than-one-classification" class="xliff"></a>
+## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
 ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
 
@@ -67,18 +62,15 @@ Azure Information Protection ポリシーを構成するとき、Azure Active Di
 
 サブラベルを使用する場合は、プライマリ ラベルでビジュアル マーキング、保護、および条件を構成しないでください。 サブレベルを使用する場合は、サブラベルのみにこれらの設定を構成してください。 プライマリ ラベルとそのサブラベルでこれらの設定を構成した場合は、サブラベルの設定が優先されます。
 
-## 電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
-<a id="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling" class="xliff"></a>
+## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
 いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は添付ファイルに適用されます。
 
-## DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
-<a id="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection" class="xliff"></a>
+## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
 Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 ファイルでは、このメタデータはカスタム プロパティに格納されます。 電子メールでは、この情報は電子メールのヘッダーにあります。
 
-## Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
-<a id="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification" class="xliff"></a>
+## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 
 Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 
 
