@@ -4,7 +4,7 @@ description: "分類、ラベル付け、組織のドキュメントと電子メ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f49d00317503f23d03ae64aa3608375b871b3854
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -88,13 +88,13 @@ Azure Information Protection では、テナント内のユーザー用に Azure
 
 ラベルを割り当てる場合:
 
-- Azure AD 内の任意の種類のグループを使用して、追加のラベルをグループ メンバーに割り当てるスコープ ポリシーを構成できます。
+- 追加のラベルをグループ メンバーに割り当てるスコープ ポリシーを構成するために、ユーザーのテナントの確認済みドメインを含む電子メール アドレスを持つ任意の種類のグループを Azure AD で使用することができます。 電子メール アドレスを持つグループを、メールが有効なグループと呼ぶことがあります。
+    
+    たとえば、メールが有効なセキュリティ グループ、配布グループ (静的または動的)、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は、電子メール アドレスを持っていない種類のグループであるため使用できません。
 
 使用権限とアクセス制御を割り当てる場合:
 
 - Azure AD にある任意の種類のグループを使用できます。Azure AD には、ユーザーのテナントに対する確認済みのドメインを含む電子メール アドレスがあります。 電子メール アドレスを持つグループを、メールが有効なグループと呼ぶことがあります。 
-    
-    たとえば、メールが有効なセキュリティ グループ、配布グループ (静的または動的)、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は、電子メール アドレスを持っていない種類のグループであるため使用できません。
 
 Azure Rights Management サービスを構成する場合:
 

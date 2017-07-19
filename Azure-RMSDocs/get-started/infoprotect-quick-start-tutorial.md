@@ -4,20 +4,19 @@ description: "約 20 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
+ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/10/2017
 ---
-# Azure Information Protection のクイック スタート チュートリアル
-<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a> 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
 >*適用対象: Azure Information Protection*
 
@@ -27,8 +26,7 @@ ms.lasthandoff: 06/30/2017
 
 このチュートリアルの実行や Azure Information Protection の使用に関して問題がある場合、または他のユーザーの意見を知りたい場合は、[Azure Information Protection の Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)を参照してください。
 
-## 必要条件
-<a id="prerequisites" class="xliff"></a> 
+## <a name="prerequisites"></a>必要条件 
 このチュートリアルでは、以下のものが必要です。
 
 - 分類、ラベル付け、および保護のための Azure Information Protection を含むサブスクリプション。 このチュートリアルには、自動化データ分類などのいくつかの高度な機能、ユーザー推奨事項、ドキュメント追跡サイトが含まれます。 このチュートリアルで扱っているこれらの機能をサポートするサブスクリプションがあることを確認してください。 詳細については、Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)」を参照してください。
@@ -40,7 +38,7 @@ ms.lasthandoff: 06/30/2017
 
 - Azure ポータルにサインインして Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
 
-- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 がインストールされている必要があります。 
+- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 Service Pack 2 がインストールされている必要があります。 クラウド アカウントを使用して、Office アプリにサインインする必要があります。
 
 では、始めましょう。
 

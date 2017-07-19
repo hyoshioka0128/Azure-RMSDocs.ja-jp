@@ -4,20 +4,19 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
-# 手順 2: Azure Information Protection ポリシーを構成して公開する
-<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
 >*適用対象: Azure Information Protection*
 
@@ -45,12 +44,11 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-labelsv2.png)
     
-    さらに、一部のポリシーの設定は設定されていません。たとえば、すべてのドキュメントと電子メールはラベルが必須ではなく、既定のラベルはなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
+    また、設定されていないポリシー設定がいくつかあります。 たとえば、すべてのドキュメントと電子メールはラベルが必須ではなく、既定のラベルはなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-settings.png)
 
-## 既定のラベルと理由を求めるプロンプトの設定の変更
-<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
+## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>既定のラベルと理由を求めるプロンプトの設定の変更
 
 このチュートリアルでは 2 つのポリシーの設定を変更し、どのように動作するかを確認します。
 
@@ -60,8 +58,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) で、これを**[On]** (オン) に設定します。
 
-## 分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
-<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>分類に関する保護ラベル、透かし、およびプロンプトを出す条件の構成
 
 メイン ラベル **[社外秘]** から、サブラベルの 1 つである **[すべての従業員]** の設定を変更します。 
 
@@ -79,9 +76,11 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     この操作により、**[保護]** ブレードが開きます。
     
-3. **[保護]** ブレードで **[Azure RMS]** および **[Select a predefined template (定義済みテンプレートの選択)]**が選択されていることを確認し、ドロップダウン ボックスをクリックして既定のテンプレートの **[\<組織名> - 機密]** を選択します。     
+3. **[保護]** ブレードで、**[Azure RMS]** が選択され、**[定義済みのテンプレートを選択する]** も選択されていることを確認します。 次に、ドリルダウン ボックスをクリックし、組織内のすべてのユーザーが保護されているコンテンツを表示および編集できる既定のテンプレートを選択します。 
     
-    たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
+    Azure Rights Management サービスを最近アクティブ化した場合、このテンプレートの名前は **Confidential \ All employees** です。 
+    
+    このチュートリアルを始める前に、Azure Rights Management サービスが既にアクティブ化されている場合、既定のテンプレート名は **\<組織名> - Confidential** の場合があります。 たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - Azure RMS 保護を設定する](../media/step2-select-rms-template.png)
     
