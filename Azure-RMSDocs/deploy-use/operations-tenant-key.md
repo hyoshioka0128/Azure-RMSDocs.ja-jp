@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection テナント キーに対する操作
-<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
+# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーに対する操作
 
 >*適用対象: Azure Information Protection、Office 365*
 
