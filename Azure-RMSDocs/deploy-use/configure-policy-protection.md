@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/05/2017
 ---
-# Rights Management による保護でラベルを構成する方法
-<a id="how-to-configure-a-label-for-rights-management-protection" class="xliff"></a>
+# <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -25,8 +24,7 @@ ms.lasthandoff: 07/05/2017
 
 テンプレートは、Azure Rights Management をアクティブ化したときに自動的に作成される既定のいずれかのテンプレート、またはカスタム テンプレートのどちらも使用できます。 Azure Rights Management の部門別テンプレートはサポートされていますが、保護は、ドキュメントまたは電子メールの作成者がテンプレートの構成範囲内にある場合にのみ適用されます。 ユーザーがその範囲外である場合は、Azure Information Protection でラベルを適用できないことを示すメッセージが表示されます。
 
-## 保護のしくみ
-<a id="how-the-protection-works" class="xliff"></a>
+## <a name="how-the-protection-works"></a>保護のしくみ
 
 Rights Management によって保護されるドキュメントまたは電子メールは、保存時および送信時に暗号化され、権限のあるユーザーのみが暗号化を解除できます。 この暗号化は、ドキュメントまたは電子メールの名前が変更された場合でも維持されます。 さらに、次の例のように、使用権限と制限を構成できます。
 
@@ -52,8 +50,7 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
 - オンプレミスの Exchange の場合: [RMS コネクタを展開し、Exchange サーバーを構成する](../deploy-use/deploy-rms-connector.md)必要があります。 
 
 
-## Rights Management による保護にラベルを構成するには
-<a id="to-configure-a-label-for-rights-management-protection" class="xliff"></a>
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護にラベルを構成するには
 
 1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は新しいブラウザーのウィンドウを開き、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
 
@@ -122,8 +119,7 @@ Azure Rights Management とそのしくみの詳細については、[Azure Righ
 
 13. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

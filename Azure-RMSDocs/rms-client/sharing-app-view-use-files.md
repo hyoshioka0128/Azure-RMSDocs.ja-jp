@@ -4,7 +4,7 @@ description: "保護されたファイルを表示して使用する手順です
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0a510d559573e942b8a2bf392f36a1300dfbfb7a
+ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
-# Rights Management によって保護されたファイルを表示して使用する
-<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
+# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -35,8 +34,7 @@ ms.lasthandoff: 06/30/2017
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
 > -   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## 保護されたファイルを表示するには
-<a id="to-view-a-protected-file" class="xliff"></a>
+## <a name="to-view-a-protected-file"></a>保護されたファイルを表示するには
 ファイル エクスプローラーまたは添付ファイルを含む電子メール メッセージを使用して、保護されたファイルをダブルクリックし、要求された場合は資格情報を入力します。
 
 ファイル名拡張子が異なる 2 つのバージョンのファイルが表示される場合、拡張子が .ppdf のファイルは、他のファイルが開かない場合にのみ開いてください。 .ppdf バージョンを開くことができない場合は、最初に [RMS 共有アプリケーション](install-sharing-app.md)をインストールします。このアプリケーションは、.ppdf ファイル名拡張子を持つファイルを開く方法を認識しています。
@@ -72,11 +70,7 @@ ms.lasthandoff: 06/30/2017
 
 Rights Management サービスでサポートされるファイル名拡張子の完全な一覧については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[サポートされているファイルの種類とファイル名拡張子](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions)」セクションを参照してください。 ファイル名拡張子が一覧にない場合は、Web 検索を使用して、別のアプリケーションでサポートされているファイル名拡張子であるかどうかを確認します。
 
-> [!NOTE]
-> Rights Management でファイルが保護されていることを確認した後、ファイルが開かない場合は、[RMS Analyzer ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして使用します。 ツールの指示に従って、保護されたドキュメントが開かない原因となっている可能性のあるコンピューターの問題を確認します。
-
-## 保護されているファイルを使用するには (ファイルを編集して印刷する場合など)
-<a id="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file" class="xliff"></a>
+## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>保護されているファイルを使用するには (ファイルを編集して印刷する場合など)
 保護されたファイルを開いた後、読み取り以外にも編集、コピー、印刷などを行う場合は、ファイル名拡張子に応じて次の手順に従います。
 
 - **ファイル名拡張子が *.pfile* である**
@@ -98,16 +92,14 @@ Rights Management サービスでサポートされるファイル名拡張子�
     Rights Management 対応のアプリケーションは、他の Rights Management 対応アプリケーションによって保護されているファイルを開く方法を認識しています。 また、Rights Management 対応アプリケーションは、ユーザーがファイルを編集したり、別のファイル名や別の場所に保存したりしても、ファイルに適用された保護を維持します。 Rights Management 対応アプリケーションを使用すると、ユーザーはファイルに現在適用されているアクセス許可に従ってファイルを使用できます。ユーザーがファイルを使用するためのアクセス許可を持っている場合、ファイルを使用できます。 たとえば、ファイルを編集できても印刷はできません。
 
 
-## 例とその他の説明
-<a id="examples-and-other-instructions" class="xliff"></a>
+## <a name="examples-and-other-instructions"></a>例とその他の説明
 Rights Management 共有アプリケーションの使用方法の例と操作手順については、Rights Management 共有アプリケーション ユーザー ガイドの次のセクションをご覧ください。
 
 -   [RMS 共有アプリケーションの使用例](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [作業内容](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## 参照
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

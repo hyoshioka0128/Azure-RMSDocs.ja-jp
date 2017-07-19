@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/05/2017
 ---
-# Azure Information Protection で他の言語用ラベルを構成する方法
-<a id="how-to-configure-labels-for-different-languages-in-azure-information-protection" class="xliff"></a>
+# <a name="how-to-configure-labels-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で他の言語用ラベルを構成する方法
 
 >*適用対象: Azure Information Protection*
 
@@ -28,8 +27,7 @@ ms.lasthandoff: 07/05/2017
 
 ユーザーの Office と Windows の言語設定に一致する言語を選択します。 これらのラベル名と説明は、Office アプリの Azure Information Protection バーと **[Classify and protection - Azure Information Protection]\(分類と保護 - Azure Information Protection\)** ダイアログ ボックスにそれぞれ表示されます。 選択する言語の詳細については、このページの「[Azure Information Protection クライアントで表示言語が決定されるしくみ](#how-the-azure-information-protection-client-determines-the-language-to- display)」をご覧ください。 
 
-## 他の言語で表示するようにラベルを構成するには
-<a id="to-configure-labels-to-display-in-different-languages" class="xliff"></a>
+## <a name="to-configure-labels-to-display-in-different-languages"></a>他の言語で表示するようにラベルを構成するには
 
 1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザーのウィンドウで、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
     
@@ -64,8 +62,7 @@ ms.lasthandoff: 07/05/2017
     
     インポートが完了すると、Azure Information Protection ポリシーが次に公開された後に、ローカライズされたラベル名と説明がユーザーにダウンロードされます。 **[グローバル ポリシー]** または **[スコープ付きポリシー]** ブレードで **[公開]** をクリックできます。
 
-## Azure Information Protection クライアントで表示言語が決定されるしくみ
-<a id="how-the-azure-information-protection-client-determines-the-language-to-display" class="xliff"></a>
+## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Azure Information Protection クライアントで表示言語が決定されるしくみ
 
 他の言語をサポートする Azure Information Protection ポリシーをユーザーがダウンロードする場合、ラベルの名前とヒントでユーザーに表示される言語は、次のロジックに従って決定されます。
 
@@ -81,8 +78,7 @@ ms.lasthandoff: 07/05/2017
 
 - ユーザーのオペレーティング システムの言語と一致する言語がない場合は、管理者がすべてのユーザーに対して既定で指定した言語を使用して、ラベルの名前と説明が表示されます。 通常、この言語は、既定のポリシーで使用される英語です。
 
-## ローカライズされたラベル名が使用されない場合
-<a id="when-localized-label-names-are-not-used" class="xliff"></a>
+## <a name="when-localized-label-names-are-not-used"></a>ローカライズされたラベル名が使用されない場合
 
 次のシナリオでは、ローカライズされたラベル (およびサブラベル) の名前は使用されません。 テナント全体の一貫性のために、次の項目に関しては既定の言語が常に使用されます。
 
@@ -93,8 +89,7 @@ ms.lasthandoff: 07/05/2017
 - ドキュメント メタデータと電子メール ヘッダー
 
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 ラベルに実行できるオプションを構成する方法や、Azure Information Protection ポリシーのその他の設定について詳しくは、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
 

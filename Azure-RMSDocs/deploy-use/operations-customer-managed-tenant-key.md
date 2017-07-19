@@ -18,22 +18,19 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/13/2017
 ---
-# お客様が管理: テナント キーのライフサイクル操作
-<a id="customer-managed-tenant-key-lifecycle-operations" class="xliff"></a>
+# <a name="customer-managed-tenant-key-lifecycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
 >*適用対象: Azure Information Protection、Office 365*
 
 Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) は、次のセクションでこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
-## テナント キーを取り消します
-<a id="revoke-your-tenant-key" class="xliff"></a>
+## <a name="revoke-your-tenant-key"></a>テナント キーを取り消します
 Azure Key Vault では、Azure Information Protection テナント キーが格納されたキー コンテナーに対するアクセス許可を変更して、Azure Rights Management サービスがキーにアクセスできないようにすることができます。 ただし、これを行うと、以前に Azure Rights Management サービスで保護したドキュメントや電子メールを誰も開けなくなります。
 
 Azure Information Protection のサブスクリプションをキャンセルすると、Azure Information Protection ではお客様のテナント キーの使用を停止します。操作を行う必要はありません。
 
 
-## テナント キーを再入力します
-<a id="re-key-your-tenant-key" class="xliff"></a>
+## <a name="re-key-your-tenant-key"></a>テナント キーを再入力します
 再入力は「キーをロールする」とも呼ばれます。 本当に必要でない限り、テナント キーは再入力しないでください。 Office 2010 など、以前のクライアントはキー変更を滑らかに処理するようには設計されていません。 このシナリオでは、グループ ポリシーまたは同等のメカニズムを使用し、コンピューターの Rights Management 状態を消去する必要があります。 ただし、場合によってはテナント キーの再入力を強制する正規のイベントがいくつかあります。 たとえば、
 
 -   あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
@@ -44,18 +41,15 @@ Azure Information Protection のサブスクリプションをキャンセルす
 
 テナント キーを再入力するには、最初に Key Vault で Azure Information Protection テナント キーを再入力します。 次に、[Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) コマンドレットをもう一度実行して、新しいキー URL を指定します。
 
-## テナント キーをバックアップ/復旧します
-<a id="backup-and-recover-your-tenant-key" class="xliff"></a>
+## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 テナント キーのバックアップは自分で行う必要があります。 Thales HSM でテナント キーを生成した場合、キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップするだけです。
 
 「[Azure Rights Management テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」の「[Implementing bring your own key (BYOK) (BYOK (Bring Your Own Key) の実装)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」セクションの手順に従ってキーを転送してあるので、Key Vault はトークン化されたキー ファイルを保持して任意のサービス ノードの障害から保護します。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
 
-## テナント キーをエクスポートします
-<a id="export-your-tenant-key" class="xliff"></a>
+## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
 BYOK を使用する場合、テナント キーを Azure Key Vault または Azure Information Protection からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 
 
-## 侵害に反応します
-<a id="respond-to-a-breach" class="xliff"></a>
+## <a name="respond-to-a-breach"></a>侵害に反応します
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の HSM 技術、現在のキー長、アルゴリズムに脆弱性が見つかる可能性があります。
 
 製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントがあなたの資産に影響を与える場合、Microsoft は Azure Information Protection テナント管理者に電子メールで通知します。その場合、サブスクリプションで指定されたアドレスが使われます。
