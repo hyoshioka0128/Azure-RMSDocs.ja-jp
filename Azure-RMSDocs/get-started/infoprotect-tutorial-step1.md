@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# 手順 1.Rights Management サービスの有効化
-<a id="step-1-activate-the-rights-management-service" class="xliff"></a>
+# <a name="step-1-activate-the-rights-management-service"></a>手順 1.Rights Management サービスの有効化
  
 >*適用対象: Azure Information Protection*
 
@@ -30,8 +29,7 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 このチュートリアルでは、直接、Office 365 管理者向け管理ポータルのアクティブ化ページに移動します。 ただし、このページに直接移動せずに、Office 365 管理ポータルから移動する場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の詳しい手順をご覧ください。 Azure Portal にアクセスできるが、Office 365 管理ポータルにはアクセスできない場合にも、これらの詳しい手順を使用します。
 
-## Rights Management サービスをアクティブにするには
-<a id="to-activate-the-rights-management-service" class="xliff"></a>
+## <a name="to-activate-the-rights-management-service"></a>Rights Management サービスをアクティブにするには
 
 1. 新しいブラウザー ウィンドウを開き、Office 365 管理者用の [Rights Management アクティブ化ページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx)に直接移動します。
     

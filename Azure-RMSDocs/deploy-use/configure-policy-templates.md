@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection ポリシーでテンプレートを構成して管理する
-<a id="configuring-and-managing-templates-in-the-azure-information-protection-policy" class="xliff"></a>
+# <a name="configuring-and-managing-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成して管理する
 
 >*適用対象: Azure Information Protection*
 
@@ -42,8 +41,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 - テナントの Rights Management テンプレートはラベルとして表示されます。また現時点では、分類とラベル付けに固有の構成設定を使用できます。 
 
 
-## Azure Portal のテンプレートに関する考慮事項
-<a id="considerations-for-templates-in-the-azure-portal" class="xliff"></a>
+## <a name="considerations-for-templates-in-the-azure-portal"></a>Azure Portal のテンプレートに関する考慮事項
 
 これらのテンプレートを編集したり Azure Portal でラベルに変換したりする前に、Azure クラシック ポータルのテンプレート管理からの、実装における次の変更点に注意してください。 一部の制限についてはプレビュー期間中に解消される見込みです。
 
@@ -67,8 +65,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 - **テンプレート** コンテナーでは新しいテンプレートを作成しません。代わりに、**[保護]** を設定したラベルを作成し、**[保護]** ブレードで使用権限と設定を構成します。 詳しい説明については、「[新しいテンプレートを作成するには](#to-create-a-new-template)」をご覧ください。
 
-## Azure Information Protection ポリシーでテンプレートを構成するには
-<a id="to-configure-the-templates-in-the-azure-information-protection-policy" class="xliff"></a>
+## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
 1. 新しいブラウザー ウィンドウで、セキュリティ管理者または全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
 
@@ -90,8 +87,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 6. ユーザーのアプリケーションとサービスで変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-## テンプレートをラベルに変換するには
-<a id="to-convert-templates-to-labels" class="xliff"></a>
+## <a name="to-convert-templates-to-labels"></a>テンプレートをラベルに変換するには
 
 分類、ラベル付け、保護を含むサブスクリプションの場合は、テンプレートをラベルに変換できます。 これを行った場合、元のテンプレートは保持されますが、Azure Portal では新しいラベルに含まれた形で元のテンプレートが表示されます。
 
@@ -111,8 +107,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 - 元のテンプレートは **[テンプレート]** に表示されなくなるため、Azure Portal で元のテンプレートを編集するには、作成したラベルを編集します。 Azure Rights Management サービスではこれまで通りテンプレートを使用できるほか、[PowerShell コマンド](administer-powershell.md)を使用してテンプレートを管理できます。  
 
-## 新しいテンプレートを作成するには
-<a id="to-create-a-new-template" class="xliff"></a>
+## <a name="to-create-a-new-template"></a>新しいテンプレートを作成するには
 
 **Azure RMS** の保護設定で新しいラベルを作成すると、その処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
 
@@ -133,8 +128,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 5. これらのテンプレートをユーザーのアプリケーションとサービスで使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーに対するすべての変更と同様に、Azure Information Protection クライアントを実行するコンピューターでこれらのテンプレートのダウンロードを完了するには、最大 15 分かかります。 コンピューターとサービスにテンプレートをダウンロードおよび更新する方法の詳細については、[ユーザー用とサービス用のテンプレートの更新](refresh-templates.md)に関するページをご覧ください。
 

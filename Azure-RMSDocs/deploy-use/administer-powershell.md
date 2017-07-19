@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Windows PowerShell を使用した Azure Rights Management サービスの管理
-<a id="administering-the-azure-rights-management-service-by-using-windows-powershell" class="xliff"></a>
+# <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Windows PowerShell を使用した Azure Rights Management サービスの管理
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -36,8 +35,7 @@ PowerShell を使って、Azure Information Protection のために Azure Rights
 
 このサービス側 PowerShell モジュールに加えて、Azure Information Protection クライアントでは補助 PowerShell モジュール **AzureInformationProtection** がインストールされます。 このクライアント モジュールは、たとえばフォルダー内のすべてのファイルを一括して保護できるように、複数のファイルの分類と保護をサポートしています。 詳細については、管理者ガイドの「[Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
 
-## 管理タスク別にグループ化されたコマンドレット
-<a id="cmdlets-grouped-by-administration-task" class="xliff"></a>
+## <a name="cmdlets-grouped-by-administration-task"></a>管理タスク別にグループ化されたコマンドレット
 
 |実行するタスク|使用するコマンドレット|
 |-------------------|------------------------------|

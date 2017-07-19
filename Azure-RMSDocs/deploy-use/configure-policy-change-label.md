@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection の既存のラベルを変更またはカスタマイズする方法
-<a id="how-to-change-or-customize-an-existing-label-for-azure-information-protection" class="xliff"></a>
+# <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Azure Information Protection の既存のラベルを変更またはカスタマイズする方法
 
 >*適用対象: Azure Information Protection*
 
@@ -45,8 +44,7 @@ Azure Information Protection ポリシー内に構成することで、Informati
 > [!TIP]
 >既定のラベルのいずれかを既定値に戻す場合は、[既定の Information Protection ポリシー](configure-policy-default.md)の情報を使用します。
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 ラベルに実行できるオプションを構成する方法や、Azure Information Protection ポリシーのその他の設定について詳しくは、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
 

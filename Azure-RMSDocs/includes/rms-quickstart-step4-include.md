@@ -10,8 +10,7 @@
 
 ![RM チュートリアルのスクリーンショット](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### 保護されたドキュメントの添付ファイルを表示するには
-<a id="to-view-the-protected-document-attachment" class="xliff"></a>
+#### <a name="to-view-the-protected-document-attachment"></a>保護されたドキュメントの添付ファイルを表示するには
 
 1.  Azure Rights Management により Word 文書が保護されているため、電子メール メッセージには、2 つの添付ファイルがあります。 これらは、実際には 2 つのバージョンの同じファイルですが、ファイル名拡張子は異なります。 ファイル名拡張子 **.ppdf** が付いているバージョン (**Confidential.ppdf**) を開きます。
 

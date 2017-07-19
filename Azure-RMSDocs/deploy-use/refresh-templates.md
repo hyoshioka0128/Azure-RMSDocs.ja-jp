@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# ユーザーとサービスのためのテンプレートの更新
-<a id="refreshing-templates-for-users-and-services" class="xliff"></a>
+# <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -37,8 +36,7 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 
 クライアント アプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更の更新)、ダウンロードが完了し、新規または更新されたテンプレートが完全に機能するまで最大 15 分待機します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
 
-## Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
-<a id="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates" class="xliff"></a>
+## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
 Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
 
 > [!NOTE]
@@ -46,8 +44,7 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
 
 テンプレートを変更するたびにこの手順を実行する必要があります。
 
-### Exchange Online 用のテンプレートを更新するには
-<a id="to-update-templates-for-exchange-online" class="xliff"></a>
+### <a name="to-update-templates-for-exchange-online"></a>Exchange Online 用のテンプレートを更新するには
 
 1.  Exchange Online で Windows PowerShell を使用し、サービスに接続します。
 
@@ -100,15 +97,13 @@ Exchange Online 用の Information Rights Management (IRM) を既に構成して
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
-<a id="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template" class="xliff"></a>
+## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
 Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有アプリケーションを実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
 
 > [!WARNING]
 > レジストリ エディターを誤って使用すると、重大な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
 
-### 自動スケジュールを変更するには
-<a id="to-change-the-automatic-schedule" class="xliff"></a>
+### <a name="to-change-the-automatic-schedule"></a>自動スケジュールを変更するには
 
 1.  レジストリ エディターを使用して、次のレジストリ値のいずれかを作成し設定します。
 
@@ -132,8 +127,7 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
 2.  テンプレートを直ちに更新する場合は、次の手順に進みます。 それ以外の場合は、Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
-### 直ちに更新するには
-<a id="to-force-an-immediate-refresh" class="xliff"></a>
+### <a name="to-force-an-immediate-refresh"></a>直ちに更新するには
 
 1.  レジストリ エディターを使用して、 **LastUpdatedTime** 値のデータを削除します。 たとえば、"**2015-04-20T15:52**" と表示されている場合は、この 2015-04-20T15:52 を削除して、何も表示されていない状態にします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
 
@@ -159,8 +153,7 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 3.  Office アプリケーションとエクスプローラーのインスタンスを再起動します。
 
 
-## 関連項目
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>関連項目
 [Azure Rights Management のカスタム テンプレートを構成する](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# Azure Information Protection テナント キーを計画して実装する
-<a id="planning-and-implementing-your-azure-information-protection-tenant-key" class="xliff"></a>
+# <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -39,8 +38,7 @@ ms.lasthandoff: 06/30/2017
 必要に応じて、デプロイ後に [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) コマンドレットを使ってテナント キー トポロジを変更できます。
 
 
-## テナント キー トポロジを選択する:Microsoft による管理 (既定) または自主管理 (BYOK)
-<a id="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok" class="xliff"></a>
+## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>テナント キー トポロジを選択する:Microsoft による管理 (既定) または自主管理 (BYOK)
 組織に最適なテナント キー トポロジを決定します。 既定では、Azure Information Protection でテナント キーが生成され、テナント キー ライフサイクルのほとんどの側面が管理されます。 これは、管理オーバーヘッドが最も少なくて済むシンプルな方法です。 多くの場合、テナント キーの存在を意識することすらありません。 Azure Information Protection にサインアップすれば、それ以外のキー管理プロセスは Microsoft によって処理されます。
 
 または、[Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用して、テナント キーを完全に管理することもできます。 このシナリオでは、テナント キーを作成して、社内でマスター コピーを保持する必要があります。 多くの場合、このシナリオは BYOK (Bring Your Own Key) と呼ばれます。 この方法では、次の状況が発生します。
@@ -56,8 +54,7 @@ ms.lasthandoff: 06/30/2017
 > [!NOTE]
 > 追加の保護措置として、Azure Key Vault では北米、EMEA (欧州、中東、アフリカ)、アジアなどの地域のデータ センターで独立したセキュリティ ドメインを使用しています。 また、Microsoft Azure Germany や Azure Government など、さまざまな Azure のインスタンスが対象になります。 テナント キーを自主管理する場合、キーは、Azure Information Protection テナントが登録されている地域またはインスタンスのセキュリティ ドメインに関連付けられています。 たとえば、欧州のお客様のテナント キーを北米やアジアのデータセンターで使用することはできません。
 
-## テナント キーのライフサイクル
-<a id="the-tenant-key-lifecycle" class="xliff"></a>
+## <a name="the-tenant-key-lifecycle"></a>テナント キーのライフサイクル
 Microsoft でテナント キーを管理することになった場合、キー ライフサイクル操作の大半を Microsoft で行います。 ただし、テナント キーを自主管理することになった場合、Azure Key Vault でキー ライフサイクル操作の多くといくつかの追加の手順を自社で行う必要があります。
 
 この 2 つの方法の概要と比較を次の図に示します。 最初の図から、Microsoft がテナント キーを管理するという既定構成では管理者のオーバーヘッドが非常に少ないことがわかります。
@@ -72,8 +69,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 テナント キーを自主管理する場合、詳細については以下のセクションを参照してください。
 
-## Azure Information Protection テナント キーを実装する
-<a id="implementing-your-azure-information-protection-tenant-key" class="xliff"></a>
+## <a name="implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを実装する
 
 このセクションでは、テナント キーの生成と管理を行う場合、つまり BYOK (Bring Your Own Key) シナリオについて説明します。
 
@@ -83,8 +79,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 > 
 > キーの処理に関して組織固有のポリシーがある場合も [Microsoft サポートにお問い合わせください](../get-started/information-support.md#to-contact-microsoft-support)。
 
-### BYOK の前提条件
-<a id="prerequisites-for-byok" class="xliff"></a>
+### <a name="prerequisites-for-byok"></a>BYOK の前提条件
 次の表に BYOK (Bring Your Own Key) の前提条件を示します。
 
 |要件|詳細情報|
@@ -96,8 +91,7 @@ Microsoft でテナント キーを管理することになった場合、キー
 
 Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使用する方法については、[Thales の Web サイト](https://www.thales-esecurity.com/msrms/cloud)を参照してください。
 
-### BYOK の手順
-<a id="instructions-for-byok" class="xliff"></a>
+### <a name="instructions-for-byok"></a>BYOK の手順
 
 独自のテナント キーを生成し Azure Key Vault に転送するには、Azure Key Vault のドキュメントの「[Azure Key Vault の HSM 保護キーを生成し、転送する方法](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/)」に記載された手順に従ってください。
 
@@ -125,8 +119,7 @@ Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使�
 最後に、Azure Rights Management サービスが既にアクティブ化されている場合は、[Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行して、Azure Rights Management サービスのアクティブなテナント キーとしてこのキーを使うよう Azure Rights Management に指示します。 この手順を行わないと、Azure Rights Management は、サービスがアクティブ化されるときに自動的に作成された既定の Microsoft 管理キーを使い続けます。
 
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 テナント キーを計画 (および必要に応じて生成) した後は、次の操作を行います。
 

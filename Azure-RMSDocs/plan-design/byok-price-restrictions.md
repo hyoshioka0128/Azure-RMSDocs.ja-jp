@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/30/2017
 ---
-# BYOK の料金と制限事項
-<a id="byok-pricing-and-restrictions" class="xliff"></a>
+# <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -30,8 +29,7 @@ Azure Information Protection が含まれているサブスクリプションを
 
 Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを専用のサブスクリプションで使用することで、それが Azure Rights Management サービスのみで使用されるようにすることをお勧めします。 
 
-## Azure Key Vault を使用する利点
-<a id="benefits-of-using-azure-key-vault" class="xliff"></a>
+## <a name="benefits-of-using-azure-key-vault"></a>Azure Key Vault を使用する利点
 
 追加的な保証として Azure Information Protection 使用状況ログを使用することに加えて、これと [Azure Key Vault のログ記録](https://azure.microsoft.com/documentation/articles/key-vault-logging/) との相互参照を行って、Azure Rights Management サービスのみでこのキーが使用されていることを個別に監視することができます。 必要な場合、キー コンテナーに対するアクセス許可を削除することにより、キーへのアクセスをすぐに取り消すことができます。
 
@@ -50,8 +48,7 @@ Azure Key Vault では、キーの管理ができるだけでなく、セキュ�
 Azure Key Vault の詳細については、「[Azure Key Vault とは](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
 
 
-## BYOK を使用する場合の制限
-<a id="restrictions-when-using-byok" class="xliff"></a>
+## <a name="restrictions-when-using-byok"></a>BYOK を使用する場合の制限
 
 BYOK と使用状況のログ記録は、Azure Information Protection が使用する Azure Rights Management サービス (Azure RMS) と統合されたすべてのアプリケーションでシームレスに利用できます。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure RMS と連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure RMS のリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
@@ -77,8 +74,7 @@ AD RMS から Azure RMS への移行を行う場合、信頼された発行ド�
 
 場合によっては、Exchange Online の Azure RMS BYOK の例外は、実際には問題にならないこともあります。 たとえば、BYOK とログ作成を必要とする組織は、データ アプリケーション (Exchange、SharePoint、Office) をオンプレミスで実行し、Azure RMS を使用するのは、オンプレミス AD RMS では簡単に使用できない機能 (他社とのコラボレーションやモバイル クライアントからのアクセスなど) を使用するためです。 BYOK とログ作成はこのシナリオで問題なく動作し、組織は Azure RMS サブスクリプションを完全に制御できます。
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 
 独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」を参照してください。
 
