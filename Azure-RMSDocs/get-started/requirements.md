@@ -4,7 +4,7 @@ description: "組織の Azure Information Protection をデプロイするため
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 74c0725857148fe12943bd9368173124cb059dcf
-ms.sourcegitcommit: 1128ccda089727ac4a638e99532516474cef0ef4
+ms.openlocfilehash: 2a41876a8c307b0736901de895e10cf3d3201809
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 07/11/2017
 
 - Windows Server 2008 R2 
 
-これらのサーバー バージョンでは、リモート デスクトップ サービスについて Azure Information Protection クライアントがサポートされています。 Azure Information Protection クライアントとリモート デスクトップ サービスを使用しているときに、ユーザー プロファイルを削除する場合は、**%LocalAppData%\Roaming\Microsoft\Protect** フォルダーを削除しないでください。
+これらのサーバー バージョンでは、リモート デスクトップ サービスについて Azure Information Protection クライアントがサポートされています。 Azure Information Protection クライアントとリモート デスクトップ サービスを使用しているときに、ユーザー プロファイルを削除する場合は、**%Appdata%\Microsoft\Protect** フォルダーを削除しないでください。
 
 Azure Information Protection クライアントで Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)からデータを使用できます。
 

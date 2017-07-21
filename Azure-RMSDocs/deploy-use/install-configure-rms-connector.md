@@ -4,7 +4,7 @@ description: "Azure Rights Management (RMS) コネクタをインストールし
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e3444ee0812d54988ad12461e0f492fe07637209
-ms.sourcegitcommit: 1128ccda089727ac4a638e99532516474cef0ef4
+ms.openlocfilehash: be09e2c974d9d542b94bc16f140e764858cc9282
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -55,7 +55,9 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 ## <a name="entering-credentials"></a>資格情報の入力
 RMS コネクタを構成する前に、RMS コネクタを構成するのに十分な特権を持つアカウントの資格情報を入力する必要があります。 たとえば、「**admin@contoso.com**」と入力してから、このアカウントのパスワードを指定します。
 
-コネクタは多要素認証 (MFA) をサポートしていないため、このアカウントで MFA を必須にしないでください。 また、コネクタには、このパスワードに文字の制限もあります。 アンパサンド (**&**)、左山かっこ (**[**)、右山かっこ (**]**)、二重引用符 (**"**)、アポストロフィ (**'**) が含まれるパスワードを使用することはできません。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にサインインできたとしても、RMS コネクタの認証は失敗し、[**このユーザー名とパスワードの組み合わせは正しくありません**] というエラー メッセージが表示されます。 シナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
+このアカウントの多要素認証 (MFA) は Microsoft Rights Management 管理ツールでサポートされていないため、このアカウントでは MFA を使用できません。 
+
+また、コネクタには、このパスワードに文字の制限もあります。 アンパサンド (**&**)、左山かっこ (**[**)、右山かっこ (**]**)、二重引用符 (**"**)、アポストロフィ (**'**) が含まれるパスワードを使用することはできません。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にサインインできたとしても、RMS コネクタの認証は失敗し、[**このユーザー名とパスワードの組み合わせは正しくありません**] というエラー メッセージが表示されます。 シナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
 
 さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントにコンテンツを保護する権限があることをご確認ください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合は、「**管理サービスおよび組織の場所を検出する試みが失敗しました。組織に対して Microsoft Rights Management サービスが有効になっていることをご確認ください。**」というエラー メッセージが表示されます。
 

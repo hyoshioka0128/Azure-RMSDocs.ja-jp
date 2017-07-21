@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8291a21bb27ef3ef3000609c94b71de1de5ba75a
-ms.sourcegitcommit: c1932dae169e9454ac24c1cc12eaf48dec7c3c49
+ms.openlocfilehash: 9b2395ad67bfee226bf10f36613cb6465eb0b019
+ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -83,7 +83,9 @@ Exchange ActiveSync IRM を使用します。Exchange の管理者が有効に�
 
 ### <a name="more-information-about-azure-rms-support-for-office"></a>Azure RMS による Office のサポートの詳細
 
-Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケーションと緊密に統合されています。多くの場合、この機能は Information Rights Management (IRM) と呼ばれます。 次の Office クライアント エディションは、Azure RMS を使用したファイルや電子メールの保護をサポートします。
+Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケーションと緊密に統合されています。多くの場合、この機能は Information Rights Management (IRM) と呼ばれます。 
+
+次の Office クライアント エディションは、Windows コンピューター上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
 
 - Office 365 ProPlus: Office 2016 と Office 2013
 
@@ -102,6 +104,12 @@ Azure RMS および Office Professional Plus 2010 Service Pack 2 または Offic
 - Windows 10 ではサポートされていません
 
 - フェデレーションされるユーザー アカウントのフォーム ベース認証はサポートされていません。 これらのアカウントでは、Windows 統合認証を使用する必要があります。
+
+次の Office クライアント エディションは、macOS 上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
+
+- Office 365 ProPlus: Office 2016
+
+- Office 2016 for Mac
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Azure Information Protection アプリに関する詳細
 
