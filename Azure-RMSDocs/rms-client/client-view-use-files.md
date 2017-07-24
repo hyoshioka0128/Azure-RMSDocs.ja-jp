@@ -12,14 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d73a8651b3bea3b8773b4aba49c7d2e85873a80
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d8fd80d6ff97118cd37dd62e293768b145c98595
+ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
-# Rights Management によって保護されたファイルを表示して使用する
-<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
+# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
@@ -41,15 +40,13 @@ ms.lasthandoff: 06/30/2017
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 
 保護されたドキュメントを開くには、アプリケーションが "RMS 対応" である必要があります。 RMS 対応アプリケーションは、たとえば Office アプリや Azure Information Protection ビューアーなどです。 種類およびサポートされるデバイス別にアプリケーションの一覧を確認するには、「[RMS-enlightened applications (RMS 対応アプリケーション)](../get-started/requirements-applications.md#rms-enlightened-applications)」の表をご覧ください。  
-## 電子メールの添付ファイルとしての Message.rpmsg
-<a id="messagerpmsg-as-an-email-attachment" class="xliff"></a>
+## <a name="messagerpmsg-as-an-email-attachment"></a>電子メールの添付ファイルとしての Message.rpmsg
 
-電子メールに **message.rpmsg** ファイルが添付されている場合、このファイルは保護されたドキュメントではありませんが、添付ファイルとして表示される保護された電子メール メッセージです。 Windows 用の Azure Information Protection ビューアーを使用して、Windows PC でこの保護された電子メール メッセージを表示することはできません。 表示するには、Office Outlook などの Rights Management 保護をサポートしている Windows 用の電子メール アプリケーションが必要です。 あるいは、Outlook on the web を使用することもできます。
+電子メールに **message.rpmsg** ファイルが添付されている場合、このファイルは保護されたドキュメントではなく、保護された電子メール メッセージであり、添付ファイルとして表示されます。 Windows 用の Azure Information Protection ビューアーを使用して、Windows PC でこの保護された電子メール メッセージを表示することはできません。 表示するには、Office Outlook などの Rights Management 保護をサポートしている Windows 用の電子メール アプリケーションが必要です。 あるいは、Outlook on the web を使用することもできます。
 
 ただし、iOS または Android デバイスがあれば、Azure Information Protection アプリを使用して保護された電子メール メッセージを開くことができます。 これらのデバイス用の Azure Information Protection アプリは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) からダウンロードできます。
 
-## 認証のプロンプト
-<a id="prompts-for-authentication" class="xliff"></a>
+## <a name="prompts-for-authentication"></a>認証のプロンプト
 
 保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 
@@ -61,8 +58,7 @@ ms.lasthandoff: 06/30/2017
     
 -   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
 
-## 保護されたファイルを表示して使用するには
-<a id="to-view-and-use-a-protected-document" class="xliff"></a>
+## <a name="to-view-and-use-a-protected-document"></a>保護されたファイルを表示して使用するには
 
 1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、**[Azure Information Protection ビューアー]** を選択します。 
 
@@ -81,11 +77,10 @@ ms.lasthandoff: 06/30/2017
 5. 追加の保護されたファイルを開く場合は、**[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
 
 > [!TIP]
-> 保護されたファイルが開かない場合は、[RMS アナライザー ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)をダウンロードして使用します。 ツールの指示に従って、保護されたドキュメントが開かない原因となっている可能性のあるコンピューターの問題を確認します。
+> 保護されたファイルが開かない場合は、Azure Information Protection の **[ヘルプとフィードバック]** オプションから **[診断の実行]** を選択します。 テストが完了すると、クライアントをリセットできます。これにより、問題が解決する場合があります。
 
 
-## その他の手順
-<a id="other-instructions" class="xliff"></a>
+## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)

@@ -12,21 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bf695772d545daca602903e156903da2aadaae7a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 63249b98578b952177351cc5547ef92c67164f06
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/17/2017
 ---
-# Azure Information Protection クライアントのファイルとクライアント使用状況ログ
-<a id="azure-information-protection-client-files-and-client-usage-logging" class="xliff"></a>
+# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
->*適用対象: Active Directory Rights Management Services、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 Azure Information Protection クライアントをインストールした後、どこにファイルがあるかを知り、クライアントがどのように使われているのかを監視することが必要になる場合があります。
 
-## Azure Information Protection クライアントのファイルの場所
-<a id="file-locations-for-the-azure-information-protection-client" class="xliff"></a>
+## <a name="file-locations-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントのファイルの場所
 
 クライアント ファイル:   
 
@@ -38,8 +36,7 @@ Azure Information Protection クライアントをインストールした後、
 
 - 64 ビットおよび 32 ビット オペレーティング システムの場合: **%localappdata%\Microsoft\MSIP**
 
-## Azure Information Protection クライアントの使用状況ログ
-<a id="usage-logging-for-the-azure-information-protection-client" class="xliff"></a>
+## <a name="usage-logging-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントの使用状況ログ
 
 クライアントは、ユーザー アクティビティをローカル Windows イベント ログの **[アプリケーションとサービス]** の **[Azure Information Protection]** に記録します。 イベントには次の情報が含まれます。
 
@@ -90,8 +87,7 @@ Azure Rights Management サービスの使用状況ログについては、「[A
 
 
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 Azure Information Protection クライアントに関連付けられているすべてのログ ファイルがわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
 
 - [カスタマイズ](client-admin-guide-customizations.md)
