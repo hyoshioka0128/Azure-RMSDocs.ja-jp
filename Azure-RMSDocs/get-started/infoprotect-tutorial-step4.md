@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 9a21c10404582000a55ee0cea554aad9b5a552b3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
+ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>手順 4: 分類、ラベル付け、保護の動作を確認する 
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 06/30/2017
 
 Azure Information Protection クライアントをインストールして Word 文書を開いたので、構成したポリシーを使用して簡単に文書のラベル付けと保護を始められることを確認できます。
 
-文書を保存すると分類と保護が行われますが、その前に、未保存の文書を使用して簡単にラベルを適用および変更できることを見てみます。
+文書を保存すると分類と保護が行われますが、その前に未保存の文書を使用して、ラベルを簡単に適用および変更できるかどうかを確認しています。
 
 ## <a name="to-manually-change-our-default-label"></a>既定のラベルを手動で変更するには
 
@@ -40,7 +40,7 @@ Information Protection バーで、現在選択しているラベルの値の横
 
 使用できるラベルが再び表示されます。
 
-最初のラベルの **[個人]** を選択します。 このドキュメントに対して前に選択したラベルよりも低い分類であるラベルを選択したため、次のように、分類レベルを下げる理由の入力を求められます。
+最初のラベルの **[個人]** を選択します。 このドキュメントに対して、前に選択したラベルよりも低い分類のラベルを選択したため、次のように分類レベルを下げる理由の入力を求められます。
 
 ![Azure Information Protection クイック スタート チュートリアル手順 4 - レベルを下げる理由の確認要求](../media/info-protect-lower-justification.png)
 
@@ -54,7 +54,7 @@ Information Protection バーで、**[ラベルの編集]** アイコンを再�
 
 プロンプトが表示されたら、"この文書では分類は不要" などと入力し、**[確認]** をクリックします。  
 
-**[Sensitivity]** (秘密度) の値が **[Not set]** (非設定) に変わります。既定のラベルが設定されていない場合も、最初はこのように表示されます。
+**[秘密度]** の値が **[未設定]** に変わります。既定のラベルが設定されていない場合も、最初はこのように表示されます。
 
 ![Azure Information Protection クイック スタート チュートリアル手順 4 - 分類の削除](../media/sensitivity-not-setv2.png)
 
@@ -69,7 +69,7 @@ Information Protection バーで、**[ラベルの編集]** アイコンを再�
 
     ![Azure Information Protection クイック スタート チュートリアル手順 4 - 推奨プロンプト](../media/change-nowv2.png)
 
-    文書に構成済みのラベルが適用されていることが示される (たとえば、**社外秘 \ すべての従業員**) ことに加えて、ページ全体に組織名の透かしが表示され、**社外秘として分類**というフッターも適用されます。 
+    構成済みのラベルが文書に適用されていることが表示されるようになった (たとえば、**社外秘 \ すべての従業員**) ことに加えて、ページ全体に組織名の透かしが表示され、**社外秘として分類**というフッターも適用されます。 
 
     文書は指定した Azure Rights Management テンプレートによっても保護されます。これは、**[ファイル]** タブをクリックして **[文書の保護]** の情報を見ることで確認できます。 既定の機密テンプレートを使用した場合は、文書が内部ユーザーに制限され (組織外のユーザーは文書を開けません)、内容をコピーまたは印刷できないという情報が表示されます。 文書の所有者は文書をコピーおよび印刷できますが、組織内の別のユーザーに文書をメール送信した場合、受信者はこれらの操作を実行できません。
 
