@@ -4,7 +4,7 @@ description: "Azure Information Protection テナント キーに関するさま
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 10ce24e72dae1225505592508d4bf88cadb131a2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52e9b4694eaafe5dbba1af04fb53dd6b1b627d23
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーに対する操作
 
@@ -30,11 +30,11 @@ Azure Key Vault で独自のテナント キーを自分で管理する場合、
 
 |ライフサイクル操作|Microsoft が管理 (既定)|お客様が管理 (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|テナント キーを取り消します|いいえ (自動)|[はい]|
-|テナント キーを再入力します|[はい]|Yes|
-|テナント キーをバックアップ/復旧します|いいえ|Yes|
-|テナント キーをエクスポートします|Yes|いいえ|
-|侵害に反応します|Yes|Yes|
+|テナント キーの取り消し|いいえ (自動)|○|
+|テナント キーの再入力|Yes|Yes|
+|テナント キーのバックアップ/復旧|いいえ|Yes|
+|テナント キーのエクスポート|Yes|いいえ|
+|侵害への対応|Yes|Yes|
 
 実装したトポロジを識別したら、次のいずれかを選択して、Azure Information Protection テナント キーに対するこれらの操作の詳細を参照してください。
 

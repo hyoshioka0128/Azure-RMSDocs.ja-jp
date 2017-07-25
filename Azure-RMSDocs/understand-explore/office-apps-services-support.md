@@ -4,7 +4,7 @@ description: "エンド ユーザー Office アプリケーション (Word、Exc
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7fe044ab9b8e253e3095af5828a33926271bc42b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d812476d882525b1fd5686418151188e57afa80d
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="office-applications-and-services"></a>Office アプリケーションおよびサービス
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/30/2017
 エンド ユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で、Azure Information Protection から Azure Rights Management サービスを使用して、組織のデータを保護することができます。
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office アプリケーション:Word、Excel、PowerPoint、Outlook
-これらのアプリケーションでは、Information Rights Management (IRM) を使用することで Rights Management がネイティブでサポートされ、ユーザーは保存済みドキュメントまたは送信される電子メール メッセージに保護を適用できます。 ユーザーは、テンプレートを適用するか、Word、Excel、PowerPoint の場合にはアクセス、権限、および使用制限の細かくカスタマイズされた設定を選択できます。 
+これらのアプリケーションでは、Information Rights Management (IRM) を使用することで Rights Management がネイティブでサポートされ、ユーザーは保存済みドキュメントまたは送信される電子メール メッセージに保護を適用できます。 ユーザーは、テンプレートを適用するか、Word、Excel、PowerPoint の場合にはアクセス、権限、および使用制限のカスタマイズされた設定を選択できます。 
 
 たとえば、ユーザーは、組織内のユーザーのみがアクセスできるように Word 文書を構成することも、Excel スプレッドシートの編集の可否、読み取り専用への制限、印刷防止などを制御することもできます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を (ユーザーが直接またはテンプレートの適用により) 構成できます。 Outlook の場合、ユーザーは、テンプレートを選択できるだけでなく、[**転送不可**] オプションを選択して、データの漏えいを防ぐこともできます。
 
@@ -44,11 +44,11 @@ Exchange Online または Exchange Server を使用する場合、追加の情�
 
 -   **Outlook Web App**用の RMS のサポート。これは、Outlook クライアントと同様に実装されるので、ユーザーは、テンプレートを使用するか個別のオプションを指定して電子メール メッセージを保護したり、自分に送信された保護された電子メール メッセージを読んで使用したりできます。
 
--   Outlook クライアントの**保護ルール**。管理者が構成し、Rights Management テンプレートが特定受信者向けの電子メール メッセージに自動的に適用されるようにします。 たとえば、社内電子メールが法務部門に送信されるときに、法務部門の所属者のみが読むことが可能で、ただし転送できないようにすることができます。 送信前に電子メール メッセージに保護が適用されたことがユーザーに表示され、既定では、ユーザーは不要と判断した場合にそれを削除できます。 電子メールは送信される前に暗号化されます。 詳細については、Exchange ライブラリの「[Outlook の保護ルール](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx)」および「[Outlook 保護ルールを作成する](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx)」を参照してください。
+-   Outlook クライアントの**保護ルール**。管理者が構成し、Rights Management テンプレートが特定受信者向けの電子メール メッセージに自動的に適用されるようにします。 たとえば、社内電子メールが法務部門に送信されるときに、法務部門の所属者のみが読むことが可能で、ただし転送できないようにすることができます。 送信前に電子メール メッセージに保護が適用されたことがユーザーに表示され、既定では、ユーザーは不要と判断した場合にこの保護を削除できます。 電子メールは送信される前に暗号化されます。 詳細については、Exchange ライブラリの「[Outlook の保護ルール](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx)」および「[Outlook 保護ルールを作成する](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx)」を参照してください。
 
 -   **トランスポート ルール**。管理者が構成し、送信者、受信者、メッセージの件名、および内容などのプロパティを基にして電子メール メッセージに Rights Management テンプレートを自動的に適用します。 これらは、概念的に保護ルールと似ていますが、ユーザーが保護を削除することはできず、Outlook Web Access とモバイル デバイスによって送信される電子メールに適用され、クライアントから送信される前に電子メール メッセージを暗号化しません。 詳細については、Exchange ライブラリの「[トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」を参照してください。
 
--   **データ損失防止 (DLP) ポリシー** 。このポリシーは、電子メール メッセージにフィルターを適用するための条件のセットを含み、機密コンテンツ (個人情報やクレジット カード情報など) のデータの損失を防ぐために役立つ操作を実行します。 ポリシーのヒントを使用すると、機密データが検出されたときに、電子メール メッセージ内の情報を基にして、情報保護の適用が必要な可能性があることをユーザーに警告することができます。 詳細については、Exchange ライブラリの「[データ損失防止](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx)」を参照してください。
+-   **データ損失防止 (DLP) ポリシー** 。このポリシーは、電子メール メッセージにフィルターを適用するための条件のセットを含み、機密コンテンツ (個人情報やクレジット カード情報など) のデータの損失を防ぐために役立つ操作を実行します。 ポリシーのヒントを使用すると、機密データが検出されたときに、電子メール メッセージ内の情報を基にして、情報保護の適用が必要な可能性があることをユーザーに警告することができます。 詳細については、Exchange ライブラリの「[データ損失防止](https://technet.microsoft.com/library/jj150527(v=exchg.160).aspx)」をご覧ください。
 
 -   **Office 365 メッセージ暗号化** 。トランスポート ルールを使用して暗号化された電子メールを社外のユーザーに送信し、Outlook Web App に似たブラウザーのインターフェイスで電子メールを読み取ります。 会社の暗号化された電子メールの免責事項のテキストとヘッダーのテキストをカスタマイズすることが可能で、会社のロゴを追加することもできます。 詳細については、Office Web サイトの「[Office 365 Message Encryption](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx)」を参照してください。
 
@@ -96,8 +96,10 @@ SharePoint の IRM を構成する用意ができている場合:
 
 ## <a name="next-steps"></a>次のステップ
 
+Office 365 をお持ちの場合、「[Office 365 のファイル保護ソリューション](https://technet.microsoft.com/library/dn919927.aspx#BKMK_O365fileprotect)」をご覧になることをお勧めします。Office 365 のファイルを保護するための推奨機能を説明しています。
+
 他のアプリケーションおよびサービスで Azure Information Protection からの Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」をご覧ください。
 
-アプリケーションとサービスの構成など、デプロイを開始する用意ができたら、「[Azure Information Protection デプロイ ロードマップ](/plan-design/deployment-roadmap.md)」を参照してください。
+アプリケーションとサービスの構成など、デプロイを開始する用意ができたら、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
