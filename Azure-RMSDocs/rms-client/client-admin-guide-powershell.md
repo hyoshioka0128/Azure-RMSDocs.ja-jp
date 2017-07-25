@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ceabbba93dd31f82ac4d0fa33898f8b09a7ee984
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 8dd4917b23b3732e0d835f957191db9c4578f60d
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
 
@@ -432,7 +432,7 @@ Azure Information Protection クライアントのバージョン 1.8.41.0 (現�
 
 アクセス トークンの有効期限を制御するには、パラメーターを指定してこのコマンドレットを実行します。 これにより、1 年間有効、2 年間有効、または期限なしのアクセス トークンを構成できます。 この構成には、2 つのアプリケーション、すなわち **Web アプリ/API** アプリケーションと**ネイティブ アプリケーション**を Azure Active Directory に登録する必要があります。 このコマンドレットのパラメーターには、これらのアプリケーションからの値を使用します。
 
-このコマンドレットを実行した後は、作成したユーザー アカウントのコンテキストでラベル付けコマンドレットを実行できます。 複数のアカウントを使用する場合は、アカウントごとにアプリケーションを Azure AD に登録する必要があるため、アカウントごとにこのコマンドレットを実行する必要があります。
+このコマンドレットを実行した後は、作成したユーザー アカウントのコンテキストでラベル付けコマンドレットを実行できます。
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Set-AIPAuthentication 用の Azure AD アプリケーションを作成し、構成するには
 
@@ -444,15 +444,17 @@ Azure Information Protection クライアントのバージョン 1.8.41.0 (現�
     
     - [名前]: **AIPOnBehalfOf**
     
+    必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+    
     - [アプリケーションの種類]: **Web アプリ/API**
     
     - [サインオン URL]: **http://localhost**
-    
-4. いま作成したアプリケーション **AIPOnBehalfOf** を選択して、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
+
+4. 先ほど作成したアプリケーションを選択します (例: **AIPOnBehalfOf**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
     
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppId` パラメーターに使用されます。
 
-5. **[設定]** ブレードで **[キー]** を選択します。 説明と期間 (1 年、2 年、または期限なし) を指定して、新しいキーを追加します。 次に **[保存]** を選択し、表示されている **[値]** の文字列をコピーします。 この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。
+5. **[設定]** ブレードで **[キー]** を選択します。 説明と期間 (1 年、2 年、または期限なし) を指定して、新しいキーを追加します。 次に **[保存]** を選択し、表示されている **[値]** の文字列をコピーします。 この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用するキーと同様に、保存した値を安全に格納すると同時に値へのアクセスを制限します。
     
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppKey` パラメーターに使用されます。
 
@@ -460,11 +462,13 @@ Azure Information Protection クライアントのバージョン 1.8.41.0 (現�
     
     - [名前]: **AIPClient**
     
+    必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+    
     - [アプリケーションの種類]: **ネイティブ**
     
     - [サインオン URL]: **http://localhost**
 
-7. いま作成したアプリケーション **AIPClient** を選択して、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。
+7. 先ほど作成したアプリケーションを選択します (例: **AIPClient**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。
     
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `NativeAppId` パラメーターに使用されます。
 
@@ -474,7 +478,7 @@ Azure Information Protection クライアントのバージョン 1.8.41.0 (現�
 
 10. **[アクセスの有効化]** ブレードで、**AIPOnBehalfOf** を選択して **[選択]** をクリックし、**[完了]** をクリックします。
     
-    2 つのアプリの構成を完了し、パラメーターを指定して Set-AIPAuthentication を実行するために必要な値を取得しました。
+    2 つのアプリの構成を完了し、パラメーターを指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。
 
 
 ## <a name="next-steps"></a>次のステップ
