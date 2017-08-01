@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 036fae62087bf71e0f3bf5ef2859acac701c5e62
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 9359d83ec2ee85edeef6a3d2680f95633d22546e
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -115,8 +115,25 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
     
     この必要な更新プログラムがインストールされていない場合、クライアントのインストールにより、インストールが必要だと警告が表示されます。 クライアントのインストール後にこの更新プログラムをインストールできますが、一部の操作はブロックされ、メッセージが再び表示されます。  
 
+- Office アプリケーションに対して **Microsoft Azure Information Protection** アドインを無効にしないでください
+    
+    グループ ポリシー設定の **[管理対象アドインの一覧]** を構成した場合は、Microsoft Azure Information Protection の次のプログラム識別子 (ProgID) を指定して、Office アプリケーションの Azure Information Protection アドインを追加し、オプションを **1 (アドインは常に有効)** に設定します。
+    
+    - Outlook の場合: `MSIP.OutlookAddin`
+    
+    - Word の場合: `MSIP.WordAddin`
+    
+    - Excel の場合: `MSIP.ExcelAddin`
+    
+    - PowerPoint の場合: `MSIP.PowerPointAddin`
+    
+    この **[管理対象アドインの一覧]** グループ ポリシー設定を構成していなくても、Microsoft Azure Information Protection アドインが無効になることを示すレポートを取得した場合は構成する必要がある場合があります。 このアドインが無効の場合は、Office アプリケーションに Azure Information Protection バーが表示されません。
+    
+    このグループ ポリシー設定の詳細については、「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) を参照してください。
+
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
+
 
 ### <a name="options-to-install-the-azure-information-protection-client-for-users"></a>ユーザー向けに Azure Information Protection クライアントをインストールするオプション
 
@@ -305,6 +322,11 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 **[バージョン]** 情報を使用して、どちらのバージョンのクライアントがインストールされているか確認します。 **新機能**のリンクをクリックし、クライアントの[バージョン リリース履歴](client-version-release-history.md)を読むことで、使用しているクライアントが最新のリリースバージョンかどうかや、各バージョンの修正と新しい機能を確認できます。
 
+## <a name="support-for-multiple-languages"></a>複数言語のサポート
+
+Azure Information Protection クライアントでは、Office でサポートされるクライアント言語がすべてサポートされます。 たとえば、メニュー オプション、ダイアログ ボックス、およびメッセージはユーザーの言語で表示されます。 言語を検出するインストーラーが 1 つあるため、他言語のクライアントをインストールするための追加の構成は必要ありません。 
+
+ただし、ユーザーに表示されるラベル名は、[既定のポリシー](../deploy-use/configure-policy-default.md)や指定されたラベル名に応じて自動的には翻訳されません。 ユーザーが他言語でラベルを表示できるようにするには、独自の翻訳を指定し、その翻訳を使用するように Azure Information Protection ポリシーを構成する必要があります。 詳細については、「[Azure Information Protection で他の言語用ラベルを構成する方法](../deploy-use/configure-policy-languages.md)」を参照してください。
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Azure Information Protection クライアントをアンインストールするには
 

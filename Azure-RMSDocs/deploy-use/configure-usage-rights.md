@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed06deca76ed1241f0c9b3f104fd922263c5a6cd
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a093ca8cdd02448c877554ff87e971e956eab789
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -78,8 +78,8 @@ Windows 用 Azure Information Protection クライアントには含まれてい
 
 |表示名|含まれる権限 (共通名)|
 |----------------|---------------------------------|
-|&lt;*組織名*&gt; *- 社外秘、表示のみ*|表示、開く、読み取り|
-|&lt;*組織名*&gt; *- 社外秘*|表示、開く、保存、コンテンツの編集、権限の表示、マクロの許可、転送、返信、全員に返信|
+|&lt;*組織名*&gt; *- 社外秘、表示のみ* <br /><br />または<br /><br /> *非常に機密性の高い社外秘 \ すべての従業員*|表示、開く、読み取り|
+|&lt;*組織名*&gt; *- 社外秘* <br /><br />または <br /><br />*社外秘 \ すべての従業員*|表示、開く、保存、コンテンツの編集、権限の表示、マクロの許可、転送、返信、全員に返信|
 
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 

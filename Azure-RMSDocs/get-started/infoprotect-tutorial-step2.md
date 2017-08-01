@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
@@ -78,9 +78,9 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
 3. **[保護]** ブレードで、**[Azure RMS]** が選択され、**[定義済みのテンプレートを選択する]** も選択されていることを確認します。 次に、ドリルダウン ボックスをクリックし、組織内のすべてのユーザーが保護されているコンテンツを表示および編集できる既定のテンプレートを選択します。 
     
-    Azure Rights Management サービスを最近アクティブ化した場合、このテンプレートの名前は **Confidential \ All employees** です。 
+    最近サブスクリプションを取得した場合、このテンプレートは **[社外秘 \ すべての従業員]** という名前です。 
     
-    このチュートリアルを始める前に、Azure Rights Management サービスが既にアクティブ化されている場合、既定のテンプレート名は **\<組織名> - Confidential** の場合があります。 たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
+    しばらくサブスクリプションを使用している場合、既定のテンプレートは **[\<組織名> - 社外秘]** という名前である可能性があります。 たとえば、組織名が VanArsdel, Ltd の場合は、**[VanArsdel, Ltd - Confidential]** (VanArsdel, Ltd - 機密) を選択します。 
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - Azure RMS 保護を設定する](../media/step2-select-rms-template.png)
     

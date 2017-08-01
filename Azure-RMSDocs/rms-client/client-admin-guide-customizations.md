@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e9e8aff35727a40413e0bf18e46f1ad14e9222
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントのカスタム構成
 
@@ -24,11 +24,11 @@ ms.lasthandoff: 07/21/2017
 
 以下の情報を使用して、詳細構成を行います。これらの構成は、Azure Information Protection クライアントを管理する際に、特定のシナリオまたはユーザーのサブセットで必要となる場合があります。
 
-これらの設定には、レジストリの編集が必要なものや、Azure Portal で構成する必要のある詳細設定を使用するものなどがあります。設定はこの後にクライアントに公開され、ダウンロードされます。 
-
-また、一部の設定は Azure Information Protection クライアントのプレビュー バージョンでのみ使用可能である場合があります。 これらの設定については、最小のクライアント バージョンが記載されています。 一般提供バージョンのクライアントでサポートされている設定と構成については、最小のクライアント バージョン番号は記載されていません。
+これらの設定には、レジストリの編集が必要なものや、Azure Portal で構成する必要のある詳細設定を使用するものなどがあります。設定はこの後にクライアントに公開され、ダウンロードされます。 また、一部の設定は Azure Information Protection クライアントのプレビュー バージョンでのみ使用可能である場合があります。 これらの設定については、最小のクライアント バージョンが記載されています。 一般提供バージョンのクライアントでサポートされている設定と構成については、最小のクライアント バージョン番号は記載されていません。
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>ポータルでクライアントの詳細構成設定を構成する方法
+
+この構成は、現在プレビューの段階です。
 
 1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザーのウィンドウで、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。
 
@@ -86,6 +86,8 @@ ms.lasthandoff: 07/21/2017
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプローラーの [Hide the Classify and Protect]\(分類の非表示と保護) メニュー オプション
 
+この構成オプションは、現在プレビューの段階です。
+
 Azure Information Protection クライアントのバージョンが 1.3.0.0 以降である場合は、レジストリを編集することで、この詳細構成を構成できます。 
 
 次の DWORD 値の名前を (任意の値と共に) 作成します。
@@ -104,6 +106,8 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを非表示にする
 
+この構成オプションは、現在プレビューの段階です。
+
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 また、この設定にはプレビュー バージョンの Azure Information Protection クライアント (最小バージョン **1.8.41.0**) が必要です。
 
 この設定を構成すると、Outlook のリボンの **[転送不可]** ボタンが非表示になります。 Office メニューからでは、このオプションは非表示になりません。
@@ -115,6 +119,8 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 - 値: **True**
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>ユーザーがカスタムのアクセス許可オプションを使用できなくする
+
+この構成オプションは、現在プレビューの段階です。
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
