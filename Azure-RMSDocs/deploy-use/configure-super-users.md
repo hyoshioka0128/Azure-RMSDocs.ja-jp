@@ -4,7 +4,7 @@ description: "Azure Information Protection からの Azure Rights Management サ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8b915ad2bf58352c41f1b534aa6c88f1640fb589
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 70c7bbd1f6244c3624cd4b1e32a98e71b5779004
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
@@ -71,7 +71,7 @@ Azure Information Protection からの Azure Rights Management サービスの�
 これらのコマンドレットの詳細については、「Azure Information Protection クライアント管理者ガイド」の「[Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md)」(PowerShell と Azure Information Protection クライアントの使用) を参照してください。
 
 > [!NOTE]
-> AIP モジュールは、RMS 保護ツールでインストールされる RMS 保護 PowerShell モジュールを置き換えます。 これらのモジュールは、[Azure Rights Management 用のメインの Windows PowerShell モジュール](administer-powershell.md)とは異なり、補足するものです。 AIP モジュールは、Azure Information Protection、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS) と、Active Directory Rights Management サービス (AD RMS) をサポートしています。
+> AzureInformationProtection モジュールは、RMS 保護ツールでインストールされた RMS 保護 PowerShell モジュールを置き換えます。 これらのモジュールは、[Azure Rights Management 用のメインの Windows PowerShell モジュール](administer-powershell.md)とは異なり、補足するものです。 AzureInformationProtection モジュールは、Azure Information Protection、Azure Information Protection 用 Azure Rights Management サービス (Azure RMS)、および Active Directory Rights Management サービス (AD RMS) をサポートしています。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

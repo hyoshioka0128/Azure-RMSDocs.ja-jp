@@ -4,7 +4,7 @@ description: "エンド ユーザー Office アプリケーション (Word、Exc
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d812476d882525b1fd5686418151188e57afa80d
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 96707d0790747b4dac668508f58e9584f4649370
+ms.sourcegitcommit: 72208cabecaa233cdade0dae0c448037370f2c2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="office-applications-and-services"></a>Office アプリケーションおよびサービス
 
 >*適用対象: Azure Information Protection、Office 365*
 
-エンド ユーザー Office アプリケーション (Word、Excel、PowerPoint、Outlook など) と Office サービス (Exchange、SharePoint など) で、Azure Information Protection から Azure Rights Management サービスを使用して、組織のデータを保護することができます。
+エンド ユーザー Office アプリケーションおよび Office サービス (Exchange や SharePoint など) で、Azure Information Protection から Azure Rights Management サービスを使用して、組織のデータを保護することができます。 これらの Office アプリケーションは Word、Excel、PowerPoint、および Outlook です。 Office サービスは Exchange および SharePoint です。 
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office アプリケーション:Word、Excel、PowerPoint、Outlook
 これらのアプリケーションでは、Information Rights Management (IRM) を使用することで Rights Management がネイティブでサポートされ、ユーザーは保存済みドキュメントまたは送信される電子メール メッセージに保護を適用できます。 ユーザーは、テンプレートを適用するか、Word、Excel、PowerPoint の場合にはアクセス、権限、および使用制限のカスタマイズされた設定を選択できます。 
@@ -78,12 +78,13 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > [!NOTE]
 > 現在のところ、SharePoint IRM を使用するとき、いくつかの制限があります。
 > 
-> - Azure クラシック ポータルで管理する既定のテンプレートまたはカスタム テンプレートは使用できません。 
+> - Azure ポータルで管理する既定のテンプレートまたはカスタム テンプレートを使用できません。 
 > 
 > - ファイル名拡張子が保護された PDF ファイルのための .PPDF であるファイルはサポートされていません。 ファイル名拡張子が .PDF で、Rights Management がネイティブで保護しているファイルは、Rights Management をネイティブでサポートする PDF リーダーを使用する場合にサポートされます。
+> 
+> - SharePoint ライブラリまたは OneDrive for Business にアップロードするファイルを保護する場合、共同編集、Office Online、インデックス作成および検索ではこのファイルは処理されません。
 
-
-IRM 保護を使用するとき、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
+SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 
 新しい投稿ではありませんが、「[What’s New with Information Rights Management in SharePoint and SharePoint Online](https://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)」 (SharePoint の Information Rights Management と SharePoint Online の新機能) という Office ブログの投稿に追加情報があります。
 
