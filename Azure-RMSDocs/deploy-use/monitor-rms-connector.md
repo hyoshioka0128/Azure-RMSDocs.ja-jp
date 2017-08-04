@@ -4,7 +4,7 @@ description: "Azure Information Protection からコネクタと組織の Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7d9e5a948aa0e81341eb99038302677268c522e
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: e759d47e45455616cac34d2b5703a567907a826f
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
@@ -33,7 +33,7 @@ RMS コネクタは、アプリケーション イベント ログを使用し�
 - ID 1000、コネクタ サービスが開始されたことを確認
 
 - ID 1002、サーバーが RMS コネクタに正常に接続したとき
-- 
+
 - ID 1004、承認済みアカウントの一覧 (各アカウントの一覧) がコネクタにダウンロードされるとき 
 
 HTTPS を使用するようにコネクタを構成していない場合は、クライアントがセキュリティで保護されていない (HTTP) 接続を使用していることを示す警告 ID 2002 が表示されます。
