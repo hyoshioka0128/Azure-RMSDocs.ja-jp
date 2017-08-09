@@ -4,7 +4,7 @@ description: "Rights Management (RMS) クライアントと RMS 保護ツール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b56955d8a01876f4107cafa5b1b8df922c0f8ad0
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e67bc3d82c1269343cd4e64f8a608a2a86d381ef
+ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -46,11 +46,11 @@ ms.lasthandoff: 06/30/2017
     
     AzureInformationProtection PowerShell モジュールは、Azure Information Protection クライアントに含まれています。 インストール手順については、Azure Information Protection 管理者ガイドの「[ユーザー向けに Azure Information Protection クライアントをインストールする方法](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users)」をご覧ください。 必要であれば、`PowerShellOnly=true` パラメーターを使用して PowerShell モジュールのみをインストールできます。
     
-    [この PowerShell モジュールを使用するための前提条件](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service)には、Azure Rights Management サービスをアクティブ化すること、サービス プリンシパルを作成すること、テナントが北米以外にある場合にレジストリを編集することが含まれます。 この記事の手順を開始する前に、これらの前提条件の説明で使われる **BposTenantId**、**AppPrincipalId**、**対称キー**の値を確認してください。 
+    [この PowerShell モジュールを使用するための前提条件](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service)には、Azure Rights Management サービスをアクティブ化すること、サービス プリンシパルを作成すること、テナントが北米以外にある場合にレジストリを編集することが含まれます。 この記事の手順を開始する前に、これらの前提条件の説明で使われる **BposTenantId**、**AppPrincipalId**、**対称キー**の値を確認してください。 
     
     - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
     
-    - インターネット接続を設定し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
+    - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
     
 - オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」をご覧ください。
     
@@ -216,12 +216,12 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
             `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
 
-            このコマンドで、**[Source File Path]** (ソース ファイル パス) と **[Source File Owner Email]** (ソース ファイル所有者電子メール) はどちらも FCI 固有の値なので、上のコマンドで表示された値を正確に入力します。 1 番目は、フォルダーで識別されたファイルを自動的に指定するために FCI によって使用され、2 番目は、FCI が識別されたファイルの指定所有者の電子メール アドレスを自動的に取得するために使用されます。 このコマンドが、フォルダー内のファイルごとに繰り返されます。この例では、ファイル分類プロパティとして RMS が指定されている C:\FileShare フォルダー内の各ファイルです。
+            このコマンドで、**[Source File Path]** (ソース ファイル パス) と **[Source File Owner Email]** (ソース ファイル所有者電子メール) はどちらも FCI 固有の値なので、上のコマンドで表示された値を正確に入力します。 最初の変数は、フォルダーで識別されたファイルを自動的に指定するために FCI によって使用され、2 番目の変数は、FCI が識別されたファイルの指定所有者の電子メール アドレスを自動的に取得するために使用されます。 このコマンドが、フォルダー内のファイルごとに繰り返されます。この例では、ファイル分類プロパティとして RMS が指定されている C:\FileShare フォルダー内の各ファイルです。
 
             > [!NOTE]
-            > **-OwnerMail [Source File Owner Email]** パラメーターと値により、ファイルの元の所有者に、保護された後のファイルの Rights Management 所有者が付与されます。 これにより、元のファイル所有者は自分のファイルに対するすべての Rights Management 権限を持ちます。 ファイルがドメイン ユーザーによって作成されると、ファイルの Owner プロパティのユーザー アカウント名を使用して Active Directory から電子メール アドレスが自動的に取得されます。 そのためには、ファイル サーバーがユーザーと同じドメインまたは信頼されるドメインに存在している必要があります。
+            > **-OwnerMail [Source File Owner Email]** パラメーターと値により、ファイルの元の所有者に、保護された後のファイルの Rights Management 所有者が付与されます。 この構成により、元のファイル所有者は自分のファイルに対するすべての Rights Management 権限を持ちます。 ファイルがドメイン ユーザーによって作成されると、ファイルの Owner プロパティのユーザー アカウント名を使用して Active Directory から電子メール アドレスが自動的に取得されます。 そのためには、ファイル サーバーがユーザーと同じドメインまたは信頼されるドメインに存在している必要があります。
             > 
-            > 可能な場合は常に、元の所有者を保護されたドキュメントに割り当て、これらのユーザーが自分で作成したファイルを完全に制御し続けることができるようにしてください。 ただし、上の [Source File Owner Email] 変数を使用した場合、ファイルに所有者として定義されたドメイン ユーザーがないと (たとえば、ファイルの作成にローカル アカウントが使用されて、所有者に SYSTEM と表示される場合)、スクリプトは失敗します。
+            > 可能な場合は常に、元の所有者を保護されたドキュメントに割り当て、これらのユーザーが自分で作成したファイルを完全に制御し続けることができるようにしてください。 ただし、上のコマンドの [Source File Owner Email] 変数を使用した場合、ファイルに所有者として定義されたドメイン ユーザーがないと (たとえば、ファイルの作成にローカル アカウントが使用されて、所有者に SYSTEM と表示される場合)、スクリプトは失敗します。
             > 
             > 所有者としてのドメイン ユーザーがないファイルの場合は、ファイルをコピーし、自分をドメイン ユーザーとしてファイルを保存することにより、これらのファイルの所有者になることができます。 または、権限がある場合は、所有者を手動で変更できます。  または、[Source File Owner Email] 変数の代わりに、特定の電子メール アドレス (自分のアドレスや、IT 部門のグループ アドレスなど) を指定することもできます。これは、このスクリプトを使用して保護するすべてのファイルが、その電子メール アドレスを使用して新しい所有者を定義することを意味します。
 
@@ -267,7 +267,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
     > [!TIP]
     > トラブルシューティングに関するヒント:
     > 
-    > -   レポートにフォルダーのファイルの数ではなく **0** と表示されている場合は、スクリプトが実行されなかったことを示します。 まず、スクリプトを Windows PowerShell ISE に読み込んで内容を確認し、実行してエラーが表示されるかどうかを調べます。 引数を指定しないと、スクリプトは Azure Rights Management サービスに接続して認証を試みます。
+    > -   レポートにフォルダーのファイルの数ではなく **0** と表示されている場合は、この出力はスクリプトが実行されなかったことを示します。 まず、スクリプトを Windows PowerShell ISE に読み込んで内容を確認し、実行してエラーが表示されるかどうかを調べます。 引数を指定しないと、スクリプトは Azure Rights Management サービスに接続して認証を試みます。
     > 
     >     -   スクリプトで Azure Rights Management サービス (Azure RMS) に接続できなかったことが示される場合は、そこで表示される、スクリプトで指定したサービス プリンシパル アカウントの値を確認します。 このサービス プリンシパル アカウントを作成する方法については、「Azure Information Protection クライアント管理者ガイド」の「[Prerequisite 3: To protect or unprotect files without interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction)」(前提条件 3: ユーザー操作なしでファイルの保護または保護の解除を行うには) を参照してください。
     >     -   スクリプトで Azure RMS に接続できたことが示される場合は、次にサーバー上で Windows PowerShell から直接 [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) を実行して、指定されたテンプレートを見つけることができるかどうかを確認します。 指定したテンプレートが結果に返されます。
@@ -278,15 +278,15 @@ FCI で使用する Rights Management テンプレートに変更を加える場
     >     ```
     >     -   この Windows PowerShell セッションでスクリプトが正常に実行する場合は、ファイル管理タスク アクションでの [ **実行可能ファイル** ] と [ **引数** ] の指定を確認します。  **-OwnerEmail [Source File Owner Email]** を指定した場合は、このパラメーターを削除してみます。
     > 
-    >         **-OwnerEmail [Source File Owner Email]** なしでファイル管理タスクが正常に動作する場合は、保護されていないファイルのファイル所有者として **SYSTEM** ではなくドメイン ユーザーが表示されるかどうかを確認します。  そのためには、ファイルのプロパティの **[セキュリティ]** タブの **[高度]** をクリックします。 **[所有者]** の値はファイルの **[名前]** の直後に表示されます。 また、ファイル サーバーが同じドメインまたは信頼されたドメインにあって Active Directory ドメイン サービスからユーザーの電子メール アドレスを参照することを確認します。
+    >         **-OwnerEmail [Source File Owner Email]** なしでファイル管理タスクが正常に動作する場合は、保護されていないファイルのファイル所有者として **SYSTEM** ではなくドメイン ユーザーが表示されるかどうかを確認します。  この確認を行うには、ファイルのプロパティの **[セキュリティ]** タブの **[高度]** をクリックします。 **[所有者]** の値はファイルの **[名前]** の直後に表示されます。 また、ファイル サーバーが同じドメインまたは信頼されたドメインにあって Active Directory ドメイン サービスからユーザーの電子メール アドレスを参照することを確認します。
     > -   正しいファイルの数がレポートで示されているにもかかわらず、ファイルが保護されていない場合は、 [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) コマンドレットを使用して手動でファイルを保護してみて、エラーが表示されるかどうかを確認します。
 
 これらのタスクが正常に動作することを確認した後、ファイル リソース マネージャーを閉じることができます。 スケジュールしたタスクが実行されると、新しいファイルは自動的に分類および保護されます。 
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>選択的にファイルを保護するための手順の変更
-前期の手順で問題がなければ、より高度な構成用に非常に簡単に変更できます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
+上の手順で問題がなければ、さらに高度な構成に変更することが簡単にできます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
 
-そのためには、組み込まれている分類プロパティのいずれかを使用するか (たとえば **[Personally Identifiable Information]** (個人を特定できる情報))、新しいプロパティを作成します。 そして、このプロパティを使用する新しい規則を作成します。 たとえば、[ **コンテンツ分類子**] を選択し、[ **個人の身元を特定する情報** ] プロパティと値 [ **高**] を選択して、このプロパティ用に構成するファイルを識別する文字列または式パターンを構成します (たとえば、文字列"**Date of Birth**")。
+この変更を行うには、組み込まれている分類プロパティのいずれかを使用するか (たとえば **[個人を特定できる情報]**)、新しいプロパティを作成します。 そして、このプロパティを使用する新しい規則を作成します。 たとえば、[ **コンテンツ分類子**] を選択し、[ **個人の身元を特定する情報** ] プロパティと値 [ **高**] を選択して、このプロパティ用に構成するファイルを識別する文字列または式パターンを構成します (たとえば、文字列"**Date of Birth**")。
 
 そのためには、同じスクリプトとおそらく異なるテンプレートを使用する新しいファイル管理タスクを作成し、構成した分類プロパティの条件を構成する必要があります。 たとえば、前に構成した条件 ([**RMS** ] プロパティ、[ **EQUAL**]、[ **はい**]) の代わりに、[ **個人の身元を特定する情報** ] プロパティを選択し、[ **演算子** ] を [ **EQUAL** ] に、[ **値** ]を [ **高**] に設定します。
 

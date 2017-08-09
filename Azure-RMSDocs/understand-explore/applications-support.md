@@ -1,10 +1,10 @@
 ---
-title: "アプリによる Azure Rights Management のサポート - AIP"
+title: "アプリが AIP から Azure Rights Management をサポートするしくみ"
 description: "幅広く使用されているエンド ユーザー アプリケーション (Office アプリケーション、Word、Excel、PowerPoint、Outlook など) およびサービス (Exchange、SharePoint など) で、Azure Information Protection の Azure Rights Management を使用して組織の文書や電子メールを保護する方法について説明します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,41 +12,40 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db9f67c5baeea678bf288f4f10237ff4517d905b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6e66ada9f950f7b4cbeac3a98f548afd760e0c7a
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
 >*適用対象: Azure Information Protection、Office 365*
 
-以下では、幅広く使用されているエンド ユーザー アプリケーション (Office アプリケーション、Word、Excel、PowerPoint、Outlook など) およびサービス (Exchange、SharePoint など) が組織の文書や電子メールを保護するために、Azure Information Protection の Azure Rights Management をどのように使用するかを説明します。 
+以下では、幅広く使用されているエンド ユーザー アプリケーションとサービスが組織の文書や電子メールを保護するために、Azure Information Protection の Azure Rights Management をどのように使用するかを説明します。 アプリケーションには、Word、Excel、PowerPoint、Outlook があります。 サービスには Exchange や SharePoint があります。
+
 > [!NOTE]
 > Azure Rights Management サービスをサポートするアプリケーションおよびバージョンを確認するには、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」をご覧ください。
 
-管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリや Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合は、エンド ユーザー自身がアプリケーションから情報の保護を適用する必要があります。たとえば、テンプレートを適用するように構成されている分類ラベルを選ぶか、テンプレートを直接選ぶか、または特定のオプションを選びます。 ユーザーによる保護の適用は、ユーザーが共有するファイルを保護していて、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限する場合に一般的です。
+管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリや Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合、エンド エーザーは自分のアプリケーションから自分で保護を適用する必要があります。 たとえば、ユーザーは保護を適用するように構成されている分類ラベルを選択するか、テンプレートを選択するか、特定のオプションを選択します。 ユーザーによる保護の適用は、ユーザーが共有するファイルを保護していて、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限する場合に一般的です。
 
-テンプレートを使用すると、ユーザー (およびポリシーを構成する管理者) が、簡単に正しいレベルの保護を適用し、組織内のユーザーにアクセスを制限することができます。 Azure Rights Management サービスには、2 つの既定のテンプレートが付属していますが、カスタム テンプレートを作成すると、個別のオプションを指定する時間を減らすことができます。 詳細については、「[Azure Rights Management サービスのカスタム テンプレートを構成する](../deploy-use/configure-custom-templates.md)」を参照してください。
+テンプレートを使用すると、ユーザー (およびポリシーを構成する管理者) が、簡単に正しいレベルの保護を適用し、組織内のユーザーにアクセスを制限することができます。 Azure Rights Management サービスには、2 つの既定のテンプレートが付属していますが、カスタム テンプレートを作成すると、ユーザーと管理者が個別のオプションを指定する時間を減らすことができます。 テンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
-ユーザーが情報保護を自分で適用する必要がある場合は、必ずユーザーに指示を与え、適用の方法とタイミングに関するガイダンスを提供してください。 ユーザーが使用するアプリケーションとバージョンおよびそれらの使用方法に適した指示を提供し、ビジネスに適した方法とタイミングで情報保護を適用するためのガイダンスを提供する必要があります。 詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」を参照してください。
+ユーザーが保護を自分で適用する必要がある場合は、必ずユーザーに指示を与え、適用の方法とタイミングに関するガイダンスを提供してください。 ユーザーが使用するアプリケーションとバージョン、用途について具体的に指示してください。 また、ビジネスに適切な保護を適用するタイミングと方法について指示してください。 詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](../deploy-use/help-users.md)」を参照してください。
 
 Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
 検索サービスは、さまざまな方法で Rights Management と統合できます。 たとえば、 
 
-- Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの RMS で保護された電子メールが検索結果に自動的に表示されようにします。 
+- Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの保護された電子メールが検索結果に自動的に表示されようにします。 
 
-- SharePoint Online と SharePoint Server は、ダウンロード時にのみファイルに Rights Management 保護を適用します。つまり、SharePoint でのインデックス作成と検索結果は、この文書保護ソリューションによる影響を受けません。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前に RMS でファイルを保護します。
+- SharePoint Online と SharePoint Server は Rights Management 保護をダウンロード時にのみファイルに適用します。 この実装は、SharePoint のインデックス作成と検索結果がこのドキュメント保護ソリューションによる影響を受けないことを意味します。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前にドキュメントを保護します。
 
-- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、RMS で保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルは含まれませんが、機密データを含むファイルは PC にサインインまたは接続する他のユーザーに対する検索結果に表示されないことが保証されます。 
-
-
+- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルは含まれませんが、機密データを含むファイルは PC にサインインまたは接続する他のユーザーに対する検索結果に表示されないことが保証されます。 
 
 ## <a name="next-steps"></a>次のステップ
 
-次の各アプリケーションで Azure Rights Management をサポートする方法について説明します。
+次のアプリケーションとサービスで Azure Rights Management をサポートする方法について説明します。
 
 -   [Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション](sharing-app-support.md)
 

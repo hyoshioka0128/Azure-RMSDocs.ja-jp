@@ -4,7 +4,7 @@ description: "Azure Rights Management (Azure RMS) で使用状況のログを使
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92b64867486f64dd5920c578faeb411104f00ebd
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
 
@@ -175,27 +175,27 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |AcquirePreLicense|ユーザーに代わってクライアントが、RMS で保護されているコンテンツのライセンスを要求しています。|
 |AcquireTemplates|テンプレート ID に基づいてテンプレートを取得するための呼び出しが行われました。|
 |AcquireTemplateInformation|サービスからテンプレートの ID を取得するための呼び出しが行われました。|
-|AddTemplate|Azure クラシック ポータルから、テンプレートを追加するための呼び出しが行われます。|
+|AddTemplate|Azure Portal から、テンプレートを追加するための呼び出しが行われます。|
 |AllDocsCsv|ドキュメント追跡サイトから呼び出し、**[すべてのドキュメント]** ページから CSV ファイルをダウンロードします。|
 |BECreateEndUserLicenseV1|モバイル デバイスから、エンド ユーザー ライセンスを作成するための呼び出しが行われます。|
 |BEGetAllTemplatesV1|モバイル デバイス (バックエンド) から、すべてのテンプレートを取得するための呼び出しが行われます。|
 |Certify|クライアントが保護のために内容を証明しています。|
-|DeleteTemplateById|Azure クラシック ポータルから、テンプレート ID でテンプレートを削除するための呼び出しが行われます。|
+|DeleteTemplateById|Azure Portal から、テンプレート ID でテンプレートを削除するための呼び出しが行われます。|
 |DocumentEventsCsv|ドキュメント追跡サイトから呼び出し、単一ドキュメントの .CSV ファイルをダウンロードします。|
-|ExportTemplateById|Azure クラシック ポータルから、テンプレート ID に基づいてテンプレートをエクスポートするための呼び出しが行われます。|
+|ExportTemplateById|Azure Portal から、テンプレート ID に基づいてテンプレートをエクスポートするための呼び出しが行われます。|
 |FECreateEndUserLicenseV1|AcquireLicense 要求と同じですが、要求元はモバイル デバイスです。|
 |FECreatePublishingLicenseV1|Certify および GetClientLicensorCert の組み合わせと同じですが、要求元はモバイル クライアントです。|
 |FEGetAllTemplates|モバイル デバイス (フロントエンド) から、テンプレートを取得するための呼び出しが行われます。|
 |FindServiceLocationsForUser|Certify または AcquireLicense の呼び出しに使用される URL を照会するための呼び出しが行われます。|
 |GetAllDocs|ドキュメント追跡サイトから呼び出し、ユーザーの **[すべてのドキュメント]** ページを読み込むか、テナントのすべてのドキュメントを検索します。 この値は、admin-action フィールドと acting-as-admin フィールドで使用します。<br /><br />- admin-action が空: ユーザーには、自分のドキュメントの **[すべてのドキュメント]** ページが表示されます。<br /><br />- admin-action が true で acting-as-user が空: 管理者には、テナントのすべてのテナントが表示されます。<br /><br />- admin-action が true で acting-as-user が空ではない: 管理者には、ユーザーの **[すべてのドキュメント]** ページが表示されます。|
-|GetAllTemplates|Azure クラシック ポータルから、すべてのテンプレートを取得するための呼び出しが行われます。|
+|GetAllTemplates|Azure Portal から、すべてのテンプレートを取得するための呼び出しが行われます。|
 |GetClientLicensorCert|クライアントは Windows ベースのコンピューターから発行元証明書 (後でコンテンツの保護に使用する) を要求しています。|
 |GetConfiguration|Azure RMS テナントの構成を取得するために、Azure PowerShell コマンドレットが呼ばれます。|
 |GetConnectorAuthorizations|RMS コネクタから、構成をクラウドから取得するための呼び出しが行われます。|
 |GetRecipients|ドキュメント追跡サイトから呼び出し、単一ドキュメントのリスト ビューに移動します。|
 |GetSingle|ドキュメント追跡サイトから呼び出し、**[シングル ドキュメント]** ページに移動します。|
-|GetTenantFunctionalState|Azure クラシック ポータルが、Azure Rights Management サービスがアクティブかどうかを調べています。|
-|GetTemplateById|Azure クラシック ポータルから、テンプレート ID を指定してテンプレートを取得するための呼び出しが行われます。|
+|GetTenantFunctionalState|Azure Portal が、Azure Rights Management サービスがアクティブかどうかを調べています。|
+|GetTemplateById|Azure Portal から、テンプレート ID を指定してテンプレートを取得するための呼び出しが行われます。|
 |KeyVaultDecryptRequest|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 Azure Key Vault の顧客管理のテナント キー (BYOK) にのみ適用されます。|
 |KeyVaultGetKeyInfoRequest|Azure Key Vault で Azure Information Protection テナント キーとして使用するように指定したキーがアクセス可能であり、既に使用されていないことを確認する呼び出しを行います。|
 |KeyVaultSignDigest|署名に Azure Key Vault の顧客管理のキー (BYOK) が使用される場合に呼び出しが行われます。 通常、これは AcquireLicence (または FECreateEndUserLicenseV1)、Certify、GetClientLicensorCert (または FECreatePublishingLicenseV1) ごとに 1 回呼び出されます。|
@@ -204,14 +204,14 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |LoadEventsForMap|ドキュメント追跡サイトから呼び出し、単一ドキュメントのマップ ビューに移動します。|
 |LoadEventsForSummary|ドキュメント追跡サイトから呼び出し、単一ドキュメントのタイムライン ビューに移動します。|
 |LoadEventsForTimeline|ドキュメント追跡サイトから呼び出し、単一ドキュメントのマップ ビューに移動します。|
-|ImportTemplate|Azure クラシック ポータルから、テンプレートをインポートするための呼び出しが行われます。|
+|ImportTemplate|Azure Portal から、テンプレートをインポートするための呼び出しが行われます。|
 |RevokeAccess|ドキュメント追跡サイトから呼び出し、ドキュメントを取り消します。|
 |SearchUsers |ドキュメント追跡サイトから呼び出し、テナント内のすべてのユーザーを検索します。|
 |ServerCertify|RMS 対応クライアント (SharePoint など) から、サーバーを認証するための呼び出しが行われます。|
 |SetUsageLogFeatureState|使用状況ログを有効にするための呼び出しが行われます。|
 |SetUsageLogStorageAccount|Azure Rights Management サービス ログの場所を指定するための呼び出しが行われます。|
 |UpdateNotificationSettings|ドキュメント追跡サイトから呼び出し、単一ドキュメントの通知設定を変更します。|
-|UpdateTemplate|Azure クラシック ポータルから、既存のテンプレートを更新するための呼び出しが行われます。|
+|UpdateTemplate|Azure Portal から、既存のテンプレートを更新するための呼び出しが行われます。|
 
 
 ## <a name="windows-powershell-reference"></a>Windows PowerShell の参照情報

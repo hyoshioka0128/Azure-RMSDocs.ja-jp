@@ -4,7 +4,7 @@ description: "RMS コネクタを使用するサーバーでのレジストリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,36 +12,40 @@ ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b894be1ef3d41a9faf6c3fd3b3fd8c5b94a62517
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d8925b2bf7cf599d580f1e3e25a8b96a433bfe8e
+ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
 >*適用対象: Azure Information Protection、Office 365*
 
 
-次のセクションの表は、Exchange、SharePoint、または Windows Server を実行しているサーバー上で、[RMS コネクタ](deploy-rms-connector.md)を使用するようにサーバーを構成するレジストリ設定を手動で追加または確認する場合にのみ使用してください。 これらのサーバーを構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。
+次のセクションの表は、Exchange、SharePoint、または Windows Server を実行しているサーバーのレジストリ設定を手動で追加または確認する場合にのみ使用してください。 このレジストリ設定により、[RMS コネクタ](deploy-rms-connector.md)を使用するようにサーバーが構成されます。 これらのサーバーを構成する場合は、Microsoft RMS コネクタ用のサーバー構成ツールを使用することをお勧めします。
 
 これらの設定を使用する場合の手順:
 
--   *MicrosoftRMSURL* は、組織の Microsoft RMS サービスの URL です。 この値を見つけるには、次の操作を実行します。
+-   *\<YourTenantURL>* は Azure Information Protection テナントの Azure Rights Management サービス URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure RMS 用の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
+    1.  Azure Rights Management サービスに [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
         例: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
-    3.  この値から、**/_wmcs/licensing** 文字列を削除します。 残りの文字列が Microsoft RMS の URL です。 この例では、Microsoft RMS の URL は次の値になります。
+    3.  この値から、**/_wmcs/licensing** 文字列を削除します。 残りの文字列が Azure Rights Management サービス URL です。 この例では、Azure Rights Management サービス URL は次の値になります。
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+        
+        次の PowerShell コマンドを実行することで、値が正しいことを確認できます。
+        
+            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
--   *ConnectorFQDN* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
+-   *\<ConnectorFQDN>* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
 
--   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、「[HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)」セクションを参照してください。 Microsoft RMS の URL では常に HTTPS が使用されます。
+-   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、「[HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)」セクションを参照してください。 Azure Rights Management サービス URL では常に HTTPS が使用されます。
 
 
 ## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Exchange 2016 または Exchange 2013 のレジストリ設定
@@ -52,7 +56,7 @@ ms.lasthandoff: 06/30/2017
 
 **値:** 既定
 
-**データ:** https://*MicrosoftRMSURL*/_wmcs/certification
+**データ:** https://*\<YourTenantURL>*/_wmcs/certification
 
 ---
 
@@ -62,7 +66,7 @@ ms.lasthandoff: 06/30/2017
 
 **値:** 既定
 
-**データ:** https://*MicrosoftRMSURL*/_wmcs/Licensing
+**データ:** https://*\<YourTenantURL>*/_wmcs/Licensing
 
 ---
 
@@ -70,14 +74,14 @@ ms.lasthandoff: 06/30/2017
 
 **種類:** Reg_SZ
 
-**値:** https://*MicrosoftRMSURL*
+**値:** https://*\<YourTenantURL>*
 
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*
+- http://*<\ConnectorFQDN>*
 
-- https://*ConnectorFQDN*
+- https://*<\ConnectorFQDN>*
 
 ---
 
@@ -85,14 +89,14 @@ ms.lasthandoff: 06/30/2017
 
 **種類:** Reg_SZ
 
-**値:** https://*MicrosoftRMSURL*
+**値:** https://*<\YourTenantURL>*
 
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*
+- http://*<\ConnectorFQDN>*
 
-- https://*ConnectorFQDN*
+- https://*<\ConnectorFQDN>*
 
 
 ## <a name="exchange-2010-registry-settings"></a>Exchange 2010 のレジストリ設定
@@ -103,7 +107,7 @@ ms.lasthandoff: 06/30/2017
 
 **値:** 既定
 
-**データ:** https://*MicrosoftRMSURL*/_wmcs/certification
+**データ:** https://*<\YourTenantURL>*/_wmcs/certification
 
 ---
 
@@ -113,7 +117,7 @@ ms.lasthandoff: 06/30/2017
 
 **値:** 既定
 
-**データ:** https://*MicrosoftRMSURL*/_wmcs/Licensing
+**データ:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
 ---
 
@@ -121,13 +125,13 @@ ms.lasthandoff: 06/30/2017
 
 **種類:** Reg_SZ
 
-**値:** https://*MicrosoftRMSURL*
+**値:** https://*<\YourTenantURL>*
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*
+- http://*<\ConnectorFQDN>*
 
-- https://*ConnectorFQDN*
+- https://*<\ConnectorFQDN>*
 
 ---
 
@@ -135,13 +139,13 @@ ms.lasthandoff: 06/30/2017
 
 **種類:** Reg_SZ
 
-**値:** https://*MicrosoftRMSURL*
+**値:** https://*<\YourTenantURL>*
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*
+- http://*<\ConnectorFQDN>*
 
-- https://*ConnectorFQDN*
+- https://*<\ConnectorFQDN>*
 
 
 ## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>SharePoint 2016 または SharePoint 2013 のレジストリ設定
@@ -150,14 +154,14 @@ ms.lasthandoff: 06/30/2017
 
 **種類:** Reg_SZ
 
-**値:** https://*MicrosoftRMSURL*/_wmcs/licensing
+**値:** https://*<\YourTenantURL>*/_wmcs/licensing
 
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*/_wmcs/licensing
+- http://*<\ConnectorFQDN>*/_wmcs/licensing
 
-- https://*ConnectorFQDN*/_wmcs/licensing
+- https://*<\ConnectorFQDN>*/_wmcs/licensing
 
 ---
 
@@ -169,9 +173,9 @@ ms.lasthandoff: 06/30/2017
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*/_wmcs/certification
+- http://*<\ConnectorFQDN>*/_wmcs/certification
 
-- https://*ConnectorFQDN*/_wmcs/certification
+- https://*<\ConnectorFQDN>*/_wmcs/certification
 
 ---
 
@@ -184,9 +188,9 @@ ms.lasthandoff: 06/30/2017
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://*ConnectorFQDN*/_wmcs/licensing
+- http://*<\ConnectorFQDN>*/_wmcs/licensing
 
-- https://*ConnectorFQDN*/_wmcs/licensing
+- https://*<\ConnectorFQDN>*/_wmcs/licensing
 
 
 
@@ -199,7 +203,7 @@ ms.lasthandoff: 06/30/2017
 
 **値:** 既定
 
-**データ:** http://*ConnectorFQDN*/_wmcs/licensing
+**データ:** http://*<\ConnectorFQDN>*/_wmcs/licensing
 
 ---
 
@@ -209,7 +213,7 @@ ms.lasthandoff: 06/30/2017
 
 **値:** 既定
 
-**データ:** http://*ConnectorFQDN*/_wmcs/certification
+**データ:** http://*<\ConnectorFQDN>*/_wmcs/certification
 
 
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。

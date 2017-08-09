@@ -4,7 +4,7 @@ description: "Windows 用 Rights Management 共有アプリケーションの情
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,21 +12,21 @@ ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ad723e96692919303fe946368c429b8c233d6ef
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a496ed482f6973f03c63b3792fd1f3ccc4b9403e
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Windows 用 Rights Management 共有アプリケーション
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
 
 > [!IMPORTANT]
-> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2018 年 1 月 31 日に停止されます。 
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 
 
 
-Windows 用 Rights Management 共有アプリケーション (単に「RMS 共有アプリ」とも呼ばれます) は無償でダウンロード可能なアプリケーションで、[Active Directory Rights Management サービス](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) または [Azure Information Protection](../understand-explore/what-is-information-protection.md) を使用している組織、および独自の情報保護インフラストラクチャを持たないが、Azure Information Protection から Azure Rights Management サービスを使用する他の組織が保護したコンテンツを使用したい組織を対象とするアプリケーションです。
+Windows 用 Rights Management 共有アプリケーション (単に“ RMS 共有アプリ” とも呼ばれます) は、[Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) または [Azure Information Protection](../understand-explore/what-is-information-protection.md) を使用する組織のための無料でダウンロードできるアプリケーションです。 このアプリケーションは、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Azure Information Protection の Azure Rights Management サービスを使って保護しているコンテンツを使いたい組織向けでもあります。
 
 -   [Rights Management 共有アプリケーション: バージョン リリース履歴](sharing-app-version-release-history.md)
 
