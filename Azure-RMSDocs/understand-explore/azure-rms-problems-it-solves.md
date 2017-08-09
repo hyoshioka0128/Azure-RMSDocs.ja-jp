@@ -4,7 +4,7 @@ description: "組織が抱える要件や問題を明らかにし、Azure RMS �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65b9d369308505e74e0dde8d96973f9985d209a0
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0bf2b22e7297a18c035431ef42359c305095f33d
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="what-problems-does-azure-rms-solve"></a>Azure RMS が解決する問題の種類
 
@@ -37,7 +37,7 @@ Azure RMS は、[Azure Information Protection](what-is-information-protection.md
 |オンプレミスのサービスや Office 365 をサポートする|√  Azure Rights Management は、[Office 365 とシームレスに](office-apps-services-support.md)連携するだけでなく、[RMS コネクタ](../deploy-use/deploy-rms-connector.md)をデプロイすると、次のオンプレミス サービスで使うこともできます。<br /><br />- Exchange Server<br /><br />- SharePoint Server<br /><br />- ファイル分類インフラストラクチャを実行する Windows Server|
 |簡単なアクティブ化|√ ユーザーに対して [Rights Management サービスをアクティブ化する](../deploy-use/activate-service.md)ために必要なのは、管理ポータルで 2 回クリックするだけです。 または、コマンド ラインで管理する方がよければ、2 つの PowerShell コマンドだけで済みます。|
 |必要に応じて組織全体でスケーリングする能力|√ Azure Rights Management はクラウド サービスとして動作し、Azure の柔軟性を活かしてスケールアップおよびスケールアウトするため、追加のオンプレミス サーバーをプロビジョニングまたはデプロイする必要がありません。|
-|シンプルで柔軟なポリシーを作成する能力|√ [権限ポリシーのカスタム テンプレート](../deploy-use/configure-custom-templates.md)を使用すると、管理者はポリシーを簡単に適用でき、ユーザーは適切なレベルの保護を各ドキュメントに適用してアクセスを組織内のユーザーに制限できます。<br /><br />たとえば、全社的戦略が記載された書類を全従業員が共有する場合、社内の全従業員に読み取り専用ポリシーを適用することが考えられます。 また、財務報告など、より機密性の高いドキュメントについては、アクセスを経営幹部にのみ制限することが考えられます。|
+|シンプルで柔軟なポリシーを作成する能力|√ [カスタム保護テンプレート](../deploy-use/configure-policy-templates.md)を使用すると、管理者はポリシーを簡単に適用でき、ユーザーは適切なレベルの保護を各ドキュメントに適用してアクセスを組織内のユーザーに制限できます。<br /><br />たとえば、全社的戦略が記載された書類を全従業員が共有する場合、社内の全従業員に読み取り専用ポリシーを適用することが考えられます。 また、財務報告など、より機密性の高いドキュメントについては、アクセスを経営幹部にのみ制限することが考えられます。|
 |広範なアプリケーションのサポート|√ Azure Rights Management は Microsoft Office のアプリケーションやサービスと緊密に統合されており、[Azure Information Protection クライアント](../rms-client/aip-client.md )を使うことで、他のアプリケーションにもサポートを広げることができます。<br /><br />√ [Azure Information Protection SDK](../develop/developers-guide.md) は、Azure  Information Protection をサポートするカスタム アプリケーションを作成するための API を社内開発者やソフトウェア ベンダーに提供します。<br /><br />詳しくは、「[Rights Management API をサポートするその他のアプリケーション](api-support.md)」をご覧ください。|
 |IT 部門がデータの制御を維持する必要がある|√ 組織は独自のテナント キーを管理し、"[Bring Your Own Key](../plan-design/plan-implement-tenant-key.md)" (BYOK) ソリューションを利用し、ハードウェア セキュリティ モジュール (HSM) にテナント キーを保存することを選択できます。<br /><br />√ 監査と[使用状況の記録](../deploy-use/log-analyze-usage.md)に対応しています。分析してビジネスに必要な洞察に活用したり、誤用を監視したり、(情報の漏えいが発生した場合) 裁判分析を実行したりできます。<br /><br />√ [スーパー ユーザー機能](../deploy-use/configure-super-users.md)を利用した委任アクセスにより、退職者によって保護されたドキュメントであっても、IT 部門は保護されたコンテンツに常にアクセスできます。 これに対し、ピア ツー ピアの暗号化ソリューションでは、企業データにアクセスできなくなるおそれがあります。<br /><br />√ Azure AD Connect などの[ディレクトリ同期ツール](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)を使用して、オンプレミスの Active Directory アカウントに対して共通の ID をサポートするために [Azure RMS が必要とするディレクトリの属性のみ](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms)を同期します。<br /><br />√ AD FS を使用して、パスワードをクラウドにレプリケートすることなくシングル サインオンを有効にします。<br /><br />√ 組織は常に、以前に Azure Rights Management によって保護されていたコンテンツへのアクセスを失わずに、Azure Rights Management サービスの使用を停止できます。 使用停止オプションの詳細については、「[Azure Rights Management の使用停止と非アクティブ化](../deploy-use/decommission-deactivate.md)」を参照してください。 さらに、Active Directory Rights Management サービス (AD RMS) をデプロイした組織は、以前に AD RMS によって保護されていたデータへのアクセスを失わずに [Azure Rights Management サービスに移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)できます。|
 > [!TIP]

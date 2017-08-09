@@ -4,7 +4,7 @@ description: "この情報保護ソリューションをサポートするアプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b4e62ab14702beabe8692147b97c4464d672bdf
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6d13d05c7139635c9a43770e418c1d7e11f880e
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="activating-azure-rights-management"></a>Rights Management をアクティブにする
 
@@ -32,18 +32,23 @@ Azure Information Protection の Azure Rights Management サービスをテナ�
 サービスをアクティブ化する前に Azure Rights Management の詳細 (解決するビジネス上の問題、一般的な用途、そのしくみなど) を把握したい場合は、「[Azure Rights Management とは](../understand-explore/what-is-azure-rms.md)」を参照してください。
 
 > [!IMPORTANT]
-> [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をアクティブ化する前に、組織に Azure Rights Management データ保護を含むサービス プランがあることを確認します。 ない場合は、Azure Rights Management をアクティブにすることはできません。
->
-> [Azure Information Protection プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。
+> 組織に Active Directory Rights Management Services (AD RMS) をデプロイしている場合、Azure Rights Management サービスをアクティブ化しないでください。 [詳細情報](prepare-environment-adrms.md)
+
+[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をアクティブ化する前に、組織に Azure Rights Management データ保護を含むサービス プランがあることを確認します。 ない場合は、Azure Rights Management をアクティブにすることはできません。 次のいずれかを用意する必要があります。
+
+- [Azure Information Protection プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
+
+- [Rights Management が含まれている Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)
 
 Azure Rights Management をアクティブにした後は、組織内のすべてのユーザーがファイルに情報保護を適用したり、Azure Rights Management で保護されているファイルを開く (使用する) ことができます。 ただし、そちらを希望する場合は、段階的デプロイのオンボーディング コントロールを使用して、情報保護を適用できるユーザーを制限できます。 詳細については、この記事の「[段階的デプロイのオンボーディング コントロールの構成](#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
 
-管理ポータルから Rights Management サービスをアクティブ化する手順については、Office 365 管理センターと Azure クラシック管理ポータルのどちらを使用するかを選択してください。
+管理ポータルから Rights Management サービスをアクティブ化する手順については、Office 365 管理センター、Azure クラシック ポータル、Azure Portal (現在プレビュー) のいずれかを選択してください。
 
+- [**Office 365 管理センター**](activate-office365.md) - グローバル管理者アカウントが必要
 
-- [Office 365 管理センター](activate-office365.md)
+- [**Azure クラシック ポータル**](activate-azure-classic.md) - グローバル管理者アカウントが必要
 
-- [Azure クラシック ポータル](activate-azure-classic.md)
+- [**Azure Portal**](activate-azure.md) - グローバル管理者アカウントまたは[セキュリティ管理者アカウント](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)が必要
 
 または、PowerShell を使用して [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] をアクティブ化することもできます。
 
@@ -90,7 +95,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 ## <a name="next-steps"></a>次のステップ
 これで組織で [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] がアクティブになったので、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」を参照して、Azure Information Protection をユーザーおよび管理者にロールアウトする前にその他に構成が必要であるかを判断することができます。 
 
-たとえば、[カスタム テンプレート](configure-custom-templates.md)を使用してユーザーが簡単に情報保護をファイルに適用できるようにする、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用するために [Rights Management コネクタ](deploy-rms-connector.md)をインストールしてオンプレミス サーバーに接続する、すべてのデバイスですべてのファイルの種類の保護をサポートする [Azure Information Protection クライアント](../rms-client/aip-client.md)をデプロイする、などが考えられます。 
+たとえば、[テンプレート](configure-policy-templates.md)を使用してユーザーが簡単に情報保護をファイルに適用できるようにする、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用するために [Rights Management コネクタ](deploy-rms-connector.md)をインストールしてオンプレミス サーバーに接続する、すべてのデバイスですべてのファイルの種類の保護をサポートする [Azure Information Protection クライアント](../rms-client/aip-client.md)をデプロイする、などが考えられます。 
 
 Exchange Online や SharePoint Online などの Office サービスの Information Rights Management (IRM) 機能を使用するには、あらかじめ追加の構成手順が必要です。 お使いのアプリケーションで Rights Management サービスを使用する方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](../understand-explore/applications-support.md)」を参照してください。
 

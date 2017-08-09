@@ -1,5 +1,5 @@
 ---
-title: "FCI を使用するファイル サーバー - Azure Information Protection"
+title: "FCI を使用するファイル サーバーが AIP から Azure RMS をサポートするしくみ"
 description: "Office ドキュメントを自動的に保護する RMS コネクタを配置するときに、Windows Server ファイル分類インフラストラクチャがどのように Azure RMS で使用されるかについて説明します。"
 author: cabailey
 ms.author: cabailey
@@ -12,20 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7f49fc1613afcfdbad1f1f13e827a866b8ebe6f9
-ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
+ms.openlocfilehash: 3f7a06edc5d685d9ca103d9e7cd0f70c3a5f7874
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 ---
-# <a name="file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci"></a>Windows Server を実行するファイル サーバーとファイル分類インフラストラクチャ (FCI) の使用
+# <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバーが Azure Rights Management をサポートするしくみ
 
 >*適用対象: Azure Information Protection、Office 365*
 
 
 ファイル分類インフラストラクチャを使用するように Windows Server を構成すると、このファイル サーバー リソース マネージャーの機能でローカル ファイルをスキャンし、機密データが含まれているかどうかを判断することができます。 この条件を満たすファイルには、管理者が定義する分類プロパティのタグが付けられます。 その後で、ファイル分類インフラストラクチャが分類に従って自動操作を実行できます。 これらの操作には、[!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を使用した情報保護の適用や Rights Management コネクタ (RMS コネクタとも呼びます) のデプロイなどがあります。 これにより Office ファイルは Azure RMS によって自動的に保護されます。
 
-すべてのファイルの種類を保護する場合は、RMS コネクタを使用せずに、代わりに、[Azure Information Protection モジュール](../rms-client/client-admin-guide-powershell.md)でコマンドレットを使用する Windows PowerShell スクリプトを実行できます。
+すべてのファイルの種類を保護する目的で、RMS コネクタを使用せずに、代わりに、[Azure Information Protection モジュール](../rms-client/client-admin-guide-powershell.md)でコマンドレットを使用する Windows PowerShell スクリプトを実行できます。
 
 この分類ポリシーは、完全に構成可能で拡張性が高いので、承認されていないユーザーおよび承認されたユーザーからの潜在的なデータの漏えいを防止できます。 管理者がファイルにアクセスする必要がないようなポリシーを構成できるので、ネットワーク管理者からのデータ漏えいのリスクも減らすことができます。
 

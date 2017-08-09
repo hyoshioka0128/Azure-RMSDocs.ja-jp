@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 28b4e89cd6300c9b206abdf45f5d580b4474eaa5
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントのカスタム構成
 
@@ -102,7 +102,20 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-クライアントの **%localappdata%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からポリシーをエクスポートしたり、クライアントのコンピューターにエクスポートされたファイルをコピーできます。 この方法を使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。
+クライアントの **%LocalAppData%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からポリシーをエクスポートしたり、クライアントのコンピューターにエクスポートされたファイルをコピーできます。 この方法を使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。
+
+ポリシーをエクスポートすると、Azure Information Protection クライアントのさまざまなバージョンに対応するさまざまなバージョンのポリシーが含まれる圧縮ファイルがダウンロードされます。
+
+1. ファイルを解凍し、次の表を利用して必要なポリシー ファイルを特定します。 
+    
+    |［ファイル名］|対応するクライアント バージョン|
+    |--------------------------|---------------------------------------------|
+    |Policy1.1.msip |バージョン 1.2|
+    |Policy1.2.msip |バージョン 1.3 - 1.7|
+    |Policy1.3.msip |バージョン 1.8 以降|
+    
+2. 特定したファイルの名前を **Policy.msip** に変更し、Azure Information Protection 保護クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
+
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを非表示にする
 

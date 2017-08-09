@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 587d24a005452874ca06b8fc179b25e91a7f0130
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a1f448a51ee4bfecfd0d680b842eed44aa816ed1
+ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -50,7 +50,11 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
     
 3. **LicensingIntranetDistributionPointUrl** の値をコピーし、この文字列から `/_wmcs\licensing` を除去します。 
     
-    残った部分は Azure Information Protection テナントの Azure Rights Management サービス URL であり、以下の移行手順では "*実際のテナント URL*" と簡潔に表記されている場合が多くあります。
+    残りの部分が Azure Information Protection テナントの Azure Rights Management サービス URL に相当します。 この値は後続の移行指示で、多くの場合、*YourTenantURL* という短縮形式で表現されています。
+    
+    次の PowerShell コマンドを実行することで、値が正しいことを確認できます。
+    
+            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 ## <a name="step-2-prepare-for-client-migration"></a>手順 2. クライアントの移行を準備する
 

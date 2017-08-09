@@ -4,7 +4,7 @@ description: "Windows 用 Microsoft Rights Management (RMS) 共有アプリケ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 02eab7970b98cbc0ed27a3928a9a3c68ebd2927a
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-user-guide"></a>Rights Management 共有アプリケーション ユーザー ガイド
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 > [!IMPORTANT]
-> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2018 年 1 月 31 日に停止されます。 
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 
 
 Windows 用 Microsoft Rights Management (RMS) 共有アプリケーションは、重要なドキュメントや画像を、それらを表示してはならないユーザーから保護するために役立ちます。それらを電子メールで送信したり、別のデバイスに保存したりする場合でも同様です。 また、このアプリケーションを使用して、他のユーザーが同じ Rights Management 保護テクノロジを使って保護したファイルを開いて使用することもできます。
 

@@ -4,7 +4,7 @@ description: "Azure Rights Management (RMS) コネクタをインストールし
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be09e2c974d9d542b94bc16f140e764858cc9282
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: a8cfa6a5baf1661495fc8b485ac0a6535c22233d
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -59,7 +59,7 @@ RMS コネクタを構成する前に、RMS コネクタを構成するのに十
 
 また、コネクタには、このパスワードに文字の制限もあります。 アンパサンド (**&**)、左山かっこ (**[**)、右山かっこ (**]**)、二重引用符 (**"**)、アポストロフィ (**'**) が含まれるパスワードを使用することはできません。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にサインインできたとしても、RMS コネクタの認証は失敗し、[**このユーザー名とパスワードの組み合わせは正しくありません**] というエラー メッセージが表示されます。 シナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
 
-さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントにコンテンツを保護する権限があることをご確認ください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合は、「**管理サービスおよび組織の場所を検出する試みが失敗しました。組織に対して Microsoft Rights Management サービスが有効になっていることをご確認ください。**」というエラー メッセージが表示されます。
+さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントにコンテンツを保護する権限があることをご確認ください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合は、「**管理サービスおよび組織の場所を検出する試みが失敗しました。」というメッセージが表示されます。組織に対して Microsoft Rights Management サービスが有効になっていることをご確認ください。**」というエラー メッセージが表示されます。
 
 次のいずれかの特権を持つアカウントを使用できます。
 
@@ -116,6 +116,10 @@ RMS コネクタのインストール プロセスでは、すべての前提条
 > -   Web ブラウザーから **http://&lt;connectoraddress&gt;/_wmcs/certification/servercertification.asmx** に接続します。*&lt;connectoraddress&gt;* は、RMS コネクタがインストールされているサーバーのアドレスまたは名前に置き換えてください。 接続に成功すると、 **ServerCertificationWebService** ページが表示されます。
 
 RMS コネクタをアンインストールする必要がある場合は、ウィザードを再実行してアンインストール オプションを選択します。
+
+インストール中に問題が発生した場合、インストール ログ **%LocalAppData%\Temp\Microsoft Rights Management connector_\<日付と時刻>.log** を確認してください。 
+
+たとえば、インストール ログは C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log のようになります。
 
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>RMS コネクタを使用するサーバーの承認
 2 台以上のコンピューターに RMS コネクタをインストールしたら、RMS コネクタを使用するサーバーとサービスを承認することができます。 たとえば、Exchange Server 2013 や SharePoint Server 2013 を実行しているサーバーがあるとします。
