@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 666ea0288a06b7a7e7f25b4a6cff0ac62888587c
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 0d8c6a1ccfaf52af25ab0cfb5fb8074019939b90
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 07/18/2017
 |目的|.. 手順|
 |----------------|---------------|
 |サービスについて推奨されるドキュメントを参照する|[Azure Information Protection ドキュメント](https://docs.microsoft.com/information-protection/)の開始ページを使用します。|
-|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する|[askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)に電子メールを送信します|
+|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する|[askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback) に電子メールを送信します。|
 |Azure Information Protection に関するツイートとドキュメントの更新に関するお知らせを、製品グループから受け取る|Microsoft の Azure Information Protection チームのリーダーである [@DanPlastina](https://twitter.com/DanPlastina) をフォローします。|
 |サブスクリプション情報とサポート対象の機能を確認する|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)」を参照してください。|
 
@@ -35,12 +35,13 @@ ms.lasthandoff: 07/18/2017
 ## <a name="information-about-new-releases-and-updated-documentation"></a>新しいリリースとドキュメントの更新に関する情報
 Azure Information Protection 製品チームは、新しいリリースと更新プログラムに関するお知らせを [Enterprise Mobility + Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)に投稿します。 これらのブログには、製品ドキュメントの補足やサポート情報が投稿されます。
 
-[Azure Information Protection Yammer サイト](https://www.yammer.com/AskIPTeam)で、新機能とプレビューに関する情報も入手できます。そのサイトでは新しい機能を要求することもできます。
+毎月、お客様に最新の状態を維持していただくために、次の[**更新プログラム**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates)を公開しています。
 
-毎月末に、ドキュメントの変更の要約が "**Azure Information Protection Documentation Update for \<月 年>**" というタイトルで投稿されます。 この投稿には、コンテンツ タイプのタグとして [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) が付けられており、新しいリリースに関するドキュメントの更新情報のほかに、既存のリリースに関する訂正と補足も含まれています。
+- 新機能と今後の予定に関する状態の更新。 投稿時のタイトル: "**Azure Information Protection 最新情報 – \<年、月>**"
 
-> [!TIP]
-> Microsoft Rights Management サービス (Azure RMS または AD RMS) を使用するアプリケーションを開発している場合、[Active Directory Rights Management Services (AD RMS) 開発者のコーナー ブログ](https://blogs.msdn.microsoft.com/rms/)もお勧めです。
+- ドキュメント変更の概要。新しいリリース、ステートメントをサポートするための更新、既存リリースの修正と説明に関する文書が含まれています。 投稿時のタイトル: "**Azure Information Protection ドキュメント更新 – \<年、月>**" 
+
+[Azure Information Protection Yammer サイト](https://www.yammer.com/AskIPTeam)で、新機能とプレビューに関する情報も入手できます。そのサイトでは Azure Information Protection について質問することもできます。 新機能に対するご提案とご意見をお寄せいただく場合、Azure Information Protection の[User Voice サイト](https://msip.uservoice.com)をご利用ください。
 
 ## <a name="support-options-and-community-resources"></a>サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。
@@ -55,7 +56,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 |Subscription|手順|
 |----------------|---------------|
-|Azure Information Protection (スタンドアロン)|Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - Included (テクニカル サポート - 含む)]**: Azure Active Directory および Azure Rights Management のカスタム テンプレートを構成するための無料 Azure サブスクリプションを持っている場合、または Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
+|Azure Information Protection (スタンドアロン)|Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - Included (テクニカル サポート - 含む)]**: Azure クラシック ポータルで Azure Active Directory と Azure Rights Management を構成するための無料 Azure サブスクリプションを持っている場合、または Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|[「一般法人向け Office 365 のサポートへのお問い合わせ - 管理者向けヘルプ」](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) を参照して、電話番号と、Office 365 管理ポータルによるサポートへの問い合わせ方法をご確認ください。|
 |Azure Information Protection と Enterprise Mobility + Security (EMS)|Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - Included (テクニカル サポート - 含む)]**: Azure Active Directory および Azure Rights Management のカスタム テンプレートを構成するための無料 Azure サブスクリプションを持っている場合、または Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
 |Azure Information Protection と Secure Productive Enterprise (SPE)|[Office 365 サポート チャネル](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) をご利用いただけます。|
@@ -67,9 +68,9 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 オンデマンド ビデオ:
 
-- [Azure Information Protection と Azure Rights Management](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D) に関する Microsoft Ignite 2016 のセッション
+- [Azure Information Protection](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D) の Microsoft Ignite 2016 セッション。
 
-- Microsoft Virtual Academy の「[Azure Rights Management Services Core Skills (Azure Rights Management サービスの中核となるスキル)](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681)」
+- [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection) が含まれる Microsoft Virtual Academy セッション。
 
 トラブルシューティング:
 
@@ -85,7 +86,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 ### <a name="community-resources"></a>コミュニティのリソース
 
-[Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、Azure Information Protection チームから直接の返信を受けることができ、他の管理者やコンサルタントと経験や知識を共有することによるメリットを得ることができます。
+[Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 
 Yammer にアクセスできない場合は、[Microsoft RMS (クラウド) の TechNet フォーラム](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)をお試しください。
 
