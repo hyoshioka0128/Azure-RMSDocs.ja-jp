@@ -4,7 +4,7 @@ description: "ドキュメントや電子メールを分類して保護する方
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c7678be03106719af4679ae06e2aaa84aff8ca3e
-ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
+ms.openlocfilehash: 954b69213c055c4b94981fabef40df29aa0e19ba
+ms.sourcegitcommit: 5a087ff509162a98f3d09fda4ef5a114028e5664
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -91,15 +91,6 @@ Azure Information Protection バーを使用して、構成されているラベ
     - **アクセスの有効期限**: ファイルの期間が限定されていて、設定された日付を過ぎた後は指定されたユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
 
 5. **[適用]** をクリックして、**"カスタム アクセス許可が適用されました"** というメッセージが表示されるまで待ちます。 次に、 **[閉じる]**をクリックします。
-
-
-### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Azure Information Protection バーのショートカット キー
-
-キーボード ショートカットを使用して、Azure Information Protection バーにアクセスするには、次のキーの組み合わせを使用します:
-
-- **Ctrl** + **Shift** + **~** キーを押します。 
-
-次に、Tab キーを使用してバーのラベルと他のコントロール (**[ラベルの非表示]** アイコンと **[ラベルの削除]** アイコン) を選択し、Enter キーで選択します。
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>エクスプローラーを使用してファイルを分類および保護する
 
