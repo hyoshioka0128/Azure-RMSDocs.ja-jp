@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6ce3936b36a716cfdc2651cda9f59eb9b552eeb3
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
+ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -102,18 +102,15 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 ### <a name="cryptographic-mode-considerations"></a>暗号化モードに関する注意事項
 
-移行に必須ではないものの、移行を開始する前に、AD RMS サーバーとクライアントを暗号化モード 2 で実行しておくことをお勧めします。 
+AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開始する前にクラスターを 暗号化モード 2 にアップグレードしないでください。 代わりに暗号化モード 1 を使用して移行し、移行後タスクの 1 つとして移行の終了時にテナント キーを更新します。
 
-さまざまなモードとアップグレードする方法の詳細については、「[AD RMS Cryptographic Modes (AD RMS の暗号化モード)](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx)」を参照してください。
-
-AD RMS クラスターが暗号化モード 1 であり、アップグレードができない場合、移行が完了したときに Azure Information Protection テナント キーを更新する必要があります。 キーの更新を行うと、暗号化モード 2 を使用する新しいテナント キーが作成されます。 暗号化モード 1 での Azure Rights Management サービスの使用は、移行プロセス中にのみサポートされます。
+暗号化モード 1 は、移行プロセス中にのみサポートされます。
 
 AD RMS 暗号化モードを確認するには:
  
 - Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
 
 - AD RMS のすべてのサポート対象バージョンの場合: [RMS アナライザー](https://www.microsoft.com/en-us/download/details.aspx?id=46437)と **AD RMS 管理**オプションを使用して、**RMS サービス情報**の暗号モードを表示します。
-
 
 ### <a name="migration-limitations"></a>移行の制限
 
