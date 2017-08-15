@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 0edde6cb304a4ad6b34d53ee798a5fbf7ede3b48
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c3260d82c13c01bb16b22e472d57720777e82f7b
+ms.sourcegitcommit: a4f4edcbf0f0a7de74d1dcec9ce6e661c6882a74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="step-3-install-the-client"></a>手順 3: クライアントのインストール
 
@@ -25,9 +25,11 @@ ms.lasthandoff: 06/30/2017
 
 ## <a name="install-the-azure-information-protection-client"></a>Azure Information Protection クライアントのインストール
 
-1. Office がインストールされている PC で (ただし、Word は現在開かれていません)、Microsoft ダウンロード センターから [Azure Information Protection クライアントをダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。 
+1. Office がインストールされていて、Word は開いていない状態の PC で、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)にアクセスし、**AzInfoProtection.exe** をダウンロードします。 これは、実稼働ネットワークでサポートされているクライアントの一般公開バージョンです。 ただし、最新の機能と修正プログラムがすべて含まれている最新のプレビュー バージョンを使いたい場合は、**AzInfoProtection_PREVIEW_1.10.52.0.exe** をダウンロードします。
+    
+    このチュートリアルでは、いずれのバージョンのクライアントを使用しても構いませんが、チュートリアルの画像は一般公開バージョンのものです。また、チュートリアルには、プレビュー バージョンのクライアントで実装された新機能は含まれていません。
 
-2. **AzInfoProtection.exe** を実行し、指示に従ってクライアントをインストールします。
+2. ダウンロードした実行可能ファイルを実行し、指示に従ってクライアントをインストールします。
 
     このチュートリアルでは、デモ ポリシーをインストールするオプションを選択するかどうかは関係ありません。デモ ポリシーをインストールしても、先に構成したポリシーが Azure からダウンロードされてデモ ポリシーを置き換えます。 ただし、Azure Information Protection に接続しないで既定のラベルを試したいだけの場合は、デモ ポリシー オプションを使用してもかまいません。 
 
@@ -45,7 +47,7 @@ Word で新しい空白の文書を開き、インストールが正常に行わ
 
     **[保護]** > **[ヘルプとフィードバック]** の順にクリックして、**[Microsoft Azure Information Protection]** ダイアログ ボックスでクライアントのステータスを確認します。 **[接続ユーザー]** とユーザー名が表示されているはずです。 さらに、最終接続日時と Information Protection ポリシーのインストール日時も表示されているはずです。 表示されているユーザー名がテナントの正しいものであることを確認します。
 
-- リボンの下の新しい Information Protection バー。 **[秘密度]** というタイトルと、構成した既定のラベル **[全般]** が表示されます。 
+- リボンの下の新しい Information Protection バー。 **[秘密度]** というタイトルと、Azure Portal で確認したラベルが表示されます。 
 
 これで、Azure Information Protection の動作を確認する準備ができました。
 

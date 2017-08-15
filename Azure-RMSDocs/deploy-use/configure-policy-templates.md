@@ -4,7 +4,7 @@ description: "現在はプレビュー段階ですが、Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b9c6b808de6c5967885f4937965b4e0e759668f3
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
+ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -32,7 +32,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 **分類、ラベル付け、保護を含むサブスクリプションの場合 (Azure Information Protection P1 または P2)**
 
-- テナントのラベルと統合されない Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードで、ラベルの後の **[テンプレート]** セクションに表示されます。 これらのテンプレートをラベルに変換できるほか、個別のテンプレートとして引き続き管理し、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
+- テナントのラベルと統合されない Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードで、ラベルの後の **[テンプレート]** セクションに表示されます。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
 
 **保護のみを含むサブスクリプションの場合 (Azure Rights Management サービスを含む Office 365 サブスクリプション)**
 
@@ -69,7 +69,7 @@ Azure Information Protection サブスクリプションを入手してからし
 - **\<組織の名前> - Confidential View Only** (保護されたコンテンツの読み取り専用アクセス許可の場合)。 
 
 >[!NOTE]
->**[Azure Information Protection - グローバル ポリシー]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されています。 テンプレートとして存在していますが、Azure ポータルでは、Azure RMS 保護を含むラベル構成の一部として表示されます。 テナントに設定されているテンプレートはいつでも確認できます。[AADRM PowerShell モジュール](administer-powershell.md)から [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) を実行してください。
+>**[Azure Information Protection - グローバル ポリシー]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure ポータルでは、Azure RMS 保護を含むラベル構成の一部として表示されます。 テナントに設定されているテンプレートはいつでも確認できます。[AADRM PowerShell モジュール](administer-powershell.md)から [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) を実行してください。
 >
 >「[テンプレートをラベルに変更するには](#to-convert-templates-to-labels)」セクションに説明があるとおり、テンプレートは手動で変換できます。変換後、必要に応じて名前を変更します。 あるいは、既定の Azure Information Protection ポリシーが最近作成され、そのとき、テナントの Azure Rights Management サービスが有効化された場合、自動的に変換されます。
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection のデータ保護サービス、Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a9f592584c090d8b0bb62acabd5775238b5e411
-ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
+ms.openlocfilehash: a2c0a8ef4534f8d5149178986688c4d00b4cee9f
+ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -101,14 +101,11 @@ Azure Rights Management サービスは、常にユーザー認証に Azure Acti
 
 このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成されたパスワード、多要素認証 (MFA)、フェデレーション、Active Directory Domain Services で作成されたパスワードを使用してから、Azure Active Directory に同期される場合があります。
 
-## <a name="can-i-add-external-users-people-from-outside-my-company-to-templates"></a>社外のユーザーをテンプレートに追加できますか?
-はい。 エンドユーザー (と管理者) がアプリケーションから選択できるテンプレートを作成すると、指定した定義済みのポリシーを使用して、すばやく簡単に情報保護を適用できます。 テンプレートの設定の 1 つに、コンテンツにアクセス可能なユーザーの設定があります。組織内のグループとユーザー、および組織外のユーザーとグループを指定できます。 別の組織のすべてのユーザーを指定することもできます。
+## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
 
-[保護設定](../deploy-use/configure-policy-protection.md)を構成するとき、Azure Portal を利用してこの構成を行うことができます。 あるいは、PowerShell を利用してこの構成を行うことができます。 PowerShell を使用するには:
+はい。 Azure Portal でテンプレートをラベルに変換するときに、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加する[保護設定](../deploy-use/configure-policy-protection.md)を構成できます。 あるいは、PowerShell を利用してこの構成を行うことができます。
 
--   **権限定義オブジェクトを使用してテンプレートを作成または更新する**。  権限定義オブジェクトで外部電子メール アドレスおよびその権限を指定し、これを使用してテンプレートを作成または更新します。 [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) コマンドレットを使用して権限定義オブジェクト指定し、変数を作成してから、[Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) コマンドレット (新しいテンプレート用) または [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレット (既存のテンプレートを変更する場合) を使用して、この変数を RightsDefinition パラメーターに指定します。 ただし、これらのユーザーを既存のテンプレートに追加する場合は、外部ユーザーだけでなく、テンプレートに既存のグループの権限定義オブジェクトを定義する必要があります。
-
-テンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
+カスタム テンプレートをラベルに変換して、外部ユーザーを簡単に追加できるようにする方法については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Azure RMS で Azure AD の動的なグループを使用できますか。
 Azure AD Premium の機能では、[属性ベースのルール](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)を指定することによってセキュリティ グループの動的メンバーシップを構成できます。 このグループの種類は、メール アドレスをサポートしていないので、Azure Rights Management サービスで使用することはできません。 ただし、Office 365 グループでは、両方の動的グループ メンバーシップをサポートし、メールが有効です。 このグループではメールが有効なため、Azure Rights Management 保護で使用できます。
