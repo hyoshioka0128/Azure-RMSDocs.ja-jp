@@ -4,7 +4,7 @@ description: "管理者が Azure Information Protection のドキュメント追
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f815fb9f9f1092ce83e9edc72f91381d3e8b46f3
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: dd8b2dcf785d47ec779b314072fb5edddf556163
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -32,11 +32,13 @@ ms.lasthandoff: 07/17/2017
 
 ドキュメント追跡サイトを有効にすると、既定では、保護されたドキュメントにアクセスしようとしている人の電子メール アドレス、アクセスを試みた時刻、その人がいる位置情報などが示されます。 このレベルの情報は、共有ドキュメントの使用方法を決めたり、不審なアクティビティが確認された際にアクセス権を取り消すべきかどうかを判断したりするのに役立ちます。 ただし、このユーザー情報へのアクセス権は、プライバシー保護の観点から一部またはすべてのユーザーに対して無効にする必要がある場合もあります。 
 
-アクティビティを追跡すべきではないユーザーがいる場合は、Azure AD に格納されているグループにそのユーザーを追加し、[Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) コマンドレットでこのグループを指定します。 このコマンドレットを使用するときに指定できるグループは 1 つだけです。 ただし、グループは入れ子構造にすることができます。 
+他のユーザーがアクティビティを追跡すべきではないユーザーがいる場合は、Azure AD に格納されているグループにそのユーザーを追加し、[Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) コマンドレットでこのグループを指定します。 このコマンドレットを使用するときに指定できるグループは 1 つだけです。 ただし、グループは入れ子構造にすることができます。 
 
-これらのグループのメンバーが行った、他のユーザーによって共有されたドキュメントに関連するアクティビティは、ドキュメント追跡サイトに記録されません。 また、ドキュメントを共有したユーザーには電子メール通知が送信されません。
+これらのグループ メンバーについては、ユーザーがグループ メンバーと共有したドキュメントに関連するアクティビティが発生した場合に、ドキュメント追跡サイトでユーザーがアクティビティを確認することはできません。 また、ドキュメントを共有したユーザーには電子メール通知が送信されません。
 
 この構成を使用する場合、引き続きすべてのユーザーがドキュメント追跡サイトを使用でき、保護されたドキュメントへのアクセスを取り消すことができます。 ただし、Set-AadrmDoNotTrackUserGroup コマンドレットを使用して指定したユーザーのアクティビティを確認することはできません。
+
+この設定はエンド ユーザーのみに影響します。 Azure Information Protection の管理者は、Set-AadrmDoNotTrackUserGroup を使用して指定されているユーザーも含めた、すべてのユーザーのアクティビティを常に追跡できます。 管理者がユーザーのドキュメントを追跡する方法については、「[ユーザーのドキュメントの追跡と取り消し](#tracking-and-revoking-documents-for-users)」のセクションをご覧ください。
 
 このオプションが不要になった場合は、[Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) を使用できます。 または、ユーザーを選択的に削除するには、グループからユーザーを削除します。その際、[グループ キャッシュ](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management)にご注意ください。 このオプションが現在使用中であるかどうかは、[Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup) を使用して確認できます。 このグループ構成のコマンドレットを使用するには、バージョン **2.10.0.0** 以降の PowerShell 用 Azure Rights Management (AADRM) モジュールが必要です。
 
