@@ -4,27 +4,23 @@ description: "ドキュメントまたは電子メール メッセージにラ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: efc60ee6126a6a0b2798f66c46c2242942878829
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a65299651abd97adb0fc7641be2f2f3c6f1d8d2f
+ms.sourcegitcommit: adb38b008656ac706920a8488fd2beafedadbc97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象: Azure Information Protection*
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
-
-視覚的なマーキングは、ラベルが適用されたときと、Word、Excel、および PowerPoint でドキュメントが保存されたときに、これらの Office アプリケーションのドキュメントに適用されます。 電子メール メッセージの場合、Outlook から電子メール メッセージが送信されたときに視覚的なマーキングが適用されます。
-
-ファイル エクスプローラーでの右クリック操作によってラベルが適用された場合は、ドキュメントに視覚的なマーキングは適用されません。 PowerShell を使用してドキュメントを分類した場合も同様です。
 
 視覚的なマーカーの追加情報:
 
@@ -33,10 +29,32 @@ ms.lasthandoff: 06/30/2017
 - 透かしは、Word、Excel、および PowerPoint に適用されます。
 
     - Excel: 透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
-
+    
     - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。
+    
+    - Azure Information Protection クライアントの最新プレビュー バージョンをご利用の場合は、複数行のテキストがサポートされます。
 
 - ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。
+
+## <a name="when-visual-markings-are-applied"></a>視覚的なマーキングが適用されるタイミング
+
+電子メール メッセージの場合、Outlook から電子メール メッセージが送信されたときに視覚的なマーキングが適用されます。
+
+ドキュメントでは、視覚的なマーキングが次のように適用されます。
+
+- Azure Information Protection クライアントの**一般公開バージョンの場合**: 
+    
+    - Office アプリでは、ラベルの適用時と、ドキュメントの毎回の保存時に、ラベルからの視覚的なマーキングが適用されます。 
+    
+    - エクスプローラーまたは PowerShell を使用してドキュメントにラベルを付ける場合は、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが保存されるたびに適用されます。
+
+- Azure Information Protection クライアントの**最新プレビュー バージョンの場合**: 
+    
+    - Office アプリでは、ラベルの適用時に、ラベルからの視覚的なマーキングが適用されます。 ラベル付きのドキュメントを開いたときと、ドキュメントを最初に保存したときにも、視覚的なマーキングが適用されます。  
+    
+    - エクスプローラーまたは PowerShell を使用してドキュメントにラベルを付ける場合は、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに適用されます。
+
+## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9fc5560381cc8ff3e3b8b1780c97ab88f3dda44a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2a5791dfd571091e8c9e510447b0a5b36818a8df
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -96,7 +96,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
     -   使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば AD FS を使用している場合は、TechNet の記事「[AD FS の追加の認証方法の構成](https://technet.microsoft.com/library/dn758113.aspx)」をご覧ください。
 
-        このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」(Office 365 の機能 – 合理化された ID プログラム) を参照してください。
+        このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 
 ## <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするクライアント デバイス
 

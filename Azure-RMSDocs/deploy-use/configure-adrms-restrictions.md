@@ -4,17 +4,17 @@ description: "Azure Information Protection による HYOK (AD RMS) 保護を選�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: ac4068885df92c58ecba2a90e7aa0aeaaa34e8e9
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
@@ -83,7 +83,7 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
     
     - 単一の AD RMS ルート クラスター。
     
-    - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスターの暗号化モードのバージョンと、その全体的な正常性を確認するには、[RMS アナライザー ツール](https://www.microsoft.com/en-us/download/details.aspx?id=46437)を使用します。   
+    - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスター プロパティの **[全般]** タブから、モードを確認できます。
     
     - サービス接続ポイント (SCP) が Active Directory に登録されていない: SCP は、AD RMS 保護と Azure Information Protection が併用されるときは使用されません。 AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](../rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。
     

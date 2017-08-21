@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -110,7 +110,7 @@ AD RMS 暗号化モードを確認するには:
  
 - Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
 
-- AD RMS のすべてのサポート対象バージョンの場合: [RMS アナライザー](https://www.microsoft.com/en-us/download/details.aspx?id=46437)と **AD RMS 管理**オプションを使用して、**RMS サービス情報**の暗号モードを表示します。
+- Windows Server 2008 R2 の場合: 「[RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (Windows Server 2008 R2 と Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました)](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server )」の修正プログラムがインストールされているかを確認します。 インストールされていない場合は、ご使用の AD RMS クラスターは暗号化モード 1 で実行されています。
 
 ### <a name="migration-limitations"></a>移行の制限
 

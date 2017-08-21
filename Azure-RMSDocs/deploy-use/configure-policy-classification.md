@@ -4,17 +4,17 @@ description: "ラベルの条件を構成するときに、ドキュメントま
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 510375dec4fc4e28197270e62655375698580b95
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/30/2017
  
 - 推奨分類は、Word、Excel、および PowerPoint でファイルが保存されるときに適用されます。
 
-条件を構成するときに、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 これらの条件は、ドキュメントや電子メールの本文とヘッダーおよびフッターに適用されます。 条件について詳しくは、「[組み込み条件に関する情報](#information-about-the-built-in-conditions)」セクションを参照してください。
+条件を構成するときには、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 これらの条件は、ドキュメントや電子メールの本文とヘッダーおよびフッターに適用されます。 条件について詳しくは、「[組み込み条件に関する情報](#information-about-the-built-in-conditions)」セクションを参照してください。
 
 複数のラベルへの適用時の複数条件の評価方法:
 
@@ -41,9 +41,9 @@ ms.lasthandoff: 06/30/2017
 
 ラベルを推奨される操作として適用するように条件を構成したときのプロンプトの例を、カスタム ポリシー ヒントと共に示します。
 
-![Azure Information Protection の検出と推奨事項](../media/info-protect-recommend-callouts.png)
+![Azure Information Protection の検出と推奨事項](../media/info-protect-recommend-calloutsv2.png)
 
-この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、バーを閉じることでその推奨を無効にすることができます。
+この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨を無効にできます。
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>ラベルの推奨または自動分類を構成するには
 
