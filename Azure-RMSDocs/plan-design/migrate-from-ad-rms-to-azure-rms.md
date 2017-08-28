@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -102,9 +102,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 ### <a name="cryptographic-mode-considerations"></a>暗号化モードに関する注意事項
 
-AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開始する前にクラスターを 暗号化モード 2 にアップグレードしないでください。 代わりに暗号化モード 1 を使用して移行し、移行後タスクの 1 つとして移行の終了時にテナント キーを更新します。
-
-暗号化モード 1 は、移行プロセス中にのみサポートされます。
+AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開始する前にクラスターを暗号化モード 2 にアップグレードしないでください。 代わりに暗号化モード 1 を使用して移行し、移行後タスクの 1 つとして移行の終了時にテナント キーを更新できます。
 
 AD RMS 暗号化モードを確認するには:
  
@@ -215,7 +213,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 12: Azure Information Protection テナント キーを更新する**
 
-    この手順は、移行前に暗号化モード 2 を実行していなかった場合に必要であり、Azure Information Protection テナント キーのセキュリティを保護するためすべての移行に対して、必須ではありませんが推奨されます。
+    移行前に暗号化モード 2 で実行されていない場合は、この手順の使用をお勧めします。
 
 
 ## <a name="next-steps"></a>次のステップ

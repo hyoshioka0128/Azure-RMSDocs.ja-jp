@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9f04698064037343719d274e793eb560b703b031
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 22b43c2b149c7a7fd5ce79ca3ceef8100b9d5e7b
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -40,7 +40,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 1. AD RMS の管理権限を持つユーザーとして AD RMS クラスターにログオンします。
 
-2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]**を展開し、 **[信頼された発行ドメイン]**をクリックします。
+2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、**[信頼ポリシー]**を展開し、**[信頼された発行ドメイン]**をクリックします。
 
 3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから [ **信頼された発行ドメインのエクスポート**] をクリックします。
 
@@ -133,7 +133,9 @@ AD RMS からインポートしたテンプレートの外観と動作は、Azur
 
 - 移行前に Azure Information Protection カスタム テンプレートを作成した場合は、手動でエクスポートしてインポートする必要があります。
 
-- AD RMS のテンプレートが **ANYONE** グループを使用していた場合は、同等のグループと権限を手動で追加する必要があります。
+- AD RMS のテンプレートで **ANYONE** グループが使用されている場合、組織の外部からユーザーまたはグループを追加しなければならない可能性があります。 
+    
+    AD RMS で、ANYONE グループはすべての認証済みユーザーに権限を付与しています。 このグループは、自動的に Azure AD テナントのすべてのユーザーに変換されます。 その他に権限を付与する必要があるユーザーが存在しない場合、これ以上の操作は必要ありません。 ただし、ANYONE グループを使用して外部ユーザーを追加したならば、それらのユーザーと、それらのユーザーに付与する権限を手動で追加する必要があります。
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>移行前にカスタム テンプレートを作成した場合の手順
 
@@ -149,21 +151,15 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートが **ANYONE** グループを使用していた場合、テンプレートを Azure Information Protection にインポートすると、このグループは自動的に削除されます。同等のグループまたはユーザーおよび同じ権限を、インポートされたテンプレートに手動で追加する必要があります。 Azure Information Protection 用の同等グループの名前は **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<テナント名>.onmicrosoft.com** です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。
+AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前のグループを使用するように自動的に変換されます。たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
 
-AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS (Windows PowerShell を使用した AD RMS の管理)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」を参照してください。
+Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。このグループを追加するために、オプションの表示は [**追加\<組織名> - すべてのメンバー**] となります。
 
-Azure クラシック ポータルの既定の権限ポリシー テンプレートの 1 つをコピーした場合、組織の自動作成されたグループが表示され、その後 **[権限]** ページで **[ユーザー名]** を特定できます。 ただし、手動で作成またはインポートしたテンプレートに Azure クラシック ポータルを使用してこのグループを追加することはできないため、代わりに次の Azure RMS PowerShell オプションのいずれかを使用する必要があります。
+AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS ](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」 (Windows PowerShell を使用した AD RMS の管理) を参照してください。
 
-- [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) PowerShell コマンドレットを使用して、"AllStaff" グループおよび権限を権限定義オブジェクトとして定義し、ANYONE グループに加えて元のテンプレートで既に権限を付与されていた他の各グループまたはユーザーに対してこのコマンドを再度実行します。 その後、[Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) コマンドレットを使用して、これらの権限定義オブジェクトをテンプレートに追加します。
+Azure Portal でテンプレートをラベルに変換すると、外部ユーザーをそれらのテンプレートに容易に追加できます。 次に、**[アクセス許可の追加]** ブレードで、**[詳細を入力]** を選択して、対象のユーザーのメール アドレスを手動で指定します。 
 
-- [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) コマンドレットを使用して、テンプレートを .XML ファイルにエクスポートします。このファイルを編集して、"AllStaff" グループおよび権限を既存のグループおよび権限に追加してから、[Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) コマンドレットを使用してこの変更を Azure Information Protection にインポートします。
-
-> [!NOTE]
-> この同等グループ "AllStaff" は、AD RMS の ANYONE グループとまったく同じではありません。"AllStaff" グループには、Azure テナントのすべてのユーザーが含まれます。一方、ANYONE グループには、認証されたすべてのユーザーが含まれ、組織外のユーザーが含まれる場合があります。
-> 
-> こうしうた 2 つのグループの違いにより、"AllStaff" グループだけでなく外部ユーザーも追加しなければならない場合があります。 グループの外部の電子メール アドレスは、現在サポートされていません。
-
+この構成の詳細については、「[Rights Management による保護を適用するようにラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
 
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>ANYONE グループを含む AD RMS テンプレートを識別するためのサンプル Windows PowerShell スクリプト
 このセクションに含まれるサンプル スクリプトを使用すると、前のセクションで説明したように、ANYONE グループが定義されている AD RMS テンプレートを識別できます。

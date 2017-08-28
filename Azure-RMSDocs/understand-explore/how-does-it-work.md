@@ -4,7 +4,7 @@ description: "Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -56,11 +56,13 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 2048 ビットは、Azure Rights Management サービスがアクティブ化されているときのキーの長さです。 1024 ビットは、省略可能な次のシナリオでサポートされています。
 
-- AD RMS クラスターが暗号化モード 1 で実行され、暗号化モード 2 にアップグレードできない場合の、オンプレミスからの移行中。
+- AD RMS クラスターが暗号化モード 1 で実行される場合の、オンプレミスからの移行中。
+
+- AD RMS クラスターが Exchange Online を使用していた場合の、オンプレミスからの移行後。
 
 - 移行前にオンプレミスで作成された、アーカイブされたキー。これにより、AD RMS で保護されたコンテンツが、Azure Rights Management への移行後も開いた状態を続行できます。
 
-- お客様が、Azure Key Vault を使用して独自キーの使用 (BYOK) を選択した場合。 最小キー サイズは 2048 ビットが推奨ですが、必須ではありません。
+- お客様が、Azure Key Vault を使用して独自キーの使用 (BYOK) を選択した場合。 Azure Information Protection は 1024 ビットと 2048 ビットのキーの長さをサポートしています。 セキュリティを強化するために、キーの長さを 2048 ビットにすることをお勧めします。
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Azure RMS 暗号化キーの格納とセキュリティ保護のしくみ
 
