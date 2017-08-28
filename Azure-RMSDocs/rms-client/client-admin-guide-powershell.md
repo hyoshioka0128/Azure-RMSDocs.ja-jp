@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 618e8b6a160ccc699658bf8c317c40ed2ded3bee
-ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
+ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
 
@@ -77,7 +77,7 @@ AzureInformationProtection モジュールのインストールに関する前�
 
 4. 北米以外のリージョンの場合： 
     
-    - サービスに対する認証のレジストリを編集します。
+    - サービス検出のレジストリを編集します。
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>前提条件 1: Azure Rights Management サービスをアクティブ化する必要がある
 
@@ -181,7 +181,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
     
         New-MsolServicePrincipal
     
-    プロンプトが表示されたら、Azure Rights Management サービスに接続してファイルの保護と保護解除を行うアカウントであることが後に分かるように、サービス プリンシパルの表示名を入力します。
+    プロンプトが表示されたら、Azure Rights Management サービスに接続してファイルの保護と保護解除を行うアカウントであることが後でわかるように、サービス プリンシパルの表示名を入力します。
     
     New-MsolServicePrincipal の出力例を次に示します。
     
@@ -229,12 +229,9 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 > [!NOTE]
 > 自分のアカウントを使って Azure Rights Management サービスへの認証を行う場合は、ファイルを保護または保護解除する前、またはテンプレートを取得する前に、Set-RMSServerAuthentication を実行する必要はありません。
 
-
-
-
 #### <a name="prerequisite-4-for-regions-outside-north-america"></a>前提条件 4: 北米以外のリージョンの場合
 
-Azure 北米リージョン以外での認証の場合は、レジストリを次のように編集する必要があります。 Azure Information Protection テナントが北米にある場合は、この手順を行う必要はありません。
+サービス プリンシパル アカウントを使用して、Azure 北米リージョン以外でファイルを保護し、テンプレートをダウンロードする場合は、レジストリを次のように編集する必要があります。 
 
 1. Get-AadrmConfiguration コマンドレットを再び実行し、**CertificationExtranetDistributionPointUrl** と **LicensingExtranetDistributionPointUrl** の値を書き留めておきます。
 

@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aeffd9780001f4c91ea8600f11d8fc3b36abce73
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
+ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -35,7 +35,7 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 
 2. [ **SCP** ] タブをクリックします。
 
-3. [ **SCPを変更する** ] チェック ボックスをオンにします。
+3. [ **SCP を変更する** ] チェック ボックスをオンにします。
 
 4. **[現在の SCP を削除する]** を選択して **[OK]** をクリックします。
 
@@ -70,20 +70,28 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを更新する
-この手順は、AD RMS デプロイが RMS 暗号化モード 1 を使用していた場合に移行が完了したときに必要です。 キーの更新を行うと、RMS 暗号化モード 2 を使用する新しいテナント キーが作成されます。 暗号化モード 1 は、移行プロセス中の Azure Information Protection でのみサポートされます。
+## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 
-移行が完了するときのキーの更新は、AD RMS キーに対する潜在的なセキュリティ侵害から Azure Information Protection テナント キーを保護する場合にも役立ちます。
+AD RMS デプロイで RMS 暗号化モード 1 が使用されていた場合、移行が完了したら、この手順を実行することをお勧めします。 キーの再入力を行うと、RMS 暗号化モード 2 を使用した保護が行われます。 
 
-Azure Information Protection テナント キーを更新すると ("キーのローリング" とも呼ばれます)、新しいキーが作成され、元のキーがアーカイブされます。 ただし、あるキーから別のキーへの移行は、即時には実行されませんが、数週間かかります。 即時ではないため、元のキーの侵害を疑い、移行が完了してすぐに Azure Information Protection テナント キーを更新するまで待たないでください。
+AD RMS のデプロイで暗号化モード 2 が使用されている場合も、この手順を実行することをお勧めします。新しいキーは、AD RMS キーに対する潜在的なセキュリティ侵害からテナントを保護するのに役立つためです。
+
+ただし、AD RMS で Exchange Online を使用していた場合はキーの再入力を行わないでください。 Exchange Online では暗号モードの変更をサポートしていません。 
+
+Azure Information Protection テナント キーの再入力を行うと ("キーをロールする" とも言われる)、現在アクティブなキーはアーカイブされ、Azure Information Protection は、指定した別のキーの使用を開始します。 この別のキーは、Azure Key Vault で自分で作成した新しいキーとすることも、テナント用に自動的に作成された既定のキーとすることもできます。
+
+あるキーから別のキーへの移行は、即時には実行されず、数週間かかります。 即時には行われないために、元のキーの侵害が疑われるまで待たず、移行が完了したらすぐにこの手順を実行してください。
 
 Azure Information Protection テナント キーを更新するには:
 
-- テナント キーが Microsoft によって管理されている場合: [Microsoft サポート](../get-started/information-support.md#to-contact-microsoft-support)に連絡し、**AD RMS からの移行後の Azure Information Protection テナント キーの更新要求に関する Azure Information Protection サポート ケース**を開きます。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 Standard サポートの料金が適用されます。テナント キーの更新は無料のサポート サービスではありません。
+- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレット [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行し、テナント用に自動的に作成されたキーの識別子を指定します。 指定する値を識別するには、[Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+    
+        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- テナント キーを自分で管理している場合 (BYOK): Azure Key Vault で、Azure Information Protection テナントで使用しているキーを更新し、再度 [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを実行して、新しいキー URL を指定します。 
+- **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
 
 Azure Information Protection テナント キーの管理の詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
+
 
 ## <a name="next-steps"></a>次のステップ
 
