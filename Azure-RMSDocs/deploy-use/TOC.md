@@ -4,7 +4,6 @@
 # [サービスのデプロイと使用](activate-service.md)
 ## [サービスのアクティブ化](activate-service.md)
 ### [Office 365 管理センター](activate-office365.md)
-### [Azure クラシック ポータル](activate-azure-classic.md)
 ### [Azure Portal](activate-azure.md)
 ## [アプリケーションの構成](configure-applications.md)
 ### [Office 365](configure-office365.md)
