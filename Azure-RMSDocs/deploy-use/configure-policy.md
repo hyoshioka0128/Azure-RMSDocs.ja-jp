@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 88843833b87eb054f534a7c85e6a7c2e52797e9b
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -48,7 +48,7 @@ Azure Information Protection P2 サブスクリプションを必要とするオ
 
 2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
     
-    サービスに最初に接続するとき、**[クイック スタート]** ページが自動的に開きます。 すべてのユーザーが取得するポリシーを構成するには、**[グローバル ポリシー]** をクリックして、**[Policy: Global]\(ポリシー: グローバル\)** ブレードを開きます。 このブレードは、ユーザのサービスに対する後続の接続を自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集します。 
+    サービスに初めて接続すると、**[Azure Information Protection - クイック スタート]** ブレードが自動的に開きます。 すべてのユーザーに適用されるポリシーを構成するには、**[ポリシー]** メニューから **[グローバル ポリシー]** を選んで、**[Azure Information Protection - グローバル ポリシー]** ブレードを開きます。 このブレードは、ユーザのサービスに対する後続の接続を自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集します。 
     
     Azure Information Protection ポリシーには、構成可能な次の要素があります。
     
@@ -70,7 +70,7 @@ Azure Information Protection には[既定ポリシー](configure-policy-default
 
 これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。 詳細については、次のセクションのリンクを使用すると、関連するオプションとそのオプションを構成する方法を確認することができます。 
 
-[Azure Information Protection] ブレードで変更を行ったら、**[保存]** をクリックして変更を保存します。または、**[破棄]** をクリックして、最後に保存した設定に戻します。 
+[Azure Information Protection] ブレードで変更を行ったら、**[保存]** をクリックして変更を保存します。または、**[破棄]** をクリックして、最後に保存した設定に戻します。
 
 目的の変更が終わったら、**[公開]** をクリックします。 
 

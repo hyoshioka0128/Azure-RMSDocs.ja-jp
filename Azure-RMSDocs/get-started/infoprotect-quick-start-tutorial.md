@@ -4,17 +4,17 @@ description: "約 20 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
-ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.openlocfilehash: 34a20c3e83b2d3d6fde15d1226535ccb90431126
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
@@ -36,9 +36,11 @@ ms.lasthandoff: 07/10/2017
   > [!TIP] 
   > サブスクリプションの申請プロセスの完了までに時間がかかる可能性があるため、申請が必要な場合は、事前に済ませてください。
 
-- Azure ポータルにサインインして Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (たとえば、Exchange Online または Exchange Server) も必要です。
+- Azure Portal にサインインして Azure Information Protection ポリシーを構成するための全体管理者アカウントまたはセキュリティ管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (Exchange Online など) も必要です。
 
-- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 Service Pack 2 がインストールされている必要があります。 クラウド アカウントを使用して、Office アプリにサインインする必要があります。
+- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 Service Pack 2 がインストールされている必要があります。 
+    
+    これらのアプリケーションを Azure Information Protection で使うには、[Azure Rights Management サービスの使用を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)が必要です。 たとえば、Office 365 E3 や Office 365 E5 サブスクリプションです。 このサブスクリプションからライセンスを使うときは、Office アプリにサインインする必要があります。
 
 では、始めましょう。
 

@@ -4,17 +4,17 @@ description: "ラベルの条件を構成するときに、ドキュメントま
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: ef84f3ceb8f732dd475b4db8eae489e715d4b7da
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/11/2017
  
 - 推奨分類は、Word、Excel、および PowerPoint でファイルが保存されるときに適用されます。
 
-条件を構成するときには、"クレジット カード番号" や "米国社会保障番号" などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 これらの条件は、ドキュメントや電子メールの本文とヘッダーおよびフッターに適用されます。 条件について詳しくは、「[組み込み条件に関する情報](#information-about-the-built-in-conditions)」セクションを参照してください。
+条件を構成するときには、**クレジット カード番号**や**米国社会保障番号 (SSN)** などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 これらの条件は、ドキュメントや電子メールの本文とヘッダーおよびフッターに適用されます。 条件について詳しくは、「[情報の種類に関する詳細](#details-about-the-information-types)」セクションをご覧ください。
 
 複数のラベルへの適用時の複数条件の評価方法:
 
@@ -47,37 +47,42 @@ ms.lasthandoff: 08/11/2017
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>ラベルの推奨または自動分類を構成するには
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザーのウィンドウで、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 自動分類または推奨される分類用に構成するラベルがすべてのユーザーに適用される場合は、**[Policy: Global (ポリシー: グローバル)]** ブレードで変更するラベルを選択して **[ラベル]** ブレードで変更を行い、必要に応じてその後のブレードで設定を行います。 
+2. 構成するラベルがすべてのユーザーに適用される場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
+    
+    構成するラベルが[スコープ付きポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードからスコープ付きポリシーを選びます。
 
-     構成するラベルが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。  
+3. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、構成するラベルを選びます。 
 
-3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
+4. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
-4. **[条件]** ブレードで、定義済みの条件を使用する場合は **[組み込み]** を、独自の条件を指定する場合は **[カスタム]** を選択した後、**[保存]** をクリックします。
-
-    - **[組み込み]** を選択した場合: 使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
+5. **[条件]** ブレードで、定義済みの条件を使用する場合は **[情報の種類]** を、独自の条件を指定する場合は **[カスタム]** を選択した後、**[保存]** をクリックします。
+    - **[情報の種類]** を選択した場合: 使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
         
-        これらの条件の検出ルールといくつかの例については、「[組み込み条件に関する情報](#information-about-the-built-in-conditions)」セクションを参照してください。
-
+        条件の完全なリストを使うには、Azure Information Protection クライアントの最新プレビュー バージョンを使う必要があります。 クライアントの最新の一般公開バージョンを使っている場合は、**SWIFT コード**、**クレジット カード番号**、**ABA 銀行コード**、**米国社会保障番号 (SSN)**、**国際銀行口座番号 (IBAN)** の 5 つの条件のみがサポートされます。 [詳細情報](#details-about-the-information-types)
+    
     - **[カスタム]** を選択した場合: 一致させる名前とフレーズを指定します。引用符と特殊文字は除外する必要があります。 次に、正規表現として一致させるかどうか、大文字と小文字を区別するかどうか、最小出現回数、出現で出現回数に一意の値を含めるどうかを選択します。
         
-    **出現オプションの例**: 組み込みの社会保障番号オプションを選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[Count occurrences with unique values only]** (一意の値のみを持つ出現回数のカウント) を **[オン]** に設定した場合、この条件には適合しません。このオプションを **[オフ]** に設定した場合、条件に適合します。
+        Azure Information Protection クライアントの最新プレビュー バージョンを使っている場合は、正規表現は Office 365 の RegEx パターンを使います。 詳しくは、Office ドキュメントの「[Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2)」(正規表現に基づく一致の定義) をご覧ください。 
+        
+    **出現オプションの例**: 組み込みの社会保障番号オプションを選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[一意の値のみを含む出現回数をカウント]** を **[オン]** に設定した場合、条件は満たされません。 このオプションを **[オフ]** に設定した場合、条件は満たされます。
 
-5. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
-
+6. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
+    
     - 自動分類または推奨分類を選択します。**[Select how this label is applied: automatically or recommended to user]** (ラベルの適用方法を選択してください: 自動またはユーザーに推奨) で、**[自動]** または **[推奨]** を選択します。
-
+    
     - ユーザー プロンプトまたはポリシー ヒント用のテキストを指定します。既定のテキストを維持するか、独自の文字列を指定します。
 
-6. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+7. ユーザーが変更を使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-## <a name="information-about-the-built-in-conditions"></a>組み込み条件に関する情報
+## <a name="details-about-the-information-types"></a>情報の種類に関する詳細
 
-以下の条件から選択できます。
+Azure Information Protection クライアントの最新プレビュー バージョンを使っている場合、情報の種類の完全なリストがサポートされ、Office 365 データ損失防止 (DLP) の機密情報の種類とパターン検出が使われます。 多くの共通の機密情報の種類から選ぶことができ、これらの一部は異なるリージョンに固有です。 詳しくは、Office ドキュメントの「[What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b)」(検索される機密情報の種類) をご覧ください。 Azure Information Protection は、これらの情報の種類を評価するとき、Office DLP 信頼レベルの設定を使わず、最も低い信頼度に従って一致します。  
+
+クライアントの最新の一般公開バージョンを使っている場合は、次の情報の種類のみがサポートされます。
 
 - [SWIFT コード](#swift-code )
 
@@ -89,6 +94,7 @@ ms.lasthandoff: 08/11/2017
 
 - [国際銀行口座番号 (IBAN)](#international-banking-account-number-iban)
 
+クライアントの一般公開バージョンの各情報の種類について詳しくは、以下のセクションをご覧ください。
 
 ### <a name="swift-code"></a>SWIFT コード
 
@@ -208,7 +214,7 @@ ms.lasthandoff: 08/11/2017
 
 1. 次のフレーズ: **IBAN** 
 
-2. IBAN 番号: 国コード (2 文字) で始まり、チェック ディジット (2 桁の数字) と銀行口座番号 (最大30 桁の数字) が続く番号。
+2. IBAN 番号: 国コード (2 文字) で始まり、チェック ディジット (2 桁の数字) と銀行口座番号 (最大 30 桁の数字) が続く番号。
 
 
 テスト用の例:

@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 80efd633bc814af1ac28e4b6bf2d0b3062b27d01
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
+ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -30,19 +30,15 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 追加の分類機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
 
-- ラベル名とツール ヒントは 1 言語でのみサポートされます。 ただし、複数言語サポートは現在プレビュー段階です。 詳細については、[他の言語用ラベルを構成する方法](../deploy-use/configure-policy-languages.md)に関するページをご覧ください。
+- ラベル名とツール ヒントは 1 言語でのみサポートされます。 ただし、複数言語サポートは現在プレビュー段階です。 詳しくは、「[Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法](../deploy-use/configure-policy-languages.md)」をご覧ください。
 
 - 分類とラベル付けには集中的なログはありません。
-
-- 自動分類の条件は、語句またはパターンでなければなりません。
 
 - モバイル デバイス (iOS および Android) および Mac コンピューター用の Office アプリや Office Web アプリ (Office Online) ではラベル付けできません。
 
 - 分類およびラベル付けは Exchange Online や SharePoint Online とは統合されません。
 
-- パートナーおよび開発者用の SDK にはまだ分類とラベル付け機能は含まれていません。
-
-2 月のリリースでは以前の多くの制限がなくなりました。 詳細については、[ブログの投稿のお知らせ](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/)を参照してください。
+Azure Information Protection の [User Voice サイト](https://msip.uservoice.com/)にアクセスし、新機能のご要望をお知らせください。また、リクエストへの投票も受け付けています。
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>分類とラベルを構成するにはグローバル管理者である必要がありますか?
 

@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection ポリシーでテンプレートを構成して管理する"
-description: "現在はプレビュー段階ですが、Azure Information Protection ポリシーで Rights Management テンプレートを構成および管理できるようになりました。"
+title: "Azure Information Protection のテンプレートを構成して管理する"
+description: "Azure Portal から Rights Management テンプレートを構成して管理します。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
-ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
+ms.openlocfilehash: 5075c8cbab441a376595baabd7863005b15b84e3
+ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -40,33 +40,40 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 ## <a name="default-templates"></a>既定のテンプレート
 
-Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、組織内で権限を与えられたユーザーにアクセスを制限する既定のテンプレートが 2 つテナントに自動的に作成されます。 これらの 2 つのテンプレートには、次の制限があります。 
+Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、組織内で権限を与えられたユーザーにアクセスを制限する既定のテンプレートが 2 つテナントに自動的に作成されます。 これらの 2 つのテンプレートが作成されたとき、次の制限が設定されます。 
 
 - 保護されたコンテンツの読み取りまたは変更の権限
     
-    特定のアクセス許可: コンテンツの表示、ファイルの保存、コンテンツの編集、割り当てられた権限の表示、Macro の許可、転送、返信、全員に返信
+    - **特定のアクセス許可**: コンテンツの表示、ファイルの保存、コンテンツの編集、割り当てられた権限の表示、Macro の許可、転送、返信、全員に返信
 
 - 保護されたコンテンツの読み取り専用の表示
     
-    - 特定の権限:コンテンツの表示
+    - **特定のアクセス許可**: コンテンツの表示
 
-これらのテンプレートを利用することで、組織の機密データの保護をすぐに開始できます。 これらのテンプレートは Azure Information Protection ラベルと組み合わせて利用するか、Rights Management テンプレートを利用できる[アプリケーションやサービス](../understand-explore/applications-support.md)で単体で利用できます。
+さらに、テンプレートは、7 日間オフライン アクセスを許可し、有効期限がないように構成されます。
+
+>[!NOTE]
+> これらの設定および既定のテンプレートの名前と説明は変更できます。 この機能は、Azure クラシック ポータルでは不可能であり、PowerShell ではサポートされないままです。
+
+これらの既定のテンプレートを利用することで、組織の機密データの保護をすぐに開始できます。 これらのテンプレートは Azure Information Protection ラベルと組み合わせて利用するか、Rights Management テンプレートを利用できる[アプリケーションやサービス](../understand-explore/applications-support.md)で単体で利用できます。
 
 また、独自のカスタム テンプレートを作成することもできます。 必要なテンプレートはおそらく数個のみですが、最大 500 個のカスタム テンプレートを Azure に保存することができます。
 
 ### <a name="default-template-names"></a>既定のテンプレート名
 
-Azure Information Protection のサブスクリプションを最近入手した場合、既定のテンプレートの名前は次のようになります。
+Azure Information Protection のサブスクリプションを最近入手した場合、既定のテンプレートは次の名前で作成されます。
 
 - **社外秘 \ すべての従業員** (保護されたコンテンツの読み取りアクセス許可または変更アクセス許可の場合)。
 
 - **非常に機密性の高い社外秘 \ すべての従業員** (保護されたコンテンツの読み取り専用権限の場合)。
 
-Azure Information Protection サブスクリプションを入手してからしばらく経過している場合、あるいは Azure Information Protection サブスクリプションを持っていないが、Azure Rights Management が含まれる Office 365 サブスクリプションを持っている場合、既定のテンプレートの名前は次のようになります。
+Azure Information Protection サブスクリプションを入手してからしばらく経過している場合、あるいは Azure Information Protection サブスクリプションを持っていないが、Azure Rights Management が含まれる Office 365 サブスクリプションを持っている場合、既定のテンプレートは次の名前で作成されます。
 
 - **\<組織の名前> - 社外秘** (保護されたコンテンツの読み取りアクセス許可または変更アクセス許可の場合)。
 
 - **\<組織の名前> - Confidential View Only** (保護されたコンテンツの読み取り専用アクセス許可の場合)。 
+
+Azure Portal を使っている場合、これらの既定テンプレートの名前を変更 (および再構成) できます。
 
 >[!NOTE]
 >**[Azure Information Protection - グローバル ポリシー]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure ポータルでは、Azure RMS 保護を含むラベル構成の一部として表示されます。 テナントに設定されているテンプレートはいつでも確認できます。[AADRM PowerShell モジュール](administer-powershell.md)から [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) を実行してください。
@@ -96,21 +103,21 @@ Azure Information Protection サブスクリプションを入手してからし
     
     また現時点では、部門別テンプレートのアプリケーションの互換性を設定できません。 必要な場合は、PowerShell の [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレッドを使用して設定できます。
 
-- 現在のところ、Azure クラシック ポータルまたは PowerShell を使用して複数の言語で構成されたテンプレートでは、名前と説明にその言語が表示されませんが、設定は維持されます。
-
-- テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。
+- テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。 また、このテンプレートは **[テンプレート]** セクションに表示されなくなりました。
 
 - **[テンプレート]** コンテナーからは新しいテンプレートを作成しません。 代わりに、**[保護]** を設定したラベルを作成し、**[保護]** ブレードで使用権限と設定を構成します。 詳しい説明については、「[新しいテンプレートを作成するには](#to-create-a-new-template)」をご覧ください。
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
-1. 新しいブラウザー ウィンドウで、セキュリティ管理者または全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。 
+    
+    たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
+2. 構成するテンプレートがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
+    
+    構成するテンプレートが[スコープ付きポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードからスコープ付きポリシーを選びます。
 
-2. 構成するテンプレートがすべてのユーザーに適用される場合は、**[Azure Information Protection]** ブレードから **[グローバル]** を選択します。 ただし、構成するテンプレートが[スコープ ポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、代わりにそのスコープ ポリシーを選択します。
-
-3. [ポリシー] ブレードで、構成するテンプレートを見つけます。
+3. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、構成するテンプレートを探します。
     
     - 分類、ラベル付け、保護を含むサブスクリプションの場合は、ラベルの後に**テンプレート**を展開します。
     
@@ -122,7 +129,10 @@ Azure Information Protection サブスクリプションを入手してからし
     
     変更を保存するには **[OK]** をクリックし、**[ラベル]** ブレードで **[保存]** をクリックします。
 
-6. ユーザーのアプリケーションとサービスで変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+6. ユーザーのアプリケーションとサービスで変更を使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+
+> [!NOTE]
+> 定義済みのテンプレートを使うためのラベルを構成した場合は、**[保護]** ブレードの **[テンプレートの編集]** ボタンを使ってテンプレートを編集することもできます。 選択したテンプレートを使っているラベルが他にない場合、このボタンはテンプレートをラベルに変換し、手順 5 に移動します。 テンプレートがラベルに変換される場合の処理について詳しくは、次のセクションをご覧ください。
 
 ## <a name="to-convert-templates-to-labels"></a>テンプレートをラベルに変換するには
 
@@ -132,7 +142,9 @@ Azure Information Protection サブスクリプションを入手してからし
 
 すべてのテンプレートをラベルに変換する必要はありませんが、すべて変換すると、保護設定がラベルのすべての機能と完全に統合されるため、個別に設定を維持する必要がなくなります。
 
-テンプレートをラベルに変換するには、テンプレートを右クリックして、**[ラベルに変換]** を選択します。 または、コンテキスト メニューを使用してこのオプションを選択します。
+テンプレートをラベルに変換するには、テンプレートを右クリックして、**[ラベルに変換]** を選択します。 または、コンテキスト メニューを使用してこのオプションを選択します。 
+
+保護および定義済みテンプレートのラベルを構成するときに、**[テンプレートの編集]** ボタンを使って、テンプレートをラベルに変換することもできます。 
 
 テンプレートをラベルに変換する場合
 
@@ -148,21 +160,23 @@ Azure Information Protection サブスクリプションを入手してからし
 
 **Azure RMS** の保護設定で新しいラベルを作成すると、その処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
 
-1. 作成する新しいテンプレートがすべてのユーザーに適用される場合は、**[Policy: Global]\(ポリシー: グローバル\)** ブレードで **[新しいラベルの追加]** をクリックします。
+1. 新しいテンプレートがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
     
-     作成する新しいテンプレートが部門別テンプレートであり、選択されたユーザーだけに適用される場合は、まず、最初の **[Azure Information Protection]** ブレードでスコープ ポリシーを選択または作成します。
+     新しいテンプレートが部門テンプレートであり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードから[スコープ付きポリシー](configure-policy-scope.md)を作成または選択します。
 
-2. **[ラベル]** ブレードで、既定の **[有効]**: **[オン]** を変更せずにこの新しいテンプレートを公開するか、この設定を **[オフ]** に変更してテンプレートをアーカイブ済みとして作成します。 次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
+2. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、**[新しいラベルの追加]** をクリックします。
 
-3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
+3. **[ラベル]** ブレードで、既定の **[有効]**: **[オン]** を変更せずにこの新しいテンプレートを公開するか、この設定を **[オフ]** に変更してテンプレートをアーカイブ済みとして作成します。 次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
+
+4. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
     
-     ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar.png)
+     ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar-configured.png)
 
-4. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
+5. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
     
     変更を保存するには **[OK]** をクリックし、**[ラベル]** ブレードで **[保存]** をクリックします。
 
-5. これらのテンプレートをユーザーのアプリケーションとサービスで使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+6. これらのテンプレートをユーザーのアプリケーションとサービスで使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 
 ## <a name="next-steps"></a>次のステップ
