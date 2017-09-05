@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e942555c7a985db10054aa3f13be5ebcda2269a3
-ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
+ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -330,7 +330,7 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 これらの言語については、Azure Information Protection クライアントのメニュー オプション、ダイアログ ボックス、およびメッセージがユーザーの言語で表示されます。 言語を検出するインストーラーが 1 つあるため、他言語の Azure Information Protection クライアントをインストールするための追加の構成は必要ありません。 
 
-ただし、ユーザーに表示されるラベル名は、[既定のポリシー](../deploy-use/configure-policy-default.md)や指定されたラベル名に応じて自動的には翻訳されません。 ユーザーが他言語でラベルを表示できるようにするには、独自の翻訳を指定し、その翻訳を使用するように Azure Information Protection ポリシーを構成する必要があります。 詳細については、「[Azure Information Protection で他の言語用ラベルを構成する方法](../deploy-use/configure-policy-languages.md)」を参照してください。
+ただし、Azure Information Protection ポリシーでラベルを構成するときは、指定するラベルの名前と説明は自動的には翻訳されません。 2017 年 8 月 30 日以降、最新の[既定のポリシー](../deploy-use/configure-policy-default.md)には一部の言語のサポートが含まれるようになりました。 ユーザーに希望する言語でラベルが表示されるようにするには、独自の翻訳を指定し、その翻訳を使用するように Azure Information Protection ポリシーを構成する必要があります。 詳細については、「[Azure Information Protection で他の言語用ラベルを構成する方法](../deploy-use/configure-policy-languages.md)」を参照してください。 視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Azure Information Protection クライアントをアンインストールするには
 

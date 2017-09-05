@@ -4,17 +4,17 @@ description: "Azure Information Protection による HYOK (AD RMS) 保護を選�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
@@ -61,13 +61,17 @@ Azure RMS による保護を使うときの利点は得られないことに加�
 
 - Office 2010 や Office 2007 はサポートされません。
 
-- Azure RMS による保護のためのラベルを構成するときに**[転送不可]**オプションを使用しないでください。 ユーザーにも、このオプションを Outlook で手動選択しないよう指示する必要があります。 
+- Outlook で **[転送不可]** を選択しないようにユーザーに指示するか、または具体的なガイダンスを提供します。 
 
-    "転送不可" オプションがラベルによって、またはユーザーの手動設定によって適用されている場合に、このオプションを Azure Rights Management サービスによって適用するつもりであっても、AD RMS デプロイによって適用される可能性があります。 このシナリオでは、外部の共有相手は転送不可オプションが指定されたメール メッセージを開くことができなくなります。
+    HYOK または Azure Rights Management サービスを使うように **[転送不可]** のラベルを構成できますが、ユーザーが [転送不可] を選択することもできます。 ユーザーは、Office リボンの **[メッセージ]** タブの **[転送不可]** ボタンまたは Outlook のメニュー オプションを使って、このオプションを選択できます。 **[転送不可]** メニュー オプションは、**[ファイル]** > **[アクセス許可]** と、リボンの **[オプション]** タブの **[アクセス許可]** ボタンから表示されます。 
     
-    バージョン 1.9.58.0 以降の Azure Information Protection クライアント (現在プレビュー中) では、Outlook の **[転送不可]** ボタンは常に Azure RMS を使用します。 保護のラベルを構成する場合、この設定は、Outlook の **[転送不可]** メニュー オプションや **[転送不可]** オプションには影響しません。 この動作を回避するには、[クライアント詳細設定](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)を構成して Outlook の **[転送不可]** ボタンを非表示にします。
+    ユーザーが [転送不可] ボタンを選択するときは、Azure RMS または AD RMS を使うことができ、どちらが選択されるかは決まっていません。 ユーザーは、Outlook メニュー オプションから **[転送不可]** を選択するとき、Azure RMS または AD RMS を選択できますが、ユーザーは自分のメール メッセージではどちらのオプションを選択すればよいかわからない場合があります。 どちらのシナリオでも、Azure RMS を使うべきときに AD RMS を使うと、外部の共有ユーザーはそれらのメール メッセージを開けなくなります。
+    
+    ユーザーが Outlook で **[転送不可]** ボタンを選択すると、Azure Information Protection クライアントの最新のプレビュー バージョンは常に Azure RMS を使用します。 この動作を回避するには、[クライアント詳細設定](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)を構成して Outlook の **[転送不可]** ボタンを非表示にします。 
 
-- AD RMS (HYOK) の保護と Azure RMS による保護を使用するときにユーザーがカスタム アクセス許可を構成する場合、ドキュメントまたは電子メールは常に Azure Rights Management によって保護されます。
+- Azure Information Protection クライアントの現在の一般公開バージョンの場合: AD RMS (HYOK) の保護および Azure RMS の保護を使っている場合にユーザーがカスタム アクセス許可を構成すると、ドキュメントまたはメールは Azure Rights Management によって常に保護されます。 この制限は、クライアントの現在のプレビュー バージョンには適用されません。
+
+- Word、Excel、PowerPoint、エクスプローラーにユーザー定義のアクセス許可を構成する場合 (これは、Azure Information Protection クライアントの現在のプレビュー バージョンでサポートされています): エクスプ ローラーでは、保護は常に HYOK (AD RMS) の保護ではなく Azure RMS を使って適用されます。 
 
 - ユーザーが Outlook で AD RMS 保護が適用されたラベルを選択し、その後、電子メールを送信する際に気が変わって Azure RMS 保護が適用されたラベルを選択した場合、後から選択されたラベルの適用は失敗します。 ユーザーには次のエラー メッセージが表示されます: **Azure Information Protection ではこのラベルを適用できません。この操作を実行するアクセス許可がありません。**
     
@@ -107,7 +111,9 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
 
-**HYOK (AD RMS)** の保護のラベルを構成する場合、AD RMS クラスターのテンプレート GUID とライセンス URL を指定する必要があります。 これらの情報は、いずれも Active Directory Rights Management サービス コンソールから確認することができます。
+**HYOK (AD RMS)** の保護のラベルを構成する場合、AD RMS クラスターのライセンス URL を指定する必要があります。 さらに、ユーザーを許可するためにアクセス許可に構成したテンプレートを指定するか、またはユーザーがアクセス許可とユーザーを定義できるようにする必要があります。 
+
+テンプレート GUID とライセンス URL の値は、Active Directory Rights Management サービス コンソールで確認できます。
 
 - テンプレート GUID を確認するには: クラスターを展開し、**[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例: 82bf3474-6efe-4fa1-8827-d1bd93339119
 

@@ -4,7 +4,7 @@ description: "この情報保護ソリューションをサポートするアプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f6d13d05c7139635c9a43770e418c1d7e11f880e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 6aa009795e45281df1c9406357f810b8d25302bc
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="activating-azure-rights-management"></a>Rights Management をアクティブにする
 
@@ -42,11 +42,9 @@ Azure Information Protection の Azure Rights Management サービスをテナ�
 
 Azure Rights Management をアクティブにした後は、組織内のすべてのユーザーがファイルに情報保護を適用したり、Azure Rights Management で保護されているファイルを開く (使用する) ことができます。 ただし、そちらを希望する場合は、段階的デプロイのオンボーディング コントロールを使用して、情報保護を適用できるユーザーを制限できます。 詳細については、この記事の「[段階的デプロイのオンボーディング コントロールの構成](#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
 
-管理ポータルから Rights Management サービスをアクティブ化する手順については、Office 365 管理センター、Azure クラシック ポータル、Azure Portal (現在プレビュー) のいずれかを選択してください。
+管理ポータルから Rights Management サービスをアクティブ化する手順については、Office 365 管理センターと Azure Portal のどちらを使うかを選択してください。
 
 - [**Office 365 管理センター**](activate-office365.md) - グローバル管理者アカウントが必要
-
-- [**Azure クラシック ポータル**](activate-azure-classic.md) - グローバル管理者アカウントが必要
 
 - [**Azure Portal**](activate-azure.md) - グローバル管理者アカウントまたは[セキュリティ管理者アカウント](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)が必要
 

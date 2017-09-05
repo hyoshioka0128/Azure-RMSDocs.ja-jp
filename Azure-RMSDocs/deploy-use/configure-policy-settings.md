@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 28997c346c727112a1acb35014af1c8ad8174ccf
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2bc5493c906b0d21be2679f0d777cb4fd5fbe30c
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -27,11 +27,15 @@ Information Protection バーに表示されるタイトルとツールヒント
 
 設定を構成するには:
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザーのウィンドウで、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。 
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウで、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 構成する設定をすべてのユーザーに適用する場合は、次のグローバル設定を **[Policy: Global (ポリシー: グローバル)]** ブレードで構成します。
+2. 構成する設定がすべてのユーザーに適用される場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
+    
+    構成する設定が[スコープ付きポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードからスコープ付きポリシーを選びます。
+
+3. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、設定を構成します。
     
     - **All documents and emails must have a label** (すべてのドキュメントと電子メールにラベルを設定する必要があります): このオプションを **[オン]** に設定した場合は、すべての保存されるドキュメントと送信される電子メールにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。 
         
@@ -52,8 +56,6 @@ Information Protection バーに表示されるタイトルとツールヒント
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page** (Azure Information Protection クライアントの "詳細情報" Web ページ用のカスタム URL を指定する): このリンクは、**[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで**[保護]** > **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
         
         たとえば、ヘルプ デスク用に、クライアントのインストールと使用の方法が記載されている Microsoft のドキュメント ページ (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) や、リリース バージョン情報のページ (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**) を指定します。 あるいは、ユーザー向けの Web ページを独自に作成して、ヘルプ デスクへの連絡方法を掲載したり、ラベルを使用する手順をユーザーに説明するビデオを公開したりすることが考えられます。
-        
-         [スコープ ポリシー](configure-policy-scope.md)を作成した場合は、指定されたユーザーにこれらの設定を上書きすることができます。 スコープ ポリシーでこれらの設定を構成するには、最初の **[Azure Information Protection]** ブレードで該当するスコープ ポリシーを選択します。
 
 3. 変更を保存するには、**[保存]** をクリックします。
 

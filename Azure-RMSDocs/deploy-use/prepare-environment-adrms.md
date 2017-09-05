@@ -4,7 +4,7 @@ description: "AD RMS がデプロイされた Azure Rights Management の場合�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 577f91958c4b54c4fb023d973475c917b28f72b3
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 2e8f6596216e06e2af773c0a19a2c5eaafd096b8
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Active Directory Rights Management サービス (AD RMS) もある場合の Azure Rights Management 用の環境の準備
 
@@ -26,7 +26,7 @@ Active Directory Rights Management サービス (AD RMS) を既に使用して�
 
 ## <a name="you-see-an-option-to-activate-azure-rms-when-you-configure-azure-information-protection"></a>Azure Information Protection を構成する際に Azure RMS をアクティブにするためのオプションが表示される
 
-**Azure Information Protection - RMS 設定 (プレビュー)** のブレードには、Azure Rights Management サービス (Azure RMS) をアクティブにするためのオプションがあります。 
+**[Azure Information Protection - RMS の設定]** のブレードには、Azure Rights Management サービス (Azure RMS) をアクティブにするためのオプションがあります。 
 
 Active Directory Rights Management サービス (AD RMS) も使用する場合は、**[アクティブ化]** オプションは選択しないでください。 AD RMS もある場合に Azure Rights Management をアクティブ化することは、互換性のある組み合わせではありません。 このシナリオはサポートされておらず、信頼できる結果が得られないため、この時点では Azure Rights Management をアクティブにしないことが重要です。 
 
