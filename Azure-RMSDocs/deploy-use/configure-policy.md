@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 23f41199f03bb6a6530f668c20c030b52613d3c2
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/30/2017
 
 ## <a name="subscription-support"></a>サブスクリプション サポート
 
-Azure Information Protection ポリシーは、さまざまなレベルのサブスクリプションをサポートします。
+Azure Information Protection では、さまざまなレベルのサブスクリプションをサポートしています。
 
 - Azure Information Protection P2: すべての分類、ラベル付け、保護機能をサポートします。
 
@@ -34,13 +34,16 @@ Azure Information Protection ポリシーは、さまざまなレベルのサブ
 
 - Azure Rights Management サービスを含む office 365: 保護をサポートしますが、分類とラベル付けはサポートしません。
 
-Azure Information Protection P2 サブスクリプションを必要とするオプションは、現在はポータルで確認します。
+Azure Information Protection P2 サブスクリプションが必要なオプションはポータルで確認します。
 
-テナントのユーザーのサブスクリプションが組み合わさっている場合、ユーザーがダウンロードする Azure Information Protection ポリシーに、ユーザーのアカウントがライセンスされていない構成オプションが含まれていないことを確認する必要があります。 すべてのユーザーがライセンスを持っているとは限らないオプションを構成する場合は、ユーザがライセンスを持つ機能を使用するよう構成しなくてもよいように、スコープ ポリシーを使用します。
+組織が種類の異なるサブスクリプションを保有している場合、アカウントに使用を許諾されていない機能をユーザーが使用しないようにする必要があります。 Azure Information Protection クライアントはライセンスのチェックと適用を行いません。 一部のユーザーのライセンスには付属しないオプションを構成する場合は、範囲設定されたポリシーやレジストリ設定を使用して、組織がライセンス条件を遵守するようにします。
+
+- **組織が Azure Information Protection P1 と Azure Information Protection P2 の種類が異なるライセンスを保有している場合**: P2 ライセンスを保有しているユーザーは、Azure Information Protection P2 ライセンスが必要なオプションを構成する場合、[範囲設定されたポリシー](configure-policy-scope.md)を 1 つ以上作成して使用します。 Azure Information Protection P2 ライセンスを必要とするオプションがグローバル ポリシーに含まれないようにします。
+
+- **組織が Azure Information Protection のサブスクリプションを保有し、一部のユーザーが Azure Rights Management サービスを含む Office 365 のライセンスのみを保有している場合**: Azure Information Protection のライセンスを保有しないユーザー向けに、コンピューター上のレジストリを編集して、Azure Information Protection ポリシーがダウンロードされないようにします。 手順については、以下のカスタマイズについての管理ガイド、「[Enforce protection-only mode when your organization has a mix of licenses (組織が種類の異なるライセンスを保有している場合の保護のみモードの適用)](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses)」をご覧ください。
 
 サブスクリプションの詳細については、「[Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)」を参照してください。
 
-スコープ ポリシーを構成する方法の詳細については、[スコープ ポリシーを使用して特定のユーザーのポリシーを構成する方法](configure-policy-scope.md)に関する記事を参照してください。
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 

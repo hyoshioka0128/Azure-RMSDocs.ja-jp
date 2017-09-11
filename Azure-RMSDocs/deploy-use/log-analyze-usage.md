@@ -4,7 +4,7 @@ description: "Azure Rights Management (Azure RMS) で使用状況のログを使
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
 
 >*適用対象: Azure Information Protection、Office 365*
 
-この情報は、Azure Information Protection からの Azure Rights Management サービスの使用状況ログの使用方法を理解するのに役立ちます。 このサービスでは、組織のドキュメントや電子メールのデータ保護が提供され、ユーザーからの要求、このサービスの管理者が行う操作、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが行う操作を含め、すべての要求をログに記録することができます。
+この情報は、Azure Information Protection からの Azure Rights Management サービスの使用状況ログの使用方法を理解するのに役立ちます。 このサービスは、組織のドキュメントや電子メールのデータ保護機能を提供し、このサービスに対するすべての要求を記録できます。 これらの要求には、ユーザーがドキュメントや電子メールを保護していて、このコンテンツも利用している場合に、このサービスのために管理者が実行した操作や、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが実行した操作が含まれます。 
 
 これらの Azure Rights Management サービス ログを使用すれば、次のビジネス シナリオをサポートできます。
 
@@ -40,12 +40,18 @@ ms.lasthandoff: 07/31/2017
 
     情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 このログを使用すれば、このような質問に答えることができます。保護されているコンテンツを使用するユーザーが Azure Rights Management サービスで保護されているドキュメントおよび画像を開くには、常に Rights Management ライセンスを取得する必要があるためです。これは、ファイルが電子メールで転送されたり、USB ドライブなどのストレージ デバイスにコピーされたりした場合も同様です。 このため、Azure Rights Management サービスを使用してデータを保護していれば、これらのログをフォレンジック分析のための最終的な情報源として活用できます。
 
-> [!NOTE]
-> Azure Rights Management サービスの管理タスクのログ記録だけに関心があり、Rights Management サービスの使用状況追跡は望まない場合は、Azure Rights Management の [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) Windows PowerShell コマンドレットを使用できます。
-> 
-> Azure クラシック ポータルを通じて、**RMS の概要**、**RMS のアクティブ ユーザー**、**RMS デバイス プラットフォーム**、**RMS アプリケーションの使用状況**など、概要レベルの使用状況レポートを使用することもできます。 Azure クラシック ポータルからこれらのレポートにアクセスするには、**[Active Directory]** をクリックし、ディレクトリを選択して開いてから、**[レポート]** をクリックします。
+この使用状況ログだけでなく、次のログ オプションもあります。
 
-次のセクションでは、Azure Rights Management の使用状況ログの詳細について説明します。
+|ログ オプション|説明|
+|----------------|---------------|
+|管理ログ|Azure Rights Management サービスの管理タスクを記録します。 たとえば、このサービスが非アクティブ化されていて、スーパー ユーザー機能が有効で、ユーザーがサービスに対する管理者権限を委任されている場合などです。 <br /><br />詳細については、PowerShell コマンドレット「[Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog)」の記事をご覧ください。|
+|Web レポート|Azure クラシック ポータルの高度な使用状況レポート: **RMS の概要**、**RMS のアクティブ ユーザー**、**RMS のデバイス プラットフォーム**、**RMS アプリケーションの使用状況**。 <br /><br />Azure クラシック ポータルからこれらのレポートにアクセスするには、**[Active Directory]** をクリックし、ディレクトリを選択して開いてから、**[レポート]** をクリックします。|
+|ドキュメント追跡|ユーザーが Azure Information Protection クライアントまたは RMS 共有アプリで追跡したドキュメントを追跡したり取り消したりできるようにします。 ユーザーに代わって、グローバル管理者がこれらのドキュメントを追跡することもできます。 <br /><br />詳細については、「[Azure Information Protection のドキュメント追跡の構成と使用](../rms-client/client-admin-guide-document-tracking.md)」をご覧ください。|
+|クライアント イベント ログ|Azure Information Protection クライアントの使用状況アクティビティ。ローカルの Windows **[アプリケーションとサービス]** イベント ログ、**[Azure Information Protection]** に記録されます。 <br /><br />詳細については、「[Azure Information Protection クライアントの使用状況ログ](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)」をご覧ください。|
+|クライアント ログ ファイル|Azure Information Protection クライアントのトラブルシューティング ログは、**%localappdata%\Microsoft\MSIP** に格納されています。 <br /><br />これらのファイルは Microsoft サポート用です。|
+
+
+次のセクションでは、Azure Rights Management サービスの使用状況ログの詳細について説明します。 
 
 ## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Azure Rights Management の使用状況ログを有効にする方法
 2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure Rights Management サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 

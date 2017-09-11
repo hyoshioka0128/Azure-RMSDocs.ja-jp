@@ -4,7 +4,7 @@ description: "保護のみモードで Azure Information Protection クライア
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +12,30 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 55254496b23e49fe7e2dbd19721a824739004b21
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 84644f717a6005245847c9e9598b87c5af885aa7
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="protection-only-mode-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントの保護のみモード
 
-Azure Information Protection ポリシーがない Azure Information Protection クライアントを実行すると、**保護のみ**モードで表示されます。 たとえば、エクスプローラーを使用し、右クリックして **[分類して保護する]** を右クリックします。
+Azure Information Protection クライアントにドキュメントや電子メールを分類するラベルが割り当てられていない場合、このクライアントは**保護のみ**モードで実行されます。 たとえば、このモードでは、Windows ファイル エクスプローラーの使用時に右クリックして **[分類して保護する]** を選択すると、以下が表示される場合があります。
 
 ![保護のみモード](../media/protection-only-mode.png)
 
- このモードは、次のようなシナリオで実行します。
+保護のみモードは、次のようなシナリオで実行されます。
 
-- 組織が Azure Information Protection のサブスクリプション (データの分類と保護用) を持っておらず、Azure Rights Management サービスのサブスクリプション (Office 365 でのデータ保護用) を持っている場合。 
-    - これはサポートされるシナリオです。Azure Information Protection クライアントを使用してファイルを保護し、保護されたファイルを表示することができます。
+- 組織が分類機能とラベル付け機能を含む Azure Information Protection のサブスクリプションを保有せず、Azure Rights Management サービスを使用したデータ保護を含む Office 365 のサブスクリプションを保有している場合。 
+    
+    - Azure Information Protection クライアントを使用してファイルを保護し、保護されたファイルを表示できます。 ドキュメントや電子メールを分類したり、ラベル付けしたりすることはできません。
+
+- 組織が一部のユーザーのみを対象とする Azure Information Protection のサブスクリプションを保有している場合。
+    
+    - このサブスクリプションの組み合わせの場合には、管理者は、分類機能とラベル付け機能を一部のユーザーのみが使用できるようにする必要があります。 残りのユーザーは Azure Information Protection クライアントを保護のみモードで実行します。 
 
 - 組織が Azure Information Protection のサブスクリプションを持っているのに、Azure Information Protection ポリシーをダウンロードできない場合。 
+    
     - この状況は、構成の誤りやサインインの失敗によって発生します。 ヘルプ デスクまたは管理者に問い合わせてください。ただし、その間に、Azure Information Protection クライアントを使用してファイルを保護し、保護されたファイルを表示できるようになる可能性があります。
 
 ## <a name="limitations-for-protection-only-mode"></a>保護のみモードの制限
