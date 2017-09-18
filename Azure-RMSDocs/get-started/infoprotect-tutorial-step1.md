@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: ac28e18573ec1bd8f0a3f1e715a8c8e1b7c2854e
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: e80d47d1a477c03296b9a2e0eb4373929cfaa66b
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>手順 1.Rights Management サービスの有効化
  
@@ -40,15 +40,15 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
     > [!TIP] 
     > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
 
-4. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページに関する情報を確認します。 後でここに戻ることができます。 このチュートリアルでは、**[RMS の設定]** を選びます。  
+4. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページに関する情報を確認します。 後でここに戻ることができます。 このチュートリアルでは、**[RMS の設定]** または **[Protection activation]\(保護のアクティブ化\)** を選択します。 このオプションの名前は、変更される予定です。 
 
 5. Azure Rights Management サービスがテナントでアクティブかどうかを確認できます。 
     
-    - サービスがアクティブの場合、次の確認情報が表示されます。
+    - サービスがアクティブである場合は、次のような確認情報が表示されます。
         
         ![Azure RMS での Azure Information Protection の状態](../media/info-protect-azurerms-activated.png)
         
-    - サービスがアクティブでない場合は、状態情報でそのことが示され、アクティブ化するオプションが表示されます。
+    - サービスがアクティブでない場合は、状態情報でそのことが示され、アクティブ化するオプションが表示されます。 たとえば、
         
         ![Azure RMS での Azure Information Protection の状態](../media/info-protect-azurerms-deactivated.png)
 
