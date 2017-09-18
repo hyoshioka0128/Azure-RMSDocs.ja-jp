@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: dbe198f84ed092f815e2c419d039d4f926fb5892
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
@@ -67,7 +67,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection ラベルに構成された保護](../media/info-protect-protection-bar-configured.png) 
     
-4. **[保護]** ブレードで、**[Azure RMS]** および **[アクセス許可の設定]** が選択されていることを確認します。 次に、**[アクセス許可の追加]** を選択します。
+4. **[保護]** ブレードで、**[Azure RMS]** または **[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。 このオプションの名前は、変更される予定です。 **[アクセス許可の設定]** も選択されていることを確認します。 次に、**[アクセス許可の追加]** を選択します。
 
 5. **[アクセス許可の追加]** ブレードで、**[\<組織名> の追加 - すべてのメンバー]** を選択します。 たとえば、組織名が VanArsdel Ltd の場合、次のようなオプションが表示されます。
     
@@ -89,7 +89,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 8. コンテンツの有効期限とオフライン アクセスを確認して既定値のままにし、**[OK]** をクリックして保存して、**[保護]** ブレードを閉じます。
 
-8. **[サブラベル]** ブレードに戻り、**[視覚的なマーキングの設定]**  セクションを見つけます。
+8. **[サブラベル]** ブレードに戻り、**[視覚的なマーキングの設定] ** セクションを見つけます。
     
     **[このラベルが付いたドキュメントにはフッターをつける]** 設定で、**[オン]** をクリックし、**[テキスト]** ボックスに「**Classified as Confidential**」と入力します。 
     
@@ -123,7 +123,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 13. **[サブラベル]** ブレードで **[保存]** をクリックします。 次に、**[Policy: Global]**(ポリシー: グローバル) ブレードで **[保存]** を再度クリックします。
     
-    視覚的なマーキングと Azure RMS の保護用に構成された新しいサブラベルが表示されます。
+    視覚的なマーキングと保護用に構成された新しいサブラベルが表示されます。 たとえば、
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー構成済み](../media/info-protect-policy-configuredv2.png)
     

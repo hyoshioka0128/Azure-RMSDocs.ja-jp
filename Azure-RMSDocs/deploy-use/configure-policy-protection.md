@@ -4,17 +4,17 @@ description: "Rights Management 保護を使用するようにラベルを構成
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 2f6bc027353f38e272a6765c10e770643b739d26
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: fce3c905f2f48c2723ee7f0b55ff5ddb77f6258a
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -39,7 +39,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 > [!IMPORTANT]
 > この保護を適用するようにラベルを構成するには、組織に対して Azure Rights Management サービスをアクティブにする必要があります。 この手順をまだ行っていない場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
 
-ラベルで保護を適用する場合、保護された文書は SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する共同作成、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示がサポートされていません。 
+ラベルで保護を適用する場合、保護された文書は SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する共同作成、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP) がサポートされていません。 
 
 ユーザーが電子メールを保護するラベルを Outlook で適用するために、Information Rights Management (IRM) 用に Exchange を構成する必要はありません。 ただし、Exchange が IRM 用に構成されるまで、Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 たとえば、ユーザーは保護された電子メールを携帯電話や Web 上の Outlook で表示できなくなります。また、保護された電子メールには検索のインデックスを作成できません。権限管理の保護のために Exchange Online DLP も構成できなくなります。 このような追加のシナリオをサポートするように Exchange を構成するには、以下のリソースを参照してください。
 
@@ -73,8 +73,9 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
     
     ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar-configured.png)
 
-6. **[保護]** ブレードで、**[Azure RMS]** または **[HYOK (AD RMS)]** を選択します。     
-    ほとんどの場合、アクセス許可の設定には **[Azure RMS]** を選択します。 この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限事項を読み、理解するまでは **[HYOK (AD RMS)]** を選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。 HYOK (AD RMS) の構成を続行するには、手順 10 に進みます。
+6. **[保護]** ブレードで、**[Azure RMS]** または **[Azure (cloud key)]\(Azure (クラウド キー)\)** を選択するか、あるいは **[HYOK (AD RMS)]** を選択します。 最初のオプションの名前は変更される予定です。
+    
+    ほとんどの場合、アクセス許可の設定には **[Azure RMS]** または **[Azure (cloud key)]\(クラウド キー\)** を選択します。 この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限事項を読み、理解するまでは **[HYOK (AD RMS)]** を選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。 HYOK (AD RMS) の構成を続行するには、手順 10 に進みます。
     
 7. 次のいずれかのオプションを選択します。
     
@@ -88,15 +89,15 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
         
         Word、Excel、PowerPoint、エクスプローラーのオプションを選択した場合: このオプションは、Azure Information Protection クライアントのプレビュー バージョンを必要とします。 このオプションを設定し、ユーザーがプレビュー クライアントを持っている場合、これらのアプリケーションにラベルが表示されます。 ユーザーがラベルを適用したときの結果の動作は、ユーザーがカスタム アクセス許可を選択するダイアログ ボックスが表示されます。 このダイアログ ボックスで、ユーザーはアクセス許可、ユーザーまたはグループ、有効期限を指定する必要があります。 これらの値を指定する方法に関する指示とガイダンスをユーザーに必ず提供します。
 
-8. **[Azure RMS]** で **[定義済みのテンプレートを選択する]** を選択した場合、ドロップ ダウン ボックスをクリックし、このラベルで文書とメールを保護するために使用する[テンプレート](../deploy-use/configure-policy-templates.md)を選択します。 アーカイブ済みのテンプレートや別にラベルに選択されているテンプレートは表示されません。
+8. **[Azure RMS]** または **[Azure (cloud key)]\(Azure (クラウド キー)\)** で **[定義済みのテンプレートを選択する]** を選択した場合、ドロップ ダウン ボックスをクリックし、このラベルで文書とメールを保護するために使用する [テンプレート](../deploy-use/configure-policy-templates.md) を選択します。 アーカイブ済みのテンプレートや別にラベルに選択されているテンプレートは表示されません。
     
     **部門別テンプレート**を選択する場合、または[オンボーディング コントロール](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成済みの場合:
     
     - 構成されたテンプレート範囲の外にいるユーザー、または Azure Rights Management 保護の適用から除外されているユーザーは、引き続きラベルを確認できますが、適用することはできません。 それらのユーザーがラベルを選択した場合、次のメッセージが表示されます: **Azure Information Protection はこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
         
-        スコープ ポリシーを構成する場合でも、公開済みのすべてのテンプレートが常に表示されることに注意してください。 たとえば、マーケティング グループのスコープ ポリシーを構成しているとします。 選択可能な Azure RMS テンプレートは、マーケティング グループにスコープされたテンプレートに制限されることはなく、選択されたユーザーが使用できない部門別のテンプレートを選択することが可能です。 構成を簡単にしてトラブルシューティングを最小限に抑えるために、部門別テンプレートの名前がスコープ ポリシーのラベルに一致するように名前を付けることを考慮してください。 
+        スコープ ポリシーを構成する場合でも、公開済みのすべてのテンプレートが常に表示されることに注意してください。 たとえば、マーケティング グループのスコープ ポリシーを構成しているとします。 選択可能なテンプレートは、マーケティング グループにスコープされたテンプレートに制限されることはなく、選択されたユーザーが使用できない部門別のテンプレートを選択することが可能です。 構成を簡単にしてトラブルシューティングを最小限に抑えるために、部門別テンプレートの名前がスコープ ポリシーのラベルに一致するように名前を付けることを考慮してください。 
             
-9. **[Azure RMS]** に **[Set permissions]\(アクセス許可を設定\)** を選択した場合、テンプレートの場合と同じ設定を構成できます。 
+9. **[Azure RMS]** または **[Azure (cloud key)]\(Azure (クラウド キー)\)** に **[アクセス許可の設定]** を選択した場合、テンプレートの場合と同じ設定を構成できます。 
     
     **[アクセス許可の追加]** を選択し、**[アクセス許可の追加]** ブレードで、選択したラベルで保護されるコンテンツの使用権限を与えるユーザーとグループの最初のセットを選択します。
     
@@ -143,7 +144,15 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 
 12. **[ラベル]** ブレードで、**[保存]** をクリックします。
 
-13. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+13. **[Azure Information Protection]** ブレードで、**[保護]** 列を使用して、目的の保護設定がラベルに表示されていることを確認します。
+    
+    - 保護を構成した場合は、**[Azure RMS]** または **[HYOK (AD RMS)]**、あるいはチェック マーク。 
+    
+    - 保護を削除するように構成した場合は、**[保護の削除]**、またはキャンセルを示す X マーク。
+    
+    - 保護を設定していない場合は、空白のフィールド。 
+
+13. 他のユーザーが変更を表示できるようにするには、**[公開]** をクリックします。
 
 ## <a name="next-steps"></a>次のステップ
 

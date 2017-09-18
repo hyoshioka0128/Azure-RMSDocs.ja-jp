@@ -1,10 +1,10 @@
 ---
 title: "Azure Portal で Azure RMS をアクティブ化する - AIP"
-description: "ドキュメントとメールの保護を開始する目的で Azure Rights Management サービスをアクティブ化する手順です。"
+description: "組織でドキュメントや電子メールの保護を開始できるように、Azure Portal から保護をアクティブ化するための手順。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 12df794b35b5a5c979709cee61cd61e11b2fb5d4
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 56c75286280905065539b2d865aa0886edfd226f
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
 
@@ -30,7 +30,7 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
     
     [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS) にメール メッセージを送信してください。
 
-2. **[管理]** メニュー オプションを探し、**[RMS の設定]** を選びます。  
+2. **[管理]** メニュー オプションを探し、**[RMS の設定]** または **[Protection activation]\(保護のアクティブ化\)** を選択します。 このオプションの名前は、変更される予定です。
     
     **[アクティブ化]** をクリックし、操作を確定します。 
 
