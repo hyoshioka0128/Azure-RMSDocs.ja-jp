@@ -26,6 +26,7 @@
 ### [テンプレートの構成および管理](configure-policy-templates.md)
 #### [ユーザー用のテンプレートを更新する](refresh-templates.md)
 #### [PowerShell リファレンス](configure-templates-with-powershell.md)
+#### [Azure クラシック ポータルからの移行](migrate-portal.md)
 ### [言語の構成](configure-policy-languages.md)
 ## [RMS コネクタのデプロイ](deploy-rms-connector.md)
 ### [コネクタのインストールと構成](install-configure-rms-connector.md)
