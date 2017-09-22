@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: ccc52f1fca6e968ac1794d7bad437c271f4bd485
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: cfe2fdf41174caf6184d3e160ce9f4d439d55566
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-3-install-the-client"></a>手順 3: クライアントのインストール
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/30/2017
 
 ## <a name="install-the-azure-information-protection-client"></a>Azure Information Protection クライアントのインストール
 
-1. Office がインストールされていて、Word は開いていない状態の PC で、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)にアクセスし、**AzInfoProtection.exe** をダウンロードします。 これは、実稼働ネットワークでサポートされているクライアントの一般公開バージョンです。 ただし、最新の機能と修正プログラムがすべて含まれている最新のプレビュー バージョンを使いたい場合は、**AzInfoProtection_PREVIEW_1.10.52.0.exe** をダウンロードします。
+1. Office がインストールされていて、Word は開いていない状態の PC で、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)にアクセスし、**AzInfoProtection.exe** をダウンロードします。
     
 2. ダウンロードした実行可能ファイルを実行し、指示に従ってクライアントをインストールします。
     
