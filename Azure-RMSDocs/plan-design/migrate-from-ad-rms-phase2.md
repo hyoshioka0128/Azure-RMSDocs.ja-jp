@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 22b43c2b149c7a7fd5ce79ca3ceef8100b9d5e7b
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 3274cb1ddd457647159034b955c47e9ab775f00c
+ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -40,7 +40,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 1. AD RMS の管理権限を持つユーザーとして AD RMS クラスターにログオンします。
 
-2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、**[信頼ポリシー]**を展開し、**[信頼された発行ドメイン]**をクリックします。
+2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]**を展開し、 **[信頼された発行ドメイン]**をクリックします。
 
 3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから [ **信頼された発行ドメインのエクスポート**] をクリックします。
 
@@ -113,7 +113,7 @@ PowerShell セッションを開き、次のコマンドを実行します。
 
 2. Azure Rights Management サービスをアクティブにします。
     
-        Enable-Aadrmservice
+        Enable-Aadrm
 
 **Azure Information Protection テナントが既にアクティブになっている場合はどうすればよいですか。** 組織の Azure Rights Management サービスが既にアクティブ化されている場合は、ユーザーが既に Azure Information Protection を使用してコンテンツを保護し、AD RMS の既存のキー (およびテンプレート) ではなく、自動的に生成されたテナント キー (および既定のテンプレート) を使用している可能性があります。 これは、イントラネット上で適切に管理されたコンピューターではほとんど起こりません。AD RMS インフラストラクチャ用に自動的に構成されるためです。 ただし、イントラネットへの接続の頻度が低いワークグループのコンピューターでは発生する可能性があります。 残念ながら、このようなコンピューターの識別は困難です。そのため、AD RMS から構成データをインポートする前に、サービスをアクティブ化しないようにお勧めします。
 
