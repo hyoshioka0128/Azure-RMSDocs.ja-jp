@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 219f39913261d22709238ee5393e8cc8080070f5
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -81,11 +81,7 @@ Azure Information Protection クライアントが保護をサポートするフ
     |Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます|
     |PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます
 
-- **その他のすべてのファイル**:
-    
-    - クライアントの一般公開バージョン: 1 GB
-    
-    - プレビュー クライアント (最小バージョンは **1.8.41.0**): 使用可能なディスク領域とメモリによってのみ制限されます
+- **その他すべてのファイル**: 使用可能なディスク領域とメモリによってのみ制限されます
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 

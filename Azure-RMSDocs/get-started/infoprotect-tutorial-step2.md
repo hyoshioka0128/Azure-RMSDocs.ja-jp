@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: 4fb571f84e9916fb5573d551ec0f0bf374e5df2f
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
@@ -67,7 +67,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection ラベルに構成された保護](../media/info-protect-protection-bar-configured.png) 
     
-4. **[保護]** ブレードで、**[Azure RMS]** または **[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。 このオプションの名前は、変更される予定です。 **[アクセス許可の設定]** も選択されていることを確認します。 次に、**[アクセス許可の追加]** を選択します。
+4. **[保護]** ブレードで、**[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。 このオプションが選択されていると、Azure Rights Management サービスによって文書と電子メールが保護されます。 **[アクセス許可の設定]** も選択されていることを確認します。 次に、**[アクセス許可の追加]** を選択します。
 
 5. **[アクセス許可の追加]** ブレードで、**[\<組織名> の追加 - すべてのメンバー]** を選択します。 たとえば、組織名が VanArsdel Ltd の場合、次のようなオプションが表示されます。
     

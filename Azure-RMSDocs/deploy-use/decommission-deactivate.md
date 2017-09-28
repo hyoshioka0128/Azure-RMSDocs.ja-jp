@@ -1,10 +1,10 @@
 ---
 title: "Azure RMS の使用停止と非アクティブ化"
-description: "Azure Information Protection からこの情報保護サービスを今後使用しないと決定した場合の詳細および手順です。"
+description: "Azure Information Protection からクラウドベースの保護サービスを今後使用しないと決定した場合の詳細および手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1f8d7a56cec4df8f0ef50f4f83ef662ad8923f17
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: a4ed44939e9853373f272d916e0765572dc0590a
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
-# <a name="decommissioning-and-deactivating-azure-rights-management"></a>Azure Rights Management の使用停止と非アクティブ化
+# <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Azure Information Protection の使用停止と非アクティブ化
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -75,9 +75,9 @@ Azure Information Protection テナント キーがある場合は、オンプ�
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 最初の **[Azure Information Protection]** ブレードで、**[RMS の設定]** または **[Protection activation]\(保護のアクティブ化\)** を選択します。 このオプションの名前は、変更される予定です。 
+2. 最初の **[Azure Information Protection]** ブレードで、**[Protection activation]\(保護のアクティブ化\)** を選択します。 
 
-3.  **[Azure Information Protection - RMS の設定]** または **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、**[非アクティブ化]** を選択します。 **[はい]** を選択して選択肢を確定します。
+3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、**[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
 
 情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、**[非アクティブ化]** が **[アクティブ化]** に変わります。 
 

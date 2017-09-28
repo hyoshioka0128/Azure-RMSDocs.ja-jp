@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
-ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
+ms.openlocfilehash: 99cb5d1ca256977cb07c41bbe153e5ca248b9efd
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの PowerShell の使用
 
@@ -26,13 +26,15 @@ Azure Information Protection クライアントをインストールすると、
 
 コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールは、RMS 保護ツールと共にインストールされる RMS 保護モジュールを置き換えます。 RMSProtection ツールがインストールされているシステムに Azure Information Protection クライアントをインストールすると、RMSProtection モジュールは自動的にアンインストールされます。
 
-AzureInformationProtection モジュールには、RMS 保護ツールのすべての Rights Management コマンドレットに加えて、ラベル付け用に Azure Information Protection (AIP) サービスを使用する 3 つの新しいコマンドレットが含まれます。
+AzureInformationProtection モジュールには、RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection (AIP) サービスを利用する新しいコマンドレットもあります。 たとえば、
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|共有フォルダーで、すべてのファイルを特定のラベルで識別します。|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|共有フォルダーで、ファイルの内容を検査したあと、指定した条件に基づいて、ラベル付けされていないファイルに自動的にラベルを付与します。|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipsuthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
+
 
 すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/module/azureinformationprotection)」 (AzureInformationProtection モジュール) を参照してください。 PowerShell セッション内で、`Get-Help <cmdlet name> -online` のように入力すると最新のヘルプが表示され、英語以外のサポートされている言語でもご覧いただけます。  
 
@@ -95,7 +97,7 @@ Azure Information Protection テナントがアクティブ化されていない
 
 非対話形式で Azure Rights Management サービスに直接接続し、ファイルを保護または保護解除できます。
 
-サービス プリンシパルを使って、非対話形式で Azure Rights Management サービスに接続する必要があります。それには、`Set-RMSServerAuthentication` コマンドレットを使います。 Azure Rights Management サービスに直接接続するコマンドレットを実行する Windows PowerShell セッションごとに、これを行う必要があります。 このコマンドレットを実行する前に、次の 3 つの識別子があることを確認します。
+サービス プリンシパル アカウントを使って、非対話形式で Azure Rights Management サービスに接続する必要があります。それには、`Set-RMSServerAuthentication` コマンドレットを使います。 Azure Rights Management サービスに直接接続するコマンドレットを実行する Windows PowerShell セッションごとに、これを行う必要があります。 このコマンドレットを実行する前に、次の 3 つの識別子があることを確認します。
 
 - BposTenantId
 
@@ -222,7 +224,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 前のコマンドのように、単一のコマンドで値を指定できます。これは、非対話的に実行するスクリプトの場合と同じです。 ただし、テストが目的の場合は、単に Set-RMSServerAuthentication と入力し、プロンプトに 1 つずつ値を入力してもかまいません。 コマンドが完了すると、クライアントは "サーバー モード" で動作するようになります。これは、スクリプトや Windows Server ファイル分類インフラストラクチャなどの非対話型の使用に適しています。
 
-このサービス プリンシパルをスーパー ユーザーにすることを検討します。このサービス プリンシパルでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準のユーザー アカウントをスーパー ユーザーとして構成するときと同じように、Azure RMS コマンドレットの [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) を使いますが、**ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
+このサービス プリンシパル アカウントをスーパー ユーザーにすることを検討します。このサービス プリンシパル アカウントでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準のユーザー アカウントをスーパー ユーザーとして構成するときと同じように、Azure RMS コマンドレットの [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) を使いますが、**ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
 
 スーパー ユーザーについて詳しくは、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」をご覧ください。
 
@@ -259,7 +261,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 ただし、Azure Rights Management サービスに直接接続してファイルを保護または保護解除するには、通常、次に説明するように一連のコマンドレットを実行する必要があります。
 
-最初に、自分のアカウントではなくサービス プリンシパルを使って Azure Rights Management サービスの認証を行う場合は、Powershell セッションで次のように入力します。
+最初に、自分のアカウントではなくサービス プリンシパル アカウントを使って Azure Rights Management サービスの認証を行う場合は、PowerShell セッションで次のように入力します。
 
     Set-RMSServerAuthentication
 
@@ -340,7 +342,7 @@ Active Directory Rights Management サービスだけを使っている場合は
 
 ### <a name="prerequisites"></a>必要条件
 
-AzureInformationProtection モジュールをインストールするための前提条件に加えて、ServerCertification.asmx にアクセスするにはアカウントに読み取りと実行のアクセス許可が必要です。
+AzureInformationProtection モジュールをインストールするための前提条件に加えて、ファイルの保護と保護解除に使用するアカウントには、ServerCertification.asmx にアクセスする読み取り許可と実行許可を与える必要があります。
 
 1. AD RMS サーバーにログオンします。
 
@@ -356,7 +358,9 @@ AzureInformationProtection モジュールをインストールするための�
 
 7. **[ServerCertification.asmx のアクセス許可]** ダイアログ ボックスで、**[追加]** をクリックします。 
 
-8. アカウント名を追加します。 他の AD RMS 管理者もこれらのコマンドレットを使ってファイルを保護および保護解除する場合は、その名前も追加します。
+8. アカウント名を追加します。 他の AD RMS 管理者やサービス アカウントもこれらのコマンドレットを使ってファイルを保護し、保護解除する場合、そのアカウントも追加します。 
+    
+    非対話式でファイルを保護または保護解除する場合、関連するコンピューター アカウントやアカウントを追加します。 たとえば、ファイル分類インフラストラクチャに対して構成されてあり、PowerShell スクリプトでファイルを保護する Windows Server コンピューターのコンピューター アカウントを追加します。 このシナリオには、Azure Information Protection クライアントの最新プレビュー版が必要です。
 
 9. **[許可]** 列で、**[読み取りと実行]** および **[読み取り]** チェック ボックスがオンになっていることを確認します。
 
@@ -435,7 +439,7 @@ AzureInformationProtection モジュールをインストールするための�
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 たとえば、
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 たとえば、
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -447,7 +451,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>非対話形式でファイルに Azure Information Protection のラベル付けをする方法
 
-Azure Information Protection クライアントのバージョン 1.8.41.0 (現在プレビュー中) 以降から、**Set-AIPAuthentication** コマンドレットを使用することで、非対話形式でラベル付けのコマンドレットを実行できます。
+**Set-AIPAuthentication** コマンドレットを利用し、ラベル付けコマンドレットを非対話式に実行できます。
 
 既定では、ラベル付けのコマンドレットを実行するとき、対話型 PowerShell セッション内のユーザー コンテキストでコマンドは動作します。 自動実行するには、そのための新しい Azure AD ユーザー アカウントを作成します。 次に、ユーザーのコンテキストで Set-AIPAuthentication コマンドレットを実行し、Azure AD のアクセス トークンを使用して資格情報を設定し、格納します。 次に、このユーザー アカウントは、Azure Rights Management サービスに認証され、ブートストラップされます。 このアカウントは、Azure Information Protection ポリシーと、ラベルが使用する Rights Management テンプレートをダウンロードします。
 

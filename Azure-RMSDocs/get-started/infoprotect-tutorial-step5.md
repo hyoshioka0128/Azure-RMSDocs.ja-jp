@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
 
@@ -39,9 +39,11 @@ ms.lasthandoff: 06/30/2017
 
     この設定により、受信者はドキュメントを表示できるものの、編集したり、印刷したりすることはできなくなります。
 
-4. **[ユーザーの選択]** では、組織の取引相手に文書を送信する場合と同じように、1 つ以上の勤務先の電子メールを入力します。 必ず、**janetm@contoso.com** または **p.dover@fabrikam.com** のような勤務先の電子メール アドレスを指定してください。現時点では、Azure Information Protection は個人用の電子メール アドレスをサポートしていないためです。 
+4. **[ユーザーの選択]** では、組織の取引相手に文書を送信する場合と同じように、1 つ以上の勤務先の電子メールを入力します。 複数のアドレスを指定するには、セミコロンを使用するか、Enter を押します。 
 
-    または、アドレス帳をクリックして、次のように共同作業者の電子メール アドレスを選択します。
+    必ず、**janetm@contoso.com** または **p.dover@fabrikam.com** のような勤務先の電子メール アドレスを指定してください。現在のところ、このシナリオには Azure Information Protection は個人用の電子メール アドレスをサポートしていないためです。 
+
+    あるいは、**[Select users, groups, or organization]\(ユーザー、グループ、または組織を選択\)** アイコンをクリックし、共同作業者の電子メール アドレスを選択できます。
 
     ![Azure Information Protection クイック スタート チュートリアル手順 5 - カスタム アクセス許可で保護](../media/protect-custom-permissions.png)  
     
@@ -77,7 +79,7 @@ ms.lasthandoff: 06/30/2017
 
 1. Office がインストールされている PC またはモバイル デバイスで、添付ファイルを開き、ドキュメントを読みます。  
 
-2.  ユーザー名とパスワードの入力を求められたら、電子メールと添付ファイルの送信に使われた電子メール アドレスと同じ形式で自分のユーザー名を入力します。 たとえば、**janetm@contoso.com** や **p.dover@fabrikam.com** のようになります。 パスワードには、個人用 RMS にサインアップするときに指定したパスワードを入力します。 組織に Office 365 などのクラウド サービスがあるか、Azure が使用されている場合には、通常の作業パスワードを入力します。
+2.  ユーザー名とパスワードの入力を求められたら、電子メールと添付ファイルの送信に使われた電子メール アドレスと同じ形式で自分のユーザー名を入力します。 たとえば、**janetm@contoso.com** や **p.dover@fabrikam.com** のようになります。パスワードには、個人用 RMS にサインアップするときに指定したパスワードを入力します。 組織に Office 365 などのクラウド サービスがあるか、Azure が使用されている場合には、通常の作業パスワードを入力します。
 
 3. 開いたドキュメントの内容を読みます。 このテキストは、読み取り専用であるため、内容を変更することはできません。
 
@@ -93,7 +95,7 @@ ms.lasthandoff: 06/30/2017
 
 2.  **[ホーム]** タブで、**[保護]** > **[追跡と取り消し]** の順にクリックします。
 
-    ![使用の追跡オプション](../media/track-usage-calloutv2.png)
+    ![使用の追跡オプション](../media/track-usage-calloutv3.png)
 
     これにより、ドキュメント追跡サイトに移動します。
 
