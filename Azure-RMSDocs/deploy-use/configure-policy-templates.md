@@ -4,7 +4,7 @@ description: "Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
 >*適用対象: Azure Information Protection*
 
 >[!NOTE]
->これは、Azure クラシック ポータルのカスタム テンプレート構成の後継にあたる機能です。
+>これは、Azure クラシック ポータルのカスタム テンプレート構成の後継にあたる機能です。 マッピングの概要は「[Azure クラシック ポータルで行っていたタスク](migrate-portal.md)」でご覧いただけます。
 >
 >Azure クラシック ポータルでも引き続きテンプレートを作成し、管理できますが、Azure クラシック ポータルと Azure Portal から同じテンプレートを管理する行為は推奨されません。 テンプレートの構成方法はポータルによって異なります。異なるポータルで同じテンプレートを構成すると、構成の信頼性が失われる可能性があります。
 
@@ -109,8 +109,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。 
-    
+1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. 構成するテンプレートがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
@@ -119,11 +118,11 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 3. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、構成するテンプレートを探します。
     
-    - 分類、ラベル付け、保護を含むサブスクリプションの場合は、ラベルの後に **[テンプレート]** または **[保護テンプレート]** を展開します。
+    - 分類、ラベル付け、保護を含むサブスクリプションの場合は、ラベルの後に**保護テンプレート**を展開します。
     
     - 保護のみを含むサブスクリプションの場合、テンプレートはラベルとして表示されます。
 
-4. テンプレートを選択し、**[ラベル]** ブレードで **[ラベル名]** と **[説明]** を編集することにより、必要に応じてテンプレートの名前と説明を変更できます。 次に、値が **Azure RMS** または **Azure (クラウド キー)** になっている **[保護]** を選択して **[保護]** ブレードを開きます。
+4. テンプレートを選択し、**[ラベル]** ブレードで **[ラベル名]** と **[説明]** を編集することにより、必要に応じてテンプレートの名前と説明を変更できます。 次に、値が **Azure (クラウド キー)** になっている **[保護]** を選択して **[保護]** ブレードを開きます。
 
 5. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
     

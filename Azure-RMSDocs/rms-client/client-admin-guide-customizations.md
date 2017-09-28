@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e590bd7983b0f3e4e4d1348fbe120452e9ceb79b
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: d5345f794fb69ddbfb4d6ffcddfcffd41ecacff5
+ms.sourcegitcommit: ff2fadacf9ef4c6ee27d9d08c4c455ffd48f21f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントのカスタム構成
 
@@ -24,11 +24,9 @@ ms.lasthandoff: 09/08/2017
 
 以下の情報を使用して、詳細構成を行います。これらの構成は、Azure Information Protection クライアントを管理する際に、特定のシナリオまたはユーザーのサブセットで必要となる場合があります。
 
-これらの設定には、レジストリの編集が必要なものや、Azure Portal で構成する必要のある詳細設定を使用するものなどがあります。設定はこの後にクライアントに公開され、ダウンロードされます。 また、一部の設定は Azure Information Protection クライアントのプレビュー バージョンでのみ使用可能である場合があります。 これらの設定については、最小のクライアント バージョンが記載されています。 一般提供バージョンのクライアントでサポートされている設定と構成については、最小のクライアント バージョン番号は記載されていません。
+これらの設定には、レジストリの編集が必要なものや、Azure Portal で構成する必要のある詳細設定を使用するものなどがあります。設定はこの後にクライアントに公開され、ダウンロードされます。  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>ポータルでクライアントの詳細構成設定を構成する方法
-
-この構成は、現在プレビューの段階です。
 
 1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザーのウィンドウで、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。
 
@@ -64,11 +62,7 @@ ms.lasthandoff: 09/08/2017
 
 別のユーザーでサイン インする方法は以下の通りです。
 
-1. Azure Information Protection クライアントのバージョンに応じて次の操作を行います。 
-    
-    - 一般公開バージョンの Azure Information Protection クライアントの場合: レジストリ エディターを使用して **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** に移動し、**TokenCache** の値 (およびそれに関連する値のデータ) を削除します。
-    
-    - 現在のプレビュー バージョンの Azure Information Protection クライアントの場合: **%localappdata%\Microsoft\MSIP** に移動して、**TokenCache** ファイルを削除します。
+1. **%localappdata%\Microsoft\MSIP** に移動し、**TokenCache** ファイルを削除します。
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするように求めるプロンプトが Office アプリケーションで表示されない場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスに戻り、更新された **[クライアント ステータス]** セクションの **[サインイン]** をクリックします。
 
@@ -78,11 +72,7 @@ ms.lasthandoff: 09/08/2017
 
 - シングル サインオンを使用する場合は、レジストリを編集した後に Windows からサインアウトし、別のユーザー アカウントでサインインする必要があります。 Azure Information Protection クライアントは、現在サインインしているユーザーアカウントを使用して、自動的に認証を行います。
 
-- Azure Rights Management サービスのユーザー設定をリセットする場合は、**[ヘルプとフィードバック]** オプションを使用します。
-
-- 現在ダウンロードされている Azure Information Protection ポリシーを削除したい場合は、**%localappdata%\Microsoft\MSIP** フォルダーから **Policy.msip** ファイルを削除します。
-
-- 現在のプレビュー バージョンの Azure Information Protection クライアントをお持ちの場合は、**[ヘルプとフィードバック]** の **[設定のリセット]** オプションからサインアウトして、現在ダウンロードされている Azure Information Protection ポリシーを削除できます。
+- **[ヘルプとフィードバック]** の **[設定のリセット]** オプションからサインアウトし、現在ダウンロードされている Azure Information Protection ポリシーを削除できます。
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>組織が種類の異なるライセンスを保有している場合の保護のみモードの適用
 
@@ -99,10 +89,6 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 また、これらのコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーに、**Policy.msip** という名前のファイルがないことを確認します。 このファイルが存在する場合は、削除します。 このファイルには Azure Information Protection ポリシーが含まれており、レジストリを編集する前、または Azure Information Protection クライアントをデモ オプションを使用してインストールした場合に、ダウンロードされた可能性があります。
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプローラーの [Hide the Classify and Protect]\(分類の非表示と保護) メニュー オプション
-
-この構成オプションは、現在プレビューの段階です。
-
-Azure Information Protection クライアントのバージョンが 1.3.0.0 以降である場合は、レジストリを編集することで、この詳細構成を構成できます。 
 
 次の DWORD 値の名前を (任意の値と共に) 作成します。
 
@@ -133,9 +119,7 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを非表示にする
 
-この構成オプションは、現在プレビューの段階です。
-
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 また、この設定にはプレビュー バージョンの Azure Information Protection クライアント (最小バージョン **1.8.41.0**) が必要です。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
 この設定を構成すると、Outlook のリボンの **[転送不可]** ボタンが非表示になります。 Office メニューからでは、このオプションは非表示になりません。
 
@@ -147,10 +131,8 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>ユーザーがカスタムのアクセス許可オプションを使用できなくする
 
-この構成オプションは、現在プレビューの段階です。
-
 > [!IMPORTANT]
-> Word、Excel、PowerPoint、エクスプローラーのユーザー定義アクセス許可用に構成されたラベルがある場合は、このオプションを使わないでください。 このオプションを使うと、ラベルが適用されるときに、ユーザーにカスタム アクセス許可を構成するメッセージが表示されません。 その結果、ドキュメントにはラベルが付きますが、意図したようには保護されません。
+> クライアントのプレビュー版を使用していない限り、Word、Excel、PowerPoint、エクスプローラーにユーザー定義アクセス許可のラベルを構成している場合、このオプションを使わないでください。 このオプションを使うと、ラベルが適用されるときに、ユーザーにカスタム アクセス許可を構成するメッセージが表示されません。 その結果、ドキュメントにはラベルが付きますが、意図したようには保護されません。
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
@@ -170,7 +152,7 @@ Azure Information Protection クライアントのバージョンが 1.3.0.0 以
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection バーを完全に非表示にする
 
-この構成では、Azure Portal で構成する必要のある詳細設定を使用します。 また、この設定にはプレビュー バージョンの Azure Information Protection クライアント (最小バージョン **1.9.58.0**) が必要です。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
 この設定を構成してユーザーのポリシーを発行し、ユーザーが Office アプリケーションで Azure Information Protection バーを表示しないように選択すると、バーは非表示のままになります。 これが起こるのは、ユーザーが **[ホーム]** タブ、**[保護]** グループ、**[保護]** ボタンから **[バーの表示]** オプションをクリアするときです。 **[このバーを閉じる]** アイコンを使用してバーを閉じた場合、この設定は何も影響を与えません。
 
@@ -181,6 +163,39 @@ Azure Information Protection バーが非表示のままであっても、推奨
 - キー: **EnableBarHiding**
 
 - 値: **True**
+
+
+## <a name="enable-recommended-classification-in-outlook"></a>Outlook で推奨分類を有効にする
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+
+推奨分類のラベルを設定すると、Word、Excel、PowerPoint では、推奨ラベルを受け入れるか、却下するように求められます。 また、このラベル推奨が Outlook でも表示されます。
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー: **OutlookRecommendationEnabled**
+
+- 値: **True**
+
+
+## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
+
+この構成オプションは現在プレビュー段階であり、クライアントのプレビュー版が必要になります。
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+この設定を構成すると、Outlook では、Azure Information Protection ポリシーで **[既定のラベルを選択]** 設定に構成した既定のラベルが適用されません。 別のラベルを適用できるか、ラベルを適用できません。
+
+別のラベルを適用するには、ラベル ID を指定する必要があります。 Azure Portal で Azure Information Protection ポリシーを表示または構成するとき、ラベル ID 値は **[ラベル]** ブレードに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルに下位ラベルがある場合、親ラベルではなく、下位ラベルの ID を常に指定してください。
+
+Outlook で既定のラベルが適用されないように、**[なし]** を指定します。
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー: **OutlookDefaultLabel**
+
+- 値: \<**ラベル ID**> または**なし**
+
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Exchange メッセージ分類との統合によるモバイル デバイスのラベル付けソリューション
 

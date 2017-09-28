@@ -4,17 +4,17 @@ description: "Azure Information Protection による HYOK (AD RMS) 保護を選�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: ef39c5489e63a67e0880e4faab4d9675a49f5f90
-ms.sourcegitcommit: 4e31a4797eb8df64af3ae8932d2b49839e7a4524
+ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
@@ -65,13 +65,11 @@ Azure RMS による保護を使うときの利点は得られないことに加�
 
     HYOK または Azure Rights Management サービスを使うように **[転送不可]** のラベルを構成できますが、ユーザーが [転送不可] を選択することもできます。 ユーザーは、Office リボンの **[メッセージ]** タブの **[転送不可]** ボタンまたは Outlook のメニュー オプションを使って、このオプションを選択できます。 **[転送不可]** メニュー オプションは、**[ファイル]** > **[アクセス許可]** と、リボンの **[オプション]** タブの **[アクセス許可]** ボタンから表示されます。 
     
-    ユーザーが [転送不可] ボタンを選択するときは、Azure RMS または AD RMS を使うことができ、どちらが選択されるかは決まっていません。 ユーザーは、Outlook メニュー オプションから **[転送不可]** を選択するとき、Azure RMS または AD RMS を選択できますが、ユーザーは自分のメール メッセージではどちらのオプションを選択すればよいかわからない場合があります。 どちらのシナリオでも、Azure RMS を使うべきときに AD RMS を使うと、外部の共有ユーザーはそれらのメール メッセージを開けなくなります。
+    ユーザーが Outlook で **[転送不可]** ボタンを選択すると、Azure Information Protection クライアントは常に Azure RMS を使用します。 この動作を回避するには、[クライアント詳細設定](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)を構成して Outlook の **[転送不可]** ボタンを非表示にします。 
     
-    ユーザーが Outlook で **[転送不可]** ボタンを選択すると、Azure Information Protection クライアントの最新のプレビュー バージョンは常に Azure RMS を使用します。 この動作を回避するには、[クライアント詳細設定](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)を構成して Outlook の **[転送不可]** ボタンを非表示にします。 
+    ユーザーは、Outlook メニュー オプションから **[転送不可]** を選択するとき、Azure RMS または AD RMS を選択できますが、ユーザーは自分のメール メッセージではどちらのオプションを選択すればよいかわからない場合があります。 Azure RMS を使うべきところで AD RMS を使うと、外部の共有ユーザーはメール メッセージを開けなくなります。
 
-- Azure Information Protection クライアントの現在の一般公開バージョンの場合: AD RMS (HYOK) の保護および Azure RMS の保護を使っている場合にユーザーがカスタム アクセス許可を構成すると、ドキュメントまたはメールは Azure Rights Management によって常に保護されます。 この制限は、クライアントの現在のプレビュー バージョンには適用されません。
-
-- Word、Excel、PowerPoint、エクスプローラーにユーザー定義のアクセス許可を構成する場合 (これは、Azure Information Protection クライアントの現在のプレビュー バージョンでサポートされています): エクスプ ローラーでは、保護は常に HYOK (AD RMS) の保護ではなく Azure RMS を使って適用されます。 
+- Word、Excel、PowerPoint、エクスプローラーにユーザー定義のアクセス許可を構成する場合: エクスプローラーでは、保護は常に HYOK (AD RMS) 保護ではなく Azure RMS を使って適用されます。 この制限は、クライアントの現在のプレビュー バージョンには適用されません。
 
 - ユーザーが Outlook で AD RMS 保護が適用されたラベルを選択し、その後、電子メールを送信する際に気が変わって Azure RMS 保護が適用されたラベルを選択した場合、後から選択されたラベルの適用は失敗します。 ユーザーには次のエラー メッセージが表示されます: **Azure Information Protection ではこのラベルを適用できません。この操作を実行するアクセス許可がありません。**
     

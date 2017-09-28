@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 192f4ade987e9f9f88f5f30bb17c70e113569002
-ms.sourcegitcommit: 8b6fc2201d99d72ee9bb43bb73356040893eceeb
+ms.openlocfilehash: d4ce0ea6a3c04c5ca52dae1750e48d5618eeef76
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -41,9 +41,9 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
 -   **ヘルプ デスク情報**
     
-    ユーザーが Azure Information Protection クライアントを実行している場合、ヘルプ デスクのオペレーターはそのユーザーに **[ヘルプとフィードバック]**、**[診断の実行]** を使用し、その後でクライアントをリセットするよう求める場合があります。 ただし、リセットしてもユーザーがサインアウトされることや、クライアントがリブートストラップされることはなく、自動修復は行われません。
+    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの「[追加のチェックとトラブルシューティング](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting)」を参照してください。
     
-    保護されたドキュメントに対する完全なアクセス権限を求める正当な要求がある場合、ヘルプ デスクには Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用してこのアクセスを要求するプロセスがあることを確認してください。 こうした要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。 
+    保護されたドキュメントに対する完全なアクセス権限を求める正当な要求がある場合、ヘルプ デスクには Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用してこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
     また、ユーザーから報告される可能性がある典型的な問題には、以下のようなものがあります。
     

@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 6786ffde8d9903ee5c9d553159710052a6d5e7a2
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -269,22 +269,9 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 **ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
 
-診断情報を取得し、クライアントをリセットするには、**[診断の実行]** を選択します。 診断テストが完了したら、**[結果のコピー]** をクリックして情報を電子メールに貼り付け、ヘルプ デスクまたは Microsoft サポートに送信できます。 テストの完了時に、クライアントをリセットすることもできます。
+**[設定のリセット]** を選択すると、ユーザーがサインアウトした状態になり、現在ダウンロードされている Azure Information Protection ポリシーが削除され、Azure Rights Management サービスのユーザー設定がリセットされます。
 
-> [!NOTE]
-> プレビュー バージョンのクライアントでは、**[診断の実行]** が削除され、**[設定のリセット]** に置き換わります。 さらに、このオプションの動作は[変更されています](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client)。
-
-#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Azure Information Protection クライアントの一般公開 (GA) バージョンのリセット オプションに関する詳細
-
-- このオプションを使用するためにローカル管理者の権限は必要ありません。また、この操作はイベント ビューアーのログに記録されません。 
-
-- ファイルがロックされていない限り、この操作で **%LocalAppData%\Microsoft\MSIPC** 内のすべてのファイルが削除されます。これは、クライアント証明書と Rights Management テンプレートが格納されている場所です。 この操作では、Azure Information Protection ポリシーまたはクライアント ログ ファイルは削除されません。また、ユーザーはサインアウトされません。
-
-- **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC** のレジストリ キーと設定は削除されます。 このレジストリ キーの設定を構成した場合、クライアントをリセットした後に、レジストリ設定を再構成する必要があります。 たとえば、AD RMS から移行しても、内部ネットワーク上にまだサービス接続ポイントがあるため、Azure Information Protection テナントへのリダイレクトの設定を構成する場合があります。
-
-- クライアントをリセットした後は、クライアントの証明書と最新のテンプレートのダウンロードを行い、ユーザー環境を再初期化する必要があります。 再初期化を実行するには、すべての Office インスタンスを終了し、Office アプリケーションを再起動します。 この操作で、最新の Azure Information Protection ポリシーをダウンロードしたことも確認されます。 この確認が完了するまで、診断テストは再実行しないでください。
-
-#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Azure Information Protection クライアントの現在のプレビュー バージョンのリセット オプションに関する詳細
+#### <a name="more-information-about-the-reset-settings-option"></a>[設定のリセット] オプションの詳細
 
 - このオプションを使用するためにローカル管理者の権限は必要ありません。また、この操作はイベント ビューアーのログに記録されません。 
 
