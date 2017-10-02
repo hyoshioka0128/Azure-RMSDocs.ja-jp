@@ -11,7 +11,7 @@
 ## [情報とサポート](information-support.md)
 ## [用語](terminology.md)
 ## [クイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)
-### [手順 1: サービスをアクティブ化する](infoprotect-tutorial-step1.md)
+### [手順 1: 保護の有効化します](infoprotect-tutorial-step1.md)
 ### [手順 2: ポリシーの構成と公開](infoprotect-tutorial-step2.md)
 ### [手順 3: クライアントのインストール](infoprotect-tutorial-step3.md)
 ### [手順 4: ラベル付け、分類、保護の動作を確認する](infoprotect-tutorial-step4.md)
