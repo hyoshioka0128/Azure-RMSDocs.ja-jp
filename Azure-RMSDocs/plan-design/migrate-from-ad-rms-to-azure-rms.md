@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 6651c812c207494bc98d5a1b22e359910a94c3cc
+ms.sourcegitcommit: 7d07b82da9aca52fe9e38fa1bada144226168a6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 10/05/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -102,7 +102,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 ### <a name="cryptographic-mode-considerations"></a>暗号化モードに関する注意事項
 
-AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開始する前にクラスターを暗号化モード 2 にアップグレードしないでください。 代わりに暗号化モード 1 を使用して移行し、移行後タスクの 1 つとして移行の終了時にテナント キーを更新できます。
+AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開始する前にクラスターを 暗号化モード 2 にアップグレードしないでください。 代わりに暗号化モード 1 を使用して移行し、移行後タスクの 1 つとして移行の終了時にテナント キーを更新できます。
 
 AD RMS 暗号化モードを確認するには:
  
@@ -111,8 +111,6 @@ AD RMS 暗号化モードを確認するには:
 - Windows Server 2008 R2 の場合: 「[RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (Windows Server 2008 R2 と Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました)](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server )」の修正プログラムがインストールされているかを確認します。 インストールされていない場合は、ご使用の AD RMS クラスターは暗号化モード 1 で実行されています。
 
 ### <a name="migration-limitations"></a>移行の制限
-
--   移行プロセスは、サーバー ライセンス証明書 (SLC) キーから Azure Information Protection のハードウェア セキュリティ モジュール (HSM) への移行をサポートしていますが、現在、Exchange Online では、Azure Information Protection によって使用されている Rights Management サービスに対してこの構成はサポートされていません。 Azure Information Protection への移行後に Exchange Online で完全な IRM 機能を使用する場合は、Azure Information Protection テナント キーが[マイクロソフトによって管理](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok)される必要があります。 または、Azure Information Protection のテナント キーがユーザーにより管理される場合 (BYOK)、Exchange Online では IRM の機能を制限付きで実行できます。 Exchange Online と Azure Rights Management サービスの使用の詳細については、「[手順 8. これらの移行手順」の「](migrate-from-ad-rms-phase4.md#step-8-configure-irm-integration-for-exchange-online)IRM と Exchange Online の統合を構成する」を参照してください。
 
 -   Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
 
