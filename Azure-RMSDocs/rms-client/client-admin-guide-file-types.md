@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -176,6 +176,22 @@ Azure Information Protection クライアントがファイルを保護する方
     - Program Files (\Program Files および \Program Files (x86))
     - \ProgramData 
     - \AppData (すべてのユーザー)
+
+### <a name="files-that-cannot-be-protected-by-default"></a>既定では保護できないファイル
+
+パスワード保護されているファイルは Azure Information Protection クライアントでネイティブ保護できません。 パスワード保護されている PDF ファイルをよく見かけますが、Office アプリなど、他のアプリケーションもこの機能を備えています。
+
+また、Windows 用の Azure Information Protection クライアントは次のいずれかの状況で PDF ファイルをネイティブ保護できません。保護解除もできません。
+
+- フォームベースの PDF ファイル。
+
+- ファイル名の拡張子が .pdf の、保護されている PDF ファイル。 
+    
+    Azure Information Protection クライアントは保護されていない PDF ファイルを保護し、ファイル名の拡張子が .ppdf ファイルの、保護されている PDF ファイルを再保護できます。
+
+これらのファイルの回避策としては、一般的に、「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションにある方法で保護できます。 ただし、この方法では、コンピューター レベルで、ファイル名の拡張子が .pdf のすべてのファイルの保護レベルが変更されます。 一覧にある基準を満たすファイルのみに一般的保護を定義することはできません。
+
+このようなファイルの保護が重要であれば、一時的に別のコンピューターにコピーすることで一般的に保護し、その後、コピーで戻すことができます。
 
 
 ## <a name="next-steps"></a>次のステップ
