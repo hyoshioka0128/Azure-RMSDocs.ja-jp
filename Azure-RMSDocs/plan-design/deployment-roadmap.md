@@ -4,7 +4,7 @@ description: "組織の Azure Information Protection を準備、実装、管理
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fabb31e2945b47cda688129d7ecd7cc3c26fd802
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 2a3e9eec089999d6ef2ab6fbb738260be23f6bb8
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -78,7 +78,7 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 
 ユーザーが文書や電子メールのラベル付けに慣れたら、最も機密性の高いデータのデータ保護を導入できます。 この段階では、Azure Rights Management サービスの次の準備が必要です。
 
-1. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 現時点では、Exchange Online を使用する場合、BYOK は使用できない点に注意してください。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+1. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 2. インターネットにアクセスできる 1 つ以上のコンピューターで [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 向けの Windows PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Rights Management サービス用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
@@ -98,9 +98,9 @@ Azure Information Protection の使用を開始する前に、次の準備を行
     
     1 つまたは複数のラベルで Rights Management 保護を適用できるように、Azure Information Protection ポリシーを変更します。 詳しくは、「[Rights Management による保護を適用するようにラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。
     
-    Exchange が Information Rights Management (IRM) 用に構成されていない場合でも、ユーザーは Outlook で Rights Management による保護を適用するラベルを適用できます。 ただし、Exchange が IRM 用に構成されるまで、組織は Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 この追加の構成は、次のリストに含まれています (Exchange Online 用は 2、Exchange オンプレミス用は 5)。 
+    Exchange が Information Rights Management (IRM) 用に構成されていない場合でも、ユーザーは Outlook で Rights Management による保護を適用するラベルを適用できます。 ただし、IRM または [Office 365 Message Encryption と新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に適するように Exchange が構成されるまで、組織は Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 この追加の構成は、次のリストに含まれています (Exchange Online 用は 2、Exchange オンプレミス用は 5)。 
 
-2. IRM のために Office のアプリケーションとサービスを構成する
+2. Office のアプリケーションとサービスを構成する
     
     SharePoint Online または Exchange Online の Information Rights Management (IRM) 機能のために Office のアプリケーションとサービスを構成します。 詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 
@@ -144,7 +144,7 @@ Azure Information Protection サイトの[サブスクリプション情報](htt
 
 1.  Office 365 テナントに、組織のユーザーを認証および承認するのに Azure Information Protection で使用されるユーザー アカウントとグループが含まれていることを確認します。 必要に応じて、これらのアカウントとグループを作成するか、またはオンプレミスのディレクトリからそれらを同期します。 詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
-2. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 現時点では、Exchange Online を使用する場合、BYOK は使用できない点に注意してください。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+2. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 3. インターネットにアクセスできる 1 つ以上のコンピューターで [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 向けの Windows PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」を参照してください。
 
@@ -156,7 +156,7 @@ Azure Information Protection サイトの[サブスクリプション情報](htt
 
 -   既定のテンプレートが組織にとって十分でない場合はカスタム テンプレート。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
--   組織での Rights Management の使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
+- 組織での Rights Management の使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
 
 ### <a name="step-3-install-the-client-and-configure-applications-and-services-for-rights-management"></a>手順 3: クライアントをインストールし、Rights Management のアプリケーションとサービスを構成する
 
@@ -164,7 +164,7 @@ Azure Information Protection サイトの[サブスクリプション情報](htt
     
     Office 2010 のサポート、Office ドキュメントと電子メール以外のファイルの保護、保護されたドキュメントの追跡には、ユーザーに Azure Information Protection をインストールします。 このクライアントのユーザー トレーニングを行います。 詳細については、「[Azure Information Protection client for Windows](../rms-client/aip-client.md)」(Windows 用 Azure Information Protection クライアント) を参照してください。
 
-2. IRM のために Office のアプリケーションとサービスを構成する
+2. Office のアプリケーションとサービスを構成する
     
     SharePoint Online または Exchange Online の Information Rights Management (IRM) 機能のために Office のアプリケーションとサービスを構成します。 詳細については、「[Azure Rights Management 用にアプリケーションを構成する](../deploy-use/configure-applications.md)」を参照してください。
 

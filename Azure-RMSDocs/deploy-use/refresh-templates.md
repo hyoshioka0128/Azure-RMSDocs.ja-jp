@@ -4,7 +4,7 @@ description: "Azure Rights Management サービスを使用する場合、テン
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9a4e01bd23f7f6107b4021cc792839cf38ee3b5
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 9a5feea87df01507520da6a118372de0f6364452
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -26,7 +26,7 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 
 |アプリケーションまたはサービス|変更後のテンプレートの更新方法|
 |--------------------------|---------------------------------------------|
-|Exchange Online<br /><br />トランスポート ルール、DLP ルール、Outlook Web アプリに該当|テンプレートを更新するには、手動構成が必要です。<br /><br />構成手順については、以下の「[Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates)」セクションを参照してください。|
+|Exchange Online<br /><br />トランスポート ルールと Outlook Web アプリに該当 |1 時間以内の自動更新 - 追加の手順は必要ありません。<br /><br />[Office 365 Message Encryption と新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)を利用している場合、これが該当します。 信頼された発行ドメイン (TPD) をインポートし、Azure Rights Management サービスを使用するように Exchange Online を既に構成している場合、同じ手順で Exchange Online の新機能を有効にします。|
 |Azure Information Protection クライアント|Azure Information Protection ポリシーがクライアントに更新されるたびに自動的に更新されます。<br /><br /> - Azure Information Protection バーをサポートしている Office アプリケーションが開いたとき。 <br /><br /> - ファイルまたはフォルダーを分類して保護するために右クリックしたとき。 <br /><br /> - ラベル付けおよび保護のために PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) を実行するとき。<br /><br /> - 24 時間ごと。<br /><br /> さらに、Azure Information Protection クライアントは Office と密接に統合されているため、Office 2016 または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection クライアントでも更新されます。|
 |Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />- Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />スケジュールに先立って強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
 |Office 2010|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。|
@@ -35,67 +35,6 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 |Mac コンピューター用 RMS 共有アプリ|自動更新 - 追加の手順は必要ありません。|
 
 クライアント アプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更の更新)、ダウンロードが完了し、新規または更新されたテンプレートが完全に機能するまで最大 15 分待機します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
-
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Exchange Online のみ: 変更されたカスタム テンプレートをダウンロードするように Exchange を構成する方法
-Exchange Online 用の Information Rights Management (IRM) を既に構成している場合は、Exchange Online で Windows PowerShell を使用して、次の変更を加えるまでカスタム テンプレートはユーザーにダウンロードされません。
-
-> [!NOTE]
-> Exchange Online で Windows PowerShell を使用する方法の詳細については、「[Exchange Online による PowerShell の使用](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx)」を参照してください。
-
-テンプレートを変更するたびにこの手順を実行する必要があります。
-
-### <a name="to-update-templates-for-exchange-online"></a>Exchange Online 用のテンプレートを更新するには
-
-1.  Exchange Online で Windows PowerShell を使用し、サービスに接続します。
-
-    1.  Office 365 のユーザー名とパスワードを入力します。
-
-        ```
-        $UserCredential = Get-Credential
-        ```
-
-    2.  Exchange Online サービスに接続するには、次の 2 つのコマンドを実行します。
-
-        ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-        ```
-
-        ```
-        Import-PSSession $Session
-        ```
-
-2.  [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx) コマンドレットを使用して、信頼された発行ドメイン (TPD) を Azure RMS から再インポートします。
-
-    ```
-    Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
-    ```
-    たとえば、TPD 名が **RMS Online - 1** (多くの組織で一般的に使用される名前) の場合、「**Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates -RMSOnline**」と入力します。
-
-    > [!NOTE]
-    > TPD 名を確認するには、[Get-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200707%28v=exchg.160%29.aspx) コマンドレットを使用できます。
-
-3.  テンプレートが正常にインポートされたことを確認するには、数分待ってから、[Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) コマンドレットを実行します。このとき、Type には All を設定します。 たとえば、
-
-    ```
-    Get-RMSTemplate -TrustedPublishingDomain "RMS Online - 1" -Type All
-    ```
-    > [!TIP]
-    > 出力のコピーを残しておくと、後でテンプレートを保存する場合にテンプレート名または GUID を簡単にコピーできて便利です。
-
-4.  インポートしたテンプレートのうち、Outlook Web App で使用できるようにするテンプレートごとに、[Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) コマンドレットを使用し、Type を Distributed に設定する必要があります。
-
-    ```
-    Set-RMSTemplate -Identity "<name  or GUID of the template>" -Type Distributed
-    ```
-    Outlook Web Access は UI を 24 時間キャッシュするため、ユーザーには最長 1 日間新しいテンプレートが表示されない可能性があります。
-
-さらに、テンプレート (カスタムまたは既定) がアーカイブされ、Exchange Online と Office 365 が使用されている場合、ユーザーが Outlook Web App または Exchange ActiveSync プロトコルを使用するモバイル デバイスを使用する場合、ユーザーはアーカイブされたテンプレートを引き続き表示できます。
-
-これらのテンプレートがユーザーに表示されないようにするには、Exchange Online の Windows PowerShell を使用してサービスに接続し、次のコマンドを実行して [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) コマンドレットを使用します。
-
-```
-Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
-```
 
 ## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
 Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有アプリケーションを実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
@@ -142,10 +81,10 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
     > 1.  Azure RMS 用の [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
     > 2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
-    > 
+    >
     >     例: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
     > 3.  この値から、**https://** 文字列と **/_wmcs/licensing** 文字列を削除します。 残りの値が、Microsoft RMS サービスの FQDN です。 この例では、Microsoft RMS サービスの FQDN は次の値になります。
-    > 
+    >
     >     **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 2.  **%localappdata%\Microsoft\MSIPC\Templates** フォルダーとその中に含まれているすべてのファイルを削除します。

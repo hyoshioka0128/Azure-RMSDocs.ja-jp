@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/26/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0d8c6a1ccfaf52af25ab0cfb5fb8074019939b90
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 0b788b8a380132d830fb6593f579dca9c8ac61bc
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -26,9 +26,10 @@ ms.lasthandoff: 07/31/2017
 
 |目的|.. 手順|
 |----------------|---------------|
-|サービスについて推奨されるドキュメントを参照する|[Azure Information Protection ドキュメント](https://docs.microsoft.com/information-protection/)の開始ページを使用します。|
-|ドキュメントに関するフィードバックを提供する、またはドキュメントについて質問する|[askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback) に電子メールを送信します。|
-|Azure Information Protection に関するツイートとドキュメントの更新に関するお知らせを、製品グループから受け取る|Microsoft の Azure Information Protection チームのリーダーである [@DanPlastina](https://twitter.com/DanPlastina) をフォローします。|
+|最も頻繁に使用されるドキュメントの参照|以下の上位 5 つのページを参照してください。 <br /><br />[はじめに - iOS 用および Android 用の AIP アプリ](../rms-client/mobile-app-get-started.md) <br /><br /> [Azure Information Protection とは](../understand-explore/what-is-information-protection.md)<br /><br /> [Azure Rights Management とは](../understand-explore/what-is-azure-rms.md)<br /><br />[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)<br /><br />[Azure Information Protection の要件](../get-started/requirements.md)|
+|製品チームや同僚との連携|Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)にアクセスします。|
+|新機能や機能変更の要求|Azure Information Protection の [User Voice サイト](https://msip.uservoice.com)にアクセスします。|
+|製品グループからのツイートの受信|Twitter で [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) をフォローします。|
 |サブスクリプション情報とサポート対象の機能を確認する|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)」を参照してください。|
 
 
@@ -41,7 +42,7 @@ Azure Information Protection 製品チームは、新しいリリースと更新
 
 - ドキュメント変更の概要。新しいリリース、ステートメントをサポートするための更新、既存リリースの修正と説明に関する文書が含まれています。 投稿時のタイトル: "**Azure Information Protection ドキュメント更新 – \<年、月>**" 
 
-[Azure Information Protection Yammer サイト](https://www.yammer.com/AskIPTeam)で、新機能とプレビューに関する情報も入手できます。そのサイトでは Azure Information Protection について質問することもできます。 新機能に対するご提案とご意見をお寄せいただく場合、Azure Information Protection の[User Voice サイト](https://msip.uservoice.com)をご利用ください。
+Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)で、新機能とプレビューに関する情報も入手できます。このサイトでは Azure Information Protection について質問することもできます。 新機能に対するご提案とご意見をお寄せいただく場合は、Azure Information Protection の[User Voice サイト](https://msip.uservoice.com)をご利用ください。
 
 ## <a name="support-options-and-community-resources"></a>サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。
@@ -67,6 +68,8 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 ### <a name="self-help"></a>セルフヘルプ
 
 オンデマンド ビデオ:
+
+- [Azure Information Protection](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) の Microsoft Ignite 2017 セッション。
 
 - [Azure Information Protection](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D) の Microsoft Ignite 2016 セッション。
 

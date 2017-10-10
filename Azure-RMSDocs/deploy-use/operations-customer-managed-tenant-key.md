@@ -4,7 +4,7 @@ description: "Azure Information Protection のテナント キーを自分で管
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3220b1cbe93b110c838a4e85cc143b44de0d2d14
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 2f3ae7a0558cf209f3ec710a5114dbbc9a0dda9d
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
@@ -38,22 +38,28 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 - あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
+- 別のキー管理トポロジに移行したい。 
+
 - テナント キーのマスター コピー (あなたが所有するコピー) の盗難が疑われています。
 
-キーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。
+管理している別のキーにキーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。
 
 1. 新しいキーが Azure Information Protection で既に使用しているキーとは異なるキー コンテナーにある場合にのみ: [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) コマンドレットを使用して、Azure Information Protection が目的のキー コンテナーを使用することを承認します。
 
-2. [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) コマンドレットによって、新しいキーを使用するように Azure Information Protection を構成します。
+2. 使用する予定のキーを Azure Information Protection がまだ認識していない場合、[Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) コマンドレットを実行します。
 
 3. [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) コマンドレットによって、テナント キー オブジェクトを構成します。
 
-これらの各ステップの詳細については、「[Azure Information Protection テナント キーを実装する](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」を参照してください。
+これらの段階の詳細については、次を参照してください。
+
+- 管理する別のキーにキーを再入力するには、「[Azure Information Protection テナント キーの BYOK を実装する](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
+
+- キーを再入力し、マイクロソフトが代わりに管理するキーに変更するには、マイクロソフト管理操作の「[テナント キーの再入力](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key)」セクションをご覧ください。
 
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
 テナント キーのバックアップは自分で行う必要があります。 Thales HSM でテナント キーを生成した場合、キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップするだけです。
 
-[BYOK (Bring Your Own Key) の実装](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)に関するセクションの手順に従ってキーを転送してあるので、Key Vault はトークン化されたキー ファイルを保持して任意のサービス ノードの障害から保護します。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
+「[Azure Information Protection テナント キーの BYOK を実装する](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」の手順に従ってキーを転送してあるので、Key Vault はトークン化されたキー ファイルを保持してあらゆるサービス ノードの障害から保護します。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
 
 ## <a name="export-your-tenant-key"></a>テナント キーのエクスポート
 BYOK を使用する場合、テナント キーを Azure Key Vault または Azure Information Protection からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 

@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3274cb1ddd457647159034b955c47e9ab775f00c
-ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
+ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -75,10 +75,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 > [!NOTE]
 > AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「 [AD RMS でのハードウェア セキュリティ モジュールの使用](http://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
 
-Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 顧客管理の Azure Information Protection テナント キーは、“Bring Your Own Key” (BYOK) と呼ばれることもあり、Thales のハードウェア セキュリティ モジュール (HSM) が必要です。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
-
-> [!IMPORTANT]
-> 現在、Exchange Online は Azure Information Protection の BYOK と互換性がありません。 移行後に BYOK を使用し、Exchange Online を使用する場合は、この構成により Exchange Online の IRM 機能が制限されることを理解しておきます。 「[BYOK の料金と制限事項](byok-price-restrictions.md)」の情報は、移行に最適な Azure Information Protection テナント キー トポロジの選択に役立ちます。
+Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 独自の Azure Information Protection テナント キーを管理する場合は、“Bring Your Own Key” (BYOK) と呼ばれることもあります。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 次の表を参考にして、移行に使用する手順を識別してください。 
 

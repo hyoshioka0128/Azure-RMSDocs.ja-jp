@@ -4,7 +4,7 @@ description: "あらかじめ Azure Information Protection クライアントが
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8fd80d6ff97118cd37dd62e293768b145c98595
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 8ed2480892d5a48075d986ee64733b0144bbc5b4
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
 
@@ -50,13 +50,11 @@ ms.lasthandoff: 07/18/2017
 
 保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 
-組織に使用できるクラウド ベースのアカウント (Office 365 または Azure 用) がなく、同等のオンプレミス バージョン (AD RMS) を使用していない場合は、Rights Management で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを申請できます。
+組織がユーザーのためにクラウドベースのアカウントを用意しておらず (Office 365 または Azure)、また、そのオンプレミス版 (AD RMS) も利用していない場合、次の 2 つの選択肢があります。
 
--   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
-    
-    サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
-    
--   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../understand-explore/rms-for-individuals.md)」を参照してください。
+- 保護されているメールが届いた場合、指示に従い、ご利用のソーシャル ID プロバイダー (Gmail アカウントの Google など) でサインインするか、ワンタイム パスコードを申請します。
+
+- 資格情報を受け付ける無料のアカウントを申請できます。Rights Management で保護されているドキュメントを開くことができます。 このアカウントを申請するには、リンクをクリックして[個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469) を申請します。個人のメール アドレスではなく、会社のメール アドレスを使用します。 
 
 ## <a name="to-view-and-use-a-protected-document"></a>保護されたファイルを表示して使用するには
 
@@ -64,7 +62,7 @@ ms.lasthandoff: 07/18/2017
 
 2. **[サインイン]** または **[サインアップ]** ページが表示されたら、**[サインイン]** をクリックして資格情報を入力します。 保護されたファイルが添付ファイルとして送信されてきた場合は、ファイルの送信に使用されたものと同じメール アドレスを指定するようにします。
     
-    承認されているアカウントがない場合は、このページの「[認証のプロンプト](#prompts-for-authentication)」を参照してください。 無料アカウントにサインアップして手順に戻ります。
+    承認されているアカウントがない場合は、このページの「[認証のプロンプト](#prompts-for-authentication)」を参照してください。
 
 3. 読み取り専用バージョンのファイルは、**Azure Information Protection Viewer (Azure Information Protection ビューアー)** で開きます。 十分なアクセス許可がある場合は、ファイルの印刷および編集ができます。 
 
@@ -77,8 +75,7 @@ ms.lasthandoff: 07/18/2017
 5. 追加の保護されたファイルを開く場合は、**[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
 
 > [!TIP]
-> 保護されたファイルが開かない場合は、Azure Information Protection の **[ヘルプとフィードバック]** オプションから **[診断の実行]** を選択します。 テストが完了すると、クライアントをリセットできます。これにより、問題が解決する場合があります。
-
+> 保護されているファイルが開かない場合、Azure Information Protection クライアントで **[保護]**、**[ヘルプとフィードバック]** の順に選択して **[診断の実行]** をクリックし、お使いのコンピューターでドキュメントを開けなくしている原因を探すことができます。
 
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。

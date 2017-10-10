@@ -1,6 +1,6 @@
 ---
 title: "クイック スタート チュートリアルの手順 1 - AIP"
-description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 1 - Azure Rights Management サービスの有効化。"
+description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 1 - 保護サービスの有効化。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,20 +10,20 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: c168f54d873d8e5b1f2d455c9ae2d12cda8926b3
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 91eb9ec61f4fa1ebd7aac3cf0c244878ef450bb9
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="step-1-activate-the-rights-management-service"></a>手順 1.Rights Management サービスの有効化
+# <a name="step-1-activate-protection"></a>手順 1: 保護の有効化します
  
 >*適用対象: Azure Information Protection*
 
 > [!NOTE]
 >既にテナントの Azure Rights Management サービスをアクティブ化してある場合でも、この手順を行ってアクティブ化の状態を確認します。 この手順には、手順 2 の準備として、Azure Portal へのサインインと、Azure Information Protection ブレードの作成が含まれます。 
 
-Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータルの使用など、このサービスをアクティブ化するにはさまざまな方法があります。
+Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータルの使用など、保護をアクティブ化するにはさまざまな方法があります。
 
 このチュートリアルでは Azure Portal を使い、そこでユーザーのラベルの構成も行います。 
 

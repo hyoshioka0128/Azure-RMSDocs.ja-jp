@@ -4,7 +4,7 @@ description: "ドキュメントや電子メールを分類して保護する方
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -32,9 +32,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 保護されているファイルは、他のユーザーと安全に共有できます。 たとえば、電子メールにファイルを添付します。
 
-組織外の相手とファイルをよく共有する場合、ユーザーがその相手に読み取りを許可する保護を設定できるように、管理者がラベルを構成することができます。 また、ファイルを共有する前に、[Office アプリを使用してカスタム アクセス許可を設定](#set-custom-permissions-for-a-document)したり、[エクスプローラーを使用してカスタム アクセス許可を設定](#using-file-explorer-to-classify-and-protect-files)したりできます。 
-
-カスタム アクセス許可を設定し、内部利用向けにファイルが既に保護されている場合、まずそのファイルのコピーを作成して、元のアクセス許可を保持します。 次に、そのコピーを使用してカスタム アクセス許可を設定します。  
+組織外の相手とファイルをよく共有する場合、ユーザーがその相手に読み取りを許可する保護を設定できるように、管理者がラベルを構成することができます。 また、ファイルを共有する前に、[Office アプリを使用してカスタム アクセス許可を設定](#set-custom-permissions-for-a-document)したり、[エクスプローラーを使用してカスタム アクセス許可を設定](#using-file-explorer-to-classify-and-protect-files)したりできます。 カスタム アクセス許可を設定し、内部利用向けにファイルが既に保護されている場合、まずそのファイルのコピーを作成して、元のアクセス許可を保持します。 次に、そのコピーを使用してカスタム アクセス許可を設定します。  
 
 カスタム アクセス許可でファイルを保護する場合は、標準の共有メカニズムを使用してファイルを共有します。 保護されたファイルを初めて受け取る共有相手の場合は、必要に応じて相手に表示手順を説明します。 このような相手には、「**このファイルは Microsoft Azure Information Protection で保護されています。初めて利用する場合は、[こちらの手順](https://aka.ms/rms-signup)を参照してください**」というメッセージをコピーして貼り付けることをお勧めします。
 
@@ -94,6 +92,16 @@ Azure Information Protection バーを使用して、構成されているラベ
     - **アクセスの有効期限**: ファイルの期間が限定されていて、設定された日付を過ぎた後は指定されたユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
 
 5. **[適用]** をクリックして、**"カスタム アクセス許可が適用されました"** というメッセージが表示されるまで待ちます。 次に、 **[閉じる]**をクリックします。
+
+### <a name="safely-sharing-by-email"></a>電子メールで安全に共有する
+
+電子メールで Office ドキュメントを共有するとき、保護しているメールにドキュメントを添付できます。メールに適用されているものと同じ制約でドキュメントが自動的に保護されます。 
+
+ただし、先にドキュメントを保護し、それからドキュメントをメールに添付することを推奨しています。 メール メッセージに機密情報が含まれている場合、メールも保護します。 メールに添付する前にドキュメントを保護することには、2 つの利点があります。
+
+- メールで送信した後、ドキュメントを追跡し、必要であれば取り消すことができます。
+
+- メール メッセージとは異なるアクセス許可をドキュメントに適用できます。
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>エクスプローラーを使用してファイルを分類および保護する
 
