@@ -4,17 +4,17 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: fff96103544242510b7e53b1636f1f95fbd4bb2b
-ms.sourcegitcommit: c5e117f5329c6e5a93d5858a3b4609aadd8a6e7e
+ms.openlocfilehash: ba39c332437e2710554d1e8f69c3f676f0d870db
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -47,9 +47,9 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
-Azure Rights Management サービスを有効にすると直ちに、組織内のユーザーがデータにアクセスすることを制限する 2 つのテンプレートが既定で作成されます。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 より制限を厳しく制御する、これらの既定のテンプレートを補うカスタム テンプレートを独自で構成することも可能です。
+Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定のテンプレートが使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
 
-これらのテンプレートをラベル構成の一部にすると、文書 (または電子メール メッセージ) に特定のラベルが適用されると、データの分類と自動での保護が同時にされるようにすることができます。 Azure Rights Management テクノロジをサポートする製品およびサービスのユーザーや管理者が、テンプレートを選択することもできます。
+テンプレートをラベル構成の一部にすることができます。 そのラベルがドキュメントまたは電子メール メッセージに適用されている場合、データの分類と自動保護の両方が行われます。 Azure Rights Management テクノロジをサポートする製品およびサービスのユーザーや管理者が、テンプレートを選択することもできます。
 
 この例では、Azure ポータルから Azure Information Protection ポリシーを構成するときに、ラベルのテンプレートを選択する方法を示します。
 
@@ -84,8 +84,6 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 
-- お知らせ: [Azure Information Protection が一般公開されました](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
-
 - 無料評価版: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
 - クライアントのダウンロード: [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
@@ -98,17 +96,7 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
-    さらに、Microsoft Ignite 2016 では Azure Information Protection に関する多くのオンデマンド セッションが提供されます。
-
-    - [BRK2127: データを安全に保護し共有するために包括的な ID ベースのソリューションを採用する](https://myignite.microsoft.com/videos?q=BRK2127)
-    
-    - [THR2107: Azure Information Protection を使用して安全に共同作業を行う](https://myignite.microsoft.com/videos?q=THR2107)
-    
-    - [THR2108: Azure Information Protection を使用してデータを包括的に保護する](https://myignite.microsoft.com/videos?q=THR2108)
-    
-    - [BRK3095: 分類、ラベル付け、保護によって永続的なデータ保護が実現されるしくみを説明する](https://myignite.microsoft.com/videos?q=BRK3095)
-    
-    - [BRK2128: Microsoft Office 365 と Azure Information Protection を利用してセキュリティで保護された電子メールを送信する](https://myignite.microsoft.com/videos?q=BRK2128)
+さらに、**Microsoft Ignite 2017** では、オンデマンドで使用可能になる Azure Information Protection に関する多くのセッションが提供されます。 これらのセッションは使用可能になったときに、Ignite Web サイトで[検索して見つける](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)ことができます。 お知らせの概要については、「[What’s new in Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」 (Azure Information Protection の新機能 (Ignite 2017)) を参照してください。
 
 
 ## <a name="next-steps"></a>次のステップ

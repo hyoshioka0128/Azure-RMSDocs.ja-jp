@@ -4,27 +4,39 @@ description: "Azure Information Protection ポリシー内に構成すること�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 2d11eb649ecec835d2ddf0045d8672c5b45af95f
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f17e149dcd8cfb7398909cbe3a83cdcf71b80b33
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
 >*適用対象: Azure Information Protection*
 
-Azure Information Protection ポリシー内に構成することで、Information Protection バーに表示されるラベルを削除または順序変更することができます。
+Azure Information Protection ポリシーでこれらのアクションを選択することで、Information Protection バーに表示されるラベルを削除または順序変更することができます。
 
 ![Azure Information Protection のラベルを削除または順序変更する](../media/info-protect-contextmenu.png)
 
 ドキュメントや電子メールに適用されているラベルを削除してから Azure Information Protection ポリシーを公開すると、そのラベルは、Azure Information Protection クライアントによって次回開かれたときに自動的にドキュメントや電子メールから削除されます。
+
+ただし、ラベルで保護が適用されている場合、その保護は解除されません。 ラベルの保護設定は維持され、**[保護テンプレート]** に表示されます。 このテンプレートは新しいラベルに変換するか、ラベルにリンクできます。 このテンプレートが残っている間は、削除したラベルと同じ名前で新しいラベルを作成することはできません。 同じ名前でラベルを作成する場合、次の方法があります。
+
+- テンプレートをラベルに変換する。 
+    
+    これは推奨される方法です。必要であれば、テンプレートの名前を変更したり、保護設定を変更したりできるからです。
+
+- PowerShell を利用し、テンプレートの名前を変更するか、削除します。
+    
+    変更または削除する前に、他の管理者やサービスがテンプレートを利用していないか考慮し、現在の名前で確認します。 テンプレートで保護されていたドキュメントやメールを開く必要がない場合にのみ、テンプレートを削除してください。
+
+保護テンプレートの管理の詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
 ラベルを削除するのではなく、その前に無効にするかどうかを検討してください。 ドキュメントや電子メールに適用されているラベルを無効にすると、適用されているラベルはこれらのドキュメントや電子メールからは削除されませんが、ユーザーが Information Protection バーで選択できるラベルとしては表示されなくなります。 ラベルを無効にすれば、ユーザーに後でラベルを選択させる必要が生じたときのために元の構成を保持することもでき、この場合は再度有効化するだけで済みます。
 

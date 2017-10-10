@@ -4,7 +4,7 @@ description: "Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
-ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
+ms.openlocfilehash: eb40f6d2b43f175af71fd58b3bef4eb3d992152b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -50,7 +50,7 @@ Exchange Online または Exchange Server を使用するとき、Azure Rights M
 
 -   **データ損失防止 (DLP) ポリシー** 。このポリシーは、電子メール メッセージにフィルターを適用するための条件のセットを含み、機密コンテンツのデータの損失を防ぐために役立つ操作を実行します。 機密コンテンツには、たとえば、個人情報やクレジット カード情報があります。 ポリシーのヒントを使用すると、機密データが検出されたときに、保護の適用が必要な可能性があることをユーザーに警告できます。 詳細については、Exchange ライブラリの[データ損失防止](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) を参照してください。
 
--   **Office 365 メッセージ暗号化**。トランスポート ルールを使用して暗号化された電子メールを社外のユーザーに送信し、Outlook on the web に似たブラウザーのインターフェイスで電子メールを読み取ります。 会社の暗号化された電子メールの免責事項のテキストとヘッダーのテキストをカスタマイズすることが可能で、会社のロゴを追加することもできます。 詳細については、Office Web サイトの「[Office 365 Message Encryption](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx)」を参照してください。
+-   **Office 365 Message Encryption** では、保護されているメール メッセージと保護されている Office ドキュメントを添付ファイルとしてあらゆるデバイスであらゆるアドレスに送信できます。 Azure AD を使用しないユーザー アカウントの場合、インターネットがあれば、ソーシャル ID プロバイダーやワンタイム パスコードを利用できます。 詳細については、Office Web サイトの「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) を参照してください。
 
 オンプレミスで Exchange を使用している場合、Azure Rights Management コネクタを展開し、IRM 機能と Azure Rights Management サービスを利用できます。 このコネクタはオンプレミス サーバーと Azure Rights Management サービスの間のリレーとして機能します。
 

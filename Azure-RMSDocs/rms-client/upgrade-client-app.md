@@ -4,7 +4,7 @@ description: "RMS 共有アプリケーションから Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 09/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f3384e7cd049120b76a408cb761a0bb5ad34bf8b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 417294ff0890f2371909915a867fbdf56669e972
+ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>RMS 共有アプリケーションで実行していたタスク
 
@@ -27,10 +27,10 @@ ms.lasthandoff: 06/30/2017
 |RMS 共有アプリ|Azure Information Protection クライアントでの作業方法
 |-----------|--------------------|
 |デバイス上のファイルを保護する <br /><br />"インプレースで保護" ともいう|Office アプリの場合、必要な保護を適用するラベルを選択するか、カスタム アクセス許可を設定します。<br /><br />他のファイルの場合、エクスプローラーのメニュー オプション **[分類して保護する]** を使用して、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを開きます。 次に、必要な保護を適用するラベルを選択するか、独自のカスタム アクセス許可を指定します。 <br /><br />詳細については、「[ファイルや電子メールを分類して保護する](client-classify-protect.md)」を参照してください。
-|電子メールで共有するファイルを保護する <br /><br />"保護ファイルの共有" ともいう|内部で共有している場合: ドキュメントや電子メール メッセージに必要な保護を適用したラベルを適用するか、Outlook の **[転送不可]** オプションを選択します。 <br /><br /> 外部で共有している場合、ファイルのコピーを使用しながら、カスタム アクセス許可を使用して、Office アプリケーション内から、またはエクスプローラーを使用してファイルを保護します。 次に、電子メールの添付ファイルや SharePoint Online ドキュメントへの招待など、標準的な共有メカニズムを使用して、ファイルを共有します。 初回使用時の手順として、https://aka.ms/rms-signup リンクを含めることを検討してください。 <br /><br />外部での共有の詳細については、ユーザー ガイドの「[Safely share a file with people outside your organization](client-classify-protect.md#safely-share-a-file-with-people-outside-your-organization)」 (組織外の相手と安全にファイルを共有する) セクションを参照してください。
+|電子メールで共有するファイルを保護する <br /><br />"保護ファイルの共有" ともいう|Outlook を使用する場合は、電子メール メッセージに必要な保護を適用したラベルを適用するか、Outlook の **[転送不可]** オプションを選択します。 保護されていない添付ファイルでも[ファイルの種類がサポートされている](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)場合、その添付ファイルは自動的に保護されます。<br /><br />注: 電子メールで送信する保護されたドキュメントを追跡するには、まず、それを保護してから電子メール メッセージに添付します。<br /><br />詳細については、「[ファイルや電子メールを分類して保護する](client-classify-protect.md)」を参照してください。
 |保護されたファイルに対するアクセス許可を変更する <br /><br />"再保護” ともいう|Azure Information Protection のバーを表示する Office アプリの場合: 必要な保護を適用するラベルを選択します。<br /><br />その他のファイルの場合、および Azure Information Protection クライアントが[保護のみモード](client-protection-only-mode.md)になっている場合: エクスプローラーのメニュー オプション **[分類して保護する]** を使用して、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを開きます。 次に、必要な保護を適用するラベルを選択するか、独自のカスタム アクセス許可を指定します。<br /><br />詳細については、「[ファイルや電子メールを分類して保護する](client-classify-protect.md)」を参照してください。
 |ドキュメントを追跡して取り消す|Office アプリの場合: ドキュメントを開き、**[ホーム]** タブ、**[保護]** グループ、**[保護]** > **[追跡と取り消し]** の順に移動します。<br /><br />エクスプローラーから: ファイルまたはフォルダーを右クリックし、**[分類して保護する]** をクリックします。 次に、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[追跡と取り消し]** をクリックします。 <br /><br />詳細については、「[ドキュメントを追跡して取り消す](client-track-revoke.md)」を参照してください。
-|保護されているファイルの表示と使用|Azure Information Protection ビューアーで、保護されているファイルを開いて、読み取ることができます。また、印刷と保存操作の実行権限がある場合は、保護されているファイルを印刷して保存することもできます。 このビューアーはクライアントと共に自動的にインストールされますが、個別にインストールすることもできます。<br /><br />詳細については、「[保護されているファイルを開く](client-view-use-files.md)」を参照してください。
+|保護されているファイルの表示と使用|保護されている Office ドキュメントの場合は、Office をインストールする必要があります。 Azure Information Protection ビューアーで、他の多くの保護されているファイルを開いて読み取ることができます。また、印刷と保存操作のアクセス許可がある場合は、保護されているファイルを印刷して保存することもできます。 このビューアーはクライアントと共に自動的にインストールされますが、個別にインストールすることもできます。<br /><br />詳細については、「[保護されているファイルを開く](client-view-use-files.md)」を参照してください。
 |ファイルからの保護の削除|エクスプローラーのメニュー オプション **[分類して保護する]** を使用して、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを開きます。 <br /><br />次に、1 つのファイルの場合は、**[Protect with custom permissions]** (カスタム アクセス許可で保護) オプションをオフにします。 複数のファイル、またはフォルダーの場合は、**[Remove custom permissions]** (カスタム アクセス許可の削除) をクリックします。<br /><br />詳細については、[ファイルや電子メールからのラベルと保護の削除](client-remove-label-protection.md)に関するページを参照してください。|
 
 ## <a name="cant-find-the-option-youre-looking-for"></a>お探しのオプションは見つかりましたか?
@@ -39,7 +39,7 @@ RMS 共有アプリケーションで選択していた特定のオプション�
 
 |RMS 共有アプリのオプション|説明
 |-----------|--------------------|
-|**保護ファイルの共有**|このオプションは、Office リボンで使用できなくなりました。 Office アプリケーション内から直接共有する代わりに、エクスプローラーの右クリック オプション **[分類して保護する]** を使用して、カスタム アクセス許可でドキュメントのコピーを保護し、選択した電子メール クライアントを使用するか、共有場所を使用してファイルを共有します。 初回使用時の手順として、https://aka.ms/rms-signup リンクを含めることを検討してください。 <br /><br />外部での共有の詳細については、ユーザー ガイドの「[Safely share a file with people outside your organization](#safely-share-a-file-with-people-outside-your-organization)」 (組織外の相手と安全にファイルを共有する) セクションを参照してください。
+|**保護ファイルの共有**|このオプションは、Office リボンで使用できなくなりました。 Office アプリケーション内から直接共有する代わりに、エクスプローラーの右クリック オプション **[分類して保護する]** を使用して、カスタム アクセス許可でドキュメントのコピーを保護し、選択した電子メール クライアントを使用するか、共有場所を使用してファイルを共有します。 <br /><br /> 保護した電子メールに保護されていないドキュメントを添付することもでき、そのドキュメントは、同じ制限で自動的に保護されます。 ただし、このドキュメントを追跡したり、取り消したりすることはできません。
 |**他のユーザーがこのドキュメントを開こうとしたら電子メールで通知する**|ドキュメント追跡サイトを使用して、優先する電子メール通知設定を構成します。その場合、共有した保護ドキュメントを見つけ、**[設定]** > **[メール通知]** の順に移動します。
 |**これらのドキュメントへのアクセスをすぐに取り消せるようにする**|このオプションは利用できなくなりました。 オフライン アクセスを許可しないテンプレートを構成してください。 また、[Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime) を実行し、テナントの使用ライセンスの有効期間を短縮する必要があるかどうかを検討してください。
 

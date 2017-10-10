@@ -1,44 +1,68 @@
 ---
-title: "新機能とリリース ノート | Azure RMS"
+title: "新機能とリリース ノート"
 description: "重要な変更点と、この新しいバージョンの RMS SDK の機能について説明します。"
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 09/25/2017
 ms.topic: article
-ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 9fd96c934d4f7a8e09035ff7eda4517f65a27e17
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: df78d1f1740128c79c944a6b5d33353141933d78
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
 ## <a name="whats-new"></a>新機能
-Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一段と簡素化され、柔軟性が向上しています。 このトピックでは、このバージョンの RMS SDK の重要な変更点と機能の概要を示します。
 
-### <a name="new-for-june-2016"></a>2016 年 6 月の新機能
+このトピックでは、重要な変更点と、この新しいバージョンの RMS SDK v4.x の機能について説明します。
 
-- **先進認証のサポート** - Active Directory Authentication Library (ADAL) ベースのサインインが RMS 対応アプリに導入されます。 これによって利用可能になるサインイン機能としては、多要素認証 (MFA)、SAML ベースのサードパーティ ID プロバイダーと RMS クライアント アプリケーションの組み合わせ、スマート カードや証明書をベースとする認証などがあります。また、RMS 対応アプリで基本認証プロトコルを使用する必要がなくなります。
+-   [2017 年 7 月の新機能](#new-for-july-2017)
+-   [2016 年 10 月の更新](#October-2016-update)
+-   [2016 年 6 月の更新](#new-for-June-2016)
+-   [2015 年 12 月の更新](#december-2015-update)
+-   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july-2015-update-adds-support-for-linux-c-developm)
+-   [2015 年 5 月の更新 – ログの制御を追加](#may-2015-update-adds-logging-control)
+-   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february-2015-update-adds-windows-store-application-support)
+-   [2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加](#january-2015-update-adds-winphone-platform-support)
+-   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [リリース ノート](#release-notes)
+-   [よく寄せられる質問](#frequently-asked-questions)
+
+### <a name="new-for-july-2017"></a>2017 年 7 月の新機能
+
+7 月リリースの更新で SDK が改訂され、4.2.5 になりました。
+
+- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
+- iOS SDK では、ログ記録レベルを設定できません。 
+- SDK は、NULL アクセス トークンに対してエラーを返すようになりました。
+
+### <a name="october-2016-update"></a>2016 年 10 月の更新
+
+- バックエンド バグをいくつか修正。
+- Apple iOS/OSX SDK のビットコードを有効化。
+
+### <a name="june-2016-update"></a>2016 年 6 月の更新
+
+- **先進認証のサポート** - Active Directory Authentication Library (ADAL) ベースのサインインを RMS 対応アプリに導入。 これによって利用可能になるサインイン機能としては、Multi-Factor Authentication (MFA)、SAML ベースのサードパーティ ID プロバイダーと RMS クライアント アプリケーションの組み合わせ、スマート カードや証明書をベースとする認証などがあります。また、RMS 対応アプリで基本認証プロトコルを使用する必要がなくなります。
 - **ドキュメント追跡のサポート** -開発するアプリの中でドキュメントを保護するときに、ドキュメント追跡を有効化できるようになりました。
 - パフォーマンスの向上
 - バグの修正
 
-
-### <a name="december-2015-update"></a>2015 年 12 月の更新
+### <a name="december-2015-update"></a>2015 年 12 月更新
 
 このリリースでは、デバイス用の RMS SDK はバージョン 4.2 であり、以下の機能が追加されています。
 
 -   ドキュメント追跡 (IOS/OS X および Android オペレーティング システムでは RMS オンラインのみ)
 
-    iOS/OS X の場合の詳細および使用ガイダンスについては、追跡情報、および [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) での追加のドキュメント追跡登録メソッドを提供する、[MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) クラスを参照してください。 Android 用の同様の機能も [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) および [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) に追加されています。
+    iOS/OS X の場合の詳細と使用方法については、[MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) クラスを参照してください。追跡情報と [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) での追加の文書追跡登録メソッドを提供します。 Android 用の同様の機能も [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) および [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) に追加されています。
 
     ドキュメント追跡機能の詳細については、「[方法: ドキュメント追跡を使用する](how-to-use-document-tracking.md)」を参照してください。
 
@@ -66,7 +90,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
 ### <a name="july-2015-update---adds-support-for-linux--c-development"></a>2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加
 
-このリリースでは、以下が追加されています。
+このリリースでは、以下の更新が追加されています。
 
 -   Linux プラットフォーム向けの RMS SDK 4.1
 
@@ -74,7 +98,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
 ### <a name="may-2015-update---adds-logging-control"></a>2015 年 5 月の更新 – ログの制御を追加
 
-このリリースでは、以下のサポートが追加されています。
+このリリースでは、以下の更新のサポートが追加されています。
 
 -   iOS
 
@@ -92,7 +116,7 @@ Microsoft Rights Management SDK 4.2 では、RMS アプリケーションが一�
 
 ### <a name="february-2015-update---adds-windows-store-application-support"></a>2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
 
-このリリースでは、Windows ストア アプリケーションのサポートを追加し、RMS SDK 4.1 の Windows Phone、Android、および iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
+このリリースでは、Windows ストア アプリケーションのサポートを追加し、RMS SDK 4.1 の Windows Phone、Android、iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
 ### <a name="january-2015-update---adds-winphone-platform-support"></a>2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加
 
@@ -117,10 +141,10 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **AD RMS SDK 4.1 – iOS/OS X および Android プラットフォームのグローバル公開リリース**
 
 -   **AD RMS のサポート** – 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
--   **オフラインで使用** – エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
+-   **オフラインで使用** - エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
 -   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) を使用することもできます)。
 -   **UI の分離** – 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
--   **再設計された API** – RMS の一貫性のある動作により、開発者は最低限の労力で API のシンプルかつ透過的な暗号化および暗号化解除を利用できます。
+-   **再設計された API** – 暗号化/復号化の API が単純でわかりやすくなりました。RMS の動作と操作方法に一貫性があり、労力が最小限に抑えられます。
 
 **すべてのプラットフォームに共通**
 
@@ -130,7 +154,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   Amazon® Kindle デバイスで .ptxt の添付ファイルを表示するサンプル アプリケーションを使用する際に、表示する前に、まずファイルをダウンロードする必要があります。
 
-    **ソリューション** – これは既知の問題であり、今後対応する予定です。
+    **解決策** - 既知の問題には後に対処されます。
 
 -   複数のインスタンスが許可されていると、SDK を使用するアプリケーションがクラッシュすることがあります。
 
@@ -142,7 +166,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **iOS および OS X**
 
--   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は 2 つありますが、 バグがあるため、現在 1 番目の言語仕様のローカライズは完全にはサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されますが、UI は翻訳されません。
+-   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は 2 つありますが、 バグがあるため、現在のところ、最初の言語仕様のローカライズは完全にサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されますが、UI は翻訳されません。
 
     1. ポルトガル語
 
@@ -187,7 +211,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
-**Q**: RMS SDK バージョン 2.1 では、情報保護を実装するアプリケーションごとに生成済みマニフェストが必要ですが、バージョン 4.0 以降でも同じでしょうか。
+**Q**: RMS SDK バージョン 2.1 では、情報保護を実装するアプリケーションごとに生成済みマニフェストが必要です。 SDK バージョン 4.0 以降でも同じでしょうか。
 
 **A**: いいえ、マニフェストは Rights Management SDK バージョン 3.0 以降では不要です。
 

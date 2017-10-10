@@ -4,7 +4,7 @@ description: "Microsoft が Azure Information Protection のテナント キー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4a484660aaf5a1820b04892ff006c08cceb5080
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
-# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
 >*適用対象: Azure Information Protection、Office 365*
 
@@ -38,6 +38,8 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 - あなたの会社が 2 つ以上の会社に分かれました。 テナント キーを再入力すると、新しい会社はあなたの社員が公開する新しいコンテンツにアクセスできません。 以前のテナント キーのコピーがあれば、以前のコンテンツにアクセスできます。
 
+- 別のキー管理トポロジに移行したい。
+
 - テナント キーのマスター コピーの盗難が疑われています。
 
 キーを再入力する場合、Microsoft が管理している別のキーを選択してテナント キーとすることはできますが、Microsoft が管理するキーを自分で新たに作成することはできません。 新しいキーを作成するには、キー トポロジを変更して、"お客様が管理 (BYOK)" とする必要があります。
@@ -48,7 +50,7 @@ Azure Information Protection のアクティブなテナント キーとして�
 
     (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-キー トポロジを、お客様が管理 (BYOK) に変更するには、「[Azure Information Protection テナント キーを実装する](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key)」を参照してください。
+キー トポロジを、お客様による管理 (BYOK) に変更するには、「[Azure Information Protection テナント キーの BYOK を実装する](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
 
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
 テナント キーのバックアップは Microsoft が行うため、ユーザーの操作は必要ありません。
@@ -62,11 +64,11 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
 ### <a name="step-2-wait-for-verification"></a>手順 2:検証が完了するまで待機する
 
--   Microsoft は Azure Information Protection テナント キーのリリース要求が正当であることを確認します。 このプロセスには、最大 3 週間を要することがあります。
+- Microsoft は Azure Information Protection テナント キーのリリース要求が正当であることを確認します。 このプロセスには、最大 3 週間を要することがあります。
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>手順 3:CSS からキーの手順を受領する
 
--   Microsoft カスタマー サポート サービス (CSS) は、Azure Information Protection の構成およびテナント キーを、パスワードで保護されたファイルで暗号化した状態で送付します。 このファイルのファイル名拡張子は、**.tpd** です。 これにあたって、CSS はまずエクスポートを開始したユーザーにツールを電子メールで送信します。 このツールをコマンド プロンプトから次のように実行します。
+- Microsoft カスタマー サポート サービス (CSS) は、Azure Information Protection の構成およびテナント キーを、パスワードで保護されたファイルで暗号化した状態で送付します。 このファイルのファイル名拡張子は、**.tpd** です。 これにあたって、CSS はまずエクスポートを開始したユーザーにツールを電子メールで送信します。 このツールをコマンド プロンプトから次のように実行します。
 
     ```
     AadrmTpd.exe -createkey
@@ -95,7 +97,7 @@ Azure Information Protection の構成およびテナント キーをエクス�
 ## <a name="respond-to-a-breach"></a>侵害への対応
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の生成キー技術、または現在のキーの長さおよびアルゴリズムに脆弱性が見つかる可能性があります。
 
-製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントがあなたの資産に影響を与える場合、Microsoft は Azure Information Protection テナント管理者に電子メールで通知します。その場合、サブスクリプションで指定されたアドレスが使われます。
+製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントがあなたの資産に影響を与える場合、マイクロソフトは Azure Information Protection テナント管理者に電子メールで通知します。その場合、サブスクリプションで指定されたメール アドレスが使われます。
 
 侵害がある場合、あなたまたはマイクロソフトがとれる最善策は侵害の範囲によって異なります。マイクロソフトはあなたと連携し、このプロセスを進めます。 次の表は一般的な状況と、考えられる対応をいくつかまとめたものです。ただし、実際の対応は調査中に明らかになった情報によって変わります。
 

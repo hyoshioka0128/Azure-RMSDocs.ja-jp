@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 09/27/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a85aafd3f3f23b1aa138fd3d44e206be143f7643
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: d5371ad1a5fb89176e47406b6c051efd1fa33b37
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
 >*適用対象: Azure Information Protection、Office 365*
 
 
-次の各表を使用して、Azure Information Protection のデータ保護を提供する、Azure Rights Management サービス (Azure RMS) をネイティブでサポートするアプリケーションおよびソリューションを特定します。 
+次の各表を使用して、Azure Information Protection のデータ保護を提供する、Azure Rights Management サービス (Azure RMS) をネイティブでサポートするアプリケーションおよびソリューションを特定します。
 
 これらのアプリケーションおよびソリューションでは、Rights Management サポートは、使用制限をサポートするために Rights Management API を使用して密接に統合されています。 このようなアプリケーションおよびソリューションは、"RMS 対応" とも呼ばれます。
 
@@ -44,41 +44,34 @@ ms.lasthandoff: 07/21/2017
 
 |**デバイス オペレーティング システム**|Word、Excel、PowerPoint|保護された PDF|電子メール|他のファイルの種類|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office モバイル アプリ (Azure RMS のみ) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Windows 用 Azure Information Protection クライアント <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン [[8]](#footnote-8): .dwg<br />|
-|**iOS**|iPad および iPhone 用 Office [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />GigaTrust<br /><br />TITUS Docs|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Azure Information Protection アプリ [[1]](#footnote-1): テキスト、画像<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile [[1]](#footnote-1)|Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) と [[7]](#footnote-7)<br /><br />Samsung Email (S3 以降) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Azure Information Protection アプリ [[1]](#footnote-1): テキスト、画像|
-|**macOS**|Office 2011 (AD RMS のみ)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />RMS 共有アプリ [[1]](#footnote-1)|Outlook 2011 (AD RMS のみ)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
-|**Windows 10 Mobile**|Office モバイル アプリ (Azure RMS のみ) [[1]](#footnote-1)|サポートされていません|Citrix WorxMail [[6]](#footnote-6)<br /><br />Outlook メール|サポートされていません|
-|**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|サポートされていません|Outlook 2013 RT<br /><br />Windows 用メール アプリケーション<br /><br />Windows メール [[4]](#footnote-4)|Siemens JT2Go: JT ファイル|
-|**Windows Phone 8.1**|Office Mobile (AD RMS のみ)|RMS 共有アプリ [[1]](#footnote-1)|Outlook Mobile [[4]](#footnote-4)|RMS 共有アプリ [[1]](#footnote-1): テキスト、イメージ、pfile|
-|**Blackberry 10**|サポートされていません|サポートされていません|Blackberry の電子メール [[4]](#footnote-4)|サポートされていません|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Windows 用 Azure Information Protection クライアント <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4) |Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
+|**iOS**|Office Mobile (保護されたドキュメントの表示と編集)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護されたドキュメントの表示)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (保護されたドキュメントの表示) <br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護されたドキュメントの表示) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 以降) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
+|**macOS**|Office 2011 (AD RMS のみ)<br /><br />Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Foxit Reader<br /><br />RMS 共有アプリ (保護されたドキュメントの表示)|Outlook 2011 (AD RMS のみ)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac <br /><br />Web ブラウザー [[3]](#footnote-3)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
+|**Windows 10 Mobile**|Office Mobile アプリ (Azure RMS で保護されたドキュメントの表示) <br /><br />Web ブラウザー [[2]](#footnote-2)|サポートされていません|Citrix WorxMail <br /><br />Outlook メール <br /><br />Web ブラウザー [[3]](#footnote-3)|サポートされていません|
+|**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|サポートされていません|Outlook 2013 RT<br /><br />Windows 用メール アプリケーション<br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Siemens JT2Go: JT ファイル|
+|**Windows Phone 8.1**|Office Mobile (AD RMS のみ)<br /><br />Web ブラウザー [[2]](#footnote-2)|RMS 共有アプリ (保護されたドキュメントの表示)|Outlook Mobile [[4]](#footnote-4) <br /><br />Web ブラウザー [[3]](#footnote-3)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
+|**Blackberry 10**|Web ブラウザー [[2]](#footnote-2)|サポートされていません|Blackberry の電子メール [[4]](#footnote-4) <br /><br />Web ブラウザー [[3]](#footnote-3)|サポートされていません|
 
 
 ###### <a name="footnote-1"></a>脚注 1:
-保護されたコンテンツの表示をサポートします。
+保護されていないドキュメントが SharePoint Online と OneDrive for Business の保護ライブラリにアップロードされたときの、保護されたドキュメントの表示をサポートします。
 
-###### <a name="footnote-2"></a>脚注 2: 
-保護されていないドキュメントが SharePoint Online と OneDrive for Business の保護ライブラリにアップロードされたときの、保護されたドキュメントの表示をサポートします。 
+###### <a name="footnote-2"></a>脚注 2:
+[Office 365 Message Encryption とその新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)で保護された [Office 添付ファイル](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)の場合。
 
 ###### <a name="footnote-3"></a>脚注 3:
-受信者が保護された電子メールを受信したが、メール サーバーとして Exchange を使用していない場合、または送信者が別の組織に属している場合、このコンテンツは Outlook のような機能が豊富なメール クライアントでしか開くことができません。 このコンテンツは Outlook Web Access から開くことはできません。
+送信者と受信者が同じ組織に属する場合。 あるいは、次の状況のいずれか。
+
+- 送信者または受信者が Exchange Online を利用している。
+
+- 送信者がハイブリッド構成でオンプレミス Exchange を利用している。 
 
 ###### <a name="footnote-4"></a>脚注 4:
-Exchange ActiveSync IRM を使用します。Exchange の管理者が有効にする必要があります。 ユーザーは保護された電子メール メッセージを表示、返信、全員に返信することができますが、新しい電子メール メッセージを自身で保護することはできません。
+Exchange ActiveSync IRM を使用します。Exchange の管理者が有効にする必要があります。 ユーザーは保護された電子メール メッセージを表示、返信、全員に返信することができますが、新しい電子メール メッセージを保護することはできません。
+ 
+Exchange ActiveSync IRM が有効になっていないために、電子メール アプリケーションがメッセージをレンダリングできない場合は、送信者がハイブリッド構成で Exchange Online またはオンプレミス Exchange を使用していれば、受信者は Web ブラウザーで電子メールを表示できます。 
 
-受信者が保護された電子メールを受信したが、メール サーバーとして Exchange を使用していない場合、または送信者が別の組織に属している場合、このコンテンツは Outlook のような機能が豊富なメール クライアントでしか開くことができません。 このコンテンツは、Outlook Web Access から開くことも、Exchange Active Sync IRM を使用してモバイル メール クライアントから開くこともできません。
-
-###### <a name="footnote-5"></a>脚注 5:
-保護された iOS 用ドキュメントの表示と編集をサポートします。 詳細については、Office ブログの投稿「[Azure Rights Management support comes to Office for iPad and iPhone (Azure Rights Management による iPad および iPone 用 Office 向けのサポート)](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)」を参照してください。
-
-###### <a name="footnote-6"></a>脚注 6:
-詳細については、「[Citrix product documentation for WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html)」 (Citrix の WorxMail 向け製品文書) を参照してください。
-
-###### <a name="footnote-7"></a>脚注 7:
-詳細については、Office ブログの投稿「[OWA for Android now available on select devices (一部のデバイスで OWA for Android が利用可能になりました)](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)」を参照してください。
-
-###### <a name="footnote-8"></a>脚注 8
-詳細については、Enterprise and Mobility ブログの投稿、「[SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)」 (SealPath で導入される AutoCAD の RMS 保護) を参照してください。
 
 
 ### <a name="more-information-about-azure-rms-support-for-office"></a>Azure RMS による Office のサポートの詳細
@@ -101,9 +94,11 @@ Azure RMS および Office Professional Plus 2010 Service Pack 2 または Offic
 
 - Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションが必要です。
 
-- Windows 10 ではサポートされていません
+- Windows 10 ではサポートされていません。
 
 - フェデレーションされるユーザー アカウントのフォーム ベース認証はサポートされていません。 これらのアカウントでは、Windows 統合認証を使用する必要があります。
+
+- ユーザーが Azure Information Protection クライアントでカスタムのアクセス許可を選択したとき、テンプレート保護がオーバーライドされることはありません。 このシナリオでは、カスタムのアクセス許可を適用する前に、元の保護を取り除く必要があります。
 
 次の Office クライアント スイートは、macOS 上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
 
@@ -124,7 +119,7 @@ iOS 用および Android 用の Azure Information Protection アプリは、こ�
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアントの詳細
 
-現在、Windows 用 Rights Management 共有アプリケーションは、このクライアントに置き換わっています。 
+現在、Windows 用 Rights Management 共有アプリケーションは、このクライアントに置き換わっています。
 
 詳細については、次のリソースを参照してください。
 
@@ -138,7 +133,7 @@ iOS 用および Android 用の Azure Information Protection アプリは、こ�
 
 ### <a name="more-information-about-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションの詳細
 
-このアプリケーションは Azure Information Protection クライアントに置き換えられます。 Mac コンピューターや Windows Phone のモバイル デバイスではまだ必要です。 
+このアプリケーションは Azure Information Protection クライアントに置き換えられます。 Mac コンピューターや Windows Phone のモバイル デバイスではまだ必要です。
 
 詳細については、次のリソースを参照してください。
 
@@ -170,7 +165,7 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 -   Microsoft OneDrive for Business for SharePoint Server 2013
 
 -   XPS ビューアー
- 
+
 さらに、RMS 共有アプリケーションと Azure Information Protection クライアントには次の制限があります。
 
 -   Windows コンピューターの場合: Windows 7 Service Pack 1 以降が必要です
