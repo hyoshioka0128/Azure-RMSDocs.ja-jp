@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2017
+ms.date: 10/03/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0b788b8a380132d830fb6593f579dca9c8ac61bc
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: 83148b97e7aca46365aa681c4a08c2029924fdd0
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -51,7 +51,7 @@ Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIP
 
 Premier サポートをご利用の場合は、[Premier サポートのお客様用ポータル](https://premier.microsoft.com/)にアクセスして、インシデントの送信、ソリューションの検索、ヘルプの参照を行ってください。
 
-**FastTrack** の利用資格: 対象となるプランで Azure Information Protection のライセンスを 150 以上ご購入いただいた場合は、FastTrack センター特典をご利用いただけます。 FastTrack センター特典によって、対象サービスの評価、修復、および有効化に関する Microsoft スペシャリストの支援を受けることができます。 詳細については、「[Azure Rights Management 用 FastTrack センター特典](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program)」を参照してください。
+**FastTrack** の利用資格: 対象となるプランで Azure Information Protection のライセンスを 150 以上ご購入いただいた場合は、FastTrack センター特典をご利用いただけます。 FastTrack センター特典によって、対象サービスの評価、修復、および有効化に関する Microsoft スペシャリストの支援を受けることができます。 詳細については、「[Enterprise Mobility + Security (EMS) 用の FastTrack センター特典](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems)」を参照してください。
 
 その他のお客様は、Azure Information Protection のサブスクリプションに応じて、以下の表のサポート チャネルをご利用ください。
 
