@@ -4,17 +4,17 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: ba39c332437e2710554d1e8f69c3f676f0d870db
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 1564f6dc0a21017151254b1ae1fab1586761e766
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -92,11 +92,18 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- ビデオ: "Information Protection のヒント トップ 5"
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
+さらに、**Microsoft Ignite 2017** では、オンデマンドで使用可能な Azure Information Protection に関する多くのセッションが提供されます。 今回のカンファレンスで発表された内容の概要については、「[What’s new in Azure Information Protection @ Ignite 2017 (Azure Information Protection の新機能 (Ignite 2017))](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」を参照してください。 
 
-さらに、**Microsoft Ignite 2017** では、オンデマンドで使用可能になる Azure Information Protection に関する多くのセッションが提供されます。 これらのセッションは使用可能になったときに、Ignite Web サイトで[検索して見つける](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)ことができます。 お知らせの概要については、「[What’s new in Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」 (Azure Information Protection の新機能 (Ignite 2017)) を参照してください。
+Ignite の Web サイトで、Azure Information Protection にタグ付けされているセッションを[検索して見つけられます](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)。 ただし、次のセッションを初めにご覧いただくことをお勧めします。
+
+- [Microsoft の情報保護機能を使用してデータのライフサイクル全体を保護する](https://myignite.microsoft.com/videos/55397)
+
+- [Azure Information Protection のデプロイと導入を加速させる](https://myignite.microsoft.com/videos/53454)
+
+- [Azure Information Protection の新機能を確認し、ロードマップと戦略について学ぶ](https://myignite.microsoft.com/videos/53453)
+
+- [新しい Office 365 Message Encryption 機能で、機密性の高いメールを保護および管理する](https://myignite.microsoft.com/videos/53230)
 
 
 ## <a name="next-steps"></a>次のステップ
