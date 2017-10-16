@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/27/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a1f448a51ee4bfecfd0d680b842eed44aa816ed1
-ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
+ms.openlocfilehash: 198698bbef8fbb778545c2599798afd1255a01bc
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -70,13 +70,13 @@ Microsoft ダウンロード センターに移動し、[Azure Rights Management
 
     その後、このグループをオンボーディング制御用に構成し、この例のオブジェクト ID を実際のグループ オブジェクト ID に置き換えて、確認を求められたら「**Y**」と入力します。
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501"
+        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
 
 3. クライアント移行スクリプトが含まれる[次のファイルをダウンロード](https://go.microsoft.com/fwlink/?LinkId=524619)します。
     
-    **ClientMigration.zip**
+    **Migration-Scripts.zip**
     
-4. ファイルを抽出し、**PrepareClient.cmd** の指示に従って、実際の AD RMS クラスター エクストラネット ライセンス URL のサーバー名が含まれるようにします。 
+4. ファイルを抽出し、**Prepare-Client.cmd** の指示に従って、実際の AD RMS クラスター エクストラネット ライセンス URL のサーバー名が含まれるようにします。 
     
     この名前を調べるには、Active Directory Rights Management サービス コンソールで、クラスターの名前をクリックします。 **[クラスターの詳細]** で、[エクストラネット クラスターの URL] セクションの **[ライセンス]** からサーバー名をコピーします。 例: **rmscluster.contoso.com**。
 

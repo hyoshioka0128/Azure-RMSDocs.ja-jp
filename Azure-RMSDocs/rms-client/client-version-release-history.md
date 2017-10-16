@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b6e6e4d824c8f76be605d9e728c0405aba960e5
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: ccd6d0cec6a71527fad0303369baad90dd733958
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection クライアント: バージョン リリース履歴
 
@@ -46,6 +46,8 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 - 新しい Office 365 DLP 条件に対応。この条件はラベルに設定できます。 詳細については、「[Azure Information Protection ラベルの条件を構成する](../deploy-use/configure-policy-classification.md)」を参照してください。
 
 - ラベルは [Information Protection] バーに表示されるほか、Office リボンの **[保護]** ボタンをクリックしたときに表示されます。 
+
+- 次の Visio ファイルの種類のネイティブ保護: .vsdm、.vsdx、.vssm、.vssx、.vstm、.vstx
 
 - Azure Portal で設定する詳細なクライアント構成に対応。 この構成には次のものが含まれます。
     
@@ -113,7 +115,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 **要件の変更**
 
-前のバージョンでは フル クライアント向けに Microsoft .NET Framework 4.6.2 の新し必須コンポーネントを導入しました。 推奨はされていませんが、カスタム インストール パラメーター **DowngradeDotNetRequirement** を使用してこの要件を省略できます。 詳細については、管理者ガイドの[クライアントのインストールに関するセクション](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users)をご覧ください。
+前のバージョンでは フル クライアント向けに Microsoft .NET Framework 4.6.2 の新しい必須コンポーネントを導入しました。 推奨はされていませんが、カスタム インストール パラメーター **DowngradeDotNetRequirement** を使用してこの要件を省略できます。 詳細については、管理者ガイドの[クライアントのインストールに関するセクション](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users)をご覧ください。
 
 **新機能**:
 
@@ -165,7 +167,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 **新機能**:
 
-- Azure Information Protection クライアントがインストールされている場合にユーザーが Office アプリケーションから実行できる診断テストとリセット オプションがあります。この機能を使用するには、[**ホーム**] タブの [**保護**] グループで [**保護**] をクリックし、[**ヘルプとフィードバック**]、[**診断の実行**] の順にクリックします。 
+- Azure Information Protection クライアントがインストールされている場合にユーザーが Office アプリケーションから実行できる診断テストとリセット オプションがあります。この機能を使用するには、**ホーム** タブの **保護** グループで **保護**をクリックし、**ヘルプとフィードバック**、**診断の実行** の順にクリックします。 
 
     このオプションの詳細については、管理者ガイドの[追加のチェックとトラブルシューティング](client-admin-guide.md#additional-checks-and-troubleshooting)セクションをご覧ください。
 

@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
-ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
+ms.openlocfilehash: db6cb1c6327808616ee98b9e5b14f2a92a590bff
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -35,7 +35,7 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 
 2. [ **SCP** ] タブをクリックします。
 
-3. [ **SCP を変更する** ] チェック ボックスをオンにします。
+3. [ **SCPを変更する** ] チェック ボックスをオンにします。
 
 4. **[現在の SCP を削除する]** を選択して **[OK]** をクリックします。
 
@@ -48,11 +48,35 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 >[!IMPORTANT]
 > この移行が終わると、Azure Information Protection および Hold Your Own Key (HYOK) オプションで AD RMS クラスターを使うことができなくなります。 Azure Information Protection のラベルに HYOK を使う場合は、現在行われているリダイレクションのため、使用する AD RMS クラスターに、移行したクラスターとは異なるライセンス URL が必要です。
 
-## <a name="step-11-remove-onboarding-controls"></a>手順 11. オンボーディング制御を解除する
+## <a name="step-11-reconfigure-mobile-device-clients-and-mac-computers-and-remove-onboarding-controls"></a>手順 11. モバイル デバイス クライアントおよび Mac コンピューターを再構成して、オンボーディング制御を解除する
 
-既存のすべてのクライアントを Azure Information Protection に移行した後は、オンボーディング制御を使い続け、移行プロセス用に作成した **AIPMigrated** グループを残しておく理由はありません。 
+モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
 
-最初にオンボーディング制御を削除した後、**AIPMigrated** グループおよびリダイレクト展開のために作成したソフトウェア展開タスクを解除できます。
+このような DNS の変更が伝達されると、これらのクライアントは自動的に検出され、Azure Rights Management サービスの使用を開始します。 ただし、Office Mac を実行する Mac コンピューターは、AD RMS からの情報をキャッシュに入れます。 これらのコンピューターの場合、このプロセスには最大で 30 日かかることがあります。 
+
+Mac コンピューターが検出プロセスを直ちに実行するようにするには、キーチェーンで "adal" を検索し、すべての ADAL エントリを削除します。 これらのコンピューターで次のコマンドを実行します。
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+既存のすべての Windows コンピューターを Azure Information Protection に移行した後は、オンボーディング制御を使い続け、移行プロセス用に作成した **AIPMigrated** グループを残しておく理由はありません。 
+
+最初にオンボーディング制御を解除すると、**AIPMigrated** グループと、移行スクリプトをデプロイするために作成した任意のソフトウェア デプロイ方法を削除できます。
 
 オンボーディング制御を解除するには:
 
@@ -63,6 +87,8 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 2. 次のコマンドを実行し、「**Y**」と入力して確認します。
 
         Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    このコマンドを実行すると、Azure Rights Management 保護サービスのライセンスの強制が解除され、すべてのコンピューターでドキュメントおよび電子メールを保護できるようになります。
 
 3. オンボーディング制御が設定されていないことを確認します。
 

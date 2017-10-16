@@ -10,18 +10,18 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 33666be46b9b2fc022e541ec710a0be596f4ede0
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 76650461c0af6e705f7ab124d31cdb598889bbc8
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
 >*適用対象: Azure Information Protection*
 
 >[!NOTE]
->現在プレビュー段階のこの機能は、Azure Information Protection クライアントの現在の**プレビュー** バージョンと組み合わせて利用します。こちらのバージョンは [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。
+>現在のところ、この機能はプレビュー段階です。
 
 Azure Information Protection の既定のラベルは複数の言語をサポートしますが、指定するラベルの名前と説明のサポートを構成する必要があります。 この構成では、次のことを行う必要があります。
 
