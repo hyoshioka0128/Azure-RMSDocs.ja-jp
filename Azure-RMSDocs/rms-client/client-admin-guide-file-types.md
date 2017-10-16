@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -34,7 +34,7 @@ Azure Information Protection クライアントは、次のことをドキュメ
 
 ## <a name="file-types-supported-for-classification-only"></a>分類のみにサポートされているファイルの種類
 
-次のファイルの種類では分類のみがサポートされています。 その他のファイルの種類では、分類と保護の両方がサポートされます ([「分類と保護がサポートされているファイルの種類」](#supported-file-types-for-classification-and-protection) セクションを参照してください)。
+次のファイルの種類は、保護されていない場合でも分類することができます。
 
 - **Adobe Portable Document Format**: .pdf
 
@@ -45,15 +45,22 @@ Azure Information Protection クライアントは、次のことをドキュメ
 - **Microsoft Publisher**: .pub
 
 - **Microsoft Office 97、Office 2010、Office 2003**: .xls、.xlt、.doc、.dot、.ppt、.pps、.pot
+
 - **Microsoft XPS**: .xps、.oxps
 
-- **イメージ**: .jpg、.jpe、.jpeg、.jif、.jfif、.jfi.png、.tif、.tiff
+- **イメージ**: .jpg、.jpe、.jpeg、.jif、.jfif、.jfi、 .png、.tif、.tiff
 
 - **Autodesk Design Review 2013**: .dwfx
 
 - **Adobe Photoshop**: .psd
 
 - **Digital Negative**: .dng
+
+他のファイルの種類では、保護されている場合に分類がサポートされます。 これらのファイルの種類については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」を参照してください。
+
+たとえば、現在の[既定のポリシー](../deploy-use/configure-policy-default.md)では、**全般**ラベルは、分類を適用しますが、保護を適用しません。 **全般ラベル**の場合 sales.pdf という名前のファイルに適用することは可能ですが、sales.txt という名前のファイルに適用することはできません。 
+
+また、現在の既定のポリシーでは、**社外秘 \ すべての従業員**は分類と保護を適用します。 このラベルの場合は、sales.pdf とい名前のファイルと sales.txt という名前のファイルに、このラベルを適用することが可能です。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
 ## <a name="file-types-supported-for-protection"></a>保護がサポートされているファイルの種類
 
@@ -108,13 +115,15 @@ Azure Information Protection クライアントが保護をサポートするフ
 |.jfif|.pjfif|
 |.jt|.pjt|
 
+
 次の表には、Azure Information Protection クライアントによるネイティブ保護をサポートし、かつ分類も可能である残りのファイルの種類を一覧表示します。 これらは、Microsoft Office アプリのファイルの種類であることがわかります。 
 
 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
 
 |Office でサポートされているファイルの種類|Office でサポートされているファイルの種類|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+
 
 ### <a name="changing-the-default-protection-level-of-files"></a>ファイルの既定の保護レベルの変更
 Azure Information Protection クライアントがファイルを保護する方法は、レジストリを編集して変更することができます。 たとえば、ネイティブ保護をサポートするファイルを、Azure Information Protection クライアントで一般的に保護されるように強制できます。
@@ -181,15 +190,15 @@ Azure Information Protection クライアントがファイルを保護する方
 
 パスワード保護されているファイルは Azure Information Protection クライアントでネイティブ保護できません。 パスワード保護されている PDF ファイルをよく見かけますが、Office アプリなど、他のアプリケーションもこの機能を備えています。
 
-また、Windows 用の Azure Information Protection クライアントは次のいずれかの状況で PDF ファイルをネイティブ保護できません。保護解除もできません。
+また、Windows 用の Azure Information Protection クライアントは、次のファイルを表示できますが、次のいずれかの状況では PDF ファイルをネイティブ保護することも保護解除することもできません。
 
 - フォームベースの PDF ファイル。
 
 - ファイル名の拡張子が .pdf の、保護されている PDF ファイル。 
     
-    Azure Information Protection クライアントは保護されていない PDF ファイルを保護し、ファイル名の拡張子が .ppdf ファイルの、保護されている PDF ファイルを再保護できます。
+    Azure Information Protection クライアントは保護されていない PDF ファイルを保護できます。ファイル名の拡張子が .ppdf である場合は、保護されている PDF ファイルを保護解除し、再保護することができます。
 
-これらのファイルの回避策としては、一般的に、「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションにある方法で保護できます。 ただし、この方法では、コンピューター レベルで、ファイル名の拡張子が .pdf のすべてのファイルの保護レベルが変更されます。 一覧にある基準を満たすファイルのみに一般的保護を定義することはできません。
+これらのファイルを保護するための回避策としては、一般的に、「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションにある方法で保護できます。 ただし、この方法では、コンピューター レベルで、ファイル名の拡張子が .pdf のすべてのファイルの保護レベルが変更されます。 一覧にある基準を満たすファイルのみに一般的保護を定義することはできません。
 
 このようなファイルの保護が重要であれば、一時的に別のコンピューターにコピーすることで一般的に保護し、その後、コピーで戻すことができます。
 

@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 1564f6dc0a21017151254b1ae1fab1586761e766
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 1cbbad16590bde0fa6278764fe9351b1a4e0b996
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -88,6 +88,8 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 - クライアントのダウンロード: [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
+- カスタマイズ可能なユーザー ガイドのダウンロード: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
 - よく寄せられる質問: [Azure Information Protection に関してよく寄せられる質問](../get-started/faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
@@ -102,6 +104,8 @@ Ignite の Web サイトで、Azure Information Protection にタグ付けされ
 - [Azure Information Protection のデプロイと導入を加速させる](https://myignite.microsoft.com/videos/53454)
 
 - [Azure Information Protection の新機能を確認し、ロードマップと戦略について学ぶ](https://myignite.microsoft.com/videos/53453)
+
+- [コンプライアンス対応の暗号化キー管理方法](https://myignite.microsoft.com/videos/53455)
 
 - [新しい Office 365 Message Encryption 機能で、機密性の高いメールを保護および管理する](https://myignite.microsoft.com/videos/53230)
 

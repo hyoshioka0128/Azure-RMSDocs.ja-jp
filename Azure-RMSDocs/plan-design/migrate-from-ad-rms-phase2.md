@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: c81d7131bfb2a5f1e0742cd8dd55d52e3a65984a
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -112,11 +112,7 @@ PowerShell セッションを開き、次のコマンドを実行します。
     
         Enable-Aadrm
 
-**Azure Information Protection テナントが既にアクティブになっている場合はどうすればよいですか。** 組織の Azure Rights Management サービスが既にアクティブ化されている場合は、ユーザーが既に Azure Information Protection を使用してコンテンツを保護し、AD RMS の既存のキー (およびテンプレート) ではなく、自動的に生成されたテナント キー (および既定のテンプレート) を使用している可能性があります。 これは、イントラネット上で適切に管理されたコンピューターではほとんど起こりません。AD RMS インフラストラクチャ用に自動的に構成されるためです。 ただし、イントラネットへの接続の頻度が低いワークグループのコンピューターでは発生する可能性があります。 残念ながら、このようなコンピューターの識別は困難です。そのため、AD RMS から構成データをインポートする前に、サービスをアクティブ化しないようにお勧めします。
-
-Azure Information Protection テナントが既にアクティブ化されていて、前述のようなコンピューターを識別できる場合は、[手順 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection) の説明に従って、それらのコンピューターで CleanUpRMS.cmd スクリプトを実行します。 このスクリプトを実行すると、それらのコンピューターで強制的にユーザーの環境が再初期化されるため、更新されたテナント キーとインポートされたテンプレートがダウンロードされます。
-
-さらに、移行後に使用するカスタム テンプレートを作成した場合は、それらのテンプレートをエクスポートしてインポートする必要があります。 これについては次の手順で説明します。 
+**Azure Information Protection テナントが既にアクティブになっている場合はどうすればよいですか。** Azure Rights Management サービスが組織で既にアクティブ化されていて、移行後に使用するカスタム テンプレートを作成済みである場合は、そのテンプレートをエクスポートしてからインポートする必要があります。 これについては次の手順で説明します。 
 
 ## <a name="step-6-configure-imported-templates"></a>手順 6. インポートされたテンプレートを構成する
 

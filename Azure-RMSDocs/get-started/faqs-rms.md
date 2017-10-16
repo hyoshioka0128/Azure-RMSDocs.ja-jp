@@ -4,7 +4,7 @@ description: "Azure Information Protection のデータ保護サービス、Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 381eaee2aa33a2a6a715c31616ad92a0f957e8b0
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -86,6 +86,18 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 Azure Portal のテンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
+## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>保護されているドキュメントに対して、使用権限の変更またはユーザーの追加を行いたいのですが、ドキュメントを再保護する必要がありますか。
+
+ドキュメントがラベルまたはテンプレートを使用して保護されている場合、ドキュメントを再保護する必要はありません。 使用権限に変更を加えるか、新しいグループ (またはユーザー) を追加することによってラベルまたはテンプレートを変更します。さらに変更内容を保存して発行します。
+
+- 変更を加える前にユーザーがドキュメントにアクセスしていない場合、ユーザーがドキュメントを開くとすぐに変更が有効になります。 
+
+- ユーザーが既にドキュメントにアクセスしている場合は、ユーザーの[使用ライセンス](../deploy-use/configure-usage-rights.md#rights-management-use-license)の有効期限が過ぎた時点で変更が有効になります。 使用ライセンスの有効期限が切れるまで待てない場合にのみ、ドキュメントを再保護します。 効果的に再保護を行うと、ドキュメントの新しいバージョンが作成され、ユーザーの使用ライセンスも新しくなります。
+
+あるいは、必要なアクセス許可に対して既にグループを構成している場合、グループのメンバーシップを変更してユーザーの追加または除外を行うことができます。ラベルまたはテンプレートの変更は必要ありません。 Azure Rights Management サービスがグループ メンバーシップを[キャッシュ](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management)に入れるため、変更が反映されるまでわずかな遅延が生じる可能性があります。
+
+カスタム アクセス許可を使用してドキュメントが保護されている場合は、既存のドキュメントのアクセス許可を変更できません。 ドキュメントを再度保護し、この新しいバージョンのドキュメントに必要なすべてのユーザーとすべての使用権限を指定する必要があります。 保護されたドキュメントを再保護するには、"フル コントロール" 使用権限が必要です。 
+
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>一部のユーザーが Exchange Online 上の Exchange に、他のユーザーが Exchange Server 上の Exchange に登録されているハイブリッド デプロイメント構成です。この構成は、Azure RMS でサポートされていますか。
 はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できるようになることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](../deploy-use/activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](../deploy-use/deploy-rms-connector.md) Exchange Server 用に構成します。
 
@@ -115,8 +127,6 @@ Azure AD のアカウントを持っていないユーザー宛の Office ドキ
 はい。 Azure Portal でテンプレートをラベルに変換するときに、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加する[保護設定](../deploy-use/configure-policy-protection.md)を構成できます。 あるいは、PowerShell を利用してこの構成を行うことができます。
 
 カスタム テンプレートをラベルに変換して、外部ユーザーを簡単に追加できるようにする方法については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
-
-カスタム テンプレートのラベルへの変換の詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Azure RMS では、どの種類のグループを使用できますか?
 ほとんどのシナリオでは、電子メール アドレスを持つ、Azure AD 内の任意の種類のグループを使用できます。 この経験則は、使用権限を割り当てる際に常に適用されますが、Azure Rights Management サービスの管理の場合はいくつか例外があります。 詳細については、「[グループ アカウントに関する Azure Information Protection の要件](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts)」を参照してください。
@@ -178,15 +188,13 @@ Azure Information Protection では、他のユーザーと情報を安全に共
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
 
-はい。 このメッセージは、その特定のファイルの使用ライセンスを反映します。 使用ライセンスは、保護されたファイルや電子メール メッセージを開くユーザーに付与されるドキュメントごとの証明書です。 この証明書は、ファイルや電子メール メッセージに対するユーザーの権限のほか、コンテンツを暗号化する際に使用される暗号化キー、ドキュメントのポリシー内で別途定義されるアクセス制限を含んでいます。 使用ライセンスの有効期間が切れた場合に、そのファイルまたは電子メール メッセージを開くには、Azure Rights Management サービスに再度、ユーザーの資格情報を送信する必要があります。 
+はい。 このメッセージは、その特定のファイルの[使用ライセンス](../deploy-use/configure-usage-rights.md#rights-management-use-license)を反映します。 
 
 ファイルを取り消すと、そのアクションは、Azure Rights Management サービスにユーザーを認証する場合にのみ適用できます。 そのため、ファイルに 30 日間の使用ライセンス有効期間があり、ユーザーが既にそのドキュメントを開いている場合、ユーザーは引き続きその使用ライセンスの期間中はドキュメントにアクセスすることができます。 使用ライセンスの期限が切れた後は、ドキュメントが取り消されているため、ユーザーのアクセスが拒否される時点で、ユーザーの再認証が必要になります。
 
 ドキュメントを保護したユーザーである [Rights Management 発行者](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)は、この取り消しから除外されており、常に自分のドキュメントにアクセスできます。 
 
-テナントの使用ライセンス有効期間の既定値は 30 日間であり、この値は PowerShell のコマンドレット **Set-AadrmMaxUseLicenseValidityTime** を使用することで構成できます。 この設定は、テンプレートでより制限の厳しい設定によって上書きできます。 
-
-使用ライセンスのしくみの情報および例については、[Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime) の詳細な説明を参照してください。
+テナントに適用される使用ライセンスの有効期間の既定値は 30 日間です。ラベルまたはテンプレートで、この設定をより制限の厳しい値でオーバーライドできます。 使用ライセンスの詳細および使用ライセンスの構成方法については、[Rights Management の使用ライセンス](../deploy-use/configure-usage-rights.md#rights-management-use-license)に関するページを参照してください。
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
 Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows Phone) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの**[使用権限](../deploy-use/configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 これに対して、iOS や Mac のデバイスでは、画面キャプチャを禁止するアプリが認められていません。また、(Outlook Web App や Office Online を使用しているなどの場合に) ブラウザーでの画面キャプチャを禁止することも不可能です。

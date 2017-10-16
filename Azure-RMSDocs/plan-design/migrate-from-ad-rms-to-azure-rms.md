@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6651c812c207494bc98d5a1b22e359910a94c3cc
-ms.sourcegitcommit: 7d07b82da9aca52fe9e38fa1bada144226168a6b
+ms.openlocfilehash: 910d131ece4bae0cf5ef2685291431a3dc319264
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -181,12 +181,9 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 [**フェーズ 3: クライアント側の構成**](migrate-from-ad-rms-phase3.md)
 
-- **手順 7: Azure Information Protection を使用するようにクライアントを再構成する**
+- **手順 7: Azure Information Protection を使用するように Windows コンピューターを再構成する**
 
     既存の Windows コンピューターを、AD RMS ではなく Azure Rights Management サービスを使うように再構成する必要があります。 この手順は、自分の組織内のコンピューターに適用されるだけでなく、AD RMS を実行していた間に外部パートナーとコラボレーションしていた場合はパートナー組織のコンピューターにも適用されます。
-
-    また、iOS 搭載の携帯電話や iPad、Android 端末およびタブレット、Windows Phone、Mac コンピューターなどのモバイル デバイスをサポートする[モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)を展開してある場合は、これらのクライアントが AD RMS を使うようにリダイレクトした SRV レコードを DNS から削除する必要があります。
-
 
 [**フェーズ 4: サポート サービスの構成**](migrate-from-ad-rms-phase4.md)
 
@@ -203,10 +200,12 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 10: AD RMS のプロビジョニング解除**
 
-    すべてのクライアントが Azure Rights Management サービスを使っていて、AD RMS サーバーにアクセスしていないことを確認した後は、AD RMS デプロイをプロビジョニング解除できます。
+    すべての Windows コンピューターが Azure Rights Management サービスを使っていて、AD RMS サーバーにアクセスしていないことを確認した後は、AD RMS デプロイをプロビジョニング解除できます。
 
-- **手順 11: オンボーディング制御を削除する**
+- **手順 11: モバイル デバイス クライアントおよび Mac コンピューターを再構成して、オンボーディング制御を解除する**
 
+    iOS 搭載の携帯電話や iPad、Android 端末およびタブレット、Windows Phone、Mac コンピューターなどのモバイル デバイスをサポートする[モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイしてある場合は、これらのクライアントが AD RMS を使うようにリダイレクトした SRV レコードを DNS から削除する必要があります。 
+    
     準備フェーズ中に構成したオンボーディング制御はもう必要ありません。
 
 - **手順 12: Azure Information Protection テナント キーを更新する**

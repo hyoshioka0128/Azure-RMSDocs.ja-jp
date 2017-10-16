@@ -4,7 +4,7 @@ description: "Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 5afd71e059ef22eed61347e6916b9cbb6c2dc7f0
+ms.sourcegitcommit: 326930de25b259c18469f4100ec5774a04bedc7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/08/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -40,15 +40,7 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 ## <a name="default-templates"></a>既定のテンプレート
 
-Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、組織内で権限を与えられたユーザーにアクセスを制限する既定のテンプレートが 2 つテナントに自動的に作成されます。 これらの 2 つのテンプレートが作成されたとき、次の制限が設定されます。 
-
-- 保護されたコンテンツの読み取りまたは変更の権限
-    
-    - **特定のアクセス許可**: コンテンツの表示、ファイルの保存、コンテンツの編集、割り当てられた権限の表示、Macro の許可、転送、返信、全員に返信
-
-- 保護されたコンテンツの読み取り専用の表示
-    
-    - **特定のアクセス許可**: コンテンツの表示
+Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、組織内で権限を与えられたユーザーにアクセスを制限する既定のテンプレートが 2 つテナントに自動的に作成されます。 この 2 つのテンプレートは、作成されると、ドキュメント「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md#rights-included-in-the-default-templates)」に一覧表示されているアクセス許可を使用します。
 
 さらに、テンプレートは、7 日間オフライン アクセスを許可し、有効期限がないように構成されます。
 
@@ -63,15 +55,15 @@ Azure Rights Management サービスが含まれる Azure Information Protection
 
 Azure Information Protection のサブスクリプションを最近入手した場合、既定のテンプレートは次の名前で作成されます。
 
-- **社外秘 \ すべての従業員** (保護されたコンテンツの読み取りアクセス許可または変更アクセス許可の場合)。
+- **社外秘 \ すべての従業員**: 保護されたコンテンツの読み取りアクセス許可または変更アクセス許可を付与します。
 
-- **非常に機密性の高い社外秘 \ すべての従業員** (保護されたコンテンツの読み取り専用権限の場合)。
+- **非常に機密性の高い社外秘 \ すべての従業員**: 保護されたコンテンツの読み取り専用アクセス許可を付与します。
 
 Azure Information Protection サブスクリプションを入手してからしばらく経過している場合、あるいは Azure Information Protection サブスクリプションを持っていないが、Azure Rights Management が含まれる Office 365 サブスクリプションを持っている場合、既定のテンプレートは次の名前で作成されます。
 
-- **\<組織の名前> - 社外秘** (保護されたコンテンツの読み取りアクセス許可または変更アクセス許可の場合)。
+- **\<組織の名前> - 社外秘**: 保護されたコンテンツの読み取りアクセス許可または変更アクセス許可を付与します。
 
-- **\<組織の名前> - Confidential View Only** (保護されたコンテンツの読み取り専用アクセス許可の場合)。 
+- **\<組織の名前> - 社外秘、表示のみ**: 保護されたコンテンツの読み取り専用アクセス許可を付与します。 
 
 Azure Portal を使っている場合、これらの既定テンプレートの名前を変更 (および再構成) できます。
 
@@ -101,7 +93,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 - 部門別テンプレート (スコープが構成されたテンプレート) はグローバル ポリシーに表示されます。 現時点では、部門別テンプレートを編集して保存すると、スコープの構成が削除されます。 Azure Information Protection ポリシーのスコープ テンプレートに相当するのが、[スコープ ポリシー](configure-policy-scope.md)です。 テンプレートをラベルに変換する場合は、既存のスコープを選択できます。
     
-    また現時点では、部門別テンプレートのアプリケーションの互換性を設定できません。 必要な場合は、PowerShell の [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレッドを使用して設定できます。
+    また現時点では、部門別テンプレートのアプリケーションの互換性を設定できません。 必要な場合は、PowerShell と [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレッドを使用して、アプリケーションの互換性設定を設定することができます。
 
 - テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。 また、このテンプレートは **[テンプレート]** または **[保護テンプレート]** セクションに表示されなくなりました。 このセクションの名前は、変更される予定です。
 
