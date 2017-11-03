@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c81d7131bfb2a5f1e0742cd8dd55d52e3a65984a
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: b65e3d803f94e6c8a494217e2a494c704640e5fc
+ms.sourcegitcommit: 3952fc01c6182c143df7f0d2e748594e49bf1da8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -42,7 +42,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]**を展開し、 **[信頼された発行ドメイン]**をクリックします。
 
-3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから [ **信頼された発行ドメインのエクスポート**] をクリックします。
+3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから **[ 信頼された発行ドメインのエクスポート]** をクリックします。
 
 4. **[信頼された発行ドメインのエクスポート]** ダイアログ ボックスで:
 
@@ -193,6 +193,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 ## <a name="next-steps"></a>次のステップ
-「[フェーズ 3 - クライアント側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
+「[フェーズ 3 - クライアント側の構成](migrate-from-ad-rms-phase3.md)」に進みます。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
