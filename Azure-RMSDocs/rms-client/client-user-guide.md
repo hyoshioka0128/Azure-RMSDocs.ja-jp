@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントは、�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 11/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3facc7898e048af6f715410c73c43309419bf957
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f1ea192bcacc856b1a4452e2ad3b21f4de45d511
+ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection ユーザー ガイド
 
@@ -30,6 +30,8 @@ Windows 用 Azure Information Protection クライアントは、電子メール
 ## <a name="what-do-you-want-to-do"></a>作業内容
 
 - [Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)
+
+- [ファイルや電子メールを分類する](client-classify.md)
 
 - [ファイルや電子メールを分類して保護する](client-classify-protect.md)
 

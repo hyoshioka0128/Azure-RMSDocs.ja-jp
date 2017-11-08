@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Azure Information Protection クライアントでサポートされるファイルの種類
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
 
 Azure Information Protection クライアントは、次のことをドキュメントとメールに適用できます。
 
@@ -88,7 +88,11 @@ Azure Information Protection クライアントが保護をサポートするフ
     |Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます|
     |PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます
 
-- **その他すべてのファイル**: 使用可能なディスク領域とメモリによってのみ制限されます
+- **その他のすべてのファイル**: 
+    
+    - これらのファイルの保護方法: ファイル サイズの上限は、ディスクの空き領域と使用可能なメモリのみで決まります。
+    
+    - Azure Information Protection ビューアーでこれらのファイルを開くには: テキストベースのファイル (.ptxt と .pxml) でサポートされる最大ファイル サイズは 20 MB です。 画像ベースのファイルと PDF ファイルの場合、ファイルの最大サイズはメモリのみで決まります。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -202,6 +206,13 @@ Azure Information Protection クライアントがファイルを保護する方
 
 このようなファイルの保護が重要であれば、一時的に別のコンピューターにコピーすることで一般的に保護し、その後、コピーで戻すことができます。
 
+### <a name="limitations-for-container-files-such-as-zip-files"></a>.zip ファイルなど、コンテナー ファイルの制限事項
+
+コンテナー ファイルは、その他のファイルが含まれるファイルです。典型的な例は、圧縮ファイルが含まれる .zip ファイルです。 他には、.rar、.7z、.msg などがあります。
+
+これらのコンテナー ファイルを分類し、保護できますが、分類と保護はコンテナー内の各ファイルに適用されません。
+
+分類され、保護されているファイルがコンテナー ファイル内にある場合、先にファイルを抽出し、分類または保護設定を変更する必要があります。 ただし、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを利用し、サポートされているコンテナー ファイル内の全ファイルの保護を削除できます。
 
 ## <a name="next-steps"></a>次のステップ
 Azure Information Protection クライアントによってサポートされるファイルの種類がわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

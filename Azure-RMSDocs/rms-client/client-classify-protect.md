@@ -1,10 +1,10 @@
 ---
-title: "Azure Information Protection を使用した分類と保護"
+title: "Azure Information Protection を使用してファイルや電子メールを分類して保護する"
 description: "ドキュメントや電子メールを分類して保護する方法の手順です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: bbd2d81149dd860d7707b6eee83dacce9c13dd54
+ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 11/03/2017
 ---
-# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Azure Information Protection を使用してファイルや電子メールを分類して保護する
+# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+
+> [!NOTE]
+> 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](client-classify-protect.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
 
 Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) でドキュメントや電子メールを作成したり編集すると、分類と保護が簡単になります。 
 
@@ -163,5 +166,8 @@ Azure Information Protection バーを使用して、構成されているラベ
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
+「[Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

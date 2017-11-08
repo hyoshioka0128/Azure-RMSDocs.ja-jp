@@ -4,17 +4,17 @@ description: "ドキュメントまたは電子メール メッセージにラ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0da5df139d98f0468f49e7e3f17cd1cd2358a015
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: ff444afb1912239ec817882c76fc735f6d35ed1e
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -93,6 +93,8 @@ ms.lasthandoff: 09/22/2017
 この設定は現在プレビュー段階です。
 
 Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、ビジュアル マーカーを適用するクライアント デバイスでそれが利用できることを確認してください。 利用できない場合、使用されるフォントは不明確になります。 
+
+Azure Information Protection クライアントのプレビュー版を使っているとき、指定したフォントがない場合、クライアントは Calibri フォントの使用に戻ります。
 
 ### <a name="setting-the-font-color"></a>フォントの色を設定する
 

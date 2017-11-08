@@ -4,7 +4,7 @@ description: "Azure Rights Management (RMS) コネクタを使用するオンプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8837b6187aee8bc041df7185527470297e913f49
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 674acfafb305d8ac6ff530710ba311160c850288
+ms.sourcegitcommit: 8ba50d1fc813214b6e66baea140e626c74c5a518
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/16/2017
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -100,13 +100,13 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
     > [!NOTE]
     > このツールを使用して、このセクションの最初に記載されている、RMS コネクタと通信するサーバーを構成します。 このツールは、RMS コネクタを実行するサーバーで実行しないでください。
 
-4.  [**管理者として実行**] オプションを使用して Windows PowerShell を起動し、Get-help コマンドを使用して、選択した構成方法でのツールの使用方法を確認します。
+4.  **[管理者として実行]** オプションを使用して Windows PowerShell を起動し、Get-help コマンドを使用して、選択した構成方法でのツールの使用方法を確認します。
 
     ```
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、https://connector.contoso.com のように入力します。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
+スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、https://connector.contoso.com のように入力します。ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
 > [!IMPORTANT]
 > このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
@@ -198,7 +198,7 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>コネクタを使用するように SharePoint サーバーを構成するには
 
-1. RMS コネクタ管理ツールと「[RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)」セクションからの情報を使用して、SharePoint サーバーに RMS コネクタを使用する権限が付与されていることを確認します。 Exchange が RMS コネクタを使用できるようにするには、この構成が必要です。
+1. RMS コネクタ管理ツールと「[RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)」セクションからの情報を使用して、SharePoint サーバーに RMS コネクタを使用する権限が付与されていることを確認します。 SharePoint サーバーが RMS コネクタを使用できるようにするには、この構成が必要です。
 
 2.  RMS コネクタと通信する SharePoint サーバーで、次のいずれかを実行します。
 
@@ -214,11 +214,11 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
 3.  SharePoint で IRM を有効にします。 詳細については、SharePoint ライブラリの「[Information Rights Management を構成する (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx)」をご覧ください。
 
-    これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に [**この RMS サーバーを使用する**] を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタの名前が https://connector.contoso.com である場合、構成は次の図のようになります。
+    これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に **[この RMS サーバーを使用する]** を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタの名前が https://connector.contoso.com である場合、構成は次の図のようになります。
 
     ![RMS コネクタのための SharePoint サーバーの構成](../media/AzRMS_SharePointConnector.png)
 
-    SharePoint ファームで IRM が有効になったら、各ライブラリの [ **ライブラリの設定** ] ページにある [ **Information Rights Management** ] オプションを使用して、個々のライブラリで IRM を有効にできます。
+    SharePoint ファームで IRM が有効になったら、各ライブラリの **[ ライブラリの設定 ]** ページにある **[ Information Rights Management ]** オプションを使用して、個々のライブラリで IRM を有効にできます。
 
 
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成
@@ -230,7 +230,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 
 ### <a name="to-configure-file-servers-to-use-the-connector"></a>コネクタを使用するようにファイル サーバーを構成するには
 
-1.  RMS コネクタ管理ツールと [RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) セクションからの情報を使用して、ファイルサーバーに RMS コネクタを使用する権限が付与されていることを確認します。 Exchange が RMS コネクタを使用できるようにするには、この構成が必要です。
+1.  RMS コネクタ管理ツールと [RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) セクションからの情報を使用して、ファイルサーバーに RMS コネクタを使用する権限が付与されていることを確認します。 ファイル サーバーが RMS コネクタを使用できるようにするには、この構成が必要です。
 
 2.  ファイル分類インフラストラクチャ用に構成され、RMS コネクタと通信するファイル サーバーで、次のいずれかを実行します。
 

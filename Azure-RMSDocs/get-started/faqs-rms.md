@@ -4,7 +4,7 @@ description: "Azure Information Protection のデータ保護サービス、Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 038cb3a81bac9f16055038f33d825daed6642479
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -124,16 +124,24 @@ Azure AD のアカウントを持っていないユーザー宛の Office ドキ
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
 
-はい。 Azure Portal でテンプレートをラベルに変換するときに、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加する[保護設定](../deploy-use/configure-policy-protection.md)を構成できます。 あるいは、PowerShell を利用してこの構成を行うことができます。
+はい。 Azure Portal で構成できる[保護設定](../deploy-use/configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 [Office 365 Message Encryption の新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)を使用して、電子メールを送信するためだけにテンプレートを使用する場合を除き、ソーシャル ID (Gmail や Microsoft など) からアカウントを追加したり、Azure AD にないその他のアカウントを追加したりしないでください。
 
-カスタム テンプレートをラベルに変換して、外部ユーザーを簡単に追加できるようにする方法については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
+Azure Information Protection ラベルがある場合は、最初にカスタム テンプレートをラベルに変換してから、Azure Potal でこれらの保護設定を構成する必要があります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
+
+または、PowerShell を使用して、カスタム テンプレート (およびラベル) に外部ユーザーを追加できます。 この構成では、テンプレートを更新するために使用する権限定義オブジェクトを使用する必要があります。
+
+1. [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) コマンドレットを使用して変数を作成することで、権限定義オブジェクトで外部電子メール アドレスとその権限を指定します。
+
+2. [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットを使用して RightsDefinition パラメーターにこの変数を指定します。
+    
+    ユーザーを既存のテンプレートを追加するときに、新しいユーザーに加え、テンプレート内の既存のユーザーに対して、権限定義オブジェクトを定義する必要があります。 このシナリオでは、コマンドレットの「[例](/powershell/module/aadrm/set-aadrmtemplateproperty#examples)」セクションの「**Example 3: Add new users and rights to a custom template**」 (例 3: カスタム テンプレートへの新しいユーザーと権利の追加) が役に立ちます。 
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Azure RMS では、どの種類のグループを使用できますか?
 ほとんどのシナリオでは、電子メール アドレスを持つ、Azure AD 内の任意の種類のグループを使用できます。 この経験則は、使用権限を割り当てる際に常に適用されますが、Azure Rights Management サービスの管理の場合はいくつか例外があります。 詳細については、「[グループ アカウントに関する Azure Information Protection の要件](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts)」を参照してください。
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>保護されたメールを Gmail または Hotmail のアカウントに送信するにはどうしますか。
 
-Exchange Online と Azure Rights Management サービスを使用する場合は、保護メッセージとして電子メールを送信するだけです。 たとえば、Outlook on the web でコマンド バーの **[保護]** ボタンを選択し、[Outlook 転送不可] オプションを使用し、Azure Rights Management から保護を適用する Azure Information Protection ラベルを選択できます。あるいは保護を Exchange Online トランスポート ルールで適用できます。
+Exchange Online と Azure Rights Management サービスを使用する場合は、保護メッセージとしてユーザーに電子メールを送信するだけです。 たとえば、Outlook on the Web のコマンド バーにある新しい**[保護]** ボタンを選択するか、Outlook の **[転送不可]** ボタンまたはメニュー オプションを選択できます。 または、自動的に転送不可を適用する Azure Information Protection ラベルを選択して、電子メールを分類することができます。 
 
 受信者には Gmail、Yahoo、または Microsoft アカウントにサインインするためのオプションが表示され、保護された電子メールを読み取れるようになります。 また、ブラウザーで電子メールを読み取るためにワンタイム パスワードのオプションを選択することもできます。
 
