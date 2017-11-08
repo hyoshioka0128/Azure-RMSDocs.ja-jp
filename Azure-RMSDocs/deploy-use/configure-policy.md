@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 660f29506e22feb742edf4041d7baed0cf749b8c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
+ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -44,14 +44,30 @@ Azure Information Protection P2 サブスクリプションが必要なオプシ
 
 サブスクリプションの詳細については、「[Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)」を参照してください。
 
+## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
+
+1. テナントの全体管理者またはセキュリティ管理者として [Azure Portal](https://portal.azure.com) にサインインします。
+
+2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 
+    
+3. **[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選びます。 次に、**[Azure Information Protection]** ブレードで **[作成]** をクリックします。
+    
+    テナントの **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[その他のサービス]** リストからサービスを選択できるようになります。 
+    
+    > [!TIP] 
+    > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
+
+4. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページが表示されます。 推奨リソースを参照するか、他のメニュー オプションを使用します。 ユーザーが選択できるラベルを構成するには、次の手順に従います。
+
+次に **[Azure Information Protection]** ブレードにアクセスすると、すべてのユーザーのラベルを構成できるように、**[ポリシー]** > **[グローバル ポリシー]** オプションが自動的に選択されます。 **[クイック スタート]** ページに戻るには、**[全般]** メニューから選択します。
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
-1. 新しいブラウザー ウィンドウで、セキュリティ管理者または全体管理者として [Azure Portal](https://portal.azure.com) にサインインします。
+1. セキュリティ管理者またはグローバル管理者として [Azure Portal](https://portal.azure.com) にサインインしていることを確認します。
 
-2. **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から [**Azure Information Protection**] を選択します。 
+2. 必要に応じて、**[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から **[Azure Information Protection]** を選択します。 
     
-    サービスに初めて接続すると、**[Azure Information Protection - クイック スタート]** ブレードが自動的に開きます。 すべてのユーザーに適用されるポリシーを構成するには、**[ポリシー]** メニューから **[グローバル ポリシー]** を選んで、**[Azure Information Protection - グローバル ポリシー]** ブレードを開きます。 このブレードは、ユーザのサービスに対する後続の接続を自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集します。 
+    **[Azure Information Protection - グローバル ポリシー]** ブレードが自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集できます。 
     
     Azure Information Protection ポリシーには、構成可能な次の要素があります。
     
@@ -69,7 +85,9 @@ Azure Information Protection P2 サブスクリプションが必要なオプシ
     
     - ユーザーにカスタム ヘルプ リンクを提供するオプション。
 
-Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのラベルは、最下位の分類である個人データから、最上位の分類である非常に機密性の高い社外秘データまで、組織が通常作成して保存するあらゆるデータで使用できます。 
+Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのうちの 2 つのラベルには、必要なときにサブカテゴリを提供するためのサブラベルが含まれています。 サブラベルのラベルを構成するときに、ユーザーはメインのラベルを選択することはできませんが、サブラベルのいずれか 1 つを選択する必要があります。
+
+Azure Information Protection ラベルは、最下位の分類である個人データから、最上位の分類である非常に機密性の高い社外秘データまで、組織が通常作成して保存するあらゆるデータで使用できます。 
 
 これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。 詳細については、次のセクションのリンクを使用すると、関連するオプションとそのオプションを構成する方法を確認することができます。
 
@@ -86,6 +104,9 @@ Azure Information Protection クライアントは、サポート対象の Offic
 - ラベル付けおよび保護のための [PowerShell コマンドレット](../rms-client/client-admin-guide-powershell.md) (Get-AIPFileStatus、Set-AIPFileClassification、および Set-AIPFileLabel) の実行。
 
 - 24 時間ごと。
+
+- [Azure Information Protection スキャナー](deploy-aip-scanner.md)の場合: サービスの開始時と 1 時間ごと。
+
 
 >[!NOTE]
 >クライアントがポリシーをダウンロードしてから完全に機能するまで、数分間待機します。 待機時間はポリシーの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 ラベルの動作の結果が最新の変更と一致しない場合は、15 分待ってから再度お試しください。

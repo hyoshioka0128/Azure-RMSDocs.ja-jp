@@ -4,24 +4,24 @@ description: "開発者は Azure Information Protection を使用して、すべ
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea13c3dbf37dd22a6e93786390bd6be4da7a6959
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a9a94744aa2eacb3ddb4bbda3989ae857ff708fd
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
-このガイドでは、Azure Information Protection の Rights Management サービスの拡張、およびサービスとの統合に使用するツールについて説明します。 このガイドは、Rights Management システムを利用する管理者が、サポートされている広範なプラットフォーム向けにさまざまな種類のアプリケーションを作成できることを目的としています。
+このガイドでは、Azure Information Protection の Rights Management サービスの拡張、およびサービスとの統合に使用するツールについて説明します。
 
->現在 Azure Information Protection SDK には権限管理コンポーネントが含まれており、分類およびラベル付けについては開発中です。
+>現行の Azure Information Protection SDK には、権限管理コンポーネントが含まれています。 分類とラベル付けのコンポーネントは開発中です。
 
 ## <a name="service-applications"></a>サービス アプリケーション
 
@@ -39,15 +39,12 @@ ms.lasthandoff: 09/28/2017
 
 ## <a name="powershell-guides"></a>PowerShell ガイド
 
-これらのスクリプトは通常 Azure Rights Management 管理者によって使用され、サービス アプリケーションの開発とテストに役立ちます。
-
-- [Azure Rights Management コマンドレット](https://msdn.microsoft.com/library/azure/dn629398.aspx)を使用すると、コマンド ラインから Azure RMS を管理できます。 PowerShell コマンドレットで自動化が可能になりますが、信頼性が高く反復的なプロセスをサポートしているので、管理者の作業も軽減されます。 また、一部の Azure RMS の高度な構成と操作には Azure PowerShell が必要です。
-- [RMS 保護コマンドレット](https://msdn.microsoft.com/library/azure/mt433195.aspx)は、Azure Information Protection の Azure Rights Management (Azure RMS) のデータ保護、または Active Directory Rights Management サービス (AD RMS) と併用できます。また、これらの Rights Management デプロイの他の PowerShell モジュールを補完できます。 これらの RMS 保護コマンドレットを使用して、任意のファイルの種類について複数のファイルの保護と保護解除を一括して実行できます。
+Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳細については、「[Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
 
 ## <a name="user-applications"></a>ユーザー アプリケーション
 
 ユーザー アプリケーションは、RMS SDK 2.1 または RMS SDK 4.2 を使用して作成することができます。
-RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Windows) 用の特定の.API をベースとした REST クライアントです。 RMS SDK 2.1 は、Windows ベースのネイティブ アプリケーションの作成に使用されます。
+RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Windows) 用の特定の.API をベースとした REST クライアントです。 2.1 バージョンは、Windows ベースのネイティブ アプリケーションの作成に使用されます。
 
 ### <a name="user-application-development-guides"></a>ユーザー アプリケーション開発ガイド
 
@@ -105,7 +102,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 [Azure Information Protection の概要](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
-これらは、Micorsoft 2016 Ignite カンファレンスのビデオです。
+これらは、Microsoft 2016 Ignite カンファレンスのビデオです。
 
 - [組織内の電子メールのセキュリティ](https://myignite.microsoft.com/videos/2787)
 - [データを安全に保護し共有するために包括的な ID ベースのソリューションを採用する](https://myignite.microsoft.com/videos/2784)
@@ -123,6 +120,17 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [サポートされているプラットフォーム](supported-platforms.md)
 - [Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)
 
+### <a name="message-protocol-and-file-formats"></a>メッセージのプロトコルとファイルの形式
+
+- [クライアント サーバー間のプロトコル](https://msdn.microsoft.com/library/cc243191.aspx)
+- [権限が管理される電子メール オブジェクトのプロトコル](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
+- [複合ファイル バイナリのファイル形式](https://msdn.microsoft.com/library/dd942138.aspx)
+
+#### <a name="rights-managed-email-message"></a>権限が管理される電子メールのメッセージ
+
+- [.MSG ファイル形式 (パート 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
+- [.MSG ファイル形式 (パート 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+
 ### <a name="api-reference"></a>API reference
 
 - [Windows API リファレンス](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
@@ -139,7 +147,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ### <a name="see-also"></a>関連項目
 
-- [開発者向け用語集](terms.md)
+- [開発者の用語](terms.md)
 - [Azure Information Protection の用語 - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

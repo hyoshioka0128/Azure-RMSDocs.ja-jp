@@ -5,20 +5,20 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 42c772b870c700da84d5dfaf04c1ac5c2cd51f96
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 252300e1d370a0c9b8260fb93315782dd01787c7
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="file-api-configuration"></a>ファイル API の構成
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/30/2017
 -   **ネイティブ保護** - ファイルの MIME の種類 (ファイル名拡張子) を基に、AD RMS 形式に対してファイルが保護されます。
 -   **PFile 保護** - AD RMS で保護されたファイル (PFile) 形式に対してファイルが保護されます。
 
-サポートされているファイル形式について詳しくは、このトピックの「**ファイル API - ファイルのサポートの詳細**」をご覧ください。
+サポートされているファイル形式について詳しくは、この記事の「**ファイル API - ファイルのサポートの詳細**」をご覧ください。
 
 ## <a name="keykey-value-types-and-descriptions"></a>キー、キーの値、種類、および説明
 
@@ -50,9 +50,9 @@ ms.lasthandoff: 06/30/2017
 
 - ワイルドカード文字 "*" を使用できます。ただし、特定の拡張子の設定は、ワイルドカードの設定よりも優先されます。 ワイルドカード文字は、Microsoft Office ファイルの設定には影響しません。これらは、ファイルの種類ごとに明示的に無効する必要があります。
 - 拡張子がないファイルを指定するには、"." を使用します。
-- 特定のファイル拡張子のキーを指定する場合は、"." 文字を指定しないでください。たとえば、.txt ファイルの設定を指定するには、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` を使用します (`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT` を使用しないでください)。
+- 特定のファイル拡張子のキーを指定する場合は、"." 文字を指定しないでください。たとえば、.txt ファイルの設定を指定するには、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` を使用します。 (`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT` を使用しないでください)。
 
-保護の動作を指定するには、**Encryption** 値をキーに設定します。 **Encryption** 値が設定されていない場合は、ファイルの種類の既定の動作が実行されます。
+保護動作を指定するには、キーに **Encryption** 値を設定します。 **Encryption** 値が設定されていない場合は、ファイルの種類の既定の動作が実行されます。
 
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
@@ -90,7 +90,7 @@ ms.lasthandoff: 06/30/2017
 
 **Office ファイル**
 
--   ファイル拡張子: doc、dot、xla、xls、xlt、pps、ppt、docm、docx、dotm、dotx、xlam、xlsb、xlsm、xlsx、xltm、xltx、xps、potm、potx、ppsx、ppsm、pptm、pptx、thmx
+-   ファイル拡張子: doc、dot、xla、xls、xlt、pps、ppt、docm、docx、dotm、dotx、xlam、xlsb、xlsm、xlsx、xltm、xltx、xps、potm、potx、ppsx、ppsm、pptm、pptx、thmx、vsdx、vsdm、vssx、vssm、vstx、vstm。 
 -   保護の種類 = ネイティブ (既定): sample.docx を暗号化すると、sample.docx のままです。
 -   保護の種類 = Pfile: Office ファイルの場合は、ネイティブと同じ結果になります。
 -   Off: 暗号化を無効にします。
@@ -146,7 +146,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-articles"></a>関連記事
 
 - [開発者向け注意事項](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)

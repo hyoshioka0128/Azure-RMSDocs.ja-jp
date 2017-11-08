@@ -1,11 +1,11 @@
 ---
-title: "リリース ノート | Azure RMS"
-description: 
+title: "リリース ノート"
+description: "SDK 更新の改訂番号とその他の開発者情報。"
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,15 +14,20 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 875584683bcf1d35037691f21ac7d78d17806a07
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52733dd7cac356879408e774c79331d705a71ea0
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="release-notes"></a>リリース ノート
 
-このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
+この記事には、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
+
+## <a name="october-2017---update"></a>2017 年 10 月の更新
+
+- 環境の初期化と初期化解除のための API が新しく 2 つ追加されました。 詳細については、「[IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx)」と「[IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx)」を参照してください。
+- サポートされるファイルの種類に Visio が加わりました。 詳細については、「 [ファイル API の構成](file-api-configuration.md)」を参照してください。
 
 ## <a name="february-2016---sdk-documentation-update"></a>2016 年 2 月 - SDK 文書更新
 
@@ -52,7 +57,7 @@ ms.lasthandoff: 06/30/2017
 
 ## <a name="may-2015-update"></a>2015 年 5 月の更新
 
--   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についてのトピックが更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
+-   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についての記事が更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 ## <a name="april-2015-update"></a>2015 年 4 月の更新
 
@@ -78,7 +83,7 @@ ms.lasthandoff: 06/30/2017
 ## <a name="october-2014-update"></a>2014 年 10 月の更新
 
 -   SDK のファイル API のコンポーネントの既定の動作が更新されました。 詳細については、「 [ファイル API の構成](file-api-configuration.md)」を参照してください。
--   新機能の電子メール通知については、開発者向け注意事項のトピック「[電子メール通知の有効化](how-to-enable-email-notification.md)」を参照してください。
+-   新機能の電子メール通知については、開発者向け注意事項の記事「[電子メール通知の有効化](how-to-enable-email-notification.md)」を参照してください。
 
 ## <a name="july-2014-update"></a>2014 年 7 月の更新
 
@@ -89,7 +94,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     このリリースで追加された関数:
 
-    **注** - ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべてのトピックに、"**暫定的なものであり、変更される可能性があります**" と記載されています。
+    **注** - ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべての記事に、"**暫定的なものであり、変更される可能性があります**" と記載されています。
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)

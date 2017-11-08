@@ -4,7 +4,7 @@ description: "管理者が Azure Information Protection のドキュメント追
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dd8b2dcf785d47ec779b314072fb5edddf556163
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: bca186ebe78d79926a6ef775b1f5be7006e89df5
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Azure Information Protection のドキュメント追跡の構成と使用
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
 >*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
 
@@ -64,6 +64,9 @@ ms.lasthandoff: 08/11/2017
 ユーザーは、ドキュメント追跡サイトにサインインすると、Azure Information Protection クライアントを使って保護しているドキュメント、または Rights Management 共有アプリケーションを使って共有しているドキュメントを、追跡したり取り消したりすることができます。 Azure Information Protection の管理者 (全体管理者) としてサインインすると、[管理者] アイコンをクリックし、管理者モードに切り替えることができます。 管理者モードでは、組織内のユーザーが Azure Information Protection クライアントを使用して追跡することを選択したドキュメントや、Rights Management 共有アプリケーションを使用して共有したドキュメントを表示できます。
 
 ![ドキュメント追跡サイトの [管理者] アイコン](../media/tracking-site-admin-icon.png)
+
+> [!NOTE] 
+> グローバル管理者でもこのアイコンが表示されない場合、ドキュメントを共有していません。 その場合、次の URL からドキュメント追跡サイトにアクセスします: https://portal.azurerms.com/#/admin
 
 管理者モードで実行したアクションは監査され、使用状況ログ ファイルに記録されます。これを確認してから次に進む必要があります。 このログ記録の詳細については、次のセクションを参照してください。
 

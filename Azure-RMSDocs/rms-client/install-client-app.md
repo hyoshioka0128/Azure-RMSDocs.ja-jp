@@ -4,7 +4,7 @@ description: "ユーザーが Windows 用 Azure Information Protection クライ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 792bb4b2554851eb4a9531e7ed9333c8bebc709a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 406ca5f8a1bdfec87dbec7743145ddfb2c4d18fb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="download-and-install-the-azure-information-protection-client"></a>Azure Information Protection クライアントをダウンロードしてインストールする
+# <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントをダウンロードしてインストールする
 
 管理者が Azure Information Protection クライアントをインストールしない場合、自分でインストールできます。 ドキュメントや電子メールにラベルを付けて保護できるように、このクライアントをインストールするには対象となる PC のローカル管理者である必要があります。
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/30/2017
 
 2. **Azure Information Protection クライアント** セクションを見つけて、Windows アイコンをクリックします。 **[ダウンロード]** をクリックし、**AzInfoProtection.exe** ファイルを保存します。     
 
-3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。    
+3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、**[ はい]** をクリックします。    
 
 4. **Azure Information Protection クライアントのインストール** ページで、     
     - クラウドに接続できない場合に、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。    
@@ -54,11 +54,11 @@ ms.lasthandoff: 06/30/2017
 ### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Office 2010 で Azure Information Protection クライアントをインストールする    
 前の指示に従い、Azure Information Protection クライアントをインストールしたら、次の操作を行います。    
 
-1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、[**Microsoft Azure Information Protection**] ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
+1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、**[Microsoft Azure Information Protection]** ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
 
 2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[OK]** をクリックします。
 
-3. [**ユーザーアクセス制御**] ダイアログ ボックスが表示された場合、[**はい**] をクリックします。Azure Information Protection でレジストリが更新されます。   
+3. **[ユーザーアクセス制御]** ダイアログ ボックスが表示された場合、**[はい]** をクリックします。Azure Information Protection でレジストリが更新されます。   
 インストールはこれで完了となります。Azure Information Protection を利用し、文書や電子メールにラベルを付けたり、保護したりできます。
 
 ## <a name="other-instructions"></a>その他の手順    
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/30/2017
 - [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
-管理者ガイドの「[How to install the Azure Information Protection client for users](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users)」 (ユーザー向けの Azure Information Protection クライアントのインストール方法) を参照してください。
+[管理者ガイド](client-admin-guide.md)の「[Install the Azure Information Protection client for users](client-admin-guide-install.md)」(ユーザー向けに Azure Information Protection クライアントをインストールする) を参照してください。
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  

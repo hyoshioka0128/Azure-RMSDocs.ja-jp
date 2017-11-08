@@ -4,24 +4,21 @@ description: "Azure Information Protection ポリシーで言語を指定して�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 76650461c0af6e705f7ab124d31cdb598889bbc8
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: 7a77b517531d5b4586871abbcb22d2158673d56c
+ms.sourcegitcommit: 222318da363a45c3a533f7b77b02f4e31a258979
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
 >*適用対象: Azure Information Protection*
-
->[!NOTE]
->現在のところ、この機能はプレビュー段階です。
 
 Azure Information Protection の既定のラベルは複数の言語をサポートしますが、指定するラベルの名前と説明のサポートを構成する必要があります。 この構成では、次のことを行う必要があります。
 
@@ -47,11 +44,11 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[管理]** メニューの **[言語 (プレビュー)]** を選択します。
+2. **[管理]** メニューの **[言語]** を選択します。
 
-3. **[Azure Information Protection - 言語 (プレビュー)]** ブレードで、**[翻訳する新しい言語の追加]** を選択します。 追加する言語を選択して、**[OK]** を選択します。 [検索] ボックスに言語の名前を入力するか、使用可能な言語の一覧をスクロールします。
+3. **[Azure Information Protection - 言語]** ブレードで、**[翻訳する新しい言語の追加]** を選択します。 追加する言語を選択して、**[OK]** を選択します。 [検索] ボックスに言語の名前を入力するか、使用可能な言語の一覧をスクロールします。
 
-4. 選択した言語が、**[Azure Information Protection - 言語 (プレビュー)]** ブレードに表示されます。
+4. 選択した言語が、**[Azure Information Protection - 言語]** ブレードに表示されます。
     
     - 別の言語を追加するには、**[翻訳する新しい言語の追加]** を選択して前の手順を繰り返します。 
         
@@ -70,7 +67,7 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 8. 各 .xml ファイルを編集したら、これらのファイルを含めた新しい圧縮 (zip 形式) フォルダーを作成します。 圧縮フォルダーには任意の名前を付けることができますが、.zip の拡張子が必要です。
 
-9. **[Azure Information Protection - 言語 (プレビュー)]** ブレードに戻り、**[インポート]** を選択します。 このオプションが使用できない場合は、まず **[言語名]** のチェック ボックス、または個別に選択した言語のチェック ボックスをオフにします。
+9. **[Azure Information Protection - 言語]** ブレードに戻り、**[インポート]** を選択します。 このオプションが使用できない場合は、まず **[言語名]** のチェック ボックス、または個別に選択した言語のチェック ボックスをオフにします。
     
     インポートが完了すると、Azure Information Protection ポリシーが次に公開された後に、ローカライズされた名前と説明がユーザーにダウンロードされます。 **[グローバル ポリシー]** または **[スコープ付きポリシー]** ブレードで **[公開]** をクリックできます。
 

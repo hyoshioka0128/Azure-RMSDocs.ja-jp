@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d4ce0ea6a3c04c5ca52dae1750e48d5618eeef76
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 29a85bf1bf216c785a1b9cd6511069fe688327db
+ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -30,7 +30,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
     > [!TIP]
     > エンドユーザー向けの例示ビデオ:
-    > -   [Azure RMS のユーザー エクスペリエンス](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
+    > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
     > -   [Azure RMS のドキュメントの追跡と取り消し](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **管理者情報**
@@ -41,7 +41,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
 -   **ヘルプ デスク情報**
     
-    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの「[追加のチェックとトラブルシューティング](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting)」を参照してください。
+    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
     
     保護されたドキュメントに対する完全なアクセス権限を求める正当な要求がある場合、ヘルプ デスクには Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用してこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
@@ -103,7 +103,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  [ **オプション** ] タブの [ **アクセス許可**] をクリックし、オプションを選択します。 たとえば、**[転送不可]**、または **[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[ オプション ]** タブの **[ アクセス許可]** をクリックし、オプションを選択します。 たとえば、**[転送不可]**、または **[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
 
 3.  メッセージを送信します。
 
@@ -115,13 +115,13 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  [  **…**]、[ **アクセス許可の設定**] の順にクリックして、オプションを選択します。 例: **[転送不可]** または **[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[  …]**、**[ アクセス許可の設定]** の順にクリックして、オプションを選択します。 例: **[転送不可]** または **[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
 
 3.  メッセージを送信します。
 
 保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに対して指定された制限付き[使用権限](../deploy-use/configure-usage-rights.md)でメッセージが開きます。 
 
-たとえば、[ **転送不可**] を選択した場合、[ **全員に返信** ] ボタンは使用できません。
+たとえば、**[ 転送不可]** を選択した場合、**[ 全員に返信 ]** ボタンは使用できません。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

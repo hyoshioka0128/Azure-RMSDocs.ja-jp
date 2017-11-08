@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 10/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 00167de7ff0c4448c558473bbd429e08a5615c6b
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 25a3baea4b1a25f23e06cc785d12f439c28ca8ea
+ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -83,7 +83,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 - オンプレミスのサーバー用に Rights Management コネクタをデプロイした場合は、[監視](../deploy-use/monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
 
-- Windows 用の Azure Information Protection クライアントについては、管理者ガイドの「[追加のチェックとトラブルシューティング](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting)」セクションをご覧ください。
+- Windows 用の Azure Information Protection クライアントについては、管理者ガイドの[インストールのチェックとトラブルシューティング](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するセクションをご覧ください。
 
 ### <a name="community-resources"></a>コミュニティのリソース
 
