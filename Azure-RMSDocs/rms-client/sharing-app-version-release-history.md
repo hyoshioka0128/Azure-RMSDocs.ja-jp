@@ -4,19 +4,20 @@ description: "Windows 用 Rights Management 共有アプリケーションのリ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 811c89ef6922f6939e7a7d13ed707c6ebe6aafd6
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: ed3725f65d5e1b357a2cd1cda1e28a8ddcb8fae6
+ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Rights Management 共有アプリケーション: バージョン リリース履歴
 
@@ -26,8 +27,8 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 2015 年 1 月 1 日より前のバージョンは表示されません。
 
-> [!NOTE]
-> RMS 共有アプリケーションに関するフィードバックまたはご質問については、 [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)まで電子メール メッセージをお送りください。
+> [!IMPORTANT]
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 
 
 ## <a name="version-1022170"></a>バージョン 1.0.2217.0
 
