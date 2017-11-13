@@ -4,19 +4,20 @@ description: "組織でドキュメントや電子メールの保護を開始で
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 15b8abd6b8ba8fa494e1d7d5c7b02221204507d1
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 23133038e2a845aae6a86a014cdef31843668ef8
+ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
 
@@ -28,7 +29,7 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
-    [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS) にメール メッセージを送信してください。
+    [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[Microsoft サポートにお問い合わせいただく](../get-started/information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。
 
 2. **[管理]** メニュー オプションを探し、**[Protection activation]\(保護のアクティブ化\)** を選択します。 
     
