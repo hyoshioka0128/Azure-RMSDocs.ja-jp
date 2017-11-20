@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 304425a2c64fb306615bbd5c6edf5e78e10b8e80
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
+ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -198,6 +198,33 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 - 値: \<**ラベル ID**> または**なし**
 
+## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+この設定を構成すると、既存のカスタム プロパティの値がいずれかのラベル名と一致するときに Office ドキュメントを分類する (さらに必要に応じて保護する) ことができます。 このカスタム プロパティは、別の分類ソリューションから設定するか、または SharePoint によってプロパティとして設定することができます。
+
+この構成の結果として、Azure Information Protection ラベルのないドキュメントが Office アプリのユーザーによって開かれて保存されると、ドキュメントが対応するプロパティ値と一致するようにラベル付けされます。 
+
+この構成では、連動する 2 つの詳細設定を指定する必要があります。 1 つ目は **SyncPropertyName** で、他の分類ソリューションから設定されているカスタム プロパティ名、または SharePoint によって設定されるプロパティです。 2 つ目は **SyncPropertyState** で、これは OneWay に設定する必要があります。
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー 1: **SyncPropertyName**
+
+- キー 1 の値: \<**プロパティ名**> 
+
+- キー 2: **SyncPropertyName**
+
+- キー 2 の値: **OneWay**
+
+たとえば、**[公開]**、**[全般]**、**[社外秘]** の値が考えられる、**[分類]** という名前の SharePoint 列があるとします。 ドキュメントは SharePoint に格納され、[分類] プロパティに設定されたいずれかの値を持ちます。
+
+Office ドキュメントにこれらの分類の値のいずれかのラベルを付けるには、**[SyncPropertyName]** を **[公開]** に、**[SyncPropertyState]** を **[OneWay]** に設定します。 
+
+ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに Azure Information Protection ポリシーに **[公開]**、**[全般]**、または **[社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Exchange メッセージ分類との統合によるモバイル デバイスのラベル付けソリューション
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
-ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
+ms.openlocfilehash: 4332b37a3c89cb68d8e090e44666f2620d5b0064
+ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -64,7 +64,13 @@ Azure Information Protection ポリシーを構成するとき、Azure Active Di
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
-Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 ファイルでは、このメタデータはカスタム プロパティに格納されます。 電子メールでは、この情報は電子メールのヘッダーにあります。
+Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 
+
+- Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx)、PDF 文書 (.pdf) の場合、このメタデータはカスタム プロパティ **MSIP_Label_\<GUID>_Enabled=True** に格納されます  
+
+- メールでは、この情報は **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** の X ヘッダーに格納されます  
+
+ラベルの GUID を特定するには、Azure Portal で Azure Information Protection ポリシーを表示または構成するときに、[ラベル] ブレードの [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルに下位ラベルがある場合、親ラベルではなく、下位ラベルの GUID を常に指定してください。
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 
