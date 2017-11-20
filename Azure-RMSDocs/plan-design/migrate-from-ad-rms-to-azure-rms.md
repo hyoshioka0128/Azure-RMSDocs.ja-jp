@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 910d131ece4bae0cf5ef2685291431a3dc319264
-ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
+ms.openlocfilehash: 1b1c7a084aa5d81a0abfd50021b95ae8af32d034
+ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -28,9 +28,9 @@ Active Directory Rights Management サービス (AD RMS) デプロイを Azure I
 
 この AD RMS の移行が組織にとって適切かどうかわからない場合は、次のようにしてください。
 
--   Azure Information Protection の概要については、「[Azure Information Protection とは](../understand-explore/what-is-information-protection.md)」をご覧ください。
+- Azure Information Protection の概要については、「[Azure Information Protection とは](../understand-explore/what-is-information-protection.md)」をご覧ください。
 
--   Azure Information Protection と AD RMS の比較については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。
+- Azure Information Protection と AD RMS の比較については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。
 
 ## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Azure Information Protection に移行する前に推奨されるドキュメント
 
@@ -106,16 +106,16 @@ AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開�
 
 AD RMS 暗号化モードを確認するには:
  
-- Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
+- Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > **[全般]** タブ。 
 
 - Windows Server 2008 R2 の場合: 「[RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (Windows Server 2008 R2 と Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました)](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server )」の修正プログラムがインストールされているかを確認します。 インストールされていない場合は、ご使用の AD RMS クラスターは暗号化モード 1 で実行されています。
 
 ### <a name="migration-limitations"></a>移行の制限
 
--   Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
+- Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
 
--   AD RMS デプロイが外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションするように構成されている場合は、同時にまたは可能な限り速やかにパートナーも Azure Information Protection に移行する必要があります。 移行前に Azure Information Protection を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
-
+- AD RMS デプロイが外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションするように構成されている場合は、同時にまたは可能な限り速やかにパートナーも Azure Information Protection に移行する必要があります。 移行前に Azure Information Protection を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
+    
     パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 ただし、次のセクションの計画ガイドラインを参照し、詳細を [Microsoft サポートにお問い合わせ](../get-started/information-support.md#support-options-and-community-resources)ください。
 
 ## <a name="migration-planning-if-you-collaborate-with-external-partners"></a>外部のパートナーとコラボレーションしている場合の移行計画
@@ -146,11 +146,11 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 2:クライアントの移行を準備する**
 
-     すべてのクライアントを一度に移行できず、少しずつ移行する場合は、オンボーディング制御を使い、移行前スクリプトをデプロイします。
+    すべてのクライアントを一度に移行できず、少しずつ移行する場合は、オンボーディング制御を使い、移行前スクリプトをデプロイします。 ただし、段階的な移行ではなく同時にすべてを移行する場合は、この手順をスキップできます。
 
 - **手順 3: Exchange の展開を移行用に準備する**
 
-    この手順は、現在 Exchange Online またはオンプレミスの Exchange の IRM 機能を使ってメールを保護している場合に必要です。
+    この手順は、現在 Exchange Online またはオンプレミスの Exchange の IRM 機能を使ってメールを保護している場合に必要です。 ただし、段階的な移行ではなく同時にすべてを移行する場合は、この手順をスキップできます。
 
 [**フェーズ 2: AD RMS のサーバー側の構成**](migrate-from-ad-rms-phase2.md)
 
@@ -206,7 +206,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
     iOS 搭載の携帯電話や iPad、Android 端末およびタブレット、Windows Phone、Mac コンピューターなどのモバイル デバイスをサポートする[モバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)をデプロイしてある場合は、これらのクライアントが AD RMS を使うようにリダイレクトした SRV レコードを DNS から削除する必要があります。 
     
-    準備フェーズ中に構成したオンボーディング制御はもう必要ありません。
+    準備フェーズ中に構成したオンボーディング制御はもう必要ありません。 ただし、段階的な移行ではなく、同時にすべてを移行することを選んだためにオンボーディング制御を使用しなかった場合は、この手順をスキップしてオンボーディング制御を削除することができます。
 
 - **手順 12: Azure Information Protection テナント キーを更新する**
 
