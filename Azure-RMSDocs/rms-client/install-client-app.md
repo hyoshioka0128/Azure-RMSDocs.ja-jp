@@ -4,7 +4,7 @@ description: "ユーザーが Windows 用 Azure Information Protection クライ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 406ca5f8a1bdfec87dbec7743145ddfb2c4d18fb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 190a6a371e67417139e033c0b5472042a24b2502
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントをダウンロードしてインストールする
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 
 2. **Azure Information Protection クライアント** セクションを見つけて、Windows アイコンをクリックします。 **[ダウンロード]** をクリックし、**AzInfoProtection.exe** ファイルを保存します。     
 
-3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、**[ はい]** をクリックします。    
+3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、**[はい]** をクリックします。    
 
 4. **Azure Information Protection クライアントのインストール** ページで、     
     - クラウドに接続できない場合に、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。    
@@ -58,7 +58,8 @@ ms.lasthandoff: 10/24/2017
 
 2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[OK]** をクリックします。
 
-3. **[ユーザーアクセス制御]** ダイアログ ボックスが表示された場合、**[はい]** をクリックします。Azure Information Protection でレジストリが更新されます。   
+3. **[ユーザーアクセス制御]** ダイアログ ボックスが表示された場合、**[はい]** をクリックします。Azure Information Protection でレジストリが更新されます。
+
 インストールはこれで完了となります。Azure Information Protection を利用し、文書や電子メールにラベルを付けたり、保護したりできます。
 
 ## <a name="other-instructions"></a>その他の手順    
