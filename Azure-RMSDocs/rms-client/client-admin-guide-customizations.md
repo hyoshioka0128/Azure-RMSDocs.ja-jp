@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
-ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
+ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -117,46 +117,40 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 2. 特定したファイルの名前を **Policy.msip** に変更し、Azure Information Protection 保護クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
 
 
-## <a name="hide-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを非表示にする
+## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを表示または非表示にする
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+このオプションを構成するには、[ポリシー設定](../deploy-use/configure-policy-settings.md)の**[Add the Do Not Forward button to the Outlook ribbon]\(Outlook リボンに [転送不可] ボタンを追加する\)** を使用することをお勧めします。 ただし、Azure Portal で構成する[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用して、このオプションを構成することもできます。
 
-この設定を構成すると、Outlook のリボンの **[転送不可]** ボタンが非表示になります。 Office メニューからでは、このオプションは非表示になりません。
+この設定を構成すると、Outlook のリボンの **[転送不可]** ボタンが表示または非表示になります。 この設定は、Office メニューからの [転送不可] オプションには影響しません。
 
 この詳細設定を構成するには、次の文字列を入力します。
 
 - キー: **DisableDNF**
 
-- 値: **True**
+- 値: ボタンを非表示にするには **True**、ボタンを表示するには **False**
 
-## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>ユーザーがカスタムのアクセス許可オプションを使用できなくする
+## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする
 
-> [!IMPORTANT]
-> クライアントのプレビュー版を使用していない限り、Word、Excel、PowerPoint、エクスプローラーにユーザー定義アクセス許可のラベルを構成している場合、このオプションを使わないでください。 このオプションを使うと、ラベルが適用されるときに、ユーザーにカスタム アクセス許可を構成するメッセージが表示されません。 その結果、ドキュメントにはラベルが付きますが、意図したようには保護されません。
+このオプションを構成するには、[ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** を使用することをお勧めします。 ただし、Azure Portal で構成する[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用して、このオプションを構成することもできます。 
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
-
-この設定を構成してユーザーのポリシーを発行すると、ユーザーは次の場所でカスタムのアクセス許可オプションを選択できなくなります。
-
-- Office アプリケーション: **[ホーム]** タブ > **[保護]** グループ > **[保護]** > **[カスタムのアクセス許可]**
-
-- エクスプローラー: 右クリック > **[分類して保護する]** > **[カスタムのアクセス許可]**
-
-この設定は、Office メニュー オプションから構成できるカスタムのアクセス許可には影響しません。 
+この設定を構成して、ユーザーにポリシーを公開した場合、ユーザーが独自の保護設定を選択できるように、カスタムのアクセス許可オプションが利用できるようになるか、または、確認メッセージが表示されない限り、ユーザーが独自の保護設定を選択できないように利用不可になります。
 
 この詳細設定を構成するには、次の文字列を入力します。
 
 - キー: **EnableCustomPermissions**
 
-- 値: **False**
+- 値: カスタム アクセス許可オプションを利用できるようにする場合は **True**、このオプションを利用不可にする場合は **False**
+
+> [!IMPORTANT]
+> クライアントの現在のプレビュー版を使用していない限り、Word、Excel、PowerPoint、エクスプローラーにユーザー定義アクセス許可のラベルを構成している場合、このオプションを **False** に設定しないでください。 このオプションを使うと、ラベルが適用されるときに、ユーザーにカスタム アクセス許可を構成するメッセージが表示されません。 その結果、ドキュメントにはラベルが付きますが、意図したようには保護されません。
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection バーを完全に非表示にする
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 これは、[ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** を **[オン]** に設定している場合にのみ使用します。
 
 この設定を構成してユーザーのポリシーを発行し、ユーザーが Office アプリケーションで Azure Information Protection バーを表示しないように選択すると、バーは非表示のままになります。 これが起こるのは、ユーザーが **[ホーム]** タブ、**[保護]** グループ、**[保護]** ボタンから **[バーの表示]** オプションをクリアするときです。 **[このバーを閉じる]** アイコンを使用してバーを閉じた場合、この設定は何も影響を与えません。
 
-Azure Information Protection バーが非表示のままであっても、推奨の分類を構成している場合やドキュメントや電子メールにラベルを指定する必要がある場合、ユーザーは一時的に表示されるバーからラベルを選択できます。 また、この設定は、手動または自動分類などの、自分や他のユーザーが構成したラベルや、既定ラベルの設定には影響を与えません。
+Azure Information Protection バーが非表示のままであっても、推奨の分類を構成している場合やドキュメントや電子メールにラベルを指定する必要がある場合、ユーザーは一時的に表示されるバーからラベルを選択できます。 
 
 この詳細設定を構成するには、次の文字列を入力します。
 
@@ -219,6 +213,8 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 - キー 2: **SyncPropertyName**
 
 - キー 2 の値: **OneWay**
+
+これらのキーと、1 つだけのカスタム プロパティに対応する値を使用します。
 
 たとえば、**[公開]**、**[全般]**、**[社外秘]** の値が考えられる、**[分類]** という名前の SharePoint 列があるとします。 ドキュメントは SharePoint に格納され、[分類] プロパティに設定されたいずれかの値を持ちます。
 

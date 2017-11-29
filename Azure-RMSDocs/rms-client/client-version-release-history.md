@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e107d796ebda1b1942e19ede8c794f79defbf64e
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -35,7 +35,6 @@ Azure Information Protection クライアントの一般提供 (GA) バージョ
 ### <a name="release-history"></a>リリース履歴
 
 Windows 用 Azure Information Protection クライアントのサポートされるリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。 
-
 
 > [!NOTE]
 > 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、最新の GA リリースで問題が修正されているかどうかを確認することをお勧めします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
@@ -60,17 +59,19 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - ユーザー定義アクションのために作られたラベルに対応。 Outlook の場合、このラベルは [転送不可] オプションに自動的に適用されます。 Word、Excel、PowerPoint、エクスプローラーの場合、このラベルはカスタムのアクセス許可を指定するようにユーザーに求めます。 詳細については、「[Azure Information Protection ラベルを保護するように構成する](../deploy-use/configure-policy-protection.md)」を参照してください。
 
+- ラベルでは、複数言語をサポートします。 2017 年 8 月 30 日以降、[既定のポリシー](../deploy-use/configure-policy-default.md)では、このバージョンのクライアントがユーザーに表示する言語が複数サポートされています。 この日付より前にユーザーに既定のポリシーから希望する言語でラベルが表示されるようにする方法、および構成するラベルについては、[Azure Information Protection でさまざまな言語のラベルを構成する方法](../deploy-use/configure-policy-languages.md)に関するページを参照してください。
+
 - ラベルは [Information Protection] バーに表示されるほか、Office リボンの **[保護]** ボタンをクリックしたときに表示されます。 
 
 - 次の Visio ファイルの種類のネイティブ保護: .vsdm、.vsdx、.vssm、.vssx、.vstm、.vstx
 
 - Azure Portal で設定する詳細なクライアント構成に対応。 この構成には次のものが含まれます。
     
-    - [Outlook の [転送不可] ボタンを非表示にする](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
+    - [Outlook の [転送不可] ボタンを表示または非表示にする](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [ユーザーがカスタムのアクセス許可オプションを使用できなくする](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Azure Information Protection バーを完全に非表示にする](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Azure Information Protection バーを完全に非表示にする](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Outlook で推奨分類を有効にする](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
@@ -98,7 +99,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - カスタムのアクセス許可を指定するときの電子メール検証。 また、Enter を押し、複数の電子メール アドレスを指定できるようになりました。
 
-- 下位ラベルの保護を設定するとき、親ラベルが表示されません。クライアントには、保護対応の Office エディションが与えられません。 
+- すべての下位ラベルの保護を設定するとき、親ラベルが表示されません。クライアントには、保護対応の Office エディションが与えられません。 
 
 ## <a name="version-172100"></a>バージョン 1.7.210.0
 

@@ -4,17 +4,17 @@ description: "Rights Management 保護を使用するようにラベルを構成
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -87,9 +87,11 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
         
         Word、Excel、PowerPoint、エクスプローラーのオプションを選択した場合: このオプションが設定されると、これらのアプリケーションにラベルが表示されます。 ユーザーがラベルを適用したときの結果の動作は、ユーザーがカスタム アクセス許可を選択するダイアログ ボックスが表示されます。 このダイアログ ボックスで、ユーザーはアクセス許可、ユーザーまたはグループ、有効期限を指定する必要があります。 これらの値を指定する方法に関する指示とガイダンスをユーザーに必ず提供します。
     
-    - **[定義済みのテンプレートを選択する]**: 既定のテンプレートのいずれかまたは構成したカスタム テンプレートを使用します。 このテンプレートは (アーカイブではなく) 公開する必要があります。また、別のラベルにリンクされていてはなりません。 このオプションを選ぶときは、**[テンプレートの編集]** ボタンを使って[テンプレートをラベルに変換する](configure-policy-templates.md#to-convert-templates-to-labels)ことができます。
+    - **[定義済みのテンプレートを選択する]**: 既定のテンプレートのいずれかまたは構成したカスタム テンプレートを使用します。 以前に **[アクセス許可の設定]** オプションを使用したラベルを編集している場合、このオプションは表示されないことにご注意ください。
     
-    ヒント: **[テンプレートの編集]** ボタンを使用する場合、「[Azure クラシック ポータルで行っていたタスク](migrate-portal.md)」の情報が役に立つことがあります。
+    定義済みのテンプレートを選択するには、テンプレートを (アーカイブではなく) 公開する必要があります。また、すでに別のラベルにリンクされていることがないようにします。 このオプションを選ぶときは、**[テンプレートの編集]** ボタンを使って[テンプレートをラベルに変換する](configure-policy-templates.md#to-convert-templates-to-labels)ことができます。
+    
+    ヒント: カスタム テンプレートの作成や編集に慣れている場合は、「[Azure クラシック ポータルで行っていたタスク](migrate-portal.md)」の情報が役に立つことがあります。
 
 8. **[Azure (cloud key)]\(Azure (クラウド キー)\)** に **[アクセス許可の設定]** を選択した場合、テンプレートの場合と同じ設定を構成できます。 
     

@@ -4,7 +4,7 @@ description: "Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5afd71e059ef22eed61347e6916b9cbb6c2dc7f0
-ms.sourcegitcommit: 326930de25b259c18469f4100ec5774a04bedc7b
+ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -32,11 +32,11 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 **分類、ラベル付け、保護を含むサブスクリプションの場合 (Azure Information Protection P1 または P2)**
 
-- テナントのラベルと統合されない Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードで、ラベルの後の **[テンプレート]** セクションに表示されます。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
+- テナントのラベルと統合されない Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードで、ラベルの後の **[保護テンプレート]** セクションに表示されます。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
 
 **保護のみを含むサブスクリプションの場合 (Azure Rights Management サービスを含む Office 365 サブスクリプション)**
 
-- テナントの Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードの **[テンプレート]** セクションに表示されます。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、テンプレートには反映されず、構成することはできません。 
+- テナントの Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードの **[保護テンプレート]** セクションに表示されます。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、テンプレートには反映されず、構成することはできません。 
 
 ## <a name="default-templates"></a>既定のテンプレート
 
@@ -95,9 +95,9 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
     
     また現時点では、部門別テンプレートのアプリケーションの互換性を設定できません。 必要な場合は、PowerShell と [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレッドを使用して、アプリケーションの互換性設定を設定することができます。
 
-- テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。 また、このテンプレートは **[テンプレート]** または **[保護テンプレート]** セクションに表示されなくなりました。 このセクションの名前は、変更される予定です。
+- テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。 また、このテンプレートは **[保護テンプレート]** セクションに表示されなくなりました。 
 
-- **[テンプレート]** または **[保護テンプレート]** セクションからは新しいテンプレートを作成しません。 代わりに、**[保護]** を設定したラベルを作成し、**[保護]** ブレードで使用権限と設定を構成します。 詳しい説明については、「[新しいテンプレートを作成するには](#to-create-a-new-template)」をご覧ください。
+- **[保護テンプレート]** セクションからは新しいテンプレートを作成しません。 代わりに、**[保護]** を設定したラベルを作成し、**[保護]** ブレードで使用権限と設定を構成します。 詳しい説明については、「[新しいテンプレートを作成するには](#to-create-a-new-template)」をご覧ください。
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
@@ -145,7 +145,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 - 保護設定は保持され、必要に応じて編集できます。また、視覚的なマーカーや条件などのラベルの他の設定を追加することもできます。
 
-- 元のテンプレートは **[テンプレート]** または **[保護テンプレート]** の下から消え、ラベルの保護の設定時、事前定義済みテンプレートとして選択できません。 Azure Portal でこのテンプレートを編集するには、テンプレートの変換時に作成したラベルを編集します。 Azure Rights Management サービスではこれまで通りテンプレートを使用できるほか、[PowerShell コマンド](administer-powershell.md)を使用してテンプレートを管理できます。  
+- 元のテンプレートは **[保護テンプレート]** に表示されなくなり、ラベルの保護の設定時に、事前定義済みテンプレートとして選択できません。 Azure Portal でこのテンプレートを編集するには、テンプレートの変換時に作成したラベルを編集します。 Azure Rights Management サービスではこれまで通りテンプレートを使用できるほか、[PowerShell コマンド](administer-powershell.md)を使用してテンプレートを管理できます。  
 
 ## <a name="to-create-a-new-template"></a>新しいテンプレートを作成するには
 

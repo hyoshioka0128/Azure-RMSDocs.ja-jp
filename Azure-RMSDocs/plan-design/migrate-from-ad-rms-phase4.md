@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6c93f38b0ae725c1bc1d3423baf64931593af3b7
-ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
+ms.openlocfilehash: beda6273c306a55130223c7b4b9ed9fc4d088fac
+ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -29,11 +29,9 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
 
 ## <a name="step-8-configure-irm-integration-for-exchange-online"></a>手順 8. IRM と Exchange Online の統合を構成する
 
-事前に AD RMS から Exchange Online に TDP をインポートしていた場合、この TDP を削除して、Azure Information Protection に移行した後にテンプレートおよびポリシーが競合しないようにする必要があります。 これを行うには、Exchange Online から [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) コマンドレットを使用します。
+選択した Azure Information Protection テナント キー トポロジから個別に、次の操作を行います。
 
-**マイクロソフト管理の** Azure Information Protection テナント キー トポロジを選択した場合:
-
-1. 記事「[Office 365: クライアントとオンライン サービスの構成](../deploy-use/configure-office365.md)」の「[Exchange Online: IRM 構成](../deploy-use/configure-office365.md#exchange-online-irm-configuration)」セクションの手順を参照してください。 このセクションには、Exchange Online サービスに接続して、Azure Information Protection からテナント キーをインポートし、Exchange Online の IRM 機能を有効にするために実行する、一般的なコマンドが含まれています。 次の手順を完了した後は、Exchange Online で Azure Rights Management 保護のすべての機能を使用できます。
+1. Azure Rights Management を使用して Exchange Online を構成する方法については、「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) を参照してください。 
 
 2. Exchange Online 用に IRM を有効にする標準の構成に加えて、次の PowerShell コマンドを実行し、AD RMS 保護を使って送信されたメールをユーザーが読めるようにします。
 
@@ -45,11 +43,6 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
         Set-IRMConfiguration -LicensingLocation $list
         Set-IRMConfiguration -internallicensingenabled $false
         Set-IRMConfiguration -internallicensingenabled $true
-
-
-**顧客管理 (BYOK)** の Azure Information Protection テナント キー トポロジを選択した場合:
-
--   「[BYOK の料金と制限事項](byok-price-restrictions.md)」の説明のとおり、Exchange Online では Rights Management 保護の機能を制限付きで使用できます。
 
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9. Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
