@@ -4,7 +4,7 @@ description: "組織でドキュメントや電子メールの保護を開始で
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23133038e2a845aae6a86a014cdef31843668ef8
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 430e84ac0a634052eb48e19347eafca436c47659
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
 
@@ -28,6 +28,8 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
 1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    
+    以前に [Azure Information Protection] ブレードにアクセスしたことがない場合、このブレードをポータルに追加するには、1 回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)を参照してください。
     
     [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[Microsoft サポートにお問い合わせいただく](../get-started/information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。
 

@@ -4,17 +4,17 @@ description: "Azure Information Protection による HYOK (AD RMS) 保護を選�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
@@ -65,7 +65,7 @@ Azure RMS による保護を使うときの利点は得られないことに加�
 
     HYOK または Azure Rights Management サービスを使うように **[転送不可]** のラベルを構成できますが、ユーザーが [転送不可] を選択することもできます。 ユーザーは、Office リボンの **[メッセージ]** タブの **[転送不可]** ボタンまたは Outlook のメニュー オプションを使って、このオプションを選択できます。 **[転送不可]** メニュー オプションは、**[ファイル]** > **[アクセス許可]** と、リボンの **[オプション]** タブの **[アクセス許可]** ボタンから表示されます。 
     
-    ユーザーが Outlook で **[転送不可]** ボタンを選択すると、Azure Information Protection クライアントは常に Azure RMS を使用します。 この動作を回避するには、[クライアント詳細設定](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)を構成して Outlook の **[転送不可]** ボタンを非表示にします。 
+    ユーザーが Outlook で **[転送不可]** ボタンを選択すると、Azure Information Protection クライアントは常に Azure RMS を使用します。 この動作を必要としない場合は、[ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Outlook のリボンに、[転送不可] ボタンを追加します]** を **[オフ]** に設定して、このボタンを非表示にすることができます。 
     
     ユーザーは、Outlook メニュー オプションから **[転送不可]** を選択するとき、Azure RMS または AD RMS を選択できますが、ユーザーは自分のメール メッセージではどちらのオプションを選択すればよいかわからない場合があります。 Azure RMS を使うべきところで AD RMS を使うと、外部の共有ユーザーはメール メッセージを開けなくなります。
 

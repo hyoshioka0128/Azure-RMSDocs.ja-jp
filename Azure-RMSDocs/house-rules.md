@@ -4,7 +4,7 @@ description: "Azure Information Protection ドキュメントの Livefyre コメ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 64f354ed87fbfaccfcc6a102c6d8c2ea88b75b39
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 4040e67a7bae2ee5a208d61134b842762ef4ace1
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Azure Information Protection のドキュメントに対するコメントの内部ルール
 
@@ -29,7 +29,9 @@ ms.lasthandoff: 11/03/2017
  
 以下の場合、Livefyre コメントとサイドノートは使用しないでください。
  
-- **テクニカル サポート**。 たとえば、ある機能が動作しないため、要件を確認してドキュメントの指示に従った場合や、 ライセンスについて質問がある場合については、 代わりに、[Microsoft サポートにお問い合わせいただく](./get-started/information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。 または、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)のコミュニティをご利用ください。
+- **組織のサブスクリプションに関する質問**。 たとえば、既存のサブスクリプションが使用する機能をサポートするかどうかについて、[Azure Information Protection のサブスクリプション要件](./get-started/requirements.md#subscription-for-azure-information-protection)を確認します。 または、Microsoft のアカウント マネージャーまたは [Microsoft サポート](./get-started/information-support.md#to-contact-microsoft-support)にお問い合わせください。
+
+- **テクニカル サポート**。 たとえば、ある機能が動作しないため、要件を確認してドキュメントの指示に従った場合や、 Azure Information Protection クライアントの[サポートされているバージョン](./rms-client/client-version-release-history.md#servicing-information-and-timelines)を使用していることも確認します。 代わりに、[Microsoft サポート](./get-started/information-support.md#to-contact-microsoft-support)にお問い合わせいただくか、標準のサポート チャネルを使用してください。 または、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)のコミュニティをご利用ください。
 
 - **ロードマップ情報**。 たとえば、新しいリリースが公開される場合、または追加の機能が計画されている場合。 この情報については、[Enterprise Mobility + Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services)を参照するか、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)で質問してください。 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com) を確認し、このリソースから新しい機能を要求することもできます。
 

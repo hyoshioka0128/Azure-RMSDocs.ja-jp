@@ -4,7 +4,7 @@ description: "ドキュメントや電子メールを分類して保護する方
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13d751bf9754ba3645cb7bb7417e7f5be394eb27
-ms.sourcegitcommit: 769057f5ffb366fc645bff542a32b2eab4f20c70
+ms.openlocfilehash: 683764d005e3223f6e5bdaa49b1d4c881a8daed4
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -41,16 +41,13 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
-Azure Information Protection バーを使用して、構成されているラベルを 1 つ選択します。 
+Azure Information Protection バーまたはリボンの **[保護]** ボタンを使用して、構成されているラベルを 1 つ選択します。 
 
-たとえば、次の図は、**[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 "General" など、ラベルを設定するには、**[全般]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。 
+たとえば、次の図は、Azure Information Protection バーの **[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 "General" など、ラベルを設定するには、**[全般]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。 
 
 ![Azure Information Protection バーの例](../media/info-protect-bar-not-set-callout.png)
 
 ラベルがドキュメントに既に適用され、ラベルを変更する場合は、別のラベルを選択できます。 ラベルがバーに表示されない場合は、現在のラベル値の横にある **[ラベルの編集]** アイコンをクリックします。
-
-> [!TIP]
-> または、**[ファイル]** タブで **[保護]** ボタンからラベルを選択できます。
 
 ラベルの手動選択に加え、次の方法でラベルを適用することもできます。
 
@@ -62,9 +59,17 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>お使いの Office アプリでこの Information Protection バーが表示されない場合
 
-- Azure Information Protection クライアントが[インストール](install-client-app.md)されていないか、クライアントが[保護のみモード](client-protection-only-mode.md)で実行されている可能性があります。
+考えられる理由:
+
+- Azure Information Protection クライアントが[インストール](install-client-app.md)されていません。
+
+- お客様はクライアントをインストールしていますが、管理者がバーを表示しないように設定を構成しています。 代わりに、Office リボンの **[ファイル]** タブで、**[保護]** ボタンからラベルを選択します。 
+
+- クライアントが[保護のみモード](client-protection-only-mode.md)で実行されています。
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>表示されるはずのラベルがバーに表示されない場合 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>表示されるはずのラベルが表示されない場合 
+
+考えられる理由:
 
 - 管理者が新しいラベルを構成したばかりの場合は、すべてのインスタンスの Office アプリを終了してから、開き直します。 この操作で、ラベルの変更が確認されます。
 
@@ -74,11 +79,13 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 ### <a name="set-custom-permissions-for-a-document"></a>ドキュメントのカスタム アクセス許可を設定する
 
-選択したラベルに対して管理者から指定されている保護設定を使用するのではなく、独自にドキュメントの保護設定を指定することができます。
+管理者から許可されている場合は、選択したラベルに対して管理者から指定されている保護設定を使用するのではなく、独自のドキュメントの保護設定を指定することができます。
 
 1. **[ホーム]** タブの **[保護]** グループで、**[保護]** > **[カスタム アクセス許可]** をクリックします。
 
     ![カスタム アクセス許可オプション](../media/custom-permissions-callout.png)
+    
+    **[カスタムのアクセス許可]** を選択できない場合、管理者はお客様がこのオプションを使用することを許可していません。
     
     指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わることに注意してください。  
 
@@ -135,7 +142,9 @@ Azure Information Protection バーを使用して、構成されているラベ
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスにラベルがない](../media/info-protect-dialog-labels-protection-only.png)
     
-3. 選択したラベルに対し管理者から指定されている保護設定を使用するのではなく、独自の保護設定を指定する場合は、**[Protect with custom permissions]\(カスタムのアクセス許可による保護)** を選択します。
+3. 管理者から許可されている場合は、選択したラベルに対して管理者が含めた保護設定を使用するのではなく、独自の保護設定を指定することができます。 この操作を行うには、**[カスタム アクセス許可で保護する]** 選択します。
+    
+    **[カスタム アクセス許可で保護する]** を選択できない場合、管理者はお客様がこのオプションを使用することを許可していません。
     
     指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わります。  
 
