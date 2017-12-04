@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
@@ -50,6 +50,10 @@ Azure Information Protection には構成しないで使用できる既定のポ
     以前のバージョンのポリシーを使用しているために、このラベルがない場合は、同等のラベルとして **[内部]** を選択します。
 
 2. **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** オプションを**[オン]** に設定します。
+
+3. さらに、**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** の設定を見つけます。 これが **[オフ]** に設定されている場合、**[オン]** に変更します。
+    
+    既定値はいつサブスクリプションを取得したかに応じて異なるため、この設定を変更する必要がない場合があります。 チュートリアルの後半で保護されたドキュメントをユーザーと共有するために、カスタム アクセス許可を使用します。共有するユーザーは、お客様がエクスプローラーのファイルを右クリックするときに指定できます。
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>分類にプロンプトを出すために保護、視覚的なマーカー、および条件に新しいラベルを作成する
 
@@ -142,7 +146,7 @@ Azure Portal を閉じても、開いたままにしておきこのチュート�
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
 |既定のポリシーと異なるバージョンについて|[Azure Information Protection の既定のポリシー](../deploy-use/configure-policy-default.md)|
-|ポリシーの構成オプションについて|[Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)|
+|ポリシーの構成について|[Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)|
 |保護のラベルを構成する詳細な手順|[Rights Management による保護でラベルを構成する方法](../deploy-use/configure-policy-protection.md)|
 |アクセス許可に関する詳細情報|[Azure Rights Management の使用権限を構成する](../deploy-use/configure-usage-rights.md)|
 

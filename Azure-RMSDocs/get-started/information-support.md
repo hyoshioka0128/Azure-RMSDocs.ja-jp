@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/08/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89f0863f11d43a19a81b31a648de13fd1733df75
-ms.sourcegitcommit: a63b3ac3949e66cc38e20d7f14ac129b8e3224c3
+ms.openlocfilehash: 91ba855bb9bd9c41c81ae819b7b3afee1f04adb8
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -26,9 +26,9 @@ ms.lasthandoff: 11/09/2017
 
 |目的|.. 手順|
 |----------------|---------------|
-|最も頻繁に使用されるドキュメントの参照|以下の上位 5 つのページを参照してください。 <br /><br />[はじめに - iOS 用および Android 用の AIP アプリ](../rms-client/mobile-app-get-started.md) <br /><br /> [Azure Information Protection とは](../understand-explore/what-is-information-protection.md)<br /><br /> [Azure Rights Management とは](../understand-explore/what-is-azure-rms.md)<br /><br />[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)<br /><br />[Azure Information Protection の要件](../get-started/requirements.md)|
+|最も頻繁に使用されるドキュメントの参照|以下の上位 5 つのページを参照してください。<br /><br /> - [Azure Information Protection とは](../understand-explore/what-is-information-protection.md)<br /> - [Azure Rights Management とは](../understand-explore/what-is-azure-rms.md)<br />- [はじめに - iOS 用および Android 用の AIP アプリ](../rms-client/mobile-app-get-started.md) <br />- [Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)<br />- [Azure Information Protection の要件](../get-started/requirements.md)|
 |製品チームや同僚との連携|Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)にアクセスします。|
-|新機能や機能変更の要求|Azure Information Protection の [User Voice サイト](https://msip.uservoice.com)にアクセスします。|
+|新機能や機能変更の要求|Azure Information Protection の [User Voice](https://msip.uservoice.com) サイトにアクセスする|
 |製品グループからのツイートの受信|Twitter で [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) をフォローします。|
 |サブスクリプション情報とサポート対象の機能を確認する|Azure Information Protection サイトの「[サブスクリプション情報](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)」と「[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)」を参照してください。|
 
@@ -83,12 +83,14 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 - オンプレミスのサーバー用に Rights Management コネクタをデプロイした場合は、[監視](../deploy-use/monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
 
-- Windows 用の Azure Information Protection クライアントについては、管理者ガイドの[インストールのチェックとトラブルシューティング](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するセクションをご覧ください。
+- Windows 用の Azure Information Protection クライアントについては、管理者ガイドの「[インストールのチェックとトラブルシューティング](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照し、[サポートされているバージョン](../rms-client/client-version-release-history.md#servicing-information-and-timelines)を使用していることを確認してください。
 
 ### <a name="community-resources"></a>コミュニティのリソース
 
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 
-Yammer にアクセスできない場合は、[Microsoft RMS (クラウド) の TechNet フォーラム](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)をお試しください。
+質問して情報を共有するための [Azure Information Protection 領域](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection)を含む、急成長中の [Tech Community](https:/techcommunity.microsoft.com) を確認します。
+
+これらのサイトにアクセスできない場合は、[TechNet フォーラムの Microsoft RMS (クラウド)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud) を試してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
