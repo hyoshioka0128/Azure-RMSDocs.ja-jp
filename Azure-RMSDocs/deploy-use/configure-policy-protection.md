@@ -4,17 +4,17 @@ description: "Rights Management 保護を使用するようにラベルを構成
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
-ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
+ms.openlocfilehash: 1b16d3ab7923592a011b6be39586a02a378f39f0
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -101,7 +101,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
         
         ユーザーまたはグループは電子メール アドレスを持っている必要があります。 運用環境ではこの条件はほとんど常に満たされますが、単純なテスト環境では、ユーザー アカウントまたはグループへの電子メール アドレスの追加が必要になることがあります。
         
-    - 個々のユーザーまたはグループ (内部または外部) の電子メール アドレスを手動で設定するには、**[詳細を入力]** を選択します。 あるいは、別の組織のドメイン名を入力すると、その組織のすべてのユーザーが指定されます。 
+    - 個々のユーザーまたはグループ (内部または外部) の電子メール アドレスを手動で設定するには、**[詳細を入力]** を選択します。 あるいは、別の組織のドメイン名を入力すると、その組織のすべてのユーザーが指定されます。 個人用のメール アカウントをサポートするソーシャル プロバイダーのドメイン名を入力しないでください。 たとえば、**gmail.com**、**hotmail.com**、または **outlook.com** を入力しないでください。
         
     >[!NOTE]
     >ユーザーまたはグループを選択した後に電子メール アドレスが変更された場合、計画ドキュメントの[電子メール アドレスが変更された場合の考慮事項](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change)をご覧ください。

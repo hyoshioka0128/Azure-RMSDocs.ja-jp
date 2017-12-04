@@ -4,7 +4,7 @@ description: "Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 6dfda21368713c652df6c815dbb3895517182af1
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: 690cbc194be79a4e4fe9d85cda0e731d31d33822
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -52,7 +52,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 |要件|詳細情報|
 |---------------|--------------------|
-|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 つのプロセス<br /><br />- 4 GB の RAM|Windows Server 2016 または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](../get-started/requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。 <br /><br />Azure Information Protection に必要な[インターネット接続](../get-started/requirements.md#firewalls-and-network-infrastructure)がこのコンピューターにあることを確認します。 またはサーバーを[切断されたコンピューター](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)として構成する必要があります。 |
+|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 個のプロセッサ<br /><br />- 4 GB の RAM|Windows Server 2016 または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](../get-started/requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。 <br /><br />Azure Information Protection に必要な[インターネット接続](../get-started/requirements.md#firewalls-and-network-infrastructure)がこのコンピューターにあることを確認します。 またはサーバーを[切断されたコンピューター](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)として構成する必要があります。 |
 |スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
 |スキャナー サービスを実行するサービス アカウント|このアカウントは、Azure AD と同期された Active Directory アカウントである必要があり、次の追加要件があります。<br /><br />- **ローカル ログオン**権限。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。<br /><br />- **サービスとしてログオン**権限。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーが保護されたファイルに常にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能が有効になっていることを確認します。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」を参照してください。|
 |Azure Information Protection クライアントが Windows Server コンピューターにインストールされる|現時点では、Azure Information Protection スキャナーには、Azure Information Protection クライアントのプレビュー バージョンが必要です。<br /><br />必要に応じて、スキャナーのインストールと構成に使用する PowerShell モジュール (AzureInformationProtection) だけのクライアントをインストールできます。<br /><br />クライアントのインストール手順については、[管理者ガイド](../rms-client/client-admin-guide.md)を参照してください。|
@@ -78,6 +78,8 @@ Azure Information Protection スキャナーをインストールする前に、
     - 名前付きインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
     
     - SQL Server Express の場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    
+    [詳細な例](/powershell/module/azureinformationprotection/set-aipscannerconfiguration#examples)が必要な場合は、このコマンドレットのオンライン ヘルプを使用します。
 
 4. **[管理ツール]** > **[サービス]** を使用して、サービスがインストールされたことを確認します。 
     
@@ -162,6 +164,48 @@ Azure Information Protection スキャナーをインストールする前に、
 [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) の実行時に `-Type` パラメーターを **[Full]** に設定すると、スキャナーにすべてのファイルの検査を強制することができます。 この構成は、レポートにすべてのファイルを含める必要がある場合に役立ち、通常は検索モードでスキャナーが実行されるときに使用されます。 フル スキャンが完了すると、後続のスキャンで新しいファイルまたは変更されたファイルのみがスキャンされるように、スキャンの種類が自動的に [増分] に変更されます。
 
 さらに、新しいまたは変更された条件を含む Azure Information Protection ポリシーをスキャナーがダウンロードした場合も、すべてのファイルが検査されます。 スキャナーは、1 時間ごと、およびサービスの開始時にポリシーを更新します。
+
+## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのパフォーマンスの最適化
+
+スキャナーのパフォーマンスを最大化するには
+
+- **スキャナー コンピューターとスキャンされたデータ ストア間のネットワーク接続を高速かつ信頼性の高い接続にする**
+    
+    たとえば、同じ LAN 内か、スキャンされたデータ ストアと同じネットワーク セグメント内 (推奨) にスキャナー コンピューターを配置します。
+    
+    ネットワーク接続の品質は、スキャナーがスキャナー サービスを実行しているコンピューターにファイルのコンテンツを転送してファイルを検査するため、スキャナーのパフォーマンスに影響します。 このデータを移動する必要があるネットワークのホップ数を減らす (削除する) と、ネットワークの負荷も軽減されます。 
+
+- **スキャナー コンピューターに利用可能なプロセッサ リソースがあることを確認する**
+    
+    ファイル コンテンツが構成した条件に一致するかの検査、およびファイルの暗号化と複合化は、プロセッサ負荷の高いアクションです。 プロセッサ リソースの不足がスキャナー パフォーマンスを低下させるかどうかを識別するには、指定したデータ ストアの標準のスキャン サイクルを監視します。
+    
+- **スキャナー サービスを実行しているコンピューター上のローカル フォルダーをスキャンしない**
+    
+    Windows Server 上にスキャンするフォルダーがある場合は、別のコンピューター上にスキャナーをインストールし、これらのフォルダーをネットワーク共有として構成してスキャンします。 ファイルをホストする機能とファイルをスキャンする機能の 2 つの機能を分離させると、これらのサービス用のリソースの計算が相互に競合していないことを意味します。
+
+スキャナーのパフォーマンスに影響するその他の要因
+
+- スキャンするファイルを含むデータ ストアの現在の負荷と応答時間
+
+- スキャナーが検索モードまたは強制モードのどちらで実行されているか
+    
+    通常、検索モードでは、強制モードよりもスキャン速度が速くなります。これは、発見には単一ファイルの読み取りアクションが必要なのに対して、強制モードでは読み取り/書き込みアクションが必要なためです。
+
+- Azure Information Protection の条件を変更する
+    
+    スキャナーがすべてのファイルを検査する必要があるときの最初のスキャン サイクルでは、既定では、新規および変更されたファイルのみを検査する後続のスキャン サイクルよりも明らかに長く時間がかかります。 ただし、Azure Information Protection ポリシーの条件を変更した場合、[上記のセクション](#when-files-are-rescanned-by-the-azure-information-protection-scanner)に示されているように、すべてのファイルがもう一度スキャンされます。
+
+- 選択したログ レベル
+    
+    スキャナー レポートに対して **[デバッグ]**、**[情報]**、**[エラー]**、**[オフ]** から選択できます。 **[オフ]** を選択すると、最適なパフォーマンスになります。**[デバッグ]** は大幅にスキャナーのスピードを低下させるので、トラブルシューティング時にのみ使用してください。 詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。
+
+- ファイル自体
+    
+    - Office ファイルは PDF ファイルよりもすばやくスキャンされます。
+    
+    - 保護されていないファイルは、保護されたファイルよりもすばやくスキャンされます。
+    
+    - 大きいファイルは明らかに小さいファイルよりも時間がかかります。
 
 ## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのコマンドレットのリスト 
 

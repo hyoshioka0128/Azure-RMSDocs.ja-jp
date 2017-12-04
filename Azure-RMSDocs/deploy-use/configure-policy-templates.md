@@ -4,7 +4,7 @@ description: "Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
+ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -53,13 +53,13 @@ Azure Rights Management サービスが含まれる Azure Information Protection
 
 ### <a name="default-template-names"></a>既定のテンプレート名
 
-Azure Information Protection のサブスクリプションを最近入手した場合、既定のテンプレートは次の名前で作成されます。
+サブスクリプションを最近入手した場合、既定のテンプレートは次の名前で作成されます。
 
 - **社外秘 \ すべての従業員**: 保護されたコンテンツの読み取りアクセス許可または変更アクセス許可を付与します。
 
 - **非常に機密性の高い社外秘 \ すべての従業員**: 保護されたコンテンツの読み取り専用アクセス許可を付与します。
 
-Azure Information Protection サブスクリプションを入手してからしばらく経過している場合、あるいは Azure Information Protection サブスクリプションを持っていないが、Azure Rights Management が含まれる Office 365 サブスクリプションを持っている場合、既定のテンプレートは次の名前で作成されます。
+以前にサブスクリプションを入手している場合、既定のテンプレートは次の名前で作成されます。
 
 - **\<組織の名前> - 社外秘**: 保護されたコンテンツの読み取りアクセス許可または変更アクセス許可を付与します。
 
