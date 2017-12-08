@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 12/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b65e3d803f94e6c8a494217e2a494c704640e5fc
-ms.sourcegitcommit: 3952fc01c6182c143df7f0d2e748594e49bf1da8
+ms.openlocfilehash: 0dff1b664cbac830dda2750cc6120ab4476c8183
+ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -42,7 +42,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]**を展開し、 **[信頼された発行ドメイン]**をクリックします。
 
-3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから **[ 信頼された発行ドメインのエクスポート]** をクリックします。
+3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから **[信頼された発行ドメインのエクスポート]** をクリックします。
 
 4. **[信頼された発行ドメインのエクスポート]** ダイアログ ボックスで:
 
@@ -138,7 +138,7 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 2. Azure RMS PowerShell コマンドレット [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) を使用して、テンプレートをエクスポートします。
 
-3. Azure RMS PowerShell コマンドレット [Import-AadrmTemplate](/powershell/aadrm/vlatest/Import-AadrmTpd) を使用して、テンプレートをインポートします。
+3. Azure RMS PowerShell コマンドレット [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate) を使用して、テンプレートをインポートします。
 
 その後は、移行後に作成した他のテンプレートと同様に、これらのテンプレートを発行したりアーカイブしたりできます。
 
