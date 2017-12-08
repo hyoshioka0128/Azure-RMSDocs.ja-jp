@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) を理解
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60765865a0c422f4baac72ed88a6bca9b96ed66f
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 124bef6f9c54fc154bdf95322ca418d01f5b5636
+ms.sourcegitcommit: 3cbea6b4191b97c69d06d04cbbd852aacacdd9c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
@@ -57,7 +57,7 @@ Azure Information Protection の主な違いの一部:
 |サポートされる Microsoft Office の最小バージョンは Office 2010 であり、このバージョンでは [Azure Information Protection クライアント](../rms-client/aip-client.md)または RMS 共有アプリケーションが必要です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされていません|サポートされる最小バージョンは Microsoft Office is Office 2007 です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポートされています<br /><br />- Microsoft Office for Mac 2011: サポートされています|
 |Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](../rms-client/aip-client.md)をサポートしています。 RMS 共有アプリでは、Mac コンピューターと Windows Phone が引き続きサポートされます。<br /><br />また、Azure Information Protection クライアントには次のものが含まれます。<br /><br />- 別組織のユーザーとの共有。<br /><br />- ユーザー用のドキュメント追跡サイト。ドキュメントを失効させる機能があります。|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](../rms-client/aip-client.md)をサポートしています。 RMS 共有アプリでは、Mac コンピューターと Windows Phone が引き続きサポートされます。 ただし、別組織のユーザーとの共有、ドキュメント追跡サイトとユーザーがドキュメントを失効させる機能はサポートされていません。|
 |Azure Information Protection クライアントを使用すると、ほとんどの[ファイルの種類](../rms-client/client-admin-guide-file-types.md)を分類し、保護することができます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|Azure Information Protection クライアントを使用すると、ほとんどの[ファイルの種類](../rms-client/client-admin-guide-file-types.md)を保護することができます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](../get-started/requirements-applications.md)」の表を参照してください。|
-|Windows クライアントのサポートされる最小バージョンは Windows 7 SP1 です。|Windows クライアントのサポートされる最小バージョンは Windows Vista Service Pack 2 です。|
+|Windows クライアントのサポートされる最小バージョンは Windows 7 SP1 です。|Windows クライアントのサポートされる最小バージョンは Windows 7 SP1 です。|
 |モバイル デバイスのサポートには、Windows Phone、Android、iOS、および Windows RT が含まれます。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でもサポートされます。|モバイル デバイスのサポート対象には、Windows Phone、Android、iOS、Windows RT が含まれます。モバイル デバイスを使用するには、[Active Directory Rights Management サービスのモバイル デバイス拡張機能](http://technet.microsoft.com/library/dn673574.aspx)が必要です。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でサポートされます。|
 |コンピューターとモバイル デバイス用の多要素認証 (MFA) をサポートします。<br /><br />詳細については、「[多要素認証 (MFA) と Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection)」を参照してください。|IIS が証明書を要求するように構成されている場合は、スマート カード認証をサポートします。|
 |追加の構成なしで Cryptographic Mode 2 をサポートします。これによりキー長と暗号化アルゴリズムのセキュリティが強化されます。<br /><br />セキュリティに関する比較について質問がある場合は、この記事の「[署名と暗号化のための暗号化制御](#cryptographic-controls-for-signing-and-encryption)」セクションと「[AD RMS Cryptographic Modes (AD RMS の暗号化モード)](http://go.microsoft.com/fwlink/?LinkId=266659)」を参照してください。|既定で Cryptographic Mode 1 をサポートし、セキュリティを強化するために Cryptographic Mode 2 をサポートするには追加の構成が必要です。<br /><br />セキュリティに関する比較について質問がある場合は、この記事の「[署名と暗号化のための暗号化制御](#cryptographic-controls-for-signing-and-encryption)」セクションと「[AD RMS Cryptographic Modes (AD RMS の暗号化モード)](http://go.microsoft.com/fwlink/?LinkId=266659)」を参照してください。|
