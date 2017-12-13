@@ -4,7 +4,7 @@ description: "Rights Management サービス クライアント (RMS クライ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7879dd85c2e46823cfe9c8f1f4482952a8db8aa
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6ddf4e43a087a9eb283651567244d96c69b4071f
+ms.sourcegitcommit: 07456cc544bc3383e05e0ee99638964d9968f257
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 7 SP1、Windows 8、Windows 8.1、Windows 10、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、Windows Vista*
+>*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 7 SP1、Windows 8、Windows 8.1、Windows 10、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016*
 
 Rights Management サービス クライアント (RMS クライアント) バージョン 2 は、MSIPC クライアントとも呼ばれます。 Microsoft Rights Management サービスと通信する Windows コンピューター (オンプレミスまたはクラウド) 用のソフトウェアで、組織内または管理対象外組織内における、アプリケーションとデバイスを行き来する情報へのアクセスや使用を保護することができます。 
 
@@ -62,7 +62,7 @@ RMS クライアントは、次のオペレーティング システムでサポ
 |Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 SP1 以降|
-|Windows Server 2008 (AD RMS のみ)|Windows Vista SP2 以降 (AD RMS のみ)|
+
 
 ### <a name="which-processors-or-platforms-support-the--rms-client"></a>RMS クライアントはどのプロセッサまたはプラットフォームでサポートされますか。
 RMS クライアントは、x86 および x64 のコンピューティング プラットフォームでサポートされます。
@@ -186,17 +186,17 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 
 1.  AD RMS サーバーの Active Directory Management サービス コンソールを開きます。
 
-    -   Windows Server 2008 R2 または Windows Server 2008 を使用している場合は、[ **開始**]、[ **管理ツール**]、[ **Active Directory Rights Management サービス**] の順にクリックします。
+    -   Windows Server 2008 R2 または Windows Server 2008 を使用している場合は、**[開始]**、**[管理ツール]**、**[Active Directory Rights Management サービス]** の順にクリックします。
 
-    -   Windows Server 2012 R2 または Windows Server 2012 を使用している場合は、[**ツール**]、[**Active Directory Rights Management サービス**] の順にクリックします。
+    -   Windows Server 2012 R2 または Windows Server 2012 を使用している場合は、**[ツール]**、**[Active Directory Rights Management サービス]** の順にクリックします。
 
-2.  AD RMS コンソールで AD RMS クラスターを右クリックし、[**プロパティ**] をクリックします。
+2.  AD RMS コンソールで AD RMS クラスターを右クリックし、**[プロパティ]** をクリックします。
 
-3.  [ **SCP** ] タブをクリックします。
+3.  **[SCP]** タブをクリックします。
 
-4.  [ **SCPを変更する** ] チェック ボックスをオンにします。
+4.  **[SCPを変更する]** チェック ボックスをオンにします。
 
-5.  [ **SCP を現在の証明クラスターに設定する** ] オプションを選択して、[ **OK**] をクリックします。
+5.  **[SCP を現在の証明クラスターに設定する]** オプションを選択して、**[OK]** をクリックします。
 
 ### <a name="enabling-client-side-service-discovery-by-using-the-windows-registry"></a>Windows レジストリを使用してクライアント側のサービスの検出を有効にする
 SCP を使用しない、または SCP が存在しない場合は、RMS クライアントがその AD RMS サーバーを検出できるように、クライアント コンピューターのレジストリを構成できます。
@@ -212,15 +212,15 @@ SCP を使用しない、または SCP が存在しない場合は、RMS クラ�
     > [!IMPORTANT]
     > 32 ビット アプリケーションを 64 ビット コンピューターで実行している場合は、パスは **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC** になります。
 
-3.  ServiceLocation サブキーを作成するには、[**MSIPC**] を右クリックして [**新規**] を選択し、[**キー**] をクリックして「**ServiceLocation**」と入力します。
+3.  ServiceLocation サブキーを作成するには、**[MSIPC]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして「**ServiceLocation**」と入力します。
 
-4.  EnterpriseCertification サブキーを作成するには、[**ServiceLocation**] を右クリックして [**新規**] を選択し、[**キー**] をクリックして「**EnterpriseCertification**」と入力します。
+4.  EnterpriseCertification サブキーを作成するには、**[ServiceLocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして「**EnterpriseCertification**」と入力します。
 
-5.  エンタープライズ証明書の URL を設定するには、[**EnterpriseCertification**] サブキーの **(既定)** 値をダブルクリックして、[**文字列の編集**] ダイアログ ボックスが表示されたら、**[値] データ**に「<http or https>://*AD RMS_cluster_name*/_wmcs/Certification」と入力し、[**OK**] をクリックします。
+5.  エンタープライズ証明書の URL を設定するには、**[EnterpriseCertification]** サブキーの **(既定)** 値をダブルクリックして、**[文字列の編集]** ダイアログ ボックスが表示されたら、**[値] データ**に「<http or https>://*AD RMS_cluster_name*/_wmcs/Certification」と入力し、**[OK]** をクリックします。
 
-6.  EnterprisePublishing サブキーを作成するには、 [**ServiceLocation**] を右クリックして [**新規**] を選択し、[**キー**] をクリックして「EnterprisePublishing」と入力します。
+6.  EnterprisePublishing サブキーを作成するには、 **[ServiceLocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして「EnterprisePublishing」と入力します。
 
-7.  エンタープライズ証明書の URL を設定するには、[**EnterprisePublishing**] サブキーの **(既定)** 値をダブルクリックして、[**文字列の編集**] ダイアログ ボックスが表示されたら、**[値] データ**に「<http or https>://*AD RMS_cluster_name*/_wmcs/Licensing」と入力し、[**OK**] をクリックします。
+7.  エンタープライズ証明書の URL を設定するには、**[EnterprisePublishing]** サブキーの **(既定)** 値をダブルクリックして、**[文字列の編集]** ダイアログ ボックスが表示されたら、**[値] データ**に「<http or https>://*AD RMS_cluster_name*/_wmcs/Licensing」と入力し、**[OK]** をクリックします。
 
 8.  レジストリ エディターを閉じます。
 
@@ -241,9 +241,9 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 
     -   x64 プラットフォームでの Office の 32 ビット バージョンの場合: HKLM\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Servicelocation
 
-3.  LicensingRedirection サブキーを作成するには、[**Servicelocation**] を右クリックして [**新規**] を選択し、[**キー**] をクリックして、「**LicensingRedirection**」と入力します。
+3.  LicensingRedirection サブキーを作成するには、**[Servicelocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして、「**LicensingRedirection**」と入力します。
 
-4.  ライセンスのリダイレクトを設定するには、[**LicensingRedirection**] サブキーを右クリックして[**新規**] を選択し、[**String value**] を選択します。  [ **名前**] には以前のサーバーのライセンス URL を指定し、[ **値** ] には新しいサーバーのライセンス URL を指定します。
+4.  ライセンスのリダイレクトを設定するには、**[LicensingRedirection]** サブキーを右クリックして**[新規]** を選択し、**[String value]** を選択します。  **[名前]** には以前のサーバーのライセンス URL を指定し、**[値]** には新しいサーバーのライセンス URL を指定します。
 
     たとえば、Contoso.com にあるサーバーからFabrikam.com のサーバーにライセンスをリダイレクトするには、次の値を入力します。
 

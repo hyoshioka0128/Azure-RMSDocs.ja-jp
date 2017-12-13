@@ -4,7 +4,7 @@ description: "Azure Information Protection でお客様が管理するキーを�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 12/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: afc25e638cff4bddc342ed29dee7fab304d67bd7
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 981f7349c9ae279d48f5cb4795ffc2087f5ae4d8
+ms.sourcegitcommit: 850869505942f9d1b74720085d253de4b54b19c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
@@ -27,7 +27,11 @@ Azure Information Protection が含まれているサブスクリプションを
 
 キーは Azure Key Vault に保存する必要があります。これには Azure サブスクリプションが必要です。 HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/en-us/pricing/details/key-vault/)を参照してください。
 
-Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを専用のサブスクリプションで使用することが推奨されます。 それによって Azure Rights Management サービスのみでキーが使用されます。 
+Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを使用することで、それが Azure Rights Management サービスのみで使用されるようにすることをお勧めします。 この構成によって、その他のサービスの呼び出しがキー コンテナーの[サービスの制限](/azure/key-vault/key-vault-service-limits)を超えないようにすることができます。このために、Azure Rights Management サービスの応答時間が調整されることもあります。  
+
+さらに、通常、Azure Key Vault を使用するサービスごとに異なるキー管理要件があるため、無効な構成に対する安全策として、このキー コンテナーに別の Azure サブスクリプションを使用することをお勧めします。 
+
+ただし、Azure Key Vault を使用する他のサービスと Azure サブスクリプションを共有する場合は、サブスクリプションで管理者の共通セットを共有しているようにします。 この予防措置は、サブスクリプションを使用する管理者が、アクセス権のあるすべてのキーをよく理解していることを意味します。そのため、誤って構成する可能性は低くなります。 たとえば、Azure Information Protection テナント キーの管理者が、Office 365 カスタマー キーと CRM Online のキーを管理するユーザーと同じ場合に共有された Azure サブスクリプションです。 ただし、カスタマー キーと CRM Online のキーを管理する管理者が、Azure Information Protection テナント キーの管理者とは異なる場合は、Azure Information Protection の Azure サブスクリプションを共有しないことをお勧めします。
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Azure Key Vault を使用する利点
 

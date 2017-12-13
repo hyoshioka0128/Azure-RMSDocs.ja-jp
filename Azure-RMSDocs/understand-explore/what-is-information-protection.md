@@ -4,17 +4,17 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 12/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: c17453cddec7d570901ccf18287e8d1db2fd3f01
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 7e16be928a12142b695f2eac60bdbd3e353c3119
+ms.sourcegitcommit: 43d77093d97509170bbdfa72bc28e1c2100228ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -43,19 +43,17 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
 
-たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 これらの保護タスクは、*Rights Management テンプレート*を使用して単純化および合理化できます。
+たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 
+
+これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 ただし、保護をサポートするアプリケーションとサービスから同じ保護設定を使用することもできますが、ラベルを付けることはできません。 これらのアプリケーションとサービスでは、保護設定は *Rights Management テンプレート*として表示されます。
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
 Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定のテンプレートが使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
 
-テンプレートをラベル構成の一部にすることができます。 そのラベルがドキュメントまたは電子メール メッセージに適用されている場合、データの分類と自動保護の両方が行われます。 Azure Rights Management テクノロジをサポートする製品およびサービスのユーザーや管理者が、テンプレートを選択することもできます。
+保護設定を含む Azure Information Protection のラベルを作成すると、その処理の裏では、このアクションによって対応する Rights Management テンプレートが作成されます。 そのテンプレートは、Azure Rights Management をサポートするアプリケーションとサービスで使用できます。
 
-この例では、Azure ポータルから Azure Information Protection ポリシーを構成するときに、ラベルのテンプレートを選択する方法を示します。
-
-![Azure ポータルでテンプレートを選択する場合の例](../media/info-protect-template-callout.png)
-
-同じテンプレートを Exchange 管理センターから選択することもできます。 たとえば、Exchange は Azure Rights Management テクノロジをサポートしているので、このようなテンプレートを使用する Exchange Online メール フロー ルールを構成できます。
+たとえば、Exchange 管理センターから、これらのテンプレートを使用するように、Exchange Online メール フロー ルールを構成できます。
 
 ![Exchange Online のテンプレートを選択する場合の例](../media/templates-exchangeonline-callouts.png)
 
