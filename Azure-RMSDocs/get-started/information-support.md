@@ -4,7 +4,7 @@ description: "新しいリリース、サポート オプション、および M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 12/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91ba855bb9bd9c41c81ae819b7b3afee1f04adb8
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: d6937e86fd0fd544ff2030e52d03c32daa67a134
+ms.sourcegitcommit: a9376b5431dc6ae9819833146a84fc1dd5e685fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -89,8 +89,6 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 
-質問して情報を共有するための [Azure Information Protection 領域](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection)を含む、急成長中の [Tech Community](https:/techcommunity.microsoft.com) を確認します。
-
-これらのサイトにアクセスできない場合は、[TechNet フォーラムの Microsoft RMS (クラウド)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud) を試してください。
+このサイトにアクセスできない場合は、[TechNet フォーラムの Microsoft RMS (クラウド)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud) を試してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
