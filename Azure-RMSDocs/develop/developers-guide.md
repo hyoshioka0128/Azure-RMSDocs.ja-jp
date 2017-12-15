@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: a9a94744aa2eacb3ddb4bbda3989ae857ff708fd
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
+ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
+ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 10/17/2017
 
 サービス アプリケーションは、エンタープライズ コンテンツ管理システム、ビジネス アプリケーション、またはクラウド ベースのビジネス ソリューションからのエクスポートにおいて、情報を保護する機能を提供します。 サービス アプリケーションの例としては、データ損失防止対策 (DLP) および Cloud Application Security (CAS) のアプリケーションが挙げられます。 マイクロソフトが提供するサービス アプリケーション開発向け SDK は、2 つのプログラミング モデルで利用できます。
 
-- [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
+- [C++](https://www.microsoft.com/download/details.aspx?id=38397)
 - [C# マネージ API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 ### <a name="examples-of-service-applications"></a>サービス アプリケーションの例
@@ -84,7 +84,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ### <a name="security-and-authentication"></a>セキュリティと認証
 
-- [Azure Active Directory ログインを使用するように App Service アプリケーションを構成する方法](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Azure Active Directory ログインを使用するように App Service アプリケーションを構成する方法](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [方法: Azure Active Directory Authentication (ADAL) 認証の使用](how-to-use-adal-authentication.md)
 - [Azure RMS の認証を構成する (サービス)](adal-auth.md)
 - [方法: API セキュリティ モードの設定 (サービス)](setting-the-api-security-mode-api-mode.md)
@@ -112,7 +112,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 - [セキュリティのベスト プラクティス ガイド](security-guidelines.md)
 - [RMS 開発者のコーナー (ブログ)](https://blogs.msdn.microsoft.com/rms/)
-- [Azure Information Protection に関してよく寄せられる質問](https://docs.microsoft.com/en-us/information-protection/get-started/faqs)
+- [Azure Information Protection に関してよく寄せられる質問](https://docs.microsoft.com/information-protection/get-started/faqs)
 
 ### <a name="support-articles"></a>サポート記事
 
@@ -133,17 +133,17 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ### <a name="api-reference"></a>API reference
 
-- [Windows API リファレンス](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
+- [Windows API リファレンス](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Windows SDK エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
 - [Windows Phone および Windows ストアの API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
-- [iOS および OSX の API リファレンス](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
-- [Android API リファレンス](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
+- [iOS および OSX の API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)
+- [Android API リファレンス](https://msdn.microsoft.com/library/dn758245.aspx)
 - [Linux API リファレンス](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>以前のバージョン
 
-- [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) は、RMS SDK の最初のバージョンです。
-- [AD RMS スクリプト ツール](https://msdn.microsoft.com/en-us/library/bb968797.aspx)は、AD RMS のインストールのための管理ツールです。
+- [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) は、RMS SDK の最初のバージョンです。
+- [AD RMS スクリプト ツール](https://msdn.microsoft.com/library/bb968797.aspx)は、AD RMS のインストールのための管理ツールです。
 
 ### <a name="see-also"></a>関連項目
 
