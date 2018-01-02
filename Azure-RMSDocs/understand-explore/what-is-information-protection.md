@@ -4,17 +4,17 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 7e16be928a12142b695f2eac60bdbd3e353c3119
-ms.sourcegitcommit: 43d77093d97509170bbdfa72bc28e1c2100228ee
+ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -45,13 +45,13 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 
 
-これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 ただし、保護をサポートするアプリケーションとサービスから同じ保護設定を使用することもできますが、ラベルを付けることはできません。 これらのアプリケーションとサービスでは、保護設定は *Rights Management テンプレート*として表示されます。
+これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 ただし、保護をサポートするアプリケーションとサービスから同じ保護設定を使用することもできますが、ラベルを付けることはできません。 これらのアプリケーションとサービスでは、保護設定は "*Rights Management テンプレート*" として使用できるようになります。
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
 Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定のテンプレートが使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
 
-保護設定を含む Azure Information Protection のラベルを作成すると、その処理の裏では、このアクションによって対応する Rights Management テンプレートが作成されます。 そのテンプレートは、Azure Rights Management をサポートするアプリケーションとサービスで使用できます。
+保護設定を含む Azure Information Protection のラベルを作成すると、その処理の裏では、このアクションによって対応する Rights Management テンプレートが作成されます。 さらに、そのテンプレートは、Azure Rights Management をサポートするアプリケーションとサービスで使用できます。
 
 たとえば、Exchange 管理センターから、これらのテンプレートを使用するように、Exchange Online メール フロー ルールを構成できます。
 
@@ -59,7 +59,7 @@ Azure Rights Management サービスを有効にするとすぐに、組織内�
 
 Azure Rights Management での保護のしくみの詳細については、「[Azure Rights Management とは](what-is-azure-rms.md)」を参照してください。
 
-## <a name="integration-with-end-user-workflows"></a>エンドユーザーのワークフローとの統合
+## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>ドキュメントおよび電子メール用のエンドユーザー ワークフローとの統合
 
 Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、Word にこのバーを表示した最初の図のように Information Protection バーをインストールします。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 たとえば、
 
@@ -79,6 +79,25 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ![ドキュメント追跡サイトの [アクセスの取り消し] アイコン](../media/tracking-site-revoke-access-icon.png)
 
+### <a name="additional-integration-for-email"></a>電子メールにおける追加の統合
+
+Exchange Online で Azure Information Protection を使用する場合は、新たな利点として、保護されたメールを任意のユーザーに送信し、送信先のユーザーが任意のデバイスでそのメールを読み取れるようにすることができます。
+
+たとえば、ユーザーが機密情報を、**Gmail**、**Hotmail**、または**Microsoft** アカウントを使用している個人用メール アカウントに送信する必要があるとします。 または、Office 365 用のアカウントまたは Azure AD 内のアカウントを持っていないユーザーに機密情報を送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
+
+このシナリオには、[Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要です。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことはできない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
+
+たとえば、Gmail ユーザーには、電子メール メッセージに次の内容が表示されます。
+
+![OME と AIP の Gmail 受信者エクスペリエンス](../media/ome-message.png)
+
+電子メールを送信するユーザーにとって、ワークフローは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。
+
+![[転送不可] として構成されたラベルを選択](../media/recipients-only-label.png)
+
+または、権利保護を適用するメール フロー ルールを使用して、ユーザーを自動的に保護することができます。 
+
+そのようなルールを適用した電子メールに Office ドキュメントを添付した場合、そのドキュメントも自動的に保護されます。
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 

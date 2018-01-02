@@ -4,7 +4,7 @@ description: "Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 986603d54b69fcf85bafecef2691fbd44af94942
-ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
+ms.openlocfilehash: 3e78fd3c306136c57b75e74c8846e38670e9eb94
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -65,21 +65,23 @@ Azure Information Protection スキャナーをインストールする前に、
 
 2. **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開きます。
 
-3. Azure Information Protection スキャナー用のデータベースを作成する SQL Server インスタンスを指定して、[Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) コマンドレットを実行します。 求められたら、スキャナー サービス アカウントの資格情報 (\<ドメイン\ユーザー名>) とパスワードを指定します。 
+3. Azure Information Protection スキャナー用のデータベースを作成する SQL Server インスタンスを指定して、[Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) コマンドレットを実行します。 
     
     ```
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
     例:
-        
-    - 既定のインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - 名前付きインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
+    既定のインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - SQL Server Express の場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    名前付きインスタンスの場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
+    
+    SQL Server Express の場合: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
     
     [詳細な例](/powershell/module/azureinformationprotection/install-aipscanner#examples)が必要な場合は、このコマンドレットのオンライン ヘルプを使用します。
+    
+    求められたら、スキャナー サービス アカウントの資格情報 (\<ドメイン\ユーザー名>) とパスワードを指定します。
 
 4. **[管理ツール]** > **[サービス]** を使用して、サービスがインストールされたことを確認します。 
     
