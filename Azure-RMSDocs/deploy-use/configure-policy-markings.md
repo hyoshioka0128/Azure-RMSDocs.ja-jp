@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: ff444afb1912239ec817882c76fc735f6d35ed1e
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
+ms.openlocfilehash: 99aba6560f9dcdbd564f317e8d9e0ce89845f4a9
+ms.sourcegitcommit: f78f5209f0e19c6edfd1815d76e0e9750b4ce71d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -100,7 +100,7 @@ Azure Information Protection クライアントのプレビュー版を使って
 
 利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、**#DAA520** と入力します。 
 
-コードの参照が必要な場合、MSDN ドキュメントの「[Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85)」 (名前別の色) が便利です。 画像編集できるさまざまなアプリケーションでもコードを参照できます。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+これらのコードの参照が必要な場合、MSDN ドキュメントの[名前別の色](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx)に関するページが役に立ちます。 画像編集できるさまざまなアプリケーションでもコードを参照できます。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
 ## <a name="next-steps"></a>次のステップ
 
