@@ -100,8 +100,8 @@ RMS クライアントのライセンスはローカル ディスクに格納さ
 
 |説明|クライアント モードのパス|サーバー モードのパス|
 |---------------|---------------------|---------------------|
-|ライセンスの保存場所|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*<SID>*\|
-|テンプレートの保存場所|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*<SID>*\|
+|ライセンスの保存場所|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*<SID>\*\|
+|テンプレートの保存場所|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*<SID>\*\|
 |レジストリの場所|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \*<SID>*|
 > [!NOTE]
 > *\<SID\>* は、サーバー アプリケーションを実行しているアカウントのセキュリティ識別子 (SID) です。 たとえば、アプリケーションが組み込みの Network Service アカウントで実行されている場合、*<SID>* をそのアカウントの既知の SID (S-1-5-20) の値に置き換えます。
@@ -126,7 +126,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 
 **Client Mode:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
-**サーバー モード:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\*\<SID\>\*
+**サーバー モード:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\\*\<SID\>\*
 
 このフォルダーを使用する際に、特別な名前付け規則に従う必要はありません。ただし、テンプレートは RMS サーバーまたはサービスによって発行される必要があり、テンプレートのファイル拡張子を .xml にする必要があります。 たとえば、Contoso-Confidential.xml または Contoso-ReadOnly.xml は有効な名前です。
 
