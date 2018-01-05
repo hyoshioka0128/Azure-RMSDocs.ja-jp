@@ -14,11 +14,11 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: c4334bad5a7ca6650c087425e4794c348b73501b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 1854329b9cb949a6b4318d00f981f0be9065a33e
+ms.sourcegitcommit: 1b6af3c85ed32e8d80ed10cb6ba86fc61026eaa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -35,9 +35,9 @@ ms.lasthandoff: 06/30/2017
 
 ### <a name="azure-ad-tenant-configuration"></a>Azure AD テナントの構成
 
-Azure Information Protection 用に Azure AD 環境を構成するには、「[Rights Management をアクティブにする](https://docs.microsoft.com/en-us/information-protection/deploy-use/activate-service)」のガイダンスに従ってください。
+Azure Information Protection 用に Azure AD 環境を構成するには、「[Rights Management をアクティブにする](https://docs.microsoft.com/information-protection/deploy-use/activate-service)」のガイダンスに従ってください。
 
-サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 「[Windows PowerShell を使用した Azure Rights Management サービスの管理](https://docs.microsoft.com/en-us/information-protection/deploy-use/administer-powershell)」に従って、これを行ってください。
+サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 「[Windows PowerShell を使用した Azure Rights Management サービスの管理](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell)」に従って、これを行ってください。
 
 ### <a name="getting-your-tenant-id"></a>テナント ID を取得する
 
