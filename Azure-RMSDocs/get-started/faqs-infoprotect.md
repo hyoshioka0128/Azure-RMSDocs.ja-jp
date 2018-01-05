@@ -4,7 +4,7 @@ description: "Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 4332b37a3c89cb68d8e090e44666f2620d5b0064
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: 7bc1e4021eeb2620857577f3970d1da9db21b6e8
+ms.sourcegitcommit: 51b93125988e6e63077b1df721985b89059f425e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -29,8 +29,6 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」に従えば、わずか数分でこの動作を確認できます。
 
 追加の分類機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
-
-- ラベル名とツール ヒントは 1 言語でのみサポートされます。 ただし、複数言語サポートは現在プレビュー段階です。 詳しくは、「[Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法](../deploy-use/configure-policy-languages.md)」をご覧ください。
 
 - 分類とラベル付けには集中的なログはありません。
 
