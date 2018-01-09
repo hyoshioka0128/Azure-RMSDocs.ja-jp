@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
-ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
+ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
+ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -26,7 +26,7 @@ Azure Information Protection クライアントをインストールすると、
 
 コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールは、RMS 保護ツールと共にインストールされる RMS 保護モジュールを置き換えます。 RMSProtection ツールがインストールされているシステムに Azure Information Protection クライアントをインストールすると、RMSProtection モジュールは自動的にアンインストールされます。
 
-AzureInformationProtection モジュールには、RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection (AIP) サービスを利用する新しいコマンドレットもあります。 たとえば、
+AzureInformationProtection モジュールには、RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection (AIP) サービスを利用する新しいコマンドレットもあります。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -260,7 +260,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Azure Information Protection および Azure Rights Management サービスのコマンドレットを使うシナリオの例
 
-ラベルを使ってファイルを分類および保護する方が効率的です。必要なコマンドレットが [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) と [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) の 2 つだけであり、単独で、または一緒に実行できるためです。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
+ラベルを使ってファイルを分類および保護する方が効率的です。必要なコマンドレットが [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) と [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) の 2 つだけであり、単独で、または一緒に実行できるためです。 詳細と例については、これら両方のコマンドレットのヘルプを使ってください。
 
 ただし、Azure Rights Management サービスに直接接続してファイルを保護または保護解除するには、通常、次に説明するように一連のコマンドレットを実行する必要があります。
 
@@ -303,7 +303,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 たとえば、
+フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -316,7 +316,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 たとえば、
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -326,7 +326,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 たとえば、
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -419,7 +419,7 @@ AzureInformationProtection モジュールをインストールするための�
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 たとえば、
+フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -432,7 +432,7 @@ AzureInformationProtection モジュールをインストールするための�
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 たとえば、 
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -442,7 +442,7 @@ AzureInformationProtection モジュールをインストールするための�
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 たとえば、
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -477,54 +477,50 @@ AzureInformationProtection モジュールをインストールするための�
 
 3. **[新しいアプリケーションの登録]** を選択し、Web アプリ/API アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
     
-    - [名前]: **AIPOnBehalfOf**
+    - 名前: **AIPOnBehalfOf**
     
     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
     
-    - [アプリケーションの種類]: **Web アプリ/API**
+    - アプリケーションの種類: **Web アプリ/API**
     
-    - [サインオン URL]: **http://localhost**
+    - サインオン URL: **http://localhost**
 
 4. 先ほど作成したアプリケーションを選択します (例: **AIPOnBehalfOf**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
     
-    この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppId` パラメーターに使用されます。
+    この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppId` パラメーターに使用されます。 後で参照できるように、これを貼り付けて保存します。
 
-5. **[設定]** ブレードで **[キー]** を選択します。 説明と期間 (1 年、2 年、または期限なし) を指定して、新しいキーを追加します。 次に **[保存]** を選択し、表示されている **[値]** の文字列をコピーします。 この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用するキーと同様に、保存した値を安全に格納すると同時に値へのアクセスを制限します。
+5. **[設定]** ブレードを再度開き、**[必要なアクセス許可]** を選択します。 **[必要なアクセス許可]** ブレードで、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
+
+6. **[設定]** ブレードを再び開き、**[キー]** を選択します。 説明と期間 (1 年、2 年、または期限なし) を指定して、新しいキーを追加します。 次に **[保存]** を選択し、表示されている **[値]** の文字列をコピーします。 この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用するキーと同様に、保存した値を安全に格納すると同時に値へのアクセスを制限します。
     
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppKey` パラメーターに使用されます。
 
-6. **[アプリの登録]** ブレードに戻り、**[新しいアプリケーションの登録]** を選択してネイティブ アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
+7. **[アプリの登録]** ブレードに戻り、**[新しいアプリケーションの登録]** を選択してネイティブ アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
     
-    - [名前]: **AIPClient**
+    - 名前: **AIPClient**
     
     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
     
-    - [アプリケーションの種類]: **ネイティブ**
+    - アプリケーションの種類: **ネイティブ**
     
-    - [サインオン URL]: **http://localhost**
+    - サインオン URL: **http://localhost**
 
-7. 先ほど作成したアプリケーションを選択します (例: **AIPClient**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。
+8. 先ほど作成したアプリケーションを選択します (例: **AIPClient**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。
     
-    この値は、Set-AIPAuthentication コマンドレットを実行するときの `NativeAppId` パラメーターに使用されます。
+    この値は、Set-AIPAuthentication コマンドレットを実行するときの `NativeAppId` パラメーターに使用されます。 後で参照できるように、これを貼り付けて保存します。
 
-8. **[設定]** ブレードで **[必要なアクセス許可]** を選択します。 
+9. **[設定]** ブレードで **[必要なアクセス許可]** を選択します。 
 
-9. **[必要なアクセス許可]** ブレードで **[追加]** をクリックし、**[API を選択します]** をクリックします。 検索ボックスに、「**AIPOnBehalfOf**」と入力します。 リスト ボックスでこの値を選択し、**[選択]** をクリックします。
+10. **[必要なアクセス許可]** ブレードで **[追加]** をクリックし、**[API を選択します]** をクリックします。 検索ボックスに、「**AIPOnBehalfOf**」と入力します。 リスト ボックスでこの値を選択し、**[選択]** をクリックします。
 
-10. **[アクセスの有効化]** ブレードで、**AIPOnBehalfOf** を選択して **[選択]** をクリックし、**[完了]** をクリックします。
+11. **[アクセスの有効化]** ブレードで、**AIPOnBehalfOf** を選択して **[選択]** をクリックし、**[完了]** をクリックします。
+
+12. **[必要なアクセス許可]** ブレードを再び開き、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
     
-    2 つのアプリの構成を完了し、パラメーターを指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。
+2 つのアプリの構成を完了し、パラメーターを指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。
 
-
-> [!TIP]
-> Set-AIPAuthentication が失敗し、前の手順を使用して新しいアプリを作成せずに既存のアプリを使用した場合、アプリに必要なアクセス許可をリセットしなければならない場合があります。 これは、Set-AIPAuthentication に新しいアプリを作成する手順に従ってから、アプリの設定を変更した場合にも当てはまる場合があります。
-> 
-> 必要なアクセス許可をリセットするには、両方のアプリで、次の構成手順を使用します: **[すべての設定]** > **[必要なアクセス許可]** > **[アクセス許可の付与]** の順に選択して、**[はい]** をクリックして確定します。
-> 
-> または、前の手順を使用して新しいアプリを作成します。
-
-## <a name="next-steps"></a>次のステップ
-PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 たとえば、 
+## <a name="next-steps"></a>次の手順
+PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 次に例を示します。 
 
     Get-Help Get-RMSTemplate -online
 
