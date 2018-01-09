@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 20ee380a48fa8fb303a5c71f43df17b8740b0cb4
+ms.sourcegitcommit: fc9a4487e2a0bc3481a814c7c308939868d52db9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -28,7 +28,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
-Azure Information Protection クライアントの一般提供 (GA) バージョンは、リリース日から 6 か月間サポートされます。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
+Azure Information Protection クライアントの各一般公開 (GA) バージョンは、後続の GA バージョンがリリースされた後も最長で 6 か月間はサポートされます。 サポートされていないクライアント バージョンはこのページに含まれていません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
 
 実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
 
@@ -125,7 +125,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     また、これらのアプリケーションに関して、SharePoint Online での Office 2016 と OneDrive for Business のパフォーマンスを改善するため、ファイルを保存するとき (自動保存、またはユーザーが保存を選択したとき) ではなくファイルを閉じるときに、推奨のラベル付けを自動で行います。 同様に、**[All documents and email must have a label]\(すべてのドキュメントと電子メール アドレスにラベルが必要\)** の設定が有効になっている場合は、ファイルを閉じるとき以外にラベルを選択するように求めるメッセージが表示されることはありません。 Word 2016 と Excel 2016 で、ユーザーが **[名前を付けて保存]** オプションを選択するときは例外です。 そのときに、これらが構成されている場合は、この操作によってラベル付け動作がトリガーされます。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 クライアントのインストールと使用の詳細: 
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f82eb8bc415b064793c1efd9b7b88795b1ec6ff2
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 5d57f1cc7728fef1b877fc25fce01bbc9c768b3c
+ms.sourcegitcommit: 24b35e27b3aa861ae8ba6bacab571b0071b058d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -57,8 +57,8 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |---------------------|----------------|---------------------------------|
 |表示者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br /> Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、返信、全員に返信、マクロの許可 [[1]](#footnote-1)<br /><br />注: 電子メールの場合、電子メールの返信が添付ファイルではなく電子メール メッセージとして受信されるように、このアクセス許可レベルではなく、レビュー担当者を利用します。 レビュー担当者は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも必要になります。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|
 |レビュー担当者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、返信、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)、マクロの許可[[1]](#footnote-1)|
-|共同作成者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[3]](#footnote-3)、印刷、返信 [[2]](#footnote-2)、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)|
-|共同所有者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[2]](#footnote-2)、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)、フルコントロール|
+|共同作成者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、マクロの許可、名前を付けて保存、エクスポート [[3]](#footnote-3)、印刷、返信 [[2]](#footnote-2)、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)|
+|共同所有者|Azure クラシック ポータル <br /><br />Azure ポータル<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[2]](#footnote-2)、全員に返信 [[2]](#footnote-2)、転送 [[2]](#footnote-2)、フル コントロール|
 
 ----
 
@@ -70,8 +70,7 @@ Windows 用 Azure Information Protection クライアントの場合、この権
 Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションには適用されません。
 
 ###### <a name="footnote-3"></a>脚注 3:
-Windows 用 Azure Information Protection クライアントには含まれていません。 このクライアントでは、エクスポートの使用権限に保護を削除する能力が含まれています。
-
+Azure Portal または Windows 用 Azure Information Protection クライアントには含まれていません。
 
 ## <a name="rights-included-in-the-default-templates"></a>既定のテンプレートに含まれる権限
 次の表は、既定のテンプレートを作成したときに含まれる使用権限を一覧表示しています。 使用権限は、[一般的な名前](#usage-rights-and-descriptions)で一覧表示されています。
@@ -114,7 +113,7 @@ Rights Management 発行者には常にドキュメントまたは電子メー�
 
 - Rights Management 発行者は取り消した後もドキュメントを開くことができます。 
 
-既定では、このアカウントはそのコンテンツの **Rights Management 所有者**でもあります。Rights Management 所有者であれば、ドキュメントまたは電子メールを作成したユーザーが保護を開始します。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 たとえば、
+既定では、このアカウントはそのコンテンツの **Rights Management 所有者**でもあります。Rights Management 所有者であれば、ドキュメントまたは電子メールを作成したユーザーが保護を開始します。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 次に例を示します。
 
 - 管理者がファイル共有のファイルを一括保護する: Azure AD の管理者アカウントでユーザーのドキュメントを保護します。
 
@@ -149,7 +148,7 @@ Azure Rights Management によって保護されたドキュメントまたは�
     PowerShell を使用してこの設定を構成するための詳細とガイダンスについては、各コマンドレットのヘルプを参照してください。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
 
 [Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)

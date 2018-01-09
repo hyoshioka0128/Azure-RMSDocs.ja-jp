@@ -4,7 +4,7 @@ description: "Azure クラシック ポータルで行っていた管理タス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 194c746298024ef294c8a6a6fa0361d21cbd869e
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
+ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -33,6 +33,8 @@ Azure Rights Management サービスの管理には Azure クラシック ポー
 
 次の情報を利用して、新しいポータルに短時間で移行できます。
 
+ただし、Office 365 US Government (Government Community Cloud) 用のサブスクリプションを保有しているお客様は現在、Azure Portal を使用することができないため [PowerShell](configure-templates-with-powershell.md) を使用してテンプレートを管理する必要があります。 
+
 |Azure クラシック ポータル|このタスクを Azure Portal で実行する方法
 |-----------|--------------------|
 |構成設定に初めてアクセスする|1.テナントの全体管理者またはセキュリティ管理者として Azure Portal にサインインします。<br /><br />2.ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。<br /><br />3.**[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選びます。 次に、**[Azure Information Protection]** ブレードで **[作成]** をクリックします。<br /><br />**[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[その他のサービス]** リストからサービスを選択できるようになります。
@@ -42,7 +44,7 @@ Azure Rights Management サービスの管理には Azure クラシック ポー
 |スコープ テンプレートを作成する|スコープ テンプレートを作成し、その範囲で保護を適用するラベルを作成します。 <br /><br />詳細については、「[スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法](configure-policy-scope.md)」を参照してください。
 |テンプレートをコピーする|Azure Portal では、テンプレートをコピーできません。 2 つのラベルに同じ保護設定を与える場合、ラベルごとにアクセス許可を設定する必要があります。 <br /><br />詳しくは、「[Rights Management による保護にラベルを構成するには](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection)」を参照してください。
 |テンプレートを削除する|テンプレートを削除するとデータにアクセスできなくなることがあります。そのため、Azure Portal ではテンプレートを削除できないようになっています。 ただし、ラベルを削除し、PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) コマンドレットを実行すれば、テンプレートを削除できます。 <br /><br />詳細については、「[Azure Information Protection のラベルを削除または順序変更する方法](configure-policy-delete-reorder.md)」を参照してください。
-|複数言語サポート|**[管理]** メニュー選択から、**[言語 (プレビュー)]** を選択すると、テンプレート名と説明が含まれるカスタマイズ可能なフィールドがエクスポートされます。 文字列を変換し、ポータルにインポートします。 <br /><br />詳細については、「[Azure Information Protection で他の言語のラベルとテンプレートを構成する方法](configure-policy-languages.md)」を参照してください。
+|複数言語サポート|**[管理]** メニュー選択から、**[言語]** を選択すると、テンプレート名と説明が含まれるカスタマイズ可能なフィールドがエクスポートされます。 文字列を変換し、ポータルにインポートします。 <br /><br />詳細については、「[Azure Information Protection で他の言語のラベルとテンプレートを構成する方法](configure-policy-languages.md)」を参照してください。
 |Rights Management Web レポート|PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) コマンドレットを使用し、Azure Rights Management サービスの使用状況ログをダウンロードします。 そのデータを利用し、カスタマイズされたレポートを作成できます。 <br /><br />詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。<br /><br />ヒント: [Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection)で、Azure Information Protection のための新しい集中レポート ソリューションの告知にご注目ください。 
 |Rights Management サービスを有効/無効化する|**[管理]** メニュー オプションから、**[RMS の設定]** または **[Protection activation]\(保護のアクティブ化\)** を選択します。 このオプションの名前は、変更される予定です。<br /><br />詳細については、「[Azure Portal から Azure Rights Management をアクティブ化する方法](activate-azure.md)」を参照してください。
 
