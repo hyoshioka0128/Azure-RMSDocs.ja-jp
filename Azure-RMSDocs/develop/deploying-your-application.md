@@ -2,8 +2,8 @@
 title: "アプリケーションのデプロイ - AIP"
 description: "このトピックでは、アプリケーションのデプロイの概要について順を追って説明します。"
 keywords: "デプロイ, RMS, AIP"
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6d098ee566d426108853d9375b4845a5e92299b5
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 9275bce1e56107648905875c19b2e4e78a05afe6
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -37,7 +37,7 @@ AIP/RMS を使用して開発したアプリケーションをリリースする
 - 要求者の氏名
 - 要求者の電子メール アドレス
 
-### <a name="next-steps"></a>次のステップ
+### <a name="next-steps"></a>次の手順
 IPIA 申請が受信されると、(Word 文書形式の) フォームがお客様に送信されます。
 IPIA の使用条件を確認し、次の情報をフォームに入力して **IPIA@microsoft.com** に返送します。
 - 会社の正式名称

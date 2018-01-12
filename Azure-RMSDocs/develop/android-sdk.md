@@ -2,8 +2,8 @@
 title: "Android のセットアップ | Azure RMS"
 description: "Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。"
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7a575b869adec5da1b8a61eed772256fe7469551
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: cf81959a7ef4f20ab550dcec1c295e5045f321f3
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="android-setup"></a>Android のセットアップ
 
@@ -26,7 +26,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
--   [必要条件](#prerequisites)
+-   [前提条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
@@ -126,15 +126,20 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   マニフェストを検証するには、テキスト エディターのビューでマニフェストを表示します。 次の行が表示されていることを確認してください。
 
-
-    <uses-sdk      android:minSdkVersion="15"      android:targetSdkVersion="19"/> <uses-permission android:name="android.permission.INTERNET"/> <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <uses-permission/>
-
+   ```
+    <uses-sdk
+         android:minSdkVersion="15"
+         android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission/>
+   ```
 
 **注**  SDK では *android.support.v4* が使用されます。
 
 -   新しい独自の Android アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 [作業開始](get-started.md)
 

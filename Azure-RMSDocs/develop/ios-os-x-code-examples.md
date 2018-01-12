@@ -2,8 +2,8 @@
 title: "iOS/OS X のコード例 | Azure RMS"
 description: "このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。"
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: cd0d599ccd1e470e5e94904d04d58c32511704c7
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a610bd7983ffcf5e56cad4038375ed6c9b3f5e0a
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
@@ -215,7 +215,7 @@ ms.lasthandoff: 06/30/2017
 ### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 
--   **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。
+-   **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
 
     **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](https://msdn.microsoft.com/en-us/library/dn790811.aspx) と [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) からのユーザー入力を使用して作成されます。
 

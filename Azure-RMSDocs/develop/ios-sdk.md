@@ -2,8 +2,8 @@
 title: "iOS および OS X のセットアップ |Azure RMS"
 description: "iOS および OS X アプリケーションは RMS SDK 4.2 を使用して、AAD RM リソースを使用することでそのアプリケーション内で統合情報保護を有効にできます。"
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed077a6d908ae5d9b6b3b187cee9c63f47dc826d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f2cb573f8c347215f130fd76321886ade2877a16
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 
@@ -29,7 +29,7 @@ iOS および OS X アプリケーションは Microsoft Rights Management SDK 4
 **注**  この SDK は iPod Touch をサポートしていません。
 
 
--   [必要条件](#prerequisites)
+-   [前提条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
@@ -100,7 +100,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 * [作業開始](get-started.md)
 
