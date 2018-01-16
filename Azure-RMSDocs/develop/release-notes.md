@@ -1,23 +1,9 @@
+# <a name="required-metadata"></a>必須のメタデータ
+
+タイトル: 新機能とリリース ノートの説明: 今度のバージョンと前のバージョンの、重要な変更と機能について説明します。
+作成者: lleonard-msft ms.author: alleonar manager: mbaldwin ms.date: 09/25/2017 ms.topic: article ms.service: information-protection ms.technology: techgroup-identity ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af audience: developer ms.reviewer: kartikk ms.suite: ems
 ---
-title: "新機能とリリース ノート"
-description: "重要な変更点、今度のバージョンの機能、前のバージョンの機能について説明します。"
-author: bruceperlerms
-ms.author: bruceper
-manager: mbaldwin
-ms.date: 09/25/2017
-ms.topic: article
-ms.service: information-protection
-ms.technology: techgroup-identity
-ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-audience: developer
-ms.reviewer: kartikk
-ms.suite: ems
-ms.openlocfilehash: 6587685e3bd40d696ce24a9aa0ed80d1f6f43f55
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2017
----
+
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
 ## <a name="whats-new"></a>新機能
@@ -224,7 +210,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
 **A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから を呼び出す必要があります。
 
-**iOS**
+**Android**
 
 **Q**: SDK の開発はどのプラットフォームで検証されましたか。
 

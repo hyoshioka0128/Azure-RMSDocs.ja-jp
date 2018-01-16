@@ -4,7 +4,7 @@ description: "あらかじめ Azure Information Protection クライアントが
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2eb82d81945793eb0b29d05ff8c6bd995481faf
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: aa222d484e67d5f1e08ac08b3839100de8390e4e
+ms.sourcegitcommit: d4c63df8436b2e490f196585fcb78afe8c2e8de8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>ユーザー ガイド: Rights Management で保護されたファイルを表示および使用する
 
@@ -31,11 +31,11 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 > クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。
 > 
-> - Azure Information Protection
+>-Azure Information Protection
 > 
-> - Azure Rights Management
+>-Azure Rights Management
 > 
-> - Active Directory Rights Management サービス 
+>-Active Directory Rights Management サービス 
 > 
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="prompts-for-authentication"></a>認証のプロンプト
 
-保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、ユーザー名とパスワードがキャッシュに格納されていて、資格情報の入力を求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
+保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、これらの資格情報がキャッシュに格納されていて、サインインを求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 
 組織がユーザーのためにクラウドベースのアカウントを用意しておらず (Office 365 または Azure)、また、そのオンプレミス版 (AD RMS) も利用していない場合、次の 2 つの選択肢があります。
 
@@ -75,7 +75,9 @@ ms.lasthandoff: 10/24/2017
 5. 追加の保護されたファイルを開く場合は、**[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
 
 > [!TIP]
-> 保護されているファイルが開かない場合、Azure Information Protection クライアントで **[保護]**、**[ヘルプとフィードバック]** の順に選択して **[診断の実行]** をクリックし、お使いのコンピューターでドキュメントを開けなくしている原因を探すことができます。
+> 保護されたファイルが開かず、Azure Information Protection クライアントが完全にインストールされている場合は、**[設定のリセット]** オプションを試してください。 このオプションにアクセスするには、Office アプリから **[保護]** ボタン > **[ヘルプとフィードバック]**  >  **[設定のリセット]** の順に選択します。 
+> 
+> [[設定のリセット] オプションの詳細](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
