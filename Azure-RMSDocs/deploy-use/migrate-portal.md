@@ -4,7 +4,7 @@ description: "Azure クラシック ポータルで行っていた管理タス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
-ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
+ms.openlocfilehash: 367189865266e85df967c398b17153d970241e98
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -24,16 +24,16 @@ ms.lasthandoff: 01/03/2018
 
 Azure Rights Management サービスの管理には Azure クラシック ポータルが利用されていました。Azure Portal への移行でサポートが必要ですか? 
 
-> [!NOTE]
-> Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃止される予定です。 この日付以降、このポータルを使用しようとすると、新しい Azure Portal に自動的にリダイレクトされます。 
-> 
-> 詳細については、ブログ投稿でのお知らせ「[Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/)」 (Azure AD 管理は未来に向かいます: Azure クラシック ポータルは使用停止に) を参照してください。 元々の廃止日の一時的な延長については、「[Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/)」 (Azure AD クラシック ポータル エクスペリエンスの廃止と条件付きアクセス ポリシーの移行に関する更新) を参照してください。
+Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃止されました。 この日付以降は、クラシック ポータルから Azure Rights Management サービスとカスタム テンプレートを管理することができません。 クラシック ポータルにアクセスしようとすると、新しい Azure Portal に移動するためのリンクが表示されます。 
+
+クラシック ポータルの廃止については、ブログ投稿でのお知らせ「[Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/)」 (Azure AD 管理は未来に向かいます: Azure クラシック ポータルは使用停止に) を参照してください。 元々の廃止日の一時的な延長については、「[Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/)」 (Azure AD クラシック ポータル エクスペリエンスの廃止と条件付きアクセス ポリシーの移行に関する更新) を参照してください。
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>使い慣れた管理タスクの実行方法
 
-次の情報を利用して、新しいポータルに短時間で移行できます。
+次の情報を利用して、最新のポータルに短時間で移行できます。
 
 ただし、Office 365 US Government (Government Community Cloud) 用のサブスクリプションを保有しているお客様は現在、Azure Portal を使用することができないため [PowerShell](configure-templates-with-powershell.md) を使用してテンプレートを管理する必要があります。 
+
 
 |Azure クラシック ポータル|このタスクを Azure Portal で実行する方法
 |-----------|--------------------|

@@ -4,7 +4,7 @@ description: "Azure Information Protection のデータ保護サービス、Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b23fe95721c442529237ea72d30b3df490ad02dc
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: d2f88d35550b47a4f73e87eeca9ecd6309a3c73e
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -70,7 +70,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 注意事項:
 
-- Office 365 のグローバル管理者と Azure AD のグローバル管理者のみが、Office 365 管理センターまたは Azure クラシック ポータルを使用して Azure RMS を構成できます。 Azure Information Protection に Azure Portal を利用する場合、セキュリティ管理者としてサインインすることもできます。
+- Office 365 のグローバル管理者と Azure AD のグローバル管理者のみが、Office 365 管理センターを使用して Azure RMS を構成できます。 Azure Information Protection に Azure Portal を利用する場合、グローバル管理者またはセキュリティ管理者としてサインインすることができます。
 
 - Azure RMS のグローバル管理者ロールを割り当てられたユーザーは、Azure RMS の PowerShell コマンドを使用して Azure RMS を構成する必要があります。 特定のタスクを実行する正しいコマンドレットについては、「[Windows PowerShell を使用した Azure Rights Management の管理](../deploy-use/administer-powershell.md)」を参照してください。
 

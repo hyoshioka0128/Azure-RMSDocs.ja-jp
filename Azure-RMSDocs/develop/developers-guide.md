@@ -1,8 +1,8 @@
 ---
 title: "Azure Information Protection 開発者ガイド"
 description: "開発者は Azure Information Protection を使用して、すべての種類のファイルを保護および管理することができます。"
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
-ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
+ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -98,15 +98,9 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [方法: 組み込み権限の使用 (ユーザー)](built-in-rights-usage-restriction-reference.md)
 - [方法: エラーとパフォーマンスのログを有効にする (ユーザー)](enabling-logging.md)
 
-## <a name="videos"></a>ビデオ
+## <a name="introduction-and-datasheets"></a>概要とデータシート
 
 [Azure Information Protection の概要](https://www.microsoft.com/cloud-platform/azure-information-protection)
-
-これらは、Microsoft 2016 Ignite カンファレンスのビデオです。
-
-- [組織内の電子メールのセキュリティ](https://myignite.microsoft.com/videos/2787)
-- [データを安全に保護し共有するために包括的な ID ベースのソリューションを採用する](https://myignite.microsoft.com/videos/2784)
-- [分類、ラベル付け、保護によって永続的なデータ保護が実現されるしくみを説明する](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>その他のリソース
 

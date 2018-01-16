@@ -4,7 +4,7 @@ description: "Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,20 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
-ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
+ms.openlocfilehash: f69a163566a9654ee6286c4bf9ca4d018e8f8db5
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
 >*適用対象: Azure Information Protection*
 
 >[!NOTE]
->これは、Azure クラシック ポータルのカスタム テンプレート構成の後継にあたる機能です。 マッピングの概要は「[Azure クラシック ポータルで行っていたタスク](migrate-portal.md)」でご覧いただけます。
->
->Azure クラシック ポータルでも引き続きテンプレートを作成し、管理できますが、Azure クラシック ポータルと Azure Portal から同じテンプレートを管理する行為は推奨されません。 テンプレートの構成方法はポータルによって異なります。異なるポータルで同じテンプレートを構成すると、構成の信頼性が失われる可能性があります。
+>これは、Azure クラシック ポータルのカスタム テンプレート構成の後継にあたる機能です。 クラシック ポータルは廃止されたため、Azure Portal を使用する必要があります。 マッピングの概要は「[Azure クラシック ポータルで行っていたタスク](migrate-portal.md)」でご覧いただけます。
 
 
 Rights Management テンプレートは Azure Information Protection ポリシーに統合されました。 
@@ -36,11 +34,11 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 **保護のみを含むサブスクリプションの場合 (Azure Rights Management サービスを含む Office 365 サブスクリプション)**
 
-- テナントの Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードの **[保護テンプレート]** セクションに表示されます。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、テンプレートには反映されず、構成することはできません。 
+- テナントの Rights Management テンプレートは、**[Azure Information Protection - グローバル ポリシー]** ブレードの **[保護テンプレート]** セクションに表示されます。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、これらの設定はテンプレートには反映されず、構成することはできません。 
 
 ## <a name="default-templates"></a>既定のテンプレート
 
-Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、組織内で権限を与えられたユーザーにアクセスを制限する既定のテンプレートが 2 つテナントに自動的に作成されます。 この 2 つのテンプレートは、作成されると、ドキュメント「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md#rights-included-in-the-default-templates)」に一覧表示されているアクセス許可を使用します。
+Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、既定のテンプレートが 2 つテナントに自動的に作成されます。 これらのテンプレートは、組織内の許可されたユーザーにアクセスを制限します。 これらのテンプレートは、作成されると、ドキュメント「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md#rights-included-in-the-default-templates)」に一覧表示されているアクセス許可を使用します。
 
 さらに、テンプレートは、7 日間オフライン アクセスを許可し、有効期限がないように構成されます。
 
@@ -85,7 +83,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
     - **マクロの許可** (共通名) が自動的に追加されます。 この使用権限は Office アプリの Azure Information Protection バーに必要です。
     
 
-- **[ラベル]** ブレードで、**[公開済み]** の設定は **[有効]** が **[オン]**、**[アーカイブ済み]** の設定は **[有効]** が **[オフ]** と表示されます。 維持するがユーザーには表示しないテンプレートの場合、**[有効]**: **[オフ]** に設定します。
+- **[ラベル]** ブレードで、**[公開済み]** の設定は **[有効]** が **[オン]**、**[アーカイブ済み]** の設定は **[有効]** が **[オフ]** と表示されます。 維持するがユーザーまたはサービスには表示しないテンプレートの場合、これらのテンプレートを **[有効]**: **[オフ]** に設定します。
 
 - Azure ポータルでは、テンプレートをコピーまたは削除することはできません。 テンプレートがラベルに変換されると、テンプレートの使用を停止するようにラベルを構成できます。**[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** オプションに **[構成されていません]** を選択します。 あるいは、ラベルを削除できます。 ただし、いずれのシナリオでもテンプレートは削除されず、アーカイブされた状態で残ります。
     
@@ -102,6 +100,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
 1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。     
+    
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
 2. 構成するテンプレートがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
@@ -127,7 +126,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-convert-templates-to-labels"></a>テンプレートをラベルに変換するには
 
-分類、ラベル付け、保護を含むサブスクリプションの場合は、テンプレートをラベルに変換できます。 これを行った場合、元のテンプレートは保持されますが、Azure Portal では新しいラベルに含まれた形で元のテンプレートが表示されます。
+分類、ラベル付け、保護を含むサブスクリプションの場合は、テンプレートをラベルに変換できます。 テンプレートの変換を行った場合、元のテンプレートは保持されますが、Azure Portal では新しいラベルに含まれた形で元のテンプレートが表示されます。
 
 たとえば、マーケティング グループに使用権限を付与する**マーケティング**という名前のラベルに変換すると、Azure Portal では、**マーケティング**という名前の、同一の保護設定のラベルが表示されます。 新しく作成したこのラベルの保護設定を変更する場合は、テンプレートで変更します。このテンプレートを使用するすべてのユーザーまたはサービスには、次にテンプレートが更新されるときに、新しい保護設定が適用されます。 
 
@@ -149,7 +148,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-create-a-new-template"></a>新しいテンプレートを作成するには
 
-**Azure RMS** または **Azure (クラウド キー)** の保護設定で新しいラベルを作成すると、その処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
+**Azure RMS** または **Azure (クラウド キー)** の保護設定で新しいラベルを作成すると、この処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
 
 1. 新しいテンプレートがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
     
@@ -170,7 +169,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 6. これらのテンプレートをユーザーのアプリケーションとサービスで使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection ポリシーに対するすべての変更と同様に、Azure Information Protection クライアントを実行するコンピューターでこれらのテンプレートのダウンロードを完了するには、最大 15 分かかります。 コンピューターとサービスにテンプレートをダウンロードおよび更新する方法の詳細については、[ユーザー用とサービス用のテンプレートの更新](refresh-templates.md)に関するページをご覧ください。
 
