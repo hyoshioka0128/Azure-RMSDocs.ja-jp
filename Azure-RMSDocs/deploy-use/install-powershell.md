@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5dae84eea9e67be75530d69b6124b97c7c29f8a3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0deb1b47036a4439f393bf7351c5d149a8e85559
+ms.sourcegitcommit: 152b4855e23f443c04ac27fedfdc1dcc9fda8949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="installing-windows-powershell-for-azure-rights-management"></a>Azure Rights Management 用 Windows PowerShell をインストールする
 
@@ -32,26 +32,26 @@ ms.lasthandoff: 06/30/2017
 |要件|詳細情報|
 |---------------|--------------------|
 |[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 管理モジュールをサポートする Windows のバージョン|「 **Azure Rights Management Administration Tool のダウンロード ページ** 」の [ [システム要件](http://go.microsoft.com/fwlink/?LinkId=257721)] セクションで、サポートされるオペレーティング システムの一覧を確認します。|
-|Windows PowerShell の最小バージョン:2.0<br /><br /> |既定では、ほとんどの Windows オペレーティング システムと共にバージョン 2.0 以上の Windows PowerShell がインストールされます。 このサポートされる最低バージョンをインストールする必要がある場合は、「[Windows PowerShell 2.0 のインストール](https://msdn.microsoft.com/library/ff637750.aspx)」を参照して下さい。<br /><br />ヒント: PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> この最小のバージョンがある場合は、Rights Management 管理モジュールのコマンドレットを使用する前に `Import-Module AADRM` を実行して、PowerShell セッションにモジュールを手動で読み込む必要があります。 Windows PowerShell v3 以降がある場合、モジュールは自動的に読み込まれ、この追加コマンドの入力は必要ありません。|
+|Windows PowerShell の最小バージョン:2.0<br /><br /> |既定では、ほとんどの Windows オペレーティング システムと共にバージョン 2.0 以上の Windows PowerShell がインストールされます。 このサポートされる最低バージョンをインストールする必要がある場合は、「[Windows PowerShell 2.0 のインストール](https://msdn.microsoft.com/library/ff637750.aspx)」を参照して下さい。<br /><br />ヒント: PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> この最低バージョンがある場合は、Rights Management 管理モジュールのコマンドレットを使用する前に `Import-Module AADRM` を実行して、PowerShell セッションにモジュールを手動で読み込む必要があります。 Windows PowerShell v3 以降がある場合、モジュールは自動的に読み込まれ、この追加コマンドの入力は必要ありません。|
 |Microsoft .NET Framework の最小バージョン: 4.5<br /><br />注: 最近のオペレーティング システムには、このバージョンの Microsoft .NET Framework が付属しています。このため、手動でインストールする必要があるのは、クライアントのオペレーティング システムが Windows 8.0 よりも前のバージョンの場合か、サーバーのオペレーティング システムが Windows Server 2012 よりも前のバージョンの場合に限ります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、[!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] 管理モジュールで使用されるクラスの一部で必要になります。|
 
 > [!NOTE]
 > Rights Management 管理モジュールのバージョン 2.5.0.0 以降、Microsoft Online Services サインイン アシスタントは必要なくなりました。
 > 
-> Rights Management 管理モジュールの以前のバージョンがインストールされている場合は、最新バージョンをインストールする前に、[**プログラムと機能**] を使用して **Windows Azure AD Rights Management の管理**をアンインストールしてください。
+> Rights Management 管理モジュールの以前のバージョンがインストールされている場合は、最新バージョンをインストールする前に、**[プログラムと機能]** を使用して **Windows Azure AD Rights Management の管理**をアンインストールしてください。
 
 
 ## <a name="how-to-install-the-rights-management-administration-module"></a>Rights Management 管理モジュールのインストール方法
 
-1.  Microsoft ダウンロード センターに移動し、[Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721) をダウンロードします。これには、Windows PowerShell 用の [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 管理モジュールが含まれています。
+1. Microsoft ダウンロード センターに移動し、[Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721) を探します。これには、Windows PowerShell 用の [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 管理モジュールが含まれています。
 
-2.  [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] インストーラー ファイルをダウンロードして保存したローカル フォルダーで、プラットフォーム用にダウンロードした実行可能ファイル (WindowsAzureADRightsManagementAdministration_x64 または WindowsAzureADRightsManagementAdministration_x86.exe) をダブルクリックし、Azure AD Rights Management Administration セットアップ ウィザードを開始します。
+2. [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] インストーラー ファイル **WindowsAzureADRightsManagementAdministration_x64** をダウンロードして保存します。 次に、このファイルをダブルクリックして、Azure AD Rights Management 管理セットアップ ウィザードを開始します。
 
 3.  ウィザードを完了します。
 
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 用の Windows PowerShell がインストールされます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 Windows PowerShell セッションを開始し、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。
 
 ```
@@ -66,7 +66,7 @@ Windows PowerShell セッションを開始し、インストールされてい�
 Get-Command -Module AADRM
 ```
 
-`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 たとえば、
+`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 次に例を示します。
 
 ```
 Get-Help Connect-AadrmService -online

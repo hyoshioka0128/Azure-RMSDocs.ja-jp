@@ -4,7 +4,7 @@ description: "管理者が企業ネットワークに Windows 用 Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d4ad7c3419d3ad83389baece95c1e30c32f06da6
-ms.sourcegitcommit: 7b90b3692bbef6fafab41c0f8c56bd4350985f37
+ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/05/2018
 
 - Office バージョン 16.0.8628.2010 以降 (クイック実行) の場合: モニターのレガシ サポートを有効にする
     
-    これらの Office バージョン用の Office アプリケーションの外部に Azure Information Protection バーが表示されるのを回避するには、モニターのレガシ サポートを有効にします。 Office アプリケーションを構成するには: **[ファイル]** > **[全般]** > **[ユーザー インターフェイスのオプション]** の順に選択します。
+    これらの Office バージョン用の Office アプリケーションの外部に Azure Information Protection バーが表示されるのを回避するには、モニターのレガシ サポートを有効にします。 Office アプリケーションを構成するには: **[ファイル]** > **[オプション]** > **[全般]** > **[ユーザー インターフェイスのオプション]** の順に選択します。
     
     - オプション **[When using multiple displays]\(マルチ ディスプレイを使用する場合\)** が **[Optimize for best appearance]\(最適な外観の最適化\)** に設定されている場合は、そこで **[互換性の最適化 (アプリケーションの再起動が必要)]** を選択します。 
         
@@ -191,7 +191,7 @@ Windows Update を使用して Azure Information Protection クライアント�
     
     |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
-    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55073)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55058)<br /><br /> バージョン: 1.0|インストール|
+    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
     |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
     |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
     |Office 2010|Windows 8.1 と Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
