@@ -14,35 +14,38 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 95c7fd5f23efec8203f6e7c5a91f0c786defd3c7
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: f23f8d1d4deddb1a0ee70a755cf94637396337c0
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="android-code-examples"></a>Android のコード例
 
-このトピックでは、Android バージョンの RMS SDK の重要なコード要素について説明します。
+この記事では、Android バージョンの RMS SDK の要素をコーディングする方法を示します。
 
-**注** 以下のコード例と説明では、クライアント プロセスを参照するために MSIPC (Microsoft Information Protection and Control) という用語を使用します。
+**注**: この記事では、用語 _MSIPC_ (Microsoft Information Protection and Control) は、クライアント プロセスを指します。
 
 
 ## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
 
-この SDK を理解する上で重要な開発シナリオを表す大規模なサンプル アプリケーションのコード例を次に示します。 これらのコード例では、保護ファイルと呼ばれる Microsoft Protected File 形式の使用例、カスタム保護ファイル形式の使用例、およびカスタムの UI コントロールの使用例を示します。
+この SDK を理解する上で重要な開発シナリオを表す大規模なサンプル アプリケーションのコード例を次に示します。 これらは、以下の使用方法を示します。
 
+- Microsoft Protected File 形式。_保護されたファイル_とも呼ばれます。
+- カスタム保護ファイル形式。
+- カスタム ユーザー インターフェイス (UI) コントロール
 
-
-サンプル アプリケーション *MSIPCSampleApp* は、この Android オペレーティング システム用の SDK で使用可能です。 このサンプル アプリケーションにアクセスするには、GitHub の [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) を参照してください。
+*MSIPCSampleApp* サンプル アプリケーションは、この Android オペレーティング システム用の SDK で使用可能です。 詳細については、[rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) に関するページをご覧ください。
 
 ### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ: RMS 保護ファイルを使用する
 
--   **手順 1**. [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) を作成します。
+- **手順 1**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) を作成します。
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化し、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用してサービス認証を実装するその作成メソッドを呼び出してトークンを取得します。それには、パラメーター *mRmsAuthCallback* として **AuthenticationRequestCallback** インスタンスを MSIPC API に渡します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
+    **説明**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
 
+    ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
         {
             CreationCallback<ProtectedFileInputStream> protectedFileInputStreamCreationCallback =
@@ -100,15 +103,16 @@ ms.lasthandoff: 01/11/2018
                 …
             }
         }
+    ```
 
-
--   **手順 2**. Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
+- **手順 2**: Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: この手順では、例の認証パラメーターで [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を実装するために ADAL を使用します。 ADAL の使用の詳細については、「[Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx)」 (Azure AD 認証ライブラリ (ADAL)) を参照してください。
+    **説明**: この手順では、ADAL を使用して、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) に関するページをご覧ください。
 
 
+    ``` java
         class MsipcAuthenticationCallback implements AuthenticationRequestCallback
         {
 
@@ -180,13 +184,13 @@ ms.lasthandoff: 01/11/2018
 
                             );
                       }
+    ```
 
-
--   **手順 3**. [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
+- **手順 3**. [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
 
     **ソース**: *TextEditorFragment.java*
 
-
+    ``` java
          //check if user has edit rights and apply enforcements
                 if (!mUserPolicy.accessCheck(EditableDocumentRights.Edit))
                 {
@@ -195,19 +199,24 @@ ms.lasthandoff: 01/11/2018
                     mTextEditor.setEnabled(false);
                     …
                 }
+    ```
 
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
 このシナリオは、はじめにテンプレートの一覧を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
--   **手順 1**. [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) オブジェクトを使用してテンプレートの一覧を取得します。
+- **手順 1**. [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) オブジェクトを使用してテンプレートの一覧を取得します。
 
     **ソース**: *MsipcTaskFragment.java*
 
-
-
-    CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>() { @Override public Context getContext() { …
+    ``` java
+    CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>()
+      {
+          @Override
+          public Context getContext()
+          {
+              …
           }
 
           @Override
@@ -227,18 +236,29 @@ ms.lasthandoff: 01/11/2018
           {
              …
           }
-      }; try { …
-          mIAsyncControl = TemplateDescriptor.getTemplates(emailId, mRmsAuthCallback, getTemplatesCreationCallback); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) { …
+      };
+      try
+      {
+              …
+          mIAsyncControl = TemplateDescriptor.getTemplates(emailId, mRmsAuthCallback, getTemplatesCreationCallback);
       }
+      catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
+      {
+              …
+      }
+    ```
 
-
--    **手順 2**. 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 2**. 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
-
-
-      CreationCallback<UserPolicy> userPolicyCreationCallback = new CreationCallback<UserPolicy>() { @Override public Context getContext() { …
+    ``` java
+      CreationCallback<UserPolicy> userPolicyCreationCallback = new CreationCallback<UserPolicy>()
+      {
+          @Override
+          public Context getContext()
+          {
+              …
           }
 
           @Override
@@ -258,19 +278,34 @@ ms.lasthandoff: 01/11/2018
           {
               …
           }
-      }; try { …
-          mIAsyncControl = UserPolicy.create((TemplateDescriptor)selectedDescriptor, mEmailId, mRmsAuthCallback, UserPolicyCreationFlags.NONE, userPolicyCreationCallback); …
-      } catch (InvalidParameterException e) { …
+      };
+      try
+      {
+           …
+          mIAsyncControl = UserPolicy.create((TemplateDescriptor)selectedDescriptor, mEmailId, mRmsAuthCallback,
+                            UserPolicyCreationFlags.NONE, userPolicyCreationCallback);
+           …
       }
+      catch (InvalidParameterException e)
+      {
+              …
+      }
+    ```
 
-
--    **手順 3**. [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
+-  **手順 3**. [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
 
     **ソース**: *MsipcTaskFragment.java*
 
-
-    private void createPTxt(final byte[] contentToProtect) { …
-            CreationCallback<ProtectedFileOutputStream> protectedFileOutputStreamCreationCallback = new CreationCallback<ProtectedFileOutputStream>() { @Override public Context getContext() { …
+    ``` java
+    private void createPTxt(final byte[] contentToProtect)
+        {
+             …
+            CreationCallback<ProtectedFileOutputStream> protectedFileOutputStreamCreationCallback = new CreationCallback<ProtectedFileOutputStream>()
+            {
+                @Override
+                public Context getContext()
+                {
+                 …
                 }
 
                 @Override
@@ -318,17 +353,22 @@ ms.lasthandoff: 01/11/2018
                  …
             }
         }
-
+    ```
 
 
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
--   **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
-
-    CreationCallback<UserPolicy> userPolicyCreationCallbackFromSerializedContentPolicy = new CreationCallback<UserPolicy>() { @Override public void onSuccess(UserPolicy userPolicy) { …
+    ``` java
+    CreationCallback<UserPolicy> userPolicyCreationCallbackFromSerializedContentPolicy = new CreationCallback<UserPolicy>()
+            {
+                @Override
+                public void onSuccess(UserPolicy userPolicy)
+                {
+                  …
                 }
 
                 @Override
@@ -351,27 +391,44 @@ ms.lasthandoff: 01/11/2018
             };
 
 
-    try {   ...
+    try
+    {
+      ...
 
       // Read the serializedContentPolicyLength from the inputStream.
       long serializedContentPolicyLength = readUnsignedInt(inputStream);
 
       // Read the PL bytes from the input stream using the PL size.
-      byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength]; inputStream.read(serializedContentPolicy);
+      byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength];
+      inputStream.read(serializedContentPolicy);
 
       ...
 
-      UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,           userPolicyCreationCallbackFromSerializedContentPolicy); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) {   ... } catch (IOException e) {   ... }
+      UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
+              userPolicyCreationCallbackFromSerializedContentPolicy);
+    }
+    catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
+    {
+      ...
+    }
+    catch (IOException e)
+    {
+      ...
+    }
+    ```
 
 
-
--    **手順 2**. **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
+- **手順 2**. **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
-
-
-      CreationCallback<CustomProtectedInputStream> customProtectedInputStreamCreationCallback = new CreationCallback<CustomProtectedInputStream>() { @Override public Context getContext() { …
+    ``` java
+      CreationCallback<CustomProtectedInputStream> customProtectedInputStreamCreationCallback = new CreationCallback<CustomProtectedInputStream>()
+      {
+         @Override
+         public Context getContext()
+         {
+             …
          }
 
          @Override
@@ -409,64 +466,110 @@ ms.lasthandoff: 01/11/2018
          }
      };
 
-    try {  ...
+    try
+    {
+      ...
 
       // Retrieve the encrypted content size.
       long encryptedContentLength = readUnsignedInt(inputStream);
 
       updateTaskStatus(new TaskStatus(TaskState.Starting, "Consuming content", true));
 
-      CustomProtectedInputStream.create(userPolicy, inputStream,                                 encryptedContentLength,                                 customProtectedInputStreamCreationCallback); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) {  ... } catch (IOException e) {  ... }
+      CustomProtectedInputStream.create(userPolicy, inputStream,
+                                     encryptedContentLength,
+                                     customProtectedInputStreamCreationCallback);
+    }
+    catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
+    {
+      ...
+    }
+    catch (IOException e)
+    {
+      ...
+    }
+    ```
 
-
--    **手順 3**. [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
+- **手順 3**. [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
 
     **ソース**: *MsipcTaskFragment.java*
 
-
-    @Override public void onSuccess(CustomProtectedInputStream customProtectedInputStream) {  mUserPolicy = customProtectedInputStream.getUserPolicy();  ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+    ``` java
+    @Override
+    public void onSuccess(CustomProtectedInputStream customProtectedInputStream)
+    {
+      mUserPolicy = customProtectedInputStream.getUserPolicy();
+      ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
       int nRead;                      
       byte[] dataChunk = new byte[16384];
 
-      try  {    while ((nRead = customProtectedInputStream.read(dataChunk, 0,                                                        dataChunk.length)) != -1)    {       buffer.write(dataChunk, 0, nRead);    }
+      try
+      {
+        while ((nRead = customProtectedInputStream.read(dataChunk, 0,
+                                                            dataChunk.length)) != -1)
+        {
+           buffer.write(dataChunk, 0, nRead);
+        }
 
-        buffer.flush();    mDecryptedContent = new String(buffer.toByteArray(), Charset.forName("UTF-8"));
+        buffer.flush();
+        mDecryptedContent = new String(buffer.toByteArray(), Charset.forName("UTF-8"));
 
-        buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
+        buffer.close();
+        customProtectedInputStream.close();
+      }
+      catch (IOException e)
+      {
+        ...
+      }
+    }
+    ```
 
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>シナリオ: カスタム ポリシーを使用してカスタム保護ファイルを作成する
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
-
--   **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
+- **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
 
     **ソース**: *MsipcTaskFragment.java*
 
     **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) と [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) からのユーザー入力を使用して作成されます。
 
+    ``` java
+      // create userRights list
+      UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),
+        Arrays.asList( CommonRights.View, EditableDocumentRights.Print));
+      ArrayList<UserRights> usersRigthsList = new ArrayList<UserRights>();
+      usersRigthsList.add(userRights);
+
+      // Create PolicyDescriptor using userRights list
+      PolicyDescriptor policyDescriptor = PolicyDescriptor.createPolicyDescriptorFromUserRights(
+                                                             usersRigthsList);
+      policyDescriptor.setOfflineCacheLifetimeInDays(10);
+      policyDescriptor.setContentValidUntil(new Date());
+    ```
 
 
-      // create userRights list   UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),     Arrays.asList( CommonRights.View, EditableDocumentRights.Print));   ArrayList<UserRights> usersRigthsList = new ArrayList<UserRights>();   usersRigthsList.add(userRights);
-
-      // Create PolicyDescriptor using userRights list   PolicyDescriptor policyDescriptor = PolicyDescriptor.createPolicyDescriptorFromUserRights(                                                          usersRigthsList);   policyDescriptor.setOfflineCacheLifetimeInDays(10);   policyDescriptor.setContentValidUntil(new Date());
-
-
-
--    **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
-
-    **ソース**: *MsipcTaskFragment.java*
-
-
-       mIAsyncControl = UserPolicy.create((PolicyDescriptor)selectedDescriptor,                                          mEmailId, mRmsAuthCallback,                                          UserPolicyCreationFlags.NONE,                                          userPolicyCreationCallback);
-
-
-
--   **手順 3**. [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) を作成してコンテンツを書き込み、閉じます。
+- **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
+    ``` java
+       mIAsyncControl = UserPolicy.create((PolicyDescriptor)selectedDescriptor,
+         mEmailId, mRmsAuthCallback, UserPolicyCreationFlags.NONE, userPolicyCreationCallback);
+    ```
 
-    File file = new File(filePath); final OutputStream outputStream = new FileOutputStream(file); CreationCallback<CustomProtectedOutputStream> customProtectedOutputStreamCreationCallback = new CreationCallback<CustomProtectedOutputStream>() { @Override public Context getContext() { …
+
+- **手順 3**. [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) を作成してコンテンツを書き込み、閉じます。
+
+    **ソース**: *MsipcTaskFragment.java*
+
+    ``` java
+    File file = new File(filePath);
+        final OutputStream outputStream = new FileOutputStream(file);
+        CreationCallback<CustomProtectedOutputStream> customProtectedOutputStreamCreationCallback = new CreationCallback<CustomProtectedOutputStream>()
+        {
+            @Override
+            public Context getContext()
+            {
+              …
             }
 
             @Override
@@ -522,5 +625,6 @@ ms.lasthandoff: 01/11/2018
         {
           …
         }
+    ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

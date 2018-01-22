@@ -2,20 +2,20 @@
 title: "Azure Information Protection で対称キーを更新する方法"
 description: "この記事では、Azure Information Protection で対称キーを更新する手順について説明します。"
 keywords: 
-author: kkanakas
+author: lleonard-msft
 manager: mbaldwin
-ms.author: kartikk
+ms.author: alleonar
 ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 6153067c308206cb93ad99de1075913c68d1fa3b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 159e5b58883490e4417ecbdb9815340c9ccaa66d
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>方法: Azure Information Protection で対称キーを更新する
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 Azure Active Directory (Azure AD) では、アプリケーションを表すサービス プリンシパル オブジェクトを作成するプロセスで、アプリケーションを検証するための 256 ビット対称キーも生成されます。 この対称キーは、既定では 1 年間有効です。 
 
-次の手順では、対称キーを更新する方法を説明します。 
+次の手順では、対称キーを更新する方法を示します。 
 
 ## <a name="prerequisites"></a>必要条件
 
@@ -60,7 +60,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-上の例で作成された対称キーは、2018 年 3 月 22 日の午後 3 時 27 分 53 秒に有効期限が切れます。 この時刻以降もサービス プリンシパルを続けて使うには、対称キーを更新する必要があります。 [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) コマンドを使ってこれを行うことができます。 
+この対称キーの有効期限は、2018 年 3 月 22 日午後 3 時 27 分 53 秒です。 この時刻以降もサービス プリンシパルを使用するには、対称キーを更新する必要があります。 この場合は、[`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) コマンドを使用します。 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -74,7 +74,7 @@ The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX6
 [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) コマンドを使って、新しい対称キーが正しいサービス プリンシパルと関連付けられていることを検証できます。 このコマンドでは、現在サービス プリンシパルに関連付けられているすべてのキーが一覧表示されることに注意してください。
 
 ```
-Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues true
+Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
 
 Type : Symmetric
 Value :
@@ -101,5 +101,5 @@ Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcb
 
 ## <a name="related-topics"></a>関連項目
 
-* [方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
+* [方法: クラウドベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
 * [Azure Active Directory MSOnline Powershell リファレンス](https://docs.microsoft.com/powershell/msonline/)
