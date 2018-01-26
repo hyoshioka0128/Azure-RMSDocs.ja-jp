@@ -26,7 +26,7 @@
 
 7 月リリースの更新で SDK が改訂され、4.2.5 になりました。
 
-- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
+- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
 - iOS SDK では、ログ記録レベルを設定できません。 
 - SDK は、NULL アクセス トークンに対してエラーを返すようになりました。
 
