@@ -4,17 +4,17 @@ description: "Azure Information Protection サービスの概要です。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
+ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -61,7 +61,7 @@ Azure Rights Management での保護のしくみの詳細については、「[A
 
 ## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>ドキュメントおよび電子メール用のエンドユーザー ワークフローとの統合
 
-Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、Word にこのバーを表示した最初の図のように Information Protection バーをインストールします。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 たとえば、
+Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、Word にこのバーを表示した最初の図のように Information Protection バーをインストールします。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 次に例を示します。
 
 ![Excel の Azure Information Protection バーの例](../media/excel2016-infoprotect-barv2.png)
 
@@ -73,7 +73,7 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 エクスプローラーから **[分類して保護する]** メニュー オプションを選択すると、Office デスクトップ アプリで Information Protection バーを使用する場合と同じように、ラベルを選択することができます。 必要に応じて、独自のカスタム アクセス許可を設定することもできます。
 
-パワー ユーザー (および管理者) は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 これを行う PowerShell コマンドは、クライアントと共に自動的に含まれますが、PowerShell モジュールを個別にインストールすることもできます。
+パワー ユーザー (および管理者) は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 これらのアクションを行う PowerShell コマンドは、クライアントと共に自動的に含まれますが、PowerShell モジュールを個別にインストールすることもできます。
 
 ドキュメントが保護されたら、ユーザーと管理者はドキュメント追跡サイトを使用して、これらのドキュメントに誰がいつアクセスしているかを監視することができます。 不正使用が疑われる場合は、これらのドキュメントに対するアクセスを取り消すこともできます。
 
@@ -127,12 +127,12 @@ Ignite の Web サイトで、Azure Information Protection にタグ付けされ
 - [新しい Office 365 Message Encryption 機能で、機密性の高いメールを保護および管理する](https://myignite.microsoft.com/videos/53230)
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
 
-「[Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md)」 (Azure Information Protection のクイック スタート チュートリアル) で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。
+「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。 このサービスを組織向けにデプロイする準備ができている場合は、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」を参照してください。
 
-Azure Rights Management または Azure Information Protection の別名については、 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
+Azure Information Protection の別名については、 [サービスの代替用語の一覧](azure-rms-aka.md)に関するページを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
