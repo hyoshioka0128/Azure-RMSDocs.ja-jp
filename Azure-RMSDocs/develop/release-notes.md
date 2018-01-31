@@ -66,7 +66,7 @@
 
     [UserPolicy.acquire 同期メソッド](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [UserPolicy.create (PolicyDescriptor…) 同期メソッド**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [UserPolicy.create (PolicyDescriptor…) 同期メソッド** ](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [UserPolicy.create (TempalteDescriptor…) 同期メソッド](https://msdn.microsoft.com/library/mt631386.aspx)
 
