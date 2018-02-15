@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: e1adb23e00b447d5633b37b310e3b9ce96d0becf
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -92,7 +92,7 @@ Azure Information Protection クライアントが保護をサポートするフ
     
     - これらのファイルの保護方法: ファイル サイズの上限は、ディスクの空き領域と使用可能なメモリのみで決まります。
     
-    - Azure Information Protection ビューアーでこれらのファイルを開くには: テキストベースのファイル (.ptxt と .pxml) でサポートされる最大ファイル サイズは 20 MB です。 画像ベースのファイルと PDF ファイルの場合、ファイルの最大サイズはメモリのみで決まります。
+    - Azure Information Protection ビューアーでこれらのファイルを開くには: Azure Information Protection クライアントの現行プレビュー バージョンをお持ち出ない場合、テキストベースのファイル (.ptxt と .pxml) でサポートされている最大ファイル サイズは 20 MB になります。 画像ベースのファイルと PDF ファイルの場合、ファイルの最大サイズはメモリのみで決まります。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -109,14 +109,14 @@ Azure Information Protection クライアントが保護をサポートするフ
 |.xml|.pxml|
 |.jpg|.pjpg|
 |.jpeg|.pjpeg|
-|.pdf|.ppdf|
+|.pdf|。ppdf|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
 |.jpe|.pjpe|
-|.jfif|.pjfif|
+|.jfif|。pjfif|
 |.jt|.pjt|
 
 
@@ -214,7 +214,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 分類され、保護されているファイルがコンテナー ファイル内にある場合、先にファイルを抽出し、分類または保護設定を変更する必要があります。 ただし、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを利用し、サポートされているコンテナー ファイル内の全ファイルの保護を削除できます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントによってサポートされるファイルの種類がわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
 
 - [カスタマイズ](client-admin-guide-customizations.md)
