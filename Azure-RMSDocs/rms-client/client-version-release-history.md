@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/22/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 20ee380a48fa8fb303a5c71f43df17b8740b0cb4
-ms.sourcegitcommit: fc9a4487e2a0bc3481a814c7c308939868d52db9
+ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -43,9 +43,63 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="versions-later-than-110560"></a>1.10.56.0 以降のバージョン
 
-1.10.56.0 以降のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。 
+1.10.56.0 以降のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。
 
-クライアントの最後の GA バージョン以降の最新のプレビュー バージョンでの新機能または変更については、[ダウンロード ページ](https://www.microsoft.com/en-us/download/details.aspx?id=53018)の**詳細**セクションを参照してください。 
+現行のプレビュー バージョンは **1.21.203.0** です。クライアントの現行 GA バージョン以降、次の変更があります。
+
+このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
+
+**新機能**:
+
+- Azure Information Protection スキャナー: クライアントに付属する PowerShell モジュールには、オンプレミス データ ソース上のファイルを検出、分類、保護できるよう、スキャナーをインストールし、構成するための新しいコマンドレットが含まれています。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-aip-scanner.md)」を参照してください。 
+
+- Office アプリでは、推奨されている自動分類が、文書が保存されたときに実行されるのではなく、バックグラウンドで継続的に実行されます。 このように動作が変更されたことで、SharePoint Online に格納されている文書に自動 (推奨) 分類を適用できるようになりました。 [詳細情報](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+
+- テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細情報](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+- [ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** 対応になりました。 この設定をオフにすると、リボンの **[保護]** ボタンからラベルを選択します。
+
+- クライアント設定が新しくなりました。Outlook では、Azure Information Protection ポリシーで構成した既定のラベルが適用されません。 別の既定のラベルを適用できるか、ラベルがありません。 [詳細情報](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+
+- Office アプリでは、カスタムのアクセス許可を指定するとき、アドレス帳アイコンからユーザーを参照し、選択できるようになりました。 エクスプローラーでカスタムのアクセス許可を指定するとき、同じような操作性が与えられます。
+
+- PowerShell を使用するが、**ローカルでログオンする**権限を付与できないサービス アカウントに完全に非対話式の認証方法を与えます。 この認証方法では、[Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) と共に新しい *Token* パラメーターを使用し、タスクとして PowerShell スクリプトを実行する必要があります。 [詳細情報](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+
+- [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication) に新しいパラメーター、*IntegratedAuth* が追加されました。 このパラメーターは AD RMS のサーバー モードをサポートします。このモードは AD RMS で Windows Server FCI をサポートするために必要になります。
+
+
+**修正内容**:
+
+以下を含む、安定性の問題と特定のシナリオの問題が修正されました。
+
+- Office バージョン 16.0.8628.2010 以降 (クイック実行) の場合、Azure Information Protection バーに最新のモニター ディスプレイ オプションが表示されます。以前は Office アプリケーションの外部にバーが表示されることがありました。
+
+- Azure Information Protection を利用する 2 つの組織がラベル付きの文書とメールを共有しているとき、独自のラベルの保持されます。他の組織のラベルで置換されることはありません。
+
+- 相互参照を含む Excel セルに対応しました。以前は、そのようなセルではテキストが壊れてしまいました。
+
+- Office テーマや Windows テーマを変更できるようになりました。以前は Excel では、テーマの変更後、データが表示されませんでした。
+
+- 推奨分類または自動分類で、ファイル名に .xml 拡張子が付くファイルを調べることができるようになりました。
+
+- 20 MB を超えるテキスト ベースの保護ファイル (.ptxt と .pxml) を開けるようになりました。 
+
+- Outlook リマインダーの利用時の Outlook の停止を回避します。
+
+- Office 64 ビットでブートストラップできます。文書やメールを保護できます。
+
+- Word、Excel、PowerPoint、エクスプローラーのユーザー定義アクセス許可にラベルを設定できるようになりました。また、クライアント詳細設定を利用し、カスタムのアクセス許可オプションを非表示にできます。 [詳細情報](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+
+- クライアントにインストールされていないフォント名について、Azure Information Protection ポリシーの視覚的マーカーが設定されている場合、Calibri フォントが使用されます。
+
+- Azure Information Protection クライアントのアップグレード後に Office がクラッシュする事態を回避できるようになりました。
+
+- Office アプリでパフォーマンスとメモリ消費が改善されました。
+
+- ユーザー定義アクセス許可と HYOK (AD RMS) 保護にラベルを設定するとき、保護で Azure Rights Management サービスが不適切に使用されることがなくなりました。
+
+- 一貫性の高い管理作業を可能にするため、下位ラベルが上位ラベルから視覚的マーキングや保護設定を継承することがなくなりました。
+
 
 ## <a name="version-110560"></a>バージョン 1.10.56.0
 
