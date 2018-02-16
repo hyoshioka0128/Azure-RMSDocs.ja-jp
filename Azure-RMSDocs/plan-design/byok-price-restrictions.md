@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 837026a45529312dbdb1657cc563e8b02bff6675
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 614adfa0aca5b65750704d45f52355780c19c137
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
@@ -49,7 +49,7 @@ Azure Information Protection テナント キーに Azure Key Vault を使用す
 
 Azure Key Vault では、キーの管理ができるだけでなく、セキュリティ管理者は同じ管理エクスペリエンスによって、暗号化を使用する他のサービスやアプリケーションの証明書やシークレット (パスワードなど) を格納し、アクセスし、管理することができます。 
 
-Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/key-vault/key-vault-whatis)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
+Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/key-vault/key-vault-whatis)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://cloudblogs.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
 
 ## <a name="restrictions-when-using-byok"></a>BYOK を使用する場合の制限
 
@@ -57,7 +57,7 @@ BYOK と使用状況のログ記録は、Azure Information Protection が使用�
 
 Azure RMS から信頼された発行ドメイン (TPD) をインポートし、Exchange Online IRM を前に有効にしている場合、「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) の手順に従い、Azure Information Protection の BYOK に対応している Exchange Online の新機能を有効にします。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
 

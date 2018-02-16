@@ -14,11 +14,11 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: bd987e1433554ddb55dc06babf4e4b6f5e0d93fe
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: e6ae24f35aa03996bd26ff891a9cb5a14d751d44
+ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linux-setup"></a>Linux のセットアップ
 
@@ -38,8 +38,8 @@ Linux オペレーティング システムの一部のエディションで Mic
  
 ## <a name="how-to-build-and-use"></a>ビルド方法および使用方法
 
-- [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
-- [How to install and use app on user systems (ユーザー システムにアプリをインストールして使用する方法)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
+- [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
+- [How to install and use app on user systems (ユーザー システムにアプリをインストールして使用する方法)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
 ## <a name="see-also"></a>参照
 

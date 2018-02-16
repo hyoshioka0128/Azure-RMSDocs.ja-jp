@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
-ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
+ms.openlocfilehash: c3bbf2a9e0fee14ddeb2f18fa5671209ad92cfd4
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -112,7 +112,7 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
 
-さらに、**Microsoft Ignite 2017** では、オンデマンドで使用可能な Azure Information Protection に関する多くのセッションが提供されます。 今回のカンファレンスで発表された内容の概要については、「[What’s new in Azure Information Protection @ Ignite 2017 (Azure Information Protection の新機能 (Ignite 2017))](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」を参照してください。 
+さらに、**Microsoft Ignite 2017** では、オンデマンドで使用可能な Azure Information Protection に関する多くのセッションが提供されます。 今回のカンファレンスで発表された内容の概要については、「[What’s new in Azure Information Protection @ Ignite 2017 (Azure Information Protection の新機能 (Ignite 2017))](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」を参照してください。 
 
 Ignite の Web サイトで、Azure Information Protection にタグ付けされているセッションを[検索して見つけられます](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)。 ただし、次のセッションを初めにご覧いただくことをお勧めします。
 
@@ -129,7 +129,7 @@ Ignite の Web サイトで、Azure Information Protection にタグ付けされ
 
 ## <a name="next-steps"></a>次の手順
 
-ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
+ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
 
 「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。 このサービスを組織向けにデプロイする準備ができている場合は、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」を参照してください。
 

@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4040e67a7bae2ee5a208d61134b842762ef4ace1
-ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
+ms.openlocfilehash: 014b4d7100a0be36951a21db9a1dcf35bdbe5dd6
+ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Azure Information Protection のドキュメントに対するコメントの内部ルール
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 
 - **テクニカル サポート**。 たとえば、ある機能が動作しないため、要件を確認してドキュメントの指示に従った場合や、 Azure Information Protection クライアントの[サポートされているバージョン](./rms-client/client-version-release-history.md#servicing-information-and-timelines)を使用していることも確認します。 代わりに、[Microsoft サポート](./get-started/information-support.md#to-contact-microsoft-support)にお問い合わせいただくか、標準のサポート チャネルを使用してください。 または、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)のコミュニティをご利用ください。
 
-- **ロードマップ情報**。 たとえば、新しいリリースが公開される場合、または追加の機能が計画されている場合。 この情報については、[Enterprise Mobility + Security のブログ](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services)を参照するか、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)で質問してください。 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com) を確認し、このリソースから新しい機能を要求することもできます。
+- **ロードマップ情報**。 たとえば、新しいリリースが公開される場合、または追加の機能が計画されている場合。 この情報については、[Enterprise Mobility + Security のブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services)を参照するか、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)で質問してください。 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com) を確認し、このリソースから新しい機能を要求することもできます。
 
 - **製品のフィードバック**。 たとえば、製品の改善、新しい機能の提案などです。 このような場合は、Azure Information Protection の [User Voice サイト](https://msip.uservoice.com)にアクセスし、新しい機能の提案、他のユーザーが投稿したアイデアへの投票、Azure Information Protection チームが対応している状況の確認を行ってください。 一般的なフィードバック、質問、アドバイスについては、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)のコミュニティをご利用ください。 
 
