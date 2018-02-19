@@ -4,7 +4,7 @@ description: "分類、ラベル付け、および保護を構成するには、
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
-ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
+ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -44,9 +44,24 @@ Azure Information Protection P2 サブスクリプションが必要なオプシ
 
 サブスクリプションの詳細については、「[Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)」を参照してください。
 
+## <a name="signing-in-to-the-azure-portal"></a>Azure Portal にサインインする
+
+Azure Portal にサインインするには、Azure Information Protection を構成して管理します。
+
+- 次のリンクを使用します: https://portal.azure.com
+
+- 次のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を持つアカウントを使用します。
+    
+    - **Information Protection 管理者** (現在プレビュー段階)
+
+    - **セキュリティ管理者**
+
+    - **グローバル管理者/会社の管理者**
+
+
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
 
-1. テナントの全体管理者またはセキュリティ管理者として [Azure Portal](https://portal.azure.com) にサインインします。
+1. Azure Portal にサインインします。
 
 2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 
     
@@ -63,7 +78,7 @@ Azure Information Protection P2 サブスクリプションが必要なオプシ
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
-1. セキュリティ管理者またはグローバル管理者として [Azure Portal](https://portal.azure.com) にサインインしていることを確認します。
+1. 次のいずれかの管理者ロール (Information Protection 管理者、セキュリティ管理者、またはグローバル管理者) を使用して、Azure Portal にサインインしていることを確認します。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
 
 2. 必要に応じて、**[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から **[Azure Information Protection]** を選択します。 
     
@@ -85,7 +100,7 @@ Azure Information Protection P2 サブスクリプションが必要なオプシ
     
     - ユーザーにカスタム ヘルプ リンクを提供するオプション。
 
-Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのうちの 2 つのラベルには、必要なときにサブカテゴリを提供するためのサブラベルが含まれています。 サブラベルのラベルを構成するときに、ユーザーはメインのラベルを選択することはできませんが、サブラベルのいずれか 1 つを選択する必要があります。
+Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのうちの 2 つのラベルには、必要なときにサブカテゴリを提供するためのサブラベルが含まれています。 サブラベルのラベルを構成するときに、ユーザーはメインのラベルを選択することはできませんが、サブラベルをいずれか 1 つ選択する必要があります。
 
 Azure Information Protection ラベルは、最下位の分類である個人データから、最上位の分類である非常に機密性の高い社外秘データまで、組織が通常作成して保存するあらゆるデータで使用できます。 
 
@@ -137,7 +152,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [異なる言語のラベルを構成する方法](configure-policy-languages.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](../get-started/infoprotect-quick-start-tutorial.md)」をご覧ください。
 

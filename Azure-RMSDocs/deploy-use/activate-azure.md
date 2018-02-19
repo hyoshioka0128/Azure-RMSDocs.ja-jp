@@ -4,7 +4,7 @@ description: "組織でドキュメントや電子メールの保護を開始で
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 430e84ac0a634052eb48e19347eafca436c47659
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 4c492f3a9075d5c560c2ec83b1371dc374b77bba
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/18/2017
 
 Azure Portal から Azure Rights Management サービス (Azure RMS) をアクティブ化する場合にこの手順に従ってください。
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
@@ -40,7 +40,7 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
 アクティブ化が完了すると、情報バーに **[Activation finished successfully]\(アクティブ化が正常に完了しました\)** と表示されます。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 「[Azure Rights Management をアクティブにする](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」を引き続きお読みください。
 
 

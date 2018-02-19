@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: a7412378655ea75500bd1339c0ba41f677fe4d9a
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/20/2017
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
-たとえば、
+次に例を示します。
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -54,7 +54,7 @@ Azure Information Protection クライアントには次のものが含まれま
 
 - ファイルに対して分類ラベルと保護を適用および削除するための PowerShell モジュール。 
     
-    このモジュールには、Windows Server 上でサービスとして実行される [Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md) (現在プレビュー段階) をインストールし、構成するためのコマンドレットが含まれます。 このサービスを利用すると、ネットワーク共有や SharePoint Server ライブラリなど、データ ストアのファイルを検出、分類、保護できます。
+    このモジュールには、Windows Server 上でサービスとして実行される [Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md) をインストールし、構成するためのコマンドレットが含まれます。 このサービスを利用すると、ネットワーク共有や SharePoint Server ライブラリなど、データ ストアのファイルを検出、分類、保護できます。
 
 - Azure Rights Management (Azure RMS) または Active Directory Rights Management サービス (AD RMS) と通信する Rights Management クライアント。
 
@@ -73,7 +73,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 - PowerShell コマンドを使って、ドキュメントを分類 (および必要に応じて保護) するスクリプトを実行したい。
 
-- オンプレミスで保存されているファイルを検出し、分類する (さらに、任意で保護する) サービスを実行することがあります。 現在、このスキャナー サービスはプレビューの段階にあります。
+- オンプレミスで保存されているファイルを検出し、分類する (さらに、任意で保護する) サービスを実行することがあります。
 
 - ファイルを表示するネイティブ アプリケーションがインストールされていないか、ドキュメントを開くことができない場合に、保護されているドキュメントを表示したい。
 
@@ -173,7 +173,7 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 - **/uninstall** を付けて実行可能ファイルを実行します。 例: `AzInfoProtection.exe /uninstall`
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 クライアントをインストールする方法については、「[Install the Azure Information Protection client for users](client-admin-guide-install.md)」 (ユーザー向けに Azure Information Protection クライアントをインストールする) を参照してください。
 
 クライアントを既にインストールしている場合、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

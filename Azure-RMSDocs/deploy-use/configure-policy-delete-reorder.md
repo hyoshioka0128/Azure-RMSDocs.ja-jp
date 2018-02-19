@@ -1,26 +1,26 @@
 ---
 title: "Azure Information Protection ラベルの削除または順序変更"
-description: "Azure Information Protection ポリシー内に構成することで、Information Protection バーに表示されるラベルを削除または順序変更することができます。"
+description: "Azure Information Protection ポリシー内に構成することで、ユーザーが Information Protection バーに表示するラベルを削除または順序変更することができます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: f17e149dcd8cfb7398909cbe3a83cdcf71b80b33
-ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
+ms.openlocfilehash: b6694c7c205f7ccd899669cc887b79ab39ec8ec4
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
 >*適用対象: Azure Information Protection*
 
-Azure Information Protection ポリシーでこれらのアクションを選択することで、Information Protection バーに表示されるラベルを削除または順序変更することができます。
+Azure Information Protection ポリシーでこれらのアクションを選択することで、ユーザーが Information Protection バーに表示するラベルを削除または順序変更することができます。
 
 ![Azure Information Protection のラベルを削除または順序変更する](../media/info-protect-contextmenu.png)
 
@@ -34,7 +34,7 @@ Azure Information Protection ポリシーでこれらのアクションを選択
 
 - PowerShell を利用し、テンプレートの名前を変更するか、削除します。
     
-    変更または削除する前に、他の管理者やサービスがテンプレートを利用していないか考慮し、現在の名前で確認します。 テンプレートで保護されていたドキュメントやメールを開く必要がない場合にのみ、テンプレートを削除してください。
+    変更や削除を行う前に、他の管理者やサービスがテンプレートを利用しているかどうかを考慮し、現在の名前で識別します。 テンプレートで保護されていたドキュメントやメールを開く必要がない場合にのみ、テンプレートを削除してください。
 
 保護テンプレートの管理の詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
@@ -48,7 +48,7 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 これらの変更を行うには、次の手順を実行します。
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザー ウィンドウを開き、セキュリティ管理者または全体管理者としてサインインします。次に、**[Azure Information Protection]** ブレードに移動します。 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[その他のサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
@@ -66,7 +66,7 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 4. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

@@ -4,7 +4,7 @@ description: "Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 21388d4a3617c50012f0f2055fce0ba48bdb66d5
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 02257ddd15886d01aa0e4e8c136078fb21bb4875
+ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
 >*適用対象: Azure Information Protection、Windows Server 2016、Windows Server 2012 R2*
-
-> [!NOTE]
-> 現在のところ、この機能はプレビュー段階で、変更される可能性があります。
 
 この情報を使用して、Azure Information Protection スキャナーについて説明し、正常にインストール、構成、および実行する方法について説明します。 
 
@@ -54,10 +51,10 @@ Azure Information Protection スキャナーをインストールする前に、
 |---------------|--------------------|
 |スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 個のプロセッサ<br /><br />- 4 GB の RAM|Windows Server 2016 または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](../get-started/requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。 <br /><br />Azure Information Protection に必要な[インターネット接続](../get-started/requirements.md#firewalls-and-network-infrastructure)がこのコンピューターにあることを確認します。 またはサーバーを[切断されたコンピューター](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)として構成する必要があります。 |
 |スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
-|スキャナー サービスを実行するサービス アカウント|このアカウントは、Azure AD と同期された Active Directory アカウントである必要があり、次の追加要件があります。<br /><br />- **ローカル ログオン**権限。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。<br /><br />注: 社内の方針によりこの権限をサービス アカウントに許可しないが、**バッチ ジョブとしてログオン**権限を与えることができる場合、追加の構成でこの要件を満たすことができます。 方法については、管理者ガイドの「[Set-AIPAuthentication の Token パラメーターを指定し、使用する](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。<br /><br />- **サービスとしてログオン**権限。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーが保護されたファイルに常にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能が有効になっていることを確認します。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」を参照してください。|
-|Azure Information Protection クライアントが Windows Server コンピューターにインストールされる|現時点では、Azure Information Protection スキャナーには、Azure Information Protection クライアントのプレビュー バージョンが必要です。<br /><br />スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />クライアントのインストール手順については、[管理者ガイド](../rms-client/client-admin-guide.md)を参照してください。|
+|スキャナー サービスを実行するサービス アカウント|このアカウントは、Azure AD と同期された Active Directory アカウントである必要があり、次の追加要件があります。<br /><br />- **ローカル ログオン**権限。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 <br /><br />注: 社内の方針によりこの権限をサービス アカウントに許可しないが、**バッチ ジョブとしてログオン**権限を与えることができる場合、追加の構成でこの要件を満たすことができます。 方法については、管理者ガイドの「[Set-AIPAuthentication の Token パラメーターを指定し、使用する](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。<br /><br />- **サービスとしてログオン**権限。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーが保護されたファイルに常にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能が有効になっていることを確認します。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」を参照してください。|
+|Azure Information Protection スキャナーが Windows Server コンピューターにインストールされている|現在、Azure Information Protection スキャナーは、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)の **AzInfoProtectionScanner.exe** という名前の個別のダウンロードです。 スキャナーの後続のリリースは、Azure Information Protection クライアントに含められます。|
 |自動分類と、必要に応じて保護を適用する構成済みのラベル|条件を構成する方法の詳細については、「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)」を参照してください。<br /><br />ファイルに保護を適用するラベルを構成する方法の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」を参照してください。<br /><br />これらのラベルは、グローバル ポリシーまたは 1 つ以上の[スコープ付きポリシー](configure-policy-scope.md)にあります。|
-
+|1 つ以上のデータ リポジトリ内のすべてのファイルにラベルが必要な場合<br /><br />- ポリシー設定として構成された既定のラベル|既定のラベル設定を構成する方法の詳細については、「[Azure Information Protection のポリシー設定を構成する方法](configure-policy-settings.md)」を参照してください。<br /><br />この既定のラベル設定は、グローバル ポリシーまたはスキャナーのスコープ付きポリシー内にある必要があります。 ただし、この既定のラベル設定は、データ リポジトリ レベルで構成する別の既定のラベルによってオーバーライドされることがあります。|
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのインストール
 

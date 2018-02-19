@@ -4,7 +4,7 @@ description: "Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3ee5bd789b62261867d6de4f56efaa3890dc1a57
-ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
+ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/03/2018
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>ポータルでクライアントの詳細構成設定を構成する方法
 
-1. [Azure Portal](https://portal.azure.com) にサインインしていない場合は、新しいブラウザーのウィンドウで、セキュリティ管理者または全体管理者としてサインインし、**[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザーのウィンドウで [Azure Portal にサインイン](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal)して、**[Azure Information Protection]** ブレードに移動します。
 
 2. 最初の [Azure Information Protection] ブレードで、**[スコープ付きポリシー]** を選択します。
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="suppress-the-initial-congratulations-welcome-page"></a>最初の "設定完了" の抑制 ようこそページ
 
-初めて Azure Information Protection クライアントをコンピューターにインストールし、ユーザーが Word、Excel、PowerPoint または Outlook をインストールすると、**[設定完了]**  ページに、ラベルを選択するために、新しい Information Protection バーを使用する方法の簡単な説明が表示されます。 このページは、レジストリを編集して抑制することができます。
+初めて Azure Information Protection クライアントをコンピューターにインストールし、ユーザーが Word、Excel、PowerPoint または Outlook を開くと、**[設定完了]**  ページに、ラベルを選択するために、新しい Information Protection バーを使用する方法の簡単な説明が表示されます。 このページは、レジストリを編集して抑制することができます。
 
 次の値の名前を検索し、値を **0** に設定します。
 
@@ -192,7 +192,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 この設定を構成すると、Outlook では、Azure Information Protection ポリシーで **[既定のラベルを選択]** 設定に構成した既定のラベルが適用されません。 別の既定のラベルを適用できるか、ラベルがありません。
 
-別のラベルを適用するには、ラベル ID を指定する必要があります。 Azure Portal で Azure Information Protection ポリシーを表示または構成するとき、ラベル ID 値は **[ラベル]** ブレードに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルに下位ラベルがある場合、親ラベルではなく、下位ラベルの ID を常に指定してください。
+別のラベルを適用するには、ラベル ID を指定する必要があります。 Azure Portal で Azure Information Protection ポリシーを表示または構成するとき、ラベル ID 値は **[ラベル]** ブレードに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの ID だけを常に指定してください。
 
 Outlook で既定のラベルが適用されないように、**[なし]** を指定します。
 
@@ -230,7 +230,7 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 Office ドキュメントにこれらの分類の値のいずれかのラベルを付けるには、**[SyncPropertyName]** を **[公開]** に、**[SyncPropertyState]** を **[OneWay]** に設定します。 
 
-ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに Azure Information Protection ポリシーに **[公開]**、**[全般]**、または **[社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
+ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに、Azure Information Protection ポリシーに **[公開]**、**[全般]**、または **[社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Exchange メッセージ分類との統合によるモバイル デバイスのラベル付けソリューション
 
