@@ -4,7 +4,7 @@ description: "Azure Information Protection の Azure Rights Management (AADRM) �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 94ec0107930e64d42ed55bce407c4b8c92f1df32
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 597590dbf33dd43329d27ccadf081e5e8d9fd0b6
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Windows PowerShell を使用した Azure Rights Management サービスの管理
 
 >*適用対象: Azure Information Protection、Office 365*
 
-PowerShell を使って、Azure Information Protection のために Azure Rights Management サービスを管理する必要がありますか。 あなたがグローバル管理者または[セキュリティ管理者](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)で、このサービスに対して必要な構成が、それをアクティブ化 (または非アクティブ化) し、Rights Management テンプレートを構成するだけである場合は、必要ないかもしれません。
-
-ただし、構成がさらに詳細な場合、あるいはグローバル管理者やセキュリティ管理者ではなくてもグローバル管理者によってサービスを管理するアクセス許可を付与されている場合は、PowerShell を使う必要があります。 また、コマンドラインでの制御とスクリプトの使用をいっそう効率的にするときも、PowerShell を使うのがよい場合があります。
+PowerShell を使って、Azure Information Protection のために Azure Rights Management サービスを管理する必要がありますか。 すべての構成を Azure Portal または Office 365 ポータルで行える場合、PowerShell を使う必要はない可能性があります。 ただし、一部の詳細な構成には PowerShell を使用する必要があり、効率的なコマンドライン コントロールとスクリプトのために PowerShell の使用を選ぶ可能性もあります。
 
 次のセクションの表では、PowerShell を使う高度な構成シナリオの一部を示します。 PowerShell を使わずに構成できる場合は、そのことも表に示してあります。
 

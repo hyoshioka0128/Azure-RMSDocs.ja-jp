@@ -4,17 +4,17 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 84ee36c4bc936841196c7fcc3668b16dec25b522
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 30f86870bb2302ff61641ffa4c10e3da6b5c3f9b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="step-1-activate-protection"></a>手順 1: 保護の有効化します
  
@@ -29,7 +29,9 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
 
 ## <a name="to-activate-the-azure-rights-management-service"></a>Azure Rights Management サービスをアクティブにするには
 
-1. テナントの全体管理者またはセキュリティ管理者として [Azure Portal](https://portal.azure.com) にサインインします。
+1. テナントのグローバル管理者アカウントを使用して、[Azure Portal](https://portal.azure.com) にサインインします。 
+    
+    グローバル管理者でない場合は、**Information Protection 管理者**または**セキュリティ管理者**のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を使用できます。
 
 2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 
     

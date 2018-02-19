@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -24,9 +24,7 @@ ms.lasthandoff: 02/09/2018
 
 Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールは、RMS 保護ツールと共にインストールされる RMS 保護モジュールを置き換えます。 RMSProtection ツールがインストールされているシステムに Azure Information Protection クライアントをインストールすると、RMSProtection モジュールは自動的にアンインストールされます。
-
-AzureInformationProtection モジュールには、RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection (AIP) サービスを利用する新しいコマンドレットもあります。 次に例を示します。
+コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection (AIP) サービスを利用する新しいコマンドレットもあります。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -36,13 +34,13 @@ AzureInformationProtection モジュールには、RMS 保護ツールの Rights
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
 
 
-[Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md) (現在プレビュー段階) コマンドレットを利用し、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
+さらに、[Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md)ではコマンドレットを使用し、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
 
 すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/module/azureinformationprotection)」 (AzureInformationProtection モジュール) を参照してください。 PowerShell セッション内で、「`Get-Help <cmdlet name> -online`」と入力すると、最新のヘルプが表示されます。  
 
 このモジュールは、**\ProgramFiles (x86)\Microsoft Azure Information Protection** にインストールされ、このフォルダーを **PSModulePath** システム変数に追加します。 このモジュールの .dll の名前は **AIP.dll** です。
 
-RMSProtection モジュールと同様に、AzureInformationProtection モジュールの現在のリリースには以下の制限があります。
+AzureInformationProtection モジュールの現在のリリースには、以下の制限があります。
 
 - Outlook 個人フォルダー (.pst ファイル) の保護を解除することはできますが、現在は、この PowerShell モジュールを使ってこれらのファイルまたは他のコンテナー ファイルをネイティブに保護することはできません。
 
@@ -147,7 +145,7 @@ Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマ
     
 4. `Get-AadrmConfiguration` を実行して、BPOSId の値をコピーします。
     
-    Get-AadrmConfiguration の出力の例を次に示します。
+    Get-AadrmConfiguration の出力例
     
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
@@ -454,7 +452,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>非対話形式でファイルに Azure Information Protection のラベル付けをする方法
 
-**Set-AIPAuthentication** コマンドレットを利用し、ラベル付けコマンドレットを非対話式に実行できます。 現在プレビュー中の Azure Information Protection スキャナーには、非対話型操作も必要です。
+**Set-AIPAuthentication** コマンドレットを利用し、ラベル付けコマンドレットを非対話式に実行できます。 Azure Information Protection スキャナーには、非対話型操作も必要です。
 
 既定では、ラベル付けのコマンドレットを実行するとき、対話型 PowerShell セッション内のユーザー コンテキストでコマンドは動作します。 自動実行するには、そのための新しい Azure AD ユーザー アカウントを作成します。 次に、ユーザーのコンテキストで Set-AIPAuthentication コマンドレットを実行し、Azure AD のアクセス トークンを使用して資格情報を設定し、格納します。 次に、このユーザー アカウントは、Azure Rights Management サービスに認証され、ブートストラップされます。 このアカウントは、Azure Information Protection ポリシーと、ラベルが使用する Rights Management テンプレートをダウンロードします。
 
@@ -487,7 +485,7 @@ AzureInformationProtection モジュールをインストールするための�
     
     - アプリケーションの種類: **Web アプリ/API**
     
-    - サインオン URL: **http://localhost**
+    - [サインオン URL]: **http://localhost**
 
 4. 先ほど作成したアプリケーションを選択します (例: **AIPOnBehalfOf**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
     
@@ -501,7 +499,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 7. **[アプリの登録]** ブレードに戻り、**[新しいアプリケーションの登録]** を選択してネイティブ アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
     
-    - 名前: **AIPClient**
+    - [名前]: **AIPClient**
     
     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
     
@@ -521,6 +519,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 12. **[必要なアクセス許可]** ブレードを再び開き、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
     
+
 2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 次に例を示します。
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
@@ -532,7 +531,7 @@ AzureInformationProtection モジュールをインストールするための�
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Set-AIPAuthentication の Token パラメーターを指定し、使用する
 
 > [!NOTE]
-> このオプションはプレビュー段階にあり、Azure Information Protection クライアントの最新プレビュー版が必要です。
+> このオプションには、Azure Information Protection スキャナーの一般提供 (GA) 版、または Azure Information Protection クライアントの最新プレビュー版が必要です。
 
 次の追加の手順と指示に従うと、ファイルにラベルを付け、保護するアカウントの初回対話式サインインを回避できます。 通常、この追加手順は、アカウントに**ローカルでログオンする**権限を与えられないが、**バッチ ジョブとしてログオン**権限が与えられている場合にのみ必要です。 たとえば、Azure Information Protection スキャナーを実行するサービス アカウントなどがこれに該当します。
 
@@ -540,12 +539,11 @@ AzureInformationProtection モジュールをインストールするための�
 
 2. Set-AIPAuthentication を実行してアクセス トークンを取得し、それをクリップボードにコピーします。
 
-2. PowerShell スクリプトを修正し、トークンを追加します。
+3. PowerShell スクリプトを修正し、トークンを追加します。
 
-3. サービス アカウントでファイルにラベルを付け、保護するという状況で PowerShell スクリプトを実行するタスクを作成します。
+4. サービス アカウントでファイルにラベルを付け、保護するという状況で PowerShell スクリプトを実行するタスクを作成します。
 
-4. サービス アカウントのトークンが保存されていることを確認し、PowerShell スクリプトを削除します。
-
+5. サービス アカウントのトークンが保存されていることを確認し、PowerShell スクリプトを削除します。
 
 #### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>手順 1: ローカル コンピューターで PowerShell スクリプトを作成します。
 

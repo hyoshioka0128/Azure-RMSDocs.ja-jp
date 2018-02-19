@@ -4,7 +4,7 @@ description: "管理者が企業ネットワークに Windows 用 Azure Informat
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d91c52ac5ae1f70ed664e54a549c906d934fdb16
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 92e4f6c05378b36165db0628f14941b0ccd26cb7
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -211,7 +211,11 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーをインストールする方法
 
-Azure Information Protection クライアントの現行プレビュー版には、Azure Information Protection スキャナーが含まれています。 クライアントに含まれている PowerShell モジュールには、スキャナーをインストールし、構成するためのコマンドレットがあります。
+現在、Azure Information Protection スキャナーの一般提供 (GA) 版は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)の **AzInfoProtectionScanner.exe** という名前の個別のダウンロードです。 スキャナーの後続のリリースは、Azure Information Protection クライアントに含められます。
+
+Azure Information Protection クライアントの現行プレビュー版には、Azure Information Protection スキャナーも含まれています。 
+
+スキャナーとプレビュー クライアントに含まれている PowerShell モジュールには、スキャナーをインストールし、構成するためのコマンドレットがあります。
 
 このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 Office のアドインやビューアーなど、クライアントのすべてのコンポーネントを必要とするわけではない場合、PowerShell モジュールだけをインストールできます。 たとえば、`PowerShellOnly=true /quiet` で実行可能ファイルを実行できます。
 

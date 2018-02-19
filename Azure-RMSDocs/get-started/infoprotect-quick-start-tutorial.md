@@ -4,17 +4,17 @@ description: "約 20 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: c851eb1ecf1551caee1ab2a6aac6f05c550cb96b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/28/2017
   > [!TIP] 
   > サブスクリプションの申請プロセスの完了までに時間がかかる可能性があるため、申請が必要な場合は、事前に済ませてください。
 
-- Azure Portal にサインインして保護を有効化し、Azure Information Protection ポリシーを構成するための全体管理者アカウントまたはセキュリティ管理者アカウント。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (Exchange Online など) も必要です。
+- Azure Portal にサインインして保護を有効化し、Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 または、[Information Protection 管理者またはセキュリティ管理者](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれかの管理者ロールを持つアカウントを使用できます。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (Exchange Online など) も必要です。
 
 - Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 Service Pack 2 がインストールされている必要があります。 
     
