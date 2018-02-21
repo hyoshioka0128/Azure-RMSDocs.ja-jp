@@ -42,7 +42,7 @@
 ### [お客様が管理](operations-customer-managed-tenant-key.md)
 ## [使用停止と非アクティブ化](decommission-deactivate.md)
 ## [PowerShell での管理](administer-powershell.md)
-### [Azure RMS 用 Windows PowerShell をインストールする](install-powershell.md)
+### [AADRM PowerShell モジュールのインストール](install-powershell.md)
 # [クライアントのデプロイと使用](/information-protection/rms-client/use-client)
 # [アプリの開発とカスタマイズ](/information-protection/develop/developers-guide)
 
