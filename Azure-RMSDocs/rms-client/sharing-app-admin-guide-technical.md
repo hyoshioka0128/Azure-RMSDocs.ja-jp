@@ -101,7 +101,7 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 既定ではネイティブ保護が適用されるすべてのファイルにジェネリック保護を適用するように RMS 共有アプリケーションを構成するには、次のレジストリ編集を行います。 RmsSharingApp キーまたは FileProtection キーが存在しない場合は、手動でそれらを作成する必要があることに注意してください。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: * という名前の新しいキーを作成します。
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: \* という名前の新しいキーを作成します。
 
     この設定は、任意のファイル名拡張子を持つファイルを表します。
 
