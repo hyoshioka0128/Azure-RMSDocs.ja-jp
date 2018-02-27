@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 714afa8c839d91ba61043a643433c5045a4aad7d
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -133,7 +133,7 @@ Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -
 
 Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマンドレットを実行します。
 
-1. このモジュールがコンピューターにまだインストールされていない場合は、「[Azure Rights Management 用 Windows PowerShell をインストールする](../deploy-use/install-powershell.md)」をご覧ください。
+1. このモジュールがコンピューターにまだインストールされていない場合は、「[AADRM PowerShell モジュールのインストール](../deploy-use/install-powershell.md)」を参照してください。
 
 2. **[管理者として実行]** オプションを使って、Windows PowerShell を起動します。
 
