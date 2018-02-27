@@ -4,28 +4,28 @@ description: "Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 30f86870bb2302ff61641ffa4c10e3da6b5c3f9b
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 952431771e89e934be4a725ece4f3d9cd47165fe
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="step-1-activate-protection"></a>手順 1: 保護の有効化します
  
 >*適用対象: Azure Information Protection*
 
 > [!NOTE]
->既にテナントの Azure Rights Management サービスをアクティブ化してある場合でも、この手順を行ってアクティブ化の状態を確認します。 この手順には、手順 2 の準備として、Azure Portal へのサインインと、Azure Information Protection ブレードの作成が含まれます。 
+>テナントの Azure Rights Management サービスがアクティブになっている場合でも、この手順を行ってアクティブ化の状態を確認します。 この手順には、手順 2 の準備として、Azure Portal へのサインインと、Azure Information Protection ブレードの作成が含まれます。
 
-Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護し、保護したドキュメントを他のユーザーと共有する際に使用する方法を追跡することができます。 Windows PowerShell の使用や、管理ポータルの使用など、保護をアクティブ化するにはさまざまな方法があります。
+Azure Rights Management サービスをアクティブ化すると、組織の最も機密性の高いドキュメントや電子メールを保護できます。 また、他のユーザーと共有するときに、これらの保護されたドキュメントがどのように使用されるかを追跡することもできます。 
 
-このチュートリアルでは Azure Portal を使い、そこでユーザーのラベルの構成も行います。 
+保護をアクティブ化するには、さまざまな方法があります。 PowerShell と管理ポータルを使用することができます。 ただし、このチュートリアルでは、Azure Portal を使い、そこでユーザーのラベルの構成も行います。 
 
 ## <a name="to-activate-the-azure-rights-management-service"></a>Azure Rights Management サービスをアクティブにするには
 
@@ -33,11 +33,11 @@ Azure Rights Management サービスをアクティブ化すると、組織の�
     
     グローバル管理者でない場合は、**Information Protection 管理者**または**セキュリティ管理者**のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を使用できます。
 
-2. ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 
+2. ハブ メニューで、**[リソースの作成]** をクリックして、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。 
     
 3.  **[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選びます。 次に、**[Azure Information Protection]** ブレードで **[作成]** をクリックします。
     
-    **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[その他のサービス]** リストからサービスを選択できるようになります。 
+    このアクションでは **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[すべてのサービス]** リストからサービスを選択できるようになります。 
     
     > [!TIP] 
     > **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。

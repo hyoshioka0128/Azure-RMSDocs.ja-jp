@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3b1662275b051ea75dcc104c4f09b5db53dbe3e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: d8e31eb4f573a149ae39c32c89607775de61bfce
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="powershell-reference-for-custom-templates"></a>カスタム テンプレート用の PowerShell リファレンス
 
@@ -31,7 +31,7 @@ Azure Portal でテンプレートを作成し、管理するためにできる�
 > 
 > 既にこの PowerShell モジュールがインストールされている場合は、PowerShell ウィンドウで次のコマンドを実行してバージョン番号を確認してください。`(Get-Module aadrm -ListAvailable).Version`
 
-インストール手順については、「[Azure Rights Management 用 Windows PowerShell をインストールする](install-powershell.md)」を参照してください。
+インストール手順については、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
 テンプレートの作成および管理をサポートするコマンドレットは次のとおりです。
 
@@ -53,7 +53,7 @@ Azure Portal でテンプレートを作成し、管理するためにできる�
 
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

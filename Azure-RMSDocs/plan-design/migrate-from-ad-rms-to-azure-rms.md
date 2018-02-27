@@ -4,7 +4,7 @@ description: "Active Directory Rights Management サービス (AD RMS) のデプ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 2ba3ae79308ddee15dc77700b7b660fd4bd91b49
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -140,9 +140,9 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 [**フェーズ 1: 移行の準備**](migrate-from-ad-rms-phase1.md)
 
-- **手順 1: Azure RMS 管理ツールをダウンロードし、テナントの URL を識別する**
+- **手順 1: AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する**
 
-    移行プロセスでは、Azure RMS 管理ツールと共にインストールされる Azure RMS モジュールから、1 つ以上の PowerShell コマンドレットを実行する必要があります。 多くの移行手順を実行するには、テナントの Azure Rights Management サービス URL が必要です。 この値は、PowerShell を使用することで識別できます。
+    移行プロセスでは、AADRM モジュールから 1 つまたは複数の PowerShell コマンドレットを実行する必要があります。 多くの移行手順を完了するには、テナントの Azure Rights Management サービス URL が必要です。この値は、PowerShell を使って特定することができます。
 
 - **手順 2:クライアントの移行を準備する**
 
@@ -215,7 +215,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
     移行前に暗号化モード 2 で実行されていない場合は、この手順の使用をお勧めします。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 移行を始めるには、「[フェーズ 1 - 準備](migrate-from-ad-rms-phase1.md)」に進んでください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
