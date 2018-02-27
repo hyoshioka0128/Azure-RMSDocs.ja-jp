@@ -4,17 +4,17 @@ description: "Azure Information Protection の既定のポリシーの構成方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/24/2017
 
 このバージョンの既定のポリシーは、2017 年 7 月 31 日付けのものです。
 
-この既定のポリシーは、ポリシーの作成時に Azure Rights Management サービスがアクティブ化された場合にのみ作成されます。 このサービスがアクティブ化されなかった場合、既定のポリシーにより次のサブラベルに保護は構成されません。
+この既定のポリシーは、ポリシーの作成時に Azure Rights Management サービスが[アクティブ化](activate-service.md)された場合にのみ作成されます。 このサービスがアクティブ化されなかった場合、既定のポリシーでは次のサブラベルに保護は構成されません。
 
 - **社外秘 \ すべての従業員**
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 
 2017 年 8 月 30 日以降、既定ポリシーのこのバージョンには、ラベルの名前と説明の多言語版が含まれるようになりました。 
 
-#### <a name="more-information-about-the-recipients-only-sub-label"></a>[受信者のみ] サブラベルに関する詳細
+#### <a name="more-information-about-the-recipients-only-sublabel"></a>[受信者のみ] サブラベルに関する詳細
 
 ユーザーには Outlook のみでこのラベルが表示されます。 このラベルは Word、Excel、PowerPoint には表示されず、エクスプローラーからも表示されません。 
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 10/24/2017
 |非常に機密性の高い社外秘|承認されていない人と共有した場合、ビジネスに損害を与える可能性のある非常に機密性の高いビジネス データ。 例としては、従業員と顧客の情報、パスワード、ソース コード、および発表前の財務レポートなどがあります。|**有効**: オン <br /><br />**色**: 赤<br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
 
 
-### <a name="sub-labels"></a>サブラベル
+### <a name="sublabels"></a>サブラベル
 
 |Label|ツールヒント|Settings|
 |-------------------------------|---------------------------|-----------------|
@@ -95,7 +95,7 @@ ms.lasthandoff: 10/24/2017
 |Setting|値|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
-|Select the default label (既定のラベルを選択する)|None|
+|Select the default label (既定のラベルを選択する)|なし|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 |添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します|オフ|
 |Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
@@ -117,7 +117,7 @@ ms.lasthandoff: 10/24/2017
 |非常に機密性の高い社外秘|承認されていない人と共有した場合、ビジネスに損害を与える可能性のある非常に機密性の高いビジネス データ。 例としては、従業員と顧客の情報、パスワード、ソース コード、および発表前の財務レポートなどがあります。|**有効**: オン <br /><br />**色**: 赤<br /><br />**視覚的なマーキング**: オフ<br /><br />**条件**: なし<br /><br />**保護**: なし|
 
 
-### <a name="sub-labels"></a>サブラベル
+### <a name="sublabels"></a>サブラベル
 
 |Label|ツールヒント|Settings|
 |-------------------------------|---------------------------|-----------------|
@@ -139,7 +139,7 @@ ms.lasthandoff: 10/24/2017
 |Setting|値|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
-|Select the default label (既定のラベルを選択する)|None|
+|Select the default label (既定のラベルを選択する)|なし|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 |添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します|オフ|
 |Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
@@ -157,7 +157,7 @@ ms.lasthandoff: 10/24/2017
 |秘密|このデータには、保護する必要がある機密性の高いビジネス情報が含まれます。 承認されていないユーザーに秘密データを公開すると、組織に深刻な損害が生じる可能性があります。 秘密情報の例には、個人識別情報、顧客レコード、ソース コード、発表前の財務レポートなどがあります。|**有効**: オン <br /><br />**色**: 赤<br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール):<br /><br /> 検出感度: 秘密<br /><br />**条件**: なし<br /><br />**保護**: なし|
 
 
-### <a name="sub-labels"></a>サブラベル
+### <a name="sublabels"></a>サブラベル
 
 |Label|ツールヒント|Settings|
 |-------------------------------|---------------------------|-----------------|
@@ -177,12 +177,12 @@ ms.lasthandoff: 10/24/2017
 |Setting|値|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
-|Select the default label (既定のラベルを選択する)|None|
+|Select the default label (既定のラベルを選択する)|なし|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 |Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。 
 

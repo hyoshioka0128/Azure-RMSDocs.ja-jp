@@ -4,7 +4,7 @@ description: "Azure クラシック ポータルで行っていた管理タス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 5f160d766abb4a81864ac1ff466362b8ae24027d
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 25604d8537aedb4421b460850ce34723c8047964
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -37,7 +37,7 @@ Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃�
 
 |Azure クラシック ポータル|このタスクを Azure Portal で実行する方法
 |-----------|--------------------|
-|構成設定に初めてアクセスする|1.[Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。<br /><br />2.ハブ メニューで、**[新規]** をクリックし、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。<br /><br />3.**[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選びます。 次に、**[Azure Information Protection]** ブレードで **[作成]** をクリックします。<br /><br />**[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[その他のサービス]** リストからサービスを選択できるようになります。
+|構成設定に初めてアクセスする|1.[Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。<br /><br />2.ハブ メニューで、**[リソースの作成]** をクリックして、**[MARKETPLACE]** リストから **[セキュリティ + ID]** を選択します。<br /><br />3.**[セキュリティ + ID]** ブレードで、**[おすすめアプリ]** リストから **[Azure Information Protection]** を選びます。 次に、**[Azure Information Protection]** ブレードで **[作成]** をクリックします。<br /><br />このアクションでは **[Azure Information Protection]** ブレードが作成され、次にポータルにサインインするときに、ハブの **[すべてのサービス]** リストからサービスを選択できるようになります。
 |新しいテンプレートを作成する|保護を適用するラベルを作成します。**[権限の設定]** を利用し、アクセス許可、有効期限、オフライン アクセスを定義します。 <br /><br />その処理の裏では、この構成により、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。<br /><br />詳細については、「[新しいテンプレートを作成するには](configure-policy-templates.md#to-create-a-new-template)」を参照してください。
 |テンプレートのプロパティを編集する: <br /><br />- テンプレート名と説明<br /><br />- 使用権限、コンテンツの有効期限、オフライン アクセス設定|まだ行っていない場合、[テンプレートをラベルに変換し](configure-policy-templates.md#to-convert-templates-to-labels)、次の作業を行ってください。<br /><br />1.ラベル名と説明を変更します。<br /><br />2.ラベルの保護設定を変更し、アクセス許可、有効期限、オフライン アクセス設定を更新します。<br /><br />詳しくは、「[Rights Management による保護にラベルを構成するには](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection)」を参照してください。
 |テンプレートをアーカイブに収める|ラベル状態を **[無効]** に設定します。
