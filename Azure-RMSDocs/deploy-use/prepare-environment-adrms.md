@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ab34172a4e822373161752142d9e082014285e1
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: de42f0d87f42c304c2df906fe037816be7f2ba25
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Active Directory Rights Management サービス (AD RMS) もある場合の Azure Rights Management 用の環境の準備
 
@@ -30,7 +30,7 @@ Active Directory Rights Management サービス (AD RMS) を既に使用して�
 
 ## <a name="your-subscription-was-purchased-during-or-after-february-2018"></a>2018 年 2 月以降に購入したサブスクリプション
 
-Azure Rights Management を含むサブスクリプションを 2018 年 2 月以降に購入した場合は、既定では Azure Rights Management サービスはアクティブ化されています。 Active Directory Rights Management サービス (AD RMS) も使用している場合は、この組み合わせには互換性がありません。 追加の手順を行うことなく、一部のコンピューターでは、Azure Rights Management サービスの使用が自動的に開始され、AD RMS クラスターへの接続も行われる場合があります。 このシナリオはサポートされておらず、信頼できる結果が得られないため、すぐに Azure Rights Management サービスを非アクティブ化することが重要です。 
+2018 年 2 月末日まで、Azure Information Protection を含む新しいサブスクリプションでは、既定により Azure Rights Management サービスがアクティブになります。 このサービスが自動的にアクティブ化されていて、Active Directory Rights Management サービス (AD RMS) も使用している場合は、この組み合わせには互換性がありません。 追加の手順を行うことなく、一部のコンピューターでは、Azure Rights Management サービスの使用が自動的に開始され、AD RMS クラスターへの接続も行われる場合があります。 このシナリオはサポートされておらず、信頼できる結果が得られないため、すぐに Azure Rights Management サービスを非アクティブ化することが重要です。 
 
 AD RMS から Azure Rights Management サービスにコンピューターを移動する準備ができたら、移行プロセスを開始することができます。 移行手順の 1 つはサービスをもう一度アクティブにすることですが、この手順は AD RMS から Azure Rights Management サービスに構成情報をエクスポートした後で行います。 この順序により、AD RMS で保護されたドキュメントと電子メールを引き続き開けるようになります。
 
