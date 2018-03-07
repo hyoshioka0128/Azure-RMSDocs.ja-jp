@@ -1,10 +1,10 @@
 ---
-title: "Azure RMS カスタム テンプレート用の PowerShell - AIP"
-description: "Azure Portal で権限管理テンプレートを作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
+title: "保護テンプレート用の PowerShell - Azure Information Protection"
+description: "Azure Portal で保護テンプレートを作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,28 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8e31eb4f573a149ae39c32c89607775de61bfce
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 051144562b1c26a22953f6e83a41b4902404fd2f
+ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="powershell-reference-for-custom-templates"></a>カスタム テンプレート用の PowerShell リファレンス
+# <a name="powershell-reference-for-protection-templates"></a>保護テンプレート用の PowerShell リファレンス
 
 >*適用対象: Azure Information Protection、Office 365*
 
-Azure Portal でテンプレートを作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 また、テンプレートをエクスポートおよびインポートして、テナント間でテンプレートをコピーしたり、テンプレート内の複雑なプロパティ (多言語の名前や説明など) を一括編集したりできます。
+Azure Information Protection の保護設定は、保護テンプレートに保存されます。 Azure Portal で保護設定を作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 
 
-エクスポートとインポートを使用して、カスタム テンプレートをバックアップおよび復元することもできます。ベスト プラクティスとして、意図しない変更を行った場合に以前のバージョンに簡単に戻すことができるように、カスタム テンプレートを定期的にバックアップします。
+さらに、保護テンプレートのエクスポートとインポートもできます。 これら 2 つの操作により、テナント間で保護テンプレートをコピーしたり、多言語の名前や説明などの複雑なプロパティを一括編集したりできるようになります。
 
-> [!IMPORTANT]
-> PowerShell を使用して Azure Rights Management テンプレートを作成および管理するには、[Azure RMS 用の Windows PowerShell モジュール](https://go.microsoft.com/fwlink/?LinkId=257721)のバージョン 2.0.0.0 以降が必要です。
-> 
-> 既にこの PowerShell モジュールがインストールされている場合は、PowerShell ウィンドウで次のコマンドを実行してバージョン番号を確認してください。`(Get-Module aadrm -ListAvailable).Version`
+エクスポートとインポートを使用して保護テンプレートをバックアップして復元することもできます。 テンプレートは定期的にバックアップすることをお勧めします。 これで、意図しない保護設定を変更してしまった場合でも、前のバージョンに簡単に戻すことができます。
 
 インストール手順については、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
-テンプレートの作成および管理をサポートするコマンドレットは次のとおりです。
+保護テンプレートの作成および管理をサポートするコマンドレットは次のとおりです。
 
 - [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
 

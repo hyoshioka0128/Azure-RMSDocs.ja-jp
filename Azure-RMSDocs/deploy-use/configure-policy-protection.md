@@ -4,17 +4,17 @@ description: "Rights Management 保護を使用するようにラベルを構成
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e4f4ced3495af71cd36caf8fc54258cd77befd99
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -60,10 +60,14 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 4. **[ラベル]** ブレードで、**[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけ、下記オプションから 1 つ選択します。
     
     - **[未構成]**: 現在、ラベルが保護を適用するように構成されており、選択したラベルにこれ以上保護を適用しない場合は、このオプションを選択します。 次に手順 11 に進みます。
+        
+        以前に構成された保護設定はアーカイブ済みの保護テンプレートとして保持され、オプションを **[保護]** に戻すと再び表示されます。 Azure Portal ではこのテンプレートが表示されませんが、[PowerShell](configure-templates-with-powershell.md) を使用すると、必要に応じてテンプレートを引き続き管理することができます。 この動作は、テンプレートに以前に適用された保護設定のラベルが含まれる場合に、引き続きコンテンツにアクセスできることを意味します。
     
     - **[保護]**: 保護を適用するには、このオプションを選択し、手順 5. に進みます。
     
     - **[保護の削除]**: ドキュメントまたはメールが保護されている場合に保護を削除するには、このオプションを選びます。 次に手順 11 に進みます。
+        
+        以前に構成された保護設定はアーカイブ済みの保護テンプレートとして保持され、オプションを **[保護]** に戻すと再び表示されます。 Azure Portal ではこのテンプレートが表示されませんが、[PowerShell](configure-templates-with-powershell.md) を使用すると、必要に応じてテンプレートを引き続き管理することができます。 この動作は、テンプレートに以前に適用された保護設定のラベルが含まれる場合に、引き続きコンテンツにアクセスできることを意味します。
         
         このオプションを持つラベルを適用するには、ユーザーは Rights Management による保護を削除するアクセス許可を持っている必要があることに注意してください。 この要件は、ユーザーが**エクスポート**または**フル コントロール**の[使用権限](../deploy-use/configure-usage-rights.md)を持っている必要があることを意味します。 あるいは、Rights Management の所有者 (自動的にフル コントロールの使用権限が付与されています) であるか、[Azure Rights Management のスーパー ユーザー](../deploy-use/configure-super-users.md)である必要があります。 既定の Azure Rights Management テンプレートには、ユーザーに保護を削除させる使用権限は含まれません。 
         
@@ -113,7 +117,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
     必要に応じて、ユーザーとグループの 2 つ目のセットと使用権限を追加できます。 すべてのユーザーとグループとそれぞれのアクセス許可が指定されるまで繰り返します。
 
     >[!TIP]
-    >カスタム アクセス許可の **[コンテンツのコピーと抽出]** の追加を検討し、このアクセス許可をデータ復旧管理者か、情報復旧を担当するその他の役割が与えられた人に付与します。 このようなユーザーは、必要であれば、このラベルまたはテンプレートで保護されるファイルやメールから保護を削除できます。 ドキュメントまたはメールの保護をアクセス許可レベルで削除できれば、[スーパー ユーザー機能](configure-super-users.md)より詳細な制御が可能になります。
+    >カスタム アクセス許可の **[名前を付けて保存、エクスポート (EXPORT)]** の追加を検討し、このアクセス許可をデータ復旧管理者か、情報復旧を担当するその他の役割が与えられた人に付与します。 このようなユーザーは、必要であれば、このラベルまたはテンプレートで保護されるファイルやメールから保護を削除できます。 ドキュメントまたはメールの保護をアクセス許可レベルで削除できれば、[スーパー ユーザー機能](configure-super-users.md)より詳細な制御が可能になります。
     
     指定したすべてのユーザーとグループに対して、**[保護]** ブレードで、次の設定を変更するかどうかを確認します。 アクセス許可と同様に、これらの設定は、[Rights Management の発行者や Rights Management の所有者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)、管理者によって割り当てられた[スーパー ユーザー](configure-super-users.md)には適用されません。
     
@@ -225,6 +229,8 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 このラベルは、Outlook を制限することはできませんが、[転送不可] を使用するよりも制限の緩い制御を提供します。 たとえば、受信者に電子メールまたは添付ファイルからコピーしたり、添付ファイルを印刷または保存することを許可できます。
 
 Azure AD のアカウントを持たない外部ユーザーを指定する場合は、ユーザーに対して、このラベルを電子メールにのみ使用して、ドキュメントには使用しないように確実に指示します。 さらに、これらの外部ユーザーをサポートするために、[Office 365 Message Encryption の新しい機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に対して Exchange Online を構成する必要があります。  
+> [!NOTE]
+> Exchange Online が新しいオプションである [[暗号化のみ]](configure-usage-rights.md#encrypt-only-option-for-emails) をロールアウトしています。 このオプションはラベル構成では使用できません。
 
 ユーザーが **[宛先]** ボックスに電子メール アドレスを指定する場合、そのアドレスは、このラベル構成に指定したものと同じユーザーのアドレスである必要があります。 ユーザーは複数のグループに属して、複数の電子メール アドレスを持つことができるため、ユーザーが指定する電子メールアドレスが、アクセス許可用に指定した電子メール アドレスと一致している必要はありません。 ただし、受信者が正常に承認されるようにするには、同じ電子メール アドレスを指定するのが最も簡単です。 ユーザーがどのようにアクセス許可を付与されるかに関する詳細は、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」を参照してください。 
 

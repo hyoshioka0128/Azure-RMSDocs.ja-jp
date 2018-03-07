@@ -4,7 +4,7 @@ description: "Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: bfe4074710bd93c92e383056f587994ec805b6c2
-ms.sourcegitcommit: 4234de57201411cd9b292492fddc683df0e6b4cc
+ms.openlocfilehash: badc9ea2db84e0537ab394ccb616c0d172469e35
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -202,7 +202,10 @@ Azure Information Protection スキャナーをインストールする前に、
 
 [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) の実行時に `-Type` パラメーターを **[Full]** に設定すると、スキャナーにすべてのファイルの検査を強制することができます。 この構成は、レポートにすべてのファイルを含める必要がある場合に役立ち、通常は検索モードでスキャナーが実行されるときに使用されます。 フル スキャンが完了すると、後続のスキャンで新しいファイルまたは変更されたファイルのみがスキャンされるように、スキャンの種類が自動的に [増分] に変更されます。
 
-さらに、新しいまたは変更された条件を含む Azure Information Protection ポリシーをスキャナーがダウンロードした場合も、すべてのファイルが検査されます。 スキャナーは、1 時間ごと、およびサービスの開始時にポリシーを更新します。
+さらに、新しいまたは変更された条件を含む Azure Information Protection ポリシーをスキャナーがダウンロードした場合も、すべてのファイルが検査されます。 スキャナーは、1 時間ごと、およびサービスの開始時にそのポリシーが 1 時間前よりも古い場合にポリシーを更新します。
+
+> [!TIP]
+> テスト期間など、この 1 時間の間隔よりも早くポリシーを更新する必要がある場合は、ポリシー ファイル **%LocalAppData%\Microsoft\MSIP\Policy.msip** を手動で削除して、Azure Information スキャナー サービスを再起動してください。
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのパフォーマンスの最適化
 
