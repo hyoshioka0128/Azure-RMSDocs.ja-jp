@@ -4,7 +4,7 @@ description: "Azure Information Protection のテナント キーを自分で管
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 47f2e19e7eed107a44ac1bed744015c878876e9f
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 70d34253300e2bef442cdd7d8cf2c06ac8a9fd88
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
@@ -59,9 +59,9 @@ Azure Information Protection に対してキーの再入力が必要になる場
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
 あなたはテナント キーを管理しているので、Azure Information Protection で使用されるキーをバックアップする責任があります。 
 
-オンプレミスの Thales HSM で、テナント キーを生成した場合: キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、これを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
+オンプレミスの Thales HSM で、テナント キーを生成した場合: キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、このトークン化されたキー ファイルを完全なバックアップとは考えないでください。 これは回復不可能なコピーであるため、たとえば Thales HSM の外部で使用するためにキーのプレーンテキスト コピーが必要になった場合でも、Azure Key Vault はこれを取得することができません。
 
-Azure Key Vault には[バックアップ コマンドレット](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey)が用意されています。これを使用すれば、キーをダウンロードしてファイルに保存することで、キーのバックアップを作成できます。 ダウンロードされたコンテンツは暗号化されているため、Azure Key Vault の外部で使用することはできません。 
+Azure Key Vault には、[バックアップ コマンドレット](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey)が用意されています。これを使用すれば、キーをダウンロードしてファイルに保存することで、キーのバックアップを作成できます。 ダウンロードされたコンテンツは暗号化されているため、Azure Key Vault の外部で使用することはできません。 
 
 ## <a name="export-your-tenant-key"></a>テナント キーのエクスポート
 BYOK を使用する場合、テナント キーを Azure Key Vault または Azure Information Protection からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 
@@ -75,10 +75,10 @@ BYOK を使用する場合、テナント キーを Azure Key Vault または Az
 
 |インシデントの説明|考えられる対応|
 |------------------------|-------------------|
-|テナント キーが漏れています。|テナント キーを再入力します。 「[テナント キーの再入力](#rkey-your-tenant-key)」をご覧ください。|
+|テナント キーが漏れています。|テナント キーを再入力します。 「[テナント キーの再入力](#rekey-your-tenant-key)」をご覧ください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
-|現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを更新するように指示します。|
-|RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure Information Protection を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
+|現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを再入力するように指示します。|
+|RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure Information Protection を更新し、すべてのお客様にテナント キーの再入力を指示する必要があります。|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

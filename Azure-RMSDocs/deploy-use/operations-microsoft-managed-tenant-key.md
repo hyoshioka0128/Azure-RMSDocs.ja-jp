@@ -4,7 +4,7 @@ description: "Microsoft が Azure Information Protection のテナント キー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: dea6fffc32876b548e5daa33a76e7891088f1e9b
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
@@ -75,7 +75,7 @@ Azure Information Protection の構成およびテナント キーをエクス�
     ```
     この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 たとえば、**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** と **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
 
-    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 たとえば、
+    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 次に例を示します。
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
@@ -103,9 +103,9 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
 |インシデントの説明|考えられる対応|
 |------------------------|-------------------|
-|テナント キーが漏れています。|テナント キーを再入力します。 この記事の「[テナント キーの再入力](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key)」セクションをご覧ください。|
+|テナント キーが漏れています。|テナント キーを再入力します。 この記事の「[テナント キーの再入力](#rekey-your-tenant-key)」セクションをご覧ください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
-|RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Information Protection を更新し、すべてのお客様にテナント キーの更新を指示する必要があります。|
+|RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Information Protection を更新し、すべてのお客様にテナント キーの再入力を指示する必要があります。|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
