@@ -4,7 +4,7 @@ description: "AD RMS から Azure Information Protection への移行のフェ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d516d9c82ce0c7bfd35dbb839cd861a301c3443f
-ms.sourcegitcommit: bb6be1812beb6adf73203c352f73ef3006416848
+ms.openlocfilehash: c4279991a91dee1f4645209eda937ca288716761
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -29,27 +29,20 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
 
 ## <a name="step-8-configure-irm-integration-for-exchange-online"></a>手順 8. IRM と Exchange Online の統合を構成する
 
+> [!IMPORTANT]
+> ユーザーを移行したどの受信者が保護されたメールを選択するか制御できないため、組織内のすべてのユーザーとメールを有効にしたグループに、Azure Information Protection で使用できる Azure AD のアカウントがあることを確認します。 [詳細情報](prepare.md)
+
 選択した Azure Information Protection テナント キー トポロジから個別に、次の操作を行います。
 
-1. Exchange Online [Get IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
+1. ユーザーが AD RMS の保護を使用して送信されたメールを閲覧できるようにするには、AD RMS クラスター用に DNS SRV レコードがあることを確認します。 手順 7 でクライアントの再構成用に DNS SRV レコードを作成しなかった場合は、ここで Exchange Online をサポートするためにこのレコードを作成します。 [手順](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+
+2. Exchange Online [Get IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
     
     出力で、**AzureRMSLicensingEnabled** が **True** に設定されているかどうかを確認します。
     
     - AzureRMSLicensingEnabled が **True** に設定されている場合は、この手順の追加の構成は必要ありません。 
     
     - AzureRMSLicensingEnabled が **False** に設定されている場合は、「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」(Azure Information Protection 上に構築される新しい Office 365 Message Encryption 機能の設定) を参照してください。 
-
-2. 次の PowerShell コマンドを実行し、AD RMS 保護を使って送信されたメールをユーザーが読めるようにします。
-
-    *\<yourcompany.domain>* を実際の組織のドメイン名に置き換えます。
-
-        $irmConfig = Get-IRMConfiguration
-        $list = $irmConfig.LicensingLocation
-        $list += "https://adrms.<yourcompany.domain>/_wmcs/licensing"
-        Set-IRMConfiguration -LicensingLocation $list
-        Set-IRMConfiguration -internallicensingenabled $false
-        Set-IRMConfiguration -internallicensingenabled $true
-
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9. Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
 
