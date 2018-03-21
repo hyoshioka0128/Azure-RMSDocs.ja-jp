@@ -4,7 +4,7 @@ description: "管理者が PowerShell を使って Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 714afa8c839d91ba61043a643433c5045a4aad7d
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -534,6 +534,8 @@ AzureInformationProtection モジュールをインストールするための�
 > このオプションには、Azure Information Protection スキャナーの一般提供 (GA) 版、または Azure Information Protection クライアントの最新プレビュー版が必要です。
 
 次の追加の手順と指示に従うと、ファイルにラベルを付け、保護するアカウントの初回対話式サインインを回避できます。 通常、この追加手順は、アカウントに**ローカルでログオンする**権限を与えられないが、**バッチ ジョブとしてログオン**権限が与えられている場合にのみ必要です。 たとえば、Azure Information Protection スキャナーを実行するサービス アカウントなどがこれに該当します。
+
+大まかな手順:
 
 1. ローカル コンピューターで PowerShell スクリプトを作成します。
 

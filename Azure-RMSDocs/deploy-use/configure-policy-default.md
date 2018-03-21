@@ -4,17 +4,17 @@ description: "Azure Information Protection の既定のポリシーの構成方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
@@ -30,7 +30,11 @@ ms.lasthandoff: 02/23/2018
 
 このバージョンの既定のポリシーは、2017 年 7 月 31 日付けのものです。
 
-この既定のポリシーは、ポリシーの作成時に Azure Rights Management サービスが[アクティブ化](activate-service.md)された場合にのみ作成されます。 このサービスがアクティブ化されなかった場合、既定のポリシーでは次のサブラベルに保護は構成されません。
+この既定のポリシーは、Azure Rights Management サービスがアクティブ化される場合 (2018 年 2 月以降の新しいテナントの場合) に作成されます。 詳細については、ブログ投稿のお知らせ「[Improvements to the protection stack in Azure Information Protection (Azure Information Protection の保護スタックの向上)](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection)」を参照してください。
+
+この既定のポリシーは、ポリシーの作成前に手動で[サービスをアクティブ化](activate-service.md)した場合にも作成されます。 
+
+サービスがアクティブ化しなかった場合、既定のポリシーは次のサブラベルの保護を構成しません。
 
 - **社外秘 \ すべての従業員**
 

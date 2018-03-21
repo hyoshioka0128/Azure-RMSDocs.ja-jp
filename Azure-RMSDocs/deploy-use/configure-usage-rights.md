@@ -4,7 +4,7 @@ description: "Azure Information Protection から Azure Rights Management サー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: faa00eee76e6c084db1a4dfb1d477e491fae5fee
-ms.sourcegitcommit: 3e9b3c2206807e82cc4721a50862b74152906f63
+ms.openlocfilehash: 8411fd46305da69e8fe06ae3851d5066695cdc24
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -95,7 +95,7 @@ Azure Portal または Windows 用 Azure Information Protection クライアン�
 
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
-Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange トランスポート ルールなど) には、**[転送不可]** というメール用の追加の情報権限保護オプションがあります。 
+Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange メール フロー ルールなど) には、**[転送不可]** というメール用の追加の情報権限保護オプションがあります。 
 
 このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、Azure Rights Management のテンプレートを表示し、管理するとき、Azure Portal には表示されません。 **[転送不可]** オプションは権限の集合であり、ユーザーが電子メール受信者に動的に適用します。
 
@@ -116,7 +116,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 Exchange Online で Office 365 Message Encryption の新機能を使用する場合、新しい電子メール オプション (**暗号化のみ**) を利用できます。
 
-このオプションは Exchange Online を使用するテナントに展開されています。最初は Outlook on the web 用のみで、トランスポート ルールの別の権利保護オプションとして使用します。 詳細については、Office チームからのブログ投稿によるお知らせ「[Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018)」(Office 365 Message Encryption の暗号化のみのロールアウト) を参照してください。
+このオプションは Exchange Online を使用するテナントに展開されています。最初は Outlook on the web 用のみで、メール フロー ルールの別の権利保護オプションとして使用します。 詳細については、Office チームからのブログ投稿によるお知らせ「[Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018)」(Office 365 Message Encryption の暗号化のみのロールアウト) を参照してください。
 
 このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 さらに、受信者にはフル コントロールを除く、すべての使用権限を持ちます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 同様に、添付および自動的に保護された任意の Office ドキュメントは、保存、コピー、および印刷できます。
 
@@ -165,7 +165,6 @@ Azure Rights Management によって保護されたドキュメントまたは�
 - PowerShell を使用してテンプレートを構成する場合、使用ライセンスの有効期間としては、[Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) および [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) コマンドレットの *LicenseValidityDuration* パラメーターの値が使用されます。
     
     PowerShell を使用してこの設定を構成するための詳細とガイダンスについては、各コマンドレットのヘルプを参照してください。
-
 
 ## <a name="see-also"></a>参照
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
