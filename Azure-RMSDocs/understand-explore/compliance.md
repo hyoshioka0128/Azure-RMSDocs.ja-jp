@@ -4,7 +4,7 @@ description: "法律、コンプライアンス、SLA を含む Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ef0b40db5dbbb66d7cbf45028862576a58886051
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: 2980032c72905ec237dea799e8d6d13e11746df3
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
@@ -56,11 +56,11 @@ Azure Rights Management サービスの特定の認証についての情報に�
 
 ## <a name="service-level-agreements"></a>サービス レベル アグリーメント
 
-- 主なリージョンごとの Azure Information Protection のサービス レベル アグリーメント: [製品ライセンスの検索ページからダウンロード](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- [Azure Information Protection の SLA](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-    - たとえば、北米向けの 2016 年 3 月のサービス レベル アグリーメントをダウンロードするには、**[OnlineSvcsConsolidatedSLA(WW)(English)(March2016)]** をクリックします。
+- [Azure Active Directory の SLA](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
 
--   Azure Active Directory のサービス レベル アグリーメント: [サービス レベル アグリーメント](http://azure.microsoft.com/support/legal/sla/)
+- [Azure Key Vault の SLA](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
 
 ## <a name="documentation"></a>ドキュメント
 

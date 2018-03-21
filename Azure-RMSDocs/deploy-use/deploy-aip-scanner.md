@@ -4,7 +4,7 @@ description: "Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3c15fe1e43f5a9d93ad70e6ac401592bbd41754b
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: f3c302b2379262a6dac87873cb607cf3cd408bcd
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -58,7 +58,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのインストール
 
-1. スキャナーを実行するために作成したサービス アカウントを使用して、スキャナーを実行する Windows Server コンピューターにサインインします。
+1. スキャナーを実行する Windows Server コンピューターにサインインします。 ローカル管理者権限と SQL Server マスター データベースに書き込むためのアクセス許可を持つアカウントを使用します。
 
 2. **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開きます。
 
@@ -92,15 +92,17 @@ Azure Information Protection スキャナーをインストールする前に、
     
     これらのアプリケーションを作成するには、管理者ガイドの「[非対話形式でファイルに Azure Information Protection のラベル付けをする方法](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」の指示に従います。
 
-2. スキャナー サービス アカウントでサインインしたまま、Windows Server コンピューターから、前の手順からコピーした値を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行します。
+2. スキャナーのサービス アカウントにインストール用に**ローカルでログオン**する権限が付与されている場合、Windows Server コンピューターから、このアカウントを使用してサインインし、PowerShell セッションを開始します。 前の手順でコピーした値を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行します。
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
+    
+    求められたら、Azure AD のサービス アカウントの資格情報のパスワードを指定し、**[同意する]** をクリックします。
+    
+    スキャナーのサービス アカウントにインストールのための**ローカルでログオン**の権限が付与されない場合、管理者ガイドの「[Set-AIPAuthentication の Token パラメーターを指定し、使用する](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」の手順に従います。 
 
-3. 求められたら、Azure AD のサービス アカウントの資格情報のパスワードを指定し、**[同意する]** をクリックします。
-
-これでスキャナーに Azure AD を認証するためのトークンが取得されました。トークンの有効期間は、Azure AD での **Web アプリ/API** の構成に従って、1 年間、2 年間、または無期限のいずれかになります。 トークンが期限切れになったら、手順 1 から 3 を繰り返す必要があります。
+これでスキャナーに Azure AD を認証するためのトークンが取得されました。トークンの有効期間は、Azure AD での **Web アプリ/API** の構成に従って、1 年間、2 年間、または無期限のいずれかになります。 トークンが期限切れになったら、手順 1 と 2 を繰り返す必要があります。
 
 これでスキャンするデータ ストアを指定する準備ができました。 
 
@@ -209,7 +211,7 @@ Azure Information Protection スキャナーをインストールする前に、
 > 
 > ポリシーの保護設定を変更した場合、保護設定を保存してから 15 分待機した後に、サービスを再起動してください。
 
-スキャナーで自動条件が構成されていないポリシーをダウンロードした場合、スキャナー フォルダーのポリシー ファイルのコピーは更新されません。 このシナリオでは、ラベルが自動条件に対して正しく構成された新たにダウンロードしたポリシー ファイルを使用できるようにするには、その前に **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** ファイルを削除する必要があります。
+スキャナーで自動条件が構成されていないポリシーをダウンロードした場合、スキャナー フォルダーのポリシー ファイルのコピーは更新されません。 このシナリオでは、ラベルが自動条件に対して正しく構成された新たにダウンロードしたポリシー ファイルを使用できるようにするには、その前に **%LocalAppData%\Microsoft\MSIP\Policy.msip** と **%LocalAppData%\Microsoft\MSIP\Scanner** からポリシー ファイル **Policy.msip** を削除する必要があります。
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのパフォーマンスの最適化
 

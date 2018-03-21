@@ -4,17 +4,17 @@ description: "Azure Information Protection による HYOK (AD RMS) 保護を選�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 6167b99593bacdf9e717c3b57839440bac39ecec
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: a0329d66ee71ee815c0700a63172617d1fddf30a
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
@@ -89,13 +89,19 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
         
         - それぞれが独立した AD RMS ルート クラスターを持つ複数のフォレスト。ユーザーは他のフォレスト内のユーザーによって保護されているコンテンツにアクセスすることはできません。
         
-        - それぞれが AD RMS クラスターを持つ複数のフォレスト。 各 AD RMS クラスターは、同じ AD RMS クラスターを指すライセンス URL を共有します。 この AD RMS クラスターには、その他のすべての AD RMS クラスターからすべての信頼されたユーザー ドメイン (TUD) の証明書をインポートする必要があります。 このトポロジの詳細については、[信頼されたユーザー ドメイン](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx) を参照してください。
+        - それぞれが AD RMS クラスターを持つ複数のフォレスト。 各 AD RMS クラスターは、同じ AD RMS クラスターを指すライセンス URL を共有します。 この AD RMS クラスターには、その他のすべての AD RMS クラスターからすべての信頼されたユーザー ドメイン (TUD) の証明書をインポートする必要があります。 このトポロジの詳細については、「[Trusted User Domain (信頼されたユーザー ドメイン)](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx)」を参照してください。
         
     個々のフォレスト内に複数の AD RMS クラスターがある場合は、HYOK (AD RMS) 保護を適用するグローバル ポリシー内のラベルを削除し、クラスターごとに [スコープ付きポリシー](configure-policy-scope.md) を構成します。 次に、各クラスターのユーザーを、対応するスコープ付きポリシーに割り当てて、ユーザーが複数のスコープ付きポリシーに割り当てられていることになるグループを使用しないようにします。 結果として、各ユーザーは 1 つの AD RMS クラスターのみのラベルを持つことになります。 
     
     - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスター プロパティの **[全般]** タブから、モードを確認できます。
     
-    - サービス接続ポイント (SCP) が Active Directory に登録されていない: SCP は、AD RMS 保護と Azure Information Protection が併用されるときは使用されません。 AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](../rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。
+    - 各 AD RMS サーバーが証明書の URL 用に構成されます。 [手順](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+    
+    - サービス接続ポイント (SCP) が Active Directory に登録されていない: SCP は、AD RMS 保護と Azure Information Protection が併用されるときは使用されません。 
+    
+        - AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](../rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。 
+        
+        - HYOK の新しい AD RMS クラスターをインストールする場合は、最初のノードの構成時に SCP を登録する手順をスキップしてください。 各追加ノードについて、AD RMS の役割を追加して、既存のクラスターに参加する前に、証明書の URL についてサーバーが構成されていることを確認します。
     
     - 接続先のクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように AD RMS サーバーが構成されている: 運用環境では必須ですが、テストまたは評価目的の場合は必須ではありません。
     
@@ -114,6 +120,24 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
 
 AD RMS のデプロイの情報と手順については、Windows Server ライブラリの「[Active Directory Rights Management Services の概要](https://technet.microsoft.com/library/hh831364.aspx)」を参照してください。 
 
+
+## <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>証明書の URL を確認するように AD RMS サーバーを構成する
+
+1. クラスターの各 AD RMS サーバーで、次のレジストリ エントリを作成します。
+
+    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
+    
+    \<文字列値> の場合、次のいずれかを指定します。
+    
+    - SSL/TLS を使用した AD RMS クラスターの場合:
+
+            https://<cluster_name>/_wmcs/certification/certification.asmx
+    
+    - SSL/TLS を使用しない AD RMS クラスターの場合 (テスト ネットワークのみ):
+        
+            http://<cluster_name>/_wmcs/certification/certification.asmx
+
+2. IIS を再開します。
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
 

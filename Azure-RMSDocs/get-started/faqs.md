@@ -4,7 +4,7 @@ description: "Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0a351c59b9c0cb3d26b5c7e623928ecb53900f41
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 604f675b34bfdc4dddb3c36c73c13dcccae40f11
+ms.sourcegitcommit: 2749d8d41fd374a9e4e2697a684eeb2bf85082d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -51,7 +51,7 @@ Windows 用の Rights Management 共有アプリケーションを現在使用�
 
 Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Information Protection のすべての管理タスクを実行できます。 ただし、管理アクセス許可を他のユーザーに割り当てる場合は、次のオプションがあります。
 
-- **Information Protection 管理者** (現在プレビュー段階): この Azure Active Directory 管理者ロールでは、管理者が Azure Information Protection のさまざまな設定を構成できますが、他のサービスは構成できません。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[AADRM モジュールからすべての PowerShell コマンドレット](../deploy-use/administer-powershell.md)を実行できます。 
+- **Information Protection 管理者**: この Azure Active Directory 管理者ロールでは、管理者が Azure Information Protection のさまざまな設定を構成できますが、他のサービスは構成できません。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[AADRM モジュールからすべての PowerShell コマンドレット](../deploy-use/administer-powershell.md)を実行できます。 
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。
 
