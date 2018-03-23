@@ -1,22 +1,22 @@
 ---
-title: "Azure Information Protection クライアント&colon; バージョン リリース履歴とサポート ポリシー"
-description: "Windows 用 Azure Information Protection クライアントのリリースの新機能と変更点、サポートのライフサイクル ポリシーについて説明します。"
+title: Azure Information Protection クライアント&colon; バージョン リリース履歴とサポート ポリシー
+description: Windows 用 Azure Information Protection クライアントのリリースの新機能と変更点、サポートのライフサイクル ポリシーについて説明します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 10fe839ff24994af0c50fff6aeac303d57a19ea6
+ms.sourcegitcommit: 65d6b0ecfbca5071afe29e63aea6226ad7a911b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -154,30 +154,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - カスタムのアクセス許可を指定するときの電子メール検証。 また、Enter を押し、複数の電子メール アドレスを指定できるようになりました。
 
 - すべての下位ラベルの保護を設定するとき、親ラベルが表示されません。クライアントには、保護対応の Office エディションが与えられません。 
-
-## <a name="version-172100"></a>バージョン 1.7.210.0
-
-**リリース日**: 2017 年 6 月 6 日
-
-このバージョンには、MSIPC バージョン 1.0.2217.1 の RMS クライアントが含まれています。
-
-**新機能**:
-
-- 新しい PowerShell コマンドレット: [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification)。 このコマンドレットを実行すると、Azure Information Protection ポリシーで指定した条件に従って、ファイルの内容を検査し、ラベル付けされていないファイルに自動でラベルを付与します。
-
-**修正内容**:
-
-- 現在、ラベル付けと分類を行うすべてのコマンドレットは、インターネットに接続されておらず、Azure Information Protection ポリシーが有効になっているコンピューターでサポートされます。
-
-- 整合性を保つため、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) コマンドレットの出力パラメーターは、英語 (英国) (**IsLabelled**) から英語 (米国) (**IsLabeled**) に変更されます。 このパラメーターを検索するスクリプトまたは自動プロセスを使用している場合は、このパラメーターのスペルを更新してください。
-
-- 安定性を改善するための一般的な修正は次のとおりです。
-
-    - Outlook: クラッシュ、高いメモリ消費量、メニューの表示に関する問題を修正。
-    
-    - Word、Excel、PowerPoint: 高い CPU 使用率、サイズの大きい Excel ファイルを保存する際の表示に関する問題、またはアプリケーションが応答を停止する問題を修正。 
-    
-    また、これらのアプリケーションに関して、SharePoint Online での Office 2016 と OneDrive for Business のパフォーマンスを改善するため、ファイルを保存するとき (自動保存、またはユーザーが保存を選択したとき) ではなくファイルを閉じるときに、推奨のラベル付けを自動で行います。 同様に、**[All documents and email must have a label]\(すべてのドキュメントと電子メール アドレスにラベルが必要\)** の設定が有効になっている場合は、ファイルを閉じるとき以外にラベルを選択するように求めるメッセージが表示されることはありません。 Word 2016 と Excel 2016 で、ユーザーが **[名前を付けて保存]** オプションを選択するときは例外です。 そのときに、これらが構成されている場合は、この操作によってラベル付け動作がトリガーされます。 
 
 ## <a name="next-steps"></a>次の手順
 
