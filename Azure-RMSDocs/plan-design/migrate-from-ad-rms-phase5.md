@@ -1,22 +1,22 @@
 ---
-title: "AD RMS から Azure Information Protection への移行 - フェーズ 5"
-description: "AD RMS から Azure Information Protection への移行のフェーズ 5 には、手順 10 から 12 が含まれます。"
+title: AD RMS から Azure Information Protection への移行 - フェーズ 5
+description: AD RMS から Azure Information Protection への移行のフェーズ 5 には、手順 10 から 12 が含まれます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 520773a2a893e7e88feb970a2539db4100287a72
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -116,7 +116,7 @@ Azure Information Protection テナント キーを更新するには:
 
 - **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
 
-Azure Information Protection テナント キーの管理の詳細については、「[Azure Rights Management テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
+Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 
 
 ## <a name="next-steps"></a>次の手順

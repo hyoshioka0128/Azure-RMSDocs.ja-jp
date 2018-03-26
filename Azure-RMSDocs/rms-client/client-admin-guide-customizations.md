@@ -1,22 +1,22 @@
 ---
-title: "Azure Information Protection クライアントのカスタム構成"
-description: "Windows 用 Azure Information Protection クライアントのカスタマイズに関する情報。"
+title: Azure Information Protection クライアントのカスタム構成
+description: Windows 用 Azure Information Protection クライアントのカスタマイズに関する情報。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e5c71068f979c13b2d8c9ee7c9c5c43e2ad3a7ad
+ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -202,9 +202,91 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 - 値: \<**ラベル ID**> または**なし**
 
+## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 さらに、この構成オプションにはクライアントのプレビュー バージョンが必要です。
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+Secure Islands によってラベル付けされた Office ドキュメントや PDF ドキュメントは、Azure Information Protection のラベルでラベル付けし直すことができます。そのためには、独自に定義したマッピングを使用します。 また、この方法を使用して、他のソリューションからのラベルを、そのラベルが Office ドキュメントにある場合は再利用することができます。 
+
+この構成オプションの結果として、Azure Information Protection の新しいラベルは、Azure Information Protection クライアントによって次のように適用されます。
+
+- Office ドキュメントの場合: デスクトップ アプリでドキュメントを開くと、Azure Information Protection の新しいラベルが設定されたことが表示され、ドキュメントを保存すると適用されます。
+
+- エクスプローラーの場合: [Azure Information Protection] ダイアログ ボックスで、Azure Information Protection の新しいラベルが設定されたことが表示され、ユーザーが **[適用]** を選択すると適用されます。 ユーザーが **[キャンセル]** を選択した場合、新しいラベルは適用されません。
+
+- PowerShell の場合: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) によって、Azure Information Protection の新しいラベルが適用されます。 [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) では、別の方法で設定されるまで、Azure Information Protection の新しいラベルは表示されません。
+
+- Azure Information Protection スキャナーの場合: Azure Information Protection の新しいラベルが設定され、強制モードで適用される可能性がある場合、検出が報告されます。
+
+この構成では、古いラベルにマッピングする Azure Information Protection のラベルごとに、**LabelbyCustomProperty** という名前のクライアントの詳細設定を指定する必要があります。 次に、各エントリに対して、次の構文を使用して値を設定します。
+
+`[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+
+Azure Portal で Azure Information Protection ポリシーを表示または構成するとき、ラベル ID 値は **[ラベル]** ブレードに表示されます。 サブラベルを指定するには、親ラベルが同じスコープまたはグローバル ポリシー内にある必要があります。
+
+任意の移行規則名を指定します。 以前のラベル付けソリューションから Azure Information Protection のラベルに、1 つまたは複数のラベルをマッピングする方法を特定するのに役立つ、わかりやすい名前を使用します。 名前は、スキャナー レポートおよびイベント ビューアーに表示されます。 
+
+### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>例1: 同じラベル名の 1 対 1 のマッピング
+
+Secure Islands の "Confidential" というラベルを持ったドキュメントは、Azure Information Protection の "Confidential" というラベルに変更されます。
+
+この例では、次の点に注意してください。
+
+- Azure Information Protection のラベル **Confidential** のラベルID は、1ace2cc3-14bc-4142-9125-bf946a70542c です。 
+
+- Secure Islands のラベルは、**Classification** という名前のカスタム プロパティに保存されます。
+
+クライアントの詳細設定:
+
+    
+|名前|値|
+|---------------------|---------|
+|LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c、"Secure Islands label is Confidential" (Secure Islands のラベルは Confidential です)、Classification、Confidential|
+
+### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>例 2: 異なるラベル名の 1 対 1 のマッピング
+
+Secure Islands によって "Sensitive" というラベルを付けられたドキュメントは、Azure Information Protection によって "Highly Confidential" というラベルに変更されます。
+
+この例では、次の点に注意してください。
+
+- Azure Information Protection のラベル **Highly Confidential** のラベルID は、3e9df74d-3168-48af-8b11-037e3021813f です。
+
+- Secure Islands のラベルは、**Classification** という名前のカスタム プロパティに保存されます。
+
+クライアントの詳細設定:
+
+    
+|名前|値|
+|---------------------|---------|
+|LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f、"Secure Islands label is Sensitive" (Secure Islands のラベルは Sensitive です)、Classification、Sensitive|
+
+
+### <a name="example-3-many-to-one-mapping-of-label-names"></a>例 3: ラベル名の多対一のマッピング
+
+"Internal" という単語を含む Secure Islands のラベルが 2 つあり、この Secure Islands のラベルのいずれかを含んでいるドキュメントを、Azure Information Protection によって "General" にラベル付けし直します。
+
+この例では、次の点に注意してください。
+
+- Azure Information Protection のラベル **General** のラベル ID は、2beb8fe7-8293-444 c-9768-7fdc6f75014d です。
+
+- Secure Islands のラベルは、**Classification** という名前のカスタム プロパティに保存されます。
+
+クライアントの詳細設定:
+
+    
+|名前|値|
+|---------------------|---------|
+|LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d、"Secure Islands label contains Internal" (Secure Islands のラベルに Internal が含まれます)、Classification、\*Internal\*|
+
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。
+
+> [!NOTE]
+> この構成と前のセクションの構成を使用して、別のラベル付けソリューションから移行する場合は、ラベル付けの移行の設定が優先されます。 
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 

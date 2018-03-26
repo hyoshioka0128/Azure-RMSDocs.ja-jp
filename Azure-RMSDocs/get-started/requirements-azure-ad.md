@@ -1,22 +1,22 @@
 ---
-title: "AIP の Azure Active Directory の要件"
-description: "ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。"
+title: AIP の Azure Active Directory の要件
+description: ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 03/19/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2a079dbc1df01c8c9402d7d79e3f587f13b44654
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 62c9bba17c561fda86393ed4e76c00895613d0e3
+ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -89,9 +89,15 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 
-Rights Management コネクタは MFA をサポートしていません。 オンプレミス サーバー用にこのコネクタを展開する場合、MFA が必要ではないアカウントをコネクタ用に使用する必要があります。
+Rights Management コネクタおよび Azure Information Protection スキャナーでは、MFA はサポートされません。 コネクタまたはスキャナーをデプロイする場合は、次のアカウントで MFA を要求することはできません。
 
-## <a name="next-steps"></a>次のステップ
+- コネクタをインストールおよび構成するアカウント。
+
+- コネクタが作成する、Azure AD のサービス プリンシパル アカウント (**Aadrm_S-1-7-0**)。
+ 
+- スキャナーを実行するサービス アカウント。
+
+## <a name="next-steps"></a>次の手順
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements-azure-rms.md)」をご覧ください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
