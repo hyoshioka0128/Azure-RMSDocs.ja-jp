@@ -1,22 +1,22 @@
 ---
-title: "BYOK の料金と制限事項 - Azure Information Protection"
-description: "Azure Information Protection でお客様が管理するキーを使用する場合 (Bring Your Own Key または BYOK と呼ばれます) は、制限事項を確認してください。"
+title: BYOK の料金と制限事項 - Azure Information Protection
+description: Azure Information Protection でお客様が管理するキーを使用する場合 (Bring Your Own Key または BYOK と呼ばれます) は、制限事項を確認してください。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6e0f63857e3b11af82dae18c23080aa849a9d03b
-ms.sourcegitcommit: 25146c649d5f4c95debebdf3823785139f2d9ea1
+ms.openlocfilehash: ac9324a0418a557682714b6f2b5621a2d9f7530e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
@@ -59,8 +59,8 @@ Azure RMS から信頼された発行ドメイン (TPD) をインポートし、
 
 ## <a name="next-steps"></a>次の手順
 
-独自のキーを管理する場合は、「[Azure Rights Management テナント キーの実装](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
+独自のキーを管理する場合は、「[Azure Information Protection テナント キーを実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
 
-テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Rights Management テナント キーを計画して実装する」の「[次のステップ](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
+テナント キーを Microsoft が管理する既定の構成を使用する場合は、「Azure Information Protection テナント キーを計画して実装する」の「[次の手順](plan-implement-tenant-key.md#next-steps)」セクションを参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

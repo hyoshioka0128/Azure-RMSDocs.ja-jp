@@ -1,22 +1,22 @@
 ---
-title: "Rights Management コネクタをデプロイする - AIP"
-description: "RMS コネクタをデプロイする手順について説明します。RMS コネクタは、Exchange Server、SharePoint Server、または Windows Server とファイル分類インフラストラクチャ (FCI) を使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。"
+title: Rights Management コネクタをデプロイする - AIP
+description: RMS コネクタをデプロイする手順について説明します。RMS コネクタは、Exchange Server、SharePoint Server、または Windows Server とファイル分類インフラストラクチャ (FCI) を使用する既存のオンプレミス デプロイのデータ保護サービスとして機能します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6560381eb07d582d817d00cc76be880998f676f2
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: 87746ad526f191907ad2670604c357e5e926b84e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
@@ -51,7 +51,7 @@ RMS コネクタは、組織のユーザーのうち一部だけがオンライ�
 
 Azure RMS の自分のテナント キーを管理する場合 (Bring Your Own Key または BYOK シナリオ)、そのキーを使用する RMS コネクタとオンプレミス サーバーには、テナント キーを含むハードウェア セキュリティ モジュール (HSM) に対するアクセス権がありません。 これは、テナント キーを使用するすべての暗号操作は、オンプレミスではなく、Azure RMS で実行されるためです。
 
-このような、テナント キーを自主管理するシナリオの詳細については、「[Azure Rights Management テナント キーを計画して実装する](../plan-design\plan-implement-tenant-key.md)」を参照してください。
+このような、テナント キーを独自に管理するシナリオについて詳しくは、「[Azure Information Protection テナント キーを計画して実装する](../plan-design\plan-implement-tenant-key.md)」を参照してください。
 
 ## <a name="prerequisites-for-the-rms-connector"></a>RMS コネクタの前提条件
 RMS コネクタをインストールする前に、次の要件を満たしていることを確認してください。
@@ -91,7 +91,7 @@ RMS コネクタをインストールする前に、次の要件を満たして�
     -   [コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 手順 1: [Azure Rights Management コネクタのインストールと構成](install-configure-rms-connector.md) に進みます。
 
