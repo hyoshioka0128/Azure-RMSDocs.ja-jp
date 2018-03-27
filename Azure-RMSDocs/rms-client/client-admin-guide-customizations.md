@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/20/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e5c71068f979c13b2d8c9ee7c9c5c43e2ad3a7ad
-ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
+ms.openlocfilehash: bb478a91a0af035bc07a77e4aae8c2f6c19eab4a
+ms.sourcegitcommit: c66da7a66f25a3c080e43c548e7945fec35ed751
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -204,7 +204,7 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 さらに、この構成オプションにはクライアントのプレビュー バージョンが必要です。
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 さらに、この構成オプションには、クライアントのプレビュー バージョンまたは Azure Information Protection スキャナーが必要です。
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
@@ -316,13 +316,13 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Exchange メッセージ分類との統合によるモバイル デバイスのラベル付けソリューション
 
-Outlook on the web はまだ Azure Information Protection の分類と保護の機能をネイティブにサポートしていませんが、Exchange メッセージ分類を使用して Azure Information Protection ラベルをモバイル ユーザーに拡張して適用できます。
+Outlook on the web では、Azure Information Protection の分類と保護の機能がまだネイティブでサポートされていませんが、ユーザーが Outlook on the web を使用する場合は、Exchange のメッセージ分類を使用して Azure Information Protection ラベルをモバイル ユーザーに拡張することができます。 Outlook Mobile では、Exchange のメッセージ分類がサポートされません。
 
 このソリューションを実現するには: 
 
 1. [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell コマンドレットを使用して、Azure Information Protection ポリシーのラベル名にマップする名前プロパティでメッセージの分類を作成します。 
 
-2. 各ラベルの Exchange トランスポート ルールを作成します。メッセージのプロパティに構成した分類が含まれる場合はルールを適用し、メッセージ ヘッダーを設定するメッセージ プロパティを変更します。 
+2. ラベルごとに Exchange メール フロー ルールを作成します。メッセージのプロパティに構成した分類が含まれる場合はルールを適用し、メッセージ プロパティを変更してメッセージ ヘッダーを設定します。 
 
     メッセージ ヘッダーについては、Azure Information Protection ラベルを使って送信および分類した電子メールのインターネット ヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、そのすぐあとに続く文字列 (セミコロンまでが対象) を探します。 前の例を使用すると、次のようになります。
     
@@ -330,9 +330,9 @@ Outlook on the web はまだ Azure Information Protection の分類と保護の�
     
     ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 次に例を示します。
     
-    ![例: 特定の Azure Information Protection ラベルのメッセージ ヘッダーを設定する Exchange Online トランスポート ルール](../media/exchange-rule-for-message-header.png)
+    ![例: 特定の Azure Information Protection ラベルのメッセージ ヘッダーを設定する Exchange Online メール フロー ルール](../media/exchange-rule-for-message-header.png)
 
-この構成のテストを行う前に、トランスポート ルールを作成または編集すると遅延 (たとえば、1 時間の遅延) がよく発生することを念頭においてください。 このルールが有効になった場合、ユーザーが Outlook on the web または Rights Management による保護をサポートするモバイル デバイス クライアントを使用すると、次のことが起こります。 
+この構成のテストを行う前に、メール フロー ルールを作成または編集すると遅延 (たとえば、1 時間の遅延) がよく発生することを念頭においてください。 このルールを有効にすると、ユーザーが Outlook on the web または Exchange ActiveSync IRM をサポートするモバイル デバイス クライアントを使用する際に、次のことが起こるようになります。 
 
 - ユーザーが Exchange のメッセージ分類を選択して電子メールを送信します。
 
@@ -340,11 +340,11 @@ Outlook on the web はまだ Azure Information Protection の分類と保護の�
 
 - Azure Information Protection クライアントをインストール済みである受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベルや、対応する電子メールのヘッダー、フッター、または透かしが表示されます。 
 
-Azure Information Protection ラベルが Rights Management による保護を適用する場合は、この保護をルールの構成に追加します。メッセージ セキュリティを変更するオプションを選択して、Rights Management による保護を適用し、RMS テンプレートまたは [転送不可] オプションを選択します。
+Azure Information Protection ラベルが保護を適用する場合は、この保護をルールの構成に追加します。メッセージ セキュリティを変更するオプションを選択して、権利保護を適用し、RMS テンプレートまたは [転送不可] オプションを選択します。
 
-また、トランスポート ルールを構成して、リバース マッピングを行うことができます。 Azure Information Protection ラベルが検出された場合は、対応する Exchange メッセージの分類を設定します。
+また、メール フロー ルールを構成して、リバース マッピングを行うこともできます。 Azure Information Protection ラベルが検出された場合は、対応する Exchange メッセージの分類を設定します。
 
-- Azure Information Protection のラベルごとに: **msip_labels** ヘッダーにラベル名 (**General** など) が含まれている場合に適用されるトランスポート ルールを作成し、このラベルにマップするメッセージ分類を適用します。
+- Azure Information Protection のラベルごとに、**msip_labels** ヘッダーにラベル名 (**General** など) が含まれている場合に適用されるメール フロー ルールを作成し、このラベルにマッピングするメッセージ分類を適用します。
 
 
 ## <a name="next-steps"></a>次の手順
