@@ -1,24 +1,24 @@
 ---
-title: "iOS/OS X のコード例 | Azure RMS"
-description: "このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。"
-keywords: 
+title: iOS/OS X のコード例 | Azure RMS
+description: このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a610bd7983ffcf5e56cad4038375ed6c9b3f5e0a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 121296ed8d2e160bd602ae9d88843eb1580f17f6
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
@@ -217,7 +217,7 @@ ms.lasthandoff: 01/11/2018
 
 -   **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](https://msdn.microsoft.com/en-us/library/dn790811.aspx) と [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) からのユーザー入力を使用して作成されます。
+    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) と [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) からのユーザー入力を使用して作成されます。
 
         + (void)policyDescriptor
         {

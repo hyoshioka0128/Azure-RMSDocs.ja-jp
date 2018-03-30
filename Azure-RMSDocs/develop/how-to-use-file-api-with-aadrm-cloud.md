@@ -1,24 +1,24 @@
 ---
-title: "クラウド ベース RMS でサービス アプリケーション使用を有効化する方法 | Azure RMS"
-description: "このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。"
-keywords: 
+title: クラウド ベース RMS でサービス アプリケーション使用を有効化する方法 | Azure RMS
+description: このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: df82a503107aae3db61101eb468009e47f546ceb
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c1500b13a0c7ddabd3a01deb08c81fa3d4d72c7
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
@@ -30,7 +30,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 ## <a name="prerequisites"></a>必要条件
 
 -   RMS SDK 2.1 をインストールして構成する必要があります。 詳細については、[RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)を参照してください。
--   対称キーのオプションを使用するかその他の方法で、[ACS を介してサービス ID を作成](https://msdn.microsoft.com/en-us/library/gg185924.aspx)して、その処理中にキー情報をメモします。
+-   対称キーのオプションを使用するかその他の方法で、[ACS を介してサービス ID を作成](https://msdn.microsoft.com/library/gg185924.aspx)して、その処理中にキー情報をメモします。
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Azure Rights Management サービスへの接続
 
@@ -80,7 +80,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 ### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>**TenantBposId** と **URL** を調べる手順
 
--   [Azure RMS PowerShell モジュール](https://technet.microsoft.com/en-us/library/jj585012.aspx)をインストールします。
+-   [Azure RMS PowerShell モジュール](https://technet.microsoft.com/library/jj585012.aspx)をインストールします。
 -   Powershell を起動し、次のコマンドを実行してテナントの RMS 構成を取得します。
 
     `Import-Module aadrm`
@@ -164,9 +164,9 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 ## <a name="related-topics"></a>関連項目
 
-* [Azure Rights Management の作業の開始](https://technet.microsoft.com/en-us/library/jj585016.aspx)
+* [Azure Rights Management の作業の開始](https://technet.microsoft.com/library/jj585016.aspx)
 * [RMS SDK 2.1 の概要](getting-started-with-ad-rms-2-0.md)
-* [ACS を介したサービス ID の作成](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
+* [ACS を介したサービス ID の作成](https://msdn.microsoft.com/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
 * [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
