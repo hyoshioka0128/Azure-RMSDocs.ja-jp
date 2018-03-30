@@ -1,24 +1,24 @@
 ---
-title: "Windows Phone のセットアップ | Azure RMS"
-description: "Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。"
-keywords: 
+title: Windows Phone のセットアップ | Azure RMS
+description: Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d695f2b29c1b0f9a4af3f942e9bf8c12553a929d
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: e606703aa764f8e4fea009131f41c9394ebb29fb
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="windows-phone-setup"></a>Windows Phone のセットアップ
 
@@ -40,7 +40,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 -   [Windows Phone 8.1 の開発ツール (SDK)](http://dev.windowsphone.com/en-us/downloadsdk)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) 以降または Visual Studio Express 2012 (Windows Phone SDK 8.0/8.1 に付属)
 -   Windows Phone 向け MS RMS SDK 4.2 パッケージ 詳細については、「[作業開始](get-started.md)」を参照してください。
--   認証ライブラリ: [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx) または他の使用可能な認証ライブラリを使用することをお勧めします。
+-   認証ライブラリ: [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) または他の使用可能な認証ライブラリを使用することをお勧めします。
 
 「[新機能](release-notes.md)」のトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
