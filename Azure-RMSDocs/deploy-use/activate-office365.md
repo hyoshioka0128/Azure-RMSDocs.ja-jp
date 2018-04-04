@@ -1,33 +1,33 @@
 ---
-title: "Office 365 管理センターで Azure RMS をアクティブ化する - AIP"
-description: "Office 365 管理センターの新しいバージョンを使用する場合の、Azure Rights Management サービスのアクティブ化手順です。"
+title: Office 365 管理センターで Azure RMS をアクティブ化する - AIP
+description: Office 365 管理センターの新しいバージョンを使用する場合の、Azure Rights Management サービスのアクティブ化手順です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a614e65e4c8e401c9add41d4594d8261eef69d12
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 77d511cc466441ffc28d813be9a0ec86ff3d8fa7
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Azure Rights Management をアクティブ化する方法
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Office 365 管理センターから Azure Rights Management サービスにアクセスする場合は、次の手順を使用します。 たとえば、Office 365 E3 または Office 365 E5 のサブスクリプションがあります。
 
 1. Rights Management が含まれている Office 365 プランにサインアップした後、Office 365 のデプロイのグローバル管理者の役割を持つ職場または学校のアカウントで [Office 365 にサインイン](https://portal.office.com/)します。
 
-2. Office 365 管理センターが自動的に表示されない場合は、左上のアプリ ランチャー アイコンを選択し、**[管理]** を選択します。**[ 管理 ]** タイルは、Office 365 管理者に対してのみ表示されます。
+2. Office 365 管理センターが自動的に表示されない場合は、左上のアプリ ランチャー アイコンを選択し、**[管理]** を選択します。**[管理]** タイルは、Office 365 管理者に対してのみ表示されます。
 
     > [!TIP]
     > 管理センターのヘルプについては、「[Office 365 管理センターについて](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23)」を参照してください。
@@ -47,12 +47,12 @@ Office 365 管理センターから Azure Rights Management サービスにア�
 
 4. **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]**をクリックします。
 
-5. **[ Rights Management をアクティブ化しますか?]** というメッセージが表示されたら、**[ アクティブ化]** をクリックします。
+5. **[Rights Management をアクティブ化しますか?]** というメッセージが表示されたら、**[アクティブ化]** をクリックします。
 
-**[ Rights Management はアクティブ化されています ]** というテキストと、非アクティブ化するオプションが表示されます。
+**[Rights Management はアクティブ化されています]** というテキストと、非アクティブ化するオプションが表示されます。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 「[Azure Rights Management をアクティブにする](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」を引き続きお読みください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,54 +1,52 @@
 ---
-title: "アプリケーションのテスト | Azure RMS"
-description: "アプリケーションのテストを設定する方法"
-keywords: 
+title: アプリケーションのテスト | Azure RMS
+description: アプリケーションのテストを設定する方法
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c1705015efbe038b577c63286813bc560e62b148
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 8f99338daf79b2a59ddacb914d424da81d2b630b
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="testing-your-application"></a>アプリケーションのテスト
 
-このトピックでは、アプリケーション テストを設定する方法について説明します。
+ここでは、アプリケーションのテストを準備する方法を説明します。
 
 ## <a name="instructions"></a>手順
 
-### <a name="step-1-setup-for-testing"></a>手順 1: テストの設定
+Azure RMS または Windows Server で実行される RMS サーバーのいずれかからテストすることができます。  Azure RMS でテストを開始し、RMS Server を使用してテストを行います (展開で必要な場合)。
 
-Windows Server で実行されている Azure RMS または RMS サーバーをテストできます。Azure RMS のテストから始めることをお勧めします。その後、デプロイに必要であれば、RMS サーバーをテストしてください。
-
-1. Azure RMS でテストする方法については、「[方法: ADAL 認証の使用](how-to-use-adal-authentication.md)」を参照してください。
-2. RMS サーバーでテストする方法については、「[方法: RMS サーバーをインストールし、構成する](how-to-install-and-configure-an-rms-server.md)」を参照してください。
-3. 以下では、開発者向けランタイムのインストール方法について説明しています。
+- Azure RMS でテストする方法については、「[方法: ADAL 認証の使用](how-to-use-adal-authentication.md)」を参照してください。
+- RMS サーバーでテストする方法については、「[方法: RMS サーバーをインストールし、構成する](how-to-install-and-configure-an-rms-server.md)」を参照してください。
+- 開発者向けランタイムをインストールするには:
 
    Rights Management Service Client 2.1 がアプリケーションのテストを実行するコンピューターにインストールされている必要があります。
-   - 開発コンピューター以外のコンピューターでアプリケーションをテストする場合は、[AD RMS クライアント ダウンロード ページ](http://www.microsoft.com/en-us/download/details.aspx?id=38396)からそのコンピューターに RMS クライアント 2.1 をインストールできます。
-   - 開発コンピューターでアプリケーションをテストする場合は、Rights Management サービス SDK 2.1 を既にインストールしています。 この時点で、RMS クライアント 2.1 がサイレント インストールされています。
+   - 開発コンピューター以外のコンピューターでアプリケーションをテストする場合は、[AD RMS クライアント ダウンロード ページ](http://www.microsoft.com/en-us/download/details.aspx?id=38396)からそのコンピューターに RMS クライアント 2.1 をインストールします。
+   - 開発用のコンピューターには、既に Rights Management サービス SDK 2.1 がインストールされている必要があります。
 
-    RMS SDK 2.1 のインストール方法については、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
+   RMS SDK 2.1 のインストールについては、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-このトピックのガイダンスは包括的なものではありません。 RMS クライアント 2.1 の構成方法について詳しくは、「[RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)」 (RMS クライアント 2.1 のデプロイに関する注意事項) をご覧ください。
+これは、包括的なガイドではありません。 RMS クライアント 2.1 の構成方法については、「[RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
-### <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連項目
 
 * [RMS サーバーをインストールして構成する方法](how-to-install-and-configure-an-rms-server.md)
 * [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)
 * [SDK のインストール](install-the-rms-sdk.md)
-* [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
+* [RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

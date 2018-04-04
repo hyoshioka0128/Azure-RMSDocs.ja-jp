@@ -1,27 +1,27 @@
 ---
-title: "クイック スタート チュートリアルの手順 5 - AIP"
-description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 5 - 保護ファイルの共有および追跡。"
-keywords: 
+title: クイック スタート チュートリアルの手順 5 - AIP
+description: Azure Information Protection を簡単に試すためのチュートリアルの手順 5 - 保護ファイルの共有および追跡。
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/18/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
 
->*適用対象: Azure Information Protection*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 チュートリアルのこの最後の手順では、既に作成されており、パートナーや共同作業者に送信する Word 文書または Excel スプレッドシートを見つけます。 このチュートリアルでは、ドキュメントの内容にどのようなテキストが含まれていても実際には問題はありませんが、承認された受信者がドキュメントを読んだことを簡単に確認できるようなテキストを含めることができます。
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 09/18/2017
 
 7. 受信者に合わせ、既定のメッセージの説明を変更します。 ただし、次のようなテキストを追加してください。
 
-    **このファイルは Microsoft Azure Information Protection で保護されています。初めてご使用になる場合は、https://aka.ms/rms-signup で手順を確認してください。** 
+    **このファイルは Microsoft Azure Information Protection で保護されています。初めて利用する場合は、https://aka.ms/rms-signupこちらの手順**を参照してください。 
 
     ![Azure Information Protection クイック スタート チュートリアル手順 5 - 電子メールによる保護ドキュメントの共有](../media/share-protected-emailv2.png)
 
@@ -99,15 +99,15 @@ ms.lasthandoff: 09/18/2017
 
     これにより、ドキュメント追跡サイトに移動します。
 
-2.  [**条件に従って保護および共有する**] ページが表示された場合は、[**サインイン**] をクリックし、ユーザー名とパスワードをもう一度入力します。
+2.  **[条件に従って保護および共有する]** ページが表示された場合は、**[サインイン]** をクリックし、ユーザー名とパスワードをもう一度入力します。
 
 3.  **[共有ドキュメント]** ページに、共有したドキュメントの名前が表示されます。 この時点では、このドキュメントは表示される唯一のファイルですが、共有するドキュメントの数を増やすと、一覧が拡張されます。
 
     このページから、ドキュメントを共有した時刻 (保護されたファイルが添付された電子メールを送信した時刻)、最後のアクティビティの日付、電子メールの宛先の受信者名を確認できます。 追加の詳細を確認するには、ドキュメント名をクリックします。
 
-4.  表示された新しいページには、クリックしたファイルの名前が付きます。ここでは、このドキュメントのみについての詳細の概要と、このドキュメントに対して使用可能なその他のオプション ([**一覧**]、[ **タイムライン**]、[ **マップ**]、[ **設定**]) が表示されます。
+4.  表示された新しいページには、クリックしたファイルの名前が付きます。ここでは、このドキュメントのみについての詳細の概要と、このドキュメントに対して使用可能なその他のオプション (**[一覧]**、**[タイムライン]**、**[マップ]**、**[設定]**) が表示されます。
 
-    各オプションをクリックすると、保護されたドキュメントを追跡するさまざまな方法を確認できます。 このほか、[ **概要** ] ページで、[ **Excel で開く** ] をクリックして情報をスプレッドシートにエクスポートしたり、[ **アクセスの取り消し** ] をクリックしてドキュメントの共有を停止したりできます。
+    各オプションをクリックすると、保護されたドキュメントを追跡するさまざまな方法を確認できます。 このほか、**[概要]** ページで、**[Excel で開く]** をクリックして情報をスプレッドシートにエクスポートしたり、**[アクセスの取り消し]** をクリックしてドキュメントの共有を停止したりできます。
 
 保護されたドキュメントに対するアクティビティを詳細に追跡したり、(必要に応じて) アクセスを取り消したりするときは、このサイトを使用します。 ブラウザーで次のリンクを使用すると、モバイル デバイスやタブレットからでもこのサイトにアクセスできます: [ドキュメント追跡](http://go.microsoft.com/fwlink/?LinkId=529562)
 

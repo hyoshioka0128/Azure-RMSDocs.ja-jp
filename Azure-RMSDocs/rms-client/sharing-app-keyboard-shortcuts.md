@@ -1,26 +1,26 @@
 ---
-title: "RMS 共有アプリケーションでのキーボード ショートカット - AIP"
-description: "Windows で RMS 共有アプリケーションを使用する場合のキーボード ショートカットについての説明です。"
+title: RMS 共有アプリケーションでのキーボード ショートカット - AIP
+description: Windows で RMS 共有アプリケーションを使用する場合のキーボード ショートカットについての説明です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ebb40568e63cf51a8b6473ca872f1e0ed9ec30ea
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 39787218e1c9e1d130748aa309ae49790b64275a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションでキーボード ショートカットを使用する
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションを使用する場合、**Alt** キーを押して使用可能なアクセス キーを確認し、**Alt** + アクセス キーを押してオプションを選択します。
 

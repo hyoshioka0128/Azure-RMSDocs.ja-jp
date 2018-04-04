@@ -1,26 +1,26 @@
 ---
-title: "Windows 用 Azure Information Protection クライアント"
-description: "Windows 用 Azure Information Protection クライアントの情報リソース。 この無料でダウンロードできるクライアントは、ドキュメントやメールを分類して保護したい組織向けです。"
+title: Windows 用 Azure Information Protection クライアント
+description: Windows 用 Azure Information Protection クライアントの情報リソース。 この無料でダウンロードできるクライアントは、ドキュメントやメールを分類して保護したい組織向けです。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dca5f00dcad1e6e1db2e8558f7ce214dd81a9064
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2abc976c1185d7031af383af96f2da8f19b1493f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアント
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2**
 
 Windows 用 Azure Information Protection クライアントは、[Azure Information Protection](../understand-explore/what-is-information-protection.md) を使ってドキュメントやメールを分類して保護している組織、または Rights Management サービスを使ってデータを保護している組織向けの、無料でダウンロードできるクライアントです。 このクライアントには、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Microsoft の Rights Management サービスを使って保護しているコンテンツを使いたい組織のためのビューアーもあります。
 

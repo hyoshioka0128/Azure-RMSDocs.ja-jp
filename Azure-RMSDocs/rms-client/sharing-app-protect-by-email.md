@@ -1,26 +1,26 @@
 ---
-title: "保護ファイルを RMS 共有アプリケーションで共有する - AIP"
-description: "安全に電子メールでドキュメントを共有するための手順です。"
+title: 保護ファイルを RMS 共有アプリケーションで共有する - AIP
+description: 安全に電子メールでドキュメントを共有するための手順です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4110050a0e45fd75633bc27dd220f71855d50672
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 71bc303aaadf6856cce2f63db0acf5280fbe172b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 電子メールで共有しているファイルを保護すると、元のファイルの新しいバージョンが作成されます。 元のファイルは保護されない状態のままになり、新しいバージョンは保護されて、送信する電子メールに自動的に添付されます。
 
@@ -34,7 +34,7 @@ Azure Information Protection を使用している場合は、共有によって
 
 ## <a name="using-outlook-to-protect-a-file-that-you-share-by-email"></a>Outlook の使用:電子メールで共有するファイルを保護するには
 
-1.  電子メール メッセージを作成してファイルを添付します。 次に、[ **RMS** ] グループの [ **メッセージ** ] タブで、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
+1.  電子メール メッセージを作成してファイルを添付します。 次に、**[RMS]** グループの **[メッセージ]** タブで、**[保護ファイルの共有]** をクリックし、もう一度 **[保護ファイルの共有]** をクリックします。
 
     ![RMS 共有アプリケーション用 Outlook アドイン](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
@@ -57,7 +57,7 @@ Outlook を使用して保護されたファイルを共有する以外に、以
 
         ![[保護ファイルの共有] メニュー オプション](../media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
-    -   Office アプリケーション、Word、Excel、PowerPoint の場合:まず、ファイルを保存してあることを確認します。 次に、[ **ホーム** ] タブの [ **RMS** ] で、[ **保護ファイルの共有** ] をクリックし、もう一度 [ **保護ファイルの共有** ] をクリックします。
+    -   Office アプリケーション、Word、Excel、PowerPoint の場合:まず、ファイルを保存してあることを確認します。 次に、**[ホーム]** タブの **[RMS]** で、**[保護ファイルの共有]** をクリックし、もう一度 **[保護ファイルの共有]** をクリックします。
 
         ![Office ツールバー アドイン](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
@@ -76,7 +76,7 @@ Outlook を使用して保護されたファイルを共有する以外に、以
 4.  省略可能:この電子メール メッセージの内容は自由に変更できます。 たとえば、メッセージの件名またはテキストを追加または変更できます。
 
     > [!WARNING]
-    > この電子メール メッセージのユーザーを追加または削除できますが、それによって [ **保護ファイルの共有** ] ダイアログ ボックスで指定した添付ファイルのアクセス許可が変わることはありません。 アクセス許可を変更するには、たとえば、新しいユーザーにファイルを開くアクセス許可を付与し、保存したり送信したりしないで電子メール メッセージを閉じてから、手順 1 に戻ります。
+    > この電子メール メッセージのユーザーを追加または削除できますが、それによって **[保護ファイルの共有]** ダイアログ ボックスで指定した添付ファイルのアクセス許可が変わることはありません。 アクセス許可を変更するには、たとえば、新しいユーザーにファイルを開くアクセス許可を付与し、保存したり送信したりしないで電子メール メッセージを閉じてから、手順 1 に戻ります。
 
 5.  電子メール メッセージを送信します。
 

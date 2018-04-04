@@ -1,24 +1,24 @@
 ---
-title: "クイック スタート チュートリアルの手順 2 - AIP"
-description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 2 - ポリシーの構成。"
+title: クイック スタート チュートリアルの手順 2 - AIP
+description: Azure Information Protection を簡単に試すためのチュートリアルの手順 2 - ポリシーの構成。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
 
->*適用対象: Azure Information Protection*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
@@ -33,7 +33,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
        > 
        > 使用する既定のポリシーが異なる場合でも、このチュートリアルを使用することはできますが、この後に示す手順や図を参照するときに、これらの変更に注意してください。 最新の既定のポリシーに合わせて既定のポリシーを変更する場合は、「[Azure Information Protection の既定のポリシー](../deploy-use/configure-policy-default.md)」を参照してください。
     
-    - 既定の構成では、一部のラベルには視覚的なマーキングが構成されていることに注意してください。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 既定のポリシーによっては、一部のラベルに保護が設定されていることもあります。 たとえば、 
+    - 既定の構成では、一部のラベルには視覚的なマーキングが構成されていることに注意してください。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 既定のポリシーによっては、一部のラベルに保護が設定されていることもあります。 次に例を示します。 
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-labelsv2.png)
     
@@ -85,7 +85,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     **[カスタム]** オプションを使って、異なるアクセス許可レベルを選択したり、個々の使用権限を指定したりできます。 ただし、このチュートリアルでは、**[レビュー担当者]** オプションのままにします。 後で別のアクセス許可を調べて、指定したユーザーが保護されたドキュメントまたはメールでできることを制限する方法を確認してください。
 
-7. **[OK]** をクリックして **[アクセス許可の追加]** ブレードを閉じると、**[保護]** ブレードが構成を反映するように更新されます。 たとえば、
+7. **[OK]** をクリックして **[アクセス許可の追加]** ブレードを閉じると、**[保護]** ブレードが構成を反映するように更新されます。 次に例を示します。
     
      ![Azure Information Protection ラベルのアクセス許可構成を示す [保護] ブレード](../media/info-protect-protection-configured.png)
     
@@ -105,7 +105,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     **[新しい条件の追加]** をクリックし、**[条件]** ブレードで次のように選択します。
     
-    a. **[条件のタイプを選択]**: 既定値の **[情報の種類]** のままにします。
+    」を参照します。 **[条件のタイプを選択]**: 既定値の **[情報の種類]** のままにします。
     
     b. **[情報の種類を選択]** 検索ボックス: 「**クレジット カード番号**」と入力します。 検索結果から **[クレジット カード番号]** を選択します。
     
@@ -127,7 +127,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 13. **[サブラベル]** ブレードで **[保存]** をクリックします。 次に、**[Policy: Global]**(ポリシー: グローバル) ブレードで **[保存]** を再度クリックします。
     
-    視覚的なマーキングと保護用に構成された新しいサブラベルが表示されます。 たとえば、
+    視覚的なマーキングと保護用に構成された新しいサブラベルが表示されます。 次に例を示します。
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー構成済み](../media/info-protect-policy-configuredv2.png)
     

@@ -1,26 +1,26 @@
 ---
-title: "Azure Information Protection 向けのユーザーとグループの準備"
-description: "分類、ラベル付け、組織のドキュメントと電子メールの保護などを開始する必要があるユーザーとグループ アカウントがあることを確認してください。"
+title: Azure Information Protection 向けのユーザーとグループの準備
+description: 分類、ラベル付け、組織のドキュメントと電子メールの保護などを開始する必要があるユーザーとグループ アカウントがあることを確認してください。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 45f75834d687247808107708e082ff61d8510899
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 組織の Azure Information Protection を展開する前に、組織のテナントの Azure AD にユーザーとグループのアカウントがあることを確認します。
 
@@ -172,7 +172,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
 - Jagannath Reddy のユーザー アカウントは  **jagannathreddy@contoso.com** によって承認されることになります。
 
--  Ankur Roy のユーザー アカウントは、 **ankur.roy@contoso.com**  と  **ankur.roy@onmicrosoft.contoso.com**  を使用して承認できますが、 **ankurroy@contoso.com** では承認できません。
+-  Ankur Roy のユーザー アカウントは、**ankur.roy@contoso.com** と **ankur.roy@onmicrosoft.contoso.com** を使用して承認できますが、 **ankurroy@contoso.com** では承認できません。
 
 通常、UserPrincipalName の値は、ProxyAddresses フィールドにあるいずれかの値と一致します。 これは、お勧めの構成ですが、電子メール アドレスと一致するように UPN を変更できない場合は、次の手順を実行する必要があります。
 

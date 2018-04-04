@@ -1,26 +1,26 @@
 ---
-title: "RMS で保護されたファイルを RMS 共有アプリケーションで開く - AIP"
-description: "保護されたファイルを表示して使用する手順です。Rights Management (RMS) 共有アプリケーションがインストールされている必要があります。"
+title: RMS で保護されたファイルを RMS 共有アプリケーションで開く - AIP
+description: 保護されたファイルを表示して使用する手順です。Rights Management (RMS) 共有アプリケーションがインストールされている必要があります。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0a510d559573e942b8a2bf392f36a1300dfbfb7a
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 393db5da6f2a563b073b071e873a8c5d555a76e6
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 [Rights Management (RMS) 共有アプリケーションがコンピューターにインストールされている場合は](install-sharing-app.md)、ダブルクリックするだけで保護されたファイルを表示できます。 ファイルは電子メール メッセージの添付ファイルの場合もあれば、ファイル エクスプローラーで表示されるファイルの場合もあります。
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/18/2017
 
 ファイルを開く方法はファイルが保護された方法によって異なり、ファイルが保護された方法はファイル名拡張子を見るとわかります。 いずれの場合も、ファイルを開くと監査される場合があり、保護されている限り監査された状態のままになります。 さらに、ファイルが電子メールの添付ファイルとして送信された場合、ファイルを開くたびに送信者に電子メールで通知される可能性があります。
 
-- 「**ファイル名拡張子*」 が .pfile 「*である**」
+- **ファイル名拡張子*が .pfile*である**
 
     このファイルは一般的に保護されています。
 
@@ -73,7 +73,7 @@ Rights Management サービスでサポートされるファイル名拡張子�
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>保護されているファイルを使用するには (ファイルを編集して印刷する場合など)
 保護されたファイルを開いた後、読み取り以外にも編集、コピー、印刷などを行う場合は、ファイル名拡張子に応じて次の手順に従います。
 
-- 「**ファイル名拡張子*」 が .pfile 「*である**」
+- **ファイル名拡張子*が .pfile*である**
 
     開いているファイルを保存し、使用するアプリケーションに関連付けられている新しいファイル名拡張子を付けます。
 

@@ -1,30 +1,30 @@
 ---
-title: "セキュリティのベスト プラクティス | Microsoft Information Protection"
-description: "Azure Information Protection のベスト プラクティスを使用することで、優れた RMS 対応アプリケーションを作成することができます。"
+title: セキュリティのベスト プラクティス | Microsoft Information Protection
+description: Azure Information Protection のベスト プラクティスを使用することで、優れた RMS 対応アプリケーションを作成することができます。
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 04fc73bac667b461a37e87a1c726c5a645495197
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Azure Information Protection のセキュリティのベスト プラクティス
 
 Azure Information Protection (AIP) ソフトウェア開発キット (SDK) は、あらゆる種類の保護された情報を発行および使用するための堅牢なシステムを提供します。 AIP システムを可能な限り強化するために、AIP のベスト プラクティスを使用して AIP 対応アプリケーションを構築する必要があります。 AIP 対応アプリケーションは、このエコシステムのセキュリティを維持するための責任を共有します。 セキュリティ リスクを特定し、アプリケーション開発時に導入されたそのリスクの緩和策を用意することで、安全性の低いソフトウェアが実装される可能性を最小限に抑えることができます。
 
 Azure Information Protection ソフトウェア開発キット (SDK) を使用してアプリケーションを実装するベスト プラクティスには、次のカテゴリの提案が含まれます。
-- [脅威モデルと緩和](https://msdn.microsoft.com/en-us/library/aa362751.aspx)
-- [セキュリティ攻撃](https://msdn.microsoft.com/en-us/library/aa362736.aspx)
+- [脅威モデルと緩和](https://msdn.microsoft.com/library/aa362751.aspx)
+- [セキュリティ攻撃](https://msdn.microsoft.com/library/aa362736.aspx)
 
 AIP SDK を使用してアプリケーションを実装するために必要な電子証明書を入手するために、この情報で署名の必要な法的契約を補います。
 
@@ -86,7 +86,7 @@ AIP システムは、複数の権限をいくつかのグループに分けて�
 API はユーザーに対して、情報の暗号化を解除すること、または解除しないことを許可します。情報自体の保護機能はありません。 ユーザーが情報の暗号化を解除する権限を持っている場合、API はそれを許可するため、暗号化が解除された後でその情報を管理または保護することは、アプリケーションの責任です。 また、情報の不正使用を防ぐように環境およびインターフェイスを管理することは、アプリケーションの責任です。たとえば、ライセンスで再生権限のみが許可されている場合は、**[印刷]** ボタンと **[コピー]** ボタンを無効にします。 テスト スイートでは、認識しているすべてのライセンス権限に対して、アプリケーションが正しく動作することを検証する必要があります。
 
 ### <a name="minimum-standard"></a>最低限の標準
-- 顧客の XrML v.1.2 権限の実装は、XrML 仕様に記載されているこれらの権限の定義に従う必要があります。XrML 仕様は、XrML Web サイトで入手できます (http://www.xrml.org) 。 アプリケーションに固有の権限がある場合、アプリケーションに関連するすべてのエンティティについて定義する必要があります。
+- 顧客の XrML v.1.2 権限の実装は、XrML 仕様に記載されているこれらの権限の定義に従う必要があります。XrML 仕様は、XrML Web サイトで入手できます (http://www.xrml.org))。 アプリケーションに固有の権限がある場合、アプリケーションに関連するすべてのエンティティについて定義する必要があります。
 - テスト スイートとテスト プロセスでは、アプリケーションがサポートする権限に対してアプリケーションが正しく動作していること、およびサポートされていない権限に対して動作しないことを検証する必要があります。
 - 発行アプリケーションを構築している場合、発行アプリケーションでサポートされている固有の権利とサポートされていない固有の権利、およびこれらの権利を解釈する方法を説明する情報を入手できるようにする必要があります。 さらに、ユーザー インターフェイスで、個別の情報に対して許可または禁止されている各権限の意味について、エンド ユーザーに対して明らかにする必要があります。
 

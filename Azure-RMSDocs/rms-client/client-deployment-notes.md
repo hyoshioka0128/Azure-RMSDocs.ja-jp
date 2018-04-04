@@ -1,26 +1,26 @@
 ---
-title: "RMS クライアントのデプロイに関する注意事項 - Azure Information Protection"
-description: "Rights Management サービス クライアント (RMS クライアント) バージョン 2 (別称 MSIPC クライアント) のインストール、サポートされるオペレーティング システム、レジストリ設定、およびサービス検出に関する情報について説明します。"
+title: RMS クライアントのデプロイに関する注意事項 - Azure Information Protection
+description: Rights Management サービス クライアント (RMS クライアント) バージョン 2 (別称 MSIPC クライアント) のインストール、サポートされるオペレーティング システム、レジストリ設定、およびサービス検出に関する情報について説明します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6518b9d91e8f73b9ac6c0fb9e4bb5c2bbcebd612
-ms.sourcegitcommit: 704700acf7302d258e9c58c365c3244e833a86cd
+ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 7 SP1、Windows 8、Windows 8.1、Windows 10、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 7 SP1、Windows 8、Windows 8.1、Windows 10、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016*
 
 Rights Management サービス クライアント (RMS クライアント) バージョン 2 は、MSIPC クライアントとも呼ばれます。 Microsoft Rights Management サービスと通信する Windows コンピューター (オンプレミスまたはクラウド) 用のソフトウェアで、組織内または管理対象外組織内における、アプリケーションとデバイスを行き来する情報へのアクセスや使用を保護することができます。 
 
@@ -118,7 +118,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 |**テンプレートを更新する頻度 (日単位) を変更するには**|TemplateUpdateFrequencyInSeconds 値が設定されていない場合、次のレジストリ値でユーザーのコンピューターでのテンプレートの更新頻度を指定します。  これらの値のどちらも設定されていない場合は、RMS クライアント (バージョン 1.0.1784.0) を使用するアプリケーションがテンプレートをダウンロードする既定の更新間隔は 1 日です。 これより前のバージョンでは、既定は 7 日ごとです。<br /><br />**クライアント モード:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** ダウンロード間の日数 (最小値は 1) を指定する整数値。<br /><br />**サーバー モード:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** ダウンロード間の日数 (最小値は 1) を指定する整数値。|
 |**テンプレートを更新する頻度 (秒単位) を変更するには**<br /><br />重要: この設定を指定した場合は、日単位のテンプレート更新値は無視されます。 1 つまたはもう一方 (両方ではありません) を指定します。|次のレジストリ値で、ユーザーのコンピューターでのテンプレートの更新頻度を指定します。 この値または頻度 (日単位) を変更する値 (TemplateUpdateFrequency) が設定されていない場合、RMS クライアント (バージョン 1.0.1784.0) を使用してテンプレートをダウンロードするアプリケーションの既定の更新間隔は 1 日です。 これより前のバージョンでは、既定は 7 日ごとです。<br /><br />**クライアント モード:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Value:** ダウンロード間の秒数 (最小値は 1) を指定する整数値。<br /><br />**サーバー モード:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<*SID*><br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Value:** ダウンロード間の秒数 (最小値は 1) を指定する整数値。|
 |AD RMS のみ: <br /><br />**次の発行要求時に即座にテンプレートをダウンロードするには**|テストと評価を行う際は、可能な限り早期に RMS クライアントでテンプレートをダウンロードすることをお勧めします。 この構成を行うには、次のレジストリ キーを削除します。これにより、RMS クライアントは TemplateUpdateFrequency レジストリ設定によって指定された時間まで待機するのではなく、次の発行要求時に即座にテンプレートをダウンロードします。<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*Server Name*>\Template <br /><br />**注**: \<*Server Name*> には、外部 URL (corprights.contoso.com) と内部 URL (corprights) の両方を指定できます。したがって、2 つの異なるエントリが存在します。|
-|AD RMS のみ: <br /><br />**フェデレーション認証のサポートを有効にするには**|RMS クライアント コンピューターがフェデレーションによる信頼関係を使用して AD RMS クラスターに接続する場合は、フェデレーション ホーム領域を構成する必要があります。<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**値:** このレジストリ エントリの値は、フェデレーション サービス (例: "http://TreyADFS.trey.net/adfs/services/trust") の URI (Uniform Resource Identifier) です。<br /><br /> **注**: この値には https ではなく http を指定することが重要です。 さらに、32 ビット MSIPC ベースのアプリケーションが 64 ビット版の Windows で実行している場合、場所は HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation になります。 構成の例については、「[Active Directory フェデレーション サービスを使用した Active Directory Rights Management サービスの展開](https://technet.microsoft.com/library/dn758110.aspx)」を参照してください。|
+|AD RMS のみ: <br /><br />**フェデレーション認証のサポートを有効にするには**|RMS クライアント コンピューターがフェデレーションによる信頼関係を使用して AD RMS クラスターに接続する場合は、フェデレーション ホーム領域を構成する必要があります。<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**値:** このレジストリ エントリの値は、フェデレーション サービス (たとえば、"http://TreyADFS.trey.net/adfs/services/trust") の URI (Uniform Resource Identifier) です。<br /><br /> **注**: この値には https ではなく http を指定することが重要です。 さらに、32 ビット MSIPC ベースのアプリケーションが 64 ビット版の Windows で実行している場合、場所は HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation になります。 構成の例については、「[Active Directory フェデレーション サービスを使用した Active Directory Rights Management サービスの展開](https://technet.microsoft.com/library/dn758110.aspx)」を参照してください。|
 |AD RMS のみ: <br /><br />**ユーザー入力にフォームベース認証を必要とするパートナーのフェデレーション サーバーをサポートするには**|既定では、RMS クライアントはサイレント モードで動作するため、ユーザー入力は必要ありません。 ただし、パートナーのフェデレーション サーバーの場合は、フォームベース認証の使用など、ユーザー入力が必要であるように構成されている場合があります。 このような場合、RMS クライアントがサイレント モードを無視し、フェデレーション認証フォームがブラウザー ウィンドウに表示され、ユーザーに認証を促すメッセージが表示されるように構成する必要があります。<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**注**: フォームベース認証を使用するようにフェデレーション サーバーが構成されている場合は、このキーは必須です。 Windows 統合認証を使用するようにフェデレーション サーバーが構成されている場合は、このキーは必要ありません。|
 |AD RMS のみ: <br /><br />**ILS サービスの使用をブロックするには**|既定では、RMS クライアントは ILS サービスによって保護されているコンテンツを使用できますが、次のレジストリ キーを設定して、クライアントがこのサービスをブロックするように構成することができます。 このレジストリ キーが設定され、ILS サービスがブロックされている場合、ILS サービスによって保護されたコンテンツを開いて使用しようとすると、次のエラーが表示されます:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Value:** ILS の使用をブロックする場合は 1、ILS の使用を許可する場合は 0 (既定値)|
 
@@ -148,7 +148,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
     
     REG_SZ:*\<URL_or_HostName>*
     
-    **値:** このレジストリ キーの場所にある文字列値には、DNS ドメイン名の形式 (たとえば、**adrms.contoso.com**)、または信頼された AD RMS サーバーへの完全な URL (たとえば、 **https://adrms.contoso.com**) のいずれかを指定できます。 指定された URL が **https://** で始まる場合、RMS クライアントは SSL または TLS を使用して、指定した AD RMS サーバーに接続します。
+    **値:** このレジストリ キーの場所の文字列値には、DNS ドメイン名の形式 (たとえば、**adrms.contoso.com**)、または信頼された AD RMS サーバーへの完全な URL (たとえば、**https://adrms.contoso.com**) のいずれかを指定できます。 指定された URL が **https://** で始まる場合、RMS クライアントは SSL または TLS を使用して、指定した AD RMS サーバーに接続します。
 
 ## <a name="rms-service-discovery"></a>RMS サービスの検出
 RMS サービスの検出を使用すると、RMS クライアントがコンテンツを保護する前に、通信する RMS サーバーまたはサービスを確認することができます。 サービスの検出は、RMS クライアントが保護されたコンテンツを使用する際にも実行されますが、このような検出はほとんど実行されません。コンテンツにアタッチされたポリシーには優先 RMS サーバーまたはサービスが記載されているからです。 そのようなソースが失敗した場合に限り、クライアントがサービスの検出を実行します。
@@ -163,7 +163,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 
     [次のセクション](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory)に従って SCP を登録すると、AD RMS サーバーの URL は、使用する RMS クライアントに返されます。
 
-3. **Azure Rights Management 検出サービス**: RMS クライアントは **https://discover.aadrm.com** に接続し、ユーザーに認証が求められます。
+3. **Azure Rights Management 検出サービス**: RMS クライアントは **https://discover.aadrm.com** に接続し、ユーザーに認証を求めます。
 
     認証に成功すると、使用する Azure Information Protection テナントの識別に認証のユーザー名 (とドメイン) が使用されます。 そのユーザー アカウントに使用する Azure Information Protection URL が RMS クライアントに返されます。 URL は、**https://**\<テナントの URL\>**/_wmcs/licensing** という形式です 
 
@@ -174,7 +174,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 > [!NOTE]
 > このサービスの検出フローには 3 つの重要な例外があります。
 > 
-> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com) 。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定を上書きするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
+> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com))。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定を上書きするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
 >
 > - Azure Information Protection ラベルから Rights Management サービスを呼び出すと、サービスの検出は実行されません。 その代わりに、Azure Information Protection ポリシーで構成されているラベル設定で URL が直接指定されます。  
 

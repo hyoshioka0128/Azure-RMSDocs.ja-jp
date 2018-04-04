@@ -1,26 +1,26 @@
 ---
-title: "Azure Information Protection クライアントで PowerShell を使用する"
-description: "管理者が PowerShell を使って Azure Information Protection クライアントを管理するための手順と情報について説明します。"
+title: Azure Information Protection クライアントで PowerShell を使用する
+description: 管理者が PowerShell を使って Azure Information Protection クライアントを管理するための手順と情報について説明します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
 
 Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
@@ -238,9 +238,11 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 1. Get-AadrmConfiguration コマンドレットを再び実行し、**CertificationExtranetDistributionPointUrl** と **LicensingExtranetDistributionPointUrl** の値を書き留めておきます。
 
-2. AzureInformationProtection コマンドレットを実行する各コンピューターで、レジストリ エディターを開き、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC` に移動します。
+2. AzureInformationProtection コマンドレットを実行する各コンピューターで、レジストリ エディターを開きます。
 
-3. **ServiceLocation** キーが表示されない場合は、レジストリのパスが **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation** となるように作成します。
+3. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation` のパスに移動します。 
+    
+    **MSIPC** キーまたは **ServiceLocation** キーがない場合は、それらを作成します。
 
 4. **ServiceLocation** キーに対し、**EnterpriseCertification** および **EnterprisePublishing** という名前の 2 つのキーを作成します (存在しない場合)。 
     
@@ -485,7 +487,7 @@ AzureInformationProtection モジュールをインストールするための�
     
     - アプリケーションの種類: **Web アプリ/API**
     
-    - [サインオン URL]: **http://localhost**
+    - サインオン URL: **http://localhost**
 
 4. 先ほど作成したアプリケーションを選択します (例: **AIPOnBehalfOf**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
     

@@ -1,24 +1,24 @@
 ---
-title: "クイック スタート チュートリアルの手順 4 - AIP"
-description: "Azure Information Protection を簡単に試すためのチュートリアルの手順 4 - ラベル付けと保護の動作の確認。"
+title: クイック スタート チュートリアルの手順 4 - AIP
+description: Azure Information Protection を簡単に試すためのチュートリアルの手順 4 - ラベル付けと保護の動作の確認。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 3a5e3fc018bb19480a52729345ad2ac6d4c851be
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f92953acfe652238ef8a36f67cdd8051324c6f18
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>手順 4: 分類、ラベル付け、保護の動作を確認する 
 
->*適用対象: Azure Information Protection*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Azure Information Protection クライアントをインストールして Word 文書を開いたので、構成したポリシーを使用して簡単に文書のラベル付けと保護を始められることを確認できます。
 
@@ -30,7 +30,7 @@ Information Protection バーの最後のラベルを選択すると、次のよ
 
 ![Azure Information Protection クイック スタート チュートリアル手順 4 - サブラベルの選択](../media/info-protect-sub-labelsv2.png)
 
-これらのサブラベルのいずれかを選択すると、バーには他のラベルは表示されなくなり、このドキュメントに対して選択したラベルが表示されるようになります。 **[秘密度]** の値が変わってラベル名とサブラベル名が表示され、それに応じて、次のようにラベルの色も変わります。 たとえば、
+これらのサブラベルのいずれかを選択すると、バーには他のラベルは表示されなくなり、このドキュメントに対して選択したラベルが表示されるようになります。 **[秘密度]** の値が変わってラベル名とサブラベル名が表示され、それに応じて、次のようにラベルの色も変わります。 次に例を示します。
 
 ![Azure Information Protection クイック スタート チュートリアル手順 4 - 選択されたサブラベル](../media/info-protect-sub-label-selectedv2.png)
 

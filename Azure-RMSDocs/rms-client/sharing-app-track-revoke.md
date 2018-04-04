@@ -1,26 +1,26 @@
 ---
-title: "RMS 共有アプリケーションを使用したドキュメントの追跡と取り消し - AIP"
-description: "RMS 共有アプリケーションを使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。"
+title: RMS 共有アプリケーションを使用したドキュメントの追跡と取り消し - AIP
+description: RMS 共有アプリケーションを使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71f08e7500fbc9326bed3a5b37d694ecc5e37984
-ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
+ms.openlocfilehash: 86da59d624d197aaad25e3f6fb04cfdd47ad1c3e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す
 
->*適用対象: Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 RMS 共有アプリケーションを使用してドキュメントを保護すると、組織が Active Directory Rights Management サービスではなく Azure Information Protection を使用している場合は、保護されているドキュメントをユーザーがどのように使用しているかを追跡できます。 必要に応じて、共有を停止する場合は、これらのドキュメントへのアクセスを取り消すこともできます。 これを行うには、Windows コンピューター、Mac コンピューター、タブレット、携帯電話からアクセスできる**ドキュメント追跡サイト**を使用します。
 
@@ -30,25 +30,25 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
 
 このサイトにアクセスしたら、サインインしてドキュメントを追跡します。 [ドキュメント追跡および失効をサポートするサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)が組織にあり、このサブスクリプションのライセンスが割り当てられている場合は、保護したファイルを開こうとしたユーザーおよび成功した (正常に認証された) かどうかを確認できます。 ユーザーがドキュメントへのアクセスを試みるたびに、その時間と場所がわかります。 さらに
 
--   ドキュメントの共有を停止する必要がある場合:**[ アクセスの取り消し]** をクリックし、ドキュメントが引き続き使用できる期間を確認して、これまで共有されていたドキュメントへのアクセスを取り消したことをユーザーに通知するかどうかを決定し、カスタマイズしたメッセージを提供します。 ドキュメントの共有を取り消しても共有していたドキュメントが削除されるわけではありませんが、これまでアクセスの権限があったユーザーがそのドキュメントを開くことはできなくなります。
+-   ドキュメントの共有を停止する必要がある場合:**[アクセスの取り消し]** をクリックし、ドキュメントが引き続き使用できる期間を確認して、これまで共有されていたドキュメントへのアクセスを取り消したことをユーザーに通知するかどうかを決定し、カスタマイズしたメッセージを提供します。 ドキュメントの共有を取り消しても共有していたドキュメントが削除されるわけではありませんが、これまでアクセスの権限があったユーザーがそのドキュメントを開くことはできなくなります。
 
 -   Excel にエクスポートする場合: **[CSV にエクスポート]** をクリックすると、データを変更したり、独自のビューやグラフを作成したりすることができます。
 
--   電子メール通知を構成する場合:**[ 設定 ]** をクリックして、ドキュメントがアクセスされたときに電子メールを送信するかどうか、および送信方法を選択します。
+-   電子メール通知を構成する場合:**[設定]** をクリックして、ドキュメントがアクセスされたときに電子メールを送信するかどうか、および送信方法を選択します。
 
 - 他のユーザーの共有したドキュメントを追跡し、取り消す場合: Azure Information Protection の管理者は、[管理者] アイコンをクリックして、他のユーザーのドキュメントを追跡し、取り消すことができます。 このアイコンは管理者にのみ表示されます。
     
-    注: グローバル管理者でもこのアイコンが表示されない場合、ドキュメントが共有されていません。 その場合、次の URL からドキュメント追跡サイトにアクセスします: https://portal.azurerms.com/#/admin
+    注: グローバル管理者でもこのアイコンが表示されない場合、ドキュメントが共有されていません。 その場合、https://portal.azurerms.com/#/admin の URL からドキュメント追跡サイトにアクセスします。
 
 -   ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合:[ヘルプ] アイコンをクリックして、「 [ドキュメント追跡の FAQ](http://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。
 
 ## <a name="using-office-to-access-the-document-tracking-site"></a>Office を使用したドキュメント追跡サイトへのアクセス
 
--   Office アプリケーション、Word、Excel、PowerPoint の場合:**[ ホーム ]** タブの **[ RMS ]** グループで、**[ 保護ファイルの共有]** をクリックし、**[ 使用の追跡]** をクリックします。
+-   Office アプリケーション、Word、Excel、PowerPoint の場合:**[ホーム]** タブの **[RMS]** グループで、**[保護ファイルの共有]** をクリックし、**[使用の追跡]** をクリックします。
 
     ![RMS 共有アプリケーションの使用時に Office アプリケーションから使用状況を追跡する ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
--   Outlook の場合:**[ ホーム ]** タブの **[  RMS ]** グループで、**[ 使用の追跡]** をクリックします。
+-   Outlook の場合:**[ホーム]** タブの **[RMS]** グループで、**[使用の追跡]** をクリックします。
 
     ![[RMS 共有アプリケーションの使用時に Outlook から使用状況を追跡する] を選択する ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
@@ -92,7 +92,7 @@ Windows コンピューターで Office アプリケーションを使用して�
 
 #### <a name="using-an-outlook-email-message-to-access-the-doc-tracking-site"></a>Outlook 電子メール メッセージを使用したドキュメント追跡サイトへのアクセス
 
--   電子メール メッセージの **[ メッセージ ]** タブで、**[  RMS ]** グループの **[ 保護ファイルの共有]** をクリックし、**[ 使用の追跡]** をクリックします。
+-   電子メール メッセージの **[メッセージ]** タブで、**[RMS]** グループの **[保護ファイルの共有]** をクリックし、**[使用の追跡]** をクリックします。
 
     ![[RMS 共有アプリケーションの使用時に Outlook から使用状況を追跡する] を選択する](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 

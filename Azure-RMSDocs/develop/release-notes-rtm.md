@@ -1,24 +1,24 @@
 ---
-title: "リリース ノート"
-description: "SDK 更新の改訂番号とその他の開発者情報。"
-keywords: 
+title: リリース ノート
+description: SDK 更新の改訂番号とその他の開発者情報。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: f05191f2c2700e59bb83a79d025ba181b799ab5a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 74f4eacb7601d137e8eb459fad3853ac5ec52e97
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="release-notes"></a>リリース ノート
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/11/2018
 >[!Note]
 > このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
 
-- **認証フローの改善** - [Azure Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/) 経由の OAuth2 トークン ベース認証を使用します。 このプロセスとその API 拡張機能の詳細については、「[ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md)」 (RMS 対応アプリケーションの ADAL 認証) を参照してください。
+- **認証フローの改善** - [Azure Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 経由の OAuth2 トークン ベース認証を使用します。 このプロセスとその API 拡張機能の詳細については、「[ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md)」 (RMS 対応アプリケーションの ADAL 認証) を参照してください。
 
 - **ADAL の更新** Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は以下を利用できるようになります。
 
@@ -121,7 +121,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     サポートされているファイルの種類の詳細については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
 
--   **Windows 7 SP1 および Windows Server 2008 R2 SP1 コンピューター**に更新プログラム [KB2533623](https://support.microsoft.com/en-us/kb/2533623) が適用されていない場合、office ファイルを保護する際に "パラメーターが正しくありません。 エラー コード 0x80070057" というエラーが発生することがあります。 このエラーが表示された場合は、更新プログラムをインストールしてやり直してください。 それでも問題が解決しない場合は、RMS SDK ベータ フィードバック エイリアス(<rmcstbeta@microsoft.com>) にお問い合わせください。
+-   **Windows 7 SP1 および Windows Server 2008 R2 SP1 コンピューター**に更新プログラム [KB2533623](https://support.microsoft.com/kb/2533623) が適用されていない場合、office ファイルを保護する際に "パラメーターが正しくありません。 エラー コード 0x80070057" というエラーが発生することがあります。 このエラーが表示された場合は、更新プログラムをインストールしてやり直してください。 それでも問題が解決しない場合は、RMS SDK ベータ フィードバック エイリアス(<rmcstbeta@microsoft.com>) にお問い合わせください。
 
     **注**  2015 年 4 月のリリース時点で、この更新プログラムのインストール プロセスにチェックが追加されました。
 
@@ -139,7 +139,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     ファイル API は、[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx) という 4 つの新機能を介して実装されます。
 
-    ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
+    ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
 
 -   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 

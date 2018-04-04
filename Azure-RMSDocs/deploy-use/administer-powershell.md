@@ -1,26 +1,26 @@
 ---
-title: "PowerShell を使用した Azure Rights Management の管理 - AIP"
-description: "Azure Information Protection の Azure Rights Management (AADRM) の PowerShell モジュールを使用して、組織でこのサービスを管理する方法について説明します。"
+title: PowerShell を使用した Azure Rights Management の管理 - AIP
+description: Azure Information Protection の Azure Rights Management (AADRM) の PowerShell モジュールを使用して、組織でこのサービスを管理する方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdd35669360b172d456254c1e8e9f1d980117cdb
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 55142c61b5ba7ee8b800bae94231401e74be9a38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Windows PowerShell を使用した Azure Rights Management サービスの管理
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 PowerShell を使って、Azure Information Protection のために Azure Rights Management サービスを管理する必要がありますか。 すべての構成を Azure Portal または Office 365 ポータルで行える場合、PowerShell を使う必要はない可能性があります。 ただし、一部の詳細な構成には PowerShell を使用する必要があり、効率的なコマンドライン コントロールとスクリプトのために PowerShell の使用を選ぶ可能性もあります。
 
