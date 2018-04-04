@@ -1,26 +1,29 @@
 ---
-title: "RMS 共有アプリケーションのダウンロードとインストール - AIP"
-description: "Windows 用 RMS 共有アプリケーションを対話形式でインストールし、他のユーザーとドキュメントを安全に共有できるようにするための手順です。"
+title: RMS 共有アプリケーションのダウンロードとインストール - AIP
+description: Windows 用 RMS 共有アプリケーションを対話形式でインストールし、他のユーザーとドキュメントを安全に共有できるようにするための手順です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9c954f750c6f49d3db1bf6383efa2805f291682c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c9fe3e28cb44812a6f3a5830546128975522b5f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションをダウンロードしてインストールする
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+
+> [!IMPORTANT]
+> **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。
 
 RMS 共有アプリケーションをインストールするのにローカル管理者である必要はありません。 ただし、ローカル管理者ではなく、かつ Office 2010 を使用している場合は、いくつか制限があります。 詳細については、このページの「[ローカル管理者ではなく、かつ Office 2010 を使用している場合](#if-you-are-not-a-local-administrator-and-use-office-2010)」を参照してください。
 
@@ -28,16 +31,16 @@ RMS 共有アプリケーションをインストールするのにローカル�
 
 1.  Microsoft Web サイトの [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) ページに移動します。
 
-2.  [ **コンピューター** ] セクションで、 **Windows 用 RMS アプリケーション** のアイコンをクリックして、Microsoft Rights Management 共有アプリケーションをインストールする **Setup.exe** ファイルを保存します。
+2.  **[コンピューター]** セクションで、 **Windows 用 RMS アプリケーション** のアイコンをクリックして、Microsoft Rights Management 共有アプリケーションをインストールする **Setup.exe** ファイルを保存します。
 
-3.  ダウンロードされた Setup.exe ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、[ **はい**] をクリックします。
+3.  ダウンロードされた Setup.exe ファイルをダブルクリックします。 続行を確認するメッセージが表示されたら、**[はい]** をクリックします。
 
-4.  [ **Microsoft RMS のセットアップ** ] ページで、[ **次へ**] をクリックし、インストールが完了するまで待機します。
+4.  **[Microsoft RMS のセットアップ]** ページで、**[次へ]** をクリックし、インストールが完了するまで待機します。
 
     > [!NOTE]
     > RMS 共有アプリケーションには、Microsoft .NET Framework のバージョン 4.0 以上が必要です。 これがインストールされているかどうかがセットアップで確認され、インストールされていない場合は、インストールするためのリンクを含むメッセージが表示されます。
 
-5.  インストールが完了したら、[ **再起動** ] をクリックして、コンピューターを再起動し、インストールを完了します。 または、[ **閉じる** ] をクリックして、後でコンピューターを再起動し、インストールを完了します。
+5.  インストールが完了したら、**[再起動]** をクリックして、コンピューターを再起動し、インストールを完了します。 または、**[閉じる]** をクリックして、後でコンピューターを再起動し、インストールを完了します。
 
 これで、ファイルの保護を開始したり、他のユーザーが保護しているファイルを読み取ったりする準備ができました。
 

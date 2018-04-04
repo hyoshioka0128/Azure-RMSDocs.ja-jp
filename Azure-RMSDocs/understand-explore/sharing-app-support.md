@@ -1,26 +1,26 @@
 ---
-title: "Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション - AIP"
-description: "Office 2010 のサポートには必須の、Windows コンピューター、Mac コンピューター、モバイル デバイスにも推奨される、無料でダウンロードできるアプリケーションとして RMS 共有アプリケーションが Azure RMS をサポートする方法について説明します。"
+title: Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション - AIP
+description: Office 2010 のサポートには必須の、Windows コンピューター、Mac コンピューター、モバイル デバイスにも推奨される、無料でダウンロードできるアプリケーションとして RMS 共有アプリケーションが Azure RMS をサポートする方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 16/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7c2b05d9bf360b08ea6a35efd959559132df864
-ms.sourcegitcommit: 3a2177df7a23d65f93d3ce2eea3fc3e042ea901c
+ms.openlocfilehash: f0b7204695ade31df0f6132684fd379704a4b338
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](../rms-client/aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 

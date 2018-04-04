@@ -1,24 +1,24 @@
 ---
-title: "Azure Information Protection の HYOK 保護"
-description: "Azure Information Protection による HYOK (AD RMS) 保護を選択した場合の制限、前提条件、推奨事項を確認します。"
+title: Azure Information Protection の HYOK 保護
+description: Azure Information Protection による HYOK (AD RMS) 保護を選択した場合の制限、前提条件、推奨事項を確認します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: a0329d66ee71ee815c0700a63172617d1fddf30a
-ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
+ms.openlocfilehash: a768b373ad5fbcbeb66e82d72ff263a7ea16e56b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
 
->*適用対象: Azure Information Protection*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 最も機密性の高いドキュメントや電子メールを保護する場合、通常、次のような利点がある Azure Rights Management (Azure RMS) 保護を適用します。
 

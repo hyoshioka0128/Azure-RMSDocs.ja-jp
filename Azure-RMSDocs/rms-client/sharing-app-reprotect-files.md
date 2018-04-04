@@ -1,27 +1,27 @@
 ---
-title: "RMS で保護されたファイルに対するアクセス許可を変更する - AIP"
-description: "ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。"
-keywords: 
+title: RMS で保護されたファイルに対するアクセス許可を変更する - AIP
+description: ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3290b9436f75c2d0d37c401dd2e0be11bcf2d554
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 766acd68d1c5c5f59530b0b61fadee315185ec4a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルのアクセス許可を変更する
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 ファイルが Rights Management によって保護されている場合、アクセス許可を変更するには、ファイルを保護し直して、ファイルにアクセスする必要のあるすべてのユーザーと、ユーザーに付与するアクセス許可を指定します。
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/30/2017
 
 ## <a name="to-re-protect-a-file-in-place"></a>ファイルを現在の場所で保護しなおすには
 
-1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 たとえば、
+1.  エクスプ ローラーで、保護するファイルを選びます。 右クリックして **[RMS による保護]** を選択し、**[Protect in-place]** (保護済み) をクリックします。 次に例を示します。
 
     ![[保護済み] メニュー オプション](../media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 

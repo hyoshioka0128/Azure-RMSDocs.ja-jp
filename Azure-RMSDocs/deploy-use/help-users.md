@@ -1,26 +1,26 @@
 ---
-title: "Azure RMS を使用してユーザーによるファイル保護を支援する - AIP"
-description: "Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。"
+title: Azure RMS を使用してユーザーによるファイル保護を支援する - AIP
+description: Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 29a85bf1bf216c785a1b9cd6511069fe688327db
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: 468550dd2389407b20d66adb814a7487988180bd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
@@ -103,7 +103,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[ オプション ]** タブの **[ アクセス許可]** をクリックし、オプションを選択します。 たとえば、**[転送不可]**、または **[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[オプション]** タブの **[アクセス許可]** をクリックし、オプションを選択します。 たとえば、**[転送不可]**、または **[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
 
 3.  メッセージを送信します。
 
@@ -115,13 +115,13 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[  …]**、**[ アクセス許可の設定]** の順にクリックして、オプションを選択します。 例: **[転送不可]** または **[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[…]**、**[アクセス許可の設定]** の順にクリックして、オプションを選択します。 例: **[転送不可]** または **[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
 
 3.  メッセージを送信します。
 
 保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに対して指定された制限付き[使用権限](../deploy-use/configure-usage-rights.md)でメッセージが開きます。 
 
-たとえば、**[ 転送不可]** を選択した場合、**[ 全員に返信 ]** ボタンは使用できません。
+たとえば、**[転送不可]** を選択した場合、**[全員に返信]** ボタンは使用できません。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

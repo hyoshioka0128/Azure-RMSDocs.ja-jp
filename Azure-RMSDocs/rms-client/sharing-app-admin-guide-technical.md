@@ -1,26 +1,26 @@
 ---
-title: "RMS 共有アプリケーションの技術概要 - AIP"
-description: "Windows 用 RMS 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの技術的な詳細です。"
+title: RMS 共有アプリケーションの技術概要 - AIP
+description: Windows 用 RMS 共有アプリケーションのデプロイを担当するエンタープライズ ネットワークの管理者向けの技術的な詳細です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1bb3308dc6e0561109602411fea3e63252fb9d4
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c4f37d2c3e7a90171662d91a4f78d61b629dd650
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 
 Microsoft Rights Management 共有アプリケーションは、Microsoft Windows およびその他のプラットフォーム用のオプションのダウンロード可能なアプリケーションであり、次の機能を備えています。
@@ -67,14 +67,14 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 |.xml|.pxml|
 |.jpg|.pjpg|
 |.jpeg|.pjeg|
-|.pdf|.ppdf|
+|.pdf|。ppdf|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
 |.jpe|.pjpe|
-|.jfif|.pjfif|
+|.jfif|。pjfif|
 |.jt|。pjt|
 ¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 
@@ -101,7 +101,7 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 既定ではネイティブ保護が適用されるすべてのファイルにジェネリック保護を適用するように RMS 共有アプリケーションを構成するには、次のレジストリ編集を行います。 RmsSharingApp キーまたは FileProtection キーが存在しない場合は、手動でそれらを作成する必要があることに注意してください。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: \* という名前の新しいキーを作成します。
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: * という名前の新しいキーを作成します。
 
     この設定は、任意のファイル名拡張子を持つファイルを表します。
 
@@ -131,7 +131,7 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 -   **Off**:保護のブロック
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

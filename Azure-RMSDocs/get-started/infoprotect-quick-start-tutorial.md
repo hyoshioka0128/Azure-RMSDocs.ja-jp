@@ -1,24 +1,24 @@
 ---
-title: "Azure Information Protection のクイック スタート チュートリアル"
-description: "約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルです。"
+title: Azure Information Protection のクイック スタート チュートリアル
+description: 約 20 分で組織の Microsoft Azure Information Protection を簡単に試すことができる概要チュートリアルです。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: e20b3e4d84b2230cf7bcbc64c31970fd53d5a7ae
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 997c4c873eb7c9340fb765f513c1e06cd3725fdd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
->*適用対象: Azure Information Protection*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 このチュートリアルを使用すると、5 つの手順を実行するだけで約 20 分で Azure Information Protection を簡単に試すことができます。 このチュートリアルは、Azure Information Protection で提供される機能のいくつかを簡単に紹介するガイドなしデモとして設計されています。 使用可能な機能がすべて含まれているわけではなく、組織用のデプロイ ガイドとして使用するものではありません。 組織向けの Azure Information Protection をデプロイする場合は、[デプロイ ロードマップ ドキュメント](../plan-design/deployment-roadmap.md)を参照してください。 
 

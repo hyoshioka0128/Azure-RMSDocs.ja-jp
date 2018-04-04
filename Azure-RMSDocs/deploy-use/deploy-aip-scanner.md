@@ -1,26 +1,26 @@
 ---
-title: "Azure Information Protection スキャナーのデプロイ"
-description: "Azure Information Protection スキャナーをインストール、構成、実行して、データ ストア上のファイルを検出、分類、および保護する手順です。"
+title: Azure Information Protection スキャナーのデプロイ
+description: Azure Information Protection スキャナーをインストール、構成、実行して、データ ストア上のファイルを検出、分類、および保護する手順です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/09/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: f3c302b2379262a6dac87873cb607cf3cd408bcd
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: c4e71ec21d6ec06a3bab32bf6bb62e6f614a7e33
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
->*適用対象: Azure Information Protection、Windows Server 2016、Windows Server 2012 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2*
 
 この情報を使用して、Azure Information Protection スキャナーについて説明し、正常にインストール、構成、および実行する方法について説明します。 
 

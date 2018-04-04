@@ -1,26 +1,26 @@
 ---
-title: "AD RMS から Azure Information Protection への移行 - フェーズ 4"
-description: "AD RMS から Azure Information Protection への移行のフェーズ 4 には、手順 8 から 9 が含まれます。"
+title: AD RMS から Azure Information Protection への移行 - フェーズ 4
+description: AD RMS から Azure Information Protection への移行のフェーズ 4 には、手順 8 から 9 が含まれます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c4279991a91dee1f4645209eda937ca288716761
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 7aaec205863bf855cc68887f3eafed27386ee49f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 AD RMS から Azure Information Protection への移行フェーズ 4 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 8 から手順 9 を説明します。
@@ -36,7 +36,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
 
 1. ユーザーが AD RMS の保護を使用して送信されたメールを閲覧できるようにするには、AD RMS クラスター用に DNS SRV レコードがあることを確認します。 手順 7 でクライアントの再構成用に DNS SRV レコードを作成しなかった場合は、ここで Exchange Online をサポートするためにこのレコードを作成します。 [手順](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
 
-2. Exchange Online [Get IRMConfiguration] (https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
+2. Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
     
     出力で、**AzureRMSLicensingEnabled** が **True** に設定されているかどうかを確認します。
     

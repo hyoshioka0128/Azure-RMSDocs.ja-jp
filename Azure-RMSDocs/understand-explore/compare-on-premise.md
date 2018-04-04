@@ -1,26 +1,26 @@
 ---
-title: "Azure Information Protection と AD RMS の比較"
-description: "Active Directory Rights Management サービス (AD RMS) を理解している、または以前にデプロイしたことがある場合、Azure Information Protection には機能や要件の面でどのような違いがあるのか疑問に思われるかもしれません。"
+title: Azure Information Protection と AD RMS の比較
+description: Active Directory Rights Management サービス (AD RMS) を理解している、または以前にデプロイしたことがある場合、Azure Information Protection には機能や要件の面でどのような違いがあるのか疑問に思われるかもしれません。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/04/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 124bef6f9c54fc154bdf95322ca418d01f5b5636
-ms.sourcegitcommit: 3cbea6b4191b97c69d06d04cbbd852aacacdd9c7
+ms.openlocfilehash: 5c550ae18b8bb72895833f22e3eadab758e26b42
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Active Directory Rights Management サービス (AD RMS) を理解している、または以前にデプロイしたことがある場合、Azure Information Protection には、情報保護ソリューションとして機能や要件の面でどのような違いがあるのか疑問に思われるかもしれません。
 
@@ -74,7 +74,7 @@ Azure Information Protection は、テナント キーのサイズが 2048 ビ�
 暗号化の制御の詳細については、「[Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」を参照してください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 AD RMS から Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

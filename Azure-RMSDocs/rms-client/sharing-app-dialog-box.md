@@ -1,26 +1,26 @@
 ---
-title: "RMS 共有アプリケーションのダイアログ ボックスのオプション - AIP"
-description: "RMS 共有アプリケーションの [保護の追加] ダイアログ ボックスまたは [保護ファイルの共有] ダイアログ ボックスでオプションを指定する場合に役立つ情報です。 このダイアログ ボックスは、共有するファイルを保護するとき、またはインプレースでファイルを保護してカスタム アクセス許可を選ぶときに表示されます。"
+title: RMS 共有アプリケーションのダイアログ ボックスのオプション - AIP
+description: RMS 共有アプリケーションの [保護の追加] ダイアログ ボックスまたは [保護ファイルの共有] ダイアログ ボックスでオプションを指定する場合に役立つ情報です。 このダイアログ ボックスは、共有するファイルを保護するとき、またはインプレースでファイルを保護してカスタム アクセス許可を選ぶときに表示されます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 429be436bc1a9fec3d31933d9cb6e8f88de7506a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションのダイアログ ボックス オプション
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 ここでは、RMS 共有アプリケーションの **[保護の追加]** ダイアログ ボックスまたは **[保護ファイルの共有]** ダイアログ ボックスでオプションを指定する場合に役立つ情報について説明します。 このダイアログ ボックスは、[共有するファイルを保護するとき](sharing-app-protect-by-email.md)、または[インプレースでファイルを保護](sharing-app-protect-in-place.md)してカスタム アクセス許可を選ぶときに表示されます。
 

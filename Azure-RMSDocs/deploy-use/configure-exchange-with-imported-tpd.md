@@ -1,26 +1,26 @@
 ---
-title: "Azure Information Protection から Azure Rights Management サービスに適するように Exchange Online IRM を構成する"
-description: "Office 365 テナントは Office 365 Message Encryption の新しい機能に対応していない場合に管理者が Azure Rights Management サービスに適するように Exchange Online を構成するための情報と使用説明。"
+title: Azure Information Protection から Azure Rights Management サービスに適するように Exchange Online IRM を構成する
+description: Office 365 テナントは Office 365 Message Encryption の新しい機能に対応していない場合に管理者が Azure Rights Management サービスに適するように Exchange Online を構成するための情報と使用説明。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/22/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0c6fe7f7b6a34eea21b646ce5573ca03b13be3c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 022eb960ef58e69c0a4c2d8a76962ed792a9ed38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="exchange-online-irm-configuration-when-you-have-imported-a-trusted-publishing-domain"></a>信頼された発行ドメインをインポートしているときの Exchange Online IRM 構成
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 以下の手順は、信頼された発行ドメイン (TPD) をインポートし、IRM に適するように Exchange Online を既に構成しているとき、以前に暗号化された電子メールを復号しなければならないときにのみご利用ください。
 
@@ -37,7 +37,7 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
 
 次の手順では、標準的な一連のコマンドを提供します。このシナリオで Azure Rights Management サービスを利用する目的で Exchange Online を有効にする場合に実行できます。
 
-1.  コンピューターで Exchange Online 用 Windows PowerShell を初めて使用する場合は、署名済みスクリプトを実行するように Windows PowerShell を構成する必要があります。 [ **管理者として実行** ] オプションを使用して Windows PowerShell セッションを開始し、次のように入力します。
+1.  コンピューターで Exchange Online 用 Windows PowerShell を初めて使用する場合は、署名済みスクリプトを実行するように Windows PowerShell を構成する必要があります。 **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開始し、次のように入力します。
 
     ```
     Set-ExecutionPolicy RemoteSigned
@@ -50,7 +50,7 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
     ```
     $UserCredential = Get-Credential
     ```
-    [ **Windows PowerShell 資格情報要求** ] ダイアログ ボックスで、Office 365 のユーザー名とパスワードを入力します。
+    **[Windows PowerShell 資格情報要求]** ダイアログ ボックスで、Office 365 のユーザー名とパスワードを入力します。
 
 3.  Exchange Online サービスに接続するには、次の 2 つのコマンドを実行します。
 
@@ -119,7 +119,7 @@ Exchange Online を構成して Azure Rights Management サービスをサポー
     Remove-PSSession $Session
     ```
 
-ユーザーは、Active Rights Management サービスを使用して電子メール メッセージを保護できるようになります。 たとえば、Outlook Web App で、拡張メニュー (**...**) から [**権限の設定**] を選択し、[ **転送不可** ] を選択するか、または使用可能なテンプレートの 1 つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 [ **権限の設定** ] メニューにはオプションは表示されません。
+ユーザーは、Active Rights Management サービスを使用して電子メール メッセージを保護できるようになります。 たとえば、Outlook Web App で、拡張メニュー (**...**) から **[権限の設定]** を選択し、**[転送不可]** を選択するか、または使用可能なテンプレートの 1 つを選択して、電子メール メッセージおよび添付ファイルに情報保護を適用します。 ただし、Outlook Web App では、1 日分の UI がキャッシュされるため、電子メール メッセージに情報保護を適用する前、およびこれらの構成コマンドを実行した後は、この期間を待機します。 UI に新しい構成が反映されるよう更新される前は、 **[権限の設定]** メニューにはオプションは表示されません。
 
 > [!IMPORTANT]
 > Azure Rights Management 用の新規 [カスタム テンプレート](configure-custom-templates.md) を作成する、またはテンプレートを更新する場合は常に、次の Exchange Online の PowerShell コマンドを実行して (必要に応じて手順 2 および 3 を最初に実行します)、これらの変更を Exchange Online に同期します。`Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -130,7 +130,7 @@ Exchange 管理者は、 [トランスポート ルール](https://technet.micro
 ### <a name="office-365-message-encryption"></a>Office 365 メッセージの暗号化
 前のセクションで説明されているのと同じ手順を実行します。ただし、テンプレートを表示したくない場合は、手順 6 の前に次のコマンドを実行して、Outlook Web App および Outlook クライアントで IRM テンプレートが使用できないようにします。 `Set-IRMConfiguration -ClientAccessServerEnabled $false`
 
-これで、 [トランスポート ルール](https://technet.microsoft.com/library/dd302432.aspx) を構成して、受信者が組織外部に居る場合にメッセージ セキュリティを自動的に更新し、[ **Office 365 のメッセージの暗号化を適用** ] オプションが選択できるようになります。
+これで、 [トランスポート ルール](https://technet.microsoft.com/library/dd302432.aspx) を構成して、受信者が組織外部に居る場合にメッセージ セキュリティを自動的に更新し、**[Office 365 のメッセージの暗号化を適用]** オプションが選択できるようになります。
 
 メッセージの暗号化の詳細については、Exchange ライブラリの「 [Office 365 での暗号化](https://technet.microsoft.com/library/dn569286.aspx) 」を参照してください。
 

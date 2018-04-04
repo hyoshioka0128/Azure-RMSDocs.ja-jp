@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d597be35e509fae655ee18fe9fc0344603385382
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
->*適用対象: Azure Information Protection、Office 365*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection から Azure Rights Management サービスを使用してファイルまたは電子メールに対して保護を設定し、テンプレートは使用しない場合、使用権限を自分で構成する必要があります。 また、Azure Rights Management 保護用のテンプレートまたはラベルを構成する場合は、ユーザー、管理者、または構成済みのサービスによってテンプレートまたはラベルが選択されたときに自動的に適用される使用権限を選択します。 たとえば、Azure Portal では、使用権限の論理的なグループを構成するロールを選ぶことも、個別の権限を構成することもできます。
 
@@ -97,11 +97,15 @@ Azure Portal または Windows 用 Azure Information Protection クライアン�
 
 Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange メール フロー ルールなど) には、**[転送不可]** というメール用の追加の情報権限保護オプションがあります。 
 
-このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、Azure Rights Management のテンプレートを表示し、管理するとき、Azure Portal には表示されません。 **[転送不可]** オプションは権限の集合であり、ユーザーが電子メール受信者に動的に適用します。
+このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、保護テンプレートを参照および管理するとき、Azure Portal には表示されません。 **[転送不可]** オプションは、ユーザーが電子メール受信者に動的に適用する使用権限の集合です。
 
 **[転送不可]** オプションが電子メールに適用される場合、電子メールが暗号化され、受信者は認証される必要があります。 その後、受信者は電子メールを転送、印刷、コピー、添付ファイルの保存、別名で保存することはできません。 たとえば、Outlook クライアントでは、[転送] ボタンが利用できなくなり、**[名前を付けて保存]**、**[添付ファイルの保存]**、**[印刷]** メニュー オプションが利用できなくなり、**[宛先]**、**[Cc]**、**[Bcc]** ボックスの受信者を追加したり、変更したりすることができなくなります。
 
-**[転送不可]** オプションの適用と電子メールに転送権限を与えないテンプレートの適用には重要な違いがあります。**[転送不可]** オプションの場合、元の電子メールでユーザーが選択した受信者に基づく、許可されたユーザーの動的なリストが使用されます。テンプレートの権限の場合、管理者が前もって指定した許可されたユーザーの静的なリストが使用されます。 違いは何ですか。 例を見てみましょう。 
+メールに添付されている保護されていない [Office ドキュメント](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)は、自動的に同じ制限を継承します。 これらのドキュメントに適用される使用権限は、**[コンテンツの編集]、[編集]**、**[保存]**、**[表示]、[開く]、[読み取り]** と **[マクロの許可]** です。 添付ファイルに別の使用権限を使用する場合または添付ファイルがこの継承された保護をサポートする Office ドキュメントでない場合、電子メールに添付する前に、ファイルを保護する必要があります。 それからファイルに必要な特定の使用権限を割り当てることができます。 
+
+### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>転送不可と転送の使用権限を付与しないことの違い
+
+**[転送不可]** オプションの適用と電子メールに**転送**使用権限を与えないテンプレートの適用には重要な違いがあります。**[転送不可]** オプションの場合、元の電子メールでユーザーが選択した受信者に基づく、許可されたユーザーの動的なリストが使用されます。テンプレートの権限の場合、管理者が前もって指定した許可されたユーザーの静的なリストが使用されます。 違いは何ですか。 例を見てみましょう。 
 
 あるユーザーがいくつかの情報をマーケティング部署の一部の人たちに電子メールで送信します。それ以外の人とこの情報を共有することは許されません。 権限 (表示、返信、保存) をマーケティング部署に限定するテンプレートで電子メールを保護するべきでしょうか。  それとも、**[転送不可]** オプションを選択するべきでしょうか。 いずれの場合でも、受信者は電子メールを転送できません。 
 
@@ -118,7 +122,9 @@ Exchange Online で Office 365 Message Encryption の新機能を使用する場
 
 このオプションは Exchange Online を使用するテナントに展開されています。最初は Outlook on the web 用のみで、メール フロー ルールの別の権利保護オプションとして使用します。 詳細については、Office チームからのブログ投稿によるお知らせ「[Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018)」(Office 365 Message Encryption の暗号化のみのロールアウト) を参照してください。
 
-このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 さらに、受信者にはフル コントロールを除く、すべての使用権限を持ちます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 同様に、添付および自動的に保護された任意の Office ドキュメントは、保存、コピー、および印刷できます。
+このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 すると、受信者には **[名前を付けて保存]、[エクスポート]** と **[フル コントロール]** を除くすべての使用権限が割り当てられます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 
+
+同様に、メールに添付されている保護されていない [Office ドキュメント](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)も同じアクセス許可を継承します。 これらのドキュメントは自動的に保護され、受信者が保存、編集、コピーおよび印刷することができます。 受信者が文書を保存する場合、新しい名前で保存できます。このとき、別の形式で保存することも可能です。 ただし、元の保護でドキュメントを保存できるよう、保護をサポートするファイル形式のみを使用できます。 添付ファイルに別の使用権限を使用する場合または添付ファイルがこの継承された保護をサポートする Office ドキュメントでない場合、電子メールに添付する前に、ファイルを保護する必要があります。 それからファイルに必要な特定の使用権限を割り当てることができます。
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management 発行者と Rights Management 所有者
 

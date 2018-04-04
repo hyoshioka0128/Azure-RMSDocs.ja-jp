@@ -1,26 +1,26 @@
 ---
-title: "AD RMS から Azure Information Protection への移行 - フェーズ 1"
-description: "AD RMS から Azure Information Protection への移行のフェーズ 1 には、手順 1 から 3 が含まれます。"
+title: AD RMS から Azure Information Protection への移行 - フェーズ 1
+description: AD RMS から Azure Information Protection への移行のフェーズ 1 には、手順 1 から 3 が含まれます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c74bbf88adced03ba73c2431c4c3ccd2ea3359d1
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: ea4c121d8945aabb4bb5a13a043a100e32e5924a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
->*適用対象: Active Directory Rights Management サービス、Azure Information Protection、Office 365*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
