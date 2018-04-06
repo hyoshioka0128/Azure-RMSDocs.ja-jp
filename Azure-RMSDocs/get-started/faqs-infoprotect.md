@@ -4,7 +4,7 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 03/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 543abf11ce2d107c3d2a52a24c6c2a474b80cfbd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 24e99c6645832bcddbbf881a2b5728af3589f1e5
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -44,10 +44,6 @@ Azure Information Protection の [User Voice サイト](https://msip.uservoice.c
 
 [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)をインストールするときにデモ ポリシーをインストールするオプションを選択した場合は、ポータルにサインインしなくてもラベル機能を試すことができます。 デモ ポリシーでは Azure Information Protection 用の既定のポリシーがローカルにインストールされるので、ドキュメントと電子メールへのラベル付けを試すことができますが、ラベルの変更または新規追加には Azure Portal にサインインする必要があります。 
 
-## <a name="which-options-in-the-azure-portal-are-p2"></a>Azure Portal のオプションが P2 かどうかを確認するにはどうすればよいですか?
-
-**Azure Information Protection Premium 2** (P2) のサブスクリプションを必要とする Azure Portal のオプションでは、そのことを示す情報ポップアップ メッセージが表示されるようになりました。 P1 および P2 のサブスクリプションに含まれる機能について詳しくは、Azure Information Protection のサイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)をご覧ください。
-
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
 ユーザーが一度に選択できるのはドキュメントまたは電子メールごとに 1 つのラベルのみです。したがって、多くの場合、適用できる分類は 1 つのみとなります。 ただし、ユーザーがサブラベルを選択した場合、実際は同時に 2 つのラベル (プライマリ ラベルとセカンダリ ラベル) が適用されます。 サブラベルを使用すれば、1 つのファイルで 2 つの分類 (制御の追加レベルの親\子関係を示す) を適用することができます。
@@ -60,7 +56,7 @@ Azure Information Protection の [User Voice サイト](https://msip.uservoice.c
 
 分類ラベルを下げる場合、ラベルを削除する場合、保護を解除する場合にその理由をユーザーが説明しなければならない[ポリシー設定](../deploy-use/configure-policy-settings.md)がありますが、この設定ではこれらの操作を回避しません。 ユーザーによるラベルの削除または変更を防ぐには、コンテンツが既に保護されている必要があります。保護のアクセス許可ではユーザーにエクスポートまたはフル コントロールの[使用権限](../deploy-use/configure-usage-rights.md)が付与されません。 
 
-# <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
+## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
 いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は添付ファイルに適用されます。
 
