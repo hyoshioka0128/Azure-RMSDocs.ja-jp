@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 47b7a82ba7dc6ba7dc3fc21ed114452578b62593
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -201,6 +201,20 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 - キー: **OutlookDefaultLabel**
 
 - 値: \<**ラベル ID**> または**なし**
+
+## <a name="turn-off-classification-running-continuously-in-the-background"></a>バック グラウンドで継続的に実行されている分類をオフにする
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 さらに、この構成オプションにはクライアントのプレビュー バージョンが必要です。
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+この設定を構成すると、Azure Information Protection クライアントのプレビュー版は、ドキュメントに指定された条件規則を定期的にチェックしません。 代わりに、自動と推奨のラベルが [Azure Information Protection クライアントの一般的に使用可能なバージョンと同じように](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied)適用されます。 この設定は、パフォーマンス上の理由で必要な場合があります。
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー: **RunPolicyInBackground**
+
+- 値: **False**
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 

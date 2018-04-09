@@ -4,7 +4,7 @@ description: Rights Management サービス クライアント (RMS クライア
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
@@ -112,7 +112,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 
 |作業|Settings|
 |--------|------------|
-|クライアントがバージョン 1.03102.0221 以降の場合:<br /><br />**アプリケーション データ収集を制御するには**|**重要**: ユーザーのプライバシーを保証するために、管理者は、データ収集を有効にする前にユーザーに同意を求める必要があります。<br /><br />データ収集を有効にした場合、インターネット経由での Microsoft へのデータ送信に同意したことになります。 Microsoft では、Microsoft 製品およびサービスの品質、セキュリティおよび整合性を向上するためにこのデータを使用します。 たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。 データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**値:** 環境プロパティ [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx) を使用して定義したアプリケーションの場合は 0 (既定値)、無効な場合は 1、有効な場合は 2 になります。<br /><br />**注**: 32 ビット MSIPC ベースのアプリケーションが 64 ビット版の Windows で実行されている場合、場所は HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC になります。|
+|クライアントがバージョン 1.03102.0221 以降の場合:<br /><br />**アプリケーション データ収集を制御するには**|**重要**: ユーザーのプライバシーを保証するために、管理者は、データ収集を有効にする前にユーザーに同意を求める必要があります。<br /><br />データ収集を有効にした場合、インターネット経由での Microsoft へのデータ送信に同意したことになります。 Microsoft では、Microsoft 製品およびサービスの品質、セキュリティおよび整合性を向上するためにこのデータを使用します。 たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。 データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。<br /><br />バージョン 1.0.3356 またはそれ以降:  <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticAvailability<br /><br />バージョン 1.0.3356 以前:  <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**値:** 環境プロパティ [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx) を使用して定義したアプリケーションの場合は 0 (既定値)、無効な場合は 1、有効な場合は 2 になります。<br /><br />**注**: 32 ビット MSIPC ベースのアプリケーションが 64 ビット版の Windows で実行されている場合、場所は HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC になります。|
 |AD RMS のみ: <br /><br />**クライアント コンピューターのエンタープライズ サービスの場所を更新するには**|次のレジストリ キーを編集します。<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: 既定<br /><br />**値:** \<http または https>://*RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: 既定<br /><br />**値:** \<http または https>://*RMS_Cluster_Name*/_wmcs/Licensing|
 |**トレースを有効化または無効化するには**|次のレジストリ キーを更新します。<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: トレース<br /><br />**Value:** トレースを有効にする場合は 1、トレースを無効にする場合は 0 (既定値)|
 |**テンプレートを更新する頻度 (日単位) を変更するには**|TemplateUpdateFrequencyInSeconds 値が設定されていない場合、次のレジストリ値でユーザーのコンピューターでのテンプレートの更新頻度を指定します。  これらの値のどちらも設定されていない場合は、RMS クライアント (バージョン 1.0.1784.0) を使用するアプリケーションがテンプレートをダウンロードする既定の更新間隔は 1 日です。 これより前のバージョンでは、既定は 7 日ごとです。<br /><br />**クライアント モード:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** ダウンロード間の日数 (最小値は 1) を指定する整数値。<br /><br />**サーバー モード:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** ダウンロード間の日数 (最小値は 1) を指定する整数値。|

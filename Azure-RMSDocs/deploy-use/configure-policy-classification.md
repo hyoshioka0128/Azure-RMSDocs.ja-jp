@@ -4,17 +4,17 @@ description: ラベルの条件を構成するときに、ドキュメントま�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 80537b32bee11df72673b869932f2d59cef11469
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -62,9 +62,11 @@ ms.lasthandoff: 03/28/2018
 
 #### <a name="more-information-about-running-continuously"></a>継続的実行に関する詳細
 
-Azure Information Protection クライアントの現行プレビュー版は、ドキュメントに指定された条件規則を定期的にチェックします。 この動作により、SharePoint Online に格納されているドキュメントの自動分類/保護と推奨分類/保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。 
+既定では、Azure Information Protection クライアントの現行プレビュー版は、ドキュメントに指定された条件規則を定期的にチェックします。 この動作により、SharePoint Online に格納されているドキュメントの自動分類/保護と推奨分類/保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。 
 
-条件規則がユーザーの入力と同時にリアルタイムで実行されることはありません。 ドキュメントが変更された場合、バックグラウンド タスクとして定期的に実行されます。 
+条件規則がユーザーの入力と同時にリアルタイムで実行されることはありません。 ドキュメントが変更された場合、バックグラウンド タスクとして定期的に実行されます。
+
+Azure Information Protection クライアントで、自動と推奨のラベルがクライアントの一般的に使用可能なバージョンと同じように適用されるように、この動作を変更できます。 この構成には、[高度なクライアント設定](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background)が必要です。
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>複数のラベルに適用するときの複数の条件の評価方法
 
