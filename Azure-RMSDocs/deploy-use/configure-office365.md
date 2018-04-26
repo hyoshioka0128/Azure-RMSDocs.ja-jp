@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ecf30ece9370a732e0bf302be5733273b64eea1a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 22182613f3bc12e5ed5aec0079c7b3e54ba8f69d
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するようにクライアントとオンライン サービスを構成する
 
@@ -110,7 +110,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
 3. **[設定]** アイコンを選択します。 **[設定]** ウィンドウの**リボン**が **[オフ]** に設定されている場合、この設定を選択し、リボンをオンにします。
 
-4. OneDrive for Business のすべてのファイルが保護されるよう構成するには、リボンの **[ライブラリ]** タブを選択し、**[ライブラリの設定]** を選択します。 特定のフォルダーのすべてのファイルが保護されるように選択するには、まずそのフォルダーを選択します。
+4. OneDrive for Business のすべてのファイルが保護されるよう構成するには、リボンの **[ライブラリ]** タブを選択し、**[ライブラリの設定]** を選択します。
 
 5. **[ドキュメント > 設定]** ページの **[権限と管理]** セクションの **[Information Rights Management]** を選択します。
 
