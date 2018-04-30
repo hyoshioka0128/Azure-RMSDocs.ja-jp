@@ -16,6 +16,7 @@
 ### [既定のポリシー](configure-policy-default.md)
 ### [ポリシー設定の構成](configure-policy-settings.md)
 ### [新しいラベルの作成](configure-policy-new-label.md)
+### [ラベルの追加または削除](configure-policy-add-remove-label.md)
 ### [ラベルの削除または順序を変更](configure-policy-delete-reorder.md)
 ### [ラベルの変更](configure-policy-change-label.md)
 ### [保護の構成](configure-policy-protection.md)
