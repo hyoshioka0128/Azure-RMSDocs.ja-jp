@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 04/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e5e1f0fa043a0a15ef34c9e4d5690e974cf6bddd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 62f854264f48b51e6177c033d95dabaf75e2dc5d
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
@@ -72,17 +72,17 @@ Windows クライアントを再構成する方法の詳細については、次
 
     」を参照します。 クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
 
-    b. **既定の Web サイト** > **_wmcs** > **licensing** > **publish.asmx** に移動します。
+    b. **既定の Web サイト** > **_wmcs** > **licensing** > **licensing.asmx** に移動します。
 
-    c. **publish.asmx** > **[プロパティ]** > **[編集]** を右クリックして選択します。
+    c. **licensing.asmx** > **[プロパティ]** > **[編集]** を右クリックして選択します。
 
-    d. **[publish.asmx の権限]** ダイアログ ボックスで、すべてのユーザーにリダイレクトを設定するために **[ユーザー]** を選択するか、**[追加]** を選択してリダイレクトするユーザーを含むグループを指定します。
+    d. **[licensing.asmx の権限]** ダイアログ ボックスで、すべてのユーザーにリダイレクトを設定するために **[ユーザー]** を選択するか、**[追加]** を選択してリダイレクトするユーザーを含むグループを指定します。
     
     すべてのユーザーが Office 2016 を使用している場合でも、最初に段階的な移行用のユーザーのサブセットを指定する可能性があります。
     
     e. 選択したグループの **[読み取りと実行]** と **[読み取り]** のアクセス許可に **[拒否]** を選択して、**[OK]** を 2 回クリックします。
 
-    f. この構成が想定どおりに動作することを確認するには、ブラウザーから直接 publish.asmx ファイルへの接続を試みます。 次のエラー メッセージが表示されます。これにより、Office 2016 を実行しているクライアントが SRV レコードの検索を開始します。
+    f. この構成が想定どおりに動作することを確認するには、ブラウザーから直接 licensing.asmx ファイルへの接続を試みます。 次のエラー メッセージが表示されます。これにより、Office 2016 を実行しているクライアントが SRV レコードの検索を開始します。
     
     **エラー メッセージ 401.3: 指定した資格情報を使用して、このディレクトリまたはページを表示するアクセス許可がありません (アクセス制御リストにより、アクセスが拒否されました)。**
 
@@ -132,7 +132,7 @@ Windows クライアントを再構成する方法の詳細については、次
     > [!IMPORTANT]
     > 前と同様に、アドレスの前後に余分なスペースが挿入されないように注意してください。
     > 
-    > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、https:// rms.treyresearch.net:443/_wmcs/licensing となっている必要があります。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、**[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、https://rms.treyresearch.net:**443** のように指定します。 
+    > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、https://rms.treyresearch.net:443/_wmcs/licensing と指定します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、**[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、https://rms.treyresearch.net:**443** のように指定します。 
     
     *&lt;YourTenantURL&gt;* の Azure Rights Management サービス URL を取得する必要がある場合は、前の「[Azure Rights Management サービス URL を識別するには](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url)」をご覧ください。
 

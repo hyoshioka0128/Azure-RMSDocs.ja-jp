@@ -4,7 +4,7 @@ description: Office 365 テナントは Office 365 Message Encryption の新し�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 04/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,30 +12,34 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 022eb960ef58e69c0a4c2d8a76962ed792a9ed38
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e452f5ac4e3297106a54a2034d64f57d8f6d5302
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="exchange-online-irm-configuration-when-you-have-imported-a-trusted-publishing-domain"></a>信頼された発行ドメインをインポートしているときの Exchange Online IRM 構成
+# <a name="exchange-online-irm-configuration-to-import-a-trusted-publishing-domain"></a>信頼された発行ドメインをインポートする Exchange Online IRM 構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-以下の手順は、信頼された発行ドメイン (TPD) をインポートし、IRM に適するように Exchange Online を既に構成しているとき、以前に暗号化された電子メールを復号しなければならないときにのみご利用ください。
+次の手順は、テナントが Office 365 Message Encryption の新しい機能を使用できない場合にのみ従ってください。 確認するには、Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行し、**AzureRMSLicensingEnabled** パラメーターがあるかどうか確認します。 このパラメーターが表示された場合、テナントは Office 365 Message Encryption の新機能を使用できます。
 
-いずれの条件にも当てはまらない場合、ここの手順を利用せず、「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) の手順をご利用ください。
+- **AzureRMSLicensingEnabled** が **True** に設定されていると、テナントは既に Office 365 Message Encryption の新機能を使用しているため、次のセクションの手順を使用しないでください。
 
-## <a name="exchange-online-irm-configuration-if-you-have-an-imported-tpd"></a>TPD をインポートしている場合の Exchange Online IRM 構成
+- **AzureRMSLicensingEnabled** が **False** に設定されている場合、テナントは Office 365 Message Encryption の新機能をサポートしますが、まだこれを実行するように構成されていません。 これらの新機能用にテナントを構成する方法については、「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」(Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) を参照してください。 
 
-Exchange Online を構成して Azure Rights Management サービスをサポートするには、Exchange Online で Information Rights Management (IRM) サービスを構成する必要があります。 これを行うには、Windows PowerShell を使用して (個別のモジュールをインストールする必要はありません)、[Exchange Online 用 PowerShell コマンド](https://technet.microsoft.com/library/jj200677.aspx)を実行します。
+次の手順は、テナントで Office 365 Message Encryption の新機能をサポートされていない場合にのみ従ってください。
+
+## <a name="exchange-online-irm-configuration"></a>Exchange Online IRM 構成
+
+Exchange Online IRM を構成するには、Windows PowerShell を使用して (個別のモジュールをインストールする必要はありません)、[Exchange Online 用 PowerShell コマンド](https://technet.microsoft.com/library/jj200677.aspx)を実行します。
 
 > [!NOTE]
-> ご利用の Office 365 をマイクロソフトが移行するまで、マイクロソフト管理のテナント キーの既定の構成ではなく Azure Information Protection の顧客管理のテナント キー (BYOK) を使用する場合は、Azure Rights Management サービスをサポートするように Exchange Online を構成することはできません。
+> ご利用の Office 365 テナントをマイクロソフトが移行して新しい機能をサポートするようになるまで、マイクロソフト管理のテナント キーの既定の構成ではなく Azure Information Protection の顧客管理のテナント キー (BYOK) を使用する場合は、Azure Rights Management サービスをサポートするように Exchange Online を構成することはできません。
 >
 > Azure Rights Management サービスで BYOK を使用しているときに Exchange Online を構成しようとすると、キーをインポートするコマンド (次の手順 5) は、**[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]** というエラー メッセージで失敗します。
 
-次の手順では、標準的な一連のコマンドを提供します。このシナリオで Azure Rights Management サービスを利用する目的で Exchange Online を有効にする場合に実行できます。
+次の手順では、Exchange Online RMS を使用可能にするために実行するコマンドの標準的なセットを提供します。
 
 1.  コンピューターで Exchange Online 用 Windows PowerShell を初めて使用する場合は、署名済みスクリプトを実行するように Windows PowerShell を構成する必要があります。 **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開始し、次のように入力します。
 

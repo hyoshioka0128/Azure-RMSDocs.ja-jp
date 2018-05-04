@@ -4,7 +4,7 @@ description: 管理者が Azure Information Protection のドキュメント追�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 04b6f65495c6b7251d000ff438ecab20c3a44db7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e24d91f04dc3186a9451546c8a962c49129f326b
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -24,11 +24,17 @@ ms.lasthandoff: 03/28/2018
 
 [ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ユーザーと管理者は、保護されたドキュメントにいつアクセスがあったのかをドキュメント追跡によって知ることができ、必要に応じて追跡対象のドキュメントへのアクセス権を取り消すことができます。
 
-## <a name="privacy-controls-for-your-document-tracking-site"></a>ドキュメント追跡サイトのプライバシー管理
+## <a name="using-powershell-to-manage-the-document-tracking-site"></a>PowerShell を使用したドキュメント追跡サイトの管理
+
+次のセクションでは、PowerShell を使用してドキュメント追跡サイトを管理する方法について説明します。 PowerShell モジュールのインストール手順については、「[AADRM PowerShell モジュールのインストール](../deploy-use/install-powershell.md)」を参照してください。 事前にモジュールをダウンロードしてインストールしてある場合は、`(Get-Module aadrm –ListAvailable).Version` を実行してバージョン番号を確認します。
+
+各コマンドレットの詳細については、各リンク先ページをご覧ください。
+
+### <a name="privacy-controls-for-your-document-tracking-site"></a>ドキュメント追跡サイトのプライバシー管理
 
 組織のプライバシーに関する要件により、すべてのドキュメント追跡情報の表示が禁止されている場合は、[Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) コマンドレットを使用してドキュメント追跡を無効にすることができます。 
 
-このコマンドレットは、組織内のすべてのユーザーが保護されたドキュメントへのアクセスを追跡したり取り消ししたりできないように、ドキュメント追跡サイトへのアクセスを無効にします。 ドキュメント追跡は、[Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) を使用して、いつでも有効にしなおすことができます。また、[Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) を使用して、ドキュメント追跡が現在有効になっているか無効になっているかを確認できます。 これらのコマンドレットを使用するには、バージョン **2.3.0.0** 以降の PowerShell 用 Azure Rights Management (AADRM) モジュールが必要です。 
+このコマンドレットは、組織内のすべてのユーザーが保護されたドキュメントへのアクセスを追跡したり取り消ししたりできないように、ドキュメント追跡サイトへのアクセスを無効にします。 ドキュメント追跡は、[Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) を使用して、いつでも有効にしなおすことができます。また、[Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) を使用して、ドキュメント追跡が現在有効になっているか無効になっているかを確認できます。 これらのコマンドレットを使用するには、バージョン **2.3.0.0** 以降の PowerShell 用 AADRM モジュールが必要です。 
 
 ドキュメント追跡サイトを有効にすると、既定では、保護されたドキュメントにアクセスしようとしている人の電子メール アドレス、アクセスを試みた時刻、その人がいる位置情報などが示されます。 このレベルの情報は、共有ドキュメントの使用方法を決めたり、不審なアクティビティが確認された際にアクセス権を取り消すべきかどうかを判断したりするのに役立ちます。 ただし、このユーザー情報へのアクセス権は、プライバシー保護の観点から一部またはすべてのユーザーに対して無効にする必要がある場合もあります。 
 
@@ -40,11 +46,19 @@ ms.lasthandoff: 03/28/2018
 
 この設定はエンド ユーザーのみに影響します。 Azure Information Protection の管理者は、Set-AadrmDoNotTrackUserGroup を使用して指定されているユーザーも含めた、すべてのユーザーのアクティビティを常に追跡できます。 管理者がユーザーのドキュメントを追跡する方法については、「[ユーザーのドキュメントの追跡と取り消し](#tracking-and-revoking-documents-for-users)」のセクションをご覧ください。
 
-このオプションが不要になった場合は、[Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) を使用できます。 または、ユーザーを選択的に削除するには、グループからユーザーを削除します。その際、[グループ キャッシュ](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection)にご注意ください。 このオプションが現在使用中であるかどうかは、[Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup) を使用して確認できます。 このグループ構成のコマンドレットを使用するには、バージョン **2.10.0.0** 以降の PowerShell 用 Azure Rights Management (AADRM) モジュールが必要です。
 
-これらのコマンドレットの詳細については、各リンク先ページをご覧ください。 PowerShell モジュールのインストール手順については、「[AADRM PowerShell モジュールのインストール](../deploy-use/install-powershell.md)」を参照してください。 事前にモジュールをダウンロードしてインストールしてある場合は、`(Get-Module aadrm –ListAvailable).Version` を実行してバージョン番号を確認します。
+### <a name="logging-information-from-the-document-tracking-site"></a>ドキュメント追跡サイトからのログ情報
 
+AADRM モジュールの最小バージョン **2.13.0.0** がある場合、次のコマンドレットを使用して、ドキュメント追跡サイトからログ情報をダウンロードできます。
 
+- [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
+    
+    このコマンドレットは、ドキュメントを保護した特定のユーザー (Rights Management の発行者) または保護されたドキュメントにアクセスしたユーザーの保護されたドキュメントに関する追跡情報を返します。 このコマンドレットは、"指定したユーザーがどの保護されたドキュメントにアクセスまたは追跡したか?" という質問に回答するために役立ちます。
+
+- [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog)
+    
+    このコマンドレットは、特定のユーザー (Rights Management の発行者) がドキュメントを保護したかドキュメントの Rights Management 所有者であった場合、または保護されたドキュメントがそのユーザーに直接アクセス権を付与するように構成された場合に、そのユーザーの追跡されるドキュメントに関する保護情報を返します。 このコマンドレットは、"指定されたユーザーに対してドキュメントをどのように保護するか?" という質問に回答するために役立ちます。
+ 
 ## <a name="destination-urls-used-by-the-document-tracking-site"></a>ドキュメント追跡サイトで使用される追跡先 URL
 
 次の URL はドキュメント追跡で使用されます。Azure Information Protection を実行するクライアントとインターネットとの間にあるすべてのデバイスとサービスで、この URL を許可する必要があります。 たとえば、これらの URL をファイアウォールに追加します。あるいは、Internet Explorer でセキュリティ強化を使用している場合は信頼済みサイトに追加します。
