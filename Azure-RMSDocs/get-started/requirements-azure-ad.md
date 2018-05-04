@@ -4,7 +4,7 @@ description: ユーザーを正常に認証できるように、Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,27 +12,23 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82e2fcb1cdbce0476e95b35b0faef7ada7637795
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 53d9d9b25ab71c91275bf770a6038eccbaa2659c
+ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Azure Information Protection を使用するには、Azure AD ディレクトリが必要です。 このディレクトリの組織アカウントを使用して Azure Portal にサインインします。ここでは、たとえば、Rights Management テンプレートを構成し、管理できます。
+Azure Information Protection を使用するには、Azure AD ディレクトリが必要です。 このディレクトリのアカウントを使用して Azure Portal にサインインします。ここでは、たとえば、Azure Information Protection ラベルや Rights Management テンプレートを構成し、管理できます。
 
-組織の Azure サブスクリプションがまだない場合は、無料試用版にサインアップして取得できます。 「[Azure - はじめに](https://account.windowsazure.com/organization)」ページにアクセスし、指示に従ってください。
+Azure Information Protection または Azure Rights Management を含むサブスクリプションをお持ちの場合は、必要に応じて Azure AD ディレクトリが自動的に作成されます。  
 
-詳細については、Azure Active Directory ドキュメントの次のリソースを参照してください。
+Azure AD の詳細については、「[Azure Active Directory とは](/active-directory/active-directory-whatis)」をご覧ください。
 
--   [Azure AD ディレクトリとは](/active-directory/active-directory-whatis)
-
--   [Azure サブスクリプションを Azure Active Directory に関連付ける方法](/active-directory/active-directory-how-subscriptions-associated-directory)
-
-Azure AD ディレクトリをオンプレミス AD フォレストと統合する場合は、「[Integrating your on-premises identities with Azure Active Directory (オンプレミス ID と Azure Active Directory の統合)](/active-directory/active-directory-aadconnect)」を参照してください。
+Azure AD ディレクトリをオンプレミス AD フォレストと統合するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](/active-directory/active-directory-aadconnect)」を参照してください。
 
 ### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ 
 
