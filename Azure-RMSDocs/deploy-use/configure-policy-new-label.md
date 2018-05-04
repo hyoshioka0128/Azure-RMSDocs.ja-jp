@@ -4,39 +4,38 @@ description: Azure Information Protection にはカスタマイズできる既�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: f24b4e8ac44377ab1c0b18244a376971ade87ebb
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e36daed0dafe970a273d153512387dda9c1dca40
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Azure Information Protection の新しいラベルを作成する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection にはカスタマイズできる既定のラベルが付属していますが、Information Protection バーに表示される独自のラベルを作成することもできます。
+>[!NOTE]
+> この記事は、グローバル ポリシーまたはスコープ ポリシーからラベルを個別に作成できる、Azure Portal に対する最新の更新を反映しています。 また、ポリシーを公開するオプションは削除されます。 これらの変更に対してテナントがまだ更新されていない場合、たとえば Azure Information Protection に対して **[公開]** オプションがまだ表示され、**[分類]** メニュー オプションが表示されない場合は、数日待ってから以下の手順に戻ってください。
+
+Azure Information Protection にはカスタマイズできる既定のラベルが付属していますが、独自のラベルを作成することもできます。
 
 新しいラベルを追加するか、分類のレベルをさらに細かくする必要がある場合は既存のラベルに新しいサブラベルを追加できます。 たとえば、[既定のポリシー](configure-policy-default.md)に含まれる最後のラベルには、サブラベルが含まれています。
 
 ラベルに最初のサブラベルを作成すると、ユーザーは元の親ラベルを選択できなくなります。 ユーザーが同じ設定を適用できるように、必要に応じて新しいサブラベルを作成して親ラベル設定を再作成してください。
 
-Azure Information Protection ポリシーに新しいラベルを追加するには、次の手順に従います。
+Azure Information Protection ポリシーに追加できる新しいラベルを追加するには、次の手順に従います。
 
 1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 追加する新しいラベルがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
-    
-    追加する新しいラベルが[スコープ付きポリシー](configure-policy-scope.md)で選んだユーザーに対するものである場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードからスコープ付きポリシーを選びます。
-
-3. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、次のいずれかのアクションを行います。
+2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、次のいずれかのアクションを実行します。
     
     - 新しいラベルを作成するには: **[Add a new label]** (新しいラベルの追加) をクリックします。
     
@@ -48,9 +47,16 @@ Azure Information Protection ポリシーに新しいラベルを追加するに
     
     新しいラベルには自動的に黒色が割り当てられます。 識別のための色を一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力します。 たとえば、**#DAA520** と入力します。 これらのコードの参照が必要な場合は、最初に MSDN ドキュメントの「[Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85)」(色の名前) を参照することをお勧めします。ここに掲載されているコードは Microsoft ペイントのような多くの画像編集プログラムで使用されており、パレットからカスタムの色を選択すると RGB の値が自動的に表示されます。
 
-5. ユーザーが変更を使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+5. 新しいラベルをユーザーが利用できるようにするには: **[分類]** > **[ポリシー]** メニュー オプションから、新しいラベルを含めるポリシーを選び、**[Add or remove labels]\(ラベルの追加または削除\)** を選択します。**[Policy: Add or remove labels]\(ポリシー: ラベルの追加または削除\) ブレード**からラベルを選択し、**[OK]**、**[保存]** の順に選択します。
+    
+    >[!TIP]
+    >新しいラベルについては、まず、テストに使用するスコープ ポリシーに追加することを検討してください。 結果に満足したら、このテスト スコープからラベルを削除し、運用環境で使用するポリシーにラベルを追加します。     
+    
+    ラベルの追加について詳しくは、[ラベルを追加または削除する方法](configure-policy-add-remove-label.md)に関する記事をご覧ください。
+    
+    変更内容はユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
-6. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには、「[How to configure labels for different languages (他の言語用ラベルを構成する方法)](configure-policy-languages.md)」の手順に従ってください。 
+6. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには、[異なる言語のラベルを構成する方法](configure-policy-languages.md)に関する記事の手順に従ってください。 
 
 ## <a name="next-steps"></a>次の手順
 

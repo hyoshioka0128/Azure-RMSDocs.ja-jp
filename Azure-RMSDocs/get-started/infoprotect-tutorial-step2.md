@@ -4,25 +4,28 @@ description: Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成して公開する
+# <a name="step-2-configure-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成する
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE]
+> チュートリアルのこの手順では、Azure Portal に最新の更新プログラムを反映します。 **[分類]** メニュー オプションが表示されず、**[公開]** オプションがまだ表示される場合、ナビゲーション手順は表示される内容と完全には一致しません。 その場合は、数日後にテナントが最新の変更に対して更新されてから、チュートリアルのこの手順に戻ることを検討してください。
+
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
-1. [手順 1](infoprotect-tutorial-step1.md) から引き続き、Azure Portal で **[グローバル ポリシー]** を選択して **[ポリシー: グローバル]** ブレードを開きます。 このブレードはサービスのその後の接続のために自動的に開き、テナントに作成される既定の Information Protection ポリシーが表示されます。
+1. [手順 1](infoprotect-tutorial-step1.md) から引き続き、Azure Portal で **[分類]** > **[ポリシー]** > **[グローバル]** を選択して **[ポリシー: グローバル]** ブレードを開きます。 このブレードには、テナントに対して作成された既定の Azure Information Protection ポリシーが表示されます。
 
 2. 表示されるラベルをよく理解しておいてください。
     
@@ -49,7 +52,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
     以前のバージョンのポリシーを使用しているために、このラベルがない場合は、同等のラベルとして **[内部]** を選択します。
 
-2. **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** オプションを**[オン]** に設定します。
+2. **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** オプションを **[オン]** に設定します。
 
 3. さらに、**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** の設定を見つけます。 これが **[オフ]** に設定されている場合、**[オン]** に変更します。
     
@@ -135,10 +138,6 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 設定構成済み](../media/info-protect-settings-configuredv2.png)
     
-14. 変更を行って保存したので、ユーザーがそれを使用できるようにします。そのためには、**[発行]** をクリックし、**[はい]** をクリックして確定します。
-
-    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 構成済みポリシーの公開](../media/info-protect-publish.png)
-
 Azure Portal を閉じても、開いたままにしておきこのチュートリアルが終わった後でさらにオプションを構成してみてもかまいません。
 
 既定のポリシーの確認と変更が済んだので、次の手順では Azure Information Protection をインストールします。

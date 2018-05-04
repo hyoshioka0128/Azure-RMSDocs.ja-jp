@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d061a7e65bce1e5072e4e06fd3ed1ef2132810c8
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e69714fdb983d7235c7fca940bebc37a14892397
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>AADRM PowerShell モジュールのインストール
 
@@ -34,15 +34,16 @@ ms.lasthandoff: 03/28/2018
 |Windows PowerShell の最小バージョン: 3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
 |Microsoft .NET Framework の最小バージョン: 4.5<br /><br />注: 最近のオペレーティング システムには、このバージョンの Microsoft .NET Framework が付属しています。このため、手動でインストールする必要があるのは、クライアントのオペレーティング システムが Windows 8.0 よりも前のバージョンの場合か、サーバーのオペレーティング システムが Windows Server 2012 よりも前のバージョンの場合に限ります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、AADRM モジュールで使用されるクラスの一部で必要になります。|
 
+AADRM モジュールのバージョン 2.5.0.0 以降、Microsoft Online Services サインイン アシスタントは必要なくなりました。
+
 > [!NOTE]
-> AADRM モジュールのバージョン 2.5.0.0 以降、Microsoft Online Services サインイン アシスタントは必要なくなりました。
 > 
-> AADRM モジュールの以前のバージョンがインストールされている場合は、最新バージョンをインストールする前に、**[プログラムと機能]** を使用して **[Windows Azure AD Rights Management の管理]** をアンインストールしてください。
+> Azure Rights Management 管理ツールで AADRM モジュールのバージョンをインストールした場合、PowerShell ギャラリーから AADRM モジュールの最新バージョンをインストールする前に、**[プログラムと機能]** を使って **Windows Azure AD Rights Management の管理**をアンインストールしてください。
 
 
 ## <a name="how-to-install-the-aadrm-module"></a>AADRM モジュールをインストールする方法
 
-AADRM モジュールは [PowerShell ギャラリー](/powershell/gallery/readme)に移動されますが、期間限定で Microsoft ダウンロード センターでも使用できます。 
+AADRM モジュールは [PowerShell ギャラリー](/powershell/gallery/readme)に移動しており、Microsoft ダウンロード センターからは入手できません。 
 
 ### <a name="to-install-the-aadrm-module-from-the-powershell-gallery"></a>PowerShell ギャラリーから AADRM モジュールをインストールするには
 
@@ -50,18 +51,16 @@ PowerShell ギャラリーを初めてお使いの場合は、「[PowerShell ギ
 
 PowerShell ギャラリーで AADRM モジュールの詳細を確認するには、[AADRM](https://www.powershellgallery.com/packages/AADRM) に関するページを参照してください。
 
-AADRM モジュールをインストールするには、PowerShell セッションを開始して、次のように入力します。
+AADRM モジュールをインストールするには、**[管理者として実行]** オプションを使用して PowerShell セッションを開始し、次のように入力します。
 
     Install-Module -Name AADRM
 
+信頼されていないリポジトリからのインストールについての警告が表示される場合は、Y キーを押して確認できます。 または、N キーを押し、`Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` コマンドを使って信頼されたリポジトリとして PowerShell ギャラリーを構成した後、コマンドを再び実行して AADRM モジュールをインストールします。  
 
-### <a name="to-install-the-aadrm-module-from-the-microsoft-download-center"></a>Microsoft ダウンロード センターから AADRM モジュールをインストールするには
+以前のバージョンの AADRM モジュールをギャラリーからインストールした場合は、次のように入力して最新バージョンに更新します。
 
-1. Microsoft ダウンロード センターに移動し、[Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721) を探します。これには、Windows PowerShell 用の [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] 管理モジュールが含まれています。
+    Update-Module -Name AADRM
 
-2. [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] インストーラー ファイル **WindowsAzureADRightsManagementAdministration_x64** をダウンロードして保存します。 次に、このファイルをダブルクリックして、Azure AD Rights Management 管理セットアップ ウィザードを開始します。
-
-3.  AADRM PowerShell モジュールをインストールするウィザードを完了します。
 
 ## <a name="next-steps"></a>次の手順
 Windows PowerShell セッションで、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。

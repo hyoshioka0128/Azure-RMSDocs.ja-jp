@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 04/17/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 380b2f715ead6f3f8c8e497c911ff425c12424e8
-ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
+ms.openlocfilehash: c031bffeb5f4f3d6edbdab71e157b3f1580d46ed
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -64,6 +64,8 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 次のデバイスでは、Azure Information Protection クライアントをサポートします。これにより、ユーザーは次のドキュメントや電子メールの分類およびラベル付けを行うことができます。
 
 - Windows 10 (x86、x64)
+    
+    - Windows 10 RS4 Build for Insiders では、手書きはサポートされていません。 
 
 - Windows 8.1 (x86、x64)
 

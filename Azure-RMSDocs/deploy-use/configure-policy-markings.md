@@ -4,21 +4,24 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c5b0c4c82fc35ab560b55c4884cf67fe126ede2b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0b8bef6acd02abb664b274bc04fe77eea06de356
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> この記事は、グローバル ポリシーまたはスコープ ポリシーからラベルを個別に作成できる、Azure Portal に対する最新の更新を反映しています。 また、ポリシーを公開するオプションは削除されます。 これらの変更に対してテナントがまだ更新されていない場合、たとえば Azure Information Protection に対して **[公開]** オプションがまだ表示され、**[分類]** メニュー オプションが表示されない場合は、数日待ってから以下の手順に戻ってください。
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
 
@@ -56,9 +59,7 @@ ms.lasthandoff: 03/28/2018
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 構成するラベルがすべてのユーザーに適用される場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
-    
-    構成するラベルが[スコープ付きポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードからスコープ付きポリシーを選びます。
+2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、追加または変更する視覚的なマーキングを含むラベルを選択します。
 
 3. **[ラベル]** ブレードで、**[Set visual marking (such as header or footer)]** (視覚的なマーキングの設定 (ヘッダーやフッターなど)) セクション、目的の視覚的なマーカーの設定を構成した後、**[保存]** をクリックします。
     
@@ -67,8 +68,9 @@ ms.lasthandoff: 03/28/2018
     - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
     
     - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
+    
+**[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
-4. ユーザーが変更を使用できるようにするには、**[Azure Information Protection]** ブレードで **[公開]** をクリックします。
 
 ## <a name="using-variables-in-the-text-string"></a>テキスト文字列に変数を使用する
 
@@ -89,8 +91,6 @@ ms.lasthandoff: 03/28/2018
 例: **General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定する
-
-現在、この設定はプレビュー段階にあり、Azure Information Protection クライアントのプレビュー版が必要です。
 
 既定では、指定した視覚的マーキングは Word、Excel、PowerPoint、Outlook のすべてに適用されます。 ただし、テキスト文字列に "If.App" という変数ステートメントを入れると、Office アプリケーションごとに視覚的マーキングを指定できます。**Word**、**Excel**、**PowerPoint**、**Outlook** という値を利用し、アプリケーションの種類を区別できます。 このような値は省略することもできます。同じ If.App ステートメントで複数回指定する場合に必要になります。
 
@@ -122,11 +122,9 @@ ms.lasthandoff: 03/28/2018
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
-この設定は現在プレビュー段階です。
+Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、ビジュアル マーカーを適用するクライアント デバイスでそれが利用できることを確認してください。 
 
-Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、ビジュアル マーカーを適用するクライアント デバイスでそれが利用できることを確認してください。 利用できない場合、使用されるフォントは不明確になります。 
-
-Azure Information Protection クライアントのプレビュー版を使っているとき、指定したフォントがない場合、クライアントは Calibri フォントの使用に戻ります。
+指定したフォントが使用可能でない場合、クライアントは Calibri フォントの使用にフォールバックします。
 
 ### <a name="setting-the-font-color"></a>フォントの色を設定する
 

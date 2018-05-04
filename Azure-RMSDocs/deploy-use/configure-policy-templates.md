@@ -4,7 +4,7 @@ description: Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4f0cc5be090a425c7be28c81f20b85eef485772d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d26b69bc06a4c0d4f9c097e791b8b10bfc9feb1d
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -30,11 +30,11 @@ Rights Management テンプレートは Azure Information Protection ポリシ�
 
 **分類、ラベル付け、保護を含むサブスクリプションの場合 (Azure Information Protection P1 または P2)**
 
-- テナントのラベルと統合されない Rights Management テンプレートは、**[Azure Information Protection - すべて - クロス ポリシー ビュー]** ブレードで、ラベルの後の **[保護テンプレート]** セクションに表示されます。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
+- テナントのラベルと統合されない Rights Management テンプレートは、**[Azure Information Protection - ラベル]** ブレードで、ラベルの後の **[保護テンプレート]** セクションに表示されます。 このブレードに移動するには、**[分類]** > **[ラベル]** メニュー オプションを選択します。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
 
 **保護のみを含むサブスクリプションの場合 (Azure Rights Management サービスを含む Office 365 サブスクリプション)**
 
-- テナントの Rights Management テンプレートは、**[Azure Information Protection - すべて - クロス ポリシー ビュー]** ブレードの **[保護テンプレート]** セクションに表示されます。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、これらの設定はテンプレートには反映されず、構成することはできません。 
+- テナントの Rights Management テンプレートは、**[Azure Information Protection - ラベル]** ブレードの **[保護テンプレート]** セクションに表示されます。 このブレードに移動するには、**[分類]** > **[ラベル]** メニュー オプションを選択します。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、これらの設定はテンプレートには反映されず、構成することはできません。 
 
 ## <a name="default-templates"></a>既定のテンプレート
 
@@ -66,11 +66,11 @@ Azure Rights Management サービスが含まれる Azure Information Protection
 Azure Portal を使っている場合、これらの既定テンプレートの名前を変更 (および再構成) できます。
 
 >[!NOTE]
->**[Azure Information Protection - すべて - クロス ポリシー ビュー]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure Portal では、クラウド キーの保護設定を含むラベル構成の一部として表示されます。 テナントに設定されているテンプレートはいつでも確認できます。[AADRM PowerShell モジュール](administer-powershell.md)から [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) を実行してください。
+>**[Azure Information Protection - ラベル]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure Portal では、クラウド キーの保護設定を含むラベル構成の一部として表示されます。 テナントに設定されているテンプレートはいつでも確認できます。[AADRM PowerShell モジュール](administer-powershell.md)から [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) を実行してください。
 >
 >「[テンプレートをラベルに変更するには](#to-convert-templates-to-labels)」セクションに説明があるとおり、テンプレートは手動で変換できます。変換後、必要に応じて名前を変更します。 あるいは、既定の Azure Information Protection ポリシーが最近作成され、そのとき、テナントの Azure Rights Management サービスが有効化された場合、自動的に変換されます。
 
-アーカイブ済みのテンプレートは **[Azure Information Protection - すべて - クロス ポリシー ビュー]** ブレードに利用不可として表示されます。 そのようなテンプレートはラベルとして選択できませんが、ラベルに変換することはできます。
+アーカイブ済みのテンプレートは **[Azure Information Protection - ラベル]** ブレードに利用不可として表示されます。 そのようなテンプレートはラベルとして選択できませんが、ラベルに変換することはできます。
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Azure Portal のテンプレートに関する考慮事項
 
@@ -96,24 +96,21 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection - すべて - クロス ポリシー ビュー]** ブレードに移動します。
+>[!NOTE]
+> これらの手順では、Azure Portal に最新の更新を反映します。 **[分類]** メニュー オプションが表示されず、**[公開]** オプションがまだ表示される場合、ナビゲーション手順は表示される内容と完全には一致しません。 その場合は、数日後にテナントが最新の変更に対して更新されてから、この手順に戻ることを検討してください。
+
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection - ラベル]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[Azure Information Protection - すべて - クロス ポリシー ビュー]** ブレードで、構成するテンプレートを探します。
+2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[保護テンプレート]** を展開し、構成するテンプレートを見つけます。
     
-    - 分類、ラベル付け、保護を含むサブスクリプションの場合は、ラベルの後に**保護テンプレート**を展開します。
-    
-    - 保護のみを含むサブスクリプションの場合、テンプレートはラベルとして表示されます。
+3. テンプレートを選択し、**[ラベル]** ブレードで **[ラベルの表示名]** と **[説明]** を編集することにより、必要に応じてテンプレート名と説明を変更できます。 次に、値が **Azure (クラウド キー)** になっている **[保護]** を選択して **[保護]** ブレードを開きます。
 
-4. テンプレートを選択し、**[ラベル]** ブレードで **[ラベルの表示名]** と **[説明]** を編集することにより、必要に応じてテンプレート名と説明を変更できます。 次に、値が **Azure (クラウド キー)** になっている **[保護]** を選択して **[保護]** ブレードを開きます。
-
-5. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
+4. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
     
     変更を保存するには **[OK]** をクリックし、**[ラベル]** ブレードで **[保存]** をクリックします。
     
-    この変更に対して **[公開]** をクリックする必要はありません。
-
 > [!NOTE]
 > 定義済みのテンプレートを使うためのラベルを構成した場合は、**[保護]** ブレードの **[テンプレートの編集]** ボタンを使ってテンプレートを編集することもできます。 選択したテンプレートを使っているラベルが他にない場合、このボタンはテンプレートをラベルに変換し、手順 5 に移動します。 テンプレートがラベルに変換される場合の処理について詳しくは、次のセクションをご覧ください。
 
@@ -141,25 +138,36 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-create-a-new-template"></a>新しいテンプレートを作成するには
 
+>[!NOTE]
+> これらの手順では、Azure Portal に最新の更新を反映します。 **[分類]** メニュー オプションが表示されず、**[公開]** オプションがまだ表示される場合、ナビゲーション手順は表示される内容と完全には一致しません。 その場合は、数日後にテナントが最新の変更に対して更新されてから、この手順に戻ることを検討してください。
+
 **Azure (クラウド キー)** の保護設定で新しいラベルを作成すると、この処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
 
-1. 新しいテンプレートがすべてのユーザーに対するものである場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードに移動します。
-    
-     新しいテンプレートが部門テンプレートであり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードから[スコープ付きポリシー](configure-policy-scope.md)を作成または選択します。
+1. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[Add a new label]\(新しいラベルの追加\)** を選択します。
 
-2. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、**[新しいラベルの追加]** をクリックします。
+2. **[ラベル]** ブレードで、既定の **[有効]**: **[オン]** を変更せずにこの新しいテンプレートを公開するか、この設定を **[オフ]** に変更してテンプレートをアーカイブ済みとして作成します。 次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
 
-3. **[ラベル]** ブレードで、既定の **[有効]**: **[オン]** を変更せずにこの新しいテンプレートを公開するか、この設定を **[オフ]** に変更してテンプレートをアーカイブ済みとして作成します。 次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
-
-4. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
+3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
     
      ![Azure Information Protection ラベルの保護を構成する](../media/info-protect-protection-bar-configured.png)
 
-5. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
+4. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
     
     変更を保存するには **[OK]** をクリックし、**[ラベル]** ブレードで **[保存]** をクリックします。
+    
+    **[Azure Information Protection - ラベル]** ブレードに新しいラベルが表示され、**[保護]** 列には保護設定が含まれていることが示されます。 これらの保護設定は、Azure Rights Management サービスをサポートするアプリケーションとサービスに対してテンプレートとして表示されます。
 
-6. 最初の **[Azure Information Protection]** ブレードで、**[公開]** をクリックします。
+5. 新しく作成したテンプレートをすべてのユーザーに対して利用可能にするのでない場合は、新しく作成したラベルをグローバル ポリシー以外のポリシーに追加する必要があります。
+    
+    」を参照します。 **[分類]** > **[ポリシー]** メニュー オプションから、**[ポリシー]** を選択します。
+    
+    b. **[Add a new policy]\(新しいポリシーの追加\)** を選択し、**[ポリシー]** ブレードでユーザーのスコープの名前と説明を指定します。 次のオプションを使用して、ユーザーのサブセットを選択します: **[Select which users or groups get this policy.Groups must be email-enabled.]\(このポリシーを取得するユーザーまたはグループを選択します。グループはメール対応である必要があります。\)**
+    
+    また、ユーザーのサブセットに対するポリシーが既に存在する場合は、**[ポリシー]** ブレードからそのポリシーを選択します。
+    
+    c. **[ポリシー]** ブレードから、**[Add or remove labels]\(ラベルの追加または削除\)** を選択します。 次に、**[Policy: Add or remove labels]\(ポリシー: ラベルの追加または削除\)** ブレードで、保護設定が含まれる新しく作成されたラベルを選択し、**[OK]** をクリックします。
+    
+    d. **[ポリシー]** ブレードに戻り、**[保存]** をクリックします。  
 
 
 ## <a name="next-steps"></a>次の手順

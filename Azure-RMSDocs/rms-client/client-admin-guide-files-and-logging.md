@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのク�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a60169a2c98a751c787a7ca4a8aee31f99a18590
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 13f82bc12fd77d4f145b059c2962af01094760c3
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
@@ -40,9 +40,9 @@ Azure Information Protection クライアントをインストールした後、
 
 クライアントは、ユーザー アクティビティをローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Azure Information Protection]** に記録します。 イベントには次の情報が含まれます。
 
-- 日付、クライアントのバージョン、ポリシー ID
+- クライアントのバージョン、ポリシー ID
 
-- サインインしたユーザー名、コンピューター名
+- サインインしたユーザーの IP アドレス
 
 - ファイル名と場所
 
@@ -77,9 +77,6 @@ Azure Information Protection クライアントをインストールした後、
     - システム (サインインおよびダウンロードポリシー用)
     
     - 既定
-        
-        この **Default** ソース アクションはプレビュー クライアント専用であり、Azure Information Protection ポリシーの **[既定のラベルを選択]** を利用して設定されたラベルを参照します。
-
     
 - 操作前後のラベル 
     

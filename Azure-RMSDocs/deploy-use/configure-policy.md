@@ -4,7 +4,7 @@ description: 分類、ラベル付け、および保護を構成するには、A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a0194b1cf6b1b134c3fd37ae9f042f117570d9ce
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e8d641fd3165346ab052daad7ec7040b0d9e543f
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> この記事は、グローバル ポリシーまたはスコープ ポリシーからラベルを個別に作成できる、Azure Portal に対する最新の更新を反映しています。 また、ポリシーを公開するオプションは削除されます。 これらの変更に対してテナントがまだ更新されていない場合、たとえば Azure Information Protection に対して **[公開]** オプションがまだ表示され、**[分類]** メニュー オプションが表示されない場合は、数日待ってから以下の手順に戻ってください。
 
 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
 
@@ -74,7 +77,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 4. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページが表示されます。 推奨リソースを参照するか、他のメニュー オプションを使用します。 ユーザーが選択できるラベルを構成するには、次の手順に従います。
 
-次に **[Azure Information Protection]** ブレードにアクセスすると、すべてのユーザーのラベルを構成できるように、**[ポリシー]** > **[グローバル ポリシー]** オプションが自動的に選択されます。 **[クイック スタート]** ページに戻るには、**[全般]** メニューから選択します。
+次に **[Azure Information Protection]** ブレードにアクセスすると、すべてのユーザーのラベルを表示および構成できるように、**[ラベル]** オプションが自動的に選択されます。 **[クイック スタート]** ページに戻るには、**[全般]** メニューから選択します。
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
@@ -82,21 +85,29 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 2. 必要に応じて、**[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から **[Azure Information Protection]** を選択します。 
     
-    **[Azure Information Protection - グローバル ポリシー]** ブレードが自動的に開き、すべてのユーザーが取得するグローバル ポリシーを表示、編集できます。 
+    **[Azure Information Protection - ラベル]** ブレードが自動的に開き、使用可能なラベルを表示、編集できます。 ラベルをポリシーに追加または削除して、すべてのユーザーまたは選択したユーザーに対して利用可能にしたり、どのユーザーに対しても利用不可にしたりできます。
+
+3. ポリシーを表示および編集するには、メニュー オプションから **[ポリシー]** を選択します。 すべてのユーザーが取得するポリシーを表示および編集するには、**[グローバル]** ポリシーを選択します。 選択したユーザー用のカスタム ポリシーを作成するには、**[Add a new policy]\(新しいポリシーの追加\)** を選択します。
     
     Azure Information Protection ポリシーには、構成可能な次の要素があります。
     
-    - 管理者とユーザーがドキュメントと電子メールを分類するために使用できるラベル。
+    - 管理者とユーザーがドキュメントや電子メールを分類できるようにするために含まれるラベル。
     
     - ユーザーの Office アプリケーションで、Information Protection バーに表示されるタイトルとツールヒント。
     
-    - ユーザーがドキュメントの保存と電子メールの送信を行ったときに分類を実行するオプション。
-    
     - ドキュメントと電子メールを分類するための開始点となる既定のラベルを設定するオプション。
+     
+    - ユーザーがドキュメントの保存と電子メールの送信を行ったときに分類を実行するオプション。
     
     - ユーザーが元のレベルよりも低い秘密度レベルのラベルを選択したときに、理由を示すことをユーザーに要求するオプション。
     
     - 添付ファイルに基づいて、電子メール メッセージに自動的にラベルを付けるオプション。
+
+    - Office アプリケーションで Information Protection バーが表示されるかどうかを制御するオプション。
+
+    - Outlook に [Do Not Forward]\(転送不可\) ボタンを表示するかどうかを制御するオプション。
+    
+    - ユーザーがドキュメントに独自のアクセス許可を指定できるようにするオプション。
     
     - ユーザーにカスタム ヘルプ リンクを提供するオプション。
 
@@ -108,9 +119,7 @@ Azure Information Protection ラベルは、最下位の分類である個人デ
 
 任意の数のラベルを作成できます。 ただし、多すぎて正しいラベルを発見して選択する作業が困難になるとき、スコープ ポリシーを作成し、あるユーザーに関連するラベルのみがそのユーザーに表示されるようにします。 保護を適用するラベルには 500 という上限があります。
 
-[Azure Information Protection] ブレードで変更を行ったら、**[保存]** をクリックして変更を保存します。または、**[破棄]** をクリックして、最後に保存した設定に戻します。
-
-目的の変更が終わったら、**[公開]** をクリックします。 
+[Azure Information Protection] ブレードで変更を行ったら、**[保存]** をクリックして変更を保存します。または、**[破棄]** をクリックして、最後に保存した設定に戻します。 ポリシーに変更を保存した場合、またはポリシーに追加されるラベルに変更を加えた場合、それらの変更は自動的に公開されます。 独立した公開オプションはありません。
 
 Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する最新の Azure Information Protection ポリシーに変更をダウンロードします。 ポリシーをクライアントに更新するトリガーには、他に次のものがあります。
 
@@ -136,6 +145,8 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [新しいラベルを作成する方法](configure-policy-new-label.md)
 
+- [ラベルを追加または削除する方法](configure-policy-add-remove-label.md)
+ 
 - [ラベルを削除または順序変更する方法](configure-policy-delete-reorder.md)
 
 - [既存のラベルを変更またはカスタマイズする方法](configure-policy-change-label.md)

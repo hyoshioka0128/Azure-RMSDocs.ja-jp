@@ -4,7 +4,7 @@ description: あらかじめ Azure Information Protection クライアントが�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a81585ae1acb791dcf33f8d047268a9e4e9f2f2e
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: eb631b0153ce047177ef12887c025303acfac1db
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>ユーザー ガイド: Rights Management で保護されたファイルを表示および使用する
 
@@ -70,9 +70,9 @@ ms.lasthandoff: 03/28/2018
     
     アクセス許可と、各アクセス許可に含まれる使用権限の詳細については、「[アクセス許可レベルに含まれる権限](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels)」を参照してください。
 
-4. ファイルを編集するには、**[名前を付けて保存]** をクリックし、元のファイル名拡張子への保護なしにファイルを保存します。 そのファイルの種類に関連付けられているアプリケーションを使用してファイルを編集することができます。
+4. ファイルを編集するには、**[名前を付けて保存]** をクリックし、ラベルや元のファイル名拡張子への保護なしでファイルを保存します。 そのファイルの種類に関連付けられているアプリケーションを使用してファイルを編集することができます。 
     
-    後でエクスプローラーを使用し、新しく保存したこのファイルを使用するとき、再度保護を試みても、保護できません。 この既知の問題は Azure Information クライアントの現行プレビュー バージョンで対処されます。 プレビュー クライアントでは、**[名前を付けて保存]** を選択すると、保護に加えてラベルが削除されます。 ファイルを右クリックすると、ラベルを再適用できます。ラベルを再適用すると、保護も再適用されます。
+    ファイルの編集が完了したら、エクスプローラーで、ラベルを再適用するファイルを右クリックして、保護を再適用します。
 
 5. 追加の保護されたファイルを開く場合は、**[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
 

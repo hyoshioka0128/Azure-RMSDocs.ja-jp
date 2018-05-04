@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -28,19 +28,22 @@ ms.lasthandoff: 04/03/2018
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>ポータルでクライアントの詳細構成設定を構成する方法
 
+>[!NOTE]
+> これらの手順では、Azure Portal に最新の更新を反映します。 **[分類]** メニュー オプションが表示されず、**[公開]** オプションがまだ表示される場合、ナビゲーション手順は表示される内容と完全には一致しません。 その場合は、数日後にテナントが最新の変更に対して更新されてから、この手順に戻ることを検討してください。
+
 1. まだサインインしていない場合は、新しいブラウザーのウィンドウで [Azure Portal にサインイン](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal)して、**[Azure Information Protection]** ブレードに移動します。
 
-2. 最初の [Azure Information Protection] ブレードで、**[スコープ付きポリシー]** を選択します。
+2. **[分類]** > **[ラベル]** メニュー オプションから、**[ポリシー]** を選択します。
 
-3. **[Azure Information Protection - スコープ付きポリシー]** ブレードで、詳細設定を含めるために、ポリシーの横にあるコンテキスト メニュー (**...**) を選択します。 次に **[詳細設定]** を選択します。
+3. **[Azure Information Protection - ポリシー]** ブレードで、詳細設定を含めるために、ポリシーの横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
     
     スコープ付きポリシーだけでなく、グローバル ポリシーの詳細設定も構成できます。
 
 4. **[詳細設定]** ブレードで、詳細設定の名前と値を入力し、**[保存して閉じる]** を選択します。
 
-5. **[発行]** をクリックして、このポリシーのユーザーが開いていたすべての Office アプリケーションを再起動するようにしてください。
+5. このポリシーのユーザーが開いていたすべての Office アプリケーションを再起動するようにしてください。
 
-6. 設定が不要になり、既定の動作に戻す場合は、**[詳細設定]** ブレードで、不要になった設定の横にあるコンテキスト メニュー (**...**) を選択し、**[削除]** を選択します。 次に **[保存して閉じる]** をクリックして変更したポリシーを再発行します。
+6. 設定が不要になり、既定の動作に戻す場合は、**[詳細設定]** ブレードで、不要になった設定の横にあるコンテキスト メニュー (**...**) を選択し、**[削除]** を選択します。 次に、**[保存して閉じる]** をクリックします。
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>AD RMS 専用コンピューターのサインイン プロンプトが表示されないようにする
 
@@ -129,7 +132,7 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを表示または非表示にする
 
-このオプションを構成するには、[ポリシー設定](../deploy-use/configure-policy-settings.md)の**[Add the Do Not Forward button to the Outlook ribbon]\(Outlook リボンに [転送不可] ボタンを追加する\)** を使用することをお勧めします。 ただし、Azure Portal で構成する[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用して、このオプションを構成することもできます。
+このオプションを構成するには、[ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Add the Do Not Forward button to the Outlook ribbon]\(Outlook リボンに [転送不可] ボタンを追加する\)** を使用することをお勧めします。 ただし、Azure Portal で構成する[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用して、このオプションを構成することもできます。
 
 この設定を構成すると、Outlook のリボンの **[転送不可]** ボタンが表示または非表示になります。 この設定は、Office メニューからの [転送不可] オプションには影響しません。
 
@@ -151,8 +154,6 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 - 値: カスタム アクセス許可オプションを利用できるようにする場合は **True**、このオプションを利用不可にする場合は **False**
 
-> [!IMPORTANT]
-> クライアントの現在のプレビュー版を使用していない限り、Word、Excel、PowerPoint、エクスプローラーにユーザー定義アクセス許可のラベルを構成している場合、このオプションを **False** に設定しないでください。 このオプションを使うと、ラベルが適用されるときに、ユーザーにカスタム アクセス許可を構成するメッセージが表示されません。 その結果、ドキュメントにはラベルが付きますが、意図したようには保護されません。
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection バーを完全に非表示にする
 
@@ -171,9 +172,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Outlook で推奨分類を有効にする
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。
-
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
 
 推奨分類のラベルを設定すると、Word、Excel、PowerPoint では、推奨ラベルを受け入れるか、却下するように求められます。 また、このラベル推奨が Outlook でも表示されます。
 
@@ -185,8 +184,6 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
-
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 さらに、この構成オプションにはクライアントのプレビュー バージョンが必要です。
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
@@ -202,19 +199,45 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 - 値: \<**ラベル ID**> または**なし**
 
-## <a name="turn-off-classification-running-continuously-in-the-background"></a>バック グラウンドで継続的に実行されている分類をオフにする
-
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 さらに、この構成オプションにはクライアントのプレビュー バージョンが必要です。
+## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>必須のラベル付けを使用するときにドキュメントの "後で" を削除する
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
-この設定を構成すると、Azure Information Protection クライアントのプレビュー版は、ドキュメントに指定された条件規則を定期的にチェックしません。 代わりに、自動と推奨のラベルが [Azure Information Protection クライアントの一般的に使用可能なバージョンと同じように](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied)適用されます。 この設定は、パフォーマンス上の理由で必要な場合があります。
+**[すべてのドキュメントとメールにラベルを付ける]** の[ポリシー設定](../deploy-use/configure-policy-settings.md)を使うと、ユーザーが Office ドキュメントを初めて保存するとき、およびメールを送信するときに、ラベルの選択を求めるメッセージが表示されます。 ドキュメントの場合、ユーザーは **[後で]** を選択して一時的にメッセージを無視し、ラベルを選んで、ドキュメントに戻ることができます。 ただし、ラベルを付けないと、保したドキュメントを閉じることはできません。 
+
+この設定を構成すると、**[後で]** オプションが削除され、ユーザーはドキュメントを初めて保存するときにラベルを選択する必要があります。
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー: **PostponeMandatoryBeforeSave**
+
+- 値: **False**
+
+## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>バックグラウンドでの分類の継続的実行をオンにする
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+この設定を構成すると、Azure Information Protection クライアントが推奨ラベルを自動的に適用する[既定の動作](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied)が次のように変わります。
+
+- 自動分類は、Word、Excel、PowerPoint、Outlook に適用されます。 ドキュメントに対して、自動分類はバックグラウンドで継続的に実行されます。 Outlook の場合、電子メールを送信すると、自動分類が実行されます。 
+    
+    以前に手動でラベルが付けられているか、以前に上位の分類で自動的にラベルが付けられているドキュメントには自動分類を使用できません。 例外は、OverrideLabel パラメーターをオンに設定して Azure Information Protection スキャナーを使用する場合です。
+
+- 推奨分類は、Word、Excel、PowerPoint に適用されます。 これらのドキュメントに対して、推奨分類はバックグラウンドで継続的に実行されます。 Outlook の場合、推奨分類を使用できません。
+    
+    上位の分類の有無に関係なく、以前にラベルが付けられたドキュメントには推奨分類を使用できます。 
+
+Azure Information Protection クライアントがユーザーによって指定された条件規則をドキュメントで定期的にチェックするとき、この動作は SharePoint Online に格納されるドキュメントに対する自動的で推奨される分類と保護を有効にします。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。 
+
+条件規則がユーザーの入力と同時にリアルタイムで実行されることはありません。 ドキュメントが変更された場合、バックグラウンド タスクとして定期的に実行されます。
 
 この詳細設定を構成するには、次の文字列を入力します。
 
 - キー: **RunPolicyInBackground**
 
-- 値: **False**
+- 値: **True**
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
@@ -296,8 +319,6 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける
-
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。
 
 > [!NOTE]
 > この構成と前のセクションの構成を使用して、別のラベル付けソリューションから移行する場合は、ラベル付けの移行の設定が優先されます。 

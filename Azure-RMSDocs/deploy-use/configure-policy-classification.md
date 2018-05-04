@@ -4,21 +4,24 @@ description: ラベルの条件を構成するときに、ドキュメントま�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: 1019b7d7ea32b26a24aa2417a77345ff87e52e4b
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> この記事は、グローバル ポリシーまたはスコープ ポリシーからラベルを個別に作成できる、Azure Portal に対する最新の更新を反映しています。 また、ポリシーを公開するオプションは削除されます。 これらの変更に対してテナントがまだ更新されていない場合、たとえば Azure Information Protection に対して **[公開]** オプションがまだ表示され、**[分類]** メニュー オプションが表示されない場合は、数日待ってから以下の手順に戻ってください。
 
 ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。 
 
@@ -30,7 +33,7 @@ ms.lasthandoff: 04/03/2018
 
 ![Azure Information Protection の検出と推奨事項](../media/info-protect-recommend-calloutsv2.png)
 
-この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨を無効にできます。
+この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨を無効にできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。 
 
 > [!IMPORTANT]
 >自動分類とユーザー定義のアクセス許可にはラベルを構成しないでください。 ユーザー定義のアクセス許可オプションは、アクセス許可を与える人をユーザーが指定できるという[保護設定](configure-policy-protection.md)となります。
@@ -38,8 +41,6 @@ ms.lasthandoff: 04/03/2018
 >自動分類とユーザー定義のアクセス許可にラベルを構成すると、条件に対してコンテンツがチェックされ、ユーザー定義のアクセス許可設定は適用されません。 推奨されている分類とユーザー定義のアクセス許可を使用できます。
 
 ## <a name="how-automatic-or-recommended-labels-are-applied"></a>自動ラベルと推奨ラベルが適用されるしくみ
-
-**Azure Information Protection クライアントの一般公開バージョンの場合:**
 
 - 自動分類は、Word、Excel、PowerPoint でドキュメントが保存されるときと、Outlook で電子メールが送信されるときに適用されます。 
     
@@ -49,28 +50,9 @@ ms.lasthandoff: 04/03/2018
     
     上位の分類の有無に関係なく、以前にラベルが付けられたドキュメントには推奨分類を使用できます。 
 
-
-**Azure Information Protection クライアントの最新プレビュー バージョンの場合:**
-
-- 自動分類は、Word、Excel、PowerPoint、Outlook に適用されます。 ドキュメントに対して、自動分類は[バックグラウンドで継続的に](#more-information-about-running-continuously)実行されます。 Outlook の場合、電子メールを送信すると、自動分類が実行されます。 
-    
-    以前に手動でラベルが付けられているか、以前に上位の分類で自動的にラベルが付けられているドキュメントには自動分類を使用できません。 例外は、OverrideLabel パラメーターをオンに設定して Azure Information Protection スキャナーを使用する場合です。
-
-- 推奨分類は、Word、Excel、PowerPoint に適用されます。 これらのドキュメントに対して、推奨分類は[バックグラウンドで継続的に](#more-information-about-running-continuously)実行されます。 Outlook の場合、推奨分類を使用できません。
-    
-    上位の分類の有無に関係なく、以前にラベルが付けられたドキュメントには推奨分類を使用できます。 
-
-#### <a name="more-information-about-running-continuously"></a>継続的実行に関する詳細
-
-既定では、Azure Information Protection クライアントの現行プレビュー版は、ドキュメントに指定された条件規則を定期的にチェックします。 この動作により、SharePoint Online に格納されているドキュメントの自動分類/保護と推奨分類/保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。 
-
-条件規則がユーザーの入力と同時にリアルタイムで実行されることはありません。 ドキュメントが変更された場合、バックグラウンド タスクとして定期的に実行されます。
-
-Azure Information Protection クライアントで、自動と推奨のラベルがクライアントの一般的に使用可能なバージョンと同じように適用されるように、この動作を変更できます。 この構成には、[高度なクライアント設定](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background)が必要です。
+ドキュメントに指定された条件規則が Azure Information Protection クライアントによって定期的にチェックされるように、この動作を変更できます。 この構成には、現在プレビュー版の[高度なクライアント設定](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)が必要です。
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>複数のラベルに適用するときの複数の条件の評価方法
-
-Azure Information Protection クライアントと現行プレビュー クライアントの一般公開バージョンの場合:
 
 1. ラベルは、ポリシーに指定した位置に従って評価の順序が決まります。先頭に配置されたラベルが最下位 (秘密度が最も低い) になり、最後に配置されたラベルが最上位 (秘密度が最も高い) ものになります。
 
@@ -85,15 +67,11 @@ Azure Information Protection クライアントと現行プレビュー クラ�
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. 構成するラベルがすべてのユーザーに適用される場合は、**[Azure Information Protection - グローバル ポリシー]** ブレードのままにします。
-    
-    構成するラベルが[スコープ付きポリシー](configure-policy-scope.md)内にあり、選択したユーザーだけに適用される場合は、**[ポリシー]** メニューから **[スコープ付きポリシー]** を選びます。 その後、**[Azure Information Protection - スコープ付きポリシー]** ブレードからスコープ付きポリシーを選びます。
+2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、構成するラベルを選択します。
 
-3. **[Azure Information Protection - グローバル ポリシー]** ブレードまたは **[ポリシー: \<名前>]** ブレードで、構成するラベルを選びます。 
+3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
-4. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
-
-5. **[条件]** ブレードで、定義済みの条件を使用する場合は **[情報の種類]** を、独自の条件を指定する場合は **[カスタム]** を選択します。
+4. **[条件]** ブレードで、定義済みの条件を使用する場合は **[情報の種類]** を、独自の条件を指定する場合は **[カスタム]** を選択します。
     - **[情報の種類]** を選択した場合: 使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
         
         情報の種類では、Office 365 データ損失防止 (DLP) の機密情報の種類とパターン検出が使われます。 多くの共通の機密情報の種類から選ぶことができ、これらの一部は異なるリージョンに固有です。 詳しくは、Office ドキュメントの「[What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b)」(検索される機密情報の種類) をご覧ください。
@@ -106,17 +84,17 @@ Azure Information Protection クライアントと現行プレビュー クラ�
         
         正規表現では、Office 365 の正規表現パターンが使用されます。 詳しくは、Office ドキュメントの「[Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2)」(正規表現に基づく一致の定義) をご覧ください。 さらに、Boost から参照できる「[Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_66_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)」 (Perl 正規表現構文) が参考になることがあります。
         
-6. **[最小出現回数]** と **[一意の値のみを含む出現回数をカウント]** を変更する必要があるかどうかを決定し、**[保存]** を選択します。 
+5. **[最小出現回数]** と **[一意の値のみを含む出現回数をカウント]** を変更する必要があるかどうかを決定し、**[保存]** を選択します。 
     
     出現オプションの例: 社会保障番号の情報タイプを選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[一意の値のみを含む出現回数をカウント]** を **[オン]** に設定した場合、条件は満たされません。 このオプションを **[オフ]** に設定した場合、条件は満たされます。
 
-7. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
+6. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
     
     - 自動分類または推奨分類を選択します。**[Select how this label is applied: automatically or recommended to user]** (ラベルの適用方法を選択してください: 自動またはユーザーに推奨) で、**[自動]** または **[推奨]** を選択します。
     
     - ユーザー プロンプトまたはポリシー ヒント用のテキストを指定します。既定のテキストを維持するか、独自の文字列を指定します。
 
-8. ユーザーが変更を使用できるようにするには、最初の **[Azure Information Protection]** ブレードで **[公開]** をクリックします。
+**[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
 ## <a name="next-steps"></a>次の手順
 

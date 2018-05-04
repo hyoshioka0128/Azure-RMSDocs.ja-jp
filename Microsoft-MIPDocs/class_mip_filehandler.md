@@ -1,0 +1,50 @@
+# <a name="class-mipfilehandler"></a>class mip::FileHandler 
+すべてのファイル処理関数のインターフェイス。
+## <a name="summary"></a>[概要]
+ メンバー                        | 説明                                
+--------------------------------|---------------------------------------------
+public void GetLabelAsync | ファイルからの機密ラベルの取得を開始します。
+public void GetProtectionAsync | ファイルからの保護ポリシーの取得を開始します。
+public void SetLabelLabelingOptions & labelingOptions) | 機密ラベルをファイルに設定します。
+public void DeleteLabel | ファイルから機密ラベルを削除します。
+public void SetCustomPermissionsPolicyDescriptor > & policyDescriptor) | ファイルにカスタムのアクセス許可を設定します。
+public void RemoveProtection | ファイルから保護を削除します。 ファイルにラベルが付いている場合、ラベルは失われます。
+public void CommitAsync | \|outputFilePath\| パラメーターで指定されたファイルに変更を書き込みます。
+public void CommitAsyncStream > & outputStream,const std::shared_ptr< void > & context) | \|outputStream\| パラメーターで指定されたストリームに変更を書き出します。
+public std::string GetOutputFileName | 元のファイル名および累積された変更に基づいて出力ファイル名と拡張子を計算します。
+public inline virtual  ~FileHandler | 
+protected inline  FileHandler | 
+## <a name="members"></a>メンバー
+### <a name="getlabelasync"></a>GetLabelAsync
+ファイルからの機密ラベルの取得を開始します。
+[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) は成功または失敗時に呼び出されます。
+#### <a name="parameters"></a>パラメーター
+* context: オブザーバーに不透明に渡されるクライアント コンテキスト。
+### <a name="getprotectionasync"></a>GetProtectionAsync
+ファイルからの保護ポリシーの取得を開始します。
+[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) は成功または失敗時に呼び出されます。
+#### <a name="parameters"></a>パラメーター
+* context: オブザーバーに不透明に渡されるクライアント コンテキスト。
+### <a name="setlabel"></a>SetLabel
+機密ラベルをファイルに設定します。
+CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。
+ラベルの設定に理由が必要で、labelingOptions パラメーターを介して理由メッセージが指定されなかった場合は、[JustificationRequiredError](#classmip_1_1_justification_required_error) をスローします。
+### <a name="deletelabel"></a>DeleteLabel
+ファイルから機密ラベルを削除します。
+CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。 Privilegd および Auto メソッドでは、既存のラベルを API でオーバーライドできます。ラベルの設定に理由が必要で、justificationMessage パラメーターを介して理由メッセージが指定されなかった場合は、[JustificationRequiredError](#classmip_1_1_justification_required_error) をスローします。
+### <a name="setcustompermissions"></a>SetCustomPermissions
+ファイルにカスタムのアクセス許可を設定します。
+CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。
+### <a name="removeprotection"></a>RemoveProtection
+ファイルから保護を削除します。 ファイルにラベルが付いている場合、ラベルは失われます。
+CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。
+### <a name="commitasync"></a>CommitAsync
+|outputFilePath| パラメーターで指定されたファイルに変更を書き込みます。
+[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) は成功または失敗時に呼び出されます。
+### <a name="commitasync"></a>CommitAsync
+|outputStream| パラメーターで指定されたストリームに変更を書き込みます。
+[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) は成功または失敗時に呼び出されます。
+### <a name="getoutputfilename"></a>GetOutputFileName
+元のファイル名および累積された変更に基づいて出力ファイル名と拡張子を計算します。
+### <a name="filehandler"></a>~FileHandler
+### <a name="filehandler"></a>FileHandler

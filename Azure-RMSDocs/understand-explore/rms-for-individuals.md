@@ -12,25 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df2d97fd8abdf7c2f210d857287d3590838222db
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-個人用 RMS は、Azure Information Protection によって保護されたファイルを開く必要があるユーザー向けの、無料セルフサービス サブスクリプションです。 そのようなユーザーを Azure Active Directory で認証できず、組織が Active Directory Rights Management (AD RMS) を用意していない場合、この無料登録サービスでユーザーのために Azure Active Directory にアカウントを作成できます。 結果的に、会社のメール アドレスでユーザーを認証できるようになり、保護されているファイルをコンピューターまたはモバイル デバイスで読み取ることができます。
+個人用 RMS は、Azure Information Protection によって保護されたファイルを開く必要があるユーザー向けの、無料セルフサービス サブスクリプションです。 そのようなユーザーを Azure Active Directory で認証できない場合は、この無料登録サービスでユーザーのために Azure Active Directory にアカウントを作成できます。 結果的に、会社のメール アドレスでユーザーを認証できるようになり、保護されているファイルをコンピューターまたはモバイル デバイスで読み取ることができます。
 
-個人用 RMS では、Azure Active Directory のセルフサービス サインアップが使用されます。 ユーザーが組織のアカウントを作成していた場合は、組織の管理者として、ユーザーのアカウントの所有権を要求し、アカウントを制御することができます。 
+個人用 RMS では、Azure Active Directory のセルフサービス サインアップが使用されます。 ユーザーがこのサブスクリプションを使用して組織のアカウントを作成していた場合は、組織の管理者として、ユーザーのアカウントの所有権を要求し、[アカウントを制御する](/active-directory/domains-admin-takeover#external-admin-takeover)ことができます。 
 
 
 > [!NOTE]
 > この無料のサブスクリプションは、組織外のユーザーで認証されている人が、組織が保護しているファイルを常に読めるようにするための方法の 1 つです。 他には [Office 365 Message Encryption と新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)でドキュメントをメール送信する方法があります。 電子メールによるこのソリューションは、あらゆるデバイスのあらゆる電子メール アドレスに対して利用できます。組織外の人と、電子メールによって安全に情報を共有し、Office ドキュメントを確認することができる、お勧めの方法です。 
 
-この無料アカウントにサインアップするには、[Microsoft Azure Information Protection のページ](https://aka.ms/rms-signup)に移動して、職場の電子メール アドレスを指定します。 Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了します。 
+この無料アカウントにサインアップするには、[Microsoft Azure Information Protection のページ](https://aka.ms/rms-signup)に移動して、仕事用メール アドレスを指定します。 ユーザーは、Microsoft からの応答メールを受信したら、アカウントの作成に必要な詳細情報を入力してサインアップ プロセスを完了できます。 
 
 アカウントが作成されると、各種デバイス用の Azure Information Protection クライアントまたはビューアーをダウンロードするためのリンク、ユーザー ガイドへのリンク、Rights Management による保護をネイティブでサポートするアプリケーションの最新の一覧へのリンクが、最終ページに表示されます。 
 

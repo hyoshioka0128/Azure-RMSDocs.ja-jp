@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ff9d6a4ce66deed8add68d7b1efc889ee9448f53
-ms.sourcegitcommit: 5866509c17872e274720d3014fe218ed95e86ee3
+ms.openlocfilehash: 02e54d3d1f324aa6d67e9fb81c3f5f83e785fe81
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -41,11 +41,9 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="versions-later-than-110560"></a>1.10.56.0 以降のバージョン
+## <a name="version-12660"></a>バージョン 1.26.6.0
 
-1.10.56.0 以降のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。
-
-現行のプレビュー バージョンは **1.21.203.0** です。クライアントの現行 GA バージョン以降、次の変更があります。
+**リリース日**: 2018 年 4 月 17 日
 
 このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
 
@@ -53,11 +51,11 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Azure Information Protection スキャナー: クライアントに付属する PowerShell モジュールには、オンプレミス データ ソース上のファイルを検出、分類、保護できるよう、スキャナーをインストールし、構成するための新しいコマンドレットが含まれています。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-aip-scanner.md)」を参照してください。 
 
-- Office アプリでは、推奨されている自動分類が、文書が保存されたときに実行されるのではなく、バックグラウンドで継続的に実行されます。 このように動作が変更されたことで、SharePoint Online に格納されている文書に自動 (推奨) 分類を適用できるようになりました。 [詳細情報](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
-
 - テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細情報](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - [ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** 対応になりました。 この設定をオフにすると、リボンの **[保護]** ボタンからラベルを選択します。
+
+- バックグラウンドで分類の継続的な実行を有効にする新しい高度なクライアント設定 (プレビュー段階)。 この設定が有効になっている場合、Office アプリでは、推奨されている自動分類が、文書が保存されたときに実行されるのではなく、バックグラウンドで継続的に実行されます。 このように動作が変更されたことで、SharePoint Online に格納されている文書に自動 (推奨) 分類を適用できるようになりました。 [詳細情報](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
 - クライアント設定が新しくなりました。Outlook では、Azure Information Protection ポリシーで構成した既定のラベルが適用されません。 別の既定のラベルを適用できるか、ラベルがありません。 [詳細情報](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
 
@@ -76,14 +74,21 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Azure Information Protection を利用する 2 つの組織がラベル付きの文書とメールを共有しているとき、独自のラベルの保持されます。他の組織のラベルで置換されることはありません。
 
-- 相互参照を含む Excel セルに対応しました。以前は、そのようなセルではテキストが壊れてしまいました。
+- Excel の場合:
+        
+    - Office テーマや Windows テーマを変更できるようになりました。以前は Excel では、テーマの変更後、データが表示されませんでした。
+        
+    - 相互参照を含むセルに対応しました。以前は、そのようなセルではテキストが壊れてしまいました。
+    
+    - 日本語、中国語、韓国語の文字の入力に対応しました。以前は、ウィンドウが閉じてしまい、これらの文字を選択できませんでした。
+    
+    - コメントに対応しました。以前は、入力中にコメントが閉じてしまいました。
 
-- Office テーマや Windows テーマを変更できるようになりました。以前は Excel では、テーマの変更後、データが表示されませんでした。
+- PowerPoint の場合: 共同作成に対応しました。以前は、データの損失が発生する可能性がありました。
 
 - 推奨分類または自動分類で、ファイル名に .xml 拡張子が付くファイルを調べることができるようになりました。
 
 - 20 MB を超えるテキスト ベースの保護ファイル (.ptxt と .pxml) を開けるようになりました。 
-
 - Outlook リマインダーの利用時の Outlook の停止を回避します。
 
 - Office 64 ビットでブートストラップできます。文書やメールを保護できます。
