@@ -5,7 +5,7 @@
 # [クライアントのデプロイと使用](/information-protection/rms-client/use-client)
 # [アプリの開発とカスタマイズ](developers-guide.md)
 ## [開発者ガイド](developers-guide.md)
-## Microsoft Information Protection
+## [Microsoft Information Protection](https://aka.ms/mipsdkdocs)
 ## [Rights Management SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 ### [概要](overview.md)
 ### [作業開始](get-started.md)
