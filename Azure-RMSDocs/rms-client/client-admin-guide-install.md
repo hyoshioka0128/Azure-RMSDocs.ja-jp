@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2a3daec687739956bb0b7bd235b69cea30039171
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d52026fcffd3a3a0b51e361e6671f247eac5296d
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -71,20 +71,6 @@ ms.lasthandoff: 03/28/2018
     この **[管理対象アドインの一覧]** グループ ポリシー設定を構成していなくても、Microsoft Azure Information Protection アドインが無効になることを示すレポートを取得した場合は構成する必要がある場合があります。 このアドインが無効の場合は、Office アプリケーションに Azure Information Protection バーが表示されません。
     
     このグループ ポリシー設定の詳細については、「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) を参照してください。
-
-- Office バージョン 16.0.8628.2010 以降 (クイック実行) の場合: モニターのレガシ サポートを有効にする
-    
-    注: Azure Information Protection クライアントの現行プレビュー バージョンの場合、この前提条件は必要ありません。 
-    
-    これらの Office バージョン用の Office アプリケーションの外部に Azure Information Protection バーが表示されるのを回避するには、モニターのレガシ サポートを有効にすることが必要な場合があります。 このシナリオでバーが正しく表示されない場合、バーは **AdxTaskPane** として表示される可能性があります。 
-    
-    この要件に合わせて Office アプリケーションを構成するには: **[ファイル]** > **[オプション]** > **[全般]** > **[ユーザー インターフェイスのオプション]** の順に選択します。
-    
-    - オプション **[When using multiple displays]\(マルチ ディスプレイを使用する場合\)** が **[Optimize for best appearance]\(最適な外観の最適化\)** に設定されている場合は、そこで **[互換性の最適化 (アプリケーションの再起動が必要)]** を選択します。 
-        
-    - オプション **[ディスプレイで最適な解像度を使用]** が選択されている場合は、この選択を解除します。
-    
-    - 上記のオプションがいずれも表示されない場合、これ以上の構成は必要ありません。
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
@@ -211,16 +197,9 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーをインストールする方法
 
-現在、Azure Information Protection スキャナーの一般提供 (GA) 版は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)の **AzInfoProtectionScanner.exe** という名前の個別のダウンロードです。 スキャナーの後続のリリースは、Azure Information Protection クライアントに含められます。
+Azure Information Protection クライアントに含まれている PowerShell モジュールには、スキャナーをインストールし、構成するためのコマンドレットがあります。 ただし、スキャナーを使用するには、クライアントのフル バージョンをインストールする必要があります。PowerShell モジュールのみをインストールすることはできません。
 
-Azure Information Protection クライアントの現行プレビュー版には、Azure Information Protection スキャナーも含まれています。 
-
-スキャナーとプレビュー クライアントに含まれている PowerShell モジュールには、スキャナーをインストールし、構成するためのコマンドレットがあります。
-
-このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 Office のアドインやビューアーなど、クライアントのすべてのコンポーネントを必要とするわけではない場合、PowerShell モジュールだけをインストールできます。 たとえば、`PowerShellOnly=true /quiet` で実行可能ファイルを実行できます。
-
-クライアントをインストールしたら、スキャナーをインストールできます。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-aip-scanner.md)」を参照してください。
-
+このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 これでスキャナーをインストールする準備ができました。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-aip-scanner.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントをインストールしたので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

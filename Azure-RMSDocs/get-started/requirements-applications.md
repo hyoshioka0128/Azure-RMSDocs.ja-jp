@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b304f65d70361b3fdb4dbf93291f408be93d363f
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: d044ac76ea910f2874219bd20fe262d8bd5c4c59
+ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -78,6 +78,10 @@ Exchange ActiveSync IRM が有効になっていないために、電子メー�
 
 Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケーションと緊密に統合されています。多くの場合、この機能は Information Rights Management (IRM) と呼ばれます。 
 
+関連項目: [Office アプリケーション サービスの説明](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+
+#### <a name="windows-computers-for-information-rights-management-irm"></a>Information Rights Management (IRM) 用の Windows コンピューター
+
 次の Office クライアント スイートは、Windows コンピューター上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
 
 - Office 365 ProPlus: Office 2016 と Office 2013
@@ -102,17 +106,19 @@ Azure RMS および Office Professional Plus 2010 Service Pack 2 または Offic
 
 - ユーザーが Azure Information Protection クライアントでカスタムのアクセス許可を選択したとき、テンプレート保護がオーバーライドされることはありません。 このシナリオでは、カスタムのアクセス許可を適用する前に、元の保護を取り除く必要があります。
 
+#### <a name="mac-computers-for-information-rights-management-irm"></a>Information Rights Management (IRM) 用の Mac コンピューター
+
 次の Office クライアント スイートは、macOS 上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
 
 - Office 365 ProPlus: Office 2016
 
 - Office Standard 2016 for Mac
 
-関連項目: [Office アプリケーション サービスの説明](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+ヒント: Office for Mac を使用してドキュメントの保護を開始するには、よくあるご質問の「[ドキュメントを保護および追跡するように Mac コンピューターを設定するにはどうすればよいのですか?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)」が役に立ちます。
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Azure Information Protection アプリに関する詳細
 
-iOS 用および Android 用の Azure Information Protection アプリは、これらのデバイスの RMS 共有アプリに置き換わります。 同様の機能を提供し、さらに SharePoint Online 上の権利で保護された電子メール メッセージおよび権利で保護された PDF ファイルをサポートします。
+iOS 用および Android 用の Azure Information Protection ビューアー アプリが、これらのデバイス用の RMS 共有アプリに置き換わります。 同様の機能を提供し、さらに SharePoint Online 上の権利で保護された電子メール メッセージおよび権利で保護された PDF ファイルをサポートします。
 
 使用している iOS デバイスや Android デバイスが Microsoft Intune で登録された場合、ポリシーで管理されているアプリを使用して、このアプリをデプロイおよび管理できます。 詳細については、Intune のドキュメントの「[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune コンソールでモバイル アプリケーション管理ポリシーを構成およびデプロイする)](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」を参照してください。 この Intune ドキュメントの手順 2 では、ポリシーで管理されているアプリを発行するためにこの手順を使用します。
 
@@ -135,7 +141,9 @@ iOS 用および Android 用の Azure Information Protection アプリは、こ�
 
 ### <a name="more-information-about-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションの詳細
 
-このアプリケーションは Azure Information Protection クライアントに置き換えられます。 Mac コンピューターや Windows Phone のモバイル デバイスではまだ必要です。
+このアプリケーションは Azure Information Protection クライアントに置き換えられます。 Windows Phone のモバイル デバイスで保護ファイルを表示する場合は、このアプリケーションがまだ必要です。 
+
+Mac コンピューターの場合、このアプリケーションでは、保護された PDF ファイル (.ppdf)、保護されたテキスト イメージ、汎用的に保護されたファイル用のビューアーが提供されます。 Mac 用 RMS 共有アプリではイメージ ファイルも保護できますが、他のファイルを保護することはできません。 Office ファイルを保護するには、Office for Mac を使用します。 
 
 詳細については、次のリソースを参照してください。
 
@@ -145,7 +153,7 @@ iOS 用および Android 用の Azure Information Protection アプリは、こ�
 
 -   [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](https://technet.microsoft.com/dn451248)
 
-[Microsoft Azure Information Protection のページ](http://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して、Mac コンピューター用と Windows Phone 用のアプリをダウンロードします。
+[Microsoft Azure Information Protection のページ](http://go.microsoft.com/fwlink/?LinkId=303970) にあるリンクを使用して、Mac コンピューター用と Windows Phone 用のビューアーをダウンロードします。
 
 
 ### <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Azure Information Protection をサポートしている他のアプリケーションの詳細

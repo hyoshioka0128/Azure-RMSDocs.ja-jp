@@ -4,7 +4,7 @@ description: 新しいリリース、サポート オプション、および Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9eafa28bb6a259c7f845f54268a30c8cdc6fc988
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 3ed8c53c235520d53c3d0a3666aa4aba45c174f5
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/26/2018
 
 |目的|手順:|
 |----------------|---------------|
-|最も頻繁に使用されるドキュメントの参照|以下の上位 5 つのページを参照してください。<br /><br /> - [Azure Rights Management の使用権限を構成する](../deploy-use/configure-usage-rights.md)<br /> - [Azure Information Protection に関してよく寄せられる質問](../get-started/faqs.md)<br />- [Azure Information Protection の要件](requirements.md) <br />- [Azure Information Protection スキャナーのデプロイ](../deploy-use/deploy-aip-scanner.md)<br />- [Azure Information Protection の既定のポリシー](../deploy-use/configure-policy-default.md)|
+|最も頻繁に使用されるドキュメントの参照|以下の上位 5 つのページを参照してください。<br /><br /> - [Azure Information Protection とは](../understand-explore/what-is-information-protection.md)<br /> - [ユーザー向けに Azure Information Protection クライアントをインストールする](../rms-client/client-admin-guide-install.md)<br />- [Azure Information Protection の要件](requirements.md) <br />- [Azure Information Protection スキャナーのデプロイ](../deploy-use/deploy-aip-scanner.md)<br />- [Azure Information Protection の既定のポリシー](../deploy-use/configure-policy-default.md)|
 |製品チームや同僚との連携|Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)にアクセスします。|
 |新機能や機能変更の要求|Azure Information Protection の [User Voice](https://msip.uservoice.com) サイトにアクセスします。|
 |製品グループからのツイートの受信|Twitter で [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) をフォローします。|
@@ -37,8 +37,6 @@ ms.lasthandoff: 04/26/2018
 Azure Information Protection 製品チームは、新しいリリースと更新プログラムに関するお知らせを [Enterprise Mobility + Security のブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection)に投稿します。 これらのブログには、製品ドキュメントの補足やサポート情報が投稿されます。
 
 さらに、ドキュメントの変更の概要については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)に関するページに毎月公開されます。 このようなドキュメントの更新には、新しいリリースや、ステートメントをサポートするための更新に関する情報に加えて、既存リリースの修正と説明が含まれています。 このような投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
-
-以前の概要は、[Enterprise Mobility + Security ブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates)に公開されています。 
 
 ## <a name="support-options-and-community-resources"></a>サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。

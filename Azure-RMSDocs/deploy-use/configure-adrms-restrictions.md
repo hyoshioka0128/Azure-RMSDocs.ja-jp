@@ -1,81 +1,117 @@
 ---
 title: Azure Information Protection の HYOK 保護
-description: Azure Information Protection による HYOK (AD RMS) 保護を選択した場合の制限、前提条件、推奨事項を確認します。
+description: Azure Information Protection による HYOK (AD RMS) 保護の概要、サポートされるシナリオ、制限事項、前提条件、推奨事項。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/24/2018
+ms.date: 05/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 8e9a29f01c3fe22a2eb30380510a3c532780fdf2
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 5ded2edb2ea3fe05cc09750c4cdb53bc03d5fbae
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項
+# <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-最も機密性の高いドキュメントや電子メールを保護する場合、通常、次のような利点がある Azure Rights Management (Azure RMS) 保護を適用します。
+次の情報を使用して、Azure Information Protection の Hold your own key (HYOK) 保護とは何か、およびクラウド ベースの既定の保護と異なる点について把握してください。 HYOK 保護を使用する前に、適切な場合、サポートされるシナリオ、制限事項、要件を理解していることを確認してください。 
+
+## <a name="cloud-based-protection-vs-hyok"></a>クラウド ベースの保護とHYOK
+
+Azure Information Protection を使用して最も機密性の高いドキュメントや電子メールを保護する場合、通常、次のような利点がある Azure Rights Management (Azure RMS) 保護を使用するクラウドベースのキーを適用します。
 
 - サーバー インフラストラクチャが不要で、問題の解決が迅速になり、オンプレミス ソリューションよりもデプロイと保守のコスト効率が高くなる。
 
 - クラウドベースの認証を使用して、他の組織のパートナーやユーザーと簡単に共有することができる。
 
-- 検索、Web ビューアー、ピボット ビュー、マルウェア対策、電子情報開示、Delve などの、Office 365 サービスと密接に統合されている。
+- 検索、Web ビューアー、ピボット ビュー、マルウェア対策、電子情報開示、Delve などの、他の Azure や Office 365 サービスと密接に統合されている。
 
 - 共有した機密ドキュメントの追跡、取り消し、電子メール通知機能を使用できる。
 
-Azure RMS は、Microsoft または自社 ("Bring Your Own Key" (BYOK) シナリオ) が管理する組織の秘密キーを使用して組織のドキュメントと電子メールを保護します。 Azure RMS で保護されている情報はクラウドに送信されません。保護対象のドキュメントと電子メールは、Azure に保存するように明示的に指定した場合や、Azure に保存する別のクラウド サービスを使用している場合を除き、Azure には保存されません。 テナント キー オプションの詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。 
+クラウドベースのキーは、Microsoft または自社 ("Bring Your Own Key" (BYOK) シナリオ) が管理する組織の秘密キーを使用して組織のドキュメントと電子メールを保護します。 テナント キー オプションの詳細については、「[Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md)」を参照してください。
 
-一方、組織によっては、オンプレミスにホストされているキーを使用して、一部のドキュメントと電子メールを保護する必要がある場合があります。 たとえば、規制や準拠のために必要な場合があります。  
+保護するドキュメントと電子メールは、クラウドまたはオンプレミスに格納することができます。 このクラウドベースのキーの保護プロセスのしくみについては、「[Azure Rights Management とは](../understand-explore/what-is-azure-rms.md )」を参照してください。
 
-この構成は、"Hold Your Own Key" (HYOK) とも呼ばれ、有効な Active Directory Rights Management サービス (AD RMS) デプロイがある場合に Azure Information Protection でサポートされます。次のセクションでは、その要件について説明します。
+重要なビジネス機能 (検索、インデックス、アーカイブ、マルウェア対策サービスなど) が、Azure Information Protection で保護されているコンテンツに対してシームレスに動作し続けられるように、Office 365 サービスと、ご利用のテナントのクラウド ベースのアプリケーションを Azure Information Protection に統合することができます。 これらのシナリオの暗号化されたコンテンツを読み取るこの機能は、“データに対する推論” と呼ばれることがあります。 たとえば、この機能により、Exchange Online はマルウェア スキャンのために電子メールの暗号化を解除したり、暗号化された電子メールにデータ損失防止 (DLP) ルールを実行したりすることができます。
 
-この HYOK シナリオでは、権利ポリシーとそのポリシーを保護する組織の秘密キーの管理と保存はオンプレミスで行われますが、ラベル付けと分類の Azure Information Protection ポリシーの管理と保存は Azure で行われます。 Azure RMS の保護と同様に、AD RMS で保護する情報は、クラウドに送信されません。
+ただし、規制の要件に関して、一部の組織ではクラウドから分離されたキーを使用したコンテンツの暗号化が必要な場合があります。 この分離は、暗号化されたコンテンツが、オンプレミスのアプリケーションとオンプレミス サービスでのみ読み取ることができることを意味します。 このキー管理オプションは、Azure Information Protection によってサポートされ、"hold your own key" または HYOK と呼ばれます。 Azure Information Protection と HYOK を使用すると、テナントがクラウド ベースのキーと、オンプレミスのキーの両方を持つことになります。
 
-> [!NOTE]
-> この構成は、必要な場合にのみ、必要なドキュメントと電子メールにのみ使用します。 AD RMS の保護には、Azure RMS の保護の場合ほど多くの利点はありません。AD RMS の目的は、"是が非でもデータの不透明度を高くすること" です。
->
-> この構成を使用している組織であっても、通常、この保護に適しているのは、保護すべきコンテンツ全体の 10% 未満です。 ガイダンスとして、次のすべての条件に一致するドキュメントまたは電子メールに対してのみ使用します。
-> 
-> **コンテンツは組織内で最上位に分類され ("最高機密")、アクセスは数名だけに制限されている**
-> 
-> **コンテンツは、決して組織外で共有されることはない**
-> 
-> **コンテンツは、内部ネットワーク上でのみ使用される**
-> 
-> **コンテンツは、Mac コンピューターまたはモバイル デバイスで利用する必要がない**
+## <a name="hyok-guidance-and-best-practices"></a>HYOK のガイダンスとベスト プラクティス
 
-ラベルに AD RMS の保護を使用する場合、Azure RMS の保護よりも、ユーザーに認識されにくくなります。 AD RMS の保護には制限事項があるため、AD RMS の保護が適用されるラベルをユーザーが選択する必要がある場合の例外について、明確な指針を示すようにしてください。 
+HYOK 保護は、暗号化キーをクラウドから分離する必要があるドキュメントと電子メールだけに使用します。 HYOK 保護には、クラウドベースのキー保護の場合ほど多くの利点はなく、"データの不透明度" が失われることが多々あります。 これは、オンプレミスのアプリケーションとサービスのみが、HYOK で保護されたデータを開くことできることを意味します。クラウド ベースのサービスとアプリケーションは、HYOK で保護されたデータに対して推論することはできません。
 
-[スコープ ポリシー](configure-policy-scope.md)は、AD RMS 保護を適用する必要があるユーザーのみに AD RMS 保護で構成されているラベルを確実に表示する優れた方法です。 
+HYOK 保護を使用している組織であっても、通常は、保護する必要があるドキュメントの数が少ない場合に適しています。 ガイダンスとして、次のすべての条件に一致するドキュメントのみに使用します。
+
+- コンテンツは組織内で最上位に分類され ("最高機密")、アクセスは数名だけに制限されている
+
+- コンテンツが組織外で共有されることはない
+
+- コンテンツは、内部ネットワーク上でのみ使用される
+
+HYOK 保護は、ラベルに対する管理者の構成オプションであるため、クラウド ベースのキーまたは HYOK を保護に使用しているかどうかにかかわらず、ユーザーのワークフローは変わりません。
+
+[スコープ ポリシー](configure-policy-scope.md)は、HYOK 保護を適用する必要があるユーザーのみに HYOK 保護で構成されているラベルを確実に表示する優れた方法です。 
+
+## <a name="supported-scenarios-for-hyok"></a>HYOK のサポートされるシナリオ
+
+HYOK 保護を適用するには、Azure Information Protection のラベルを使用します。 
+
+HYOK 向けに構成されているラベルを使用して、HYOK によって保護されているコンテンツを開き (消費し) コンテンツを保護するための、サポートされているシナリオを次の表に示します。
+
+|プラットフォーム|アプリケーション|サポート|
+|----------------------|----------|-----------|
+|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護: はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Outlook|保護: はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントとファイル エクスプローラー|保護: はい <br /><br />消費: はい|
+|Windows|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット|保護: はい<br /><br />消費: はい|
+|Windows|Azure Information Protection スキャナー|保護: はい<br /><br />消費: はい|
+|Windows|Rights Management 共有アプリ|保護: なし<br /><br />消費: はい|
+|MacOS|Office for Mac <br /><br /> - Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
+|MacOS|Office for Mac<br /><br />- Outlook|保護: なし<br /><br />消費: はい|
+|MacOS|Rights Management 共有アプリ|保護: なし<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />-Outlook|保護: なし<br /><br />消費: いいえ|
+|iOS|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
+|Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
+|Android|Office Mobile <br /><br />- Outlook|保護: なし<br /><br />消費: いいえ|
+|Android|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
+|Web|Outlook on the web|保護: なし<br /><br />消費: いいえ|
+|Web|Office Online<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
+|ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
+
 
 ## <a name="additional-limitations-when-using-hyok"></a>HYOK を使用する際の追加制限事項
 
-Azure RMS による保護を使うときの利点は得られないことに加えて、AD RMS による保護を Azure Information Protection とともに使う場合は次のような制限が課せられます。
+さらに、HYOK 保護と Azure Information Protection ラベルを使用する場合、次の制限があります。
 
 - Office 2010 や Office 2007 はサポートされません。
 
-- Outlook で **[転送不可]** を選択しないようにユーザーに指示するか、または具体的なガイダンスを提供します。 
-
-    HYOK または Azure Rights Management サービスを使うように **[転送不可]** のラベルを構成できますが、ユーザーが [転送不可] を選択することもできます。 ユーザーは、Office リボンの **[メッセージ]** タブの **[転送不可]** ボタンまたは Outlook のメニュー オプションを使って、このオプションを選択できます。 **[転送不可]** メニュー オプションは、**[ファイル]** > **[アクセス許可]** と、リボンの **[オプション]** タブの **[アクセス許可]** ボタンから表示されます。 
+- Office 365 サービスと他のオンライン サービスは、HYOK で保護されたドキュメントと電子メールの暗号化を解除して内容を調べたり操作を実行することはできません。 この制限は、Rights Management コネクタで保護されている HYOK で保護されたドキュメントおよび電子メールにも適用されます。 
     
-    ユーザーが Outlook で **[転送不可]** ボタンを選択すると、Azure Information Protection クライアントは常に Azure RMS を使用します。 この動作を必要としない場合は、[ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Outlook のリボンに、[転送不可] ボタンを追加します]** を **[オフ]** に設定して、このボタンを非表示にすることができます。 
-    
-    ユーザーは、Outlook メニュー オプションから **[転送不可]** を選択するとき、Azure RMS または AD RMS を選択できますが、ユーザーは自分のメール メッセージではどちらのオプションを選択すればよいかわからない場合があります。 Azure RMS を使うべきところで AD RMS を使うと、外部の共有ユーザーはメール メッセージを開けなくなります。
+    この HYOK で保護された電子メールで失われる機能には、マルウェア スキャナー、データ損失防止 (DLP) ソリューション、メール ルーティング規則、ジャーナル、電子情報開示、アーカイブ ソリューション、Exchange ActiveSync が含まれます。 さらに、ユーザーは、一部のデバイスで自分の HYOK で保護された電子メールが開けない理由がわからないため、ヘルプ デスクに問い合わせる可能性があります。 こうした多くの制限のため、電子メールに HYOK 保護を使用することはお勧めしません。
 
-- ユーザーが Outlook で AD RMS 保護が適用されたラベルを選択し、その後、電子メールを送信する際に気が変わって Azure RMS 保護が適用されたラベルを選択した場合、後から選択されたラベルの適用は失敗します。 ユーザーには次のエラー メッセージが表示されます: **Azure Information Protection ではこのラベルを適用できません。この操作を実行するアクセス許可がありません。**
-    
-    唯一の対応策は、その電子メール メッセージを閉じ、もう一度やり直すことです。 同様に、ユーザーが最初に Azure RMS 保護が適用されたラベルを選択し、次に AD RMS 保護が適用されたラベルに変更する場合も、同じ制限が適用されます。
+## <a name="implementing-hyok"></a>HYOK を実装する
 
-## <a name="requirements-for-hyok"></a>HYOK の要件
+HYOK は、有効な Active Directory Rights Management サービス (AD RMS) デプロイがある場合に Azure Information Protection でサポートされます。次のセクションでは、その要件について説明します。 このシナリオでは、使用権限ポリシーとそのポリシーを保護する組織の秘密キーの管理と保存はオンプレミスで行われますが、ラベル付けと分類の Azure Information Protection ポリシーの管理と保存は Azure で行われます。 
 
-Azure Information Protection に AD RMS の保護を適用する場合、AD RMS のデプロイが次の要件を満たしていることを確認してください。
+HYOK と Azure Information Protection を、AD RMS と Azure Information Protection の完全なデプロイの使用と混同しないでください。また、AD RMS から Azure Information Protection への移行の代替手段として使用しないでください。 HYOK はラベルを適用することでのみサポートされます。HYOK は、AD RMS に機能パリティを提供していませんし、すべての AD RMS デプロイの構成をサポートしているわけではありません。
+
+- コンテンツの保護および保護されたコンテンツの使用について HYOK がサポートするシナリオに関する詳細は、「[HYOK のサポートされるシナリオ](#supported-scenarios-for-hyok)」セクションを参照してください。
+
+- AD RMS からの移行の手順については、「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
+
+- AD RMS のデプロイ要件の詳細については、次のセクションをご覧ください。
+
+### <a name="requirements-for-ad-rms-to-support-hyok"></a>HYOK をサポートするための AD RMS の要件
+
+Azure Information Protection ラベルに HYOK 保護を適用するには、AD RMS のデプロイで次の要件を満たす必要があります。
 
 - AD RMS の構成:
     
@@ -104,25 +140,28 @@ Azure Information Protection に AD RMS の保護を適用する場合、AD RMS 
     - 接続先のクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように AD RMS サーバーが構成されている: 運用環境では必須ですが、テストまたは評価目的の場合は必須ではありません。
     
     - 構成済みの権利テンプレート。
+    
+    - Exchange IRM 用に構成されていない。
+    
+    - モバイル デバイスと Mac コンピューターの場合: [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) がインストールされ構成されている。
 
-- オンプレミス Active Directory と Azure Active Directory 間にディレクトリ同期が構成され、AD RMS の保護を使用するユーザーのシングル サインオンが構成されている。
+- オンプレミスの Active Directory と Azure Active Directory 間にディレクトリ同期が構成され、HYOK 保護を使用するユーザーのシングル サインオンが構成されている。
 
-- AD RMS で保護されているドキュメントまたは電子メールを組織以外の相手と共有する場合: AD RMS は、信頼されたユーザー ドメイン (TUD)、または Active Directory Federation Services (AD FS) を使用して作成されたまたはフェデレーションによる信頼を使用して、他の組織との直接的なポイント間の関係に明示的に定義した信頼向けに構成されている。
+- HYOK で保護されているドキュメントまたは電子メールを組織以外の相手と共有する場合: AD RMS は、信頼されたユーザー ドメイン (TUD)、または Active Directory Federation Services (AD FS) を使用して作成された、またはフェデレーションによる信頼を使用して、他の組織との直接的なポイント間の関係に明示的に定義した信頼向けに構成されている。
 
 - ユーザーは、Windows 7 Service Pack 1 以降で実行されている Office 2016 Professional Plus または Office 2013 Professional Plus Service Pack 1 のバージョンの Office を持っている。 ただし、このシナリオでは、Office 2010 と Office 2007 は、サポートされません。
-    
     
     - Office 2016 の Microsoft インストーラー (.msi) ベースのエディションの場合: [2018 年 3 月 6 日にリリースされた Microsoft Office 2016 の更新プログラム 4018295](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295) をインストールしてあります。
 
 > [!IMPORTANT]
-> このシナリオが提供する高い確実性を実現するために、AD RMS サーバーは DMZ に配置せず、適切に管理されているコンピューター (たとえば、モバイル デバイスやワークグループ コンピューター以外のコンピューター) からのみ使用することをお勧めします。 
+> HYOK 保護が提供する高い確実性を実現するために、AD RMS サーバーは DMZ に配置せず、管理デバイスでのみ使用することをお勧めします。 
 > 
 > また、AD RMS クラスターでハードウェア セキュリティ モジュール (HSM) を使用することをお勧めします。これを使用すれば、AD RMS のデプロイが侵入または侵害されても、サーバー ライセンサー証明書 (SLC) の秘密キーが公開または盗難されることはありません。 
 
 AD RMS のデプロイの情報と手順については、Windows Server ライブラリの「[Active Directory Rights Management Services の概要](https://technet.microsoft.com/library/hh831364.aspx)」を参照してください。 
 
 
-## <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>証明書の URL を確認するように AD RMS サーバーを構成する
+### <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>証明書の URL を確認するように AD RMS サーバーを構成する
 
 1. クラスターの各 AD RMS サーバーで、次のレジストリ エントリを作成します。
 
@@ -140,7 +179,7 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 2. IIS を再開します。
 
-## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
+### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
 
 **HYOK (AD RMS)** の保護のラベルを構成する場合、AD RMS クラスターのライセンス URL を指定する必要があります。 さらに、ユーザーを許可するためにアクセス許可に構成したテンプレートを指定するか、またはユーザーがアクセス許可とユーザーを定義できるようにする必要があります。 
 
@@ -152,10 +191,9 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
     
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
+
 ## <a name="next-steps"></a>次の手順
 
-この機能の詳細と使用するタイミングについては、ブログ投稿のお知らせ「[Azure Information Protection with HYOK (Hold Your Own Key)](https://cloudblogs.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/)」(HYOK (Hold Your Own Key) による Azure Information Protection) を参照してください。
-
-AD RMS 保護のラベルを構成するには、「[Rights Management による保護でラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。 
+HYOK 保護のラベルを構成するには、「[Rights Management による保護でラベルを構成する方法](../deploy-use/configure-policy-protection.md)」を参照してください。 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
