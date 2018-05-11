@@ -4,7 +4,7 @@ description: 分類、ラベル付け、組織のドキュメントと電子メ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
+ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -41,24 +41,6 @@ ms.lasthandoff: 03/28/2018
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Azure Information Protection によるユーザーとグループの使用方法
 
 Azure Information Protection でユーザーとグループを使用するシナリオは 3 通りあります。
-
-- **ラベルをユーザーに割り当てる場合**: ラベル付けと分類を使用するケースが該当します。 管理者だけが次のグループを選択します。
-    
-    - 既定の Azure Information Protection ポリシーは、テナントの Azure AD にあるすべてのユーザーに対して自動的に割り当てられます。 ただし、スコープを持つポリシーを使用して、指定したユーザーまたはグループに追加のラベルを割り当てることもできます。
-
-- **使用権限とアクセス制御を割り当てる場合**: Azure Rights Management サービスを使用してドキュメントと電子メールを保護します。 管理者とユーザーが、これらのユーザーとグループを選択できます。
-
-    - 使用権限は、ドキュメントや電子メールをユーザーが開くことができるかと、その使用方法を決定します。 たとえば、読み取り専用、読み取りと印刷、または読み取りと編集などができます。
-
-    - アクセス制御には、有効期限日とアクセスのためにインターネット接続が必要かどうかが含まれます。
-
-- **Azure Rights Management サービスを構成する場合**: 特定のシナリオをサポートするためであり、したがって、管理者のみがこれらのグループを選択します。 たとえば、次のような構成の例があります。
-
-    - スーパー ユーザー。eDiscovery またはデータ回復で必要な場合に、指定されたサービスまたはユーザーが暗号化されたコンテンツを開くことができるようにします。
-
-    - Azure Rights Management サービスの代理管理。
-
-    - 段階的デプロイをサポートするオンボーディング コントロール。
 
 **ラベルをユーザーに割り当てる場合**: Azure Information Protection ポリシーを構成するときに、ラベルをドキュメントや電子メールに適用できるようにします。 管理者のみがこれらのユーザーとグループを選択できます。
 
