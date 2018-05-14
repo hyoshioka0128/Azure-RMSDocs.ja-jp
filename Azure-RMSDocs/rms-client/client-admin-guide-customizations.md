@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 80f0b29b05f3a63972f7bc45e14ee721cf289a86
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 0b71519002816f5bae272f002bfec123186a65a1
+ms.sourcegitcommit: 22072325721cfd26b6546ef625e8b38f5551d30b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -56,10 +56,21 @@ ms.lasthandoff: 05/03/2018
 
 初めて Azure Information Protection クライアントをコンピューターにインストールし、ユーザーが Word、Excel、PowerPoint または Outlook を開くと、**[設定完了]**  ページに、ラベルを選択するために、新しい Information Protection バーを使用する方法の簡単な説明が表示されます。 このページは、レジストリを編集して抑制することができます。
 
-次の値の名前を検索し、値を **0** に設定します。
+1. 次のレジストリ キーが存在しない場合は、作成します。
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+2. **EnableWelcomeExperience** という名前の DWORD (32 ビット) 値 (REG-DWORD) が存在しない場合は、作成し、データ値を **0** に設定します。
 
+## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>[Azure Information Protection の新機能] を非表示にする ページ
+
+Azure Information Protection クライアントをコンピューターに初めてインストールするか、アップグレードすると、Azure Information Protection バーが Word、Excel、PowerPoint、または Outlook に表示され、**[Azure Information Protection の新機能]** ページにユーザーの同意と使用状況の追跡に関する通知が表示されます。 このページは、レジストリを編集して抑制することができます。
+
+1. 次のレジストリ キーが存在しない場合は、作成します。
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
+
+2.  **WhatsNewVersion** という名前の文字列値 (REG-SZ) が存在しない場合は作成し、データ値を **1.4** に設定します。
 
 ## <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
 

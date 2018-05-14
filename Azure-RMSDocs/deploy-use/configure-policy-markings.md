@@ -4,17 +4,17 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1fc9e3babd83368f1fa6389da3e2b66e8080d308
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 3a732f49a299b4d66af70da3d26df193eaca36ac
+ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -47,6 +47,8 @@ ms.lasthandoff: 05/03/2018
 - Office アプリでは、ラベルの適用時に、ラベルからの視覚的なマーキングが適用されます。 ラベル付きのドキュメントを開いたときと、ドキュメントを最初に保存したときにも、視覚的なマーキングが適用されます。  
 
 - エクスプローラーまたは PowerShell を使用してドキュメントにラベルを付ける場合は、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに適用されます。
+    
+    例外は、SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office 2016 で[自動保存](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)を使用している場合です。自動保存が有効な場合、[高度なクライアント設定](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)でバックグラウンドで連続的に実行する分類を有効にします。 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 

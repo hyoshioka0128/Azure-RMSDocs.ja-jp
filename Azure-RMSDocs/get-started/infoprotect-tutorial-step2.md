@@ -4,17 +4,17 @@ description: Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3b9dbbc16fe26d7f111d37dbcd28d6477372a5d9
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成する
 
@@ -55,11 +55,13 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     既定値はいつサブスクリプションを取得したかに応じて異なるため、この設定を変更する必要がない場合があります。 チュートリアルの後半で保護されたドキュメントをユーザーと共有するために、カスタム アクセス許可を使用します。共有するユーザーは、お客様がエクスプローラーのファイルを右クリックするときに指定できます。
 
+4. この **[ポリシー: グローバル]** ブレードで **[保存]** を選択します。操作を確認するメッセージが表示されたら **[OK]** を選択します。 このブレードを閉じます。
+
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>分類にプロンプトを出すために保護、視覚的なマーカー、および条件に新しいラベルを作成する
 
 ここでは、**社外秘**に新しいサブラベルを作成します。
 
-1. **[社外秘]** ラベルを右クリックし、**[サブラベルの追加]** を選択します。
+1. **[分類]** > **[ラベル]** メニュー オプションから、**[社外秘]** ラベルを右クリックし、**[サブラベルの追加]** を選択します。
     
     **[社外秘]** という名前のラベルがない場合は、代わりに別のラベルを選択するか、新しいラベルを作成し、それに応じてチュートリアルの手順を変更してかまいません。
 
@@ -125,9 +127,13 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 12. **[Enter notes for internal housekeeping]** (内部ハウスキーピング処理向けのメモを入力) ボックスに、「**For testing purposes only**」 (テスト用のみ) と入力します。
 
-13. **[サブラベル]** ブレードで **[保存]** をクリックします。 次に、**[Policy: Global]**(ポリシー: グローバル) ブレードで **[保存]** を再度クリックします。
-    
-    視覚的なマーキングと保護用に構成された新しいサブラベルが表示されます。 次に例を示します。
+13. **[サブラベル]** ブレードで **[保存]** をクリックします。 確認するメッセージが表示されたら、**[OK]** をクリックします。 新しいラベルが作成され、保存されますが、まだポリシーには追加されていません。
+
+14. **[分類]** > **[ポリシー]** メニュー オプションから **[グローバル]** をもう一度選択し、ラベルの横にある **[ラベルの追加または削除]** リンクを選択します。
+
+15. **[ポリシー: ラベルの追加または削除]** ブレードから、作成したラベルを選択し、**[財務]** というサブラベルを選択して **[OK]** をクリックします。
+
+16. **[ポリシー: グローバル]** ブレードにグローバル ポリシーの新しいサブラベルが表示されます。このサブラベルは、視覚的なマーキングと保護のために構成されています。 次に例を示します。
 
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー構成済み](../media/info-protect-policy-configuredv2.png)
     
@@ -135,6 +141,9 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 設定構成済み](../media/info-protect-settings-configuredv2.png)
     
+
+17. この **[ポリシー: グローバル]** ブレードで **[保存]** をクリックします。 操作を確認するメッセージが表示されたら、**[OK]** をクリックします。
+
 Azure Portal を閉じても、開いたままにしておきこのチュートリアルが終わった後でさらにオプションを構成してみてもかまいません。
 
 既定のポリシーの確認と変更が済んだので、次の手順では Azure Information Protection をインストールします。

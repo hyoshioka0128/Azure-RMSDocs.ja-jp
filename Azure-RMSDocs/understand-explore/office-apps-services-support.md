@@ -4,7 +4,7 @@ description: Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f7ca9a9e85a1d76d2d7bdc505c884ee9f02ddb42
-ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
+ms.openlocfilehash: caf89d6df51adcd556db319a8140cbe936102ef3
+ms.sourcegitcommit: fa64f9c2a4d367d7586d64def0fd02764ad2e00b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/06/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -38,7 +38,7 @@ Office アプリと Azure Information Protection クライアントを構成す�
 - Azure Information Protection クライアントをインストールして構成するには、「[Azure Information Protection クライアント: クライアントのインストールと構成](../deploy-use/configure-client.md)」を参照してください。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
-Exchange Online または Exchange Server を使用するとき、Azure Rights Management をサポートする IRM (Information Rights Management) オプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
+Exchange Online または Exchange Server を使用するとき、Azure Rights Management をサポートする Information Rights Management (IRM) オプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
 
 -   **Exchange ActiveSync IRM** 。モバイル デバイスで、保護された電子メール メッセージを保護および使用することができます。
 
@@ -46,7 +46,7 @@ Exchange Online または Exchange Server を使用するとき、Azure Rights M
 
 -   Outlook クライアントの**保護ルール**。保護テンプレートが特定受信者の電子メール メッセージに自動的に適用されるように管理者が構成します。 たとえば、社内電子メールが法務部門に送信されるときに、法務部門の所属者のみが読むことが可能で、ただし転送できないようにすることができます。 送信前に電子メール メッセージに保護が適用されたことがユーザーに表示され、既定では、ユーザーは不要と判断した場合にこの保護を削除できます。 電子メールは送信される前に暗号化されます。 詳細については、Exchange ライブラリの「[Outlook の保護ルール](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx)」および「[Outlook 保護ルールを作成する](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx)」を参照してください。
 
--   **トランスポート ルール**。保護テンプレートが電子メール メッセージに自動的に適用されるように管理者が構成します。 ルールの基盤は送信者、受信者、メッセージの件名、内容などのプロパティになります。 ルールは概念上、保護ルールに似ていますが、ユーザーは保護を削除できません。 Outlook on the web とモバイル デバイスにより送信されるメールに適用できます。 また、クライアントから送信される前にメール メッセージが暗号化されることはありません。 詳細については、Exchange ライブラリの「[トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」を参照してください。
+-   **メール フロー ルール**。保護テンプレートが電子メール メッセージに自動的に適用されるように管理者が構成します。 ルールの基盤は送信者、受信者、メッセージの件名、内容などのプロパティになります。 ルールは概念上、保護ルールに似ていますが、ユーザーは保護を削除できません。 Outlook on the web とモバイル デバイスにより送信されるメールに適用できます。 また、クライアントから送信される前にメール メッセージが暗号化されることはありません。 詳細については、Exchange ライブラリの「[トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」を参照してください。
 
 -   **データ損失防止 (DLP) ポリシー** 。このポリシーは、電子メール メッセージにフィルターを適用するための条件のセットを含み、機密コンテンツのデータの損失を防ぐために役立つ操作を実行します。 機密コンテンツには、たとえば、個人情報やクレジット カード情報があります。 ポリシーのヒントを使用すると、機密データが検出されたときに、保護の適用が必要な可能性があることをユーザーに警告できます。 詳細については、Exchange ライブラリの「[データ損失防止](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx)」を参照してください。
 
@@ -78,11 +78,11 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > [!NOTE]
 > 現在のところ、SharePoint IRM を使用するとき、いくつかの制限があります。
 > 
-> - Azure ポータルで管理する既定のテンプレートまたはカスタム テンプレートを使用できません。 
+> - Azure Portal で管理する既定のテンプレートまたはカスタム保護テンプレートを使用できません。 
 > 
-> - ファイル名拡張子が保護された PDF ファイルのための .ppdf であるファイルはサポートされていません。 ファイル名拡張子が .pdf で、Rights Management がネイティブで保護しているファイルは、Rights Management をネイティブでサポートする PDF リーダーを使用する場合にサポートされます。
+> - ファイル名拡張子が保護された PDF ファイルのための .ppdf であるファイルはサポートされていません。 ファイル名の拡張子が .pdf のファイルはサポートされており、ダウンロードすると、Rights Management をネイティブでサポートする PDF アプリケーションで開くことができます。 たとえば、Windows 用 Azure Information Protection クライアントには、これらの保護された PDF ファイルのビューアーが含まれています。 その他の PDF ビューアーについては、「[RMS 対応アプリケーション](../get-started/requirements-applications.md#rms-enlightened-applications)」を参照してください。
 > 
-> - 共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントをチェックアウトし、ダウンロードする必要があるため、ファイルは一度に 1 人のユーザーしか編集できません。
+> - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
 IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、そのファイルは共同編集、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP) で使用できません。
 
