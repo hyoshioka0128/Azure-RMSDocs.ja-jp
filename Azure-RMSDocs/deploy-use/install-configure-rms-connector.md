@@ -4,7 +4,7 @@ description: Azure Rights Management (RMS) コネクタをインストールし�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2017
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a1526c3efea1a03a82baed526d65b748d2aa7bae
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 099d85a753d81d3d7e8a649f132ee723d9f20006
+ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 Azure Rights Management (RMS) コネクタをインストールして構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 1 から手順 4 を説明します。
 
@@ -48,7 +48,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 
 4.  [Microsoft Rights Management コネクタ セットアップ] の [ようこそ] ページで、**[このコンピューターへの Microsoft Rights Management コネクタのインストール]** を選択し、**[次へ]** をクリックします。
 
-5.  RMS コネクタのライセンス条項を読んで同意したら、 **[次へ]**をクリックします。
+5.  RMS コネクタのライセンス条項を読んで同意したら、 **[次へ]** をクリックします。
 
 続行するには、RMS コネクタを構成するためのアカウントとパスワードを入力します。
 
@@ -104,11 +104,11 @@ RMS コネクタのインストール プロセスでは、すべての前提条
 
 -   Azure RMS での操作を承認するコネクタ用の一連のセキュリティ トークン。 Azure RMS からダウンロードされ、ローカル コンピューター上のレジストリにインストールされます。 これらのトークンは、データ保護アプリケーション プログラム (DPAPI) およびローカル システム アカウントの資格情報を使用して保護されます。
 
-ウィザードの最終ページで、次の操作を実行して **[完了]**をクリックします。
+ウィザードの最終ページで、次の操作を実行して **[完了]** をクリックします。
 
 -   最初のコネクタをインストールした段階では、 **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択しないでください。 このオプションは、2 つ目 (または最後) の RMS コネクタをインストールした後に選択します。 代わりに、少なくとも 1 つの他のコンピューターで、ウィザードをもう一度実行してください。 2 つ以上のコネクタをインストールする必要があります。
 
--   2 つ目 (または最後) のコネクタをインストールした後で、 **[コネクタ管理者コンソールを起動してサーバーを承認する]**を選択します。
+-   2 つ目 (または最後) のコネクタをインストールした後で、 **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択します。
 
 > [!TIP]
 > この時点で、検証テストを実行して、RMS コネクタ用の Web サービスが機能しているかどうかを確認できます。
@@ -132,7 +132,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 - 複数のサーバーを 1 つのエントリとして追加するには、Active Directory のセキュリティ グループや配布グループ、または複数のサーバーで使用されているサービス アカウントを指定します。 この構成を使用すると、サーバーのグループは同じ RMS 証明書を共有し、グループに属するすべてのサーバーは、グループ内の各サーバーが保護しているコンテンツの所有者と見なされます。 管理オーバーヘッドを最小限に抑えるため、個々のサーバー単位ではなく、この単一グループ構成を使用して組織の Exchange サーバーまたは SharePoint サーバー ファームを承認することを推奨します。
 
-**[コネクタの使用が許可されているサーバー]** ページで **[追加]**をクリックします。
+**[コネクタの使用が許可されているサーバー]** ページで **[追加]** をクリックします。
 
 > [!NOTE]
 > サーバーの承認は、サービスまたはサーバーのコンピューター アカウントの ServerCertification.asmx に NTFS アクセス許可を手動で適用して、Exchange アカウントにユーザー スーパー権限を手動で付与する AD RMS 構成に対する Azure RMS の同等の構成です。 コネクタでは、ServerCertification.asmx に NTFS アクセス許可を適用する必要はありません。
@@ -162,7 +162,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 -   ファイル分類インフラストラクチャを使用するファイル サーバーの場合、関連するサービスはローカル システム アカウントとして実行されるため、ファイル サーバーのコンピューター アカウント (SERVERNAME$ など)、またはこれらのコンピューター アカウントを含むグループを承認する必要があります。
 
-一覧へのサーバーの追加が完了したら、 **[閉じる]**をクリックします。
+一覧へのサーバーの追加が完了したら、 **[閉じる]** をクリックします。
 
 次に、RMS コネクタがインストールされているサーバーの負荷分散を構成する必要があります (未構成の場合)。また、これらのサーバーと承認されたサーバーの間の接続に HTTPS を使用するかどうかを検討します。
 
