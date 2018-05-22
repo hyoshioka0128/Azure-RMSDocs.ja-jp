@@ -4,7 +4,7 @@ description: Azure Rights Management (Azure RMS) で使用状況のログを使�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b4a9c6b259e5863bb5be276f89beb0de33002ca4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 989f75361d96680bf0bedff00251b6d60aa999c5
+ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
 
@@ -176,7 +176,7 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 
 |要求の種類|説明|
 |----------------|---------------|
-|AcquireLicense|Windows ベースのマシンのクライアントが RMS で保護されているコンテンツのライセンスを要求しています。|
+|AcquireLicense|Windows ベースのコンピューターのクライアントが RMS で保護されているコンテンツのライセンスを要求しています。|
 |AcquirePreLicense|ユーザーに代わってクライアントが、RMS で保護されているコンテンツのライセンスを要求しています。|
 |AcquireTemplates|テンプレート ID に基づいてテンプレートを取得するための呼び出しが行われました。|
 |AcquireTemplateInformation|サービスからテンプレートの ID を取得するための呼び出しが行われました。|
@@ -222,7 +222,7 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 ## <a name="windows-powershell-reference"></a>Windows PowerShell の参照情報
 2016 年 2 月以降、Azure Rights Management 使用状況ログに必要となる唯一の Windows PowerShell コマンドレットは、[Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) です。 
 
-この変更の前は次のコマンドレットが Azure Rights Management 使用状況ログに必要でしたが、現在は推奨されていません。  
+この変更の前は次のコマンドレットが Azure Rights Management 使用状況ログに必要でしたが、現在は非推奨とされます：  
 
 -   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
 
