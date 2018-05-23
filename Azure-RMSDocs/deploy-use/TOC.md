@@ -41,6 +41,7 @@
 ## [テナント キーに対する操作](operations-tenant-key.md)
 ### [マイクロソフト管理](operations-microsoft-managed-tenant-key.md)
 ### [お客様が管理](operations-customer-managed-tenant-key.md)
+## [Azure Information Protection の個人データの管理](manage-personal-data.md)
 ## [使用停止と非アクティブ化](decommission-deactivate.md)
 ## [PowerShell での管理](administer-powershell.md)
 ### [AADRM PowerShell モジュールのインストール](install-powershell.md)
