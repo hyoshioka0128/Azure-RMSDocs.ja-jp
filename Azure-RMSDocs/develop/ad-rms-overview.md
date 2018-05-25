@@ -1,24 +1,24 @@
 ---
-title: "概要 - RMS SDK 2.1 | Azure RMS"
-description: "Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。"
-keywords: 
+title: 概要 - RMS SDK 2.1 | Azure RMS
+description: Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d8f9ac875c0c69d308ab34de45a0d594ae581780
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: fcf72e8c633186424957cde4bb98b5e2051b9dcf
+ms.sourcegitcommit: d1a3f35ea2d2c246a5b1e3f3da75df9c182fd0da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="overview"></a>概要
 
@@ -54,6 +54,6 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 
 * [RMS の概念](application-types.md)
 * [作業開始](getting-started-with-ad-rms-2-0.md)
-* [AD RMS の IT Pro ドキュメント](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)
+* [AD RMS の IT Pro ドキュメント](https://technet.microsoft.com/library/cc771234.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
