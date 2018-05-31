@@ -5,7 +5,7 @@ keywords: iOS 用および Android 用の Azure Information Protection アプリ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,11 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 655829682f6fe962a27eb48ecf73deb9cabc481a
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 190fce3f1725775ae699dbc523a810dc79b96f88
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444250"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
@@ -51,13 +52,18 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、**[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
 
 ただし、待機しない場合は、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md)」の手順に従って、表示対象の保護された電子メールまたはファイルを自分自身に送信できます 
+
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>このアプリにサインインするにはどのような資格情報を使用する必要がありますか?
 
-組織が既に (モバイル デバイス拡張機能と共に) オンプレミスの AD RMS を所有している、または Azure Rights Management サービスを使用している場合は、自分の資格情報を使用してサインインできます。 それ以外の場合は、[Azure Information Protection ページ](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)を使用して、無料の新しいアカウントにサインアップできます。
+組織が既に (モバイル デバイス拡張機能と共に) オンプレミスの AD RMS を所有している、または Azure Rights Management サービスを使用している場合は、自分の作業資格情報を使用してサインインします。 
+
+ファイルの保護に個人の電子メール アドレスが使用されている場合は、無料の [Microsoft アカウント](https://signup.live.com)の資格情報を使用してサインインします。
 
 ## <a name="can-i-sign-up-for-the-free-account-with-my-personal-email-address-such-as-a-hotmail-or-gmail-account"></a>Hotmail または Gmail アカウントなど、個人の電子メール アドレスで無料アカウントにサインアップできますか?
 
-まだできません。 現在、勤務先の電子メール アドレス (職場または学校のアカウント) でのみサインアップできます。 個人の電子メール アドレスのサポートに取り組んでおり、利用可能になった場合はこのエントリを更新します。
+はい、Microsoft アカウントを申請する際には、Hotmail や Gmail などの電子メール アドレスのほか、所有しているその他の電子メール アドレスを指定できます。 
+
+ただし、このビューアーではこのアカウントを使って保護されたファイルを開くことができますが、認証に Microsoft アカウントが使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合もあります。 [詳細情報](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>このアプリで開くことができるファイル拡張子
 

@@ -4,7 +4,7 @@ description: Azure Information Protection でお客様が管理するキーを�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,18 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ccbca7f0309e03128ebbe0544e55b341ece47d0f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f5380dc364255fd085c82fd9c0a834afea368c97
+ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34402151"
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Azure Information Protection が含まれているサブスクリプションを所有する組織は、追加料金なしで、顧客管理のキー (BYOK) を使用し、[キーの使用状況ログを記録](../deploy-use/log-analyze-usage.md)するように Azure Information Protection テナントを構成することができます。 
+Azure Information Protection が含まれているサブスクリプションを所有する組織は、顧客管理のキー (BYOK) を使用し、[キーの使用状況ログを記録](../deploy-use/log-analyze-usage.md)するように Azure Information Protection テナントを構成することができます。 
 
 キーは Azure Key Vault に保存する必要があります。これには Azure サブスクリプションが必要です。 HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/pricing/details/key-vault/)を参照してください。
 

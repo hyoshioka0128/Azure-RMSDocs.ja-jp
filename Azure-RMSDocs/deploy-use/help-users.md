@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 468550dd2389407b20d66adb814a7487988180bd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0243961b4dfdf3bb8c8b04059793098b26880615
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444267"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -49,7 +50,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
     - **サインイン ヘルプ**
         
-        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 必要な資格情報は、Office 365 テナントまたは Azure Active Directory テナントに関連付けられている、ユーザーの所属する企業または学校のアカウントとパスワードです。 必要な資格情報は Microsoft アカウント (以前の Microsoft Live ID) または個人用の電子メール アカウントではありません。これらのアカウントは Azure Rights Management サービスでは現在サポートされていません。 
+        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 通常、必要な資格情報は、Office 365 テナントまたは Azure Active Directory テナントに関連付けられている、ユーザーの所属する企業または学校のアカウントとパスワードです。 Azure Rights Management サービスでは Azure AD アカウントを認証できますが、Microsoft アカウントが認証に使用されている場合は、一部のアプリケーションでも、保護されたコンテンツを開くことができます。 [詳細情報](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Azure Rights Management サービスを使用するアプリケーションを実行しているときに資格情報を要求された場合、どのアカウントを使用すればいいのかについてユーザーとヘルプ デスクにガイダンスを提供します。
         
@@ -57,7 +58,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
         
         使用するアプリケーションに対する適切な指示をユーザーが受けていること、また、ユーザーが Azure Rights Management サービスでサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
         
-        認証と承認は Azure Active Directory のアカウントとグループに依存します。 特定のユーザーまたはグループによる、保護されたコンテンツの使用を承認できることを確認するには、[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)の検証チェックを使用します。
+        特定のユーザーまたはグループによる、保護されたコンテンツの保護や使用を Azure Active Directory によって承認できることを確認するには、[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)の検証チェックを使用します。
         
         保護されたコンテンツを開くことはできるが必要な権限を持っていないという報告がユーザーからあった場合、そのユーザーが Rights Management テンプレート用に構成された正しいグループに含まれていないことが問題である可能性があります。 または、そのユーザーまたはグループに[テンプレートの再構成が必要である](configure-policy-templates.md)という問題の場合があります。 
         

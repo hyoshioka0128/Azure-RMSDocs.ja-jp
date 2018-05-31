@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5006ef3d0401b6a7f018be1f65979c079cf04fc
-ms.sourcegitcommit: fdcfc006108f61fcd380ff6f3c3208c78ecf4056
+ms.openlocfilehash: 697fa4674699fd3b24f7f7353ff9f9d476040bd8
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423359"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -168,7 +169,7 @@ Azure Rights Management によって保護されたドキュメントまたは�
 
 - Azure Portal で、ラベルまたはテンプレートを構成する場合は、使用ライセンスの有効期間として、**[オフライン アクセスの許可]** 設定の値が使用されます。 
     
-    Azure Portal で、この設定を構成するための詳細とガイダンスについては、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」の手順 9 の表を参照してください。
+    Azure Portal でこの設定を構成するための詳細とガイダンスについては、Rights Management の保護用にラベルを構成する方法について説明した記事の、「[保護の設定に関する情報](../deploy-use/configure-policy-protection.md#information-about-the-protection-settings)」の表をご覧ください。
 
 - PowerShell を使用してテンプレートを構成する場合、使用ライセンスの有効期間としては、[Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) および [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) コマンドレットの *LicenseValidityDuration* パラメーターの値が使用されます。
     

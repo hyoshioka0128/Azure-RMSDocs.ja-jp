@@ -4,7 +4,7 @@ description: Azure Information Protection のデータ保護サービス、Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1968f277ca7c9237487d4d767b8a85eb15a9331
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: af2157b8163d9ad5adbb69e057330b3b03259fd0
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444182"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -106,11 +107,15 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成されたパスワード、多要素認証 (MFA)、フェデレーション、Active Directory Domain Services で作成されたパスワードを使用してから、Azure Active Directory に同期される場合があります。
 
-Azure AD のアカウントを持っていないユーザー宛の Office ドキュメントが添付されている電子メールを保護する場合、認証方法が異なります。 Azure Rights Management サービスは、Gmail など、いくつかの一般的なソーシャル ID プロバイダーと統合されます。 ユーザーの電子メール プロバイダーがサポートされている場合、ユーザーはそのサービスにサインインでき、電子メール プロバイダーによって認証が行われます。 ユーザーの電子メール プロバイダーがサポートされていない場合、または基本設定として、ユーザーは認証を行い、Web ブラウザーで保護されたドキュメントを含む電子メールを表示するためのワンタイム パスワードを申請できます。
+その他の認証方法:
+
+- Azure AD のアカウントを持っていないユーザー宛の Office ドキュメントが添付されている電子メールを保護する場合、認証方法が異なります。 Azure Rights Management サービスは、Gmail など、いくつかの一般的なソーシャル ID プロバイダーと統合されます。 ユーザーの電子メール プロバイダーがサポートされている場合、ユーザーはそのサービスにサインインでき、電子メール プロバイダーによって認証が行われます。 ユーザーの電子メール プロバイダーがサポートされていない場合、または基本設定として、ユーザーは認証を行い、Web ブラウザーで保護されたドキュメントを含む電子メールを表示するためのワンタイム パスワードを申請できます。
+
+- Azure Information Protection では、サポートされているアプリケーションの Microsoft アカウントを使用できます。 現在、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 [詳細情報](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
 
-はい。 Azure Portal で構成できる[保護設定](../deploy-use/configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 [Office 365 Message Encryption の新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)を使用して、電子メールを送信するためだけにテンプレートを使用する場合を除き、ソーシャル ID (Gmail や Microsoft など) からアカウントを追加したり、Azure AD にないその他のアカウントを追加したりしないでください。
+はい。 Azure Portal で構成できる[保護設定](../deploy-use/configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 これについては、必要に応じて「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。 
 
 Azure Information Protection ラベルがある場合は、最初にカスタム テンプレートをラベルに変換してから、Azure Potal でこれらの保護設定を構成する必要があります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
@@ -127,7 +132,7 @@ Azure Information Protection ラベルがある場合は、最初にカスタム
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>保護されたメールを Gmail または Hotmail のアカウントに送信するにはどうしますか。
 
-Exchange Online と Azure Rights Management サービスを使用する場合は、保護メッセージとしてユーザーに電子メールを送信するだけです。 たとえば、Outlook on the Web のコマンド バーにある新しい**[保護]** ボタンを選択するか、Outlook の **[転送不可]** ボタンまたはメニュー オプションを選択できます。 または、自動的に転送不可を適用する Azure Information Protection ラベルを選択して、電子メールを分類することができます。
+Exchange Online と Azure Rights Management サービスを使用する場合は、保護メッセージとしてユーザーに電子メールを送信するだけです。 たとえば、Outlook on the Web のコマンド バーにある新しい **[保護]** ボタンを選択するか、Outlook の **[転送不可]** ボタンまたはメニュー オプションを選択できます。 または、自動的に転送不可を適用する Azure Information Protection ラベルを選択して、電子メールを分類することができます。
 
 受信者には Gmail、Yahoo、または Microsoft アカウントにサインインするためのオプションが表示され、保護された電子メールを読むことができます。 また、ブラウザーで電子メールを読み取るためにワンタイム パスワードのオプションを選択することもできます。
 

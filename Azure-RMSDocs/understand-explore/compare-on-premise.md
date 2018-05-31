@@ -4,7 +4,7 @@ description: Active Directory Rights Management サービス (AD RMS) を理解�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8fe6c95c9e141e63aa70d60920fbc127f49996f5
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 8c53a88b75c145a743f878c4d4138f179c9dae8c
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444140"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
@@ -28,7 +29,7 @@ Azure Information Protection の主な違いの一部:
 
 - **サーバー インフラストラクチャが必要ない**: AD RMS で必要とされる追加サーバーと PKI 証明書が、Azure Information Protection では必要ありません。Microsoft Azure により処理されるためです。 そのため、クラウド ソリューションを短時間でデプロイして簡単に管理できます。
 
-- **クラウド ベースの認証**: Azure Information Protection は、内部ユーザーと他の組織からのユーザー両方の認証に Azure AD を使用します。 つまり、内部ネットワークに接続されていないモバイル ユーザーでも認証でき、保護されたコンテンツを他の組織のユーザーと簡単に共有できます。 多くの組織は、Azure サービスや Office 365 を使用しているため、Azure AD に既にユーザー アカウントがあります。 ない場合は、個人用 RMS で無料のアカウントを作成できます。 AD RMS で保護されたコンテンツを別の組織と共有するには、各組織との明示的な信頼関係を構成する必要があります。
+- **クラウド ベースの認証**: Azure Information Protection は、内部ユーザーと他の組織からのユーザー両方の認証に Azure AD を使用します。 つまり、内部ネットワークに接続されていないモバイル ユーザーでも認証でき、保護されたコンテンツを他の組織のユーザーと簡単に共有できます。 多くの組織は、Azure サービスや Office 365 を使用しているため、Azure AD に既にユーザー アカウントがあります。 ただし、そうでない場合は、個人向け RMS サブスクリプションを使用して無料アカウントを作成するか、[Azure Information Protection への認証をサポートしているアプリケーション](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)用に、Microsoft アカウントを使用することができます。 AD RMS で保護されたコンテンツを別の組織と共有するには、各組織との明示的な信頼関係を構成する必要があります。
 
 - **モバイル デバイスの組み込みサポート**: Azure RMS でモバイル デバイスや Mac コンピューターをサポートする場合でも、デプロイを変更する必要はありません。 AD RMS でこれらのデバイスをサポートするには、モバイル デバイス拡張機能をインストールし、フェデレーション用に AD FS を構成して、パブリック DNS サービスの追加レコードを作成する必要があります。
 

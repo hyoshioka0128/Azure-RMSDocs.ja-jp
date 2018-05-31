@@ -4,7 +4,7 @@ description: 組織が抱える要件や問題を明らかにし、Azure RMS テ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ca7d733cfe1045f46cfe47ee99d0df51dcac347
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 7d0205628502917d6bf35386d851403a40ed597a
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444097"
 ---
 # <a name="what-problems-does-azure-rms-solve"></a>Azure RMS が解決する問題の種類
 
@@ -33,7 +34,7 @@ Azure RMS は、[Azure Information Protection](what-is-information-protection.md
 |情報を安全に共有する|√ [保護された](../rms-client/client-classify-protect.md)ファイルは、他のユーザーと安全に共有できます  (例: メールの添付ファイル、SharePoint サイトへのリンク)。 機密情報がメール メッセージ内にある場合は、メールを保護するか、または単に Outlook の [転送不可] オプションを使うことができます。 <br /><br />メール メッセージ全体を保護するのではなく、保護されたファイルを添付する利点は、メールのテキストが暗号化されないため、組織外にメールを送る場合に、初めて使うときの説明をメールに含めることができることです。 説明を読むことは誰でもできますが、添付されたドキュメントは保護されているので、メールまたはドキュメントが他の人に転送されたとしても、承認されているユーザーだけがドキュメントを開くことができます。|
 |監査と監視|√ 保護されたファイルが組織外部に出た後も、ファイルの[使用状況を監査および監視](../deploy-use/log-analyze-usage.md)できます。<br /><br />たとえば、Contoso, Ltd の社員がFabrikam, Inc. の 3 人の社員と共同プロジェクトに携わっていて、読み取り専用の保護ドキュメントをこの 3 人に電子メールで送信するものとします。 Azure Rights Management の監査機能は次の情報を提供できます。<br /><br />- Fabrikam 社内の指定されたユーザーがドキュメントを開いたかどうか、および開いた日時。<br /><br />- ドキュメントが転送されたり他のユーザーがアクセスできる共有場所に保存されたりして、指定外のユーザーがドキュメントを開こうとしたかどうか (試みは失敗します)。<br /><br />- 指定されたユーザーがドキュメントを印刷または変更しようとしたかどうか (試みは失敗します)。<br /><br />さらに、[ドキュメント追跡サイト](../rms-client/client-track-revoke.md)を使うと、ユーザーや管理者は、保護されたドキュメントを追跡でき、必要な場合は、ドキュメントへのアクセスを取り消すことができます。|
 |Windows コンピューターに限らず、広く使われているデバイスをサポートする|√ [サポートされるデバイス](../get-started/requirements-client-devices.md)には次のものが含まれます。<br /><br />- Windows コンピューターと携帯電話<br /><br />- Mac コンピューター<br /><br />- iOS タブレットと携帯電話<br /><br />- Android タブレットと携帯電話|
-|企業間のコラボレーションをサポートする|√ Azure Rights Management はクラウド サービスであるため、保護されたコンテンツを他の組織と共有する前に、信頼関係を明示的に構成する必要がありません。 相手組織が Office 365 または Azure AD ディレクトリを既に導入している場合、組織間のコラボレーションは自動的にサポートされます。 導入していない場合、無料の[個人用 RMS](rms-for-individuals.md) サブスクリプションに登録できます。|
+|企業間のコラボレーションをサポートする|√ Azure Rights Management はクラウド サービスであるため、保護されたコンテンツを他の組織と共有する前に、信頼関係を明示的に構成する必要がありません。 相手組織が Office 365 または Azure AD ディレクトリを既に導入している場合、組織間のコラボレーションは自動的にサポートされます。 そうでない場合、ユーザーは無料の[個人向け RMS](rms-for-individuals.md) サブスクリプションにサインアップするか、[Azure Information Protection への認証をサポートしているアプリケーション](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)用に Microsoft アカウントを使用することができます。|
 |オンプレミスのサービスや Office 365 をサポートする|√  Azure Rights Management は、[Office 365 とシームレスに](office-apps-services-support.md)連携するだけでなく、[RMS コネクタ](../deploy-use/deploy-rms-connector.md)をデプロイすると、次のオンプレミス サービスで使うこともできます。<br /><br />- Exchange Server<br /><br />- SharePoint Server<br /><br />- ファイル分類インフラストラクチャを実行する Windows Server|
 |簡単なアクティブ化|√ 新しいサブスクリプションの場合は、自動的にアクティブ化されます。 既存のサブスクリプションの場合、[Rights Management サービスをアクティブ化する](../deploy-use/activate-service.md)には、管理ポータルで数回クリックするだけです。 または、コマンド ラインで管理する方がよければ、2 つの PowerShell コマンドだけで済みます。|
 |必要に応じて組織全体でスケーリングする能力|√ Azure Rights Management はクラウド サービスとして動作し、Azure の柔軟性を活かしてスケールアップおよびスケールアウトするため、追加のオンプレミス サーバーをプロビジョニングまたはデプロイする必要がありません。|

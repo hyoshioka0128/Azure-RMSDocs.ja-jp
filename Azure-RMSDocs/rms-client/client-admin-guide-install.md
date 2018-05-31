@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d52026fcffd3a3a0b51e361e6671f247eac5296d
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: b8cd6aeb13398bdfd65ba3e743e3e12bf3cc5f53
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423291"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -30,11 +31,13 @@ ms.lasthandoff: 05/03/2018
 
 - Microsoft .NET Framework 4.6.2
     
-    Azure Information Protection クライアントを完全にインストールするには、既定では Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。 推奨はされていませんが、[カスタム インストール パラメーター](#more-information-about-the-downgradedotnetrequirement-installation-parameter)を使用してこの要件を省略できます。
+    Azure Information Protection クライアントを完全にインストールするには、既定では Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。これがない場合、実行可能インストーラーのセットアップ ウィザードでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。 推奨はされていませんが、この要件は、セットアップ ウィザードを使用する際に、[カスタム インストール パラメーター](#more-information-about-the-downgradedotnetrequirement-installation-parameter)を使用することで省略できます。
+    
+    この前提条件は、実行可能インストーラー、Windows Update、または Windows インストーラーを使用してクライアントをサイレント モードでインストールする場合には、自動的にはインストールされていません。 これらのシナリオでは、必要に応じてこの前提条件をインストールしてください。そうしないと、インストールが失敗します。 Microsoft .NET Framework 4.6.2 (オフライン インストーラー) は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53344)からダウンロードできます。
 
 - Microsoft .NET Framework 4.5.2
     
-    Azure Information Protection ビューアーを別にインストールする場合は、Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。これがない場合、インストーラーではダウンロードまたはインストールされません。
+    Azure Information Protection ビューアーを別にインストールする場合は、Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。これがない場合、実行可能インストーラーではダウンロードまたはインストールされません。
 
 - Windows PowerShell バージョン 4.0
     
@@ -71,6 +74,14 @@ ms.lasthandoff: 05/03/2018
     この **[管理対象アドインの一覧]** グループ ポリシー設定を構成していなくても、Microsoft Azure Information Protection アドインが無効になることを示すレポートを取得した場合は構成する必要がある場合があります。 このアドインが無効の場合は、Office アプリケーションに Azure Information Protection バーが表示されません。
     
     このグループ ポリシー設定の詳細については、「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) を参照してください。
+
+- Office クイック実行のバージョン 16.0.9324.1000 以降の場合: モニターのレガシ サポートを有効にする
+    
+    特定されたクイック実行バージョン用の Outlook の外部に Azure Information Protection バーが表示されるのを回避するには、モニターのレガシ サポートを有効にすることが必要な場合があります。 このシナリオでバーが正しく表示されない場合、バーは **AdxTaskPane** として表示される可能性があります。 
+    
+    この要件に応じて Outlook を構成するには、**[ファイル]** > **[オプション]** > **[全般]** を選択します。
+    
+    - **[ユーザー インターフェイス オプション]** セクションで、オプション **[ディスプレイで最適な解像度を使用]** が選択されている場合は、この選択を解除します。
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
@@ -159,7 +170,7 @@ Office 2010 と Azure RMS のクライアントのサイレント インスト�
 
 #### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>DowngradeDotNetRequirement インストール パラメーターの詳細について
 
-Windows Update を使用して自動アップグレードをサポートし、Office アプリケーションとの信頼性の高い統合のため、Azure Information Protection クライアントは Microsoft .NET Framework バージョン 4.6.2 を使用します。 既定では、インストールのこのバージョンを確認し、ない場合はインストールしようとします。 インストール後はコンピューターの再起動が必要です。
+Windows Update を使用して自動アップグレードをサポートし、Office アプリケーションとの信頼性の高い統合のため、Azure Information Protection クライアントは Microsoft .NET Framework バージョン 4.6.2 を使用します。 既定では、実行可能ファイルによる対話型インストールによってこのバージョンが確認され、ない場合はインストールが試行されます。 インストール後はコンピューターの再起動が必要です。
 
 この Microsoft .NET Framework の新しいバージョンのインストールが現実的ではない場合は、**DowngradeDotNetRequirement = True** パラメーターと値を使用してクライアントをインストールすることで、Microsoft .NET Framework バージョン 4.5.1 がインストールされていれば要件を省略できます。
 
