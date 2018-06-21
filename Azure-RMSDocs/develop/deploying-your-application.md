@@ -1,13 +1,13 @@
 ---
-title: "アプリケーションのデプロイ - AIP"
-description: "このトピックでは、アプリケーションのデプロイの概要と手順を説明します"
-keywords: "デプロイ, RMS, AIP"
+title: アプリケーションのデプロイ - AIP
+description: このトピックでは、アプリケーションのデプロイの概要と手順を説明します
+keywords: デプロイ, RMS, AIP
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
@@ -19,6 +19,7 @@ ms.sourcegitcommit: e21fb3385de6f0e251167e5dc973e90f0e7f2bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/01/2018
+ms.locfileid: "28908087"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 

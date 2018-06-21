@@ -1,13 +1,13 @@
 ---
-title: "アプリケーションの種類 | Azure RMS"
-description: "このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。"
-keywords: 
+title: アプリケーションの種類 | Azure RMS
+description: このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765287"
 ---
 # <a name="application-types"></a>アプリケーションの種類
 

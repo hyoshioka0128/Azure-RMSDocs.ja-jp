@@ -1,6 +1,6 @@
 ---
-title: "Azure Information Protection 開発者ガイド"
-description: "開発者は Azure Information Protection を使用して、すべての種類のファイルを保護および管理することができます。"
+title: Azure Information Protection 開発者ガイド
+description: 開発者は Azure Information Protection を使用して、すべての種類のファイルを保護および管理することができます。
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765529"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 

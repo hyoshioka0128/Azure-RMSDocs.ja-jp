@@ -1,13 +1,13 @@
 ---
-title: "Azure Information Protection SDK 4.2 開発者ガイド |Microsoft Docs"
-description: "AIP SDK 4.2 での開発の操作方法に関するトピックのコレクション"
-keywords: 
+title: Azure Information Protection SDK 4.2 開発者ガイド |Microsoft Docs
+description: AIP SDK 4.2 での開発の操作方法に関するトピックのコレクション
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27764582"
 ---
 # <a name="developer-guidance"></a>開発者ガイド
 Microsoft Rights Management SDK 4.2 は、Active Directory Right Management サービス (AD RMS) を利用する AD RMS 対応アプリケーションを可能な限りシンプルに構築できるようにすることに重点を置いています。

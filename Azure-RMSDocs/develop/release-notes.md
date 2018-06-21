@@ -1,6 +1,6 @@
 ---
-title: "新機能とリリース ノート"
-description: "このバージョンと以前のバージョンの重要な変更点と機能について概要を説明します。"
+title: 新機能とリリース ノート
+description: このバージョンと以前のバージョンの重要な変更点と機能について概要を説明します。
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/29/2018
+ms.locfileid: "28878937"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 

@@ -1,13 +1,13 @@
 ---
-title: "Android のコード例 |Azure RMS"
-description: "このトピックでは、Android バージョンの RMS SDK の重要なコード要素について説明します。"
-keywords: 
+title: Android のコード例 |Azure RMS
+description: このトピックでは、Android バージョンの RMS SDK の重要なコード要素について説明します。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
@@ -19,6 +19,7 @@ ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/19/2018
+ms.locfileid: "27927126"
 ---
 # <a name="android-code-examples"></a>Android のコード例
 

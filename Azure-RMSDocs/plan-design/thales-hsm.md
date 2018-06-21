@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30204675"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Thales HSM と Microsoft の追加手順に関する詳細: RETIRED CONTENT
 

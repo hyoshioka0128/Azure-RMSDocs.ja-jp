@@ -19,6 +19,7 @@ ms.sourcegitcommit: d1a3f35ea2d2c246a5b1e3f3da75df9c182fd0da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34480172"
 ---
 # <a name="install-the-sdk"></a>SDK のインストール
 

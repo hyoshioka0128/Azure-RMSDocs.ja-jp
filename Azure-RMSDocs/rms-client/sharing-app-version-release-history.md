@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208619"
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Rights Management 共有アプリケーション: バージョン リリース履歴
 
@@ -104,13 +105,13 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 -   ドキュメントの追跡と取り消しをサポートします。 詳細については、「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](sharing-app-track-revoke.md)」を参照してください。
 
--   **[保護ファイルの共有]**を選んだ場合のテンプレートのサポート:
+-   **[保護ファイルの共有]** を選んだ場合のテンプレートのサポート:
 
     -   テンプレートを選べるようになりました。
 
     -   スライダーの代わりに、テンプレートとカスタム アクセス許可を含むリスト ボックスが表示されます。
 
-    -   **[すべてのデバイスで使用を許可する]** と **[使用制限を強制する]**のオプションが表示されなくなりました。 代わりに、ファイルの種類によって **[一般保護]** が自動的に選択されます。
+    -   **[すべてのデバイスで使用を許可する]** と **[使用制限を強制する]** のオプションが表示されなくなりました。 代わりに、ファイルの種類によって **[一般保護]** が自動的に選択されます。
 
     詳細については、「[Rights Management 共有アプリケーションのダイアログ ボックス オプション](sharing-app-dialog-box.md)」を参照してください。
 

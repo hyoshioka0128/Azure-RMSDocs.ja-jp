@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208466"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -40,7 +41,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 1. AD RMS の管理権限を持つユーザーとして AD RMS クラスターにログオンします。
 
-2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]**を展開し、 **[信頼された発行ドメイン]**をクリックします。
+2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]** を展開し、 **[信頼された発行ドメイン]** をクリックします。
 
 3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから **[信頼された発行ドメインのエクスポート]** をクリックします。
 

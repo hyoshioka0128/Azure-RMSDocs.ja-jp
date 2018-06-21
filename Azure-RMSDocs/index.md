@@ -6,6 +6,7 @@ ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29772977"
 ---
 # <a name="azure-information-protection-documentation"></a>Azure Information Protection のドキュメント
 

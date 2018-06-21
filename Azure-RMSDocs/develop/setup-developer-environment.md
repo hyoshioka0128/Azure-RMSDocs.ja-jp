@@ -1,13 +1,13 @@
 ---
-title: "開発環境のセットアップ | Azure RMS"
-description: "特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する方法について説明します。"
-keywords: 
+title: 開発環境のセットアップ | Azure RMS
+description: 特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する方法について説明します。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27764476"
 ---
 # <a name="setup-developer-environment"></a>開発環境のセットアップ
 

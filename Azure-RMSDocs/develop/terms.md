@@ -1,13 +1,13 @@
 ---
-title: "AIP 開発者向け用語集 |Microsoft Docs"
-description: "Rights Management サービスに固有の開発者用語定義のコレクション。"
-keywords: 
+title: AIP 開発者向け用語集 |Microsoft Docs
+description: Rights Management サービスに固有の開発者用語定義のコレクション。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27764526"
 ---
 # <a name="terms"></a>利用規約
 

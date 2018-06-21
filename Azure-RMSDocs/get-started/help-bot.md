@@ -1,12 +1,12 @@
 ---
-title: "Azure Information Protection のヘルプ ボット"
-description: "Azure Information Protection のヘルプ ボットは、質問の回答、ドキュメントの検索、テクニカル サポートが必要な場合にサポート チケットを開くのに役立ちます。"
+title: Azure Information Protection のヘルプ ボット
+description: Azure Information Protection のヘルプ ボットは、質問の回答、ドキュメントの検索、テクニカル サポートが必要な場合にサポート チケットを開くのに役立ちます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 98105d30-ff81-4b9c-9f41-9e9ffd6e7aa6
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29476254"
 ---
 # <a name="help-bot-for-azure-information-protection"></a>Azure Information Protection のヘルプ ボット
 

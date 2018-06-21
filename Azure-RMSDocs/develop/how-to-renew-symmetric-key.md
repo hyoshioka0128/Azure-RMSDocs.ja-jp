@@ -1,13 +1,13 @@
 ---
-title: "Azure Information Protection で対称キーを更新する方法"
-description: "この記事では、Azure Information Protection で対称キーを更新する手順について説明します。"
-keywords: 
+title: Azure Information Protection で対称キーを更新する方法
+description: この記事では、Azure Information Protection で対称キーを更新する手順について説明します。
+keywords: ''
 author: lleonard-msft
 manager: mbaldwin
 ms.author: alleonar
 ms.date: 03/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
@@ -16,6 +16,7 @@ ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/19/2018
+ms.locfileid: "27927109"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>方法: Azure Information Protection で対称キーを更新する
 

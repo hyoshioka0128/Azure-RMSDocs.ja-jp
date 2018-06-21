@@ -1,13 +1,13 @@
 ---
-title: "ドキュメント追跡の有効化と取り消しを行う方法 | Azure RMS"
-description: "コンテンツのドキュメント追跡機能を導入する方法の基本的な説明、ならびにメタデータ更新のサンプル コードとアプリの [使用の追跡] ボタンのサンプルコードを紹介します。"
-keywords: 
+title: ドキュメント追跡の有効化と取り消しを行う方法 | Azure RMS
+description: コンテンツのドキュメント追跡機能を導入する方法の基本的な説明、ならびにメタデータ更新のサンプル コードとアプリの [使用の追跡] ボタンのサンプルコードを紹介します。
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765427"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 

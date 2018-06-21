@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30207439"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションのダイアログ ボックス オプション
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 03/28/2018
     > [!NOTE]
     > 一般的に保護されたファイルのファイル名拡張子は常に **.pfile**です。
 
--   比較として、Rights Management の**組み込み (ネイティブ) 保護**と、それをサポートするアプリケーション (Office ファイルなど) を使用する場合、ファイルが他のユーザーに送信されたり、別の場所に保存されたりした場合でも、ファイルに保護が適用されます。 また、このようなファイルを保護する場合、読み取り専用などの厳しいアクセス許可を使用したり、編集はできても印刷やコピーができないアクセス許可を使用したりできます。 たとえば、 **[レビュー担当者 - 表示のみ]**を選んで、コンテンツが編集、印刷、コピーされないようにすることができます。
+-   比較として、Rights Management の**組み込み (ネイティブ) 保護**と、それをサポートするアプリケーション (Office ファイルなど) を使用する場合、ファイルが他のユーザーに送信されたり、別の場所に保存されたりした場合でも、ファイルに保護が適用されます。 また、このようなファイルを保護する場合、読み取り専用などの厳しいアクセス許可を使用したり、編集はできても印刷やコピーができないアクセス許可を使用したりできます。 たとえば、 **[レビュー担当者 - 表示のみ]** を選んで、コンテンツが編集、印刷、コピーされないようにすることができます。
 
 詳細については、「[Rights Management 共有アプリケーション管理ガイド](sharing-app-admin-guide.md)」の「[保護のレベル - ネイティブと汎用](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)」セクションを参照してください。
 
