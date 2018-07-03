@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b8cd6aeb13398bdfd65ba3e743e3e12bf3cc5f53
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 511fea3a6176cf047eb4c1568d2efa755c46f39c
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34423291"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949829"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -74,14 +74,6 @@ ms.locfileid: "34423291"
     この **[管理対象アドインの一覧]** グループ ポリシー設定を構成していなくても、Microsoft Azure Information Protection アドインが無効になることを示すレポートを取得した場合は構成する必要がある場合があります。 このアドインが無効の場合は、Office アプリケーションに Azure Information Protection バーが表示されません。
     
     このグループ ポリシー設定の詳細については、「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) を参照してください。
-
-- Office クイック実行のバージョン 16.0.9324.1000 以降の場合: モニターのレガシ サポートを有効にする
-    
-    特定されたクイック実行バージョン用の Outlook の外部に Azure Information Protection バーが表示されるのを回避するには、モニターのレガシ サポートを有効にすることが必要な場合があります。 このシナリオでバーが正しく表示されない場合、バーは **AdxTaskPane** として表示される可能性があります。 
-    
-    この要件に応じて Outlook を構成するには、**[ファイル]** > **[オプション]** > **[全般]** を選択します。
-    
-    - **[ユーザー インターフェイス オプション]** セクションで、オプション **[ディスプレイで最適な解像度を使用]** が選択されている場合は、この選択を解除します。
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
