@@ -29,6 +29,7 @@
 #### [PowerShell リファレンス](configure-templates-with-powershell.md)
 #### [Azure クラシック ポータルからの移行](migrate-portal.md)
 ### [言語の構成](configure-policy-languages.md)
+## [Azure Information Protection ラベルのメール フロー ルールの構成](configure-exo-rules.md)
 ## [Azure Information Protection スキャナーの展開](deploy-aip-scanner.md)
 ## [RMS コネクタのデプロイ](deploy-rms-connector.md)
 ### [コネクタのインストールと構成](install-configure-rms-connector.md)
