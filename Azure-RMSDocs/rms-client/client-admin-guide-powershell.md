@@ -4,7 +4,7 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 06/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b4376d9f2b0cde836b37553eb83efd8068e6c2f8
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: a830fa6172df3dab2701109fd30484156c69fc29
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "35726869"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/17/2018
 
 Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection (AIP) サービスを利用する新しいコマンドレットもあります。 次に例を示します。
+コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -33,8 +34,12 @@ Azure Information Protection クライアントをインストールすると、
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
 
+> [!TIP]
+> 260 文字よりも長いパスとともにコマンドレットを使用するには、Windows 10 Anniversary Update で利用できる次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用します。<br /> **ローカル コンピューター ポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべての設定** > **NTFS** > **Win32 の長いパスを有効にする** 
+> 
+> Windows Server 2016 の場合、Windows 10 用の最新の管理用テンプレート (.admx) をインストールすれば、同じグループ ポリシー設定を使用できます。
 
-さらに、[Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md)ではコマンドレットを使用し、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
+[Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md)では AzureInformationProtection モジュールのコマンドレットを使用して、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
 
 すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/module/azureinformationprotection)」 (AzureInformationProtection モジュール) を参照してください。 PowerShell セッション内で、「`Get-Help <cmdlet name> -online`」と入力すると、最新のヘルプが表示されます。  
 
