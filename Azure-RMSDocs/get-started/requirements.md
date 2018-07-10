@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2018
+ms.date: 06/27/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9cdb205488c300f1df1e002be105765a90ce1a1a
-ms.sourcegitcommit: 09072591f1aa9878d063feb78ffcc4accec63fd1
+ms.openlocfilehash: 18168f89c762011146f7f3f131079f5a502820ac
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34308173"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37069378"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -83,6 +83,8 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 これらのサーバー バージョンでは、リモート デスクトップ サービスについて Azure Information Protection クライアントがサポートされています。 Azure Information Protection クライアントとリモート デスクトップ サービスを使用しているときに、ユーザー プロファイルを削除する場合は、**%Appdata%\Microsoft\Protect** フォルダーを削除しないでください。
 
 Azure Information Protection クライアントで Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)からデータを使用できます。
+
+Azure Information Protection クライアントには、管理者ガイドに一覧表示される[追加の前提条件](../rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)があります。
 
 ## <a name="applications"></a>アプリケーション
 

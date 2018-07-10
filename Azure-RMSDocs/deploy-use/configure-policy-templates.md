@@ -4,7 +4,7 @@ description: Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d26b69bc06a4c0d4f9c097e791b8b10bfc9feb1d
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 44c1166ce4205d6e77b4877d6aca0eaf16911530
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562145"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -96,9 +97,6 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
->[!NOTE]
-> これらの手順では、Azure Portal に最新の更新を反映します。 **[分類]** メニュー オプションが表示されず、**[公開]** オプションがまだ表示される場合、ナビゲーション手順は表示される内容と完全には一致しません。 その場合は、数日後にテナントが最新の変更に対して更新されてから、この手順に戻ることを検討してください。
-
 1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection - ラベル]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
@@ -138,14 +136,11 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 ## <a name="to-create-a-new-template"></a>新しいテンプレートを作成するには
 
->[!NOTE]
-> これらの手順では、Azure Portal に最新の更新を反映します。 **[分類]** メニュー オプションが表示されず、**[公開]** オプションがまだ表示される場合、ナビゲーション手順は表示される内容と完全には一致しません。 その場合は、数日後にテナントが最新の変更に対して更新されてから、この手順に戻ることを検討してください。
-
 **Azure (クラウド キー)** の保護設定で新しいラベルを作成すると、この処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
 
 1. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[Add a new label]\(新しいラベルの追加\)** を選択します。
 
-2. **[ラベル]** ブレードで、既定の **[有効]**: **[オン]** を変更せずにこの新しいテンプレートを公開するか、この設定を **[オフ]** に変更してテンプレートをアーカイブ済みとして作成します。 次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
+2. **[ラベル]** ブレードで、**[有効]** : **[オン]** を既定のままにします。次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
 
 3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
     
@@ -156,19 +151,10 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
     変更を保存するには **[OK]** をクリックし、**[ラベル]** ブレードで **[保存]** をクリックします。
     
     **[Azure Information Protection - ラベル]** ブレードに新しいラベルが表示され、**[保護]** 列には保護設定が含まれていることが示されます。 これらの保護設定は、Azure Rights Management サービスをサポートするアプリケーションとサービスに対してテンプレートとして表示されます。
+    
+    ラベルは有効ですが (既定)、テンプレートはアーカイブされます。 アプリケーションとサービスでテンプレートを使用してドキュメントや電子メールを保護できるようにするには、テンプレートを発行する最後の手順を完了します。
 
-5. 新しく作成したテンプレートをすべてのユーザーに対して利用可能にするのでない場合は、新しく作成したラベルをグローバル ポリシー以外のポリシーに追加する必要があります。
-    
-    」を参照します。 **[分類]** > **[ポリシー]** メニュー オプションから、**[ポリシー]** を選択します。
-    
-    b. **[Add a new policy]\(新しいポリシーの追加\)** を選択し、**[ポリシー]** ブレードでユーザーのスコープの名前と説明を指定します。 次のオプションを使用して、ユーザーのサブセットを選択します: **[Select which users or groups get this policy.Groups must be email-enabled.]\(このポリシーを取得するユーザーまたはグループを選択します。グループはメール対応である必要があります。\)**
-    
-    また、ユーザーのサブセットに対するポリシーが既に存在する場合は、**[ポリシー]** ブレードからそのポリシーを選択します。
-    
-    c. **[ポリシー]** ブレードから、**[Add or remove labels]\(ラベルの追加または削除\)** を選択します。 次に、**[Policy: Add or remove labels]\(ポリシー: ラベルの追加または削除\)** ブレードで、保護設定が含まれる新しく作成されたラベルを選択し、**[OK]** をクリックします。
-    
-    d. **[ポリシー]** ブレードに戻り、**[保存]** をクリックします。  
-
+5. **[分類]** > **[ポリシー]** メニュー オプションから、新しい保護設定を含むポリシーを選択します。 次に **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードから、保護設定が含まれる新しく作成されたラベルを選択し、**[OK]**、**[保存]** の順に選択します。
 
 ## <a name="next-steps"></a>次の手順
 

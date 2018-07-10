@@ -10,11 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 221b4228bc06868fb491a1a591939afb5baba8b8
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 5cfacba692cfd2c0e27981e8c41e45e4d9dcb3a3
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562587"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Azure Information Protection の新しいラベルを作成する方法
 
@@ -44,7 +45,7 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
     
     新しいラベルには自動的に黒色が割り当てられます。 識別のための色を一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力します。 たとえば、**#DAA520** と入力します。 これらのコードの参照が必要な場合は、最初に MSDN ドキュメントの「[Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85)」(色の名前) を参照することをお勧めします。ここに掲載されているコードは Microsoft ペイントのような多くの画像編集プログラムで使用されており、パレットからカスタムの色を選択すると RGB の値が自動的に表示されます。
 
-5. 新しいラベルをユーザーが利用できるようにするには: **[分類]** > **[ポリシー]** メニュー オプションから、新しいラベルを含めるポリシーを選び、**[Add or remove labels]\(ラベルの追加または削除\)** を選択します。**[Policy: Add or remove labels]\(ポリシー: ラベルの追加または削除\) ブレード**からラベルを選択し、**[OK]**、**[保存]** の順に選択します。
+5. 新しいラベルをユーザーが利用できるようにするには、**[分類]** > **[ポリシー]** メニュー オプションから、新しいラベルを含むポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードからラベルを選択し、**[OK]**、**[保存]** の順に選択します。
     
     >[!TIP]
     >新しいラベルについては、まず、テストに使用するスコープ ポリシーに追加することを検討してください。 結果に満足したら、このテスト スコープからラベルを削除し、運用環境で使用するポリシーにラベルを追加します。     

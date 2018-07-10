@@ -4,18 +4,18 @@ description: ラベルの条件を構成するときに、ドキュメントま�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 053d8dfd51d8c79cdc733f4395226c12ab6e2102
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: c7ef58cd42a793cacb3b64aec33d2cd0a0b105f4
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32326754"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37068883"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -25,13 +25,13 @@ ms.locfileid: "32326754"
 
 これらの条件を構成するときには、**クレジット カード番号**や**米国社会保障番号 (SSN)** などの定義済みのパターンを使用できます。 または、自動分類の条件として、ユーザー指定の文字列またはパターンを定義することもできます。 これらの条件は、ドキュメントや電子メールの本文とヘッダーおよびフッターに適用されます。 条件の詳細については、[次の手順](#to-configure-recommended-or-automatic-classification-for-a-label)の手順 5 をご覧ください。
 
-最良のユーザー エクスペリエンスとビジネスの継続性を確保するために、自動分類ではなく、ユーザーが推奨する分類から始めることをお勧めします。 この構成の場合、ユーザーは、分類や関連付けられている保護を受け入れるか、それらの提案が自分のドキュメントまたは電子メール メッセージに適していない場合は無効にすることを選択できます。
+最良のユーザー エクスペリエンスとビジネスの継続性を確保するために、自動分類ではなく、ユーザーが推奨する分類から始めることをお勧めします。 この構成の場合、ユーザーは、分類や関連付けられている保護を受け入れるか、それらの提案が自分のドキュメントまたは電子メール メッセージに適していない場合はオーバーライドすることを選択できます。
 
 ラベルを推奨される操作として適用するように条件を構成したときのプロンプトの例を、カスタム ポリシー ヒントと共に示します。
 
 ![Azure Information Protection の検出と推奨事項](../media/info-protect-recommend-calloutsv2.png)
 
-この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨を無効にできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。 
+この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨をオーバーライドできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。 
 
 > [!IMPORTANT]
 >自動分類とユーザー定義のアクセス許可にはラベルを構成しないでください。 ユーザー定義のアクセス許可オプションは、アクセス許可を与える人をユーザーが指定できるという[保護設定](configure-policy-protection.md)となります。
@@ -44,7 +44,7 @@ ms.locfileid: "32326754"
     
     以前に手動でラベルが付けられているか、以前に上位の分類で自動的にラベルが付けられているドキュメントと電子メールには自動分類を使用できません。 
 
-- 推奨分類は、Word、Excel、および PowerPoint でドキュメントが保存されるときに適用されます。 Outlook の場合、推奨分類を使用できません。
+- 推奨分類は、Word、Excel、および PowerPoint でドキュメントが保存されるときに適用されます。 現在プレビュー段階にある[高度なクライアント設定](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)を構成しない限り、推奨分類を Outlook に使用することはできません。
     
     以前に上位の分類でラベルが付けられているドキュメントには推奨分類を使用できません。 
 

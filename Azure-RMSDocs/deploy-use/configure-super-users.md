@@ -4,7 +4,7 @@ description: Azure Information Protection からの Azure Rights Management サ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 05/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d35f7faed0e02a253e5ba48cbdb2bca0aa76419
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: aed109667fe5c58f50735b8cc223f02009ebde55
+ms.sourcegitcommit: 0782e460d29e11974ec1c4bb9286572d0ef000d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37102832"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
@@ -53,7 +54,7 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 - Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) コマンドレットを使用して、GlobalAdministrator ロールが割り当てられている管理者を制限し、監視します。 これらのユーザーは、スーパー ユーザー機能を有効にし、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができ、組織で保護するすべてのファイルを複合化できます。
 
-- スーパー ユーザーとして割り当てられた個々のユーザーおよびサービス アカウントを表示するには、[Get-AadrmSuperUser コマンドレット](/powershell/module/aadrm/get-aadrmsuperuser)を使用します。 スーパー ユーザー グループが構成されているかどうかを確認するには、[Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperusergroup) コマンドレットと標準的なユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを調べます。 すべての管理アクションと同様に、スーパー機能の有効化や無効化、およびスーパー ユーザーの追加や削除はログに記録され、 [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) コマンドを使用して監査できます。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルを復号化すると、この操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
+- スーパー ユーザーとして割り当てられた個々のユーザーおよびサービス アカウントを表示するには、[Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperuser) コマンドレットを使用します。 スーパー ユーザー グループが構成されているかどうかを確認するには、[Get-AadrmSuperUserGroup](/powershell/module/aadrm/get-aadrmsuperusergroup) コマンドレットと標準的なユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを調べます。 すべての管理アクションと同様に、スーパー機能の有効化や無効化、およびスーパー ユーザーの追加や削除はログに記録され、 [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) コマンドを使用して監査できます。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルを復号化すると、この操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
 
 - 日常的なサービスでスーパー ユーザー機能を必要としない場合は、必要なときにのみ有効にし、 [Disable-AadrmSuperUserFeature](/powershell/module/aadrm/disable-aadrmsuperuserfeature) コマンドレットを使用して、再度無効にします。
 

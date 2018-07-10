@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ff64b5bb4f73533352aa5497a98263c86842800
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 732eb98b1cbd1af575f15ddc992349d77b436131
+ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34423257"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37088261"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -25,7 +25,9 @@ ms.locfileid: "34423257"
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 
 
-最新の GA リリース バージョンと現在のプレビュー バージョンを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 これらのバージョンは、WSUS や構成マネージャー、またはその他の Microsoft Update を使用するソフトウェア展開メカニズムを使用してクライアントを展開できるように、Microsoft Update カタログにも含まれます (カテゴリ: **Azure Information Protection**)。
+最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 一般公開バージョンは、WSUS や Configuration Manager、またはその他の Microsoft Update を使用するソフトウェア展開メカニズムを使用してクライアントをアップグレードできるように、Microsoft Update カタログにも含まれます (カテゴリ: **Azure Information Protection**)。
+
+詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
@@ -42,19 +44,34 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="versions-later-than-12660"></a>1.26.6.0 以降のバージョン
+## <a name="version-12950"></a>バージョン 1.29.5.0 
 
-1.26.6.0 以降のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。 
- 
-**リリース日**: 2018 年 5 月 21 日 
+**リリース日**: 2018 年 6 月 26 日
 
-現行のプレビュー バージョンは **1.27.48.0** です。クライアントの現行 GA バージョン以降、次の変更があります。  
+このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
+
+**修正内容**:
+
+- Outlook バージョン 16.0.9324.1000 以降 (クイック実行) の場合、Azure Information Protection バーに最新のモニター ディスプレイ オプションが表示されます。以前は Outlook アプリケーションの外部にバーが表示されることがありました。
+
+- [Office アプリケーションごとに](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成する視覚的マーキングが、以前は Azure Information Protection ラベルによって適用されていたヘッダーやフッターに置き換わりました。
+
+- Excel ファイルが既にラベル付けされていてラベルが視覚的なマーキングを適用している場合、新しいシートにもラベルの視覚的なマーキングが適用されるようになりました。
+
+- [既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property)ためにクライアントの詳細設定を使用する場合、自動ラベル付けは手動ラベル付けをオーバーライドしません。
+
+
+## <a name="version-127480"></a>バージョン 1.27.48.0
+
+**リリース日**: 2018 年 5 月 30 日
+
+このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
 
 **新機能**: 
 
 - Azure Information Protection スキャナー:
     
-    - ファイルの種類のリストを指定して、スキャン対象や除外対象を指定することができます。 このリストを指定するには、[Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes) を使用します。 ファイルの種類のリストを指定した後、新しいファイルの種類リストを追加するには、[Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType) を使用します。リストからファイルの種類を削除するには、[Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType) を使用します。
+    - ファイルの種類のリストを指定して、スキャン対象や除外対象を指定することができます。 このリストを指定するには、[Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes) を使用します。 ファイルの種類のリストを指定した後、新しいファイルの種類をリストに追加するには、[Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) を使用します。リストからファイルの種類を削除するには、[Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) を使用します。
     
     - 既定のラベルを適用することで、内容を検査することなく、ファイルにラベル付けすることができます。 [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) コマンドレットを使用し、*MatchPolicy*パラメーターを **Off** に設定します。 
     
@@ -69,6 +86,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 **その他の変更**:
 
 - Azure Information Protection スキャナー: 
+    
+    - スキャナーの以前のバージョンをインストールした場合は、Azure Information Protection クライアントをアップグレードした後、[Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) でスキャナーのインストール コマンドを再実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナーを再インストールすると、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可が付与されます。これはレポートのために必要となります。    
     
     - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) の *ScanMode* パラメーターの名前が、**Enforce** に変更されました (値は Off と On)。
     
@@ -128,7 +147,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Office 64 ビットでブートストラップできます。文書やメールを保護できます。
 
-- Word、Excel、PowerPoint、エクスプローラーのユーザー定義アクセス許可にラベルを設定できるようになりました。また、クライアント詳細設定を利用し、カスタムのアクセス許可オプションを非表示にできます。 [詳細情報](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+- Word、Excel、PowerPoint、エクスプローラーに対して、ユーザー定義アクセス許可のラベルを設定できるようになりました。また、クライアント詳細設定を利用し、カスタムのアクセス許可オプションを非表示にできます。 [詳細情報](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
 
 - クライアントにインストールされていないフォント名について、Azure Information Protection ポリシーの視覚的マーカーが設定されている場合、Calibri フォントが使用されます。
 
@@ -136,10 +155,13 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Office アプリでパフォーマンスとメモリ消費が改善されました。
 
-- ユーザー定義アクセス許可と HYOK (AD RMS) 保護にラベルを設定するとき、保護で Azure Rights Management サービスが不適切に使用されることがなくなりました。
+- ユーザー定義アクセス許可と HYOK (AD RMS) 保護のラベルを設定するとき、保護で Azure Rights Management サービスが不適切に使用されることがなくなりました。
 
 - 一貫性の高い管理作業を可能にするため、下位ラベルが上位ラベルから視覚的マーキングや保護設定を継承することがなくなりました。
 
+**その他の変更**:
+
+- [クライアント使用状況ログ](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client )において、イベント ID 102 と ID 103 がイベント ID 101 に置き換えられます。
 
 ## <a name="version-110560"></a>バージョン 1.10.56.0
 

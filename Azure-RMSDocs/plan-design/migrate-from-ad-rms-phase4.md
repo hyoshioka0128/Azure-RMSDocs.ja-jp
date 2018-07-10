@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7aaec205863bf855cc68887f3eafed27386ee49f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 254e3ecc1292d2b9db0e291f9c45af343f3ccb9c
+ms.sourcegitcommit: 93e83ed71250e408e11fb098551e486282494013
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324307"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -34,7 +35,9 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
 
 選択した Azure Information Protection テナント キー トポロジから個別に、次の操作を行います。
 
-1. ユーザーが AD RMS の保護を使用して送信されたメールを閲覧できるようにするには、AD RMS クラスター用に DNS SRV レコードがあることを確認します。 手順 7 でクライアントの再構成用に DNS SRV レコードを作成しなかった場合は、ここで Exchange Online をサポートするためにこのレコードを作成します。 [手順](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+1. AD RMS によって保護された電子メールを Exchange Online で暗号化解除できるようにするには、クラスターの AD RMS URL とテナントで利用できるキーが一致することを把握する必要があります。 これは、AD RMS クラスターの DNS SRV レコードを使用して実行されます。これは、Azure Information Protection を使用する Office クライアントを再構成するためにも使用されます。 手順 7 でクライアントの再構成用に DNS SRV レコードを作成しなかった場合は、ここで Exchange Online をサポートするためにこのレコードを作成します。 [手順](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+    
+    この DNS レコードが配置されると、Web とモバイルの電子メール クライアントに Outlook を使用しているユーザーはそのアプリで AD RMS によって保護された電子メールを表示できるようになります。また、Exchange では AD RMS からインポートしたキーを使用して、AD RMS によって保護されたコンテンツを暗号化解除、インデックス化、保管、保護できるようになります。  
 
 2. Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
     
@@ -94,11 +97,11 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 1.  RMS で保護されたライブラリからドキュメントがチェックアウトされていないことを確認します。 ある場合、この手順の最後でそれらにアクセスできなくなります。
 
-2.  SharePoint サーバーの全体管理 Web サイトの **[サイド リンク バー]** セクションで、 **[セキュリティ]**をクリックします。
+2.  SharePoint サーバーの全体管理 Web サイトの **[サイド リンク バー]** セクションで、 **[セキュリティ]** をクリックします。
 
-3.  **[セキュリティ]** ページの **[情報ポリシー]** セクションで、 **[Information Rights Management の構成]**をクリックします。
+3.  **[セキュリティ]** ページの **[情報ポリシー]** セクションで、 **[Information Rights Management の構成]** をクリックします。
 
-4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、 **[このサーバーでは IRM を使用しない]**を選択して、 **[OK]**をクリックします。
+4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、 **[このサーバーでは IRM を使用しない]** を選択して、 **[OK]** をクリックします。
 
 5.  各 SharePoint サーバー コンピューターで、\ProgramData\Microsoft\MSIPC\Server\\<*SharePoint サーバーを実行しているアカウントの SID*> フォルダーの内容を削除します。
 
@@ -118,12 +121,9 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 #### <a name="registry-edits-for-exchange"></a>Exchange に関するレジストリの編集
 
-すべての Exchange サーバーで、準備フェーズの間に LicenseServerRedirection に追加したレジストリ値を削除します。 これらの値は、次のパスに追加されました。
+すべての Exchange サーバーの LicenseServerRedirection に、Exchange のバージョンに応じて次のレジストリ値を追加します。
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
+---
 
 Exchange 2013 および Exchange 2016 の場合 - レジストリ編集 1:
 
@@ -147,7 +147,7 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 
 ---
 
-Exchange 2013 の場合 - レジストリの編集 2:
+Exchange 2013 - レジストリの編集 2:
 
 **レジストリ パス:**
 

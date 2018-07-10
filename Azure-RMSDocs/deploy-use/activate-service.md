@@ -4,7 +4,7 @@ description: この情報保護ソリューションをサポートするアプ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7c257b16737a916d597be858fcfeaf6c475bb423
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 8e8a5062efe3b14f1867cf8440dc91c368a810f5
+ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137782"
 ---
 # <a name="activating-azure-rights-management"></a>Rights Management をアクティブにする
 
@@ -36,11 +37,13 @@ Azure Information Protection の Azure Rights Management サービスを組織�
 
 Azure Rights Management を含むサービス プランを持っている場合は、サービスをアクティブにする必要がない可能性があります。
 
-- Azure Rights Management または Azure Information Protection を含むサブスクリプションを **2018 年 2 月**末日以降を対象として取得した場合は、サービスが自動的にアクティブになります。 お客様または組織の他のグローバル管理者が Azure Rights Management を非アクティブ化しない限り、サービスをアクティブ化する必要はありません。
+- **Azure Rights Management または Azure Information Protection を含むサブスクリプションを 2018 年 2 月末日以降を対象として取得した場合**、サービスが自動的にアクティブになります。 お客様または組織の他のグローバル管理者が Azure Rights Management を非アクティブ化しない限り、サービスをアクティブ化する必要はありません。
 
-- 今月より前にサブスクリプションを取得した場合は、自分でサービスをアクティブにする必要があります。 
+- **Azure Rights Management または Azure Information Protection を含むサブスクリプションを 2018 年 2 月以前に取得した場合**については、Microsoft は、テナントで Exchange Online を使用している場合にこれらのサブスクリプションの Azure Rights Management サービスのアクティブ化を開始しています。 これらのサブスクリプションの場合、サービスがアクティブ化される 2018 年 8 月 1 日から自動アクティブ化のロール アウトが開始されます。ただし、[Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) を実行するときに **AutomaticServiceUpdateEnabled** が **false** に設定されていない場合に限ります。 
 
-Azure Rights Management をアクティブにした後は、組織内のすべてのユーザーがファイルに情報保護を適用したり、Azure Rights Management で保護されているファイルを開く (使用する) ことができます。 ただし、そちらを希望する場合は、段階的デプロイのオンボーディング コントロールを使用して、情報保護を適用できるユーザーを制限できます。 詳細については、この記事の「[段階的デプロイのオンボーディング コントロールの構成](#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
+後続のシナリオがどちらも当てはまらない場合は、保護サービスを手動でアクティブ化する必要があります。 
+
+サービスをアクティブにした後は、組織内のすべてのユーザーが各自のドキュメントや電子メールに情報保護を適用したり、Azure Rights Management で保護されているドキュメントや電子メールを開く (使用する) ことができます。 ただし、そちらを希望する場合は、段階的デプロイのオンボーディング コントロールを使用して、情報保護を適用できるユーザーを制限できます。 詳細については、この記事の「[段階的デプロイのオンボーディング コントロールの構成](#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
 
 ## <a name="how-to-activate-or-confirm-the-status-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの状態をアクティブ化または確認する方法 
 
@@ -53,7 +56,7 @@ Azure Rights Management をアクティブにした後は、組織内のすべ�
 
 - [Rights Management が含まれている Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)
 
-Azure Rights Management をアクティブにした後は、組織内のすべてのユーザーがファイルに情報保護を適用したり、Azure Rights Management で保護されているファイルを開く (使用する) ことができます。 ただし、そちらを希望する場合は、段階的デプロイのオンボーディング コントロールを使用して、情報保護を適用できるユーザーを制限できます。 詳細については、この記事の「[段階的デプロイのオンボーディング コントロールの構成](#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
+Azure Rights Management サービスをアクティブにした後は、組織内のすべてのユーザーが各自のドキュメントや電子メールに情報保護を適用したり、Azure Rights Management で保護されているドキュメントや電子メールを開く (使用する) ことができます。 ただし、そちらを希望する場合は、段階的デプロイのオンボーディング コントロールを使用して、情報保護を適用できるユーザーを制限できます。 詳細については、この記事の「[段階的デプロイのオンボーディング コントロールの構成](#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
 
 ## <a name="choosing-your-activation-method"></a>アクティブ化メソッドを選択する
 
@@ -74,7 +77,7 @@ Azure Rights Management をアクティブにした後は、組織内のすべ�
 4. サービスをアクティブ化するには、[Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) を実行します。
 
 ## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>段階的デプロイのオンボーディング コントロールの構成
-すべてのユーザーが Azure Rights Management を使用してすぐにファイルを保護できるようにしたくない場合は、[Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) PowerShell コマンドを使用してユーザー オンボーディング コントロールを構成できます。 このコマンドを実行するのは、Azure Rights Management サービスをアクティブ化する前と後のどちらでもかまいません。
+すべてのユーザーが Azure Rights Management を使用してすぐにドキュメントや電子メールを保護できるようにしたくない場合は、[Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) PowerShell コマンドを使用してユーザー オンボーディング コントロールを構成できます。 このコマンドを実行するのは、Azure Rights Management サービスをアクティブ化する前と後のどちらでもかまいません。
 
 > [!IMPORTANT]
 > このコマンドを使用するには、バージョン **2.1.0.0** 以降の [Azure Rights Management PowerShell モジュール](https://go.microsoft.com/fwlink/?LinkId=257721)が必要です。
@@ -103,7 +106,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 
 このコマンドレットとその他の例の詳細については、[Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy) ヘルプを参照してください。
 
-これらのオンボーディング コントロールを使用するときは、保護されたコンテンツを組織内のすべてのユーザーがいつでも使用できますが、コンテンツを保護できるのは組織内の一部のユーザーのみとなり、それ以外のユーザーは情報保護を自分でクライアント アプリケーションから適用することはできません。 たとえば、そのようなユーザーの Office クライアントには、Azure Rights Management がアクティブになると自動的に公開される既定のテンプレートや管理者が構成したカスタム テンプレートは表示されません。  Exchange などのサーバー側のアプリケーションには、Rights Management と統合された場合に同じ結果を達成するための、独自のユーザー単位コントロールを実装する機能があります。
+これらのオンボーディング コントロールを使用するときは、保護されたコンテンツを組織内のすべてのユーザーがいつでも使用できますが、コンテンツを保護できるのは組織内の一部のユーザーのみとなり、それ以外のユーザーは情報保護を自分でクライアント アプリケーションから適用することはできません。 たとえば、そのようなユーザーの Office クライアントには、Azure Rights Management がアクティブになると自動的に公開される既定のテンプレートや管理者が構成したカスタム テンプレートは表示されません。 Exchange などのサーバー側のアプリケーションには、Rights Management と統合された場合に同じ結果を達成するための、独自のユーザー単位コントロールを実装する機能があります。
 
 
 ## <a name="next-steps"></a>次の手順

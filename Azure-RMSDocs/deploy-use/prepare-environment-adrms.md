@@ -4,7 +4,7 @@ description: AD RMS がデプロイされた Azure Rights Management の場合�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,35 +12,54 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a233ddab67832e2de59b1fc0727296a8f3017db7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 142f8b0683cbf18fb72cec303587481f3e9e3018
+ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137816"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Active Directory Rights Management サービス (AD RMS) もある場合の Azure Rights Management 用の環境の準備
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Active Directory Rights Management サービス (AD RMS) を既に使用している場合の重要なガイダンスです。次のいずれかのシナリオが適用されます。
+> [!IMPORTANT]
+> Active Directory Rights Management サービス (AD RMS) を使用する場合のガイダンス
+
+Azure Rights Management サービスがアクティブ化されていて、かつ AD RMS も使用している場合、この組み合わせには互換性がありません。 追加の手順を行うことなく、一部のコンピューターでは、Azure Rights Management サービスの使用が自動的に開始され、AD RMS クラスターへの接続も行われる場合があります。 このシナリオはサポートされておらず、信頼できる結果が得られないため、追加の手順を実行することが重要です。 
+
+**AD RMS をデプロイしているかどうかを確認するには:**
+
+1. オプションとはいえ、ほとんどの AD RMS デプロイでは、ドメイン コンピューターが AD RMS クラスターを検出できるように Active Directory にサービス接続ポイント (SCP) を発行しています。 
+    
+    Active Directory に SCP を発行しているかどうかを確認するには、ADSI Edit を使用します: `CN=Configuration [server name], CN=Services, CN=RightsManagementServices, CN=SCP`
+
+2. SCP を使用していない場合、AD RMS クラスターに接続する Windows コンピューターでは、Windows レジストリを使用してクライアント側のサービスの検出またはライセンスのリダイレクトを構成する必要があります: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation` または `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation`
+    
+    これらのレジストリ構成について詳しくは、「[Windows レジストリを使用してクライアント側のサービスの検出を有効にする](../rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry)」と「[ライセンス サーバーのトラフィックのリダイレクト](../rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic)」をご覧ください。   
+
+組織に AD RMS がデプロイされる場合は、Azure Information Protection に移行可能かどうかを検討してください。 Azure Information Protection には、AD RMS よりも優れた点が多数あります。 たとえば、モバイル デバイスのサポート強化や、Exchange Server や SharePoint Server に加えて Office 365 サービスとの統合を備えています。 詳細については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-on-premise.md)」をご覧ください。
+
+Azure Information Protection に移行しても、以前に保護されていたコンテンツへのアクセスを失うことはありません。また、コンテンツの保護の解除したり、コンテンツを再保護する必要はありません。 AD RMS をプロビジョニング解除した後でも、AD RMS によって保護されていたドキュメントと電子メールを引き続き開くことができます。
+
+Azure Information Protection に移行する場合でも、制限事項を受け入れて現在の AD RMS デプロイを使用する場合でも、Azure Rights Management サービスが非アクティブ化されていることをまず確認する必要があります。 手順については、該当するシナリオ向けの手順に従います。
 
 - [2018 年 2 月以降に購入した Azure Rights Management を含むサブスクリプションの場合](#your-subscription-was-purchased-during-or-after-february-2018)
 
-- [Azure Portal で Azure Information Protection ポリシーを構成するときに保護をアクティブにするためのオプションが表示される場合](#you-see-an-option-to activate-azure-rights-management-when-you-configure-azure-information-protection)
+- [サブスクリプションの購入が 2018 年 2 月以前であり、Exchange Online がある場合](#your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online)
+
+- [Azure Portal で Azure Information Protection ポリシーを構成するときに保護をアクティブにするためのオプションが表示される場合](#you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection)
+
 
 ## <a name="your-subscription-was-purchased-during-or-after-february-2018"></a>2018 年 2 月以降に購入したサブスクリプション
 
-2018 年 2 月末日まで、Azure Information Protection を含む新しいサブスクリプションでは、既定により Azure Rights Management サービスがアクティブになります。 このサービスが自動的にアクティブ化されていて、Active Directory Rights Management サービス (AD RMS) も使用している場合は、この組み合わせには互換性がありません。 追加の手順を行うことなく、一部のコンピューターでは、Azure Rights Management サービスの使用が自動的に開始され、AD RMS クラスターへの接続も行われる場合があります。 このシナリオはサポートされておらず、信頼できる結果が得られないため、すぐに Azure Rights Management サービスを非アクティブ化することが重要です。 
-
-AD RMS から Azure Rights Management サービスにコンピューターを移動する準備ができたら、移行プロセスを開始することができます。 移行手順の 1 つはサービスをもう一度アクティブにすることですが、この手順は AD RMS から Azure Rights Management サービスに構成情報をエクスポートした後で行います。 この順序により、AD RMS で保護されたドキュメントと電子メールを引き続き開けるようになります。
-
-最初の手順は、Azure Rights Management サービスを非アクティブ化することです。
+2018 年 2 月末日まで、Azure Information Protection を含む新しいサブスクリプションでは、既定により Azure Rights Management サービスがアクティブになります。 このサービスが自動的にアクティブ化されていて、Active Directory Rights Management サービス (AD RMS) も使用している場合は、この組み合わせには互換性がありません。したがって、でくるだけ早く Azure Rights Management サービスを非アクティブ化することが重要です。 
 
 ### <a name="step-1-deactivate-azure-rights-management"></a>手順 1: Azure Rights Management を非アクティブ化する
 [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] を非アクティブ化するには、次のいずれかの手順を使用します。
 
 > [!TIP]
-> Windows PowerShell の [Disable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629422.aspx) コマンドレットを使用して [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] を非アクティブ化することもできます。
+> Windows PowerShell の [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) コマンドレットを使用して Azure Rights Management サービスを非アクティブ化することもできます。
 
 #### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Rights Management を非アクティブ化するには
 
@@ -62,7 +81,7 @@ AD RMS から Azure Rights Management サービスにコンピューターを移
     
     以前に [Azure Information Protection] ブレードにアクセスしたことがない場合、このブレードをポータルに追加するには、1 回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)を参照してください。
 
-2. 最初の **[Azure Information Protection]** ブレードで、**[Protection activation]\(保護のアクティブ化\)** を選択します。 
+2. メニュー オプションで、**[保護のアクティブ化]** を選択します。 
 
 3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、**[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
 
@@ -70,27 +89,41 @@ AD RMS から Azure Rights Management サービスにコンピューターを移
 
 ### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
 
-移行ガイダンス「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
+移行ガイダンス「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください
 
-## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Azure Information Protection を構成する際に保護をアクティブにするためのオプションが表示される
 
-**[Azure Information Protection - 保護のアクティブ化]** のブレードには、Azure Rights Management サービス (Azure RMS) をアクティブにするためのオプションがあります。  
+## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>サブスクリプションの購入が 2018 年 2 月以前であり、Exchange Online がある場合
 
-Active Directory Rights Management サービス (AD RMS) も使用する場合は、**[アクティブ化]** オプションは選択しないでください。 AD RMS もある場合に Azure Rights Management をアクティブ化することは、互換性のある組み合わせではありません。 このシナリオはサポートされておらず、信頼できる結果が得られないため、この時点では Azure Rights Management をアクティブにしないことが重要です。  
+サブスクリプションに Azure Rights Management または Azure Information Protection が含まれ、かつテナントで Exchange Online を使用している場合、Microsoft ではこれらのサブスクリプションの Azure Rights Management サービスのアクティブ化を開始しています。 これらのテナントに対して、自動アクティブ化は 2018 年 8 月 1 日にロール アウトを開始します。
 
-AD RMS から Azure Rights Management サービスにコンピューターを移動する準備ができたら、移行プロセスを開始することができます。 移行手順の 1 つはサービスをアクティブにすることですが、これは AD RMS から Azure Rights Management サービスに構成情報をエクスポートした後で行います。 このプロセスにより、AD RMS で保護されたドキュメントと電子メールを引き続き開けるようになります。 
+サービスが自動的にアクティブ化され、かつ AD RMS を使用している場合、この組み合わせには互換性がないため、サービスの自動更新からテナントを除外することが重要です。 
 
-Azure Rights Management サービスがアクティブになっていない場合でも、分類のみを適用するラベルで Azure Information Protection を使用できます。 データ保護を含まない特別な既定ポリシーが自動的に作成されます。これらの構成オプションは、Azure Rights Management サービスがアクティブになるまで使用不可のままです。
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>手順 1: サービスの自動更新から除外する
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1: 分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
+次の [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell コマンドを使用します: `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
 
-**Azure Information Protection** の最初のブレードから、**[グローバル ポリシー]** を選択し、データ保護のオプションを含まない既定のポリシーを表示して構成します。 詳しくは、「[Configuring Azure Information Protection policy](configure-policy.md)」 (Azure Information Protection ポリシーの構成) をご覧ください。
+[詳細情報](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
 ### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
 
-移行ガイダンス「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
+移行ガイダンス「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください
 
-### <a name="step-3-start-to-configure-labels-for-protection"></a>手順 3: 保護のためのラベルの構成を開始する
+
+## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Azure Information Protection を構成する際に保護をアクティブにするためのオプションが表示される
+
+**[Azure Information Protection - 保護のアクティブ化]** のブレードには、Azure Rights Management サービスをアクティブ化するためのオプションがあります。  
+
+AD RMS も使用している場合は、**[アクティブ化]** オプションを選択しないでください。 Azure Rights Management サービスがアクティブになっていない場合でも、分類のみを適用するラベルで Azure Information Protection を使用できます。 データ保護を含まない特別な既定ポリシーが自動的に作成されます。これらの構成オプションは、Azure Rights Management サービスがアクティブになるまで使用不可のままです。
+
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1: 分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
+
+**[Azure Information Protection - ラベル]** ブレードから、データ保護のためのオプションが含まれていないラベルを表示して構成します。 ラベルとポリシーの設定を構成する方法について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
+
+### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
+
+移行ガイダンス「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください
+
+### <a name="step-3-configure-labels-for-protection"></a>手順 3: 保護のためのラベルを構成する
 
 移行プロセス時に Azure Rights Management サービスをアクティブにした場合は、データ保護のためにラベルを構成できます。 ただし、ユーザーをバッチで移行する場合は、保護を適用するラベルの範囲が移行対象のユーザーのみに指定されていることを確認してください。
 

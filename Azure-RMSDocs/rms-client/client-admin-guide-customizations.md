@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c0e1011da16c9e3e91595cd06375cb744aa8fe00
-ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
+ms.openlocfilehash: c078536a3f8501b52c8980b4d71f9138971a8e05
+ms.sourcegitcommit: b1e739bd911579ab9af09654b5517c4d0a23f482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402270"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271455"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -52,30 +52,6 @@ ms.locfileid: "34402270"
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 この設定に関係なく、Azure Information Protection クライアントは標準 [RMS サービス検索プロセス](../rms-client/client-deployment-notes.md#rms-service-discovery)に従い、その AD RMS クラスターを検出します。
-
-## <a name="suppress-the-initial-congratulations-welcome-page"></a>最初の "設定完了" の抑制 ようこそページ
-
-プレビュー クライアントでは、この [設定完了] ウェルカム ページは表示されなくなりました。
-
-初めて Azure Information Protection クライアントをコンピューターにインストールし、ユーザーが Word、Excel、PowerPoint または Outlook を開くと、**[設定完了]**  ページに、ラベルを選択するために、新しい Information Protection バーを使用する方法の簡単な説明が表示されます。 このページは、レジストリを編集して抑制することができます。
-
-1. 次のレジストリ キーが存在しない場合は、作成します。
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. **EnableWelcomeExperience** という名前の DWORD (32 ビット) 値 (REG-DWORD) が存在しない場合は、作成し、データ値を **0** に設定します。
-
-## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>[Azure Information Protection の新機能] を非表示にする ページ
-
-プレビュー クライアントでは、[Azure Information Protection の新機能] は表示されなくなりました。 ページに表示される名前です。
-
-Azure Information Protection クライアントをコンピューターに初めてインストールするか、アップグレードすると、Azure Information Protection バーが Word、Excel、PowerPoint、または Outlook に表示され、**[Azure Information Protection の新機能]** ページにユーザーの同意と使用状況の追跡に関する通知が表示されます。 このページは、レジストリを編集して抑制することができます。
-
-1. 次のレジストリ キーが存在しない場合は、作成します。
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. **WhatsNewVersion** という名前の文字列値 (REG-SZ) が存在しない場合は作成し、データ値を **1.4** に設定します。
 
 ## <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
 
@@ -356,19 +332,17 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 
 これらのキーと、1 つだけのカスタム プロパティに対応する値を使用します。
 
-たとえば、**[公開]**、**[全般]**、**[社外秘]** の値が考えられる、**[分類]** という名前の SharePoint 列があるとします。 ドキュメントは SharePoint に格納され、[分類] プロパティに設定されたいずれかの値を持ちます。
+たとえば、**[公開]**、**[全般]**、**[非常に機密性の高い社外秘]** の値が考えられる、**[分類]** という名前の SharePoint 列があるとします。 ドキュメントは SharePoint に格納され、[分類] プロパティの一連の値として **[公開]**、**[全般]**、**[非常に機密性の高い社外秘]** を持ちます。
 
 Office ドキュメントにこれらの分類の値のいずれかのラベルを付けるには、**[SyncPropertyName]** を **[公開]** に、**[SyncPropertyState]** を **[OneWay]** に設定します。 
 
-ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに、Azure Information Protection ポリシーに **[公開]**、**[全般]**、または **[社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
+ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに、Azure Information Protection ポリシーに **[公開]**、**[全般]**、または **[非常に機密性の高い社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>スキャナーの低整合性レベルを無効にする
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、Azure Information Protection クライアントの最新プレビュー版が必要です。
-
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
-既定では、Azure Information Protection スキャナーのプレビュー バージョンは、低整合性レベルで実行されます。 この設定では、より高度なセキュリティ分離が提供されますが、パフォーマンスが低下します。 低整合性レベルは、特権を持ったアカウント (ローカル管理者アカウントなど) でスキャナーを実行する場合に適しています。この設定は、スキャナーを実行しているコンピューターを保護するのに役立ちます。
+既定では、Azure Information Protection スキャナーは低整合性レベルで実行されます。 この設定では、より高度なセキュリティ分離が提供されますが、パフォーマンスが低下します。 低整合性レベルは、特権を持ったアカウント (ローカル管理者アカウントなど) でスキャナーを実行する場合に適しています。この設定は、スキャナーを実行しているコンピューターを保護するのに役立ちます。
 
 ただし、スキャナーを実行するサービス アカウントに、[スキャナーの前提条件](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner)のセクションで説明されている権限だけが付与されている場合、低整合性レベルは必要ありません。これはパフォーマンスに悪影響を及ぼすため、推奨されません。 
 
@@ -407,7 +381,7 @@ Outlook on the web では、Azure Information Protection の分類と保護の�
 
 - Exchange ルールにより Exchange の分類が検出され、ルールに従ってメッセージ ヘッダーが変更されて、Azure Information Protection の分類が追加されます。
 
-- Azure Information Protection クライアントをインストール済みである受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベルや、対応する電子メールのヘッダー、フッター、または透かしが表示されます。 
+- Azure Information Protection クライアントをインストール済みである内部受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベルが表示されます。 
 
 Azure Information Protection ラベルが保護を適用する場合は、この保護をルールの構成に追加します。メッセージ セキュリティを変更するオプションを選択して、権利保護を適用し、RMS テンプレートまたは [転送不可] オプションを選択します。
 

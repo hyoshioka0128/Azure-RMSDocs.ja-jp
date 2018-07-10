@@ -4,7 +4,7 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54106b67888f8c8a669d2c93e60f9967d484ebf3
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: f0ae817fb8b60b0086d2684b620fa17da970f8e8
+ms.sourcegitcommit: 92bb6d3163e455250a84281dac62b5af82f8c4f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37043350"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -59,7 +60,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。 この役割のユーザーが持つその他のアクセス許可を確認するには、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」セクションを参照してください。
 
-- Azure Rights Management の**グローバル管理者**および**コネクタ管理者**: これらの Azure Rights Management の管理者ロールの場合、グローバル管理者は、ユーザーをその他のクラウド サービスのグローバル管理者にすることなく、[AADRM モジュールからすべての PowerShell コマンドレット](../deploy-use/administer-powershell.md)を実行するアクセス許可をユーザーに付与し、コネクタ管理者は Rights Management (RMS) コネクタのみを実行するアクセス許可を付与します。 これらの管理者ロールはどちらも、管理コンソールへのアクセス許可を付与することはありません。
+- Azure Rights Management の**グローバル管理者**および**コネクタ管理者**: これらの Azure Rights Management の管理者ロールの場合、グローバル管理者は、ユーザーをその他のクラウド サービスのグローバル管理者にすることなく、[AADRM モジュールからすべての PowerShell コマンドレット](../deploy-use/administer-powershell.md)を実行するアクセス許可をユーザーに付与し、コネクタ管理者は Rights Management (RMS) コネクタのみを実行するアクセス許可を付与します。 これらの管理者ロールはどちらも、管理コンソールへのアクセス許可を付与することはありません。また、ドキュメント追跡サイトで管理者モードを使用することはありません。
 
     これらのいずれかの管理者ロールを割り当てるには、AADRM PowerShell コマンドレット ([Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator)) を使用します。
 
@@ -120,8 +121,9 @@ Azure Information Protection のラベルでは、ドキュメントおよび電
 |--------------------------------|-------------------------------------|
 |サポートされるデータ ストア: <br /><br />- Windows Server のローカル フォルダー|サポートされるデータ ストア: <br /><br />- Windows Server のローカル フォルダー<br /><br />- Windows ファイル共有とネットワーク接続ストレージ<br /><br />- SharePoint Server 2016 と SharePoint Server 2013|
 |操作モード: <br /><br />- リアルタイム|操作モード: <br /><br />- 体系的にデータ ストアをクロールします。このサイクルは 1 回のみまたは繰り返し実行できます|
+|ファイルの種類ごとのサポート: <br /><br />- すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office のファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護に含めることができます|
 
-現在、ローカル フォルダーまたはネットワーク共有で保護されるファイルに対して、[Rights Management 所有者](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定に違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定を上書きすることができます。
+現在、ローカル フォルダーまたはネットワーク共有で保護されるファイルに対して、[Rights Management 所有者](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定に違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定をオーバーライドすることができます。
 
 - Windows Server FCI の場合: すべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定したり、各ファイルの Rights Management 所有者を動的に設定したりすることができます。 Rights Management 所有者を動的に設定するには、**-OwnerMail [ソース ファイルの所有者の電子メール]** パラメーターと値を使用します。 この構成では、ファイルの所有者プロパティのユーザー アカウント名を使用して、Active Directory からユーザーのメール アドレスを取得します。
 
