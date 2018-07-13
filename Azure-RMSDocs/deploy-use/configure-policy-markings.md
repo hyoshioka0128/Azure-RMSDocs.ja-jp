@@ -4,17 +4,18 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 3a732f49a299b4d66af70da3d26df193eaca36ac
-ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
+ms.openlocfilehash: c41dcb0a11e61be4a2dfd974d9bf6803a992b858
+ms.sourcegitcommit: ef3d187da900107095d499de7e7dac5c947e4b13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947455"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/07/2018
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
 
-視覚的なマーカーの追加情報:
+視覚的なマーキングに関する追加情報:
 
 - ヘッダーとフッターは、Word、Excel、PowerPoint、および Outlook に適用されます。
 
@@ -30,13 +31,15 @@ ms.lasthandoff: 05/07/2018
 
     - Excel: 透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
     
-    - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。
+    - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
     
     - 複数行のテキストがサポートされます。
 
 - ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。
 
-- 視覚的なマーカーがサポートするのは、1 つの言語のみです。
+- Word、PowerPoint、Outlook では、さまざまな色の視覚的なマーキングがサポートされます。 色に対して構成された視覚的なマーキングは、Excel では常に黒く表示されます。
+
+- 視覚的なマーキングがサポートする言語は 1 つのみです。
 
 ## <a name="when-visual-markings-are-applied"></a>視覚的なマーキングが適用されるタイミング
 
@@ -46,7 +49,7 @@ ms.lasthandoff: 05/07/2018
 
 - Office アプリでは、ラベルの適用時に、ラベルからの視覚的なマーキングが適用されます。 ラベル付きのドキュメントを開いたときと、ドキュメントを最初に保存したときにも、視覚的なマーキングが適用されます。  
 
-- エクスプローラーまたは PowerShell を使用してドキュメントにラベルを付ける場合は、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに適用されます。
+- エクスプローラー、PowerShell、Azure Information Protection スキャナーを使用してドキュメントにラベルを付けると、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに、Azure Information Protection クライアントによって適用されます。
     
     例外は、SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office 2016 で[自動保存](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)を使用している場合です。自動保存が有効な場合、[高度なクライアント設定](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)でバックグラウンドで連続的に実行する分類を有効にします。 
 
@@ -60,7 +63,7 @@ ms.lasthandoff: 05/07/2018
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、追加または変更する視覚的なマーキングを含むラベルを選択します。
 
-3. **[ラベル]** ブレードで、**[Set visual marking (such as header or footer)]** (視覚的なマーキングの設定 (ヘッダーやフッターなど)) セクション、目的の視覚的なマーカーの設定を構成した後、**[保存]** をクリックします。
+3. **[ラベル]** ブレードの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、使用する視覚的なマーキングの設定を構成した後、**[保存]** をクリックします。
     
     - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
     
@@ -121,7 +124,7 @@ ms.lasthandoff: 05/07/2018
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
-Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、ビジュアル マーカーを適用するクライアント デバイスでそれが利用できることを確認してください。 
+Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、視覚的なマーキングを適用するクライアント デバイスでそれが利用できることを確認してください。 
 
 指定したフォントが使用可能でない場合、クライアントは Calibri フォントの使用にフォールバックします。
 

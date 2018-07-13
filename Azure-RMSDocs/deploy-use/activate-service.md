@@ -4,7 +4,7 @@ description: この情報保護ソリューションをサポートするアプ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2018
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8e8a5062efe3b14f1867cf8440dc91c368a810f5
-ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
+ms.openlocfilehash: 46c13b70e0b922b9b4d403d9801a192bb649497f
+ms.sourcegitcommit: 4bda470156d18ee8289752d37789feb1ae758a6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137782"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37925026"
 ---
 # <a name="activating-azure-rights-management"></a>Rights Management をアクティブにする
 
@@ -106,7 +106,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 
 このコマンドレットとその他の例の詳細については、[Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy) ヘルプを参照してください。
 
-これらのオンボーディング コントロールを使用するときは、保護されたコンテンツを組織内のすべてのユーザーがいつでも使用できますが、コンテンツを保護できるのは組織内の一部のユーザーのみとなり、それ以外のユーザーは情報保護を自分でクライアント アプリケーションから適用することはできません。 たとえば、そのようなユーザーの Office クライアントには、Azure Rights Management がアクティブになると自動的に公開される既定のテンプレートや管理者が構成したカスタム テンプレートは表示されません。 Exchange などのサーバー側のアプリケーションには、Rights Management と統合された場合に同じ結果を達成するための、独自のユーザー単位コントロールを実装する機能があります。
+これらのオンボーディング コントロールを使用するときは、保護されたコンテンツを組織内のすべてのユーザーがいつでも使用できますが、コンテンツを保護できるのは組織内の一部のユーザーのみとなり、それ以外のユーザーは情報保護を自分でクライアント アプリケーションから適用することはできません。 たとえば、そのようなユーザーの Office アプリには、Azure Rights Management サービスがアクティブになると自動的に公開される既定のテンプレートや、構成したカスタム テンプレートは表示されません。 Exchange などのサーバー側のアプリケーションには、Rights Management と統合された場合に同じ結果を達成するための、独自のユーザー単位コントロールを実装する機能があります。 たとえば、ユーザーが Outlook on the web 内の電子メールを保護できないようにするには、[Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) を使用して *IRMEnabled* パラメーターを *$false* に設定します。
 
 
 ## <a name="next-steps"></a>次の手順

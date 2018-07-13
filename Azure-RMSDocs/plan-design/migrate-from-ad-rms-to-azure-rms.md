@@ -4,7 +4,7 @@ description: Active Directory Rights Management サービス (AD RMS) のデプ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 07/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c99a7a361ad1f22ab0fa819644e7f79fec6c9227
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 740a97298d27f5abb2cda8e0b6f3ce931c1a6d91
+ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208381"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38973462"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -37,7 +37,8 @@ Active Directory Rights Management サービス (AD RMS) デプロイを Azure I
 
 以下のドキュメントは必須ではありませんが、移行を開始する前に読んでおくと役に立つ場合があります。 このナレッジによって、お客様の移行手順と関係のあるテクノロジが、どのような仕組みで動作するかを、より詳しく理解できます。
 
-- [Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md): クラウドで SLC キーと同等のキーを Microsoft が管理するか (既定)、ユーザーが管理するか ("Bring Your Own Key" (BYOK) 構成) という、Azure Information Protection テナントで利用できるキー管理オプションについて説明しています。 
+- 
+  [Azure Information Protection テナント キーを計画して実装する](../plan-design/plan-implement-tenant-key.md): クラウドで SLC キーと同等のキーを Microsoft が管理するか (既定)、ユーザーが管理するか ("Bring Your Own Key" (BYOK) 構成) という、Azure Information Protection テナントで利用できるキー管理オプションについて説明しています。 
 
 - [RMS サービスの検出](../rms-client/client-deployment-notes.md#rms-service-discovery): RMS クライアントのデプロイの注意事項に関するこのセクションでは、サービスの検出の順序が**レジストリ**、**SCP**、**クラウド**であることを説明します。 SCP がインストールされている環境の移行プロセスでは、SCP から返される AD RMS クラスターを使用しないように、レジストリ設定で Azure Information Protection テナントのクライアントを構成します。
 

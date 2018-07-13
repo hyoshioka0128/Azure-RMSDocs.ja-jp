@@ -1,1 +1,1 @@
-Azure の権限管理
+Azure Rights Management

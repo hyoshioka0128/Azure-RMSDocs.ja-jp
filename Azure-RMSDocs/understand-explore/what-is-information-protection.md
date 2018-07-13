@@ -4,26 +4,26 @@ description: Azure Information Protection サービスの概要です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2018
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 5a9edbb36384af4aee531854b973adfa28362bda
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: c851c2f6af3d355b017c7fbc3de188d15ed16e90
+ms.sourcegitcommit: 7a58d6bec0b504b889980c83e8551301d49e44f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208126"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37910093"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection (AIP とも呼ばれます) は、組織が文書や電子メールを、分類、ラベル付けおよび保護するのに役立つクラウドベースのソリューションです。 これは、ルールや条件を定義する管理者が自動で実行するか、推奨が提示されたユーザーが手動で実行するか、両者で実行します。 
+Azure Information Protection (AIP とも呼ばれます) は、ラベルを適用することで組織がドキュメントや電子メールを分類したり、必要に応じて保護したりするのに役立つクラウドベースのソリューションです。 ラベルの適用は、ルールや条件を定義する管理者が自動で実行するか、ユーザーが手動で実行するか、その組み合わせ (ユーザーにレコメンデーションが提示される) で実行します。 
 
-次の図に動作中の Azure Information Protection の例を示します。 管理者によって機密データを検出するルールが構成されています (この場合は、クレジット カード情報)。 ユーザーがクレジット カード情報を含む Word 文書を保存すると、管理者が構成した特定のラベルを適用することを推奨するカスタム ツールヒントが表示されます。 このラベルによって分類されます。また、構成によっては文書も保護されます。 
+ユーザーのコンピューターで動作する Azure Information Protection の例を、次の図に示します。 管理者は、機密データを検出するルールを使用してラベルを構成しました。この例ではクレジット カード情報が使用されます。 ユーザーがクレジット カード番号を含む Word ドキュメントを保存すると、管理者が構成したラベルを推奨するカスタム ツールヒントが表示されます。 このラベルによってドキュメントが分類され、保護されます。 
 
 ![Azure Information Protection による推奨分類の例](../media/info-protect-recommend-calloutsv2.png)
 
@@ -31,9 +31,9 @@ Azure Information Protection (AIP とも呼ばれます) は、組織が文書�
 
 ## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
 
-Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく、いつでも分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングが含まれます。 メタデータはクリア テキストでファイルと電子メール ヘッダーに追加されます。 クリア テキストなので、データ損失防止ソリューションなど、その他のサービスが分類を識別して適切なアクションを取ることができます。 
+Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングを含めることができます。 メタデータはクリア テキストでファイルと電子メール ヘッダーに追加されます。 クリア テキストなので、データ損失防止ソリューションなど、その他のサービスが分類を識別して適切なアクションを取ることができます。 
 
-たとえば、次の電子メール メッセージは "一般" と分類されています。 このラベルはフッターとして電子メール メッセージに追加されます。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて、監査エントリを作成したり、組織外に送信されたりすることを阻止するよう、電子メールのヘッダーにも埋め込まれます。
+たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、"秘密度: 一般" のフッターが電子メール メッセージに追加されました。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
 
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](../media/example-email-footerv2.png)
 
@@ -99,6 +99,17 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 または、権利保護を適用するメール フロー ルールを使用して、ユーザーを自動的に保護することができます。 
 
 そのようなルールを適用した電子メールに Office ドキュメントを添付した場合、そのドキュメントも自動的に保護されます。
+
+## <a name="classifying-and-protecting-existing-documents"></a>既存のドキュメントの分類と保護
+
+ドキュメントと電子メールは、最初に作成したときにラベル付けすることが理想的です。 しかし、おそらくデータ ストアには既存のドキュメントが多数あり、これらのドキュメントも分類して保護する必要があります。 これらのデータ ストアは、オンプレミスか、またはクラウド内にある場合があります。
+
+オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。 
+
+スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-rms-connector.md)」をご覧ください。
+
+クラウドのデータ ストアの場合、Microsoft Cloud App Security を使用して、Box、SharePoint Online、OneDrive for Business 内にあるドキュメントにラベルを適用します。 詳細については、「[Azure Information Protection 分類ラベルを自動的に適用する](/cloud-app-security/use-case-information-protection)」と「[Azure Information Protection の統合](/cloud-app-security/azip-integration)」をご覧ください。
+
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 

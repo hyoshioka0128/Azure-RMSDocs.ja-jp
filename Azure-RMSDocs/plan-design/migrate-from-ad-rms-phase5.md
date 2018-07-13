@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 227a7f1f0ac08ed67648f97a78a5ff89e9b4a586
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0330b8a18c52d76ba3aa926e66085b1f33f4dd0f
+ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207514"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38973479"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -111,11 +111,13 @@ Azure Information Protection テナント キーの再入力を行うと ("キ�
 
 Azure Information Protection テナント キーを更新するには:
 
-- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレット [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行し、テナント用に自動的に作成されたキーの識別子を指定します。 指定する値を識別するには、[Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+- 
+  **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレット [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行し、テナント用に自動的に作成されたキーの識別子を指定します。 指定する値を識別するには、[Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
     
         (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
+- 
+  **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](../deploy-use/operations-tenant-key.md)」を参照してください。
 

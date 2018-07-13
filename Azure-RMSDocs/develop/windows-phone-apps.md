@@ -14,12 +14,12 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e606703aa764f8e4fea009131f41c9394ebb29fb
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: d236eaf4f9027a84a36819b5234a43cfc5674c54
+ms.sourcegitcommit: 55c7461f705a46f385a967753187ba2dda642238
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258804"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38229955"
 ---
 # <a name="windows-phone-setup"></a>Windows Phone のセットアップ
 
@@ -45,7 +45,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 「[新機能](release-notes.md)」のトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
-[Windows Phone の開発](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)の詳細については、Windows Phone デベロッパー センターでご確認ください。
+[Windows Phone の開発](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)の詳細については、Windows Phone デベロッパー センターでご確認ください。
 
 ## <a name="configuring-your-development-environment"></a>開発環境の構成
 
@@ -61,7 +61,8 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
     ![参照の追加](../media/wpsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスの左下で **[参照]** をクリックし、パッケージを解凍したフォルダー内にある *Microsoft.RightsManagment.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   
+  **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/wpsetup-refmngr.png)
 
@@ -77,7 +78,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 [コア概念](core-concepts.md)
 
-[Windows Phone の開発](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
+[Windows Phone の開発](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)
 
 [Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
 

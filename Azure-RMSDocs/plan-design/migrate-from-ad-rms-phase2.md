@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2017
+ms.date: 07/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9871c5890be8b5aa019d9788ecdfe929cfab0eb9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 033504a26ae04bae3e4f1179503855bcfce63d73
+ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208466"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38973404"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -145,9 +145,9 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前のグループを使用するように自動的に変換されます。たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
+AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前のグループを使用するように自動的に変換されます。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
 
-Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。このグループを追加するために、オプションの表示は [**追加\<組織名> - すべてのメンバー**] となります。
+Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。 このグループを追加するために、オプションの表示は [**追加\<組織名> - すべてのメンバー**] となります。
 
 AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS ](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」 (Windows PowerShell を使用した AD RMS の管理) を参照してください。
 
