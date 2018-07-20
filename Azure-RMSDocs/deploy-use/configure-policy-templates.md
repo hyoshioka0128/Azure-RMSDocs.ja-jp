@@ -4,7 +4,7 @@ description: Azure Portal から Rights Management テンプレートを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/28/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 44c1166ce4205d6e77b4877d6aca0eaf16911530
-ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
+ms.openlocfilehash: ba56e6b165cd378c957b2c54bd41ce54f1830797
+ms.sourcegitcommit: 1b0c387b2848b7dfaee0b0548dde7e41383ffe6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "34562145"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39138306"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -77,7 +77,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 テンプレートを編集したり、ラベルに変換したりする前に、次の変更内容と考慮事項に注意してください。 実装変更のため、Azure クラシック ポータルで以前、テンプレートを管理していた場合、次のリストが特に重要になります。
 
-- テンプレートを編集または変換して Azure Information Protection ポリシーを保存すると、元の[使用権限](configure-usage-rights.md)に次の変更が行われます。 必要な場合は、Azure Portal を使用して、個々の使用権限を追加または削除できます。 または、[New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットと [Set-AadrmTemplateProperty](/powershell/module/aadrm/new-aadrmrightsdefinition) コマンドレットを使って、PowerShell を使用します。
+- テンプレートを編集または変換して Azure Information Protection ポリシーを保存すると、元の[使用権限](configure-usage-rights.md)に次の変更が行われます。 必要な場合は、Azure Portal を使用して、個々の使用権限を追加または削除できます。 または、[New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットと [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットを使って、PowerShell を使用します。
     
     - **マクロの許可** (共通名) が自動的に追加されます。 この使用権限は Office アプリの Azure Information Protection バーに必要です。
 
