@@ -4,18 +4,18 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: cfdb1537ad5444ef478c18380b535f38b5f7c667
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: c03ec14c8c2fefd72e7972c486120e3a2dd1760d
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32326550"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029918"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -63,7 +63,7 @@ Azure Information Protection のサブスクリプションを購入した時期
     
         このポリシー設定は、[クライアントのカスタマイズ](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)としてクライアントの詳細設定を使って構成することもできます。
     
-    - **Make the custom permissions option available to users (ユーザーがカスタム アクセス許可オプションを使用できるようにする)**: この設定をオンにすると、ユーザーは独自の保護設定を設定したり、ラベルの構成で指定している可能性がある保護設定を上書きしたりすることができます。 この設定をオフにすると、カスタムのアクセス許可オプションをユーザーが選択することはできません。
+    - **Make the custom permissions option available to users \(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)**: この設定をオンにすると、ラベルの構成で指定している可能性がある保護設定をオーバーライドできる、独自の保護設定を設定するオプションがユーザーに表示されます。 ユーザーには、保護を削除するオプションも表示されます。 この設定がオフの場合、これらのオプションはユーザーに表示されません。
         
         このポリシー設定は、ユーザーが Office メニュー オプションから構成できるカスタムのアクセス許可には影響しないことに注意してください。 ただし、[クライアントのカスタマイズ](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)としてクライアントの詳細設定を使用し、構成することもできます。
         

@@ -4,7 +4,7 @@ description: ドキュメントや電子メールを分類して保護する方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 223dd5681b6b5c6911a90cf6540b2ab4c9d7f54e
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 07abfb8da932dea6fe29507cca9f3066eaf546cf
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444141"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029901"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -89,7 +89,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
     ![カスタム アクセス許可オプション](../media/custom-permissions-callout.png)
     
-    **[カスタムのアクセス許可]** を選択できない場合、管理者はお客様がこのオプションを使用することを許可していません。
+    **[カスタム アクセス許可]** が表示されない場合、管理者はお客様がこのオプションを使用することを許可していません。
     
     指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わることに注意してください。  
 
@@ -148,7 +148,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
     
 3. 管理者から許可されている場合は、選択したラベルに対して管理者が含めた保護設定を使用するのではなく、独自の保護設定を指定することができます。 この操作を行うには、**[カスタム アクセス許可で保護する]** 選択します。
     
-    **[カスタム アクセス許可で保護する]** を選択できない場合、管理者はお客様がこのオプションを使用することを許可していません。
+    **[カスタム アクセス許可で保護する]** が表示されない場合、管理者はお客様がこのオプションを使用することを許可していません。
     
     指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わります。  
 
@@ -181,6 +181,8 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
-「[Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)」を参照してください。
+**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../deploy-use/configure-policy-settings.md)」を参照してください。
+
+その他の構成手順: [Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
