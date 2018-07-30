@@ -4,18 +4,18 @@ description: Azure Information Protection を簡単に試すためのチュー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2018
+ms.date: 07/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
-ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
+ms.openlocfilehash: 994b9fb3db3c4a1616896ffac7fcd68b0aff7887
+ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33946370"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204460"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成する
 
@@ -38,13 +38,13 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-labelsv2.png)
     
-3. いくつかのポリシー設定も確認できます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
+3. ラベルの後、**[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションに、ポリシー設定の一部も表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
     
     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](../media/info-protect-policy-default-settings.png)
 
 ## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>既定のラベルと理由を求めるプロンプトの設定の変更
 
-このチュートリアルでは 2 つのポリシーの設定を変更し、どのように動作するかを確認します。
+このチュートリアルでは、動作を確認するために各ポリシー設定のいくつかを変更します。
 
 1. **[既定のラベルを選択]** で、**[全般]** を選択します。 
 
@@ -52,7 +52,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 2. **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** オプションを **[オン]** に設定します。
 
-3. さらに、**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** の設定を見つけます。 これが **[オフ]** に設定されている場合、**[オン]** に変更します。
+3. さらに、**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** の設定を見つけます。 この設定が **[オフ]** になっている場合は、**[オン]** に変更します。
     
     既定値はいつサブスクリプションを取得したかに応じて異なるため、この設定を変更する必要がない場合があります。 チュートリアルの後半で保護されたドキュメントをユーザーと共有するために、カスタム アクセス許可を使用します。共有するユーザーは、お客様がエクスプローラーのファイルを右クリックするときに指定できます。
 
@@ -74,7 +74,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     ![Azure Information Protection ラベルに構成された保護](../media/info-protect-protection-bar-configured.png) 
     
-4. **[保護]** ブレードで、**[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。 このオプションが選択されていると、Azure Rights Management サービスによって文書と電子メールが保護されます。 **[アクセス許可の設定]** も選択されていることを確認します。 次に、**[アクセス許可の追加]** を選択します。
+4. **[保護]** ブレードで、**[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。 このオプションが選択されていると、Azure Rights Management サービスによって文書と電子メールが保護されます。 また、**[アクセス許可の設定]** オプションが選択されていることを確認します。 次に、**[アクセス許可の追加]** を選択します。
 
 5. **[アクセス許可の追加]** ブレードで、**[\<組織名> の追加 - すべてのメンバー]** を選択します。 たとえば、組織名が VanArsdel Ltd の場合、次のようなオプションが表示されます。
     
@@ -92,7 +92,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
      ![Azure Information Protection ラベルのアクセス許可構成を示す [保護] ブレード](../media/info-protect-protection-configured.png)
     
-    **[アクセス許可の追加]** を選択すると **[アクセス許可の追加]** ブレードが再び開き、さらにユーザーを追加して、別のアクセス許可を付与できます。 たとえば、特定のグループに表示アクセスだけを付与します。 このチュートリアルでは、すべてのユーザーに 1 つのアクセス許可セットのままにします。
+    **[アクセス許可の追加]** を選択すると、このアクションによって **[アクセス許可の追加]** ブレードが再び開き、さらにユーザーを追加して、別のアクセス許可を付与できます。 たとえば、特定のグループに表示アクセスだけを付与します。 このチュートリアルでは、すべてのユーザーに 1 つのアクセス許可セットのままにします。
 
 8. コンテンツの有効期限とオフライン アクセスを確認して既定値のままにし、**[OK]** をクリックして保存して、**[保護]** ブレードを閉じます。
 
@@ -108,7 +108,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
     
     **[新しい条件の追加]** をクリックし、**[条件]** ブレードで次のように選択します。
     
-    」を参照します。 **[条件のタイプを選択]**: 既定値の **[情報の種類]** のままにします。
+    a. **[条件のタイプを選択]**: 既定値の **[情報の種類]** のままにします。
     
     b. **[情報の種類を選択]** 検索ボックス: 「**クレジット カード番号**」と入力します。 検索結果から **[クレジット カード番号]** を選択します。
     

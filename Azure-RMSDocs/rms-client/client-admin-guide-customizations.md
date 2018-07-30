@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6b5a2856f54ec6d38ae69007e80d9eb22d416799
-ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
+ms.openlocfilehash: fe04cc36f99e641cb11ef832e967699106728749
+ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39029935"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217843"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -98,13 +98,13 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 ## <a name="support-for-disconnected-computers"></a>切断されたコンピューターのサポート
 
-既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピューターをお持ちの場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 
+既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピューターがある場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 
 
 次の値の名前を検索し、値を **0** に設定します。
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-クライアントの **%LocalAppData%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からポリシーをエクスポートしたり、クライアントのコンピューターにエクスポートされたファイルをコピーできます。 この方法を使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。
+クライアントの **%LocalAppData%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からグローバル ポリシーまたはスコープ ポリシーをエクスポートしたり、エクスポートしたファイルをクライアントのコンピューターにコピーしたりできます。 この方法を使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。 ただし、ポリシーのエクスポートでは、ユーザーが複数のスコープ ポリシーに属しているシナリオはサポートされません。
 
 ポリシーをエクスポートすると、Azure Information Protection クライアントのさまざまなバージョンに対応するさまざまなバージョンのポリシーが含まれる圧縮ファイルがダウンロードされます。
 
@@ -116,7 +116,7 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
     |Policy1.2.msip |バージョン 1.3 - 1.7|
     |Policy1.3.msip |バージョン 1.8 以降|
     
-2. 特定したファイルの名前を **Policy.msip** に変更し、Azure Information Protection 保護クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
+2. 特定したファイルの名前を **Policy.msip** に変更し、Azure Information Protection クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
 
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを表示または非表示にする
@@ -258,7 +258,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 Secure Islands の "Confidential" というラベルを持ったドキュメントは、Azure Information Protection の "Confidential" というラベルに変更されます。
 
-この例では、次の点に注意してください。
+この例では:
 
 - Azure Information Protection のラベル **Confidential** のラベルID は、1ace2cc3-14bc-4142-9125-bf946a70542c です。 
 
@@ -275,7 +275,7 @@ Secure Islands の "Confidential" というラベルを持ったドキュメン�
 
 Secure Islands によって "Sensitive" というラベルを付けられたドキュメントは、Azure Information Protection によって "Highly Confidential" というラベルに変更されます。
 
-この例では、次の点に注意してください。
+この例では:
 
 - Azure Information Protection のラベル **Highly Confidential** のラベルID は、3e9df74d-3168-48af-8b11-037e3021813f です。
 
@@ -293,7 +293,7 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 
 "Internal" という単語を含む Secure Islands のラベルが 2 つあり、この Secure Islands のラベルのいずれかを含んでいるドキュメントを、Azure Information Protection によって "General" にラベル付けし直します。
 
-この例では、次の点に注意してください。
+この例では:
 
 - Azure Information Protection のラベル **General** のラベル ID は、2beb8fe7-8293-444 c-9768-7fdc6f75014d です。
 
@@ -390,7 +390,7 @@ Azure Information Protection ラベルが保護を適用する場合は、この
 - Azure Information Protection のラベルごとに、**msip_labels** ヘッダーにラベル名 (**General** など) が含まれている場合に適用されるメール フロー ルールを作成し、このラベルにマッピングするメッセージ分類を適用します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 これで Azure Information Protection クライアントのカスタマイズができました。次に、このクライアントのサポートに必要な追加情報を記載した以下の記事をご覧ください。
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
