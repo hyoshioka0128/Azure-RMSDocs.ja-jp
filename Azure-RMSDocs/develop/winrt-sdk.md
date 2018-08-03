@@ -14,12 +14,12 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dde2b47ddf91c6f79d50df5ad776d981c1494047
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 330ce41da93004209e6fe00c46fa8491d0fbcd49
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30259008"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375199"
 ---
 # <a name="windows-store-setup"></a>Windows ストアのセットアップ
 
@@ -63,7 +63,8 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
     ![参照の追加](../media/winrtsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスで **[参照]** をクリックし、SDK パッケージを解凍したフォルダー内にある *Microsoft.RightsManagement.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   
+  **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/winrtsetup-refmngr.png)
 
@@ -84,5 +85,3 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -14,12 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190fce3f1725775ae699dbc523a810dc79b96f88
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 09e75b1d8fd841295924dccfbacf8dcb6d753182
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444250"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473476"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
@@ -63,7 +63,7 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 
 はい、Microsoft アカウントを申請する際には、Hotmail や Gmail などの電子メール アドレスのほか、所有しているその他の電子メール アドレスを指定できます。 
 
-ただし、このビューアーではこのアカウントを使って保護されたファイルを開くことができますが、認証に Microsoft アカウントが使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合もあります。 [詳細情報](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+ただし、このビューアーではこのアカウントを使って保護されたファイルを開くことができますが、認証に Microsoft アカウントが使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合もあります。 [詳細情報](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>このアプリで開くことができるファイル拡張子
 
@@ -79,5 +79,3 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>自分の質問が回答されていません。どうすればよいですか。
 
 [Yammer サイト](https://www.yammer.com/AskIPTeam)に質問を投稿してください。
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

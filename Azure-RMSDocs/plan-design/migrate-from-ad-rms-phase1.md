@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 683609cd2da2d13e11f92599813753a2a4747bd2
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: 4ab4ff7e0e22cfd477a17052a1d46efa2ecb9f25
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973373"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374145"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -152,4 +152,3 @@ Exchange Online またはオンプレミスの Exchange に対してこれらの
 ## <a name="next-steps"></a>次の手順
 「[フェーズ 2: サーバー側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

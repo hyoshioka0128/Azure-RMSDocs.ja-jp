@@ -11,12 +11,12 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: cfd090df79e640ef6106f2c72001b2b05969cdf6
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765529"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473901"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -29,7 +29,8 @@ ms.locfileid: "27765529"
 サービス アプリケーションは、エンタープライズ コンテンツ管理システム、ビジネス アプリケーション、またはクラウド ベースのビジネス ソリューションからのエクスポートにおいて、情報を保護する機能を提供します。 サービス アプリケーションの例としては、データ損失防止対策 (DLP) および Cloud Application Security (CAS) のアプリケーションが挙げられます。 マイクロソフトが提供するサービス アプリケーション開発向け SDK は、2 つのプログラミング モデルで利用できます。
 
 - [C++](https://www.microsoft.com/download/details.aspx?id=38397)
-- [C# マネージ API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
+- 
+  [C# マネージド API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 ### <a name="examples-of-service-applications"></a>サービス アプリケーションの例
 
@@ -143,6 +144,5 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 ### <a name="see-also"></a>関連項目
 
 - [開発者の用語](terms.md)
-- [Azure Information Protection の用語 - ITPro](../get-started/terminology.md)
+- [Azure Information Protection の用語 - ITPro](./terminology.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

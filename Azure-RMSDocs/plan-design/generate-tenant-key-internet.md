@@ -12,17 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 011fff0d11527a8abd1bb93f3dbc0e914cd6bd43
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 5c0ecb9cd27387cff73e88334e6a7d7cd06567be
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205167"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375625"
 ---
 # <a name="generate-and-transfer-your-tenant-key--over-the-internet-retired-content"></a>テナント キーを生成して転送する – インターネット経由 | RETIRED CONTENT
 
 >*適用対象: Azure Rights Management、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Rights Management では顧客管理テナントキー (Bring Your Own Key (BYOK) とも呼ばれる) に対して Azure Key Vault が使用されるようになったので、この記事の情報は必要なくなり、削除されました。 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

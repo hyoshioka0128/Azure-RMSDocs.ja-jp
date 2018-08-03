@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258777"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371851"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Azure Information Protection のセキュリティのベスト プラクティス
 
@@ -94,5 +94,3 @@ API はユーザーに対して、情報の暗号化を解除すること、ま�
 - アプリケーションが実装する新しい権限の追加で抽象化される権限がある場合、新しい用語にマップする必要があります。 たとえば、MANAGER という新しい権限には、抽象化された権限として、印刷、コピー、および編集権限が含まれる可能性があります。
 推奨される標準: 現時点ではありません。
 優先される標準: 現時点ではありません。
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

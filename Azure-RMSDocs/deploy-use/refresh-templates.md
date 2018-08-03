@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bbefccbcf5d529d64b613220013a0988fa4808a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: ce9e189ffdad0ab2020aa38258c06ac27230a280
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206019"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369892"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -98,4 +98,3 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 ## <a name="see-also"></a>参照
 [Azure Information Protection ポリシーでテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

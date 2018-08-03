@@ -14,12 +14,12 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9c6f24491a23af8b7123ccdee7762111f14749f4
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: f5d50aef96520e390bd83a450e2c1bb456aba323
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765256"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375421"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>方法: 暗号化設定の操作
 
@@ -39,7 +39,7 @@ ms.locfileid: "27765256"
 
 -   IPC\_ENCRYPTION\_PACKAGE\_AES256\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
--   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (非推奨アルゴリズムとも呼ばれます)
+-   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (非推奨のアルゴリズムとも呼ばれます)
 
 暗号化パッケージ フラグ (「[Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx)」(推奨される暗号化) を参照) はライセンス プロパティ フラグ (*IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*) と併用できます。
 
@@ -80,9 +80,9 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                            &amp;dwEncryptionMode);
 
 
-## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>AES 128 ECB (非推奨アルゴリズム) によるファイルの保護
+## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>AES 128 ECB (非推奨のアルゴリズム) によるファイルの保護
 
-この例は*非推奨アルゴリズム*をサポートする新しい方法も示しています。
+この例は*非推奨のアルゴリズム*をサポートする新しい方法も示しています。
 
     C++
 
@@ -98,5 +98,3 @@ API の *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* フラグは非公開と�
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

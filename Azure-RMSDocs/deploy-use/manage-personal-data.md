@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f0fc9b01b042c3210abf69804d552607d92c5928
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: f42e1318e8be0d805216cffd402a9b87a1259e1e
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444345"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473850"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -254,7 +254,7 @@ Azure Rights Management サービスのドキュメント追跡ログ、管理�
 Azure Rights Management サービスのドキュメント追跡ログ、管理ログ、または使用状況ログ内にある個人データを削除するよう Microsoft に要請するには、次の 3 つの手順を実行します。 
 
 **手順 1: 削除リクエストを開始する**
-[Microsoft サポートに連絡](../get-started/information-support.md#to-contact-microsoft-support)して Azure Information Protection のサポート ケースを開き、テナントからデータを削除するよう要請します。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 リクエストを発行する際には、削除するデータの種類に応じて、追加情報を提供する必要があります。
+[Microsoft サポートに連絡](../information-support.md#to-contact-microsoft-support)して Azure Information Protection のサポート ケースを開き、テナントからデータを削除するよう要請します。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 リクエストを発行する際には、削除するデータの種類に応じて、追加情報を提供する必要があります。
 
 - 管理ログを削除するには、**終了日**を指定します。 その終了日までのすべての管理者ログが削除されます。
 - 使用状況ログを削除するには、**終了日**を指定します。 その終了日までのすべての使用状況ログが削除されます。
@@ -277,4 +277,3 @@ AADRM モジュールを使用して個人データの検索やエクスポー�
 
 削除操作の場合、サポート リクエストは Microsoft によって実行された操作の監査およびレポート記録として機能します。 削除後は、削除されたデータの検索やエクスポートはできなくなりますが、管理者は AADRM モジュールから Get コマンドレットを使用して記録を確認することができます。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

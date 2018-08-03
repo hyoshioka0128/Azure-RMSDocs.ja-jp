@@ -14,12 +14,12 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: cf81959a7ef4f20ab550dcec1c295e5045f321f3
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: bca4453b235133fb77d1ca89de91427aef45a321
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765600"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373476"
 ---
 # <a name="android-setup"></a>Android のセットアップ
 
@@ -151,4 +151,3 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 [Android API リファレンス](https://msdn.microsoft.com/library/dn758245.aspx)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1e6ce5660a0ccc8385c6ab728c4d2c1c202023ed
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d1014f139d0ddf81034708c636f3e13d946f3e06
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205841"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370824"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection ユーザー ガイド
 
@@ -48,5 +48,3 @@ Windows 用 Azure Information Protection クライアントは、電子メール
 > [!NOTE]
 > 企業ネットワークで Azure Information Protection クライアントを担当する管理者の場合、詳細な技術情報については、「[Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)」を参照してください。 
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

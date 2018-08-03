@@ -14,12 +14,12 @@ ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: efa05d43cc8541f6781951addc3f6c1ed4268ea5
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 770bbc39f44d0ee4fe6a2221f9aa6fd336343c77
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765638"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375006"
 ---
 # <a name="rights-management-sdk-42"></a>Rights Management SDK 4.2
 
@@ -50,5 +50,3 @@ RMS SDK 4.2 API では各オペレーティング システムに対して標準
 [Developer guidance and terms (開発者ガイドと用語)](core-concepts.md) - MS SDK 4.2 は、Right Management サービスを利用する AD RMS 対応アプリケーションを、可能な限りシンプルに構築できるようにすることに重点を置いています。
 
 [API reference (API リファレンス)](api-reference-4-2.md) - RMS SDK 4.2 は、表に記載されたいくつかのオペレーティング システムをサポートしています。
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

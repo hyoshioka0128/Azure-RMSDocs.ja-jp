@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8fc380b5d015ec055961b815117a0b5450c3661b
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 2be1df328867fa1ccb13b1d6bc53b59e58f12903
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34216768"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370790"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
@@ -192,4 +192,3 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 5.  必要なトレースをキャプチャしたら、手順 3. の行を元に戻し、IIS を停止してから再起動します。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

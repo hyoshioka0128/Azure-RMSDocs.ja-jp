@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c49306a731bf629f3678dc9aa95b23b8ee46190e
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 5e7003c2b2dbcd81ee980dda1dfab14291e81088
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34217024"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473401"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
@@ -41,7 +41,7 @@ RMS コネクタでサポートされるオンプレミス サーバーは、Exc
 > [!NOTE]
 > Office ドキュメントだけでなく、複数の種類のファイルをファイル分類インフラストラクチャで保護したい場合は、RMS コネクタではなく [AzureInformationProtection コマンドレット](/powershell/azureinformationprotection/vlatest/aip)を使用してください。
 
-これらのオンプレミス サーバーのうち、どのバージョンが RMS コネクタでサポートされるかについては、「[Azure RMS をサポートするオンプレミス サーバー](..\get-started\requirements-servers.md)」をご覧ください。
+これらのオンプレミス サーバーのうち、どのバージョンが RMS コネクタでサポートされるかについては、「[Azure RMS をサポートするオンプレミス サーバー](../requirements-servers.md)」をご覧ください。
 
 
 ### <a name="support-for-hybrid-scenarios"></a>ハイブリッド シナリオのサポート
@@ -94,5 +94,3 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 ## <a name="next-steps"></a>次の手順
 
 手順 1: [Azure Rights Management コネクタのインストールと構成](install-configure-rms-connector.md) に進みます。
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

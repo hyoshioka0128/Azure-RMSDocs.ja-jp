@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: e14844a5bd1b0ace4085eaaa9c15be6b3c814146
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444114"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473748"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -87,7 +87,7 @@ Azure Information Protection では、テナント内のユーザー用に Azure
 
 その他の承認方法:
 
-- Azure AD に含まれていない電子メール アドレスの場合、Microsoft アカウントで認証されていれば、Azure Information Protection でそれらを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 [詳細情報](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Azure AD に含まれていない電子メール アドレスの場合、Microsoft アカウントで認証されていれば、Azure Information Protection でそれらを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 [詳細情報](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 - Office 365 Message Encryption と新機能を利用し、Azure AD にアカウントを持っていないユーザーにメールを送信すると、ソーシャル ID プロバイダーとのフェデレーションかワンタイム パスコードにより最初にユーザーが認証されます。 保護されているメールに指定されているメール アドレスがユーザーの認証に使用されます。
 
@@ -215,4 +215,3 @@ Azure Information Protection で使用したいグループが表示されるこ
 
 アクティブ化の状態の確認を含む詳細については、「[Azure Rights Management をアクティブにする](../deploy-use/activate-service.md)」を参照してください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

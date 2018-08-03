@@ -14,12 +14,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1d7a5a41c16a8a1354933b13449875de7ec0902e
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: cb9e5ef5cd60fff43174071938525b7544e5eb9e
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765385"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369600"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
@@ -75,7 +75,7 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
     iOS: `<app-scheme>://<bundle-id>`
 
 >[!NOTE] 
-> アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
+> アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>認証コールバックの実装の例
 **認証コード例** - この SDK には、認証コールバックの使用を示すコード例が含まれています。 ご参考のためにここに、また以下のリンクされたトピックでいくつかのコード例を紹介します。
@@ -266,5 +266,3 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
         throw;
       }
     }
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

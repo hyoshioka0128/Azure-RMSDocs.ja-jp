@@ -13,12 +13,12 @@ ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: efbc164b27e1dfe1b839e2ace893c4e3c5e656aa
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f9dcd216a3591dee9fc328dac9d17d9338a9a978
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205131"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474428"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -48,6 +48,4 @@ Windows 用 Rights Management 共有アプリケーションと RMS 保護ツー
 
 
 ## <a name="see-also"></a>関連項目
-[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+[Azure Information Protection と AD RMS の比較](../compare-on-premise.md)

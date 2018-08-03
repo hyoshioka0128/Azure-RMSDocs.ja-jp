@@ -14,12 +14,12 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3b7ff758abeb3f1ddc1ae82349233e437d05dacc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3299981f6e45cc8c82da66e2fce07cece552c81f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2017
-ms.locfileid: "20232838"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372276"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>別のテナントへのサービス アプリケーションのデプロイ
 
@@ -51,5 +51,3 @@ ms.locfileid: "20232838"
 ## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>フロー 2: *ABC* の IT 管理者による *CoolApp* チームへのキーの提供
 
 *ABC の* IT 管理者がサービス プリンシパルを作成した場合、**図 1** のように、*ABC* は *CoolApp* チームに情報を提供します。 その後、*CoolApp* チームは、*ABC の*テナントで使用するために *CoolApp* アプリケーションの情報の埋め込みに進みます。
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

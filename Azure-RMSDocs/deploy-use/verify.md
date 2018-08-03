@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43689f942bae88c9b7099f45a980f0fd96b1bdaf
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4cdf429527bfc97b4e02438ae45aae80754e5fe1
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204957"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474353"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Azure Rights Management サービスの検証
 
@@ -32,12 +32,11 @@ Azure Information Protection の Azure Rights Management サービスをアク�
 テストが成功しない場合は、「[Azure Information Protection デプロイ ロードマップ](../plan-design/deployment-roadmap.md)」の構成手順を確認してください。
 
 > [!TIP]
-> さらにサポートが必要な場合は、「[Azure Information Protection の情報とサポート](../get-started/information-support.md)」の「[サポート オプションとコミュニティ リソース](../get-started/information-support.md#support-options-and-community-resources)」セクションを参照してください。
+> さらにサポートが必要な場合は、「[Azure Information Protection の情報とサポート](../information-support.md)」の「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」セクションを参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
 使用状況ログを使用することで、組織がどのように Azure Rights Management サービスを使用しているか監視することができます。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

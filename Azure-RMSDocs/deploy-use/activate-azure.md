@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 976d03abfb512060aecb2e6f6809f8c491d6fc1b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 9f8c81f30e9d1a115026d2888a3a4c696627c74e
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207174"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474462"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
 
@@ -32,7 +32,7 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
     
     以前に [Azure Information Protection] ブレードにアクセスしたことがない場合、このブレードをポータルに追加するには、1 回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)を参照してください。
     
-    [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[Microsoft サポートにお問い合わせいただく](../get-started/information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。
+    [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[Microsoft サポートにお問い合わせいただく](../information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。
 
 2. **[管理]** メニュー オプションを探し、**[Protection activation]\(保護のアクティブ化\)** を選択します。 
     
@@ -44,5 +44,3 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
 ## <a name="next-steps"></a>次の手順
 「[Azure Rights Management をアクティブにする](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」を引き続きお読みください。
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

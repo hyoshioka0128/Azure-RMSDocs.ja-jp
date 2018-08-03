@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 740a97298d27f5abb2cda8e0b6f3ce931c1a6d91
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: 937d9b1e91690ed7633d2112725f49e1325afcbd
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973462"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473928"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -29,9 +29,9 @@ Active Directory Rights Management サービス (AD RMS) デプロイを Azure I
 
 この AD RMS の移行が組織にとって適切かどうかわからない場合は、次のようにしてください。
 
-- Azure Information Protection の概要については、「[Azure Information Protection とは](../understand-explore/what-is-information-protection.md)」をご覧ください。
+- Azure Information Protection の概要については、「[Azure Information Protection とは](../what-is-information-protection.md)」をご覧ください。
 
-- Azure Information Protection と AD RMS の比較については、「[Azure Information Protection と AD RMS の比較](../understand-explore/compare-azure-rms-ad-rms.md)」をご覧ください。
+- Azure Information Protection と AD RMS の比較については、「[Azure Information Protection と AD RMS の比較](../compare-on-premise.md)」をご覧ください。
 
 ## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Azure Information Protection に移行する前に推奨されるドキュメント
 
@@ -44,7 +44,7 @@ Active Directory Rights Management サービス (AD RMS) デプロイを Azure I
 
 - [Microsoft Rights Management コネクタの概要](../deploy-use/deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): RMS コネクタに関するドキュメントのこのセクションでは、オンプレミス サービスから Azure Rights Management サービスに接続してドキュメントと電子メールを保護する方法について説明しています。
 
-また、AD RMS のしくみを理解している場合、「[Azure RMS の機能の詳細](../understand-explore/how-does-it-work.md)」を参照して、クラウド バージョンで同じテクノロジ プロセスと異なるテクノロジ プロセスを特定することもできます。
+また、AD RMS のしくみを理解している場合、「[Azure RMS の機能の詳細](../how-does-it-work.md)」を参照して、クラウド バージョンで同じテクノロジ プロセスと異なるテクノロジ プロセスを特定することもできます。
 
 ## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行の前提条件
 
@@ -74,7 +74,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 - **Azure Information Protection のサブスクリプション (Azure Rights Management は非アクティブです) など、Azure Information Protection を実行するためのすべての要件:**
 
-    「[Azure Information Protection の要件](../get-started/requirements-azure-rms.md)」をご覧ください。
+    「[Azure Information Protection の要件](../requirements.md)」をご覧ください。
 
     Office 2010 を実行するコンピューターがある場合は、Azure Information Protection クライアントをインストールする必要があります。このクライアントには、クラウド サービスへのユーザーを認証する機能があるためです。 それより後のバージョンの Office では、Azure Information Protection クライアントは、分類とラベル付けのためには必要であり、データ保護だけが目的の場合は必須ではありませんが推奨されます。 詳しくは、「[Azure Information Protection クライアント管理者ガイド](../rms-client/client-admin-guide.md)」をご覧ください。
 
@@ -114,11 +114,11 @@ AD RMS 暗号化モードを確認するには:
 
 ### <a name="migration-limitations"></a>移行の制限
 
-- Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
+- Azure Information Protection によって使用されている Rights Management サービスによってサポートされていないソフトウェアやクライアントは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](../requirements.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
 
 - AD RMS デプロイが外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションするように構成されている場合は、同時にまたは可能な限り速やかにパートナーも Azure Information Protection に移行する必要があります。 移行前に Azure Information Protection を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
     
-    パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 ただし、次のセクションの計画ガイドラインを参照し、詳細を [Microsoft サポートにお問い合わせ](../get-started/information-support.md#support-options-and-community-resources)ください。
+    パートナーの構成は異なる可能性があるので、このドキュメントで再構成を正確に説明することはできません。 ただし、次のセクションの計画ガイドラインを参照し、詳細を [Microsoft サポートにお問い合わせ](../information-support.md#support-options-and-community-resources)ください。
 
 ## <a name="migration-planning-if-you-collaborate-with-external-partners"></a>外部のパートナーとコラボレーションしている場合の移行計画
 
@@ -220,4 +220,3 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 ## <a name="next-steps"></a>次の手順
 移行を始めるには、「[フェーズ 1 - 準備](migrate-from-ad-rms-phase1.md)」に進んでください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

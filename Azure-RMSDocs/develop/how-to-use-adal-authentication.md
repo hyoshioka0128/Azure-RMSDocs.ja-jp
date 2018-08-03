@@ -14,12 +14,12 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 422234063eaa28eefed5e195cd6a2c3131a880d5
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: c79571c130bde45f226f48e699b9d9cd5ec31302
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765886"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375319"
 ---
 # <a name="how-to-use-adal-authentication"></a>方法: ADAL 認証の使用
 
@@ -35,14 +35,16 @@ Microsoft Online サインイン アシスタントではなく、ADAL 認証を
 
 このトピックでは、2 種類の認証方法とそれに対応するコード例を示します。
 
-- **内部認証** - RMS SDK によって管理された OAuth 認証。
+- 
+  **内部認証** - RMS SDK によって管理された OAuth 認証。
 
   認証が必要なときに RMS クライアントに ADAL 認証プロンプトを表示させる場合は、この方法を使用します。 アプリケーションの構成方法の詳細については、「内部認証」セクションを参照してください。
 
   > [!Note]
   > 現在、アプリケーションがサインイン アシスタント付きの AD RMS SDK 2.1 を使用している場合は、アプリケーション移行パスとして内部認証方法を使用することをお勧めします。
 
-- **外部認証** - アプリケーションによって管理される OAuth 認証。
+- 
+  **外部認証** - アプリケーションによって管理される OAuth 認証。
 
   アプリケーションで独自の OAuth 認証を管理する場合は、この方法を使用します。 この方法では、認証が必要なとき、RMS クライアントはアプリケーション定義のコールバックを実行します。 詳細な例については、このトピックの最後の「外部認証」を参照してください。
 
@@ -122,5 +124,3 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
 - [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
 - [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
 - [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

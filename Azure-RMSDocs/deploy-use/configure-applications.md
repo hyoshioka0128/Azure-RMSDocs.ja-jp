@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2477432e53a3aaeee89781a8bd7a595315e86561
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 3e7949075e7bd2a307bc74dfba082decdb1902a5
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207738"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473265"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
@@ -28,10 +28,10 @@ ms.locfileid: "30207738"
 >
 > たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「 **Rights Management** 」や「 **IRM**」などの検索語句を入力します。 Windows 用 Azure Information Protection クライアントについては、「[Azure Information Protection ユーザー ガイド](../rms-client/client-user-guide.md)」を参照してください。
 
-組織に Azure Information Protection をデプロイしたら、次の情報を使用してアプリケーション、Azure Information Protection クライアント、サービスを構成します。 たとえば、Word 2016、Word 2013、Word 2010 などの Office アプリケーションです。 また、Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスも含まれます。 これらのアプリケーションとサービスで Azure Information Protection からデータ保護サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](../understand-explore/applications-support.md)」を参照してください。
+組織に Azure Information Protection をデプロイしたら、次の情報を使用してアプリケーション、Azure Information Protection クライアント、サービスを構成します。 たとえば、Word 2016、Word 2013、Word 2010 などの Office アプリケーションです。 また、Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスも含まれます。 これらのアプリケーションとサービスで Azure Information Protection からデータ保護サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](../applications-support.md)」を参照してください。
 
 > [!IMPORTANT]
-> サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](../get-started/requirements-azure-rms.md)」を参照してください。
+> サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](../requirements.md)」を参照してください。
 
 -   [Office 365: クライアントとオンライン サービスの構成](configure-office365.md)
 
@@ -65,5 +65,4 @@ Azure Rights Management サービスをサポートするためにアプリケ�
 
 - [Azure Information Protection テナント キーに対する操作](operations-tenant-key.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

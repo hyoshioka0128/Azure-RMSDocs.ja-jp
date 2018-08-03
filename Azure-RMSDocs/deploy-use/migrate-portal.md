@@ -4,7 +4,7 @@ description: Azure クラシック ポータルで行っていた管理タスク
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: ff1cae1695ac37c3e884053e6633a631e236efbe
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 0eb56adc41c18427a2f5058affc525ecfbbf68ba
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376526"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -31,9 +32,6 @@ Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃�
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>使い慣れた管理タスクの実行方法
 
 次の情報を利用して、最新のポータルに短時間で移行できます。
-
-ただし、Office 365 US Government (Government Community Cloud) 用のサブスクリプションを保有しているお客様は現在、Azure Portal を使用することができないため [PowerShell](configure-templates-with-powershell.md) を使用してテンプレートを管理する必要があります。
-
 
 |Azure クラシック ポータル|このタスクを Azure Portal で実行する方法
 |-----------|--------------------|
@@ -66,4 +64,3 @@ Azure Portal の新機能:
 ## <a name="see-also"></a>関連項目
 詳細については、「[Azure Information Protection ポリシーでテンプレートを構成して管理する](../deploy-use/configure-policy-templates.md)」を参照してください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

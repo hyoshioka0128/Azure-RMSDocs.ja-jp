@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0d3abf33ada7c639c1e7b0bad67c36636a9a0951
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 045df42bf847630b89458dabb6e8438a6f97d5b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205916"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372983"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類する
 
@@ -101,4 +101,3 @@ Azure Information Protection バーを使用して、構成されているラベ
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 「[Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)」を参照してください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

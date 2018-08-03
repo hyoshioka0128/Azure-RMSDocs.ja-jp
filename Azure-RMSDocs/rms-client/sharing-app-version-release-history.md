@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 1ebeef2847a8404d5970673acd3163b336cf0406
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208619"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473357"
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Rights Management 共有アプリケーション: バージョン リリース履歴
 
@@ -81,7 +81,7 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 -   Azure RMS 用の多要素認証 (MFA) をサポートするようになりました。それにより、最新の認証を利用するアプリケーションの Microsoft サインイン アシスタントへの依存関係が削除されました。
 
-    詳細については、「[Azure Information Protection の Azure Active Directory の要件](../get-started/requirements-azure-ad.md)」の「[多要素認証 (MFA) と Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection)」セクションを参照してください。
+    詳細については、「[Azure Information Protection の Azure Active Directory の要件](../requirements-servers.md)」の「[多要素認証 (MFA) と Azure Information Protection](../requirements-servers.md)」セクションを参照してください。
 
 ## <a name="version-1017840"></a>バージョン 1.0.1784.0
 **リリース日**: 2015 年 7 月 30 日
@@ -130,4 +130,3 @@ Azure Information Protection チームは、Rights Management 共有アプリケ
 
 -   **組織内の複数の電子メール ドメインのサポート**: AD RMS を使用している組織のユーザーが複数の電子メール ドメインを持つ場合、この更新プログラムによって、このユーザーは、他のドメイン内にある自分の組織のユーザーによって保護されているコンテンツを使用できます。 詳細については、「[Rights Management 共有アプリケーション管理者ガイド](sharing-app-admin-guide.md)」の「[AD RMS のみ: 組織内での複数の電子メール ドメインのサポート](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization)」セクションを参照してください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

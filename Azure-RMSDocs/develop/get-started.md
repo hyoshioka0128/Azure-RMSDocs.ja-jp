@@ -14,12 +14,12 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bddbc42a555ee6ccbd4dd7b41a4183374a1db070
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 34ad679cf5af056b1397a8ec4bdab6542f29c7f8
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764545"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371708"
 ---
 # <a name="get-started"></a>作業開始
 
@@ -54,5 +54,3 @@ ms.locfileid: "27764545"
   |[開発環境のセットアップ](setup-developer-environment.md)|次のトピックは、特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する必要があることを示しています。|
   |[コード例](code-examples.md)|MS RMS SDK 4.2 には、いくつかのサポートされているオペレーティング システム向けのコード例と実用的なプロジェクトが含まれています。|
   |[コミュニティのリソース](community-resources.md)|Active Directory Rights Management サービスは、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

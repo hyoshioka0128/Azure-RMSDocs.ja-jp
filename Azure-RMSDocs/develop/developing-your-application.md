@@ -14,12 +14,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 794e0b89f58944c6734992c57e1ad3a7aa58238a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: ecbc6ced2b67f3f378a03e98cd6a12b488efbce4
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765818"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373041"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -231,4 +231,3 @@ Azure への接続に必要なパラメーターを読み込みます。
 
 6. 最後に、ポリシーのメタデータの一部 (ポリシー名、説明、発行者 (Azure AD テナント) の表示名) を入力します。![アプリの出力 - 手順 6](../media/develop/app-output-6.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

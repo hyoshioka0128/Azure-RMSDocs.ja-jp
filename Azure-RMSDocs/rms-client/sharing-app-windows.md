@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4a5541e076fa4324c4a79df4d18daacc6b3dafb5
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 43f0496854b17ee476c04b7b5ea3e3430b704c92
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206990"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473282"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Windows 用 Rights Management 共有アプリケーション
 
@@ -27,7 +27,7 @@ ms.locfileid: "30206990"
 > **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 
 
 
-Windows 用 Rights Management 共有アプリケーション (単に“ RMS 共有アプリ” とも呼ばれます) は、[Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) または [Azure Information Protection](../understand-explore/what-is-information-protection.md) を使用する組織のための無料でダウンロードできるアプリケーションです。 このアプリケーションは、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Azure Information Protection の Azure Rights Management サービスを使って保護しているコンテンツを使いたい組織向けでもあります。
+Windows 用 Rights Management 共有アプリケーション (単に“ RMS 共有アプリ” とも呼ばれます) は、[Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) または [Azure Information Protection](../what-is-information-protection.md) を使用する組織のための無料でダウンロードできるアプリケーションです。 このアプリケーションは、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Azure Information Protection の Azure Rights Management サービスを使って保護しているコンテンツを使いたい組織向けでもあります。
 
 -   [Rights Management 共有アプリケーション: バージョン リリース履歴](sharing-app-version-release-history.md)
 
@@ -43,4 +43,3 @@ Windows 用 Rights Management 共有アプリケーション (単に“ RMS 共�
 ## <a name="see-also"></a>参照
 [Windows 用 Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn467883)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

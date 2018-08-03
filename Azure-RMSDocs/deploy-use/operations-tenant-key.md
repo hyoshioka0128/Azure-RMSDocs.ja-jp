@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f459504f43c8e361e36832b19011f93d1cbaccc4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: a12d0a885b4ed4762124511929bb9f139e8c02db
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205797"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369777"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーに対する操作
 
@@ -44,4 +44,3 @@ Azure Key Vault で独自のテナント キーを自分で管理する場合、
 
 ただし、信頼された発行ドメイン (TPD) を Active Directory Rights Management サービスからインポートして、Azure Information Protection テナント キーを作成する場合、このインポート操作は「[AD RMS から Azure Information Protection への移行](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」作業の一部になります。  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 77d511cc466441ffc28d813be9a0ec86ff3d8fa7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 9cc8d49b62155354b96ad04f76c335be2124f15a
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205038"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473510"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Azure Rights Management をアクティブ化する方法
 
@@ -44,7 +44,7 @@ Office 365 管理センターから Azure Rights Management サービスにア�
     >
     >Azure Rights Management サービスをアクティブ化するには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。 
     
-    サービスのアクティブ化のヘルプが必要な場合、またはサブスクリプションの要件に関する質問がある場合は、[Microsoft サポートにお問い合わせいただく](../get-started/information-support.md#to-contact-microsoft-support)か、標準サポート チャネルを使用してください。
+    サービスのアクティブ化のヘルプが必要な場合、またはサブスクリプションの要件に関する質問がある場合は、[Microsoft サポートにお問い合わせいただく](../information-support.md#to-contact-microsoft-support)か、標準サポート チャネルを使用してください。
 
 4. **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]** をクリックします。
 
@@ -56,4 +56,3 @@ Office 365 管理センターから Azure Rights Management サービスにア�
 ## <a name="next-steps"></a>次の手順
 「[Azure Rights Management をアクティブにする](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」を引き続きお読みください。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

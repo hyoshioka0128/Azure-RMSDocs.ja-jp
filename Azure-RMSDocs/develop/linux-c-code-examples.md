@@ -14,12 +14,12 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b711e68f970c26f627802c05a3a9417734e72fb5
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 610356d02579cd37baacc97588fe3193eb2eef00
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765512"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371086"
 ---
 # <a name="linux-code-examples"></a>Linux のコード例
 
@@ -590,5 +590,3 @@ ms.locfileid: "27765512"
 **手順 5**: 結果からアクセス トークンを取得します。説明: **result-> accessToken()** メソッドを呼び出します。
 
 **注**  いずれかの認証ライブラリ メソッドにより **rmsauth::Exception** が発生する場合があります
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 79befd96ba20fa3dcb86dbb5a511e0fec6bc8447
-ms.sourcegitcommit: b993c332e53d7aa48d93d4bbd42c80abcf79b351
+ms.openlocfilehash: 27bc46bd6afb94b4a87836d2cad18d3cb6ea9b9f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107000"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375574"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>ユーザー ガイド: RMS 共有アプリケーションを使用して実行するタスク
 
@@ -55,5 +55,4 @@ RMS 共有アプリケーションで選択していた特定のオプション�
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 「[Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)」をご覧ください。
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  
