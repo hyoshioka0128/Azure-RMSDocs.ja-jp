@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62f854264f48b51e6177c033d95dabaf75e2dc5d
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: 07da614bf7971ee4ef89ec9ec3830be188483201
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31009119"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371766"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
@@ -51,7 +51,7 @@ Windows クライアントを再構成する方法の詳細については、次
     
     *\<AD RMS クラスター>* には、お客様の AD RMS クラスターの FQDN を指定します。 例: **rmscluster.contoso.com**。
     
-    代わりに、そのドメインに 1 つだけ AD RMS クラスターがある場合は、AD RMS クラスターのドメイン名だけを指定できます。 この例では、**contoso.com** になります。このレコードにドメイン名を指定すると、リダイレクトがそのドメインの任意またはすべての AD RMS クラスターに適用されます。
+    代わりに、そのドメインに 1 つだけ AD RMS クラスターがある場合は、AD RMS クラスターのドメイン名だけを指定できます。 この例では、**contoso.com** になります。 このレコードにドメイン名を指定すると、リダイレクトがそのドメインの任意またはすべての AD RMS クラスターに適用されます。
     
     *\<ポート>* 番号は無視されます。
     
@@ -67,7 +67,8 @@ Windows クライアントを再構成する方法の詳細については、次
     |**優先度**|0|  
     |**重み**|0|  
     |**ポート番号**|80|  
-    |**このサービスを提供しているホスト**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
+    |
+  **このサービスを提供しているホスト**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. AD RMS の発行エンドポイントの Office 2016 ユーザーに拒否のアクセス許可を設定します。
 
@@ -141,5 +142,3 @@ Windows クライアントを再構成する方法の詳細については、次
 
 ## <a name="next-steps"></a>次の手順
 移行を続行するには、「[移行フェーズ 4 - サービス構成のサポート](migrate-from-ad-rms-phase4.md)」に進んでください。
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
