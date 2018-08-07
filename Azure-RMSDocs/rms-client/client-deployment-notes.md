@@ -4,7 +4,7 @@ description: Rights Management サービス クライアント (RMS クライア
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
-ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
+ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376536"
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
@@ -108,7 +109,7 @@ RMS クライアントのライセンスはローカル ディスクに格納さ
 > *\<SID*> は、サーバー アプリケーションを実行しているアカウントのセキュリティ識別子 (SID) です。 たとえば、アプリケーションが組み込みの Network Service アカウントで実行されている場合、*\<SID\>* をそのアカウントの既知の SID (S-1-5-20) の値に置き換えます。
 
 ### <a name="windows-registry-settings-for-the-rms-client"></a>RMS クライアントの Windows レジストリ設定
-Windows レジストリ キーを使用して、一部の RMS クライアントの構成を設定または変更することができます。 たとえば、AD RMS サーバーと通信する RMS 対応のアプリケーションの管理者は、エンタープライズ サービスの場所を更新する (発行用に現在選択されている AD RMS サーバーを上書きする) ことをお勧めします。これは、Active Directory トポロジ内のクライアント コンピューターの場所により異なります。 または、クライアント コンピューターでの RMS のトレースを有効にすることをお勧めします。これは、RMS 対応アプリケーションで発生する問題のトラブルシューティングに役立ちます。 次の表を使用して、RMS クライアント用に変更できるレジストリ設定を特定します。
+Windows レジストリ キーを使用して、一部の RMS クライアントの構成を設定または変更することができます。 たとえば、AD RMS サーバーと通信する RMS 対応のアプリケーションの管理者は、エンタープライズ サービスの場所を更新する (発行用に現在選択されている AD RMS サーバーをオーバーライドする) ことをお勧めします。これは、Active Directory トポロジ内のクライアント コンピューターの場所により異なります。 または、クライアント コンピューターでの RMS のトレースを有効にすることをお勧めします。これは、RMS 対応アプリケーションで発生する問題のトラブルシューティングに役立ちます。 次の表を使用して、RMS クライアント用に変更できるレジストリ設定を特定します。
 
 |作業|Settings|
 |--------|------------|
@@ -172,13 +173,15 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
     *\<テナントの URL\>* は、**{GUID}.rms.[Region].aadrm.com** という形式です。この値は、Azure RMS の [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行して **RightsManagementServiceId** 値で確認できます。
 
 > [!NOTE]
-> このサービスの検出フローには 3 つの重要な例外があります。
+> このサービスの検出フローには 4 つの重要な例外があります。
 > 
-> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com))。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定を上書きするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
+> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com))。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定をオーバーライドするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
 >
-> - Azure Information Protection ラベルから Rights Management サービスを呼び出すと、サービスの検出は実行されません。 その代わりに、Azure Information Protection ポリシーで構成されているラベル設定で URL が直接指定されます。  
-
+> - Azure Information Protection ラベルから Rights Management サービスを呼び出すと、サービスの検出は実行されません。 その代わりに、Azure Information Protection ポリシーで構成されているラベル設定で URL が直接指定されます。 
+>  
 > - ユーザーが Office アプリケーションからサインインを開始すると、使用する Azure Information Protection テナントの識別に認証のユーザー名 (とドメイン) が使用されます。 この場合、レジストリ設定は不要であり、SCP は確認されません。
+> 
+> - Office 2016 のクイック実行デスクトップ アプリ用に [DNS のリダイレクト](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) を構成した場合、以前に検出された AD RMS クラスターへのアクセスが拒否されることで、RMS クライアントは Azure Rights Management サービスを検出します。 この拒否アクションにより、クライアントは SRV レコードを検索し、クライアントをテナントの Azure Rights Management サービスにリダイレクトします。 また、この SRV レコードを使用すると、AD RMS クラスターによって保護されている電子メールを Exchange Online で復号化することができます。 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>AD RMS のみ: Active Directory を使用してサーバー側のサービスの検出を有効にする
 十分な権限を持つアカウントの場合 (Enterprise Admins および AD RMS サーバーのローカルの管理者)、AD RMS ルート クラスター サーバーをインストールする際にサービス接続ポイント (SCP) を自動的に登録することができます。 フォレスト内に SCP が既に存在する場合、新規 SCP を登録する前に、まず既存の SCP を削除する必要があります。
@@ -244,7 +247,7 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 
 3.  LicensingRedirection サブキーを作成するには、**[Servicelocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして、「**LicensingRedirection**」と入力します。
 
-4.  ライセンスのリダイレクトを設定するには、**[LicensingRedirection]** サブキーを右クリックして**[新規]** を選択し、**[String value]** を選択します。  **[名前]** には以前のサーバーのライセンス URL を指定し、**[値]** には新しいサーバーのライセンス URL を指定します。
+4.  ライセンスのリダイレクトを設定するには、**[LicensingRedirection]** サブキーを右クリックして **[新規]** を選択し、**[String value]** を選択します。  **[名前]** には以前のサーバーのライセンス URL を指定し、**[値]** には新しいサーバーのライセンス URL を指定します。
 
     たとえば、Contoso.com にあるサーバーからFabrikam.com のサーバーにライセンスをリダイレクトするには、次の値を入力します。
 
@@ -259,4 +262,3 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 
 6.  レジストリ エディターを閉じます。
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
