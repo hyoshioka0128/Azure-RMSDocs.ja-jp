@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: fe04cc36f99e641cb11ef832e967699106728749
-ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
+ms.openlocfilehash: 7bc9e67ae029cedc734f3060fe43f62367a805ba
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39217843"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371494"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -114,7 +114,8 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
     |--------------------------|---------------------------------------------|
     |Policy1.1.msip |バージョン 1.2|
     |Policy1.2.msip |バージョン 1.3 - 1.7|
-    |Policy1.3.msip |バージョン 1.8 以降|
+    |Policy1.3.msip |バージョン 1.8 - 1.29|
+    |Policy1.4.msip |バージョン 1.32 以降|
     
 2. 特定したファイルの名前を **Policy.msip** に変更し、Azure Information Protection クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
 
@@ -228,6 +229,51 @@ Azure Information Protection クライアントがユーザーによって指定
 
 - 値: **True**
 
+## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+既定では、Azure Information Protection クライアントで PDF ファイルが保護されている場合、結果のファイル名の拡張子は .ppdf になります。 この動作を変更し、ファイル名の拡張子を .pdf のままにして PDF 暗号化の ISO 標準に準拠することができます。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。  
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー: **EnablePDFv2Protection**
+
+- 値: **True**
+
+この構成オプションの結果、Azure Information Protection クライアントが PDF ファイルを保護している場合、このアクションによって保護された PDF ドキュメントが作成されます。作成された PDF ドキュメントは、プレビュー版の Windows 用 Azure Information Protection クライアント版や、PDF 暗号化の ISO 標準をサポートする他の PDF リーダーで開くことができます。 iOS および Android 用の Azure Information Protection アプリは、現在、PDF 暗号化の ISO 標準をサポートしていません。
+
+Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。
+
+現在のプレビューの既知の問題: ドキュメントのプロパティで、保護された PDF の作成者に正しくない値が表示されます。
+
+## <a name="support-for-files-protected-by-secure-islands"></a>Secure Islands によって保護されたファイルのサポート
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、プレビュー版の Azure Information Protection クライアント、Azure Information Protection スキャナー、または Azure Information Protection ビューアーが必要です。
+
+ドキュメントを保護するために Secure Islands を使用した場合、この保護の結果、テキスト ファイル、画像ファイル、一般的に保護対象となるファイルが保護される可能性があります。 たとえば、ファイル名の拡張子が .ptxt、.pjpeg、または .pfile のファイルです。 以下のようにレジストリを編集すると、Azure Information Protection はこれらのファイルを復号化できます。
+
+
+以下のように **EnableIQPFormats** という DWORD 値を次のレジストリ パスに追加し、値データを **1** に設定します。
+
+- 64 ビット版の Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP
+
+- 32 ビット版の Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP
+
+このレジストリ編集の結果、次のシナリオがサポートされます。
+
+- Azure Information Protection ビューアーは、これらの保護されたファイルを開くことができます。
+
+- エクスプローラーと PowerShell でこれらのファイルの保護を解除し、Azure Information Protection を使用して再び保護することができます。
+
+- エクスプローラー、PowerShell、Azure Information Protection スキャナーで、これらのファイルにラベルを付けることができます。
+
+- Azure Information Protection スキャナーは、これらのファイルに機密情報が含まれているかどうかを検査できます。
+
+- [ラベル付け移行クライアントのカスタマイズ](#migrate-labels-from-secure-islands-and-other-labeling-solutions)を使用して、これらの保護されたファイルの Secure Islands ラベルを Azure Information Protection ラベルに変換することができます。
+
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
 この構成オプションは、現在プレビューの段階で、変更される可能性があります。
@@ -235,6 +281,9 @@ Azure Information Protection クライアントがユーザーによって指定
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
 Secure Islands によってラベル付けされた Office ドキュメントや PDF ドキュメントは、Azure Information Protection のラベルでラベル付けし直すことができます。そのためには、独自に定義したマッピングを使用します。 また、この方法を使用して、他のソリューションからのラベルを、そのラベルが Office ドキュメントにある場合は再利用することができます。 
+
+> [!NOTE]
+> PDF および Office ドキュメント以外に、Secure Islands によって保護されているファイルがある場合、[前のセクション](#support-for-files-protected-by-secure-islands)で説明したようにレジストリを編集した後に再びラベルを付けることができます。 
 
 この構成オプションの結果として、Azure Information Protection の新しいラベルは、Azure Information Protection クライアントによって次のように適用されます。
 
@@ -258,7 +307,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 Secure Islands の "Confidential" というラベルを持ったドキュメントは、Azure Information Protection の "Confidential" というラベルに変更されます。
 
-この例では:
+この例では、次の点に注意してください。
 
 - Azure Information Protection のラベル **Confidential** のラベルID は、1ace2cc3-14bc-4142-9125-bf946a70542c です。 
 
@@ -275,7 +324,7 @@ Secure Islands の "Confidential" というラベルを持ったドキュメン�
 
 Secure Islands によって "Sensitive" というラベルを付けられたドキュメントは、Azure Information Protection によって "Highly Confidential" というラベルに変更されます。
 
-この例では:
+この例では、次の点に注意してください。
 
 - Azure Information Protection のラベル **Highly Confidential** のラベルID は、3e9df74d-3168-48af-8b11-037e3021813f です。
 
@@ -293,7 +342,7 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 
 "Internal" という単語を含む Secure Islands のラベルが 2 つあり、この Secure Islands のラベルのいずれかを含んでいるドキュメントを、Azure Information Protection によって "General" にラベル付けし直します。
 
-この例では:
+この例では、次の点に注意してください。
 
 - Azure Information Protection のラベル **General** のラベル ID は、2beb8fe7-8293-444 c-9768-7fdc6f75014d です。
 
@@ -390,7 +439,7 @@ Azure Information Protection ラベルが保護を適用する場合は、この
 - Azure Information Protection のラベルごとに、**msip_labels** ヘッダーにラベル名 (**General** など) が含まれている場合に適用されるメール フロー ルールを作成し、このラベルにマッピングするメッセージ分類を適用します。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 これで Azure Information Protection クライアントのカスタマイズができました。次に、このクライアントのサポートに必要な追加情報を記載した以下の記事をご覧ください。
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
@@ -402,4 +451,3 @@ Azure Information Protection ラベルが保護を適用する場合は、この
 - [PowerShell コマンド](client-admin-guide-powershell.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
