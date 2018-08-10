@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f529b761ef757612b621e948a49805448f9414ba
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: a450aabe8b2e318e4cb7be65f9c4d7d48941dc95
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474669"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488762"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
@@ -30,11 +30,11 @@ ms.locfileid: "39474669"
 
 管理者がポリシーを構成している場合、Azure Rights Management サービスによって保護が自動で実行される場合があります。 たとえば、SharePoint ライブラリや Exchange トランスポート ルールなどがこれに該当します。 それ以外の場合、エンド エーザーは自分のアプリケーションから自分で保護を適用する必要があります。 たとえば、ユーザーは保護を適用するように構成されている分類ラベルを選択するか、テンプレートを選択するか、特定のオプションを選択します。 ユーザーによる保護の適用は、ユーザーが共有するファイルを保護していて、選択したユーザーまたは組織外のユーザーにアクセスや使用を制限する場合に一般的です。
 
-テンプレートを使用すると、ユーザー (およびポリシーを構成する管理者) が、簡単に正しいレベルの保護を適用し、組織内のユーザーにアクセスを制限することができます。 Azure Rights Management サービスには、2 つの既定のテンプレートが付属していますが、カスタム テンプレートを作成すると、ユーザーと管理者が個別のオプションを指定する時間を減らすことができます。 テンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./deploy-use/configure-policy-templates.md)」を参照してください。
+テンプレートを使用すると、ユーザー (およびポリシーを構成する管理者) が、簡単に正しいレベルの保護を適用し、組織内のユーザーにアクセスを制限することができます。 Azure Rights Management サービスには、2 つの既定のテンプレートが付属していますが、カスタム テンプレートを作成すると、ユーザーと管理者が個別のオプションを指定する時間を減らすことができます。 テンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
-ユーザーが保護を自分で適用する必要がある場合は、必ずユーザーに指示を与え、適用の方法とタイミングに関するガイダンスを提供してください。 ユーザーが使用するアプリケーションとバージョン、用途について具体的に指示してください。 また、ビジネスに適切な保護を適用するタイミングと方法について指示してください。 詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](./deploy-use/help-users.md)」を参照してください。
+ユーザーが保護を自分で適用する必要がある場合は、必ずユーザーに指示を与え、適用の方法とタイミングに関するガイダンスを提供してください。 ユーザーが使用するアプリケーションとバージョン、用途について具体的に指示してください。 また、ビジネスに適切な保護を適用するタイミングと方法について指示してください。 詳細については、「[ユーザーに Azure Rights Management でファイルを保護するためのヘルプを提供する](help-users.md)」を参照してください。
 
-Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](./deploy-use/configure-applications.md)」を参照してください。
+Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
 
 検索サービスは、さまざまな方法で Rights Management と統合できます。 次に例を示します。 
 

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e4db3996a201909fcf861a4190cbe6647a7326c
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 55d3b303a84a557ad5f65760d963221878a7b521
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474619"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488853"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
@@ -33,7 +33,7 @@ Azure Information Protection は他のサービスをサポートし、また、
 
 - Azure Information Protection で使用されるすべての暗号化キーは RSA 2048 ビットを使用する顧客固有のルート キーを使用して保護されます。 RSA 1024 も下位互換性のためにサポートされています。 [詳細情報](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- 顧客固有のルート キーは Microsoft によって管理されるか、または Thales HSM の顧客が "[Bring Your Own Key](./plan-design/plan-implement-tenant-key.md)"(BYOK) を使用してプロビジョニングします。 Azure Information Protection は、クラウドベースのキーで保護すべきでないことを示す要件の影響を受けるコンテンツに対して "[Hold Your Own Key](./deploy-use/configure-adrms-restrictions.md)" (HYOK) を使ってオンプレミスのキーの制限付き機能もサポートします。
+- 顧客固有のルート キーは Microsoft によって管理されるか、または Thales HSM の顧客が "[Bring Your Own Key](plan-implement-tenant-key.md)"(BYOK) を使用してプロビジョニングします。 Azure Information Protection は、クラウドベースのキーで保護すべきでないことを示す要件の影響を受けるコンテンツに対して "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) を使ってオンプレミスのキーの制限付き機能もサポートします。
 
 - Azure Information Protection サービスは世界中のリージョンのデータ センターでホストされています。 Azure Information Protection のキーとポリシーは常に最初にデプロイされたリージョン内に保持されます。
  

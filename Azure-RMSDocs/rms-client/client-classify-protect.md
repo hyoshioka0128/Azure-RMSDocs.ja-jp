@@ -4,7 +4,7 @@ description: ドキュメントや電子メールを分類して保護する方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: baf3edc435672c8339c15ea74f5b5e14d6951f96
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: dbe983b1c777308a01a2c1c9b7a97571cb9a7d08
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371545"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575459"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -181,7 +181,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 -   [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
-**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../deploy-use/configure-policy-settings.md)」を参照してください。
+**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../configure-policy-settings.md)」を参照してください。
 
-その他の構成手順: [Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)
+その他の構成手順: [Azure Information Protection ポリシーの構成](../configure-policy.md)
 

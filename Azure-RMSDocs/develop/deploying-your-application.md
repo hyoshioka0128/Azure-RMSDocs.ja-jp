@@ -14,12 +14,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 365d1bf0e36fda964f185713f5514a91f4c6df53
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 17590360f7e5111678496e2bb386e8a47ae0dd99
+ms.sourcegitcommit: 7ed2a257f68435fe6807af8975a5477801ec2537
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473635"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39501304"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -109,7 +109,7 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 
 > [!IMPORTANT]
-> Azure ベースの RMS でクライアント アプリケーションを実行する場合は、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](./requirements-subscriptions.md)」を参照してください。
+> Azure ベースの RMS でクライアント アプリケーションを実行する場合は、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../requirements.md)」を参照してください。
 > Azure RMS での実行に関する詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 -   Microsoft ダウンロード センターから [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/download/details.aspx?id=28177)をダウンロードします。

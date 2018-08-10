@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: af9cfca4d328dba7646c1c319744476fe0e6b43f
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 5c162b1a25332c977d2c4976338854904abfcc54
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474173"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575551"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -117,7 +117,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
 
     - お使いのコンピューターが Office 2010 を実行する場合は、コンピューターを再起動します。 
         
-        ServiceLocation パラメーターを指定してクライアントをインストールしなかった場合は、Azure Information Protection バーを使う Office アプリケーション (Word など) を初めて開くときに、この初回使用時にレジストリを更新するプロンプトを確認する必要があります。 [サービス検索](../rms-client/client-deployment-notes.md#rms-service-discovery)はレジストリ キーの設定に使用されます。 
+        ServiceLocation パラメーターを指定してクライアントをインストールしなかった場合は、Azure Information Protection バーを使う Office アプリケーション (Word など) を初めて開くときに、この初回使用時にレジストリを更新するプロンプトを確認する必要があります。 [サービス検索](client-deployment-notes.md#rms-service-discovery)はレジストリ キーの設定に使用されます。 
     
     - その他のバージョンの Office では、Office アプリケーションとエクスプローラーのインスタンスをすべて再起動します。 
         
@@ -147,7 +147,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 1. PowerShell セッションから、最初に [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) を実行し、管理者の資格情報を指定して Azure Rights Management サービスに接続します。 [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration) を実行します。 
  
-    Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](../deploy-use/install-powershell.md)」を参照してください。
+    Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
 
 2. 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
@@ -202,7 +202,7 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 Azure Information Protection クライアントに含まれている PowerShell モジュールには、スキャナーをインストールし、構成するためのコマンドレットがあります。 ただし、スキャナーを使用するには、クライアントのフル バージョンをインストールする必要があります。PowerShell モジュールのみをインストールすることはできません。
 
-このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 これでスキャナーをインストールする準備ができました。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-aip-scanner.md)」を参照してください。
+このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 これでスキャナーをインストールする準備ができました。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントをインストールしたので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6c500c099a382d4a4a070b05a55043bc66dc9543
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: aa1b24e24d05487014280fd6334d013466b6777f
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474649"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489129"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -34,9 +34,9 @@ ms.locfileid: "39474649"
 
 Office アプリと Azure Information Protection クライアントを構成する用意ができている場合:
 
-- Office アプリを構成するには、「[Office アプリ: クライアントの構成](./deploy-use/configure-office-apps.md)」を参照してください。
+- Office アプリを構成するには、「[Office アプリ: クライアントの構成](configure-office-apps.md)」を参照してください。
 
-- Azure Information Protection クライアントをインストールして構成するには、「[Azure Information Protection クライアント: クライアントのインストールと構成](./deploy-use/configure-client.md)」を参照してください。
+- Azure Information Protection クライアントをインストールして構成するには、「[Azure Information Protection クライアント: クライアントのインストールと構成](configure-client.md)」を参照してください。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用するとき、Azure Rights Management をサポートする Information Rights Management (IRM) オプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
@@ -57,9 +57,9 @@ Exchange Online または Exchange Server を使用するとき、Azure Rights M
 
 Exchange の IRM を構成する用意ができている場合:
 
-- Exchange Online については、「[Exchange Online: IRM 構成](./deploy-use/configure-office365.md#exchange-online-irm-configuration)」を参照してください。
+- Exchange Online については、「[Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)」を参照してください。
 
-- Exchange On-Premises については、「[Azure Rights Management コネクタをデプロイする](./deploy-use/deploy-rms-connector.md)」を参照してください。
+- Exchange On-Premises については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
 ## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online と SharePoint Server
@@ -74,7 +74,7 @@ SharePoint のリストとライブラリについては、この保護は常に
 
 最初に SharePoint の IRM サービスを有効にする必要があります。 次に、ライブラリの IRM アクセス許可を指定します。 SharePoint Online と OneDrive for Business の場合、ユーザーは OneDrive for Business ライブラリに対しても IRM アクセス許可を指定できます。 SharePoint は権限ポリシー テンプレートを使用しませんが、テンプレートに指定できるいくつかの設定と同じ設定を SharePoint の構成で選択できます。
 
-SharePoint Server を使用する場合、Azure Rights Management コネクタをデプロイすることでこの IRM 保護を使用できます。 このコネクタはオンプレミス サーバーと Rights Management クラウド サービスの間のリレーとして機能します。 詳細については、「[Azure Rights Management コネクタをデプロイする](./deploy-use/deploy-rms-connector.md)」を参照してください。
+SharePoint Server を使用する場合、Azure Rights Management コネクタをデプロイすることでこの IRM 保護を使用できます。 このコネクタはオンプレミス サーバーと Rights Management クラウド サービスの間のリレーとして機能します。 詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 > [!NOTE]
 > 現在のところ、SharePoint IRM を使用するとき、いくつかの制限があります。
@@ -93,9 +93,9 @@ SharePoint IRM 保護を使用する場合、Azure Rights Management サービ�
 
 SharePoint の IRM を構成する用意ができている場合:
 
-- SharePoint Online については、「[SharePoint Online と OneDrive for Business: IRM 構成](./deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」を参照してください。
+- SharePoint Online については、「[SharePoint Online と OneDrive for Business: IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」を参照してください。
 
-- Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](./deploy-use/deploy-rms-connector.md)」を参照してください。
+- Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
 ## <a name="next-steps"></a>次の手順
@@ -104,4 +104,4 @@ Office 365 をお持ちの場合、「[Office 365 のファイル保護ソリュ
 
 他のアプリケーションおよびサービスで Azure Information Protection からの Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」をご覧ください。
 
-アプリケーションとサービスの構成など、デプロイを開始する用意ができたら、「[Azure Information Protection デプロイ ロードマップ](./plan-design/deployment-roadmap.md)」を参照してください。
+アプリケーションとサービスの構成など、デプロイを開始する用意ができたら、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」を参照してください。

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb50971c3bdfd464927866a72e2657f7acffd515
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 8fccb3dccfdef523bf1ffdee4bc5be175b3f94fd
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474709"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488952"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -52,30 +52,30 @@ Windows 用の Rights Management 共有アプリケーションを現在使用�
 
 Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Information Protection のすべての管理タスクを実行できます。 ただし、管理アクセス許可を他のユーザーに割り当てる場合は、次のオプションがあります。
 
-- **Information Protection 管理者**: この Azure Active Directory 管理者ロールでは、管理者が Azure Information Protection のさまざまな設定を構成できますが、他のサービスは構成できません。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)と [AADRM モジュール](./deploy-use/administer-powershell.md)からのすべての PowerShell コマンドレットを実行できます。 
+- **Information Protection 管理者**: この Azure Active Directory 管理者ロールでは、管理者が Azure Information Protection のさまざまな設定を構成できますが、他のサービスは構成できません。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)と [AADRM モジュール](administer-powershell.md)からのすべての PowerShell コマンドレットを実行できます。 
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。
 
-- **セキュリティ管理者**: この Azure Active Directory 管理者ロールでは、管理者が、他の Azure サービスの一部を構成するだけでなく、Azure Portal で Azure Information Protection のさまざまな設定を構成することができます。 この役割を持つ管理者は、[AADRM モジュールからどの PowerShell コマンドレット](./deploy-use/administer-powershell.md)も実行することはできません。
+- **セキュリティ管理者**: この Azure Active Directory 管理者ロールでは、管理者が、他の Azure サービスの一部を構成するだけでなく、Azure Portal で Azure Information Protection のさまざまな設定を構成することができます。 この役割を持つ管理者は、[AADRM モジュールからどの PowerShell コマンドレット](administer-powershell.md)も実行することはできません。
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。 この役割のユーザーが持つその他のアクセス許可を確認するには、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」セクションを参照してください。
 
-- Azure Rights Management の**グローバル管理者**および**コネクタ管理者**: これらの Azure Rights Management の管理者ロールの場合、グローバル管理者は、ユーザーをその他のクラウド サービスのグローバル管理者にすることなく、[AADRM モジュールからすべての PowerShell コマンドレット](./deploy-use/administer-powershell.md)を実行するアクセス許可をユーザーに付与し、コネクタ管理者は Rights Management (RMS) コネクタのみを実行するアクセス許可を付与します。 これらの管理者ロールはどちらも、管理コンソールへのアクセス許可を付与することはありません。また、ドキュメント追跡サイトで管理者モードを使用することはありません。
+- Azure Rights Management の**グローバル管理者**および**コネクタ管理者**: これらの Azure Rights Management の管理者ロールの場合、グローバル管理者は、ユーザーをその他のクラウド サービスのグローバル管理者にすることなく、[AADRM モジュールからすべての PowerShell コマンドレット](administer-powershell.md)を実行するアクセス許可をユーザーに付与し、コネクタ管理者は Rights Management (RMS) コネクタのみを実行するアクセス許可を付与します。 これらの管理者ロールはどちらも、管理コンソールへのアクセス許可を付与することはありません。また、ドキュメント追跡サイトで管理者モードを使用することはありません。
 
     これらのいずれかの管理者ロールを割り当てるには、AADRM PowerShell コマンドレット ([Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator)) を使用します。
 
 注意事項:
 
-- [オンボーディング コントロール](./deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 たとえば、コンテンツを保護する機能を "IT department" グループに制限するようにオンボーディング コントロールが構成されている場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。 
+- [オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 たとえば、コンテンツを保護する機能を "IT department" グループに制限するようにオンボーディング コントロールが構成されている場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。 
 
-- 管理者ロールが割り当てられているユーザーは、Azure Information Protection によって保護されたドキュメントやメールから保護を自動的に削除することはできません。 スーパー ユーザーを割り当てられたユーザーだけが、スーパー ユーザー機能が有効になっているときにのみ、この操作を行うことができます。 ただし、Azure Information Protection への管理アクセス許可を割り当てたすべてのユーザーが、各自のアカウントなど、ユーザーにスーパー ユーザーを割り当てることができます。 また、スーパー ユーザー機能を有効にすることもできます。 これらのアクションは、管理者ログに記録されます。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./deploy-use/configure-super-users.md)」のセキュリティのベスト プラクティスに関するセクションを参照してください。 
+- 管理者ロールが割り当てられているユーザーは、Azure Information Protection によって保護されたドキュメントやメールから保護を自動的に削除することはできません。 スーパー ユーザーを割り当てられたユーザーだけが、スーパー ユーザー機能が有効になっているときにのみ、この操作を行うことができます。 ただし、Azure Information Protection への管理アクセス許可を割り当てたすべてのユーザーが、各自のアカウントなど、ユーザーにスーパー ユーザーを割り当てることができます。 また、スーパー ユーザー機能を有効にすることもできます。 これらのアクションは、管理者ログに記録されます。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)」のセキュリティのベスト プラクティスに関するセクションを参照してください。 
 
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
 はい。 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
 
-Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](./deploy-use/deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)を使用して、よりシームレスな認証方法をユーザーに提供できます。
+Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)を使用して、よりシームレスな認証方法をユーザーに提供できます。
 
 必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
@@ -111,9 +111,9 @@ Azure Information Protection のラベルでは、ドキュメントおよび電
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Windows Server FCI と Azure Information Protection スキャナーの違い
 
-しばらくの間、[Rights Management コネクタ](./deploy-use/deploy-rms-connector.md) (Office ドキュメントのみ) や [PowerShell スクリプト](./rms-client/configure-fci.md) (すべてのファイルの種類) を使用して、ドキュメントを分類し、保護するには、Windows Server ファイル分類インフラストラクチャを使用することができました。 
+しばらくの間、[Rights Management コネクタ](deploy-rms-connector.md) (Office ドキュメントのみ) や [PowerShell スクリプト](./rms-client/configure-fci.md) (すべてのファイルの種類) を使用して、ドキュメントを分類し、保護するには、Windows Server ファイル分類インフラストラクチャを使用することができました。 
 
-[Azure Information Protection スキャナー](./deploy-use/deploy-aip-scanner.md)を使用できるようになりました。 スキャナーは Azure Information Protection クライアントと Azure Information Protection ポリシーを使用して、ドキュメント (すべてのファイルの種類) にラベルを付けるため、これらのドキュメントは分類され、必要に応じて保護されます。
+[Azure Information Protection スキャナー](deploy-aip-scanner.md)を使用できるようになりました。 スキャナーは Azure Information Protection クライアントと Azure Information Protection ポリシーを使用して、ドキュメント (すべてのファイルの種類) にラベルを付けるため、これらのドキュメントは分類され、必要に応じて保護されます。
 
 この 2 つのトポロジの主な違いを次に示します。
 
@@ -123,7 +123,7 @@ Azure Information Protection のラベルでは、ドキュメントおよび電
 |操作モード: <br /><br />- リアルタイム|操作モード: <br /><br />- 体系的にデータ ストアをクロールします。このサイクルは 1 回のみまたは繰り返し実行できます|
 |ファイルの種類ごとのサポート: <br /><br />- すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office のファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護に含めることができます|
 
-現在、ローカル フォルダーまたはネットワーク共有で保護されるファイルに対して、[Rights Management 所有者](./deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定に違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定をオーバーライドすることができます。
+現在、ローカル フォルダーまたはネットワーク共有で保護されるファイルに対して、[Rights Management 所有者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定に違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定をオーバーライドすることができます。
 
 - Windows Server FCI の場合: すべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定したり、各ファイルの Rights Management 所有者を動的に設定したりすることができます。 Rights Management 所有者を動的に設定するには、**-OwnerMail [ソース ファイルの所有者の電子メール]** パラメーターと値を使用します。 この構成では、ファイルの所有者プロパティのユーザー アカウント名を使用して、Active Directory からユーザーのメール アドレスを取得します。
 

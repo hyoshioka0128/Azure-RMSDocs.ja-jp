@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのク�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/29/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74cd50008213b9a78745a14e7753d252b1adcf53
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 517113c447857800a585dccadd66314b131523a4
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374638"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575881"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
@@ -85,9 +85,9 @@ Azure Information Protection クライアントをインストールした後、
     
 - ユーザーの理由 (該当する場合)
 
-- 指定したユーザー、グループ、または組織の[エンコーディング名に基づく使用権限](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions)が含まれるカスタム アクセス許可 (該当する場合)
+- 指定したユーザー、グループ、または組織の[エンコーディング名に基づく使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)が含まれるカスタム アクセス許可 (該当する場合)
     
-保護サービスの使用状況ログについては、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」をご覧ください。
+保護サービスの使用状況ログについては、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../log-analyze-usage.md)」をご覧ください。
 
 
 

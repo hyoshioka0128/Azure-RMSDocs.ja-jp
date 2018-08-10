@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74cb6b6cd03621f52860012331fbf4cf518459dc
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f9189de08c7089087ba37964a9d7acee3f537d02
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473969"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575677"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -55,13 +55,13 @@ Azure Information Protection クライアントには次のものが含まれま
 
 - ファイルに対して分類ラベルと保護を適用および削除するための PowerShell モジュール。 
     
-    このモジュールには、Windows Server 上でサービスとして実行される [Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md) をインストールし、構成するためのコマンドレットが含まれます。 このサービスを利用すると、ネットワーク共有や SharePoint Server ライブラリなど、データ ストアのファイルを検出、分類、保護できます。
+    このモジュールには、Windows Server 上でサービスとして実行される [Azure Information Protection スキャナー](../deploy-aip-scanner.md) をインストールし、構成するためのコマンドレットが含まれます。 このサービスを利用すると、ネットワーク共有や SharePoint Server ライブラリなど、データ ストアのファイルを検出、分類、保護できます。
 
 - Azure Rights Management (Azure RMS) または Active Directory Rights Management サービス (AD RMS) と通信する Rights Management クライアント。
 
 Azure Information Protection クライアントは、Azure サービス (Azure Information Protection とそのデータ保護サービス、Azure Rights Management) と併用すると最適です。 ただし、いくつか制限はありますが、オンプレミス バージョンの Rights Management である AD RMS でも使用できます。 Azure Information Protection と AD RMS でサポートされている機能の包括的な比較については、「[Azure Information Protection と AD RMS の比較](../compare-on-premise.md)」をご覧ください。 
 
-AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
+AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
 
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Azure Information Protection クライアントのデプロイが必要な場合
@@ -106,7 +106,7 @@ Windows Update、実行可能ファイル、または Windows インストーラ
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
-既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../deploy-use/configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
+既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
 
 **[フィードバックの送信]** リンクを使って、Information Protection チームに提案または要求を送信します。 テクニカル サポートの場合はこのオプションを使わず、代わりに「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」をご覧ください。 
 
@@ -162,7 +162,7 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 これらの言語については、Azure Information Protection クライアントのメニュー オプション、ダイアログ ボックス、およびメッセージがユーザーの言語で表示されます。 言語を検出するインストーラーが 1 つあるため、他言語の Azure Information Protection クライアントをインストールするための追加の構成は必要ありません。 
 
-ただし、Azure Information Protection ポリシーでラベルを構成するときは、指定するラベルの名前と説明は自動的には翻訳されません。 2017 年 8 月 30 日以降、最新の[既定のポリシー](../deploy-use/configure-policy-default.md)には一部の言語のサポートが含まれるようになりました。 ユーザーに希望する言語でラベルが表示されるようにするには、独自の翻訳を指定し、その翻訳を使用するように Azure Information Protection ポリシーを構成する必要があります。 詳細については、「[Azure Information Protection で他の言語用ラベルを構成する方法](../deploy-use/configure-policy-languages.md)」を参照してください。 視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
+ただし、Azure Information Protection ポリシーでラベルを構成するときは、指定するラベルの名前と説明は自動的には翻訳されません。 2017 年 8 月 30 日以降、最新の[既定のポリシー](../configure-policy-default.md)には一部の言語のサポートが含まれるようになりました。 ユーザーに希望する言語でラベルが表示されるようにするには、独自の翻訳を指定し、その翻訳を使用するように Azure Information Protection ポリシーを構成する必要があります。 詳細については、「[Azure Information Protection で他の言語用ラベルを構成する方法](../configure-policy-languages.md)」を参照してください。 視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
@@ -196,7 +196,7 @@ Windows Update を使用する場合、Azure Information Protection クライア
 
 手動でアップグレードし、かつインストール方法を変更する場合は、最初に以前のバージョンをアンインストールします。 たとえば、実行可能 (.exe) バージョンのクライアントから Windows インストーラ― (.msi) バージョンのクライアントに変更する場合です。 または、クライアントの以前のバージョンをインストールする必要がある場合です。 たとえば、テスト用に現在のプレビュー バージョンがインストールされていて、現在の一般公開バージョンに戻す必要がある場合です。
 
-Azure Information Protection クライアントのサポート ポリシー、現在サポートされているバージョン、サポートされているリリースの新機能や機能変更については、[バージョン リリース履歴とサポート ポリシー](../rms-client/client-version-release-history.md)に関する記事をご覧ください。 
+Azure Information Protection クライアントのサポート ポリシー、現在サポートされているバージョン、サポートされているリリースの新機能や機能変更については、[バージョン リリース履歴とサポート ポリシー](client-version-release-history.md)に関する記事をご覧ください。 
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
 

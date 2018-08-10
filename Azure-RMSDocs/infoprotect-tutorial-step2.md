@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 403d5d2222438136e5d449dbe4b26b693ad566d0
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: eb99fb447702dd2f453c1caacbb8ccd341ed127b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474639"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489486"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成する
 
@@ -32,7 +32,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
        > [!NOTE]
        > 実際の既定のポリシーは、このチュートリアルの既定のポリシーとは若干異なる場合があります。 たとえば、ラベル名が **[全般]** ではなく **[内部]** である場合や、**[非常に機密性の高い社外秘]** ではなく **[秘密]** である場合があります。 **[受信者のみ]** という名前のサブラベルがない場合、またはラベルがまったくない場合があります。 これらの違いは、テナントに対して作成された時期によっては既定のポリシーにさまざまなバージョンが存在するためです。 または、このチュートリアルを開始する前に、自分で編集した可能性があります。
        > 
-       > 使用する既定のポリシーが異なる場合でも、このチュートリアルを使用することはできますが、この後に示す手順や図を参照するときに、これらの変更に注意してください。 最新の既定のポリシーに合わせて既定のポリシーを変更する場合は、「[Azure Information Protection の既定のポリシー](./deploy-use/configure-policy-default.md)」を参照してください。
+       > 使用する既定のポリシーが異なる場合でも、このチュートリアルを使用することはできますが、この後に示す手順や図を参照するときに、これらの変更に注意してください。 最新の既定のポリシーに合わせて既定のポリシーを変更する場合は、「[Azure Information Protection の既定のポリシー](configure-policy-default.md)」を参照してください。
     
     - 既定の構成では、一部のラベルには視覚的なマーキングが構成されていることに注意してください。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 既定のポリシーによっては、一部のラベルに保護が設定されていることもあります。 次に例を示します。 
     
@@ -96,7 +96,7 @@ Azure Information Protection には構成しないで使用できる既定のポ
 
 8. コンテンツの有効期限とオフライン アクセスを確認して既定値のままにし、**[OK]** をクリックして保存して、**[保護]** ブレードを閉じます。
 
-8. **[サブラベル]** ブレードに戻り、**[視覚的なマーキングの設定]**  セクションを見つけます。
+8. **[サブラベル]** ブレードに戻り、**[視覚的なマーキングの設定] ** セクションを見つけます。
     
     **[このラベルが付いたドキュメントにはフッターをつける]** 設定で、**[オン]** をクリックし、**[テキスト]** ボックスに「**Classified as Confidential**」と入力します。 
     
@@ -151,10 +151,10 @@ Azure Portal を閉じても、開いたままにしておきこのチュート�
 
 |必要な詳細情報|追加情報|
 |--------------------------------|--------------------------|
-|既定のポリシーと異なるバージョンについて|[Azure Information Protection の既定のポリシー](./deploy-use/configure-policy-default.md)|
-|ポリシーの構成について|[Azure Information Protection ポリシーの構成](./deploy-use/configure-policy.md)|
-|保護のラベルを構成する詳細な手順|[Rights Management による保護でラベルを構成する方法](./deploy-use/configure-policy-protection.md)|
-|アクセス許可に関する詳細情報|[Azure Rights Management の使用権限を構成する](./deploy-use/configure-usage-rights.md)|
+|既定のポリシーと異なるバージョンについて|[Azure Information Protection の既定のポリシー](configure-policy-default.md)|
+|ポリシーの構成について|[Azure Information Protection ポリシーの構成](configure-policy.md)|
+|保護のラベルを構成する詳細な手順|[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)|
+|アクセス許可に関する詳細情報|[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)|
 
 
 

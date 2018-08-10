@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01bf7e0e090482a74c8f5e162bb8771cf8ee941b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 288b945f785f3f12226d48ad7a91aab8a2747c77
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474579"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489350"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
 
@@ -127,4 +127,4 @@ ms.locfileid: "39474579"
 
 さらにドキュメントを共有してみて、使用方法を追跡し、ドキュメントの失効のしくみを確認します。
 
-その後で Azure Portal の **[クイック スタート]** ページに戻り、Azure Information Protection について[よく寄せられる質問](faqs.md)を読んだり、この他のドキュメントの記事を詳しく調べてみたりすると、役立つ情報を得られることがあります。 ただし、組織の Azure Information Protection のデプロイを開始する準備ができている場合は、[Azure Information Protection のデプロイ ロードマップ](./plan-design/deployment-roadmap.md)に進む必要があります。 
+その後で Azure Portal の **[クイック スタート]** ページに戻り、Azure Information Protection について[よく寄せられる質問](faqs.md)を読んだり、この他のドキュメントの記事を詳しく調べてみたりすると、役立つ情報を得られることがあります。 ただし、組織の Azure Information Protection のデプロイを開始する準備ができている場合は、[Azure Information Protection のデプロイ ロードマップ](deployment-roadmap.md)に進む必要があります。 

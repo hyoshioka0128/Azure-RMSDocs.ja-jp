@@ -10,18 +10,18 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 601b60d7ece2cf1c67865b25b6e897b8f2905dc8
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b060288efd080397f754d6aecd71abc4bbaabf81
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475149"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488812"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-このチュートリアルを使用すると、5 つの手順を実行するだけで約 20 分で Azure Information Protection を簡単に試すことができます。 このチュートリアルは、Azure Information Protection で提供される機能のいくつかを簡単に紹介するガイドなしデモとして設計されています。 使用可能な機能がすべて含まれているわけではなく、組織用のデプロイ ガイドとして使用するものではありません。 組織向けの Azure Information Protection をデプロイする場合は、[デプロイ ロードマップ ドキュメント](./plan-design/deployment-roadmap.md)を参照してください。 
+このチュートリアルを使用すると、5 つの手順を実行するだけで約 20 分で Azure Information Protection を簡単に試すことができます。 このチュートリアルは、Azure Information Protection で提供される機能のいくつかを簡単に紹介するガイドなしデモとして設計されています。 使用可能な機能がすべて含まれているわけではなく、組織用のデプロイ ガイドとして使用するものではありません。 組織向けの Azure Information Protection をデプロイする場合は、[デプロイ ロードマップ ドキュメント](deployment-roadmap.md)を参照してください。 
 
 このチュートリアルは、IT 管理者やコンサルタントが組織向けのエンタープライズ情報保護ソリューションとして Azure Information Protection を評価する際の支援を目的としたものです。 運用環境では、Information Protection ポリシーの構成、およびユーザー用のクライアントのインストールに関する手順は、管理者が行います。 ドキュメントにラベルを付け、電子メールでドキュメントを安全に共有し、それを追跡する手順は、エンドユーザーが行います。 このチュートリアルにはこれらの手順がすべて含まれており、組織のデータの分類、ラベル付け、保護に関する標準的なエンド ツー エンド シナリオが示されています。 
 

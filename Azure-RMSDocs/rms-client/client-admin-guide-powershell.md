@@ -4,7 +4,7 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7853cfc577329e04a1f378a419f0e1ef3eca0f2a
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: 69aa0078f854c04c6eaf360e8f17a0597523f832
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411072"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575643"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -39,7 +39,7 @@ Azure Information Protection クライアントをインストールすると、
 > 
 > Windows Server 2016 の場合、Windows 10 用の最新の管理用テンプレート (.admx) をインストールすれば、同じグループ ポリシー設定を使用できます。
 
-[Azure Information Protection スキャナー](../deploy-use/deploy-aip-scanner.md)では AzureInformationProtection モジュールのコマンドレットを使用して、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
+[Azure Information Protection スキャナー](../deploy-aip-scanner.md)では AzureInformationProtection モジュールのコマンドレットを使用して、Windows Server にサービスをインストールし、構成します。 このスキャナーでは、データ ストアのファイルを検出、分類、保護できます。
 
 すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/module/azureinformationprotection)」 (AzureInformationProtection モジュール) を参照してください。 PowerShell セッション内で、「`Get-Help <cmdlet name> -online`」と入力すると、最新のヘルプが表示されます。  
 
@@ -92,13 +92,13 @@ AzureInformationProtection モジュールのインストールに関する前�
 
 この前提条件は、ラベルを使ってデータ保護を適用する場合、または Azure Rights Management サービスに直接接続してデータ保護を適用する場合に適用されます。
 
-Azure Information Protection テナントがアクティブ化されていない場合は、「[Rights Management をアクティブにする](../deploy-use/activate-service.md)」の手順をご覧ください。
+Azure Information Protection テナントがアクティブ化されていない場合は、「[Rights Management をアクティブにする](../activate-service.md)」の手順をご覧ください。
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>前提条件 2: 自分のアカウントを使って他のユーザーのファイルから保護を削除するには
 
 他のユーザーのファイルから保護を削除する一般的なシナリオには、データの探索またはデータの回復が含まれます。 ラベルを使って保護を適用している場合は、保護を適用しない新しいラベルを設定することによって、またはラベルを削除することによって保護を削除できます。 ただし、Azure Rights Management サービスに直接接続して保護を削除することもできます。
 
-ファイルから保護を削除するには、Rights Management の使用権限を持っているか、スーパー ユーザーである必要があります。 データの探索またはデータの回復には、スーパー ユーザー機能が通常使われます。 この機能を有効にし、アカウントをスーパー ユーザーとして構成するには、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」をご覧ください。
+ファイルから保護を削除するには、Rights Management の使用権限を持っているか、スーパー ユーザーである必要があります。 データの探索またはデータの回復には、スーパー ユーザー機能が通常使われます。 この機能を有効にし、アカウントをスーパー ユーザーとして構成するには、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../configure-super-users.md)」をご覧ください。
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>前提条件 3: ユーザー操作なしにファイルを保護または保護解除するには
 
@@ -140,7 +140,7 @@ Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -
 
 Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマンドレットを実行します。
 
-1. このモジュールがコンピューターにまだインストールされていない場合は、「[AADRM PowerShell モジュールのインストール](../deploy-use/install-powershell.md)」を参照してください。
+1. このモジュールがコンピューターにまだインストールされていない場合は、「[AADRM PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
 
 2. **[管理者として実行]** オプションを使って、Windows PowerShell を起動します。
 
@@ -234,7 +234,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 このサービス プリンシパル アカウントをスーパー ユーザーにすることを検討します。このサービス プリンシパル アカウントでいつでも他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準のユーザー アカウントをスーパー ユーザーとして構成するときと同じように、Azure RMS コマンドレットの [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) を使いますが、**ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
 
-スーパー ユーザーについて詳しくは、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../deploy-use/configure-super-users.md)」をご覧ください。
+スーパー ユーザーについて詳しくは、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../configure-super-users.md)」をご覧ください。
 
 > [!NOTE]
 > 自分のアカウントを使って Azure Rights Management サービスへの認証を行う場合は、ファイルを保護または保護解除する前、またはテンプレートを取得する前に、Set-RMSServerAuthentication を実行する必要はありません。
@@ -466,7 +466,7 @@ AzureInformationProtection モジュールをインストールするための�
 既定では、ラベル付けのコマンドレットを実行するとき、対話型 PowerShell セッション内のユーザー コンテキストでコマンドは動作します。 自動実行するには、そのための新しい Azure AD ユーザー アカウントを作成します。 次に、ユーザーのコンテキストで Set-AIPAuthentication コマンドレットを実行し、Azure AD のアクセス トークンを使用して資格情報を設定し、格納します。 次に、このユーザー アカウントは、Azure Rights Management サービスに認証され、ブートストラップされます。 このアカウントは、Azure Information Protection ポリシーと、ラベルが使用する Rights Management テンプレートをダウンロードします。
 
 > [!NOTE]
-> [スコープ付きポリシー](../deploy-use/configure-policy-scope.md)を使用する場合は、このアカウントをスコープ付きポリシーに追加しなければならない場合があります。
+> [スコープ付きポリシー](../configure-policy-scope.md)を使用する場合は、このアカウントをスコープ付きポリシーに追加しなければならない場合があります。
 
 このコマンドレットを初めて実行する際は、Azure Information Protection へのサインインを求められます。 自動実行ユーザー用に作成したユーザー アカウント名とパスワードを指定します。 これ以降、このアカウントでは、認証トークンの有効期限が切れるまで、ラベル付けのコマンドレットを非対話形式で実行できます。 
 

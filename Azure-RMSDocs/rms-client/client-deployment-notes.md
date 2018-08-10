@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 571545905a0fac6bb1ea9b80c351b96f9f70899b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376536"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489445"
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
@@ -158,7 +158,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 
 1. **ローカル コンピューターの Windows レジストリ**: サービスの検出の設定がレジストリで構成されている場合、これらの設定が最初に試行されます。 
 
-    既定では、これらの設定はレジストリで構成されていませんが、管理者は[次のセクション](#enabling-client-side-service-discovery-by-using-the-windows-registry)に従って AD RMS 用に設定を構成することができます。 管理者は、通常、AD RMS から Azure Information Protection への[移行プロセス](../plan-design/migrate-from-ad-rms-phase2.md)中に Azure Rights Management サービス用にこれらの設定を構成します。
+    既定では、これらの設定はレジストリで構成されていませんが、管理者は[次のセクション](#enabling-client-side-service-discovery-by-using-the-windows-registry)に従って AD RMS 用に設定を構成することができます。 管理者は、通常、AD RMS から Azure Information Protection への[移行プロセス](../migrate-from-ad-rms-phase2.md)中に Azure Rights Management サービス用にこれらの設定を構成します。
 
 2. **Active Directory Domain Services**: ドメインに参加しているコンピューターは、サービス接続ポイント (SCP) を Active Directory に照会します。 
 
@@ -181,7 +181,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 >  
 > - ユーザーが Office アプリケーションからサインインを開始すると、使用する Azure Information Protection テナントの識別に認証のユーザー名 (とドメイン) が使用されます。 この場合、レジストリ設定は不要であり、SCP は確認されません。
 > 
-> - Office 2016 のクイック実行デスクトップ アプリ用に [DNS のリダイレクト](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) を構成した場合、以前に検出された AD RMS クラスターへのアクセスが拒否されることで、RMS クライアントは Azure Rights Management サービスを検出します。 この拒否アクションにより、クライアントは SRV レコードを検索し、クライアントをテナントの Azure Rights Management サービスにリダイレクトします。 また、この SRV レコードを使用すると、AD RMS クラスターによって保護されている電子メールを Exchange Online で復号化することができます。 
+> - Office 2016 のクイック実行デスクトップ アプリ用に [DNS のリダイレクト](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) を構成した場合、以前に検出された AD RMS クラスターへのアクセスが拒否されることで、RMS クライアントは Azure Rights Management サービスを検出します。 この拒否アクションにより、クライアントは SRV レコードを検索し、クライアントをテナントの Azure Rights Management サービスにリダイレクトします。 また、この SRV レコードを使用すると、AD RMS クラスターによって保護されている電子メールを Exchange Online で復号化することができます。 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>AD RMS のみ: Active Directory を使用してサーバー側のサービスの検出を有効にする
 十分な権限を持つアカウントの場合 (Enterprise Admins および AD RMS サーバーのローカルの管理者)、AD RMS ルート クラスター サーバーをインストールする際にサービス接続ポイント (SCP) を自動的に登録することができます。 フォレスト内に SCP が既に存在する場合、新規 SCP を登録する前に、まず既存の SCP を削除する必要があります。

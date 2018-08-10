@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cb4195b1b63c39d1d6e47d1c94d2f7e1c2c83e63
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371851"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575847"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Azure Information Protection のセキュリティのベスト プラクティス
 
@@ -81,7 +81,7 @@ AIP は、インポート アドレス テーブル (IAT) の実行時または�
 
 AIP 発行ライセンスに表記されている権利をアプリケーションが正しく解釈および適用していない場合、情報所有者が意図していなかった方法で情報が入手可能になることがあります。 たとえば、発行ライセンスで付与されているのが、情報の閲覧権限のみであるにもかかわらず、アプリケーションがユーザーに対して、暗号化されていない情報の新しいメディアへの保存を許可する場合などです。
 
-AIP システムは、複数の権限をいくつかのグループに分けています。 詳細については、「[Azure Rights Management の使用権限を構成する](../deploy-use/configure-usage-rights.md)」を参照してください。
+AIP システムは、複数の権限をいくつかのグループに分けています。 詳細については、「[Azure Rights Management の使用権限を構成する](../configure-usage-rights.md)」を参照してください。
 
 ### <a name="azure-information-protection"></a>Azure Information Protection  
 API はユーザーに対して、情報の暗号化を解除すること、または解除しないことを許可します。情報自体の保護機能はありません。 ユーザーが情報の暗号化を解除する権限を持っている場合、API はそれを許可するため、暗号化が解除された後でその情報を管理または保護することは、アプリケーションの責任です。 また、情報の不正使用を防ぐように環境およびインターフェイスを管理することは、アプリケーションの責任です。たとえば、ライセンスで再生権限のみが許可されている場合は、**[印刷]** ボタンと **[コピー]** ボタンを無効にします。 テスト スイートでは、認識しているすべてのライセンス権限に対して、アプリケーションが正しく動作することを検証する必要があります。

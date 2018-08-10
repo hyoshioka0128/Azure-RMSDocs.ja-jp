@@ -11,12 +11,12 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: cfd090df79e640ef6106f2c72001b2b05969cdf6
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 096f5d02e4bcb39390bcd6f6ed64476f4a74d5eb
+ms.sourcegitcommit: 7ed2a257f68435fe6807af8975a5477801ec2537
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473901"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39501270"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -41,7 +41,7 @@ ms.locfileid: "39473901"
 
 ## <a name="powershell-guides"></a>PowerShell ガイド
 
-Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳細については、「[Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
+Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳細については、「[Using PowerShell with the Azure Information Protection client](/azure/information-protection/rms-client/client-admin-guide-powershell)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
 
 ## <a name="user-applications"></a>ユーザー アプリケーション
 
@@ -144,5 +144,5 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 ### <a name="see-also"></a>関連項目
 
 - [開発者の用語](terms.md)
-- [Azure Information Protection の用語 - ITPro](./terminology.md)
+- [Azure Information Protection の用語 - ITPro](../terminology.md)
 

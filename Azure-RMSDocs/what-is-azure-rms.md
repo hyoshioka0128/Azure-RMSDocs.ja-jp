@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7af3c166eafda4d0fa5ec5a85c47353b593776b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 96eb395f9fb8a73d903422d2f6afbba22b7df91b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475039"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489254"
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
 
@@ -51,7 +51,7 @@ Azure Information Protection のこのデータ保護サービスの詳細につ
 
 Azure Information Protection ラベルを使用してドキュメントの保護を自分で試してみる場合は、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」をご利用ください。 このチュートリアルでは、機密データが検出された場合にドキュメントを保護する方法が説明されています。 また、電子メールで共有するドキュメントを保護し、使用方法を追跡し、必要に応じてドキュメントへのアクセスを無効にする方法も説明されています。
 
-ただし、Azure Information Protection を組織にデプロイし、管理者とユーザーがドキュメントと電子メールの保護する準備ができたら、「[Azure Information Protection デプロイ ロードマップ](./plan-design/deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
+ただし、Azure Information Protection を組織にデプロイし、管理者とユーザーがドキュメントと電子メールの保護する準備ができたら、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
 
 > [!TIP]
 > 追加情報やサポートが必要な場合は、「[Azure Information Protection の情報とサポート](information-support.md)」のリソースとリンクをご利用ください。

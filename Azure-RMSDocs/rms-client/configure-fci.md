@@ -4,7 +4,7 @@ description: Rights Management (RMS) クライアントと Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9780e355839edaa4b6eccea9692b2a1058affaa
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 850f57534287a7df0a93bfd88399e3417f6aff09
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474190"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575626"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -28,7 +28,7 @@ ms.locfileid: "39474190"
 このソリューションを使用すると、Windows Server を搭載するファイル サーバー上のフォルダー内のすべてのファイルを自動的に保護したり、特定の条件に一致するファイルを自動的に保護したりすることができます。 たとえば、機密性の高い情報が含まれるものとして分類されたファイルなどです。 このソリューションは Azure Information Protection から Azure Rights Management サービスに直接接続してファイルを保護するため、このサービスを組織にデプロイしておく必要があります。
 
 > [!NOTE]
-> Azure Information Protection にはファイル分類インフラストラクチャをサポートする[コネクタ](../deploy-use/deploy-rms-connector.md)が含まれますが、そのソリューションはネイティブな保護 (たとえば Office ファイル) のみをサポートします。
+> Azure Information Protection にはファイル分類インフラストラクチャをサポートする[コネクタ](../deploy-rms-connector.md)が含まれますが、そのソリューションはネイティブな保護 (たとえば Office ファイル) のみをサポートします。
 > 
 > Windows Server のファイル分類インフラストラクチャで複数のファイルの種類をサポートするには、この記事で説明するように、PowerShell の **AzureInformationProtection** モジュールを使用する必要があります。 Azure Information Protection クライアントと同様に、Azure Information Protection コマンドレットは汎用的な保護とネイティブ保護をサポートしています。つまり、Office ドキュメント以外のファイルの種類も保護できます。 詳細については、「Azure Information Protection クライアント管理者ガイド」の「[File types supported by the Azure Information Protection client](client-admin-guide-file-types.md)」(Azure Information Protection クライアントでサポートされるファイルの種類) を参照してください。
 
@@ -53,7 +53,7 @@ ms.locfileid: "39474190"
     
     - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
     
-- オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../plan-design/prepare.md)」をご覧ください。
+- オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
     
 - ファイル サーバーに Rights Management テンプレートをダウンロードして、ファイルを保護するテンプレート ID を識別しました。 このためには、[Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用します。 このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があります。
 

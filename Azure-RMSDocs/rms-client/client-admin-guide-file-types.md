@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdf710737c4bcf5ffbfdd3ab6476f6b5cd118854
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: fcba3a4bf59c3c18dab53de9e06d5484e092465c
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371283"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575592"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -63,7 +63,7 @@ Azure Information Protection クライアントは、次のことをドキュメ
 
 他のファイルの種類では、保護されている場合に分類がサポートされます。 これらのファイルの種類については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」を参照してください。
 
-たとえば、現在の[既定のポリシー](../deploy-use/configure-policy-default.md)では、**全般**ラベルは、分類を適用しますが、保護を適用しません。 **全般ラベル**の場合 sales.pdf という名前のファイルに適用することは可能ですが、sales.txt という名前のファイルに適用することはできません。 
+たとえば、現在の[既定のポリシー](../configure-policy-default.md)では、**全般**ラベルは、分類を適用しますが、保護を適用しません。 **全般ラベル**の場合 sales.pdf という名前のファイルに適用することは可能ですが、sales.txt という名前のファイルに適用することはできません。 
 
 また、現在の既定のポリシーでは、**社外秘 \ すべての従業員**は分類と保護を適用します。 このラベルの場合は、sales.pdf とい名前のファイルと sales.txt という名前のファイルに、このラベルを適用することが可能です。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
@@ -79,7 +79,7 @@ Azure Information Protection クライアントは、次の表に示すように
 
 Azure Information Protection クライアントで適用される既定の保護レベルを変更できます。 既定のレベルをネイティブからジェネリックに、またジェネリックからネイティブに変更することができます。さらに、Azure Information Protection クライアントで保護を適用しないようにすることもできます。 詳細については、この記事の「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションを参照してください。
 
-ユーザーは、管理者によって構成されたラベルを選んで、データ保護を自動的に適用できます。または、ユーザーは、[アクセス許可レベル](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels)を使って、独自のカスタム保護設定を指定できます。 
+ユーザーは、管理者によって構成されたラベルを選んで、データ保護を自動的に適用できます。または、ユーザーは、[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使って、独自のカスタム保護設定を指定できます。 
 
 ### <a name="file-sizes-supported-for-protection"></a>保護がサポートされているファイルのサイズ
 

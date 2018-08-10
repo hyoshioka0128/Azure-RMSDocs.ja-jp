@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f126fe6b76a0d637e202d86bde9f257561c5a72e
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 98c4f32e0964b736c16d28ada37a1d59ee565d41
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474689"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489367"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -56,7 +56,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 認証要件の詳細については、「[Azure Information Protection の Azure Active Directory の要件](requirements-azure-ad.md)」をご覧ください。 
 
-承認用のユーザーとグループ アカウントの要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](./plan-design/prepare.md)」をご覧ください。
+承認用のユーザーとグループ アカウントの要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
 ## <a name="client-devices"></a>クライアント デバイス
 
@@ -142,11 +142,11 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>AD RMS と Azure RMS の共存
 
-次のデプロイ シナリオは、Azure Information Protection を使った [HYOK 保護](./deploy-use/configure-adrms-restrictions.md) ("Hold Your Own Key" 構成) 用に AD RMS を 使用している場合を除き、サポートされません。
+次のデプロイ シナリオは、Azure Information Protection を使った [HYOK 保護](configure-adrms-restrictions.md) ("Hold Your Own Key" 構成) 用に AD RMS を 使用している場合を除き、サポートされません。
 
-- 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](./plan-design/migrate-from-ad-rms-to-azure-rms.md)」を参照)。
+- 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照)。
 
-[AD RMS から Azure Information Protection への移行](http://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aadrm/Set-AadrmMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](./deploy-use/decommission-deactivate.md)」をご覧ください。
+[AD RMS から Azure Information Protection への移行](http://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aadrm/Set-AadrmMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
 
 
 

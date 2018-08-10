@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8f2facdeda749987bb1fffae84a3f1bf033e1ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f08c458ce779149d34d573ba145452f98d612c8c
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474719"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489503"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーション
 
@@ -25,7 +25,7 @@ ms.locfileid: "39474719"
 
 Azure Information Protection では、承認済みユーザーのコラボレーション機能を損なうことなく、ドキュメントを保護できます。 1 人のユーザーが作成し、表示や編集の権限を他のユーザーと共有するドキュメントの多くは、Word、Excel、PowerPoint の Office ドキュメントになります。 これらのドキュメントでは、保護機能がネイティブにサポートされます。つまり、認証と暗号化の機能だけでなく、より詳細に制御するための制限付き権限もサポートされます。 
 
-これらの権限は使用権限と呼ばれ、表示、編集、印刷などの権限があります。 ドキュメントを保護する際に使用権限を個別に定義することもできますし、使用権限のグループ (権限レベル) を定義することもできます。 権限レベルを使用すると、よく使われる使用権限を簡単に選択することができます (たとえば、レビュー担当者や共同作成者など)。 使用権限と権限レベルについて詳しくは、「[Azure Rights Management の使用権限を構成する](./deploy-use/configure-usage-rights.md)」をご覧ください。
+これらの権限は使用権限と呼ばれ、表示、編集、印刷などの権限があります。 ドキュメントを保護する際に使用権限を個別に定義することもできますし、使用権限のグループ (権限レベル) を定義することもできます。 権限レベルを使用すると、よく使われる使用権限を簡単に選択することができます (たとえば、レビュー担当者や共同作成者など)。 使用権限と権限レベルについて詳しくは、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」をご覧ください。
 
 これらの権限を構成する際には、その対象となるユーザーを指定できます。
 
@@ -44,7 +44,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 この例では、既存のラベルを構成して保護を適用し、組織内のユーザーが他のユーザーとドキュメントでコラボレーションできるようにする手順について説明します。コラボレーションに含めるのは、Office 365 または Azure AD を使用している他の組織内の全ユーザー、Office 365 または Azure AD を使用している他の組織内のグループ、および Azure AD のアカウントを持たずに Gmail のメール アドレスを使用しているユーザーです。
 
-シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例としては、「[例 5: コンテンツを暗号化するがアクセスを制限しないラベル](./deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)」をご覧ください。  
+シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例としては、「[例 5: コンテンツを暗号化するがアクセスを制限しないラベル](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)」をご覧ください。  
 
 1. グローバル ポリシーまたはスコープ付きポリシーに含まれている既存のラベルを選択します。 **[保護]** ブレードで、**[Azure (クラウド キー)]** が選択されていることを確認します。
     
@@ -79,10 +79,10 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 |ラベルの適用方法|詳細情報|
 |---------------|----------|
 |Office アプリケーションでのドキュメント作成時に、手動でラベルを選択する。|Office リボンの **[保護]** ボタンか、Azure Information Protection バーからラベルを選択します。|
-|新規ドキュメントの保存時に、ラベルを選択するように求められる。|**[すべてのドキュメントとメールにラベルを付ける]** という Azure Information Protection [ポリシー設定](./deploy-use/configure-policy-settings.md)を構成した場合です。|
+|新規ドキュメントの保存時に、ラベルを選択するように求められる。|**[すべてのドキュメントとメールにラベルを付ける]** という Azure Information Protection [ポリシー設定](configure-policy-settings.md)を構成した場合です。|
 |電子メールによってドキュメントを共有し、Outlook でラベルを手動で選択する。|Office リボンの **[保護]** ボタン (または Azure Information Protection バー) からラベルを選択すると、添付されたドキュメントが同じ設定で自動的に保護されます。|
 |管理者が PowerShell を使用してドキュメントにラベルを適用する。|[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) コマンドレットを使用して、特定のドキュメントや、フォルダー内のすべてのドキュメントにラベルを適用します。|
-|自動分類を適用するようにラベルを構成する (これは、Azure Information Protection スキャナーまたは PowerShell を使用して適用できるようになりました)。|「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](./deploy-use/configure-policy-classification.md)」をご覧ください。|
+|自動分類を適用するようにラベルを構成する (これは、Azure Information Protection スキャナーまたは PowerShell を使用して適用できるようになりました)。|「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)」をご覧ください。|
 
 このチュートリアルを完了するには、Office アプリケーションでドキュメントを作成する際に手動でラベルを適用します。 
 
@@ -149,9 +149,9 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="next-steps"></a>次の手順
 
-一般的なシナリオで保護を適用するためのラベルについては、他の[構成例](./deploy-use/configure-policy-protection.md#example-configurations)をご覧ください。 この記事には、保護設定に関する詳細も含まれています。
+一般的なシナリオで保護を適用するためのラベルについては、他の[構成例](configure-policy-protection.md#example-configurations)をご覧ください。 この記事には、保護設定に関する詳細も含まれています。
 
-ラベルについて構成できるその他のオプションや設定について詳しくは、[Azure Information Protection ポリシーの構成](./deploy-use/configure-policy.md)に関する記事をご覧ください。 
+ラベルについて構成できるその他のオプションや設定について詳しくは、[Azure Information Protection ポリシーの構成](configure-policy.md)に関する記事をご覧ください。 
 
 この記事で構成されているラベルでは、同じ名前の保護テンプレートも作成されます。 ご使用のアプリケーションやサービスが Azure Information Protection の保護テンプレートと統合されている場合は、このテンプレートを適用できます (たとえば、DLP ソリューションやメール フロー ルール)。 Web 上の Outlook では、Azure Information Protection のグローバル ポリシーからの保護テンプレートが自動的に表示されます。 
 

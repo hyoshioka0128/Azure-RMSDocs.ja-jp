@@ -4,7 +4,7 @@ description: Azure Information Protection でラベルが適用されたファ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b7973c2f0a0edeeba262d647243bfce643f7f88
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: f74354ea3c588093b4fefcf98ce0b4cbf807aedb
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373007"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575779"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>ユーザー ガイド: Azure Information Protection でラベルが適用されたファイル、または Rights Management で保護されているファイルから、ラベルと保護を削除する
 
@@ -78,7 +78,7 @@ Information Protection バーの **[ラベルの削除]** アイコンをクリ�
 - [作業内容](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
-**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../deploy-use/configure-policy-settings.md)」を参照してください。
+**[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../configure-policy-settings.md)」を参照してください。
 
-その他の構成手順: [Azure Information Protection ポリシーの構成](../deploy-use/configure-policy.md)
+その他の構成手順: [Azure Information Protection ポリシーの構成](../configure-policy.md)
 

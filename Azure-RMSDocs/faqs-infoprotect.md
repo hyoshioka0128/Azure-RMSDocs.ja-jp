@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 691bf76154689e69966f173a19e047120748687b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 154c4beb398bdd772f91b85ea2d7d05fe3e3fd16
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474699"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489173"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -55,7 +55,7 @@ Azure Information Protection の [User Voice サイト](https://msip.uservoice.c
 
 ## <a name="how-do-i-prevent-somebody-from-removing-or-changing-a-label"></a>他のユーザーがラベルを削除または変更しないようにするには、どうすればいいですか?
 
-分類ラベルを下げる場合、ラベルを削除する場合、保護を解除する場合にその理由をユーザーが説明しなければならない[ポリシー設定](./deploy-use/configure-policy-settings.md)がありますが、この設定ではこれらの操作を回避しません。 ユーザーによるラベルの削除または変更を防ぐには、コンテンツが既に保護されている必要があります。保護のアクセス許可ではユーザーにエクスポートまたはフル コントロールの[使用権限](./deploy-use/configure-usage-rights.md)が付与されません。 
+分類ラベルを下げる場合、ラベルを削除する場合、保護を解除する場合にその理由をユーザーが説明しなければならない[ポリシー設定](configure-policy-settings.md)がありますが、この設定ではこれらの操作を回避しません。 ユーザーによるラベルの削除または変更を防ぐには、コンテンツが既に保護されている必要があります。保護のアクセス許可ではユーザーにエクスポートまたはフル コントロールの[使用権限](configure-usage-rights.md)が付与されません。 
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
@@ -65,7 +65,7 @@ Azure Information Protection の [User Voice サイト](https://msip.uservoice.c
 
 Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 
 
-Exchange Online のメール フロー ルールでのこのメタデータの使用に関する詳細と例については、「[Configuring Exchange Online mail flow rules for Azure Information Protection labels](./deploy-use/configure-exo-rules.md)」(Azure Information Protection ラベル用に Exchange Online のメール フロー ルールを構成する) をご覧ください。
+Exchange Online のメール フロー ルールでのこのメタデータの使用に関する詳細と例については、「[Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md)」(Azure Information Protection ラベル用に Exchange Online のメール フロー ルールを構成する) をご覧ください。
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 

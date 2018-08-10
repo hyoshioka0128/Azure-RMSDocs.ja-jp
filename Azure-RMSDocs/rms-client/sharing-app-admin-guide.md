@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65fa46d7a978eb87b455d34075bdb3f939a133f7
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b535b90afe43cd262cb637606eb6060c7c2ee277
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474040"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575660"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>保護のレベル – ネイティブと汎用
 
@@ -28,7 +28,7 @@ ms.locfileid: "39474040"
 
 企業ネットワークで Microsoft Rights Management 共有アプリケーションを担当している場合や、「[Rights Management sharing application user guide (Rights Management 共有アプリケーション ガイド](sharing-app-user-guide.md))」または「[FAQ for Microsoft Rights Management Sharing Application for Windows (Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ)](http://go.microsoft.com/fwlink/?LinkId=303971)」よりも詳細な技術情報が必要な場合は、以下の情報を使用してください。
 
-RMS 共有アプリケーションは Azure Information Protection での作業に最適です。このデプロイ構成では、別の組織のユーザーへの保護された添付ファイルの送信、および電子メール通知やドキュメントの追跡と取り消しなどのオプションがサポートされているためです。 ただし、いくつかの制限はあるものの、オンプレミス バージョンの AD RMS でも使用できます。 Azure Information Protection と AD RMS でサポートされている機能の包括的な比較については、「[Azure Information Protection と AD RMS の比較](../compare-on-premise.md)」をご覧ください。 AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../plan-design/migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
+RMS 共有アプリケーションは Azure Information Protection での作業に最適です。このデプロイ構成では、別の組織のユーザーへの保護された添付ファイルの送信、および電子メール通知やドキュメントの追跡と取り消しなどのオプションがサポートされているためです。 ただし、いくつかの制限はあるものの、オンプレミス バージョンの AD RMS でも使用できます。 Azure Information Protection と AD RMS でサポートされている機能の包括的な比較については、「[Azure Information Protection と AD RMS の比較](../compare-on-premise.md)」をご覧ください。 AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
 
 Rights Management 共有アプリケーションの技術的概要、ネイティブ保護とジェネリック保護についての情報、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法については、「[Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細](sharing-app-admin-guide-technical.md)」を参照してください。 
 
@@ -345,7 +345,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection のみ: ドキュメントの追跡の構成
 [ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
 
-これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure Information Protection モジュールが必要です。 インストール手順については、「[AADRM PowerShell モジュールのインストール](../deploy-use/install-powershell.md)」を参照してください。
+これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure Information Protection モジュールが必要です。 インストール手順については、「[AADRM PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
 
 > [!TIP]
 > 事前にモジュールをダウンロードしてインストールしてある場合は、`(Get-Module aadrm –ListAvailable).Version` を実行してバージョン番号を確認します。
@@ -388,7 +388,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 また、ユーザーと管理者がドキュメント追跡サイトを使用する方法をログに記録する要求の種類もあります。 たとえば、**RevokeAccess** は、ユーザーまたはユーザーの代理の管理者が、ドキュメント追跡サイトでドキュメントを取り消した場合の要求の種類です。 この要求の種類と AdminAction フィールドを組み合わせて、ユーザーが自分のドキュメントを取り消したか (AdminAction フィールドが空)、管理者がユーザーの代理でドキュメントを取り消したか (AdminAction が true) を判断できます。
 
 
-使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../deploy-use/log-analyze-usage.md)」を参照してください。
+使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../log-analyze-usage.md)」を参照してください。
 
 ## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>AD RMS のみ: 組織内での複数の電子メール ドメインのサポート
 AD RMS を使用し、(たとえば、合併や買収の結果) 組織のユーザーが複数の電子メール ドメインを保有している場合は、次のレジストリ編集を行います。

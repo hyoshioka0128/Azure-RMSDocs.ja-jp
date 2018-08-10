@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 772b6a27dd1e3b9a3f6f36df55793ce105736284
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: d3daeefc4053cbe4cd7740a7cd3ad07c94c63c08
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475009"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488728"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバーが Azure Rights Management をサポートするしくみ
 
@@ -30,7 +30,7 @@ ms.locfileid: "39475009"
 
 この分類ポリシーは、完全に構成可能で拡張性が高いので、承認されていないユーザーおよび承認されたユーザーからの潜在的なデータの漏えいを防止できます。 管理者がファイルにアクセスする必要がないようなポリシーを構成できるので、ネットワーク管理者からのデータ漏えいのリスクも減らすことができます。
 
-Office ファイル用 RMS コネクタをデプロイおよび構成する方法については、「[Azure Rights Management コネクタをデプロイする](./deploy-use/deploy-rms-connector.md)」を参照してください。
+Office ファイル用 RMS コネクタをデプロイおよび構成する方法については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 すべてのファイルの種類に Windows PowerShell スクリプトを使用する方法については、「[Windows Server ファイル分類インフラストラクチャ &#40;FCI&#41; での RMS の保護](./rms-client/configure-fci.md)」を参照してください。
 

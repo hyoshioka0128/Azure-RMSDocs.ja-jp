@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a503c4232847828bf32d889f4702fbfed39463ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 15df93cfe3a88e3aaafefcb0df05579a726e6d84
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473714"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575830"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルのアクセス許可を変更する
 
@@ -33,7 +33,7 @@ ms.locfileid: "39473714"
 >
 > 同様に、アクセス許可を追加または削除する場合は、追加または削除するアクセス許可だけを指定することはできず、ユーザーに付与するすべてのアクセス許可を指定する必要があります。
 
-保護しなおすファイルの所有者には (たとえば、共有アプリケーションを使用してファイルをもともと保護していた場合)、ファイルを保護しなおすためのアクセス許可が自動的に付与されます。 所有者ではない場合は、保護対象のファイルに現在設定されているアクセス許可に応じて、ファイルを保護しなおすアクセス許可が付与される場合と、付与されない場合があります。 ファイルを保護しなおすには、[フル コントロールの使用権限](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions)が必要です。
+保護しなおすファイルの所有者には (たとえば、共有アプリケーションを使用してファイルをもともと保護していた場合)、ファイルを保護しなおすためのアクセス許可が自動的に付与されます。 所有者ではない場合は、保護対象のファイルに現在設定されているアクセス許可に応じて、ファイルを保護しなおすアクセス許可が付与される場合と、付与されない場合があります。 ファイルを保護しなおすには、[フル コントロールの使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)が必要です。
 
 たとえば、他のユーザーが Rights Management 共有アプリケーションを使用してファイルを保護していて、あるユーザーが属しているグループと、カスタム アクセス許可として**共同所有者**を指定した場合、そのユーザーはファイルを保護しなおすことができます。 一方、あるユーザーの名前またはそのユーザーが属しているグループを指定していない場合、または**レビュー担当者 - 表示および編集**を選択した場合、またはそのユーザーにアクセス許可を付与しないテンプレートを選択した場合は、そのユーザーはファイルを保護しなおせません。 確認する最も簡単な方法は、ファイルを保護し直してみることです。
 

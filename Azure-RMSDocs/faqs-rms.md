@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ee408c47572bcdfcbfccc6d193ed432b92c6f4a1
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 1fccd7712c75ea6f0b45e706377d444b0ae46507
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474769"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489656"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -41,13 +41,13 @@ Microsoft はさまざまなシナリオでのデータ保護に合わせて多�
 
 Azure Information Protection において**独自キーを持ち込む** (BYOK) のは、Azure Rights Management 保護の独自キーをオンプレミスで作成する場合です。 そのキーを Azure Key Vault のハードウェア セキュリティ モジュール (HSM) に転送し、そこでそのキーの所有と管理を続行します。 これを行わない場合、Azure Rights Management 保護では Azure 内で自動的に作成、管理されるキーが使用されます。 この既定の設定は、"顧客管理" ではなく "マイクロソフト管理" と呼ばれます (BYOK オプション)。
 
-BYOK の詳細および組織でこのキー トポロジを選択すべきかについては、「[Azure Information Protection テナント キーの計画と実装](./plan-design/plan-implement-tenant-key.md)」を参照してください。
+BYOK の詳細および組織でこのキー トポロジを選択すべきかについては、「[Azure Information Protection テナント キーの計画と実装](plan-implement-tenant-key.md)」を参照してください。
 
 Azure Information Protection において**独自キーを保持する** (HYOK) 機能は、クラウドに格納されているキーで保護することができないドキュメントや電子メールのサブセットを持つような、少数の組織のためのものです。 こうした組織では、BYOK を使用してキーを作成し管理する場合でも、この制限が適用されます。 この制限は多くの場合、規制やコンプライアンス上の理由によるもので、HYOK 構成は "最高機密" 情報のみに適用されます。すなわち、組織外には決して共有されず、内部ネットワークのみで利用され、モバイル デバイスからアクセスする必要のない情報です。
 
 これらの例外 (通常は、保護する必要のあるすべてのコンテンツの 10% 未満) については、組織は、オンプレミスのソリューションである Active Directory Rights Management サービスを使用して、オンプレミスのキーを作成することができます。 このソリューションでは、コンピューターはクラウドから Azure Information Protection ポリシーを取得しますが、この識別されたコンテンツはオンプレミスのキーを使用して保護することができます。
 
-HYOK の詳細についてや、制限事項の正しい理解や使用するタイミングを確認するには、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](./deploy-use/configure-adrms-restrictions.md)」を参照してください。
+HYOK の詳細についてや、制限事項の正しい理解や使用するタイミングを確認するには、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>現在、Exchange Online で BYOK を使用できますか?
 
@@ -61,7 +61,7 @@ HYOK の詳細についてや、制限事項の正しい理解や使用するタ
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>RMS コネクタには管理パックまたは同様の監視メカニズムがありますか?
 
-Rights Management コネクタは情報、警告、およびエラー メッセージをイベント ログに記録しますが、これらのイベントの監視機能を備えた管理パックはありません。 ただし、イベントの一覧とその説明および修正の実施に役立つ詳細な情報については、「[Azure Rights Management コネクタを監視する](./deploy-use/monitor-rms-connector.md)」を参照してください。
+Rights Management コネクタは情報、警告、およびエラー メッセージをイベント ログに記録しますが、これらのイベントの監視機能を備えた管理パックはありません。 ただし、イベントの一覧とその説明および修正の実施に役立つ詳細な情報については、「[Azure Rights Management コネクタを監視する](monitor-rms-connector.md)」を参照してください。
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?
 
@@ -71,7 +71,7 @@ Rights Management コネクタは情報、警告、およびエラー メッセ�
 
 カスタム テンプレートは、Azure Portal に移動しています。Azure Portal では、引き続きカスタムテンプレートをテンプレートとして管理したり、ラベルに変換することができます。 新しいテンプレートを作成するには、新しいラベルを作成し、Azure RMS 用のデータ保護設定を構成します。 その処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいテンプレートが作成されます。
 
-Azure Portal のテンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./deploy-use/configure-policy-templates.md)」を参照してください。
+Azure Portal のテンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>保護されているドキュメントに対して、使用権限の変更またはユーザーの追加を行いたいのですが、ドキュメントを再保護する必要がありますか。
 
@@ -79,22 +79,22 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 - 変更を加える前にユーザーがドキュメントにアクセスしていない場合、ユーザーがドキュメントを開くとすぐに変更が有効になります。
 
-- ユーザーが既にドキュメントにアクセスしている場合は、ユーザーの[使用ライセンス](./deploy-use/configure-usage-rights.md#rights-management-use-license)の有効期限が過ぎた時点で変更が有効になります。 使用ライセンスの有効期限が切れるまで待てない場合にのみ、ドキュメントを再保護します。 効果的に再保護を行うと、ドキュメントの新しいバージョンが作成され、ユーザーの使用ライセンスも新しくなります。
+- ユーザーが既にドキュメントにアクセスしている場合は、ユーザーの[使用ライセンス](configure-usage-rights.md#rights-management-use-license)の有効期限が過ぎた時点で変更が有効になります。 使用ライセンスの有効期限が切れるまで待てない場合にのみ、ドキュメントを再保護します。 効果的に再保護を行うと、ドキュメントの新しいバージョンが作成され、ユーザーの使用ライセンスも新しくなります。
 
-あるいは、必要なアクセス許可に対して既にグループを構成している場合、グループのメンバーシップを変更してユーザーの追加または除外を行うことができます。ラベルまたはテンプレートの変更は必要ありません。 Azure Rights Management サービスがグループ メンバーシップを[キャッシュ](./plan-design/prepare.md#group-membership-caching-by-azure-information-protection)に入れるため、変更が反映されるまでわずかな遅延が生じる可能性があります。
+あるいは、必要なアクセス許可に対して既にグループを構成している場合、グループのメンバーシップを変更してユーザーの追加または除外を行うことができます。ラベルまたはテンプレートの変更は必要ありません。 Azure Rights Management サービスがグループ メンバーシップを[キャッシュ](prepare.md#group-membership-caching-by-azure-information-protection)に入れるため、変更が反映されるまでわずかな遅延が生じる可能性があります。
 
 カスタム アクセス許可を使用してドキュメントが保護されている場合は、既存のドキュメントのアクセス許可を変更できません。 ドキュメントを再度保護し、この新しいバージョンのドキュメントに必要なすべてのユーザーとすべての使用権限を指定する必要があります。 保護されたドキュメントを再保護するには、"フル コントロール" 使用権限が必要です。
 
 ヒント: ドキュメントがテンプレートで保護されているのか、それともカスタム アクセス許可を使用して保護されているのかを確認するには、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを使用してください。 [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) を実行したときに一意のテンプレート ID が表示されない場合は、カスタム アクセス許可の **[制限されたアクセス]** に関するテンプレートの説明を必ず確認してください。
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>一部のユーザーが Exchange Online 上の Exchange に、他のユーザーが Exchange Server 上の Exchange に登録されているハイブリッド デプロイメント構成です。この構成は、Azure RMS でサポートされていますか。
-はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](./deploy-use/activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](./deploy-use/deploy-rms-connector.md) Exchange Server 用に構成します。
+はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](deploy-rms-connector.md) Exchange Server 用に構成します。
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>運用環境にこの保護を利用すると、会社の環境が Azure RMS に固定されたり、Azure RMS で保護したコンテンツにアクセスできなくなる危険性が生じたりしますか。
-いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「[Azure Rights Management の使用停止と非アクティブ化](./deploy-use/decommission-deactivate.md)」を参照してください。
+いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「[Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)」を参照してください。
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Azure RMS を使用してコンテンツを保護するユーザーを制御できますか。
-はい。Azure Rights Management サービスには、このシナリオのためのユーザー オンボーディング コントロールがあります。 詳細については、記事「[Rights Management をアクティブにする](./deploy-use/activate-service.md)」の「[段階的デプロイのオンボーディング コントロールの構成](./deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」のセクションを参照してください。
+はい。Azure Rights Management サービスには、このシナリオのためのユーザー オンボーディング コントロールがあります。 詳細については、記事「[Rights Management をアクティブにする](activate-service.md)」の「[段階的デプロイのオンボーディング コントロールの構成](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」のセクションを参照してください。
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>ユーザーが、保護されたドキュメントを特定の組織と共有しないようにすることはできますか。
 データ保護に Azure Rights Management サービスを使用する最大の利点の 1 つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
@@ -115,9 +115,9 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
 
-はい。 Azure Portal で構成できる[保護設定](./deploy-use/configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 これについては、必要に応じて「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。 
+はい。 Azure Portal で構成できる[保護設定](configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 これについては、必要に応じて「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。 
 
-Azure Information Protection ラベルがある場合は、最初にカスタム テンプレートをラベルに変換してから、Azure Potal でこれらの保護設定を構成する必要があります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./deploy-use/configure-policy-templates.md)」を参照してください。
+Azure Information Protection ラベルがある場合は、最初にカスタム テンプレートをラベルに変換してから、Azure Potal でこれらの保護設定を構成する必要があります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
 または、PowerShell を使用して、カスタム テンプレート (およびラベル) に外部ユーザーを追加できます。 この構成では、テンプレートを更新するために使用する権限定義オブジェクトを使用する必要があります。
 
@@ -128,7 +128,7 @@ Azure Information Protection ラベルがある場合は、最初にカスタム
     ユーザーを既存のテンプレートを追加するときに、新しいユーザーに加え、テンプレート内の既存のユーザーに対して、権限定義オブジェクトを定義する必要があります。 このシナリオでは、コマンドレットの「[例](/powershell/module/aadrm/set-aadrmtemplateproperty#examples)」セクションの「**Example 3: Add new users and rights to a custom template**」 (例 3: カスタム テンプレートへの新しいユーザーと権利の追加) が役に立ちます。
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Azure RMS では、どの種類のグループを使用できますか?
-ほとんどのシナリオでは、電子メール アドレスを持つ、Azure AD 内の任意の種類のグループを使用できます。 この経験則は、使用権限を割り当てる際に常に適用されますが、Azure Rights Management サービスの管理の場合はいくつか例外があります。 詳細については、「[グループ アカウントに関する Azure Information Protection の要件](./plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts)」を参照してください。
+ほとんどのシナリオでは、電子メール アドレスを持つ、Azure AD 内の任意の種類のグループを使用できます。 この経験則は、使用権限を割り当てる際に常に適用されますが、Azure Rights Management サービスの管理の場合はいくつか例外があります。 詳細については、「[グループ アカウントに関する Azure Information Protection の要件](prepare.md#azure-information-protection-requirements-for-group-accounts)」を参照してください。
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>保護されたメールを Gmail または Hotmail のアカウントに送信するにはどうしますか。
 
@@ -136,7 +136,7 @@ Exchange Online と Azure Rights Management サービスを使用する場合は
 
 受信者には Gmail、Yahoo、または Microsoft アカウントにサインインするためのオプションが表示され、保護された電子メールを読むことができます。 また、ブラウザーで電子メールを読み取るためにワンタイム パスワードのオプションを選択することもできます。
 
-このシナリオをサポートするには、Exchange Online を Azure Rights Management サービスおよび Office 365 のメッセージの暗号化の新しい機能で使用できるようにする必要があります。 この構成の詳細については、「[Exchange Online: IRM 構成](./deploy-use/configure-office365.md#exchange-online-irm-configuration)」を参照してください。
+このシナリオをサポートするには、Exchange Online を Azure Rights Management サービスおよび Office 365 のメッセージの暗号化の新しい機能で使用できるようにする必要があります。 この構成の詳細については、「[Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)」を参照してください。
 
 すべてのデバイスですべての電子メール アカウントをサポートする新機能の詳細については、ブログの投稿「[Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)」 (Office 365 のメッセージの暗号化で使用できる新機能のお知らせ) を参照してください。
 
@@ -174,7 +174,7 @@ Office 365 の職場または学校のアカウントを使用して、Outlook �
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>ユーザーが社内や社外の人間とファイルを安全に共有できるように SharePoint Online で OneDrive for Business を構成するには、どうすればよいですか。
 既定では、Office 365 管理者は構成しません。ユーザーが構成します。
 
-SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](./deploy-use/configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](./deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションを参照してください。
+SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションを参照してください。
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>正常にデプロイするためのヒントやコツがあれば教えてください。
 
@@ -183,20 +183,20 @@ SharePoint サイト管理者が、所有する SharePoint ライブラリの IR
 Azure Information Protection では、他のユーザーと情報を安全に共有できるため、データ保護の範囲を詳細に指定することができます。 使用権限の制限の構成は慎重に行ってください。 多くの組織にとって、業務上最も重要な利点は、組織内のユーザーのアクセス許可を制限して、データ漏えいを防止できることです。 もちろん、印刷や編集などの操作を制限する必要があれば、より詳細なポリシーを作成することもできます。ただし、そのような細かい制限は、高レベルのセキュリティが本当に必要なドキュメントに限定してください。最初から制限の厳しい使用権限を実装するのではなく、より段階的な方法を計画することをお勧めします。
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>退職した従業員が保護していたファイルにアクセスするには、どうすればよいですか。
-[スーパー ユーザー機能](./deploy-use/configure-super-users.md)を使用してください。この機能により、テナントで保護されているすべてのドキュメントと電子メールに対して承認されたユーザーにフル コントロール使用権限が与えられます。 スーパー ユーザーは常にこの保護されたコンテンツを読み取ることができ、必要に応じて、保護を解除したり、別のユーザーのために再度保護したりすることができます。 また必要に応じて、スーパー ユーザー機能を使用すると、権限を持つサービスのインデックス化とファイルの検証を行うことができます。
+[スーパー ユーザー機能](configure-super-users.md)を使用してください。この機能により、テナントで保護されているすべてのドキュメントと電子メールに対して承認されたユーザーにフル コントロール使用権限が与えられます。 スーパー ユーザーは常にこの保護されたコンテンツを読み取ることができ、必要に応じて、保護を解除したり、別のユーザーのために再度保護したりすることができます。 また必要に応じて、スーパー ユーザー機能を使用すると、権限を持つサービスのインデックス化とファイルの検証を行うことができます。
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
 
-はい。 このメッセージは、その特定のファイルの[使用ライセンス](./deploy-use/configure-usage-rights.md#rights-management-use-license)を反映します。
+はい。 このメッセージは、その特定のファイルの[使用ライセンス](configure-usage-rights.md#rights-management-use-license)を反映します。
 
 ファイルを取り消すと、そのアクションは、Azure Rights Management サービスにユーザーを認証する場合にのみ適用できます。 そのため、ファイルに 30 日間の使用ライセンス有効期間があり、ユーザーが既にそのドキュメントを開いている場合、ユーザーは引き続きその使用ライセンスの期間中はドキュメントにアクセスすることができます。 使用ライセンスの期限が切れた後は、ドキュメントが取り消されているため、ユーザーのアクセスが拒否される時点で、ユーザーの再認証が必要になります。
 
-ドキュメントを保護したユーザーである [Rights Management 発行者](./deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)は、この取り消しから除外されており、常に自分のドキュメントにアクセスできます。
+ドキュメントを保護したユーザーである [Rights Management 発行者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)は、この取り消しから除外されており、常に自分のドキュメントにアクセスできます。
 
-テナントに適用される使用ライセンスの有効期間の既定値は 30 日間です。ラベルまたはテンプレートで、この設定をより制限の厳しい値でオーバーライドできます。 使用ライセンスの詳細および使用ライセンスの構成方法については、[Rights Management の使用ライセンス](./deploy-use/configure-usage-rights.md#rights-management-use-license)に関するページを参照してください。
+テナントに適用される使用ライセンスの有効期間の既定値は 30 日間です。ラベルまたはテンプレートで、この設定をより制限の厳しい値でオーバーライドできます。 使用ライセンスの詳細および使用ライセンスの構成方法については、[Rights Management の使用ライセンス](configure-usage-rights.md#rights-management-use-license)に関するページを参照してください。
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
-Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows Phone) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの**[使用権限](./deploy-use/configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 これに対して、iOS や Mac のデバイスでは、画面キャプチャを禁止するアプリが認められていません。また、(Outlook Web App や Office Online を使用しているなどの場合に) ブラウザーでの画面キャプチャを禁止することも不可能です。
+Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows Phone) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの**[使用権限](configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 これに対して、iOS や Mac のデバイスでは、画面キャプチャを禁止するアプリが認められていません。また、(Outlook Web App や Office Online を使用しているなどの場合に) ブラウザーでの画面キャプチャを禁止することも不可能です。
 
 画面のキャプチャを禁止しておくと、不注意や不測の出来事により機密性の高い情報が漏洩してしまう事態を避けることができます。 ただし、画面に表示されるデータをユーザーが共有するにはさまざまな方法があり、スクリーン ショットを保存する方法はその 1 つにすぎません。 たとえば、表示される情報を共有しようとするユーザーは、カメラ付き携帯電話を使用して写真を撮影したり、データを再入力したり、単に口頭で他者に伝達することができます。
 
@@ -204,5 +204,5 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>電子メールをユーザー保護する方法として、[転送不可] と転送権限のないテンプレートにはどのような違いがありますか。
 
-名前や外観に反して、**[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、コピー、印刷、添付ファイルの保存の制限を含む権限の集まりであり、それらに加え、電子メールの転送が制限されます。 権限は、選択した受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「[Azure Rights Management の使用権限を構成する](./deploy-use/configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](./deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
+名前や外観に反して、**[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、コピー、印刷、添付ファイルの保存の制限を含む権限の集まりであり、それらに加え、電子メールの転送が制限されます。 権限は、選択した受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
 
