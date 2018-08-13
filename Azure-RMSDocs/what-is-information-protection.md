@@ -4,18 +4,18 @@ description: Azure Information Protection サービスの概要です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 08/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9031309c7fbc109d23ea3ddba6fe97dc6db8c00d
-ms.sourcegitcommit: cf930d768536980b7754f7992f604aa99548ee73
+ms.openlocfilehash: 11ac7ab7a1c1b55811f2f62b426dceedfa9c4874
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39476960"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489401"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -106,7 +106,7 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 
 オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。 
 
-スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](./deploy-use/deploy-rms-connector.md)」をご覧ください。
+スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-rms-connector.md)」をご覧ください。
 
 クラウドのデータ ストアの場合、Microsoft Cloud App Security を使用して、Box、SharePoint Online、OneDrive for Business 内にあるドキュメントにラベルを適用します。 詳細については、「[Azure Information Protection 分類ラベルを自動的に適用する](/cloud-app-security/use-case-information-protection)」と「[Azure Information Protection の統合](/cloud-app-security/azip-integration)」をご覧ください。
 
@@ -125,8 +125,11 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
+その他のリソース: [Azure Information Protection の情報とサポート](information-support.md)
 
-さらに、**Microsoft Ignite 2017** では、オンデマンドで使用可能な Azure Information Protection に関する多くのセッションが提供されました。 今回のカンファレンスで発表された内容の概要については、「[What’s new in Azure Information Protection @ Ignite 2017 (Azure Information Protection の新機能 (Ignite 2017))](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」を参照してください。 
+### <a name="microsoft-ignite"></a>Microsoft Ignite
+
+Microsoft Ignite 2017 では、オンデマンドで使用可能な Azure Information Protection に関する多くのセッションが提供されました。 今回のカンファレンスで発表された内容の概要については、「[What’s new in Azure Information Protection @ Ignite 2017 (Azure Information Protection の新機能 (Ignite 2017))](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」を参照してください。 
 
 Ignite の Web サイトで、Azure Information Protection にタグ付けされているセッションを[検索して見つけられます](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)。 ただし、次のセッションを初めにご覧いただくことをお勧めします。
 
@@ -145,7 +148,7 @@ Ignite の Web サイトで、Azure Information Protection にタグ付けされ
 
 ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
 
-「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。 このサービスを組織向けにデプロイする準備ができている場合は、「[Azure Information Protection デプロイ ロードマップ](./plan-design/deployment-roadmap.md)」を参照してください。
+「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。 このサービスを組織向けにデプロイする準備ができている場合は、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」を参照してください。
 
 Azure Information Protection の別名については、 [サービスの代替用語の一覧](aka.md)に関するページを参照してください。
 
