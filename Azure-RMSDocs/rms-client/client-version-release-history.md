@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61762157ff6419bb325d92470d5264dc9b55f840
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 1c41e1e6622dc76a2a2afe68a48d0761573ccf06
+ms.sourcegitcommit: 6eab0086306a4e12cbcf7d8578cb5fd42abe1e66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474217"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020602"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -52,7 +52,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **新機能**: 
 
-- 個人情報が含まれているドキュメントの分類に役立つ、新しい種類の機密情報のサポート。 [詳細情報](../deploy-use/configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+- 個人情報が含まれているドキュメントの分類に役立つ、新しい種類の機密情報のサポート。 [詳細情報](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Word、Excel、および PowerPoint ファイルの**厳格な Open XML ドキュメント**形式に対するラベリングのサポート。 Open XML 形式の詳細については、Office のブログ記事「[New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/)」(新しい Office の新しいファイル形式オプション) を参照してください。 
 
@@ -92,7 +92,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     - *Schedule* パラメーターの値が **OneTime**、**Continuous**、**Never** ではなく、**Manual** と **Always** になりました。
         
-    - *Type* パラメーターは削除されたため、[Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) の実行時の出力からも削除されます。
+    - *Type* パラメーターは削除されたため、[Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) の実行時の出力からも削除されます。 既定では、最初のスキャン サイクル後に調査されるのは新しいファイルまたは変更されたファイルのみです。 以前にすべてのファイルを再スキャンするために *Type* パラメーターを **Full** に設定した場合、ここで *Reset* パラメーターと共に [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を実行します。 また、手動スケジュールに対してもスキャナーを構成する必要があり、その場合、*Schedule* パラメーターを [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) で **Manual** に設定します。
     
 - スキャナーの既定の除外リストに .rtf ファイルが含まれるようになりました。 [詳細情報](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
 
@@ -109,7 +109,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Outlook バージョン 16.0.9324.1000 以降 (クイック実行) の場合、Azure Information Protection バーに最新のモニター ディスプレイ オプションが表示されます。以前は Outlook アプリケーションの外部にバーが表示されることがありました。
 
-- [Office アプリケーションごとに](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成する視覚的マーキングが、以前は Azure Information Protection ラベルによって適用されていたヘッダーやフッターに置き換わりました。
+- [Office アプリケーションごとに](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成する視覚的マーキングが、以前は Azure Information Protection ラベルによって適用されていたヘッダーやフッターに置き換わりました。
 
 - Excel ファイルが既にラベル付けされていてラベルが視覚的なマーキングを適用している場合、新しいシートにもラベルの視覚的なマーキングが適用されるようになりました。
 
@@ -133,7 +133,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     - 既定では、Office ドキュメントの種類のみが保護されます。 その他のファイルの種類は、レジストリ内に定義することで保護できます。 詳しくは、開発者ガイダンスの「[ファイル API の構成](../develop/file-api-configuration.md)」をご覧ください。
     
-    - 既定では、スキャナーは低整合性レベルで実行されます。これは、特権を持ったアカウントでスキャナーを実行する場合に、セキュリティを高めるためです。 スキャナーを実行するサービス アカウントに、[スキャナーの前提条件](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner)のセクションで説明されている権限だけが付与されている場合、低整合性レベルは必要ありません。これはパフォーマンスに悪影響を及ぼすため、推奨されません。 高度なクライアント設定を使用すると、低整合性レベルを無効にできます。 [詳細情報](../rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
+    - 既定では、スキャナーは低整合性レベルで実行されます。これは、特権を持ったアカウントでスキャナーを実行する場合に、セキュリティを高めるためです。 スキャナーを実行するサービス アカウントに、[スキャナーの前提条件](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner)のセクションで説明されている権限だけが付与されている場合、低整合性レベルは必要ありません。これはパフォーマンスに悪影響を及ぼすため、推奨されません。 高度なクライアント設定を使用すると、低整合性レベルを無効にできます。 [詳細情報](client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
     
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus) の出力に、Rights Management 所有者、Rights Management 発行者、およびコンテンツが保護された日付が表示されるようになりました。
  
@@ -157,11 +157,11 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **新機能**:
 
-- Azure Information Protection スキャナー: クライアントに付属する PowerShell モジュールには、オンプレミス データ ソース上のファイルを検出、分類、保護できるよう、スキャナーをインストールし、構成するための新しいコマンドレットが含まれています。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-use/deploy-aip-scanner.md)」を参照してください。 
+- Azure Information Protection スキャナー: クライアントに付属する PowerShell モジュールには、オンプレミス データ ソース上のファイルを検出、分類、保護できるよう、スキャナーをインストールし、構成するための新しいコマンドレットが含まれています。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。 
 
-- テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細情報](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+- テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細](configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
-- [ポリシー設定](../deploy-use/configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** 対応になりました。 この設定をオフにすると、リボンの **[保護]** ボタンからラベルを選択します。
+- [ポリシー設定](../configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** 対応になりました。 この設定をオフにすると、リボンの **[保護]** ボタンからラベルを選択します。
 
 - バックグラウンドで分類の継続的な実行を有効にする新しい高度なクライアント設定 (プレビュー段階)。 この設定が有効になっている場合、Office アプリでは、推奨されている自動分類が、文書が保存されたときに実行されるのではなく、バックグラウンドで継続的に実行されます。 このように動作が変更されたことで、SharePoint Online に格納されている文書に自動 (推奨) 分類を適用できるようになりました。 [詳細情報](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
@@ -169,7 +169,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Office アプリでは、カスタムのアクセス許可を指定するとき、アドレス帳アイコンからユーザーを参照し、選択できるようになりました。 エクスプローラーでカスタムのアクセス許可を指定するとき、同じような操作性が与えられます。
 
-- PowerShell を使用するが、**ローカルでログオンする**権限を付与できないサービス アカウントに完全に非対話式の認証方法を与えます。 この認証方法では、[Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) と共に新しい *Token* パラメーターを使用し、タスクとして PowerShell スクリプトを実行する必要があります。 [詳細情報](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+- PowerShell を使用するが、**ローカルでログオンする**権限を付与できないサービス アカウントに完全に非対話式の認証方法を与えます。 この認証方法では、[Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) と共に新しい *Token* パラメーターを使用し、タスクとして PowerShell スクリプトを実行する必要があります。 [詳細情報](client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
 
 - [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication) に新しいパラメーター、*IntegratedAuth* が追加されました。 このパラメーターは AD RMS のサーバー モードをサポートします。このモードは AD RMS で Windows Server FCI をサポートするために必要になります。
 
@@ -225,11 +225,11 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **新機能**:
 
-- 新しい Office 365 DLP 条件に対応。この条件はラベルに設定できます。 詳細については、「[Azure Information Protection ラベルの条件を構成する](../deploy-use/configure-policy-classification.md)」を参照してください。
+- 新しい Office 365 DLP 条件に対応。この条件はラベルに設定できます。 詳細については、「[Azure Information Protection ラベルの条件を構成する](../configure-policy-classification.md)」を参照してください。
 
-- ユーザー定義アクションのために作られたラベルに対応。 Outlook の場合、このラベルは [転送不可] オプションに自動的に適用されます。 Word、Excel、PowerPoint、エクスプローラーの場合、このラベルはカスタムのアクセス許可を指定するようにユーザーに求めます。 詳細については、「[Azure Information Protection ラベルを保護するように構成する](../deploy-use/configure-policy-protection.md)」を参照してください。
+- ユーザー定義アクションのために作られたラベルに対応。 Outlook の場合、このラベルは [転送不可] オプションに自動的に適用されます。 Word、Excel、PowerPoint、エクスプローラーの場合、このラベルはカスタムのアクセス許可を指定するようにユーザーに求めます。 詳細については、「[Azure Information Protection ラベルを保護するように構成する](../configure-policy-protection.md)」を参照してください。
 
-- ラベルでは、複数言語をサポートします。 2017 年 8 月 30 日以降、[既定のポリシー](../deploy-use/configure-policy-default.md)では、このバージョンのクライアントがユーザーに表示する言語が複数サポートされています。 この日付より前にユーザーに既定のポリシーから希望する言語でラベルが表示されるようにする方法、および構成するラベルについては、[Azure Information Protection でさまざまな言語のラベルを構成する方法](../deploy-use/configure-policy-languages.md)に関するページを参照してください。
+- ラベルでは、複数言語をサポートします。 2017 年 8 月 30 日以降、[既定のポリシー](../configure-policy-default.md)では、このバージョンのクライアントがユーザーに表示する言語が複数サポートされています。 この日付より前にユーザーに既定のポリシーから希望する言語でラベルが表示されるようにする方法、および構成するラベルについては、[Azure Information Protection で他の言語用ラベルを構成する方法](configure-policy-languages.md) をご覧ください。
 
 - ラベルは [Information Protection] バーに表示されるほか、Office リボンの **[保護]** ボタンをクリックしたときに表示されます。 
 
@@ -237,15 +237,15 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Azure Portal で設定する詳細なクライアント構成に対応。 この構成には次のものが含まれます。
     
-    - [Outlook の [転送不可] ボタンを表示または非表示にする](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
+    - [Outlook の [転送不可] ボタンを表示または非表示にする](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
+    - [ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Azure Information Protection バーを完全に非表示にする](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
+    - [Azure Information Protection バーを完全に非表示にする](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
-    - [Outlook で推奨分類を有効にする](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
+    - [Outlook で推奨分類を有効にする](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
-- PowerShell の場合、新しい PowerShell コマンドレットの [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) と [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication) を利用し、非対話式にファイルにラベルを付けることができます。 このコマンドレットについては、管理者ガイドの [PowerShell セクション](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)をご覧ください。
+- PowerShell の場合、新しい PowerShell コマンドレットの [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) と [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication) を利用し、非対話式にファイルにラベルを付けることができます。 このコマンドレットについては、管理者ガイドの [PowerShell セクション](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)をご覧ください。
 
 - PowerShell コマンドレットの [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) と [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) には、**Owner** と **PreserveFileDetails** という新しいパラメーターがあります。 このパラメーターを利用すれば、Owner カスタム プロパティに電子メール アドレスを指定したり、ラベルを付ける文書の日付を変更せずに残したりできます。
 
@@ -259,7 +259,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - SharePoint Server に保存されているファイルにラベルを付け、保護できるようになりました。
 
-- 複数の行に透かしを付けることができるようになりました。 また、視覚的なマーキングが、文書が保存されるたびにではなく、[最初に保存したときだけ](../deploy-use/configure-policy-markings.md#when-visual-markings-are-applied)文書に適用されるようになりました。
+- 複数の行に透かしを付けることができるようになりました。 また、視覚的なマーキングが、ドキュメントが保存されるたびにではなく、[最初に保存したときだけ](configure-policy-markings.md#when-visual-markings-are-applied) ドキュメントに適用されるようになりました。
 
 - **[ヘルプとフィードバック]** ダイアログ ボックスの **[診断の実行]** オプションが **[設定のリセット]** になりました。 このアクションの動作が変更され、ユーザーのサインアウトと Azure Information Protection ポリシーの削除が追加されました。 詳細については、管理者ガイドの「[More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option)」 ([設定のリセット] オプションの詳細) を参照してください。
 
