@@ -4,20 +4,18 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5c162b1a25332c977d2c4976338854904abfcc54
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: 5a56836d8a77cc65c633cdb6777f1666d24b5777
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575551"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42805592"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -81,13 +79,13 @@ ms.locfileid: "39575551"
 
 ## <a name="options-to-install-the-azure-information-protection-client-for-users"></a>ユーザー向けに Azure Information Protection クライアントをインストールするオプション
 
-ユーザー向けにクライアントをインストールするオプションは次の 3 つです。
-
-**Windows Update**: Azure Information Protection クライアントは、Microsoft Update カタログに含まれているため、カタログを使用する任意のソフトウェア更新プログラム サービスを使用して、クライアントをインストールおよび更新することができます。
+ユーザー向けにクライアントをインストールするオプションは次の 2 つです。
 
 **実行可能ファイル (.exe) のバージョンのクライアントを実行する**: 対話形式またはサイレント モードで実行できるお勧めのインストール方法です。 この方法ではインストーラーが前提条件の多くを確認し、満たされていない前提条件を自動的にインストールできるため、柔軟性に優れたお勧めの方法です。 [手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
 **Windows インストーラー (.msi) バージョンのクライアントを展開する**: グループ ポリシー、構成マネージャー、Microsoft Intune などの一元的な展開メカニズムを使用するサイレント インストールでのみサポートされています。 Intune とモバイル デバイス管理 (MDM) で管理されている Windows 10 PC では、インストールで実行可能ファイルがサポートされていないため、この方法が必要です。 ただし、このインストール方法を使用する場合は、依存関係にあるソフトウェアの確認と、インストールまたはアンインストールを手動で行う必要があります。実行可能ファイルのインストーラーであれば、各コンピューターでインストーラーによってこの作業が実行されます。 [手順](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+
+Azure Information Protection クライアントをインストールした後、選択したインストール方法を繰り返すことでこのクライアントを更新できます。または、Windows Update を使用して、クライアントが自動的にアップグレードされるようにすることができます。 アップグレードについて詳しくは、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」セクションをご覧ください。
 
 ### <a name="to-install-the-azure-information-protection-client-by-using-the-executable-installer"></a>実行可能ファイルのインストーラーを使用して Azure Information Protection クライアントをインストールするには
 

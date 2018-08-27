@@ -4,20 +4,18 @@ description: この手順は、AD RMS から Azure Information Protection への
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/30/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ccd62b7a539906c6e1f375e8bfc51e461f4cd547
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 778d83926e67a3f15fb182de3d2658d9881c29a5
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490155"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807084"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
 
@@ -56,7 +54,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
     
     たとえば、Azure Information Protection 用に作成したキー コンテナーの名前が contoso-byok-ky、リソース グループの名前が contoso-byok-rg である場合は、次のコマンドを実行します。
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 
 これで、Azure Information Protection から Azure Rights Management サービスに対して Azure Key Vault の HSM キーが準備されたので、AD RMS 構成データをインポートできます。

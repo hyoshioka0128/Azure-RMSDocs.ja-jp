@@ -4,18 +4,16 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 08/16/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 07ce6d2bc9a606692ccaffb42cfe6717092c72b6
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 050ffcf6e500316912ac4b0894594b99b441aab5
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490325"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42804308"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -92,7 +90,7 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 
 さらに、HYOK 保護と Azure Information Protection ラベルを使用する場合、次の制限があります。
 
-- Office 2010 や Office 2007 はサポートされません。
+- Office 2013 より前のバージョンの Office をサポートしません。
 
 - Office 365 サービスと他のオンライン サービスは、HYOK で保護されたドキュメントと電子メールの暗号化を解除して内容を調べたり操作を実行することはできません。 この制限は、Rights Management コネクタで保護されている HYOK で保護されたドキュメントおよび電子メールにも適用されます。 
     

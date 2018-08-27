@@ -4,20 +4,18 @@ description: Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aa1b24e24d05487014280fd6334d013466b6777f
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: c302972e8a048ec851af85cdba9d86bd7fbcc971
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489129"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42803821"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -66,7 +64,7 @@ Exchange の IRM を構成する用意ができている場合:
 
 SharePoint Online または SharePoint Server を使用するとき、SharePoint IRM (Information Rights Management) でドキュメントを保護できます。 この機能では、管理者がリストやライブラリを保護できます。ユーザーが文書をチェックアウトしたときに、指定した情報保護ポリシーに従って許可されたユーザーのみがファイルを表示および使用できるようにダウンロードされたファイルが保護されます。 たとえば、ファイルが読み取り専用のときに、テキストのコピーを無効にし、ローカル コピーの保存やファイルの印刷を防止することができます。
 
-Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保護に対応しています。 既定では、保護はドキュメントをダウンロードした人に限定されます。 SharePoint でドキュメントにアクセスできるすべてのユーザー、または指定したグループに保護を拡張できる構成オプションを使用すれば、この既定を変更できます。
+Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保護に対応しています。 既定では、保護はドキュメントをダウンロードした人に限定されます。 この既定を変更するには、**[グループの保護を許可します]** という名前の構成オプションを使用します。これは、指定したグループに保護を拡張します。 たとえば、ライブラリ内のドキュメントを編集するアクセス許可を持つグループを指定して、同じユーザーのグループが、どのユーザーがドキュメントをダウンロードしたかに関係なく、SharePoint の外部でドキュメントを編集できるようにすることができます。 または、SharePoint でアクセス許可を付与されていないグループ内のユーザーが、SharePoint の外部でドキュメントにアクセスする必要がある場合に、このグループを指定できます。 
 
 SharePoint のリストとライブラリについては、この保護は常にエンド ユーザーではなく管理者によって構成されます。 アクセス許可はサイト レベルで設定します。そのようなアクセス許可は、既定では、そのサイトのリストまたはライブラリにより継承されます。 SharePoint Online を使用する場合、ユーザーは OneDrive for Business ライブラリの IRM 保護も構成できます。
 

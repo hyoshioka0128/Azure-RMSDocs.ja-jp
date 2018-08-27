@@ -4,20 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1c41e1e6622dc76a2a2afe68a48d0761573ccf06
-ms.sourcegitcommit: 6eab0086306a4e12cbcf7d8578cb5fd42abe1e66
+ms.openlocfilehash: b9f7381daac2398af459adbb945c548a6ca194c4
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020602"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806240"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -62,7 +60,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Azure Information Protection スキャナー:
 
-    - 新しいコマンドレット [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): バージョン 1.26.6.0 以前からアップグレードした後に 1 回実行する必要があります。
+    - 新しいコマンドレット [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): 以前のすべてのバージョンからアップグレードした後に、1 回実行する必要があります。
     
     - 新しいコマンドレット [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): スキャナーのサービスの現在の状態を取得します。  
     

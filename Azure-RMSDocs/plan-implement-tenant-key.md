@@ -4,20 +4,18 @@ description: Azure Information Protection テナント キーに関する計画�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05aee77b60b5fd5a7239b51665e2afb122704afb
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490125"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807271"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -36,14 +34,13 @@ Azure Information Protection テナント キーとは
 |ビジネスの要件|推奨テナント キー トポロジ|
 |------------------------|-----------------------------------|
 |特別なハードウェア、追加のソフトウェア、または Azure サブスクリプションなしで、Azure Information Protection をすばやくデプロイする。<br /><br />例: テスト環境および組織にキー管理に関する規制上の要件がない場合。|マイクロソフト管理|
-|コンプライアンスに関する規制、追加のセキュリティ、およびすべてのライフ サイクル操作の制御。 <br /><br />例: ハードウェア セキュリティ モジュール (HSM) でキーを保護する必要があります。|BYOK [[1]](#footnote-1)|
+|コンプライアンスに関する規制、追加のセキュリティ、およびすべてのライフ サイクル操作の制御。 <br /><br />例: ハードウェア セキュリティ モジュール (HSM) でキーを保護する必要があります。|BYOK|
 
 
 必要に応じて、デプロイ後に [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) コマンドレットを使ってテナント キー トポロジを変更できます。
 
 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>テナント キー トポロジを選択する:Microsoft による管理 (既定) または自主管理 (BYOK)
-組織に最適なテナント キー トポロジを決定します。 既定では、Azure Information Protection でテナント キーが生成され、テナント キー ライフサイクルのほとんどの側面が管理されます。 これは、管理オーバーヘッドが最も少なくて済むシンプルな方法です。 多くの場合、テナント キーの存在を意識することすらありません。 Azure Information Protection にサインアップすれば、それ以外のキー管理プロセスは Microsoft によって処理されます。
 
 組織に最適なテナント キー トポロジを決定します。
 
@@ -95,7 +92,7 @@ Microsoft でテナント キーを管理するようにした場合:
 
 - AD RMS から移行する場合を除き、テナントのキーの生成に関する操作は不要です。[次のステップ](plan-implement-tenant-key.md#next-steps)に進んでください。
 
-- 現在、AD RMS を所有していて、Azure Information Protection に移行する場合は、AD RMS から Azure Information Protection への移行手順を使用してください。 
+- 現在 AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」に記載されている移行手順を使用します。 
 
 テナント キーを自主管理する場合、詳細については以下のセクションを参照してください。
 
@@ -183,11 +180,11 @@ Azure Information Protection でキーを使用するには、Azure Rights Manag
 
 1.  テナント キーの使用を開始します。
     
-    - まだの場合は、この段階で Rights Management サービスをアクティブにして、組織が Azure Information Protection の使用を開始できるようにする必要があります。 ユーザーはすぐに (Azure Key Vault の自主管理、または Microsoft 管理による) テナント キーの使用を開始します。
+    - 保護サービスをまだアクティブにしていない場合は、この段階で Rights Management サービスをアクティブにして、組織が Azure Information Protection の使用を開始できるようにする必要があります。 ユーザーはすぐに (Azure Key Vault の自主管理、または Microsoft 管理による) テナント キーの使用を開始します。
     
         アクティブ化の詳細については、「[Rights Management をアクティブにする](./activate-service.md)」を参照してください。
         
-    - 既に Rights Management サービスをアクティブにしていてテナント キーを自主管理する場合、ユーザーは古いテナント キーから新しいテナント キーへと段階的に移行します。この段階的な移行が完了するまで数週間かかることがあります。 古いテナント キーで保護されていたドキュメントやファイルは、権限のあるユーザーが引き続きアクセスできます。
+    - 既に Rights Management サービスをアクティブにしていてテナント キーを自主管理する場合、ユーザーは古いテナント キーから新しいテナント キーへと段階的に移行します。 この段階的な移行は、完了するまでに数週間かかる場合があります。 古いテナント キーで保護されていたドキュメントやファイルは、権限のあるユーザーが引き続きアクセスできます。
         
 2. 使用状況のログを使用することを検討します。このログには Azure Rights Management サービスで実行されるすべてのトランザクションが記録されます。
     

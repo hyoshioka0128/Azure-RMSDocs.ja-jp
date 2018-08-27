@@ -4,20 +4,18 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2018
+ms.date: 08/22/2018
 ms.topic: get-started-article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 98c4f32e0964b736c16d28ada37a1d59ee565d41
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 03b97ca4324b9352db7abec37666e7de262e6f39
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489367"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42808036"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -108,19 +106,15 @@ Azure Information Protection クライアントは、同じコンピューター
 
 ## <a name="firewalls-and-network-infrastructure"></a>ファイアウォールとネットワーク インフラストラクチャ
 
-特定の接続を許可するように構成するファイアウォールまたは同様の介在するネットワーク デバイスがある場合は、Office 記事「[Office 365 URL および IP アドレス範囲](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)」の「[Office 365 ポータルと共有](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US#bkmk_portal-identity)」セクションで **Azure Rights Management (RMS)** に関する情報を参照してください。
-
-RSS フィードを購読して最新の情報を入手するには、この Office 記事の手順を使用してください。
+特定の接続を許可するように構成されたファイアウォール、または同様の中間ネットワーク デバイスがある場合、ネットワーク接続の要件は、Office の記事「[Office 365 URL および IP アドレス範囲](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)」に記載されています。 「**Microsoft 365 Common および Office Online**」セクションをご覧ください。
 
 Office の記事の情報に加えて、Azure Information Protection に固有の要件は以下のとおりです。
 
 - **api.informationprotection.azure.com** TCP 443 の HTTPS トラフィックを許可します。
 
-- TCP 443 の **mobile.pipe.aria.microsoft.com** への HTTPS トラフィックを許可します。
-
 - 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
-- Azure Rights Management サービスへの TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
+- **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
     
     - ヒント: Chrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
     

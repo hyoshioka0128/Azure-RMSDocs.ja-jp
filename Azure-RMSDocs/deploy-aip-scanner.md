@@ -4,20 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1545c7bd931ab6aa4a76ddfd256a916d31d262bc
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490565"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806053"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -246,9 +244,14 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF|.pdf|
+|PDF |.pdf|
 |テキスト|.txt; .xml; .csv|
 
+既定では、スキャナーによって保護されるのは Office のファイルの種類のみです。したがって、[レジストリを編集](develop/file-api-configuration.md)してファイルの種類を指定しない限り、PDF ファイルやテキスト ファイルは保護されません。
+
+- レジストリに .pdf のファイルの種類を追加しない場合: このファイル名拡張子を持つファイルはラベル付けされますが、ラベルが保護用に構成されている場合、保護は適用されません。
+
+- レジストリに .txt、.xml、または .csv のファイルの種類を追加しない場合: これらのファイルの種類は分類のみをサポートしないため、これらのファイル名拡張子を持つファイルはラベル付けされません。
 
 最後に、残りの種類のファイルについて、スキャナーは Azure Information Protection ポリシーの既定のラベル (またはユーザーがスキャナー用に構成した既定のラベル) を適用します。
 
@@ -270,7 +273,11 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 スキャナーが保護とともにラベルを適用した場合、既定では、Office のファイルの種類のみが保護されます。 他のファイルの種類が保護されるように、この動作を変更できます。 ただし、ラベルがドキュメントに一般保護を適用すると、ファイル名の拡張子が .pfile に変わります。 また、権限が与えられたユーザーが開き、そのネイティブ形式で保存されるまで、ファイルは読み取り専用になります。 テキスト ファイルと画像ファイルでは、そのファイル名の拡張子を変更し、読み取り専用にすることもできます。 
 
-スキャナーの既定の動作を変更する (たとえば、他のファイルの種類も汎用的に保護する) には、レジストリを手動で編集し、保護する他のファイルの種類を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 スキャナーでは、特定のファイル名拡張子を指定する必要があり、`*` ワイルドカードは使用できません。
+スキャナーの既定の動作を変更する (たとえば、他のファイルの種類も汎用的に保護する) には、レジストリを手動で編集し、保護する他のファイルの種類を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
+
+- 具体的なファイル名拡張子を指定する必要があります。`*` ワイルドカードは使用できません。
+
+- スキャナーには独自の既定の動作があります。既定で保護されるのは、Office ファイル形式のみです。 レジストリに追加していないその他のファイル形式は、スキャナーによっては保護されません。
 
 ## <a name="when-files-are-rescanned"></a>ファイルが再スキャンされる場合
 

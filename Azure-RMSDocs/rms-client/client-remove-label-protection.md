@@ -4,20 +4,18 @@ description: Azure Information Protection でラベルが適用されたファ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f74354ea3c588093b4fefcf98ce0b4cbf807aedb
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: a18014a210607b2c9a38cc4c68e955e01403c986
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575779"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42805784"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>ユーザー ガイド: Azure Information Protection でラベルが適用されたファイル、または Rights Management で保護されているファイルから、ラベルと保護を削除する
 
@@ -28,7 +26,7 @@ ms.locfileid: "39575779"
 削除対象のラベルが保護を適用するように構成されている場合、この操作でもファイルから保護が削除されます。 ラベルを削除する理由を記録するためにメッセージが表示されることがあります。
 
 > [!IMPORTANT]
-> 保護を削除するファイルの所有者であるか、保護を削除するアクセス許可 (Rights Management の抽出またはフル コントロール アクセス許可) が付与されている必要があります。
+> 保護を削除するファイルの所有者であるか、保護を削除するアクセス許可 (**抽出**または**フル コントロール**の Rights Management アクセス許可) を付与されている必要があります。
 
 別のラベルまたは別の保護設定セットを選択する場合、ラベルまたは保護を削除する必要はありません。 その代わり、新しいラベルを選択し、必要に応じて、カスタム アクセス許可を定義できます (管理者がこの設定を許可している場合)。 
 
