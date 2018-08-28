@@ -173,7 +173,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 > [!NOTE]
 > このサービスの検出フローには 4 つの重要な例外があります。
 > 
-> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com))。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定をオーバーライドするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
+> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com)) 。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定をオーバーライドするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
 >
 > - Azure Information Protection ラベルから Rights Management サービスを呼び出すと、サービスの検出は実行されません。 その代わりに、Azure Information Protection ポリシーで構成されているラベル設定で URL が直接指定されます。 
 >  
