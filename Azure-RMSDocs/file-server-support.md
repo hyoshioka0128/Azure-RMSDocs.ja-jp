@@ -4,18 +4,18 @@ description: Office ドキュメントを自動的に保護する RMS コネク�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65285a543e4237adf3dc61a1e47035ccc3eae544
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 5df573af6350e26300569b9e7952de2d78bce081
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803898"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242144"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバーが Azure Rights Management をサポートするしくみ
 

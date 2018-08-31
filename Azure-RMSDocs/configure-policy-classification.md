@@ -4,16 +4,16 @@ description: ラベルの条件を構成するときに、ドキュメントま�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 7d9e128dd771f6d4d4882bedcd7f49aeefb41809
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 605173136442ed3af5b50e565cae79a94b16fb27
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804185"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297992"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -96,9 +96,6 @@ ms.locfileid: "42804185"
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
-
-> [!NOTE]
-> 以下の機密情報の種類は現在テナントにロール アウトされていますが、まだ表示されておらず、選択できない可能性があります。 ただし、[すべてのカスタム条件と既知の機密情報の種類](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations)を識別するように Azure Information Protection スキャナーを構成すると、Azure portal で選択できない場合でも、プレビュー版のスキャナーでこれらの新しい情報の種類を検出できます。
 
 現在、次の機密情報の種類を使用するには、プレビュー版の Azure Information Protection クライアントが必要です。
 
