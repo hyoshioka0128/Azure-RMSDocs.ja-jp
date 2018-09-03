@@ -4,18 +4,18 @@ description: Azure Information Protection のテナント キーを自分で管�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e910ad5226310f0c76de437c30e95fb7f6ba8f87
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4dd322c95d9aadc6df73e426fb92d2bb77312ed4
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804055"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298040"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
@@ -41,7 +41,7 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 - テナント キーのマスター コピー (あなたが所有するコピー) の盗難が疑われています。
 
-管理している別のキーにキーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。
+管理している別のキーにキーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。 
 
 1. 新しいキーが Azure Information Protection で既に使用しているキーとは異なるキー コンテナーにある場合にのみ: [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) コマンドレットを使用して、Azure Information Protection が目的のキー コンテナーを使用することを承認します。
 
@@ -52,6 +52,8 @@ Azure Information Protection に対してキーの再入力が必要になる場
 これらの段階の詳細については、次を参照してください。
 
 - 管理する別のキーにキーを再入力するには、「[Azure Information Protection テナント キーの BYOK を実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
+    
+    オンプレミスで作成し Key Vault に転送する、HSM で保護されているキーを再入力する場合は、現在のキーで使用したものと同じセキュリティ ワールドとアクセス カードを使用できます。
 
 - キーを再入力し、マイクロソフトが代わりに管理するキーに変更するには、マイクロソフト管理操作の「[テナント キーの再入力](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key)」セクションをご覧ください。
 

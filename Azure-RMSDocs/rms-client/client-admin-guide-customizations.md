@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb724f8c35ae5ae34f81cfec01fcbabffcbcff44
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805117"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298016"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -88,6 +88,20 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 また、これらのコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーに、**Policy.msip** という名前のファイルがないことを確認します。 このファイルが存在する場合は、削除します。 このファイルには Azure Information Protection ポリシーが含まれており、レジストリを編集する前、または Azure Information Protection クライアントをデモ オプションを使用してインストールした場合に、ダウンロードされた可能性があります。
 
+## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>[問題の報告] リンクの電子メール アドレスを変更する
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+
+ユーザーが **[ヘルプとフィードバック]** クライアント ダイアログ ボックスから **[問題の報告]** リンクを選択すると、既定では Microsoft のアドレスが電子メール メッセージに設定されます。 次のクライアントの詳細設定を使用して、そのアドレスを変更します。 たとえば、ヘルプ デスクの電子メール アドレスとして `mailto:helpdesk@contoso.com` を指定します。 
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- キー: **ReportAnIssueLink**
+
+- 値: **\<HTTP string>**
+
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプローラーの [Hide the Classify and Protect]\(分類の非表示と保護) メニュー オプション
 
 次の DWORD 値の名前を (任意の値と共に) 作成します。
@@ -98,7 +112,9 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続し、Azure Information Protection の最新のポリシーのダウンロードを試みます。 一定期間インターネットに接続できないコンピューターがある場合は、レジストリを編集することでサービスに接続しようとしないように設定することができます。 
 
-次の値の名前を検索し、値を **0** に設定します。
+インターネットに接続されていない場合、クライアントは、組織のクラウドベース キーを使用することによる保護 (または保護の削除) を適用できません。 代わりに、クライアントは、分類にのみ適用されるラベルの使用か、[HYOK](../configure-adrms-restrictions.md) を使用する保護に制限されます。
+
+この設定を構成するには、レジストリ内で次の値の名前を見つけ、値のデータを **0** に設定します。
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
@@ -223,25 +239,21 @@ Azure Information Protection クライアントがユーザーによって指定
 
 - 値: **True**
 
-## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する
+## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない
 
 この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
-既定では、Azure Information Protection クライアントで PDF ファイルが保護されている場合、結果のファイル名の拡張子は .ppdf になります。 この動作を変更し、ファイル名の拡張子を .pdf のままにして PDF 暗号化の ISO 標準に準拠することができます。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。  
+一般公開 (GA) バージョンの Azure Information Protection クライアントによって PDF ファイルが保護される場合、結果のファイル名の拡張子は .ppdf になります。 ただし、Azure Information Protection クライアントの最新のプレビュー バージョンを使用して PDF ファイルを保護する場合、得られるファイル名の拡張子は .pdf のままとなり、PDF 暗号化の ISO 標準に準拠します。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。
 
-この詳細設定を構成するには、次の文字列を入力します。
+最新のプレビュー バージョンのクライアントを GA の動作に戻す必要がある場合は、詳細設定を使用するために次の文字列を入力します。
 
 - キー: **EnablePDFv2Protection**
 
-- 値: **True**
-
-この構成オプションの結果、Azure Information Protection クライアントが PDF ファイルを保護している場合、このアクションによって保護された PDF ドキュメントが作成されます。作成された PDF ドキュメントは、プレビュー版の Windows 用 Azure Information Protection クライアント版や、PDF 暗号化の ISO 標準をサポートする他の PDF リーダーで開くことができます。 iOS および Android 用の Azure Information Protection アプリは、現在、PDF 暗号化の ISO 標準をサポートしていません。
+- 値: **False**
 
 Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。
-
-現在のプレビューの既知の問題: ドキュメントのプロパティで、保護された PDF の作成者に正しくない値が表示されます。
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Secure Islands によって保護されたファイルのサポート
 

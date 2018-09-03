@@ -4,18 +4,18 @@ description: 幅広く使用されているエンド ユーザー アプリケ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b2c21ba2c7030b0757aeb0fd901b900863a962d1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f468e82f71914e15aacc4a1a9c1d38e0fe5b4372
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242124"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
@@ -40,11 +40,11 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 - SharePoint Online と SharePoint Server は Rights Management 保護をダウンロード時にのみファイルに適用します。 この実装は、SharePoint のインデックス作成と検索結果がこのドキュメント保護ソリューションによる影響を受けないことを意味します。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前にドキュメントを保護します。
 
-- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルは含まれませんが、機密データを含むファイルは PC にサインインまたは接続する他のユーザーに対する検索結果に表示されないことが保証されます。 
+- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルが含まれませんが、PC にサインインまたは接続する他のユーザーの検索結果に、機密データを含むファイルが表示されないことが保証されます。 
 
 ## <a name="next-steps"></a>次の手順
 
-次のアプリケーションとサービスで Azure Rights Management をサポートする方法について説明します。
+次の各アプリケーションとサービスで Azure Rights Management サービスをサポートする方法について説明します。
 
 -   [Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション](sharing-app-support.md)
 

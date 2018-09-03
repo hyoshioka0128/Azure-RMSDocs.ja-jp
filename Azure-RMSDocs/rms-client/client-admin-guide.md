@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f0f3c6a5f46024083d8e4d105dd535abc1b46552
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 7510350957c867e144704af261053b73fa04651a
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805444"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118008"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -106,7 +106,9 @@ Windows Update、実行可能ファイル、または Windows インストーラ
 
 既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
 
-**[フィードバックの送信]** リンクを使って、Information Protection チームに提案または要求を送信します。 テクニカル サポートの場合はこのオプションを使わず、代わりに「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」をご覧ください。 
+**[フィードバックの送信]** リンク (一般公開バージョン) を使用して、Information Protection チームに提案または要求を送信します。 テクニカル サポートの場合はこのオプションを使わず、代わりに「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」をご覧ください。 
+
+**[問題の報告]** リンクによって、プレビュー バージョンのクライアントの **[フィードバックの送信]** リンクが置き換えられます。 既定では、このオプションは Microsoft に電子メールを送信しますが、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を指定することで、ユーザー用に HTTP 文字列を構成できます。 たとえば、ヘルプ デスクの電子メール アドレスを指定します。
 
 **ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
 
@@ -206,7 +208,7 @@ Azure Information Protection スキャナーをアップグレードするには
 
 プレビュー バージョンの場合: 
 
-- クライアントのインストール後、[Update AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
+- Azure Information Protection クライアントを一般公開バージョン 1.29.5.0 以前からアップグレードした後に、[Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
     
     この更新コマンドレットを実行するまでスキャナーは実行されません。また、通常、Windows イベント ログにイベント ID **1000** が表示され、"**オブジェクト名 'ScannerStatus' が無効です**" というエラー メッセージが表示されます。
 

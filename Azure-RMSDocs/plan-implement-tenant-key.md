@@ -4,18 +4,18 @@ description: Azure Information Protection テナント キーに関する計画�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9fa90627d3db00efcc577c838e78394d45fff81a
+ms.sourcegitcommit: 2b2cf599b8072cb8fe6a651743e27fbbe1a827c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807271"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222321"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -44,13 +44,11 @@ Azure Information Protection テナント キーとは
 
 組織に最適なテナント キー トポロジを決定します。
 
-- 
-  **Microsoft 管理**: Microsoft では組織のテナント キーが自動的に生成され、このキーは Azure Information Protection 専用に使用されます。 既定では、Microsoft はテナントにこのキーを使用し、テナント キー ライフ サイクルのほとんどの側面を管理します。 
+- **Microsoft 管理**: Microsoft では組織のテナント キーが自動的に生成され、このキーは Azure Information Protection 専用に使用されます。 既定では、Microsoft はテナントにこのキーを使用し、テナント キー ライフ サイクルのほとんどの側面を管理します。 
     
     これは、管理オーバーヘッドが最も少なくて済むシンプルな方法です。 多くの場合、テナント キーの存在を意識することすらありません。 Azure Information Protection にサインアップすれば、それ以外のキー管理プロセスは Microsoft によって処理されます。
 
-- 
-  **自主管理 (BYOK)**: テナント キーを完全に制御するには、Azure Information Protection で [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用します。 このテナント キー トポロジの場合、Key Vault に直接キーを作成するか、オンプレミスで作成します。 オンプレミスで作成する場合は、このキーを Key Vault に転送またはインポートします。 その後、このキーを使用するように Azure Information Protection を構成して、Azure Key Vault で管理します。
+- **自主管理 (BYOK)**: テナント キーを完全に制御するには、Azure Information Protection で [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用します。 このテナント キー トポロジの場合、Key Vault に直接キーを作成するか、オンプレミスで作成します。 オンプレミスで作成する場合は、このキーを Key Vault に転送またはインポートします。 その後、このキーを使用するように Azure Information Protection を構成して、Azure Key Vault で管理します。
     
 
 ### <a name="more-information-about-byok"></a>BYOK の詳細
@@ -149,6 +147,8 @@ Azure Key Vault ドキュメントを使用して、Azure Information Protection
 キーの長さが 2048 ビット (推奨) または 1024 ビットであることを確認してください。 Azure Information Protection ではその他のキーの長さはサポートされていません。
 
 オンプレミスで HSM 保護キーを作成し、HSM 保護キーとして Key Vault に転送する場合は、「[Azure Key Vault の HSM 保護キーを生成し、転送する方法](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/)」の手順に従ってください。
+
+Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは既定の構成で、操作には暗号化、暗号化解除、ラップ、ラップ解除、署名、確認が含まれます。 [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) を使用し、**[キー]** の詳細で返される *key_ops* の値を確認することで、許可されているキーの操作を確認できます。 必要に応じて、[Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) と *KeyOps* パラメーターを使用することで、許可された操作を追加します。
 
 Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 Key Vault URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
 

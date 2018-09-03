@@ -4,18 +4,18 @@ description: Azure Information Protection でラベルが適用されたファ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a18014a210607b2c9a38cc4c68e955e01403c986
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4031a332d900e91f66026dd661d83fb07d47e6d7
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805784"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117857"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>ユーザー ガイド: Azure Information Protection でラベルが適用されたファイル、または Rights Management で保護されているファイルから、ラベルと保護を削除する
 
@@ -43,6 +43,8 @@ Information Protection バーの **[ラベルの削除]** アイコンをクリ�
 **[ラベルの削除]** アイコンを使用できない場合は、まず **[ラベルの編集]** アイコンをクリックします。
 
 ![Azure Information Protection バー - [ラベルの編集]](../media/edit-label.png)
+
+**[ラベルの削除]** アイコンがまだ表示されない場合、管理者はお客様がこのオプションを使用することを許可していません。
 
 > [!NOTE]
 > お使いの Office アプリでこの Information Protection バーが表示されない場合:

@@ -4,18 +4,18 @@ description: あらかじめ Azure Information Protection クライアントが�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 518fd44053f6a6ee0c4b45024d5be0ac0122ec22
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 54042dfd49c1f12fc50eca127dfc0441686b1513
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808223"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117960"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>ユーザー ガイド: Rights Management で保護されたファイルを表示および使用する
 
@@ -28,13 +28,7 @@ ms.locfileid: "42808223"
 このビューアーは、Azure Information Protection クライアントの一部として自動的にインストールされますが、個別にインストールすることもできます。 クライアントとビューアーの両方のクライアントは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページからインストールできます。 クライアントのインストールの詳細については、「[Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
 
 > [!NOTE]
-> クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。
-> 
->-Azure Information Protection
-> 
->-Azure Rights Management
-> 
->-Active Directory Rights Management サービス 
+> クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。 たとえば、Azure Information Protection や Active Directory Rights Management サービスです。
 > 
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 

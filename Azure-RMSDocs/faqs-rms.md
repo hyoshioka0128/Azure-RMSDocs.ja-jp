@@ -4,19 +4,19 @@ description: Azure Information Protection のデータ保護サービス、Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0964d6de3f06d8620de89d9c4c9cca65a64b71c1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 67a3720f38faab750f04e91d7a4848cf88ae4eef
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805955"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242216"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -73,7 +73,7 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>保護されているドキュメントに対して、使用権限の変更またはユーザーの追加を行いたいのですが、ドキュメントを再保護する必要がありますか。
 
-ドキュメントがラベルまたはテンプレートを使用して保護されている場合、ドキュメントを再保護する必要はありません。 使用権限に変更を加えるか、新しいグループ (またはユーザー) を追加することによってラベルまたはテンプレートを変更します。さらに変更内容を保存して発行します。
+ドキュメントがラベルまたはテンプレートを使用して保護されている場合、ドキュメントを再保護する必要はありません。 使用権限に変更を加えるか、新しいグループ (またはユーザー) を追加することによって、ラベルまたはテンプレートを変更した後、変更内容を保存します。
 
 - 変更を加える前にユーザーがドキュメントにアクセスしていない場合、ユーザーがドキュメントを開くとすぐに変更が有効になります。
 
@@ -147,7 +147,7 @@ Azure Rights Management でネイティブでサポートされているファ�
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>ドキュメントを保護および追跡するように Mac コンピューターを設定するにはどうすればよいのですか?
 
-まず、https://portal.office.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 手順については、「[Office 365 または Office 2016 を PC または Mac にダウンロードしてインストールまたは再インストールする](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
+まず、 https://portal.office.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 手順については、「[Office 365 または Office 2016 を PC または Mac にダウンロードしてインストールまたは再インストールする](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
 
 Office 365 の職場または学校のアカウントを使用して、Outlook を開き、プロファイルを作成します。 次に新しいメッセージを作成し、次の操作を行って、Azure Rights Management サービスを使用してドキュメントや電子メールを保護できるように Office を構成します。
 

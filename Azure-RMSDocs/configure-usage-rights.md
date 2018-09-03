@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9f7c9ef4e6a6eccc1f42fa60a78550f53d4a64b6
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808774"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920671"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -98,7 +98,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、保護テンプレートを参照および管理するとき、Azure Portal には表示されません。 **[転送不可]** オプションは、ユーザーが電子メール受信者に動的に適用する使用権限の集合です。
 
-**[転送不可]** オプションが電子メールに適用される場合、電子メールが暗号化され、受信者は認証される必要があります。 その後、受信者は電子メールを転送、印刷、コピー、添付ファイルの保存、別名で保存することはできません。 たとえば、Outlook クライアントでは、[転送] ボタンが利用できなくなり、**[名前を付けて保存]**、**[添付ファイルの保存]**、**[印刷]** メニュー オプションが利用できなくなり、**[宛先]**、**[Cc]**、**[Bcc]** ボックスの受信者を追加したり、変更したりすることができなくなります。
+**[転送不可]** オプションが電子メールに適用される場合、電子メールが暗号化され、受信者は認証される必要があります。 その結果、受信者はメールの転送、印刷、またはコピーを実行できなくなります。 たとえば、Outlook クライアントでは、[転送] ボタンが利用できなくなり、**[名前を付けて保存]** および **[印刷]** メニュー オプションが利用できなくなり、**[宛先]**、**[Cc]**、**[Bcc]** ボックスの受信者を追加したり、変更したりすることができなくなります。
 
 メールに添付されている保護されていない [Office ドキュメント](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM)は、自動的に同じ制限を継承します。 これらのドキュメントに適用される使用権限は、**[コンテンツの編集]、[編集]**、**[保存]**、**[表示]、[開く]、[読み取り]** と **[マクロの許可]** です。 添付ファイルに別の使用権限を使用する場合または添付ファイルがこの継承された保護をサポートする Office ドキュメントでない場合、電子メールに添付する前に、ファイルを保護する必要があります。 それからファイルに必要な特定の使用権限を割り当てることができます。 
 
@@ -127,9 +127,9 @@ Exchange Online で Office 365 Message Encryption の新機能を使用する場
 
 または、[Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) コマンドの **Set-IRMConfiguration** を使って設定した次の構成パラメーターのいずれかを使用して、このドキュメントの保護の継承を変更できます。 ユーザーの認証後にドキュメントの元の保護を保持する必要がない場合は、これらのオプションを使用します。
 
-- ブラウザーでドキュメントを表示する受信者に対してのみドキュメントの保護を削除する場合 (通常、Gmail などのソーシャル プロバイダーのアドレスに送信されるため): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`。 各受信者がドキュメントをダウンロードすると、保護が削除されます。
+- すべての受信者に対してドキュメントの保護を削除する場合: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`。 これらの受信者が電子メール メッセージを開く場合、ドキュメントは保護されません。
 
-- すべての受信者に対して常にドキュメントの保護を削除する場合: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`。 これらの受信者が電子メール メッセージを開く場合、ドキュメントは保護されません。
+- ブラウザーでドキュメントを表示する受信者に対してのみドキュメントの保護を削除する場合 (通常、Gmail などのソーシャル プロバイダーのアドレスに送信されるため): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`。 各受信者がドキュメントをダウンロードすると、保護が削除されます。
 
 各自のブラウザーでドキュメントを表示する受信者に対してのみ保護を削除する方法について詳しくは、Office のブログ記事「[Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007)」(添付ファイルに対する管理者の制御が Office 365 メッセージの暗号化で利用可能になりました) をご覧ください。 元の保護を保持するために添付されたドキュメントが必要な場合は、「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。
 

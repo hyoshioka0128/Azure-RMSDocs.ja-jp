@@ -4,16 +4,16 @@ description: Rights Management 保護を使用するようにラベルを構成�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/14/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: bc60f1791cd7c36f179851b1759a46ba3980dd96
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807092"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920310"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -62,9 +62,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
         
         以前に構成された保護設定はアーカイブ済みの保護テンプレートとして保持され、オプションを **[保護]** に戻すと再び表示されます。 Azure Portal ではこのテンプレートが表示されませんが、[PowerShell](configure-templates-with-powershell.md) を使用すると、必要に応じてテンプレートを引き続き管理することができます。 この動作は、テンプレートに以前に適用された保護設定のラベルが含まれる場合に、引き続きコンテンツにアクセスできることを意味します。
     
-    - **[保護]**: 保護を適用するには、このオプションを選択し、手順 5. に進み保護設定を行います。
-    
-    注: この段階では、さらに構成をする必要なく新しいラベルを保存することができます。 行った場合、ラベルを適用したユーザーのみが使用制限なしにドキュメントまたはメールを開くことができるよう、ラベルが保護構成されます。 場合によっては、これは、ユーザーが任意の場所にファイルを保存でき、それらのユーザーのみが開くことができるという、期待されている結果である場合もあります。 この結果を求めており、他のユーザーと保護されているコンテンツを共用しない場合、手順 5 ではなく手順 12 にすぐ進みます。
+    - **[保護]**: 保護を適用するには、このオプションを選択し、手順 4 に進みます。
     
     - **[保護の削除]**: ドキュメントまたはメールが保護されている場合に保護を削除するには、このオプションを選びます。 次に手順 11 に進みます。
         
