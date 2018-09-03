@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c147b6ac668e27f4e07257b3189e272a1c8093af
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d5ff45ee8c48e1843010692cbd22d146a3fa9970
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808296"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117912"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -30,6 +30,8 @@ Azure Information Protection クライアントは、次のことをドキュメ
 - 保護のみ
 
 以下では、Azure Information Protection クライアントでサポートされているファイルの種類を確認し、さまざまな保護レベルと既定の保護レベルを変更する方法を理解し、分類と保護から自動的に除外 (スキップ) されるファイルを特定する方法について説明します。
+
+一覧表示されているファイルの種類に対して、WebDav の場所はサポートされません。
 
 ## <a name="file-types-supported-for-classification-only"></a>分類のみにサポートされているファイルの種類
 
@@ -53,7 +55,7 @@ Azure Information Protection クライアントは、次のことをドキュメ
 
 - **Microsoft Office**: 次の表のファイルの種類
     
-    これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。 プレビュー版の Azure Information Protection クライアントを使用していない場合、Strict Open XML Document 形式はサポートされません
+    これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。 プレビュー版の Azure Information Protection クライアントを使用していない場合、Strict Open XML Document 形式はサポートされません。
     
     |Office ファイルの種類|Office ファイルの種類|
     |----------------------------------|----------------------------------|
@@ -123,7 +125,7 @@ Azure Information Protection クライアントが保護をサポートするフ
 |.jt|.pjt|
 
 ###### <a name="footnote-1"></a>脚注 1:
-プレビュー版の Azure Information Protection クライアントを使用し、[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)ように構成している場合、保護された PDF ドキュメントのファイル名の拡張子は .pdf のままです。
+プレビュー版の Azure Information Protection クライアントを使用する場合、[既定では](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)、保護された PDF ドキュメントのファイル名の拡張子は .pdf のままです。
 
 次の表には、Azure Information Protection クライアントによるネイティブ保護をサポートし、かつ分類も可能である残りのファイルの種類を一覧表示します。 これらは、Microsoft Office アプリのファイルの種類であることがわかります。 これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。 プレビュー版の Azure Information Protection クライアントを使用していない場合、Strict Open XML Document 形式はサポートされません。
 
@@ -196,7 +198,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーによる分類と保護から除外されるファイルの種類
 
-既定ではスキャナーにより Azure Information Protection クライアントと同じファイルの種類も除外されますが、プレビュー版のスキャナーは例外であり、.rtf も除外されます。 
+既定では、スキャナーにより Azure Information Protection クライアントと同じファイルの種類も除外されますが、プレビュー版のスキャナーの場合、次は例外となります: .rar、.rtf、.msg、.zip。 
 
 次の PowerShell コマンドレットを使用する場合、スキャナーによるファイル検査の対象となるファイルと除外するファイルの種類を変更することができます。
 
@@ -227,7 +229,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 このようなファイルの保護が重要であれば、一時的に別のコンピューターにコピーすることで一般的に保護し、その後、コピーで戻すことができます。 または、プレビュー版の Azure Information Protection クライアントを使用します。
 
-プレビュー版の Azure Information Protection クライアントを使用し、[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)ように構成している場合、次のいずれの状況でも PDF ファイルをネイティブで保護し、保護を解除することができます。
+Azure Information Protection クライアントの最新のプレビュー版を使用する場合、[既定では](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)、次のいずれの状況でも PDF ファイルをネイティブで保護し、保護を解除することができます。
 
 - フォームベースの PDF ファイル。
 

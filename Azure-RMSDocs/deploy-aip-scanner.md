@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ddf9ebcdce4cf51e35dfc76b099194873796919f
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806053"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117887"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -275,9 +275,9 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 スキャナーの既定の動作を変更する (たとえば、他のファイルの種類も汎用的に保護する) には、レジストリを手動で編集し、保護する他のファイルの種類を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
 
-- 具体的なファイル名拡張子を指定する必要があります。`*` ワイルドカードは使用できません。
+- スキャナーには独自の既定の動作があります。既定で保護されるのは、Office ファイル形式のみです。 レジストリを変更していない場合、その他のファイル形式は、スキャナーによっては保護されません。
 
-- スキャナーには独自の既定の動作があります。既定で保護されるのは、Office ファイル形式のみです。 レジストリに追加していないその他のファイル形式は、スキャナーによっては保護されません。
+- スキャナーの最新のプレビュー バージョンを使用しない限り、特定のファイル名拡張子を指定する必要があり、`*` ワイルドカードは使用できません。 スキャナーのプレビュー バージョンでは、このワイルドカードがサポートされます。
 
 ## <a name="when-files-are-rescanned"></a>ファイルが再スキャンされる場合
 
