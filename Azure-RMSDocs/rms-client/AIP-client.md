@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントの情�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c10558c9a24d5348bd3188cbdf352653df993867
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 33312efdaaa9a9b65e79f2f5b40fd910db35a686
+ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808918"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43380703"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアント
 
@@ -33,5 +33,12 @@ Windows 用 Azure Information Protection クライアントは、[Azure Informat
 > iOS 用および Android 用の Microsoft Azure Information Protection も提供しています。 詳細については、「[iOS 用および Android 用の Azure Information Protection アプリに関する FAQ](mobile-app-faq.md )」を参照してください。
 > 
 > Mac コンピューターと Windows Phone の場合: モバイル デバイス用 RMS 共有アプリを使い、「[モバイルおよび Mac プラットフォーム用 Rights Management 共有アプリケーションの FAQ](http://technet.microsoft.com/dn451248)」を参照してください。
+
+## <a name="install-instructions"></a>インストール手順
+
+- [Administrators](client-admin-guide-install.md)
+
+- [エンド ユーザー](install-client-app.md)
+
 
 

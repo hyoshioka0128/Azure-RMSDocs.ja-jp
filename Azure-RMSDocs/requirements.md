@@ -4,18 +4,18 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 08/31/2018
 ms.topic: get-started-article
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 03b97ca4324b9352db7abec37666e7de262e6f39
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 0cfaaa199178b7bede1d5b0d3fe54dd43dcfbf01
+ms.sourcegitcommit: beb4e480e0e821e32c9d35e86f2cf4321005c521
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808036"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43663401"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -102,7 +102,7 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 Azure Information Protection クライアントは、同じコンピューター上で Office の複数のバージョンをサポートしていません。 このクライアントはまた、Office でのユーザー アカウントの切り替えもサポートしていません。
 
-データ保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
+保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
 
 ## <a name="firewalls-and-network-infrastructure"></a>ファイアウォールとネットワーク インフラストラクチャ
 
@@ -110,7 +110,7 @@ Azure Information Protection クライアントは、同じコンピューター
 
 Office の記事の情報に加えて、Azure Information Protection に固有の要件は以下のとおりです。
 
-- **api.informationprotection.azure.com** TCP 443 の HTTPS トラフィックを許可します。
+- **informationprotection.hosting.portal.azure.net** への TCP 443 の HTTPS トラフィックを許可します。
 
 - 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 

@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
-ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
+ms.openlocfilehash: 3e6d5f30e3db48eced850649976ac4da56271622
+ms.sourcegitcommit: a42bb93adbb5be2cd39606fed3de0785ac52dd65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43298016"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43703932"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -76,7 +76,7 @@ ms.locfileid: "43298016"
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>組織が種類の異なるライセンスを保有している場合の保護のみモードの適用
 
-組織が Azure Information Protection のライセンスを保有せず、Azure Rights Management サービスのデータ保護を含む Office 365 のライセンスを保有している場合、Azure Information Protection クライアント (Windows 用) は自動的に[保護のみモード](client-protection-only-mode.md)で実行されます。
+組織が Azure Information Protection のライセンスを保有せず、データ保護のために Azure Rights Management サービスを含む Office 365 のライセンスを保有している場合、Azure Information Protection クライアント (Windows 用) は自動的に[保護のみモード](client-protection-only-mode.md)で実行されます。
 
 ただし、組織が Azure Information Protection のサブスクリプションを保有している場合は、既定で、すべての Windows コンピューターで Azure Information Protection ポリシーをダウンロードできます。 Azure Information Protection クライアントはライセンスのチェックと適用を行いません。 
 
@@ -309,6 +309,8 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 任意の移行規則名を指定します。 以前のラベル付けソリューションから Azure Information Protection のラベルに、1 つまたは複数のラベルをマッピングする方法を特定するのに役立つ、わかりやすい名前を使用します。 名前は、スキャナー レポートおよびイベント ビューアーに表示されます。 
 
+この設定では、古いラベルで適用された可能性がある視覚的マーキングは削除されません。 ヘッダーおよびフッターを削除するには、次のセクションの「[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)」を参照してください。
+
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>例1: 同じラベル名の 1 対 1 のマッピング
 
 Secure Islands の "Confidential" というラベルを持ったドキュメントは、Azure Information Protection の "Confidential" というラベルに変更されます。
@@ -362,10 +364,107 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d、"Secure Islands label contains Internal" (Secure Islands のラベルに Internal が含まれます)、Classification、\*Internal\*|
 
 
+## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
+
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
+
+この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+
+これらの設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、ドキュメントからヘッダーまたはフッターを削除したり置き換えたりできるようになります。 たとえば、古いフッターに古いラベルの名前が含まれていますが、これを新しいラベル名と独自のフッターで Azure Information Protection に移行したとします。
+
+クライアントがそのポリシーにこの構成を使用すると、Office アプリでドキュメントが開き、いずれかの Azure Information Protection ラベルがドキュメントに適用されたときに、古いヘッダーとフッターが削除または置換されます。
+
+この構成は Outlook ではサポートされていません。そのため、この構成を Word、Excel、PowerPoint で使用すると、ユーザーのこれらのアプリのパフォーマンスに悪影響が生じる場合があります。 この構成ではアプリケーションごとの設定を定義することができます。たとえば、Word 文書のヘッダーとフッターのテキストは検索し、Excel のスプレッドシートや PowerPoint のプレゼンテーションのテキストは検索しないようにできます。
+
+パターン マッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**ord、**E**xcel、**P**owerPoint) は検索を必要とするもののみに制限することをお勧めします。
+
+- キー: **RemoveExternalContentMarkingInApp**
+
+- 値: \<**Office アプリケーションの種類 WXP**> 
+
+例:
+
+- Word 文書のみを検索するには、**W** を指定します。
+
+- Word 文書と PowerPoint プレゼンテーションを検索するには、**WP** を指定します。
+
+この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 **ExternalContentMarkingToRemove** が必要です。
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>ExternalContentMarkingToRemove を構成する方法
+
+**ExternalContentMarkingToRemove** キーに文字列値を指定するときには、正規表現を使用する 3 つのオプションがあります。
+
+- ヘッダーまたはフッターのすべてを削除する部分一致。
+    
+    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 これらのヘッダーまたはフッターを完全に削除したいとします。 値 `*TEXT*` を指定します。
+
+- ヘッダーまたはフッターの特定の単語のみを削除する完全一致。
+    
+    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 単語 **TEXT** のみを削除し、ヘッダーまたはフッター文字列は **TO REMOVE** として残したいとします。 値 `TEXT ` を指定します。
+
+- ヘッダーまたはフッターのすべてを削除する完全一致。
+    
+    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 正確にこの文字列が含まれているヘッダーまたはフッターを削除したいとします。 値 `^TEXT TO REMOVE$` を指定します。
+    
+
+指定した文字列のパターン マッチングでは大文字と小文字が区別されます。 文字列の最大長は 255 文字です。
+
+一部のドキュメントには非表示の文字やさまざまな種類のスペースやタブが含まれているため、語句や文に指定した文字列が検出されない可能性があります。 値には、できるだけ単独の特徴的な単語を指定し、運用環境に展開する前に結果をテストしてください。
+
+- キー: **ExternalContentMarkingToRemove**
+
+- 値: \<**正規表現として定義された、マッチングする文字列**> 
+
+#### <a name="multiline-headers-or-footers"></a>複数行のヘッダーまたはフッター
+
+ヘッダーまたはフッターのテキストが複数行にわたる場合は、行ごとにキーと値を作成します。 たとえば、2 行にわたる次のフッターがあるとします。
+
+**ファイルは社外秘として分類**
+
+**ラベルは手動で適用**
+
+この複数行のフッターを削除するには、次の 2 つのエントリを作成します。
+
+- キー 1: **ExternalContentMarkingToRemove**
+
+- キーの値 1: **\*社外秘***
+
+- キー 2: **ExternalContentMarkingToRemove**
+
+- キーの値 2: **\*ラベルの適用*** 
+
+#### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
+
+PowerPoint では、フッターが図形として実装されます。 指定したテキストのうち、ヘッダーまたはフッターでない図形が削除されるのを防ぐには、**PowerPointShapeNameToRemove** という名前の、追加のクライアントの詳細設定を使用します。 また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。
+
+この追加のクライアントの詳細設定を指定せず、PowerPoint が **RemoveExternalContentMarkingInApp** キーの値に含まれている場合、**ExternalContentMarkingToRemove** で指定したテキストがすべての図形でチェックされます。 
+
+ヘッダーまたはフッターとして使用している図形の名前を検索するには:
+
+1. PowerPoint の**選択**ウィンドウを表示し、**[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
+
+2. ヘッダーまたはフッターを含むスライド上の図形を選択します。 選択した図形の名前が、**選択**ウィンドウで強調表示されます。
+
+図形の名前を使用して、**PowerPointShapeNameToRemove** キーの文字列値を指定します。 
+
+例: 図形の名前は **fc** です。 この名前の図形を削除するには、値 `fc` を指定します。
+
+- キー: **PowerPointShapeNameToRemove**
+
+- 値: \<**PowerPoint の図形の名前**> 
+
+削除する PowerPoint の図形が複数ある場合は、削除する図形と同じ数だけ **PowerPointShapeNameToRemove** キーを作成します。 各エントリに、削除する図形の名前を指定します。
+
+既定では、マスター スライドのヘッダーとフッターのみがチェックされます。 この検索の対象をすべてのスライドに広げるには、**RemoveExternalContentMarkingInAllSlides** という名前の、追加のクライアントの詳細設定を使用します。ただし、このプロセスはリソースをより多く消費します。
+
+- キー: **RemoveExternalContentMarkingInAllSlides**
+
+- 値: **True**
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける
 
 > [!NOTE]
-> この構成と前のセクションの構成を使用して、別のラベル付けソリューションから移行する場合は、ラベル付けの移行の設定が優先されます。 
+> この構成と、[Secure Islands およびその他のラベル付けソリューションからラベルを移行する](#migrate-labels-from-secure-islands-and-other-labeling-solutions)ための構成を使用する場合は、ラベル付けの移行の設定が優先されます。 
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
