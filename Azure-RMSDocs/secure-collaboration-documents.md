@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 50182f5d0df5d204e8ffbfe3f1d27feafa3eee8e
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 5cacc32cab0526e1083ec9e3caa7203a70a0ec6a
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807668"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44148182"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーション
 
@@ -136,10 +136,10 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 |Android|はい [[1]](#footnote-1)|[いいえ]|
 |MacOS|はい [[1]](#footnote-1)|[いいえ]|
 
-###### <a name="footnote-1"></a>脚注 1:
+###### <a name="footnote-1"></a>脚注 1
 ユーザー アカウント、電子メールが有効なグループ、すべてのメンバーがサポートされています。 ユーザー アカウント、および電子メールが有効なグループには、ゲスト アカウントが含まれる場合があります。 すべてのメンバーには、ゲスト アカウントは含まれません。
 
-###### <a name="footnote-2"></a>脚注 2:
+###### <a name="footnote-2"></a>脚注 2
 現在サポートされているのは、Office 2016 クイック実行だけです。
 
 

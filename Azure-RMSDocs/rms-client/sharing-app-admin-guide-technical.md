@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4a04af78d1327fa9810325d799336c98f12b5163
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f9b02f62ff31665e60455cdcd77e0de9da4db9af
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804491"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44148436"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細
 
@@ -66,15 +66,15 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 |.xml|.pxml|
 |.jpg|.pjpg|
 |.jpeg|.pjeg|
-|.pdf|。ppdf|
+|.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
 |.jpe|.pjpe|
-|.jfif|。pjfif|
-|.jt|。pjt|
+|.jfif|.pjfif|
+|.jt|.pjt|
 ¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 
 Microsoft Office 2016、Office 2013 および Office 2010 の Microsoft Rights Management 共有アプリケーションでネイティブにサポートされているファイルの種類を次の表にリストします。 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
@@ -130,6 +130,6 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 -   **Off**:保護のブロック
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 

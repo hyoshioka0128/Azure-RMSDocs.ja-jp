@@ -5,19 +5,19 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ed59d980721072668f8a970495689ef0d70d615
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 959d0b8fb8d36c7a3a9205140b33a2e71dce2d7a
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805638"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149380"
 ---
-# <a name="rights-management-sharing-application-administrator-guide"></a>保護のレベル – ネイティブと汎用
+# <a name="rights-management-sharing-application-administrator-guide"></a>Rights Management 共有アプリケーション管理者ガイド
 
 >*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
@@ -30,7 +30,7 @@ RMS 共有アプリケーションは Azure Information Protection での作業�
 
 Rights Management 共有アプリケーションの技術的概要、ネイティブ保護とジェネリック保護についての情報、サポートされているファイルの種類とファイル名拡張子、既定の保護レベルの変更方法については、「[Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細](sharing-app-admin-guide-technical.md)」を参照してください。 
 
-## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの自動デプロイ
+## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの自動デプロイメント
 Windows 版の RMS 共有アプリケーションはスクリプト化されたインストールをサポートするため、企業のデプロイメントに適しています。
 
 インストールの前提条件は、コンピューターで Windows 7 Service Pack 1 以降のバージョンを実行していることと、Microsoft Framework Version 4.0 以降がインストールされていることだけです。 Microsoft .NET Framework 4.0 をインストールする必要がある場合は、 [Microsoft ダウンロード センターからダウンロードしてインストール](http://www.microsoft.com/download/details.aspx?id=17718)できます。
@@ -39,9 +39,9 @@ Windows 版の RMS 共有アプリケーションはスクリプト化された�
 
 1.  Microsoft ダウンロード センターの「 [Windows 用 Microsoft Rights Management 共有アプリケーション](http://www.microsoft.com/download/details.aspx?id=40857) 」ページに移動して、**[ダウンロード]** をクリックします。
 
-2.  必要なファイルを選択してダウンロードします。 次の 2 つのクライアント インストール パッケージがあります。1 つは Windows 64 ビット (Microsoft Rights Management 共有アプリケーション x64.zip)、もう 1 つは Windows 32 ビット (Microsoft Rights Management 共有アプリケーション x86.zip) です。
+2.  必要なファイルを選択してダウンロードします。 クライアント インストール パッケージは 2 つあります。1 つは Windows 64 ビット (Microsoft Rights Management 共有アプリケーション x64.zip)、もう 1 つは Windows 32 ビット (Microsoft Rights Management 共有アプリケーション x86.zip) です。
 
-3.  圧縮されたインストール パッケージから、ダブルクリックなどによりファイルを抽出します。 次に、抽出したファイルを、クライアント コンピューターがアクセスできるネットワークの場所にコピーします。
+3.  圧縮されたインストール パッケージから、ダブルクリックするなどして、ファイルを抽出します。 次に、抽出したファイルを、クライアント コンピューターがアクセスできるネットワークの場所にコピーします。
 
 RMS 共有アプリケーションのセットアップ パッケージは、さまざまなデプロイメント シナリオをサポートしており、次のものが含まれます。
 
@@ -254,15 +254,15 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
     > [!NOTE]
     > 場合によっては、このインストールは 2 回実行され、1 回目に失敗し、2 回目に成功することがあります。
 
-    このツールによって変更されたレジストリを手動で確認する場合、変更は次のとおりです。
+    このツールによるレジストリ変更を手動で確認する場合、変更内容は以下のようになります。
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\Federation]
 
-        "FederationホームRealm"="urn:HostedRmsOnlineService:Certification"
+        "FederationHomeRealm"="urn:HostedRmsOnlineService:Certification"
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\Federation]
 
-        "FederationホームRealm"="urn:HostedRmsOnlineService:Certification"
+        "FederationHomeRealm"="urn:HostedRmsOnlineService:Certification"
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation]
 
@@ -291,9 +291,9 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
     **MSI (s) (9C:88) [18:49:04:007]: Windows Installer installed the product.Product Name:Microsoft RMS Office Addins.Product Version:1.0.7.Product Language:1033.製造元:Microsoft.Installation success or error status: 0.**
 
 ## <a name="uninstall-commands"></a>アンインストール コマンド
-これらのデプロイメントに必要なすべてのインストール コマンドで、アンインストール コマンドがサポートされているわけではありません。 AD RMS クライアントと、共有アプリケーションをアンインストールし、Office アドインをアンインストールすることができます。 これらの要素をアンインストールするには、次のコマンドを使用します。
+これらのデプロイメントに必要なすべてのインストール コマンドで、アンインストール コマンドがサポートされているわけではありません。 AD RMS クライアントと共有アプリケーションをアンインストールし、Office アドインをアンインストールすることができます。 これらの要素をアンインストールするには、次のコマンドを使用します。
 
-### <a name="to-uninstall-the-ad-rms-client-and-the-rms-sharing-application"></a>AD RMS クライアントおよび RMS 共有アプリケーションをアンインストールするには
+### <a name="to-uninstall-the-ad-rms-client-and-the-rms-sharing-application"></a>AD RMS クライアントおよび RMS 共有アプリケーションをアンインストールするには
 
 -   次のコマンドを使用します。
 

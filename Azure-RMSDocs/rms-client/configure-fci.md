@@ -4,18 +4,18 @@ description: Rights Management (RMS) クライアントと Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
-ms.topic: article
+ms.date: 09/12/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8eed649c89e854a4499260af15af8af510a39ea
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 8c97e4591343c0c6f04c39b5fa162acb1feacdd1
+ms.sourcegitcommit: 62da5075a6b3d13e4688d2d7d82beff53cade440
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804686"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45540090"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -209,11 +209,11 @@ FCI で使用する Rights Management テンプレートに変更を加える場
         -   **引数**: 次のように指定します。&lt;path&gt; と &lt;template ID&gt; は実際の値に置き換えます。
 
             ```
-            -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail [Source File Owner Email]"
+            -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail '[Source File Owner Email]'"
             ```
             たとえば、スクリプトを C:\RMS-Protection にコピーし、前提条件で確認したテンプレート ID が e6ee2481-26b9-45e5-b34a-f744eacd53b0 である場合は、次のように指定します。
 
-            `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
+            `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail '[Source File Owner Email]'"`
 
             このコマンドで、**[Source File Path]** (ソース ファイル パス) と **[Source File Owner Email]** (ソース ファイル所有者電子メール) はどちらも FCI 固有の値なので、上のコマンドで表示された値を正確に入力します。 最初の変数は、フォルダーで識別されたファイルを自動的に指定するために FCI によって使用され、2 番目の変数は、FCI が識別されたファイルの指定所有者の電子メール アドレスを自動的に取得するために使用されます。 このコマンドが、フォルダー内のファイルごとに繰り返されます。この例では、ファイル分類プロパティとして RMS が指定されている C:\FileShare フォルダー内の各ファイルです。
 

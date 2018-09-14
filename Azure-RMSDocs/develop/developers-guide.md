@@ -5,17 +5,17 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 59c9a2db3f0959a5c4bfb9e65248598b14276825
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 21564a219a05efb0d47a12755d4334cc9ac2a559
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808561"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44150349"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -28,8 +28,7 @@ ms.locfileid: "42808561"
 サービス アプリケーションは、エンタープライズ コンテンツ管理システム、ビジネス アプリケーション、またはクラウド ベースのビジネス ソリューションからのエクスポートにおいて、情報を保護する機能を提供します。 サービス アプリケーションの例としては、データ損失防止対策 (DLP) および Cloud Application Security (CAS) のアプリケーションが挙げられます。 マイクロソフトが提供するサービス アプリケーション開発向け SDK は、2 つのプログラミング モデルで利用できます。
 
 - [C++](https://www.microsoft.com/download/details.aspx?id=38397)
-- 
-  [C# マネージド API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
+- [C# マネージド API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 ### <a name="examples-of-service-applications"></a>サービス アプリケーションの例
 

@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7965b6cd5283908e56266c88df866ca1a78bc977
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 821038f555a73e89748541d5b512d5a631094fa8
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806855"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149363"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -47,11 +47,11 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 |アルゴリズム:RSA<br /><br />キーの長さ: 2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
 
-###### <a name="footnote-1"></a>脚注 1: 
+###### <a name="footnote-1"></a>脚注 1 
 
 ファイルの拡張子が .ppdf のとき、またはファイルが保護されたテキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のときは、汎用的な保護およびネイティブ保護のために Azure Information Protection クライアントと Rights Management 共有アプリケーションは 256 ビットを使用します。
 
-###### <a name="footnote-2"></a>脚注 2:
+###### <a name="footnote-2"></a>脚注 2
 
 2048 ビットは、Azure Rights Management サービスがアクティブ化されているときのキーの長さです。 1024 ビットは、省略可能な次のシナリオでサポートされています。
 

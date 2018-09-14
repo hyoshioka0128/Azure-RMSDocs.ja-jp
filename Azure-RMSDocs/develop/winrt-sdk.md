@@ -6,18 +6,18 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6de44f60b3915da6f5840d98743a1798fe2a6811
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f7fde149e080607633b0e916123d4da1e06d7715
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804086"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44147512"
 ---
 # <a name="windows-store-setup"></a>Windows ストアのセットアップ
 
@@ -30,7 +30,7 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4.
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 
 開発システムには、以下のソフトウェアが必要です。
@@ -61,8 +61,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
     ![参照の追加](../media/winrtsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスで **[参照]** をクリックし、SDK パッケージを解凍したフォルダー内にある *Microsoft.RightsManagement.dll* ファイルを選択します。
--   
-  **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/winrtsetup-refmngr.png)
 
@@ -70,7 +69,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 これで、新しい独自の Windows ストア アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 [作業開始](get-started.md)
 

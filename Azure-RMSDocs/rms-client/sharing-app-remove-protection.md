@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4f6491e63cf5eca1274ddc7727320dc739f4fe43
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 871a9c34e3b02fcf1e7295228d1c79f9840f719b
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803431"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44151592"
 ---
 # <a name="remove-protection-from-a-file-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションの使用によるファイルからの保護の削除
 
@@ -32,7 +32,7 @@ RMS 共有アプリケーションを使用して、保護されていたファ�
 
     ![RMS 共有アプリケーションの [保護の解除] メニュー オプション](../media/ADRMS_MSRMSApp_RemoveProtection.png)
 
-    資格情報が要求される場合があります。
+    資格情報の入力が求められる場合があります。
 
 注: これらのオプションが表示されない場合は、RMS 共有アプリケーションがコンピューターにインストールされていない、最新バージョンがインストールされていない、インストールを完了するためにコンピューターを再起動する必要がある、などの可能性があります。 共有アプリケーションをインストールする方法の詳細については、「[Rights Management 共有アプリケーションをダウンロードしてインストールする](install-sharing-app.md)」を参照してください。
 

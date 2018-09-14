@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/15/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bb55fa6156eb27adf6ef2aaa2fde37142baf28af
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: c876d4ffb3ecfb04aeb8aaad3dab83ea20ac35fa
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805305"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44148972"
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するようにクライアントとオンライン サービスを構成する
 
@@ -495,7 +495,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
     1.  `$sharepointAdminCenterUrl` を探し、例の値を実際の SharePoint 管理センターの URL に置き換えます。
 
-        SharePoint 管理センターでこの値をベース URL として探すことになります。形式は、https://*&lt;テナント名&gt;*-admin.sharepoint.com です。
+        SharePoint 管理センターでこの値をベース URL として探すことになります。形式は、 https://*&lt;テナント名&gt;*-admin.sharepoint.com です。
 
         たとえば、テナント名が "contoso" の場合、**https://contoso-admin.sharepoint.com** と指定します。
 
@@ -509,7 +509,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
         または、スクリプトのコメントを参考にして、構成する必要のあるすべての URL を含む .CSV ファイルをインポートして、この配列を置き換えます。  自動的に URL を検索して抽出し、この .CSV ファイルを作成する、別のサンプル スクリプトが提供されています。 これを行う準備ができたら、これらの手順を実行した直後に「[すべての OneDrive for Business URL を .CSV ファイルに出力するための追加スクリプト](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file)」セクションの手順を実行します。
 
-        ユーザーの OneDrive for Business の Web URL の形式は、https://*&lt;テナント名&gt;*-my.sharepoint.com/personal/*&lt;ユーザー名&gt;*_*&lt;テナント名&gt;*_com です。
+        ユーザーの OneDrive for Business の Web URL の形式は、 https://*&lt;テナント名&gt;*-my.sharepoint.com/personal/*&lt;ユーザー名&gt;*_*&lt;テナント名&gt;*_com です。
 
         たとえば、contoso テナントのユーザーのユーザー名が "rsimone" の場合、**https://contoso-my.sharepoint.com/personal/rsimone_contoso_com** と指定します。
 

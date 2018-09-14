@@ -6,18 +6,18 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: ca9f73a764bee7dfa66f9f0d1b2282b7c6f0d67f
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: a3385f260928dabc7254a49f3265b647c2920703
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808579"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44150060"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -118,7 +118,7 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 アプリケーションによる Azure Rights Management サービスでの RMS の使用を有効にする方法の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」をご覧ください。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/download/details.aspx?id=28177)
 * [Rights Management を構成する](https://TechNet.Microsoft.Com/library/jj585002.aspx)

@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/05/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68a02ba4ec9ef0a91d2aa4fbd541c27ba2a07bcd
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 43f99a35104ecdc3bfb422ed9f6747043e895ac7
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806447"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149839"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -77,9 +77,9 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 
 ユーザーが文書や電子メールのラベル付けに慣れたら、最も機密性の高いデータのデータ保護を導入できます。 この段階には次の準備が必要です。
 
-1. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+1. マイクロソフトでテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-2. インターネットにアクセスできる 1 つ以上のコンピューターで AADRM 向けの PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
+2. インターネットにアクセスできる 1 つ以上のコンピューターで AADRM 向けの PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
 
 3. 現在、AD RMS を使用している場合: キー、テンプレート、URL をクラウドに移行する統合を実行します。 詳細については、「[AD RMS から Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
@@ -87,9 +87,9 @@ Azure Information Protection の使用を開始する前に、次の準備を行
 
 必要に応じて、次の構成を考慮してください。
 
--   既定のテンプレートが組織にとって十分でない場合は、保護設定のためのカスタム テンプレート。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
+-   既定のテンプレートが組織にとって十分でない場合は、保護設定のためのカスタム テンプレート。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
--   組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
+-   組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
 
 ### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>手順 5: データ保護のために Azure Information Protection ポリシー、アプリケーション、サービスを構成する
 
@@ -143,9 +143,9 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 1.  Office 365 テナントに、組織のユーザーを認証および承認するのに Azure Information Protection で使用されるユーザー アカウントとグループが含まれていることを確認します。 必要に応じて、これらのアカウントとグループを作成するか、またはオンプレミスのディレクトリからそれらを同期します。 詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
-2. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+2. マイクロソフトでテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-3. インターネットにアクセスできる 1 つ以上のコンピューターで AADRM 向けの PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
+3. インターネットにアクセスできる 1 つ以上のコンピューターで AADRM 向けの PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
 
 4. 現在、AD RMS を使用している場合: キー、テンプレート、URL をクラウドに移行する統合を実行します。 詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
@@ -153,9 +153,9 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 必要に応じて、次の構成を考慮してください。
 
--   既定のテンプレートが組織にとって十分でない場合は、保護設定のためのカスタム テンプレート。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
+-   既定のテンプレートが組織にとって十分でない場合は、保護設定のためのカスタム テンプレート。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
-- 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行してもかまいません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
+- 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
 
 ### <a name="step-3-install-the-client-and-configure-applications-and-services-for-rights-management"></a>手順 3: クライアントをインストールし、Rights Management のアプリケーションとサービスを構成する
 

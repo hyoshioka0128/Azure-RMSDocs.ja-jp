@@ -6,17 +6,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dda9bf1ae16f76bcfa8d4abf95529ce933c71a67
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 076c7f78f4a1458a4d83272b0a8b281341ebb75d
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807341"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44148632"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>手順 5: 保護ファイルの共有の動作を確認し、文書を追跡する 
 
@@ -58,7 +58,7 @@ ms.locfileid: "42807341"
 
 7. 受信者に合わせ、既定のメッセージの説明を変更します。 ただし、次のようなテキストを追加してください。
 
-    **このファイルは Microsoft Azure Information Protection で保護されています。初めて利用する場合は、https://aka.ms/rms-signupこちらの手順**を参照してください。 
+    **このファイルは Microsoft Azure Information Protection で保護されています。初めて利用する場合は、 https://aka.ms/rms-signupこちらの手順**を参照してください。 
 
     ![Azure Information Protection クイック スタート チュートリアル手順 5 - 電子メールによる保護ドキュメントの共有](./media/share-protected-emailv2.png)
 

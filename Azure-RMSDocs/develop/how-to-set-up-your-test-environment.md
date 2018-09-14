@@ -6,18 +6,18 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4d35cec17528c88773784231ccd45cdc50252a25
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 054121899523056e9d61a673c01f70022e77d13c
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807972"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149636"
 ---
 # <a name="testing-your-application"></a>アプリケーションのテスト
 
@@ -41,7 +41,7 @@ Azure RMS または Windows Server で実行される RMS サーバーのいず�
 
 これは、包括的なガイドではありません。 RMS クライアント 2.1 の構成方法については、「[RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [RMS サーバーをインストールして構成する方法](how-to-install-and-configure-an-rms-server.md)
 * [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)

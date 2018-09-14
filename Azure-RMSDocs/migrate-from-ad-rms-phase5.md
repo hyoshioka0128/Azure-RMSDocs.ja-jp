@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1092a8a23af5249a3b74968d2de2ee1cc2b71fe
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 16d3aa308395a65f7d3af6e74f817d88d6033747
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44150587"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -109,13 +109,11 @@ Azure Information Protection テナント キーの再入力を行うと ("キ�
 
 Azure Information Protection テナント キーを更新するには:
 
-- 
-  **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレット [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行し、テナント用に自動的に作成されたキーの識別子を指定します。 指定する値を識別するには、[Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレット [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行し、テナント用に自動的に作成されたキーの識別子を指定します。 指定する値を識別するには、[Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
     
         (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- 
-  **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
+- **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 

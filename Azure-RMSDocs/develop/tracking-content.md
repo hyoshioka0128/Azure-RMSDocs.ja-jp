@@ -6,18 +6,18 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b3fb0f9f084bd474d2431f1806268a74f59454d1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 68c7f3c0ca050a13e0e943dc2372267c00f20c48
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805269"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149091"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
@@ -145,7 +145,7 @@ ms.locfileid: "42805269"
 
 このクライアントでは、適切な URL でブラウザーを開く必要があります。 RMS ドキュメント追跡ポータルが認証と必要なリダイレクトを処理します。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [ライセンス メタデータ プロパティの種類](https://msdn.microsoft.com/library/dn974062.aspx)
 * [通知の基本設定](https://msdn.microsoft.com/library/dn974063.aspx)
