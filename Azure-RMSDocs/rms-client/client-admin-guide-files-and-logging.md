@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6fd4c5768d29a231960b3e048c74d4c0e5ec3e7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7e72aa9af0d248f54880f8b5bb6df0ce75018f2b
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149924"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211226"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
@@ -87,7 +87,7 @@ Azure Information Protection クライアントをインストールした後、
     
 保護サービスの使用状況ログについては、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../log-analyze-usage.md)」をご覧ください。
 
-
+保護サービスの使用状況ログについては、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../log-analyze-usage.md)」をご覧ください。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントに関連付けられているすべてのログ ファイルがわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
