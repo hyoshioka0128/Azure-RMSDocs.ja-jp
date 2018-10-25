@@ -4,18 +4,18 @@ description: Azure Information Protection ラベルの Exchange Online メール
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 1f80f939c857c3b36c7999eaaeb2af1ae1680444
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9d30e7c3e15e9aa6b67c2e1b653d56c1af36ffe0
+ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148259"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49366990"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
@@ -93,7 +93,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
 
 ### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>例 2: 電子メールに **Confidential \ Partners** ラベルの付いた添付ファイルが含まれ、かつ電子メールが組織の外部に送信される場合に、暗号化のみのオプションを電子メールに適用するルール
 
-この例では、**Confidential \ Partners** サブラベルの GUID は 5ab1c8a1-8241-72bc-3f22-304a0558362a です。 このルールで使用する独自のラベルまたはサブラベルの GUID で置き換えます。 
+この例では、**Confidential \ Partners** サブラベルの GUID は 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 です。 このルールで使用する独自のラベルまたはサブラベルの GUID で置き換えます。 
 
 このラベルは、パートナーと共同で作業するドキュメントの分類と保護のために使用されます。   
 

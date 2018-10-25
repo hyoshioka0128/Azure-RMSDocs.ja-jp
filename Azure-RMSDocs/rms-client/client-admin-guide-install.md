@@ -4,18 +4,18 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d8818ff71acbd338ebb4959f9eb3ef617655b25d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
+ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149278"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49367007"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -57,9 +57,9 @@ ms.locfileid: "44149278"
     
     クライアントのインストールでは、この前提条件は確認されませんが、Azure Information Protection クライアントで PDF ファイルを分類し保護する場合は必要になります。
 
-- Office アプリケーションに対して **Microsoft Azure Information Protection** アドインを無効にしないでください
+- **[管理対象アドインの一覧]** のグループ ポリシーの構成
     
-    グループ ポリシー設定の **[管理対象アドインの一覧]** を構成した場合は、Microsoft Azure Information Protection の次のプログラム識別子 (ProgID) を指定して、Office アプリケーションの Azure Information Protection アドインを追加し、オプションを **1 (アドインは常に有効)** に設定します。
+    Office 2013 およびそれ以降のバージョンの場合、グループ ポリシー設定の **[管理対象アドインの一覧]** を構成し、Office アプリケーション用の **Microsoft Azure Information Protection** アドインを追加します。 Azure Information Protection に次のプログラム識別子 (ProgID) を指定して、オプションを **[1: アドインを常に有効にする]** に設定します。
     
     - Outlook の場合: `MSIP.OutlookAddin`
     
@@ -69,9 +69,9 @@ ms.locfileid: "44149278"
     
     - PowerPoint の場合: `MSIP.PowerPointAddin`
     
-    この **[管理対象アドインの一覧]** グループ ポリシー設定を構成していなくても、Microsoft Azure Information Protection アドインが無効になることを示すレポートを取得した場合は構成する必要がある場合があります。 このアドインが無効の場合は、Office アプリケーションに Azure Information Protection バーが表示されません。
+    この設定を構成しない場合は、Microsoft Azure Information Protection アドインは無効になり、ユーザーは Office アプリケーションでドキュメントと電子メールにラベルを付けることはできません。
     
-    このグループ ポリシー設定の詳細については、「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) を参照してください。
+    このグループ ポリシー設定の構成の詳細については、Office ドキュメントの「[システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」を参照してください。
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。

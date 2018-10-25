@@ -8,12 +8,12 @@ ms.date: 07/21/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: d399edf1e8b367ad45118447a5d3a88257953f4d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8ceda2342638b77de40844a9b5dc00d4f3b1494f
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148751"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170044"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>手順 2: Azure Information Protection ポリシーを構成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "44148751"
 
 Azure Information Protection には構成しないで使用できる既定のポリシーが付属していますが、ここではそのポリシーを確認し、いくつか変更を行います。
 
-1. [手順 1](infoprotect-tutorial-step1.md) から引き続き、Azure Portal で **[分類]** > **[ポリシー]** > **[グローバル]** を選択して **[ポリシー: グローバル]** ブレードを開きます。 このブレードには、テナントに対して作成された既定の Azure Information Protection ポリシーが表示されます。
+1. [手順 1](infoprotect-tutorial-step1.md) から引き続き、Azure portal で **[分類]** > **[ポリシー]** > **[グローバル]** を選択して **[ポリシー: グローバル]** ブレードを開きます。 このブレードには、テナントに対して作成された既定の Azure Information Protection ポリシーが表示されます。
 
 2. 表示されるラベルをよく理解しておいてください。
     

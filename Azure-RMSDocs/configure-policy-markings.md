@@ -4,16 +4,16 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2b7b94c7e53cd59a72602a2b3076eaefbc49e2ef
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
+ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148870"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358977"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -32,6 +32,12 @@ ms.locfileid: "44148870"
     - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
     
     - 複数行のテキストがサポートされます。
+
+- 文字列の最大長:
+    
+    - ヘッダーとフッターに入力できる文字列の最大長は 1024 文字です。 しかし、Excel にはヘッダーとフッターに合計 255 文字の制限があります。 ヘッダーとフッターに長い文字列を入力すると、Excel では、このテキストは 255 文字以下に切り捨てられることがあります。
+    
+    - 入力できる透かしの文字列の最大長は 255 文字です。
 
 - ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。
 
