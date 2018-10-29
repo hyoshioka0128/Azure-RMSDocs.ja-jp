@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f64391c3eb47d9b65908e95c300d19ae3ad82e2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7ec0dacdf545ad8f7b04c8fb852ef0dcb4197838
+ms.sourcegitcommit: 100a812737a507467d89bfbc2a64d1ce8ad2c201
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149125"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975557"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -46,8 +46,8 @@ ms.locfileid: "44149125"
 |**デバイス オペレーティング システム**|Word、Excel、PowerPoint|保護された PDF|Email|他のファイルの種類|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (保護されたドキュメントの表示) [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Windows 用 Azure Information Protection クライアント <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4) |Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
-|**Android**|Office Mobile (保護されたドキュメントの表示と編集)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護されたドキュメントの表示)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (保護されたドキュメントの表示と編集) <br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護されたドキュメントの表示) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 以降) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
+|**Android**|GigaTrust<br /><br /> Office Mobile (保護されたドキュメントの表示と編集)<br /><br />Office Online [[1]](#footnote-1)<br /><br />TITUS Docs<br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護されたドキュメントの表示)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile <br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護されたドキュメントの表示) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 以降) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
 |**macOS**|Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Foxit Reader<br /><br />RMS 共有アプリ (保護されたドキュメントの表示)|Outlook 2016 for Mac<br /><br />Web ブラウザー [[3]](#footnote-3)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
 |**Windows 10 Mobile**|Office Mobile アプリ (Azure RMS で保護されたドキュメントの表示) <br /><br />Web ブラウザー [[2]](#footnote-2)|サポートされていません|Citrix WorxMail <br /><br />Outlook メール (保護されたメールの表示) <br /><br />Web ブラウザー [[3]](#footnote-3)|サポートされていません|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|サポートされていません|Outlook 2013 RT<br /><br />Windows 用メール アプリケーション<br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Siemens JT2Go: JT ファイル|
@@ -83,7 +83,9 @@ Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケー
 
 #### <a name="windows-computers-for-information-rights-management-irm"></a>Information Rights Management (IRM) 用の Windows コンピューター
 
-次の Office クライアント スイートは、Windows コンピューター上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
+次の Office クライアント スイートは、Windows コンピューター上にあるファイルや電子メールの Azure Rights Management サービスを使用した保護をサポートします。
+
+- ユーザーに Azure Rights Management (Azure Information Protection for Office 365 とも呼ばれます) のライセンスが割り当てられている場合は、Office 2016 アプリ (最小バージョン 1805、ビルド 9330.2078) を含む Office 365
 
 - Office 365 ProPlus: Office 2016 と Office 2013
     
@@ -97,7 +99,7 @@ Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケー
 
 Office のすべてのエディション (Office 2007 を除く) で、保護されたコンテンツの使用がサポートされます。
 
-Azure RMS および Office Professional Plus 2010 Service Pack 2 または Office Professional 2010 Service Pack 2:
+Office Professional Plus 2010 Service Pack 2 または Office Professional 2010 Service Pack 2 で Azure Rights Management サービスを使用する場合:
 
 - Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションが必要です。
 

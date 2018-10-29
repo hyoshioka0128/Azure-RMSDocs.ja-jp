@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 57c410432377d5a98c132239ac1805293d1a5133
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e63b98118cda3a927577a90c7c0999d8781f8d93
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151488"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211294"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -168,7 +168,11 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [異なる言語のラベルを構成する方法](configure-policy-languages.md)
 
+- [Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](configure-policy-migrate-labels.md)
+
 ## <a name="next-steps"></a>次の手順
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」をご覧ください。
+
+ポリシーの実行方法を確認するには、[Azure Information Protection 向けのレポート作成](reports-aip.md)に関する記事を参照してください。
 
