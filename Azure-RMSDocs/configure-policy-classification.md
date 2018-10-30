@@ -4,16 +4,16 @@ description: ラベルの条件を構成するときに、ドキュメントま�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 252b92a7a6ea6b64858acb0e7ace1cf9c56c1f63
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3e911d8190e524efe56677d6afaec8f679c773b9
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148160"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862109"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -97,7 +97,7 @@ ms.locfileid: "44148160"
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
 
-現在、次の機密情報の種類を使用するには、プレビュー版の Azure Information Protection クライアントが必要です。
+次の機密情報の種類には、Azure Information Protection クライアントのバージョン 1.37.19.0 以降が必要です。
 
 - **EU の電話番号**
 - **EU の携帯電話番号**

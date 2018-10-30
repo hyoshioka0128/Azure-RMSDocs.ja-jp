@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c1ad35bde57822460f0f3e7346d05d95647eedd6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b4306a45f8bfa1f6c865f634e270ba8eafa6e8d8
+ms.sourcegitcommit: aaa3eabffc9cdc2389955de770b43ffa9fa984fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151862"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889463"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -29,7 +29,7 @@ ms.locfileid: "44151862"
 
 - サーバー メッセージ ブロック (SMB) プロトコルを使用するネットワーク共有の UNC パス。
 
-- SharePoint Server 2016 および SharePoint Server 2013 のサイトとライブラリ。 SharePoint 2010 は、[このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様、および前のバージョンのスキャナーを使用しているお客様にもサポートされます。
+- SharePoint Server 2016 および SharePoint Server 2013 のサイトとライブラリ。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint 2010 もサポートされています。
 
 クラウド リポジトリのファイルをスキャンおよびラベル付けするには、[Cloud App Security](https://docs.microsoft.com/cloud-app-security/) を使用します。
 
@@ -54,7 +54,7 @@ Azure Information Protection スキャナーをインストールする前に、
 |要件|詳細情報|
 |---------------|--------------------|
 |スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 4 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2016 または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br />Azure Information Protection に必要な[インターネット接続](requirements.md#firewalls-and-network-infrastructure)がこのコンピューターにあることを確認します。 組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。|
-|スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス<br /><br />- スキャナーをインストールする sysadmin ロール|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Sysadmin ロールを持つアカウントでスキャナーをインストールすると、インストールのプロセスで AzInfoProtectionScanner データベースが自動的に作成され、スキャナーを実行するサービス アカウントに対して必要な db_owner ロールが付与されます。  Sysadmin ロールが付与されない場合や、組織のポリシーがデータベースを手動で作成し構成することを要求している場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」をご覧ください。|
+|スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス<br /><br />- スキャナーをインストールする sysadmin ロール|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />スキャナーの複数のインスタンスをインストールする場合は、スキャナー インスタンスごとに独自の SQL Server データベースが必要です。<br /><br />Sysadmin ロールを持つアカウントでスキャナーをインストールすると、インストールのプロセスで AzInfoProtectionScanner データベースが自動的に作成され、スキャナーを実行するサービス アカウントに対して必要な db_owner ロールが付与されます。  Sysadmin ロールが付与されない場合や、組織のポリシーがデータベースを手動で作成し構成することを要求している場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」をご覧ください。|
 |スキャナー サービスを実行するサービス アカウント|スキャナーのサービスの実行に加えて、このアカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />- **ローカル ログオン**権限。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />- **サービスとしてログオン**権限。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーが保護されたファイルに常にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能が有効になっていることを確認します。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」を参照してください。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
 |Azure Information Protection クライアントが Windows Server コンピューターにインストールされる|スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />クライアントのインストール手順については、[管理者ガイド](./rms-client/client-admin-guide.md)を参照してください。 スキャナーを以前にインストールしていて、今回新しいバージョンにアップグレードする必要がある場合は、[「Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」をご覧ください。|
 |自動分類と、必要に応じて保護を適用する構成済みのラベル|Azure Information Protection ポリシーの条件を構成する方法について詳しくは、「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)」をご覧ください。<br /><br />ファイルに保護を適用するラベルを構成する方法の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」を参照してください。<br /><br />これらのラベルは、グローバル ポリシーまたは 1 つ以上の[スコープ付きポリシー](configure-policy-scope.md)にあります。<br /><br />注: 自動分類を適用するラベルを構成していない場合でもスキャナーを実行できますが、このシナリオについては、これらのガイドでは説明されていません。 [詳細情報](#using-the-scanner-with-alternative-configurations)|
@@ -168,7 +168,7 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) コマンドレットを使用して、Azure Information Protection スキャナーでスキャンするデータ ストアを指定します。 SharePoint サイトとライブラリのローカル フォルダー、UNC パス、および SharePoint Server URL を指定できます。 
 
-サポートされている SharePoint のバージョン: SharePoint Server 2016 と SharePoint Server 2013。 SharePoint Server 2010 は、[このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様、および前のバージョンのスキャナーを使用しているお客様にもサポートされます。
+サポートされている SharePoint のバージョン: SharePoint Server 2016 と SharePoint Server 2013。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 もサポートされています。
 
 1. 同じ Windows Server コンピューターから、PowerShell セッションで次のコマンドを実行して、最初のデータ ストアを追加します。
     
@@ -188,43 +188,34 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>探索サイクルの実行とスキャナーのレポートの表示
 
-1. **[管理ツール]** > **[サービス]** を使用して、**Azure Information Protection スキャナー** サービスを開始します。
+1. PowerShell セッションで次のコマンドを実行して、**Azure Information Protection スキャナー** サービスを再起動します。
     
-    現在のプレビュー バージョンのスキャナーを所有している場合は、PowerShell セッションで [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を代わりに実行できます。
+        Start-AIPScan
 
 2. スキャナーのサイクルが完了するまで待ちます。 スキャナーが指定したデータ ストア内のすべてのファイルをクロールすると、サービスが停止します。 サービスが停止したときに、ローカルの Windows **アプリケーションとサービス**のイベント ログ、**Azure Information Protection** を使用して確認できます。 情報イベント ID **911** を探します。
 
 3. %*localappdata*%\Microsoft\MSIP\Scanner\Reports に格納され、.csv ファイル形式を持つレポートを確認します。 スキャナーの既定の構成では、自動分類の条件に一致するファイルのみがこれらのレポートに含まれます。
     
+    > [!TIP]
+    > 現在プレビュー中であり、これらのレポートからの情報は、Azure portal から表示できるように Azure Information Protection に送信されます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。 
+        
     結果が期待どおりにならない場合は、Azure Information Protection ポリシーに指定した条件を微調整する必要がある場合があります。 その場合は、構成を変更して分類、および必要に応じて保護を適用する準備ができるまで、手順 1 から 3 を繰り返します。 
-    
-    現在の GA バージョンのスキャナー: これらの手順を繰り返すたびに、最初に Windows Server コンピューターで次の PowerShell コマンドを実行します。
-  
-        Set-AIPScannerConfiguration -Schedule OneTime
-    
-    現在のプレビュー バージョンのスキャナーを所有している場合は、Set-AIPScannerConfiguration コマンドを実行しないでください。
-  
+
 スキャナーが検出したファイルに自動的にラベル付けする準備ができたら、次の手順に進みます。 
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>スキャナーを構成して分類と保護を適用する
 
 既定の設定では、スキャナーは、レポートのみモードで 1 回だけ実行されます。 これらの設定を変更するには、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットを実行します。
 
-1. Windows Server コンピューターの PowerShell セッションで、次のコマンドのいずれかを実行します。
+1. Windows Server コンピューターの PowerShell セッションで、次のコマンドを実行します。
     
-    現在の GA バージョンのスキャナーの場合:
-       
-        Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
-    
-    プレビュー バージョンのスキャナーの場合:
-       
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
     変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、およびレポートに記録する項目などがあります。 さらに、Azure Information Protection ポリシーに分類レベルを下げる、または保護を解除する理由メッセージを必要とする設定が含まれている場合、このコマンドレットを使用してそのメッセージを指定します。 各構成設定に関する詳細については、[オンライン ヘルプ](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters)を参照してください。 
 
-2. **[管理ツール]** > **[サービス]** を使用して、**Azure Information Protection スキャナー** サービスを再開します。
+2. 次のコマンドを実行して、**Azure Information Protection スキャナー** サービスを再起動します。
     
-    現在のプレビュー バージョンのスキャナーを所有している場合は、PowerShell セッションで [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を代わりに実行できます。
+        Start-AIPScan
 
 3. 以前と同じく、イベント ログとレポートを監視して、ラベル付けされたファイル、適用された分類、保護が適用されたかどうかを確認します。
 
@@ -273,25 +264,16 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 スキャナーが保護とともにラベルを適用した場合、既定では、Office のファイルの種類のみが保護されます。 他のファイルの種類が保護されるように、この動作を変更できます。 ただし、ラベルがドキュメントに一般保護を適用すると、ファイル名の拡張子が .pfile に変わります。 また、権限が与えられたユーザーが開き、そのネイティブ形式で保存されるまで、ファイルは読み取り専用になります。 テキスト ファイルと画像ファイルでは、そのファイル名の拡張子を変更し、読み取り専用にすることもできます。 
 
-スキャナーの既定の動作を変更する (たとえば、他のファイルの種類も汎用的に保護する) には、レジストリを手動で編集し、保護する他のファイルの種類を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
+スキャナーの既定の動作を変更する (たとえば、他のファイルの種類も汎用的に保護する) には、レジストリを手動で編集し、保護する他のファイルの種類を指定する必要があります。 または、`*` ワイルドカード指定して、すべての種類のファイルを保護することもできます。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
 
 - スキャナーには独自の既定の動作があります。既定で保護されるのは、Office ファイル形式のみです。 レジストリを変更していない場合、その他のファイル形式は、スキャナーによっては保護されません。
 
-- スキャナーの最新のプレビュー バージョンを使用しない限り、特定のファイル名拡張子を指定する必要があり、`*` ワイルドカードは使用できません。 スキャナーのプレビュー バージョンでは、このワイルドカードがサポートされます。
 
 ## <a name="when-files-are-rescanned"></a>ファイルが再スキャンされる場合
 
 最初のスキャン サイクルではスキャナーは構成されているデータ ストアのすべてのファイルを検査し、後続のスキャンでは、新しいファイルまたは変更されたファイルのみが検査されます。 
 
-次のコマンドを実行して、スキャナーにもう一度すべてのファイルを検査するように強制することができます。
-
-- 現在の GA バージョンのスキャナーの場合:
-    
-    `-Type` パラメーターを **Full** に設定して [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) を実行します。
-
-- プレビュー バージョンのスキャナーの場合:
-    
-    `-Reset` パラメーターを設定して [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を実行します。 スキャナーに手動スケジュールを構成する必要があり、その場合、`-Schedule`パラメーターを **Manual** に設定して [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) を実行します。
+`-Reset` パラメーターを指定して [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を実行すると、スキャナーにすべてのファイルの再検査を強制することができます。 スキャナーに手動スケジュールを構成する必要があり、その場合、`-Schedule`パラメーターを **Manual** に設定して [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) を実行します。
 
 すべてのファイルの再検査はレポートにすべてのファイルを含める必要がある場合に役立ち、この構成は通常、検索モードでスキャナーが実行されるときに使用されます。 フル スキャンが完了すると、後続のスキャンで新しいファイルまたは変更されたファイルのみがスキャンされるように、スキャンの種類が自動的に [増分] に変更されます。
 
@@ -339,6 +321,8 @@ Azure AD トークンを使用することで、Azure Information Protection サ
     
     Windows Server 上にスキャンするフォルダーがある場合は、別のコンピューター上にスキャナーをインストールし、これらのフォルダーをネットワーク共有として構成してスキャンします。 ファイルをホストする機能とファイルをスキャンする機能の 2 つの機能を分離させると、これらのサービス用のリソースの計算が相互に競合していないことを意味します。
 
+必要に応じて、スキャナーの複数のインスタンスをインストールします。 各スキャナー インスタンスには、独自の構成データベースが必要です。
+
 スキャナーのパフォーマンスに影響するその他の要因
 
 - スキャンするファイルを含むデータ ストアの現在の負荷と応答時間
@@ -384,6 +368,8 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 - [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository)
 
+- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
@@ -398,14 +384,9 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
+- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
+
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
-
-
-プレビュー バージョンからの追加コマンドレット:
-
-- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
-
-- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) 
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

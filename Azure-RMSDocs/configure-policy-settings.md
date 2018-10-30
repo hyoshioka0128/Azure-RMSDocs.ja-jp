@@ -4,16 +4,16 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 118b65d1dc76e2df7b1fd639b6ea224cb5e8220c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: eb2f539486464d93e99f8485fc8d0812f9a7953d
+ms.sourcegitcommit: 4e2493d7856dc35bb3f5869fff1276c98bf88192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864118"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -49,7 +49,7 @@ Azure Information Protection のサブスクリプションを購入した時期
         
         ![新しい分類が下位の場合の Azure Information Protection のプロンプト](./media/info-protect-lower-justification.png)
         
-        このオプションは、サブラベルには適用されません。
+        このオプションは、同じ親ラベル下のサブラベルの分類を低くするためには使用できません。
         
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments (添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します)**: このオプションを **[推奨]** に設定すると、ユーザーは自分の電子メール メッセージにラベルを適用するよう求められます。 ラベルは、添付ファイルに適用されている分類のラベルに基づいて動的に選択され、最上位の分類のラベルが選択されます。 添付ファイルは物理ファイルである必要があり、ファイルへのリンク (たとえば、SharePoint または OneDrive for Business 上のファイルへのリンク) はできません。 ユーザーは、推奨設定を受け入れるか、通知を閉じます。 このオプションを **[自動]** に設定すると、ラベルが自動的に適用されますが、ユーザーは電子メールを送信する前に、ラベルを削除することも、別のラベルを選択することもできます。  
     

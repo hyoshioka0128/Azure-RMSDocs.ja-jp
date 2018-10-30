@@ -4,16 +4,16 @@ description: ユーザーに表示される Azure Information Protection ラベ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 9589985fa0ab5f80ce78483dedac8c7bc4b9879e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b4631cd5664ba7951db04ce9ba221a19c0674ff
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151709"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794312"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
@@ -25,7 +25,7 @@ ms.locfileid: "44151709"
 
 ドキュメントや電子メールに適用されているラベルを削除すると、これらのドキュメントや電子メールが Azure Information Protection クライアントによって次に開かれたときに、ユーザーにはラベルの状態が "**未設定**" と表示されます。 ただし、ラベル情報はメタデータに残り、このラベル情報を検索するサービスで読み取ることができます。
 
-また、削除されたラベルに保護が適用されている場合、その保護は解除されません。 ラベルの保護設定は維持され、**[保護テンプレート]** セクションに表示されます。 このテンプレートは新しいラベルに変換するか、ラベルにリンクできます。 このテンプレートが残っている間は、削除したラベルと同じ名前で新しいラベルを作成することはできません。 同じ名前でラベルを作成する場合、次の方法があります。
+また、削除されたラベルに保護が適用されている場合、その保護は解除されません。 ラベルの保護設定は維持され、**[保護テンプレート]** セクションに表示されます。 これで、このテンプレートを新しいラベルに変換することができます。 このテンプレートが残っている間は、削除したラベルと同じ名前で新しいラベルを作成することはできません。 同じ名前でラベルを作成する場合、次の方法があります。
 
 - テンプレートをラベルに変換する。 
     
