@@ -4,17 +4,17 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f05c1e96222eb70a7257123301d14ef7d885564d
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
+ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382597"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951841"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection 統合ラベル付けクライアント: バージョン リリース情報
 
@@ -50,6 +50,8 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
 - ユーザーが機密レベルを下げるかどうかを確認する理由のメッセージ
 
 - 設定のリセットとログのエクスポートを含む、ヘルプとフィードバックのダイアログ ボックス
+
+- 4 時間ごとのセキュリティ/コンプライアンス センターからのポリシーの更新 (Office アプリごとに)。
 
 次の機能はこのプレビュー バージョンでは実行できません。
 
