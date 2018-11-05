@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/04/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b4d0f104c0c0562f98c5418b9763adf62bdee97f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 40415c25befd3eea8d33a2b8572b0d48f7ee918c
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149777"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403099"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -90,11 +90,9 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 ## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>[問題の報告] リンクの電子メール アドレスを変更する
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 一般に提供されているバージョンのクライアントでは、**問題を報告する**リンクが表示されないため、この設定は、Azure Information Protection クライアントのプレビュー バージョンのみに該当します。
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
-
-ユーザーが **[ヘルプとフィードバック]** クライアント ダイアログ ボックスから **[問題の報告]** リンクを選択すると、既定では Microsoft のアドレスが電子メール メッセージに設定されます。 次のクライアントの詳細設定を使用して、そのアドレスを変更します。 たとえば、ヘルプ デスクの電子メール アドレスとして `mailto:helpdesk@contoso.com` を指定します。 
+ユーザーがクライアントのプレビュー バージョンの **[ヘルプとフィードバック]** クライアント ダイアログ ボックスから **[問題の報告]** リンクを選択すると、既定で Microsoft のアドレスが電子メール メッセージに設定されます。 次のクライアントの詳細設定を使用して、そのアドレスを変更します。 たとえば、ヘルプ デスクの電子メール アドレスとして `mailto:helpdesk@contoso.com` を指定します。 
 
 この詳細設定を構成するには、次の文字列を入力します。
 
@@ -219,9 +217,7 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>バックグラウンドでの分類の継続的実行をオンにする
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。
-
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
 
 この設定を構成すると、Azure Information Protection クライアントが推奨ラベルを自動的にドキュメントに適用する[既定の動作](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied)が次のように変わります。 
 
@@ -239,25 +235,61 @@ Azure Information Protection クライアントがユーザーによって指定
 
 - 値: **True**
 
-## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない
-
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
+## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
-一般公開 (GA) バージョンの Azure Information Protection クライアントによって PDF ファイルが保護される場合、結果のファイル名の拡張子は .ppdf になります。 ただし、Azure Information Protection クライアントの最新のプレビュー バージョンを使用して PDF ファイルを保護する場合、得られるファイル名の拡張子は .pdf のままとなり、PDF 暗号化の ISO 標準に準拠します。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。
+既定では、Azure Information Protection クライアントで PDF ファイルが保護されている場合、結果のファイル名の拡張子は .ppdf になります。 この動作を変更し、ファイル名の拡張子を .pdf のままにして PDF 暗号化の ISO 標準に準拠することができます。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。
 
-最新のプレビュー バージョンのクライアントを GA の動作に戻す必要がある場合は、詳細設定を使用するために次の文字列を入力します。
+この詳細設定を構成するには、次の文字列を入力します。
 
 - キー: **EnablePDFv2Protection**
 
-- 値: **False**
+- 値: **True**
+
+この構成オプションの結果、Azure Information Protection クライアントが PDF ファイルを保護している場合、このアクションによって保護された PDF ドキュメントが作成されます。作成された PDF ドキュメントは、最新版の Windows 用 Azure Information Protection クライアント版や、PDF 暗号化の ISO 標準をサポートする他の PDF リーダーで開くことができます。 iOS および Android 用の Azure Information Protection アプリは、現在、PDF 暗号化の ISO 標準をサポートしていません。 Adobe Acrobat Reader の最新の情報については、「[Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)」 (10 月以降、Microsoft Information Protection で保護されている PDF に Adobe Acrobat Reader を使用する) を参照してください。
 
 Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。
 
+この PDF の暗号化の詳細については、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) を参照してください。
+
+### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>既存の .ppdf ファイルを保護された .pdf ファイルに変換するには
+
+Azure Information Protection クライアントに新しい設定のクライアント ポリシーがダウンロードされると、既存の .ppdf ファイルを、PDF の暗号化に ISO 標準が使用された保護された .pdf ファイルに PowerShell コマンドを使用して変換することができます。 
+
+ご自分で保護していないファイルに次の手順を行うには、[Rights Management の使用権限](../configure-usage-rights.md)を持っているか、スーパー ユーザーでないと、ファイルから保護を削除できません。 スーパー ユーザーの機能を有効にし、アカウントをスーパー ユーザーとして構成するには、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../configure-super-users.md)」をご覧ください。
+
+また、自分で保護していないファイルにこれらの手順を使用する場合、そのユーザーは [RMS Issuer](../configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) になります。 このシナリオでは、ドキュメントを最初に保護したユーザーは、それを追跡して取り消すことができなくなります。 ユーザーが保護されている PDF 文書を追跡して取り消す必要がある場合、ファイル エクスプローラーの右クリックを使用して、ラベルを手動で削除して最適用するよう依頼します。
+
+PowerShell コマンドを使用して既存の .ppdf ファイルを保護された .pdf ファイルに変換するには、PDF の暗号化に ISO 標準を使用します。
+
+1. .ppdf ファイルに [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) を使用します。 次に例を示します。
+    
+        Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+
+2. 出力の次のパラメーター値のメモを取ります。
+    
+    - 存在する場合、**SubLabelId** の値 (GUID)。 この値が空の場合、サブラベルは使用されていないので、代わりに **MainLabelId** 値のメモを取ります。
+    
+    注: **MainLabelId** にも値がない場合、ファイルはレベル付けされていません。 この場合は、手順 3 と 4 のコマンドではなく、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドと [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドを使用します。
+    
+    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** 用に表示された値) にラベルの削除と、元のカスタム アクセス許可と共にそれの再適用の実行を依頼するかどうかを決定します。
+
+3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
+    
+        Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    
+    [ポリシー設定](../configure-policy-settings.md) (**すべてのドキュメントと電子メールにラベルが必要です**) として必須のラベル付けを使用しているためにラベルを削除できない場合、代わりに一時的に別のラベルを適用します。
+
+4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 次に例を示します。
+    
+        Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+
+ファイルは .pdf ファイル名拡張子を維持しますが、以前と同様に分類され、PDF の暗号化のための ISO 標準を使用して保護されます。
+
 ## <a name="support-for-files-protected-by-secure-islands"></a>Secure Islands によって保護されたファイルのサポート
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、プレビュー版の Azure Information Protection クライアント、Azure Information Protection スキャナー、または Azure Information Protection ビューアーが必要です。
+この構成オプションは、現在プレビューの段階で、変更される可能性があります。
 
 ドキュメントを保護するために Secure Islands を使用した場合、この保護の結果、テキスト ファイル、画像ファイル、一般的に保護対象となるファイルが保護される可能性があります。 たとえば、ファイル名の拡張子が .ptxt、.pjpeg、または .pfile のファイルです。 以下のようにレジストリを編集すると、Azure Information Protection はこれらのファイルを復号化できます。
 
@@ -282,9 +314,9 @@ Azure Information Protection スキャナーで新しい設定を使用するに
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
+現在、この設定は、[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)設定とは互換性がありません。 両方の設定を同時に使用する場合、.ppdf ファイルをファイル エクスプローラー、PowerShell、またはスキャナーで開くことはできません。
 
 Secure Islands によってラベル付けされた Office ドキュメントや PDF ドキュメントは、Azure Information Protection のラベルでラベル付けし直すことができます。そのためには、独自に定義したマッピングを使用します。 また、この方法を使用して、他のソリューションからのラベルを、そのラベルが Office ドキュメントにある場合は再利用することができます。 
 
@@ -366,11 +398,9 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
 
-この構成オプションは、現在プレビューの段階で、変更される可能性があります。 また、この構成オプションには、プレビュー版の Azure Information Protection クライアントが必要です。
+この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 これらの設定はプレビュー段階であり、変更される可能性があります。
 
-この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
-
-これらの設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、ドキュメントからヘッダーまたはフッターを削除したり置き換えたりできるようになります。 たとえば、古いフッターに古いラベルの名前が含まれていますが、これを新しいラベル名と独自のフッターで Azure Information Protection に移行したとします。
+この設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、ドキュメントからヘッダーまたはフッターを削除したり置き換えたりできるようになります。 たとえば、古いフッターに古いラベルの名前が含まれていますが、これを新しいラベル名と独自のフッターで Azure Information Protection に移行したとします。
 
 クライアントがそのポリシーにこの構成を使用すると、Office アプリでドキュメントが開き、いずれかの Azure Information Protection ラベルがドキュメントに適用されたときに、古いヘッダーとフッターが削除または置換されます。
 
@@ -519,11 +549,11 @@ Outlook on the web では、Azure Information Protection の分類と保護の�
 
 2. ラベルごとに Exchange メール フロー ルールを作成します。メッセージのプロパティに構成した分類が含まれる場合はルールを適用し、メッセージ プロパティを変更してメッセージ ヘッダーを設定します。 
 
-     メッセージ ヘッダーについては、Azure Information Protection ラベルを使って送信および分類した電子メールのインターネット ヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、そのすぐあとに続く文字列 (セミコロンまでが対象) を探します。 例:
+     メッセージ ヘッダーについては、Azure Information Protection ラベルを使って送信および分類した電子メールのインターネット ヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、そのすぐあとに続く文字列 (セミコロンまでが対象) を探します。 次に例を示します。
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
-    ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 例:
+    ルール内のメッセージ ヘッダーの場合は、ヘッダーとして **msip_labels** を指定し、ヘッダー値としてこの文字列の残りの部分を指定します。 次に例を示します。
     
     ![例: 特定の Azure Information Protection ラベルのメッセージ ヘッダーを設定する Exchange Online メール フロー ルール](../media/exchange-rule-for-message-header.png)
     

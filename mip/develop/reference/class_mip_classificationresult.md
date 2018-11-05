@@ -1,3 +1,18 @@
+---
+title: class mip ClassificationResult
+description: class mip ClassificationResult のリファレンス
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: ea312330c656b6daefbc1bcba690f53ebfbf419f
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446296"
+---
 # <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
 実行状態での分類呼び出しの結果を含むクラス。
   

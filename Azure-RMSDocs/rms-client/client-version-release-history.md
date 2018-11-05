@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8bd70537bc3057ecb3087e790d529f499d07779d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b7aed6f8cdf6cf95b6b7af0bfa06554bde79dc02
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149652"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862177"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -42,29 +42,51 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="versions-later-than-12950"></a>1.29.5.0 以降のバージョン
+## <a name="versions-later-than-137190"></a>1.37.19.0 より後のバージョン
 
-1.29.5.0 以降のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。
+1.37.19.0 より後のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。
+
+**リリース日**: 2018 年 9 月 20 日
+
+**新機能:**
+
+- Microsoft Ignite で発表された Azure Information Protection 分析機能の[中央レポート機能](../reports-aip.md)のサポート。
+
+**追加:**
+
+このプレビュー バージョンでのみ、スキャナーを使用するには、次の手順に従う必要があります。
+
+1. クライアントの現行の GA バージョン (1.37.19.0) をインストールします。
+2. スキャナーをインストールして構成します。
+3. スキャナーを起動します。
+4. Azure Information Protection クライアントをこのプレビュー バージョンにアップグレードします。
+5. スキャナーを起動します。
+
+スキャナーのインストール、構成、起動方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。
+
+## <a name="version-137190"></a>バージョン 1.37.19.0
+
+**リリース日**: 2018 年 9 月 17 日
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 
 **新機能**: 
 
-- PDF 暗号化の ISO 標準がサポートされ、保護するドキュメントの .pdf ファイル名拡張子を既定で保持できます。また、この ISO 標準をサポートする PDF リーダーで開くことができます。 現時点では、Azure Information Protection ビューアーを使用して手動でこれらの保護された PDF を開くよう、ユーザーに指示する必要があります。 これをサポートするために、ユーザーがこれらの保護された PDF ファイルのいずれかを開くと、各自のオペレーティング システム用に選択するためのアイコンを含むページが表示されます。 この動作の代わりに、Azure Information Protection クライアントの一般公開バージョンと同等の機能を要求する場合、[クライアントの詳細構成](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)を構成できます。
+- 新しい[高度なクライアント構成](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)による、PDF 暗号化のための ISO 標準のサポート。 このオプションを構成すると、保護対象の PDF ドキュメントの .pdf ファイル名拡張子が保持され (.ppdf には変更されません)、この ISO 標準をサポートしている PDF リーダーで開くことができます。 現時点では、Azure Information Protection ビューアーを使用して手動でこれらの保護された PDF を開くよう、ユーザーに指示する必要があります。 これをサポートするために、ユーザーがこれらの保護された PDF ファイルのいずれかを開くと、各自のオペレーティング システム用に選択するためのアイコンを含むページが表示されます。
 
 - 個人情報が含まれているドキュメントの分類に役立つ、新しい種類の機密情報のサポート。 [詳細情報](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+
+- ユーザーに Azure Rights Management (Azure Information Protection for Office 365 とも呼ばれます) のライセンスが割り当てられている場合は、保護を適用するラベルが Office 2016 アプリ (最小バージョン 1805、ビルド 9330.2078) で表示されるようになりました。
 
 - Word、Excel、および PowerPoint ファイルの**厳格な Open XML ドキュメント**形式に対するラベリングのサポート。 Open XML 形式の詳細については、Office のブログ記事「[New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/)」(新しい Office の新しいファイル形式オプション) を参照してください。 
 
 - Secure Islands によって保護されているファイルが PDF または Office ドキュメント以外である場合のサポート。 たとえば、保護されているテキストや画像のファイルなど。 もしくは、ファイル名拡張子が .pfile のファイル。 このサポートにより、Azure Information Protection スキャナーがファイルに機密情報があるかを検査して自動的に Azure Information Protection 向けにラベルを変更できるようにする、などの新しいシナリオが有効になります。 [詳細情報](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
 
-- **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが、カスタマイズ可能な **[問題の報告]** で置き換えられます。 既定では、このオプションは Microsoft に電子メールを送信します。 ユーザーがこのオプションを選択するときに指定した HTTP 文字列が使用されるように、この電子メール アドレスを変更できます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 このアドレスを変更するには、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を使用します。
-
 - 他のラベル付けソリューションによってドキュメントに適用されたヘッダーおよびフッターを削除するための、新しいクライアントの詳細設定。 [詳細情報](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
 
 - Azure Information Protection スキャナー:
 
-    - 新しいコマンドレット [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): 現在の GA バージョン (1.29.5.0) 以前からアップグレードした後に 1 回実行する必要があります。
+    - 新しいコマンドレット [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): 前の GA バージョン (1.29.5.0) 以前からアップグレードした後に 1 回実行する必要があります。
     
     - 新しいコマンドレット [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): スキャナーのサービスの現在の状態を取得します。  
     
@@ -79,6 +101,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     - SharePoint ライブラリで保護されたドキュメントで、*DefaultOwner* パラメーターがデータ リポジトリに使用されていない場合は、既定値として作成者の値の代わりに SharePoint エディターの値が使用されるようになりました。
     
     - スキャナー レポートには、Office ドキュメントの "最終変更者" が含まれます。
+    
+    - 「[ファイル API の構成](../develop/file-api-configuration.md)」の手順に記載されているように、レジストリを編集するときに、`*` ワイルドカードを使用してあらゆる種類のファイルを保護できるようになりました。
 
 - PowerShell またはスキャナーを使用して分類と保護を行う場合、Office ドキュメントのメタデータは削除も暗号化もされません。
 
@@ -93,16 +117,18 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - **[すべてのドキュメントとメールにラベルを付ける]** という[ポリシー設定](../configure-policy-settings.md)を構成する場合、クライアント アプリ (Word、Excel、PowerPoint、Outlook) 内で [ラベルの削除] アイコンが表示されません。
 
 **その他の変更**:
-   
+
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
     
     - *Schedule* パラメーターの値が **OneTime**、**Continuous**、**Never** ではなく、**Manual** と **Always** になりました。
         
     - *Type* パラメーターは削除されたため、[Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) の実行時の出力からも削除されます。 既定では、最初のスキャン サイクル後に調査されるのは新しいファイルまたは変更されたファイルのみです。 以前にすべてのファイルを再スキャンするために *Type* パラメーターを **Full** に設定した場合、ここで *Reset* パラメーターと共に [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を実行します。 また、手動スケジュールに対してもスキャナーを構成する必要があり、その場合、*Schedule* パラメーターを [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) で **Manual** に設定します。
     
-- スキャナーの既定の除外リストに .msg、.rar、.rtf、.zip ファイルが含まれるようになりました。 [詳細情報](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- クライアントとスキャナーの既定の除外リストに .msg、.rar、.zip ファイルが含まれるようになりました。 スキャナーでは.rtf ファイルも除外されます。 [詳細情報](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 - ポリシーのバージョンは、1.4 に変更されます。 [切断されたコンピューターを構成する](client-admin-guide-customizations.md#support-for-disconnected-computers)には、バージョン番号の特定が必要です。
+
+- **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが削除されました。 このリンクは **[問題の報告]** に一時的に置き換えられましたが、現在はプレビュー バージョンでのみこのリンクが表示されます。 既定では、このオプションで Microsoft に電子メールが送信されますが、このメール アドレスを指定する HTTP 文字列に変更できます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 このアドレスを変更するには、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を使用します。
 
 ## <a name="version-12950"></a>バージョン 1.29.5.0 
 

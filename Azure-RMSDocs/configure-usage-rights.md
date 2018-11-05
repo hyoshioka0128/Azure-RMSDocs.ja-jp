@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/05/2018
-ms.topic: article
+ms.date: 10/08/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b0b9577062a7225b7568e54031476b037fa70469
-ms.sourcegitcommit: 2855d26a019dc7b0a4208eba8d53d89361a918d2
+ms.openlocfilehash: ab94d732144613d810c959f7fad0f34a842da9c7
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43821793"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866188"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -42,11 +42,11 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |共通名: **保存** <br /><br />ポリシーでのエンコード: **EDIT**|ドキュメントを現在の場所に保存することをユーザーに許可します。<br /><br />Office アプリケーションでは、この権限により、ユーザーがドキュメントを変更してそれを新しい場所に保存することもできます。選択したファイル形式が Rights Management 保護をネイティブにサポートしている場合は、新しい名前でドキュメントが保存されます。 ファイル形式の制限により、ファイルから元の保護を削除することはできません。|Office カスタム権限: **変更**と**フル コントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **ファイルの保存**<br /><br />Azure Portal での名前: **保存 (EDIT)**<br /><br />AD RMS テンプレートでの名前: **保存** <br /><br />API の定数または値: `IPC_GENERIC_WRITE L"EDIT"`|
 |共通名: **コメント** <br /><br />ポリシーでのエンコード: **COMMENT**|コンテンツに注釈やコメントを追加するオプションを有効にします。<br /><br />この権限は SDK で使用でき、Azure Information Protection と Windows PowerShell の RMS 保護モジュールでアドホック ポリシーとして使用できます。また、いくつかのソフトウェア ベンダーのアプリケーションに実装されています。 ただし広く使用されてはおらず、Office アプリケーションでは現在のところサポートされていません。|Office カスタム権限: 実装されていません。 <br /><br />Azure クラシック ポータルでの名前: 実装されていません。<br /><br />Azure ポータルでの名前: 実装されていません。<br /><br />AD RMS テンプレートでの名前: 実装されていません。 <br /><br />API の定数または値: `IPC_GENERIC_COMMENT L"COMMENT`|
 |共通名: **名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード: **EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 <br /><br />Office ドキュメントと Azure Information Protection クライアントについては、ファイルを保護なしで保存し、新しい設定とアクセス許可で再保護することができます。 許可されているこれらの操作は、この権限を持つユーザーが保護されたドキュメントまたは電子メールから Azure Information Protection ラベルを変更または削除できることを意味します。 <br /><br />この権限は、アプリケーションでその他のエクスポート オプション (**[OneNote に送る]** など) を実行することもユーザーに許可します。<br /><br /> 注: この権限が与えられていない場合、ユーザーが選択したファイル形式が Rights Management 保護をネイティブにサポートしていると、Office アプリケーションでは新しい名前でドキュメントが保存されます。|Office カスタム権限: **フル コントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツのエクスポート (名前を付けて保存)** <br /><br />Azure Portal での名前: **名前を付けて保存、エクスポート (EXPORT)**<br /><br />AD RMS テンプレートでの名前: **エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
-|共通名: **転送** <br /><br />ポリシーでのエンコード: **FORWARD**|電子メール メッセージの転送、**[宛先]**、**[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。 <br /><br />この権限を付与するときは、元の電子メールが添付ファイルではなく、転送される電子メール メッセージの一部になるように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: **転送不可**標準ポリシーを使用すると拒否されます。<br /><br />Azure クラシック ポータルでの名前: **転送**<br /><br />Azure Portal での名前: **転送 (FORWARD)**<br /><br />AD RMS テンプレートでの名前: **転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
+|共通名: **転送** <br /><br />ポリシーでのエンコード: **FORWARD**|電子メール メッセージの転送、**[宛先]**、**[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。 <br /><br />この権限を付与するときは、保護されたメール メッセージが添付ファイルとして転送されないように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: **転送不可**標準ポリシーを使用すると拒否されます。<br /><br />Azure クラシック ポータルでの名前: **転送**<br /><br />Azure Portal での名前: **転送 (FORWARD)**<br /><br />AD RMS テンプレートでの名前: **転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |共通名: **フル コントロール** <br /><br />ポリシーでのエンコード: **OWNER**|ドキュメントに対するすべての権限を付与します。利用可能なすべての操作を実行できます。<br /><br />ドキュメントの保護解除と再保護の能力も含まれます。 <br /><br />この使用権限は [Rights Management 所有者](#rights-management-issuer-and-rights-management-owner)とは同じではありません。|Office カスタム権限: **フル コントロール** カスタム オプション。<br /><br />Azure クラシック ポータルでの名前: **フル コントロール**<br /><br />Azure Portal での名前: **フル コントロール (OWNER)**<br /><br />AD RMS テンプレートでの名前: **フル コントロール** <br /><br />API の定数または値: `IPC_GENERIC_ALL L"OWNER"`|
 |共通名: **印刷** <br /><br />ポリシーでのエンコード: **PRINT**|コンテンツを印刷するオプションを有効にします。|Office カスタム権限: カスタム アクセス許可の**コンテンツの印刷**オプション。 受信者単位の設定ではありません。<br /><br />Azure クラシック ポータルでの名前: **印刷**<br /><br />Azure Portal での名前: **印刷 (PRINT)**<br /><br />AD RMS テンプレートでの名前: **印刷** <br /><br />API の定数または値: `IPC_GENERIC_PRINT L"PRINT"`|
-|共通名: **返信** <br /><br />ポリシーでのエンコード: **REPLY**|メール クライアントの **[返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行に対する変更は許可しません。<br /><br />この権限を付与するときは、元の電子メールが添付ファイルではなく、転送される電子メール メッセージの一部になるように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **返信**<br /><br />Azure クラシック ポータルでの名前: **返信 (REPLY)**<br /><br />AD RMS テンプレートでの名前: **返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLY`|
-|共通名: **全員に返信** <br /><br />ポリシーでのエンコード: **REPLYALL**|メール クライアントの **[全員に返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行への受信者の追加はユーザーに許可しません。<br /><br />この権限を付与するときは、元の電子メールが添付ファイルではなく、転送される電子メール メッセージの一部になるように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **全員に返信**<br /><br />Azure Portal での名前: **全員に返信 (REPLY ALL)**<br /><br />AD RMS テンプレートでの名前: **全員に返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
+|共通名: **返信** <br /><br />ポリシーでのエンコード: **REPLY**|メール クライアントの **[返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行に対する変更は許可しません。<br /><br />この権限を付与するときは、保護されたメール メッセージが添付ファイルとして転送されないように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **返信**<br /><br />Azure クラシック ポータルでの名前: **返信 (REPLY)**<br /><br />AD RMS テンプレートでの名前: **返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLY`|
+|共通名: **全員に返信** <br /><br />ポリシーでのエンコード: **REPLYALL**|メール クライアントの **[全員に返信]** オプションを有効にします。ただし、**[宛先]** または **[CC]** 行への受信者の追加はユーザーに許可しません。<br /><br />この権限を付与するときは、保護されたメール メッセージが添付ファイルとして転送されないように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: 該当なし。<br /><br />Azure クラシック ポータルでの名前: **全員に返信**<br /><br />Azure Portal での名前: **全員に返信 (REPLY ALL)**<br /><br />AD RMS テンプレートでの名前: **全員に返信** <br /><br />API の定数または値: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |共通名: **表示、開く、読み取り** <br /><br />ポリシーでのエンコード: **VIEW**|ドキュメントを開き、内容を表示することをユーザーに許可します。<br /><br /> Excel の場合、データを並べ替えるには、この権限は十分ではありません。次の権限が必要です: **コンテンツの編集、編集**。 Excel でデータをフィルター処理するには、次の 2 つの権限が必要です: **コンテンツの編集、編集**および**コピー**。|Office カスタム権限: **読み取り**カスタムポリシー、**表示**オプション。<br /><br />Azure クラシック ポータルでの名前: **表示**<br /><br />Azure Portal での名前:**表示、開く、読み取り (VIEW)**<br /><br />AD RMS テンプレートでの名前: **読み取り** <br /><br />API の定数または値: `IPC_GENERIC_READ L"VIEW"`|
 |共通名: **コピー** <br /><br />ポリシーでのエンコード: **EXTRACT**|ドキュメントのデータ (画面キャプチャを含む) を同じドキュメントまたは別のドキュメントにコピーするオプションを有効にします。<br /><br />一部のアプリケーションでは、ドキュメント全体を保護されていない形式で保存することも許可されます。<br /><br />Skype for Business のような画面共有アプリケーションでは、プレゼンターは、保護されたドキュメントを正常に表示するために、この権限を持っている必要があります。 プレゼンターがこの権限を持っていない場合は、参加者はドキュメントを表示することができず、黒塗りで表示されます。|Office カスタム権限: **[閲覧の権限を持つユーザーが、コンテンツをコピーすることを許可する]** カスタム ポリシー オプションと同様。<br /><br />Azure クラシック ポータルでの名前: **コンテンツのコピーと抽出**<br /><br />Azure Portal での名前: **コピー (EXTRACT)**<br /><br />AD RMS テンプレートでの名前: **Extract** <br /><br />API の定数または値: `IPC_GENERIC_EXTRACT L"EXTRACT"`|
 |共通名: **権限の表示** <br /><br />ポリシーでのエンコード: **VIEWRIGHTSDATA**|ドキュメントに適用されたポリシーを表示することをユーザーに許可します。|Office カスタム権限: 実装されていません。<br /><br />Azure クラシック ポータルでの名前: **割り当てられた権限の表示**<br /><br />Azure Portal での名前: **権限の表示 (VIEWRIGHTSDATA)**<br /><br />AD RMS テンプレートでの名前: **権限の表示** <br /><br />API の定数または値: `IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
@@ -94,7 +94,7 @@ Azure Portal または Windows 用 Azure Information Protection クライアン�
 
 ## <a name="do-not-forward-option-for-emails"></a>電子メールの [転送不可] オプション
 
-Exchange のクライアントとサービス (Outlook クライアント、Outlook Web Access アプリ、Exchange メール フロー ルールなど) には、**[転送不可]** というメール用の追加の情報権限保護オプションがあります。 
+Exchange のクライアントとサービス (Outlook クライアント、Outlook on the web、Exchange メール フロー ルール、Exchange の DLP アクションなど) には、**[転送不可]** というメール用の追加の情報権限保護オプションがあります。 
 
 このオプションは、選択できる既定の Rights Management テンプレートのようにユーザー (と Exchange 管理者) には見えますが、**[転送不可]** はテンプレートではありません。 そのため、保護テンプレートを参照および管理するとき、Azure Portal には表示されません。 **[転送不可]** オプションは、ユーザーが電子メール受信者に動的に適用する使用権限の集合です。
 
@@ -119,7 +119,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 Exchange Online で Office 365 Message Encryption の新機能を使用する場合、新しい電子メール オプション (**暗号化のみ**) を利用できます。
 
-このオプションは Exchange Online を使用するテナントに展開されています。最初は Outlook on the web 用のみで、メール フロー ルールの別の権利保護オプションとして使用します。 詳細については、Office チームからのブログ投稿によるお知らせ「[Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018)」(Office 365 Message Encryption の暗号化のみのロールアウト) を参照してください。
+このオプションは、Exchange Online を使用するテナントが利用可能であり、Outlook on the web でメール フロー ルールの別の権利保護オプションとして、Office 365 の DLP アクションとして、および最小バージョン [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) の Office 365 ProPlus を使用している場合は Outlook から選択することができます。 詳細については、Office チームからのブログ投稿によるお知らせ「[Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018)」(Office 365 Message Encryption の暗号化のみのロールアウト) を参照してください。
 
 このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 すると、受信者には**名前を付けて保存、エクスポート**と**フル コントロール**を除くすべての使用権限が割り当てられます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 
 

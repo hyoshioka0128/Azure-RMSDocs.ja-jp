@@ -4,18 +4,18 @@ description: Azure Information Protection テナント キーに関する計画�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 72b2fe408f77742b8ca5f1ba8727e3a065818322
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42451d8b50b0ad1edb75d767e622e697b12acf90
+ms.sourcegitcommit: 4767afef8fb7b81065a6bf207cd0a5518bf0e97a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151148"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48907163"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -150,11 +150,26 @@ Azure Key Vault ドキュメントを使用して、Azure Information Protection
 
 Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは既定の構成で、操作には暗号化、暗号化解除、ラップ、ラップ解除、署名、確認が含まれます。 [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) を使用し、**[キー]** の詳細で返される *key_ops* の値を確認することで、許可されているキーの操作を確認できます。 必要に応じて、[Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) と *KeyOps* パラメーターを使用することで、許可された操作を追加します。
 
-Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 Key Vault URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
+Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 キー コンテナー URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
 
-Azure Information Protection でキーを使用するには、Azure Rights Management サービスが組織の Key Vault にあるキーの使用を承認されている必要があります。 そのためには、Azure Key Vault 管理者は、Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) を使い、GUID 00000012-0000-0000-c000-000000000000 を使用して、Azure Rights Management サービス プリンシパルにアクセス許可を付与する必要があります。 次に例を示します。
+Azure Information Protection でキーを使用するには、Azure Rights Management サービスが組織の Key Vault にあるキーの使用を承認されている必要があります。 そのために、Azure Key Vault 管理者は Azure portal または Azure PowerShell を使用できます。
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+Azure portal を使用した構成:
+
+1. **[キー コンテナー]** > **\<*ご使用のキー コンテナー名*>** > **[アクセス ポリシー]** > **[新規追加]** に移動します。
+
+2. **[アクセス ポリシーの追加]** ブレードで、**[Configure from template]\(テンプレートからの構成\)** (省略可能) リスト ボックスから **[Azure Information Protection BYOK]** を選択し、**[OK]** をクリックします。
+    
+    選択したテンプレートには次の構成が含まれます。
+    
+    - **[プリンシパルの選択]** に対して、**[Microsoft Rights Management Services]** が自動的に割り当てられます。
+    - **[取得]**、**[暗号化解除]**、および **[サイン]** に対して、キーのアクセス許可が自動的に選択されます。 
+
+PowerShell を使用した構成:
+
+- Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) を実行し、GUID **00000012-0000-0000-c000-000000000000** を使用して、Azure Rights Management サービス プリンシパルにアクセス許可を付与します。 次に例を示します。
+    
+        Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 このキーを組織の Azure Information Protection テナント キーとして使用するように、Azure Information Protection を構成できるようになったとします。 Azure RMS コマンドレットを使用するには、まず Azure Rights Management サービスに接続してサインインします。
 

@@ -1,3 +1,18 @@
+---
+title: class mip RemoveContentFooterAction
+description: class mip RemoveContentFooterAction のリファレンス
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: d275e2256c8a65bf63fd16d5761f42563d7a7f07
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445633"
+---
 # <a name="class-mipremovecontentfooteraction"></a>class mip::RemoveContentFooterAction 
 ドキュメントからのコンテンツ フッターの削除を指定するアクション クラス。
   

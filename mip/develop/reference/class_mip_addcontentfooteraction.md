@@ -1,3 +1,18 @@
+---
+title: class mip AddContentFooterAction
+description: class mip AddContentFooterAction のリファレンス
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 73f641d965c3cf0236919557128af2ed07705672
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445837"
+---
 # <a name="class-mipaddcontentfooteraction"></a>class mip::AddContentFooterAction 
 コンテンツ フッターをドキュメントに追加することを指定するアクション クラス。
   
@@ -57,7 +72,7 @@
 一番下からのフッターの余白を取得します。
 
   
-**戻り値**: ドキュメントの一番下からの余白を表す整数 (例: 10 mm)。
+**戻り値**: ドキュメントの一番下からの余白 (例: 10 mm)。
   
 ### <a name="actiontype"></a>ActionType
 [アクション](class_mip_action.md)の種類を取得します。

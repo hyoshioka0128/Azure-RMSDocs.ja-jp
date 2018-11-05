@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63e84e8a5d072f0bb57bb72754f97ca8963a2c76
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b5eccdd62d828bc5104815746458d4c7036594fd
+ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149108"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100638"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -106,9 +106,7 @@ Windows Update、実行可能ファイル、または Windows インストーラ
 
 既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
 
-**[フィードバックの送信]** リンク (一般公開バージョン) を使用して、Information Protection チームに提案または要求を送信します。 テクニカル サポートの場合はこのオプションを使わず、代わりに「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」をご覧ください。 
-
-**[問題の報告]** リンクによって、プレビュー バージョンのクライアントの **[フィードバックの送信]** リンクが置き換えられます。 既定では、このオプションは Microsoft に電子メールを送信しますが、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を指定することで、ユーザー用に HTTP 文字列を構成できます。 たとえば、ヘルプ デスクの電子メール アドレスを指定します。
+**問題の報告** リンクは、一般公開バージョンではなく、クライアントのプレビュー バージョンに表示されます。 既定では、このオプションは Microsoft に電子メールを送信しますが、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を指定することで、ユーザー用に HTTP 文字列を構成できます。 たとえば、ヘルプ デスクの電子メール アドレスを指定します。
 
 **ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
 
@@ -200,7 +198,7 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
 
-Azure Information Protection スキャナーをアップグレードするには、Azure Information Protection クライアントの最新バージョンをインストールします。 次のいずれかの 1 回限りの操作を行います。
+Azure Information Protection スキャナーをアップグレードするには、Azure Information Protection クライアントの最新バージョンをインストールします。 次のいずれかの 1 回限りの操作を行います。 これを行ったら、既にスキャンされたファイルを再スキャンする必要はありません。
 
 現在の GA バージョンの場合: 
 

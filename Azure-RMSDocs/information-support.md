@@ -4,18 +4,18 @@ description: 新しいリリース、サポート オプション、および Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aa5fffe039c8e5b8dc960d6197ecd8a03837e5e6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 145889772dd3d2a8e29967264c1f0f7de7a7c222
+ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046990"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -35,7 +35,7 @@ ms.locfileid: "44150043"
 ## <a name="information-about-new-releases-and-updates"></a>新しいリリースと更新プログラムに関する情報
 Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://msip.uservoice.com)で要求された機能の状態をチェックすることも役立つ場合があります。
 
-さらに、ドキュメントの変更の概要については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)に関するページに毎月公開されます。 このようなドキュメントの更新には、新しいリリースや、ステートメントをサポートするための更新に関する情報に加えて、既存リリースの修正と説明が含まれています。 このような投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
+追加情報および詳細情報については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)を参照してください。 たとえば、新しいリリースに関する情報、サポート ステートメントの更新、および既存のリリースの修正と詳細について通知するために、ドキュメントの変更の概要が毎月発行されます。 このようなドキュメントの更新の投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
 
 ## <a name="support-options-and-community-resources"></a>サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。
@@ -64,7 +64,9 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 オンデマンド ビデオ:
 
-- [Azure Information Protection](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) の Microsoft Ignite 2017 セッション。
+- [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) の Microsoft Ignite 2018 セッション:
+    
+    - 推奨される[トップ 5](what-is-information-protection.md#microsoft-ignite) のセッションをご覧ください。
 
 - [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection) が含まれる Microsoft Virtual Academy セッション。
 

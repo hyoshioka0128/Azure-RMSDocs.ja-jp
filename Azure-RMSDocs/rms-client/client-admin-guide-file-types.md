@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f96a9c395b2a5df11a05acb4ce7dac0da516164
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 23baab9ba6ab9a7b1d43dd1f5f12947f383d9d28
+ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151828"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072478"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -55,7 +55,7 @@ Azure Information Protection クライアントは、次のことをドキュメ
 
 - **Microsoft Office**: 次の表のファイルの種類
     
-    これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。 プレビュー版の Azure Information Protection クライアントを使用していない場合、Strict Open XML Document 形式はサポートされません。
+    これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。
     
     |Office ファイルの種類|Office ファイルの種類|
     |----------------------------------|----------------------------------|
@@ -98,6 +98,8 @@ Azure Information Protection クライアントが保護をサポートするフ
     - その他のファイルの種類を保護し、これらのファイルの種類を Azure Information Protection ビューアーで開く場合: ファイルの最大サイズは、使用可能なディスク領域とメモリによってのみ制限されます。
     
     - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合: .pst ファイル向けにサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
+    
+    ヒント: 大きな .pst ファイルの保護された項目を検索したり復元する必要がある場合、「[Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」 (電子情報開示での Unprotect-RMSFile の使用に関するガイダンス) を参照してください。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -125,9 +127,9 @@ Azure Information Protection クライアントが保護をサポートするフ
 |.jt|.pjt|
 
 ###### <a name="footnote-1"></a>脚注 1
-プレビュー版の Azure Information Protection クライアントを使用する場合、[既定では](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)、保護された PDF ドキュメントのファイル名の拡張子は .pdf のままです。
+Azure Information Protection クライアントで [PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)ように構成した場合、保護された PDF ドキュメントのファイル名の拡張子は .pdf のままです。
 
-次の表には、Azure Information Protection クライアントによるネイティブ保護をサポートし、かつ分類も可能である残りのファイルの種類を一覧表示します。 これらは、Microsoft Office アプリのファイルの種類であることがわかります。 これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。 プレビュー版の Azure Information Protection クライアントを使用していない場合、Strict Open XML Document 形式はサポートされません。
+次の表には、Azure Information Protection クライアントによるネイティブ保護をサポートし、かつ分類も可能である残りのファイルの種類を一覧表示します。 これらは、Microsoft Office アプリのファイルの種類であることがわかります。 これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。
 
 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
 
@@ -188,7 +190,9 @@ Azure Information Protection クライアントがファイルを保護する方
 
 コンピューターの動作に不可欠なファイルをユーザーが変更しないように、一部のファイルの種類とフォルダーは分類と保護から自動的に除外されます。 ユーザーが Azure Information Protection クライアントを使用してこのようなファイルを分類または保護しようとすると、ファイルが除外されることを示すメッセージが表示されます。
 
-- **除外されるファイルの種類**: .lnk、.exe、.com、.cmd、.bat、.dll、.ini、.pst、.sca、.drm、.sys、.cpl、.inf、.drv、.dat、.tmp、.msp、.msi、.pdb、.jar
+- **除外されるファイルの種類**: .lnk、.exe、.com、.cmd、.bat、.dll、.ini、.pst、.sca、.drm、.sys、.cpl、.inf、.drv、.dat、.tmp、msg、.msp、.msi、.pdb、.jar
+    
+    .zip、.msg および .rar. のファイルの種類も除外されるようになりました。 
 
 - **除外されるフォルダー**: 
     - Windows
@@ -198,7 +202,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーによる分類と保護から除外されるファイルの種類
 
-既定では、スキャナーにより Azure Information Protection クライアントと同じファイルの種類も除外されますが、プレビュー版のスキャナーの場合、次は例外となります: .rar、.rtf、.msg、.zip。 
+既定では、.rtf も除外されるのを除き、スキャナーでも Azure Information Protection クライアントと同じ種類のファイルが除外されます。 
 
 次の PowerShell コマンドレットを使用する場合、スキャナーによるファイル検査の対象となるファイルと除外するファイルの種類を変更することができます。
 
@@ -213,27 +217,39 @@ Azure Information Protection クライアントがファイルを保護する方
 
 既定では、スキャナーが保護するのは Office ファイルの種類のみです。 このスキャナーの動作を変更するには、レジストリを編集し、保護する追加のファイルの種類を指定します。 詳しくは、開発者ガイダンスの「[ファイル API の構成](../develop/file-api-configuration.md)」をご覧ください。
 
+#### <a name="to-scan-zip-files"></a>.zip ファイルをスキャンするには
+
+次の手順に従うと、スキャナーで .zip ファイルを検査できます。
+
+1. スキャナーを実行している Windows Server コンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
+
+2. 前のセクションで説明されているとおり、検査する対象として .zip ファイルも含まれるようスキャナーを構成します。
+
+3. .zip ファイルの機密情報を単に検査するだけでなく、分類して保護する場合、前のセクションで説明したように、汎用的に保護されるように (pfile)、このファイル名拡張子のファイル用のレジストリ エントリを追加します。
+
+これらの手順の実行後のシナリオ例: 
+
+**accounts.zip** という名前のファイルには、クレジット カード番号が含まれる Excel のスプレッドシートが含まれています。 Azure Information Protection のポリシーに **Confidential \ Finance** という名前のラベルがあります。これはクレジット カード番号を検出するために構成されており、ラベルでは Finance グループへのアクセスを制限する保護が自動的に適用されます。 
+
+ファイルの検査後、スキャナーではこのファイルは **Confidential \ Finance** として分類され、Finance グループのメンバーのみが解凍できるよう、ファイルへ汎用的な保護が適用され、ファイルは **accounts.zip.pfile** に名前変更されます。
+
 ### <a name="files-that-cannot-be-protected-by-default"></a>既定では保護できないファイル
 
 パスワードで保護されているファイルは、保護を適用するアプリケーションでファイルが現在開かれている場合を除き、Azure Information Protection クライアントでネイティブで保護することはできません。 パスワード保護されている PDF ファイルをよく見かけますが、Office アプリなど、他のアプリケーションもこの機能を備えています。
 
-また、一般公開版 (GA) の Windows 用 Azure Information Protection クライアントは、次のファイルを表示できますが、次のいずれかの状況では PDF ファイルをネイティブ保護することも保護解除することもできません。
-
-- フォームベースの PDF ファイル。 
-
-- ファイル名の拡張子が .pdf の、保護されている PDF ファイル。
-    
-    Azure Information Protection クライアントは保護されていない PDF ファイルを保護できます。ファイル名の拡張子が .ppdf である場合は、保護されている PDF ファイルを保護解除し、再保護することができます。
-
-これらのファイルを保護するための回避策としては、一般的に、「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションにある方法で保護できます。 ただし、この方法では、コンピューター レベルで、ファイル名の拡張子が .pdf のすべてのファイルの保護レベルが変更されます。 一覧にある基準を満たすファイルのみに一般的保護を定義することはできません。
-
-このようなファイルの保護が重要であれば、一時的に別のコンピューターにコピーすることで一般的に保護し、その後、コピーで戻すことができます。 または、プレビュー版の Azure Information Protection クライアントを使用します。
-
-Azure Information Protection クライアントの最新のプレビュー版を使用する場合、[既定では](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)、次のいずれの状況でも PDF ファイルをネイティブで保護し、保護を解除することができます。
+また、Azure Information Protection クライアントで [PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)ように構成されていない限り、このクライアントは次のファイルを参照できますが、以下のいずれの状況では PDF ファイルをネイティブで保護または保護解除できません。
 
 - フォームベースの PDF ファイル。
 
-- ファイル名の拡張子が .pdf の、保護されている PDF ファイル。 
+- ファイル名の拡張子が .pdf の、保護されている PDF ファイル。
+
+これらのファイルを保護するための回避策としては、一般的に、「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションにある方法で保護できます。 ただし、この方法では、コンピューター レベルで、ファイル名の拡張子が .pdf のすべてのファイルの保護レベルが変更されます。 一覧にある基準を満たすファイルのみに一般的保護を定義することはできません。
+
+このようなファイルの保護が重要であれば、一時的に別のコンピューターにコピーすることで一般的に保護し、その後、コピーで戻すことができます。 また、[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)ようにクライアントを構成して、次のいずれの状況でも PDF ファイルをネイティブで保護および保護解除できるようにします。
+
+- フォームベースの PDF ファイル。
+
+- ファイル名の拡張子が .pdf の、保護されている PDF ファイル。
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>.zip ファイルなど、コンテナー ファイルの制限事項
 

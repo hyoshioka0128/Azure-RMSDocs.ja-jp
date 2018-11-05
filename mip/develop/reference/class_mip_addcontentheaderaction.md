@@ -1,3 +1,18 @@
+---
+title: class mip AddContentHeaderAction
+description: class mip AddContentHeaderAction のリファレンス
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: bc60fe32005a0c6bc8088ab7687a3f711ae7a99a
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445650"
+---
 # <a name="class-mipaddcontentheaderaction"></a>class mip::AddContentHeaderAction 
 コンテンツ ヘッダーの追加を指定するアクション クラス。
   
@@ -43,7 +58,7 @@
 コンテンツ ヘッダーの表示に使用されるフォントの色を取得します。
 
   
-**戻り値**: 文字列としてのフォントの色 (例: "#000000")。
+**戻り値**: 文字列としてのフォントの色 (例: #000000")。
   
 ### <a name="getalignment"></a>GetAlignment
 ヘッダーの配置を取得します。
@@ -57,7 +72,7 @@
 一番下からのヘッダーの余白を取得します。
 
   
-**戻り値**: ドキュメントの一番下からの余白を表す整数 (例: 10 mm)。
+**戻り値**: ドキュメントの一番下からの余白 (例: 10 mm)。
   
 ### <a name="actiontype"></a>ActionType
 [アクション](class_mip_action.md)の種類を取得します。

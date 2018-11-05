@@ -4,16 +4,16 @@ description: Azure Information Protection サービスの概要です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 08d77cda9eeedada562ac4610cbc04b5f6f558aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b789697a398a0e201cbf041b36d7cd41a82a9e0d
+ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150077"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236834"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -104,7 +104,7 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 
 オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。 
 
-スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-rms-connector.md)」をご覧ください。
+スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。
 
 クラウドのデータ ストアの場合、Microsoft Cloud App Security を使用して、Box、SharePoint Online、OneDrive for Business 内にあるドキュメントにラベルを適用します。 詳細については、「[Azure Information Protection 分類ラベルを自動的に適用する](/cloud-app-security/use-case-information-protection)」と「[Azure Information Protection の統合](/cloud-app-security/azip-integration)」をご覧ください。
 
@@ -127,19 +127,19 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Microsoft Ignite 2017 では、オンデマンドで使用可能な Azure Information Protection に関する多くのセッションが提供されました。 今回のカンファレンスで発表された内容の概要については、「[What’s new in Azure Information Protection @ Ignite 2017 (Azure Information Protection の新機能 (Ignite 2017))](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/)」を参照してください。 
+オーランドでの Microsoft Ignite 2018 では、[Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) に関する多くのセッションが行われました。 参加できなかった方も後でセッションを確認できるように、すべてのセッションが記録されています。 推奨されるトップ 5 のセッションは次のとおりです。
 
-Ignite の Web サイトで、Azure Information Protection にタグ付けされているセッションを[検索して見つけられます](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)。 ただし、次のセッションを初めにご覧いただくことをお勧めします。
+- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Microsoft Information Protection (MIP) を使用して、ライフサイクル全体を通してあらゆる場所の機密データを保護する)](https://myignite.techcommunity.microsoft.com/sessions/64297) - [YouTube ビデオ](https://youtu.be/gmHVF-1cLXA)をご覧ください
+ 
+- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Microsoft Information Protection の機能を連携させて、デバイス、アプリ、およびサービスの間で機密情報を保護する方法について)](https://myignite.techcommunity.microsoft.com/sessions/64299) - [YouTube ビデオ](https://youtu.be/kL9Y7NGTyQQ)をご覧ください
 
-- [Microsoft の情報保護機能を使用してデータのライフサイクル全体を保護する](https://myignite.microsoft.com/videos/55397)
+- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Microsoft Information Protection ソリューションのデプロイと導入を加速させる)](https://myignite.techcommunity.microsoft.com/sessions/64283) - [YouTube ビデオ](https://www.youtube.com/watch?v=JsCyIVyQJmE)をご覧ください
 
-- [Azure Information Protection のデプロイと導入を加速させる](https://myignite.microsoft.com/videos/53454)
+- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Office 365 Message Encryption で、機密性の高いメールを保護および管理する)](https://myignite.techcommunity.microsoft.com/sessions/64327) - [YouTube ビデオ](https://www.youtube.com/watch?v=Ld4b4pFua0g)をご覧ください
 
-- [Azure Information Protection の新機能を確認し、ロードマップと戦略について学ぶ](https://myignite.microsoft.com/videos/53453)
+- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、使用状況レポート、および分析を行う)](https://myignite.techcommunity.microsoft.com/sessions/64301) - [YouTube ビデオ](https://www.youtube.com/watch?v=nzDIXd0XaeA)をご覧ください
 
-- [コンプライアンス対応の暗号化キー管理方法](https://myignite.microsoft.com/videos/53455)
-
-- [新しい Office 365 Message Encryption 機能で、機密性の高いメールを保護および管理する](https://myignite.microsoft.com/videos/53230)
+この Ignite で行われた発表のロールアップについては、ブログ投稿「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」(機密データを保護するために使用できる情報保護機能の発表) を参照してください。
 
 
 ## <a name="next-steps"></a>次の手順

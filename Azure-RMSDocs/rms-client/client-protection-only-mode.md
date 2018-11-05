@@ -4,18 +4,18 @@ description: 保護のみモードで Azure Information Protection クライア�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5a2b01af0e246e732d087a344ecf037c13a47546
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c9f8408c4417b1b5131a51276a829a16687f1870
+ms.sourcegitcommit: ccc99efd2402a8b93912c8df4df330fa1311aacb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151581"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48812420"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントの保護のみモード
 
@@ -34,7 +34,7 @@ Azure Information Protection クライアントにドキュメントや電子メ
 
 - 組織が一部のユーザーのみを対象とする Azure Information Protection のサブスクリプションを保有している場合。
     
-    - このサブスクリプションの組み合わせの場合には、管理者は、分類機能とラベル付け機能を一部のユーザーのみが使用できるようにする必要があります。 残りのユーザーは Azure Information Protection クライアントを保護のみモードで実行します。 
+    - このサブスクリプションの組み合わせの場合、管理者は、分類機能とラベル付け機能を一部のユーザーのみが使用できるようにする必要があります。 残りのユーザーは Azure Information Protection クライアントを保護のみモードで実行します。 
 
 - 組織が Azure Information Protection のサブスクリプションを保有しているが、自分用に構成されたラベルを保有していない場合。
     
