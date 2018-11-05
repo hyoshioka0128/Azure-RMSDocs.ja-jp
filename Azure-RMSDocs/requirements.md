@@ -4,18 +4,18 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e471cd5e4de5c4bd4c24fd5c5627e69f7db1ec90
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 00daf488568fef8569f97db378b771383a221ce3
+ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148343"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473819"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -78,6 +78,8 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows Server 2008 R2 
 
+物理コンピューターでの Azure Information Protection クライアントのインストールに加え、仮想マシンでインストールすることもできます。 仮想デスクトップ ソリューションのソフトウェア ベンダーで、Azure Information Protection クライアントを実行するために必要になる可能性がある構成が追加されているかどうかを確認します。 たとえば、Citrix ソリューションでは、Office (winword.exe、excel.exe、outlook.exe、powerpoint.exe) と Microsoft Azure Information Protection クライアント (msip.app.exe、msip.viewer.exe) に対して [Citrix アプリケーション プログラミング インターフェイス (API) フックを無効にする](https://support.citrix.com/article/CTX107825)必要がある場合があります。
+
 これらのサーバー バージョンでは、リモート デスクトップ サービスについて Azure Information Protection クライアントがサポートされています。 Azure Information Protection クライアントとリモート デスクトップ サービスを使用しているときに、ユーザー プロファイルを削除する場合は、**%Appdata%\Microsoft\Protect** フォルダーを削除しないでください。
 
 Azure Information Protection クライアントで Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)からデータを使用できます。
@@ -88,9 +90,9 @@ Azure Information Protection クライアントには、管理者ガイドに一
 
 Azure Information Protection クライアントは、次の Office エディションのいずれかの Office アプリケーション **Word**、**Excel**、**PowerPoint**、**Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
 
+- ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Office 2016 アプリ (最小バージョン 1805、ビルド 9330.2078) を含む Office 365
+
 - Office 365 ProPlus と 2016 アプリまたは 2013 アプリ (クイック実行または Windows インストーラー ベースのインストール)
-    
-    Office のこれらのエディションは、Azure Information Protection のデータ保護を含むほぼすべての Office 365 サブスクリプションに含まれています。 Office 365 ProPlus が含まれているかどうかについては、サブスクリプション情報を確認してください。 この情報は、[Azure Information Protection データシート](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)にもあります。
 
 - Office Professional Plus 2016
 

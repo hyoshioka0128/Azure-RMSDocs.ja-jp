@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f147ad04ec61e7a5796cbb1f02c7fa33afdeae7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149686"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211328"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
 
@@ -48,6 +48,7 @@ ms.locfileid: "44149686"
 |クライアント イベント ログ|Azure Information Protection クライアントの使用状況アクティビティ。ローカルの Windows **[アプリケーションとサービス]** イベント ログ、**[Azure Information Protection]** に記録されます。 <br /><br />詳細については、「[Azure Information Protection クライアントの使用状況ログ](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)」をご覧ください。|
 |クライアント ログ ファイル|Azure Information Protection クライアントのトラブルシューティング ログは、**%localappdata%\Microsoft\MSIP** に格納されています。 <br /><br />これらのファイルは Microsoft サポート用です。|
 
+さらに、Azure portal でレポートを作成するために、Azure Information Protection クライアントの使用状況ログと、Azure Information Protection スキャナーからの情報が収集され、集計されます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。
 
 次のセクションでは、Azure Rights Management サービスの使用状況ログの詳細について説明します。 
 
@@ -58,8 +59,6 @@ ms.locfileid: "44149686"
 > ログ ストレージやログ機能に対する追加費用は発生しません。
 > 
 > 2016 年 2 月より前に Azure Rights Management の使用状況ログを使用するには、Azure のサブスクリプションのほか、Azure 上に十分なストレージが必要でしたが、これらが不要になります。
-
-
 
 ## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Azure Rights Management の使用状況ログにアクセスして使用する方法
 Azure Rights Management サービスは、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
@@ -103,7 +102,7 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Azure Rights Management 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
 
 
-ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) コマンドレットを使用して古いログをダウンロードできます。 例:
+ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) コマンドレットを使用して古いログをダウンロードできます。 次に例を示します。
 
 - すべてのログを E:\logs フォルダーにダウンロードするには: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -144,19 +143,19 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 |time|時刻|要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。|21:59:28|
 |row-id|テキスト|このログ レコードの固有 GUID。 値が存在しない場合は、correlation-id の値を使用してエントリを識別します。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|名前|要求された RMS API の名前。|AcquireLicense|
-|user-id|文字列|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。|‘joe@contoso.com’|
-|結果|文字列|要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|'Success'|
+|user-id|文字列型|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。|‘joe@contoso.com’|
+|結果|文字列型|要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|'Success'|
 |correlation-id|テキスト|特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|テキスト|保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|文字列|ドキュメントの所有者の電子メール アドレス。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com|
-|issuer|文字列|ドキュメントの発行者の電子メール アドレス。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|文字列|ドキュメントを保護するために使用されるテンプレートの ID。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|文字列|Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションを使用して追跡される保護されたドキュメント名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|TopSecretDocument.docx|
+|owner-email|文字列型|ドキュメントの所有者の電子メール アドレス。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com|
+|issuer|文字列型|ドキュメントの発行者の電子メール アドレス。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|文字列型|Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションを使用して追跡される保護されたドキュメント名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|TopSecretDocument.docx|
 |date-published|日付|ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|2015-10-15T21:37:00|
-|c-info|文字列|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
+|c-info|文字列型|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
 |admin-action|Bool|管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。|True|
-|acting-as-user|文字列|管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。 |'joe@contoso.com'|
+|acting-as-user|文字列型|管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。 |'joe@contoso.com'|
 
 
 #### <a name="exceptions-for-the-user-id-field"></a>user-id フィールドの例外

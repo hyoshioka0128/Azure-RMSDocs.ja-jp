@@ -4,18 +4,18 @@ description: Windows Server ファイル分類インフラストラクチャで�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/26/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e7c10a24db234196ae772fd6406a0dc66555b81d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: be5b7c658fcdd2c5d4d03de21a89bfda51039539
+ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147270"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233696"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>ファイル サーバー リソース マネージャー FCI を使用する Azure RMS 保護のための Windows PowerShell スクリプト
 
@@ -25,8 +25,7 @@ ms.locfileid: "44147270"
 
 このスクリプトでは、AzureInformationProtection モジュールに **1.3.155.2** という最小バージョンを使用しています。 次のコマンドを実行してバージョンを確認してください。`(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;免責事項&#42;&#42; このサンプル スクリプトは、Microsoft Stanadrd サポート プログラムまたはサービスではサポートされません。このサンプル*
-*スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。*
+*&#42;&#42;免責事項&#42;&#42; このサンプル スクリプトは、Microsoft Stanadrd サポート プログラムまたはサービスではサポートされません。このサンプル スクリプトは、どのような種類の保証も伴わずそのままの状態で提供されます。*
 
 ```
 <#
@@ -57,7 +56,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 3.3' 
+[String] $Script:Version = 'version 3.4' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -116,6 +115,7 @@ function Set-RMSConnection ($fappId, $fkey, $fbposId) {
     try {
                Set-RMSServerAuthentication -AppPrincipalId $fappId -Key $fkey -BposTenantId $fbposId
         Write-Host ("Information: " + "Connected to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
+#       Get-RMSTemplate -Force
         $returnValue = $true
     } catch {
         Write-Host ("ERROR" + "During connection to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")

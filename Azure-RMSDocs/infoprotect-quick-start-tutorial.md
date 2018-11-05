@@ -4,16 +4,16 @@ description: 約 20 分で組織の Microsoft Azure Information Protection を�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: c98667de0b0c103b9dfbd278c0665db39f999491
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2eb58e0177ca397548b5dda6df7b6b5a5fde0031
+ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696485"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Azure Information Protection のクイック スタート チュートリアル 
 
@@ -37,9 +37,18 @@ ms.locfileid: "44146847"
 
 - Azure Portal にサインインして保護を有効化し、Azure Information Protection ポリシーを構成するためのグローバル管理者アカウント。 または、[Information Protection 管理者またはセキュリティ管理者](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれかの管理者ロールを持つアカウントを使用できます。 このアカウントには、電子メール アドレスと、動作している電子メール サービス (Exchange Online など) も必要です。
 
-- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。このコンピューターには、Office 365 ProPlus と 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1、または Office Professional Plus 2010 Service Pack 2 がインストールされている必要があります。 
+- Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューター。また、このコンピューターで、次のいずれかのカテゴリから Office アプリにサインインしている必要があります。
     
-    これらのアプリケーションを Azure Information Protection で使うには、[Azure Rights Management サービスの使用を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)が必要です。 たとえば、Office 365 E3 や Office 365 E5 サブスクリプションです。 このサブスクリプションからライセンスを使うときは、Office アプリにサインインする必要があります。
+    - Office 365 と Office 2016 アプリ (バージョン 1805、ビルド 9330.2078 以降)。 このオプションを使用するには、Azure Rights Management のライセンスがアカウントに割り当てられている必要があります。 このライセンスは、Azure Information Protection サブスクリプションに含まれています。
+    
+    - Office 365 ProPlus と 2016 アプリまたは 2013 アプリ (クリック実行または Windows インストーラー ベースのインストール)。
+    
+    - Office Professional Plus 2016。
+    
+    - Office Professional Plus 2013 Service Pack 1。
+    
+    - Office Professional Plus 2010 Service Pack 2。
+
 
 では、始めましょう。
 
