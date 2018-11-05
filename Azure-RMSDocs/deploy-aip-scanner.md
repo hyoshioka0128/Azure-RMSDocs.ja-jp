@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
-ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
+ms.openlocfilehash: 47a8633852139bf0a84e6c55321c69b1af2c2892
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991379"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751289"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -191,13 +191,23 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 1. PowerShell セッションで次のコマンドを実行して、**Azure Information Protection スキャナー** サービスを再起動します。
     
         Start-AIPScan
+    
+    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[今すぐスキャン]** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードからスキャナーを起動できます。
 
-2. スキャナーのサイクルが完了するまで待ちます。 スキャナーが指定したデータ ストア内のすべてのファイルをクロールすると、スキャナー サービスの動作が続いていてもスキャナーは停止します。 スキャナーが停止したかどうかは、ローカルの Windows **アプリケーションとサービス**のイベント ログ、**Azure Information Protection** を使用して確認できます。 情報イベント ID **911** を探します。
+2. 次のコマンドを実行し、スキャナーがサイクルを完了するまで待機します。
+    
+    Get-AIPScannerStatus
+    
+    表示が **[スキャン中]** ではなく **[アイドル]** になっている状態を探します。 スキャナーが指定したデータ ストア内のすべてのファイルをクロールすると、スキャナー サービスの動作が続いていてもスキャナーは停止します。 
+    
+    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[状態]** 列を確認することで、Azure portal の **Azure Information Protection** ブレードから状態を確認できます。
+    
+    ローカル Windows イベント ログの **[アプリケーションとサービス]** の **[Azure Information Protection]** を確認します。 このログでは、スキャナーがスキャンを完了した時刻も、結果の概要と共に報告されます。 情報イベント ID **911** を探します。
 
 3. %*localappdata*%\Microsoft\MSIP\Scanner\Reports に格納され、.csv ファイル形式を持つレポートを確認します。 スキャナーの既定の構成では、自動分類の条件に一致するファイルのみがこれらのレポートに含まれます。
     
     > [!TIP]
-    > 現在プレビュー中であり、これらのレポートからの情報は、Azure portal から表示できるように Azure Information Protection に送信されます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。 
+    > 現在プレビュー段階ですが、プレビュー バージョンのスキャナーを使用する場合は、5 分ごとにこの情報がスキャナーから Azure Information Protection に送信されます。これにより、Azure portal から結果をほぼリアルタイムで確認することができます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。 
         
     結果が期待どおりにならない場合は、Azure Information Protection ポリシーに指定した条件を微調整する必要がある場合があります。 その場合は、構成を変更して分類、および必要に応じて保護を適用する準備ができるまで、手順 1 から 3 を繰り返します。 
 
@@ -213,13 +223,17 @@ Azure AD トークンを使用することで、Azure Information Protection サ
     
     変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、およびレポートに記録する項目などがあります。 さらに、Azure Information Protection ポリシーに分類レベルを下げる、または保護を解除する理由メッセージを必要とする設定が含まれている場合、このコマンドレットを使用してそのメッセージを指定します。 各構成設定に関する詳細については、[オンライン ヘルプ](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters)を参照してください。 
 
-2. 次のコマンドを実行して、**Azure Information Protection スキャナー** サービスを再起動します。
+2. 現在の時刻をメモしておき、次のコマンドを実行してもう一度スキャナーを開始します。
     
         Start-AIPScan
+    
+    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[今すぐスキャン]** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードからスキャナーを起動できます。
 
-3. 以前と同じく、イベント ログとレポートを監視して、ラベル付けされたファイル、適用された分類、保護が適用されたかどうかを確認します。
+3. 情報の種類が **911** で、タイム スタンプが前の手順でスキャンを開始した時刻よりも後のイベント ログを再び監視します。 
+    
+    次に、レポートをチェックして、ラベル付けされたファイル、各ファイルに適用された分類、それらに保護が適用されたかどうかについての詳細を確認します。 または、Azure portal を使用してより簡単にこの情報を確認します。
 
-継続的に実行するスケジュールを構成したため、スキャナーはすべてのファイルを完了すると、新しいファイルと変更されたファイルが検出されるように、新しいサイクルを開始します。
+スケジュールを継続的に実行するように構成したため、スキャナーはすべてのファイルの作業を完了すると、新しいファイルや変更されたファイルをすべて検出するために新しいサイクルを開始します。
 
 
 ## <a name="how-files-are-scanned"></a>ファイルをスキャンする方法
@@ -283,6 +297,8 @@ Office ファイル以外のファイルの種類を保護するためにスキ�
 最初のスキャン サイクルではスキャナーは構成されているデータ ストアのすべてのファイルを検査し、後続のスキャンでは、新しいファイルまたは変更されたファイルのみが検査されます。 
 
 `-Reset` パラメーターを指定して [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を実行すると、スキャナーにすべてのファイルの再検査を強制することができます。 スキャナーに手動スケジュールを構成する必要があり、その場合、`-Schedule`パラメーターを **Manual** に設定して [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) を実行します。
+
+または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[Rescan all files]\(すべてのファイルを再スキャン\)** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードから、すべてのファイルを再検査するようスキャナーに強制することができます。
 
 すべてのファイルの再検査はレポートにすべてのファイルを含める必要がある場合に役立ち、この構成は通常、検索モードでスキャナーが実行されるときに使用されます。 フル スキャンが完了すると、後続のスキャンで新しいファイルまたは変更されたファイルのみがスキャンされるように、スキャンの種類が自動的に [増分] に変更されます。
 
@@ -425,6 +441,8 @@ Office ファイル以外のファイルの種類を保護するためにスキ�
 ----
 
 ## <a name="next-steps"></a>次の手順
+
+Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 
 [Windows Server FCI と Azure Information Protection スキャナーの違い](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。
 
