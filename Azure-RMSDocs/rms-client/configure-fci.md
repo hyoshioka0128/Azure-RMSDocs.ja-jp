@@ -4,18 +4,18 @@ description: Rights Management (RMS) クライアントと Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8c97e4591343c0c6f04c39b5fa162acb1feacdd1
-ms.sourcegitcommit: 62da5075a6b3d13e4688d2d7d82beff53cade440
+ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
+ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45540090"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750630"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -53,7 +53,7 @@ ms.locfileid: "45540090"
     
 - オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
     
-- ファイル サーバーに Rights Management テンプレートをダウンロードして、ファイルを保護するテンプレート ID を識別しました。 このためには、[Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) コマンドレットを使用します。 このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があります。
+- このシナリオでは部門別テンプレートがサポートされていないので、スコープ構成されていないテンプレートを使用するか、または [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットと *EnableInLegacyApps* パラメーターを使用する必要があります。
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Azure Rights Management 保護のためのファイル サーバー リソース マネージャー FCI の構成手順
 PowerShell スクリプトをカスタム タスクとして使用してフォルダー内のすべてのファイルを自動的に保護するには、以下の手順に従います。 以下の手順をこの順序で実行します。
@@ -72,7 +72,7 @@ PowerShell スクリプトをカスタム タスクとして使用してフォ�
 
 この手順が終了すると、選択したフォルダー内のすべてのファイルは RMS のカスタム プロパティで分類され、Rights Management によって保護されるようになります。 一部のファイルだけを選択的に保護するさらに複雑な構成の場合は、異なる分類プロパティと規則、そしてそれらのファイルだけを保護するファイル管理タスクを、作成または使用できます。
 
-FCI で使用する Rights Management テンプレートに変更を加える場合、ファイル サーバー コンピューター上で `Get-RMSTemplate -Force` を実行して、更新されたテンプレートを取得する必要があります。 更新されたテンプレートは、新しいファイルを保護するために使用されます。 テンプレートへの変更が重要であり、ファイル サーバー上のファイルを再び保護する必要がある場合、そのファイルについてエクスポートやフル コントロールの使用権限を持つアカウントで Protect-RMSFile コマンドレットを対話的に実行することにより、これを行うことができます。 FCI で使用する新しいテンプレートを発行した場合は、このファイル サーバー コンピューター上で `Get-RMSTemplate -Force` も実行する必要があります。
+FCI で使用する Rights Management テンプレートに変更を加える場合、ファイルを保護するスクリプトを実行するコンピューター アカウントは、更新されたテンプレートを自動的に取得しません。 そのためには、スクリプトでコメント アウトされた `Get-RMSTemplate -Force` コマンドを見つけて、`#` コメント文字を削除します。 更新されたテンプレートがダウンロードされる (スクリプトが少なくとも 1 回実行される) 際に、テンプレートが不必要に毎回ダウンロードされないように、この追加のコマンドをコメント アウトできます。 テンプレートへの変更が重要であり、ファイル サーバー上のファイルを再び保護する必要がある場合、そのファイルについてエクスポートやフル コントロールの使用権限を持つアカウントで Protect-RMSFile コマンドレットを対話的に実行することにより、これを行うことができます。 FCI で使用する新しいテンプレートを発行した場合は、`Get-RMSTemplate -Force` も実行する必要があります。
 
 ### <a name="save-the-windows-powershell-script"></a>Windows PowerShell スクリプトを保存する
 
@@ -266,7 +266,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
     > [!TIP]
     > トラブルシューティングに関するヒント:
     > 
-    > -   レポートにフォルダーのファイルの数ではなく **0** と表示されている場合は、この出力はスクリプトが実行されなかったことを示します。 まず、スクリプトを Windows PowerShell ISE に読み込んで内容を確認し、実行してエラーが表示されるかどうかを調べます。 引数を指定しないと、スクリプトは Azure Rights Management サービスに接続して認証を試みます。
+    > -   レポートにフォルダーのファイルの数ではなく **0** と表示されている場合は、この出力はスクリプトが実行されなかったことを示します。 まず、スクリプトを Windows PowerShell ISE に読み込んで内容を確認し、同じ PowerShell セッションで 1 回実行してみて、エラーが表示されるかどうかを調べます。 引数を指定しないと、スクリプトは Azure Rights Management サービスに接続して認証を試みます。
     > 
     >     -   スクリプトで Azure Rights Management サービス (Azure RMS) に接続できなかったことが示される場合は、そこで表示される、スクリプトで指定したサービス プリンシパル アカウントの値を確認します。 このサービス プリンシパル アカウントを作成する方法については、「Azure Information Protection クライアント管理者ガイド」の「[Prerequisite 3: To protect or unprotect files without interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction)」(前提条件 3: ユーザー操作なしでファイルの保護または保護の解除を行うには) を参照してください。
     >     -   スクリプトで Azure RMS に接続できたことが示される場合は、次にサーバー上で Windows PowerShell から直接 [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) を実行して、指定されたテンプレートを見つけることができるかどうかを確認します。 指定したテンプレートが結果に返されます。
@@ -281,6 +281,14 @@ FCI で使用する Rights Management テンプレートに変更を加える場
     > -   正しいファイルの数がレポートで示されているにもかかわらず、ファイルが保護されていない場合は、 [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) コマンドレットを使用して手動でファイルを保護してみて、エラーが表示されるかどうかを確認します。
 
 これらのタスクが正常に動作することを確認した後、ファイル リソース マネージャーを閉じることができます。 スケジュールしたタスクが実行されると、新しいファイルは自動的に分類および保護されます。 
+
+## <a name="action-required-if-you-make-changes-to-the-rights-management-template"></a>Rights Management テンプレートに変更を加える場合に必要なアクション
+
+スクリプトが参照する Rights Management テンプレートに変更を加える場合、ファイルを保護するスクリプトを実行するコンピューター アカウントは、更新されたテンプレートを自動的に取得しません。 スクリプトで、Set-RMSConnection 関数内のコメント アウトされた `Get-RMSTemplate -Force` コマンドを見つけ、行の先頭にあるコメント文字を削除します。 スクリプトが次回実行されると、更新されたテンプレートがダウンロードされます。 テンプレートが不必要にダウンロードされないようにパフォーマンスを最適化するには、この行をもう一度コメント アウトします。 
+
+テンプレートへの変更が重要であり、ファイル サーバー上のファイルを再び保護する必要がある場合、そのファイルについてエクスポートやフル コントロールの使用権限を持つアカウントで Protect-RMSFile コマンドレットを対話的に実行することにより、これを行うことができます。 
+
+FCI で使用する新しいテンプレートを発行し、カスタム ファイル管理タスクの引数行内のテンプレート ID を変更する場合にも、スクリプトでこの行を実行します。
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>選択的にファイルを保護するための手順の変更
 上の手順で問題がなければ、さらに高度な構成に変更することが簡単にできます。 たとえば、同じスクリプトを使用して個人識別情報を含むファイルだけを保護し、さらに制限の厳しい権限のテンプレートを選択できます。
