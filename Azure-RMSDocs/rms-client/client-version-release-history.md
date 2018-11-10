@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b7aed6f8cdf6cf95b6b7af0bfa06554bde79dc02
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862177"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751255"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -44,7 +44,10 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="versions-later-than-137190"></a>1.37.19.0 より後のバージョン
 
-1.37.19.0 より後のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。
+1.37.19.0 より後のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。 
+
+> [!TIP]
+> Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント: バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」をご覧ください。
 
 **リリース日**: 2018 年 9 月 20 日
 
@@ -54,13 +57,19 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **追加:**
 
-このプレビュー バージョンでのみ、スキャナーを使用するには、次の手順に従う必要があります。
+このプレビュー バージョンのみが対象 (スキャナーに特化):
 
-1. クライアントの現行の GA バージョン (1.37.19.0) をインストールします。
-2. スキャナーをインストールして構成します。
-3. スキャナーを起動します。
-4. Azure Information Protection クライアントをこのプレビュー バージョンにアップグレードします。
-5. スキャナーを起動します。
+- 次の手順に従ってスキャナーをインストールします。
+    
+    1. クライアントの現行の GA バージョン (1.37.19.0) をインストールします。
+    2. スキャナーをインストールして構成します。
+    3. スキャナーを起動します。
+    4. Azure Information Protection クライアントをこのプレビュー バージョンにアップグレードします。
+    5. スキャナーを起動します。
+
+- 大規模なデータ セットのスキャンに関する既知の問題:
+    
+    このプレビュー バージョンでは、スキャンするファイルの数を段階的に増やし、その進行状況を監視してください。 スキャナーが実行されているのに新しいファイルがスキャンされない状態が報告される場合は、スキャンするファイルの数を減らしてスキャナーを再起動します。 
 
 スキャナーのインストール、構成、起動方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。
 
@@ -94,6 +103,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     - [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 がサポートされています。
     
+- 1 つの場所からスキャナーを管理できる、Azure portal の新しい **[Azure Information Protection - Nodes (Preview)]\(Azure Information Protection - ノード (プレビュー)\)** ブレードのサポート。 Azure と接続されたスキャナーを配置すると、5 分ごとにそのスキャナーからの情報が更新されます。 このブレードからスキャナーを起動して、1 回限りのスキャン、すべてのファイルの再スキャン、スキャナーの状態のチェック、スキャン率の確認を行うことができます。
+
 **修正内容**
 
 - Azure Information Protection スキャナー:
@@ -102,7 +113,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     - スキャナー レポートには、Office ドキュメントの "最終変更者" が含まれます。
     
-    - 「[ファイル API の構成](../develop/file-api-configuration.md)」の手順に記載されているように、レジストリを編集するときに、`*` ワイルドカードを使用してあらゆる種類のファイルを保護できるようになりました。
+    - 「[スキャナーのレジストリの編集](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)」セクションで説明されているように、レジストリを編集するときに、`*` ワイルドカードを使用してあらゆる種類のファイルを保護できるようになりました。
 
 - PowerShell またはスキャナーを使用して分類と保護を行う場合、Office ドキュメントのメタデータは削除も暗号化もされません。
 
@@ -246,60 +257,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 **その他の変更**:
 
 - [クライアント使用状況ログ](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client )において、イベント ID 102 と ID 103 がイベント ID 101 に置き換えられます。
-
-## <a name="version-110560"></a>バージョン 1.10.56.0
-
-**リリース日**: 2017 年 9 月 18 日
-
-このバージョンには、MSIPC バージョン 1.0.3219.0619 の RMS クライアントが含まれています。
-
-**新機能**:
-
-- 新しい Office 365 DLP 条件に対応。この条件はラベルに設定できます。 詳細については、「[Azure Information Protection ラベルの条件を構成する](../configure-policy-classification.md)」を参照してください。
-
-- ユーザー定義アクションのために作られたラベルに対応。 Outlook の場合、このラベルは [転送不可] オプションに自動的に適用されます。 Word、Excel、PowerPoint、エクスプローラーの場合、このラベルはカスタムのアクセス許可を指定するようにユーザーに求めます。 詳細については、「[Azure Information Protection ラベルを保護するように構成する](../configure-policy-protection.md)」を参照してください。
-
-- ラベルでは、複数言語をサポートします。 2017 年 8 月 30 日以降、[既定のポリシー](../configure-policy-default.md)では、このバージョンのクライアントがユーザーに表示する言語が複数サポートされています。 この日付より前にユーザーに既定のポリシーから希望する言語でラベルが表示されるようにする方法、および構成するラベルについては、[Azure Information Protection で他の言語用ラベルを構成する方法](configure-policy-languages.md) をご覧ください。
-
-- ラベルは [Information Protection] バーに表示されるほか、Office リボンの **[保護]** ボタンをクリックしたときに表示されます。 
-
-- 次の Visio ファイルの種類のネイティブ保護: .vsdm、.vsdx、.vssm、.vssx、.vstm、.vstx
-
-- Azure Portal で設定する詳細なクライアント構成に対応。 この構成には次のものが含まれます。
-    
-    - [Outlook の [転送不可] ボタンを表示または非表示にする](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
-    
-    - [ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
-    
-    - [Azure Information Protection バーを完全に非表示にする](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
-    
-    - [Outlook で推奨分類を有効にする](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-
-- PowerShell の場合、新しい PowerShell コマンドレットの [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) と [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication) を利用し、非対話式にファイルにラベルを付けることができます。 このコマンドレットについては、管理者ガイドの [PowerShell セクション](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)をご覧ください。
-
-- PowerShell コマンドレットの [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) と [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) には、**Owner** と **PreserveFileDetails** という新しいパラメーターがあります。 このパラメーターを利用すれば、Owner カスタム プロパティに電子メール アドレスを指定したり、ラベルを付ける文書の日付を変更せずに残したりできます。
-
-**修正内容**:
-
-以下を含む、安定性の問題と特定のシナリオの問題が修正されました。
-
-- 以前は 1 GB を超える大きなファイルが破損することがありましたが、そのような大きなファイルが通常は保護されるようになりました。 ファイル サイズの上限は、ハード ディスクの空き領域と使用可能なメモリで決まります。 ファイル サイズの上限については、管理者ガイドの「[保護がサポートされているファイルのサイズ](client-admin-guide-file-types.md#file-sizes-supported-for-protection)」を参照してください。
-
-- Azure Information Protection クライアント ビューアーは、保護されている PDF (.ppdf) ファイルを閲覧限定で開きます。
-
-- SharePoint Server に保存されているファイルにラベルを付け、保護できるようになりました。
-
-- 複数の行に透かしを付けることができるようになりました。 また、視覚的なマーキングが、ドキュメントが保存されるたびにではなく、[最初に保存したときだけ](configure-policy-markings.md#when-visual-markings-are-applied) ドキュメントに適用されるようになりました。
-
-- **[ヘルプとフィードバック]** ダイアログ ボックスの **[診断の実行]** オプションが **[設定のリセット]** になりました。 このアクションの動作が変更され、ユーザーのサインアウトと Azure Information Protection ポリシーの削除が追加されました。 詳細については、管理者ガイドの「[More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option)」 ([設定のリセット] オプションの詳細) を参照してください。
-
-- プロキシ認証対応になりました。
-
-ユーザー エクスペリエンス改善のため、次のような修正がありました。
-
-- カスタムのアクセス許可を指定するときの電子メール検証。 また、Enter を押し、複数の電子メール アドレスを指定できるようになりました。
-
-- すべての下位ラベルの保護を設定するとき、親ラベルが表示されません。クライアントには、保護対応の Office エディションが与えられません。 
 
 ## <a name="next-steps"></a>次の手順
 

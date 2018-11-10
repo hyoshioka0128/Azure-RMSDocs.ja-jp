@@ -4,17 +4,17 @@ description: 統合ラベル付けをサポートしているクライアント�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 075330138910da90049cad3c1ccc74a1a360a218
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100645"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382614"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
@@ -26,6 +26,15 @@ ms.locfileid: "49100645"
 Office 365 セキュリティ/コンプライアンス センターで使用できるようにする場合、ラベルを移行します。Office 365 セキュリティ/コンプライアンス センターでは、[統合ラベル付けをサポートしているクライアント](#clients-that-support-unified-labeling)でラベルを公開し、ダウンロードできます。 Azure Information Protection クライアントでは引き続き、Azure portal から Azure Information Protection ポリシーでラベルがダウンロードされます。 
 
 移行後のラベルは Azure portal または Office 365 セキュリティ/コンプライアンス センターで変更できます。個々のクライアントで同じ変更内容がダウンロードされます。
+
+### <a name="important-information-about-administrative-roles"></a>管理者ロールに関する重要な情報
+
+**セキュリティ管理者**と **Information Protection 管理者**の [Azure AD ロール](/active-directory/users-groups-roles/directory-assign-admin-roles)は、統合ラベル付けのプラットフォームではサポートされていません。 組織でこれらの管理者ロールを使用する場合は、ラベルを移行する前に、これらのロールを持つユーザーを、Office 365 セキュリティ/コンプライアンス センターの**コンプライアンス管理者**ロール グループまたは**組織管理**ロール グループに追加しておきます。 代わりに、これらのユーザー用の新しいロール グループを作成して、このグループに**保持管理**、**組織の構成**のどちらのロールでも追加できます。 手順については、「[Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」(Office 365 セキュリティ/コンプライアンス センターへのアクセス権をユーザーに付与する) をご覧ください。
+
+これらの構成のいずれかを使用して各ユーザーに 365 セキュリティ/コンプライアンス センターへのアクセス権を付与しないと、ラベルの移行後に各ユーザーは Azure portal でラベルとポリシーにアクセスできなくなります。
+
+ラベルの移行後でも、テナントのグローバル管理者は Azure portal およびセキュリティ/コンプライアンス センターの両方でラベルとポリシーの管理を続けられます。
+
 
 ## <a name="considerations-for-unified-labels"></a>統合ラベルに関する考慮事項
 
@@ -45,7 +54,7 @@ Office 365 セキュリティ/コンプライアンス センターで使用で�
     
     - クラウドベースのキーを使用し、ラベル構成に含まれるテンプレートもラベルと共に移行されます。 その他の保護テンプレートは移行されません。 
     
-    - クラウドベースの保護設定のあるラベルが移行されると、保護テンプレートの結果的に生成されるスコープは、Azure portal で (あるいは、ADDRM PowerShell モジュールを使用することで) 定義されるスコープであり、セキュリティ/コンプライアンス センターで定義されるスコープとなります。 
+    - クラウドベースの保護設定のあるラベルが移行されると、保護テンプレートの結果的に生成されるスコープは、Azure portal で (あるいは、AADRM PowerShell モジュールを使用することで) 定義されるスコープであり、セキュリティ/コンプライアンス センターで定義されるスコープとなります。 
 
 - ラベルを移行すると、移行結果にラベルが**作成された**か、**更新された**か、重複のため、**名前が変更**されたかが表示されます。
 
@@ -89,6 +98,8 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 お使いのテナントで機密ラベルがサポートされていることをセキュリティ/コンプライアンス センターで確認したら、次の指示に従い、テナントと Azure Information Protection ラベルを移行します。
 
+ラベルを移行するには、グローバル管理者である必要があります。
+
 1. 新しいブラウザー ウィンドウを開き、次のリンクから Azure portal にサインインします。 https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
 2. **[Azure Information Protection - 統合ラベル付け]** ブレードで **[有効化]** を選択し、オンライン指示に従います。
@@ -100,6 +111,8 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 現在、統合ラベル付けをサポートしているクライアント:
 
+- [Windows 用 Azure Information Protection 統合ラベル付けクライアント](./rms-client/unifiedlabelingclient-version-release-history.md) - プレビュー
+
 - Office Insiders プログラムからのアプリ。 詳細については、Office ドキュメントの「[現在、機能はどこで入手できますか?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable)」セクションを参照してください。
     
 - [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference) を使用するソフトウェア ベンダー/開発者からのクライアント。
@@ -107,4 +120,6 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 ## <a name="next-steps"></a>次の手順
 
-移行したラベルを Office 365 セキュリティ/コンプライアンス センターで構成し、公開する方法については、「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターで統合ラベル付けの管理が可能に) というブログ投稿を参照してください。
+Office 365 セキュリティ/コンプライアンス センターで構成および公開できるようになった移行済みラベルについては、「[機密ラベルの概要](/Office365/SecurityCompliance/sensitivity-labels)」をご覧ください。
+
+発表については、ブログ記事「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」(セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。

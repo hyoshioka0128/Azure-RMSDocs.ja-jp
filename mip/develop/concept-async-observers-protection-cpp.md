@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d7077678ba336b031f7a8f812a3c4e90d8c5b05a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 35c0fb8eb358c5872ab378755d303425cc8e80a4
+ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251711"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236817"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Microsoft Information Protection SDK - 保護 API オブザーバー
 
@@ -25,7 +25,7 @@ ms.locfileid: "48251711"
 
 次の例は、promise/future パターンを示しています。これは SDK サンプルでも使用され、目的のコールバック動作を実装するために拡張することもできます。 
 
-## <a name="protection-protection-observer-implementation"></a>保護オブザーバーの実装
+## <a name="protectionprofile-observer-implementation"></a>ProtectionProfile Observer の実装
 
 次の例では、`mip::ProtectionProfile::Observer` から派生される `ProtectionProfileObserverImpl` クラスを作成しています。 メンバー関数は、サンプル全体で使用される promise/future パターンを使用するためにオーバーライドされています。
 

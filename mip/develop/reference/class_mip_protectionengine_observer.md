@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5c5b5e807a80c8db3cbdb69ea5d09da1e79aec6e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 9999b450d614b4465f151f0b2df80892a83bc143
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446585"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651347"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
 [ProtectionEngine](class_mip_protectionengine.md) に関連する通知を受け取るインターフェイス。
@@ -24,7 +24,7 @@ public virtual void OnGetTemplatesSuccess(const std::shared_ptr<std::vector<std:
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
 public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr<std::vector<std::string>>& rights, const std::shared_ptr<void>& context)  |  権限が正しく取得されると呼び出されます。
 public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
-public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& lableIds, const std::shared_ptr<void>& context)  |  ラベル ID が正しく取得されると呼び出されます。
+public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& labelIds, const std::shared_ptr<void>& context)  |  ラベル ID が正しく取得されると呼び出されます。
 public virtual void OnGetGrantingLabelIdsFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  ユーザーのラベル ID を取得するときに呼び出されます。
   
 ## <a name="members"></a>メンバー
@@ -81,7 +81,7 @@ public virtual void OnGetGrantingLabelIdsFailure(const std::exception_ptr& error
 ラベル ID が正しく取得されると呼び出されます。
 
 パラメーター:  
-* **lableIds**: 取得したラベル ID の一覧への参照 
+* **labelIds**: 取得したラベル ID の一覧への参照 
 
 
 * **context**: [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync) に渡されたものと同じコンテキスト

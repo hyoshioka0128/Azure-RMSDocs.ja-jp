@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
-ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
+ms.openlocfilehash: c4b4df01be10ce033dd7369e71420e949750e667
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101836"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169909"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 
@@ -96,5 +96,5 @@ Office 365 の電子情報開示を利用できない場合、Azure Rights Manag
 
 4. 小さくなったこの 2 つ目の PST ファイルで Unprotect-RMSFile を実行し、そのコンテンツを復号します。 出力から、新しく復号された PST ファイルを情報開示ツールにインポートします。
 
-さまざまなメールボックスと PST ファイルで電子情報開示を実行する方法については、「[Azure Information Process and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216)」 (Azure 情報プロセスと電子情報開示プロセス) というブログ投稿を参照してください。
+メールボックスと PST ファイル全体で電子情報開示を実行する方法について詳しくは、ブログ投稿「[Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216)」 (Azure Information Protection と電子情報開示プロセス) をご覧ください。
 
