@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9a9256d4c67845f43eeb1598926ea5c02f07f822
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: f80eb1f7ade5e024bd6d7d68775624b51f3f1809
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445735"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223910"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Microsoft Information Protection SDK - 認証委任の実装 (C++)
 
@@ -23,7 +23,7 @@ MIP SDK は認証チャレンジとトークンで応答を処理する、認証
 
 ### <a name="authdelegateimplh"></a>auth_delegate_impl.h
 
-この例では、既定のコンストラクターがユーザー名、パスワード、およびアプリケーションの[アプリケーション ID](/azure/active-directory/develop/developer-glossary.md#application-id-client-id) のみを許可します。 これらは、プライベート変数 `mUserName`、`mPassword`、および `mClientId` に格納されます。
+この例では、既定のコンストラクターがユーザー名、パスワード、およびアプリケーションの[アプリケーション ID](/azure/active-directory/develop/developer-glossary#application-id-client-id) のみを許可します。 これらは、プライベート変数 `mUserName`、`mPassword`、および `mClientId` に格納されます。
 
 ID プロバイダーやリソース URI などの情報は、少なくとも `AuthDelegateImpl` コンストラクターでは、実装する必要がないということに注意してください。 その情報は、`OAuth2Challenge` オブジェクトの `AcquireOAuth2Token` の一部として渡されます。 代わりに、これらの詳細は、`AcquireOAuth2Token` の `AcquireToken` 呼び出しで渡します。
 
