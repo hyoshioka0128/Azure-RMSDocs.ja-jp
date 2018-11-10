@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
+ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476206"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51508444"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
@@ -169,7 +169,49 @@ Office 365 サブスクリプションのプロビジョニング プロセス�
 
 登録に API とアクセス許可を追加する方法の詳細については、[アプリケーションを更新し、Web API にアクセスするようにクライアント アプリケーションを構成するのセクション](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application)を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
 
+## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
+
+MIP で開発されたアプリケーションをリリースすることができます、前にの適用し、Microsoft との正式な取り決めを完了する必要があります。
+
+1. 次の情報を記載した電子メールを [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) に送信して、IPIA を入手します。
+
+   **件名:** *会社名* の IPIA 申し込み
+
+   電子メールの本文に、次の情報を含めます。
+   - アプリケーションと製品名
+   - 要求者の氏名
+   - 要求者の電子メール アドレス
+
+2. IPIA 申請が受信されると、(Word 文書形式の) フォームがお客様に送信されます。 IPIA の使用条件を確認し、次の情報をフォームに入力して [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) に返送します。
+
+   - 会社の正式名称
+   - 法人の都道府県または国
+   - 会社の URL
+   - 連絡先の電子メール アドレス
+   - (省略可能) 会社の追加住所
+   - 会社のアプリケーションの名前
+   - アプリケーションの簡単な説明
+   - *Azure テナント ID*
+   - アプリケーションの*アプリ ID*
+   - 緊急時の会社の連絡先、電子メール アドレス、および電話番号
+
+3. フォームが受信されると、デジタル署名を行うための最終的な IPIA リンクがお客様に送信されます。 お客様の署名後、適切な Microsoft 担当者が署名することで、契約が締結されます。
+
+### <a name="already-have-a-signed-ipia"></a>既に署名済みの IPIA がある場合
+
+署名済みの IPIA が既に存在し、リリースするアプリケーション用に新しい *アプリ ID* を追加する場合は、電子メールに次の情報を記載して [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Updating%20IPIA%20for%20<company-name>) に送信します。
+
+- 会社のアプリケーションの名前
+- アプリケーションの簡単な説明
+- Azure テナント ID (以前と同じ場合でも記載)
+- アプリケーションのアプリ ID
+- 緊急時の会社の連絡先、電子メール アドレス、および電話番号
+
+電子メールの送信時には、受領の確認には最大で 72 時間かかることをご了承ください。
+
 ## <a name="next-steps"></a>次の手順
 
 - MIP SDK はほぼ完全に非同期に設計されているため、クイック スタート セクションを開始する前に、必ず [MIP SDK のオブザーバー](concept-async-observers.md)のページをお読みください。
 - SDK を使用した実践的な体験をする準備ができたら、「[Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md)」 (クイック スタート: クライアント アプリケーションの初期化 (C++)) を開始します。
+
+
