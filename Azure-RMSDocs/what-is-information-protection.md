@@ -4,16 +4,16 @@ description: Azure Information Protection サービスの概要です。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: b789697a398a0e201cbf041b36d7cd41a82a9e0d
-ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
+ms.openlocfilehash: 979f0acfc2177ba05e57f7c36d5bf3ca3840a65f
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236834"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026693"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -144,9 +144,4 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 
 ## <a name="next-steps"></a>次の手順
 
-ブログの投稿「[Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)」 (Azure Information Protection: 準備、設定、保護) をお読みください。
-
-「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」で説明されているように、5 つの簡単な手順で Azure Information Protection をご自分で構成および確認できます。 このサービスを組織向けにデプロイする準備ができている場合は、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」を参照してください。
-
-Azure Information Protection の別名については、 [サービスの代替用語の一覧](aka.md)に関するページを参照してください。
-
+[クイック スタート](quickstart-viewpolicy.md)と[チュートリアル](infoprotect-quick-start-tutorial.md)を参照すれば、Azure Information Protection をご自分で構成および確認できます。 また、このサービスを組織向けにデプロイする準備ができている場合は、[一般的なシナリオ向けの攻略ガイド](how-to-guides.md)を参照してください。

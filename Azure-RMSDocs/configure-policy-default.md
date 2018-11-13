@@ -4,16 +4,15 @@ description: Azure Information Protection の既定のポリシーの構成方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
-ms.topic: article
+ms.date: 11/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: ada4e4b2b7f8ef4bcf95307184d9c262a930c9f0
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d74dfcd35dca2f3ab5e88a66eaaba37b13636e4d
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807324"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223978"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
@@ -21,19 +20,19 @@ ms.locfileid: "42807324"
 
 以下では、Azure Information Protection の既定のポリシーの構成方法を説明します。
 
-管理者が Azure Portal を使用して最初に Azure Information Protection サービスに接続したときに、そのテナントの既定のポリシーが作成されます。 Microsoft は、時折、既定のポリシーに変更を加えることがありますが、既定のポリシーが改訂される前に、既にサービスを使用していた場合、以前のバージョンの既定のポリシーは更新されません。これは、ユーザーが既定のポリシーを構成し、運用環境に展開している可能性があるためです。
+管理者が Azure portal を使用して最初に Azure Information Protection サービスに接続したときに、そのテナント用に Azure Information Protection の既定のポリシーが作成されます。 Microsoft はこの既定のポリシーに変更を加える場合がありますが、既定のポリシーが改訂される前に既にサービスを使用していた場合、以前のバージョンの Azure Information Protection の既定のポリシーは更新されません。これは、ユーザーが既定のポリシーを構成し、運用環境に展開している可能性があるためです。
 
-次の値を参照してポリシーを既定値に戻したり、ポリシーを最新の値に更新したりすることができます。
+次の値を参照して Azure Information Protection のポリシーを既定値に戻したり、Azure Information Protection のポリシーを最新の値に更新したりすることができます。
 
 ## <a name="current-default-policy"></a>最新の既定のポリシー
 
-このバージョンの既定のポリシーは、2017 年 7 月 31 日付けのものです。
+このバージョンの Azure Information Protection の既定のポリシーは、2017 年 7 月 31 日以降のものです。
 
-この既定のポリシーは、Azure Rights Management サービスがアクティブ化される場合 (2018 年 2 月以降の新しいテナントの場合) に作成されます。 詳細については、ブログ投稿のお知らせ「[Improvements to the protection stack in Azure Information Protection (Azure Information Protection の保護スタックの向上)](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection)」を参照してください。
+この Azure Information Protection の既定のポリシーは、Azure Rights Management サービスをアクティブ化するとき (2018 年 2 月以降の新しいテナントの場合) に作成されます。 詳細については、ブログ投稿のお知らせ「[Improvements to the protection stack in Azure Information Protection (Azure Information Protection の保護スタックの向上)](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection)」を参照してください。
 
-この既定のポリシーは、ポリシーの作成前に手動で[サービスをアクティブ化](activate-service.md)した場合にも作成されます。 
+この Azure Information Protection の既定のポリシーは、Azure Information Protection のポリシーの作成前に手動で[サービスをアクティブ化](activate-service.md)した場合にも作成されます。 
 
-サービスがアクティブ化しなかった場合、既定のポリシーは次のサブラベルの保護を構成しません。
+サービスをアクティブ化しなかった場合、Azure Information Protection の既定のポリシーでは次のサブラベルの保護が構成されません。
 
 - **社外秘 \ すべての従業員**
 
@@ -43,11 +42,11 @@ ms.locfileid: "42807324"
 
 - **非常に機密性の高い社外秘 \ 受信者のみ** 
 
-保護に対してこれらのサブラベルが自動的に構成されないとき、既定のポリシーは[前の既定のポリシー](#default-policy-before-july-31-2017)と同じになります。
+保護に対してこれらのサブラベルが自動的に構成されないとき、Azure Information Protection の既定のポリシーは[前の既定のポリシー](#default-policy-before-july-31-2017)と同じになります。
 
 保護が **[すべての従業員]** サブラベルに適用されるとき、Azure Portal で自動的にラベルに変換される既定のテンプレートを利用し、保護が構成されます。 これらのテンプレートの詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
-2017 年 8 月 30 日以降、既定ポリシーのこのバージョンには、ラベルの名前と説明の多言語版が含まれるようになりました。 
+2017 年 8 月 30 日以降、このバージョンの Azure Information Protection の既定ポリシーには、多言語版のラベルの名前と説明が含まれるようになりました。 
 
 #### <a name="more-information-about-the-recipients-only-sublabel"></a>[受信者のみ] サブラベルに関する詳細
 
@@ -78,10 +77,10 @@ ms.locfileid: "42807324"
 |非常に機密性の高い社外秘 \ (保護されていない) すべてのユーザー|保護を必要としないデータ。 このオプションは、適切な業務の理由がある場合に、注意して使用します。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (ドキュメントや電子メール)<br /><br />非常に機密性の高い社外秘として分類<br /><br />**条件**: なし<br /><br />**保護**: なし|
 |非常に機密性の高い社外秘 \ 受信者のみ|保護を必要とし、受信者だけが閲覧できる非常に機密性の高いデータ。|**有効**: オン <br /><br />**視覚的なマーキング**: フッター (電子メール)<br /><br />非常に機密性の高い社外秘として分類 <br /><br />**条件**: なし<br /><br />**保護**: ユーザー定義のアクセス許可を設定します (プレビュー)。Outlook では転送不可を適用します|
 
-###### <a name="footnote-1"></a>脚注 1:
+###### <a name="footnote-1"></a>脚注 1
 保護のアクセス許可は、[既定のテンプレート](configure-policy-templates.md#default-templates)である**社外秘 \ すべての従業員**でこれらと一致します。
 
-###### <a name="footnote-2"></a>脚注 2: 
+###### <a name="footnote-2"></a>脚注 2 
 保護のアクセス許可は、[既定のテンプレート](configure-policy-templates.md#default-templates)である**非常に機密性の高い社外秘 \ すべての従業員**でこれらと一致します。
 
 

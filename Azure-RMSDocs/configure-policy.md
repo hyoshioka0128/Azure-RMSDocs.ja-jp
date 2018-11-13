@@ -4,18 +4,18 @@ description: 分類、ラベル付け、および保護を構成するには、A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bc6ec93104f2fc4f037b2410d53d7e3e70874725
-ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
+ms.openlocfilehash: 98c3d09a72a74ce8f2abc679df1e155b3a9ee5d8
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49651330"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026589"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -92,35 +92,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 3. ポリシーを表示および編集するには、メニュー オプションから **[ポリシー]** を選択します。 すべてのユーザーが取得するポリシーを表示および編集するには、**[グローバル]** ポリシーを選択します。 選択したユーザー用のカスタム ポリシーを作成するには、**[Add a new policy]\(新しいポリシーの追加\)** を選択します。
     
 
-### <a name="overview-of-the-policy"></a>ポリシーの概要
-
-Azure Information Protection ポリシーには、構成可能な次の要素があります。
-    
-- 含めるラベル。管理者とユーザーは、ラベルを使用してドキュメントや電子メールを分類できます (また、必要に応じて保護できます)。
-
-- ユーザーの Office アプリケーションで、Information Protection バーに表示されるタイトルとツールヒント。
-
-- ドキュメントと電子メールを分類するための開始点となる既定のラベルを設定するオプション。
-
-- ユーザーがドキュメントの保存と電子メールの送信を行ったときに分類を実行するオプション。
-
-- ユーザーが元のレベルよりも低い秘密度レベルのラベルを選択したときに、理由を示すことをユーザーに要求するオプション。
-
-- 添付ファイルに基づいて、電子メール メッセージに自動的にラベルを付けるオプション。
-
-- Office アプリケーションで Information Protection バーが表示されるかどうかを制御するオプション。
-
-- Outlook に [Do Not Forward]\(転送不可\) ボタンを表示するかどうかを制御するオプション。
-
-- ユーザーがドキュメントに独自のアクセス許可を指定できるようにするオプション。
-
-- ユーザーにカスタム ヘルプ リンクを提供するオプション。
-
-Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのうちの 2 つのラベルには、必要なときにサブカテゴリを提供するためのサブラベルが含まれています。 サブラベルのラベルを構成するときに、ユーザーはメインのラベルを選択することはできませんが、サブラベルをいずれか 1 つ選択する必要があります。
-
-Azure Information Protection ラベルは、最下位の分類である個人データから、最上位の分類である非常に機密性の高い社外秘データまで、組織が通常作成して保存するあらゆるデータで使用できます。 
-
-これらの既定のラベルは、そのまま使用する、カスタマイズする、または削除することができ、新しいラベルを作成することもできます。 詳細については、次のセクションのリンクを使用すると、関連するオプションとそのオプションを構成する方法を確認することができます。
+### <a name="making-changes-to-the-policy"></a>ポリシーに対する変更
 
 任意の数のラベルを作成できます。 ただし、多すぎて正しいラベルを発見して選択する作業が困難になるとき、スコープ ポリシーを作成し、あるユーザーに関連するラベルのみがそのユーザーに表示されるようにします。 保護を適用するラベルには 500 という上限があります。
 
@@ -172,7 +144,11 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 ## <a name="next-steps"></a>次の手順
 
-既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」をご覧ください。
+Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
+
+- [Edit the Azure Information Protection policy and create a new label (Azure Information Protection ポリシーを編集して新しいラベルを作成する)](infoprotect-quick-start-tutorial.md)
+
+- [Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)
 
 ポリシーの実行方法を確認するには、[Azure Information Protection 向けのレポート作成](reports-aip.md)に関する記事を参照してください。
 

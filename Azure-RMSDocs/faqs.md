@@ -4,26 +4,36 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e49912fd777a97c51f9ef7b4e7cff5a2aeb2c3ad
-ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
+ms.openlocfilehash: 04cafed6317bd17f08e6b09a7f0b42b2cb2e20c7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48794329"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026674"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Azure Information Protection、または Azure Rights Management サービス (Azure RMS) に関して質問がございますか。 ここで回答を探してみてください。
+Azure Information Protection、または Azure Rights Management (Azure RMS) による保護に関して質問がございますか。 ここで回答を探してみてください。
 
 これらの FAQ ページは定期的に更新されます。新しい情報は [Azure Information Protection 技術ブログ](https://aka.ms/AIPblog)上の月次のドキュメント更新発表に一覧表示されます。
+
+## <a name="whats-the-difference-between-azure-information-protection-and-microsoft-information-protection"></a>Azure Information Protection と Microsoft Information Protection の違いは何ですか。
+
+Azure Information Protection とは異なり、Microsoft Information Protection は購入できるサブスクリプションや製品ではありません。 そうではなく、これは組織の機密情報を保護するのに役立つ製品および統合された機能のフレームワークです。
+
+- このフレームワークに含まれる個々の製品には、Azure Information Protection、Office 365 Information Protection (たとえば Office 365 DLP)、Windows Information Protection、Microsoft Cloud App Security などがあります。 
+
+- このフレームワークに含まれる統合された機能としては、統合ラベルの管理、Office アプリに組み込みのエンド ユーザーのラベル付けエクスペリエンス、Windows で統合ラベルを使用したりデータに保護を適用したりする機能、Microsoft Information Protection SDK、ラベル付けされた PDF と保護された PDF を表示する Adobe Acrobat Reader の新機能などがあります。
+
+詳細については、「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」(機密データを保護するために使用できる情報保護機能の発表) をご覧ください。
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Azure Information Protection と Azure Rights Management の違いは何ですか。
 
@@ -37,6 +47,10 @@ Azure Information Protection で保護されたコンテンツにアクセスす
 「[Azure Information Protection の価格](https://azure.microsoft.com/en-us/pricing/details/information-protection)」ページのサブスクリプション情報と機能一覧を参照してください。 
 
 Azure Rights Management データ保護を含む Office 365 サブスクリプションをお持ちの場合は、[Azure Information Protection ライセンス データシート](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をダウンロードしてください。このデータシートにはライセンスに関してよく寄せられる質問もいくつか含まれています。
+
+## <a name="ive-just-got-my-azure-information-protection-subscriptionhow-do-i-get-going"></a>Azure Information Protection のサブスクリプションを取得したばかりなのですが、何から取りかかればよいですか。
+
+Azure Information Protection を初めて使用する場合は、最初に[クイック スタート](quickstart-viewpolicy.md)を参照してから、[一般的なシナリオ向けの攻略ガイド](how-to-guides.md)を確認してください。
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Azure Information Protection client は分類とラベル付けを含むサブスクリプション用のみでしょうか。
 
@@ -68,14 +82,15 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 - 管理者ロールが割り当てられているユーザーは、Azure Information Protection によって保護されたドキュメントやメールから保護を自動的に削除することはできません。 スーパー ユーザーを割り当てられたユーザーだけが、スーパー ユーザー機能が有効になっているときにのみ、この操作を行うことができます。 ただし、Azure Information Protection への管理アクセス許可を割り当てたすべてのユーザーが、各自のアカウントなど、ユーザーにスーパー ユーザーを割り当てることができます。 また、スーパー ユーザー機能を有効にすることもできます。 これらのアクションは、管理者ログに記録されます。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)」のセキュリティのベスト プラクティスに関するセクションを参照してください。 
 
+- Azure Information Protection のラベルを Office 365 に移行する場合は、ラベルの移行に関するドキュメントの「[管理者ロールに関する重要な情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)」セクションをお読みください。
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
 はい。 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
 
-Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)を使用して、よりシームレスな認証方法をユーザーに提供できます。
+Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) を使用して、よりシームレスな認証方法をユーザーに提供できます。
 
-必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
+必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Azure Information Protection ではどのようなデータの種類を分類し、保護できますか?
 
@@ -105,17 +120,19 @@ Azure Information Protection で保護されているドキュメントをユー
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Azure Information Protection のラベルと Office 365 のラベルにはどのような違いがありますか。
 
-Azure Information Protection のラベルでは、ドキュメントおよび電子メールがオンプレミスのものであるかクラウド内のものであるかに関係なく、ドキュメントと電子メールに対して一貫性のある分類および保護ポリシーを適用できます。 この分類と保護は、コンテンツの格納場所または移動方法とは関係ありません。 最近まで、Office 365 には[保有期間ラベル](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30)のみがあり、ドキュメントおよび電子メールのコンテンツが Office 365 サービス内にある場合に、それらを分類して監査および保持することができました。 
+最近まで、Office 365 には[保有期間ラベル](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30)のみがあり、ドキュメントおよび電子メールのコンテンツが Office 365 サービス内にある場合に、それらを分類して監査および保持することができました。 これに対して、Azure Information Protection のラベルでは、ドキュメントおよび電子メールがオンプレミスのものであるかクラウド内のものであるかに関係なく、ドキュメントと電子メールに対して一貫性のある分類および保護ポリシーを適用できます。
 
-Microsoft では、Azure Information Protection、Office 365、Microsoft Cloud App Security、Windows 情報保護などの複数のサービスに対応する包括的で統一されたラベル戦略に向けて作業を進めています。  "Microsoft Information Protection" と呼ばれるこの戦略については、聞いたことがあるかもしれません。 これと同じラベル スキーマおよびストアは、MIP SDK を使用することで、ソフトウェア ベンダーも利用できます。
+Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/コンプライアンス センターでは、保有期間ラベルに加え、[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を作成および構成するためのオプションが表示されるようになります。 さらに、現在はプレビュー段階ですが、既存の Azure Information Protection のラベルを新しい統合ラベル付けストアに移行できます。 
 
-Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/コンプライアンス センターでは、保有期間ラベルに加え、**機密ラベル**を構成するためのオプションが表示されるようになります。 さまざまなサービス全体で統合されるラベルの進行状況について詳しくは、「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」 (機密データの保護に役立つ情報保護機能の可用性の発表) というブログ記事を参照してください。
+統合ラベル付けの管理と各ラベルのサポート方法について詳しくは、ブログ記事「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」 (機密データの保護に役立つ情報保護機能の可用性の発表) をご覧ください。
+
+既存のラベルの移行について詳しくは、「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](configure-policy-migrate-labels.md)」をご覧ください。
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Windows Server FCI と Azure Information Protection スキャナーの違い
 
-しばらくの間、[Rights Management コネクタ](deploy-rms-connector.md) (Office ドキュメントのみ) や [PowerShell スクリプト](./rms-client/configure-fci.md) (すべてのファイルの種類) を使用して、ドキュメントを分類し、保護するには、Windows Server ファイル分類インフラストラクチャを使用することができました。 
+[Rights Management コネクタ](deploy-rms-connector.md) (Office ドキュメントのみ) や [PowerShell スクリプト](./rms-client/configure-fci.md) (すべてのファイルの種類) を使用してドキュメントを分類して保護するために、これまでは Windows Server ファイル分類インフラストラクチャが選択されてきました。 
 
-[Azure Information Protection スキャナー](deploy-aip-scanner.md)を使用できるようになりました。 スキャナーは Azure Information Protection クライアントと Azure Information Protection ポリシーを使用して、ドキュメント (すべてのファイルの種類) にラベルを付けるため、これらのドキュメントは分類され、必要に応じて保護されます。
+これからは、[Azure Information Protection スキャナー](deploy-aip-scanner.md)の使用をお勧めします。 スキャナーは Azure Information Protection クライアントと Azure Information Protection ポリシーを使用して、ドキュメント (すべてのファイルの種類) にラベルを付けるため、これらのドキュメントは分類され、必要に応じて保護されます。
 
 この 2 つのトポロジの主な違いを次に示します。
 
@@ -135,7 +152,7 @@ Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/�
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>新しいリリースが Azure Information Protection ですぐに利用できるようになると聞きました。いつリリースされますか?
 
-技術文書には今後のリリースに関する情報は含まれません。 この種の情報およびリリースの通知については、[Enterprise Mobility and Security のブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services)を参照し、Twitter の [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) から最新の情報を入手してください。 Office のリリースに興味がある場合は、[Office ブログ](https://blogs.office.com/)も確認してください。
+技術文書には今後のリリースに関する情報は含まれません。 この種の情報およびリリースの通知については、[Enterprise Mobility and Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services)を参照し、Twitter の [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) から最新の情報を入手してください。 この Office のリリースに関心がある場合は、[Office 365 のブログ](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog)と [Office アプリのブログ](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog)もチェックしてください。
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>自分の国に Azure Information Protection は適していますか?
 
@@ -145,7 +162,7 @@ Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/�
 
 一般データ保護規則 (GDPR) に準拠するために Azure Information Protection がどのように役立つかを確認するには、ブログ投稿「[Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr)」(Microsoft 365 が GDPR で役立つ情報保護戦略を提供) のお知らせとビデオをご覧ください。
 
-## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>法律、法令遵守、SLA など、Azure Information Protection に関するサポート情報はどこで入手できますか。
+## <a name="where-can-i-find-supporting-information-for-azureinformation-protectionsuch-as-legal-compliance-and-slas"></a>法律、法令遵守、SLA など、Azure Information Protection に関するサポート情報はどこで入手できますか。
 「[Azure Information Protection のコンプライアンスとサポート情報](./compliance.md)」を参照してください。
 
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Azure Information Protection の問題を報告またはフィードバックを送信するにはどうすればよいですか。

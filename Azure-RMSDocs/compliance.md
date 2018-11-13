@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection のコンプライアンスと情報
-description: 法律、コンプライアンス、SLA を含む Azure Information Protection のサポート情報を紹介します。
+description: 法律、コンプライアンス、SLA を含む Azure Information Protection のサポート情報を紹介します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e7c6c078d992bc4d3be9480227715be2157178f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0269888af84f4f1b17ce5523bb5bbc8648d0d1a7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150789"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026708"
 ---
-# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
+# <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
-Azure Information Protection は他のサービスをサポートし、また、他のサービスに依存しています。 Azure Information Protection サービスの使用方法以外で、Azure Information Protection の関連情報をお探しの場合は、以下のリソースを参照してください。
+Azure Information Protection は他のサービスをサポートし、また、他のサービスに依存しています。 Azure Information Protection サービスの使用方法以外で、Azure Information Protection の関連情報をお探しの場合は、以下のリソースを参照してください。
 
 ## <a name="suitability-for-different-countries"></a>国ごとの適合性
 
@@ -39,15 +39,15 @@ Azure Information Protection は他のサービスをサポートし、また、
 
 ## <a name="legal-and-privacy"></a>法律およびプライバシー
 
-- Microsoft Azure の契約情報について: [Microsoft Azure の契約](http://azure.microsoft.com/support/legal/subscription-agreement/)
+- Microsoft Azure の契約情報について: [Microsoft Azure 契約](http://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](http://azure.microsoft.com/support/legal/privacy-statement/)
+- Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](http://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>セキュリティ、コンプライアンス、監査
 
-Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](./azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
+Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
 
-- Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
+- Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
 
 - FIPS 140 について: [FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
 
@@ -63,7 +63,7 @@ Azure Rights Management サービスの特定の認証についての情報に�
 
 ## <a name="documentation"></a>ドキュメント
 
-- Azure Active Directory のドキュメント: [Azure Active Directory](/active-directory/)
+- Azure Active Directory のドキュメント: [Azure Active Directory](/active-directory/)
 
-- Office 365 ライブラリ: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+- Office 365 ライブラリ: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 

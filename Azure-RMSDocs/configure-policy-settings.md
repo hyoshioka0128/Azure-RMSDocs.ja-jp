@@ -4,16 +4,16 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 03736896f73fc83f699191677846e757eaf17be7
-ms.sourcegitcommit: d6c29e0d23c079045f9a9a2a270cf3cf22d628d5
+ms.openlocfilehash: f8967b16f864939bfcb06f786e8ee1eff0603ac2
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336461"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026606"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -83,5 +83,7 @@ Azure Information Protection のサブスクリプションを購入した時期
 
 ## <a name="next-steps"></a>次の手順
 
-Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
+このような一部のポリシー設定を連携させる方法を確認するには、チュートリアル「[Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)」をご覧ください。
+
+Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
 

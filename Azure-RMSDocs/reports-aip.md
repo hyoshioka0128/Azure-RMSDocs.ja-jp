@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 11/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: cf951bba3cc74a82e31841986dde9e75ec34a630
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 4cb496e6cca01d7a4ad6636acc315bd40dc4c58c
+ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862126"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51273584"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -62,17 +62,25 @@ ms.locfileid: "48862126"
 
 - ラベル操作。 ラベルの設定、ラベルの変更、保護の追加または削除、自動ラベルと推奨ラベルなど。
 
+- ラベル操作の前後のラベル名。
+
 - 組織のテナント ID。
 
 - ユーザー ID (電子メール アドレスまたは UPN)。
 
-- ラベル付けされているドキュメントのファイル パスとファイル名。
+- ユーザーのデバイスの名前。
+
+- ドキュメントの場合: ラベル付けされているドキュメントのファイル パスとファイル名。
+
+- 電子メールの場合: 電子メールの件名、電子メールの送信者、ラベル付けされた電子メールの受信者。 
+
+- コンテンツ内で検出された機密情報の種類 ([定義済み](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for)およびカスタム)。
 
 - Azure Information Protection クライアントのバージョン。
 
 - クライアント オペレーティング システムのバージョン。
 
-この情報は、ご自分が所有する Azure Log Analytics ワークスペースに格納されます。
+この情報は、自分が所有し、このワークスペースへのアクセス権を持つユーザーが表示できる Azure Log Analytics ワークスペースに格納されます。 ワークスペースに対するアクセスの構成について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users)」セクションをご覧ください。
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Azure Information Protection 分析の前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
@@ -104,11 +112,11 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 ## <a name="how-to-view-the-reports"></a>レポートの表示方法
 
-[Azure Information Protection] ブレードで、**[ダッシュボード (プレビュー)]** メニュー オプションを見つけ、次のいずれかのオプションを選択します。
+[Azure Information Protection] ブレードから **[ダッシュボード]** メニュー オプションを探し、次のいずれかのオプションを選択します。
 
-- **使用状況レポート**: ラベルがどのように使用されているかを確認するには、このレポートを使用します。 
+- **使用状況レポート (プレビュー)**: ラベルがどのように使用されているかを確認するには、このレポートを使用します。 
 
-- **データ検出**: スキャナーで検出されたファイルに関する情報を表示するには、このレポートを使用します。
+- **データ検出 (プレビュー)**: スキャナーで検出されたファイルに関する情報を表示するには、このレポートを使用します。
 
 ## <a name="how-to-modify-the-reports"></a>レポートを変更する方法
 
@@ -116,6 +124,8 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 ![Azure Information Protection のレポートをカスタマイズする [Log Analytics] アイコン](./media/log-analytics-icon.png)
 
+
+Azure Information Protection のログに記録されたデータは、テーブル **InformationProtectionLogs_CL** に格納されます。
 
 ## <a name="next-steps"></a>次の手順
 レポートの情報を確認した後で、Azure Information Protection ポリシーを変更することがあります。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。

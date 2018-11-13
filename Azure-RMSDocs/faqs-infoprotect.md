@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: a6df966c75a1d556aeb3341804fa18d912389e24
-ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
+ms.openlocfilehash: f4a5cd07f072f1fa5ea6473cf0f1f75bcb2568f4
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233730"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026640"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -25,7 +25,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 ## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Azure Information Protection の分類機能はどのように使用しますか。
 
-「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」に従えば、わずか数分でこの動作を確認できます。
+[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルに従えば、わずか数分でこの動作を確認できます。
 
 追加の分類機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
 

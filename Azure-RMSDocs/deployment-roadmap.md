@@ -4,18 +4,18 @@ description: 組織の Azure Information Protection を準備、実装、管理�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1a63ac3ea5fae9782588b1779d7c7950738e23
-ms.sourcegitcommit: 3b41a6e730fa40660a2bdf5b1a73d155c87aacc2
+ms.openlocfilehash: 4e2fa20d542a9509476c78ebe21143e49863b788
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48834608"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026827"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -23,7 +23,7 @@ ms.locfileid: "48834608"
 
 組織の Azure Information Protection を準備、実装、管理するための推奨事項として、次の手順に従ってください。
 
-ただし、運用環境にロールアウトせずに、簡単に Azure Information Protection を試す場合は、「[Azure Information Protection のクイック スタート チュートリアル](./infoprotect-quick-start-tutorial.md)」を参照してください。
+ただし、シナリオに基づく手順をお探しの場合は、「[How to guides for common scenarios that use Azure Information Protection (Azure Information Protection を使用する一般的なシナリオ向けの攻略ガイド)](how-to-guides.md)」を参照してください。
 
 > [!NOTE]
 > 製品リリースのロードマップをお探しの場合は、「[新しいリリースと更新プログラムに関する情報](information-support.md#information-about-new-releases-and-updates)」セクションを参照してください。
@@ -32,7 +32,7 @@ ms.locfileid: "48834608"
 
 ### <a name="identify-your-deployment-roadmap"></a>デプロイ ロードマップを特定する
 
-次の手順を実行して Azure Information Protection をデプロイする前に、「[Azure Information Protection の要件](./requirements.md)」を確認してください。
+次のいずれかの手順を実行して Azure Information Protection をデプロイする前に、「[Azure Information Protection の要件](./requirements.md)」を確認してください。
 
 次に、ご自分の組織に適用可能で、必要な[サブスクリプション機能](https://azure.microsoft.com/pricing/details/information-protection/)に一致するデプロイ ロードマップを選択します。
 
@@ -52,14 +52,14 @@ ms.locfileid: "48834608"
 注: ユーザー ライセンスを無料の個人用 RMS サブスクリプションから手動で割り当てることや、このライセンスを組織の Azure Rights Management サービスの管理目的で使用することはしないでください。 このようなライセンスは、Office 365 管理センターに **Rights Management Adhoc** と表示されるとともに、Azure AD PowerShell コマンドレット [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) を実行したときに **RIGHTSMANAGEMENT_ADHOC** と表示されます。 個人用 RMS サブスクリプションが自動的に付与されてユーザーに割り当てられるしくみの詳細については、「[個人用 RMS と Azure Information Protection](./rms-for-individuals.md)」を参照してください。
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>手順 2: Azure Information Protection を使用するためのテナントを用意する
-Azure Information Protection を使用するには、事前に Office 365 または Azure Active Directory にユーザー アカウントとグループがあることを確認します。 これらのユーザー アカウントとグループは、組織のユーザーを認証および承認するのに Azure Information Protection で使用されます。 必要に応じて、これらのアカウントとグループを作成するか、またはオンプレミスのディレクトリからそれらを同期します。 
+Azure Information Protection を使用するには、事前に Office 365 または Azure Active Directory にユーザー アカウントとグループがあることを確認します。 これらのユーザー アカウントとグループは、組織のユーザーを認証および承認するのに Azure Information Protection で使用されます。 必要に応じて、これらのアカウントとグループを作成するか、またはオンプレミスのディレクトリからそれらを同期します。 
 
 詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>手順 3: 分類とラベル付けを構成し、デプロイする
 
 > [!TIP]
-> **省略可能だが推奨する手順**: ローカル データ ストアにどのような機密情報があるかを検出するため、[Azure Information Protection スキャナー](deploy-aip-scanner.md)のデプロイを検討してください。 スキャナーで検出される情報は、ご使用の分類法で役立ち、必要なラベルおよび保護が必要なファイルに関する貴重な情報を提供します。
+> **省略可能だが推奨する手順**: ローカル データ ストアにどのような機密情報があるかを検出するため、Azure Information Protection スキャナーのデプロイを検討してください。 このシナリオに対応した[クイック スタート](quickstart-findsensitiveinfo.md)を用意しています。 スキャナーで検出される情報は、ご使用の分類法で役立ち、必要なラベルおよび保護が必要なファイルに関する貴重な情報を提供します。
 > 
 > スキャナーは、Windows Server 上のローカル ファイル、ネットワーク共有内のファイル、および SharePoint のオンプレミス バージョンのファイル内のよく知られている機密情報の種類を検索するように構成できます。 この構成にラベルを構成する必要はなく、また分類法を定義する必要もないため、デプロイの非常に早い段階には、この方法でスキャナーを実行するのが適しています。 ラベルの条件を構成するまで、次の手順に従ってスキャナーのこの構成を並列で使用することもできます。
 
@@ -113,7 +113,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 3. データ回復のスーパー ユーザー機能を構成する
     
-    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./configure-super-users.md)」を参照してください。
+    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./configure-super-users.md)」を参照してください。
 
 4. 既存ファイルを一括で分類および保護する
     
@@ -151,7 +151,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>手順 2: Azure Information Protection を使用するためのテナントを用意する
 Azure Information Protection の保護サービスの使用を開始する前に、次の準備を行います。
 
-1. Office 365 テナントに、組織のユーザーを認証および承認するのに Azure Information Protection で使用されるユーザー アカウントとグループが含まれていることを確認します。 必要に応じて、これらのアカウントとグループを作成するか、またはオンプレミスのディレクトリからそれらを同期します。 詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
+1. Office 365 テナントに、組織のユーザーを認証および承認するのに Azure Information Protection で使用されるユーザー アカウントとグループが含まれていることを確認します。 必要に応じて、これらのアカウントとグループを作成するか、またはオンプレミスのディレクトリからそれらを同期します。 詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
 2. Microsoft でテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
@@ -179,7 +179,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 3. データ回復のスーパー ユーザー機能を構成する
     
-    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./configure-super-users.md)」を参照してください。
+    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./configure-super-users.md)」を参照してください。
 
 4. 既存ファイルを一括で保護する 
     

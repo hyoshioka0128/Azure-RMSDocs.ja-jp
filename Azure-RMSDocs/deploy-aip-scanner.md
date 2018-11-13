@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 47a8633852139bf0a84e6c55321c69b1af2c2892
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: b97b000aaeb545592910a32b00e88ad6dd579ab1
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751289"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026793"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -326,7 +326,9 @@ Office ファイル以外のファイルの種類を保護するためにスキ�
     
     この構成では、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットを使用し、 *DiscoverInformationTypes* パラメーターを **All** に設定します。
     
-    スキャナーでは、Azure Information Protection ポリシー内のラベルに対して指定したカスタム条件と、Azure Information Protection ポリシー内のラベルに指定できる情報の種類のリストが使用されます。 
+    スキャナーでは、Azure Information Protection ポリシー内のラベルに対して指定したカスタム条件と、Azure Information Protection ポリシー内のラベルに指定できる情報の種類のリストが使用されます。
+    
+    この構成は「[Quickstart: Find what sensitive information you have (クイック スタート: 保有する機密情報の検索)](quickstart-findsensitiveinfo.md)」で使用されます。
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>スキャナーのパフォーマンスの最適化
 

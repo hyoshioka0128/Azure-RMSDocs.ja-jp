@@ -4,18 +4,18 @@ description: 特定のユーザーに対して異なる設定やラベルを構�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b40431632d02445d12e1faac012c28c1b1e6f8e2
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: f1623c14377feb545f945a447363e7f3d12e8dd3
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169959"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026572"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法
 
@@ -57,5 +57,5 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 ## <a name="next-steps"></a>次の手順
 
-既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」をご覧ください。
+既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルをご覧ください。
 

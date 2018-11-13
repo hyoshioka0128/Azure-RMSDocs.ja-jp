@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 40415c25befd3eea8d33a2b8572b0d48f7ee918c
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: 62d53acd482b9efdd0425d5a944d2241f8a33b30
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403099"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223995"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -40,6 +40,25 @@ ms.locfileid: "47403099"
 5. このポリシーのユーザーが開いていたすべての Office アプリケーションを再起動するようにしてください。
 
 6. 設定が不要になり、既定の動作に戻す場合は、**[詳細設定]** ブレードで、不要になった設定の横にあるコンテキスト メニュー (**...**) を選択し、**[削除]** を選択します。 次に、**[保存して閉じる]** をクリックします。
+
+#### <a name="available-advanced-client-settings"></a>使用可能なクライアントの詳細設定
+
+|Setting|シナリオと手順|
+|----------------|---------------|
+|DisableDNF|[Outlook の [転送不可] ボタンを表示または非表示にする](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|EnableBarHiding|[Azure Information Protection バーを完全に非表示にする](#permanently-hide-the-azure-information-protection-bar)|
+|EnableCustomPermissions|[ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnablePDFv2Protection|[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|LabelbyCustomProperty|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|OutlookDefaultLabel|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
+|OutlookRecommendationEnabled|[Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)|
+|PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+|ProcessUsingLowIntegrity|[スキャナーの低整合性レベルを無効にする](#disable-the-low-integrity-level-for-the-scanner)|
+|RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
+|ReportAnIssueLink|[[問題の報告] リンクの電子メール アドレスを変更する](#modify-the-email-address-for-the-report-an-issue-link)|
+|RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)|
+|SyncPropertyName|[既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](#label-an-office-document-by-using-an-existing-custom-property)|
+|SyncPropertyState|[既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](#label-an-office-document-by-using-an-existing-custom-property)|
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>AD RMS 専用コンピューターのサインイン プロンプトが表示されないようにする
 
@@ -251,7 +270,7 @@ Azure Information Protection クライアントがユーザーによって指定
 
 Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。
 
-この PDF の暗号化の詳細については、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) を参照してください。
+この PDF の暗号化の詳細については、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) を参照してください。
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>既存の .ppdf ファイルを保護された .pdf ファイルに変換するには
 
@@ -278,8 +297,6 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
-    
-    [ポリシー設定](../configure-policy-settings.md) (**すべてのドキュメントと電子メールにラベルが必要です**) として必須のラベル付けを使用しているためにラベルを削除できない場合、代わりに一時的に別のラベルを適用します。
 
 4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 次に例を示します。
     
@@ -304,13 +321,11 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 
 - Azure Information Protection ビューアーは、これらの保護されたファイルを開くことができます。
 
-- エクスプローラーと PowerShell でこれらのファイルの保護を解除し、Azure Information Protection を使用して再び保護することができます。
-
-- エクスプローラー、PowerShell、Azure Information Protection スキャナーで、これらのファイルにラベルを付けることができます。
-
 - Azure Information Protection スキャナーは、これらのファイルに機密情報が含まれているかどうかを検査できます。
 
-- [ラベル付け移行クライアントのカスタマイズ](#migrate-labels-from-secure-islands-and-other-labeling-solutions)を使用して、これらの保護されたファイルの Secure Islands ラベルを Azure Information Protection ラベルに変換することができます。
+- エクスプローラー、PowerShell、Azure Information Protection スキャナーで、これらのファイルにラベルを付けることができます。 その結果、Azure Information Protection の新しい保護を適用する Azure Information Protection ラベルや、Secure Islands から既存の保護を削除する Azure Information Protection ラベルを適用することができます。
+
+- [ラベル付け移行クライアントのカスタマイズ](#migrate-labels-from-secure-islands-and-other-labeling-solutions)を使用して、これらの保護されたファイルの Secure Islands ラベルを Azure Information Protection ラベルに自動的に変換することができます。
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 

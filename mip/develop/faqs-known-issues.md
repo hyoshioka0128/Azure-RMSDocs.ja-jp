@@ -1,21 +1,23 @@
 ---
 title: よくあるご質問と既知の問題 - Microsoft Information Protection SDK。
-description: Microsoft Information Protection (MIP) SDK のよく寄せられる質問と既知の問題のトラブルシューティング ガイダンスです。
+description: Microsoft Information Protection (MIP) SDK のよく寄せられる質問と、問題とエラーに関するトラブルシューティングのガイダンスです。
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: cb3bdd6f2d9328a57156580f3d345d25983fccad
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: f213b31d9b0e41ea9c1e076055a90e9f62b31b3a
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476428"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223927"
 ---
-# <a name="microsoft-information-protection-mip-sdk-faqs-and-known-issues"></a>Microsoft Information Protection (MIP) SDK のよくあるご質問と既知の問題
+# <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
-## <a name="frequently-asked-questions-faqs"></a>よく寄せられる質問 (FAQ)
+この記事では、よく寄せられる質問 (FAQ) に対する回答と、既知の問題と一般的なエラーに関するトラブルシューティングのガイダンスを示します。
+
+## <a name="frequently-asked-questions"></a>よく寄せられる質問 
 
 ### <a name="question-which-platforms-are-supported-by-the-mip-sdk"></a>質問: MIP SDK ではどのプラットフォームがサポートされますか?
 
@@ -33,7 +35,13 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 | .NET | .NET SDK クライアントでは、すべての文字列で既定の UTF-16 エンコードが使用され、特別な変換は必要ありません。 UTF-16 との間での変換は、MIP SDK によって内部的に管理されます。 |
 | その他のプラットフォーム | MIP SDK でサポートされているその他のすべてのプラットフォームでは、UTF-8 がネイティブでサポートされています。 |
 
-## <a name="known-issues"></a>既知の問題
+## <a name="issues-and-errors-reference"></a>問題とエラーのリファレンス
+
+### <a name="error-file-format-not-supported"></a>エラー: "ファイル形式がサポートされていません"  
+
+| エラー | 解決方法 |
+|-|-|
+|*ファイル形式がサポートされていません*| この例外は、デジタル署名されているかパスワードで保護されている PDF ファイルを保護またはラベル付けしようとすると発生します。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。|
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>エラー: "取得したコンプライアンス ポリシーを解析できませんでした"  
 

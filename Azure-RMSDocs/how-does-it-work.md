@@ -4,18 +4,18 @@ description: Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 821038f555a73e89748541d5b512d5a631094fa8
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 19b45c3e24de5eba9f0bd243baf73797b66431f7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149363"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026776"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -89,7 +89,7 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights
 
 **手順 1 の処理**: コンピューターの RMS クライアントは、最初に Azure Rights Management サービスに接続し、Azure Active Directory アカウントを使用してユーザーを認証します。
 
-ユーザーのアカウントが Azure Active Directory と統合されている場合、この認証は自動的に行われ、ユーザーが資格情報の入力を求められることはありません。
+ユーザーのアカウントが Azure Active Directory と統合されている場合、この認証は自動的に行われ、ユーザーが資格情報の入力を求められることはありません。
 
 ![RMS クライアントのアクティブ化 - 手順 2、証明書がクライアントにダウンロードされる](./media/AzRMS_useractivation2.png)
 
@@ -150,7 +150,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 - **モバイル デバイス**:モバイル デバイスが Azure Rights Management サービスでファイルを保護または消費するときのプロセス フローはとても簡単です。 モバイル デバイスでは、コンテンツを保護または消費するための各トランザクションは独立しているので、ユーザー初期化プロセスは行われません。 Windows コンピューターと同じように、モバイル デバイスは Azure Rights Management サービスに接続して認証します。 コンテンツを保護する場合、モバイル デバイスはポリシーを送信し、Azure Rights Management サービスは発行ライセンスとドキュメントを保護する対称キーをモバイル デバイスに送信します。 コンテンツを消費する場合、モバイル デバイスは、Azure Rights Management サービスに接続して認証するときに、ドキュメントのポリシーを Azure Rights Management サービスに送信し、ドキュメントを消費するための使用ライセンスを要求します。 応答として、Azure Rights Management サービスは必要なキーと制限をモバイル デバイスに送信します。 どちらのプロセスも、TLS を使用してキーの交換およびその他の通信を保護します。
 
-- **RMS コネクタ**:Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
+- **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
 
 - **汎用的な保護 (.pfile)**:Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
 
@@ -160,9 +160,9 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 ## <a name="next-steps"></a>次の手順
 
-Azure Rights Management サービスの詳細については、**概要と詳細**のセクションの他の記事を使用してください。たとえば、既存のアプリケーションと Azure Rights Management を統合して情報保護ソリューションを提供する方法を確認するには、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。 
+Azure Rights Management サービスの詳細については、**概要と詳細**のセクションの他の記事を使用してください。たとえば、既存のアプリケーションと Azure Rights Management を統合して情報保護ソリューションを提供する方法を確認するには、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。 
 
-「[ Azure Information Protection の用語](./terminology.md)」を確認して、Azure Rights Management サービスの構成や使用で目にする用語を理解できるようにします。また、デプロイを開始する前に、「[Requirements for Azure Information Protection](requirements.md)」 (Azure Information Protection の要件) も確認しておいてください。 すぐに自分で試してみる場合は、「[Azure Information Protection のクイック スタート チュートリアル](infoprotect-quick-start-tutorial.md)」をご利用ください。
+「[ Azure Information Protection の用語](./terminology.md)」を確認して、Azure Rights Management サービスの構成や使用で目にする用語を理解できるようにします。また、デプロイを開始する前に、「[Requirements for Azure Information Protection](requirements.md)」 (Azure Information Protection の要件) も確認しておいてください。 すぐにご自分で試してみる場合は、[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルをご利用ください。
 
 データ保護を組織にデプロイする準備ができたら、「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」で、デプロイの手順と具体的な操作手順へのリンクを参照してください。
 
