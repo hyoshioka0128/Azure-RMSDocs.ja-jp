@@ -4,24 +4,24 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04cafed6317bd17f08e6b09a7f0b42b2cb2e20c7
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 06434646727b93da5746f66f062fb49f986aaa95
+ms.sourcegitcommit: e70480e4d3dabbc1b5ae03a56cf54473400d25e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026674"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51527792"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Azure Information Protection、または Azure Rights Management (Azure RMS) による保護に関して質問がございますか。 ここで回答を探してみてください。
+Azure Information Protection、または Azure Rights Management サービス (Azure RMS) に関して質問がございますか。 ここで回答を探してみてください。
 
 これらの FAQ ページは定期的に更新されます。新しい情報は [Azure Information Protection 技術ブログ](https://aka.ms/AIPblog)上の月次のドキュメント更新発表に一覧表示されます。
 
@@ -47,10 +47,6 @@ Azure Information Protection で保護されたコンテンツにアクセスす
 「[Azure Information Protection の価格](https://azure.microsoft.com/en-us/pricing/details/information-protection)」ページのサブスクリプション情報と機能一覧を参照してください。 
 
 Azure Rights Management データ保護を含む Office 365 サブスクリプションをお持ちの場合は、[Azure Information Protection ライセンス データシート](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をダウンロードしてください。このデータシートにはライセンスに関してよく寄せられる質問もいくつか含まれています。
-
-## <a name="ive-just-got-my-azure-information-protection-subscriptionhow-do-i-get-going"></a>Azure Information Protection のサブスクリプションを取得したばかりなのですが、何から取りかかればよいですか。
-
-Azure Information Protection を初めて使用する場合は、最初に[クイック スタート](quickstart-viewpolicy.md)を参照してから、[一般的なシナリオ向けの攻略ガイド](how-to-guides.md)を確認してください。
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Azure Information Protection client は分類とラベル付けを含むサブスクリプション用のみでしょうか。
 
@@ -117,6 +113,16 @@ Azure Information Protection で保護されているドキュメントをユー
 - 他の組織とのコラボレーション (B2B) のための条件付きアクセス ポリシーで MFA を使用する場合は、[Azure AD B2B コラボレーション](/active-directory/b2b/what-is-b2b)を使用して、他の組織と共有するユーザーのためのゲスト アカウントを作成する必要があります。
 
 - 多くのクラウド アプリで条件付きアクセスを使用する場合、選択対象の一覧に **Microsoft Azure Information Protection** が表示されないことがあります。 その場合、一覧の上にある検索ボックスを使用します。 「Microsoft Azure Information Protection」と入力し、利用可能アプリを絞り込みます。 サポートされているサブスクリプションがある場合、選択対象として **Microsoft Azure Information Protection** が表示されます。 
+
+## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Azure Information Protection が Microsoft Graph Security のセキュリティ プロバイダーとして記載されています。これはどのように動作しますか? また、どのようなアラートを受信できますか?
+
+はい。公共プレビュー サービスとして、**Azure Information Protection の異常なデータ アクセス**に対するアラートを受信できるようになりました。 Azure Information Protection によって保護されているデータに対する異常なアクセスの試行があると、このアラートがトリガーされます。 たとえば、異常に大量のデータへのアクセス、不自然な時間帯でのアクセス、または不明な場所からのアクセスなどです。
+
+このようなアラートは、データ関連の高度な攻撃や、環境内部の脅威を検出するのに役立ちます。 これらのアラートでは、保護されたデータにアクセスするユーザーの動作をプロファイルするために機械学習が使用されます。 
+
+Azure Information Protection のアラートにアクセスするには、[Microsoft Graph Security API を使用します](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview)。または、Azure Monitor を使用して、Splunk や IBM Qradar などの SIEM ソリューションに[アラートをストリームする](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration)ことができます。
+
+Microsoft Graph Security API について詳しくは、「[Microsoft Graph Security API の概要](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview)」をご覧ください。
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Azure Information Protection のラベルと Office 365 のラベルにはどのような違いがありますか。
 

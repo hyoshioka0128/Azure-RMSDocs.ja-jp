@@ -4,15 +4,15 @@ description: スコープ付きポリシーを使用して特定のユーザー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 921b1343e533b4643d97098350c34f5a69bfcf3e
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: dca90c7635702226e7414947aad6f3d89cf91efd
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027057"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644652"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート: 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
@@ -48,9 +48,11 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 最初に、新しいラベルを作成します。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure portal](configure-policy.md#signing-in-to-the-azure-portal) にサインインします。 次に、**[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    
+    グローバル管理者でない場合は、別のロールのためにリンク「[Azure Portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」を使用します。
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[新しいラベルの追加]** をクリックします。
 

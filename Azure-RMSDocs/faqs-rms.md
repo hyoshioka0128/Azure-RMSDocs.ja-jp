@@ -4,19 +4,19 @@ description: Azure Information Protection のデータ保護サービス、Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df069aaf45b1108de1243419c22706cbca64273e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 15cf2c9c893adfb6e81e6a0c94001a3a0e120076
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149448"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644762"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -86,16 +86,16 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 ヒント: ドキュメントがテンプレートで保護されているのか、それともカスタム アクセス許可を使用して保護されているのかを確認するには、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを使用してください。 [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) を実行したときに一意のテンプレート ID が表示されない場合は、カスタム アクセス許可の **[制限されたアクセス]** に関するテンプレートの説明を必ず確認してください。
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>一部のユーザーが Exchange Online 上の Exchange に、他のユーザーが Exchange Server 上の Exchange に登録されているハイブリッド デプロイメント構成です。この構成は、Azure RMS でサポートされていますか。
-はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](deploy-rms-connector.md) Exchange Server 用に構成します。
+はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](deploy-rms-connector.md) Exchange Server 用に構成します。
 
-## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>運用環境にこの保護を利用すると、会社の環境が Azure RMS に固定されたり、Azure RMS で保護したコンテンツにアクセスできなくなる危険性が生じたりしますか。
-いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「[Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)」を参照してください。
+## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>運用環境にこの保護を利用すると、会社の環境がこのソリューションに固定されたり、Azure RMS で保護したコンテンツにアクセスできなくなる危険性が生じたりしますか。
+いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「[Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)」を参照してください。
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Azure RMS を使用してコンテンツを保護するユーザーを制御できますか。
 はい。Azure Rights Management サービスには、このシナリオのためのユーザー オンボーディング コントロールがあります。 詳細については、記事「[Rights Management をアクティブにする](activate-service.md)」の「[段階的デプロイのオンボーディング コントロールの構成](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」のセクションを参照してください。
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>ユーザーが、保護されたドキュメントを特定の組織と共有しないようにすることはできますか。
-データ保護に Azure Rights Management サービスを使用する最大の利点の 1 つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
+データ保護に Azure Rights Management サービスを使用する最大の利点の 1 つは、Azure AD が認証を自動的に処理するため、各パートナー組織に対して明示的な信頼を構成することなく、企業間のコラボレーションをサポートできることです。
 
 ユーザーが特定の組織とのドキュメントの安全な共有を防止するような管理オプションはありません。 たとえば、信頼していない組織や、競合先の組織をブロックするとします。 Azure Rights Management サービスがこれらの組織のユーザーに保護されたドキュメントを送信しないようにしても意味がありません。その場合、ユーザーはドキュメントを保護されていないまま共有することになり、おそらくこれはこのシナリオにおいて最も望ましくない状況です。 たとえば、これらの組織のユーザーと社外秘ドキュメントを共有しているユーザーを識別することはできませんが、ドキュメント (または電子メール) が Azure Rights Management サービスで保護されていれば、これが可能になります。
 
@@ -103,7 +103,7 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 既定では、Azure Rights Management サービスは、ユーザー認証に Azure Active Directory アカウントと関連付けられた電子メール アドレスを使用します。これにより、管理者にとって企業間のコラボレーションがシームレスになります。 他の組織で Azure サービスを使用する場合は、アカウントがオンプレミスで作成、管理されてから Azure に同期される場合でも、ユーザーは既に Azure Active Directory にアカウントを持っています。 組織が内部的に Office 365 を所有している場合、このサービスはユーザー アカウント用に Azure Active Directory も使用します。 ユーザーの組織が Azure に管理アカウントを持っていない場合、ユーザーは[個人向け RMS](./rms-for-individuals.md) にサインアップできます。これは、アンマネージド Azure テナントと組織用のディレクトリをユーザー用のアカウントを使用して作成するため、このユーザー (およびそれ以降のユーザー) は Azure Rights Management サービスに対して認証されます。
 
-このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成されたパスワード、多要素認証 (MFA)、フェデレーション、Active Directory Domain Services で作成されたパスワードを使用してから、Azure Active Directory に同期される場合があります。
+このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成したパスワード、フェデレーション、Active Directory Domain Services で作成した後 Azure Active Directory に同期したパスワードを使用できます。
 
 その他の認証方法:
 
@@ -134,7 +134,7 @@ Exchange Online と Azure Rights Management サービスを使用する場合は
 
 受信者には Gmail、Yahoo、または Microsoft アカウントにサインインするためのオプションが表示され、保護された電子メールを読むことができます。 また、ブラウザーで電子メールを読み取るためにワンタイム パスワードのオプションを選択することもできます。
 
-このシナリオをサポートするには、Exchange Online を Azure Rights Management サービスおよび Office 365 のメッセージの暗号化の新しい機能で使用できるようにする必要があります。 この構成の詳細については、「[Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)」を参照してください。
+このシナリオをサポートするには、Exchange Online を Azure Rights Management サービスおよび Office 365 のメッセージの暗号化の新しい機能で使用できるようにする必要があります。 この構成の詳細については、「[Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)」をご覧ください。
 
 すべてのデバイスですべての電子メール アカウントをサポートする新機能の詳細については、ブログの投稿「[Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)」 (Office 365 のメッセージの暗号化で使用できる新機能のお知らせ) を参照してください。
 
@@ -172,7 +172,7 @@ Office 365 の職場または学校のアカウントを使用して、Outlook �
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>ユーザーが社内や社外の人間とファイルを安全に共有できるように SharePoint Online で OneDrive for Business を構成するには、どうすればよいですか。
 既定では、Office 365 管理者は構成しません。ユーザーが構成します。
 
-SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションを参照してください。
+SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)」セクションをご覧ください。
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>正常にデプロイするためのヒントやコツがあれば教えてください。
 

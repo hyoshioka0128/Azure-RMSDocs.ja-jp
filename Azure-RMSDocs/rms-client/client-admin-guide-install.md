@@ -4,18 +4,18 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: f4067698a97ded8aa4c7fd6144fa7738822f1910
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49367007"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644677"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -41,6 +41,11 @@ ms.locfileid: "49367007"
     
     クライアント用の PowerShell モジュールには、Windows PowerShell バージョン 4.0 が必要で、以前のオペレーティング システムにインストールする必要がある場合があります。 詳細については、「[How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 インストーラーでは、この前提条件のチェックやインストールは行われません。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。
 
+- 800 x 600 より大きい画面の解像度
+    
+    解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。
+
+
 - Microsoft Online Services サインイン アシスタント 7.250.4303.0
     
     Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 新しいバージョンのサインイン アシスタントがある場合は、これをアンインストールしてから Azure Information Protection クライアントをインストールしてください。 たとえば、バージョンを確認し、**[コントロール パネル]** > **[プログラムと機能]** > **[プログラムのアンインストールまたは変更]** を使用して、サインイン アシスタントをアンインストールします。
@@ -57,21 +62,21 @@ ms.locfileid: "49367007"
     
     クライアントのインストールでは、この前提条件は確認されませんが、Azure Information Protection クライアントで PDF ファイルを分類し保護する場合は必要になります。
 
-- **[管理対象アドインの一覧]** のグループ ポリシーの構成
+- グループ ポリシーを構成して Azure Information Protection アドインが無効にならないようにする
     
-    Office 2013 およびそれ以降のバージョンの場合、グループ ポリシー設定の **[管理対象アドインの一覧]** を構成し、Office アプリケーション用の **Microsoft Azure Information Protection** アドインを追加します。 Azure Information Protection に次のプログラム識別子 (ProgID) を指定して、オプションを **[1: アドインを常に有効にする]** に設定します。
+    Office 2013 およびそれ以降のバージョンの場合、グループ ポリシーを構成して、Office アプリケーション用の **Microsoft Azure Information Protection** アドインが常に有効になるようにします。 この構成を行わないと、Microsoft Azure Information Protection アドインが無効にされる場合があり、ユーザーが Office アプリケーションで自分のドキュメントや電子メールにラベル付けできなくなります。
     
-    - Outlook の場合: `MSIP.OutlookAddin`
+    - Outlook の場合、Office ドキュメントの「[システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」に記載されているグループ ポリシー設定を使用します。
     
-    - Word の場合: `MSIP.WordAddin`
-    
-    - Excel の場合: `MSIP.ExcelAddin`
-    
-    - PowerPoint の場合: `MSIP.PowerPointAddin`
-    
-    この設定を構成しない場合は、Microsoft Azure Information Protection アドインは無効になり、ユーザーは Office アプリケーションでドキュメントと電子メールにラベルを付けることはできません。
-    
-    このグループ ポリシー設定の構成の詳細については、Office ドキュメントの「[システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」を参照してください。
+    - Word、Excel、および PowerPoint の場合、サポート記事「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) に記載されているグループ ポリシー設定 **[管理対象アドインの一覧]** を使用します。 
+        
+        Azure Information Protection に次のプログラム識別子 (ProgID) を指定して、オプションを **[1: アドインを常に有効にする]** に設定します。
+        
+        Word の場合: `MSIP.WordAddin`
+        
+        Excel の場合: `MSIP.ExcelAddin`
+        
+        PowerPoint の場合: `MSIP.PowerPointAddin`
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。

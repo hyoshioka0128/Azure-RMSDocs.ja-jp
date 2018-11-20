@@ -4,15 +4,15 @@ description: 転送不可の保護を自動的に適用することで、ユー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 6beb55b6dbcd82582cc24c7beb787bf4b232f518
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 793c3ff3b68de66dce5876c25cb4ba5455d19c33
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027049"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644694"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
@@ -64,9 +64,11 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 ## <a name="configure-an-existing-label-to-apply-the-do-not-forward-protection"></a>転送不可の保護を適用するように既存のラベルを構成する
 
-1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](https://portal.azure.com)。 次に、**[Azure Information Protection]** に移動します。 
+1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、**[Azure Information Protection]** に移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    
+    グローバル管理者でない場合は、別のロールのためにリンク「[Azure Portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」を使用します。
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、保護を適用するように構成するラベルを選択します。 
 

@@ -4,18 +4,18 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: f4a5cd07f072f1fa5ea6473cf0f1f75bcb2568f4
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 2c0d391e2d00ec7d0bc09d98de3fe6f502f999a4
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026640"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707744"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -27,7 +27,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 [ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルに従えば、わずか数分でこの動作を確認できます。
 
-追加の分類機能が利用可能になる時期については、[Enterprise Mobility and Security ブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
+追加の分類機能が利用可能になる時期については、[Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
 
 - Office Web アプリ (Office Online) にはラベル付け機能はありません。
 

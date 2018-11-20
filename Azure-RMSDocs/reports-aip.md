@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 4cb496e6cca01d7a4ad6636acc315bd40dc4c58c
-ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
+ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
+ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51273584"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51611422"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -28,7 +28,7 @@ ms.locfileid: "51273584"
 
 中央レポート機能に Azure Information Protection の分析を使用して、Azure Information Protection ラベルの導入を追跡し、ラベル付きのドキュメントや電子メールへのユーザー アクセスと、分類への変更を監視します。 保護する必要がある機密情報が含まれているドキュメントを識別することもできます。
 
-表示されるデータは、Azure Information Protection クライアント、Azure Information Protection スキャナー、および[統一されたラベル付けをサポートしているクライアント](configure-policy-migrate-labels.md#clients-that-support-unified-labeling)から集計されたものです。
+現在、表示されるデータは Azure Information Protection クライアントと Azure Information Protection スキャナーから集計されたものです。
 
 たとえば、次のようなことを確認できます。
 

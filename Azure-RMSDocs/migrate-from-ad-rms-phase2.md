@@ -4,18 +4,18 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04ca9cdfe3f528d71ee45a88a81b59268a6357aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ebc5a9867bad267b71f2f4ae6ebe0e22c9e7a607
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150468"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707761"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -125,9 +125,9 @@ AD RMS からインポートしたテンプレートの外観と動作は、Azur
 
 - 移行前に Azure Information Protection カスタム テンプレートを作成した場合は、手動でエクスポートしてインポートする必要があります。
 
-- AD RMS のテンプレートで **ANYONE** グループが使用されている場合、組織の外部からユーザーまたはグループを追加しなければならない可能性があります。 
+- AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、ユーザーまたはグループを手動で追加することが必要になる場合があります。 
     
-    AD RMS で、ANYONE グループはすべての認証済みユーザーに権限を付与しています。 このグループは、自動的に Azure AD テナントのすべてのユーザーに変換されます。 その他に権限を付与する必要があるユーザーが存在しない場合、これ以上の操作は必要ありません。 ただし、ANYONE グループを使用して外部ユーザーを追加したならば、それらのユーザーと、それらのユーザーに付与する権限を手動で追加する必要があります。
+    AD RMS では、ANYONE グループはオンプレミスの Active Directory によって認証されたすべてのユーザーに権限を付与します。また、このグループは Azure Information Protection ではサポートされていません。 最も近いのは、Azure AD テナント内のすべてのユーザーに対して自動的に作成されるグループです。 AD RMS テンプレートに対して ANYONE グループを使用していた場合、ユーザーおよびそのユーザーに付与したい権限を追加することが必要になる場合があります。
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>移行前にカスタム テンプレートを作成した場合の手順
 
@@ -143,9 +143,9 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前のグループを使用するように自動的に変換されます。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
+AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、Azure Information Protection 内の最も近いグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
 
-Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。 このグループを追加するために、オプションの表示は [**追加\<組織名> - すべてのメンバー**] となります。
+Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。 このグループを追加するために、オプションの表示は [** 追加\<組織名> - すべてのメンバー**] となります。
 
 AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS ](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」 (Windows PowerShell を使用した AD RMS の管理) を参照してください。
 

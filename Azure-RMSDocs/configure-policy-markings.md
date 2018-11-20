@@ -4,16 +4,16 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 0e40e0044c38e58690b3e4130a4980042296edf4
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358977"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644728"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -23,7 +23,7 @@ ms.locfileid: "49358977"
 
 視覚的なマーキングに関する追加情報:
 
-- ヘッダーとフッターは、Word、Excel、PowerPoint、および Outlook に適用されます。
+- ヘッダーとフッターでは単一行のテキストがサポートされ、これは Word、Excel、PowerPoint、および Outlook に適用されます。
 
 - 透かしは、Word、Excel、および PowerPoint に適用されます。
 

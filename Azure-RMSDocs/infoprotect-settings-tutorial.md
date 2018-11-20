@@ -4,15 +4,15 @@ description: Azure Information Protection のポリシー設定を構成して�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: ead65d9fef1b6c4f0087757e044caccee14805df
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027080"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644653"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -69,9 +69,11 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 Azure portal を使用してグローバル ポリシーを編集し、すべてのユーザーに向けたポリシー設定を変更します。
 
-1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](https://portal.azure.com)。 次に、**[Azure Information Protection]** に移動します。 
+1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、**[Azure Information Protection]** に移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    
+    グローバル管理者でない場合は、別のロールのためにリンク「[Azure Portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」を使用します。
 
 2. **[分類]** > **[ポリシー]** > **[グローバル]** を選択して、**[ポリシー: グローバル]** ブレードを開きます。 
 

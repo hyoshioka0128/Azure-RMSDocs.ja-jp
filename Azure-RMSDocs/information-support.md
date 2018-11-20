@@ -4,18 +4,18 @@ description: 新しいリリース、サポート オプション、および Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/01/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 145889772dd3d2a8e29967264c1f0f7de7a7c222
-ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
+ms.openlocfilehash: da86d4dbdc5b5ac98dad8aac21772c43354b4b90
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046990"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707727"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -33,7 +33,7 @@ ms.locfileid: "48046990"
 |特定の Azure Information Protection 用語を理解する|[用語](terminology.md)ページで用語や省略形を検索します。|
 
 ## <a name="information-about-new-releases-and-updates"></a>新しいリリースと更新プログラムに関する情報
-Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://msip.uservoice.com)で要求された機能の状態をチェックすることも役立つ場合があります。
+Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://msip.uservoice.com)で要求された機能の状態をチェックすることも役立つ場合があります。
 
 追加情報および詳細情報については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)を参照してください。 たとえば、新しいリリースに関する情報、サポート ステートメントの更新、および既存のリリースの修正と詳細について通知するために、ドキュメントの変更の概要が毎月発行されます。 このようなドキュメントの更新の投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
 
