@@ -4,18 +4,18 @@ description: RMS コネクタをデプロイする手順について説明しま
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba7f0ec91b949f2d91d96bde5be06195c3facaf8
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7c6a0f74752ea6d477b503bdfb9e92dd656c84ca
+ms.sourcegitcommit: 8d854ee417d9af1a85e7d4ecb3807a69a43b0313
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149822"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177213"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
@@ -58,7 +58,7 @@ RMS コネクタをインストールする前に、次の要件を満たして�
 |要件|詳細情報|
 |---------------|--------------------|
 |Rights Management (RMS) サービスがアクティブ化されている|[Azure Rights Management をアクティブにする](activate-service.md)|
-|オンプレミス Active Directory フォレストと Azure Active Directory の間のディレクトリ同期|RMS をアクティブ化した後に、Azure Active Directory を構成して Active Directory データベース内のユーザーおよびグループを使用できるようにする必要があります。<br /><br />**重要**: RMS コネクタが動作するためには、テスト ネットワークに対してもこのディレクトリ同期手順を実行する必要があります。 Office 365 および Azure Active Directory では、Azure Active Directory で手動作成したアカウントを使用できますが、このコネクタでは、Azure Active Directory のアカウントが Active Directory Domain Services と同期している必要があります。手動によるパスワードの同期では不十分です。<br /><br />詳細については、次のリソースを参照してください。<br /><br />[オンプレミス ID と Azure Active Directory の統合](/active-directory/active-directory-aadconnect)<br /><br />[ハイブリッド ID ディレクトリ統合ツールの比較](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)|
+|オンプレミス Active Directory フォレストと Azure Active Directory の間のディレクトリ同期|RMS をアクティブ化した後に、Azure Active Directory を構成して Active Directory データベース内のユーザーおよびグループを使用できるようにする必要があります。<br /><br />**重要**: RMS コネクタが動作するためには、テスト ネットワークに対してもこのディレクトリ同期手順を実行する必要があります。 Office 365 および Azure Active Directory では、Azure Active Directory で手動作成したアカウントを使用できますが、このコネクタでは、Azure Active Directory のアカウントが Active Directory Domain Services と同期している必要があります。手動によるパスワードの同期では不十分です。<br /><br />詳細については、次のリソースを参照してください。<br /><br />- [オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [ハイブリッド ID ディレクトリ統合ツールの比較](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
 |RMS コネクタをインストールする 2 台以上のメンバー コンピューター:<br /><br />- 次のいずれかのオペレーティング システムが搭載されている 64 ビットの物理または仮想コンピューター: Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、または Windows Server 2008 R2。<br /><br />- 1 GB 以上の RAM。<br /><br />- 64 GB 以上のディスク領域。<br /><br />- 1 つ以上のネットワーク インターフェイス。<br /><br />- 認証が不要な、ファイアウォール (または Web プロキシ) 経由のインターネット アクセス。<br /><br />- 所属するフォレストまたはドメインが、RMS コネクタを使用する Exchange または SharePoint サーバーが含まれている組織内の他のフォレストと信頼関係にあること。|フォールト トレランスと高可用性を構成するには、RMS コネクタを 2 台以上のコンピューターにインストールする必要があります。<br /><br />**ヒント**: Outlook Web Access、または Exchange ActiveSync IRM を使用するモバイル デバイスを使用しており、Azure RMS で保護されているメールと添付ファイルへのアクセスを維持する必要がある場合、負荷分散されたコネクタ サーバー グループをデプロイして高可用性を確保することをお勧めします。<br /><br />専用サーバーでコネクタを実行する必要はありませんが、コネクタを使用するサーバーとは別のコンピューターにインストールする必要があります。<br /><br />**重要**: Exchange Server または SharePoint Server が実行されているコンピューター、およびファイル分類インフラストラクチャ用に構成されたファイル サーバーには、コネクタをインストールしないでください。そうしないと、これらのサービスの機能を Azure RMS で使用できなくなります。 また、このコネクタをドメイン コントローラーにインストールしないでください。<br /><br />RMS コネクタで使用するサーバー ワークロードがあり、コネクタを実行するドメインによって信頼されていないドメインにそのワークロードのサーバーがある場合、それらの信頼されていないドメインまたはフォレスト内の他のドメインに、追加の RMS コネクタ サーバーをインストールできます。 <br /><br />組織で実行可能なコネクタ サーバーの数に制限はなく、組織にインストールされているすべてのコネクタ サーバーが同じ構成を共有します。 ただし、コネクタでサーバーを承認するように構成するには、承認されるサーバーまたはサーバー アカウントを参照できる必要があります。つまり、それらのアカウントを参照できるフォレスト内で RMS 管理ツールを実行する必要があります。|
 
 
