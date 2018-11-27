@@ -55,16 +55,18 @@ items:
     - name: ポリシー API のハンドラー (C++)
       href: concept-handler-policy-cpp.md
       items:
-      - name: 監査
-        href: concept-auditing-policy-cpp.md
       - name: 実行状態
-        href: concept-auditing-policy-executionstate-cpp.md
+        href: concept-handler-policy-executionstate-cpp.md
       - name: 計算操作
-        href: concept-auditing-policy-computeactions-cpp.md
+        href: concept-handler-policy-computeactions-cpp.md
+      - name: 監査
+        href: concept-handler-policy-auditing-cpp.md
     - name: 保護 API のハンドラー (C++)
       href: concept-handler-protection-cpp.md
   - name: ラベル
     href: concept-classification-labels.md
+  - name: メタデータ
+    href: concept-mip-metadata.md
   - name: 非同期のオブザーバー (C++)
     href: concept-async-observers.md
     items:
@@ -225,9 +227,9 @@ items:
     href: http://aka.ms/mipsdk
   - name: サンプル
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
-ms.openlocfilehash: 44d1e464abc351e4e4e270c6992172d783e3f09e
-ms.sourcegitcommit: 05fdaf43f74013eecb5886b95b09dd5e00670753
+ms.openlocfilehash: 62fe0af32efa5c68828cb8ab307f70350c8992be
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51528042"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304016"
