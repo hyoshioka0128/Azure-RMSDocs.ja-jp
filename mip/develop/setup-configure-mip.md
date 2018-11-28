@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
-ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51508444"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386731"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
@@ -21,11 +21,18 @@ MIP SDK は、次のプラットフォームで使用できます。
 
 [!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
+## <a name="prerequisites"></a>前提条件
+
 開始する前に、次のトピックを確認してください。
 
 - [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [Azure Information Protection とは](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Azure Information Protection での保護のしくみ](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+> [!IMPORTANT]
+> **ユーザーのプライバシーを保証するためには、ユーザーに自動ログ記録を有効にする前に同意を求める必要があります。** 次の例では、Microsoft はログ記録の通知を使用する標準的なメッセージを示します。
+>
+> *エラーとパフォーマンス ログの記録を有効にすると、エラーとパフォーマンス データの Microsoft への送信に同意することになります。Microsoft はインターネット経由でエラーとパフォーマンス データ (以下 "データ") を収集します。Microsoft は、Microsoft 製品およびサービスの品質、セキュリティ、および整合性を向上するためにこのデータを使用します。たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。*
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Office 365 サブスクリプションへのサインアップ
 
@@ -41,7 +48,7 @@ MIP SDK は、次のプラットフォームで使用できます。
 
 ## <a name="configure-sensitivity-labels"></a>機密ラベルの構成
 
-現在 Azure Information Protection を使用している場合は、ラベルを Office 365 セキュリティとコンプライアンス センターに移行する手順を実行する必要があります。 プロセスの詳細については、「[How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels)」 (Azure Information Protection ラベルを Office 365 セキュリティとコンプライアンス センターに移行する方法) を参照してください。 
+Azure Information Protection を使用している場合は、Office 365 セキュリティ/コンプライアンス センターにラベルを移行する必要があります。 プロセスの詳細については、「[How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels)」 (Azure Information Protection ラベルを Office 365 セキュリティとコンプライアンス センターに移行する方法) を参照してください。 
 
 ## <a name="configure-your-client-workstation"></a>クライアント ワークステーションの構成
 
