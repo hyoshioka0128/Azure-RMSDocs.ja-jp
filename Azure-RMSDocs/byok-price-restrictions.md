@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 57914b0268102e8f7f5049ee1c63b58bf54c9a14
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 93e538b882da557715b04e8675b5a3b86de018b0
+ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149144"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330278"
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
@@ -34,7 +34,7 @@ Azure Information Protection テナント キーに対して Azure Key Vault を
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Azure Key Vault を使用する利点
 
-追加的な保証として Azure Information Protection 使用状況ログを使用することに加えて、これと [Azure Key Vault のログ記録](https://azure.microsoft.com/documentation/articles/key-vault-logging/) との相互参照を行って、Azure Rights Management サービスのみでこのキーが使用されていることを個別に監視することができます。 必要な場合、キー コンテナーに対するアクセス許可を削除することにより、キーへのアクセスをすぐに取り消すことができます。
+追加的な保証として Azure Information Protection 使用状況ログを使用することに加えて、これと [Azure Key Vault のログ記録](/azure/key-vault/key-vault-logging) との相互参照を行って、Azure Rights Management サービスのみでこのキーが使用されていることを個別に監視することができます。 必要な場合、キー コンテナーに対するアクセス許可を削除することにより、キーへのアクセスをすぐに取り消すことができます。
 
 Azure Information Protection テナント キーに Azure Key Vault を使用するその他の利点:
 
