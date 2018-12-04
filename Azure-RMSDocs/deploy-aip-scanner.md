@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9c5c07d09096d5d0f75c53fd03f85f5e29af1640
-ms.sourcegitcommit: 74d13c7162a0a94cda4762556a975a1d12433a13
+ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281311"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386799"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -39,7 +39,7 @@ ms.locfileid: "52281311"
 
 ![Azure Information Protection スキャナーのアーキテクチャの概要](./media/infoprotect-scanner.png)
 
-スキャナーは、コンピューターにインストールされている iFilter を使用して Windows でインデックス化できるすべてのファイルを検証することができます。 そして、ファイルでラベル付けが必要かどうかを判断するため、スキャナーで Office 365 に組み込まれたデータ損失防止 (DLP) の機密情報の種類とパターン検出、または Office 365 の正規表現パターンが使われます。 スキャナーは Azure Information Protection クライアントを使用するため、同じ[ファイルの種類](./rms-client/client-admin-guide-file-types.md)を分類および保護できます。
+スキャナーは、コンピューターにインストールされている IFilters を使うことで、Windows によってインデックス化できるすべてのファイルを検証できます。 そして、ファイルでラベル付けが必要かどうかを判断するため、スキャナーで Office 365 に組み込まれたデータ損失防止 (DLP) の機密情報の種類とパターン検出、または Office 365 の正規表現パターンが使われます。 スキャナーは Azure Information Protection クライアントを使用するため、同じ[ファイルの種類](./rms-client/client-admin-guide-file-types.md)を分類および保護できます。
 
 スキャナーを実行できるのは検索モードでのみです。この場合、レポートを使用して、ファイルがラベル付けされた場合に何が発生するかをチェックします。 またはスキャナーを実行して、自動的にラベルを適用できます。 機密情報の種類を含んだファイルを検出するためにスキャナーを実行することもできます (自動分類を適用する条件用にラベルを構成する必要はありません)。
 
@@ -192,7 +192,7 @@ Azure AD トークンを使用することで、Azure Information Protection サ
     
         Start-AIPScan
     
-    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[今すぐスキャン]** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードからスキャナーを起動できます。
+    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>** > **[今すぐスキャン]** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードからスキャナーを起動できます。
 
 2. 次のコマンドを実行し、スキャナーがサイクルを完了するまで待機します。
     
@@ -207,7 +207,7 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 3. %*localappdata*%\Microsoft\MSIP\Scanner\Reports に格納され、.csv ファイル形式を持つレポートを確認します。 スキャナーの既定の構成では、自動分類の条件に一致するファイルのみがこれらのレポートに含まれます。
     
     > [!TIP]
-    > 現在プレビュー段階ですが、プレビュー バージョンのスキャナーを使用する場合は、5 分ごとにこの情報がスキャナーから Azure Information Protection に送信されます。これにより、Azure portal から結果をほぼリアルタイムで確認することができます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。 
+    > スキャナーでは 5 分ごとにこの情報が Azure Information Protection に送信されます。このため、Azure portal から結果をほぼリアルタイムで確認することができます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。 
         
     結果が期待どおりにならない場合は、Azure Information Protection ポリシーに指定した条件を微調整する必要がある場合があります。 その場合は、構成を変更して分類、および必要に応じて保護を適用する準備ができるまで、手順 1 から 3 を繰り返します。 
 
@@ -242,7 +242,7 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 
 スキャンする (またはスキャン対象から除外する) ファイルの種類のリストを定義することで、この動作を変更できます。 このリストを指定し、データ リポジトリを指定しなかった場合、そのリストは、独自のリストが指定されていないすべてのデータ リポジトリに適用されます。 このリストを指定するには、[Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes) を使用します。 ファイルの種類のリストを指定した後、新しいファイルの種類をリストに追加するには、[Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) を使用します。リストからファイルの種類を削除するには、[Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) を使用します。
 
-その後、Windows iFilter を利用し、次の種類のファイルをスキャンします。 このような種類のファイルでは、ラベルに指定した条件によって文書にラベルが付けられます。
+次に、スキャナーでは Windows IFilter が使用され、次のファイルの種類がスキャンされます。 このような種類のファイルでは、ラベルに指定した条件によって文書にラベルが付けられます。
 
 |アプリケーションの種類|ファイルの種類|
 |--------------------------------|-------------------------------------|
@@ -252,13 +252,17 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 |PDF |.pdf|
 |テキスト|.txt; .xml; .csv|
 
-既定では、スキャナーによって保護されるのは Office のファイルの種類のみです。したがって、[レジストリを編集](#editing-the-registry-for-the-scanner)してファイルの種類を指定しない限り、PDF ファイルやテキスト ファイルは保護されません。
+さらに、スキャナーを実行するコンピューター上で [Windows TIFF IFilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成すると、スキャナーで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査することもできます。
+
+既定では、スキャナーによって保護されるのは Office のファイルの種類のみです。したがって、[レジストリを編集](#editing-the-registry-for-the-scanner)してファイルの種類を指定しない限り、PDF ドキュメントやテキスト ファイル、および TIFF イメージは保護されません。
 
 - レジストリに .pdf のファイルの種類を追加しない場合: このファイル名拡張子を持つファイルはラベル付けされますが、ラベルが保護用に構成されている場合、保護は適用されません。
 
 - レジストリに .txt、.xml、または .csv のファイルの種類を追加しない場合: これらのファイルの種類は分類のみをサポートしないため、これらのファイル名拡張子を持つファイルはラベル付けされません。
 
-最後に、残りの種類のファイルについて、スキャナーは Azure Information Protection ポリシーの既定のラベル (またはユーザーがスキャナー用に構成した既定のラベル) を適用します。
+- Windows TIFF IFilter を構成した後、レジストリに .tiff のファイルの種類を追加しない場合: このファイル名拡張子を持つファイルはラベル付けされますが、ラベルが保護用に構成されている場合、保護は適用されません。
+
+最後に、残りの種類のファイルについて、スキャナーではそれらが検査されませんが、Azure Information Protection ポリシーの既定のラベル (またはご自身がスキャナー用に構成する既定のラベル) が適用されます。
 
 |アプリケーションの種類|ファイルの種類|
 |--------------------------------|-------------------------------------|

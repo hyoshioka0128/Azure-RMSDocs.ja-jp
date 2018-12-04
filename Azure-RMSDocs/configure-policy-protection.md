@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: e16c50422268a05596ebc28e09d464959fd1e0b2
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751170"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303925"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -107,9 +107,10 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
         ###### <a name="more-information-about-add-any-authenticated-users"></a>**認証されたユーザーの追加**に関する詳しい情報 
         この設定では、ラベルで保護されているコンテンツのアクセス権を持つユーザーが制限されることはありません。一方、引き続きコンテンツは暗号化され、コンテンツの使用方法 (アクセス許可) やアクセス方法 (有効期限、オフライン アクセス) を制限できます。 ただし、保護されたコンテンツを開くアプリケーションは、使用されている認証をサポートできる必要があります。 このため、Google などのフェデレーション ソーシャル プロバイダーや、ワンタイム パスコード認証は、電子メール用、および Exchange Online と Office 365 メッセージの暗号化の新機能を使用するときにのみ使用する必要があります。 Microsoft アカウントは、Azure Information Protection ビューアーおよび Office 2016 クイック実行で使用できます。 
           
-        認証されたユーザー設定の一般的なシナリオ: - 誰がコンテンツを表示してもよいが、その使用方法を制限する場合。 たとえば、コンテンツを編集、コピー、印刷できないようにします。  
-            - 誰がコンテンツにアクセスしてもよいが、コンテンツを開いたユーザーを追跡し、必要に応じて取り消しできるようにする場合。  
-            - コンテンツを保存時と転送時に暗号化する必要があるが、アクセスの制御は要求しない要件の場合。
+        認証されたユーザー設定の一般的なシナリオ:
+        - 誰がコンテンツを表示してもよいが、その使用方法を制限する場合。 たとえば、コンテンツを編集、コピー、印刷できないようにします。
+        - 誰がコンテンツにアクセスしてもよいが、コンテンツを開いたユーザーを追跡し、必要に応じて取り消しできるようにする場合。
+        - コンテンツを保存時と転送時に暗号化する必要があるが、アクセス制御は要求しない要件の場合。
         
     - 個々のユーザーまたはグループ (内部または外部) の電子メール アドレスを手動で設定するには、**[詳細を入力]** を選択します。 あるいは、別の組織のドメイン名を入力して、その組織のすべてのユーザーを指定するには、このオプションを使用します。 また、**gmail.com**、**hotmail.com**、または **outlook.com** などのドメイン名を入力すると、ソーシャル プロバイダーにこのオプションを使用することもできます。
         

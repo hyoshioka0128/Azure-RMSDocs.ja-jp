@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 11/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
-ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
+ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51611422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421013"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -44,6 +44,18 @@ ms.locfileid: "51611422"
     
     - ラベル付けに使用されているアプリケーション
 
+- 期間を選択できる**アクティビティ ログ**からは、次のことが確認できます。
+    
+    - 特定のユーザーが実行したラベル付けアクション
+    
+    - 特定のデバイスから実行されたラベル付けアクション
+    
+    - 特定のラベル付きのドキュメントにアクセスしたユーザー
+    
+    - 特定のファイル パスに対して実行されたラベル付けアクション
+    
+    - 特定のアプリケーション (エクスプローラーと右クリック、または AzureInformationProtection PowerShell モジュールなど) によって実行されたラベル付けアクション
+
 - **データ検出**レポートからは、次のことが確認できます。
 
     - スキャンされたデータ リポジトリにあるファイル
@@ -52,7 +64,7 @@ ms.locfileid: "51611422"
     
     - 既知のカテゴリ (財務データや個人情報など) の機密情報が含まれるファイルと、これらのカテゴリごとのファイルの場所
     
-レポートでは [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) を使用して、ユーザーが所有するワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、「[Log Analytics のクエリの概要](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal)」のチュートリアルが役立ちます。 
+レポートでは [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有しているワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、「[Log Analytics のクエリの概要](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal)」のチュートリアルが役立ちます。 
 
 詳細については、ブログ記事「[Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)」 (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、レポート作成、および分析を行う) を参照してください。
 
@@ -80,7 +92,7 @@ ms.locfileid: "51611422"
 
 - クライアント オペレーティング システムのバージョン。
 
-この情報は、自分が所有し、このワークスペースへのアクセス権を持つユーザーが表示できる Azure Log Analytics ワークスペースに格納されます。 ワークスペースに対するアクセスの構成について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users)」セクションをご覧ください。
+この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、このワークスペースへのアクセス権を持つユーザーが表示できます。 ワークスペースに対するアクセスの構成について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users)」セクションをご覧ください。
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Azure Information Protection 分析の前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
@@ -88,7 +100,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |要件|詳細情報|
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプション|[Azure Log Analytics の価格](https://azure.microsoft.com/pricing/details/log-analytics)ページを参照してください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
-|Azure Information Protection クライアントの現行のプレビュー バージョン。|現行のプレビュー バージョンのクライアントをまだインストールしていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
+|Azure Information Protection クライアントの現在の一般公開バージョン。|このバージョンのクライアントをまだインストールしていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
 |**検出とリスク** レポートの場合: <br /><br />- Azure Information Protection スキャナー (現行のプレビュー バージョン) のインスタンスを少なくとも 1 つデプロイしていること|インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」を参照してください。 <br /><br />スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。|
 
 
@@ -115,6 +127,12 @@ Log Analytics ワークスペースの作成に関する情報については、
 [Azure Information Protection] ブレードから **[ダッシュボード]** メニュー オプションを探し、次のいずれかのオプションを選択します。
 
 - **使用状況レポート (プレビュー)**: ラベルがどのように使用されているかを確認するには、このレポートを使用します。 
+
+- **アクティビティ ログ (プレビュー)**: ユーザーからの、およびデバイスとファイル パス上でのラベル付けアクションを確認するには、このレポートを使用します。
+    
+    このレポートは現在テナントにロールアウトされています。そのため、これが表示されない場合は、数日後にもう一度お試しください。 
+    
+    このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。 列の 1 つは **[デバイス リスク]** です。これは、Windows Defender が Azure Information Protection と統合されている場合に、そのアプリケーションからのデータを表示します。
 
 - **データ検出 (プレビュー)**: スキャナーで検出されたファイルに関する情報を表示するには、このレポートを使用します。
 

@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23baab9ba6ab9a7b1d43dd1f5f12947f383d9d28
-ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
+ms.openlocfilehash: 9bc0bbcf6eb74d889e7cd31e6d7ff3f0b6320050
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072478"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386748"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -192,7 +192,6 @@ Azure Information Protection クライアントがファイルを保護する方
 
 - **除外されるファイルの種類**: .lnk、.exe、.com、.cmd、.bat、.dll、.ini、.pst、.sca、.drm、.sys、.cpl、.inf、.drv、.dat、.tmp、msg、.msp、.msi、.pdb、.jar
     
-    .zip、.msg および .rar. のファイルの種類も除外されるようになりました。 
 
 - **除外されるフォルダー**: 
     - Windows
@@ -202,7 +201,9 @@ Azure Information Protection クライアントがファイルを保護する方
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーによる分類と保護から除外されるファイルの種類
 
-既定では、.rtf も除外されるのを除き、スキャナーでも Azure Information Protection クライアントと同じ種類のファイルが除外されます。 
+既定では、以下の例外を除き、スキャナーでも Azure Information Protection クライアントと同じファイルの種類が除外されます。
+
+    - .rtf、.rar、.zip も除外されます
 
 次の PowerShell コマンドレットを使用する場合、スキャナーによるファイル検査の対象となるファイルと除外するファイルの種類を変更することができます。
 

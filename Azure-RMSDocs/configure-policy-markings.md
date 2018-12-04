@@ -4,16 +4,16 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1a2702d1cff5cdf62b8969829f0389c15b5c7fae
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 23185d2d6b5b1bb14633647c345d0e58eeda3bdc
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292611"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52585994"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -23,8 +23,6 @@ ms.locfileid: "52292611"
 
 視覚的なマーキングに関する追加情報:
 
-- すべての視覚的なマーキングに対して複数行のテキストがサポートされます。
-
 - ヘッダーとフッターは、Word、Excel、PowerPoint、および Outlook に適用されます。
 
 - 透かしは、Word、Excel、および PowerPoint に適用されます。
@@ -32,6 +30,8 @@ ms.locfileid: "52292611"
     - Excel: 透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
     
     - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
+
+- 透かしと、Word、Excel、PowerPoint のヘッダーおよびフッターでは、複数の行がサポートされています。 Outlook で適用されるラベルのヘッダーまたはフッターに対して複数の行を指定した場合、その行は連結されます。 このシナリオでは、[Word、Excel、PowerPoint、Outlook にさまざまな視覚的なマーキングを設定する](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成の使用を検討します。
 
 - 文字列の最大長:
     
@@ -41,7 +41,7 @@ ms.locfileid: "52292611"
 
 - ヘッダー、フッター、または透かしを適用するときに、単なるテキスト文字列を指定するか、[変数](#using-variables-in-the-text-string)を使用してテキスト文字列を動的に作成することができます。
 
-- Word、PowerPoint、Outlook では、さまざまな色の視覚的なマーキングがサポートされます。 色に対して構成された視覚的なマーキングは、Excel では常に黒く表示されます。
+- Word、PowerPoint、Outlook に加えて Excel でも、さまざまな色の視覚的なマーキングがサポートされるようになりました。
 
 - 視覚的なマーキングがサポートする言語は 1 つのみです。
 
@@ -82,7 +82,7 @@ ms.locfileid: "52292611"
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}`: 選択したラベル。 例: Internal
+- `${Item.Label}`: 選択したラベル。 例: General
 
 - `${Item.Name}`: ファイル名または電子メールの件名。 例: JulySales.docx
 
@@ -95,6 +95,9 @@ ms.locfileid: "52292611"
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
 例: **General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
+
+>[!TIP]
+> また、ドキュメントやテンプレートに[ラベル名を挿入するフィールド コード](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)も使用します。
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定する
 

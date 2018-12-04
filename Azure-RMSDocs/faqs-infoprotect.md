@@ -4,18 +4,18 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 2c0d391e2d00ec7d0bc09d98de3fe6f502f999a4
-ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
+ms.openlocfilehash: a4aa5b1a6375655b9b6ab20f092a7def47187225
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51707744"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421047"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -68,6 +68,24 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 Azure Information Protection は分類に永続的メタデータを使用し、これにはクリア テキストのラベルが含まれるので、DLP ソリューションや他のアプリケーションはこの情報を読み取ることができます。 
 
 Exchange Online のメール フロー ルールでのこのメタデータの使用に関する詳細と例については、「[Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md)」(Azure Information Protection ラベル用に Exchange Online のメール フロー ルールを構成する) をご覧ください。
+
+## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>分類が自動的に含まれるドキュメント テンプレートを作成できますか?
+
+はい。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それがご自身の要件を満たしていない場合は、好みの書式設定を持つドキュメント テンプレートを作成し、フィールド コードとして分類を追加することができます。 
+
+例として、ドキュメントのヘッダーに分類を表示するテーブルがあるとします。 または、概要向けにドキュメントの分類を参照する具体的な表現を使用します。
+
+このフィールド コードをドキュメントに追加するには:
+
+1. ドキュメントにラベルを付けて保存します。 このアクションにより新しいメタデータ フィールドが作成され、これをフィールド コード用に使用できます。
+
+2. ドキュメント内で、ラベルの分類を追加したい位置にカーソルを合わせた後、**[挿入]** タブから **[テキスト]** > **[クイック パーツ]** > **[フィールド]** を選択します。
+
+3. **[フィールド]** ダイアログ ボックスの **[カテゴリ]** ドロップダウンから、**[ドキュメント情報]** を選択します。 次に、**[フィールド名]** ドロップダウンから **[DocProperty (文書プロパティ)]** を選択します。
+
+4. **[プロパティ]** ドロップダウンから **[秘密度]** を選択し、**[OK]** を選択します。
+
+現在のラベルの分類がドキュメントに表示され、この値はドキュメントを開くかテンプレートを使用するたびに自動的に更新されます。 このため、ラベルが変更されると、このフィールド コードに対して表示される分類がドキュメント内で自動的に更新されます。
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
 

@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/06/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4d3a44426de151ad9d1f1262cae967fdddf0da6f
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 41e092b379cfb52db286a61ad715703514e500d0
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292594"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386782"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -50,10 +50,12 @@ ms.locfileid: "52292594"
 |EnableCustomPermissions|[ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|LabelToSMIME|[ラベルを構成して Outlook で S/MIME 保護を適用する](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[スキャナーの低整合性レベルを無効にする](#disable-the-low-integrity-level-for-the-scanner)|
+|PullPolicy|[切断されたコンピューターのサポート](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[[問題の報告] リンクの電子メール アドレスを変更する](#modify-the-email-address-for-the-report-an-issue-link)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)|
@@ -64,11 +66,11 @@ ms.locfileid: "52292594"
 
 既定では、Azure Information Protection クライアントは Azure Information Protection サービスへ自動的に接続しようとします。 AD RMS とのみ通信するコンピューターの場合、この構成では不必要なサインイン プロンプトがユーザーに表示されます。 レジストリを編集し、このサインイン プロンプトが表示されないようにすることができます。
 
-次の値の名前を検索し、値データを **0** に設定します。
+ - 次の値の名前を検索し、値データを **0** に設定します。
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
-
-この設定に関係なく、Azure Information Protection クライアントは標準 [RMS サービス検索プロセス](client-deployment-notes.md#rms-service-discovery)に従い、その AD RMS クラスターを検出します。
+この設定に関係なく、Azure Information Protection クライアントは引き続き標準 [RMS サービス検索プロセス](client-deployment-notes.md#rms-service-discovery)に従い、その AD RMS クラスターを検出します。
 
 ## <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
 
@@ -133,11 +135,28 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 インターネットに接続されていない場合、クライアントは、組織のクラウドベース キーを使用することによる保護 (または保護の削除) を適用できません。 代わりに、クライアントは、分類にのみ適用されるラベルの使用か、[HYOK](../configure-adrms-restrictions.md) を使用する保護に制限されます。
 
-この設定を構成するには、レジストリ内で次の値の名前を見つけ、値のデータを **0** に設定します。
+Azure Information Protection サービスへのサインイン プロンプトが表示されないようにするには、Azure portal で構成する必要がある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使い、コンピューターにポリシーをダウンロードします。 または、レジストリを編集してこのサインイン プロンプトが表示されないようにすることができます。
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+- クライアントの詳細設定を構成するには:
+    
+    1. 次の文字列を入力します。
+    
+        - キー: **PullPolicy**
+        
+        - 値: **False**
+    
+    2. この設定を含むポリシーをダウンロードし、後続の手順に従ってそれをコンピューターにインストールします。
 
-クライアントの **%LocalAppData%\Microsoft\MSIP** フォルダーの中に、**Policy.msip** という名前の有効なポリシー ファイルがあることを確認してください。 必要に応じて、Azure Portal からグローバル ポリシーまたはスコープ ポリシーをエクスポートしたり、エクスポートしたファイルをクライアントのコンピューターにコピーしたりできます。 この方法を使用して、古いポリシー ファイルを公開されている最新のポリシーに置き換えることもできます。 ただし、ポリシーのエクスポートでは、ユーザーが複数のスコープ ポリシーに属しているシナリオはサポートされません。 また、ユーザーが [[ヘルプとフィードバック]](client-admin-guide.md#help-and-feedback-section) の **[設定のリセット]** オプションを選択する場合、このアクションによってポリシー ファイルが削除され、ポリシー ファイルを手動で交換するか、クライアントがポリシーをダウンロードするためにサービスに接続するまで、クライアントは動作できなくなります。
+- または、レジストリを編集するには:
+    
+    - 次の値の名前を検索し、値データを **0** に設定します。
+    
+        **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+
+クライアントは、**%LocalAppData%\Microsoft\MSIP** フォルダー内に、**Policy.msip** という名前の有効なポリシー ファイルを置く必要があります。
+
+Azure portal からグローバル ポリシーまたはスコープ ポリシーをエクスポートし、エクスポートしたファイルをクライアントのコンピューターにコピーすることができます。 この方法を使用して、古いポリシー ファイルを最新のポリシーに置き換えることもできます。 ただし、ポリシーのエクスポートでは、ユーザーが複数のスコープ ポリシーに属しているシナリオはサポートされません。 また、ユーザーが [[ヘルプとフィードバック]](client-admin-guide.md#help-and-feedback-section) の **[設定のリセット]** オプションを選択する場合、このアクションによってポリシー ファイルが削除され、ポリシー ファイルを手動で交換するか、クライアントがポリシーをダウンロードするためにサービスに接続するまで、クライアントは動作できなくなります。
 
 Azure Portal からポリシーをエクスポートすると、ポリシーの複数のバージョンを含む zip 形式のファイルがダウンロードされます。 ポリシーの各バージョンは、Azure Information Protection クライアントのさまざまなバージョンに対応しています。
 
@@ -222,6 +241,46 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 - 値: \<**ラベル ID**> または**なし**
 
+## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>ラベルを構成して Outlook で S/MIME 保護を適用する
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
+
+動作中の [S/MIME の展開](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption)があり、Azure Information Protection の Rights Management 保護ではなくこの保護方法をラベルが電子メールに対して自動的に適用するようにしたい場合にのみ、この設定を使用します。 結果として得られる保護は、ユーザーが Outlook から手動で S/MIME オプションを選択した場合と同じものです。
+
+この構成では、S/MIME 保護を適用したい Azure Information Protection ラベルごとに、**LabelToSMIME** という名前のクライアントの詳細設定を指定する必要があります。 次に、各エントリに対して、次の構文を使用して値を設定します。
+
+`[Azure Information Protection label ID];[S/MIME action]`
+
+Azure Portal で Azure Information Protection ポリシーを表示または構成するとき、ラベル ID 値は **[ラベル]** ブレードに表示されます。 サブラベルと共に S/MIME を使うには、親ラベルではなく、サブラベルの ID だけを常に指定します。 サブラベルを指定する場合、親ラベルが同じスコープまたはグローバル ポリシー内にある必要があります。
+
+次のような S/MIME アクションが可能です。
+
+- `Sign;Encrypt`: デジタル署名と S/MIME 暗号化を適用する
+
+- `Encrypt`: S/MIME 暗号化のみを適用する
+
+- `Sign`: デジタル署名のみを適用する
+
+**dcf781ba-727f-4860-b3c1-73479e31912b** のラベル ID の値の例:
+
+- デジタル署名と S/MIME 暗号化を適用する:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign;Encrypt**
+
+- S/MIME 暗号化のみを適用する:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Encrypt**
+    
+- デジタル署名のみを適用する:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign**
+
+この構成の結果として、電子メール メッセージに向けてこのラベルを適用すると、ラベルの分類に加えて S/MIME 保護が電子メールに適用されます。
+
+指定するラベルが Azure portal で Rights Management の保護用に構成されている場合、S/MIME 保護は Outlook でのみ Rights Management の保護を置き換えます。 ラベル付けをサポートしているその他のすべてのシナリオでは、Rights Management の保護が適用されます。
+
+ラベルが Outlook 内でのみ表示されるようにする必要がある場合は、「[クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](../quickstart-label-dnf-protectedemail.md)」で説明されているように、ラベルを構成してユーザー定義の **[転送不可]** シングル アクションを適用します。
+
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>必須のラベル付けを使用するときにドキュメントの "後で" を削除する
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
@@ -296,7 +355,8 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
     
     - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** 用に表示された値) にラベルの削除と、元のカスタム アクセス許可と共にそれの再適用の実行を依頼するかどうかを決定します。
 
-3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
+3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 [ポリシー設定](../configure-
+4. settings.md) **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** を使用している場合は、理由と共に *Justification* パラメーターも指定する必要があります。 次に例を示します。 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -417,7 +477,7 @@ Secure Islands によって "Sensitive" というラベルを付けられたド�
 
 この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 これらの設定はプレビュー段階であり、変更される可能性があります。
 
-この設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、ドキュメントからヘッダーまたはフッターを削除したり置き換えたりできるようになります。 たとえば、古いフッターに古いラベルの名前が含まれていますが、これを新しいラベル名と独自のフッターで Azure Information Protection に移行したとします。
+この設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、テキスト ベースのヘッダーまたはフッターをドキュメントから削除したり置き換えたりできるようになります。 たとえば、古いフッターに古いラベルの名前が含まれていますが、これを新しいラベル名と独自のフッターで Azure Information Protection に移行したとします。
 
 クライアントがそのポリシーにこの構成を使用すると、Office アプリでドキュメントが開き、いずれかの Azure Information Protection ラベルがドキュメントに適用されたときに、古いヘッダーとフッターが削除または置換されます。
 

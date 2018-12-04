@@ -4,18 +4,17 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d4b9419ee12dfef0db29604dc7a396eedd7225fc
-ms.sourcegitcommit: a547dee247e4961e8f7c1f08e39b03dff710a74c
+ms.openlocfilehash: b0dc98bb1c626737fb087c78691bb3a9e35a445e
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51628073"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586011"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -42,36 +41,42 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="versions-later-than-137190"></a>1.37.19.0 より後のバージョン
-
-1.37.19.0 より後のバージョンのクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。 
+## <a name="version-141510"></a>バージョン 1.41.51.0
 
 > [!TIP]
 > Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント: バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」をご覧ください。
 
-**リリース日**: 2018 年 9 月 20 日
+**リリース日**: 2018 年 11 月 27 日
+
+このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 
 **新機能:**
 
 - Microsoft Ignite で発表された Azure Information Protection 分析機能の[中央レポート機能](../reports-aip.md)のサポート。
 
-**追加:**
+- Excel で異なる色の[視覚的なマーキング](../configure-policy-markings.md)もサポートされるようになりました。
 
-このプレビュー バージョンのみが対象 (スキャナーに特化):
+- 既存の S/MIME の展開について、Outlook で S/MIME の保護を自動的に適用するようにラベルを構成する、新しいクライアントの詳細設定 (プレビュー)。 [詳細情報](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- 次の手順に従ってスキャナーをインストールします。
+- [切断されたコンピューター](client-admin-guide-customizations.md#support-for-disconnected-computers)に対して Azure Information Protection サービスのサインイン プロンプトが表示されないようにするためのレジストリの編集に代わる、新しいクライアントの詳細設定。
+
+**修正内容**:
+
+- Azure Information Protection クライアントで、エクスプローラー (右クリック) や PowerShell コマンドに対してファイル名拡張子 .msg、.rar、.zip が除外されなくなりました。 ただし、これらのファイル名拡張子は、スキャナーに対しては既定で除外されたままです。 
+
+- Azure Information Protection クライアントでは、エクスプローラー (右クリック) を使う場合に、複数のファイル (複数選択および保護されたファイルを含むフォルダー) の保護を解除できます。
+
+- Excel の場合:
     
-    1. クライアントの現行の GA バージョン (1.37.19.0) をインストールします。
-    2. スキャナーをインストールして構成します。
-    3. スキャナーを起動します。
-    4. Azure Information Protection クライアントをこのプレビュー バージョンにアップグレードします。
-    5. スキャナーを起動します。
-
-- 大規模なデータ セットのスキャンに関する既知の問題:
+    - セルの編集中にスプレッドシートを保存する場合、視覚的なマーキングが適用されるようになりました。
     
-    このプレビュー バージョンでは、スキャンするファイルの数を段階的に増やし、その進行状況を監視してください。 スキャナーが実行されているのに新しいファイルがスキャンされない状態が報告される場合は、スキャンするファイルの数を減らしてスキャナーを再起動します。 
+    - Excel 2010: スプレッドシートが共同作成者の[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使って保護されている場合、ファイルを右クリックして **[分類して保護する]** を選択したときに、**[ラベルの削除]** ボタンを使用できるようになりました。
 
-スキャナーのインストール、構成、起動方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。
+- [他のラベル付けソリューションからヘッダーとフッターを削除する](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)ことができるクライアントの詳細設定で、カスタム レイアウトがサポートされるようになりました。
+
+**その他の変更:**
+
+- スキャナーのスケジュールを **[常時]** に設定した場合、スキャンの間に 30 秒の遅延が追加されるようになりました。
 
 ## <a name="version-137190"></a>バージョン 1.37.19.0
 
@@ -117,7 +122,9 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - クイック アクセス ツールバーの [次の項目] と [前の項目] の矢印アイコンを使用して電子メールを表示すると、各電子メールに正しいラベルが表示されます。
 
-- カスタム アクセス許可は、アポストロフィが含まれる受信者のメール アドレスをサポートします。
+- エクスプローラー、PowerShell、またはスキャナーを使用して分類と保護を行う場合、Office ドキュメントのメタデータは削除も暗号化もされません。
+
+- カスタムのアクセス許可では、アポストロフィを含む受信者のメール アドレスがサポートされます。
 
 - SharePoint Online に格納されている保護されたドキュメントを開くことでこの操作が開始された場合、このコンピューター環境での初期化 (ブートストラップ) が成功します。
 
@@ -198,9 +205,12 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 **新機能**:
 
 - Azure Information Protection スキャナー: クライアントに付属する PowerShell モジュールには、オンプレミス データ ソース上のファイルを検出、分類、保護できるよう、スキャナーをインストールし、構成するための新しいコマンドレットが含まれています。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。 
-- テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細](configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+- テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細情報](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - [ポリシー設定](../configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** 対応になりました。 この設定をオフにすると、リボンの **[保護]** ボタンからラベルを選択します。
+
+- Word、Excel、および PowerPoint のヘッダーとフッターで、複数行のテキストがサポートされるようになりました。
 
 - バックグラウンドで分類の継続的な実行を有効にする新しい高度なクライアント設定 (プレビュー段階)。 この設定が有効になっている場合、Office アプリでは、推奨されている自動分類が、文書が保存されたときに実行されるのではなく、バックグラウンドで継続的に実行されます。 このように動作が変更されたことで、SharePoint Online に格納されている文書に自動 (推奨) 分類を適用できるようになりました。 [詳細情報](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
@@ -233,7 +243,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - PowerPoint の場合: 共同作成に対応しました。以前は、データの損失が発生する可能性がありました。
 
-- 推奨分類または自動分類で、ファイル名に .xml 拡張子が付くファイルを調べることができるようになりました。
+- 推奨または自動分類について、ファイル名に .xml 拡張子が付くファイルを調べることができるようになりました。
 
 - 20 MB を超えるテキスト ベースの保護ファイル (.ptxt と .pxml) を開けるようになりました。 
 - Outlook リマインダーの利用時の Outlook の停止を回避します。
