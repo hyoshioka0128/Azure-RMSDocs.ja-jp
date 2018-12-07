@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 75a13413cbbbb1a7ab653522fcec9606c002f7d8
+ms.sourcegitcommit: dce7b4f95c216afc9ec6524a686a02287e6bdcf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644653"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "53007500"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "51644653"
 
 このチュートリアルを完了するための必要条件を次に示します。
 
-1. Azure Information Protection プラン 2 を含むサブスクリプション。
+1. Azure Information Protection プラン 1 またはプラン 2 を含むサブスクリプション。
     
     このプランを含むサブスクリプションを持っていない場合は、組織用の[無料](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 

@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/05/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: adcaa1e0f15536d83a20c54017813d7e1546d860
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 351b026429a803bf1ac74cdddd547c73a29dfa18
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644711"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953348"
 ---
 # <a name="quickstart-get-started-in-the-azure-portal"></a>クイック スタート: Azure portal で作業を開始する
 
@@ -24,7 +24,7 @@ ms.locfileid: "51644711"
 
 このクイック スタートを完了するには、次の要件があります。
 
-- Azure Information Protection プラン 1 またはプラン 1 を含むサブスクリプション。
+- Azure Information Protection プラン 1 またはプラン 2 を含むサブスクリプション。
     
     このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
