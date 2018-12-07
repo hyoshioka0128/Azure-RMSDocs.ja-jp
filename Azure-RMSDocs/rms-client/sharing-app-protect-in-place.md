@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 218f20f7ad42b3f7b6e1a47a8c1f57556df612c3
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9156f7af9cb7915595f911b6d0ff8fa70332d8d7
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150723"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023449"
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションを使用して、デバイス上のファイルを保護する (インプレースの保護)
 
@@ -24,7 +24,7 @@ ms.locfileid: "44150723"
 インプレースのファイルを保護する場合は、元の保護されていないファイルを置き換えます。 次に、その場所にファイルを残したまま別のフォルダーやデバイスにコピーするか、ファイルのあるフォルダーを共有すると、ファイルは保護されたままになります。 エクスプローラーまたは Office アプリケーションから直接、電子メールで保護されたファイルを共有することをお勧めしますが、保護されたファイルを電子メール メッセージに添付することもできます (「[Rights Management 共有アプリケーションを使用して、電子メールで共有するファイルを保護する](sharing-app-protect-by-email.md)」を参照してください)。
 
 > [!TIP]
-> ファイルを保護しようとするとエラーが表示される場合は、「 [Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ](http://go.microsoft.com/fwlink/?LinkId=303971)」をご覧ください。
+> ファイルを保護しようとするとエラーが表示される場合は、「 [Windows 用 Microsoft Rights Management 共有アプリケーションの FAQ](https://go.microsoft.com/fwlink/?LinkId=303971)」をご覧ください。
 
 ## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>デバイス上のファイルを保護するには (インプレースの保護)
 

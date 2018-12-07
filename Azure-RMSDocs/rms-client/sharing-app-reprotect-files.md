@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 283e3dc21997f455301fcd7a6edb3caf84f82572
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9ca34cc149f86fa99174ea9792d05d7dfecc35dc
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150825"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023581"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルのアクセス許可を変更する
 
@@ -65,7 +65,7 @@ ms.locfileid: "44150825"
 >
 > 組織が Azure Information Protection または AD RMS を使用していない場合は、RMS で保護されたファイルを使用できるように資格情報を受け付ける無料のアカウントを要求できます。
 >
-> -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
+> -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](https://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
 >
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
 > -   詳細については、「[個人用 RMS と Azure Rights Management](../rms-for-individuals.md)」を参照してください。

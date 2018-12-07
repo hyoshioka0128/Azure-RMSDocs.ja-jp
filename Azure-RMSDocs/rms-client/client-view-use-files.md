@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3b4dfc62950166ca7221002169005fa3693a5998
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 0bb7a5333124c7581144ec00ac0b758691ff349f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862093"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023797"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>ユーザー ガイド: Rights Management で保護されたファイルを表示および使用する
 
@@ -47,7 +47,7 @@ ms.locfileid: "48862093"
 
 - 保護されているメールが届いた場合、指示に従い、ご利用のソーシャル ID プロバイダー (Gmail アカウントの Google など) でサインインするか、ワンタイム パスコードを申請します。
 
-- 資格情報を受け付ける無料のアカウントを申請できます。Rights Management で保護されているドキュメントを開くことができます。 このアカウントを申請するには、リンクをクリックして[個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469) を申請します。個人のメール アドレスではなく、会社のメール アドレスを使用します。 
+- 資格情報を受け付ける無料のアカウントを申請できます。Rights Management で保護されているドキュメントを開くことができます。 このアカウントを申請するには、リンクをクリックして[個人用 RMS](https://go.microsoft.com/fwlink/?LinkId=309469) を申請します。個人のメール アドレスではなく、会社のメール アドレスを使用します。 
 
 ## <a name="to-view-and-use-a-protected-document"></a>保護されたファイルを表示して使用するには
 

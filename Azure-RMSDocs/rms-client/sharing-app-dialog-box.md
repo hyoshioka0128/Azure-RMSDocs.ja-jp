@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 435432c1c759c040482096393c3a36cdee02691b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f6e84919653d68fb4f09671b233ccdc31bf1a82f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148496"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024282"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションのダイアログ ボックス オプション
 
@@ -24,7 +24,7 @@ ms.locfileid: "44148496"
 ここでは、RMS 共有アプリケーションの **[保護の追加]** ダイアログ ボックスまたは **[保護ファイルの共有]** ダイアログ ボックスでオプションを指定する場合に役立つ情報について説明します。 このダイアログ ボックスは、[共有するファイルを保護するとき](sharing-app-protect-by-email.md)、または[インプレースでファイルを保護](sharing-app-protect-in-place.md)してカスタム アクセス許可を選ぶときに表示されます。
 
 > [!IMPORTANT]
-> ここに記載されるオプションとは別のオプションが表示される場合は、インストールされている共有アプリケーションが最新版ではないと考えられます。 最新版は、 [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) ページからダウンロードできます。
+> ここに記載されるオプションとは別のオプションが表示される場合は、インストールされている共有アプリケーションが最新版ではないと考えられます。 最新版は、 [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) ページからダウンロードできます。
 > 
 > 最新版かどうかを確認するには、 [プログラムと機能] で **[Microsoft Rights Management 共有アプリケーション]** を探し、バージョン番号を確認します。 表中のオプションを表示して使用するには、バージョンが **1.0.1770.0**以降である必要があります。 最新のバージョン番号はダウンロード ページで確認できます。
 

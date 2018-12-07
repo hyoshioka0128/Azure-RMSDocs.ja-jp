@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1d749c77ada71a7f086b5d7836f44b530cab2dc9
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 7a95da3590a666e1d90452e514e93ab6100b8ad7
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330347"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024027"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
@@ -43,9 +43,9 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 1.  Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の独自のキー (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azurekey-vault)」セクションに記載された次の手順を実行します。
 
-    -   **キーを生成し、Azure Key Vault HSM に転送する**: [手順 1: インターネット接続ワークステーションを準備する](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+    -   **キーを生成し、Azure Key Vault HSM に転送する**: [手順 1: インターネット接続ワークステーションを準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
 
-    -   **テナント キーを生成して転送する – インターネット経由**: [手順 2: 未接続ワークステーションを準備する](/azure/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
+    -   **テナント キーを生成して転送する – インターネット経由**: [手順 2: 未接続ワークステーションを準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
 
     手順に従ってテナント キーを生成しないでください。既に、エクスポートされた構成データ (.xml) ファイルに同等のものがあります。 代わりに、ツールを実行してファイルからこのキーを抽出し、オンプレミス HSM にインポートします。 ツールを実行すると、次の 2 つのファイルが作成されます。
 
