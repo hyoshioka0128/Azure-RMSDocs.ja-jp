@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/30/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
-ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
+ms.openlocfilehash: 153009e9c9760649bd42d85bece421e3b8ee5afd
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52731151"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024248"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -62,7 +62,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 組織のポリシーによる禁止のためにテーブルの要件をすべて満たすことができない場合は、代替案として次のセクションをご覧ください。
 
-要件がすべて満たされる場合は、[インストールのセクション](#install-the-azure-information-protection-scanner)に直接移動してください。
+要件がすべて満たされる場合は、[インストールのセクション](#install-the-scanner)に直接移動してください。
 
 ### <a name="deploying-the-scanner-with-alternative-configurations"></a>代替構成でのスキャナーのデプロイ
 
@@ -221,7 +221,7 @@ Azure AD トークンを使用することで、Azure Information Protection サ
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、およびレポートに記録する項目などがあります。 さらに、Azure Information Protection ポリシーに分類レベルを下げる、または保護を解除する理由メッセージを必要とする設定が含まれている場合、このコマンドレットを使用してそのメッセージを指定します。 各構成設定に関する詳細については、[オンライン ヘルプ](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters)を参照してください。 
+    変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、およびレポートに記録する項目などがあります。 さらに、Azure Information Protection ポリシーに分類レベルを下げる、または保護を解除する理由メッセージを必要とする設定が含まれている場合、このコマンドレットを使用してそのメッセージを指定します。 各構成設定に関する詳細については、[オンライン ヘルプ](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters)を参照してください。 
 
 2. 現在の時刻をメモしておき、次のコマンドを実行してもう一度スキャナーを開始します。
     
@@ -364,7 +364,7 @@ Office ファイル以外のファイルの種類を保護するためにスキ�
 
 - Azure Information Protection の条件を変更する
     
-    スキャナーがすべてのファイルを検査する必要があるときの最初のスキャン サイクルでは、既定では、新規および変更されたファイルのみを検査する後続のスキャン サイクルよりも明らかに長く時間がかかります。 ただし、Azure Information Protection ポリシーの条件を変更した場合、[上記のセクション](#when-files-are-rescanned-by-the-azure-information-protection-scanner)に示されているように、すべてのファイルがもう一度スキャンされます。
+    スキャナーがすべてのファイルを検査する必要があるときの最初のスキャン サイクルでは、既定では、新規および変更されたファイルのみを検査する後続のスキャン サイクルよりも明らかに長く時間がかかります。 ただし、Azure Information Protection ポリシーの条件を変更した場合、[上記のセクション](#when-files-are-rescanned)に示されているように、すべてのファイルがもう一度スキャンされます。
 
 - 選択したログ レベル
     
