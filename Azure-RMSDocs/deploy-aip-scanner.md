@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
+ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386799"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52731151"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -252,7 +252,7 @@ Azure AD トークンを使用することで、Azure Information Protection サ
 |PDF |.pdf|
 |テキスト|.txt; .xml; .csv|
 
-さらに、スキャナーを実行するコンピューター上で [Windows TIFF IFilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成すると、スキャナーで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査することもできます。
+さらに、スキャナーを実行するコンピューター上に Windows TIFF IFilter 機能をインストールして、[Windows TIFF IFilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成すると、スキャナーで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査することもできます。
 
 既定では、スキャナーによって保護されるのは Office のファイルの種類のみです。したがって、[レジストリを編集](#editing-the-registry-for-the-scanner)してファイルの種類を指定しない限り、PDF ドキュメントやテキスト ファイル、および TIFF イメージは保護されません。
 

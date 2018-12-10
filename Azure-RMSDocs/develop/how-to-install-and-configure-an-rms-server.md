@@ -12,17 +12,17 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2a239c802ae818a3b51eb0fb05f98f509f469e3c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5a3fabd4d76dc86b52d0d8891b7032d1e017cf28
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146321"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023301"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>方法: RMS サーバーをインストールし、構成し、それでテストする
 
 このトピックでは、権限保護対応アプリケーションをテストするために、RMS サーバーまたは Azure RMS に接続する手順について説明します。
- 
+ 
 ## <a name="instructions"></a>手順
 
 ### <a name="step-1-setup-your-rms-server"></a>手順 1: RMS サーバーをセットアップする
@@ -38,7 +38,7 @@ ms.locfileid: "44146321"
 
     Windows Server 2008 以降は、クライアント コンポーネントとサーバーコンポーネントの両方がオペレーティング システムに含まれています。 以前のオペレーティング システムのサーバー コンポーネントは、次の場所からダウンロードできます。
 
-    -   [RMS サーバー v1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [RMS サーバー v1.0 SP2](https://go.microsoft.com/fwlink/p/?linkid=73722)
 
     Windows Server 2008 でサーバー コンポーネントを構成するには、AD RMS ロールをインストールする必要があります。 以前のサーバー オペレーティング システムに対してアプリケーションを開発している場合は、RMS サーバー v1.0 SP2 のインストール後、RMS サービスをプロビジョニングする前に、レジストリを構成します。
 
@@ -48,7 +48,7 @@ ms.locfileid: "44146321"
 
     -   **自己登録**
 
-        Windows Server 2008 以降では、Microsoft に情報を送信せずに、適切な階層に RMS サーバーを登録できます。 RMS ロールをインストールするときに、自己登録証明書と秘密キーもインストールされます。 これらは、サーバー ライセンサー証明書の自動作成に使用されます。 Microsoft と情報は交換されません。
+        Windows Server 2008 以降では、Microsoft に情報を送信することなく、適切な階層に RMS サーバーを登録できます。 RMS ロールをインストールするときに、自己登録証明書と秘密キーもインストールされます。 これらは、サーバー ライセンサー証明書の自動作成に使用されます。 Microsoft と情報は交換されません。
 
     -   **オンライン登録**
 

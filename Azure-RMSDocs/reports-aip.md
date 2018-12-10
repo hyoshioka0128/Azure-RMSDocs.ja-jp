@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
-ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
+ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52421013"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953314"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -25,10 +25,13 @@ ms.locfileid: "52421013"
 > [!NOTE]
 > 現在のところ、この機能はプレビュー段階で、変更される可能性があります。 この機能が一般公開になったときに、このプレビュー期間中に収集されたすべてのデータがサポートされなくなる可能性があります。
 
+Azure Information Protection 分析を使って、中央レポート機能に Azure Information Protection ラベルの導入を追跡させます。 さらに
 
-中央レポート機能に Azure Information Protection の分析を使用して、Azure Information Protection ラベルの導入を追跡し、ラベル付きのドキュメントや電子メールへのユーザー アクセスと、分類への変更を監視します。 保護する必要がある機密情報が含まれているドキュメントを識別することもできます。
+- ラベル付きのドキュメントや電子メールへのユーザーのアクセスと、その分類に対する変更を監視します。 
 
-現在、表示されるデータは Azure Information Protection クライアントと Azure Information Protection スキャナーから集計されたものです。
+- 保護する必要がある機密情報が含まれているドキュメントを識別します。
+
+現在、表示されるデータは、Azure Information Protection クライアントと Azure Information Protection スキャナー、および [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview) を実行している Windows コンピューターから集計されたものです。
 
 たとえば、次のようなことを確認できます。
 
@@ -58,7 +61,7 @@ ms.locfileid: "52421013"
 
 - **データ検出**レポートからは、次のことが確認できます。
 
-    - スキャンされたデータ リポジトリにあるファイル
+    - スキャンされたデータ リポジトリ、または Windows 10 コンピューター上にあるファイル
     
     - ラベル付けされ、保護されているファイルと、ラベルごとのファイルの場所
     
@@ -101,8 +104,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプション|[Azure Log Analytics の価格](https://azure.microsoft.com/pricing/details/log-analytics)ページを参照してください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
 |Azure Information Protection クライアントの現在の一般公開バージョン。|このバージョンのクライアントをまだインストールしていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
-|**検出とリスク** レポートの場合: <br /><br />- Azure Information Protection スキャナー (現行のプレビュー バージョン) のインスタンスを少なくとも 1 つデプロイしていること|インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」を参照してください。 <br /><br />スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。|
-
+|**検出とリスク** レポートの場合: <br /><br />- オンプレミスのデータ ストアからのデータを表示するには、Azure Information Protection スキャナー (現行の GA バージョン) のインスタンスを少なくとも 1 つデプロイしていること <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。<br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
@@ -130,11 +132,11 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 - **アクティビティ ログ (プレビュー)**: ユーザーからの、およびデバイスとファイル パス上でのラベル付けアクションを確認するには、このレポートを使用します。
     
-    このレポートは現在テナントにロールアウトされています。そのため、これが表示されない場合は、数日後にもう一度お試しください。 
+    このレポートは現在テナントにロールアウトされています。そのため、これが表示されない場合は、数日後にもう一度お試しください。
     
-    このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。 列の 1 つは **[デバイス リスク]** です。これは、Windows Defender が Azure Information Protection と統合されている場合に、そのアプリケーションからのデータを表示します。
+    このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。
 
-- **データ検出 (プレビュー)**: スキャナーで検出されたファイルに関する情報を表示するには、このレポートを使用します。
+- **データ検出 (プレビュー)**: スキャナーまたは Windows Defender ATP によって検出されたファイルに関する情報を表示するには、このレポートを使用します。
 
 ## <a name="how-to-modify-the-reports"></a>レポートを変更する方法
 

@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b5eccdd62d828bc5104815746458d4c7036594fd
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: be6477edae471bddbcf3a5d4e6c7bb0cfcec1e4e
+ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100638"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52831257"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -198,15 +198,9 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
 
-Azure Information Protection スキャナーをアップグレードするには、Azure Information Protection クライアントの最新バージョンをインストールします。 次のいずれかの 1 回限りの操作を行います。 これを行ったら、既にスキャンされたファイルを再スキャンする必要はありません。
+Azure Information Protection スキャナーをアップグレードするには、Azure Information Protection クライアントの最新バージョンをインストールします。 次に、以下の 1 回限りの操作を行います。 これを行ったら、既にスキャンされたファイルを再スキャンする必要はありません。
 
-現在の GA バージョンの場合: 
-
-- スキャナーのインストール コマンドを再実行します ([Install-aipscanner](/powershell/module/azureinformationprotection/Install-AIPScanner))。 スキャナーとリポジトリの構成設定は保持されます。 スキャナーを再インストールすると、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可が付与されます。これはレポートのために必要となります。
-
-プレビュー バージョンの場合: 
-
-- Azure Information Protection クライアントを一般公開バージョン 1.29.5.0 以前からアップグレードした後に、[Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
+- Azure Information Protection クライアントをアップグレードした後に、[Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
     
     この更新コマンドレットを実行するまでスキャナーは実行されません。また、通常、Windows イベント ログにイベント ID **1000** が表示され、"**オブジェクト名 'ScannerStatus' が無効です**" というエラー メッセージが表示されます。
 

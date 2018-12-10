@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f9b02f62ff31665e60455cdcd77e0de9da4db9af
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ec0c231e2036dc66b941be7f764bb5e5fd5c518a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148436"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023804"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細
 
@@ -36,7 +36,7 @@ Microsoft Rights Management 共有アプリケーションは、Microsoft Window
 
 Microsoft Rights Management 共有アプリケーションでは、[AD RMS Client 2.1 ランタイム](http://www.microsoft.com/download/details.aspx?id=38396)が使用されます。 Microsoft Rights Management 共有アプリケーションは、AD RMS 2.1 の機能を使用することにより、エンド ユーザーが簡単に保護および使用できるようにします。
 
-RMS の 2013 年 10 月リリースでは、Office 2010 を使用してネイティブにドキュメントを保護し、別の企業のユーザーに送信できます。それらのユーザーは、Azure Information Protection から Azure Rights Management サービスを使用してドキュメントを利用できます。 さらに、このリリースでは、暗号化モード 2 で AD RMS を使用すると、個人向け RMS を使用して、Azure Rights Management サービスを使用する別の企業内のユーザーからのコンテンツを利用できます。 暗号化モード 2 の詳細については、「 [AD RMS の暗号化モード](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx)」を参照してください。
+RMS の 2013 年 10 月リリースでは、Office 2010 を使用してネイティブにドキュメントを保護し、それを別の企業のユーザーに送信できます。次に、そのユーザーは Azure Information Protection から Azure Rights Management サービスを使用してドキュメントを利用できます。 さらに、このリリースでは、暗号化モード 2 で AD RMS を使用すると、個人向け RMS を使用して、Azure Rights Management サービスを使用する別の企業内のユーザーからのコンテンツを利用できます。 暗号化モード 2 について詳しくは、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx)」をご覧ください。
 
 デプロイ情報については、「[Automatic deployment for the Microsoft Rights Management sharing application (Microsoft Rights Management 共有アプリケーションの自動デプロイ)](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)」を参照してください。
 
@@ -66,18 +66,18 @@ Microsoft Rights Management 共有アプリケーションでネイティブに�
 |.xml|.pxml|
 |.jpg|.pjpg|
 |.jpeg|.pjeg|
-|.pdf|.ppdf|
+|.pdf|。ppdf|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
 |.jpe|.pjpe|
-|.jfif|.pjfif|
-|.jt|.pjt|
-¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
+|.jfif|。pjfif|
+|.jt|。pjt|
+¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 
-Microsoft Office 2016、Office 2013 および Office 2010 の Microsoft Rights Management 共有アプリケーションでネイティブにサポートされているファイルの種類を次の表にリストします。 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
+Microsoft Rights Management 共有アプリケーションが Microsoft Office 2016、Office 2013、および Office 2010 でネイティブにサポートしているファイルの種類の一覧を、次の表に示します。 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
 
 |Office でサポートされているファイルの種類|Office でサポートされているファイルの種類|
 |----------------------------------|----------------------------------|
@@ -130,6 +130,6 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 -   **Off**:保護のブロック
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)
 

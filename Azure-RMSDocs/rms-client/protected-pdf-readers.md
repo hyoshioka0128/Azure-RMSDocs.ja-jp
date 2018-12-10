@@ -5,19 +5,19 @@ keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 12/04/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: ab3d141394a9a042a8a3e15e35d1daffab20ad98
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: d4421caa4ec6846456c12aa831644e957c5b4fd9
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170249"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861202"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Microsoft Information Protection のサポートされる PDF Reader
 
@@ -33,7 +33,7 @@ Microsoft と Adobe のコラボレーションによって、分類され、必
 
 - PDF の暗号化における ISO 標準をサポートします。
     
-    この保護された PDF ファイル形式は、[管理者によって有効にされる](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)必要があります。 この構成が行われると、ファイル名拡張子は .pdf のまま保持され、.ppdf に変更されません。
+    この機能が[管理者によって無効](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)にされていない限り、最新バージョンの Azure Information Protection クライアントではこの保護された PDF ファイル形式が既定で有効化されるようになりました。
 
 詳細については、「[Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)」 (10 月以降、Microsoft Information Protection で保護されている PDF に Adobe Acrobat Reader を使用する) のブログ記事を参照してください
 
@@ -49,13 +49,13 @@ Microsoft と Adobe のコラボレーションによって、分類され、必
 
 ### <a name="support-for-previous-formats"></a>以前の形式のサポート
 
-次の表の PDF Reader は、.ppdf ファイル名拡張子および古い形式の .pdf ファイル名拡張子の保護された PDF ドキュメントをサポートします。
+次の表の PDF Reader では、.ppdf ファイル名拡張子を持つ保護された PDF ドキュメントと、.pdf ファイル名拡張子を持つ古い形式がサポートされています。
 
 現在、SharePoint Online とオンプレミスの SharePoint では、IRM で保護されたライブラリで PDF ドキュメントの古い形式を使用します。
 
 
 |オペレーティング システム|サポートされるリーダー|
 |----------------|-----------------------------------|
-|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|
+|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|
 |Android|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|

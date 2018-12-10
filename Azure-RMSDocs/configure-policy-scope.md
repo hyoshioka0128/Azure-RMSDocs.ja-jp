@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection のスコープ ポリシーの構成
+title: Azure Information Protection のスコープ ポリシーの構成 - AIP
 description: 特定のユーザーに対して異なる設定やラベルを構成するには、Azure Information Protection のスコープ ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a55a073a0b567e9e92b11fdcb1a5c8032c4e94c7
-ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
+ms.openlocfilehash: 8d10ddf21842d944773c7d088c4c452bc618c29c
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52268055"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024343"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法
 

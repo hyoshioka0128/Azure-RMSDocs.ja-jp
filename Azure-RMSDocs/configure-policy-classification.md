@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection ラベルの条件を構成する
-description: ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。
+title: Azure Information Protection ラベルの条件を構成する - AIP
+description: ラベルの条件を使うと、ドキュメントや電子メールにラベルを自動的に割り当てることができます。 または、推奨するラベルを選択するようユーザーに求めることができます。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -8,12 +8,12 @@ ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 49d3879dd4dd5d9a5459638b1b539f4fa233ee2f
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026555"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023857"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 

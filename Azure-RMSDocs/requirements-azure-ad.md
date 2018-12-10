@@ -1,21 +1,21 @@
 ---
-title: AIP の Azure Active Directory の要件
+title: Azure Information Protection に対する Azure AD の要件 - AIP
 description: ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 442c1b6ec44421696aef928c38692ded70911966
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 58de817eec541c4bbb1b5d4541469cda0d93e417
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146872"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024197"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -25,9 +25,9 @@ Azure Information Protection を使用するには、Azure AD ディレクトリ
 
 Azure Information Protection または Azure Rights Management を含むサブスクリプションをお持ちの場合は、必要に応じて Azure AD ディレクトリが自動的に作成されます。  
 
-Azure AD の詳細については、「[Azure Active Directory とは](/active-directory/active-directory-whatis)」をご覧ください。
+Azure AD の詳細については、「[Azure Active Directory とは](/azure/active-directory/fundamentals/active-directory-whatis)」をご覧ください。
 
-Azure AD ディレクトリをオンプレミス AD フォレストと統合するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](/active-directory/active-directory-aadconnect)」を参照してください。
+Azure AD ディレクトリをオンプレミス AD フォレストと統合するには、「[オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)」をご覧ください。
 
 ### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ 
 
@@ -47,7 +47,7 @@ Office 2010 を実行しているコンピューターの場合:
     
     UPN 値内のドメイン名が、テナントを確認するためのドメインである場合は、ユーザーの UPN 値を別の電子メール アドレスとして Azure AD proxyAddresses 属性に追加します。 これにより、使用権限が与えられる時点でユーザーの UPN 値が指定されている場合は、このユーザーの Azure Rights Management が承認されます。 この要件に関する詳細とユーザー アカウントの承認方法については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
-AD FS または同等な認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
+AD FS または同等の認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
 
 - 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 

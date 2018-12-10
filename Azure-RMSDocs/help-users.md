@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0359329513bdd2825f7121a95d4e940a76c401a5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148802"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024078"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -30,7 +30,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     > [!TIP]
     > エンドユーザー向けの例示ビデオ:
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
-    > -   [Azure RMS のドキュメントの追跡と取り消し](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
+    > -   [Azure RMS のドキュメントの追跡と取り消し](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **管理者情報**
     
@@ -48,7 +48,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
     - **サインイン ヘルプ**
         
-        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 通常、必要な資格情報は、Office 365 テナントまたは Azure Active Directory テナントに関連付けられている、ユーザーの所属する企業または学校のアカウントとパスワードです。 Azure Rights Management サービスでは Azure AD アカウントを認証できますが、Microsoft アカウントが認証に使用されている場合は、一部のアプリケーションでも、保護されたコンテンツを開くことができます。 [詳細情報](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Azure Rights Management サービスがユーザーを認証するときにキャッシュされた資格情報を使用できない場合、資格情報の入力を要求される場合があります。 通常、必要な資格情報は、Office 365 テナントまたは Azure Active Directory テナントに関連付けられている、ユーザーの企業または学校のアカウントとパスワードです。 Azure Rights Management サービスでは Azure AD アカウントを認証できますが、Microsoft アカウントが認証に使用されている場合は、一部のアプリケーションでも、保護されたコンテンツを開くことができます。 [詳細情報](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Azure Rights Management サービスを使用するアプリケーションを実行しているときに資格情報を要求された場合、どのアカウントを使用すればいいのかについてユーザーとヘルプ デスクにガイダンスを提供します。
         
@@ -66,20 +66,20 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの情報保護の使用
 
-ユーザーが Office 2010 を使用している場合は、保護されたドキュメントと電子メールの保護と使用のために、Azure Information Protection クライアント (または以前のアプリケーションである RMS 共有アプリケーション) が必要です。 ただし、Azure Information Protection クライアントも、このサービスをサポートするすべてのコンピューターとモバイル デバイスに推奨されています。
+ユーザーが Office 2010 を使用している場合は、保護されたドキュメントと電子メールを保護および使用するために、Azure Information Protection クライアント (または以前のアプリケーションである RMS 共有アプリケーション) が必要です。 ただし、Azure Information Protection クライアントも、このサービスをサポートするすべてのコンピューターとモバイル デバイスに推奨されています。
 
 Azure Information Protection クライアントを使用すると、ユーザーがドキュメントと電子メールを簡単に保護できるだけでなく、保護したドキュメントをユーザー自身で追跡できます。 また、過去に承認済みのユーザーが追跡対象のドキュメントにアクセスする必要がない場合は、そのドキュメントを無効にすることもできます。
 
 この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
 
 
-## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Office 365、Office 2016、または Office 2013 での情報保護の使用
+## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Office 365、Office 2016、または Office 2013 での情報保護の使用
 Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリに Azure Information Protection バーが表示されません。 リボンには **[保護]** ボタンが表示されず、エクスプローラーに **[分類して保護する]** も表示されません。 これらの追加によって、ユーザーはドキュメントと電子メールを簡単に保護できます。 これらのユーザーについては、次のような手順に従う必要があります。
 
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
-#### <a name="to-protect-a-document-in-word-2013"></a>Word 2013 でドキュメントを保護するには
+#### <a name="to-protect-a-document-in-word2013"></a>Word 2013 でドキュメントを保護するには
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
@@ -98,7 +98,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 使用権限は、制限バナーを使用してドキュメントの上部に表示されます。 このバナーには、ドキュメントに適用されるアクセス許可やそれらを表示するためのリンクが表示される場合があります。
 
-#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Outlook 2013 および Exchange Online を使用して電子メール メッセージを保護するには
+#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Outlook 2013 および Exchange Online を使用して電子メール メッセージを保護するには
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 

@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/16/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d39986951808cce23cbdc1ca817e14dcb6629f43
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 2e3babe4a402b8f77700e9b9890dc5f826a5850a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805996"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53026928"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -28,12 +28,13 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 
 ## <a name="installing-the-rms-connector"></a>RMS コネクタのインストール
 
-1.  RMS コネクタを実行するコンピューター (2 つ以上) を決定します。 前提条件で表示されている最小限の仕様を満たしている必要があります。
+1.  RMS コネクタを実行するコンピューター (2 つ以上) を
+2.  決定します。 前提条件で表示されている最小限の仕様を満たしている必要があります。
 
     > [!NOTE]
     > テナント (Office 365 テナントまたは Azure AD テナント) ごとに 1 つの RMS コネクタをインストールします (複数のサーバーにインストールして高可用性を確保します)。 Active Directory RMS とは異なり、RMS コネクタを各フォレストにインストールする必要はありません。
 
-2.  [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から RMS コネクタのソース ファイルをダウンロードします。
+2.  [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)から RMS コネクタのソース ファイルをダウンロードします。
 
     RMS コネクタをインストールするには、RMSConnectorSetup.exe をダウンロードしてください。
 
@@ -173,7 +174,7 @@ RMS コネクタの 2 つ目または最後のインスタンスをインスト�
 > [!IMPORTANT]
 > コネクタを使用するように Exchange サーバーまたは SharePoint サーバーを構成した後は、この名前を変更しないことをお勧めします。名前を変更すると、これらのサーバーですべての IRM 構成を消去し、再構成する必要があります。
 
-DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 このためには、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、「[Load Balancing Deployment Guide (負荷分散デプロイ ガイド)](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)」を参照してください。
+DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 このためには、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、「[Load Balancing Deployment Guide (負荷分散デプロイ ガイド)](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)」を参照してください。
 
 次の設定を使用して、NLB クラスターを構成します。
 
@@ -200,9 +201,9 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 > [!TIP]
 > 次の情報およびリソースを使用して、サーバー認証証明書を要求してインストールし、その証明書を IIS の既定の Web サイトにバインドできます。
 >
-> -   Active Directory 証明書サービス (AD CS) とエンタープライズ証明機関 (CA) を使用してこれらのサーバー認証証明書を展開する場合は、Web サーバー証明書テンプレートを複製して使用することができます。 この証明書テンプレートでは、証明書のサブジェクト名で **[要求に含まれる]** オプションを使用しています。これにより、証明書を要求する際に、証明書のサブジェクト名またはサブジェクトの別名に RMS コネクタ名の FQDN を指定できます。
-> -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web サーバー (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[インターネット サーバー証明書を構成する (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx)」を参照してください。
-> -   証明書を使用するように IIS を構成するには、TechNet の「[Web サーバー (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[サイトにバインドを追加する (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx)」を参照してください。
+> - Active Directory 証明書サービス (AD CS) とエンタープライズ証明機関 (CA) を使用してこれらのサーバー認証証明書を展開する場合は、Web サーバー証明書テンプレートを複製して使用することができます。 この証明書テンプレートでは、証明書のサブジェクト名で **[要求に含まれる]** オプションを使用しています。これにより、証明書を要求する際に、証明書のサブジェクト名またはサブジェクトの別名に RMS コネクタ名の FQDN を指定できます。
+> -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[インターネット サーバー証明書を構成する (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx)」を参照してください。
+> - 証明書を使用するように IIS を構成するには、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[サイトにバインドを追加する (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx)」を参照してください。
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Web プロキシ サーバーを使用するための RMS コネクタの構成
 コネクタ サーバーが配置されているネットワークがインターネットに直接接続されておらず、インターネットに発信アクセスを行うために Web プロキシ サーバーの手動構成が必要な場合、これらのサーバーのレジストリで RMS コネクタを構成する必要があります。
@@ -238,7 +239,7 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 
 -   64 ビット コンピューターの場合: RMSConnectorSetup.exe
 
-これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
+これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
 
 
 ## <a name="next-steps"></a>次の手順

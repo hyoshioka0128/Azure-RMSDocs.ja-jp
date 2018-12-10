@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c20ead2b01b2a37d63bbf3b2b0295f37c9421fdd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d0efb37ee0d424593b9cdb4c2690088e11afc29d
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151692"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024061"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す
 
@@ -37,7 +37,7 @@ RMS 共有アプリケーションを使用してドキュメントを保護す�
     
     注: グローバル管理者でもこのアイコンが表示されない場合、ドキュメントが共有されていません。 その場合、 https://portal.azurerms.com/#/admin の URL からドキュメント追跡サイトにアクセスします。
 
-- ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合:[ヘルプ] アイコンをクリックして、「 [ドキュメント追跡の FAQ](http://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。
+- ドキュメント追跡サイトについて質問がある場合、またはフィードバックを提供したい場合:[ヘルプ] アイコンをクリックして、「 [ドキュメント追跡の FAQ](https://go.microsoft.com/fwlink/?LinkId=523977)」にアクセスします。
 
 ## <a name="using-office-to-access-the-document-tracking-site"></a>Office を使用したドキュメント追跡サイトへのアクセス
 
@@ -67,9 +67,9 @@ Windows コンピューターで Office アプリケーションを使用して�
 
 #### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Web ブラウザーを使用したドキュメント追跡サイトへのアクセス
 
-- サポートされているブラウザーを使用して、 [ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)に移動します。
+- サポートされているブラウザーを使用して、 [ドキュメント追跡サイト](https://go.microsoft.com/fwlink/?LinkId=529562)に移動します。
 
-    サポートされているブラウザー:Internet Explorer バージョン 10 以降の使用が推奨されますが、次のいずれかのブラウザーを使用してドキュメント追跡サイトを使用することもできます。
+    サポートされているブラウザー: Internet Explorer バージョン 10 以降の使用をお勧めしますが、次のいずれかのブラウザーを使用してドキュメント追跡サイトを使用することもできます。
 
     -   Internet Explorer:バージョン 10 以降
 

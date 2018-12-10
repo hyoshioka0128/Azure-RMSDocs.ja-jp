@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 84bd09aef5390c9ff8eee299febf41e91c2cb606
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6ea5a80ad9d08873f817f21a9f6ac4d059618af7
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149482"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024044"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -37,7 +37,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
     
     この DNS レコードが配置されると、Web とモバイルの電子メール クライアントに Outlook を使用しているユーザーはそのアプリで AD RMS によって保護された電子メールを表示できるようになります。また、Exchange では AD RMS からインポートしたキーを使用して、AD RMS によって保護されたコンテンツを暗号化解除、インデックス化、保管、保護できるようになります。  
 
-2. Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](/..deploy-use/configure-office365.md#exchange-online-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
+2. Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)」に記載されている詳しい手順を参照してください。
     
     出力で、**AzureRMSLicensingEnabled** が **True** に設定されているかどうかを確認します。
     
@@ -47,7 +47,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9. Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
 
-AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使っている場合は、Rights Management (RMS) コネクタをデプロイする必要があります。このコネクタは、オンプレミスのサーバーと Azure Information Protection の保護サービスの間のインターフェイス (リレー) として機能します。
+AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使っている場合は、Rights Management (RMS) コネクタをデプロイする必要があります。このコネクタは、オンプレミスのサーバーと Azure Information Protection の保護サービスの間の通信インターフェイス (リレー) として機能します。
 
 ここでは、コネクタをインストールして構成し、Exchange および SharePoint で IRM を無効にして、コネクタを使うようにこれらのサーバーを構成する手順を説明します。 最後に、メール メッセージの保護に使われていた AD RMS データ構成ファイル (.xml) を Azure Information Protection にインポートしてある場合、Exchange Server コンピューターのレジストリを手動で編集して、すべての信頼された発行ドメインの URL を RMS コネクタにリダイレクトする必要があります。
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0538c66bcfcedf33854fdbc606fbedb25b112ee5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e78a870afea9828bf2020aca7007db9a766a1076
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147496"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023318"
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
 
@@ -26,7 +26,7 @@ ms.locfileid: "44147496"
  
 RMS 共有アプリケーションはダウンロード可能なアプリケーションであり、Windows コンピューター用の Office 2010 をサポートし、すべての Windows コンピューターとモバイル デバイスに推奨されていました。 Mac コンピューターや Windows Phone デバイスでは引き続き推奨されます。 利点の 1 つとして、Azure Rights Management サービスをネイティブでサポートしないアプリケーションやファイルの一般的な保護を適用できることが挙げられます。つまり、すべてのファイルを保護できます。 各種の保護レベルの詳細については、「[Rights Management 共有アプリケーション管理者ガイド](./rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic)」の「[保護のレベル – ネイティブと汎用](./rms-client/sharing-app-admin-guide.md)」セクションを参照してください。
 
-ユーザーが RMS 共有アプリケーションを使用してファイルを保護すると、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることもできます。 これを行うには、 [ドキュメント追跡サイト](http://go.microsoft.com/fwlink/?LinkId=529562)を使用します。
+ユーザーが RMS 共有アプリケーションを使用してファイルを保護すると、ユーザーが保護したドキュメントを追跡したり、必要に応じてそれらへのアクセスを取り消したりすることもできます。 これを行うには、 [ドキュメント追跡サイト](https://go.microsoft.com/fwlink/?LinkId=529562)を使用します。
 
 Windows コンピューターの場合、RMS 共有アプリケーションは、ユーザーが既に使用しているアプリケーションに既に統合されていて機能を拡張しています。
 
@@ -36,15 +36,15 @@ Windows コンピューターの場合、RMS 共有アプリケーションは�
 
 -   Azure Rights Management サービスによって保護されているファイルを開くビューアー。 このビューアーは、保護されたファイルを開くことができるアプリケーションが他にインストールされていない場合に自動的に起動します。
 
--   Office 2010 のバックエンド構成により、このスイートの Word、Excel、PowerPoint、および Outlook が Azure Rights Management サービスとシームレスに連携できるようになります。
+-   Office 2010 向けのバックエンド構成。これにより、このスイートの Word、Excel、PowerPoint、および Outlook が Azure Rights Management サービスとシームレスに連携できるようになります。
 
-Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)ページを使用して 1 つのコンピューターにダウンロードしてインストールできますが、サイレント インストールおよびカスタム構成のためのエンタープライズ デプロイもサポートされています。 詳細については、次のリソースを参照してください。
+Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970)ページを使用して 1 つのコンピューターにダウンロードしてインストールできますが、サイレント インストールおよびカスタム構成のためのエンタープライズ デプロイもサポートされています。 詳細については、次のリソースを参照してください。
 
 -   [Rights Management 共有アプリケーション管理者ガイド](./rms-client/sharing-app-admin-guide.md)
 
 -   [Rights Management 共有アプリケーション ユーザー ガイド](./rms-client/sharing-app-user-guide.md)
 
-モバイル デバイス用の RMS 共有アプリケーションは、iPad、iPhone、Android、Windows Phone、Windows RT などの最も一般的に使用されているモバイル デバイスをサポートします。 ユーザーは、関連するストアからこのアプリをダウンロードできます。 [Microsoft Rights Management ページ](http://go.microsoft.com/fwlink/?LinkId=303970)には、それらのリンクがあります。
+モバイル デバイス用の RMS 共有アプリケーションは、iPad、iPhone、Android、Windows Phone、Windows RT などの最も一般的に使用されているモバイル デバイスをサポートします。 ユーザーは、関連するストアからこのアプリをダウンロードできます。 [Microsoft Rights Management ページ](https://go.microsoft.com/fwlink/?LinkId=303970)には、それらのリンクがあります。
 
 **Microsoft Intune がある場合**: RMS 共有アプリには Microsoft Intune アプリ ソフトウェア開発キットが含まれているため、次のオプションを使用できます。
 

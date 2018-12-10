@@ -4,17 +4,17 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b0dc98bb1c626737fb087c78691bb3a9e35a445e
-ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
+ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586011"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861219"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -22,7 +22,7 @@ ms.locfileid: "52586011"
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 
 
-最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 一般公開バージョンは、WSUS や Configuration Manager、またはその他の Microsoft Update を使用するソフトウェア展開メカニズムを使用してクライアントをアップグレードできるように、Microsoft Update カタログにも含まれます (カテゴリ: **Azure Information Protection**)。
+最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 通常数週間の短い遅延の後で、一般公開バージョンもまた Microsoft Update カタログに含められます (カテゴリ: **Azure Information Protection**)。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
@@ -52,6 +52,10 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **新機能:**
 
+- Azure Information Protection により、既定で PDF 暗号化の ISO 標準を使用して PDF ファイルが保護されるようになりました。 以前は、クライアントの詳細設定を使ってこのサポートを有効にする必要がありました。
+    
+    クライアントを元に戻して、ファイル名拡張子 .ppdf を使って PDF ファイルを保護させるようにするには、同じ[クライアントの詳細設定](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)を使いますが、ここでは **False** を指定します。
+
 - Microsoft Ignite で発表された Azure Information Protection 分析機能の[中央レポート機能](../reports-aip.md)のサポート。
 
 - Excel で異なる色の[視覚的なマーキング](../configure-policy-markings.md)もサポートされるようになりました。
@@ -78,6 +82,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - スキャナーのスケジュールを **[常時]** に設定した場合、スキャンの間に 30 秒の遅延が追加されるようになりました。
 
+- スキャナーで、ファイルが既に保護されていた場合にそれがラベル付けする、ファイルの Rights Management 所有者が変更されなくなりました。
+
 ## <a name="version-137190"></a>バージョン 1.37.19.0
 
 **リリース日**: 2018 年 9 月 17 日
@@ -86,7 +92,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **新機能**: 
 
-- 新しい[高度なクライアント構成](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)による、PDF 暗号化のための ISO 標準のサポート。 このオプションを構成すると、保護対象の PDF ドキュメントの .pdf ファイル名拡張子が保持され (.ppdf には変更されません)、この ISO 標準をサポートしている PDF リーダーで開くことができます。 現時点では、Azure Information Protection ビューアーを使用して手動でこれらの保護された PDF を開くよう、ユーザーに指示する必要があります。 これをサポートするために、ユーザーがこれらの保護された PDF ファイルのいずれかを開くと、各自のオペレーティング システム用に選択するためのアイコンを含むページが表示されます。
+- 新しい[高度なクライアント構成](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)による、PDF 暗号化のための ISO 標準のサポート。 このオプションを **True** に設定すると、保護対象の PDF ドキュメントの .pdf ファイル名拡張子が保持され (.ppdf には変更されません)、この ISO 標準をサポートしている PDF リーダーで開くことができます。 現時点では、Azure Information Protection ビューアーを使用して手動でこれらの保護された PDF を開くよう、ユーザーに指示する必要があります。 これをサポートするために、ユーザーがこれらの保護された PDF ファイルのいずれかを開くと、各自のオペレーティング システム用に選択するためのアイコンを含むページが表示されます。
 
 - 個人情報が含まれているドキュメントの分類に役立つ、新しい種類の機密情報のサポート。 [詳細情報](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
@@ -196,76 +202,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - [設定完了] ウェルカム ページと [Azure Information Protection の新機能] ページが削除されました (以前は、Office アプリケーションの初回使用時に表示されていました)。
 
-## <a name="version-12660"></a>バージョン 1.26.6.0
-
-**リリース日**: 2018 年 4 月 17 日
-
-このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
-
-**新機能**:
-
-- Azure Information Protection スキャナー: クライアントに付属する PowerShell モジュールには、オンプレミス データ ソース上のファイルを検出、分類、保護できるよう、スキャナーをインストールし、構成するための新しいコマンドレットが含まれています。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。 
-
-- テキスト文字列に "If.App" 変数ステートメントを使用し、Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定し、アプリケーションの種類を識別できるようになりました。 [詳細情報](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
-
-- [ポリシー設定](../configure-policy-settings.md)の **[Display the Information Protection bar in Office apps]\(Office アプリで Information Protection バーを表示する\)** 対応になりました。 この設定をオフにすると、リボンの **[保護]** ボタンからラベルを選択します。
-
-- Word、Excel、および PowerPoint のヘッダーとフッターで、複数行のテキストがサポートされるようになりました。
-
-- バックグラウンドで分類の継続的な実行を有効にする新しい高度なクライアント設定 (プレビュー段階)。 この設定が有効になっている場合、Office アプリでは、推奨されている自動分類が、文書が保存されたときに実行されるのではなく、バックグラウンドで継続的に実行されます。 このように動作が変更されたことで、SharePoint Online に格納されている文書に自動 (推奨) 分類を適用できるようになりました。 [詳細情報](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
-
-- クライアント設定が新しくなりました。Outlook では、Azure Information Protection ポリシーで構成した既定のラベルが適用されません。 別の既定のラベルを適用できるか、ラベルがありません。 [詳細情報](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
-
-- Office アプリでは、カスタムのアクセス許可を指定するとき、アドレス帳アイコンからユーザーを参照し、選択できるようになりました。 エクスプローラーでカスタムのアクセス許可を指定するとき、同じような操作性が与えられます。
-
-- PowerShell を使用するが、**ローカルでログオンする**権限を付与できないサービス アカウントに完全に非対話式の認証方法を与えます。 この認証方法では、[Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) と共に新しい *Token* パラメーターを使用し、タスクとして PowerShell スクリプトを実行する必要があります。 [詳細情報](client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
-
-- [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication) に新しいパラメーター、*IntegratedAuth* が追加されました。 このパラメーターは AD RMS のサーバー モードをサポートします。このモードは AD RMS で Windows Server FCI をサポートするために必要になります。
-
-
-**修正内容**:
-
-以下を含む、安定性の問題と特定のシナリオの問題が修正されました。
-
-- Office バージョン 16.0.8628.2010 以降 (クイック実行) の場合、Azure Information Protection バーに最新のモニター ディスプレイ オプションが表示されます。以前は Office アプリケーションの外部にバーが表示されることがありました。
-
-- Azure Information Protection を利用する 2 つの組織がラベル付きの文書とメールを共有しているとき、独自のラベルの保持されます。他の組織のラベルで置換されることはありません。
-
-- Excel の場合:
-        
-    - Office テーマや Windows テーマを変更できるようになりました。以前は Excel では、テーマの変更後、データが表示されませんでした。
-        
-    - 相互参照を含むセルに対応しました。以前は、そのようなセルではテキストが壊れてしまいました。
-    
-    - 日本語、中国語、韓国語の文字の入力に対応しました。以前は、ウィンドウが閉じてしまい、これらの文字を選択できませんでした。
-    
-    - コメントに対応しました。以前は、入力中にコメントが閉じてしまいました。
-
-- PowerPoint の場合: 共同作成に対応しました。以前は、データの損失が発生する可能性がありました。
-
-- 推奨または自動分類について、ファイル名に .xml 拡張子が付くファイルを調べることができるようになりました。
-
-- 20 MB を超えるテキスト ベースの保護ファイル (.ptxt と .pxml) を開けるようになりました。 
-- Outlook リマインダーの利用時の Outlook の停止を回避します。
-
-- Office 64 ビットでブートストラップできます。文書やメールを保護できます。
-
-- Word、Excel、PowerPoint、エクスプローラーに対して、ユーザー定義アクセス許可のラベルを設定できるようになりました。また、クライアント詳細設定を利用し、カスタムのアクセス許可オプションを非表示にできます。 [詳細情報](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
-
-- クライアントにインストールされていないフォント名について、Azure Information Protection ポリシーの視覚的マーカーが設定されている場合、Calibri フォントが使用されます。
-
-- Azure Information Protection クライアントのアップグレード後に Office がクラッシュする事態を回避できるようになりました。
-
-- Office アプリでパフォーマンスとメモリ消費が改善されました。
-
-- ユーザー定義アクセス許可と HYOK (AD RMS) 保護のラベルを設定するとき、保護で Azure Rights Management サービスが不適切に使用されることがなくなりました。
-
-- 一貫性の高い管理作業を可能にするため、下位ラベルが上位ラベルから視覚的マーキングや保護設定を継承することがなくなりました。
-
-**その他の変更**:
-
-- [クライアント使用状況ログ](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client )において、イベント ID 102 と ID 103 がイベント ID 101 に置き換えられます。
-
 ## <a name="next-steps"></a>次の手順
 
 クライアントのインストールと使用の詳細: 
@@ -273,5 +209,4 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - ユーザー向け: [クライアントをダウンロードしてインストールする](install-client-app.md)
 
 - 管理者向け: [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
-
 

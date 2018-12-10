@@ -4,18 +4,18 @@ description: 分類、ラベル付け、組織のドキュメントと電子メ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0277b638f9d069d2cfb1084136068d7ef58b1e2b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151624"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024103"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -73,9 +73,9 @@ Azure Information Protection でユーザーとグループを使用するシナ
     
     ドメインがテナントに追加されている場合 ("確認済みドメイン")、Azure Information Protection では Azure AD proxyAddresses 属性にある任意の値を使用できます。 ドメインの確認の詳細については、以下の項目をご覧ください。
     
-    - Azure AD: 「[Azure Active Directory へのカスタム ドメイン名の追加](/active-directory/active-directory-add-domain)」
+    - Azure AD: 「[Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)」
 
-    - Office 365: 「[ドメインとユーザーを Office 365 に追加する](https://go.microsoft.com/fwlinkid/?linkid=847121)」
+    - Office 365: 「[Add a domain to Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)」(Office 365 にドメインを追加する)
 
 - **Azure AD userPrincipalName** 属性は、テナントにあるアカウントに対する値が Azure AD proxyAddresses 属性にない場合にのみ使用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスのない Office 365 のユーザーを作成する場合です。
 
@@ -146,7 +146,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
 **ProxyAddresses** 列が設定されていない場合は、**UserPrincipalName** の値が Azure Rights Management サービスのユーザーを承認するために使用されます。
 
-例:
+次に例を示します。
 
 |表示名|UserPrincipalName|ProxyAddresses
 |-------------------|-----------------|--------------------|

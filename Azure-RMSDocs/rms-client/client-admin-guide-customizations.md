@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e092b379cfb52db286a61ad715703514e500d0
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d4e2af4a9123b7276f2afad6f0d41232f3555d62
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386782"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861185"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -48,7 +48,7 @@ ms.locfileid: "52386782"
 |DisableDNF|[Outlook の [転送不可] ボタンを表示または非表示にする](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |EnableBarHiding|[Azure Information Protection バーを完全に非表示にする](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
-|EnablePDFv2Protection|[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|EnablePDFv2Protection|[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[ラベルを構成して Outlook で S/MIME 保護を適用する](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
@@ -315,23 +315,21 @@ Azure Information Protection クライアントがユーザーによって指定
 
 - 値: **True**
 
-## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する
+## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 
 
-既定では、Azure Information Protection クライアントで PDF ファイルが保護されている場合、結果のファイル名の拡張子は .ppdf になります。 この動作を変更し、ファイル名の拡張子を .pdf のままにして PDF 暗号化の ISO 標準に準拠することができます。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。
+最新バージョンの Azure Information Protection クライアントを使用して PDF ファイルを保護する場合、得られるファイル名の拡張子は .pdf のままとなり、PDF 暗号化の ISO 標準に準拠します。 この標準の詳細については、[ISO 32000-1 から派生し、Adobe Systems Incorporated が発行したドキュメント](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf)のセクション「**7.6 Encryption**」(7.6 暗号化) を参照してください。
 
-この詳細設定を構成するには、次の文字列を入力します。
+クライアントを、ファイル名拡張子 .ppdf を使って PDF ファイルを保護していた旧バージョンのクライアントの動作に戻す必要がある場合は、次の文字列を入力して以下の詳細設定を使います。
 
 - キー: **EnablePDFv2Protection**
 
-- 値: **True**
-
-この構成オプションの結果、Azure Information Protection クライアントが PDF ファイルを保護している場合、このアクションによって保護された PDF ドキュメントが作成されます。作成された PDF ドキュメントは、最新版の Windows 用 Azure Information Protection クライアント版や、PDF 暗号化の ISO 標準をサポートする他の PDF リーダーで開くことができます。 iOS および Android 用の Azure Information Protection アプリは、現在、PDF 暗号化の ISO 標準をサポートしていません。 Adobe Acrobat Reader の最新の情報については、「[Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)」 (10 月以降、Microsoft Information Protection で保護されている PDF に Adobe Acrobat Reader を使用する) を参照してください。
+- 値: **False**
 
 Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。
 
-この PDF の暗号化の詳細については、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) を参照してください。
+新しい PDF の暗号化について詳しくは、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>既存の .ppdf ファイルを保護された .pdf ファイルに変換するには
 

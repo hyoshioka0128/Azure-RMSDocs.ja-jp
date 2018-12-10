@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27de9df7062f6072e7e15b66759f540d5ce81dba
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148054"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023993"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Rights Management によって保護されたファイルを表示して使用する
 
@@ -28,10 +28,10 @@ ms.locfileid: "44148054"
 >
 > 組織が Azure Information Protection または AD RMS を使用していない場合は、RMS で保護されたファイルを開けるように資格情報を受け付ける無料のアカウントを要求できます。
 >
-> -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](http://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
+> -   このアカウントを要求するには、リンクをクリックして、 [個人用 RMS](https://go.microsoft.com/fwlink/?LinkId=309469)を要求します。
 >
 >     サインアップするときは、個人の電子メール アドレスではなく会社の電子メール アドレスを使用してください。 電子メールで保護された添付ファイルを受け取ったためにサインアップする場合は、その電子メール メッセージの送信に使用されたものと同じ電子メール アドレスを使用します。
-> -   詳細については、「[個人用 RMS と Azure Rights Management](../rms-for-individuals.md)」を参照してください。
+> -   詳細については、「[個人用 RMS と Microsoft Azure Rights Management](../rms-for-individuals.md)」を参照してください。
 
 ## <a name="to-view-a-protected-file"></a>保護されたファイルを表示するには
 ファイル エクスプローラーまたは添付ファイルを含む電子メール メッセージを使用して、保護されたファイルをダブルクリックし、要求された場合は資格情報を入力します。
@@ -72,7 +72,7 @@ Rights Management サービスでサポートされるファイル名拡張子�
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>保護されているファイルを使用するには (ファイルを編集して印刷する場合など)
 保護されたファイルを開いた後、読み取り以外にも編集、コピー、印刷などを行う場合は、ファイル名拡張子に応じて次の手順に従います。
 
-- **ファイル名拡張子 *が .pfile*  である**
+- **ファイル名拡張子*が .pfile*である**
 
     開いているファイルを保存し、使用するアプリケーションに関連付けられている新しいファイル名拡張子を付けます。
 

@@ -1,5 +1,5 @@
 ---
-title: クイック スタート - 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
+title: クイック スタート - 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する - AIP
 description: スコープ付きポリシーを使用して特定のユーザー向けのドキュメントや電子メールを分類する新しいラベルを作成および構成します。
 author: cabailey
 ms.author: cabailey
@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: dca90c7635702226e7414947aad6f3d89cf91efd
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 1a8af09681411e49936c067c6161376c9d4f9f16
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644652"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023575"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート: 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 

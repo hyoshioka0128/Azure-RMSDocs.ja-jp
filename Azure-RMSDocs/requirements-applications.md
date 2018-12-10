@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b632319b595c3745be576fa2d508ebcb089ec8aa
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: e3c4e28fc9f67faeefcb1e6c98dda99711f1ef2b
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170163"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024418"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -45,9 +45,9 @@ ms.locfileid: "49170163"
 
 |**デバイス オペレーティング システム**|Word、Excel、PowerPoint|Email|他のファイルの種類|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (保護されたドキュメントの表示) [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4) |Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (保護されたドキュメントの表示) [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4) |Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />Windows 用 RMS 共有アプリケーション: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
 |**Android**|GigaTrust<br /><br /> Office Mobile (保護されたドキュメントの表示と編集)<br /><br />Office Online [[1]](#footnote-1)<br /><br />TITUS Docs<br /><br />Web ブラウザー [[2]](#footnote-2)|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iOS [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile <br /><br />Web ブラウザー [[2]](#footnote-2)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 以降) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile <br /><br />Web ブラウザー [[2]](#footnote-2)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 以降) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
 |**macOS**|Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Outlook 2016 for Mac<br /><br />Web ブラウザー [[3]](#footnote-3)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
 |**Windows 10 Mobile**|Office Mobile アプリ (Azure RMS で保護されたドキュメントの表示) <br /><br />Web ブラウザー [[2]](#footnote-2)|Citrix WorxMail <br /><br />Outlook メール (保護されたメールの表示) <br /><br />Web ブラウザー [[3]](#footnote-3)|サポートされていません|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web ブラウザー [[2]](#footnote-2)|Outlook 2013 RT<br /><br />Windows 用メール アプリケーション<br /><br />Web ブラウザー [[3]](#footnote-3)<br /><br />Windows メール [[4]](#footnote-4)|Siemens JT2Go: JT ファイル|
@@ -84,7 +84,7 @@ Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケー
 
 次の Office クライアント スイートは、Windows コンピューター上にあるファイルや電子メールの Azure Rights Management サービスを使用した保護をサポートします。
 
-- ユーザーに Azure Rights Management (Azure Information Protection for Office 365 とも呼ばれます) のライセンスが割り当てられている場合は、Office 2016 アプリ (最小バージョン 1805、ビルド 9330.2078) を含む Office 365
+- ユーザーに Azure Rights Management (Azure Information Protection for Office 365 ともいう) のライセンスが割り当てられている場合は、Office 2016 アプリ (最小バージョン 1805、ビルド 9330.2078) を含む Office 365
 
 - Office 365 ProPlus: Office 2016 と Office 2013
     
@@ -139,7 +139,7 @@ iOS 用および Android 用の Azure Information Protection ビューアー ア
 
 - [iOS 用と Android 用の Azure Information Protection の FAQ](./rms-client/mobile-app-faq.md)
 
-[Microsoft Azure Information Protection のページ](http://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して関連アプリをダウンロードします。
+[Microsoft Azure Information Protection のページ](https://go.microsoft.com/fwlink/?LinkId=303970)にあるリンクを使用して関連アプリをダウンロードします。
 
 ### <a name="more-information-about-the-rights-management-sharing-application"></a>Rights Management 共有アプリケーションの詳細
 
@@ -155,7 +155,7 @@ Mac コンピューターの場合、このアプリケーションでは、保�
 
 -   [モバイル プラットフォーム用 Microsoft Rights Management 共有アプリケーションの FAQ](https://technet.microsoft.com/dn451248)
 
-[Microsoft Azure Information Protection のページ](http://go.microsoft.com/fwlink/?LinkId=303970) にあるリンクを使用して、Mac コンピューター用と Windows Phone 用のビューアーをダウンロードします。
+[Microsoft Azure Information Protection のページ](https://go.microsoft.com/fwlink/?LinkId=303970) にあるリンクを使用して、Mac コンピューター用と Windows Phone 用のビューアーをダウンロードします。
 
 
 ### <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Azure Information Protection をサポートしている他のアプリケーションの詳細

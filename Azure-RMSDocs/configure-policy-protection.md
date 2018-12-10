@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection ラベルを保護するように構成する
+title: 保護用に Azure Information Protection ラベルを構成する - AIP
 description: Rights Management 保護を使用するようにラベルを構成すると、最も機密性の高いドキュメントや電子メールを保護できます。
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e16c50422268a05596ebc28e09d464959fd1e0b2
-ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
+ms.openlocfilehash: ba878086ec29f85bd6191cb193dcde52a47ea813
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303925"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53022718"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
