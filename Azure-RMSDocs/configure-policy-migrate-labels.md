@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する
+title: Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する - AIP
 description: 統合ラベル付けをサポートしているクライアントで Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953331"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024010"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
@@ -29,7 +29,7 @@ Office 365 セキュリティ/コンプライアンス センターで使用で�
 
 ### <a name="important-information-about-administrative-roles"></a>管理者ロールに関する重要な情報
 
-**セキュリティ管理者**と **Information Protection 管理者**の [Azure AD ロール](/active-directory/users-groups-roles/directory-assign-admin-roles)は、統合ラベル付けのプラットフォームではサポートされていません。 組織でこれらの管理者ロールを使用する場合は、ラベルを移行する前に、これらのロールを持つユーザーを、Office 365 セキュリティ/コンプライアンス センターの**コンプライアンス管理者**ロール グループまたは**組織管理**ロール グループに追加しておきます。 代わりに、これらのユーザー用の新しいロール グループを作成して、このグループに**保持管理**、**組織の構成**のどちらのロールでも追加できます。 手順については、「[Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」(Office 365 セキュリティ/コンプライアンス センターへのアクセス権をユーザーに付与する) をご覧ください。
+**セキュリティ管理者**と **Information Protection 管理者**の [Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)は、統合ラベル付けのプラットフォームではサポートされていません。 組織でこれらの管理者ロールを使用する場合は、ラベルを移行する前に、これらのロールを持つユーザーを、Office 365 セキュリティ/コンプライアンス センターの**コンプライアンス管理者**ロール グループまたは**組織管理**ロール グループに追加しておきます。 代わりに、これらのユーザー用の新しいロール グループを作成して、このグループに**保持管理**、**組織の構成**のどちらのロールでも追加できます。 手順については、「[Give users access to the Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」(Office 365 セキュリティ/コンプライアンス センターへのアクセス権をユーザーに付与する) をご覧ください。
 
 これらの構成のいずれかを使用して各ユーザーに 365 セキュリティ/コンプライアンス センターへのアクセス権を付与しないと、ラベルの移行後に各ユーザーは Azure portal でラベルとポリシーにアクセスできなくなります。
 

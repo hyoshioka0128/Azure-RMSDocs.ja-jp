@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection の要件
+title: Azure Information Protection の要件 - AIP
 description: 組織の Azure Information Protection をデプロイするための前提条件を特定します。
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62a291667cf0ae60debbd62047d3a6b09962ac1d
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: 43ff5d8fabf8197ba8ea235b01258dff12a5acd4
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831240"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024148"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -140,7 +140,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 - 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照)。
 
-[AD RMS から Azure Information Protection への移行](http://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aadrm/Set-AadrmMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
+[AD RMS から Azure Information Protection への移行](https://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aadrm/Set-AadrmMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
 
 
 
