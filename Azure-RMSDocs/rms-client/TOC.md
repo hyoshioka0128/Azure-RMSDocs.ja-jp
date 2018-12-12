@@ -28,6 +28,7 @@
 ##### [RMS 共有アプリケーションを使用して実行するタスク](upgrade-client-app.md)
 ### [Azure Information Protection 統合ラベル付けクライアント (プレビュー)](unifiedlabelingclient-version-release-history.md)
 ### [Azure Information Protection 統合ラベル付けクライアント (プレビュー) をダウンロードしてインストールする](install-unifiedlabelingclient-app.md)
+### [保護された PDF リーダー](protected-pdf-readers.md)
 ### [RMS クライアントのデプロイに関する注意事項](client-deployment-notes.md)
 ### [Windows Server FCI での RMS 保護](configure-fci.md)
 #### [PowerShell スクリプト](fci-script.md)
