@@ -12,12 +12,12 @@ ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d190dd1559378473e52c2c741fcf4693f9e43a59
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0f937825a55eee3b58dc60830748a35982c5a8c8
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151335"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266479"
 ---
 # <a name="server"></a>サーバー
 
@@ -28,7 +28,7 @@ ms.locfileid: "44151335"
 > [!IMPORTANT] 
 > Azure RMS を介してアプリケーションを開発し、テストすることをお勧めします。
 
-**Windows Server** - RMS オンプレミス サーバーでは、Windows Server 2008 以降、RMS サービスをロールとして追加することで、そのインストールと構成ができます。 以前のオペレーティング システムにサービスをインストールするには、Microsoft ダウンロード センターから [Microsoft Windows Rights Management サービス Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909) をダウンロードします。
+**Windows Server** - RMS オンプレミス サーバーでは、Windows Server 2008 以降、RMS サービスをロールとして追加することで、そのインストールと構成ができます。 以前のオペレーティング システムにサービスをインストールするには、Microsoft ダウンロード センターから [Microsoft Windows Rights Management サービス Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909) をダウンロードします。
 
 インストールされる多くの Web サービスの中でも、Windows Server の RMS サーバーの場合、アプリケーション開発にとっては次のサービスが重要です。
 
@@ -41,11 +41,11 @@ ms.locfileid: "44151335"
 |事前証明 | サーバーがユーザーに代わって *Rights Account Certificate* を要求できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 |サービス ロケーター | アカウント証明サービス、ライセンス サービス、および発行サービスの URL を Active Directory に提供し、RMS クライアントがこれらのサービスを検出できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 
-## <a name="related-topics"></a>関連トピック ##
+## <a name="related-topics"></a>関連項目 ##
 * [概要](ad-rms-overview.md)
-* [Microsoft インターネット インフォメーション サービス](http://www.iis.net/overview)
+* [Microsoft インターネット インフォメーション サービス](https://www.iis.net/overview)
 * [クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
-* [Microsoft Windows Rights Management サービス Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909)
+* [Microsoft Windows Rights Management サービス Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)
 * [Active Directory Rights Management Services Scripting API (Active Directory Rights Management Services スクリプト API)](https://msdn.microsoft.com/library/Bb968797)
 * [Activating a Computer (コンピューターのアクティブ化)](https://msdn.microsoft.com/library/Cc530377)
 * [Activating a User (ユーザーのアクティブ化)](https://msdn.microsoft.com/library/Cc530378)
