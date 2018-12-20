@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19b45c3e24de5eba9f0bd243baf73797b66431f7
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 7c1d488ff738b0eea9042f1580ea74b7099f3ac5
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026776"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174116"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure RMS の動作のしくみについて理解しておくべき重要な点は、Azure Information Protection のデータ保護サービスは、保護プロセスの一部としてデータを表示したり保存したりしないことです。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。 Azure RMS は、単純に、承認されたユーザーおよびサービス以外のものが文書のデータを読めないようにします。
 
@@ -33,7 +33,7 @@ Azure RMS が暗号化および復号化、承認、制限の適用を行う保�
 
 ![Azure RMS がファイルを保護する方法](./media/AzRMS_SecretColaFormula_final.png)
 
-処理の詳細については、この記事の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
+処理の詳細については、この記事の「[Azure RMS の動作のチュートリアル: 初めての使用、コンテンツ保護、コンテンツ消費](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」をご覧ください。
 
 Azure RMS が使用するアルゴリズムおよびキー長に関する技術的詳細については、次のセクションを参照してください。
 
@@ -43,8 +43,8 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 |暗号化コントロール|Azure RMS での使用|
 |-|-|
-|アルゴリズム:AES<br /><br />キーの長さ: 128 ビットと 256 ビット [[1]](#footnote-1)|ドキュメントの保護|
-|アルゴリズム:RSA<br /><br />キーの長さ: 2048 ビット [[2]](#footnote-2)|キーの保護|
+|アルゴリズム:AES<br /><br />キーの長さ:128 ビットと 256 ビット [[1]](#footnote-1)|ドキュメントの保護|
+|アルゴリズム:RSA<br /><br />キーの長さ:2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
 
 ###### <a name="footnote-1"></a>脚注 1 
@@ -148,11 +148,11 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 - **電子メールの保護**: Exchange Online と新しい機能を備えた Office 365 Message Encryption を使ってメール メッセージを保護するとき、消費するための認証では、ソーシャル ID プロバイダーとのフェデレーションまたはワンタイム パスコードを使うこともできます。 その後のプロセス フローは、送信メールの一時的なキャッシュ コピーを介して Web ブラウザー セッションのサービス側でコンテンツの消費が行われるのを除けば、よく似ています。
 
-- **モバイル デバイス**:モバイル デバイスが Azure Rights Management サービスでファイルを保護または消費するときのプロセス フローはとても簡単です。 モバイル デバイスでは、コンテンツを保護または消費するための各トランザクションは独立しているので、ユーザー初期化プロセスは行われません。 Windows コンピューターと同じように、モバイル デバイスは Azure Rights Management サービスに接続して認証します。 コンテンツを保護する場合、モバイル デバイスはポリシーを送信し、Azure Rights Management サービスは発行ライセンスとドキュメントを保護する対称キーをモバイル デバイスに送信します。 コンテンツを消費する場合、モバイル デバイスは、Azure Rights Management サービスに接続して認証するときに、ドキュメントのポリシーを Azure Rights Management サービスに送信し、ドキュメントを消費するための使用ライセンスを要求します。 応答として、Azure Rights Management サービスは必要なキーと制限をモバイル デバイスに送信します。 どちらのプロセスも、TLS を使用してキーの交換およびその他の通信を保護します。
+- **モバイル デバイス**: モバイル デバイスが Azure Rights Management サービスでファイルを保護または消費するときのプロセス フローはとても簡単です。 モバイル デバイスでは、コンテンツを保護または消費するための各トランザクションは独立しているので、ユーザー初期化プロセスは行われません。 Windows コンピューターと同じように、モバイル デバイスは Azure Rights Management サービスに接続して認証します。 コンテンツを保護する場合、モバイル デバイスはポリシーを送信し、Azure Rights Management サービスは発行ライセンスとドキュメントを保護する対称キーをモバイル デバイスに送信します。 コンテンツを消費する場合、モバイル デバイスは、Azure Rights Management サービスに接続して認証するときに、ドキュメントのポリシーを Azure Rights Management サービスに送信し、ドキュメントを消費するための使用ライセンスを要求します。 応答として、Azure Rights Management サービスは必要なキーと制限をモバイル デバイスに送信します。 どちらのプロセスも、TLS を使用してキーの交換およびその他の通信を保護します。
 
-- **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
+- **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
 
-- **汎用的な保護 (.pfile)**:Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
+- **汎用的な保護 (.pfile)**: Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
 
 - **保護された PDF (.ppdf)**: Azure Rights Management サービスは、Office ファイルをネイティブに保護するときは、そのファイルのコピーも作成して同じ方法で保護します。 唯一の違いは、ファイルのコピーが PPDF ファイル形式であり、Azure Information Protection クライアント ビューアーと RMS 共有アプリケーションは表示するために開く方法だけを認識していることです。 このシナリオでは、保護された添付ファイルを電子メールで送信できます。モバイル デバイスの受信者は、モバイル デバイスに保護された Office ファイルをネイティブにサポートするアプリがない場合であっても、常にファイルを読むことができます。
 

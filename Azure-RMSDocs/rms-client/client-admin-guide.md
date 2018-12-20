@@ -4,22 +4,22 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: be6477edae471bddbcf3a5d4e6c7bb0cfcec1e4e
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: a9f54931d8409fd88bddb6be85f1a0d7c2b416a1
+ms.sourcegitcommit: 40ea9568688b9da95d72b48f02b4152e54da17c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831257"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029406"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
@@ -98,15 +98,15 @@ Windows Update、実行可能ファイル、または Windows インストーラ
 
 クライアントがインストールされたら、**[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
 
-- Office アプリケーションから、**[ホーム]** タブの **[保護]** グループで、**[保護]**、**[ヘルプとフィードバック]** の順に選択します。
+- Office アプリケーション: **[ホーム]** タブの **[保護]** グループで、**[保護]**、**[ヘルプとフィードバック]** の順に選択します。
 
-- エクスプローラーから単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
+- ファイル エクスプローラー: 単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
 既定では、**詳細を表示するリンク**から [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) の Web サイトに移動しますが、Azure Information Protection ポリシー内で[ポリシー設定](../configure-policy-settings.md)の 1 つとしてカスタム URL の構成を行えます。
 
-**問題の報告** リンクは、一般公開バージョンではなく、クライアントのプレビュー バージョンに表示されます。 既定では、このオプションは Microsoft に電子メールを送信しますが、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を指定することで、ユーザー用に HTTP 文字列を構成できます。 たとえば、ヘルプ デスクの電子メール アドレスを指定します。
+**[問題の報告]** リンクは、[クライアントの詳細設定](client-admin-guide-customizations.md#add-report-an-issue-for-users)を指定した場合にのみ表示されます。 この設定を構成するときに、ヘルプ デスクの電子メール アドレスなどの HTTP リンクを指定します。
 
 **ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
 
@@ -150,7 +150,7 @@ Windows Update、実行可能ファイル、または Windows インストーラ
 
 **[前回の接続]** には、クライアントが組織の Azure Information Protection サービスに前回接続した時刻が表示されます。 この情報と **[<日時> に Information Protection ポリシーがインストールされました]** を使用して、Azure Information Protection ポリシーが最後にインストールまたは更新された日時を確認できます。 クライアントはサービスへの接続時に、現在のポリシーからの変更を見つけると最新のポリシーを自動的にダウンロードし、24 時間ごとに確認を行います。 表示された時刻以降にポリシーを変更している場合は、Office アプリケーションを閉じて再度開きます。
 
-**このクライアントには Office Professional Plus 用のライセンスがありません**というメッセージが表示された場合、Azure Information Protection クライアントはインストールされている Office のエディションが Rights Management による保護の適用をサポートしていないことを検出しています。 この検出が行われると、保護を適用するラベルは Azure Information Protection バーには表示されません。
+**このクライアントには Office Professional Plus 用のライセンスがありません**と表示された場合: Azure Information Protection クライアントはインストールされている Office のエディションが Rights Management による保護の適用をサポートしていないことを検出しています。 この検出が行われると、保護を適用するラベルは Azure Information Protection バーには表示されません。
 
 **[バージョン]** 情報を使用して、どちらのバージョンのクライアントがインストールされているか確認します。 **新機能**のリンクをクリックし、クライアントの[バージョン リリース履歴](client-version-release-history.md)を読むことで、使用しているクライアントが最新のリリースバージョンかどうかや、各バージョンの修正と新しい機能を確認できます。
 
@@ -166,9 +166,9 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 次に例を示します。
 
-- オンライン ユーザーの手順: [Azure Information Protection ユーザー ガイド](client-user-guide.md)
+- オンライン ユーザーの手順:[Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
-- カスタマイズ可能なユーザー ガイドのダウンロード: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ### <a name="update-macros-in-excel-spreadsheets"></a>Excel スプレッドシートのマクロを更新する
 
@@ -202,13 +202,13 @@ Azure Information Protection スキャナーをアップグレードするには
 
 - Azure Information Protection クライアントをアップグレードした後に、[Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
     
-    この更新コマンドレットを実行するまでスキャナーは実行されません。また、通常、Windows イベント ログにイベント ID **1000** が表示され、"**オブジェクト名 'ScannerStatus' が無効です**" というエラー メッセージが表示されます。
+    この更新コマンドレットを実行するまでスキャナーは実行されません。また、通常、Windows イベント ログにイベント ID **1000** が表示され、次のエラー メッセージが表示されます: **オブジェクト名 'ScannerStatus' は無効です**。
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Azure Information Protection クライアントのアンインストール
 
 クライアントは、以下のいずれかの方法でアンインストールできます。
 
-- コントロール パネルを使って、プログラムをアンインストールします。**[Microsoft Azure Information Protection]**  >  **[アンインストール]** をクリックします。
+- [コントロール パネル] を使用してプログラムをアンインストールする: **[Microsoft Azure Information Protection]** > **[アンインストール]** をクリックします。
 
 - 実行可能ファイル (例: **AzInfoProtection.exe**) を再実行し、**[セットアップの変更]** ページの **[アンインストール]** をクリックします。 
 

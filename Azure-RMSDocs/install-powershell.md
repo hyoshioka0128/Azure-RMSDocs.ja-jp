@@ -4,22 +4,22 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
-ms.topic: article
+ms.date: 12/12/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fe03b296020e28234e439f634074746ff1bd677
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 8809524c197321840016e2db4347b0c37154e352
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808884"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305354"
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>AADRM PowerShell モジュールのインストール
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 以下の情報は、Azure Information Protection から Azure Rights Management サービス用 Windows PowerShell をインストールする場合に役立ちます。 このモジュールの名前は AADRM です。
 
@@ -30,8 +30,8 @@ ms.locfileid: "42808884"
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Windows PowerShell の最小バージョン: 3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
-|Microsoft .NET Framework の最小バージョン: 4.5<br /><br />注: 最近のオペレーティング システムには、このバージョンの Microsoft .NET Framework が付属しています。このため、手動でインストールする必要があるのは、クライアントのオペレーティング システムが Windows 8.0 よりも前のバージョンの場合か、サーバーのオペレーティング システムが Windows Server 2012 よりも前のバージョンの場合に限ります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、AADRM モジュールで使用されるクラスの一部で必要になります。|
+|Windows PowerShell の最小バージョン:3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
+|Microsoft .NET Framework の最小バージョン:4.5<br /><br />注: 最近のオペレーティング システムには、このバージョンの Microsoft .NET Framework が付属しています。このため、手動でインストールする必要があるのは、クライアントのオペレーティング システムが Windows 8.0 よりも前のバージョンの場合か、サーバーのオペレーティング システムが Windows Server 2012 よりも前のバージョンの場合に限ります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、AADRM モジュールで使用されるクラスの一部で必要になります。|
 
 AADRM モジュールのバージョン 2.5.0.0 以降、Microsoft Online Services サインイン アシスタントは必要なくなりました。
 
@@ -68,7 +68,7 @@ Windows PowerShell セッションで、インストールされているモジ�
 (Get-Module AADRM –ListAvailable).Version
 ```
 
-注: このコマンドが失敗した場合は、最初に **Import-module AADRM** を実行します。
+注: このコマンドが失敗した場合は、最初に **Import-Module AADRM** を実行します。
 
 使用可能なコマンドレットを確認するには、次のコマンドを入力します。
 
@@ -84,7 +84,7 @@ Get-Help Connect-AadrmService -online
 
 詳細情報:
 
--   使用可能なすべてのコマンドレットの一覧: [AADRM Module](/powershell/aadrm/vlatest/rightsmanagement)
+-   使用可能なすべてのコマンドレットの一覧:[AADRM モジュール](/powershell/aadrm/vlatest/rightsmanagement)
 
 -   PowerShell をサポートする主要な構成シナリオの一覧: [Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)
 

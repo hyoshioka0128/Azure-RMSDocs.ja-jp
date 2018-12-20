@@ -4,22 +4,22 @@ description: Azure Information Protection でお客様が管理するキーを�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 93e538b882da557715b04e8675b5a3b86de018b0
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 68e479eb7f19f60d6d68b913eae46dd287b5a04f
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330278"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305150"
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Azure Information Protection が含まれているサブスクリプションを所有する組織は、顧客管理のキー (BYOK) を使用し、[キーの使用状況ログを記録](./log-analyze-usage.md)するように Azure Information Protection テナントを構成することができます。 
@@ -44,11 +44,11 @@ Azure Information Protection テナント キーに Azure Key Vault を使用す
 
 - Azure Key Vault では、セキュリティのベスト プラクティスとして認識されている役割の分離を実現しています。 Azure Information Protection の管理者は、データ分類とデータ保護の管理に専念し、Azure Key Vault の管理者は、暗号化キーの管理と、セキュリティまたはコンプライアンスで必要となる特別なポリシーの管理に専念することができます。
 
-- 組織によっては、マスター キーが存在する必要がある場合、制限を設けているところがあります。 多くの Azure リージョンでサービスが提供されているため、Azure Key Vault ではマスター キーの保存先について高度な制御を行います。 現在、28 の Azure リージョンの中から選択することができ、この数は増える予定です。 詳細については、Azure サイトの [リージョン別の利用可能な製品] (https://azure.microsoft.com/regions/services/) ページを参照してください。
+- 組織によっては、マスター キーが存在する必要がある場合、制限を設けているところがあります。 多くの Azure リージョンでサービスが提供されているため、Azure Key Vault ではマスター キーの保存先について高度な制御を行います。 現在、28 の Azure リージョンの中から選択することができ、この数は増える予定です。 詳細については、Azure サイトの「[リージョン別の利用可能な製品](https://azure.microsoft.com/regions/services/)」のページを参照してください。
 
 Azure Key Vault では、キーの管理ができるだけでなく、セキュリティ管理者は同じ管理エクスペリエンスによって、暗号化を使用する他のサービスやアプリケーションの証明書やシークレット (パスワードなど) を格納し、アクセスし、管理することができます。 
 
-Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/key-vault/key-vault-whatis)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://cloudblogs.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
+Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/key-vault/key-vault-whatis)」を参照してください。最新情報と、他のサービスでこのテクノロジを使用する方法については、「[Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/)」 (Azure Key Vault チームのブログ) を参照してください。
 
 ## <a name="restrictions-when-using-byok"></a>BYOK を使用する場合の制限
 

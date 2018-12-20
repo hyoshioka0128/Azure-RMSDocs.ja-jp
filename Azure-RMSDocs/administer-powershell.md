@@ -4,22 +4,22 @@ description: Azure Information Protection の Azure Rights Management (AADRM) �
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: de522b734b923927972d6491d922651f26196440
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: 3a0dadd58536044ee8749c2dcb61efd50e626fa8
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168728"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305337"
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Windows PowerShell を使用した Azure Rights Management サービスの管理
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 PowerShell を使って、Azure Information Protection のために Azure Rights Management サービスを管理する必要がありますか。 すべての構成を Azure Portal または Office 365 ポータルで行える場合、PowerShell を使う必要はない可能性があります。 ただし、一部の詳細な構成には PowerShell を使用する必要があり、効率的なコマンドライン コントロールとスクリプトのために PowerShell の使用を選ぶ可能性もあります。
 
@@ -46,7 +46,7 @@ PowerShell を使って、Azure Information Protection のために Azure Rights
 |インターネット接続を利用しないで、組織によって保護されたコンテンツにアクセスできる最大日数を構成します (使用ライセンスの有効期間)。|[Get-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/get-aadrmmaxuselicensevaliditytime)<br /><br />[Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime)|
 |組織の Rights Management のスーパー ユーザー機能を管理する。|[Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature)<br /><br />[Disable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/disable-aadrmsuperuserfeature)<br /><br />[Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser)<br /><br />[Get-AadrmSuperUser](/powershell/aadrm/vlatest/get-aadrmsuperuser)<br /><br />[Remove-AadrmSuperUser](/powershell/aadrm/vlatest/remove-aadrmsuperuser)<br /><br />[Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup)<br /><br />[Get-AadrmSuperUserGroup](/powershell/aadrm/vlatest/get-aadrmsuperusergroup)<br /><br />[Clear-AadrmSuperUserGroup](/powershell/aadrm/vlatest/clear-aadrmsuperusergroup)|
 |組織の Rights Management サービスの管理が許可されているユーザーとグループを管理する。|[Add-AadrmRoleBasedAdministrator](/powershell/aadrm/vlatest/add-aadrmrolebasedadministrator)<br /><br />[Get-AadrmRoleBasedAdministrator](/powershell/aadrm/vlatest/get-aadrmrolebasedadministrator)<br /><br />[Remove-AadrmRoleBasedAdministrator](/powershell/aadrm/vlatest/remove-aadrmrolebasedadministrator)|
-|組織の Rights Management 管理タスクのログを取得する。|[Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx)|
+|組織の Rights Management 管理タスクのログを取得する。|[Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog)|
 |Rights Management の使用状況ログを記録および分析する。|[Get-AadrmUserLog](/powershell/aadrm/vlatest/get-aadrmuserlog)|
 |組織の Rights Management サービスの現在の構成を表示する。|[Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)|
 |組織を Azure Information Protection からオンプレミスの AD RMS デプロイに移行する。|[Set-AadrmMigrationUrl](/powershell/aadrm/vlatest/set-aadrmmigrationurl)<br /><br />[Get-AadrmMigrationUrl](/powershell/aadrm/vlatest/get-aadrmmigrationurl)|

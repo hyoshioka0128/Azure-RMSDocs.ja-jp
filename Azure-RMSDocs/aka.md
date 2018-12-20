@@ -4,22 +4,22 @@ description: Azure Information Protection は何度も名前が変更されて�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 496912a8dea0c73957d979d3f2cd42d785d532aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 036b80b1c2aa7026b1f7993d42ce726d518209c0
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149958"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305133"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection の別名
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection (AIP という略称で呼ばれることもある) は、権利管理保護を実装する、Microsoft の長い歴史を持つ確立されたテクノロジから進化したものです。 このような進化により、このソリューションは以前のいずれかの名前で知られている可能性があります。 また、ドキュメント、UI およびログ ファイルでは以前の名前が使用されている可能性もあります。 
 

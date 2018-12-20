@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
+ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953314"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068811"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -67,9 +67,13 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
     
     - 既知のカテゴリ (財務データや個人情報など) の機密情報が含まれるファイルと、これらのカテゴリごとのファイルの場所
     
-レポートでは [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有しているワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、「[Log Analytics のクエリの概要](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal)」のチュートリアルが役立ちます。 
+レポートでは [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有しているワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、[Analytics ポータルの概要](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal)についてのチュートリアルが役立ちます。 
 
-詳細については、ブログ記事「[Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)」 (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、レポート作成、および分析を行う) を参照してください。
+詳細については、次のブログ記事を参照してください。 
+
+- [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、レポート作成、および分析を行う)
+
+- [Discover and protect sensitive data through Azure Information Protection and Windows Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292) (Azure Information Protection および Windows Defender ATP を使用して機密データを発見し、保護する)
 
 ### <a name="information-collected-and-sent-to-microsoft"></a>収集され Microsoft に送信される情報
 
@@ -116,9 +120,9 @@ Azure Information Protection レポートを表示し、独自のレポートを
 
 3. **[Azure Information Protection ログ分析]** ブレードには、テナントによって所有されているすべての Log Analytics ワークスペースの一覧が表示されます。 以下のいずれかを実行します。
     
-    - 新しい Log Analytics ワークスペースを作成するには、**[新しいワークスペースの作成]** を選択し、**[Log Analytics ワークスペース]** ブレードで、要求された情報を指定します。
+    - 新しい Log Analytics ワークスペースを作成するには: **[新しいワークスペースの作成]** を選択し、**[Log Analytics ワークスペース]** ブレードで、要求された情報を指定します。
     
-    - 既存の Log Analytics ワークスペースを使用するには、一覧からワークスペースを選択します。
+    - 既存の Log Analytics ワークスペースを使用するには: 一覧からワークスペースを選択します。
 
 Log Analytics ワークスペースの作成に関する情報については、「[Azure ポータルで Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
@@ -145,7 +149,7 @@ Log Analytics ワークスペースの作成に関する情報については、
 ![Azure Information Protection のレポートをカスタマイズする [Log Analytics] アイコン](./media/log-analytics-icon.png)
 
 
-Azure Information Protection のログに記録されたデータは、テーブル **InformationProtectionLogs_CL** に格納されます。
+ログに記録された Azure Information Protection のデータは、次のテーブルに格納されます: **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>次の手順
 レポートの情報を確認した後で、Azure Information Protection ポリシーを変更することがあります。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。

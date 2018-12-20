@@ -4,16 +4,16 @@ description: すべてのユーザー用のグローバル ポリシーまたは
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: f097ec2f0e3db75d679e6c0a6251fb128f583d4b
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 367426324af487cbdf0ddaac53eb86aa89c168b7
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023304"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304858"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Azure Information Protection ポリシーにラベルを追加または削除する
 
@@ -39,7 +39,7 @@ Azure Information Protection ラベルを作成したら、ユーザーが使用
 
 3. **[ポリシー]** ブレードで、**[Add or remove labels]\(ラベルの追加または削除\)** を選択します。
 
-4. **[Policy: Add or remove labels]\(ポリシー: ラベルの追加または削除\)** ブレードで、すべてのラベルが表示されて、ラベルがポリシーに既に存在する場合はチェック ボックスがオンになり、対応するポリシー名が **[ポリシー]** 列に表示されます。
+4. **[ポリシー: ラベルの追加または削除]** ブレードで、すべてのラベルが表示されて、ラベルがポリシーに既に存在する場合はチェック ボックスがオンになり、対応するポリシー名が **[ポリシー]** 列に表示されます。
      
     サブラベルはインデントされて表示されます。 スコープ ポリシーでは、グローバル ポリシーから継承されているラベルは利用不可として表示されます。
     

@@ -12,19 +12,20 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 08ea1a1dfda69221657e738459f2b758a5014b05
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c6a1c0fa6d3783ce7eb618f56316fdbe1141bd77
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150247"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266462"
 ---
 # <a name="community-resources"></a>コミュニティのリソース
 
 Active Directory Rights Management サービスは、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。
 
 ## <a name="developers-blog"></a>開発者ブログ
-「[Active Directory Rights Management Services (AD RMS) Developer's Corner (Active Directory Rights Management サービス (AD RMS) 開発者のコーナー)」(ブログ)](http://blogs.msdn.com/b/rms/) は、情報保護分野の開発者のためのアクティブなハブです。
+[Microsoft RMS クラウド TechNet フォーラム](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
+[Stack Overflow Azure RMS](https://stackoverflow.com/search?q=Azure+RMS)
 
 ## <a name="microsoft-connect"></a>Microsoft Connect
 Connect サイトの Rights Management サービスのセクションでは、最新の成果物を検索し、フィードバックを返すことができます。
@@ -33,7 +34,7 @@ Connect サイトの Rights Management サービスのセクションでは、�
 >
 >Microsoft Connect にまだ登録していない場合は、次の手順に従って登録してください。
 >
->-   [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com) にアクセスします。
+>-   [Microsoft Connect](https://connect.microsoft.com) (https://connect.microsoft.com) にアクセスします。
 >-   Microsoft アカウントを使用してサインイン
 >-   コマンド バーの **[ディレクトリ]** をクリックします。
 >-   "Rights Management サービス" を検索します。

@@ -4,20 +4,20 @@ description: この手順は、AD RMS から Azure Information Protection への
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7ddaf0a54aa116a317cee8699caf437faae9676f
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 77037f5ab82e7b36899c4b1bdb2399d27b662a5d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330334"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305042"
 ---
-# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
+# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2: HSM で保護されているキーから HSM で保護されているキーへの移行
 
 >*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -40,7 +40,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 > Azure Key Vault の構成手順を実行中で、この Azure サービスに慣れていない方は、最初に「[Azure Key Vault の概要](/azure/key-vault/key-vault-get-started)」を参照することをお勧めします。 
 
 
-## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>パート 1: Azure Key Vault に HSM キーを転送する
+## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>パート 1:Azure Key Vault に HSM キーを転送する
 
 これらの手順は、Azure Key Vault の管理者によって実行されます。
 
@@ -59,7 +59,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 これで、Azure Information Protection から Azure Rights Management サービスに対して Azure Key Vault の HSM キーが準備されたので、AD RMS 構成データをインポートできます。
 
-## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>パート 2: 構成データを Azure Information Protection にインポートする
+## <a name="part-2-import-the-configuration-data-to-azure-information-protection"></a>パート 2:構成データを Azure Information Protection にインポートする
 
 これらの手順は、Azure Information Protection の管理者によって実行されます。
 

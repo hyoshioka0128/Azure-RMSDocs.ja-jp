@@ -4,22 +4,22 @@ description: Azure Rights Management サービスを使用する場合、テン�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 90c046f0cf2f954e70a17d127bc99b0479115928
-ms.sourcegitcommit: a5fd0afd84b62f84c3b9f0d076fab1b674267bf3
+ms.openlocfilehash: 10e381e68c75f2f401439ee330bf952b01b22c30
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083882"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305286"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection の Azure Rights Management サービスを使用する場合、テンプレートは自動的にクライアント コンピューターにダウンロードされるので、ユーザーはアプリケーションからテンプレートを選択できます。 しかし、テンプレートを変更する場合は、追加の手順が必要になることがあります。
 
@@ -28,7 +28,7 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 |Exchange Online<br /><br />トランスポート ルールと Outlook Web アプリに該当 |1 時間以内の自動更新 - 追加の手順は必要ありません。<br /><br />[Office 365 Message Encryption と新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)を利用している場合、これが該当します。 信頼された発行ドメイン (TPD) をインポートし、Azure Rights Management サービスを使用するように Exchange Online を既に構成している場合、同じ手順で Exchange Online の新機能を有効にします。|
 |Azure Information Protection クライアント|Azure Information Protection ポリシーがクライアントに更新されるたびに自動的に更新されます。<br /><br /> - Azure Information Protection バーをサポートしている Office アプリケーションが開いたとき。 <br /><br /> - ファイルまたはフォルダーを分類して保護するために右クリックしたとき。 <br /><br /> - ラベル付けおよび保護のために PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) を実行するとき。<br /><br /> - Azure Information Protection スキャナー サービスが開始され、ローカル ポリシーが 1 時間前よりも古いとき。 また、スキャナー サービスは 1 時間おきに変更を確認し、次のスキャン サイクルには変更を適用します。<br /><br /> - 24 時間ごと。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 2016 または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection クライアントでも更新されます。|
 |Azure Information Protection 統合ラベル付けクライアント (プレビュー)|4 時間ごとに自動で更新されます (Office アプリごとに)。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 2016 または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection 統合ラベル付けクライアントでも更新されます。|
-|Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />- Windows 用 RMS 共有アプリケーション: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日ごとです。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />スケジュールに先立って強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
+|Office 2016 と Office 2013:<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />- Windows 用 RMS 共有アプリケーションの場合: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日です。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />スケジュールに先立って強制的に更新するには、以下の「[Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
 |Office 2010|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。|
 |Exchange On-Premises と Rights Management コネクタ<br /><br />トランスポート ルールと Outlook Web アプリに該当|自動更新 - 追加の手順は必要ありません。 ただし、Outlook Web アプリは UI を一日キャッシュします。|
 |Office 2016 for Mac|自動更新 - 追加の手順は必要ありません。|
@@ -37,7 +37,7 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 
 クライアント アプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更の更新)、ダウンロードが完了し、新規または更新されたテンプレートが完全に機能するまで最大 15 分待機します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション: 変更されたカスタム テンプレートを強制的に更新する方法
+## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション:変更されたカスタム テンプレートを強制的に更新する方法
 Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有アプリケーションを実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
 
 > [!WARNING]
@@ -47,19 +47,19 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
 1.  レジストリ エディターを使用して、次のレジストリ値のいずれかを作成し設定します。
 
-    - 更新頻度を日単位で設定するには (最短 1 日): **TemplateUpdateFrequency** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (日数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
+    - 更新頻度を日単位で設定するには (最短 1 日):**TemplateUpdateFrequency** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (日数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
 
         **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **種類:** REG_DWORD
+        **次のように入力します。** REG_DWORD
 
         **値:** TemplateUpdateFrequency
 
-    - 更新頻度を秒単位で設定するには (最短 1 秒): **TemplateUpdateFrequencyInSeconds** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (秒数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
+    - 更新頻度を秒単位で設定するには (最短 1 秒):**TemplateUpdateFrequencyInSeconds** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (秒数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
 
         **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **種類:** REG_DWORD
+        **次のように入力します。** REG_DWORD
 
         **値:** TemplateUpdateFrequencyInSeconds
 
@@ -73,18 +73,18 @@ Office 2016、Office 2013 または Windows 用 Rights Management (RMS) 共有�
 
     **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
-    **種類:** REG_SZ
+    **次のように入力します。** REG_SZ
 
     **値:** LastUpdatedTime
 
     > [!TIP]
     > レジストリ パスの <*MicrosoftRMS_FQDN*> は、Microsoft RMS サービスの FQDN を指します。 この値を確認するには:
 
-    > Azure RMS 用の [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
+    > Azure RMS 用の [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
     >
     > 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
     >
-    > 例: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    > 次に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
     > 
     > この値から、**https://** 文字列と **/_wmcs/licensing** 文字列を削除します。 残りの値が、Microsoft RMS サービスの FQDN です。 この例では、Microsoft RMS サービスの FQDN は次の値になります。
     >

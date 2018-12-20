@@ -1,27 +1,27 @@
 ---
 title: Windows ストアのセットアップ | Azure RMS
-description: Windows Store アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
+description: Windows ストア アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f7fde149e080607633b0e916123d4da1e06d7715
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6d16237ff8d4fbfe1b26a73577c16b78b31849e1
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266360"
 ---
 # <a name="windows-store-setup"></a>Windows ストアのセットアップ
 
-Windows ストア アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
+Windows ストア アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
@@ -30,15 +30,15 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4.
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 
 開発システムには、以下のソフトウェアが必要です。
 
--   [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet) オペレーティング システム
+-   [Windows 8.1](https://windows.microsoft.com/windows-8/meet) オペレーティング システム
 -   [Windows 8.1 用 Windows SDK](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) 以降、または Visual Studio Express 2012 (Windows 8.0/8.1 用 Windows SDK に付属)
--   Windows ストア アプリケーション用の MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) 以降、または Visual Studio Express 2012 (Windows 8.0/8.1 用 Windows SDK に付属)
+-   Windows ストア アプリケーション用の MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
 -   認証ライブラリ: [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) または他の使用可能な認証ライブラリを使用することをお勧めします。
 
 [新機能](release-notes.md)に関するトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
@@ -69,7 +69,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 これで、新しい独自の Windows ストア アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 [作業開始](get-started.md)
 
@@ -77,8 +77,8 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 [開発者の用語と概念](core-concepts.md)
 
-[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
+[Windows 8](https://windows.microsoft.com/windows-8/meet)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
 [Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)

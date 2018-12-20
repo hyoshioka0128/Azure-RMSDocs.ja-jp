@@ -4,22 +4,22 @@ description: Azure Information Protection でラベルが適用されたファ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 31a325e31c8a7829f660080311f60181aa595ee7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ab98e211bf0f346359c6f6627a68db3071f7482e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148037"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305082"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>ユーザー ガイド: Azure Information Protection でラベルが適用されたファイル、または Rights Management で保護されているファイルから、ラベルと保護を削除する
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
 [コンピューターに Azure Information Protection クライアントをインストールする](install-client-app.md)と、ファイルと電子メールから分類ラベルと保護を削除することができます。
 
@@ -30,7 +30,7 @@ ms.locfileid: "44148037"
 
 別のラベルまたは別の保護設定セットを選択する場合、ラベルまたは保護を削除する必要はありません。 その代わり、新しいラベルを選択し、必要に応じて、カスタム アクセス許可を定義できます (管理者がこの設定を許可している場合)。 
 
-Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) で Office ドキュメントや電子メールを作成または編集している場合、ラベルと保護を削除できます。 
+次の Office デスクトップ アプリで Office ドキュメントや電子メールを作成または編集している場合、ラベルと保護を削除できます: **Word**、**Excel**、**PowerPoint**、**Outlook**。 
 
 また、**エクスプローラー**を使用して分類と保護の削除を行うこともできます。エクスプローラーは、その他のファイルの種類をサポートしています。複数のファイルからラベルと保護を一度に削除する場合に便利な方法です。
 
@@ -49,7 +49,7 @@ Information Protection バーの **[ラベルの削除]** アイコンをクリ�
 > [!NOTE]
 > お使いの Office アプリでこの Information Protection バーが表示されない場合:
 >
-> - リボンに **[保護]** ボタンが表示されている場合: **[保護]**、**[バーの表示]** の順に選択します。
+> - リボンに **[保護]** ボタンが表示されている場合: **[保護]** を選択してから、次のように **[バーの表示]** を選択します。
 > 
 > - Azure Information Protection クライアントが[インストール](install-client-app.md)されていないか、クライアントが[保護のみモード](client-protection-only-mode.md)で実行されている可能性があります。
 
@@ -59,13 +59,13 @@ Information Protection バーの **[ラベルの削除]** アイコンをクリ�
 
 1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。
 
-2. ラベルを削除するには: **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[ラベルの削除]** をクリックします。 保護を適用するようにラベルが構成されていた場合、その保護は自動的に削除されます。
+2. ユーザーを削除するには: **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[ラベルの削除]** をクリックします。 保護を適用するようにラベルが構成されていた場合、その保護は自動的に削除されます。
 
-3. 1 つのアプリケーションからカスタムの保護を削除するには: **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[Protect with custom permissions]**(カスタム アクセス許可で保護) オプションをオフにします。 
+3. 1 つのファイルからカスタム保護を削除するには: **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[カスタム アクセス許可で保護する]** オプションをオフにします。 
     
     **[カスタム アクセス許可で保護する]** オプションが表示されない場合、管理者はお客様がこのオプションを使用することを許可していません。
     
-4. 複数のファイルからカスタムの保護を削除するには: **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[Remove custom permissions]** (カスタム アクセス許可の削除) をクリックします。
+4. 複数のファイルからカスタム保護を削除するには: **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、**[カスタム アクセス許可の削除]** をクリックします。
     
     **[カスタム アクセス許可の削除]** オプションが表示されない場合、管理者はお客様がこのオプションを使用することを許可していません。
 

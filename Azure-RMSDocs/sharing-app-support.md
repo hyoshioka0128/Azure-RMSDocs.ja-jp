@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e78a870afea9828bf2020aca7007db9a766a1076
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 16110efd8d0874ba1235cc02576848d122203ea8
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023318"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173443"
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](./rms-client/aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 
@@ -46,7 +46,7 @@ Windows 用の RMS 共有アプリケーションは、 [Microsoft Rights Manage
 
 モバイル デバイス用の RMS 共有アプリケーションは、iPad、iPhone、Android、Windows Phone、Windows RT などの最も一般的に使用されているモバイル デバイスをサポートします。 ユーザーは、関連するストアからこのアプリをダウンロードできます。 [Microsoft Rights Management ページ](https://go.microsoft.com/fwlink/?LinkId=303970)には、それらのリンクがあります。
 
-**Microsoft Intune がある場合**: RMS 共有アプリには Microsoft Intune アプリ ソフトウェア開発キットが含まれているため、次のオプションを使用できます。
+**Microsoft Intune を所有している場合**: RMS 共有アプリには Microsoft Intune アプリ ソフトウェア開発キットが含まれているため、次のオプションを使用できます。
 
 -   Intune で登録されている iOS および Android デバイス用のアプリをデプロイおよび管理する。
 

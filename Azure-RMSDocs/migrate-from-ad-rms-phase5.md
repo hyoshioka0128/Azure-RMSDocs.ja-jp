@@ -4,22 +4,22 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e535295c4393d2d7267174f587fcbbf34fa986b0
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 49d91c616967e81e306cc296703a5a1bac8fa277
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023874"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305371"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 AD RMS から Azure Information Protection への移行フェーズ 5 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 10 から手順 12 を説明します。
@@ -38,7 +38,7 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 
 4. **[現在の SCP を削除する]** を選択して **[OK]** をクリックします。
 
-次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx)、[ServiceRequest テーブルの確認](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx)、[保護コンテンツに対するユーザー アクセスの監査](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。 
+次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx)、[ServiceRequest テーブルの確認](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx)、[保護コンテンツに対するユーザー アクセスの監査](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。 
 
 RMS クライアントがこれらのサーバーと通信していないこと、およびクライアントが Azure Information Protection を正常に使用していることを確認できたら、これらのサーバーから AD RMS サーバーの役割を削除できます。 専用のサーバーを使用している場合は、最初のサーバーのシャットダウン期間に警告手順を使用してもかまいません。 この方法では、サービス継続性のためにこれらのサーバーを再起動する必要がある問題の報告が発生していないことを確認でき、クライアントが Azure Information Protection を使用していない理由を調査する時間を確保できます。
 
@@ -49,7 +49,7 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 
-モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
+モバイル デバイス クライアントおよび Mac コンピューターの場合:[AD RMS モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
 
 このような DNS の変更が伝達されると、これらのクライアントは自動的に検出され、Azure Rights Management サービスの使用を開始します。 ただし、Office Mac を実行する Mac コンピューターは、AD RMS からの情報をキャッシュに入れます。 これらのコンピューターの場合、このプロセスには最大で 30 日かかることがあります。 
 
@@ -95,7 +95,7 @@ killall cfprefsd
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所で見つけることができます: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス クライアント**
+最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所で見つけることができます: **Microsoft** > **Windows** > **Active Directory Rights Management サービス クライアント**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 

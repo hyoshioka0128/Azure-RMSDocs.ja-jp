@@ -4,27 +4,27 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3a695268605a16564573d64c1f48447ea9b8cf45
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5eec7b06f3e0b649f436f61dc141e53173503774
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151114"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305180"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
 
-## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>手順 1: AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する
+## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>手順 1.AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する
 
 Azure Information Protection のデータ保護を指定するサービスを構成および管理できるように、AADRM モジュールをインストールします。
 
@@ -35,7 +35,7 @@ Azure Information Protection のデータ保護を指定するサービスを構
 
 移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、**<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
-例: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+次に例を示します。**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Azure Rights Management サービス URL を確認するには
 
@@ -77,7 +77,7 @@ Azure Information Protection のデータ保護を指定するサービスを構
     
 4. ファイルを抽出し、**Prepare-Client.cmd** の指示に従って、実際の AD RMS クラスター エクストラネット ライセンス URL のサーバー名が含まれるようにします。 
     
-    この名前を調べるには、Active Directory Rights Management サービス コンソールで、クラスターの名前をクリックします。 **[クラスターの詳細]** で、[エクストラネット クラスターの URL] セクションの **[ライセンス]** からサーバー名をコピーします。 例: **rmscluster.contoso.com**。
+    この名前を見つけるには: Active Directory Rights Management サービス コンソールで、クラスターの名前をクリックします。 **[クラスターの詳細]** で、[エクストラネット クラスターの URL] セクションの **[ライセンス]** からサーバー名をコピーします。 例: **rmscluster.contoso.com**。
 
     > [!IMPORTANT]
     > この手順では、**adrms.contoso.com** のアドレスの例を実際の AD RMS サーバーのアドレスに置き換えます。 これを行うときは、アドレスの前または後に余計なスペースが入らないように注意してください。余計なスペースがあると、移行スクリプトが中断し、問題の根本原因の特定が非常に困難になります。 編集ツールによっては、テキストを貼り付けた後でスペースが自動的に追加されることがあります。
@@ -93,7 +93,7 @@ Azure Information Protection のデータ保護を指定するサービスを構
 
 [実際のテナントの Azure Rights Management サービス URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) を確認しておき、次のコマンドの *&lt;YourTenantURL&gt;* をその値に置き換えることができるようにします。 
 
-**Exchange Online を AD RMS と統合している場合**: Exchange Online PowerShell セッションを開き、以下の PowerShell コマンドを、1 つずつ、またはスクリプトで実行します。
+**Exchange Online を AD RMS と統合している場合**: Exchange Online PowerShell セッションを開き、以下の PowerShell コマンドを 1 つずつ、またはスクリプト内で実行します。
 
     $irmConfig = Get-IRMConfiguration
     $list = $irmConfig.LicensingLocation
@@ -102,7 +102,7 @@ Azure Information Protection のデータ保護を指定するサービスを構
     Set-IRMConfiguration -internallicensingenabled $false
     Set-IRMConfiguration -internallicensingenabled $true 
 
-**オンプレミスの Exchange と AD RMS を統合している場合**: Exchange 組織ごとに、まず各 Exchange サーバーでレジストリ値を追加してから PowerShell コマンドを実行します。 
+**オンプレミスの Exchange を AD RMS と統合している場合**: Exchange 組織ごとに、まず各 Exchange サーバー上でレジストリ値を追加してから PowerShell コマンドを実行します。 
 
 Exchange 2013 と Exchange 2016 のレジストリ値:
 
@@ -110,7 +110,7 @@ Exchange 2013 と Exchange 2016 のレジストリ値:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://\<実際のテナント URL\>/_wmcs/licensing
 
@@ -124,7 +124,7 @@ Exchange 2010 のレジストリ値:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://\<実際のテナント URL\>/_wmcs/licensing
 

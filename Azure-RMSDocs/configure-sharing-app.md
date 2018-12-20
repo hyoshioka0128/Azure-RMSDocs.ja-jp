@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1e282490138f26acb27bc4d553e6135c03f498c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d1e81966f93ec5e2647a1ce828f6bc8ee3f89f3e
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148309"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173487"
 ---
-# <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Rights Management 共有アプリケーション: クライアントでのインストールと構成
+# <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Rights Management 共有アプリケーション:クライアントでのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](./rms-client/aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 

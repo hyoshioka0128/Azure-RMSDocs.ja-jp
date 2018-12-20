@@ -11,20 +11,20 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab3d976a1aa39829e83aaef0c34fdf5f3f377fe7
-ms.sourcegitcommit: eefbf103e5360594248969281b8091c8c096b352
+ms.openlocfilehash: 416cb479be67f575e4d59bfaecf1dd86eb98aab0
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671031"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53172892"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Azure Rights Management をアクティブ化する方法
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Office 365 管理センターから Azure Rights Management サービスにアクセスでき、かつご自身がグローバル管理者である場合は、次の手順を使用します。 
 
-Azure Rights Management サービスをアクティブ化するには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。 たとえば、ご自身の組織が Office 365 E3 や Office 365 E5 のプランを取得しているとします。 
+Azure Rights Management サービスをアクティブ化するには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。 たとえば、ご自身の組織が Office 365 E3 や Office 365 E5 のプランを取得しているとします。 
 
 サブスクリプションの要件に関する質問がある場合、またはサービスのアクティブ化についてサポートが必要な場合は、[Microsoft サポートにお問い合わせいただく](information-support.md#to-contact-microsoft-support)か、標準サポート チャネルをご利用ください。
 

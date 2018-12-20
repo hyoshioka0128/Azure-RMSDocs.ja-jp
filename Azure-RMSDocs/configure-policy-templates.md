@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1571939554e64459acd7ec0b7c32e9d40f7bd7eb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 412b84b705d12efd7259066c0fece68e2ab8c099
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024316"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173946"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 保護テンプレート (Rights Management テンプレート) は、Azure Information Protection 用の管理者が定義した保護設定のグループです。 これらの設定には、承認されたユーザー向けの選択した[使用権限](configure-usage-rights.md)や、有効期限やオフライン アクセス向けのアクセス制御が含まれます。 これらのテンプレートは Azure Information Protection ポリシーに統合されています。 
 
@@ -79,7 +79,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
     
     - **マクロの許可** (共通名) が自動的に追加されます。 この使用権限は Office アプリの Azure Information Protection バーに必要です。
 
-- **[ラベル]** ブレードで、**[公開済み]** の設定は **[有効]** が **[オン]**、**[アーカイブ済み]** の設定は **[有効]** が **[オフ]** と表示されます。 維持するがユーザーまたはサービスには表示しないテンプレートの場合、これらのテンプレートを **[有効]**: **[オフ]** に設定します。
+- **[公開済み]** と **[アーカイブ済み]** の設定はそれぞれ、**[有効]**: **[オン]**、**[有効]**: **[オフ]** とそれぞれ **[ラベル]** ブレードで表示されます。 維持するがユーザーまたはサービスには表示しないテンプレートの場合、これらのテンプレートを **[有効]**: **[オフ]** に設定します。
 
 - Azure ポータルでは、テンプレートをコピーまたは削除することはできません。 テンプレートがラベルに変換されると、テンプレートの使用を停止するようにラベルを構成できます。**[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** オプションに **[構成されていません]** を選択します。 あるいは、ラベルを削除できます。 ただし、いずれのシナリオでもテンプレートは削除されず、アーカイブされた状態で残ります。
     
@@ -138,7 +138,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 1. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[新しいラベルの追加]** を選択します。
 
-2. **[ラベル]** ブレードで、**[有効]** : **[オン]** を既定のままにします。次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
+2. **[ラベル]** ブレードで、既定である **[有効]**: **[オン]** のままにします。次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
 
 3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
     

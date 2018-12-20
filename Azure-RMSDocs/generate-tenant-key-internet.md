@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 014421aa6057f498454b2dcedf82edbeefd290d4
-ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
+ms.openlocfilehash: 7a7996c994cd225c35c5f135f289bb4c66e20cf9
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52268106"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173368"
 ---
-# <a name="generate-and-transfer-your-tenant-key--over-the-internet-retired-content"></a>テナント キーを生成して転送する – インターネット経由 | RETIRED CONTENT
+# <a name="generate-and-transfer-your-tenant-key--over-the-internet-retired-content"></a>テナント キーを生成して転送する – インターネット経由: 提供終了済みコンテンツ
 
->*適用対象: Azure Rights Management、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Azure Rights Management、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Rights Management では顧客管理テナントキー (Bring Your Own Key (BYOK) とも呼ばれる) に対して Azure Key Vault が使用されるようになったので、この記事の情報は必要なくなり、削除されました。 
 

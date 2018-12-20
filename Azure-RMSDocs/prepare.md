@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024103"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173878"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 組織の Azure Information Protection を展開する前に、組織のテナントの Azure AD にユーザーとグループのアカウントがあることを確認します。
 
@@ -73,9 +73,9 @@ Azure Information Protection でユーザーとグループを使用するシナ
     
     ドメインがテナントに追加されている場合 ("確認済みドメイン")、Azure Information Protection では Azure AD proxyAddresses 属性にある任意の値を使用できます。 ドメインの確認の詳細については、以下の項目をご覧ください。
     
-    - Azure AD: 「[Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)」
+    - Azure AD の場合: [Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Office 365: 「[Add a domain to Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)」(Office 365 にドメインを追加する)
+    - Office 365 の場合: [Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - **Azure AD userPrincipalName** 属性は、テナントにあるアカウントに対する値が Azure AD proxyAddresses 属性にない場合にのみ使用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスのない Office 365 のユーザーを作成する場合です。
 
@@ -113,7 +113,7 @@ Azure Information Protection では、テナント内のグループ用に Azure
 
 ## <a name="using-accounts-from-active-directory-on-premises-for-azure-information-protection"></a>オンプレミスの Active Directory からのアカウントを Azure Information Protection 用に使用する
 
-オンプレミスで管理されているアカウントがあり、Azure Information Protection でこのアカウントを使用したい場合は、このアカウントを Azure AD と同期する必要があります。 展開を容易にするために、[Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) を使用することお勧めします。 ただし、任意のディレクトリ同期方式を使用して同じ結果を達成できます。
+オンプレミスで管理されているアカウントがあり、Azure Information Protection でこのアカウントを使用したい場合は、このアカウントを Azure AD と同期する必要があります。 展開を容易にするために、[Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect) を使用することお勧めします。 ただし、任意のディレクトリ同期方式を使用して同じ結果を達成できます。
 
 アカウントを同期するとき、すべての属性を同期する必要はありません。 同期する必要がある属性の一覧については、Azure Active Directory のドキュメントの [Azure RMS に関するセクション](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms)をご覧ください。
 
@@ -207,7 +207,7 @@ Azure Information Protection で使用したいグループが表示されるこ
 
 ユーザーとグループを Azure Information Protection に使用できることと、ドキュメントと電子メールの保護を開始する準備ができたことを確認したら、Azure Rights Management サービスをアクティブにする必要があるかどうかを確認します。 組織のドキュメントと電子メールを保護するには、このサービスをアクティブにする必要があります。 
 
-- 2018 年 2 月以降: Azure Rights Management または Azure Information Protection を含むサブスクリプションを今月以降に取得した場合は、サービスが自動的にアクティブ化されます。 
+- 2018 年 2 月以降: Azure Rights Management または Azure Information Protection を含むサブスクリプションをこの月以降に取得した場合は、サービスが自動的にアクティブ化されます。 
 
 - 2018 年 2 月より前にサブスクリプションを取得した場合: 自分でサービスをアクティブにする必要があります。 
 

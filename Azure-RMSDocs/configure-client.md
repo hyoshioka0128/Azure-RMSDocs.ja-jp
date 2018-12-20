@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e60ef4d683abe920072fdc9cf6a0b8e9537cf5ff
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 9dfe8c6921b50faddb6ee8f24c39fe6f33e1fd4d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023415"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173317"
 ---
-# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
+# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントでのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Rights Management サービスと Azure Information Protection サービスに対して認証を行うには、Office 2010 を実行するコンピューターに Azure Information Protection クライアント (または Rights Management 共有アプリケーション) が必要です。 このクライアントは、Azure Rights Management サービスと Azure Information Protection をサポートするすべての Windows コンピューターと iOS および Android デバイスにも推奨されます。 
 
@@ -31,7 +31,7 @@ Azure Information Protection クライアントと Office アプリケーショ�
 > [!TIP]
 > 1 台のコンピューターで Azure Information Protection クライアントをインストールおよびテストする簡単な方法については、「[Azure Information Protection ユーザー ガイド](./rms-client/client-user-guide.md)」の「[Azure Information Protection クライアントをダウンロードしてインストールする](./rms-client/install-client-app.md)」を参照してください。
 
-## <a name="the-azure-information-protection-client-for-ios-and-android-installation-and-management"></a>iOS および Android 用 Azure Information Protection クライアント: インストールと管理
+## <a name="the-azure-information-protection-client-for-ios-and-android-installation-and-management"></a>iOS 用と Android 用の Azure Information Protection クライアント: インストールと管理
 これらの一般的なモバイル プラットフォーム用の Azure Information Protection クライアントをインストールするには、[Microsoft Azure Information Protection ページ](https://go.microsoft.com/fwlink/?LinkId=303970)のリンクを使用して関連するアプリをダウンロードできます。 構成は必要ありません。
 
 > [!NOTE]

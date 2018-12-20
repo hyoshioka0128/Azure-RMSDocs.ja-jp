@@ -1,6 +1,6 @@
 ---
 title: 概要 | Azure RMS
-description: RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。
+description: RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -12,18 +12,18 @@ ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2113d408356fc80efa90838bf667712d47ce7e0f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43e63165fcf8c19760a9f82619a02923ba55e97e
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147340"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266343"
 ---
 # <a name="getting-started"></a>はじめに
 
 Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は RMS サーバーまたは Azure RMS を介して RMS 情報保護を利用するアプリケーションを作成できます。 このプラットフォームでは、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
 
-## <a name="get-started-with-rms-sdk-21"></a>RMS SDK 2.1 の概要
+## <a name="get-started-with-rmssdk21"></a>RMS SDK 2.1 の概要
 
 このトピックでは、テスト環境で権限保護対応アプリケーションをセットアップおよび実行するためのプロセスについて説明します。 次のトピックでは、開発環境をセットアップする方法について説明しています。これらのトピックは、推奨されるタスクの実行順序に従って紹介されています。
 
@@ -39,7 +39,7 @@ Rights Management サービス SDK 2.1 プラットフォームを使用する�
 | [運用環境にデプロイする](deploying-your-application.md) |このトピックでは、権利保護に対応したアプリケーションのデプロイ オプションについて順を追って各操作を説明します。|
 
 
-これらのトピックのガイダンスに従って、RMS SDK 2.1 を使用してみてください。
+これらのトピックのガイダンスに従って、RMS SDK 2.1 を使用してみてください。
 
 - [SDK のインストール](install-the-rms-sdk.md)
 - [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
@@ -47,9 +47,9 @@ Rights Management サービス SDK 2.1 プラットフォームを使用する�
 - [アプリケーションのテスト](how-to-set-up-your-test-environment.md)
 - [運用環境にデプロイする](deploying-your-application.md)
 
-### <a name="why-use-rms-sdk-21-for-protecting-your-content"></a>コンテンツの保護に RMS SDK 2.1 を使用する理由
+### <a name="why-use-rmssdk21-for-protecting-your-content"></a>コンテンツの保護に RMS SDK 2.1 を使用する理由
 
-RMS のサポートを新規および既存のアプリケーションに追加する開発者に向けて、RMS SDK 2.1 は、次の作業を簡略化します。
+RMS のサポートを新規および既存のアプリケーションに追加する開発者に向けて、RMS SDK 2.1 は、次の作業を簡略化します。
 
 -   管理しやすく、規制に準拠した、堅牢な RMS 対応アプリケーションを作成する
 -   ユーザー データを永続的に暗号化する 環境、デバイス、またはオペレーティング システムに関係なくデータの暗号化を維持する
@@ -57,7 +57,7 @@ RMS のサポートを新規および既存のアプリケーションに追加�
 -   企業が管理する保護ポリシーをサポートする
 -   新しい認証メカニズムや暗号化アルゴリズムの登場と同時にサポートする
 
-RMS SDK 2.1 では、重要なクライアントおよびサーバー プラットフォームを幅広くサポートします。 詳細については、「[サポートされているプラットフォーム](supported-platforms.md)」を参照してください。
+RMS SDK 2.1 では、重要なクライアントおよびサーバー プラットフォームを幅広くサポートします。 詳細については、「[サポートされているプラットフォーム](supported-platforms.md)」を参照してください。
 
 ## <a name="core-principles"></a>基本原則
 
@@ -68,4 +68,3 @@ RMS SDK 2.1 では、重要なクライアントおよびサーバー プラッ�
 ## <a name="related-topics"></a>関連項目
 
 * [RMS 開発者ガイド](developers-guide.md)
-* [AD RMS Developer's Corner (AD RMS 開発者のコーナー)](http://blogs.msdn.com/b/rms/)

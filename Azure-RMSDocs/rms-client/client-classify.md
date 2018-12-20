@@ -4,27 +4,27 @@ description: ドキュメントや電子メールを分類する方法の手順�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e49cd5da0c34c8dd6fa537bca3d90ba56c32e690
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 823f252756e18d5a2ab2239afb85b58fc3aa048e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150230"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305303"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類する
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類します (保護はしません)。 ドキュメントや電子メールを保護する必要もある場合は、[分類して保護する手順](client-classify-protect.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
 
-Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) でドキュメントや電子メールを作成したり編集すると、分類が簡単になります。 
+次の Office デスクトップ アプリでドキュメントや電子メールを作成または編集している場合、それらを最も簡単な方法で分類できます: **Word**、**Excel**、**PowerPoint**、**Outlook**。 
 
 ただし、**エクスプローラー**を利用してファイルを分類することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類できるので便利です。 
 
@@ -70,7 +70,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 エクスプローラーを使用してファイルを分類する際に、1 つまたは複数のラベルが淡色表示になっている場合、選択したファイルは保護なしの分類をサポートしません。
 
-管理者ガイドには、保護なしの分類をサポートするファイルの種類の完全なリスト (「[分類のみにサポートされているファイルの種類](client-admin-guide-file-types.md#file-types-supported-for-classification-only)」) が含まれています。
+管理者ガイドには、保護なしの分類をサポートするファイルの種類の詳細な一覧が含まれています。「[分類のみにサポートされているファイルの種類](client-admin-guide-file-types.md#file-types-supported-for-classification-only)」を参照してください。
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類するには
 
@@ -80,7 +80,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類を設定します。 
     
-    選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 次に例を示します。
+    選択できるラベルがない場合 (ラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 次に例を示します。
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
 

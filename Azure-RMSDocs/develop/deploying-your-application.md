@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a3385f260928dabc7254a49f3265b647c2920703
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b1525665fb488aed1ad98a77ac66f92f7ee4509b
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150060"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266683"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -29,7 +29,7 @@ AIP/RMS を使用して開発したアプリケーションをリリースする
 ### <a name="begin-the-process"></a>プロセスを開始する
 次の情報を記載した電子メールを **IPIA@microsoft.com** に送信して、IPIA を入手します。
 
-**件名:** *会社名* の IPIA 申し込み
+**件名:** *会社名*の IPIA 申し込み
 
 電子メールの本文に、次の情報を含めます。
 - アプリケーションと製品名
@@ -65,18 +65,18 @@ IPIA の使用条件を確認し、次の情報をフォームに入力して **
 
 ## <a name="deploying-to-the-client-environment"></a>クライアント環境にデプロイする
 
-Azure Information Protection (AIP)/Rights Management サービス (RMS) ツールでビルドしたアプリケーションをデプロイするには、エンドユーザーのコンピューターに RMS クライアント 2.1 をデプロイする必要があります。
+Azure Information Protection (AIP)/Rights Management サービス (RMS) ツールでビルドしたアプリケーションをデプロイするには、エンドユーザーのコンピューターに RMS クライアント 2.1 をデプロイする必要があります。
 
-### <a name="rms-client-21"></a>RMS クライアント 2.1
+### <a name="rmsclient21"></a>RMS クライアント 2.1
 RMS クライアント 2.1 は、(オンプレミスでインストールされるか、Microsoft のデータセンターにインストールされているかにかかわらず) AIP/RMS 対応アプリケーション経由でやり取りされる情報へのアクセスと使用を保護するためのものです。
 
 RMS クライアント 2.1 は、Windows オペレーティング システムのコンポーネントではありません。 このクライアントはオプションのダウンロードとして配信されており、使用許諾契約書を確認して承諾することでお使いのアプリケーションと一緒に自由に配布できます。
 
 > [!IMPORTANT]
-> RMS クライアント 2.1 はアーキテクチャ固有であるため、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
+> RMS クライアント 2.1 はアーキテクチャ固有であるため、ターゲット オペレーティング システムのアーキテクチャと一致する必要があります。
 
 
-## <a name="rms-client-21-installation-options"></a>RMS クライアント 2.1 のインストール オプション
+## <a name="rmsclient21-installation-options"></a>RMS クライアント 2.1 のインストール オプション
 
 ### <a name="creating-your-deployment-package"></a>デプロイ パッケージの作成
 
@@ -85,11 +85,11 @@ RMS クライアント インストーラー パッケージは、お好みの�
 RMS クライアント 2.1 のインストーラーを起動して対話形式で RMS クライアント 2.1 をインストールすることも、サイレント モードでインストールすることもできます。 統合手順は次のとおりです。
 
 -   RMS クライアント 2.1 インストーラーをダウンロードする
--   実行する RMS クライアント 2.1 インストーラーをアプリケーションのインストーラーと統合する
+-   実行する RMS クライアント 2.1 インストーラーをアプリケーションのインストーラーと統合する
 
 RMS クライアント 2.1 とアプリケーションの統合の例として、[Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx) パッケージがあります。 手順を理解するために、これをご自分でインストールしてみてください。
 
-### <a name="make-rms-client-21-a-pre-requisite-for-your-application-install"></a>RMS クライアント 2.1 をアプリケーションをインストールする際の前提条件とする
+### <a name="make-rmsclient21-a-pre-requisite-for-your-application-install"></a>RMS クライアント 2.1 をアプリケーションをインストールする際の前提条件とする
 
 この場合、RMS クライアント 2.1 がエンドユーザーのコンピューターに存在しない場合、アプリケーションのインストールが失敗するように前提条件を作成します。
 
@@ -101,7 +101,7 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 > [!NOTE]
 > 認証用に新しい ADAL モデルに移行した場合は、**SIA** をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
-> あるいは、**Windows 10 のアプリケーション認定を受ける**ことができます。 - Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は多要素認証を利用したり、コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールしたりできるようになります。
+> **Windows 10 のアプリケーション認定を受ける**こともできます。Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は以下を利用できるようになります。多要素認証を使用する。コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールする
 
 エンドユーザーが Information Protection/サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
 
@@ -110,7 +110,7 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 > Azure ベースの RMS でクライアント アプリケーションを実行する場合は、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../requirements.md)」を参照してください。
 > Azure RMS での実行に関する詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
--   Microsoft ダウンロード センターから [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/download/details.aspx?id=28177)をダウンロードします。
+-   Microsoft ダウンロード センターから [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=28177)をダウンロードします。
 -   権利保護に対応したアプリケーションのデプロイにこのサービスを選択する前提条件チェックが含まれていることを確認します。
 -   ご自身のテストおよびエンドユーザーによるオンライン サービスの使用に関する詳細については、TechNet トピック「[Rights Management の構成](https://TechNet.Microsoft.Com/library/jj585002.aspx)」をご覧ください。
 
@@ -118,9 +118,9 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 アプリケーションによる Azure Rights Management サービスでの RMS の使用を有効にする方法の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」をご覧ください。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
-* [Microsoft Online Services サインイン アシスタント](http://www.microsoft.com/download/details.aspx?id=28177)
+* [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Rights Management を構成する](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [クラウド ベース RMS でのアプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
 

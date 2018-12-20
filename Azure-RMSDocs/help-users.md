@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024078"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173895"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
@@ -40,7 +40,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
 -   **ヘルプ デスク情報**
     
-    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
+    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」を参照してください。
     
     保護されたドキュメントに対する完全なアクセス権限を求める正当な要求がある場合、ヘルプ デスクには Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用してこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
@@ -102,7 +102,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブの **[アクセス許可]** をクリックし、オプションを選択します。 たとえば、**[転送不可]**、または **[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[オプション]** タブの **[アクセス許可]** をクリックし、オプションを選択します。 次に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
 
 3.  メッセージを送信します。
 
@@ -114,7 +114,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[…]**、**[アクセス許可の設定]** の順にクリックして、オプションを選択します。 例: **[転送不可]** または **[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[…]**、**[アクセス許可の設定]** の順にクリックして、オプションを選択します。 次に例を示します。**[転送不可]**、**[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
 
 3.  メッセージを送信します。
 

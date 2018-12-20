@@ -4,17 +4,17 @@ description: Azure Information Protection 向けに使用することで、組�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d537453395657309fe3f37d65b66b783890acdd8
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 7986648999a830985c4dbd1f31855bb222a443c2
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027065"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218376"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
@@ -24,9 +24,9 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 展開が最も成功するのは、組織にとってビジネス上の利益が最大になる特定のユース ケースを見つけた場合です。 一般的なシナリオと手順に関する以下の一覧を使用して、展開を開始しましょう。
 
+## <a name="common-scenarios"></a>一般的なシナリオ
 
-
-|シナリオの目的|手順|
+|シナリオ:目的:|手順|
 |----------------|---------------|
 |組織がオンプレミスに格納している機密情報を検索する|[クイック スタート: オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
 |ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
@@ -36,6 +36,18 @@ Azure Information Protection を使用して組織のドキュメントや電子
 |オンプレミスのデータ ストアにある既存のデータを自動的に分類して保護する|[Azure Information Protection スキャナーの展開](deploy-aip-scanner.md)|
 |自分のキーを使用して自分の組織のデータを保護する| [テナント キーの計画と実装](plan-implement-tenant-key.md)|
 |AD RMS から移行する|[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)|
+
+## <a name="additional-deployment-instructions"></a>デプロイの追加手順
+
+[Azure Information Protection の技術ブログ](https://aka.ms/AIPblog)には、カスタマー エクスペリエンス エンジニアリング チームによって追加の詳しい手順が示されています。 次に例を示します。
+
+- [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010) (Azure Information Protection を使用して PDF および Adobe Acrobat Reader を保護して表示する)
+
+- [Cataloging your Sensitive Data with AIP, Even Before Configuring Labels!](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cataloging-your-Sensitive-Data-with-AIP-Even-Before-Configuring/ba-p/267241) (AIP を使用してラベルを構成する前に、機密データをカタログ化する)
+
+- [Azure Information Protection Scanner Express Installation](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Scanner-Express-Installation/ba-p/265424) (Azure Information Protection スキャナーの簡易インストール)
+
+- [Discovery of Sensitive Data Using the AIP Scanner (AIP Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040) (AIP スキャナーを使用した機密データの検出 (AIP Premium P1))
 
 ## <a name="next-steps"></a>次の手順
 

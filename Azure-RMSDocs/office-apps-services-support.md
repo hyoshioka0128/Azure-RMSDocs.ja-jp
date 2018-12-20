@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 22df24a7af17dd87dd6f3947e39ea72d7b7b1372
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: e1a44fb7cf6e4ad340a89f236920e5ff6d96b7d0
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169942"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173997"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 エンド ユーザー Office アプリケーションと Office サービスで Azure Information Protection から Azure Rights Management サービスを使用し、組織のデータを保護できます。 これらの Office アプリケーションは Word、Excel、PowerPoint、および Outlook です。 Office サービスは Exchange および SharePoint です。 Azure Rights Management サービスをサポートする Office 構成では、多くの場合、**IRM (Information Rights Management)** という用語が使用されます。
 
@@ -34,7 +34,7 @@ Office アプリと Azure Information Protection クライアントを構成す�
 
 - Office アプリを構成するには、「[Office アプリ: クライアントの構成](configure-office-apps.md)」を参照してください。
 
-- Azure Information Protection クライアントをインストールして構成するには、「[Azure Information Protection クライアント: クライアントのインストールと構成](configure-client.md)」を参照してください。
+- Azure Information Protection クライアントをインストールして構成するには、[「Azure Information Protection クライアント: クライアントのインストールと構成](configure-client.md)」を参照してください。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
@@ -87,11 +87,11 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > 
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
-IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、そのファイルは共同編集、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP) で使用できません。
+IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、このファイルで次のことはできません: 共同編集、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
 
 SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 
-新しい投稿ではありませんが、「[What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)」 (SharePoint の Information Rights Management と SharePoint Online の新機能) という Office 365 ブログの投稿に追加情報があります。
+新しい投稿ではありませんが、Office 365 ブログの次の記事に追加情報があります: [What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/) (SharePoint と SharePoint Online の Information Rights Management の新機能)
 
 SharePoint の IRM を構成する用意ができている場合:
 

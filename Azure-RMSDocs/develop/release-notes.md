@@ -4,19 +4,19 @@ description: 重要な変更点、今度のバージョンの機能、前のバ�
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e3b4812f06c7ee86c48c0984e440d34f858bb4e7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6433352f05401fcaafc84704a0441941ff87bdf3
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266700"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -26,13 +26,13 @@ ms.locfileid: "44148785"
 
 -   [2017 年 7 月の新機能](#new-for-july-2017)
 -   [2016 年 10 月の更新](#October-2016-update)
--   [2016 年 6 月の更新](#new-for-June-2016)
+-   [2016 年 6 月の更新](#june-2016-update)
 -   [2015 年 12 月の更新](#december-2015-update)
--   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july-2015-update-adds-support-for-linux-c-developm)
--   [2015 年 5 月の更新 – ログの制御を追加](#may-2015-update-adds-logging-control)
--   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february-2015-update-adds-windows-store-application-support)
--   [2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加](#january-2015-update-adds-winphone-platform-support)
--   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july-2015-update---adds-support-for-linux--c-development)
+-   [2015 年 5 月の更新 – ログの制御を追加](#may-2015-update---adds-logging-control)
+-   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february-2015-update---adds-windows-store-application-support)
+-   [2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加](#january-2015-update---adds-winphone-platform-support)
+-   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
 -   [リリース ノート](#release-notes)
 -   [よく寄せられる質問](#frequently-asked-questions)
 
@@ -40,7 +40,7 @@ ms.locfileid: "44148785"
 
 7 月リリースの更新で SDK が改訂され、4.2.5 になりました。
 
-- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
+- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[方法: エラーとパフォーマンスのログを有効にする](https://docs.microsoft.com/information-protection/develop/enabling-logging)」を参照してください。
 - iOS SDK では、ログ記録レベルを設定できません。 
 - SDK は、NULL アクセス トークンに対してエラーを返すようになりました。
 
@@ -108,7 +108,7 @@ ms.locfileid: "44148785"
 
     ログ レベルの制御の設定が可能になりました。
 
-    詳細については、「[How to: Enable error and performance logging](enabling-logging.md)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
+    詳細については、「[方法: エラーとパフォーマンスのログを有効にする](enabling-logging.md)」を参照してください。
 
     キャッシュ クリアのサポートが追加されました。
 
@@ -193,7 +193,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 
 
-**注**  MDI アプリケーションは、iOS API ではサポートされていません。
+**注**  MDI アプリケーションは、iOS API ではサポートされていません。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -201,7 +201,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 これはなぜでしょうか。
 
-**A** – これは既知の問題であり、今後対応する予定です。
+**A**: これは既知の問題であり、今後対応する予定です。
 
 **Q**: SDK およびサンプル アプリケーションを試すために新しい組織のテナントを取得するにはどうすればよいですか。
 
@@ -222,7 +222,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **A**: Google API 15 以降を使用した Eclipse Juno です。
 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
-**A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから を呼び出す必要があります。
+**A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから呼び出す必要があります。
 
 **Android**
 

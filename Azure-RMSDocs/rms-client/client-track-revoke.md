@@ -4,18 +4,18 @@ description: ドキュメントを保護した後は、保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 485b999ce8b5adcbe284d0ea8286cdf1183ac8da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151034"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305228"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してドキュメントを追跡および取り消す
 
@@ -99,7 +99,7 @@ Office アプリまたはエクスプローラーを使用して保護された�
 
     - Internet Explorer:バージョン 10 以降
 
-    - Internet Explorer 9、MS12-037 (Internet Explorer 用の累積的なセキュリティ更新プログラム: 2012 年 6 月 12 日) 以降
+    - Internet Explorer 9、MS12-037 以降:Internet Explorer 用の累積的なセキュリティ更新プログラム:2012 年 6 月 12 日
 
     - Mozilla Firefox:バージョン 12 以降
 

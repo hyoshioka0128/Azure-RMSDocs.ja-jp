@@ -4,18 +4,18 @@ description: RMS コネクタを使用するサーバーでのレジストリ設
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
-ms.topic: article
+ms.date: 12/06/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9b99f914e78adafbcfd0f01f0937c6d636f43159
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 6af7fe3a7b23f655a79d67421f67292416792792
+ms.sourcegitcommit: 0632c89a316ff31f588e9752dd474445983b1690
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808698"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53120587"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
@@ -28,11 +28,11 @@ ms.locfileid: "42808698"
 
 -   *\<YourTenantURL>* は Azure Information Protection テナントの Azure Rights Management サービス URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure Rights Management サービスに [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
+    1.  Azure Rights Management サービスに [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
-        例: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        次に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  この値から、**/_wmcs/licensing** 文字列を削除します。 残りの文字列が Azure Rights Management サービス URL です。 この例では、Azure Rights Management サービス URL は次の値になります。
 
@@ -51,7 +51,7 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
@@ -61,7 +61,7 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
@@ -71,12 +71,12 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://*\<YourTenantURL>*
 
 
-**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*
 
@@ -86,12 +86,12 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://*<\YourTenantURL>*
 
 
-**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*
 
@@ -102,7 +102,7 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
@@ -112,7 +112,7 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
@@ -122,11 +122,11 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://*<\YourTenantURL>*
 
-**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*
 
@@ -136,11 +136,11 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://*<\YourTenantURL>*
 
-**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*
 
@@ -151,12 +151,12 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://*<\YourTenantURL>*/_wmcs/licensing
 
 
-**データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -166,11 +166,11 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
-**データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*/_wmcs/certification
 
@@ -180,12 +180,12 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
 
-**データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
+**データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
 - http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -198,7 +198,7 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 
@@ -208,7 +208,7 @@ ms.locfileid: "42808698"
 
 **レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** 既定
 

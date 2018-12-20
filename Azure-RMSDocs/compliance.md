@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 96746e39d564c87471205fa442976a3904ddf992
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: e6586c60934bf0db48295c3d9a7a40ece84f4ad2
+ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023823"
+ms.locfileid: "53068862"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
@@ -39,17 +39,17 @@ Azure Information Protection は他のサービスをサポートし、また�
 
 ## <a name="legal-and-privacy"></a>法律およびプライバシー
 
-- Microsoft Azure の契約情報について: [Microsoft Azure 契約](http://azure.microsoft.com/support/legal/subscription-agreement/)
+- Microsoft Azure の契約情報について:[Microsoft Azure 契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](http://azure.microsoft.com/support/legal/privacy-statement/)
+- Microsoft Azure のプライバシー情報について:[Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>セキュリティ、コンプライアンス、監査
 
 Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
 
-- Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](http://azure.microsoft.com/support/trust-center/)
+- Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](https://azure.microsoft.com/support/trust-center/)
 
-- FIPS 140 について: [FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
+- FIPS 140 について:[FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 保護テクノロジのしくみに関する詳細な技術情報については、「[Azure RMS の機能の詳細](./how-does-it-work.md)」を参照してください。 
 

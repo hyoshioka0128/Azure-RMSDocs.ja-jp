@@ -4,19 +4,19 @@ description: 組織でドキュメントや電子メールの保護を開始で�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82d1ee4267210b4fef989ab6a20385e24e2a8b35
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: cb90744828595b6cbf68962368fd001f3ca0eebd
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169891"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304827"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
 
@@ -30,7 +30,7 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
     
     以前に [Azure Information Protection] ブレードにアクセスしたことがない場合、このブレードをポータルに追加するには、1 回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)を参照してください。
     
-    [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[Microsoft サポートにお問い合わせいただく](information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。
+    [Azure Information Protection] ブレードを開くには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)または[Rights Management を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を持っている必要があります。 いずれかのサブスクリプションをお持ちで、有効なサブスクリプションが見つからないというメッセージが表示される場合、[Microsoft サポートにお問い合わせいただく](information-support.md#to-contact-microsoft-support)か、標準のサポート チャネルを使用してください。
 
 2. **[管理]** メニュー オプションを探し、**[Protection activation]\(保護のアクティブ化\)** を選択します。 
     

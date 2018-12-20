@@ -12,12 +12,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1adb21ac41a922ebb3636fcce9e13c9fd785930d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42a1944dcb643c1647ee7299456307815f1023b4
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151658"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266632"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
@@ -33,12 +33,12 @@ ms.locfileid: "44151658"
 アプリケーションを展開する前に、Microsoft Information Protection チームとの IPIA を完了する必要があります。 完全な詳細については、トピック「[運用環境にデプロイする](deploying-your-application.md)」の最初のセクションを参照してください。
 
 ## <a name="implement-user-authentication-for-your-app"></a>アプリのユーザー認証の実装
-各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。
+各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。
 
 - Android - [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) および [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx) インターフェイス。
 - iOS / OS X - [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) プロトコル。
 -  Windows Phone / Window RT - [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx) インターフェイス。
-- Linux - [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) インターフェイス。
+- Linux - [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) インターフェイス。
 
 ### <a name="what-library-to-use-for-authentication"></a>認証に使用するライブラリ
 認証コールバックを実装するには、適切なライブラリをダウンロードして、それを使用するように開発環境を構成する必要があります。 これらのプラットフォーム用の ADAL ライブラリが GitHub に用意されています。
@@ -51,8 +51,7 @@ ms.locfileid: "44151658"
 -   [Windows Azure Active Directory 認証ライブラリ (ADAL) (dotnet 向け)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Linux SDK の場合、ADAL ライブラリは SDK ソースでパッケージ化されます ([Github](https://github.com/AzureAD/rms-sdk-for-cpp) で入手可能)。
 
->[!NOTE]  
-> 他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
+>[!NOTE]   他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
 
 ### <a name="authentication-parameters"></a>認証パラメーター
 
@@ -72,8 +71,7 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] 
-> アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
+>[!NOTE]  アプリでこれらのガイドラインが遵守されていない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>認証コールバックの実装の例
 **認証コード例** - この SDK には、認証コールバックの使用を示すコード例が含まれています。 ご参考のためにここに、また以下のリンクされたトピックでいくつかのコード例を紹介します。

@@ -10,22 +10,22 @@ ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0f94a36f7653ef4aff590bb6815c75210768f7c5
-ms.sourcegitcommit: 227f54a8e90aa57d778ab60c646179c10e5edb44
+ms.openlocfilehash: 1988552916494ec6673f7439c0b132ccf87786c2
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51272365"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174082"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Rights Management サービスの管理には Azure クラシック ポータルが利用されていました。Azure Portal への移行でサポートが必要ですか?
 
 Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃止されました。 この日付以降は、クラシック ポータルから Azure Rights Management サービスとカスタム テンプレートを管理することができません。 クラシック ポータルにアクセスしようとすると、新しい Azure Portal に移動するためのリンクが表示されます。
 
-クラシック ポータルの廃止については、ブログ投稿でのお知らせ「[Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/)」 (Azure AD 管理は未来に向かいます: Azure クラシック ポータルは使用停止に) を参照してください。 元々の廃止日の一時的な延長については、「[Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/)」 (Azure AD クラシック ポータル エクスペリエンスの廃止と条件付きアクセス ポリシーの移行に関する更新) を参照してください。
+クラシック ポータルの廃止の詳細については、ブログ記事でのお知らせ「[Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/)」 (Azure AD 管理は未来に向かいます: Azure クラシック ポータルは使用停止に) を参照してください。 元々の廃止日の一時的な延長については、「[Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/)」 (Azure AD クラシック ポータル エクスペリエンスの廃止と条件付きアクセス ポリシーの移行に関する更新) を参照してください。
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>使い慣れた管理タスクの実行方法
 
@@ -55,7 +55,7 @@ Azure Portal の新機能:
 
 - テンプレートをラベルに変換できます。結果的に、テンプレートとラベルをそれぞれ管理するのではなく、1 つのオブジェクトを管理することになります。 方法については、「[テンプレートをラベルに変換するには](configure-policy-templates.md#to-convert-templates-to-labels)」を参照してください。
 
-- その他の管理者ロールのサポート: Azure Rights Management を構成するためにグローバル管理者として Azure クラシック ポータルにサインインする必要がありましたが、次のいずれかの管理者ロールを持つアカウント (**グローバル管理者**、**セキュリティ管理者**、または **Information Protection 管理者**) を使用して、Azure Portal にサインインし、Azure Information Protection を構成できます。 これらの各ロールの詳細については、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」を参照してください。
+- その他の管理者ロールのサポート: Azure Rights Management を構成するためにグローバル管理者として Azure クラシック ポータルにサインインする必要がありましたが、Azure Information Protection を構成する目的で Azure portal にサインインするときは、次のいずれかの管理者ロールを持つアカウントを使用できます: **グローバル管理者**、**セキュリティ管理者**、**Information Protection 管理者**。 これらの各ロールの詳細については、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」を参照してください。
 
 テンプレートの作成と管理、サービスの有効化と無効化のための PowerShell コマンドレットは、変更なく引き続きサポートされます。
 

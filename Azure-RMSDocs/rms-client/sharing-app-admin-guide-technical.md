@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ec0c231e2036dc66b941be7f764bb5e5fd5c518a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7104da9852458cbe9100600c3e14b43ee4aa7986
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023804"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218478"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの技術的概要と保護の詳細
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 
 Microsoft Rights Management 共有アプリケーションは、Microsoft Windows およびその他のプラットフォーム用のオプションのダウンロード可能なアプリケーションであり、次の機能を備えています。
@@ -34,7 +34,7 @@ Microsoft Rights Management 共有アプリケーションは、Microsoft Window
 
 -   ファイル分類インフラストラクチャ (FCI) およびサポートされている PDF 作成ツールを使用して保護された PDF ファイルとの完全な相互運用。
 
-Microsoft Rights Management 共有アプリケーションでは、[AD RMS Client 2.1 ランタイム](http://www.microsoft.com/download/details.aspx?id=38396)が使用されます。 Microsoft Rights Management 共有アプリケーションは、AD RMS 2.1 の機能を使用することにより、エンド ユーザーが簡単に保護および使用できるようにします。
+Microsoft Rights Management 共有アプリケーションでは、[AD RMS Client 2.1 ランタイム](https://www.microsoft.com/download/details.aspx?id=38396)が使用されます。 Microsoft Rights Management 共有アプリケーションは、AD RMS 2.1 の機能を使用することにより、エンド ユーザーが簡単に保護および使用できるようにします。
 
 RMS の 2013 年 10 月リリースでは、Office 2010 を使用してネイティブにドキュメントを保護し、それを別の企業のユーザーに送信できます。次に、そのユーザーは Azure Information Protection から Azure Rights Management サービスを使用してドキュメントを利用できます。 さらに、このリリースでは、暗号化モード 2 で AD RMS を使用すると、個人向け RMS を使用して、Azure Rights Management サービスを使用する別の企業内のユーザーからのコンテンツを利用できます。 暗号化モード 2 について詳しくは、「[AD RMS の暗号化モード](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx)」をご覧ください。
 
@@ -100,7 +100,7 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 既定ではネイティブ保護が適用されるすべてのファイルにジェネリック保護を適用するように RMS 共有アプリケーションを構成するには、次のレジストリ編集を行います。 RmsSharingApp キーまたは FileProtection キーが存在しない場合は、手動でそれらを作成する必要があることに注意してください。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: * という名前の新しいキーを作成します。
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**:* という名前の新しいキーを作成します。
 
     この設定は、任意のファイル名拡張子を持つファイルを表します。
 
@@ -110,7 +110,7 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 これら 2 つの設定により、RMS 共有アプリケーションは、ファイル名拡張子を持つすべてのファイルにジェネリック保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つのレジストリ編集を行う必要があります。
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: ファイル名拡張子の名前を持つ新しいキーを追加します (前にピリオドは付けません)。
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**:ファイル名拡張子を名前として持つ新しいキーを追加します (前にピリオドは付けません)。
 
     たとえば、.docx というファイル名拡張子を持つファイルの場合、 **DOCX**という名前のキーを作成します。
 
@@ -124,11 +124,11 @@ RMS 共有アプリケーションがファイルを保護する方法は、レ�
 
 次の値をサポートする **Encryption** 文字列の値を変更することで、他のシナリオで同様のレジストリ編集を行うことができます。
 
--   **Pfile**:一般保護
+-   **Pfile**: 一般保護
 
--   **Native**:ネイティブ保護
+-   **Native**: ネイティブ保護
 
--   **Off**:保護のブロック
+-   **Off**: 保護ブロック
 
 ## <a name="see-also"></a>参照
 [Rights Management 共有アプリケーション ユーザー ガイド](sharing-app-user-guide.md)

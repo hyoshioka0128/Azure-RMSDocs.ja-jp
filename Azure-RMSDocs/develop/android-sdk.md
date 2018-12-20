@@ -1,6 +1,6 @@
 ---
 title: Android のセットアップ | Azure RMS
-description: Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
+description: Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、そのアプリケーション内で統合情報保護を有効にできます。
 keywords: ''
 author: lleonard-msft
 ms.author: alleonar
@@ -12,16 +12,16 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d6a851cc5568b14b1f18ad71169b2c0e6efc136b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 242700c089e34bc69eef10a45ea761f9668f4a42
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147527"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266649"
 ---
 # <a name="android-setup"></a>Android のセットアップ
 
-Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
+Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
@@ -30,18 +30,18 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
--   [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) 開発環境を実行する Windows または OS X オペレーティング システム。
+-   [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) 開発環境を実行する Windows または OS X オペレーティング システム。
 -   このガイドでは、Eclipse Juno 4.2 以降を持つ Eclipse SDK と、既定のインストールを使用していることを前提としています。
 -   Java 1.6 以降。
--   [Android Developer Tools (ADT) プラグイン](http://developer.android.com/sdk/installing/index.html)。 注 - インストールを完了するために、Eclipse の再起動を求められる場合があります。
+-   [Android Developer Tools (ADT) プラグイン](https://developer.android.com/studio/install)。 注 - インストールを完了するために、Eclipse の再起動を求められる場合があります。
 
-     
+     
 
--   Android 向け MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
+-   Android 向け MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
 
     この SDK は、Android 4.0.3 (API レベル 15) 以降を対象とする開発に使用できます。
 
@@ -49,11 +49,11 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
     詳細については、「[ADAL for iOS ](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)」 (iOS 用の ADAL) を参照してください。
 
-    **注**  アプリケーションで OAuth 2.0 認証ライブラリとして ADAL ライブラリが使用されない場合は、Android ガイダンス「[Some SecureRandom Thoughts](http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html)」 (セキュリティ保護に関するランダムな意見) を参照してください。
+    **注**   アプリケーションで OAuth 2.0 認証ライブラリとして ADAL ライブラリが使用されない場合は、Android のガイダンス「[Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html)」 (SecureRandom に関する考察) を参照してください。
 
-     
+     
 
-「[What's new](release-notes.md)」 (新機能) トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
+「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
 ## <a name="optional"></a>省略可能
 
@@ -61,9 +61,9 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 ## <a name="configuring-your-development-environment"></a>開発環境の構成
 
-**注**  MS RMS SDK 4.2 プレビュー リリース: このプレビュー リリースでは、com/microsoft/protection から com/microsoft/rightsmanagment へのパス名の変更を表示するようにスクリーンショットが更新されていません。 テキストは更新されています。
+**注**  MS RMS SDK 4.2 プレビュー リリース: このプレビュー リリースでは、com/microsoft/protection から com/microsoft/rightsmanagment へのパス名の変更を表示するようにスクリーンショットが更新されていません。 テキストは更新されています。
 
- 
+ 
 -   Eclipse の開発環境を開きます。
 -   Android アプリケーション プロジェクトを新規作成するには、**[File]** メニューで **[New]**、**[Project]** の順にクリックし、**[Android Application Project]** を選択します。
 
@@ -117,7 +117,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   **[OK]** をクリックします。
 
-    MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
+    MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
 
     アクセス許可を追加するには、**[Add]** をクリックして、**[Uses Permissions]** を選択します。
 
@@ -134,11 +134,11 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
     <uses-permission/>
    ```
 
-**注**  SDK では *android.support.v4* が使用されます。
+**注**  SDK では *android.support.v4* が使用されます。
 
 -   新しい独自の Android アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
 [作業開始](get-started.md)
 

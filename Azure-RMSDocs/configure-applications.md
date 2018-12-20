@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04a93c57e2ea940384a171284da57b5d7c1572d9
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b53bb0a914871ba2a53ad7ff4c3bd6fca0d32dde
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148564"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173266"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > ここでは、Azure Information Protection をデプロイした IT 管理者やコンサルタント向けの情報を紹介しています。 特定のアプリケーション用の Rights Management 機能の使用方法、または権利保護されたファイルを開く方法に関するユーザー向けヘルプや情報をお探しの場合は、アプリケーションに付属しているヘルプとガイダンスを使用してください。
@@ -31,19 +31,19 @@ ms.locfileid: "44148564"
 > [!IMPORTANT]
 > サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](requirements.md)」を参照してください。
 
--   [Office 365: クライアントとオンライン サービスの構成](configure-office365.md)
+-   [Office 365: クライアントとオンライン サービスの構成](configure-office365.md)
 
-    -   [Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)
+    -   [Exchange Online: IRM 構成](configure-office365.md#exchange-online-irm-configuration)
 
-    -   [SharePoint Online と OneDrive for Business: IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online と OneDrive for Business: IRM 構成](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
 
 - [Office アプリケーション: クライアントの構成](configure-office-apps.md)
 
-    -   [Office 2016 と Office 2013](configure-office-apps.md#office-2016-and-office-2013)
+    -   [Office 2016 と Office 2013](configure-office-apps.md#office-2016-and-office-2013)
 
-    -   [Office 2010](configure-office-apps.md#office-2010)
+    -   [Office 2010](configure-office-apps.md#office-2010)
 
--   [Azure Information Protection クライアント: クライアントのインストールと構成](configure-sharing-app.md)
+-   [Azure Information Protection クライアント: クライアントでのインストールと構成](configure-sharing-app.md)
 
 -   [Rights Management 共有アプリケーション: クライアントでのインストールと構成](configure-sharing-app.md)
 

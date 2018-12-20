@@ -4,19 +4,18 @@ description: 分類と保護に対するラベルが付けられた PDF ドキ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/12/2018
 ms.topic: article
-ms.prod: azure
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: 4a4d396db6eaac2709577023d873587697327bef
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: fc1a6c136d0b44671cbae0e6eb15202364e356d4
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023602"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246124"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Microsoft Information Protection のサポートされる PDF Reader
 
@@ -34,7 +33,7 @@ Microsoft と Adobe のコラボレーションによって、分類され、必
     
     この機能が[管理者によって無効](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)にされていない限り、最新バージョンの Azure Information Protection クライアントではこの保護された PDF ファイル形式が既定で有効化されるようになりました。
 
-詳細については、「[Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)」 (10 月以降、Microsoft Information Protection で保護されている PDF に Adobe Acrobat Reader を使用する) のブログ記事を参照してください
+詳細については、ブログ記事「[Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738)」 (10 月以降、Microsoft Information Protection で保護されている PDF に Adobe Acrobat Reader を使用する) を参照してください。
 
 ## <a name="supported-pdf-readers"></a>サポートされる PDF Reader
 
@@ -42,7 +41,7 @@ Microsoft と Adobe のコラボレーションによって、分類され、必
 
 |オペレーティング システム|サポートされるリーダーとダウンロード リンク|
 |----------------|-----------------------------------|
-|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Adobe Acrobat Reader (推奨):<br />-  [Adobe の一般使用条件を参照する](https://www.adobe.com/legal/terms.html) <br />- [プレビューをダウンロードする](https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/misc/MIP_Preview/1900820120/Adobe_MIP_Preview_1900820120.zip) <br /><br /> Azure Information Protection ビューアー: [ダウンロード](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [ダウンロード](https://www.foxitsoftware.com/pdf-reader/)|
+|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Adobe Acrobat Reader (推奨):<br />-  1.  [Adobe の一般使用条件を参照する](https://www.adobe.com/legal/terms.html) <br />- 2.  [Adobe サイト](https://www.adobe.com/)から Adobe Reader をインストールする<br />- 3.  [Adobe プラグイン](https://go.microsoft.com/fwlink/?linkid=2050049)をインストールする<br />- 4.  メッセージが表示されたら、管理者に[プラグインの承認](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)を依頼してください。 <br /><br /> Azure Information Protection ビューアー: [ダウンロード](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [ダウンロード](https://www.foxitsoftware.com/pdf-reader/)|
 |Android|Azure Information Protection アプリ: [ダウンロード](https://go.microsoft.com/fwlink/?LinkId=325340)|
 |iOS|Azure Information Protection アプリ: [ダウンロード](https://go.microsoft.com/fwlink/?LinkId=325338)|
 

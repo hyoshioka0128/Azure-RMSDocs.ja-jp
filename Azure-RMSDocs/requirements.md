@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43ff5d8fabf8197ba8ea235b01258dff12a5acd4
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 4ef35134a8f5d6a3a8a615be6c956ec5e445557d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024148"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173742"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 組織の Azure Information Protection をデプロイする前に、次の前提条件が満たされていることを確認します。 
 
@@ -27,7 +27,7 @@ ms.locfileid: "53024148"
 
 **分類、ラベル付け、保護の場合**: [Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)を取得する必要があります。 
 
-**保護のみの場合**: [Azure Information Protection を含む Office 365 プラン](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。
+**保護のみの場合**: [Azure Information Protection を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。
 
 使用する Azure Information Protection 機能を含むサブスクリプションを組織が所有していることを確認するには、「[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)」ページの機能一覧をご覧ください。
 
@@ -50,7 +50,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure Information Protection で多要素認証 (MFA) がサポートされます。
 
-条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次の FAQ の「[条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)」を参照してください。
+条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次の FAQ を参照してください: [条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
 認証要件の詳細については、「[Azure Information Protection の Azure Active Directory の要件](requirements-azure-ad.md)」をご覧ください。 
 
@@ -116,7 +116,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 - **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
     
-    - ヒント: Chrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
+    - ヒントChrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
     
         ブラウザー ウィンドウに表示されるものについては気に留める必要はありません。 その代わりに、アドレス バーの鍵マークをクリックしてサイトの情報を確認します。 サイトの情報で発行元の証明機関 (CA) を確認できます。 証明書が Microsoft CA によって発行されたものでない場合、クライアントとサービス間のセキュリティで保護された接続は終了し、ファイアウォール上で再構成する必要がある場合があります。 次の図は、Microsoft が発行した CA の例です。 証明書を発行したのが内部 CA である場合、この構成は Azure Information Protection との互換性がありません。
         

@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024010"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174133"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > この機能はプレビュー段階にあり、やはりプレビュー段階にある新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされており、作成し、管理するラベルは複数のクライアントやサービスで使用できます。
@@ -76,15 +76,15 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 |ラベル構成|統合ラベル付けのクライアントによるサポート|セキュリティ/コンプライアンス センターで編集から除外する|
 |-------------------|---------------------------------------------|-------------------------|
-|有効または無効の状態<br /><br />注: セキュリティ/コンプライアンス センターには同期されません |適用できません|適用できません|
-|ラベルの色: 一覧から選択するか、RGB コードを使用して指定します<br /><br />注: ラベルの色はセキュリティ/コンプライアンス センターではサポートされていません |適用できません|適用できません|
+|有効または無効の状態<br /><br />注:セキュリティ/コンプライアンス センターには同期されません |適用できません|適用できません|
+|ラベルの色: 一覧から選択するか、RGB コードを使用して指定します<br /><br />注:ラベルの色はセキュリティ/コンプライアンス センターではサポートされていません |適用できません|適用できません|
 |事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |[いいえ]|はい|
 |Word、Excel、PowerPoint でユーザー定義のアクセス許可を使用するクラウドベースの保護 |[いいえ]|はい|
 |[転送不可] に関する Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 |[いいえ]|はい|
 |保護を解除する |[いいえ]|はい|
-|視覚的なマーキング (ヘッダー、フッター、透かし): カスタム フォントと RGB コードによるカスタム フォントの色|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
+|視覚的なマーキング (ヘッダー、フッター、透かしなど): カスタム フォントと RGB コードによるカスタム フォントの色|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
 |アプリごとの視覚的なマーキング|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
-|条件と関連設定 <br /><br />注: 自動の推奨ラベル付けとそのツールヒントが含まれます|適用できません|[いいえ]|
+|条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用できません|[いいえ]|
 
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Azure Information Protection ラベルを移行するには
@@ -117,4 +117,4 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 Office 365 セキュリティ/コンプライアンス センターで構成および公開できるようになった移行済みラベルについては、「[機密ラベルの概要](/Office365/SecurityCompliance/sensitivity-labels)」をご覧ください。
 
-発表については、ブログ記事「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」(セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。
+発表については、ブログ記事「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。

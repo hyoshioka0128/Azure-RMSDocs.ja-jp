@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 40cc70864d68b4bdcc1081f908539663ba8366a8
-ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
+ms.openlocfilehash: 72735ea07a00f37377bbbab781c03c4516f032de
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915565"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173793"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
@@ -43,7 +43,7 @@ ms.locfileid: "50915565"
 
 3. **[サインアップ]** をクリックします。
 
-    Microsoft では、ユーザーの電子メール アドレスを使用して、組織が既に [Azure Information Protection Premium のサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)、または [Azure Information Protection を使用したデータ保護を含む Office 365 サブスクリプション](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を利用しているかどうかを確認します。 これらのサブスクリプションのいずれかが見つかったら、個人用 RMS は必要ありません。 すぐにサインインが行われ、個人用 RMS のセルフ サービス サインアップはキャンセルされます。 これらのサブスクリプションのいずれも見つからない場合は、次の手順に進みます。
+    Microsoft では、ユーザーの電子メール アドレスを使用して、組織が既に [Azure Information Protection Premium のサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)、または [Azure Information Protection を使用したデータ保護を含む Office 365 サブスクリプション](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を利用しているかどうかを確認します。 これらのサブスクリプションのいずれかが見つかったら、個人用 RMS は必要ありません。 すぐにサインインが行われ、個人用 RMS のセルフ サービス サインアップはキャンセルされます。 これらのサブスクリプションのいずれも見つからない場合は、次の手順に進みます。
 
 4. 入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 

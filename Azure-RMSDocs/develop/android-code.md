@@ -5,28 +5,28 @@ keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bf1958dca3c4c1c461fa7c66758a9a6f97377569
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8537a4a9e51b99e0dd37e7abc720473b364cd879
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147459"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173691"
 ---
 # <a name="android-code-examples"></a>Android のコード例
 
 この記事では、Android バージョンの RMS SDK の要素をコーディングする方法を示します。
 
-**注**: この記事では、用語 _MSIPC_ (Microsoft Information Protection and Control) は、クライアント プロセスを指します。
+**注** : この記事では、用語 _MSIPC_ (Microsoft Information Protection and Control) は、クライアント プロセスを指します。
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
+## <a name="using-the-microsoft-rights-management-sdk42---key-scenarios"></a>Microsoft Rights Management SDK 4.2 の使用 - 主要なシナリオ
 
 この SDK を理解する上で重要な開発シナリオを表す大規模なサンプル アプリケーションのコード例を次に示します。 これらは、以下の使用方法を示します。
 
@@ -36,13 +36,13 @@ ms.locfileid: "44147459"
 
 *MSIPCSampleApp* サンプル アプリケーションは、この Android オペレーティング システム用の SDK で使用可能です。 詳細については、[rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) に関するページをご覧ください。
 
-### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ: RMS 保護ファイルを使用する
+### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ:RMS 保護ファイルを使用する
 
 - **手順 1**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) を作成します。
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
+    **説明**:[ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -108,7 +108,7 @@ ms.locfileid: "44147459"
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: この手順では、ADAL を使用して、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) に関するページをご覧ください。
+    **説明**:この手順では、ADAL を使用して、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) に関するページをご覧ください。
 
 
     ``` java
@@ -185,7 +185,7 @@ ms.locfileid: "44147459"
                       }
     ```
 
-- **手順 3**. [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
+- **手順 3**: [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
 
     **ソース**: *TextEditorFragment.java*
 
@@ -201,11 +201,11 @@ ms.locfileid: "44147459"
     ```
 
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ:テンプレートを使用して新しい保護ファイルを作成する
 
 このシナリオは、はじめにテンプレートの一覧を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
-- **手順 1**. [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) オブジェクトを使用してテンプレートの一覧を取得します。
+- **手順 1**: [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) オブジェクトを使用してテンプレートの一覧を取得します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -247,7 +247,7 @@ ms.locfileid: "44147459"
       }
     ```
 
-- **手順 2**. 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 2**: 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -291,7 +291,7 @@ ms.locfileid: "44147459"
       }
     ```
 
--  **手順 3**. [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
+-  **手順 3**: [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -355,9 +355,9 @@ ms.locfileid: "44147459"
     ```
 
 
-### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
+### <a name="scenario-open-a-custom-protected-file"></a>シナリオ:カスタム保護ファイルを開く
 
-- **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 1**: *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -417,7 +417,7 @@ ms.locfileid: "44147459"
     ```
 
 
-- **手順 2**. **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
+- **手順 2**: **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -488,7 +488,7 @@ ms.locfileid: "44147459"
     }
     ```
 
-- **手順 3**. [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
+- **手順 3**: [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -523,13 +523,13 @@ ms.locfileid: "44147459"
     }
     ```
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>シナリオ: カスタム ポリシーを使用してカスタム保護ファイルを作成する
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>シナリオ:カスタム ポリシーを使用してカスタム保護ファイルを作成する
 
-- **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
+- **手順 1**: ユーザーが指定した電子メール アドレスを使用してポリシー記述子を作成する
 
     **ソース**: *MsipcTaskFragment.java*
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) と [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) からのユーザー入力を使用して作成されます。
+    **説明**:実際には、次のオブジェクトは、デバイス インターフェイス [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) と [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) からのユーザー入力を使用して作成されます。
 
     ``` java
       // create userRights list
@@ -546,7 +546,7 @@ ms.locfileid: "44147459"
     ```
 
 
-- **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 2**: ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -556,7 +556,7 @@ ms.locfileid: "44147459"
     ```
 
 
-- **手順 3**. [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) を作成してコンテンツを書き込み、閉じます。
+- **手順 3**: [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) を作成してコンテンツを書き込み、閉じます。
 
     **ソース**: *MsipcTaskFragment.java*
 

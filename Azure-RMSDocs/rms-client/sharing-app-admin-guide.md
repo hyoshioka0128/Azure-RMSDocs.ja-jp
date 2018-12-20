@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7be58d201ddd24497ff79935554c2a68efd04a3f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f013014f0256a01c30d9518089f2604ed9a668
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024435"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246192"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>保護のレベル – ネイティブと汎用
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 7 SP1、Windows 8、Windows 8.1*
 
 > [!IMPORTANT]
 > **サポートの終了通知**: Windows 用 Rights Management 共有アプリケーションは [Azure Information Protection クライアント](aip-client.md)に置き換えられます。 この古いアプリケーションのサポートは、2019 年 1 月 31 日に停止されます。 
@@ -33,11 +33,11 @@ Rights Management 共有アプリケーションの技術的概要、ネイテ�
 ## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Microsoft Rights Management 共有アプリケーションの自動デプロイ
 Windows 版の RMS 共有アプリケーションはスクリプト化されたインストールをサポートするため、企業のデプロイメントに適しています。
 
-インストールの唯一の前提条件は、コンピューターが Windows 7 Service Pack 1 以上のバージョンを搭載していて、Microsoft Framework バージョン 4.0 以上がインストールされていることです。 Microsoft .NET Framework 4.0 をインストールする必要がある場合は、[Microsoft ダウンロード センターからダウンロードしてインストール](http://www.microsoft.com/download/details.aspx?id=17718)できます。
+インストールの唯一の前提条件は、コンピューターが Windows 7 Service Pack 1 以上のバージョンを搭載していて、Microsoft Framework バージョン 4.0 以上がインストールされていることです。 Microsoft .NET Framework 4.0 をインストールする必要がある場合は、[Microsoft ダウンロード センターからダウンロードしてインストール](https://www.microsoft.com/download/details.aspx?id=17718)できます。
 
 ### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>RMS 共有アプリケーションを自動デプロイメント用にダウンロードするには
 
-1.  Microsoft ダウンロード センターの「 [Windows 用 Microsoft Rights Management 共有アプリケーション](http://www.microsoft.com/download/details.aspx?id=40857) 」ページに移動して、**[ダウンロード]** をクリックします。
+1.  Microsoft ダウンロード センターの「 [Windows 用 Microsoft Rights Management 共有アプリケーション](https://www.microsoft.com/download/details.aspx?id=40857) 」ページに移動して、**[ダウンロード]** をクリックします。
 
 2.  必要なファイルを選択してダウンロードします。 次の 2 つのクライアント インストール パッケージがあります。1 つは Windows 64 ビット (Microsoft Rights Management 共有アプリケーション x64.zip)、もう 1 つは Windows 32 ビット (Microsoft Rights Management 共有アプリケーション x86.zip) です。
 
@@ -92,7 +92,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     1.  ローカル管理者アカウントを使用して、コンピューターにログインします。
 
-    2.  そのコンピューターで、 [Microsoft Online サインイン アシスタントをダウンロードしてインストールします](http://www.microsoft.com/download/details.aspx?id=28177)。
+    2.  そのコンピューターで、 [Microsoft Online サインイン アシスタントをダウンロードしてインストールします](https://www.microsoft.com/download/details.aspx?id=28177)。
 
     3.  次のコマンドを実行し、証明サービスの URL を画面に表示します。次に、これをコピーして、この後の手順のために保存します。
 
@@ -217,7 +217,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     インストールが成功した場合、終了コードは 0 となり、それ以外の場合はインストールが失敗したことを示します。
 
-    ログ ファイル名の例: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
+    ログ ファイル名の例:**C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office2010-and-azure-information-protection"></a>Office 2010 用 RMS 共有アプリケーションおよび Azure Information Protection のインストールの成功を確認するには
 
@@ -225,7 +225,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     インストールが成功した場合、終了コードは 0 となり、それ以外の場合はインストールが失敗したことを示します。
 
-    ログ ファイル名の例: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
+    ログ ファイル名の例:**C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
 
 2.  RMSSetup.exe コマンドの成功を確認するには、ユーザーが *%localappdata%\microsoft\drm* フォルダーに次のファイルを作成しておく必要があります。
 
@@ -247,7 +247,7 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
     インストールが成功した場合、終了コードは 0 となり、それ以外の場合はインストールが失敗したことを示します。
 
-    ログ ファイル名の例: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
+    ログ ファイル名の例:**C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
 
 2.  aadrmprep.exe コマンドの成功を確認するには、各コンピューターのインストール ログ ファイルで、 **aadrmprep.exe exited with status SUCCESS**というテキストを探します。
 
@@ -274,21 +274,21 @@ RMS 共有アプリケーションのセットアップ パッケージは、さ
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>RMS 共有アプリケーションおよび Office アドインのみのインストールの成功を確認するには
 
-1.  Setup_ipviewer.exe コマンドの成功を確認するには、インストール ログ ファイルでテキスト「**インストールの成功またはエラーの状態 0**」を探します。
+1.  Setup_ipviewer.exe コマンドが成功したことを確認するには、インストール ログ ファイルで次のテキストを検索します。**Installation success or error status: 0**
 
     インストールの成功を示す行の例:
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Product: Active Directory Rights Management Services Client 2.1 -- Installation completed successfully.**
+    **MSI (s) (F0:B8) [14:19:57:854]:Product:Active Directory Rights Management Services Client 2.1 -- Installation completed successfully.**
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer installed the product.Product Name:Active Directory Rights Management Services Client 2.1.Product Version:1.0.1179.1.Product Language:1033.製造元:Microsoft Corporation.Installation success or error status: 0.**
+    **MSI (s) (F0:B8) [14:19:57:854]:Windows Installer installed the product.Product Name:Active Directory Rights Management Services Client 2.1.Product Version:1.0.1179.1.Product Language:1033.Manufacturer:Microsoft Corporation.Installation success or error status:0.**
 
-2.  Office アドインの成功を確認するには、各コンピューターのインストール ログ ファイルでテキスト「**インストールの成功またはエラーの状態 0**」を探します。
+2.  Office アドインが成功したことを確認するには、各コンピューターのインストール ログ ファイルで次のテキストを検索します。**Installation success or error status: 0**
 
     インストールの成功を示す行の例:
 
-    **MSI (s) (9C:88) [18:49:04:007]: Product: Microsoft RMS Office Addins -- Installation completed successfully.**
+    **MSI (s) (9C:88) [18:49:04:007]:Product:Microsoft RMS Office Addins -- Installation completed successfully.**
 
-    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer installed the product.Product Name:Microsoft RMS Office Addins.Product Version:1.0.7.Product Language:1033.製造元:Microsoft.Installation success or error status: 0.**
+    **MSI (s) (9C:88) [18:49:04:007]:Windows Installer installed the product.Product Name:Microsoft RMS Office Addins.Product Version:1.0.7.Product Language:1033.製造元:Microsoft.Installation success or error status:0.**
 
 ## <a name="uninstall-commands"></a>アンインストール コマンド
 これらのデプロイメントに必要なすべてのインストール コマンドで、アンインストール コマンドがサポートされているわけではありません。 AD RMS クライアントと、共有アプリケーションをアンインストールし、Office アドインをアンインストールすることができます。 これらの要素をアンインストールするには、次のコマンドを使用します。
@@ -340,7 +340,7 @@ RMS 共有アプリケーションは、WSUS ではサポートされていな�
 
 3.  テストが完了し、問題を解決したら、このガイドの自動デプロイメントの手順を使用して、すべてのユーザーに最新バージョンをデプロイします。
 
-## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection のみ: ドキュメントの追跡の構成
+## <a name="azure-information-protection-only-configuring-document-tracking"></a>Azure Information Protection のみ: ドキュメント追跡の構成
 [ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ドキュメント追跡では、ユーザーが共有している保護されたドキュメントにアクセスしようとしている人々の電子メール アドレス、これらの人々がアクセスを試みた時刻、およびその場所などの情報が示されます。 プライバシーに関する要件により、組織でこの情報の表示が禁止されている場合、[Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) コマンドレットを使用して、ドキュメント追跡サイトへのアクセスを無効にすることができます。 サイトへのアクセスは [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) を使用して、いつでも再度有効にすることができます。また、[Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) を使用して、アクセスが現在有効になっているか無効になっているかを確認できます。
 
 これらのコマンドを使用するには、バージョン **2.3.0.0** 以降の Windows PowerShell 用 Azure Information Protection モジュールが必要です。 インストール手順については、「[AADRM PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
@@ -395,7 +395,7 @@ AD RMS を使用していて、組織のユーザーが複数の電子メール
 
 2.  **RmsSharingApp** を選択し、**FederatedDomains** という名前の新しい複数文字列値を作成して、組織で使用されるドメインとすべてのサブドメインを追加します。 ワイルドカードはサポートされません。
 
-    例:Coho Vineyard &amp; Winery という会社には、標準の電子メール ドメインとして **cohovineyardandwinery.com** がありますが、合併の結果、**cohowinery.com**、**eastcoast.cohowinery.com**、および **cohovineyard** という電子メール ドメインも使用されています。 **FederatedDomains** 値のデータとして、管理者は「**cohowinery.com; eastcoast.cohowinery.com; cohovineyard**」と入力します。
+    次に例を示します。Coho Vineyard &amp; Winery という会社には、標準の電子メール ドメインとして **cohovineyardandwinery.com** がありますが、合併の結果、**cohowinery.com**、**eastcoast.cohowinery.com**、および **cohovineyard** という電子メール ドメインも使用されています。 **FederatedDomains** 値のデータとして、管理者は「**cohowinery.com; eastcoast.cohowinery.com; cohovineyard**」と入力します。
 
 このレジストリ変更を行わないと、ユーザーは、組織の他のユーザーによって保護されたコンテンツを使用できなくなる可能性があります。 Azure Information Protection を使用する場合、このレジストリ編集は必要ありません。
 

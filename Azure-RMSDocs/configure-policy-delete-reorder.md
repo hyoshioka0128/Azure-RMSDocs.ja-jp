@@ -4,16 +4,16 @@ description: ユーザーに表示される Azure Information Protection ラベ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: ccb5f4ff84e590640ed4e5204d2170384611775f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023398"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304878"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
@@ -57,11 +57,11 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、次の 1 つ以上のアクションを実行します。 
 
-    - ラベルを削除するには: 削除するラベルを右クリックするかコンテキスト メニュー (**[...]**) を選択し、**[Delete this label]\(このラベルを削除する\)** をクリックし、**[OK]** をクリックして確定します。 
+    - ラベルを削除するには: 削除するラベルを右クリックするかコンテキスト メニュー (**[...]**) を選択し、**[このラベルを削除]** をクリックし、**[OK]** をクリックして確定します。 
 
-    - ラベルを無効にする: 無効にするラベルを選択します。 **[ラベル]** ブレードで、**[有効]** に対して **[オフ]** を選択し、**[保存]** をクリックします。
+    - ラベルを無効にするには: 無効にするラベルを選択します。 **[ラベル]** ブレードで、**[有効]** に対して **[オフ]** を選択し、**[保存]** をクリックします。
 
-    - ラベルの順序を変更する: 順序を変更するラベルを右クリックするかコンテキスト メニュー (**...**) を選択し、ラベルが目的の順序になるまで、**[上へ移動]** または **[下へ移動]** をクリックします。  
+    - ラベルの順序を変更するには: 順序を変更するラベルを右クリックするかコンテキスト メニュー (**...**) を選択し、ラベルが目的の順序になるまで、**[上へ移動]** または **[下へ移動]** をクリックします。  
 
 ## <a name="next-steps"></a>次の手順
 

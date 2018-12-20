@@ -4,22 +4,22 @@ description: Windows 用 Azure Information Protection クライアントのク�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d935d5eafd3d893b67bbdccb1893bf67d418ae79
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
+ms.openlocfilehash: 2aa0e470d9a2801b695c6b2c9d922836c010690c
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866120"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304912"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 Azure Information Protection クライアントをインストールした後、どこにファイルがあるかを知り、クライアントがどのように使われているのかを監視することが必要になる場合があります。
 
@@ -55,7 +55,7 @@ Azure Information Protection クライアントをインストールした後、
     
     - ラベルの削除: 情報 ID 104
    
-    - 推奨されるヒント: 情報 ID 105
+    - 推奨されるヒント: 情報 105
     
     - カスタム保護の適用: 情報 ID 201
     

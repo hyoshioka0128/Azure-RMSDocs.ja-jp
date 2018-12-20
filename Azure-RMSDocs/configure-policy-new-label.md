@@ -4,16 +4,16 @@ description: Azure Information Protection にはカスタマイズできる既�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 963a86e37112fb2c4a2f9ca10162995a131c49ac
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7302e0e0e76f6ca94eba678390e7d938172e40c4
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023432"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304997"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Azure Information Protection の新しいラベルを作成する方法
 
@@ -33,7 +33,7 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、次のいずれかのアクションを実行します。
     
-    - 新しいラベルを作成するには: **[Add a new label]** (新しいラベルの追加) をクリックします。
+    - 新しいラベルを作成するには: **[新しいラベルの追加]** をクリックします。
     
     - 新しいサブラベルを作成するには: サブラベルを作成するラベルを右クリックするかコンテキスト メニュー (**...**) をクリックし、**[サブラベルの追加]** をクリックします。
 
@@ -43,7 +43,7 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
     
     新しいラベルには自動的に黒色が割り当てられます。 識別のための色を一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力します。 たとえば、**#DAA520** と入力します。 これらのコードの参照が必要な場合は、最初に MSDN ドキュメントの「 [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) 」(色の名前) を参照することをお勧めします。ここに掲載されているコードは Microsoft ペイントのような多くの画像編集プログラムで使用されており、パレットからカスタムの色を選択すると RGB の値が自動的に表示されます。
 
-5. 新しいラベルをユーザーが利用できるようにするには、**[分類]** > **[ポリシー]** メニュー オプションから、新しいラベルを含むポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードからラベルを選択し、**[OK]**、**[保存]** の順に選択します。
+5. 新しいラベルをユーザーが利用できるようにするには: **[分類]** > **[ポリシー]** メニュー オプションから、新しいラベルを含むポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードからラベルを選択し、**[OK]**、**[保存]** の順に選択します。
     
     >[!TIP]
     >新しいラベルについては、まず、テストに使用するスコープ ポリシーに追加することを検討してください。 結果に満足したら、このテスト スコープからラベルを削除し、運用環境で使用するポリシーにラベルを追加します。     
@@ -52,7 +52,7 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
     
     変更内容はユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
-6. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには、[異なる言語のラベルを構成する方法](configure-policy-languages.md)に関する記事の手順に従ってください。 
+6. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには: [異なる言語のラベルを構成する方法](configure-policy-languages.md)のページにある手順に従ってください。 
 
 ## <a name="next-steps"></a>次の手順
 
