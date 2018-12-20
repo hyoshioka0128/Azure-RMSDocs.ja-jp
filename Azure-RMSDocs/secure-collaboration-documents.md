@@ -4,22 +4,22 @@ description: Azure Information Protection によって保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b11f50bcf2090129211f3dd09cff867cfbdcb7b
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026657"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305507"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection では、承認済みユーザーのコラボレーション機能を損なうことなく、ドキュメントを保護できます。 1 人のユーザーが作成し、表示や編集の権限を他のユーザーと共有するドキュメントの多くは、Word、Excel、PowerPoint の Office ドキュメントになります。 これらのドキュメントでは、保護機能がネイティブにサポートされます。つまり、認証と暗号化の機能だけでなく、より詳細に制御するための制限付き権限もサポートされます。 
 
@@ -27,13 +27,13 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 これらの権限を構成する際には、その対象となるユーザーを指定できます。
 
-- **お客様の組織か、Azure Active Directory を使用している別の組織内のユーザーの場合**: で Azure AD ユーザー アカウント、Azure AD グループ、またはその組織内のすべてのユーザーを指定できます。 
+- **Azure Active Directory を使用する自社または他の組織のユーザーの場合**: その組織の Azure AD ユーザー アカウント、Azure AD グループ、またはすべてのユーザーを指定できます。 
 
-- **Azure Active Directory アカウントを持っていないユーザーの場合**: Microsoft アカウントで使用される電子メール アドレスを指定します。 既存のアカウントを使用することもできますし、保護されたドキュメントを開くときにアカウントを作成することもできます。 
+- **Azure Active Directory アカウントのないユーザーの場合**: Microsoft アカウントで使用されるメール アドレスを指定します。 既存のアカウントを使用することもできますし、保護されたドキュメントを開くときにアカウントを作成することもできます。 
     
     Microsoft アカウントを使ってドキュメントを開くには、Office 2016 クイック実行を使用する必要があります。 他のエディションやバージョンの Office では、Office の保護されたドキュメントを Microsoft アカウントで開く機能は、まだサポートされていません。
 
-- **認証されたユーザーの場合**: 認証されたユーザーであれば保護されたドキュメントへのアクセスを制御する必要がない場合、このオプションが適しています。 認証は、Azure AD、Microsoft アカウントの使用、コンテンツが Office 365 メッセージの暗号化の新機能で保護されている場合はフェデレーション ソーシャル プロバイダーやワンタイム パスコードなど、さまざまな方法で行われます。 
+- **認証されたユーザーの場合**: 保護されたドキュメントへのアクセスを制御する必要がなく、ユーザーが認証されていれば、このオプションが適しています。 認証は、Azure AD、Microsoft アカウントの使用、コンテンツが Office 365 メッセージの暗号化の新機能で保護されている場合はフェデレーション ソーシャル プロバイダーやワンタイム パスコードなど、さまざまな方法で行われます。 
 
 管理者は、Azure Information Protection ラベルを構成して、権限と承認済みユーザーを適用できます。 この構成により、ユーザーや他の管理者は詳細を指定することなく、ラベルを適用するだけで正しい保護設定を簡単に適用できるようになります。 次のセクションでは、ドキュメントを保護し、内部や外部のユーザーと安全にコラボレーションできるようにする方法について、例を使って説明します。
 
@@ -42,7 +42,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 この例では、既存のラベルを構成して保護を適用し、組織内のユーザーが他のユーザーとドキュメントでコラボレーションできるようにする手順について説明します。コラボレーションに含めるのは、Office 365 または Azure AD を使用している他の組織内の全ユーザー、Office 365 または Azure AD を使用している他の組織内のグループ、および Azure AD のアカウントを持たずに Gmail のメール アドレスを使用しているユーザーです。
 
-シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例としては、「[例 5: コンテンツを暗号化するがアクセスを制限しないラベル](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)」をご覧ください。  
+シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例は、[例 5: コンテンツを暗号化するが、アクセスできるユーザーは制限しないラベル](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)を参照してください。  
 
 1. グローバル ポリシーまたはスコープ付きポリシーに含まれている既存のラベルを選択します。 **[保護]** ブレードで、**[Azure (クラウド キー)]** が選択されていることを確認します。
     
@@ -54,11 +54,11 @@ Azure Information Protection では、承認済みユーザーのコラボレー
     
     - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
     
-    - 第 2 外部組織内のグループ: **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のように指定します。
+    - 第 2 外部組織内のグループ: 同様に **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のように指定します。
     
-    - Azure AD アカウントを持っていないユーザー: **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のように指定します。 
+    - Azure AD アカウントを持っていないユーザー: この場合も **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のように指定します。 
 
-4. これらすべてのユーザーに同じ権限を付与するには、**[事前設定されたものの中からアクセス許可を選択する]** で、**[共同所有者]**、**[共同作成者]**、**[レビュー担当者]**、または **[カスタム]** を選択し、付与する権限を選択します。
+4. これらすべてのユーザーに同じアクセス許可を与える場合: **[事前設定されたものの中からアクセス許可を選択する]** に対し、**[共同所有者]**、**[共同作成者]**、**[レビュー担当者]**、**[カスタム]** のいずれかを選択し、付与するアクセス許可を選択します。
     
     たとえば、構成後の権限は次のようになります。
         

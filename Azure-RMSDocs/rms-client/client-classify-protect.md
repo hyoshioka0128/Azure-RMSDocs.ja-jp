@@ -4,27 +4,27 @@ description: ドキュメントや電子メールを分類して保護する方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 355d71f844d64fb26898c482d2414ca388ac38be
-ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
+ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696519"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305703"
 ---
-# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類して保護する
+# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド:Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](client-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
 
-Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) でドキュメントや電子メールを作成したり編集すると、分類と保護が簡単になります。 
+ドキュメントや電子メールを分類して保護する最も簡単な方法は、Office デスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) 内から作成または編集することです。 
 
 ただし、**エクスプローラー**を利用してファイルを分類し、保護することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類し、保護できるので便利です。 この方法は、Office ドキュメント、PDF ファイル、テキスト ファイル、画像ファイルなどさまざまなファイルの保護をサポートしています。 
 
@@ -75,7 +75,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 - 管理者が新しいラベルを構成したばかりの場合は、すべてのインスタンスの Office アプリを終了してから、開き直します。 この操作で、ラベルの変更が確認されます。
 
-- 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、**[保護]**、**[ヘルプとフィードバック]** の順にクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
+- 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、**[保護]** > **[ヘルプとフィードバック]** の順にクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
     
     バージョン 1805、ビルド 9330.2078 以降の Office 2016 アプリがあり、アカウントに Azure Rights Management (Azure Information Protection for Office 365 とも呼ばれる) のライセンスが割り当てられている場合、Office Professional Plus は必要ありません。
 
@@ -95,9 +95,9 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、以下を指定します。
 
-    - **カスタム アクセス許可で保護する**: こちらが選択されていて、カスタム アクセス許可を指定して適用できることを確認します。 このオプションをクリアしてカスタム アクセス許可を削除します。
+    - **カスタム アクセス許可で保護する**: これが選択されていて、カスタム アクセス許可を指定して適用できることを確認します。 このオプションをクリアしてカスタム アクセス許可を削除します。
     
-    - **アクセス許可の選択**: 自分だけがファイルにアクセスできるようにファイルを保護するには、**[Only for me (自分のみ)]** を選択します。 それ以外の場合は、ユーザーに付与するアクセス レベルを選択します。
+    - **アクセス許可の選択**: 自分だけがファイルにアクセスできるようにファイルを保護するには、**[Only for me]\(自分のみ\)** を選択します。 それ以外の場合は、ユーザーに付与するアクセス レベルを選択します。
     
     - **ユーザー、グループ、および組織の選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 
         
@@ -127,7 +127,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 一部のファイルは、変更すると PC が動作しなくなる可能性があるため、分類と保護の対象から自動的に除外されます。 これらのファイルを選択することはできますが、除外されるフォルダーまたはファイルとしてスキップされます。 たとえば、実行可能ファイルや Windows フォルダーが含まれます。
 
-管理者ガイドには、サポートされるファイルの種類と自動的に除外されるファイルとフォルダーの詳細な一覧が記載されています。「[File types supported by the Azure Information Protection client](client-admin-guide-file-types.md)」(Azure Information Protection クライアントでサポートされるファイルの種類) を参照してください。
+管理者ガイドには、サポートされるファイルの種類と自動的に除外されるファイルとフォルダーの詳細な一覧が記載されています。「[Azure Information Protection クライアントでサポートされるファイルの種類](client-admin-guide-file-types.md)」を参照してください。
 
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類および保護するには
@@ -138,11 +138,11 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-    - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
+    - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
 
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
     
-    - ラベルが表示されず、このダイアログ ボックスで **[Company pre-defined protection]** (会社の定義済み保護) のオプションは表示される場合、クライアントは[保護のみモード](client-protection-only-mode.md)で実行されています。 管理者が構成した保護を適用するには、テンプレートを選択します。独自の保護設定を指定するには **[カスタム アクセス許可]** を選択して手順 4 に進みます。
+    - ラベルが表示されず、このダイアログ ボックスで **[Company pre-defined protection]\(会社の定義済み保護\)** のオプションは表示される場合: クライアントは[保護のみモード](client-protection-only-mode.md)で実行されています。 管理者が構成した保護を適用するには、テンプレートを選択します。独自の保護設定を指定するには **[カスタム アクセス許可]** を選択して手順 4 に進みます。
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスにラベルがない](../media/info-protect-dialog-labels-protection-only.png)
     
@@ -154,7 +154,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 4. カスタムのアクセス許可オプションを選択した場合は、次の項目を指定します。
 
-    - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選択します。
+    - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選びます。
     
     - **ユーザー、グループ、および組織の選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 
     
@@ -183,5 +183,5 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../configure-policy-settings.md)」を参照してください。
 
-その他の構成手順: [Azure Information Protection ポリシーの構成](../configure-policy.md)
+その他の構成手順: [Azure Information Protection ポリシーの構成](../configure-policy.md)。
 

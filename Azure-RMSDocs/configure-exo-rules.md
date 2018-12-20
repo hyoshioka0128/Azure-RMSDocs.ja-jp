@@ -4,22 +4,22 @@ description: Azure Information Protection ラベルの Exchange Online メール
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 9d30e7c3e15e9aa6b67c2e1b653d56c1af36ffe0
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49366990"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305473"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 次に例を示します。
 
@@ -39,7 +39,7 @@ Azure Information Protection ラベルはメタデータに格納されるため
 
 - メールでは、この情報は **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** の X ヘッダーに格納されます 
 
-- Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx)、PDF 文書 (.pdf) の場合、このメタデータはカスタム プロパティ **MSIP_Label_\<GUID>_Enabled=True** に格納されます  
+- Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx)、PDF 文書 (.pdf) の場合、このメタデータはカスタム プロパティ **MSIP_Label_\<GUID>_Enabled=True** に格納されます。  
 
 ラベルの GUID を特定するには、Azure Portal で Azure Information Protection ポリシーを表示または構成するときに、**[ラベル]** ブレードの [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
@@ -63,7 +63,7 @@ Azure Information Protection ラベルはメタデータに格納されるため
 この例では、電子メールが組織の外に送信されるときに保護を適用する条件が 1 つだけ含まれています。 選択できる他の条件について詳しくは、「[Mail flow rule conditions and exceptions (predicates) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx)」(Exchange Online のメール フロー ルールの条件と例外 (述語)) をご覧ください。
 
 
-### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>例 1: **[全般]** ラベルの付いた電子メールが組織の外部に送信されるときに [転送不可] オプションを適用するルール
+### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>例 1: **[全般]** ラベルの付いた電子メールが組織の外部に送信されるときに、それに [転送不可] オプションを適用するルール
 
 この例では、**[全般]** ラベルの GUID は 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 です。 このルールで使用する独自のラベルまたはサブラベルの GUID で置き換えます。 
 
@@ -83,7 +83,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
     
     c. **[+]** を選択し、**[OK]** を選択します。
 
-5. **[実行する処理]** で、**[メッセージのセキュリティを変更する]** > **[Apply Office 365 Message Encryption and rights protection]\(Office 365 メッセージの暗号化と権限保護を適用する\)** > **[転送不可]** の順に選択し、**[OK]** を選択します。
+5. **[実行する処理]** で、**[メッセージのセキュリティを変更する]** > **[Office 365 メッセージの暗号化と権限保護を適用する]** > **[転送不可]** の順に選択し、**[OK]** を選択します。
     
     これで、ルール構成は次のようになります。![Azure Information Protection ラベル用に構成された Exchange Online メール フロー ルール - 例 1](./media/aip-exo-rule-ex1.png)
 
@@ -103,7 +103,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
 
 3. **[その他のオプション]** を選択し、**[条件の追加]** を選択します。
  
-4. **[and]** で、**[Any attachment]\(添付ファイル\)** を選択し、**[これらのプロパティが次の単語のいずれかを含む]** を選択します。
+4. **[and]** で、**[任意の添付ファイル]** を選択してから、**[これらのプロパティが次の単語のいずれかを含む]** を選択します。
      
     」を参照します。 **[+]** > **[カスタム添付ファイルのプロパティを指定]** を選択します。
   
@@ -113,7 +113,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
     
     d. **[保存]** を選択し、**[OK]** を選択します。
 
-5. **[実行する処理]** で、**[メッセージのセキュリティを変更する]** > **[Apply Office 365 Message Encryption and rights protection]\(Office 365 メッセージの暗号化と権限保護を適用する\)** > **[暗号化]** の順に選択し、**[OK]** を選択します。
+5. **[実行する処理]** で、**[メッセージのセキュリティを変更する]** > **[Office 365 メッセージの暗号化と権限保護を適用する]** > **[暗号化]** の順に選択し、**[OK]** を選択します。
     
     これで、ルール構成は次のようになります。![Azure Information Protection ラベル用に構成された Exchange Online メール フロー ルール - 例 1](./media/aip-exo-rule-ex2.png)
 
@@ -126,6 +126,6 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
 
 Exchange Online メール フロー ルールで使用するラベルの作成と構成について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 
-また、添付ファイルを含む電子メール メッセージを分類するには、次の Azure Information Protection [ポリシー設定](configure-policy-settings.md)の使用を検討してください: **添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します**。
+また、添付ファイルを含む電子メール メッセージの分類を楽にするために、次の Azure Information Protection [ポリシー設定](configure-policy-settings.md)の使用を検討してください: **添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します**。
 
 

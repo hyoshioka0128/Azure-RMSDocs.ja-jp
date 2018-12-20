@@ -4,20 +4,20 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: d4d653f5244467b29fc2be7d4554d92d035d0f87
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: de278dbb9fd9f051c3a4e47ef719988df4706434
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151760"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305558"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 次の情報を使用して、Azure Information Protection の Hold your own key (HYOK) 保護とは何か、およびクラウド ベースの既定の保護と異なる点について把握してください。 HYOK 保護を使用する前に、適切な場合、サポートされるシナリオ、制限事項、要件を理解していることを確認してください。 
 
@@ -65,25 +65,25 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 
 |プラットフォーム|アプリケーション|サポート|
 |----------------------|----------|-----------|
-|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護: はい<br /><br />消費: はい|
-|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Outlook|保護: はい<br /><br />消費: はい|
-|Windows|Azure Information Protection クライアントとファイル エクスプローラー|保護: はい <br /><br />消費: はい|
-|Windows|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
-|Windows|Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット|保護: はい<br /><br />消費: はい|
-|Windows|Azure Information Protection スキャナー|保護: はい<br /><br />消費: はい|
-|Windows|Rights Management 共有アプリ|保護: なし<br /><br />消費: はい|
-|MacOS|Office for Mac <br /><br /> - Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
-|MacOS|Office for Mac<br /><br />- Outlook|保護: なし<br /><br />消費: はい|
-|MacOS|Rights Management 共有アプリ|保護: なし<br /><br />消費: はい|
-|iOS|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
-|iOS|Office Mobile <br /><br />-Outlook|保護: なし<br /><br />消費: いいえ|
-|iOS|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
-|Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
-|Android|Office Mobile <br /><br />- Outlook|保護: なし<br /><br />消費: いいえ|
-|Android|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
-|Web|Outlook on the web|保護: なし<br /><br />消費: いいえ|
-|Web|Office Online<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
-|ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
+|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Outlook|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントとファイル エクスプローラー|保護:はい <br /><br />消費: はい|
+|Windows|Azure Information Protection ビューアー|保護:適用できません<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection スキャナー|保護:はい<br /><br />消費: はい|
+|Windows|Rights Management 共有アプリ|保護:[いいえ]<br /><br />消費: はい|
+|MacOS|Office for Mac <br /><br /> - Word、Excel、PowerPoint|保護:[いいえ]<br /><br />消費: はい|
+|MacOS|Office for Mac<br /><br />- Outlook|保護:[いいえ]<br /><br />消費: はい|
+|MacOS|Rights Management 共有アプリ|保護:[いいえ]<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護:[いいえ]<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />-Outlook|保護:[いいえ]<br /><br />消費: [いいえ]|
+|iOS|Azure Information Protection ビューアー|保護:適用できません<br /><br />消費: はい|
+|Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護:[いいえ]<br /><br />消費: はい|
+|Android|Office Mobile <br /><br />- Outlook|保護:[いいえ]<br /><br />消費: [いいえ]|
+|Android|Azure Information Protection ビューアー|保護:適用できません<br /><br />消費: はい|
+|Web|Outlook on the web|保護:[いいえ]<br /><br />消費: [いいえ]|
+|Web|Office Online<br /><br />- Word、Excel、PowerPoint|保護:[いいえ]<br /><br />消費: [いいえ]|
+|ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護:[いいえ]<br /><br />消費: [いいえ]|
 
 
 ## <a name="additional-limitations-when-using-hyok"></a>HYOK を使用する際の追加制限事項
@@ -130,27 +130,27 @@ Azure Information Protection ラベルに HYOK 保護を適用するには、AD 
     
     - 各 AD RMS サーバーが証明書の URL 用に構成されます。 [手順](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - サービス接続ポイント (SCP) が Active Directory に登録されていない: SCP は、AD RMS 保護と Azure Information Protection が併用されるときは使用されません。 
+    - サービス接続ポイント (SCP) が Active Directory に登録されていません。SCP は Azure Information Protection で AD RMS 保護を使用する場合には使用されません。 
     
         - AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](./rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。 
         
         - HYOK の新しい AD RMS クラスターをインストールする場合は、最初のノードの構成時に SCP を登録する手順をスキップしてください。 各追加ノードについて、AD RMS の役割を追加して、既存のクラスターに参加する前に、証明書の URL についてサーバーが構成されていることを確認します。
     
-    - 接続先のクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように AD RMS サーバーが構成されている: 運用環境では必須ですが、テストまたは評価目的の場合は必須ではありません。
+    - AD RMS サーバーは接続先のクライアントによって信頼されている有効な x.509 証明書が含まれる SSL/TLS を使用するために構成されます。運用環境では必要ですが、テストまたは評価目的では必要ありません。
     
     - 構成済みの権利テンプレート。
     
     - Exchange IRM 用に構成されていない。
     
-    - モバイル デバイスと Mac コンピューターの場合: [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) がインストールされ構成されている。
+    - モバイル デバイスと Mac コンピューターの場合: [Active Directory Rights Management サービス モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx) がインストールされ構成されている。
 
 - オンプレミスの Active Directory と Azure Active Directory 間にディレクトリ同期が構成され、HYOK 保護を使用するユーザーのシングル サインオンが構成されている。
 
-- HYOK で保護されているドキュメントまたは電子メールを組織以外の相手と共有する場合: AD RMS は、信頼されたユーザー ドメイン (TUD)、または Active Directory Federation Services (AD FS) を使用して作成された、またはフェデレーションによる信頼を使用して、他の組織との直接的なポイント間の関係に明示的に定義した信頼向けに構成されている。
+- HYOK で保護されているドキュメントや電子メールを組織外のユーザーと共有する場合: AD RMS は、信頼されたユーザー ドメイン (TUD) または Active Directory フェデレーション サービス (AD FS) を使用して作成したフェデレーションによる信頼関係を使用して、他の組織との直接のポイントツーポイントの関係で明示的に定義された信頼関係に対して構成されます。
 
 - ユーザーは、Windows 7 Service Pack 1 以降で実行されている Office 2016 Professional Plus または Office 2013 Professional Plus Service Pack 1 のバージョンの Office を持っている。 ただし、このシナリオでは、Office 2010 と Office 2007 は、サポートされません。
     
-    - Office 2016 の Microsoft インストーラー (.msi) ベースのエディションの場合: [2018 年 3 月 6 日にリリースされた Microsoft Office 2016 の更新プログラム 4018295](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295) をインストールしてあります。
+    - Office 2016 の Microsoft インストーラー (.msi) ベースのエディションの場合: [2018 年 3 月 6 日にリリースされた Microsoft Office 2016 の更新プログラム 4018295](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295) をインストールしておきます。
 
 > [!IMPORTANT]
 > HYOK 保護が提供する高い確実性を実現するために、AD RMS サーバーは DMZ に配置せず、マネージド デバイスでのみ使用することをお勧めします。 
@@ -184,11 +184,11 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 テンプレート GUID とライセンス URL の値は、Active Directory Rights Management サービス コンソールで確認できます。
 
-- テンプレート GUID を確認するには: クラスターを展開し、**[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例: 82bf3474-6efe-4fa1-8827-d1bd93339119
+- テンプレート GUID を確認するには: クラスターを展開し、**[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 次に例を示します。82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、**[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: https://rmscluster.contoso.com 
+- ライセンス URL を確認するには: クラスター名を指定します。 **[クラスターの詳細]** の情報から、**[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: https://rmscluster.contoso.com 
     
-    エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
+    エクストラネットのライセンスの値とイントラネットのライセンス値がある場合、それらは次のように異なります。エクストラネットの値は、保護されたドキュメントまたは電子メールを、明示的なポイントツーポイントの信頼関係によって定義されたパートナーと共有する場合にのみ指定してください。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
 
 ## <a name="next-steps"></a>次の手順

@@ -4,22 +4,22 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6ea5a80ad9d08873f817f21a9f6ac4d059618af7
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: d694876a91e0d39d0d429e5dd5503bb153fd5521
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024044"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305456"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 AD RMS から Azure Information Protection への移行フェーズ 4 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 8 から手順 9 を説明します。
@@ -105,7 +105,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>コネクタを使うように Exchange と SharePoint を構成する
 
-1. 「[手順 5: RMS コネクタを使用するためのサーバーの構成](./configure-servers-rms-connector.md)」の RMS コネクタのデプロイ手順に戻ります。
+1. RMS コネクタのデプロイ手順に戻る: [手順 5: RMS コネクタを使用するためのサーバーの構成](./configure-servers-rms-connector.md)
 
     SharePoint サーバーだけを使っている場合は、[次の手順](#next-steps)に進んで移行を続けます。 
 
@@ -130,7 +130,7 @@ Exchange 2013 および Exchange 2016 の場合 - レジストリ編集 1:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://\<AD RMS イントラネット ライセンス URL\>/_wmcs/licensing
 
@@ -151,7 +151,7 @@ Exchange 2013 - レジストリの編集 2:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
 
@@ -172,7 +172,7 @@ Exchange 2010 の場合 - レジストリの編集 1:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://\<AD RMS イントラネット ライセンス URL\>/_wmcs/licensing
 
@@ -194,7 +194,7 @@ Exchange 2010 の場合 - レジストリの編集 2:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**種類:** Reg_SZ
+**次のように入力します。** Reg_SZ
 
 **値:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
 

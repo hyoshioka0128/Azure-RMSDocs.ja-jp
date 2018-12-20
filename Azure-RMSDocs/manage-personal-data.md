@@ -4,18 +4,18 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 6904c8c1e879a4d076486fae17a1dbdbd71cb4b4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150434"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319416"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -260,7 +260,7 @@ Azure Rights Management サービスのドキュメント追跡ログ、管理�
 
 これらのデータの削除は永続的な操作です。 削除リクエストが処理された後にデータを回復する手段はありません。 管理者におかれては、削除リクエストを発行する前に、必要なデータをエクスポートすることをお勧めします。
 
-**手順 2: 確認を待つ** Microsoft は、1 つ以上のログの削除を求めるお客様のリクエストが正当なものであることを確認します。 このプロセスには、最大で 5 営業日を要することがあります。
+**手順 2: 確認を待つ** Microsoft で、1 つ以上のログの削除を求めるお客様のリクエストが正当なものであることを確認します。 このプロセスには、最大で 5 営業日を要することがあります。
 
 **手順 3: 削除の確認を受け取る** データが削除されたことを知らせる確認メールが、Microsoft カスタマー サポート サービス (CSS) から送信されます。 
 

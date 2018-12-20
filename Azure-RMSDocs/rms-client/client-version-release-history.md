@@ -4,21 +4,21 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861219"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335525"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 
 
@@ -44,7 +44,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 ## <a name="version-141510"></a>バージョン 1.41.51.0
 
 > [!TIP]
-> Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント: バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」をご覧ください。
+> Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
 
 **リリース日**: 2018 年 11 月 27 日
 
@@ -112,6 +112,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     - 新しいコマンドレット [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): スケジュールが手動に設定されている場合に、スキャナーに 1 回限りのスキャン サイクルを開始するように指示します。
     
+    - PDF 暗号化の ISO 標準を使用する際に、既定で PDF ドキュメントが保護されるようになりました。
+    
     - [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 がサポートされています。
     
 - 1 つの場所からスキャナーを管理できる、Azure portal の新しい **[Azure Information Protection - Nodes (Preview)]\(Azure Information Protection - ノード (プレビュー)\)** ブレードのサポート。 Azure と接続されたスキャナーを配置すると、5 分ごとにそのスキャナーからの情報が更新されます。 このブレードからスキャナーを起動して、1 回限りのスキャン、すべてのファイルの再スキャン、スキャナーの状態のチェック、スキャン率の確認を行うことができます。
@@ -150,7 +152,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - ポリシーのバージョンは、1.4 に変更されます。 [切断されたコンピューターを構成する](client-admin-guide-customizations.md#support-for-disconnected-computers)には、バージョン番号の特定が必要です。
 
-- **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが削除されました。 このリンクは **[問題の報告]** に一時的に置き換えられましたが、現在はプレビュー バージョンでのみこのリンクが表示されます。 既定では、このオプションで Microsoft に電子メールが送信されますが、このメール アドレスを指定する HTTP 文字列に変更できます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 このアドレスを変更するには、[クライアントの詳細設定](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link)を使用します。
+- **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが削除されました。 これは **[問題の報告]** に一時的に置き換えられていたもので、既定では Microsoft に電子メールが送信されていました。 2018 年 12 月以降、**[問題の報告]** オプションは既定で表示されなくなりますが、リンクの HTTP 文字列を指定する[クライアントの詳細設定](client-admin-guide-customizations.md#add-report-an-issue-for-users)を使用して追加することができます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 
 
 ## <a name="version-12950"></a>バージョン 1.29.5.0 
 
@@ -206,7 +208,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 クライアントのインストールと使用の詳細: 
 
-- ユーザー向け: [クライアントをダウンロードしてインストールする](install-client-app.md)
+- ユーザー向け: [クライアントのダウンロードとインストール](install-client-app.md)
 
 - 管理者向け: [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
 
