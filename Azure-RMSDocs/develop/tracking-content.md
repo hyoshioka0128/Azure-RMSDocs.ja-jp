@@ -2,8 +2,8 @@
 title: ドキュメント追跡の有効化と取り消しを行う方法 | Azure RMS
 description: コンテンツのドキュメント追跡機能を導入する方法の基本的な説明、ならびにメタデータ更新のサンプル コードとアプリの [使用の追跡] ボタンのサンプルコードを紹介します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 68c7f3c0ca050a13e0e943dc2372267c00f20c48
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8794d0f7413941573484c7f9509f5be5e2aa2414
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149091"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071694"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
@@ -145,7 +145,7 @@ ms.locfileid: "44149091"
 
 このクライアントでは、適切な URL でブラウザーを開く必要があります。 RMS ドキュメント追跡ポータルが認証と必要なリダイレクトを処理します。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [ライセンス メタデータ プロパティの種類](https://msdn.microsoft.com/library/dn974062.aspx)
 * [通知の基本設定](https://msdn.microsoft.com/library/dn974063.aspx)

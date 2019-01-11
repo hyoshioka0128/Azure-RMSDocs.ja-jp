@@ -2,8 +2,8 @@
 title: 方法&#58; 組み込み権限の使用 | Azure RMS
 description: RMS SDK 4.2 の組み込み権限と、その制限に従うことでアプリケーションによって適用される使用制限について説明します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 0d93f24f74a385613ebb5f3f44eee1951ea00be9
-ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
+ms.openlocfilehash: 3fd505e8e692cfacafbfec7b65d6e6ac37d539f5
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266666"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071269"
 ---
-# <a name="how-to-use-built-in-rights"></a>手順組み込み権限の使用
+# <a name="how-to-use-built-in-rights"></a>方法:組み込み権限の使用
 
 このトピックでは、Microsoft Rights Management SDK 4.2 の組み込み権限と、その制限に従うことでアプリケーションによって適用される使用制限について説明します。 組み込み権限、一般的な権限、編集可能なドキュメントの権限、電子メール権限、オペレーティング システムによる説明とその値を次に示します。
 

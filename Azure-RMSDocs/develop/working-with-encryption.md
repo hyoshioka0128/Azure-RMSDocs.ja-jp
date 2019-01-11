@@ -2,8 +2,8 @@
 title: 暗号化設定を操作する方法 | Azure RMS
 description: Azure RMS の暗号化パッケージおよび暗号化パッケージを使用するためのコード スニペットを紹介します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d8d5c76c08c7518c8279267a6c1e15f559d6ea54
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6c46df1ac7aca8d4668ff71bb91195d059f8a3a6
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147153"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071726"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>方法: 暗号化設定の操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "44147153"
 > [!IMPORTANT]
 > *AES 256* で保護されたファイルの消費量のサポートは、[2014 年 10 月のリリース](release-notes-rtm.md)より開始されています。 2014 年 10 月より前の SDK のバージョンでビルドされたアプリケーションを実行している場合、この更新プログラムによってアプリケーションは中断されます。 ビルドしているアプリケーションの顧客が更新後の SDK を使用していない場合、最新バージョンのアプリケーションにすぐに更新する意向があることを確認してください。
 
- 
+ 
 ## <a name="api-encryption-support"></a>API 暗号化のサポート
 
 [2015 年 3 月の更新](release-notes-rtm.md)より、次の 3 つのフラグが API および関連する暗号化パッケージに組み込まれています。
