@@ -4,14 +4,14 @@ description: Microsoft Information Protection SDK でビルドされたアプリ
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: 2f84cfd8a0ae15a66cd624fe591f2891ff549768
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386731"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136235"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
@@ -113,9 +113,9 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
 
    各 .zip や tarball には、次の 3 つのディレクトリが含まれています。
 
-   - **Bins:** 各プラットフォーム アーキテクチャのコンパイル済みバイナリ (該当する場合)
-   - **Include:** Microsoft Information Protection SDK ヘッダー ファイル
-   - **Samples:** サンプル アプリケーションのソース コード
+   - **ビン。** 該当する場合は、各プラットフォーム アーキテクチャのバイナリをコンパイルします。
+   - **次のとおり**Microsoft Information Protection SDK のヘッダー ファイル
+   - **サンプル:** サンプル アプリケーションのソース コード
 
    Visual Studio の開発を行っている場合は、NuGet パッケージ マネージャー コンソールを使用して SDK をインストールすることもできます。
 
@@ -139,7 +139,7 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Azure Active Directory へのクライアント アプリケーションの登録
 
-Office 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure AD テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
+Office 365 サブスクリプションがプロビジョニング プロセスの一環として、関連する Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
 
 実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。 
 
@@ -149,7 +149,7 @@ Office 365 サブスクリプションのプロビジョニング プロセス�
   > アカウント作成のために Azure AD テナントの管理にアクセスするには、[サブスクリプションで "所有者" ロール](/azure/billing/billing-add-change-azure-subscription-administrator)のメンバーであるユーザー アカウントを使用して、Azure portal にサインインする必要があります。 テナントの構成によっては、[アプリケーションを登録する](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)には、"グローバル管理者" ディレクトリ ロールのメンバーである必要もあります。
   > 制限付きのアカウントを使用してテストすることをお勧めします。 アカウントには、必要な SCC エンドポイントにアクセスするための適切な権限のみがあることを確認します。 コマンドラインを通じて渡されたクリア テキスト パスワードは、ログ システムによって収集することができます。
 
-1. [アプリケーションを Azure Active Directory と統合し、アプリケーションを追加するのセクション](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application)の手順に従います。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。 
+1. 次の手順では、 [Azure AD でアプリを登録、新しいアプリケーション登録](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)セクション。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。 
     - **アプリケーションの種類**: [ネイティブ] を選択します。これは、SDK でデモンストレーションされるアプリケーションは、ネイティブにインストールされたコンソール アプリケーションだからです。 ネイティブ アプリケーションは、アプリケーションの資格情報を安全な方法で格納/使用できないため、OAuth2 では "パブリック" クライアントと見なされます。 独自の資格情報を使用して登録される Web アプリケーションなどの "機密性の高い" サーバー ベース アプリケーションとは異なります。 
     - **リダイレクト URI**: SDK は単純なコンソール クライアント アプリケーションを使用しているため、`<app-name>://authorize` の形式で URI を使用します。
 
@@ -174,7 +174,7 @@ Office 365 サブスクリプションのプロビジョニング プロセス�
    [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-登録に API とアクセス許可を追加する方法の詳細については、[アプリケーションを更新し、Web API にアクセスするようにクライアント アプリケーションを構成するのセクション](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application)を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
+登録に Api とアクセス許可を追加する方法の詳細については、次を参照してください。 [web Api にアクセスするクライアント アプリケーションを構成する Azure ad でのアプリケーションの更新](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)します。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
 
@@ -182,7 +182,7 @@ MIP で開発されたアプリケーションをリリースすることがで�
 
 1. 次の情報を記載した電子メールを [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) に送信して、IPIA を入手します。
 
-   **件名:** *会社名* の IPIA 申し込み
+   **件名:** *会社名*の IPIA 申し込み
 
    電子メールの本文に、次の情報を含めます。
    - アプリケーションと製品名
@@ -219,6 +219,6 @@ MIP で開発されたアプリケーションをリリースすることがで�
 ## <a name="next-steps"></a>次の手順
 
 - MIP SDK はほぼ完全に非同期に設計されているため、クイック スタート セクションを開始する前に、必ず [MIP SDK のオブザーバー](concept-async-observers.md)のページをお読みください。
-- SDK を使用した実践的な体験をする準備ができたら、「[Quickstart: Client application initialization (C++)](quick-app-initialization-cpp.md)」 (クイック スタート: クライアント アプリケーションの初期化 (C++)) を開始します。
+- SDK を使用した実践的体験をする準備ができたら場合、まず[クイック スタート。クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)します。
 
 

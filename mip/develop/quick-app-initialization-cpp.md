@@ -4,23 +4,23 @@ description: Microsoft Information Protection (MIP) SDK クライアント ア�
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 578c5aa69faa986663ea6c164d94e5940580167d
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
-ms.translationtype: HT
+ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866138"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136236"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++)
+# <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C++)
 
 このクイック スタートでは、実行時に MIP C++ SDK によって使用される、クライアントの初期化パターンを実装する方法を示します。 
 
 > [!NOTE]
 > MIP ファイル、ポリシー、または保護 API を使用する任意のクライアント アプリケーションには、このクイック スタートで概説されている手順が必要です。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 今後のクイック スタートは、それぞれが前のクイック スタートをベースにビルドされるので、連続的に実行される必要があります。このクイック スタートが最初になっています。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 まだ完了していない場合は、必ず次の操作を行ってください。
 
@@ -259,8 +259,8 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
-                 "<friendly-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
+                 "<application-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -310,10 +310,10 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 3. 貼り付けたばかりのソース コードのプレースホルダー値を、次の値で置き換えます。
 
-   | [プレースホルダ] | 値 | 例 |
+   | [プレースホルダ] | [値] | 例 |
    |:----------- |:----- |:--------|
-   | \<application-id\> | "MIP SDK のセットアップと構成" で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (2 つのインスタンス)。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<friendly-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 | AppInitialization |
+   | \<application-id\> | 登録されている Azure AD アプリケーション ID (GUID)、アプリケーションに割り当てられている[手順 #2「MIP SDK のセットアップと構成」の](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory)記事。 2 つのインスタンスを置き換えます。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<アプリケーション名\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 有効な ASCII 文字を含める必要があります (を除く ';')、理想的には、Azure AD の登録で使用したアプリケーション名と一致するとします。 | AppInitialization |
    | \<engine-account\> | エンジンの ID に使用されるアカウント。 トークンの取得時にユーザー アカウントを認証する場合、ユーザー アカウントはこの値に一致します。 | user1@tenant.onmicrosoft.com |
    | \<engine-state\> | エンジンに関連付けられるユーザー定義の状態。 | MyAppState |
 
