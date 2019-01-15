@@ -2,8 +2,8 @@
 title: Linux のコード例 | Azure RMS
 description: このトピックでは、Linux バージョンの RMS SDK の重要なシナリオとコード要素について説明します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6888e6a8b131c116ff4b6f8f2411ad5cb2baaf6f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 81177bcafa1595f27dd0bb1120c3ddd98b15b36f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149499"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071286"
 ---
 # <a name="linux-code-examples"></a>Linux のコード例
 
@@ -25,12 +25,12 @@ ms.locfileid: "44149499"
 
 次のコード スニペットは、サンプル アプリケーション、*rms\_sample* および *rmsauth\_sample* からのものです。 詳しくは、GitHub リポジトリの「[サンプル](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples)」をご覧ください。
 
-## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>シナリオ: 保護されたファイルから保護ポリシー情報にアクセスする
+## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>シナリオ:保護されたファイルから保護ポリシー情報にアクセスする
 
 **RMS 保護ファイルを開いて読み取ります**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、*ConvertFromPFile* を呼び出してから (次のコード例を参照)、保護ポリシー名、説明、およびコンテンツの有効期日を読み取ります。
+**説明**:ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、*ConvertFromPFile* を呼び出してから (次のコード例を参照)、保護ポリシー名、説明、およびコンテンツの有効期日を読み取ります。
 
 **C++**:
 
@@ -98,7 +98,7 @@ ms.locfileid: "44149499"
 **保護されたファイル ストリームを作成します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: この方法では、SDK メソッド、*ProtectedFileStream::Aquire* を通じて渡されたサポートするストリームから保護ファイル ストリームを作成します。これは、呼び出し元に返されます。
+**説明**:この方法では、SDK メソッド、*ProtectedFileStream::Aquire* を通じて渡されたサポートするストリームから保護ファイル ストリームを作成します。これは、呼び出し元に返されます。
 
 **C++**:
 
@@ -145,12 +145,12 @@ ms.locfileid: "44149499"
       return fsResult;
     }
 
-## <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
+## <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ:テンプレートを使用して新しい保護ファイルを作成する
 
 **ユーザーが選択したテンプレートを使用してファイルを保護します**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFileTemplates* を呼び出して保護します (次のコード例を参照)。
+**説明**:ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFileTemplates* を呼び出して保護します (次のコード例を参照)。
 
 **C++**:
 
@@ -213,7 +213,7 @@ ms.locfileid: "44149499"
 **テンプレートから作成されたポリシーを使用してファイルを保護します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: ユーザーに関連付けられたテンプレートの一覧がフェッチされ、選択したテンプレートがポリシーの作成に使用されます。このポリシーを使用してファイルを保護します。
+**説明**:ユーザーに関連付けられたテンプレートの一覧がフェッチされ、選択したテンプレートがポリシーの作成に使用されます。このポリシーを使用してファイルを保護します。
 
 **C++**:
 
@@ -246,7 +246,7 @@ ms.locfileid: "44149499"
 **ポリシーを指定してファイルを保護します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: 特定のポリシーを使用して保護されたファイル ストリームを作成し、そのファイルを保護します。
+**説明**:特定のポリシーを使用して保護されたファイル ストリームを作成し、そのファイルを保護します。
 
 **C++**:
 
@@ -285,12 +285,12 @@ ms.locfileid: "44149499"
     
 
 
-## <a name="scenario-protect-a-file-using-custom-protection"></a>シナリオ: カスタム保護を使用してファイルを保護する
+## <a name="scenario-protect-a-file-using-custom-protection"></a>シナリオ:カスタム保護を使用してファイルを保護する
 
 **カスタム保護を使用してファイルを保護します**
 **ソース**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、ユーザーから権限情報を収集し、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFilePredefinedRights* を呼び出して保護します (次のコード例を参照)。
+**説明**:ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、ユーザーから権限情報を収集し、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFilePredefinedRights* を呼び出して保護します (次のコード例を参照)。
 
 **C++**:
 
@@ -373,7 +373,7 @@ ms.locfileid: "44149499"
 **ユーザーが選択した権限を指定して保護ポリシーを作成します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**: ポリシー記述子を作成し、ユーザーの権限情報を使ってこれを入力し、このポリシー記述子を使用してユーザー ポリシーを作成します。 このポリシーを使用して *ConvertToPFileUsingPolicy* への呼び出しにより選択したファイルを保護します (このトピックの前のセクションの説明を参照)。
+**説明**:ポリシー記述子を作成し、ユーザーの権限情報を使ってこれを入力し、このポリシー記述子を使用してユーザー ポリシーを作成します。 このポリシーを使用して *ConvertToPFileUsingPolicy* への呼び出しにより選択したファイルを保護します (このトピックの前のセクションの説明を参照)。
 
 **C++**:
 
@@ -497,21 +497,21 @@ ms.locfileid: "44149499"
     }
 
 
-## <a name="scenario-rms-authentication"></a>シナリオ: RMS 認証
+## <a name="scenario-rms-authentication"></a>シナリオ:RMS 認証
 
 次の例は、2 つの異なる認証方法 (UI を使用、または使用せずに Azure 認証 oAuth2 トークンを取得) を示しています。
 **UI を使用した oAuth2 認証トークンの取得**
 **ソース**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
 **手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します。
-説明: キャッシュのパスを設定するか、既定値を使用できます。
+説明:キャッシュのパスを設定するか、既定値を使用できます。
 
 **C++**:
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
-**手順 2**: **rmsauth::AuthenticationContext** オブジェクトを作成します。説明: Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
+**手順 2**: **rmsauth::AuthenticationContext** オブジェクトを作成します。説明:Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
 
 **C++**:
 
@@ -539,7 +539,7 @@ ms.locfileid: "44149499"
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**手順 4**: 結果からアクセス トークンを取得します。説明: **result-> accessToken()** メソッドを呼び出します。
+**手順 4**:結果からアクセス トークンを取得します。説明:**result-> accessToken()** メソッドを呼び出します
 
 **注**  いずれかの認証ライブラリ メソッドにより **rmsauth::Exception** が発生する場合があります
 
@@ -547,14 +547,14 @@ ms.locfileid: "44149499"
 **UI なしの oAuth2 認証トークンの取得**
 **ソース**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します。説明: キャッシュのパスを設定するか、既定値を使用できます。
+**手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します 説明:キャッシュのパスを設定するか、既定値を使用できます
 
 **C++**:
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
-**手順 2**: **UserCredential** オブジェクトを作成します。説明: *ユーザー ログイン*と*パスワード*を指定します。
+**手順 2**: **UserCredential** オブジェクトを作成します 説明:*ユーザー ログイン*と*パスワード*を指定します
 
 **C++**:
 
@@ -562,7 +562,7 @@ ms.locfileid: "44149499"
                                                  "SomePass");
 
 
-**手順 3**: **rmsauth::AuthenticationContext** オブジェクトを作成します。説明: Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
+**手順 3**: **rmsauth::AuthenticationContext** オブジェクトを作成します 説明:Azure *証明機関 URI* と *FileCache* オブジェクトを指定します
 
 **C++**:
 
@@ -572,7 +572,7 @@ ms.locfileid: "44149499"
                         FileCachePtr);
 
 
-**手順 4**: **authContext** オブジェクトの **aquireToken** メソッドを呼び出し、次のパラメーターを指定します。
+**手順 4**:**authContext** の **aquireToken** メソッドを呼び出し、次のパラメーターを指定します。
 -   *要求されるリソース* - アクセスする必要のある保護されたリソース
 -   *クライアントの一意な ID* - 通常は GUID
 -   *ユーザーの資格情報* - 作成されたオブジェクトを渡します
@@ -585,6 +585,6 @@ ms.locfileid: "44149499"
                 userCred);
 
 
-**手順 5**: 結果からアクセス トークンを取得します。説明: **result-> accessToken()** メソッドを呼び出します。
+**手順 5**:結果からアクセス トークンを取得します。説明:**result-> accessToken()** メソッドを呼び出します
 
 **注**  いずれかの認証ライブラリ メソッドにより **rmsauth::Exception** が発生する場合があります

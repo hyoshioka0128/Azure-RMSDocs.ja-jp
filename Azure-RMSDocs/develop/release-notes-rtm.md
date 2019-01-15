@@ -2,8 +2,8 @@
 title: リリース ノート
 description: SDK 更新の改訂番号とその他の開発者情報。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 05ac80a9032467fafe09e39941117c6b4c52d439
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151352"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071201"
 ---
 # <a name="release-notes"></a>リリース ノート
 
@@ -63,7 +63,7 @@ ms.locfileid: "44151352"
 -   一連の新しい API で**ドキュメント追跡** が可能になりました。 詳細については、「[Tracking Content](tracking-content.md)」 (コンテンツの追跡) を参照してください。
 -   **暗号化の種類** – 暗号化パッケージの選択の API レベルでの制御をサポートします。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
 
-    **注**  API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**  フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
+    **注**  API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
 
 -   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [API モード値](https://msdn.microsoft.com/library/hh535236.aspx) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
 -   **ログ**は、ファイルと Event Tracing for Windows メソッドの両方で実装されました。
@@ -93,7 +93,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     このリリースで追加された関数:
 
-    **注** - ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべての記事に、"**暫定的なものであり、変更される可能性があります**" と記載されています。
+    **注** - ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべての記事に、"**暫定的なものであり、変更される可能性があります**" と記載されています。
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -122,13 +122,13 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **Windows 7 SP1 および Windows Server 2008 R2 SP1 コンピューター**に更新プログラム [KB2533623](https://support.microsoft.com/kb/2533623) が適用されていない場合、office ファイルを保護する際に "パラメーターが正しくありません。 エラー コード 0x80070057" というエラーが発生することがあります。 このエラーが表示された場合は、更新プログラムをインストールしてやり直してください。 それでも問題が解決しない場合は、RMS SDK ベータ フィードバック エイリアス(<rmcstbeta@microsoft.com>) にお問い合わせください。
 
-    **注**  2015 年 4 月のリリース時点で、この更新プログラムのインストール プロセスにチェックが追加されました。
+    **注**  2015 年 4 月のリリース時点で、この更新プログラムのインストール プロセスにチェックが追加されました。
 
-     
+     
 
 -   **ファイル API の統合**
 
-    Active Directory Rights Management サービスのファイル API は、ファイル API の追加により次の利点と機能を提供します。
+    Active Directory Rights Management サービスのファイル API では、ファイル API の追加により次の利点と機能が提供されます。
 
       - 機密データを自動化された方法で保護することが可能であり、さまざまなファイル形式で使用される Information Rights Management (IRM) の実装の詳細を知る必要はありません。
 
@@ -136,27 +136,27 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
       - システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
 
-    ファイル API は、[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx) という 4 つの新機能を介して実装されます。
+    ファイル API は、次の 4 つの新しい関数によって実装されます:[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx)。
 
     ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
 
--   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
+-   **問題**:ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
-    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
+    **解決方法**：ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
 
--   **問題**: アプリケーションがハンドルを使用して、同じウィンドウに対して [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) または [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) を 2 回呼び出した場合、RMS SDK 2.1 は **HRESULT** にエラーを返します。
+-   **問題**:アプリケーションでそのハンドルを使用して同じウィンドウに対して [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) または [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) を 2 回呼び出した場合、RMS SDK 2.1 では **HRESULT** でエラーが返されます。
 
-    **ソリューション**: この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
+    **解決方法**：この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
 
--   **問題**: 複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
+-   **問題**:複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
 
-    **ソリューション**: Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
+    **解決方法**：Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **Q**: LCID パラメーターを受け取る関数では、既定の言語の動作はどうなるでしょうか。
 
-**A**: 既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序でを検索し、使用可能な最初の値を取得します。
+**A**: 既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序で検索し、使用可能な最初の値が取得されます。
 
     1 - User preferred LCID.
     2 - System locale LCID.

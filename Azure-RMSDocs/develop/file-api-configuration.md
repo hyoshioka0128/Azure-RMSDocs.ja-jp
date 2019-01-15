@@ -2,8 +2,8 @@
 title: ファイル API の構成 | Azure RMS
 description: ファイルの API の動作は、レジストリの設定を使用して構成できます。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1323984258b64e9d28142a0209a89d3791ab03dd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b05498730d064dfa2b7fb2183b1a8694c1fbf63
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148649"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070623"
 ---
 # <a name="file-api-configuration"></a>ファイル API の構成
 
@@ -39,13 +39,13 @@ ms.locfileid: "44148649"
 
 **種類**: キー
 
-**説明**: ファイル API の一般的な構成が含まれています。
+**説明**:ファイル API の一般的な構成が含まれています。
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
 **種類**: キー
 
-**説明**: 特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
+**説明**:特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
 
 - ワイルドカード文字 "*" を使用できます。ただし、特定の拡張子の設定は、ワイルドカードの設定よりも優先されます。 ワイルドカード文字は、Microsoft Office ファイルの設定には影響しません。これらは、ファイルの種類ごとに明示的に無効する必要があります。
 - 拡張子がないファイルを指定するには、"." を使用します。
@@ -58,7 +58,7 @@ ms.locfileid: "44148649"
 
 **種類**: REG_SZ
 
-**説明**: 次の 3 つの値のいずれかが含まれています。
+**説明**:次の 3 つの値のいずれかが含まれています。
 
 - **Off**: 暗号化が無効です。
 
@@ -91,19 +91,19 @@ ms.locfileid: "44148649"
 
 -   ファイル拡張子: doc、dot、xla、xls、xlt、pps、ppt、docm、docx、dotm、dotx、xlam、xlsb、xlsm、xlsx、xltm、xltx、xps、potm、potx、ppsx、ppsm、pptm、pptx、thmx、vsdx、vsdm、vssx、vssm、vstx、vstm。 
 -   保護の種類 = ネイティブ (既定): sample.docx を暗号化すると、sample.docx のままです。
--   保護の種類 = Pfile: Office ファイルの場合は、ネイティブと同じ結果になります。
--   Off: 暗号化を無効にします。
+-   保護の種類 = Pfile:Office ファイルの場合は、ネイティブと同じ結果になります。
+-   オフ:暗号化を無効にします。
 
 **PDF ファイル**
 
 -   保護の種類 = ネイティブ: sample.pdf を暗号化すると、sample.ppdf という名前になります。
 -   保護の種類 = Pfile: sample.pdf を暗号化すると、sample.pdf.pfile という名前になります。
--   Off: 暗号化を無効にします。
+-   オフ:暗号化を無効にします。
 
 **その他のすべてのファイル形式**
 
 -   保護の種類 = Pfile: sample.*zzz* を暗号化すると、sample.*zzz*.pfile という名前になります。*zzz* は元のファイル拡張子です。
--   Off: 暗号化を無効にします。
+-   オフ:暗号化を無効にします。
 
 ### <a name="examples"></a>例
 
@@ -111,38 +111,38 @@ ms.locfileid: "44148649"
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               txt
-                  Encryption = Pfile
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               txt
+                  Encryption = Pfile
 ```
 
 次の設定は、Office 以外のすべてのファイル (txt ファイルを除く) の PFile 暗号化を有効にします。 Office ファイルには (既定で) ネイティブ保護が適用され、txt ファイルの保護はブロックされ、その他のすべてのファイルには PFile 保護が適用されます。
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               *
-                  Encryption = Pfile
-               txt
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               *
+                  Encryption = Pfile
+               txt
+                  Encryption = Off
 ```
 
 次の設定は、docx ファイルのネイティブ暗号化を無効にします。 Office ファイル (docx ファイルを除く) には (既定で) ネイティブ保護が適用され、その他のすべてのファイルの保護は (既定で) ブロックされます。
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               docx
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               docx
+                  Encryption = Off
 ```
 
 ## <a name="related-articles"></a>関連記事

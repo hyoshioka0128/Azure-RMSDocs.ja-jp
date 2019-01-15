@@ -2,8 +2,8 @@
 title: Azure Information Protection SDK 2.1 開発者ガイド |Microsoft Docs
 description: AIP SDK 2.1 での開発の操作方法に関するトピックのコレクション
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
@@ -12,18 +12,18 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5e85005cd497be45a2b92631a682121482e5997f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e6f4cbf9ec795ca73424bbd2ca35e5f1ae59fa7
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147483"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070590"
 ---
 # <a name="developer-guidance"></a>開発者ガイド
 
 このセクションでは、いくつかの重要な開発シナリオについて説明し、この SDK による開発に関する基本情報を提供します。 このセクションのシナリオは Rights Management サービス SDK 2.1 のこのリリースに固有のシナリオであり、将来のリリースで変更される可能性があります。
 - [方法: ADAL 認証の使用](how-to-use-adal-authentication.md) - Azure Active Directory Authentication Library (ADAL) を利用し、アプリに対して Azure RMS で認証を実行する。
-- [方法: 明示的な所有者権限の追加](add-explicit-owner-rights.md) - アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx))。
+- [方法:明示的な所有者権限の追加](add-explicit-owner-rights.md) - アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx))。
 - [方法: 権限保護対応アプリケーションのデバッグ](debugging-applications-that-use-ad-rms.md) - このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
 - [方法: 顧客のテナントへのアプリのデプロイ](how-to-deploy-app.md) - Azure AD の開発テナントから Azure AD の運用テナントにアプリをデプロイする手順の概要を説明します。
 - [方法: ドキュメント追跡の有効化と取り消し](tracking-content.md) - このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
@@ -39,6 +39,6 @@ ms.locfileid: "44147483"
 - [サポートされているプラットフォーム](supported-platforms.md): このトピックでは、RMS SDK 2.1 でサポートされているクライアントとサーバー プラットフォームを識別します。
 - [使用制限について](understanding-usage-restrictions.md) - すべての RMS 対応アプリケーションは、このトピックに記載されている定数で定義されている使用制限を適用する必要があります。
 
- 
+ 
 ## <a name="related-topics"></a>関連項目
 * [概要](ad-rms-overview.md)

@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 01/04/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2ecb0376ac7d4d4ddd476e76a60053ff408e2bbd
-ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
+ms.openlocfilehash: b16dee0a922ce6f3195d192021edbf4966223e30
+ms.sourcegitcommit: 17d2528e801ebf37f3d6f54db920588ef212d34d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335542"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996946"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -76,7 +76,7 @@ ms.locfileid: "53335542"
 
 通常、運用環境では、Azure Information Protection クライアントを使用しているときに別のユーザーとしてサインインする必要はありません。 ただし管理者の場合は、テスト段階のときに別ユーザーとしてサインインする必要がある場合があります。 
 
-**[Microsoft Azure Information Protection]** ダイアログ ボックスを使用して、現在サインインしているアカウントを確認することができます。Office アプリケーションを開き、**[ホーム]** タブの **[保護]** グループで、**[保護]**、**[ヘルプとフィードバック]** の順にクリックします。 アカウント名が **[クライアント ステータス]** セクションに表示されます。
+**[Microsoft Azure Information Protection]** ダイアログ ボックスを使用して、現在サインインしているアカウントを確認することができます。Office アプリケーションを開き、**[ホーム]** タブの**保護**グループで、**[保護]**、**[ヘルプとフィードバック]** の順にクリックします。 アカウント名が **[クライアント ステータス]** セクションに表示されます。
 
 表示されるサインイン アカウントのドメイン名も必ず確認してください。 正しいアカウントでサインインしていてもドメインが間違っている、という状況は気付きにくいものです。 適切ではないアカウントが使用された場合は、Azure Information Protection ポリシーのダウンロードが失敗することや、目的のラベルや機能が表示されないことがあります。
 
@@ -122,6 +122,10 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 - 記号の意味:**ReportAnIssueLink**
 
 - Value:**\<HTTP 文字列>**
+
+Web サイトの値の例: `https://support.contoso.com`
+
+メール アドレスの値の例: `mailto:helpdesk@contoso.com`
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>エクスプローラーの [Hide the Classify and Protect]\(分類の非表示と保護) メニュー オプション
 
@@ -351,10 +355,9 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
     
     注: **MainLabelId** にも値がない場合、ファイルはレベル付けされていません。 この場合は、手順 3 と 4 のコマンドではなく、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドと [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドを使用します。
     
-    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** 用に表示された値) にラベルの削除と、元のカスタム アクセス許可と共にそれの再適用の実行を依頼するかどうかを決定します。
+    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
 
-3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 [ポリシー設定](../configure-
-4. settings.md) **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** を使用している場合は、理由と共に *Justification* パラメーターも指定する必要があります。 次に例を示します。 
+3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 

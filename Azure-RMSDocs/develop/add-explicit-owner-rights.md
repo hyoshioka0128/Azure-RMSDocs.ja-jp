@@ -2,8 +2,8 @@
 title: 明示的な所有者権限の追加方法 | Azure RMS
 description: アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6322831ee15266a4709284da0f9eb113f6d3eaf0
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ee003510feaebfb0615eaf8e8408e0276cc082d6
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147121"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071167"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>方法: 明示的な所有者権限の追加
 
@@ -27,14 +27,13 @@ ms.locfileid: "44147121"
 
 アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使ってライセンス ハンドルを作成するときは、所有者に完全な権限 (アクセス許可) も明示的に付与する必要があります。
 
->[!NOTE] 
-> [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) と **IPC\_LI\_OWNER** プロパティを使ってユーザーを "所有者" として設定しても、所有者に完全なアクセス許可は付与されません。
+>[!NOTE]  [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) と **IPC\_LI\_OWNER** プロパティを使ってユーザーを "所有者" として設定しても、所有者に完全なアクセス許可は付与されません。
 
 次のコード例には、特定の権限を作成して特定のライセンスに割り当てるための手順のみが示されています。
 
 ## <a name="instructions"></a>手順
- 
-## <a name="step-1-example-scenario"></a>手順 1: シナリオ例
+ 
+## <a name="step-1-example-scenario"></a>手順 1.シナリオ例
 
 この例では、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って作成したライセンスに必要な権限を追加しています。 この例は、権限の作成のほか、権限リストを使用したライセンスへの権限の割り当てを示しています。
 

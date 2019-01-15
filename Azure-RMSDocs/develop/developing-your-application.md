@@ -2,8 +2,8 @@
 title: アプリケーションの開発 - AIP
 description: AIP によるドキュメントの保護を実装する基本的なコンソール アプリのガイダンスです。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
@@ -12,21 +12,21 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: ef75dcff64d5ad2adaf2ffc9938490a65ac9bee9
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148734"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071303"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
 この例では、Azure Information Protection サービス (AIP) と連携する簡単なコンソール アプリケーションを作成します。  保護するドキュメントのパスを入力し、アドホック ポリシーまたは Azure テンプレートを使用してドキュメントを保護する手順を説明します。 アプリケーションは入力に従って正しいポリシーを適用し、情報が保護されたドキュメントを作成します。 使用するサンプル コードは、[Azure IP テスト アプリケーション](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test)および Github を参照してください。
 
 ## <a name="sample-app-prerequisites"></a>サンプル アプリの前提条件
-- **オペレーティング システム**: Windows 10、Windows 8、Windows 7、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012 のいずれか
-- **プログラミング言語**: C# (.NET Framework 3.0 以降)
-- **開発環境**: Visual Studio 2015 (およびそれ以降)
+- **オペレーティング システム**:Windows 10、Windows 8、Windows 7、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012 のいずれか
+- **プログラミング言語**:C# (.NET Framework 3.0 以降)
+- **開発環境**:Visual Studio 2015 (以降)
 
 ## <a name="setting-up-your-azure-configuration"></a>Azure 構成のセットアップ
 

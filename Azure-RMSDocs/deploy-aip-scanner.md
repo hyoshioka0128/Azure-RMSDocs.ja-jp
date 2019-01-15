@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 01/08/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: fba2a1a804c085c44efc79d0f0ac69988f681aaa
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: 87e82a34e38bb66df2ecb10b91ec371f35bd5652
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382522"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071320"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -53,12 +53,13 @@ Azure Information Protection スキャナーをインストールする前に、
 
 |要件|詳細情報|
 |---------------|--------------------|
-|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 4 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2016 または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br />Azure Information Protection に必要な[インターネット接続](requirements.md#firewalls-and-network-infrastructure)がこのコンピューターにあることを確認します。 組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。|
+|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2016 または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br />Azure Information Protection に必要な[インターネット接続](requirements.md#firewalls-and-network-infrastructure)がこのコンピューターにあることを確認します。 組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。|
 |スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス<br /><br />- スキャナーをインストールする sysadmin ロール|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />スキャナーの複数のインスタンスをインストールする場合は、スキャナー インスタンスごとに独自の SQL Server インスタンスが必要です。<br /><br />Sysadmin ロールを持つアカウントでスキャナーをインストールすると、インストールのプロセスで AzInfoProtectionScanner データベースが自動的に作成され、スキャナーを実行するサービス アカウントに対して必要な db_owner ロールが付与されます。 Sysadmin ロールが付与されない場合や、組織のポリシーがデータベースを手動で作成し構成することを要求している場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」をご覧ください。<br /><br />構成データベースのサイズはデプロイごとに異なりますが、スキャンしたい 1,000,000 ファイルごとに 500 MB を割り当てることをお勧めします。 |
 |スキャナー サービスを実行するサービス アカウント|スキャナーのサービスの実行に加えて、このアカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />- **ローカル ログオン**権限。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />- **サービスとしてログオン**権限。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーで保護されたファイルに常に確実にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能を確実に有効にします。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」を参照してください。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
 |Azure Information Protection クライアントが Windows Server コンピューターにインストールされる|スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />クライアントのインストール手順については、[管理者ガイド](./rms-client/client-admin-guide.md)を参照してください。 スキャナーを以前にインストールしていて、今回新しいバージョンにアップグレードする必要がある場合は、[「Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」をご覧ください。|
 |自動分類と、必要に応じて保護を適用する構成済みのラベル|Azure Information Protection ポリシーの条件を構成する方法について詳しくは、「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)」をご覧ください。<br /><br />ファイルに保護を適用するラベルを構成する方法の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」を参照してください。<br /><br />これらのラベルは、グローバル ポリシーまたは 1 つ以上の[スコープ付きポリシー](configure-policy-scope.md)にあります。<br /><br />注: 自動分類を適用するラベルを構成していない場合でもスキャナーを実行できますが、このシナリオについては、これらの手順では説明されていません。 [詳細情報](#using-the-scanner-with-alternative-configurations)|
-|スキャンされる Office ドキュメントの場合:<br /><br />- Word、Excel、PowerPoint の 97-2003 ファイル形式および Office Open XML 形式|これらのファイル形式に対してスキャナーがサポートするファイルの種類について詳しくは、「[Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)」をご覧ください。 
+|スキャンされる Office ドキュメントの場合:<br /><br />- Word、Excel、PowerPoint の 97-2003 ファイル形式および Office Open XML 形式|これらのファイル形式についてスキャナーでサポートされるファイルの種類について詳しくは、「[Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)」をご覧ください|
+|長いパスの場合:<br /><br />- 最大 260 文字 (スキャナーが Windows 2016 にインストールされていて、コンピューターが長いパスをサポートするように構成されているのでない場合)|Windows 10 および Windows Server 2016 では、次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)により、260 文字を超えるパスの長さがサポートされます。**ローカル コンピューター ポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべての設定** > **NTFS** > **Win32 の長いパスを有効にする**<br /><br /> 長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
 
 組織のポリシーによる禁止のためにテーブルの要件をすべて満たすことができない場合は、代替案として次のセクションをご覧ください。
 
@@ -192,7 +193,7 @@ SharePoint のサポートされているバージョン: SharePoint Server 2016
     
         Start-AIPScan
     
-    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>** > **[今すぐスキャン]** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードからスキャナーを起動できます。
+    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > **\<*スキャナー ノード*>** > **[今すぐスキャン]** オプションを使用すると、Azure portal の **[Azure Information Protection]** ブレードからスキャナーを開始できます。
 
 2. 次のコマンドを実行し、スキャナーがサイクルを完了するまで待機します。
     
@@ -227,7 +228,7 @@ SharePoint のサポートされているバージョン: SharePoint Server 2016
     
         Start-AIPScan
     
-    または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[今すぐスキャン]** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードからスキャナーを起動できます。
+    または、**[スキャナー]** \> **[Nodes (Preview)]\(ノード (プレビュー)\)** \> **\<*スキャナー ノード*\>** \> **[今すぐスキャン]** オプションを使用すると、Azure portal の **[Azure Information Protection]** ブレードからスキャナーを開始できます。
 
 3. 情報の種類が **911** で、タイム スタンプが前の手順でスキャンを開始した時刻よりも後のイベント ログを再び監視します。 
     
@@ -238,61 +239,72 @@ SharePoint のサポートされているバージョン: SharePoint Server 2016
 
 ## <a name="how-files-are-scanned"></a>ファイルをスキャンする方法
 
-このスキャナーは、実行可能ファイルやシステム ファイルなど、[分類と保護から除外されている](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)ファイルを自動的にスキップします。
+スキャナーでは、ファイルをスキャンするとき、次のプロセスが実行されます。
 
-スキャンする (またはスキャン対象から除外する) ファイルの種類のリストを定義することで、この動作を変更できます。 このリストを指定し、データ リポジトリを指定しなかった場合、そのリストは、独自のリストが指定されていないすべてのデータ リポジトリに適用されます。 このリストを指定するには、[Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes) を使用します。 ファイルの種類のリストを指定した後、新しいファイルの種類をリストに追加するには、[Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) を使用します。リストからファイルの種類を削除するには、[Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) を使用します。
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1.ファイルがスキャンに含まれるか、または除外されるかを判断する 
+スキャナーでは、実行可能ファイルやシステム ファイルなど、[分類と保護から除外されている](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)ファイルは自動的にスキップされます。
 
-次に、スキャナーでは Windows IFilter が使用され、次のファイルの種類がスキャンされます。 このような種類のファイルでは、ラベルに指定した条件によって文書にラベルが付けられます。
+スキャンする (またはスキャン対象から除外する) ファイルの種類のリストを定義することで、この動作を変更できます。 このリストを指定し、データ リポジトリを指定しなかった場合、そのリストは、独自のリストが指定されていないすべてのデータ リポジトリに適用されます。 このリストを指定するには、[Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes) を使用します。 
 
-|アプリケーションの種類|ファイルの種類|
-|--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
-|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF |.pdf|
-|テキスト|.txt; .xml; .csv|
+ファイルの種類のリストを指定した後、新しいファイルの種類をリストに追加するには、[Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) を使用します。リストからファイルの種類を削除するには、[Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) を使用します。
 
-さらに、スキャナーを実行するコンピューター上に Windows TIFF IFilter 機能をインストールして、[Windows TIFF IFilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成すると、スキャナーで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査することもできます。
+### <a name="2-inspect-and-label-files"></a>2.ファイルを検査してラベルを付ける
 
-既定では、スキャナーによって保護されるのは Office のファイルの種類と PDF ファイルのみです。したがって、[レジストリを編集](#editing-the-registry-for-the-scanner)してファイルの種類を指定しない限り、テキストおよびイメージ ファイルは保護されません。
+その後、スキャナーでは、フィルターを使用して、サポートされているファイルの種類がスキャンされます。 これらの同じフィルターが、オペレーティング システムによって Windows Search とインデックス作成にも使用されます。 構成を何も追加しなくても、Word、Excel、PowerPoint、PDF ドキュメント、テキスト ファイルに対して使用されるファイルの種類のスキャンに、Windows IFilter が使用されます。
 
-- レジストリに .txt、.xml、.csv のファイルの種類を追加しない場合: これらのファイルの種類では分類のみがサポートされないため、これらのファイル名拡張子を持つファイルはラベル付けされません。
+既定でサポートされているファイルの種類の完全な一覧、および .zip ファイルと .tiff ファイルを含む既存のフィルターの構成方法に関する追加情報については、「[検査に対してサポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)」をご覧ください。
 
-- Windows TIFF IFilter の構成後に、レジストリに .tiff のファイルの種類を追加しない場合: このファイル名拡張子を持つファイルはラベル付けされますが、ラベルが保護用に構成されている場合、保護は適用されません。
+検査が済むと、ユーザーがラベルに対して指定した条件を使用して、これらのファイルの種類にラベルを付けることができます。 または、検出モードを使用している場合は、ユーザーがラベルに対して指定した条件、またはすべての既知の機密情報の種類を含むように、これらのファイルを報告できます。 
 
-最後に、残りの種類のファイルについて、スキャナーではそれらが検査されませんが、Azure Information Protection ポリシーの既定のラベル (またはご自身がスキャナー用に構成する既定のラベル) が適用されます。
+ただし、以下の状況では、スキャナーでファイルにラベルを付けることはできません。
 
-|アプリケーションの種類|ファイルの種類|
-|--------------------------------|-------------------------------------|
-|Project|.mpp; .mpt|
-|発行者|.pub|
-|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
-|XPS|.xps; .oxps; .dwfx|
-|Solidworks|.sldprt; .slddrw; .sldasm|
-|Jpeg |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
-|Png |.png|
-|Gif|.gif|
-|ビットマップ|.bmp; .giff|
-|Tiff|.tif; .tiff|
-|Photoshop|.psdv|
-|DigitalNegative|.dng|
-|Pfile|.pfile|
+- ラベルで分類は適用されるが、保護は適用されず、ファイルの種類で ["分類のみ" がサポート](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only)されていない場合。
 
-スキャナーで保護と共にラベルが適用された場合、既定では、Office のファイルの種類と PDF ファイルのみが保護されます。 他のファイルの種類が保護されるように、この動作を変更できます。 ただし、ラベルがドキュメントに一般保護を適用すると、ファイル名の拡張子が .pfile に変わります。 その他のファイルの種類も、ファイル名拡張子を変更できます。 また、承認されたユーザーが開き、そのネイティブ形式で保存されるまで、ファイルは読み取り専用になります。
+- ラベルで分類と保護が適用されるが、スキャナーでファイルの種類が保護されていない場合。
+    
+    既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 他のファイルの種類は、次のセクションで説明するように、[レジストリを編集](#editing-the-registry-for-the-scanner)すると保護できます。
+
+たとえば、.txt ファイルの種類では "分類のみ" がサポートされていないため、ファイル名拡張子が .txt であるファイルを検査した後は、分類用にだけ構成されていて保護用には構成されていないラベルを、スキャナーで適用することはできません。 ラベルが分類用と保護用に構成されていて、レジストリが .txt ファイルの種類用に編集されている場合は、スキャナーでファイルにラベルを付けることができます。 
+
+> [!TIP]
+> このプロセスの間に、スキャナーが停止し、リポジトリ内の多数のファイルのスキャンを完了できない場合は、ファイルをホストしているオペレーティング システムで動的ポートの数を増やすことが必要な場合があります。 SharePoint 用にサーバーのセキュリティが強化されている場合、スキャナーが許可されているネットワーク接続の数を超えて、そのために停止する原因の 1 つになる可能性があります。
+> 
+> これがスキャナー停止の原因であるかどうかを確認するには、%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog にスキャナーに対する以下のエラー メッセージが記録されているかどうかを確認します (複数のログがある場合は zip 形式になっています)。**リモート サーバー 'System.Net.Sockets.SocketException' に接続できません:通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます IP:ポート**
+>
+> 現在のポート範囲を表示し、範囲を拡大する方法について詳しくは、「[ネットワーク パフォーマンスを向上させるために変更可能な設定](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」をご覧ください 
+
+
+
+### <a name="3-label-files-that-cant-be-inspected"></a>3.検査できないファイルにラベルを付ける
+検査できないファイルの種類に対し、スキャナーでは Azure Information Protection ポリシーの既定のラベル、またはユーザーがスキャナー用に構成した既定のラベルが適用されます。
+
+前のステップと同じように、以下の状況では、スキャナーでファイルにラベルを付けることはできません。
+
+- ラベルで分類は適用されるが、保護は適用されず、ファイルの種類で ["分類のみ" がサポート](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only)されていない場合。
+
+- ラベルで分類と保護が適用されるが、スキャナーでファイルの種類が保護されていない場合。
+    
+    既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 他のファイルの種類は、次に説明するように、[レジストリを編集](#editing-the-registry-for-the-scanner)すると保護できます。
+
 
 ### <a name="editing-the-registry-for-the-scanner"></a>スキャナーのレジストリの編集
 
-Office ファイルと PDF 以外のファイルの種類を保護するためにスキャナーの既定の動作を変更するには、レジストリを手動で編集し、保護する他のファイルの種類を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
+Office ファイルと PDF 以外のファイルの種類を保護するためにスキャナーの既定の動作を変更するには、レジストリを手動で編集し、保護する他のファイルの種類と、保護の種類 (ネイティブまたは汎用) を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
 
-- スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更していない場合、その他のファイル形式は、スキャナーによっては保護されません。
+- スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
 - すべてのファイルがネイティブのまたは汎用的な保護により自動的に保護される、Azure Information Protection クライアントの同じ既定の保護動作が必要な場合は、`*` ワイルドカードをレジストリ キーとして、`Default` を値データとして指定します。
 
 レジストリを編集するときには、各ファイル名拡張子のキーと共に、**MSIPC** キーと **FileProtection** キーが存在しない場合には手動で作成します。
 
-たとえば、Office ファイルと PDF だけでなく、TIFF イメージも保護するスキャナーの場合、レジストリの編集後は、次の図のようになります。
+たとえば、Office ファイルと PDF だけでなく、TIFF イメージも保護するスキャナーの場合、レジストリの編集後は、次の図のようになります。 イメージ ファイルなので、TIFF ファイルではネイティブ保護がサポートされ、結果としてファイル名拡張子は .ptiff になります。
 
 ![保護を適用するためのスキャナーのレジストリの編集](./media/editregistry-scanner.png)
+
+同様に、ネイティブ保護はサポートされていても、レジストリで指定する必要があるテキスト ファイルとイメージ ファイルの種類の一覧については、管理者ガイドの「[分類と保護がサポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection)」をご覧ください。
+
+ネイティブ保護がサポートされていないファイルの場合は、新しいキーとしてファイル名拡張子を指定し、汎用的な保護のために **PFile** を指定します。 結果として、保護されるファイルのファイル名拡張子は .pfile になります。
+
 
 ## <a name="when-files-are-rescanned"></a>ファイルが再スキャンされる場合
 
@@ -300,7 +312,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 `-Reset` パラメーターを指定して [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) を実行すると、スキャナーにすべてのファイルの再検査を強制することができます。 スキャナーに手動スケジュールを構成する必要があり、その場合、`-Schedule`パラメーターを **Manual** に設定して [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) を実行します。
 
-または、**[スキャナー]** > **[Nodes (Preview)]\(ノード (プレビュー)\)** > \**<* スキャナー ノード*>**> **[Rescan all files]\(すべてのファイルを再スキャン\)** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードから、すべてのファイルを再検査するようスキャナーに強制することができます。
+または、**[スキャナー]** \> **[Nodes (Preview)]\(ノード (プレビュー)\)** \> **\<*スキャナー ノード*\>** \> **[Rescan all files]\(すべてのファイルを再スキャン\)** オプションを使用すると、Azure portal の **Azure Information Protection** ブレードから、すべてのファイルを再検査するようスキャナーに強制することができます。
 
 すべてのファイルの再検査はレポートにすべてのファイルを含める必要がある場合に役立ち、この構成は通常、検索モードでスキャナーが実行されるときに使用されます。 フル スキャンが完了すると、後続のスキャンで新しいファイルまたは変更されたファイルのみがスキャンされるように、スキャンの種類が自動的に [増分] に変更されます。
 
@@ -438,9 +450,9 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 **スキャナーのサイクルが完了しました。**
 
-サーバーを起動してからスキャナーが 1 回限りのスキャンを完了するか、スキャナーが連続的なスケジュールのサイクルを完了したときに、このイベントがログに記録されます。
+スキャナーで手動スキャンまたは継続的スケジュールのサイクルが完了すると、このイベントがログに記録されます。
 
-スキャナーを連続ではなく 1 回のみ実行するように構成している場合、ファイルをもう一度スキャンするには、**[1 回限り]** または **[継続]** にスケジュールを設定してから、サービスを手動で再起動する必要があります。 スケジュールを変更するには、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットと **[スケジュール]** パラメーターを使用します。
+継続的ではなく手動で実行するようにスキャナーが構成されていた場合、新しいスキャンを実行するには、[Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) コマンドレットを使用します。 スケジュールを変更するには、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットと **[スケジュール]** パラメーターを使用します。
 
 ----
 

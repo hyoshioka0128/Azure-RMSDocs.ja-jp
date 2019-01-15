@@ -1,20 +1,20 @@
 ---
 title: Azure Information Protection ポリシーの概要
-description: Azure Inforamtion Protection ポリシーにおけるラベルと設定について説明します。
+description: Azure Information Protection ポリシーにおけるラベルと設定について説明します。
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e66a2c117523eb01089881b8210f12ed2f657ed4
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6483600d8ba74a29a54965010441fe10dc309d8e
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304895"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814188"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの概要
 
@@ -42,7 +42,9 @@ Azure Information Protection ポリシーには、構成可能な次の要素が
 
 - ユーザーにカスタム ヘルプ リンクを提供するオプション。
 
-Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのうちの 2 つのラベルには、必要なときにサブカテゴリを提供するためのサブラベルが含まれています。 サブラベルのラベルを構成するときに、ユーザーはメインのラベルを選択することはできませんが、サブラベルをいずれか 1 つ選択する必要があります。
+Azure Information Protection には[既定ポリシー](configure-policy-default.md)があり、5 つの主要なラベルが含まれています。 これらのうちの 2 つのラベルには、必要なときにサブカテゴリを提供するためのサブラベルが含まれています。 
+
+サブラベルのラベルを構成するときに、ユーザーはメインのラベルを選択することはできませんが、サブラベルをいずれか 1 つ選択する必要があります。 このシナリオでは、メインのラベルは名前と色の表示コンテナーとしてのみサポートされます。
 
 Azure Information Protection ラベルは、最下位の分類である個人データから、最上位の分類である非常に機密性の高い社外秘データまで、組織が通常作成して保存するあらゆるデータで使用できます。 
 

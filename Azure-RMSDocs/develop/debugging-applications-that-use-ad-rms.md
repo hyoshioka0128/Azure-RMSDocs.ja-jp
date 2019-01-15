@@ -2,8 +2,8 @@
 title: 権限保護対応アプリケーションをデバッグする方法 | Azure RMS
 description: このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed627c98238028fc14f977f2ce7475f356ceb889
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: cb77177ecb0c92f3e991e0f6d06a55fa2c332873
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147374"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071556"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>方法: 権限保護対応アプリケーションのデバッグ
 
@@ -32,21 +32,21 @@ Rights Management サービス SDK 2.1 では、ランタイムの開発者バ�
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         MSIPC
-            "Trace" = 00000001
-            Data type
-            dword
+   SOFTWARE
+      Microsoft
+         MSIPC
+            "Trace" = 00000001
+            Data type
+            dword
 ```
 
 ### <a name="application-logging-by-using-the-windows-event-log"></a>Windows イベント ログを使用したアプリケーションのログ記録
 
 イベント ログの名前は "Microsoft-RMS-MSIPC/Debug" です。 これは、Windows イベント ビューアーでログが表示される場所が "アプリケーションとサービス ログ\\Microsoft\\RMS\\MSIPC\\Debug" であることを意味します。
 
-**注**: ログは既定で有効に設定され、詳細レベル 3 に設定されます。
+**注**:  ログは既定で有効に設定され、詳細レベル 3 に設定されます。
 
- 
+ 
 
 ログ機能の設定を変更するには、Windows イベント ビューアーの UI か、Windows の組み込みコマンド ライン ツールである Wevtutil を使用できます。
 
@@ -62,4 +62,4 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**注**: Windows イベント ビューアーで、**[表示]** メニューの **[分析およびデバッグ ログの表示]** を選択すると、MSIPC デバッグ ログが表示されます。
+**注**:  Windows イベント ビューアーで、**[表示]** メニューの **[分析およびデバッグ ログの表示]** を選択すると、MSIPC デバッグ ログが表示されます。

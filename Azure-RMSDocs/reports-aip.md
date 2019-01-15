@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2018
+ms.date: 12/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
-ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
+ms.openlocfilehash: 0c2309fb635a05f6b0c836b7d4caf04d1c17a23a
+ms.sourcegitcommit: 6651546fa69538e2099b5c2b92ab0902d568a96a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068811"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815124"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -101,6 +101,11 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
 
 この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、このワークスペースへのアクセス権を持つユーザーが表示できます。 ワークスペースに対するアクセスの構成について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users)」セクションをご覧ください。
 
+> [!NOTE]
+> Azure Information Protection の Azure Log Analytics ワークスペースには、ドキュメントのコンテンツの一致に関するチェック ボックスが含まれています。 このチェック ボックスをオンにすると、機密情報の種類またはカスタム条件によって識別された実際のデータも収集されます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 このデータを収集したくない場合は、このチェック ボックスをオンにしないでください。
+>
+> 現時点では、この情報はレポートに表示されませんが、クエリで表示および取得することはできます。
+
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Azure Information Protection 分析の前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
@@ -124,7 +129,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
     
     - 既存の Log Analytics ワークスペースを使用するには: 一覧からワークスペースを選択します。
 
-Log Analytics ワークスペースの作成に関する情報については、「[Azure ポータルで Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
+Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
 ワークスペースが構成されている場合は、レポートを表示する準備ができています。
 
@@ -141,6 +146,9 @@ Log Analytics ワークスペースの作成に関する情報については、
     このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。
 
 - **データ検出 (プレビュー)**: スキャナーまたは Windows Defender ATP によって検出されたファイルに関する情報を表示するには、このレポートを使用します。
+
+> [!NOTE]
+> 現在、送信元オペレーティング システムのロケールが英語の場合、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されるという既知の問題があります。
 
 ## <a name="how-to-modify-the-reports"></a>レポートを変更する方法
 

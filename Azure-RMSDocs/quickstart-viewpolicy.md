@@ -4,17 +4,17 @@ description: 組織で初めて Azure Information Protection を使用する場�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: f5cf70b0827e36ffae6644634ef198385ef6d11a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
+ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023517"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411815"
 ---
-# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート: Azure portal で Azure Information Protection の使用を開始する
+# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
 このクイック スタートでは、Azure Information Protection を Azure portal に追加し、保護サービスがアクティブ化されていることを確認して、組織の既定のポリシーを表示します。 
 
@@ -36,7 +36,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 1. テナントのグローバル管理者アカウントを使用して、[Azure Portal](https://portal.azure.com) にサインインします。 
     
-    グローバル管理者でない場合は、別のロールのためにリンク「[Azure Portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」を使用します。
+    グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
 2. ハブ メニューで **[リソースの作成]** を選択し、Marketplace の検索ボックスに **Azure Information Protection** と入力します。 
     
@@ -75,7 +75,7 @@ Azure portal を使用して Azure Information Protection サービスに初め�
     
 2. 表示されるラベルをよく理解しておいてください。
     
-    - 分類用のラベル: **[Personal (個人)]**、**[Public (公開)]**、**[General (全般)]**、**[Confidential (社外秘)]**、**[Highly Confidential (非常に機密性の高い社外秘)]**。 最後の 2 つのラベルを展開するとサブラベルが表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
+    - 分類用のラベル:**[個人用]**、**[公開]**、**[全般]**、**[社外秘]**、**[非常に機密性の高い社外秘]**。 最後の 2 つのラベルを展開するとサブラベルが表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
     
     - 既定の構成では、一部のラベルには視覚的なマーキングが構成されていることに注意してください。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 既定のポリシーによっては、一部のラベルに保護が設定されていることもあります。 次に例を示します。 
     
@@ -83,12 +83,12 @@ Azure portal を使用して Azure Information Protection サービスに初め�
     
 3. ラベルの後、**[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションに、ポリシー設定の一部も表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
     
-    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](./media/info-protect-policy-default-settings.png) 
+    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. 表示しているのはラベルと設定のみであるため、開いたブレードを閉じてもかまいません。
 
 ## <a name="next-steps"></a>次の手順
 
-ラベルとポリシー設定を Azure portal で確認したので、[Azure Information Protection のポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルが次の手順として役立ちます。
+ラベルとポリシー設定を Azure portal で確認したので、次のことに関するチュートリアルが次の手順として役立ちます:[Azure Information Protection のポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)。
 
 また、Azure Information Protection ポリシーのすべての要素を構成するための詳しい手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。

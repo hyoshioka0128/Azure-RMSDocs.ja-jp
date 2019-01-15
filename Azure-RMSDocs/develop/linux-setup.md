@@ -2,8 +2,8 @@
 title: Linux のセットアップ
 description: Linux オペレーティング システムの一部のエディションで Rights Management SDK 4.x を使用できるようになりました。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: c403baa17cb4de9ec7932ca5088bbc5e6033d9f6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 69fdf8e9405415c196cf439e06abe2983afcbf37
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150383"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070368"
 ---
 # <a name="linux-setup"></a>Linux のセットアップ
 
@@ -34,7 +34,7 @@ Linux オペレーティング システムの一部のエディションで Mic
 - CentOS 7
 
 ライブラリとサンプルは Windows と OSX でも正常にコンパイルされていますが、現時点では完全にはサポートされていません。
- 
+ 
 ## <a name="how-to-build-and-use"></a>ビルド方法および使用方法
 
 - [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)

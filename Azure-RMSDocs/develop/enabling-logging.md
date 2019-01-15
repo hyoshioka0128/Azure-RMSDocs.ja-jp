@@ -1,9 +1,9 @@
 ---
 title: 方法&#58; エラーとパフォーマンスのログを有効にする | Azure RMS
-description: Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードを 1 つのデバイス プロパティで管理します。
+description: Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードが 1 つのデバイス プロパティで管理されます。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,15 +12,15 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4dece185bdbfd83d8ee98d815ead5545ca007754
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147357"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071813"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>方法: エラーとパフォーマンスのログを有効にする
-Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードを 1 つのデバイス プロパティで管理します。
+# <a name="how-to-enable-error-and-performance-logging"></a>方法:エラーとパフォーマンスのログを有効にする
+Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードが 1 つのデバイス プロパティで管理されます。
 
 ## <a name="overview"></a>概要 ##
 診断、パフォーマンス、およびテレメトリに関するデータ ログの Microsoft への自動アップロードを有効にすると、ユーザーのエクスペリエンスとトラブルシューティングを改善できます。 
@@ -79,7 +79,7 @@ Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマン�
 ログ コントロール設定を取得する
 
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+ 
 
 ## <a name="windows"></a>Windows ##
 自動更新を有効にする

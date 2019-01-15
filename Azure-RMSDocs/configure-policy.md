@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6c6c2be34250cca486004a0ed1b1fcd8fddfce35
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 6afbf2e95f6e9d21d1bfa9c4c05df288accf716d
+ms.sourcegitcommit: f13c6db055c1fc69cf92e47609465270a42bbdac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023738"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54085077"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
 
@@ -33,19 +33,19 @@ ms.locfileid: "53023738"
 
 Azure Information Protection では、さまざまなレベルのサブスクリプションをサポートしています。
 
-- Azure Information Protection P2: すべての分類、ラベル付け、保護機能をサポートします。
+- Azure Information Protection P2:すべての分類、ラベル付け、保護機能がサポートされます。
 
-- Azure Information Protection P1: ほとんどの分類、ラベル付け、保護機能をサポートしますが、自動分類や HYOK はサポートしません。
+- Azure Information Protection P1:ほとんどの分類、ラベル付け、保護機能がサポートされますが、自動分類や HYOK はサポートされません。
 
-- Azure Rights Management サービスを含む office 365: 保護をサポートしますが、分類とラベル付けはサポートしません。
+- Azure Rights Management サービスを含む office 365:保護はサポートされますが、分類とラベル付けはサポートされません。
 
 Azure Information Protection P2 サブスクリプションが必要なオプションはポータルで確認します。
 
 組織が種類の異なるサブスクリプションを保有している場合、アカウントに使用を許諾されていない機能をユーザーが使用しないようにする必要があります。 Azure Information Protection クライアントはライセンスのチェックと適用を行いません。 一部のユーザーのライセンスには付属しないオプションを構成する場合は、範囲設定されたポリシーやレジストリ設定を使用して、組織がライセンス条件を遵守するようにします。
 
-- **組織が Azure Information Protection P1 と Azure Information Protection P2 の種類が異なるライセンスを保有している場合**: P2 ライセンスを保有しているユーザーは、Azure Information Protection P2 ライセンスが必要なオプションを構成する場合、[範囲設定されたポリシー](configure-policy-scope.md)を 1 つ以上作成して使用します。 Azure Information Protection P2 ライセンスを必要とするオプションがグローバル ポリシーに含まれないようにします。
+- **Azure Information Protection P1 ライセンスと Azure Information Protection P2 ライセンスの両方を組織が保有している場合**:P2 ライセンスを保有しているユーザーは、Azure Information Protection P2 ライセンスが必要なオプションを構成する場合、[範囲設定されたポリシー](configure-policy-scope.md)を 1 つ以上作成して使用します。 Azure Information Protection P2 ライセンスを必要とするオプションがグローバル ポリシーに含まれないようにします。
 
-- **組織が Azure Information Protection のサブスクリプションを保有し、一部のユーザーが Azure Rights Management サービスを含む Office 365 のライセンスのみを保有している場合**: Azure Information Protection のライセンスを保有しないユーザー向けに、コンピューター上のレジストリを編集して、Azure Information Protection ポリシーがダウンロードされないようにします。 手順については、以下のカスタマイズについての管理ガイド、「[Enforce protection-only mode when your organization has a mix of licenses (組織が種類の異なるライセンスを保有している場合の保護のみモードの適用)](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses)」をご覧ください。
+- **組織が Azure Information Protection のサブスクリプションを保有し、一部のユーザーが Azure Rights Management サービスを含む Office 365 のライセンスのみを保有している場合**:Azure Information Protection のライセンスを保有しないユーザー向けに、コンピューター上のレジストリを編集して、Azure Information Protection ポリシーがダウンロードされないようにします。 手順については、管理ガイドで以下のカスタマイズについての説明をご覧ください:「[組織が種類の異なるライセンスを保有している場合の保護のみモードの適用](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses)」。
 
 サブスクリプションの詳細については、「[Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)」を参照してください。
 
@@ -85,7 +85,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
-1. 次のいずれかの管理者ロール (Information Protection 管理者、セキュリティ管理者、またはグローバル管理者) を使用して、Azure Portal にサインインしていることを確認します。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
+1. 次のいずれかの管理者ロールを使用して、Azure portal にサインインしていることを確認します:Information Protection 管理者、セキュリティ管理者、またはグローバル管理者。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
 
 2. 必要に応じて、**[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から **[Azure Information Protection]** を選択します。 
     
@@ -108,7 +108,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - 24 時間ごと。
 
-- [Azure Information Protection スキャナー](deploy-aip-scanner.md)の場合: サービスが開始されたとき (ポリシーが 1 時間前よりも古い場合) と、操作中の 1 時間ごと。
+- [Azure Information Protection スキャナー](deploy-aip-scanner.md)の場合:サービスが開始されたとき (ポリシーが 1 時間前よりも古い場合) と、操作中の 1 時間ごと。
 
 
 >[!NOTE]
@@ -148,7 +148,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
 
-- [Edit the Azure Information Protection policy and create a new label (Azure Information Protection ポリシーを編集して新しいラベルを作成する)](infoprotect-quick-start-tutorial.md)
+- [Azure Information Protection ポリシーを編集して新しいラベルを作成する](infoprotect-quick-start-tutorial.md)
 
 - [Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)
 

@@ -1,9 +1,9 @@
 ---
 title: iOS および OS X のセットアップ |Azure RMS
-description: iOS および OS X アプリケーションは RMS SDK 4.2 を使用して、AAD RM リソースを使用することでそのアプリケーション内で統合情報保護を有効にできます。
+description: iOS および OS X アプリケーションでは、RMS SDK 4.2 を使用して、AAD RM リソースを使用することにより、そのアプリケーション内で統合情報保護を有効にできます。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,20 +12,20 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 39856dc34396e1aa32a73f436da9744583519c86
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 620412b55ca583d8a84cf8d167ba890cea742b7f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150366"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070232"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 
-iOS および OS X アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Rights Management (Azure RMS) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
+iOS および OS X アプリケーションでは、Microsoft Rights Management SDK 4.2 を使用して、Azure Rights Management (Azure RMS) を使用することにより、そのアプリケーション内で統合情報保護を有効にできます。
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
-**注**  この SDK は iPod Touch をサポートしていません。
+**注**  この SDK では iPod Touch はサポートされていません。
 
 
 -   [前提条件](#prerequisites)
@@ -42,7 +42,7 @@ iOS および OS X アプリケーションは Microsoft Rights Management SDK 4
 
     Xcode は、[Mac App Store](https://developer.apple.com/technologies/mac/) で入手できます。
 
--   iOS および OS X 用 MS RMS SDK 4.2 パッケージ。詳細については、「[概要](get-started.md)」を参照してください。
+-   iOS および OS X 用 MS RMS SDK 4.2 パッケージ。詳しくは、「[作業開始](get-started.md)」をご覧ください。
 
     この SDK は、iOS 7.0 および OS X 10.8 以降を対象とする開発に使用できます。
 
@@ -78,12 +78,12 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![SDK のインストール フォルダーへの参照の設定](../media/iOS-create-groups.png)
 
--   リソース バンドルの MS RMS SDK 4.2 を追加するために、MSRightsManagementResources.bundle ファイルを MSRightsManagement.framework/Resources フォルダーからプロジェクト ナビゲーターの **Frameworks** セクションにドラッグします。
+-   リソース バンドル用の MS RMS SDK 4.2 を追加するには、MSRightsManagementResources.bundle ファイルを MSRightsManagement.framework/Resources フォルダーから Project Navigator の **[Frameworks]\(フレームワーク\)** セクションにドラッグします。
 
     ![リソース バンドルの追加](../media/iOS-add-resource-bundle-02a.png)
 
 -   フレームワークをコピーしたときと同様に、**[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
--   SDK は、**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security** などの他のフレームワークに依存しています。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
+-   SDK は次のような他のフレームワークに依存しています:**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security**。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
 
     **UIKit** と **Foundation** フレームワークが必要ですが、通常は既定で表示されます。
 

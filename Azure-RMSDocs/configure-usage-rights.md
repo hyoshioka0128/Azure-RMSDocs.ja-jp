@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab2ea0f153d33e192958bf84800fc713d1b5b336
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
+ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382505"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429901"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -129,7 +129,7 @@ Exchange Online で Office 365 Message Encryption の新機能を使用する場
 
 元の保護を保持するために添付されたドキュメントが必要な場合は、「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。
 
-注: **DecryptAttachmentFromPortal** への参照が表示される場合、[Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) ではこのパラメーターは非推奨になり、使用できなくなりました。
+注: **DecryptAttachmentFromPortal** への参照が表示される場合、[Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) ではこのパラメーターは非推奨になりました。 このパラメーターを以前に設定したことがない場合は使用できません。 
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management 発行者と Rights Management 所有者
 

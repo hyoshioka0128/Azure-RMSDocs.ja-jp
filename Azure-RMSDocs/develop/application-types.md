@@ -2,8 +2,8 @@
 title: アプリケーションの種類 | Azure RMS
 description: このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fbd49df82faec0f9ea198e0ba7ad334bc5b2a831
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 744a5648bc436bb903cf1b8feb47ca91b19bb7fc
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149941"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071660"
 ---
 # <a name="application-types"></a>アプリケーションの種類
 
 
 このトピックでは、権限保護対応として作成できるアプリケーションの種類について説明します。
 
-Rights Management サービス SDK 2.1 では、次のアプリケーションの種類が現在サポートされています。
+Rights Management サービス SDK 2.1 では、次のアプリケーションの種類が現在サポートされています
 
 ## <a name="simple-applications"></a>単純なアプリケーション
 
@@ -34,7 +34,7 @@ Rights Management サービス SDK 2.1 では、次のアプリケーション�
 
 *サーバー モード*は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止*アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp)を参照してください。
 
-アプリケーションで*サーバー モード*を使用する場合は、RMS サーバーをサイレント認証する必要があります。 *クライアント モード*とは異なり、サイレント認証に失敗した場合にも、RMS SDK 2.1 は資格情報プロンプトを開きません。 また、*サーバー モード*で実行しているときは、アプリケーション マニフェストも必要ありません。
+アプリケーションで*サーバー モード*を使用する場合は、RMS サーバーをサイレント認証する必要があります。 "*クライアント モード*" とは異なり、サイレント認証に失敗した場合でも、RMS SDK 2.1 で資格情報プロンプトは開かれません。 また、*サーバー モード*で実行しているときは、アプリケーション マニフェストも必要ありません。
 
 API のセキュリティ モード設定の詳細については、「[Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
@@ -52,7 +52,7 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 アプリケーションの保護の詳細については、「[Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)」を参照してください。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 - [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 - [アプリケーションの開発](developing-your-application.md)

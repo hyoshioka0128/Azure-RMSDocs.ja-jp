@@ -2,8 +2,8 @@
 title: RMS サーバーをインストールし、構成し、それでテストする方法 | Azure RMS
 description: 権限保護対応アプリケーションのテスト用に RMS Server をインストールおよび構成します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5a3fabd4d76dc86b52d0d8891b7032d1e017cf28
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 74330e8ea1cd709b594a41ffec826d4bdade67c3
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023301"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071507"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>方法: RMS サーバーをインストールし、構成し、それでテストする
 
@@ -25,7 +25,7 @@ ms.locfileid: "53023301"
  
 ## <a name="instructions"></a>手順
 
-### <a name="step-1-setup-your-rms-server"></a>手順 1: RMS サーバーをセットアップする
+### <a name="step-1-setup-your-rms-server"></a>手順 1.RMS サーバーをセットアップする
 
 次の手順で RMS サーバーをセットアップする方法について説明します。この手順には、次が含まれています。
 
@@ -77,7 +77,7 @@ ms.locfileid: "53023301"
                 ServiceLocation
                   EnterpriseCertification
 
-   **値**: (既定): **[http|https]**://RMSClusterName/**_wmcs/Certification**
+   **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
 
@@ -88,7 +88,7 @@ ms.locfileid: "53023301"
                 ServiceLocation
                   EnterprisePublishing
                   
-   **値**: (既定): **[http|https]**://RMSClusterName/**_wmcs/Licensing**
+   **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > 既定では、これらのキーはレジストリに存在しないため、作成する必要があります。

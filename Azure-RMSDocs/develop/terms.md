@@ -2,8 +2,8 @@
 title: AIP 開発者向け用語集 |Microsoft Docs
 description: Rights Management サービスに固有の開発者用語定義のコレクション。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 8ddf0b8722111ff2cd4c433337c4e0c930b02009
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1cf0080c899bc3095ff036f651c1f31f63b70ffe
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151559"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071381"
 ---
 # <a name="terms"></a>利用規約
 
@@ -28,7 +28,7 @@ Azure Information Protection に固有の開発者用語定義のコレクショ
 
 この設定を使用すると、顧客のコンテンツ保護の標準に準拠しない方法で、アプリケーションがコンテンツを保護する可能性があります。
 
-この設定を使用すると、アプリケーションは Microsoft Rights Management SDK 3.0 以降で追加される暗号化の機能強化の恩恵を受けられなくなります。
+この設定を使用すると、アプリケーションでは Microsoft Rights Management SDK 3.0 以降で追加される暗号化の機能強化のベネフィットを得られなくなります。
 
 **Microsoft 保護されたファイル形式**
 

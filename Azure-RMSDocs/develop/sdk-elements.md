@@ -2,8 +2,8 @@
 title: 開発環境ファイル | Azure RMS
 description: このトピックでは、開発環境のファイルと、コンピューター上での相対的なインストール場所について説明します。
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 3dffcdddae1ba7522671694cb909c21b4e096c89
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 80993b63a50e4d180429f841698638219f7725a0
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147765"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071439"
 ---
 # <a name="development-environment-files"></a>開発環境ファイル
 

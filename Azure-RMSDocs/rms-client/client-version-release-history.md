@@ -4,17 +4,17 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
-ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
+ms.openlocfilehash: 94120417c5e2e61f1d28fc16d714ec1c91a4ed0f
+ms.sourcegitcommit: 630f03a91f84d79219e04b4085bdfb5bc6478e88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335525"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54011975"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -22,13 +22,13 @@ ms.locfileid: "53335525"
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 
 
-最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 通常数週間の短い遅延の後で、一般公開バージョンもまた Microsoft Update カタログに含められます (カテゴリ: **Azure Information Protection**)。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 通常数週間の短い遅延の後で、最新の一般公開バージョンもまた Microsoft Update カタログに含められます (カテゴリ:**Azure Information Protection**)。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
-Azure Information Protection クライアントの各一般公開 (GA) バージョンは、後続の GA バージョンがリリースされた後も最長で 6 か月間はサポートされます。 サポートされていないクライアント バージョンはこのページに含まれていません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
+Azure Information Protection クライアントの各一般公開 (GA) バージョンは、後続の GA バージョンがリリースされた後も最長で 6 か月間はサポートされます。 ドキュメントには、サポートされていないバージョンのクライアントに関する情報は含まれません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
 
 実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
 
@@ -170,40 +170,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - [既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property)ためにクライアントの詳細設定を使用する場合、自動ラベル付けは手動ラベル付けをオーバーライドしません。
 
-## <a name="version-127480"></a>バージョン 1.27.48.0
-
-**リリース日**: 2018 年 5 月 30 日
-
-このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
-
-**新機能**: 
-
-- Azure Information Protection スキャナー:
-    
-    - ファイルの種類のリストを指定して、スキャン対象や除外対象を指定することができます。 このリストを指定するには、[Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes) を使用します。 ファイルの種類のリストを指定した後、新しいファイルの種類をリストに追加するには、[Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) を使用します。リストからファイルの種類を削除するには、[Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) を使用します。
-    
-    - 既定のラベルを適用することで、内容を検査することなく、ファイルにラベル付けすることができます。 [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) コマンドレットを使用し、*MatchPolicy*パラメーターを **Off** に設定します。 
-    
-    - ラベルを自動分類用に構成しなくても、機密情報の種類のファイルを検出できます。 [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットを使用し、*DiscoverInformationTypes* パラメーターを **All** に設定します
-    
-    - 既定では、Office ドキュメントの種類のみが保護されます。 その他のファイルの種類は、レジストリ内に定義することで保護できます。 詳しくは、開発者ガイダンスの「[ファイル API の構成](../develop/file-api-configuration.md)」をご覧ください。
-    
-    - 既定では、スキャナーは低整合性レベルで実行されます。これは、特権を持ったアカウントでスキャナーを実行する場合に、セキュリティを高めるためです。 スキャナーを実行するサービス アカウントに、[スキャナーの前提条件](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner)のセクションで説明されている権限だけが付与されている場合、低整合性レベルは必要ありません。これはパフォーマンスに悪影響を及ぼすため、推奨されません。 高度なクライアント設定を使用すると、低整合性レベルを無効にできます。 [詳細情報](client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
-    
-- [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus) の出力に、Rights Management 所有者、Rights Management 発行者、およびコンテンツが保護された日付が表示されるようになりました。
- 
-**その他の変更**:
-
-- Azure Information Protection スキャナー: 
-    
-    - スキャナーの以前のバージョンをインストールした場合は、Azure Information Protection クライアントをアップグレードした後、[Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) でスキャナーのインストール コマンドを再実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナーを再インストールすると、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可が付与されます。これはレポートのために必要となります。    
-    
-    - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) の *ScanMode* パラメーターの名前が、**Enforce** に変更されました (値は Off と On)。
-    
-    - 既定のラベルを使用する場合に、既定のラベルをポリシー設定として構成する必要がなくなりました。 代わりに、リポジトリ構成で既定のラベルを指定します。 
-
-- [設定完了] ウェルカム ページと [Azure Information Protection の新機能] ページが削除されました (以前は、Office アプリケーションの初回使用時に表示されていました)。
-
 ## <a name="next-steps"></a>次の手順
 
 クライアントのインストールと使用の詳細: 
@@ -211,4 +177,3 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - ユーザー向け: [クライアントのダウンロードとインストール](install-client-app.md)
 
 - 管理者向け: [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
-

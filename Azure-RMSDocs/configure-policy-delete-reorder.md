@@ -4,16 +4,16 @@ description: ユーザーに表示される Azure Information Protection ラベ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6e5348eb55451747ff9f10b3bd4f7a2f868b03c5
+ms.sourcegitcommit: 95f16f89a46d9dffa8a114f7683816024d65ff02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304878"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996067"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
@@ -33,7 +33,7 @@ ms.locfileid: "53304878"
 
 - PowerShell を利用し、テンプレートの名前を変更するか、削除します。
     
-    変更や削除を行う前に、他の管理者やサービスがテンプレートを利用しているかどうかを考慮し、現在の名前で識別します。 テンプレートで保護されていたドキュメントやメールを開く必要がない場合にのみ、テンプレートを削除してください。
+    これらの操作を行う前に、他の管理者やサービスがそのテンプレートを使用しているかどうか、または過去に使用したかどうかを確認します。 テンプレートは、変更されることのないテンプレート ID または名前 (変更される可能性があります) で識別できます。 ベスト プラクティスとしては、将来的にユーザーがそのテンプレートによって保護されていたドキュメントやメールを開く必要がないことが確実である場合にのみ、テンプレートを削除します。
 
 保護テンプレートの管理の詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
