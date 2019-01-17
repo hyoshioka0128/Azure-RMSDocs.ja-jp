@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f761dc1b000145ccaaf68f8734c1f847e877917d
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314783"
+---
 # [概要](/azure/information-protection/what-is-information-protection)
 ## [Azure Information Protection とは](what-is-information-protection.md)
 ## [Azure Information Protection と AD RMS の比較](compare-on-premise.md)
@@ -88,6 +96,7 @@
 ## [セキュリティで保護されたドキュメントの共同作業を構成する](secure-collaboration-documents.md)
 ## [Azure Information Protection ラベルのメール フロー ルールの構成](configure-exo-rules.md)
 ## [Azure Information Protection スキャナーの展開](deploy-aip-scanner.md)
+## [Azure Information Protection スキャナーの展開 (プレビュー)](deploy-aip-scanner-preview.md)
 ## [Azure Information Protection のレポート](reports-aip.md)
 ## [RMS コネクタのデプロイ](deploy-rms-connector.md)
 ### [コネクタのインストールと構成](install-configure-rms-connector.md)
