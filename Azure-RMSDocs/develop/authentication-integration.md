@@ -12,12 +12,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3922236e6118045b6f01f55926a9c6de8aa9df72
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 2cdd5f88edd8cad446ebaecbdd4065fdc18de51e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071643"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394107"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
@@ -51,7 +51,8 @@ ms.locfileid: "54071643"
 -   [Windows Azure Active Directory 認証ライブラリ (ADAL) (dotnet 向け)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Linux SDK の場合、ADAL ライブラリは SDK ソースでパッケージ化されます ([Github](https://github.com/AzureAD/rms-sdk-for-cpp) で入手可能)。
 
->[!NOTE]   他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
+> [!NOTE]
+> 他の認証ライブラリも使用できますが、ADAL のいずれかを使用することをお勧めします。
 
 ### <a name="authentication-parameters"></a>認証パラメーター
 
@@ -64,14 +65,15 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 また、前述の Azure ポータルでの登録手順で取得したものです。
 - **リダイレクト URI** – 認証コードの対象の URI で認証ライブラリを指定します。 iOS および Android では、特定の形式が必要になります。 これらの形式については、ADAL の対応する GitHub リポジトリの README ファイルで説明されています。 この値は、前述の Azure ポータルでの登録手順で取得したものです。
 
->[!NOTE]
+> [!NOTE]
 > **範囲**は現在使用されていませんが、今後の使用のために予約されています。
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE]  アプリでこれらのガイドラインが遵守されていない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
+> [!NOTE]
+> アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>認証コールバックの実装の例
 **認証コード例** - この SDK には、認証コールバックの使用を示すコード例が含まれています。 ご参考のためにここに、また以下のリンクされたトピックでいくつかのコード例を紹介します。

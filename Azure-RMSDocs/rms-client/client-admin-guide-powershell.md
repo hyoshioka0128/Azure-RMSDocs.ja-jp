@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8c46dfb6aafa9162be6725202516f8d1fa871cc8
-ms.sourcegitcommit: 60223377a914269c93d73b3522d87b8161ecf854
+ms.openlocfilehash: 53a08a06351e4095e8e5662a4e1bf85f15f77f1d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53786319"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394316"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -77,15 +77,15 @@ AzureInformationProtection モジュールのインストールに関する前�
 1. Azure Rights Management サービスをアクティブ化する必要があります。
 
 2. 自分のアカウントを使って他のユーザーのファイルから保護を削除するには: 
-    
+
     - 組織のスーパー ユーザー機能を有効にし、自分のアカウントを Azure Rights Management のスーパー ユーザーとして構成する必要があります。
 
 3. ユーザー操作なしにファイルを直接保護または保護解除するには: 
-    
+
     - サービス プリンシパル アカウントを作成し、Set-RMSServerAuthentication を実行して、このサービス プリンシパルを Azure Rights Management のスーパー ユーザーにします。
 
 4. 北米以外のリージョンの場合： 
-    
+
     - サービス検出のレジストリを編集します。
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>前提条件 1: Azure Rights Management サービスをアクティブ化する必要があります
@@ -131,7 +131,6 @@ New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 $symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
 $appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $ServicePrincipalName }).AppPrincipalId
 Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
-
 ````
 
 次のセクションでは、値を手動で取得し、指定する方法について説明します。それぞれの値について詳しく説明します。
@@ -145,29 +144,29 @@ Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマ
 2. **[管理者として実行]** オプションを使って、Windows PowerShell を起動します。
 
 3. `Connect-AadrmService` コマンドレットを使って、Azure Rights Management サービスに接続します。
-    
+
         Connect-AadrmService
-    
+
     プロンプトが表示されたら、Azure Information Protection テナント管理者資格情報を入力します。 通常、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使用します。
-    
+
 4. `Get-AadrmConfiguration` を実行して、BPOSId の値をコピーします。
-    
+
     Get-AadrmConfiguration の出力例
-    
+
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-        
+
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-        
+
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-        
+
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-        
+
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-        
+
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. サービスから切断します。
-    
+
         Disconnect-AadrmService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
@@ -182,25 +181,25 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 2. **[管理者として実行]** オプションを使って、Windows PowerShell を起動します。
 
 3. **Connect-MsolService** コマンドレットを使って、Azure AD に接続します。
-    
+
         Connect-MsolService
-    
+
     プロンプトが表示されたら、Azure AD のテナント管理者の資格情報を入力します (通常は、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使います)。
 
 4. New-MsolServicePrincipal コマンドレットを実行して、新しいサービス プリンシパルを作成します。
-    
+
         New-MsolServicePrincipal
-    
+
     プロンプトが表示されたら、Azure Rights Management サービスに接続してファイルの保護と保護解除を行うアカウントであることが後に分かるように、サービス プリンシパルの表示名を入力します。
-    
+
     New-MsolServicePrincipal の出力例を次に示します。
-    
+
         Supply values for the following parameters:
-        
+
         DisplayName: AzureRMSProtectionServicePrincipal
         The following symmetric key was created as one was not supplied
         zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
-        
+
         Display Name: AzureRMSProtectionServicePrincipal
         ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
         ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
@@ -248,20 +247,20 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 2. AzureInformationProtection コマンドレットを実行する各コンピューターで、レジストリ エディターを開きます。
 
 3. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation` のパスに移動します。 
-    
+
     **MSIPC** キーまたは **ServiceLocation** キーがない場合は、それらを作成します。
 
 4. **ServiceLocation** キーに対し、**EnterpriseCertification** および **EnterprisePublishing** という名前の 2 つのキーを作成します (存在しない場合)。 
-    
+
     キーに自動作成される文字列値については、"(Default)" の名前を変更せず、文字列を編集して値データを設定してください。
 
-    - **EnterpriseCertification** には、CertificationExtranetDistributionPointUrl の値を貼り付けます。
-    
-    - **EnterprisePublishing** には、LicensingExtranetDistributionPointUrl の値を貼り付けます。
-    
-    たとえば、EnterpriseCertification のレジストリ エントリは次のようになります。
-    
-    ![北米以外の地域に関して、Azure Information Protection PowerShell モジュールのレジストリを編集する](../media/registry-example-rmsprotection.png)
+   - **EnterpriseCertification** には、CertificationExtranetDistributionPointUrl の値を貼り付けます。
+
+   - **EnterprisePublishing** には、LicensingExtranetDistributionPointUrl の値を貼り付けます。
+
+     たとえば、EnterpriseCertification のレジストリ エントリは次のようになります。
+
+     ![北米以外の地域に関して、Azure Information Protection PowerShell モジュールのレジストリを編集する](../media/registry-example-rmsprotection.png)
 
 5. レジストリ エディターを閉じます。 コンピューターを再起動する必要はありません。 ただし、自分のユーザー アカウントではなくサービス プリンシパル アカウントを使っている場合は、このレジストリの編集を行った後で、Set-RMSServerAuthentication コマンドを実行する必要があります。
 
@@ -280,7 +279,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 ファイルを保護するには、Rights Management テンプレートをお使いのコンピューターにダウンロードして、使用するものとそれに対応する ID 番号を確認する必要があります。 出力から、テンプレート ID をコピーできます。
 
     Get-RMSTemplate
-    
+
 出力は次のようになります。
 
     TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
@@ -289,7 +288,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
     Name              : Contoso, Ltd - Confidential View Only
     IssuerDisplayName : Contoso, Ltd
     FromTemplate      : True
-    
+
     TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
     CultureInfo       : en-US
     Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
@@ -369,7 +368,7 @@ AzureInformationProtection モジュールをインストールするための�
 7. **[ServerCertification.asmx のアクセス許可]** ダイアログ ボックスで、**[追加]** をクリックします。 
 
 8. アカウント名を追加します。 他の AD RMS 管理者やサービス アカウントもこれらのコマンドレットを使ってファイルを保護し、保護解除する場合、そのアカウントも追加します。 
-    
+
     非対話式でファイルを保護または保護解除する場合、関連するコンピューター アカウントやアカウントを追加します。 たとえば、ファイル分類インフラストラクチャに対して構成されてあり、PowerShell スクリプトでファイルを保護する Windows Server コンピューターのコンピューター アカウントを追加します。
 
 9. **[許可]** 列で、**[読み取りと実行]** および **[読み取り]** チェック ボックスがオンになっていることを確認します。
@@ -406,8 +405,8 @@ AzureInformationProtection モジュールをインストールするための�
     Name              : Contoso, Ltd - Confidential View Only
     IssuerDisplayName : Contoso, Ltd
     FromTemplate      : True
-    
-    
+
+
     TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
     CultureInfo       : en-US
     Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
@@ -487,37 +486,37 @@ AzureInformationProtection モジュールをインストールするための�
 2. Azure Information Protection で使用する Azure AD テナントで、**[Azure Active Directory]** > **[アプリの登録]** と移動します。 
 
 3. **[新しいアプリケーションの登録]** を選択し、Web アプリ/API アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
-    
-    - 名前:**AIPOnBehalfOf**
-    
-    必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
-    
-    - アプリケーションの種類: **Web アプリ/API**
-    
-    - サインオン URL: **http://localhost**
+
+   - 名前:**AIPOnBehalfOf**
+
+     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+
+   - アプリケーションの種類: **Web アプリ/API**
+
+   - サインオン URL: **http://localhost**
 
 4. 先ほど作成したアプリケーションを選択します (例: **AIPOnBehalfOf**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
-    
+
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppId` パラメーターに使用されます。 後で参照できるように、これを貼り付けて保存します。
 
 5. **[設定]** ブレードを再度開き、**[必要なアクセス許可]** を選択します。 **[必要なアクセス許可]** ブレードで、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
 
 6. **[設定]** ブレードを再び開き、**[キー]** を選択します。 説明と期間 (1 年、2 年、または期限なし) を指定して、新しいキーを追加します。 次に **[保存]** を選択し、表示されている **[値]** の文字列をコピーします。 この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用するキーと同様に、保存した値を安全に格納すると同時に値へのアクセスを制限します。
-    
+
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppKey` パラメーターに使用されます。
 
 7. **[アプリの登録]** ブレードに戻り、**[新しいアプリケーションの登録]** を選択してネイティブ アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
-    
-    - 名前:**AIPClient**
-    
-    必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
-    
-    - アプリケーションの種類: **ネイティブ**
-    
-    - サインオン URL: **http://localhost**
+
+   - 名前:**AIPClient**
+
+     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+
+   - アプリケーションの種類: **ネイティブ**
+
+   - サインオン URL: **http://localhost**
 
 8. 先ほど作成したアプリケーションを選択します (例: **AIPClient**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。
-    
+
     この値は、Set-AIPAuthentication コマンドレットを実行するときの `NativeAppId` パラメーターに使用されます。 後で参照できるように、これを貼り付けて保存します。
 
 9. **[設定]** ブレードで **[必要なアクセス許可]** を選択します。 
@@ -527,7 +526,7 @@ AzureInformationProtection モジュールをインストールするための�
 11. **[アクセスの有効化]** ブレードで、**AIPOnBehalfOf** を選択して **[選択]** をクリックし、**[完了]** をクリックします。
 
 12. **[必要なアクセス許可]** ブレードを再び開き、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
-    
+
 
 2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 次に例を示します。
 
@@ -558,21 +557,21 @@ AzureInformationProtection モジュールをインストールするための�
 1. コンピューターで、Aipauthentication.ps1 という名前の新しい PowerShell スクリプトを作成します。
 
 2. 次のコマンドをコピーし、このスクリプトに貼り付けます。
-    
+
          Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
 
 3. 先のセクションの指示に従ってこのコマンドを修正します。**WebAppId**、**WebAppkey**、**NativeAppId** パラメーターに独自の値を指定してください。 今回は **Token** パラメーターの値を指定しません。これは後で指定します。 
-    
+
     例: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
-    
+
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>手順 2: Set-AIPAuthentication を実行してアクセス トークンを取得し、それをクリップボードにコピーします
 
 1. Windows PowerShell セッションを開始します。
 
 2. スクリプトに指定したものと同じ値を利用し、次のコマンドを実行します。
-    
+
         (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
-    
+
     例: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>手順 3: PowerShell スクリプトを修正し、トークンを指定します
@@ -580,7 +579,7 @@ AzureInformationProtection モジュールをインストールするための�
 1. PowerShell スクリプトで、クリップボードから文字列を貼り付け、ファイルを保存してトークン値を指定します。
 
 2. スクリプトに署名します。 スクリプトに署名 (セキュリティを強化) しない場合は、ラベル付けコマンドを実行するコンピューターで Windows PowerShell を構成する必要があります。 たとえば、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、`Set-ExecutionPolicy RemoteSigned` と入力します。 ただし、この構成を使用すると、署名されていないすべてのスクリプトは、このコンピューターに保存されている場合に実行できます (セキュリティは低下)。
-    
+
     Windows PowerShell スクリプトへの署名の詳細については、PowerShell のドキュメント ライブラリの「 [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) 」を参照してください。
 
 3. ファイルにラベルを付けて保護するコンピューターにこの PowerShell スクリプトをコピーし、自分のコンピューターのオリジナルを削除します。 たとえば、PowerShell スクリプトを Windows Server コンピューターの C:\Scripts\Aipauthentication.ps1 にコピーします。
@@ -590,12 +589,12 @@ AzureInformationProtection モジュールをインストールするための�
 1. ファイルにラベルを付けて保護するサービス アカウントに**バッチ ジョブとしてログオン**権限が与えられていることを確認します。
 
 2. ファイルにラベルを付けて保護するコンピューターで、Task Scheduler を起動し、新しいタスクを作成します。 ファイルにラベルを付けて保護するサービス アカウントとして実行するようにこのタスクを構成し、**[アクション]** に次の値を構成します。
-    
-    - **アクション**: `Start a program`
-    - **プログラム/スクリプト**: `Powershell.exe`
-    - **引数の追加 (省略可能)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
-    
-    引数の行については、例と異なるようであれば、独自のパスとファイル名を指定します。
+
+   - **アクション**: `Start a program`
+   - **プログラム/スクリプト**: `Powershell.exe`
+   - **引数の追加 (省略可能)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+
+     引数の行については、例と異なるようであれば、独自のパスとファイル名を指定します。
 
 3. このタスクを手動で実行します。
 
@@ -604,7 +603,7 @@ AzureInformationProtection モジュールをインストールするための�
 1. サービス アカウント プロファイルの %localappdata%\Microsoft\MSIP フォルダーにトークンが保存されていることを確認します。 この値はサービス アカウントによって保護されます。
 
 2. トークン値が含まれている PowerShell スクリプトを削除します (たとえば、Aipauthentication.ps1)。
-    
+
     必要に応じて、タスクを削除します。 トークンの有効期限が切れた場合、この過程を繰り返す必要があります。その場合、構成したタスクを残しておくと便利です。新しい PowerShell スクリプトを新しいトークン値で上書きコピーするとき、すぐに再実行できます。
 
 ## <a name="next-steps"></a>次の手順

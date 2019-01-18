@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c0fc5812eedd7cce5c0e17231d9ee19dbf4edd1b
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 57dd5faad33681bbf87045b61335e11baaa973a2
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305677"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393966"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -53,7 +53,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 続行するには、RMS コネクタを構成するためのアカウントとパスワードを入力します。
 
 ## <a name="entering-credentials"></a>資格情報の入力
-RMS コネクタを構成する前に、RMS コネクタを構成するのに十分な特権を持つアカウントの資格情報を入力する必要があります。 たとえば、「**admin@contoso.com**」と入力してから、このアカウントのパスワードを指定します。
+RMS コネクタを構成する前に、RMS コネクタを構成するのに十分な特権を持つアカウントの資格情報を入力する必要があります。 たとえば、「<strong>admin@contoso.com</strong>」と入力してから、このアカウントのパスワードを指定します。
 
 このアカウントの多要素認証 (MFA) は Microsoft Rights Management 管理ツールでサポートされていないため、このアカウントでは MFA を使用できません。 
 
@@ -63,40 +63,40 @@ RMS コネクタを構成する前に、RMS コネクタを構成するのに十
 
 次のいずれかの特権を持つアカウントを使用できます。
 
--   **テナントのグローバル管理者**:Office 365 テナントまたは Azure AD テナントのグローバル管理者であるアカウント。
+- **テナントのグローバル管理者**:Office 365 テナントまたは Azure AD テナントのグローバル管理者であるアカウント。
 
--   **Azure Rights Management グローバル管理者**:Azure RMS グローバル管理者ロールを割り当てられている Azure Active Directory のアカウント。
+- **Azure Rights Management グローバル管理者**:Azure RMS グローバル管理者ロールを割り当てられている Azure Active Directory のアカウント。
 
--   **Azure Rights Management コネクタ管理者**:Azure Active Directory のアカウントで、組織の RMS コネクタをインストールおよび管理する権限が付与されています。
+- **Azure Rights Management コネクタ管理者**:Azure Active Directory のアカウントで、組織の RMS コネクタをインストールおよび管理する権限が付与されています。
 
-    > [!NOTE]
-    > Azure Rights Management グローバル管理者ロールおよび Azure Rights Management コネクタ管理者ロールは、Azure RMS の [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) コマンドレットを使用してアカウントに割り当てられます。
-    > 
-    > RMS コネクタを最低限の特権で実行するには、この目的専用のアカウントを作成し、次のようにして Azure RMS コネクタ管理者ロールを割り当てます。
-    >
-    > 1.  Rights Management 用 Windows PowerShell のダウンロードとインストールが完了していない場合は実行します。 詳細については、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
-    >
-    >     **[管理者として実行]** コマンドで Windows PowerShell を起動し、[Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) コマンドを使用して Azure RMS サービスに接続します。
-    >
-    >     ```
-    >     Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
-    >     ```
-    > 2.  次のいずれか 1 つのパラメーターを使用して、[Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) コマンドを実行します。
-    >
-    >     ```
-    >     Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
-    >     ```
-    >
-    >     ```
-    >     Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
-    >     ```
-    >
-    >     ```
-    >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
-    >     ```
-    >     たとえば、次のように入力します。**Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
-    >
-    >     これらのコマンドはコネクタ管理者ロールを割り当てますが、GlobalAdministrator ロールをここで使用することもできます。
+  > [!NOTE]
+  > Azure Rights Management グローバル管理者ロールおよび Azure Rights Management コネクタ管理者ロールは、Azure RMS の [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) コマンドレットを使用してアカウントに割り当てられます。
+  > 
+  > RMS コネクタを最低限の特権で実行するには、この目的専用のアカウントを作成し、次のようにして Azure RMS コネクタ管理者ロールを割り当てます。
+  > 
+  > 1. Rights Management 用 Windows PowerShell のダウンロードとインストールが完了していない場合は実行します。 詳細については、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
+  > 
+  >    **[管理者として実行]** コマンドで Windows PowerShell を起動し、[Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) コマンドを使用して Azure RMS サービスに接続します。
+  > 
+  >    ```
+  >    Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+  >    ```
+  > 2. 次のいずれか 1 つのパラメーターを使用して、[Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) コマンドを実行します。
+  > 
+  >    ```
+  >    Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
+  >    ```
+  > 
+  >    ```
+  >    Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
+  >    ```
+  > 
+  >    ```
+  >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
+  >    ```
+  >    たとえば、次のように入力します。**Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+  > 
+  >    これらのコマンドはコネクタ管理者ロールを割り当てますが、GlobalAdministrator ロールをここで使用することもできます。
 
 RMS コネクタのインストール プロセスでは、すべての前提条件ソフトウェアが検証されてインストールされます。また、インターネット インフォメーション サービス (IIS) が存在しない場合はインストールされ、その後、コネクタ ソフトウェアがインストールされて構成されます。 さらに、Azure RMS の構成を準備するために以下が作成されます。
 

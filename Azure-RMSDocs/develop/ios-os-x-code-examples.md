@@ -12,12 +12,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c71fe41da2eb29645c3c25d0044f969ebdca1c9a
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: aee986c462dd5bba1966017eada2f97f4fbbb1a8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070234"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394165"
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
@@ -37,7 +37,7 @@ ms.locfileid: "54070234"
 
 - **手順 1**: [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを作成します。
 
- **説明**:[MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) の呼び出しを参照してください。
+  **説明**:[MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) の呼び出しを参照してください。
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -94,19 +94,19 @@ ms.locfileid: "54070234"
                           }];
        }
 
--   **手順 3**: [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
+- **手順 3**: [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
 
-        - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
-        {
-            //check if user has edit rights and apply enforcements
-            if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
-            {
-                // enforce on the UI
-                textEditor.focusableInTouchMode = NO;
-                textEditor.focusable = NO;
-                textEditor.enabled = NO;
-            }
-        }
+      - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
+      {
+          //check if user has edit rights and apply enforcements
+          if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
+          {
+              // enforce on the UI
+              textEditor.focusableInTouchMode = NO;
+              textEditor.focusable = NO;
+              textEditor.enabled = NO;
+          }
+      }
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ:テンプレートを使用して新しい保護ファイルを作成する
 

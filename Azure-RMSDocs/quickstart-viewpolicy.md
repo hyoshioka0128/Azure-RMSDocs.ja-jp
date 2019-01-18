@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
-ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
+ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411815"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393978"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
@@ -75,11 +75,11 @@ Azure portal を使用して Azure Information Protection サービスに初め�
     
 2. 表示されるラベルをよく理解しておいてください。
     
-    - 分類用のラベル:**[個人用]**、**[公開]**、**[全般]**、**[社外秘]**、**[非常に機密性の高い社外秘]**。 最後の 2 つのラベルを展開するとサブラベルが表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
+   - 分類用のラベル:**[個人用]**、**[公開]**、**[全般]**、**[社外秘]**、**[非常に機密性の高い社外秘]**。 最後の 2 つのラベルを展開するとサブラベルが表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
     
-    - 既定の構成では、一部のラベルには視覚的なマーキングが構成されていることに注意してください。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 既定のポリシーによっては、一部のラベルに保護が設定されていることもあります。 次に例を示します。 
+   - 既定の構成では、一部のラベルには視覚的なマーキングが構成されていることに注意してください。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 既定のポリシーによっては、一部のラベルに保護が設定されていることもあります。 次に例を示します。 
     
-    ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](./media/info-protect-policy-default-labelsv2.png)
+     ![Azure Information Protection クイック スタート チュートリアル手順 3 - 既定ポリシー](./media/info-protect-policy-default-labelsv2.png)
     
 3. ラベルの後、**[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションに、ポリシー設定の一部も表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
     

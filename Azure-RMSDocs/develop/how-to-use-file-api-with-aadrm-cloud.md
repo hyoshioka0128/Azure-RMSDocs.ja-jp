@@ -12,18 +12,19 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d495abaec5bd32eb7082e8c1774011f9b765448b
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: a8c1917d8a73fd31020f06fec1d69bdd93d572ff
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070236"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393801"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
 このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)」を参照してください。
 
-**重要**   Rights Management Services SDK 2.1 サービス アプリケーションを Azure RMS で利用するには、ご自身のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../requirements.md)」を参照してください。
+**重要**  
+Rights Management Services SDK 2.1 サービスを Azure RMS で利用するには、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../requirements.md)」を参照してください。
 
 ## <a name="prerequisites"></a>必要条件
 
@@ -40,9 +41,9 @@ ms.locfileid: "54070236"
         IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
-  **注**   詳細については、[API セキュリティ モードの設定](setting-the-api-security-mode-api-mode.md)に関するページをご覧ください
+  **注** 詳細については、「[Setting the API security mode (API セキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
-     
+
 -   次の手順は、[IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) 構造体のインスタンスを作成するためのセットアップです。*pcCredential* ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) メンバーに Azure Rights Management サービスの接続情報を設定します。
 -   対称キーのサービス ID 作成時にメモした情報 (このトピックの前述の前提条件を参照してください) を使用して、[IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) 構造体のインスタンスを作成するときに *wszServicePrincipal*、*wszBposTenantId*、*cbKey* パラメーターを設定します。
 
@@ -55,7 +56,7 @@ ms.locfileid: "54070236"
 -   [Microsoft Online サインイン アシスタント](https://go.microsoft.com/fwlink/p/?LinkID=286152)をインストールします。
 -   [Azure AD PowerShell モジュール](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi)をインストールします。
 
-**注**  - Powershell コマンドレットを使用するには、テナントの管理者である必要があります。
+**注** - Powershell コマンドレットを使用するには、テナントの管理者でなければなりません。
 
 - Powershell を起動し、次のコマンドを実行してキーを生成します。
 
@@ -103,7 +104,7 @@ ms.locfileid: "54070236"
 
 -   [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) 構造体のインスタンスを作成します。この中に [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) インスタンスが格納されます。
 
-**注**  - *connectionInfo* メンバーには、直前に `Get-AadrmConfiguration` を呼び出したときの URL が設定され、ここではそのフィールド名を示します。
+**注** - *connectionInfo* メンバーには、直前に `Get-AadrmConfiguration` を呼び出したときの URL が設定され、ここではそのフィールド名を示します。
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -132,9 +133,17 @@ ms.locfileid: "54070236"
     [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) を呼び出して、[IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) の同じインスタンスに渡します。
 
 
-    PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
+~~~
+PCIPC_TIL pTemplates = NULL;
+IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
 
-    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
+hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),
+       IPC_GTL_FLAG_FORCE_DOWNLOAD,
+       0,
+       &promptCtx,
+       NULL,
+       &pTemplates);
+~~~
 
 
 -   このトピック前半のテンプレートを使用して、[IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx) を呼び出して、[IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) の同じインスタンスに渡します。

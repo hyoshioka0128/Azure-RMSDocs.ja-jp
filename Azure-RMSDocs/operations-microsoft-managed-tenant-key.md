@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3cddb4660ddae7bb19ff2ef1994fb4fa3c0bf9a6
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 8f98750c24fe535a580952fa7ebe76a6833f7dd2
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305388"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394068"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理:テナント キーのライフサイクル操作
 
@@ -81,9 +81,9 @@ Azure Information Protection の構成およびテナント キーをエクス�
     ```
     このコマンドの出力は 2 つのファイルです。一方にはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、もう一方にはパスワードで保護された TPD 自体が含まれています。 ファイルには、以下のような新しい GUID が付けられます。
      
-    - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
+  - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
-    - ExportedTPD-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
+  - ExportedTPD-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
 
     これらのファイルをバックアップし、安全な場所に保存します。これにより、このテナント キーで保護されたコンテンツを継続して暗号化解除できるようになります。 また、AD RMS に移行する場合は、この TPD ファイル (名前が **ExportedTDP** で始まるファイル) を AD RMS サーバーにインポートできます。
 

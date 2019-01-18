@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071201"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394249"
 ---
 # <a name="release-notes"></a>リリース ノート
 
@@ -37,9 +37,9 @@ ms.locfileid: "54071201"
 
 - **ADAL の更新** Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は以下を利用できるようになります。
 
- - 多要素認証を使用する
- - コンピューターの管理者特権なしで RMS 2.1 クライアントをインストールする
- - Windows 10 向けアプリケーションの認定
+  - 多要素認証を使用する
+  - コンピューターの管理者特権なしで RMS 2.1 クライアントをインストールする
+  - Windows 10 向けアプリケーションの認定
 
 - **Microsoft Online サインイン アシスタント (SIA) と RMS SDK のサポートがなくなります。** サポートの停止後、SIA は 6 か月間使用できます。
 
@@ -124,7 +124,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     **注**  2015 年 4 月のリリース時点で、この更新プログラムのインストール プロセスにチェックが追加されました。
 
-     
+     
 
 -   **ファイル API の統合**
 

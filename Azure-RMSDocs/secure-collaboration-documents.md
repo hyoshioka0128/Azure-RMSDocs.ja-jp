@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305507"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393965"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -50,13 +50,13 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 3. **[アクセス許可の追加]** ブレードで、次の操作を行います。 
     
-    - 内部グループ: **[ディレクトリを参照]** を選択し、グループを選択します (電子メールが有効になっている必要があります)。
+   - 内部グループ: **[ディレクトリを参照]** を選択し、グループを選択します (電子メールが有効になっている必要があります)。
     
-    - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
+   - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
     
-    - 第 2 外部組織内のグループ: 同様に **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のように指定します。
+   - 第 2 外部組織内のグループ: 同様に **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のように指定します。
     
-    - Azure AD アカウントを持っていないユーザー: この場合も **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のように指定します。 
+   - Azure AD アカウントを持っていないユーザー: この場合も **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のように指定します。 
 
 4. これらすべてのユーザーに同じアクセス許可を与える場合: **[事前設定されたものの中からアクセス許可を選択する]** に対し、**[共同所有者]**、**[共同作成者]**、**[レビュー担当者]**、**[カスタム]** のいずれかを選択し、付与するアクセス許可を選択します。
     

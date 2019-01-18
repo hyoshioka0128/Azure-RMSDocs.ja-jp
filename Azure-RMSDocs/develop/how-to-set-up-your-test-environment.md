@@ -12,12 +12,12 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 323816b04f59d8a18015157052f097531b34cf03
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: ce8c5866d721c64f5bf36bd0ee905b74deb01474
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071779"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393693"
 ---
 # <a name="testing-your-application"></a>アプリケーションのテスト
 
@@ -32,10 +32,10 @@ Azure RMS または Windows Server で実行される RMS サーバーのいず�
 - 開発者向けランタイムをインストールするには:
 
    Rights Management Service Client 2.1 がアプリケーションのテストを実行するコンピューターにインストールされている必要があります。
-   - 開発コンピューター以外のコンピューターでアプリケーションをテストする場合は、[AD RMS クライアント ダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=38396)からそのコンピューターに RMS クライアント 2.1 をインストールします。
-   - 開発用のコンピューターには、既に Rights Management サービス SDK 2.1 がインストールされている必要があります。
+  - 開発コンピューター以外のコンピューターでアプリケーションをテストする場合は、[AD RMS クライアント ダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=38396)からそのコンピューターに RMS クライアント 2.1 をインストールします。
+  - 開発用のコンピューターには、既に Rights Management サービス SDK 2.1 がインストールされている必要があります。
 
-   RMS SDK 2.1 のインストールについては、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
+    RMS SDK 2.1 のインストールについては、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 

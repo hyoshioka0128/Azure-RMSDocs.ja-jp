@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305703"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393468"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド:Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -138,13 +138,13 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-    - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
 
-    ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
+     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
     
-    - ラベルが表示されず、このダイアログ ボックスで **[Company pre-defined protection]\(会社の定義済み保護\)** のオプションは表示される場合: クライアントは[保護のみモード](client-protection-only-mode.md)で実行されています。 管理者が構成した保護を適用するには、テンプレートを選択します。独自の保護設定を指定するには **[カスタム アクセス許可]** を選択して手順 4 に進みます。
+   - ラベルが表示されず、このダイアログ ボックスで **[Company pre-defined protection]\(会社の定義済み保護\)** のオプションは表示される場合: クライアントは[保護のみモード](client-protection-only-mode.md)で実行されています。 管理者が構成した保護を適用するには、テンプレートを選択します。独自の保護設定を指定するには **[カスタム アクセス許可]** を選択して手順 4 に進みます。
     
-    ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスにラベルがない](../media/info-protect-dialog-labels-protection-only.png)
+     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスにラベルがない](../media/info-protect-dialog-labels-protection-only.png)
     
 3. 管理者から許可されている場合は、選択したラベルに対して管理者が含めた保護設定を使用するのではなく、独自の保護設定を指定することができます。 この操作を行うには、**[カスタム アクセス許可で保護する]** 選択します。
     
@@ -154,15 +154,15 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 4. カスタムのアクセス許可オプションを選択した場合は、次の項目を指定します。
 
-    - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選びます。
+   - **アクセス許可の選択**: 選択したファイルを保護する場合のユーザーのアクセス レベルを選びます。
     
-    - **ユーザー、グループ、および組織の選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 
+   - **ユーザー、グループ、および組織の選択**: ファイルに対して選択したアクセス許可を持つユーザーを指定します。 組織内のユーザー全員について、組織で使用する完全なメール アドレス、グループ メール アドレス、ドメイン名を入力します。 
     
-    あるいは、アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択できます。
+     あるいは、アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択できます。
         
-    - **アクセスの有効期限**: ファイルの期間が限定されていて、設定した日付を過ぎた後は指定したユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 設定した日付の深夜を過ぎた後は、指定したユーザーはファイルを開くことができなくなります。
+   - **アクセスの有効期限**: ファイルの期間が限定されていて、設定した日付を過ぎた後は指定したユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。自分は元のファイルを引き続き開くことができますが、(使用中のタイム ゾーンで) 設定した日付の深夜を過ぎた後は、指定したユーザーはファイルを開くことができなくなります。
     
-    この設定を Office 2010 アプリのカスタム アクセス許可を使用して構成していた場合、指定した有効期限の日付はこのダイアログ ボックスには表示されませんが、有効期限は依然として有効です。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。
+     この設定を Office 2010 アプリのカスタム アクセス許可を使用して構成していた場合、指定した有効期限の日付はこのダイアログ ボックスには表示されませんが、有効期限は依然として有効です。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
 
@@ -183,5 +183,5 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../configure-policy-settings.md)」を参照してください。
 
-その他の構成手順: [Azure Information Protection ポリシーの構成](../configure-policy.md)。
+その他の構成手順: [Azure Information Protection ポリシーの構成](../configure-policy.md)
 

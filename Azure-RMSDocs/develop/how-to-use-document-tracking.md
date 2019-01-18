@@ -12,12 +12,12 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7415e1408c5e3c3c782506a9ce25b4b8d90403f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: f1d8030fd4453ff5ec0720f30d22278297e580c8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071847"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394147"
 ---
 # <a name="how-to-use-document-tracking"></a>方法:ドキュメント追跡を使用する
 
@@ -31,9 +31,9 @@ ms.locfileid: "54071847"
 
 特定のコンテンツに対してドキュメント追跡をセットアップするための手順を次に示します。
 
--   **ライセンス メタデータ** オブジェクトを作成してから、**コンテンツ名**と**通知タイプ**を設定します。 必須のプロパティはこれらのプロパティのみです。
-   - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
-   -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
+- **ライセンス メタデータ** オブジェクトを作成してから、**コンテンツ名**と**通知タイプ**を設定します。 必須のプロパティはこれらのプロパティのみです。
+  - Android - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx)
+  -  iOS - [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)
 
 ポリシーの種類 (テンプレートまたはアドホック) を選択します。
 - テンプレート ベースのドキュメント追跡の場合は、**ユーザー ポリシー** オブジェクトを作成し、ライセンス メタデータをパラメーターとして渡します。
@@ -46,8 +46,8 @@ ms.locfileid: "54071847"
 
     **注**:  ライセンス メタデータ オブジェクトは、特定のユーザー ポリシーのドキュメント追跡の設定プロセス中に直接アクセスできる唯一のオブジェクトです。 ユーザー ポリシー オブジェクトが作成されると、関連付けられているライセンス メタデータにアクセスできなくなります。つまり、ライセンス メタデータの値を変更しても効果はありません。
 
-     
+     
 
--   最後に、ドキュメント追跡のためのプラットフォーム登録メソッドを呼び出します。
+- 最後に、ドキュメント追跡のためのプラットフォーム登録メソッドを呼び出します。
   - Android - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) または [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx)
   - iOS - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)

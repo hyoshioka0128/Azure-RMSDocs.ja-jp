@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d9b79faa2444560ec209faa199072f2a745152cd
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 3f7c06a6415160b5c2245dc60e94bf7d9633ef7f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305575"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393763"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -49,23 +49,23 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 - **サポートされる RMS のデプロイ:**
     
-    - AD RMS の次のリリースでは、Azure Information Protection への移行をサポートします。
+  - AD RMS の次のリリースでは、Azure Information Protection への移行をサポートします。
     
-        - Windows Server 2008 R2 (x64)
+      - Windows Server 2008 R2 (x64)
         
-        - Windows Server 2012 (x64)
+      - Windows Server 2012 (x64)
         
-        - Windows Server 2012 R2 (x64)
+      - Windows Server 2012 R2 (x64)
         
-        - Windows Server 2016 (x64)
+      - Windows Server 2016 (x64)
         
-    - すべての有効な AD RMS トポロジがサポートされます。
+  - すべての有効な AD RMS トポロジがサポートされます。
     
-        - 単一フォレスト、単一 RMS クラスター
+      - 単一フォレスト、単一 RMS クラスター
         
-        - 単一フォレスト、複数のライセンス専用 RMS クラスター
+      - 単一フォレスト、複数のライセンス専用 RMS クラスター
         
-        - 複数フォレスト、複数 RMS クラスター
+      - 複数フォレスト、複数 RMS クラスター
         
     注: 既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
 
@@ -80,15 +80,15 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 - **Azure Information Protection の準備:**
 
-    - オンプレミス ディレクトリと Azure Active Directory の間でのディレクトリ同期
+  - オンプレミス ディレクトリと Azure Active Directory の間でのディレクトリ同期
 
-    - Azure Active Directory でのメールが有効なグループ
+  - Azure Active Directory でのメールが有効なグループ
 
     「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
 - **AD RMS で Exchange Server** (たとえば、トランスポート ルールと Outlook Web Access) または SharePoint Server の Information Rights Management (IRM) 機能を使用していた場合:
 
-    - 短時間これらのサーバーで IRM が利用できなくなることを予定しておきます。
+  - 短時間これらのサーバーで IRM が利用できなくなることを予定しておきます。
  
     移行後もこれらのサーバーで IRM を引き続き使用できます。 ただし、移行手順には、IRM サービスの一時的な無効化、コネクタのインストールと構成、サーバーの再構成、IRM の再有効化が含まれます。
 

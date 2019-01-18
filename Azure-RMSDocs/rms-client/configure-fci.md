@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19a295076ce86da0c93685250cd62b0ca1ca41e6
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 35f8ddcefb5cbc7ab07fd311edfa783fb5a83aa0
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305704"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394137"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -35,21 +35,21 @@ ms.locfileid: "53305704"
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Windows Server FCI での Azure Rights Management 保護の前提条件
 次のような前提条件があります。
 
--  ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
+- ファイル分類インフラストラクチャでファイル リソース マネージャーを実行する各ファイル サーバーでの前提条件:
     
-    - ファイル サービス ロールのロール サービスの 1 つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
+  - ファイル サービス ロールのロール サービスの 1 つとして、ファイル サーバー リソース マネージャーをインストールしておきます。
     
-    - Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
+  - Rights Management で保護するファイルを含むローカル フォルダーを特定しておきます。 C:\FileShare など。
     
-    - AzureInformationProtection PowerShell モジュールをインストールし、このモジュールを Azure Rights Management サービスに接続するための前提条件を構成しておきます。
+  - AzureInformationProtection PowerShell モジュールをインストールし、このモジュールを Azure Rights Management サービスに接続するための前提条件を構成しておきます。
     
     AzureInformationProtection PowerShell モジュールは、Azure Information Protection クライアントに含まれています。 インストール手順については、Azure Information Protection 管理者ガイドの「[Install the Azure Information Protection client for users](client-admin-guide-install.md)」(ユーザー向けに Azure Information Protection クライアントをインストールする) をご覧ください。 必要であれば、`PowerShellOnly=true` パラメーターを使用して PowerShell モジュールのみをインストールできます。
     
     [この PowerShell モジュールを使用するための前提条件](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service)には、Azure Rights Management サービスをアクティブ化すること、サービス プリンシパルを作成すること、テナントが北米以外にある場合にレジストリを編集することが含まれます。 この記事の手順を開始する前に、これらの前提条件の説明で使われる **BposTenantId**、**AppPrincipalId**、**対称キー**の値を確認してください。 
     
-    - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
+  - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
     
-    - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
+  - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
     
 - オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
     

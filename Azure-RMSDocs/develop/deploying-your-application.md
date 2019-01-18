@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: daad2483fb850d06bbd62ff6b9a721160341d8b7
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: bc1e1e3dc66b3dee00dbfac7db11a1aaaeeab4e3
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070317"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394301"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -27,7 +27,7 @@ ms.locfileid: "54070317"
 AIP/RMS を使用して開発したアプリケーションをリリースする前に、Microsoft との正式契約を申請して締結する必要があります。
 
 ### <a name="begin-the-process"></a>プロセスを開始する
-次の情報を記載した電子メールを **IPIA@microsoft.com** に送信して、IPIA を入手します。
+次の情報を記載した電子メールを <strong>IPIA@microsoft.com</strong> に送信して、IPIA を入手します。
 
 **件名:** *会社名*の IPIA 申し込み
 
@@ -38,7 +38,7 @@ AIP/RMS を使用して開発したアプリケーションをリリースする
 
 ### <a name="next-steps"></a>次の手順
 IPIA 申請が受信されると、(Word 文書形式の) フォームがお客様に送信されます。
-IPIA の使用条件を確認し、次の情報をフォームに入力して **IPIA@microsoft.com** に返送します。
+IPIA の使用条件を確認し、次の情報をフォームに入力して <strong>IPIA@microsoft.com</strong> に返送します。
 - 会社の正式名称
 - 法人の都道府県または国
 - 会社の URL
@@ -54,7 +54,7 @@ IPIA の使用条件を確認し、次の情報をフォームに入力して **
 フォームが受信されると、デジタル署名を行うための最終的な IPIA リンクがお客様に送信されます。 お客様の署名後、適切な Microsoft 担当者が署名することで、契約が締結されます。
 
 ### <a name="already-have-a-signed-ipia"></a>既に署名済みの IPIA がある場合
-署名済みの IPIA が既に存在し、リリースするアプリケーション用に新しい *アプリ ID* を追加する場合は、電子メールに次の情報を記載して **IPIA@microsoft.com** に送信します。
+署名済みの IPIA が既に存在し、リリースするアプリケーション用に新しい *アプリ ID* を追加する場合は、電子メールに次の情報を記載して <strong>IPIA@microsoft.com</strong> に送信します。
 - 会社のアプリケーションの名前
 - アプリケーションの簡単な説明
 - Azure テナント ID (以前と同じ場合でも記載)

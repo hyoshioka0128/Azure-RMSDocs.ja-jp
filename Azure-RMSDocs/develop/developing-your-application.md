@@ -12,12 +12,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 580dc90bae499a5cc64238a6157612bea5eb3282
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071303"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394189"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -62,7 +62,7 @@ Azure Information Protection 用に Azure AD 環境を構成するには、「[R
 - 割り当てられたユーザーの資格情報でオンライン サービスに接続します: `Connect-MsolService`
 - `New-MsolServicePrincipal` を実行して、新しいサービス プリンシパルを作成します。
 - サービス プリンシパルの名前を入力します。
-> 後で使用するために、対称キーとアプリケーションのプリンシパル ID を記録します。
+  > 後で使用するために、対称キーとアプリケーションのプリンシパル ID を記録します。
 
 *出力例*
 ![コマンドレットの出力](../media/develop/output-of-NewMsolServicePrincipal.png)
@@ -80,8 +80,8 @@ Azure Information Protection 用に Azure AD 環境を構成するには、「[R
 ![設計の概要](../media/develop/design-summary.png)
 
 1. ユーザーは次を入力します。
-  - 保護されるファイルのパス。
-  - テンプレートを選択するか、またはアドホック ポリシーを作成します。
+   - 保護されるファイルのパス。
+   - テンプレートを選択するか、またはアドホック ポリシーを作成します。
 2. アプリケーションが AIP による認証を要求します。
 3. AIP が認証を確認します。
 4. アプリケーションが AIP のテンプレートを要求します。
@@ -216,16 +216,16 @@ Azure への接続に必要なパラメーターを読み込みます。
 ![アプリの出力 - 手順 1](../media/develop/app-output-1.png)
 
 2. 保護されるファイルのパスを入力するよう求められます。
-![アプリの出力 - 手順 2](../media/develop/app-output-2.png)
+   ![アプリの出力 - 手順 2](../media/develop/app-output-2.png)
 
 3. ライセンス所有者のメール アドレスを入力するよう求められます (この所有者は、Azure AD テナントでグローバル管理者の権限を持つ必要があります)。
-![アプリの出力 - 手順 3](../media/develop/app-output-3.png)
+   ![アプリの出力 - 手順 3](../media/develop/app-output-3.png)
 
 4. ファイルへのアクセス権を持つユーザーのメール アドレスを入力します (メール アドレスはスペースで区切る必要があります)。
-![アプリの出力 - 手順 4](../media/develop/app-output-4.png)
+   ![アプリの出力 - 手順 4](../media/develop/app-output-4.png)
 
 5. 承認されたユーザーに与えられる権限の一覧から選択します。
-![アプリの出力 - 手順 5](../media/develop/app-output-5.png)
+   ![アプリの出力 - 手順 5](../media/develop/app-output-5.png)
 
 6. 最後に、ポリシーのメタデータの一部 (ポリシー名、説明、発行者 (Azure AD テナント) の表示名) を入力します。![アプリの出力 - 手順 6](../media/develop/app-output-6.png)
 

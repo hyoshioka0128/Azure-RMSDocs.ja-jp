@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: e707e84ccfafc7b3ed161d05cadac9f2314ad3ae
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173878"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394278"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -70,9 +70,9 @@ Azure Information Protection でユーザーとグループを使用するシナ
 - ユーザーを承認するために Azure AD 内の 2 つの属性、**proxyAddresses** と **userPrincipalName** が使用されます。
 
 - **Azure AD proxyAddresses** 属性は、単一アカウントのすべての電子メール アドレスを格納するために使用され、さまざまな方法でデータを設定できます。 たとえば、Exchange Online メールボックスを持つ Office 365 内のユーザーであれば、この属性に格納されている電子メール アドレスを自動的に持つことになります。 代替電子メール アドレスを Office 365 ユーザーに割り当てると、それもこの属性に保存されます。 オンプレミスのアカウントから同期する電子メール アドレスでも設定できます。 
-    
+
     ドメインがテナントに追加されている場合 ("確認済みドメイン")、Azure Information Protection では Azure AD proxyAddresses 属性にある任意の値を使用できます。 ドメインの確認の詳細については、以下の項目をご覧ください。
-    
+
     - Azure AD の場合: [Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)
 
     - Office 365 の場合: [Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
@@ -94,7 +94,7 @@ Azure Information Protection では、テナント内のユーザー用に Azure
 ラベルを割り当てる場合:
 
 - 追加のラベルをグループ メンバーに割り当てるスコープ ポリシーを構成するために、ユーザーのテナントの確認済みドメインを含む電子メール アドレスを持つ任意の種類のグループを Azure AD で使用することができます。 電子メール アドレスを持つグループを、メールが有効なグループと呼ぶことがあります。
-    
+
     たとえば、メールが有効なセキュリティ グループ、配布グループ (静的または動的)、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は、電子メール アドレスを持っていない種類のグループであるため使用できません。
 
 使用権限とアクセス制御を割り当てる場合:
@@ -148,16 +148,17 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
 次に例を示します。
 
-|表示名|UserPrincipalName|ProxyAddresses
-|-------------------|-----------------|--------------------|
-|Jagannath Reddy |jagannathreddy@contoso.com|{}|
-|Ankur Roy|ankurroy@contoso.com|{SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com}|
+
+|  表示名   |     UserPrincipalName      |                            ProxyAddresses                             |
+|-----------------|----------------------------|-----------------------------------------------------------------------|
+| Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
+|    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
 
 この例では、次の点に注意してください。
 
-- Jagannath Reddy のユーザー アカウントは **jagannathreddy@contoso.com** によって承認されることになります。
+- Jagannath Reddy のユーザー アカウントは <strong>jagannathreddy@contoso.com</strong> によって承認されることになります。
 
--  Ankur Roy のユーザー アカウントは、**ankur.roy@contoso.com** と **ankur.roy@onmicrosoft.contoso.com** を使用して承認できますが、**ankurroy@contoso.com** では承認できません。
+- Ankur Roy のユーザー アカウントは、<strong>ankur.roy@contoso.com</strong> と <strong>ankur.roy@onmicrosoft.contoso.com</strong> を使用して承認できますが、<strong>ankurroy@contoso.com</strong> では承認できません。
 
 通常、UserPrincipalName の値は、ProxyAddresses フィールドにあるいずれかの値と一致します。 これは、お勧めの構成ですが、電子メール アドレスと一致するように UPN を変更できない場合は、次の手順を実行する必要があります。
 
@@ -165,7 +166,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
     UPN 値内のドメイン名がテナントの確認済みドメインでない場合は、Azure Information Protection で使用できません。 ただし、グループ電子メール アドレスが検証済みドメイン名を使用している場合、このユーザーはグループのメンバーとしてまだ承認できます。
 
-2. UPN がルーティングできない場合は (たとえば、**ankurroy@contoso.local**)、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法をユーザーに指示してください。 Office のレジストリ キーを設定する必要もあります。
+2. UPN がルーティングできない場合は (たとえば、<strong>ankurroy@contoso.local</strong>)、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法をユーザーに指示してください。 Office のレジストリ キーを設定する必要もあります。
 
     詳細については、「[代替ログイン ID を構成する](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)」と「[Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online (Office アプリケーションは SharePoint のオンライン、OneDrive、 Lync オンラインの資格情報を定期的に要求する)](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)」をご覧ください。
 

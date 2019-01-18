@@ -12,12 +12,12 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7e95243793251be2180b129893220c25142bcc98
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: c0edbda67c7c6faadd0c5d6bddb2695d88dc8420
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071228"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393413"
 ---
 # <a name="android-setup"></a>Android のセットアップ
 
@@ -39,7 +39,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 -   Java 1.6 以降。
 -   [Android Developer Tools (ADT) プラグイン](https://developer.android.com/studio/install)。 注 - インストールを完了するために、Eclipse の再起動を求められる場合があります。
 
-     
+     
 
 -   Android 向け MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
 
@@ -51,7 +51,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
     **注**   アプリケーションで OAuth 2.0 認証ライブラリとして ADAL ライブラリが使用されない場合は、Android のガイダンス「[Some SecureRandom Thoughts](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html)」 (SecureRandom に関する考察) を参照してください。
 
-     
+     
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
@@ -63,7 +63,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 **注**  MS RMS SDK 4.2 プレビュー リリース: このプレビュー リリースでは、com/microsoft/protection から com/microsoft/rightsmanagment へのパス名の変更を表示するようにスクリーンショットが更新されていません。 テキストは更新されています。
 
- 
+ 
 -   Eclipse の開発環境を開きます。
 -   Android アプリケーション プロジェクトを新規作成するには、**[File]** メニューで **[New]**、**[Project]** の順にクリックし、**[Android Application Project]** を選択します。
 
@@ -94,45 +94,45 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 **SDK の参照**
 
--   *adrms\_android\_sdk.zip* を展開したフォルダーに移動します。 "SDK > com > microsoft > rightsmanagement" フォルダーで、ファイル *.classpath*、*.project*、および *project.properties* が読み取り専用にマークされていないことを確認します。
--   参照するには、SDK をワークスペースにインポートする必要があります。
+- *adrms\_android\_sdk.zip* を展開したフォルダーに移動します。 "SDK > com > microsoft > rightsmanagement" フォルダーで、ファイル *.classpath*、*.project*、および *project.properties* が読み取り専用にマークされていないことを確認します。
+- 参照するには、SDK をワークスペースにインポートする必要があります。
 
-    Eclipse で **[File]** をクリックします。 **[File]** メニューの **[Import]** をクリックします。 **[Import]** ダイアログ ボックスで、**[Android / Existing Android Code into Workspace]** を選択します。
+  Eclipse で **[File]** をクリックします。 **[File]** メニューの **[Import]** をクリックします。 **[Import]** ダイアログ ボックスで、**[Android / Existing Android Code into Workspace]** を選択します。
 
-    ![ワークスペースにインポートする](../media/Android-setup-07.png)
+  ![ワークスペースにインポートする](../media/Android-setup-07.png)
 
--   **[Next]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
+- **[Next]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
 
-    ![フォルダーに移動して選択する](../media/Android-setup-08c.jpg)
+  ![フォルダーに移動して選択する](../media/Android-setup-08c.jpg)
 
--   **[Finish]** をクリックすると、SDK プロジェクトが、以前に作成したアプリケーションの兄弟として表示されます。
+- **[Finish]** をクリックすると、SDK プロジェクトが、以前に作成したアプリケーションの兄弟として表示されます。
 
-    ![SDK プロジェクトがアプリケーションの兄弟として表示される](../media/Android-setup-09.jpg)
+  ![SDK プロジェクトがアプリケーションの兄弟として表示される](../media/Android-setup-09.jpg)
 
--   **プロジェクト** アイコンを右クリックし、プロジェクトのプロパティを表示します。
--   **[Android]** タブに移動します。
--   **[Add]** をクリックして、ワークスペースから *com.microsoft.rightsmanagement* ライブラリを選択します。
+- **プロジェクト** アイコンを右クリックし、プロジェクトのプロパティを表示します。
+- **[Android]** タブに移動します。
+- **[Add]** をクリックして、ワークスペースから *com.microsoft.rightsmanagement* ライブラリを選択します。
 
-    ![ライブラリを追加する](../media/Android-setup-10b.jpg)
+  ![ライブラリを追加する](../media/Android-setup-10b.jpg)
 
--   **[OK]** をクリックします。
+- **[OK]** をクリックします。
 
-    MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
+  MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
 
-    アクセス許可を追加するには、**[Add]** をクリックして、**[Uses Permissions]** を選択します。
+  アクセス許可を追加するには、**[Add]** をクリックして、**[Uses Permissions]** を選択します。
 
-    ![アクセス許可を追加する](../media/Android-setup-11d.jpg)
+  ![アクセス許可を追加する](../media/Android-setup-11d.jpg)
 
--   マニフェストを検証するには、テキスト エディターのビューでマニフェストを表示します。 次の行が表示されていることを確認してください。
+- マニフェストを検証するには、テキスト エディターのビューでマニフェストを表示します。 次の行が表示されていることを確認してください。
 
-   ```
-    <uses-sdk
-         android:minSdkVersion="15"
-         android:targetSdkVersion="19"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission/>
-   ```
+  ```
+  <uses-sdk
+       android:minSdkVersion="15"
+       android:targetSdkVersion="19"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission/>
+  ```
 
 **注**  SDK では *android.support.v4* が使用されます。
 

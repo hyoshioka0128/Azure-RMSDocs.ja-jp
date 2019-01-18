@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 35b2211b9ca6eb3f8c0f160a80850c3cb899562c
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 5fb3e3ab5d32bf5e590bec5b0a1380bf13a7d066
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174184"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394203"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -143,7 +143,7 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>AD RMS のテンプレートが **ANYONE** グループを使用していた場合の手順
 
-AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、Azure Information Protection 内の最も近いグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前です。 たとえば、Contoso の場合、このグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com** のようになります。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
+AD RMS のテンプレートで **ANYONE** グループが使用されていた場合、Azure Information Protection 内の最も近いグループは **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** という名前です。 たとえば、Contoso の場合、このグループは <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong> のようになります。 このグループは、Azure AD テナントからのすべてのユーザーを含んでいます。
 
 Azure Portal でテンプレートとラベルを管理する場合、このグループは、Azure AD でのテナントのドメイン名として表示されます。 たとえば、Contoso の場合、このグループは **contoso.onmicrosoft.com** のようになります。 このグループを追加するために、オプションの表示は [**追加\<組織名> - すべてのメンバー**] となります。
 
