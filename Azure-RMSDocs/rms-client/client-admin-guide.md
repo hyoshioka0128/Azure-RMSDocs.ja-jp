@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e66ad53b23a76a263d4ec74e184597db12fdaa9d
-ms.sourcegitcommit: 8deca8163a6adea73f28aaf300a958154f842e4a
+ms.openlocfilehash: 1ece9ab39045d1bb6f1388a33784a733618dd0d4
+ms.sourcegitcommit: 24c464bcb80db2d193cfd17ea8c264a327dcf54a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210500"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54366211"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -198,11 +198,69 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
 
+スキャナーのアップグレード方法は、現在の GA バージョンにアップグレードするか、現在のプレビュー バージョンにアップグレードするかによって異なります。
+
+#### <a name="to-upgrade-the-scanner-to-the-current-ga-version"></a>スキャナーを現在の GA バージョンにアップグレードする場合
+
 Azure Information Protection スキャナーをアップグレードするには、Azure Information Protection クライアントの最新バージョンをインストールします。 次に、以下の 1 回限りの操作を行います。 これを行ったら、既にスキャンされたファイルを再スキャンする必要はありません。
 
 - Azure Information Protection クライアントをアップグレードした後に、[Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
     
     この更新コマンドレットを実行するまでスキャナーは実行されません。また、通常、Windows イベント ログにイベント ID **1000** が表示され、次のエラー メッセージが表示されます: **オブジェクト名 'ScannerStatus' は無効です**。
+
+#### <a name="to-upgrade-the-scanner-to-the-current-preview-version"></a>スキャナーを現在のプレビュー バージョンにアップグレードする場合
+
+> [!IMPORTANT]
+> アップグレード パスを円滑にするために、スキャナーをアップグレードする最初の手順として、スキャナーを実行するコンピューターにプレビュー バージョンの Azure Information Protection クライアントをインストールしないでください。 代わりに、次のアップグレード手順を使用します。
+
+現在のプレビュー バージョンのスキャナーの場合、アップグレード プロセスが以前のバージョンとは異なります。 スキャナーをアップグレードすると、構成設定を Azure portal から取得するようにスキャナーが自動的に変更されます。 さらに、スキーマがスキャナーの構成データベース用に更新され、このデータベースの名前も AzInfoProtection から次のように変更されます。
+
+- 独自のプロファイル名を指定しない場合、構成データベースの名前が **AIPScanner_\<computer_name>** に変更されます。 
+
+- 独自のプロファイル名を指定すると、構成データベースの名前が **AIPScanner_\<profile_name>** に変更されます。
+
+別の順序でスキャナーをアップグレードすることもできますが、次の手順をお勧めします。
+
+1. Azure portal を使用して、スキャナーの設定とデータ リポジトリ、およびそれに必要なすべての設定を含む新しいスキャナー プロファイルを作成します。 この手順については、プレビュー バージョンのスキャナーのデプロイ手順に含まれている [Azure portal 上でのスキャナーの構成](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal)に関するセクションをご覧ください。
+    
+    スキャナーを実行するコンピューターがインターネットから切断されている場合でも、この手順を実行する必要があります。 次に、Azure portal 上で **[エクスポート]** オプションを使用して、スキャナー プロファイルをファイルにエクスポートします。
+
+2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
+
+3. 現在のプレビュー バージョンを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からインストールして、Azure Information Protection クライアントをアップグレードします。
+
+4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile USWest`
+
+5. スキャナーが切断されたコンピューター上で実行されている場合のみ: ここで [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) を実行し、エクスポートされた設定を含んでいるファイルを指定します。
+
+6. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
+
+##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>推奨される手順と異なる順序でのアップグレード
+
+Update-AIPScanner コマンドを実行する前に Azure portal 上でスキャナーを構成しない場合、アップグレード プロセス用に指定する、スキャナーの構成設定を識別するプロファイル名がありません。 
+
+このシナリオでは、Azure portal 上でスキャナーを構成するときに、Update-AIPScanner コマンドの実行時に使用したのとまったく同じプロファイル名を指定する必要があります。 名前が一致しない場合、スキャナーは設定に対して構成されません。 
+
+> [!TIP]
+> この正しく構成されていないスキャナーを識別するには、Azure portal 上で **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードを使用します。
+>  
+> インターネットに接続されているスキャナーの場合、コンピューター名が Azure Information Protection クライアントのプレビュー バージョン番号と共に表示されますが、プロファイル名は表示されません。 バージョン番号が 1.41.51.0 のスキャナーの場合のみ、このブレードにプロファイル名が表示されません。 
+
+Update-AIPScanner コマンドの実行時にプロファイル名を指定しなかった場合、コンピューター名を使用してスキャナーのプロファイル名が自動的に作成されます。
+
+#### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>別の SQL Server インスタンスへのスキャナー構成データベースの移動
+
+現在のプレビュー バージョンでは、アップグレード コマンドを実行した後にスキャナーの構成データベースを新しい SQL Server インスタンスに移動しようとすると既知の問題が発生します。
+
+プレビュー バージョンのスキャナー構成データベースを移動する必要があることがわかっている場合は、次の操作を行います。
+
+1. [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner) を使用して、スキャナーをアンインストールします。
+
+2. プレビュー バージョンの Azure Information Protection クライアントをまだアップグレードしていない場合は、この時点でアップグレードします。
+
+3. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) を使用し、新しい SQL Server インスタンスとプロファイル名を指定してスキャナーをインストールします。
+
+4. 省略可能: スキャナーですべてのファイルが再スキャンされないようにするには、ScannerFiles テーブルをエクスポートし、新しいデータベースにインポートします。
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Azure Information Protection クライアントのアンインストール
 

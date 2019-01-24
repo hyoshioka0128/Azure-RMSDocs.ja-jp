@@ -4,18 +4,18 @@ description: 管理者が Azure Information Protection のドキュメント追�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5add56fb5c033243acccb5308b7b9569b0c72624
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305201"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314737"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -95,6 +95,16 @@ AADRM モジュールの最小バージョン **2.13.0.0** がある場合、次
 
 ドキュメント追跡サイトを使用する手順については、ユーザー ガイドの「[RMS 共有アプリケーションを使用してドキュメントを追跡および取り消す](client-track-revoke.md)」を参照してください。
 
+### <a name="using-powershell-to-register-labeled-documents-with-the-document-tracking-site"></a>PowerShell を使ってドキュメント追跡サイトにラベル付きのドキュメントを登録する
+
+このオプションは、Azure Information Protection クライアントの最新プレビュー バージョンでのみ使用できます。
+
+ドキュメントを追跡および取り消しできるようにするためには、まずこれをドキュメント追跡サイトに登録する必要があります。 ユーザーが Azure Information Protection クライアントを使っている場合、このアクションは、エクスプローラーまたは各 Office アプリの **[追跡と取り消し]** オプションを選択すると発生します。 Rights Management 共有アプリケーションの場合、ユーザーが **[保護ファイルの共有]** オプションを選択していると自動的にこのアクションが発生します。
+
+[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 次に例を示します。
+
+    Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
+
 ## <a name="usage-logging-for-the-document-tracking-site"></a>ドキュメント追跡サイトの使用状況のログ記録
 
 使用状況ログ ファイルの 2 つのフィールド **AdminAction** と **ActingAsUser** は、ドキュメント追跡に適用できます。
@@ -105,9 +115,7 @@ AADRM モジュールの最小バージョン **2.13.0.0** がある場合、次
 
 また、ユーザーと管理者がドキュメント追跡サイトを使用する方法をログに記録する要求の種類もあります。 たとえば、**RevokeAccess** は、ユーザーまたはユーザーの代理の管理者が、ドキュメント追跡サイトでドキュメントを取り消した場合の要求の種類です。 この要求の種類と AdminAction フィールドを組み合わせて、ユーザーが自分のドキュメントを取り消したか (AdminAction フィールドが空)、管理者がユーザーの代理でドキュメントを取り消したか (AdminAction が true) を判断できます。
 
-
 使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../log-analyze-usage.md)」を参照してください。
-
 
 
 ## <a name="next-steps"></a>次の手順

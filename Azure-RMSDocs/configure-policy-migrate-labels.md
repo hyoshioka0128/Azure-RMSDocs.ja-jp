@@ -4,17 +4,17 @@ description: 統合ラベル付けをサポートしているクライアント�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/17/20198
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 221b503fa3621e51c4822a6ad5a6d08fae4f1bad
+ms.sourcegitcommit: 8dec864bf25c7da62b9e0f628f1bf673c81c15ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174133"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54356013"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
@@ -93,9 +93,13 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 ラベルを移行するには、グローバル管理者である必要があります。
 
-1. 新しいブラウザー ウィンドウを開き、次のリンクから Azure portal にサインインします。 https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
+    
+    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[Azure Information Protection - 統合ラベル付け]** ブレードで **[有効化]** を選択し、オンライン指示に従います。
+2. **[管理]** メニュー オプションから **[統合ラベル付け (プレビュー)]** を選択します。
+
+3. **[Azure Information Protection - 統合ラベル付け]** ブレードで **[有効化]** を選択し、オンライン指示に従います。
 
 正常に移行できたラベルは、[統合ラベル付けをサポートするクライアント](#clients-that-support-unified-labeling)で使用できます。 ただし、最初にセキュリティ/コンプライアンス センターでラベルを公開する必要があります。
 

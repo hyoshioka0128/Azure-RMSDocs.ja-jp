@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 39abf4586f00cb40cb096841261993225b8c8387
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305473"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393354"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
@@ -29,7 +29,7 @@ Exchange Online でメール フロー ルールを構成して Azure Informatio
 
 アクションとして保護を適用するメール フロー ルール は、電子メールが既に保護されている場合は無視されます。 たとえば、電子メール メッセージが [転送不可] によって保護されている場合、暗号化のみのオプションを使用する Exchange メール フロー ルールでは変更できません。  
 
-これらの例は、変更するだけでなく拡張することもできます。 たとえば、さらに条件を追加します。 メール フロー ルールの構成について詳しくは、Exchange Online のドキュメントの「[Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150\).aspx)」(Exchange Online のメール フロー ルール (トランスポート ルール)) をご覧ください。
+これらの例は、変更するだけでなく拡張することもできます。 たとえば、さらに条件を追加します。 詳しくは、Exchange Online のドキュメントの「[Exchange Online のメール フロー ルール (トランスポート ルール)](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)」をご覧ください。
 
 電子メール メッセージを暗号化するメール フロー ルールを構成する方法について詳しくは、Office ドキュメントの「[Office 365 でメール メッセージを暗号化するメール フロー ルールを定義する](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8)」をご覧ください。 
 
@@ -60,7 +60,7 @@ Azure Information Protection ラベルはメタデータに格納されるため
 > [!TIP]
 > ルールを構成する際にユーザー インターフェイスの問題が発生する場合は、Internet Explorer など、別のブラウザーを試してください。
 
-この例では、電子メールが組織の外に送信されるときに保護を適用する条件が 1 つだけ含まれています。 選択できる他の条件について詳しくは、「[Mail flow rule conditions and exceptions (predicates) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx)」(Exchange Online のメール フロー ルールの条件と例外 (述語)) をご覧ください。
+この例では、電子メールが組織の外に送信されるときに保護を適用する条件が 1 つだけ含まれています。 選択できる他の条件について詳しくは、「[Exchange Online でのメール フロー ルールの条件と例外 (述語)](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx)」をご覧ください。
 
 
 ### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>例 1: **[全般]** ラベルの付いた電子メールが組織の外部に送信されるときに、それに [転送不可] オプションを適用するルール

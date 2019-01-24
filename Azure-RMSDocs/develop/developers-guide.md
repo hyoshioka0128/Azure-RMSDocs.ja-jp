@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: f995f0236728850884a2e58d727e0f2f12b3717e
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 7b7bf658fe0766091ddd33aab076c9a721fcc236
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070844"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393793"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -77,7 +77,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 - [方法: ドキュメント追跡の有効化と取り消し (サービス)](tracking-content.md)
 - [クライアントを展開する方法](../rms-client/client-deployment-notes.md)
-- [サービス アプリを別のテナントにデプロイする方法] (how-to-deploy-app.md)
+- [サービス アプリを別のテナントにデプロイする方法](how-to-deploy-app.md)
 - [方法: RMS サーバーをインストールして構成する (サービス)](how-to-install-and-configure-an-rms-server.md)
 - [方法: ドキュメント追跡を使用する (ユーザー)](how-to-use-document-tracking.md)
 - [Azure Information Protection で対称キーを更新する方法](how-to-renew-symmetric-key.md)

@@ -4,18 +4,18 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/05/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 393cac6703016235359e0eb2812b31c585d4b524
-ms.sourcegitcommit: b2619c522298eaee3bd0067f2827e80fa9d4bfc2
+ms.openlocfilehash: ef9836a6e3b651986642d2c93128ea0f6b1e6112
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060316"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314851"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -154,7 +154,7 @@ Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/�
 
 - Windows Server FCI の場合: すべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定したり、各ファイルの Rights Management 所有者を動的に設定したりすることができます。 Rights Management 所有者を動的に設定するには、**-OwnerMail [ソース ファイルの所有者の電子メール]** パラメーターと値を使用します。 この構成では、ファイルの所有者プロパティのユーザー アカウント名を使用して、Active Directory からユーザーのメール アドレスを取得します。
 
-- Azure Information Protection スキャナー:新しく保護されるファイルの場合、指定のデータ ストアのすべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定できますが、各ファイルの Rights Management 所有者を動的に設定することはできません。 以前から保護されていたファイルについては、Rights Management 所有者は変更されません。 アカウントを設定するには、[データ リポジトリ プロファイル](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters)に **-DefaultOwner** パラメーターを指定します。
+- Azure Information Protection スキャナー:新しく保護されるファイルの場合、指定のデータ ストアのすべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定できますが、各ファイルの Rights Management 所有者を動的に設定することはできません。 以前から保護されていたファイルについては、Rights Management 所有者は変更されません。 新しく保護されるファイルに対してアカウントを設定するには、スキャナー プロファイルで **-Default owner** 設定を指定します。 
 
 スキャナーで SharePoint サイトおよびライブラリのファイルを保護する場合、Rights Management 所有者は SharePoint エディターの値を使用して、ファイルごとに動的に設定されます。
 

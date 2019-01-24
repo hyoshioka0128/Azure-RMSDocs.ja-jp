@@ -4,20 +4,20 @@ description: ラベルの条件を使うと、ドキュメントや電子メー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023857"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314800"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。 
 
@@ -50,7 +50,7 @@ ms.locfileid: "53023857"
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>複数のラベルに適用するときの複数の条件の評価方法
 
-1. ラベルは、ポリシーに指定した位置に従って評価の順序が決まります。先頭に配置されたラベルが最下位 (秘密度が最も低い) になり、最後に配置されたラベルが最上位 (秘密度が最も高い) ものになります。
+1. ラベルは、ポリシー内で指定した位置に従って評価の順序を決められます。先頭に配置したラベルが最下位 (秘密度が最も低い) になり、最後に配置したラベルが最上位 (秘密度が最も高い) になります。
 
 2. 最も秘密度の高いラベルが適用されます。
  
@@ -68,7 +68,7 @@ ms.locfileid: "53023857"
 3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
 4. **[条件]** ブレードで、定義済みの条件を使用する場合は **[情報の種類]** を、独自の条件を指定する場合は **[カスタム]** を選択します。
-    - **[情報の種類]** を選択した場合: 使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
+    - **[情報の種類]** を選択した場合:使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
         
         情報の種類では、Office 365 データ損失防止 (DLP) の機密情報の種類とパターン検出が使われます。 多くの共通の機密情報の種類から選ぶことができ、これらの一部は異なるリージョンに固有です。 詳しくは、Office 365 ドキュメントの「[What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for)」(検索される機密情報の種類) をご覧ください。
         
@@ -79,17 +79,17 @@ ms.locfileid: "53023857"
         
         Azure Information Protection は、選択された情報の種類を評価するとき、Office DLP 信頼レベルの設定を使わず、最も低い信頼度に従って一致させます。
     
-    - **[カスタム]** を選択した場合: 一致させる名前とフレーズを指定します。引用符と特殊文字は除外する必要があります。 次に、正規表現として一致させるかどうか、大文字と小文字を区別するかどうか、最小出現回数、出現で出現回数に一意の値を含めるどうかを選択します。
+    - **[カスタム]** を選択した場合:一致させる名前とフレーズを指定します。引用符と特殊文字は除外する必要があります。 次に、正規表現として一致させるかどうか、大文字と小文字を区別するかどうか、最小出現回数、出現で出現回数に一意の値を含めるどうかを選択します。
         
         正規表現では、Office 365 の正規表現パターンが使用されます。 カスタム条件に正規表現を指定するために、次の Boost から参照できる「[Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)」 (Perl 正規表現構文) の特定のバージョンをご覧ください。
         
 5. **[最小出現回数]** と **[一意の値のみを含む出現回数をカウント]** を変更する必要があるかどうかを決定し、**[保存]** を選択します。 
     
-    出現オプションの例: 社会保障番号の情報タイプを選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[一意の値のみを含む出現回数をカウント]** を **[オン]** に設定した場合、条件は満たされません。 このオプションを **[オフ]** に設定した場合、条件は満たされます。
+    出現オプションの例:社会保障番号の情報の種類を選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[一意の値のみを含む出現回数をカウント]** を **[オン]** に設定した場合、条件は満たされません。 このオプションを **[オフ]** に設定した場合、条件は満たされます。
 
 6. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
     
-    - 自動分類または推奨分類を選択します。**[Select how this label is applied: automatically or recommended to user]** (ラベルの適用方法を選択してください: 自動またはユーザーに推奨) で、**[自動]** または **[推奨]** を選択します。
+    - 自動分類または推奨分類を選択します。**[このラベルの適用方法を選択: 自動またはユーザーへの推奨]** に対して、**[自動]** または **[推奨]** を選択します。
     
     - ユーザー プロンプトまたはポリシー ヒント用のテキストを指定します。既定のテキストを維持するか、独自の文字列を指定します。
 
@@ -99,11 +99,9 @@ ms.locfileid: "53023857"
 
 次の機密情報の種類には、Azure Information Protection クライアントのバージョン 1.37.19.0 以降が必要です。
 
-- **EU の電話番号**
 - **EU の携帯電話番号**
 - **EU のパスポート番号**
 - **EU の運転免許証番号**
-- **EU の GPS 座標**
 - **EU の国民識別番号**
 - **EU の社会保障番号 (SSN) または同等の ID**
 - **EU の納税者識別番号 (TIN)**
@@ -111,6 +109,24 @@ ms.locfileid: "53023857"
 - **トルコの国民識別番号**
 - **日本の住民基本台帳カード番号**
 
+
+次の機密情報の種類を使用するには、Azure Information Protection クライアントの最新プレビュー バージョンが必要です。
+
+- **Azure Service Bus の接続文字列**
+- **Azure IoT の接続文字列**
+- **Azure ストレージ アカウント**
+- **Azure IAAS データベースの接続文字列および Azure SQL の接続文字列**
+- **Azure Redis Cache の接続文字列**
+- **Azure SAS**
+- **SQL Server の接続文字列**
+- **Azure DocumentDB の認証キー**
+- **Azure 発行設定のパスワード**
+- **Azure Storage のアカウント キー (汎用)**
+
+また、次の機密情報の種類は Azure Information Protection クライアントの最新プレビュー バージョンでサポートされておらず、Azure portal に表示されなくなりました。
+
+- **EU の電話番号**
+- **EU の GPS 座標**
 
 ## <a name="next-steps"></a>次の手順
 

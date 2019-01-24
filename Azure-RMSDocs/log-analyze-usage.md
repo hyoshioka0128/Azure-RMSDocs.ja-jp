@@ -4,18 +4,18 @@ description: Azure Rights Management (Azure RMS) で使用状況のログを使�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/15/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d287df4fbea3f4b040444182aed89da7c470ea1
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: bf42c0309af481847e80b12cb161422b7cd18378
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305643"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394330"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
 
@@ -137,26 +137,26 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 
 後続の各行はログ レコードです。 フィールド値の順序は前の行と同じで、タブで区切られます。 フィールドを解釈するには、次の表を参照してください。
 
-|フィールド名|W3C データ型|説明|値の例|
-|--------------|-----------------|---------------|-----------------|
-|date|日付|要求が処理された UTC 日付。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。|2013-06-25|
-|time|時刻|要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。|21:59:28|
-|row-id|テキスト|このログ レコードの固有 GUID。 値が存在しない場合は、correlation-id の値を使用してエントリを識別します。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
-|request-type|名前|要求された RMS API の名前。|AcquireLicense|
-|user-id|文字列型|要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。|‘joe@contoso.com’|
-|結果|文字列型|要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。|'Success'|
-|correlation-id|テキスト|特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。|cab52088-8925-4371-be34-4b71a3112356|
-|content-id|テキスト|保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|文字列型|ドキュメントの所有者の電子メール アドレス。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com|
-|issuer|文字列型|ドキュメントの発行者の電子メール アドレス。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|文字列型|ドキュメントを保護するために使用されるテンプレートの ID。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|文字列型|Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションを使用して追跡される保護されたドキュメント名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|TopSecretDocument.docx|
-|date-published|日付|ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。|2015-10-15T21:37:00|
-|c-info|文字列型|要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
-|c-ip|住所|要求を行ったクライアントの IP アドレス。|64.51.202.144|
-|admin-action|Bool|管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。|True|
-|acting-as-user|文字列型|管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。 |'joe@contoso.com'|
 
+|   フィールド名   | W3C データ型 |                                                                                                                                                                          説明                                                                                                                                                                          |                                                            値の例                                                            |
+|----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+|      date      |     日付      |                                                                                                                     要求が処理された UTC 日付。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。                                                                                                                     |                                                             2013-06-25                                                              |
+|      time      |     時刻      |                                                                                                            要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。                                                                                                            |                                                              21:59:28                                                               |
+|     row-id     |     テキスト      |                                                                           このログ レコードの固有 GUID。 値が存在しない場合は、correlation-id の値を使用してエントリを識別します。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
+|  request-type  |     名前      |                                                                                                                                                            要求された RMS API の名前。                                                                                                                                                            |                                                           AcquireLicense                                                            |
+|    user-id     |    文字列型     |                                                               要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。                                                                |                                                          ‘joe@contoso.com’                                                          |
+|     結果     |    文字列型     |                                                                                                                  要求が正常に処理された場合は 'Success' です。<br /><br />要求が失敗した場合はエラーの種類が単一引用符で囲まれて示されます。                                                                                                                   |                                                              'Success'                                                              |
+| correlation-id |     テキスト      |                                                                                                 特定の要求に対する RMS クライアント ログとサーバー ログ間で共通の GUID。<br /><br />この値はクライアントの問題を解決するために役立ちます。                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |
+|   content-id   |     テキスト      |                                                                      保護されたコンテンツ (ドキュメントなど) を示す、波かっこで囲まれた GUID。<br /><br />このフィールドには request-type が AcquireLicense の場合にのみ値が含まれ、それ以外の場合は空白になります。                                                                       |                                               {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                |
+|  owner-email   |    文字列型     |                                                                                                                       ドキュメントの所有者の電子メール アドレス。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                        |                                                          alice@contoso.com                                                          |
+|     issuer     |    文字列型     |                                                                                                                          ドキュメントの発行者の電子メール アドレス。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                          |                       alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
+|  template-id   |    文字列型     |                                                                                                                    ドキュメントを保護するために使用されるテンプレートの ID。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
+|   file-name    |    文字列型     | Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションを使用して追跡される保護されたドキュメント名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。 |                                                       TopSecretDocument.docx                                                        |
+| date-published |     日付      |                                                                                                                          ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
+|     c-info     |    文字列型     |                                                                                   要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。                                                                                   | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
+|      c-ip      |    住所    |                                                                                                                                                       要求を行ったクライアントの IP アドレス。                                                                                                                                                        |                                                            64.51.202.144                                                            |
+|  admin-action  |     Bool      |                                                                                                                                    管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。                                                                                                                                    |                                                                True                                                                 |
+| acting-as-user |    文字列型     |                                                                                                                               管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。                                                                                                                                |                                                          'joe@contoso.com'                                                          |
 
 #### <a name="exceptions-for-the-user-id-field"></a>user-id フィールドの例外
 通常、user-id フィールドは要求を行ったユーザーを示しますが、値が実際のユーザーにマップされない例外が 2 つあります。
@@ -182,7 +182,7 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |AllDocsCsv|ドキュメント追跡サイトから呼び出し、**[すべてのドキュメント]** ページから CSV ファイルをダウンロードします。|
 |BECreateEndUserLicenseV1|モバイル デバイスから、エンド ユーザー ライセンスを作成するための呼び出しが行われます。|
 |BEGetAllTemplatesV1|モバイル デバイス (バックエンド) から、すべてのテンプレートを取得するための呼び出しが行われます。|
-|Certify|クライアントが保護のために内容を証明しています。|
+|Certify|クライアントは保護されたコンテンツの使用および作成に関してユーザーを証明しています。|
 |DeleteTemplateById|Azure Portal から、テンプレート ID でテンプレートを削除するための呼び出しが行われます。|
 |DocumentEventsCsv|ドキュメント追跡サイトから呼び出し、単一ドキュメントの .CSV ファイルをダウンロードします。|
 |ExportTemplateById|Azure Portal から、テンプレート ID に基づいてテンプレートをエクスポートするための呼び出しが行われます。|

@@ -4,18 +4,18 @@ description: Windows コンピューターとモバイル デバイスに Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9dfe8c6921b50faddb6ee8f24c39fe6f33e1fd4d
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 3edcaf6b7751996a6d162eeec7cfc8ba3e352940
+ms.sourcegitcommit: 2daa75cda8475028a3dac83d70505fcfccef42a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173317"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361785"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントでのインストールと構成
 
@@ -37,7 +37,12 @@ Azure Information Protection クライアントと Office アプリケーショ�
 > [!NOTE]
 > Mac コンピューターと Windows Phone の場合、このページのリンクでモバイル デバイス用の RMS 共有アプリをダウンロードします。 現在のところ、これらのデバイスは Azure Information Protection クライアントをサポートしていません。
 
-**Microsoft Intune を所有している場合**: Azure Information Protection アプリには Microsoft Intune App Software Development Kit が含まれているため、Intune で iOS デバイスや Android デバイスを登録していると、これらのデバイス用の Azure Information Protection ビューアーをデプロイおよび管理できます。 詳細については、Intune のドキュメントの「[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune コンソールでモバイル アプリケーション管理ポリシーを構成およびデプロイする)](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」を参照してください。 手順 2. として、手順に従ってポリシー管理型アプリを発行します。
+**Microsoft Intune を所有している場合**: Azure Information Protection アプリは Microsoft Intune App Software Development Kit を使用して構築されているため、Intune で iOS デバイスや Android デバイスを登録していると、これらのデバイス用の Azure Information Protection アプリをデプロイおよび管理できます。
 
+- アプリをデプロイするには、[Azure Information Protection アプリを Intune に追加](/intune/apps-add)し、[ユーザーに割り当て](/intune/apps-deploy)ます。
 
+- アプリを管理するには、Intune の[アプリ保護ポリシー](/intune/app-protection-policies)を使用します。
 
+## <a name="next-steps"></a>次の手順
+
+Azure Information Protection クライアントをインストールして構成したら、ドキュメントおよび電子メールの保護に使用できるさまざまな使用権限がクライアントでどのように解釈されるかを詳しく学習する必要があります。 詳細については、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」を参照してください。

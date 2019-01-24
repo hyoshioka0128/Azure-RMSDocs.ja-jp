@@ -4,17 +4,17 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/27/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 94120417c5e2e61f1d28fc16d714ec1c91a4ed0f
-ms.sourcegitcommit: 630f03a91f84d79219e04b4085bdfb5bc6478e88
+ms.openlocfilehash: d120c9dea8ac49c48d7b47d4ee0a0b317ab8c5d6
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54011975"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314953"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -41,10 +41,77 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="version-141510"></a>バージョン 1.41.51.0
+## <a name="versions-later-than-141510"></a>1.41.51.0 より後のバージョン
+
+1.41.51.0 より後のバージョン 1 のクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。  
 
 > [!TIP]
 > Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
+
+**リリース日**: 2019 年 1 月 15 日
+
+このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
+
+**新機能:**
+
+- Azure Information Protection スキャナーは、PowerShell ではなく Azure portal を使用して構成されるようになりました。
+    
+    - 一般公開バージョンのスキャナーからアップグレードする場合は、アップグレード プロセスが以前のバージョンとは異なるため、「[Azure Information Protection スキャナーのアップグレード](client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を必ずお読みください。
+    
+    - スキャナーをアップグレードするのではなく初めてインストールする場合は、「[プレビュー バージョンの Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner-preview.md)」をご覧ください。
+
+- [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 [詳細情報](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
+
+- Azure Information Protection スキャナーで、プロファイル名を指定するときに同じ SQL Server インスタンス上の複数の構成データベースがサポートされるようになりました。
+
+- ドキュメントおよび電子メール内の資格情報を識別するのに役立つ、次の機密情報の種類のサポート。
+    - Azure Service Bus の接続文字列
+    - Azure IoT の接続文字列
+    - Azure ストレージ アカウント
+    - Azure IAAS データベースの接続文字列および Azure SQL の接続文字列
+    - Azure Redis Cache の接続文字列
+    - Azure SAS
+    - SQL Server の接続文字列
+    - Azure DocumentDB の認証キー
+    - Azure 発行設定のパスワード
+    - Azure Storage のアカウント キー (汎用)
+
+**修正内容**:
+
+- ユーザーがWord 文書に新しいセクションを追加した後で再度ラベルを付ける場合、新しい視覚的なマーキングが一貫して適用されます。
+
+- Azure Information Protection クライアントで、Rights Management 共有アプリケーションによって保護されていた PDF 文書の保護が正しく解除されます。
+
+- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されません。
+
+- ユーザー定義のアクセス許可に対して親ラベルが構成されている場合、PowerShell およびスキャナーによってサブラベルが正しく適用されます。
+
+- Azure Information Protection クライアントで、[統合ラベル付けをサポートしているクライアント](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling)によって適用されているラベルが正しく表示されます。
+
+- エクスプローラーと右クリック、PowerShell、およびスキャナーによって保護が解除された後に、ドキュメントが Office で回復メッセージなしで正しく開きます。
+
+**その他の変更:**
+
+- 推奨または自動の分類に対して構成するラベルで、次の機密情報の種類がサポートされなくなりました。
+    - EU の電話番号
+    - EU の GPS 座標
+
+- Azure Information Protections スキャナーは Azure portal を使用して構成されるため、次のコマンドレットが非推奨になり、データ リポジトリまたはファイルの種類一覧の構成に使用できなくなりました。
+    - Add-AIPScannerRepository
+    - Add-AIPScannerScannedFileTypes
+    - Get-AIPScannerRepository
+    - Remove-AIPScannerRepository
+    - Remove-AIPScannerScannedFileTypes
+    - Set-AIPScannerRepository
+    - Set-AIPScannerScannedFileTypes
+
+- Azure Information Protection スキャナーが Azure portal から構成をダウンロードできないシナリオに対処するための新しい PowerShell コマンドレット [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)。
+
+- Azure Information Protection スキャナーで、.zip ファイルが既定で除外されなくなりました。 .zip ファイルの検査およびラベル付けの方法については、管理ガイドの「[.zip ファイルを検査するには](client-admin-guide-file-types.md#to-inspect-zip-files)」セクションをご覧ください。
+
+- [ポリシー設定](../configure-policy-settings.md) **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** がスキャナーに適用されなくなりました。 スキャナーのプロファイルで **[ファイルのラベルを書き換える]** 設定を **[オン]** に構成すると、スキャナーでこれらのアクションが実行されます。
+
+## <a name="version-141510"></a>バージョン 1.41.51.0
 
 **リリース日**: 2018 年 11 月 27 日
 

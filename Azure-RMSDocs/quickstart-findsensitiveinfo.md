@@ -4,19 +4,21 @@ description: Azure Information Protection スキャナーを使用して、オ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 050c56887b83f0badf692bf2ee3b4616ad5b8bf4
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 12bde16a9b1659d00137720ad7c804db32cb1556
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024231"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314834"
 ---
-# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート: オンプレミスに格納しているファイル内の機密情報を検索する
+# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
-このクイック スタートでは、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。 
+このクイック スタートでは、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
+
+注: このクイックスタートでは、Azure portal を使用して構成するプレビュー バージョンのスキャナーではなく、現在の一般公開バージョンのスキャナーを使用します。
 
 この構成は 10 分未満で完了します。
 

@@ -8,12 +8,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: de278dbb9fd9f051c3a4e47ef719988df4706434
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: d1613d30dbb59395254ca5bd56222c15fcb75058
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305558"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393570"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -114,35 +114,35 @@ Azure Information Protection ラベルに HYOK 保護を適用するには、AD 
 
 - AD RMS の構成:
     
-    - Windows Server 2012 R2 の最小バージョン: 運用環境では必須ですが、テストまたは評価を目的とする場合は、Windows Server 2008 R2 Service Pack 1 の最小バージョンを使用できます。
+  - Windows Server 2012 R2 の最小バージョン: 運用環境では必須ですが、テストまたは評価を目的とする場合は、Windows Server 2008 R2 Service Pack 1 の最小バージョンを使用できます。
     
-    - 次のいずれかのトポロジ:
+  - 次のいずれかのトポロジ:
         
-        - AD RMS ルート クラスターを 1 つ持つ単一のフォレスト。 
+    - AD RMS ルート クラスターを 1 つ持つ単一のフォレスト。 
         
-        - それぞれが独立した AD RMS ルート クラスターを持つ複数のフォレスト。ユーザーは他のフォレスト内のユーザーによって保護されているコンテンツにアクセスすることはできません。
+    - それぞれが独立した AD RMS ルート クラスターを持つ複数のフォレスト。ユーザーは他のフォレスト内のユーザーによって保護されているコンテンツにアクセスすることはできません。
         
-        - それぞれが AD RMS クラスターを持つ複数のフォレスト。 各 AD RMS クラスターは、同じ AD RMS クラスターを指すライセンス URL を共有します。 この AD RMS クラスターには、その他のすべての AD RMS クラスターからすべての信頼されたユーザー ドメイン (TUD) の証明書をインポートする必要があります。 このトポロジの詳細については、「[Trusted User Domain](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx) (信頼されたユーザー ドメイン)」(」を参照してください。
+    - それぞれが AD RMS クラスターを持つ複数のフォレスト。 各 AD RMS クラスターは、同じ AD RMS クラスターを指すライセンス URL を共有します。 この AD RMS クラスターには、その他のすべての AD RMS クラスターからすべての信頼されたユーザー ドメイン (TUD) の証明書をインポートする必要があります。 このトポロジについて詳しくは、「[Trusted User Domain (信頼されたユーザー ドメイン)](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx)」をご覧ください。
         
     個々のフォレスト内に複数の AD RMS クラスターがある場合は、HYOK (AD RMS) 保護を適用するグローバル ポリシー内のラベルを削除し、クラスターごとに [スコープ付きポリシー](configure-policy-scope.md) を構成します。 次に、各クラスターのユーザーを、対応するスコープ付きポリシーに割り当てて、ユーザーが複数のスコープ付きポリシーに割り当てられていることになるグループを使用しないようにします。 結果として、各ユーザーは 1 つの AD RMS クラスターのみのラベルを持つことになります。 
     
-    - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスター プロパティの **[全般]** タブから、モードを確認できます。
+  - [暗号化モード 2](https://technet.microsoft.com/library/hh867439.aspx): AD RMS クラスター プロパティの **[全般]** タブから、モードを確認できます。
     
-    - 各 AD RMS サーバーが証明書の URL 用に構成されます。 [手順](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+  - 各 AD RMS サーバーが証明書の URL 用に構成されます。 [手順](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - サービス接続ポイント (SCP) が Active Directory に登録されていません。SCP は Azure Information Protection で AD RMS 保護を使用する場合には使用されません。 
+  - サービス接続ポイント (SCP) が Active Directory に登録されていません。SCP は Azure Information Protection で AD RMS 保護を使用する場合には使用されません。 
     
-        - AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](./rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。 
+      - AD RMS デプロイに SCP を登録している場合、Azure Rights Management 保護の[サービス検索](./rms-client/client-deployment-notes.md#rms-service-discovery)を正常に実行するには、SCP を削除する必要があります。 
         
-        - HYOK の新しい AD RMS クラスターをインストールする場合は、最初のノードの構成時に SCP を登録する手順をスキップしてください。 各追加ノードについて、AD RMS の役割を追加して、既存のクラスターに参加する前に、証明書の URL についてサーバーが構成されていることを確認します。
+      - HYOK の新しい AD RMS クラスターをインストールする場合は、最初のノードの構成時に SCP を登録する手順をスキップしてください。 各追加ノードについて、AD RMS の役割を追加して、既存のクラスターに参加する前に、証明書の URL についてサーバーが構成されていることを確認します。
     
-    - AD RMS サーバーは接続先のクライアントによって信頼されている有効な x.509 証明書が含まれる SSL/TLS を使用するために構成されます。運用環境では必要ですが、テストまたは評価目的では必要ありません。
+  - AD RMS サーバーは接続先のクライアントによって信頼されている有効な x.509 証明書が含まれる SSL/TLS を使用するために構成されます。運用環境では必要ですが、テストまたは評価目的では必要ありません。
     
-    - 構成済みの権利テンプレート。
+  - 構成済みの権利テンプレート。
     
-    - Exchange IRM 用に構成されていない。
+  - Exchange IRM 用に構成されていない。
     
-    - モバイル デバイスと Mac コンピューターの場合: [Active Directory Rights Management サービス モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx) がインストールされ構成されている。
+  - モバイル デバイスと Mac コンピューターの場合: [Active Directory Rights Management サービス モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx) がインストールされ構成されている。
 
 - オンプレミスの Active Directory と Azure Active Directory 間にディレクトリ同期が構成され、HYOK 保護を使用するユーザーのシングル サインオンが構成されている。
 

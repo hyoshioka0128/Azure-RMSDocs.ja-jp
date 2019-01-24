@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/15/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 51883da128580be5f6bfd4dd725b8dfdf10f844f
-ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.openlocfilehash: 0f83401b8cac96820f2628a501ca2f731d678126
+ms.sourcegitcommit: 2daa75cda8475028a3dac83d70505fcfccef42a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429884"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361802"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -122,11 +122,11 @@ Office for Mac 2016 のすべてのエディションで、保護されたコン
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Azure Information Protection アプリに関する詳細
 
-iOS 用および Android 用の Azure Information Protection ビューアー アプリが、これらのデバイス用の RMS 共有アプリに置き換わります。 同様の機能を提供し、さらに SharePoint Online 上の権利で保護された電子メール メッセージおよび権利で保護された PDF ファイルをサポートします。
+iOS 用および Android 用の Azure Information Protection アプリでは、これらのモバイル デバイス上に保護された電子メールを開くことができる電子メール アプリがない場合に、権利で保護された電子メール メッセージ (.rpmsg ファイル) 用のビューアーが提供されます。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルも開くことができます。
 
-使用している iOS デバイスや Android デバイスが Microsoft Intune で登録された場合、ポリシーで管理されているアプリを使用して、このアプリをデプロイおよび管理できます。 詳細については、Intune のドキュメントの「[Configure and deploy mobile application management policies in the Microsoft Intune console (Microsoft Intune コンソールでモバイル アプリケーション管理ポリシーを構成およびデプロイする)](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)」を参照してください。 この Intune ドキュメントの手順 2 では、ポリシーで管理されているアプリを発行するためにこの手順を使用します。
+iOS デバイスや Android デバイスを Microsoft Intune で登録している場合、ユーザーは Intune ポータル サイトからアプリをインストールでき、管理者は Intune の[アプリ保護ポリシー](/intune/app-protection-policies)を使用してアプリを管理できます。
 
-詳細については、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ](./rms-client/mobile-app-faq.md)」をご覧ください。
+アプリの使用方法について詳しくは、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ](./rms-client/mobile-app-faq.md)」をご覧ください。
 
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアントの詳細

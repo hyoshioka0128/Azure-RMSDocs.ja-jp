@@ -4,18 +4,18 @@ description: 分類と保護に対するラベルが付けられた PDF ドキ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: fc1a6c136d0b44671cbae0e6eb15202364e356d4
-ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
+ms.openlocfilehash: c6d02b5b7f82acc8b540fca57c2a7e8ab56f76fb
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246124"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314817"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Microsoft Information Protection のサポートされる PDF Reader
 
@@ -54,6 +54,6 @@ Microsoft と Adobe のコラボレーションによって、分類され、必
 
 |オペレーティング システム|サポートされるリーダー|
 |----------------|-----------------------------------|
-|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS 共有アプリ|
+|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF<br /><br />RMS 共有アプリ|
 |Android|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />GigaTrust App for Android|
 |iOS|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|

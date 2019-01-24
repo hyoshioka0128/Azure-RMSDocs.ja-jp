@@ -11,22 +11,24 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd07ed5d1c4bf2f4192f400c699e6e6dc3447713
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 29c7d333131c0b85b9cdb83e9a2212420f60077f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023755"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393662"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
-*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 このページでは、iOS 用および Android 用の Azure Information Protection アプリの使用に役立つよく寄せられる質問への回答を示します。
 
 ## <a name="what-can-i-do-with-the-azure-information-protection-app"></a>Azure Information Protection アプリを使ってできる操作
 
-お使いの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合、このアプリを使うと、権利が保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルを表示することもできます。 現時点では、このアプリを使用して、保護されたメール メッセージを新規作成したり、メール メッセージに返信したり、保護されたファイルを作成または編集したりすることはできません。
+お使いの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合、このアプリを使うと、権利が保護された電子メール メッセージ (.rpmsg ファイル) を表示できます。 このアプリでは、権利で保護された PDF ドキュメントや、権利で保護された画像およびテキスト ファイルを表示させることもできます。 
+
+このアプリはビューアーであるため、これを使って保護されたメール メッセージを新規作成したり、それらに返信したり、保護されたファイルを作成または編集したりすることはできません。 さらに、表示するファイルの添付ファイルをアプリで開くことはできません。 たとえば、保護された PDF ドキュメントや、権利で保護されたメール メッセージの添付ファイルです。
 
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive for Business にある PDF ファイルを開くことはできますか。
 
@@ -48,7 +50,7 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 
 アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、**[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
 
-ただし、待機しない場合は、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md)」の手順に従って、表示対象の保護された電子メールまたはファイルを自分自身に送信できます 
+ただし、待機しない場合は、次の手順に従って、表示対象の保護されたメールまたはファイルを自分自身に送信できます。[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md) 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>このアプリにサインインするにはどのような資格情報を使用する必要がありますか?
 

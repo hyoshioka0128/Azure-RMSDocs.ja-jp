@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b16dee0a922ce6f3195d192021edbf4966223e30
-ms.sourcegitcommit: 17d2528e801ebf37f3d6f54db920588ef212d34d
+ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996946"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394361"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -175,6 +175,7 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
     
 2. 特定したファイルの名前を **Policy.msip** に変更し、Azure Information Protection クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP** フォルダーにコピーします。 
 
+切断されたコンピューターでプレビュー バージョンの Azure Information Protection スキャナーが実行されている場合は、追加の構成手順を実行する必要があります。 詳細については、「[制限: スキャナー サーバーがインターネット接続できない](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」(スキャナーのデプロイ手順) をご覧ください。
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを表示または非表示にする
 
@@ -351,11 +352,11 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 
 2. 出力の次のパラメーター値のメモを取ります。
     
-    - 存在する場合、**SubLabelId** の値 (GUID)。 この値が空の場合、サブラベルは使用されていないので、代わりに **MainLabelId** 値のメモを取ります。
+   - 存在する場合、**SubLabelId** の値 (GUID)。 この値が空の場合、サブラベルは使用されていないので、代わりに **MainLabelId** 値のメモを取ります。
     
-    注: **MainLabelId** にも値がない場合、ファイルはレベル付けされていません。 この場合は、手順 3 と 4 のコマンドではなく、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドと [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドを使用します。
+     注: **MainLabelId** にも値がない場合、ファイルはレベル付けされていません。 この場合は、手順 3 と 4 のコマンドではなく、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドと [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドを使用します。
     
-    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
+   - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
 
 3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
     

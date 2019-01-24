@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 77037f5ab82e7b36899c4b1bdb2399d27b662a5d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: afa69f81341a025037aba63d0d4acb6c404bdc46
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305042"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394030"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2: HSM で保護されているキーから HSM で保護されているキーへの移行
 
@@ -46,9 +46,9 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 1. Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の Bring Your Own Key (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」に記載された手順に従います。ただし、次の例外があります。
 
-    - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 Thales のインストールから AD RMS サーバーで使用されるキーを識別し、移行中にこのキーを使用する必要があります。 Thales で暗号化されたキー ファイルの名前は通常、サーバー上のローカルな **key<*keyAppName*><*keyIdentifier*>** です。
+   - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 Thales のインストールから AD RMS サーバーで使用されるキーを識別し、移行中にこのキーを使用する必要があります。 Thales で暗号化されたキー ファイルの名前は通常、サーバー上のローカルな **key<*keyAppName*><*keyIdentifier*>** です。
 
-    Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
+     Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
 2. インターネットに接続されたワークステーションの PowerShell セッションで、[Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) コマンドレットを使って、Azure Information Protection テナント キーを保存するキー コンテナーに Azure Rights Management サービス プリンシパルがアクセスするのを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
     

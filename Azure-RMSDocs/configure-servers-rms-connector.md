@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 606ca10f04ad9fa21d90fdf4bfcbc368db6febb1
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 9feca10b2e3fb259dbee70d9a84dd709f8d8deff
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305626"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393551"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -155,19 +155,19 @@ Exchange サーバーのオペレーティング システムがこれよりも�
 
 1. RMS コネクタ管理ツールと「[RMS コネクタを使用するサーバーを承認する](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)」セクションからの情報を使用して、Exchange サーバーに RMS コネクタを使用する権限が付与されていることを確認します。 Exchange が RMS コネクタを使用できるようにするには、この構成が必要です。
 
-2.  RMS コネクタと通信する Exchange サーバー ロールで、次のいずれかを実行します。
+2. RMS コネクタと通信する Exchange サーバー ロールで、次のいずれかを実行します。
 
-    -   Microsoft RMS コネクタのサーバー構成ツールを実行します。 詳細については、「[Microsoft RMS コネクタ用のサーバー構成ツールの使用方法](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector)」を参照してください。
+   -   Microsoft RMS コネクタのサーバー構成ツールを実行します。 詳細については、「[Microsoft RMS コネクタ用のサーバー構成ツールの使用方法](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector)」を参照してください。
 
-        たとえば、ツールをローカルで実行して、Exchange 2016 または Exchange 2013 が実行されているサーバーを構成するには、次のコマンドを使います。
+       たとえば、ツールをローカルで実行して、Exchange 2016 または Exchange 2013 が実行されているサーバーを構成するには、次のコマンドを使います。
 
-        ```
-        .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
-        ```
+       ```
+       .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
+       ```
 
-    -   「[RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)」の情報を使用してサーバー上にレジストリ設定を追加し、手動でレジストリの編集を行います。 
+   -   「[RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)」の情報を使用してサーバー上にレジストリ設定を追加し、手動でレジストリの編集を行います。 
 
-3. [内部メッセージの IRM を有効にする](https://technet.microsoft.com/library/bb124077(v=exchg.150\).aspx#Anchor_1) ことで、Exchange の IRM 機能を有効にします。
+3. [内部メッセージの IRM を有効にする](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1)ことで、Exchange の IRM 機能を有効にします。
 
     > [!NOTE]
     > 既定では、**Set-IRMConfiguration -InternalLicensingEnabled $true** を実行すると、IRM はメールボックスだけでなく Outlook Web App とモバイル デバイスに対しても自動的に有効にされます。 ただし、管理者はさまざまなレベルで IRM を無効にできます (例: クライアント アクセス サーバー、Outlook Web App 仮想ディレクトリまたは Outlook Web App メールボックス ポリシー、モバイル デバイス メールボックス ポリシー)。 ユーザーが、Outlook クライアントでは Azure RMS テンプレートを見ることができるのに、Outlook Web App (1 日待った後) またはモバイル デバイスではテンプレートを見ることができない場合は、関連する設定を調べて IRM が無効ではないことを確認します。 詳細については、Exchange のドキュメントの「[クライアント アクセス サーバーで Information Rights Management を有効または無効にする](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx)」を参照してください。 
