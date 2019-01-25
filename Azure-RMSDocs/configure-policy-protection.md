@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: ffb919e0d48687a3a1c46a12651734c85c578aa6
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393367"
+ms.locfileid: "54397846"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -44,7 +44,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 
 ユーザーが電子メールを保護するラベルを Outlook で適用するために、Azure Information Protection 用に Exchange を構成する必要はありません。 ただし、Exchange が Azure Information Protection 用に構成されるまで、Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 たとえば、ユーザーは保護された電子メールを携帯電話や Outlook on the web で表示できません。保護された電子メールには検索のインデックスを作成できません。また、Rights Management 保護に Exchange Online DLP を構成できません。 このような追加のシナリオを Exchange がサポートできるようにするには、以下のリソースを参照してください。
 
-- Exchange Online の場合: 「[Exchange Online:IRM 構成](configure-office365.md#exchange-online-irm-configuration)」を参照してください。
+- Exchange Online の場合: 「[Exchange Online:IRM 構成](configure-office365.md#exchangeonline-irm-configuration)」を参照してください。
 
 - オンプレミスの Exchange の場合: [RMS コネクタを展開し、Exchange サーバーを構成する](deploy-rms-connector.md)必要があります。 
 
