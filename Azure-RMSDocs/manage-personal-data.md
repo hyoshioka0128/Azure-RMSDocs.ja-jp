@@ -4,18 +4,18 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
-ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
+ms.openlocfilehash: 08ae5875437a1e443247a5a57b1bb621b6627ce3
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53319416"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898785"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -196,6 +196,12 @@ ObjectID による検索はできません。 ただし、`-UserEmail` パラメ
 また、Azure Information Protection クライアントは、この個人データをローカル Windows イベント ログの **[アプリケーションとサービス ログ]** > **[Azure Information Protection]** に記録します。
 
 Azure Information Protection クライアントがスキャナーを実行した場合、個人データは、スキャナーを実行する Windows Server コンピューター上の %localappdata%\Microsoft\MSIP\Scanner\Reports に保存されます。
+
+Azure Information Protection のクライアントとスキャナーに関する情報のログ記録をオフにするには、次の構成を使います。
+
+- Azure Information Protection クライアント:**LogLevel** を [[オフ]](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) に構成する**クライアントの詳細設定**を作成します。
+
+- Azure Information Protection スキャナー:[Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) コマンドレットを使って *ReportLevel* パラメーターを **[オフ]** に設定します。
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 

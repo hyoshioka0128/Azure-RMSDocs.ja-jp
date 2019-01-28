@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: b9cc4267ec4dd3ebaa24b23d996fde61f9b09799
+ms.sourcegitcommit: 719e3c758e414c5c95dea03cd78d7427af4ee8e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314800"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443843"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -29,7 +29,9 @@ ms.locfileid: "54314800"
 
 ![Azure Information Protection の検出と推奨事項](./media/info-protect-recommend-calloutsv2.png)
 
-この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨をオーバーライドできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。 
+この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨をオーバーライドできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。
+
+推奨ではなく自動分類を構成した場合、ラベルは自動的に適用され、ユーザーには各自の Office アプリ内に引き続き通知が表示されます。 ただし、**[今すぐ変更]** および **[閉じる]** ボタンは **[OK]** で置き換えられます。
 
 > [!IMPORTANT]
 >自動分類とユーザー定義のアクセス許可にはラベルを構成しないでください。 ユーザー定義のアクセス許可オプションは、アクセス許可を与える人をユーザーが指定できるという[保護設定](configure-policy-protection.md)となります。

@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173895"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898802"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -79,11 +79,11 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
-#### <a name="to-protect-a-document-in-word2013"></a>Word 2013 でドキュメントを保護するには
+#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Office 365 ProPlus の Word でドキュメントを保護するには
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
-2.  **[ファイル]** メニューで **[情報]**、**[文書の​​保護]**、**[アクセスの制限]** の順にクリックします。
+2.  **[ファイル]** メニュー:**[情報]** > **[文書の保護]** >  **[アクセスの制限]**。
 
 3. テンプレートを選択して適切な使用権限をすぐに適用するか、**[アクセスの制限]** を選択して使用権限を自分で選択します。
 
@@ -98,11 +98,11 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 使用権限は、制限バナーを使用してドキュメントの上部に表示されます。 このバナーには、ドキュメントに適用されるアクセス許可やそれらを表示するためのリンクが表示される場合があります。
 
-#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Outlook 2013 および Exchange Online を使用して電子メール メッセージを保護するには
+#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Exchange Online に接続し、Office 365 ProPlus の Outlook を使ってメール メッセージを保護するには、
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブの **[アクセス許可]** をクリックし、オプションを選択します。 次に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
+2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 次に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
 
 3.  メッセージを送信します。
 
@@ -114,12 +114,10 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[…]**、**[アクセス許可の設定]** の順にクリックして、オプションを選択します。 次に例を示します。**[転送不可]**、**[Do Not Reply All]\(全員に返信禁止\)**。 あるいは、**[\<会社名> - 社外秘]**、**[\<会社名> - 社外秘、表示のみ]** です。
+2.  **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 次に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
 
 3.  メッセージを送信します。
 
 保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)でメッセージが開きます。 
 
-たとえば、**[転送不可]** を選択した場合、**[全員に返信]** ボタンは使用できません。
-
-
+たとえば、既定の **[転送不可]** オプションを使う場合、メッセージ ウィンドウの **[転送]** オプションは使用できません。

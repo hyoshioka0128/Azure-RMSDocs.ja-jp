@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd0279bb45c04bc6f62c9eb20ffc006c7838b286
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 3d4285b77e0ccbfd21b4ed536f8c002ffa8d2a28
+ms.sourcegitcommit: fb0a9593f1e69306040fabda9bc9ad4977b21be8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751538"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -188,7 +188,9 @@ Azure Information Protection クライアントがファイルを保護する方
 
 - **Off**: 保護ブロック
 
-詳細については、開発者ガイダンスの「[ファイル API の構成](../develop/file-api-configuration.md)」を参照してください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 
+これらのレジストリに変更を加えた後、コンピューターを再起動する必要はありません。 ただし、ファイルを保護するために PowerShell コマンドを使っている場合は、変更を反映させるために新しい PowerShell セッションを開始する必要があります。
+
+ファイルの既定の保護レベルを変更するためのレジストリの編集について詳しくは、開発者ガイドの「[ファイル API の構成](../develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>分類と保護から除外されるファイルの種類
 
@@ -254,11 +256,11 @@ Azure Information Protection クライアントがファイルを保護する方
 
 分類され、保護されているファイルがコンテナー ファイル内にある場合、先にファイルを抽出し、分類または保護設定を変更する必要があります。 ただし、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを利用し、サポートされているコンテナー ファイル内の全ファイルの保護を削除できます。
 
-Azure Information Protection ビューアーでは、保護された PDF ドキュメント内の添付ファイルを開くことはできません。
+Azure Information Protection ビューアーでは、保護された PDF ドキュメント内の添付ファイルを開くことはできません。 このシナリオでは、ビューアーでドキュメントを開いたときに、添付ファイルは表示されません。
 
 ## <a name="file-types-supported-for-inspection"></a>検査に対してサポートされているファイルの種類
 
-構成を何も追加しなくても、Azure Information Protection クライアントでは、Windows IFilter を使用してドキュメントの内容が検査されます。 Windows IFilter は、インデックス作成のために Windows Search によって使用されます。 結果として、[Azure Information Protection スキャナー](../deploy-aip-scanner.md)または [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドを使用すると、次のファイルの種類を検査できます。
+構成を何も追加しなくても、Azure Information Protection クライアントでは、Windows IFilter を使用してドキュメントの内容が検査されます。 Windows IFilter は、インデックス作成のために Windows Search によって使用されます。 結果として、[Azure Information Protection スキャナー](../deploy-aip-scanner.md)または [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドを使用すると、次のファイルの種類を検査できます。
 
 |アプリケーションの種類|ファイルの種類|
 |--------------------------------|-------------------------------------|
@@ -276,7 +278,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 ### <a name="to-inspect-zip-files"></a>.zip ファイルを検査するには
 
-以下の手順のようにすると、Azure Information Protection スキャナーおよび [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで .zip ファイルを検査できます。
+以下の手順のようにすると、Azure Information Protection スキャナーおよび [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで .zip ファイルを検査できます。
 
 1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
 
