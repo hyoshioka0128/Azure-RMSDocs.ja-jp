@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: f213b31d9b0e41ea9c1e076055a90e9f62b31b3a
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 9bffda812448bea4ba6a6c1557042e14b78de1b5
+ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223927"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55088056"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
@@ -23,7 +23,7 @@ ms.locfileid: "51223927"
 
 MIP SDK は、次のプラットフォームで使用できます。
 
-[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>質問: SDK ではどのように文字列が処理されますか? また、コードではどの文字列型を使用すればよいですか?
 
@@ -37,16 +37,16 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 ## <a name="issues-and-errors-reference"></a>問題とエラーのリファレンス
 
-### <a name="error-file-format-not-supported"></a>エラー: "ファイル形式がサポートされていません"  
+### <a name="error-file-format-not-supported"></a>エラー:「ファイルの形式がサポートされていません」  
 
-| エラー | 解決方法 |
+| [エラー] | ソリューション |
 |-|-|
 |*ファイル形式がサポートされていません*| この例外は、デジタル署名されているかパスワードで保護されている PDF ファイルを保護またはラベル付けしようとすると発生します。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。|
 
-### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>エラー: "取得したコンプライアンス ポリシーを解析できませんでした"  
+### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>エラー:「を取得したコンプライアンス ポリシーを解析できませんでした」  
 
 MIP SDK をダウンロードして、サンプル アプリケーションを実行したとします。 ファイルのサンプルを使用してすべてのラベルを一覧表示しようとすると、次のエラーが発生します。
 
-| エラー | 解決方法 |
+| [エラー] | ソリューション |
 |-|-|
-|*エラーが発生しました: 取得したコンプライアンス ポリシーを解析できませんでした。Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]*| これは、ラベルを Azure Information Protection から統合ラベル付けエクスペリエンスに移行していないことを示しています。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 完了すると、サンプルが正常に実行されます。|
+|*何か問題が発生しました。取得したコンプライアンス ポリシーを解析できませんでした。失敗しました: [クラス mip::CompliancePolicyParserException] タグが見つかりません: ポリシーでは、NodeType:15、名前:ない名前が見つかった値: 先祖: <SyncFile> <Content>、関連付け Id: [34668a40-blll-4ef8-b2af-00005aa674z9]*| これは、ラベルを Azure Information Protection から統合ラベル付けエクスペリエンスに移行していないことを示しています。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 完了すると、サンプルが正常に実行されます。|
