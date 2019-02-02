@@ -4,21 +4,21 @@ description: Microsoft Information Protection (MIP) SDK クライアント ア�
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
-ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.openlocfilehash: 2fb19aa5071fa13f9801de9e9ed1106717f5adf9
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136236"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651430"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C++)
 
-このクイック スタートでは、実行時に MIP C++ SDK によって使用される、クライアントの初期化パターンを実装する方法を示します。 
+このクイック スタートでは、実行時に MIP C++ SDK で使用される、クライアントの初期化パターンを実装する方法を示します。 
 
 > [!NOTE]
-> MIP ファイル、ポリシー、または保護 API を使用する任意のクライアント アプリケーションには、このクイック スタートで概説されている手順が必要です。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 今後のクイック スタートは、それぞれが前のクイック スタートをベースにビルドされるので、連続的に実行される必要があります。このクイック スタートが最初になっています。
+> MIP ファイル、ポリシー、または保護 API を使用する任意のクライアント アプリケーションには、このクイック スタートで概説されている手順が必要です。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 直列に、残りのクイック スタートを完了する 1 つ目を次のそれぞれは、1 つ前のビルド、します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -27,12 +27,12 @@ ms.locfileid: "54136236"
 - 「[Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md)」 (Microsoft Information Protection (MIP) SDK のセットアップと構成) の手順を完了します。 この "クライアント アプリケーションの初期化" クイック スタートは、適切な SDK のセットアップと構成に依存します。
 - 必要に応じて、次の操作を行います。
   - [プロファイル オブジェクトとエンジン オブジェクト](concept-profile-engine-cpp.md)を確認します。 プロファイル オブジェクトとエンジン オブジェクトは、MIP ファイル/ポリシー/保護 API を使用するクライアントによって必要とされる、ユニバーサルな概念です。 
-  - [認証の概念](concept-authentication-cpp.md)を確認して、認証と承認が SDK とクライアント アプリケーションによってどのように実装されるかについて学習します。
-  - [オブザーバーの概念](concept-async-observers.md)を確認して、オブザーバーの詳細および実装方法について学習します。 MIP SDK では、非同期イベントの通知を実装するために、オブザーバー パターンを利用します。
+  - レビュー[認証の概念](concept-authentication-cpp.md)に、SDK、およびクライアント アプリケーションで認証と承認を実装する方法について説明します。
+  - [オブザーバーの概念](concept-async-observers.md)を確認して、オブザーバーの詳細および実装方法について学習します。 MIP SDK では、オブザーバー パターンを使用して、非同期のイベント通知を実装します。
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Visual Studio のソリューションとプロジェクトの作成
 
-まず、その他のクイック スタートをビルドする対象の初期の Visual Studio ソリューションを作成して構成します。 
+最初に作成し、初期の Visual Studio ソリューションとの他のクイック スタートをビルドするプロジェクトを構成します。 
 
 1. Visual Studio 2017 を開いて、**[ファイル]** メニュー、**[新規]**、**[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
    - 左側のウィンドウの **[インストール済み]** の下の **[その他の言語]** で、**[Visual C++]** を選択します。
@@ -43,7 +43,7 @@ ms.locfileid: "54136236"
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、**[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプ ローラー**を (直接 上部/ソリューション ノード) で、プロジェクト ノードを右クリックし、 **NuGet パッケージの管理.**:
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -58,7 +58,7 @@ ms.locfileid: "54136236"
 
 1. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、**[追加]**、**[クラス]** の順に選択します。
+   - **ソリューション エクスプ ローラー**、もう一度、プロジェクト ノードを右クリックし、選択**追加**を選択し、**クラス**します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
      - **[クラス名]** フィールドに「profile_observer」と入力します。 入力した名前に基づき、**[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
      - 完了したら、**[OK]** ボタンをクリックします。
@@ -235,7 +235,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 ## <a name="construct-a-file-profile-and-engine"></a>ファイルのプロファイルとエンジンを構築する
 
-前述のように、MIP API を使用する SDK クライアントには、プロファイル オブジェクトとエンジン オブジェクトが必要です。 プロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためにコードを追加することで、このクイック スタートのコード部分を完了します。 
+前述のように、プロファイルとエンジンのオブジェクトは SDK クライアントが MIP Api を使用する必要があります。 プロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためにコードを追加することで、このクイック スタートのコード部分を完了します。 
 
 1. **ソリューション エクスプローラー**から、`main()` メソッドの実装を含む .cpp ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
@@ -259,8 +259,9 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
-                 "<application-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
+                 "<application-name>",
+                 "<application-version>"};
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -277,8 +278,19 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
      auto profileFuture = profilePromise->get_future();
-     mip::FileProfile::LoadAsync(profileSettings, profilePromise);
-     auto profile = profileFuture.get();
+    try
+    { 
+        mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+    }
+    catch (const std::exception& e)
+    {
+        cout << "An exception occurred... are the Settings and ApplicationInfo objects populated correctly?\n\n"
+            << e.what() << "'\n";
+        system("pause");
+        return 1;
+
+    }
+    auto profile = profileFuture.get();
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
@@ -303,28 +315,28 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
        return 1;
      }
 
-      return 0;
-     }
-
+   return 0;
+   }
    ``` 
 
-3. 貼り付けたばかりのソース コードのプレースホルダー値を、次の値で置き換えます。
+3. 貼り付けた、文字列定数を使用してソース コード内のすべてのプレース ホルダー値を置き換えます。
 
    | [プレースホルダ] | [値] | 例 |
    |:----------- |:----- |:--------|
-   | \<application-id\> | 登録されている Azure AD アプリケーション ID (GUID)、アプリケーションに割り当てられている[手順 #2「MIP SDK のセットアップと構成」の](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory)記事。 2 つのインスタンスを置き換えます。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<アプリケーション名\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 有効な ASCII 文字を含める必要があります (を除く ';')、理想的には、Azure AD の登録で使用したアプリケーション名と一致するとします。 | AppInitialization |
-   | \<engine-account\> | エンジンの ID に使用されるアカウント。 トークンの取得時にユーザー アカウントを認証する場合、ユーザー アカウントはこの値に一致します。 | user1@tenant.onmicrosoft.com |
-   | \<engine-state\> | エンジンに関連付けられるユーザー定義の状態。 | MyAppState |
+   | \<application-id\> | 登録されている Azure AD アプリケーション ID (GUID)、アプリケーションに割り当てられている[手順 #2「MIP SDK のセットアップと構成」の](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory)記事。 2 つのインスタンスを置き換えます。 | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 有効な ASCII 文字を含める必要があります (を除く ';')、理想的には、Azure AD の登録で使用したアプリケーション名と一致するとします。 | `"AppInitialization"` |
+   | \<application-version\> | アプリケーションのユーザー定義のバージョン情報です。 有効な ASCII 文字を含める必要があります (を除く ';')。 | `"1.1.0.0"` |
+   | \<engine-account\> | エンジンの ID に使用されるアカウント。 トークンの取得時にユーザー アカウントを認証する場合、ユーザー アカウントはこの値に一致します。 | `"user1@tenant.onmicrosoft.com"` |
+   | \<engine-state\> | エンジンに関連付けられるユーザー定義の状態。 | `"My App State"` |
 
 
-4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 ご自分のコードで正常にビルドされますが、次のクイック スタートを完了するまでは、まだ正しく実行されません。 アプリケーションを実行すると、次のような出力が表示されます。 次のクイック スタートを完了するまで、提供するアクセス トークンはありません。
+4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 ご自分のコードで正常にビルドされますが、次のクイック スタートを完了するまでは、まだ正しく実行されません。 アプリケーションを実行する場合に、次のような出力を参照してください。 次のクイック スタートを完了するまで、提供するアクセス トークンはありません。
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Be sure to sign in with user account:
+   Sign in with user account:
    Enter access token:
    ```
 

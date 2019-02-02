@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 05a66dc7a00b976dfb9883f44b3c93a25b4b6975
-ms.sourcegitcommit: 0d3b43c9cedbaeae65299ac372fbfb9ad66ce27f
+ms.openlocfilehash: e29c128569549bbab2125bcce97d87eb74734750
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54183628"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651396"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK - プロファイル オブジェクトとエンジン オブジェクトの概念
 
@@ -39,7 +39,7 @@ MIP SDK には、次の 3 つの種類のプロファイルがあります。
 - `Path`:ファイルのパスをログ、テレメトリ、およびその他の永続的な状態が格納されます。
 - `useInMemoryStorage`:状態をメモリに格納する必要があるかどうかを定義するブール値またはディスクにします。
 - `authDelegate`:クラスの共有ポインター`mip::AuthDelegate`します。 
-- `consentDelegate`:クラスの共有ポインター [ `mip::ConsentDelegate`](reference/class_consentdelegate.md)します。 
+- `consentDelegate`:クラスの共有ポインター [ `mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)します。 
 - `observer`:プロファイルへの共有ポインター`Observer`実装 (で[ `PolicyProfile` ](reference/class_mip_policyprofile_observer.md)、 [ `ProtectionProfile` ](reference/class_mip_protectionprofile_observer.md)、および[ `FileProfile` ](reference/class_mip_fileprofile_observer.md))。
 - `applicationInfo`:A [ `mip::ApplicationInfo` ](reference/mip-enums-and-structs.md#structures)オブジェクト。 Azure Active Directory アプリケーションの登録 ID、名前に一致すると、SDK を利用するアプリケーションについて説明します。
 

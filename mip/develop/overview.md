@@ -4,20 +4,23 @@ description: Microsoft Information Protection (MIP) は、Microsoft の分類、
 author: BryanLa
 ms.service: information-protection
 ms.topic: overview
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 775ae3d524947c8300de0e011b92c2cad106905a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 77d8fb8d32c0f75be49b29e95316f8da873d14c6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251728"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651141"
 ---
 # <a name="overview"></a>概要
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
-Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル作成、および保護の各サービスを 1 つの管理エクスペリエンスとソフトウェア開発キット (SDK) に統合したものです。 Office 365、Azure Information Protection、Windows Information Protection、およびその他の Microsoft サービスの全体で統一された管理が提供されます。 サード パーティは、標準的で一貫性のあるデータ ラベル スキーマと保護サービスを使用しているアプリケーションと統合するために、この SDK を使用することができます。
+Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル付け、および保護サービスの統合を示します。
+
+- Office 365、Azure Information Protection、Windows Information Protection、およびその他の Microsoft サービスの全体で統一された管理が提供されます。 
+- サード パーティは、MIP SDK を使用して、サービスのスキーマと保護のラベルを付け、標準的な一貫性のあるデータを使用して、アプリケーションと統合することができます。
 
 * [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/)
 * [Azure Information Protection とは](/azure/information-protection/understand-explore/what-is-information-protection)
@@ -25,7 +28,7 @@ Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル作�
 
 ## <a name="microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK
 
-MIP SDK では、Office 365 セキュリティとコンプライアンス センターからサード パーティ製のアプリケーションとサービスに、ラベル作成サービスと保護サービスが公開されます。 開発者は SDK を使用して、ファイルにラベルと保護を適用するためのネイティブ サポートを構築することができます。 開発者は、特定のラベルが検出されたときにどのアクションを実行する必要があるかを推論したり、MIP で暗号化された情報に対して推論したりすることができます。 
+MIP SDK では、サード パーティ製アプリケーションとサービスから Office 365 セキュリティ/コンプライアンス センターでは、ラベル付け、保護サービスを公開します。 開発者は SDK を使用して、ファイルにラベルと保護を適用するためのネイティブ サポートを構築することができます。 開発者は、特定のラベルが検出されたときにどのアクションを実行する必要があるかを推論したり、MIP で暗号化された情報に対して推論したりすることができます。 
 
 一連の Microsoft サービス全体に適用されるラベルと保護には、**一貫性**があります。 一貫性が、MIP をサポートするアプリケーションとサービスが、共通の予測可能な方法でラベルを読み書きすることを可能にします。
 
@@ -39,5 +42,5 @@ MIP SDK では、Office 365 セキュリティとコンプライアンス セン
 
 ## <a name="next-steps"></a>次の手順
 
-これで SDK を使用する準備ができました。 最初に行う必要があることは、[MIP SDK の設定と構成の手順を完了](setup-configure-mip.md)して、ご利用の Office 365 サブスクリプションとクライアント コンピューターが正しく設定されていることを確認することです。
+これで SDK を使用する準備ができました。 実行する必要がありますまず[MIP SDK のセットアップと構成の手順を完了](setup-configure-mip.md)します。 次の手順は、Office 365 サブスクリプションを確認し、クライアント コンピューターが正しく設定されています。
 

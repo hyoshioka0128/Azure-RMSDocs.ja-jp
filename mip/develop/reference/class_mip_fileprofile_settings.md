@@ -1,177 +1,177 @@
 ---
-title: class mip FileProfile Settings
-description: class mip FileProfile Settings のリファレンス
+title: class mip::FileProfile::Settings
+description: Mip::fileprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 4b79d8eb75a54a56f1b3e48645bdd5eec0afaa19
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 1e94e149a99fa48a69a830d5915ce4b33b55b322
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446381"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650903"
 ---
 # <a name="class-mipfileprofilesettings"></a>class mip::FileProfile::Settings 
 作成時および有効期間全体にわたって [FileProfile](class_mip_fileprofile.md) に使用される[設定](class_mip_fileprofile_settings.md)。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, std::shared_ptr<AuthDelegate> authDelegate, std::shared_ptr<ConsentDelegate> consentDelegate, std::shared_ptr<Observer> observer, const ApplicationInfo& applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
- public const std::string& GetPath() const  |  ログ、テレメトリ、その他の継続状態が格納されるファイル パスを取得します。
- public bool GetUseInMemoryStorage() const  |  状態がすべて (ディスク上ではなく) メモリに格納されるかどうかを取得します。
-public std::shared_ptr<AuthDelegate> GetAuthDelegate() const  |  認証トークンを取得するために使用する認証委任を取得します。
-public std::shared_ptr<ConsentDelegate> GetConsentDelegate() const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
-public std::shared_ptr<Observer> GetObserver() const  |  [FileProfile](class_mip_fileprofile.md) に関連するイベントの通知を受信するオブザーバーを取得します。
- public const ApplicationInfo GetApplicationInfo() const  |  SDK を利用しているアプリケーションに関する情報を取得します。
- public bool GetSkipTelemetryInit() const  |  テレメトリ初期化をスキップする必要があるかどうかを取得します。
- public void SetSkipTelemetryInit()  |  テレメトリ初期化を無効にします。
- public void SetNewFeaturesDisabled()  |  新機能を無効にします。
- public bool AreNewFeaturesDisabled() const  |  新機能が無効になっているかどうかを取得します。
-public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
-public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  既定のロガーをオーバーライドします。
-public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
- public void OptOutTelemetry()  |  テレメトリの収集をすべて無効にします。
- public bool IsTelemetryOptedOut() const  |  テレメトリの収集を無効にする必要があるかどうかを取得します。
- public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
- public const std::string& GetSessionId() const  |  セッション ID を取得します。
- public void SetMinimumLogLevel(LogLevel logLevel)  |  ログ イベントをトリガーする最小のログ レベルを設定します。
- public LogLevel GetMinimumLogLevel() const  |  ログ イベントをトリガーする最小のログ レベルを取得します。
+パブリック設定 (const std::string & パス、bool useinmemorystorage: std::shared_ptr\<authdelegate:\> authdelegate:、std::shared_ptr\<ConsentDelegate\> consentDelegate、std::shared_ptr\<オブザーバー\> observer, const ApplicationInfo & applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
+public const std::string& GetPath() const  |  ログ、テレメトリ、その他の継続状態が格納されるファイル パスを取得します。
+public bool GetUseInMemoryStorage() const  |  状態がすべて (ディスク上ではなく) メモリに格納されるかどうかを取得します。
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  認証トークンを取得するために使用する認証委任を取得します。
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
+public std::shared_ptr\<Observer\> GetObserver() const  |  [FileProfile](class_mip_fileprofile.md) に関連するイベントの通知を受信するオブザーバーを取得します。
+public const ApplicationInfo GetApplicationInfo() const  |  SDK を利用しているアプリケーションに関する情報を取得します。
+public bool GetSkipTelemetryInit() const  |  テレメトリ初期化をスキップする必要があるかどうかを取得します。
+public void SetSkipTelemetryInit()  |  テレメトリ初期化を無効にします。
+public void SetNewFeaturesDisabled()  |  新機能を無効にします。
+public bool AreNewFeaturesDisabled() const  |  新機能が無効になっているかどうかを取得します。
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
+public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  既定のロガーをオーバーライドします。
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public void OptOutTelemetry()  |  テレメトリの収集をすべて無効にします。
+public bool IsTelemetryOptedOut() const  |  テレメトリの収集を無効にする必要があるかどうかを取得します。
+public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
+public const std::string& GetSessionId() const  |  セッション ID を取得します。
+public void SetMinimumLogLevel(LogLevel logLevel)  |  ログ イベントをトリガーする最小のログ レベルを設定します。
+public LogLevel GetMinimumLogLevel() const  |  ログ イベントをトリガーする最小のログ レベルを取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="settings"></a>Settings
+### <a name="settings-function"></a>ポリシーの設定
 [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
 
 パラメーター:  
-* **path**: ログ、テレメトリ、その他の継続状態が格納されるファイル パス 
+* **パス**:ログ、テレメトリ、およびその他のファイル パスは、永続的な状態の格納 
 
 
 * **useInMemoryStorage**: すべての状態がメモリ内に格納される必要がある場合は true、状態をディスクにキャッシュできる場合は false 
 
 
-* **authDelegate**: 認証トークンを取得するために使用する認証委任 
+* **authDelegate**:認証トークンを取得するために使用される認証委任 
 
 
-* **observer**: [FileProfile](class_mip_fileprofile.md) に関連するイベントの通知を受信する[オブザーバー](class_mip_fileprofile_observer.md) インスタンス
+* **オブザーバー**:[オブザーバー](class_mip_fileprofile_observer.md)イベントの通知を受信するインスタンスに関連する[FileProfile](class_mip_fileprofile.md)
 
 
-* **applicationInfo**: SDK を利用しているアプリケーションに関する情報
+* **applicationInfo**:SDK を利用するアプリケーションに関する情報
 
 
   
-### <a name="getpath"></a>GetPath
+### <a name="getpath-function"></a>GetPath 関数
 ログ、テレメトリ、その他の継続状態が格納されるファイル パスを取得します。
 
   
-**戻り値**: ログ、テレメトリ、その他の継続状態が格納されるファイル パス
+**返します**:ログ、テレメトリ、およびその他のパスは、永続的な状態の格納
   
-### <a name="getuseinmemorystorage"></a>GetUseInMemoryStorage
+### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage 関数
 状態がすべて (ディスク上ではなく) メモリに格納されるかどうかを取得します。
 
   
-**戻り値**: 状態がすべて (ディスク上ではなく) メモリに格納されるかどうか
+**返します**:はなく、ディスク上) に、すべての状態がメモリに格納するかどうか
   
-### <a name="getauthdelegate"></a>GetAuthDelegate
+### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
 認証トークンを取得するために使用する認証委任を取得します。
 
   
-**戻り値**: 認証トークンを取得するために使用する認証委任
+**返します**:認証トークンを取得するために使用される認証委任
   
-### <a name="consentdelegate"></a>ConsentDelegate
+### <a name="getconsentdelegate-function"></a>GetConsentDelegate 関数
 サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
 
   
-**戻り値**: ユーザーの同意を要求するために使用する同意委任
+**返します**:ユーザーの同意を要求するために使用されるデリゲートを同意します。
   
-### <a name="observer"></a>オブザーバー
+### <a name="getobserver-function"></a>GetObserver 関数
 [FileProfile](class_mip_fileprofile.md) に関連するイベントの通知を受信するオブザーバーを取得します。
 
   
-**戻り値**: [FileProfile](class_mip_fileprofile.md) に関連するイベントの通知を受信する[オブザーバー](class_mip_fileprofile_observer.md)
+**返します**:[オブザーバー](class_mip_fileprofile_observer.md)に関連するイベントの通知を受け取る[FileProfile](class_mip_fileprofile.md)
   
-### <a name="applicationinfo"></a>ApplicationInfo
+### <a name="getapplicationinfo-function"></a>GetApplicationInfo 関数
 SDK を利用しているアプリケーションに関する情報を取得します。
 
   
-**戻り値**: SDK を利用しているアプリケーションに関する情報
+**返します**:SDK を利用するアプリケーションに関する情報
   
-### <a name="getskiptelemetryinit"></a>GetSkipTelemetryInit
+### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit 関数
 テレメトリ初期化をスキップする必要があるかどうかを取得します。
 
   
-**戻り値**: テレメトリ初期化をスキップする必要があるかどうか
+**返します**:場合か、テレメトリ初期化をスキップする必要があります。
   
-### <a name="setskiptelemetryinit"></a>SetSkipTelemetryInit
+### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit 関数
 テレメトリ初期化を無効にします。
 このメソッドは、通常、クライアント アプリケーションによっては呼び出されず、初期化の重複を防ぐためにファイル SDK によって使用されます
   
-### <a name="setnewfeaturesdisabled"></a>SetNewFeaturesDisabled
+### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled 関数
 新機能を無効にします。
 新機能を試さないアプリケーションの場合
   
-### <a name="arenewfeaturesdisabled"></a>AreNewFeaturesDisabled
+### <a name="arenewfeaturesdisabled-function"></a>AreNewFeaturesDisabled 関数
 新機能が無効になっているかどうかを取得します。
 
   
-**戻り値**: 新機能が無効になっているかどうか
+**返します**:かどうかの新機能が無効な場合
   
-### <a name="loggerdelegate"></a>LoggerDelegate
+### <a name="getloggerdelegate-function"></a>GetLoggerDelegate 関数
 アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
 
   
-**戻り値**: ロガー
+**返します**:ロガー
   
-### <a name="setloggerdelegate"></a>SetLoggerDelegate
+### <a name="setloggerdelegate-function"></a>SetLoggerDelegate 関数
 既定のロガーをオーバーライドします。
 
 パラメーター:  
-* **loggerDelegate**: クライアント アプリケーションによって実装されるログ コールバック インターフェイス
+* **loggerDelegate**:クライアント アプリケーションによって実装されるコールバック インターフェイスをログ記録
 
 
 このメソッドは、独自のロガー実装を使用するクライアント アプリケーションによって呼び出される必要があります
   
-### <a name="httpdelegate"></a>HttpDelegate
+### <a name="gethttpdelegate-function"></a>GetHttpDelegate 関数
 アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
 
   
-**戻り値**: HTTP 操作に使用される HTTP 委任
+**返します**:HTTP 操作に使用する HTTP デリゲート
   
-### <a name="sethttpdelegate"></a>SetHttpDelegate
+### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
 パラメーター:  
-* **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
+* **httpDelegate**:クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
 
 
   
-### <a name="optouttelemetry"></a>OptOutTelemetry
+### <a name="optouttelemetry-function"></a>OptOutTelemetry 関数
 テレメトリの収集をすべて無効にします。
   
-### <a name="istelemetryoptedout"></a>IsTelemetryOptedOut
+### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut 関数
 テレメトリの収集を無効にする必要があるかどうかを取得します。
 
   
-**戻り値**: テレメトリの収集を無効にする必要があるかどうか
+**返します**:かどうか、テレメトリの収集を無効にする場合
   
-### <a name="setsessionid"></a>SetSessionId
+### <a name="setsessionid-function"></a>SetSessionId 関数
 セッション ID を設定します。
 
 パラメーター:  
-* **sessionId**: ログ/テレメトリを関連付けるために使用されるセッション ID
+* **sessionId**:ログ/テレメトリを関連付けるために使用されるセッション ID
 
 
   
-### <a name="getsessionid"></a>GetSessionId
+### <a name="getsessionid-function"></a>GetSessionId 関数
 セッション ID を取得します。
 
   
-**戻り値**: ログ/テレメトリを関連付けるために使用されるセッション ID
+**返します**:ログ/テレメトリを関連付けるために使用されるセッション ID
   
-### <a name="setminimumloglevel"></a>SetMinimumLogLevel
+### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel 関数
 ログ イベントをトリガーする最小のログ レベルを設定します。
 
 パラメーター:  
@@ -180,10 +180,10 @@ SDK を利用しているアプリケーションに関する情報を取得し�
 
 
   
-**戻り値**: True
+**返します**:True
   
-### <a name="loglevel"></a>ログ レベル
+### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel 関数
 ログ イベントをトリガーする最小のログ レベルを取得します。
 
   
-**戻り値**: ログ イベントをトリガーする最小のログ レベル。
+**返します**:ログ イベントをトリガーする最小のログ レベル。

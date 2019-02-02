@@ -1,115 +1,116 @@
 ---
-title: class mip ExecutionState
-description: class mip ExecutionState のリファレンス
+title: class mip::ExecutionState
+description: Mip::executionstate クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 976bca60f3f494a0fbf196e6512b00bdcdd63992
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 86f06a8fab5600f0bc72f60272864a2ce2fab15e
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446313"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650716"
 ---
 # <a name="class-mipexecutionstate"></a>class mip::ExecutionState 
 エンジンの実行に必要なすべての状態のインターフェイス。
 クライアントでは、必要な状態を取得するメソッドのみを呼び出す必要があります。 そのため、効率を高めるために、クライアントは対応する状態が事前に計算されるのではなく動的に計算されるようにこのインターフェイスを実装できます。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public std::string GetNewLabelId() const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
- public ActionSource GetNewLabelActionSource() const  |  新しいラベル アクションのソースを取得します。
- public std::string GetContentIdentifier() const  |  ドキュメントを説明するコンテンツ識別子を取得します。 ファイルの例: [パス] 電子メールの例: [件名:送信者]。
- public ContentState GetContentState() const  |  アプリケーションで操作中のコンテンツの状態を取得します。
-public std::pair<bool, std::string> IsDowngradeJustified() const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
- public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
-public std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties() const  |  新しいラベルの拡張プロパティを返します。
-public std::vector<std::pair<std::string, std::string>> GetContentMetadata(const std::vector<std::string>& names, const std::vector<std::string>& namePrefixes) const  |  コンテンツからメタデータ項目を取得します。
-public std::shared_ptr<ProtectionDescriptor> GetProtectionDescriptor() const  |  保護記述子を取得します。
- public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
- public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
-public virtual std::map<std::string, std::shared_ptr<ClassificationResult>> GetClassificationResults(const std::vector<std::string> &) const  |  分類結果のマップを返します。
+public std::string GetNewLabelId() const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
+public ActionSource GetNewLabelActionSource() const  |  新しいラベル アクションのソースを取得します。
+public std::string GetContentIdentifier() const  |  ドキュメントを説明するコンテンツ識別子を取得します。 ファイルの例: 電子メールの [&] 例: [サブジェクト: 送信者]。
+public ContentState GetContentState() const  |  アプリケーションで操作中のコンテンツの状態を取得します。
+public std::pair\<bool、std::string\> IsDowngradeJustified() 定数  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
+public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
+public std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  新しいラベルの拡張プロパティを返します。
+public std::vector\<std::pair\<std::string, std::string\>\> GetContentMetadata(const std::vector\<std::string\>& names, const std::vector\<std::string\>& namePrefixes) const  |  コンテンツからメタデータ項目を取得します。
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  保護記述子を取得します。
+public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
+public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
+public virtual std::map\<std::string, std::shared_ptr\<ClassificationResult\>\> GetClassificationResults(const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  アプリケーションの特定の監査のキー/値ペアのマップを返します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="getnewlabelid"></a>GetNewLabelId
+### <a name="getnewlabelid-function"></a>GetNewLabelId 関数
 ドキュメントに適用される必要のある機密ラベル ID を取得します。
 
   
-**戻り値**: コンテンツに適用される機密ラベル ID が存在する場合はその ID、それ以外でラベルを削除する場合は空。
+**返します**:場合、コンテンツに適用される機密ラベル ID が存在するラベルを削除するのには、空それ以外の場合。
   
-### <a name="getnewlabelactionsource"></a>GetNewLabelActionSource
+### <a name="getnewlabelactionsource-function"></a>GetNewLabelActionSource 関数
 新しいラベル アクションのソースを取得します。
 
   
-**戻り値**: アクションのソース。
+**返します**:操作のソース。
   
-### <a name="getcontentidentifier"></a>GetContentIdentifier
-ドキュメントを説明するコンテンツ識別子を取得します。 ファイルの例: [パス] 電子メールの例: [件名:送信者]。
+### <a name="getcontentidentifier-function"></a>GetContentIdentifier 関数
+ドキュメントを説明するコンテンツ識別子を取得します。 ファイルの例: 電子メールの [&] 例: [サブジェクト: 送信者]。
 
   
-**戻り値**: コンテンツに適用されるコンテンツ識別子。
+**返します**:コンテンツに適用するコンテンツ識別子。
 この値は、人間が判読できるコンテンツの説明として監査で使用されます。
   
-### <a name="getcontentstate"></a>GetContentState
+### <a name="getcontentstate-function"></a>GetContentState 関数
 アプリケーションで操作中のコンテンツの状態を取得します。
 
   
-**戻り値**: コンテンツ データの状態
+**返します**:コンテンツ データの状態
   
-### <a name="isdowngradejustified"></a>IsDowngradeJustified
+### <a name="isdowngradejustified-function"></a>IsDowngradeJustified 関数
 実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
 
   
-**戻り値**: ダウングレードの正当性が理由メッセージと共に示される場合は true、それ以外の場合は false。 
+**返します**:ダウン グレードが justifiedalong 妥当性の messageelse false の場合は true 
   
 **関連項目**: [mip::JustifyAction](class_mip_justifyaction.md)
   
-### <a name="getnewlabelassignmentmethod"></a>GetNewLabelAssignmentMethod
+### <a name="getnewlabelassignmentmethod-function"></a>GetNewLabelAssignmentMethod 関数
 新しいラベルの割り当て方法を取得します。
 
   
-**戻り値**: 割り当て方法: STANDARD、PRIVILEGED、AUTO。 
+**返します**:割り当て方法 STANDARD、PRIVILEGED、AUTO。 
   
-**関連項目**: mip::AssignmentMethod
+**参照してください**: [:assignmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
-### <a name="getnewlabelextendedproperties"></a>GetNewLabelExtendedProperties
+### <a name="getnewlabelextendedproperties-function"></a>GetNewLabelExtendedProperties function
 新しいラベルの拡張プロパティを返します。
 
   
-**戻り値**: コンテンツに適用される拡張プロパティ。
+**返します**:拡張プロパティのコンテンツに適用します。
   
-### <a name="getcontentmetadata"></a>GetContentMetadata
+### <a name="getcontentmetadata-function"></a>GetContentMetadata 関数
 コンテンツからメタデータ項目を取得します。
 
   
-**戻り値**: コンテンツに適用されるメタデータ。 各メタデータ項目は名前と値のペアです。
+**返します**:コンテンツに適用されるメタデータ。 各メタデータ項目は名前と値のペアです。
   
-### <a name="protectiondescriptor"></a>ProtectionDescriptor
+### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor 関数
 保護記述子を取得します。
 
   
-**戻り値**: 保護記述子
+**返します**:保護記述子
   
-### <a name="getcontentformat"></a>GetContentFormat
+### <a name="getcontentformat-function"></a>GetContentFormat 関数
 コンテンツの形式を取得します。
 
   
-**戻り値**: DEFAULT、EMAIL 
+**返します**:既定では、電子メール 
   
-**次も参照**: mip::ContentFormat
+**参照してください**: [:contentformat](mip-enums-and-structs.md#contentformat-enum)
   
-### <a name="actiontype"></a>ActionType
+### <a name="getsupportedactions-function"></a>GetSupportedActions 関数
 サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
 
   
-**戻り値**: サポートされているすべてのアクションの種類を表すマスクされた列挙型。
+**返します**:サポートされているアクションのすべての型を記述する、マスクされた列挙型。
 ActionType::Justify must be supported. ポリシーとラベルの変更に理由が必要な場合、常に理由アクションが返されます。
   
-### <a name="classificationresult"></a>ClassificationResult
+### <a name="getclassificationresults-function"></a>GetClassificationResults 関数
 分類結果のマップを返します。
 
 パラメーター:  
@@ -118,4 +119,10 @@ ActionType::Justify must be supported. ポリシーとラベルの変更に理�
 
 
   
-**戻り値**: 分類結果のリスト。
+**返します**:分類結果の一覧。
+  
+### <a name="getauditmetadata-function"></a>GetAuditMetadata 関数
+アプリケーションの特定の監査のキー/値ペアのマップを返します。
+
+  
+**返します**:アプリケーションの特定の監査メタデータの登録キーと値ペア送信者の一覧:送信者が受信者の電子メール Id:LastModifiedBy、電子メールの受信者の JSON 配列を表します。コンテンツの LastModifiedDate を前回変更したユーザーの電子メール Id:コンテンツの最終変更日

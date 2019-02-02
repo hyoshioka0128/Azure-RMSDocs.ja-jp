@@ -1,44 +1,44 @@
 ---
-title: class mip HttpResponse
-description: class mip HttpResponse のリファレンス
+title: class mip::HttpResponse
+description: Mip::httpresponse クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a19ea78b048cafe94501d452bb9c7409237f6ffd
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 9cbd899548be15833456a7c1e1fe34c3b5629717
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445358"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650294"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
 [HttpDelegate](class_mip_httpdelegate.md) をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public int32_t GetStatusCode() const  |  応答の状態コードを取得します。
- public const std::string& GetBody() const  |  要求本文を取得します。
-public const std::map<std::string, std::string, CaseInsensitiveComparator>& GetHeaders() const  |  要求ヘッダーを取得します。
+public int32_t GetStatusCode() const  |  応答の状態コードを取得します。
+public const std::string& GetBody() const  |  要求本文を取得します。
+public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  要求ヘッダーを取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="getstatuscode"></a>GetStatusCode
+### <a name="getstatuscode-function"></a>GetStatusCode 関数
 応答の状態コードを取得します。
 
   
-**戻り値**: 状態コード
+**返します**:状態コード
   
-### <a name="getbody"></a>GetBody
+### <a name="getbody-function"></a>GetBody 関数
 要求本文を取得します。
 
   
-**戻り値**: 要求本文
+**返します**:要求本文
   
-### <a name="getheaders"></a>GetHeaders
+### <a name="getheaders-function"></a>GetHeaders 関数
 要求ヘッダーを取得します。
 
   
-**戻り値**: 要求ヘッダー
+**返します**:要求ヘッダー

@@ -1,32 +1,32 @@
 ---
-title: class mip LoggerDelegate
-description: class mip LoggerDelegate のリファレンス
+title: class mip::LoggerDelegate
+description: Mip::loggerdelegate クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b25cdb177735feccfa5c4d344613e4747d18b77f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d93bfb863bf97629a8b2361425a0d78187c88cdc
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445854"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650002"
 ---
 # <a name="class-miploggerdelegate"></a>class mip::LoggerDelegate 
 MIP SDK のロガーに対してインターフェイスを定義するクラス。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public void Init(const std::string& storagePath, LogLevel logLevel)  |  ロガーを初期化します。
- public LogLevel GetLogLevel() const  |  ログ イベントをトリガーする最も低いログ レベルを取得します。
- public void Flush()  |  ロガーをフラッシュします。
- public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  ログ ファイルにログ ステートメントを書き込みます。
+public void Init(const std::string& storagePath, LogLevel logLevel)  |  ロガーを初期化します。
+public LogLevel GetLogLevel() const  |  ログ イベントをトリガーする最も低いログ レベルを取得します。
+public void Flush()  |  ロガーをフラッシュします。
+public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  ログ ファイルにログ ステートメントを書き込みます。
   
 ## <a name="members"></a>メンバー
   
-### <a name="init"></a>Init
+### <a name="init-function"></a>Init 関数
 ロガーを初期化します。
 
 パラメーター:  
@@ -37,16 +37,16 @@ MIP SDK のロガーに対してインターフェイスを定義するクラス
 
 
   
-### <a name="loglevel"></a>ログ レベル
+### <a name="getloglevel-function"></a>GetLogLevel 関数
 ログ イベントをトリガーする最も低いログ レベルを取得します。
 
   
-**戻り値**: ログ イベントをトリガーする最小のログ レベル。
+**返します**:ログ イベントをトリガーする最小のログ レベル。
   
-### <a name="flush"></a>フラッシュ
+### <a name="flush-function"></a>Flush 関数
 ロガーをフラッシュします。
   
-### <a name="writetolog"></a>WriteToLog
+### <a name="writetolog-function"></a>WriteToLog 関数
 ログ ファイルにログ ステートメントを書き込みます。
 
 パラメーター:  

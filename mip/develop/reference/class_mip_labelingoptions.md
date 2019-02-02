@@ -1,62 +1,62 @@
 ---
-title: class mip LabelingOptions
-description: class mip LabelingOptions のリファレンス
+title: class mip::LabelingOptions
+description: Mip::labelingoptions クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 1f3bdb5084dfa0d9121d1b1f7987161ba6d6ae6f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 13e1e7d6d25bda7db90315295f671c4acf794066
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445684"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650243"
 ---
 # <a name="class-miplabelingoptions"></a>class mip::LabelingOptions 
 SetLabel/DeleteLabel メソッドのラベル付けオプションを構成するためのインターフェイス。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _まだ文書化されていません。_
- public AssignmentMethod GetAssignmentMethod() const  | _まだ文書化されていません。_
- public ActionSource GetActionSource() const  | _まだ文書化されていません。_
- public bool IsDowngradeJustified() const  | _まだ文書化されていません。_
- public const std::string& GetJustificationMessage() const  | _まだ文書化されていません。_
-public const std::vector<std::pair<std::string, std::string>>& GetExtendedProperties() const  | _まだ文書化されていません。_
- public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _まだ文書化されていません。_
-public void SetExtendedProperties(const std::vector<std::pair<std::string, std::string>>& extendedProperties)  | _まだ文書化されていません。_
+public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _まだ文書化されていません。_
+public AssignmentMethod GetAssignmentMethod() const  | _まだ文書化されていません。_
+public ActionSource GetActionSource() const  | _まだ文書化されていません。_
+public bool IsDowngradeJustified() const  | _まだ文書化されていません。_
+public const std::string& GetJustificationMessage() const  | _まだ文書化されていません。_
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | _まだ文書化されていません。_
+public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _まだ文書化されていません。_
+public void SetExtendedProperties(const std::vector\<std::pair\<std::string, std::string\>\>& extendedProperties)  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   
-### <a name="labelingoptions"></a>LabelingOptions
+### <a name="labelingoptions-function"></a>LabelingOptions 関数
 _まだ文書化されていません。_
 
   
-### <a name="getassignmentmethod"></a>GetAssignmentMethod
+### <a name="getassignmentmethod-function"></a>GetAssignmentMethod 関数
 _まだ文書化されていません。_
 
   
-### <a name="getactionsource"></a>GetActionSource
+### <a name="getactionsource-function"></a>GetActionSource 関数
 _まだ文書化されていません。_
 
   
-### <a name="isdowngradejustified"></a>IsDowngradeJustified
+### <a name="isdowngradejustified-function"></a>IsDowngradeJustified 関数
 _まだ文書化されていません。_
 
   
-### <a name="getjustificationmessage"></a>GetJustificationMessage
+### <a name="getjustificationmessage-function"></a>GetJustificationMessage 関数
 _まだ文書化されていません。_
 
   
-### <a name="getextendedproperties"></a>GetExtendedProperties
+### <a name="getextendedproperties-function"></a>GetExtendedProperties 関数
 _まだ文書化されていません。_
 
   
-### <a name="setdowngradejustification"></a>SetDowngradeJustification
+### <a name="setdowngradejustification-function"></a>SetDowngradeJustification 関数
 _まだ文書化されていません。_
 
   
-### <a name="setextendedproperties"></a>SetExtendedProperties
+### <a name="setextendedproperties-function"></a>SetExtendedProperties 関数
 _まだ文書化されていません。_

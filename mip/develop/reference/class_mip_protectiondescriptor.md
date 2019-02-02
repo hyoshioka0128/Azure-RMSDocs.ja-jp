@@ -1,114 +1,121 @@
 ---
-title: class mip ProtectionDescriptor
-description: class mip ProtectionDescriptor のリファレンス
+title: class mip::ProtectionDescriptor
+description: Mip::protectiondescriptor クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: e723041af1eec7be7a839bf36f6d3db67b32447f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: f3bf856982f3e5b4c060a83fe1e822866fb1808b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446551"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651719"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 コンテンツの一部に関連付けられている保護の説明。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public ProtectionType GetProtectionType() const  |  保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
- public std::string GetOwner() const  |  保護するために所有者を取得します。
- public std::string GetName() const  |  保護の名前を取得します。
- public std::string GetDescription() const  |  保護の説明を取得します。
- public std::string GetTemplateId() const  |  存在する場合、保護テンプレート ID を取得します。
- public std::string GetLabelId() const  |  存在する場合、ラベル ID を取得します。
-public std::vector<UserRights> GetUserRights() const  |  ユーザーから権限へのマッピングのコレクションを取得します。
-public std::vector<UserRoles> GetUserRoles() const  |  ユーザーからロールへのマッピングのコレクションを取得します。
-public std::chrono::time_point<std::chrono::system_clock> GetContentValidUntil() const  |  保護の有効期限を取得します。
- public bool DoesAllowOfflineAccess() const  |  保護がオフライン コンテンツへのアクセスを許可するかどうかを取得します。
- public std::string GetReferrer() const  |  保護の参照元のアドレスを取得します。
-public std::map<std::string, std::string> GetEncryptedAppData() const  |  暗号化されたアプリ固有のデータを取得します。
-public std::map<std::string, std::string> GetSignedAppData() const  |  署名されたアプリ固有のデータを取得します。
+public ProtectionType GetProtectionType() const  |  保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
+public std::string GetOwner() const  |  保護するために所有者を取得します。
+public std::string GetName() const  |  保護の名前を取得します。
+public std::string GetDescription() const  |  保護の説明を取得します。
+public std::string GetTemplateId() const  |  存在する場合、保護テンプレート ID を取得します。
+public std::string GetLabelId() const  |  存在する場合、ラベル ID を取得します。
+public std::vector\<UserRights\> GetUserRights() 定数  |  ユーザーから権限へのマッピングのコレクションを取得します。
+public std::vector\<UserRoles\> GetUserRoles() 定数  |  ユーザーからロールへのマッピングのコレクションを取得します。
+public bool DoesContentExpire() const  |  かどうかコンテンツ有効期限かどうかを確認します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  保護の有効期限を取得します。
+public bool DoesAllowOfflineAccess() const  |  保護がオフライン コンテンツへのアクセスを許可するかどうかを取得します。
+public std::string GetReferrer() const  |  保護の参照元のアドレスを取得します。
+public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  暗号化されたアプリ固有のデータを取得します。
+public std::map\<std::string, std::string\> GetSignedAppData() const  |  署名されたアプリ固有のデータを取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="protectiontype"></a>ProtectionType
+### <a name="getprotectiontype-function"></a>GetProtectionType 関数
 保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
 
   
-**戻り値**: 保護の種類
+**返します**:保護の種類
   
-### <a name="getowner"></a>GetOwner
+### <a name="getowner-function"></a>GetOwner 関数
 保護するために所有者を取得します。
 
   
-**戻り値**: 保護の所有者
+**返します**:保護の所有者
   
-### <a name="getname"></a>GetName
+### <a name="getname-function"></a>GetName 関数
 保護の名前を取得します。
 
   
-**戻り値**: 保護の名前
+**返します**:保護名
   
-### <a name="getdescription"></a>GetDescription
+### <a name="getdescription-function"></a>GetDescription 関数
 保護の説明を取得します。
 
   
-**戻り値**: 保護の説明
+**返します**:保護の説明
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>GetTemplateId 関数
 存在する場合、保護テンプレート ID を取得します。
 
   
-**戻り値**: テンプレート ID
+**返します**:テンプレート ID
   
-### <a name="getlabelid"></a>GetLabelId
+### <a name="getlabelid-function"></a>GetLabelId 関数
 存在する場合、ラベル ID を取得します。
 
   
-**戻り値**: [ラベル](class_mip_label.md) ID このプロパティは、既存の保護されたコンテンツに対して ProtectionDescriptors にのみ設定されます。 これは、保護されたコンテンツが利用される時に、サーバーによって設定されたフィールドです。
+**返します**:[ラベル](class_mip_label.md)ID の既存の ProtectionDescriptors でこのプロパティが入力のみが保護されたコンテンツ。 これは、保護されたコンテンツが利用される時に、サーバーによって設定されたフィールドです。
   
-### <a name="userrights"></a>UserRights
+### <a name="getuserrights-function"></a>GetUserRights 関数
 ユーザーから権限へのマッピングのコレクションを取得します。
 
   
-**戻り値**: ユーザーから権限へのマッピングのコレクション。現在のユーザーがこの情報へのアクセス権を持っていない (つまり、ユーザーが所有者ではなく VIEWRIGHTSDATA 権限がない) 場合、[UserRights](class_mip_userrights.md) プロパティの値は空になります。
+**返します**:ユーザーから権限へのマッピングのコレクションの値、 [UserRights](class_mip_userrights.md)プロパティは (つまり場合、ユーザーが所有者ではないと、VIEWRIGHTSDATA 権限がありません)、現在のユーザーはこの情報へのアクセスを持っていない場合は空になります。
   
-### <a name="userroles"></a>UserRoles
+### <a name="getuserroles-function"></a>GetUserRoles 関数
 ユーザーからロールへのマッピングのコレクションを取得します。
 
   
-**戻り値**: ユーザーからロールへのマッピングのコレクション
+**返します**:ユーザーからロールへのマッピングのコレクション
   
-### <a name="getcontentvaliduntil"></a>GetContentValidUntil
+### <a name="doescontentexpire-function"></a>DoesContentExpire 関数
+かどうかコンテンツ有効期限かどうかを確認します。
+
+  
+**返します**:コンテンツは有効期限、偽の場合は true。
+  
+### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil 関数
 保護の有効期限を取得します。
 
   
-**戻り値**: 保護の有効期限
+**返します**:保護の有効期限
   
-### <a name="doesallowofflineaccess"></a>DoesAllowOfflineAccess
+### <a name="doesallowofflineaccess-function"></a>DoesAllowOfflineAccess 関数
 保護がオフライン コンテンツへのアクセスを許可するかどうかを取得します。
 
   
-**戻り値**: 保護がオフライン コンテンツへのアクセスを許可するかどうか (既定値 = true)
+**返します**:保護がない、またはオフライン コンテンツへのアクセスを許可する場合 (既定値 = true)
   
-### <a name="getreferrer"></a>GetReferrer
+### <a name="getreferrer-function"></a>GetReferrer 関数
 保護の参照元のアドレスを取得します。
 
   
-**戻り値**: 保護の参照元のアドレス参照元は、コンテンツの保護を解除できない場合、ユーザーに表示可能な URI です。 これには、そのユーザーがコンテンツにアクセスするためのアクセス許可をどのように取得できるかに関する情報が含まれます。
+**返します**:保護参照元アドレス。 参照元は、コンテンツ保護の解除できない場合、ユーザーに表示可能なである URI です。 これには、そのユーザーがコンテンツにアクセスするためのアクセス許可をどのように取得できるかに関する情報が含まれます。
   
-### <a name="getencryptedappdata"></a>GetEncryptedAppData
+### <a name="getencryptedappdata-function"></a>GetEncryptedAppData 関数
 暗号化されたアプリ固有のデータを取得します。
 
   
-**戻り値**: アプリ固有のデータ。[ProtectionHandler](class_mip_protectionhandler.md) では、保護サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する場合があります。 この暗号化データは、[ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata) を使用してアクセスできる署名済みデータに依存しません
+**返します**:アプリ固有のデータ。 [ProtectionHandler](class_mip_protectionhandler.md) protection サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する可能性があります。 この暗号化データは、[ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function) を使用してアクセスできる署名済みデータに依存しません
   
-### <a name="getsignedappdata"></a>GetSignedAppData
+### <a name="getsignedappdata-function"></a>GetSignedAppData 関数
 署名されたアプリ固有のデータを取得します。
 
   
-**戻り値**: アプリ固有のデータ。[ProtectionHandler](class_mip_protectionhandler.md) では、保護サービスが署名したアプリ固有のデータのディクショナリを保持する場合があります。 この署名済みデータは、[ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata) 経由でアクセスできる暗号化データに依存しません
+**返します**:アプリ固有のデータ。 [ProtectionHandler](class_mip_protectionhandler.md) protection サービスによって署名されたアプリ固有のデータのディクショナリを保持する可能性があります。 この署名済みデータは、[ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata-function) 経由でアクセスできる暗号化データに依存しません

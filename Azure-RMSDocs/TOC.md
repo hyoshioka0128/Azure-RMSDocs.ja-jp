@@ -23,7 +23,6 @@
 ### [アプリケーションで Azure Rights Management 保護をサポートする方法](applications-support.md)
 #### [Office アプリケーションおよびサービス](office-apps-services-support.md)
 #### [Windows Server を実行しファイル分類インフラストラクチャを使用するファイル サーバー](file-server-support.md)
-#### [Windows およびモバイル プラットフォーム用の RMS 共有アプリケーション](sharing-app-support.md)
 #### [RMS API をサポートするその他のアプリケーション](api-support.md)
 ## [個人用 RMS と Azure Information Protection](rms-for-individuals.md)
 ## [別名](aka.md)

@@ -1,130 +1,130 @@
 ---
-title: class mip PolicyProfile Settings
-description: class mip PolicyProfile Settings のリファレンス
+title: class mip::PolicyProfile::Settings
+description: Mip::policyprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07cbcbc022c02a43f751e1cf55b5b0efdfb816d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d6a0c773226fff789889bd82a6075a65cff184bd
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446912"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651124"
 ---
 # <a name="class-mippolicyprofilesettings"></a>class mip::PolicyProfile::Settings 
 作成時および有効期間全体にわたって [PolicyProfile](class_mip_policyprofile.md) に使用される[設定](class_mip_policyprofile_settings.md)。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, const std::shared_ptr<AuthDelegate>& authDelegate, const std::shared_ptr<PolicyProfile::Observer>& observer, const ApplicationInfo& applicationInfo)  |  プロファイルを構成するためのインターフェイス。
- public const std::string& GetPath() const  |  保存された状態へのパスを取得します。
- public bool GetUseInMemoryStorage() const  |  Use In Memory Storage フラグを取得します。
-public const std::shared_ptr<AuthDelegate>& GetAuthDelegate() const  |  認証委任を取得します。
-public const std::shared_ptr<PolicyProfile::Observer>& GetObserver() const  |  イベント オブザーバーを取得します。
- public const ApplicationInfo GetApplicationInfo() const  |  アプリケーション情報を取得します。
-public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
-public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  既定のロガーをオーバーライドします。
-public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
- public void OptOutTelemetry()  |  テレメトリの収集をすべて無効にします。
- public bool IsTelemetryOptedOut() const  |  テレメトリの収集を無効にする必要があるかどうかを取得します。
- public void SetMinimumLogLevel(LogLevel logLevel)  |  ログ イベントをトリガーする最小のログ レベルを設定します。
- public LogLevel GetMinimumLogLevel() const  |  最小のログ レベル オブジェクトを取得します。
+パブリック設定 (const std::string & パス、bool useinmemorystorage: const std::shared_ptr\<authdelegate:\>& authdelegate:、const std::shared_ptr\<PolicyProfile::Observer\>(& a)observer, const ApplicationInfo & applicationInfo)  |  プロファイルを構成するためのインターフェイス。
+public const std::string& GetPath() const  |  保存された状態へのパスを取得します。
+public bool GetUseInMemoryStorage() const  |  Use In Memory Storage フラグを取得します。
+public const std::shared_ptr\<AuthDelegate\>& GetAuthDelegate() const  |  認証委任を取得します。
+public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  |  イベント オブザーバーを取得します。
+public const ApplicationInfo GetApplicationInfo() const  |  アプリケーション情報を取得します。
+public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
+public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  既定のロガーをオーバーライドします。
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public void OptOutTelemetry()  |  テレメトリの収集をすべて無効にします。
+public bool IsTelemetryOptedOut() const  |  テレメトリの収集を無効にする必要があるかどうかを取得します。
+public void SetMinimumLogLevel(LogLevel logLevel)  |  ログ イベントをトリガーする最小のログ レベルを設定します。
+public LogLevel GetMinimumLogLevel() const  |  最小のログ レベル オブジェクトを取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="settings"></a>Settings
+### <a name="settings-function"></a>ポリシーの設定
 プロファイルを構成するためのインターフェイス。
 
 パラメーター:  
-* **path**: SDK でプロファイル状態が格納されるディレクトリへのパス。 
+* **パス**:SDK がプロファイル状態を格納するディレクトリへのパス。 
 
 
-* **useInMemoryStorage**: キャッシュされた状態をディスクではなくメモリに格納します。 
+* **useInMemoryStorage**:ディスクではなくメモリにキャッシュされている任意の状態を格納します。 
 
 
-* **authDelegate**: 認証トークンを取得するために SDK によって使用される認証委任。 
+* **authDelegate**:認証トークンを取得する SDK によって使用される認証デリゲート。 
 
 
-* **observer**: [PolicyProfile::Observer](class_mip_policyprofile_observer.md) インターフェイスを実装するクラス。 nullptr にすることができます。 
+* **オブザーバー**:実装するクラス、 [PolicyProfile::Observer](class_mip_policyprofile_observer.md)インターフェイス。 nullptr にすることができます。 
 
 
-* **applicationInfo**: サービスへのアクセスに使用されるアプリケーション識別子。
+* **applicationInfo**:サービスへのアクセスに使用されるアプリケーション識別子。
 
 
   
-### <a name="getpath"></a>GetPath
+### <a name="getpath-function"></a>GetPath 関数
 保存された状態へのパスを取得します。
 
   
-**戻り値**: 保存された状態へのパス。
+**返します**:保存された状態へのパス。
   
-### <a name="getuseinmemorystorage"></a>GetUseInMemoryStorage
+### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage 関数
 Use In Memory Storage フラグを取得します。
 
   
-**戻り値**: メモリでの使用が設定されている場合は true、それ以外の場合は false。
+**返します**:メモリでの使用が false それ以外の場合に設定されている場合は true。
   
-### <a name="getauthdelegate"></a>GetAuthDelegate
+### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
 認証委任を取得します。
 
   
-**戻り値**: 認証委任。
+**返します**:認証委任。
   
-### <a name="policyprofileobserver"></a>PolicyProfile::Observer
+### <a name="getobserver-function"></a>GetObserver 関数
 イベント オブザーバーを取得します。
 
   
-**戻り値**: イベント オブザーバー。
+**返します**:イベント オブザーバー。
   
-### <a name="applicationinfo"></a>ApplicationInfo
+### <a name="getapplicationinfo-function"></a>GetApplicationInfo 関数
 アプリケーション情報を取得します。
 
   
-**戻り値**: アプリケーション情報。
+**返します**:アプリケーションの情報です。
   
-### <a name="loggerdelegate"></a>LoggerDelegate
+### <a name="getloggerdelegate-function"></a>GetLoggerDelegate 関数
 アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
 
   
-**戻り値**: ロガー
+**返します**:ロガー
   
-### <a name="setloggerdelegate"></a>SetLoggerDelegate
+### <a name="setloggerdelegate-function"></a>SetLoggerDelegate 関数
 既定のロガーをオーバーライドします。
 
 パラメーター:  
-* **loggerDelegate**: クライアント アプリケーションによって実装されるログ コールバック インターフェイス
+* **loggerDelegate**:クライアント アプリケーションによって実装されるコールバック インターフェイスをログ記録
 
 
 このメソッドは、独自のロガー実装を使用するクライアント アプリケーションによって呼び出される必要があります
   
-### <a name="httpdelegate"></a>HttpDelegate
+### <a name="gethttpdelegate-function"></a>GetHttpDelegate 関数
 アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
 
   
-**戻り値**: HTTP 操作に使用される HTTP 委任
+**返します**:HTTP 操作に使用する http デリゲート
   
-### <a name="sethttpdelegate"></a>SetHttpDelegate
+### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
 パラメーター:  
-* **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
+* **httpDelegate**:クライアント アプリケーションによって実装される http コールバック インターフェイス
 
 
   
-### <a name="optouttelemetry"></a>OptOutTelemetry
+### <a name="optouttelemetry-function"></a>OptOutTelemetry 関数
 テレメトリの収集をすべて無効にします。
   
-### <a name="istelemetryoptedout"></a>IsTelemetryOptedOut
+### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut 関数
 テレメトリの収集を無効にする必要があるかどうかを取得します。
 
   
-**戻り値**: テレメトリの収集を無効にする必要があるかどうか
+**返します**:テレメトリの収集を無効にする場合は true false のその他。
   
-### <a name="setminimumloglevel"></a>SetMinimumLogLevel
+### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel 関数
 ログ イベントをトリガーする最小のログ レベルを設定します。
 
 パラメーター:  
@@ -133,10 +133,10 @@ Use In Memory Storage フラグを取得します。
 
 
   
-**戻り値**: True
+**返します**:True
   
-### <a name="loglevel"></a>ログ レベル
+### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel 関数
 最小のログ レベル オブジェクトを取得します。
 
   
-**戻り値**: ログ イベントをトリガーする最小のログ レベル。
+**返します**:ログ イベントをトリガーするための最小ログ レベル。

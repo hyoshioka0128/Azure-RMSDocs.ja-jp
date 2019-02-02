@@ -1,137 +1,155 @@
 ---
-title: class mip PolicyProfile Observer
-description: class mip PolicyProfile Observer のリファレンス
+title: class mip::PolicyProfile::Observer
+description: Mip::policyprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5de2156f4906c14e4ebc1418df8acb092c089d7d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 451cc2b9da086644e561d0a1dd1912de5f38c48c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446904"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651175"
 ---
 # <a name="class-mippolicyprofileobserver"></a>class mip::PolicyProfile::Observer 
 クライアントがプロファイル関連のイベントに関する通知を取得するための [Observer](class_mip_policyprofile_observer.md) インターフェイス。
 すべてのエラーは [mip::Error](class_mip_error.md) から継承されます。 クライアントは、オブザーバーを呼び出すスレッド上でエンジンをコールバックしてはなりません。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess(const std::shared_ptr<PolicyProfile>& profile, const std::shared_ptr<void>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
-public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
-public virtual void OnListEnginesSuccess(const std::vector<std::string>& engineIds, const std::shared_ptr<void>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
-public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
-public virtual void OnUnloadEngineSuccess(const std::shared_ptr<void>& context)  |  エンジンが正常にアンロードされたときに呼び出されます。
-public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
-public virtual void OnAddEngineSuccess(const std::shared_ptr<PolicyEngine>& engine, const std::shared_ptr<void>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
-public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
-public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  エンジンが正常に削除されたときに呼び出されます。
-public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
- public virtual void OnPolicyChanged(const std::string& engineId)  |  指定された ID のエンジンに対してポリシーが変更されたときに呼び出されます。
+パブリック仮想 void OnLoadSuccess (const std::shared_ptr\<PolicyProfile\>(& a) プロファイル、const std::shared_ptr\<void\>& コンテキスト)  |  プロファイルが正常に読み込まれたときに呼び出されます。
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
+パブリック仮想 void OnListEnginesSuccess (const std::vector\<std::string\>& engineids:、const std::shared_ptr\<void\>& コンテキスト)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
+パブリック仮想 void OnUnloadEngineSuccess (const std::shared_ptr\<void\>& コンテキスト)  |  エンジンが正常にアンロードされたときに呼び出されます。
+パブリック仮想 void OnUnloadEngineFailure (const std::exception_ptr & エラー、const std::shared_ptr\<void\>& コンテキスト)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
+パブリック仮想 void OnAddEngineSuccess (const std::shared_ptr\<PolicyEngine\>& エンジン, const std::shared_ptr\<void\>& コンテキスト)  |  新しいエンジンが正常に追加されたときに呼び出されます。
+パブリック仮想 void OnAddEngineStarting (bool requiresPolicyFetch)  |  サーバーからそのエンジンのポリシーのデータをフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成するかどうかを示すエンジンを作成する前に呼び出されます。
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
+public virtual void OnPolicyChanged(const std::string& engineId)  |  指定した ID を使用してエンジンのポリシーが変更されたとき、または読み込まれたカスタム機密の種類が変更されたときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   
-### <a name="onloadsuccess"></a>OnLoadSuccess
+### <a name="onloadsuccess-function"></a>OnLoadSuccess 関数
 プロファイルが正常に読み込まれたときに呼び出されます。
 
 パラメーター:  
 * **profile**: 操作の開始に使用された現在のプロファイル。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: LoadAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onloadfailure"></a>OnLoadFailure
+### <a name="onloadfailure-function"></a>OnLoadFailure 関数
 プロファイルの読み込みでエラーが発生したときに呼び出されます。
 
 パラメーター:  
 * **error**: 読み込み操作が失敗する原因となったエラー。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: LoadAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onlistenginessuccess"></a>OnListEnginesSuccess
+### <a name="onlistenginessuccess-function"></a>OnListEnginesSuccess 関数
 エンジンの一覧が正常に生成されたときに呼び出されます。
 
 パラメーター:  
 * **engineIds**: 使用可能なエンジン ID の一覧。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: ListEnginesAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onlistenginesfailure"></a>OnListEnginesFailure
+### <a name="onlistenginesfailure-function"></a>OnListEnginesFailure 関数
 エラーの原因となったエンジンを一覧表示するときに呼び出されます。
 
 パラメーター:  
 * **error**: エンジンの一覧操作が失敗する原因となったエラー。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: ListEnginesAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onunloadenginesuccess"></a>OnUnloadEngineSuccess
+### <a name="onunloadenginesuccess-function"></a>OnUnloadEngineSuccess 関数
 エンジンが正常にアンロードされたときに呼び出されます。
 
 パラメーター:  
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: UnloadEngineAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onunloadenginefailure"></a>OnUnloadEngineFailure
+### <a name="onunloadenginefailure-function"></a>OnUnloadEngineFailure 関数
 エンジンのアンロードがエラーの原因となったときに呼び出されます。
 
 パラメーター:  
 * **error**: エンジンのアンロード操作が失敗する原因となったエラー。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: UnloadEngineAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onaddenginesuccess"></a>OnAddEngineSuccess
+### <a name="onaddenginesuccess-function"></a>OnAddEngineSuccess 関数
 新しいエンジンが正常に追加されたときに呼び出されます。
+
+パラメーター:  
+* **エンジン**: 新しく追加されたエンジン 
+
+
+* **コンテキスト**: AddEngineAsync 操作に渡されるコンテキスト
+
+
   
-### <a name="onaddenginefailure"></a>OnAddEngineFailure
+### <a name="onaddenginestarting-function"></a>OnAddEngineStarting 関数
+サーバーからそのエンジンのポリシーのデータをフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成するかどうかを示すエンジンを作成する前に呼び出されます。
+
+パラメーター:  
+* **requiresPolicyFetch**:エンジンのデータを HTTP 経由でフェッチする必要があるかどうか、またはキャッシュから読み込まれるかどうかについて説明します
+
+
+この省略可能なコールバックをアプリケーションにできない形式であるかどうか、AddEngineAsync 操作が必要になります (その関連付けられている遅延) で HTTP 操作を完了することができます。
+  
+### <a name="onaddenginefailure-function"></a>OnAddEngineFailure 関数
 新しいエンジンの追加がエラーの原因となったときに呼び出されます。
 
 パラメーター:  
 * **error**: エンジンの追加操作が失敗する原因となったエラー。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: AddEngineAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="ondeleteenginesuccess"></a>OnDeleteEngineSuccess
+### <a name="ondeleteenginesuccess-function"></a>OnDeleteEngineSuccess 関数
 エンジンが正常に削除されたときに呼び出されます。
 
 パラメーター:  
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: DeleteEngineAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="ondeleteenginefailure"></a>OnDeleteEngineFailure
+### <a name="ondeleteenginefailure-function"></a>OnDeleteEngineFailure 関数
 エンジンの削除がエラーの原因となったときに呼び出されます。
 
 パラメーター:  
 * **error**: エンジンの削除操作が失敗する原因となったエラー。 
 
 
-* **context**: 操作に渡されたコンテキスト。
+* **コンテキスト**: DeleteEngineAsync 操作に、コンテキストが渡されます。
 
 
   
-### <a name="onpolicychanged"></a>OnPolicyChanged
-指定された ID のエンジンに対してポリシーが変更されたときに呼び出されます。
+### <a name="onpolicychanged-function"></a>OnPolicyChanged 関数
+指定した ID を使用してエンジンのポリシーが変更されたとき、または読み込まれたカスタム機密の種類が変更されたときに呼び出されます。
 
 パラメーター:  
 * **engineId**: エンジン 

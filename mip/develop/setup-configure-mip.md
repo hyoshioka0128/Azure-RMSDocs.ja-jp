@@ -4,22 +4,18 @@ description: Microsoft Information Protection SDK でビルドされたアプリ
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/30/2019
 ms.author: bryanla
-ms.openlocfilehash: 21fdf98495fbf64cfae413c70205beaeffa7fe3b
-ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
+ms.openlocfilehash: b8c152db0ae52a20cc5323709c245911564e5f18
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55088124"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651447"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
 クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Office 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
-
-MIP SDK は、次のプラットフォームで使用できます。  
-
-[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -76,7 +72,7 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
 
      [![Visual Studio のセットアップ](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. [ADAL.PS PowerShell モジュール](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2)をインストールします。 
+3. インストール、 [ADAL.PS PowerShell モジュール](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
 
    - モジュールをインストールするには管理者権限が必要なため、最初に次のいずれかを行う必要があります。
 
@@ -97,25 +93,21 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
      PS C:\WINDOWS\system32>
      ```
 
-4. GitHub から SDK サンプルをダウンロードします。 
+4. SDK ファイルをダウンロードするには。
 
-   - [GitHub プロファイル](https://github.com/join)をまだお持ちでない場合は、まずそれを作成します。
-   - 次に、[Software Freedom Conservancy の Git クライアント ツール (Git Bash)](https://git-scm.com/download/) の最新バージョンをインストールします。
-   - Git Bash を使用して、関心のあるサンプルをダウンロードします。
-     - 次のクエリを使用して、リポジトリを表示します。 https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk 
-     - Git Bash で、`git clone https://github.com/azure-samples/<repo-name>` を使用して各サンプル リポジトリをダウンロードします。
+   MIP SDK は、サポートされている各プラットフォームと言語の個別のダウンロードで、次のプラットフォームでサポートされます。  
 
-5. SDK バイナリ ファイルとヘッダー ファイルをダウンロードします。
+   [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-   すべてのプラットフォームの SDK バイナリとヘッダーを含む .zip ファイルは、 https://aka.ms/mipsdkbinaries にあります。 .zip には、複数の追加の .zip ファイル (プラットフォームと API ごとに 1 つ) が含まれています。 ファイルは次のように命名されます。`mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`: ここで、\<API\> = `file`、`protection`、または `upe` で、\<OS\> = プラットフォームです。
+   **Tar.gz/します。Zip のダウンロード**
 
-   たとえば、Debian での保護 API のバイナリとヘッダーの .zip は次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz`
+   Tar.gz とします。Zip のダウンロードには、各 API のいずれか、追加の圧縮されたファイルが含まれます。 圧縮されたファイルの名前は、次のように、 \<API\> = `file`、 `protection`、または`upe`、および\<OS\> = プラットフォーム:`mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`します。 たとえば、debian 保護 API のバイナリとヘッダー ファイルになります:`mip_sdk_protection_debian9_1.0.0.0.tar.gz`します。 3 つのディレクトリに含まれている各.tar.gz/.zip が分かれています。
 
-   各 .zip や tarball には、次の 3 つのディレクトリが含まれています。
-
-   - **ビン。** 該当する場合は、各プラットフォーム アーキテクチャのバイナリをコンパイルします。
-   - **次のとおり**Microsoft Information Protection SDK のヘッダー ファイル
-   - **サンプル:** サンプル アプリケーションのソース コード
+   - **ビン。** 該当する場合は、各プラットフォーム アーキテクチャ用にバイナリをコンパイルします。
+   - **次のとおり**ヘッダー ファイル (C++)。
+   - **サンプル:** サンプル アプリケーションのソース コード。
+    
+   **NuGet パッケージ**
 
    Visual Studio の開発を行っている場合は、NuGet パッケージ マネージャー コンソールを使用して SDK をインストールすることもできます。
 
@@ -124,8 +116,11 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
     ```  
-    
-6. SDK バイナリのパス (ダイナミック リンク ライブラリ (.dll)) を PATH 環境変数に追加します。 PATH 変数は、実行時にクライアント アプリケーションによって依存 DLL が見つかるようにします。
+
+5. NuGet パッケージを使用していない場合、SDK のバイナリのパスを PATH 環境変数に追加します。 PATH 変数は、クライアント アプリケーション (省略可能) によって依存バイナリを実行時に検索するには、(Dll) を使用できます。
+
+   Windows 10 ワークステーションを使用している場合:
+
    - 左下にある Windows アイコンをクリックします。
    - 「パス」と入力して Enter キーを押すと、**[Edit the system environment variables]\(システム環境変数の編集\)** 項目が表示されます。
    - **[システムのプロパティ]** ダイアログで、**[環境変数]** をクリックします。
@@ -133,9 +128,17 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
    - **[環境変数の編集]** ダイアログで、新しい編集可能な行を作成する **[新規]** をクリックします。 `file\bins\debug\amd64`、`protection\bins\debug\amd64`、`upe\bins\debug\amd64` の各サブディレクトリへの完全なパスを使用して、それぞれに新しい行を追加します。 SDK ディレクトリは `<API>\bins\<target>\<platform>` の形式で格納されます。
      - \<API\> = `file`、`protection`、`upe`
      - \<target\> = `debug`、`release`
-     - \<platform\> = `amd64` (別名: x64)、`x86` など
+     - \<プラットフォーム\> =  `amd64` (x64)、`x86`など。
    
    - **パス**変数の更新が完了したら、**[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、**[OK]** をクリックします。
+
+6. GitHub (オプション) から SDK サンプルをダウンロードします。
+
+   - [GitHub プロファイル](https://github.com/join)をまだお持ちでない場合は、まずそれを作成します。
+   - 次に、[Software Freedom Conservancy の Git クライアント ツール (Git Bash)](https://git-scm.com/download/) の最新バージョンをインストールします。
+   - Git Bash を使用して、関心のあるサンプルをダウンロードします。
+     - 次のクエリを使用して、リポジトリを表示します。 https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk 
+     - Git Bash で、`git clone https://github.com/azure-samples/<repo-name>` を使用して各サンプル リポジトリをダウンロードします。
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Azure Active Directory へのクライアント アプリケーションの登録
 
@@ -161,7 +164,7 @@ Office 365 サブスクリプションがプロビジョニング プロセス�
    - **[必要なアクセス許可]** ページで **[追加]** をクリックします。 
    - **[API アクセスの追加]** ページで **[API の選択]** をクリックします。
    - **[API の選択]** ページで、**[Microsoft Rights Management Services]** API をクリックして、**[選択]** をクリックします。
-   - **[アクセスを有効にする]** ページで、API の指定できるアクセス許可に対して、**[ユーザー用の保護されたコンテンツを作成してアクセスする]** をクリックして、**[選択]**、**[完了]** の順にクリックします。
+   - **アクセスの有効化**の API の使用可能なアクセス許可] ページで ["**保護されたユーザーのコンテンツの作成とアクセス**"、し**選択**、し**完了**.
 
 5. 手順 4 を繰り返しますが、今回は **[API の選択]** ページで API を検索する必要があります。
    - **[API の選択]** ページの検索ボックスに「**Microsoft Information Protection 同期サービス**」と入力し、その API をクリックし、**[選択]** をクリックします。
@@ -174,7 +177,7 @@ Office 365 サブスクリプションがプロビジョニング プロセス�
    [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-登録に Api とアクセス許可を追加する方法の詳細については、次を参照してください。 [web Api にアクセスするクライアント アプリケーションを構成する Azure ad でのアプリケーションの更新](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)します。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
+登録に Api とアクセス許可を追加する方法の詳細については、次を参照してください。 [web Api にアクセスするクライアント アプリケーションを構成する](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)します。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
 
@@ -210,15 +213,17 @@ MIP で開発されたアプリケーションをリリースすることがで�
 
 - 会社のアプリケーションの名前
 - アプリケーションの簡単な説明
-- Azure テナント ID (以前と同じ場合でも記載)
+- Azure テナント ID (場合でも、以前と同じ)
 - アプリケーションのアプリ ID
 - 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
-電子メールの送信時には、受領の確認には最大で 72 時間かかることをご了承ください。
+電子メールの送信、処理時に、最大 72 時間の受信確認の受信確認を許可します。
 
 ## <a name="next-steps"></a>次の手順
 
-- MIP SDK はほぼ完全に非同期に設計されているため、クイック スタート セクションを開始する前に、必ず [MIP SDK のオブザーバー](concept-async-observers.md)のページをお読みください。
-- SDK を使用した実践的体験をする準備ができたら場合、まず[クイック スタート。クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)します。
+- C++ 開発者の場合
+  - 必ずお読み[オブザーバー概念](concept-async-observers.md)C++ Api の非同期の性質の詳細については、クイック スタート セクションを開始する前にします。
+  - SDK を使用した経験を取得する準備ができたら、始まり[クイック スタート。クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)します。
+- 場合は、C#開発者は、SDK を使用した経験を始める準備ができたら[クイック スタート。クライアント アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md)します。
 
 

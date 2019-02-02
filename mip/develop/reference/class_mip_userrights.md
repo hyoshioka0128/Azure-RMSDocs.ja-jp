@@ -1,49 +1,49 @@
 ---
-title: class mip UserRights
-description: class mip UserRights のリファレンス
+title: class mip::UserRights
+description: Mip::userrights クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c1ef7aaba00bf595d80f07f318aa5808f3a56409
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 3e3abd2045b0e66ee8c2b307d555bf860e489625
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445123"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650614"
 ---
 # <a name="class-mipuserrights"></a>class mip::UserRights 
 ユーザーのグループおよびそれらに関連付けられている権限。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public UserRights(const std::vector<std::string>& users, const std::vector<std::string>& rights)  |  [UserRights](class_mip_userrights.md) コンストラクター。
-public const std::vector<std::string>& Users() const  |  権限のセットに関連付けられているユーザーを取得します。
-public const std::vector<std::string>& Rights() const  |  ユーザーのグループに関連付けられている権限を取得します。
+パブリック UserRights (const std::vector\<std::string\>(& a) ユーザー、const std::vector\<std::string\>& rights)  |  [UserRights](class_mip_userrights.md) コンストラクター。
+public const std::vector\<std::string\>& Users() const  |  権限のセットに関連付けられているユーザーを取得します。
+public const std::vector\<std::string\>& Rights() const  |  ユーザーのグループに関連付けられている権限を取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="userrights"></a>UserRights
+### <a name="userrights-function"></a>UserRights 関数
 [UserRights](class_mip_userrights.md) コンストラクター。
 
 パラメーター:  
-* **users**: 同じ権限を共有するユーザーのグループ 
+* **ユーザー**:同じ権限を共有するユーザーのグループ 
 
 
-* **rights**: ユーザーのグループによって共有されている権限
+* **rights**:ユーザーのグループによって共有されている権限
 
 
   
-### <a name="users"></a>Users
+### <a name="users-function"></a>ユーザー関数
 権限のセットに関連付けられているユーザーを取得します。
 
   
-**戻り値**: 権限のセットに関連付けられているユーザー
+**返します**:権限のセットに関連付けられているユーザー
   
-### <a name="rights"></a>［権利］
+### <a name="rights-function"></a>Rights 関数
 ユーザーのグループに関連付けられている権限を取得します。
 
   
-**戻り値**: ユーザーのグループに関連付けられている権限
+**返します**:ユーザーのグループに関連付けられている権限

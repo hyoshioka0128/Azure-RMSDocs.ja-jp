@@ -1,41 +1,41 @@
 ---
-title: class mip ClassificationResult
-description: class mip ClassificationResult のリファレンス
+title: class mip::ClassificationResult
+description: Mip::classificationresult クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ea312330c656b6daefbc1bcba690f53ebfbf419f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 28b174fe65de5980fb1922cfb4c3e5cee7cab1d8
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446296"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650750"
 ---
 # <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
 実行状態での分類呼び出しの結果を含むクラス。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public std::string GetId() const  |  分類ポリシーの ID を取得します。
- public int GetCount() const  |  インスタンス数を取得します。
- public int GetConfidenceLevel() const  |  結果の信頼度を取得します。
+public std::string GetId() const  |  分類ポリシーの ID を取得します。
+public int GetCount() const  |  インスタンス数を取得します。
+public int GetConfidenceLevel() const  |  結果の信頼度を取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="getid"></a>GetId
+### <a name="getid-function"></a>GetId 関数
 分類ポリシーの ID を取得します。
 
   
-**戻り値**: 分類ポリシーの ID。
+**返します**:分類ポリシーの ID。
   
-### <a name="getcount"></a>GetCount
+### <a name="getcount-function"></a>GetCount 関数
 インスタンス数を取得します。
 
   
-**戻り値**: インスタンス数。
+**返します**:インスタンスの数。
   
-### <a name="getconfidencelevel"></a>GetConfidenceLevel
+### <a name="getconfidencelevel-function"></a>GetConfidenceLevel 関数
 結果の信頼度を取得します。

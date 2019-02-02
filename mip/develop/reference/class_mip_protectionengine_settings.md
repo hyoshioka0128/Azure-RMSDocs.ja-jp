@@ -1,77 +1,77 @@
 ---
-title: class mip ProtectionEngine Settings
-description: class mip ProtectionEngine Settings のリファレンス
+title: class mip::ProtectionEngine::Settings
+description: Mip::protectionengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f61e86a87ecfea21bc9d02f4e55f3fbe663e9b80
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 131c41c2fe3788b1ef68b0d020606cf5f00d229c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446704"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651243"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
 作成時および有効期間全体にわたって [ProtectionEngine](class_mip_protectionengine.md) によって使用される[設定](class_mip_protectionengine_settings.md)。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  新しいエンジンを作成するための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  既存のエンジンを読み込むための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
- public const std::string& GetEngineId() const  |  エンジン ID を取得します。
- public void SetEngineId(const std::string& engineId)  |  エンジン ID を設定します。
- public const Identity& GetIdentity() const  |  エンジンに関連付けられたユーザー ID を取得します。
- public void SetIdentity(const Identity& identity)  |  エンジンに関連付けられるユーザー ID を設定します。
- public const std::string& GetClientData() const  |  クライアントに指定されたカスタム データを取得します。
- public void SetClientData(const std::string& clientData)  |  クライアントに指定されたカスタム データを設定します。
- public const std::string& GetLocale() const  |  エンジン データが書き込まれるロケールを取得します。
-public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& value)  |  テストや実験に使用する名前と値のペアを設定します。
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  テストや実験に使用する名前と値のペアを取得します。
- public void SetSessionId(const std::string& sessionId)  |  ログ/テレメトリの相関関係に使用する、エンジンのセッション ID を設定します。
- public const std::string& GetSessionId() const  |  エンジンのセッション ID を取得します。
- public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  必要に応じて、クラウド エンドポイントのベース URL を設定します。
- public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  新しいエンジンを作成するための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  既存のエンジンを読み込むための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
+public const std::string& GetEngineId() const  |  エンジン ID を取得します。
+public void SetEngineId(const std::string& engineId)  |  エンジン ID を設定します。
+public const Identity& GetIdentity() const  |  ユーザーを取得します[Identity](class_mip_identity.md)エンジンに関連付けられています。
+public void SetIdentity(const Identity& identity)  |  ユーザーを設定します[Identity](class_mip_identity.md)エンジンに関連付けられています。
+public const std::string& GetClientData() const  |  クライアントに指定されたカスタム データを取得します。
+public void SetClientData(const std::string& clientData)  |  クライアントに指定されたカスタム データを設定します。
+public const std::string& GetLocale() const  |  エンジン データが書き込まれるロケールを取得します。
+public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  テストや実験に使用する名前と値のペアを設定します。
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  テストや実験に使用する名前と値のペアを取得します。
+public void SetSessionId(const std::string& sessionId)  |  ログ/テレメトリの相関関係に使用する、エンジンのセッション ID を設定します。
+public const std::string& GetSessionId() const  |  エンジンのセッション ID を取得します。
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  必要に応じて、クラウド エンドポイントのベース URL を設定します。
+public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
   
 ## <a name="members"></a>メンバー
   
-### <a name="settings"></a>Settings
+### <a name="settings-function"></a>ポリシーの設定
 新しいエンジンを作成するための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
 
 パラメーター:  
-* **identity**: [ProtectionEngine](class_mip_protectionengine.md) に関連付けられる ID
+* **identity**:[Identity](class_mip_identity.md)を関連付けられる[ProtectionEngine](class_mip_protectionengine.md)
 
 
 * **clientData**: アンロード時にエンジンと共に保存でき、読み込まれたエンジンから取得できる、カスタマイズ可能なクライアント データ。 
 
 
-* **locale**: エンジン出力はこのロケールで提供されます。
+* **ロケール**:エンジンの出力は、このロケールで提供されます。
 
 
   
-### <a name="settings"></a>Settings
+### <a name="settings-function"></a>ポリシーの設定
 既存のエンジンを読み込むための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
 
 パラメーター:  
-* **engineId**: 読み込まれるエンジンの一意識別子 
+* **engineId**:読み込まれるエンジンの一意識別子 
 
 
 * **clientData**: アンロード時にエンジンと共に保存でき、読み込まれたエンジンから取得できる、カスタマイズ可能なクライアント データ。 
 
 
-* **locale**: エンジン出力はこのロケールで提供されます。
+* **ロケール**:エンジンの出力は、このロケールで提供されます。
 
 
   
-### <a name="getengineid"></a>GetEngineId
+### <a name="getengineid-function"></a>GetEngineId 関数
 エンジン ID を取得します。
 
   
-**戻り値**: エンジン ID
+**返します**:エンジン ID
   
-### <a name="setengineid"></a>SetEngineId
+### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
 
 パラメーター:  
@@ -79,27 +79,27 @@ public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings
 
 
   
-### <a name="getidentity"></a>GetIdentity
-エンジンに関連付けられたユーザー ID を取得します。
+### <a name="getidentity-function"></a>GetIdentity 関数
+ユーザーを取得します[Identity](class_mip_identity.md)エンジンに関連付けられています。
 
   
-**戻り値**: エンジンに関連付けられたユーザー ID
+**返します**:ユーザー [Identity](class_mip_identity.md)エンジンに関連付けられています。
   
-### <a name="setidentity"></a>SetIdentity
-エンジンに関連付けられるユーザー ID を設定します。
+### <a name="setidentity-function"></a>SetIdentity 関数
+ユーザーを設定します[Identity](class_mip_identity.md)エンジンに関連付けられています。
 
 パラメーター:  
-* **identity**: エンジンに関連付けられるユーザー ID
+* **identity**:ユーザー [Identity](class_mip_identity.md)エンジンに関連付けられています。
 
 
   
-### <a name="getclientdata"></a>GetClientData
+### <a name="getclientdata-function"></a>GetClientData 関数
 クライアントに指定されたカスタム データを取得します。
 
   
-**戻り値** クライアントに指定されたカスタム データ
+**返します**:クライアントで指定されたカスタム データ
   
-### <a name="setclientdata"></a>SetClientData
+### <a name="setclientdata-function"></a>SetClientData 関数
 クライアントに指定されたカスタム データを設定します。
 
 パラメーター:  
@@ -107,41 +107,41 @@ public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings
 
 
   
-### <a name="getlocale"></a>GetLocale
+### <a name="getlocale-function"></a>GetLocale 関数
 エンジン データが書き込まれるロケールを取得します。
 
   
-**戻り値**: エンジン データが書き込まれるロケール
+**返します**:ロケール データが書き込まれるエンジン
   
-### <a name="setcustomsettings"></a>SetCustomSettings
+### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 テストや実験に使用する名前と値のペアを設定します。
 
 パラメーター:  
-* **customSettings**: テストや実験に使用する名前と値のペア
+* **customsettings:**:名前/値ペアのテストや実験に使用
 
 
   
-### <a name="getcustomsettings"></a>GetCustomSettings
+### <a name="getcustomsettings-function"></a>GetCustomSettings 関数
 テストや実験に使用する名前と値のペアを取得します。
 
   
-**戻り値**: テストや実験に使用する名前と値のペア
+**返します**:名前/値ペアのテストや実験に使用
   
-### <a name="setsessionid"></a>SetSessionId
+### <a name="setsessionid-function"></a>SetSessionId 関数
 ログ/テレメトリの相関関係に使用する、エンジンのセッション ID を設定します。
 
 パラメーター:  
-* **sessionId**: ログ/テレメトリの相関関係に使用する、エンジンのセッション ID
+* **sessionId**:ログ/テレメトリの関連付けに使用される、エンジンのセッション ID
 
 
   
-### <a name="getsessionid"></a>GetSessionId
+### <a name="getsessionid-function"></a>GetSessionId 関数
 エンジンのセッション ID を取得します。
 
   
-**戻り値**: エンジンのセッション ID
+**返します**:エンジンのセッション ID
   
-### <a name="setcloudendpointbaseurl"></a>SetCloudEndpointBaseUrl
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
 必要に応じて、クラウド エンドポイントのベース URL を設定します。
 
 パラメーター:  
@@ -150,8 +150,8 @@ public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings
 
 ベース URL が指定されていない場合は、エンジン ID のドメインの DNS 参照によって決定されます。
   
-### <a name="getcloudendpointbaseurl"></a>GetCloudEndpointBaseUrl
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
 すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
 
   
-**戻り値**: ベース URL
+**返します**:ベース URL

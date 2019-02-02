@@ -1,37 +1,44 @@
 ---
-title: class mip RecommendLabelAction
-description: class mip RecommendLabelAction のリファレンス
+title: class mip::RecommendLabelAction
+description: Mip::recommendlabelaction クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b8e56daed967523b7580087d7bb934c1b2164320
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: ec1f82ab5951a5b7813fff2ebd5be6650a80203b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446007"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651345"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 このアクションの目的は、ユーザーにラベルを提案することです。 ユーザーが推奨ラベルを無視した後にこの呼び出しを抑制する場合、実行状態のサポートされるアクションを使用して行う必要があります。
   
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
- public const std::string& GetLabelId() const  |  提案されたラベル ID を取得します。
- public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
+public const std::string& GetLabelId() const  |  提案されたラベル ID を取得します。
+public const std::vector\<std::string\>& GetClassificationIds() const  |  一致し、このラベルを表示するが発生した分類 Id を取得します。
+public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="getlabelid"></a>GetLabelId
+### <a name="getlabelid-function"></a>GetLabelId 関数
 提案されたラベル ID を取得します。
 
   
-**戻り値**: ラベル ID。
+**返します**:ラベル ID
   
-### <a name="actiontype"></a>ActionType
+### <a name="getclassificationids-function"></a>GetClassificationIds 関数
+一致し、このラベルを表示するが発生した分類 Id を取得します。
+
+  
+**返します**:Const std::vector < std::string > & 分類ラベルを表示するを原因となった Id の一覧。
+  
+### <a name="gettype-function"></a>GetType 関数
 [アクション](class_mip_action.md)の種類を取得します。
 
   
-**戻り値**: ActionType: この基底クラスをキャストできる派生アクションの種類。
+**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
