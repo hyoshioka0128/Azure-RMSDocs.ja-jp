@@ -4,18 +4,18 @@ description: Azure Information Protection からクラウドベースの保護�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e1b7134beaccfe4032da700ebdab1682afce90b
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 1389c544cc1061c2cc211a90a33d6cc6ae25bf27
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393910"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067841"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Azure Information Protection の使用停止と非アクティブ化
 
@@ -32,13 +32,12 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 Azure Information Protection テナント キーがある場合は、オンプレミスで Rights Management (AD RMS) をデプロイし、信頼された発行ドメイン (TPD) としてテナント キーをインポートできます。 Azure Information Protection のデプロイは次の方法で使用停止できます。
 
-
-|                                                                                                          条件                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                               … 操作内容:                                                                                                                                                                                                                                                                                                                                                                                                               |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                すべてのユーザーに Rights Management を引き続き利用させたいが、Azure Information Protection ではなくオンプレミス ソリューションを利用する場合    →                                                 | この変更後に保護されたコンテンツを既存ユーザーが使用するときにユーザーをオンプレミス デプロイに移動させるには、[Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl) コマンドレットを使用します。 ユーザーが保護されたコンテンツを使用する際に、自動的に AD RMS インストールを利用するようになります。<br /><br />この変更の前に保護されたコンテンツを利用するには、Office 2016 または Office 2013 の **LicensingRedirection** レジストリ キーを利用し、オンプレミス展開にクライアントをリダイレクトします。 手順については、RMS クライアント展開ノートの[サービス検索セクション](./rms-client/client-deployment-notes.md)と「[Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」(Office レジストリ設定) の Office 2010 の **LicenseServerRedirection** レジストリ キーを参照してください。 |
-|                                                                                   Rights Management テクノロジの使用を完全に停止する場合                                                                                    |                 指定の管理者に[スーパー ユーザー権限](configure-super-users.md)を付与し、このユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールします。<br /><br />そうすることでこの管理者は、このクライアントの PowerShell モジュールを使用して、Azure Rights Management サービスで保護されたフォルダー内のファイルを一括復号できます。 ファイルは保護のない状態に戻り、Azure Information Protection や AD RMS など、Rights Management テクノロジなしで読めるようになります。 この PowerShell モジュールは、Azure Information Protection の Azure Rights Management サービスと AD RMS の両方で使用できるため、Azure Rights Management サービスを非アクティブ化する前または後、またはその組み合わせでファイルを復号できます。                 |
-| Azure Information Protection から Azure Rights Management サービスで保護されたファイルの一部を特定できない場合。 あるいは、読み取れなかった保護ファイルをすべてのユーザーが自動的に読み取れるようにする場合。    → |                                                                 RMS クライアント デプロイ ノートの[サービスの検出に関するセクション](./rms-client/client-deployment-notes.md)の説明に従って Office 2016 と Office 2013 の **LicensingRedirection** レジストリ キーを利用するか、または「[Office Registry Settings (Office レジストリ設定)](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」の説明に従って Office 2010 の **LicenseServerRedirection** レジストリ キーを利用して、すべてのクライアント コンピューターにレジストリ設定をデプロイします。<br /><br />さらに、「[Office Registry Settings (Office レジストリ設定)](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」の説明に従って、**DisableCreation** を **1** に設定して、ユーザーが新しいファイルを保護できないようにするための別のレジストリ設定をデプロイします。                                                                  |
-|                                                                             読み取れなかったファイルに、制御された手動回復サービスを実行する場合                                                                             |                                                                                                                                      データ回復グループの指定のユーザーに[スーパー ユーザー権限](configure-super-users.md)を付与し、それらのユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールして、標準ユーザーから要求されたときにそれらのユーザーがファイルの保護を解除できるようにします。<br /><br />すべてのコンピューターで、「[Office Registry Settings (Office レジストリ設定)](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」の説明に従って、**DisableCreation** を **1** に設定して、ユーザーが新しいファイルを保護できないようにするためのレジストリ設定をデプロイします。                                                                                                                                      |
+|条件|… 操作内容:|
+|----------------------------|--------------|
+|すべてのユーザーに Rights Management を引き続き利用させたいが、Azure Information Protection ではなくオンプレミス ソリューションを利用する場合    →|この変更後に保護されたコンテンツを既存ユーザーが使用するときにユーザーをオンプレミス デプロイに移動させるには、[Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl) コマンドレットを使用します。 ユーザーが保護されたコンテンツを使用する際に、自動的に AD RMS インストールを利用するようになります。<br /><br />この変更の前に保護されたコンテンツを利用するには、Office 365 アプリ、Office 2019、Office 2016、または Office 2013 の **LicensingRedirection** レジストリ キーを利用し、オンプレミス展開にクライアントをリダイレクトします。 手順については、RMS クライアント展開ノートの[サービス検索セクション](./rms-client/client-deployment-notes.md)と「[Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」(Office レジストリ設定) の Office 2010 の **LicenseServerRedirection** レジストリ キーを参照してください。|
+|Rights Management テクノロジの使用を完全に停止する場合|指定の管理者に[スーパー ユーザー権限](configure-super-users.md)を付与し、このユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールします。<br /><br />そうすることでこの管理者は、このクライアントの PowerShell モジュールを使用して、Azure Rights Management サービスで保護されたフォルダー内のファイルを一括復号できます。 ファイルは保護のない状態に戻り、Azure Information Protection や AD RMS などの、Rights Management テクノロジなしで読めるようになります。 この PowerShell モジュールは、Azure Information Protection の Azure Rights Management サービスと AD RMS の両方で使用できるため、Azure Rights Management サービスを非アクティブ化する前または後、またはその組み合わせでファイルを復号できます。|
+|Azure Information Protection から Azure Rights Management サービスで保護されたファイルの一部を特定できない場合。 あるいは、読み取れなかった保護ファイルをすべてのユーザーが自動的に読み取れるようにする場合。    →|RMS クライアント デプロイ ノートの[サービスの検出に関するセクション](./rms-client/client-deployment-notes.md)の説明に従って Office 365 アプリ、Office 2019、Office 2016、または Office 2013 の **LicensingRedirection** レジストリ キーを利用するか、または「[Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」 (Office レジストリ設定) の説明に従って Office 2010 の **LicenseServerRedirection** レジストリ キーを利用して、すべてのクライアント コンピューターにレジストリ設定をデプロイします。<br /><br />さらに、「[Office Registry Settings (Office レジストリ設定)](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」の説明に従って、**DisableCreation** を **1** に設定して、ユーザーが新しいファイルを保護できないようにするための別のレジストリ設定をデプロイします。|
+|読み取れなかったファイルに、制御された手動回復サービスを実行する場合|データ回復グループの指定のユーザーに[スーパー ユーザー権限](configure-super-users.md)を付与し、それらのユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールして、標準ユーザーから要求されたときにそれらのユーザーがファイルの保護を解除できるようにします。<br /><br />すべてのコンピューターで、「[Office Registry Settings (Office レジストリ設定)](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」の説明に従って、**DisableCreation** を **1** に設定して、ユーザーが新しいファイルを保護できないようにするためのレジストリ設定をデプロイします。|
 
 この表に記載された各手順の詳細については、以下のリソースをご覧ください。
 
@@ -80,8 +79,4 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、**[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
 
-情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、**[非アクティブ化]** が **[アクティブ化]** に変わります。 
-
-
-
-
+情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、**[非アクティブ化]** が **[アクティブ化]** に変わります。

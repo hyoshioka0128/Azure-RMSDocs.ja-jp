@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2018
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
-ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
+ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429901"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420794"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -119,7 +119,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 Exchange Online で Office 365 Message Encryption の新機能を使用する場合、新しい電子メール オプション (**暗号化のみ**) を利用できます。
 
-このオプションは、Exchange Online を使用するテナントが利用可能であり、Outlook on the web でメール フロー ルールの別の権利保護オプションとして、Office 365 の DLP アクションとして、および最小バージョン [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) の Office 365 ProPlus を使用している場合は Outlook から選択することができます。 詳細については、Office チームからのブログ投稿の [Office 365 Message Encryption の暗号化のみのロールアウト](https://aka.ms/omefeb2018)に関するお知らせを参照してください。
+このオプションは、Exchange Online を使用するテナントが利用可能であり、Outlook on the web でメール フロー ルールの別の権利保護オプションとして、Office 365 の DLP アクションとして、および Outlook (Office 365 ProPlus の最小バージョン [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4)、および [Azure RMS をサポートする Office 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合は、最小バージョン 1805) から選択することができます。 暗号化のみオプションの詳細については、Office チームからのブログ記事、[Office 365 Message Encryption の暗号化のみのロールアウト](https://aka.ms/omefeb2018)に関するお知らせを参照してください。
 
 このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 すると、受信者には**名前を付けて保存、エクスポート**と**フル コントロール**を除くすべての使用権限が割り当てられます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 
 

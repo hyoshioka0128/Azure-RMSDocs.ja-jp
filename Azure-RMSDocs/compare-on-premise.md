@@ -4,18 +4,18 @@ description: Active Directory Rights Management サービス (AD RMS) を理解�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 127b1c00a3b9e76da5b05032ef93287399cf0db7
-ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
+ms.openlocfilehash: ffaa0f341cbe9fd59a63c27b4114923049efcdc6
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411832"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146691"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
@@ -53,11 +53,11 @@ Azure Information Protection の主な違いの一部:
 |認証に Azure AD を使用する組織とのドキュメントに対して、安全なコラボレーションを自動的に有効にします。 これは、組織が内部的に、または他の組織と共有するドキュメントを保護できることを意味します。|組織外のドキュメントで安全にコラボレーションするには、2 つの組織間の直接のポイントツーポイント関係で、認証の信頼を明示的に定義する必要があります。 信頼されたユーザー ドメイン (TUD)、または Active Directory フェデレーション サービス (AD FS) を使用して作成したフェデレーションによる信頼のいずれかを構成する必要があります。|
 |認証の信頼関係がない場合、保護されたメール (必要に応じて、自動的に保護される Office ドキュメントの添付ファイルも一緒に) をユーザーに送信します。 ソーシャル プロバイダーによるフェデレーション、またはワンタイム パスコードと表示用の Web ブラウザーを使用すると、このシナリオが可能になります。|認証の信頼関係がない場合は、保護されたメールを送信しません。|
 |コンテンツのアクセスをユーザー自身の組織に制限する既定の保護テンプレートが用意されています。一方のテンプレートでは保護されたコンテンツの読み取り専用の表示が提供され、もう一方のテンプレートでは保護されたコンテンツの書き込みまたは変更アクセス許可が提供されます。<br /><br />ユーザーのサブセットのみが見ることのできる部門テンプレートを含む独自のカスタム テンプレートを作成することもできます。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。<br /><br />また、テンプレートで不十分な場合は、独自のアクセス許可セットを定義できます。|既定のテンプレートはありません。独自のテンプレートを作成してから配布する必要があります。 詳細については、「[AD RMS ポリシー テンプレートに関する考慮事項](https://go.microsoft.com/fwlink/?LinkId=154765)」をご覧ください。<br /><br />また、テンプレートで不十分な場合は、独自のアクセス許可セットを定義できます。|
-|サポートされる Microsoft Office の最小バージョンは Office 2010 であり、このバージョンでは [Azure Information Protection クライアント](./rms-client/aip-client.md)または RMS 共有アプリケーションが必要です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポート|サポートされる Microsoft Office の最小バージョンは、Office 2010 です。<br /><br />Microsoft Office for Mac:<br /><br />- Microsoft Office for Mac 2016: サポート|
-|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](./rms-client/aip-client.md)をサポートしています。 RMS 共有アプリでは、Mac コンピューターと Windows Phone が引き続きサポートされます。<br /><br />また、Azure Information Protection クライアントには次のものが含まれます。<br /><br />- 別組織のユーザーとの共有。<br /><br />- ユーザー用のドキュメント追跡サイト。ドキュメントを失効させる機能があります。|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](./rms-client/aip-client.md)をサポートしています。 RMS 共有アプリでは、Mac コンピューターと Windows Phone が引き続きサポートされます。 ただし、別組織のユーザーとの共有、ドキュメント追跡サイトとユーザーがドキュメントを失効させる機能はサポートされていません。|
+|サポートされる Microsoft Office の最小バージョンは Office 2010 であり、このバージョンでは [Azure Information Protection クライアント](./rms-client/aip-client.md)または RMS 共有アプリケーションが必要です。|サポートされる Microsoft Office の最小バージョンは、Office 2010 です。|
+|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](./rms-client/aip-client.md)をサポートしています。 RMS 共有アプリにより、Mac コンピューターは引き続きサポートされます。<br /><br />また、Azure Information Protection クライアントには次のものが含まれます。<br /><br />- 別組織のユーザーとの共有。<br /><br />- ユーザー用のドキュメント追跡サイト。ドキュメントを失効させる機能があります。|Windows 用、iOS 用、および Android 用 [Azure Information Protection クライアント](./rms-client/aip-client.md)をサポートしています。 RMS 共有アプリにより、Mac コンピューターは引き続きサポートされます。 ただし、別組織のユーザーとの共有、ドキュメント追跡サイトとユーザーがドキュメントを失効させる機能はサポートされていません。|
 |Azure Information Protection クライアントを使用すると、ほとんどの[ファイルの種類](./rms-client/client-admin-guide-file-types.md)を分類し、保護することができます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](./requirements-applications.md)」の表を参照してください。|Azure Information Protection クライアントを使用すると、ほとんどの[ファイルの種類](./rms-client/client-admin-guide-file-types.md)を保護することができます。<br /><br />他のアプリケーションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](./requirements-applications.md)」の表を参照してください。|
 |Windows クライアントのサポートされる最小バージョンは Windows 7 SP1 です。|Windows クライアントのサポートされる最小バージョンは Windows 7 SP1 です。|
-|モバイル デバイスのサポートには、Windows Phone、Android、iOS、および Windows RT が含まれます。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でもサポートされます。|モバイル デバイスでは、Windows Phone、Android、iOS、Windows RT などがサポートされます。また、[Active Directory Rights Management サービスのモバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)が必要です。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でサポートされます。|
+|モバイル デバイスのサポートには、Windows 10 Mobile、Android、および iOS が含まれます。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でもサポートされます。|モバイル デバイスでは、Windows 10 Mobile、Android、iOS などがサポートされます。また、[Active Directory Rights Management サービスのモバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)が必要です。<br /><br />Exchange ActiveSync IRM を使用する電子メール サポートが、このプロトコルをサポートするすべてのモバイル デバイス プラットフォーム上でサポートされます。|
 |コンピューターとモバイル デバイス用の多要素認証 (MFA) をサポートします。<br /><br />詳細については、「[多要素認証 (MFA) と Azure RMS](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection)」を参照してください。|IIS が証明書を要求するように構成されている場合は、スマート カード認証をサポートします。|
 |追加の構成なしで Cryptographic Mode 2 をサポートします。これによりキー長と暗号化アルゴリズムのセキュリティが強化されます。<br /><br />詳細については、この記事の「[署名と暗号化のための暗号化制御](#cryptographic-controls-for-signing-and-encryption)」セクションと、「[AD RMS の暗号化モード](https://go.microsoft.com/fwlink/?LinkId=266659)」をご覧ください。|既定で Cryptographic Mode 1 をサポートし、セキュリティを強化するために Cryptographic Mode 2 をサポートするには追加の構成が必要です。<br /><br />詳細については、この記事の「[署名と暗号化のための暗号化制御](#cryptographic-controls-for-signing-and-encryption)」セクションと、「[AD RMS の暗号化モード](https://go.microsoft.com/fwlink/?LinkId=266659)」をご覧ください。|
 |AD RMS から、および必要な場合は AD RMS への、移行のサポート:<br /><br />- [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)<br /><br />- [Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)|Azure Information Protection からの移行と Azure Information Protection への移行をサポートします。<br /><br />- [Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)<br /><br />- [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)|

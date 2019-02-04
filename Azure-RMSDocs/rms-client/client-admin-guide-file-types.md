@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントを担�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2019
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d4285b77e0ccbfd21b4ed536f8c002ffa8d2a28
-ms.sourcegitcommit: fb0a9593f1e69306040fabda9bc9ad4977b21be8
+ms.openlocfilehash: 9ba401db68ceb3e37db9fc77d5721b9e9a235d23
+ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54751538"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55088141"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -160,15 +160,15 @@ Azure Information Protection クライアントがファイルを保護する方
 
     - 32 ビット版の Windows の場合:**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - 64 ビット版の Windows の場合:**HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
+    - 64 ビット版の Windows の場合:**HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
 2. 新しく追加したキー (例: HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) の中に、新しい文字列値 (REG_SZ) を **Encryption** という名前で作成し、データ値は **Pfile** とします。
 
     この設定により、Azure Information Protection クライアントは汎用的な保護を適用します。
 
-これら 2 つの設定により、Azure Information Protection クライアントは、ファイル名拡張子を持つすべてのファイルに汎用的な保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つのレジストリ編集を行う必要があります。
+これら 2 つの設定により、Azure Information Protection クライアントは、ファイル名拡張子を持つすべてのファイルに汎用的な保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つ (32 ビット Windows の場合) または 6 つ (64 ビット Windows の場合) のレジストリ編集を行う必要があります。
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (32 ビット版 Windows) または **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (64 ビット版 Windows) の場合:ファイル名拡張子を名前として持つ新しいキーを追加します (前にピリオドは付けません)。
+1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合):ファイル名拡張子を名前として持つ新しいキーを追加します (前にピリオドは付けません)。
 
     たとえば、.docx というファイル名拡張子を持つファイルの場合、 **DOCX**という名前のキーを作成します。
 

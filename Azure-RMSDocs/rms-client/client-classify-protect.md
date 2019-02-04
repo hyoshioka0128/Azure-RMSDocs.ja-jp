@@ -4,18 +4,18 @@ description: ドキュメントや電子メールを分類して保護する方�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: e0404f21ae3fbd5a4e9be86c9372645a4a425b38
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393468"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067790"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド:Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
@@ -77,7 +77,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 - 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、**[保護]** > **[ヘルプとフィードバック]** の順にクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
     
-    バージョン 1805、ビルド 9330.2078 以降の Office 2016 アプリがあり、アカウントに Azure Rights Management (Azure Information Protection for Office 365 とも呼ばれる) のライセンスが割り当てられている場合、Office Professional Plus は必要ありません。
+    ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の Office アプリがあれば、Office Professional Plus は必要ありません。
 
 - 自分のアカウントを含まない範囲のポリシーのラベルである可能性があります。 ヘルプ デスクまたは管理者に問い合わせてください。
 

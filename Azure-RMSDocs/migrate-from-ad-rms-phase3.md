@@ -4,18 +4,18 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/11/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5aa86c3806dd23787d2661b4a4ac2e6850d1e907
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 659f42f71ef49cd1e632c0ac46416d51b9c8cfb1
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393888"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067623"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
@@ -25,15 +25,15 @@ AD RMS から Azure Information Protection への移行フェーズ 3 では、�
 
 ## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>手順 7. Azure Information Protection を使用するように Windows コンピューターを再構成する
 
-Office 2016 のクイック実行デスクトップ アプリを使用する Windows コンピューターの場合
+Office 365 アプリ、Office 2019、または Office 2016 のクイック実行デスクトップ アプリを使用する Windows コンピューターの場合:
 
 - DNS リダイレクトを使用して、Azure Information Protection を使用するようにこれらのクライアントを再構成することができます。 これが最も簡単なため、クライアントの移行にお勧めの方法です。 ただし、この方法は Windows コンピューター用の Office 2016 (またはそれ以降) のクイック実行デスクトップ アプリに制限されます。
     
     この方法では、新しい SRV レコードを作成して、AD RMS の発行エンドポイントのユーザーに NTFS の拒否のアクセス許可を設定する必要があります。
 
-- Office 2016 のクイック実行を使用しない Windows コンピューターの場合
+- Office 2019 または Office 2016 のクイック実行を使用しない Windows コンピューターの場合:
     
-    DNS リダイレクトは使用できません。代わりに、レジストリの編集を使用する必要があります。 Office 2016 とその他のバージョンの Office が混在している場合は、すべての Windows コンピューターでこの単一の方法を使用するか、DNS リダイレクトとレジストリの編集を組み合わせて使用します。 
+    DNS リダイレクトは使用できません。代わりに、レジストリの編集を使用する必要があります。 DNS リダイレクトを使用できる Office のバージョンと使用できない Office のバージョンが混在している場合は、すべての Windows コンピューターでこの単一の方法を使用することも、DNS リダイレクトとレジストリの編集を組み合わせて使用することもできます。 
     
     ダウンロードできるスクリプトを編集およびデプロイすると、レジストリの変更が簡単になります。 
 
@@ -41,7 +41,7 @@ Windows クライアントを再構成する方法の詳細については、次
 
 ## <a name="client-reconfiguration-by-using-dns-redirection"></a>DNS リダイレクトを使用するクライアントの再構成
 
-この方法は、Office 2016 (またはそれ以降) のクイック実行デスクトップ アプリを実行する Windows クライアントにのみ適しています。 
+この方法は、Office 365 アプリおよび Office 2016 (またはそれ以降) のクイック実行デスクトップ アプリを実行する Windows クライアントにのみ適しています。 
 
 1. 次のような形式を使用して DNS SRV レコードを作成します。
     
@@ -67,7 +67,7 @@ Windows クライアントを再構成する方法の詳細については、次
     |**ポート番号**|80|  
     |**このサービスを提供しているホスト**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
-2. AD RMS の発行エンドポイントの Office 2016 ユーザーに拒否のアクセス許可を設定します。
+2. Office 365 アプリまたは Office 2016 (またはそれ以降) を実行しているユーザーに対し、AD RMS の発行エンドポイントで拒否のアクセス許可を設定します。
 
     」を参照します。 クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
 
@@ -77,18 +77,18 @@ Windows クライアントを再構成する方法の詳細については、次
 
     d. **[licensing.asmx の権限]** ダイアログ ボックスで、すべてのユーザーにリダイレクトを設定するために **[ユーザー]** を選択するか、**[追加]** を選択してリダイレクトするユーザーを含むグループを指定します。
     
-    すべてのユーザーが Office 2016 を使用している場合でも、最初に段階的な移行用のユーザーのサブセットを指定する可能性があります。
+    すべてのユーザーが DNS リダイレクトをサポートする Office のバージョンを使用している場合でも、段階的な移行のために、最初にユーザーのサブセットを指定したい場合があります。
     
     e. 選択したグループの **[読み取りと実行]** と **[読み取り]** のアクセス許可に **[拒否]** を選択して、**[OK]** を 2 回クリックします。
 
-    f. この構成が想定どおりに動作することを確認するには、ブラウザーから直接 licensing.asmx ファイルへの接続を試みます。 次のエラー メッセージが表示されます。これにより、Office 2016 を実行しているクライアントが SRV レコードの検索を開始します。
+    f. この構成が想定どおりに動作することを確認するには、ブラウザーから直接 licensing.asmx ファイルへの接続を試みます。 次のエラー メッセージが表示されます。これにより、Office 365 アプリ、Office 2019、または Office 2016 を実行しているクライアントが SRV レコードの検索を開始します。
     
     **エラー メッセージ 401.3: 指定した資格情報を使用して、このディレクトリまたはページを表示するアクセス許可がありません (アクセス制御リストにより、アクセスが拒否されました)。**
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>レジストリの編集を使用するクライアントの再構成
 
-この方法はすべての Windows クライアントに適用され、Office 2016 を実行せずに、以前のバージョンを実行している場合に使用されます。 この方法では、2 つの移行スクリプトを使って AD RMS クライアントを再構成します。
+この方法はすべての Windows クライアントに適用され、Office 365 アプリ、Office 2019、 または Office 2016 を実行せずに、以前のバージョンを実行している場合に使用されます。 この方法では、2 つの移行スクリプトを使って AD RMS クライアントを再構成します。
 
 - Migrate-Client.cmd
 

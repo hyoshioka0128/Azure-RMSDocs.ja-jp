@@ -4,18 +4,18 @@ description: Rights Management サービス クライアント (RMS クライア
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 36f8452525f614b4cca1bed15d4d63b5e4ae33f0
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: ff0b5dd04673b7b8f4e1d458d1f02e66eee908d9
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394240"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067773"
 ---
 # <a name="rms-client-deployment-notes"></a>RMS クライアントのデプロイに関する注意事項
 
@@ -180,7 +180,7 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 >  
 > - ユーザーが Office アプリケーションからサインインを開始すると、使用する Azure Information Protection テナントの識別に認証のユーザー名 (とドメイン) が使用されます。 この場合、レジストリ設定は不要であり、SCP は確認されません。
 > 
-> - Office 2016 のクイック実行デスクトップ アプリ用に [DNS のリダイレクト](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) を構成した場合、以前に検出された AD RMS クラスターへのアクセスが拒否されることで、RMS クライアントは Azure Rights Management サービスを検出します。 この拒否アクションにより、クライアントは SRV レコードを検索し、クライアントをテナントの Azure Rights Management サービスにリダイレクトします。 また、この SRV レコードを使用すると、AD RMS クラスターによって保護されている電子メールを Exchange Online で復号化することができます。 
+> - Office のクイック実行デスクトップ アプリ用に [DNS リダイレクト](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)を構成した場合、以前に検出された AD RMS クラスターへのアクセスが拒否されることで、RMS クライアントは Azure Rights Management サービスを検出します。 この拒否アクションにより、クライアントは SRV レコードを検索し、クライアントをテナントの Azure Rights Management サービスにリダイレクトします。 また、この SRV レコードを使用すると、AD RMS クラスターによって保護されている電子メールを Exchange Online で復号化することができます。 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>AD RMS のみ: Active Directory を使用してサーバー側のサービスの検出を有効にする
 十分な権限を持つアカウントの場合 (Enterprise Admins および AD RMS サーバーのローカルの管理者)、AD RMS ルート クラスター サーバーをインストールする際にサービス接続ポイント (SCP) を自動的に登録することができます。 フォレスト内に SCP が既に存在する場合、新規 SCP を登録する前に、まず既存の SCP を削除する必要があります。

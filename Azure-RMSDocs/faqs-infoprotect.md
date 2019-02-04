@@ -4,18 +4,18 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: ac127067999876d82434f3aab9e744a2eb174641
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 706989f3461e8df540d351aed7e21d331fc8e307
+ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173504"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55088090"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -36,8 +36,9 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 > [!NOTE]
 > **プレビュー段階**:
 > - 分類とラベル付け用の中央レポート。 詳細については、「[Central reporting for Azure Information Protection](reports-aip.md)」 (Azure Information Protection の中央レポート機能) を参照してください。
-> - [Office Insider プログラム](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16)にオプトインしているお客様のための、モバイル デバイス (iOS および Android) および Mac コンピューター用の Office アプリでのラベル付け機能。 詳細については、「[Office 内の文書やメールに機密ラベルを適用する](https://aka.ms/officemipdocs)」を参照してください。
-
+>
+>**最近リリースされた機能**:
+> - モバイル デバイス (iOS および Android) および Mac コンピューター用の Office アプリに組み込まれたラベル付け機能。 詳細については、「[Office 内の文書やメールに機密ラベルを適用する](https://aka.ms/officemipdocs)」を参照してください。
 
 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com/)にアクセスし、新機能のご要望をお知らせください。また、リクエストへの投票も受け付けています。
 

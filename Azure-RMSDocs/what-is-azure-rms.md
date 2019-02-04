@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba44c23b56c2832268f0ed6df122a347c9a8fdf3
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 0d1cae062602897fce6d36078cfac3b164c7d614
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218461"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146725"
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
 
@@ -30,7 +30,7 @@ Azure Rights Management (多くの場合は Azure RMS に省略して表現) と
 
 ただし、権限を持つ人物とサービス (検索やインデックス作成など) が、保護されているデータの読み取りと検査を引き続き実行できることが非常に重要です。 ピアツーピアの暗号化を使用する他の情報保護ソリューションでは、このような機能を簡単に達成できません。 この機能は "データに対する推論" と呼ばれ、組織のデータの管理を維持する上で重要な要素です。
 
-次の図では、このサービスがオンプレミスのサーバーやサービスに加えて、Office 365 にどのように保護ソリューションを提供するのかを示します。 また、エンド ユーザーの間でよく使用される Windows、Mac OS、iOS、Android Windows Phone のデバイスでも保護がサポートされます。
+次の図では、このサービスがオンプレミスのサーバーやサービスに加えて、Office 365 にどのように保護ソリューションを提供するのかを示します。 また、エンド ユーザーの間でよく使用される Windows、macOS、iOS、Android を実行するデバイスでも保護がサポートされます。
 
 
 ![Azure RMS のしくみ](./media/AzRMS_elements.png)

@@ -4,18 +4,18 @@ description: Azure Information Protection によって保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: cc62934195916f5db26e7a328957c7fb09f10a57
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393965"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067595"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -31,7 +31,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 - **Azure Active Directory アカウントのないユーザーの場合**: Microsoft アカウントで使用されるメール アドレスを指定します。 既存のアカウントを使用することもできますし、保護されたドキュメントを開くときにアカウントを作成することもできます。 
     
-    Microsoft アカウントを使ってドキュメントを開くには、Office 2016 クイック実行を使用する必要があります。 他のエディションやバージョンの Office では、Office の保護されたドキュメントを Microsoft アカウントで開く機能は、まだサポートされていません。
+    Microsoft アカウントを使ってドキュメントを開くには、Office 365 アプリ (クイック実行) を使用する必要があります。 他のエディションやバージョンの Office では、Office の保護されたドキュメントを Microsoft アカウントで開く機能は、まだサポートされていません。
 
 - **認証されたユーザーの場合**: 保護されたドキュメントへのアクセスを制御する必要がなく、ユーザーが認証されていれば、このオプションが適しています。 認証は、Azure AD、Microsoft アカウントの使用、コンテンツが Office 365 メッセージの暗号化の新機能で保護されている場合はフェデレーション ソーシャル プロバイダーやワンタイム パスコードなど、さまざまな方法で行われます。 
 
@@ -140,7 +140,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 ユーザー アカウント、電子メールが有効なグループ、すべてのメンバーがサポートされています。 ユーザー アカウント、および電子メールが有効なグループには、ゲスト アカウントが含まれる場合があります。 すべてのメンバーには、ゲスト アカウントは含まれません。
 
 ###### <a name="footnote-2"></a>脚注 2
-現在サポートされているのは、Office 2016 クイック実行だけです。
+現在サポートされているのは、Office 365 アプリ (クイック実行) だけです。
 
 
 

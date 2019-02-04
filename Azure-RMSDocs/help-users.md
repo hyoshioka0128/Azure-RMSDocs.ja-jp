@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898802"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067671"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -73,7 +73,7 @@ Azure Information Protection クライアントを使用すると、ユーザー
 この Windows コンピューター用クライアントを使用する手順については、「[Azure Information Protection クライアント ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
 
 
-## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Office 365、Office 2016、または Office 2013 での情報保護の使用
+## <a name="using-information-protection-with-office365-office-2019-office-2016-or-office2013"></a>Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用
 Azure Rights Management サービスを使用していて、Azure Information Protection クライアントをインストールしていない場合、Office デスクトップ アプリに Azure Information Protection バーが表示されません。 リボンには **[保護]** ボタンが表示されず、エクスプローラーに **[分類して保護する]** も表示されません。 これらの追加によって、ユーザーはドキュメントと電子メールを簡単に保護できます。 これらのユーザーについては、次のような手順に従う必要があります。
 
 > [!TIP]
@@ -112,11 +112,11 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 #### <a name="to-protect-an-email-message-using-outlook-on-the-web"></a>Outlook on the web を使用して電子メール メッセージを保護するには
 
-1.  Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
+1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 次に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 次に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
 
-3.  メッセージを送信します。
+3. メッセージを送信します。
 
 保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メール メッセージを参照する権限が与えられると、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)でメッセージが開きます。 
 

@@ -4,24 +4,24 @@ description: 統合ラベル付けをサポートしているクライアント�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/17/20198
+ms.date: 01/26/2019
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 221b503fa3621e51c4822a6ad5a6d08fae4f1bad
-ms.sourcegitcommit: 8dec864bf25c7da62b9e0f628f1bf673c81c15ae
+ms.openlocfilehash: 58a563e3d1f43dd312c0d4c9d1ffdf612b1c8d12
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54356013"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231040"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> この機能はプレビュー段階にあり、やはりプレビュー段階にある新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされており、作成し、管理するラベルは複数のクライアントやサービスで使用できます。
+> この機能はプレビュー段階にあり、新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされており、作成し、管理するラベルは複数のクライアントやサービスで使用できます。
 
 Office 365 セキュリティ/コンプライアンス センターで使用できるようにする場合、ラベルを移行します。Office 365 セキュリティ/コンプライアンス センターでは、[統合ラベル付けをサポートしているクライアント](#clients-that-support-unified-labeling)でラベルを公開し、ダウンロードできます。 Azure Information Protection クライアントでは引き続き、Azure portal から Azure Information Protection ポリシーでラベルがダウンロードされます。 
 
@@ -112,7 +112,7 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 - [Windows 用 Azure Information Protection 統合ラベル付けクライアント](./rms-client/unifiedlabelingclient-version-release-history.md) - プレビュー
 
-- Office Insiders プログラムからのアプリ。 詳細については、Office ドキュメントの「[現在、機能はどこで入手できますか?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable)」セクションを参照してください。
+- 可用性の段階が異なる Office からのアプリ。 詳細については、Office ドキュメントの「[Office 内の文書やメールに機密ラベルを適用する](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)」から「**現在、機能はどこで入手できますか?**」のセクションを参照してください。
     
 - [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference) を使用するソフトウェア ベンダー/開発者からのクライアント。
 

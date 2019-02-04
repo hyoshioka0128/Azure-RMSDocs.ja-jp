@@ -4,16 +4,16 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: d1613d30dbb59395254ca5bd56222c15fcb75058
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 12f199f6bae08a2b57cbdae14b83175679446c1c
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393570"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067722"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -65,8 +65,8 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 
 |プラットフォーム|アプリケーション|サポート|
 |----------------------|----------|-----------|
-|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護:はい<br /><br />消費: はい|
-|Windows|Azure Information Protection クライアントと Office 2016 および Office 2013 <br /><br />- Outlook|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Outlook|保護:はい<br /><br />消費: はい|
 |Windows|Azure Information Protection クライアントとファイル エクスプローラー|保護:はい <br /><br />消費: はい|
 |Windows|Azure Information Protection ビューアー|保護:適用できません<br /><br />消費: はい|
 |Windows|Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット|保護:はい<br /><br />消費: はい|
@@ -148,7 +148,7 @@ Azure Information Protection ラベルに HYOK 保護を適用するには、AD 
 
 - HYOK で保護されているドキュメントや電子メールを組織外のユーザーと共有する場合: AD RMS は、信頼されたユーザー ドメイン (TUD) または Active Directory フェデレーション サービス (AD FS) を使用して作成したフェデレーションによる信頼関係を使用して、他の組織との直接のポイントツーポイントの関係で明示的に定義された信頼関係に対して構成されます。
 
-- ユーザーは、Windows 7 Service Pack 1 以降で実行されている Office 2016 Professional Plus または Office 2013 Professional Plus Service Pack 1 のバージョンの Office を持っている。 ただし、このシナリオでは、Office 2010 と Office 2007 は、サポートされません。
+- ユーザーは、Information Rights Management (IRM) をサポートしている Office のバージョンと、Windows 7 Service Pack 1 以降で実行されている Office 2013 Professional Plus Service Pack 1 以降を持っている。 ただし、このシナリオでは、Office 2010 と Office 2007 は、サポートされません。
     
     - Office 2016 の Microsoft インストーラー (.msi) ベースのエディションの場合: [2018 年 3 月 6 日にリリースされた Microsoft Office 2016 の更新プログラム 4018295](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295) をインストールしておきます。
 

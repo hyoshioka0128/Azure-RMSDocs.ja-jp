@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ef9836a6e3b651986642d2c93128ea0f6b1e6112
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 18c5028bf69f756b79328a26ce967f5e73492d2e
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314851"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146793"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -44,7 +44,7 @@ Azure Information Protection では、組織の文書や電子メールを分類
 Azure Information Protection で保護されたコンテンツにアクセスするには、有効なユーザー名とパスワードが必要です。 Azure Information Protection でデータを保護するしくみについての詳細は、「[データのセキュリティ保護における Azure Information Protection の役割](/enterprise-mobility-security/solutions/azure-information-protection-securing-data)」をご覧ください。 
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。
-「[Azure Information Protection の価格](https://azure.microsoft.com/en-us/pricing/details/information-protection)」ページのサブスクリプション情報と機能一覧を参照してください。 
+「[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)」ページのサブスクリプション情報と機能一覧を参照してください。 
 
 Azure Rights Management データ保護を含む Office 365 サブスクリプションをお持ちの場合は、[Azure Information Protection ライセンス データシート](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)をダウンロードしてください。このデータシートにはライセンスに関してよく寄せられる質問もいくつか含まれています。
 
@@ -122,7 +122,7 @@ Azure Information Protection で保護されているドキュメントをユー
 
 このようなアラートは、データ関連の高度な攻撃や、環境内部の脅威を検出するのに役立ちます。 これらのアラートでは、保護されたデータにアクセスするユーザーの動作をプロファイルするために機械学習が使用されます。 
 
-Azure Information Protection のアラートにアクセスするには、[Microsoft Graph Security API を使用します](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview)。または、Azure Monitor を使用して、Splunk や IBM Qradar などの SIEM ソリューションに[アラートをストリームする](https://developer.microsoft.com/en-us/graph/docs/concepts/security_siemintegration)ことができます。
+Azure Information Protection のアラートにアクセスするには、[Microsoft Graph Security API を使用します](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/security-api-overview)。または、Azure Monitor を使用して、Splunk や IBM Qradar などの SIEM ソリューションに[アラートをストリームする](https://developer.microsoft.com/graph/docs/concepts/security_siemintegration)ことができます。
 
 Microsoft Graph Security API について詳しくは、「[Microsoft Graph Security API の概要](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview)」をご覧ください。
 
@@ -195,7 +195,7 @@ Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/�
 
 - [iOS 用と Android 用の Azure Information Protection の FAQ](./rms-client/mobile-app-faq.md)
 
-- [Mac コンピューターと Windows Phone 用 RMS 共有アプリの FAQ](https://technet.microsoft.com/dn451248)
+- [Mac コンピューター用 RMS 共有アプリの FAQ](https://technet.microsoft.com/dn451248)
 
 - [Windows 用 Rights Management 共有アプリケーションの FAQ](https://technet.microsoft.com/dn467883)
 

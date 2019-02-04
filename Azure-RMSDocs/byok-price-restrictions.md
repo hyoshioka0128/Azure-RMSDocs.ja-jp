@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68e479eb7f19f60d6d68b913eae46dd287b5a04f
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ea82ec3aacb8abbd4b9f15d0150bf7ff535e57db
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305150"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067987"
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK の料金と制限事項
 
@@ -52,7 +52,7 @@ Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/ke
 
 ## <a name="restrictions-when-using-byok"></a>BYOK を使用する場合の制限
 
-BYOK と使用状況のログ記録は、Azure Information Protection が使用する Azure Rights Management サービスと統合されたすべてのアプリケーションでシームレスに利用できます。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure Rights Management サービスと連携するオンプレミス サーバー、Office 2016 および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure Rights Management サービスのリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
+BYOK と使用状況のログ記録は、Azure Information Protection が使用する Azure Rights Management サービスと統合されたすべてのアプリケーションでシームレスに利用できます。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure Rights Management サービスと連携するオンプレミス サーバー、Office 2019、Office 2016、および Office 2013 などのクライアント アプリケーションが含まれます。 どのアプリケーションが Azure Rights Management サービスのリクエストを作成するかにかかわらず、キー利用状況ログを取得できます。
 
 Azure RMS から信頼された発行ドメイン (TPD) をインポートし、Exchange Online IRM を前に有効にしている場合、「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) の手順に従い、Azure Information Protection の BYOK に対応している Exchange Online の新機能を有効にします。
 

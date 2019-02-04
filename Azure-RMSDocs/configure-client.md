@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3edcaf6b7751996a6d162eeec7cfc8ba3e352940
-ms.sourcegitcommit: 2daa75cda8475028a3dac83d70505fcfccef42a1
+ms.openlocfilehash: 10fc4c158cd4669b67c28e4968b0a3c4e7b889ad
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361785"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146844"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントでのインストールと構成
 
@@ -35,7 +35,7 @@ Azure Information Protection クライアントと Office アプリケーショ�
 これらの一般的なモバイル プラットフォーム用の Azure Information Protection クライアントをインストールするには、[Microsoft Azure Information Protection ページ](https://go.microsoft.com/fwlink/?LinkId=303970)のリンクを使用して関連するアプリをダウンロードできます。 構成は必要ありません。
 
 > [!NOTE]
-> Mac コンピューターと Windows Phone の場合、このページのリンクでモバイル デバイス用の RMS 共有アプリをダウンロードします。 現在のところ、これらのデバイスは Azure Information Protection クライアントをサポートしていません。
+> Mac コンピューターの場合、このページのリンクでモバイル デバイス用の RMS 共有アプリをダウンロードします。 これらのコンピューターは Azure Information Protection クライアントをサポートしていません。
 
 **Microsoft Intune を所有している場合**: Azure Information Protection アプリは Microsoft Intune App Software Development Kit を使用して構築されているため、Intune で iOS デバイスや Android デバイスを登録していると、これらのデバイス用の Azure Information Protection アプリをデプロイおよび管理できます。
 

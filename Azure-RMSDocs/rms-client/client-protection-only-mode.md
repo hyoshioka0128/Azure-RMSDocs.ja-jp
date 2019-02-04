@@ -4,18 +4,18 @@ description: 保護のみモードで Azure Information Protection クライア�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2f73f8bf107aaebe0e87588c410e1e7f66093ef7
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: dedacab4509b88f300739bd92012debedfaacf7d
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305099"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067970"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントの保護のみモード
 
@@ -55,7 +55,7 @@ Azure Information Protection クライアントにドキュメントや電子メ
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>保護のみモードでサポートされるタスク
 
-- Office アプリ内からドキュメントと電子メールを保護する (または保護を解除する) には、Office Information Rights Management (IRM) 機能を使用します。次に例を示します。**[ファイル]** > **[情報]** > **[文書の保護]** > **[アクセスの制限]** をクリックします。 詳細については、「[Office 365、Office 2016、または Office 2013 での情報保護の使用](../help-users.md)」を参照してください。
+- Office アプリ内からドキュメントと電子メールを保護する (または保護を解除する) には、Office Information Rights Management (IRM) 機能を使用します。次に例を示します。**[ファイル]** > **[情報]** > **[文書の保護]** > **[アクセスの制限]** をクリックします。 詳細については、「[Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013)」を参照してください。
 
 - ファイルを保護する (または保護を解除する) には、エクスプローラーを使用します。単一ファイル、複数ファイル、またはフォルダーを右クリックし、**[分類して保護する]** を選択します。 管理者が構成した保護を適用するには、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスの **[テンプレートの選択]** をクリックし、使用できるテンプレートのいずれかを選択します。
 

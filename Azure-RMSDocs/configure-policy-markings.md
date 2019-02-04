@@ -4,20 +4,20 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 3f94e9b1993573e8fe392dc75bcf999452bab626
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 549bf29cc6c4c70dd91d6e36ad3fbe26baa69535
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023976"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067739"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。 
 
@@ -27,9 +27,9 @@ ms.locfileid: "53023976"
 
 - 透かしは、Word、Excel、および PowerPoint に適用されます。
 
-    - Excel: 透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
+    - Excel:透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
     
-    - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
+    - PowerPoint:透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
 
 - 透かしと、Word、Excel、PowerPoint のヘッダーおよびフッターでは、複数の行がサポートされています。 Outlook で適用されるラベルのヘッダーまたはフッターに対して複数の行を指定した場合、その行は連結されます。 このシナリオでは、[Word、Excel、PowerPoint、Outlook にさまざまな視覚的なマーキングを設定する](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成の使用を検討します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "53023976"
 
 - エクスプローラー、PowerShell、Azure Information Protection スキャナーを使用してドキュメントにラベルを付けると、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに、Azure Information Protection クライアントによって適用されます。
     
-    例外は、SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office 2016 で[自動保存](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)を使用している場合です。自動保存が有効な場合、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)でバックグラウンドで連続的に実行する分類を有効にします。 
+    例外は、SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office アプリで[自動保存](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)を使用している場合です。自動保存が有効な場合、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)で、バックグラウンドで連続的に実行される分類を有効にしない限り、視覚的なマーキングは適用されません。 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 
@@ -69,11 +69,11 @@ ms.locfileid: "53023976"
 
 3. **[ラベル]** ブレードの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、使用する視覚的なマーキングの設定を構成した後、**[保存]** をクリックします。
     
-    - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
+    - ヘッダーを構成するには:**[Documents with this label have a header]\(このラベルを持つドキュメントにヘッダーを設定する\)** で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
     
-    - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
+    - フッターを構成するには:**[Documents with this label have a footer]\(このラベルを持つドキュメントにフッターを設定する\)** で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
     
-    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
+    - 透かしを構成するには:**[Documents with this label have a watermark]\(このラベルを持つドキュメントに透かしを設定する\)** で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
     
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
@@ -82,9 +82,9 @@ ms.locfileid: "53023976"
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}`: 選択したラベル。 例: General
+- `${Item.Label}`: 選択したラベル。 次に例を示します。全般
 
-- `${Item.Name}`: ファイル名または電子メールの件名。 例: JulySales.docx
+- `${Item.Name}`: ファイル名または電子メールの件名。 次に例を示します。JulySales.docx
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
@@ -92,9 +92,9 @@ ms.locfileid: "53023976"
 
 - `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
+- `${Event.DateTime}`: 選択したラベルが設定された日時。 次に例を示します。8/16/2016 1:30 PM
 
-例: **General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
+例:**General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification:General** になります。
 
 >[!TIP]
 > また、ドキュメントやテンプレートに[ラベル名を挿入するフィールド コード](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)も使用します。
