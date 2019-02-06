@@ -4,32 +4,33 @@ description: この記事は、Python を使用して OAuth2 アクセス トー
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
-ms.openlocfilehash: 4d6db3d2bd2e2b980770027e07104f7528264e66
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 423ae80df11dcf8031f845fdabf881606daf89c7
+ms.sourcegitcommit: fa7551060aaecc62d0c1f9179dd07f035d86651f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223886"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742169"
 ---
 # <a name="acquire-an-access-token-python"></a>アクセス トークンを取得する (Python)
 
-この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 これは、認証委任の実装で必要になります。
+この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 有効な OAuth2 アクセス トークンは、認証のデリゲートの実装で必要です。
 
-このコードは運用環境で使用するためのものではありませんが、開発に、また、認証概念を理解するために使用できます。 このサンプルは、クロス プラットフォームです。
+## <a name="prerequisites"></a>前提条件
 
-## <a name="prerequisites"></a>必要条件
-
-以下のサンプルを実行するには、次を完了する必要があります。
+以下のサンプルを実行します。
 
 - Python 2.7 をインストールします。
 - プロジェクトに utils.h/cpp を実装します。 
-- ビルド時にバイナリと同じディレクトリにあるよう、auth.py をプロジェクトに追加します。
+- Auth.py はプロジェクトに追加する必要があり、ビルドのバイナリと同じディレクトリに存在します。
+- 完全な[(MIP) SDK のセットアップと構成](setup-configure-mip.md)します。 その他のタスク間で、Azure Active Directory (Azure AD) テナント、クライアント アプリケーションを登録します。 Azure AD では、これは、トークンの取得ロジックで使用すると、クライアント ID とも呼ばれる、アプリケーション ID を提供します。
+
+このコードは、運用環境で使用目的としています。 開発と認証の概念についてのみ使用できます。 このサンプルは、クロス プラットフォームです。
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-単純な認証の例では、パラメーターは取らず、ハード コーティングされたトークン値を返す、単純な `AcquireToken()` 関数を試しました。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
+単純な認証の例で、単純なお見せしました`AcquireToken()`関数パラメーターがありませんでしたし、ハード コーディングされたトークンの値が返されます。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
 
 ### <a name="authh"></a>auth.h
 
@@ -46,7 +47,7 @@ namespace sample {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
-        const std::string& clientId, //The AAD client ID of your application.
+        const std::string& clientId, //The Azure AD client ID (also known as Application ID) of your application.
         const std::string& resource, //The resource URL for which an OAuth2 token is required. Provided by challenge object.
         const std::string& authority); //The authentication authority endpoint. Provided by challenge object.
     }
@@ -104,7 +105,8 @@ namespace sample {
     cmd += " -r ";
     cmd += resource;
     cmd += " -c ";
-    cmd += (!clientId.empty() ? clientId : "0edbblll-8773-44de-b87c-b8c6276d41eb");
+    // Replace <application-id> with the Application ID provided during your Azure AD application registration.
+    cmd += (!clientId.empty() ? clientId : "<application-id>");
 
     string result = sample::Execute(cmd.c_str());
     if (result.empty())

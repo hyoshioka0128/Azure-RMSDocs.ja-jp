@@ -4,26 +4,30 @@ description: この記事は、PowerShell を使用して OAuth2 アクセス �
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
-ms.openlocfilehash: a5ce346d044a9a56d37777e569582087026c9ce6
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 4148075c1fc8cf8c9b1393cfd3671a9413e274cf
+ms.sourcegitcommit: fa7551060aaecc62d0c1f9179dd07f035d86651f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223885"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742220"
 ---
 # <a name="acquire-an-access-token-powershell"></a>アクセス トークンを取得する (PowerShell)
 
-この例では、外部の PowerShell スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 これは、認証委任の実装で必要になります。
+この例では、OAuth2 トークンを取得する外部の PowerShell スクリプトを呼び出す方法を示します。 有効な OAuth2 アクセス トークンは、認証のデリゲートの実装で必要です。
 
-このコードは運用環境で使用するためのものではありませんが、開発に、また、認証概念を理解するために使用できます。 
+## <a name="prerequisites"></a>前提条件
+
+- 完全な[(MIP) SDK のセットアップと構成](setup-configure-mip.md)します。 その他のタスク間で、Azure Active Directory (Azure AD) テナント、クライアント アプリケーションを登録します。 Azure AD では、これは、トークンの取得ロジックで使用すると、クライアント ID とも呼ばれる、アプリケーション ID を提供します。
+
+このコードは、運用環境で使用目的としています。 開発と認証の概念についてのみ使用できます。 
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
 ### <a name="authh"></a>auth.h
 
-AcquireToken という単一の関数を作成します。 このチュートリアルでは戻り値はハードコーディングされるため、パラメーターは受け入れず、単に文字列 (トークン) を返すようにします。
+AcquireToken という単一の関数を作成します。 戻り値になるため、ハードコーディングこのチュートリアルでは、パラメーターを受け付けずお文字列 (トークン) を返します。
 
 ```cpp
 //auth.h
@@ -38,7 +42,7 @@ namespace sample {
 
 ### <a name="authcpp"></a>auth.cpp
 
-このソース ファイルでは、後の手順でハードコーディングされるトークン値が返されます。
+ソース ファイルは、後の手順で、ハードコーディングされるトークンの値を返します。
 
 ```cpp
 //auth.cpp
@@ -57,9 +61,11 @@ namespace sample {
 
 ## <a name="mint-a-token"></a>トークンを mint する
 
-最後に、mToken 変数に入れるトークンを mint します。 次の例では、Windows で ADAL および PowerShell を使用して、OAuth2 トークンをすばやく取得するために使用できる PowerShell スクリプトを示します。 このトークンは、Office 365 セキュリティとコンプライアンス センターのエンドポイントに対してのみ付与されます。 そのため、リソース URL が更新されない限り、保護アクションは失敗します。 この時点でラベルと保護の両方でテストしたい場合は、[次の手順](#next-steps)のセクションに進むことをお勧めします。
+最後に、mToken 変数に入れるトークンを mint します。 次の例では、Windows で ADAL および PowerShell を使用して、OAuth2 トークンをすばやく取得するために使用できる PowerShell スクリプトを示します。 このトークンは、Office 365 セキュリティとコンプライアンス センターのエンドポイントに対してのみ付与されます。 そのため、リソース URL が更新されない限り、保護アクションは失敗します。 
 
 ### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>PS ギャラリーから [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) をインストールする
+
+既に完了している場合は、この手順をスキップすることができます[(MIP) SDK のセットアップと構成](setup-configure-mip.md)します。
 
 ```PowerShell
 Install-Module -Name ADAL.PS
@@ -74,10 +80,9 @@ if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 $authority = "https://login.windows.net/common/oauth2/authorize" 
 #this is the security and compliance center endpoint
 $resourceUrl = "https://dataservice.o365filtering.com"
-#clientId and redirectUri are from the RMS Sharing Application. 
-#Once custom app registration is supported, a custom id and uri will be required. 
-$clientId = "0edbblll-8773-44de-b87c-b8c6276d41eb"
-$redirectUri = "com.microsoft.rms-sharing-for-win://authorize"
+#replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
+$clientId = "<application-id>"
+$redirectUri = "<redirect-uri>"
 
 $response = Get-ADALToken -Resource $resourceUrl -ClientId $clientId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:Always
 $response.AccessToken | clip
