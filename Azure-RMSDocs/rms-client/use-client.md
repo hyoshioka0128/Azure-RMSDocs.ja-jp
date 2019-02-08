@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9026560849d04939799a013d28d6d6d4d38ae442
-ms.sourcegitcommit: 8d854ee417d9af1a85e7d4ecb3807a69a43b0313
+ms.openlocfilehash: 59f79f7ac24a575665a2d8350f39b87aaedec7e1
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177196"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559480"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 Azure Information Protection は、組織の文書や電子メールを保護するクライアント/サーバー型のソリューションです。
 
@@ -39,10 +39,6 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 
 - [Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護](configure-fci.md)
 
-- [Windows 用 Rights Management 共有アプリケーション](sharing-app-windows.md)
 
-Windows 用 Rights Management 共有アプリケーションと RMS 保護ツールは、現在、Azure Information Protection クライアントに置き換わっていることに注意してください。 
-
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>「
 [Azure Information Protection と AD RMS の比較](../compare-on-premise.md)
