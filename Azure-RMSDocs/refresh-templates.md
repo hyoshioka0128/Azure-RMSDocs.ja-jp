@@ -4,18 +4,18 @@ description: Azure Rights Management サービスを使用する場合、テン�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: caed7a13a290739065792320525dfa648981aa20
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 02858ff5f908cbdee91e8a97d3cbe087e262f54d
+ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067597"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55701917"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -28,7 +28,7 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 |Exchange Online<br /><br />トランスポート ルールと Outlook Web アプリに該当 |1 時間以内の自動更新 - 追加の手順は必要ありません。<br /><br />[Office 365 Message Encryption と新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)を利用している場合、これが該当します。 信頼された発行ドメイン (TPD) をインポートし、Azure Rights Management サービスを使用するように Exchange Online を既に構成している場合、同じ手順で Exchange Online の新機能を有効にします。|
 |Azure Information Protection クライアント|Azure Information Protection ポリシーがクライアントに更新されるたびに自動的に更新されます。<br /><br /> - Azure Information Protection バーをサポートしている Office アプリケーションが開いたとき。 <br /><br /> - ファイルまたはフォルダーを分類して保護するために右クリックしたとき。 <br /><br /> - ラベル付けおよび保護のために PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) を実行するとき。<br /><br /> - Azure Information Protection スキャナー サービスが開始され、ローカル ポリシーが 1 時間前よりも古いとき。 また、スキャナー サービスは 1 時間おきに変更を確認し、次のスキャン サイクルには変更を適用します。<br /><br /> - 24 時間ごと。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 365 アプリ、Office 2019、Office 2016、または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection クライアントでも更新されます。|
 |Azure Information Protection 統合ラベル付けクライアント (プレビュー)|4 時間ごとに自動で更新されます (Office アプリごとに)。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 365 アプリ、Office 2019、Office 2016、または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection 統合ラベル付けクライアントでも更新されます。|
-|Office 365 アプリ、Office 2019、Office 2016、および Office 2013<br /><br />Windows 用 RMS 共有アプリケーション|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />- Windows 用 RMS 共有アプリケーションの場合: バージョン 1.0.1784.0 以降では、既定の更新間隔は 1 日です。 それ以前のバージョンでは、既定の更新間隔は 7 日ごとです。<br /><br />スケジュールに先立って強制的に更新するには、以下の「[Office 365 アプリ、Office 2019、Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション:変更されたカスタム テンプレートを強制的に更新する方法](#office-365-apps--office-2019--office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
+|Office 365 アプリ、Office 2019、Office 2016、および Office 2013|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />スケジュールに先立って強制的に更新するには、以下の「[Office 365 アプリ、Office 2019、Office 2016、Office 2013:変更されたカスタム テンプレートを強制的に更新する方法](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template)」セクションを参照してください。|
 |Office 2010|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。|
 |Exchange On-Premises と Rights Management コネクタ<br /><br />トランスポート ルールと Outlook Web アプリに該当|自動更新 - 追加の手順は必要ありません。 ただし、Outlook Web アプリは UI を一日キャッシュします。|
 |Office 2019 for Mac と Office 2016 for Mac|自動更新 - 追加の手順は必要ありません。|
@@ -37,8 +37,8 @@ Azure Information Protection の Azure Rights Management サービスを使用�
 
 クライアント アプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更の更新)、ダウンロードが完了し、新規または更新されたテンプレートが完全に機能するまで最大 15 分待機します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
 
-## <a name="office-365-apps-office-2019-office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 365 アプリ、Office 2019、Office 2016、Office 2013、Windows 用 RMS 共有アプリケーション:変更されたカスタム テンプレートを強制的に更新する方法
-Office 365 アプリ、Office 2019、Office 2016、Office 2013、または Windows 用 Rights Management (RMS) 共有アプリケーションを実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
+## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 365 アプリ、Office 2019、Office 2016、Office 2013:変更されたカスタム テンプレートを強制的に更新する方法
+Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実行しているコンピューター上でレジストリを編集すると、変更されたテンプレートがコンピューター上で、既定値よりも短い周期で更新されるように自動スケジュールを変更できます。 レジストリ値の既存のデータを削除して直ちに更新することもできます。
 
 > [!WARNING]
 > レジストリ エディターを誤って使用すると、重大な問題が発生し、オペレーティング システムの再インストールが必要になることがあります。 マイクロソフトは、レジストリ エディターを誤って使用したために発生した問題を解決できることを保証できません。 レジストリ エディターは、各自の責任で使用してください。
@@ -84,7 +84,7 @@ Office 365 アプリ、Office 2019、Office 2016、Office 2013、または Windo
    > 
    > 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
    > 
-   > 次に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+   > たとえば、次のように入力します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
    > 
    > この値から、**https://** 文字列と **/_wmcs/licensing** 文字列を削除します。 残りの値が、Microsoft RMS サービスの FQDN です。 この例では、Microsoft RMS サービスの FQDN は次の値になります。
    > 

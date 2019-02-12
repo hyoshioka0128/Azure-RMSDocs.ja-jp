@@ -4,17 +4,17 @@ description: 統合ラベル付けをサポートしているクライアント�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 58a563e3d1f43dd312c0d4c9d1ffdf612b1c8d12
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
+ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231040"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737275"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
@@ -26,6 +26,14 @@ ms.locfileid: "55231040"
 Office 365 セキュリティ/コンプライアンス センターで使用できるようにする場合、ラベルを移行します。Office 365 セキュリティ/コンプライアンス センターでは、[統合ラベル付けをサポートしているクライアント](#clients-that-support-unified-labeling)でラベルを公開し、ダウンロードできます。 Azure Information Protection クライアントでは引き続き、Azure portal から Azure Information Protection ポリシーでラベルがダウンロードされます。 
 
 移行後のラベルは Azure portal または Office 365 セキュリティ/コンプライアンス センターで変更できます。個々のクライアントで同じ変更内容がダウンロードされます。
+
+ラベルを移行する方法についての詳細な手順を読む前に、次のよく寄せられる質問が役立つ場合があります。
+
+- [Azure Information Protection のラベルと Office 365 のラベルにはどのような違いがありますか。](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+
+- [Office 365 にラベルを移行する適切なタイミングはいつですか。](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-office-365)
+
+- [ラベルを移行した後に使用する管理ポータルはどれですか。](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
 
 ### <a name="important-information-about-administrative-roles"></a>管理者ロールに関する重要な情報
 
@@ -82,7 +90,7 @@ Azure Information Protection クライアントでは、何の問題もなく、
 |Word、Excel、PowerPoint でユーザー定義のアクセス許可を使用するクラウドベースの保護 |[いいえ]|はい|
 |[転送不可] に関する Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 |[いいえ]|はい|
 |保護を解除する |[いいえ]|はい|
-|視覚的なマーキング (ヘッダー、フッター、透かしなど): カスタム フォントと RGB コードによるカスタム フォントの色|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
+|視覚的なマーキング (ヘッダー、フッター、透かしなど): カスタム フォントと RGB コードによるカスタム フォントの色|いいえ|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
 |アプリごとの視覚的なマーキング|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
 |条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用できません|[いいえ]|
 

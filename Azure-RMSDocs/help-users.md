@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067671"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559939"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -66,7 +66,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Azure Information Protection クライアントでの情報保護の使用
 
-ユーザーが Office 2010 を使用している場合は、保護されたドキュメントと電子メールを保護および使用するために、Azure Information Protection クライアント (または以前のアプリケーションである RMS 共有アプリケーション) が必要です。 ただし、Azure Information Protection クライアントも、このサービスをサポートするすべてのコンピューターとモバイル デバイスに推奨されています。
+ユーザーが Office 2010 を使用している場合は、保護されたドキュメントと電子メールを保護および使用するために、Azure Information Protection クライアントが必要です。 ただし、Azure Information Protection クライアントも、このサービスをサポートするすべてのコンピューターとモバイル デバイスに推奨されています。
 
 Azure Information Protection クライアントを使用すると、ユーザーがドキュメントと電子メールを簡単に保護できるだけでなく、保護したドキュメントをユーザー自身で追跡できます。 また、過去に承認済みのユーザーが追跡対象のドキュメントにアクセスする必要がない場合は、そのドキュメントを無効にすることもできます。
 
@@ -102,7 +102,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 次に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
+2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 たとえば、次のように入力します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
 
 3.  メッセージを送信します。
 
@@ -114,7 +114,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 次に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 たとえば、次のように入力します。**[暗号化]** または **[\<会社名> - 社外秘]**。
 
 3. メッセージを送信します。
 

@@ -4,18 +4,18 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68b1cb057af1cc5de271c6e896e5cff4bb922cd2
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: b410b85b1fa877aef542d52cc14b44cf65370c3f
+ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146708"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55854172"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -31,16 +31,18 @@ ms.locfileid: "55146708"
 
 使用する Azure Information Protection 機能を含むサブスクリプションを組織が所有していることを確認するには、「[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)」ページの機能一覧をご覧ください。
 
+ライセンスについて質問がある場合は、ライセンスについての[よく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)に目を通してください。
+
 > [!TIP]
 > 保護された電子メールを個人用の電子メール アドレスに送信するために、お使いの Office 365 プランまたは Exchange Online スタンドアロン プランで [Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)をサポートしているかどうかを確認する必要がありますか? たとえば、Gmail、Yahoo、Microsoft などです。 次のリソースを参照してください。
 >
-> [Exchange Online サービスの説明](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+> - [Exchange Online サービスの説明](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
-> [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
 >
-> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
+> - [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
-サブスクリプションまたはライセンスに関するご質問がある場合は、このページに投稿するのではなく、弊社担当者または [Microsoft サポート](information-support.md#to-contact-microsoft-support)にお問い合わせください。
+サブスクリプションまたはライセンスに関するご質問は、このページでは投稿しないでください。 代わりに、ライセンスについての[よく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)で回答されているかどうかを確認してください。 ここにご質問に対する回答がない場合は、Microsoft のアカウント マネージャーまたは [Microsoft サポート](information-support.md#to-contact-microsoft-support)にお問い合わせください。
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
@@ -118,7 +120,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 - **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
     
-    - ヒントChrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
+    - ヒント:Chrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
     
         ブラウザー ウィンドウに表示されるものについては気に留める必要はありません。 その代わりに、アドレス バーの鍵マークをクリックしてサイトの情報を確認します。 サイトの情報で発行元の証明機関 (CA) を確認できます。 証明書が Microsoft CA によって発行されたものでない場合、クライアントとサービス間のセキュリティで保護された接続は終了し、ファイアウォール上で再構成する必要がある場合があります。 次の図は、Microsoft が発行した CA の例です。 証明書を発行したのが内部 CA である場合、この構成は Azure Information Protection との互換性がありません。
         

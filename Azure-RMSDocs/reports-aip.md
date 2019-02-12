@@ -4,19 +4,19 @@ description: 中央レポート機能を使用して、Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/30/2018
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 0c2309fb635a05f6b0c836b7d4caf04d1c17a23a
-ms.sourcegitcommit: 6651546fa69538e2099b5c2b92ab0902d568a96a
+ms.openlocfilehash: eb9ff9dd73422813a80b41ee516876bfc4c50663
+ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815124"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760788"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -112,8 +112,8 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |要件|詳細情報|
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプション|[Azure Log Analytics の価格](https://azure.microsoft.com/pricing/details/log-analytics)ページを参照してください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
-|Azure Information Protection クライアントの現在の一般公開バージョン。|このバージョンのクライアントをまだインストールしていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
-|**検出とリスク** レポートの場合: <br /><br />- オンプレミスのデータ ストアからのデータを表示するには、Azure Information Protection スキャナー (現行の GA バージョン) のインスタンスを少なくとも 1 つデプロイしていること <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。<br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
+|Azure Information Protection クライアントの現在の一般公開バージョンまたはプレビュー バージョン|このクライアントをまだインストールしていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
+|**検出とリスク** レポートの場合: <br /><br />- オンプレミスのデータ ストアからのデータを表示するには、Azure Information Protection スキャナー (現在の一般公開バージョンまたはプレビュー バージョン) のインスタンスを少なくとも 1 つデプロイしていること <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。<br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
@@ -123,7 +123,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
     
 2. **[管理]** メニュー オプションを探し、**[Configure analytics (Preview)]\(分析の構成 (プレビュー)\)** を選択します。
 
-3. **[Azure Information Protection ログ分析]** ブレードには、テナントによって所有されているすべての Log Analytics ワークスペースの一覧が表示されます。 以下のいずれかを実行します。
+3. **[Azure Information Protection ログ分析]** ブレードには、テナントによって所有されているすべての Log Analytics ワークスペースの一覧が表示されます。 次のいずれかの操作を行います。
     
     - 新しい Log Analytics ワークスペースを作成するには: **[新しいワークスペースの作成]** を選択し、**[Log Analytics ワークスペース]** ブレードで、要求された情報を指定します。
     

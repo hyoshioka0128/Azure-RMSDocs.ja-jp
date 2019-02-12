@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
-ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
+ms.openlocfilehash: 02bdd294e30f0d773fcc29b4c7a13f9e418af9db
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420794"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559990"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -61,10 +61,10 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 |アクセス許可レベル|アプリケーション|含まれる使用権限|
 |---------------------|----------------|---------------------------------|
-|表示者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br /> Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、権限の表示、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、マクロの許可 [[2]](#footnote-2)<br /><br />注: 電子メールの場合、電子メールの返信が添付ファイルではなく電子メール メッセージとして確実に受信されるように、このアクセス許可レベルではなく、レビュー担当者を利用します。 レビュー担当者は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも必要になります。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|
-|レビュー担当者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、権限の表示、返信:全員に返信 [[3]](#footnote-3)、転送 [[3]](#footnote-3)、マクロの許可 [[2]](#footnote-2)|
-|共同作成者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[4]](#footnote-4)、印刷、返信 [[3]](#footnote-3)、全員に返信 [[3]](#footnote-3)、転送 [[3]](#footnote-3)|
-|共同所有者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Rights Management 共有アプリケーション<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、権限の変更、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[3]](#footnote-3)、全員に返信 [[3]](#footnote-3)、転送 [[3]](#footnote-3)、フル コントロール|
+|表示者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、権限の表示、返信 [[1]](#footnote-1)、全員に返信 [[1]](#footnote-1)、マクロの許可 [[2]](#footnote-2)<br /><br />注: 電子メールの場合、電子メールの返信が添付ファイルではなく電子メール メッセージとして確実に受信されるように、このアクセス許可レベルではなく、レビュー担当者を利用します。 レビュー担当者は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも必要になります。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|
+|レビュー担当者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、権限の表示、返信:全員に返信 [[3]](#footnote-3)、転送 [[3]](#footnote-3)、マクロの許可 [[2]](#footnote-2)|
+|共同作成者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、マクロの許可、名前を付けて保存、エクスポート [[4]](#footnote-4)、印刷、返信 [[3]](#footnote-3)、全員に返信 [[3]](#footnote-3)、転送 [[3]](#footnote-3)|
+|共同所有者|Azure クラシック ポータル <br /><br />Azure Portal<br /><br />Windows 用 Azure Information Protection クライアント|表示、開く、読み取り、保存、コンテンツの編集、編集、コピー、権限の表示、権限の変更、マクロの許可、名前を付けて保存、エクスポート、印刷、返信 [[3]](#footnote-3)、全員に返信 [[3]](#footnote-3)、転送 [[3]](#footnote-3)、フル コントロール|
 
 ----
 
@@ -77,7 +77,7 @@ Azure Portal には含まれていません。
 Windows 用 Azure Information Protection クライアントの場合、この権限は、Office アプリケーションの Information Protection バーで現在必要です。
 
 ###### <a name="footnote-3"></a>脚注 3
-Windows 用 Azure Information Protection クライアントまたは Windows 用 Rights Management 共有アプリケーションには適用されません。
+Windows 用 Azure Information Protection クライアントには適用されません。
 
 ###### <a name="footnote-4"></a>脚注 4
 Azure Portal または Windows 用 Azure Information Protection クライアントには含まれていません。
@@ -143,7 +143,7 @@ Rights Management 発行者には常にドキュメントまたは電子メー�
 
 - Rights Management 発行者は取り消した後もドキュメントを開くことができます。 
 
-既定では、このアカウントはそのコンテンツの **Rights Management 所有者**でもあります。Rights Management 所有者であれば、ドキュメントまたは電子メールを作成したユーザーが保護を開始します。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 次に例を示します。
+既定では、このアカウントはそのコンテンツの **Rights Management 所有者**でもあります。Rights Management 所有者であれば、ドキュメントまたは電子メールを作成したユーザーが保護を開始します。 ただし、管理者またはサービスがユーザーの代わりにコンテンツを保護できるシナリオもあります。 たとえば、次のように入力します。
 
 - 管理者がファイル共有のファイルを一括保護する: Azure AD の管理者アカウントでユーザーのドキュメントが保護されます。
 

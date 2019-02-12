@@ -4,18 +4,18 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be8378705611f10064026dd0043e6404ad693092
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 7dd3216492b1fa967c52c3b390077995175f5db1
+ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393500"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55701934"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するようにクライアントとオンライン サービスを構成する
 
@@ -66,7 +66,7 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    次に例を示します。<strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
+    たとえば、次のように入力します。<strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
     
     このコマンドは、サービスへの接続の確認、構成の取得、URI、ライセンス、および任意のテンプレートの取得を含む一連のチェックを実行します。 Windows PowerShell セッションでは、これらのチェックのそれぞれの結果、およびすべてのチェックをパスした場合は最後にも、その結果が表示されます。**全体的な結果: 合格**
 
@@ -74,16 +74,16 @@ Azure Rights Management サービスを使用するように Exchange Online を
 
 ## <a name="sharepointonline-and-onedrive-for-business-irm-configuration"></a>SharePoint Online と OneDrive for Business:IRM 構成
 
-SharePoint Online IRM と Azure Rights Management サービスが連動するしくみについては、「**理解と調査**」セクションの「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」を参照してください。
+SharePoint Online IRM と Azure Rights Management サービスが連動するしくみについては、このドキュメントの「**Rights Management の保護**」セクションの「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」を参照してください。
 
 Azure Rights Management サービスをサポートするように SharePoint Online と OneDrive for Business を構成するには、最初に SharePoint 管理センターを使用して、SharePoint Online の Information Rights Management (IRM) サービスを有効にする必要があります。 これで、サイトの所有者は SharePoint リストとドキュメント ライブラリを IRM で保護でき、ユーザーは OneDrive for Business ライブラリを IRM で保護することができます。それらの場所に保存されたドキュメント、および他のユーザーと共有しているドキュメントが、自動的に Azure Rights Management サービスで保護されるようになります。
 
 > [!NOTE]
 > SharePoint と OneDrive for Business の IRM で保護されたライブラリには、新しい OneDrive 同期クライアントの最新版 (OneDrive.exe) と、このバージョンの [Microsoft ダウンロード センターの RMS クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=38396)が必要です。 Azure Information Protection クライアントをインストールした場合でも、このバージョンの RMS クライアントをインストールします。 このデプロイ シナリオについて詳しくは、「[エンタープライズ環境に新しい OneDrive 同期クライアントを展開する](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)」をご覧ください。
 
-SharePoint Online 用の Information Rights Management (IRM) サービスを有効にするには、Office Web サイトの次の手順を参照してください。
+SharePoint Online 用の Information Rights Management (IRM) サービスを有効にするには、Office ドキュメントの次の手順を参照してください。
 
-- [SharePoint 管理センターにおける Information Rights Management (IRM) の設定](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
+- [SharePoint 管理センターにおける Information Rights Management (IRM) の設定](/office365/securitycompliance/set-up-irm-in-sp-admin-center)
 
 この構成は、Office 365 管理者によって行われます。
 
@@ -517,7 +517,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
    5. `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 
-5. スクリプトを保存し、署名します。 スクリプトに署名しない場合は (より安全)、署名されていないスクリプトを実行するようにコンピューターで Windows PowerShell を構成する必要があります。 そのためには、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy Unrestricted**」と入力します。 ただし、この構成を使用すると署名されていないすべてのスクリプトを実行できます (セキュリティが低下)。
+5. スクリプトを保存し、署名します。 スクリプトに署名しない場合は (より安全)、署名されていないスクリプトを実行するようにコンピューターで Windows PowerShell を構成する必要があります。 そのためには、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy Unrestricted**」と入力します。 ただし、この構成を使用すると署名されていないすべてのスクリプトを実行できます (セキュリティが低下) 。
 
    Windows PowerShell スクリプトへの署名の詳細については、PowerShell のドキュメント ライブラリの「 [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) 」を参照してください。
 

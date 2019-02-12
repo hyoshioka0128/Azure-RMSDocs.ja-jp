@@ -4,18 +4,18 @@ description: 管理者が Azure Information Protection のドキュメント追�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 32e61bafe3157c33b3ed9db6d540085df07a9f15
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314737"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55560007"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -74,20 +74,20 @@ AADRM モジュールの最小バージョン **2.13.0.0** がある場合、次
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>ユーザーのドキュメントの追跡と取り消し
 
-ユーザーは、ドキュメント追跡サイトにサインインすると、Azure Information Protection クライアントを使って保護しているドキュメント、または Rights Management 共有アプリケーションを使って共有しているドキュメントを、追跡したり取り消したりすることができます。 テナントの Azure AD グローバル管理者としてサインインすると、[管理者] アイコンをクリックし、管理者モードに切り替えることができます。 その他の管理者ロールでは、このドキュメント追跡サイト用のモードはサポートされません。 
+ユーザーは、ドキュメント追跡サイトにサインインすると、Azure Information Protection クライアントを使って保護しているドキュメント追跡したり取り消したりすることができます。 テナントの Azure AD グローバル管理者としてサインインすると、[管理者] アイコンをクリックし、管理者モードに切り替えることができます。 その他の管理者ロールでは、このドキュメント追跡サイト用のモードはサポートされません。 
 
 ![ドキュメント追跡サイトの [管理者] アイコン](../media/tracking-site-admin-icon.png)
 
-管理者モードでは、組織内のユーザーが Azure Information Protection クライアントを使用して追跡することを選択したドキュメントや、Rights Management 共有アプリケーションを使用して共有したドキュメントを表示できます。
+管理者モードでは、組織内のユーザーが Azure Information Protection クライアントを使用して追跡することを選択したドキュメントを表示できます。
 
 > [!NOTE] 
 > グローバル管理者でもこのアイコンが表示されない場合は、まだドキュメントを共有していません。 その場合、 https://portal.azurerms.com/#/admin の URL からドキュメント追跡サイトにアクセスします。
 
 管理者モードで実行したアクションは監査され、使用状況ログ ファイルに記録されます。これを確認してから次に進む必要があります。 このログ記録の詳細については、次のセクションを参照してください。
 
-管理者モードの場合、ユーザーまたはドキュメントを指定して検索できます。 ユーザーを指定して検索すると、指定したユーザーが Azure Information Protection クライアントを使用して追跡することを選択したドキュメントや、Rights Management 共有アプリケーションを使用して共有したドキュメントを表示できます。 
+管理者モードの場合、ユーザーまたはドキュメントを指定して検索できます。 ユーザーを指定して検索すると、指定したユーザーが Azure Information Protection クライアントを使用して追跡することを選択したドキュメントを表示できます。 
 
-ドキュメントを指定して検索すると、Azure Information Protection クライアントを使用してそのドキュメントを追跡した組織内のすべてのユーザーや、Rights Management 共有アプリケーションを使用して共有したドキュメントを表示できます。 検索結果を調べて、ユーザーが保護したドキュメントを追跡し、必要に応じてそのドキュメントを取り消すことができます。 
+ドキュメントを指定して検索すると、Azure Information Protection クライアントを使用してそのドキュメントを追跡した組織内のすべてのユーザーを表示できます。 検索結果を調べて、ユーザーが保護したドキュメントを追跡し、必要に応じてそのドキュメントを取り消すことができます。 
 
 管理者モードを終了するには、**[管理者モードを終了する]** の横にある **[X]** をクリックします。
 
@@ -99,9 +99,9 @@ AADRM モジュールの最小バージョン **2.13.0.0** がある場合、次
 
 このオプションは、Azure Information Protection クライアントの最新プレビュー バージョンでのみ使用できます。
 
-ドキュメントを追跡および取り消しできるようにするためには、まずこれをドキュメント追跡サイトに登録する必要があります。 ユーザーが Azure Information Protection クライアントを使っている場合、このアクションは、エクスプローラーまたは各 Office アプリの **[追跡と取り消し]** オプションを選択すると発生します。 Rights Management 共有アプリケーションの場合、ユーザーが **[保護ファイルの共有]** オプションを選択していると自動的にこのアクションが発生します。
+ドキュメントを追跡および取り消しできるようにするためには、まずこれをドキュメント追跡サイトに登録する必要があります。 ユーザーが Azure Information Protection クライアントを使っている場合、このアクションは、エクスプローラーまたは各 Office アプリの **[追跡と取り消し]** オプションを選択すると発生します。
 
-[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 次に例を示します。
+[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 たとえば、次のように入力します。
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 

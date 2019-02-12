@@ -4,18 +4,17 @@ description: ユーザーを正常に認証できるように、Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 02/05/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
-ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d52b6fe3c290a6a012d66a39f60633cfb3e08504
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: b2ca14d6dcff00009b6e032d5ca17f5e466d69ea
+ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173351"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760771"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -33,7 +32,7 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 
 Office 2010 を実行しているコンピューターの場合: 
 
-- Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、これらのコンピューターに [Azure Information Protection クライアント](./rms-client/aip-client.md) (推奨) または [Windows 用 Rights Management 共有アプリケーション](./rms-client/sharing-app-windows.md) が必要です。
+- Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、これらのコンピューターに [Azure Information Protection クライアント](./rms-client/aip-client.md)が必要です。
 
 - ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
 
@@ -60,15 +59,11 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 - Azure Information Protection クライアント:
 
-    - Windows、iOS および Android 用の [Azure Information Protection クライアント](./rms-client/aip-client.md)では、常に、MFA がサポートされており、最小バージョンは不要です。 
+    - Windows 用の [Azure Information Protection クライアント](./rms-client/aip-client.md)および iOS 用および Android 用のビューアー アプリでは、常に MFA がサポートされており、最小バージョンは不要です。 
 
--   Windows 用 Rights Management 共有アプリケーション:
+-   Mac コンピューター用の Rights Management 共有アプリ:
 
-    - 最小バージョン 1.0.1908.0 がインストールされている必要があります。バージョンはコントロール パネルの [プログラムと機能] で確認できます。 現在、Rights Management 共有アプリケーションは Azure Information Protection クライアントに置き換わっていることに注意してください。 共有アプリケーションの詳細については、[「Windows 用 Rights Management 共有アプリケーション」](./rms-client/sharing-app-windows.md) を参照してください。
-
--   モバイル デバイス用や Mac コンピューター用の Rights Management 共有アプリ:
-
-    -   最新バージョンがインストールされていることを確認してください。 MFA では、2015 の年 9 月以降にリリースされた RMS 共有アプリがサポートされます。
+    -   MFA では、2015 の年 9 月以降にリリースされた RMS 共有アプリがサポートされます。
 
 確認後、MFA ソリューションを構成します。
 

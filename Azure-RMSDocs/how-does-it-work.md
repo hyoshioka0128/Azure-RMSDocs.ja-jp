@@ -4,18 +4,18 @@ description: Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7c1d488ff738b0eea9042f1580ea74b7099f3ac5
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: d4530e6a09fbf8ab3779d1938c37b6e736976ed7
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174116"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559667"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -49,7 +49,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 ###### <a name="footnote-1"></a>脚注 1 
 
-ファイルの拡張子が .ppdf のとき、またはファイルが保護されたテキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のときは、汎用的な保護およびネイティブ保護のために Azure Information Protection クライアントと Rights Management 共有アプリケーションは 256 ビットを使用します。
+ファイルの拡張子が .ppdf のとき、あるいはファイルが保護されたテキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のときは、汎用保護とネイティブ保護のために Azure Information Protection クライアントは 256 ビットを使用します。
 
 ###### <a name="footnote-2"></a>脚注 2
 
@@ -153,8 +153,6 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 - **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
 
 - **汎用的な保護 (.pfile)**: Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
-
-- **保護された PDF (.ppdf)**: Azure Rights Management サービスは、Office ファイルをネイティブに保護するときは、そのファイルのコピーも作成して同じ方法で保護します。 唯一の違いは、ファイルのコピーが PPDF ファイル形式であり、Azure Information Protection クライアント ビューアーと RMS 共有アプリケーションは表示するために開く方法だけを認識していることです。 このシナリオでは、保護された添付ファイルを電子メールで送信できます。モバイル デバイスの受信者は、モバイル デバイスに保護された Office ファイルをネイティブにサポートするアプリがない場合であっても、常にファイルを読むことができます。
 
 - **Microsoft アカウント**: Microsoft アカウントで認証されていれば、Azure Information Protection で消費用の電子メール アドレスを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 詳しくは[こちら](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)をご覧ください。
 

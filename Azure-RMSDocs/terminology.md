@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection に関連する単語、フ�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d9aad27d0c76552dbf7234bf5849eeb72058cae
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 388abeb75a5b80a575990923f37f2bb19a9e5e7f
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067953"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559701"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -28,7 +28,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |AADRM|Azure Rights Management サービス用の PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management という名前だったときに、Azure Rights Management の非公式な略語から派生したものです。|
 |アクティブ化|Azure Rights Management サービスを有効化して、組織がドキュメントや電子メールを保護できるようにします。 この操作により、Exchange Online と SharePoint Online での IRM 機能も有効になります。|
 |Active Directory Rights Management サービス|*AD RMS* という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
-|AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
+|AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
 AzureInformationProtection|Azure Information Protection クライアント用の PowerShell モジュールの名前です。
 |Azure Information Protection|ラベルを使用してドキュメントと電子メールの分類と保護を行う、クラウドベースのサービスです。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
 Azure Information Protection クライアント|ユーザー、管理者、サービスがラベルと Azure Information Protection ポリシーの設定を使用できるようにする、クライアント側での Azure Information Protection です。|
@@ -36,8 +36,8 @@ Azure Information Protection クライアント|ユーザー、管理者、サ�
 |Azure Information Protection ポリシー|Azure Information Protection のラベルとポリシーの設定を使用するクライアントとサービスに向けた、管理者が定義する構成です。|
 |Azure Information Protection スキャナー|Windows Server 上で実行するサービスです。これにより、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行うことができます。|
 |Azure Information Protection ビューアー|保護されたファイルを表示するために、Windows コンピューターやモバイル デバイスで実行するアプリです。|
-|Azure Rights Management|*Azure RMS* という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
-|Azure RMS|*Azure Rights Management* をご覧ください。|
+|Azure の権限管理|*Azure RMS* という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
+|Azure RMS|*Azure Rights Management* をご覧ください。|
 |既定のテンプレート|Azure Information Protection のサブスクリプションを取得すると自動的に作成される保護テンプレートです。これにより、機密情報が記載されたドキュメントや電子メールの保護をすぐに開始できます。|
 |BYOK|*Bring Your Own Key*をご覧ください。|
 |Bring Your Own Key|*BYOK*という略称で呼ばれることもあります。<br /><br />組織が Azure Information Protection の独自のテナント キーを生成および管理するときに選択する構成およびトポロジ オプションです。|
@@ -58,7 +58,7 @@ Azure Information Protection クライアント|ユーザー、管理者、サ�
 |IRM|*Information Rights Management*をご覧ください。|
 |Office Message Encryption|*OME* という略称で呼ばれることもあります。<br /><br />新しい Office 365 Message Encryption 機能には、内部と外部のユーザーに対する同じ電子メール保護、テンプレートの自動更新、Bring Your Own Key (BYOK) シナリオのサポートを提供する Azure Rights Management サービスとのネイティブな統合が含まれています。 以前の OME 実装は外部の受信者のみのために設計されており、メール フロー ルールが必要で、BYOK をサポートしていませんでした。|
 |MSDRM|RMS クライアント 1.0 を指す用語として使用されることがあります。新しいクライアントでは、MSIPC という名前に置き換えられています。 この古いクライアントでは、RMS SDK 1.0 を使用して開発されたアプリケーションと、Office 2010 および Office 2007、Exchange 2010 および Exchange 2013、SharePoint 2010 および SharePoint 2007 をサポートしています。|
-|MSIPC|RMS クライアント 2.0 を指す用語として使用されることがあります。古い RMS クライアントの MSDRM を置き換えるものです。 この新しいクライアントでは、RMS SDK 2.0 を使用して開発されたアプリケーションと、Office 365 ProPlus、Office 2019、Office 2016、Office 2013、SharePoint 2013、RMS 共有アプリケーション、および Azure Information Protection クライアントをサポートしています。|
+|MSIPC|RMS クライアント 2.0 を指す用語として使用されることがあります。古い RMS クライアントの MSDRM を置き換えるものです。 この新しいクライアントでは、RMS SDK 2.0 を使用して開発されたアプリケーションと、Office 365 ProPlus、Office 2019、Office 2016、Office 2013、SharePoint 2013、および Azure Information Protection クライアントをサポートしています。|
 |ネイティブ保護|すべての対応アプリケーションで使用できる保護レベル。承認されていないユーザーがファイルを開けないようにするだけでなく、読み取り専用や印刷不可など、より厳格なポリシーを適用できます。 また、ファイルが他のユーザーに転送されたり、他のユーザーがアクセスできる公開された場所に保存された場合でも、ファイルに対する保護は維持されます。|
 |.pfile|権限管理サービスが一般的に保護するすべてのファイルに付けられるファイル名拡張子。|
 |アクセス許可レベル|エンドユーザーと管理者が、役割ベースの構成オプションを選択しやすくするための使用権限の論理的なグループ化。 たとえば、レビュー担当者や共同作成者などがあります。|
@@ -69,7 +69,7 @@ Azure Information Protection クライアント|ユーザー、管理者、サ�
 |Rights Management 発行者|ドキュメントまたは電子メールを保護したアカウントです。|
 |Rights Management 所有者|自動的に付与される Rights Management フル コントロール使用権限によって、保護されたドキュメントまたは電子メールのフル コントロールを保持し、いかなる有効期限日またはオフライン設定からも除外されているアカウントです。|
 |Rights Management サービス|クラウド バージョンの Rights Management (Azure Rights Management) とオンプレミス バージョンの Rights Management (AD RMS) の両方に適用される一般的な用語。|
-|Rights Management 共有アプリケーション|現在は、Azure Information Protection クライアント (インプレース ファイルや電子メールで送信されたファイルを安全に共有できる、Windows やモバイル デバイス向けのオプションのアプリケーション) で置き換えられています。|
+|Rights Management 共有アプリケーション|Azure Information Protection クライアントに置き換えられました。|
 |RMS|*Rights Management サービス*をご覧ください。|
 |RMS コネクタ|*Rights Management コネクタ*をご覧ください。|
 |個人用 RMS|ユーザーの組織が Office 365 または Azure Active Directory のサブスクリプションを保有していない場合にユーザーが Rights Management を使用するための無料のサブスクリプション。|
