@@ -4,14 +4,15 @@ description: この記事は、MIP SDK によって認証を実装する方法�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 288342c467574cf84c60e1211238b65a9e716b6c
-ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
-ms.translationtype: HT
+ms.openlocfilehash: dd2e8c5c3344da351715069910741c5651f4e617
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48230524"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257971"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - 認証の概念
 
@@ -23,11 +24,11 @@ MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の
 
 `mip::AuthDelegate::AcquireOAuth2Token` は、次のパラメーターを受け取り、トークンの取得に成功したかどうかを示すブール値を返します。
 
-- `mip::Identity`: 認証されるユーザーまたはサービスの ID (既知の場合)。
-- `mip::AuthDelegate::OAuth2Challenge`: 2 つのパラメーター **authority** と **resource** を受け取ります。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。
-- `mip::AuthDelegate::OAuth2Token`: トークンの結果はこのオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
+- `mip::Identity`:既知の場合は、認証されるユーザーまたはサービスの id。
+- `mip::AuthDelegate::OAuth2Challenge`:2 つのパラメーターを受け取る**機関**と**リソース**します。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。
+- `mip::AuthDelegate::OAuth2Token`:トークンの結果は、このオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
 
-**重要:** アプリケーションは `AcquireOAuth2Token` を直接呼び出しません。 必要に応じて SDK がこの関数を呼び出します。
+**大事な：** アプリケーションは呼び出さないでください`AcquireOAuth2Token`直接します。 必要に応じて SDK がこの関数を呼び出します。
 
 ## <a name="consent"></a>同意
 
@@ -48,9 +49,9 @@ Azure AD では、アプリケーションが、セキュリティで保護さ�
 
 ### <a name="consent-options"></a>同意オプション
 
-- **AcceptAlways**: 同意し、決定事項を保存します。
-- **Accept**: 一度同意します。
-- **Reject**: 同意しません。
+- **AcceptAlways**:同意し、意思決定に注意してください。
+- **受け入れる**:1 回同意します。
+- **拒否**:同意しません。
 
 このメソッドを使用して SDK でユーザーの同意が求められる場合、クライアント アプリケーションではユーザーに URL を提示する必要があります。 クライアント アプリケーションでは、ユーザーの同意を取得するための手段を提供し、ユーザーの決定に対応する適切な Consent 列挙型を返す必要があります。
 

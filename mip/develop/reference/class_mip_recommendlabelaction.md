@@ -4,14 +4,15 @@ description: Mip::recommendlabelaction クラスの Microsoft Information Protec
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: ec1f82ab5951a5b7813fff2ebd5be6650a80203b
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 665a244a858ba9924f27df96ca3b6471cb5fc829
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651345"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260121"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 このアクションの目的は、ユーザーにラベルを提案することです。 ユーザーが推奨ラベルを無視した後にこの呼び出しを抑制する場合、実行状態のサポートされるアクションを使用して行う必要があります。

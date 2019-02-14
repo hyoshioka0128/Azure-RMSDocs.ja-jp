@@ -4,14 +4,15 @@ description: この記事は、アプリケーションの初期化中に作成�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b229148c3028f4478f83cbbc928e19666c2f44b5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 0eed59e82d32c3461e21cfcfb20514b4d615ea8c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445429"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252267"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK - ポリシー API プロファイルの概念
 
@@ -25,10 +26,10 @@ ms.locfileid: "47445429"
 
 ### <a name="profilesettings-parameters"></a>Profile::Settings パラメーター
 
-- `std::string path`: ログ、テレメトリ、その他の継続状態が格納されるファイル パス。
-- `bool useInMemoryStorage`: 状態を、ディスク上ではなく、すべてメモリに格納するかどうかの定義。
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: クラス `mip::AuthDelegate` の共有ポインター。 
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: `PolicyProfile::Observer` の実装への共有ポインター。
+- `std::string path`:ファイルのパスをログ、テレメトリ、およびその他の永続的な状態が格納されます。
+- `bool useInMemoryStorage`:すべての状態をディスク上ではなくメモリに格納する必要があるかどうかを定義します。
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`:クラスの共有ポインター `mip::AuthDelegate` 
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`:共有へのポインター、`PolicyProfile::Observer`実装します。
 - `mip::ApplicationInfo applicationInfo`: オブジェクト。 SDK を利用しているアプリケーションに関する情報を定義するために使用します。
 
 次の 2 つの例では、状態ストレージに対するローカル ストレージ、およびメモリ内のみを使用する profileSettings オブジェクト作成する方法を示します。 いずれも、`authDelegateImpl` オブジェクトが作成済みであると想定しています。

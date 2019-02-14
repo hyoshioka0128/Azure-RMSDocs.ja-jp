@@ -4,14 +4,15 @@ description: Microsoft Information Protection (MIP) SDK クライアント ア�
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 2fb19aa5071fa13f9801de9e9ed1106717f5adf9
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 75ca6b078275a2547cebfee3c78f8741f367c788
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651430"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255956"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C++)
 
@@ -321,7 +322,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
 3. 貼り付けた、文字列定数を使用してソース コード内のすべてのプレース ホルダー値を置き換えます。
 
-   | [プレースホルダ] | [値] | 例 |
+   | [プレースホルダ] | 値 | 例 |
    |:----------- |:----- |:--------|
    | \<application-id\> | 登録されている Azure AD アプリケーション ID (GUID)、アプリケーションに割り当てられている[手順 #2「MIP SDK のセットアップと構成」の](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory)記事。 2 つのインスタンスを置き換えます。 | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 有効な ASCII 文字を含める必要があります (を除く ';')、理想的には、Azure AD の登録で使用したアプリケーション名と一致するとします。 | `"AppInitialization"` |

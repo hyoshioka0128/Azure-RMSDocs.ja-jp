@@ -4,14 +4,15 @@ description: この記事は、アプリケーションの初期化中に作成�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 33ec266068d15e827267b7d518344aebd0f8f072
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 74937f5ef157c7807b6519a6490af80d46de6a8f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445905"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254513"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Microsoft Information Protection SDK - ファイル API プロファイルの概念
 
@@ -32,11 +33,11 @@ ms.locfileid: "47445905"
 
 `FileProfile::Settings` コンストラクターでは、以下に一覧された 5 つのパラメーターを受け取ります。
 
-- `std::string path`: ログ、テレメトリ、その他の継続状態が格納されるファイル パス。
-- `bool useInMemoryStorage`: ディスク上ではなく、状態がすべてメモリに格納されるかどうかを定義します。
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: クラス `mip::AuthDelegate` の共有ポインター。 
+- `std::string path`:ファイルのパスをログ、テレメトリ、およびその他の永続的な状態が格納されます。
+- `bool useInMemoryStorage`:すべての状態をディスク上ではなくメモリに格納する必要があるかどうかを定義します。
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`:クラスの共有ポインター `mip::AuthDelegate` 
 - `std::shared_ptr<mip::ConsentDelegate>`: 
-- `std::shared_ptr<mip::FileProfile::Observer> observer`: `FileProfile::Observer` の実装への共有ポインター。
+- `std::shared_ptr<mip::FileProfile::Observer> observer`:共有へのポインター、`FileProfile::Observer`実装します。
 - `mip::ApplicationInfo applicationInfo`: オブジェクト。 SDK を利用しているアプリケーションに関する情報を定義するために使用します。
 
 次の例では、状態ストレージに対するローカル ストレージ、およびメモリ内のみを使用する `profileSettings` オブジェクトを作成する方法を示します。 いずれも、`authDelegateImpl` オブジェクトが作成済みであると想定しています。

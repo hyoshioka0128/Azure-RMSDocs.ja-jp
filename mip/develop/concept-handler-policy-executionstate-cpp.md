@@ -5,14 +5,15 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: 71cc6f08e130fe4a97604924643d13fd341a5625
-ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
+ms.openlocfilehash: 54e5249f7624cbc020451752d39ccb9f0b507f3a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304165"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257690"
 ---
 # <a name="implement-executionstate"></a>ExecutionState を実装する
 
@@ -28,7 +29,7 @@ ms.locfileid: "52304165"
 `ExecutionState` では、次の仮想メンバーが公開されます。 各メンバーからポリシー エンジンに何らかのコンテキストが渡されると、アプリケーションによって実行される必要があるアクションに関する情報が返されます。 さらに、この情報は、Azure Information Protection レポート機能に監査情報を提供するために、使用される場合もあります。
 
 
-| Member                                                                           | 返します。                                                                                                              |
+| Member                                                                           | 戻り値                                                                                                              |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | `std::string GetNewLabelId()`                                                      | オブジェクトに適用するラベル ID が返されます。                                                                    |
 | `mip::ContentState GetContentState()`                                              | オブジェクトの mip::ContentState が返されます。                                                                         |

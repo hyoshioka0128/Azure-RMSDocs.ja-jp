@@ -4,14 +4,15 @@ description: Mip::transientnetworkerror クラスの Microsoft Information Prote
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: e0d66c5d6bf3c36d88386e1c6e7122d9a17c890b
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 726d9d917f390bf7ed91770661f6fe056deae2ee
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650801"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258608"
 ---
 # <a name="class-miptransientnetworkerror"></a>class mip::TransientNetworkError 
 一時的なネットワーク エラー。 サービス エンドポイントに対するネットワーク呼び出しを作成する際の、予期しない動作によって発生します。 このエラーは一時的なエラーであるため、この操作は再試行できます。

@@ -4,14 +4,15 @@ description: Mip::consentdelegate クラスの Microsoft Information Protection 
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 3eed60a06d2dda22f3ed037b1f30e3c5a0f2c699
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 6b4ec544e0390f9fd17d39dc146cfd538cfb927c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651862"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254868"
 ---
 # <a name="class-mipconsentdelegate"></a>mip::ConsentDelegate をクラスします。 
 同意に関連する操作の委任。

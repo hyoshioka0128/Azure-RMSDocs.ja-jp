@@ -4,14 +4,15 @@ description: Mip::policyengine クラスの Microsoft Information Protection (MI
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 33ae1bd2ceddc66c89d00adb44d6ef39b2ab69a8
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 6ad384768ef876109a6a43237765474345a666bc
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651260"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257537"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
 [PolicyEngine](class_mip_policyengine.md) に関連付けられている設定を定義します。

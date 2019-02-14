@@ -4,24 +4,25 @@ description: この記事は、アプリケーションの初期化中に作成�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9ccea755c83b570aa17ff4d30d98783f4bef79e5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446602"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259288"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK - ファイル API エンジンの概念
 
 MIP SDK のファイル API の `mip::FileEngine` では、指定した ID の代わりに実行されるすべての操作へのインターフェイスを提供します。 アプリケーションにサインインするユーザーごとにエンジンが 1 つ追加され、エンジンで実行される操作がすべてその ID のコンテキストで実行されます。
 
-`FileEngine` には主な責任が 2 つあります。認証されたユーザーにラベルを一覧することと、そのユーザーの代わりにファイル操作を実行するためにファイル ハンドラーを作成することです。 
+`FileEngine`が 2 つの主な責務。認証されたユーザーのラベルを一覧表示するユーザーの代理としてのファイル操作を実行するファイルのハンドラーを作成しています。 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()`: 読み込まれたエンジンに対するラベルの一覧が取得されます。
-- `CreateFileHandler()`: 特定のファイルまたはストリームに対する `mip::FileHandler` が作成されます。
+- `ListSensitivityLabels()`:読み込まれたエンジンのラベルの一覧を取得します。
+- `CreateFileHandler()`:作成、`mip::FileHandler`特定のファイルまたはストリームにします。
 
 ## <a name="add-a-file-engine"></a>ファイル エンジンの追加
 

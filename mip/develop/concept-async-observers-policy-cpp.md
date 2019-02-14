@@ -4,14 +4,15 @@ description: MIP SDK は、ほぼ完全に非同期になるように設計さ�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 50bc3bfd9bcba8e90a386a6e0444f65389bcfa76
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: d822a8ea57def13d2f04ac1c18b22ff629e413ad
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445803"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251178"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - ポリシー API オブザーバー
 
@@ -27,7 +28,7 @@ ms.locfileid: "47445803"
 
 次の例では、`mip::Profile::Observer` から派生される `ProfileObserver` クラスを作成しています。 メンバー関数は、サンプル全体で使用される future/promise パターンを使用するためにオーバーライドされています。
 
-**注**: 以下のサンプルは部分的にのみ実装され、`mip::ProfileEngine` 関連のオブザーバーに対するオーバーライドは含まれていません。
+**注**:以下のサンプルのみ部分的に実装され、用の上書きを含めないでください、`mip::ProfileEngine`オブザーバーに関連します。
 
 ### <a name="profileobserverh"></a>profile_observer.h
 

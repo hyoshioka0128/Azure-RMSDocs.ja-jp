@@ -4,14 +4,15 @@ description: MIP SDK .NET ラッパー、および .NET ラッパーと C++ SDK 
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: ec1d2083449f1cb4ffccb086f71a7085a9251604
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 6b2f26a61cd491574fd9f4a1e74fbfab4752257a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651981"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252318"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Microsoft の情報保護の .NET ラッパーの概要
 

@@ -4,15 +4,16 @@ description: Microsoft Information Protection (MIP) SDK クライアント ア�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 01/08/2019
 ms.author: bryanla
 manager: barbkess
-ms.openlocfilehash: 1d7b30832441180f8673e7430d7d32e8a58a5205
-ms.sourcegitcommit: 8c2de5119105cf5d5bc91fcc2202b64e5a779e7c
+ms.openlocfilehash: da4b737082153f47cc0072e8b259da4c0c89c6e4
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56082801"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252692"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK のバージョン リリース履歴とサポート ポリシー
 

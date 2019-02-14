@@ -4,14 +4,15 @@ description: この記事では、Microsoft Information Protection SDK によっ
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 9f9e4768a01d3d82f7b9563cb907533e53c7a228
-ms.sourcegitcommit: 03c9d1131177041e320d1bdbbdd92852a0d1d5cd
+ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52156856"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253971"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - メタデータ
 
@@ -46,7 +47,7 @@ MIP SDK には、次の一連のメタデータが適用されます。
 
 ファイルに適用する場合、結果は次の表に似ています。
 
-| Key                                                         | 値                                |
+| キー                                                         | 値                                |
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |

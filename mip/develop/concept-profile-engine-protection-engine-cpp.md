@@ -4,24 +4,25 @@ description: この記事は、アプリケーションの初期化中に作成�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: da0c50de6a818fcd8beda0483696ba433ce22149
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: 9595d3a3b12af802720363e141e40608c6f5ba93
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453318"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258410"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK - 保護 API エンジンの概念
 
-## <a name="implementation-add-a-protection-engine"></a>実装: 保護エンジンを追加する
+## <a name="implementation-add-a-protection-engine"></a>実装:保護エンジンを追加します。
 
 ファイル API では、`mip::ProtectionProfile` クラスがすべての SDK 操作のルート クラスとなります。 プロファイルは既に作成されているため、ここでプロファイルにエンジンを追加できます。
 
 次の例では、1 人の認証済みユーザーに対する単一エンジンの使用について説明します。
 
-### <a name="implementation-create-protection-engine-settings"></a>実装: 保護エンジンの設定を作成する
+### <a name="implementation-create-protection-engine-settings"></a>実装:保護エンジンの設定を作成します。
 
 プロファイルと同様に、エンジンにも設定オブジェクト `mip::ProtectionEngine::Settings` が必要です。 このオブジェクトには、一意のエンジン ID、デバッグやテレメトリで使用できるカスタマイズ可能なクライアント データ、および必要に応じてロケールが格納されます。
 
@@ -31,7 +32,7 @@ ms.locfileid: "47453318"
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**注**: この方法を使用して保護設定オブジェクトを作成する場合は、手動で CloudEndpointBaseUrl を https://api.aadrm.com に設定する必要もあります。
+**注**:CloudEndpointBaseUrl を設定する必要がありますも手動で保護設定オブジェクトを作成するこの方法を使用する場合 https://api.aadrm.com
 
 ベスト プラクティスとして、最初のパラメーターである **id** を、関連付けられているユーザーにエンジンを簡単に接続できるようなものにする必要があります。**または** `mip::Identity` オブジェクトを使用します。 `mip::Identity` で設定を初期化するには、次のようにします。
 
@@ -41,7 +42,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 
 しかし、通常は、ハード コードではなく、ID に変数を渡します。
 
-### <a name="implementation-add-the-protection-engine"></a>実装: 保護エンジンを追加する
+### <a name="implementation-add-the-protection-engine"></a>実装:保護エンジンを追加します。
 
 エンジンを追加するため、プロファイルの読み込みに使用した future/promise パターンに戻ります。 `mip::ProtectionProfile` の promise を作成するのではなく、`mip::ProtectionEngine` を使用します。
 
@@ -68,13 +69,13 @@ ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 
 上記のコードの最終結果では、認証済みユーザーのエンジンがプロファイルに正常に追加されます。
 
-## <a name="implementation-list-templates"></a>実装: テンプレートを一覧表示する
+## <a name="implementation-list-templates"></a>実装:リスト テンプレート
 
 追加されたエンジンを使用し、`engine->GetTemplatesAsync()` を呼び出すことで、認証済みユーザーが利用可能な機密テンプレートをすべて一覧表示することができます。 
 
 `GetTemplatesAsync()` では、テンプレート ID の一覧が取り込まれます。 結果は `std::shared_ptr<std::string>` のベクターに格納されます。
 
-### <a name="implementation-listsensitivitytemplates"></a>実装: ListSensitivityTemplates()
+### <a name="implementation-listsensitivitytemplates"></a>実装:ListSensitivityTemplates()
 
 ```cpp
 auto loadPromise = std::make_shared<std::promise<shared_ptr<vector<string>>>>();
@@ -83,7 +84,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>実装: テンプレート ID を印刷する
+### <a name="implementation-print-the-template-ids"></a>実装:印刷テンプレート Id
 
 ```cpp
 //Iterate through all template IDs in the vector

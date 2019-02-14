@@ -4,14 +4,15 @@ description: MIP SDK は、ほぼ完全に非同期になるように設計さ�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d150e59c98300bfe20ced0b1a453a899558d1f27
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: aec8fd7df79fe44503887e22dc7e6a110407f98a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446262"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259537"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Microsoft Information Protection SDK - ファイル API オブザーバー
 
@@ -28,7 +29,7 @@ ms.locfileid: "47446262"
 
 次の例では、`mip::FileProfile::Observer` から派生される `ProfileObserver` クラスを作成しています。 メンバー関数は、サンプル全体で使用される future/promise パターンを使用するためにオーバーライドされています。
 
-**注**: 以下のサンプルは部分的にのみ実装され、`mip::FileEngine` 関連のオブザーバーに対するオーバーライドは含まれていません。
+**注**:以下のサンプルのみ部分的に実装され、用の上書きを含めないでください、`mip::FileEngine`オブザーバーに関連します。
 
 ### <a name="profileobserverh"></a>profile_observer.h
 
@@ -52,7 +53,7 @@ ProfileObserver() { }
 
 2 つ目のパラメーターは、*コンテキスト*への共有ポインターです。 この実装では、コンテキストは `std::promise` への参照で、`std::shared_ptr<void>` として参照によって渡されます。 関数の最初の行は、これを `std::promise` にキャストし、`promise` という名前のオブジェクトに格納されます。
 
-最後に、`promise->set_value()` を設定し、`mip::FileProfile` オブジェクトに渡すことで、future の準備ができます。
+最後に、`promise->set_value()` を設定し、`mip::FileProfile`オブジェクトに渡すことで、future の準備ができます。
 
 ```cpp
 #include "profile_observer.h"
