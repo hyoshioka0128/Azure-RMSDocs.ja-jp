@@ -3,19 +3,20 @@ title: Azure Information Protection のヘルプ ボット
 description: Azure Information Protection のヘルプ ボットは、質問の回答、ドキュメントの検索、テクニカル サポートが必要な場合にサポート チケットを開くのに役立ちます。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 98105d30-ff81-4b9c-9f41-9e9ffd6e7aa6
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 53d6842c623a3a65d2ed6e96937ee9500356e785
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 7d16ec8ade8a96d31fdc621d2223414aa1ac6e9b
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803801"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256279"
 ---
 # <a name="help-bot-for-azure-information-protection"></a>Azure Information Protection のヘルプ ボット
 

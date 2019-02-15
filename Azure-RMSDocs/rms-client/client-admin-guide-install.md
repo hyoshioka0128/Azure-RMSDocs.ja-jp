@@ -3,19 +3,20 @@ title: ユーザー向けに Azure Information Protection クライアントを�
 description: 管理者が企業ネットワークに Windows 用 Azure Information Protection クライアントをデプロイするための手順と情報です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 156cb0311e93f506ce4dfcd822dcfd867a1417a8
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f1f111b0f5e6c534f005dae5725211f9035377ec
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067807"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257074"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 

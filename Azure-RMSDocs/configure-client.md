@@ -3,19 +3,20 @@ title: Azure Information Protection クライアント - インストールと�
 description: Windows コンピューターとモバイル デバイスに Azure Information Protection クライアントをデプロイする場合の管理者向けの情報です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/05/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8b6735715bbd7ac86e75838683e14efb8864ffc3
-ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
+ms.openlocfilehash: 79d4dbb1d6339f0261d57b32cf77addee9ca9744
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737241"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258923"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントでのインストールと構成
 

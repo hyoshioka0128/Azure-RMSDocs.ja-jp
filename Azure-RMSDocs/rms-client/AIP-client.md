@@ -3,19 +3,20 @@ title: Windows 用 Azure Information Protection クライアント
 description: Windows 用 Azure Information Protection クライアントの情報リソース。 この無料でダウンロードできるクライアントは、ドキュメントやメールを分類して保護したい組織向けです。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 365330c19ea55ffa93bc834db50fc6233e6c71f7
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 9b299d00b3d8e64e97c6ad45af233374bd7c93ca
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559888"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259951"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアント
 
@@ -32,7 +33,7 @@ Windows 用 Azure Information Protection クライアントは、[Azure Informat
 > [!TIP]
 > iOS 用および Android 用の Microsoft Azure Information Protection も提供しています。 詳細については、「[iOS 用および Android 用の Azure Information Protection アプリに関する FAQ](mobile-app-faq.md )」を参照してください。
 > 
-> Mac コンピューター: RMS 共有アプリを使い、「[FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)」 (モバイルおよび Mac プラットフォーム用 Rights Management 共有アプリケーションの FAQ) を参照してください。
+> Mac コンピューターの場合:RMS 共有アプリを使い、「[FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)」 (モバイルおよび Mac プラットフォーム用 Rights Management 共有アプリケーションの FAQ) を参照してください。
 
 ## <a name="install-instructions"></a>インストール手順
 

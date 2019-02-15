@@ -4,20 +4,21 @@ description: ADAL での認証プロセスの概要を説明します。
 keywords: 認証、RMS、ADAL
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a921d71c7cb54d0db84d30baf5dd723e314405c3
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 82574d20e11b64b54652a6df9da2bd9e043f2b9e
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070351"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260070"
 ---
 # <a name="how-to-use-adal-authentication"></a>方法: ADAL 認証の使用
 

@@ -3,19 +3,20 @@ title: Azure Information Protection の情報とサポート
 description: 新しいリリース、サポート オプション、および Microsoft に連絡して問題を報告する方法などの情報を含む、管理者向けリソース。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/07/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 013532db350b41e8cfaeac5559065e46f76379a7
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: 5d73037a8aba25e7c15ca531241b90dcc92f6dcc
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854223"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258098"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -45,11 +46,11 @@ Azure Information Protection 製品チームは、主要な新しいリリース
 
 Premier サポートをご利用の場合は、[Premier サポートのお客様用ポータル](https://premier.microsoft.com/)にアクセスして、インシデントの送信、ソリューションの検索、ヘルプの参照を行ってください。
 
-**FastTrack** の利用資格: 対象となるプランで Azure Information Protection のライセンスを 150 以上ご購入いただいた場合は、FastTrack センター特典をご利用いただけます。 FastTrack センター特典によって、対象サービスの評価、修復、有効化に関する Microsoft スペシャリストの支援を受けることができます。 詳細については、「[Enterprise Mobility + Security (EMS) 用の FastTrack センター特典](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems)」を参照してください。
+**FastTrack** の利用資格: 対象となるプランで Azure Information Protection のライセンスを 150 以上ご購入いただいた場合は、FastTrack センター特典をご利用いただけます。 FastTrack センター特典によって、対象サービスの評価、修復、および有効化に関する Microsoft スペシャリストの支援を受けることができます。 詳細については、「[Enterprise Mobility + Security (EMS) 用の FastTrack センター特典](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems)」を参照してください。
 
 その他のお客様は、Azure Information Protection のサブスクリプションに応じて、以下の表のサポート チャネルをご利用ください。
 
-|サブスクリプション|手順|
+|Subscription|手順|
 |----------------|---------------|
 |Azure Information Protection (スタンドアロン)|1.Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2.要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - included]\(テクニカル サポート - 含む\)**: Azure のサブスクリプションがない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Office 365 管理ポータルによるサポートへの問い合わせ方法、および連絡先電話番号については、「[一般法人向けサポートへのお問い合わせ - 管理者向けヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
@@ -85,7 +86,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 - Windows 用 Azure Information Protection クライアントについて: 管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照し、[サポートされているバージョン](./rms-client/client-version-release-history.md#servicing-information-and-timelines)を使用していることを確認してください。
 
-### <a name="community-resources"></a>コミュニティ リソース
+### <a name="community-resources"></a>コミュニティのリソース
 
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 

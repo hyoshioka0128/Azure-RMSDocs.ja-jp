@@ -3,19 +3,20 @@ title: Azure Information Protection が提供する Azure Rights Management に�
 description: Azure Information Protection が使用する保護テクノロジである Azure Rights Management (Azure RMS) に関する情報。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/06/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0d1cae062602897fce6d36078cfac3b164c7d614
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: ff30f006ece558efe42a38c1ec3596cfbbce3fab
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146725"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257554"
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
 

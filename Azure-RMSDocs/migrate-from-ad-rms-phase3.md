@@ -3,19 +3,20 @@ title: AD RMS から Azure Information Protection への移行 - フェーズ 3
 description: AD RMS から Azure Information Protection への移行のフェーズ 3 には、手順 7 が含まれます。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 659f42f71ef49cd1e632c0ac46416d51b9c8cfb1
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: bdd5d17bc947b25f312baa498da057b409dcd07e
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067623"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256976"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 

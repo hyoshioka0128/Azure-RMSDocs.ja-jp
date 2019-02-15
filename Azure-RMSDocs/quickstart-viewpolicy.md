@@ -3,18 +3,21 @@ title: クイック スタート - Azure portal で Azure Information Protection
 description: 組織で初めて Azure Information Protection を使用する場合は、このクイック スタートから開始して、サービスを Azure portal に追加し、保護サービスがアクティブ化されていることを確認して、ポリシーを表示します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/15/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 3e4e81f7300f319f9fd5887cd859f43e58d60c10
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393978"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266048"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
+
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 このクイック スタートでは、Azure Information Protection を Azure portal に追加し、保護サービスがアクティブ化されていることを確認して、組織の既定のポリシーを表示します。 
 

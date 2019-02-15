@@ -3,19 +3,20 @@ title: Azure Information Protection の要件 - AIP
 description: 組織の Azure Information Protection をデプロイするための前提条件を特定します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/07/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b410b85b1fa877aef542d52cc14b44cf65370c3f
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: 5bf20171ec434d0fde5953f23c11d555f7d80139
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854172"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252411"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -120,7 +121,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 - **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
     
-    - ヒント:Chrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
+    - ヒントChrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
     
         ブラウザー ウィンドウに表示されるものについては気に留める必要はありません。 その代わりに、アドレス バーの鍵マークをクリックしてサイトの情報を確認します。 サイトの情報で発行元の証明機関 (CA) を確認できます。 証明書が Microsoft CA によって発行されたものでない場合、クライアントとサービス間のセキュリティで保護された接続は終了し、ファイアウォール上で再構成する必要がある場合があります。 次の図は、Microsoft が発行した CA の例です。 証明書を発行したのが内部 CA である場合、この構成は Azure Information Protection との互換性がありません。
         

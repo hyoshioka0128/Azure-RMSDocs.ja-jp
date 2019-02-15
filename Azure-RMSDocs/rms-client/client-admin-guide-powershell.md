@@ -3,19 +3,20 @@ title: Azure Information Protection クライアントで PowerShell を使用�
 description: 管理者が PowerShell を使って Azure Information Protection クライアントを管理するための手順と情報について説明します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/25/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 53a08a06351e4095e8e5662a4e1bf85f15f77f1d
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 0222a3ad5beaaae01d0da42d869ef2241c3af21a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394316"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254018"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 

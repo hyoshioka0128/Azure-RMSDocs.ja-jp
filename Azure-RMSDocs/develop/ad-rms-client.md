@@ -4,20 +4,21 @@ description: AD RMS クライアント 2.1 は、情報へのアクセスと情�
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e090ed93a6032a1952ce703d6e28791efe49d189
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 1dcb08bb2d9bb99f5f6c5db5e06845d47f4bfeca
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071184"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255905"
 ---
 # <a name="client"></a>クライアント
 

@@ -4,20 +4,21 @@ description: コンテンツのドキュメント追跡機能を導入する方�
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 8794d0f7413941573484c7f9509f5be5e2aa2414
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 3e6eadc1defb43d1ced438144fbf9191eb1254f1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071694"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253627"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 

@@ -3,19 +3,20 @@ title: Rights Management コネクタのインストールと構成 - AIP
 description: Azure Rights Management (RMS) コネクタをインストールして構成するための情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 1 から手順 4 について説明します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 57dd5faad33681bbf87045b61335e11baaa973a2
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: b89bab8cd4ae7aecb8484f729001038b922360c8
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393966"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259433"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 

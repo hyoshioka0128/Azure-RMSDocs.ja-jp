@@ -3,19 +3,20 @@ title: AIP から Azure RMS を使用するように Office 365 クライアン�
 description: Azure Information Protection から Azure Rights Management サービスで使用する Office 365 を構成するための、管理者向けの情報と手順です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/02/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7dd3216492b1fa967c52c3b390077995175f5db1
-ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
+ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55701934"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259186"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するようにクライアントとオンライン サービスを構成する
 
@@ -66,7 +67,7 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    たとえば、次のように入力します。<strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
+    次に例を示します。<strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
     
     このコマンドは、サービスへの接続の確認、構成の取得、URI、ライセンス、および任意のテンプレートの取得を含む一連のチェックを実行します。 Windows PowerShell セッションでは、これらのチェックのそれぞれの結果、およびすべてのチェックをパスした場合は最後にも、その結果が表示されます。**全体的な結果: 合格**
 
@@ -517,7 +518,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
    5. `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 
-5. スクリプトを保存し、署名します。 スクリプトに署名しない場合は (より安全)、署名されていないスクリプトを実行するようにコンピューターで Windows PowerShell を構成する必要があります。 そのためには、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy Unrestricted**」と入力します。 ただし、この構成を使用すると署名されていないすべてのスクリプトを実行できます (セキュリティが低下) 。
+5. スクリプトを保存し、署名します。 スクリプトに署名しない場合は (より安全)、署名されていないスクリプトを実行するようにコンピューターで Windows PowerShell を構成する必要があります。 そのためには、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、「**Set-ExecutionPolicy Unrestricted**」と入力します。 ただし、この構成を使用すると署名されていないすべてのスクリプトを実行できます (セキュリティが低下)。
 
    Windows PowerShell スクリプトへの署名の詳細については、PowerShell のドキュメント ライブラリの「 [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) 」を参照してください。
 

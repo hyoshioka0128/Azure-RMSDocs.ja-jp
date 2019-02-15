@@ -4,20 +4,21 @@ description: このトピックでは、iOS/OS X バージョンの RMS SDK の�
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: aee986c462dd5bba1966017eada2f97f4fbbb1a8
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: b8a09101f261089aefc01f73da1c9e530d76f7b3
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394165"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252879"
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 

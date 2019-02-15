@@ -3,19 +3,20 @@ title: Azure RMS を使用してユーザーによるファイル保護を支援
 description: Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559939"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258999"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -102,7 +103,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 たとえば、次のように入力します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
+2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 次に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
 
 3.  メッセージを送信します。
 
@@ -114,7 +115,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 たとえば、次のように入力します。**[暗号化]** または **[\<会社名> - 社外秘]**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 次に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
 
 3. メッセージを送信します。
 

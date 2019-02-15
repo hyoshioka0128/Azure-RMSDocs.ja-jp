@@ -3,19 +3,20 @@ title: Microsoft が管理 - AIP テナント キーのライフサイクル操�
 description: Microsoft が Azure Information Protection のテナント キーを管理する場合 (既定) に関連するライフサイクル操作に関する詳細です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f98750c24fe535a580952fa7ebe76a6833f7dd2
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: d9fc409faedf8083dae6730f866c12bdd84255ce
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394068"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252573"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理:テナント キーのライフサイクル操作
 

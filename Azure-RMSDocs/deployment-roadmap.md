@@ -3,19 +3,20 @@ title: Azure Information Protection デプロイ ロードマップ
 description: 組織の Azure Information Protection を準備、実装、管理するには、これらの手順に従ってください。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/05/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a74478895c7bdb500b40dc4732c871cbc130fe36
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: ac9e76d7c9ef49e687a18d84491e939247958117
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174048"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259968"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 

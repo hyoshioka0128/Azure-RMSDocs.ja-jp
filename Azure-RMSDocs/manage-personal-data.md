@@ -3,19 +3,20 @@ title: Azure Information Protection の個人データの管理
 description: Azure Information Protection で使用される個人データと、その表示、エクスポート、削除方法について説明します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f030ebaa372d6fa308a51a3d9b34cefa0bc0535b
-ms.sourcegitcommit: d9c8b560fa3d2797ef634d8919af3ed695b16908
+ms.openlocfilehash: aa8b1da968a0821fd889bbed54e6b7698857bcf2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55701951"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259404"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -89,7 +90,7 @@ Azure Rights Management サービスのスーパー ユーザー ロールやグ
 
 Azure Rights Management サービス (Azure Information Protection のデータを保護するサービス) の管理者アクションのログを取得するには、 [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) コマンドレットを実行します。 このログには、個人データが電子メール アドレスと IP アドレスの形式で記録されます。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-たとえば、次のように入力します。
+次に例を示します。
 ```
 PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -98,7 +99,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況ログ
 Azure Rights Management サービスを使用するエンドユーザー操作のログを取得するには、[Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) コマンドレットを実行します。 このサービスは、Azure Information Protection 用のデータを保護するものです。 ログには、個人データが電子メール アドレスと IP アドレスの形式で記録される場合があります。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-たとえば、次のように入力します。
+次に例を示します。
 ```
 PS C:\Users> Get-AadrmUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -130,7 +131,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ドキュメント追跡サイトから特定のユーザーに関する情報を取得するには、[Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) コマンドレットを実行します。 ドキュメント ログに関連付けられた追跡情報を取得するには、[Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps) コマンドレットを使用します。
 
-たとえば、次のように入力します。
+次に例を示します。
 ```
 PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
