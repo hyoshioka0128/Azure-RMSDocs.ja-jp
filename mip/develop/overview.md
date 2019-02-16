@@ -7,12 +7,12 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 656f4af77ce3e26515c5e54103e8d3b341439271
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b78214fc2260fd984b6b853866f72b92dd5cc11e
+ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250744"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56323565"
 ---
 # <a name="overview"></a>概要
 
@@ -40,6 +40,10 @@ MIP SDK では、サード パーティ製アプリケーションとサービ�
 * Cloud Access Security Broker またはデータ損失防止ソリューションが、Azure Information Protection で暗号化されたデータに対して推論する。
 
 より網羅された一覧は、[API の概念](concept-apis-use-cases.md)に関するページを参照してください。
+
+MIP SDK は、次のプラットフォームで使用できます。
+
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## <a name="next-steps"></a>次の手順
 

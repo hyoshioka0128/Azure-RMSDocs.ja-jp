@@ -7,24 +7,18 @@ ms.topic: troubleshooting
 ms.collection: M365-security-compliance
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: a4e6f4e06e534fd61078da254185503d041d4767
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f9aed3cab9ba22ba1ac2b41984ce82957278f1e6
+ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257775"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56323582"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
 この記事では、よく寄せられる質問 (FAQ) に対する回答と、既知の問題と一般的なエラーに関するトラブルシューティングのガイダンスを示します。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問 
-
-### <a name="question-which-platforms-are-supported-by-the-mip-sdk"></a>質問: MIP SDK ではどのプラットフォームがサポートされますか?
-
-MIP SDK は、次のプラットフォームで使用できます。
-
-[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>質問: SDK ではどのように文字列が処理されますか? また、コードではどの文字列型を使用すればよいですか?
 
