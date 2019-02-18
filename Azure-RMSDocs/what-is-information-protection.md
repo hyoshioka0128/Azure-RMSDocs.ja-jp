@@ -3,21 +3,22 @@ title: Azure Information Protection とは - AIP
 description: Azure Information Protection サービスの概要です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/05/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9c7fd9070e6cc07a7b16043dd480addd2d0a4313
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 147982a700f2b2033b77d0b02568990a164cf555
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024342"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257860"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Azure Information Protection (AIP とも呼ばれます) は、ラベルを適用することで組織がドキュメントや電子メールを分類したり、必要に応じて保護したりするのに役立つクラウドベースのソリューションです。 ラベルの適用は、ルールや条件を定義する管理者が自動で実行するか、ユーザーが手動で実行するか、その組み合わせ (ユーザーにレコメンデーションが提示される) で実行します。 
 
@@ -31,7 +32,7 @@ Azure Information Protection (AIP とも呼ばれます) は、ラベルを適�
 
 Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングを含めることができます。 メタデータはクリア テキストでファイルと電子メール ヘッダーに追加されます。 クリア テキストなので、データ損失防止ソリューションなど、その他のサービスが分類を識別して適切なアクションを取ることができます。 
 
-たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、"秘密度: 一般" のフッターが電子メール メッセージに追加されました。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
+たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、フッター "秘密度:一般" がメール メッセージに追加されました。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
 
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](./media/example-email-footerv2.png)
 
@@ -80,7 +81,7 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ### <a name="additional-integration-for-email"></a>電子メールにおける追加の統合
 
-Exchange Online で Azure Information Protection を使用する場合は、新たな利点として、保護されたメールを任意のユーザーに送信し、送信先のユーザーが任意のデバイスでそのメールを読み取れるようにすることができます。
+Exchange Online で Azure Information Protection を使用する場合は、追加の利点を得られます:保護されたメールを任意のユーザーに送信し、そのユーザーが任意のデバイス上でそのメールを読み取れるようにすることができます。
 
 たとえば、ユーザーが機密情報を、**Gmail**、**Hotmail**、または**Microsoft** アカウントを使用している個人用メール アドレスに送信する必要があるとします。 または、Office 365 用のアカウントまたは Azure AD 内のアカウントを持っていないユーザーに機密情報を送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
 
@@ -111,19 +112,21 @@ Exchange Online で Azure Information Protection を使用する場合は、新�
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 
-- 無料評価版: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- 無料試用版:[Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- サブスクリプションのオプションと価格: [Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
+- サブスクリプションのオプションと価格:[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
 
-- クライアントのダウンロード: [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- クライアントのダウンロード:[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- カスタマイズ可能なユーザー ガイドのダウンロード: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- ビジネスの意思決定者に向けたデプロイ ガイドのダウンロード:[Azure Information Protection デプロイの高速化ガイド](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 
-- よく寄せられる質問: [Azure Information Protection に関してよく寄せられる質問](faqs.md)
+- カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
+- よく寄せられる質問:[Azure Information Protection に関してよく寄せられる質問](faqs.md)
 
-その他のリソース: [Azure Information Protection の情報とサポート](information-support.md)
+- Yammer:[Azure Information Protection](https://www.yammer.com/AskIPTeam)
+
+その他の資料:[Azure Information Protection の情報とサポート](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 

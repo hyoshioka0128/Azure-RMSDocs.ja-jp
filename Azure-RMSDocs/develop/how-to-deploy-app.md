@@ -4,20 +4,21 @@ description: この記事では、開発時にもともと使用されていた�
 keywords: ''
 author: kkanakas
 ms.author: kartikka
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/27/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: a7f31be3e7885e206d24ca4f193270b3ca1aa242
-ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
+ms.openlocfilehash: 5be6785c86cfeb104acc7f12d4cb7b830e9c9d36
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473785"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251877"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>別のテナントへのサービス アプリケーションのデプロイ
 
@@ -31,7 +32,7 @@ ms.locfileid: "46473785"
 
 ![別のテナントで対照キーを作成する場合のサンプル フロー](../media/develop/service-app-provision.jpg)
 
-## <a name="flow-1-coolapp-provides-a-ui-dialog-to-abc-to-implement-the-deployment"></a>フロー 1: *CoolApp* による *ABC* へのデプロイを実装するための UI ダイアログの提供
+## <a name="flow-1-coolapp-provides-a-ui-dialog-to-abc-to-implement-the-deployment"></a>フロー 1:*CoolApp* による *ABC* へのデプロイを実装するための UI ダイアログの提供
 
 *ABC* が *CoolApp の*ソリューションを購入した場合、*ABC* の IT 管理者は *CoolApp* のサービス プリンシパルを作成し、*ABC の* Azure AD テナントにアプリケーションを登録する必要があります。 
 
@@ -46,6 +47,6 @@ ms.locfileid: "46473785"
 
 希望するエクスペリエンスで *ABC* の IT 管理者にサービス プリンシパル情報の UI ダイアログが提供されない場合は、**フロー 2** の方法に従います。
 
-## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>フロー 2: *ABC* の IT 管理者による *CoolApp* チームへのキーの提供
+## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>フロー 2:*ABC* の IT 管理者による *CoolApp* チームへのキーの提供
 
 *ABC の* IT 管理者がサービス プリンシパルを作成した場合、**図 1** のように、*ABC* は *CoolApp* チームに情報を提供します。 その後、*CoolApp* チームは、*ABC の*テナントで使用するために *CoolApp* アプリケーションの情報の埋め込みに進みます。

@@ -3,23 +3,24 @@ title: Azure Information Protection 統合ラベル付けクライアント (プ
 description: ドキュメントと電子メールを分類および保護できるように、ユーザーが Windows 用 Azure Information Protection 統合ラベル付けクライアントのプレビュー バージョンをインストールするための手順です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/17/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5d2f5c07ebc7f4844b0d35879ae00c7b9066cb6d
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359004"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56250894"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Azure Information Protection 統合ラベル付けクライアント (プレビュー) をダウンロードしてインストールする
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
 > [!NOTE]
 > このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、Office 365 セキュリティ/コンプライアンス センターから機密ラベルを含むポリシーをダウンロードします。 これらのラベルを使用するには、まずセキュリティ/コンプライアンス センターから発行する必要があります。 [詳細情報](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
@@ -69,5 +70,5 @@ Azure Information Protection 用に Azure portal から現在発行されてい�
 
 ## <a name="next-steps"></a>次の手順
 
-Office 365 セキュリティ/コンプライアンス センターが現在使用している統合ラベル付けストアの詳細については、「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターでの統合ラベル付け管理の可用性の発表) のブログ記事を参照してください。
+Office 365 セキュリティ/コンプライアンス センターが現在使用している統合ラベル付けストアの詳細については、次のブログ記事をご覧ください:「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。
 

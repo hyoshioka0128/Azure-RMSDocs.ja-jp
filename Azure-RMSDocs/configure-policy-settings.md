@@ -3,17 +3,18 @@ title: Azure Information Protection のポリシー設定を構成する - AIP
 description: すべてのユーザーとデバイスに適用される Azure Information Protection ポリシーを設定します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c3d95b0dc8328665c921ab4ff6b37e53ec726f03
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393477"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266065"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -37,7 +38,9 @@ Azure Information Protection のサブスクリプションを購入した時期
 
 3. **[ポリシー]** ブレードで、設定を構成します。
     
-   - **[既定のラベルを選択]**:このオプションを設定する場合、ラベルを持たないドキュメントや電子メールに割り当てるラベルを選択します。 サブラベルがあるラベルは、既定値として設定することはできません。 
+   - **[既定のラベルを選択]**:このオプションを設定する場合、ラベルを持たないドキュメントや電子メールに割り当てるラベルを選択します。 サブラベルがあるラベルは、既定値として設定することはできません。
+        
+        この設定は、Office アプリとスキャナーに適用されます。 これはエクスプローラーや PowerShell には適用されません。
     
    - **[すべてのドキュメントとメールにラベルを付ける]**:このオプションを **[オン]** に設定した場合は、保存されるドキュメントと送信される電子メールのすべてにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。
         
@@ -51,11 +54,13 @@ Azure Information Protection のサブスクリプションを購入した時期
         
        ![新しい分類が下位の場合の Azure Information Protection のプロンプト](./media/info-protect-lower-justification.png)
         
-       このオプションは、同じ親ラベル下のサブラベルの分類を低くするため、またはスキャナーのプレビュー バージョンのためには使用できません。
+       このオプションは、同じ親ラベル下のサブラベルの分類を低くするためには使用できません。
         
    - **[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します]**:このオプションを **[推奨]** に設定すると、ユーザーは自分の電子メール メッセージにラベルを適用するよう求められます。 ラベルは、添付ファイルに適用されている分類のラベルに基づいて動的に選択され、最上位の分類のラベルが選択されます。 添付ファイルは物理ファイルである必要があり、ファイルへのリンク (たとえば、SharePoint または OneDrive for Business 上のファイルへのリンク) はできません。 ユーザーは、推奨設定を受け入れるか、通知を閉じます。 このオプションを **[自動]** に設定すると、ラベルが自動的に適用されますが、ユーザーは電子メールを送信する前に、ラベルを削除することも、別のラベルを選択することもできます。
-    
-     ユーザー定義のアクセス許可のプレビュー設定を使って保護するために、最上位の分類のラベルを含む添付ファイルを構成する場合、電子メール メッセージは同じ分類でラベル付けされますが、保護は適用されません。
+        
+        このポリシー設定を使う際にサブラベルの順序を考慮する場合は、[クライアントの詳細設定を構成する](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)必要があります。
+        
+        ユーザー定義のアクセス許可のプレビュー設定を使って保護するために、最上位の分類のラベルを含む添付ファイルを構成する場合、電子メール メッセージは同じ分類でラベル付けされますが、保護は適用されません。
     
    - **[Office アプリの Information Protection バーを表示します]**:この設定をオフにすると、ユーザーは Word、Excel、PowerPoint、Outlook のバーからラベルを選択できなくなります。 代わりに、リボンの **[保護]** ボタンからラベルを選択する必要があります。 この設定をオンにすると、ユーザーはバーまたはボタンのいずれかからラベルを選択できます。
         

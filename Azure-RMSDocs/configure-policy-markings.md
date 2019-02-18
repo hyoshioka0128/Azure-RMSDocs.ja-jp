@@ -3,17 +3,18 @@ title: Azure Information Protection ラベルの視覚的なマーキングを�
 description: ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 549bf29cc6c4c70dd91d6e36ad3fbe26baa69535
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067739"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258965"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -35,7 +36,7 @@ ms.locfileid: "55067739"
 
 - 文字列の最大長:
     
-    - ヘッダーとフッターに入力できる文字列の最大長は 1024 文字です。 しかし、Excel にはヘッダーとフッターに合計 255 文字の制限があります。 ヘッダーとフッターに長い文字列を入力すると、Excel では、このテキストは 255 文字以下に切り捨てられることがあります。
+    - ヘッダーとフッターに入力できる文字列の最大長は 1024 文字です。 しかし、Excel にはヘッダーとフッターに合計 255 文字の制限があります。 この制限には、Excel で表示されない文字 (書式設定コードなど) が含まれます。 ヘッダーとフッターに長い文字列を入力すると、Excel では、このテキストは 255 文字以下に切り捨てられることがあります。
     
     - 入力できる透かしの文字列の最大長は 255 文字です。
 

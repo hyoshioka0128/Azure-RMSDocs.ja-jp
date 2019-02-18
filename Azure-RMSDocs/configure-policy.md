@@ -3,19 +3,20 @@ title: Azure Information Protection ポリシーを構成する - AIP
 description: 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 02/15/2019
+manager: barbkess
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3085799d9cb8da168c68a1a2eea04528daeb7737
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394043"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258710"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -65,6 +66,8 @@ Azure Portal にサインインするには、Azure Information Protection を�
     
     > [!NOTE] 
     > テナントが統合ラベル付けストアに移行されている場合、Azure portal からラベルを管理するには、ご自身のアカウントが Office 365 セキュリティ/コンプライアンス センターへのアクセス許可も持っている必要があります。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    
+    - **セキュリティ閲覧者**は [Azure Information Protection 分析](reports-aip.md)に対してのみ使用します。
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
 

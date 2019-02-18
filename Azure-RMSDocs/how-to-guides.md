@@ -3,18 +3,19 @@ title: Azure Information Protection を使用する一般的なシナリオに�
 description: Azure Information Protection 向けに使用することで、組織のデータを分類および保護できるユース ケースを特定します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/08/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7986648999a830985c4dbd1f31855bb222a443c2
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 69ae0a504ffcdaa201b1d4ce9762b22470e05eb7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218376"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259033"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
@@ -39,7 +40,13 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="additional-deployment-instructions"></a>デプロイの追加手順
 
-[Azure Information Protection の技術ブログ](https://aka.ms/AIPblog)には、カスタマー エクスペリエンス エンジニアリング チームによって追加の詳しい手順が示されています。 次に例を示します。
+[Azure Information Protection の技術ブログ](https://aka.ms/AIPblog)には、カスタマー エクスペリエンス エンジニアリング チームによる追加のガイダンスが記載されています。
+
+たとえば、ビジネスの意思決定者や IT の実装担当者向けのベスト プラクティスを使った方法:
+
+- [Azure Information Protection デプロイの高速化ガイド](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
+
+詳しい手順:
 
 - [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010) (Azure Information Protection を使用して PDF および Adobe Acrobat Reader を保護して表示する)
 

@@ -3,18 +3,19 @@ title: Azure Information Protection ラベルを Office 365 セキュリティ/�
 description: 統合ラベル付けをサポートしているクライアントで Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/05/2019
+manager: barbkess
+ms.date: 02/12/2019
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
-ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
+ms.openlocfilehash: 27fe7dce81856140caf5e30451caabc3df9a2894
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737275"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254783"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
@@ -24,8 +25,6 @@ ms.locfileid: "55737275"
 > この機能はプレビュー段階にあり、新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされており、作成し、管理するラベルは複数のクライアントやサービスで使用できます。
 
 Office 365 セキュリティ/コンプライアンス センターで使用できるようにする場合、ラベルを移行します。Office 365 セキュリティ/コンプライアンス センターでは、[統合ラベル付けをサポートしているクライアント](#clients-that-support-unified-labeling)でラベルを公開し、ダウンロードできます。 Azure Information Protection クライアントでは引き続き、Azure portal から Azure Information Protection ポリシーでラベルがダウンロードされます。 
-
-移行後のラベルは Azure portal または Office 365 セキュリティ/コンプライアンス センターで変更できます。個々のクライアントで同じ変更内容がダウンロードされます。
 
 ラベルを移行する方法についての詳細な手順を読む前に、次のよく寄せられる質問が役立つ場合があります。
 
@@ -62,6 +61,8 @@ Office 365 セキュリティ/コンプライアンス センターで使用で�
     
     - クラウドベースのキーを使用し、ラベル構成に含まれるテンプレートもラベルと共に移行されます。 その他の保護テンプレートは移行されません。 
     
+    - 定義済みのテンプレート用に構成されたラベルがある場合、ラベルを移行する前に[これらのテンプレートをラベルに変換](configure-policy-templates.md#to-convert-templates-to-labels)します。 この構成はラベルの移行をブロックしませんが、セキュリティ/コンプライアンス センターではサポートされていません。
+    
     - クラウドベースの保護設定のあるラベルが移行されると、保護テンプレートの結果的に生成されるスコープは、Azure portal で (あるいは、AADRM PowerShell モジュールを使用することで) 定義されるスコープであり、セキュリティ/コンプライアンス センターで定義されるスコープとなります。 
 
 - ラベルを移行すると、移行結果にラベルが**作成された**か、**更新された**か、重複のため、**名前が変更**されたかが表示されます。
@@ -90,7 +91,7 @@ Azure Information Protection クライアントでは、何の問題もなく、
 |Word、Excel、PowerPoint でユーザー定義のアクセス許可を使用するクラウドベースの保護 |[いいえ]|はい|
 |[転送不可] に関する Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 |[いいえ]|はい|
 |保護を解除する |[いいえ]|はい|
-|視覚的なマーキング (ヘッダー、フッター、透かしなど): カスタム フォントと RGB コードによるカスタム フォントの色|いいえ|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
+|視覚的なマーキング (ヘッダー、フッター、透かしなど): カスタム フォントと RGB コードによるカスタム フォントの色|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
 |アプリごとの視覚的なマーキング|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
 |条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用できません|[いいえ]|
 

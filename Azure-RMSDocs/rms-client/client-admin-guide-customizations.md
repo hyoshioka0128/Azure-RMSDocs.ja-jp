@@ -3,19 +3,20 @@ title: Azure Information Protection クライアントのカスタム構成
 description: Windows 用 Azure Information Protection クライアントのカスタマイズに関する情報。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/02/2019
+manager: barbkess
+ms.date: 02/14/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3612c0848cf77a57636186f5f9683a2ac7f1c5ec
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: f41dde8fda216084ef9399c0a0e4d7b09c1e79fb
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651566"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266133"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -46,6 +47,7 @@ ms.locfileid: "55651566"
 |Setting|シナリオと手順|
 |----------------|---------------|
 |DisableDNF|[Outlook の [転送不可] ボタンを表示または非表示にする](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|CompareSubLabelsInAttachmentAction|[サブラベルの順序のサポートを有効にする](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Azure Information Protection バーを完全に非表示にする](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
@@ -122,7 +124,7 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 - 記号の意味:**ReportAnIssueLink**
 
-- 値:**\<HTTP 文字列>**
+- Value:**\<HTTP 文字列>**
 
 Web サイトの値の例: `https://support.contoso.com`
 
@@ -148,7 +150,7 @@ Azure Information Protection サービスへのサインイン プロンプト�
     
         - 記号の意味:**PullPolicy**
         
-        - 値:**False**
+        - Value:**False**
     
     2. この設定を含むポリシーをダウンロードし、後続の手順に従ってそれをコンピューターにインストールします。
 
@@ -188,7 +190,7 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
 
 - 記号の意味:**DisableDNF**
 
-- 値:ボタンを非表示にするには **True**、ボタンを表示するには **False**
+- Value:ボタンを非表示にするには **True**、ボタンを表示するには **False**
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする
 
@@ -200,7 +202,7 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
 
 - 記号の意味:**EnableCustomPermissions**
 
-- 値:カスタム アクセス許可オプションを表示する場合は **True**、このオプションを非表示にする場合は **False**
+- Value:カスタム アクセス許可オプションを表示する場合は **True**、このオプションを非表示にする場合は **False**
 
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection バーを完全に非表示にする
@@ -217,8 +219,23 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 - 記号の意味:**EnableBarHiding**
 
-- 値:**True**
+- Value:**True**
 
+## <a name="enable-order-support-for-sublabels-on-attachments"></a>添付ファイルでサブラベルの順序のサポートを有効にする
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+
+サブラベルがあり、次の[ポリシー設定](../configure-policy-settings.md)を構成している場合は、この設定を使います。
+
+- **添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します**
+
+次の文字列を構成します。
+
+- 記号の意味:**CompareSubLabelsInAttachmentAction**
+
+- Value:**True**
+
+これを設定しない場合、最上位の親ラベルにある最初のサブラベルがこのメールに適用されます。
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Outlook で推奨分類を有効にする
 
@@ -230,7 +247,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 - 記号の意味:**OutlookRecommendationEnabled**
 
-- 値:**True**
+- Value:**True**
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
@@ -251,7 +268,7 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>ラベルを構成して Outlook で S/MIME 保護を適用する
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
 動作中の [S/MIME の展開](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption)があり、Azure Information Protection の Rights Management 保護ではなくこの保護方法をラベルが電子メールに対して自動的に適用するようにしたい場合にのみ、この設定を使用します。 結果として得られる保護は、ユーザーが Outlook から手動で S/MIME オプションを選択した場合と同じものです。
 
@@ -301,7 +318,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 - 記号の意味:**PostponeMandatoryBeforeSave**
 
-- 値:**False**
+- Value:**False**
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>バックグラウンドでの分類の継続的実行をオンにする
 
@@ -321,7 +338,7 @@ Azure Information Protection クライアントがユーザーによって指定
 
 - 記号の意味:**RunPolicyInBackground**
 
-- 値:**True**
+- Value:**True**
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない
 
@@ -333,7 +350,7 @@ Azure Information Protection クライアントがユーザーによって指定
 
 - 記号の意味:**EnablePDFv2Protection**
 
-- 値:**False**
+- Value:**False**
 
 Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 EnablePDFv2Protection が False に設定されているときにスキャナーで PDF ドキュメントを保護する場合は、[レジストリを編集する](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)必要があります。
 
@@ -361,7 +378,7 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
     
    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
 
-3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 たとえば、次のように入力します。 
+3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -409,7 +426,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 - Office ドキュメントの場合: デスクトップ アプリでドキュメントを開くと、Azure Information Protection の新しいラベルが設定されたことが表示され、ドキュメントを保存すると適用されます。
 
-- エクスプローラーの場合：[Azure Information Protection] ダイアログ ボックスで、Azure Information Protection の新しいラベルが設定されたことが表示され、ユーザーが **[適用]** を選択すると適用されます。 ユーザーが **[キャンセル]** を選択した場合、新しいラベルは適用されません。
+- ファイル エクスプローラーの場合: [Azure Information Protection] ダイアログ ボックスで、Azure Information Protection の新しいラベルが設定されたことが表示され、ユーザーが **[適用]** を選択すると適用されます。 ユーザーが **[キャンセル]** を選択した場合、新しいラベルは適用されません。
 
 - PowerShell の場合: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) によって、Azure Information Protection の新しいラベルが適用されます。 [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) では、別の方法で設定されるまで、Azure Information Protection の新しいラベルは表示されません。
 
@@ -427,7 +444,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 要件 :Secure Islands の "Confidential" というラベルを持ったドキュメントは、Azure Information Protection の "Confidential" というラベルに変更されます。
 
-この例では:
+この例では、次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **Confidential** という名前が付けられ、ラベル ID は **1ace2cc3-14bc-4142-9125-bf946a70542c** です。 
 
@@ -444,7 +461,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 要件 :Secure Islands によって "Sensitive" というラベルを付けられたドキュメントは、Azure Information Protection によって "Highly Confidential" というラベルに変更されます。
 
-この例では:
+この例では、次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **Highly Confidential** という名前が付けられ、ラベル ID は **3e9df74d-3168-48af-8b11-037e3021813f** です。
 
@@ -462,7 +479,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 要件 :"Internal" という単語を含む Secure Islands のラベルが 2 つあり、この Secure Islands のラベルのいずれかを含んでいるドキュメントを、Azure Information Protection によって "General" にラベル付けし直します。
 
-この例では:
+この例では、次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **General** という名前が付けられ、ラベル ID は **2beb8fe7-8293-444c-9768-7fdc6f75014d** です。
 
@@ -490,7 +507,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 - 記号の意味:**RemoveExternalContentMarkingInApp**
 
-- 値:\<**Office アプリケーションの種類 WXP**> 
+- Value:\<**Office アプリケーションの種類 WXP**> 
 
 例:
 
@@ -561,7 +578,7 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 - 記号の意味:**PowerPointShapeNameToRemove**
 
-- 値:\<**PowerPoint の図形の名前**> 
+- Value:\<**PowerPoint の図形の名前**> 
 
 削除する PowerPoint の図形が複数ある場合は、削除する図形と同じ数だけ **PowerPointShapeNameToRemove** キーを作成します。 各エントリに、削除する図形の名前を指定します。
 
@@ -569,7 +586,7 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 - 記号の意味:**RemoveExternalContentMarkingInAllSlides**
 
-- 値:**True**
+- Value:**True**
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける
 
@@ -616,7 +633,7 @@ Windows 整合性レベルについて詳しくは、「[What is the Windows Int
 
 - 記号の意味:**ProcessUsingLowIntegrity**
 
-- 値:**False**
+- Value:**False**
 
 
 ## <a name="change-the-local-logging-level"></a>ローカルのログ記録レベルを変更する
@@ -655,7 +672,7 @@ Outlook on the web では、Azure Information Protection の分類と保護の�
 
 2. ラベルごとに Exchange メール フロー ルールを作成します。メッセージ プロパティに構成した分類が含まれる場合はルールを適用し、メッセージ プロパティを変更してメッセージ ヘッダーを設定します。 
 
-     メッセージ ヘッダーについては、Azure Information Protection ラベルを使って送信および分類した電子メールのインターネット ヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、そのすぐあとに続く文字列 (セミコロンまでが対象) を探します。 たとえば、次のように入力します。
+     メッセージ ヘッダーについては、Azure Information Protection ラベルを使って送信および分類した電子メールのインターネット ヘッダーを調べることによって、指定する情報を見つけることができます。 ヘッダー **msip_labels** と、そのすぐあとに続く文字列 (セミコロンまでが対象) を探します。 次に例を示します。
     
     **msip_labels:MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     

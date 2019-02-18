@@ -3,22 +3,23 @@ title: Azure Information Protection 統合ラベル付けクライアント - �
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/23/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
-ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
+ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951841"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254834"
 ---
-# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection 統合ラベル付けクライアント: バージョン リリース情報
+# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 > [!NOTE]
 > このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、Office 365 セキュリティ/コンプライアンス センターからラベルを含むポリシーをダウンロードします。 [詳細情報](/Office365/SecurityCompliance/sensitivity-labels)
@@ -71,7 +72,7 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
 
 ## <a name="instructions"></a>手順
 
-1. 次の手順に従ってクライアントをインストールします: 「[User Guide: Download and install the Azure Information Protection client (Preview)](install-unifiedlabelingclient-app.md)」 (ユーザー ガイド: Azure Information Protection クライアント (プレビュー) をダウンロードしてインストールする) 
+1. 次の指示に従ってクライアントをインストールします。[ユーザー ガイド:Azure Information Protection クライアント (プレビュー) をダウンロードしてインストールする](install-unifiedlabelingclient-app.md) 
 
 2. Office リボンのボタンが **[保護]** ではなく、**[機密度]** という名前の場合を除き、Azure Information Protection クライアントで行うように Office アプリでそのクライアントを使用します。
     

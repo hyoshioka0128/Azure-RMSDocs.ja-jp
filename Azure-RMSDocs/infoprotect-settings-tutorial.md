@@ -3,16 +3,17 @@ title: チュートリアル - Azure Information Protection のポリシー設�
 description: Azure Information Protection のポリシー設定を構成して、組織のドキュメントや電子メールを分類する手順について説明した簡単なチュートリアルです。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: f906a5b9fc9f678d1f452e347fb3739b4ff96586
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231023"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266082"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -96,7 +97,7 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
     
     ![Azure Information Protection チュートリアル - 既定の設定の変更](./media/defaultsettings-aip-changed.png)
 
-5. この **[ポリシー: グローバル]** ブレードで **[保存]** を選択します。操作を確認するメッセージが表示されたら **[OK]** を選択します。 
+5. **[保存]** を選択し (この **[ポリシー:グローバル]** ブレード上)、操作を確認するメッセージが表示されたら **[OK]** を選択します。 
 
 ## <a name="see-your-policy-settings-in-action"></a>ポリシー設定の動作を確認する 
 
@@ -157,7 +158,7 @@ Outlook を起動し、新しい電子メール メッセージを作成しま�
 
 電子メールを送信する前にラベルの選択を行うので、このポリシー設定の動作を確認するために電子メールを実際に送信する必要はありません。 送信または保存せずに電子メールを閉じてかまいません。
 
-ただし、上位の分類 (**[非常に機密性の高い社外秘]** ラベルのサブラベル) を持つ別のドキュメントを添付して、この手順を繰り返すこともできます。 その場合、上位の分類ラベルを適用するよう求めるプロンプトがどのように変更されるのかを確認できます。
+ただし、上位の分類 (**[非常に機密性の高い社外秘]** ラベルのサブラベル) を持つ別のドキュメントを添付して、この手順を繰り返すこともできます。 その場合、上位の分類ラベルを適用するよう求めるプロンプトがどのように変更されるのかを確認できます。 同じ親ラベルを持つサブラベルを使って複数の添付ファイルをテストする場合、その順序をサポートするには Azure portal で[クライアントの詳細設定](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)を構成する必要があります。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 

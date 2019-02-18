@@ -3,27 +3,28 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/05/2019
+ms.date: 02/15/2019
+manager: barbkess
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: eb9ff9dd73422813a80b41ee516876bfc4c50663
-ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
+ms.openlocfilehash: 2a6602303e51c4bc1cce803ec43841a52992c8b8
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760788"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254494"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
-> 現在のところ、この機能はプレビュー段階で、変更される可能性があります。 この機能が一般公開になったときに、このプレビュー期間中に収集されたすべてのデータがサポートされなくなる可能性があります。
+> 現在のところ、この機能はプレビュー段階で、変更される可能性があります。
 
 Azure Information Protection 分析を使って、中央レポート機能に Azure Information Protection ラベルの導入を追跡させます。 さらに
 
@@ -67,7 +68,7 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
     
     - 既知のカテゴリ (財務データや個人情報など) の機密情報が含まれるファイルと、これらのカテゴリごとのファイルの場所
     
-レポートでは [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有しているワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、[Analytics ポータルの概要](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal)についてのチュートリアルが役立ちます。 
+レポートでは [Azure Monitor](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有している Log Analytics ワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、「[Log Analytics のクエリの概要](/azure/azure-monitor/log-query/get-started-queries)」のチュートリアルが役立ちます。 
 
 詳細については、次のブログ記事を参照してください。 
 
@@ -99,7 +100,7 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
 
 - クライアント オペレーティング システムのバージョン。
 
-この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、このワークスペースへのアクセス権を持つユーザーが表示できます。 ワークスペースに対するアクセスの構成について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users)」セクションをご覧ください。
+この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、このワークスペースへのアクセス権を持つユーザーが表示できます。 ワークスペースに対するアクセスの構成について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/azure-monitor/platform/manage-access#manage-accounts-and-users)」セクションをご覧ください。
 
 > [!NOTE]
 > Azure Information Protection の Azure Log Analytics ワークスペースには、ドキュメントのコンテンツの一致に関するチェック ボックスが含まれています。 このチェック ボックスをオンにすると、機密情報の種類またはカスタム条件によって識別された実際のデータも収集されます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 このデータを収集したくない場合は、このチェック ボックスをオンにしないでください。
@@ -111,9 +112,39 @@ Azure Information Protection レポートを表示し、独自のレポートを
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Log Analytics を含む Azure サブスクリプション|[Azure Log Analytics の価格](https://azure.microsoft.com/pricing/details/log-analytics)ページを参照してください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
+|Log Analytics を含む Azure サブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
 |Azure Information Protection クライアントの現在の一般公開バージョンまたはプレビュー バージョン|このクライアントをまだインストールしていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
 |**検出とリスク** レポートの場合: <br /><br />- オンプレミスのデータ ストアからのデータを表示するには、Azure Information Protection スキャナー (現在の一般公開バージョンまたはプレビュー バージョン) のインスタンスを少なくとも 1 つデプロイしていること <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。<br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
+
+### <a name="permissions-required-for-azure-information-protection-analytics"></a>Azure Information Protection 分析に必要なアクセス許可
+
+Azure Information Protection 分析に固有の機能として、セキュリティ閲覧者の Azure AD 管理者ロールを、Azure Information Protection の管理をサポートしている他の Azure AD ロールの代替として使用することができます。
+
+この機能は Azure Log Analytics を使うため、Azure のロールベースのアクセス制御 (RBAC) によってもワークスペースへのアクセスを制御できます。 Azure ロールを初めてご使用になる場合は、「[Azure RBAC ロールと Azure AD 管理者ロールの違い](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles)」が役に立つ場合があります。
+
+詳細:
+
+1. Azure portal で Azure Information Protection の分析ブレードにアクセスするには、次の [Azure AD の管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれかを持っている必要があります。
+    
+    - **セキュリティ閲覧者**
+    
+    - **Information Protection 管理者**
+    
+   - **セキュリティ管理者**
+    
+    - **グローバル管理者**
+
+2. Azure Log Analytics を使うには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions)、または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかを持っている必要があります:
+    
+    - Log Analytics ワークスペースを作成する、またはカスタム クエリを作成する場合は、次のいずれか:
+    
+        - **Log Analytics 共同作成者**
+        - Azure ロール:**所有者**または**共同作成者**
+    
+    - 別の管理者が作成した Log Analytics ワークスペースのデータを表示するには:
+    
+        - **Log Analytics 閲覧者**
+        - Azure ロール:**閲覧者**
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
@@ -123,7 +154,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
     
 2. **[管理]** メニュー オプションを探し、**[Configure analytics (Preview)]\(分析の構成 (プレビュー)\)** を選択します。
 
-3. **[Azure Information Protection ログ分析]** ブレードには、テナントによって所有されているすべての Log Analytics ワークスペースの一覧が表示されます。 次のいずれかの操作を行います。
+3. **[Azure Information Protection ログ分析]** ブレードには、テナントによって所有されているすべての Log Analytics ワークスペースの一覧が表示されます。 以下のいずれかを実行します。
     
     - 新しい Log Analytics ワークスペースを作成するには: **[新しいワークスペースの作成]** を選択し、**[Log Analytics ワークスペース]** ブレードで、要求された情報を指定します。
     

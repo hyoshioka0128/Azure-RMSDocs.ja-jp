@@ -3,16 +3,17 @@ title: チュートリアル - Azure Information Protection ポリシーを編�
 description: 組織用の Microsoft Azure Information Protection ポリシーを編集するための簡単なチュートリアルです。所要時間は約 15 分です。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 2e08b21deb8d1b7ef99d77f56e1bf149a82df081
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231057"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254358"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>チュートリアル: Azure Information Protection ポリシーを編集して新しいラベルを作成する
 
@@ -93,7 +94,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
 
 6. さらに、**[Office アプリの Information Protection バーを表示します]** が **[オン]** になっていることを確認します。
 
-7. この **[ポリシー: グローバル]** ブレードで **[保存]** を選択します。操作を確認するメッセージが表示されたら **[OK]** を選択します。 このブレードを閉じます。
+7. **[保存]** を選択し (この **[ポリシー:グローバル]** ブレード上)、操作を確認するメッセージが表示されたら **[OK]** を選択します。 このブレードを閉じます。
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>保護用の新しいラベル、視覚的なマーカー、および分類を求めるための条件を作成する
 
@@ -182,7 +183,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     ![Azure Information Protection チュートリアル - 設定の構成](./media/info-protect-settings-configuredv2.png)
     
 
-17. この **[ポリシー: グローバル]** ブレードで **[保存]** をクリックします。 この操作を確認するメッセージが表示されたら、**[OK]** をクリックします。
+17. **[保存]** をクリックします (この **[ポリシー:グローバル]** ブレードを開きます。 この操作を確認するメッセージが表示されたら、**[OK]** をクリックします。
 
 Azure portal を閉じても、または開いたままでこのチュートリアルを完了した後にその他の構成オプションを試してみてもかまいません。
 

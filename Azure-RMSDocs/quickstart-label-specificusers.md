@@ -3,18 +3,21 @@ title: クイック スタート - 特定のユーザー向けの新しい Azure
 description: スコープ付きポリシーを使用して特定のユーザー向けのドキュメントや電子メールを分類する新しいラベルを作成および構成します。
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/14/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1a8af09681411e49936c067c6161376c9d4f9f16
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: a4057396bbe2d642d5f1d155a9e3975d40f02b1e
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023575"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265980"
 ---
-# <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート: 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
+# <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
+
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる新しいラベルを作成します。
 
@@ -32,13 +35,13 @@ ms.locfileid: "53023575"
 
 2. Azure portal に [Azure Information Protection] ブレードを追加し、保護サービスがアクティブになっていることを確認した。
 
-    これらのアクションに関するヘルプが必要な場合は、「[クイック スタート: Azure portal で作業を開始する](quickstart-viewpolicy.md)」をご覧ください。
+    これらの操作に関するサポートが必要な場合は、[Azure portal での作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。
 
 3. 新しいラベルを表示および適用するユーザーを含む、Azure AD の電子メールが有効なグループ。
     
     適切なグループがない場合は、"**営業チーム**" という名前のグループを作成し、少なくとも 1 人のユーザーを追加します。
 
-4. 新しいラベルをテストする場合: ユーザーのコンピューターに Azure Information Protection クライアントをインストールする必要があります。 
+4. 新しいラベルをテストする場合:ユーザーのコンピューターに Azure Information Protection クライアントをインストールする必要があります。 
     
     ラベルをご自分で試してみるには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードしてクライアントをインストールできます。
 
@@ -52,15 +55,15 @@ Azure Information Protection を使用するための必要条件の完全な一
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
-    グローバル管理者でない場合は、別のロールのためにリンク「[Azure Portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」を使用します。
+    グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[新しいラベルの追加]** をクリックします。
 
 3. **[ラベル]** ブレードで、少なくとも以下の項目を指定します。
     
-    - **ラベルの表示名**: ユーザーが表示し、コンテンツの分類を識別する新しいラベルの名前。 たとえば、`Sales - Restricted` と指定します。
+    - **[ラベルの表示名]**:ユーザーに表示されるラベルの名前。これによりコンテンツの分類を識別します。 たとえば、`Sales - Restricted` と指定します。
     
-    - **説明**: ユーザーがこの新しいラベルを選択するタイミングを識別するために役立つヒント。 例: `Business data that is restricted to the Sales Team.`
+    - **説明**:ユーザーがこの新しいラベルを選択するタイミングを識別するために役立つヒント。 例: `Business data that is restricted to the Sales Team.`
 
 4. **[有効化]** が **[オン]** (既定値) に設定されていることを確認し、**[保存]** を選択します。
 
@@ -68,7 +71,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 次に、新しく作成したラベルを新しいスコープ付きポリシーに追加します。
 
-1. **[分類]** > **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ブレードで、**[Add a new policy]\(新しいポリシーの追加\)** を選択します。 
+1. **[分類]** > **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ブレードで、**[新しいポリシーの追加]** を選択します。 
 
 2. **[ポリシー]** ブレードの **[ポリシー名]** ボックスに、新しく作成したラベルを表示するユーザー グループを識別する名前を入力します。 たとえば、`Sales` のように指定します。
 
@@ -100,7 +103,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 2. **[ポリシーの削除]** を選択し、確認を求められたら **[OK]** を選択します。
 
-3. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、作成したラベルのコンテキスト メニュー (**...**) を選択します。  たとえば、"**営業 - 制限付き**" を選択します。
+3. **[分類]** > **[ラベル]** メニュー オプションから:**[Azure Information Protection - ラベル]** ブレードで、作成したラベルのコンテキスト メニュー (**...**) を選択します。  たとえば、"**営業 - 制限付き**" を選択します。
 
 4.  **[このラベルを削除]** を選択し、確認を求められたら **[OK]** を選択します。
 
