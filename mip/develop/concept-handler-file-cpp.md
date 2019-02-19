@@ -4,14 +4,15 @@ description: この記事は、ファイル API ハンドラーがどのよう�
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6b2916a3937892353f4389a59b5e48356deda603
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: b021f5a05ad484b32af3a189c10522564da6d86d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453369"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254851"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK - ファイル ハンドラーの概念
 
@@ -36,7 +37,7 @@ MIP SDK ファイル API では、`mip::FileHandler` によって、さまざま
 - `DeleteLabel()`
 - `CommitAsync()`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 特定のファイルを操作するための `FileHandler` を作成するには、以下のものが必要です。
 
@@ -50,9 +51,9 @@ MIP SDK ファイル API では、`mip::FileHandler` によって、さまざま
 
 `FileHandler` の作成は、promise/future パターンを使用して `FileEngine` の `CreateFileHandlerAsync` 関数を呼び出すのと同じくらい簡単です。
 
-`CreateFileHandlerAsync` では 3 つのパラメーターが受け入れられます。つまり、読み取りまたは変更が必要なファイルへのパス、非同期イベント通知のための `mip::FileHandler::Observer`、および `FileHandler` の promise です。
+`CreateFileHandlerAsync` 次の 3 つのパラメーターを受け取ります。読み取りまたは変更する必要がありますファイルへのパス、`mip::FileHandler::Observer`非同期イベントの通知との約束、`FileHandler`します。
 
-**注:** `mip::FileHandler::Observer` クラスは派生クラスで実装する必要があります。これは、`CreateFileHandler` に `Observer` オブジェクトが必要であるためです。 
+**注:**`mip::FileHandler::Observer` クラスは派生クラスで実装する必要があります。これは、`CreateFileHandler` に `Observer` オブジェクトが必要であるためです。 
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
@@ -132,7 +133,7 @@ MIP SDK のファイルに対する変更をコミットする最後の手順は
 
 コミットメント関数を実装するため、promise/future に戻り、`bool` の promise を作成します。 `CommitAsync()` 関数では、操作が成功した場合は true、何らかの理由で失敗した場合は false が返されます。 
 
-`promise` と `future` を作成した後、`CommitAsync()` が呼び出され、2 つのパラメーター、つまり、出力ファイル パス (`std::string`)、と promise が指定されます。 最後に、`future` オブジェクトの値を取得することで、結果が得られます。
+作成した後、`promise`と`future`、`CommitAsync()`呼びますと指定した 2 つのパラメーター。出力ファイルのパス (`std::string`)、および約束。 最後に、`future` オブジェクトの値を取得することで、結果が得られます。
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -141,7 +142,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**重要:** `FileHandler` では、既存のファイルの更新や上書きは行われません。 ラベルが付けられるファイルを**置き換える**のは開発者の責任です。 
+**大事な：**`FileHandler`更新または既存のファイルを上書きされません。 ラベルが付けられるファイルを**置き換える**のは開発者の責任です。 
 
 ラベルを **FileA.docx** に書き込む場合、ラベルを適用して、**FileB.docx** ファイルのコピーを作成する必要があります。 **FileA.docx**の削除/名前変更、および**FileB.docx** の名前変更を行う場合は、コードを記述する必要があります。
 
