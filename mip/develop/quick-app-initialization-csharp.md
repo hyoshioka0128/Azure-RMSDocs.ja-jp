@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 17c7bb1bd887b4009f450cb5bbf75900587de4f1
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252098"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589987"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -83,7 +83,7 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
 
 `ApplicationInfo`オブジェクトには、2 つのプロパティが含まれています。 `_appInfo.ApplicationId`で使用される、`AuthDelegateImplementation`認証ライブラリへのクライアント ID を指定するクラス。
 
-5. 追加、`public string AcquireToken()`クラス。 このクラスを受け入れる必要があります`Microsoft.InformationProtection.Identity`、2 つの文字列: 機関とリソース。 これらの文字列変数では、API での認証ライブラリに渡され、操作することはできません。 編集と、認証に失敗した可能性があります。
+5. 追加、`public string AcquireToken()`メソッド。 このメソッドが受け入れる必要があります`Microsoft.InformationProtection.Identity`と 2 つの文字列: 機関とリソース。 これらの文字列変数では、API での認証ライブラリに渡され、操作することはできません。 編集と、認証に失敗した可能性があります。
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)
@@ -197,7 +197,7 @@ namespace mip_sdk_dotnet_quickstart
 
 3. 次の値を使用して、コピーしたソース コード内のプレース ホルダーの値に置き換えます。
 
-   | [プレースホルダ] | [値] | 例 |
+   | [プレースホルダ] | 値 | 例 |
    |:----------- |:----- |:--------|
    | \<application-id\> | "MIP SDK のセットアップと構成" で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (2 つのインスタンス)。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 | AppInitialization |
