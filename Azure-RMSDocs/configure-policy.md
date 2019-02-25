@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258710"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425948"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -58,16 +58,17 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 - 次のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を持つアカウントを使用します。
     
-  - **Information Protection 管理者**
-
+    - **Information Protection 管理者**
+    
+    - **セキュリティ閲覧者** ([Azure Information Protection 分析](reports-aip.md)のみの場合)
+    
   - **セキュリティ管理者**
-
+    
   - **グローバル管理者/会社の管理者**
     
     > [!NOTE] 
-    > テナントが統合ラベル付けストアに移行されている場合、Azure portal からラベルを管理するには、ご自身のアカウントが Office 365 セキュリティ/コンプライアンス センターへのアクセス許可も持っている必要があります。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
-    
-    - **セキュリティ閲覧者**は [Azure Information Protection 分析](reports-aip.md)に対してのみ使用します。
+    > テナントが統合ラベル付けストアに移行されている場合、Azure portal から Azure Information Protection を管理するには、ご自分のアカウントがグローバル管理者であるか、リストされたロールのいずれかに加えて Office 365 セキュリティ/コンプライアンス センターに対するアクセス権を持っている必要があります。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
 
@@ -146,6 +147,16 @@ Azure Information Protection クライアントは、サポート対象の Offic
 - [異なる言語のラベルを構成する方法](configure-policy-languages.md)
 
 - [Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](configure-policy-migrate-labels.md)
+
+## <a name="label-information-stored-in-emails-and-documents"></a>メールやドキュメントに格納されるラベル情報
+
+ドキュメントまたはメールにラベルが適用されるとき、実際には、アプリケーションとサービスがそのラベルを読み取れるように、メタデータにラベルが格納されています。
+
+- メールでは、この情報は **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** の X ヘッダーに格納されます 
+
+- Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx)、PDF ドキュメントの場合、このメタデータは次のカスタム プロパティに格納されます:**MSIP_Label_\<GUID>_Enabled=True** に格納されます。  
+
+ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の **[ラベル]** ブレード上の [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
 ## <a name="next-steps"></a>次の手順
 

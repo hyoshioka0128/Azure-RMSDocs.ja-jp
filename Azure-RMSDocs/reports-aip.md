@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 2a6602303e51c4bc1cce803ec43841a52992c8b8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 54a18f52a3b1cd5656d1d2c3cfbd675062b06c47
+ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254494"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407727"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -126,13 +126,16 @@ Azure Information Protection 分析に固有の機能として、セキュリテ
 
 1. Azure portal で Azure Information Protection の分析ブレードにアクセスするには、次の [Azure AD の管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれかを持っている必要があります。
     
-    - **セキュリティ閲覧者**
-    
     - **Information Protection 管理者**
     
+    - **セキュリティ閲覧者**
+  
    - **セキュリティ管理者**
     
     - **グローバル管理者**
+    
+    > [!NOTE] 
+    > テナントが統合ラベル付けストアに移行されている場合、ご自分のアカウントはグローバル管理者であるか、リストされたロールのいずれかに加えて Office 365 セキュリティ/コンプライアンス センターに対するアクセス権を持っている必要があります。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. Azure Log Analytics を使うには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions)、または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかを持っている必要があります:
     
@@ -148,7 +151,7 @@ Azure Information Protection 分析に固有の機能として、セキュリテ
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。 
+1. まだそれを実行していない場合、新しいブラウザー ウィンドウを開き、[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)を備えたアカウントを使って [Azure portal にサインインします](https://portal.azure.com)。 次に、**[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
@@ -171,8 +174,6 @@ Log Analytics ワークスペースの作成に関する情報については、
 - **使用状況レポート (プレビュー)**: ラベルがどのように使用されているかを確認するには、このレポートを使用します。 
 
 - **アクティビティ ログ (プレビュー)**: ユーザーからの、およびデバイスとファイル パス上でのラベル付けアクションを確認するには、このレポートを使用します。
-    
-    このレポートは現在テナントにロールアウトされています。そのため、これが表示されない場合は、数日後にもう一度お試しください。
     
     このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。
 

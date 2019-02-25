@@ -4,19 +4,19 @@ description: Azure Information Protection ラベルの Exchange Online メール
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f35ab27167514b9b94a4cb4be2e6196dccd5280d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265997"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425965"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
@@ -34,17 +34,13 @@ Exchange Online でメール フロー ルールを構成して Azure Informatio
 
 電子メール メッセージを暗号化するメール フロー ルールを構成する方法について詳しくは、Office ドキュメントの「[Office 365 でメール メッセージを暗号化するメール フロー ルールを定義する](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8)」をご覧ください。 
 
-## <a name="where-labels-are-stored-in-emails-and-documents"></a>電子メールやドキュメント中でラベルが格納される場所
+## <a name="prerequisite-know-your-label-guid"></a>前提条件:ご自分のラベルの GUID を把握している
 
-Azure Information Protection ラベルはメタデータに格納されるため、Exchange Online のメール フロー ルールでは、メッセージとドキュメント添付ファイルのラベルを読み取ることができます。
+Azure Information Protection ラベルはメタデータに格納されるため、Exchange Online のメール フロー ルールでは、メッセージと Office ドキュメント添付ファイルに対するこの情報を読み取ることができます。 メール フロー ルールでは、PDF ドキュメントのメタデータを検査することはできません。
 
-- メールでは、この情報は **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** の X ヘッダーに格納されます 
+ラベル付けされたメッセージとドキュメントを識別するメール フロー ルールを構成する前に、使用する Azure Information Protection ラベルの GUID を把握する必要があります。 
 
-- Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx) の場合、このメタデータは次のカスタム プロパティに格納されます:**MSIP_Label_\<GUID>_Enabled=True** に格納されます。  
-
-ラベルの GUID を特定するには、Azure Portal で Azure Information Protection ポリシーを表示または構成するときに、**[ラベル]** ブレードの [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
-
-メール フロー ルールを構成する前に、使用する Azure Information Protection ラベルの GUID を把握する必要があります。
+ラベルによって格納されるメタデータと、ラベルの GUID の識別方法について詳しくは、「[メールやドキュメントに格納されるラベル情報](configure-policy.md#label-information-stored-in-emails-and-documents)」をご覧ください。
 
 ## <a name="example-configurations"></a>構成例
 

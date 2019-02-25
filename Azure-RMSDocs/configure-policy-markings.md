@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
+ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258965"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56654701"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -128,7 +128,7 @@ ms.locfileid: "56258965"
     
     `${If.App.WP}This content is ${If.End}Confidential`
     
-    Word と PointPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルは透かしテキストを適用しません。
+    Word と PowerPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルはいかなる透かしテキストも適用しません。
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 

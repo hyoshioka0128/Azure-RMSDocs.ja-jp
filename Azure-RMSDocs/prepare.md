@@ -4,19 +4,19 @@ description: 分類、ラベル付け、組織のドキュメントと電子メ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be4deaa13311cb414df48fc7edde50dbe42ed744
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: db258b5b9babaf050399bf07baa37a78b36ae21b
+ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253287"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407744"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -36,7 +36,9 @@ ms.locfileid: "56253287"
 
 - 別のディレクトリにユーザーとグループを作成し、それらを Azure AD と同期させます。
 
-この一覧にある最初の 3 つのメソッドを使用してユーザーとグループを作成するとき、ユーザーとグループは自動的に Azure AD に作成されて、Azure Information Protection でこれらのアカウントを直接使用できます。 ただし、多くの企業ネットワークでは、オンプレミスのディレクトリを使用してユーザーとグループを作成および管理します。 Azure Information Protection では、これらのアカウントを直接使用できません。Azure AD に同期する必要があります。
+この一覧にある最初の 3 つのメソッドを使用してユーザーとグループを作成する場合 (1 つの例外を除く)、それらは自動的に Azure AD に作成され、Azure Information Protection でこれらのアカウントを直接使用できます。 ただし、多くの企業ネットワークでは、オンプレミスのディレクトリを使用してユーザーとグループを作成および管理します。 Azure Information Protection では、これらのアカウントを直接使用できません。Azure AD に同期する必要があります。
+
+前の段落で言及されている例外は、Exchange Online 用に作成できる動的配布リストです。 静的な配布リストとは異なり、これらのグループは Azure AD にレプリケートされないため、Azure Information Protection では使用できません。 
 
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Azure Information Protection によるユーザーとグループの使用方法
 
@@ -96,7 +98,7 @@ Azure Information Protection では、テナント内のユーザー用に Azure
 
 - 追加のラベルをグループ メンバーに割り当てるスコープ ポリシーを構成するために、ユーザーのテナントの確認済みドメインを含む電子メール アドレスを持つ任意の種類のグループを Azure AD で使用することができます。 電子メール アドレスを持つグループを、メールが有効なグループと呼ぶことがあります。
 
-    たとえば、メールが有効なセキュリティ グループ、配布グループ (静的または動的)、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は、電子メール アドレスを持っていない種類のグループであるため使用できません。
+    たとえば、メールが有効なセキュリティ グループ、静的な配布グループ、Office 365 グループを使用できます。 セキュリティ グループ (動的または静的) は、電子メール アドレスを持っていない種類のグループであるため使用できません。 Exchange Online からの動的配布リストも使用できません。このグループは Azure AD にレプリケートされないためです。
 
 使用権限とアクセス制御を割り当てる場合:
 

@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/14/2019
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f41dde8fda216084ef9399c0a0e4d7b09c1e79fb
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: e336a025d680f6c3a016f1b9b2c36976f765824f
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266133"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590004"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -413,7 +413,7 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
-この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、変更される可能性があります。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
 現在、この構成は、PDF 暗号化の ISO 標準を使用して PDF ファイルを保護する新しい既定の動作とは互換性がありません。 このシナリオでは、.ppdf ファイルをエクスプローラー、PowerShell、スキャナーで開くことはできません。 これを解決するには、クライアントの詳細設定を使用して、[PDF 暗号化の ISO 標準を使用しない](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)ようにします。
 
@@ -654,11 +654,11 @@ Windows 整合性レベルについて詳しくは、「[What is the Windows Int
 
 - **エラー**:エラーのみ。
 
-- **[情報]**:最小のログ記録 (イベント ID は含まれません)。
+- **[情報]**:最小のログ記録 (イベント ID は含まれません) (スキャナーの既定の設定)。
 
-- **[デバッグ]**:完全な情報 (既定の設定)。
+- **[デバッグ]**:完全な情報。
 
-- **[トレース]**:パフォーマンスに影響を与える、非常に詳細なログ記録。Microsoft サポートから要求された場合にのみ有効にする必要があります。 このレベルのログ記録を設定するよう指示された場合は、関連ログの収集が完了したときに別の値に設定することを忘れないでください。
+- **[トレース]**:詳細なログ記録 (クライアントの既定の設定)。 スキャナーの場合、この設定はパフォーマンスに大きな影響を与えるため、スキャナーに対しては Microsoft サポートから要求された場合にのみ有効にする必要があります。 このレベルのログ記録をスキャナー用に設定するよう指示された場合は、関連ログの収集が完了したときに別の値に設定することを忘れないでください。
 
 このクライアントの詳細設定によって、[中央レポート機能](../reports-aip.md)のために Azure Information Protection に送信される情報が変更されたり、ローカルの[イベント ログ](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)に書き込まれる情報が変更されたりすることはありません。
 
@@ -682,7 +682,7 @@ Outlook on the web では、Azure Information Protection の分類と保護の�
     
     注: ラベルがサブラベルである場合は、ヘッダー値のサブラベルの前に、同じ形式を使って親ラベルも指定する必要があります。 たとえば、サブラベルの GUID が 27efdf94-80a0-4d02-b88c-b615c12d69a9 である場合、値は `MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;` のようになります。
 
-この構成のテストを行う前に、メール フロー ルールを作成または編集すると遅延 (たとえば、1 時間の遅延) がよく発生することを念頭においてください。 このルールを有効にすると、ユーザーが Outlook on the web または Exchange ActiveSync IRM をサポートするモバイル デバイス クライアントを使用する際に、次のことが起こるようになります。 
+この構成のテストを行う前に、メール フロー ルールを作成または編集すると遅延 (たとえば、1 時間の遅延) がよく発生することを念頭においてください。 このルールを有効にすると、ユーザーが Outlook on the web を使用したときに次のイベントが発生するようになります。 
 
 - ユーザーが Exchange のメッセージ分類を選択して電子メールを送信します。
 
@@ -690,7 +690,7 @@ Outlook on the web では、Azure Information Protection の分類と保護の�
 
 - Azure Information Protection クライアントをインストール済みである内部受信者が Outlook で電子メールを表示すると、Azure Information Protection の割り当てられたラベルが表示されます。 
 
-Azure Information Protection ラベルで保護を適用する場合は、ルール構成にこの保護を追加します。メッセージ セキュリティを変更するオプションを選択し、権利保護を適用して、RMS テンプレートまたは [転送不可] オプションを選択します。
+Azure Information Protection ラベルで保護を適用する場合は、ルール構成にこの保護を追加します。メッセージ セキュリティを変更するオプションを選択し、権利保護を適用して、保護テンプレートまたは [転送不可] オプションを選択します。
 
 また、メール フロー ルールを構成して、リバース マッピングを行うこともできます。 Azure Information Protection ラベルが検出された場合は、対応する Exchange メッセージの分類を設定します。
 

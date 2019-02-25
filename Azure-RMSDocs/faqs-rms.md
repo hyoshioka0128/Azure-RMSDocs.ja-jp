@@ -4,7 +4,7 @@ description: Azure Information Protection のデータ保護サービス、Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/10/2019
+ms.date: 02/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 769978bb7cfe5e363b0f73f5564865e67b5aad49
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 3782d2cea93b2128530e66d82e366924e92abbbc
+ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259985"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407761"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -195,7 +195,7 @@ Azure Information Protection では、他のユーザーと情報を安全に共
 テナントに適用される使用ライセンスの有効期間の既定値は 30 日間です。ラベルまたはテンプレートで、この設定をより制限の厳しい値でオーバーライドできます。 使用ライセンスの詳細および使用ライセンスの構成方法については、[Rights Management の使用ライセンス](configure-usage-rights.md#rights-management-use-license)に関するページを参照してください。
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
-Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows 10 Mobile) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの**[使用権限](configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 これに対して、iOS や Mac のデバイスでは、画面キャプチャを禁止するアプリが認められていません。また、(Outlook Web App や Office Online を使用しているなどの場合に) ブラウザーでの画面キャプチャを禁止することも不可能です。
+Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows 10 Mobile) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの**[使用権限](configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 ただし、iOS および Mac デバイスでは、いかなるアプリも画面キャプチャを防止することができません。 さらに、すべてのデバイス上のブラウザーは画面キャプチャを防止することができません。 ブラウザーの使用には、Outlook on the web と Office Online が含まれます。
 
 画面のキャプチャを禁止しておくと、不注意や不測の出来事により機密性の高い情報が漏洩してしまう事態を避けることができます。 ただし、画面に表示されるデータをユーザーが共有するにはさまざまな方法があり、スクリーン ショットを保存する方法はその 1 つにすぎません。 たとえば、表示される情報を共有しようとするユーザーは、カメラ付き携帯電話を使用して写真を撮影したり、データを再入力したり、単に口頭で他者に伝達することができます。
 
