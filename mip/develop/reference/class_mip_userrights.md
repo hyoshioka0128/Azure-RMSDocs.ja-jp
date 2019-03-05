@@ -1,18 +1,18 @@
 ---
 title: class mip::UserRights
 description: Mip::userrights クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: aadf12606f74d508ba3ebdc1ce0770febd49e142
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2a45f7bc9947984f9189b10bd886a53807b3abdb
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251304"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332673"
 ---
 # <a name="class-mipuserrights"></a>class mip::UserRights 
 ユーザーのグループおよびそれらに関連付けられている権限。

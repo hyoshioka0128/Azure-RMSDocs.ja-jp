@@ -1,18 +1,18 @@
 ---
 title: class mip::ProtectionDescriptor
 description: Mip::protectiondescriptor クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d04d1fe3c3d59592084a60b68d50d74ae10291c0
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: bf063cb8b56cfd0c487b62394c9226519e85b1f3
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259628"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330749"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 コンテンツの一部に関連付けられている保護の説明。

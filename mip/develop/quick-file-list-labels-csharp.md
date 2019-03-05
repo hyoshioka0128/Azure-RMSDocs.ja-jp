@@ -1,18 +1,18 @@
 ---
 title: MIP SDK を使用して Microsoft Information Protection (MIP) テナントに機密ラベルのリストのクイック スタート -C#ラッパー
 description: Microsoft の Information Protection SDK を使用する方法を示すクイック スタートC#ラッパーをテナント内の機密ラベルを一覧表示します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
-ms.author: bryanla
-ms.openlocfilehash: f7071952693e947977278b39d28a8ee985d5834e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253848"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333332"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C#)
 
@@ -91,7 +91,7 @@ ms.locfileid: "56253848"
 
 | まとめ | エラー メッセージ | ソリューション |
 |---------|---------------|----------|
-| 不正なアクセス トークン | *例外が発生しました.../期限切れの不適切なアクセス トークンは、ですか?<br><br>失敗の API 呼び出し: profile_add_engine_async に失敗しました: [クラス mip::PolicySyncException] ポリシーの取得に失敗しました、要求は http 状態コードで失敗しました。401、x: ms 診断: [2000001; 理由 =「、要求と共に送信される OAuth トークンを解析できません」;。error_category ="invalid_token"]、関連付け Id: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (プロセス 29924) は、コード 0 で終了しました<br>。<br>このウィンドウを閉じますすべてのキーを押します.* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 「[Update the token acquisition logic](#update-the-token-acquisition-logic-with-a-valid-access-token)」 (トークンの取得ロジックの更新) に戻り、アクセス トークンを再生成し、`AcquireOAuth2Token()` を再度更新して、再構築および再テストを行います。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
+| 不正なアクセス トークン | *例外が発生しました.正しくない/有効期限切れ、アクセス トークンですか。<br><br>失敗の API 呼び出し: profile_add_engine_async に失敗しました: [クラス mip::PolicySyncException] ポリシーの取得に失敗しました、要求は http 状態コードで失敗しました。401、x: ms 診断: [2000001; 理由 =「、要求と共に送信される OAuth トークンを解析できません」;。error_category ="invalid_token"]、関連付け Id: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (プロセス 29924) は、コード 0 で終了しました<br>。<br>このウィンドウを閉じますすべてのキーを押します.* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 「[Update the token acquisition logic](#update-the-token-acquisition-logic-with-a-valid-access-token)」 (トークンの取得ロジックの更新) に戻り、アクセス トークンを再生成し、`AcquireOAuth2Token()` を再度更新して、再構築および再テストを行います。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
 | 機密ラベルが構成されていない | 該当なし | プロジェクトが正常に構築されたにもかかわらず、コンソール ウィンドウに出力がない場合、組織の機密ラベルの構成が正しいことを確認します。 詳細については、「Define label taxonomy and protection settings」 (ラベルの分類と保護設定の定義) の「[MIP SDK setup and configuration](setup-configure-mip.md)」 (MIP SDK の設定と構成) を参照してください。  |
 
 ## <a name="next-steps"></a>次の手順

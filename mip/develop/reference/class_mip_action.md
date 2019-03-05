@@ -1,18 +1,18 @@
 ---
 title: class mip::Action
 description: Mip::action クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 90a4182c10c55518634f0dd0cd84c7ba1c31640e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: a8e160f31dbf696944f7c6d40c1826233883f00a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332250"
 ---
 # <a name="class-mipaction"></a>class mip::Action 
 アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します

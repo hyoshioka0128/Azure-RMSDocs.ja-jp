@@ -1,18 +1,18 @@
 ---
 title: mip::NoPolicyError をクラスします。
 description: Mip::nopolicyerror クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 409c9f379630594be662ae4a6723e74fbc7f10bc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4059905ed18356f373d8264099dde8d7694898d1
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332754"
 ---
 # <a name="class-mipnopolicyerror"></a>mip::NoPolicyError をクラスします。 
 分類とラベルは、テナントのポリシーが構成されていません。

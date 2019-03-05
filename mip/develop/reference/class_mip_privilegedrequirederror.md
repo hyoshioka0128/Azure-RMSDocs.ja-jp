@@ -1,18 +1,18 @@
 ---
 title: class mip::PrivilegedRequiredError
 description: Mip::privilegedrequirederror クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 3d4473029011a690ee98dbb77547de77c82b2208
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 778eada67cc244f1f0c81f8246fe33b0aa46140e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330720"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>class mip::PrivilegedRequiredError 
 現在のラベルは特権操作 (管理者の操作と同等) として割り当てられています。このため、オーバーライドできません。

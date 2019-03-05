@@ -2,18 +2,18 @@
 title: クイック スタート - 設定および取得を使用してファイルの機密ラベル、 C# MIP SDK
 description: Microsoft の情報保護 SDK .NET ラッパーを使用して設定およびファイルの機密ラベルを取得する方法を示すクイック スタートです。
 services: information-protection
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/09/2019
-ms.author: bryanla
-ms.openlocfilehash: 3af8cd7e21124d6e6ac70407d8e366eb6d88da45
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 3ee178c493b99cfecd3f6cd04a680f47acf45412
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253610"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333249"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:設定し、機密ラベルを取得 (C#)
 
@@ -70,7 +70,7 @@ ms.locfileid: "56253610"
 
 3. 貼り付けたばかりのソース コードのプレースホルダー値を、次の値で置き換えます。
 
-   | [プレースホルダ] | [値] |
+   | [プレースホルダ] | 値 |
    |:----------- |:----- |
    | \<input-file-path\> | テスト入力ファイルへの完全なパス。たとえば `c:\\Test\\Test.docx`。 |
    | \<label-id\> | 前のクイック スタートでコンソールの出力からコピーした機密ラベル ID。たとえば `f42a3342-8706-4288-bd31-ebb85995028z`。 |

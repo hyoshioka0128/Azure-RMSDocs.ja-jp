@@ -2,18 +2,18 @@
 title: クイック スタート - C++ MIP SDK を使用したファイルの機密ラベルの設定および取得
 description: Microsoft Information Protection C++ SDK を使用して、ファイルに機密ラベルを設定および取得する方法を説明するクイック スタート。
 services: information-protection
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: 45263bc2a8f77f73f318b2c8df94f21e785e0f40
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 50fe4bce04b28440609c558297d8a3e39087e557
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256687"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332839"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:設定および取得の機密ラベル (C++)
 
@@ -209,10 +209,10 @@ ms.locfileid: "56256687"
 
 4. 貼り付けたで次のように、文字列定数を使用してソース コード内のプレース ホルダーの値に置き換えます。
 
-   | [プレースホルダ] | [値] |
+   | [プレースホルダ] | 値 |
    |:----------- |:----- |
    | \<input-file-path\> | テスト入力ファイルへの完全なパス。たとえば `"c:\\Test\\Test.docx"`。 |
-   | \<content-identifier\> | コンテンツの人間が判読できる識別子です。 例: <ul><li>ファイルの場合は、& を検討してください。 `"c:\Test\Test.docx"`</li><li>電子メール、サブジェクト: 送信者を検討してください。 `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | コンテンツの人間が判読できる識別子です。 以下に例を示します。 <ul><li>ファイルの場合は、& を検討してください。 `"c:\Test\Test.docx"`</li><li>電子メール、サブジェクト: 送信者を検討してください。 `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | 前のクイック スタートでコンソールの出力からコピーした機密ラベル ID。たとえば `"f42a3342-8706-4288-bd31-ebb85995028z"`。 |
    | \<output-file-path\> | 入力ファイルのラベル付きコピーである出力ファイルへの完全なパス。たとえば、`"c:\\Test\\Test_labeled.docx"`。 |
 

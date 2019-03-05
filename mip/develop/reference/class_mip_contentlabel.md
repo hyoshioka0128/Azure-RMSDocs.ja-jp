@@ -1,18 +1,18 @@
 ---
 title: class mip::ContentLabel
 description: Mip::contentlabel クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6ef95a20be13123eec6ad17a9eef26f321e36cf8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 34e4395858713219361e4e2ccf8308d89bc5f29d
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330493"
 ---
 # <a name="class-mipcontentlabel"></a>class mip::ContentLabel 
 コンテンツの一部 (通常はドキュメント) に適用される Microsoft Information Protection ラベルの抽象化。

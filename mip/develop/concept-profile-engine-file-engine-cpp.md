@@ -1,18 +1,18 @@
 ---
 title: 概念 - ファイル API エンジン オブジェクト
 description: この記事は、アプリケーションの初期化中に作成される、ファイル エンジン オブジェクトの概念を理解するのに役立ちます。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: fcdcb5c11646fd7d32284b6df31cda33abbfde4a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259288"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330544"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK - ファイル API エンジンの概念
 

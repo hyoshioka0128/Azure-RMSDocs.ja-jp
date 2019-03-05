@@ -1,18 +1,18 @@
 ---
 title: 概念 - 保護 API エンジン オブジェクト
 description: この記事は、アプリケーションの初期化中に作成される、保護エンジン オブジェクトに関する概念を理解するのに役立ちます。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 9595d3a3b12af802720363e141e40608c6f5ba93
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e3338395a193f6c1cc8f60a6beb93a1d0db15511
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258410"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330425"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK - 保護 API エンジンの概念
 

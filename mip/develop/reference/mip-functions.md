@@ -1,18 +1,18 @@
 ---
 title: 関数
 description: 関数
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.date: 01/28/2019
-ms.author: bryanla
-ms.openlocfilehash: 614e4bdd589e8c7ad3efdbf9be2f807e6d4ec43a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 5827c1f2779ec22dd798ec26c12a9977e10065c1
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254188"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332737"
 ---
 # <a name="functions"></a>関数
 

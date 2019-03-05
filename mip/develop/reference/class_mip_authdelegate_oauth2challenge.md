@@ -1,18 +1,18 @@
 ---
 title: クラスの mip::AuthDelegate::OAuth2Challenge
 description: Mip::authdelegate クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 64a485c30dc6fdb8154c85c3afbd548bbc78ce9a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2e4a107a0a967f4d3ff58ebf269bb701f5834fb0
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259410"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331820"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>クラスの mip::AuthDelegate::OAuth2Challenge 
 oauth2 トークンを生成するために呼び出し元アプリケーションに必要なすべての情報を含むクラスです。

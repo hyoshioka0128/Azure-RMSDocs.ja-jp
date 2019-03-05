@@ -1,18 +1,18 @@
 ---
 title: よくあるご質問と既知の問題 - Microsoft Information Protection SDK。
 description: Microsoft Information Protection (MIP) SDK のよく寄せられる質問と、問題とエラーに関するトラブルシューティングのガイダンスです。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
 ms.date: 10/19/2018
-ms.author: bryanla
-ms.openlocfilehash: f9aed3cab9ba22ba1ac2b41984ce82957278f1e6
-ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
+ms.author: mbaldwin
+ms.openlocfilehash: e548b2b6e9b32899ceff693312cf510b9fff74aa
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56323582"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333552"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 

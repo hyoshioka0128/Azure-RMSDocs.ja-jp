@@ -1,18 +1,18 @@
 ---
 title: 概念 - MIP SDK の API。
 description: この記事は、MIP SDK の 3 種類の API、その関連性、およびそれぞれのユースケースを理解するのに役立ちます。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 10/16/2018
-ms.author: bryanla
-ms.openlocfilehash: 1dddb9834a0cc7b365a2294bbad3611e4d01870a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: d4bef66f8e3d808b195ac49f7bb42ab0eb62b7d5
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330170"
 ---
 # <a name="microsoft-information-protection-sdk---api-concepts"></a>Microsoft Information Protection SDK - API の概念
 

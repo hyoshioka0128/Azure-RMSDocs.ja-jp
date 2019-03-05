@@ -1,18 +1,18 @@
 ---
 title: 概念 - MIP SDK でのポリシー API オブザーバー。
 description: MIP SDK は、ほぼ完全に非同期になるように設計されています。 この記事は、ポリシー API オブザーバーの実装方法と非同期処理への使用方法を理解するのに役立ちます。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: d822a8ea57def13d2f04ac1c18b22ff629e413ad
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251178"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330289"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - ポリシー API オブザーバー
 

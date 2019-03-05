@@ -1,18 +1,18 @@
 ---
 title: 概念 - MIP SDK でのオブザーバー。
 description: MIP SDK は、ほぼ完全に非同期になるように設計されています。 この記事は、オブザーバーの実装方法と非同期処理への使用方法を理解するのに役立ちます。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 9ee7e0bcf7fdd42bb989067adf1037ac8d371cad
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: e42b9996d737ace5b25988eb72fa02aa87230f13
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259662"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330867"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Microsoft Information Protection SDK - オブザーバーの概念
 

@@ -1,18 +1,18 @@
 ---
 title: class mip::LabelingOptions
 description: Mip::labelingoptions クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 0ef91bb6b27776ec4774be68496bc4eb9240261b
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 36251330bbca45d69630302c304f5190e25db320
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251258"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329558"
 ---
 # <a name="class-miplabelingoptions"></a>class mip::LabelingOptions 
 SetLabel/DeleteLabel メソッドのラベル付けオプションを構成するためのインターフェイス。

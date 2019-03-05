@@ -1,18 +1,18 @@
 ---
 title: class mip::ProtectionProfile::Observer
 description: Mip::protectionprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d6d376e5b6e1ba65394e575b2e257a3b15c19f14
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 386005f6b3eb8a648a83c60315e12782e8cb7457
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332788"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>class mip::ProtectionProfile::Observer 
 [ProtectionProfile](class_mip_protectionprofile.md) に関連する通知を受け取るインターフェイス。

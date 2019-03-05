@@ -1,18 +1,18 @@
 ---
 title: class mip::InternalError
 description: Mip::internalerror クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9fffd19cab46053e1038fc2e548ebf0802501453
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 022f6f3904bb788146400f6ef6f9fd3f223638f5
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256466"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330646"
 ---
 # <a name="class-mipinternalerror"></a>class mip::InternalError 
 内部エラーです。 このエラーは、実行中に予期しない事態が発生するとスローされます。
