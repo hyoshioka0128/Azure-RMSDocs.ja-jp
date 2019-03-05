@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
+ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254834"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956255"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報
 
@@ -28,53 +28,71 @@ Azure Information Protection 統合ラベル付けクライアントの最新プ
 
 ### <a name="release-information"></a>リリース情報
 
-次の情報を使って、Azure Information Protection 統合ラベル付けクライアントの最新プレビュー情報のサポート内容を参照します。 
+次の情報を使って、Azure Information Protection 統合ラベル付けクライアントの最新プレビュー情報のサポート内容を参照します。
 
-このクライアントは Windows コンピューターに Office アドオンとしてインストールします。また、Azure からポリシーをダウンロードする Azure Information Protection クライアントと同じ[前提条件](../requirements.md)があります。
+このクライアントでは、Windows コンピューター用の Office アドオン、エクスプローラー用の拡張機能、および PowerShell モジュールがインストールされます。 このクライアントには、Azure からポリシーをダウンロードする Azure Information Protection クライアントと同じ[前提条件](../requirements.md)があります。
+
+Azure Information Protection クライアントと機能を比較するには、「[クライアントの機能比較](use-client.md#feature-comparisons-for-the-clients)」をご覧ください。
 
 ## <a name="current-preview-version"></a>現在のプレビュー バージョン
 
-**リリース日**: 2018 年 10 月 16 日
+**リリース日**: 2019 年 2 月 25 日
 
 Windows 用 Azure Information Protection 統合ラベル付けクライアントのこのプレビュー バージョンでは、次の機能をサポートします。 
 
-- Azure Information Protection クライアントからのアップグレード
+- Azure Information Protection クライアントからのアップグレード。
 
-- Word、Excel、PowerPoint、Outlook に分類と保護を適用する手動のラベル付け。
+- 手動、自動、および推奨ラベル付け:Office 365 セキュリティ/コンプライアンス センターの**自動ラベル付け**を使って、自動および推奨ラベル付けを構成します。 詳細については、「[機密ラベルをコンテンツに自動的に適用する](/Office365/SecurityCompliance/apply_sensitivity_label_automatically)」をご覧ください。
 
-- 視覚的なマーキング (ヘッダー、フッター、透かし)
+- エクスプローラー、右クリック アクションによるファイルの分類と保護、保護の削除、およびカスタムのアクセス許可の適用。
 
-- 既定のラベル付け 
+- 保護されたテキストとイメージ ファイル、保護された PDF ファイル、一般的に保護されているファイル用のビューアー。
 
-- 転送不可を適用するラベル
+- 次を実行するための PowerShell コマンド:
+    - [ドキュメント上のラベルを設定または削除する](/powershell/module/azureinformationprotection/set-aipfilelabel)
+    - [内容を検査してからドキュメントをラベル付けする](/powershell/module/azureinformationprotection/set-aipfileclassification)
+    - [ドキュメントに適用されているラベル情報を読み取る](/powershell/module/azureinformationprotection/get-aipfilestatus)
+    - [無人の PowerShell セッションをサポートするために認証する](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- ユーザーが機密レベルを下げるかどうかを確認する理由のメッセージ
+- [Azure Information Protection 分析](../reports-aip.md)を使った中央レポート機能のサポート。
 
-- 設定のリセットとログのエクスポートを含む、ヘルプとフィードバックのダイアログ ボックス
+- 次のラベルおよびポリシー設定:
+    - 視覚的なマーキング (ヘッダー、フッター、透かし)
+    - 既定のラベル付け
+    - 転送不可を適用し、Outlook でのみ表示されるラベル
+    - ユーザーが分類レベルを下げるかどうか、またはラベルを削除するかどうかを確認する理由プロンプト
+    - ラベルの色
 
-- 4 時間ごとのセキュリティ/コンプライアンス センターからのポリシーの更新 (Office アプリごとに)。
+- セキュリティ/コンプライアンス センターからのポリシーの更新:
+    - Office アプリの起動ごと、および 4 時間ごと
+    - 右クリックしてファイルまたはフォルダーを分類して保護したとき
+    - ラベル付けと保護のために PowerShell コマンドレット を実行したとき
 
-次の機能はこのプレビュー バージョンでは実行できません。
+- 設定のリセットとログのエクスポートを含む、ヘルプとフィードバックのダイアログ ボックス。
 
-- 自動分類と推奨される分類
+### <a name="features-that-do-not-work-in-this-preview-version-or-are-not-available"></a>このプレビュー バージョンでは機能しない、または使用できない機能
 
-- カスタムのアクセス許可
+主な機能:
 
-- 保護されたテキストとイメージ ファイル、保護された PDF ファイル、一般的に保護されているファイル用のビューアー
+- オンプレミスのデータ ストア上のファイルを検出、ラベル付け、保護するためのスキャナーは使用できません。
 
-- エクスプローラーでの右クリック アクションによるファイルの分類と保護
+- Azure portal から移行され、HYOK 保護用に構成されたラベルは、公開されるとクライアントに表示されますが、これらのラベルでは保護が適用されません。
 
-- PowerShell コマンドでのコマンド ラインからのファイルの分類と保護
+- AzureInformationProtection モジュールのコマンドレットの完全なセットは使用できません。これには保護サービスに直接接続するコマンドレットが含まれます。 たとえば、ファイルを一括で保護解除する、Unprotect-RMSFile です。
 
-- スキャナーによるオンプレミスのデータ ストアでの検出、ラベル付け、保護
-
-- 英語以外の言語のサポート
+完全な詳細については、[比較表](use-client.md#feature-comparisons-for-the-clients)をご覧ください。
 
 ## <a name="instructions"></a>手順
 
 1. 次の指示に従ってクライアントをインストールします。[ユーザー ガイド:Azure Information Protection クライアント (プレビュー) をダウンロードしてインストールする](install-unifiedlabelingclient-app.md) 
 
-2. Office リボンのボタンが **[保護]** ではなく、**[機密度]** という名前の場合を除き、Azure Information Protection クライアントで行うように Office アプリでそのクライアントを使用します。
+2. Azure Information Protection クライアントの場合と同じようにクライアントを使いますが、Office アプリに関して次の例外があります。
+    - Office リボン上のボタンの名前は、**[保護]** ではなく **[秘密度]** です。
+    - 管理者は、既定で Information Protection バーを表示することができません。ただし、ユーザーは、**[秘密度]** ボタンから **[バーの表示]** を選択することでこれを表示できます。 
+    - カスタムのアクセス許可は使用できません
+    - 追跡と取り消しは使用できません
+    
+    ユーザーの手順について:
     
     - [ファイルや電子メールを分類する](client-classify.md) 
     
@@ -83,6 +101,3 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
 3. 操作の共有 
     
     - このプレビュー クライアントについてフィードバックを提供したり、質問するには、[Azure Information Protection 用の Yammer サイト](https://www.yammer.com/AskIPTeam)に関するページを使用してください。
-    
-    - このプレビュー クライアントでの問題を報告するには、リボンの **[機密度]** ボタンから **[ヘルプとフィードバック]** を使用します。 ダイアログ ボックスから、ログをエクスポートして、**[問題の報告]** オプションで作成される電子メールにこれらのログ ファイルを添付してください。 
-

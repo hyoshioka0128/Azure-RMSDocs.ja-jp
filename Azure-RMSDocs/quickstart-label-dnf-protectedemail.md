@@ -4,16 +4,16 @@ description: 転送不可の保護を自動的に適用することで、ユー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 67fe46f94b83b219794251c9d7e1500f756669a3
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: c41f190cf2e91378b03922caf3211c19ec01e871
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266031"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017202"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
@@ -77,7 +77,9 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、保護を適用するように構成するラベルを選択します。 
 
-3. **[ラベル]** ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけます。 **[保護]** を選択し、**[保護]** を選択します。
+3. **[ラベル]** ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけます。 **[保護]** を選択すると、その他のオプションのいずれかが以前に選択されていた場合に **[保護]** ブレードが自動的に開きます。 
+    
+    **[保護]** ブレードが自動的に開かない場合は、**[保護]** を選択します。
     
     ![Azure Information Protection ラベルの保護を構成する](./media/info-protect-protection-bar-configured.png)。
 

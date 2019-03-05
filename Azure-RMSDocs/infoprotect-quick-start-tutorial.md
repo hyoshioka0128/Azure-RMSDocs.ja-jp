@@ -4,16 +4,16 @@ description: 組織用の Microsoft Azure Information Protection ポリシーを
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254358"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017236"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>チュートリアル: Azure Information Protection ポリシーを編集して新しいラベルを作成する
 
@@ -108,7 +108,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
     このテキストは、選択したラベルがどのような使用目的であるかを示しており、ユーザーに対してはツールヒントとして表示され、ユーザーがどのラベルを選択するかを決定するのに役立ちます。
 
-3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、**[保護]** を選択してから、再び **[保護]** を選択します。
+3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** に対して、**[保護]** を選択します。これにより、**[保護]** オプションを選択することで自動的に **[保護]** ブレードが開きます。
     
     ![保護用の Azure Information Protection ラベルの構成](./media/info-protect-protection-bar-configured.png) 
     

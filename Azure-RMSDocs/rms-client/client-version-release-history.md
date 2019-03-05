@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
+ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266099"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828670"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 

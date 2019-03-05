@@ -4,19 +4,19 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/25/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 37aea835e34c0db50d277922edbfd044e43afd71
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5945b115d4b20f7ef8c42d51e76066cca5c994bd
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256812"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756200"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -42,6 +42,18 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 > - モバイル デバイス (iOS および Android) および Mac コンピューター用の Office アプリに組み込まれたラベル付け機能。 詳細については、「[Office 内の文書やメールに機密ラベルを適用する](https://aka.ms/officemipdocs)」を参照してください。
 
 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com/)にアクセスし、新機能のご要望をお知らせください。また、リクエストへの投票も受け付けています。
+
+## <a name="which-preview-client-do-i-install-for-testing-new-functionality"></a>新しい機能をテストするためにどのプレビュー クライアントをインストールすればよいですか?
+
+現在、2 つの Windows 用プレビュー クライアントが存在しています。 
+
+- Azure portal からラベルとポリシー設定をダウンロードする **Azure Information Protection クライアント**。 このクライアントは、クライアントの一般提供バージョンに基づいています。
+
+- Office 365 セキュリティ/コンプライアンス センターからラベルとポリシー設定をダウンロードする **Azure Information Protection 統合ラベル付けクライアント**。 このクライアントは 2 番目のプレビュー段階にあります。
+
+Azure Information Protection 統合ラベル付けクライアントの現在の機能セットや機能がビジネス要件を満たしている場合は、これを使ってテストすることをお勧めします。 そうでない場合、または Azure portal でラベルを構成し、それをまだ[統合ラベル付けストアに移行](configure-policy-migrate-labels.md)していない場合は、Azure Information Protection クライアントを使います。
+
+機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)」をご覧ください。
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>分類とラベルを構成するにはグローバル管理者である必要がありますか?
 

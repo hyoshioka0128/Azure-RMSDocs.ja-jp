@@ -4,19 +4,19 @@ description: ドキュメントと電子メールを分類および保護でき�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/17/2018
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: cbe97fc619de9b7bda73ebb419bfc254f237f372
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250894"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756132"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Azure Information Protection 統合ラベル付けクライアント (プレビュー) をダウンロードしてインストールする
 
@@ -43,18 +43,15 @@ Azure Information Protection 用に Azure portal から現在発行されてい�
 
 2. ダウンロードされた実行可能ファイル **AzInfoProtection_For_Unified_Labeling.exe** を実行します。 続行を確認するメッセージが表示されたら、**[はい]** をクリックします。    
 
-3. **Azure Information Protection クライアントのインストール** ページで、     
-    - クラウドに接続できない場合に、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 ご自分のクライアントが Office 365 セキュリティ/コンプライアンス センターに接続されると、このデモ ポリシーは組織のラベル ポリシーに置き換えられます。
+3. **[Azure Information Protection クライアントのインストール]** ページ上で、ライセンス条項および条件を読み、**[同意する]** をクリックします。
 
-    - ライセンス条項および使用条件を読み、**[同意する]** をクリックします。    
+4. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。
 
-4. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。    
-
-6. **[閉じる]** をクリックします。 Azure Information Protection 統合ラベル付けクライアントの使用を開始する前に、次の操作を行います。    
+6. **[閉じる]** をクリックします。 Azure Information Protection 統合ラベル付けクライアントの使用を開始する前に、次の操作を行います。
 
     - コンピューターで Office 2010 を実行している場合、コンピューターを再起動し、最後の手順として次のセクションに進みます。    
         
-    - その他のバージョンの Office では、Office アプリケーションとエクスプローラーのインスタンスをすべて再起動します。 インストールはこれで完了となります。クライアントを使用して、ドキュメントや電子メールにラベルを付けたり、保護したりできます。    
+    - その他のバージョンの Office では、Office アプリケーションとエクスプローラーのインスタンスをすべて再起動します。 インストールはこれで完了となります。クライアントを使用して、ドキュメントや電子メールにラベルを付けたり、保護したりできます。
 
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Office 2010 で Azure Information Protection 統合ラベル付けクライアントをインストールする
 
@@ -71,4 +68,3 @@ Azure Information Protection 用に Azure portal から現在発行されてい�
 ## <a name="next-steps"></a>次の手順
 
 Office 365 セキュリティ/コンプライアンス センターが現在使用している統合ラベル付けストアの詳細については、次のブログ記事をご覧ください:「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。
-

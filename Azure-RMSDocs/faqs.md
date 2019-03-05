@@ -4,19 +4,19 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258064"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756149"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -61,6 +61,8 @@ Office 365 セキュリティ/コンプライアンス センターでは機密�
     Azure portal でラベルの構成を完了させてから、ラベルを移行することをお勧めします。 この方針によって、移行プロセス中にラベル重複が回避されます。ラベルが重複すると、セキュリティ/コンプライアンス センターで編集しなければなりません。
 
 ラベルを移行する前に、[考慮事項とセキュリティ/コンプライアンス センターでサポートされていないラベル設定](configure-policy-migrate-labels.md#considerations-for-unified-labels)について理解しておく必要があります。
+
+「[新しい機能をテストするためにどのプレビュー クライアントをインストールすればよいですか?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)」もご覧ください。
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>ラベルを移行した後に使用する管理ポータルはどれですか。
 

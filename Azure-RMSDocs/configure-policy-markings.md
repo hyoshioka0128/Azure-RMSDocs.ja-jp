@@ -4,17 +4,17 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
-ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
+ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56654701"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756183"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -48,7 +48,7 @@ ms.locfileid: "56654701"
 
 ## <a name="when-visual-markings-are-applied"></a>視覚的なマーキングが適用されるタイミング
 
-電子メール メッセージの場合、Outlook から電子メール メッセージが送信されたときに視覚的なマーキングが適用されます。
+メール メッセージの場合、Outlook からメール メッセージが送信されたときに視覚的なマーキングが適用されます。 そのメール メッセージがラベルを変更されて転送または返信された場合、元の視覚的なマーキングは常に保持されます。
 
 ドキュメントでは、視覚的なマーキングが次のように適用されます。
 
