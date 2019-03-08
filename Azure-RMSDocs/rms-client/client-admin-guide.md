@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/18/2019
+ms.date: 03/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a0addbf7d4e613ab49ea29e750fd67a3b8ef1793
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: cec2614cacffa41ef3e4a345455c582ad92682f2
+ms.sourcegitcommit: 746963b045072ea74e147895a8acda6a2e5bc9ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254579"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57226293"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -170,20 +170,6 @@ Azure Information Protection クライアントをインストールしたら、
 - オンライン ユーザーの手順:[Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
 - カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
-
-### <a name="update-macros-in-excel-spreadsheets"></a>Excel スプレッドシートのマクロを更新する
-
-マクロを含む Excel スプレッドシートがある場合は、次のようにマクロを編集して、Azure Information Protection クライアントのインストール後もマクロが予期したとおりに動作を続けるようにします。
-
-1. マクロの先頭に次を追加します。
-
-        Application.EnableEvents = False
-
-2. マクロの末尾に次を追加します。
-
-        Application.EnableEvents = True
-
-詳細については、「[Application.EnableEvents プロパティ (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel)」をご覧ください。
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Azure Information Protection クライアントのアップグレードと保守
 

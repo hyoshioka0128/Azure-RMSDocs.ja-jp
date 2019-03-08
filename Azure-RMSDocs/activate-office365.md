@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d072b2d9b87a366d6828aa831a2ce200d420c3b3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 3eb45542a3ee6cb712abadae68b1d0572204ae35
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258924"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557682"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Azure Rights Management をアクティブ化する方法
 
@@ -34,7 +34,7 @@ Azure Rights Management サービスをアクティブ化するには、[Azure I
     サインインを求められたら、Office 365 のグローバル管理者であるアカウントを使用します。
     
     > [!TIP]
-    > 管理センターのヘルプについては、「[Office 365 管理センターについて](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23)」を参照してください。
+    > 管理センターのヘルプについては、「[Office 365 管理センターについて](/office365/admin/admin-overview/about-the-admin-center)」を参照してください。
     
     管理センターから **Rights Management** ページに移動する場合: **[設定]** > **[サービスとアドイン]** > **[Microsoft Azure Information Protection]** > **[Manage Microsoft Azure Information Protection settings]\(Microsoft Azure Information Protection 設定の管理\)**
 

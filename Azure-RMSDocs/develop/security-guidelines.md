@@ -1,8 +1,8 @@
 ---
 title: Information Protection のセキュリティのベスト プラクティス
 description: Information Protection のベスト プラクティスを使用することで、優れた RMS 対応アプリケーションを構築することができます。
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 12/13/2018
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 0a9d8c0c6c86481dbce38d2cafde1c37c54b7b3e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ca4aa7b340a3024139e6a61c0ba4fd938009d522
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332108"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Information Protection のセキュリティのベスト プラクティス
 

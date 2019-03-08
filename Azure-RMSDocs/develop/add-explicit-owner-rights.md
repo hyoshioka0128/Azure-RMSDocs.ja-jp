@@ -2,8 +2,8 @@
 title: 明示的な所有者権限の追加方法 | Azure RMS
 description: アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2bb0ef4652a58a1658e6d0cd64577a02f3af039c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 925d1fa7e55e8d58da904e8811f530f2524a1658
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255769"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330517"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>方法: 明示的な所有者権限の追加
 

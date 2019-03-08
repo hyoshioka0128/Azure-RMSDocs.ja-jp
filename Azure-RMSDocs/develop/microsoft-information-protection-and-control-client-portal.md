@@ -2,8 +2,8 @@
 title: Rights Management サービス SDK 2.1 | Azure RMS
 description: RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS または Azure RMS を使用して情報保護を提供するアプリケーションを作成できます。
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 44D3EB62-7A60-45D9-BA7E-45A06E7D598F
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: eaaade51662a384c914123448f52c42315815b1d
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: d61b9cb7262e83270395768a03581b8a97ba365f
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257214"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330367"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management サービス SDK 2.1
 

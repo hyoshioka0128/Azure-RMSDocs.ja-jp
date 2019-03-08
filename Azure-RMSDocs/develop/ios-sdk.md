@@ -2,8 +2,8 @@
 title: iOS および OS X のセットアップ |Azure RMS
 description: iOS および OS X アプリケーションでは、RMS SDK 4.2 を使用して、AAD RM リソースを使用することにより、そのアプリケーション内で統合情報保護を有効にできます。
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6b3fe0994c27e26c505974cd4f5d96df252f2aa0
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 392bfa5e76bd0e07212fd47042b514a243a652dd
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259322"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333451"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 

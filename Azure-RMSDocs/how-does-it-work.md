@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82b76924e74796a06ecc9bf57acb1461cc0e8ce9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256670"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557648"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -44,7 +44,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 |暗号化コントロール|Azure RMS での使用|
 |-|-|
-|アルゴリズム:AES<br /><br />キーの長さ:128 ビットと 256 ビット [[1]](#footnote-1)|ドキュメントの保護|
+|アルゴリズム:AES<br /><br />キーの長さ:128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
 |アルゴリズム:RSA<br /><br />キーの長さ:2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
 

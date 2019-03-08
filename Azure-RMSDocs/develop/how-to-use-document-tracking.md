@@ -2,8 +2,8 @@
 title: ドキュメント追跡を使用する方法 | Azure RMS
 description: ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 8a5d5c72d91d58ffb42b53768112ce62c4835334
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 334b4aed3e24a64e553429587eea4b0bf4c7948a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257996"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330391"
 ---
 # <a name="how-to-use-document-tracking"></a>方法:ドキュメント追跡を使用する
 
