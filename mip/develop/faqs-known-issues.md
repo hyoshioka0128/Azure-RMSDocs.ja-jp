@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
-ms.date: 10/19/2018
+ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e548b2b6e9b32899ceff693312cf510b9fff74aa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333552"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581727"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
@@ -20,7 +20,9 @@ ms.locfileid: "57333552"
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問 
 
-### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>質問: SDK ではどのように文字列が処理されますか? また、コードではどの文字列型を使用すればよいですか?
+### <a name="sdk-string-handling"></a>SDK の文字列の処理
+
+**質問**:SDK は、文字列処理する方法と、どのような文字列型では、する必要がありますで自分のコードを使用するでしょうか。
 
 SDK はクロスプラットフォームでの使用を想定しています。文字列の処理には [UTF-8 (Unicode Transformation Format - 8 ビット)](https://wikipedia.org/wiki/UTF-8) が使用されます。 具体的なガイダンスは、使用するプラットフォームによって異なります。
 
@@ -34,14 +36,24 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 ### <a name="error-file-format-not-supported"></a>エラー:「ファイルの形式がサポートされていません」  
 
-| [エラー] | ソリューション |
-|-|-|
-|*ファイル形式がサポートされていません*| この例外は、デジタル署名されているかパスワードで保護されている PDF ファイルを保護またはラベル付けしようとすると発生します。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。|
+**質問**:PDF ファイルのラベルまたは保護しようとしています。 ときに、次のエラーするはなぜですか。
+
+> ファイル形式がサポートされていません
+
+この例外は、デジタル署名されている PDF ファイルにラベル付けまたは保護しようとしています。 またはパスワードで保護の結果です。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>エラー:「を取得したコンプライアンス ポリシーを解析できませんでした」  
 
-MIP SDK をダウンロードして、サンプル アプリケーションを実行したとします。 ファイルのサンプルを使用してすべてのラベルを一覧表示しようとすると、次のエラーが発生します。
+**質問**:MIP SDK をダウンロードして、すべてのラベルを一覧表示するファイルのサンプルを使用しようとした後、次のエラーが発生する理由
 
-| [エラー] | ソリューション |
-|-|-|
-|*何か問題が発生しました。取得したコンプライアンス ポリシーを解析できませんでした。失敗しました: [クラス mip::CompliancePolicyParserException] タグが見つかりません: ポリシーでは、NodeType:15、名前:ない名前が見つかった値: 先祖: <SyncFile> <Content>、関連付け Id: [34668a40-blll-4ef8-b2af-00005aa674z9]*| これは、ラベルを Azure Information Protection から統合ラベル付けエクスペリエンスに移行していないことを示しています。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 完了すると、サンプルが正常に実行されます。|
+> 何か問題が発生しました。取得したコンプライアンス ポリシーを解析できませんでした。 失敗しました: [クラス mip::CompliancePolicyParserException] タグが見つかりません: ポリシーでは、NodeType:15、名前:ない名前が見つかった値: 先祖: <SyncFile> <Content>、関連付け Id: [34668a40-blll-4ef8-b2af-00005aa674z9]
+
+これは、ラベル、統一されたラベル付けエクスペリエンスに Azure Information Protection から移行していないことを示します。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 
+
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>エラー:"System.ComponentModel.Win32Exception:LoadLibrary が失敗しました"
+
+**質問**:MIP SDK の .NET ラッパーを使用する場合、次のエラーするはなぜですか。
+
+> : System.ComponentModel.Win32ExceptionLoadLibrary に失敗しました: [sdk_wrapper_dotnet.dll] MIP を呼び出すときにします。Initialize() します。
+
+アプリケーションでは、必要なランタイムがないか、リリースとしてビルドされませんでした。 参照してください[アプリに必要なランタイム](setup-configure-mip.md#ensure-your-app-has-the-required-runtime)詳細についてはします。 

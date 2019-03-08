@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/30/2019
+ms.date: 03/01/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331972"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581744"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
@@ -219,6 +219,17 @@ MIP で開発されたアプリケーションをリリースすることがで�
 - 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
 電子メールの送信、処理時に、最大 72 時間の受信確認の受信確認を許可します。
+
+## <a name="ensure-your-app-has-the-required-runtime"></a>アプリが必要なランタイムを確認します。
+
+> [!NOTE]
+> Visual Studio は、いないコンピューターにアプリケーションを配置する場合にのみ、または Visual Studio のインストール、Visual C ランタイム コンポーネントがない場合、この手順は必要があります。
+
+MIP SDK でビルドされたアプリケーションでは、まだ存在しない場合、インストールに、Visual C 2015 または Visual C 2017 のランタイムが必要です。
+- [Microsoft Visual C 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C Redistributable for Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+
+これらにより、リリースとして、アプリケーションがビルドされている場合にのみ機能します。 デバッグとして、アプリケーションがビルドし、Visual C ランタイム デバッグ Dll アプリケーションに含める必要があるかがコンピューターにインストールします。 
 
 ## <a name="next-steps"></a>次の手順
 
