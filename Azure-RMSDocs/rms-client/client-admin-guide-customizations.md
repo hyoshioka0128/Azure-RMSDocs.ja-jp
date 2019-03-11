@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 59395fe48eff2a3b1df0ae25dded1a66af9f453f
-ms.sourcegitcommit: f19ee03fd3f6f39df1a28ab389b43fbd8f9e9072
+ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56891096"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379952"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -50,12 +50,17 @@ ms.locfileid: "56891096"
 |CompareSubLabelsInAttachmentAction|[サブラベルの順序のサポートを有効にする](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Azure Information Protection バーを完全に非表示にする](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[ユーザーに対してカスタムのアクセス許可オプションを利用可能または利用不可にする](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnableCustomPermissionsForCustomProtectedFiles|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[PDF 暗号化の ISO 標準を使用して PDF ファイルを保護しない](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[ラベルを構成して Outlook で S/MIME 保護を適用する](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |ログ レベル|[ローカルのログ記録レベルを変更する](#change-the-local-logging-level)
+|OutlookBlockUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationTrustedDomains|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Outlook で推奨分類を有効にする](#enable-recommended-classification-in-outlook)|
+|OutlookWarnUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[スキャナーの低整合性レベルを無効にする](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[切断されたコンピューターのサポート](#support-for-disconnected-computers)
@@ -205,6 +210,19 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
 
 - Value:カスタム アクセス許可オプションを表示する場合は **True**、このオプションを非表示にする場合は **False**
 
+## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する
+
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この設定はプレビュー段階であり、クライアントのプレビュー版が必要になります。
+
+[ポリシー設定](../configure-policy-settings.md)の **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)**、または前のセクションの同等のクライアント詳細設定を構成した場合、ユーザーは、保護されたドキュメントで既に設定されているカスタム アクセス許可を表示または変更できません。 
+
+このクライアント詳細設定を作成して構成した場合、ユーザーはファイル エクスプローラーを使用してファイルを右クリックすることで、保護されたドキュメントのカスタム アクセス許可を表示および変更できます。 Office リボンの **[保護]** ボタンからの **[カスタム アクセス許可]** オプションは、非表示のままです。
+
+この詳細設定を構成するには、次の文字列を入力します。
+
+- 記号の意味:**EnableCustomPermissionsForCustomProtectedFiles**
+
+- Value:**True**
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection バーを完全に非表示にする
 
@@ -250,6 +268,98 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 - Value:**True**
 
+## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する
+
+この構成では、Azure Portal で構成する必要のある、複数の[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。 この構成はプレビュー段階であり、変更される可能性があります。
+
+次のクライアント詳細設定を作成して構成すると、Outlook でユーザーに対してポップアップ メッセージが表示されます。これにより、次のどちらかのシナリオで、電子メールを送信する前に警告したり、電子メールの送信理由の入力を求めたり、電子メールの送信を妨げることができます。
+
+- **電子メール、または電子メールの添付ファイルに特定のラベルが含まれる**:
+    - 添付ファイルはあらゆる種類のファイルである可能性がある
+
+- **電子メール、または電子メールの添付ファイルにラベルがない**:
+    - 添付ファイルは Office ドキュメントまたは PDF ドキュメントである可能性がある
+
+これらの条件が満たされ、指定した許可されるドメイン名の一覧に受信者の電子メール アドレスが含まれていない場合は、ユーザーに対して次のいずれかのアクションのポップアップ メッセージが表示されます。
+
+- **警告**: ユーザーは確認して電子メールを送信またはキャンセルできます。
+
+- **理由の入力**:ユーザーは理由 (定義済みオプションまたは自由形式) の入力を求められます。  その後、ユーザーは電子メールを送信またはキャンセルできます。 理由のテキストは、他のシステムで読み取ることができるように電子メールの X ヘッダーに書き込まれます。 たとえば、データ損失防止 (DLP) サービスです。
+
+- **[ブロック]**:条件が満たされている間、ユーザーは電子メールを送信できなくなります。 メッセージには、ユーザーが問題に対処できるように、電子メールをブロックする理由が含まれます。 たとえば、特定の受信者を削除する、電子メールにラベルを付けるなどです。 
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>特定のラベルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
+
+特定のラベルに対するポップアップ メッセージを実装するには、それらのラベルのラベル ID が必要です。 Azure Portal で Azure Information Protection ポリシーを表示または構成するとき、ラベル ID 値は **[ラベル]** ブレードに表示されます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行してラベル ID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの ID だけを常に指定してください。
+
+次のキーを使用して、次の 1 つまたは複数のクライアント詳細設定を作成します。 値については、1 つまたは複数のラベルの ID をそれぞれコンマで区切って指定します。
+
+コンマ区切り文字列としての複数のラベル ID の値の例: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+
+
+- 警告メッセージ: 
+    
+    - 記号の意味:**OutlookWarnUntrustedCollaborationLabel**
+    
+    - 値: \<**コンマ区切りのラベル ID**>
+
+- 理由の入力メッセージ: 
+    
+    - 記号の意味:**OutlookJustifyUntrustedCollaborationLabel**
+    
+    - 値: \<**コンマ区切りのラベル ID**>
+
+- ブロック メッセージ: 
+    
+    - 記号の意味:**OutlookBlockUntrustedCollaborationLabel**
+    
+    - 値: \<**コンマ区切りのラベル ID**>
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>ラベルのない電子メールまたは添付ファイルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
+
+次のいずれかの値を使用して、次のクライアント詳細設定を作成します。
+
+- 警告メッセージ: 
+    
+    - 記号の意味:**OutlookUnlabeledCollaborationAction**
+    
+    - Value:**警告**
+
+- 理由の入力メッセージ: 
+    
+    - 記号の意味:**OutlookUnlabeledCollaborationAction**
+    
+    - Value:**理由の入力**
+
+- ブロック メッセージ: 
+    
+    - 記号の意味:**OutlookUnlabeledCollaborationAction**
+    
+    - Value:**ブロック**
+
+- これらのメッセージをオフにする: 
+    
+    - 記号の意味:**OutlookUnlabeledCollaborationAction**
+    
+    - Value:**Off**
+
+### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>ポップアップ メッセージの対象外の受信者について、許可されるドメイン名を指定するには
+
+クライアント詳細設定でドメイン名を指定すると、電子メール アドレスにそのドメイン名が含まれる受信者については、ユーザーに対してポップアップ メッセージが表示されません。 この場合、電子メールは中断なく送信されます。 複数のドメインを指定するには、ドメインをコンマで区切って 1 つの文字列として追加します。
+
+一般的な構成では、組織の外部の受信者、または組織の承認済みのパートナーではない受信者についてのみ、ポップアップ メッセージが表示されます。 この場合は、お客様の組織およびパートナーによって使用されるすべての電子メール ドメインを指定します。
+
+次のクライアント詳細設定キーを作成します。 値については、1 つまたは複数のドメインをそれぞれコンマで区切って指定します。
+
+コンマ区切り文字列としての複数のドメインの値の例: `contoso.com,fabrikam.com,litware.com`
+
+- 記号の意味:**OutlookCollaborationTrustedDomains**
+
+- 値: **\<** コンマ区切りのドメイン名**>**
+
+たとえば、ドメイン名 contoso.com を指定した場合、Outlook で john@sales.contoso.com に電子メールを送信する際に、ユーザーに対してポップアップ メッセージは表示されません。
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
 
@@ -356,6 +466,8 @@ Azure Information Protection クライアントがユーザーによって指定
 Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 EnablePDFv2Protection が False に設定されているときにスキャナーで PDF ドキュメントを保護する場合は、[レジストリを編集する](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)必要があります。
 
 新しい PDF の暗号化について詳しくは、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
+
+PDF 暗号化の ISO 標準をサポートする PDF リーダー、および古い形式をサポートするリーダーの一覧については、「[Supported PDF readers for Microsoft Information Protection](protected-pdf-readers.md)」(Microsoft Information Protection でサポートされる PDF リーダー) を参照してください。
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>既存の .ppdf ファイルを保護された .pdf ファイルに変換するには
 

@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection に関連する単語、フ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b94a08a1201f3bedfcaa8264a75e30f2bb77232d
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5fd820cb189d21d6d4b848547ad4eaafd42d5b96
+ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255151"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57206503"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -30,20 +30,21 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |アクティブ化|Azure Rights Management サービスを有効化して、組織がドキュメントや電子メールを保護できるようにします。 この操作により、Exchange Online と SharePoint Online での IRM 機能も有効になります。|
 |Active Directory Rights Management サービス|*AD RMS* という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
-AzureInformationProtection|Azure Information Protection クライアント用の PowerShell モジュールの名前です。
+AzureInformationProtection|Azure Information Protection クライアントおよび Azure Information Protection 統合ラベル付けクライアントの PowerShell モジュールの名前です。
 |Azure Information Protection|ラベルを使用してドキュメントと電子メールの分類と保護を行う、クラウドベースのサービスです。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
 Azure Information Protection クライアント|ユーザー、管理者、サービスがラベルと Azure Information Protection ポリシーの設定を使用できるようにする、クライアント側での Azure Information Protection です。|
-|Azure Information Protection のラベル|この項目によってドキュメントや電子メールに分類値を適用し、必要に応じてそれらを保護することができます。|
+|Azure Information Protection のラベル|この項目によってドキュメントや電子メールに分類値を常に適用し、それらを保護することもできます。 ラベルが適用されると、ラベル情報はアプリケーションおよびサービスのメタデータに格納され、読み取ったり、必要に応じて操作したりできます。|
 |Azure Information Protection ポリシー|Azure Information Protection のラベルとポリシーの設定を使用するクライアントとサービスに向けた、管理者が定義する構成です。|
 |Azure Information Protection スキャナー|Windows Server 上で実行するサービスです。これにより、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行うことができます。|
+|Azure Information Protection 統合ラベル付けクライアント|現在、プレビュー期間中: Windows コンピューターのクライアント。これにより、ユーザー、管理者、およびサービスは、Office 365 セキュリティ/コンプライアンス センターから機密ラベルとポリシー設定を使用できます。|
+|Azure RMS|*Azure Rights Management* をご覧ください。|
 |Azure Information Protection ビューアー|保護されたファイルを表示するために、Windows コンピューターやモバイル デバイスで実行するアプリです。|
 |Azure Rights Management|*Azure RMS* という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|
-|Azure RMS|*Azure Rights Management* をご覧ください。|
 |既定のテンプレート|Azure Information Protection のサブスクリプションを取得すると自動的に作成される保護テンプレートです。これにより、機密情報が記載されたドキュメントや電子メールの保護をすぐに開始できます。|
 |BYOK|*Bring Your Own Key*をご覧ください。|
 |Bring Your Own Key|*BYOK*という略称で呼ばれることもあります。<br /><br />組織が Azure Information Protection の独自のテナント キーを生成および管理するときに選択する構成およびトポロジ オプションです。|
 |コンテンツ キー|Rights Management を使用して保護されている各ドキュメントまたは電子メールに対して RMS 対応アプリケーションが作成する一意のキーです。情報漏えいの危険性を減らすのに役立ちます。|
-|使用処理|コンテンツが Rights Management で保護されているドキュメントや電子メールを、読み取りや使用のために開く操作。 ドキュメントの場合、使用処理には保護されたドキュメントの編集や、新しいコンテンツの追加が含まれます。 電子メール メッセージの場合、使用処理には保護されたメッセージへの返信が含まれます。|
+|使用処理|保護のみのコンテキストで: コンテンツが Rights Management サービスで保護されているドキュメントや電子メールを、読み取りや使用のために開きます。 ドキュメントの場合、使用処理には保護されたドキュメントの編集や、新しいコンテンツの追加が含まれます。 電子メール メッセージの場合、使用処理には保護されたメッセージへの返信が含まれます。<br /><br />ラベル付けのコンテキスト (保護あり、または保護なし) で: ファイルおよび電子メールのメタデータに格納されているラベル情報を読み取ったり、場合によっては操作します。|
 |非アクティブ化|Rights Management サービスを無効化します。組織は Azure Information Protection を使用できなくなります。|
 |部門別のテンプレート|組織内のすべてのユーザーではなく選択したユーザーに対して表示されるように構成する、独自に作成する保護テンプレートです。 "*スコープ テンプレート*" とも呼ばれます。|
 |対応アプリケーション|Rights Management をネイティブでサポートするアプリケーション。Word や Excel などの Office アプリケーションが含まれます。 独立系ソフトウェア ベンダー (ISV) や開発者も、Rights Management をネイティブでサポートするアプリケーションを作成できます。|

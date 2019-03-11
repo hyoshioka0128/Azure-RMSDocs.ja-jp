@@ -4,17 +4,17 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379884"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -60,7 +60,8 @@ Azure Information Protection のサブスクリプションを購入した時期
         
         このポリシー設定を使う際にサブラベルの順序を考慮する場合は、[クライアントの詳細設定を構成する](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)必要があります。
         
-        ユーザー定義のアクセス許可のプレビュー設定を使って保護するために、最上位の分類のラベルを含む添付ファイルを構成する場合、電子メール メッセージは同じ分類でラベル付けされますが、保護は適用されません。
+        ユーザー定義のアクセス許可のプレビュー設定を使って保護するために、最上位の分類のラベルを含む添付ファイルを構成する場合: - 通常利用可能なバージョンのクライアント: 電子メール メッセージは同じ分類でラベル付けされますが、保護は適用されません。
+            - プレビュー バージョンのクライアント: ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれる場合、電子メールにそのラベルが適用され、転送不可保護も適用されます。 ラベルのユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびファイル エクスプローラーのみを対象とする場合、そのラベルは電子メールに適用されず、保護も適用されません。
     
    - **[Office アプリの Information Protection バーを表示します]**:この設定をオフにすると、ユーザーは Word、Excel、PowerPoint、Outlook のバーからラベルを選択できなくなります。 代わりに、リボンの **[保護]** ボタンからラベルを選択する必要があります。 この設定をオンにすると、ユーザーはバーまたはボタンのいずれかからラベルを選択できます。
         

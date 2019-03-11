@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
-ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
+ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
+ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57510056"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -49,7 +49,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 > [!TIP]
 > Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
 
-**リリース日**: 2019 年 1 月 15 日
+**リリース日**: 2019 年 3 月 5 日
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 
@@ -77,6 +77,11 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     - Azure 発行設定のパスワード
     - Azure Storage のアカウント キー (汎用)
 
+- Outlook で送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する、新しいクライアント詳細設定。 [詳細情報](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- カスタム アクセス許可を表示しないようポリシー設定を構成する場合にのみ適用される、新しいクライアント詳細設定。カスタム アクセス許可で保護されているファイルがある場合に、ユーザーが (保護設定を変更するアクセス許可を持っていれば) 表示および変更できるように、ファイル エクスプローラーにカスタム アクセス許可オプションが表示されます。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **修正内容**:
 
 - ユーザーがWord 文書に新しいセクションを追加した後で再度ラベルを付ける場合、新しい視覚的なマーキングが一貫して適用されます。
@@ -90,6 +95,12 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - Azure Information Protection クライアントで、[統合ラベル付けをサポートしているクライアント](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling)によって適用されているラベルが正しく表示されます。
 
 - エクスプローラーと右クリック、PowerShell、およびスキャナーによって保護が解除された後に、ドキュメントが Office で回復メッセージなしで正しく開きます。
+
+- クライアント詳細設定を使用して [Outlook の既定のラベル](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook)を設定すると、ユーザーに対してすべてのサブラベルが無効化されている場合でも、これらのサブラベルを含む親ラベルを適用できます。
+
+- [ポリシー設定](../configure-policy-settings.md)の **[添付ファイルのあるメール メッセージの場合、それらの添付ファイルの最上位の分類に一致するラベルを適用します]** を使用し、ユーザー定義のアクセス許可で最上位の分類のラベルが構成されている場合、以前はそのラベルが電子メールに適用されましたが、保護は適用されませんでした。 現在の動作は次のとおりです。
+    - ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれる場合: そのラベルとその転送不可保護を電子メールに適用します。
+    - ラベルのユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびファイル エクスプローラーのみを対象とする場合: 電子メールにラベルが適用されず、保護も適用されません。
 
 **その他の変更:**
 

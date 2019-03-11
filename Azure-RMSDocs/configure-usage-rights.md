@@ -4,19 +4,19 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f7eda5df7fad0a4b1a16ba9059c6adf76794372f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: aedeea5e98a1dbee4e73cdf27573da52b623a6c4
+ms.sourcegitcommit: 21e7b96e1a60ff584149b3ff4325c80cb0a3770c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260019"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57568095"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Azure Rights Management の使用権限を構成する
 
@@ -42,7 +42,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |［共通名］:**コンテンツの編集、編集** <br /><br />ポリシーでのエンコード:**DOCEDIT**|アプリケーション内のコンテンツの変更、再配置、書式設定、または並べ替えをユーザーに許可します。 編集済みのコピーを保存する権限は付与されません。<br /><br />Word では、バージョン [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25) 以降の Office 365 ProPlus を持っていない限り、**[変更の追跡]** をオンまたはオフにしたり、レビュー担当者として変更の追跡機能をすべて使用したりするには、この権限は十分ではありません。 代わりに、変更の追跡オプションをすべて使用するには、**フル コントロール**権限が必要です。 |Office カスタム権限:**[変更]** オプションと **[フル コントロール]** のオプションの一部。 <br /><br />Azure クラシック ポータルでの名前:**コンテンツの編集**<br /><br />Azure portal での名前:**コンテンツの編集、編集 (DOCEDIT)**<br /><br />AD RMS テンプレートでの名前:**編集** <br /><br />API の定数または値:該当なし。|
 |［共通名］:**保存** <br /><br />ポリシーでのエンコード:**EDIT**|ドキュメントを現在の場所に保存することをユーザーに許可します。<br /><br />Office アプリケーションでは、この権限により、ユーザーがドキュメントを変更してそれを新しい場所に保存することもできます。選択したファイル形式が Rights Management 保護をネイティブにサポートしている場合は、新しい名前でドキュメントが保存されます。 ファイル形式の制限により、ファイルから元の保護を削除することはできません。|Office カスタム権限:**[変更]** オプションと **[フル コントロール]** のオプションの一部。 <br /><br />Azure クラシック ポータルでの名前:**ファイルの保存**<br /><br />Azure portal での名前:**保存 (EDIT)**<br /><br />AD RMS テンプレートでの名前:**保存** <br /><br />API の定数または値: `IPC_GENERIC_WRITE L"EDIT"`|
 |［共通名］:**コメント** <br /><br />ポリシーでのエンコード:**COMMENT**|コンテンツに注釈やコメントを追加するオプションを有効にします。<br /><br />この権限は SDK で使用でき、Azure Information Protection と Windows PowerShell の RMS 保護モジュールでアドホック ポリシーとして使用できます。また、いくつかのソフトウェア ベンダーのアプリケーションに実装されています。 ただし広く使用されてはおらず、Office アプリケーションでは現在のところサポートされていません。|Office カスタム権限:実装されていません。 <br /><br />Azure クラシック ポータルでの名前:実装されていません。<br /><br />Azure portal での名前:実装されていません。<br /><br />AD RMS テンプレートでの名前:実装されていません。 <br /><br />API の定数または値: `IPC_GENERIC_COMMENT L"COMMENT`|
-|［共通名］:**名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード:**EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 <br /><br />Office ドキュメントと Azure Information Protection クライアントについては、ファイルを保護なしで保存し、新しい設定とアクセス許可で再保護することができます。 許可されているこれらの操作は、この権限を持つユーザーが保護されたドキュメントまたは電子メールから Azure Information Protection ラベルを変更または削除できることを意味します。 <br /><br />この権限は、アプリケーションでその他のエクスポート オプション (**[OneNote に送る]** など) を実行することもユーザーに許可します。<br /><br /> 注: この権限が与えられていない場合、ユーザーが選択したファイル形式で Rights Management 保護をネイティブにサポートされていると、Office アプリケーションでは新しい名前でドキュメントが保存されます。|Office カスタム権限: **[フル コントロール]** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前:**コンテンツのエクスポート (名前を付けて保存)** <br /><br />Azure portal での名前:**名前を付けて保存、エクスポート (EXPORT)**<br /><br />AD RMS テンプレートでの名前:**エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
+|［共通名］:**名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード:**EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 <br /><br />Azure Information Protection クライアントについては、ファイルを保護なしで保存し、新しい設定とアクセス許可で再保護することができます。 許可されているこれらの操作は、この権限を持つユーザーが保護されたドキュメントまたは電子メールから Azure Information Protection ラベルを変更または削除できることを意味します。 <br /><br />この権限は、アプリケーションでその他のエクスポート オプション (**[OneNote に送る]** など) を実行することもユーザーに許可します。|Office カスタム権限: **[フル コントロール]** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前:**コンテンツのエクスポート (名前を付けて保存)** <br /><br />Azure portal での名前:**名前を付けて保存、エクスポート (EXPORT)**<br /><br />AD RMS テンプレートでの名前:**エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
 |［共通名］:**転送** <br /><br />ポリシーでのエンコード:**FORWARD**|電子メール メッセージの転送、**[宛先]**、**[CC]** 行への受信者の追加を行うオプションを有効にします。 この権限は、ドキュメントには適用されません。メール メッセージだけに適用されます。<br /><br />転送操作の一部として転送者が他のユーザーに権限を付与することは許可しません。 <br /><br />この権限を付与するときは、保護されたメール メッセージが添付ファイルとして転送されないように、**コンテンツの編集、編集**権限 (共通名) と、さらに**保存**権限 (共通名) も付与します。 これらの権限は、Outlook クライアントまたは Outlook Web アプリを利用する別の組織に電子メールを送信するときにも指定します。 または、[オンボーディング制御](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy)を実装しているため、Azure Rights Management サービスの使用対象から除外されている組織内のユーザーに適用されます。|Office カスタム権限: 標準的なポリシーである **[転送不可]** を使用する場合は拒否されます。<br /><br />Azure クラシック ポータルでの名前:**転送**<br /><br />Azure portal での名前:**転送 (FORWARD)**<br /><br />AD RMS テンプレートでの名前:**転送** <br /><br />API の定数または値: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |［共通名］:**フル コントロール** <br /><br />ポリシーでのエンコード:**OWNER**|ドキュメントに対するすべての権限を付与します。利用可能なすべての操作を実行できます。<br /><br />ドキュメントの保護解除と再保護の能力も含まれます。 <br /><br />この使用権限は [Rights Management 所有者](#rights-management-issuer-and-rights-management-owner)とは同じではありません。|Office カスタム権限: **[フル コントロール]** カスタム オプションの一部です。<br /><br />Azure クラシック ポータルでの名前:**フル コントロール**<br /><br />Azure portal での名前:**フル コントロール (OWNER)**<br /><br />AD RMS テンプレートでの名前:**フル コントロール** <br /><br />API の定数または値: `IPC_GENERIC_ALL L"OWNER"`|
 |［共通名］:**印刷** <br /><br />ポリシーでのエンコード:**PRINT**|コンテンツを印刷するオプションを有効にします。|Office カスタム権限: カスタム アクセス許可の **[コンテンツを印刷する]** オプションと同様。 受信者単位の設定ではありません。<br /><br />Azure クラシック ポータルでの名前:**印刷**<br /><br />Azure portal での名前:**印刷 (PRINT)**<br /><br />AD RMS テンプレートでの名前:**印刷** <br /><br />API の定数または値: `IPC_GENERIC_PRINT L"PRINT"`|
