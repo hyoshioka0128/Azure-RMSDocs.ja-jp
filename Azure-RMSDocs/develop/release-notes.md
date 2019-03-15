@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 22dbe505020d7ed65318fcdc173a7e659791b606
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332074"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829078"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -33,7 +33,7 @@ ms.locfileid: "57332074"
 -   [2015 年 5 月の更新 – ログの制御を追加](#may-2015-update---adds-logging-control)
 -   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february-2015-update---adds-windows-store-application-support)
 -   [2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加](#january-2015-update---adds-winphone-platform-support)
--   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
+-   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [リリース ノート](#release-notes)
 -   [よく寄せられる質問](#frequently-asked-questions)
 
@@ -240,4 +240,3 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **Q**: サンプル アプリケーションのフレームワークは Xcode 5 に対応していますが、Xcode 4.6 でも使用できますか。
 
 **A**: OS X SDK は Xcode 4.6 以降のみ、および OS X 10.8 以降で動作します。
-
