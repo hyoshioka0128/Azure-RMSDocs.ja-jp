@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f05b95477405a2262b7dc0e129f17f9f5ff46db
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256398"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828908"
 ---
 # <a name="activating-azure-rights-management"></a>Rights Management をアクティブにする
 
@@ -59,9 +59,9 @@ Azure Rights Management サービスをアクティブにした後は、組織�
 
 ## <a name="choosing-your-activation-method"></a>アクティブ化メソッドを選択する
 
-管理ポータルから Rights Management サービスをアクティブ化する手順については、Office 365 管理センターと Azure Portal のどちらを使うかを選択してください。
+ご利用の管理ポータルから Rights Management サービスをアクティブ化する手順については、Microsoft 365 管理センターと Azure Portal のどちらを使うかを選択してください。
 
-- [Office 365 管理センター](activate-office365.md) - グローバル管理者アカウントが必要
+- [Microsoft 365 管理センター](activate-office365.md) - グローバル管理者アカウントが必要
 
 - [Azure Portal](activate-azure.md) - グローバル管理者アカウントは不要
 

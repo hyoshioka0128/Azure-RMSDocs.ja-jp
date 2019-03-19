@@ -4,27 +4,27 @@ description: 統合ラベル付けをサポートしているクライアント�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/12/2019
+ms.date: 03/14/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 27fe7dce81856140caf5e30451caabc3df9a2894
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ed3c77df8da01a4b87b30875a315eac5c075b438
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254783"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829061"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> この機能はプレビュー段階にあり、新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされており、作成し、管理するラベルは複数のクライアントやサービスで使用できます。
+> この機能はプレビュー段階にあり、新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされいます。このため、作成し管理するラベルを、[Microsoft Information Protection](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection) ソリューションをサポートするクライアントおよびサービスで使用できます。
 
-Office 365 セキュリティ/コンプライアンス センターで使用できるようにする場合、ラベルを移行します。Office 365 セキュリティ/コンプライアンス センターでは、[統合ラベル付けをサポートしているクライアント](#clients-that-support-unified-labeling)でラベルを公開し、ダウンロードできます。 Azure Information Protection クライアントでは引き続き、Azure portal から Azure Information Protection ポリシーでラベルがダウンロードされます。 
+ご自分のラベルを Office 365 セキュリティ/コンプライアンス センターから Office 365 機密ラベルとして使用できるようにしたい場合は、[統合ラベル付けをサポートしているクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)で使用されるようにラベルを移行します。 移行後、Azure Information Protection クライアントによって、引き続き Azure portal からラベルとその Azure Information Protection ポリシーがダウンロードされます。 
 
 ラベルを移行する方法についての詳細な手順を読む前に、次のよく寄せられる質問が役立つ場合があります。
 
@@ -40,14 +40,14 @@ Office 365 セキュリティ/コンプライアンス センターで使用で�
 
 これらの構成のいずれかを使用して各ユーザーに 365 セキュリティ/コンプライアンス センターへのアクセス権を付与しないと、ラベルの移行後に各ユーザーは Azure portal でラベルとポリシーにアクセスできなくなります。
 
-ラベルの移行後でも、テナントのグローバル管理者は Azure portal およびセキュリティ/コンプライアンス センターの両方でラベルとポリシーの管理を続けられます。
+ラベルの移行後も、テナントのグローバル管理者は Azure portal およびセキュリティ/コンプライアンス センターの両方でラベルとポリシーの管理を続けられます。
 
 
 ## <a name="considerations-for-unified-labels"></a>統合ラベルに関する考慮事項
 
 ラベルを移行する前に、次の変更内容と考慮事項に注意してください。
 
-- 現在のところ、一部のクライアントでは統合ラベルがサポートされていません。 [サポートされているクライアント](#clients-that-support-unified-labeling)を用意し、Azure portal (統合ラベルをサポートしていないクライアント用) とセキュリティ/コンプライアンス センター (統合ラベルをサポートしているクライアント用) の両方での管理のための準備をしてください。
+- 現在のところ、一部のクライアントでは統合ラベルがサポートされていません。 [サポートされているクライアント](#clients-and-services-that-support-unified-labeling)を用意し、Azure portal (統合ラベルをサポートしていないクライアント用) とセキュリティ/コンプライアンス センター (統合ラベルをサポートしているクライアント用) の両方での管理のための準備をしてください。
 
 - 使用するラベルを定義し、構成している最中であれば、Azure portal でこのプロセスを完了し、ラベルを移行することをお勧めします。 この方針によって、移行プロセス中にラベル重複が回避されます。ラベルが重複すると、セキュリティ/コンプライアンス センターで編集しなければなりません。
 
@@ -55,7 +55,7 @@ Office 365 セキュリティ/コンプライアンス センターで使用で�
     
     操作における一貫性を上げるために、セキュリティ/コンプライアンス センターでは同じスコープで同じラベルを公開することをお勧めします。
 
-- セキュリティ/コンプライアンス センターでは、移行されたラベルの一部の設定がサポートされません。 セキュリティ/コンプライアンス センターでサポートされていないない設定を確認するには、「[セキュリティ/コンプライアンス センターでサポートされていないラベル設定](#label-settings-that-are-not-supported-in-the-security--compliance-center)」セクションの表を使います。
+- セキュリティ/コンプライアンス センターでは、移行されたラベルの一部の設定がサポートされません。 「[セキュリティ/コンプライアンス センターでサポートされていないラベル設定](#label-settings-that-are-not-supported-in-the-security--compliance-center)」セクションに記載された表を使用すると、それらの設定と推奨される一連の措置を容易に確認できます。
 
 - 保護テンプレート:
     
@@ -79,21 +79,22 @@ Office 365 セキュリティ/コンプライアンス センターで使用で�
 
 ### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>セキュリティ/コンプライアンス センターでサポートされていないラベル設定
 
-次の表を使って、移行されたラベルのどの構成設定が統合ラベル付けのクライアントにサポートされていないのか、または制限付きでサポートされているのかを識別します。 混乱を避けるために、統合ラベル付けのクライアントに影響がない設定は構成しないことをお勧めします。
+次の表を使用すると、移行されたラベルのうちセキュリティ/コンプライアンス センターでサポートされていない構成設定を識別できます。 そのような設定が含まれているラベルがある場合は、移行の完了時に、最後の列にある管理ガイダンスを確認してから Office 365 セキュリティ/コンプライアンス センターでご自分のラベルを発行してください。
 
-Azure Information Protection クライアントでは、何の問題もなく、このようなラベル設定を使用できます。Azure portal から引き続きラベルをダウンロードするためです。
+Azure Information Protection クライアントでは、一覧表示されているラベル設定をすべて何の問題もなく使用できます。これは Azure portal から引き続きラベルがダウンロードされるからです。
 
-|ラベル構成|統合ラベル付けのクライアントによるサポート|セキュリティ/コンプライアンス センターで編集から除外する|
+|ラベル構成|統合ラベル付けのクライアントによるサポート| セキュリティ/コンプライアンス センターのガイダンス|
 |-------------------|---------------------------------------------|-------------------------|
-|有効または無効の状態<br /><br />注:セキュリティ/コンプライアンス センターには同期されません |適用できません|適用できません|
-|ラベルの色: 一覧から選択するか、RGB コードを使用して指定します<br /><br />注:ラベルの色はセキュリティ/コンプライアンス センターではサポートされていません |適用できません|適用できません|
-|事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |[いいえ]|はい|
-|Word、Excel、PowerPoint でユーザー定義のアクセス許可を使用するクラウドベースの保護 |[いいえ]|はい|
-|[転送不可] に関する Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 |[いいえ]|はい|
-|保護を解除する |[いいえ]|はい|
-|視覚的なマーキング (ヘッダー、フッター、透かしなど): カスタム フォントと RGB コードによるカスタム フォントの色|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
-|アプリごとの視覚的なマーキング|[いいえ]|変数の使用時に推奨<br /><br />- クライアントでは、変数は動的な値ではなく、テキストとして表示されます|
-|条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用できません|[いいえ]|
+|有効または無効の状態<br /><br />注:セキュリティ/コンプライアンス センターには同期されません |適用できません|ラベルが発行されているかどうかに対応します。 |
+|一覧から選択するか、RGB コードを使用して指定するラベルの色 |はい|ラベルの色に対する構成オプションはありません。 代わりに、Azure portal でラベルの色を構成できます。|
+|事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |[いいえ]|事前に定義されたテンプレート用の構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
+|Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |[いいえ]|これらの Office アプリ用のユーザー定義のアクセス許可については構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
+|Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 ([転送不可]) |[いいえ]|HYOK に対する構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
+|保護を解除する |[いいえ]|保護を削除するための構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。<br /><br /> このラベルを発行した場合、それが適用されると、保護は以前にラベルによって適用されていた場合は削除されます。 保護が以前にラベルから独立して適用されていた場合、保護は保持されます。|
+|視覚的なマーキング (ヘッダー、フッター、透かし) 向けのカスタム フォントと RGB コードによるカスタム フォントの色|はい|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値がセキュリティ/コンプライアンス センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal を使用します。 しかし、管理をより簡単にするには、セキュリティ/コンプライアンス センターに一覧されるオプションのいずれかに、色を変更することを検討してください。|
+|視覚的なマーキングの変数 (ヘッダー、フッター)|[いいえ]|変更なしでこのラベルを発行した場合、変数は動的な値を表示するのでなく、クライアント上でテキストとして表示されます。 ラベルを発行する前に、文字列を編集して変数を削除してください。|
+|アプリごとの視覚的なマーキング|[いいえ]|変更なしでこのラベルを発行した場合、アプリ変数は、選択したアプリ上にご利用のテキスト文字列を表示するのでなく、クライアント上ですべてのアプリにテキストとして表示されます。 このラベルはすべてのアプリに適している場合にのみ発行します。文字列を編集してアプリ変数を削除します。|
+|条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用できません|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
 
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Azure Information Protection ラベルを移行するには
@@ -110,21 +111,36 @@ Azure Information Protection クライアントでは、何の問題もなく、
 
 3. **[Azure Information Protection - 統合ラベル付け]** ブレードで **[有効化]** を選択し、オンライン指示に従います。
 
-正常に移行できたラベルは、[統合ラベル付けをサポートするクライアント](#clients-that-support-unified-labeling)で使用できます。 ただし、最初にセキュリティ/コンプライアンス センターでラベルを公開する必要があります。
+正常に移行されたラベルについては、[統合ラベル付けをサポートするクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)で使用できるようになりました。 ただし、最初にセキュリティ/コンプライアンス センターでラベルを公開する必要があります。
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントに対して、Azure portal の外部でラベルを編集する場合、この **[Azure Information Protection - 統合ラベル付け]** ブレードに戻り、**[公開]** を選びます。
 
-### <a name="clients-that-support-unified-labeling"></a>統合ラベル付けをサポートするクライアント
+### <a name="clients-and-services-that-support-unified-labeling"></a>統合ラベル付けをサポートするクライアントおよびサービス
 
-現在、統合ラベル付けをサポートしているクライアント:
+使用しているクライアントとサービスによって統合ラベル付けがサポートされているかどうかを確認するには、該当するドキュメントを参照して、Office 365 セキュリティ/コンプライアンス センターから発行された機密ラベルをそれらで使用できるかどうかを確認してください。 
+
+##### <a name="clients-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているクライアント: 
 
 - [Windows 用 Azure Information Protection 統合ラベル付けクライアント](./rms-client/unifiedlabelingclient-version-release-history.md) - プレビュー
 
 - 可用性の段階が異なる Office からのアプリ。 詳細については、Office ドキュメントの「[Office 内の文書やメールに機密ラベルを適用する](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)」から「**現在、機能はどこで入手できますか?**」のセクションを参照してください。
     
-- [MIP SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference) を使用するソフトウェア ベンダー/開発者からのクライアント。
+- [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのアプリです。
 
+##### <a name="services-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているサービス: 
+
+- Windows Defender Azure Threat Protection
+
+- Microsoft Cloud App Security
+    
+    このサービスでは、統合ラベル付けストアに移行する前と後の両方で、次のロジックを使用してラベルがサポートされます。
+    
+    - Azure portal にあるのと同じラベルが Office 365 セキュリティ/コンプライアンス センターに存在する場合: 統合ラベルは Office 365 セキュリティ/コンプライアンス センターから取得されます。 Cloud App Security でこれらのラベルを選択するには、少なくとも 1 つのユーザーに少なくとも 1 つのラベルを発行する必要があります。
+    
+    - Azure portal にあるのと同じラベルが Office 365 セキュリティ/コンプライアンス センターに存在しない場合: 統合ラベルは Office 365 セキュリティ/コンプライアンス センターからは使用されません。代わりに、ラベルは Azure portal から取得されます。
+
+- [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのサービスです。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 268cc1710c7bfb9c15f039612bcdd069d0b8ac7a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 660fb56839bff1d99d85ab4a08982abd3e289168
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256534"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828942"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Azure Information Protection の使用停止と非アクティブ化
 
@@ -58,7 +58,7 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 > [!TIP]
 > Windows PowerShell の [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) コマンドレットを使用して Rights Management を非アクティブ化することもできます。
 
-#### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Rights Management を非アクティブ化するには
+#### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Rights Management を非アクティブ化するには
 
 1. Office 365 管理者向けの [Rights Management ページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) に移動します。
 

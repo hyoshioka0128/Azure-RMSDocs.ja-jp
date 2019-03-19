@@ -4,19 +4,19 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1f111b0f5e6c534f005dae5725211f9035377ec
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 36900711d53e7bea33c1f0e8c1b03048694b212d
+ms.sourcegitcommit: e22c369e93f5069f9e197cab42cd751d3d97b136
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257074"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57682350"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -46,10 +46,13 @@ ms.locfileid: "56257074"
     
     解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。
 
-
 - Microsoft Online Services サインイン アシスタント 7.250.4303.0
     
     Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 新しいバージョンのサインイン アシスタントがある場合は、これをアンインストールしてから Azure Information Protection クライアントをインストールしてください。 たとえば、バージョンを確認し、**[コントロール パネル]** > **[プログラムと機能]** > **[プログラムのアンインストールまたは変更]** を使用して、サインイン アシスタントをアンインストールします。
+
+- KB 4482887
+    
+    Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。
 
 - KB 2533623
     
@@ -190,6 +193,9 @@ Windows Update を使用して Azure Information Protection クライアント�
     
     |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
+    |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
+    |Office 2013|サポートされているすべてのバージョン|64 ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン:1.0|インストール|
+    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン:2.1|インストール|
     |Office 2016|サポートされているすべてのバージョン|64 ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン:1.0|インストール|
     |Office 2013|サポートされているすべてのバージョン|64 ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン:1.0|インストール|
     |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン:2.1|インストール|

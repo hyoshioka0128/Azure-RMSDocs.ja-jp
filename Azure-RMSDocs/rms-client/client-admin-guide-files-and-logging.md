@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: abf4b87198f2997aa7a452d0c34931c55220ee5f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 72e29d19ddbfc3189d498724fc8353829820ab4e
+ms.sourcegitcommit: f4fe64474999954e0c013c3901edbb3048670935
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255072"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725751"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
@@ -55,12 +55,18 @@ Azure Information Protection クライアントをインストールした後、
     - ラベルの設定 (上位): 情報 ID 101
     
     - ラベルの削除: 情報 ID 104
-   
-    - 推奨されるヒント: 情報 105
+    
+    - 推奨されるラベルのヒント: 情報 105
     
     - カスタム保護の適用: 情報 ID 201
     
     - カスタム保護の削除: 情報 ID 202
+    
+    - Outlook 警告メッセージ: 情報 ID 301
+    
+    - Outlook 理由メッセージ: 情報 ID 302
+    
+    - Outlook ブロック メッセージ: 情報 ID 303
     
     - サインイン (操作): 情報 ID 902
     
@@ -85,6 +91,8 @@ Azure Information Protection クライアントをインストールした後、
 - ユーザーの理由 (該当する場合)
 
 - 指定したユーザー、グループ、または組織の[エンコーディング名に基づく使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)が含まれるカスタム アクセス許可 (該当する場合)
+
+Outlook の警告メッセージ、理由メッセージ、ブロック メッセージのイベントにはプレビュー クライアントとクライアントの詳細設定が必要です。 詳細については、「[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)」を参照してください。
 
 保護サービスの使用状況ログについては、「[Azure Rights Management サービスの使用状況をログに記録して分析する](../log-analyze-usage.md)」をご覧ください。
 

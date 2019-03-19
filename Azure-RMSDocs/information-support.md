@@ -4,19 +4,19 @@ description: 新しいリリース、サポート オプション、および Mi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d73037a8aba25e7c15ca531241b90dcc92f6dcc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5ff687b812ac9c7d3253e284baeaca0b1de2e8e3
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258098"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978221"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -53,7 +53,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 |Subscription|手順|
 |----------------|---------------|
 |Azure Information Protection (スタンドアロン)|1.Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2.要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - included]\(テクニカル サポート - 含む\)**: Azure のサブスクリプションがない場合、このオプションが表示されます。|
-|Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Office 365 管理ポータルによるサポートへの問い合わせ方法、および連絡先電話番号については、「[一般法人向けサポートへのお問い合わせ - 管理者向けヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
+|Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Microsoft 365 管理センターによるサポートへの問い合わせ方法、および連絡先電話番号については、「[ビジネス製品についてサポートに問い合わせる - 管理者ヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
 |Azure Information Protection と Enterprise Mobility + Security (EMS)|1.Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2.要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - included]\(テクニカル サポート - 含む\)**: Azure のサブスクリプションがない場合、このオプションが表示されます。|
 |Azure Information Protection と Microsoft 365 Enterprise|[Office 365 サポート チャネル](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) をご利用いただけます。|
 
@@ -61,8 +61,6 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 
 ### <a name="self-help"></a>セルフヘルプ
-
-現在ベータ版の [Azure Information Protection ヘルプ ボット](help-bot.md)をお試しください。
 
 ハンズオン ラボ: 「[Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)」 (Azure Information Protection ハンズオン ラボ) をご覧ください。
 

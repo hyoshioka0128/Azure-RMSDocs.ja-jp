@@ -1,6 +1,6 @@
 ---
-title: Office 365 管理センターで Azure RMS をアクティブ化する - AIP
-description: Office 365 管理センターの新しいバージョンを使用する場合の、Azure Rights Management サービスのアクティブ化手順です。
+title: Microsoft 365 管理センターで Azure RMS をアクティブ化する - AIP
+description: Microsoft 365 管理センターの新しいバージョンを使用する場合の、Azure Rights Management サービスのアクティブ化手順です。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -12,29 +12,29 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3eb45542a3ee6cb712abadae68b1d0572204ae35
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
+ms.openlocfilehash: fdf5abd317164736cc66b1cbca8cfb9c2c5863d0
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557682"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828976"
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Office 365 管理センターから Azure Rights Management をアクティブ化する方法
+# <a name="how-to-activate-azure-rights-management-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Azure Rights Management をアクティブ化する方法
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Office 365 管理センターから Azure Rights Management サービスにアクセスでき、かつご自身がグローバル管理者である場合は、次の手順を使用します。 
+Microsoft 365 管理センターから Azure Rights Management サービスにアクセスでき、かつご自分がグローバル管理者である場合は、次の手順を使用します。 
 
 Azure Rights Management サービスをアクティブ化するには、[Azure Information Protection Premium プラン](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)を取得するか、[Rights Management を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。 たとえば、ご自身の組織が Office 365 E3 や Office 365 E5 のプランを取得しているとします。 
 
 サブスクリプションの要件に関する質問がある場合、またはサービスのアクティブ化についてサポートが必要な場合は、[Microsoft サポートにお問い合わせいただく](information-support.md#to-contact-microsoft-support)か、標準サポート チャネルをご利用ください。
 
-1. ご自身の組織が Azure Rights Management を含むプランを取得していることを確認したら、Office 365 管理センターの [Rights Management ページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx)に移動します。
+1. ご自分の組織が Azure Rights Management を含むプランを取得していることを確認したら、Microsoft 365 管理センターの [Rights Management のページ](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx)に移動します。
     
     サインインを求められたら、Office 365 のグローバル管理者であるアカウントを使用します。
     
     > [!TIP]
-    > 管理センターのヘルプについては、「[Office 365 管理センターについて](/office365/admin/admin-overview/about-the-admin-center)」を参照してください。
+    > 管理センターのヘルプについては、「[Microsoft 365 管理センターについて](/office365/admin/admin-overview/about-the-admin-center)」を参照してください。
     
     管理センターから **Rights Management** ページに移動する場合: **[設定]** > **[サービスとアドイン]** > **[Microsoft Azure Information Protection]** > **[Manage Microsoft Azure Information Protection settings]\(Microsoft Azure Information Protection 設定の管理\)**
 

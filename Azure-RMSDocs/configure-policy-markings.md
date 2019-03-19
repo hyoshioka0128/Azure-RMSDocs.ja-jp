@@ -4,17 +4,17 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: cc921ae66d8a36a3bad9f184b7b900c7508eb2d1
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756183"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734111"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "56756183"
 
 - 文字列の最大長:
     
-    - ヘッダーとフッターに入力できる文字列の最大長は 1024 文字です。 しかし、Excel にはヘッダーとフッターに合計 255 文字の制限があります。 この制限には、Excel で表示されない文字 (書式設定コードなど) が含まれます。 ヘッダーとフッターに長い文字列を入力すると、Excel では、このテキストは 255 文字以下に切り捨てられることがあります。
+    - ヘッダーとフッターに入力できる文字列の最大長は 1024 文字です。 しかし、Excel にはヘッダーとフッターに合計 255 文字の制限があります。 この制限には、Excel で表示されない文字 (書式設定コードなど) が含まれます。 その制限に達すると、入力した文字列は Excel では表示されません。
     
     - 入力できる透かしの文字列の最大長は 255 文字です。
 

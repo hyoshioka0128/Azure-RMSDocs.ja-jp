@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9b7cd88df290c3df46f0a336c649e282df10d4df
-ms.sourcegitcommit: bfb8e4fff4b6ebc38337f48f2b31ca43048dcca6
+ms.openlocfilehash: b8cf9cb6bd0fadadc12a6ef9c7b65d708ce51648
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007054"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828534"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -371,7 +371,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>スキャナーのパフォーマンスの最適化
 
-スキャナーのパフォーマンスを最適化するには、次のガイダンスを使用します。 ただし、スキャナーのパフォーマンスではなくスキャナー コンピューターの応答性を優先する場合は、クライアントの詳細設定を使って[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)ことができます。
+スキャナーのパフォーマンスを最適化するには、次のガイダンスを使用します。 ただし、スキャナーのパフォーマンスではなくスキャナー コンピューターの応答性を優先する場合は、クライアントの詳細設定を使ってスキャナーで使用されるスレッドの数を制限することができます。
 
 スキャナーのパフォーマンスを最大化するには
 
@@ -490,5 +490,3 @@ Microsoft の Core Services Engineering と Operations チームがどのよう�
 次に、[Windows Server FCI と Azure Information Protection スキャナーの違い](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)について確認します
 
 また、PowerShell を使用して、デスクトップ コンピューターからファイルを対話的に分類し、保護することができます。 これに関する詳細および PowerShell を使用するその他のシナリオについては、「[Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)」をご覧ください。
-
-

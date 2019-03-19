@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 8a1057aeab9bf86bba8047f3425b11e7eeae1082
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259186"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828432"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するようにクライアントとオンライン サービスを構成する
 
@@ -104,7 +104,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 #### <a name="configuration-for-users"></a>ユーザー用の構成
 ユーザーが自分の OneDrive for Business を構成してビジネス ファイルを保護できるように、ユーザーに次のことを指示します。
 
-1. 職場または学校のアカウントで Office 365 にサインインし、[OneDrive の Web サイト](https://portal.office.com/onedrive)に移動します。
+1. 職場または学校のアカウントで Office 365 にサインインし、[OneDrive の Web サイト](https://admin.microsoft.com/onedrive)に移動します。
 
 2. ナビゲーション ウィンドウの下部の、**[従来の OneDrive に戻す]** を選択します。
 
@@ -502,7 +502,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
    2. `$tenantAdmin` を探し、例の値を Office 365 の実際の完全修飾グローバル管理者アカウントに置き換えます。
 
-      この値は、グローバル管理者として Office 365 管理ポータルにサインインするために使用するものと同じで、形式は user_name@*&lt;テナント ドメイン名&gt;*.com です。
+      この値は、グローバル管理者として Microsoft 365 管理センターにサインインするために使用するものと同じで、形式は user_name@*&lt;テナント ドメイン名&gt;*.com です。
 
       たとえば、"contoso.com" テナント ドメインの Office 365 グローバル管理者ユーザーの名前が "admin" である場合、<strong>admin@contoso.com</strong> と指定します。
 

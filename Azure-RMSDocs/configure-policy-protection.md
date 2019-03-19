@@ -4,17 +4,17 @@ description: Rights Management 保護を使用するようにラベルを構成�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/05/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332312"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978153"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -62,16 +62,24 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
     - **[未構成]**:現在保護を適用するようにラベルが構成されていて、選択したラベルでこれ以上保護を適用しない場合は、このオプションを選択します。 次に手順 11 に進みます。
         
         以前に構成された保護設定はアーカイブ済みの保護テンプレートとして保持され、オプションを **[保護]** に戻すと再び表示されます。 Azure Portal ではこのテンプレートが表示されませんが、[PowerShell](configure-templates-with-powershell.md) を使用すると、必要に応じてテンプレートを引き続き管理することができます。 この動作は、テンプレートに以前に適用された保護設定のラベルが含まれる場合に、引き続きコンテンツにアクセスできることを意味します。
+        
+        この **[未構成]** 保護設定を使用したラベルが適用されるとき: 
+        
+         - コンテンツが以前にラベルを使用しないで保護されている場合、その保護は保持されます。 
+         
+         - コンテンツが以前にラベルを使用して保護されている場合、ラベルを適用するユーザーに Rights Management による保護を削除するアクセス許可があると、その保護は削除されます。 この要件は、ユーザーが**エクスポート**または**フル コントロール**の[使用権限](configure-usage-rights.md)を持っている必要があることを意味します。 あるいは、Rights Management の所有者 (自動的にフル コントロールの使用権限が付与されている) であるか、[Azure Rights Management のスーパー ユーザー](configure-super-users.md)である必要があります。
+             
+             ユーザーが保護を削除するアクセス許可を持っていない場合、ラベルを適用することはできず、次のメッセージが表示されます。**Azure Information Protection ではこのラベルを適用できません。この問題が引き続き発生する場合は、管理者にお問い合わせください。** 
     
     - **[保護]**:保護を適用するには、このオプションを選択し、手順 4 に進みます。
     
     - **[保護の削除]**:ドキュメントまたはメールが保護されている場合に保護を削除するには、このオプションを選びます。 次に手順 11 に進みます。
         
-        以前に構成された保護設定はアーカイブ済みの保護テンプレートとして保持され、オプションを **[保護]** に戻すと再び表示されます。 Azure Portal ではこのテンプレートが表示されませんが、[PowerShell](configure-templates-with-powershell.md) を使用すると、必要に応じてテンプレートを引き続き管理することができます。 この動作は、テンプレートに以前に適用された保護設定のラベルが含まれる場合に、引き続きコンテンツにアクセスできることを意味します。
+        ラベルまたは保護テンプレートを使用して保護が適用されている場合、保護設定はアーカイブ済みの保護テンプレートとして保持され、オプションを **[保護]** に戻すと再び表示されます。 Azure Portal ではこのテンプレートが表示されませんが、[PowerShell](configure-templates-with-powershell.md) を使用すると、必要に応じてテンプレートを引き続き管理することができます。 この動作は、テンプレートに以前に適用された保護設定のラベルが含まれる場合に、引き続きコンテンツにアクセスできることを意味します。
         
-        このオプションを持つラベルを適用するには、ユーザーは Rights Management による保護を削除するアクセス許可を持っている必要があることに注意してください。 この要件は、ユーザーが**エクスポート**または**フル コントロール**の[使用権限](configure-usage-rights.md)を持っている必要があることを意味します。 あるいは、Rights Management の所有者 (自動的にフル コントロールの使用権限が付与されています) であるか、[Azure Rights Management のスーパー ユーザー](configure-super-users.md)である必要があります。 既定の Azure Rights Management テンプレートには、ユーザーに保護を削除させる使用権限は含まれません。 
+        このオプションを持つラベルを正常に適用するには、ユーザーは Rights Management による保護を削除するアクセス許可を持っている必要があることに注意してください。 この要件は、ユーザーが**エクスポート**または**フル コントロール**の[使用権限](configure-usage-rights.md)を持っている必要があることを意味します。 あるいは、Rights Management の所有者 (自動的にフル コントロールの使用権限が付与されている) であるか、[Azure Rights Management のスーパー ユーザー](configure-super-users.md)である必要があります。 
         
-        Rights Management による保護を削除するアクセス許可を持たないユーザーが **[保護の削除]** オプションを持つラベルを選択すると、次のメッセージが表示されます。**Azure Information Protection ではこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
+        この設定を使用してラベルを適用するユーザーが、Rights Management による保護を削除するアクセス許可を持たない場合、ラベルを適用することはできず、次のメッセージが表示されます。**Azure Information Protection ではこのラベルを適用できません。この問題が引き続き発生する場合は、管理者に問い合わせてください。**
 
 4. **[保護]** を選択した場合、その他のオプションのいずれかが以前選択された場合は **[保護]** ブレードが自動的に開きます。 この新しいブレードが自動的に開かない場合は、**[保護]** を選択します。
     
