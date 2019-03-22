@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ae91e36a4b2406d3dcb5a4ea52f4cac48c37287
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4561c505be994039a6e95779e47ea1c511e0a0c1
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257197"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221067"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -27,7 +27,7 @@ ms.locfileid: "56257197"
 
 これらのアプリケーションおよびソリューションでは、Rights Management サポートは、使用制限をサポートするために Rights Management API を使用して密接に統合されています。 このようなアプリケーションおよびソリューションは、"RMS 対応" とも呼ばれます。
 
-別途明記されていない限り、サポートされる機能は Azure RMS と AD RMS の両方に適用されます。 また、iOS、Android、macOS、Windows Phone 8.1 で AD RMS をサポートするには、[Active Directory Rights Management サービス モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)が必要です。
+別途明記されていない限り、サポートされる機能は Azure RMS と AD RMS の両方に適用されます。 また、iOS、Android、macOS、Windows Phone 8.1 で AD RMS をサポートするには、[Active Directory Rights Management サービス モバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))が必要です。
 
 ## <a name="rms-enlightened-applications"></a>RMS 対応アプリケーション
 

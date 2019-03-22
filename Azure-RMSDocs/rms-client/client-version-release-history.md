@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
-ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
+ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57510056"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57828449"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -92,7 +92,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - ユーザー定義のアクセス許可に対して親ラベルが構成されている場合、PowerShell およびスキャナーによってサブラベルが正しく適用されます。
 
-- Azure Information Protection クライアントで、[統合ラベル付けをサポートしているクライアント](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling)によって適用されているラベルが正しく表示されます。
+- Azure Information Protection クライアントで、[統合ラベル付けをサポートしているクライアント](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)によって適用されているラベルが正しく表示されます。
 
 - エクスプローラーと右クリック、PowerShell、およびスキャナーによって保護が解除された後に、ドキュメントが Office で回復メッセージなしで正しく開きます。
 
@@ -236,21 +236,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが削除されました。 これは **[問題の報告]** に一時的に置き換えられていたもので、既定では Microsoft に電子メールが送信されていました。 2018 年 12 月以降、**[問題の報告]** オプションは既定で表示されなくなりますが、リンクの HTTP 文字列を指定する[クライアントの詳細設定](client-admin-guide-customizations.md#add-report-an-issue-for-users)を使用して追加することができます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 
 
-## <a name="version-12950"></a>バージョン 1.29.5.0 
-
-**リリース日**: 2018 年 6 月 26 日
-
-このバージョンには、MSIPC バージョン 1.0.3403.1224 の RMS クライアントが含まれています。
-
-**修正内容**:
-
-- Outlook バージョン 16.0.9324.1000 以降 (クイック実行) の場合、Azure Information Protection バーに最新のモニター ディスプレイ オプションが表示されます。以前は Outlook アプリケーションの外部にバーが表示されることがありました。
-
-- [Office アプリケーションごとに](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成する視覚的マーキングが、以前は Azure Information Protection ラベルによって適用されていたヘッダーやフッターに置き換わりました。
-
-- Excel ファイルが既にラベル付けされていてラベルが視覚的なマーキングを適用している場合、新しいシートにもラベルの視覚的なマーキングが適用されるようになりました。
-
-- [既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property)ためにクライアントの詳細設定を使用する場合、自動ラベル付けは手動ラベル付けをオーバーライドしません。
 
 ## <a name="next-steps"></a>次の手順
 
