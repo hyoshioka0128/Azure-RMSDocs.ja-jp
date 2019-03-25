@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: 0a09c4c89ffd461cb0c922cb09ee0acd3ed033be
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425965"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57829004"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
@@ -50,7 +50,7 @@ Azure Information Protection ラベルはメタデータに格納されるため
 
 2. **[管理者]** タイルを選択します。
 
-3. Office 365 管理センターで、**[管理センター]** > **[Exchange]** の順に選択します。
+3. Microsoft 365 管理センターで、**[管理センター]** > **[Exchange]** の順に選択します。
 
 4. Exchange 管理センターで、**[メール フロー]** > **[ルール]** > **+** > **[新しいルールの作成]** の順に選択します。 
 

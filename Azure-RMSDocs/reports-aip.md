@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 02/26/2019
+ms.date: 03/22/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 319365dd5dfa7c9c5cb82532faa179334c8f0b0f
-ms.sourcegitcommit: dde803603371dc30d40ca7225f330163bcc7c103
+ms.openlocfilehash: c7f862a7a16579b6d414c79015c42664e4066c29
+ms.sourcegitcommit: cf06c3854e6ee8645c3b71a0257bdb6a1b569843
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56825970"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343045"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -30,7 +30,7 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
 
 - ラベル付きのドキュメントや電子メールへのユーザーのアクセスと、その分類に対する変更を監視します。 
 
-- 保護する必要がある機密情報が含まれているドキュメントを識別します。
+- 保護されていないと組織をリスクにさらす可能性がある機密情報が含まれるドキュメントを識別し、次の推奨事項に従ってリスクを軽減します。
 
 現在、表示されるデータは、Azure Information Protection クライアントと Azure Information Protection スキャナー、および [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview) を実行している Windows コンピューターから集計されたものです。
 
@@ -67,7 +67,17 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
     - ラベル付けされ、保護されているファイルと、ラベルごとのファイルの場所
     
     - 既知のカテゴリ (財務データや個人情報など) の機密情報が含まれるファイルと、これらのカテゴリごとのファイルの場所
+
+- **推奨事項**レポートから次のことが確認できます。
     
+    - 既知の種類の機密情報が含まれていて保護されていないファイルを識別します。 推奨事項に従えば、ご利用のラベルのいずれかによって自動ラベル付けまたは推奨ラベル付けを適用するための対応する条件をすぐに構成することができます。
+        
+        推奨事項に従う場合: 今度ファイルがユーザーによって開かれるか、または Azure Information Protection スキャナーによってスキャンされる場合、ファイルを自動的に分類して保護することができます。
+    
+    - 識別された機密情報が含まれているファイルが存在していて、Azure Information Protection によってスキャンされていないデータ リポジトリを特定します。 推奨事項に従えば、識別されたデータ ストアをご利用のスキャナーのプロファイルのいずれかにすぐに追加できます。
+        
+        推奨事項に従う場合: 次のスキャナー サイクルで、ファイルを自動的に分類し、保護することができます。
+
 レポートでは [Azure Monitor](/azure/log-analytics/log-analytics-overview) を使用して、ご自身の組織が所有している Log Analytics ワークスペースにデータを格納します。 クエリ言語に習熟している場合は、クエリを変更して、新しいレポートや Power BI ダッシュボードを作成できます。 クエリ言語を理解するには、「[Log Analytics のクエリの概要](/azure/azure-monitor/log-query/get-started-queries)」のチュートリアルが役立ちます。 
 
 詳細については、次のブログ記事を参照してください。 
@@ -100,7 +110,7 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
 
 - クライアント オペレーティング システムのバージョン。
 
-この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースに対するアクセスの管理について詳しくは、Azure ドキュメントの「[アカウントとユーザーの管理](/azure/azure-monitor/platform/manage-access#manage-accounts-and-users)」セクションをご覧ください。
+この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)に関するセクションをご覧ください。
 
 > [!NOTE]
 > Azure Information Protection の Azure Log Analytics ワークスペースには、ドキュメントのコンテンツの一致に関するチェック ボックスが含まれています。 このチェック ボックスをオンにすると、機密情報の種類またはカスタム条件によって識別された実際のデータも収集されます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 このデータを収集したくない場合は、このチェック ボックスをオンにしないでください。
@@ -114,7 +124,8 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
 |Azure Information Protection クライアント (現在の一般提供バージョンまたはプレビュー バージョン)、またはプレビュー バージョンの Azure Information Protection 統合ラベル付けクライアント|これらのバージョンのクライアントのいずれかをまだインストールしていない場合は、Microsoft ダウンロード センターからダウンロードしてインストールできます。<br /> - [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Azure Information Protection 統合ラベル付けクライアント](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
-|**検出とリスク** レポートの場合: <br /><br />- オンプレミスのデータ ストアからのデータを表示するには、Azure Information Protection スキャナー (現在の一般公開バージョンまたはプレビュー バージョン) のインスタンスを少なくとも 1 つデプロイしていること <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 スキャナーの以前のバージョンからアップグレードする場合は、「[Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。<br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
+|**検出とリスク** レポートの場合: <br /><br />- オンプレミスのデータ ストアからのデータを表示するには、Azure Information Protection スキャナー (現在の一般公開バージョンまたはプレビュー バージョン) のインスタンスを少なくとも 1 つデプロイしていること <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 <br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
+|**推奨事項**レポートの場合:  <br /><br />- 推奨される操作として Azure portal から新しいデータ リポジトリを追加するには、現在のプレビュー バージョンの Azure Information Protection スキャナーを使用する必要があります |プレビュー バージョンのスキャナーをデプロイするには、「[プレビュー バージョンの Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner-preview.md)」を参照してください。|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Azure Information Protection 分析に必要なアクセス許可
 
@@ -142,7 +153,7 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
     > [!NOTE] 
     > テナントが統合ラベル付けストアに移行されている場合、ご自分のアカウントはグローバル管理者であるか、リストされたロールのいずれかに加えて Office 365 セキュリティ/コンプライアンス センターに対するアクセス権を持っている必要があります。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. ご自身の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions)、または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかを持っている必要があります:
+2. ご自身の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)、または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかを持っている必要があります:
     
     - Log Analytics ワークスペースを作成する、またはカスタム クエリを作成する場合は、次のいずれか:
     
@@ -190,6 +201,12 @@ Log Analytics ワークスペースの作成に関する情報については、
     このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。
 
 - **データ検出 (プレビュー)**: スキャナーまたは Windows Defender ATP によって検出されたファイルに関する情報を表示するには、このレポートを使用します。
+
+- **推奨事項 (プレビュー)**: このレポートを使用すると、推奨事項に従って機密情報が含まれているファイルを識別し、リスクを軽減することができます。
+    
+    このレポートは現在テナントにロールアウトされています。そのため、これが表示されない場合は、数日後にもう一度お試しください。
+    
+    項目を選択すると、**[データの表示]** オプションによって、推奨事項をトリガーした監査アクティビティが表示されます。
 
 > [!NOTE]
 > 現在、送信元オペレーティング システムのロケールが英語の場合、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されるという既知の問題があります。

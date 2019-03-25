@@ -4,19 +4,19 @@ description: Azure Information Protection スキャナーをインストール�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/29/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b8cf9cb6bd0fadadc12a6ef9c7b65d708ce51648
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 6cd71239fc2b6bd20fe1444568abea7d541e067f
+ms.sourcegitcommit: ffc7b181f27b628d2a2740f83e0874a830c3735c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828534"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306967"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -242,7 +242,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、およびレポートに記録する項目などがあります。 さらに、Azure Information Protection ポリシーに分類レベルを下げる、または保護を解除する理由メッセージを必要とする設定が含まれている場合、このコマンドレットを使用してそのメッセージを指定します。 各構成設定に関する詳細については、[オンライン ヘルプ](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters)を参照してください。 
+    変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、およびレポートに記録する項目などがあります。 さらに、Azure Information Protection ポリシーに分類レベルを下げる、または保護を解除する理由メッセージを必要とする設定が含まれている場合、このコマンドレットを使用してそのメッセージを指定します。 各構成設定に関する詳細については、[オンライン ヘルプ](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters)を参照してください。 
 
 2. 現在の時刻をメモしておき、次のコマンドを実行してもう一度スキャナーを開始します。
     
@@ -402,6 +402,14 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 - Azure Information Protection の条件を変更する
     
     スキャナーがすべてのファイルを検査する必要があるときの最初のスキャン サイクルでは、既定では、新規および変更されたファイルのみを検査する後続のスキャン サイクルよりも明らかに長く時間がかかります。 ただし、Azure Information Protection ポリシーの条件を変更した場合、[上記のセクション](#when-files-are-rescanned)に示されているように、すべてのファイルがもう一度スキャンされます。
+
+- カスタム条件に対する正規表現式の構築
+    
+    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 次に例を示します。
+    
+    - [最長の量指定子](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)を開始します
+    
+    - `(expression)` ではなく、`(?:expression)` などの非キャプチャ グループを使用します
 
 - 選択したログ レベル
     

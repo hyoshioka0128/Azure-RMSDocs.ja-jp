@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 9cb472280160919be93745fe7ff50f05e036f301
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: f797ffc63e38c15649e5bf590ad11dd5a009e957
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829095"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221016"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -71,7 +71,7 @@ Azure portal からラベルとポリシー設定をダウンロードする **A
 |保護のみモード (ラベルなし):| はい | [いいえ] |
 |Outlook の [転送不可] ボタン: | はい | [いいえ] |
 |多言語のサポート:| はい | [いいえ] |
-|AD RMS のサポート:| はい | 次のアクションのみがサポートされます。<br /><br /> - ビューアーで保護されたドキュメントを開くことができます|
+|AD RMS のサポート:| はい | 次のアクションのみがサポートされます。<br /><br /> - [Active Directory Rights Management サービスのモバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))をデプロイすると、保護されたドキュメントをビューアーで開くことができます|
 
 #### <a name="functional-comparison-for-the-clients"></a>クライアントの機能の比較
 
@@ -89,6 +89,8 @@ Azure portal からラベルとポリシー設定をダウンロードする **A
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度:ファイルごと <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度:セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
 |自動および推奨される分類: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使って、セキュリティ/コンプライアンス センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
+
+特定の保護設定での動作の違いの詳細な比較については、「[ラベルの保護設定の動作を比較する](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)」を参照してください。
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントにない機能
 
