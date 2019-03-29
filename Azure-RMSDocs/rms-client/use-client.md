@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/20/2019
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: f797ffc63e38c15649e5bf590ad11dd5a009e957
-ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
+ms.openlocfilehash: b8f19a4953d5cfead99e96386bd65d070ac8ae77
+ms.sourcegitcommit: 0df1cd6000f72ec8cac60a5ace0fa441974464e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221016"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524372"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -57,6 +57,7 @@ Azure portal からラベルとポリシー設定をダウンロードする **A
 |ユーザー定義のアクセス許可:| はい | Outlook のみ (転送不可) |
 |カスタム アクセス許可:| はい | エクスプローラーのみ <br /><br /> Office アプリでは、代替として、**[ファイル情報]** > **[文書の保護]** > **[アクセスの制限]** を選択できます |
 |Office アプリの Information Protection バー: | はい | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> - ラベルの色は適用されたラベルに表示されません|
+|ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| はい | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
 |エクスプローラー、右クリック アクション:| はい | はい (制限あり):<br /><br /> - .ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
 |保護されたファイル用のビューアー:| はい | はい (制限あり):<br /><br /> 一般的に保護されたファイル (.pfile) に関しては、Azure Information Protection クライアントのビューアーとは異なり、最初に開いたファイルへの変更を保存することができません。|
 |PowerShell コマンド:| はい | はい (制限あり):<br /><br />- 含まれているコマンドレット:[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)、[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)、[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- 保護サービスに直接接続するコマンドレットは含まれていません|
@@ -125,7 +126,7 @@ Azure Information Protection 統合ラベル付けクライアントはまだ開
 - AD RMS のみの保護
 
 
-##### <a name="parent-labels-and-their-sublabels"></a>親ラベルとそのサブラベル 
+#### <a name="parent-labels-and-their-sublabels"></a>親ラベルとそのサブラベル 
 
 Azure Information Protection クライアントでは、サブラベルを持つ親ラベルを指定する構成がサポートされていません。 これらの構成には、既定のラベルと、推奨または自動分類のラベルの指定が含まれます。 ラベルにサブラベルがある場合は、親ラベルではなく、サブラベルのいずれかを指定できます。
 
