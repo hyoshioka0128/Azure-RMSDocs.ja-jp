@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bf063cb8b56cfd0c487b62394c9226519e85b1f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330749"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809796"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 コンテンツの一部に関連付けられている保護の説明。
@@ -113,7 +113,7 @@ public std::map\<std::string, std::string\> GetSignedAppData() const  |  署名�
 暗号化されたアプリ固有のデータを取得します。
 
   
-**返します**:アプリ固有のデータ。 [ProtectionHandler](class_mip_protectionhandler.md) protection サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する可能性があります。 この暗号化データは、[ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function) を使用してアクセスできる署名済みデータに依存しません
+**返します**:アプリ固有のデータ。 [ProtectionHandler](class_mip_protectionhandler.md) protection サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する可能性があります。 この暗号化データは、[ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function) を使用してアクセスできる署名済みデータに依存しません
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData 関数
 署名されたアプリ固有のデータを取得します。

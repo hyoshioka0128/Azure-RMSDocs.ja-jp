@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 27b6c9039277feca033298520cc0fc18d239f037
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: e20b66062788632f3fc519e498761500ee78d68c
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330986"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809915"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C++)
 
@@ -135,7 +135,7 @@ SDK によって要求されたアクセス トークンを生成する次の Po
 
 | まとめ | エラー メッセージ | ソリューション |
 |---------|---------------|----------|
-| 不正なアクセス トークン | *例外が発生しました.正しくない/有効期限切れ、アクセス トークンですか。<br><br>失敗の API 呼び出し: profile_add_engine_async に失敗しました: [クラス mip::PolicySyncException] ポリシーの取得に失敗しました、要求は http 状態コードで失敗しました。401、x: ms 診断: [2000001; 理由 =「、要求と共に送信される OAuth トークンを解析できません」;。error_category ="invalid_token"]、関連付け Id: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (プロセス 29924) は、コード 0 で終了しました<br>。<br>このウィンドウを閉じますすべてのキーを押します.* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 「[Update the token acquisition logic](#update-the-token-acquisition-logic-with-a-valid-access-token)」 (トークンの取得ロジックの更新) に戻り、アクセス トークンを再生成し、`AcquireOAuth2Token()` を再度更新して、再構築および再テストを行います。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
+| 不正なアクセス トークン | *例外が発生しました.正しくない/有効期限切れ、アクセス トークンですか。<br><br>失敗の API 呼び出し: profile_add_engine_async に失敗しました: [クラス mip::PolicySyncException] ポリシーの取得に失敗しました、要求は http 状態コードで失敗しました。401、x: ms 診断: [2000001; 理由 =「、要求と共に送信される OAuth トークンを解析できません」;。error_category ="invalid_token"]、関連付け Id: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (プロセス 29924) は、コード 0 で終了しました<br>。<br>このウィンドウを閉じますすべてのキーを押します.* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 戻り[アクセス トークンを生成する PowerShell スクリプトを作成](#create-a-powershell-script-to-generate-access-tokens)およびアクセス トークン、更新プログラムを再生成`AcquireOAuth2Token()`もう一度、および再構築/再テストします。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
 | 機密ラベルが構成されていない | 該当なし | プロジェクトが正常に構築されたにもかかわらず、コンソール ウィンドウに出力がない場合、組織の機密ラベルの構成が正しいことを確認します。 詳細については、「Define label taxonomy and protection settings」 (ラベルの分類と保護設定の定義) の「[MIP SDK setup and configuration](setup-configure-mip.md)」 (MIP SDK の設定と構成) を参照してください。  |
 
 ## <a name="next-steps"></a>次の手順
