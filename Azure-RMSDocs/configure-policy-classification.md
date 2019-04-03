@@ -4,17 +4,17 @@ description: ラベルの条件を使うと、ドキュメントや電子メー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829044"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809762"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -99,19 +99,6 @@ ms.locfileid: "57829044"
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
-
-次の機密情報の種類には、Azure Information Protection クライアントのバージョン 1.37.19.0 以降が必要です。
-
-- **EU の携帯電話番号**
-- **EU のパスポート番号**
-- **EU の運転免許証番号**
-- **EU の国民識別番号**
-- **EU の社会保障番号 (SSN) または同等の ID**
-- **EU の納税者識別番号 (TIN)**
-- **タイの人口識別コード**
-- **トルコの国民識別番号**
-- **日本の住民基本台帳カード番号**
-
 
 次の機密情報の種類を使用するには、Azure Information Protection クライアントの最新プレビュー バージョンが必要です。
 

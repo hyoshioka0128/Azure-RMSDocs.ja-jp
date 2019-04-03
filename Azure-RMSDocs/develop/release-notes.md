@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829078"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809813"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -26,7 +26,7 @@ ms.locfileid: "57829078"
 このトピックでは、重要な変更点と、この新しいバージョンの RMS SDK v4.x の機能について説明します。
 
 -   [2017 年 7 月の新機能](#new-for-july-2017)
--   [2016 年 10 月の更新](#October-2016-update)
+-   [2016 年 10 月の更新](#october-2016-update)
 -   [2016 年 6 月の更新](#june-2016-update)
 -   [2015 年 12 月の更新](#december-2015-update)
 -   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july-2015-update---adds-support-for-linux--c-development)

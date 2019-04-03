@@ -4,16 +4,16 @@ description: 転送不可の保護を自動的に適用することで、ユー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/29/2019
+ms.date: 04/02/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: ce64578c40ea62e584121ebbc45b1a2cb521f18e
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 5987b53079b0accc32dfe22c9d7d98147ff6e321
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828891"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809881"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
