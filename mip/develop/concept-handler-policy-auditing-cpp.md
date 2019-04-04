@@ -76,6 +76,6 @@ Azure Information Protection 監査パイプラインに送信されたイベン
 
 ## <a name="next-steps"></a>次の手順
 
-- 詳細については、Azure Information Protection での監査操作は、次を参照してください。、[技術コミュニティでの発表に関するブログをプレビュー](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)します。
+- 詳細については、Azure Information Protection での監査操作は、、[技術コミュニティでの発表に関するブログをプレビュー](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)を参照してください。
 - ダウンロード、[ポリシー API のサンプルを GitHub ポリシー API を試すから](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

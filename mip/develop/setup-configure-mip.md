@@ -178,7 +178,7 @@ Office 365 サブスクリプションがプロビジョニング プロセス�
    [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-登録に Api とアクセス許可を追加する方法の詳細については、次を参照してください。 [web Api にアクセスするクライアント アプリケーションを構成する](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)します。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
+登録に Api とアクセス許可を追加する方法の詳細については、[web Api にアクセスするクライアント アプリケーションを構成する](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
 
