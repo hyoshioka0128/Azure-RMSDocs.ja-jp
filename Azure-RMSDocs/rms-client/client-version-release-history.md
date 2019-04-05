@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/19/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
-ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
+ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57828449"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809864"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -47,7 +47,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 1.41.51.0 より後のバージョン 1 のクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。  
 
 > [!TIP]
-> Office 365 セキュリティ/コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
+> Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
 
 **リリース日**: 2019 年 3 月 5 日
 
@@ -81,6 +81,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - カスタム アクセス許可を表示しないようポリシー設定を構成する場合にのみ適用される、新しいクライアント詳細設定。カスタム アクセス許可で保護されているファイルがある場合に、ユーザーが (保護設定を変更するアクセス許可を持っていれば) 表示および変更できるように、ファイル エクスプローラーにカスタム アクセス許可オプションが表示されます。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
+- Azure portal でコンテンツ一致を収集するチェック ボックスをオンにしてあるときに、ユーザーのサブセットについて情報の種類の一致が送信されないようにする、Azure Information Protection 分析に対する新しいクライアントの詳細設定。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
 **修正内容**:
 

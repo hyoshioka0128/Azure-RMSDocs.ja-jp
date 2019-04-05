@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/20/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: de1febc25d5fa5518f7ffca5d51895bebd2cd56b
-ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
+ms.openlocfilehash: 6f41e49b2a5183c7c264c5be60fc496f78a6e1dd
+ms.sourcegitcommit: b201730193b4e4e3a3254e7a0f673ddd7d6e3c84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221084"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58640364"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -55,6 +55,7 @@ ms.locfileid: "58221084"
 |LabelbyCustomProperty|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[ラベルを構成して Outlook で S/MIME 保護を適用する](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |ログ レベル|[ローカルのログ記録レベルを変更する](#change-the-local-logging-level)
+|LogMatchedContent|[ユーザーのサブセットに対して送信情報の種類の一致を無効にする](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookCollaborationTrustedDomains|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Outlook に別の既定ラベルを設定する](#set-a-different-default-label-for-outlook)|
@@ -755,6 +756,17 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 Office ドキュメントにこれらの分類の値のいずれかのラベルを付けるには、**[SyncPropertyName]** を **[公開]** に、**[SyncPropertyState]** を **[OneWay]** に設定します。 
 
 ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに、Azure Information Protection ポリシーに **[公開]**、**[全般]**、または **[非常に機密性の高い社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
+
+## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>ユーザーのサブセットに対して送信情報の種類の一致を無効にする
+
+この構成では、Azure portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)が使用され、Azure Information Protection クライアントの現在のプレビュー バージョンが必要です。
+
+機密情報の種類またはカスタム条件に対するコンテンツ一致を収集する [[Azure Information Protection 分析]](../reports-aip.md) のチェック ボックスをオンにすると、既定で、すべてのユーザーによってこの情報が送信されます。 このデータを送信できないユーザーがいる場合は、それらのユーザーの[スコープ付きポリシー](../configure-policy-scope.md)で、次のようなクライアントの詳細設定を作成します。 
+
+- 記号の意味:**LogMatchedContent**
+
+- Value:**無効化**
+
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>スキャナーで使用されるスレッドの数を制限する
 

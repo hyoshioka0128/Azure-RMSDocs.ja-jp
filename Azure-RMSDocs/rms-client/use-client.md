@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: b8f19a4953d5cfead99e96386bd65d070ac8ae77
-ms.sourcegitcommit: 0df1cd6000f72ec8cac60a5ace0fa441974464e0
+ms.openlocfilehash: 876838dbd4e9818ca118f632079c98531ce347a1
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524372"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809830"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -35,7 +35,7 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 
 Azure portal からラベルとポリシー設定をダウンロードする **Azure Information Protection クライアント**は、一般提供されています。また、新機能と修正プログラムをテストするためのプレビュー バージョンがあります。 これらのバージョンのクライアントについて詳しくは、「[Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー](client-version-release-history.md)」をご覧ください。 
 
-**Azure Information Protection 統合ラベル付けクライアント**では、Office 365 セキュリティ/コンプライアンス センターからラベルとポリシー設定をダウンロードします。 現在、このクライアントはテスト用のプレビュー段階です。 これらのバージョンのクライアントについて詳しくは、「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
+**Azure Information Protection 統合ラベル付けクライアント**では、次の管理センターからラベルとポリシー設定をダウンロードします: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 現在、このクライアントはテスト用のプレビュー段階です。 これらのバージョンのクライアントについて詳しくは、「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
 
 どのクライアントをインストールすべきでしょうか?
 
@@ -83,13 +83,13 @@ Azure portal からラベルとポリシー設定をダウンロードする **A
 |セットアップ:| ローカルのデモ ポリシーをインストールするオプション | ローカルのデモ ポリシーなし|
 |Office アプリで適用した場合のラベルの選択と表示:|リボン上の **[保護]** ボタンから <br /><br /> Information Protection バーから (リボンの下の水平バー)|リボン上の **[秘密度]** ボタンから<br /><br /> Information Protection バーから (リボンの下の水平バー)|
 |Office アプリの Information Protection バーを管理する:|ユーザー向け:  <br /><br />- リボン上の **[保護]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択した場合、既定では、バーはそのアプリ内で非表示になりますが、新しく開いたアプリでは自動的に表示され続けます <br /><br /> 管理者向け:  <br /><br />- アプリを最初に開いたときにバーを自動的に表示または非表示にする、および、ユーザーがバーの非表示を選択した後に新しく開いたアプリに対してバーを自動的に非表示のままにするかどうかを制御するポリシー設定|ユーザー向け:  <br /><br />- リボン上の **[秘密度]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択すると、バーはそのアプリ内でも新しく開いたアプリ内でも非表示になります <br /><br />管理者向け:  <br /><br />- バーを管理するポリシー設定はありません|
-|ラベルの色:  | Azure portal で構成します | Office 365 にラベルを移行した後も保持されます <br /><br /> セキュリティ/コンプライアンス センターで作成された新しいラベルには色が付いていません。|
+|ラベルの色:  | Azure portal で構成します | Office 365 にラベルを移行した後も保持されます <br /><br /> 管理センターで作成された新しいラベルには、色はありません|
 |ポリシーの更新: | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />24 時間ごと | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />4 時間ごと|
 |サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費:  <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費:  <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
 |サポートされているコマンドレット:| [AzureInformatioProtection](/powershell/module/azureinformationprotection) に記載されているすべてのコマンドレット | Set-AIPFileClassification と Set-AIPFileLabel は、*Owner* パラメーターまたは SharePoint Server ライブラリをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />さらに、Get-AIPFileStatus の *LabelingMethod* パラメーターでは、**[手動]** または **[自動]** の代わりに **[特権]**、**[標準]**、または **[自動]** が表示されます。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度:ファイルごと <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度:セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
-|自動および推奨される分類: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使って、セキュリティ/コンプライアンス センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
+|自動および推奨される分類: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
 
 特定の保護設定での動作の違いの詳細な比較については、「[ラベルの保護設定の動作を比較する](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)」を参照してください。
 
@@ -102,6 +102,8 @@ Azure Information Protection 統合ラベル付けクライアントはまだ開
 - Office アプリとエクスプローラーからの追跡と取り消し
 
 - Information Protection バーのタイトルとヒント
+
+- 変数を使用することによるヘッダーとフッターでの動的な値、および Word、Excel、PowerPoint、Outlook に対する異なる視覚的マーキング
 
 - PowerShell およびエクスプローラーでの保護アクションのオフライン サポート
 
@@ -130,7 +132,7 @@ Azure Information Protection 統合ラベル付けクライアントはまだ開
 
 Azure Information Protection クライアントでは、サブラベルを持つ親ラベルを指定する構成がサポートされていません。 これらの構成には、既定のラベルと、推奨または自動分類のラベルの指定が含まれます。 ラベルにサブラベルがある場合は、親ラベルではなく、サブラベルのいずれかを指定できます。
 
-パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、Office 365 セキュリティ/コンプライアンス センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
+パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
 ## <a name="see-also"></a>関連項目
 これらのクライアントをデプロイおよび使用する方法について詳しい情報が必要な場合は、次のドキュメントを使用してください。

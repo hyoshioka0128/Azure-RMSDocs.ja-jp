@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection に関連する単語、フ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/02/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd820cb189d21d6d4b848547ad4eaafd42d5b96
-ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
+ms.openlocfilehash: bd136d42420f42521e9fe058e73b4d643715d254
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57206503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809932"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -36,7 +36,7 @@ Azure Information Protection クライアント|ユーザー、管理者、サ�
 |Azure Information Protection のラベル|この項目によってドキュメントや電子メールに分類値を常に適用し、それらを保護することもできます。 ラベルが適用されると、ラベル情報はアプリケーションおよびサービスのメタデータに格納され、読み取ったり、必要に応じて操作したりできます。|
 |Azure Information Protection ポリシー|Azure Information Protection のラベルとポリシーの設定を使用するクライアントとサービスに向けた、管理者が定義する構成です。|
 |Azure Information Protection スキャナー|Windows Server 上で実行するサービスです。これにより、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行うことができます。|
-|Azure Information Protection 統合ラベル付けクライアント|現在、プレビュー期間中: Windows コンピューターのクライアント。これにより、ユーザー、管理者、およびサービスは、Office 365 セキュリティ/コンプライアンス センターから機密ラベルとポリシー設定を使用できます。|
+|Azure Information Protection 統合ラベル付けクライアント|現在、プレビュー期間中: Windows コンピューターのクライアント。これにより、ユーザー、管理者、およびサービスは、Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センターから機密ラベルとポリシー設定を使用できます。|
 |Azure RMS|*Azure Rights Management* をご覧ください。|
 |Azure Information Protection ビューアー|保護されたファイルを表示するために、Windows コンピューターやモバイル デバイスで実行するアプリです。|
 |Azure Rights Management|*Azure RMS* という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称で呼ばれることもあります。<br /><br />- *RMS Online*: 元の推奨名です。エラー メッセージやログ ファイルのエントリで表示されることがあります。|

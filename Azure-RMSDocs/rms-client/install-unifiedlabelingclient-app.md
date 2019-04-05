@@ -4,26 +4,26 @@ description: ドキュメントと電子メールを分類および保護でき�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cbe97fc619de9b7bda73ebb419bfc254f237f372
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: a48bb16bd2b4a0b15df0086c1eba3c14766ee9a2
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756132"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809898"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Azure Information Protection 統合ラベル付けクライアント (プレビュー) をダウンロードしてインストールする
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 
 > [!NOTE]
-> このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、Office 365 セキュリティ/コンプライアンス センターから機密ラベルを含むポリシーをダウンロードします。 これらのラベルを使用するには、まずセキュリティ/コンプライアンス センターから発行する必要があります。 [詳細情報](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
+> このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、次の管理センターから機密ラベルを含むポリシーをダウンロードします: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 これらのラベルを使用するには、まずいずれかの管理センターから発行する必要があります。 [詳細情報](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
 
 ドキュメントや電子メールにラベルを付けて保護できるように、このプレビュー クライアントをインストールするには対象となる PC のローカル管理者である必要があります。
 
@@ -35,9 +35,9 @@ ms.locfileid: "56756132"
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールするには
 
-Azure Information Protection 統合ラベル付けクライアントをインストールする前に、Office 365 セキュリティ/コンプライアンス センターでユーザーに発行される機密レベルがあることを確認します。 
+Azure Information Protection 統合ラベル付けクライアントをインストールする前に、Office 365 セキュリティ/コンプライアンス センターまたはMicrosoft 365 セキュリティ センターと Microsoft 365 コンプライアンス センターでユーザーで機密レベルを発行したことを確認します。 
 
-Azure Information Protection 用に Azure portal から現在発行されているラベルがある場合は、[これらのラベル](../configure-policy-migrate-labels.md)をセキュリティ/コンプライアンス センターに移行できます。
+Azure Information Protection 用に Azure portal から現在発行されているラベルがある場合は、管理センターに[これらのラベルを移行](../configure-policy-migrate-labels.md)できます。
 
 1. プレビュー クライアントを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=57440)からダウンロードします。
 
@@ -67,4 +67,4 @@ Azure Information Protection 用に Azure portal から現在発行されてい�
 
 ## <a name="next-steps"></a>次の手順
 
-Office 365 セキュリティ/コンプライアンス センターが現在使用している統合ラベル付けストアの詳細については、次のブログ記事をご覧ください:「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。
+管理センターが現在使用している統合ラベル付けストアの詳細については、次のブログ記事「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。

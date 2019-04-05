@@ -3,21 +3,20 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 03/22/2019
+ms.date: 04/02/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: c7f862a7a16579b6d414c79015c42664e4066c29
-ms.sourcegitcommit: cf06c3854e6ee8645c3b71a0257bdb6a1b569843
+ms.openlocfilehash: e24b143c64957fb4336effc4cac6666b374f3a15
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343045"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809966"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -112,10 +111,19 @@ Azure Information Protection 分析を使って、中央レポート機能に Az
 
 この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)に関するセクションをご覧ください。
 
-> [!NOTE]
-> Azure Information Protection の Azure Log Analytics ワークスペースには、ドキュメントのコンテンツの一致に関するチェック ボックスが含まれています。 このチェック ボックスをオンにすると、機密情報の種類またはカスタム条件によって識別された実際のデータも収集されます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 このデータを収集したくない場合は、このチェック ボックスをオンにしないでください。
->
-> 現時点では、この情報はレポートに表示されませんが、クエリで表示および取得することはできます。
+Azure Information Protection クライアントでこのデータが送信されないようにするには、[ポリシー設定](configure-policy-settings.md)の **[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定します。
+
+- ほとんどのユーザーがこのデータを送信し、ユーザーのサブセットが監査データを送信できない場合: 
+    - ユーザーのサブセットに対するスコープ付きポリシーで、**[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定します。 この構成は、運用環境のシナリオに一般的なものです。
+    
+- ユーザーのサブセットだけが監査データを送信する場合: 
+    - **[監査データを Azure Information Protection ログ分析に送信します]** を、グローバル ポリシーでは **[オフ]** に設定し、ユーザーのサブセットに対するスコープ付きポリシーでは **[オン]** に設定します。 この構成は、テストのシナリオに一般的なものです。
+
+#### <a name="content-matches-for-deeper-analysis"></a>詳細な分析のためのコンテンツ一致 
+
+Azure Information Protection 用の Azure Log Analytics ワークスペースには、機密情報の種類またはカスタム条件によって識別されるデータも収集および格納するためのチェック ボックスが含まれています。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 この追加データを送信したくない場合は、このチェック ボックスをオンにしないでください。 ほとんどのユーザーについてはこの追加データを送信し、ユーザーのサブセットでは送信できない場合は、ユーザーのサブセットに対するスコープ付きポリシーでそのチェック ボックスをオンにして、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
+
+収集した後のコンテンツ一致は、アクティビティ ログからファイルにドリル ダウンして **[アクティビティの詳細]** を表示すると、レポートに表示されます。 この情報は、クエリで表示および取得することもできます。
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Azure Information Protection 分析の前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
@@ -135,42 +143,42 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
 
 詳細:
 
-1. Azure portal で Azure Information Protection の分析ブレードにアクセスするには、次の [Azure AD の管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれかを持っている必要があります。
+1. Azure Information Protection 分析ブレードにアクセスするには、次の [Azure AD の管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれか:
     
-    - Log Analytics ワークスペースを作成する、またはカスタム クエリを作成する場合は、次のいずれか:
+    - Log Analytics ワークスペースを作成する、またはカスタム クエリを作成するには:
     
         - **Information Protection 管理者**
         - **セキュリティ管理者**
         - **グローバル管理者**
     
-    - Log Analytics ワークスペースを作成した後にデータを表示する場合は、次のいずれか:
+    - ワークスペースが作成された後は、アクセス許可がさらに少ない次のロールを使用して、収集されたデータを表示できます。
     
         - **セキュリティ閲覧者**
-        - **Information Protection 管理者**
-        - **セキュリティ管理者**
-        - **グローバル管理者**
     
     > [!NOTE] 
     > テナントが統合ラベル付けストアに移行されている場合、ご自分のアカウントはグローバル管理者であるか、リストされたロールのいずれかに加えて Office 365 セキュリティ/コンプライアンス センターに対するアクセス権を持っている必要があります。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. ご自身の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)、または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかを持っている必要があります:
+2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかが必要です。
     
-    - Log Analytics ワークスペースを作成する、またはカスタム クエリを作成する場合は、次のいずれか:
+    - ワークスペースを作成する、またはカスタム クエリを作成するには、次のいずれか:
     
         - **Log Analytics 共同作成者**
-        - Azure ロール:**所有者**または**共同作成者**
+        - **共同作成者**
+        - **所有者**
     
-    - Log Analytics ワークスペースにあるデータを、ワークスペースを作成した後に表示する場合は、次のいずれか:
+    - ワークスペースが作成された後は、アクセス許可がさらに少ない次のロールのいずれかを使用して、収集されたデータを表示できます。
     
         - **Log Analytics 閲覧者**
-        - Azure ロール:**閲覧者**
+        - **閲覧者**
 
 #### <a name="minimum-roles-to-view-the-reports"></a>レポートを表示するための最低限のロール
 
-Azure Information Protection 分析のためにワークスペースを構成した後、レポートを表示するために必要な最低限のロールは、次の両方です。
+Azure Information Protection 分析のためにワークスペースを構成した後、Azure Information Protection 分析レポートを表示するために必要な最低限のロールは、次の両方です。
 
 - Azure AD の管理者ロール:**セキュリティ閲覧者**
 - Azure ロール:**Log Analytics 閲覧者**
+
+ただし、多くの組織の標準的なロールの割り当ては、**セキュリティ閲覧者**の Azure AD ロールと、**閲覧者**の Azure ロールです。
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
@@ -189,6 +197,9 @@ Azure Information Protection 分析のためにワークスペースを構成し
 Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
 ワークスペースが構成されている場合は、レポートを表示する準備ができています。
+
+> [!NOTE]
+> 現在、レポートで初めてデータを表示するときに既知の問題があります。 これが発生する場合は、グローバル ポリシーで、[ポリシー設定](configure-policy-settings.md)の **[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定して、ポリシーを保存します。 その後、同じ設定を **[オン]** に設定して、ポリシーを保存します。 クライアントが[変更をダウンロード](configure-policy.md#making-changes-to-the-policy)した後、その監査イベントが Log Analytics ワークスペースで表示されるまでに、最大で 30 分かかることがあります。
 
 ## <a name="how-to-view-the-reports"></a>レポートの表示方法
 
@@ -222,3 +233,5 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 ## <a name="next-steps"></a>次の手順
 レポートの情報を確認した後で、Azure Information Protection ポリシーを変更することがあります。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。
+
+Microsoft 365 のサブスクリプションがある場合は、Microsoft 365 コンプライアンス センターと Microsoft 365 セキュリティ センターでラベルの使用状況を表示することもできます。 詳しくは、「[ラベル分析によるラベル使用状況の表示](/Office365/SecurityCompliance/label-analytics)」をご覧ください。

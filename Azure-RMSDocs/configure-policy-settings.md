@@ -4,17 +4,17 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: b85cf3fc1a1f78732c928b40cb09b4781dc42168
+ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379884"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58617824"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -42,7 +42,11 @@ Azure Information Protection のサブスクリプションを購入した時期
         
         この設定は、Office アプリとスキャナーに適用されます。 これはエクスプローラーや PowerShell には適用されません。
     
-   - **[すべてのドキュメントとメールにラベルを付ける]**:このオプションを **[オン]** に設定した場合は、保存されるドキュメントと送信される電子メールのすべてにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。
+    - **[監査データを Azure Information Protection 分析に送信します]**: [Azure Information 分析](reports-aip.md)用の Azure Log Analytics ワークスペースを作成する前は、この設定には **[オフ]** および **[未構成]** という値が表示されています。 ワークスペースを作成すると、値が **[オフ]** および **[オン]** に変わります。
+        
+        設定を **[オン]** にすると、中央レポート機能をサポートするエンドポイントから Azure Information Protection サービスに監査データが送信されます。 送信および保存される情報について詳しくは、「[収集され Microsoft に送信される情報](reports-aip.md#information-collected-and-sent-to-microsoft)」セクションをご覧ください。 このオプションを **[オフ]** に設定すると、このデータは送信されません。
+    
+    - **[すべてのドキュメントとメールにラベルを付ける]**:このオプションを **[オン]** に設定した場合は、保存されるドキュメントと送信される電子メールのすべてにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または (**[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。
         
        ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 次に例を示します。
         

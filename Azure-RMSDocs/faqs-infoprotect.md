@@ -4,19 +4,19 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 3bfa333e88df07702aa6e7990c31609985a2b00f
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 34f64cc28762f8eb08089b188fbb40c7358e4807
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809983"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -49,7 +49,7 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 
 - Azure portal からラベルとポリシー設定をダウンロードする **Azure Information Protection クライアント**。 このクライアントは、クライアントの一般提供バージョンに基づいています。
 
-- Office 365 セキュリティ/コンプライアンス センターからラベルとポリシー設定をダウンロードする **Azure Information Protection 統合ラベル付けクライアント**。 このクライアントは 2 番目のプレビュー段階にあります。
+- 次のいずれかの管理センターからラベルとポリシー設定をダウンロードする**Azure Information Protection 統合ラベル付けクライアント**: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 このクライアントは 2 番目のプレビュー段階にあります。
 
 Azure Information Protection 統合ラベル付けクライアントの現在の機能セットや機能がビジネス要件を満たしている場合は、これを使ってテストすることをお勧めします。 そうでない場合、または Azure portal でラベルを構成し、それをまだ[統合ラベル付けストアに移行](configure-policy-migrate-labels.md)していない場合は、Azure Information Protection クライアントを使います。
 

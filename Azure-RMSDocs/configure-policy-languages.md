@@ -4,17 +4,17 @@ description: Azure Information Protection ポリシーで言語を指定して�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/03/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 279823d8c3512ec8f28a3ecfdf4970cb18bae690
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 82dc592263117d075cb3793b9034a8adc0f1ca15
+ms.sourcegitcommit: 7283b7c7619d65b5e8272d51bbf85a1bc846befd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253238"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58867519"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
@@ -36,7 +36,7 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 - ラベルをサポートするサブスクリプションがないため、Azure Portal でのみテンプレートを作成および管理できる場合。
 
-ユーザーの Office と Windows の言語設定に一致する言語を選択します。 これらのラベル名と説明は、Office アプリの Azure Information Protection バーと **[Classify and protection - Azure Information Protection]\(分類と保護 - Azure Information Protection\)** ダイアログ ボックスにそれぞれ表示されます。 選択する言語の詳細については、このページの「[Azure Information Protection クライアントで表示言語が決定されるしくみ](#how-the-azure-information-protection-client-determines-the-language-to- display)」をご覧ください。 
+ユーザーの Office と Windows の言語設定に一致する言語を選択します。 これらのラベル名と説明は、Office アプリの Azure Information Protection バーと **[分類と保護 - Azure Information Protection]** ダイアログ ボックスにそれぞれ表示されます。 選択する言語の詳細については、このページの「[Azure Information Protection クライアントで表示言語が決定されるしくみ](#how-the-azure-information-protection-client-determines-the-language-to- display)」をご覧ください。 
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>異なる言語のラベルとテンプレートを構成するには
 
@@ -64,10 +64,14 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 6. 各 .xml ファイルを編集します。`<LocalizedText>` タグ内の各文字列に、選択した言語ごとに翻訳を入力します。 
 
 7. 各 .xml ファイルを編集したら、これらのファイルを含めた新しい圧縮 (zip 形式) フォルダーを作成します。 圧縮フォルダーには任意の名前を付けることができますが、.zip の拡張子が必要です。
+    
+    ヒントダウンロードした各言語ファイルを編集するまで待つ必要はありません。 代わりに、ダウンロードしたすべてのファイルのサブセットを .zip ファイルに含めることで、段階的に異なる言語をロールアウトできます。 その後、他の言語の翻訳を完了した時点で、手順 7 と 8 を繰り返します。
 
 8. **[Azure Information Protection - 言語]** ブレードに戻り、**[インポート]** を選択します。 このオプションが使用できない場合は、まず **[言語名]** のチェック ボックス、または個別に選択した言語のチェック ボックスをオフにします。
     
     インポートが完了したら、ローカライズされた名前と説明をユーザーにダウンロードします。
+
+新しい言語をサポートするか、新しいラベルを作成する必要がある場合、または Azure portal でラベルの名前や説明を変更した場合は、この手順を繰り返す必要があります。
 
 ## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Azure Information Protection クライアントで表示言語が決定されるしくみ
 

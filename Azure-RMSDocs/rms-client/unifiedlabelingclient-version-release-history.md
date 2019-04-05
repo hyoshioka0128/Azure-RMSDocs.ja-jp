@@ -4,25 +4,25 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
-ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
+ms.openlocfilehash: 7eb7ffd98651ed35be7ecd8043e49c1d15a65e8e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956255"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809711"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 > [!NOTE]
-> このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、Office 365 セキュリティ/コンプライアンス センターからラベルを含むポリシーをダウンロードします。 [詳細情報](/Office365/SecurityCompliance/sensitivity-labels)
+> このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、次の管理センターからラベルを含むポリシーをダウンロードします: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 [詳細情報](/Office365/SecurityCompliance/sensitivity-labels)
 
 Azure Information Protection 統合ラベル付けクライアントの最新プレビュー バージョンを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=57440)からダウンロードできます。
 
@@ -42,7 +42,7 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
 
 - Azure Information Protection クライアントからのアップグレード。
 
-- 手動、自動、および推奨ラベル付け:Office 365 セキュリティ/コンプライアンス センターの**自動ラベル付け**を使って、自動および推奨ラベル付けを構成します。 詳細については、「[機密ラベルをコンテンツに自動的に適用する](/Office365/SecurityCompliance/apply_sensitivity_label_automatically)」をご覧ください。
+- 手動、自動、および推奨ラベル付け:このクライアントの自動ラベル付けおよび推奨ラベル付けを構成する方法について詳しくは、「[機密ラベルをコンテンツに自動的に適用する](/Office365/SecurityCompliance/apply_sensitivity_label_automatically)」をご覧ください。
 
 - エクスプローラー、右クリック アクションによるファイルの分類と保護、保護の削除、およびカスタムのアクセス許可の適用。
 
@@ -63,7 +63,7 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
     - ユーザーが分類レベルを下げるかどうか、またはラベルを削除するかどうかを確認する理由プロンプト
     - ラベルの色
 
-- セキュリティ/コンプライアンス センターからのポリシーの更新:
+- 管理センターからのポリシー更新:
     - Office アプリの起動ごと、および 4 時間ごと
     - 右クリックしてファイルまたはフォルダーを分類して保護したとき
     - ラベル付けと保護のために PowerShell コマンドレット を実行したとき

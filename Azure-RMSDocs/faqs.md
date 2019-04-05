@@ -4,19 +4,19 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/13/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6a68d7f550a773016b552b380bb42f596720f250
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 503615fa6d2bb492fcbaec3271a23a606ceb4127
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828492"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809949"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -40,27 +40,27 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 当初は、Office 365 には[保有期間ラベル](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30)のみがあり、ドキュメントおよび電子メールのコンテンツが Office 365 サービス内にある場合に、それらを分類して監査および保持することができました。 これに対して、Azure Information Protection のラベルでは、ドキュメントおよび電子メールがオンプレミスのものであるかクラウド内のものであるかに関係なく、ドキュメントと電子メールに対して一貫性のある分類および保護ポリシーを適用できます。
 
-オーランドでの Microsoft Ignite 2018 で発表したとおり、Office 365 セキュリティ/コンプライアンス センターでは、保有期間ラベルに加え、[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を作成および構成するためのオプションが表示されるようになりました。 現在はプレビュー段階ですが、既存の Azure Information Protection のラベルを新しい統合ラベル付けストアに移行して、Office 365 で機密ラベルとして使用できます。 
+オーランドでの Microsoft Ignite 2018 で発表したとおり、次のいずれかの管理センターでは、保有期間ラベルに加え、[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を作成および構成するためのオプションが表示されるようになりました: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 現在はプレビュー段階ですが、既存の Azure Information Protection のラベルを新しい統合ラベル付けストアに移行して、Office 365 で機密ラベルとして使用できます。 
 
 統合ラベル付けの管理と各ラベルのサポート方法について詳しくは、ブログ記事「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」 (機密データの保護に役立つ情報保護機能の可用性の発表) をご覧ください。
 
-既存のラベルの移行について詳しくは、「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](configure-policy-migrate-labels.md)」をご覧ください。
+既存のラベルの移行について詳しくは、[Azure Information Protection ラベルの Office 365 への移行](configure-policy-migrate-labels.md)に関する記事をご覧ください。
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Office 365 にラベルを移行する適切なタイミングはいつですか。
 
-Office 365 セキュリティ/コンプライアンス センターでは機密ラベルが一般公開されていますが、お使いの Azure Information Protection ラベルを移行するオプションはまだプレビュー段階です。 ラベルを統合ラベル付けストアに移行すると、それらを公開して、[統合ラベル付けをサポートしているクライアントおよびサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)で使用できます。 現在、すべての統合ラベルが一般公開されているわけではなく、またすべてのクライアントにより統合ラベルがサポートされているわけでもありません。
+管理センター (Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター) では機密ラベルが一般公開されていますが、お使いの Azure Information Protection ラベルを移行するオプションはまだプレビュー段階です。 ラベルを統合ラベル付けストアに移行すると、それらを公開して、[統合ラベル付けをサポートしているクライアントおよびサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)で使用できます。 現在、すべての統合ラベルが一般公開されているわけではなく、またすべてのクライアントにより統合ラベルがサポートされているわけでもありません。
 
 まず、テスト テナントでプレビュー機能をテストしてから、運用環境のテナントに移行することをお勧めします。 さらに
 
 - **Azure Information Protection を初めてご使用になる場合:** 
     
-    Azure Information Protection には、デプロイを促進する既定のラベルがあるため、最初にこれらの既定のラベルを移行してから、それらを Office 365 セキュリティ/コンプライアンス センターから管理することお勧めします。
+    Azure Information Protection には、デプロイを促進する既定のラベルがあるため、最初にこれらの既定のラベルを移行してから、それらをいずれかの管理センターから管理することお勧めします。
 
 - **Azure Information Protection の使用は初めてではないが、使用するラベルの定義と構成を行っている最中の場合:**
     
-    Azure portal でラベルの構成を完了させてから、ラベルを移行することをお勧めします。 この方針によって、移行プロセス中にラベル重複が回避されます。ラベルが重複すると、セキュリティ/コンプライアンス センターで編集しなければなりません。
+    Azure portal でラベルの構成を完了させてから、ラベルを移行することをお勧めします。 この方針によって、移行プロセス中にラベル重複が回避されます。ラベルが重複する場合は、いずれかの管理センターで編集する必要があります。
 
-ラベルを移行する前に、[考慮事項とセキュリティ/コンプライアンス センターでサポートされていないラベル設定](configure-policy-migrate-labels.md#considerations-for-unified-labels)について理解しておく必要があります。
+ラベルを移行する前に、[考慮事項および管理センターでサポートされていないラベル設定](configure-policy-migrate-labels.md#considerations-for-unified-labels)について理解しておく必要があります。
 
 「[新しい機能をテストするためにどのプレビュー クライアントをインストールすればよいですか?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)」もご覧ください。
 
@@ -68,11 +68,11 @@ Office 365 セキュリティ/コンプライアンス センターでは機密�
 
 Azure portal でラベルを移行した場合:
 
-- [統合ラベル付けのクライアントおよびサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)がある場合は、Office 365 セキュリティ/コンプライアンス センターに移動して、これらのラベルを公開し、ポリシー設定を構成します。 転送されるラベル変更には、セキュリティ/コンプライアンス センターを使用します。 統合ラベル付けのクライアントは、セキュリティ/コンプライアンス センターからラベルとポリシー設定をダウンロードします。
+- [統合ラベル付けのクライアントおよびサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)がある場合は、いずれかの管理センター (Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター) に移動して、これらのラベルを公開し、ポリシー設定を構成します。 転送されるラベル変更には、いずれかの管理センターを使用します。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。
 
 - [Azure Information Protection クライアント](./rms-client/aip-client.md)がある場合は、引き続き Azure portal を使用して、ラベルとポリシー設定を編集します。 Azure Information Protection クライアントは、Azure から引き続きラベルとポリシー設定をダウンロードします。
 
-- [統合ラベル付けのクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)と [Azure Information Protection クライアント](./rms-client/aip-client.md)の両方がある場合は、いずれかのポータルを使用してラベルを変更できます。 ただし、セキュリティ/コンプライアンス センターで行ったラベルの変更を Azure Information Protection クライアントで取得するには、Azure portal に戻る必要があります。Azure portal の **[Azure Information Protection - 統合ラベル付け]** ブレードから **[公開]** オプションを使用します。 
+- [統合ラベル付けのクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)と [Azure Information Protection クライアント](./rms-client/aip-client.md)の両方がある場合は、管理センターまたは Azure portal を使用してラベルを変更できます。 ただし、管理センターで行ったラベルの変更を Azure Information Protection クライアントで取得するには、Azure portal に戻る必要があります。Azure portal の **[Azure Information Protection - 統合ラベル付け]** ブレードから **[公開]** オプションを使用します。 
 
 [中央レポート機能](reports-aip.md)と[スキャナー](deploy-aip-scanner-preview.md)には、引き続き Azure portal を使用します。
 
