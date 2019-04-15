@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 876838dbd4e9818ca118f632079c98531ce347a1
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 0762edb3e7960c5700ac8a28d7ae1b62455efbe0
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809830"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364608"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -62,16 +62,17 @@ Azure portal からラベルとポリシー設定をダウンロードする **A
 |保護されたファイル用のビューアー:| はい | はい (制限あり):<br /><br /> 一般的に保護されたファイル (.pfile) に関しては、Azure Information Protection クライアントのビューアーとは異なり、最初に開いたファイルへの変更を保存することができません。|
 |PowerShell コマンド:| はい | はい (制限あり):<br /><br />- 含まれているコマンドレット:[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)、[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)、[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />- 保護サービスに直接接続するコマンドレットは含まれていません|
 |保護アクションに対するオフライン サポート:| はい | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
-|HYOK のサポート:| はい | [いいえ]<br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
-|イベント ビューアーに対する使用状況ログの記録:| はい | [いいえ]|
-|メールの添付ファイルからのラベル継承:| はい | [いいえ] |
-|Outlook の [転送不可] ボタンを表示する| はい | [いいえ] |
-|以下を含む[カスタマイズ](client-admin-guide-customizations.md#available-advanced-client-settings):<br />- メールの既定のラベル<br />- カスタム アクセス許可を有効にする <br />- S/MIME のサポート<br />- [問題の報告] オプション| はい | [いいえ] |
-|オンプレミスのデータ ストア用のスキャナー:| はい | [いいえ] |
-|追跡と取り消し:| はい | [いいえ] |
-|保護のみモード (ラベルなし):| はい | [いいえ] |
-|Outlook の [転送不可] ボタン: | はい | [いいえ] |
-|多言語のサポート:| はい | [いいえ] |
+|オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| はい |いいえ |
+|HYOK のサポート:| はい | いいえ<br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
+|イベント ビューアーに対する使用状況ログの記録:| はい | いいえ|
+|メールの添付ファイルからのラベル継承:| はい | いいえ |
+|Outlook の [転送不可] ボタンを表示する| はい | いいえ |
+|以下を含む[カスタマイズ](client-admin-guide-customizations.md#available-advanced-client-settings):<br />- メールの既定のラベル<br />- カスタム アクセス許可を有効にする <br />- S/MIME のサポート<br />- [問題の報告] オプション| はい | いいえ |
+|オンプレミスのデータ ストア用のスキャナー:| はい | いいえ |
+|追跡と取り消し:| はい | いいえ |
+|保護のみモード (ラベルなし):| はい | いいえ |
+|Outlook の [転送不可] ボタン: | はい | いいえ |
+|多言語のサポート:| はい | いいえ |
 |AD RMS のサポート:| はい | 次のアクションのみがサポートされます。<br /><br /> - [Active Directory Rights Management サービスのモバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))をデプロイすると、保護されたドキュメントをビューアーで開くことができます|
 
 #### <a name="functional-comparison-for-the-clients"></a>クライアントの機能の比較
@@ -95,17 +96,13 @@ Azure portal からラベルとポリシー設定をダウンロードする **A
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントにない機能
 
-Azure Information Protection 統合ラベル付けクライアントはまだ開発中ですが、Azure Information Protection クライアントとは異なる次の機能と動作は、Azure Information Protection 統合ラベル付けクライアントの将来のリリースで使用できるようにはなりません。 
+Azure Information Protection 統合ラベル付けクライアントはまだ開発中ですが、Azure Information Protection 統合ラベル付けクライアントの今後のリリースで Azure Information Protection クライアントとは異なる次の機能と動作が使用可能になる予定はありません。 
 
 - Office アプリでのカスタムのアクセス許可: Word、Excel、PowerPoint
 
 - Office アプリとエクスプローラーからの追跡と取り消し
 
 - Information Protection バーのタイトルとヒント
-
-- 変数を使用することによるヘッダーとフッターでの動的な値、および Word、Excel、PowerPoint、Outlook に対する異なる視覚的マーキング
-
-- PowerShell およびエクスプローラーでの保護アクションのオフライン サポート
 
 - 保護のみモード (ラベルなし)
 
@@ -124,8 +121,6 @@ Azure Information Protection 統合ラベル付けクライアントはまだ開
 - 既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける (SyncPropertyName および SyncPropertyState クライアント詳細設定)
 
 - Rights Management サービスに接続するために PowerShell コマンドレットを分離させる
-
-- AD RMS のみの保護
 
 
 #### <a name="parent-labels-and-their-sublabels"></a>親ラベルとそのサブラベル 

@@ -4,16 +4,16 @@ description: Azure Information Protection の既定のポリシーの構成方�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/06/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: a6fd4b308413fb5bf852a5c063c54b972497289c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 18654d3867fd456b8b4ed6eb0ebd01d9c86ff13a
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364591"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
@@ -24,6 +24,12 @@ ms.locfileid: "56253593"
 管理者が Azure portal を使用して最初に Azure Information Protection サービスに接続したときに、そのテナント用に Azure Information Protection の既定のポリシーが作成されます。 Microsoft はこの既定のポリシーに変更を加える場合がありますが、既定のポリシーが改訂される前に既にサービスを使用していた場合、以前のバージョンの Azure Information Protection の既定のポリシーは更新されません。これは、ユーザーが既定のポリシーを構成し、運用環境に展開している可能性があるためです。
 
 次の値を参照して Azure Information Protection のポリシーを既定値に戻したり、Azure Information Protection のポリシーを最新の値に更新したりすることができます。
+
+> [!IMPORTANT]
+> 2019 年 4 月以降、既定のラベルが自動的に作成されない新しいお客様に対して徐々にロールアウトされる変更があります。 これらのテナントには、統一ラベル付けプラットフォームが自動的にプロビジョニングされるため、Azure portal でラベルを構成した後、それらを移行する必要はありません。
+> 
+> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、**[ラベル]** ブレードで **[既定のラベルの生成]** を選択し、グローバル ポリシーにラベルを追加します。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
+
 
 ## <a name="current-default-policy"></a>最新の既定のポリシー
 
@@ -58,7 +64,7 @@ ms.locfileid: "56253593"
 
 ### <a name="labels"></a>ラベル
 
-|Label|ツールヒント|Settings|
+|ラベル|ツールヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |個人用|ビジネス以外のデータ、個人用としてのみ使用します。|**有効**: オン <br /><br />**色**:明るい緑<br /><br />**視覚的なマーキング**:オフ <br /><br />**条件**:なし<br /><br />**保護**:なし|
 |パブリック|パブリックで使用するために、特別に準備され、承認されたビジネス データ。|**有効**: オン <br /><br />**色**:緑<br /><br />**視覚的なマーキング**:オフ<br /><br />**条件**:なし<br /><br />**保護**:なし|
@@ -69,7 +75,7 @@ ms.locfileid: "56253593"
 
 ### <a name="sublabels"></a>サブラベル
 
-|Label|ツールヒント|Settings|
+|ラベル|ツールヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |社外秘 \ すべての従業員|保護を必要とする機密データ。すべての従業員に完全なアクセス許可を付与します。 データ所有者は、コンテンツの追跡や取り消しを実行できます。|**有効**: オン <br /><br />**視覚的なマーキング**:フッター (ドキュメントや電子メール)<br /><br />社外秘として分類<br /><br />**条件**:なし<br /><br />**保護**:Azure (クラウド キー) [[1]](#footnote-1)|
 |社外秘 \ (保護されていない) すべてのユーザー|保護を必要としないデータ。 このオプションは、適切な業務の理由がある場合に、注意して使用します。|**有効**: オン <br /><br />**視覚的なマーキング**:フッター (ドキュメントや電子メール)<br /><br />社外秘として分類 <br /><br />**条件**:なし<br /><br />**保護**:なし|
@@ -87,22 +93,27 @@ ms.locfileid: "56253593"
 
 ### <a name="information-protection-bar"></a>Information Protection バー
 
-|Setting|値|
+|設定|値|
 |-------------------------------|---------------------------|
 |タイトル|検出感度|
 |ツールヒント|このコンテンツの現在のラベル。 このコンテンツが組織内外の承認されていないユーザーと共有されている場合、この設定はビジネスのリスクを識別します。|
 
 
-### <a name="settings"></a>Settings
+### <a name="settings"></a>設定
 
-|Setting|値|
+設定の一部は、2017 年 7 月 31 日以降に追加されています。
+
+|設定|値|
 |-------------------------------|---------------------------|
-|All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
 |Select the default label (既定のラベルを選択する)|なし|
+|[Send audit data to Azure Information Protection analytics]\(監査データを Azure Information Protection 分析に送信する\)|オフ|
+|All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 |添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します|オフ|
+|Display the Information Protection bar in Office apps\(Office アプリの Information Protection バーを表示する\)|オフ|
+|[Add the Do Not Forward button to the Outlook ribbon]\(Outlook のリボンに [転送不可] ボタンを追加する\)|オフ|
+|[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)|オフ|
 |Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
-
 
 ## <a name="default-policy-before-july-31-2017"></a>2017 年 7 月 31 日より前の既定のポリシー
 
@@ -111,7 +122,7 @@ ms.locfileid: "56253593"
 
 ### <a name="labels"></a>ラベル
 
-|Label|ツールヒント|Settings|
+|ラベル|ツールヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |個人用|ビジネス以外のデータ、個人用としてのみ使用します。|**有効**: オン <br /><br />**色**:明るい緑<br /><br />**視覚的なマーキング**:オフ <br /><br />**条件**:なし<br /><br />**保護**:なし|
 |パブリック|パブリックで使用するために、特別に準備され、承認されたビジネス データ。|**有効**: オン <br /><br />**色**:緑<br /><br />**視覚的なマーキング**:オフ<br /><br />**条件**:なし<br /><br />**保護**:なし|
@@ -122,7 +133,7 @@ ms.locfileid: "56253593"
 
 ### <a name="sublabels"></a>サブラベル
 
-|Label|ツールヒント|Settings|
+|ラベル|ツールヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |社外秘 \ すべての従業員|保護を必要とする機密データ。すべての従業員に完全なアクセス許可を付与します。 データ所有者は、コンテンツの追跡や取り消しを実行できます。|**有効**: オン <br /><br />**視覚的なマーキング**:フッター (ドキュメントや電子メール)<br /><br />社外秘として分類<br /><br />**条件**:なし<br /><br />**保護**:なし|
 |社外秘 \ (保護されていない) すべてのユーザー|保護を必要としないデータ。 このオプションは、適切な業務の理由がある場合に、注意して使用します。|**有効**: オン <br /><br />**視覚的なマーキング**:フッター (ドキュメントや電子メール)<br /><br />社外秘として分類 <br /><br />**条件**:なし<br /><br />**保護**:なし|
@@ -131,27 +142,27 @@ ms.locfileid: "56253593"
 
 ### <a name="information-protection-bar"></a>Information Protection バー
 
-|Setting|値|
+|設定|値|
 |-------------------------------|---------------------------|
 |タイトル|検出感度|
 |ツールヒント|このコンテンツの現在のラベル。 このコンテンツが組織内外の承認されていないユーザーと共有されている場合、この設定はビジネスのリスクを識別します。|
 
 
-### <a name="settings"></a>Settings
+### <a name="settings"></a>設定
 
-|Setting|値|
+|設定|値|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
 |Select the default label (既定のラベルを選択する)|なし|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection (ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります)|オフ|
 |添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します|オフ|
-|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|新規|
+|Azure Information Protection クライアントの "詳細" Web ページのカスタム URL を指定します|空白|
 
 ## <a name="default-policy-before-march-21-2017"></a>2017 年 3 月 21 日より前の既定のポリシー
 
 ### <a name="labels"></a>ラベル
 
-|Label|ツールヒント|Settings|
+|ラベル|ツールヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |個人用|個人用としてのみ使用します。 このデータは組織によって監視されることはありません。 個人用の情報にビジネスに関連するデータを含めないでください。|**有効**: オン <br /><br />**色**:明るい緑<br /><br />**視覚的なマーキング**:オフ <br /><br />**条件**:なし<br /><br />**保護**:なし|
 |パブリック|これは内部情報であり、社内および社外のだれもが使用できます。|**有効**: オン <br /><br />**色**:緑<br /><br />**視覚的なマーキング**:オフ<br /><br />**条件**:なし<br /><br />**保護**:なし|
@@ -162,22 +173,22 @@ ms.locfileid: "56253593"
 
 ### <a name="sublabels"></a>サブラベル
 
-|Label|ツールヒント|Settings|
+|ラベル|ツールヒント|設定|
 |-------------------------------|---------------------------|-----------------|
 |秘密 \ 会社全体|このデータには、すべての会社の従業員に対して許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**:オフ<br /><br />**条件**:なし<br /><br />**保護**:なし|
 |秘密 \ マイ グループ|このデータには、従業員グループに対してのみ許可される機密性のあるビジネス情報が含まれます。|**有効**: オン <br /><br />**視覚的なマーキング**:オフ<br /><br />**条件**:なし<br /><br />**保護**:なし|
 
 ### <a name="information-protection-bar"></a>Information Protection バー
 
-|Setting|値|
+|設定|値|
 |-------------------------------|---------------------------|
 |タイトル|検出感度|
 |ツールヒント|情報の秘密度は 4 つの異なるレベル (パブリック、内部、機密、秘密) で構成され、これによってユーザーは、社内または社外の承認されていないユーザーに対する情報漏えいのリスクを識別できます。|
 
 
-### <a name="settings"></a>Settings
+### <a name="settings"></a>設定
 
-|Setting|値|
+|設定|値|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (すべてのドキュメントと電子メールにラベルを設定する必要があります (自動設定またはユーザーが設定))|オフ|
 |Select the default label (既定のラベルを選択する)|なし|

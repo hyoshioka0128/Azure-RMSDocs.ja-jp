@@ -4,17 +4,17 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: b85cf3fc1a1f78732c928b40cb09b4781dc42168
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: c0a3acebb9f95d0044e1ad4b5cbea637e7742201
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364540"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -83,7 +83,7 @@ Azure Information Protection のサブスクリプションを購入した時期
         
        - Office アプリケーション:リボンから **[ホーム]** タブ > **[保護]** グループ > **[保護]** > **[カスタムのアクセス許可]**
         
-       - ファイル エクスプローラー: 右クリック > **[分類して保護する]** > **[カスタムのアクセス許可]**
+       - ファイル エクスプローラーから:右クリック > **[分類して保護する]** > **[カスタムのアクセス許可]**
     
    - **[Provide a custom URL for the Azure Information Protection client "Tell me more" web page]\(Azure Information Protection クライアントの "詳細情報を表示する" Web ページのカスタム URL を入力する\)**:このリンクは、**[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで **[保護]** > **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
         
