@@ -7,20 +7,21 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 0215d68bafa0243ebcf576755bec90ce5e2540a4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f24b380b892739faec0602f3dd6b60467e4f4993
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333094"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573634"
 ---
 # <a name="class-mipjustificationrequirederror"></a>class mip::JustificationRequiredError 
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public virtual std::shared_ptr\<Error\> Clone() const  |  エラーを複製します。
 public char const* what() const  |  エラー メッセージを取得します。
+public std::shared_ptr\<エラー\> Clone() 定数  |  エラーを複製します。
 public virtual ErrorType GetErrorType() const  |  エラーの種類を取得します。
 public virtual const std::string& GetErrorName() const  |  エラー名を取得します。
 public virtual const std::string& GetMessage() const  |  エラー メッセージを取得します。
@@ -33,7 +34,7 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
   
 **返します**:エラーの複製。
-  
+
 ### <a name="what-function"></a>どのような関数
 エラー メッセージを取得します。
 
@@ -63,4 +64,3 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-

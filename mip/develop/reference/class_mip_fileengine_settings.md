@@ -7,17 +7,17 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2621d4ec6f8aa8bf20c6fa3bb2bc0350d88333f4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332601"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574042"
 ---
 # <a name="class-mipfileenginesettings"></a>class mip::FileEngine::Settings 
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [FileEngine::Settings](class_mip_fileengine_settings.md) コンストラクター。
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  新しいエンジンを作成するための [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
@@ -32,7 +32,9 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public void SetSessionId(const std::string& sessionId)  |  エンジンのセッション ID を設定します。
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を返します。
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  cloudEndpointBaseUrl を取得します。
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  保護クラウド エンドポイントのベース url を取得します。
+public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  ポリシー クラウド エンドポイント ベースの url を設定、クラウドの境界を指定するために使用します。
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  ポリシーのクラウド エンドポイントのベース url を取得します。
 public void SetProtectionOnlyEngine(const bool protectionOnly)  |  保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
 public const bool IsProtectionOnlyEngine() const  |  保護のみのエンジン インジケーターを返します (ポリシー/ラベルなし)。
 public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密ラベルが有効になっているかどうかを示すフラグ。
@@ -117,10 +119,24 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-cloudEndpointBaseUrl を取得します。
+保護クラウド エンドポイントのベース url を取得します。
 
   
 **返します**:保護のエンドポイントに関連付けられているベース url
+  
+### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl 関数
+ポリシー クラウド エンドポイント ベースの url を設定、クラウドの境界を指定するために使用します。
+
+パラメーター:  
+* **policyCloudEndpointBaseUrl**:ポリシーのエンドポイントに関連付けられているベース url
+
+
+  
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
+ポリシーのクラウド エンドポイントのベース url を取得します。
+
+  
+**返します**:ポリシーのエンドポイントに関連付けられているベース url
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine 関数
 保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。

@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 87ab4b9b040297cc73baf40a274377654ec5df9b
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 20ac5207e744224d9d8eaef72607708721c55172
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331751"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573910"
 ---
 # <a name="class-mipprotectionhandler"></a>class mip::ProtectionHandler 
 特定の保護構成のための保護に関連するアクションを管理します。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<Stream\> CreateProtectedStream (const std::shared_ptr\<Stream\>& backingStream、contentStartPosition の int64_t、int64_t contentSize)  |  コンテンツの暗号化/暗号化解除を可能にする、保護されたストリームを作成します。
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  バッファーを暗号化します。

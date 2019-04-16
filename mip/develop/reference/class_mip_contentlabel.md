@@ -7,21 +7,21 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 34e4395858713219361e4e2ccf8308d89bc5f29d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 96f8cca48f385a21685e93eb5bc57abac571975c
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330493"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573017"
 ---
 # <a name="class-mipcontentlabel"></a>class mip::ContentLabel 
 コンテンツの一部 (通常はドキュメント) に適用される Microsoft Information Protection ラベルの抽象化。
 特定の適用されたラベル インスタンスに対するプロパティも保持します。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
-public const std::string& GetCreationTime() const  |  ラベルの作成時間を取得します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetCreationTime() const  |  ラベルの作成時間を取得します。
 public AssignmentMethod GetAssignmentMethod() const  |  ラベルの割り当て方法を取得します。
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  拡張プロパティを取得します。
 public bool IsProtectionAppliedFromLabel() const  |  保護がラベルによって適用されたかどうかを取得します。
@@ -33,7 +33,7 @@ public std::shared_ptr\<ラベル\>GetLabel() 定数  |  コンテンツに適�
 ラベルの作成時間を取得します。
 
   
-**返します**:GMT 文字列として作成時間。
+**返します**:作成時間。
   
 ### <a name="getassignmentmethod-function"></a>GetAssignmentMethod 関数
 ラベルの割り当て方法を取得します。
@@ -41,7 +41,7 @@ public std::shared_ptr\<ラベル\>GetLabel() 定数  |  コンテンツに適�
   
 **返します**:AssignmentMethod STANDARD | PRIVILEGED | AUTO。 
   
-**参照してください**: [:assignmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**参照してください**: [:assignmentmethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### <a name="getextendedproperties-function"></a>GetExtendedProperties 関数
 拡張プロパティを取得します。

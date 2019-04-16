@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 4059905ed18356f373d8264099dde8d7694898d1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 107aab66dc62592bda5b6833911a446e0013db41
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332754"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573515"
 ---
 # <a name="class-mipnopolicyerror"></a>mip::NoPolicyError をクラスします。 
 分類とラベルは、テナントのポリシーが構成されていません。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public char const* what() const  |  エラー メッセージを取得します。
 public std::shared_ptr\<エラー\> Clone() 定数  |  エラーを複製します。
@@ -64,4 +64,3 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-

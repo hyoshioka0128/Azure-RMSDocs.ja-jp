@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 997b3fbfb7dc302f7a47b5cfb281bdaf37c11295
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ee0545346eef2c143946496f56af77b7081b1e06
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332686"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574382"
 ---
 # <a name="class-mipfilehandler"></a>class mip::FileHandler 
 すべてのファイル処理関数のインターフェイス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetLabel()  |  ファイルからの機密ラベルの取得を開始します。
 public std::shared_ptr\<ProtectionHandler\> GetProtection()  |  ファイルからの保護ポリシーの取得を開始します。
@@ -28,10 +28,10 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  ファイル
 public void SetProtection(const std::shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  カスタムまたはテンプレート ベースのアクセス許可 (protectionDescriptor->GetProtectionType に従う) のいずれかをファイルに設定します。
 public void SetProtection(const std::vector\<uint8_t\>& serializedPublishingLicense, const std::vector\<uint8_t\>& serializedProtectionInfo)  |  ファイルには、(serializedPublishingLicense および serializedProtectionInfo) に従って、カスタムまたはテンプレート ベースのアクセス許可を設定します。
 public void RemoveProtection()  |  ファイルから保護を削除します。 ファイルにラベルが付いている場合、ラベルは失われます。
-public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  パラメーター。
-public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | \|outputStream\ で指定されたストリームに変更を書き込みます。 |  パラメーター。
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  パラメーターを使用して指定します。
+public void CommitAsync(const std::shared_ptr\<Stream\>& outputStream, const std::shared_ptr\<void\>& context) | \|outputStream\ で指定されたストリームに変更を書き込みます。 |  パラメーターを使用して指定します。
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  一時ファイル (可能であれば削除されます) - 復号化されたコンテンツを表すパスを返します。
-public void NotifyCommitSuccessful(const std::string& contentIdentifier)  |  変更がディスクにコミットされたときに、呼び出されます。
+public void NotifyCommitSuccessful(const std::string& actualFilePath)  |  変更がディスクにコミットされたときに、呼び出されます。
 public std::string GetOutputFileName()  |  元のファイル名および累積された変更に基づいて出力ファイル名と拡張子を計算します。
   
 ## <a name="members"></a>メンバー
@@ -84,7 +84,7 @@ CommitAsync が呼び出されるまで、変更はファイルに書き込ま�
 変更がディスクにコミットされたときに、呼び出されます。
 
 パラメーター:  
-* **contentIdentifier**: ファイルの例。電子メールの"C:\mip-sdk-for-cpp\files\audit.docx"[&] 例:"RE:監査design:user1@contoso.com"[サブジェクト: 送信者] 
+* **actualFilePath**:出力ファイルの実際のファイル パス 
 
 
 監査イベントを発生させます

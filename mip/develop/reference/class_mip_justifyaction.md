@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: cf0500aa9d7c6a0422e5846edda23515319c1efc
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: c0968fd019e8c251703a8f23f35ce03e421fffc3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333213"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573719"
 ---
 # <a name="class-mipjustifyaction"></a>class mip::JustifyAction 
 正当化[アクション](class_mip_action.md)は、ラベルをダウングレードする理由の提供と実行状態での応答の設定を要求します。
@@ -20,10 +20,10 @@ ms.locfileid: "57333213"
 **関連項目**: [mip::ExecutionState::IsDowngradeJustified](class_mip_executionstate.md#isdowngradejustified-function)
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-  
+
 ## <a name="members"></a>メンバー
   
 ### <a name="gettype-function"></a>GetType 関数

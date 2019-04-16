@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 778eada67cc244f1f0c81f8246fe33b0aa46140e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 5f91cc121212bb15691477e05322b124025234d6
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330720"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573396"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>class mip::PrivilegedRequiredError 
 現在のラベルは特権操作 (管理者の操作と同等) として割り当てられています。このため、オーバーライドできません。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public char const* what() const  |  エラー メッセージを取得します。
 public std::shared_ptr\<エラー\> Clone() 定数  |  エラーを複製します。
@@ -64,4 +64,3 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-

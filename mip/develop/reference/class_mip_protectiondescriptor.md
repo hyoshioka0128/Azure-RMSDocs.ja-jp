@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 6f4bb83950a4745739a1663950a52d05c51f7f4d
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809796"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573294"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 コンテンツの一部に関連付けられている保護の説明。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public ProtectionType GetProtectionType() const  |  保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
 public std::string GetOwner() const  |  保護するために所有者を取得します。
@@ -26,6 +26,7 @@ public std::string GetName() const  |  保護の名前を取得します。
 public std::string GetDescription() const  |  保護の説明を取得します。
 public std::string GetTemplateId() const  |  存在する場合、保護テンプレート ID を取得します。
 public std::string GetLabelId() const  |  存在する場合、ラベル ID を取得します。
+public std::string GetContentId() const  |  存在する場合は、コンテンツの ID を取得します。
 public std::vector\<UserRights\> GetUserRights() 定数  |  ユーザーから権限へのマッピングのコレクションを取得します。
 public std::vector\<UserRoles\> GetUserRoles() 定数  |  ユーザーからロールへのマッピングのコレクションを取得します。
 public bool DoesContentExpire() const  |  かどうかコンテンツ有効期限かどうかを確認します。
@@ -73,6 +74,12 @@ public std::map\<std::string, std::string\> GetSignedAppData() const  |  署名�
   
 **返します**:[ラベル](class_mip_label.md)ID の既存の ProtectionDescriptors でこのプロパティが入力のみが保護されたコンテンツ。 これは、保護されたコンテンツが利用される時に、サーバーによって設定されたフィールドです。
   
+### <a name="getcontentid-function"></a>GetContentId 関数
+存在する場合は、コンテンツの ID を取得します。
+
+  
+**返します**:コンテンツ ID
+  
 ### <a name="getuserrights-function"></a>GetUserRights 関数
 ユーザーから権限へのマッピングのコレクションを取得します。
 
@@ -113,7 +120,7 @@ public std::map\<std::string, std::string\> GetSignedAppData() const  |  署名�
 暗号化されたアプリ固有のデータを取得します。
 
   
-**返します**:アプリ固有のデータ。 [ProtectionHandler](class_mip_protectionhandler.md) protection サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する可能性があります。 この暗号化データは、[ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function) を使用してアクセスできる署名済みデータに依存しません
+**返します**:アプリ固有のデータ。 [ProtectionHandler](class_mip_protectionhandler.md) protection サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する可能性があります。 この暗号化データは ProtectionDescriptor::GetSignedAppData 経由でアクセスできる署名済みデータです。
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData 関数
 署名されたアプリ固有のデータを取得します。

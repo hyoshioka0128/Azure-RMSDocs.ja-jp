@@ -7,12 +7,12 @@ ms.topic: troubleshooting
 ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
-ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
+ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581727"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574228"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
@@ -57,3 +57,11 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 > : System.ComponentModel.Win32ExceptionLoadLibrary に失敗しました: [sdk_wrapper_dotnet.dll] MIP を呼び出すときにします。Initialize() します。
 
 アプリケーションでは、必要なランタイムがないか、リリースとしてビルドされませんでした。 参照してください[アプリに必要なランタイム](setup-configure-mip.md#ensure-your-app-has-the-required-runtime)詳細についてはします。 
+
+### <a name="error-proxyautherror-exception"></a>エラー:「ProxyAuthError 例外」
+
+**質問**:MIP SDK を使用する場合、次のエラーするはなぜですか。
+
+> "ProxyAuthenticatonError:プロキシ認証はサポートされていません"
+
+MIP SDK には、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するのには、プロキシの管理者が、プロキシをバイパスする Microsoft Information Protection サービス エンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「、 [Office 365 Url および IP アドレス範囲](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)ページ。 MIP SDK である必要があります`*.protection.outlook.com`(行 9) と Azure Information Protection サービス エンドポイント (行 73) プロキシ認証をバイパスします。

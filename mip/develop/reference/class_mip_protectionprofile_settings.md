@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 5e609cfbc7cbb705dafbee239726c0cfd15cc38a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3d3685656f8814fe495e6e29d7fe12cf54d7d7d4
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331870"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574076"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>class mip::ProtectionProfile::Settings 
 作成時および有効期間全体にわたって [ProtectionProfile](class_mip_protectionprofile.md) によって使用される[設定](class_mip_protectionprofile_settings.md)。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック設定 (const std::string & パス、bool useinmemorystorage: const std::shared_ptr\<authdelegate:\>& authdelegate:、const std::shared_ptr\<ConsentDelegate\>& consentDelegate、const std::shared_ptr\<protectionprofile::observer\>& observer, const ApplicationInfo & applicationInfo)  |  非同期操作に使用されるオブザーバーを指定する [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) コンストラクター。
 パブリック設定 (const std::string & パス、bool useinmemorystorage: const std::shared_ptr\<authdelegate:\>& authdelegate:、const std::shared_ptr\<ConsentDelegate\>& consentDelegate、const ApplicationInfo & applicationInfo)  |  同期操作に使用される、[ProtectionProfile::Settings](class_mip_protectionprofile_settings.md) コンストラクター。
@@ -34,8 +34,8 @@ public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  アプリ
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  既定のロガーをオーバーライドします。
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
 public void SetHttpDelegate (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
-public bool GetSkipTelemetryInit() const  |  テレメトリ初期化をスキップする必要があるかどうかを取得します。
-public void SetSkipTelemetryInit()  |  テレメトリ初期化を無効にします。
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  アプリケーションによって提供される TaskDispatcher デリゲート (指定されている場合) を取得します。
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアントの処理をディスパッチ既定 asynchonous タスクをオーバーライドします。
 public void SetNewFeaturesDisabled()  |  新機能を無効にします。
 public bool AreNewFeaturesDisabled() const  |  新機能が無効になっているかどうかを取得します。
 public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
@@ -156,15 +156,19 @@ public LogLevel GetMinimumLogLevel() const  |  最小のログ レベル オブ�
 
 
   
-### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit 関数
-テレメトリ初期化をスキップする必要があるかどうかを取得します。
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate 関数
+アプリケーションによって提供される TaskDispatcher デリゲート (指定されている場合) を取得します。
 
   
-**返します**:場合か、テレメトリ初期化をスキップする必要があります。
+**返します**:非同期タスクの実行に使用する TaskDispatcher デリゲート
   
-### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit 関数
-テレメトリ初期化を無効にします。
-このメソッドは、通常、クライアント アプリケーションによっては呼び出されず、初期化の重複を防ぐためにファイル SDK によって使用されます
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
+クライアントの処理をディスパッチ既定 asynchonous タスクをオーバーライドします。
+
+パラメーター:  
+* **taskDispatcherDelegate**:クライアント アプリケーションによって実装されるコールバック インターフェイスをディスパッチするタスク
+
+
   
 ### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled 関数
 新機能を無効にします。

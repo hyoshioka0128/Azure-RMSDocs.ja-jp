@@ -7,27 +7,27 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2d64d576ead748adff7804e9068aab71fd9672c0
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 1373d9ecc03f69267af631216a04d358e8be7af3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333026"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574344"
 ---
 # <a name="class-mipservicedisablederror"></a>mip::ServiceDisabledError をクラスします。 
 ユーザーは、サービスを無効になっているため、コンテンツへのアクセスを取得できませんでした。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public Extent GetExtent() const  |  サービスが無効になっているエクステントを取得します。
+エクステントの列挙型  |  サービスが無効になっているエクステントをについて説明します。
 public char const* what() const  |  エラー メッセージを取得します。
 public std::shared_ptr\<エラー\> Clone() 定数  |  エラーを複製します。
 public virtual ErrorType GetErrorType() const  |  エラーの種類を取得します。
 public virtual const std::string& GetErrorName() const  |  エラー名を取得します。
 public virtual const std::string& GetMessage() const  |  エラー メッセージを取得します。
 public virtual void SetMessage(const std::string& msg)  |  エラー メッセージを設定します。
-エクステントの列挙型  |  サービスが無効になっているエクステントをについて説明します。
   
 ## <a name="members"></a>メンバー
   
@@ -37,6 +37,19 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
   
 **返します**:エクステントは、サービスが無効になっています
   
+### <a name="extent-enum"></a>Extent 列挙型
+
+サービスが無効になっているエクステントをについて説明します。
+
+ 値                         | [説明]                                
+--------------------------------|---------------------------------------------
+ユーザー            | サービスは、ユーザーに対して無効です。
+デバイス            | デバイスのサービスは無効です。
+プラットフォーム            | プラットフォームのサービスは無効です。
+テナント            | サービスは、テナントに対して無効です。
+
+
+
 ### <a name="what-function"></a>どのような関数
 エラー メッセージを取得します。
 
@@ -72,14 +85,3 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-
-
-  
-### <a name="extent-enum"></a>Extent 列挙型
- 値                         | 説明                                
---------------------------------|---------------------------------------------
-ユーザー            | サービスは、ユーザーに対して無効です。
-デバイス            | デバイスのサービスは無効です。
-プラットフォーム            | プラットフォームのサービスは無効です。
-テナント            | サービスは、テナントに対して無効です。
-サービスが無効になっているエクステントをについて説明します。

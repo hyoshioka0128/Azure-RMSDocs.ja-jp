@@ -7,22 +7,23 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 716bc18031b5b67b080281b76c42df296f3d72fa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 6a048dd7902e8148e4f32f8cc9e62d63110b2b4a
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332516"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573566"
 ---
 # <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
 実行状態での分類呼び出しの結果を含むクラス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  分類ポリシーの ID を取得します。
 public int GetCount() const  |  インスタンス数を取得します。
 public int GetConfidenceLevel() const  |  結果の信頼度を取得します。
+public std::string GetSensitiveInformationDetections() const  |  機密情報の検出を取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -40,3 +41,9 @@ public int GetConfidenceLevel() const  |  結果の信頼度を取得します�
   
 ### <a name="getconfidencelevel-function"></a>GetConfidenceLevel 関数
 結果の信頼度を取得します。
+  
+### <a name="getsensitiveinformationdetections-function"></a>GetSensitiveInformationDetections 関数
+機密情報の検出を取得します。
+
+  
+**返します**:すべての機密情報の検出の Json 文字列。

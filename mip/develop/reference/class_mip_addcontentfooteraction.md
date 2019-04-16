@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: dd803c734c099e11b46db1b7d446b03b2eaa8a1e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332278"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573532"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>class mip::AddContentFooterAction 
 コンテンツ フッターをドキュメントに追加することを指定するアクション クラス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ フッター要素をマークするために使用する API。
 public const std::string& GetText() const  |  コンテンツ フッターに移動されるテキストを取得します。
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  コンテンツ フッター�
 public ContentMarkAlignment GetAlignment() const  |  フッターの配置を取得します。
 public int GetMargin() const  |  一番下からのフッターの余白を取得します。
 public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-  
+
 ## <a name="members"></a>メンバー
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
@@ -67,14 +67,14 @@ public ActionType GetType() const  |  [アクション](class_mip_action.md)の�
   
 **返します**:ContentMarkAlignment 列挙子。左 |右 |CENTER。 
   
-**参照してください**:[ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**参照してください**:[ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin 関数
 一番下からのフッターの余白を取得します。
 
   
 **返します**:ドキュメント (たとえば、10 mm) の下の余白。
-  
+
 ### <a name="gettype-function"></a>GetType 関数
 [アクション](class_mip_action.md)の種類を取得します。
 

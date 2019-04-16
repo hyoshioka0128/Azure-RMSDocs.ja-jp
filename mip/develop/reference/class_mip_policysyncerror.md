@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 46cf8e147a250b0e79f4def89055d2408055c24b
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f1a437ad7c94d515c369cd63d17874b3c53400ba
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333518"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573685"
 ---
 # <a name="class-mippolicysyncerror"></a>class mip::PolicySyncError 
 ポリシー データを同期しようとして失敗しました。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public char const* what() const  |  エラー メッセージを取得します。
 public std::shared_ptr\<エラー\> Clone() 定数  |  エラーを複製します。
@@ -64,4 +64,3 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-

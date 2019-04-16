@@ -7,22 +7,22 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: c33700dc00440448063de76d95105432a9c5f70a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3cc2fbdcfeae4e168e342a3c7af0edc971039db4
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332870"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574314"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>class mip::RemoveContentHeaderAction 
 ドキュメントからのコンテンツ ヘッダーの削除を指定するアクション クラス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetUIElementNames()  |  削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
 public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-  
+
 ## <a name="members"></a>メンバー
   
 ### <a name="getuielementnames-function"></a>GetUIElementNames 関数
@@ -30,9 +30,8 @@ public ActionType GetType() const  |  [アクション](class_mip_action.md)の�
 
   
 **返します**:Ui 要素名の一覧。
-  
-### <a name="gettype-function"></a>GetType 関数
-[アクション](class_mip_action.md)の種類を取得します。
 
-  
+### <a name="gettype-function"></a>GetType 関数    
+[アクション](class_mip_action.md)の種類を取得します。  
+
 **返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。

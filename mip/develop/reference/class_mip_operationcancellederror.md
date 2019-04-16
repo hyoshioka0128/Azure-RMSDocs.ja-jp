@@ -1,21 +1,21 @@
 ---
-title: class mip::ConsentDeniedError
-description: Mip::consentdeniederror クラスの Microsoft Information Protection (MIP) SDK について説明します。
+title: mip::OperationCancelledError をクラスします。
+description: Mip::operationcancellederror クラスの Microsoft Information Protection (MIP) SDK について説明します。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 1cbd8ce0bd5b899bb31777ac5889a1475b9e47d5
+ms.openlocfilehash: 69dc2c0242f446450e7933ebfdf80bc52035b358
 ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573209"
+ms.locfileid: "59574467"
 ---
-# <a name="class-mipconsentdeniederror"></a>class mip::ConsentDeniedError 
-ユーザーに同意を求めた操作で、同意が得られませんでした。
+# <a name="class-mipoperationcancellederror"></a>mip::OperationCancelledError をクラスします。 
+操作が取り消されました。
   
 ## <a name="summary"></a>まとめ
  メンバー                        | [説明]                                

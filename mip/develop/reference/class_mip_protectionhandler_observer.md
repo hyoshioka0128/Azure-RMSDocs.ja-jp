@@ -7,19 +7,19 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 00d74069374850a562547cd161ad4c5f15927b0a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f6d71bc4f4c04ba305b59b4dcb3b5850f858716b
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333723"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573192"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>class mip::ProtectionHandler::Observer 
 [ProtectionHandler](class_mip_protectionhandler.md) に関連する通知を受け取るインターフェイス。
 このインターフェイスは、保護 SDK を使用してアプリケーションによって実装する必要があります
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック仮想 void OnCreateProtectionHandlerSuccess (const std::shared_ptr\<ProtectionHandler\>& protectionHandler、const std::shared_ptr\<void\>& コンテキスト)  |  [ProtectionHandler](class_mip_protectionhandler.md) が正しく作成されると呼び出されます。
 パブリック仮想 void OnCreateProtectionHandlerFailure (const std::exception_ptr & エラー、const std::shared_ptr\<void\>& コンテキスト)  |  [ProtectionHandler](class_mip_protectionhandler.md) の作成に失敗すると呼び出されます。

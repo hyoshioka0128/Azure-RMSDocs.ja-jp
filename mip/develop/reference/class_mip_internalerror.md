@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 022f6f3904bb788146400f6ef6f9fd3f223638f5
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 94f82e84b2907f4aa91100964cfb4d1b287b116e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330646"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573974"
 ---
 # <a name="class-mipinternalerror"></a>class mip::InternalError 
-内部エラーです。 このエラーは、実行中に予期しない事態が発生するとスローされます。
+内部エラー。 このエラーは、実行中に予期しない事態が発生するとスローされます。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public char const* what() const  |  エラー メッセージを取得します。
 public std::shared_ptr\<エラー\> Clone() 定数  |  エラーを複製します。
@@ -64,4 +64,3 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-

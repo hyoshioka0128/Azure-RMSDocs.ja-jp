@@ -7,19 +7,19 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 4bdd96e7f9f414062d969de1ffaf7195ad71d214
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: b9f5fba87246d0ce89c3e34733bf311b23478334
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329405"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59572954"
 ---
 # <a name="class-mipfileprofile"></a>class mip::FileProfile 
 [FileProfile](class_mip_fileprofile.md) クラスは、Microsoft Information Protection 操作を使用するためのルート クラスです。
 一般的なアプリケーションには、プロファイルが 1 つのみ必要です。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  プロファイル設定を返します。
 public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。

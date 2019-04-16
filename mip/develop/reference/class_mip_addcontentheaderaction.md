@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9e3080e4fcfd8553d04acc1533fc16d8bb1640f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 367626955ba1652b20b372efd309d15304e5336f
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330680"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573447"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>class mip::AddContentHeaderAction 
 コンテンツ ヘッダーの追加を指定するアクション クラス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ ヘッダー要素をマークするために使用する API。
 public const std::string& GetText() const  |  コンテンツ ヘッダーに移動されるテキストを取得します。
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  コンテンツ ヘッダー�
 public ContentMarkAlignment GetAlignment() const  |  ヘッダーの配置を取得します。
 public int GetMargin() const  |  一番下からのヘッダーの余白を取得します。
 public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-  
+
 ## <a name="members"></a>メンバー
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
@@ -67,14 +67,14 @@ public ActionType GetType() const  |  [アクション](class_mip_action.md)の�
   
 **返します**:ContentMarkAlignment 列挙子。左 |右 |CENTER。 
   
-**参照してください**:[ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**参照してください**:[ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin 関数
 一番下からのヘッダーの余白を取得します。
 
   
 **返します**:ドキュメント (たとえば、10 mm) の下の余白。
-  
+
 ### <a name="gettype-function"></a>GetType 関数
 [アクション](class_mip_action.md)の種類を取得します。
 

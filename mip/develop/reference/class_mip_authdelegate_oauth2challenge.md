@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2e4a107a0a967f4d3ff58ebf269bb701f5834fb0
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331820"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574246"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>クラスの mip::AuthDelegate::OAuth2Challenge 
 oauth2 トークンを生成するために呼び出し元アプリケーションに必要なすべての情報を含むクラスです。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック OAuth2Challenge (const std::string & 機関、const std::string & リソース、const std::string & スコープ)  |  新しい[OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md)オブジェクト。
 public const std::string& GetAuthority() const  |  機関の文字列を取得します。

@@ -7,25 +7,24 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 3cdd3713eac9894a12d2951efdb3a5326529d96d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 1c6a9a1e772de52a060b776a78fc7748218adec4
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331326"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573600"
 ---
 # <a name="class-mipremoveprotectionaction"></a>class mip::RemoveProtectionAction 
 ドキュメントからの保護の削除を指定するアクション クラス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-  
-## <a name="members"></a>メンバー
-  
-### <a name="gettype-function"></a>GetType 関数
-[アクション](class_mip_action.md)の種類を取得します。
 
-  
+## <a name="members"></a>メンバー
+
+### <a name="gettype-function"></a>GetType 関数    
+[アクション](class_mip_action.md)の種類を取得します。  
+
 **返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。

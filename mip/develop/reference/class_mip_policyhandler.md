@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6c5979706b9868bd7d0b6b1adad5d96bd5d3e0ce
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 7cc1eeeafa4a086631f5d3c376643b5758002679
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329592"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59572836"
 ---
 # <a name="class-mippolicyhandler"></a>class mip::PolicyHandler 
 このクラスは、ファイル上のすべてのポリシー ハンドラー関数にインターフェイスを提供します。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<ContentLabel\> GetSensitivityLabel (const ExecutionState & state)  |  既存のコンテンツから機密ラベルを取得します。
 public std::vector\<std::shared_ptr\<アクション\>\> ComputeActions (const ExecutionState & state)  |  指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
@@ -30,7 +30,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 既存のコンテンツから機密ラベルを取得します。
 
 パラメーター:  
-* **state**:コンテンツの現在の状態 
+* **state**:コンテンツの現在の状態。 
 
 
 
@@ -52,7 +52,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 計算されたアクションが適用され、データがディスクにコミットされると呼び出されます。
 
 パラメーター:  
-* **state**: アクションがコミットされた後のコンテンツの現在の実行状態。 
+* **状態**: アクションがコミットされた後に、コンテンツの現在の実行状態。 
 
 
 :この呼び出しは、監査イベントを送信します。

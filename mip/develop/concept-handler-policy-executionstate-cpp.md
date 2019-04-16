@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: 54e5249f7624cbc020451752d39ccb9f0b507f3a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: dbe6db5fe54f9d26d072d3f6fcad1f2595d61040
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257690"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574153"
 ---
 # <a name="implement-executionstate"></a>ExecutionState を実装する
 
@@ -32,7 +32,7 @@ ms.locfileid: "56257690"
 | Member                                                                           | 戻り値                                                                                                              |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | `std::string GetNewLabelId()`                                                      | オブジェクトに適用するラベル ID が返されます。                                                                    |
-| `mip::ContentState GetContentState()`                                              | オブジェクトの mip::ContentState が返されます。                                                                         |
+| `mip::DataState GetDataState()`                                              | オブジェクトの mip::DataState を返します。                                                                         |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | ダウングレードの正当性と理由を表す std::pair が返されます。                                 |
 | `std::string GetContentIdentifier()`                                               | コンテンツの識別子が返されます。 オブジェクトの位置を示していて人間が判読できる識別子である必要があります。   |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | ラベルの mip::ActionSource が返されます。                                                                          |
@@ -53,7 +53,7 @@ struct ExecutionStateOptions {
     std::string newLabelId;
     std::string contentIdentifier;
     mip::ActionSource actionSource = mip::ActionSource::MANUAL;
-    mip::ContentState contentState = mip::ContentState::REST;
+    mip::DataState dataState = mip::DataState::USE;
     mip::AssignmentMethod assignmentMethod = mip::AssignmentMethod::STANDARD;
     bool isDowngradeJustified = false;
     std::string downgradeJustification;

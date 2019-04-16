@@ -7,20 +7,21 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d7d7baee4212ad90739a2c5343e7c09050a16b5e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 75d11fae7d79cadc4dd8909be371cbde2e87f289
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330442"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573617"
 ---
 # <a name="class-mipidentity"></a>クラスの:identity 
 Id の抽象化です。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック Identity()  |  既定の[Identity](class_mip_identity.md)ユーザーの電子メール アドレスが不明の場合に使用されるコンス トラクター。
+public Identity(const Identity& other)  |  [Identity](class_mip_identity.md)コピー コンス トラクター。
 パブリックの明示的な Id (const std::string & 電子メール)  |  [Identity](class_mip_identity.md)ユーザーの電子メール アドレスがわかっている場合に使用されるコンス トラクター。
 public const std::string& GetEmail() const  |  電子メールを取得します。
 public void SetDelegatedEmail(const std::string& delegatedEmail)  |  On behalf of、opertations の実行をユーザーが委任された電子メール、委任された電子メール アドレスを設定します。
@@ -30,6 +31,14 @@ public const std::string& GetDelegatedEmail() const  |  委任された電子メ
   
 ### <a name="identity-function"></a>Identity 関数
 既定の[Identity](class_mip_identity.md)ユーザーの電子メール アドレスが不明の場合に使用されるコンス トラクター。
+  
+### <a name="identity-function"></a>Identity 関数
+[Identity](class_mip_identity.md)コピー コンス トラクター。
+
+パラメーター:  
+* **[Identity](class_mip_identity.md)**: コピーを作成するために使用します。
+
+
   
 ### <a name="identity-function"></a>Identity 関数
 [Identity](class_mip_identity.md)ユーザーの電子メール アドレスがわかっている場合に使用されるコンス トラクター。

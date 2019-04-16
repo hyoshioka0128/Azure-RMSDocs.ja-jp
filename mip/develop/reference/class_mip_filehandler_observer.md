@@ -7,19 +7,19 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 02ed14c315cfc15e39b030e42db0dd9a1e785249
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 4204bd17abe756c42c672a1cda17706b59600795
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329575"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573671"
 ---
 # <a name="class-mipfilehandlerobserver"></a>class mip::FileHandler::Observer 
 クライアントがファイル ハンドラーに関連する通知イベントを取得するための [Observer](class_mip_filehandler_observer.md) インターフェイス。
 すべてのエラーは [mip::Error](class_mip_error.md) から継承されます。 クライアントは、オブザーバーを呼び出すスレッド上でエンジンをコールバックしてはなりません。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック仮想 void OnCreateFileHandlerSuccess (const std::shared_ptr\<FileHandler\>& fileHandler、const std::shared_ptr\<void\>& コンテキスト)  |  ハンドラーが正しく作成されると呼び出されます。
 パブリック仮想 void OnCreateFileHandlerFailure (const std::exception_ptr & エラー、const std::shared_ptr\<void\>& コンテキスト)  |  ハンドラー フィールドを作成するときに呼び出されます。

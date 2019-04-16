@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d874e57806ecf2ee98fa41eb3b655e9525ed8362
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 841eddc32e5e6928469dc11aba581defae09bc09
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333757"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574008"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
 作成時および有効期間全体にわたって [ProtectionEngine](class_mip_protectionengine.md) によって使用される[設定](class_mip_protectionengine_settings.md)。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  新しいエンジンを作成するための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  既存のエンジンを読み込むための [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) コンストラクター。

@@ -7,23 +7,23 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: c180072eec94b2f71471c10b4344d65321ef49c6
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 677de5965c0fe506af3731c2b54b4faaab225471
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332414"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573379"
 ---
 # <a name="class-mipmetadataaction"></a>class mip::MetadataAction 
 コンテンツにメタデータ情報を追加する[アクション](class_mip_action.md)。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetMetadataToRemove() const  |  コンテンツから削除する必要のあるメタデータの名前の一覧を取得します。
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetMetadataToAdd() const  |  コンテンツに追加するメタデータ名と値のペアを取得します。
 public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-  
+
 ## <a name="members"></a>メンバー
   
 ### <a name="getmetadatatoremove-function"></a>GetMetadataToRemove 関数
@@ -37,7 +37,8 @@ public ActionType GetType() const  |  [アクション](class_mip_action.md)の�
 
   
 **返します**:Const std::vector < std::pair < std::string, std::string >> & Removing メタデータは、メタデータを追加する前に行う必要があります。
-  
+
+
 ### <a name="gettype-function"></a>GetType 関数
 [アクション](class_mip_action.md)の種類を取得します。
 

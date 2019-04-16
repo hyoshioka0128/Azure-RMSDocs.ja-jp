@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bc130d2c6056d971635bcf204243f29b13789466
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3ffd4b3e86192786309739add907a724acdaffa5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330836"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574221"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
 [PolicyEngine](class_mip_policyengine.md) に関連付けられている設定を定義します。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  新しいエンジンを作成するための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
@@ -34,6 +34,8 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 public void SetSessionId(const std::string& sessionId)  |  クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID、一意識別子を取得します。
 public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密ラベルが有効になっているかどうかを示すフラグ。
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  必要に応じて、クラウド エンドポイントのベース URL を設定します。
+public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
   
 ## <a name="members"></a>メンバー
   
@@ -156,3 +158,17 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 
   
 **返します**:他の false を有効になっている場合は true。
+  
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
+必要に応じて、クラウド エンドポイントのベース URL を設定します。
+
+パラメーター:  
+* **cloudEndpointBaseUrl**: すべてのサービス要求で使用されるベース URL (たとえば、"https://dataservice.protection.outlook.com")
+
+
+  
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
+
+  
+**返します**:ベース URL

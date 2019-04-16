@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ea7edbc6e30d3ac529d55ddeaeecc63f140c512f
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ac10820e1fa167888b857043219711a485632c00
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329422"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573702"
 ---
 # <a name="class-mipnopermissionserror"></a>mip::NoPermissionsError をクラスします。 
 ユーザーがコンテンツにアクセスできませんでした。 例: アクセス許可がない、コンテンツが取り消された。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  ドキュメントに対する権限の不足が発生した場合の連絡先を取得します。
 public std::string GetOwner() const  | _まだ文書化されていません。_
@@ -30,7 +30,7 @@ public virtual const std::string& GetMessage() const  |  エラー メッセー�
 public virtual void SetMessage(const std::string& msg)  |  エラー メッセージを設定します。
   
 ## <a name="members"></a>メンバー
-  
+
 ### <a name="getreferrer-function"></a>GetReferrer 関数
 ドキュメントに対する権限の不足が発生した場合の連絡先を取得します。
 
@@ -40,7 +40,6 @@ public virtual void SetMessage(const std::string& msg)  |  エラー メッセ�
 ### <a name="getowner-function"></a>GetOwner 関数
 _まだ文書化されていません。_
 
-  
 ### <a name="what-function"></a>どのような関数
 エラー メッセージを取得します。
 
@@ -76,4 +75,3 @@ _まだ文書化されていません。_
 
 パラメーター:  
 * **msg**: エラー メッセージ。
-

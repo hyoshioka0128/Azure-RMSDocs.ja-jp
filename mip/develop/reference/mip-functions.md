@@ -7,41 +7,49 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 5827c1f2779ec22dd798ec26c12a9977e10065c1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ced8339fa93ec349644a1f9e386489bb02c8eff0
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332737"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574025"
 ---
 # <a name="functions"></a>関数
 
-## <a name="summary"></a>まとめ
+## <a name="summary"></a>まとめ 
 
-| 名前空間スコープ関数   | 説明                                |
+### <a name="namespace-mip"></a>Namespace mip
+| 名前空間スコープ関数   | [説明]                                |
 |--------------------------------|---------------------------------------------|
-**Namespace `mip` :** |
 public std::string GetAssignmentMethodString (AssignmentMethod メソッド)       |  AssignmentMethod 列挙型を説明する文字列に変換します。
 パブリック静的な std::string GetActionSourceString (ActionSource actionSource)       |  アクションのソース名を取得します。
-public static std::string GetContentStateString(mip::ContentState state)       |  コンテンツの状態の名前を取得します。
+public static std::string GetDataStateString(mip::DataState state)       |  コンテンツの状態の名前を取得します。
 public const std::string& GetCustomSettingPolicyDataName()       |  ポリシー データを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingExportPolicyFileName()       |  SCC ポリシー データをエクスポートするファイルのパスを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingSensitivityTypesDataName()       |  機密データを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingPolicyDataFile()       |  ポリシー データのファイルのパスを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  小文字の区別の種類のデータ ファイルのパスを明示的に指定する設定の名前。
-public MIP_API void __CDECL ReleaseAllResources()       |  シャットダウンの前にすべてのリソース (スレッドなど) を解放します。
+public const std::string& GetCustomSettingExternalLabelsEnabled()       |  「外部ラベル」機能を有効にできる設定の名前。
+public MIP_API void __CDECL ReleaseAllResources()       |  シャット ダウンする前にすべてのリソース (スレッドなど) を解放します。
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::istream\>& stdIStream)       |  std::istream から[ストリーム](class_mip_stream.md)を作成します。
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::ostream\>& stdOStream)       |  std::ostream から[ストリーム](class_mip_stream.md)を作成します。
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const std::shared_ptr\<std::iostream\>& stdIOStream)       |  std::iostream から[ストリーム](class_mip_stream.md)を作成します。
 public MIP_API std::shared_ptr\<mip::Stream\> CreateStreamFromBuffer(uint8_t* buffer, const int64_t size)       |  バッファーから[ストリーム](class_mip_stream.md)を作成します。
- | 
-**Namespace `mip::auditmetadatakeys` :** |
+
+
+### <a name="namespace-mipauditmetadatakeys"></a>Namespace mip::auditmetadatakeys
+ メンバー                        | [説明]                                
+--------------------------------|---------------------------------------------
 public std::string Sender()       |  文字列形式のメタデータのキーを監査します。
 public std::string Recipients()       | _まだ文書化されていません。_
 public std::string LastModifiedBy()       | _まだ文書化されていません。_
 public std::string LastModifiedDate()       | _まだ文書化されていません。_
- | 
-**Namespace `mip::rights` :** |
+
+
+### <a name="namespace-miprights"></a>Namespace mip::rights
+
+ メンバー                        | [説明]                                
+--------------------------------|---------------------------------------------
 public std::string Owner()       |  '所有者' 権限の文字列識別子を取得します。
 public std::string View()       |  '表示' 権限の文字列識別子を取得します。
 public std::string AuditedExtract()       |  '監査済み抽出' 権限の文字列識別子を取得します。
@@ -56,16 +64,17 @@ public std::string Forward()       |  '転送' 権限の文字列識別子を取
 public std::vector\<std::string\> EmailRights()       |  電子メールに適用される権限の一覧を取得します。
 public std::vector\<std::string\> EditableDocumentRights()       |  ドキュメントに適用される権限の一覧を取得します。
 public std::vector\<std::string\> CommonRights()       |  すべてのシナリオで適用される権限の一覧を取得します。
- | 
-**Namespace `mip::roles` :** |
+
+### <a name="namespace-miproles"></a>Namespace mip::roles
+
+ メンバー                        | [説明]                                
+--------------------------------|---------------------------------------------
 public std::string Viewer()       |  'ビューアー' ロールの文字列識別子を取得します。
 public std::string Reviewer()       |  'レビュー担当者' ロールの文字列識別子を取得します。
 public std::string Author()       |  '作成者' ロールの文字列識別子を取得します。
 public std::string CoOwner()       |  '共同所有者' ロールの文字列識別子を取得します。
 
-
-
-## <a name="namespace-mip"></a>Namespace `mip`
+## <a name="namespace-mip"></a>Namespace mip
 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString 関数
 AssignmentMethod 列挙型を説明する文字列に変換します。
@@ -89,7 +98,7 @@ AssignmentMethod 列挙型を説明する文字列に変換します。
   
 **返します**:操作のソースの文字列形式。
   
-### <a name="getcontentstatestring-function"></a>GetContentStateString 関数
+### <a name="getdatastatestring-function"></a>GetDataStateString 関数
 コンテンツの状態の名前を取得します。
 
 パラメーター:  
@@ -130,23 +139,16 @@ SCC ポリシー データをエクスポートするファイルのパスを明
   
 **返します**:カスタム設定のキー。
   
+### <a name="getcustomsettingexternallabelsenabled-function"></a>GetCustomSettingExternalLabelsEnabled 関数
+「外部ラベル」機能を有効にできる設定の名前。
+
+  
+**返します**:カスタム設定のキー。
+  
 ### <a name="releaseallresources-function"></a>ReleaseAllResources 関数
-シャットダウンの前にすべてのリソース (スレッドなど) を解放します。
-MIP 動的ライブラリは、アプリケーションによって遅延読み込みされる場合、デッドロックを回避するため、それらの MIP ライブラリをアプリケーションで明示的にアンロードする前に、この関数は呼び出される必要があります。 たとえば、win32 を明示的に呼び出す FreeLibrary または __FUnloadDelayLoadedDLL2 を介して MIP Dll のアンロードする前になるこの関数を呼び出す必要があります。 アプリケーションでは、この関数を呼び出す前に、すべての MIP オブジェクト (例: プロファイル、エンジン、ハンドラー) への参照を解放する必要があります。
-  
-### <a name="operator-function"></a>演算子 |関数
-ProtectionHandlerCreationOptions ビットごとの OR 演算子。
-
-パラメーター:  
-* **A**:左の値 
-
-
-* **b**:適切な値
-
-
-
-  
-**返します**:ProtectionHandlerCreationOptions のビットごとの OR
+シャット ダウンする前にすべてのリソース (スレッドなど) を解放します。
+この関数は、プロセスが終了する前に 1 回だけ呼び出す必要があります。 ここでその依存するライブラリが読み込まれる保証も、引き続き可能はスレッドへの参加後すぐに自体を初期化する機会 MIP を提供します。 アプリケーションでは、この関数を呼び出す前に、すべての MIP オブジェクト (例: プロファイル、エンジン、ハンドラー) への参照を解放する必要があります。
+この関数が呼び出されない場合は、MIP は標準的なプロセスの終了処理の一部として自然なアンロードできません。 プラットフォームによっては、デッドロックになる可能性があります (たとえば、スレッドを破棄を処理する応答で win32 では参加できません) またはクラッシュした (たとえば、win32 上のライブラリの遅延読み込みの DLL のアンロード順序によって制御されていない MIP、ため、その依存するライブラリの可能性がありますによってがアンロードされた無効な読み取り障害の結果として、MIP シャット ダウン コードの実行時間)。
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
 std::istream から[ストリーム](class_mip_stream.md)を作成します。
@@ -195,7 +197,7 @@ std::iostream から[ストリーム](class_mip_stream.md)を作成します。
 
 
 
-## <a name="namespace-mipauditmetadatakeys"></a>Namespace `mip::auditmetadatakeys`
+## <a name="namespace-mipauditmetadatakeys"></a>Namespace mip::auditmetadatakeys
 
 ### <a name="sender-function"></a>送信者関数
 文字列形式のメタデータのキーを監査します。
@@ -206,6 +208,7 @@ _まだ文書化されていません。_
   
 ### <a name="lastmodifiedby-function"></a>LastModifiedBy 関数
 _まだ文書化されていません。_
+
   
 ### <a name="lastmodifieddate-function"></a>LastModifiedDate 関数
 _まだ文書化されていません。_
@@ -214,7 +217,8 @@ _まだ文書化されていません。_
 
 
 
-## <a name="namespace-miprights"></a>Namespace `mip::rights`
+
+## <a name="namespace-miprights"></a>Namespace mip::rights
 
 ### <a name="owner-function"></a>所有者関数
 '所有者' 権限の文字列識別子を取得します。
@@ -301,9 +305,7 @@ _まだ文書化されていません。_
 **返します**:すべてのシナリオで適用される権限の一覧
 
 
-
-
-## <a name="namespace-miproles"></a>Namespace `mip::roles`
+## <a name="namespace-miproles"></a>Namespace mip::roles
 
 ### <a name="viewer-function"></a>ビューアー関数
 'ビューアー' ロールの文字列識別子を取得します。

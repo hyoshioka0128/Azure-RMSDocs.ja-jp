@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a7f08c24f2e0c4838d538d34268ed9f9704d85bf
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d85fe9f4b3de485ab966a38b2c41358a6ba091e0
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333587"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574284"
 ---
 # <a name="class-mipfileprofilesettings"></a>class mip::FileProfile::Settings 
 作成時および有効期間全体にわたって [FileProfile](class_mip_fileprofile.md) に使用される[設定](class_mip_fileprofile_settings.md)。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック設定 (const std::string & パス、bool useinmemorystorage: std::shared_ptr\<authdelegate:\> authdelegate:、std::shared_ptr\<ConsentDelegate\> consentDelegate、std::shared_ptr\<オブザーバー\> observer, const ApplicationInfo & applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
 public const std::string& GetPath() const  |  ログ、テレメトリ、その他の継続状態が格納されるファイル パスを取得します。
@@ -27,14 +27,14 @@ public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  認証トー�
 public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
 public std::shared_ptr\<Observer\> GetObserver() const  |  [FileProfile](class_mip_fileprofile.md) に関連するイベントの通知を受信するオブザーバーを取得します。
 public const ApplicationInfo GetApplicationInfo() const  |  SDK を利用しているアプリケーションに関する情報を取得します。
-public bool GetSkipTelemetryInit() const  |  テレメトリ初期化をスキップする必要があるかどうかを取得します。
-public void SetSkipTelemetryInit()  |  テレメトリ初期化を無効にします。
 public void SetNewFeaturesDisabled()  |  新機能を無効にします。
 public bool AreNewFeaturesDisabled() const  |  新機能が無効になっているかどうかを取得します。
 public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
 public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  既定のロガーをオーバーライドします。
 public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
 public void SetHttpDelegate (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  アプリケーションによって提供される TaskDispatcher デリゲート (指定されている場合) を取得します。
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアントの処理をディスパッチ既定 asynchonous タスクをオーバーライドします。
 public void OptOutTelemetry()  |  テレメトリの収集をすべて無効にします。
 public bool IsTelemetryOptedOut() const  |  テレメトリの収集を無効にする必要があるかどうかを取得します。
 public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
@@ -100,16 +100,6 @@ SDK を利用しているアプリケーションに関する情報を取得し�
   
 **返します**:SDK を利用するアプリケーションに関する情報
   
-### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit 関数
-テレメトリ初期化をスキップする必要があるかどうかを取得します。
-
-  
-**返します**:場合か、テレメトリ初期化をスキップする必要があります。
-  
-### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit 関数
-テレメトリ初期化を無効にします。
-このメソッドは、通常、クライアント アプリケーションによっては呼び出されず、初期化の重複を防ぐためにファイル SDK によって使用されます
-  
 ### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled 関数
 新機能を無効にします。
 新機能を試さないアプリケーションの場合
@@ -146,6 +136,20 @@ SDK を利用しているアプリケーションに関する情報を取得し�
 
 パラメーター:  
 * **httpDelegate**:クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate 関数
+アプリケーションによって提供される TaskDispatcher デリゲート (指定されている場合) を取得します。
+
+  
+**返します**:非同期タスクの実行に使用する TaskDispatcher デリゲート
+  
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
+クライアントの処理をディスパッチ既定 asynchonous タスクをオーバーライドします。
+
+パラメーター:  
+* **taskDispatcherDelegate**:クライアント アプリケーションによって実装されるコールバック インターフェイスをディスパッチするタスク
 
 
   

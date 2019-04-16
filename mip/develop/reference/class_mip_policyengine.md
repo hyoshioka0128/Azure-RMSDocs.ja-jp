@@ -7,18 +7,18 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ffc2adc3e48de3f7efc7426c1276ccba8f0a70f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332805"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573787"
 ---
 # <a name="class-mippolicyengine"></a>class mip::PolicyEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  ポリシー エンジン[設定](class_mip_policyengine_settings.md)を取得します。
 public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  ポリシー エンジンに関連付けられている機密ラベルの一覧を示します。
@@ -30,6 +30,9 @@ public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscove
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 public const std::string& GetPolicyDataXml() const  |  ポリシー データの設定、ラベル、およびこのポリシーに関連付けられているルールを記述する XML を取得します。
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  カスタム設定の一覧を取得します。
+public const std::string& GetPolicyId() const  |  ポリシー ID を取得します
+public bool HasClassificationRules() const  |  場合は、ポリシーは自動または推奨事項ルールを取得します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチした時刻を取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -77,7 +80,7 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 ポリシー ハンドラーを作成して、ファイルの事項状態でポリシー関連の関数を実行します。
 
 パラメーター:  
-* **A**: ブール値を表す監査検出が有効か無効かどうか
+* **A**: 監査検出が有効か無効かどうかを表すブール値。
 
 
 
@@ -89,13 +92,13 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 
 パラメーター:  
-* **レベル**: のログ レベル。警告/情報/エラー 
+* **レベル**: のログ レベル。情報/エラー/警告します。 
 
 
-* **eventType**: イベントの種類の説明 
+* **eventType**: イベントの種類の説明。 
 
 
-* **eventData**: イベントに関連付けられているデータ
+* **eventData**: イベントに関連付けられたデータ。
 
 
   
@@ -103,10 +106,28 @@ public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSett
 ポリシー データの設定、ラベル、およびこのポリシーに関連付けられているルールを記述する XML を取得します。
 
   
-**返します**:ポリシー データの XML
+**返します**:ポリシー データは XML です。
   
 ### <a name="getcustomsettings-function"></a>GetCustomSettings 関数
 カスタム設定の一覧を取得します。
 
   
-**返します**:カスタム設定のベクター
+**返します**:カスタム設定のベクター。
+  
+### <a name="getpolicyid-function"></a>GetPolicyId 関数
+ポリシー ID を取得します
+
+  
+**返します**:ポリシー ID を表す文字列です。
+  
+### <a name="hasclassificationrules-function"></a>HasClassificationRules 関数
+場合は、ポリシーは自動または推奨事項ルールを取得します。
+
+  
+**返します**:かどうかがあります、自動または recommandation 規則、ポリシーでのかを示すブール値
+  
+### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime 関数
+ポリシーが最後にフェッチした時刻を取得します。
+
+  
+**返します**:ポリシーが最後にフェッチした時間

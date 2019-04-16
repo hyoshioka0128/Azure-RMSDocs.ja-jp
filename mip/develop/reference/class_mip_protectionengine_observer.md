@@ -7,19 +7,19 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a023d3e5a3ea557f5766db71906b540c6c5d87f9
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2473e4bc1e64e3e8de498d2976d07b5324346a53
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331836"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573498"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
 [ProtectionEngine](class_mip_protectionengine.md) に関連する通知を受け取るインターフェイス。
 このインターフェイスは、保護 SDK を使用してアプリケーションによって実装する必要があります
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック仮想 void OnGetTemplatesSuccess (const std::shared_ptr\<std::vector\<std::string\>\>& templateIds、const std::shared_ptr\<void\>& コンテキスト)  |  テンプレートが正しく取得されると呼び出されます。
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
