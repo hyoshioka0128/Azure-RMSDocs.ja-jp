@@ -35,8 +35,9 @@ items:
   - name: API
     href: concept-apis-use-cases.md
   - name: プロファイルとエンジン (C++)
-    href: concept-profile-engine-cpp.md
     items:
+    - name: プロファイルとエンジンのオブジェクトの概念
+      href: concept-profile-engine-cpp.md
     - name: ファイル API プロファイル (C++)
       href: concept-profile-engine-file-profile-cpp.md
     - name: ファイル API エンジン (C++)
@@ -50,8 +51,9 @@ items:
     - name: 保護 API エンジン (C++)
       href: concept-profile-engine-protection-engine-cpp.md
   - name: 認証 (C++)
-    href: concept-authentication-cpp.md
     items:
+    - name: 認証の概念
+      href: concept-authentication-cpp.md
     - name: 認証の委任の実装 (C++)
       href: concept-authentication-delegate-cpp.md
     - name: アクセス トークンの取得 (PowerShell)
@@ -61,13 +63,15 @@ items:
   - name: ハンドラー
     items:
     - name: ファイル API のハンドラー (C++)
-      href: concept-handler-file-cpp.md
       items:
+      - name: ファイル ハンドラーの概念
+        href: concept-handler-file-cpp.md
       - name: 監査
         href: concept-auditing-file-cpp.md
     - name: ポリシー API のハンドラー (C++)
-      href: concept-handler-policy-cpp.md
       items:
+      - name: ポリシー ハンドラーの概念
+        href: concept-handler-policy-cpp.md
       - name: 実行状態
         href: concept-handler-policy-executionstate-cpp.md
       - name: 計算操作
@@ -81,8 +85,9 @@ items:
   - name: メタデータ
     href: concept-mip-metadata.md
   - name: 非同期のオブザーバー (C++)
-    href: concept-async-observers.md
     items:
+    - name: オブザーバーの概念
+      href: concept-async-observers.md
     - name: ファイル API オブザーバー (C++)
       href: concept-async-observers-file-cpp.md
     - name: ポリシー API オブザーバー (C++)
@@ -92,8 +97,9 @@ items:
 - name: リファレンス
   items:
   - name: C++ ライブラリ
-    href: reference/mip-sdk-reference.md
     items:
+    - name: C++ライブラリの概要
+      href: reference/mip-sdk-reference.md
     - name: 列挙型と構造体
       href: reference/mip-enums-and-structs.md
     - name: 関数
@@ -110,6 +116,8 @@ items:
         href: reference/class_mip_addcontentheaderaction.md
       - name: AddWatermarkAction
         href: reference/class_mip_addwatermarkaction.md
+      - name: AdhocProtectionRequiredError
+        href: reference/class_mip_adhocprotectionrequirederror.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
       - name: Authdelegate
@@ -156,6 +164,8 @@ items:
         href: reference/class_mip_fileprofile_settings.md
       - name: HttpDelegate
         href: reference/class_mip_httpdelegate.md
+      - name: HttpOperation
+        href: reference/class_mip_httpoperation.md
       - name: HttpRequest
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
@@ -186,6 +196,8 @@ items:
         href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
+      - name: OperationCancelledError
+        href: reference/class_mip_operationcancellederror.md
       - name: PolicyEngine
         href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
@@ -246,6 +258,8 @@ items:
         href: reference/class_mip_servicedisablederror.md
       - name: ストリーム
         href: reference/class_mip_stream.md
+      - name: TaskDispatcherDelegate
+        href: reference/class_mip_taskdispatcherdelegate.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights
@@ -268,9 +282,9 @@ items:
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: バージョン 1.1 の新機能
     href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
-ms.openlocfilehash: 68fae7819664fadd7fa470cd8db9f45eb430dc5b
-ms.sourcegitcommit: dde803603371dc30d40ca7225f330163bcc7c103
+ms.openlocfilehash: f71e85308a3bf03dddfaed5c1f1fc8df7aeae3b7
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56825987"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574416"
