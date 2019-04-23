@@ -9,11 +9,11 @@ ms.date: 01/08/2019
 ms.author: mbaldwin
 manager: barbkess
 ms.openlocfilehash: 9f02d682164dac8ee28ed023dd7b21b53937f4bb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184220"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK のバージョン リリース履歴とサポート ポリシー
 
@@ -34,7 +34,7 @@ ms.locfileid: "57333638"
 
 ## <a name="version-110"></a>バージョン 1.1.0
 
-**リリース日**:未定
+**リリース日**:TBD
 
 このバージョンには、次のプラットフォームのサポートが導入されています。
 
@@ -85,7 +85,7 @@ ms.locfileid: "57333638"
 
 **修正内容**:
 
-未定
+TBD
 
 ## <a name="next-steps"></a>次の手順
 

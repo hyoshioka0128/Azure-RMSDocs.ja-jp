@@ -8,18 +8,18 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 7b9c3440d577e9ba2e08bdba6ed890d3a480c783
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60174104"
 ---
 # <a name="class-mipfileprofileobserver"></a>class mip::FileProfile::Observer 
 クライアントがプロファイル関連のイベントに関する通知を取得するための [Observer](class_mip_fileprofile_observer.md) インターフェイス。
 すべてのエラーは [mip::Error](class_mip_error.md) から継承されます。 クライアントは、オブザーバーを呼び出すスレッド上でエンジンをコールバックしてはなりません。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public virtual ~Observer()  | _まだ文書化されていません。_
 パブリック仮想 void OnLoadSuccess (const std::shared_ptr\<mip::FileProfile\>(& a) プロファイル、const std::shared_ptr\<void\>& コンテキスト)  |  プロファイルが正常に読み込まれたときに呼び出されます。

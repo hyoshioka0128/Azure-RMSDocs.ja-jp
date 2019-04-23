@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e815820fa9f3a6de95d5e37e350ed18df8513b21
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175107"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK - プロファイル オブジェクトとエンジン オブジェクトの概念
 
@@ -35,7 +35,7 @@ MIP SDK には、次の 3 つの種類のプロファイルがあります。
 - `mip::AuthDelegate` を受け入れることで、認証を処理します。
 - SDK を利用しているアプリのアプリケーション ID とフレンドリ名を設定します。
 
-### <a name="profile-settings"></a>プロファイルの設定
+### <a name="profile-settings"></a>プロファイル設定
 
 - `Path`:ファイルのパスをログ、テレメトリ、およびその他の永続的な状態が格納されます。
 - `useInMemoryStorage`:状態をメモリに格納する必要があるかどうかを定義するブール値またはディスクにします。
@@ -70,10 +70,10 @@ SDK には 3 つのエンジン クラス (API ごとに 1 つずつ) があり�
 
 次の表に、可能なエンジンの状態と、メソッドがその状態を変更できます。
 
-|         | なし              | 作成           | LOADED         |
+|         | なし              | CREATED           | LOADED         |
 |---------|-------------------|-------------------|----------------|
 | なし    |                   |                   | AddEngineAsync |
-| 作成 | DeleteEngineAsync |                   | AddEngineAsync |
+| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
 | LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### <a name="engine-id"></a>エンジン ID

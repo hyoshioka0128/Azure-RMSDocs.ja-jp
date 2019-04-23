@@ -8,13 +8,13 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184986"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
+# <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C#)
 
 このクイック スタートでは、実行時に MIP SDK .NET ラッパーで使用される、クライアントの初期化パターンを実装する方法を示します。
 
@@ -197,7 +197,7 @@ namespace mip_sdk_dotnet_quickstart
 
 3. 次の値を使用して、コピーしたソース コード内のプレース ホルダーの値に置き換えます。
 
-   | [プレースホルダ] | 値 | 例 |
+   | [プレースホルダ] | [値] | 例 |
    |:----------- |:----- |:--------|
    | \<application-id\> | "MIP SDK のセットアップと構成" で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (2 つのインスタンス)。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 | AppInitialization |

@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173475"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>クラスの mip::AuthDelegate::OAuth2Challenge 
 oauth2 トークンを生成するために呼び出し元アプリケーションに必要なすべての情報を含むクラスです。

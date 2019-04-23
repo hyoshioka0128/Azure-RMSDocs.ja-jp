@@ -8,18 +8,18 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: d789250d2ab91ca6e65181e216f260db8d44d496
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184367"
 ---
 # <a name="class-mipprotectionprofile"></a>class mip::ProtectionProfile 
 [ProtectionProfile](class_mip_protectionprofile.md) は、保護操作を実行するためのルート クラスです。
 アプリケーションでは、保護操作を実行する前に [ProtectionProfile](class_mip_protectionprofile.md) を作成する必要があります
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  初期化時および有効期間全体にわたって [ProtectionProfile](class_mip_protectionprofile.md) によって使用される設定を取得します。
 public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。

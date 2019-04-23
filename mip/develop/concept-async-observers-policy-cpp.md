@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175498"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - ポリシー API オブザーバー
 
@@ -28,7 +28,7 @@ ms.locfileid: "57330289"
 
 次の例では、`mip::Profile::Observer` から派生される `ProfileObserver` クラスを作成しています。 メンバー関数は、サンプル全体で使用される future/promise パターンを使用するためにオーバーライドされています。
 
-**注**:以下のサンプルのみ部分的に実装され、用の上書きを含めないでください、`mip::ProfileEngine`オブザーバーに関連します。
+**注意**:以下のサンプルのみ部分的に実装され、用の上書きを含めないでください、`mip::ProfileEngine`オブザーバーに関連します。
 
 ### <a name="profileobserverh"></a>profile_observer.h
 

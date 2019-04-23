@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: f4d96da36eb41025df5d280c62a3831cd5afa9a1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175294"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - 認証の概念
 
@@ -28,7 +28,7 @@ MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の
 - `mip::AuthDelegate::OAuth2Challenge`:2 つのパラメーターを受け取る**機関**と**リソース**します。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。
 - `mip::AuthDelegate::OAuth2Token`:トークンの結果は、このオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
 
-**大事な：** アプリケーションは呼び出さないでください`AcquireOAuth2Token`直接します。 必要に応じて SDK がこの関数を呼び出します。
+**重要:** アプリケーションは呼び出さないでください`AcquireOAuth2Token`直接します。 必要に応じて SDK がこの関数を呼び出します。
 
 ## <a name="consent"></a>同意
 

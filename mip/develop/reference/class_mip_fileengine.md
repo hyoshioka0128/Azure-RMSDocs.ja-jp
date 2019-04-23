@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 15ce90a80430f50854580f6c7a2993d92db0a744
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184792"
 ---
 # <a name="class-mipfileengine"></a>class mip::FileEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。

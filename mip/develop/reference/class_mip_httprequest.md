@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 8b0349db2e985d6fb015e1a2698187089483fbe3
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173513"
 ---
 # <a name="class-miphttprequest"></a>class mip::HttpRequest 
 1 つの HTTP 要求を表すインターフェイス。

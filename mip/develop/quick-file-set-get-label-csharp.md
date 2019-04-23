@@ -9,11 +9,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173246"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート: 設定し、機密ラベルを取得 (C#)
 
@@ -72,7 +72,7 @@ ms.locfileid: "59573768"
 
 3. 貼り付けたばかりのソース コードのプレースホルダー値を、次の値で置き換えます。
 
-   | [プレースホルダ] | [値] |
+   | [プレースホルダ] | 値 |
    |:----------- |:----- |
    | \<input-file-path\> | テスト入力ファイルへの完全なパス。たとえば `c:\\Test\\Test.docx`。 |
    | \<label-id\> | 前のクイック スタートでコンソールの出力からコピーした機密ラベル ID。たとえば `f42a3342-8706-4288-bd31-ebb85995028z`。 |

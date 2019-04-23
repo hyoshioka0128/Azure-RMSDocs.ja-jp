@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 18bdf3caa5eba2f335376d81f525fe93da4d0352
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173262"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>class mip::ProtectByTemplateAction 
 テンプレートによる保護をドキュメントに追加することを指定するアクション クラス。

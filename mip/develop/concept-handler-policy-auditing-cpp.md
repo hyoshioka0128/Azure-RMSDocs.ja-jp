@@ -9,11 +9,11 @@ ms.collection: M365-security-compliance
 ms.date: 11/07/2018
 ms.author: tommos
 ms.openlocfilehash: 729570c902ad3175b65ddd8167005c0cb4e4078c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175226"
 ---
 # <a name="auditing-in-the-mip-sdk"></a>MIP SDK での監査
 
@@ -76,6 +76,6 @@ Azure Information Protection 監査パイプラインに送信されたイベン
 
 ## <a name="next-steps"></a>次の手順
 
-- 詳細については、Azure Information Protection での監査操作は、、[技術コミュニティでの発表に関するブログをプレビュー](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)を参照してください。
+- 詳細については、Azure Information Protection での監査操作は、次を参照してください。、[技術コミュニティでの発表に関するブログをプレビュー](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)します。
 - ダウンロード、[ポリシー API のサンプルを GitHub ポリシー API を試すから](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

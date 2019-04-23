@@ -8,17 +8,17 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 7ed2c118d2f57f93d0445c113fd6127704e52637
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60174155"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
 コンテンツの一部に関連付けられている保護を説明する、[ProtectionDescriptor](class_mip_protectiondescriptor.md) を構築します。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
 public void SetName(const std::string& value)  |  保護ポリシー名を設定します。

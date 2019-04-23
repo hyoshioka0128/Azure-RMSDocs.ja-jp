@@ -8,17 +8,17 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: a3a634c99f278d1e8eb27d4c37da0cec566c6aa2
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184809"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>クラスの mip::AuthDelegate::OAuth2Token 
 MIP SDK で oauth2 トークンを SDK に渡す必要がある方法を定義するクラス。
   
 ## <a name="summary"></a>まとめ
- メンバー                        | 説明                                
+ メンバー                        | [説明]                                
 --------------------------------|---------------------------------------------
 public OAuth2Token()  |  新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md)オブジェクト。
 public OAuth2Token(const std::string& accessToken)  |  新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md) accessToken からのオブジェクト。
