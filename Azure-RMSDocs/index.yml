@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: a5679ecddad0f365d5d93e2c0100fa04b2b1a341
-ms.sourcegitcommit: 8c2de5119105cf5d5bc91fcc2202b64e5a779e7c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56081696"
 documentType: LandingData
 title: Azure Information Protection のドキュメント
 metadata:
@@ -23,56 +17,56 @@ metadata:
 abstract:
   description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Azure Information Protection での簡単な分類から埋め込みラベルとアクセス許可、データ保護の強化は常時提供され、保存場所、共有先は関係ありません。
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsFTitle
+  - title: null
     items:
-    - title: Azure Information Protection について詳しく知る
-      href: what-is-information-protection.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: what-is-information-protection.md
-    - title: Azure Information Protection を使用して作業を開始する
-      href: quickstart-viewpolicy.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-        href: quickstart-viewpolicy.md
-    - title: Azure Information Protection を含む完全なソリューションである Microsoft 365 の詳細を説明する
-      href: https://docs.microsoft.com/microsoft-365/
-      image:
-        src: /office/media/icons/caret-right-blue.svg
-        href: https://docs.microsoft.com/microsoft-365/
-- title: 5 分のクイックスタート
-  items:
-  - type: paragraph
-    text: 次のクイックスタートを使用してデータを保護する方法について説明します。
-  - type: list
-    style: icon48
+      - type: list
+        style: cards
+        className: cardsFTitle
+        items:
+          - title: Azure Information Protection について詳しく知る
+            href: what-is-information-protection.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
+              href: what-is-information-protection.md
+          - title: Azure Information Protection を使用して作業を開始する
+            href: quickstart-viewpolicy.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_quick-start.svg'
+              href: quickstart-viewpolicy.md
+          - title: Azure Information Protection を含む完全なソリューションである Microsoft 365 の詳細を説明する
+            href: 'https://docs.microsoft.com/microsoft-365/'
+            image:
+              src: /office/media/icons/caret-right-blue.svg
+              href: 'https://docs.microsoft.com/microsoft-365/'
+  - title: 5 分のクイックスタート
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_portal.svg
-      text: Azure Portal
-      href: quickstart-viewpolicy.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_search.svg
-      text: 機密情報を検索する
-      href: quickstart-findsensitiveinfo.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      text: ラベルの構成
-      href: quickstart-label-dnf-protectedemail.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_categorize.svg
-      text: 新しいラベルの作成
-      href: quickstart-label-specificusers.md
-- title: ステップバイステップ チュートリアル
-  items:
-  - type: paragraph
-    text: ポリシーの編集、新しいラベルの作成、および設定を構成する方法について説明します。
-  - type: list
-    style: unordered
+      - type: paragraph
+        text: 次のクイックスタートを使用してデータを保護する方法について説明します。
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_portal.svg'
+            text: Azure Portal
+            href: quickstart-viewpolicy.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_search.svg'
+            text: 機密情報を検索する
+            href: quickstart-findsensitiveinfo.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+            text: ラベルの構成
+            href: quickstart-label-dnf-protectedemail.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_categorize.svg'
+            text: 新しいラベルの作成
+            href: quickstart-label-specificusers.md
+  - title: ステップバイステップ チュートリアル
     items:
-    - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Azure Information Protection ポリシーを編集して新しいラベルを作成する</a>
-    - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)</a>
+      - type: paragraph
+        text: ポリシーの編集、新しいラベルの作成、および設定を構成する方法について説明します。
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Azure Information Protection ポリシーを編集して新しいラベルを作成する</a>
+          - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)</a>

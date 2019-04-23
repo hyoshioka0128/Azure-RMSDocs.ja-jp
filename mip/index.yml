@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 7643f9eb25665d7a1bc1b2897be521cd30c06757
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332720"
 documentType: LandingData
 title: Microsoft Information Protection
 metadata:
@@ -21,7 +15,7 @@ metadata:
 abstract:
   description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Microsoft Information Protection では、保存場所や共有者にかかわらず、簡単な分類から埋め込みラベル、アクセス許可、データ保護の強化が常時提供されています。
 sections:
-- title: Microsoft Information Protection SDK
-  items:
-  - type: paragraph
-    text: 概要については、<a href="develop/">Microsoft Information Protection SDK の概要</a>に関するページを参照してください。
+  - title: Microsoft Information Protection SDK
+    items:
+      - type: paragraph
+        text: 概要については、<a href="develop/">Microsoft Information Protection SDK の概要</a>に関するページを参照してください。
