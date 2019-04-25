@@ -1,26 +1,28 @@
 ---
-title: Azure Information Protection でサポートされるファイルの種類
+title: Azure Information Protection クライアントでサポートされるファイルの種類
 description: Windows 用 Azure Information Protection クライアントを担当する管理者のために、サポートされるファイルの種類、ファイル名拡張子、保護のレベルに関する技術の詳細について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: efa968ab048d0c648d1b0351fa847d2a80a3d11a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 21a795a6386b5d030718bc39a094d9251db570e5
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259541"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183426"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection クライアントは、次のことをドキュメントとメールに適用できます。
 
@@ -93,9 +95,9 @@ Azure Information Protection クライアントが保護をサポートするフ
 
   |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-  |             Word 2007 (AD RMS のみでサポート)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット:512 MB<br /><br />64 ビット:512 MB                                          |
-  |           Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット:2 GB<br /><br />64 ビット:使用可能なディスク領域とメモリによってのみ制限されます                       |
-  | PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット:使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット:使用可能なディスク領域とメモリによってのみ制限されます |
+  |             Word 2007 (AD RMS のみでサポート)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット。512 MB<br /><br />64 ビット。512 MB                                          |
+  |           Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット。2 GB<br /><br />64 ビット。使用可能なディスク領域とメモリによってのみ制限されます                       |
+  | PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット。使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット。使用可能なディスク領域とメモリによってのみ制限されます |
 
 
 - **その他のすべてのファイル**: 
@@ -104,7 +106,7 @@ Azure Information Protection クライアントが保護をサポートするフ
 
   - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合:.pst ファイルに対してサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
 
-    ヒント大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
+    ヒント:大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -169,7 +171,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 これら 2 つの設定により、Azure Information Protection クライアントは、ファイル名拡張子を持つすべてのファイルに汎用的な保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つ (32 ビット Windows の場合) または 6 つ (64 ビット Windows の場合) のレジストリ編集を行う必要があります。
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合):ファイル名拡張子を名前として持つ新しいキーを追加します (前にピリオドは付けません)。
+1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合):ファイル名拡張子 (ピリオドは付けません) なしの名前を持つ新しいキーを追加します。
 
     たとえば、.docx というファイル名拡張子を持つファイルの場合、 **DOCX**という名前のキーを作成します。
 
@@ -183,11 +185,11 @@ Azure Information Protection クライアントがファイルを保護する方
 
 次の値をサポートする **Encryption** 文字列の値を変更することで、他のシナリオで同様のレジストリ編集を行うことができます。
 
-- **Pfile**: 一般保護
+- **Pfile**: 汎用的な保護
 
 - **Native**: ネイティブ保護
 
-- **Off**: 保護ブロック
+- **Off**: 保護のブロック
 
 これらのレジストリに変更を加えた後、コンピューターを再起動する必要はありません。 ただし、ファイルを保護するために PowerShell コマンドを使っている場合は、変更を反映させるために新しい PowerShell セッションを開始する必要があります。
 
@@ -210,27 +212,11 @@ Azure Information Protection クライアントがファイルを保護する方
 
 既定では、以下の例外を除き、スキャナーでも Azure Information Protection クライアントと同じファイルの種類が除外されます。
 
-一般公開バージョンの場合:
-
-- .rtf、.rar、.zip も除外されます
-
-最新のプレビュー バージョンの場合: 
-
 - .rtf、.rar も除外されます
 
 スキャナーによるファイル検査について、対象または対象外となるファイルの種類を変更することができます。
 
-一般公開バージョンの場合、次の PowerShell コマンドレットを使います。
-
-- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
-
-- [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
-
-- [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
-
-最新のプレビュー バージョンの場合:
-
-- [Azure portal を使って](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal)、スキャナー プロファイルの **[スキャンするファイルの種類]** を構成します。
+- [Azure portal を使って](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)、スキャナー プロファイルの **[スキャンするファイルの種類]** を構成します。
 
 > [!NOTE]
 > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。 
@@ -283,9 +269,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
 
-2. スキャナーの場合:スキャナーの最新のプレビュー バージョンを実行している場合を除き、「[Azure Information Protection スキャナー](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)」セクションの説明に従って、検査する .zip ファイルを含めます。
-
-3. スキャナーの場合:機密情報を検索した後、.zip ファイルをラベルで分類および保護する必要がある場合は、スキャナーのデプロイに関する説明の「[スキャナーのレジストリの編集](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)」に従って、汎用的な保護 (pfile) が行われるようにこのファイル名拡張子に対するレジストリ エントリを追加します。
+2. スキャナーの場合:機密情報を検索した後、.zip ファイルをラベルで分類および保護する必要がある場合は、スキャナーのデプロイに関する説明の「[スキャナーのレジストリの編集](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)」に従って、汎用的な保護 (pfile) が行われるようにこのファイル名拡張子に対するレジストリ エントリを追加します。
 
 これらの手順の実行後のシナリオ例: 
 

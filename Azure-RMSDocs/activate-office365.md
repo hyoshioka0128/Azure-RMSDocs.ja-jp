@@ -13,11 +13,11 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: fdf5abd317164736cc66b1cbca8cfb9c2c5863d0
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828976"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175185"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Azure Rights Management をアクティブ化する方法
 
@@ -38,7 +38,7 @@ Azure Rights Management サービスをアクティブ化するには、[Azure I
     
     管理センターから **Rights Management** ページに移動する場合: **[設定]** > **[サービスとアドイン]** > **[Microsoft Azure Information Protection]** > **[Manage Microsoft Azure Information Protection settings]\(Microsoft Azure Information Protection 設定の管理\)**
 
-2. **[RIGHTS MANAGEMENT]** ページで、 **[アクティブ化]** をクリックします。
+2. **[Rights Management]** ページで、**[アクティブ化]** をクリックします。
 
 3. **[Rights Management をアクティブ化しますか?]** というメッセージが表示されたら、**[アクティブ化]** をクリックします。
 

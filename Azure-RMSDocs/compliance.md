@@ -12,11 +12,11 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 525637a52a71e4bdc48e8f0665ef73c70a5a18ff
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557631"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181074"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
@@ -40,17 +40,17 @@ Azure Information Protection は他のサービスをサポートし、また�
 
 ## <a name="legal-and-privacy"></a>法律およびプライバシー
 
-- Microsoft Azure の契約情報について:[Microsoft Azure 契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Microsoft Azure の契約情報について。[Microsoft Azure 契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Microsoft Azure のプライバシー情報について:[Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Microsoft Azure のプライバシー情報について。[Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>セキュリティ、コンプライアンス、監査
 
-Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
+Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに:
 
 - Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](https://azure.microsoft.com/support/trust-center/)
 
-- FIPS 140 について:[FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
+- FIPS 140 について。[FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 保護テクノロジのしくみに関する詳細な技術情報については、「[Azure RMS の機能の詳細](./how-does-it-work.md)」を参照してください。 
 

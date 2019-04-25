@@ -4,19 +4,19 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
-ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
-ms.translationtype: HT
+ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233736"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181901"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -34,7 +34,7 @@ Azure Information Protection を構成して使用すると、Azure Information 
 
 - ドキュメント追跡ログ
 
-- Azure Information Protection クライアントおよび RMS クライアントの使用状況ログ 
+- Azure Information Protection クライアントと RMS クライアントの使用状況ログ 
 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
@@ -90,7 +90,7 @@ Azure Rights Management サービスのスーパー ユーザー ロールやグ
 
 Azure Rights Management サービス (Azure Information Protection のデータを保護するサービス) の管理者アクションのログを取得するには、 [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) コマンドレットを実行します。 このログには、個人データが電子メール アドレスと IP アドレスの形式で記録されます。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-次に例を示します。
+以下に例を示します。
 ```
 PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -99,7 +99,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況ログ
 Azure Rights Management サービスを使用するエンドユーザー操作のログを取得するには、[Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) コマンドレットを実行します。 このサービスは、Azure Information Protection 用のデータを保護するものです。 ログには、個人データが電子メール アドレスと IP アドレスの形式で記録される場合があります。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-次に例を示します。
+以下に例を示します。
 ```
 PS C:\Users> Get-AadrmUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -131,7 +131,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ドキュメント追跡サイトから特定のユーザーに関する情報を取得するには、[Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) コマンドレットを実行します。 ドキュメント ログに関連付けられた追跡情報を取得するには、[Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps) コマンドレットを使用します。
 
-次に例を示します。
+以下に例を示します。
 ```
 PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -186,11 +186,11 @@ IsHiddenInfo         : False
 
 ObjectID による検索はできません。 ただし、`-UserEmail` パラメーターによる制限はなく、指定する電子メール アドレスがテナントの一部である必要はありません。 指定した電子メール アドレスがドキュメント追跡ログ内のどこかに保存されている場合は、コマンドレットの出力にドキュメント追跡エントリが返されます。
 
-### <a name="usage-logs-for-the-azure-information-protection-client-and-rms-client"></a>Azure Information Protection クライアントおよび RMS クライアントの使用状況ログ
+### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Azure Information Protection クライアントと RMS クライアントの使用状況ログ
 
 ドキュメントと電子メールにラベルと保護が適用されている場合、電子メール アドレスと IP アドレスは、ユーザーのコンピューター上の次の場所にあるログ ファイルに格納される可能性があります。
 
-- Azure Information Protection クライアントの場合: %localappdata%\Microsoft\MSIP\Logs
+- Azure Information Protection の統合されたラベル付けクライアントと Azure Information Protection クライアント: %localappdata%\Microsoft\MSIP\Logs
 
 - RMS クライアントの場合: %localappdata%\Microsoft\MSIPC\msip\Logs
 

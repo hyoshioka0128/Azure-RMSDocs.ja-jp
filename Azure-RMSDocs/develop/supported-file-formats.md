@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 9a2e543cc8a598ab371121d75c1191ce8c4c8c77
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333485"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175884"
 ---
 # <a name="supported-file-formats"></a>サポートされるファイル形式
 
@@ -33,7 +33,7 @@ File API の現在のバージョンは、Microsoft Office ファイルに対す
 
 管理者は、レジストリ キーを設定して、ファイル名拡張子に基づいてファイルを保護するかどうか、およびその方法を構成することができます。 File API を使用してファイルの保護を構成する方法の詳細については、「[File API configuration (File API の構成)](file-api-configuration.md)」を参照してください。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [開発者向け注意事項](developer-notes.md)
 * [ファイル API の構成](file-api-configuration.md)

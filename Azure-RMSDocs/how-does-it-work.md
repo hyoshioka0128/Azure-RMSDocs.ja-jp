@@ -12,11 +12,11 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
-ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57734138"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183155"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -38,7 +38,7 @@ Azure RMS が暗号化および復号化、承認、制限の適用を行う保�
 
 Azure RMS が使用するアルゴリズムおよびキー長に関する技術的詳細については、次のセクションを参照してください。
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Azure RMS で使用される暗号化の制御:アルゴリズムとキーの長さ
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Azure RMS で使用される暗号化制御:アルゴリズムとキーの長さ
 このテクノロジのしくみを詳しく理解する必要がない場合でも、このテクノロジが使用する暗号化コントロールについてたずねられる可能性があります。 たとえば、セキュリティ保護が業界標準であることを確認するためです。
 
 

@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 1e7e2badcd57ce6896c9850729ba546efe22b778
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331343"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176031"
 ---
 # <a name="overview"></a>概要
 
@@ -49,9 +49,9 @@ MS RMS SDK 4.2 には、次のような便利な新機能があります。
 
 [作業開始](get-started.md)ガイドを使用して、保護されている情報のデバイス アプリ プロジェクトを開始してください。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
-* [作業開始](get-started.md)
+* [開始するには](get-started.md)
 * [Azure AD 認証ライブラリ](https://msdn.microsoft.com/library/jj573266.aspx)
 * [GitHub アカウント](https://github.com/AzureAD/)

@@ -4,21 +4,24 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/11/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: cc921ae66d8a36a3bad9f184b7b900c7508eb2d1
-ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
-ms.translationtype: HT
+ms.openlocfilehash: 4868e0972839bfd1fa13f230a4e3d1d0af8fe768
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57734111"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179867"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。 
 
@@ -83,9 +86,9 @@ ms.locfileid: "57734111"
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}`: 選択したラベル。 次に例を示します。全般
+- `${Item.Label}`: 選択したラベル。 以下に例を示します。全般
 
-- `${Item.Name}`: ファイル名または電子メールの件名。 次に例を示します。JulySales.docx
+- `${Item.Name}`: ファイル名または電子メールの件名。 以下に例を示します。JulySales.docx
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
@@ -93,7 +96,7 @@ ms.locfileid: "57734111"
 
 - `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}`: 選択したラベルが設定された日時。 次に例を示します。8/16/2016 1:30 PM
+- `${Event.DateTime}`: 選択したラベルが設定された日時。 以下に例を示します。8/16/2016 1:30 PM
 
 例:**General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification:General** になります。
 
@@ -104,7 +107,7 @@ ms.locfileid: "57734111"
 
 既定では、指定した視覚的マーキングは Word、Excel、PowerPoint、Outlook のすべてに適用されます。 ただし、テキスト文字列に "If.App" という変数ステートメントを入れると、Office アプリケーションごとに視覚的マーキングを指定できます。**Word**、**Excel**、**PowerPoint**、**Outlook** という値を利用し、アプリケーションの種類を区別できます。 このような値は省略することもできます。同じ If.App ステートメントで複数回指定する場合に必要になります。
 
-次の構文を使用します。
+使用する構文は以下のとおりです。
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 

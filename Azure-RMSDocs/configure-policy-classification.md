@@ -4,21 +4,23 @@ description: ラベルの条件を使うと、ドキュメントや電子メー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809762"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179959"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。 
 
@@ -100,7 +102,7 @@ ms.locfileid: "58809762"
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
 
-次の機密情報の種類を使用するには、Azure Information Protection クライアントの最新プレビュー バージョンが必要です。
+次の機密情報の種類が必要な[現在一般公開バージョン](./rms-client/client-version-release-history.md#version-1482040)の Azure Information Protection クライアント。
 
 - **Azure Service Bus の接続文字列**
 - **Azure IoT の接続文字列**
@@ -113,7 +115,9 @@ ms.locfileid: "58809762"
 - **Azure 発行設定のパスワード**
 - **Azure Storage のアカウント キー (汎用)**
 
-また、次の機密情報の種類は Azure Information Protection クライアントの最新プレビュー バージョンでサポートされておらず、Azure portal に表示されなくなりました。
+これらの機密情報の種類の詳細については、ブログの投稿を参照してください。[Azure Information Protection では、資格情報を自動的に検出することによってセキュリティを強化することができます。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+
+さらに、次の機密情報の種類は、Azure Information Protection クライアント、および不要になった Azure portal での表示の現在の一般公開バージョンについてはサポートされません。
 
 - **EU の電話番号**
 - **EU の GPS 座標**
@@ -123,5 +127,3 @@ ms.locfileid: "58809762"
 [Azure Information Protection スキャナー](deploy-aip-scanner.md)のデプロイについて検討します。このスキャナーは自動分類規則を利用し、ネットワーク共有やオンプレミス ファイル ストアのファイルを検出、分類、保護できます。  
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
-
-

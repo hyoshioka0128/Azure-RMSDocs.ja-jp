@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 334b4aed3e24a64e553429587eea4b0bf4c7948a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330391"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178371"
 ---
-# <a name="how-to-use-document-tracking"></a>方法:ドキュメント追跡を使用する
+# <a name="how-to-use-document-tracking"></a>方法: ドキュメント追跡を使用する
 
 ドキュメント追跡機能を使用するには、関連付けられているメタデータの管理とサービスへの登録について理解している必要があります。
 

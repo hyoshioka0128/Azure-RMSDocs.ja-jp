@@ -1,22 +1,22 @@
 ---
-title: Azure Information Protection の情報とサポート
+title: 情報と Azure Information Protection - AIP のサポート
 description: 新しいリリース、サポート オプション、および Microsoft に連絡して問題を報告する方法などの情報を含む、管理者向けリソース。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ff687b812ac9c7d3253e284baeaca0b1de2e8e3
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.openlocfilehash: 385b44e6f3753e7d066f63fee812c4f12b67171d
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57978221"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181737"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -50,7 +50,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 その他のお客様は、Azure Information Protection のサブスクリプションに応じて、以下の表のサポート チャネルをご利用ください。
 
-|Subscription|手順|
+|サブスクリプション|手順|
 |----------------|---------------|
 |Azure Information Protection (スタンドアロン)|1.Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2.要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - included]\(テクニカル サポート - 含む\)**: Azure のサブスクリプションがない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Microsoft 365 管理センターによるサポートへの問い合わせ方法、および連絡先電話番号については、「[ビジネス製品についてサポートに問い合わせる - 管理者ヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
@@ -65,6 +65,8 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 ハンズオン ラボ: 「[Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)」 (Azure Information Protection ハンズオン ラボ) をご覧ください。
 
 オンデマンド ビデオ:
+
+- Tech Community のウェビナーの録画[Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014)します。
 
 - [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) の Microsoft Ignite 2018 セッション:
     
@@ -84,7 +86,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 - Windows 用 Azure Information Protection クライアントについて: 管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照し、[サポートされているバージョン](./rms-client/client-version-release-history.md#servicing-information-and-timelines)を使用していることを確認してください。
 
-### <a name="community-resources"></a>コミュニティのリソース
+### <a name="community-resources"></a>コミュニティ リソース
 
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 

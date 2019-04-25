@@ -4,23 +4,25 @@ description: Rights Management (RMS) クライアントと Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fa836d25fa779d53ada2448a4a9d01144e24e1e6
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 41ced1c43502b1c266ad2423b637266dbb0f1690
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255497"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183386"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 この記事では、Azure Information Protection クライアントと PowerShell を使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
@@ -50,7 +52,7 @@ ms.locfileid: "56255497"
     
   - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
     
-  - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
+  - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 たとえば次のようになります。`netsh winhttp import proxy source=ie`
     
 - オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
     
@@ -144,7 +146,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **名前**: 「**Classify for RMS**」と入力します
 
-        -   **有効**: 既定のオンのままにします。
+        -   **有効**: このチェック ボックスをオンになっていることは、既定値を保持します。
 
         -   **説明**:「**Classify all files in the &lt;フォルダー名&gt; folder for Rights Management**」と入力します。
 
@@ -168,13 +170,13 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 -   **[自動分類]** タブで次のように設定します。
 
-    -   **固定スケジュールを有効にする**: このチェック ボックスをオンにします。
+    -   **固定スケジュールを有効にする**: このチェック ボックスを選択します。
 
     -   実行するすべての分類規則のスケジュールを構成します。これには、RMS のプロパティでファイルを分類する新しい規則も含まれます。
 
     -   **新しいファイルの連続分類を許可する**: 新しいファイルが分類されるように、このチェック ボックスをオンにします。
 
-    -   省略可能: レポートと通知のオプションの構成など、他の必要な変更を行います。
+    -   省略可能: レポートと通知のオプションの構成など、必要なその他の変更を加えます。
 
 分類の構成が完了したので、ファイルに RMS 保護を適用する管理タスクを構成できます。
 
@@ -241,7 +243,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
             スクリプトが完了するのに十分な時間を指定します。 このソリューションはフォルダー内のすべてのファイルを保護しますが、スクリプトは、毎回、ファイルごとに 1 回実行します。 これは Azure Information Protection クライアントがサポートするような同時にすべてのファイルを保護する方法より時間がかかりますが、FCI のファイル単位の構成の方がいっそう強力です。 たとえば、[Source File Owner Email] 変数を使用すると保護されるファイルの所有者が異なっていてもかまいません (元の所有者の維持)。また、フォルダー内のすべてのファイルではなく一部のファイルだけを選択して保護するように後で構成を変更する場合は、このファイル単位のアクションが必要になります。
 
-        -   **新しいファイルに対して連続実行する**: このチェック ボックスをオンにします。
+        -   **新しいファイルに対して連続実行する**: このチェック ボックスを選択します。
 
 ### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>規則とタスクを手動で実行して構成をテストする
 

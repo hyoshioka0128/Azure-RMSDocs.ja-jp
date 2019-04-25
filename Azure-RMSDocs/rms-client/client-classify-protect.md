@@ -1,26 +1,28 @@
 ---
-title: Azure Information Protection を使用してファイルや電子メールを分類して保護する
+title: Azure Information Protection - AIP を使用した分類し、保護
 description: ドキュメントや電子メールを分類して保護する方法の手順です。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f8ad7f4e9243e7f6b2be306681ba11d18cc9394b
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: e7d4083bbd2f11e4abcd934c8bb17cc49d4e2b83
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253954"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60185177"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド:Azure Information Protection を使用してファイルや電子メールを分類して保護する
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](client-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
@@ -37,7 +39,7 @@ ms.locfileid: "56253954"
 
 組織外のユーザーとファイルを共有する場合は、外部ユーザーからファイルを保護する方法について、事前にヘルプ デスクや管理者に確認をとってください。
 
-たとえば、別の組織内のユーザーと定期的に情報をやりとりをする場合は、それらのユーザーが保護されたドキュメントを読み取って使用できるように、管理者が保護を設定するラベルを構成している可能性があります。 その後、それらのラベルを選択し、共有するドキュメントを分類して保護します。
+たとえば、組織は、定期的に別の組織内のユーザーと通信する場合、管理者可能性があります構成しているラベルこれらのユーザーを読み取り、保護されたドキュメントを使用するようします。 場合は、分類および共有するドキュメントを保護するこれらのラベルを選択します。
 
 なお、外部ユーザーに対して[企業間取引 (B2B) アカウント](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b)が作成されている場合は、ドキュメントを共有する前に、[Office アプリを使用してカスタム アクセス許可を設定する](#set-custom-permissions-for-a-document)か、[ファイル エクスプ ローラーを使用してカスタム アクセス許可を設定する](#using-file-explorer-to-classify-and-protect-files)ことができます。 カスタム アクセス許可を設定し、内部利用向けにドキュメントが既に保護されている場合、まずそのファイルのコピーを作成して、元のアクセス許可を保持します。 次に、そのコピーを使用してカスタム アクセス許可を設定します。
 
@@ -88,7 +90,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 1. **[ホーム]** タブの **[保護]** グループで、**[保護]** > **[カスタム アクセス許可]** をクリックします。
 
-    ![カスタム アクセス許可オプション](../media/custom-permissions-callout.png)
+    ![カスタム アクセス許可のオプション](../media/custom-permissions-callout.png)
     
     **[カスタム アクセス許可]** が表示されない場合、管理者はお客様がこのオプションを使用することを許可していません。
     
@@ -104,7 +106,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
         
         アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択することもできます。
     
-    - **アクセスの有効期限**: ファイルの期間が限定されていて、設定された日付を過ぎた後は指定されたユーザーがファイルを開けないようにする場合にのみ、このオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
+    - **アクセスの有効期限**: 指定されたユーザーが日付を設定した後、選択したファイルまたはファイルを開くことができませんように時間を区別するファイルに対してのみこのオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
 
 5. **[適用]** をクリックして、**"カスタム アクセス許可が適用されました"** というメッセージが表示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
 
@@ -133,13 +135,13 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類および保護するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 次に例を示します。
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 以下に例を示します。
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 以下に例を示します。
 
      ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
     
@@ -167,7 +169,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
 
-選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 次に例を示します。
+選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 以下に例を示します。
 
 ![Azure Information Protection のロック アイコンが付いた保護されたファイル](../media/Pfile.png)
 
@@ -179,7 +181,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
--   [作業内容](client-user-guide.md#what-do-you-want-to-do)
+-   [目的に合ったトピックをクリックしてください](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 **[Make the custom permissions option available to users]\(ユーザーがカスタム アクセス許可オプションを使用できるようにする\)** のポリシー設定を有効にする構成手順については、「[Azure Information Protection のポリシー設定を構成する](../configure-policy-settings.md)」を参照してください。

@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 5f6628c9a09b1b881c3e2c211d1c54e044b6d3b4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333366"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179884"
 ---
 # <a name="overview"></a>概要
 
@@ -47,11 +47,11 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 | トピック | 説明 |
 |-------|-------------|
 |[クライアント](ad-rms-client.md) |このトピックでは、Rights Management Service Client 2.1 の用途と機能について説明します。 |
-|[サーバー](ad-rms-server.md) | このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。|
+|[[サーバー]](ad-rms-server.md) | このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。|
 
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [RMS の概念](application-types.md)
-* [作業開始](getting-started-with-ad-rms-2-0.md)
+* [開始するには](getting-started-with-ad-rms-2-0.md)
 * [AD RMS の IT Pro ドキュメント](https://technet.microsoft.com/library/cc771234.aspx)

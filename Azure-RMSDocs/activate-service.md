@@ -12,11 +12,11 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828908"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175816"
 ---
 # <a name="activating-azure-rights-management"></a>Rights Management をアクティブにする
 
@@ -81,7 +81,7 @@ Azure Rights Management サービスをアクティブにした後は、組織�
 > [!IMPORTANT]
 > このコマンドを使用するには、バージョン **2.1.0.0** 以降の [Azure Rights Management PowerShell モジュール](https://www.powershellgallery.com/packages/AADRM)が必要です。
 >
-> です。インストールされているバージョンを確認するには、**(Get-Module aadrm -ListAvailable).Version** を実行します。
+> インストールされているバージョンを確認するには、次のコマンドを実行します。**(Get-Module aadrm -ListAvailable).Version** を実行します。
 
 たとえば、テストのために最初は “IT department” グループ (オブジェクト ID が fbb99ded-32a0-45f1-b038-38b519009503) の管理者だけがコンテンツを保護できるようにする場合は、次のコマンドを使用します。
 

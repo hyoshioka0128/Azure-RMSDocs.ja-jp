@@ -12,11 +12,11 @@ ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: b5a27e874af808136274a50d25310d722f399032
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252743"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181635"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -25,7 +25,7 @@ ms.locfileid: "56252743"
 AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
 
-## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>手順 1.AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する
+## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>手順 1:AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する
 
 Azure Information Protection のデータ保護を指定するサービスを構成および管理できるように、AADRM モジュールをインストールします。
 
@@ -36,7 +36,7 @@ Azure Information Protection のデータ保護を指定するサービスを構
 
 移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、**<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
-次に例を示します。**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+以下に例を示します。**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Azure Rights Management サービス URL を確認するには
 

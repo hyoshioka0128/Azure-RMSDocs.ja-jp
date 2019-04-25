@@ -4,18 +4,18 @@ description: ユーザーを正常に認証できるように、Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/05/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.suite: ems
-ms.openlocfilehash: 7be53f80e3de227ee2439121bc6733661274f3e1
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 171f7c3a410578421d7dffdf4ba12808940abf58
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258472"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181516"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -33,7 +33,7 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 
 Office 2010 を実行しているコンピューターの場合: 
 
-- Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うには、これらのコンピューターに [Azure Information Protection クライアント](./rms-client/aip-client.md)が必要です。
+- これらのコンピューターが必要な[Azure Information Protection クライアントのラベル付けを統合する](./rms-client/aip-clientv2.md)または[Azure Information Protection クライアント](./rms-client/aip-client.md)Azure Information Protection とそのデータ保護への認証サービス、Azure Rights Management を使用します。
 
 - ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
 
@@ -60,7 +60,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 - Azure Information Protection クライアント:
 
-    - Windows 用の [Azure Information Protection クライアント](./rms-client/aip-client.md)および iOS 用および Android 用のビューアー アプリでは、常に MFA がサポートされており、最小バージョンは不要です。 
+    - Windows 用 Azure Information Protection クライアントおよび iOS と Android 用のビューアー アプリが常にサポートされている MFA;最小バージョンは必要ありません。 
 
 -   Mac コンピューター用の Rights Management 共有アプリ:
 
@@ -76,7 +76,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 - 統合テナント (オンプレミスのフェデレーション サーバー) の場合:
 
-    - 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば AD FS を使用している場合は、TechNet の記事「[AD FS の追加の認証方法の構成](https://technet.microsoft.com/library/dn758113.aspx)」をご覧ください。
+    - 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば、AD FS を使用している場合は、表示[AD FS の追加の認証方法の構成](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)します。
 
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 

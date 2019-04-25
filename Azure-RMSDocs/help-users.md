@@ -12,11 +12,11 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258999"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182332"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -103,7 +103,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 次に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
+2.  **[オプション]** タブ:**[アクセス許可]** > オプションを選択します。 以下に例を示します。**[転送不可]**、**[\<会社名>- 社外秘]**、**[\<会社名> - 社外秘、表示のみ]**。
 
 3.  メッセージを送信します。
 
@@ -115,7 +115,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 次に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、**[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 以下に例を示します。**[暗号化]** または **[\<会社名> - 社外秘]**。
 
 3. メッセージを送信します。
 

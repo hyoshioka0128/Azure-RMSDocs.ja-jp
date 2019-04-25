@@ -1,44 +1,53 @@
 ---
-title: Azure Information Protection 統合ラベル付けクライアント - バージョン リリース情報
+title: 統合、azure Information Protection クライアントのバージョンをラベル付けリリース履歴とサポート ポリシー
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 7eb7ffd98651ed35be7ecd8043e49c1d15a65e8e
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: 1262a2f1a70002686aed0bad47354cdc5ac23bac
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809711"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180887"
 ---
-# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報
+# <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>統合、azure Information Protection クライアントのバージョンをラベル付けリリース履歴とサポート ポリシー
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>
+> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+
+Azure Information Protection の統合されたラベル付けクライアントをダウンロードすることができます、 [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。
+
+### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
+
+Azure Information Protection の統合されたラベル付けクライアントの各一般 (公開 GA) バージョンは最大 6 か月間、後続の GA バージョンのリリース後でサポートされています。 ドキュメントには、サポートされていないバージョンのクライアントに関する情報は含まれません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
+
+実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
 
 > [!NOTE]
-> このクライアントはプレビュー段階にあり、変更される可能性があります。 ここでは統合ラベル付けストアを使用し、次の管理センターからラベルを含むポリシーをダウンロードします: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 [詳細情報](/Office365/SecurityCompliance/sensitivity-labels)
-
-Azure Information Protection 統合ラベル付けクライアントの最新プレビュー バージョンを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=57440)からダウンロードできます。
+> テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
 ### <a name="release-information"></a>リリース情報
 
-次の情報を使って、Azure Information Protection 統合ラベル付けクライアントの最新プレビュー情報のサポート内容を参照します。
+次の情報を使用すると、Azure Information Protection の統合されたラベル付けクライアントの一般公開バージョンでサポートされる機能を参照してください。
 
 このクライアントでは、Windows コンピューター用の Office アドオン、エクスプローラー用の拡張機能、および PowerShell モジュールがインストールされます。 このクライアントには、Azure からポリシーをダウンロードする Azure Information Protection クライアントと同じ[前提条件](../requirements.md)があります。
 
-Azure Information Protection クライアントと機能を比較するには、「[クライアントの機能比較](use-client.md#feature-comparisons-for-the-clients)」をご覧ください。
+Azure Information Protection クライアントと機能を比較するには、「[クライアントの機能比較](use-client.md#compare-the-clients)」をご覧ください。
 
-## <a name="current-preview-version"></a>現在のプレビュー バージョン
+## <a name="version-20778"></a>バージョン 2.0.778
 
-**リリース日**: 2019 年 2 月 25 日
+**リリース日**: 04/16/2019
 
-Windows 用 Azure Information Protection 統合ラベル付けクライアントのこのプレビュー バージョンでは、次の機能をサポートします。 
+この最初の一般公開バージョンの Windows 用 Azure Information Protection のクライアントを統一されたにラベル付けには、次の機能がサポートされています。 
 
 - Azure Information Protection クライアントからのアップグレード。
 
@@ -54,7 +63,7 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
     - [ドキュメントに適用されているラベル情報を読み取る](/powershell/module/azureinformationprotection/get-aipfilestatus)
     - [無人の PowerShell セッションをサポートするために認証する](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- [Azure Information Protection 分析](../reports-aip.md)を使った中央レポート機能のサポート。
+- 監査を使用して中央レポートのデータとエンドポイントの検出サポート[Azure Information Protection analytics](../reports-aip.md)します。
 
 - 次のラベルおよびポリシー設定:
     - 視覚的なマーキング (ヘッダー、フッター、透かし)
@@ -70,34 +79,14 @@ Windows 用 Azure Information Protection 統合ラベル付けクライアント
 
 - 設定のリセットとログのエクスポートを含む、ヘルプとフィードバックのダイアログ ボックス。
 
-### <a name="features-that-do-not-work-in-this-preview-version-or-are-not-available"></a>このプレビュー バージョンでは機能しない、または使用できない機能
 
-主な機能:
+## <a name="next-steps"></a>次の手順
 
-- オンプレミスのデータ ストア上のファイルを検出、ラベル付け、保護するためのスキャナーは使用できません。
+完全な詳細については、[比較表](use-client.md#compare-the-clients)をご覧ください。
 
-- Azure portal から移行され、HYOK 保護用に構成されたラベルは、公開されるとクライアントに表示されますが、これらのラベルでは保護が適用されません。
+インストールして、このクライアントを使用しての詳細については。 
 
-- AzureInformationProtection モジュールのコマンドレットの完全なセットは使用できません。これには保護サービスに直接接続するコマンドレットが含まれます。 たとえば、ファイルを一括で保護解除する、Unprotect-RMSFile です。
+- ユーザー向け: [クライアントのダウンロードとインストール](install-unifiedlabelingclient-app.md)
 
-完全な詳細については、[比較表](use-client.md#feature-comparisons-for-the-clients)をご覧ください。
+- 管理者向け: [Azure Information Protection クライアント管理者ガイドのラベル付けを統合します。](clientv2-admin-guide.md)
 
-## <a name="instructions"></a>手順
-
-1. 次の指示に従ってクライアントをインストールします。[ユーザー ガイド:Azure Information Protection クライアント (プレビュー) をダウンロードしてインストールする](install-unifiedlabelingclient-app.md) 
-
-2. Azure Information Protection クライアントの場合と同じようにクライアントを使いますが、Office アプリに関して次の例外があります。
-    - Office リボン上のボタンの名前は、**[保護]** ではなく **[秘密度]** です。
-    - 管理者は、既定で Information Protection バーを表示することができません。ただし、ユーザーは、**[秘密度]** ボタンから **[バーの表示]** を選択することでこれを表示できます。 
-    - カスタムのアクセス許可は使用できません
-    - 追跡と取り消しは使用できません
-    
-    ユーザーの手順について:
-    
-    - [ファイルや電子メールを分類する](client-classify.md) 
-    
-    - [ファイルや電子メールを分類して保護する](client-classify-protect.md)
-
-3. 操作の共有 
-    
-    - このプレビュー クライアントについてフィードバックを提供したり、質問するには、[Azure Information Protection 用の Yammer サイト](https://www.yammer.com/AskIPTeam)に関するページを使用してください。

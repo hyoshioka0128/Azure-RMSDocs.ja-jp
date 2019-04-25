@@ -4,21 +4,23 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c0a3acebb9f95d0044e1ad4b5cbea637e7742201
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: 0c77eb5df06ca3a7ba78b4671cc9e52cdb89a34d
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364540"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180099"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Information Protection バーに表示されるタイトルとヒントのほかに、ラベルから個別に構成できる Azure Information Protection ポリシーにはいくつかの設定があります。
 
@@ -64,8 +66,7 @@ Azure Information Protection のサブスクリプションを購入した時期
         
         このポリシー設定を使う際にサブラベルの順序を考慮する場合は、[クライアントの詳細設定を構成する](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)必要があります。
         
-        ユーザー定義のアクセス許可のプレビュー設定を使って保護するために、最上位の分類のラベルを含む添付ファイルを構成する場合: - 通常利用可能なバージョンのクライアント: 電子メール メッセージは同じ分類でラベル付けされますが、保護は適用されません。
-            - プレビュー バージョンのクライアント: ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれる場合、電子メールにそのラベルが適用され、転送不可保護も適用されます。 ラベルのユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびファイル エクスプローラーのみを対象とする場合、そのラベルは電子メールに適用されず、保護も適用されません。
+        ユーザー定義のアクセス許可のプレビュー設定で保護するため、最上位の分類ラベルの添付ファイルが構成されている場合: - Outlook (Do 転送不可)、そのラベルを適用し、不可はラベルのユーザー定義のアクセス許可が含まれます保護は、電子メールに適用されます。 ラベルのユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびファイル エクスプローラーのみを対象とする場合、そのラベルは電子メールに適用されず、保護も適用されません。
     
    - **[Office アプリの Information Protection バーを表示します]**:この設定をオフにすると、ユーザーは Word、Excel、PowerPoint、Outlook のバーからラベルを選択できなくなります。 代わりに、リボンの **[保護]** ボタンからラベルを選択する必要があります。 この設定をオンにすると、ユーザーはバーまたはボタンのいずれかからラベルを選択できます。
         

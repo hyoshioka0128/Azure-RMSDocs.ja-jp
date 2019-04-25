@@ -12,13 +12,13 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 79d4dbb1d6339f0261d57b32cf77addee9ca9744
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258923"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180343"
 ---
-# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントでのインストールと構成
+# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントのインストールと構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -54,9 +54,9 @@ Azure Information Protection アプリは Microsoft Intune App Software Developm
 
 Azure Information Protection アプリを Intune に追加するときの追加情報:
 
-- iOS の場合:Intune からアプリを検索して追加します。
+- Ios:Intune からアプリを検索して追加します。
 
-- Android の場合:アプリを追加するときに、次の **Appstore URL** を使用します。
+- Android:アプリを追加するときに、次の **Appstore URL** を使用します。
         
         https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 

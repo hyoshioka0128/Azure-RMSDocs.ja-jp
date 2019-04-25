@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikka
 ms.suite: ems
 ms.openlocfilehash: 5be6785c86cfeb104acc7f12d4cb7b830e9c9d36
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251877"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178501"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>別のテナントへのサービス アプリケーションのデプロイ
 
@@ -27,7 +27,7 @@ ms.locfileid: "56251877"
 > [!Note]
 > このシナリオは、サービス アプリケーションで対称キー認証を使用する場合にのみ関連します。
 
-## <a name="scenario"></a>通信の種類
+## <a name="scenario"></a>シナリオ
 *CoolApp* という会社は、ユーザーが Dynamics、SAP、Salesforce などのビジネス アプリケーションからドキュメントをエクスポートする際にドキュメントを暗号化し、ラベルを付けて保護する Azure Information Protection (AIP) を使用してサービス アプリケーションを開発しました。 このシナリオでは、*ABC* という大企業は *CoolApp の*新しいアプリケーションを購入したため、*CoolApp* チームはソリューションを *ABC の*環境にデプロイする必要があります。 
 
 ![別のテナントで対照キーを作成する場合のサンプル フロー](../media/develop/service-app-provision.jpg)

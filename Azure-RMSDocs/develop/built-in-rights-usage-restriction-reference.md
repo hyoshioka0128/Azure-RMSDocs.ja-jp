@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 6904c0e477a34e4321fcf3d7ee66b47b201bed21
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332006"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178938"
 ---
-# <a name="how-to-use-built-in-rights"></a>方法:組み込み権限の使用
+# <a name="how-to-use-built-in-rights"></a>方法: 組み込み権限の使用
 
 このトピックでは、Microsoft Rights Management SDK 4.2 の組み込み権限と、その制限に従うことでアプリケーションによって適用される使用制限について説明します。 組み込み権限、一般的な権限、編集可能なドキュメントの権限、電子メール権限、オペレーティング システムによる説明とその値を次に示します。
 

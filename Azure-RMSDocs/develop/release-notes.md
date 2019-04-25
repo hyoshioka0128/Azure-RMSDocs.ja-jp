@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809813"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176020"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -200,7 +200,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 これはなぜでしょうか。
+**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 なぜでしょうか。
 
 **A**: これは既知の問題であり、今後対応する予定です。
 
@@ -208,7 +208,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 これはなぜでしょうか。
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜでしょうか。
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -225,13 +225,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
 **A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから呼び出す必要があります。
 
-**Android**
+**iOS**
 
 **Q**: SDK の開発はどのプラットフォームで検証されましたか。
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 これはなぜでしょうか。
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜでしょうか。
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 

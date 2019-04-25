@@ -4,19 +4,19 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bf20171ec434d0fde5953f23c11d555f7d80139
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: b1370046de0b2b455128af44078476e0b15f9995
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252411"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183917"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -63,7 +63,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 ユーザーは Azure Information Protection をサポートするオペレーティング システムを実行するクライアント デバイス (コンピューターまたはモバイル デバイス) を所有している必要があります。
 
-次のデバイスでは、Azure Information Protection クライアントをサポートします。これにより、ユーザーは次のドキュメントや電子メールの分類およびラベル付けを行うことができます。
+次のデバイスでは、Azure Information Protection の統合されたラベル付けクライアント、および Azure Information Protection クライアントをサポートします。 [両方のクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)分類して、文書や電子メールをラベル付けできるようにします。
 
 - Windows 10 (x86、x64)
     
@@ -81,17 +81,22 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows Server 2008 R2 
 
-物理コンピューターでの Azure Information Protection クライアントのインストールに加え、仮想マシンでインストールすることもできます。 仮想デスクトップ ソリューションのソフトウェア ベンダーで、Azure Information Protection クライアントを実行するために必要になる可能性がある構成が追加されているかどうかを確認します。 たとえば、Citrix ソリューションでは、Office (winword.exe、excel.exe、outlook.exe、powerpoint.exe) と Microsoft Azure Information Protection クライアント (msip.app.exe、msip.viewer.exe) に対して [Citrix アプリケーション プログラミング インターフェイス (API) フックを無効にする](https://support.citrix.com/article/CTX107825)必要がある場合があります。
+物理コンピューターでクライアントをインストールする方法に加えてインストールすることも、仮想マシンでします。 仮想デスクトップ ソリューションのソフトウェア ベンダーが実行する必要がある追加の構成を持つかどうかを確認、Azure Information Protection の統合されたラベル付けクライアントまたは Azure Information Protection クライアント。 たとえば、Citrix のソリューションにならない場合があります[Citrix アプリケーション プログラミング インターフェイス (API) フックを無効にする](https://support.citrix.com/article/CTX107825)for Office (winword.exe、excel.exe、outlook.exe、powerpoint.exe) および実行可能ファイル、AzureInformation Protection の統一されたラベル付けクライアントまたは Azure Information Protection クライアント (msip.app.exe、msip.viewer.exe)。
 
-これらのサーバー バージョンでは、リモート デスクトップ サービスについて Azure Information Protection クライアントがサポートされています。 Azure Information Protection クライアントとリモート デスクトップ サービスを使用しているときに、ユーザー プロファイルを削除する場合は、**%Appdata%\Microsoft\Protect** フォルダーを削除しないでください。
+表示されているサーバー バージョンでは、Azure Information Protection クライアントは、リモート デスクトップ サービスのサポートされます。 リモート デスクトップ サービスを Azure Information Protection クライアントを使用する場合にユーザー プロファイルを削除する場合は削除しないでください、 **%Appdata%\Microsoft\Protect**フォルダー。
 
-Azure Information Protection クライアントで Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)からデータを使用できます。
+データを使用できる、Azure Information Protection クライアントは、Azure Rights Management サービスを使用して、データを保護するときに、[同じデバイス](requirements-client-devices.md)Azure Rights Management サービスをサポートします。
 
-Azure Information Protection クライアントには、管理者ガイドに一覧表示される[追加の前提条件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)があります。
+Azure Information Protection クライアントは、それぞれの管理者ガイドに記載されている追加の前提条件があります。
 
-## <a name="applications"></a>アプリケーション
+- Azure Information Protection 統合ラベル付けクライアント:[前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
-Azure Information Protection クライアントは、次の Office エディションのいずれかの Office アプリケーション **Word**、**Excel**、**PowerPoint**、**Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
+- Azure Information Protection クライアント:[前提条件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+
+
+## <a name="applications"></a>[アプリケーション]
+
+Azure Information Protection クライアントがラベルし、Office アプリケーションを使用してドキュメントや電子メールを保護**Word**、 **Excel**、 **PowerPoint**、および**Outlook**から次の Office エディションのいずれか。
 
 - ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ
 
@@ -107,7 +112,7 @@ Azure Information Protection クライアントは、次の Office エディシ�
 
 Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Azure Information Protection バーまたは Office リボンの **[保護]** ボタンでユーザーに表示されません。 
 
-Azure Information Protection クライアントは、同じコンピューター上で Office の複数のバージョンをサポートしていません。 このクライアントはまた、Office でのユーザー アカウントの切り替えもサポートしていません。
+Azure Information Protection クライアントは、同じコンピューターに Office の複数のバージョンをサポートしていません。 これらのクライアントもできないユーザー アカウントの切り替え Office にあります。
 
 保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
 
@@ -121,7 +126,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 - **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
     
-    - ヒントChrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
+    - ヒント:Chrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
     
         ブラウザー ウィンドウに表示されるものについては気に留める必要はありません。 その代わりに、アドレス バーの鍵マークをクリックしてサイトの情報を確認します。 サイトの情報で発行元の証明機関 (CA) を確認できます。 証明書が Microsoft CA によって発行されたものでない場合、クライアントとサービス間のセキュリティで保護された接続は終了し、ファイアウォール上で再構成する必要がある場合があります。 次の図は、Microsoft が発行した CA の例です。 証明書を発行したのが内部 CA である場合、この構成は Azure Information Protection との互換性がありません。
         
@@ -146,7 +151,3 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 - 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照)。
 
 [AD RMS から Azure Information Protection への移行](https://technet.microsoft.com/library/Dn858447.aspx)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aadrm/Set-AadrmMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
-
-
-
-

@@ -12,11 +12,11 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 789c3178827e52c27759268b1340b53c3add1c39
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259713"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181720"
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>AADRM PowerShell モジュールのインストール
 
@@ -26,13 +26,13 @@ ms.locfileid: "56259713"
 
 この PowerShell モジュールを使用すると、インターネットに接続され、次のセクションでリストする前提条件を満たす任意のコンピューターを使って、コマンドラインから Azure Rights Management サービスを管理できます。 Azure Rights Management 用の Windows PowerShell は、自動化のためのスクリプトをサポートし、高度な構成シナリオのために必要になる場合があります。 管理タスクと、モジュールがサポートする構成に関する詳細については、「[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)」を参照してください。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 この表には、Azure Information Protection から Azure Rights Management サービス用 AADRM PowerShell モジュールをインストールして使用するための前提条件が一覧表示されています。
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Windows PowerShell の最小バージョン:3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
-|Microsoft .NET Framework の最小バージョン:4.5<br /><br />注: 最近のオペレーティング システムには、このバージョンの Microsoft .NET Framework が付属しています。このため、手動でインストールする必要があるのは、クライアントのオペレーティング システムが Windows 8.0 よりも前のバージョンの場合か、サーバーのオペレーティング システムが Windows Server 2012 よりも前のバージョンの場合に限ります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、AADRM モジュールで使用されるクラスの一部で必要になります。|
+|Windows PowerShell の最小バージョン:3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
+|Microsoft .NET Framework の最小バージョン:4.5<br /><br />注:このバージョンの Microsoft .NET Framework は、クライアント オペレーティング システムが Windows 8.0 よりも前か、サーバー オペレーティング システムが Windows Server 2012 より小さい場合にのみに手動でインストールする必要があるために、以降のオペレーティング システムに含まれています。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この最小バージョンの Microsoft .NET Framework は、AADRM モジュールで使用されるクラスの一部で必要になります。|
 
 AADRM モジュールのバージョン 2.5.0.0 以降、Microsoft Online Services サインイン アシスタントは必要なくなりました。
 
@@ -69,7 +69,7 @@ Windows PowerShell セッションで、インストールされているモジ�
 (Get-Module AADRM –ListAvailable).Version
 ```
 
-注: このコマンドが失敗した場合は、最初に **Import-Module AADRM** を実行します。
+注:このコマンドが失敗した場合は、最初に **Import-Module AADRM** を実行します。
 
 使用可能なコマンドレットを確認するには、次のコマンドを入力します。
 
@@ -77,15 +77,15 @@ Windows PowerShell セッションで、インストールされているモジ�
 Get-Command -Module AADRM
 ```
 
-`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 次に例を示します。
+`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 以下に例を示します。
 
 ```
 Get-Help Connect-AadrmService -online
 ```
 
-詳細情報:
+詳しくは、次のトピックをご覧ください。
 
--   使用可能なすべてのコマンドレットの一覧:[AADRM モジュール](/powershell/aadrm/vlatest/rightsmanagement)
+-   使用可能なコマンドレットの完全な一覧:[AADRM モジュール](/powershell/aadrm/vlatest/rightsmanagement)
 
 -   PowerShell をサポートする主要な構成シナリオの一覧: [Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)
 

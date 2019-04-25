@@ -12,11 +12,11 @@ ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: c8219221fe9b932e0d09901dccf496df5f83ef76
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828874"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183927"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Active Directory Rights Management サービス (AD RMS) もある場合の Azure Rights Management 用の環境の準備
 
@@ -54,7 +54,7 @@ Azure Information Protection に移行する場合でも、制限事項を受け
 
 2018 年 2 月末日まで、Azure Information Protection を含む新しいサブスクリプションでは、既定により Azure Rights Management サービスがアクティブになります。 このサービスが自動的にアクティブ化されていて、Active Directory Rights Management サービス (AD RMS) も使用している場合は、この組み合わせには互換性がありません。したがって、でくるだけ早く Azure Rights Management サービスを非アクティブ化することが重要です。 
 
-### <a name="step-1-deactivate-azure-rights-management"></a>手順 1.Azure Rights Management を非アクティブ化する
+### <a name="step-1-deactivate-azure-rights-management"></a>手順 1:Azure Rights Management を非アクティブ化する
 Azure Rights Management を非アクティブ化するには、次のいずれかの手順を使用します。
 
 > [!TIP]
@@ -86,7 +86,7 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、**[非アクティブ化]** が **[アクティブ化]** に変わります。 
 
-### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
+### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
 
 移行ガイダンスをご覧ください: [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -97,13 +97,13 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 サービスが自動的にアクティブ化され、かつ AD RMS を使用している場合、この組み合わせには互換性がないため、サービスの自動更新からテナントを除外することが重要です。 
 
-### <a name="step-1-opt-out-from-the-automatic-service-update"></a>手順 1.サービスの自動更新から除外する
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>手順 1:サービスの自動更新から除外する
 
 次の [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell コマンドを使用します: `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
 
 [詳細情報](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
+### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
 
 移行ガイダンスをご覧ください: [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -114,15 +114,15 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 AD RMS も使用している場合は、**[アクティブ化]** オプションを選択しないでください。 Azure Rights Management サービスがアクティブになっていない場合でも、分類のみを適用するラベルで Azure Information Protection を使用できます。 データ保護を含まない特別な既定ポリシーが自動的に作成されます。これらの構成オプションは、Azure Rights Management サービスがアクティブになるまで使用不可のままです。
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1.分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1:分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
 
 **[Azure Information Protection - ラベル]** ブレードから、データ保護のためのオプションが含まれていないラベルを表示して構成します。 ラベルとポリシーの設定を構成する方法について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 
-### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
+### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
 
 移行ガイダンスをご覧ください: [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
 
-### <a name="step-3-configure-labels-for-protection"></a>手順 3: 保護のためのラベルを構成する
+### <a name="step-3-configure-labels-for-protection"></a>手順 3:保護のためのラベルを構成する
 
 移行プロセス時に Azure Rights Management サービスをアクティブにした場合は、データ保護のためにラベルを構成できます。 ただし、ユーザーをバッチで移行する場合は、保護を適用するラベルの範囲が移行対象のユーザーのみに指定されていることを確認してください。
 

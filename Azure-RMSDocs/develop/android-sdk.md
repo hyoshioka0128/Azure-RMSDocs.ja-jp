@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: e3bce5ec86f8c655ca6f37a108f007d50387c2d2
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333611"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179566"
 ---
 # <a name="android-setup"></a>Android のセットアップ
 
@@ -31,7 +31,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -139,9 +139,9 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の Android アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
-[作業開始](get-started.md)
+[開始するには](get-started.md)
 
 [新機能](release-notes.md)
 

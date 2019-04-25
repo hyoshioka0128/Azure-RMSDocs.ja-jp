@@ -12,11 +12,11 @@ ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 0c9e426fe6025b31f03ed84e65741c4a461e3938
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257316"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181832"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -55,9 +55,9 @@ Azure Information Protection では、承認済みユーザーのコラボレー
     
    - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
     
-   - 第 2 外部組織内のグループ: 同様に **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のように指定します。
+   - 第 2 外部組織内のグループ: 同様に **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、 sales@contoso.comのようにします。
     
-   - Azure AD アカウントを持っていないユーザー: この場合も **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のように指定します。 
+   - Azure AD アカウントを持っていないユーザー: この場合も **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、 bengi.turan@gmail.comのようにします。 
 
 4. これらすべてのユーザーに同じアクセス許可を与える場合: **[事前設定されたものの中からアクセス許可を選択する]** に対し、**[共同所有者]**、**[共同作成者]**、**[レビュー担当者]**、**[カスタム]** のいずれかを選択し、付与するアクセス許可を選択します。
     
@@ -93,7 +93,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 次に例を示します。
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 以下に例を示します。
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 
@@ -101,7 +101,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ![Azure Information Protection の権限に関するダイアログ ボックスの例](./media/example-permisisons-popup.png)
 
-注: Azure Information Protection を使用している外部ユーザーによってドキュメントが開かれた場合、Office アプリケーションでは、そのドキュメントの分類ラベルの視覚的なマーキングは残りますが、ラベルは表示されません。 代わりに、外部ユーザーはそれぞれの組織の分類法に沿って各自のラベルを適用できます。 外部ユーザーが編集したドキュメントを送り返してきた場合、Office でドキュメントを再び開くと元の分類ラベルが表示されます。
+注:Azure Information Protection を使用している外部ユーザーによってドキュメントが開かれた場合、Office アプリケーションでは、そのドキュメントの分類ラベルの視覚的なマーキングは残りますが、ラベルは表示されません。 代わりに、外部ユーザーはそれぞれの組織の分類法に沿って各自のラベルを適用できます。 外部ユーザーが編集したドキュメントを送り返してきた場合、Office でドキュメントを再び開くと元の分類ラベルが表示されます。
 
 保護されたドキュメントが開く前に、次のいずれかの認証フローが発生します。
 
@@ -133,9 +133,9 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 |ドキュメントの表示と編集のためのプラットフォーム: <br />Word、Excel、PowerPoint|認証方法:<br />Azure AD|認証方法:<br />Microsoft アカウント|
 |---------------|----------|-----------|-----------|
 |Windows|はい [[1]](#footnote-1)|はい [[2]](#footnote-2)|
-|iOS|はい [[1]](#footnote-1)|[いいえ]|
-|Android|はい [[1]](#footnote-1)|[いいえ]|
-|MacOS|はい [[1]](#footnote-1)|[いいえ]|
+|iOS|はい [[1]](#footnote-1)|いいえ|
+|Android|はい [[1]](#footnote-1)|いいえ|
+|MacOS|はい [[1]](#footnote-1)|いいえ|
 
 ###### <a name="footnote-1"></a>脚注 1
 ユーザー アカウント、電子メールが有効なグループ、すべてのメンバーがサポートされています。 ユーザー アカウント、および電子メールが有効なグループには、ゲスト アカウントが含まれる場合があります。 すべてのメンバーには、ゲスト アカウントは含まれません。

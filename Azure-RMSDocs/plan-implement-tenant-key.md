@@ -1,22 +1,22 @@
 ---
 title: Azure Information Protection テナント キー
-description: Azure Information Protection テナント キーに関する計画および管理に役立つ情報です。 Microsoft がテナント キーを管理する (既定値) のではなく、組織に該当する特定の規制に準拠するために、ユーザーが自分でテナント キーを管理する必要がある場合があります。 ユーザーでのテナント キーの管理は、Bring Your Own Key (BYOK) とも呼ばれます。
+description: Microsoft Azure Information Protection のルート キーの管理ではなく作成してこのキーを管理する場合があります ("bring your own key"と呼ばれるまたは BYOK) のテナントの特定の規制に準拠します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/10/2018
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9fa0a6547ec508c50f25f5ec9fe926c7416fa5a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: da0d6f8e4e91b5f5e6163855434a39432256b2be
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258625"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182118"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -30,18 +30,18 @@ Azure Information Protection テナント キーとは
 
 - Azure Information Protection テナント キーは、Active Directory Rights Management サービス (AD RMS) からのサーバー ライセンサー証明書 (SLC) キーのオンライン版です。 
 
-**概要:** 次の表は、推奨されるテナント キー トポロジのクイック ガイドとしてご使用ください。 詳細については、別のドキュメントを参照してください。
+**概要:** 推奨されるテナント キー トポロジのクイック ガイドとして、次の表を使用します。 詳細については、別のドキュメントを参照してください。
 
 |ビジネスの要件|推奨テナント キー トポロジ|
 |------------------------|-----------------------------------|
-|特別なハードウェア、追加のソフトウェア、または Azure サブスクリプションなしで、Azure Information Protection をすばやくデプロイする。<br /><br />次に例を示します。テスト環境および組織にキー管理に関する規制上の要件がない場合。|マイクロソフト管理|
-|コンプライアンスに関する規制、追加のセキュリティ、およびすべてのライフ サイクル操作の制御。 <br /><br />次に例を示します。ハードウェア セキュリティ モジュール (HSM) でキーを保護する必要があります。|BYOK|
+|特別なハードウェア、追加のソフトウェア、または Azure サブスクリプションなしで、Azure Information Protection をすばやくデプロイする。<br /><br />以下に例を示します。テスト環境および組織にキー管理に関する規制上の要件がない場合。|マイクロソフト管理|
+|コンプライアンスに関する規制、追加のセキュリティ、およびすべてのライフ サイクル操作の制御。 <br /><br />以下に例を示します。ハードウェア セキュリティ モジュール (HSM) でキーを保護する必要があります。|BYOK|
 
 
 必要に応じて、デプロイ後に [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) コマンドレットを使ってテナント キー トポロジを変更できます。
 
 
-## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>テナント キー トポロジを選択する:Microsoft による管理 (既定) または自主管理 (BYOK)
+## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>選択、テナント キー トポロジ。(既定値) を Microsoft が管理または自主管理 (BYOK)
 
 組織に最適なテナント キー トポロジを決定します。
 
@@ -107,8 +107,8 @@ Microsoft でテナント キーを管理するようにした場合:
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Azure Information Protection テナントには Azure サブスクリプションが必要です。 ない場合は、[無料アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。 <br /><br /> HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。|Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには、次のように [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) の PowerShell コマンドレットを使用します。 <br /><br /> 1.**[管理者として実行]** オプションで Azure PowerShell セッションを開始し、次のコマンドを使用して、Azure Information Protection のテナントの全体管理者としてサインインします。`Login-AzureRmAccount`<br /><br />2.次のように入力し、サブスクリプションの名前と ID、Azure Information Protection テナント ID、有効な状態の値が表示されることを確認します。`Get-AzureRmSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注**:BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
-|オンプレミスで作成する HSM 保護キーを使用するには: <br /><br />- Key Vault の BYOK のすべての前提条件の一覧。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok)」を参照してください。 <br /><br /> **注**:BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
+|Azure Information Protection テナントには Azure サブスクリプションが必要です。 ない場合は、[無料アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。 <br /><br /> HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。|Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには使用[Azure PowerShell](/powershell/azure/overview)コマンドレット。 <br /><br /> 1.Azure PowerShell セッションを開始、**管理者として実行**オプション、およびを使用して、Azure Information Protection テナントのグローバル管理者としてサインイン`Connect-AzAccount`をコピーしてに結果として得られるトークン文字列を貼り付けます`https://microsoft.com/devicelogin`ブラウザーを使用しています。 <br /><br /> 詳細については、次を参照してください。 [Azure PowerShell を使用してサインイン](/powershell/azure/authenticate-azureps)します。 <br /><br />2.次のように入力し、サブスクリプションの名前と ID、Azure Information Protection テナント ID、有効な状態の値が表示されることを確認します。`Get-AzSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注意**:BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
+|オンプレミスで作成する HSM 保護キーを使用するには: <br /><br />- Key Vault の BYOK のすべての前提条件の一覧。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok)」を参照してください。 <br /><br /> **注意**:BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
 |テナント キーを含むキー コンテナーが Azure Key Vault の仮想ネットワーク サービス エンドポイントを使用する場合: <br /><br />- 信頼された Microsoft サービスを許可して、このファイアウォールをバイパスします。|詳細については、「[Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/key-vault-overview-vnet-service-endpoints)」(Azure Key Vault の仮想ネットワーク サービス エンドポイント) をご覧ください。|
 |Windows PowerShell 用の Azure Rights Management 管理モジュール。|インストール手順については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。 <br /><br />この Windows PowerShell モジュールを既にインストールしている場合は、次のコマンドを実行してバージョン番号が **2.9.0.0** 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version`|
 
@@ -124,7 +124,7 @@ Azure Information のテナント キーとして使用するキーを含む Key
 
 - 保護のためのすべての暗号化呼び出しは Azure Information Protection テナント キーにチェーンされるため、これらの呼び出しで発生するネットワーク待機時間を最小限に抑える必要があります。 そのためには、Azure Information Protection テナントと同じ Azure リージョンまたはインスタンスに Key Vault を作成します。
 
-Azure Information Protection テナントの場所を特定するには、[Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) PowerShell コマンドレットを使用し、URL からリージョンを特定します。 次に例を示します。
+Azure Information Protection テナントの場所を特定するには、[Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) PowerShell コマンドレットを使用し、URL からリージョンを特定します。 以下に例を示します。
 
     LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
@@ -149,7 +149,7 @@ Azure Key Vault ドキュメントを使用して、Azure Information Protection
 
 オンプレミスで HSM 保護キーを作成し、HSM 保護キーとして Key Vault に転送する場合は、「[Azure Key Vault の HSM 保護キーを生成し、転送する方法](/azure/key-vault/key-vault-hsm-protected-keys)」の手順に従ってください。
 
-Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは既定の構成で、操作には暗号化、暗号化解除、ラップ、ラップ解除、署名、確認が含まれます。 [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) を使用し、**[キー]** の詳細で返される *key_ops* の値を確認することで、許可されているキーの操作を確認できます。 必要に応じて、[Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) と *KeyOps* パラメーターを使用することで、許可された操作を追加します。
+Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは既定の構成で、操作には暗号化、暗号化解除、ラップ、ラップ解除、署名、確認が含まれます。 使用して、キーの許可された操作を確認できます[Get AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey)と検証、 *key_ops*に返される値、**キー**詳細。 必要に応じて、許可された操作の追加を使用して[Update AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey)と*KeyOps*パラメーター。
 
 Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 キー コンテナー URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
 
@@ -168,24 +168,24 @@ Azure portal を使用した構成:
 
 PowerShell を使用した構成:
 
-- Key Vault の PowerShell コマンドレット [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) を実行し、GUID **00000012-0000-0000-c000-000000000000** を使用して、Azure Rights Management サービス プリンシパルにアクセス許可を付与します。 次に例を示します。
+- Key Vault の PowerShell コマンドレットを実行[セット AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)、GUID を使用して、Azure Rights Management サービス プリンシパルにアクセス許可を付与**00000012-0000-0000-c000-000000000000**. 以下に例を示します。
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+        Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 このキーを組織の Azure Information Protection テナント キーとして使用するように、Azure Information Protection を構成できるようになったとします。 Azure RMS コマンドレットを使用するには、まず Azure Rights Management サービスに接続してサインインします。
 
     Connect-AadrmService
 
-次に、[Use-AadrmKeyVaultKey コマンドレット](/powershell/module/aadrm/use-aadrmkeyvaultkey)を実行して、キー URL を指定します。 次に例を示します。
+次に、[Use-AadrmKeyVaultKey コマンドレット](/powershell/module/aadrm/use-aadrmkeyvaultkey)を実行して、キー URL を指定します。 以下に例を示します。
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
 > [!IMPORTANT]
 > この例では、"aaaabbbbcccc111122223333" は使用するキーのバージョンです。 バージョンを指定しない場合は、現在のバージョンのキーが警告なしで使用され、機能するコマンドが表示されます。 ただし、Key Vault のキーを後で更新 (新たに) する場合、AadrmKeyVaultKey コマンドをもう一度実行する場合でも、Azure Rights Management サービスはテナントの機能を停止します。
 > 
-> このコマンドを実行する場合は、キー名だけでなく、キーのバージョンを指定することを確認してください。 Azure Key Vault コマンドの [Get AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) を使用して、現在のキーのバージョン番号を取得できます。 例: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+> このコマンドを実行する場合は、キー名だけでなく、キーのバージョンを指定することを確認してください。 Azure Key Vault cmd を使用する[Get AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey)を現在のキーのバージョン番号を取得します。 たとえば次のようになります。`Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-キーの URL が Azure Information Protection に対して正しく設定されていることを確認する必要がある場合: Azure Key Vault で、[Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) を実行して、キーの URL を表示します。
+キーの URL が Azure Information Protection に対して正しく設定されていることを確認する必要がある場合: Azure Key vault では、次のように実行します。 [Get AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey)キーを参照する URL。
 
 最後に、Azure Rights Management サービスが既にアクティブ化されている場合は、[Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行して、Azure Rights Management サービスのアクティブなテナント キーとしてこのキーを使用するように Azure Information Protection に指示します。 この手順を行わないと、Azure Information Protection は、テナントに対して自動的に作成された、既定の Microsoft 管理キーを使用し続けます。
 

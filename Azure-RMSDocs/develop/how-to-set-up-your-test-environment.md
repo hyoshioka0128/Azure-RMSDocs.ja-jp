@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 58de314ef4c87518c8aa6c53036c477b541ef5e1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331037"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178286"
 ---
 # <a name="testing-your-application"></a>アプリケーションのテスト
 
@@ -38,11 +38,11 @@ Azure RMS または Windows Server で実行される RMS サーバーのいず�
 
     RMS SDK 2.1 のインストールについては、「[SDK のインストール](install-the-rms-sdk.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 これは、包括的なガイドではありません。 RMS クライアント 2.1 の構成方法については、「[RMS クライアント 2.1 のデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [RMS サーバーをインストールして構成する方法](how-to-install-and-configure-an-rms-server.md)
 * [方法: ADAL 認証の使用](how-to-use-adal-authentication.md)

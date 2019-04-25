@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 3ea3ff7e8099521123a9cc2e27ed349ee1c091b5
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331496"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178337"
 ---
 # <a name="getting-started"></a>はじめに
 
@@ -66,6 +66,6 @@ RMS SDK 2.1 では、重要なクライアントおよびサーバー プラ�
 **1 回の記述** - RMS SDK 2.1 アプリケーションでは、最新の RMS 機能を使用するためにコードの変更や再コンパイルは必要ありません。 RMS の新機能は、RMS サーバーに追加されるとすぐに既存のアプリケーションで使用可能になります。
 **一貫性** - RMS SDK 2.1 により、さまざまな RMS 構成に一貫して従うアプリケーションを記述しやすくなります。 アプリケーション開発者が作成する必要のある RMS ユーザー インターフェイスの量が大幅に減少するので、ルック アンド フィールの一貫性が強化され、ユーザー教育の必要性を減らすこともできます。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [RMS 開発者ガイド](developers-guide.md)

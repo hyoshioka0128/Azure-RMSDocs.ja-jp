@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: 7a7019e72e4d8d2b66c81fbc69542e140992467b
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330221"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176824"
 ---
 # <a name="linux-setup"></a>Linux のセットアップ
 
@@ -41,8 +41,8 @@ Linux オペレーティング システムの一部のエディションで Mic
 - [How to build libs and sample apps (lib およびサンプル アプリをビルドする方法)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
 - [How to install and use app on user systems (ユーザー システムにアプリをインストールして使用する方法)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [作業開始](get-started.md)
+- [開始するには](get-started.md)
 - [新機能](release-notes.md)
 - [開発者の用語と概念](core-concepts.md)

@@ -12,11 +12,11 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: b89bab8cd4ae7aecb8484f729001038b922360c8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259433"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182043"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -58,7 +58,7 @@ RMS コネクタを構成する前に、RMS コネクタを構成するのに十
 
 このアカウントの多要素認証 (MFA) は Microsoft Rights Management 管理ツールでサポートされていないため、このアカウントでは MFA を使用できません。 
 
-また、コネクタには、このパスワードに文字の制限もあります。 次のいずれかの文字が含まれるパスワードは使用できません:アンパサンド ( **&** )、左山かっこ ( **[** )、右山かっこ ( **]** )、二重引用符 ( **"** )、アポストロフィ ( **'** )。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にサインインできたとしても、RMS コネクタの認証は失敗し、**[このユーザー名とパスワードの組み合わせは正しくありません]** というエラー メッセージが表示されます。 このシナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
+また、コネクタには、このパスワードに文字の制限もあります。 次の文字を含むパスワードを使用することはできません。アンパサンド ( **&** )、左山かっこ ( **[** )、右山かっこ ( **]** )、二重引用符 ( **"** )、アポストロフィ ( **'** )。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にサインインできたとしても、RMS コネクタの認証は失敗し、**[このユーザー名とパスワードの組み合わせは正しくありません]** というエラー メッセージが表示されます。 このシナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
 
 さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントにコンテンツを保護する権限があることをご確認ください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 そうでない場合は、「**管理サービスおよび組織の場所を検出する試みが失敗しました。組織に対して Microsoft Rights Management サービスが有効になっていることをご確認ください。**」というエラー メッセージが表示されます。
 
@@ -68,7 +68,7 @@ RMS コネクタを構成する前に、RMS コネクタを構成するのに十
 
 - **Azure Rights Management グローバル管理者**:Azure RMS グローバル管理者ロールを割り当てられている Azure Active Directory のアカウント。
 
-- **Azure Rights Management コネクタ管理者**:Azure Active Directory のアカウントで、組織の RMS コネクタをインストールおよび管理する権限が付与されています。
+- **Azure Rights Management コネクタ管理者**:インストールして、組織の RMS コネクタの管理権限が与えられている Azure Active directory アカウント。
 
   > [!NOTE]
   > Azure Rights Management グローバル管理者ロールおよび Azure Rights Management コネクタ管理者ロールは、Azure RMS の [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) コマンドレットを使用してアカウントに割り当てられます。
@@ -146,7 +146,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 それぞれのサーバーの役割に関する追加情報を次に示します。
 
--   Exchange を実行するサーバー:セキュリティ グループを指定する必要があり、既定のグループ (**Exchange サーバー**) を使用できます。このグループは Exchange によって自動的に作成され、フォレスト内のすべての Exchange サーバーが保持されています。
+-   Exchange を実行するサーバー。セキュリティ グループを指定する必要があり、既定のグループ (**Exchange サーバー**) を使用できます。このグループは Exchange によって自動的に作成され、フォレスト内のすべての Exchange サーバーが保持されています。
 
 -   SharePoint を実行するサーバー:
 
@@ -179,13 +179,13 @@ DNS で名前を作成して IP アドレスを構成したら、そのアドレ
 
 次の設定を使用して、NLB クラスターを構成します。
 
--   ポート:80 (HTTP) または 443 (HTTPS)
+-   ポート:80 (HTTP 用) または 443 (HTTPS 用)
 
     HTTP または HTTPS のどちらを使用するかについては、次のセクションを参照してください。
 
 -   アフィニティ:なし
 
--   分散方法:Equal
+-   配布方法:等しい
 
 (RMS コネクタ サービスを実行しているサーバーの) 負荷分散システム用に定義したこの名前は、組織の RMS コネクタ名です。この名前は、後で Azure RMS を使用するオンプレミス サーバーを構成するときに使用します。
 
@@ -236,9 +236,9 @@ RMS コネクタがインストールされていないコンピューターで 
 
 RMS コネクタ管理ツールをインストールするには、次のファイルを実行します。
 
--   32 ビット コンピューターの場合:RMSConnectorAdminToolSetup_x86.exe
+-   32 ビット コンピューター。RMSConnectorAdminToolSetup_x86.exe
 
--   64 ビット コンピューターの場合:RMSConnectorSetup.exe
+-   64 ビット コンピューター。RMSConnectorSetup.exe
 
 これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
 

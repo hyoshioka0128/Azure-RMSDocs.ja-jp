@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 6843d2298adcc6edee6cf0ddf35a8d8b32101083
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333134"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179716"
 ---
 # <a name="server"></a>サーバー
 
@@ -42,7 +42,7 @@ ms.locfileid: "57333134"
 |事前証明 | サーバーがユーザーに代わって *Rights Account Certificate* を要求できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 |サービス ロケーター | アカウント証明サービス、ライセンス サービス、および発行サービスの URL を Active Directory に提供し、RMS クライアントがこれらのサービスを検出できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 
-## <a name="related-topics"></a>関連項目 ##
+## <a name="related-topics"></a>関連トピック ##
 * [概要](ad-rms-overview.md)
 * [Microsoft インターネット インフォメーション サービス](https://www.iis.net/overview)
 * [クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)

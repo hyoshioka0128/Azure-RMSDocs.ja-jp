@@ -12,11 +12,11 @@ ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9957e144a97006660f05484db7df7ff86622e0e7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259492"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181573"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーに対する操作
 
@@ -30,10 +30,10 @@ Azure Key Vault で独自のテナント キーを自分で管理する場合、
 
 |ライフサイクル操作|Microsoft が管理 (既定)|お客様が管理 (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|テナント キーの取り消し|いいえ (自動)|はい|
+|テナント キーを取り消します|いいえ (自動)|はい|
 |テナント キーの再入力|はい|はい|
-|テナント キーのバックアップ/復旧|[いいえ]|はい|
-|テナント キーのエクスポート|はい|[いいえ]|
+|テナント キーをバックアップ/復旧します|いいえ|はい|
+|テナント キーをエクスポートします|はい|いいえ|
 |侵害への対応|はい|はい|
 
 実装したトポロジを識別したら、次のいずれかのリンクを選択して、Azure Information Protection テナント キーに対するこれらの操作の詳細を参照してください。

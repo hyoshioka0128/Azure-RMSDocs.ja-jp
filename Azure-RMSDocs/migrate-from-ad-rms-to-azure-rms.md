@@ -4,19 +4,19 @@ description: Active Directory Rights Management サービス (AD RMS) のデプ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/11/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 85bbf60e2d17c623572671b745c22d1ffdcfe871
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 94d5e3ea586b67c18f9583d0743d4341a3f787bf
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258047"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181703"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -68,13 +68,13 @@ Azure Information Protection への移行を始める前に、次の前提条件
         
       - 複数フォレスト、複数 RMS クラスター
         
-    注: 既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
+    注:既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
 
 - **Azure Information Protection のサブスクリプション (Azure Rights Management は非アクティブです) など、Azure Information Protection を実行するためのすべての要件:**
 
     「[Azure Information Protection の要件](./requirements.md)」をご覧ください。
 
-    Office 2010 を実行するコンピューターがある場合は、Azure Information Protection クライアントをインストールする必要があります。このクライアントには、クラウド サービスへのユーザーを認証する機能があるためです。 それより後のバージョンの Office では、Azure Information Protection クライアントは、分類とラベル付けのためには必要であり、データ保護だけが目的の場合は必須ではありませんが推奨されます。 詳しくは、「[Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)」をご覧ください。
+    Office 2010 を実行しているコンピューターがあれば、インストールすることする必要がありますに注意してください、 [Azure Information Protection クライアントまたはユーザーの Azure Information Protection のクライアントを統一されたにラベル付け](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)これらのクライアント機能を提供するため、クラウド サービスにユーザーを認証します。 以降のバージョンの Office では、これらのクライアントは、分類、ラベル付け、必要な Azure Information Protection クライアントは省略可能なだけデータを保護したい場合が推奨されます。 詳細については、管理者ガイドを参照してください、 [Azure Information Protection クライアント](./rms-client/client-admin-guide.md)と[Azure Information Protection クライアントのラベル付けを統合する](./rms-client/clientv2-admin-guide.md)します。
 
     AD RMS からの移行を行うには、その前に Azure Information Protection のサブスクリプションを用意しておく必要がありますが、移行を始める前はテナントの Rights Management サービスをアクティブにしないことをお勧めします。 移行プロセスには、AD RMS からキーとテンプレートをエクスポートし、それらを Azure Information Protection のテナントにインポートした後の、このアクティブ化の手順が含まれています。 ただし、Rights Management サービスが既にアクティブ化されている場合でも、いくつかの追加手順を行って AD RMS から移行することができます。
 

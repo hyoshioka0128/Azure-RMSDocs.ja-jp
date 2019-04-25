@@ -4,23 +4,25 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cec2614cacffa41ef3e4a345455c582ad92682f2
-ms.sourcegitcommit: 746963b045072ea74e147895a8acda6a2e5bc9ce
-ms.translationtype: HT
+ms.openlocfilehash: 530b7e112f4ee66f9117bf3816ff19ab179b3811
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57226293"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773646"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
 >*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
@@ -65,7 +67,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Azure Information Protection クライアントのデプロイが必要な場合
 
-次のいずれかが当てはまる場合は、Azure Information Protection クライアントをデプロイします。
+使用していない場合は、Azure Information Protection クライアントを展開[Office 365 セキュリティ/コンプライアンス センターでの機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)が代わりに、ダウンロードすること、Azure からおよび Azure Information Protection ラベルを使用して次の次のように適用します。
 
 - Office アプリケーション (Word、Excel、PowerPoint、Outlook) 内からラベルを選んで、ドキュメントとメール メッセージを分類 (および必要に応じて保護) したい。
 
@@ -99,9 +101,9 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 クライアントがインストールされたら、**[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
 
-- Office アプリケーション: **[ホーム]** タブの **[保護]** グループで、**[保護]**、**[ヘルプとフィードバック]** の順に選択します。
+- Office アプリケーション: から **[ホーム]** タブの **[保護]** グループで、**[保護]**、**[ヘルプとフィードバック]** の順に選択します。
 
-- ファイル エクスプローラー: 単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
+- ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
@@ -165,7 +167,7 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 次に例を示します。
+Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 以下に例を示します。
 
 - オンライン ユーザーの手順:[Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
@@ -185,22 +187,14 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
 
-スキャナーのアップグレード方法は、現在の GA バージョンにアップグレードするか、現在のプレビュー バージョンにアップグレードするかによって異なります。
+スキャナーを 1.48.204.0 より前の一般公開バージョンから、スキャナーの現在のバージョンにアップグレードするのにには、次の手順を使用します。
 
-#### <a name="to-upgrade-the-scanner-to-the-current-ga-version"></a>スキャナーを現在の GA バージョンにアップグレードする場合
-
-Azure Information Protection スキャナーをアップグレードするには、Azure Information Protection クライアントの最新バージョンをインストールします。 次に、以下の 1 回限りの操作を行います。 これを行ったら、既にスキャンされたファイルを再スキャンする必要はありません。
-
-- Azure Information Protection クライアントをアップグレードした後に、[Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) を実行します。 スキャナーとリポジトリの構成設定は保持されます。 スキャナー データベース スキーマを更新するには、このコマンドレットを実行する必要があります。さらに、必要に応じて、スキャナー サービス アカウントに対してスキャナー データベースの削除アクセス許可も付与されます。 
-    
-    この更新コマンドレットを実行するまでスキャナーは実行されません。また、通常、Windows イベント ログにイベント ID **1000** が表示され、次のエラー メッセージが表示されます: **オブジェクト名 'ScannerStatus' は無効です**。
-
-#### <a name="to-upgrade-the-scanner-to-the-current-preview-version"></a>スキャナーを現在のプレビュー バージョンにアップグレードする場合
+#### <a name="to-upgrade-the-scanner-to-the-current-version"></a>スキャナーを現在のバージョンにアップグレードするには
 
 > [!IMPORTANT]
-> アップグレード パスを円滑にするために、スキャナーをアップグレードする最初の手順として、スキャナーを実行するコンピューターにプレビュー バージョンの Azure Information Protection クライアントをインストールしないでください。 代わりに、次のアップグレード手順を使用します。
+> スムーズなアップグレード パスをインストールしないでください、スキャナーをアップグレードする最初の手順として、スキャナーを実行するコンピューターで Azure Information Protection クライアント。 代わりに、次のアップグレード手順を使用します。
 
-現在のプレビュー バージョンのスキャナーの場合、アップグレード プロセスが以前のバージョンとは異なります。 スキャナーをアップグレードすると、構成設定を Azure portal から取得するようにスキャナーが自動的に変更されます。 さらに、スキーマがスキャナーの構成データベース用に更新され、このデータベースの名前も AzInfoProtection から次のように変更されます。
+バージョン以降では 1.48.204.0、以前のバージョンからのアップグレード プロセスに自動的に変更をスキャナーは、Azure portal からその構成設定を取得します。 さらに、スキーマがスキャナーの構成データベース用に更新され、このデータベースの名前も AzInfoProtection から次のように変更されます。
 
 - 独自のプロファイル名を指定しない場合、構成データベースの名前が **AIPScanner_\<computer_name>** に変更されます。 
 
@@ -208,19 +202,21 @@ Azure Information Protection スキャナーをアップグレードするには
 
 別の順序でスキャナーをアップグレードすることもできますが、次の手順をお勧めします。
 
-1. Azure portal を使用して、スキャナーの設定とデータ リポジトリ、およびそれに必要なすべての設定を含む新しいスキャナー プロファイルを作成します。 この手順については、プレビュー バージョンのスキャナーのデプロイ手順に含まれている [Azure portal 上でのスキャナーの構成](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal)に関するセクションをご覧ください。
+1. Azure portal を使用して、スキャナーの設定とデータ リポジトリ、およびそれに必要なすべての設定を含む新しいスキャナー プロファイルを作成します。 この手順については、次を参照してください。、 [、Azure portal で、スキャナーを構成する](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)スキャナーのデプロイの手順からセクション。
     
     スキャナーを実行するコンピューターがインターネットから切断されている場合でも、この手順を実行する必要があります。 次に、Azure portal 上で **[エクスポート]** オプションを使用して、スキャナー プロファイルをファイルにエクスポートします。
 
 2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
 
-3. 現在のプレビュー バージョンを [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からインストールして、Azure Information Protection クライアントをアップグレードします。
+3. 現在一般 (公開 GA) バージョンをインストールすることで、Azure Information Protection クライアントをアップグレード、 [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。
 
-4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile USWest`
+4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 たとえば次のようになります。`Update-AIPScanner –Profile Europe`
 
 5. スキャナーが切断されたコンピューター上で実行されている場合のみ: ここで [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) を実行し、エクスポートされた設定を含んでいるファイルを指定します。
 
 6. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
+
+手順の残りの部分を使えるようになりました[ファイルを分類して保護を自動的に Azure Information Protection スキャナーをデプロイして](../deploy-aip-scanner.md)スキャナーをインストールする手順を省略します。 スキャナーが既にインストールされているため、再度インストールする理由はありません。
 
 ##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>推奨される手順と異なる順序でのアップグレード
 
@@ -231,19 +227,19 @@ Update-AIPScanner コマンドを実行する前に Azure portal 上でスキャ
 > [!TIP]
 > この正しく構成されていないスキャナーを識別するには、Azure portal 上で **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードを使用します。
 >  
-> インターネットに接続されているスキャナーの場合、コンピューター名が Azure Information Protection クライアントのプレビュー バージョン番号と共に表示されますが、プロファイル名は表示されません。 バージョン番号が 1.41.51.0 のスキャナーの場合のみ、このブレードにプロファイル名が表示されません。 
+> インターネットに接続されているスキャナーの場合は、Azure Information Protection クライアントの GA バージョン番号を持つそれぞれのコンピュータ名がないプロファイル名が表示されます。 バージョン番号が 1.41.51.0 のスキャナーの場合のみ、このブレードにプロファイル名が表示されません。 
 
 Update-AIPScanner コマンドの実行時にプロファイル名を指定しなかった場合、コンピューター名を使用してスキャナーのプロファイル名が自動的に作成されます。
 
 #### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>別の SQL Server インスタンスへのスキャナー構成データベースの移動
 
-現在のプレビュー バージョンでは、アップグレード コマンドを実行した後にスキャナーの構成データベースを新しい SQL Server インスタンスに移動しようとすると既知の問題が発生します。
+現在の GA バージョンでは、既知の問題アップグレード コマンドを実行した後、スキャナーの構成データベースを新しい SQL Server インスタンスに移動しようとする場合。
 
-プレビュー バージョンのスキャナー構成データベースを移動する必要があることがわかっている場合は、次の操作を行います。
+GA バージョンのスキャナー構成データベースを移動することがわかっている場合は、次の操作を行います。
 
 1. [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner) を使用して、スキャナーをアンインストールします。
 
-2. プレビュー バージョンの Azure Information Protection クライアントをまだアップグレードしていない場合は、この時点でアップグレードします。
+2. Azure Information Protection クライアントの現在の GA バージョンにまだアップグレードしていない場合は、クライアントを今すぐアップグレードします。
 
 3. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) を使用し、新しい SQL Server インスタンスとプロファイル名を指定してスキャナーをインストールします。
 
@@ -273,5 +269,3 @@ Update-AIPScanner コマンドの実行時にプロファイル名を指定し�
 - [サポートされるファイルの種類](client-admin-guide-file-types.md)
 
 - [PowerShell コマンド](client-admin-guide-powershell.md)
-
-

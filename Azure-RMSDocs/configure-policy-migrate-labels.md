@@ -4,27 +4,29 @@ description: 統合ラベルをサポートしているクライアントとサ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/18/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0cc09e58d49fe9515de0109c726af08e12937dd1
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: 260e6cd429e428fd59782ef33bd557750e3c8eb5
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364574"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179629"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Azure Information Protection のラベルを Office 365 の機密ラベルに移行する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
 > この機能はプレビュー段階にあり、新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされいます。このため、作成し管理するラベルを、[Microsoft Information Protection](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection) ソリューションをサポートするクライアントおよびサービスで使用できます。
 
-[統合ラベル付けをサポートしているクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)によって Office 365 機密ラベルとして使用できるようにしたい場合は、ラベルを移行します。 これらのラベルの管理と発行は、Office 365 セキュリティ/コンプライアンス センターから、または Microsoft 365 セキュリティ センターと Microsoft 365 コンプライアンス センターから行います。 移行後、Azure Information Protection クライアントによって、引き続き Azure portal からラベルとその Azure Information Protection ポリシーがダウンロードされます。 
+[統合ラベル付けをサポートしているクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)によって Office 365 機密ラベルとして使用できるようにしたい場合は、ラベルを移行します。 これらのラベルの管理と発行は、Office 365 セキュリティ/コンプライアンス センターから、または Microsoft 365 セキュリティ センターと Microsoft 365 コンプライアンス センターから行います。 移行後、Azure Information Protection クライアントによって、引き続き Azure portal からラベルとその Azure Information Protection ポリシーがダウンロードされます。
 
 ラベルを移行する方法についての詳細な手順を読む前に、次のよく寄せられる質問が役立つ場合があります。
 
@@ -91,20 +93,20 @@ Azure Information Protection クライアントでは、一覧表示されてい
 
 |ラベル構成|統合ラベル付けのクライアントによるサポート| 管理センターのガイダンス|
 |-------------------|---------------------------------------------|-------------------------|
-|有効または無効の状態<br /><br />注:管理センターには同期されません |適用できません|ラベルが発行されているかどうかに対応します。 |
+|有効または無効の状態<br /><br />注:管理センターには同期されません |適用なし|ラベルが発行されているかどうかに対応します。 |
 |一覧から選択するか、RGB コードを使用して指定するラベルの色 |はい|ラベルの色に対する構成オプションはありません。 代わりに、Azure portal でラベルの色を構成できます。|
 |事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |いいえ|事前に定義されたテンプレート用の構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
 |Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |いいえ|これらの Office アプリ用のユーザー定義のアクセス許可については構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。 それを行った場合は、ラベルの適用結果が[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)に一覧表示されます。|
 |Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 ([転送不可]) |いいえ|HYOK に対する構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。 それを行った場合は、ラベルの適用結果が[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)に一覧表示されます。|
-|保護を解除する |いいえ|保護を削除するための構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。<br /><br /> このラベルを発行した場合、それが適用されると、保護は以前にラベルによって適用されていた場合は削除されます。 保護が以前にラベルから独立して適用されていた場合、保護は保持されます。|
+|保護を解除する |いいえ|保護を削除するための構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。<br /><br /> 適用されたときに、このラベルを発行するは、ラベルで適用されていた場合に保護が削除されます。 保護が以前にラベルから独立して適用されていた場合、保護は保持されます。|
 |視覚的なマーキング (ヘッダー、フッター、透かし) 向けのカスタム フォントと RGB コードによるカスタム フォントの色|はい|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal を使用します。 しかし、管理をより簡単にするには、管理センターに一覧されるオプションのいずれかに、色を変更することを検討してください。|
 |視覚的なマーキングの変数 (ヘッダー、フッター)|いいえ|変更なしでこのラベルを発行した場合、変数は動的な値を表示するのでなく、クライアント上でテキストとして表示されます。 ラベルを発行する前に、文字列を編集して変数を削除してください。|
 |アプリごとの視覚的なマーキング|いいえ|変更なしでこのラベルを発行した場合、アプリ変数は、選択したアプリ上にご利用のテキスト文字列を表示するのでなく、クライアント上ですべてのアプリにテキストとして表示されます。 このラベルはすべてのアプリに適している場合にのみ発行します。文字列を編集してアプリ変数を削除します。|
-|条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用できません|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
+|条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用なし|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>ラベルの保護設定の動作を比較する
 
-次の表を参照すれば、ラベル用の保護設定は同じであっても、Azure Information Protection クライアント (一般提供バージョンおよび現在のプレビュー バージョン)、Azure Information Protection 統合ラベル付けクライアントの現在のプレビュー バージョン、またはラベル付けが組み込まれた Office アプリ ("ネイティブ Office ラベル付け") のいずれで使用するかによってその動作は異なることがわかります。
+次の表を使用して、どのラベルに同じ保護設定によって動作が、Azure Information Protection クライアント、Azure Information Protection の統合されたラベル付けクライアント、または必要とする Office アプリケーションの使用かどうかを識別するために組み込み (別名"ネイティブな Office のラベル付け 
 
 保護設定がどのように構成されているか不明な場合は、Azure portal の **[保護]** ブレードでそれらの設定を表示して確認してください。 この手順に関してサポートが必要な場合は、「[保護設定用のラベルを構成するには](configure-policy-protection.md#to-configure-a-label-for-protection-settings)」をご覧ください。
 
@@ -137,7 +139,7 @@ Outlook for Mac では、保護は保持されますが例外が 1 つありま�
 
 次の手順に従い、テナントと Azure Information Protection ラベルを移行して、統合ラベル付けの新しいストアを使います。
 
-ラベルを移行するには、グローバル管理者である必要があります。
+ラベルを移行するコンプライアンス管理者、セキュリティ管理者、またはグローバル管理者があります。
 
 1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
     
@@ -160,7 +162,7 @@ Outlook for Mac では、保護は保持されますが例外が 1 つありま�
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているクライアント: 
 
-- [Windows 用 Azure Information Protection 統合ラベル付けクライアント](./rms-client/unifiedlabelingclient-version-release-history.md) - プレビュー
+- [Azure Information Protection unified Windows 用のラベル付けのクライアント](./rms-client/unifiedlabelingclient-version-release-history.md)
 
 - 可用性の段階が異なる Office からのアプリ。 詳細については、Office ドキュメントの「[Office 内の文書やメールに機密ラベルを適用する](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)」から「**現在、機能はどこで入手できますか?**」のセクションを参照してください。
     

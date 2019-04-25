@@ -4,28 +4,33 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 52b72d7d05b405e0d4972dd4c4c1edfee3d9fe3b
-ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
-ms.translationtype: HT
+ms.openlocfilehash: 3e1f515dc12280cdd2f8d9b8bca49ca483ee1809
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59289504"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181397"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>
+> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 
 
 最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 通常数週間の短い遅延の後で、最新の一般公開バージョンもまた Microsoft Update カタログに含められます (カテゴリ:**Azure Information Protection**)。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
+
+> [!TIP]
+> ラベルが Office 365 セキュリティとコンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターからパブリッシュされるので、Azure Information Protection 統合ラベル付けのクライアントに興味があるでしょうか。 これを Azure Information Protection クライアントをアップグレードするにはダウンロードして、Microsoft ダウンロード センターから、統一されたラベル付けクライアントをインストールすると、[統合型のラベル付けクライアント](unifiedlabelingclient-version-release-history.md)します。
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
@@ -38,32 +43,23 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 Windows 用 Azure Information Protection クライアントのサポートされるリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。 
 
 > [!NOTE]
-> 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、最新の GA リリースで問題が修正されているかどうかを確認することをお勧めします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
+> 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、最新の GA リリースで問題が修正されているかどうかを確認することをお勧めします。 問題が解決しない場合は、(該当する場合)、現在のプレビュー バージョンを確認します。
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="versions-later-than-141510"></a>1.41.51.0 より後のバージョン
+## <a name="version-1482040"></a>バージョン 1.48.204.0
 
-1.41.51.0 より後のバージョン 1 のクライアントがある場合、それはテストおよび評価目的のプレビュー ビルドです。  
-
-> [!TIP]
-> Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センターからラベルを公開するため、Azure Information Protection の統合ラベル付けクライアントを評価することに関心をお持ちですか。 「[Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
-
-**リリース日**: 2019 年 3 月 5 日
+**リリース日**: 04/16/2019
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 
 **新機能:**
 
-- Azure Information Protection スキャナーは、PowerShell ではなく Azure portal を使用して構成されるようになりました。
+- PowerShell を使用してではなく、Azure portal から Azure Information Protection スキャナーが構成されます。
     
-    - 一般公開バージョンのスキャナーからアップグレードする場合は、アップグレード プロセスが以前のバージョンとは異なるため、「[Azure Information Protection スキャナーのアップグレード](client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を必ずお読みください。
-    
-    - スキャナーをアップグレードするのではなく初めてインストールする場合は、「[プレビュー バージョンの Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner-preview.md)」をご覧ください。
+    一般公開バージョンのスキャナーからアップグレードする場合は、アップグレード プロセスが以前のバージョンとは異なるため、「[Azure Information Protection スキャナーのアップグレード](client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を必ずお読みください。
 
-- [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 [詳細情報](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
-
-- Azure Information Protection スキャナーで、プロファイル名を指定するときに同じ SQL Server インスタンス上の複数の構成データベースがサポートされるようになりました。
+- スキャナーは、プロファイル名を指定するときにようになりました複数の構成データベースと同じ SQL server インスタンスでサポートします。
 
 - ドキュメントおよび電子メール内の資格情報を識別するのに役立つ、次の機密情報の種類のサポート。
     - Azure Service Bus の接続文字列
@@ -78,21 +74,27 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     - Azure Storage のアカウント キー (汎用)
 
 - Outlook で送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する、新しいクライアント詳細設定。 [詳細情報](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    
+    ドメインはアクションごとに除外できるように OutlookCollaborationTrustedDomains のプレビュー バージョンのクライアントの詳細プロパティを構成した場合は、この設定は、次の 3 つの新しい設定によっては置き換えられます今すぐに注意してください。OutlookWarnTrustedDomains、OutlookJustifyTrustedDomains、および OutlookBlockTrustedDomains です。
+
+- [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 [詳細情報](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
 - カスタム アクセス許可を表示しないようポリシー設定を構成する場合にのみ適用される、新しいクライアント詳細設定。カスタム アクセス許可で保護されているファイルがある場合に、ユーザーが (保護設定を変更するアクセス許可を持っていれば) 表示および変更できるように、ファイル エクスプローラーにカスタム アクセス許可オプションが表示されます。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- 次のシナリオ用の Azure Information Protection 分析の 2 つの新しいクライアントの詳細設定:
+- エンドポイントの検出の[Azure Information Protection analytics](../reports-aip.md)します。
+    
+- 2 つの新しいアドバンスト、クライアントは、次のシナリオの analytics の設定。
     
     - Azure portal でコンテンツ一致を収集するチェック ボックスをオンにしてあるときに、ユーザーのサブセットについて情報の種類の一致が送信されないようにします。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - 検出レポートで、ファイルに機密情報が含まれているかどうかを表示します。 [詳細情報](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - **データ検出**レポートをファイルには、機密情報が含まれるかどうかを表示します。 [詳細情報](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
 
 **修正内容**:
+
+- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されません。
 
 - ユーザーがWord 文書に新しいセクションを追加した後で再度ラベルを付ける場合、新しい視覚的なマーキングが一貫して適用されます。
 
 - Azure Information Protection クライアントで、Rights Management 共有アプリケーションによって保護されていた PDF 文書の保護が正しく解除されます。
-
-- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されません。
 
 - ユーザー定義のアクセス許可に対して親ラベルが構成されている場合、PowerShell およびスキャナーによってサブラベルが正しく適用されます。
 
@@ -139,7 +141,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     クライアントを元に戻して、ファイル名拡張子 .ppdf を使って PDF ファイルを保護させるようにするには、同じ[クライアントの詳細設定](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)を使いますが、ここでは **False** を指定します。
 
-- Microsoft Ignite で発表された Azure Information Protection 分析機能の[中央レポート機能](../reports-aip.md)のサポート。
+- データのサポートを監査[中央レポート機能](../reports-aip.md)Microsoft Ignite 2018 で発表された、Azure Information Protection の analytics を使用しています。
 
 - Excel で異なる色の[視覚的なマーキング](../configure-policy-markings.md)もサポートされるようになりました。
 
