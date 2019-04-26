@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: eb7d73c1ebca49f4d49f8b57de94319cabc1300d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330255"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176858"
 ---
 # <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -26,9 +26,9 @@ ms.locfileid: "57330255"
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
--   Windows 10
--   Windows Server 2012 R2
--   Windows Server 2012
+-   Windows 10
+-   Windows Server 2012 R2
+-   Windows Server 2012
 -   Windows 8
 -   Windows Server 2008 R2 SP1
 -   Windows 7 + SP1

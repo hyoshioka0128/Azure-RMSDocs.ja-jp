@@ -4,17 +4,17 @@ description: Azure Information Protection サービスの概要です。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
-ms.topic: conceptual
+ms.date: 04/17/2019
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 3082d43d44d961303c61796c949ba66adfb7f08b
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
+ms.openlocfilehash: 64733ce1007a97f32a12b50d37aa886b774f896e
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828466"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181236"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -109,6 +109,11 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 クラウドのデータ ストアの場合、Microsoft Cloud App Security を使用して、Box、SharePoint Online、OneDrive for Business 内にあるドキュメントにラベルを適用します。 詳細については、「[Azure Information Protection 分類ラベルを自動的に適用する](/cloud-app-security/use-case-information-protection)」と「[Azure Information Protection の統合](/cloud-app-security/azip-integration)」をご覧ください。
 
+## <a name="latest-labeling-updates-for-microsoft-365"></a>Microsoft 365 のラベル付けに関する最新の更新
+
+あらゆる場所にある機密情報の検出、分類、保護、および監視に Azure Information Protection が役立つしくみについて、最新情報をご覧ください:
+
+> [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 
@@ -126,7 +131,7 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 - Yammer:[Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-その他の資料:[Azure Information Protection の情報とサポート](information-support.md)
+その他のリソース: [Azure Information Protection の情報とサポート](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
@@ -147,4 +152,4 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ## <a name="next-steps"></a>次の手順
 
-[クイック スタート](quickstart-viewpolicy.md)と[チュートリアル](infoprotect-quick-start-tutorial.md)を参照すれば、Azure Information Protection をご自分で構成および確認できます。 また、このサービスを組織向けにデプロイする準備ができている場合は、[一般的なシナリオ向けの攻略ガイド](how-to-guides.md)を参照してください。
+[クイック スタート](quickstart-viewpolicy.md)と[チュートリアル](infoprotect-quick-start-tutorial.md)を参照すれば、Azure Information Protection をご自分で構成および確認できます。 また、このサービスを組織向けにデプロイする準備ができている場合は、[攻略ガイド](how-to-guides.md)を参照してください。

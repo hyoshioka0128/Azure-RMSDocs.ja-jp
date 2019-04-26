@@ -1,27 +1,29 @@
 ---
-title: クイック スタート - Azure Information Protection スキャナーを使ってファイル内の機密情報を検索する - AIP
+title: クイック スタート - Azure Information Protection スキャナーを使って機密情報を検索する - AIP
 description: Azure Information Protection スキャナーを使用して、オンプレミスに格納しているファイル内の機密情報を検索します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 5a051967ad9f3b572eecd5214cf411dd4a4a01d6
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 6d7de0658aa2b14180ef61caddae0aa40e4c7bd0
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828993"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184061"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
 
 このクイック スタートでは、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
 
-注: このクイックスタートでは、Azure portal を使用して構成するプレビュー バージョンのスキャナーではなく、現在の一般公開バージョンのスキャナーを使用します。
+注: このクイックスタートでは現在の一般提供バージョンのスキャナーを使います。これでは、前のバージョンで使われていた PowerShell コマンドレットではなく Azure portal が構成用に使われます。
 
 この構成は 10 分未満で完了します。
 
@@ -53,41 +55,69 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 2. **4242-4242-4242-4242** というテキスト (テスト用の既知のクレジット カード番号) を含む Word ドキュメントを作成して、そのフォルダー内に保存します。
 
+## <a name="configure-a-profile-for-the-scanner"></a>スキャナー用のプロファイルを構成する
+
+スキャナーをインストールする前に、Azure portal でそのためのプロファイルを作成します。 このプロファイルには、スキャナーの設定と、スキャンするデータ リポジトリの場所が含まれます。
+
+1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、**[Azure Information Protection]** ブレードに移動します。 
+    
+    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    
+2. **[スキャナー]** メニュー オプションを見つけて、**[プロファイル]** を選択します。
+
+3. **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードで、**[追加]** を選択します。
+    
+    ![Azure Information Protection スキャナーのプロファイルを追加する](./media/scanner-add-profile.png)
+
+4. **[新しいプロファイルを追加する]** ブレードで、その構成設定とスキャンするデータ リポジトリを識別するために使うスキャナーの名前を指定します。 たとえば、このクイックスタートでは、**Quickstart** を指定できます。 後でスキャナーをインストールするときに、同じプロファイル名を指定する必要があります。
+    
+    スキャナーのプロファイル名を識別するために、必要に応じて管理目的の説明を指定します。
+
+5. このクイックスタートでは、設定を 1 つだけ選択します。**[ポリシーの適用]** に対して、**[オフ]** を選択します。 次に **[保存]** を選択しますが、ブレードは閉じないでください。
+    
+    この設定では、指定したデータ リポジトリ内にあるすべてのファイルの 1 回限りの探索を実行するようにスキャナーを構成します。 このスキャンでは、機密情報の既知の種類がすべて検索されます。また、最初に Azure Information Protection ラベルやポリシー設定を構成する必要はありません
+
+6. これでプロファイルの作成と保存が完了したので、**[リポジトリの構成]** オプションに戻って、スキャンするデータ ストアとしてローカル フォルダーを指定する準備が整いました。
+    
+    引き続き **[新しいプロファイルを追加する]** ブレード上で、**[リポジトリの構成]** を選択して **[リポジトリ]** ブレードを開きます。
+    
+    ![Azure Information Protection スキャナーのデータ リポジトリを構成する](./media/scanner-repositories-bar.png)
+
+7. **[リポジトリ]** ブレードで、**[追加]** を選択します。
+    
+    ![Azure Information Protection スキャナーのデータ リポジトリを追加する](./media/scanner-repository-add.png)
+
+8. **[リポジトリ]** ブレード上で、一番最初の手順で作成したローカル フォルダーを指定します。 例: `C:\TestScanner`
+    
+    このブレード上の残りの設定に関しては、変更せずに **[既定のプロファイル]** のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
+    
+    **[保存]** を選択します。
+
+9. これで **[新しいプロファイルを追加する]** ブレードを閉じることができ、**[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードにご自分のプロファイル名が表示されます。**[スケジュール]** 列には **[手動]** が表示され、**[強制]** 列は空白です。
+
+これで、先ほど作成したスキャナーのプロファイルを使ってスキャナーをインストールする準備ができました。
+
 ## <a name="install-the-scanner"></a>スキャナーのインストール
 
 1. **[管理者として実行]** オプションを使用して PowerShell セッションを開きます。
 
-2. 自分のコンピューター名を指定しながら次のコマンドを使用して、スキャナーをインストールします。
+2. 次のコマンドを使ってスキャナーをインストールします。自分のコンピューター名と、Azure portal で保存したプロファイル名を指定します。
     
-        Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS
+        Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
     
     プロンプトが表示されたら、\<ドメイン\ユーザー名> の形式を使用してスキャナー用の資格情報を独自に指定し、次にパスワードを指定します。 
 
-## <a name="specify-your-test-data-store"></a>テスト用のデータ ストアを指定する
-
-PowerShell セッションで、次のコマンドを入力します。
-
-    Add-AIPScannerRepository -Path C:\TestScanner
-
-## <a name="configure-the-scanner-to-discover-all-information-types"></a>すべての情報の種類を探索するようにスキャナーを構成する
-
-PowerShell セッションで、次のコマンドを入力します。
-
-    Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -DiscoverInformationTypes All
-
-このコマンドでは、指定したデータ リポジトリ内にあるすべてのファイルの 1 回限りの探索を実行するようにスキャナーを構成します。 このスキャンでは、機密情報の既知の種類がすべて検索されます。また、最初に Azure Information Protection ラベルやポリシー設定を構成する必要はありません。
-
 ## <a name="start-the-scan-and-confirm-it-finished"></a>スキャンの開始および完了の確認
 
-1. PowerShell セッションで、次のコマンドを入力してスキャナーを起動します。
+1. 再び Azure portal で、Azure Information Protection に戻ってスキャナーを起動します。 **[スキャナー]** メニュー オプションから、**[ノード]** を選択します。 自分のコンピューター名を選択したら、**[今すぐスキャン]** オプションを選択します。
     
-        Start-AIPScan
-    
-    調べる対象が小さなファイル 1 つだけなので、この最初のテスト スキャンは非常に高速です。 
+    ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
 
-2. Windows の **[イベント ビューアー]** > **[アプリケーションとサービス]** > **[Azure Information Protection]** イベント ログに移動します。 
+2. 調べる対象が小さなファイル 1 つだけなので、この最初のテスト スキャンは非常に高速です。
     
-    Azure Information Protection で **MSIP.Scanner** プロセスに対して情報イベント ID **911** が表示されていることを確認します。 イベント ログ エントリには、スキャンの結果の概要も含まれています。
+    - **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードで、**[状態]** 列の値が **[スキャン]** から **[アイドル]** に変化します。
+    
+    - または、ローカル Windows イベント ログの **[アプリケーションとサービス]** の **[Azure Information Protection]** を確認します。 **MSIP.Scanner** プロセスの情報イベント ID **911** を確認します。 イベント ログ エントリには、スキャンの結果の概要も含まれています。
 
 ## <a name="see-detailed-results"></a>詳細結果を確認する
 
@@ -97,25 +127,25 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 
 ## <a name="scan-your-own-data"></a>独自のデータをスキャンする
 
-1. 今回は、機密情報をスキャンする独自のオンプレミスのデータ ストアを指定して、もう一度 Add-AIPScannerRepository を実行します。 
+1. 今回は、機密情報をスキャンする独自のオンプレミスのデータ ストアを指定して、スキャナー プロファイルを編集して新しいデータ リポジトリを追加します。 
     
     ローカル フォルダー、ネットワーク共有 (UNC パス)、または SharePoint サイトや SharePoint ライブラリの SharePoint サーバーの URL を指定することができます。 
     
     - ローカル フォルダーについての例:
         
-            Add-AIPScannerRepository -Path D:\Data\Finance
+            D:\Data\Finance
     
     - ネットワーク共有についての例
         
-            Add-AIPScannerRepository -Path \\NAS\HR
+            \\NAS\HR
     
     - SharePoint フォルダーについての例:
         
-            Add-AIPScannerRepository -Path "http://sp2016/Shared Documents"
+            http://sp2016/Shared Documents
 
-2. スキャナーを再起動します。
+2. もう一度スキャナーを再起動します。**[スキャナー]** メニュー オプションから、**[ノード]** を選択し、自分のコンピューター名を選択した後、**[今すぐスキャン]** オプションを選択します。
     
-        Start-AIPScan
+    ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
 
 3. スキャンが完了すると、新しい結果が表示されます。 
     
@@ -133,7 +163,7 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 
 このコマンドでは以下の項目は削除されません。このクイック スタートの後にこれらを削除する場合は、手動で削除する必要があります。
 
-- Azure Information Protection スキャナーをインストールしたときに、Install-AIPScanner コマンドレットを実行することによって作成された **AzInfoProtection** という名前の SQL サーバー データベース。 
+- Azure Information Protection スキャナーをインストールしたときに、Install-AIPScanner コマンドレットを実行することによって作成された **AIPScanner_\<プロファイル>** という名前の SQL Server データベース。 
 
 - %*localappdata*%\Microsoft\MSIP\Scanner\Reports にあるスキャナー レポート。
 
