@@ -21,7 +21,7 @@ ms.locfileid: "62773703"
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2*
 >
-> *手順:[Windows 用の azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
 
 > [!NOTE]
 > この記事は、最新の一般公開バージョンの Azure Information Protection スキャナーが対象です。
@@ -142,9 +142,9 @@ Sysadmin ロールが一時的にでも付与されない場合は、スキャ�
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
-2. 検索、**スキャナー**メニュー オプション、および選択**プロファイル**します。
+2. **[スキャナー]** メニュー オプションを見つけて、**[プロファイル]** を選択します。
 
-3. **Azure Information Protection - プロファイル**ブレードで、**追加**:
+3. **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードで、**[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのプロファイルを追加する](./media/scanner-add-profile.png)
 
@@ -204,7 +204,7 @@ Sysadmin ロールが一時的にでも付与されない場合は、スキャ�
 
 9. 別のデータ リポジトリを追加する場合は、手順 7 と 8 を繰り返します。
 
-10. 今すぐに閉じることができます、**新しいプロファイルを追加**ブレードに表示されるプロファイル名を参照してください、 **Azure Information Protection - プロファイル**ブレードで、と共に、**スケジュール**。列が表示された**手動**と**強制**列は空白にします。
+10. これで **[新しいプロファイルを追加する]** ブレードを閉じることができ、**[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードにご自分のプロファイル名が表示されます。**[スケジュール]** 列には **[手動]** が表示され、**[強制]** 列は空白です。
 
 これで、先ほど作成したスキャナーのプロファイルを使ってスキャナーをインストールする準備ができました。
 

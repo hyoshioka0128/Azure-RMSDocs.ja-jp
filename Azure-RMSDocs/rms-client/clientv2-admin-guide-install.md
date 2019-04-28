@@ -20,7 +20,7 @@ ms.locfileid: "60183696"
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 社内のネットワークに Azure Information Protection の統合されたラベル付けクライアントをインストールする前に、コンピューターに必要なオペレーティング システムのバージョンと Azure Information Protection 用のアプリケーションがあることを確認します。「[Azure Information Protection の要件](../requirements.md)」で確認してください。 
 

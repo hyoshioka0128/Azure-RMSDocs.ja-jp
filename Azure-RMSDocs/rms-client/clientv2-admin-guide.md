@@ -20,7 +20,7 @@ ms.locfileid: "60183189"
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このガイドの情報を使用して、Azure Information Protection の統合、エンタープライズ ネットワーク上のラベル付けのクライアントの責任者は場合、またはよりも詳細な技術情報を表示する場合、 [Azure Information Protection unified ラベル付けクライアント ユーザー ガイド](clientv2-user-guide.md)します。 
 
