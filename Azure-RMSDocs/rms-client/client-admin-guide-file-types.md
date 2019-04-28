@@ -13,7 +13,7 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 21a795a6386b5d030718bc39a094d9251db570e5
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60183426"
@@ -22,7 +22,7 @@ ms.locfileid: "60183426"
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
 
 Azure Information Protection クライアントは、次のことをドキュメントとメールに適用できます。
 

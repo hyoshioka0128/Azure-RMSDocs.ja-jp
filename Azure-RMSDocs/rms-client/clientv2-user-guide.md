@@ -21,7 +21,7 @@ ms.locfileid: "60182672"
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Windows 用 Azure Information Protection のクライアントを統一されたにラベル付けは、重要なドキュメントを維持するのに役立ち、電子メールが転送またはドキュメントが別の場所に保存された場合でも、見るべきではないユーザーから電子メールで送信します。 また、このクライアントを使用して、他のユーザーが Azure Information Protection の Rights Management 保護テクノロジを使って保護したドキュメントを開くこともできます。
 

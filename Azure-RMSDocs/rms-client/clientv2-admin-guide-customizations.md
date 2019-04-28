@@ -13,7 +13,7 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: c565c025b6ae3001984141a691ed37a057203f38
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60181091"
@@ -22,7 +22,7 @@ ms.locfileid: "60181091"
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection の統合されたラベル付けクライアントを管理するときに、特定のシナリオまたはユーザーのサブセットは必要な高度な構成の次の情報を使用します。
 
