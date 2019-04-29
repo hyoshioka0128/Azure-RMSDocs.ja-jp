@@ -12,7 +12,7 @@ ms.reviewer: demizets
 ms.suite: ems
 ms.openlocfilehash: edc855c5a92e6f1bac8f3f175b84cdeed1afaa88
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60180206"
@@ -21,7 +21,7 @@ ms.locfileid: "60180206"
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2*
 >
-> *手順:[Windows 用の azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
 
 > [!NOTE]
 > この記事はバージョンよりも前のバージョンの Azure Information Protection スキャナー **1.48.204.0**が引き続きサポートします。 現在のバージョンには、以前のバージョンをアップグレードするを参照してください。 [Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)します。
