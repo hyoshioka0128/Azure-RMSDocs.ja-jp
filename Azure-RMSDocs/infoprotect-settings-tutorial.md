@@ -4,20 +4,22 @@ description: Azure Information Protection のポリシー設定を構成して�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d627bd71ec3a669f59161c8c3c7137f8a635ceb6
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: d5d6988c5180a58ed9de5c8111036ee380044584
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617799"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773606"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このチュートリアルで学習する内容は次のとおりです。
 > [!div class="checklist"]
@@ -113,7 +115,7 @@ Word で新しいドキュメントを開きます。 ドキュメントのラ�
 
 ラベルを変更する代わりに、Information Protection バーを閉じて、バーが表示されない場合のエクスペリエンスと比較します。
 
-![Azure Information Protection チュートリアル - 既定のラベルを持つ新しいドキュメント](./media/infoprotect-bar-close.png)
+![Azure Information Protection チュートリアル - バーを閉じる](./media/infoprotect-bar-close.png)
 
 **[全般]** ラベルが選択されたままですが、非常にわかりにくくなります。 また、別のラベルを選択する方法もわかりにくくなります。 そのためには、ユーザーは **[保護]** ボタンを選択する必要があります。
 
@@ -132,7 +134,7 @@ Word で新しいドキュメントを開きます。 ドキュメントのラ�
 
 その設定を変更していなかった場合は、Information Protection バーに次のアイコンが表示されます。
 
-![Azure Information Protection チュートリアル - [保護] ボタンの選択](./media/infoprotect-deletelabel-icon.png)
+![Azure Information Protection チュートリアル - バーを閉じる](./media/infoprotect-deletelabel-icon.png)
 
 既定のラベルと共に必須のラベル付けを使用すると、新規のまたは編集したドキュメント (および電子メール) に対して任意の基本の分類が適用されるよう保証することができます。 
 
@@ -150,9 +152,9 @@ Outlook を起動し、新しい電子メール メッセージを作成しま�
 
 **[破棄]** をクリックすると、新しいラベルは適用されず、構成した既定のラベル **[全般]** が電子メールに適用されたままになります。 使用可能なラベルは引き続き表示されており、代替として選択できます。
 
-**[今すぐ変更]** を選択すると、電子メールに **[社外秘]** サブラベルがラベル付けし直されます。 ただし、ユーザーは、電子メールを送信する前に [ラベルの編集] を選択して、まだラベルを変更することができます。
+**[今すぐ変更]** を選択すると、電子メールに **[社外秘]** サブラベルがラベル付けし直されます。 ただし、電子メールを送信する前でも、[ラベルの編集] アイコンを選択すれば、ユーザーがラベルを変更することは可能です。
 
-![Azure Information Protection チュートリアル - ラベル付けされた添付ファイルと一致するよう電子メールをラベル付けし直すよう求めるプロンプト](./media/infoprotect-editlabel-icon.png)
+![Azure Information Protection チュートリアル - ラベル アイコンを編集する](./media/infoprotect-editlabel-icon.png)
 
 そうすると、Information Protection バーが再度表示され、ユーザーは代わりのラベルを選択できます。
 

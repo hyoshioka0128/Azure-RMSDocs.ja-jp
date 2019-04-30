@@ -4,20 +4,22 @@ description: 組織で初めて Azure Information Protection を使用する場�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1d857fc3282b0851e80765fe3f53a2315ed59b5f
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
+ms.openlocfilehash: e41af7f6bcf8734377404b0dabcdb059d2d91bc1
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364642"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773588"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このクイック スタートでは、Azure portal に Azure Information Protection を追加し、この保護サービスがアクティブ化されていることを確認し、ラベルがまだ用意されていなければ既定のラベルを作成し、Azure Information Protection のポリシー設定を表示します。
 
@@ -60,11 +62,11 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
     
     - 保護がアクティブの場合、次の確認情報が表示されます。
         
-        ![Azure RMS での Azure Information Protection の状態](./media/info-protect-azurerms-activated.png)
+        ![Azure RMS での Azure Information Protection の状態 - アクティブ](./media/info-protect-azurerms-activated.png)
         
     - 保護がアクティブでない場合は、状態情報でそのことが示され、アクティブ化するオプションが表示されます。
         
-        ![Azure RMS での Azure Information Protection の状態](./media/info-protect-azurerms-deactivated.png)
+        ![Azure RMS での Azure Information Protection の状態 - 非アクティブ](./media/info-protect-azurerms-deactivated.png)
 
 3. 保護がアクティブになっていない場合は、**[アクティブ化]** を選択します。 
 
@@ -88,7 +90,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 4. 次に、すべてのユーザーに対してラベルを発行するために、**[分類]** > **[ポリシー]** > **[グローバル]** で次の操作を行います。
     
-    a. **[ラベルの追加または削除]** を選択します。
+    」を参照します。 **[ラベルの追加または削除]** を選択します。
     
     b. **[ポリシー: ラベルの追加または削除]** ブレードで、すべてのラベルを選択し、**[OK]** を選択します。
     
