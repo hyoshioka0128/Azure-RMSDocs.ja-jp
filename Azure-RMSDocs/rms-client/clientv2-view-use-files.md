@@ -1,6 +1,6 @@
 ---
-title: Windows 用 Azure Information Protection の統合されたラベル付けクライアントを使用して、保護されたファイルを表示します。
-description: Azure Information Protection 統合ラベル付けクライアントをインストールする必要がある保護されたファイルを表示する手順です。
+title: 統一されたラベル付けのクライアントを Azure Information Protection で保護されたファイルを表示します。
+description: 保護されたファイルはインストールされている、Azure Information Protection の統合のラベル付けビューアーに要求を表示する手順です。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 6c6e5ddd7ddc39810e05cdc8b2bf0f5b24bf8176
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 2df0bd25bf30eb94aab17a8dae89332b4e96389b
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180989"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880194"
 ---
-# <a name="user-guide-view-files-that-have-been-protected-by-rights-management"></a>ユーザー ガイド: Rights Management によって保護されているファイルの表示
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: 統一されたラベル付けのクライアントを Azure Information Protection で保護されたファイルを表示します。
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
 > *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-通常、開くだけで保護されたドキュメントを表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
+多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
 ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー**で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
 

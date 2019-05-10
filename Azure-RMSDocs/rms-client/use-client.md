@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: ed762332e023843326fc4ec4d89e8fc44ede39be
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: f93432e245e1eafc74857a7571a4e0a4fe5d9318
+ms.sourcegitcommit: 1c2d588beccfcb13824f3d518683304018bce452
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180819"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493281"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -48,7 +48,7 @@ Rights Management (RMS) クライアントが Office アプリケーション、
 
 ##### <a name="example-deployment-strategy"></a>展開戦略の例:
 
-- ほとんどのユーザーは、ほとんどのユーザーが Azure Information Protection の統合されたラベル付けクライアントでのみ利用できる機能に必要ないため、Azure Information Protection の統一されたラベル付けクライアントを展開します。 
+- ほとんどのユーザーは、ほとんどのユーザーが Azure Information Protection クライアントでのみ利用できる機能や機能に必要ないため、Azure Information Protection の統一されたラベル付けクライアントを展開します。 
     
     これらのユーザーがラベル付けの操作は、MacOS、iOS、および Android を実行するデバイスもあるし、これらのデバイス秘密度ラベルをサポートする Office のバージョンがない場合とよく似ています。
 
@@ -102,7 +102,8 @@ Rights Management (RMS) クライアントが Office アプリケーション、
 |サポートされているコマンドレット:| [AzureInformatioProtection](/powershell/module/azureinformationprotection) に記載されているすべてのコマンドレット | Set-aipauthentication 非対話型セッションをサポートしていません <br /><br /> Set-AIPFileClassification と Set-AIPFileLabel は、*Owner* パラメーターまたは SharePoint Server ライブラリをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />さらに、Get-AIPFileStatus の *LabelingMethod* パラメーターでは、**[手動]** または **[自動]** の代わりに **[特権]**、**[標準]**、または **[自動]** が表示されます。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度:ファイルごと <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度:セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
-|自動および推奨される分類: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
+|自動および推奨のラベル。 | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
+|自動および推奨のラベルのカスタマイズ可能なポリシーのヒント: | はい <br /><br />Azure portal を使用して、ユーザーに既定のメッセージを交換するには | いいえ <br /><br /> 管理センターでは、カスタマイズしたポリシー ヒントを指定するオプションがありますが、このオプションは現在サポートされていません、統一されたラベル付けクライアントによって|
 
 特定の保護設定の動作の違いの詳細な比較についてを参照してください。[ラベルの保護設定の動作を比較する](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)します。
 
@@ -126,9 +127,7 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 - 保護を削除する場合の理由
 
-- 適用済みのラベルを削除する前に表示される確認プロンプト
-
-- [ヘルプとフィードバック] ダイアログ ボックスでの問題リンクのレポート
+- 確認プロンプト**このラベルを削除しますか?** 妥当性のポリシー設定を使用しない場合、ユーザーの
 
 - 既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける (SyncPropertyName および SyncPropertyState クライアント詳細設定)
 

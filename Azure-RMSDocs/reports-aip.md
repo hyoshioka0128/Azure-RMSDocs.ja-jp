@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: e85537f705fa388aa7c2c3a838ca658213899edb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: d7cc81a41b7515edd0df0e38d5813e0e90b2aa73
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181676"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191935"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -192,11 +192,11 @@ Azure Information Protection 分析のためにワークスペースを構成し
 
 Azure Information Protection の統合されたラベル付けクライアント。
 
-- 監査とエンドポイントの検出のサポート:バージョン 2.0.778
+- 監査とエンドポイントの検出のサポート:バージョン 2.0.778.0
 
 Azure Information Protection クライアント:
 
-- 監査のサポート:1.41.51.0
+- 監査のサポート:バージョン 1.41.51.0
 - エンドポイントの検出のサポート:バージョン 1.48.204.0
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
@@ -232,7 +232,7 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 - **データ検出 (プレビュー)**: スキャナーとサポートされているエンドポイントによって検出されたラベル付きファイルに関する情報を表示するには、このレポートを使用します。
     
-    注:エンドポイントでの検出は、テナントに徐々にロールアウトされています。 サポートされているエンドポイントからこのレポートにデータが表示されるのは、この機能がお客様のテナントにロールアウトされた時点から始まります。
+    注:エンドポイントの検出はテナントに徐々 にロールアウトします。 サポートされているエンドポイントからこのレポートにデータが表示されるのは、この機能がお客様のテナントにロールアウトされた時点から始まります。
     
     構成することができます、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)の機密情報を含むレポート ファイルに Azure Information Protection クライアント。
     

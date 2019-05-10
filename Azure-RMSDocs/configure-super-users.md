@@ -1,6 +1,6 @@
 ---
 title: Azure Rights Management のスーパー ユーザーを構成する - AIP
-description: Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能を理解し、実装して、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 この機能は 'データに対する推論' と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。
+description: 理解し、権限を持つ人物とサービスは常に読み取りし、検査できるように、Azure Information Protection から Azure Rights Management サービスのスーパー ユーザー機能を実装 (「理由を」)、組織のデータを保護します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 9aa95d164f0211248a45f2376345608f50bac5f6
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767876"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成
 

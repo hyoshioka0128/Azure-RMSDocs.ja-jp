@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection - AIP を使用して分類します。
-description: ドキュメントや電子メールを分類する方法の手順です。
+title: 分類 - Azure Information Protection クライアント
+description: 手順については Windows 用 Azure Information Protection クライアントを使用する場合は、ドキュメントや電子メールを分類する方法。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b11a60d9bcc12cb3ad28c3c6f583f99d4664751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ecc7a1e0655c322151ba0c44c51592656303d857
+ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183852"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64914722"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してファイルや電子メールを分類する
+# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントで、ファイルや電子メールを分類します。
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類します (保護はしません)。 ドキュメントや電子メールを保護する必要もある場合は、[分類して保護する手順](client-classify-protect.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。

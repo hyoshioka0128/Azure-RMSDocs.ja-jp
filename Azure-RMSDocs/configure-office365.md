@@ -12,11 +12,11 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: c621ce93810243ce022433d860671a34e7d679c0
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767969"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365:Azure Rights Management サービスを使用するようにクライアントとオンライン サービスを構成する
 

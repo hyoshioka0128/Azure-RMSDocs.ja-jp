@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection ポリシーの概要
-description: Azure Information Protection ポリシーにおけるラベルと設定について説明します。
+description: ラベルと、Azure Information Protection クライアントにダウンロードされる Azure Information Protection ポリシーの設定を理解します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c2670efc774f81d8e66dfbd18f754a0db34b495b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 2e18f90b343dec10f1649ccfcf13e19931d53378
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183944"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880159"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの概要
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection ポリシーには、構成可能な次の要素があります。
     

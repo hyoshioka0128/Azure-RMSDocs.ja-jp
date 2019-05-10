@@ -4,29 +4,29 @@ description: Azure Information Protection スキャナーの現在の一般公�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: edc855c5a92e6f1bac8f3f175b84cdeed1afaa88
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 3d394c455d6012e4b617a6109db47363661d8814
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180206"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191885"
 ---
-# <a name="deploying-previous-versions-of-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>以前のバージョンのファイルを分類して保護を自動的に Azure Information Protection スキャナーのデプロイ
+# <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの以前のバージョンを展開します。
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > この記事はバージョンよりも前のバージョンの Azure Information Protection スキャナー **1.48.204.0**が引き続きサポートします。 現在のバージョンには、以前のバージョンをアップグレードするを参照してください。 [Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)します。
 > 
-> 展開の手順を Azure portal から構成を含む、スキャナーの現在のバージョンを探している場合は、次を参照してください[ファイルを分類して保護を自動的にAzureInformationProtectionスキャナーのデプロイ。](deploy-aip-scanner.md).
+> 展開の手順を Azure portal から構成を含む、スキャナーの現在のバージョンを探している場合は、次を参照してください[ファイルを分類して保護を自動的にAzureInformationProtectionスキャナーのデプロイ](deploy-aip-scanner.md)。
 
 この情報を使用して、Azure Information Protection スキャナーについて説明し、正常にインストール、構成、および実行する方法について説明します。
 
@@ -316,7 +316,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
-- すべてのファイルがネイティブのまたは汎用的な保護により自動的に保護される、Azure Information Protection クライアントの同じ既定の保護動作が必要な場合は、`*` ワイルドカードをレジストリ キーとして、`Default` を値データとして指定します。
+- すべてのファイルに自動的にネイティブまたは汎用保護と保護、Azure Information Protection クライアントと同じ既定の保護動作を実行する場合にします。指定、`*`レジストリ キーとしてワイルドカード`Encryption`値 (REG_SZ) としてと`Default`値のデータとします。
 
 レジストリを編集するときには、各ファイル名拡張子のキーと共に、**MSIPC** キーと **FileProtection** キーが存在しない場合には手動で作成します。
 

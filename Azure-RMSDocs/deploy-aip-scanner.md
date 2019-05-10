@@ -1,27 +1,27 @@
 ---
 title: AIP の Azure Information Protection スキャナーをデプロイします。
-description: インストール、構成、およびこれを検出すると、Azure Information Protection スキャナーの現在の GA バージョンを実行する手順については、分類、および、データ ストア上のファイルを保護します。
+description: インストール、構成、およびこれを検出すると、Azure Information Protection スキャナーの現在のバージョンを実行する手順については、分類、および、データ ストア上のファイルを保護します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 05/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 75ea97484b226617c33f985a40035e3b641434c5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 17a5406e4e7fff0d7acfa431b7a9731db19b2078
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773703"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191899"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > この記事は、最新の一般公開バージョンの Azure Information Protection スキャナーが対象です。
@@ -380,7 +380,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
-- すべてのファイルがネイティブのまたは汎用的な保護により自動的に保護される、Azure Information Protection クライアントの同じ既定の保護動作が必要な場合は、`*` ワイルドカードをレジストリ キーとして、`Default` を値データとして指定します。
+- すべてのファイルに自動的にネイティブまたは汎用保護と保護、Azure Information Protection クライアントと同じ既定の保護動作を実行する場合にします。指定、`*`レジストリ キーとしてワイルドカード`Encryption`値 (REG_SZ) としてと`Default`値のデータとします。
 
 レジストリを編集するときには、各ファイル名拡張子のキーと共に、**MSIPC** キーと **FileProtection** キーが存在しない場合には手動で作成します。
 

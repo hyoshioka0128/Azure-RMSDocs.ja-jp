@@ -1,6 +1,6 @@
 ---
-title: 保護されたドキュメントを AIP クライアントで表示して使用する
-description: あらかじめ Azure Information Protection クライアントがインストールされている必要がある、保護されたドキュメントの表示および使用手順です。
+title: Azure Information Protection ビューアーを使用した保護されたファイルを表示します。
+description: 表示すると、Azure Information Protection ビューアーがインストールされている必要がある保護されたファイルを使用して手順です。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,20 +11,20 @@ ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d477d8112afd48a61a3f0977f2550fb12dff67a2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8dea94af41cb445f895ee4cbc2c424fc169ae117
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182961"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880218"
 ---
-# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>ユーザー ガイド: Rights Management によって保護されたファイルを表示して使用する
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>ユーザー ガイド: Azure Information Protection ビューアーを使用した保護されたファイルを表示します。
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-通常、開くだけで保護されたドキュメントを表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
+多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
 ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー**で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
 

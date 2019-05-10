@@ -1,5 +1,5 @@
 ---
-title: Windows 用 Azure Information Protection の統合されたラベル付けクライアントを使用した分類し、保護
+title: 分類し、保護 - Azure Information Protection クライアントのラベル付けを統合します。
 description: 分類して、Azure Information Protection を使用すると、ドキュメントや電子メールを保護する方法は、Windows 用のラベル付けのクライアントを統合する手順です。
 author: cabailey
 ms.author: cabailey
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 0404acb6f79100a78d955a94f67ea0a0a7aaf604
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 1b05cf8f5194c8491a2aa7bb687622e821e770cb
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181379"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880119"
 ---
-# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザー ガイド: 分類および Windows 用 Azure Information Protection の統合されたラベル付けクライアントを使用して、ファイルや電子メールを保護します。
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: 分類および Azure Information Protection の統合されたラベル付けクライアントと保護
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >

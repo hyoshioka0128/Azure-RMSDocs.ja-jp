@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection のルート キーの管理
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da0d6f8e4e91b5f5e6163855434a39432256b2be
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 26999c8fdd079c7a34d39415d8beba6763a06f68
+ms.sourcegitcommit: e0ce23467744ec6a4da49081461a459bc37c7d78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182118"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443277"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -149,7 +149,7 @@ Azure Key Vault ドキュメントを使用して、Azure Information Protection
 
 オンプレミスで HSM 保護キーを作成し、HSM 保護キーとして Key Vault に転送する場合は、「[Azure Key Vault の HSM 保護キーを生成し、転送する方法](/azure/key-vault/key-vault-hsm-protected-keys)」の手順に従ってください。
 
-Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは既定の構成で、操作には暗号化、暗号化解除、ラップ、ラップ解除、署名、確認が含まれます。 使用して、キーの許可された操作を確認できます[Get AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey)と検証、 *key_ops*に返される値、**キー**詳細。 必要に応じて、許可された操作の追加を使用して[Update AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey)と*KeyOps*パラメーター。
+Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは、既定の構成と操作は、暗号化、復号化、wrapKey、unwrapKey、記号、および確認します。 次の PowerShell コマンドを使用して、キーの許可された操作を確認することができます:`(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`します。 必要に応じて、許可された操作の追加を使用して[Update AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey)と*KeyOps*パラメーター。
 
 Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 キー コンテナー URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
 

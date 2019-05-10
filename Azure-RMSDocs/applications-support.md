@@ -1,22 +1,22 @@
 ---
 title: アプリが AIP から Azure Rights Management をサポートするしくみ
-description: 幅広く使用されているエンド ユーザー アプリケーション (Office アプリケーション、Word、Excel、PowerPoint、Outlook など) およびサービス (Exchange、SharePoint など) で、Azure Information Protection の Azure Rights Management を使用して組織の文書や電子メールを保護する方法について説明します。
+description: 最もがよくアプリケーション (Office アプリなど) を使用する方法を理解し、サービス (Exchange、SharePoint など) は、組織のドキュメントや電子メールを保護するために Azure Information Protection から Azure Rights Management サービスを使用することができます。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/02/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 56584fbff799780a86f93546997a342faa29592f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: deb9cb2bf0751c78d419db579b5df050e4862245
+ms.sourcegitcommit: 4721f96650fde6e0e8e704cc6a3458ddeff635a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175408"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65087877"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 

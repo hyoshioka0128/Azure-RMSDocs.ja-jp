@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection - AIP を使用した分類し、保護
-description: ドキュメントや電子メールを分類して保護する方法の手順です。
+title: 分類し、保護 - Azure Information Protection クライアント
+description: 手順については分類および Windows 用 Azure Information Protection クライアントを使用する場合は、ドキュメントや電子メールを保護する方法。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e7d4083bbd2f11e4abcd934c8bb17cc49d4e2b83
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: bdb714a02ca775f5d8409be64499227f1bf15ef1
+ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185177"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64914720"
 ---
-# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>ユーザー ガイド:Azure Information Protection を使用してファイルや電子メールを分類して保護する
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>ユーザー ガイド: 分類および Azure Information Protection クライアントの保護
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Windows 用の azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](client-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。

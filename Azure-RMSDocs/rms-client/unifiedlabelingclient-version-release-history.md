@@ -1,21 +1,21 @@
 ---
-title: 統合、azure Information Protection クライアントのバージョンをラベル付けリリース履歴とサポート ポリシー
+title: Azure Information Protection unified ラベル付けのクライアントのバージョンの履歴とサポート ポリシー
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1262a2f1a70002686aed0bad47354cdc5ac23bac
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180887"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982153"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>統合、azure Information Protection クライアントのバージョンをラベル付けリリース履歴とサポート ポリシー
 
@@ -41,9 +41,15 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 このクライアントでは、Windows コンピューター用の Office アドオン、エクスプローラー用の拡張機能、および PowerShell モジュールがインストールされます。 このクライアントには、Azure からポリシーをダウンロードする Azure Information Protection クライアントと同じ[前提条件](../requirements.md)があります。
 
-Azure Information Protection クライアントと機能を比較するには、「[クライアントの機能比較](use-client.md#compare-the-clients)」をご覧ください。
+機能と、Azure Information Protection クライアントを使用して機能を比較するを参照してください。[クライアントの比較](use-client.md#compare-the-clients)します。
 
-## <a name="version-20778"></a>バージョン 2.0.778
+## <a name="version-207790"></a>バージョン 2.0.779.0
+
+**リリース日**: 05/01/2019
+
+このリリースでは、場合によっては、ラベル表示しない Office アプリ、またはファイル エクスプ ローラーで、競合状態の問題を解決するのには 1 つの修正。
+
+## <a name="version-207780"></a>バージョン 2.0.778.0
 
 **リリース日**: 04/16/2019
 

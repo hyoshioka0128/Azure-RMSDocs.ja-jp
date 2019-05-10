@@ -4,19 +4,19 @@ description: 新しいリリース、サポート オプション、および Mi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 385b44e6f3753e7d066f63fee812c4f12b67171d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a80ec942197cb9502fcddbe38190d4e874575825
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181737"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982118"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -35,9 +35,18 @@ ms.locfileid: "60181737"
 |特定の Azure Information Protection 用語を理解する|[用語](terminology.md)ページで用語や省略形を検索します。|
 
 ## <a name="information-about-new-releases-and-updates"></a>新しいリリースと更新プログラムに関する情報
+
+Azure Information Protection の正式なロードマップは現在、 [Microsoft 365 ロードマップ](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent)します。
+
 Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://msip.uservoice.com)で要求された機能の状態をチェックすることも役立つ場合があります。
 
-追加情報および詳細情報については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)を参照してください。 たとえば、新しいリリースに関する情報、サポート ステートメントの更新、および既存のリリースの修正と詳細について通知するために、ドキュメントの変更の概要が毎月発行されます。 このようなドキュメントの更新の投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
+追加情報および詳細情報については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)を参照してください。 
+
+## <a name="whats-new-in-the-documentation"></a>新機能については、ドキュメントです。
+
+Azure Information Protection テクニカル ブログがありますの概要[ドキュメント変更の 1 か月あたり](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)します。 これらの変更には、新しいリリースでは、ステートメント、およびも修正をサポートするために変更の新規および更新されたドキュメントと、既存リリースの説明を含めることができます。
+
+このようなドキュメントの更新の投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
 
 ## <a name="support-options-and-community-resources"></a>サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。

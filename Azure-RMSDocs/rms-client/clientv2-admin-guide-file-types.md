@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection の統合されたラベル付けクライアントでサポートされるファイルの種類
+title: ファイルの種類がサポートされています - Azure Information Protection ラベル付けクライアントの統合
 description: サポートされているファイルの種類、ファイル名拡張子、および保護する管理者のためのレベルに関する技術的な詳細は、Windows 用 Azure Information Protection の統合されたラベル付けクライアントを担当します。
 author: cabailey
 ms.author: cabailey
@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: aca0fe5d3d9624676bc2bb12a772f5b753eb1a0d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 61d7dfa6fa1fe86c930e9c6a6d2c21a807433583
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768136"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントでサポートされるファイルの種類
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*>
 >
-> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection の統合されたラベル付けクライアントは、ドキュメントや電子メールに、次を適用できます。
 

@@ -4,29 +4,32 @@ description: 統合ラベルをサポートしているクライアントとサ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 260e6cd429e428fd59782ef33bd557750e3c8eb5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 89a8c1045fcf203ec95c5e79ed80588dfe167459
+ms.sourcegitcommit: 9c6f36a291dd50c0f3806a4c9660895613c6ad72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179629"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65213074"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Azure Information Protection のラベルを Office 365 の機密ラベルに移行する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
-> この機能はプレビュー段階にあり、新しいプラットフォームにテナントが移行されます。 移行を元に戻すことはできません。 新しいプラットフォームでは統合ラベル付けがサポートされいます。このため、作成し管理するラベルを、[Microsoft Information Protection](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection) ソリューションをサポートするクライアントおよびサービスで使用できます。
+>
+> この機能は現在一般に、すべてのテナントで使用できるという単語を引き続き表示可能性がありますが**プレビュー** 2 ~ 3 週間の Azure portal でします。
 
-[統合ラベル付けをサポートしているクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)によって Office 365 機密ラベルとして使用できるようにしたい場合は、ラベルを移行します。 これらのラベルの管理と発行は、Office 365 セキュリティ/コンプライアンス センターから、または Microsoft 365 セキュリティ センターと Microsoft 365 コンプライアンス センターから行います。 移行後、Azure Information Protection クライアントによって、引き続き Azure portal からラベルとその Azure Information Protection ポリシーがダウンロードされます。
+Azure Information Protection でラベルを秘密度ラベルとして使用することができるように移行[統一されたラベル付けをサポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)します。
+
+移行後も管理し、Office 365 のセキュリティとコンプライアンス センター、または Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センターからこれらのラベルを発行します。 これらのラベルは、Azure Information Protection の統合されたラベル付けクライアントで使用できます。 Azure Information Protection クライアントを使用するように続行すると、このクライアントは引き続き Azure portal から Azure Information Protection ポリシーを使用してラベルをダウンロードします。
 
 ラベルを移行する方法についての詳細な手順を読む前に、次のよく寄せられる質問が役立つ場合があります。
 
@@ -53,8 +56,6 @@ ms.locfileid: "60179629"
 
 - 現在のところ、一部のクライアントでは統合ラベルがサポートされていません。 [サポートされているクライアント](#clients-and-services-that-support-unified-labeling)を用意し、Azure portal (統合ラベルをサポートしていないクライアント用) と管理センター (統合ラベルをサポートしているクライアント用) の両方での管理のための準備をしてください。
 
-- 使用するラベルを定義し、構成している最中であれば、Azure portal でこのプロセスを完了し、ラベルを移行することをお勧めします。 この方針によって、移行プロセス中にラベル重複が回避されます。ラベルが重複する場合は、管理センターで編集する必要があります。
-
 - ポリシーとすべてのクライアント詳細設定は移行されません。移行されないポリシーには、ポリシー設定とそれにアクセスできるユーザーが含まれます (スコープ付きポリシー)。 移行されない変更については、ラベルの移行後、管理センターで関連オプションを構成する必要があります。
     
     操作における一貫性を上げるために、管理センターでは同じスコープで同じラベルを発行することをお勧めします。
@@ -75,7 +76,7 @@ ms.locfileid: "60179629"
 
     - ラベルを作成したら、それをアプリケーションやサービスで利用できるようにするには、いずれかの管理センターでラベルを発行する必要があります。
     
-    - ラベルの名前が変更された場合は、いずれかの管理センターまたは Azure portal で編集する必要があります。 
+    - ラベルの名前が変更された場合は、いずれかの管理センターまたは Azure portal で編集する必要があります。
 
 - Azure portal では、各ラベルのラベル表示名のみが表示されます。この名前は編集できます。 管理センターには、ラベルのこの表示名とラベル名の両方が表示されます。 ラベル名は、ラベルが最初に作成されたときに指定した最初の名前です。このプロパティは、識別目的でバックエンド サービスによって使用されます。
 
@@ -141,11 +142,16 @@ Outlook for Mac では、保護は保持されますが例外が 1 つありま�
 
 ラベルを移行するコンプライアンス管理者、セキュリティ管理者、またはグローバル管理者があります。
 
+> [!NOTE]
+> 保有期間のラベルやデータ損失防止ポリシーがある Office 365 の場合は、コンプライアンス管理者ロール、または、ラベルを移行するグローバル管理者ロールがあることをお勧めします。
+> 
+> セキュリティ管理者しない保有期間のラベルやデータ損失防止ポリシーにアクセス、ため場合、これらのいずれかがある場合と同じ名前の Azure Information Protection ラベルがある、移行プロセスを手動で表示されるまで完了できません名前を変更します。重複します。 ただし、他のロールのいずれかがある場合、移行プロセス名前を変更できます、Azure Information Protection ラベル、移行を完了できるようにします。
+
 1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[管理]** メニュー オプションから **[統合ラベル付け (プレビュー)]** を選択します。
+2. **管理**メニュー オプションを選択し**統合がラベル付け**します。
 
 3. **[Azure Information Protection - 統合ラベル付け]** ブレードで **[有効化]** を選択し、オンライン指示に従います。
     
@@ -186,4 +192,4 @@ Outlook for Mac では、保護は保持されますが例外が 1 つありま�
 
 いずれかの管理センターで構成および発行できるようになった移行済みラベルについて詳しくは、「[機密ラベルの概要](/Office365/SecurityCompliance/sensitivity-labels)」をご覧ください。
 
-発表については、ブログ記事「[Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)」 (セキュリティ/コンプライアンス センターにおける統合ラベル付けの管理の発表) をご覧ください。
+既に同意していない場合、は、Azure Information Protection の統合されたラベル付けクライアントをインストールします。 リリースについては、管理者ガイド、およびユーザー ガイドを参照してください。 [Azure Information Protection unified Windows 用のラベル付けクライアント](./rms-client/aip-clientv2.md)します。

@@ -1,5 +1,5 @@
 ---
-title: Windows 用 Azure Information Protection の統合されたラベル付けクライアントを使用して分類します。
+title: Azure Information Protection の統合されたラベル付けクライアントを使用して分類します。
 description: 手順については、Azure Information Protection を使用すると、ドキュメントや電子メールを分類する方法は、Windows 用のラベル付けのクライアントを統合します。
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 630959840574c0441719d317dda254242cad3b3d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c7ec1c5f6a929d9b6b810b647e6cb6dbe3c42316
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767963"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザー ガイド: Windows 用 Azure Information Protection の統合されたラベル付けクライアントを使用して、ファイルや電子メールを分類します。
 
