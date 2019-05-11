@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2d703eff5d31563c1c34b9937f9a1d2f45e93064
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 9d681f986028f83eb3fe59d9e295db6873828052
+ms.sourcegitcommit: 96a05d1abe20b7c588dccaecea18a73b648179b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183798"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535322"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
@@ -486,7 +486,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
-2. Azure Information Protection で使用する Azure AD テナントで、**[Azure Active Directory]** > **[アプリの登録]** と移動します。 
+2. Azure Information Protection で使用する Azure AD テナントに移動します。 **Azure Active Directory** > **アプリの登録 (レガシ)** します。 
 
 3. **[新しいアプリケーションの登録]** を選択し、Web アプリ/API アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
 
