@@ -69,4 +69,4 @@ sections:
         style: unordered
         items:
           - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Azure Information Protection ポリシーを編集して新しいラベルを作成する</a>
-          - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)</a>
+          - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">連携させる Azure Information Protection のポリシー設定を構成する</a>
