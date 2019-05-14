@@ -1,5 +1,5 @@
 ---
-title: チュートリアル - Azure Information Protection のポリシー設定を構成してドキュメントや電子メールを分類する - AIP
+title: チュートリアル - Azure Information Protection ポリシー設定を使ってデータを分類する
 description: Azure Information Protection のポリシー設定を構成して、組織のドキュメントや電子メールを分類する手順について説明した簡単なチュートリアルです。
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d5d6988c5180a58ed9de5c8111036ee380044584
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a09e7bf3b5f4da30dc0e92d150f3a485ccf85693
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773606"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768103"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 

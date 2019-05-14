@@ -1,25 +1,25 @@
 ---
-title: クイック スタート - ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする - AIP
+title: クイック スタート - ラベルを構成して、ユーザーが電子メールを簡単に保護できるようにする - AIP
 description: 転送不可の保護を自動的に適用することで、ユーザーの電子メールを保護するラベルを構成します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 052dc5d4bbbd0a74bb92f87351ece62eb37e565b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 629f3558d3e8b605136ea6857826763287755a79
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181686"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767913"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
 
 このクイック スタートでは、転送不可の保護設定を自動的に適用するように既存のラベルを構成します。
 

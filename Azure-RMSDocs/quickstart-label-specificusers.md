@@ -1,6 +1,6 @@
 ---
 title: クイック スタート - 特定のユーザー向けの新しい Azure Information Protection ラベル - AIP
-description: スコープ付きポリシーを使用して特定のユーザー向けのドキュメントや電子メールを分類する新しいラベルを作成および構成します。
+description: スコープ付きポリシーを使用してユーザーのサブセットに向けたドキュメントや電子メールを分類する新しいラベルを作成および構成します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -8,18 +8,18 @@ ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 623f57ac5aae6980f8c7e0a9deee4aeca0a268a2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 15359fac56b4bef68ae9668a31c82a8b742b208f
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183876"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767835"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
 
 このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる新しいラベルを作成します。
 

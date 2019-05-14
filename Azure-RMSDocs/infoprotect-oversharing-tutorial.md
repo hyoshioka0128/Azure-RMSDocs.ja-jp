@@ -1,24 +1,24 @@
 ---
-title: チュートリアル - Azure Information Protection を構成して情報の過剰な共有を制御する - AIP
-description: Azure Information Protection クライアントでのクライアントの詳細設定を構成および参照して、メッセージの警告、理由の確認、または Outlook からの送信をブロックするための導入チュートリアルです。
+title: チュートリアル - Azure Information Protection を使って過剰な共有を制御する - AIP
+description: Azure Information Protection クライアントでのクライアントの詳細設定を構成して動作を確認し、警告、理由の入力、または Outlook からのメッセージの送信のブロックを行うための導入チュートリアルです。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 977c26e24ebb9538216704898493f218f86a7556
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 38def86f9bbc32edc083f856cf43101890b5a22e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773629"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64562784"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル: Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このチュートリアルで学習する内容は次のとおりです。
