@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 264de1992659b2bd8c7464248704b514ae764274
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768193"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708909"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -164,11 +164,11 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
     - **HSM で保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS 用の HSM により保存されているキーを、顧客管理の Azure Information Protection テナント キーに移行します ("Bring Your Own Key" つまり BYOK シナリオ)。 これには、オンプレミスの Thales HSM から Azure Key Vault にキーを転送し、Azure Rights Management サービスによるこのキーの使用を承認する追加手順が必要です。 HSM で保護されている既存のキーは、モジュールで保護する必要があります。OCS で保護されているキーは、Rights Management サービスでサポートされていません。
+        AD RMS 用の HSM により保存されているキーを、顧客管理の Azure Information Protection テナント キーに移行します ("Bring Your Own Key" つまり BYOK シナリオ)。 これには、オンプレミスの nCipher HSM のキーを Azure Key Vault に転送して、このキーを使用する Azure Rights Management サービスを承認する追加の手順が必要です。 HSM で保護されている既存のキーは、モジュールで保護する必要があります。OCS で保護されているキーは、Rights Management サービスでサポートされていません。
 
     - **ソフトウェアで保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェア キーを抽出してオンプレミス HSM にインポートした後、オンプレミス Thales HSM から Azure Key Vault HSM にキーを転送し、キーを格納するキー コンテナーの使用を Azure Rights Management サービスに承認する追加手順が必要になるため、必要な構成はこの方法が最も多くなります。
+        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェア キーを抽出し、オンプレミス HSM にインポートして、オンプレミスの nCipher HSM から Azure Key Vault HSM にキーを転送および Azure の権限を承認する追加の手順を実行する必要がありますので、ほとんどの構成が必要です。キーを格納する key vault を使用する管理サービス。
 
 - **手順 5: Azure Rights Management サービスをアクティブにする**
 

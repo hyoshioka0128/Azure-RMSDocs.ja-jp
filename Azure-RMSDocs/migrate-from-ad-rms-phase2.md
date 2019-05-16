@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 297608ce7fd64170e9aaa31ab39f0b0e151d7538
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 4f1177df3165a811668ae03e45da02879ff7c872
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184265"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708890"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -66,9 +66,9 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 - AD RMS データベースでのパスワード保護。 これが既定の構成です。
 
-- Thales ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護。
+- NCipher ハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護。
 
-- Thales 以外のサプライヤーのハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護。
+- NCipher 以外のサプライヤーからハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護。
 
 - 外部暗号プロバイダーを使用して保護されたパスワード。
 
@@ -82,10 +82,10 @@ Azure Information Protection テナント キー トポロジには、テナン�
 |現在の AD RMS のデプロイ|選択した Azure Information Protection テナント キーのトポロジ|移行手順|
 |-----------------------------|----------------------------------------|--------------------------|
 |AD RMS データベースでのパスワード保護|マイクロソフト管理|後で説明される「**ソフトウェアで保護されたキーからソフトウェアで保護されたキーへの移行**」の手順を参照してください。<br /><br />これは最も簡単な移行パスであり、Azure Information Protection に構成データを転送するだけで済みます。|
-|Thales nShield ハードウェア セキュリティ モジュール (HSM) を使用する HSM 保護 |お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、3 つの一連の手順を実行する必要があります。最初にオンプレミスの HSM から Azure Key Vault の HSM にキーを転送し、次に Azure Information Protection からの Azure Rights Management サービスがテナント キーを使用するのを承認し、最後に構成データを Azure Information Protection に転送します。|
+|NCipher nShield ハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|後で説明される「**HSM で保護されたキーから HSM で保護されたキーへの移行**」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、3 つの一連の手順を実行する必要があります。最初にオンプレミスの HSM から Azure Key Vault の HSM にキーを転送し、次に Azure Information Protection からの Azure Rights Management サービスがテナント キーを使用するのを承認し、最後に構成データを Azure Information Protection に転送します。|
 |AD RMS データベースでのパスワード保護|お客様が管理 (BYOK)|後で説明される「**ソフトウェアで保護されたキーから HSM で保護されたキー**への移行」の手順を参照してください。<br /><br />Azure Key Vault の BYOK ツールセットが必要であり、一連の 4 つの手順を実行する必要があります。最初にソフトウェア キーを抽出してオンプレミスの HSM にインポートし、次にオンプレミスの HSM から Azure Information Protection HSM にキーを転送し、さらに Key Vault データを Azure Information Protection に転送して、最後に構成データを Azure Information Protection に転送します。|
-|Thales 以外のサプライヤーのハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|この HSM から Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、HSM のサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
-|外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|Thales nShield ハードウェア セキュリティ モジュール (HSM) にキーを転送する方法については、暗号プロバイダーのサプライヤーに問い合わせてください。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
+|NCipher 以外のサプライヤーからハードウェア セキュリティ モジュール (HSM) を使用した HSM 保護 |お客様が管理 (BYOK)|NCipher nShield ハードウェア セキュリティ モジュール (HSM) に、この HSM からキーを転送する方法を手順については、hsm 業者に連絡します。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
+|外部暗号プロバイダーを使用して保護されたパスワード|お客様が管理 (BYOK)|NCipher nShield ハードウェア セキュリティ モジュール (HSM) に、キーを転送する方法を手順については、暗号化サービス プロバイダーの業者に連絡します。 後で説明される「**HSM で保護されたキーから HSM で保護されたキー**への移行」の手順に従います。|
 
 エクスポートできない HSM で保護されたキーがある場合でも、読み取り専用モード用に AD RMS クラスターを構成することで、Azure Information Protection に移行できます。 このモードでは、以前に保護されたコンテンツを引き続き開くことはできますが、新たに保護されたコンテンツでは、ユーザー (BYOK) または Microsoft によって管理されている新しいテナント キーが使用されます。 詳細については、「[AD RMS から Azure RMS への移行がサポートされている Office の更新プログラムが利用可能になりました](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to)」を参照してください。
 

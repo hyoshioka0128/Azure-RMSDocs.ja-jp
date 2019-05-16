@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9651e1c44f9f6fb59fb8a48fb4435212c827968
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 87edfae6959f5ce6c037379e7564449d53405aae
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184078"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708929"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2:ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
@@ -29,7 +29,7 @@ ms.locfileid: "60184078"
 
 これは、AD RMS 構成を Azure Information Protection にインポートする 4 段階の手順で、結果は Azure Key Vault でお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
 
-最初にサーバー ライセンサー証明書 (SLC) キーを AD RMS 構成データから抽出し、キーをオンプレミスの Thales HSM に転送します。次に、HSM キーをパッケージ化して Azure Key Vault に転送し、Azure Information Protection からの Azure Rights Management サービスによるキー コンテナーへのアクセスを承認し、構成データをインポートします。
+必要があります最初にサーバー ライセンサー証明書 (SLC) キーを AD RMS 構成データから抽出してオンプレミス nCipher HSM にキーを転送、次にパッケージ化し、HSM キーを Azure Key Vault に転送し、するから Azure Rights Management サービスを承認Key vault にアクセスし、構成データをインポートする azure Information Protection です。
 
 Azure Information Protection テナント キーは Azure Key Vault によって格納され管理されるので、移行のこの部分では、Azure Information Protection だけでなく、Azure Key Vault での管理も必要です。 Azure Key Vault が組織で自分以外の管理者によって管理されている場合は、その管理者と調整し、連携してこれらの手順を完了する必要があります。
 
@@ -74,7 +74,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     - このコマンドを実行するときに、**TpdPassword** の完全なパラメーター名または **pwd** の短いパラメーター名を使用してパスワードを指定しなかった場合は、パスワードを指定するように求められます。
 
-3. 同じ未接続のワークステーションで、Thales のドキュメントに従って Thales HSM をアタッチして構成します。 次のコマンドを使用することで、アタッチした Thales HSM にキーをインポートできるようになりました。この場合は、独自のファイル名を ContosoTPD.pem に置換する必要があります。
+3. 同じ未接続のワークステーションをアタッチし、nCipher ドキュメントに従って、nCipher HSM を構成します。 独自のファイル名を ContosoTPD.pem に置換する必要がある、次のコマンドを使用して、アタッチされた nCipher HSM にキーをインポートすることができますようになりました。
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -103,7 +103,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     **キーへのパス: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-次の出力により、キー (この例では、"key_simple_contosobyok") に保存されている暗号化されたコピーを使用して秘密キーがオンプレミスの Thales HSM デバイスに移行されたことを確認できます。 
+この出力は、秘密キーがオンプレミス nCipher HSM を使用してデバイスをキー (この例では、"key_simple_contosobyok") に保存されている暗号化されたコピーを今すぐ移行されたことを確認します。 
 
 SLC キーが抽出され、オンプレミスの HSM にインポートされたので、HSM で保護されたキーをパッケージ化し、Azure Key Vault に転送することができます。
 
