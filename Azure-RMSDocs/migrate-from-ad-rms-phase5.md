@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b5b7e9c79ec533ef72da1b094347556770c50e71
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184112"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780866"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -47,6 +47,20 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 
 >[!IMPORTANT]
 > この移行が終わると、Azure Information Protection および Hold Your Own Key (HYOK) オプションで AD RMS クラスターを使うことができなくなります。 Azure Information Protection のラベルに HYOK を使う場合は、現在行われているリダイレクションのため、使用する AD RMS クラスターに、移行したクラスターとは異なるライセンス URL が必要です。
+
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加の構成
+
+Office 2010 を実行するクライアントを移行するには、AD RMS サーバーをプロビジョニング解除後に、保護されたコンテンツを開くときに遅延を発生する可能性が。 または、ユーザーは、メッセージ資格情報を保護されたコンテンツを開く必要がないことを確認可能性があります。 これらの問題を解決するには、AD RMS の URL の FQDN (127.0.0.1)、コンピューターのローカル IP アドレスにリダイレクトして、これらのコンピューターのネットワークのリダイレクトを作成します。 これは、各コンピューターで、ローカルの hosts ファイルを構成することで、または DNS を使用して行んだことができます。
+
+ローカルの hosts ファイルを使用してリダイレクトします。
+
+- ローカルの hosts ファイルに次の行を追加する置換`<AD RMS URL FQDN>`プレフィックスまたは web ページのことがなく、AD RMS クラスターの値で。
+    
+        127.0.0.1 <AD RMS URL FQDN>
+
+DNS を使用してリダイレクトします。
+    
+- AD RMS の URL FQDN、IP アドレス 127.0.0.1 を持つ新しいホスト (A) レコードを作成します。
 
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 21148e9293c3be1162028a6cf7e26c30fb52a15f
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175362"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822170"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - メタデータ
 
@@ -39,15 +39,15 @@ MIP SDK には、次の一連のメタデータが適用されます。
 | **有効**   | True または False                 | この属性は、データ項目のこのキー値のペアのセットによって表される分類が有効になっているかどうかを示します。 通常、DLP 製品は、分類ラベルを識別するためにこのキーの存在を検証します。 | はい       |
 | **SiteId**    | GUID                          | Azure Active Directory テナント ID                                                                                                                                                                                                                   | はい       |
 | **ActionId**  | GUID                          | ActionID は、ラベルを設定するたびに変更されます。 監査ログには、新旧両方の actionID アクティビティ データ項目にラベル付けのチェーンを許可するのには含まれます。                                                                                 | はい       |
-| **方法**    | Standard、Privileged、または自動        | :Assignmentmethod を使用して設定します。                                                                                                                                                                                                                 | いいえ        |
+| **方法**    | Standard または特権        | 使用して設定[:assignmentmethod](reference/mip-enums-and-structs.md#assignmentmethod)します。 Standard では、既定か、または自動的にラベルが適用されることを意味します。 特権は、ラベルを手動で選択したことを意味します。                                                                                                                                                                                                                 | いいえ        |
 | **SetDate**   | 拡張の ISO 8601 の日付形式 | ラベルが設定されたときのタイムスタンプ。                                                                                                                                                                                                              | いいえ        |
 | **名前**      | string                        | ラベル、テナント内で一意の名前。 必ずしも、表示名に対応していません。                                                                                                                                                              | いいえ      |
-| **ContentBits** | 整数 (integer) | マークするコンテンツの種類を記述するビットマスクは、ファイルに適用する必要があります。 CONTENT_HEADER = 0X1、CONTENT_FOOTER = 0X2、透かし = 0X4
+| **ContentBits** | 整数 (integer) | マークするコンテンツの種類を記述するビットマスクは、ファイルに適用する必要があります。 CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
  | いいえ |
 
 ファイルに適用する場合、結果は次の表に似ています。
 
-| キー                                                         | [値]                                |
+| キー                                                         | 値                                |
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |

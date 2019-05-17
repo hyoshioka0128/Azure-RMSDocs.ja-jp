@@ -4,23 +4,23 @@ description: 手順とエンタープライズ ネットワーク上の管理者
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 7caa35896e0dcfd3cd6dc1cf407da87e41e71ef5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183189"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822217"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイドのラベル付けを統合します。
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このガイドの情報を使用して、Azure Information Protection の統合、エンタープライズ ネットワーク上のラベル付けのクライアントの責任者は場合、またはよりも詳細な技術情報を表示する場合、 [Azure Information Protection unified ラベル付けクライアント ユーザー ガイド](clientv2-user-guide.md)します。 
 
@@ -156,9 +156,11 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 Azure Information Protection チームは、新機能と修正プログラムの Azure Information Protection のクライアントを統一されたにラベル付けを定期的に更新します。 アナウンスは、チームの [Yammer サイト](https://www.yammer.com/AskIPTeam)に投稿されます。
 
-Windows Update を使用している Azure 情報保護の Azure Information Protection の統合されたラベル付けクライアントは自動的にクライアントのインストール方法に関係なく、このクライアントの一般公開バージョンをアップグレードします。 新しいクライアントのリリースは、リリースの数週間後にカタログに公開されます。
+Windows Update を使用している場合、Azure Information Protection の統一されたラベル付けクライアントは、クライアントのインストール方法に関係なく、このクライアントの一般公開バージョンを自動的にアップグレードします。 新しいクライアントのリリースは、リリースの数週間後にカタログに公開されます。
 
 または、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から新しいリリースをダウンロードして、クライアントを手動でアップグレードすることもできます。 ダウンロードしたら、新しいバージョンをインストールして、クライアントをアップグレードします。 このメソッドは、プレビュー バージョンと、Azure Information Protection クライアントをアップグレードするかどうかのアップグレードを使用する必要があります。
+
+Azure Information Protection クライアントを Windows 7 からアップグレードする場合はすべての Office アプリケーションがクライアントのアップグレード中に自動的に再起動します。 この自動再起動は、以降のオペレーティング システムには適用されません、統一されたラベル付けクライアントの以前のバージョンからアップグレードする場合またはします。
 
 手動でアップグレードし、かつインストール方法を変更する場合は、最初に以前のバージョンをアンインストールします。 たとえば、実行可能 (.exe) バージョンのクライアントから Windows インストーラ― (.msi) バージョンのクライアントに変更する場合です。 または、クライアントの以前のバージョンをインストールする必要がある場合です。 たとえば、テスト用に現在のプレビュー バージョンがインストールされていて、現在の一般公開バージョンに戻す必要がある場合です。
 

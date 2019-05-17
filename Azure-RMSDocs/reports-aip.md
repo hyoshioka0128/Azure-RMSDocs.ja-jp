@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 05/07/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: d7cc81a41b7515edd0df0e38d5813e0e90b2aa73
-ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.openlocfilehash: 625fcf1474ebd1de1c087fe62a213590014dce13
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65191935"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780883"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -35,7 +35,7 @@ Azure Information Protection 分析の中央レポートを使用して、Azure 
 
 - 保護されていないと組織をリスクにさらす可能性がある機密情報が含まれるドキュメントを識別し、次の推奨事項に従ってリスクを軽減します。
 
-表示されるデータは、Azure Information Protection クライアントと Azure Information Protection スキャナーからのデータ、[Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview) を実行中の Windows コンピューターからのデータ、および[統合ラベル付けをサポートしているクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)からのデータを集計したものです。
+表示されるデータは、Azure Information Protection クライアントおよび実行している Windows コンピューターからの Azure Information Protection スキャナーから集計[Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview)との間[統一されたラベル付けをサポートしているクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)します。
 
 たとえば、次のようなことを確認できます。
 
@@ -88,7 +88,7 @@ Azure Information Protection 分析の中央レポートを使用して、Azure 
 詳細については、次のブログ記事を参照してください。 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、レポート作成、および分析を行う)
 
-- [Discover and protect sensitive data through Azure Information Protection and Windows Defender ATP](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292) (Azure Information Protection および Windows Defender ATP を使用して機密データを発見し、保護する)
+- [検出し、Azure Information Protection と Microsoft Defender ATP で機密データを保護します。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### <a name="information-collected-and-sent-to-microsoft"></a>収集され Microsoft に送信される情報
 
@@ -137,7 +137,7 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプションで、Azure Information Protection と同じテナント用のサブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
 |Azure Information Protection クライアントまたは Azure Information Protection の統合されたラベル付けクライアント|これらのクライアントのいずれかをいない場合は、ダウンロードしてインストールしてから、 [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。 <br /><br /> サポートする最新バージョンがあるかどうかを確認[機能をすべて](#features-that-require-a-minimum-version-of-the-client)Azure Information Protection の分析のためです。|
-|**検出とリスク** レポートの場合: <br /><br />、オンプレミスのデータ ストアからデータを表示するには Azure Information Protection スキャナーの少なくとも 1 つのインスタンスをデプロイしました。 <br /><br />- Windows 10 コンピューターからのデータを表示するには、それがビルド 1809 以降であり、Windows Defender Advanced Threat Protection (Windows Defender ATP) を使っていて、Windows Defender セキュリティ センターから Azure Information Protection の統合機能を有効にしていること|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 <br /><br />Windows Defender セキュリティ センターから Azure Information Protection の統合機能を構成および使用する方法について詳しくは、「[Information protection in Windows overview](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview)」(Windows での情報保護の概要) をご覧ください。|
+|**検出とリスク** レポートの場合: <br /><br />、オンプレミスのデータ ストアからデータを表示するには Azure Information Protection スキャナーの少なくとも 1 つのインスタンスをデプロイしました。 <br /><br />、Windows 10 のコンピューターからデータを表示するには Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を使用している、Microsoft から Azure Information Protection の統合機能が有効になっている 1809 の最小ビルドする必要があります。Defender セキュリティ センター|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 <br /><br />構成と Microsoft Defender セキュリティ センターから Azure Information Protection の統合機能を使用する方法については、次を参照してください。[における Windows Information protection](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview)します。|
 |**推奨事項**レポートの場合:  <br /><br />-推奨される操作として、Azure portal から新しいデータ リポジトリを追加する必要がありますを使っている Azure Information Protection スキャナーの最新の一般公開バージョン |スキャナーを展開するを参照してください。[ファイルを分類して保護を自動的に Azure Information Protection スキャナーをデプロイして](deploy-aip-scanner.md)します。|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Azure Information Protection 分析に必要なアクセス許可
@@ -231,8 +231,6 @@ Log Analytics ワークスペースの作成に関する情報については、
     このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。 ファイルを選択して**アクティビティの詳細**を表示することで、ファイルの詳細を確認することもできます。
 
 - **データ検出 (プレビュー)**: スキャナーとサポートされているエンドポイントによって検出されたラベル付きファイルに関する情報を表示するには、このレポートを使用します。
-    
-    注:エンドポイントの検出はテナントに徐々 にロールアウトします。 サポートされているエンドポイントからこのレポートにデータが表示されるのは、この機能がお客様のテナントにロールアウトされた時点から始まります。
     
     構成することができます、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)の機密情報を含むレポート ファイルに Azure Information Protection クライアント。
     

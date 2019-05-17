@@ -3,7 +3,7 @@ title: Azure Information Protection ポリシーを構成する - AIP
 description: 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3849a676473d05d5440a77288b8e9478270828ef
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ce3464a1035c79655709d47ea8f64a885602d994
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180224"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822186"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
 
@@ -160,6 +160,8 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx)、PDF ドキュメントの場合、このメタデータは次のカスタム プロパティに格納されます:**MSIP_Label_\<GUID>_Enabled=True** に格納されます。  
 
+メールの電子メールが送信されるときに、ラベル情報が格納されます。 ドキュメントについては、ファイルを保存するときに、ラベル情報が格納されます。 
+
 ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の **[ラベル]** ブレード上の [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
 ## <a name="next-steps"></a>次の手順
@@ -168,7 +170,7 @@ Azure Information Protection ポリシーをカスタマイズする方法や、
 
 - [Azure Information Protection ポリシーを編集して新しいラベルを作成する](infoprotect-quick-start-tutorial.md)
 
-- [Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)
+- [連携させる Azure Information Protection のポリシー設定を構成する](infoprotect-settings-tutorial.md)
 
 ポリシーの実行方法を確認するには、[Azure Information Protection 向けのレポート作成](reports-aip.md)に関する記事を参照してください。
 
