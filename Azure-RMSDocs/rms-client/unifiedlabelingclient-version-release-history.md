@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 37ecdd3862ee6ae83526979f132ff213b66dcece
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982153"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837789"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>統合、azure Information Protection クライアントのバージョンをラベル付けリリース履歴とサポート ポリシー
 
@@ -25,6 +25,10 @@ ms.locfileid: "64982153"
 
 
 Azure Information Protection の統合されたラベル付けクライアントをダウンロードすることができます、 [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)します。
+
+最新の一般提供バージョンにも製品名を持つ、Microsoft Update カタログに含まれているは、通常 2 週間の短い遅延の後**Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection Unified ラベル付けクライアント**との分類**更新**します。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+
+詳細については、次を参照してください。[アップグレードと維持、Azure Information Protection の統合のラベル付けクライアント](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client)します。
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
@@ -73,7 +77,7 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 - 次のラベルおよびポリシー設定:
     - 視覚的なマーキング (ヘッダー、フッター、透かし)
-    - 既定のラベル付け
+    - 既定のラベル付け - サブラベルなしのラベルに現在制限があります。
     - 転送不可を適用し、Outlook でのみ表示されるラベル
     - ユーザーが分類レベルを下げるかどうか、またはラベルを削除するかどうかを確認する理由プロンプト
     - ラベルの色
