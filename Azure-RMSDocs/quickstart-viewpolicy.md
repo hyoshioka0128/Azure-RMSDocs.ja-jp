@@ -4,16 +4,16 @@ description: 組織で初めて Azure Information Protection を使用する場�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 099d35d7d4862aff3006b1d6cc57423b898234c4
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767899"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935006"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
@@ -130,7 +130,7 @@ Azure Information Protection の既定のポリシー設定を表示するには
     
 2. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後ろにポリシー設定が表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
     
-    ![Azure Information Protection ポリシーのグローバル設定](./media/info-protect-policy-default-settingsv3.png)
+    ![Azure Information Protection ポリシーのグローバル設定](./media/defaultsettings-aip.png)
 
 3. 設定を表示しただけなので、ポータルで開いたすべてのブレードは閉じるだけで問題ありません。
 

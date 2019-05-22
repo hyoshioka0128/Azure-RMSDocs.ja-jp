@@ -4,19 +4,18 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
-ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d67b51357806e5162a8544f78f2210459aac84c4
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 5d32210a7ccc56d388b24a55f6e19331e768f7f3
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837872"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934938"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -486,54 +485,84 @@ AzureInformationProtection モジュールをインストールするための�
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
-2. Azure Information Protection で使用する Azure AD テナントに移動します。 **Azure Active Directory** > **アプリの登録 (レガシ)** します。 
+2. Azure Information Protection で使用する Azure AD テナントに移動します**Azure Active Directory** > **管理** > **アプリの登録**。 
 
-3. **[新しいアプリケーションの登録]** を選択し、Web アプリ/API アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
+3. 選択 **+ 新しい登録**、Web アプリ/API アプリケーションを作成します。 **アプリケーションを登録する**ブレードは、次の値を指定して、クリックして**登録**:
 
-   - 名前:**AIPOnBehalfOf**
+   - **名前**: `AIPOnBehalfOf`
+        
+        必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+    
+    - **勘定科目の種類がサポートされている**:**この組織のディレクトリのみでのアカウント**
+    
+    - **リダイレクト URI (省略可能)**:**Web**と `http://localhost`
 
-     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+4. **AIPOnBehalfOf**ブレードの値をコピー、**アプリケーション (クライアント) ID**します。 値は次の例のようになります:`57c3c1c3-abf9-404e-8b2b-4652836c8c66`します。 この値は、使用、 *WebAppId* Set-aipauthentication コマンドレットを実行するときにパラメーター。 貼り付けし、後で参照値を保存します。
 
-   - アプリケーションの種類: **Web アプリ/API**
+5. **AIPOnBehalfOf**ブレードから、**管理**メニューの **認証**します。
 
-   - サインオン URL: **http://localhost**
+6. **AIPOnBehalfOf - 認証**ブレードで、**詳細設定**セクションで、 **ID トークン**チェック ボックスをオンし、 **の保存**.
 
-4. 先ほど作成したアプリケーションを選択します (例: **AIPOnBehalfOf**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。 
+7. **AIPOnBehalfOf - 認証**ブレードから、**管理**メニューの **証明書およびシークレット**します。
 
-    この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppId` パラメーターに使用されます。 後で参照できるように、これを貼り付けて保存します。
+8. **AIPOnBehalfOf - 証明書およびシークレット**ブレードで、**クライアント シークレット**セクションで、 **+ 新しいクライアント シークレット**します。 
 
-5. **[設定]** ブレードを再度開き、**[必要なアクセス許可]** を選択します。 **[必要なアクセス許可]** ブレードで、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
+9. **クライアント シークレットを追加**、次を指定し、**追加**:
+    
+    - **説明**: `Azure Information Protection client`
+    - **有効期限が切れる**:任意の期間 (1 年、2 年、または期限なし)
 
-6. **[設定]** ブレードを再び開き、**[キー]** を選択します。 説明と期間 (1 年、2 年、または期限なし) を指定して、新しいキーを追加します。 次に **[保存]** を選択し、表示されている **[値]** の文字列をコピーします。 この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用するキーと同様に、保存した値を安全に格納すると同時に値へのアクセスを制限します。
+9. 戻り、 **AIPOnBehalfOf - 証明書およびシークレット**ブレードで、**クライアント シークレット**セクションで、文字列をコピーします、**値**します。 この文字列は次の例に似ています。`+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`します。 すべての文字をコピーするようにするには、アイコンを選択する**クリップボードにコピー**します。 
+    
+    この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に安全に保存されている値を格納し、アクセスを制限します。
 
-    この値は、Set-AIPAuthentication コマンドレットを実行するときの `WebAppKey` パラメーターに使用されます。
+10. **AIPOnBehalfOf - 証明書およびシークレット**ブレードから、**管理**メニューの  **API を公開**します。
 
-7. **[アプリの登録]** ブレードに戻り、**[新しいアプリケーションの登録]** を選択してネイティブ アプリケーションを作成します。 **[作成]** ラベルで次の値を指定して、**[作成]** をクリックします。
+11. **AIPOnBehalfOf - 公開 API**ブレードで、**設定**の**アプリケーション ID URI**オプション、および、**アプリケーション ID URI**値、変更**api**に**http**します。 この文字列は次の例に似ています。`http://d244e75e-870b-4491-b70d-65534953099e`します。 
+    
+    **[保存]** を選択します。
 
-   - 名前:**AIPClient**
+12. 戻り、 **AIPOnBehalfOf - 公開 API**ブレードで、 **+ スコープの追加**します。
 
-     必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+13. **スコープを追加**ブレードで、次を指定し、**スコープ追加**:
+    - **スコープ名**: `user-impersonation`
+    - **ユーザーが同意できるでしょうか。**:**管理者とユーザー**
+    - **管理者の同意の表示名**: `Access Azure Information Protection scanner`
+    - **管理者の同意の説明**: `Allow the application to access the scanner for the signed-in user`
+    - **ユーザーの同意の表示名**: `Access Azure Information Protection scanner`
+    - **ユーザーの同意の説明**: `Allow the application to access the scanner for the signed-in user`
+    - **状態**:**有効になっている**(既定値)
 
-   - アプリケーションの種類: **ネイティブ**
+14. 戻り、 **AIPOnBehalfOf - 公開 API**ブレードで、このブレードを閉じます。
 
-   - サインオン URL: **http://localhost**
+15. **アプリの登録**ブレードで、 **+ 新しいアプリケーションの登録**をネイティブ アプリケーションを作成するようになりました。
 
-8. 先ほど作成したアプリケーションを選択します (例: **AIPClient**)。 その後、**[設定]** ブレードで **[プロパティ]** を選択します。 **[プロパティ]** ブレードで **[アプリケーション ID]** の値をコピーし、このブレードを閉じます。
+16. **アプリケーションを登録する**ブレードで、次の設定を指定し、**登録**:
+    - **名前**: `AIPClient`
+    - **勘定科目の種類がサポートされている**:**この組織のディレクトリのみでのアカウント**
+    - **リダイレクト URI (省略可能)**:**パブリック クライアント (モバイルとデスクトップ)** と `http://localhost`
 
-    この値は、Set-AIPAuthentication コマンドレットを実行するときの `NativeAppId` パラメーターに使用されます。 後で参照できるように、これを貼り付けて保存します。
+17. **AIPClient**ブレードの値をコピー、**アプリケーション (クライアント) ID**します。 値は次の例のようになります:`8ef1c873-9869-4bb1-9c11-8313f9d7f76f`します。 
+    
+    この値は、Set-aipauthentication コマンドレットを実行するときに、NativeAppId パラメーターに使用されます。 貼り付けし、後で参照値を保存します。
 
-9. **[設定]** ブレードで **[必要なアクセス許可]** を選択します。 
+18. **AIPClient**ブレードから、**管理**メニューの **認証**します。
 
-10. **[必要なアクセス許可]** ブレードで **[追加]** をクリックし、**[API を選択します]** をクリックします。 検索ボックスに、「**AIPOnBehalfOf**」と入力します。 リスト ボックスでこの値を選択し、**[選択]** をクリックします。
+19. **AIPClient - 認証**ブレードで、次を指定し、**保存**:
+    - **詳細設定**セクションで、 **ID トークン**します。
+    - **既定のクライアントの種類**セクションで、**はい**します。
 
-11. **[アクセスの有効化]** ブレードで、**AIPOnBehalfOf** を選択して **[選択]** をクリックし、**[完了]** をクリックします。
+20. **AIPClient - 認証**ブレードから、**管理**メニューの  **API のアクセス許可**。
 
-12. **[必要なアクセス許可]** ブレードを再び開き、**[アクセス許可の付与]** を選択し、確認のために **[はい]** をクリックして、このブレードを閉じます。
+21. **AIPClient - アクセス許可**ブレードで、**アクセス許可を追加 +** します。
 
+22. **API の要求のアクセス許可**ブレードで、**マイ Api**します。
 
-2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 以下に例を示します。
+23. **API を選択します**セクションで、選択**APIOnBehalfOf**、し、チェック ボックスをオン**ユーザー偽装**、アクセス許可とします。 選択**アクセス許可の追加**します。 
 
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 例: から
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
 アカウントで非対話式で文書にラベルを付け、保護するという状況でこのコマンドを実行します。 たとえば、PowerShell スクリプトのユーザー アカウントやサービス アカウントで Azure Information Protection スキャナーを実行します。  
 

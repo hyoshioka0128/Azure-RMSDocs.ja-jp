@@ -4,16 +4,16 @@ description: 組織用の Microsoft Azure Information Protection ポリシーを
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 137de38d7fc0d62286000d93b05efa7b4a81d255
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 10fa599831a57291d6e89574b2d57a1db025b2ac
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768182"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934821"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル: Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
@@ -52,15 +52,15 @@ ms.locfileid: "64768182"
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
-    - Office 365 ProPlus
+    - Office 365 ProPlus。
     
-    - Office Professional Plus 2019
+    - Office Professional Plus 2019。
     
-    - Office Professional Plus 2016
+    - Office Professional Plus 2016。
     
-    - Office Professional Plus 2013 Service Pack 1
+    - Office Professional Plus 2013 Service Pack 1。
     
-    - Office Professional Plus 2010 Service Pack 2
+    - Office Professional Plus 2010 Service Pack 2。
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
