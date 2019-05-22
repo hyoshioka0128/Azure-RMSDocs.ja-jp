@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection のルート キーの管理
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/08/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 865334193d39a048ac48b6233005673f2be43f03
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 9e43e534b95ecef5fa412ffb75fd3659ad9f8bb3
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780900"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934981"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -107,12 +107,12 @@ Microsoft でテナント キーを管理するようにした場合:
 
 |要件|詳細情報|
 |---------------|--------------------|
-|Azure Information Protection テナントには Azure サブスクリプションが必要です。 ない場合は、[無料アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。 <br /><br /> HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。|Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには使用[Azure PowerShell](/powershell/azure/overview)コマンドレット。 <br /><br /> 1.Azure PowerShell セッションを開始、**管理者として実行**オプション、およびを使用して、Azure Information Protection テナントのグローバル管理者としてサインイン`Connect-AzAccount`をコピーしてに結果として得られるトークン文字列を貼り付けます`https://microsoft.com/devicelogin`ブラウザーを使用しています。 <br /><br /> 詳細については、次を参照してください。 [Azure PowerShell を使用してサインイン](/powershell/azure/authenticate-azureps)します。 <br /><br />2.次のように入力し、サブスクリプションの名前と ID、Azure Information Protection テナント ID、有効な状態の値が表示されることを確認します。`Get-AzSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注意**:BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
-|オンプレミスで作成する HSM 保護キーを使用するには: <br /><br />- Key Vault の BYOK のすべての前提条件の一覧。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok)」を参照してください。 <br /><br /> **注意**:BYOK の前提条件に加え、ソフトウェア キーとハードウェア キーを使用して AD RMS から Azure Information Protection への移行を行う場合は、Thales ファームウェアのバージョンが 11.62 以降である必要があります。|
+|Azure Information Protection テナントには Azure サブスクリプションが必要です。 ない場合は、[無料アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。 <br /><br /> HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。|Azure Active Directory の構成と、Azure Rights Management カスタム テンプレートの構成にアクセスできる無料の Azure サブスクリプション (**Azure Active Directory へのアクセス権**) では、Azure Key Vault を使用できません。 BYOK を使用できる Azure サブスクリプションがあることを確認するには使用[Azure PowerShell](/powershell/azure/overview)コマンドレット。 <br /><br /> 1.Azure PowerShell セッションを開始、**管理者として実行**オプション、およびを使用して、Azure Information Protection テナントのグローバル管理者としてサインイン`Connect-AzAccount`をコピーしてに結果として得られるトークン文字列を貼り付けます`https://microsoft.com/devicelogin`ブラウザーを使用しています。 <br /><br /> 詳細については、次を参照してください。 [Azure PowerShell を使用してサインイン](/powershell/azure/authenticate-azureps)します。 <br /><br />2.次のように入力し、サブスクリプションの名前と ID、Azure Information Protection テナント ID、有効な状態の値が表示されることを確認します。`Get-AzSubscription`<br /><br />値が表示されず、プロンプトに戻るだけの場合は、BYOK に使用できる Azure サブスクリプションがありません。 <br /><br />**注意**:BYOK の前提条件に加えて場合とハードウェア キーをソフトウェア キーを使用して Azure Information Protection に AD RMS から移行するが必要最低限のバージョンが 11.62 以降、HSM の Thales ファームウェアを使用している場合。|
+|オンプレミスで作成する HSM 保護キーを使用するには: <br /><br />- Key Vault の BYOK のすべての前提条件の一覧。 |Azure Key Vault のドキュメントの「[BYOK の前提条件](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok)」を参照してください。 <br /><br /> **注意**:BYOK の前提条件に加えて場合とハードウェア キーをソフトウェア キーを使用して Azure Information Protection に AD RMS から移行するが必要最低限のバージョンが 11.62 以降、HSM の Thales ファームウェアを使用している場合。|
 |テナント キーを含むキー コンテナーが Azure Key Vault の仮想ネットワーク サービス エンドポイントを使用する場合: <br /><br />- 信頼された Microsoft サービスを許可して、このファイアウォールをバイパスします。|詳細については、「[Virtual Network Service Endpoints for Azure Key Vault](/azure/key-vault/key-vault-overview-vnet-service-endpoints)」(Azure Key Vault の仮想ネットワーク サービス エンドポイント) をご覧ください。|
 |Windows PowerShell 用の Azure Rights Management 管理モジュール。|インストール手順については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。 <br /><br />この Windows PowerShell モジュールを既にインストールしている場合は、次のコマンドを実行してバージョン番号が **2.9.0.0** 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version`|
 
-Thales HSM の詳細と Thales HSM を Azure Key Vault と組み合わせて使用する方法については、[Thales の Web サイト](https://www.thales-esecurity.com/msrms/cloud)を参照してください。
+NCipher nShield ハードウェア セキュリティ モジュール (HSM) と Azure Key Vault の使用方法の詳細については、次を参照してください。、 [nCipher web サイト](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy)します。
 
 ### <a name="choosing-your-key-vault-location"></a>Key Vault の場所の選択
 

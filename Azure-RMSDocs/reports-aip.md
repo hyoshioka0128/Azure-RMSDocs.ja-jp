@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/21/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 625fcf1474ebd1de1c087fe62a213590014dce13
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: afded60f7a9b1a67725fe08887895673c2b2ccab
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780883"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934957"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -198,6 +198,18 @@ Azure Information Protection クライアント:
 
 - 監査のサポート:バージョン 1.41.51.0
 - エンドポイントの検出のサポート:バージョン 1.48.204.0
+
+### <a name="storage-requirements-and-data-retention"></a>記憶域の要件とデータのリテンション期間
+
+テナントごとに収集され、Azure Information Protection ワークスペースに格納されているデータの量は大幅に異なります、方法などの要因に応じて Azure Information Protection クライアントの数とその他のサポートされているエンドポイントがある、いるかどうかエンドポイントの探索データを収集するには、スキャナーをデプロイしたおよび具合です。
+
+ただし、開始点として、次の見積もり役に立ちます。
+
+- Azure Information Protection クライアントの場合のみによって生成される監査データ。10,000 人のアクティブなユーザーごとに 2 GB です。
+
+- Azure Information Protection クライアント、スキャナー、および Microsoft Defender ATP によって生成される監査データ。10,000 人のアクティブなユーザーあたり 20 GB です。
+
+Azure Monitor のログが、**使用量と推定コスト**を推定し、保存されたデータの量を確認するのに役立つ機能し、Log Analytics ワークスペースのデータ保有期間を制御することもできます。 詳細については、次を参照してください。[使用状況と Azure Monitor のログを使用したコスト管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)します。
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
