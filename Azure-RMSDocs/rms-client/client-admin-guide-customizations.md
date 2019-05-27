@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5f9ac2414e83ab84690c0fdaea187dad8d7f3b36
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768370"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186686"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -380,7 +380,7 @@ User Response: Confirmed
 
 既定では、警告を正当化、またはブロックするポップアップ メッセージがすべての Office ドキュメントと PDF ドキュメントに適用されます。 警告を表示、justify、または、追加の高度なクライアント プロパティおよびファイル名拡張子のコンマ区切りのリストを持つメッセージをブロックする必要があるファイル名拡張子を指定してこの一覧を調整できます。
 
-コンマ区切りの文字列として定義する複数のファイル名拡張子の値の例: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+コンマ区切りの文字列として定義する複数のファイル名拡張子の値の例: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 この例で、ラベル付けされていない PDF ドキュメントをされることはありませんで警告を表示、正当化、またはメッセージのポップアップをブロックします。
 

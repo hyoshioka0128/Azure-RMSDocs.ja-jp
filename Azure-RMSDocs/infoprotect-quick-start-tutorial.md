@@ -52,15 +52,15 @@ ms.locfileid: "65934821"
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
-    - Office 365 ProPlus。
+    - Office 365 ProPlus
     
-    - Office Professional Plus 2019。
+    - Office Professional Plus 2019
     
-    - Office Professional Plus 2016。
+    - Office Professional Plus 2016
     
-    - Office Professional Plus 2013 Service Pack 1。
+    - Office Professional Plus 2013 Service Pack 1
     
-    - Office Professional Plus 2010 Service Pack 2。
+    - Office Professional Plus 2010 Service Pack 2
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 

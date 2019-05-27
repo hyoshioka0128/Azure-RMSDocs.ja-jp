@@ -4,17 +4,17 @@ description: Azure Information Protection サービスの技術的な概要で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/20/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
-ms.openlocfilehash: 768cac711deff33bf796973ede2541250df5f357
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 0bb1096a903be953eb9702bc89b6a8c98d340946
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982175"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935031"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -26,6 +26,8 @@ Azure Information Protection (AIP とも呼ばれます) は、ラベルを適�
 
 ![Azure Information Protection による推奨分類の例](./media/info-protect-recommend-calloutsv2.png)
 
+###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット
+
 コンテンツを分類し (オプションで保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
 
 ## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
@@ -36,6 +38,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](./media/example-email-footerv2.png)
 
+###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット
 
 ## <a name="how-data-is-protected"></a>データ保護のしくみ
 
@@ -63,7 +66,9 @@ Azure Rights Management での保護の詳細については、「[Azure Rights 
 
 Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、Word にこのバーを表示した最初の図のように Information Protection バーをインストールします。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 次に例を示します。
 
-![Excel の Azure Information Protection バーの例](./media/excel2016-infoprotect-barv2.png)
+![Excel の Azure Information Protection バーの例](./media/excelproplus-infoprotect-bar.png)
+
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット 
 
 エンド ユーザーはこの Information Protection バーを使用して、正しい分類のラベルを簡単に選択できるようになります。 必要に応じて、ラベルを自動的に適用してユーザーの推測を排除したり、組織のポリシーに準拠したりすることもできます。
 
@@ -91,9 +96,11 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ![OME と AIP の Gmail 受信者エクスペリエンス](./media/ome-message.png)
 
-電子メールを送信するユーザーにとって、ワークフローは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。
+電子メールを送信するユーザーにとって、ワークフローは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。 次に例を示します。
 
-![[転送不可] として構成されたラベルを選択](./media/recipients-only-label.png)
+![[転送不可] として構成されたラベルを選択](./media/recipients-only-label2.png)
+
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット
 
 または、権利保護を適用するメール フロー ルールを使用して、ユーザーを自動的に保護することができます。 
 

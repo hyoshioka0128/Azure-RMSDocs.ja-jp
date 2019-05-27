@@ -9,7 +9,7 @@ ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
 ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "60184986"
@@ -34,16 +34,16 @@ ms.locfileid: "60184986"
 
 まず、その他のクイック スタートをビルドする対象の初期の Visual Studio ソリューションを作成して構成します。
 
-1. Visual Studio 2017 を開いて、**[ファイル]** メニュー、**[新規]**、**[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
+1. Visual Studio 2017 を開いて、 **[ファイル]** メニュー、 **[新規]** 、 **[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
    - 左側のウィンドウで **インストール済み**、 **Visual C#** を選択します**Windows デスクトップ**します。
    - 中央のウィンドウで次のように選択します**コンソール アプリ (.NET Framework)。**
-   - 下のウィンドウで、プロジェクトの **[名前]**、**[場所]**、およびそれに応じて含める **[ソリューション名]** を更新します。
+   - 下のウィンドウで、プロジェクトの **[名前]** 、 **[場所]** 、およびそれに応じて含める **[ソリューション名]** を更新します。
    - 完了したら、右下の **[OK]** ボタンをクリックします。 
 
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、**[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -122,7 +122,7 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
 
 3. マネージ ラッパーには、静的クラスが含まれています。 `Microsoft.InformationProtection.MIP` 、プロファイルの読み込みとリソースを解放するときに、初期化に使用します。 ファイル API の操作のラッパーを初期化するには、MIP を呼び出します。渡して初期化`MipComponent.File`ファイル操作のために必要なライブラリを読み込みます。 
 
-4. `Main()`で*Program.cs* 、次の追加、置換**\<アプリケーション id\>** の前に作成した Azure AD アプリケーションの登録 id。
+4. `Main()`で*Program.cs* 、次の追加、置換 **\<アプリケーション id\>** の前に作成した Azure AD アプリケーションの登録 id。
 
 ```csharp
 using System;
