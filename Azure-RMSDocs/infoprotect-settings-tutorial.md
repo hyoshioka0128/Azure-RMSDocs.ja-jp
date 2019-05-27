@@ -9,10 +9,10 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 2341bfbdc443a15096d178b143e6bd1464b1a53e
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935094"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
@@ -54,15 +54,15 @@ ms.locfileid: "65935094"
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
-    - Office 365 ProPlus。
+    - Office 365 ProPlus
     
-    - Office Professional Plus 2019。
+    - Office Professional Plus 2019
     
-    - Office Professional Plus 2016。
+    - Office Professional Plus 2016
     
-    - Office Professional Plus 2013 Service Pack 1。
+    - Office Professional Plus 2013 Service Pack 1
     
-    - Office Professional Plus 2010 Service Pack 2。
+    - Office Professional Plus 2010 Service Pack 2
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
@@ -74,13 +74,13 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 Azure portal を使用してグローバル ポリシーを編集し、すべてのユーザーに向けたポリシー設定を変更します。
 
-1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、**[Azure Information Protection]** に移動します。 
+1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]** > **[ポリシー]** > **[グローバル]** を選択して、**[ポリシー:グローバル]** ブレードを開きます。 
+2. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ブレードを開きます。 
 
 3. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後にポリシー設定があるのを見つけます。 設定の値は次に表示する値とは異なる場合があります。
     
@@ -142,7 +142,7 @@ Word で新しいドキュメントを開きます。 ドキュメントのラ�
 
 ### <a name="recommendations-for-emails-with-attachments"></a>添付ファイル付きの電子メールの推奨事項
 
-開いた Word 文書に対して、**[全般]** よりも上位の分類を持つラベルを選択します。 たとえば、**[社外秘]** の下にあるいずれかのサブラベル (**[Confidential - Anyone (not protected)]\(社外秘 - すべてのユーザー (未保護)\)** など) です。 ドキュメントをローカルに保存し、任意の名前を付けます。 
+開いた Word 文書に対して、 **[全般]** よりも上位の分類を持つラベルを選択します。 たとえば、 **[社外秘]** の下にあるいずれかのサブラベル ( **[Confidential - Anyone (not protected)]\(社外秘 - すべてのユーザー (未保護)\)** など) です。 ドキュメントをローカルに保存し、任意の名前を付けます。 
 
 Outlook を起動し、新しい電子メール メッセージを作成します。 Word の場合と同様に、新しい電子メール メッセージには自動的に **[全般]** ラベルが付けられ、Information Protection バーが表示されます。
 
@@ -160,15 +160,15 @@ Outlook を起動し、新しい電子メール メッセージを作成しま�
 
 電子メールを送信する前にラベルの選択を行うので、このポリシー設定の動作を確認するために電子メールを実際に送信する必要はありません。 送信または保存せずに電子メールを閉じてかまいません。
 
-ただし、上位の分類 (**[非常に機密性の高い社外秘]** ラベルのサブラベル) を持つ別のドキュメントを添付して、この手順を繰り返すこともできます。 その場合、上位の分類ラベルを適用するよう求めるプロンプトがどのように変更されるのかを確認できます。 同じ親ラベルを持つサブラベルを使って複数の添付ファイルをテストする場合、その順序をサポートするには Azure portal で[クライアントの詳細設定](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)を構成する必要があります。
+ただし、上位の分類 ( **[非常に機密性の高い社外秘]** ラベルのサブラベル) を持つ別のドキュメントを添付して、この手順を繰り返すこともできます。 その場合、上位の分類ラベルを適用するよう求めるプロンプトがどのように変更されるのかを確認できます。 同じ親ラベルを持つサブラベルを使って複数の添付ファイルをテストする場合、その順序をサポートするには Azure portal で[クライアントの詳細設定](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)を構成する必要があります。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
 このチュートリアルで行った変更を保持したくない場合は、次の操作を行います。
 
-1. **[分類]** > **[ポリシー]** > **[グローバル]** を選択して、**[ポリシー:グローバル]** ブレードを開きます。
+1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ブレードを開きます。
 
-2. ポリシー設定をメモしておいた元の値に戻した後、**[保存]** を選択します。
+2. ポリシー設定をメモしておいた元の値に戻した後、 **[保存]** を選択します。
 
 Word アプリと Outlook アプリを再起動して、これらの変更をダウンロードします。
 

@@ -9,10 +9,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935006"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
@@ -45,10 +45,10 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 2. ハブ メニューで **[リソースの作成]** を選択し、Marketplace の検索ボックスに **Azure Information Protection** と入力します。 
     
-3. 結果一覧から **[Azure Information Protection]** を選択します。 次に、**[Azure Information Protection]** ブレードで **[作成]** をクリックします。
+3. 結果一覧から **[Azure Information Protection]** を選択します。 次に、 **[Azure Information Protection]** ブレードで **[作成]** をクリックします。
     
     > [!TIP] 
-    > 必要に応じて、**[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
+    > 必要に応じて、 **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
     
     再び **[作成]** をクリックします。
 
@@ -56,7 +56,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 この保護サービスは、新しいお客様に対しては自動的にアクティブ化されるようになっていますが、手動でアクティブ化する必要がないことを確認しておくことをお勧めします。 
 
-1. **[Azure Information Protection]** ブレードで、**[管理]** > **[保護のアクティブ化]** を選択します。
+1. **[Azure Information Protection]** ブレードで、 **[管理]**  >  **[保護のアクティブ化]** を選択します。
 
 2. テナントの保護がアクティブかどうかを確認します。 
     
@@ -68,7 +68,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
         
         ![Azure RMS での Azure Information Protection の状態 - 非アクティブ](./media/info-protect-azurerms-deactivated.png)
 
-3. 保護がアクティブになっていない場合は、**[アクティブ化]** を選択します。 
+3. 保護がアクティブになっていない場合は、 **[アクティブ化]** を選択します。 
 
     アクティブ化が完了すると、情報バーに **[Activation finished successfully]\(アクティブ化が正常に完了しました\)** と表示されます。
 
@@ -76,7 +76,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 お客様の組織に既にラベルが存在している場合があります。これは、お客様のテナント用のラベルが自動的に作成されていたため、または、Office 365 セキュリティ & コンプライアンス センター、Microsoft セキュリティ センター、または Microsoft コンプライアンス センターのラベルが存在するためです。 では、始めましょう。
 
-1. **[分類]** > **[ラベル]** を選択します。
+1. **[分類]**  >  **[ラベル]** を選択します。
     
     **[既定のラベルの生成]** オプションが表示される場合は、ラベルはまだ存在していません。
     
@@ -86,29 +86,29 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
     
     ![Azure Information Protection の既定のラベルあり](./media/info-protect-defaultlabels.png)
 
-2. ラベルが存在する場合は、次のセクションに進んでラベルを表示します。 ラベルが存在しない場合は、**[既定のラベルの生成]** オプションを選択します。
+2. ラベルが存在する場合は、次のセクションに進んでラベルを表示します。 ラベルが存在しない場合は、 **[既定のラベルの生成]** オプションを選択します。
 
-4. 次に、すべてのユーザーに対してラベルを発行するために、**[分類]** > **[ポリシー]** > **[グローバル]** で次の操作を行います。
+4. 次に、すべてのユーザーに対してラベルを発行するために、 **[分類]**  >  **[ポリシー]**  >  **[グローバル]** で次の操作を行います。
     
     」を参照します。 **[ラベルの追加または削除]** を選択します。
     
-    b. **[ポリシー: ラベルの追加または削除]** ブレードで、すべてのラベルを選択し、**[OK]** を選択します。
+    b. **[ポリシー: ラベルの追加または削除]** ブレードで、すべてのラベルを選択し、 **[OK]** を選択します。
     
-    c. **[ポリシー:グローバル]** ブレードに戻り、**[保存]** を選択します。
+    c. **[ポリシー:グローバル]** ブレードに戻り、 **[保存]** を選択します。
 
 ## <a name="view-your-labels"></a>ラベルを表示する
 
-**[分類]** > **[ラベル]** を選択し、少し時間を割いて **[Azure Information Protection - ラベル]** ブレードに表示されるラベルをよく理解しておきます。
+**[分類]**  >  **[ラベル]** を選択し、少し時間を割いて **[Azure Information Protection - ラベル]** ブレードに表示されるラベルをよく理解しておきます。
 
 前のセクションで示されたラベルに似ていない場合は、Azure Information Protection の既定のラベルではなく、ffice 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで作成されたラベルが使用されてます。
 
 > [!TIP]
 > カスタム ラベルを使用したくない場合は、Azure Information Protection の既定のラベルを代わりに使用してください。 
-> - カスタム ラベルを削除すると、[前のセクション](#create-labels---if-necessary)で説明したように、**[ラベル]** ブレードに既定のラベルを生成するオプションが表示されます。 
+> - カスタム ラベルを削除すると、[前のセクション](#create-labels---if-necessary)で説明したように、 **[ラベル]** ブレードに既定のラベルを生成するオプションが表示されます。 
 
 **[Azure Information Protection - ラベル]** ブレードでは:
 
-- 分類用のラベルは、**[Personal (個人)]**、**[Public (公開)]**、**[General (全般)]**、**[Confidential (社外秘)]**、**[Highly Confidential (非常に機密性の高い社外秘)]** です。 最後の 2 つのラベルを展開するとサブラベルが表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
+- 分類用のラベルは、 **[Personal (個人)]** 、 **[Public (公開)]** 、 **[General (全般)]** 、 **[Confidential (社外秘)]** 、 **[Highly Confidential (非常に機密性の高い社外秘)]** です。 最後の 2 つのラベルを展開するとサブラベルが表示されます。これは、分類にサブカテゴリを設定できることを示す例となります。
 
 - **[マーキング]** 列と **[保護]** 列から、一部のラベルには視覚的なマーカーが構成されていることを確認できます。 視覚的なマーカーとは、フッター、ヘッダー、および透かしです。 一部のラベルには、保護も設定されています。 
 
@@ -126,7 +126,7 @@ Azure Information Protection の統合ラベル付けクライアントを使用
 
 Azure Information Protection の既定のポリシー設定を表示するには:
 
-1. **[分類]** > **[ポリシー]** > **[グローバル]** を選択して、お客様のテナントに対して作成された既定の Azure Information Protection ポリシー設定を表示します。
+1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、お客様のテナントに対して作成された既定の Azure Information Protection ポリシー設定を表示します。
     
 2. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後ろにポリシー設定が表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
     

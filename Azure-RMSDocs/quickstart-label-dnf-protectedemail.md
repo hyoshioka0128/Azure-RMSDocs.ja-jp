@@ -9,17 +9,17 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 1485020b6edd47aae75486bf3a8215cf5cb14a1b
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935001"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)* "
 
 このクイック スタートでは、転送不可の保護設定を自動的に適用するように既存のラベルを構成します。
 
@@ -57,43 +57,43 @@ ms.locfileid: "65935001"
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
-    - Office 365 ProPlus。
+    - Office 365 ProPlus
     
-    - Office Professional Plus 2019。
+    - Office Professional Plus 2019
     
-    - Office Professional Plus 2016。
+    - Office Professional Plus 2016
     
-    - Office Professional Plus 2013 Service Pack 1。
+    - Office Professional Plus 2013 Service Pack 1
     
-    - Office Professional Plus 2010 Service Pack 2。
+    - Office Professional Plus 2010 Service Pack 2
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
 ## <a name="configure-an-existing-label-to-apply-the-do-not-forward-protection"></a>転送不可の保護を適用するように既存のラベルを構成する
 
-1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、**[Azure Information Protection]** に移動します。 
+1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、保護を適用するように構成するラベルを選択します。 
+2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、保護を適用するように構成するラベルを選択します。 
 
-3. **[ラベル]** ブレードで、**[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけます。 **[保護]** を選択すると、その他のオプションのいずれかが以前に選択されていた場合に **[保護]** ブレードが自動的に開きます。 
+3. **[ラベル]** ブレードで、 **[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけます。 **[保護]** を選択すると、その他のオプションのいずれかが以前に選択されていた場合に **[保護]** ブレードが自動的に開きます。 
     
-    **[保護]** ブレードが自動的に開かない場合は、**[保護]** を選択します。
+    **[保護]** ブレードが自動的に開かない場合は、 **[保護]** を選択します。
     
     ![Azure Information Protection ラベルの保護を構成する](./media/info-protect-protection-bar-configured.png)。
 
-4. **[保護]** ブレードで、**[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。
+4. **[保護]** ブレードで、 **[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。
     
 5. **[ユーザー定義のアクセス許可の設定 (プレビュー)]** を選択します。
 
-6. 次のオプションが選択されていることを確認します。**[Outlook で [転送不可] を適用する]**。
+6. 次のオプションが選択されていることを確認します。 **[Outlook で [転送不可] を適用する]** 。
 
-7. 選択されている場合は、次のオプションをオフにします。**[Word、Excel、PowerPoint、エクスプローラーでは、カスタム アクセス許可を指定するようユーザーに促す]**。
+7. 選択されている場合は、次のオプションをオフにします。 **[Word、Excel、PowerPoint、エクスプローラーでは、カスタム アクセス許可を指定するようユーザーに促す]** 。
 
-8. **[保護]** ブレードで **[OK]** をクリックしてから、**[ラベル]** ブレードで **[保存]** をクリックします。
+8. **[保護]** ブレードで **[OK]** をクリックしてから、 **[ラベル]** ブレードで **[保存]** をクリックします。
 
 これで、Outlook でのみ表示し、転送不可の保護を電子メールに適用するようにラベルが構成されました。
 
@@ -115,9 +115,9 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 この構成を保持しない場合や、保護を適用しないようなラベルを返さない場合は、次の手順を実行します。
 
-1. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、構成したラベルを選択します。 
+1. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、構成したラベルを選択します。 
 
-3. **[ラベル]** ブレードで、**[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけ、**[未構成]** を選択して **[保存]** を選択します。
+3. **[ラベル]** ブレードで、 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけ、 **[未構成]** を選択して **[保存]** を選択します。
 
 ## <a name="next-steps"></a>次の手順
 

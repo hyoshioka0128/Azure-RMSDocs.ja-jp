@@ -9,17 +9,17 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 15359fac56b4bef68ae9668a31c82a8b742b208f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767835"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)* "
 
 このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる新しいラベルを作成します。
 
@@ -53,39 +53,39 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 最初に、新しいラベルを作成します。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure portal](configure-policy.md#signing-in-to-the-azure-portal) にサインインします。 次に、**[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure portal](configure-policy.md#signing-in-to-the-azure-portal) にサインインします。 次に、 **[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、**[新しいラベルの追加]** をクリックします。
+2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、 **[新しいラベルの追加]** をクリックします。
 
 3. **[ラベル]** ブレードで、少なくとも以下の項目を指定します。
     
-    - **[ラベルの表示名]**:ユーザーに表示されるラベルの名前。これによりコンテンツの分類を識別します。 たとえば、`Sales - Restricted` と指定します。
+    - **[ラベルの表示名]** :ユーザーに表示されるラベルの名前。これによりコンテンツの分類を識別します。 たとえば、`Sales - Restricted` と指定します。
     
     - **説明**:ユーザーがこの新しいラベルを選択するタイミングを識別するために役立つヒント。 例: `Business data that is restricted to the Sales Team.`
 
-4. **[有効化]** が **[オン]** (既定値) に設定されていることを確認し、**[保存]** を選択します。
+4. **[有効化]** が **[オン]** (既定値) に設定されていることを確認し、 **[保存]** を選択します。
 
 ## <a name="add-the-label-to-a-new-scoped-policy"></a>新しいスコープ付きポリシーにラベルを追加する
 
 次に、新しく作成したラベルを新しいスコープ付きポリシーに追加します。
 
-1. **[分類]** > **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ブレードで、**[新しいポリシーの追加]** を選択します。 
+1. **[分類]**  >  **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ブレードで、 **[新しいポリシーの追加]** を選択します。 
 
 2. **[ポリシー]** ブレードの **[ポリシー名]** ボックスに、新しく作成したラベルを表示するユーザー グループを識別する名前を入力します。 たとえば、`Sales` のように指定します。
 
 3. **[このポリシーを取得するユーザーまたはグループを選択してください]** オプションを選択します。
 
-4. **[AAD ユーザーとグループ]** ブレードで、**[ユーザー/グループ]** を選択します。 次に、新しい **[ユーザー/グループ]** ブレードで、必要条件で特定したグループを検索して選択します。 たとえば、"**営業チーム**" を選択します。 ブレードの **[選択]** をクリックし、**[OK]** をクリックします。
+4. **[AAD ユーザーとグループ]** ブレードで、 **[ユーザー/グループ]** を選択します。 次に、新しい **[ユーザー/グループ]** ブレードで、必要条件で特定したグループを検索して選択します。 たとえば、"**営業チーム**" を選択します。 ブレードの **[選択]** をクリックし、 **[OK]** をクリックします。
 
-5. **[ポリシー]** ブレードに戻り、**[ラベルの追加または削除]** を選択します。
+5. **[ポリシー]** ブレードに戻り、 **[ラベルの追加または削除]** を選択します。
 
-6. **[ポリシー: ラベルの追加または削除]** ブレードで、作成したラベル ("**営業 - 制限付き**" など) を選択し、**[OK]** を選択します。
+6. **[ポリシー: ラベルの追加または削除]** ブレードで、作成したラベル ("**営業 - 制限付き**" など) を選択し、 **[OK]** を選択します。
 
-7. **[ポリシー]** ブレードに戻り、**[保存]** を選択します。 
+7. **[ポリシー]** ブレードに戻り、 **[保存]** を選択します。 
 
 これで、指定したグループのメンバーだけに新しいラベルが公開されました。 
 
@@ -101,11 +101,11 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 このラベルとスコープ付きポリシーを保持しない場合は、次の手順を実行します。
 
-1. **[分類]** > **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ブレードで、作成したスコープ付きポリシーのコンテキスト メニュー (**...**) を選択します。 たとえば、"**営業**" を選択します。
+1. **[分類]**  >  **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ブレードで、作成したスコープ付きポリシーのコンテキスト メニュー ( **...** ) を選択します。 たとえば、"**営業**" を選択します。
 
 2. **[ポリシーの削除]** を選択し、確認を求められたら **[OK]** を選択します。
 
-3. **[分類]** > **[ラベル]** メニュー オプションから:**[Azure Information Protection - ラベル]** ブレードで、作成したラベルのコンテキスト メニュー (**...**) を選択します。  たとえば、"**営業 - 制限付き**" を選択します。
+3. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、作成したラベルのコンテキスト メニュー ( **...** ) を選択します。  たとえば、"**営業 - 制限付き**" を選択します。
 
 4.  **[このラベルを削除]** を選択し、確認を求められたら **[OK]** を選択します。
 

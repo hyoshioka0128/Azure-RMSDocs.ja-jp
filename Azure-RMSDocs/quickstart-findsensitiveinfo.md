@@ -9,17 +9,17 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 657d85e90ffe4192514101595815f5110564d761
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767793"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)* "
 
 このクイック スタートでは、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
 
@@ -59,13 +59,13 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 スキャナーをインストールする前に、Azure portal でそのためのプロファイルを作成します。 このプロファイルには、スキャナーの設定と、スキャンするデータ リポジトリの場所が含まれます。
 
-1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、**[Azure Information Protection]** ブレードに移動します。 
+1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、 **[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
-2. **[スキャナー]** メニュー オプションを見つけて、**[プロファイル]** を選択します。
+2. **[スキャナー]** メニュー オプションを見つけて、 **[プロファイル]** を選択します。
 
-3. **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードで、**[追加]** を選択します。
+3. **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードで、 **[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのプロファイルを追加する](./media/scanner-add-profile.png)
 
@@ -73,17 +73,17 @@ Azure Information Protection を使用するための必要条件の完全な一
     
     スキャナーのプロファイル名を識別するために、必要に応じて管理目的の説明を指定します。
 
-5. このクイックスタートでは、設定を 1 つだけ選択します。**[ポリシーの適用]** に対して、**[オフ]** を選択します。 次に **[保存]** を選択しますが、ブレードは閉じないでください。
+5. このクイックスタートでは、設定を 1 つだけ選択します。 **[ポリシーの適用]** に対して、 **[オフ]** を選択します。 次に **[保存]** を選択しますが、ブレードは閉じないでください。
     
     この設定では、指定したデータ リポジトリ内にあるすべてのファイルの 1 回限りの探索を実行するようにスキャナーを構成します。 このスキャンでは、機密情報の既知の種類がすべて検索されます。また、最初に Azure Information Protection ラベルやポリシー設定を構成する必要はありません
 
-6. これでプロファイルの作成と保存が完了したので、**[リポジトリの構成]** オプションに戻って、スキャンするデータ ストアとしてローカル フォルダーを指定する準備が整いました。
+6. これでプロファイルの作成と保存が完了したので、 **[リポジトリの構成]** オプションに戻って、スキャンするデータ ストアとしてローカル フォルダーを指定する準備が整いました。
     
-    引き続き **[新しいプロファイルを追加する]** ブレード上で、**[リポジトリの構成]** を選択して **[リポジトリ]** ブレードを開きます。
+    引き続き **[新しいプロファイルを追加する]** ブレード上で、 **[リポジトリの構成]** を選択して **[リポジトリ]** ブレードを開きます。
     
     ![Azure Information Protection スキャナーのデータ リポジトリを構成する](./media/scanner-repositories-bar.png)
 
-7. **[リポジトリ]** ブレードで、**[追加]** を選択します。
+7. **[リポジトリ]** ブレードで、 **[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのデータ リポジトリを追加する](./media/scanner-repository-add.png)
 
@@ -93,7 +93,7 @@ Azure Information Protection を使用するための必要条件の完全な一
     
     **[保存]** を選択します。
 
-9. これで **[新しいプロファイルを追加する]** ブレードを閉じることができ、**[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードにご自分のプロファイル名が表示されます。**[スケジュール]** 列には **[手動]** が表示され、**[強制]** 列は空白です。
+9. これで **[新しいプロファイルを追加する]** ブレードを閉じることができ、 **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードにご自分のプロファイル名が表示されます。 **[スケジュール]** 列には **[手動]** が表示され、 **[強制]** 列は空白です。
 
 これで、先ほど作成したスキャナーのプロファイルを使ってスキャナーをインストールする準備ができました。
 
@@ -109,13 +109,13 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>スキャンの開始および完了の確認
 
-1. 再び Azure portal で、Azure Information Protection に戻ってスキャナーを起動します。 **[スキャナー]** メニュー オプションから、**[ノード]** を選択します。 自分のコンピューター名を選択したら、**[今すぐスキャン]** オプションを選択します。
+1. 再び Azure portal で、Azure Information Protection に戻ってスキャナーを起動します。 **[スキャナー]** メニュー オプションから、 **[ノード]** を選択します。 自分のコンピューター名を選択したら、 **[今すぐスキャン]** オプションを選択します。
     
     ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
 
 2. 調べる対象が小さなファイル 1 つだけなので、この最初のテスト スキャンは非常に高速です。
     
-    - **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードで、**[状態]** 列の値が **[スキャン]** から **[アイドル]** に変化します。
+    - **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードで、 **[状態]** 列の値が **[スキャン]** から **[アイドル]** に変化します。
     
     - または、ローカル Windows イベント ログの **[アプリケーションとサービス]** の **[Azure Information Protection]** を確認します。 **MSIP.Scanner** プロセスの情報イベント ID **911** を確認します。 イベント ログ エントリには、スキャンの結果の概要も含まれています。
 
@@ -123,7 +123,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 エクスプローラーを使用して、%*localappdata*%\Microsoft\MSIP\Scanner\Reports にあるスキャナー レポートを見つけます。 .csv ファイル形式の詳細レポート ファイルを開きます。
 
-Excel では、データ ストア リポジトリとファイル名が最初の 2 列に表示されます。 列を調べていくと、**[Information Type Name]\(情報の種類の名前\)** という名前の列があります。これが最も重要な列です。 最初のテストでは **[クレジット カード番号]** が表示されています。これは、スキャナーが検索できる多くの機密情報の種類の 1 つです。
+Excel では、データ ストア リポジトリとファイル名が最初の 2 列に表示されます。 列を調べていくと、 **[Information Type Name]\(情報の種類の名前\)** という名前の列があります。これが最も重要な列です。 最初のテストでは **[クレジット カード番号]** が表示されています。これは、スキャナーが検索できる多くの機密情報の種類の 1 つです。
 
 ## <a name="scan-your-own-data"></a>独自のデータをスキャンする
 
@@ -143,7 +143,7 @@ Excel では、データ ストア リポジトリとファイル名が最初の
         
             http://sp2016/Shared Documents
 
-2. もう一度スキャナーを再起動します。**[スキャナー]** メニュー オプションから、**[ノード]** を選択し、自分のコンピューター名を選択した後、**[今すぐスキャン]** オプションを選択します。
+2. もう一度スキャナーを再起動します。 **[スキャナー]** メニュー オプションから、 **[ノード]** を選択し、自分のコンピューター名を選択した後、 **[今すぐスキャン]** オプションを選択します。
     
     ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
 
@@ -167,7 +167,7 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 
 - %*localappdata*%\Microsoft\MSIP\Scanner\Reports にあるスキャナー レポート。
 
-- ドメイン アカウントがローカル コンピューターに対して付与された、**[サービスとしてログオン]** ユーザー権限の割り当て。
+- ドメイン アカウントがローカル コンピューターに対して付与された、 **[サービスとしてログオン]** ユーザー権限の割り当て。
 
 
 ## <a name="next-steps"></a>次の手順
