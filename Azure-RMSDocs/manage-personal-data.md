@@ -4,19 +4,19 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e6563b3ac385ff19999d458a461fd2a4c8fa7061
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181901"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269786"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -209,7 +209,7 @@ Azure Information Protection のクライアントとスキャナーに関する
 ## <a name="securing-and-controlling-access-to-personal-information"></a>個人情報のセキュリティ保護とアクセス制御
 Azure Portal で表示および指定する個人データは、次のいずれかの [Azure Active Directory 管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を割り当てられたユーザーだけがアクセスできます。
     
-- **Information Protection 管理者**
+- **Azure Information Protection 管理者**
 
 - **コンプライアンス管理者**
 
@@ -217,7 +217,7 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **グローバル管理者**
 
-AADRM モジュールを使用して表示および指定する個人データは、Azure Active Directory の **Information Protection 管理者**ロール、**コンプライアンス管理者**ロール、または**グローバル管理者**ロールを割り当てられたユーザーか、Azure Rights Management サービスのグローバル管理者ロールを割り当てられたユーザーだけがアクセスできます。  
+AADRM モジュールを使用して指定して表示される個人データが割り当てられているユーザーのみがアクセスできる、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、または**グローバル管理者**ロールから Azure Active Directory、または Azure Rights Management サービスのグローバル管理者ロール。  
 
 ## <a name="updating-personal-data"></a>個人データの更新
 

@@ -4,17 +4,17 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
-ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65191914"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269810"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -56,7 +56,7 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 両方のクライアントがインストールされているときに表示**Azure Information Protection**します。 インストールされているクライアントを識別するために、使用、**ヘルプとフィードバック**を開くオプション、 **Microsoft Azure Information Protection**  ダイアログ ボックス。
 
-- ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。
+- ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、 **[分類して保護する]** 、 **[ヘルプとフィードバック]** の順に選択します。
 
 - Office アプリケーション: から**保護**(Azure Information Protection クライアント)] ボタンまたは**感度**ボタン (Azure Information Protection 統合ラベル付けクライアント)、[**ヘルプとフィードバック**.
 
@@ -110,7 +110,7 @@ Windows 用の Azure Information Protection クライアントがインストー
 
 Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Information Protection のすべての管理タスクを実行できます。 ただし、管理アクセス許可を他のユーザーに割り当てる場合は、次のオプションがあります。
 
-- **Information Protection 管理者**:この Azure Active Directory 管理者ロールには、管理者が他のサービスではなく、Azure Information Protection を構成することができます。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)と [AADRM モジュール](administer-powershell.md)からのすべての PowerShell コマンドレットを実行できます。 ただし、このロールでは、ユーザーのドキュメント追跡と取り消しをサポートしていません。
+- **Azure Information Protection 管理者**:この Azure Active Directory 管理者ロールには、管理者が他のサービスではなく、Azure Information Protection を構成することができます。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)と [AADRM モジュール](administer-powershell.md)からのすべての PowerShell コマンドレットを実行できます。 ただし、このロールでは、ユーザーのドキュメント追跡と取り消しをサポートしていません。
     
     > [!NOTE]
     > ご自身の[テナントを統一ラベル付けストアに移行](configure-policy-migrate-labels.md)した後、このロールは、Azure portal ではサポートされなくなります。
@@ -151,7 +151,7 @@ Exchange Server、SharePoint Server、および Windows ファイル サーバ�
 
 Azure Information Protection では、メール メッセージやドキュメントがオンプレミスまたはクラウドのどちらに配置されていても、それらを分類し、管理することができます。 これらのドキュメントには、Word ドキュメント、Excel スプレッドシート、PowerPoint プレゼンテーション、PDF ドキュメント、テキストベースのファイル、および画像ファイルが含まれます。 サポートされるドキュメントの種類の一覧については、管理者ガイドの[サポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md)の一覧を参照してください。
 
-Azure Information Protection では、データベース ファイル、予定表アイテム、PowerBI レポート、Yammer の投稿、Sway コンテンツ、および OneNote ノートブックなど、構造化されたデータを分類または保護することはできません。
+Azure Information Protection は分類し、データベース ファイル、予定表アイテム、Power BI レポート、Yammer の投稿、Sway コンテンツ、および OneNote ノートブックなどの構造化データを保護することはできません。
 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。
 
@@ -201,7 +201,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 
 現在、ローカル フォルダーまたはネットワーク共有で保護されるファイルに対して、[Rights Management 所有者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定に違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定をオーバーライドすることができます。
 
-- Windows Server FCI の場合: すべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定したり、各ファイルの Rights Management 所有者を動的に設定したりすることができます。 Rights Management 所有者を動的に設定するには、**-OwnerMail [ソース ファイルの所有者の電子メール]** パラメーターと値を使用します。 この構成では、ファイルの所有者プロパティのユーザー アカウント名を使用して、Active Directory からユーザーのメール アドレスを取得します。
+- Windows Server FCI の場合: すべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定したり、各ファイルの Rights Management 所有者を動的に設定したりすることができます。 Rights Management 所有者を動的に設定するには、 **-OwnerMail [ソース ファイルの所有者の電子メール]** パラメーターと値を使用します。 この構成では、ファイルの所有者プロパティのユーザー アカウント名を使用して、Active Directory からユーザーのメール アドレスを取得します。
 
 - Azure Information Protection スキャナー:新しく保護されるファイルの場合、指定のデータ ストアのすべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定できますが、各ファイルの Rights Management 所有者を動的に設定することはできません。 以前から保護されていたファイルについては、Rights Management 所有者は変更されません。 新しく保護されるファイルに対してアカウントを設定するには、スキャナー プロファイルで **-Default owner** 設定を指定します。 
 

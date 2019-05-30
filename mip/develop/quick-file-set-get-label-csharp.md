@@ -1,6 +1,6 @@
 ---
-title: クイック スタート - 設定および取得を使用してファイルの機密ラベル、 C# MIP SDK
-description: Microsoft の情報保護 SDK .NET ラッパーを使用して設定およびファイルの機密ラベルを取得する方法を示すクイック スタートです。
+title: クイック スタート - C# MIP SDK を使用したファイルの機密ラベルの設定と取得
+description: Microsoft Information Protection SDK .NET ラッパーを使用して、ファイルの機密ラベルを設定および取得する方法を説明するクイック スタート。
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -9,28 +9,28 @@ ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60173246"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート: 設定し、機密ラベルを取得 (C#)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:機密ラベルの設定と取得 (C#)
 
 このクイック スタートでは、MIP File API をさらに活用する方法について説明します。 前のクイック スタートで列挙した機密ラベルの 1 つを使用して、ファイル ハンドラーを使用し、ファイルのラベルを設定および取得します。 ファイル ハンドラー クラスでは、ラベルの設定および取得操作、またはサポートされている種類のファイルの保護のさまざまな操作を公開しています。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
-- 完全な[クイック スタート。機密ラベルを一覧表示 (C#)](quick-file-list-labels-csharp.md) 1 つは、組織の機密ラベルを一覧表示するスターター Visual Studio のソリューションをビルドします。 この「機密ラベルの設定および取得」クイック スタートは、前のものに基づいて進められます。
-- 必要に応じて、次の操作を行います。レビュー [MIP SDK ファイル ハンドラー](concept-handler-file-cpp.md)概念です。
+- 「[クイック スタート: 機密ラベルの一覧表示 (C#)](quick-file-list-labels-csharp.md)」をまず完了し、組織の機密ラベルを列挙するスターター Visual Studio ソリューションを構築します。 この「機密ラベルの設定および取得」クイック スタートは、前のものに基づいて進められます。
+- 必要に応じて、次の操作を行います。[MIP SDK のファイル ハンドラー](concept-handler-file-cpp.md)の概念を確認してください。
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>機密ラベルを設定および取得するためのロジックの追加
 
 ファイル エンジン オブジェクトを使用し、ファイルに機密ラベルを設定および取得するためのロジックを追加します。 
 
-1. 使用して**ソリューション エクスプ ローラー**Main() の実装を含むプロジェクトの .cs ファイルを開きます ' メソッド。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
+1. **ソリューション エクスプローラー**を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
 
 2. `Main()` 本文の末尾の `Console.ReadKey()` の下の `}` の上 (前のクイック スタートが終わった場所) に次のコードを挿入します。
 
@@ -82,9 +82,9 @@ ms.locfileid: "60173246"
 
 クライアント アプリケーションを構築してテストします。 
 
-1. CTRL + SHIFT+B を使用して (**ソリューションのビルド**) クライアント アプリケーションをビルドします。 ビルド エラーがない場合、F5 (**[デバッグ開始]**) を使用してアプリケーションを実行します。
+1. Ctrl + Shift + B (**[ソリューションのビルド]**) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 (**[デバッグ開始]**) を使用してアプリケーションを実行します。
 
-2. プロジェクトがビルドされ、アプリケーションで実行が成功したかどうかは*可能性があります*各 ADAL 経由での認証用プロンプトが SDK の呼び出しを時間、`AcquireToken()`メソッド。 キャッシュされた資格情報が既に存在する場合は、後で適用されたラベル情報、およびファイルを変更するにログオンし、ラベルの一覧を参照してください。 は求められません。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、ログオンが求められることなく、ラベルの一覧、その後に適用されたラベルと修正されたファイルに関する情報を表示できます。
 
   ```console   
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6

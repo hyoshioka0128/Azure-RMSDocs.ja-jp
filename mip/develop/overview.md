@@ -8,20 +8,20 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: d8efb7ceef890d0c2a0ea72f64d3047e0cfb25a5
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184945"
 ---
 # <a name="overview"></a>概要
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
-Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル付け、および保護サービスの統合を示します。
+Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル作成、および保護の各サービスを統合したものです。
 
 - Office 365、Azure Information Protection、Windows Information Protection、およびその他の Microsoft サービスの全体で統一された管理が提供されます。 
-- サード パーティは、MIP SDK を使用して、サービスのスキーマと保護のラベルを付け、標準的な一貫性のあるデータを使用して、アプリケーションと統合することができます。
+- サード パーティは、標準的で一貫性のあるデータ ラベル スキーマと保護サービスを使用しているアプリケーションと統合するために、この MIP SDK を使用することができます。
 
 * [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/)
 * [Azure Information Protection とは](/azure/information-protection/understand-explore/what-is-information-protection)
@@ -29,7 +29,7 @@ Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル付�
 
 ## <a name="microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK
 
-MIP SDK では、サード パーティ製アプリケーションとサービスから Office 365 セキュリティ/コンプライアンス センターでは、ラベル付け、保護サービスを公開します。 開発者は SDK を使用して、ファイルにラベルと保護を適用するためのネイティブ サポートを構築することができます。 開発者は、特定のラベルが検出されたときにどのアクションを実行する必要があるかを推論したり、MIP で暗号化された情報に対して推論したりすることができます。 
+MIP SDK では、Office 365 セキュリティとコンプライアンス センターからサード パーティ製のアプリケーションとサービスに、ラベル作成サービスと保護サービスが公開されます。 開発者は SDK を使用して、ファイルにラベルと保護を適用するためのネイティブ サポートを構築することができます。 開発者は、特定のラベルが検出されたときにどのアクションを実行する必要があるかを推論したり、MIP で暗号化された情報に対して推論したりすることができます。 
 
 一連の Microsoft サービス全体に適用されるラベルと保護には、**一貫性**があります。 一貫性が、MIP をサポートするアプリケーションとサービスが、共通の予測可能な方法でラベルを読み書きすることを可能にします。
 
@@ -47,5 +47,5 @@ MIP SDK は、次のプラットフォームで使用できます。
 
 ## <a name="next-steps"></a>次の手順
 
-これで SDK を使用する準備ができました。 実行する必要がありますまず[MIP SDK のセットアップと構成の手順を完了](setup-configure-mip.md)します。 次の手順は、Office 365 サブスクリプションを確認し、クライアント コンピューターが正しく設定されています。
+これで SDK を使用する準備ができました。 最初に、[MIP SDK の設定と構成の手順を完了する](setup-configure-mip.md)必要があります。 この手順により、Office 365 サブスクリプションとクライアント マシンが正しく設定されます。
 

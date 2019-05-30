@@ -1,6 +1,6 @@
 ---
-title: MIP SDK を使用して Microsoft Information Protection (MIP) テナントに機密ラベルのリストのクイック スタート -C#ラッパー
-description: Microsoft の Information Protection SDK を使用する方法を示すクイック スタートC#ラッパーをテナント内の機密ラベルを一覧表示します。
+title: クイック スタート - MIP SDK C# ラッパーを使用した Microsoft Information Protection (MIP) テナントの機密ラベルの列挙
+description: Microsoft Information Protection SDK C# ラッパーを使用して、テナントの機密ラベルを列挙する方法を説明するクイック スタート。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,32 +8,32 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60175611"
 ---
-# <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート: 機密ラベルの一覧表示 (C#)
+# <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C#)
 
-このクイック スタートでは、MIP SDK のファイル API を使用して、組織用に構成された機密ラベルを一覧表示する方法を示しています。
+このクイック スタートでは、MIP SDK ファイル API を使用して、ご自分の組織用に構成された機密ラベルを列挙する方法を示します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
-- 完全な[クイック スタート。クライアント アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md) 1 つは、starter Visual Studio ソリューションをビルドします。 この「機密ラベルの列挙」のクイック スタートでは、前のクイック スタートでスターター ソリューションが正しく構築されている必要があります。
-- 必要に応じて、次の操作を行います。レビュー[分類ラベル](concept-classification-labels.md)概念です。
+- 「[クイック スタート: クライアント アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md)」をまず完了し、スターター Visual Studio ソリューションを構築します。 この「機密ラベルの列挙」のクイック スタートでは、前のクイック スタートでスターター ソリューションが正しく構築されている必要があります。
+- 必要に応じて、次の操作を行います。[分類ラベル](concept-classification-labels.md)の概念を確認します。
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>機密ラベルを列挙するためのロジックの追加
 
 ファイル エンジン オブジェクトを使用して、組織の機密ラベルを列挙するロジックを追加します。 
 
-1. 以前で作成した Visual Studio ソリューションを開く"クイック スタート。クライアント アプリケーションの初期化 (C#)"記事。
+1. 前の「クイック スタート: クライアント アプリケーションの初期化 (C#)」の記事で作成した、Visual Studio ソリューションを開きます。
 
-2. 使用して**ソリューション エクスプ ローラー**の実装を含むプロジェクトの .cs ファイルを開き、`Main()`メソッド。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
+2. **ソリューション エクスプローラー**を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
 
-3. 末尾に向かって、`Main()`右中かっこの下の本文`}`の`Main()`関数 (中断したところから前のクイック スタートでは)、次のコード挿入します。
+3. `Main()` 本文の末尾の `Main()` 関数の閉じかっこ `}` の下 (前のクイック スタートが終わった場所) に、次のコードを挿入します。
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -55,9 +55,9 @@ ms.locfileid: "60175611"
 
 最後に、クライアント アプリケーションを構築してテストします。 
 
-1. CTRL + SHIFT+B を使用して (**ソリューションのビルド**) クライアント アプリケーションをビルドします。 ビルド エラーがない場合、F5 (**[デバッグ開始]**) を使用してアプリケーションを実行します。
+1. Ctrl + Shift + B (**[ソリューションのビルド]**) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 (**[デバッグ開始]**) を使用してアプリケーションを実行します。
 
-2. プロジェクトがビルドされ、アプリケーションで実行が成功したかどうかは*可能性があります*各 ADAL 経由での認証用プロンプトが SDK の呼び出しを時間、`AcquireToken()`メソッド。 キャッシュされた資格情報が既に存在する場合にログオンし、ラベルの一覧を表示する求めるはありません。 
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、ラベルの一覧を表示するためにログオンが求められることはありません。 
 
      [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
@@ -65,7 +65,7 @@ ms.locfileid: "60175611"
 
      [![Visual Studio での承諾](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-3. 認証後、コンソール出力次の例のような機密ラベルが表示されます。
+3. 認証後、次の例のように、コンソールに機密ラベルが出力されます。
 
   ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
@@ -87,12 +87,12 @@ ms.locfileid: "60175611"
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-### <a name="problems-during-execution-of-c-application"></a>実行中に問題C#アプリケーション
+### <a name="problems-during-execution-of-c-application"></a>C# アプリケーションの実行時の問題
 
-| まとめ | エラー メッセージ | ソリューション |
+| [概要] | エラー メッセージ | 解決策: |
 |---------|---------------|----------|
-| 不正なアクセス トークン | *例外が発生しました.正しくない/有効期限切れ、アクセス トークンですか。<br><br>失敗の API 呼び出し: profile_add_engine_async に失敗しました: [クラス mip::PolicySyncException] ポリシーの取得に失敗しました、要求は http 状態コードで失敗しました。401、x: ms 診断: [2000001; 理由 =「、要求と共に送信される OAuth トークンを解析できません」;。error_category ="invalid_token"]、関連付け Id: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (プロセス 29924) は、コード 0 で終了しました<br>。<br>このウィンドウを閉じますすべてのキーを押します.* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 戻り[のビルドし、アプリケーションをテスト](#build-and-test-the-application)アクセス トークン、更新プログラムを再生成と`AcquireOAuth2Token()`、もう一度と再構築/再テストします。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
-| 機密ラベルが構成されていない | n/a | プロジェクトが正常に構築されたにもかかわらず、コンソール ウィンドウに出力がない場合、組織の機密ラベルの構成が正しいことを確認します。 詳細については、「Define label taxonomy and protection settings」 (ラベルの分類と保護設定の定義) の「[MIP SDK setup and configuration](setup-configure-mip.md)」 (MIP SDK の設定と構成) を参照してください。  |
+| 不正なアクセス トークン | *例外が発生しました...正しくない/期限切れのアクセス トークンですか?<br><br>API 呼び出しが失敗しました: profile_add_engine_async が次により失敗しました: [class mip::PolicySyncException] ポリシーの取得に失敗しました。次の http 状態コードにより要求が失敗しました:401, x-ms-diagnostics: [2000001;reason="要求により送信された OAuth トークンを解析できません。";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) がコード 0 により終了しました。<br><br>このウィンドウを閉じるには、いずれかのキーを押してください . . .* | プロジェクトが正しく構成されているにもかかわらず、左と同様な出力がある場合、`AcquireOAuth2Token()` メソッドのトークンが不正であるか期限切れである可能性があります。 「[アプリケーションの構築とテスト](#build-and-test-the-application)」に戻り、アクセス トークンを再生成し、`AcquireOAuth2Token()` を再度更新して、再構築/再テストを行います。 [jwt.ms](https://jwt.ms/) の 1 ページからなる Web アプリケーションを使用して、トークンとその要求を検証および確認することも可能です。 |
+| 機密ラベルが構成されていない | 該当なし | プロジェクトが正常に構築されたにもかかわらず、コンソール ウィンドウに出力がない場合、組織の機密ラベルの構成が正しいことを確認します。 詳細については、「Define label taxonomy and protection settings」 (ラベルの分類と保護設定の定義) の「[MIP SDK setup and configuration](setup-configure-mip.md)」 (MIP SDK の設定と構成) を参照してください。  |
 
 ## <a name="next-steps"></a>次の手順
 

@@ -4,18 +4,18 @@ description: 統合ラベルをサポートしているクライアントとサ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 05/29/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b4c702ba84567ba51a29a2bf98c1650dd8f835b6
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: a9cc458bb22c4b2c76b7aa80b58434a213ec5af1
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780831"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269762"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Azure Information Protection のラベルを Office 365 の機密ラベルに移行する方法
 
@@ -37,7 +37,7 @@ Azure Information Protection でラベルを秘密度ラベルとして使用す
 
 ### <a name="important-information-about-administrative-roles"></a>管理者ロールに関する重要な情報
 
-統一ラベル付けプラットフォームでは、[Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)の **Information Protection 管理者**はサポートされていません。 お客様の組織でこの管理者ロールが使用されている場合は、ラベルを移行する前に、このロールを持つユーザーを Azure AD ロールの**セキュリティ管理者**または**コンプライアンス管理者**に追加してください。 この手順に関してサポートが必要な場合は、「[Office 365 セキュリティ&コンプライアンスセンターへのアクセス権をユーザーに付与する](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」をご覧ください。 Azure AD ポータル、Microsoft 365 セキュリティ センター、および Microsoft 365 コンプライアンス センターで、これらのロールを割り当てることもできます。
+[Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)の**Azure Information Protection 管理者**(旧称**Information Protection 管理者**)、統一されたラベルでサポートされていませんプラットフォームです。 お客様の組織でこの管理者ロールが使用されている場合は、ラベルを移行する前に、このロールを持つユーザーを Azure AD ロールの**セキュリティ管理者**または**コンプライアンス管理者**に追加してください。 この手順に関してサポートが必要な場合は、「[Office 365 セキュリティ&コンプライアンスセンターへのアクセス権をユーザーに付与する](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」をご覧ください。 Azure AD ポータル、Microsoft 365 セキュリティ センター、および Microsoft 365 コンプライアンス センターで、これらのロールを割り当てることもできます。
 
 これらのロールを使用する代わりに、管理センターで、これらのユーザー用の新しいロール グループを作成し、そのグループに **[秘密度ラベル管理者]** ロールまたは **[組織構成]** ロールを追加できます。
 
@@ -96,7 +96,7 @@ Azure Information Protection クライアントでは、一覧表示されてい
 |Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |いいえ|これらの Office アプリ用のユーザー定義のアクセス許可については構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。 それを行った場合は、ラベルの適用結果が[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)に一覧表示されます。|
 |Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 ([転送不可]) |いいえ|HYOK に対する構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。 それを行った場合は、ラベルの適用結果が[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)に一覧表示されます。|
 |保護を解除する |いいえ|保護を削除するための構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。<br /><br /> 適用されたときに、このラベルを発行するは、ラベルで適用されていた場合に保護が削除されます。 保護が以前にラベルから独立して適用されていた場合、保護は保持されます。|
-|視覚的なマーキング (ヘッダー、フッター、透かし) 向けのカスタム フォントと RGB コードによるカスタム フォントの色|はい|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal を使用します。 しかし、管理をより簡単にするには、管理センターに一覧されるオプションのいずれかに、色を変更することを検討してください。|
+|視覚的なマーキング (ヘッダー、フッター、透かし) 向けのカスタム フォントと RGB コードによるカスタム フォントの色|[はい]|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal を使用します。 しかし、管理をより簡単にするには、管理センターに一覧されるオプションのいずれかに、色を変更することを検討してください。|
 |視覚的なマーキングの変数 (ヘッダー、フッター)|いいえ|変更なしでこのラベルを発行した場合、変数は動的な値を表示するのでなく、クライアント上でテキストとして表示されます。 ラベルを発行する前に、文字列を編集して変数を削除してください。|
 |アプリごとの視覚的なマーキング|いいえ|変更なしでこのラベルを発行した場合、アプリ変数は、選択したアプリ上にご利用のテキスト文字列を表示するのでなく、クライアント上ですべてのアプリにテキストとして表示されます。 このラベルはすべてのアプリに適している場合にのみ発行します。文字列を編集してアプリ変数を削除します。|
 |条件と関連設定 <br /><br />注:自動の推奨ラベル付けとそのヒントが含まれます|適用なし|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|

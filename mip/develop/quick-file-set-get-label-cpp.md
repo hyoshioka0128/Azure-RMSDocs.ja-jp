@@ -9,34 +9,34 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184900"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート: 設定および取得の機密ラベル (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:機密ラベルの設定と取得 (C++)
 
 このクイック スタートでは、MIP File API をさらに活用する方法について説明します。 前のクイック スタートで列挙した機密ラベルの 1 つを使用して、ファイル ハンドラーを使用し、ファイルのラベルを設定および取得します。 ファイル ハンドラー クラスでは、ラベルの設定および取得操作、またはサポートされている種類のファイルの保護のさまざまな操作を公開しています。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
-- 完全な[クイック スタート。機密ラベル (C++) を一覧表示](quick-file-list-labels-cpp.md)1 つは、組織の機密ラベルを一覧表示するスターター Visual Studio のソリューションをビルドします。 この「機密ラベルの設定および取得」クイック スタートは、前のものに基づいて進められます。
-- 必要に応じて、次の操作を行います。レビュー [MIP SDK ファイル ハンドラー](concept-handler-file-cpp.md)概念です。
+- 「[クイック スタート: 機密ラベルの一覧表示 (C++)](quick-file-list-labels-cpp.md)」をまず完了し、組織の機密ラベルを列挙するスターター Visual Studio ソリューションを構築します。 この「機密ラベルの設定および取得」クイック スタートは、前のものに基づいて進められます。
+- 必要に応じて、次の操作を行います。[MIP SDK のファイル ハンドラー](concept-handler-file-cpp.md)の概念を確認してください。
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>ファイル ハンドラー オブジェクトを監視するためのオブザーバー クラスの実装
 
 アプリケーションの初期化のクイック スタートで (ファイル プロファイルおよびエンジン用に) 実装したオブザーバーのように、ここでファイル ハンドラー オブジェクト用にオブザーバー クラスを実装します。
 
-拡張 SDK のファイル ハンドラー オブザーバーでは、基本的な実装を作成`mip::FileHandler::Observer`クラス。 ファイル ハンドラーの操作を監視するために、オブザーバーはインスタンス化され、後で使用されます。
+SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハンドラー オブザーバーの基本実装を作成します。 ファイル ハンドラーの操作を監視するために、オブザーバーはインスタンス化され、後で使用されます。
 
-1. 前に作業した Visual Studio ソリューションを開く"クイック スタート。機密ラベル (C++) を一覧表示"記事。
+1. 前の「クイック スタート: 機密ラベルの一覧表示 (C++)」の記事で使用した Visual Studio ソリューションを開きます。
 
 2. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプ ローラー**、もう一度、プロジェクト ノードを右クリックし、選択**追加**を選択し、**クラス**します。
+   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、**[追加]**、**[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
      - **[クラス名]** フィールドに「filehandler_observer」と入力します。 入力した名前に基づき、**[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
      - 完了したら、**[OK]** ボタンをクリックします。
@@ -205,12 +205,12 @@ ms.locfileid: "60184900"
    system("pause");
    ```
 
-4. 貼り付けたで次のように、文字列定数を使用してソース コード内のプレース ホルダーの値に置き換えます。
+4. 貼り付けたばかりのソース コードのプレースホルダー値を、次の文字列定数を使って置き換えます。
 
    | [プレースホルダ] | 値 |
    |:----------- |:----- |
    | \<input-file-path\> | テスト入力ファイルへの完全なパス。たとえば `"c:\\Test\\Test.docx"`。 |
-   | \<content-identifier\> | コンテンツの人間が判読できる識別子です。 以下に例を示します。 <ul><li>ファイルの場合は、& を検討してください。 `"c:\Test\Test.docx"`</li><li>電子メール、サブジェクト: 送信者を検討してください。 `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | コンテンツに対する人間が判読できる識別子。 次に例を示します。 <ul><li>ファイルの場合は、path\filename を検討してください: `"c:\Test\Test.docx"`</li><li>電子メールの場合は、subject:sender を検討してください: `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | 前のクイック スタートでコンソールの出力からコピーした機密ラベル ID。たとえば `"f42a3342-8706-4288-bd31-ebb85995028z"`。 |
    | \<output-file-path\> | 入力ファイルのラベル付きコピーである出力ファイルへの完全なパス。たとえば、`"c:\\Test\\Test_labeled.docx"`。 |
 
@@ -220,7 +220,7 @@ ms.locfileid: "60184900"
 
 1. F6 (**[ソリューションのビルド]**) を使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 (**[デバッグ開始]**) を使用してアプリケーションを実行します。
 
-2. プロジェクトのビルドし、実行が正常にアクセス トークンの入力を求める、アプリケーションごとに SDK の呼び出しの場合、`AcquireOAuth2Token()`メソッド。 これまでと同様、「機密ラベルを一覧表示」クイック スタートでは、常に、トークンを取得する PowerShell スクリプトを実行 $authority と $resourceUrl に指定された値を使用します。 
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 「機密ラベルの一覧表示」クイック スタートで前に実行したとおり、PowerShell スクリプトを実行し、$authority と $resourceUrl に指定された値を使用して、都度トークンを取得します。 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

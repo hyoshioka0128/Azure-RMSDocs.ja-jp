@@ -13,12 +13,12 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7ae70446b932d9f78c2dccc99b2f5727c2e9418e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 745a340586157b6bb429345c96ee9556f60a93da
+ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178898"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263888"
 ---
 # <a name="android-code-examples"></a>Android のコード例
 
@@ -112,81 +112,79 @@ ms.locfileid: "60178898"
     **説明**:この手順では、ADAL を使用して、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) に関するページをご覧ください。
 
 
-~~~
-``` java
-    class MsipcAuthenticationCallback implements AuthenticationRequestCallback
-    {
+   ``` java
+       class MsipcAuthenticationCallback implements AuthenticationRequestCallback
+       {
 
-    …
+       …
 
-    @Override
-    public void getToken(Map<String, String> authenticationParametersMap,
-                         final AuthenticationCompletionCallback authenticationCompletionCallbackToMsipc)
-    {
-        String authority = authenticationParametersMap.get("oauth2.authority");
-        String resource = authenticationParametersMap.get("oauth2.resource");
-        String userId = authenticationParametersMap.get("userId");
-        final String userHint = (userId == null)? "" : userId;
-        AuthenticationContext authenticationContext = App.getInstance().getAuthenticationContext();
-        if (authenticationContext == null || !authenticationContext.getAuthority().equalsIgnoreCase(authority))
-        {
-            try
-            {
-                authenticationContext = new AuthenticationContext(App.getInstance().getApplicationContext(), authority, …);
-                App.getInstance().setAuthenticationContext(authenticationContext);
-            }
-            catch (NoSuchAlgorithmException e)
-            {
-                …
-                authenticationCompletionCallbackToMsipc.onFailure();
-            }
-            catch (NoSuchPaddingException e)
-            {
-                …
-                authenticationCompletionCallbackToMsipc.onFailure();
-            }
-       }
-        App.getInstance().getAuthenticationContext().acquireToken(mParentActivity, resource, mClientId, mRedirectURI, userId, mPromptBehavior,
-                       "&USERNAME=" + userHint, new AuthenticationCallback<AuthenticationResult>()
-                        {
-                            @Override
-                            public void onError(Exception exc)
-                            {
-                                …
-                                if (exc instanceof AuthenticationCancelError)
-                                {
-                                     …
-                                    authenticationCompletionCallbackToMsipc.onCancel();
-                                }
-                                else
-                                {
-                                     …
-                                    authenticationCompletionCallbackToMsipc.onFailure();
-                                }
-                            }
+       @Override
+       public void getToken(Map<String, String> authenticationParametersMap,
+                            final AuthenticationCompletionCallback authenticationCompletionCallbackToMsipc)
+       {
+           String authority = authenticationParametersMap.get("oauth2.authority");
+           String resource = authenticationParametersMap.get("oauth2.resource");
+           String userId = authenticationParametersMap.get("userId");
+           final String userHint = (userId == null)? "" : userId;
+           AuthenticationContext authenticationContext = App.getInstance().getAuthenticationContext();
+           if (authenticationContext == null || !authenticationContext.getAuthority().equalsIgnoreCase(authority))
+           {
+               try
+               {
+                   authenticationContext = new AuthenticationContext(App.getInstance().getApplicationContext(), authority, …);
+                   App.getInstance().setAuthenticationContext(authenticationContext);
+               }
+               catch (NoSuchAlgorithmException e)
+               {
+                   …
+                   authenticationCompletionCallbackToMsipc.onFailure();
+               }
+               catch (NoSuchPaddingException e)
+               {
+                   …
+                   authenticationCompletionCallbackToMsipc.onFailure();
+               }
+          }
+           App.getInstance().getAuthenticationContext().acquireToken(mParentActivity, resource, mClientId, mRedirectURI, userId, mPromptBehavior,
+                          "&USERNAME=" + userHint, new AuthenticationCallback<AuthenticationResult>()
+                           {
+                               @Override
+                               public void onError(Exception exc)
+                               {
+                                   …
+                                   if (exc instanceof AuthenticationCancelError)
+                                   {
+                                        …
+                                       authenticationCompletionCallbackToMsipc.onCancel();
+                                   }
+                                   else
+                                   {
+                                        …
+                                       authenticationCompletionCallbackToMsipc.onFailure();
+                                   }
+                               }
 
-                            @Override
-                            public void onSuccess(AuthenticationResult result)
-                            {
-                                …
-                                if (result == null || result.getAccessToken() == null
-                                        || result.getAccessToken().isEmpty())
-                                {
-                                     …
-                                }
-                                else
-                                {
-                                    // request is successful
-                                    …
-                                    authenticationCompletionCallbackToMsipc.onSuccess(result.getAccessToken());
-                                }
-                            }
-                        }
+                               @Override
+                               public void onSuccess(AuthenticationResult result)
+                               {
+                                   …
+                                   if (result == null || result.getAccessToken() == null
+                                           || result.getAccessToken().isEmpty())
+                                   {
+                                        …
+                                   }
+                                   else
+                                   {
+                                       // request is successful
+                                       …
+                                       authenticationCompletionCallbackToMsipc.onSuccess(result.getAccessToken());
+                                   }
+                               }
+                           }
 
-                        );
-                  }
-```
-~~~
+                           );
+                     }
+   ```
 
 - **手順 3**: [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
 
@@ -249,6 +247,7 @@ ms.locfileid: "60178898"
               …
       }
     ```
+    
 
 - **手順 2**: 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
@@ -293,6 +292,7 @@ ms.locfileid: "60178898"
               …
       }
     ```
+    
 
 -  **手順 3**: [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
 
@@ -391,40 +391,36 @@ ms.locfileid: "60178898"
                   …
                 }
             };
+            try
+            {
+                ...
+
+                // Read the serializedContentPolicyLength from the inputStream.
+                long serializedContentPolicyLength = readUnsignedInt(inputStream);
+
+                // Read the PL bytes from the input stream using the PL size.
+                byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength];
+                inputStream.read(serializedContentPolicy);
+
+                ...
+
+                UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
+                userPolicyCreationCallbackFromSerializedContentPolicy);
+            }
+            catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
+            {
+            ...
+            }
+            catch (IOException e)
+            {
+            ...
+            }
+   ```
 
 
-~~~
-try
-{
-  ...
+- **手順 2**: **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
 
-  // Read the serializedContentPolicyLength from the inputStream.
-  long serializedContentPolicyLength = readUnsignedInt(inputStream);
-
-  // Read the PL bytes from the input stream using the PL size.
-  byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength];
-  inputStream.read(serializedContentPolicy);
-
-  ...
-
-  UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
-          userPolicyCreationCallbackFromSerializedContentPolicy);
-}
-catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
-{
-  ...
-}
-catch (IOException e)
-{
-  ...
-}
-```
-~~~
-
-
-- **Step 2**: Create a [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) using the [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from **Step 1**.
-
-    **Source**: *MsipcTaskFragment.java*
+    **ソース**: *MsipcTaskFragment.java*
 
     ``` java
       CreationCallback<CustomProtectedInputStream> customProtectedInputStreamCreationCallback = new CreationCallback<CustomProtectedInputStream>()
@@ -492,10 +488,11 @@ catch (IOException e)
       ...
     }
     ```
+    
 
-- **Step 3**: Read content from the [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) into *mDecryptedContent* then close.
+- **手順 3**: [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
 
-    **Source**: *MsipcTaskFragment.java*
+    **ソース**: *MsipcTaskFragment.java*
 
     ``` java
     @Override
@@ -527,14 +524,15 @@ catch (IOException e)
       }
     }
     ```
+    
 
-### Scenario: Create a custom protected file using a custom policy
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>シナリオ:カスタム ポリシーを使用してカスタム保護ファイルを作成する
 
-- **Step 1**: With an email address provided by the user, create a policy descriptor.
+- **手順 1**: ユーザーが指定した電子メール アドレスを使用してポリシー記述子を作成する
 
-    **Source**: *MsipcTaskFragment.java*
+    **ソース**: *MsipcTaskFragment.java*
 
-    **Description**: In practice, the following objects would be created by using user inputs from the device interface; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) and [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **説明**:実際には、次のオブジェクトは、デバイス インターフェイス [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) と [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) からのユーザー入力を使用して作成されます。
 
     ``` java
       // create userRights list
@@ -551,9 +549,9 @@ catch (IOException e)
     ```
 
 
-- **Step 2**: Create a custom [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from the policy descriptor, *selectedDescriptor*.
+- **手順 2**: ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
-    **Source**: *MsipcTaskFragment.java*
+    **ソース**: *MsipcTaskFragment.java*
 
     ``` java
        mIAsyncControl = UserPolicy.create((PolicyDescriptor)selectedDescriptor,
@@ -561,9 +559,9 @@ catch (IOException e)
     ```
 
 
-- **Step 3**: Create and write content to the [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) and then close.
+- **手順 3**: [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) を作成してコンテンツを書き込み、閉じます。
 
-    **Source**: *MsipcTaskFragment.java*
+    **ソース**: *MsipcTaskFragment.java*
 
     ``` java
     File file = new File(filePath);

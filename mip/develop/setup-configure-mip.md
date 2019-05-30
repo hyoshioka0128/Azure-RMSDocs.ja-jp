@@ -8,17 +8,17 @@ ms.collection: M365-security-compliance
 ms.date: 03/01/2019
 ms.author: mbaldwin
 ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184412"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
 クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Office 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 開始する前に、次のトピックを確認してください。
 
@@ -27,7 +27,7 @@ ms.locfileid: "60184412"
 - [Azure Information Protection での保護のしくみ](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 > [!IMPORTANT]
-> **ユーザーのプライバシーを保証するためには、ユーザーに自動ログ記録を有効にする前に同意を求める必要があります。** 次の例では、Microsoft はログ記録の通知を使用する標準的なメッセージを示します。
+> **ユーザーのプライバシーを保証するため、自動ログ記録を有効にする前には、同意を求める必要があります。** たとえば、Microsoft の標準のメッセージでは、ログ記録について次のように通知しています。
 >
 > *エラーとパフォーマンス ログの記録を有効にすると、エラーとパフォーマンス データの Microsoft への送信に同意することになります。Microsoft はインターネット経由でエラーとパフォーマンス データ (以下 "データ") を収集します。Microsoft は、Microsoft 製品およびサービスの品質、セキュリティ、および整合性を向上するためにこのデータを使用します。たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。*
 
@@ -45,7 +45,7 @@ ms.locfileid: "60184412"
 
 ## <a name="configure-sensitivity-labels"></a>機密ラベルの構成
 
-Azure Information Protection を使用している場合は、Office 365 セキュリティ/コンプライアンス センターにラベルを移行する必要があります。 プロセスの詳細については、「[How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels)」 (Azure Information Protection ラベルを Office 365 セキュリティとコンプライアンス センターに移行する方法) を参照してください。 
+現在 Azure Information Protection を使用している場合は、ラベルを Office 365 セキュリティとコンプライアンス センターに移行する必要があります。 プロセスの詳細については、「[How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels)」 (Azure Information Protection ラベルを Office 365 セキュリティとコンプライアンス センターに移行する方法) を参照してください。 
 
 ## <a name="configure-your-client-workstation"></a>クライアント ワークステーションの構成
 
@@ -73,7 +73,7 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
 
      [![Visual Studio のセットアップ](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. インストール、 [ADAL.PS PowerShell モジュール](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
+3. [ADAL.PS PowerShell モジュール](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2)をインストールします。 
 
    - モジュールをインストールするには管理者権限が必要なため、最初に次のいずれかを行う必要があります。
 
@@ -94,19 +94,19 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
      PS C:\WINDOWS\system32>
      ```
 
-4. SDK ファイルをダウンロードするには。
+4. SDK ファイルをダウンロードする: 
 
-   MIP SDK は、サポートされている各プラットフォームと言語の個別のダウンロードで、次のプラットフォームでサポートされます。  
+   MIP SDK は、次のプラットフォームでサポートされています。ダウンロードはサポートされているプラットフォーム/言語ごとに行われます。  
 
    [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-   **Tar.gz/します。Zip のダウンロード**
+   **Tar.gz/.Zip のダウンロード**
 
-   Tar.gz とします。Zip のダウンロードには、各 API のいずれか、追加の圧縮されたファイルが含まれます。 圧縮されたファイルの名前は、次のように、 \<API\> = `file`、 `protection`、または`upe`、および\<OS\> = プラットフォーム:`mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`します。 たとえば、debian 保護 API のバイナリとヘッダー ファイルになります:`mip_sdk_protection_debian9_1.0.0.0.tar.gz`します。 3 つのディレクトリに含まれている各.tar.gz/.zip が分かれています。
+   Tar.gz と .Zip のダウンロードには、API ごとに追加の圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。`mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`: ここで、\<API\> = `file`、`protection`、または `upe` で、\<OS\> = プラットフォームです。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
 
-   - **ビン。** 該当する場合は、各プラットフォーム アーキテクチャ用にバイナリをコンパイルします。
-   - **次のとおり**ヘッダー ファイル (C++)。
-   - **サンプル:** サンプル アプリケーションのソース コード。
+   - **Bins:** 各プラットフォーム アーキテクチャのコンパイル済みバイナリ (該当する場合)。
+   - **Include:** ヘッダー ファイル (C++)。
+   - **Samples:** サンプル アプリケーションのソース コード。
     
    **NuGet パッケージ**
 
@@ -118,7 +118,7 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
     Install-Package Microsoft.InformationProtection.Protection
     ```  
 
-5. NuGet パッケージを使用していない場合、SDK のバイナリのパスを PATH 環境変数に追加します。 PATH 変数は、クライアント アプリケーション (省略可能) によって依存バイナリを実行時に検索するには、(Dll) を使用できます。
+5. NuGet パッケージを使用していない場合、SDK のバイナリのパスを PATH 環境変数に追加します。 PATH 変数は、実行時にクライアント アプリケーションによって依存バイナリ (DLL) が見つかるようにします (省略可能)。
 
    Windows 10 ワークステーションを使用している場合:
 
@@ -129,21 +129,21 @@ Azure Information Protection を使用している場合は、Office 365 セキ�
    - **[環境変数の編集]** ダイアログで、新しい編集可能な行を作成する **[新規]** をクリックします。 `file\bins\debug\amd64`、`protection\bins\debug\amd64`、`upe\bins\debug\amd64` の各サブディレクトリへの完全なパスを使用して、それぞれに新しい行を追加します。 SDK ディレクトリは `<API>\bins\<target>\<platform>` の形式で格納されます。
      - \<API\> = `file`、`protection`、`upe`
      - \<target\> = `debug`、`release`
-     - \<プラットフォーム\> =  `amd64` (x64)、`x86`など。
+     - \<platform\> = `amd64` (x64)、`x86` など。
    
    - **パス**変数の更新が完了したら、**[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、**[OK]** をクリックします。
 
-6. GitHub (オプション) から SDK サンプルをダウンロードします。
+6. GitHub から SDK サンプルをダウンロードします (省略可能)。
 
    - [GitHub プロファイル](https://github.com/join)をまだお持ちでない場合は、まずそれを作成します。
    - 次に、[Software Freedom Conservancy の Git クライアント ツール (Git Bash)](https://git-scm.com/download/) の最新バージョンをインストールします。
    - Git Bash を使用して、関心のあるサンプルをダウンロードします。
-     - 次のクエリを使用して、リポジトリを表示します。 https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk 
+     - 次のクエリを使用して、リポジトリを表示します。https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk 
      - Git Bash で、`git clone https://github.com/azure-samples/<repo-name>` を使用して各サンプル リポジトリをダウンロードします。
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Azure Active Directory へのクライアント アプリケーションの登録
 
-Office 365 サブスクリプションがプロビジョニング プロセスの一環として、関連する Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
+Office 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
 
 実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。 
 
@@ -153,7 +153,7 @@ Office 365 サブスクリプションがプロビジョニング プロセス�
   > アカウント作成のために Azure AD テナントの管理にアクセスするには、[サブスクリプションで "所有者" ロール](/azure/billing/billing-add-change-azure-subscription-administrator)のメンバーであるユーザー アカウントを使用して、Azure portal にサインインする必要があります。 テナントの構成によっては、[アプリケーションを登録する](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)には、"グローバル管理者" ディレクトリ ロールのメンバーである必要もあります。
   > 制限付きのアカウントを使用してテストすることをお勧めします。 アカウントには、必要な SCC エンドポイントにアクセスするための適切な権限のみがあることを確認します。 コマンドラインを通じて渡されたクリア テキスト パスワードは、ログ システムによって収集することができます。
 
-1. 次の手順では、 [Azure AD でアプリを登録、新しいアプリケーション登録](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)セクション。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。 
+1. 「[Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)」(Azure AD によるアプリの登録、新しいアプリケーションの登録) のセクションに示されている手順を行います。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。 
     - **アプリケーションの種類**: [ネイティブ] を選択します。これは、SDK でデモンストレーションされるアプリケーションは、ネイティブにインストールされたコンソール アプリケーションだからです。 ネイティブ アプリケーションは、アプリケーションの資格情報を安全な方法で格納/使用できないため、OAuth2 では "パブリック" クライアントと見なされます。 独自の資格情報を使用して登録される Web アプリケーションなどの "機密性の高い" サーバー ベース アプリケーションとは異なります。 
     - **リダイレクト URI**: SDK は単純なコンソール クライアント アプリケーションを使用しているため、`<app-name>://authorize` の形式で URI を使用します。
 
@@ -164,8 +164,8 @@ Office 365 サブスクリプションがプロビジョニング プロセス�
 4. 次に、実行時にアプリケーションで要求される MIP API とアクセス許可を追加します。
    - **[必要なアクセス許可]** ページで **[追加]** をクリックします。 
    - **[API アクセスの追加]** ページで **[API の選択]** をクリックします。
-   - **[API の選択]** ページで、**[Microsoft Rights Management Services]** API をクリックして、**[選択]** をクリックします。
-   - **アクセスの有効化**の API の使用可能なアクセス許可] ページで ["**保護されたユーザーのコンテンツの作成とアクセス**"、し**選択**、し**完了**.
+   - **[API の選択]** ページで、[**Microsoft Rights Management Services**] API をクリックして、**[選択]** をクリックします。
+   - **[アクセスを有効にする]** ページで、API の指定できるアクセス許可に対して、**[ユーザー用の保護されたコンテンツを作成してアクセスする]** をクリックして、**[選択]**、**[完了]** の順にクリックします。
 
 5. 手順 4 を繰り返しますが、今回は **[API の選択]** ページで API を検索する必要があります。
    - **[API の選択]** ページの検索ボックスに「**Microsoft Information Protection 同期サービス**」と入力し、その API をクリックし、**[選択]** をクリックします。
@@ -178,11 +178,11 @@ Office 365 サブスクリプションがプロビジョニング プロセス�
    [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-登録に Api とアクセス許可を追加する方法の詳細については、次を参照してください。 [web Api にアクセスするクライアント アプリケーションを構成する](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)します。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
+登録に API とアクセス許可を追加する方法の詳細については、「[Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)」(Web API にアクセスするためのクライアント アプリケーションを構成する) を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
 
-MIP で開発されたアプリケーションをリリースすることができます、前にの適用し、Microsoft との正式な取り決めを完了する必要があります。
+MIP を使用して開発したアプリケーションをリリースする前に、Microsoft との正式契約を申請して締結する必要があります。
 
 1. 次の情報を記載した電子メールを [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) に送信して、IPIA を入手します。
 
@@ -214,28 +214,28 @@ MIP で開発されたアプリケーションをリリースすることがで�
 
 - 会社のアプリケーションの名前
 - アプリケーションの簡単な説明
-- Azure テナント ID (場合でも、以前と同じ)
+- Azure テナント ID (以前と同じ場合でも記載)
 - アプリケーションのアプリ ID
 - 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
-電子メールの送信、処理時に、最大 72 時間の受信確認の受信確認を許可します。
+電子メールの送信時には、受領の確認には最大で 72 時間かかることをご了承ください。
 
-## <a name="ensure-your-app-has-the-required-runtime"></a>アプリが必要なランタイムを確認します。
+## <a name="ensure-your-app-has-the-required-runtime"></a>アプリに必要なランタイムがあることを確認する
 
 > [!NOTE]
-> Visual Studio は、いないコンピューターにアプリケーションを配置する場合にのみ、または Visual Studio のインストール、Visual C ランタイム コンポーネントがない場合、この手順は必要があります。
+> この手順は、Visual Studio のないマシンにアプリケーションをデプロイする場合や、Visual Studio のインストールに Visual C++ ランタイム コンポーネントが含まれていない場合にのみ必要です。
 
-MIP SDK でビルドされたアプリケーションでは、まだ存在しない場合、インストールに、Visual C 2015 または Visual C 2017 のランタイムが必要です。
-- [Microsoft Visual C 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
-- [Microsoft Visual C Redistributable for Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+MIP SDK でビルドされたアプリケーションに Visual C++ 2015 または Visual C++ 2017 のランタイムがない場合は、インストールする必要があります。
+- [Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual Studio 2017 の Visual C++ 再頒布可能パッケージ](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
 
-これらにより、リリースとして、アプリケーションがビルドされている場合にのみ機能します。 デバッグとして、アプリケーションがビルドし、Visual C ランタイム デバッグ Dll アプリケーションに含める必要があるかがコンピューターにインストールします。 
+これらは、アプリケーションがリリースとしてビルドされている場合にのみ機能します。 アプリケーションがデバッグとしてビルドされている場合、Visual C++ ランタイム デバッグ DLL をアプリケーションに含めるか、マシンにインストールする必要があります。 
 
 ## <a name="next-steps"></a>次の手順
 
 - C++ 開発者の場合
-  - 必ずお読み[オブザーバー概念](concept-async-observers.md)C++ Api の非同期の性質の詳細については、クイック スタート セクションを開始する前にします。
-  - SDK を使用した経験を取得する準備ができたら、始まり[クイック スタート。クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)します。
-- 場合は、C#開発者は、SDK を使用した経験を始める準備ができたら[クイック スタート。クライアント アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md)します。
+  - クイック スタートのセクションを開始する前に、[オブザーバーの概念](concept-async-observers.md)について読み、C++ の API の非同期的な性質について理解してください。
+  - SDK を使ってみる準備ができたら、「[クイック スタート: クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)」から開始します。
+- C# の開発者である場合、SDK を使ってみる準備ができたら、「[クイック スタート: クライアント アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md)」から開始します。
 
 

@@ -1,6 +1,6 @@
 ---
-title: クイック スタート - Microsoft Information Protection (MIP) SDK の初期化C#クライアント
-description: Microsoft Information Protection (MIP) SDK の初期化ロジックを記述する方法を示すクイック スタートC#クライアント アプリケーション。
+title: クイック スタート - Microsoft Information Protection (MIP) SDK C# クライアントの初期化
+description: Microsoft Information Protection (MIP) SDK C# クライアント アプリケーションの初期化ロジックを記述する方法を示すクイック スタート。
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,20 +8,20 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184986"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C#)
+# <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
-このクイック スタートでは、実行時に MIP SDK .NET ラッパーで使用される、クライアントの初期化パターンを実装する方法を示します。
+このクイック スタートでは、実行時に MIP SDK .NET ラッパーによって使用される、クライアントの初期化パターンを実装する方法を示します。
 
 > [!NOTE]
-> このクイック スタートで説明する手順は、MIP .NET ラッパーのファイルまたはポリシー Api を使用するクライアント アプリケーションに必要です。 保護 API は、まだ使用できません。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 今後のクイック スタートは、それぞれが前のクイック スタートをベースにビルドされるので、連続的に実行される必要があります。このクイック スタートが最初になっています。
+> MIP .NET ラッパーのファイルまたはポリシー API を使用するすべてのクライアント アプリケーションには、このクイック スタートで概説されている手順が必要です。 保護 API はまだ使用できません。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 今後のクイック スタートは、それぞれが前のクイック スタートをベースにビルドされるので、連続的に実行される必要があります。このクイック スタートが最初になっています。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
 まだ完了していない場合は、必ず次の操作を行ってください。
 
@@ -34,40 +34,40 @@ ms.locfileid: "60184986"
 
 まず、その他のクイック スタートをビルドする対象の初期の Visual Studio ソリューションを作成して構成します。
 
-1. Visual Studio 2017 を開いて、 **[ファイル]** メニュー、 **[新規]** 、 **[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
-   - 左側のウィンドウで **インストール済み**、 **Visual C#** を選択します**Windows デスクトップ**します。
-   - 中央のウィンドウで次のように選択します**コンソール アプリ (.NET Framework)。**
-   - 下のウィンドウで、プロジェクトの **[名前]** 、 **[場所]** 、およびそれに応じて含める **[ソリューション名]** を更新します。
+1. Visual Studio 2017 を開いて、**[ファイル]** メニュー、**[新規]**、**[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
+   - 左側のウィンドウの **[インストール済み]**、**[Visual C#]** の下で **[Windows Desktop]** を選択します。
+   - 中央のウィンドウで、**[コンソール アプリ (.NET Framework)]** を選択します。
+   - 下のウィンドウで、プロジェクトの **[名前]**、**[場所]**、およびそれに応じて含める **[ソリューション名]** を更新します。
    - 完了したら、右下の **[OK]** ボタンをクリックします。 
 
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、**[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
      - [Microsoft.InformationProtection.File] パッケージを選択します。
      - **[変更のプレビュー]** の確認ダイアログが表示されたら、[インストール]、[OK] の順にクリックします。
 
-3. MIP SDK ファイル API パッケージを追加するための上記の手順を繰り返しますが、代わりに、アプリケーションを"Microsoft.IdentityModel.Clients.ActiveDirectory"を追加します。
+3. 上記の手順を繰り返して MIP SDK ファイルの API パッケージを追加します。ただし代わりに "Microsoft.IdentityModel.Clients.ActiveDirectory" をアプリケーションに追加します。
 
 ## <a name="implement-an-authentication-delegate"></a>認証の委任を実装する
 
 MIP SDK では、クラスの拡張機能を使用して認証を実装します。これにより、クライアント アプリケーションを操作する認証を共有するメカニズムが提供されます。 クライアントによって、適切な OAuth2 アクセス トークンを取得し、実行時に MIP SDK を提供する必要があります。
 
-これで、SDK を拡張することによって認証デリゲートでは、実装を作成`Microsoft.InformationProtection.IAuthDelegate`インターフェイス、およびオーバーライド実装、`IAuthDelegate.AcquireToken()`仮想関数。 認証のデリゲートがインスタンス化され、後で使用される、`FileProfile`と`FileEngine`オブジェクト。
+SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイスを拡張し、`IAuthDelegate.AcquireToken()` 仮想関数をオーバーライド/実装することで、認証の委任に対して実装を作成します。 この認証の委任はインスタンス化され、`FileProfile` オブジェクトと `FileEngine` オブジェクトによって後で使用されます。
 
-1. Visual Studio でプロジェクト名を右クリックして**追加**し**クラス**します。
-2. "AuthDelegateImplementation"を入力、**名前**フィールド。 **[追加]** をクリックします。
-3. Active Directory Authentication Library (ADAL) と MIP ライブラリの using ステートメントを追加します。
+1. Visual Studio でプロジェクト名を右クリックし、**[追加]**、**[クラス]** の順に選択します。
+2. **[名前]** フィールドに「AuthDelegateImplementation」と入力します。 **[追加]** をクリックします。
+3. 次のように Active Directory Authentication Library (ADAL) と MIP ライブラリの using ステートメントを追加します。
 
      ```csharp
      using Microsoft.InformationProtection;
      using Microsoft.IdentityModel.Clients.ActiveDirectory;
      ```
 
-4. 設定`AuthDelegateImplementation`を継承する`Microsoft.InformationProtection.IAuthDelegate`のプライベート変数を実装および`Microsoft.InformationProtection.ApplicationInfo`と同じ型を受け取るコンス トラクター。
+4. `AuthDelegateImplementation` を設定して `Microsoft.InformationProtection.IAuthDelegate` を継承し、`Microsoft.InformationProtection.ApplicationInfo` のプライベート変数と、同じ型を受け入れるコンストラクターを実装します。
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
@@ -81,9 +81,9 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
      }
      ```
 
-`ApplicationInfo`オブジェクトには、2 つのプロパティが含まれています。 `_appInfo.ApplicationId`で使用される、`AuthDelegateImplementation`認証ライブラリへのクライアント ID を指定するクラス。
+`ApplicationInfo` オブジェクトには 2 つのプロパティが含まれています。 `_appInfo.ApplicationId` は認証ライブラリにクライアント ID を提供するために `AuthDelegateImplementation` クラスで使用されます。
 
-5. 追加、`public string AcquireToken()`メソッド。 このメソッドが受け入れる必要があります`Microsoft.InformationProtection.Identity`と 2 つの文字列: 機関とリソース。 これらの文字列変数では、API での認証ライブラリに渡され、操作することはできません。 編集と、認証に失敗した可能性があります。
+5. `public string AcquireToken()` メソッドを追加します。 このメソッドは `Microsoft.InformationProtection.Identity` と、機関とリソースという 2 つの文字列を受け入れる必要があります。 これらの文字列変数は API によって認証ライブラリに渡されるため、操作することはできません。 編集することで認証に失敗する可能性があります。
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)
@@ -96,11 +96,11 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
 
 ## <a name="implement-a-consent-delegate"></a>同意の委任を実装する
 
-これで拡張 SDK の同意デリゲートの実装を作成`Microsoft.InformationProtection.IConsentDelegate`インターフェイス、およびオーバーライド実装`GetUserConsent()`します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意のデリゲートがでを使用するサービスのアドレスを持つ、ユーザーが同意する必要があります指定、`url`パラメーター。 デリゲートは一般に、ユーザーに同意すると、サービスへのアクセスを承認または拒否できるいくつかのフローを提供します。 このクイック スタートのハード コード`Consent.Accept`します。
+SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイスを拡張し、`GetUserConsent()` をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意の委任によりサービスのアドレスが提供され、これを `url` パラメーターで使用することをユーザーが同意する必要があります。 委任では一般に、サービスへのアクセスに同意することをユーザーが許可/拒否できるようにするフローがいくつか提供されます。 このクイック スタートでは `Consent.Accept` をハードコーディングします。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 今回での"ConsentDelegateImplementation"の入力、**クラス名**フィールド。 
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。 
 
-2. 今すぐ更新**ConsentDelegateImpl.cs**新しい同意デリゲート クラスを実装します。 使用して、追加のステートメント`Microsoft.InformationProtection`設定を継承するクラスと`IConsentDelegate`します。
+2. ここで **ConsentDelegateImpl.cs** を更新して、新しい同意の委任クラスを実装します。 `Microsoft.InformationProtection` に using ステートメントを追加し、`IConsentDelegate` を継承するようにクラスを設定します。
 
      ```csharp
      class ConsentDelegateImplementation : IConsentDelegate
@@ -112,17 +112,17 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
      }
      ```
 
-3. 必要に応じて、エラーなしでコンパイルすることを確認するソリューションをビルドしようとします。
+3. 必要に応じて、ソリューションのビルドを試し、エラーなしでコンパイルされることを確認してください。
 
-## <a name="initialize-the-mip-sdk-managed-wrapper"></a>MIP SDK のマネージ ラッパーを初期化します。
+## <a name="initialize-the-mip-sdk-managed-wrapper"></a>MIP SDK のマネージド ラッパーを初期化する
 
-1. **ソリューション エクスプ ローラー**の実装を含むプロジェクトの .cs ファイルを開き、`Main()`メソッド。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー**から、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. 生成された `main()` の実装を削除します。 
 
-3. マネージ ラッパーには、静的クラスが含まれています。 `Microsoft.InformationProtection.MIP` 、プロファイルの読み込みとリソースを解放するときに、初期化に使用します。 ファイル API の操作のラッパーを初期化するには、MIP を呼び出します。渡して初期化`MipComponent.File`ファイル操作のために必要なライブラリを読み込みます。 
+3. マネージド ラッパーには、初期化、プロファイルの読み込み、リソースのリリースに使用された静的クラス `Microsoft.InformationProtection.MIP` が含まれています。 ファイル API の操作のためにラッパーを初期化するには、MIP.Initialize を呼び出し、`MipComponent.File` で渡して、ファイル操作に必要なライブラリを読み込みます。 
 
-4. `Main()`で*Program.cs* 、次の追加、置換 **\<アプリケーション id\>** の前に作成した Azure AD アプリケーションの登録 id。
+4. *Program.cs* の `Main()` で次を追加し、**\<application-id\>** を前に作成した Azure AD アプリケーションの登録の ID と置き換えます。
 
 ```csharp
 using System;
@@ -146,9 +146,9 @@ namespace mip_sdk_dotnet_quickstart
 }
 ```
 
-## <a name="construct-a-file-profile-and-engine"></a>ファイルのプロファイルとエンジンを構築します。
+## <a name="construct-a-file-profile-and-engine"></a>ファイルのプロファイルとエンジンを構築する
 
-前述のように、プロファイルとエンジンのオブジェクトは SDK クライアントが MIP Api を使用する必要があります。 ネイティブ Dll をロードし、プロファイルとエンジンのオブジェクトをインスタンス化するためのコードを追加することで、このクイック スタートのコード部分を完了します。
+前述のように、MIP API を使用する SDK クライアントには、プロファイル オブジェクトとエンジン オブジェクトが必要です。 ネイティブの DLL を読み込んでプロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためのコードを追加することで、このクイック スタートのコード部分を完了します。
 
    ```csharp
 using System;
@@ -195,15 +195,15 @@ namespace mip_sdk_dotnet_quickstart
 }
 ``` 
 
-3. 次の値を使用して、コピーしたソース コード内のプレース ホルダーの値に置き換えます。
+3. 貼り付けたソース コードのプレースホルダー値を、次の値で置き換えます。
 
-   | [プレースホルダ] | [値] | 例 |
+   | [プレースホルダ] | 値 | 例 |
    |:----------- |:----- |:--------|
    | \<application-id\> | "MIP SDK のセットアップと構成" で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (2 つのインスタンス)。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 | AppInitialization |
 
 
-4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 コードが正常にビルドする必要があります。
+4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 コードは正常にビルドされるはずです。
 
 ## <a name="next-steps"></a>次の手順
 

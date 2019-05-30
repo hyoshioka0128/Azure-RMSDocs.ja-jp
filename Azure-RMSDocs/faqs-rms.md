@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: daa545f2fa0ed8241c5b8c729d7e018e170933f7
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c9ed9992f96a923a97f2ec04d8598867321d4505
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182383"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269799"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -61,10 +61,6 @@ HYOK の詳細についてや、制限事項の正しい理解や使用するタ
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>RMS コネクタには管理パックまたは同様の監視メカニズムがありますか?
 
 Rights Management コネクタは情報、警告、およびエラー メッセージをイベント ログに記録しますが、これらのイベントの監視機能を備えた管理パックはありません。 ただし、イベントの一覧とその説明および修正の実施に役立つ詳細な情報については、「[Azure Rights Management コネクタを監視する](monitor-rms-connector.md)」を参照してください。
-
-## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators"></a>Azure RMS を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?
-
-この質問 (および回答) は、新しく導入された Information Protection 管理者ロールと共に、主要な FAQ ページに移動しました: [Azure Information Protection を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
 ## <a name="how-do-i-create-a-new-custom-template-in-the-azure-portal"></a>Azure Portal で新しいカスタム テンプレートをどのように作成しますか?
 
@@ -152,13 +148,13 @@ Azure Rights Management でネイティブでサポートされているファ�
 
 Office 365 の職場または学校のアカウントを使用して、Outlook を開き、プロファイルを作成します。 次に新しいメッセージを作成し、次の操作を行って、Azure Rights Management サービスを使用してドキュメントや電子メールを保護できるように Office を構成します。
 
-1. 新規のメッセージで、**[オプション]** タブで、**[アクセス許可]** をクリックし、**[資格情報の確認]** をクリックします。
+1. 新規のメッセージで、 **[オプション]** タブで、 **[アクセス許可]** をクリックし、 **[資格情報の確認]** をクリックします。
 
-2. 入力要求が表示されたら、Office 365 の職場または学校のアカウントの詳細をもう一度指定し、**[サインイン]** を選択します。
+2. 入力要求が表示されたら、Office 365 の職場または学校のアカウントの詳細をもう一度指定し、 **[サインイン]** を選択します。
 
     これによって Azure Rights Management テンプレートがダウンロードされ、**資格情報の確認**が、**無制限**、**転送不可**、およびユーザーのテナント用に公開されたすべての Azure Rights Management テンプレートを含むオプションで置換されます。 この新しいメッセージを今すぐ取り消すことができます。
 
-電子メール メッセージやドキュメントを保護するには: **[オプション]** タブで、**[アクセス許可]** をクリックして、電子メールやドキュメントを保護するオプションまたはテンプレートを選択します。
+電子メール メッセージやドキュメントを保護するには: **[オプション]** タブで、 **[アクセス許可]** をクリックして、電子メールやドキュメントを保護するオプションまたはテンプレートを選択します。
 
 ドキュメントを保護した後、ドキュメントを追跡するには: Azure Information Protection クライアントをインストールした Windows コンピューターから、Office アプリケーションまたはエクスプローラーを使用して、ドキュメントをドキュメント追跡サイトに登録します。 手順については、[ドキュメントの追跡と取り消し](./rms-client/client-track-revoke.md)に関する記事を参照してください。 Mac コンピューターからは、現在、Web ブラウザーを使用してドキュメント追跡サイト (https://track.azurerms.com)) に移動し、このドキュメントを追跡して取り消すことができます。
 
@@ -197,11 +193,11 @@ Azure Information Protection では、他のユーザーと情報を安全に共
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management は画面キャプチャを防止できますか。
 Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows 10 Mobile) および Android で広く使われているさまざまな画面キャプチャ ツールについては、**コピーの**[使用権限](configure-usage-rights.md)を付与しなければ、Rights Management で画面キャプチャを防止できます。 ただし、iOS および Mac デバイスでは、いかなるアプリも画面キャプチャを防止することができません。 さらに、すべてのデバイス上のブラウザーは画面キャプチャを防止することができません。 ブラウザーの使用には、Outlook on the web と Office Online が含まれます。
 
-画面のキャプチャを禁止しておくと、不注意や不測の出来事により機密性の高い情報が漏洩してしまう事態を避けることができます。 ただし、画面に表示されるデータをユーザーが共有するにはさまざまな方法があり、スクリーン ショットを保存する方法はその 1 つにすぎません。 たとえば、表示される情報を共有しようとするユーザーは、カメラ付き携帯電話を使用して写真を撮影したり、データを再入力したり、単に口頭で他者に伝達することができます。
+画面のキャプチャを禁止しておくと、不注意や不測の出来事により機密性の高い情報が漏洩してしまう事態を避けることができます。 ユーザーが画面に表示されるデータを共有する方法はたくさんありますいて、1 つのメソッドには、スクリーン ショットを作成します。 たとえば、表示される情報を共有しようとするユーザーは、カメラ付き携帯電話を使用して写真を撮影したり、データを再入力したり、単に口頭で他者に伝達することができます。
 
 このように、あらゆるプラットフォームとソフトウェアが Rights Management API をサポートしており、かつ画面キャプチャをブロックできたとしても、テクノロジだけでデータの漏洩を防ぐことができるわけではありません。 Rights Management は、承認および使用ポリシーを使用して重要なデータを保護するのに役立つものの、このエンタープライズ権限管理ソリューションは、他の管理手段と共に使用する必要があります。 たとえば、物理的なセキュリティを実装したり、組織のデータへのアクセスが承認されているユーザーを慎重に検査および監視したり、共有してはならないデータを理解できるようにユーザーの教育に投資したりすることです。
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>電子メールをユーザー保護する方法として、[転送不可] と転送権限のないテンプレートにはどのような違いがありますか。
 
-名前や外観に反して、**[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、コピー、印刷、添付ファイルの保存の制限を含む権限の集まりであり、それらに加え、電子メールの転送が制限されます。 権限は、選択した受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
+名前や外観に反して、 **[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、コピー、印刷、添付ファイルの保存の制限を含む権限の集まりであり、それらに加え、電子メールの転送が制限されます。 権限は、選択した受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
 
