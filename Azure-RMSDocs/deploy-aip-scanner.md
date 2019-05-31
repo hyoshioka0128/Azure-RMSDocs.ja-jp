@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9fcc7f157ef5fa562993b70a4b30db1556921272
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: 22c53cbfc4fb1c8ddab3eed8a26cc86b94ee6eac
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263987"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411780"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -443,7 +443,7 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>スキャナーのパフォーマンスの最適化
 
-スキャナーのパフォーマンスを最適化するには、次のガイダンスを使用します。 ただし、スキャナーのパフォーマンスではなくスキャナー コンピューターの応答性を優先する場合は、クライアントの詳細設定を使ってスキャナーで使用されるスレッドの数を制限することができます。
+スキャナーのパフォーマンスを最適化するには、次のガイダンスを使用します。 ただし、優先順位がスキャナー パフォーマンスではなく、スキャナー コンピューターの応答性の場合は、使用できます、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner)スキャナーによって使用されるスレッドの数を制限します。
 
 スキャナーのパフォーマンスを最大化するには
 
