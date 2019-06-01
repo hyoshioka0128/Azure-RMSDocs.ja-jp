@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 88aa75bbf61728c43f9104d59a00f0c06842ef0e
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 201716f5d33b79223100d1751c555899aa5958ca
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837829"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448054"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -92,7 +92,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **修正内容**:
 
-- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されません。
+- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 ( **?** ) で表示されません。
 
 - ユーザーがWord 文書に新しいセクションを追加した後で再度ラベルを付ける場合、新しい視覚的なマーキングが一貫して適用されます。
 
@@ -112,7 +112,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **その他の変更:**
 
-- 推奨または自動の分類に対して構成するラベルで、次の機密情報の種類がサポートされなくなりました。
+- 次の機密情報の種類は[サポートされなくなりました](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client)ラベル構成の推奨または自動分類。
     - EU の電話番号
     - EU の GPS 座標
 
@@ -164,7 +164,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     - セルの編集中にスプレッドシートを保存する場合、視覚的なマーキングが適用されるようになりました。
     
-    - Excel 2010: スプレッドシートが共同作成者の[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使って保護されている場合、ファイルを右クリックして **[分類して保護する]** を選択したときに、**[ラベルの削除]** ボタンを使用できるようになりました。
+    - Excel 2010: スプレッドシートが共同作成者の[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使って保護されている場合、ファイルを右クリックして **[分類して保護する]** を選択したときに、 **[ラベルの削除]** ボタンを使用できるようになりました。
 
 - [他のラベル付けソリューションからヘッダーとフッターを削除する](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)ことができるクライアントの詳細設定で、カスタム レイアウトがサポートされるようになりました。
 
@@ -242,7 +242,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - ポリシーのバージョンは、1.4 に変更されます。 [切断されたコンピューターを構成する](client-admin-guide-customizations.md#support-for-disconnected-computers)には、バージョン番号の特定が必要です。
 
-- **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが削除されました。 これは **[問題の報告]** に一時的に置き換えられていたもので、既定では Microsoft に電子メールが送信されていました。 2018 年 12 月以降、**[問題の報告]** オプションは既定で表示されなくなりますが、リンクの HTTP 文字列を指定する[クライアントの詳細設定](client-admin-guide-customizations.md#add-report-an-issue-for-users)を使用して追加することができます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 
+- **[ヘルプとフィードバック]** ダイアログ ボックスの **[フィードバックの送信]** リンクが削除されました。 これは **[問題の報告]** に一時的に置き換えられていたもので、既定では Microsoft に電子メールが送信されていました。 2018 年 12 月以降、 **[問題の報告]** オプションは既定で表示されなくなりますが、リンクの HTTP 文字列を指定する[クライアントの詳細設定](client-admin-guide-customizations.md#add-report-an-issue-for-users)を使用して追加することができます。 たとえば、ユーザーが問題を報告するための、カスタマイズされた独自の Web ページや、ヘルプ デスクに送信される電子メール アドレスです。 
 
 
 ## <a name="next-steps"></a>次の手順

@@ -4,23 +4,23 @@ description: ラベルの条件を使うと、ドキュメントや電子メー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 7557757584ce5d255ac8081039d1b0b7ace39594
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179959"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448030"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。 
 
@@ -32,9 +32,9 @@ ms.locfileid: "60179959"
 
 ![Azure Information Protection の検出と推奨事項](./media/info-protect-recommend-calloutsv2.png)
 
-この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、**[閉じる]** を選択することでその推奨をオーバーライドできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。
+この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、 **[閉じる]** を選択することでその推奨をオーバーライドできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。
 
-推奨されている分類ではなく自動分類を構成した場合、ラベルは自動的に適用され、ユーザーには Word、Excel、PowerPoint 内に引き続き通知が表示されます。 ただし、**[今すぐ変更]** および **[閉じる]** ボタンは **[OK]** で置き換えられます。 Outlook では、自動分類の場合に通知は表示されず、電子メールの送信時にラベルが適用されます。
+推奨されている分類ではなく自動分類を構成した場合、ラベルは自動的に適用され、ユーザーには Word、Excel、PowerPoint 内に引き続き通知が表示されます。 ただし、**今すぐ変更**と**Dismiss**ボタンに置き換えられます**OK**します。 Outlook では、自動分類の場合に通知は表示されず、電子メールの送信時にラベルが適用されます。
 
 > [!IMPORTANT]
 >自動分類とユーザー定義のアクセス許可にはラベルを構成しないでください。 ユーザー定義のアクセス許可オプションは、アクセス許可を与える人をユーザーが指定できるという[保護設定](configure-policy-protection.md)となります。
@@ -64,13 +64,13 @@ ms.locfileid: "60179959"
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>ラベルの推奨または自動分類を構成するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、構成するラベルを選択します。
+2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、構成するラベルを選択します。
 
-3. **[ラベル]** ブレードで、**[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
+3. **[ラベル]** ブレードで、 **[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションの **[新しい条件の追加]** をクリックします。
 
 4. **[条件]** ブレードで、定義済みの条件を使用する場合は **[情報の種類]** を、独自の条件を指定する場合は **[カスタム]** を選択します。
     - **[情報の種類]** を選択した場合:使用可能な条件の一覧から選択し、最小出現回数と、出現で出現回数に一意の値を含めるかどうかを選択します。
@@ -88,13 +88,13 @@ ms.locfileid: "60179959"
         
         正規表現では、Office 365 の正規表現パターンが使用されます。 カスタム条件に正規表現を指定するために、次の Boost から参照できる「[Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)」 (Perl 正規表現構文) の特定のバージョンをご覧ください。
         
-5. **[最小出現回数]** と **[一意の値のみを含む出現回数をカウント]** を変更する必要があるかどうかを決定し、**[保存]** を選択します。 
+5. **[最小出現回数]** と **[一意の値のみを含む出現回数をカウント]** を変更する必要があるかどうかを決定し、 **[保存]** を選択します。 
     
-    出現オプションの例:社会保障番号の情報の種類を選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。**[一意の値のみを含む出現回数をカウント]** を **[オン]** に設定した場合、条件は満たされません。 このオプションを **[オフ]** に設定した場合、条件は満たされます。
+    出現オプションの例:社会保障番号の情報の種類を選択し、最小出現回数として 2 を設定したときに、ドキュメントに同じ社会保障番号が 2 回記載されていたとします。 **[一意の値のみを含む出現回数をカウント]** を **[オン]** に設定した場合、条件は満たされません。 このオプションを **[オフ]** に設定した場合、条件は満たされます。
 
-6. **[ラベル]** ブレードで、次のように構成し、**[保存]** をクリックします。
+6. **[ラベル]** ブレードで、次のように構成し、 **[保存]** をクリックします。
     
-    - 自動分類または推奨分類を選択します。**[このラベルの適用方法を選択: 自動またはユーザーへの推奨]** に対して、**[自動]** または **[推奨]** を選択します。
+    - 自動分類または推奨分類を選択します。 **[このラベルの適用方法を選択: 自動またはユーザーへの推奨]** に対して、 **[自動]** または **[推奨]** を選択します。
     
     - ユーザー プロンプトまたはポリシー ヒント用のテキストを指定します。既定のテキストを維持するか、独自の文字列を指定します。
 
@@ -102,7 +102,7 @@ ms.locfileid: "60179959"
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
 
-次の機密情報の種類が必要な[現在一般公開バージョン](./rms-client/client-version-release-history.md#version-1482040)の Azure Information Protection クライアント。
+次の機密情報の種類の最小バージョンを必要と[1.48.204.0](./rms-client/client-version-release-history.md#version-1482040)の Azure Information Protection クライアント。
 
 - **Azure Service Bus の接続文字列**
 - **Azure IoT の接続文字列**
@@ -117,7 +117,7 @@ ms.locfileid: "60179959"
 
 これらの機密情報の種類の詳細については、ブログの投稿を参照してください。[Azure Information Protection では、資格情報を自動的に検出することによってセキュリティを強化することができます。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-さらに、次の機密情報の種類は、Azure Information Protection クライアント、および不要になった Azure portal での表示の現在の一般公開バージョンについてはサポートされません。
+さらに、以降、Azure Information Protection クライアント、次の機密情報の種類はサポートされていません、不要になった Azure portal で表示 1.48.204.0 でします。 これらの機密情報の種類を使用するラベルがあれば、それらの検出を適切なことができないし、スキャナー レポートでそれらへの参照を無視するかため、それらを削除することお勧めします。
 
 - **EU の電話番号**
 - **EU の GPS 座標**
