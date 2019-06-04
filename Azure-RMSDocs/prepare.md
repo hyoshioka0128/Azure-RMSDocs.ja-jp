@@ -4,19 +4,19 @@ description: 分類、ラベル付け、組織のドキュメントと電子メ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 06/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a67f95bb3d7683de901a557c22971eee6d7b0c25
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 75aea1cf43c6e6ca66dbca611946c4366fe8280d
+ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181601"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462224"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -78,7 +78,7 @@ Azure Information Protection でユーザーとグループを使用するシナ
 
     - Azure AD の場合: [Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Office 365 の場合: [Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Office 365。[Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - **Azure AD userPrincipalName** 属性は、テナントにあるアカウントに対する値が Azure AD proxyAddresses 属性にない場合にのみ使用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスのない Office 365 のユーザーを作成する場合です。
 
