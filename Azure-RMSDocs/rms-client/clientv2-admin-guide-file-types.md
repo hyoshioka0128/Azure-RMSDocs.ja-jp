@@ -4,17 +4,17 @@ description: サポートされているファイルの種類、ファイル名�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 61d7dfa6fa1fe86c930e9c6a6d2c21a807433583
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 3e161c382357c0f1710ba5ac587bddb8a7ba1e22
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768136"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507163"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントでサポートされるファイルの種類
 
@@ -82,7 +82,7 @@ Azure Information Protection の統合されたラベル付けクライアント
 |保護|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、電子メールでファイルを受け取るユーザー、あるいはファイルや共有のアクセス許可によってそれに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。<br /><br />- さらに、ファイルが保護されたときにコンテンツの所有者によって設定された使用権限およびポリシーは、コンテンツが Azure Information Protection ビューアーで表示される (保護されたテキストとイメージ ファイルの場合) か、関連付けられたアプリケーションで表示される (他のサポートされているすべてのファイルの種類の場合) ときに適用されます。|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、ファイルを開く権限があり、それに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。 承認に失敗すると、ファイルは開きません。<br /><br />- コンテンツの所有者によって設定された使用権限とポリシーが表示され、目的の使用ポリシーが承認済みユーザーに通知されます。<br /><br />- 承認済みユーザーがファイルを開きアクセスしていることを確認する監査ログが実行されます。 ただし、使用権限は適用されません。|
 |ファイルの種類の既定値|次のファイルの種類の既定の保護レベルを次に示します。<br /><br />- テキストとイメージ ファイル<br /><br />- Microsoft Office (Word、Excel、PowerPoint) ファイル<br /><br />- Portable Document Format (.pdf)<br /><br />詳細については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」 を参照してください。|これは、ネイティブな保護によってサポートされない他のすべてのファイルの種類 (.vsdx、.rtf など) の既定の保護です。|
 
-Azure Information Protection の統合されたラベル付けクライアントに適用される既定の保護レベルを変更することができます。 ネイティブ ジェネリックからネイティブに汎用的で、既定のレベルを変更し、Azure Information Protection の統合されたラベル付けクライアントが保護を適用できないこともできます。 詳細については、この記事の「[ファイルの既定の保護レベルの変更](#changing-the-default-protection-level-of-files)」セクションを参照してください。
+現時点では、Azure Information Protection の統合されたラベル付けクライアントに適用される既定の保護レベルを変更することはできません。
 
 ユーザーが、管理者が構成されている機密ラベルを選択すると、保護を自動的に適用できますか、ユーザーを使用して、独自のカスタム保護設定を指定できます[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)します。 
 
@@ -140,56 +140,6 @@ Azure Information Protection の統合されたラベル付けクライアント
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>ファイルの既定の保護レベルの変更
-Azure Information Protection の統合されたラベル付けクライアントが、レジストリを編集してファイルを保護する方法を変更することができます。 たとえば、Azure Information Protection の統合されたラベル付けクライアントで一般的に保護をネイティブ保護をサポートするファイルを強制できます。
-
-この操作を行う必要がある理由:
-
-- ネイティブ保護をサポートするアプリケーションがない場合に、すべてのユーザーがファイルを開けるようにするため。
-
-- セキュリティ システムがファイル名拡張子に基づいてファイルに対するアクションを実行し、.pfile ファイル名拡張子に対応するように再構成できるが、ネイティブ保護のための複数のファイル名拡張子に対応するように再構成できないようにするため。
-
-同様に、既定では、汎用的な保護を適用しているファイルにネイティブな保護を適用する Azure Information Protection のクライアントを統一されたにラベル付けを強制することができます。 この操作は、RMS API をサポートするアプリケーションがあるときに適切な場合があります。 たとえば、社内開発者によって作成された基幹業務アプリケーションや、独立系ソフトウェア ベンダー (ISV) から購入したアプリケーションです。
-
-ファイルの保護をブロックする Azure Information Protection のクライアントを統一されたにラベル付けを強制することもできます (ネイティブ保護または汎用的な保護は適用されません)。 たとえば、内容を処理するために特定のファイルを開く必要がある自動化されたアプリケーションやサービスがある場合に、この操作が必要になることがあります。 ファイルの種類の保護をブロックすると、ユーザーは、そのファイルの種類を含むファイルを保護するのに Azure Information Protection の統合されたラベル付けクライアントを使用できません。 ユーザーがこの操作を試みると、管理者が保護できないように設定したことと、ファイルを保護するには操作を取り消す必要があることを示すメッセージが表示されます。
-
-既定では、ネイティブ保護を適用しているすべてのファイルに汎用的な保護を適用する Azure Information Protection のクライアントを統一されたにラベル付けを構成するには、次のレジストリ編集を行います。 FileProtection キーが存在しない場合は、手動でそれを作成する必要があることに注意してください。
-
-1. ファイルにファイル拡張子があることを示す * という名前の新しいキーを次のレジストリのパスに作成します。
-
-    - 32 ビット版の Windows の場合:**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-    - 64 ビット版の Windows の場合:**HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-2. 新しく追加したキー (例: HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) の中に、新しい文字列値 (REG_SZ) を **Encryption** という名前で作成し、データ値は **Pfile** とします。
-
-    この設定により、Azure Information Protection クライアントは汎用的な保護を適用します。
-
-これら 2 つの設定と、ファイル名の拡張子を持つすべてのファイルに汎用的な保護を適用する、Azure Information Protection の統合のラベル付けクライアント。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つ (32 ビット Windows の場合) または 6 つ (64 ビット Windows の場合) のレジストリ編集を行う必要があります。
-
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合):ファイル名拡張子 (ピリオドは付けません) なしの名前を持つ新しいキーを追加します。
-
-    たとえば、.docx というファイル名拡張子を持つファイルの場合、 **DOCX**という名前のキーを作成します。
-
-2. 新たに追加したファイル種類のキー (たとえば、**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**) で、値が **0** の **AllowPFILEEncryption** という新しい DWORD 値を作成します。
-
-3. 新たに追加したファイル種類のキー (たとえば、**HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**) で、値が **Native** の **Encryption** という新しい文字列値を作成します。
-
-これらの設定の結果、.docx というファイル名拡張子を持つファイルを除き、すべてのファイルが一般的に保護されます。 これらのファイルは、Azure Information Protection の統合されたラベル付けクライアントによってネイティブに保護されます。
-
-ネイティブ保護をサポートし、それらを Azure Information Protection の統合されたラベル付けクライアントで一般的に保護しないため、例外として定義するその他のファイルの種類には、これら 3 つの手順を繰り返します。
-
-次の値をサポートする **Encryption** 文字列の値を変更することで、他のシナリオで同様のレジストリ編集を行うことができます。
-
-- **Pfile**: 汎用的な保護
-
-- **Native**: ネイティブ保護
-
-- **Off**: 保護のブロック
-
-これらのレジストリに変更を加えた後、コンピューターを再起動する必要はありません。 ただし、ファイルを保護するために PowerShell コマンドを使っている場合は、変更を反映させるために新しい PowerShell セッションを開始する必要があります。
-
-ファイルの既定の保護レベルを変更するためのレジストリの編集について詳しくは、開発者ガイドの「[ファイル API の構成](../develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>分類と保護から除外されるファイルの種類
 

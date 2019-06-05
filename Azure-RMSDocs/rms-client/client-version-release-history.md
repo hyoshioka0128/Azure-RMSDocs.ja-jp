@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1da800b43ecfc3fcb91881dc5462e4758ffbb7
-ms.sourcegitcommit: aa13e56ae0ff0dea79e83335a6ecaf45e34e9d8c
+ms.openlocfilehash: 42b2bfefae33c4f1e725a24420dff4a553f5153f
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2019
-ms.locfileid: "66458230"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507099"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -36,9 +36,28 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
-Azure Information Protection クライアントの各一般公開 (GA) バージョンは、後続の GA バージョンがリリースされた後も最長で 6 か月間はサポートされます。 ドキュメントには、サポートされていないバージョンのクライアントに関する情報は含まれません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
+Azure Information Protection クライアントの各一般公開 (GA) バージョンは、後続の GA バージョンがリリースされた後も最長で 6 か月間はサポートされます。 ここでは、例外、ドキュメントではサポートされていないバージョンのクライアントに関する情報は含まれません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
 
 実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
+
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>一般公開はサポートされなくなったバージョン:
+
+|クライアントのバージョン|リリース日|
+|--------------|--------------------------|
+|1.37.19.0|2018 年 9 月 17 日|
+|1.29.5.0|2018 年 6 月 26 日|
+|1.27.48.0|2018 年 5 月 30 日|
+|1.26.6.0|04/17/2018|
+|1.10.56.0|09/18/2017|
+|1.7.210.0|06/06/2017|
+|1.4.21.0|03/15/2017|
+|1.3.155.2|02/08/2017|
+|1.2.4.0|10/27/2016|
+|1.1.23.0|10/01/2016|
+
+2019/6/2、Azure Information Protection のラベル付け、サービスを開始するには、TLS 1.2 を使用する接続が必要です。
+
+1.4.21.0 からすべてのクライアント バージョンは、TLS 1.2 を 03/15/2017 サポートをリリースしました。 クライアント バージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0** TLS 1.2 を使用しないと、そのため、Azure Information Protection ポリシーをダウンロードできなくします。
 
 ### <a name="release-history"></a>リリース履歴
 
@@ -134,6 +153,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 ## <a name="version-141510"></a>バージョン 1.41.51.0
 
 **リリース日**: 2018 年 11 月 27 日
+
+10/16/2019 によってサポートされています
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 

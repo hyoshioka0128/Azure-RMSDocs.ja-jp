@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/15/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 311c03815cc245f3d48a588fe4ec5fc6fb6ab4cd
-ms.sourcegitcommit: 01e3669cc499d860dc7cda0d1430196621b7a0d1
+ms.openlocfilehash: 0c757c8b599215e78bc30f50a05fbedf83d67481
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626330"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507137"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -64,12 +64,12 @@ Rights Management (RMS) クライアントが Office アプリケーション、
 
 |機能|Azure Information Protection クライアント|Azure Information Protection<br /> 統合ラベル付けクライアント|
 |-------|-----------------------------------|----------------------------------------------------|
-|ラベル付けアクション:手動、推奨、自動| はい | はい |
-|中央レポート機能 (分析):| はい | はい |
-|設定のリセットとログのエクスポート:| はい | はい |
+|ラベル付けアクション:手動、推奨、自動| はい | [はい] |
+|中央レポート機能 (分析):| はい | [はい] |
+|設定のリセットとログのエクスポート:| [はい] | はい |
 |ユーザー定義のアクセス許可:| はい | Outlook のみ (転送不可) |
-|カスタム アクセス許可:| はい | エクスプローラーのみ <br /><br /> Office アプリでは、代替として、**[ファイル情報]** > **[文書の保護]** > **[アクセスの制限]** を選択できます |
-|Office アプリの Information Protection バー: | はい | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> - ラベルの色は適用されたラベルに表示されません|
+|カスタム アクセス許可:| はい | エクスプローラーのみ <br /><br /> Office アプリでは、代替として、 **[ファイル情報]**  >  **[文書の保護]**  >  **[アクセスの制限]** を選択できます |
+|Office アプリの Information Protection バー:| はい | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> - ラベルの色は適用されたラベルに表示されません|
 |ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| はい | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
 |エクスプローラー、右クリック アクション:| はい | はい (制限あり):<br /><br /> - .ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
 |保護されたファイル用のビューアー:| はい | はい (制限あり):<br /><br /> 一般的に保護されたファイル (.pfile) に関しては、Azure Information Protection クライアントのビューアーとは異なり、最初に開いたファイルへの変更を保存することができません。|
@@ -77,13 +77,13 @@ Rights Management (RMS) クライアントが Office アプリケーション、
 |保護アクションに対するオフライン サポート:| はい | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
 |オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| はい |いいえ |
 |HYOK のサポート:| はい | いいえ<br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
-|イベント ビューアーに対する使用状況ログの記録:| はい | いいえ|
+|イベント ビューアーに対する使用状況ログの記録:| [はい] | いいえ|
 |メールの添付ファイルからのラベル継承:| はい | いいえ |
-|Outlook の [転送不可] ボタンを表示する| はい | いいえ |
-|以下を含む[カスタマイズ](client-admin-guide-customizations.md#available-advanced-client-settings):<br />- メールの既定のラベル<br />- カスタム アクセス許可を有効にする <br />- S/MIME のサポート<br />- [問題の報告] オプション| はい | いいえ |
+|Outlook の [転送不可] ボタンを表示する| [はい] | いいえ |
+|以下を含む[カスタマイズ](client-admin-guide-customizations.md#available-advanced-client-settings):<br />- メールの既定のラベル<br />- カスタム アクセス許可を有効にする <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] | いいえ |
 |オンプレミスのデータ ストア用のスキャナー:| はい | いいえ |
 |追跡と取り消し:| はい | いいえ |
-|保護のみモード (ラベルなし):| はい | いいえ |
+|保護のみモード (ラベルなし):| [はい] | いいえ |
 |多言語のサポート:| はい | いいえ |
 |AD RMS のサポート:| はい | 次のアクションのみがサポートされます。<br /><br /> - [Active Directory Rights Management サービスのモバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))をデプロイすると、保護されたドキュメントをビューアーで開くことができます|
 
@@ -95,15 +95,16 @@ Rights Management (RMS) クライアントが Office アプリケーション、
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |セットアップ:| ローカルのデモ ポリシーをインストールするオプション | ローカルのデモ ポリシーなし|
 |Office アプリで適用した場合のラベルの選択と表示:|リボン上の **[保護]** ボタンから <br /><br /> Information Protection バーから (リボンの下の水平バー)|リボン上の **[秘密度]** ボタンから<br /><br /> Information Protection バーから (リボンの下の水平バー)|
-|Office アプリの Information Protection バーを管理する:|ユーザー向け:  <br /><br />- リボン上の **[保護]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択した場合、既定では、バーはそのアプリ内で非表示になりますが、新しく開いたアプリでは自動的に表示され続けます <br /><br /> 管理者向け:  <br /><br />- アプリを最初に開いたときにバーを自動的に表示または非表示にする、および、ユーザーがバーの非表示を選択した後に新しく開いたアプリに対してバーを自動的に非表示のままにするかどうかを制御するポリシー設定|ユーザー向け:  <br /><br />- リボン上の **[秘密度]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択すると、バーはそのアプリ内でも新しく開いたアプリ内でも非表示になります <br /><br />管理者向け:  <br /><br />- バーを管理するポリシー設定はありません|
-|ラベルの色:  | Azure portal で構成します | Office 365 にラベルを移行した後も保持されます <br /><br /> 管理センターで作成された新しいラベルには、色はありません|
+|Office アプリの Information Protection バーを管理する:|ユーザー向け: <br /><br />- リボン上の **[保護]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択した場合、既定では、バーはそのアプリ内で非表示になりますが、新しく開いたアプリでは自動的に表示され続けます <br /><br /> 管理者向け: <br /><br />- アプリを最初に開いたときにバーを自動的に表示または非表示にする、および、ユーザーがバーの非表示を選択した後に新しく開いたアプリに対してバーを自動的に非表示のままにするかどうかを制御するポリシー設定|ユーザー向け: <br /><br />- リボン上の **[秘密度]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択すると、バーはそのアプリ内でも新しく開いたアプリ内でも非表示になります <br /><br />管理者向け: <br /><br />- バーを管理するポリシー設定はありません|
+|ラベルの色: | Azure portal で構成します | Office 365 にラベルを移行した後も保持されます <br /><br /> 管理センターで作成された新しいラベルには、色はありません|
 |ポリシーの更新: | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />24 時間ごと | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />4 時間ごと|
-|サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費:  <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費:  <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
+|サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
 |サポートされているコマンドレット:| [AzureInformatioProtection](/powershell/module/azureinformationprotection) に記載されているすべてのコマンドレット | Set-aipauthentication 非対話型セッションをサポートしていません <br /><br /> Set-AIPFileClassification と Set-AIPFileLabel は、*Owner* パラメーターまたは SharePoint Server ライブラリをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />さらに、 *LabelingMethod* Get-aipfilestatus のパラメーターが表示されます**特権**または**標準**の代わりに**手動**または**自動**します。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度:ファイルごと <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度:セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
 |自動および推奨のラベル。 | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
-|自動および推奨のラベルのカスタマイズ可能なポリシーのヒント: | はい <br /><br />Azure portal を使用して、ユーザーに既定のメッセージを交換するには | いいえ <br /><br /> 管理センターでは、カスタマイズしたポリシー ヒントを指定するオプションがありますが、このオプションは現在サポートされていません、統一されたラベル付けクライアントによって|
+|自動および推奨のラベルのカスタマイズ可能なポリシーのヒント: | [はい] <br /><br />Azure portal を使用して、ユーザーに既定のメッセージを交換するには | いいえ <br /><br /> 管理センターでは、カスタマイズしたポリシー ヒントを指定するオプションがありますが、このオプションは現在サポートされていません、統一されたラベル付けクライアントによって|
+|ファイルの既定の保護レベルを変更します。 | はい <br /><br />使用することができます[レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)ネイティブと汎用的な保護の既定値をオーバーライドするには | いいえ |
 
 特定の保護設定の動作の違いの詳細な比較についてを参照してください。[ラベルの保護設定の動作を比較する](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)します。
 
