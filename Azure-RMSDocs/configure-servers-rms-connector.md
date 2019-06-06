@@ -4,19 +4,19 @@ description: Azure Rights Management (RMS) コネクタを使用するオンプ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/06/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 023d35152f1afbd8bba60366bfb2beec37905b91
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e35aad25d0e065cda255d880b3605056d83c30f7
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180061"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719819"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -106,7 +106,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、 https://connector.contoso.comのようにします。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
+スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、 https://connector.contoso.com のようにします。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
 > [!IMPORTANT]
 > このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
@@ -168,10 +168,7 @@ Exchange サーバーのオペレーティング システムがこれよりも�
 
    -   「[RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)」の情報を使用してサーバー上にレジストリ設定を追加し、手動でレジストリの編集を行います。 
 
-3. [内部メッセージの IRM を有効にする](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1)ことで、Exchange の IRM 機能を有効にします。
-
-    > [!NOTE]
-    > 既定では、**Set-IRMConfiguration -InternalLicensingEnabled $true** を実行すると、IRM はメールボックスだけでなく Outlook Web App とモバイル デバイスに対しても自動的に有効にされます。 ただし、管理者はさまざまなレベルで IRM を無効にできます (例: クライアント アクセス サーバー、Outlook Web App 仮想ディレクトリまたは Outlook Web App メールボックス ポリシー、モバイル デバイス メールボックス ポリシー)。 ユーザーが、Outlook クライアントでは Azure RMS テンプレートを見ることができるのに、Outlook Web App (1 日待った後) またはモバイル デバイスではテンプレートを見ることができない場合は、関連する設定を調べて IRM が無効ではないことを確認します。 詳細については、Exchange のドキュメントの「[クライアント アクセス サーバーで Information Rights Management を有効または無効にする](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx)」を参照してください。 
+3. Exchange PowerShell コマンドレットを使用して、Exchange の IRM 機能を有効にする[Set-irmconfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)設定と`InternalLicensingEnabled $true`と`ClientAccessServerEnabled $true`します。
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>コネクタを使用するための SharePoint サーバーの構成
@@ -192,7 +189,7 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 > [!WARNING]
 > MSIPC 2.1 クライアントには複数のバージョンがあるため、必ずバージョン 1.0.2004.0 以降を使用します。
 >
-> クライアントのバージョンを確認するには、MSIPC.dll のバージョン番号を確認します。このファイルは、**\Program Files\Active Directory Rights Management Services Client 2.1** にあります。 プロパティ ダイアログ ボックスに、MSIPC 2.1 クライアントのバージョン番号が表示されます。
+> クライアントのバージョンを確認するには、MSIPC.dll のバージョン番号を確認します。このファイルは、 **\Program Files\Active Directory Rights Management Services Client 2.1** にあります。 プロパティ ダイアログ ボックスに、MSIPC 2.1 クライアントのバージョン番号が表示されます。
 
 SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 のサポートが含まれる MSDRM クライアントのバージョンがインストールされている必要があります。 Windows Server 2008 でサポートされている最小バージョンは修正プログラムに含まれており、「 [Windows Server 2008 R2 および Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](https://support.microsoft.com/kb/2627272)」からダウンロードできます。Windows Server 2008 R2 用の最小バージョンは、「 [Windows 7 または Windows Server 2008 R2 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](https://support.microsoft.com/kb/2627273)」からダウンロードできます。 Windows Server 2012 と Windows Server 2012 R2 は、暗号化モード 2 をネイティブでサポートしています。
 
@@ -251,7 +248,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 ## <a name="next-steps"></a>次の手順
 RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーを構成しました。IT 管理者とユーザーは、Azure Rights Management サービスを使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、Azure Information Protection クライアントをデプロイします。これによって、Office 用のアドオンがインストールされ、エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)」を参照してください。
 
-Exchange トランスポート ルールまたは Windows Server FCI と共に使用する部門別テンプレートを構成する場合は、**[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があることに注意してください。
+Exchange トランスポート ルールまたは Windows Server FCI と共に使用する部門別テンプレートを構成する場合は、 **[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があることに注意してください。
 
 「[Azure Information Protection デプロイ ロードマップ](deployment-roadmap.md)」を参照して、Azure Rights Management をユーザーおよび管理者にロールアウトする前にその他の構成手順が必要かどうかを判断します。
 

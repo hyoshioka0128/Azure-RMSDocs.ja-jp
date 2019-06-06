@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーの現在の一般公�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/28/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: fab3faaa4d2fd46215021f2c3bfda9e020b06434
-ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
+ms.openlocfilehash: a894513d26a78daefc7d8032f1afa754ece74028
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66411772"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719825"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの以前のバージョンを展開します。
 
@@ -416,7 +416,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - ファイル自体
     
-    - Office ファイルは PDF ファイルよりもすばやくスキャンされます。
+    - Excel のファイルを除く Office ファイルは PDF ファイルよりもすばやくスキャンします。
     
     - 保護されていないファイルは、保護されたファイルよりもすばやくスキャンされます。
     

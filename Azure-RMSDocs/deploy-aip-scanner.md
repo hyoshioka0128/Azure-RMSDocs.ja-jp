@@ -4,18 +4,18 @@ description: インストール、構成、およびこれを検出すると、A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/28/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 22c53cbfc4fb1c8ddab3eed8a26cc86b94ee6eac
-ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
+ms.openlocfilehash: f86c1622e19b0ab5dc7bf274bd020203043bea0f
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66411780"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719854"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -489,7 +489,7 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
 
 - ファイル自体
     
-    - Office ファイルは PDF ファイルよりもすばやくスキャンされます。
+    - Excel のファイルを除く Office ファイルは PDF ファイルよりもすばやくスキャンします。
     
     - 保護されていないファイルは、保護されたファイルよりもすばやくスキャンされます。
     
