@@ -4,17 +4,17 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269810"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815621"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -117,9 +117,9 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。
 
-- **コンプライアンス管理者**:Azure Active Directory の管理者ロールが管理者を含む Azure Information Protection を構成することができますをアクティブ化し、Azure Rights Management 保護サービスを非アクティブ化、保護設定とラベル、および構成しますAzure Information Protection ポリシー。 さらに、この役割を持つ管理者は、[Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)と [AADRM モジュール](administer-powershell.md)からのすべての PowerShell コマンドレットを実行できます。 ただし、このロールでは、ユーザーのドキュメント追跡と取り消しをサポートしていません。
+- **コンプライアンス管理者**または**コンプライアンス データ管理者**:これらの Azure Active Directory 管理者の役割を含む Azure Information Protection を構成する管理者を使用するアクティブ化し、Azure Rights Management 保護サービスを非アクティブ化、保護設定とラベルを構成および構成しますAzure Information Protection ポリシー。 さらに、これらのロールのいずれかを持つ管理者はのすべての PowerShell コマンドレットを実行できます、 [Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)との間、 [AADRM モジュール](administer-powershell.md)します。 ただし、これらのロールでは、ユーザーのドキュメント追跡と取り消しをサポートされていません。
     
-    ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。 この役割のユーザーが持つその他のアクセス許可を確認するには、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」セクションを参照してください。
+    これらの管理者ロールのいずれかにユーザーを割り当てるを参照してください。 [Azure Active Directory での管理者ロールにユーザーを割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)します。 これらのロールを持つユーザーを他のアクセス許可のあるを参照してください、[利用可能な役割](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)セクション、Azure Active Directory のドキュメントから。
 
 - **セキュリティ閲覧者**:[Azure Information Protection 分析](reports-aip.md)の場合のみ。 この Azure Active Directory の管理者ロールを持っている管理者は、ご自身のラベルの使用方法を確認したり、ラベル付きのドキュメントやメールに対するユーザー アクセスや、各分類への変更を監視したり、保護する必要がある機密情報を含んでいるドキュメントを識別したりできます。 この機能では Azure Log Analytics が使われるため、サポートする [RBAC ロール](reports-aip.md#permissions-required-for-azure-information-protection-analytics)も持っている必要があります。
 

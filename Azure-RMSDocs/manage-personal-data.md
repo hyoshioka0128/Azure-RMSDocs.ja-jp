@@ -4,19 +4,19 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: e6563b3ac385ff19999d458a461fd2a4c8fa7061
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 91ce158ded8b9e7812f15737b8d07e5efdf5e3c0
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269786"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815582"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -194,7 +194,7 @@ ObjectID による検索はできません。 ただし、`-UserEmail` パラメ
 
 - RMS クライアントの場合: %localappdata%\Microsoft\MSIPC\msip\Logs
 
-また、Azure Information Protection クライアントは、この個人データをローカル Windows イベント ログの **[アプリケーションとサービス ログ]** > **[Azure Information Protection]** に記録します。
+また、Azure Information Protection クライアントは、この個人データをローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Azure Information Protection]** に記録します。
 
 Azure Information Protection クライアントがスキャナーを実行した場合、個人データは、スキャナーを実行する Windows Server コンピューター上の %localappdata%\Microsoft\MSIP\Scanner\Reports に保存されます。
 
@@ -213,11 +213,13 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **コンプライアンス管理者**
 
+- **コンプライアンス データの管理者**
+
 - **セキュリティ管理者**
 
 - **グローバル管理者**
 
-AADRM モジュールを使用して指定して表示される個人データが割り当てられているユーザーのみがアクセスできる、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、または**グローバル管理者**ロールから Azure Active Directory、または Azure Rights Management サービスのグローバル管理者ロール。  
+AADRM モジュールを使用して指定して表示される個人データが割り当てられているユーザーのみがアクセスできる、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、 **コンプライアンス データ管理者**、または**グローバル管理者**ロールから Azure Active Directory、または Azure Rights Management サービスのグローバル管理者ロール。  
 
 ## <a name="updating-personal-data"></a>個人データの更新
 

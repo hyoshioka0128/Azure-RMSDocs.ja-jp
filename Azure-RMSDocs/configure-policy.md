@@ -3,7 +3,7 @@ title: Azure Information Protection ポリシーを構成する - AIP
 description: 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 53847787fa79782c2bf8e6ce2b6b032e439d1547
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 5ea4991281905b174b0ae70537d5953d60268dbf
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269722"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815577"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -65,6 +65,8 @@ Azure Portal にサインインするには、Azure Information Protection を�
     - **セキュリティ閲覧者** ([Azure Information Protection 分析](reports-aip.md)のみ)
     
   - **コンプライアンス管理者**
+    
+  - **コンプライアンス データの管理者**
     
   - **セキュリティ管理者**
     

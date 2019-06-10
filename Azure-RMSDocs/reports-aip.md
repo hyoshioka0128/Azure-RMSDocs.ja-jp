@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 06/05/2019
+ms.date: 06/08/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 500786b518f5d95c464d4538a3d8bdefd030a3eb
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: 84e3e4231c07f2234baa717d1be2c29386ed44ca
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507171"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815597"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -155,6 +155,7 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
         - **Azure Information Protection 管理者**
         - **セキュリティ管理者**
         - **コンプライアンス管理者**
+        - **コンプライアンス データの管理者**
         - **グローバル管理者**
     
     - ワークスペースが作成された後は、アクセス許可がさらに少ない次のロールを使用して、収集されたデータを表示できます。
