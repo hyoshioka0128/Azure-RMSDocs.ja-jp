@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 36946bc1344931b80b1b45b4f27f86b7be6864c6
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 887b4fa06ddac3395892aab8b085fae8a44bebd9
+ms.sourcegitcommit: a8d78554f20fca35a0384569a323e5f73afdc06a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768225"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66835328"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Rights Management サービス クライアントのデプロイに関する注意事項
 
@@ -30,12 +30,12 @@ RMS クライアントは [Windows 用 Azure Information Protection クライア
 ## <a name="redistributing-the-rms-client"></a>RMS クライアントの再配布
 RMS クライアントは自由に再配布でき、他のアプリケーションや IT ソリューションにバンドルできます。 アプリケーション開発者やソリューション プロバイダーには、RMS クライアントを再配布する 2 つのオプションがあります。
 
-- 推奨:お使いのアプリケーションのインストールに RMS クライアントのインストーラーを組み込み、それをサイレント モード (**/quiet** スイッチ。次のセクションで詳細を説明します) で実行することをお勧めします。
+- 推奨:お使いのアプリケーションのインストールに RMS クライアントのインストーラーを組み込み、それをサイレント モード ( **/quiet** スイッチ。次のセクションで詳細を説明します) で実行することをお勧めします。
 
 - RMS クライアントがお使いのアプリケーションの前提条件を満たすことを確認します。 このオプションを使用する場合、ユーザーがアプリケーションを使用する前に、ユーザーのコンピューターにおいてクライアントを追加、インストール、更新する手順をユーザーに提供する必要がある場合があります。
 
 ## <a name="installing-the-rms-client"></a>RMS クライアントのインストール
-RMS クライアントは、**setup_msipc_*\<arch\>*.exe** という名前のインストーラー実行可能ファイルの中に含まれています。*\<arch>* は、**x86** (32 ビット クライアント コンピューターの場合) または **x64** (64 ビット クライアント コンピューターの場合) になります。 64 ビット (x64) のインストーラー パッケージでは、64 ビット オペレーティング システムのインストールで実行される 32 ビット アプリケーションとの互換用 32 ビット実行可能ファイルと、ネイティブの 64 ビット アプリケーションをサポートするための 64 ビット ランタイム実行可能ファイルの両方がインストールされます。 32 ビット (x86) インストーラーは、64 ビットの Windows インストールでは実行されません。
+RMS クライアントは、**setup_msipc_ *\<arch\>* .exe** という名前のインストーラー実行可能ファイルの中に含まれています。 *\<arch>* は、**x86** (32 ビット クライアント コンピューターの場合) または **x64** (64 ビット クライアント コンピューターの場合) になります。 64 ビット (x64) のインストーラー パッケージでは、64 ビット オペレーティング システムのインストールで実行される 32 ビット アプリケーションとの互換用 32 ビット実行可能ファイルと、ネイティブの 64 ビット アプリケーションをサポートするための 64 ビット ランタイム実行可能ファイルの両方がインストールされます。 32 ビット (x86) インストーラーは、64 ビットの Windows インストールでは実行されません。
 
 > [!NOTE]
 > RMS クライアントのインストールには、ローカル コンピューターの Administrators グループのメンバーなど、管理者特権が必要です。
@@ -48,7 +48,7 @@ RMS クライアントをインストールするには、次のインストー�
     setup_msipc_x64.exe /quiet
     ```
 
-- **対話型モード。** または、RMS クライアントのインストール ウィザードによって提供される GUI ベースのセットアップ プログラムを使用して、RMS クライアントをインストールすることができます。 対話型インストールを行うには、ローカル コンピューターにコピーまたはダウンロードされたフォルダー内の RMS クライアントのインストーラー パッケージ (**setup_msipc_*\<arch\>*.exe**) をダブルクリックします。
+- **対話型モード。** または、RMS クライアントのインストール ウィザードによって提供される GUI ベースのセットアップ プログラムを使用して、RMS クライアントをインストールすることができます。 対話型インストールを行うには、ローカル コンピューターにコピーまたはダウンロードされたフォルダー内の RMS クライアントのインストーラー パッケージ (**setup_msipc_ *\<arch\>* .exe**) をダブルクリックします。
 
 ## <a name="questions-and-answers-about-the-rms-client"></a>RMS クライアントに関する質問と回答
 次のセクションには、RMS クライアントについてよく寄せられる質問、およびそれらに対する回答が示されています。
@@ -100,12 +100,12 @@ RMS クライアントのライセンスはローカル ディスクに格納さ
 
 |説明|クライアント モードのパス|サーバー モードのパス|
 |---------------|---------------------|---------------------|
-|ライセンスの保存場所|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*|
-|テンプレートの保存場所|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*|
-|レジストリの場所|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\*\<SID*\>|
+|ライセンスの保存場所|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\\ *\<SID\>*|
+|テンプレートの保存場所|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\\ *\<SID\>*|
+|レジストリの場所|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\ *\<SID*\>|
 
 > [!NOTE]
-> *\<SID*> は、サーバー アプリケーションを実行しているアカウントのセキュリティ識別子 (SID) です。 たとえば、アプリケーションが組み込みの Network Service アカウントで実行されている場合、*\<SID\>* をそのアカウントの既知の SID (S-1-5-20) の値に置き換えます。
+> *\<SID*> は、サーバー アプリケーションを実行しているアカウントのセキュリティ識別子 (SID) です。 たとえば、アプリケーションが組み込みの Network Service アカウントで実行されている場合、 *\<SID\>* をそのアカウントの既知の SID (S-1-5-20) の値に置き換えます。
 
 ### <a name="windows-registry-settings-for-the-rms-client"></a>RMS クライアントの Windows レジストリ設定
 Windows レジストリ キーを使用して、一部の RMS クライアントの構成を設定または変更することができます。 たとえば、AD RMS サーバーと通信する RMS 対応のアプリケーションの管理者は、エンタープライズ サービスの場所を更新する (発行用に現在選択されている AD RMS サーバーをオーバーライドする) ことをお勧めします。これは、Active Directory トポロジ内のクライアント コンピューターの場所により異なります。 または、クライアント コンピューターでの RMS のトレースを有効にすることをお勧めします。これは、RMS 対応アプリケーションで発生する問題のトラブルシューティングに役立ちます。 次の表を使用して、RMS クライアント用に変更できるレジストリ設定を特定します。
@@ -113,7 +113,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 
 |                                                                                                  タスク                                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             設定                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                  クライアントがバージョン 1.03102.0221 以降の場合:<br /><br />**アプリケーション データ収集を制御するには**                                                  | **重要**:ユーザーのプライバシーを保証するために、管理者は、データ収集を有効にする前にユーザーに同意を求める必要があります。<br /><br />データ収集を有効にした場合、インターネット経由での Microsoft へのデータ送信に同意したことになります。 Microsoft では、Microsoft 製品およびサービスの品質、セキュリティおよび整合性を向上するためにこのデータを使用します。 たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。 データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。<br /><br />バージョン 1.0.3356 またはそれ以降:  <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD:DiagnosticAvailability<br /><br />バージョン 1.0.3356 以前:  <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD:DiagnosticState<br /><br />**値:** 環境プロパティ [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx) を使用して定義したアプリケーションの場合は 0 (既定値)、無効な場合は 1、有効な場合は 2 になります。<br /><br />**注意**:32 ビット MSIPC ベースのアプリケーションが 64 ビット版の Windows で実行されている場合、場所は HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC になります。 |
+|                                                  クライアントがバージョン 1.03102.0221 以降の場合:<br /><br />**アプリケーション データ収集を制御するには**                                                  | **重要**:ユーザーのプライバシーを保証するために、管理者は、データ収集を有効にする前にユーザーに同意を求める必要があります。<br /><br />データ収集を有効にした場合、インターネット経由での Microsoft へのデータ送信に同意したことになります。 Microsoft では、Microsoft 製品およびサービスの品質、セキュリティおよび整合性を向上するためにこのデータを使用します。 たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。 データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。<br /><br />バージョン 1.0.3356 またはそれ以降: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD:DiagnosticAvailability<br /><br />バージョン 1.0.3356 以前: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD:DiagnosticState<br /><br />**値:** 環境プロパティ [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx) を使用して定義したアプリケーションの場合は 0 (既定値)、無効な場合は 1、有効な場合は 2 になります。<br /><br />**注意**:32 ビット MSIPC ベースのアプリケーションが 64 ビット版の Windows で実行されている場合、場所は HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC になります。 |
 |                                                       AD RMS のみ:<br /><br />**クライアント コンピューターのエンタープライズ サービスの場所を更新するには**                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               次のレジストリ キーを編集します。<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: 既定<br /><br />**値:** \<http または https>://*RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: 既定<br /><br />**値:** \<http または https>://*RMS_Cluster_Name*/_wmcs/Licensing                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                                                                                    **トレースを有効化または無効化するには**                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    次のレジストリ キーを更新します。<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD:Trace<br /><br />**値:** 1 (既定値) のトレースを無効にするには 0 のトレースを有効にするには                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |                                                                        **テンプレートを更新する頻度 (日単位) を変更するには**                                                                         |                                                                                                                                                                                                                                                                                TemplateUpdateFrequencyInSeconds 値が設定されていない場合、次のレジストリ値でユーザーのコンピューターでのテンプレートの更新頻度を指定します。  これらの値のどちらも設定されていない場合は、RMS クライアント (バージョン 1.0.1784.0) を使用するアプリケーションがテンプレートをダウンロードする既定の更新間隔は 1 日です。 これより前のバージョンでは、既定は 7 日ごとです。<br /><br />**クライアント モード:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD:TemplateUpdateFrequency<br /><br />**値:** ダウンロード間の日数 (1 の最小値) の数を指定する整数値。<br /><br />**サーバー モード:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD:TemplateUpdateFrequency<br /><br />**値:** ダウンロード間の日数 (1 の最小値) の数を指定する整数値。                                                                                                                                                                                                                                                                                 |
@@ -128,7 +128,7 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 
 **Client Mode:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
-**サーバー モード:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\*\<SID\>*
+**サーバー モード:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\ *\<SID\>*
 
 このフォルダーを使用する際に、特別な名前付け規則に従う必要はありません。ただし、テンプレートは RMS サーバーまたはサービスによって発行される必要があり、テンプレートのファイル拡張子を .xml にする必要があります。 たとえば、Contoso-Confidential.xml または Contoso-ReadOnly.xml は有効な名前です。
 
@@ -147,9 +147,9 @@ Windows レジストリ キーを使用して、一部の RMS クライアント
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
 
-    REG_SZ:*\<URL_or_HostName>*
+    REG_SZ: *\<URL_or_HostName>*
 
-    **値:** このレジストリ キーの場所の文字列値には、DNS ドメイン名の形式 (たとえば、**adrms.contoso.com**)、または信頼された AD RMS サーバーへの完全な URL (たとえば、**https://adrms.contoso.com**) のいずれかを指定できます。 指定された URL が **https://** で始まる場合、RMS クライアントは SSL または TLS を使用して、指定した AD RMS サーバーに接続します。
+    **値:** このレジストリ キーの場所の文字列値には、DNS ドメイン名の形式 (たとえば、**adrms.contoso.com**)、または信頼された AD RMS サーバーへの完全な URL (たとえば、 **`https://adrms.contoso.com`** ) のいずれかを指定できます。 指定された URL が **https://** で始まる場合、RMS クライアントは SSL または TLS を使用して、指定した AD RMS サーバーに接続します。
 
 ## <a name="rms-service-discovery"></a>RMS サービスの検出
 RMS サービスの検出を使用すると、RMS クライアントがコンテンツを保護する前に、通信する RMS サーバーまたはサービスを確認することができます。 サービスの検出は、RMS クライアントが保護されたコンテンツを使用する際にも実行されますが、このような検出はほとんど実行されません。コンテンツにアタッチされたポリシーには優先 RMS サーバーまたはサービスが記載されているからです。 そのようなソースが失敗した場合に限り、クライアントがサービスの検出を実行します。
@@ -164,13 +164,13 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 
     [次のセクション](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory)に従って SCP を登録すると、AD RMS サーバーの URL は、使用する RMS クライアントに返されます。
 
-3. **Azure Rights Management 検出サービス**: RMS クライアントは **https://discover.aadrm.com** に接続し、ユーザーに認証を求めます。
+3. **Azure Rights Management 検出サービス**: RMS クライアントは **`https://discover.aadrm.com`** に接続し、ユーザーに認証を求めます。
 
-    認証に成功すると、使用する Azure Information Protection テナントの識別に認証のユーザー名 (とドメイン) が使用されます。 そのユーザー アカウントに使用する Azure Information Protection URL が RMS クライアントに返されます。 URL は、**https://**\<テナントの URL\>**/_wmcs/licensing** という形式です 
+    認証に成功すると、使用する Azure Information Protection テナントの識別に認証のユーザー名 (とドメイン) が使用されます。 そのユーザー アカウントに使用する Azure Information Protection URL が RMS クライアントに返されます。 URL は、**https://** \<テナントの URL\> **/_wmcs/licensing** という形式です 
 
     以下に例を示します。5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<テナントの URL\>* は、**{GUID}.rms.[Region].aadrm.com** という形式です。この値は、Azure RMS の [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行して **RightsManagementServiceId** 値で確認できます。
+    *\<テナントの URL\>* は、 **{GUID}.rms.[Region].aadrm.com** という形式です。この値は、Azure RMS の [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行して **RightsManagementServiceId** 値で確認できます。
 
 > [!NOTE]
 > このサービスの検出フローには 4 つの重要な例外があります。
@@ -194,15 +194,15 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 
     - Windows Server 2012 R2 または Windows Server 2012 を使用している場合は、Server Manager で **[ツール]**  >  **[Active Directory Rights Management サービス]** の順にクリックします。
 
-    - Windows Server 2008 R2 を使用している場合は、**[スタート]**  >  **[管理ツール]**  >  **[Active Directory Rights Management サービス]** の順にクリックします。
+    - Windows Server 2008 R2 を使用している場合は、 **[スタート]**  >  **[管理ツール]**  >  **[Active Directory Rights Management サービス]** の順にクリックします。
 
-2.  AD RMS コンソールで AD RMS クラスターを右クリックし、**[プロパティ]** をクリックします。
+2.  AD RMS コンソールで AD RMS クラスターを右クリックし、 **[プロパティ]** をクリックします。
 
 3.  **[SCP]** タブをクリックします。
 
 4.  **[SCPを変更する]** チェック ボックスをオンにします。
 
-5.  **[SCP を現在の証明クラスターに設定する]** オプションを選択して、**[OK]** をクリックします。
+5.  **[SCP を現在の証明クラスターに設定する]** オプションを選択して、 **[OK]** をクリックします。
 
 ### <a name="enabling-client-side-service-discovery-by-using-the-windows-registry"></a>Windows レジストリを使用してクライアント側のサービスの検出を有効にする
 SCP を使用しない、または SCP が存在しない場合は、RMS クライアントがその AD RMS サーバーを検出できるように、クライアント コンピューターのレジストリを構成できます。
@@ -218,15 +218,15 @@ SCP を使用しない、または SCP が存在しない場合は、RMS クラ�
     > [!NOTE]
     > 32 ビット アプリケーションを 64 ビット コンピューターで実行している場合は、**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC** に移動します。
 
-3. ServiceLocation サブキーを作成するには、**[MSIPC]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして「**ServiceLocation**」と入力します。
+3. ServiceLocation サブキーを作成するには、 **[MSIPC]** を右クリックして **[新規]** を選択し、 **[キー]** をクリックして「**ServiceLocation**」と入力します。
 
-4. EnterpriseCertification サブキーを作成するには、**[ServiceLocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして「**EnterpriseCertification**」と入力します。
+4. EnterpriseCertification サブキーを作成するには、 **[ServiceLocation]** を右クリックして **[新規]** を選択し、 **[キー]** をクリックして「**EnterpriseCertification**」と入力します。
 
-5. エンタープライズ証明書の URL を設定するには、**[EnterpriseCertification]** サブキーの下にある **[(既定)]** 値をダブルクリックします。 **[文字列の編集]** ダイアログ ボックスが表示されたら、**[値のデータ]** に `<http or https>://<AD RMS_cluster_name>/_wmcs/Certification` と入力して、**[OK]** をクリックします。
+5. エンタープライズ証明書の URL を設定するには、 **[EnterpriseCertification]** サブキーの下にある **[(既定)]** 値をダブルクリックします。 **[文字列の編集]** ダイアログ ボックスが表示されたら、 **[値のデータ]** に `<http or https>://<AD RMS_cluster_name>/_wmcs/Certification` と入力して、 **[OK]** をクリックします。
 
-6. EnterprisePublishing サブキーを作成するには、 **[ServiceLocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして `EnterprisePublishing` と入力します。
+6. EnterprisePublishing サブキーを作成するには、 **[ServiceLocation]** を右クリックして **[新規]** を選択し、 **[キー]** をクリックして `EnterprisePublishing` と入力します。
 
-7. エンタープライズ公開 URL を設定するには、**[EnterprisePublishing]** サブキーの下にある **[(既定)]** をダブルクリックします。 **[文字列の編集]** ダイアログ ボックスが表示されたら、**[値のデータ]** に `<http or https>://<AD RMS_cluster_name>/_wmcs/Licensing` と入力して、**[OK]** をクリックします。
+7. エンタープライズ公開 URL を設定するには、 **[EnterprisePublishing]** サブキーの下にある **[(既定)]** をダブルクリックします。 **[文字列の編集]** ダイアログ ボックスが表示されたら、 **[値のデータ]** に `<http or https>://<AD RMS_cluster_name>/_wmcs/Licensing` と入力して、 **[OK]** をクリックします。
 
 8.  レジストリ エディターを閉じます。
 
@@ -245,9 +245,9 @@ RMS クライアントが Active Directory への照会で SCP を検索でき�
 
     -   X64 での Office の 32 ビット バージョンのプラットフォーム。HKLM\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Servicelocation
 
-3.  LicensingRedirection サブキーを作成するには、**[Servicelocation]** を右クリックして **[新規]** を選択し、**[キー]** をクリックして、「**LicensingRedirection**」と入力します。
+3.  LicensingRedirection サブキーを作成するには、 **[Servicelocation]** を右クリックして **[新規]** を選択し、 **[キー]** をクリックして、「**LicensingRedirection**」と入力します。
 
-4.  ライセンスのリダイレクトを設定するには、**[LicensingRedirection]** サブキーを右クリックして **[新規]** を選択し、**[String value]** を選択します。  **[名前]** には以前のサーバーのライセンス URL を指定し、**[値]** には新しいサーバーのライセンス URL を指定します。
+4.  ライセンスのリダイレクトを設定するには、 **[LicensingRedirection]** サブキーを右クリックして **[新規]** を選択し、 **[String value]** を選択します。  **[名前]** には以前のサーバーのライセンス URL を指定し、 **[値]** には新しいサーバーのライセンス URL を指定します。
 
     たとえば、Contoso.com にあるサーバーからFabrikam.com のサーバーにライセンスをリダイレクトするには、次の値を入力します。
 
