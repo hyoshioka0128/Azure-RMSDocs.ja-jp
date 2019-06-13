@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: a894513d26a78daefc7d8032f1afa754ece74028
-ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
+ms.openlocfilehash: 129449585ee6128d0b8d88b2372343a2c10ec4e9
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719825"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028693"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの以前のバージョンを展開します。
 
@@ -424,12 +424,13 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - 補足:
     
-    - スキャナーを実行するサービス アカウントに、[スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner)のセクションで説明した権限のみが付与されていることを確認し、[高度なクライアント プロパティ](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner)を構成して、スキャナーの低整合性レベルを無効してください。
+    - スキャナーを実行するサービス アカウントに記載されている権限のみがいることを確認、[スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner)セクションで、し、構成、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner)低整合性を無効にするにはスキャナーのレベル。
     
     - [代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのファイルに既定のラベルを適用すると、ファイル内容の検査がスキップされるため、スキャナーの実行速度が速くなります。
     
     - [代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのカスタム条件と既知の機密情報の種類を特定すると、スキャナーの実行速度が遅くなりなります。
     
+    - スキャナーのタイムアウトを小さくことができます[クライアント設定を高度な](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner)よりスキャン率とメモリ消費量が、受信確認をいくつかのファイルをスキップする可能性があります。
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>スキャナーのコマンドレットの一覧 
 
