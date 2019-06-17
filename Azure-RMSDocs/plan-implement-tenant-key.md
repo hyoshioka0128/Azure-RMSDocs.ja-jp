@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection のルート キーの管理
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e43e534b95ecef5fa412ffb75fd3659ad9f8bb3
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: d23884de43f63798a86b4ade47cd8683d7444980
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149261"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -49,7 +49,7 @@ Azure Information Protection テナント キーとは
     
     これは、管理オーバーヘッドが最も少なくて済むシンプルな方法です。 多くの場合、テナント キーの存在を意識することすらありません。 Azure Information Protection にサインアップすれば、それ以外のキー管理プロセスは Microsoft によって処理されます。
 
-- **自主管理 (BYOK)**: テナント キーを完全に制御するには、Azure Information Protection で [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用します。 このテナント キー トポロジの場合、Key Vault に直接キーを作成するか、オンプレミスで作成します。 オンプレミスで作成する場合は、このキーを Key Vault に転送またはインポートします。 その後、このキーを使用するように Azure Information Protection を構成して、Azure Key Vault で管理します。
+- **自主管理 (BYOK)** : テナント キーを完全に制御するには、Azure Information Protection で [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用します。 このテナント キー トポロジの場合、Key Vault に直接キーを作成するか、オンプレミスで作成します。 オンプレミスで作成する場合は、このキーを Key Vault に転送またはインポートします。 その後、このキーを使用するように Azure Information Protection を構成して、Azure Key Vault で管理します。
     
 
 ### <a name="more-information-about-byok"></a>BYOK の詳細
@@ -145,26 +145,28 @@ Azure Information Protection テナントの場所を特定するには、[Get-A
 
 Azure Key Vault ドキュメントを使用して、Azure Information Protection で使用するキーと Key Vault を作成します。 例については、「[Azure Key Vault の概要](/azure/key-vault/key-vault-get-started)」を参照してください。
 
-キーの長さが 2048 ビット (推奨) または 1024 ビットであることを確認してください。 Azure Information Protection ではその他のキーの長さはサポートされていません。
+キーの長さが 2048 ビット (推奨) または 1024 ビットであることを確認してください。 Azure Information Protection ではその他のキーの長さはサポートされていません。 
+
+アクティブなテナント キーとして、不適切なレベルの保護の提供と見なされるため、1024 ビットのキーを使用しないでください。 Microsoft には、1024 ビット RSA キーなどの下位のキーの長さを使用し、sha-1 などの保護の不適切なレベルを提供するプロトコルの関連付けの使用を保証しません。 キー長が大きいほどへの移行をお勧めします。
 
 オンプレミスで HSM 保護キーを作成し、HSM 保護キーとして Key Vault に転送する場合は、「[Azure Key Vault の HSM 保護キーを生成し、転送する方法](/azure/key-vault/key-vault-hsm-protected-keys)」の手順に従ってください。
 
 Azure Information Protection でキーを使用するには、キーに対して Key Vault のすべての操作が許可される必要があります。 これは、既定の構成と操作は、暗号化、復号化、wrapKey、unwrapKey、記号、および確認します。 次の PowerShell コマンドを使用して、キーの許可された操作を確認することができます:`(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`します。 必要に応じて、許可された操作の追加を使用して[Update AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey)と*KeyOps*パラメーター。
 
-Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 キー コンテナー URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
+Key Vault に格納されているキーにはキー ID があります。 このキー ID は、Key Vault の名前、キー コンテナー、キーの名前、およびキーのバージョンが含まれる URL です。 たとえば、 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** です。 キー コンテナー URL を指定して、このキーを使用するように Azure Information Protection を構成する必要があります。
 
 Azure Information Protection でキーを使用するには、Azure Rights Management サービスが組織の Key Vault にあるキーの使用を承認されている必要があります。 そのために、Azure Key Vault 管理者は Azure portal または Azure PowerShell を使用できます。
 
 Azure portal を使用した構成:
 
-1. **[キー コンテナー]** > **\<*ご使用のキー コンテナー名*>** > **[アクセス ポリシー]** > **[新規追加]** に移動します。
+1. **[キー コンテナー]**  >  **\<*ご使用のキー コンテナー名*>**  >  **[アクセス ポリシー]**  >  **[新規追加]** に移動します。
 
-2. **[アクセス ポリシーの追加]** ブレードで、**[Configure from template]\(テンプレートからの構成\)** (省略可能) リスト ボックスから **[Azure Information Protection BYOK]** を選択し、**[OK]** をクリックします。
+2. **[アクセス ポリシーの追加]** ブレードで、 **[Configure from template]\(テンプレートからの構成\)** (省略可能) リスト ボックスから **[Azure Information Protection BYOK]** を選択し、 **[OK]** をクリックします。
     
     選択したテンプレートには次の構成が含まれます。
     
-    - **[プリンシパルの選択]** に対して、**[Microsoft Rights Management Services]** が自動的に割り当てられます。
-    - **[取得]**、**[暗号化解除]**、および **[サイン]** に対して、キーのアクセス許可が自動的に選択されます。 
+    - **[プリンシパルの選択]** に対して、 **[Microsoft Rights Management Services]** が自動的に割り当てられます。
+    - **[取得]** 、 **[暗号化解除]** 、および **[サイン]** に対して、キーのアクセス許可が自動的に選択されます。 
 
 PowerShell を使用した構成:
 

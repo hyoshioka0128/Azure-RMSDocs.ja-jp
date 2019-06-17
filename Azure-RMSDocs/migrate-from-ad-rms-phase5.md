@@ -4,19 +4,19 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149271"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -31,7 +31,7 @@ AD RMS から Azure Information Protection への移行フェーズ 5 では、�
 
 SCP を削除するには、ドメイン エンタープライズ管理者としてログインしていることを確認し、次の手順を使用します。
 
-1. Active Directory Rights Management サービス コンソールで、AD RMS クラスターを右クリックし、**[プロパティ]** をクリックします。
+1. Active Directory Rights Management サービス コンソールで、AD RMS クラスターを右クリックし、 **[プロパティ]** をクリックします。
 
 2. **[SCP]** タブをクリックします。
 
@@ -110,11 +110,13 @@ killall cfprefsd
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所で見つけることができます: **Microsoft** > **Windows** > **Active Directory Rights Management サービス クライアント**
+最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))** " タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所で見つけることができます: **Microsoft** > **Windows** > **Active Directory Rights Management サービス クライアント**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 
-AD RMS デプロイで RMS 暗号化モード 1 が使用されていた場合、移行が完了したら、この手順を実行することをお勧めします。 キーの再入力を行うと、RMS 暗号化モード 2 を使用した保護が行われます。 
+移行がこのモードは、1024 ビットのキーと sha-1 を使用するため、AD RMS のデプロイが RMS Cryptographic Mode 1 を使用していた場合は、完了すると、この手順が必要です。 この構成は、不適切なレベルの保護を提供すると見なされます。 Microsoft には、1024 ビット RSA キーなどの下位のキーの長さを使用し、sha-1 などの保護の不適切なレベルを提供するプロトコルの関連付けの使用を保証しません。
+
+2048 ビット キーおよび SHA 256 で RMS Cryptographic Mode 2 を使用した保護の結果を更新するには、その結果します。 
 
 AD RMS のデプロイで暗号化モード 2 が使用されている場合も、この手順を実行することをお勧めします。新しいキーは、AD RMS キーに対する潜在的なセキュリティ侵害からテナントを保護するのに役立つためです。
 
@@ -128,7 +130,7 @@ Azure Information Protection テナント キーを更新するには:
     
         (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **テナント キーを自分で管理している場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
+- **テナント キーを自分で管理している場合 (BYOK)** : Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 

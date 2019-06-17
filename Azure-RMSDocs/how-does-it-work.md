@@ -4,19 +4,19 @@ description: Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149289"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -64,11 +64,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 - AD RMS クラスターが暗号化モード 1 で実行される場合の、オンプレミスからの移行中。
 
-- AD RMS クラスターが Exchange Online を使用していた場合の、オンプレミスからの移行後。
-
 - 移行前にオンプレミスで作成された、アーカイブされたキー。これにより、以前に AD RMS で保護されたコンテンツが、移行後も Azure Rights Management サービスから継続して開くことができます。
-
-- お客様が、Azure Key Vault を使用して独自キーの使用 (BYOK) を選択した場合。 Azure Information Protection は 1024 ビットと 2048 ビットのキーの長さをサポートしています。 セキュリティを強化するために、キーの長さを 2048 ビットにすることをお勧めします。
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Azure RMS 暗号化キーの格納とセキュリティ保護のしくみ
 
@@ -159,7 +155,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 - **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
 
-- **汎用的な保護 (.pfile)**: Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
+- **汎用的な保護 (.pfile)** : Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
 
 - **Microsoft アカウント**: Microsoft アカウントで認証されていれば、Azure Information Protection で消費用の電子メール アドレスを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 詳しくは[こちら](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)をご覧ください。
 
