@@ -4,19 +4,19 @@ description: Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/13/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71f5afc3f65713f62607717d5459080aa11bedf2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 655116fa6749221ee6f454c2b8673635937f34db
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184163"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156730"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -27,7 +27,7 @@ ms.locfileid: "60184163"
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office アプリケーション:Word、Excel、PowerPoint、Outlook
 これらのアプリケーションは Azure Rights Management をネイティブでサポートし、ユーザーは保存済みのドキュメントまたは送信する電子メール メッセージに保護を適用できます。 ユーザーは[テンプレート](configure-policy-templates.md)を適用して保護を適用できます。 あるいは、Word、Excel、PowerPoint の場合、アクセス、権限、使用制限にカスタマイズ設定を選択できます。
 
-たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、**[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
+たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、 **[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
 
 これらのアプリケーションでは、Azure Rights Management のネイティブ Office サポートに加え、[Azure Information Protection クライアント](./rms-client/aip-client.md)と共にインストールされる Azure Information Protection バーもサポートされます。 このバーにはラベルが表示されます。これにより、ユーザーは機密データを含むドキュメントや電子メールに保護をより簡単に自動で適用することができます。
 
@@ -69,7 +69,7 @@ Exchange Online または Exchange Server を使用すると、Azure Information
 
 SharePoint Online または SharePoint Server を使用するとき、SharePoint IRM (Information Rights Management) でドキュメントを保護できます。 この機能では、管理者がリストやライブラリを保護できます。ユーザーが文書をチェックアウトしたときに、指定した情報保護ポリシーに従って許可されたユーザーのみがファイルを表示および使用できるようにダウンロードされたファイルが保護されます。 たとえば、ファイルが読み取り専用のときに、テキストのコピーを無効にし、ローカル コピーの保存やファイルの印刷を防止することができます。
 
-Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保護に対応しています。 既定では、保護はドキュメントをダウンロードした人に限定されます。 この既定を変更するには、**[グループの保護を許可します]** という名前の構成オプションを使用します。これは、指定したグループに保護を拡張します。 たとえば、ライブラリ内のドキュメントを編集するアクセス許可を持つグループを指定して、同じユーザーのグループが、どのユーザーがドキュメントをダウンロードしたかに関係なく、SharePoint の外部でドキュメントを編集できるようにすることができます。 または、SharePoint でアクセス許可を付与されていないグループ内のユーザーが、SharePoint の外部でドキュメントにアクセスする必要がある場合に、このグループを指定できます。 
+Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保護に対応しています。 既定では、保護はドキュメントをダウンロードした人に限定されます。 この既定を変更するには、 **[グループの保護を許可します]** という名前の構成オプションを使用します。これは、指定したグループに保護を拡張します。 たとえば、ライブラリ内のドキュメントを編集するアクセス許可を持つグループを指定して、同じユーザーのグループが、どのユーザーがドキュメントをダウンロードしたかに関係なく、SharePoint の外部でドキュメントを編集できるようにすることができます。 または、SharePoint でアクセス許可を付与されていないグループ内のユーザーが、SharePoint の外部でドキュメントにアクセスする必要がある場合に、このグループを指定できます。 
 
 SharePoint のリストとライブラリについては、この保護は常にエンド ユーザーではなく管理者によって構成されます。 アクセス許可はサイト レベルで設定します。そのようなアクセス許可は、既定では、そのサイトのリストまたはライブラリにより継承されます。 SharePoint Online を使用する場合、ユーザーは OneDrive for Business ライブラリの IRM 保護も構成できます。
 

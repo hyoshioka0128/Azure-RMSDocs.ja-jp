@@ -4,19 +4,19 @@ description: 個人向け RMS について説明します。これは、保護�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/02/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 947461f31c6c9d8ef8a97d07c78370153169af03
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5f95406f7f6851b6a0082c19c186fda5bc4532fd
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182411"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156675"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
@@ -48,7 +48,7 @@ ms.locfileid: "60182411"
 
 4. 入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 
-5. このメールが届いたら、**[はい、私です]** をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
+5. このメールが届いたら、 **[はい、私です]** をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
 
 6. **[最後に...]** というページが表示され、アカウントの詳細情報を入力できるようになります。 氏名とパスワードを入力し、パスワードを確認のため再入力してから **[開始]** をクリックします。
 
@@ -61,5 +61,5 @@ ms.locfileid: "60182411"
 
 
 ## <a name="next-steps"></a>次の手順
-個人用 RMS は、Azure Active Directory でサポートされているセルフサービス サインアップの使用例です。 この動作のしくみについて詳しくは、Azure Active Directory ドキュメントの「[Azure Active Directory のセルフサービス サインアップについて](/azure/active-directory/users-groups-roles/directory-self-service-signup)」をご覧ください。
+個人向け RMS は、Azure Active Directory でサポートされているセルフ サービス サインアップ機能を使用する例を示します。 この機能のしくみの詳細については、次を参照してください。 [Azure Active Directory のセルフ サービス サインアップは何ですか?](/azure/active-directory/users-groups-roles/directory-self-service-signup) Azure Active Directory のドキュメント。
 

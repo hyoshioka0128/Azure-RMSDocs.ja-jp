@@ -4,18 +4,18 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 5d32210a7ccc56d388b24a55f6e19331e768f7f3
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: 7cffbff5a5d6942c7ed722e64ead4a68e5ae959f
+ms.sourcegitcommit: 9b7b2e3a0f7b5717b349af2c883ebdeebfbd53e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934938"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67161258"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -45,7 +45,7 @@ Azure Information Protection クライアントをインストールすると、
 
 すべてのコマンドレットと対応するヘルプの一覧については、「[AzureInformationProtection Module](/powershell/module/azureinformationprotection)」 (AzureInformationProtection モジュール) を参照してください。 PowerShell セッション内で、「`Get-Help <cmdlet name> -online`」と入力すると、最新のヘルプが表示されます。  
 
-このモジュールは、**\ProgramFiles (x86)\Microsoft Azure Information Protection** にインストールされ、このフォルダーを **PSModulePath** システム変数に追加します。 このモジュールの .dll の名前は **AIP.dll** です。
+このモジュールは、 **\ProgramFiles (x86)\Microsoft Azure Information Protection** にインストールされ、このフォルダーを **PSModulePath** システム変数に追加します。 このモジュールの .dll の名前は **AIP.dll** です。
 
 現時点では、モジュールをインストールするときに使うユーザーと、同じコンピューターでコマンドレットを実行するときに使うユーザーが異なる場合は、最初に `Import-Module AzureInformationProtection` コマンドを実行する必要があります。 このシナリオでは、コマンドレットを初めて実行するときに、モジュールは自動的に読み込まれません。
 
@@ -311,7 +311,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 以下に例を示します。
+フォルダー内のすべてのファイルを保護するには、 **-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 以下に例を示します。
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -357,23 +357,23 @@ AzureInformationProtection モジュールをインストールするための�
 
 1. AD RMS サーバーにログオンします。
 
-2. **[スタート]** ボタンをクリックし、**[コンピューター]** をクリックします。
+2. **[スタート]** ボタンをクリックし、 **[コンピューター]** をクリックします。
 
 3. エクスプローラーで、%systemdrive%\Initpub\wwwroot\_wmsc\Certification に移動します。
 
-4. **ServerCertification.asmx** を右クリックし、**[プロパティ]** をクリックします。
+4. **ServerCertification.asmx** を右クリックし、 **[プロパティ]** をクリックします。
 
-5. **[ServerCertification.asmx のプロパティ]** ダイアログ ボックスで、**[セキュリティ]** タブをクリックします。 
+5. **[ServerCertification.asmx のプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。 
 
 6. **[続行]** または **[編集]** ボタンをクリックします。 
 
-7. **[ServerCertification.asmx のアクセス許可]** ダイアログ ボックスで、**[追加]** をクリックします。 
+7. **[ServerCertification.asmx のアクセス許可]** ダイアログ ボックスで、 **[追加]** をクリックします。 
 
 8. アカウント名を追加します。 他の AD RMS 管理者やサービス アカウントもこれらのコマンドレットを使ってファイルを保護し、保護解除する場合、そのアカウントも追加します。 
 
     非対話式でファイルを保護または保護解除する場合、関連するコンピューター アカウントやアカウントを追加します。 たとえば、ファイル分類インフラストラクチャに対して構成されてあり、PowerShell スクリプトでファイルを保護する Windows Server コンピューターのコンピューター アカウントを追加します。
 
-9. **[許可]** 列で、**[読み取りと実行]** および **[読み取り]** チェック ボックスがオンになっていることを確認します。
+9. **[許可]** 列で、 **[読み取りと実行]** および **[読み取り]** チェック ボックスがオンになっていることを確認します。
 
 10. **[OK]** を 2 回クリックします。
 
@@ -485,7 +485,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
-2. Azure Information Protection で使用する Azure AD テナントに移動します**Azure Active Directory** > **管理** > **アプリの登録**。 
+2. Azure Information Protection で使用する Azure AD テナントに移動します**Azure Active Directory** > **管理** > **アプリの登録。** . 
 
 3. 選択 **+ 新しい登録**、Web アプリ/API アプリケーションを作成します。 **アプリケーションを登録する**ブレードは、次の値を指定して、クリックして**登録**:
 
@@ -495,7 +495,7 @@ AzureInformationProtection モジュールをインストールするための�
     
     - **勘定科目の種類がサポートされている**:**この組織のディレクトリのみでのアカウント**
     
-    - **リダイレクト URI (省略可能)**:**Web**と `http://localhost`
+    - **リダイレクト URI (省略可能)** :**Web**と `http://localhost`
 
 4. **AIPOnBehalfOf**ブレードの値をコピー、**アプリケーション (クライアント) ID**します。 値は次の例のようになります:`57c3c1c3-abf9-404e-8b2b-4652836c8c66`します。 この値は、使用、 *WebAppId* Set-aipauthentication コマンドレットを実行するときにパラメーター。 貼り付けし、後で参照値を保存します。
 
@@ -526,7 +526,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 13. **スコープを追加**ブレードで、次を指定し、**スコープ追加**:
     - **スコープ名**: `user-impersonation`
-    - **ユーザーが同意できるでしょうか。**:**管理者とユーザー**
+    - **ユーザーが同意できるでしょうか。** :**管理者とユーザー**
     - **管理者の同意の表示名**: `Access Azure Information Protection scanner`
     - **管理者の同意の説明**: `Allow the application to access the scanner for the signed-in user`
     - **ユーザーの同意の表示名**: `Access Azure Information Protection scanner`
@@ -540,7 +540,7 @@ AzureInformationProtection モジュールをインストールするための�
 16. **アプリケーションを登録する**ブレードで、次の設定を指定し、**登録**:
     - **名前**: `AIPClient`
     - **勘定科目の種類がサポートされている**:**この組織のディレクトリのみでのアカウント**
-    - **リダイレクト URI (省略可能)**:**パブリック クライアント (モバイルとデスクトップ)** と `http://localhost`
+    - **リダイレクト URI (省略可能)** :**パブリック クライアント (モバイルとデスクトップ)** と `http://localhost`
 
 17. **AIPClient**ブレードの値をコピー、**アプリケーション (クライアント) ID**します。 値は次の例のようになります:`8ef1c873-9869-4bb1-9c11-8313f9d7f76f`します。 
     
@@ -559,6 +559,8 @@ AzureInformationProtection モジュールをインストールするための�
 22. **API の要求のアクセス許可**ブレードで、**マイ Api**します。
 
 23. **API を選択します**セクションで、選択**APIOnBehalfOf**、し、チェック ボックスをオン**ユーザー偽装**、アクセス許可とします。 選択**アクセス許可の追加**します。 
+
+24. 戻り、 **API のアクセス許可**ブレードで、**同意が付与される**セクションで、**の管理者の同意を与える\<テナント名 >** を選択します **。はい**確認プロンプトにします。
 
 2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 例: から
 
@@ -610,7 +612,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 1. PowerShell スクリプトで、クリップボードから文字列を貼り付け、ファイルを保存してトークン値を指定します。
 
-2. スクリプトに署名します。 スクリプトに署名 (セキュリティを強化) しない場合は、ラベル付けコマンドを実行するコンピューターで Windows PowerShell を構成する必要があります。 たとえば、**[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、`Set-ExecutionPolicy RemoteSigned` と入力します。 ただし、この構成を使用すると、署名されていないすべてのスクリプトは、このコンピューターに保存されている場合に実行できます (セキュリティは低下)。
+2. スクリプトに署名します。 スクリプトに署名 (セキュリティを強化) しない場合は、ラベル付けコマンドを実行するコンピューターで Windows PowerShell を構成する必要があります。 たとえば、 **[管理者として実行]** オプションを使用して Windows PowerShell セッションを実行し、`Set-ExecutionPolicy RemoteSigned` と入力します。 ただし、この構成を使用すると、署名されていないすべてのスクリプトは、このコンピューターに保存されている場合に実行できます (セキュリティは低下)。
 
     Windows PowerShell スクリプトへの署名の詳細については、PowerShell のドキュメント ライブラリの「 [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) 」を参照してください。
 
@@ -620,11 +622,11 @@ AzureInformationProtection モジュールをインストールするための�
 
 1. ファイルにラベルを付けて保護するサービス アカウントに**バッチ ジョブとしてログオン**権限が与えられていることを確認します。
 
-2. ファイルにラベルを付けて保護するコンピューターで、Task Scheduler を起動し、新しいタスクを作成します。 ファイルにラベルを付けて保護するサービス アカウントとして実行するようにこのタスクを構成し、**[アクション]** に次の値を構成します。
+2. ファイルにラベルを付けて保護するコンピューターで、Task Scheduler を起動し、新しいタスクを作成します。 ファイルにラベルを付けて保護するサービス アカウントとして実行するようにこのタスクを構成し、 **[アクション]** に次の値を構成します。
 
    - **アクション**: `Start a program`
    - **プログラム/スクリプト**: `Powershell.exe`
-   - **引数の追加 (省略可能)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **引数の追加 (省略可能)** : `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      引数の行については、例と異なるようであれば、独自のパスとファイル名を指定します。
 

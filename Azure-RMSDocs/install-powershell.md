@@ -4,19 +4,19 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 789c3178827e52c27759268b1340b53c3add1c39
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 0069503146d5847935fa1b86769a9968c2a5e2b1
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181720"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156808"
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>AADRM PowerShell モジュールのインストール
 
@@ -38,7 +38,7 @@ AADRM モジュールのバージョン 2.5.0.0 以降、Microsoft Online Servic
 
 > [!NOTE]
 > 
-> Azure Rights Management 管理ツールで AADRM モジュールのバージョンをインストールした場合、PowerShell ギャラリーから AADRM モジュールの最新バージョンをインストールする前に、**[プログラムと機能]** を使って **Windows Azure AD Rights Management の管理**をアンインストールしてください。
+> Azure Rights Management 管理ツールで AADRM モジュールのバージョンをインストールした場合、PowerShell ギャラリーから AADRM モジュールの最新バージョンをインストールする前に、 **[プログラムと機能]** を使って **Windows Azure AD Rights Management の管理**をアンインストールしてください。
 
 
 ## <a name="how-to-install-the-aadrm-module"></a>AADRM モジュールをインストールする方法
@@ -51,7 +51,7 @@ PowerShell ギャラリーを初めてお使いの場合は、「[PowerShell ギ
 
 PowerShell ギャラリーで AADRM モジュールの詳細を確認するには、[AADRM](https://www.powershellgallery.com/packages/AADRM) に関するページを参照してください。
 
-AADRM モジュールをインストールするには、**[管理者として実行]** オプションを使用して PowerShell セッションを開始し、次のように入力します。
+AADRM モジュールをインストールするには、 **[管理者として実行]** オプションを使用して PowerShell セッションを開始し、次のように入力します。
 
     Install-Module -Name AADRM
 
@@ -77,7 +77,7 @@ Windows PowerShell セッションで、インストールされているモジ�
 Get-Command -Module AADRM
 ```
 
-`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、**-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 以下に例を示します。
+`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、 **-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 以下に例を示します。
 
 ```
 Get-Help Connect-AadrmService -online

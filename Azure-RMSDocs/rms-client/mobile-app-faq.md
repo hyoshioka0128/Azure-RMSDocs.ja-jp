@@ -4,7 +4,7 @@ description: iOS 用および Android 用の Azure Information Protection アプ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/31/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fe86802c70276633439c1eaaa37160aa1dd0ff79
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 7694cf898651eee45e64d2319e1527f07e5fa5de
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185438"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156624"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
@@ -49,7 +49,7 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>ビューアー アプリを開始するにはどうすればよいですか。
 
-アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、**[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
+アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、 **[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
 
 ただし、待機しない場合は、次の手順に従って、表示対象の保護されたメールまたはファイルを自分自身に送信できます。[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md) 
 
@@ -73,7 +73,7 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>このアプリに関するフィードバックを提供する方法
 
-アプリで、**[設定]** > **[フィードバックの送信]** に移動します。
+アプリで、 **[設定]**  >  **[フィードバックの送信]** に移動します。
 
 
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>自分の質問が回答されていません。どうすればよいですか。
