@@ -4,16 +4,16 @@ description: 組織用の Microsoft Azure Information Protection ポリシーを
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 10fa599831a57291d6e89574b2d57a1db025b2ac
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 01c8dceff54738c8734fb1d2e09c403784341664
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65934821"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156533"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル: Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
