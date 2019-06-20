@@ -4,19 +4,19 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: d39b73a93f6abd434034acc9dca1858c7f57dde4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182655"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236828"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -47,7 +47,7 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 
 現時点では、Windows の 2 つのクライアントがあります。 
 
-- Office 365 セキュリティ/コンプライアンス センターからラベルとポリシー設定をダウンロードする **Azure Information Protection 統合ラベル付けクライアント**。 このクライアントは、一般に可用性ではようになりました。
+- **Azure Information Protection クライアントのラベル付けを統合する**管理センターでは、次のいずれかからラベルとポリシー設定をダウンロードします。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター, Microsoft 365 コンプライアンス センター。 このクライアントは現在一般提供であり、将来のリリースの他の機能をテストするためのプレビュー バージョンを使います。
 
 - Azure portal からラベルとポリシー設定をダウンロードする **Azure Information Protection クライアント**。 このクライアントは、クライアントの以前の一般公開バージョンに基づいています。
 
@@ -89,11 +89,11 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 1. ドキュメントにラベルを付けて保存します。 このアクションにより新しいメタデータ フィールドが作成され、これをフィールド コード用に使用できます。
 
-2. ドキュメント内で、ラベルの分類を追加したい位置にカーソルを合わせた後、**[挿入]** タブから **[テキスト]** > **[クイック パーツ]** > **[フィールド]** を選択します。
+2. ドキュメント内で、ラベルの分類を追加したい位置にカーソルを合わせた後、 **[挿入]** タブから **[テキスト]**  >  **[クイック パーツ]**  >  **[フィールド]** を選択します。
 
-3. **[フィールド]** ダイアログ ボックスの **[カテゴリ]** ドロップダウンから、**[ドキュメント情報]** を選択します。 次に、**[フィールド名]** ドロップダウンから **[DocProperty (文書プロパティ)]** を選択します。
+3. **[フィールド]** ダイアログ ボックスの **[カテゴリ]** ドロップダウンから、 **[ドキュメント情報]** を選択します。 次に、 **[フィールド名]** ドロップダウンから **[DocProperty (文書プロパティ)]** を選択します。
 
-4. **[プロパティ]** ドロップダウンから **[秘密度]** を選択し、**[OK]** を選択します。
+4. **[プロパティ]** ドロップダウンから **[秘密度]** を選択し、 **[OK]** を選択します。
 
 現在のラベルの分類がドキュメントに表示され、この値はドキュメントを開くかテンプレートを使用するたびに自動的に更新されます。 このため、ラベルが変更されると、このフィールド コードに対して表示される分類がドキュメント内で自動的に更新されます。
 

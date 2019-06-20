@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 7cffbff5a5d6942c7ed722e64ead4a68e5ae959f
-ms.sourcegitcommit: 9b7b2e3a0f7b5717b349af2c883ebdeebfbd53e2
+ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67161258"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236971"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -524,7 +524,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 12. 戻り、 **AIPOnBehalfOf - 公開 API**ブレードで、 **+ スコープの追加**します。
 
-13. **スコープを追加**ブレードで、次を指定し、**スコープ追加**:
+13. **スコープを追加**ブレードで、以下を指定しと例については、推奨される文字列を使用して、**スコープの追加**:
     - **スコープ名**: `user-impersonation`
     - **ユーザーが同意できるでしょうか。** :**管理者とユーザー**
     - **管理者の同意の表示名**: `Access Azure Information Protection scanner`
@@ -560,7 +560,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 23. **API を選択します**セクションで、選択**APIOnBehalfOf**、し、チェック ボックスをオン**ユーザー偽装**、アクセス許可とします。 選択**アクセス許可の追加**します。 
 
-24. 戻り、 **API のアクセス許可**ブレードで、**同意が付与される**セクションで、**の管理者の同意を与える\<テナント名 >** を選択します **。はい**確認プロンプトにします。
+24. 戻り、 **API のアクセス許可**ブレードで、**同意が付与される**セクションで、**の管理者の同意を与える\<*テナント名*>** 選択と**はい**確認プロンプトをします。
 
 2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 例: から
 
