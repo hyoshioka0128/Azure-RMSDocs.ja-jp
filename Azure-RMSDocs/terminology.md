@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection に関連する単語、フ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01b882c03fd907a4ce41f8163a59f8ec30afa396
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 4ccc320d04d0aee9baac2bfcf337d11b63b7df9e
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182468"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305726"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -30,13 +30,13 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 |アクティブ化|Azure Rights Management サービスを有効化して、組織がドキュメントや電子メールを保護できるようにします。 この操作により、Exchange Online と SharePoint Online での IRM 機能も有効になります。|
 |Active Directory Rights Management サービス|*AD RMS* という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
-AzureInformationProtection|Azure Information Protection クライアントおよび Azure Information Protection 統合ラベル付けクライアントの PowerShell モジュールの名前です。
+AzureInformationProtection|(クラシック) の Azure Information Protection クライアントと、Azure Information Protection の PowerShell モジュールの名前は、ラベル付けのクライアントを統合します。
 |Azure Information Protection|ラベルを使用してドキュメントと電子メールの分類と保護を行う、クラウドベースのサービスです。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
-Azure Information Protection クライアント|ユーザー、管理者、サービスがラベルと Azure Information Protection ポリシーの設定を使用できるようにする、クライアント側での Azure Information Protection です。|
+Azure Information Protection クライアント (クラシック)|省略*クラシック クライアント*します。<br /><br />ユーザー、管理者、およびサービスを Azure Information Protection の元のクライアント側では、ラベルと Azure Information Protection ポリシーの設定を使用します。 クライアントのラベル付けを統合、Azure Information Protection で置き換えられるようになりました。|
 |Azure Information Protection のラベル|この項目によってドキュメントや電子メールに分類値を常に適用し、それらを保護することもできます。 ラベルが適用されると、ラベル情報はアプリケーションおよびサービスのメタデータに格納され、読み取ったり、必要に応じて操作したりできます。|
 |Azure Information Protection ポリシー|Azure Information Protection のラベルとポリシーの設定を使用するクライアントとサービスに向けた、管理者が定義する構成です。|
 |Azure Information Protection スキャナー|Windows Server 上で実行するサービスです。これにより、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行うことができます。|
-|Azure Information Protection 統合ラベル付けクライアント|Windows コンピューターのクライアント。これにより、ユーザー、管理者、およびサービスは、Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センターから機密ラベルとポリシー設定を使用できます。|
+|Azure Information Protection 統合ラベル付けクライアント|省略*統合型のラベル付けクライアント*します。<br /><br />Windows コンピューターのクライアント。これにより、ユーザー、管理者、およびサービスは、Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センターから機密ラベルとポリシー設定を使用できます。 Azure Information Protection クライアント (クラシック) を置き換えます。|
 |Azure RMS|*Azure Rights Management* をご覧ください。|
 |Azure Information Protection ビューアー|保護されたファイルを表示するために、Windows コンピューターやモバイル デバイスで実行するアプリです。|
 |Azure Rights Management|*Azure RMS* という略称で呼ばれることもあります。<br /><br />Azure Information Protection で使用される Azure サービスであり、暗号化とポリシーを使用して、ドキュメント、ファイル、および電子メールを保護することができます。  *Azure Rights Management サービス*とも呼ばれます。 以前の名前には次のものがあります。<br /><br />- *Windows Azure Active Directory Rights Management*: Windows Azure AD Rights Management サービスという略称です。<br /><br />- *RMS Online*: 元の推奨名でエラー メッセージとログ ファイルのエントリが表示されることができます。|

@@ -4,17 +4,17 @@ description: Azure Information Protection とそのデータ保護サービス�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: 1e0933a88afc355dbcbab0dc667e28f49f10c0b9
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815621"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305769"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -46,7 +46,7 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>ラベル付けのクライアントを統合する Azure Information Protection クライアントと、Azure Information Protection の違いは何ですか。
 
-**Azure Information Protection クライアント**のため、Azure Information Protection が最初に発表されたファイルや電子メールの保護の分類と新しいサービスとして提供されています。 このクライアントは、Azure からラベルとポリシー設定をダウンロードし、Azure portal から Azure Information Protection ポリシーを構成します。 詳細については、次を参照してください。 [Azure Information Protection ポリシーの概要](overview-policy.md)します。 
+**Azure Information Protection クライアント (クラシック)** のため、Azure Information Protection が最初に発表されたファイルや電子メールの保護の分類と新しいサービスとして提供されています。 このクライアントは、Azure からラベルとポリシー設定をダウンロードし、Azure portal から Azure Information Protection ポリシーを構成します。 詳細については、次を参照してください。 [Azure Information Protection ポリシーの概要](overview-policy.md)します。 
 
 **Azure Information Protection クライアントのラベル付けを統合する**統一されたラベル付けをサポートするためより最近追加された機能は、その複数のアプリケーションとサービスのサポートを格納します。 このクライアントは、次の管理センターから機密ラベルとポリシー設定をダウンロードします。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 詳細については、次を参照してください。[機密ラベルの概要](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)します。
 
@@ -58,11 +58,11 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 - ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、 **[分類して保護する]** 、 **[ヘルプとフィードバック]** の順に選択します。
 
-- Office アプリケーション: から**保護**(Azure Information Protection クライアント)] ボタンまたは**感度**ボタン (Azure Information Protection 統合ラベル付けクライアント)、[**ヘルプとフィードバック**.
+- Office アプリケーション: から**保護**(従来のクライアント) ボタンまたは**感度**ボタン (統合のラベル付けクライアント) の選択**ヘルプとフィードバック**します。
 
 使用して、**バージョン**クライアントを識別するために表示される番号。
 
-- バージョン**1**、たとえば、 **1.48.204.0**、Azure Information Protection クライアントを識別します。
+- バージョン**1**、たとえば、 **1.48.204.0**、Azure Information Protection クライアント (クラシック) を識別します。
 
 - バージョン**2**、たとえば、 **2.0.778.0**、Azure Information Protection の統合されたラベル付けクライアントを識別します。
 

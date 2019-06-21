@@ -4,19 +4,19 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: db5b1b06f198db0795876e71749b1d220c7c2694
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236828"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305706"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -49,9 +49,9 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 
 - **Azure Information Protection クライアントのラベル付けを統合する**管理センターでは、次のいずれかからラベルとポリシー設定をダウンロードします。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター, Microsoft 365 コンプライアンス センター。 このクライアントは現在一般提供であり、将来のリリースの他の機能をテストするためのプレビュー バージョンを使います。
 
-- Azure portal からラベルとポリシー設定をダウンロードする **Azure Information Protection クライアント**。 このクライアントは、クライアントの以前の一般公開バージョンに基づいています。
+- **Azure Information Protection クライアント (クラシック)** Azure portal からラベルとポリシー設定をダウンロードします。 このクライアントは、クライアントの以前の一般公開バージョンに基づいています。
 
-Azure Information Protection 統合ラベル付けクライアントの現在の機能セットや機能がビジネス要件を満たしている場合は、これを使ってテストすることをお勧めします。 そうでない場合、または Azure portal でラベルを構成し、それをまだ[統合ラベル付けストアに移行](configure-policy-migrate-labels.md)していない場合は、Azure Information Protection クライアントを使います。
+その現在の機能セットと機能は、ビジネス要件を満たしている場合、統一されたラベル付けクライアントでテストすることをお勧めします。 そうでない場合、またはまだしていない Azure portal でラベルを構成している場合[統合のラベル付けのストアに移行](configure-policy-migrate-labels.md)、従来のクライアントを使用します。
 
 機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)」をご覧ください。
 
