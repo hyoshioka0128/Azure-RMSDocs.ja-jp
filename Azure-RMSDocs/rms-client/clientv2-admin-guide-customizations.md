@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection の統合されたラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 41b4d44babb9941820c95a7f842f119c444a4b06
-ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
+ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298272"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343741"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントのカスタム構成
 
@@ -132,7 +132,7 @@ PowerShell のラベルのポリシー名を指定する*Identity*ラベルの�
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[ユーザーの "問題の報告" を追加する](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[ドキュメント内の機密情報を検出する Azure Information Protection 分析を有効にする](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Azure Information Protection analytics へのドキュメントで検出された機密情報を送信を無効にします。](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 ラベルのポリシーに対して有効なラベル ポリシー設定を確認する PowerShell コマンドの例では、"Global"という名前。
 
@@ -212,13 +212,13 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
 選択したラベル ポリシーは、次の文字列を指定します。
 
-- キー:**PostponeMandatoryBeforeSaveProperty**
+- キー:**PostponeMandatoryBeforeSave**
 
 - 値: **False**
 
 PowerShell コマンドの例、ラベル、ポリシーが"Global"をという名前:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSaveProperty="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
 
@@ -444,28 +444,6 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
 - **[ブロック]** : 条件が満たされている間、ユーザーは電子メールを送信できなくなります。 メッセージには、ユーザーが問題に対処できるように、電子メールをブロックする理由が含まれます。 たとえば、特定の受信者を削除する、電子メールにラベルを付けるなどです。 
 
-結果としてアクションは、ローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Azure Information Protection]** に記録されます。
-
-- 警告メッセージ: 情報 ID 301
-
-- 理由メッセージ: 情報 ID 302
-
-- ブロック メッセージ: 情報 ID 303
-
-理由メッセージからのイベント エントリの例:
-
-```
-Client Version: 2.0.779.0
-Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Price list.msg
-Item Name: Price list
-Process Name: OUTLOOK
-Action: Justify
-User Justification: My manager approved sharing of this content
-Action Source: 
-User Response: Confirmed
-```
-次のセクションでには、各クライアントの詳細設定の構成手順が含まれます。
 
 > [!TIP]
 > このチュートリアルでは、統一されたラベル付けクライアントではなく、Azure Information Protection クライアントが、これらの設定で自分のアクションの詳細を参照できます[チュートリアル。Outlook を使用して情報の oversharing を制御する Azure Information Protection を構成する](../infoprotect-oversharing-tutorial.md)します。
@@ -595,19 +573,19 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>ドキュメント内の機密情報を検出する Azure Information Protection の分析を有効にする
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Azure Information Protection analytics へのドキュメントで検出された機密情報を送信を無効にします。
 
 この構成ポリシーを使用して[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)ことは、Office 365 セキュリティ/コンプライアンス センターの PowerShell を使用して構成する必要があります。 統一されたラベル付けクライアントのみのプレビュー バージョンでサポートされています。
 
-[Azure Information Protection analytics](../reports-aip.md)ことが検出し、そのコンテンツには、機密情報が含まれている場合、Azure Information Protection によって保存されたドキュメントがラベル付けのクライアントを unified を報告します。 既定では、この情報は Azure Information Protection 分析には送信されません。
+[Azure Information Protection analytics](../reports-aip.md)検出し、そのコンテンツには、機密情報が含まれている場合は、Azure Information Protection クライアントによって保存されたドキュメントを報告できます。 既定では、この情報を Azure Information Protection analytics にラベル付け、Azure Information Protection の統合によって送信されます。
 
-この情報は、統一されたラベル付けクライアントによって送信されるように、この動作を変更するには、選択したラベルのポリシーの次の文字列を入力します。
+統一されたラベル付けクライアントによってこの情報は送信しないように、この動作を変更するには、選択したラベルのポリシーの次の文字列を入力します。
 
 - キー:**RunAuditInformationTypeDiscovery**
 
-- 値: **True**
+- 値: **False**
 
-この高度なクライアントを設定しない場合は設定すると、監査結果、統一されたラベル付けクライアントから送信されますが、情報は、ユーザーがラベル付けされたコンテンツへのアクセス時のレポートに制限されます。
+この高度なクライアント設定を設定すると、監査結果、統一されたラベル付けクライアントから送信されますが、情報は、ユーザーがアクセスするときにレポートに制限はコンテンツにラベル付けします。
 
 以下に例を示します。
 
@@ -619,7 +597,7 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
 PowerShell コマンドの例、ラベル、ポリシーが"Global"をという名前:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>ユーザーのサブセットに対して送信情報の種類の一致を無効にする
 
@@ -629,7 +607,7 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
 - キー:**LogMatchedContent**
 
-- 値: **無効にします。**
+- 値: **False**
 
 PowerShell コマンドの例、ラベル、ポリシーが"Global"をという名前:
 
@@ -647,7 +625,7 @@ Secure Islands によってラベル付けされている Office ドキュメン
 
 - Office ドキュメントの場合: デスクトップ アプリでドキュメントが開かれ、新しい機密ラベル セットとして表示されます文書を保存するときに適用されます。
 
-- PowerShell の場合: [Set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel)と[セット AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification)新しい機密ラベルを適用することができます。 [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus)別の方法で設定されるまで、新しい機密ラベルを表示しません。
+- PowerShell の場合: [Set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel)と[セット AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification)新しい機密ラベルを適用することができます。
 
 - ファイル エクスプローラーの場合:Azure Information Protection ダイアログ ボックスで、新しい機密ラベルが表示されますが設定されていません。
 

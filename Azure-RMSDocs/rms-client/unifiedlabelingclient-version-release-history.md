@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: ea360e880e4b6bf0dc4c2f362a82ffa6d21a6c3b
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: d0122c41123bb47f0facf2bdf96e73ad10f8fe3d
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236809"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343656"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>統合、azure Information Protection クライアントのバージョンをラベル付けリリース履歴とサポート ポリシー
 
@@ -69,7 +69,7 @@ Azure Information Protection の統合されたラベル付けクライアント
     - [添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
     - [ユーザーの "問題の報告" を追加する](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [ドキュメント内の機密情報を検出する Azure Information Protection 分析を有効にする](clientv2-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - [Azure Information Protection analytics へのドキュメントで検出された機密情報を送信を無効にします。](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
     - [ユーザーのサブセットに対して送信情報の種類の一致を無効にする](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
     - [Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [ラベルが適用されるときに、カスタム プロパティを適用します。](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
@@ -93,6 +93,8 @@ Azure Information Protection の統合されたラベル付けクライアント
 **修正:**
 
 - 自動ラベル付け機能が構成されている場合、ラベルには、初めてドキュメントを保存するが適用されます。
+
+- 既定のサポート サブラベルのラベル付けします。
 
 ## <a name="version-207790"></a>バージョン 2.0.779.0
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 9f50eef590b684be95d410ed470bd0d0ee62a76a
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822217"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343711"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイドのラベル付けを統合します。
 
@@ -81,11 +81,11 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 ### <a name="installation-checks-and-troubleshooting"></a>インストールのチェックとトラブルシューティング
 
-クライアントがインストールされたら、**[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
+クライアントがインストールされたら、 **[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
 
 - Office アプリケーション: から**ホーム** タブで、**感度**グループで、**感度**、し、**ヘルプとフィードバック**。
 
-- ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
+- ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、 **[分類して保護する]** 、 **[ヘルプとフィードバック]** の順に選択します。 
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
@@ -113,15 +113,15 @@ Azure Information Protection の統合されたラベル付けクライアント
     
     通常、エンタープライズ ネットワークでは、グループ ポリシーをコンピューター上で更新するときに、これらの設定が自動的に再適用される場合、設定はグループ ポリシーを使用して構成されます。 ただし、スクリプトで一度構成されているか、手動で構成されている設定がある場合があります。 これらの場合、設定を再構成するには、追加の手順を行う必要があります。 たとえば、AD RMS から移行しても、内部ネットワーク上にまだサービス接続ポイントがあるため、Azure Information Protection へのリダイレクトの設定を構成するには、コンピューターでスクリプトが一度実行される場合があります。 クライアントをリセットした後、コンピューターでこのスクリプトをもう一度実行する必要があります。
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - 現在サインインしているユーザーは、サインアウトします。
 
@@ -145,7 +145,7 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 Azure Information Protection の統合されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法については、ユーザーと特定のシナリオを選択するには、どのラベルのガイダンスを与えることを確認します。 以下に例を示します。
 
-- オンライン ユーザーの手順:[Azure Information Protection ユーザー ガイド](client-user-guide.md)
+- オンライン ユーザーの手順:[Azure Information Protection ユーザー ガイドのラベル付けを統合します。](clientv2-user-guide.md)
 
 - カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
@@ -170,7 +170,7 @@ Azure Information Protection クライアントを Windows 7 からアップグ�
 
 クライアントは、以下のいずれかの方法でアンインストールできます。
 
-- [コントロール パネル] を使用してプログラムをアンインストールする: **[Microsoft Azure Information Protection]** > **[アンインストール]** をクリックします。
+- [コントロール パネル] を使用してプログラムをアンインストールする: **[Microsoft Azure Information Protection]**  >  **[アンインストール]** をクリックします。
 
 - 実行可能ファイルを再実行 (たとえば、 **AzInfoProtection_UL.exe**) との間、**セットアップの変更**] ページで [**アンインストール**します。 
 

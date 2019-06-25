@@ -4,19 +4,19 @@ description: Azure Information Protection 用の Azure Rights Management 保護�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/01/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 445f68f102764444551b13b49ea327a0b58046e4
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 8827350cc630f6e2af77878c726c023c5ba6674e
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767767"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343698"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "64767767"
 >
 > たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「 **Rights Management** 」や「 **IRM**」などの検索語句を入力します。 Windows 用 Azure Information Protection クライアントについては、「[Azure Information Protection ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
 
-組織に Azure Information Protection をデプロイしたら、次の情報を使用してアプリケーション、Azure Information Protection クライアント、サービスを構成します。 たとえば、Word 2016、Word 2013、Word 2010 などの Office アプリケーションです。 また、Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスも含まれます。 これらのアプリケーションとサービスで Azure Information Protection からデータ保護サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。
+組織に Azure Information Protection をデプロイしたら、次の情報を使用してアプリケーション、Azure Information Protection クライアント、サービスを構成します。 たとえばなどの Office アプリケーション Word 2019、Word 2016、および Word 2013。 また、Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスも含まれます。 これらのアプリケーションとサービスで Azure Information Protection からデータ保護サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。
 
 > [!IMPORTANT]
 > サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](requirements.md)」を参照してください。
@@ -40,7 +40,7 @@ ms.locfileid: "64767767"
 
 - [Office アプリケーション: クライアントの構成](configure-office-apps.md)
 
-    -   [Office 2016 と Office 2013](configure-office-apps.md#office2016-and-office-2013)
+    -   [Office 2019、Office 2016、および Office 2013](configure-office-apps.md#office2019-office-2016-and-office-2013)
 
     -   [Office 2010](configure-office-apps.md#office2010)
 
