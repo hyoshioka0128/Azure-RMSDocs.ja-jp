@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection の統合されたラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 15dc66f33918e52645e81964eca260f167986f3e
+ms.sourcegitcommit: 027c550fc7634ca28935ed3521e8eae186b03483
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343741"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389025"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントのカスタム構成
 
@@ -26,16 +26,16 @@ ms.locfileid: "67343741"
 
 Azure Information Protection の統合されたラベル付けクライアントを管理するときに、特定のシナリオまたはユーザーのサブセットは必要な高度な構成の次の情報を使用します。
 
-これらの設定では、Office 365 セキュリティ/コンプライアンス センターの PowerShell を使用しての詳細設定のレジストリを編集またはを指定する必要があります。
+これらの設定では、詳細設定のレジストリを編集またはを指定する必要があります。 高度な設定を使用[Office 365 セキュリティ/コンプライアンス センターの PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps)します。
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Office 365 セキュリティ/コンプライアンス センターの PowerShell を使用して、クライアントの高度な設定を構成する方法
 
-使用すると[Office 365 セキュリティ/コンプライアンス センターの PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps)ポリシーのラベルとラベルのカスタマイズをサポートする高度な設定を構成することができます。 以下に例を示します。
+Office 365 セキュリティ/コンプライアンス センターの PowerShell を使用する場合は、ポリシーのラベルとラベルのカスタマイズをサポートする高度な設定を構成できます。 以下に例を示します。
 
 - Office アプリで Information Protection バーを表示する設定は、***ポリシー設定の詳細にラベルを付ける***します。
 - ラベルの色を指定する設定は、***ラベルの設定を高度な***します。
 
-どちらの場合も、指定した、 *AdvancedSettings*ポリシーまたはラベルの id (名前または GUID) を持つパラメーターでキー/値ペアを指定し、[ハッシュ テーブル](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables)、次の構文を使用します。
+後のどちらの場合も[Office 365 セキュリティ/コンプライアンス センターの PowerShell に接続する](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)、指定、 *AdvancedSettings*ポリシーまたはラベルの id (名前または GUID) を持つパラメーターを指定キー/値のペアを[ハッシュ テーブル](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables)します。 使用する構文は以下のとおりです。
 
 ラベルのポリシー設定では、単一の文字列値を。
 
@@ -139,6 +139,9 @@ PowerShell のラベルのポリシー名を指定する*Identity*ラベルの�
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>ラベルの使用可能な高度な設定
+
+> [!NOTE]
+> ラベルの高度な設定を構成するラベルの設定のコマンドレットはテナントに徐々 にロールアウトします。 Office 365 セキュリティ/コンプライアンス センターの PowerShell に接続するときにこのコマンドレットをいない場合は、数週間後にもう一度お試しください。
 
 |設定|シナリオと手順|
 |----------------|---------------|
