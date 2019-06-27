@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 15dc66f33918e52645e81964eca260f167986f3e
-ms.sourcegitcommit: 027c550fc7634ca28935ed3521e8eae186b03483
+ms.openlocfilehash: 451a7df93629be3bdfb46004dfa3b4dfd94cced7
+ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389025"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398755"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントのカスタム構成
 
@@ -141,7 +141,7 @@ PowerShell のラベルのポリシー名を指定する*Identity*ラベルの�
 #### <a name="available-advanced-settings-for-labels"></a>ラベルの使用可能な高度な設定
 
 > [!NOTE]
-> ラベルの高度な設定を構成するラベルの設定のコマンドレットはテナントに徐々 にロールアウトします。 Office 365 セキュリティ/コンプライアンス センターの PowerShell に接続するときにこのコマンドレットをいない場合は、数週間後にもう一度お試しください。
+> ラベルの高度な設定を構成するラベルの設定コマンドレットは、まだテナントにロールアウトしではまだ使用可能なすべてのリージョン。 Office 365 セキュリティ/コンプライアンス センターの PowerShell に接続するときにこのコマンドレットをいない場合は、数週間後にもう一度お試しください。
 
 |設定|シナリオと手順|
 |----------------|---------------|
