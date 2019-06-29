@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection の統合されたラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/26/2019
+ms.date: 06/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 451a7df93629be3bdfb46004dfa3b4dfd94cced7
-ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
+ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
+ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398755"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67464881"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントのカスタム構成
 
@@ -139,9 +139,6 @@ PowerShell のラベルのポリシー名を指定する*Identity*ラベルの�
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>ラベルの使用可能な高度な設定
-
-> [!NOTE]
-> ラベルの高度な設定を構成するラベルの設定コマンドレットは、まだテナントにロールアウトしではまだ使用可能なすべてのリージョン。 Office 365 セキュリティ/コンプライアンス センターの PowerShell に接続するときにこのコマンドレットをいない場合は、数週間後にもう一度お試しください。
 
 |設定|シナリオと手順|
 |----------------|---------------|
