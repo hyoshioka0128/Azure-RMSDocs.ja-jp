@@ -4,17 +4,17 @@ description: Azure Information Protection サービスの技術的な概要で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/21/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
-ms.openlocfilehash: 0bb1096a903be953eb9702bc89b6a8c98d340946
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 6e980f8ee376348be3ac87ebddb9315d61ed4289
+ms.sourcegitcommit: bccaf342b0f7e2f915ea29afe7bc6e46f09ae589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65935031"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314163"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -26,7 +26,7 @@ Azure Information Protection (AIP とも呼ばれます) は、ラベルを適�
 
 ![Azure Information Protection による推奨分類の例](./media/info-protect-recommend-calloutsv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット
+###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント (クラシック)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) からのスクリーンショット
 
 コンテンツを分類し (オプションで保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
 
@@ -38,7 +38,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](./media/example-email-footerv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット
+###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント (クラシック)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) からのスクリーンショット
 
 ## <a name="how-data-is-protected"></a>データ保護のしくみ
 
