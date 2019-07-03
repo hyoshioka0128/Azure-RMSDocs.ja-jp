@@ -4,17 +4,17 @@ description: Rights Management 保護を使用するようにラベルを構成�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/22/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305597"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520434"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -41,7 +41,7 @@ Rights Management によって保護されたドキュメントや電子メー�
 Azure Rights Management での保護のしくみについて詳しくは、「[Azure Rights Management とは](what-is-azure-rms.md)」をご覧ください。
 
 > [!IMPORTANT]
-> この保護を適用するようにラベルを構成するには、組織に対して Azure Rights Management サービスをアクティブにする必要があります。 詳細については、「[Rights Management をアクティブにする](activate-service.md)」を参照してください。
+> この保護を適用するようにラベルを構成するには、組織に対して Azure Rights Management サービスをアクティブにする必要があります。 詳細については、「[Activating the protection service from Azure Information Protection (Azure Information Protection の保護サービスのアクティブ化)](activate-service.md)」をご覧ください。
 
 ラベルで保護を適用する場合、保護された文書は SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する次の機能はサポートされていません。共同編集、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。 
 
@@ -132,7 +132,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
     
      ベスト プラクティスとしては、ユーザーではなくグループの利用が推奨されます。 この戦略では構成が単純になり、後でラベル構成を更新し、コンテンツを再保護する必要性が少なくなります。 ただし、グループを変更した場合、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](prepare.md#group-membership-caching-by-azure-information-protection)ことに注意してください。 
     
-     ユーザーとグループの最初のセットを指定したら、ユーザーとグループに与えるアクセス許可を選択します。 選択できるアクセス許可の詳細については、「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md)」を参照してください。 ただし、この保護をサポートするアプリケーションでアクセス許可の実装方法が異なる場合があります。 その文書を参照し、ユーザーが使用するアプリケーションで独自にテストし、動作を確認してからユーザーのテンプレートをデプロイします。
+    ユーザーとグループの最初のセットを指定したら、ユーザーとグループに与えるアクセス許可を選択します。 選択できるアクセス許可について詳しくは、「[Configuring usage rights for Azure Information Protection (Azure Information Protection の使用権限の構成)](configure-usage-rights.md)」をご覧ください。 ただし、この保護をサポートするアプリケーションでアクセス許可の実装方法が異なる場合があります。 その文書を参照し、ユーザーが使用するアプリケーションで独自にテストし、動作を確認してからユーザーのテンプレートをデプロイします。
     
      必要に応じて、ユーザーとグループの 2 つ目のセットと使用権限を追加できます。 すべてのユーザーとグループとそれぞれのアクセス許可が指定されるまで繰り返します。
 
