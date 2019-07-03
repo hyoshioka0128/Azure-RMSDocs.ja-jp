@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87edfae6959f5ce6c037379e7564449d53405aae
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 5729c52283f5f7537898efc730b1992be531130d
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708929"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535122"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2:ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
@@ -122,7 +122,7 @@ Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済�
 
 権限が制限されたキーのコピーを作成したとき (手順 4.1) およびキーを暗号化したとき (手順 4.3) に、KeyTransferRemote.exe ユーティティから **[Result: SUCCESS]** が返されていることを確認してから、Azure Key Vault へのキーの転送を行ってください。
 
-Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、**https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Information Protection からの Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
+Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Information Protection からの Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
 使用して、[セット AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットは、key vault にアクセスする Azure Rights Management サービス プリンシパルを認証します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
 
@@ -136,7 +136,7 @@ Azure Key Vault にキーがアップロードされるとき、表示された�
 
 1. Azure Information Protection 管理者: インターネットに接続されたワークステーションでの PowerShell セッションで、TpdUtil ツールの実行後に、SLC キーが削除されている新しい構成データ ファイル (.xml) をコピーしてください。
 
-2. [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) コマンドレットを使用して、各 .xml ファイルをアップロードします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。
+2. 使用して、各 .xml ファイルをアップロード、[インポート AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)コマンドレット。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。
 
     このコマンドレットを実行するには、各構成データ ファイルに対して以前指定したパスワードと前の手順で指定したキーの URL が必要です。
 
@@ -149,20 +149,20 @@ Azure Key Vault にキーがアップロードされるとき、表示された�
    指定したパスワードを入力して構成データ ファイルをエクスポートします。 次に、以下のコマンドを実行して、この操作を行うことを確認します。
 
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
     このインポート処理の一部として、SLC キーがインポートされ、自動でアーカイブ済みに設定されます。
 
-3. 各ファイルをアップロードしたら [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行して、AD RMS クラスターで現在アクティブな SLC キーと一致するインポート済みのキーを指定します。
+3. 各ファイルがアップロードされると、実行[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)インポート済みのキーが AD RMS クラスターで現在アクティブな SLC キーと一致するを指定します。
 
-4. [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスから切断します。
+4. 使用して、[切断 AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Azure Rights Management サービスから切断するコマンドレット。
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
-Azure Key Vault で Azure Information Protection テナント キーが使用しているキーを後で確認する必要がある場合は、Azure RMS コマンドレット [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) を使用します。
+後で、Azure Information Protection を使用して、Azure Key Vault のテナント キーを使用しているキーを確認する必要がある場合、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS コマンドレット。
 
 
 以上で「[手順 5. Azure Rights Management サービスをアクティブにする](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)」に進む準備ができました。

@@ -4,19 +4,19 @@ description: Azure Rights Management サービスを使用する場合、テン�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 44925ad0a2c384978d3f91c1d40a5b6b11d5a2a6
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5939869dd421899a4b929b262e8a18790debaf5c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181499"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535074"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -47,12 +47,12 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 ### <a name="to-change-the-automatic-schedule"></a>自動スケジュールを変更するには
 
 1.  レジストリ エディターを使用して、次のレジストリ値のいずれかを作成し設定します。
-
+    
     - 日数 (1 日以降) では、更新頻度を設定します。**TemplateUpdateFrequency** という名前の新しいレジストリ値を作成し、データの整数値を定義します。これにより、ダウンロードされたテンプレートの変更をダウンロードする周期 (日数) が指定されます。 この新しいレジストリ値を作成する際にレジストリ パスを検索するには、次の情報を使用します。
 
         **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **次のように入力します。** REG_DWORD
+        **種類:** REG_DWORD
 
         **値:** TemplateUpdateFrequency
 
@@ -60,7 +60,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
         **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **次のように入力します。** REG_DWORD
+        **種類:** REG_DWORD
 
         **値:** TemplateUpdateFrequencyInSeconds
 
@@ -74,14 +74,14 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
    **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
-   **次のように入力します。** REG_SZ
+   **種類:** REG_SZ
 
    **値:** LastUpdatedTime
 
    > [!TIP]
    > レジストリ パスの <*MicrosoftRMS_FQDN*> は、Microsoft RMS サービスの FQDN を指します。 この値を確認するには:
    > 
-   > Azure RMS 用の [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
+   > 実行、 [Get AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Azure Information Protection のコマンドレット。 既に AIPService PowerShell モジュールをインストールしていない場合は、次を参照してください。 [AIPService PowerShell モジュールをインストールする](install-powershell.md)します。
    > 
    > 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
    > 
@@ -94,7 +94,6 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 2. **%localappdata%\Microsoft\MSIPC\Templates** フォルダーとその中に含まれているすべてのファイルを削除します。
 
 3. Office アプリケーションとエクスプローラーのインスタンスを再起動します。
-
 
 ## <a name="see-also"></a>関連項目
 [Azure Information Protection ポリシーでテンプレートを構成して管理する](configure-policy-templates.md)

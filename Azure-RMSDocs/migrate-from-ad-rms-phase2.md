@@ -4,19 +4,19 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dbbea622800561cb0a466f6dda90e9910f1c7db4
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 5d822b36fd7dd38713b8bd3d42aee72838b24195
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781861"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522116"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -106,11 +106,11 @@ PowerShell セッションを開き、次のコマンドを実行します。
 
 1. Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
     
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Azure Rights Management サービスをアクティブにします。
     
-        Enable-Aadrm
+        Enable-AipService
 
 **Azure Information Protection テナントが既にアクティブになっている場合はどうすればよいですか。** Azure Rights Management サービスが組織で既にアクティブ化されていて、移行後に使用するカスタム テンプレートを作成済みである場合は、そのテンプレートをエクスポートしてからインポートする必要があります。 これについては次の手順で説明します。 
 
@@ -134,11 +134,11 @@ AD RMS からインポートしたテンプレートの外観と動作は、Azur
 
 Azure Rights Management サービスをアクティブ化する前でも後でも、移行前にカスタム テンプレートを作成した場合は、**公開済み**に設定してあっても、移行後にユーザーはテンプレートを使用できません。 ユーザーが使用できるようにするには、最初に次のようにする必要があります。 
 
-1. [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate) を実行して、そのようなテンプレートを識別し、テンプレート ID を記録しておきます。 
+1. これらのテンプレートを特定しを実行して、テンプレート ID をメモしてをおきます、 [Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)します。 
 
-2. Azure RMS PowerShell コマンドレット [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) を使用して、テンプレートをエクスポートします。
+2. Azure RMS PowerShell コマンドレットを使用して、テンプレートのエクスポート[エクスポート AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)します。
 
-3. Azure RMS PowerShell コマンドレット [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate) を使用して、テンプレートをインポートします。
+3. Azure RMS PowerShell コマンドレットを使用して、テンプレートをインポート[インポート AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)します。
 
 その後は、移行後に作成した他のテンプレートと同様に、これらのテンプレートを発行したりアーカイブしたりできます。
 
@@ -150,7 +150,7 @@ Azure Portal でテンプレートとラベルを管理する場合、このグ�
 
 AD RMS テンプレートに ANYONE グループが含まれるかどうかわからない場合は、次のサンプルの Windows PowerShell スクリプトを使用してこれらのテンプレートを識別できます。 AD RMS での Windows PowerShell の使用に関する詳細については、「[Using Windows PowerShell to Administer AD RMS ](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx)」 (Windows PowerShell を使用した AD RMS の管理) を参照してください。
 
-Azure Portal でテンプレートをラベルに変換すると、外部ユーザーをそれらのテンプレートに容易に追加できます。 次に、**[アクセス許可の追加]** ブレードで、**[詳細を入力]** を選択して、対象のユーザーのメール アドレスを手動で指定します。 
+Azure Portal でテンプレートをラベルに変換すると、外部ユーザーをそれらのテンプレートに容易に追加できます。 次に、 **[アクセス許可の追加]** ブレードで、 **[詳細を入力]** を選択して、対象のユーザーのメール アドレスを手動で指定します。 
 
 この構成の詳細については、「[Rights Management による保護を適用するようにラベルを構成する方法](./configure-policy-protection.md)」を参照してください。
 

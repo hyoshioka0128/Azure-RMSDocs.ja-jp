@@ -4,19 +4,19 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149271"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522073"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -96,17 +96,17 @@ killall cfprefsd
 
 1. PowerShell セッションで Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. 次のコマンドを実行し、「**Y**」と入力して確認します。
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     
     このコマンドを実行すると、Azure Rights Management 保護サービスのライセンスの強制が解除され、すべてのコンピューターでドキュメントおよび電子メールを保護できるようになります。
 
 3. オンボーディング制御が設定されていないことを確認します。
 
-        Get-AadrmOnboardingControlPolicy
+        Get-AipServiceOnboardingControlPolicy
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
@@ -126,11 +126,11 @@ Azure Information Protection テナント キーの再入力を行うと ("キ�
 
 Azure Information Protection テナント キーを更新するには:
 
-- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレット [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行し、テナント用に自動的に作成されたキーの識別子を指定します。 指定する値を識別するには、[Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレットを実行[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)し、テナントが自動的に作成したキーのキー識別子を指定します。 使用して指定する値を識別する、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレット。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
     
-        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **テナント キーを自分で管理している場合 (BYOK)** : Azure Key Vault で、Azure Information Protection テナントに対してキー作成プロセスを繰り返し、次に [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) コマンドレットを再度実行して、この新しいキーの URI を指定します。 
+- **テナント キーを自分で管理している場合 (BYOK)** : Azure Key Vault で、Azure Information Protection テナント キーの作成プロセスを繰り返し、実行、[使用 AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットを再度この新しいキーの URI を指定します。 
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 

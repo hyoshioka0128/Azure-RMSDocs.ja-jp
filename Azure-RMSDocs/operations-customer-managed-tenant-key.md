@@ -4,19 +4,19 @@ description: Azure Information Protection のテナント キーを自分で管�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82061c4a146a049d7cecf6da6ab16a2e85c0ddd3
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: c1b163a1e149b77e8974635dff39d9a754a962f2
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156762"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521944"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理。テナント キーのライフサイクル操作
 
@@ -46,9 +46,9 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 1. 新しいキーが Azure Information Protection で既に使用しているキーとは異なるキー コンテナーにある場合にのみ: 使用して、key vault を使用する Azure Information Protection の承認、[セット AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレット。
 
-2. 使用する予定のキーを Azure Information Protection がまだ認識していない場合、[Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) コマンドレットを実行します。
+2. 使用して、実行する場合、Azure Information Protection がまだ認識キー[使用 AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレット。
 
-3. [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) コマンドレットによって、テナント キー オブジェクトを構成します。
+3. 実行を使用して、テナント キー オブジェクトを構成する[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレット。
 
 これらの段階の詳細については、次を参照してください。
 

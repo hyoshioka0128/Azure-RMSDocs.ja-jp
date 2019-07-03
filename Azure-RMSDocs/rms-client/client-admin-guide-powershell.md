@@ -4,18 +4,18 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 6afeef61671eaaf6fffdb7a0a5bb6ef93b1cf8ce
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236971"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535140"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -94,7 +94,7 @@ AzureInformationProtection モジュールのインストールに関する前�
 
 この前提条件は、ラベルを使ってデータ保護を適用する場合、または Azure Rights Management サービスに直接接続してデータ保護を適用する場合に適用されます。
 
-Azure Information Protection テナントがアクティブ化されていない場合は、「[Rights Management をアクティブにする](../activate-service.md)」の手順をご覧ください。
+Azure Information Protection テナントがアクティブでない場合の手順を参照してください。 [Azure Information Protection からの保護サービスをアクティブ化する](../activate-service.md)します。
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>前提条件 2: 自分のアカウントを使って他のユーザーのファイルから保護を削除するには
 
@@ -119,12 +119,12 @@ Azure Information Protection テナントがアクティブ化されていない
 値を自動で取得し、Set-RMSServerAuthentication を実行するには:
 
 ````
-# Make sure that you have the AADRM and MSOnline modules installed
+# Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AadrmService
-$bposTenantID=(Get-AadrmConfiguration).BPOSId
-Disconnect-AadrmService
+Connect-AipService
+$bposTenantID=(Get-AipServiceConfiguration).BPOSId
+Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -139,37 +139,37 @@ Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -
 
 ##### <a name="to-get-the-bpostenantid"></a>BposTenantId を取得するには
 
-Azure RMS Windows PowerShell モジュールから Get-AadrmConfiguration コマンドレットを実行します。
+Azure RMS Windows PowerShell モジュールから Get AipServiceConfiguration コマンドレットを実行します。
 
-1. このモジュールがコンピューターにまだインストールされていない場合は、「[AADRM PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
+1. このモジュールがコンピューターに既にインストールされていない場合は、次を参照してください。 [AIPService PowerShell モジュールをインストールする](../install-powershell.md)します。
 
 2. **[管理者として実行]** オプションを使って、Windows PowerShell を起動します。
 
-3. `Connect-AadrmService` コマンドレットを使って、Azure Rights Management サービスに接続します。
-
-        Connect-AadrmService
-
+3. `Connect-AipService` コマンドレットを使って、Azure Rights Management サービスに接続します。
+    
+        Connect-AipService
+    
     プロンプトが表示されたら、Azure Information Protection テナント管理者資格情報を入力します。 通常、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使用します。
-
-4. `Get-AadrmConfiguration` を実行して、BPOSId の値をコピーします。
-
-    Get-AadrmConfiguration の出力例
-
+    
+4. `Get-AipServiceConfiguration` を実行して、BPOSId の値をコピーします。
+    
+    Get AipServiceConfiguration から出力の例:
+    
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-
+        
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-
+        
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-
+        
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. サービスから切断します。
-
-        Disconnect-AadrmService
+    
+        Disconnect-AipServiceService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
 
@@ -233,9 +233,9 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 前のコマンドのように、単一のコマンドで値を指定できます。これは、非対話的に実行するスクリプトの場合と同じです。 ただし、テストが目的の場合は、単に Set-RMSServerAuthentication と入力し、プロンプトに 1 つずつ値を入力してもかまいません。 コマンドが完了すると、クライアントは "サーバー モード" で動作するようになります。これは、スクリプトや Windows Server ファイル分類インフラストラクチャなどの非対話型の使用に適しています。
 
-このサービス プリンシパル アカウントをスーパー ユーザーにすることを検討します。このサービス プリンシパル アカウントでいつでも確実に他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 標準のユーザー アカウントをスーパー ユーザーとして構成するときと同じように、Azure RMS コマンドレットの [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser) を使いますが、**ServicePrincipalId** パラメーターには AppPrincipalId の値を指定します。
+このサービス プリンシパル アカウントをスーパー ユーザーにすることを検討します。このサービス プリンシパル アカウントでいつでも確実に他のユーザーのファイルの保護を解除できるように、スーパー ユーザーとして構成できます。 同じ方法でスーパー ユーザーでは、標準ユーザー アカウントを構成する場合に使用する Azure RMS コマンドレット[追加 AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)が、指定、 **ServicePrincipalId**パラメーターと、AppPrincipalId の値。
 
-スーパー ユーザーについて詳しくは、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](../configure-super-users.md)」をご覧ください。
+スーパー ユーザーの詳細については、次を参照してください。 [Azure Information Protection および探索サービスまたはデータの回復用のスーパー ユーザーを構成する](../configure-super-users.md)します。
 
 > [!NOTE]
 > 自分のアカウントを使って Azure Rights Management サービスへの認証を行う場合は、ファイルを保護または保護解除する前、またはテンプレートを取得する前に、Set-RMSServerAuthentication を実行する必要はありません。
@@ -244,7 +244,7 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 サービス プリンシパル アカウントを使用して、Azure 北米リージョン以外でファイルを保護し、テンプレートをダウンロードする場合は、レジストリを次のように編集する必要があります。 
 
-1. Get-AadrmConfiguration コマンドレットを再び実行し、**CertificationExtranetDistributionPointUrl** と **LicensingExtranetDistributionPointUrl** の値を書き留めておきます。
+1. Get AipServiceConfiguration コマンドレットをもう一度実行しの値をメモしておきます**CertificationExtranetDistributionPointUrl**と**LicensingExtranetDistributionPointUrl**します。
 
 2. AzureInformationProtection コマンドレットを実行する各コンピューターで、レジストリ エディターを開きます。
 

@@ -4,19 +4,19 @@ description: Azure Information Protection からコネクタと組織の Azure R
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 507f8ea8a613715b14fbedd820000765afa48e15
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156791"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521975"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
@@ -173,7 +173,7 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 
-使用状況ログの詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
+使用状況ログの詳細については、次を参照してください。[ログと Azure Information Protection からの保護の使用量の分析](log-analyze-usage.md)します。
 
 診断のためにより詳細なログを記録する必要がある場合は、Windows Sysinternals の [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) を使用できます。 IIS の既定サイトの web.config ファイルを変更することにより、RMS コネクタのトレースを有効にします。
 

@@ -4,19 +4,19 @@ description: 組織の Azure Information Protection を準備、実装、管理�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 311e8991d4527c48f2d76deba8a93264f4a08dad
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 6b0918c4f5bd77bec2b0e155eae55882a55d1b54
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156552"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520572"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -93,15 +93,15 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 1. マイクロソフトでテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-2. インターネットにアクセスできる 1 つ以上のコンピューターで AADRM 向けの PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
+2. インターネットにアクセスできる 1 つ以上のコンピューターで AIPService の PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](./install-powershell.md)します。
 
 3. 現在、AD RMS を使用している場合: キー、テンプレート、および Url をクラウドに移行する移行を実行します。 詳細については、「[AD RMS から Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
-4. 文書や電子メールの保護を開始できるように、保護サービスがアクティブになっていることを確認します。 段階的に展開する必要がある場合、ユーザーによる保護の適用を制限するオンボーディング コントロールを構成します。 詳細については、「[Rights Management をアクティブにする](./activate-service.md)」を参照してください。
+4. 文書や電子メールの保護を開始できるように、保護サービスがアクティブになっていることを確認します。 段階的に展開する必要がある場合、ユーザーによる保護の適用を制限するオンボーディング コントロールを構成します。 詳細については、次を参照してください。 [Azure Information Protection からの保護サービスをアクティブ化する](./activate-service.md)します。
 
 必要に応じて、次の構成を考慮してください。
 
-- 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
+- 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、次を参照してください。[ログと Azure Information Protection からの保護の使用量の分析](./log-analyze-usage.md)します。
 
 ### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>手順 5:データ保護のために Azure Information Protection ポリシー、アプリケーション、サービスを構成する
 
@@ -119,7 +119,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 3. データ回復のスーパー ユーザー機能を構成する
     
-    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./configure-super-users.md)」を参照してください。
+    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、次を参照してください。 [Azure Information Protection および探索サービスまたはデータの回復用のスーパー ユーザーを構成する](./configure-super-users.md)します。
 
 4. 既存ファイルを一括で分類および保護する
     
@@ -138,13 +138,13 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 - クライアントのファイルと使用状況のログ記録、 [Azure Information Protection クライアント](./rms-client/client-admin-guide-files-and-logging.md)
 
-- [Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)
+- [ログ記録と Azure Information Protection からの保護の使用状況の分析](./log-analyze-usage.md)
 
 ### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>手順 7:必要に応じてテナント アカウントの保護サービスを管理する
 
 保護サービスの使用を開始するときに、PowerShell がスクリプトまたは管理変更の自動化に役立つことがあります。 一部の高度な構成には、PowerShell も必要になる場合があります。 
 
-詳細については、「[Windows PowerShell を使用した Azure Rights Management サービスの管理](./administer-powershell.md)」を参照してください。
+詳細については、次を参照してください。 [PowerShell を使用して Azure Information Protection からの保護を管理する](./administer-powershell.md)します。
 
 
 ## <a name="deployment-roadmap-for-data-protection-only"></a>データ保護のみのデプロイ ロードマップ
@@ -164,17 +164,17 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 2. マイクロソフトでテナント キーを管理するか (既定値)、テナント キーを自分で生成して管理するか (Bring Your Own Key または BYOK と呼ばれます) を決定します。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-3. インターネットにアクセスできる 1 つ以上のコンピューターで AADRM 向けの PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
+3. インターネットにアクセスできる 1 つ以上のコンピューターで AIPService の PowerShell モジュールをインストールします。 この手順は、今実行しても後で実行しても構いません。 詳細については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](./install-powershell.md)します。
 
 4. 現在、AD RMS を使用している場合: キー、テンプレート、および Url をクラウドに移行する移行を実行します。 詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
-5. 文書や電子メールの保護を開始できるように、保護サービスがアクティブになっていることを確認します。 段階的に展開する必要がある場合、ユーザーによる保護の適用を制限するオンボーディング コントロールを構成します。 詳細については、「[Rights Management をアクティブにする](./activate-service.md)」を参照してください。
+5. 文書や電子メールの保護を開始できるように、保護サービスがアクティブになっていることを確認します。 段階的に展開する必要がある場合、ユーザーによる保護の適用を制限するオンボーディング コントロールを構成します。 詳細については、次を参照してください。 [Azure Information Protection からの保護サービスをアクティブ化する](./activate-service.md)します。
 
 必要に応じて、次の構成を考慮してください。
 
 - 既定のテンプレートが組織にとって十分でない場合は、保護設定のためのカスタム テンプレート。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
-- 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
+- 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、次を参照してください。[ログと Azure Information Protection からの保護の使用量の分析](./log-analyze-usage.md)します。
 
 ### <a name="step-3-install-the-azure-information-protection-client-and-configure-applications-and-services-for-rights-management"></a>手順 3:Azure Information Protection クライアントをインストールし、アプリケーションと Rights management サービスを構成します。
 
@@ -188,7 +188,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 3. データ回復のスーパー ユーザー機能を構成する
     
-    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](./configure-super-users.md)」を参照してください。
+    Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、次を参照してください。 [Azure Information Protection および探索サービスまたはデータの回復用のスーパー ユーザーを構成する](./configure-super-users.md)します。
 
 4. 既存ファイルを一括で保護する 
     
@@ -202,10 +202,10 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>手順 4:データ保護ソリューションを使用および監視する
 
-これでデータを保護し、会社で保護サービスを使用する方法を記録する準備が整いました。 このデプロイ段階の詳細については、「[Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ](./help-users.md)」と「[Azure Rights Management サービスの使用状況をログに記録して分析する](./log-analyze-usage.md)」を参照してください。
+これでデータを保護し、会社で保護サービスを使用する方法を記録する準備が整いました。 詳細についてはこの展開フェーズをサポートするために、次を参照してください[ユーザーが Azure Rights Management サービスを使用してファイルを保護する際に役立つ](./help-users.md)と[ログ記録とから Azure Information protection の使用量の分析。保護](./log-analyze-usage.md)します。
 
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>手順 5:必要に応じてテナント アカウントの保護サービスを管理する
 
 保護サービスの使用を開始するときに、PowerShell がスクリプトまたは管理変更の自動化に役立つことがあります。 一部の高度な構成には、PowerShell も必要になる場合があります。 
 
-詳細については、「[Windows PowerShell を使用した Azure Rights Management サービスの管理](./administer-powershell.md)」を参照してください。
+詳細については、次を参照してください。 [PowerShell を使用して Azure Information Protection からの保護を管理する](./administer-powershell.md)します。

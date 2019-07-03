@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 03/13/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 62d217f7f48d0120ed630b184131b726c21d8363
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: feb0636c025d13dd3a290eb34ecb49eec4ebe284
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179356"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520757"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -35,24 +35,24 @@ ms.locfileid: "60179356"
 
 ### <a name="azure-ad-tenant-configuration"></a>Azure AD テナントの構成
 
-Azure Information Protection 用に Azure AD 環境を構成するには、「[Rights Management をアクティブにする](https://docs.microsoft.com/information-protection/deploy-use/activate-service)」のガイダンスに従ってください。
+Azure Information Protection の Azure AD 環境を構成するのガイダンスに従って[Azure Information Protection からの保護サービスをアクティブ化する](https://docs.microsoft.com/information-protection/deploy-use/activate-service)します。
 
-サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 「[Windows PowerShell を使用した Azure Rights Management サービスの管理](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell)」に従って、これを行ってください。
+サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 次の[PowerShell を使用して Azure Information Protection からの保護を管理する](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell)これを実現します。
 
 ### <a name="getting-your-tenant-id"></a>テナント ID を取得する
 
 - 管理者として PowerShell を実行します。
-- RMS モジュールをインポートします: `Import-Module AADRM`
-- 割り当てられたユーザーの資格情報でサービスに接続します: `Connect-AadrmService –Verbose`
-- RMS が有効になっていることを確認します: `Enable-AADRM`
-- `Get-AadrmConfiguration` を実行してテナント ID を取得します。
+- RMS モジュールをインポートします: `Import-Module AIPService`
+- 割り当てられたユーザーの資格情報でサービスに接続します: `Connect-AipService –Verbose`
+- RMS が有効になっていることを確認します: `enable-aipservice`
+- `Get-AipServiceConfiguration` を実行してテナント ID を取得します。
 
 >BPOS ID (テナント ID) 値を記録します。 後の手順でこの値が必要になります。
 
 *出力例*
 ![コマンドレットの出力](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-- サービスから切断します: `Disconnect-AadrmService`
+- サービスから切断します: `Disconnect-AipServiceService`
 
 ### <a name="create-a-service-principal"></a>サービス プリンシパルの作成
 サービス プリンシパルを作成するには、次の手順に従います。

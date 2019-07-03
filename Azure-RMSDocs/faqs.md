@@ -1,20 +1,20 @@
 ---
 title: Azure Information Protection に関してよく寄せられる質問
-description: Azure Information Protection とそのデータ保護サービス、Azure Rights Management (Azure RMS) に関してよく寄せられる質問の一部
+description: よく寄せられる質問については、Azure Information Protection とその保護サービス、Azure Rights Management (Azure RMS)。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 1e0933a88afc355dbcbab0dc667e28f49f10c0b9
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: abc19ff1ebc21c143f773d09c0585aa9058e4f09
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305769"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520588"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -110,32 +110,32 @@ Windows 用の Azure Information Protection クライアントがインストー
 
 Office 365 テナントまたは Azure AD テナントのグローバル管理者は、Azure Information Protection のすべての管理タスクを実行できます。 ただし、管理アクセス許可を他のユーザーに割り当てる場合は、次のオプションがあります。
 
-- **Azure Information Protection 管理者**:この Azure Active Directory 管理者ロールには、管理者が他のサービスではなく、Azure Information Protection を構成することができます。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、[Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)と [AADRM モジュール](administer-powershell.md)からのすべての PowerShell コマンドレットを実行できます。 ただし、このロールでは、ユーザーのドキュメント追跡と取り消しをサポートしていません。
+- **Azure Information Protection 管理者**:この Azure Active Directory 管理者ロールには、管理者が他のサービスではなく、Azure Information Protection を構成することができます。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者はのすべての PowerShell コマンドレットを実行できます、 [Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)との間、 [AIPService モジュール](administer-powershell.md)します。 ただし、このロールでは、ユーザーのドキュメント追跡と取り消しをサポートしていません。
     
     > [!NOTE]
     > ご自身の[テナントを統一ラベル付けストアに移行](configure-policy-migrate-labels.md)した後、このロールは、Azure portal ではサポートされなくなります。
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。
 
-- **コンプライアンス管理者**または**コンプライアンス データ管理者**:これらの Azure Active Directory 管理者の役割を含む Azure Information Protection を構成する管理者を使用するアクティブ化し、Azure Rights Management 保護サービスを非アクティブ化、保護設定とラベルを構成および構成しますAzure Information Protection ポリシー。 さらに、これらのロールのいずれかを持つ管理者はのすべての PowerShell コマンドレットを実行できます、 [Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)との間、 [AADRM モジュール](administer-powershell.md)します。 ただし、これらのロールでは、ユーザーのドキュメント追跡と取り消しをサポートされていません。
+- **コンプライアンス管理者**または**コンプライアンス データ管理者**:これらの Azure Active Directory 管理者の役割を含む Azure Information Protection を構成する管理者を使用するアクティブ化し、Azure Rights Management 保護サービスを非アクティブ化、保護設定とラベルを構成および構成しますAzure Information Protection ポリシー。 さらに、これらのロールのいずれかを持つ管理者はのすべての PowerShell コマンドレットを実行できます、 [Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)との間、 [AIPService モジュール](administer-powershell.md)します。 ただし、これらのロールでは、ユーザーのドキュメント追跡と取り消しをサポートされていません。
     
     これらの管理者ロールのいずれかにユーザーを割り当てるを参照してください。 [Azure Active Directory での管理者ロールにユーザーを割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)します。 これらのロールを持つユーザーを他のアクセス許可のあるを参照してください、[利用可能な役割](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)セクション、Azure Active Directory のドキュメントから。
 
 - **セキュリティ閲覧者**:[Azure Information Protection 分析](reports-aip.md)の場合のみ。 この Azure Active Directory の管理者ロールを持っている管理者は、ご自身のラベルの使用方法を確認したり、ラベル付きのドキュメントやメールに対するユーザー アクセスや、各分類への変更を監視したり、保護する必要がある機密情報を含んでいるドキュメントを識別したりできます。 この機能では Azure Log Analytics が使われるため、サポートする [RBAC ロール](reports-aip.md#permissions-required-for-azure-information-protection-analytics)も持っている必要があります。
 
-- **セキュリティ管理者**:この Azure Active Directory 管理者ロールには、管理者は他の Azure サービスの一部の側面を構成するだけでなく、Azure portal で Azure Information Protection を構成することができます。 この役割を持つ管理者は、のいずれかを実行できない、 [AADRM モジュールからの PowerShell コマンドレット](administer-powershell.md)、またはドキュメント追跡および取り消すユーザー。
+- **セキュリティ管理者**:この Azure Active Directory 管理者ロールには、管理者は他の Azure サービスの一部の側面を構成するだけでなく、Azure portal で Azure Information Protection を構成することができます。 この役割を持つ管理者は、のいずれかを実行できない、 [AIPService モジュールからの PowerShell コマンドレット](administer-powershell.md)、またはドキュメント追跡および取り消すユーザー。
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。 この役割のユーザーが持つその他のアクセス許可を確認するには、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」セクションを参照してください。
 
-- Azure Rights Management の**グローバル管理者**および**コネクタ管理者**: これらの Azure Rights Management の管理者ロールの場合、グローバル管理者は、ユーザーをその他のクラウド サービスのグローバル管理者にすることなく、[AADRM モジュールからすべての PowerShell コマンドレット](administer-powershell.md)を実行するアクセス許可をユーザーに付与し、コネクタ管理者は Rights Management (RMS) コネクタのみを実行するアクセス許可を付与します。 どちらも、これらの管理者ロール管理コンソールへのアクセス許可を付与またはユーザーに対してドキュメント追跡と取り消しをサポートします。
-
-    これらのいずれかの管理者ロールを割り当てるには、AADRM PowerShell コマンドレット ([Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator)) を使用します。
+- Azure Rights Management の**グローバル管理者**および**コネクタ管理者**: 最初は、これらの Azure Rights Management 管理者ロールのすべてを実行するユーザーのアクセス許可を付与[AIPService モジュールからの PowerShell コマンドレット](administer-powershell.md)が他のクラウド サービスと、2 つ目のグローバル管理者を作成しません。ロールには、Rights Management (RMS) コネクタのみを実行するアクセス許可が付与されます。 どちらもこれらの管理者ロールの管理コンソールまたはドキュメント追跡と取り消しのユーザーへのアクセス許可を付与します。
+    
+    これらの管理ロールのいずれかを割り当てる、AIPService PowerShell コマンドレットを使用して、[追加 AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator)します。
 
 注意事項:
 
 - [オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 たとえば、コンテンツを保護する機能を "IT department" グループに制限するようにオンボーディング コントロールが構成されている場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。 
 
-- 管理者ロールが割り当てられているユーザーは、Azure Information Protection によって保護されたドキュメントやメールから保護を自動的に削除することはできません。 スーパー ユーザーを割り当てられたユーザーだけが、スーパー ユーザー機能が有効になっているときにのみ、この操作を行うことができます。 ただし、Azure Information Protection への管理アクセス許可を割り当てたすべてのユーザーが、各自のアカウントなど、ユーザーにスーパー ユーザーを割り当てることができます。 また、スーパー ユーザー機能を有効にすることもできます。 これらのアクションは、管理者ログに記録されます。 詳細については、「[Azure Rights Management および探索サービスまたはデータの回復用のスーパー ユーザーの構成](configure-super-users.md)」のセキュリティのベスト プラクティスに関するセクションを参照してください。 
+- 管理者ロールが割り当てられているユーザーは、Azure Information Protection によって保護されたドキュメントやメールから保護を自動的に削除することはできません。 スーパー ユーザーを割り当てられたユーザーだけが、スーパー ユーザー機能が有効になっているときにのみ、この操作を行うことができます。 ただし、Azure Information Protection への管理アクセス許可を割り当てたすべてのユーザーが、各自のアカウントなど、ユーザーにスーパー ユーザーを割り当てることができます。 また、スーパー ユーザー機能を有効にすることもできます。 これらのアクションは、管理者ログに記録されます。 詳細については、セキュリティのベスト プラクティスに関するセクションを参照してください。 [Azure Information Protection および探索サービスまたはデータの回復用のスーパー ユーザーを構成する](configure-super-users.md)します。 
 
 - 統合のラベル付けのストアに、Azure Information Protection ラベルを移行する場合は、ラベルの移行に関するドキュメントから、次のセクションを参照してくださいに。「[管理者ロールに関する重要な情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)」セクションをお読みください。
 

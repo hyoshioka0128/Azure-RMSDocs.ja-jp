@@ -4,19 +4,19 @@ description: 構成し、Azure portal からの保護テンプレート、rights
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/12/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7088f50534b30b188580f395e02a65e56df16cf1
-ms.sourcegitcommit: b5b825ec7f08dbdcd70c0016ed3a69e7dd887fef
+ms.openlocfilehash: 90a4ffb31648ca938b0ee266318eea26fe645b5a
+ms.sourcegitcommit: 356d781a32642acdc573fbc9d2f284a34aa414fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840151"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527244"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
@@ -39,7 +39,7 @@ ms.locfileid: "66840151"
 
 ## <a name="default-templates"></a>既定のテンプレート
 
-Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、既定のテンプレートが 2 つテナントに自動的に作成されます。 これらのテンプレートは、組織内の許可されたユーザーにアクセスを制限します。 これらのテンプレートは、作成されると、ドキュメント「[Azure Rights Management の使用権限を構成する](configure-usage-rights.md#rights-included-in-the-default-templates)」に一覧表示されているアクセス許可を使用します。
+Azure Rights Management サービスが含まれる Azure Information Protection サブスクリプションまたは Office 365 サブスクリプションを入手すると、既定のテンプレートが 2 つテナントに自動的に作成されます。 これらのテンプレートは、組織内の許可されたユーザーにアクセスを制限します。 記載されているアクセス許可があるこれらのテンプレートを作成するとき、 [Azure Information Protection の使用権限を構成する](configure-usage-rights.md#rights-included-in-the-default-templates)ドキュメント。
 
 さらに、テンプレートは、7 日間オフライン アクセスを許可し、有効期限がないように構成されます。
 
@@ -68,7 +68,7 @@ Azure Rights Management サービスが含まれる Azure Information Protection
 Azure Portal を使っている場合、これらの既定テンプレートの名前を変更 (および再構成) できます。
 
 >[!NOTE]
->**[Azure Information Protection - ラベル]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure Portal では、クラウド キーの保護設定を含むラベル構成の一部として表示されます。 テナントに設定されているテンプレートはいつでも確認できます。[AADRM PowerShell モジュール](administer-powershell.md)から [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) を実行してください。
+>**[Azure Information Protection - ラベル]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure Portal では、クラウド キーの保護設定を含むラベル構成の一部として表示されます。 実行して、テナントが、どのようなテンプレートをいつでも確認できます、 [Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)から、 [AIPService PowerShell モジュール](administer-powershell.md)します。
 >
 >「[テンプレートをラベルに変更するには](#to-convert-templates-to-labels)」セクションに説明があるとおり、テンプレートは手動で変換できます。変換後、必要に応じて名前を変更します。 あるいは、既定の Azure Information Protection ポリシーが最近作成され、そのとき、テナントの Azure Rights Management サービスが有効化された場合、自動的に変換されます。
 
@@ -78,7 +78,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 テンプレートを編集したり、ラベルに変換したりする前に、次の変更内容と考慮事項に注意してください。 実装変更のため、Azure クラシック ポータルで以前、テンプレートを管理していた場合、次のリストが特に重要になります。
 
-- テンプレートを編集または変換して Azure Information Protection ポリシーを保存すると、元の[使用権限](configure-usage-rights.md)に次の変更が行われます。 必要な場合は、Azure Portal を使用して、個々の使用権限を追加または削除できます。 または、[New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) コマンドレットと [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットを使って、PowerShell を使用します。
+- テンプレートを編集または変換して Azure Information Protection ポリシーを保存すると、元の[使用権限](configure-usage-rights.md)に次の変更が行われます。 必要な場合は、Azure Portal を使用して、個々の使用権限を追加または削除できます。 または、PowerShell を使用して、[新規 AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)と[セット AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレット。
     
     - **マクロの許可** (共通名) が自動的に追加されます。 この使用権限は Office アプリの Azure Information Protection バーに必要です。
 
@@ -86,11 +86,11 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 - Azure ポータルでは、テンプレートをコピーまたは削除することはできません。 テンプレートがラベルに変換されると、テンプレートの使用を停止するようにラベルを構成できます。 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** オプションに **[構成されていません]** を選択します。 あるいは、ラベルを削除できます。 ただし、いずれのシナリオでもテンプレートは削除されず、アーカイブされた状態で残ります。
     
-    これで PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) コマンドレットを利用し、テンプレートを削除できます。 ラベルに変換されていないテンプレートにもこの PowerShell コマンドレットを使用できます。 ただし、それ以前に保護されていたコンテンツを意図したとおり確実に開いたり使用したりできるようにするため、通常は、テンプレートを削除しないことをお勧めします。 ベスト プラクティスとしては、運用環境で文書やメールの保護に使用されなかったことが確かな場合にのみ、テンプレートを削除してください。 念のために、[Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) コマンドレットを利用し、テンプレートをバックアップとしてエクスポートしておくことが推奨されます。 
+    これで、PowerShell を使用して、テンプレートを削除する可能性があります[削除 AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)コマンドレット。 ラベルに変換されていないテンプレートにもこの PowerShell コマンドレットを使用できます。 ただし、それ以前に保護されていたコンテンツを意図したとおり確実に開いたり使用したりできるようにするため、通常は、テンプレートを削除しないことをお勧めします。 ベスト プラクティスとしては、運用環境で文書やメールの保護に使用されなかったことが確かな場合にのみ、テンプレートを削除してください。 念のため、最初を使用して、バックアップとテンプレートのエクスポートを検討する可能性があります、[エクスポート AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)コマンドレット。 
 
 - 現時点では、部門別テンプレートを編集して保存すると、スコープの構成が削除されます。 Azure Information Protection ポリシーのスコープ テンプレートに相当するのが、[スコープ ポリシー](configure-policy-scope.md)です。 テンプレートをラベルに変換する場合は、既存のスコープを選択できます。
     
-    また、Azure Portal では部門別テンプレートのアプリケーションの互換性を設定できません。 必要な場合は、[Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) コマンドレットと *EnableInLegacyApps* パラメーターを使用して、このアプリケーションの互換性設定を設定することができます。
+    また、Azure Portal では部門別テンプレートのアプリケーションの互換性を設定できません。 かどうか、必要に応じて設定できますこのアプリケーションの互換性設定を使用して、[セット AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットと*EnableInLegacyApps*パラメーター。
 
 - テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。 また、このテンプレートは **[保護テンプレート]** セクションに表示されなくなりました。 
 

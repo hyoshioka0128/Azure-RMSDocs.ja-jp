@@ -1,98 +1,95 @@
 ---
-title: Azure RMS サービスの使用状況をログに記録して分析する - AIP
-description: Azure Rights Management (Azure RMS) で使用状況のログを使用する方法の詳細および手順です。
+title: ログインし、Azure Information Protection からの保護の使用状況の分析
+description: 情報および手順については Azure Information Protection からの保護サービスの使用状況ログを使用する方法。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e17e13eeb86b161444e222cde658905177dd285
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 708e538956b24838fa3dd70e02f5745e89a120c0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181618"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520600"
 ---
-# <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Azure Rights Management サービスの使用状況をログに記録して分析する
+# <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>ログ記録と Azure Information Protection からの保護の使用状況の分析
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-この情報は、Azure Information Protection からの Azure Rights Management サービスの使用状況ログの使用方法を理解するのに役立ちます。 このサービスは、組織のドキュメントや電子メールのデータ保護機能を提供し、このサービスに対するすべての要求を記録できます。 これらの要求には、ユーザーがドキュメントや電子メールを保護していて、このコンテンツも利用している場合に、このサービスのために管理者が実行した操作や、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが実行した操作が含まれます。 
+この情報を使用して、使用状況ログを Azure Information Protection からの保護サービス (Azure Rights Management) を使用する方法を理解するのに役立ちます。 この保護サービスが、組織のドキュメントのデータ保護を提供し、電子メールやそれがすべての要求を記録できます。 これらの要求には、ユーザーがドキュメントや電子メールを保護していて、このコンテンツも利用している場合に、このサービスのために管理者が実行した操作や、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが実行した操作が含まれます。 
 
-これらの Azure Rights Management サービス ログを使用すれば、次のビジネス シナリオをサポートできます。
+これらの保護の使用状況ログは、次のビジネス シナリオをサポートするために、使用できます。
 
 -   **ビジネス情報を分析する**
 
-    Azure Rights Management サービスで生成されるログを、選択したリポジトリ (データベース、オンライン分析処理 (OLAP) システム、MapReduce システムなど) にインポートすることによって、情報を分析してレポートを生成できます。 たとえば、保護されているデータにだれがアクセスしているかを識別できます。 保護されているどのデータにアクセスしているか、どのデバイスから、およびどの場所からアクセスしているかを特定できます。 また、保護されているコンテンツを正常に読むことができたかどうかを調べることができます。 さらに、保護されている重要なドキュメントを読んだユーザーを識別することもできます。
+    Protection サービスによって生成されたログは、選択したリポジトリにインポートすることができます (オンライン分析処理 (OLAP) システムでは、データベースなど、mapreduce システム) の情報を分析し、レポートを作成します。 たとえば、保護されているデータにだれがアクセスしているかを識別できます。 保護されているどのデータにアクセスしているか、どのデバイスから、およびどの場所からアクセスしているかを特定できます。 また、保護されているコンテンツを正常に読むことができたかどうかを調べることができます。 さらに、保護されている重要なドキュメントを読んだユーザーを識別することもできます。
 
 -   **不正使用を監視する**
 
-    Azure Rights Management のログ情報はほぼリアルタイムに提供されるため、会社での Rights Management サービスの使用状況を継続的に監視できます。 ログの 99.9% は、操作を開始してから 15 分以内にサービスで使用できます。
+    保護の使用状況に関するログ情報は、保護サービスの会社の使用を継続的に監視できるように、ほぼリアルタイムで利用可能です。 ログの 99.9% は、操作を開始してから 15 分以内にサービスで使用できます。
 
     たとえば、保護されているデータを標準勤務時間外に読むユーザーの数が突然増加した場合に警告を受け取りたい場合があります。この場合、悪意のあるユーザーが競合他社に売り渡すために情報を収集している可能性があります。 また、明らかに同じユーザーが短時間に 2 つの異なる IP アドレスからデータにアクセスした場合、これはユーザー アカウントが侵害されたことを示している可能性があります。
 
 -   **フォレンジック分析の実行**
 
-    情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 このログを使用すれば、このような質問に答えることができます。保護されているコンテンツを使用するユーザーが Azure Rights Management サービスで保護されているドキュメントおよび画像を開くには、常に Rights Management ライセンスを取得する必要があるためです。これは、ファイルが電子メールで転送されたり、USB ドライブなどのストレージ デバイスにコピーされたりした場合も同様です。 このため、Azure Rights Management サービスを使用してデータを保護していれば、これらのログをフォレンジック分析のための最終的な情報源として活用できます。
+    情報漏えいが発生した場合、特定のドキュメントにだれが最近アクセスしたか、および疑わしいユーザーが最近どの情報にアクセスしたかをたずねられる可能性があります。 保護されたコンテンツを使用するユーザーは Rights Management ライセンスをこれらのファイルがによって移動された場合でも、Azure Information Protection によって保護されているドキュメントおよび画像を開くを常に取得する必要がありますので、このログ記録を使用するときにこれらの種類の質問に回答することができます。電子メールまたは USB ドライブまたはその他の記憶装置にコピーします。 これを使えるこれらのログの情報源としてフォレンジック分析の Azure Information Protection を使用してデータを保護することを意味します。
 
 この使用状況ログだけでなく、次のログ オプションもあります。
 
 |ログ オプション|説明|
 |----------------|---------------|
-|管理ログ|Azure Rights Management サービスの管理タスクを記録します。 たとえば、このサービスが非アクティブ化されていて、スーパー ユーザー機能が有効で、ユーザーがサービスに対する管理者権限を委任されている場合などです。 <br /><br />詳細については、PowerShell コマンドレット「[Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog)」の記事をご覧ください。|
+|管理ログ|保護サービス用の管理タスクを記録します。 たとえば、このサービスが非アクティブ化されていて、スーパー ユーザー機能が有効で、ユーザーがサービスに対する管理者権限を委任されている場合などです。 <br /><br />詳細については、PowerShell コマンドレットを参照してください。 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)します。|
 |ドキュメント追跡|ユーザーが Azure Information Protection クライアントで追跡したドキュメントを追跡したり取り消したりできるようにします。 ユーザーに代わって、グローバル管理者がこれらのドキュメントを追跡することもできます。 <br /><br />詳細については、「[Azure Information Protection のドキュメント追跡の構成と使用](./rms-client/client-admin-guide-document-tracking.md)」をご覧ください。|
-|クライアント イベント ログ|Azure Information Protection クライアントの使用状況アクティビティ。ローカルの Windows **[アプリケーションとサービス]** イベント ログ、**[Azure Information Protection]** に記録されます。 <br /><br />詳細については、「[Azure Information Protection クライアントの使用状況ログ](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)」をご覧ください。|
-|クライアント ログ ファイル|Azure Information Protection クライアントのトラブルシューティング ログは、**%localappdata%\Microsoft\MSIP** に格納されています。 <br /><br />これらのファイルは Microsoft サポート用です。|
+|クライアント イベント ログ|Azure Information Protection クライアントの使用状況アクティビティ。ローカルの Windows **[アプリケーションとサービス]** イベント ログ、 **[Azure Information Protection]** に記録されます。 <br /><br />詳細については、「[Azure Information Protection クライアントの使用状況ログ](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)」をご覧ください。|
+|クライアント ログ ファイル|Azure Information Protection クライアントのトラブルシューティング ログは、 **%localappdata%\Microsoft\MSIP** に格納されています。 <br /><br />これらのファイルは Microsoft サポート用です。|
 
 さらに、Azure portal でレポートを作成するために、Azure Information Protection クライアントの使用状況ログと、Azure Information Protection スキャナーからの情報が収集され、集計されます。 詳細については、[Azure Information Protection のレポート作成](reports-aip.md)に関するページを参照してください。
 
-次のセクションでは、Azure Rights Management サービスの使用状況ログの詳細について説明します。 
+保護サービスの使用状況ログの詳細については、次のセクションを使用します。 
 
-## <a name="how-to-enable-azure-rightsmanagement-usage-logging"></a>Azure Rights Management の使用状況ログを有効にする方法
-2016 年 2 月以降、Azure Rights Management の使用状況ログは、すべてのお客様を対象に既定で有効になります。 2016 年 2 月より前に Azure Rights Management サービスをアクティブ化したお客様と 2016 年 2 月以降にこのサービスをアクティブ化するお客様がこれに該当します。 
+## <a name="how-to-enable-logging-for-protection-usage"></a>保護の使用状況のログ記録を有効にする方法
+保護の使用状況ログは、すべてのお客様に対して、既定で有効です。 
 
-> [!NOTE]
-> ログ ストレージやログ機能に対する追加費用は発生しません。
-> 
-> 2016 年 2 月より前に Azure Rights Management の使用状況ログを使用するには、Azure のサブスクリプションのほか、Azure 上に十分なストレージが必要でしたが、これらが不要になります。
+ログ ストレージやログ機能に対する追加費用は発生しません。
 
-## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Azure Rights Management の使用状況ログにアクセスして使用する方法
-Azure Rights Management サービスは、ログを Azure ストレージ アカウントに一連の BLOB として書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-azure-rights-management-usage-logs)」セクションで説明します。
+## <a name="how-to-access-and-use-your-protection-usage-logs"></a>アクセスして、保護の使用状況ログを使用する方法
+Azure Information Protection は、テナントに対して自動的に作成した Azure ストレージ アカウントに一連の blob としてのログを書き込みます。 各 BLOB には、W3C 拡張ログ形式の 1 つ以上のログ レコードが含まれています。 BLOB の名前は、作成された順序を表す数字です。 ログの内容と作成の詳細については、このドキュメントの後半の「[Azure Rights Management の使用状況ログを解釈する方法](#how-to-interpret-your-usage-logs)」セクションで説明します。
 
-Azure Rights Management 操作の実行後、ログがストレージ アカウントに書き込まれるまで若干時間がかかります。 ほとんどのログは 15 分以内に表示されます。 ログはローカル ストレージ (ローカル フォルダー、データベース、MapReduce リポジトリなど) にダウンロードすることをお勧めします。
+保護操作後、ストレージ アカウントに表示されるログの時間がかかることができます。 ほとんどのログは 15 分以内に表示されます。 ログはローカル ストレージ (ローカル フォルダー、データベース、MapReduce リポジトリなど) にダウンロードすることをお勧めします。
 
-使用状況ログをダウンロードするには、Windows PowerShell の Azure Rights Management 管理モジュールを使用します。 インストール手順については、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。 この Windows PowerShell モジュールを既にダウンロードしている場合は、次のコマンドを実行してバージョン番号が **2.4.0.0** 以上であることを確認します。`(Get-Module aadrm -ListAvailable).Version` 
+使用状況ログをダウンロードするには、Azure Information Protection の AIPService PowerShell モジュールを使用します。 インストール手順については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](install-powershell.md)します。
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>PowerShell を使用して使用状況ログをダウンロードするには
 
-1.  **[管理者として実行]** オプションを選択して Windows PowerShell を起動し、[Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスに接続します。
+1.  Windows PowerShell を起動、**管理者として実行**オプションを選択し、使用、 [Connect AipService](/powershell/module/aipservice/connect-aipservice)コマンドレットを Azure Information Protection に接続します。
 
     ```
-    Connect-AadrmService
+    Connect-AipService
     ```
     
 2.  次のコマンドを実行して、特定の日付のログをダウンロードします。 
 
     ```
-    Get-AadrmUserLog -Path <location> -fordate <date>
+    Get-AipServiceUserLog -Path <location> -fordate <date>
     ```
 
     たとえば、E: ドライブに Logs という名前のフォルダーを作成した場合は、次のようになります。
     
-    * 特定の日付 (たとえば 2016/2/1) のログをダウンロードするには、次のコマンドを実行します。`Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
+    * 特定の日付 (たとえば 2016/2/1) のログをダウンロードするには、次のコマンドを実行します。`Get-AipServiceUserLog -Path E:\Logs -fordate 2/1/2016`
     
-    * 特定の日付範囲 (たとえば 2016/2/1 から 2016/2/14 まで) のログをダウンロードするには、次のコマンドを実行します。`Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
+    * 特定の日付範囲 (たとえば 2016/2/1 から 2016/2/14 まで) のログをダウンロードするには、次のコマンドを実行します。`Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
-この例のように日付のみを指定すると、時刻はローカル時刻の 00 時 00 分 00 秒と見なされて UTC に変換されます。 -fromdate パラメーターまたは -todate パラメーター (たとえば、-fordate "2/1/2016 15:00:00") を使用して時刻を指定すると、日付と時刻は UTC に変換されます。 Get-AadrmUserLog コマンドは、その UTC の時間帯のログを取得します。
+この例のように日付のみを指定すると、時刻はローカル時刻の 00 時 00 分 00 秒と見なされて UTC に変換されます。 -fromdate パラメーターまたは -todate パラメーター (たとえば、-fordate "2/1/2016 15:00:00") を使用して時刻を指定すると、日付と時刻は UTC に変換されます。 Get AipServiceUserLog コマンドし、ログを取得しますその UTC 時間です。
 
 ダウンロード対象に 1 日未満を指定することはできません。
 
-既定では、このコマンドレットは、ログをダウンロードするときに 3 つのスレッドを使用します。 十分なネットワーク帯域幅があり、ログをダウンロードする際に必要な時間を短縮したい場合は、- NumberOfThreads パラメーターを使用します。このパラメーターは、1 ～ 32 の値をサポートします。 たとえば、次のコマンドを実行すると、ログをダウンロードするためのスレッドが 10 個生成されます。`Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
+既定では、このコマンドレットは、ログをダウンロードするときに 3 つのスレッドを使用します。 十分なネットワーク帯域幅があり、ログをダウンロードする際に必要な時間を短縮したい場合は、- NumberOfThreads パラメーターを使用します。このパラメーターは、1 ～ 32 の値をサポートします。 たとえば、次のコマンドを実行すると、ログをダウンロードするためのスレッドが 10 個生成されます。`Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
 
 
 > [!TIP]
@@ -100,28 +97,13 @@ Azure Rights Management 操作の実行後、ログがストレージ アカウ�
 >
 > たとえば、次のコマンドを実行すると、すべての情報を .log ファイル形式にインポートできます。`logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Azure Rights Management 使用状況ログを 2016 年 2 月 22 日のログの変更の前に手動で有効にした場合
-
-
-ログの変更前に使用状況ログを使用していた場合は、構成済みの Azure ストレージ アカウントの使用状況ログがあります。 このログの変更の一環として、Microsoft がこれらのログをストレージ アカウントから新しい Azure Rights Management 管理ストレージ アカウントにコピーすることはありません。 前に生成されたログのライフサイクルは、ユーザーの側で管理していただく必要があります。ユーザーは、[Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) コマンドレットを使用して古いログをダウンロードできます。 以下に例を示します。
-
-- すべてのログを E:\logs フォルダーにダウンロードするには: `Get-AadrmUsageLog -Path "E:\Logs"`
-    
-- 特定の範囲の BLOB をダウンロードするには: `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
-
-次のいずれかに該当する場合は、Get-AadrmUsageLog コマンドレットを使用してログをダウンロードする必要はありません。
-
--  2016 年 2 月 22 日以前に Azure Rights Management サービスをアクティブ化したが、使用状況ログの機能は有効にしていない。
-
-- 2016 年 2 月 22 日より後に Azure Rights Management サービスをアクティブ化した。
-
-## <a name="how-to-interpret-your-azure-rights-management-usage-logs"></a>Azure Rights Management の使用状況ログを解釈する方法
-Azure Rights Management の使用状況ログを解釈するには、次の情報を活用してください。
+## <a name="how-to-interpret-your-usage-logs"></a>使用状況ログを解釈する方法
+保護の使用状況ログを解釈するのに役立つ、次の情報を使用します。
 
 ### <a name="the-log-sequence"></a>ログ シーケンス
-Azure Rights Management サービスは、ログを一連の BLOB として書き込みます。 
+Azure Information Protection は、ログを一連の blob として書き込みます。
 
-ログ内の各エントリには、UTC のタイムスタンプがあります。 Azure Rights Management サービスは複数のデータ センターにまたがる複数のサーバー上で実行されるため、タイムスタンプで並べ替えられたログであっても、それらが順序どおりではないように見える場合があります。 しかし、その差はわずかであり、通常 1 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
+ログ内の各エントリには、UTC のタイムスタンプがあります。 保護サービスは、複数のデータ センター間で複数のサーバーで実行される、ので場合があります、ログは、タイムスタンプで並べ替えの場合でも、順序どおりに見えるかもしれません。 しかし、その差はわずかであり、通常 1 分以内です。 ほとんどの場合、ログの分析でこれが問題になることはありません。
 
 ### <a name="the-blob-format"></a>BLOB の形式
 各 BLOB は、W3C 拡張ログ形式です。 BLOB は、次の 2 行で始まります。
@@ -130,7 +112,7 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 
 **#Version:1.1**
 
-最初の行は、これらが Azure Rights Management ログであることを示します。 2 番目の行は、BLOB の残りの部分がバージョン 1.1 の仕様に準拠していることを示します。 これらのログを解析するアプリケーションでは、上の 2 つの行を検証してから BLOB の残りを解析することをお勧めします。
+最初の行では、これらは Azure Information Protection からの保護ログであることを示します。 2 番目の行は、BLOB の残りの部分がバージョン 1.1 の仕様に準拠していることを示します。 これらのログを解析するアプリケーションでは、上の 2 つの行を検証してから BLOB の残りを解析することをお勧めします。
 
 3 番目の行には、タブで区切られたフィールド名が列挙されます。
 
@@ -162,25 +144,25 @@ Azure Rights Management サービスは、ログを一連の BLOB として書�
 #### <a name="exceptions-for-the-user-id-field"></a>user-id フィールドの例外
 通常、user-id フィールドは要求を行ったユーザーを示しますが、値が実際のユーザーにマップされない例外が 2 つあります。
 
--   値 **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**。
+-   値 **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'** 。
 
-    これは、Office 365 サービス (Exchange Online や SharePoint Online など) が要求を行っていることを示します。 この文字列で、*&lt;YourTenantID&gt;* はテナントの GUID、*&lt;region&gt;* はテナントが登録されている地域です。 たとえば、 **na** は北アメリカを表し、 **eu** はヨーロッパを表し、 **ap** はアジアを表します。
+    これは、Office 365 サービス (Exchange Online や SharePoint Online など) が要求を行っていることを示します。 この文字列で、 *&lt;YourTenantID&gt;* はテナントの GUID、 *&lt;region&gt;* はテナントが登録されている地域です。 たとえば、 **na** は北アメリカを表し、 **eu** はヨーロッパを表し、 **ap** はアジアを表します。
 
 -   RMS コネクタを使用している場合
 
     このコネクタからの要求は、RMS コネクタのインストール時に自動的に生成されたサービス プリンシパル名 **Aadrm_S-1-7-0** でログに記録されます。
 
 #### <a name="typical-request-types"></a>一般的な要求の種類
-Azure Rights Management サービスには多くの要求の種類がありますが、次の表に最も一般的に使用される要求の種類をいくつか示します。
+保護サービス用の多くの要求種類がありますが、次の表は一般的に使用される要求の種類の一部を示します。
 
 |要求の種類|説明|
 |----------------|---------------|
-|AcquireLicense|Windows ベースのコンピューターのクライアントが RMS で保護されているコンテンツのライセンスを要求しています。|
-|AcquirePreLicense|ユーザーに代わってクライアントが、RMS で保護されているコンテンツのライセンスを要求しています。|
+|AcquireLicense|Windows ベースのコンピューターからのクライアントは、保護されたコンテンツのライセンスを要求しています。|
+|AcquirePreLicense|ユーザーに代わって、クライアントが保護されたコンテンツのライセンス要求されています。|
 |AcquireTemplates|テンプレート ID に基づいてテンプレートを取得するための呼び出しが行われました。|
 |AcquireTemplateInformation|サービスからテンプレートの ID を取得するための呼び出しが行われました。|
 |AddTemplate|Azure Portal から、テンプレートを追加するための呼び出しが行われます。|
-|AllDocsCsv|ドキュメント追跡サイトから呼び出し、**[すべてのドキュメント]** ページから CSV ファイルをダウンロードします。|
+|AllDocsCsv|ドキュメント追跡サイトから呼び出し、 **[すべてのドキュメント]** ページから CSV ファイルをダウンロードします。|
 |BECreateEndUserLicenseV1|モバイル デバイスから、エンド ユーザー ライセンスを作成するための呼び出しが行われます。|
 |BEGetAllTemplatesV1|モバイル デバイス (バックエンド) から、すべてのテンプレートを取得するための呼び出しが行われます。|
 |Certify|クライアントは保護されたコンテンツの使用および作成に関してユーザーを証明しています。|
@@ -197,8 +179,8 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |GetConfiguration|Azure RMS テナントの構成を取得するために、Azure PowerShell コマンドレットが呼ばれます。|
 |GetConnectorAuthorizations|RMS コネクタから、構成をクラウドから取得するための呼び出しが行われます。|
 |GetRecipients|ドキュメント追跡サイトから呼び出し、単一ドキュメントのリスト ビューに移動します。|
-|GetSingle|ドキュメント追跡サイトから呼び出し、**[シングル ドキュメント]** ページに移動します。|
-|GetTenantFunctionalState|Azure Portal が、Azure Rights Management サービスがアクティブかどうかを調べています。|
+|GetSingle|ドキュメント追跡サイトから呼び出し、 **[シングル ドキュメント]** ページに移動します。|
+|GetTenantFunctionalState|Azure portal は、保護サービス (Azure Rights Management) がアクティブになっているかどうか確認しています。|
 |GetTemplateById|Azure Portal から、テンプレート ID を指定してテンプレートを取得するための呼び出しが行われます。|
 |KeyVaultDecryptRequest|クライアントが RMS で保護されているコンテンツを復号化しようとしています。 Azure Key Vault の顧客管理のテナント キー (BYOK) にのみ適用されます。|
 |KeyVaultGetKeyInfoRequest|Azure Key Vault で Azure Information Protection テナント キーとして使用するように指定したキーがアクセス可能であり、既に使用されていないことを確認する呼び出しを行います。|
@@ -218,28 +200,8 @@ Azure Rights Management サービスには多くの要求の種類がありま�
 |UpdateTemplate|Azure Portal から、既存のテンプレートを更新するための呼び出しが行われます。|
 
 
-## <a name="windows-powershell-reference"></a>Windows PowerShell の参照情報
-2016 年 2 月以降、Azure Rights Management 使用状況ログに必要となる唯一の Windows PowerShell コマンドレットは、[Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) です。 
+## <a name="powershell-reference"></a>PowerShell リファレンス
 
-この変更の前は次のコマンドレットが Azure Rights Management 使用状況ログに必要でしたが、現在は非推奨とされます：  
+保護の使用状況ログにアクセスする必要がある唯一の PowerShell コマンドレットは[Get AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog)します。 
 
--   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
-
--   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
-
--   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
-
--   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
-
--   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
-
--   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
-
--   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
-
-Azure Rights Management ログが変更される以前から独自の Azure ストレージにログがある場合は、従来どおりこれらの古いコマンドレット (Get-AadrmUsageLog と Get-AadrmUsageLogLastCounterValue) を使用してダウンロードすることができます。 ただし、新しい使用状況ログはすべて新しい Azure RMS ストレージに書き込まれるため、Get-AadrmUserLog を使用してダウンロードする必要があります。
-
-Azure Rights Management サービス用 Windows PowerShell の使用の詳細については、「[Windows PowerShell を使用した Azure Rights Management の管理](administer-powershell.md)」を参照してください。
-
-
-
+PowerShell を使用して、Azure Information Protection の詳細については、次を参照してください。 [PowerShell を使用して Azure Information Protection からの保護を管理する](administer-powershell.md)します。

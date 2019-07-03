@@ -1,28 +1,28 @@
 ---
 title: Azure Rights Management を確認する - AIP
-description: 1 つのアカウントを使用してファイルまたは電子メール メッセージを保護し、次に別のユーザー アカウントから保護されたコンテンツを開いて使用してみることで、サービスが想定どおりに動作していることを確認できます。
+description: Azure Information Protection からの保護サービスが期待どおりに動作していることを確認する手順です。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fbc2cff29997ea3b824d900e2d96b27c65a575f2
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 618d6ff233c69e1b44ef39f8eebc3b578bd5199d
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156611"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521344"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Azure Rights Management サービスの検証
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Azure Information Protection の Azure Rights Management サービスをアクティブ化し、組織に必要な追加の構成手順を実行したら、この保護サービスが想定どおりに動作していることを検証する準備が整いました。 
+この保護サービスがあることを確認する準備が完了したら Azure Information Protection からの保護サービス (Azure Rights Management) がアクティブ化すると、組織に必要な追加の構成手順を実行する、正常に動作します。 
 
 単純な検証テストは、1 つのユーザー アカウントを使用してドキュメントや電子メール メッセージを保護し、別のコンピューターのもう 1 つのユーザー アカウントからその保護コンテンツを開いて使用してみることです。
 
@@ -35,7 +35,7 @@ Azure Information Protection の Azure Rights Management サービスをアク�
 
 ## <a name="next-steps"></a>次の手順
 
-使用状況ログを使用することで、組織がどのように Azure Rights Management サービスを使用しているか監視することができます。 詳細については、「[Azure Rights Management サービスの使用状況をログに記録して分析する](log-analyze-usage.md)」を参照してください。
+使用状況ログを使用して、この保護サービスを組織で使用が方法を監視できます。 詳細については、次を参照してください。[ログと Azure Information Protection からの保護の使用量の分析](log-analyze-usage.md)します。
 
 
 

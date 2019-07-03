@@ -4,19 +4,19 @@ description: 分類、ラベル付け、組織のドキュメントと電子メ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/03/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 75aea1cf43c6e6ca66dbca611946c4366fe8280d
-ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
+ms.openlocfilehash: 2ffe76069e4f36fb4c21fdd8edaeb611635b0abf
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462224"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521907"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -215,5 +215,5 @@ Azure Information Protection で使用したいグループが表示されるこ
 
 - 2018 年 2 月より前にサブスクリプションを取得した場合: 自分でサービスをアクティブにする必要があります。 
 
-アクティブ化の状態の確認を含む詳細については、「[Azure Rights Management をアクティブにする](./activate-service.md)」を参照してください。
+詳細については、アクティブ化の状態の確認が含まれているを参照してください。 [Azure Information Protection からの保護サービスをアクティブ化する](./activate-service.md)します。
 

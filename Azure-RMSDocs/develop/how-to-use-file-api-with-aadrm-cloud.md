@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 02/23/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dbd7969d5e6d87ec2d8e935f44867d58dfee9751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b2e625ad8c238d592656129cbc1542e4f6f24f97
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178388"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521216"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
@@ -83,11 +83,11 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 -   [Azure RMS PowerShell モジュール](https://technet.microsoft.com/library/jj585012.aspx)をインストールします。
 -   Powershell を起動し、次のコマンドを実行してテナントの RMS 構成を取得します。
 
-    `Import-Module aadrm`
+    `Import-Module AIPService`
 
-    `Connect-AadrmService` (管理者の資格情報を入力します)
+    `Connect-AipService` (管理者の資格情報を入力します)
 
-    `Get-AadrmConfiguration`
+    `Get-AipServiceConfiguration`
 
 
 - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) のインスタンスを作成して、いくつかのメンバーを設定します。
@@ -105,7 +105,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 -   [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) 構造体のインスタンスを作成します。この中に [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) インスタンスが格納されます。
 
-**注** - *connectionInfo* メンバーには、直前に `Get-AadrmConfiguration` を呼び出したときの URL が設定され、ここではそのフィールド名を示します。
+**注**  - *connectionInfo* メンバーには、直前に `Get-AipServiceConfiguration` を呼び出したときの URL が設定され、ここではそのフィールド名を示します。
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};

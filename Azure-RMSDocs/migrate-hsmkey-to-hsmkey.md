@@ -4,19 +4,19 @@ description: Azure Key Vault の HSM で保護されたテナント キーを持
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11391088aa0e2a084198cdb0aa73eeb6be0795d0
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: b4861b7955237df9b9d282330a8bd3752b00d6e6
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780851"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535204"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2:HSM で保護されているキーから HSM で保護されているキーへの移行
 
@@ -64,9 +64,9 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 これらの手順は、Azure Information Protection の管理者によって実行されます。
 
-1. インターネットに接続されたワークステーションでの PowerShell セッションで、[Connnect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスに接続します。
+1. インターネットに接続されたワークステーションでの PowerShell セッションで、[Connnect-AadrmService](/powershell/module/aipservice/connect-aipservice) コマンドレットを使用して Azure Rights Management サービスに接続します。
     
-    [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) コマンドレットを使用して、各信頼された発行ドメイン (.xml) ファイルをアップロードします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。
+    使用して各信頼された発行ドメイン (.xml) ファイルをアップロード、[インポート AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)コマンドレット。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。
     
     このコマンドレットを実行するには、各構成データ ファイルに対して以前指定したパスワードと前の手順で指定したキーの URL が必要です。
     
@@ -79,20 +79,20 @@ Azure Information Protection テナント キーは Azure Key Vault によって
     指定したパスワードを入力して構成データ ファイルをエクスポートします。 次に、以下のコマンドを実行して、この操作を行うことを確認します。
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
     このインポート処理の一部として、SLC キーがインポートされ、自動でアーカイブ済みに設定されます。
 
-2.  各ファイルをアップロードしたら [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) を実行して、AD RMS クラスターで現在アクティブな SLC キーと一致するインポート済みのキーを指定します。 このキーは、Azure Rights Management サービスのアクティブなテナント キーとなります。
+2.  各ファイルがアップロードされると、実行[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)インポート済みのキーが AD RMS クラスターで現在アクティブな SLC キーと一致するを指定します。 このキーは、Azure Rights Management サービスのアクティブなテナント キーとなります。
 
-3.  [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) コマンドレットを使用して Azure Rights Management サービスから切断します。
+3.  使用して、[切断 AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Azure Rights Management サービスから切断するコマンドレット。
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
-Azure Key Vault で Azure Information Protection テナント キーが使用しているキーを後で確認する必要がある場合は、Azure RMS コマンドレット [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) を使用します。
+後で、Azure Information Protection を使用して、Azure Key Vault のテナント キーを使用しているキーを確認する必要がある場合、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS コマンドレット。
 
 以上で「[手順 5. Azure Rights Management サービスをアクティブにする](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)」に進む準備ができました。
 

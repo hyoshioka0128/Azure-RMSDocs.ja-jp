@@ -4,19 +4,19 @@ description: Rights Management と AD RMS のデプロイがある場合、管�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 572806eefd9207a2d3d6bbcab12ad274c116f49f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 98b8dc8e09ba7ec3bddb83817663819e0af89697
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767661"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520907"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS がある場合は、Azure Rights Management の環境を準備します。
 
@@ -58,7 +58,7 @@ Azure Information Protection に移行する場合でも、制限事項を受け
 Azure Rights Management を非アクティブ化するには、次のいずれかの手順を使用します。
 
 > [!TIP]
-> Windows PowerShell の [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) コマンドレットを使用して Azure Rights Management サービスを非アクティブ化することもできます。
+> Windows PowerShell コマンドレットを使用することもできます。[無効 AipService](/powershell/module/aipservice/disable-aipservice)、Azure Rights Management サービスを非アクティブ化します。
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Rights Management を非アクティブ化するには
 
@@ -66,25 +66,25 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
     
     サインインを求められたら、Office 365 のグローバル管理者であるアカウントを使用します。
 
-2. **[Rights Management]** ページで、**[非アクティブ化]** をクリックします。
+2. **[Rights Management]** ページで、 **[非アクティブ化]** をクリックします。
 
-3.  **[Rights Management を非アクティブ化しますか?]** というメッセージが表示されたら、**[非アクティブ化]** をクリックします。
+3.  **[Rights Management を非アクティブ化しますか?]** というメッセージが表示されたら、 **[非アクティブ化]** をクリックします。
 
 **[Rights Management がアクティブ化されていません]** というテキストとアクティブ化するオプションが表示されます。
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Azure ポータルから Rights Management を非アクティブ化するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
     以前に [Azure Information Protection] ブレードにアクセスしたことがない場合、このブレードをポータルに追加するには、1 回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)を参照してください。
 
-2. メニュー オプションで、**[保護のアクティブ化]** を選択します。 
+2. メニュー オプションで、 **[保護のアクティブ化]** を選択します。 
 
-3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、**[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
+3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、 **[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
 
-情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、**[非アクティブ化]** が **[アクティブ化]** に変わります。 
+情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、 **[非アクティブ化]** が **[アクティブ化]** に変わります。 
 
 ### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
 
@@ -112,7 +112,7 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 **[Azure Information Protection - 保護のアクティブ化]** のブレードには、Azure Rights Management サービスをアクティブ化するためのオプションがあります。  
 
-AD RMS も使用している場合は、**[アクティブ化]** オプションを選択しないでください。 Azure Rights Management サービスがアクティブになっていない場合でも、分類のみを適用するラベルで Azure Information Protection を使用できます。 データ保護を含まない特別な既定ポリシーが自動的に作成されます。これらの構成オプションは、Azure Rights Management サービスがアクティブになるまで使用不可のままです。
+AD RMS も使用している場合は、 **[アクティブ化]** オプションを選択しないでください。 Azure Rights Management サービスがアクティブになっていない場合でも、分類のみを適用するラベルで Azure Information Protection を使用できます。 データ保護を含まない特別な既定ポリシーが自動的に作成されます。これらの構成オプションは、Azure Rights Management サービスがアクティブになるまで使用不可のままです。
 
 ### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1:分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
 

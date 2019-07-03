@@ -4,19 +4,19 @@ description: RMS コネクタを使用するサーバーでのレジストリ設
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3cba05e27740ff11a2c8504ace1d1a5037cf3b2
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156573"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535053"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
@@ -29,7 +29,7 @@ ms.locfileid: "67156573"
 
 -   *\<YourTenantURL>* は Azure Information Protection テナントの Azure Rights Management サービス URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure Rights Management サービスに [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行します。 Azure RMS 用の Windows PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
+    1.  実行、 [Get AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Azure Rights Management サービスのコマンドレット。 既に AIPService モジュールをインストールしていない場合は、次を参照してください。 [AIPService PowerShell モジュールをインストールする](install-powershell.md)します。
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
@@ -41,7 +41,7 @@ ms.locfileid: "67156573"
         
         次の PowerShell コマンドを実行することで、値が正しいことを確認できます。
         
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 -   *\<ConnectorFQDN>* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
 

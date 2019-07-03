@@ -4,17 +4,17 @@ description: 手順と、Azure Information Protection を展開する管理者�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 46102a1b2b60b58d47d0e436f25b2480f2737a51
-ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
+ms.openlocfilehash: 27399c5955ed66d7c9e5e9d8870b01d52dba6e1d
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050733"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521021"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: ユーザーの Azure Information Protection の統合されたラベル付けクライアントをインストールします。
 
@@ -44,12 +44,12 @@ ms.locfileid: "66050733"
 
 - 800 x 600 より大きい画面の解像度
     
-    解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。
+    解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、 **[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。
 
 
 - Microsoft Online Services サインイン アシスタント 7.250.4303.0
     
-    Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 以降のバージョンのサインイン アシスタントがあれば、Azure Information Protection の統合されたラベル付けクライアントをインストールする前にアンインストールします。 たとえば、バージョンを確認し、**[コントロール パネル]** > **[プログラムと機能]** > **[プログラムのアンインストールまたは変更]** を使用して、サインイン アシスタントをアンインストールします。
+    Office 2010 を実行するコンピューターには、Microsoft Online Services サインイン アシスタント バージョン 7.250.4303.0 が必要です。 このバージョンは、クライアントのインストールに含まれています。 以降のバージョンのサインイン アシスタントがあれば、Azure Information Protection の統合されたラベル付けクライアントをインストールする前にアンインストールします。 たとえば、バージョンを確認し、 **[コントロール パネル]**  >  **[プログラムと機能]**  >  **[プログラムのアンインストールまたは変更]** を使用して、サインイン アシスタントをアンインストールします。
 
 - KB 4482887
     
@@ -105,7 +105,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。 
 
-2. 既定のインストールで実行するだけです、実行可能ファイルは、たとえば、 **AzInfoProtection_UL.exe**します。 一方、インストール オプションを表示するには、**/help** を付けて実行可能ファイルを実行します。`AzInfoProtection_UL.exe /help`
+2. 既定のインストールで実行するだけです、実行可能ファイルは、たとえば、 **AzInfoProtection_UL.exe**します。 一方、インストール オプションを表示するには、 **/help** を付けて実行可能ファイルを実行します。`AzInfoProtection_UL.exe /help`
 
     サイレント モードでクライアントをインストールする例: `AzInfoProtection_UL.exe /quiet`
     
@@ -151,15 +151,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
 
-1. PowerShell セッションから、最初に [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) を実行し、管理者の資格情報を指定して Azure Rights Management サービスに接続します。 [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration) を実行します。 
+1. PowerShell セッションからまず実行[Connect AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice)し、Azure Rights Management サービスに接続するため、管理者の資格情報を指定します。 実行して[Get AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)します。 
  
-    Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「[AADRM PowerShell モジュールのインストール](../install-powershell.md)」を参照してください。
+    既に Azure Rights Management サービス用の PowerShell モジュールをインストールしていない場合は、次を参照してください。 [AIPService PowerShell モジュールをインストールする](../install-powershell.md)します。
 
 2. 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
     以下に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
-3. この値から、**/_wmcs/licensing** 文字列を削除します。 例: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+3. この値から、 **/_wmcs/licensing** 文字列を削除します。 例: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
     残りの文字列は、ServiceLocation パラメーターに指定する値です。
 
@@ -202,7 +202,7 @@ Office アプリケーションが Azure Information Protection の統合され�
     |適用なし|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|インストール|
     |適用なし|Windows 7|KB2627273 <br /><br /> ファイル名に含まれるバージョン番号: v4|アンインストール|
 
-3. 既定のインストールでは、`AzInfoProtection_UL.msi /quiet` のように、**/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。  
+3. 既定のインストールでは、`AzInfoProtection_UL.msi /quiet` のように、 **/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。  
 
 
 ## <a name="next-steps"></a>次の手順

@@ -4,19 +4,19 @@ description: Rights Management サービス クライアント (RMS クライア
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 887b4fa06ddac3395892aab8b085fae8a44bebd9
-ms.sourcegitcommit: a8d78554f20fca35a0384569a323e5f73afdc06a
+ms.openlocfilehash: adb30f7f4e9ecb548f8003c7ab7888ee90d0fc43
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66835328"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535093"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Rights Management サービス クライアントのデプロイに関する注意事項
 
@@ -170,12 +170,12 @@ RMS サービスの検出を使用すると、RMS クライアントがコンテ
 
     以下に例を示します。5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<テナントの URL\>* は、 **{GUID}.rms.[Region].aadrm.com** という形式です。この値は、Azure RMS の [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) コマンドレットを実行して **RightsManagementServiceId** 値で確認できます。
+    *\<YourTenantURL\>* 形式は、次のとおり: **{GUID}. rms. [Region].aadrm.com**します。識別することによってこの値を見つけることができます、 **RightsManagementServiceId**実行するときに、 [Get AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)コマンドレット。
 
 > [!NOTE]
 > このサービスの検出フローには 4 つの重要な例外があります。
 > 
-> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com)) 。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定をオーバーライドするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
+> - モバイル デバイスはクラウド サービスの使用に最適なので、既定で Azure Rights Management サービスにサービスの検出を使用します (https://discover.aadrm.com) ) 。 モバイル デバイスが Azure Rights Management サービスではなく AD RMS を使用するようにこの既定をオーバーライドするには、「[Active Directory Rights Management サービス モバイル デバイス拡張](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)」に従って DNS に SRV レコードを指定し、モバイル デバイス拡張機能をインストールします。 
 >
 > - Azure Information Protection ラベルから Rights Management サービスを呼び出すと、サービスの検出は実行されません。 その代わりに、Azure Information Protection ポリシーで構成されているラベル設定で URL が直接指定されます。 
 >  

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c86bf4100f3c2c49cc5261215a0edcd59f24408
-ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
+ms.openlocfilehash: 1dcf34bf2990426a9ff22660d871b4f60e72bc3f
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348836"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520622"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365:Azure Rights Management サービスを使用するオンライン サービスの構成
 
@@ -525,7 +525,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 > [!TIP]
 > このスクリプトを使用して、SharePoint Online ライブラリ用に IRM を構成することもできます。 この構成では、追加オプション **[IRM をサポートしないドキュメントのアップロードをユーザーに許可しない]** を有効にして、保護されたドキュメントだけがライブラリに含まれるようにできます。    そのためには、`-IrmReject` パラメーターをスクリプトの Set-IrmConfiguration コマンドに追加します。
 >
-> また、`$webUrls` 変数 (例: **https://contoso.sharepoint.com** ) および `$listTitle` 変数 (例: **$Reports**) を変更する必要もあります。
+> 変更する必要も、`$webUrls`変数 (たとえば、 **https:\//contoso.sharepoint.com**) と`$listTitle`変数 (たとえば、 **$Reports**)。
 
 ユーザーの OneDrive for Business ライブラリに対して IRM を無効にする必要がある場合、「[OneDrive for Business の IRM を無効にするスクリプト](#script-to-disable-irm-for-onedrive-for-business)」セクションを参照してください。
 

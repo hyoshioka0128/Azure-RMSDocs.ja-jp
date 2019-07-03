@@ -4,19 +4,19 @@ description: Active Directory Rights Management サービス (AD RMS) のデプ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708909"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522063"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -128,7 +128,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - パートナーの Azure Rights Management サービスはまだアクティブ化されていないが、Azure Rights Management サービスの URL はわかっていること。
 
-    この情報は、Azure Rights Management Tool をインストールし、サービスに接続して ([Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice))、Azure Rights Management サービスのテナント情報を見ることで ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)) 取得できます。
+    この情報は、サービスへの接続、Azure Rights Management Tool をインストールすることで受けることができます ([Connect AipService](/powershell/module/aipservice/connect-aipservice))、し、Azure Rights Management サービスのテナント情報を表示する ([Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration))。
 
 - パートナーの AD RMS で保護されたコンテンツへの要求をパートナーのテナントの Azure Rights Management サービスにリダイレクトするよう、移行後のクライアントを構成できるように、パートナーの AD RMS クラスターの URL と Azure Rights Management サーバーの URL をパートナーから提供されていること。 クライアントのリダイレクトを構成する手順については、手順 7 で説明します。
 
@@ -140,9 +140,9 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 [**フェーズ 1: 移行の準備**](migrate-from-ad-rms-phase1.md)
 
-- **手順 1: AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する**
+- **ステップ 1: AIPService PowerShell モジュールをインストールし、テナントの URL を特定します。**
 
-    移行プロセスでは、AADRM モジュールから 1 つまたは複数の PowerShell コマンドレットを実行する必要があります。 多くの移行手順を完了するには、テナントの Azure Rights Management サービス URL が必要です。この値は、PowerShell を使って特定することができます。
+    移行プロセスでは、AIPService モジュールから 1 つ以上の PowerShell コマンドレットを実行する必要があります。 多くの移行手順を完了するには、テナントの Azure Rights Management サービス URL が必要です。この値は、PowerShell を使って特定することができます。
 
 - **手順 2:クライアントの移行を準備する**
 
@@ -156,7 +156,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 4:AD RMS から構成データをエクスポートし、それを Azure Information Protection にインポートする**
 
-    構成データ (キー、テンプレート、URL) を AD RMS から XML ファイルにエクスポートした後、PowerShell コマンドレット Import-AadrmTpd を使ってそのファイルを Azure Information Protection から Azure Rights Management サービスにアップロードします。 次に、Azure Rights Management サービスのテナント キーとして使用するインポート済みのサーバー ライセンサー証明書 (SLC) キーを指定します。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
+    インポート AipServiceTpd PowerShell コマンドレットを使用して、Azure Information Protection から Azure Rights Management サービスにファイルを XML ファイル、およびアップロードするには、AD RMS から構成データ (キー、テンプレート、Url) をエクスポートします。 次に、Azure Rights Management サービスのテナント キーとして使用するインポート済みのサーバー ライセンサー証明書 (SLC) キーを指定します。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
 
     - **ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行**:
 
@@ -208,7 +208,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
     
     準備フェーズ中に構成したオンボーディング制御はもう必要ありません。 ただし、段階的な移行ではなく、同時にすべてを移行することを選んだためにオンボーディング制御を使用しなかった場合は、この手順をスキップしてオンボーディング制御を削除することができます。
     
-    Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。
+    Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))** " タスクを無効にする必要があるかどうかを確認します。
 
 - **手順 12: Azure Information Protection テナント キーを再入力する**
 

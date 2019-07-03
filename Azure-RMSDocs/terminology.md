@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection に関連する単語、フ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ccc320d04d0aee9baac2bfcf337d11b63b7df9e
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: f23b64f7d8d0eddcdf853238400653a32d5f145b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305726"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521510"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -26,10 +26,11 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 |項目|定義|
 |--------|--------------|
-|AADRM|Azure Rights Management サービス用の PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management という名前だったときに、Azure Rights Management の非公式な略語から派生したものです。|
-|アクティブ化|Azure Rights Management サービスを有効化して、組織がドキュメントや電子メールを保護できるようにします。 この操作により、Exchange Online と SharePoint Online での IRM 機能も有効になります。|
+|AADRM|以前 (Windows) Azure Active Directory Rights Management という名前だったときに Azure Rights Management の非公式な略語から派生した protection サービス (Azure Rights Management) の最初の PowerShell モジュールの名前。 この PowerShell モジュールは、今すぐ、AIPService モジュールは置き換えられます。|
+|アクティブ化|組織がドキュメントや電子メールを保護できるように、保護サービス (Azure Rights Management) を有効にするには この操作により、Exchange Online と SharePoint Online での IRM 機能も有効になります。|
 |Active Directory Rights Management サービス|*AD RMS* という略称で呼ばれることもあります。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |AD RMS|*Active Directory Rights Management サービス*をご覧ください。|
+|AIPService|古い、AADRM モジュールに代わる protection サービスの PowerShell モジュールの現在の名前。|
 AzureInformationProtection|(クラシック) の Azure Information Protection クライアントと、Azure Information Protection の PowerShell モジュールの名前は、ラベル付けのクライアントを統合します。
 |Azure Information Protection|ラベルを使用してドキュメントと電子メールの分類と保護を行う、クラウドベースのサービスです。 Azure Rights Management は、暗号化ポリシー、ID ポリシー、承認ポリシーを使用して、保護を提供します。|
 Azure Information Protection クライアント (クラシック)|省略*クラシック クライアント*します。<br /><br />ユーザー、管理者、およびサービスを Azure Information Protection の元のクライアント側では、ラベルと Azure Information Protection ポリシーの設定を使用します。 クライアントのラベル付けを統合、Azure Information Protection で置き換えられるようになりました。|

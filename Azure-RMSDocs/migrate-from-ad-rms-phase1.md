@@ -4,19 +4,19 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 95eed1f01140c133cd6e5d3301e5eef2ef12f359
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: bd2ad07e428dabe694701ffbd807fa12ee8e01cb
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65782056"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520913"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -25,16 +25,13 @@ ms.locfileid: "65782056"
 AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
 
-## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>手順 1:AADRM PowerShell モジュールをインストールし、自分のテナント URL を特定する
+## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>手順 1:AIPService PowerShell モジュールをインストールし、テナントの URL を特定します。
 
-Azure Information Protection のデータ保護を指定するサービスを構成および管理できるように、AADRM モジュールをインストールします。
+AIPService モジュールをインストールして、構成して Azure Information Protection のデータ保護を提供するサービスを管理できるようにします。
 
-手順については、「[AADRM PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
+手順については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](./install-powershell.md)します。
 
-> [!NOTE]
-> この Windows PowerShell モジュールを既にダウンロードしている場合は、`(Get-Module aadrm -ListAvailable).Version` コマンドを実行して、バージョン番号が **2.9.0.0** 以上であることを確認します。
-
-移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、**<GUID>.rms.<リージョン>.aadrm.com** という形式です。
+移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、 **<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
 以下に例を示します。**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -42,11 +39,11 @@ Azure Information Protection のデータ保護を指定するサービスを構
 
 1. Azure Rights Management サービスに接続し、求められたら、テナントのグローバル管理者の資格情報を入力します。
     
-        Connect-AadrmService
+        Connect-AipService
     
 2. テナントの構成を取得します。
     
-        Get-AadrmConfiguration
+        Get-AipServiceConfiguration
     
 3. **LicensingIntranetDistributionPointUrl** の値をコピーし、この文字列から `/_wmcs\licensing` を除去します。 
     
@@ -54,7 +51,7 @@ Azure Information Protection のデータ保護を指定するサービスを構
     
     次の PowerShell コマンドを実行することで、値が正しいことを確認できます。
     
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 ## <a name="step-2-prepare-for-client-migration"></a>手順 2. クライアントの移行を準備する
 
@@ -66,11 +63,11 @@ Azure Information Protection のデータ保護を指定するサービスを構
 
 2. このグループをオンボーディング制御用に構成し、このグループのメンバーのみが Azure Rights Management を使ってコンテンツを保護できるようにします。 そのためには、PowerShell セッションで Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-        Connect-Aadrmservice
+        Connect-AipService
 
     その後、このグループをオンボーディング制御用に構成し、この例のオブジェクト ID を実際のグループ オブジェクト ID に置き換えて、確認を求められたら「**Y**」と入力します。
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
+        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
 
 3. クライアント移行スクリプトが含まれる[次のファイルをダウンロード](https://go.microsoft.com/fwlink/?LinkId=524619)します。
     
@@ -125,7 +122,7 @@ Exchange 2010 のレジストリ値:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**次のように入力します。** Reg_SZ
+**種類:** Reg_SZ
 
 **値:** https://\<実際のテナント URL\>/_wmcs/licensing
 

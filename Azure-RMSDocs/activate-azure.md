@@ -4,26 +4,25 @@ description: 組織でドキュメントや電子メールの保護を開始で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ce90491200e51be7d270f5f0ef1d81b33dae63e7
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 2c2b0ca3ded29fd408d6597327f2bb15844bdd10
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156373"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520266"
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Azure Portal から Azure Rights Management をアクティブ化する方法
+# <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Azure portal から Rights Management 保護サービスをアクティブ化する方法
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Portal から Azure Rights Management サービス (Azure RMS) をアクティブ化する場合にこの手順に従ってください。
+Azure portal を使用して、Azure Information Protection からの Rights Management 保護サービス (Azure RMS) をアクティブ化する場合は、次の手順を使用します。
 
 1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
     
@@ -41,5 +40,5 @@ Azure Portal から Azure Rights Management サービス (Azure RMS) をアク�
 
 
 ## <a name="next-steps"></a>次の手順
-「[Azure Rights Management をアクティブにする](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」を引き続きお読みください。
+読み取りを再開[Azure Information Protection からの保護サービスをアクティブ化する](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)します。
 

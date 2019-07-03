@@ -4,19 +4,19 @@ description: Information Protection のベスト プラクティスを使用す�
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 12/13/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ca4aa7b340a3024139e6a61c0ba4fd938009d522
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175997"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521188"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Information Protection のセキュリティのベスト プラクティス
 
@@ -81,9 +81,9 @@ SDK 発行ライセンスに表記されている権利をアプリケーショ�
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-情報保護システムでは、権限がいくつかのグループに分けられます。 詳細については、「[Azure Rights Management の使用権限を構成する](../configure-usage-rights.md)」を参照してください。
+情報の保護システム権限を整理するいくつかのグループ化します。 詳細については、次を参照してください。 [Azure Information Protection の使用権限を構成する](../configure-usage-rights.md)します。
 
-AIP では、ユーザーに対して、情報の暗号化を解除すること、または解除しないことを許可します。 情報自体の保護機能はありません。 ユーザーに情報の暗号化を解除する権限がある場合は、API でそれが許可されます。 暗号化が解除された後でその情報を管理または保護することは、アプリケーションの責任です。 情報の不正使用を防ぐように環境およびインターフェイスを管理することは、アプリケーションの責任です。 たとえば、ライセンスで表示権限のみが付与されている場合、**[印刷]** ボタンと **[コピー]** ボタンを無効にします。 テスト スイートでは、認識しているすべてのライセンス権限に対して、アプリケーションが正しく動作することを検証する必要があります。
+AIP では、ユーザーに対して、情報の暗号化を解除すること、または解除しないことを許可します。 情報自体の保護機能はありません。 ユーザーに情報の暗号化を解除する権限がある場合は、API でそれが許可されます。 暗号化が解除された後でその情報を管理または保護することは、アプリケーションの責任です。 情報の不正使用を防ぐように環境およびインターフェイスを管理することは、アプリケーションの責任です。 たとえば、ライセンスで表示権限のみが付与されている場合、 **[印刷]** ボタンと **[コピー]** ボタンを無効にします。 テスト スイートでは、認識しているすべてのライセンス権限に対して、アプリケーションが正しく動作することを検証する必要があります。
 
 ### <a name="minimum-standard"></a>最低限の標準
 
