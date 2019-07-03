@@ -12,11 +12,11 @@
           href: requirements.md
         - name: Azure Active Directory の要件
           href: requirements-azure-ad.md
-        - name: クライアント デバイスでのデータ保護のサポート
+        - name: クライアント デバイスでの保護のサポート
           href: requirements-client-devices.md
-        - name: アプリケーションでのデータ保護のサポート
+        - name: アプリケーションでの保護のサポート
           href: requirements-applications.md
-        - name: オンプレミス サーバーでのデータ保護のサポート
+        - name: オンプレミス サーバーでの保護のサポート
           href: requirements-servers.md
 - name: クイックスタート
   expanded: true
@@ -101,7 +101,7 @@
           href: prepare.md
     - name: サービスのデプロイと使用
       items:
-        - name: サービスのアクティブ化
+        - name: 保護のアクティブ化
           items:
             - name: 概要
               href: activate-service.md
@@ -209,7 +209,7 @@
           items:
             - name: 概要
               href: administer-powershell.md
-            - name: AADRM PowerShell モジュールのインストール
+            - name: AIPService PowerShell モジュールのインストール
               href: install-powershell.md
     - name: クライアントのデプロイと使用
       items:
