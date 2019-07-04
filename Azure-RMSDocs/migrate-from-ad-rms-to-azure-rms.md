@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: 61cd0d2ea761cf3f0ca1a8cbd9e1ab1d248b63ef
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522063"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545011"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -112,7 +112,7 @@ AD RMS 暗号化モードを確認するには:
 
 ### <a name="migration-limitations"></a>移行の制限
 
-- Azure Information Protection で使われる Rights Management サービスによってサポートされていないソフトウェアやクライアントでは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「[Azure Rights Management の要件](./requirements.md)」のサポートされているアプリケーションとクライアントのセクションを確認してください。
+- Azure Information Protection で使われる Rights Management サービスによってサポートされていないソフトウェアやクライアントでは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 サポートされているアプリケーションとクライアントのセクションを確認して[Azure Information Protection の要件](./requirements.md)します。
 
 - AD RMS デプロイが外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションするように構成されている場合は、同時にまたは可能な限り速やかにパートナーも Azure Information Protection に移行する必要があります。 移行前に Azure Information Protection を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
     

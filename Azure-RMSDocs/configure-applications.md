@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 753ef710b4a4058e9792203e549b27cae83f8a12
-ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
+ms.openlocfilehash: 9a0625f842d7fef7e72020021164b5eb62029031
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348796"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67544995"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "67348796"
 組織に Azure Information Protection をデプロイしたら、次の情報を使用してアプリケーション、Azure Information Protection クライアント、サービスを構成します。 たとえばなどの Office アプリケーション Word 2019、Word 2016、および Word 2013。 また、Exchange Online (トランスポート ルール、データ損失の防止、転送禁止、およびメッセージの暗号化) や SharePoint Online (保護されたライブラリ) などのサービスも含まれます。 これらのアプリケーションとサービスで Azure Information Protection からデータ保護サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。
 
 > [!IMPORTANT]
-> サポートされているアプリケーションおよびその他の要件については、「[Azure Rights Management の要件](requirements.md)」を参照してください。
+> サポートされているバージョンとその他の要件については、次を参照してください。 [Azure Information Protection の要件](requirements.md)します。
 
 -   [Office 365: オンライン サービスの構成](configure-office365.md)
 

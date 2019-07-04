@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 018f889c11339b97013cadd0725330b95597dd41
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: a6aa0b8ecd01df9d012588f8e2b02d13f03cfff6
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535043"
+ms.locfileid: "67544962"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>PowerShell を使用して Azure Information Protection からの保護を管理します。
 
@@ -37,10 +37,10 @@ PowerShell を使用して、Azure Information Protection からの保護サー�
 
 |実行するタスク|使用するコマンドレット|
 |-------------------|------------------------------|
-|オンプレミスの Rights Management (AD RMS または Windows RMS) から Azure Information Protection に移行する。|[Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)<br /><br />[Set-AipServiceKeyProperties](/powershell/module/aipservice/setaipservicekeyproperties)|
+|オンプレミスの Rights Management (AD RMS または Windows RMS) から Azure Information Protection に移行する。|[Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)<br /><br />[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)|
 |組織の Rights Management サービスに接続する、またはこのサービスから切断する。|[接続 AipService](/powershell/module/aipservice/connect-aipservice)<br /><br />[切断 AipServiceService](/powershell/module/aipservice/disconnect-aipservice)|
 |独自のテナント キーを生成および管理する - BYOK (Bring Your Own Key) シナリオ。|[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)<br /><br />[Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)<br /><br />[Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)|
-|組織の Rights Management サービスをアクティブにする、または非アクティブ化する。<br /><br />管理ポータルからこれらのアクションを実行することもできます。 詳細については、次を参照してください。 [Azure Information Protection からの保護サービスをアクティブ化する](activate-service.md)します。|[有効にする AipService](/powershell/module/aipservice/enable-aipservice)<br /><br />[無効にする AipService](/powershell/module/aipservice/disable-aipservice)|
+|組織の Rights Management サービスをアクティブにする、または非アクティブ化する。<br /><br />管理ポータルからこれらのアクションを実行することもできます。 詳細については、「[Activating the protection service from Azure Information Protection (Azure Information Protection の保護サービスのアクティブ化)](activate-service.md)」をご覧ください。|[有効にする AipService](/powershell/module/aipservice/enable-aipservice)<br /><br />[無効にする AipService](/powershell/module/aipservice/disable-aipservice)|
 |Azure Information Protection のドキュメント追跡サイトを管理する。|[無効にする AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature)<br /><br />[有効にする AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)<br /><br />[Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)<br /><br />[Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/set-aipservicedonottrackusergroup)<br /><br />[Clear-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Clear-AipServiceDoNotTrackUserGroup)<br /><br />[Get-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/get-AipServiceDoNotTrackUserGroup)<br /><br />[Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)<br /><br />[Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)|
 |Azure Rights Management サービスの段階的なデプロイのためのオンボード コントロールを構成する。|[Get-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy)<br /><br />[Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy)|
 |組織の Rights Management テンプレートを作成および管理する。<br /><br />PowerShell の方がきめ細かく制御できますが、これらのアクションの大部分は Azure Portal で実行することもできます。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。|[Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate)<br /><br />[Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)<br /><br />[Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)<br /><br />[Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)<br /><br />[Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetemplate)<br /><br />[New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)<br /><br />[Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)<br /><br />[セット AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)|

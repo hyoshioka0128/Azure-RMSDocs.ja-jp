@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8e160908ac568b0657cc92b838959eb95da624b3
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: e94d624c1fa59d44399b9c83959534d75c912d6b
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156653"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67544986"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするオンプレミス サーバー
 
@@ -60,4 +60,4 @@ Rights Management コネクタは、Windows Server 2016、Windows Server 2012 R2
 これらのオンプレミス サーバーで Rights Management コネクタを構成する方法の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」をご覧ください。
 
 ## <a name="next-steps"></a>次の手順
-その他の要件を確認するには、「[Azure Rights Management の要件](requirements.md)」を参照してください。
+その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
