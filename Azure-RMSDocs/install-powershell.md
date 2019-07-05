@@ -4,19 +4,19 @@ description: Azure Information Protection からの保護サービス用の Powe
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c986b34f3138a3410cb0d675c016206a752ad0c8
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: d6f5ccc34669781f4ec9723014d5254444255649
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535029"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563392"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>AIPService PowerShell モジュールのインストール
 
@@ -40,8 +40,11 @@ AIPService モジュールには、以前のモジュールでは、AADRM が置
 
 新しいモジュールは、既存のスクリプトは引き続き機能するために、古いモジュールでコマンドレット名に別名を持っています。 ただし、元のモジュールがサポート対象外になる前に、これらの参照を更新を計画します。 AADRM モジュールのサポートは 2020 年 7 月 15日年を終了します。
 
-Azure Rights Management Administration Tool で AADRM モジュールをインストールした場合に使用して**プログラムと機能**をアンインストールする**Windows Azure AD Rights Management の管理**します。
+開始と PowerShell セッションをアンインストールし、PowerShell ギャラリーから AADRM モジュールをインストールした場合、**管理者として実行**オプション、および種類。
 
+    Uninstall-Module -Name AADRM
+
+Azure Rights Management Administration Tool で AADRM モジュールをインストールした場合に使用して**プログラムと機能**をアンインストールする**Windows Azure AD Rights Management の管理**します。
 
 ## <a name="how-to-install-the-aipservice-module"></a>AIPService モジュールをインストールする方法
 

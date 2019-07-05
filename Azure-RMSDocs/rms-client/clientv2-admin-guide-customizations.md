@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection の統合されたラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
-ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
+ms.openlocfilehash: aac8b94bbe1eaa46111dee15ac5f69d05ac730ab
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67464881"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563450"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントのカスタム構成
 
@@ -577,7 +577,7 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
 この構成ポリシーを使用して[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)ことは、Office 365 セキュリティ/コンプライアンス センターの PowerShell を使用して構成する必要があります。 統一されたラベル付けクライアントのみのプレビュー バージョンでサポートされています。
 
-[Azure Information Protection analytics](../reports-aip.md)検出し、そのコンテンツには、機密情報が含まれている場合は、Azure Information Protection クライアントによって保存されたドキュメントを報告できます。 既定では、この情報を Azure Information Protection analytics にラベル付け、Azure Information Protection の統合によって送信されます。
+[Azure Information Protection analytics](../reports-aip.md)検出し、そのコンテンツには、機密情報が含まれている場合は、Azure Information Protection クライアントによって保存されたドキュメントを報告できます。 既定では、この情報は、analytics の Azure Information Protection に Azure Information Protection の統合されたラベル付けクライアントによって送信されます。
 
 統一されたラベル付けクライアントによってこの情報は送信しないように、この動作を変更するには、選択したラベルのポリシーの次の文字列を入力します。
 
@@ -589,9 +589,9 @@ PowerShell コマンドの例、ラベル、ポリシーが"Global"をという�
 
 以下に例を示します。
 
-- これが設定されていない場合、**Confidential \ Sales** というラベル付きの Financial.docx にアクセスしたユーザーを確認できます。
+- この設定で、ユーザーがラベルがついた Financial.docx をアクセスを確認できます**社外秘 \ Sales**します。
 
-- これを設定した場合、Financial.docx に 6 つのクレジット カード番号が含まれていることを確認できます。
+- この設定がない Financial.docx が 6 のクレジット_カード番号が含まれているを確認できます。
     
     - [詳細な分析のためのコンテンツ一致](../reports-aip.md#content-matches-for-deeper-analysis)も有効にすると、これらのクレジット カードの番号も追加で確認できます。
 

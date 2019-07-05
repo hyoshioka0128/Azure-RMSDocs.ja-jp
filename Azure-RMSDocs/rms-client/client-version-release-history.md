@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/05/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5c3be398ea132d21b32e6337f44638d424ff71d
-ms.sourcegitcommit: 12848714f3c8d7a4761c28668e5809bf324c267a
+ms.openlocfilehash: 569b53a958ae90153133406141be15703ef92901
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692222"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563384"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -57,7 +57,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 2019/6/2、Azure Information Protection のラベル付け、サービスを開始するには、TLS 1.2 を使用する接続が必要です。
 
-1.4.21.0 からすべてのクライアント バージョンは、TLS 1.2 を 03/15/2017 サポートをリリースしました。 クライアント バージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0** TLS 1.2 を使用しないと、そのため、Azure Information Protection ポリシーをダウンロードできなくします。
+1\.4.21.0 からすべてのクライアント バージョンは、TLS 1.2 を 03/15/2017 サポートをリリースしました。 クライアント バージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0** TLS 1.2 を使用しないと、そのため、Azure Information Protection ポリシーをダウンロードできなくします。
 
 ### <a name="release-history"></a>リリース履歴
 
@@ -107,7 +107,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - 2 つの新しいアドバンスト、クライアントは、次のシナリオの analytics の設定。
     
     - Azure portal でコンテンツ一致を収集するチェック ボックスをオンにしてあるときに、ユーザーのサブセットについて情報の種類の一致が送信されないようにします。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - **データ検出**レポートをファイルには、機密情報が含まれるかどうかを表示します。 [詳細情報](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - **データ検出**レポートをファイルには、機密情報が含まれるかどうかを表示します。 [詳細情報](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **修正内容**:
 

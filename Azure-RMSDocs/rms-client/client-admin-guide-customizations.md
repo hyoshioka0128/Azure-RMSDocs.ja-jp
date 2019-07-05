@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/12/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 4ef4a0d07154da9cb4b4b34d3b55264fa44f5fdf
-ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
+ms.openlocfilehash: 13bc0ab4df8c07905149cfa6ef8417543415f4d2
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67028717"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563425"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -74,7 +74,7 @@ ms.locfileid: "67028717"
 |PullPolicy|[切断されたコンピューターのサポート](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[ユーザーの "問題の報告" を追加する](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[ドキュメント内の機密情報を検出する Azure Information Protection 分析を有効にする](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Azure Information Protection analytics へのドキュメントで検出された機密情報を送信を無効にします。](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -795,25 +795,25 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 ここで、ユーザーがこれらの Office ドキュメントのいずれかを開いて保存するときに、Azure Information Protection ポリシーに **[公開]** 、 **[全般]** 、または **[非常に機密性の高い社外秘]** の名前のラベルがあると、このいずれかにラベル付けされます。 これらの名前のラベルがない場合、ドキュメントはラベル付けされないままです。
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>ドキュメント内の機密情報を検出する Azure Information Protection の分析を有効にする
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Azure Information Protection analytics へのドキュメントで検出された機密情報を送信を無効にします。
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-[Azure Information Protection 分析](../reports-aip.md)では、Azure Information Protection クライアントによって保存された文書で、内容に機密情報が含まれていている文書を検出して報告できます。 既定では、この情報は Azure Information Protection 分析には送信されません。
+[Azure Information Protection analytics](../reports-aip.md)検出し、そのコンテンツには、機密情報が含まれている場合は、Azure Information Protection クライアントによって保存されたドキュメントを報告できます。 既定では、この情報は、Azure Information Protection クライアントによって (クラシック) analytics に送信 Azure Information Protection。
 
-この動作を、この情報が送信されるように変更するには、次の文字列を入力します。
+従来のクライアントでこの情報は送信しないように、この動作を変更するには、次の文字列を入力します。
 
 - キー:**RunAuditInformationTypeDiscovery**
 
-- 値: **True**
+- 値: **False**
 
-このクライアントの詳細設定を実行しなくても、Azure Information Protection クライアントから監査結果が送信されますが、情報は、ユーザーがラベル付けされたコンテンツにアクセスしたときの報告のみに限定されます。
+この高度なクライアント設定を設定すると、監査結果、従来のクライアントから送信されますが、情報は、ユーザーがアクセスするときにレポートに制限はコンテンツにラベル付けします。
 
 以下に例を示します。
 
-- これが設定されていない場合、**Confidential \ Sales** というラベル付きの Financial.docx にアクセスしたユーザーを確認できます。
+- この設定で、ユーザーがラベルがついた Financial.docx をアクセスを確認できます**社外秘 \ Sales**します。
 
-- これを設定した場合、Financial.docx に 6 つのクレジット カード番号が含まれていることを確認できます。
+- この設定がない Financial.docx が 6 のクレジット_カード番号が含まれているを確認できます。
     
     - [詳細な分析のためのコンテンツ一致](../reports-aip.md#content-matches-for-deeper-analysis)も有効にすると、これらのクレジット カードの番号も追加で確認できます。
 
