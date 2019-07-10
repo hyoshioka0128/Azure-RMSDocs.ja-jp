@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection の統合されたラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/05/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 560d954119c40ad3fd9dd99b4d9f1ef18fb88515
-ms.sourcegitcommit: 9c9ee62632bbb5d7151131da8b720b7c9bf2a8f1
+ms.openlocfilehash: 5ec1a6ab89fc1d4730254d9d22ee77f9c72ad60e
+ms.sourcegitcommit: 531feafbabd8874fbeac4bd460e9bef60afabcdc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67571858"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67691081"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection の統合されたラベル付けクライアントのカスタム構成
 
@@ -111,6 +111,8 @@ PowerShell のラベルのポリシー名を指定する*Identity*ラベルの�
 
 #### <a name="available-advanced-settings-for-label-policies"></a>ラベルのポリシーの詳細設定を利用可能
 
+使用して、 *AdvancedSettings*パラメーター[新規 LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps)と[セット LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps)します。
+
 |設定|シナリオと手順|
 |----------------|---------------|
 |AttachmentAction|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
@@ -140,6 +142,8 @@ PowerShell のラベルのポリシー名を指定する*Identity*ラベルの�
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>ラベルの使用可能な高度な設定
+
+使用して、 *AdvancedSettings*パラメーター[新規ラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps)と[セット ラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)。
 
 |設定|シナリオと手順|
 |----------------|---------------|
