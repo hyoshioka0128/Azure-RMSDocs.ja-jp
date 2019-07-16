@@ -4,18 +4,18 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/10/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0e18fe93045dec211f2bb400e32fc067ea9ac7
-ms.sourcegitcommit: 01209692397e73aec5c8f04f0ea8b54292b397d7
+ms.openlocfilehash: d07b862fc95815cad2b100b80c6f024c582263dc
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67816324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141646"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -68,9 +68,33 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
+## <a name="version-153100"></a>バージョン1.53.10.0
+
+**リリース日**: 07/15/2019
+
+このバージョンには、RMS クライアントの MSIPC バージョン1.0.3889.0419 が含まれています。
+
+**新機能:**
+
+- ポリシー設定から Outlook メッセージを除外する新しい高度なクライアント設定**すべてのドキュメントと電子メールにラベルを付ける必要があり**ます。 [詳細情報](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+
+- 新しい高度なクライアント設定。 Outlook でポップアップメッセージを実装する設定をカスタマイズして、送信される電子メールを警告、ブロック、またはブロックします。 この新しい詳細設定では、添付ファイルのない電子メールメッセージに対して別のアクションを設定できます。 [詳細情報](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+
+**修正内容**:
+
+- エクスプローラーを使用する場合、右クリックすると、保護がラベルとは別に適用されているファイルにラベルを付けることができます。 たとえば、ユーザーがファイルにカスタムアクセス許可を適用したとします。
+
+- 電子メールスレッドの [転送不可] オプションを、ユーザー定義のアクセス許可用に構成され、転送しないラベルに置き換えると、元の受信者は引き続き電子メールメッセージを開くことができます。
+
+- 次のシナリオでは、ラベルが自動的に設定されたことを示すラベルのツールヒントにユーザーが表示されなくなりました。ユーザーは、ラベルが付けられているが自動的に保護されていないドキュメントが添付された保護された電子メールを受信します。 差出人と同じ組織のユーザーがドキュメントを開くと、保護設定の対応するラベルがドキュメントに適用されます。
+
+- [Protect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile)コマンドレットを実行するための最小[使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)は、**コピー** (EXTRACT) ではなく **、名前を付けて保存、エクスポート**(エクスポート) されるようになりました。
+
 ## <a name="version-1482040"></a>バージョン1.48.204.0
 
 **リリース日**: 04/16/2019
+
+02/15/2020 でサポート
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 

@@ -4,19 +4,19 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: 9d579d6ad639445dbf6f52b8cd3245b01973adef
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545031"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229844"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -43,7 +43,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
     ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、 **[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」を参照してください。
     
-    保護されたドキュメントに対する完全なアクセス権限を求める正当な要求がある場合、ヘルプ デスクには Azure Rights Management の[スーパー ユーザー機能](configure-super-users.md)を使用してこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
+    保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection[スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
     また、ユーザーから報告される可能性がある典型的な問題には、以下のようなものがあります。
     
@@ -55,7 +55,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
         
     - **コンテンツの保護または使用に関する問題**
         
-        使用するアプリケーションに対する適切な指示をユーザーが受けていること、また、ユーザーが Azure Rights Management サービスでサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、次を参照してください。 [Azure Information Protection の要件](requirements.md)します。
+        使用するアプリケーションに対する適切な指示をユーザーが受けていること、また、ユーザーが Azure Rights Management サービスでサポートされているアプリケーションとデバイスを使用していることを確認します。 サポートされているアプリケーションとデバイスの詳細については、「 [Azure Information Protection の要件](requirements.md)」を参照してください。
         
         特定のユーザーまたはグループによる、保護されたコンテンツの保護や使用を Azure Active Directory によって承認できることを確認するには、[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)の検証チェックを使用します。
         
@@ -103,7 +103,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブ: **[アクセス許可]** > オプションを選択します。 以下に例を示します。 **[転送不可]** 、 **[\<会社名>- 社外秘]** 、 **[\<会社名> - 社外秘、表示のみ]** 。
+2.  **[オプション]** タブ: **[アクセス許可]** > オプションを選択します。 例えば: **[転送不可]** 、 **[\<会社名>- 社外秘]** 、 **[\<会社名> - 社外秘、表示のみ]** 。
 
 3.  メッセージを送信します。
 
@@ -115,7 +115,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、 **[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、 **[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 以下に例を示します。 **[暗号化]** または **[\<会社名> - 社外秘]** 。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、 **[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、 **[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 例えば: **[暗号化]** または **[\<会社名> - 社外秘]** 。
 
 3. メッセージを送信します。
 

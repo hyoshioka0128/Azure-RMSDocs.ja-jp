@@ -4,19 +4,19 @@ description: 法律、コンプライアンス、SLA を含む Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92f282a2cf785c82c87d3ffbe8b47317a1ca1956
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 05c2c97bf5a46cb29c64bcd432de2043a5d33ad3
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708839"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229912"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
@@ -32,7 +32,7 @@ Azure Information Protection は他のサービスをサポートし、また�
 
 - Azure Information Protection で使用されるすべての暗号化キーは RSA 2048 ビットを使用する顧客固有のルート キーを使用して保護されます。 RSA 1024 ビットも下位互換性用にサポートされています。 [詳細情報](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- 顧客固有のルート キーは Microsoft によって管理されるかを使用して、nCipher HSM の顧客によってプロビジョニングされた"[独自のキーを持ち込む](plan-implement-tenant-key.md)"(BYOK)。 Azure Information Protection は、クラウドベースのキーで保護すべきでないことを示す要件の影響を受けるコンテンツに対して "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) を使ってオンプレミスのキーの制限付き機能もサポートします。
+- 顧客固有のルートキーは、Microsoft によって管理されているか、"nCipher" キーを使用して、顧客によって "[独自のキーを持ち込む](plan-implement-tenant-key.md)" (byok) を使用してプロビジョニングされています。 Azure Information Protection は、クラウドベースのキーで保護すべきでないことを示す要件の影響を受けるコンテンツに対して "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) を使ってオンプレミスのキーの制限付き機能もサポートします。
 
 - Azure Information Protection サービスは世界中のリージョンのデータ センターでホストされています。 Azure Information Protection のキーとポリシーは常に最初にデプロイされたリージョン内に保持されます。
  
@@ -40,9 +40,9 @@ Azure Information Protection は他のサービスをサポートし、また�
 
 ## <a name="legal-and-privacy"></a>法律およびプライバシー
 
-- Microsoft Azure の契約情報について。[Microsoft Azure 契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Microsoft Azure 契約情報の場合:[Microsoft Azure 契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Microsoft Azure のプライバシー情報について。[Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Microsoft Azure のプライバシー情報:[Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>セキュリティ、コンプライアンス、監査
 
@@ -50,7 +50,7 @@ Azure Rights Management サービスの特定の認証についての情報に�
 
 - Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](https://azure.microsoft.com/support/trust-center/)
 
-- FIPS 140 について。[FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
+- FIPS 140 情報の場合:[FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 保護テクノロジのしくみに関する詳細な技術情報については、「[Azure RMS の機能の詳細](./how-does-it-work.md)」を参照してください。 
 

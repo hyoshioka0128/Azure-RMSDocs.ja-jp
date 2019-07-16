@@ -4,7 +4,7 @@ description: iOS 用および Android 用の Azure Information Protection アプ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7694cf898651eee45e64d2319e1527f07e5fa5de
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 5419488303aa3f1c031c09660dd346cc4dc28b65
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156624"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229822"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
@@ -55,7 +55,7 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>このアプリにサインインするにはどのような資格情報を使用する必要がありますか?
 
-組織が既に (モバイル デバイス拡張機能と共に) オンプレミスの AD RMS を所有している、または Azure Rights Management サービスを使用している場合は、自分の作業資格情報を使用してサインインします。 
+組織が既にオンプレミスの AD RMS (モバイルデバイス拡張機能を使用) している場合、または Azure Information Protection を使用している場合は、職場の資格情報を使用してサインインします。 
 
 ファイルの保護に個人の電子メール アドレスが使用されている場合は、無料の [Microsoft アカウント](https://signup.live.com)の資格情報を使用してサインインします。
 
@@ -69,7 +69,7 @@ Azure Information Protection アプリには、**iOS 8** 以降または **Andro
 
 .rpmsg、.pdf、.ppdf、.pjpg、.pjpeg、.ptiff、.ppng、.ptxt、.pxml などのテキストと画像ファイル形式を開くことができます。
 
-テキストと画像ファイルの拡張子一覧については、管理者ガイドの「[分類と保護がサポートされているファイルの種類](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)」に記載されている最初の表を参照してください。
+テキストと画像ファイルの拡張子一覧については、管理者ガイドの「[分類と保護がサポートされているファイルの種類](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)」に記載されている最初の表を参照してください。
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>このアプリに関するフィードバックを提供する方法
 
