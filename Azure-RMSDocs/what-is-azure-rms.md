@@ -1,5 +1,5 @@
 ---
-title: Azure Rights Management の保護 - AIP の概要
+title: Azure Rights Management protection の概要-AIP
 description: Azure Information Protection が使用する保護テクノロジである Azure Rights Management (Azure RMS) に関する情報。
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42e4f575b310b8cb802d982e25ad021cf2445e13
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+search.appverid:
+- MET150
+ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885602"
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Active Directory Rights Management の概要
 
@@ -47,7 +49,7 @@ Azure Rights Management (多くの場合は Azure RMS に省略して表現) と
 |--------------------------|-----------------------|
 |複数のファイルの種類を保護する|√ 初期の Rights Management の実装では、Rights Management のネイティブな保護を使って、Office ファイルのみを保護できました。 現在の**汎用的な保護**は、さらに多くの[ファイルの種類](./rms-client/client-admin-guide-file-types.md)がサポートされることを意味します。汎用的な保護は、Rights Management 共有アプリケーションによって最初に提供され、現在は Azure Information Protection クライアントによって提供されています。|
 |あらゆる場所のファイルを保護する|√ ファイルが[保護](./rms-client/client-classify-protect.md)されると、クラウド ストレージ サービスなど、IT の制御下にないストレージにファイルが保存またはコピーされる場合でも、その保護は維持されます。|
-|情報を安全に共有する|√ [保護された](./rms-client/client-classify-protect.md)ファイルは、他のユーザーと安全に共有できます  (例: メールの添付ファイル、SharePoint サイトへのリンク)。 機密情報がメール メッセージ内にある場合は、メールを保護するか、または単に Outlook の [転送不可] オプションを使うことができます。 <br /><br />メール メッセージ全体を保護するのではなく、保護されたファイルを添付する利点は、メールのテキストが暗号化されないため、組織外にメールを送る場合に、初めて使うときの説明をメールに含めることができることです。 説明を読むことは誰でもできますが、添付されたドキュメントは保護されているので、メールまたはドキュメントが他の人に転送されたとしても、承認されているユーザーだけがドキュメントを開くことができます。|
+|情報を安全に共有する|√ [保護された](./rms-client/client-classify-protect.md)ファイルは、他のユーザーと安全に共有できます (例: メールの添付ファイル、SharePoint サイトへのリンク)。 機密情報がメール メッセージ内にある場合は、メールを保護するか、または単に Outlook の [転送不可] オプションを使うことができます。 <br /><br />メール メッセージ全体を保護するのではなく、保護されたファイルを添付する利点は、メールのテキストが暗号化されないため、組織外にメールを送る場合に、初めて使うときの説明をメールに含めることができることです。 説明を読むことは誰でもできますが、添付されたドキュメントは保護されているので、メールまたはドキュメントが他の人に転送されたとしても、承認されているユーザーだけがドキュメントを開くことができます。|
 |監査と監視|√ 保護されたファイルが組織外部に出た後も、ファイルの[使用状況を監査および監視](log-analyze-usage.md)できます。<br /><br />たとえば、Contoso, Ltd の社員がFabrikam, Inc. の 3 人の社員と共同プロジェクトに携わっていて、読み取り専用の保護ドキュメントをこの 3 人に電子メールで送信するものとします。 Azure Rights Management の監査機能では次の情報を提供できます。<br /><br />- Fabrikam 社内の指定されたユーザーがドキュメントを開いたかどうか、および開いた日時。<br /><br />- ドキュメントが転送されたり他のユーザーがアクセスできる共有場所に保存されたりして、指定外のユーザーがドキュメントを開こうとしたかどうか (試みは失敗します)。<br /><br />- 指定されたユーザーがドキュメントを印刷または変更しようとしたかどうか (試みは失敗します)。<br /><br />さらに、[ドキュメント追跡サイト](./rms-client/client-track-revoke.md)を使うと、ユーザーや管理者は、保護されたドキュメントを追跡でき、必要な場合は、ドキュメントへのアクセスを取り消すことができます。|
 |Windows コンピューターに限らず、広く使われているデバイスをサポートする|√ [サポートされるデバイス](./requirements-client-devices.md)には次のものが含まれます。<br /><br />- Windows コンピューターと携帯電話<br /><br />- Mac コンピューター<br /><br />- iOS タブレットと携帯電話<br /><br />- Android タブレットと携帯電話|
 |企業間のコラボレーションをサポートする|√ Azure Rights Management はクラウド サービスであるため、保護されたコンテンツを他の組織と共有する前に、信頼関係を明示的に構成する必要がありません。 相手組織が Office 365 または Azure AD ディレクトリを既に導入している場合、組織間のコラボレーションは自動的にサポートされます。 そうでない場合、ユーザーは無料の[個人向け RMS](rms-for-individuals.md) サブスクリプションにサインアップするか、[Azure Information Protection への認証をサポートしているアプリケーション](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)用に Microsoft アカウントを使用することができます。|
@@ -65,7 +67,7 @@ Azure Rights Management では、セキュリティ、コンプライアンス�
 
 √ 業界標準の暗号化を使用し、FIPS 140-2 をサポートします。 詳細については、「[Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」の情報を参照してください。
 
-√ nCipher nShield ハードウェア セキュリティ モジュール (HSM) を Microsoft Azure データ、テナント キーを格納するサポート センターします。 自社の地域でのみキーを使用できるように、Azure Rights Management では北米、EMEA (ヨーロッパ、中東、およびアフリカ)、およびアジアのデータ センターで独立したセキュリティ ワールドを使っています。
+テナントキーを Microsoft Azure データセンターに格納するための nCipher nShield ハードウェアセキュリティモジュール (HSM) のサポートを√。 自社の地域でのみキーを使用できるように、Azure Rights Management では北米、EMEA (ヨーロッパ、中東、およびアフリカ)、およびアジアのデータ センターで独立したセキュリティ ワールドを使っています。
 
 √ 次の認定を受けています。
 
