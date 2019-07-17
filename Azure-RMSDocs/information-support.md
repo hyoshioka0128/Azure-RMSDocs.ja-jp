@@ -1,5 +1,5 @@
 ---
-title: 情報と Azure Information Protection - AIP のサポート
+title: Azure Information Protection AIP の情報 & サポート
 description: 新しいリリース、サポート オプション、および Microsoft に連絡して問題を報告する方法などの情報を含む、管理者向けリソース。
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a80ec942197cb9502fcddbe38190d4e874575825
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+search.appverid:
+- MET150
+ms.openlocfilehash: 28057fb2697855afc7028292f19b2a344635a52c
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885504"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -36,17 +38,17 @@ ms.locfileid: "64982118"
 
 ## <a name="information-about-new-releases-and-updates"></a>新しいリリースと更新プログラムに関する情報
 
-Azure Information Protection の正式なロードマップは現在、 [Microsoft 365 ロードマップ](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent)します。
+Azure Information Protection の公式ロードマップは、Microsoft 365 の[ロードマップ](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent)にあります。
 
 Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://msip.uservoice.com)で要求された機能の状態をチェックすることも役立つ場合があります。
 
 追加情報および詳細情報については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)を参照してください。 
 
-## <a name="whats-new-in-the-documentation"></a>新機能については、ドキュメントです。
+## <a name="whats-new-in-the-documentation"></a>ドキュメントの新機能
 
-Azure Information Protection テクニカル ブログがありますの概要[ドキュメント変更の 1 か月あたり](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)します。 これらの変更には、新しいリリースでは、ステートメント、およびも修正をサポートするために変更の新規および更新されたドキュメントと、既存リリースの説明を含めることができます。
+Azure Information Protection テクニカルブログには、[毎月のドキュメント変更](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)の概要も記載されています。 これらの変更には、新しいリリースの新しいドキュメントや更新されたドキュメント、サポートステートメントの変更、および既存のリリースの修正と説明が含まれます。
 
-このようなドキュメントの更新の投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>**"。
+このようなドキュメントの更新の投稿には次のタイトルが付けられます: "**Azure Information Protection ドキュメント更新 – \<年、月>** "。
 
 ## <a name="support-options-and-community-resources"></a>サポート オプションとコミュニティ リソース
 以降のセクションでは、サポートおよびトラブルシューティングのオプションとコミュニティ リソースに関する情報を提供します。
@@ -61,9 +63,9 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 |サブスクリプション|手順|
 |----------------|---------------|
-|Azure Information Protection (スタンドアロン)|1.Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2.要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - included]\(テクニカル サポート - 含む\)**: Azure のサブスクリプションがない場合、このオプションが表示されます。|
+|Azure Information Protection (スタンドアロン)|1. Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2. 要求されたら、 **[基本]** ブレードで、 **[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - included]\(テクニカル サポート - 含む\)** : Azure のサブスクリプションがない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Microsoft 365 管理センターによるサポートへの問い合わせ方法、および連絡先電話番号については、「[ビジネス製品についてサポートに問い合わせる - 管理者ヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
-|Azure Information Protection と Enterprise Mobility + Security (EMS)|1.Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2.要求されたら、**[基本]** ブレードで、**[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - included]\(テクニカル サポート - 含む\)**: Azure のサブスクリプションがない場合、このオプションが表示されます。|
+|Azure Information Protection と Enterprise Mobility + Security (EMS)|1. Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2. 要求されたら、 **[基本]** ブレードで、 **[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のオプションのいずれかが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - included]\(テクニカル サポート - 含む\)** : Azure のサブスクリプションがない場合、このオプションが表示されます。|
 |Azure Information Protection と Microsoft 365 Enterprise|[Office 365 サポート チャネル](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) をご利用いただけます。|
 
 その他のサポート オプションについては、Microsoft 連絡先担当者にお問い合わせください。 
@@ -75,7 +77,7 @@ Premier サポートをご利用の場合は、[Premier サポートのお客様
 
 オンデマンド ビデオ:
 
-- Tech Community のウェビナーの録画[Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014)します。
+- [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014)のための Tech Community 記録されたウェビナー。
 
 - [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) の Microsoft Ignite 2018 セッション:
     
