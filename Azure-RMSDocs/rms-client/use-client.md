@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 75d95df5017c440c06f58c22f59ecad68fc1a4b7
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: ff8f69469cb7c86868db283aca8586c99b437179
+ms.sourcegitcommit: 433787223074973cae4fcfbe9cd85f46c019cd78
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141550"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246851"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -55,7 +55,7 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 
 - ユーザーのサブセットでは、従来のクライアントを展開します。これらのユーザーには、独自のキーの保持 (HYOK) 保護を適用するラベルが必要なためです。
     
-    これらのユーザーには、MacOS、iOS、および Android を実行するデバイスも含まれており、これらのデバイスには、機密ラベルをサポートするバージョンの Office がインストールされている場合、エクスペリエンスは若干異なります。 たとえば、Office リボンの **[秘密度]** ボタンではなく、 **[保護]** ボタンが表示されます。 その他の違いについては、次の表を参照してください。
+    これらのユーザーには、MacOS、iOS、および Android を実行するデバイスも含まれており、これらのデバイスには、機密ラベルをサポートするバージョンの Office がインストールされている場合、エクスペリエンスは若干異なります。 たとえば、Office リボンの **[秘密度]** ボタンではなく、 **[保護]** ボタンが表示されます。 従来のクライアントと、統一されたラベル付けクライアントの違いについては、次の表を参照してください。
 
 - 機密情報のスキャンや分類、保護が必要なドキュメントを含むオンプレミスのデータストアがある。 クラシッククライアントをサーバーに展開し、Azure Information Protection スキャナーを実行します。
 
