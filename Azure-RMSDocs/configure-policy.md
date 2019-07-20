@@ -3,7 +3,7 @@ title: Azure Information Protection ポリシーを構成する - AIP
 description: 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-ms.date: 06/08/2019
+ms.date: 07/19/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5ea4991281905b174b0ae70537d5953d60268dbf
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815577"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340555"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -66,14 +66,14 @@ Azure Portal にサインインするには、Azure Information Protection を�
     
   - **コンプライアンス管理者**
     
-  - **コンプライアンス データの管理者**
+  - **コンプライアンスデータ管理者**
     
   - **セキュリティ管理者**
     
   - **グローバル管理者**
     
     > [!NOTE] 
-    > 統合のラベル付けのストアに、テナントが移行された場合、Azure Information Protection 管理者 (旧称「Information Protection 管理者」) はサポートされていません。 [詳細情報](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > テナントが統合ラベルストアに移行されている場合、Azure Information Protection 管理者 (旧称 "Information Protection administrator") はサポートされなくなりました。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
@@ -95,7 +95,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
-1. 次のいずれかの管理者ロールを使用して、Azure portal にサインインしていることを確認します:Azure Information Protection 管理者、セキュリティ管理者、またはグローバル管理します。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
+1. 次のいずれかの管理者ロールを使用して、Azure portal にサインインしていることを確認します:Azure Information Protection 管理者、セキュリティ管理者、またはグローバル管理。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
 
 2. 必要に応じて、 **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から **[Azure Information Protection]** を選択します。 
     
@@ -108,7 +108,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 任意の数のラベルを作成できます。 ただし、多すぎて正しいラベルを発見して選択する作業が困難になるとき、スコープ ポリシーを作成し、あるユーザーに関連するラベルのみがそのユーザーに表示されるようにします。 保護を適用するラベルには 500 という上限があります。
 
-[Azure Information Protection] ブレードで変更を行ったら、 **[保存]** をクリックして変更を保存します。または、 **[破棄]** をクリックして、最後に保存した設定に戻します。 ポリシーでは、変更を保存するか、ポリシーに追加されるラベルを変更すると、ときに、これらの変更が自動的に発行します。 独立した公開オプションはありません。
+[Azure Information Protection] ブレードで変更を行ったら、 **[保存]** をクリックして変更を保存します。または、 **[破棄]** をクリックして、最後に保存した設定に戻します。 ポリシーに変更を保存したり、ポリシーに追加されたラベルを変更したりすると、それらの変更は自動的に発行されます。 独立した公開オプションはありません。
 
 Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する最新の Azure Information Protection ポリシーに変更をダウンロードします。 ポリシーをクライアントに更新するトリガーには、他に次のものがあります。
 
@@ -162,7 +162,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - Word 文書 (.doc、.docx)、Excel スプレッドシート (.xls、.xlsx)、PowerPoint プレゼンテーション (.ppt、.pptx)、PDF ドキュメントの場合、このメタデータは次のカスタム プロパティに格納されます:**MSIP_Label_\<GUID>_Enabled=True** に格納されます。  
 
-メールの電子メールが送信されるときに、ラベル情報が格納されます。 ドキュメントについては、ファイルを保存するときに、ラベル情報が格納されます。 
+電子メールの場合は、電子メールの送信時にラベル情報が保存されます。 ドキュメントについては、ファイルの保存時にラベル情報が保存されます。 
 
 ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の **[ラベル]** ブレード上の [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 

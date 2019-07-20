@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 3dfc29a45425bbe811093874f22972a6a53b6283
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: 7a20eba01a57a0c09dd24c88834d0d5b6cb53198
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141709"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352869"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -306,7 +306,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 - **電子メール、または電子メールの添付ファイルにラベルがない**:
     - 添付ファイルは Office ドキュメントまたは PDF ドキュメントである可能性がある
 
-これらの条件が満たされ、指定した許可されるドメイン名の一覧に受信者の電子メール アドレスが含まれていない場合は、ユーザーに対して次のいずれかのアクションのポップアップ メッセージが表示されます。
+これらの条件が満たされると、ユーザーには次のいずれかの操作でポップアップメッセージが表示されます。
 
 - **警告**: ユーザーは確認して電子メールを送信またはキャンセルできます。
 
@@ -314,7 +314,9 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 - **[ブロック]** : 条件が満たされている間、ユーザーは電子メールを送信できなくなります。 メッセージには、ユーザーが問題に対処できるように、電子メールをブロックする理由が含まれます。 たとえば、特定の受信者を削除する、電子メールにラベルを付けるなどです。 
 
-結果としてアクションは、ローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Azure Information Protection]** に記録されます。
+ポップアップメッセージが特定のラベルに対して実行されている場合は、ドメイン名を使用して受信者の例外を構成できます。
+
+ポップアップメッセージの結果のアクションは、ローカルの Windows イベントログの**アプリケーションとサービスログ** > **Azure Information Protection**に記録されます。
 
 - 警告メッセージ: 情報 ID 301
 
@@ -325,7 +327,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 理由メッセージからのイベント エントリの例:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -364,6 +366,35 @@ User Response: Confirmed
     
     - 値: \<**コンマ区切りのラベル ID**>
 
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>特定のラベル用に構成されたポップアップメッセージのドメイン名を除外するには
+
+これらのポップアップメッセージで指定したラベルについては、特定のドメイン名を除外して、そのドメイン名が電子メールアドレスに含まれている受信者のメッセージがユーザーに表示されないようにすることができます。 この場合、電子メールは中断なく送信されます。 複数のドメインを指定するには、ドメインをコンマで区切って 1 つの文字列として追加します。
+
+一般的な構成では、組織の外部の受信者、または組織の承認済みのパートナーではない受信者についてのみ、ポップアップ メッセージが表示されます。 この場合は、お客様の組織およびパートナーによって使用されるすべての電子メール ドメインを指定します。
+
+次のクライアントの詳細設定を作成し、値として1つ以上のドメインをコンマで区切って指定します。
+
+コンマ区切り文字列としての複数のドメインの値の例: `contoso.com,fabrikam.com,litware.com`
+
+- 警告メッセージ:
+    
+    - 重要:**OutlookWarnTrustedDomains**
+    
+    - 値: **\<** コンマ区切りのドメイン名 **>**
+
+- 理由の入力メッセージ:
+    
+    - 重要:**Outlookジャスト Ifytrusteddomains**
+    
+    - 値: **\<** コンマ区切りのドメイン名 **>**
+
+- ブロック メッセージ:
+    
+    - 重要:**OutlookBlockTrustedDomains**
+    
+    - 値: **\<** コンマ区切りのドメイン名 **>**
+
+たとえば、 **[社外秘 \ すべての従業員]** ラベルに対して**OutlookBlockUntrustedCollaborationLabel**アドバンストクライアント設定を指定したとします。 ここで、 **Outlookblocktrusteddomains**と**contoso.com**の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" john@sales.contoso.com **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>ラベルのない電子メールまたは添付ファイルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
@@ -438,37 +469,6 @@ User Response: Confirmed
 
 このクライアント設定を指定しない場合は、OutlookUnlabeledCollaborationAction に指定した値が、添付ファイルのない電子メールメッセージと、添付ファイルを含むラベルなしの電子メールメッセージに使用されます。
 
-### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>ポップアップ メッセージの対象外の受信者について、許可されるドメイン名を指定するには
-
-追加のアドバンストクライアント設定でドメイン名を指定した場合、そのドメイン名が電子メールアドレスに含まれている受信者のポップアップメッセージは表示されません。 この場合、電子メールは中断なく送信されます。 複数のドメインを指定するには、ドメインをコンマで区切って 1 つの文字列として追加します。
-
-一般的な構成では、組織の外部の受信者、または組織の承認済みのパートナーではない受信者についてのみ、ポップアップ メッセージが表示されます。 この場合は、お客様の組織およびパートナーによって使用されるすべての電子メール ドメインを指定します。
-
-次のクライアントの詳細設定を作成し、値として1つ以上のドメインをコンマで区切って指定します。
-
-コンマ区切り文字列としての複数のドメインの値の例: `contoso.com,fabrikam.com,litware.com`
-
-- 警告メッセージ:
-    
-    - 重要:**OutlookWarnTrustedDomains**
-    
-    - 値: **\<** コンマ区切りのドメイン名 **>**
-
-- 理由の入力メッセージ:
-    
-    - 重要:**Outlookジャスト Ifytrusteddomains**
-    
-    - 値: **\<** コンマ区切りのドメイン名 **>**
-
-- ブロック メッセージ:
-    
-    - 重要:**OutlookBlockTrustedDomains**
-    
-    - 値: **\<** コンマ区切りのドメイン名 **>**
-
-たとえば、contoso.com の電子メールアドレスを持つユーザーに送信された電子メールをブロックしないようにするには、 **Outlook Blocktrusteddomains**と**contoso.com**のアドバンストクライアント設定を指定します。 その結果、ユーザーがに電子メールをjohn@sales.contoso.com送信したときに、Outlook で警告ポップアップメッセージが表示されません。
-
-
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
 
@@ -502,9 +502,9 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 - `Sign;Encrypt`:デジタル署名と S/MIME 暗号化を適用する
 
-- `Encrypt` :S/MIME 暗号化のみを適用する
+- `Encrypt`:S/MIME 暗号化のみを適用する
 
-- `Sign` :デジタル署名のみを適用する
+- `Sign`:デジタル署名のみを適用する
 
 **dcf781ba-727f-4860-b3c1-73479e31912b** のラベル ID の値の例:
 
