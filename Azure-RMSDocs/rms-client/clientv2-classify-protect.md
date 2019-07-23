@@ -1,26 +1,26 @@
 ---
-title: 分類し、保護 - Azure Information Protection クライアントのラベル付けを統合します。
-description: 分類して、Azure Information Protection を使用すると、ドキュメントや電子メールを保護する方法は、Windows 用のラベル付けのクライアントを統合する手順です。
+title: '& 保護を分類する-Azure Information Protection の統一されたラベル付けクライアント'
+description: Windows 用の Azure Information Protection 統合ラベル付けクライアントを使用するときに、ドキュメントと電子メールを分類して保護する方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 0ea7ce8fc589b6546210e3cc6ee31b12c83d56de
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 5202d56476faeb820fab0c6adef31e6cc161a099
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236957"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375489"
 ---
-# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: 分類および Azure Information Protection の統合されたラベル付けクライアントと保護
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: Azure Information Protection の統合ラベル付けクライアントを使用して分類および保護する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](clientv2-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
@@ -39,38 +39,38 @@ ms.locfileid: "67236957"
 
 たとえば、別の組織内のユーザーと定期的に情報をやりとりをする場合は、それらのユーザーが保護されたドキュメントを読み取って使用できるように、管理者が保護を設定するラベルを構成している可能性があります。 その後、それらのラベルを選択し、共有するドキュメントを分類して保護します。
 
-また、外部のユーザーがいる場合[企業間取引 (B2B) アカウント](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b)使用できますに作成、[カスタム アクセス許可を設定するファイル エクスプ ローラー](#using-file-explorer-to-classify-and-protect-files)共有する前に、ドキュメントの。 カスタム アクセス許可を設定し、内部利用向けにドキュメントが既に保護されている場合、まずそのファイルのコピーを作成して、元のアクセス許可を保持します。 次に、そのコピーを使用してカスタム アクセス許可を設定します。
+また、外部ユーザーに対して作成された[企業間 (B2B) アカウント](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b)がある場合は、ファイルエクスプローラーを使用してドキュメントを共有する前に[カスタムアクセス許可を設定する](#using-file-explorer-to-classify-and-protect-files)こともできます。 カスタム アクセス許可を設定し、内部利用向けにドキュメントが既に保護されている場合、まずそのファイルのコピーを作成して、元のアクセス許可を保持します。 次に、そのコピーを使用してカスタム アクセス許可を設定します。
 
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
-**ホーム**] タブで、[、**感度**リボンのボタンをクリックし、いずれかが構成されているラベルを選択します。 以下に例を示します。
+**[ホーム]** タブで、リボンの **[感度]** ボタンを選択し、構成されているラベルのいずれかを選択します。 例えば:
 
 ![感度ボタンの例](../media/sensitivity-not-set-callout.png)
 
-または、選択した場合に**バーを表示する**から、**感度**ボタン、Azure Information Protection バーからラベルを選択することができます。 以下に例を示します。
+または、 **[感度]** ボタンから **[バーの表示]** を選択した場合は、Azure Information Protection バーからラベルを選択できます。 例えば:
 
 ![Azure Information Protection バーの例](../media/info-protect-barv2-not-set-callout.png)
 
-などのラベルを設定する"**社外秘** \ **すべての従業員**"を選択します**社外秘**し**すべての従業員**します。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。
+"**社外秘** \ **すべての従業員**" などのラベルを設定するには、 **[社外秘]** 、 **[すべての従業員]** の順に選択します。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。
 
-ラベルがドキュメントに既に適用され、ラベルを変更する場合は、別のラベルを選択できます。 Azure Information Protection バーを表示して、ラベルが、バーを選択して、最初に表示されていない場合、**ラベルの編集**アイコンは、現在のラベル値の横にあります。
+ラベルがドキュメントに既に適用され、ラベルを変更する場合は、別のラベルを選択できます。 Azure Information Protection バーが表示されていて、選択できるバーにラベルが表示されていない場合は、まず、現在のラベルの値の横にある **[ラベルの編集]** アイコンをクリックします。
 
 ラベルの手動選択に加え、次の方法でラベルを適用することもできます。
 
 - 管理者が既定のラベルを構成済み。そのまま使用するか、変更することができます。
 
-- 管理者は、機密情報が検出されたときに自動的に設定するラベルを構成します。
+- 機密情報が検出されたときに、管理者がラベルを自動的に設定するように構成しました。
 
-- 管理者が構成済みの機密情報が検出されると、および推奨事項に同意するように求められます (とラベルが適用されるキーを押す)、ラベルが推奨されるか、拒否 (推奨されたラベルは適用されません)。
+- 管理者は、機密情報が検出されたときに推奨ラベルを構成し、推奨事項 (およびラベルが適用されます) を受け入れるか、拒否するかを確認するメッセージが表示されます (推奨ラベルは適用されません)。
 
-### <a name="exceptions-for-the-sensitivity-button"></a>感度ボタンの例外
+### <a name="exceptions-for-the-sensitivity-button"></a>[秘密度] ボタンの例外
 
-##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Office アプリでの感度ボタンが表示されない場合
+##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Office アプリで [秘密度] ボタンが表示されない場合は、
 
-- Azure Information Protection の統合されたラベル付けクライアントがない[インストール](install-unifiedlabelingclient-app.md)します。
+- Azure Information Protection 統合ラベルクライアントが[インストールさ](install-unifiedlabelingclient-app.md)れていない可能性があります。
 
-- 表示されない場合、**感度**リボンのボタンしますが、表示、**保護**代わりにラベルが付いたボタンをクリックする必要があります、Azure Information Protection クライアントのインストールと Azure Information Protection ではありません統一されたラベル付けクライアント。 [詳細情報](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- リボンに **[秘密度]** ボタンが表示されていない場合でも、ラベル付きの **[保護]** ボタンが表示されている場合は、Azure Information Protection クライアントがインストールされており、Azure Information Protection 統合ラベル付けクライアントではありません。 [詳細情報](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
  
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>表示されるはずのラベルが表示されない場合 
 
@@ -89,7 +89,7 @@ ms.locfileid: "67236957"
 
 電子メールで Office ドキュメントを共有するとき、保護しているメールにドキュメントを添付できます。メールに適用されているものと同じ制約でドキュメントが自動的に保護されます。 
 
-ただし、最初に、ドキュメントを保護するため、電子メールに添付したい場合があります。 メール メッセージに機密情報が含まれている場合、メールも保護します。 電子メールに添付する前に文書の保護の利点:
+ただし、まずドキュメントを保護し、次に電子メールに添付することもできます。 メール メッセージに機密情報が含まれている場合、メールも保護します。 電子メールに添付する前にドキュメントを保護することの利点は次のとおりです。
 
 - メール メッセージとは異なるアクセス許可をドキュメントに適用できます。
 
@@ -103,22 +103,22 @@ ms.locfileid: "67236957"
 
 一部のファイルは、変更すると PC が動作しなくなる可能性があるため、分類と保護の対象から自動的に除外されます。 これらのファイルを選択することはできますが、除外されるフォルダーまたはファイルとしてスキップされます。 たとえば、実行可能ファイルや Windows フォルダーが含まれます。
 
-管理者ガイドには、サポートされるファイルの種類と自動的に除外されるファイルとフォルダーの詳細な一覧が記載されています。[ファイルの種類の Azure Information Protection の統合されたラベル付けクライアントでサポートされている](clientv2-admin-guide-file-types.md)します。
+管理者ガイドには、サポートされるファイルの種類と自動的に除外されるファイルとフォルダーの詳細な一覧が記載されています。[Azure Information Protection 統合ラベル付けクライアントによってサポートされるファイルの種類](clientv2-admin-guide-file-types.md)。
 
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類および保護するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 以下に例を示します。
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 例えば:
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 以下に例を示します。
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルでは分類がサポートされていませんが、カスタム アクセス許可で保護できます (手順 3)。 例えば:
 
      ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/v2info-protect-dialog-labels-dimmed.png)
 
-3. ことができます独自の保護設定を指定ではなく、管理者が含まれている保護設定を使用して、選択したラベル。 この操作を行うには、 **[カスタム アクセス許可で保護する]** 選択します。
+3. 選択したラベルに管理者が含めた保護設定を使用するのではなく、独自の保護設定を指定できます。 この操作を行うには、 **[カスタム アクセス許可で保護する]** 選択します。
     
     指定したカスタムのアクセス許可は、選択したラベルに対して管理者から定義されている保護設定を補足するのではなく、この設定に置き換わります。  
 
@@ -130,13 +130,13 @@ ms.locfileid: "67236957"
     
      あるいは、アドレス帳アイコンを使用して、Outlook のアドレス帳からユーザーまたはグループを選択できます。
         
-    - **アクセスの有効期限**: 指定されたユーザーが日付を設定した後、選択したファイルまたはファイルを開くことができませんように時間を区別するファイルに対してのみこのオプションを選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
+    - **アクセスの有効期限**: このオプションは、指定したユーザーが、設定した日付の後に選択したファイルを開くことができないように、時間を区別するファイルに対してのみ選択します。 自分は元のファイルを引き続き開くことができますが、(現在のタイム ゾーンで) 設定した日の深夜を過ぎた後は、他のユーザーはファイルを開くことができなくなります。
     
      この設定を Office 2010 アプリのカスタム アクセス許可を使用して構成していた場合、指定した有効期限の日付はこのダイアログ ボックスには表示されませんが、有効期限は依然として有効です。 これは Office 2010 で有効期限を構成していた場合にのみ発生する表示上の問題です。
 
 5. **[適用]** をクリックし、 **"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
 
-選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 以下に例を示します。
+選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 例えば:
 
 ![Azure Information Protection のロック アイコンが付いた保護されたファイル](../media/Pfile.png)
 
@@ -145,10 +145,10 @@ ms.locfileid: "67236957"
 ファイルを電子メールで送信したり、別の場所に保存した場合にも、指定した分類と保護はファイルに設定されたままです。 
 
 ## <a name="other-instructions"></a>その他の手順
-Azure Information Protection の統合されたラベル付けクライアントのユーザーからの複数の操作手順を紹介します。
+Azure Information Protection 統合されたラベル付けクライアントのユーザーガイドの詳細な手順については、次を参照してください。
 
 -   [目的に合ったトピックをクリックしてください](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 
-参照してください[機密ラベルの概要](/Office365/SecurityCompliance/sensitivity-labels)します。
+「[秘密度ラベルの概要」を](/Office365/SecurityCompliance/sensitivity-labels)参照してください。

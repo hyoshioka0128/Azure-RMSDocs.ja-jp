@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9ff328584f76d89e1bbbc350a1ce0161633907b
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.openlocfilehash: 8625dfa874e05bb69ba5e0458a7283bd8e8651ba
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229874"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375449"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
@@ -65,6 +65,9 @@ Azure Information Protection は、テナント キーのサイズが 2048 ビ�
 ## <a name="next-steps"></a>次の手順
 デバイスのサポートや最小バージョンなど、Azure Information Protection を使用するための要件の詳細については、「 [Azure Information Protection の要件](requirements.md)」を参照してください。
 
-AD RMS から Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
+AD RMS から Azure Information Protection に移行する場合は、「 [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。
 
+次の Faq をご確認ください。
+- [Azure Information Protection と Microsoft Information Protection の違いは何ですか。](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+- [Azure Information Protection と Azure Rights Management の違いは何ですか。](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
 

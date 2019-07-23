@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fc76b7da1f687ab9876a6831539bf515df59aea1
-ms.sourcegitcommit: 9221a0a9f3862739446b9027931a05023e0d5fc3
+ms.openlocfilehash: 4b70be66db156dc92f57aaf0cc9ba3ce2413dd65
+ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68286996"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387392"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -81,7 +81,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows Server 2008 R2 
 
-クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)(winword.exe、excel.exe、outlook.exe、powerpoint .exe) と、統合された Azure Information Protection の実行可能ファイルを無効にする必要がある場合があります。クライアントまたは Azure Information Protection クライアント (msip .exe、msip) にラベルを付ける。
+クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)(winword.exe、excel.exe、outlook.exe、powerpnt.exe) と、統合された Azure Information Protection の実行可能ファイルを無効にする必要がある場合があります。クライアントまたは Azure Information Protection クライアント (msip .exe、msip) にラベルを付ける。
 
 一覧表示されているサーバーバージョンでは、Azure Information Protection クライアントがリモートデスクトップサービスでサポートされています。 リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect**フォルダーを削除しないでください。
 

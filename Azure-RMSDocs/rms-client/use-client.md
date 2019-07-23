@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: e4746246c13ece385cd19f9ace8422ae6210132f
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: 531cd6fed4974435edcf5fd9d7afb12b09e0a61b
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352864"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375469"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -68,21 +68,20 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 |ラベル付けアクション:手動、推奨、自動| [はい] | [はい] |
 |中央レポート機能 (分析):| [はい] | [はい] |
 |ラベルの多言語サポート:| [はい] | [はい] |
-|設定のリセットとログのエクスポート:| [はい] | [はい] |
-|ユーザー定義のアクセス許可:| [はい] | はい (制限あり): <br /><br />-Outlook の場合のみ (転送不可):Supported<br /><br />-Word、Excel、PowerPoint、エクスプローラーの場合:Azure portal でラベルを構成するときにサポートされます。 |
+|メールの添付ファイルからのラベル継承:| [はい] | [はい]  |
+|次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] <br /><br /> [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。| [はい] <br /><br /> [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされます。 |
+|ユーザー定義のアクセス許可:| [はい] | はい (制限あり): <br /><br />-Word、Excel、PowerPoint、エクスプローラーの場合:Azure portal でラベルを構成するときにサポートされます。 |
 |カスタム アクセス許可:| [はい] | エクスプローラーと PowerShell <br /><br /> Office アプリでは、別の方法として、ユーザーが **ファイル情報** >  **ドキュメント** > の保護 **アクセスの制限** または 管理者がユーザー定義のアクセス許可のラベルを構成できる を選択できます。|
 |Office アプリの Information Protection バー:| [はい] | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> - ラベルの色は適用されたラベルに表示されません|
 |ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| [はい] | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
 |エクスプローラー、右クリック アクション:| [はい] | はい (制限あり):<br /><br /> - .ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
 |保護されたファイル用のビューアー:| [はい] | はい (制限あり):<br /><br /> -一般的に保護されているファイル (pfile) の場合、従来のクライアントのビューアーとは異なり、最初に開いたファイルに変更を保存することはできません。|
-|PowerShell コマンド:| [はい] | はい (制限あり):<br /><br />- 含まれているコマンドレット:[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)、 [New-Aipfilestatus](/powershell/module/azureinformationprotection/New-AIPCustomPermissions)、 [set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification)、 [set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel)、 [set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />-現時点では、コンテナーファイル (zip、rar、7z、.msg、および .pst) から保護を削除することはできません。|
+|PowerShell コマンド:| [はい] | はい (制限あり):<br /><br />-コンテナーファイル (zip、rar、7z、.msg、および .pst) から保護を削除することはできません|
 |保護アクションに対するオフライン サポート:| [はい] | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
 |オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| [はい] |いいえ |
-|HYOK のサポート:| [はい] | いいえ<br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
+|HYOK のサポート:| [はい] | いいえ <br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
 |イベント ビューアーに対する使用状況ログの記録:| [はい] | いいえ|
-|メールの添付ファイルからのラベル継承:| [はい] | [はい]  |
 |Outlook の [転送不可] ボタンを表示する| [はい] | いいえ |
-|以下を含む[カスタマイズ](client-admin-guide-customizations.md#available-advanced-client-settings):<br />- メールの既定のラベル<br />- カスタム アクセス許可を有効にする <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] | はい ( [PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用) |
 |オンプレミスのデータ ストア用のスキャナー:| [はい] | いいえ |
 |追跡と取り消し:| [はい] | いいえ |
 |テンプレートを使用した保護専用モード (ラベルなし):| [はい] | いいえ |
@@ -116,7 +115,7 @@ Azure Information Protection 統合されたラベル付けクライアントは
 
 - ポリシーファイルの手動管理を使用して、切断されたコンピューターの Office アプリをサポートする
 
-- Office アプリでユーザーが選択できるオプションとしてのカスタムアクセス許可:Word、Excel、PowerPoint
+- カスタムアクセス許可は、ユーザーが Office アプリで選択できる別のオプションとして使用できます。Word、Excel、PowerPoint
 
 - Office アプリとエクスプローラーからの追跡と取り消し
 

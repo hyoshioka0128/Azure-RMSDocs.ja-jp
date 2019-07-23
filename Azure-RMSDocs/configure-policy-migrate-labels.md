@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 4608bf407a88a306c1abfdd62fc122b80b6a5419
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: f1340d42c0f09733bf4517b4d573e75e5d88b68e
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340730"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375411"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Azure Information Protection のラベルを Office 365 の機密ラベルに移行する方法
 
@@ -164,8 +164,7 @@ Outlook for Mac では、保護は保持されますが例外が 1 つありま�
 
 #### <a name="copy-your-policies-and-policy-settings"></a>ポリシーとポリシー設定をコピーする
 
-> [!NOTE]
-> このオプションは、プレビュー段階でテナントに徐々にロールアウトされ、変更される可能性があります。 **[ポリシーのコピー (プレビュー)]** オプションが表示されない場合は、数週間後に再試行してください。
+このオプションは、プレビュー段階でテナントに徐々にロールアウトされ、変更される可能性があります。 **[ポリシーのコピー (プレビュー)]** オプションが表示されない場合は、数週間後に再試行してください。
 
 ラベルを移行したら、ポリシーをコピーするオプションを選択できます。 このオプションを選択すると、[ポリシー設定](configure-policy-settings.md)と[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings)を含むポリシーの1回限りのコピーが、ラベルを管理する管理センターに送信されます。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。
 

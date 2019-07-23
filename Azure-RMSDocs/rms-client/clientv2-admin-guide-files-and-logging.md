@@ -1,28 +1,28 @@
 ---
-title: Azure Information Protection の統合のラベル付けクライアント ファイルと使用状況ログ
-description: クライアント ファイルと、Azure Information Protection の使用状況ログについては、Windows 用のラベル付けのクライアントを統合します。
+title: クライアントファイルと使用状況ログの統合されたラベル付け Azure Information Protection
+description: Windows 用のクライアントファイルに関する情報と、Azure Information Protection 統合されたラベル付けクライアントの使用状況ログ。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f49495ae79dbd61e85406957c0fb7864be7116ac
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e90672438efff30d378699f36b3037f04d420b22
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181295"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375439"
 ---
-# <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection の統合のラベル付けクライアント ファイルとクライアント使用状況ログ
+# <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>管理者ガイド: クライアントファイルとクライアントの使用状況ログの統合を Azure Information Protection する
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 >
-> "*手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Azure Information Protection の統合されたラベル付けクライアントをインストールした後、ファイルの場所を把握し、クライアントの使用方法を監視する必要があります。
+Azure Information Protection の統一されたラベル付けクライアントをインストールしたら、ファイルの場所を確認し、クライアントがどのように使用されているかを監視する必要があります。
 
 ## <a name="file-locations-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントのファイルの場所
 
@@ -32,13 +32,13 @@ Azure Information Protection の統合されたラベル付けクライアント
 
 - 32 ビット オペレーティング システムの場合: **\Program Files\Microsoft Azure Information Protection**
 
-クライアントのログ ファイル。
+クライアントログファイル:
 
 - 64 ビットおよび 32 ビット オペレーティング システムの場合: **%localappdata%\Microsoft\MSIP**
 
 
 ## <a name="next-steps"></a>次の手順
-Azure Information Protection の統合されたラベル付けクライアントに関連付けられたすべてのログ ファイルを特定したら、これでは、このクライアントをサポートする必要があります追加については、次を参照してください。
+Azure Information Protection 統合されたラベル付けクライアントに関連付けられているすべてのログファイルを確認したので、このクライアントのサポートに必要な追加情報については、次を参照してください。
 
 - [カスタマイズ](clientv2-admin-guide-customizations.md)
 
