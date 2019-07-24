@@ -4,18 +4,18 @@ description: ユーザーを正常に認証できるように、Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.suite: ems
-ms.openlocfilehash: 171f7c3a410578421d7dffdf4ba12808940abf58
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 7ae6b5396bd3c2bcd0c92d7f2a21de6681c80546
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768048"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428285"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -33,11 +33,11 @@ Azure AD ディレクトリをオンプレミス AD フォレストと統合す�
 
 Office 2010 を実行しているコンピューターの場合: 
 
-- これらのコンピューターが必要な[Azure Information Protection クライアントのラベル付けを統合する](./rms-client/aip-clientv2.md)または[Azure Information Protection クライアント](./rms-client/aip-client.md)Azure Information Protection とそのデータ保護への認証サービス、Azure Rights Management を使用します。
+- これらのコンピューターでは、Azure Information Protection 統合された[ラベル付けクライアント](./rms-client/aip-clientv2.md)または[Azure Information Protection クライアント](./rms-client/aip-client.md)が Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行う必要があります。
 
 - ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
 
-証明書ベースの認証 (CBA) のサポート: 
+証明書ベースの認証 (CBA) のサポート:
 
 - iOS および Android 用の Azure Information Protection アプリでは、証明書ベースの認証をサポートしています。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/azure/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
 
@@ -60,7 +60,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 - Azure Information Protection クライアント:
 
-    - Windows 用 Azure Information Protection クライアントおよび iOS と Android 用のビューアー アプリが常にサポートされている MFA;最小バージョンは必要ありません。 
+    - Windows 用の Azure Information Protection クライアントおよび iOS および Android 用のビューアーアプリでは、常に MFA がサポートされています。最小バージョンは必要ありません。 
 
 -   Mac コンピューター用の Rights Management 共有アプリ:
 
@@ -76,7 +76,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 - 統合テナント (オンプレミスのフェデレーション サーバー) の場合:
 
-    - 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば、AD FS を使用している場合は、表示[AD FS の追加の認証方法の構成](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)します。
+    - 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば、AD FS を使用する場合は、「 [AD FS の追加の認証方法を構成](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)する」を参照してください。
 
         このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
 

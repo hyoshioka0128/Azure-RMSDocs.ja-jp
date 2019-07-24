@@ -4,19 +4,19 @@ description: ドキュメントを保護した後は、保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 95a70375f65e461cff2f69d28598d2a72aeaec10
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: b0fb6c14e246a027e01913ef213898bc397717d3
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768075"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428322"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してドキュメントを追跡および取り消す
 
@@ -46,7 +46,7 @@ Azure Information Protection を使用してドキュメントを保護した後
      
     - **[設定]** をクリックし、ドキュメントへのアクセスがあれば電子メールで知らせるかどうかやその方法を選択します。
         
-        ![ドキュメント追跡サイトに電子メール通知を構成します。](../media/tracking-site-settings-email.png)
+        ![ドキュメント追跡サイトで電子メール通知を構成する](../media/tracking-site-settings-email.png)
 
 - 他のユーザーの共有したドキュメントを追跡し、アクセスを取り消す場合:
     
@@ -63,7 +63,7 @@ Azure Information Protection を使用してドキュメントを保護した後
 
 自分が保護したドキュメントを追跡するには、Windows コンピューターを使用してドキュメント追跡サイトに登録する必要があります。 登録するには、エクスプローラーまたは Office アプリを使用します。
 
-場合は、Azure Information Protection クライアントの現在の一般公開バージョンがある場合は、登録することも、保護されたドキュメントで PowerShell を使用する場合、 *EnableTracking*パラメーター、 [Set-aipfilelabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)コマンドレット。
+Azure Information Protection クライアントの現在の一般公開バージョンがある場合は、 [set-aipfilelabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)コマンドレットで*enabletracking*パラメーターを使用するときに、保護されたドキュメントを PowerShell に登録することもできます。
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Office を使用したドキュメントの追跡または取り消し
 
@@ -71,7 +71,7 @@ Office アプリケーション、Word、Excel、PowerPoint の場合:
 
 1. 追跡または取り消し対象の保護されたドキュメントを開きます。
 
-2. **[ホーム]** タブの **[保護]** グループで **[保護]** > **[追跡と取り消し]** をクリックします。
+2. **[ホーム]** タブの **[保護]** グループで **[保護]**  >  **[追跡と取り消し]** をクリックします。
 
     ![使用の追跡オプション](../media/track-usage-callout.png)
     
@@ -87,9 +87,9 @@ Azure Information Protection クライアントのインストール方法の詳
 
 ## <a name="using-file-explorer-to-track-or-revoke-the-document"></a>エクスプローラーを使用したドキュメントの追跡または取り消し
 
-1. 保護されたファイルを右クリックし、**[分類して保護する]** を選択します。
+1. 保護されたファイルを右クリックし、 **[分類して保護する]** を選択します。
 
-2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスから、**[追跡と取り消し]** を選択します。
+2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスから、 **[追跡と取り消し]** を選択します。
 
     ![[分類と保護 - Azure Information Protection] ダイアログ ボックスの [追跡と取り消し] アイコン](../media/track-and-revoke.png)
 
@@ -100,17 +100,17 @@ Office アプリまたはエクスプローラーを使用して保護された�
 
 - Windows PC、Mac コンピューター、またはモバイル デバイスで[ドキュメント追跡サイト](https://go.microsoft.com/fwlink/?LinkId=529562)にアクセスします。
 
-    **サポートされているブラウザー**: 以上では、Internet Explorer を使用することをお勧めします。 version 10、が使用できますの次のブラウザーを使用してドキュメント追跡サイト。
+    **サポートされているブラウザー**: Internet Explorer のバージョン10以上を使用することをお勧めしますが、次のいずれかのブラウザーを使用してドキュメント追跡サイトを使用することもできます。
 
-    - Internet Explorer:少なくともバージョン 10
+    - Internet Explorer:バージョン10以降
 
-    - Internet Explorer 9 以上の MS12 037。Internet Explorer 用の累積的なセキュリティ更新プログラム:2012 年 6 月 12 日
+    - Internet Explorer 9 (少なくとも MS12-037):Internet Explorer 用の累積的なセキュリティ更新プログラム:2012年6月12日
 
-    - Mozilla Firefox:少なくともバージョン 12
+    - Mozilla Firefox:バージョン12以降
 
-    - Apple Safari 5:少なくともバージョン 5
+    - Apple Safari 5:バージョン5以降
 
-    - Google Chrome:少なくともバージョン 18
+    - Google Chrome:バージョン18以降
 
 
 ## <a name="other-instructions"></a>その他の手順

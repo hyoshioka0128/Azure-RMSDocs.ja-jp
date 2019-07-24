@@ -4,17 +4,17 @@ description: Azure Information Protection ポリシーで言語を指定して�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: c89085c7f001cd26ccd0b722196d9678b674163e
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 275a1b984ee839477e479f2476554c9d3dbd2b62
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767950"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428466"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
@@ -34,7 +34,7 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 次のいずれかの条件が当てはまるときは、異なる言語のテンプレートを構成することもできます。 この構成は、ユーザーまたは管理者が、現在のテンプレートの名前と説明をローカライズされた言語で表示する必要がある場合に適しています。
 
-- テンプレートが Azure クラシック ポータルまたは PowerShell で作成されており、**[定義済みのテンプレートを選択する]** 保護設定を使ってテンプレートがラベルにリンクされていない場合。
+- テンプレートが Azure クラシック ポータルまたは PowerShell で作成されており、 **[定義済みのテンプレートを選択する]** 保護設定を使ってテンプレートがラベルにリンクされていない場合。
 
 - ラベルをサポートするサブスクリプションがないため、Azure Portal でのみテンプレートを作成および管理できる場合。
 
@@ -42,22 +42,22 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>異なる言語のラベルとテンプレートを構成するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[管理]** > **[言語]** メニュー オプションから: **[Azure Information Protection - 言語]** ブレードで、**[翻訳する新しい言語の追加]** を選択します。 追加する言語を選択して、**[OK]** を選択します。 [検索] ボックスに言語の名前を入力するか、使用可能な言語の一覧をスクロールします。
+2. **[管理]**  >  **[言語]** メニュー オプションから: **[Azure Information Protection - 言語]** ブレードで、 **[翻訳する新しい言語の追加]** を選択します。 追加する言語を選択して、 **[OK]** を選択します。 [検索] ボックスに言語の名前を入力するか、使用可能な言語の一覧をスクロールします。
 
-3. 選択した言語が、**[Azure Information Protection - 言語]** ブレードに表示されます。
+3. 選択した言語が、 **[Azure Information Protection - 言語]** ブレードに表示されます。
     
-    - 別の言語を追加するには、**[翻訳する新しい言語の追加]** を選択して前の手順を繰り返します。 
+    - 別の言語を追加するには、 **[翻訳する新しい言語の追加]** を選択して前の手順を繰り返します。 
         
         > [!NOTE]
         > ユーザーが Office と Windows で使用できる言語を選択してください。 場合によっては、コンピューターごとに 2 つの異なる選択が必要なことがあります。
         
-    - 追加した言語を変更する場合は、一覧から該当するエントリを選択して、**[削除]** をクリックします。
+    - 追加した言語を変更する場合は、一覧から該当するエントリを選択して、 **[削除]** をクリックします。
 
-4. サポートするすべての言語が一覧表示されたら、**[言語名]** の横のチェック ボックスをオンにしてすべてのエントリを選択 (または代わりに個々のエントリを選択) し、**[エクスポート]** をクリックして既存のラベル名と説明のローカル コピーをファイルに保存します。 
+4. サポートするすべての言語が一覧表示されたら、 **[言語名]** の横のチェック ボックスをオンにしてすべてのエントリを選択 (または代わりに個々のエントリを選択) し、 **[エクスポート]** をクリックして既存のラベル名と説明のローカル コピーをファイルに保存します。 
     
     ダウンロードされたファイルは **exported localization.zip** の名前で、ローカルのダウンロード フォルダーに保存されます。 また、Azure Portal のステータス バーでこのファイル名を選択することで、ファイルにアクセスできます。
 
@@ -67,9 +67,9 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 7. 各 .xml ファイルを編集したら、これらのファイルを含めた新しい圧縮 (zip 形式) フォルダーを作成します。 圧縮フォルダーには任意の名前を付けることができますが、.zip の拡張子が必要です。
     
-    ヒント:ダウンロードした各言語ファイルを編集するまで待つ必要はありません。 代わりに、ダウンロードしたすべてのファイルのサブセットを .zip ファイルに含めることで、段階的に異なる言語をロールアウトできます。 その後、他の言語の翻訳を完了した時点で、手順 7 と 8 を繰り返します。
+    ヒント :ダウンロードした各言語ファイルを編集するまで待つ必要はありません。 代わりに、ダウンロードしたすべてのファイルのサブセットを .zip ファイルに含めることで、段階的に異なる言語をロールアウトできます。 その後、他の言語の翻訳を完了した時点で、手順 7 と 8 を繰り返します。
 
-8. **[Azure Information Protection - 言語]** ブレードに戻り、**[インポート]** を選択します。 このオプションが使用できない場合は、まず **[言語名]** のチェック ボックス、または個別に選択した言語のチェック ボックスをオフにします。
+8. **[Azure Information Protection - 言語]** ブレードに戻り、 **[インポート]** を選択します。 このオプションが使用できない場合は、まず **[言語名]** のチェック ボックス、または個別に選択した言語のチェック ボックスをオフにします。
     
     インポートが完了したら、ローカライズされた名前と説明をユーザーにダウンロードします。
 

@@ -4,25 +4,25 @@ description: Windows 用 Azure Information Protection クライアントは、�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 031e80046fbc02d3f425adbc52202806559eeed0
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: bc5e3b04e4cafc15cb63e13893edf4b6f0114dfc
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182944"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427915"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection ユーザー ガイド
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> "*手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*"
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Windows 用 Azure Information Protection クライアントは、電子メールが転送されたりドキュメントが別の場所に保存されている場合でも、重要なドキュメントや電子メールを閲覧すべきでないユーザーから保護するうえで役立ちます。 また、このクライアントを使用して、他のユーザーが Azure Information Protection の Rights Management 保護テクノロジを使って保護したドキュメントを開くこともできます。
 

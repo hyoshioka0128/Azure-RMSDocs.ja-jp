@@ -1,24 +1,24 @@
 ---
-title: 分類 - Azure Information Protection クライアント
-description: 手順については Windows 用 Azure Information Protection クライアントを使用する場合は、ドキュメントや電子メールを分類する方法。
+title: 分類-Azure Information Protection クライアント
+description: Windows 用 Azure Information Protection クライアントを使用するときに、ドキュメントと電子メールを分類する方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ecc7a1e0655c322151ba0c44c51592656303d857
-ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
+ms.openlocfilehash: e810245f94b688c1fc6018905f7a0265ebb0ec98
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914722"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428252"
 ---
-# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントで、ファイルや電子メールを分類します。
+# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントを使用してファイルまたは電子メールを分類する
 
 >*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
@@ -35,14 +35,14 @@ ms.locfileid: "64914722"
 
 Azure Information Protection バーを使用して、構成されているラベルを 1 つ選択します。 
 
-たとえば、次の図は、**[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 "General" など、ラベルを設定するには、**[全般]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。 
+たとえば、次の図は、 **[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 "General" など、ラベルを設定するには、 **[全般]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。 
 
 ![Azure Information Protection バーの例](../media/info-protect-bar-not-set-callout.png)
 
 ラベルがドキュメントに既に適用され、ラベルを変更する場合は、別のラベルを選択できます。 ラベルがバーに表示されない場合は、現在のラベル値の横にある **[ラベルの編集]** アイコンをクリックします。
 
 > [!TIP]
-> または、**[ファイル]** タブで **[保護]** ボタンからラベルを選択できます。
+> または、 **[ファイル]** タブで **[保護]** ボタンからラベルを選択できます。
 
 ラベルの手動選択に加え、次の方法でラベルを適用することもできます。
 
@@ -56,7 +56,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 - Azure Information Protection クライアントが[インストール](install-client-app.md)されていない可能性があります。
 
-- お客様はクライアントをインストールしていますが、管理者がバーを表示しないように設定を構成しています。 代わりに、Office リボンの **[ファイル]** タブで、**[保護]** ボタンからラベルを選択します。 
+- お客様はクライアントをインストールしていますが、管理者がバーを表示しないように設定を構成しています。 代わりに、Office リボンの **[ファイル]** タブで、 **[保護]** ボタンからラベルを選択します。 
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>表示されるはずのラベルがバーに表示されない場合 
 
@@ -77,19 +77,19 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 以下に例を示します。
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 例えば:
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類を設定します。 
     
-    選択できるラベルがない場合 (ラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 以下に例を示します。
+    選択できるラベルがない場合 (ラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 例えば:
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
 
-3. 分類をサポートしていないファイルを選択した場合は、**[閉じる]** をクリックします。 このファイルは保護せずに分類することはできません。
+3. 分類をサポートしていないファイルを選択した場合は、 **[閉じる]** をクリックします。 このファイルは保護せずに分類することはできません。
     
-    ラベルを選択した場合は、**[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
+    ラベルを選択した場合は、 **[適用]** をクリックし、 **"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
 
 選択したラベルを変更する場合は、この手順を繰り返して、別のラベルを選択します。
 

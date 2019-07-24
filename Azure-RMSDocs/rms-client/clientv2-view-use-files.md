@@ -1,35 +1,35 @@
 ---
-title: 統一されたラベル付けのクライアントを Azure Information Protection で保護されたファイルを表示します。
-description: 保護されたファイルはインストールされている、Azure Information Protection の統合のラベル付けビューアーに要求を表示する手順です。
+title: Azure Information Protection の統合ラベル付けクライアントを使用して保護されたファイルを表示する
+description: Azure Information Protection 統合ラベルビューアーがインストールされている必要がある保護されたファイルを表示する手順。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 2df0bd25bf30eb94aab17a8dae89332b4e96389b
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 6c499d384ec4d116edb18dccf532fbb1290bf284
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880194"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427940"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: 統一されたラベル付けのクライアントを Azure Information Protection で保護されたファイルを表示します。
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: Azure Information Protection の統合ラベル付けクライアントを使用して保護されたファイルを表示する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Azure Information Protection unified Windows 用のラベル付けのクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
 ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー**で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
 
-ビューアーは、Azure Information Protection の統合されたラベル付けクライアントの一部として自動的にインストールまたは個別にインストールできます。 このクライアントと、ビューアーからの両方をインストールすることができます、 [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) Microsoft web サイトのページ。 このクライアントのインストールの詳細については、次を参照してください。[をダウンロードして、Azure Information Protection の統一されたラベル付けクライアントをインストール](install-unifiedlabelingclient-app.md)します。
+ビューアーは、Azure Information Protection 統合されたラベル付けクライアントの一部として自動的にインストールされます。または、個別にインストールすることもできます。 このクライアントとビューアーの両方を、Microsoft web サイトの[Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970)のページからインストールできます。 このクライアントのインストールの詳細については、「 [Azure Information Protection の統合ラベル付けクライアントのダウンロードとインストール](install-unifiedlabelingclient-app.md)」を参照してください。
 
 > [!NOTE]
-> クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。 たとえば、Azure Information Protection です。
+> クライアントをインストールする方が多くの機能を使用できますが、ローカル管理者のアクセス許可が必要であり、全機能を使用するには、組織に対応するサービスが必要です。 たとえば、Azure Information Protection のようにします。
 > 
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 
@@ -53,18 +53,18 @@ ms.locfileid: "64880194"
 
 ## <a name="to-view-a-protected-file"></a>保護されたファイルを表示するには
 
-1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、**[Azure Information Protection ビューアー]** を選択します。 
+1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、 **[Azure Information Protection ビューアー]** を選択します。 
 
 2. **[サインイン]** または **[サインアップ]** ページが表示された場合: **[サインイン]** をクリックして資格情報を入力します。 保護されたファイルが添付ファイルとして送信されてきた場合は、ファイルの送信に使用されたものと同じメール アドレスを指定するようにします。
     
     承認されているアカウントがない場合は、このページの「[認証のプロンプト](#prompts-for-authentication)」を参照してください。
 
-3. ファイルの読み取り専用バージョンが表示されます、 **Azure Information Protection ビューアー**またはアプリケーションのファイル名拡張子に関連付けられています。
+3. **Azure Information Protection ビューアー** 、またはファイル名拡張子に関連付けられているアプリケーションで、ファイルの読み取り専用バージョンが開きます。
 
-4. 追加の保護されたファイルを開く場合は、**[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
+4. 追加の保護されたファイルを開く場合は、 **[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
 
 > [!TIP]
-> 保護されたファイルが開かず、Azure Information Protection クライアントが完全にインストールされている場合は、**[設定のリセット]** オプションを試してください。 Office アプリから、このオプションにアクセスするには、選択、**感度**ボタン >**ヘルプとフィードバック** > **設定のリセット**します。 
+> 保護されたファイルが開かず、Azure Information Protection クライアントが完全にインストールされている場合は、 **[設定のリセット]** オプションを試してください。 このオプションにアクセスするには、Office アプリから **秘密度** ボタンを選択して >**ヘルプとフィードバック** > の**リセット設定** をクリックします。 
 > 
 > [[設定のリセット] オプションの詳細](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

@@ -1,22 +1,22 @@
 ---
-title: ファイルの種類はサポートされています - Azure Information Protection クライアント
+title: サポートされているファイルの種類-Azure Information Protection クライアント
 description: Windows 用 Azure Information Protection クライアントを担当する管理者のために、サポートされるファイルの種類、ファイル名拡張子、保護のレベルに関する技術の詳細について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 158a5703fa776aed01151fdf09474e54cc3baaa1
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 8ef451597e32915cdc14e859f275e0d8d20326f4
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768312"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428286"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -95,9 +95,9 @@ Azure Information Protection クライアントが保護をサポートするフ
 
   |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-  |             Word 2007 (AD RMS のみでサポート)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット。512 MB<br /><br />64 ビット。512 MB                                          |
-  |           Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット。2 GB<br /><br />64 ビット。使用可能なディスク領域とメモリによってのみ制限されます                       |
-  | PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット。使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット。使用可能なディスク領域とメモリによってのみ制限されます |
+  |             Word 2007 (AD RMS のみでサポート)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32ビット:512 MB<br /><br />64ビット:512 MB                                          |
+  |           Excel 2007 (AD RMS のみでサポート)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32ビット:2 GB<br /><br />64ビット:使用可能なディスク領域とメモリによってのみ制限されます                       |
+  | PowerPoint 2007 (AD RMS のみでサポート)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32ビット:使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64ビット:使用可能なディスク領域とメモリによってのみ制限されます |
 
 
 - **その他のすべてのファイル**: 
@@ -106,7 +106,7 @@ Azure Information Protection クライアントが保護をサポートするフ
 
   - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合:.pst ファイルに対してサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
 
-    ヒント:大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
+    ヒント :大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -171,7 +171,7 @@ Azure Information Protection クライアントがファイルを保護する方
 
 これら 2 つの設定により、Azure Information Protection クライアントは、ファイル名拡張子を持つすべてのファイルに汎用的な保護を適用します。 これが目的である場合、それ以上の構成は必要ありません。 ただし、引き続きネイティブで保護されるように、特定のファイルの種類の例外を定義できます。 そのためには、以下のように、ファイルの種類ごとに追加で 3 つ (32 ビット Windows の場合) または 6 つ (64 ビット Windows の場合) のレジストリ編集を行う必要があります。
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合):ファイル名拡張子 (ピリオドは付けません) なしの名前を持つ新しいキーを追加します。
+1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (該当する場合):(前のピリオドを除く) ファイル名拡張子の名前を持つ新しいキーを追加します。
 
     たとえば、.docx というファイル名拡張子を持つファイルの場合、 **DOCX**という名前のキーを作成します。
 
@@ -185,11 +185,11 @@ Azure Information Protection クライアントがファイルを保護する方
 
 次の値をサポートする **Encryption** 文字列の値を変更することで、他のシナリオで同様のレジストリ編集を行うことができます。
 
-- **Pfile**: 汎用的な保護
+- **Pfile**: 一般的な保護
 
 - **Native**: ネイティブ保護
 
-- **Off**: 保護のブロック
+- **Off**: 保護をブロックする
 
 これらのレジストリに変更を加えた後、コンピューターを再起動する必要はありません。 ただし、ファイルを保護するために PowerShell コマンドを使っている場合は、変更を反映させるために新しい PowerShell セッションを開始する必要があります。
 
