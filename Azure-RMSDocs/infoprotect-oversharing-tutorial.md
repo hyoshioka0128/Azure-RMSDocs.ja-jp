@@ -4,16 +4,16 @@ description: Azure Information Protection クライアントでのクライア�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 889e10192cc36f7fba913683f21c18ee5e577280
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 565a46f599922aeef3636756c47c561264bf010f
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65934712"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352829"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル: Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
@@ -211,7 +211,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 たとえば、最初のテストはユーザーに警告するためのもので、 **[キャンセル]** を選択したので、 **[ユーザーの応答]** で最初のイベント 301 に **[破棄済み]** と表示されます。 次に例を示します。
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -226,7 +226,7 @@ User Response: Dismissed
 しかし、次のイベント 301 に反映される **[確認して送信]** を選択すると、 **[ユーザーの応答]** には **[確認済み]** と表示されます。
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -241,7 +241,7 @@ User Response: Confirmed
 理由メッセージでは、同じパターンが繰り返されます。これにはイベント 302 が含まれます。 最初のイベントには **[破棄済み]** の **[ユーザーの応答]** があり、2 つ目には選択された理由が表示されます。 次に例を示します。
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Justify message.msg
 Item Name: Testing the General label for the Justify message
@@ -258,7 +258,7 @@ User Response: Confirmed
 イベント ログの上部に、イベント 303 を含む、記録されたブロック メッセージが表示されます。 次に例を示します。
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Block message.msg
 Item Name: Testing the General label for the Block message
@@ -268,6 +268,24 @@ Label After Action: General
 Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
+
+### <a name="optional-create-an-additional-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>省略可能: 追加のクライアントの詳細設定を作成して、内部受信者に対するこれらのメッセージの適用を除外する
+
+自分のメール アドレスを受信者として使用して、警告、理由、およびブロック メッセージをテストしてきました。 運用環境では、受信者が自分の組織の外部にいる場合にのみ、指定したラベルに対するこれらのメッセージを表示させるよう選択する場合があります。 この例外は、組織が常に共同作業をしているパートナーにまで広げることができます。
+
+このしくみを説明するために、**OutlookBlockTrustedDomains** という名前の追加のクライアントの詳細設定を作成し、自分のメール アドレスの独自のドメイン名を指定します。 これによって、自分のドメイン名を各自のメール アドレスに共有している受信者には、以前は表示されていたブロック メッセージが表示されなくなります。ただし、その他の受信者には引き続き表示されます。 同様に、**OutlookWarnTrustedDomains** と **OutlookJustifyTrustedDomains** に対して追加のクライアントの詳細設定を作成することができます。
+
+1. Azure portal の **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+
+2. **[詳細設定]** ブレードで、詳細設定の名前 (**OutlookBlockTrustedDomains**) を入力して、値として自分の電子メール アドレスからドメイン名を貼り付けます。 次に例を示します。
+    
+    ![Azure Information Protection チュートリアル - OutlookBlockTrustedDomains クライアントの詳細設定を作成する](./media/configure-exemptblockdomain.png)
+
+4. **[保存して閉じる]** を選択します。 **[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+
+5. ここで、[ユーザーが [全般] ラベルがある電子メールを送信できないようにする前のテスト](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label)をもう一度実行します。自分のメール アドレスを使用すると、ブロック メッセージが表示されなくなります。 メールは中断されることなく送信されます。
+    
+    外部の受信者に対して引き続きブロック メッセージが表示されることを確認するには、組織の外部の受信者を指定してもう一度テストを繰り返します。 今回は、再びブロック メッセージが表示され、新しい受信者のアドレスが信頼されていないものとして表示されます。
 
 ## <a name="configure-and-test-an-advanced-client-setting-to-warn-prompt-for-justification-or-block-emails-that-dont-have-a-label"></a>クライアントの詳細設定を構成してテストし、ラベルのない電子メールに対する警告、理由の確認、またはブロックを行う
 
@@ -380,7 +398,7 @@ Action Source:
 たとえば、電子メールにラベルがない場合の理由の確認結果です。
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing send an email without a label for the Justify message.msg
 Item Name: Testing send an email without a label for the Justify message
@@ -390,22 +408,6 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
-## <a name="create-an-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>クライアントの詳細設定を作成して、内部受信者に対してこれらのメッセージの適用を除外する
-
-受信者として自分の電子メール アドレスを使用し、これらのメッセージをテストしてきました。 しかし、運用環境では、受信者が組織外にいる場合にのみ、これらのメッセージの表示を選択してもよいでしょう。 この例外は、組織が常に共同作業をしているパートナーにまで広げることができます。
-
-このしくみを示すために、**OutlookBlockTrustedDomains** という名前が付けられた新しいクライアントの詳細設定を作成し、自分の電子メール アドレスから独自のドメイン名を指定します。 これにより、電子メール アドレスでドメイン名を共有する受信者に表示されるブロック メッセージが回避されます。 同様に、**OutlookWarnTrustedDomains** と **OutlookJustifyTrustedDomains** に対してクライアントの詳細設定を作成できます。
-
-1. Azure portal の **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
-
-2. **[詳細設定]** ブレードで、詳細設定の名前 (**OutlookBlockTrustedDomains**) を入力して、値として自分の電子メール アドレスからドメイン名を貼り付けます。 次に例を示します。
-    
-    ![Azure Information Protection チュートリアル - OutlookBlockTrustedDomains クライアントの詳細設定を作成する](./media/configure-exemptblockdomain.png)
-
-4. **[保存して閉じる]** を選択します。 **[ポリシー]** ブレードまたは Azure portal は閉じないでください。
-
-5. [自分のアドレスにラベル付けされていない電子メールを送信するという前述のテスト](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled)を繰り返すと、ブロック メッセージは表示されなくなります。 しかし、組織外から新しい受信者を追加する場合、もう一度ブロック メッセージが表示されます。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
@@ -419,6 +421,6 @@ Outlook を再起動すると、このチュートリアルで構成した設定
 
 ## <a name="next-steps"></a>次の手順
 
-テストを速く済ませるために、このチュートリアルでは、添付ファイルのない、1 人の受信者への電子メール メッセージを使用しました。 しかし、複数の受信者、複数のラベルを含む同じメソッドを適用し、ユーザーにとってラベル付けの状態がわかりにくい添付ファイルにも同じロジックを適用することもできます。 たとえば、電子メール メッセージ自体には [公開] のラベルが付けられていますが、添付の PowerPoint プレゼンテーションには [全般] のラベルが付けられています。 詳細については、管理者ガイドの次のセクションを参照してください。[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+テストを速く済ませるために、このチュートリアルでは、添付ファイルのない、1 人の受信者への電子メール メッセージを使用しました。 しかし、複数の受信者、複数のラベルを含む同じメソッドを適用し、ユーザーにとってラベル付けの状態がわかりにくい添付ファイルにも同じロジックを適用することもできます。 たとえば、電子メール メッセージ自体には [公開] のラベルが付けられていますが、添付の PowerPoint プレゼンテーションには [全般] のラベルが付けられています。 構成オプションについて詳しくは、管理者ガイドの次のセクションをご覧ください。[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 管理者ガイドには、クライアントの動作のカスタマイズに使用できるその他のクライアントの詳細設定に関する情報も含まれます。 完全なリストについては、「[使用可能なクライアントの詳細設定](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings)」を参照してください。
