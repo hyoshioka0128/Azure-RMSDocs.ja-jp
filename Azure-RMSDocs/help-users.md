@@ -4,19 +4,19 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/15/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d579d6ad639445dbf6f52b8cd3245b01973adef
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.openlocfilehash: 16f9a0713be5c6dc1110ca5841b48e3ef6d8450e
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229844"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446746"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -115,7 +115,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、 **[転送不可]** オプションが自動的に選択されます。 既定値を変更したい場合は、 **[アクセス許可の変更]** を選択し、ドロップ ダウンからオプションを選択します。 例えば: **[暗号化]** または **[\<会社名> - 社外秘]** 。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、 **[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、 **[アクセス許可の変更]** を選択し、ドロップダウンからオプションを選択します。 例えば: **[暗号化]** または **[\<会社名> - 社外秘]** 。
 
 3. メッセージを送信します。
 

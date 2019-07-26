@@ -4,17 +4,17 @@ description: Windows 用のクライアントファイルに関する情報と�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: e90672438efff30d378699f36b3037f04d420b22
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.openlocfilehash: 6904f77a621b2dc362a82f9b20099d71aaf4f605
+ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375439"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501645"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>管理者ガイド: クライアントファイルとクライアントの使用状況ログの統合を Azure Information Protection する
 
@@ -34,7 +34,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 クライアントログファイル:
 
-- 64 ビットおよび 32 ビット オペレーティング システムの場合: **%localappdata%\Microsoft\MSIP**
+- 64ビットおよび32ビットのオペレーティングシステムの場合: **%localappdata%\Microsoft\MSIP\Logs**
 
 
 ## <a name="next-steps"></a>次の手順

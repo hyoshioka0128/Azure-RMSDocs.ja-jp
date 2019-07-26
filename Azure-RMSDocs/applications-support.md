@@ -1,22 +1,22 @@
 ---
 title: アプリが AIP から Azure Rights Management をサポートするしくみ
-description: 最もがよくアプリケーション (Office アプリなど) を使用する方法を理解し、サービス (Exchange、SharePoint など) は、組織のドキュメントや電子メールを保護するために Azure Information Protection から Azure Rights Management サービスを使用することができます。
+description: 最も一般的に使用されるアプリケーション (Office アプリなど) とサービス (Exchange や SharePoint など) が Azure Information Protection の Azure Rights Management サービスを使用して、組織のドキュメントや電子メールを保護する方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: deb9cb2bf0751c78d419db579b5df050e4862245
-ms.sourcegitcommit: 4721f96650fde6e0e8e704cc6a3458ddeff635a6
+ms.openlocfilehash: 4513667ad3a09d4f986282780f4858b0bce670f7
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65087877"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446761"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
@@ -35,7 +35,7 @@ ms.locfileid: "65087877"
 
 Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
 
-検索サービスは、さまざまな方法で Rights Management と統合できます。 以下に例を示します。 
+検索サービスは、さまざまな方法で Rights Management と統合できます。 例えば: 
 
 - Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの保護された電子メールが検索結果に自動的に表示されようにします。 
 

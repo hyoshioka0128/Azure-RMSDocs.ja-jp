@@ -4,19 +4,19 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 7a20eba01a57a0c09dd24c88834d0d5b6cb53198
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: f5a47cf86dfc5f8140cf21a0808eef84919b495d
+ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352869"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483133"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -76,7 +76,7 @@ ms.locfileid: "68352869"
 |PullPolicy|[切断されたコンピューターのサポート](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[ユーザーの "問題の報告" を追加する](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|Runauditinformationタイプの検出|[ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -271,7 +271,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>必須ラベルから Outlook メッセージを除外する
 
-この構成では、Azure portal で構成する必要のある[アドバンストクライアント設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
+この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
 既定では、[ポリシー設定](../configure-policy-settings.md)を有効にすると、**すべてのドキュメントと電子メールにラベル**が設定され、保存されたすべてのドキュメントと送信された電子メールにラベルが適用されます。 次の詳細設定を構成すると、ポリシー設定は Office ドキュメントにのみ適用され、Outlook メッセージには適用されません。
 
@@ -306,7 +306,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 - **電子メール、または電子メールの添付ファイルにラベルがない**:
     - 添付ファイルは Office ドキュメントまたは PDF ドキュメントである可能性がある
 
-これらの条件が満たされると、ユーザーには次のいずれかの操作でポップアップメッセージが表示されます。
+これらの条件が満たされると、ユーザーには、次のいずれかの操作を含むポップアップメッセージが表示されます。
 
 - **警告**: ユーザーは確認して電子メールを送信またはキャンセルできます。
 
@@ -502,9 +502,9 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 - `Sign;Encrypt`:デジタル署名と S/MIME 暗号化を適用する
 
-- `Encrypt`:S/MIME 暗号化のみを適用する
+- `Encrypt` :S/MIME 暗号化のみを適用する
 
-- `Sign`:デジタル署名のみを適用する
+- `Sign` :デジタル署名のみを適用する
 
 **dcf781ba-727f-4860-b3c1-73479e31912b** のラベル ID の値の例:
 
@@ -851,7 +851,7 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 この動作を変更して、この情報が従来のクライアントによって送信されないようにするには、次の文字列を入力します。
 
-- 重要:**RunAuditInformationTypeDiscovery**
+- 重要:**Runauditinformationタイプの検出**
 
 - 値:**False**
 

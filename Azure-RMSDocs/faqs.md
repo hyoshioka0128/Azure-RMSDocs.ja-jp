@@ -4,19 +4,19 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 4dcf7fd16ec6d360c69b6fb6b83e4f885732f020
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 16f459d789715c44f724eacb4c8fc01397d90b3f
+ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340566"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501668"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -64,9 +64,9 @@ Azure Information Protection の統一された**ラベル付けクライアン�
 
 表示された**バージョン**番号を使用して、クライアントを識別します。
 
-- バージョン**1**(たとえば、 **1.48.204.0**) は、Azure Information Protection クライアント (クラシック) を識別します。
+- バージョン**1**(たとえば、 **1.53.10.0**) は、Azure Information Protection クライアント (クラシック) を識別します。
 
-- バージョン**2**(たとえば、 **2.0.778.0**) は、Azure Information Protection 統合されたラベル付けクライアントを識別します。
+- バージョン**2**(たとえば、 **2.2.14.0**) は、Azure Information Protection 統合されたラベル付けクライアントを識別します。
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Office 365 にラベルを移行する適切なタイミングはいつですか。
 
@@ -80,9 +80,9 @@ Azure portal でラベルを移行した場合:
 
 - [クライアントとサービスを統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)したラベルを作成している場合は、管理センター (Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンター) のいずれかにアクセスして、これらのラベルを公開し、ポリシーを構成します。設定。 転送されるラベル変更には、いずれかの管理センターを使用します。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。
 
-- [Azure Information Protection クライアント](./rms-client/aip-client.md)がある場合は、引き続き Azure portal を使用して、ラベルとポリシー設定を編集します。 Azure Information Protection クライアントは、Azure から引き続きラベルとポリシー設定をダウンロードします。
+- [Azure Information Protection クライアント (クラシック)](./rms-client/aip-client.md)を使用している場合は、引き続き Azure portal を使用してラベルとポリシー設定を編集します。 クラシッククライアントは、Azure からラベルとポリシー設定を引き続きダウンロードします。
 
-- [統合ラベル付けのクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)と [Azure Information Protection クライアント](./rms-client/aip-client.md)の両方がある場合は、管理センターまたは Azure portal を使用してラベルを変更できます。 ただし、管理センターで行ったラベルの変更を Azure Information Protection クライアントで取得するには、Azure portal に戻る必要があります。Azure portal の **[Azure Information Protection - 統合ラベル付け]** ブレードから **[公開]** オプションを使用します。 
+- 統一されたラベル[付けクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)と[従来のクライアント](./rms-client/aip-client.md)の両方がある場合は、管理センターまたは Azure portal を使用してラベルを変更できます。 ただし、クラシッククライアントが管理センターで行ったラベルの変更を取得するには、Azure portal に戻る必要があります。Azure portal の **[Azure Information Protection - 統合ラベル付け]** ブレードから **[公開]** オプションを使用します。 
 
 [中央レポート機能](reports-aip.md)と[スキャナー](deploy-aip-scanner.md)には、引き続き Azure portal を使用します。
 
@@ -104,9 +104,9 @@ Azure Rights Management データ保護を含む Office 365 サブスクリプ�
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Azure Information Protection client は分類とラベル付けを含むサブスクリプション用のみでしょうか。
 
-いいえ。 ご覧いただきました Azure Information Protection クライアントのプレゼンテーションとデモの大部分は、分類とラベル付けのサポート方法を示していますが、データを保護するAzure Rights Management サービスのみを含むサブスクリプションと共に使用することもできます。
+No. Azure Information Protection クライアント (クラシック) は、データを保護するために Azure Rights Management サービスだけを含むサブスクリプションでも使用できます。
 
-Windows 用の Azure Information Protection クライアントがインストールされているが Azure Information Protection ポリシーがない場合、クライアントは自動的に[保護のみモード](./rms-client/client-protection-only-mode.md)で動作します。 このモードでは、ユーザーは Rights Management テンプレートとカスタム アクセス許可に簡単に適用できます。 分類とラベル付けを含むサブスクリプションを後で購入した場合、Azure Information Protection ポリシーをダウンロードする際に、クライアントは自動的に標準モードへと切り替わります。
+クラシッククライアントがインストールされていて、Azure Information Protection ポリシーがない場合、このクライアントは自動的に[保護のみモード](./rms-client/client-protection-only-mode.md)で動作します。 このモードでは、ユーザーは Rights Management テンプレートとカスタム アクセス許可に簡単に適用できます。 分類とラベル付けを含むサブスクリプションを後で購入した場合、Azure Information Protection ポリシーをダウンロードする際に、クライアントは自動的に標準モードへと切り替わります。
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators"></a>Azure Information Protection を構成するにはグローバル管理者である必要がありますか、または他の管理者に委任できますか?
 
@@ -201,7 +201,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 |操作モード: <br /><br />- リアルタイム|操作モード: <br /><br />- 体系的にデータ ストアをクロールします。このサイクルは 1 回のみまたは繰り返し実行できます|
 |ファイルの種類ごとのサポート: <br /><br />- すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
 
-現在、ローカル フォルダーまたはネットワーク共有で保護されるファイルに対して、[Rights Management 所有者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定に違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定をオーバーライドすることができます。
+ローカルフォルダーまたはネットワーク共有で保護されているファイルの[Rights Management 所有者](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner)の設定には違いがあります。 既定では、どちらのソリューションでも、Rights Management の所有者は、ファイルを保護するアカウントに設定されますが、この設定をオーバーライドすることができます。
 
 - Windows Server FCI の場合: すべてのファイルに対して単一アカウントとなるように Rights Management 所有者を設定したり、各ファイルの Rights Management 所有者を動的に設定したりすることができます。 Rights Management 所有者を動的に設定するには、 **-OwnerMail [ソース ファイルの所有者の電子メール]** パラメーターと値を使用します。 この構成では、ファイルの所有者プロパティのユーザー アカウント名を使用して、Active Directory からユーザーのメール アドレスを取得します。
 
@@ -211,9 +211,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>新しいリリースが Azure Information Protection ですぐに利用できるようになると聞きました。いつリリースされますか?
 
-技術文書には今後のリリースに関する情報は含まれません。 この種の情報およびリリースの通知については、[Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services)を参照してください。
-
-この Office のリリースに関心がある場合は、[Office 365 のブログ](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog)と [Office アプリのブログ](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog)もチェックしてください。
+技術文書には今後のリリースに関する情報は含まれません。 この種類の情報については、 [Microsoft 365 ロードマップ](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent)を使用して、 [Enterprise Mobility + Security ブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services)を確認してください。
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>自分の国に Azure Information Protection は適していますか?
 

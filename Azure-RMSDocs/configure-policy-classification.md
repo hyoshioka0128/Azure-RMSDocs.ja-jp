@@ -4,17 +4,17 @@ description: ラベルの条件を使うと、ドキュメントや電子メー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/31/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 7557757584ce5d255ac8081039d1b0b7ace39594
-ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
+ms.openlocfilehash: 9719bb83da8456637f0c15c24e44d5cf57f035a6
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66448030"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446788"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -34,7 +34,7 @@ ms.locfileid: "66448030"
 
 この例では、ユーザーは **[今すぐ変更]** をクリックして推奨されたラベルを適用するか、 **[閉じる]** を選択することでその推奨をオーバーライドできます。 ユーザーが推奨を無視することを選択しても、ドキュメントを次に開いたときに条件がまだ適用される場合は、ラベルの推奨がもう一度表示されます。
 
-推奨されている分類ではなく自動分類を構成した場合、ラベルは自動的に適用され、ユーザーには Word、Excel、PowerPoint 内に引き続き通知が表示されます。 ただし、**今すぐ変更**と**Dismiss**ボタンに置き換えられます**OK**します。 Outlook では、自動分類の場合に通知は表示されず、電子メールの送信時にラベルが適用されます。
+推奨されている分類ではなく自動分類を構成した場合、ラベルは自動的に適用され、ユーザーには Word、Excel、PowerPoint 内に引き続き通知が表示されます。 ただし、 **[今すぐ変更]** と **[無視]** ボタンは **[OK]** に置き換えられます。 Outlook では、自動分類の場合に通知は表示されず、電子メールの送信時にラベルが適用されます。
 
 > [!IMPORTANT]
 >自動分類とユーザー定義のアクセス許可にはラベルを構成しないでください。 ユーザー定義のアクセス許可オプションは、アクセス許可を与える人をユーザーが指定できるという[保護設定](configure-policy-protection.md)となります。
@@ -102,7 +102,7 @@ ms.locfileid: "66448030"
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
 
-次の機密情報の種類の最小バージョンを必要と[1.48.204.0](./rms-client/client-version-release-history.md#version-1482040)の Azure Information Protection クライアント。
+次の機密情報の種類には、Azure Information Protection クライアントの[1.48.204.0](./rms-client/client-version-release-history.md#version-1482040)の最小バージョンが必要です。
 
 - **Azure Service Bus の接続文字列**
 - **Azure IoT の接続文字列**
@@ -115,9 +115,9 @@ ms.locfileid: "66448030"
 - **Azure 発行設定のパスワード**
 - **Azure Storage のアカウント キー (汎用)**
 
-これらの機密情報の種類の詳細については、ブログの投稿を参照してください。[Azure Information Protection では、資格情報を自動的に検出することによってセキュリティを強化することができます。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+これらの機密情報の種類の詳細については、次のブログ投稿を参照してください。[Azure Information Protection を使用すると、資格情報を自動的に検出してセキュリティを強化することができます。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-さらに、以降、Azure Information Protection クライアント、次の機密情報の種類はサポートされていません、不要になった Azure portal で表示 1.48.204.0 でします。 これらの機密情報の種類を使用するラベルがあれば、それらの検出を適切なことができないし、スキャナー レポートでそれらへの参照を無視するかため、それらを削除することお勧めします。
+さらに、Azure Information Protection クライアントの1.48.204.0 以降では、次の機密情報の種類はサポートされておらず、Azure portal に表示されなくなりました。 これらの機密情報の種類を使用するラベルがある場合は、これらを削除することをお勧めします。正しく検出されないようにし、スキャナーレポートでそれらへの参照を無視する必要があるためです。
 
 - **EU の電話番号**
 - **EU の GPS 座標**

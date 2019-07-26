@@ -4,17 +4,17 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/24/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c365b71c2047a3556c3ba4da091945454096e048
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 6aea5948c9ad6358425f057a7459c3f851a74f49
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66186673"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446689"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -33,7 +33,7 @@ ms.locfileid: "66186673"
 
     - Excel:透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
     
-    - PowerPoint:透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
+    - PowerPoint:透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、 **[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
 
 - 透かしと、Word、Excel、PowerPoint のヘッダーおよびフッターでは、複数の行がサポートされています。 Outlook で適用されるラベルのヘッダーまたはフッターに対して複数の行を指定した場合、その行は連結されます。 このシナリオでは、[Word、Excel、PowerPoint、Outlook にさまざまな視覚的なマーキングを設定する](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成の使用を検討します。
 
@@ -65,19 +65,19 @@ ms.locfileid: "66186673"
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、**[Azure Information Protection]** ブレードに移動します。 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。 
     
     たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
 
-2. **[分類]** > **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、追加または変更する視覚的なマーキングを含むラベルを選択します。
+2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、追加または変更する視覚的なマーキングを含むラベルを選択します。
 
-3. **[ラベル]** ブレードの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、使用する視覚的なマーキングの設定を構成した後、**[保存]** をクリックします。
+3. **[ラベル]** ブレードの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、使用する視覚的なマーキングの設定を構成した後、 **[保存]** をクリックします。
     
-    - ヘッダーを構成するには:**[Documents with this label have a header]\(このラベルを持つドキュメントにヘッダーを設定する\)** で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
+    - ヘッダーを構成するには: **[Documents with this label have a header]\(このラベルを持つドキュメントにヘッダーを設定する\)** で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
     
-    - フッターを構成するには:**[Documents with this label have a footer]\(このラベルを持つドキュメントにフッターを設定する\)** で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
+    - フッターを構成するには: **[Documents with this label have a footer]\(このラベルを持つドキュメントにフッターを設定する\)** で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
     
-    - 透かしを構成するには:**[Documents with this label have a watermark]\(このラベルを持つドキュメントに透かしを設定する\)** で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
+    - 透かしを構成するには: **[Documents with this label have a watermark]\(このラベルを持つドキュメントに透かしを設定する\)** で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
     
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
@@ -86,9 +86,9 @@ ms.locfileid: "66186673"
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}`: 選択したラベル。 以下に例を示します。全般
+- `${Item.Label}`: 選択したラベル。 例えば:全般
 
-- `${Item.Name}`: ファイル名または電子メールの件名。 以下に例を示します。JulySales.docx
+- `${Item.Name}`: ファイル名または電子メールの件名。 例えば:JulySales.docx
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
@@ -96,7 +96,7 @@ ms.locfileid: "66186673"
 
 - `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}`: 選択したラベルが設定された日時。 以下に例を示します。8/16/2016 1:30 PM
+- `${Event.DateTime}`: 選択したラベルが設定された日時。 例えば:8/16/2016 1:30 PM
 
 例:**General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification:General** になります。
 
@@ -141,9 +141,9 @@ Calibri は、ヘッダー、フッター、透かしのテキストに使われ
 
 ### <a name="setting-the-font-color"></a>フォントの色を設定する
 
-利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**青緑色の RGB の 16 進値です。 
+利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**は水色の RGB 16 進値です。 
 
-便利なテーブルがありますの参照をこれらのコードが必要な場合、 [\<色 >](https://developer.mozilla.org/docs/Web/CSS/color_value) MSDN の web ドキュメントからページ。画像編集できるさまざまなアプリケーションでもコードを参照できます。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \<色の >](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。画像編集できるさまざまなアプリケーションでもコードを参照できます。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
 ## <a name="next-steps"></a>次の手順
 
