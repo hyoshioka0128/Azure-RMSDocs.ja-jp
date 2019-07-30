@@ -3,19 +3,19 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: c583dfd8fe17a926bc2014a626d289a3d29d627c
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
-ms.translationtype: HT
+ms.openlocfilehash: 77fac8df4194e70e05ec202359a18dcfd5b959b7
+ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411734"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483101"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -135,7 +135,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[ユーザーの "問題の報告" を追加する](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|Runauditinformationタイプの検出|[ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 "Global" という名前のラベルポリシーに対してラベルポリシー設定が有効であることを確認する PowerShell コマンドの例を次に示します。
 
@@ -640,7 +640,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この動作を変更して、この情報が統合ラベルクライアントによって送信されないようにするには、選択したラベルポリシーに対して次の文字列を入力します。
 
-- 重要:**RunAuditInformationTypeDiscovery**
+- 重要:**Runauditinformationタイプの検出**
 
 - 値:**False**
 
@@ -656,7 +656,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>ユーザーのサブセットに対して送信情報の種類の一致を無効にする
 
@@ -824,7 +824,7 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 同じラベルに複数のカスタムプロパティを追加するには、同じキーに対して複数の文字列値を定義する必要があります。
 
-例として、ラベルに "General" という名前が付けられていて、 **general**という値を持つ**分類**という名前のカスタムプロパティを1つ追加します。:
+例として、ラベルに "General" という名前が付けられていて、 **general** **という値**を持つ**分類**という名前のカスタムプロパティを1つ追加します。:
 
     Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 
