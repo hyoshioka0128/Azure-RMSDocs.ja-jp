@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 07/04/2019
+ms.date: 07/28/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 3d3dec9c5f2da8089b277cf9c372800c971af9ea
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.openlocfilehash: 94f7eb89f05ddce29d42689f8af05b0a99e0eedf
+ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428346"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68602762"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -130,7 +130,7 @@ Azure Information Protection 用の Azure Log Analytics ワークスペースに
 
 収集した後のコンテンツ一致は、アクティビティ ログからファイルにドリル ダウンして **[アクティビティの詳細]** を表示すると、レポートに表示されます。 この情報は、クエリで表示および取得することもできます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
@@ -231,9 +231,6 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
 ワークスペースが構成されている場合は、レポートを表示する準備ができています。
-
-> [!NOTE] 
-> 現在、レポートで初めてデータを表示するときに既知の問題があります。 これが発生する場合は、グローバル ポリシーで、[ポリシー設定](configure-policy-settings.md)の **[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定して、ポリシーを保存します。 その後、同じ設定を **[オン]** に設定して、ポリシーを保存します。 クライアントが[変更をダウンロード](configure-policy.md#making-changes-to-the-policy)した後、その監査イベントが Log Analytics ワークスペースで表示されるまでに、最大で 30 分かかることがあります。
 
 ## <a name="how-to-view-the-reports"></a>レポートの表示方法
 
