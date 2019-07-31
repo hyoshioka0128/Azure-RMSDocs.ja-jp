@@ -4,19 +4,19 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/18/2019
+ms.date: 07/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: be9c66a79b5eb9bf03b9a11cedd69926a292cbae
-ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
+ms.openlocfilehash: 9900f16e91b818b9e46ca8ea3b241b3aec4d4d5d
+ms.sourcegitcommit: 2f15ef5f4587a6363314e17a1c24658493f4bb73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68602743"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68658361"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -67,15 +67,15 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 |-------|-----------------------------------|----------------------------------------------------|
 |ラベル付けアクション:手動、推奨、自動| [はい] | [はい] |
 |中央レポート機能 (分析):| [はい] | [はい] |
+|保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| [はい] | [はい] |
 |ラベルの多言語サポート:| [はい] | [はい] |
 |メールの添付ファイルからのラベル継承:| [はい] | [はい]  |
 |次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] <br /><br /> [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。| [はい] <br /><br /> [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされます。 |
-|ユーザー定義のアクセス許可:| [はい] | はい (制限あり): <br /><br />-Word、Excel、PowerPoint、エクスプローラーの場合:Azure portal でラベルを構成するときにサポートされます。 |
+|ユーザー定義のアクセス許可:| [はい] | [はい] <br /><br />Word、Excel、PowerPoint、エクスプローラーの場合:Azure portal でラベルを構成する |
 |カスタム アクセス許可:| [はい] | エクスプローラーと PowerShell <br /><br /> Office アプリでは、別の方法として、ユーザーが **ファイル情報** >  **ドキュメント** > の保護 **アクセスの制限** または 管理者がユーザー定義のアクセス許可のラベルを構成できる を選択できます。|
 |Office アプリの Information Protection バー:| [はい] | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> - ラベルの色は適用されたラベルに表示されません|
 |ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| [はい] | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
 |エクスプローラー、右クリック アクション:| [はい] | はい (制限あり):<br /><br /> -以前の ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
-|保護されたファイル用のビューアー:| [はい] | はい (制限あり):<br /><br /> -一般的に保護されているファイル (pfile) の場合、従来のクライアントのビューアーとは異なり、最初に開いたファイルに変更を保存することはできません。|
 |PowerShell コマンド:| [はい] | はい (制限あり):<br /><br />-コンテナーファイル (zip、rar、7z、.msg、および .pst) から保護を削除することはできません|
 |保護アクションに対するオフライン サポート:| [はい] | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
 |オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| [はい] |いいえ |
@@ -100,6 +100,7 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 |ラベルは、さまざまな言語をサポートします。| Azure portal で構成します | Office 365 Security & Compliance PowerShell を使用して構成し、 *LocaleSettings*パラメーターと[新しいラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps)と[セットラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)を使用して構成します。|
 |ポリシーの更新: | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />24 時間ごと | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />4 時間ごと|
 |サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
+|ビューアーで開かれた一般的な保護されたファイル (pfile):| ファイルは元のアプリで開き、保護なしで表示、変更、および保存できます。 | ファイルは元のアプリで開くことができ、それを表示して変更することはできますが、保存することはできません。|
 |サポートされているコマンドレット:| [AzureInformatioProtection](/powershell/module/azureinformationprotection) に記載されているすべてのコマンドレット | Set-aipfileclassification、Set-aipfilelabel、および Get-AIPFileStatus は SharePoint のパスをサポートしていません <br /><br /> Set-aipfileclassification と Set-aipfilelabel は*Owner*パラメーターをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-aipfileclassification は*WhatIf*パラメーターをサポートするため、検出モードで実行できます。 <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />また、Get-AIPFileStatus の*Labelingmethod*パラメーターには、**手動**または**自動**ではなく**Privileged**または**Standard**が表示されます。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度:ファイルごと <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度:セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
