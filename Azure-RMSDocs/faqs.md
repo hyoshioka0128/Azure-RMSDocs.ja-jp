@@ -4,19 +4,19 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/25/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 16f459d789715c44f724eacb4c8fc01397d90b3f
-ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
+ms.openlocfilehash: d283821fc61747c2debab1e8e449c7083d7fa439
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68501668"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730371"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -134,6 +134,8 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
     これらの管理者ロールのいずれかを割り当てるには、[AIPService](/powershell/module/aipservice/add-aipservicerolebasedadministrator)PowerShell コマンドレットを使用します。
 
 注意事項:
+
+- Microsoft アカウントは、一覧表示されているいずれかの管理者ロールにアカウントが割り当てられている場合でも、Azure Information Protection の代理管理ではサポートされません。 
 
 - [オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を構成してある場合は、RMS コネクタを除き、Azure Information Protection を管理する機能に影響はありません。 たとえば、コンテンツを保護する機能を "IT department" グループに制限するようにオンボーディング コントロールが構成されている場合、RMS コネクタのインストールと構成に使用するアカウントは、そのグループのメンバーである必要があります。 
 

@@ -3,7 +3,7 @@ title: Azure Information Protection ポリシーを構成する - AIP
 description: 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-ms.date: 07/19/2019
+ms.date: 08/01/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 45b1d7dcefcdf36921b2dcbb34f1da6ead57c231
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340555"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730370"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -58,7 +58,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 - 以下のリンクを使用します。 https://portal.azure.com
 
-- 次のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を持つアカウントを使用します。
+- 次のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を持つ Azure AD アカウントを使用します。
     
     - **Azure Information Protection 管理者**
     
@@ -74,7 +74,8 @@ Azure Portal にサインインするには、Azure Information Protection を�
     
     > [!NOTE] 
     > テナントが統合ラベルストアに移行されている場合、Azure Information Protection 管理者 (旧称 "Information Protection administrator") はサポートされなくなりました。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
-
+    
+    Microsoft アカウントは Azure Information Protection を管理できません。
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
 
