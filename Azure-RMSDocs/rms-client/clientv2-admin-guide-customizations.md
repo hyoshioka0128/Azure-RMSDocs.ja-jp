@@ -3,19 +3,19 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 77fac8df4194e70e05ec202359a18dcfd5b959b7
-ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
+ms.openlocfilehash: 60debc8e04691dcb977da7d9a8c29bba7ae659ce
+ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483101"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684652"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -77,7 +77,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 ラベルポリシーを管理する管理センターには、ポリシー名が1つだけ表示されるため、PowerShell *id*パラメーターにラベルポリシー名を指定するのは簡単です。 ただし、ラベルの場合、管理センターには**名前**と**表示名**の両方が表示されます。 場合によっては、両方の値が同じになりますが、異なっていてもかまいません。
 
-- **Name**はラベルの元の名前であり、すべてのラベルで一意です。 作成したラベルの名前を変更しても、この値は変わりません。
+- **Name**はラベルの元の名前であり、すべてのラベルで一意です。 作成したラベルの名前を変更しても、この値は変わりません。 Azure Information Protection から移行されたラベルの場合、Azure portal のラベルのラベル ID が表示されることがあります。
 
 - [**表示名**] はユーザーに表示されるラベルの名前であり、すべてのラベルで一意である必要はありません。 たとえば、"**社外**秘" と表示されている**すべて**の従業員をサブラベル、他のすべての**従業員**にサブラベルを持つユーザーがいるとします。 これらのサブラベルの両方に同じ名前が表示されますが、ラベルは同じではなく、設定も異なります。
 
