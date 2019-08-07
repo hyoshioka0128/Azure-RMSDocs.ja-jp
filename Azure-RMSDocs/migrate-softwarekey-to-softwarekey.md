@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f8aef51156bb92d7d37da300ae2fccd51d739de1
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: 5bbf064cb019b663b62a779bf58322e0b23302e8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535117"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790548"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>手順 2:ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行
 
@@ -31,14 +33,14 @@ ms.locfileid: "67535117"
 
 ## <a name="to-import-the-configuration-data-to-azure-information-protection"></a>構成データを Azure Information Protection にインポートするには
 
-1. インターネットに接続されたワークステーションで使用して、 [Connect AipService](/powershell/module/aipservice/connect-aipservice)コマンドレット、Azure Rights Management サービスに接続します。
+1. インターネットに接続されたワークステーションで、 [connect-AipService](/powershell/module/aipservice/connect-aipservice)コマンドレットを使用して、Azure Rights Management サービスに接続します。
 
     ```
     Connect-AipService
     ```
     プロンプトが表示されたら、Azure Rights Management テナント管理者の資格情報を入力します (通常は、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使います)。
 
-2. 使用して、[インポート AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)コマンドレットをアップロードする各信頼された発行ドメイン (.xml) ファイルをエクスポートします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。 
+2. [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)コマンドレットを使用して、エクスポートされた各信頼された発行ドメイン (.xml) ファイルをアップロードします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。 
     
     このコマンドレットを実行するには、各構成データ ファイルに対して以前指定したパスワードが必要です。 
     
@@ -51,9 +53,9 @@ ms.locfileid: "67535117"
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
-3. 各ファイルがアップロードされると、実行[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) AD RMS で現在アクティブな SLC キーと一致するインポート済みのキーを識別するためにします。 このキーは、Azure Rights Management サービスのアクティブなテナント キーとなります。
+3. 各ファイルをアップロードしたら、 [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)を実行して、AD RMS で現在アクティブになっている SLC キーと一致するインポートされたキーを識別します。 このキーは、Azure Rights Management サービスのアクティブなテナント キーとなります。
 
-4.  使用して、[切断 AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Azure Rights Management サービスから切断するコマンドレット。
+4.  [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice)コマンドレットを使用して、Azure Rights Management サービスとの接続を切断します。
 
     ```
     Disconnect-AipServiceService

@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd2ad07e428dabe694701ffbd807fa12ee8e01cb
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 608419325f3a38f607577ee0fd1cdcdeee40d212
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520913"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790611"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -25,15 +27,15 @@ ms.locfileid: "67520913"
 AD RMS から Azure Information Protection への移行フェーズ 1 では、次の情報を使用してください。 この手順では「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 1 から 3 について説明し、ユーザーに影響を与えずに移行の環境を準備します。
 
 
-## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>手順 1:AIPService PowerShell モジュールをインストールし、テナントの URL を特定します。
+## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>手順 1:AIPService PowerShell モジュールをインストールし、テナントの URL を指定する
 
-AIPService モジュールをインストールして、構成して Azure Information Protection のデータ保護を提供するサービスを管理できるようにします。
+Azure Information Protection のデータ保護を提供するサービスを構成および管理できるように、AIPService モジュールをインストールします。
 
-手順については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](./install-powershell.md)します。
+手順については、「 [AIPService PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
 
 移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、 **<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
-以下に例を示します。**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+例えば:**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Azure Rights Management サービス URL を確認するには
 

@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
+ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f5a47cf86dfc5f8140cf21a0808eef84919b495d
-ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
+ms.custom: admin
+ms.openlocfilehash: 7dbd7a6091f0df3f4124b2ddb06178630c440f67
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483133"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793731"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -502,9 +504,9 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 - `Sign;Encrypt`:デジタル署名と S/MIME 暗号化を適用する
 
-- `Encrypt` :S/MIME 暗号化のみを適用する
+- `Encrypt`:S/MIME 暗号化のみを適用する
 
-- `Sign` :デジタル署名のみを適用する
+- `Sign`:デジタル署名のみを適用する
 
 **dcf781ba-727f-4860-b3c1-73479e31912b** のラベル ID の値の例:
 

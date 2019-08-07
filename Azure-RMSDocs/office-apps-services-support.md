@@ -4,18 +4,20 @@ description: Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
+ms.subservice: azurerms
 ms.suite: ems
-ms.openlocfilehash: fba1cf12c8ffbecbc9293c4b06283929507a39cb
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.custom: admin
+ms.openlocfilehash: 09a9272233a744027810ef65c12e8a3df5cac24b
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343725"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808088"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -28,7 +30,7 @@ ms.locfileid: "67343725"
 
 たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、 **[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
 
-Office アプリの参照を構成する準備が完了したら場合[Office アプリ。クライアントの構成](configure-office-apps.md)」を参照してください。
+Office アプリを構成する準備ができて[いる場合は、「office アプリ:クライアントの構成](configure-office-apps.md)」を参照してください。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
@@ -79,13 +81,13 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > 
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
-IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、このファイルで次のことはできません: 共同編集、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
+IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、このファイルで次のことはできません: 共同編集、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
 
 SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 
 新しい投稿ではありませんが、Office 365 ブログの次の記事に追加情報があります: [What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/) (SharePoint と SharePoint Online の Information Rights Management の新機能)
 
-予定されている変更は、次を参照してください。[更新を SharePoint のセキュリティ、管理、および移行](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585)します。
+今後の変更については、「 [SharePoint のセキュリティ、管理、および移行に対する更新](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585)」を参照してください。
 
 SharePoint の IRM を構成する用意ができている場合:
 

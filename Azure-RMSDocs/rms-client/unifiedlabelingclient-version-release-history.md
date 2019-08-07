@@ -4,18 +4,20 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f60d75655e24e7888ae45111d2b3538a8a12c288
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
+ms.custom: admin
+ms.openlocfilehash: 565b9d061bf148d0b1e6e2ef2ea45eb93c6cb6ec
+ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411698"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820696"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -50,9 +52,21 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「[クライアントを比較](use-client.md#compare-the-clients)する」を参照してください。
 
+## <a name="version-22190"></a>バージョン2.2.19.0
+
+**リリース日**: 08/06/2019
+
+**関する**
+
+- クライアントは、ポリシーを正常にダウンロードし、現在の機密ラベルを表示できます。 以前のバージョンからアップグレードした後で、ラベル付けセンターでカスタム情報の種類を構成していない場合は、この修正が必要です。
+
+- 一般的なパフォーマンスと安定性の向上。
+
 ## <a name="version-22140"></a>バージョン2.2.14.0
 
 **リリース日**: 07/15/2019
+
+04/06/2020 でサポート
 
 **新機能:**
 

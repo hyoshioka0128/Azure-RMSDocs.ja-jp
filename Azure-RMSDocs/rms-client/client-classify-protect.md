@@ -4,19 +4,21 @@ description: Windows 用 Azure Information Protection クライアントを使�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c42ef652f2fe2ccd8c668c84ee134aae47b1056f
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: user
+ms.openlocfilehash: 780e89703c9af6607cf6639c162b552535797cc9
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428360"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808148"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントで分類して保護する
 
@@ -31,7 +33,7 @@ ms.locfileid: "68428360"
 
 ただし、**エクスプローラー**を利用してファイルを分類し、保護することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類し、保護できるので便利です。 この方法は、Office ドキュメント、PDF ファイル、テキスト ファイル、画像ファイルなどさまざまなファイルの保護をサポートしています。 
 
-ラベルによりドキュメントに保護が適用される場合、保護されたドキュメントは SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する共同作成、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示がサポートされていません。 
+ラベルによりドキュメントに保護が適用される場合、保護されたドキュメントは SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する共同編集、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示。 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>組織外の相手と安全にファイルを共有する
 

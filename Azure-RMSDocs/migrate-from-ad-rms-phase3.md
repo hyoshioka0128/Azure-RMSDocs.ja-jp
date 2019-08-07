@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 521a14606a72bba4871f18a2191f246af1de14f7
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: eb9cfbe808e20f3b65a2d964e4f776f02b4b5ce8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522087"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793952"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
@@ -70,9 +72,9 @@ Windows クライアントを再構成する方法の詳細については、次
 
 2. Office 365 アプリまたは Office 2016 (またはそれ以降) を実行しているユーザーに対し、AD RMS の発行エンドポイントで拒否のアクセス許可を設定します。
 
-    A. クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
+    a. クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
 
-    B. **既定の Web サイト** >  **_wmcs** > **licensing** > **licensing.asmx** に移動します。
+    b. **既定の Web サイト** >  **_wmcs** > **licensing** > **licensing.asmx** に移動します。
 
     c. **licensing.asmx** >  **[プロパティ]**  >  **[編集]** を右クリックして選択します。
 
@@ -105,7 +107,7 @@ Windows クライアントを再構成する方法の詳細については、次
 
 - ユーザーがローカルの管理者特権を持つ場合は、ログオン スクリプトを使用します。
 
-ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 以下に例を示します。
+ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 例えば:
 
 - ログオン スクリプトを使用します。
 
@@ -132,7 +134,7 @@ Windows クライアントを再構成する方法の詳細については、次
    > [!IMPORTANT]
    > 前と同様に、アドレスの前後に余分なスペースが挿入されないように注意してください。
    > 
-   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、「 https://rms.treyresearch.net:443/_wmcs/licensing 」のように入力します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、 **[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、 https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
+   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、 https://rms.treyresearch.net:443/_wmcs/licensing のように指定します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、 **[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、 https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
     
    *&lt;YourTenantURL&gt;* の Azure Rights Management サービス URL を取得する必要がある場合は、前の「[Azure Rights Management サービス URL を識別するには](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url)」をご覧ください。
 

@@ -13,12 +13,13 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e3bce5ec86f8c655ca6f37a108f007d50387c2d2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179566"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792661"
 ---
 # <a name="android-setup"></a>Android のセットアップ
 
@@ -26,12 +27,12 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
--   [前提条件](#prerequisites)
+-   [必須コンポーネント](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -56,7 +57,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>省略可能
+## <a name="optional"></a>Optional
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for Android](https://github.com/AzureAD/rms-sdk-ui-for-android)」 (Android 用の UI ライブラリとサンプル アプリ) 参照。
 
@@ -66,7 +67,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
  
 -   Eclipse の開発環境を開きます。
--   Android アプリケーション プロジェクトを新規作成するには、**[File]** メニューで **[New]**、**[Project]** の順にクリックし、**[Android Application Project]** を選択します。
+-   Android アプリケーション プロジェクトを新規作成するには、 **[File]** メニューで **[New]** 、 **[Project]** の順にクリックし、 **[Android Application Project]** を選択します。
 
     ![新しい Android アプリケーションを作成する](../media/Android-setup-01c.png)
 
@@ -79,7 +80,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![アプリのアイコンを選択する](../media/Android-setup-03.png)
 
--   **[Next]** をクリックし、**[Blank Activity]** を選択してアクティビティを作成します。
+-   **[Next]** をクリックし、 **[Blank Activity]** を選択してアクティビティを作成します。
 
     ![アクティビティを作成する](../media/Android-setup-04.png)
 
@@ -95,10 +96,10 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 **SDK の参照**
 
-- *adrms\_android\_sdk.zip* を展開したフォルダーに移動します。 "SDK > com > microsoft > rightsmanagement" フォルダーで、ファイル *.classpath*、*.project*、および *project.properties* が読み取り専用にマークされていないことを確認します。
+- *adrms\_android\_sdk.zip* を展開したフォルダーに移動します。 "SDK > com > microsoft > rightsmanagement" フォルダーで、ファイル *.classpath*、 *.project*、および *project.properties* が読み取り専用にマークされていないことを確認します。
 - 参照するには、SDK をワークスペースにインポートする必要があります。
 
-  Eclipse で **[File]** をクリックします。 **[File]** メニューの **[Import]** をクリックします。 **[Import]** ダイアログ ボックスで、**[Android / Existing Android Code into Workspace]** を選択します。
+  Eclipse で **[File]** をクリックします。 **[File]** メニューの **[Import]** をクリックします。 **[Import]** ダイアログ ボックスで、 **[Android / Existing Android Code into Workspace]** を選択します。
 
   ![ワークスペースにインポートする](../media/Android-setup-07.png)
 
@@ -120,7 +121,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
   MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
 
-  アクセス許可を追加するには、**[Add]** をクリックして、**[Uses Permissions]** を選択します。
+  アクセス許可を追加するには、 **[Add]** をクリックして、 **[Uses Permissions]** を選択します。
 
   ![アクセス許可を追加する](../media/Android-setup-11d.jpg)
 

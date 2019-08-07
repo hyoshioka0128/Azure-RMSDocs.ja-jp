@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b6391df8ae2e31303f5b369963389abe3005a1bd
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 6ea0c6787680a86fde0c3a7d2919caac4fcdd811
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521654"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793767"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
@@ -84,7 +86,7 @@ Azure Information Protection クライアントをインストールした後、
     
     - システム (サインインおよびダウンロードポリシー用)
     
-    - 既定
+    - 既定値
     
 - 操作前後のラベル 
     
@@ -94,9 +96,9 @@ Azure Information Protection クライアントをインストールした後、
 
 - 指定したユーザー、グループ、または組織の[エンコーディング名に基づく使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)が含まれるカスタム アクセス許可 (該当する場合)
 
-Outlook のイベントは、警告、justify、および、ブロック メッセージが現在のクライアントが一般提供を必要し、クライアント設定の詳細。 詳細については、「[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)」を参照してください。
+Outlook の警告、ブロック、およびブロックメッセージのイベントには、現在の一般公開クライアントとクライアントの詳細設定が必要です。 詳細については、「[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)」を参照してください。
 
-保護サービスの使用状況ログについては、次を参照してください[ログと Azure Information Protection からの保護の使用量の分析。](../log-analyze-usage.md)
+保護サービスの使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](../log-analyze-usage.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントに関連付けられているすべてのログ ファイルがわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

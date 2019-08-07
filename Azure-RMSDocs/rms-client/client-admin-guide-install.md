@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 637ed02bab2adedd4a224f67e3cf50bfbdf95dbe
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 32805aca55871b502671dec0eec47970d1148a8a
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520933"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793652"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -72,7 +74,7 @@ ms.locfileid: "67520933"
     
     Office 2013 およびそれ以降のバージョンの場合、グループ ポリシーを構成して、Office アプリケーション用の **Microsoft Azure Information Protection** アドインが常に有効になるようにします。 この構成を行わないと、Microsoft Azure Information Protection アドインが無効にされる場合があり、ユーザーが Office アプリケーションで自分のドキュメントや電子メールにラベル付けできなくなります。
     
-    - Outlook の場合。Office ドキュメントの「[システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」に記載されているグループ ポリシー設定を使用します。
+    - Outlook の場合:Office ドキュメントの「[システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」に記載されているグループ ポリシー設定を使用します。
     
     - Word、Excel、PowerPoint の場合: サポート記事「[No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」 (Office 2013 および Office 2016 プログラムのグループ ポリシー設定によりアドインが読み込まれない) に記載されているグループ ポリシー設定 **[管理対象アドインの一覧]** を使用します。 
         
@@ -134,7 +136,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
  
     このファイルの名前は次の形式です: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
-    以下に例を示します。**Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    例えば:**Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     このログ ファイルで、次の文字列を検索します: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** インストールに失敗した場合、このログ ファイルには、問題の特定と解決に役立つ詳細が含まれます。
 
@@ -154,13 +156,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
 
-1. PowerShell セッションからまず実行[Connect AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice)し、Azure Rights Management サービスに接続するため、管理者の資格情報を指定します。 実行して[Get AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)します。 
+1. PowerShell セッションから、まず[connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice)を実行し、Azure Rights Management サービスに接続するための管理者の資格情報を指定します。 次[に、AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)を実行します。 
  
-    既に Azure Rights Management サービス用の PowerShell モジュールをインストールしていない場合は、次を参照してください。 [AIPService PowerShell モジュールをインストールする](../install-powershell.md)します。
+    Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「 [AIPService powershell モジュールのインストール](../install-powershell.md)」を参照してください。
 
 2. 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
-    以下に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    例えば:**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
 3. この値から、 **/_wmcs/licensing** 文字列を削除します。 例: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -175,7 +177,7 @@ Windows Update を使用して自動アップグレードをサポートし、Of
 
 この Microsoft .NET Framework の新しいバージョンのインストールが現実的ではない場合は、**DowngradeDotNetRequirement = True** パラメーターと値を使用してクライアントをインストールすることで、Microsoft .NET Framework バージョン 4.5.1 がインストールされていれば要件を省略できます。
 
-たとえば次のようになります。`AzInfoProtection.exe DowngradeDotNetRequirement=True`
+例: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 このパラメーターは、Azure Information Protection クライアントが Microsoft .NET Framework の以前のバージョンと共に使用すると Office アプリケーションがハングする問題が報告されていることを把握したうえで注意して使用することをお勧めします。 ハングすることがある場合は、その他のトラブルシューティングを行う前に推奨されているバージョンにアップグレードしてください。 
 
@@ -193,18 +195,18 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 2. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
     |--------------------|--------------|----------------|---------------------|
     |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
-    |Office 2013|サポートされているすべてのバージョン|64 ビット。[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 ビット。[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン:1.0|インストール|
+    |Office 2013|サポートされているすべてのバージョン|64ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン:1|インストール|
     |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン:2.1|インストール|
-    |Office 2016|サポートされているすべてのバージョン|64 ビット。[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 ビット。[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン:1.0|インストール|
+    |Office 2016|サポートされているすべてのバージョン|64ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン:1|インストール|
     |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン:2.1|インストール|
     |Office 2010|Windows 8.1 と Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
     |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
     |Office 2010|Windows 7 および Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB3125574 がインストールされていない場合はインストールします|
     |適用なし|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|インストール|
-    |適用なし|Windows 7|KB2627273 <br /><br /> ファイル名に含まれるバージョン番号: v4|アンインストール|
+    |適用なし|Windows 7|KB2627273 <br /><br /> ファイル名に含まれるバージョン番号: v4|Uninstall|
 
 3. 既定のインストールでは、`AzInfoProtection.msi /quiet` のように、 **/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。  
 
@@ -213,7 +215,7 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 Azure Information Protection クライアントに含まれている PowerShell モジュールには、スキャナーをインストールし、構成するためのコマンドレットがあります。 ただし、スキャナーを使用するには、クライアントのフル バージョンをインストールする必要があります。PowerShell モジュールのみをインストールすることはできません。
 
-このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 構成してから、スキャナーをインストールする準備ができました。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。
+このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 これで、スキャナーを構成してからインストールする準備が整いました。 インストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](../deploy-aip-scanner.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントをインストールしたので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

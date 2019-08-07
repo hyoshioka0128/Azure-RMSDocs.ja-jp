@@ -13,12 +13,13 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a1ec90089c86bc46e9423b2f1987279736095093
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 3c9bca4e474306d3e73df8d9d41a7c4ef9c6e5e2
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175947"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790809"
 ---
 # <a name="development-environment-files"></a>開発環境ファイル
 
@@ -26,7 +27,7 @@ ms.locfileid: "60175947"
 
 Rights Management サービス SDK 2.1 には、次のファイルが含まれています。これらのファイルは、コンピューター上の既定の場所または指定された場所 (%MsipcSDKDir%) にインストールされます。
 
-|ファイル|パス|説明|
+|File|パス|説明|
 |----|----|-----------|
 |ReadMe.htm| \ | RMS ヘルプおよび[リリース ノート](release-notes-rtm.md)へのリンクが含まれています。|
 |Isvtier5appsigningprivkey.dat|\bin|RMS 対応アプリケーションの開発時に使用するマニフェストを生成するための秘密キーが含まれています。|

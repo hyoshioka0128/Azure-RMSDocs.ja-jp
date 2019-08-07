@@ -1,6 +1,6 @@
 ---
 title: 保護テンプレート用の PowerShell - Azure Information Protection
-description: Azure Portal で保護テンプレートを作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 さらに、テナント間でテンプレートをコピーしたり、多言語の名前や説明などのテンプレートで複雑なプロパティの一括編集を実行できます。
+description: Azure Portal で保護テンプレートを作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 さらに、テナント間でテンプレートをコピーしたり、多言語の名前や説明など、テンプレート内の複雑なプロパティを一括編集したりすることができます。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -10,13 +10,15 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
+ms.subservice: azurerms
 ms.suite: ems
-ms.openlocfilehash: 1e1e033ee900890431ed35faed5cca0171f86e38
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 105286f907df4f8c8f0f329e4467d4dc1d95422e
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520996"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791542"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>保護テンプレート用の PowerShell リファレンス
 
@@ -28,11 +30,11 @@ Azure Information Protection の保護設定は、保護テンプレートに保
 
 エクスポートとインポートを使用して保護テンプレートをバックアップして復元することもできます。 テンプレートは定期的にバックアップすることをお勧めします。 これで、意図しない保護設定を変更してしまった場合でも、前のバージョンに簡単に戻すことができます。
 
-インストール手順については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](install-powershell.md)します。
+インストール手順については、「 [AIPService PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
 保護テンプレートの作成および管理をサポートするコマンドレットは次のとおりです。
 
-- [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate)
+- [AipServiceTemplate を追加します。](/powershell/module/aipservice/add-aipservicetemplate)
 
 - [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)
 
@@ -40,13 +42,13 @@ Azure Information Protection の保護設定は、保護テンプレートに保
 
 - [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
 
-- [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
+- [インポート-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
 
-- [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
+- [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
 
-- [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)
+- [-AipServiceTemplate を削除します。](/powershell/module/aipservice/remove-aipservicetemplate)
 
-- [セット AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
+- [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
 
 
 

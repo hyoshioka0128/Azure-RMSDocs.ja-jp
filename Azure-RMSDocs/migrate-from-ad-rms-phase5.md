@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: da6ee07bf47e4b392346e719a2c62f00133f498c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522073"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793930"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -48,19 +50,19 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 >[!IMPORTANT]
 > この移行が終わると、Azure Information Protection および Hold Your Own Key (HYOK) オプションで AD RMS クラスターを使うことができなくなります。 Azure Information Protection のラベルに HYOK を使う場合は、現在行われているリダイレクションのため、使用する AD RMS クラスターに、移行したクラスターとは異なるライセンス URL が必要です。
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加の構成
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Office 2010 を実行するコンピューターの追加構成
 
-Office 2010 を実行するクライアントを移行するには、AD RMS サーバーをプロビジョニング解除後に、保護されたコンテンツを開くときに遅延を発生する可能性が。 または、ユーザーは、メッセージ資格情報を保護されたコンテンツを開く必要がないことを確認可能性があります。 これらの問題を解決するには、AD RMS の URL の FQDN (127.0.0.1)、コンピューターのローカル IP アドレスにリダイレクトして、これらのコンピューターのネットワークのリダイレクトを作成します。 これは、各コンピューターで、ローカルの hosts ファイルを構成することで、または DNS を使用して行んだことができます。
+移行されたクライアントが Office 2010 を実行している場合、AD RMS サーバーがプロビジョニング解除された後、保護されたコンテンツを開くのに遅延が発生する可能性があります。 または、保護されたコンテンツを開くための資格情報がないというメッセージが表示されることがあります。 これらの問題を解決するには、これらのコンピューターに対してネットワークリダイレクトを作成し、AD RMS URL FQDN をコンピューターのローカル IP アドレス (127.0.0.1) にリダイレクトします。 これを行うには、各コンピューターでローカルホストファイルを構成するか、DNS を使用します。
 
-ローカルの hosts ファイルを使用してリダイレクトします。
+ローカルホストファイルを使用したリダイレクト:
 
-- ローカルの hosts ファイルに次の行を追加する置換`<AD RMS URL FQDN>`プレフィックスまたは web ページのことがなく、AD RMS クラスターの値で。
+- ローカルホストファイルに次の行を追加します`<AD RMS URL FQDN>` 。を AD RMS クラスターの値に置き換えます。プレフィックスや web ページは使用しません。
     
         127.0.0.1 <AD RMS URL FQDN>
 
-DNS を使用してリダイレクトします。
+DNS を使用したリダイレクト:
     
-- AD RMS の URL FQDN、IP アドレス 127.0.0.1 を持つ新しいホスト (A) レコードを作成します。
+- AD RMS URL FQDN の新しいホスト (A) レコードを作成します。 IP アドレスは127.0.0.1 です。
 
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 
@@ -114,9 +116,9 @@ killall cfprefsd
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 
-移行がこのモードは、1024 ビットのキーと sha-1 を使用するため、AD RMS のデプロイが RMS Cryptographic Mode 1 を使用していた場合は、完了すると、この手順が必要です。 この構成は、不適切なレベルの保護を提供すると見なされます。 Microsoft には、1024 ビット RSA キーなどの下位のキーの長さを使用し、sha-1 などの保護の不適切なレベルを提供するプロトコルの関連付けの使用を保証しません。
+AD RMS のデプロイで RMS 暗号化モード1を使用していた場合、このモードでは1024ビットのキーと SHA-1 が使用されるため、この手順を実行する必要があります。 この構成は、十分なレベルの保護を提供するものと見なされます。 マイクロソフトは、1024ビットの RSA キーなどの下位キーの長さの使用を保証していません。また、SHA-1 など、不適切なレベルの保護を提供するプロトコルの使用については推奨しません。
 
-2048 ビット キーおよび SHA 256 で RMS Cryptographic Mode 2 を使用した保護の結果を更新するには、その結果します。 
+キーを更新すると、RMS 暗号化モード2を使用する保護が適用され、その結果、2048ビットキーと SHA-256 が生成されます。 
 
 AD RMS のデプロイで暗号化モード 2 が使用されている場合も、この手順を実行することをお勧めします。新しいキーは、AD RMS キーに対する潜在的なセキュリティ侵害からテナントを保護するのに役立つためです。
 
@@ -126,11 +128,11 @@ Azure Information Protection テナント キーの再入力を行うと ("キ�
 
 Azure Information Protection テナント キーを更新するには:
 
-- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレットを実行[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)し、テナントが自動的に作成したキーのキー識別子を指定します。 使用して指定する値を識別する、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレット。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+- **テナント キーが Microsoft によって管理されている場合**: PowerShell コマンドレットの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)を実行し、テナント用に自動的に作成されたキーのキー識別子を指定します。 指定する値を特定するには、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **テナント キーを自分で管理している場合 (BYOK)** : Azure Key Vault で、Azure Information Protection テナント キーの作成プロセスを繰り返し、実行、[使用 AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットを再度この新しいキーの URI を指定します。 
+- **テナント キーを自分で管理している場合 (BYOK)** : Azure Key Vault で、Azure Information Protection テナントのキー作成プロセスを繰り返してから、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットをもう一度実行して、この新しいキーの URI を指定します。 
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 

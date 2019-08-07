@@ -4,19 +4,20 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: db5b1b06f198db0795876e71749b1d220c7c2694
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.custom: admin
+ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305706"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808046"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -30,7 +31,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 追加の分類機能が利用可能になる時期については、[Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
 
-- Office Web アプリ (Office Online) にはラベル付け機能はありません。
+- Office web apps (web 用 Office) にラベル付け機能がありません。
 
 - 分類およびラベル付けは Exchange Online や SharePoint Online とは統合されません。
 
@@ -43,15 +44,15 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com/)にアクセスし、新機能のご要望をお知らせください。また、リクエストへの投票も受け付けています。
 
-## <a name="which-client-do-i-install-for-testing-new-functionality"></a>新しい機能をテスト用クライアントをインストールします。
+## <a name="which-client-do-i-install-for-testing-new-functionality"></a>新しい機能をテストするためにどのクライアントをインストールしますか?
 
-現時点では、Windows の 2 つのクライアントがあります。 
+現在、Windows には次の2つのクライアントがあります。 
 
-- **Azure Information Protection クライアントのラベル付けを統合する**管理センターでは、次のいずれかからラベルとポリシー設定をダウンロードします。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター, Microsoft 365 コンプライアンス センター。 このクライアントは現在一般提供であり、将来のリリースの他の機能をテストするためのプレビュー バージョンを使います。
+- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビュー版が用意されています。
 
-- **Azure Information Protection クライアント (クラシック)** Azure portal からラベルとポリシー設定をダウンロードします。 このクライアントは、クライアントの以前の一般公開バージョンに基づいています。
+- Azure portal からラベルとポリシー設定をダウンロードする**Azure Information Protection クライアント (クラシック)** 。 このクライアントは、以前の一般公開バージョンのクライアント上に構築されます。
 
-その現在の機能セットと機能は、ビジネス要件を満たしている場合、統一されたラベル付けクライアントでテストすることをお勧めします。 そうでない場合、またはまだしていない Azure portal でラベルを構成している場合[統合のラベル付けのストアに移行](configure-policy-migrate-labels.md)、従来のクライアントを使用します。
+現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
 
 機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)」をご覧ください。
 
@@ -81,7 +82,7 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>分類が自動的に含まれるドキュメント テンプレートを作成できますか?
 
-可能。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それがご自身の要件を満たしていない場合は、好みの書式設定を持つドキュメント テンプレートを作成し、フィールド コードとして分類を追加することができます。 
+はい。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それがご自身の要件を満たしていない場合は、好みの書式設定を持つドキュメント テンプレートを作成し、フィールド コードとして分類を追加することができます。 
 
 例として、ドキュメントのヘッダーに分類を表示するテーブルがあるとします。 または、概要向けにドキュメントの分類を参照する具体的な表現を使用します。
 

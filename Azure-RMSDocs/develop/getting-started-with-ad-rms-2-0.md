@@ -13,14 +13,15 @@ ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 3ea3ff7e8099521123a9cc2e27ed349ee1c091b5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 1e5efbf90bb4542d885e5ebe69eb71eeb2f74c03
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178337"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791088"
 ---
-# <a name="getting-started"></a>はじめに
+# <a name="getting-started"></a>作業の開始
 
 Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は RMS サーバーまたは Azure RMS を介して RMS 情報保護を利用するアプリケーションを作成できます。 このプラットフォームでは、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
 

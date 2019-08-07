@@ -13,12 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 392bfa5e76bd0e07212fd47042b514a243a652dd
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178722"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791448"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 
@@ -29,12 +30,12 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 **注**  この SDK では iPod Touch はサポートされていません。
 
 
--   [前提条件](#prerequisites)
+-   [必須コンポーネント](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -53,13 +54,13 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>省略可能
+## <a name="optional"></a>省略可
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for iOS (iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)」参照。
 
 ## <a name="configuring-your-development-environment"></a>開発環境の構成
 
--   新しいプロジェクトを作成するために、**[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
+-   新しいプロジェクトを作成するために、 **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。
 -   **[Single View Application (単一枠ビュー アプリケーション)]** を選択します。
 
     ![新しいプロジェクトの作成](../media/iOS-Project.png)
@@ -73,7 +74,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![場所の設定](../media/ios-add-dependencies-01a.png)
 
--   **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンをクリックし、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
+-   **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンをクリックし、 **[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
 
     この操作により、コピーを作成する代わりに、SDK のインストール フォルダーへの参照を保持します。
 
@@ -83,7 +84,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![リソース バンドルの追加](../media/iOS-add-resource-bundle-02a.png)
 
--   フレームワークをコピーしたときと同様に、**[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
+-   フレームワークをコピーしたときと同様に、 **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、 **[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
 -   SDK は次のような他のフレームワークに依存しています:**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security**。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
 
     **UIKit** と **Foundation** フレームワークが必要ですが、通常は既定で表示されます。

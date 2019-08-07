@@ -13,12 +13,13 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c2cae0e07903dd27c8cd4332e255cb33910c9f94
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: eada5335d234b080dcb7be882eddfc4437a59370
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178320"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792230"
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
@@ -36,9 +37,9 @@ ms.locfileid: "60178320"
 ### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ:RMS 保護ファイルを使用する
 
 
-- **手順 1**: [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを作成します。
+- **手順 1**:[MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを作成します。
 
-  **説明**:[MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) の呼び出しを参照してください。
+  **説明**: [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) の呼び出しを参照してください。
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -56,7 +57,7 @@ ms.locfileid: "60178320"
 
 - **手順 2**: Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
 
-  **説明**:この手順では、例の認証パラメーターで [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
+  **説明**: この手順では、例の認証パラメーターで [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
 
       // AuthenticationCallback holds the necessary information to retrieve an access token.
       @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
@@ -113,7 +114,7 @@ ms.locfileid: "60178320"
 
 このシナリオは、初めにテンプレートの一覧 [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
--   **手順 1**: テンプレートの一覧を取得します。
+-   **手順 1**:テンプレートの一覧を取得します。
 
         + (void)templateListUsageWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -157,7 +158,7 @@ ms.locfileid: "60178320"
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ:カスタム保護ファイルを開く
 
 
--   **手順 1**: *serializedContentPolicy* から [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
+-   **手順 1**:*serializedContentPolicy* から [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -215,7 +216,7 @@ ms.locfileid: "60178320"
 ### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>シナリオ:カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 
--   **手順 1**: ユーザーが指定した電子メール アドレスを使用してポリシー記述子を作成する
+-   **手順 1**:ユーザーが指定した電子メール アドレスを使用してポリシー記述子を作成する
 
     **説明**:実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) と [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) からのユーザー入力を使用して作成されます。
 

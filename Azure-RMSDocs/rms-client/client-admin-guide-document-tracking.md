@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
+ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb76aece7012d521542973c94181f43f7b0d15f3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 6ba83809a8f077ed23afaa337c62d63c78c0cfbc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521759"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790119"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -28,30 +30,30 @@ ms.locfileid: "67521759"
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>PowerShell を使用したドキュメント追跡サイトの管理
 
-次のセクションでは、PowerShell を使用してドキュメント追跡サイトを管理する方法について説明します。 PowerShell モジュールのインストール手順については、次を参照してください。 [AIPService PowerShell モジュールをインストールする](../install-powershell.md)します。
+次のセクションでは、PowerShell を使用してドキュメント追跡サイトを管理する方法について説明します。 PowerShell モジュールのインストール手順については、「 [AIPService powershell モジュールのインストール](../install-powershell.md)」を参照してください。
 
 各コマンドレットの詳細については、各リンク先ページをご覧ください。
 
 ### <a name="privacy-controls-for-your-document-tracking-site"></a>ドキュメント追跡サイトのプライバシー管理
 
-使用してドキュメント追跡を無効にできますドキュメント追跡情報がすべて表示が禁止されている場合、組織のプライバシーに関する要件により、[無効 AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature)コマンドレット。 
+プライバシー要件により、組織ですべてのドキュメント追跡情報を表示できない場合は、 [disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature)コマンドレットを使用してドキュメント追跡を無効にすることができます。 
 
-このコマンドレットは、組織内のすべてのユーザーが保護されたドキュメントへのアクセスを追跡したり取り消ししたりできないように、ドキュメント追跡サイトへのアクセスを無効にします。 再度ドキュメントを使用して、いつでもの追跡が有効にすることができます、[有効にする AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)、ドキュメント追跡が現在有効になっているかを使用して無効になっているかどうかをチェックすることができますと[Get AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)します。 
+このコマンドレットは、組織内のすべてのユーザーが保護されたドキュメントへのアクセスを追跡したり取り消ししたりできないように、ドキュメント追跡サイトへのアクセスを無効にします。 [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)を使用すると、いつでもドキュメント追跡を再度有効にできます。また、 [Get AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)を使用して、ドキュメント追跡が現在有効になっているか無効になっているかを確認できます。 
 
 ドキュメント追跡サイトを有効にすると、既定では、保護されたドキュメントにアクセスしようとしている人の電子メール アドレス、アクセスを試みた時刻、その人がいる位置情報などが示されます。 このレベルの情報は、共有ドキュメントの使用方法を決めたり、不審なアクティビティが確認された際にアクセス権を取り消すべきかどうかを判断したりするのに役立ちます。 ただし、このユーザー情報へのアクセス権は、プライバシー保護の観点から一部またはすべてのユーザーに対して無効にする必要がある場合もあります。 
 
-アクティビティを他のユーザーによって追跡されていないユーザーが存在する場合、Azure AD に格納されているグループに追加し、このグループを指定、[セット AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup)コマンドレット。 このコマンドレットを使用するときに指定できるグループは 1 つだけです。 ただし、グループは入れ子構造にすることができます。 
+このアクティビティが他のユーザーによって追跡されていないユーザーがいる場合は、Azure AD に格納されているグループにそのユーザーを追加し、 [AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup)コマンドレットでこのグループを指定します。 このコマンドレットを使用するときに指定できるグループは 1 つだけです。 ただし、グループは入れ子構造にすることができます。 
 
 これらのグループ メンバーについては、ユーザーがグループ メンバーと共有したドキュメントに関連するアクティビティが発生した場合に、ドキュメント追跡サイトでユーザーがアクティビティを確認することはできません。 また、ドキュメントを共有したユーザーには電子メール通知が送信されません。
 
-この構成を使用する場合、引き続きすべてのユーザーがドキュメント追跡サイトを使用でき、保護されたドキュメントへのアクセスを取り消すことができます。 ただし、セット AipServiceDoNotTrackUserGroup コマンドレットを使用して指定したユーザーのアクティビティが表示されません。
+この構成を使用する場合、引き続きすべてのユーザーがドキュメント追跡サイトを使用でき、保護されたドキュメントへのアクセスを取り消すことができます。 ただし、AipServiceDoNotTrackUserGroup コマンドレットを使用して指定したユーザーのアクティビティは表示されません。
 
-この設定はエンド ユーザーのみに影響します。 セット AipServiceDoNotTrackUserGroup を使用してそれらのユーザーが指定されている場合でも、Azure Information Protection の管理者は、すべてのユーザーのアクティビティを常に追跡できます。 管理者がユーザーのドキュメントを追跡する方法については、「[ユーザーのドキュメントの追跡と取り消し](#tracking-and-revoking-documents-for-users)」のセクションをご覧ください。
+この設定はエンド ユーザーのみに影響します。 Azure Information Protection の管理者は、AipServiceDoNotTrackUserGroup を使用してユーザーを指定した場合でも、常にすべてのユーザーのアクティビティを追跡できます。 管理者がユーザーのドキュメントを追跡する方法については、「[ユーザーのドキュメントの追跡と取り消し](#tracking-and-revoking-documents-for-users)」のセクションをご覧ください。
 
 
 ### <a name="logging-information-from-the-document-tracking-site"></a>ドキュメント追跡サイトからのログ情報
 
-次のコマンドレットを使用して、ログ情報をドキュメント追跡サイトからダウンロードできます。
+ドキュメント追跡サイトからログ情報をダウンロードするには、次のコマンドレットを使用します。
 
 - [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
@@ -102,7 +104,7 @@ ms.locfileid: "67521759"
 
 ドキュメントを追跡および取り消しできるようにするためには、まずこれをドキュメント追跡サイトに登録する必要があります。 ユーザーが Azure Information Protection クライアントを使っている場合、このアクションは、エクスプローラーまたは各 Office アプリの **[追跡と取り消し]** オプションを選択すると発生します。
 
-[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 以下に例を示します。
+[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 例えば:
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 
@@ -116,7 +118,7 @@ ms.locfileid: "67521759"
 
 また、ユーザーと管理者がドキュメント追跡サイトを使用する方法をログに記録する要求の種類もあります。 たとえば、**RevokeAccess** は、ユーザーまたはユーザーの代理の管理者が、ドキュメント追跡サイトでドキュメントを取り消した場合の要求の種類です。 この要求の種類と AdminAction フィールドを組み合わせて、ユーザーが自分のドキュメントを取り消したか (AdminAction フィールドが空)、管理者がユーザーの代理でドキュメントを取り消したか (AdminAction が true) を判断できます。
 
-使用状況ログの詳細については、次を参照してください[ログと Azure Information Protection からの保護の使用量の分析。](../log-analyze-usage.md)
+使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](../log-analyze-usage.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアント用にドキュメント追跡サイトを構成した後は、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

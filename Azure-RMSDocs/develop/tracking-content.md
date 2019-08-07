@@ -13,12 +13,13 @@ ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 35bcfbb8ea3afeb1cfce3703ca59131dbcacb040
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175861"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792019"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
@@ -34,7 +35,7 @@ ms.locfileid: "60175861"
 
 導入の詳しい手順は以下のようになります。
 
-## <a name="1-add-document-tracking-metadata"></a>1.ドキュメント追跡メタデータを追加する
+## <a name="1-add-document-tracking-metadata"></a>1. ドキュメント追跡メタデータを追加する
 
 ドキュメント追跡は、Rights Management システムの機能です。 ドキュメントの保護プロセス中に特定のメタデータを追加することにより、追跡用のいくつかのオプションを提供する追跡サービス ポータルにドキュメントを登録できます。
 
@@ -87,7 +88,7 @@ ms.locfileid: "60175861"
 - [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## <a name="2-register-the-document-with-the-rms-service"></a>2.RMS サービスでドキュメントを登録する
+## <a name="2-register-the-document-with-the-rms-service"></a>2. RMS サービスでドキュメントを登録する
 
 ドキュメント追跡メタデータの設定と追跡システムに登録するための呼び出しの例を表すコード スニペットを次に示します。
 

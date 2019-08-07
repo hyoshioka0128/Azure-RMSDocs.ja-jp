@@ -13,12 +13,13 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 745a340586157b6bb429345c96ee9556f60a93da
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.custom: dev
+ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263888"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791336"
 ---
 # <a name="android-code-examples"></a>Android のコード例
 
@@ -43,7 +44,7 @@ ms.locfileid: "66263888"
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**:[ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
+    **説明**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)

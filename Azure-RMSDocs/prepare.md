@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2ffe76069e4f36fb4c21fdd8edaeb611635b0abf
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 9c57385119f8bad8ce6c98c0d3c9bb6cee4c3118
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521907"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793819"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -78,7 +79,7 @@ Azure Information Protection でユーザーとグループを使用するシナ
 
     - Azure AD の場合: [Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Office 365。[Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Office 365 の場合:[Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - **Azure AD userPrincipalName** 属性は、テナントにあるアカウントに対する値が Azure AD proxyAddresses 属性にない場合にのみ使用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスのない Office 365 のユーザーを作成する場合です。
 
@@ -131,7 +132,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
     Connect-MsolService
 
 
-注:このコマンドが機能しない場合は、`Install-Module MSOnline` を実行して MSOnline モジュールをインストールできます。
+メモ:このコマンドが機能しない場合は、`Install-Module MSOnline` を実行して MSOnline モジュールをインストールできます。
 
 次に、PowerShell セッションを構成して、値を切り捨てないようにします。
 
@@ -215,5 +216,5 @@ Azure Information Protection で使用したいグループが表示されるこ
 
 - 2018 年 2 月より前にサブスクリプションを取得した場合: 自分でサービスをアクティブにする必要があります。 
 
-詳細については、アクティブ化の状態の確認が含まれているを参照してください。 [Azure Information Protection からの保護サービスをアクティブ化する](./activate-service.md)します。
+アクティベーションの状態の確認など、詳細については、「 [Azure Information Protection からの保護サービスのアクティブ化](./activate-service.md)」を参照してください。
 

@@ -13,12 +13,13 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 93975ad0f2113fc10bff3f54f0b6729dfa33bad3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178354"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792422"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>方法: エラーとパフォーマンスのログを有効にする
 Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードが 1 つのデバイス プロパティで管理されます。
@@ -94,6 +95,6 @@ Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマン�
     CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
 
 
-**注**: 上記の Windows コード スニペットは C++ で記述されています。 C\# の場合は、構文の "::" を  "." に置き換えてください。
+**注**: 上記の Windows コード スニペットは C++ で記述されています。 C\# の場合は、構文の "::" を "." に置き換えてください。
 
-**Linux/C++** - この SDK には、他のプラットフォームほど大規模ではないいくつかの基本的なログ記録機能が含まれています。 詳細については、「[RMS SDK for portable C++ (移植可能 C++ のための RMS SDK)](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting)」の "README.md" の「**Troubleshooting (トラブルシューティング)**」セクションを参照してください。
+**Linux/C++** - この SDK には、他のプラットフォームほど大規模ではないいくつかの基本的なログ記録機能が含まれています。 詳細については、「[RMS SDK for portable C++ (移植可能 C++ のための RMS SDK)](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting)」の "README.md" の「**Troubleshooting (トラブルシューティング)** 」セクションを参照してください。

@@ -1,6 +1,6 @@
 ---
 title: AD RMS から Azure Information Protection への移行
-description: Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Information Protection に移行する方法を説明します。 ユーザーは、移行後に、AD RMS を使用して、組織が保護されているドキュメントと電子メール メッセージへのアクセスがあります。
+description: Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Information Protection に移行する方法を説明します。 移行後も、ユーザーは AD RMS を使用して組織が保護したドキュメントや電子メールメッセージにアクセスできます。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61cd0d2ea761cf3f0ca1a8cbd9e1ab1d248b63ef
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.custom: admin
+ms.openlocfilehash: 88a6409afae1be74a9f43dc18eaa2a48863b0c1c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545011"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790714"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -68,13 +70,13 @@ Azure Information Protection への移行を始める前に、次の前提条件
         
       - 複数フォレスト、複数 RMS クラスター
         
-    注:既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
+    メモ:既定では、複数の AD RMS クラスターが Azure Information Protection の 1 つのテナントに移行します。 個別の Azure Information Protection テナントが必要な場合は、それぞれ異なる移行として処理する必要があります。 1 つの RMS クラスターからのキーを、複数のテナントにインポートすることはできません。
 
 - **Azure Information Protection のサブスクリプション (Azure Rights Management は非アクティブです) など、Azure Information Protection を実行するためのすべての要件:**
 
     「[Azure Information Protection の要件](./requirements.md)」をご覧ください。
 
-    Office 2010 を実行しているコンピューターがあれば、インストールすることする必要がありますに注意してください、 [Azure Information Protection クライアントまたはユーザーの Azure Information Protection のクライアントを統一されたにラベル付け](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)これらのクライアント機能を提供するため、クラウド サービスにユーザーを認証します。 以降のバージョンの Office では、これらのクライアントは、分類、ラベル付け、必要な Azure Information Protection クライアントは省略可能なだけデータを保護したい場合が推奨されます。 詳細については、管理者ガイドを参照してください、 [Azure Information Protection クライアント](./rms-client/client-admin-guide.md)と[Azure Information Protection クライアントのラベル付けを統合する](./rms-client/clientv2-admin-guide.md)します。
+    Office 2010 を実行しているコンピューターを使用している場合は、これらのクライアントがクラウドに対してユーザーを認証する機能を提供するため、 [Azure Information Protection クライアントまたは Azure Information Protection 統合されたラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)をインストールする必要があることに注意してください。サーヴィス. 新しいバージョンの Office では、これらのクライアントは分類とラベル付けに必要であり、Azure Information Protection クライアントは省略可能ですが、データの保護のみを行う場合に推奨されます。 詳細については、 [Azure Information Protection クライアント](./rms-client/client-admin-guide.md)の管理者ガイドと[Azure Information Protection 統合ラベル付けクライアント](./rms-client/clientv2-admin-guide.md)に関する情報を参照してください。
 
     AD RMS からの移行を行うには、その前に Azure Information Protection のサブスクリプションを用意しておく必要がありますが、移行を始める前はテナントの Rights Management サービスをアクティブにしないことをお勧めします。 移行プロセスには、AD RMS からキーとテンプレートをエクスポートし、それらを Azure Information Protection のテナントにインポートした後の、このアクティブ化の手順が含まれています。 ただし、Rights Management サービスが既にアクティブ化されている場合でも、いくつかの追加手順を行って AD RMS から移行することができます。
 
@@ -112,7 +114,7 @@ AD RMS 暗号化モードを確認するには:
 
 ### <a name="migration-limitations"></a>移行の制限
 
-- Azure Information Protection で使われる Rights Management サービスによってサポートされていないソフトウェアやクライアントでは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 サポートされているアプリケーションとクライアントのセクションを確認して[Azure Information Protection の要件](./requirements.md)します。
+- Azure Information Protection で使われる Rights Management サービスによってサポートされていないソフトウェアやクライアントでは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「 [Azure Information Protection の要件](./requirements.md)」の「サポートされているアプリケーションとクライアント」セクションを必ず確認してください。
 
 - AD RMS デプロイが外部のパートナーと (たとえば、信頼されたユーザー ドメインやフェデレーションを使用して) コラボレーションするように構成されている場合は、同時にまたは可能な限り速やかにパートナーも Azure Information Protection に移行する必要があります。 移行前に Azure Information Protection を使用して保護されていたコンテンツに引き続きアクセスするには、外部パートナーも同じようにこのドキュメントで説明されているクライアント構成の変更を行う必要があります。
     
@@ -128,7 +130,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - パートナーの Azure Rights Management サービスはまだアクティブ化されていないが、Azure Rights Management サービスの URL はわかっていること。
 
-    この情報は、サービスへの接続、Azure Rights Management Tool をインストールすることで受けることができます ([Connect AipService](/powershell/module/aipservice/connect-aipservice))、し、Azure Rights Management サービスのテナント情報を表示する ([Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration))。
+    この情報を取得するには、Azure Rights Management ツールをインストールし、サービスに接続し ([接続-AipService](/powershell/module/aipservice/connect-aipservice))、azure Rights Management サービスのテナント情報を表示します ([AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
 - パートナーの AD RMS で保護されたコンテンツへの要求をパートナーのテナントの Azure Rights Management サービスにリダイレクトするよう、移行後のクライアントを構成できるように、パートナーの AD RMS クラスターの URL と Azure Rights Management サーバーの URL をパートナーから提供されていること。 クライアントのリダイレクトを構成する手順については、手順 7 で説明します。
 
@@ -140,9 +142,9 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 [**フェーズ 1: 移行の準備**](migrate-from-ad-rms-phase1.md)
 
-- **ステップ 1: AIPService PowerShell モジュールをインストールし、テナントの URL を特定します。**
+- **ステップ 1: AIPService PowerShell モジュールをインストールし、テナントの URL を指定する**
 
-    移行プロセスでは、AIPService モジュールから 1 つ以上の PowerShell コマンドレットを実行する必要があります。 多くの移行手順を完了するには、テナントの Azure Rights Management サービス URL が必要です。この値は、PowerShell を使って特定することができます。
+    移行プロセスでは、AIPService モジュールから1つまたは複数の PowerShell コマンドレットを実行する必要があります。 多くの移行手順を完了するには、テナントの Azure Rights Management サービス URL が必要です。この値は、PowerShell を使って特定することができます。
 
 - **手順 2:クライアントの移行を準備する**
 
@@ -156,7 +158,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
 - **手順 4:AD RMS から構成データをエクスポートし、それを Azure Information Protection にインポートする**
 
-    インポート AipServiceTpd PowerShell コマンドレットを使用して、Azure Information Protection から Azure Rights Management サービスにファイルを XML ファイル、およびアップロードするには、AD RMS から構成データ (キー、テンプレート、Url) をエクスポートします。 次に、Azure Rights Management サービスのテナント キーとして使用するインポート済みのサーバー ライセンサー証明書 (SLC) キーを指定します。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
+    構成データ (キー、テンプレート、Url) を AD RMS から XML ファイルにエクスポートし、そのファイルを Azure Information Protection から Azure Rights Management サービスにアップロードするには、Import-AipServiceTpd PowerShell コマンドレットを使用します。 次に、Azure Rights Management サービスのテナント キーとして使用するインポート済みのサーバー ライセンサー証明書 (SLC) キーを指定します。 AD RMS のキー構成によっては、追加の手順が必要になる可能性があります。
 
     - **ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行**:
 
@@ -164,11 +166,11 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
     - **HSM で保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS 用の HSM により保存されているキーを、顧客管理の Azure Information Protection テナント キーに移行します ("Bring Your Own Key" つまり BYOK シナリオ)。 これには、オンプレミスの nCipher HSM のキーを Azure Key Vault に転送して、このキーを使用する Azure Rights Management サービスを承認する追加の手順が必要です。 HSM で保護されている既存のキーは、モジュールで保護する必要があります。OCS で保護されているキーは、Rights Management サービスでサポートされていません。
+        AD RMS 用の HSM により保存されているキーを、顧客管理の Azure Information Protection テナント キーに移行します ("Bring Your Own Key" つまり BYOK シナリオ)。 これには、オンプレミスの nCipher HSM から Azure Key Vault にキーを転送し、このキーを使用するように Azure Rights Management サービスを承認するための追加の手順が必要です。 HSM で保護されている既存のキーは、モジュールで保護する必要があります。OCS で保護されているキーは、Rights Management サービスでサポートされていません。
 
     - **ソフトウェアで保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェア キーを抽出し、オンプレミス HSM にインポートして、オンプレミスの nCipher HSM から Azure Key Vault HSM にキーを転送および Azure の権限を承認する追加の手順を実行する必要がありますので、ほとんどの構成が必要です。キーを格納する key vault を使用する管理サービス。
+        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 これには、最初にソフトウェアキーを抽出してオンプレミスの HSM にインポートし、オンプレミスの nCipher HSM から Azure Key Vault HSM にキーを転送して Azure の権利を承認するための追加手順を実行する必要があるため、ほとんどの構成が必要です。キーを格納する key vault を使用する管理サービス。
 
 - **手順 5: Azure Rights Management サービスをアクティブにする**
 

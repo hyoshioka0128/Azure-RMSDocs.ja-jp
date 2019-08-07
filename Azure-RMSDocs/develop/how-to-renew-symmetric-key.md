@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 353365a1619ae9f87b0d92ab4b956c8cf7b1d6cc
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 61eda99c43493ad4221b470781f4a8ea319ce5fc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178439"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788461"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>方法:Azure Information Protection で対称キーを更新する
 
@@ -25,7 +26,7 @@ Azure Active Directory (Azure AD) では、アプリケーションを表すサ�
 
 次の手順では、対称キーを更新する方法を示します。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 * 「[Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/)」(Azure AD Powershell リファレンス) の説明に従って、Azure Active Directory (Azure AD) PowerShell モジュールをインストールする必要があります。
 

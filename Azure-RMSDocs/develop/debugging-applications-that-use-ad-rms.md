@@ -13,12 +13,13 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 58791e2ac3070a8cde1ee9307544d9bc35ab2f40
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: c0b53c0f749427f785bf12afa6b3f8cda461947e
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178887"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792541"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>方法: 権限保護対応アプリケーションのデバッグ
 
@@ -63,4 +64,4 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**注**:  Windows イベント ビューアーで、**[表示]** メニューの **[分析およびデバッグ ログの表示]** を選択すると、MSIPC デバッグ ログが表示されます。
+**注**:  Windows イベント ビューアーで、 **[表示]** メニューの **[分析およびデバッグ ログの表示]** を選択すると、MSIPC デバッグ ログが表示されます。

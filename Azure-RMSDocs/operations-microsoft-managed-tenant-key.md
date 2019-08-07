@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521922"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790484"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理します。テナント キーのライフサイクル操作
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理:テナント キーのライフサイクル操作
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -46,7 +48,7 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 Active Directory Rights Management サービス (AD RMS) から移行済みである場合に、Azure Information Protection 用に Microsoft が管理するキー トポロジを選択すると、Microsoft が管理するキーを複数持つことができます。 このシナリオでは、テナントに対して Microsoft が管理するキーは少なくとも 2 つあります。 1 つ (または複数の) キーが、AD RMS からインポートしたキーとなります。 Azure Information Protection テナント用に自動的作成された既定のキーもあります。
 
-Azure Information Protection のアクティブなテナント キーを別のキーを選択するには、使用、[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) AIPService モジュールのコマンドレット。 使用するキーを識別するために、使用、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレット。 Azure Information Protection テナント用に自動的に作成された既定のキーを特定するには、次のコマンドを実行します。
+Azure Information Protection のアクティブなテナントキーとして別のキーを選択するには、AIPService モジュールの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレットを使用します。 使用するキーを識別できるように、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを使用します。 Azure Information Protection テナント用に自動的に作成された既定のキーを特定するには、次のコマンドを実行します。
 
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
@@ -58,29 +60,29 @@ Azure Information Protection のアクティブなテナント キーを別の�
 ## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
 Azure Information Protection の構成およびテナント キーをエクスポートするには、次の 3 つの手順に従います。
 
-### <a name="step-1-initiate-export"></a>手順 1:エクスポートを開始します。
+### <a name="step-1-initiate-export"></a>手順 1:エクスポートの開始
 
 - [Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)し、**Azure Information Protection キーのエクスポートの要求で Azure Information Protection サポート ケース**を開きます。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 Standard サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
 
-### <a name="step-2-wait-for-verification"></a>手順 2:検証のための待機
+### <a name="step-2-wait-for-verification"></a>手順 2:確認を待機する
 
 - Microsoft は Azure Information Protection テナント キーのリリース要求が正当であることを確認します。 このプロセスには、最大 3 週間を要することがあります。
 
-### <a name="step-3-receive-key-instructions-from-css"></a>手順 3:CSS からキーの手順を受領します。
+### <a name="step-3-receive-key-instructions-from-css"></a>手順 3:CSS からの主要な命令の受信
 
 - Microsoft カスタマー サポート サービス (CSS) は、Azure Information Protection の構成およびテナント キーを、パスワードで保護されたファイルで暗号化した状態で送付します。 このファイルのファイル名拡張子は、 **.tpd** です。 これにあたって、CSS はまずエクスポートを開始したユーザーにツールを電子メールで送信します。 このツールをコマンド プロンプトから次のように実行します。
 
     ```
     AadrmTpd.exe -createkey
     ```
-    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 以下に例を示します。**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** や **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
+    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 例えば:**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** や **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
 
-    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 以下に例を示します。
+    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 例えば:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    このコマンドの出力は、2 つのファイルにする必要があります。一方にはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、もう一方にはパスワードで保護された TPD 自体が含まれています。 ファイルには、以下のような新しい GUID が付けられます。
+    このコマンドの出力は、次の2つのファイルである必要があります。一方にはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、もう一方にはパスワードで保護された TPD 自体が含まれています。 ファイルには、以下のような新しい GUID が付けられます。
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -88,7 +90,7 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
     これらのファイルをバックアップし、安全な場所に保存します。これにより、このテナント キーで保護されたコンテンツを継続して暗号化解除できるようになります。 また、AD RMS に移行する場合は、この TPD ファイル (名前が **ExportedTDP** で始まるファイル) を AD RMS サーバーにインポートできます。
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>手順 4:進行中。テナント キーを保護します。
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>手順 4:メンテナンステナントキーを保護する
 
 テナント キーを受領したら、厳重に保護してください。だれかがそれにアクセスできる場合、そのキーを使用して保護されているすべてのドキュメントを暗号化解除できるからです。
 

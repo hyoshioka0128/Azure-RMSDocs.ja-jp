@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 54e0a7470681608bcd38b3a0211718de6059d6e4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521975"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793900"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
@@ -165,7 +167,7 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 たとえば、ドキュメントまたは電子メールが保護されている場合は、定期的に遅延が発生します。 あるいは、保護されているドキュメントまたは電子メールが開かれるとき、遅延が発生します。 このような場合は、パフォーマンス カウンターによって、遅延の原因がコネクタの処理時間や Azure Rights Management サービスの処理時間なのか、それともネットワークの遅延なのかを判断できます。 
 
-遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 以下に例を示します。**Licensing Successful Batched Request Average Connector Response Time**。
+遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例えば:**Licensing Successful Batched Request Average Connector Response Time**。
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
@@ -173,7 +175,7 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 
-使用状況ログの詳細については、次を参照してください。[ログと Azure Information Protection からの保護の使用量の分析](log-analyze-usage.md)します。
+使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](log-analyze-usage.md)」を参照してください。
 
 診断のためにより詳細なログを記録する必要がある場合は、Windows Sysinternals の [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) を使用できます。 IIS の既定サイトの web.config ファイルを変更することにより、RMS コネクタのトレースを有効にします。
 

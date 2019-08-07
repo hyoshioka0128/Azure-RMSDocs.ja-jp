@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
+ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf6ff8129c7737b782b9ccd004089b99475a9311
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 743b9dc75a5cd39832ef02e0dc0730fc23fd14b9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521618"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789693"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -24,7 +26,7 @@ ms.locfileid: "67521618"
 
 Azure Information Protection では、承認済みユーザーのコラボレーション機能を損なうことなく、ドキュメントを保護できます。 1 人のユーザーが作成し、表示や編集の権限を他のユーザーと共有するドキュメントの多くは、Word、Excel、PowerPoint の Office ドキュメントになります。 これらのドキュメントでは、保護機能がネイティブにサポートされます。つまり、認証と暗号化の機能だけでなく、より詳細に制御するための制限付き権限もサポートされます。 
 
-これらの権限は使用権限と呼ばれ、表示、編集、印刷などの権限があります。 ドキュメントを保護する際に使用権限を個別に定義することもできますし、使用権限のグループ (権限レベル) を定義することもできます。 権限レベルを使用すると、よく使われる使用権限を簡単に選択することができます (たとえば、レビュー担当者や共同作成者など)。 使用権限とアクセス許可レベルの詳細については、次を参照してください。 [Azure Information Protection の使用権限を構成する](configure-usage-rights.md)します。
+これらの権限は使用権限と呼ばれ、表示、編集、印刷などの権限があります。 ドキュメントを保護する際に使用権限を個別に定義することもできますし、使用権限のグループ (権限レベル) を定義することもできます。 権限レベルを使用すると、よく使われる使用権限を簡単に選択することができます (たとえば、レビュー担当者や共同作成者など)。 使用権限とアクセス許可レベルの詳細については、「 [Azure Information Protection の使用権限の構成](configure-usage-rights.md)」を参照してください。
 
 これらの権限を構成する際には、その対象となるユーザーを指定できます。
 
@@ -93,7 +95,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 以下に例を示します。
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 例えば:
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 
@@ -101,7 +103,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ![Azure Information Protection の権限に関するダイアログ ボックスの例](./media/example-permisisons-popup.png)
 
-注:Azure Information Protection を使用している外部ユーザーによってドキュメントが開かれた場合、Office アプリケーションでは、そのドキュメントの分類ラベルの視覚的なマーキングは残りますが、ラベルは表示されません。 代わりに、外部ユーザーはそれぞれの組織の分類法に沿って各自のラベルを適用できます。 外部ユーザーが編集したドキュメントを送り返してきた場合、Office でドキュメントを再び開くと元の分類ラベルが表示されます。
+メモ:Azure Information Protection を使用している外部ユーザーによってドキュメントが開かれた場合、Office アプリケーションでは、そのドキュメントの分類ラベルの視覚的なマーキングは残りますが、ラベルは表示されません。 代わりに、外部ユーザーはそれぞれの組織の分類法に沿って各自のラベルを適用できます。 外部ユーザーが編集したドキュメントを送り返してきた場合、Office でドキュメントを再び開くと元の分類ラベルが表示されます。
 
 保護されたドキュメントが開く前に、次のいずれかの認証フローが発生します。
 

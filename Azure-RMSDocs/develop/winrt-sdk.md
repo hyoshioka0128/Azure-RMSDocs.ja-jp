@@ -13,12 +13,13 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 57020ff3af69e2711adcc717951b61e48281645a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182615"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790725"
 ---
 # <a name="windows-store-setup"></a>Windows ストアのセットアップ
 
@@ -44,7 +45,7 @@ Windows ストア アプリケーションは Microsoft Rights Management SDK 4
 
 [新機能](release-notes.md)に関するトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>省略可能
+## <a name="optional"></a>Optional
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します - [Windows ストア アプリ用の UI ライブラリ](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore)。 Windows ストア アプリのサンプル アプリケーションも提供しています - [Windows ストア用の RMS サンプル アプリケーション](https://github.com/AzureADSamples/rms-samples-for-windowsstore)。
 
@@ -52,21 +53,21 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 
 -   Visual Studio を開きます。
--   **[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。
--   **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C\#]**、**[空のアプリケーション (Windows)]** の順にクリックし、**[OK]** をクリックします。
+-   **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
+-   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C\#]** 、 **[空のアプリケーション (Windows)]** の順にクリックし、 **[OK]** をクリックします。
 
     ![新規プロジェクトの作成](../media/winrtsetup-newproj.png)
 
--   **ソリューション エクスプローラー**でプロジェクトを右クリックし、**[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
+-   **ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
 
     ![参照の追加](../media/winrtsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスで **[参照]** をクリックし、SDK パッケージを解凍したフォルダー内にある *Microsoft.RightsManagement.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。 **[Windows 8.1]** -&gt; **[拡張機能]** を選択し、 **[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/winrtsetup-refmngr.png)
 
--   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、**[機能]** タブに移動して追加します。
+-   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、 **[機能]** タブに移動して追加します。
 
 これで、新しい独自の Windows ストア アプリを作成する準備が整いました。
 

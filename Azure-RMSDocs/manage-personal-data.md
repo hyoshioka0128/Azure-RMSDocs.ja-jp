@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 900b447f67bab09e0cfcb2ed243f2c6a3de71135
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: fa37a5b1263eae5fe7f9739b9c8621334aae6a35
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521174"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788428"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -24,11 +25,11 @@ Azure Information Protection を構成して使用すると、Azure Information 
 
 - Azure Information Protection ポリシー
 
-- 保護サービス用のテンプレート
+- 保護サービスのテンプレート
 
-- スーパー ユーザーと、保護サービスを代理管理者 
+- 保護サービスのスーパーユーザーと代理管理者 
 
-- 保護サービス用の管理のログ
+- 保護サービスの管理ログ
 
 - 保護サービスの使用状況ログ
 
@@ -44,14 +45,14 @@ Azure Information Protection を構成して使用すると、Azure Information 
 
 管理者は Azure を使用して、スコープ付きポリシーや、ラベル構成内での保護設定の電子メール アドレスを指定できます。 詳しくは、「[スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法](configure-policy-scope.md)」および「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。 
 
-Azure Rights Management サービスからの保護を適用するように構成するラベル、電子メール アドレスでも確認できます保護テンプレート から PowerShell コマンドレットを使用して、 [AIPService モジュール](/powershell/module/aipservice)します。 この PowerShell モジュールでは、[スーパー ユーザー](configure-super-users.md)になるユーザーや、Azure Rights Management サービスの管理者になるユーザーを電子メール アドレスで指定することもできます。 
+Azure Rights Management サービスから保護を適用するように構成されているラベルについては、 [Aipservice モジュール](/powershell/module/aipservice)の PowerShell コマンドレットを使用して、保護テンプレートに電子メールアドレスを指定することもできます。 この PowerShell モジュールでは、[スーパー ユーザー](configure-super-users.md)になるユーザーや、Azure Rights Management サービスの管理者になるユーザーを電子メール アドレスで指定することもできます。 
 
 Azure Information Protection を使用してドキュメントや電子メールを分類し、保護した場合、電子メール アドレスとユーザーの IP アドレスがログ ファイルに保存される可能性があります。
 
 
 ### <a name="protection-templates"></a>保護テンプレート
 
-実行、 [Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)保護テンプレートの一覧を取得するコマンドレットです。 テンプレート ID を使用すると、特定のテンプレートの詳細を取得できます。 `RightsDefinitions` オブジェクトは個人データを表示します (存在する場合)。 
+[Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)コマンドレットを実行して、保護テンプレートの一覧を取得します。 テンプレート ID を使用すると、特定のテンプレートの詳細を取得できます。 `RightsDefinitions` オブジェクトは個人データを表示します (存在する場合)。 
 
 例:
 ```
@@ -81,25 +82,25 @@ EnableInLegacyApps      : False
 LabelId                 :
 ```
 
-### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>スーパー ユーザーと、保護サービスを代理管理者
+### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 
-実行、 [Get AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットと[get aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator)コマンドレットをユーザーは、スーパー ユーザー ロールまたは保護するためのグローバル管理者ロールに割り当てられているを参照してください。Azure Information Protection からのサービス (Azure Rights Management)。 これらいずれかのロールが割り当てられているユーザーについては、電子メール アドレスが表示されます。
+[AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを実行し、 [-aipserviceroleベースの管理者](/powershell/module/aipservice/get-aipservicerolebasedadministrator)コマンドレットを実行して、azure から保護サービス (azure Rights Management) のスーパーユーザーロールまたは全体管理者ロールが割り当てられているユーザーを確認します。Information Protection。 これらいずれかのロールが割り当てられているユーザーについては、電子メール アドレスが表示されます。
 
 
-### <a name="administration-logs-for-the-protection-service"></a>保護サービス用の管理のログ
+### <a name="administration-logs-for-the-protection-service"></a>保護サービスの管理ログ
 
-実行、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) Azure Information Protection からの保護サービス (Azure Rights Management) の管理操作のログを取得するコマンドレットです。 このログには、個人データが電子メール アドレスと IP アドレスの形式で記録されます。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
+[Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレットを実行して、Azure Information Protection から保護サービス (Azure Rights Management) の管理操作のログを取得します。 このログには、個人データが電子メール アドレスと IP アドレスの形式で記録されます。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-以下に例を示します。
+例えば:
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
 ```
 
 ### <a name="usage-logs-for-the-protection-service"></a>保護サービスの使用状況ログ
-実行、 [Get AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) Azure Information Protection からの保護サービスを使用するエンドユーザーのアクションのログを取得するコマンドレットです。 ログには、個人データが電子メール アドレスと IP アドレスの形式で記録される場合があります。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
+[Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog)コマンドレットを実行して、Azure Information Protection から保護サービスを使用するエンドユーザーの操作のログを取得します。 ログには、個人データが電子メール アドレスと IP アドレスの形式で記録される場合があります。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-以下に例を示します。
+例えば:
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -129,9 +130,9 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### <a name="document-tracking-logs"></a>ドキュメント追跡ログ
 
-実行、 [Get AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog)コマンドレットは、ドキュメント追跡サイトについて、特定のユーザーから情報を取得します。 関連付けられたドキュメント ログ情報を追跡する取得を使用して、 [Get AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps)コマンドレット。
+[Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog)コマンドレットを実行して、特定のユーザーに関するドキュメント追跡サイトから情報を取得します。 ドキュメントログに関連付けられている追跡情報を取得するには、 [Get AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps)コマンドレットを使用します。
 
-以下に例を示します。
+例えば:
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -190,7 +191,7 @@ ObjectID による検索はできません。 ただし、`-UserEmail` パラメ
 
 ドキュメントと電子メールにラベルと保護が適用されている場合、電子メール アドレスと IP アドレスは、ユーザーのコンピューター上の次の場所にあるログ ファイルに格納される可能性があります。
 
-- Azure Information Protection の統合されたラベル付けクライアントと Azure Information Protection クライアント: %localappdata%\Microsoft\MSIP\Logs
+- Azure Information Protection 統合されたラベル付けクライアントと Azure Information Protection クライアントの場合:%localappdata%\Microsoft\MSIP\Logs
 
 - RMS クライアントの場合: %localappdata%\Microsoft\MSIPC\msip\Logs
 
@@ -213,54 +214,54 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **コンプライアンス管理者**
 
-- **コンプライアンス データの管理者**
+- **コンプライアンスデータ管理者**
 
 - **セキュリティ管理者**
 
 - **グローバル管理者**
 
-AIPService モジュール (または以前のモジュールでは、AADRM) を使用して指定して表示される個人データが割り当てられているユーザーのみがアクセスできる、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、**コンプライアンス データ管理者**、または**グローバル管理者**ロールから Azure Active Directory、または保護サービスのグローバル管理者ロール。
+AIPService モジュール (または以前のモジュール AADRM) を使用して表示および指定した個人データは、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、**コンプライアンス対応に割り当てられているユーザーのみがアクセスできます。データ管理**者、または Azure Active Directory からの**グローバル管理者**ロール、または保護サービスのグローバル管理者ロール。
 
 ## <a name="updating-personal-data"></a>個人データの更新
 
 Azure Information Protection ポリシーのスコープ付きポリシーと保護設定の電子メール アドレスは更新することができます。 詳しくは、「[スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法](configure-policy-scope.md)」および「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。 
 
-保護の設定から PowerShell コマンドレットを使用して同じ情報を更新することができます、 [AIPService モジュール](/powershell/module/aipservice)します。
+保護設定では、 [Aipservice モジュール](/powershell/module/aipservice)の PowerShell コマンドレットを使用して、同じ情報を更新できます。
 
 スーパー ユーザーと代理管理者の電子メール アドレスを更新することはできません。 代わりに、指定されたユーザー アカウントを削除し、更新後の電子メール アドレスを使ったユーザー アカウントを追加します。 
 
 ### <a name="protection-templates"></a>保護テンプレート
 
-実行、[セット AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットで、保護テンプレートを更新します。 個人データが内にあるため、`RightsDefinitions`プロパティも必要になりますを使用する、[新規 AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)最新の情報を権限定義オブジェクトを作成して、権限を使用するコマンドレット定義オブジェクトを`Set-AipServiceTemplateProperty`コマンドレット。
+[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データは`RightsDefinitions`プロパティ内にあるため、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、権限定義オブジェクトを使用する必要があります。`Set-AipServiceTemplateProperty`コマンドレットを行います。
 
-### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>スーパー ユーザーと、保護サービスを代理管理者
+### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 
 スーパー ユーザーの電子メール アドレスを更新する必要がある場合には、次の操作を行います。
 
-1. 使用[削除 AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser)ユーザーと古い電子メール アドレスを削除します。
+1. ユーザーと古いメールアドレスを削除するには、 [AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser)を使用します。
 
-2. 使用[追加 AipServiceSuperUser](/powershell/module/aipservice/Add-AipServiceSuperUser)ユーザーと新しいメール アドレスを追加します。
+2. ユーザーと新しい電子メールアドレスを追加するには、 [AipServiceSuperUser](/powershell/module/aipservice/Add-AipServiceSuperUser)を使用します。
 
 代理管理者の電子メール アドレスを更新する必要がある場合には、次の操作を行います。
 
-1. 使用[削除 AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator)ユーザーと古い電子メール アドレスを削除します。
+1. ユーザーと古いメールアドレスを削除するには、[[削除](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator)] を使用します。
 
-2. 使用[追加 AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator)ユーザーと新しいメール アドレスを追加します。
+2. ユーザーと新しい電子メールアドレスを追加するには、[[追加](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator)] を使用します。
 
 ## <a name="deleting-personal-data"></a>個人データの削除
 Azure Information Protection ポリシーのスコープ付きポリシーと保護設定の電子メール アドレスは削除することができます。 詳しくは、「[スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法](configure-policy-scope.md)」および「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。 
 
-PowerShell コマンドレットを使用して、同じ情報を削除する、保護設定を[AIPService モジュール](/powershell/module/aipservice)します。
+保護設定では、 [Aipservice モジュール](/powershell/module/aipservice)の PowerShell コマンドレットを使用して、同じ情報を削除できます。
 
-スーパー ユーザーおよび代理管理者の電子メール アドレスを削除するを使用してこれらのユーザーを削除、[削除 AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser)コマンドレットと[削除 AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator)します。 
+スーパーユーザーと代理管理者の電子メールアドレスを削除するには、 [AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser)コマンドレットを使用してこれらのユーザーを削除し、 [-Aipservicerole を削除](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator)します。 
 
-ドキュメント追跡ログ、ログの管理、または保護サービスの使用状況ログでの個人データを削除するのにには、Microsoft サポートの要求を発生させる、次のセクションを使用します。
+ドキュメント追跡ログ、管理ログ、または保護サービスの使用状況ログで個人データを削除するには、次のセクションを使用して Microsoft サポートで要求を発生させます。
 
 コンピューターに保存されているクライアント ログ ファイルとスキャナー ログ内の個人データを削除するには、標準の Windows ツールを使用して、ファイルやファイル内の個人データを削除します。 
 
 ### <a name="to-delete-personal-data-with-microsoft-support"></a>Microsoft サポートを通じて個人データを削除するには
 
-次の 3 つの手順を使用すると、Microsoft がドキュメント追跡ログ、ログの管理、または保護サービスの使用状況ログでの個人データを削除することを要求できます。 
+次の3つの手順を使用して、保護サービスのドキュメント追跡ログ、管理ログ、または使用状況ログで個人データを削除するように要求します。 
 
 **ステップ 1: 削除リクエストを開始する**
 [Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)して Azure Information Protection のサポート ケースを開き、テナントからデータを削除するよう要請します。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 リクエストを発行する際には、削除するデータの種類に応じて、追加情報を提供する必要があります。
@@ -276,12 +277,12 @@ PowerShell コマンドレットを使用して、同じ情報を削除する、
 **手順 3: 削除の確認を受け取る** データが削除されたことを知らせる確認メールが、Microsoft カスタマー サポート サービス (CSS) から送信されます。 
 
 ## <a name="exporting-personal-data"></a>個人データのエクスポート
-AIPService または AADRM PowerShell コマンドレットを使用するときに、個人データは利用の検索とエクスポートを PowerShell オブジェクトとして。 `ConvertTo-Json` コマンドレットを使用すると、PowerShell オブジェクトを JSON に変換して保存できます。
+AIPService または AADRM PowerShell コマンドレットを使用すると、個人データを PowerShell オブジェクトとして検索およびエクスポートできるようになります。 `ConvertTo-Json` コマンドレットを使用すると、PowerShell オブジェクトを JSON に変換して保存できます。
 
 ## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>プロファイリングやマーケティングに個人データを同意なく使用することの制限
 Azure Information Protection では、個人データに基くプロファイリングやマーケティングに関して、Microsoft の[プライバシー条項](https://privacy.microsoft.com/privacystatement)が適用されます。
 
 ## <a name="auditing-and-reporting"></a>監査とレポート
-割り当てられているユーザーのみ[管理者のアクセス許可](#securing-and-controlling-access-to-personal-information)AIPService または ADDRM のモジュールの検索と個人データのエクスポートを使用しています。 これらの操作は、ダウンロード可能な管理ログに記録されます。
+[管理者権限](#securing-and-controlling-access-to-personal-information)が割り当てられているユーザーのみが、AIPService または addrm モジュールを使用して、個人データの検索とエクスポートを行うことができます。 これらの操作は、ダウンロード可能な管理ログに記録されます。
 
-削除操作の場合、サポート リクエストは Microsoft によって実行された操作の監査およびレポート記録として機能します。 、削除後に削除されたデータは検索とエクスポートを使用できず、管理者は、これを確認する AIPService モジュールから Get コマンドレットを使用します。
+削除操作の場合、サポート リクエストは Microsoft によって実行された操作の監査およびレポート記録として機能します。 削除後、削除されたデータは検索およびエクスポートに使用できなくなり、管理者は AIPService モジュールの Get コマンドレットを使用してこれを確認できます。

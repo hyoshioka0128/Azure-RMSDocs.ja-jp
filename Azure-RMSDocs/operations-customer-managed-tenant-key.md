@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1b163a1e149b77e8974635dff39d9a754a962f2
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: b1b3dc6b5a557339a33abfb5cf8b54d995b1da21
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521944"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793870"
 ---
-# <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理。テナント キーのライフサイクル操作
+# <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理:テナント キーのライフサイクル操作
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -44,11 +46,11 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 管理している別のキーにキーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。 
 
-1. 新しいキーが Azure Information Protection で既に使用しているキーとは異なるキー コンテナーにある場合にのみ: 使用して、key vault を使用する Azure Information Protection の承認、[セット AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレット。
+1. 新しいキーが Azure Information Protection で既に使用しているキーとは異なるキー コンテナーにある場合にのみ: [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、キーコンテナーを使用する Azure Information Protection を承認します。
 
-2. 使用して、実行する場合、Azure Information Protection がまだ認識キー[使用 AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレット。
+2. Azure Information Protection 使用するキーがまだわからない場合は、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットを実行します。
 
-3. 実行を使用して、テナント キー オブジェクトを構成する[セット AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレット。
+3. Run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレットを使用して、テナントキーオブジェクトを構成します。
 
 これらの段階の詳細については、次を参照してください。
 
@@ -61,7 +63,7 @@ Azure Information Protection に対してキーの再入力が必要になる場
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 あなたはテナント キーを管理しているので、Azure Information Protection で使用されるキーをバックアップする責任があります。 
 
-NCipher HSM では、オンプレミスでテナント キーを生成: 場合キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、このトークン化されたキー ファイルを完全なバックアップとは考えないでください。 たとえば、nCipher HSM の外部で使用するにはキーのプレーン テキストのコピーを続ける必要がある場合 Azure Key Vault を取得できませんが、- 不可能なコピーのみがあるため。
+オンプレミスでテナントキーを生成した場合は、nCipher HSM で次のようになります。キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、このトークン化されたキー ファイルを完全なバックアップとは考えないでください。 たとえば、nCipher HSM の外部で使用するためにキーのプレーンテキストコピーが必要な場合、Azure Key Vault は回復不可能なコピーしかないため、このキーを取得することはできません。
 
 Azure Key Vault には、[バックアップ コマンドレット](/powershell/module/az.keyvault/backup-azkeyvaultkey)が用意されています。これを使用すれば、キーをダウンロードしてファイルに保存することで、キーのバックアップを作成できます。 ダウンロードされたコンテンツは暗号化されているため、Azure Key Vault の外部で使用することはできません。 
 

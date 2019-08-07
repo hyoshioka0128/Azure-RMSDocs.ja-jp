@@ -1,6 +1,6 @@
 ---
-title: AIP の Azure Information Protection スキャナーをデプロイします。
-description: インストール、構成、およびこれを検出すると、Azure Information Protection スキャナーの現在のバージョンを実行する手順については、分類、および、データ ストア上のファイルを保護します。
+title: Azure Information Protection スキャナーを展開する-AIP
+description: 現在のバージョンの Azure Information Protection スキャナーをインストール、構成、および実行して、データストア上のファイルを検出、分類、および保護する方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -8,27 +8,29 @@ ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 908c1105de93551a0fd7c2cf8a63ac2dc75ed7c8
-ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
+ms.custom: admin
+ms.openlocfilehash: 900b4817006370d319f31883b47f8a2cd46b6080
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648191"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789067"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)2019 の Windows Server、Windows Server 2016、Windows Server 2012 R2*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > この記事は、最新の一般公開バージョンの Azure Information Protection スキャナーが対象です。
 > 
-> 1\.48.204.0 よりも古いスキャナーの一般公開バージョンからアップグレードするを参照してください。 [Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)します。 命令を使用する、このページで、スキャナーをインストールする手順を省略します。
+> 1\.48.204.0 よりも前の一般公開バージョンのスキャナーからアップグレードするには、「 [Azure Information Protection スキャナーをアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)する」を参照してください。 このページに記載されている手順を使用して、スキャナーをインストールする手順を省略できます。
 > 
-> 以前のバージョンからアップグレードする準備がされていない場合は、[ファイルを分類して保護を自動的に Azure Information Protection スキャナーの以前のバージョンを展開する](deploy-aip-scanner-previousversions.md)します。
+> 以前のバージョンからアップグレードする準備ができていない場合は、「[以前のバージョンの Azure Information Protection スキャナーを展開して、ファイルを自動的に分類して保護する」を](deploy-aip-scanner-previousversions.md)参照してください。
 
 
 この情報を使用して、Azure Information Protection スキャナーについて説明し、正常にインストール、構成、および実行する方法について説明します。
@@ -39,7 +41,7 @@ ms.locfileid: "67648191"
 
 - サーバー メッセージ ブロック (SMB) プロトコルを使用するネットワーク共有の UNC パス。
 
-- サイトと SharePoint Server 2013、SharePoint Server 2019 ライブラリ。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint 2010 もサポートされています。
+- Sharepoint server 2013 2019 のサイトとライブラリ。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint 2010 もサポートされています。
 
 クラウド リポジトリ上のファイルをスキャンおよびラベル付けするには、スキャナーの代わりに [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) を使用します。
 
@@ -63,14 +65,14 @@ Azure Information Protection スキャナーをインストールする前に、
 
 |要件|詳細情報|
 |---------------|--------------------|
-|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />注:非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br />組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。 それ以外の場合は、HTTPS (ポート 443) 経由で次の URL を許可するインターネット接続がこのコンピューターにあることを確認します。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
-|スキャナー サービスを実行するサービス アカウント|Windows Server コンピューター上でのスキャナー サービスの実行に加えて、この Windows アカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />-  **[Log on locally]\(ローカル ログオン\)** ユーザー権限の割り当て。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />-  **[サービスとしてログオン]** ユーザー権限の割り当て。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: SharePoint オンプレミスでは、データのリポジトリを常に許可、**編集**権限場合**の追加とカスタマイズ ページ**サイト、または grant が選択されている、**デザイン**アクセス許可。 その他のデータ リポジトリを与える**読み取り**と**書き込み**ファイルをスキャンおよびについては、Azure での条件を満たすファイルに、分類と保護を適用するための権限保護ポリシー。 これらの他のデータ リポジトリに対してのみ検出モードでスキャナーを実行する**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーで保護されたファイルに常に確実にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能を確実に有効にします。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」を参照してください。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
+|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />メモ:非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br />組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。 それ以外の場合は、HTTPS (ポート 443) 経由で次の URL を許可するインターネット接続がこのコンピューターにあることを確認します。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
+|スキャナー サービスを実行するサービス アカウント|Windows Server コンピューター上でのスキャナー サービスの実行に加えて、この Windows アカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />-  **[Log on locally]\(ローカル ログオン\)** ユーザー権限の割り当て。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />-  **[サービスとしてログオン]** ユーザー権限の割り当て。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: オンプレミスの SharePoint のデータリポジトリの場合、サイトの **[ページの追加とカスタマイズ]** が選択されている場合は、 **[編集]** アクセス許可を常に付与するか、 **[デザイン]** アクセス許可を付与します。 その他のデータリポジトリの場合は、ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用する**読み取り**と**書き込み**のアクセス許可を付与します。 これらの他のデータリポジトリに対してのみ検出モードでスキャナーを実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーで保護されたファイルに常に確実にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能を確実に有効にします。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」を参照してください。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
 |スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス<br /><br />- スキャナーをインストールする sysadmin ロール|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Azure Information Protection スキャナーでは、スキャナーのカスタム プロファイル名を指定するときに同じ SQL Server インスタンス上の複数の構成データベースがサポートされます。<br /><br />Sysadmin ロールを持つアカウントでスキャナーをインストールすると、インストールのプロセスでスキャナーの構成データベースが自動的に作成され、スキャナーを実行するサービス アカウントに対して必要な db_owner ロールが付与されます。 Sysadmin ロールが付与されない場合や、組織のポリシーがデータベースを手動で作成し構成することを要求している場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」をご覧ください。<br /><br />構成データベースのサイズはデプロイごとに異なりますが、スキャンしたい 1,000,000 ファイルごとに 500 MB を割り当てることをお勧めします。 |
-|(クラシック) の Azure Information Protection クライアントが Windows Server コンピューターにインストールされています。|スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />クライアントのインストール手順については、[管理者ガイド](./rms-client/client-admin-guide.md)を参照してください。 スキャナーを以前にインストールしていて、今回新しいバージョンにアップグレードする必要がある場合は、[「Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」をご覧ください。|
-|自動分類と、必要に応じて保護を適用する構成済みのラベル|条件用にラベルを構成し、保護を適用する方法について詳しくは、次をご覧ください。<br /> - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)<br /> - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md) <br /><br />ヒント:[チュートリアル](infoprotect-quick-start-tutorial.md)の手順に従うと、準備した Word 文書内のクレジット カード番号を検索するラベルを使ってスキャナーをテストすることができます。 ただし、オプション **[このラベルの適用方法を選択]** が **[推奨]** ではなく **[自動]** に設定されるように、ラベルの構成を変更する必要があります。 その後、(適用される場合は) ドキュメントからラベルを削除して、スキャナー用のデータ リポジトリにファイルをコピーします。 簡単なテストの場合、これにはスキャナー コンピューター上のローカル フォルダーを使用できます。<br /><br /> 自動分類を適用するラベルを構成していない場合でもスキャナーを実行できますが、このシナリオについては、これらの手順では説明されていません。 [詳細情報](#using-the-scanner-with-alternative-configurations)|
-|スキャン対象の SharePoint サイトおよびライブラリの場合:<br /><br />- SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|スキャナーでは SharePoint の他のバージョンはサポートされていません。<br /><br />大規模な SharePoint ファームの場合は、スキャナーがすべてのファイルにアクセスするために、リスト ビューのしきい値 (既定では 5,000) を増やす必要があるかどうかを確認します。 詳細については、次の SharePoint のドキュメントを参照してください。[SharePoint で大規模なリストとライブラリを管理する](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
+|Azure Information Protection クライアント (クラシック) が Windows Server コンピューターにインストールされている|スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />クライアントのインストール手順については、[管理者ガイド](./rms-client/client-admin-guide.md)を参照してください。 スキャナーを以前にインストールしていて、今回新しいバージョンにアップグレードする必要がある場合は、[「Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)」をご覧ください。|
+|自動分類と、必要に応じて保護を適用する構成済みのラベル|条件用にラベルを構成し、保護を適用する方法について詳しくは、次をご覧ください。<br /> - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)<br /> - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md) <br /><br />ヒント :[チュートリアル](infoprotect-quick-start-tutorial.md)の手順に従うと、準備した Word 文書内のクレジット カード番号を検索するラベルを使ってスキャナーをテストすることができます。 ただし、オプション **[このラベルの適用方法を選択]** が **[推奨]** ではなく **[自動]** に設定されるように、ラベルの構成を変更する必要があります。 その後、(適用される場合は) ドキュメントからラベルを削除して、スキャナー用のデータ リポジトリにファイルをコピーします。 簡単なテストの場合、これにはスキャナー コンピューター上のローカル フォルダーを使用できます。<br /><br /> 自動分類を適用するラベルを構成していない場合でもスキャナーを実行できますが、このシナリオについては、これらの手順では説明されていません。 [詳細情報](#using-the-scanner-with-alternative-configurations)|
+|スキャン対象の SharePoint サイトおよびライブラリの場合:<br /><br />-SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|スキャナーでは SharePoint の他のバージョンはサポートされていません。<br /><br />大規模な SharePoint ファームの場合は、スキャナーがすべてのファイルにアクセスするために、リスト ビューのしきい値 (既定では 5,000) を増やす必要があるかどうかを確認します。 詳細については、次の SharePoint のドキュメントを参照してください。[SharePoint で大規模なリストとライブラリを管理する](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
 |スキャンされる Office ドキュメントの場合:<br /><br />- Word、Excel、PowerPoint の 97-2003 ファイル形式および Office Open XML 形式|これらのファイル形式についてスキャナーでサポートされるファイルの種類について詳しくは、「[Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)」をご覧ください|
-|長いパスの場合:<br /><br />- 最大 260 文字 (スキャナーが Windows 2016 にインストールされていて、コンピューターが長いパスをサポートするように構成されているのでない場合)|Windows 10 および Windows Server 2016 では、次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)により、260 文字を超えるパスの長さがサポートされます。**ローカル コンピューター ポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべて設定**  > **長いパスを有効にする Win32**<br /><br /> 長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
+|長いパスの場合:<br /><br />- 最大 260 文字 (スキャナーが Windows 2016 にインストールされていて、コンピューターが長いパスをサポートするように構成されているのでない場合)|Windows 10 および Windows Server 2016 では、次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)により、260 文字を超えるパスの長さがサポートされます。**ローカルコンピューターポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべての設定** > で**Win32 の長いパスを有効にする**<br /><br /> 長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
 
 組織のポリシーによる禁止のためにテーブルの要件をすべて満たすことができない場合は、代替案として次のセクションをご覧ください。
 
@@ -167,7 +169,7 @@ Sysadmin ロールが一時的にでも付与されない場合は、スキャ�
 
 6. これでプロファイルの作成と保存が完了したので、 **[リポジトリの構成]** オプションに戻って、スキャンするデータ ストアを指定する準備が整いました。 オンプレミスの SharePoint サイトとライブラリのローカル フォルダー、UNC パス、および SharePoint Server URL を指定できます。 
     
-    For SharePoint は、SharePoint Server 2019、SharePoint Server 2016、および SharePoint Server 2013 がサポートされています。 また、SharePoint Server 2010 も、[このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)を受けている場合はサポートされます。
+    Sharepoint では、sharepoint server 2019、SharePoint Server 2016、および SharePoint Server 2013 がサポートされています。 また、SharePoint Server 2010 も、[このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)を受けている場合はサポートされます。
     
     最初のデータ ストアを追加するには、引き続き **[新しいプロファイルを追加する]** ブレード上で、 **[リポジトリの構成]** を選択して **[リポジトリ]** ブレードを開きます。
     
@@ -181,7 +183,7 @@ Sysadmin ロールが一時的にでも付与されない場合は、スキャ�
     
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
-    例 :
+    次に例を示します。
     
     ローカル パスの場合: `C:\Folder`
     
@@ -194,9 +196,9 @@ Sysadmin ロールが一時的にでも付与されない場合は、スキャ�
     > [!TIP]
     > "共有ドキュメント" の SharePoint パスを追加する場合:
     >
-     >- 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 たとえば次のようになります。`http://sp2013/Shared Documents`
+     >- 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 例: `http://sp2013/Shared Documents`
      >
-     >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 たとえば次のようになります。`http://sp2013/Documents/Sales Reports`
+     >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 例: `http://sp2013/Documents/Sales Reports`
     
     このブレード上の残りの設定に関しては、この初期構成では変更せず、 **[既定のプロファイル]** のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
     
@@ -298,7 +300,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 これらの手順に従っている場合、スキャナーは、レポートのみモードで 1 回だけ実行されます。 これらの設定を変更するには、スキャナーのプロファイルを編集します。
 
-1. 戻り、 **Azure Information Protection - プロファイル**ブレードで、編集するスキャナーのプロファイルを選択します。
+1. **[Azure Information Protection プロファイル]** ブレードに戻り、スキャナープロファイルを選択して編集します。
 
 2. \<**プロファイル名**> ブレード上で、次の 2 つの設定を変更した後、 **[保存]** を選択します。
     
@@ -380,7 +382,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
-- すべてのファイルに自動的にネイティブまたは汎用保護と保護、Azure Information Protection クライアントと同じ既定の保護動作を実行する場合にします。指定、`*`レジストリ キーとしてワイルドカード`Encryption`値 (REG_SZ) としてと`Default`値のデータとします。
+- Azure Information Protection クライアントと同じ既定の保護動作が必要な場合は、すべてのファイルが自動的にネイティブ保護または汎用保護で保護されます。ワイルドカードをレジストリキーとして`Encryption` 、値 (REG_SZ)、および`Default`値のデータとして指定します。 `*`
 
 レジストリを編集するときには、各ファイル名拡張子のキーと共に、**MSIPC** キーと **FileProtection** キーが存在しない場合には手動で作成します。
 
@@ -439,11 +441,11 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
     
     スキャナーでは、Azure Information Protection ポリシー内のラベルに対して指定したカスタム条件と、Azure Information Protection ポリシー内のラベルに指定できる情報の種類のリストが使用されます。 この設定は、気付かない可能性がある機密情報を発見するのに役立ちますが、スキャナーのスキャン速度が犠牲になります。
     
-    次の一般公開バージョンのスキャナーに向けたクイック スタートでは、この構成が使われています。[クイック スタート: 所有している機密情報の検索](quickstart-findsensitiveinfo.md)に関するページで使用されます。
+    次の一般公開バージョンのスキャナーに向けたクイック スタートでは、この構成が使われています。[クイック スタート:所有している機密情報の検索](quickstart-findsensitiveinfo.md)に関するページで使用されます。
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>スキャナーのパフォーマンスの最適化
 
-スキャナーのパフォーマンスを最適化するには、次のガイダンスを使用します。 ただし、優先順位がスキャナー パフォーマンスではなく、スキャナー コンピューターの応答性の場合は、使用できます、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner)スキャナーによって使用されるスレッドの数を制限します。
+スキャナーのパフォーマンスを最適化するには、次のガイダンスを使用します。 ただし、スキャナーのパフォーマンスではなく、スキャナーコンピューターの応答性が優先される場合は、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner)を使用して、スキャナーが使用するスレッドの数を制限することができます。
 
 スキャナーのパフォーマンスを最大化するには
 
@@ -477,7 +479,7 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
 
 - カスタム条件に対する正規表現式の構築
     
-    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 以下に例を示します。
+    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 例えば:
     
     - [最長の量指定子](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)を開始します
     
@@ -489,7 +491,7 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
 
 - ファイル自体
     
-    - Excel のファイルを除く Office ファイルは PDF ファイルよりもすばやくスキャンします。
+    - Excel ファイルを除き、Office ファイルは PDF ファイルよりもすばやくスキャンされます。
     
     - 保護されていないファイルは、保護されたファイルよりもすばやくスキャンされます。
     
@@ -497,13 +499,13 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
 
 - 補足:
     
-    - スキャナーを実行するサービス アカウントに記載されている権限のみがいることを確認、[スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner)セクションで、し、構成、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner)低整合性を無効にするにはスキャナーのレベル。
+    - スキャナーを実行するサービスアカウントに、「[スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner)」セクションに記載されている権限のみがあることを確認し、[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner)を構成して、スキャナーの低整合性レベルを無効にします。
     
     - [代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのファイルに既定のラベルを適用すると、ファイル内容の検査がスキップされるため、スキャナーの実行速度が速くなります。
     
     - [代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのカスタム条件と既知の機密情報の種類を特定すると、スキャナーの実行速度が遅くなりなります。
     
-    - スキャナーのタイムアウトを小さくことができます[クライアント設定を高度な](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner)よりスキャン率とメモリ消費量が、受信確認をいくつかのファイルをスキップする可能性があります。
+    - [高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner)でスキャナーのタイムアウトを小さくすると、スキャン速度が向上し、メモリ消費が減少しますが、一部のファイルがスキップされる可能性があります。
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>スキャナーのコマンドレットの一覧
 
@@ -511,7 +513,7 @@ Azure portal で各データ リポジトリを編集する代わりに、 **[�
 
 残っているコマンドレットには、スキャナーをインストールおよびアップグレードするコマンドレット、スキャナーの構成データベースとプロファイルを変更するコマンドレット、ローカルのレポート レベルを変更するコマンドレット、および切断されたコンピューターの構成設定をインポートするコマンドレットが含まれます。 
 
-スキャナーの現在のバージョンをサポートするコマンドレットの完全な一覧: 
+現在のバージョンのスキャナーでサポートされているコマンドレットの完全な一覧を次に示します。 
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 

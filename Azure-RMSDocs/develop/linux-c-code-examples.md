@@ -13,12 +13,13 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6a4aa43e54510df5775b4c5d73500d60e2a68d56
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 0b65fad4922790eb7a269edb46b48e4502e28d44
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176909"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790961"
 ---
 # <a name="linux-code-examples"></a>Linux のコード例
 
@@ -33,7 +34,7 @@ ms.locfileid: "60176909"
 
 **説明**:ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、*ConvertFromPFile* を呼び出してから (次のコード例を参照)、保護ポリシー名、説明、およびコンテンツの有効期日を読み取ります。
 
-**C++**:
+**C++** :
 
     void MainWindow::ConvertFromPFILE(const string& fileIn,
         const string& clientId,
@@ -101,7 +102,7 @@ ms.locfileid: "60176909"
 
 **説明**:この方法では、SDK メソッド、*ProtectedFileStream::Aquire* を通じて渡されたサポートするストリームから保護ファイル ストリームを作成します。これは、呼び出し元に返されます。
 
-**C++**:
+**C++** :
 
     shared_ptr<GetProtectedFileStreamResult>PFileConverter::ConvertFromPFile(
     const string           & userId,
@@ -153,7 +154,7 @@ ms.locfileid: "60176909"
 
 **説明**:ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFileTemplates* を呼び出して保護します (次のコード例を参照)。
 
-**C++**:
+**C++** :
 
     void MainWindow::ConvertToPFILEUsingTemplates(const string& fileIn,
                                               const string& clientId,
@@ -216,7 +217,7 @@ ms.locfileid: "60176909"
 
 **説明**:ユーザーに関連付けられたテンプレートの一覧がフェッチされ、選択したテンプレートがポリシーの作成に使用されます。このポリシーを使用してファイルを保護します。
 
-**C++**:
+**C++** :
 
     void PFileConverter::ConvertToPFileTemplates(const string           & userId,
                                              shared_ptr<istream>      inStream,
@@ -247,9 +248,9 @@ ms.locfileid: "60176909"
 **ポリシーを指定してファイルを保護します**
 **ソース**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**説明**:特定のポリシーを使用して保護されたファイル ストリームを作成し、そのファイルを保護します。
+**説明**: 特定のポリシーを使用して保護されたファイル ストリームを作成し、そのファイルを保護します。
 
-**C++**:
+**C++** :
 
     void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr<UserPolicy>   policy,
                                                shared_ptr<istream>      inStream,
@@ -293,7 +294,7 @@ ms.locfileid: "60176909"
 
 **説明**:ユーザーからファイル名を取得したら、証明書を読み取り (*MainWindow::addCertificates* を参照)、ユーザーから権限情報を収集し、クライアント ID とリダイレクト URL で承認コールバックを設定し、選択したファイルを *ConvertToPFilePredefinedRights* を呼び出して保護します (次のコード例を参照)。
 
-**C++**:
+**C++** :
 
     void MainWindow::ConvertToPFILEUsingRights(const string            & fileIn,
                                            const vector<UserRights>& userRights,
@@ -376,7 +377,7 @@ ms.locfileid: "60176909"
 
 **説明**:ポリシー記述子を作成し、ユーザーの権限情報を使ってこれを入力し、このポリシー記述子を使用してユーザー ポリシーを作成します。 このポリシーを使用して *ConvertToPFileUsingPolicy* への呼び出しにより選択したファイルを保護します (このトピックの前のセクションの説明を参照)。
 
-**C++**:
+**C++** :
 
     void PFileConverter::ConvertToPFilePredefinedRights(
     const string            & userId,
@@ -408,7 +409,7 @@ ms.locfileid: "60176909"
 
 *WorkerThread()* メソッドは、上のシナリオ例の 2 つ (**保護されたファイル ストリームの作成**および**ポリシーを指定してファイルを保護**) によって、次の方法で呼び出されます。
 
-**C++**:
+**C++** :
 
     threadPool.push_back(thread(WorkerThread,
                                   static_pointer_cast<iostream>(outStream), pfs,
@@ -417,7 +418,7 @@ ms.locfileid: "60176909"
 
 **サポート メソッド、WorkerThread()**
 
-**C++**:
+**C++** :
 
     static mutex   threadLocker;
     static int64_t totalSize     = 0;
@@ -504,17 +505,17 @@ ms.locfileid: "60176909"
 **UI を使用した oAuth2 認証トークンの取得**
 **ソース**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します。
+**手順 1**:**rmsauth::FileCache** オブジェクトの共有ポイントを作成します。
 説明:キャッシュのパスを設定するか、既定値を使用できます。
 
-**C++**:
+**C++** :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **手順 2**: **rmsauth::AuthenticationContext** オブジェクトを作成します。説明:Azure *証明機関 URI* と *FileCache* オブジェクトを指定します。
 
-**C++**:
+**C++** :
 
     AuthenticationContext authContext(
                               std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
@@ -530,7 +531,7 @@ ms.locfileid: "60176909"
 -   *認証プロンプトの動作* - **PromptBehavior::Auto** を設定した場合、必要に応じて、ライブラリによりキャッシュの使用トークンの更新が試行されます
 -   *ユーザー ID* - プロンプト ウィンドウに表示されるユーザー名
 
-**C++**:
+**C++** :
 
     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),
@@ -548,16 +549,16 @@ ms.locfileid: "60176909"
 **UI なしの oAuth2 認証トークンの取得**
 **ソース**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**手順 1**: **rmsauth::FileCache** オブジェクトの共有ポイントを作成します 説明:キャッシュのパスを設定するか、既定値を使用できます
+**手順 1**:**rmsauth::FileCache** オブジェクトの共有ポイントを作成します 説明:キャッシュのパスを設定するか、既定値を使用できます
 
-**C++**:
+**C++** :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **手順 2**: **UserCredential** オブジェクトを作成します 説明:*ユーザー ログイン*と*パスワード*を指定します
 
-**C++**:
+**C++** :
 
     auto userCred = std::make_shared<UserCredential>("john.smith@msopentechtest01.onmicrosoft.com",
                                                  "SomePass");
@@ -565,7 +566,7 @@ ms.locfileid: "60176909"
 
 **手順 3**: **rmsauth::AuthenticationContext** オブジェクトを作成します 説明:Azure *証明機関 URI* と *FileCache* オブジェクトを指定します
 
-**C++**:
+**C++** :
 
     AuthenticationContext authContext(
                         std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
@@ -578,7 +579,7 @@ ms.locfileid: "60176909"
 -   *クライアントの一意な ID* - 通常は GUID
 -   *ユーザーの資格情報* - 作成されたオブジェクトを渡します
 
-**C++**:
+**C++** :
 
     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),

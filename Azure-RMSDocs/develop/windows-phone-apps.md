@@ -13,12 +13,13 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 42ef57b73dfbbd49620e406a296df400ea3d99cf
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181034"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792084"
 ---
 # <a name="windows-phone-setup"></a>Windows Phone のセットアップ
 
@@ -27,11 +28,11 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
--   [前提条件](#prerequisites)
+-   [必須コンポーネント](#prerequisites)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 
 開発システムには、以下のソフトウェアが必要です。
@@ -50,21 +51,21 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 
 -   *Visual Studio* を開きます。
--   **[ファイル]** をクリックします。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
--   **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C\#]**、**[空のアプリケーション (Windows Phone)]** の順に選択し、**[OK]** をクリックします。
+-   **[ファイル]** をクリックします。 **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。
+-   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C\#]** 、 **[空のアプリケーション (Windows Phone)]** の順に選択し、 **[OK]** をクリックします。
 
     ![新規プロジェクトの作成](../media/wpsetup-newproj.png)
 
--   ソリューション エクスプローラーでプロジェクトを右クリックし、**[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
+-   ソリューション エクスプローラーでプロジェクトを右クリックし、 **[参照の追加]** を選択して **[参照の追加]** ダイアログ ボックスを開きます。
 
     ![参照の追加](../media/wpsetup-addref.png)
 
 -   **[参照の追加]** ダイアログ ボックスの左下で **[参照]** をクリックし、パッケージを解凍したフォルダー内にある *Microsoft.RightsManagment.dll* ファイルを選択します。
--   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。**[Windows 8.1]**-&gt;**[拡張機能]** を選択し、**[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
+-   **管理対象アプリ** - 管理対象アプリを構築するには、この参照を追加する必要があります。 **[Windows 8.1]** -&gt; **[拡張機能]** を選択し、 **[Windows Visual C++ Runtime Package for Windows]** のチェック ボックスをオンにしてください。
 
     ![拡張機能の追加](../media/wpsetup-refmngr.png)
 
--   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、**[機能]** タブに移動して追加します。
+-   **機能を追加する** - アプリケーションで SDK を使用するには、[インターネット (クライアントとサーバー)] 機能が必要です。 この機能をアプリに追加するには、*Package.appxmanifest* ファイルをプロジェクトで開き、 **[機能]** タブに移動して追加します。
 
 これで、独自の Windows Phone アプリを作成する準備が整いました。
 

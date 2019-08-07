@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f95406f7f6851b6a0082c19c186fda5bc4532fd
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: a6fb98b54c5305206123076b8c9c3b2fad0f9876
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156675"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792864"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
@@ -61,5 +62,5 @@ ms.locfileid: "67156675"
 
 
 ## <a name="next-steps"></a>次の手順
-個人向け RMS は、Azure Active Directory でサポートされているセルフ サービス サインアップ機能を使用する例を示します。 この機能のしくみの詳細については、次を参照してください。 [Azure Active Directory のセルフ サービス サインアップは何ですか?](/azure/active-directory/users-groups-roles/directory-self-service-signup) Azure Active Directory のドキュメント。
+個人用 RMS は、Azure Active Directory でサポートされているセルフサービスサインアップ機能を使用する例です。 この機能の動作の詳細については、Azure Active Directory のドキュメントの「 [Azure Active Directory のセルフサービスサインアップとは](/azure/active-directory/users-groups-roles/directory-self-service-signup)」を参照してください。
 

@@ -1,6 +1,6 @@
 ---
 title: Azure RMS および AD RMS 用の環境を準備する
-description: Rights Management と AD RMS のデプロイがある場合、管理者向けガイダンスです。
+description: Azure Rights Management が AD RMS デプロイされている場合の管理者向けガイダンス。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 98b8dc8e09ba7ec3bddb83817663819e0af89697
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 3b5ee3f68f0f1fb6d82e0e3abaf2d2c0d5585bf8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520907"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790370"
 ---
-# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS がある場合は、Azure Rights Management の環境を準備します。
+# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS がある場合に Azure Rights Management 用に環境を準備する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -58,7 +60,7 @@ Azure Information Protection に移行する場合でも、制限事項を受け
 Azure Rights Management を非アクティブ化するには、次のいずれかの手順を使用します。
 
 > [!TIP]
-> Windows PowerShell コマンドレットを使用することもできます。[無効 AipService](/powershell/module/aipservice/disable-aipservice)、Azure Rights Management サービスを非アクティブ化します。
+> また、Windows PowerShell コマンドレットである[-AipService](/powershell/module/aipservice/disable-aipservice)を使用して、Azure Rights Management サービスを非アクティブ化することもできます。
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Rights Management を非アクティブ化するには
 

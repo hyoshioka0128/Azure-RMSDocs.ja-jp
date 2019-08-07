@@ -1,6 +1,6 @@
 ---
-title: Azure Information Protection の一般的なシナリオ用の操作手順
-description: 分類、Azure Information Protection を使用して、組織のデータを保護するユース ケースを特定します。
+title: Azure Information Protection の一般的なシナリオの手順
+description: Azure Information Protection を使用して、組織のデータを分類して保護するユースケースを特定します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -10,12 +10,13 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d69462640857e4e19583a9583fae65adc7df7281
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: 1a7662b0262e2c46e3b88861a967287070a5a1ed
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156441"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794082"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
@@ -42,7 +43,7 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="additional-deployment-instructions"></a>デプロイの追加手順
 
-この[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)最前線から追加のガイダンスが含まれています。
+[Azure Information Protection テクニカルブログ](https://aka.ms/AIPblog)には、最前線からの追加のガイダンスが含まれています。
 
 たとえば、ビジネスの意思決定者や IT の実装担当者向けのベスト プラクティスを使った方法:
 
@@ -50,13 +51,13 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 詳しい手順:
 
-- [Microsoft Information Protection と Azure AD ログイン データでより豊富なレポートを作成します。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
+- [Microsoft Information Protection と Azure AD ログインデータを使用して、より豊富なレポートを作成する](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 
-- [クラウドでの Azure Information Protection ラベルを適用する Microsoft Cloud App Security を利用します。](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
+- [Microsoft Cloud App Security を活用してクラウドに Azure Information Protection ラベルを適用する](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
 
-- ["クラウド Exit"を計画する Azure Information Protection を準備する方法](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
+- [Azure Information Protection "Cloud Exit" プランを準備する方法](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
 
-- [クロス テナントのラベルの視覚エフェクト](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
+- [テナント間のラベルの視覚化](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
 
 - [Using Azure Information Protection to protect PDF’s and Adobe Acrobat Reader to view them](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010) (Azure Information Protection を使用して PDF および Adobe Acrobat Reader を保護して表示する)
 

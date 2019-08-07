@@ -4,19 +4,21 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/12/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f19efeffe982ce36eef84d1947936acb25fd83d
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.custom: admin
+ms.openlocfilehash: dfc933dfa753ecee2bf23861d8151df02fe172b5
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229892"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808105"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -46,10 +48,10 @@ ms.locfileid: "68229892"
 
 |**デバイス オペレーティング システム**|Word、Excel、PowerPoint|Email|他のファイルの種類|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 365 アプリ [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (保護されたドキュメントの表示) [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web ブラウザー [[4]](#footnote-4)<br /><br />Windows メール[[5]](#footnote-5) |Windows 用 Azure Information Protection クライアント: テキスト、画像、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
-|**Android**|GigaTrust<br /><br /> Office Mobile <br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />iPad および iPhone 用 Outlook [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs:Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (機密ラベルを使用しない場合、保護されたドキュメントの表示と編集に制限) <br /><br />Web ブラウザー [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 以降) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
-|**macOS**|Office 365 アプリ<br /><br />Office 2019 for Mac<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2019 for Mac<br /><br /> Outlook 2016 for Mac<br /><br />Web ブラウザー [[4]](#footnote-4)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
+|**Windows**|Office 365 アプリ [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Web 用 Office (保護されたドキュメントの表示) [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web ブラウザー [[4]](#footnote-4)<br /><br />Windows メール[[5]](#footnote-5) |Windows 用 Azure Information Protection クライアント: テキスト、画像、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
+|**Android**|GigaTrust<br /><br /> Office Mobile <br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />iPad および iPhone 用 Outlook [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs:Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />Office Mobile (機密ラベルを使用しない場合、保護されたドキュメントの表示と編集に制限) <br /><br />Web ブラウザー [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 以降) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
+|**macOS**|Office 365 アプリ<br /><br />Office 2019 for Mac<br /><br />Office 2016 for Mac<br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2019 for Mac<br /><br /> Outlook 2016 for Mac<br /><br />Web ブラウザー [[4]](#footnote-4)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
 |**Windows 10 Mobile**|Office Mobile アプリ (Azure RMS で保護されたドキュメントの表示) <br /><br />Web ブラウザー [[3]](#footnote-3)|Citrix WorxMail <br /><br />Outlook メール (保護されたメールの表示) <br /><br />Web ブラウザー [[4]](#footnote-4)|サポートなし|
 |**Blackberry 10**|Web ブラウザー [[3]](#footnote-3)|Blackberry の電子メール [[5]](#footnote-5) <br /><br />Web ブラウザー [[4]](#footnote-4)|サポートなし|
 

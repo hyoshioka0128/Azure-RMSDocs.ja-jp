@@ -13,18 +13,19 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9874b2d07930b80f8d4ef291f83ae16356a3c191
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178602"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792405"
 ---
 # <a name="configure-visual-studio"></a>Configure Visual Studio (Visual Studio の構成)
 
 このトピックでは、Rights Management サービス SDK 2.1 を使用するように Visual Studio プロジェクトを構成する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 -   [SDK のインストール](install-the-rms-sdk.md)
 
@@ -38,34 +39,34 @@ ms.locfileid: "60178602"
 
 1.  RMS SDK 2.1 インクルード ディレクトリを Visual Studio 2010 プロジェクトに追加します。
 
-    **[構成プロパティ]** で、**[VC++ ディレクトリ]** を選択し、RMS SDK 2.1 インクルード ディレクトリ **$(MSIPCSDKDIR)\\inc** を **[インクルード ディレクトリ]** フィールドに追加します。
+    **[構成プロパティ]** で、 **[VC++ ディレクトリ]** を選択し、RMS SDK 2.1 インクルード ディレクトリ **$(MSIPCSDKDIR)\\inc** を **[インクルード ディレクトリ]** フィールドに追加します。
 
     ![[構成プロパティ] の [インクルード ディレクトリ] フィールド](../media/include_directories.png)
 
 2.  RMS SDK 2.1 ライブラリ ディレクトリを Visual Studio 2010 プロジェクトに追加します。
 
-    **[構成プロパティ]** で、**[VC++ ディレクトリ]** を選択し、使用しているプラットフォームの RMS SDK 2.1 ライブラリ ディレクトリを **[ライブラリ ディレクトリ]** フィールドに追加します。
+    **[構成プロパティ]** で、 **[VC++ ディレクトリ]** を選択し、使用しているプラットフォームの RMS SDK 2.1 ライブラリ ディレクトリを **[ライブラリ ディレクトリ]** フィールドに追加します。
 
-    -   Win32 の場合は、**$(MSIPCSDKDIR)\\lib** を使用します。
-    -   x64 の場合は、**$(MSIPCSDKDIR)\\lib\\x64** を使用します。
+    -   Win32 の場合は、 **$(MSIPCSDKDIR)\\lib** を使用します。
+    -   x64 の場合は、 **$(MSIPCSDKDIR)\\lib\\x64** を使用します。
 
     ![[構成プロパティ] の [ライブラリ ディレクトリ] フィールド](../media/library_directories.png)
 
 3.  RMS SDK 2.1 ライブラリ ファイルを Visual Studio 2010 の依存関係として追加します。
 
-    **[リンカー]** で、**[入力]** を選択し、RMS SDK 2.1 ライブラリ ファイル **Msipc.lib** および **Msipc\_s.lib** を **[追加の依存ファイル]** フィールドに追加します。
+    **[リンカー]** で、 **[入力]** を選択し、RMS SDK 2.1 ライブラリ ファイル **Msipc.lib** および **Msipc\_s.lib** を **[追加の依存ファイル]** フィールドに追加します。
 
     ![[リンカー] のライブラリの依存ファイル フィールド](../media/additional_dependencies.png)
 
 4.  RMS SDK 2.1 ダイナミック リンク ライブラリ (DLL) を遅延読み込み DLL として追加します。
 
-    **[リンカー]** で、**[入力]** を選択し、RMS SDK 2.1 DLL ファイル **Msipc.dll** を **[DLL の遅延読み込み]** フィールドに追加します。
+    **[リンカー]** で、 **[入力]** を選択し、RMS SDK 2.1 DLL ファイル **Msipc.dll** を **[DLL の遅延読み込み]** フィールドに追加します。
 
     ![[リンカー] の [DLL の遅延読み込み] フィールド](../media/delay_loaded.png)
 
 5.  結果のバイナリのバージョン情報を作成します。
 
-    **[ソリューション エクスプローラー]** で、**[リソース ファイル]** を選択し、目的のバイナリ名を **[OriginalFileName]** フィールドに追加します。
+    **[ソリューション エクスプローラー]** で、 **[リソース ファイル]** を選択し、目的のバイナリ名を **[OriginalFileName]** フィールドに追加します。
 
     ![[ソリューション エクスプローラー] の [リソース ファイル] フィールド](../media/original_file_name.png)
 

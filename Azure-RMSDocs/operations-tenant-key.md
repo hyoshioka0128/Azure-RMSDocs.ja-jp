@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 571e16ace6c661da6db766d3338312fe45e8f886
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: e9bc761097697144d06264a78acfca3d63f1a319
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156746"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793851"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーに対する操作
 
@@ -31,10 +33,10 @@ Azure Key Vault で独自のテナント キーを自分で管理する場合、
 |ライフサイクル操作|Microsoft が管理 (既定)|お客様が管理 (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
 |テナント キーを取り消します|いいえ (自動)|[はい]|
-|テナント キーの再入力|[はい]|はい|
+|テナント キーの再入力|[はい]|[はい]|
 |テナント キーをバックアップ/復旧します|いいえ|[はい]|
-|テナント キーをエクスポートします|はい|いいえ|
-|侵害への対応|はい|[はい]|
+|テナント キーをエクスポートします|[はい]|いいえ|
+|侵害への対応|[はい]|[はい]|
 
 実装したトポロジを識別したら、次のいずれかのリンクを選択して、Azure Information Protection テナント キーに対するこれらの操作の詳細を参照してください。
 

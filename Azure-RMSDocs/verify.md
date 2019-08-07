@@ -1,6 +1,6 @@
 ---
 title: Azure Rights Management を確認する - AIP
-description: Azure Information Protection からの保護サービスが期待どおりに動作していることを確認する手順です。
+description: Azure Information Protection からの保護サービスが想定どおりに動作していることを確認する手順。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 618d6ff233c69e1b44ef39f8eebc3b578bd5199d
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 1994b30d2ad27f837e49549719de5de7413c25d7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521344"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792720"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Azure Rights Management サービスの検証
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-この保護サービスがあることを確認する準備が完了したら Azure Information Protection からの保護サービス (Azure Rights Management) がアクティブ化すると、組織に必要な追加の構成手順を実行する、正常に動作します。 
+Azure Information Protection から保護サービス (Azure Rights Management) がアクティブになり、組織に必要な追加の構成手順を実行した場合は、この保護サービスが次のものであることを確認できます。予期したとおりに動作しています。 
 
 単純な検証テストは、1 つのユーザー アカウントを使用してドキュメントや電子メール メッセージを保護し、別のコンピューターのもう 1 つのユーザー アカウントからその保護コンテンツを開いて使用してみることです。
 
@@ -35,7 +37,7 @@ ms.locfileid: "67521344"
 
 ## <a name="next-steps"></a>次の手順
 
-使用状況ログを使用して、この保護サービスを組織で使用が方法を監視できます。 詳細については、次を参照してください。[ログと Azure Information Protection からの保護の使用量の分析](log-analyze-usage.md)します。
+使用状況ログを使用して、組織でこの保護サービスをどのように使用しているかを監視できます。 詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](log-analyze-usage.md)」を参照してください。
 
 
 

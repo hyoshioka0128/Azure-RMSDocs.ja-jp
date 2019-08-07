@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: f24931cbc3a3f91928a6d7190b5e028e6b474202
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535053"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789587"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
@@ -29,11 +31,11 @@ ms.locfileid: "67535053"
 
 -   *\<YourTenantURL>* は Azure Information Protection テナントの Azure Rights Management サービス URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  実行、 [Get AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Azure Rights Management サービスのコマンドレット。 既に AIPService モジュールをインストールしていない場合は、次を参照してください。 [AIPService PowerShell モジュールをインストールする](install-powershell.md)します。
+    1.  Azure Rights Management サービスに対して[AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)コマンドレットを実行します。 AIPService モジュールをまだインストールしていない場合は、「 [Aipservice PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
     2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
-        以下に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        例えば:**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  この値から、 **/_wmcs/licensing** 文字列を削除します。 残りの文字列が Azure Rights Management サービス URL です。 この例では、Azure Rights Management サービス URL は次の値になります。
 
@@ -54,7 +56,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** https:// *\<YourTenantURL>* /_wmcs/certification
 
@@ -64,7 +66,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** https:// *\<YourTenantURL>* /_wmcs/Licensing
 
@@ -105,7 +107,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** https:// *<\YourTenantURL>* /_wmcs/certification
 
@@ -115,7 +117,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** https:// *<\YourTenantURL>* /_wmcs/Licensing
 
@@ -169,7 +171,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
@@ -183,7 +185,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
@@ -201,7 +203,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
@@ -211,7 +213,7 @@ ms.locfileid: "67535053"
 
 **種類:** Reg_SZ
 
-**値:** 既定
+**値:** 既定値
 
 **データ:** http:// *<\ConnectorFQDN>* /_wmcs/certification
 

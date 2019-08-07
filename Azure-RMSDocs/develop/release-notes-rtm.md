@@ -13,12 +13,13 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6e962a2e9727048a60e74e811e964e6a0a9bc82d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 6fdef7a9d92880fa6754ffc7b2f889acdecd0bfc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176048"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791192"
 ---
 # <a name="release-notes"></a>リリース ノート
 
@@ -143,21 +144,21 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **問題**:ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
-    **ソリューション**:ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
+    **解決策**:ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
 
 -   **問題**:アプリケーションでそのハンドルを使用して同じウィンドウに対して [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) または [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) を 2 回呼び出した場合、RMS SDK 2.1 では **HRESULT** でエラーが返されます。
 
-    **ソリューション**:この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
+    **解決策**:この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
 
 -   **問題**:複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
 
-    **ソリューション**:Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
+    **解決策**:Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **Q**: LCID パラメーターを受け取る関数では、既定の言語の動作はどうなるでしょうか。
 
-**A**: 既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序で検索し、使用可能な最初の値が取得されます。
+**A**:既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序で検索し、使用可能な最初の値が取得されます。
 
     1 - User preferred LCID.
     2 - System locale LCID.

@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.custom: admin
+ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149289"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794175"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -38,14 +40,14 @@ Azure RMS が暗号化および復号化、承認、制限の適用を行う保�
 
 Azure RMS が使用するアルゴリズムおよびキー長に関する技術的詳細については、次のセクションを参照してください。
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Azure RMS で使用される暗号化制御:アルゴリズムとキーの長さ
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Azure RMS によって使用される暗号化コントロール:アルゴリズムとキーの長さ
 このテクノロジのしくみを詳しく理解する必要がない場合でも、このテクノロジが使用する暗号化コントロールについてたずねられる可能性があります。 たとえば、セキュリティ保護が業界標準であることを確認するためです。
 
 
 |暗号化コントロール|Azure RMS での使用|
 |-|-|
-|アルゴリズム:AES<br /><br />キーの長さ:128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
-|アルゴリズム:RSA<br /><br />キーの長さ:2048 ビット [[2]](#footnote-2)|キーの保護|
+|アルゴリズムAES<br /><br />キーの長さ:128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
+|アルゴリズムRSA<br /><br />キーの長さ:2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
 
 ###### <a name="footnote-1"></a>脚注 1 
@@ -77,7 +79,7 @@ Azure RMS は、Azure RMS によって保護されているドキュメントま
 Windows デバイスに送信されるライセンスと証明書は、クライアントのデバイス秘密キーによって保護されます。このキーは、デバイスのユーザーが初めて Azure RMS を使用したときに作成されます。 一方、この秘密キーは、クライアント上の DPAPI によって保護されます。DPAPI は、ユーザーのパスワードから派生したキーを使用して、これらのシークレットを保護します。 モバイル デバイスでは、キーは 1 回しか使われず、クライアントに格納されないため、これらのキーをデバイス上で保護する必要はありません。 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Azure RMS の動作のチュートリアル:最初の使用、コンテンツ保護、コンテンツ消費
 Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights Management サービスがアクティブ化](activate-service.md)された後、ユーザーが初めて Windows コンピューターで Rights Management サービスを使用し (**ユーザー環境の初期化**とも呼ばれます)、**コンテンツ (ドキュメントまたは電子メール) を保護**し、他のユーザーによって保護されているコンテンツを**消費する** (開いて使用する) ときの、一般的なフローを説明します。
 
 ユーザー環境が初期化された後、ユーザーはそのコンピューターでドキュメントを保護したり、保護されているドキュメントを消費したりできます。

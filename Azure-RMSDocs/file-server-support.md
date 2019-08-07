@@ -1,5 +1,5 @@
 ---
-title: Windows ファイルの Azure RMS の AIP の FCI サポートを使用するサーバー
+title: FCI を使用する Windows ファイルサーバーのサポート Azure RMS-AIP
 description: Office ドキュメントを自動的に保護する RMS コネクタを配置するときに、Windows Server ファイル分類インフラストラクチャがどのように Azure RMS で使用されるかについて説明します。
 author: cabailey
 ms.author: cabailey
@@ -9,21 +9,23 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 301ee894bfeeb89ffb81b5e22fb7201a1f393178
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: 4644970758cc193cb210b0e216940e6b71c36fc2
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156505"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791857"
 ---
-# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Windows ファイルの FCI サポート Azure Rights Management を使用するサーバー
+# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>FCI を使用する Windows ファイルサーバーで Azure Rights Management をサポートする方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-ファイル分類インフラストラクチャを使用するように Windows Server を構成すると、このファイル サーバー リソース マネージャーの機能でローカル ファイルをスキャンし、機密データが含まれているかどうかを判断することができます。 この条件を満たすファイルには、管理者が定義する分類プロパティのタグが付けられます。 その後で、ファイル分類インフラストラクチャが分類に従って自動操作を実行できます。 これらのアクションの 1 つは、Azure Rights Management と Rights Management コネクタ (RMS コネクタとも呼ばれます) のデプロイを使用して情報保護の適用が含まれます。 これにより Office ファイルは Azure RMS によって自動的に保護されます。
+ファイル分類インフラストラクチャを使用するように Windows Server を構成すると、このファイル サーバー リソース マネージャーの機能でローカル ファイルをスキャンし、機密データが含まれているかどうかを判断することができます。 この条件を満たすファイルには、管理者が定義する分類プロパティのタグが付けられます。 その後で、ファイル分類インフラストラクチャが分類に従って自動操作を実行できます。 これらのアクションの1つには、Azure Rights Management を使用した情報保護の適用と、Rights Management コネクタ (RMS コネクタとも呼ばれます) のデプロイが含まれます。 これにより Office ファイルは Azure RMS によって自動的に保護されます。
 
 すべてのファイルの種類を保護する目的で、RMS コネクタを使用せずに、代わりに、[Azure Information Protection モジュール](./rms-client/client-admin-guide-powershell.md)でコマンドレットを使用する Windows PowerShell スクリプトを実行できます。
 

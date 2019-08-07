@@ -4,17 +4,19 @@ description: Rights Management 保護を使用するようにラベルを構成�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: b29b56664bad205a6c23d092aca7b233ebe9d3d0
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520434"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807917"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -43,7 +45,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 > [!IMPORTANT]
 > この保護を適用するようにラベルを構成するには、組織に対して Azure Rights Management サービスをアクティブにする必要があります。 詳細については、「[Activating the protection service from Azure Information Protection (Azure Information Protection の保護サービスのアクティブ化)](activate-service.md)」をご覧ください。
 
-ラベルで保護を適用する場合、保護された文書は SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する次の機能はサポートされていません。共同編集、Office Online、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。 
+ラベルで保護を適用する場合、保護された文書は SharePoint または OneDrive に保存するには適しません。 これらの場所では、保護されたファイルに対する次の機能はサポートされていません。共同編集、Web 用 Office、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。 
 
 ユーザーが電子メールを保護するラベルを Outlook で適用するために、Azure Information Protection 用に Exchange を構成する必要はありません。 ただし、Exchange が Azure Information Protection 用に構成されるまで、Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 たとえば、ユーザーは保護された電子メールを携帯電話や Outlook on the web で表示できません。保護された電子メールには検索のインデックスを作成できません。また、Rights Management 保護に Exchange Online DLP を構成できません。 このような追加のシナリオを Exchange がサポートできるようにするには、以下のリソースを参照してください。
 
