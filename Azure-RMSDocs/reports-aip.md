@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 07/30/2019
+ms.date: 08/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8f783daea65e29ba33d2395208994e9f6b92d7b2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793785"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862736"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -118,7 +118,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)に関するセクションをご覧ください。
 
-Azure Information Protection クライアントでこのデータが送信されないようにするには、[ポリシー設定](configure-policy-settings.md)の **[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定します。
+Azure Information Protection クライアント (クラシック) からこのデータが送信されないようにするには、 **[監査データを Azure Information Protection log analytics に送信する]** の[ポリシー設定](configure-policy-settings.md)を **[オフ]** に設定します。
 
 - ほとんどのユーザーがこのデータを送信し、ユーザーのサブセットが監査データを送信できない場合: 
     - ユーザーのサブセットに対するスコープ付きポリシーで、 **[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定します。 この構成は、運用環境のシナリオに一般的なものです。
@@ -128,7 +128,11 @@ Azure Information Protection クライアントでこのデータが送信され
 
 #### <a name="content-matches-for-deeper-analysis"></a>詳細な分析のためのコンテンツ一致 
 
-Azure Information Protection 用の Azure Log Analytics ワークスペースには、機密情報の種類またはカスタム条件によって識別されるデータも収集および格納するためのチェック ボックスが含まれています。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 この追加データを送信したくない場合は、このチェック ボックスをオンにしないでください。 ほとんどのユーザーについてはこの追加データを送信し、ユーザーのサブセットでは送信できない場合は、ユーザーのサブセットに対するスコープ付きポリシーでそのチェック ボックスをオンにして、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
+Azure Information Protection 用の Azure Log Analytics ワークスペースには、機密情報の種類またはカスタム条件によって識別されるデータも収集および格納するためのチェック ボックスが含まれています。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 この追加データを送信しない場合は、[**機微なデータの分析をさらに有効に**する] チェックボックスをオンにしないでください。 ほとんどのユーザーがこの追加データを送信する必要があり、ユーザーのサブセットがそのデータを送信できないようにするには、チェックボックスをオンにして、次のようにします。
+
+- クラシッククライアントの場合:ユーザーのサブセットに対してスコープポリシーの[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
+
+- 統一されたラベル付けクライアントの場合:ユーザーのサブセットのラベルポリシーで[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
 
 収集した後のコンテンツ一致は、アクティビティ ログからファイルにドリル ダウンして **[アクティビティの詳細]** を表示すると、レポートに表示されます。 この情報は、クエリで表示および取得することもできます。
 
@@ -192,16 +196,16 @@ Azure Information Protection 分析のためにワークスペースを構成し
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンを必要とする機能
 
-Azure Information Protection 統合された[ラベル付けクライアント](./rms-client/unifiedlabelingclient-version-release-history.md)および[Azure Information Protection クライアント (クラシック)](./rms-client/client-version-release-history.md)のバージョン履歴情報を使用して、クライアントのバージョンですべての中央レポートがサポートされているかどうかを確認できます。機能. クライアントの最小バージョン:
+Azure Information Protection クライアントは、基本的な監査 (ラベルの使用法) とエンドポイント検出 (機密情報の種類の識別) をサポートしています。
 
-Azure Information Protection 統合されたラベル付けクライアントの場合:
+Azure Information Protection 統合ラベル付けクライアント:
 
-- 監査とエンドポイント検出のサポート:バージョン2.0.778.0
+- 基本的な監査とエンドポイント検出のサポート:2.0.778.0 の最小バージョン
 
-Azure Information Protection クライアント (クラシック) の場合:
+Azure Information Protection クライアント (クラシック):
 
-- 監査のサポート:バージョン 1.41.51.0
-- エンドポイント検出のサポート:バージョン1.48.204.0
+- 基本的な監査のサポート:1.41.51.0 の最小バージョン
+- エンドポイント検出のサポート:1.48.204.0 の最小バージョン
 
 ### <a name="storage-requirements-and-data-retention"></a>ストレージ要件とデータ保有期間
 

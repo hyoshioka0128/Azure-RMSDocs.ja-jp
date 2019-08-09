@@ -4,19 +4,19 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 01bd7936f0269d46b6eb782bdd132e0f80bb3d98
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789563"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862708"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -87,7 +87,7 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 |Android|Office Mobile <br /><br />- Outlook|保護:いいえ<br /><br />消費: いいえ|
 |Android|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: [はい]|
 |Web|Outlook on the web|保護:いいえ<br /><br />消費: いいえ|
-|Web|Office Online<br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: いいえ|
+|Web|Web 用 Office<br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: いいえ|
 |ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: いいえ|
 
 
