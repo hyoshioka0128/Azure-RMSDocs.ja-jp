@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 08/08/2019
+ms.date: 08/11/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862736"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948642"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -126,11 +126,13 @@ Azure Information Protection クライアント (クラシック) からこの�
 - ユーザーのサブセットだけが監査データを送信する場合: 
     - **[監査データを Azure Information Protection ログ分析に送信します]** を、グローバル ポリシーでは **[オフ]** に設定し、ユーザーのサブセットに対するスコープ付きポリシーでは **[オン]** に設定します。 この構成は、テストのシナリオに一般的なものです。
 
+Azure Information Protection 統合クライアントがこのデータを送信できないようにするには、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)を構成します。
+
 #### <a name="content-matches-for-deeper-analysis"></a>詳細な分析のためのコンテンツ一致 
 
 Azure Information Protection 用の Azure Log Analytics ワークスペースには、機密情報の種類またはカスタム条件によって識別されるデータも収集および格納するためのチェック ボックスが含まれています。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 この追加データを送信しない場合は、[**機微なデータの分析をさらに有効に**する] チェックボックスをオンにしないでください。 ほとんどのユーザーがこの追加データを送信する必要があり、ユーザーのサブセットがそのデータを送信できないようにするには、チェックボックスをオンにして、次のようにします。
 
-- クラシッククライアントの場合:ユーザーのサブセットに対してスコープポリシーの[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
+- 従来のクライアントとスキャナーの場合:ユーザーのサブセットに対してスコープポリシーの[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
 
 - 統一されたラベル付けクライアントの場合:ユーザーのサブセットのラベルポリシーで[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
 
