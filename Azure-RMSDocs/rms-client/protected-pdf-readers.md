@@ -38,7 +38,7 @@ Microsoft Information Protection によって保護されている PDF ドキュ
 
 ### <a name="support-for-previous-formats"></a>以前の形式のサポート
 
-次の表の PDF リーダーは、ファイル名拡張子が ppdf である保護された PDF ドキュメントと、.pdf ファイル名拡張子を持つ古い形式をサポートしています。
+次の表の PDF リーダーは、ファイル名拡張子が .ppdf である保護された PDF ドキュメントと、.pdf ファイル名拡張子を持つ古い形式をサポートしています。
 
 現在、SharePoint Online とオンプレミスの SharePoint では、IRM で保護されたライブラリで PDF ドキュメントの古い形式を使用します。
 
