@@ -3,7 +3,7 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3607fc65a1c1c2dc80768b777d98473fd1c6c88c
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8957bd019beb3af99ca1794118f42aaa2994d9f6
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790177"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948667"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -119,6 +119,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 |AttachmentAction|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling)
+|EnableAudit|[Azure Information Protection analytics への監査データの送信を無効にする](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |EnableCustomPermissions|[エクスプローラーでカスタムアクセス許可を無効にする](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -633,12 +634,28 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
+## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Azure Information Protection analytics への監査データの送信を無効にする
+
+この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
+
+Azure Information Protection 統合されたラベル付けクライアントは、中央レポートをサポートします。既定では、は監査データを[Azure Information Protection analytics](../reports-aip.md)に送信します。 送信および保存される情報の詳細については、中央レポートのドキュメントの「[収集して Microsoft に送信する](../reports-aip.md#information-collected-and-sent-to-microsoft)情報」セクションを参照してください。
+
+この動作を変更して、この情報が統合ラベルクライアントによって送信されないようにするには、選択したラベルポリシーに対して次の文字列を入力します。
+
+- 重要:**EnableAudit**
+
+- 値:**False**
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-[Azure Information Protection analytics](../reports-aip.md)は、コンテンツに機密情報が含まれている場合に Azure Information Protection クライアントによって保存されたドキュメントを検出してレポートできます。 既定では、この情報は Azure Information Protection 統合されたラベル付けクライアントによって Azure Information Protection analytics に送信されます。
+[Azure Information Protection analytics](../reports-aip.md)は、そのコンテンツに機密情報が含まれている場合に Azure Information Protection クライアントによって保存されたドキュメントを報告できます。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)の詳細設定を**False**に設定しないでください。既定では、この情報は Azure Information Protection 統合ラベルクライアントによって Azure Information Protection analytics に送信されます。
 
 この動作を変更して、この情報が統合ラベルクライアントによって送信されないようにするには、選択したラベルポリシーに対して次の文字列を入力します。
 
