@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 064cf6db8551caa12bb06540fd598f70f02e6c0d
-ms.sourcegitcommit: bdaf9809fcf78602ec7675c04f97ad5d3cc47b44
+ms.custom: admin
+ms.openlocfilehash: ced4865d5a0549e5ae9883f239966bd30fef8ffe
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748346"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793973"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -60,9 +62,9 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 ### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Exchange サーバーで IRM を無効にし、AD RMS の構成を削除する
 
 > [!IMPORTANT]
-> 任意の Exchange サーバーで IRM をまだ構成していない、だけ手順 2 ~ 6 の操作を行います。
+> どの Exchange サーバーでも IRM をまだ構成していない場合は、手順 2. と 6. を実行します。
 > 
-> これらすべての手順を行うには、すべての AD RMS クラスターのすべてのライセンス Url が表示されない場合、 *LicensingLocation*パラメーターを実行すると[Get-irmconfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)します。
+> [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) を実行し、*LicensingLocation* パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順をすべて実行します。
 
 1. 各 Exchange サーバーでフォルダー **\ProgramData\Microsoft\DRM\Server\S-1-5-18** を見つけて、そのフォルダーのすべてのエントリを削除します。
 
@@ -75,7 +77,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
         $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
     
-    実行すると[Get-irmconfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)、ライセンス Url と、Azure Rights Management サービスの URL が表示される、すべての AD RMS クラスターを表示する必要があります、 *LicensingLocation*パラメーター。
+    これで、 [Get IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)を実行すると、すべての AD RMS クラスターのライセンス url と、 *LicensingLocation*パラメーターに表示される AZURE Rights Management サービスの url が表示されます。
 
 3.  次に、内部受信者に送信されるメッセージの IRM 機能を無効にします。
 

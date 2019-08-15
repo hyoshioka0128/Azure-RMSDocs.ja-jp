@@ -1,6 +1,6 @@
 ---
 title: Azure Rights Management のスーパー ユーザーを構成する - AIP
-description: 理解し、権限を持つ人物とサービスは常に読み取りし、検査できるように、Azure Information Protection から Azure Rights Management サービスのスーパー ユーザー機能を実装 (「理由を」)、組織のデータを保護します。
+description: Azure Information Protection から Azure Rights Management サービスのスーパーユーザー機能を理解して実装することで、承認されたユーザーとサービスが組織の保護されたデータをいつでも読み取り、検査 ("理由") できるようになります。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f65e3cbda824dcd2ddcfad0c239cb7831da2fac5
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 23cb44d9b4101c4e73aeed27142be50c79a70cfb
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520643"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789041"
 ---
-# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection および探索サービスまたはデータの回復用のスーパー ユーザーの構成
+# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -40,26 +42,26 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 既定では、スーパー ユーザー機能は無効であり、このロールはどのユーザーにも割り当てられていません。 これは、Exchange に Rights Management コネクタを構成すると自動的に有効にされますが、Exchange Online、SharePoint Online、または SharePoint Server を実行する標準的なサービスには必要ありません。
 
-スーパー ユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレットを使用して[有効にする AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)を使用して、必要に応じて、ユーザー (またはサービス アカウント) に割り当てると、[追加 AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)コマンドレットまたは[セット AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup)コマンドレットをこのグループに、必要に応じてユーザー (またはその他のグループ) を追加します。 
+スーパー ユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレット [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature) を使用します。次に、必要に応じて [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) コマンドレットを使用してユーザー (またはサービス アカウント) を割り当てたり、[Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) コマンドレットを使用して、必要に応じてこのグループにユーザー (または他のグループ) を追加したりします。 
 
-スーパー ユーザーにグループを使用すると管理しやすくなりますが、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](prepare.md#group-membership-caching-by-azure-information-protection)ことに注意してください。 これをすぐにコンテンツを復号化するスーパー ユーザーの新しいユーザーを割り当てる必要がある場合は、セット AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、追加 AipServiceSuperUser を使用してそのユーザーを追加します。
+スーパー ユーザーにグループを使用すると管理しやすくなりますが、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](prepare.md#group-membership-caching-by-azure-information-protection)ことに注意してください。 そのため、新しいユーザーを、すぐにコンテンツの暗号化を解除するスーパーユーザーに割り当てる必要がある場合は、AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、AipServiceSuperUser を使用してそのユーザーを追加します。
 
 > [!NOTE]
-> Azure Rights Management 用 Windows PowerShell モジュールをまだインストールしていないが、表示[AIPService PowerShell モジュールをインストールする](install-powershell.md)します。
+> Azure Rights Management 用の Windows PowerShell モジュールをまだインストールしていない場合は、「 [AIPService PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
 いつスーパー ユーザー機能を有効にするか、ユーザーをスーパー ユーザーとして追加するかは関係ありません。 たとえば、木曜日にこの機能を有効にして金曜日にユーザーを追加した場合、そのユーザーはその週の最初に保護されていたコンテンツをすぐに開くことができます。
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>スーパー ユーザー機能のセキュリティ ベスト プラクティス
 
-- 制限し、監視、Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てまたはを使用して GlobalAdministrator ロールが割り当ての管理者、[追加 AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドレット。 これらのユーザーは、スーパー ユーザー機能を有効にし、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができ、組織で保護するすべてのファイルを複合化できます。
+- Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または、 [Add Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドレットを使用して globaladministrator ロールが割り当てられている管理者を制限および監視します。 これらのユーザーは、スーパー ユーザー機能を有効にし、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができ、組織で保護するすべてのファイルを複合化できます。
 
-- ユーザーおよびサービス アカウントは、スーパー ユーザーとして個別に割り当てを表示する、 [Get AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレット。 スーパー ユーザー グループが構成されているかどうかを表示する、 [Get AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup)コマンドレットと標準ユーザーの管理ツールをユーザーに確認するはこのグループのメンバー。 すべての管理アクションと同様を有効にする機能を無効にして追加または削除のスーパー ユーザーのログは記録されを使用して監査することができます、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンド。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルを復号化すると、この操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
+- スーパーユーザーとして個別に割り当てられているユーザーとサービスアカウントを確認するには、 [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを使用します。 スーパーユーザーグループが構成されているかどうかを確認するには、 [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup)コマンドレットと標準のユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを確認します。 すべての管理操作と同様に、スーパー機能の有効化または無効化、スーパーユーザーの追加または削除はログに記録され、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドを使用して監査することができます。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルを復号化すると、この操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
 
-- 使用して、もう一度無効にし、必要な場合にのみに機能を有効に、日常的なサービスのスーパー ユーザー機能が必要ない場合、[無効 AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature)コマンドレット。
+- 日常的なサービスでスーパーユーザー機能を必要としない場合は、必要なときにのみ機能を有効にし、 [disable-Aipservices Uperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature)コマンドレットを使用して再度無効にします。
 
 ### <a name="example-auditing-for-the-super-user-feature"></a>スーパー ユーザー機能の監査の例
 
-次のログの抜粋を使用してから、いくつかのエントリの例を示しています、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレット。 
+次のログの抜粋では、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレットの使用に関するいくつかのエントリの例を示しています。 
 
 この例では、Contoso 社の管理者は、スーパー ユーザー機能が無効になっていることを確認し、スーパー ユーザーとして Richard Simone を追加します。Richard が Azure Rights Management サービス用に構成された唯一のスーパー ユーザーであることを確認してから、Richard は退職した従業員によって保護されたいくつかのファイルを復号化できるようにスーパー ユーザー機能を有効にします。
 
@@ -79,7 +81,7 @@ Azure Rights Management のスーパー ユーザーが割り当てられてい�
 これらのコマンドレットの詳細については、「Azure Information Protection クライアント管理者ガイド」の「[Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)」(PowerShell と Azure Information Protection クライアントの使用) を参照してください。
 
 > [!NOTE]
-> AzureInformationProtection モジュールとは異なる、補完、 [AIPService PowerShell モジュール](administer-powershell.md)Azure Information Protection の Azure Rights Management サービスを管理します。
+> AzureInformationProtection モジュールは、Azure Information Protection 用に Azure Rights Management サービスを管理する[Aipservice PowerShell モジュール](administer-powershell.md)とは異なり、補足しています。
 
 ### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>電子情報開示での Unprotect-RMSFile の使用に関するガイダンス
 
