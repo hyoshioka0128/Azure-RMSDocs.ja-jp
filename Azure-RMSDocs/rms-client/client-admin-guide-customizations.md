@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 08/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7dbd7a6091f0df3f4124b2ddb06178630c440f67
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: a43bdbf2e4ec14b60ac37164273529c764cffa98
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793731"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978793"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -504,9 +504,9 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 - `Sign;Encrypt`:デジタル署名と S/MIME 暗号化を適用する
 
-- `Encrypt`:S/MIME 暗号化のみを適用する
+- `Encrypt` :S/MIME 暗号化のみを適用する
 
-- `Sign`:デジタル署名のみを適用する
+- `Sign` :デジタル署名のみを適用する
 
 **dcf781ba-727f-4860-b3c1-73479e31912b** のラベル ID の値の例:
 
@@ -849,15 +849,15 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-[Azure Information Protection analytics](../reports-aip.md)は、コンテンツに機密情報が含まれている場合に Azure Information Protection クライアントによって保存されたドキュメントを検出してレポートできます。 既定では、この情報は Azure Information Protection クライアント (クラシック) によって Azure Information Protection analytics に送信されます。
+Office アプリで Azure Information Protection クライアントが使用されている場合は、ドキュメントが最初に保存されたときに、機密情報が検索されます。 クライアントが監査情報を送信しないように構成されていない場合、検出された機密情報の種類 (定義済みまたはカスタム) は[Azure Information Protection analytics](../reports-aip.md)に送信されます。
 
-この動作を変更して、この情報が従来のクライアントによって送信されないようにするには、次の文字列を入力します。
+この動作を変更して、クラシッククライアントによって検出された機密情報の種類が Azure Information Protection analytics に送信されないようにするには、次の文字列を入力します。
 
 - 重要:**Runauditinformationタイプの検出**
 
 - 値:**False**
 
-この高度なクライアント設定を設定した場合、監査結果は従来のクライアントから送信されますが、ユーザーがラベル付きコンテンツにアクセスした場合、情報はレポートに限定されます。
+この高度なクライアント設定を設定した場合でも、クライアントから監査結果を送信できますが、ユーザーがラベル付きコンテンツにアクセスしたときに情報がレポートに限定されます。
 
 例えば:
 
@@ -865,13 +865,13 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 - この設定を行わないと、".docx" に6個のクレジットカード番号が含まれていることがわかります。
     
-    - [詳細な分析のためのコンテンツ一致](../reports-aip.md#content-matches-for-deeper-analysis)も有効にすると、これらのクレジット カードの番号も追加で確認できます。
+    - また、機密性の[高いデータに](../reports-aip.md#content-matches-for-deeper-analysis)対してより深い分析を有効にすると、そのクレジットカード番号を確認することができます。
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>ユーザーのサブセットに対して送信情報の種類の一致を無効にする
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-機密情報の種類またはカスタム条件に対するコンテンツ一致を収集する [[Azure Information Protection 分析]](../reports-aip.md) のチェック ボックスをオンにすると、既定で、すべてのユーザーによってこの情報が送信されます。 このデータを送信できないユーザーがいる場合は、それらのユーザーの[スコープ付きポリシー](../configure-policy-scope.md)で、次のようなクライアントの詳細設定を作成します。 
+[Azure Information Protection analytics](../reports-aip.md)のチェックボックスをオンにすると、機微なデータに対してより深い分析が可能になり、機密情報の種類またはカスタム条件に一致する内容が収集されます。既定では、この情報は次のようになります。Azure Information Protection スキャナーを実行するサービスアカウントを含むすべてのユーザーによって送信されます。 このデータを送信できないユーザーがいる場合は、それらのユーザーの[スコープ付きポリシー](../configure-policy-scope.md)で、次のようなクライアントの詳細設定を作成します。 
 
 - 重要:**LogMatchedContent**
 

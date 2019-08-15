@@ -4,7 +4,7 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/01/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f93b8e8deeb6a1329262cd08f0bb905d53507812
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 67e9e53ddcd8e5604493955a0b3a9c2fe289cb3c
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794160"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994471"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -41,11 +41,11 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 当初は、Office 365 には[保有期間ラベル](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30)のみがあり、ドキュメントおよび電子メールのコンテンツが Office 365 サービス内にある場合に、それらを分類して監査および保持することができました。 これに対して、Azure Information Protection のラベルでは、ドキュメントおよび電子メールがオンプレミスのものであるかクラウド内のものであるかに関係なく、ドキュメントと電子メールに対して一貫性のある分類および保護ポリシーを適用できます。
 
-オーランドでの Microsoft Ignite 2018 で発表したとおり、次のいずれかの管理センターでは、保有期間ラベルに加え、[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を作成および構成するためのオプションが表示されるようになりました: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 Office 365 では、既存の Azure Information Protection ラベルを新しい統合ラベルストアに移行して、秘密度ラベルとして使用することができます。 
+オーランドでの Microsoft Ignite 2018 で発表したとおり、次のいずれかの管理センターでは、保有期間ラベルに加え、[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を作成および構成するためのオプションが表示されるようになりました: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 Office アプリでは、既存の Azure Information Protection ラベルを新しい統合ラベルストアに移行して、機密ラベルとして使用することができます。 
 
 統合ラベル付けの管理と各ラベルのサポート方法について詳しくは、ブログ記事「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」 (機密データの保護に役立つ情報保護機能の可用性の発表) をご覧ください。
 
-既存のラベルの移行について詳しくは、[Azure Information Protection ラベルの Office 365 への移行](configure-policy-migrate-labels.md)に関する記事をご覧ください。
+既存のラベルの移行の詳細については、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection クライアントと Azure Information Protection の統一されたラベル付けクライアントの違いは何ですか。
 
@@ -69,11 +69,11 @@ Azure Information Protection の統一された**ラベル付けクライアン�
 
 - バージョン**2**(たとえば、 **2.2.14.0**) は、Azure Information Protection 統合されたラベル付けクライアントを識別します。
 
-## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Office 365 にラベルを移行する適切なタイミングはいつですか。
+## <a name="when-is-the-right-time-to-migrate-my-labels"></a>ラベルを移行するのに最適なタイミング
 
 Azure portal のラベルを移行するオプションが一般に利用できるようになったので、移行をアクティブ化することをお勧めします。これにより、ラベルを、統一されたラベル[付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)の秘密ラベルとして使用できるようになります。
 
-詳細および手順については、「 [Azure Information Protection ラベルを Office 365 の機密ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。
+詳細および手順については、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>ラベルを移行した後に使用する管理ポータルはどれですか。
 

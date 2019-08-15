@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb9dbea01c501ef7fa8e0639ae9416c4f0f4045e
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: 1bf26b600c5ea1ad4d1065b503ea25685fad0a0e
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862715"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978726"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -120,20 +120,21 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     - Azure 発行設定のパスワード
     - Azure Storage のアカウント キー (汎用)
 
+- エンドポイント探索による[Azure Information Protection analytics](../reports-aip.md)のサポート: ユーザーが最初に Office ドキュメントを保存したときに検出された機密情報を報告する (Word、Excel、PowerPoint 用のデスクトップアプリを使用):
+    - この情報を見つけるには、ドキュメントにラベルを付ける必要はありません。
+    - 機密情報は、定義済みおよびカスタムの情報の種類によって識別されます。
+    - 機密情報の種類が Azure Information Protection analytics に送信されないようにする場合は、[クライアントの詳細設定](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)を使用してエンドポイントの検出を無効にすることができます。
+
 - Outlook で送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する、新しいクライアント詳細設定。 [詳細情報](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
     プレビューバージョンの OutlookCollaborationTrustedDomains のアドバンストクライアントプロパティを構成した場合、この設定は3つの新しい設定に置き換えられるため、ドメインがアクションごとに除外されるようになりました。OutlookWarnTrustedDomains、Outlookジャスト Ifytrusteddomains、および OutlookBlockTrustedDomains。
 
 - [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 [詳細情報](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
+- Azure portal のチェックボックスをオンにして、機密データをより深く分析できるようにするための、 [Azure Information Protection analytics](../reports-aip.md)の新しいクライアント設定の1つ。 この設定は、クライアントとスキャナーに適用されます。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+
 - カスタム アクセス許可を表示しないようポリシー設定を構成する場合にのみ適用される、新しいクライアント詳細設定。カスタム アクセス許可で保護されているファイルがある場合に、ユーザーが (保護設定を変更するアクセス許可を持っていれば) 表示および変更できるように、ファイル エクスプローラーにカスタム アクセス許可オプションが表示されます。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- [Azure Information Protection analytics](../reports-aip.md)のエンドポイント検出。
-    
-- 次のシナリオで、分析用の2つの新しいアドバンストクライアント設定が追加されています。
-    
-    - Azure portal でコンテンツ一致を収集するチェック ボックスをオンにしてあるときに、ユーザーのサブセットについて情報の種類の一致が送信されないようにします。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - **データ検出**レポートで、ファイルに機密情報が含まれているかどうかを表示します。 [詳細情報](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **修正内容**:
 
@@ -190,7 +191,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
     
     クライアントを元に戻して、ファイル名拡張子 .ppdf を使って PDF ファイルを保護させるようにするには、同じ[クライアントの詳細設定](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)を使いますが、ここでは **False** を指定します。
 
-- Microsoft Ignite 2018 で発表された Azure Information Protection analytics を使用した、[中央レポート](../reports-aip.md)のデータサポートの監査。
+- Azure Information Protection analytics を使用した、[中央レポート](../reports-aip.md)のデータサポートの監査。 この情報には、ラベルの使用状況を監視したり、ラベル付きドキュメントや電子メールにユーザーがアクセスしたりするためのラベルの使用方法が含まれています。
 
 - Excel で異なる色の[視覚的なマーキング](../configure-policy-markings.md)もサポートされるようになりました。
 

@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection 統合ラベルクラ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 67713198da1269a776aeeb75606d101178bbeabf
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 195714bb44ea16686005c7f079c6d871c86c8528
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790206"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994410"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Windows 用の統一されたラベル付けクライアント Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "68790206"
 >
 > *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Windows 用の Azure Information Protection 統合ラベル付けクライアントは、 [Office 365 の機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を使用してドキュメントや電子メールを分類および保護する組織用のダウンロード可能なクライアントです。 このクライアントには、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Microsoft の Rights Management サービスを使って保護しているコンテンツを使いたい組織のためのビューアーもあります。
+Windows 用の Azure Information Protection 統合ラベル付けクライアントは、[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を使用してドキュメントや電子メールを分類および保護する組織用のダウンロード可能なクライアントです。 このクライアントには、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Microsoft の Rights Management サービスを使って保護しているコンテンツを使いたい組織のためのビューアーもあります。
 
 > [!NOTE]
 > このクライアントは、"統合されたラベル付けクライアント" とも呼ばれ、Azure Information Protection クライアント (クラシック) に置き換わるものではありません。 使用するクライアントがわからない場合は、「[使用する Azure Information Protection クライアントを選択](use-client.md#choose-which-azure-information-protection-client-to-use)する」を参照してください。

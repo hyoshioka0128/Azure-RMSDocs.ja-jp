@@ -3,7 +3,7 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/11/2019
+ms.date: 08/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8957bd019beb3af99ca1794118f42aaa2994d9f6
-ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
+ms.openlocfilehash: ab409f5f293708db121df0c600cb9e7b5b970a18
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68948667"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978740"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -655,15 +655,15 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-[Azure Information Protection analytics](../reports-aip.md)は、そのコンテンツに機密情報が含まれている場合に Azure Information Protection クライアントによって保存されたドキュメントを報告できます。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)の詳細設定を**False**に設定しないでください。既定では、この情報は Azure Information Protection 統合ラベルクライアントによって Azure Information Protection analytics に送信されます。
+Azure Information Protection 統合されたラベル付けクライアントが Office アプリで使用されると、ドキュメントが最初に保存されたときに、その情報を検索します。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)詳細設定を**False**に設定していない場合、機密情報の種類 (定義済みまたはカスタム) が検出されると Azure Information Protection analytics に送信されます。
 
-この動作を変更して、この情報が統合ラベルクライアントによって送信されないようにするには、選択したラベルポリシーに対して次の文字列を入力します。
+この動作を変更して、統一されたラベル付けクライアントによって検出された機密情報の種類が Azure Information Protection analytics に送信されないようにするには、選択したラベルポリシーに次の文字列を入力します。
 
 - 重要:**Runauditinformationタイプの検出**
 
 - 値:**False**
 
-この高度なクライアント設定を設定した場合、監査結果は統一されたラベル付けクライアントから送信されますが、ユーザーがラベル付きコンテンツにアクセスしたときには、情報はレポートに限定されます。
+この高度なクライアント設定を設定した場合でも、クライアントから監査情報を送信できますが、ユーザーがラベル付きコンテンツにアクセスした場合、情報はレポートに限定されます。
 
 例えば:
 
@@ -681,7 +681,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-機密情報の種類またはカスタム条件に対するコンテンツ一致を収集する [[Azure Information Protection 分析]](../reports-aip.md) のチェック ボックスをオンにすると、既定で、すべてのユーザーによってこの情報が送信されます。 このデータを送信しないユーザーがいる場合は、これらのユーザーのラベルポリシーで次の高度なクライアント設定を作成します。 
+[Azure Information Protection analytics](../reports-aip.md)のチェックボックスをオンにすると、機微なデータに対してより深い分析が可能になり、機密情報の種類またはカスタム条件に一致する内容が収集されます。既定では、この情報は次のようになります。Azure Information Protection スキャナーを実行するサービスアカウントを含むすべてのユーザーによって送信されます。 このデータを送信しないユーザーがいる場合は、これらのユーザーのラベルポリシーで次の高度なクライアント設定を作成します。 
 
 - 重要:**LogMatchedContent**
 

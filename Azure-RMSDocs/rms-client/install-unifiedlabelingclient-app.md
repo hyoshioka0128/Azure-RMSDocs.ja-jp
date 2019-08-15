@@ -4,19 +4,19 @@ description: ドキュメントと電子メールを分類して保護できる�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 548080426cadfb14bd8d03f0550aa06258f80e81
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3c92a57864d81a20577ced49ad6346b03617d6a6
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789899"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994408"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>ユーザー ガイド: Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールする
 
@@ -34,7 +34,7 @@ ms.locfileid: "68789899"
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールするには
 
-Azure Information Protection 統合ラベル付けクライアントをインストールする前に、Office 365 の秘密度ラベルを使用していることを管理者またはヘルプデスクに確認してください。
+Azure Information Protection の統一されたラベル付けクライアントをインストールする前に、管理者またはヘルプデスクに問い合わせて、ドキュメントや電子メールの分類と保護に[機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を使用していることを確認してください。
 
 1. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から**AzInfoProtection_UL**をダウンロードします。
 

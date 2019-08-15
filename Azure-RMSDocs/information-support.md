@@ -4,7 +4,7 @@ description: 管理者向けのリソース。新しいリリース、サポー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 9364856f9c84545d8094a4cb6057cd3422f2f1d7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d29a8918244f1e3dcdf615d3959df2b3969ffb5f
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788404"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994454"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -57,7 +57,7 @@ Azure Information Protection テクニカルブログには、[毎月のドキ�
 
 ### <a name="to-contact-microsoft-support"></a>Microsoft サポートに問い合わせるには
 
-Premier サポートをご利用の場合は、[Premier サポートのお客様用ポータル](https://premier.microsoft.com/)にアクセスして、インシデントの送信、ソリューションの検索、ヘルプの参照を行ってください。
+Premier サポートがある場合は、 [Microsoft サービスハブ](https://serviceshub.microsoft.com/support/contactsupport)にアクセスしてインシデントを送信し、ソリューションを参照して、ヘルプを参照してください。
 
 **FastTrack** の利用資格: 対象となるプランで Azure Information Protection のライセンスを 150 以上ご購入いただいた場合は、FastTrack センター特典をご利用いただけます。 FastTrack センター特典によって、対象サービスの評価、修復、および有効化に関する Microsoft スペシャリストの支援を受けることができます。 詳細については、「[Enterprise Mobility + Security (EMS) 用の FastTrack センター特典](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems)」を参照してください。
 
