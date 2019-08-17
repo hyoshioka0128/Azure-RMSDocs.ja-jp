@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/12/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a43bdbf2e4ec14b60ac37164273529c764cffa98
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: e2cce9e76ae1b583aacc30df7d2abe5940106455
+ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978793"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546064"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -502,11 +502,11 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 次のような S/MIME アクションが可能です。
 
-- `Sign;Encrypt`:デジタル署名と S/MIME 暗号化を適用する
+- `Sign;Encrypt` :デジタル署名と S/MIME 暗号化を適用する
 
-- `Encrypt` :S/MIME 暗号化のみを適用する
+- `Encrypt`:S/MIME 暗号化のみを適用する
 
-- `Sign` :デジタル署名のみを適用する
+- `Sign`:デジタル署名のみを適用する
 
 **dcf781ba-727f-4860-b3c1-73479e31912b** のラベル ID の値の例:
 
@@ -849,15 +849,15 @@ Office ドキュメントにこれらの分類の値のいずれかのラベル�
 
 この構成では、Azure Portal で構成する必要のある[クライアントの詳細設定](#how-to-configure-advanced-client-configuration-settings-in-the-portal)を使用します。
 
-Office アプリで Azure Information Protection クライアントが使用されている場合は、ドキュメントが最初に保存されたときに、機密情報が検索されます。 クライアントが監査情報を送信しないように構成されていない場合、検出された機密情報の種類 (定義済みまたはカスタム) は[Azure Information Protection analytics](../reports-aip.md)に送信されます。
+Office アプリで Azure Information Protection クライアントが使用されている場合は、ドキュメントが最初に保存されたときに、機密情報が検索されます。 クライアントが監査情報を送信しないように構成されていない場合、検出された機密情報の種類 (定義済みまたはカスタム) は[Azure Information Protection analytics](../reports-aip.md)に送信されます。 
 
-この動作を変更して、クラシッククライアントによって検出された機密情報の種類が Azure Information Protection analytics に送信されないようにするには、次の文字列を入力します。
+クライアントが監査情報を送信するかどうかを制御する構成は、 **[監査データを Azure Information Protection log analytics に送信する]** の[ポリシー設定](../configure-policy-settings.md)です。 このポリシー設定が**オン**の場合は、ラベル付け操作を含む監査情報を送信するが、クライアントが検出した機密情報の種類を送信しないようにするには、次の文字列を入力します。
 
 - 重要:**Runauditinformationタイプの検出**
 
 - 値:**False**
 
-この高度なクライアント設定を設定した場合でも、クライアントから監査結果を送信できますが、ユーザーがラベル付きコンテンツにアクセスしたときに情報がレポートに限定されます。
+この高度なクライアント設定を設定した場合でも、クライアントから監査情報を送信できますが、情報はラベル付けアクティビティに限定されます。
 
 例えば:
 
