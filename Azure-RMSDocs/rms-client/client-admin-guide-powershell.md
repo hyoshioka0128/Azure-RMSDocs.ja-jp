@@ -4,7 +4,7 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 41fa947d70633a3c3c9cddb996fb86ce6b45a23d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ce8e2b9969ba6cbc3b5a58eac6d66fdd5db4f5b7
+ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793635"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546045"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -126,7 +126,7 @@ Azure Information Protection テナントがアクティブ化されていない
 $ServicePrincipalName="<new service principal name>"
 Connect-AipService
 $bposTenantID=(Get-AipServiceConfiguration).BPOSId
-Disconnect-AipServiceService
+Disconnect-AipService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -171,7 +171,7 @@ Azure RMS Windows PowerShell モジュールから AipServiceConfiguration コ�
 
 5. サービスから切断します。
     
-        Disconnect-AipServiceService
+        Disconnect-AipService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
 
@@ -353,7 +353,7 @@ Rights Management テンプレートが変更された場合は、もう一度 `
 Active Directory Rights Management サービスだけを使っている場合は、PowerShell コマンドを使ってファイルを保護または保護解除する前に、このセクションをお読みください。
 
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 AzureInformationProtection モジュールをインストールするための前提条件に加えて、ファイルの保護と保護解除に使用するアカウントには、ServerCertification.asmx にアクセスする読み取り許可と実行許可を与える必要があります。
 
