@@ -3,8 +3,8 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 08/13/2019
-manager: barbkess
+ms.date: 08/19/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
+ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978661"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630072"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -37,7 +37,9 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - 保護されていないと組織をリスクにさらす可能性がある機密情報が含まれるドキュメントを識別し、次の推奨事項に従ってリスクを軽減します。
 
-表示されるデータは、Azure Information Protection のクライアントとスキャナー、および統一され[たラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)から集計されます。
+- 内部または外部のユーザーが保護されたドキュメントにアクセスするタイミングと、アクセスが許可または拒否されたかどうかを識別します。
+
+表示されるデータは、統一された[ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)、および[保護の使用状況ログ](log-analyze-usage.md)から、Azure Information Protection のクライアントとスキャナーから集計されます。
 
 たとえば、次のようなことを確認できます。
 
@@ -65,6 +67,8 @@ Azure Information Protection analytics for central reporting を使用すると�
     
     - 特定のアプリケーションで実行されたラベル付けアクション (エクスプローラー、右クリック、PowerShell、スキャナー、Microsoft Cloud App Security
     
+    - ユーザーが正常にアクセスした保護されたドキュメント、またはユーザーが Azure Information Protection クライアントをインストールしていないか組織の外部にある場合でも、ユーザーがアクセスを拒否したドキュメント
+
     - 報告されたファイルをドリルダウンして、追加情報の**アクティビティの詳細**を表示する
 
 - **データ検出**レポートからは、次のことが確認できます。
@@ -174,7 +178,7 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
     > [!NOTE] 
     > テナントが統合ラベルストアに移行されている場合、Azure Information Protection 管理者ロールを使用することはできません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかが必要です。
+2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかが必要です。
     
     - ワークスペースを作成する、またはカスタム クエリを作成するには、次のいずれか:
     
@@ -198,7 +202,7 @@ Azure Information Protection 分析のためにワークスペースを構成し
 
 ### <a name="storage-requirements-and-data-retention"></a>ストレージ要件とデータ保有期間
 
-Azure Information Protection ワークスペースに収集されて格納されるデータの量は、テナントごとに大きく異なります。 Azure Information Protection クライアントとその他のサポートされているエンドポイントの数などの要因によっては、エンドポイント検出データの収集、スキャナーの展開などを行うことができます。
+Azure Information Protection ワークスペースに収集されて格納されるデータの量は、テナントごとに大きく異なります。 Azure Information Protection クライアントとその他のサポートされているエンドポイントの数などの要因によっては、エンドポイント検出データの収集、スキャナーの展開、アクセスされる保護されたドキュメントの数など。
 
 ただし、出発点として、次のような見積もりが役に立つ場合があります。
 
@@ -234,13 +238,13 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 - **使用状況レポート (プレビュー)** : ラベルがどのように使用されているかを確認するには、このレポートを使用します。
 
-- **アクティビティ ログ (プレビュー)** : ユーザーからの、およびデバイスとファイル パス上でのラベル付けアクションを確認するには、このレポートを使用します。
+- **アクティビティ ログ (プレビュー)** : ユーザーからの、およびデバイスとファイル パス上でのラベル付けアクションを確認するには、このレポートを使用します。 さらに、保護されたドキュメントについては、Azure Information Protection クライアントがインストールされていない場合でも、組織の内部と外部の両方でユーザーのアクセス試行 (成功または拒否) を確認できます。
     
     このレポートには **[列]** オプションが備わっています。これを使うと、既定の表示よりも多くのアクティビティ情報を表示できます。 ファイルを選択して**アクティビティの詳細**を表示することで、ファイルの詳細を確認することもできます。
 
 - **データ検出 (プレビュー)** : スキャナーとサポートされているエンドポイントによって検出されたラベル付きファイルに関する情報を表示するには、このレポートを使用します。
     
-    ヒント :収集された情報から、認識してなかった場所や現時点ではスキャンされていない場所から機密情報が含まれているファイルにアクセスしているユーザーを発見することがあります。
+    ヒント:収集された情報から、認識してなかった場所や現時点ではスキャンされていない場所から機密情報が含まれているファイルにアクセスしているユーザーを発見することがあります。
     
     - 場所がオンプレミスの場合は、Azure Information Protection スキャナーの追加のデータ リポジトリとして、その場所を追加することを検討します。
     - 場所がクラウド上の場合は、Microsoft Cloud App Security を使用してそれらを管理することを検討します。 
@@ -267,6 +271,8 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 |列名|説明|
 |-----------|-----------|
+|アクセス権|保護されたドキュメントが正常に開かれました。ファイル名が追跡されている場合は、ファイル名で識別されます。追跡されていない場合は ID です。|
+|AccessDenied|保護されたドキュメントが、追跡されている場合はファイル名で識別されるアクセスを拒否されました。追跡されていない場合は ID。|
 |Time|イベント時間:形式の UTC (YYYY-MM-YYYY-MM-DDTHH: MM: SS)|
 |ユーザー|ユーザー:UPN またはドメイン \ ユーザーの書式設定|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|

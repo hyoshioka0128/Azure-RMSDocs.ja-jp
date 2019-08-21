@@ -4,7 +4,7 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 67e9e53ddcd8e5604493955a0b3a9c2fe289cb3c
-ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
+ms.openlocfilehash: ff746d3636df73568db009a4e026e37cab962963
+ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68994471"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630046"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -46,6 +46,16 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 統合ラベル付けの管理と各ラベルのサポート方法について詳しくは、ブログ記事「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」 (機密データの保護に役立つ情報保護機能の可用性の発表) をご覧ください。
 
 既存のラベルの移行の詳細については、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。
+
+## <a name="how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform"></a>テナントが統一されたラベル付けプラットフォームにあるかどうかを確認する方法はありますか
+
+テナントが統一されたラベル付けプラットフォームにある場合、[統一ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)は、秘密度ラベルを使用できます。 2019年6月以降に Azure Information Protection のサブスクリプションを取得した場合、テナントは自動的に統合されたラベル付けプラットフォームになり、それ以上の操作は必要ありません。 また、ユーザーが[Azure Information Protection ラベルを移行](configure-policy-migrate-labels.md)したため、テナントがこのプラットフォーム上に存在する場合もあります。
+
+状態を確認するには、Azure portal で、[ **Azure Information Protection** > の**統合**されたラベルの**管理** > ] にアクセスし、**統合ラベル**の状態を確認します。
+
+- **アクティブ**になっている場合は、テナントは統一されたラベル付けプラットフォームにあります。
+
+- **アクティブ化されてい**ない場合、テナントは統一されたラベル付けプラットフォーム上にありません。 移行手順については、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection クライアントと Azure Information Protection の統一されたラベル付けクライアントの違いは何ですか。
 
