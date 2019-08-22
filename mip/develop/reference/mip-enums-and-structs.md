@@ -1,62 +1,235 @@
 ---
-title: MIP SDK for C リファレンス構造体と列挙型
-description: MIP C++ SDK 構造体、列挙型のリファレンス ドキュメント。
+title: 参照構造体C++と列挙型用の MIP SDK
+description: MIP C++ SDK の構造体と列挙型に関するリファレンスドキュメント。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: c9e634d436d02b147fc10a734c8c3d5b1fcdec71
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6efe7910769dffe809e0661475f9adc8226b37b3
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173358"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884909"
 ---
-# <a name="enumerations-and-structures"></a>列挙体と構造体
+# <a name="enumerations-and-structures"></a>列挙型と構造体
 
-## <a name="namespace-mip"></a>Namespace mip
+## <a name="namespace-mip"></a>名前空間 mip
 
- メンバー                        | [説明]                                
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-ActionSource 列挙型       |  SetLabel イベントが発生した原因を定義します。
-enum ActionType       |  さまざまなアクション タイプ。
-AssignmentMethod 列挙型       |  ドキュメント上のラベルの割り当て方法。 かどうか、ラベルの割り当てでは標準または特権操作 (管理者の操作に相当) として行うが自動的に。
+enum WatermarkLayout       |  透かしのレイアウト。
+enum ContentMarkAlignment       |  コンテンツマーク (コンテンツヘッダーまたはコンテンツフッター) の配置。
+列挙型のメソッド       |  ドキュメントのラベルの割り当て方法。 ラベルの割り当てが自動的に行われたか、標準または特権操作 (管理者操作と同等) であったか。
+ActionSource の列挙       |  SetLabel イベントのトリガーを定義します。
+enum DataState       |  アプリケーションが動作するデータの状態を定義します。
+enum ContentFormat       |  コンテンツ形式。
 enum Consent       |  サービス エンドポイントに接続するためにコンテンツが要求されるときのユーザーの応答。
-名前列挙型       |  コンテンツの形式。
-ContentMarkAlignment 列挙型       |  コンテンツの配置 (コンテンツ ヘッダーまたはフッターのコンテンツ) をマークします。
-DataState 列挙型       |  データのアプリケーションを実行する対象の状態を定義します。
+列挙型の CacheStorageType       |  キャッシュのストレージの種類。
 enum ErrorType       | _まだ文書化されていません。_
+enum InspectorType       |  サポートされているファイルの種類に関連付けているインスペクターの種類。
+列挙型 BodyType       |  ボディ型列挙子。
+フライトの列挙機能       |  新しい機能を名前で定義します。
 enum HttpRequestType       |  HTTP 要求の種類。
 enum LogLevel       |  MIP SDK 全体で使用するさまざまなのログ レベル。
 enum ProtectionHandlerCreationOptions       |  追加のポリシー作成の動作を支持するビット フラグ。
 enum ProtectionType       |  保護がテンプレートに基づくのか、アドホック (カスタム) かを説明します。
-watermarklayout: 列挙型       |  透かしのレイアウト。
-struct ApplicationInfo  |  アプリケーション固有の情報を含む構造体。
-PublishingLicenseContext 構造体  |  保護ハンドラーを作成するために使用する発行ライセンスの詳細を保持します。
-  
+enum ActionType       |  さまざまなアクション タイプ。
+列挙型 LabelState       | _まだ文書化されていません。_
+ActionDataType の列挙       | _まだ文書化されていません。_
+列挙型 ConditionDataType       | _まだ文書化されていません。_
+enum ContentMarkPlacement       | _まだ文書化されていません。_
+enum LabelActionDataType       | _まだ文書化されていません。_
+列挙型 ProtectionActionType       | _まだ文書化されていません。_
+struct mip:: ApplicationInfo  |  アプリケーション固有の情報を含む構造体。
+struct mip:: TelemetryConfiguration  |  カスタムテレメトリ設定 (一般的には使用されません)
+
+
 ## <a name="enumerations-mip"></a>列挙型 (mip)
 
-### <a name="actionsource"></a>ActionSource
+### <a name="watermarklayout-enum"></a>WatermarkLayout 列挙型
 
-SetLabel イベントが発生した原因を定義します。
-
- 値                         | [説明]                                
+値                         | 説明                                
 --------------------------------|---------------------------------------------
-手動            | ユーザーが手動で選択
-自動            | ポリシーの条件を設定します。
-お勧めします            | ラベルがポリシーの条件で推奨された直後後にユーザーによって設定します。
-DEFAULT            | 既定では、ポリシー設定します。
-必須            | ポリシーのラベルの設定を適用した後、ユーザーが設定します。
+位置            | 透かしレイアウトは水平方向です
+)            | 透かしのレイアウトが斜めです
 
+透かしのレイアウト。
+  
+### <a name="contentmarkalignment-enum"></a>ContentMarkAlignment 列挙型
 
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+[LEFT]            | コンテンツのマークが左に揃えられます
+[RIGHT]            | コンテンツのマークが右側に揃います
+センター            | コンテンツのマークは中央に配置されます
 
-### <a name="actiontype"></a>ActionType
+コンテンツマーク (コンテンツヘッダーまたはコンテンツフッター) の配置。
+  
+### <a name="assignmentmethod-enum"></a>メソッドの列挙型
 
-さまざまなアクション タイプ。 CUSTOM は汎用的なアクション タイプです。 その他のアクション タイプは、すべて特定の意味を持つ特定のアクションです。
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+STANDARD            | [ラベル](class_mip_label.md)の割り当て方法は標準です
+インストラクション            | [ラベル](class_mip_label.md)の割り当て方法は特権です
+AUTO            | [ラベル](class_mip_label.md)の割り当て方法は自動です
 
- 値                         | [説明]                                
+ドキュメントのラベルの割り当て方法。 ラベルの割り当てが自動的に行われたか、標準または特権操作 (管理者操作と同等) であったか。
+  
+### <a name="actionsource-enum"></a>ActionSource 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+手動            | ユーザーによって手動で選択されました
+自動            | ポリシー条件による設定
+しない            | ポリシー条件によってラベルが推奨された後にユーザーが設定する
+DEFAULT            | ポリシーに既定で設定する
+
+SetLabel イベントのトリガーを定義します。
+  
+### <a name="datastate-enum"></a>DataState 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+REST            | 物理的にデータベース/ファイル/ウェアハウスに格納されている非アクティブなデータ
+動く            | ネットワークを通過するデータ、またはコンピューターのメモリ内で一時的に存在し、読み取りまたは更新されるデータ
+USE            | データベース/ファイル/ウェアハウスなどに物理的に格納されている定数の変更によるアクティブなデータ
+
+アプリケーションが動作するデータの状態を定義します。
+  
+### <a name="contentformat-enum"></a>ContentFormat 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+DEFAULT            | コンテンツ形式は標準ファイル形式です
+電子メール            | コンテンツ形式は電子メール形式です
+
+コンテンツ形式。
+  
+### <a name="consent-enum"></a>同意の列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+AcceptAlways            | 同意し、この決定を記憶します
+同意する            | 同意します (1 回限り)
+[拒否]            | 同意しません
+
+サービス エンドポイントに接続するためにコンテンツが要求されるときのユーザーの応答。
+  
+### <a name="cachestoragetype-enum"></a>CacheStorageType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+InMemory            | メモリストレージ内
+Ondisk です            | ディスク記憶域
+OnDiskEncrypted            | 暗号化を使用するディスクストレージ (プラットフォームでサポートされている場合)
+
+キャッシュのストレージの種類。
+  
+### <a name="errortype-enum"></a>ErrorType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+BAD_INPUT_ERROR            | 呼び出し元が無効な入力を渡しました。
+FILE_IO_ERROR            | 一般的なファイル IO エラー。
+NETWORK_ERROR            | 一般的なネットワークの問題たとえば、到達できないサービスなどです。
+TRANSIENT_NETWORK_ERROR            | 一時的なネットワークの問題たとえば、ゲートウェイが正しくありません。
+INTERNAL_ERROR            | 予期しない内部エラー。
+JUSTIFICATION_REQUIRED            | ファイルのアクションを完了するには理由が提供される必要があります。
+NOT_SUPPORTED_OPERATION            | 要求された操作はまだサポートされていません。
+PRIVILEGED_REQUIRED            | 新しいラベルのメソッドが標準である場合、特権ラベルをオーバーライドできません。
+ACCESS_DENIED            | ユーザーはサービスにアクセスできませんでした。
+CONSENT_DENIED            | ユーザーに同意を求めた操作で、同意が得られませんでした。
+POLICY_SYNC_ERROR            | ポリシー データを同期しようとして失敗しました。
+NO_PERMISSIONS            | ユーザーがコンテンツにアクセスできませんでした。 たとえば、アクセス許可はありません。コンテンツは失効します。
+NO_AUTH_TOKEN            | 認証トークンが空であるため、ユーザーはコンテンツにアクセスできませんでした。
+DISABLED_SERVICE            | サービスが無効になっているため、ユーザーはコンテンツにアクセスできませんでした
+PROXY_AUTH_ERROR            | プロキシ認証に失敗しました。
+NO_POLICY            | ユーザー/テナントに対してポリシーが構成されていません
+OPERATION_CANCELLED            | 操作が取り消されました
+ADHOC_PROTECTION_REQUIRED            | ファイルに対する操作を完了するには、アドホック保護を設定する必要があります
+DEPRECATED_API            | 呼び出し元が非推奨の API を呼び出しました
+TEMPLATE_NOT_FOUND            | テンプレート ID が認識されません
+LABEL_NOT_FOUND            | [ラベル](class_mip_label.md)ID が認識されません
+LABEL_DISABLED            | [ラベル](class_mip_label.md)が無効または非アクティブです
+  
+### <a name="inspectortype-enum"></a>InspectorType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+不明            | 不明のファイルインスペクターです。
+メッセージ            | Msg スタイルファイルインスペクター、rpq msg/msg ベース。
+
+サポートされているファイルの種類に関連付けているインスペクターの種類。
+  
+### <a name="bodytype-enum"></a>BodyType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+UNKNOWN            | 不明の本文の種類
+TXT            | テキストスタイルの本文の種類、エンコードは utf8 として返されます
+HTML            | HTML スタイルの本文型、エンコードは utf8 として返されます
+RTF            | RTF スタイルの本文の種類、バイナリ形式
+
+ボディ型列挙子。
+  
+### <a name="flightingfeature-enum"></a>フライト機能列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+ServiceDiscovery            | 個別の HTTP 呼び出しに依存して RMS サービスエンドポイントを決定する
+AuthInfoCache            | ドメイン/テナントごとに OAuth2 のチャレンジをキャッシュすることで、不要な401の応答を減らすことができます。 独自の HTTP 認証を管理するアプリ/サービス (SPO など) に対して無効にする
+LinuxEncryptedCache            | Linux プラットフォームの暗号化されたキャッシュを有効にします (この機能の前提条件をお読みください)
+
+新しい機能を名前で定義します。
+  
+### <a name="httprequesttype-enum"></a>HttpRequestType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+取得            | GET
+Post            | POST
+
+HTTP 要求の種類。
+  
+### <a name="loglevel-enum"></a>LogLevel 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+Trace            | 
+Info            | 
+警告            | 
+Error            | 
+
+MIP SDK 全体で使用するさまざまなのログ レベル。
+  
+### <a name="protectionhandlercreationoptions-enum"></a>Protectionハンドラのオプションの列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+なし            | なし
+OfflineOnly            | UI およびネットワーク操作を許可しない
+AllowAuditedExtraction            | 保護 SDK に対応していないアプリでコンテンツを開くことができます
+PreferDeprecatedAlgorithms            | 下位互換性のために非推奨の暗号アルゴリズム (ECB) を使用します
+
+追加のポリシー作成の動作を支持するビット フラグ。
+
+> れCreateprotectionハンドラ Fromdescriptor および Createprotectionハンドラ From発行ライセンスが削除されると、この列挙型はまもなく非推奨となります
+  
+### <a name="protectiontype-enum"></a>ProtectionType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+TemplateBased            | ハンドルはテンプレートから作成されました
+カスタム            | ハンドルはアドホックで作成されました
+
+保護がテンプレートに基づくのか、アドホック (カスタム) かを説明します。
+  
+### <a name="actiontype-enum"></a>ActionType 列挙型
+
+値                         | 説明                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | ドキュメントのアクション タイプにコンテンツ フッターを追加します。
 ADD_CONTENT_HEADER            | ドキュメントのアクション タイプにコンテンツ ヘッダーを追加します。
@@ -74,172 +247,118 @@ REMOVE_WATERMARK            | ウォーターマークの削除アクション �
 APPLY_LABEL            | ラベルの適用アクション タイプ。
 RECOMMEND_LABEL            | ラベルの推奨アクション タイプ。
 
-
-### <a name="assignmentmethod"></a>AssignmentMethod
-
-ドキュメント上のラベルの割り当て方法。 かどうか、ラベルの割り当てでは標準または特権操作 (管理者の操作に相当) として行うが自動的に。
-
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-STANDARD            | [ラベル](class_mip_label.md)割り当て方法は、標準
-特権            | [ラベル](class_mip_label.md)特権が割り当て方法
-AUTO            | [ラベル](class_mip_label.md)割り当て方法は自動
-
-
-### <a name="consent"></a>同意
-
-サービス エンドポイントに接続するためにコンテンツが要求されるときのユーザーの応答。
-
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-AcceptAlways            | 同意し、この決定を記憶します
-同意する            | 同意します (1 回限り)
-[拒否]            | 同意しません
-
-
-### <a name="contentformat"></a>名前
-
-コンテンツの形式。
-
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-DEFAULT            | コンテンツの形式は、標準のファイルの形式
-電子メール            | コンテンツの形式は、電子メールの形式
-
-### <a name="contentmarkalignment"></a>ContentMarkAlignment
-
-コンテンツの配置 (コンテンツ ヘッダーまたはフッターのコンテンツ) をマークします。
-
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-[LEFT]            | コンテンツ マーキングは、左に配置します。
-[RIGHT]            | コンテンツ マーキングは、右側に配置されます。
-センター            | コンテンツ マーキングが中央揃え
-
-### <a name="datastate"></a>DataState
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-残りの部分            | データベース/ファイル/倉庫に物理的に格納されている非アクティブなデータ
-モーション            | データをネットワーク上で転送または一時的に読み取りまたは更新するコンピューターのメモリ内に存在します。
-USE            | データベース/ファイル/倉庫などに物理的に格納されている定数の変更のアクティブなデータ
-
-
-### <a name="errortype"></a>ErrorType
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-BAD_INPUT_ERROR            | 呼び出し元が無効な入力を渡しました。
-FILE_IO_ERROR            | 一般的なファイル IO エラー。
-NETWORK_ERROR            | 一般的なネットワークの問題たとえば、サービスに到達できません。
-TRANSIENT_NETWORK_ERROR            | ネットワークの一時的な問題です。たとえば、無効なゲートウェイです。
-INTERNAL_ERROR            | 予期しない内部エラー。
-JUSTIFICATION_REQUIRED            | ファイルのアクションを完了するには理由が提供される必要があります。
-NOT_SUPPORTED_OPERATION            | 要求された操作はまだサポートされていません。
-PRIVILEGED_REQUIRED            | 新しいラベルのメソッドが標準である場合、特権ラベルをオーバーライドできません。
-ACCESS_DENIED            | ユーザーは、サービスへのアクセスを取得できませんでした。
-CONSENT_DENIED            | ユーザーに同意を求めた操作で、同意が得られませんでした。
-POLICY_SYNC_ERROR            | ポリシー データを同期しようとして失敗しました。
-NO_PERMISSIONS            | ユーザーがコンテンツにアクセスできませんでした。 たとえば、権限、コンテンツを取り消すなし
-NO_AUTH_TOKEN            | ユーザーは、空の認証トークンのためのコンテンツへのアクセスを取得できませんでした。
-DISABLED_SERVICE            | ユーザーは、サービスを無効になっているため、コンテンツへのアクセスを取得できませんでした。
-PROXY_AUTH_ERROR            | プロキシ認証に失敗しました。
-NO_POLICY_ERROR            | ユーザーまたはテナントにポリシーが構成されていません
-OPERATION_CANCELLED            | 操作は取り消されました
-ADHOC_PROTECTION_REQUIRED            | アドホック保護をファイルにアクションを完了に設定する必要があります。
+さまざまなアクション タイプ。 CUSTOM は汎用的なアクション タイプです。 その他のアクション タイプは、すべて特定の意味を持つ特定のアクションです。
   
-### <a name="httprequesttype"></a>HttpRequestType
+### <a name="labelstate-enum"></a>LabelState 列挙型
 
-HTTP 要求の種類。
-
- 値                         | [説明]                                
+値                         | 説明                                
 --------------------------------|---------------------------------------------
-取得            | GET
-Post            | POST
-
+NoChange            | 
+削除            | 
+更新            | 
   
-### <a name="loglevel"></a>ログ レベル
+### <a name="actiondatatype-enum"></a>ActionDataType 列挙型
 
-MIP SDK 全体で使用するさまざまなのログ レベル。
-
- 値                         | [説明]                                
+値                         | 説明                                
 --------------------------------|---------------------------------------------
-Trace            | 
-Info            | 
-警告            | 
+カスタム            | 
+保護            | 
+ContentMarking            | 
+AddWatermark            | 
+group1            | 
   
-### <a name="protectionhandlercreationoptions"></a>ProtectionHandlerCreationOptions
+### <a name="conditiondatatype-enum"></a>ConditionDataType 列挙型
 
-追加のポリシー作成の動作を支持するビット フラグ。
-
- 値                         | [説明]                                
+値                         | 説明                                
 --------------------------------|---------------------------------------------
-なし            | なし
-OfflineOnly            | UI およびネットワークの操作を許可しません。
-AllowAuditedExtraction            | 保護 SDK に対応していないアプリでコンテンツを開くことができます
-PreferDeprecatedAlgorithms            | 下位互換性のために非推奨の暗号アルゴリズム (ECB) を使用します
-
-
-### <a name="protectiontype"></a>ProtectionType
-
-保護をテンプレートまたはアドホック (カスタム) に基づくかどうかについて説明します。
-
- 値                         | [説明]                                
---------------------------------|---------------------------------------------
-TemplateBased            | ハンドルはテンプレートから作成されました
-カスタム            | ハンドルはアドホックで作成されました
-
+既定値            | 
+検出感度            | 
   
-### <a name="watermarklayout"></a>Watermarklayout:
+### <a name="contentmarkplacement-enum"></a>ContentMarkPlacement 列挙型
 
-透かしのレイアウト。
-
- 値                         | [説明]                                
+値                         | 説明                                
 --------------------------------|---------------------------------------------
-水平方向            | 透かしのレイアウトは横方向
-対角線            | 透かしのレイアウトが斜め
+Header            | 
+[フッター]            | 
+  
+### <a name="labelactiondatatype-enum"></a>LabelActionDataType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+おすすめ            | 
+適用            | 
+  
+### <a name="protectionactiontype-enum"></a>ProtectionActionType 列挙型
+
+値                         | 説明                                
+--------------------------------|---------------------------------------------
+カスタム            | 
+テンプレート            | 
+前面へ移動            | 
+独自            | 
+表示するプロンプト            | 
+Hyok            | 
+事前に宣言するテンプレート            | 
+RemoveProtection            | 
+  
 
 
 ## <a name="structures"></a>構造体 
 
-### <a name="mipapplicationinfo"></a>mip::ApplicationInfo 
+### <a name="mipapplicationinfo"></a>mip:: ApplicationInfo 
 アプリケーション固有の情報を含む構造体。
   
-#### <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+#### <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std::string applicationId  |  アプリケーション識別子としては、AAD ポータルの設定、(角かっこなし GUID である必要があります)。
-public std::string applicationName  |  アプリケーションの名前 (有効な ASCII 文字を除くを含める必要がありますのみ ';')
-public std::string applicationVersion  |  使用しているアプリケーションのバージョン (有効な ASCII 文字を除くを含める必要がありますのみ ';')
+public std::string applicationId  |  AAD ポータルで設定されたアプリケーション id (角かっこなしの GUID である必要があります)。
+public std::string applicationName  |  アプリケーション名 ('; ' を除く有効な ASCII 文字のみが含まれる必要があります)
+public std::string applicationVersion  |  使用されているアプリケーションのバージョン ('; ' を除く有効な ASCII 文字のみが含まれている必要があります)
   
 #### <a name="members"></a>メンバー
   
-##### <a name="applicationid-struct-member"></a>applicationId 構造体のメンバー
-アプリケーション識別子としては、AAD ポータルの設定、(角かっこなし GUID である必要があります)。
+##### <a name="applicationid-struct-member"></a>applicationId 構造体メンバー
+AAD ポータルで設定されたアプリケーション id (角かっこなしの GUID である必要があります)。
   
-##### <a name="applicationname-struct-member"></a>applicationName 構造体のメンバー
-アプリケーションの名前 (有効な ASCII 文字を除くを含める必要がありますのみ ';')
+##### <a name="applicationname-struct-member"></a>applicationName 構造体メンバー
+アプリケーション名 ('; ' を除く有効な ASCII 文字のみが含まれる必要があります)
   
-##### <a name="applicationversion-struct-member"></a>applicationVersion 構造体のメンバー
-使用しているアプリケーションのバージョン (有効な ASCII 文字を除くを含める必要がありますのみ ';')  
+##### <a name="applicationversion-struct-member"></a>applicationVersion 構造体メンバー
+使用されているアプリケーションのバージョン ('; ' を除く有効な ASCII 文字のみが含まれている必要があります)
 
-### <a name="mippublishinglicensecontext"></a>mip::PublishingLicenseContext 
-保護ハンドラーを作成するために使用する発行ライセンスの詳細を保持します。
+### <a name="miptelemetryconfiguration"></a>mip:: TelemetryConfiguration 
+カスタムテレメトリ設定 (一般的には使用されません)
   
-#### <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+#### <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::vector\<uint8_t\> licenseInfo  | _まだ文書化されていません。_
-public const std::vector\<uint8_t\> serializedPublishingLicense  | _まだ文書化されていません。_
-public PublishingLicenseContext(const std::vector\<uint8_t\>& licenseInfo, const std::vector\<uint8_t\>& serializedPublishingLicense)  | _まだ文書化されていません。_
+public std:: string hostNameOverride  |  ホストテレメトリのインスタンス名。 設定されていない場合、MIP は独自のホストとして機能します。
+public std:: string libraryNameOverride  |  代替テレメトリライブラリ (DLL) ファイル名。
+public std:: shared_ptr\<httpdelegate\> httpDelegateOverride  |  設定すると、このインスタンスによって HTTP 処理が管理されます
+public std:: shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  設定すると、このインスタンスによって非同期タスクの処理が管理されます
+public bool isNetworkDetectionEnabled  |  設定すると、テレメトリコンポーネントによってバックグラウンドスレッドでネットワークの状態が ping されます。
+public bool isLocalCachingEnabled  |  設定すると、テレメトリコンポーネントはディスク上のキャッシュを使用します。
+public bool isTelemetryOptedOut  |  設定すると、必要なサービスデータテレメトリのみが送信されます
   
 #### <a name="members"></a>メンバー
   
-##### <a name="licenseinfo-struct-member"></a>licenseInfo 構造体のメンバー
-_まだ文書化されていません。_
-
+##### <a name="hostnameoverride-struct-member"></a>hostNameOverride struct メンバー
+ホストテレメトリのインスタンス名。 設定されていない場合、MIP は独自のホストとして機能します。
   
-##### <a name="serializedpublishinglicense-struct-member"></a>serializedPublishingLicense 構造体のメンバー
-_まだ文書化されていません。_
-
+##### <a name="librarynameoverride-struct-member"></a>libraryNameOverride 構造体メンバー
+代替テレメトリライブラリ (DLL) ファイル名。
   
-##### <a name="publishinglicensecontext-function"></a>PublishingLicenseContext 関数
-_まだ文書化されていません。_
+##### <a name="httpdelegate"></a>HttpDelegate
+設定すると、このインスタンスによって HTTP 処理が管理されます
+  
+##### <a name="taskdispatcherdelegate"></a>TaskDispatcherDelegate
+設定すると、このインスタンスによって非同期タスクの処理が管理されます
+  
+##### <a name="isnetworkdetectionenabled-struct-member"></a>isNetworkDetectionEnabled struct メンバー
+設定すると、テレメトリコンポーネントによってバックグラウンドスレッドでネットワークの状態が ping されます。
+  
+##### <a name="islocalcachingenabled-struct-member"></a>isLocalCachingEnabled 構造体メンバー
+設定すると、テレメトリコンポーネントはディスク上のキャッシュを使用します。
+  
+##### <a name="istelemetryoptedout-struct-member"></a>isTelemetryOptedOut struct メンバー
+設定すると、必要なサービスデータテレメトリのみが送信されます

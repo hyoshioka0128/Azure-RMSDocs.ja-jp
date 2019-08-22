@@ -1,88 +1,88 @@
 ---
-title: MIP SDK 内のラベルのメタデータの概念
-description: この記事では、Microsoft Information Protection SDK によって生成されるメタデータを理解できます。
+title: 概念-MIP SDK でのメタデータのラベル付け
+description: この記事は、Microsoft Information Protection SDK によって生成されるメタデータを理解するのに役立ちます。
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 21148e9293c3be1162028a6cf7e26c30fb52a15f
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822170"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886142"
 ---
-# <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - メタデータ
+# <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-メタデータ
 
-Microsoft の Information Protection SDK には、ファイルに適用されるメタデータのセットが生成されます。 このメタデータは、ラベルを表したものです。 このドキュメントでは、メール、ドキュメント、およびその他のレコードに適用する SDK を生成するメタデータについて説明します。
+Microsoft Information Protection SDK は、ファイルに適用する必要があるメタデータのセットを生成します。 このメタデータは、ラベルの表現です。 このドキュメントでは、メール、ドキュメント、およびその他のレコードに適用するために SDK によって生成されるメタデータについて説明します。
 
 ## <a name="labels"></a>ラベル
 
-Microsoft の Information Protection SDK 内のラベルは、その情報の機密性を説明する情報に適用されます。 データのラベルは、ファイルまたはラベルを表すキー/値ペアのセット内のレコードに保存されます。 メタデータ名は、次の構造にビルドされます。
+Microsoft Information Protection SDK のラベルは、その情報の機密度を説明するために、情報に適用されます。 ラベルデータは、ラベルを説明するキーと値のペアのセット内のファイルまたはレコードに保存されます。 メタデータ名は、次の構造に基づいて構築されます。
 
 `DefinedPrefix_ElementType_GlobalIdentifier_AttributeName`
 
-Microsoft Information Protection ラベルが付いたデータに適用すると、結果は。
+Microsoft Information Protection でラベル付けされたデータに適用すると、結果は次のようになります。
 
 `MSIP_Label_GUID_Enabled = true`
 
-GUID は、組織の各ラベルの一意の識別子です。
+GUID は、組織内の各ラベルの一意の識別子です。
 
-## <a name="microsoft-information-protection-sdk-metadata"></a>Microsoft の情報保護 SDK メタデータ
+## <a name="microsoft-information-protection-sdk-metadata"></a>Microsoft Information Protection SDK メタデータ
 
-MIP SDK には、次の一連のメタデータが適用されます。
+MIP SDK は、次の一連のメタデータを適用します。
 
 | 属性 | 型または値                 | 説明                                                                                                                                                                                                                                        | 必須 |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **有効**   | True または False                 | この属性は、データ項目のこのキー値のペアのセットによって表される分類が有効になっているかどうかを示します。 通常、DLP 製品は、分類ラベルを識別するためにこのキーの存在を検証します。 | はい       |
-| **SiteId**    | GUID                          | Azure Active Directory テナント ID                                                                                                                                                                                                                   | はい       |
-| **ActionId**  | GUID                          | ActionID は、ラベルを設定するたびに変更されます。 監査ログには、新旧両方の actionID アクティビティ データ項目にラベル付けのチェーンを許可するのには含まれます。                                                                                 | はい       |
-| **方法**    | Standard または特権        | 使用して設定[:assignmentmethod](reference/mip-enums-and-structs.md#assignmentmethod)します。 Standard では、既定か、または自動的にラベルが適用されることを意味します。 特権は、ラベルを手動で選択したことを意味します。                                                                                                                                                                                                                 | いいえ        |
-| **SetDate**   | 拡張の ISO 8601 の日付形式 | ラベルが設定されたときのタイムスタンプ。                                                                                                                                                                                                              | いいえ        |
-| **名前**      | string                        | ラベル、テナント内で一意の名前。 必ずしも、表示名に対応していません。                                                                                                                                                              | いいえ      |
-| **ContentBits** | 整数 (integer) | マークするコンテンツの種類を記述するビットマスクは、ファイルに適用する必要があります。 CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
+| **有効**   | True または False                 | この属性は、このキーと値のペアのセットによって表される分類がデータ項目に対して有効になっているかどうかを示します。 DLP 製品は、通常、このキーが存在するかどうかを検証して分類ラベルを識別します。 | [はい]       |
+| **SiteId**    | GUID                          | Azure Active Directory テナント ID                                                                                                                                                                                                                   | [はい]       |
+| **ActionId**  | GUID                          | ActionID は、ラベルが設定されるたびに変更されます。 監査ログには、古い actionID と新しい actionID の両方が含まれます。これにより、データ項目にラベルアクティビティを連鎖させることができます。                                                                                 | [はい]       |
+| **メソッド**    | 標準または特権        | [Mip::](reference/mip-enums-and-structs.md#assignmentmethod-enum)の設定メソッドを使用して設定します。 標準は、ラベルが既定で適用されるか、自動的に適用されることを意味します。 Privileged は、ラベルが手動で選択されたことを意味します。                                                                                                                                                                                                                 | いいえ        |
+| **SetDate**   | 拡張 ISO 8601 日付形式 | ラベルが設定されたときのタイムスタンプ。                                                                                                                                                                                                              | いいえ        |
+| **名前**      | string                        | テナント内の一意の名前をラベル付けします。 必ずしも表示名に対応しているわけではありません。                                                                                                                                                              | いいえ      |
+| **ContentBits** | 整数 | ファイルに適用するコンテンツマークの種類を記述するビットマスク。 CONTENT_HEADER = 0X1、CONTENT_FOOTER = 0X2、透かし = 0X4、ENCRYPT = 0x8
  | いいえ |
 
-ファイルに適用する場合、結果は次の表に似ています。
+ファイルに適用すると、結果は次の表のようになります。
 
 | キー                                                         | 値                                |
 |-------------------------------------------------------------|--------------------------------------|
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | 特権                           |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | 社外秘                         |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Enabled     | true                                 |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Method      | インストラクション                           |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Name        | 社外秘                         |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_ContentBits | 2                                    |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
-## <a name="extending-metadata-with-custom-attributes"></a>カスタム属性を持つメタデータの拡張
+## <a name="extending-metadata-with-custom-attributes"></a>カスタム属性を使用したメタデータの拡張
 
-ファイルとポリシーの API を使用してカスタム メタデータを追加できます。 カスタム属性は、ベースを維持する必要があります`MSIP_Label_GUID`プレフィックス。 
+カスタムメタデータは、ファイルおよびポリシー API を使用して追加できます。 カスタム属性では、ベース`MSIP_Label_GUID`プレフィックスを維持する必要があります。 
 
-たとえば、Contoso Corporation によって記述されたアプリケーションは、どのシステムにはラベルの付いたファイルが生成されたことを示すメタデータを適用する必要があります。 アプリケーションが付いた、新しいラベルを作成できます`MSIP_Label_GUID`します。 カスタム メタデータを生成するプレフィックスには、ソフトウェア ベンダーの名前とカスタム属性が追加されます。
+たとえば、Contoso Corporation によって作成されたアプリケーションは、ラベル付きファイルを生成したシステムを示すメタデータを適用する必要があります。 アプリケーションでは、というプレフィックスが付いた`MSIP_Label_GUID`新しいラベルを作成できます。 カスタムメタデータを生成するために、ソフトウェアベンダー名とカスタム属性がプレフィックスに追加されます。
 
 ```
 MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRReportingSystem
 ```
 
 > [!Note]
-> 一般的なアプリケーション、それぞれの最大長の間で互換性を維持するために、キーと値は、255 文字です。
+> 共通のアプリケーション間での互換性を維持するために、キーと値の最大長は255文字です。
 
 ## <a name="versioning"></a>バージョン管理
 
-時間の経過と共に属性導入された、変更、または廃止します。 これらの古いを処理するアプリケーションは引き続きまたは企業全体の値の置換としての提供終了になった属性が年にかかる場合がありますのことが期待されます。
+時間の経過と共に、属性は導入、変更、または廃止されます。 企業全体で値を置き換えるには数年かかる場合があるため、アプリケーションはこれらの古い属性または廃止された属性を引き続き処理することが期待されます。
 
-属性を新しいバージョンに置き換えることがある場合は、属性にバージョン サフィックスを追加してください。
+属性を新しいバージョンに置き換える場合は、バージョンサフィックスを属性に追加する必要があります。
 
 `MSIP_Label_GUID_EnabledV2 = True | False | Condition`
 
-## <a name="email"></a>Email
+## <a name="email"></a>電子メール
 
-電子メールに適用されるメタデータは保持キー/値ペアの形式のドキュメントに似ています。 主な違いは、という名前の 1 つの電子メール ヘッダーをですべての属性をシリアル化する**MSIP_Labels**します。 キー/値ペアは、セミコロンと空白文字で区切られ、新しいヘッダーに配置します。
+電子メールに適用されるメタデータは、ドキュメントの場合と同様に、キーと値のペアの形式を保持します。 主な違いは、すべての属性が**MSIP_Labels**という1つの電子メールヘッダーにシリアル化されることです。 キーと値のペアは、セミコロンと空白で区切られ、新しいヘッダーに配置されます。
 
-上記のサンプル メタデータを使用するには。
+上記のサンプルメタデータを使用します。
 
 ```
 MSIP_Labels: MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled=true; MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate=2018-11-08T21:13:16-0800; MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method=Privileged; MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name=Confidential; MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId=cb46c030-1825-4e81-a295-151c039dbf02; MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits=2; MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId=88124cf5-1340-457d-90e1-0000a9427c99

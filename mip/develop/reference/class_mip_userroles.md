@@ -1,28 +1,27 @@
 ---
 title: class mip::UserRoles
-description: Mip::userroles クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: 'Microsoft Information Protection (MIP) SDK の mip:: userroles クラスについて説明します。'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7e9e750f5b327dbad5e9b46fa1eca2a3291abdd3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: c674882145e5c47233224f470d3b038bca9a40b7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173245"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882808"
 ---
 # <a name="class-mipuserroles"></a>class mip::UserRoles 
 ユーザーのグループおよびそれらに関連付けられているロール。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック UserRoles (const std::vector\<std::string\>(& a) ユーザー、const std::vector\<std::string\>(& a) の役割)  |  [UserRoles](class_mip_userroles.md) コンストラクター。
-public const std::vector\<std::string\>& Users() const  |  ロールのセットに関連付けられているユーザーを取得します。
-public const std::vector\<std::string\>& Roles() const  |  ユーザーのグループに関連付けられているロールを取得します。
+public userroles (const std:: vector\<std:: string\>& users, const std:: vector\<std:: string\>& roles)  |  [UserRoles](class_mip_userroles.md) コンストラクター。
+public const std:: vector\<std:: string\>& Users () const  |  ロールのセットに関連付けられているユーザーを取得します。
+public const std:: vector\<std:: string\>& Roles () const  |  ユーザーのグループに関連付けられているロールを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -33,18 +32,18 @@ public const std::vector\<std::string\>& Roles() const  |  ユーザーのグル
 * **ユーザー**:同じロールを共有するユーザーのグループ 
 
 
-* **ロール**:ユーザーのグループによって共有の役割
+* **ロール**:ユーザーのグループによって共有されるロール
 
 
   
-### <a name="users-function"></a>ユーザー関数
+### <a name="users-function"></a>Users 関数
 ロールのセットに関連付けられているユーザーを取得します。
 
   
-**返します**:ロールのセットに関連付けられているユーザー
+次の**値を返し**ます。ロールのセットに関連付けられているユーザー
   
-### <a name="roles-function"></a>ロール関数
+### <a name="roles-function"></a>Roles 関数
 ユーザーのグループに関連付けられているロールを取得します。
 
   
-**返します**:ユーザーのグループに関連付けられているロール
+次の**値を返し**ます。ユーザーのグループに関連付けられているロール

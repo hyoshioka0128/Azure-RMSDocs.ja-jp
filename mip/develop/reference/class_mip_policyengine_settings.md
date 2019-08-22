@@ -1,49 +1,50 @@
 ---
 title: class mip::PolicyEngine::Settings
-description: Mip::policyengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: Microsoft Information Protection (MIP) SDK の mip::p olicyengine クラスについて説明します。
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3ffd4b3e86192786309739add907a724acdaffa5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d4eef1af6e738e7fbd2c33e961dcbffca8781924
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174189"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885284"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
 [PolicyEngine](class_mip_policyengine.md) に関連付けられている設定を定義します。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  新しいエンジンを作成するための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
+パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
+パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を取得します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
-public const Identity& GetIdentity() const  |  取得、 [Identity](class_mip_identity.md)オブジェクト。
-public void SetIdentity(const Identity& identity)  |  設定、 [Identity](class_mip_identity.md)オブジェクト。
+public const Identity& GetIdentity() const  |  [Id](class_mip_identity.md)オブジェクトを取得します。
+public void SetIdentity(const Identity& identity)  |  [Id](class_mip_identity.md)オブジェクトを設定します。
 public const std::string& GetClientData() const  |  設定で設定されたクライアント データを取得します。
 public void SetClientData(const std::string& clientData)  |  クライアント データ文字列を設定します。
 public const std::string& GetLocale() const  |  設定で設定されたロケールを取得します。
-public void SetCustomSettings (const std::vector\<std::pair\<std::string, std::string\>\>& customsettings:)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\>\>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
 public void SetSessionId(const std::string& sessionId)  |  クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID、一意識別子を取得します。
-public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密ラベルが有効になっているかどうかを示すフラグ。
+public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  必要に応じて、クラウド エンドポイントのベース URL を設定します。
 public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
+public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。
+public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="settings-function"></a>ポリシーの設定
+### <a name="settings-function"></a>Settings 関数
 既存のエンジンを読み込むための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
 
 パラメーター:  
-* **engineId**:AddEngineAsync または生成された自己によって生成された一意のエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
+* **engineId**:AddEngineAsync または自己生成された一意のエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -52,15 +53,15 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 * **locale**: エンジンのローカライズ可能な出力はこのロケールで提供されます。 
 
 
-* **省略可能な**: エンジンが読み込まれたときを示すフラグを読み込む必要がありますもカスタムの機密の種類の更新情報をカスタムの機密の種類とポリシーの変更をプロファイルには true。 OnPolicyChange オブザーバーが呼び出される場合。 false ListSensitivityTypes を呼び出す場合は空のリストを常に返します。
+* **省略可能**: エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示すフラグです。 true の場合、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルに対して true が呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
 
 
   
-### <a name="settings-function"></a>ポリシーの設定
+### <a name="settings-function"></a>Settings 関数
 新しいエンジンを作成するための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
 
 パラメーター:  
-* **identity**:[Identity](class_mip_identity.md)新しいエンジンに関連付けられているユーザーの情報。 
+* **id**:新しいエンジンに関連付けられているユーザーの[id](class_mip_identity.md)情報。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -69,7 +70,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 * **locale**: エンジンのローカライズ可能な出力はこのロケールで提供されます。 
 
 
-* **省略可能な**: エンジンが読み込まれたときを示すフラグを読み込む必要がありますもカスタムの機密の種類の更新情報をカスタムの機密の種類とポリシーの変更をプロファイルには true。 OnPolicyChange オブザーバーが呼び出される場合。 false ListSensitivityTypes を呼び出す場合は空のリストを常に返します。
+* **省略可能**: エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示すフラグです。 true の場合、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルに対して true が呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
 
 
   
@@ -77,7 +78,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 エンジン ID を取得します。
 
   
-**返します**:エンジンを識別する一意の文字列。
+次の**値を返し**ます。エンジンを識別する一意の文字列。
   
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
@@ -88,28 +89,28 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 
   
 ### <a name="getidentity-function"></a>GetIdentity 関数
-取得、 [Identity](class_mip_identity.md)オブジェクト。
+[Id](class_mip_identity.md)オブジェクトを取得します。
 
   
-**返します**:設定オブジェクト内の id への参照。 
+次の**値を返し**ます。設定オブジェクト内の id への参照。 
   
-**参照してください**: [:identity](class_mip_identity.md)
+**関連**項目: [Mip:: Identity](class_mip_identity.md)
   
 ### <a name="setidentity-function"></a>SetIdentity 関数
-設定、 [Identity](class_mip_identity.md)オブジェクト。
+[Id](class_mip_identity.md)オブジェクトを設定します。
 
 パラメーター:  
 * **identity**: ユーザーの一意の ID。 
 
 
   
-**参照してください**: [:identity](class_mip_identity.md)
+**関連**項目: [Mip:: Identity](class_mip_identity.md)
   
 ### <a name="getclientdata-function"></a>GetClientData 関数
 設定で設定されたクライアント データを取得します。
 
   
-**返します**:クライアントによって指定されたデータの文字列。
+次の**値を返し**ます。クライアントによって指定されたデータの文字列。
   
 ### <a name="setclientdata-function"></a>SetClientData 関数
 クライアント データ文字列を設定します。
@@ -123,13 +124,13 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 設定で設定されたロケールを取得します。
 
   
-**返します**:ロケール。
+次の**値を返し**ます。ロケール。
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
 パラメーター:  
-* **customsettings:**:名前と値のペアの一覧。
+* **Customsettings**:名前と値のペアの一覧。
 
 
   
@@ -137,7 +138,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 機能のゲーティングとテストに使用するカスタム設定を取得します。
 
   
-**返します**:名前と値のペアの一覧。
+次の**値を返し**ます。名前と値のペアの一覧。
   
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
@@ -151,13 +152,13 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 セッション ID、一意識別子を取得します。
 
   
-**返します**:セッション id。
+次の**値を返し**ます。セッション ID。
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled 関数
-取得、負荷の機密ラベルが有効になっているかどうかを示すフラグ。
+読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 
   
-**返します**:他の false を有効になっている場合は true。
+次の**値を返し**ます。有効な場合は True、それ以外の場合は false。
   
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
 必要に応じて、クラウド エンドポイントのベース URL を設定します。
@@ -167,8 +168,23 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 
 
   
-### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl 関数
 すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
 
   
-**返します**:ベース URL
+次の**値を返し**ます。[基本 URL]
+  
+### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
+委任されたユーザーを設定します。
+
+パラメーター:  
+* **delegatedUserEmail**: 委任の電子メール。
+
+
+委任されたユーザーは、他のユーザーの代理として認証を行うユーザーまたはアプリケーションが動作するときに指定します。
+  
+### <a name="getdelegateduseremail-function"></a>GetDelegatedUserEmail 関数
+委任されたユーザーを取得します。
+
+  
+次の**値を返し**ます。委任されたユーザー認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。

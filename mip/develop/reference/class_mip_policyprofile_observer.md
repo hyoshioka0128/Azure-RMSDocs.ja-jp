@@ -1,38 +1,37 @@
 ---
 title: class mip::PolicyProfile::Observer
-description: Mip::policyprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: Microsoft Information Protection (MIP) SDK の mip::p olicyprofile クラスについて説明します。
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: f9ff2448b3ae09e094189e85b15b2fabad12321e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 09c7203ed023a07bc25dcca382ad04799ae17783
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184554"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885195"
 ---
 # <a name="class-mippolicyprofileobserver"></a>class mip::PolicyProfile::Observer 
 クライアントがプロファイル関連のイベントに関する通知を取得するための [Observer](class_mip_policyprofile_observer.md) インターフェイス。
 すべてのエラーは [mip::Error](class_mip_error.md) から継承されます。 クライアントは、オブザーバーを呼び出すスレッド上でエンジンをコールバックしてはなりません。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 void OnLoadSuccess (const std::shared_ptr\<PolicyProfile\>(& a) プロファイル、const std::shared_ptr\<void\>& コンテキスト)  |  プロファイルが正常に読み込まれたときに呼び出されます。
-public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
-パブリック仮想 void OnListEnginesSuccess (const std::vector\<std::string\>& engineids:、const std::shared_ptr\<void\>& コンテキスト)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
-public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
-パブリック仮想 void OnUnloadEngineSuccess (const std::shared_ptr\<void\>& コンテキスト)  |  エンジンが正常にアンロードされたときに呼び出されます。
-パブリック仮想 void OnUnloadEngineFailure (const std::exception_ptr & エラー、const std::shared_ptr\<void\>& コンテキスト)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
-パブリック仮想 void OnAddEngineSuccess (const std::shared_ptr\<PolicyEngine\>& エンジン, const std::shared_ptr\<void\>& コンテキスト)  |  新しいエンジンが正常に追加されたときに呼び出されます。
-パブリック仮想 void OnAddEngineStarting (bool requiresPolicyFetch)  |  サーバーからそのエンジンのポリシーのデータをフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成するかどうかを示すエンジンを作成する前に呼び出されます。
-public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
-public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
-public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
-public virtual void OnPolicyChanged(const std::string& engineId)  |  指定した ID を使用してエンジンのポリシーが変更されたとき、または読み込まれたカスタム機密の種類が変更されたときに呼び出されます。
+パブリック仮想 void onloadsuccess (const std:: shared_ptr\<policyprofile\>& profile、const std:: shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
+パブリック仮想 void onloadfailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
+public virtual void OnListEnginesSuccess (const std:: vector\<std:: string\>& engineIds、const std:: shared_ptr\<void\>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
+public virtual void OnListEnginesFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
+public virtual void OnUnloadEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常にアンロードされたときに呼び出されます。
+public virtual void OnUnloadEngineFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
+public virtual void OnAddEngineSuccess (const std:: shared_ptr\<policyengine\>& engine、const std:: shared_ptr\<void\>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
+public virtual void OnAddEngineStarting (bool requiresPolicyFetch)  |  エンジンのポリシーデータをサーバーからフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成できるかどうかを示すために、エンジンを作成する前に呼び出されます。
+public virtual void OnAddEngineFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
+public virtual void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
+public virtual void OnDeleteEngineFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
+public virtual void OnPolicyChanged(const std::string& engineId)  |  指定された ID を持つエンジンに対してポリシーが変更された場合、または読み込まれたカスタム感度の種類が変更された場合に呼び出されます。
   
 ## <a name="members"></a>メンバー
   
@@ -43,7 +42,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **profile**: 操作の開始に使用された現在のプロファイル。 
 
 
-* **コンテキスト**: LoadAsync 操作に、コンテキストが渡されます。
+* **context**: LoadAsync 操作に渡されるコンテキスト。
 
 
   
@@ -54,7 +53,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **error**: 読み込み操作が失敗する原因となったエラー。 
 
 
-* **コンテキスト**: LoadAsync 操作に、コンテキストが渡されます。
+* **context**: LoadAsync 操作に渡されるコンテキスト。
 
 
   
@@ -65,7 +64,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **engineIds**: 使用可能なエンジン ID の一覧。 
 
 
-* **コンテキスト**: ListEnginesAsync 操作に、コンテキストが渡されます。
+* **context**: ListEnginesAsync 操作に渡されるコンテキスト。
 
 
   
@@ -76,7 +75,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **error**: エンジンの一覧操作が失敗する原因となったエラー。 
 
 
-* **コンテキスト**: ListEnginesAsync 操作に、コンテキストが渡されます。
+* **context**: ListEnginesAsync 操作に渡されるコンテキスト。
 
 
   
@@ -84,7 +83,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 エンジンが正常にアンロードされたときに呼び出されます。
 
 パラメーター:  
-* **コンテキスト**: UnloadEngineAsync 操作に、コンテキストが渡されます。
+* **context**: UnloadEngineAsync 操作に渡されるコンテキスト。
 
 
   
@@ -95,7 +94,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **error**: エンジンのアンロード操作が失敗する原因となったエラー。 
 
 
-* **コンテキスト**: UnloadEngineAsync 操作に、コンテキストが渡されます。
+* **context**: UnloadEngineAsync 操作に渡されるコンテキスト。
 
 
   
@@ -103,21 +102,21 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 新しいエンジンが正常に追加されたときに呼び出されます。
 
 パラメーター:  
-* **エンジン**: 新しく追加されたエンジン 
+* **engine**: 新しく追加されたエンジン 
 
 
-* **コンテキスト**: AddEngineAsync 操作に渡されるコンテキスト
+* **context**: AddEngineAsync 操作に渡されるコンテキスト
 
 
   
 ### <a name="onaddenginestarting-function"></a>OnAddEngineStarting 関数
-サーバーからそのエンジンのポリシーのデータをフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成するかどうかを示すエンジンを作成する前に呼び出されます。
+エンジンのポリシーデータをサーバーからフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成できるかどうかを示すために、エンジンを作成する前に呼び出されます。
 
 パラメーター:  
-* **requiresPolicyFetch**:エンジンのデータを HTTP 経由でフェッチする必要があるかどうか、またはキャッシュから読み込まれるかどうかについて説明します
+* **requiresPolicyFetch**:エンジンデータを HTTP 経由でフェッチする必要があるのか、それともキャッシュから読み込まれるのかを説明します。
 
 
-この省略可能なコールバックをアプリケーションにできない形式であるかどうか、AddEngineAsync 操作が必要になります (その関連付けられている遅延) で HTTP 操作を完了することができます。
+この省略可能なコールバックは、AddEngineAsync 操作の完了に HTTP 操作が必要かどうかを通知するために、アプリケーションによって使用される場合があります。
   
 ### <a name="onaddenginefailure-function"></a>OnAddEngineFailure 関数
 新しいエンジンの追加がエラーの原因となったときに呼び出されます。
@@ -126,7 +125,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **error**: エンジンの追加操作が失敗する原因となったエラー。 
 
 
-* **コンテキスト**: AddEngineAsync 操作に、コンテキストが渡されます。
+* **context**: AddEngineAsync 操作に渡されるコンテキスト。
 
 
   
@@ -134,7 +133,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 エンジンが正常に削除されたときに呼び出されます。
 
 パラメーター:  
-* **コンテキスト**: DeleteEngineAsync 操作に、コンテキストが渡されます。
+* **context**: DeleteEngineAsync 操作に渡されるコンテキスト。
 
 
   
@@ -145,12 +144,12 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  指定し�
 * **error**: エンジンの削除操作が失敗する原因となったエラー。 
 
 
-* **コンテキスト**: DeleteEngineAsync 操作に、コンテキストが渡されます。
+* **context**: DeleteEngineAsync 操作に渡されるコンテキスト。
 
 
   
 ### <a name="onpolicychanged-function"></a>OnPolicyChanged 関数
-指定した ID を使用してエンジンのポリシーが変更されたとき、または読み込まれたカスタム機密の種類が変更されたときに呼び出されます。
+指定された ID を持つエンジンに対してポリシーが変更された場合、または読み込まれたカスタム感度の種類が変更された場合に呼び出されます。
 
 パラメーター:  
 * **engineId**: エンジン 

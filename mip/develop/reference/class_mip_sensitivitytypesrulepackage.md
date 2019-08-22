@@ -1,37 +1,36 @@
 ---
-title: mip::SensitivityTypesRulePackage をクラスします。
-description: Mip::sensitivitytypesrulepackage クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+title: 'クラス mip:: SensitivityTypesRulePackage'
+description: 'Microsoft Information Protection (MIP) SDK の mip:: sensitivitytypesrulepackage クラスについて説明します。'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 46d59f7ee3cd099c5526fdc565ff5e84a81f6f4e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 4a18ebd134dc0c46fd7221aaf09bcc5429de1101
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185030"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883112"
 ---
-# <a name="class-mipsensitivitytypesrulepackage"></a>mip::SensitivityTypesRulePackage をクラスします。 
+# <a name="class-mipsensitivitytypesrulepackage"></a>クラス mip:: SensitivityTypesRulePackage 
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetRulePackageId() const  |  ルールのパッケージ id を取得します。
-public const std::string& GetRulePackage() const  |  ルールのパッケージを取得します。
+public const std::string& GetRulePackageId() const  |  規則パッケージ Id を取得します。
+public const std::string& GetRulePackage() const  |  ルールパッケージを取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId 関数
-ルールのパッケージ id を取得します。
+規則パッケージ Id を取得します。
 
   
-**返します**:ルールのパッケージ Id
+次の**値を返し**ます。ルールパッケージ Id
   
 ### <a name="getrulepackage-function"></a>GetRulePackage 関数
-ルールのパッケージを取得します。
+ルールパッケージを取得します。
 
   
-**返します**:ルール パッケージ
+次の**値を返し**ます。ルールパッケージ

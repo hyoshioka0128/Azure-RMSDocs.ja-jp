@@ -1,51 +1,54 @@
 ---
 title: class mip::FileEngine::Settings
-description: Mip::fileengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: 'Microsoft Information Protection (MIP) SDK の mip:: fileengine クラスについて説明します。'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 00ad6058b146f428a65a0697b722e6d3adb5c07d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184707"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884295"
 ---
 # <a name="class-mipfileenginesettings"></a>class mip::FileEngine::Settings 
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [FileEngine::Settings](class_mip_fileengine_settings.md) コンストラクター。
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  新しいエンジンを作成するための [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
+パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [FileEngine::Settings](class_mip_fileengine_settings.md) コンストラクター。
+パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を返します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
-public const Identity& GetIdentity() const  |  エンジンを返します[Identity](class_mip_identity.md)します。
+public const Identity& GetIdentity() const  |  エンジン[id](class_mip_identity.md)を返します。
 public void SetIdentity(const Identity& identity)  |  エンジン ID を設定します。
 public const std::string& GetClientData() const  |  エンジンのクライアント データを返します。
 public const std::string& GetLocale() const  |  エンジンのロケールを返します。
-public void SetCustomSettings(const std::vector\<std::pair\<std::string, std::string\>\>& value)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
+public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\>\>& 値)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
 public void SetSessionId(const std::string& sessionId)  |  エンジンのセッション ID を設定します。
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を返します。
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  保護クラウド エンドポイントのベース url を取得します。
-public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  ポリシー クラウド エンドポイント ベースの url を設定、クラウドの境界を指定するために使用します。
-public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  ポリシーのクラウド エンドポイントのベース url を取得します。
-public void SetProtectionOnlyEngine(const bool protectionOnly)  |  保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  保護クラウドエンドポイントのベース url を取得します。
+public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  ポリシークラウドエンドポイントのベース url を取得します。
+public void SetProtectionOnlyEngine (bool protectionOnly)  |  保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
 public const bool IsProtectionOnlyEngine() const  |  保護のみのエンジン インジケーターを返します (ポリシー/ラベルなし)。
-public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密ラベルが有効になっているかどうかを示すフラグ。
+public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
+public void EnablePFile (bool 値)  |  が PFiles を生成するかどうかを示すフラグを設定します。
+public const bool IsPFileEnabled ()  |  が PFiles を生成するかどうかを示すフラグを取得します。
+public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。
+public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
   
 ## <a name="members"></a>メンバー
   
-### <a name="settings-function"></a>ポリシーの設定
+### <a name="settings-function"></a>Settings 関数
 既存のエンジンを読み込むための [FileEngine::Settings](class_mip_fileengine_settings.md) コンストラクター。
 
 パラメーター:  
-* **engineId**:AddEngineAsync によって生成された一意のエンジン ID に設定します。 
+* **engineId**:AddEngineAsync によって生成される一意のエンジン ID に設定します。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -54,15 +57,15 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 * **locale**: エンジンのローカライズ可能な出力はこのロケールで提供されます。 
 
 
-* **loadSensitivityTypes**:エンジンが読み込まれるときを示す省略可能なフラグ読み込む必要がありますもカスタムの機密の種類の更新情報をカスタムの機密の種類とポリシーの変更をプロファイルには true。 OnPolicyChange オブザーバーが呼び出される場合。 false ListSensitivityTypes を呼び出す場合は空のリストを常に返します。
+* **loadSensitivityTypes**:エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示す省略可能なフラグです。 true の場合は、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルの OnPolicyChange オブザーバーが呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
 
 
   
-### <a name="settings-function"></a>ポリシーの設定
+### <a name="settings-function"></a>Settings 関数
 新しいエンジンを作成するための [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
 
 パラメーター:  
-* **identity**:[Identity](class_mip_identity.md)新しいエンジンに関連付けられているユーザーの情報。 
+* **id**:新しいエンジンに関連付けられているユーザーの[id](class_mip_identity.md)情報。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -71,7 +74,7 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 * **locale**: エンジンのローカライズ可能な出力はこのロケールで提供されます。 
 
 
-* **loadSensitivityTypes**:エンジンが読み込まれるときを示す省略可能なフラグ読み込む必要がありますもカスタムの機密の種類の更新情報をカスタムの機密の種類とポリシーの変更をプロファイルには true。 OnPolicyChange オブザーバーが呼び出される場合。 false ListSensitivityTypes を呼び出す場合は空のリストを常に返します。
+* **loadSensitivityTypes**:エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示す省略可能なフラグです。 true の場合は、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルの OnPolicyChange オブザーバーが呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
 
 
   
@@ -87,7 +90,7 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 
   
 ### <a name="getidentity-function"></a>GetIdentity 関数
-エンジンを返します[Identity](class_mip_identity.md)します。
+エンジン[id](class_mip_identity.md)を返します。
   
 ### <a name="setidentity-function"></a>SetIdentity 関数
 エンジン ID を設定します。
@@ -114,29 +117,29 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
 
 パラメーター:  
-* **protectionCloudEndpointBaseUrl**:保護のエンドポイントに関連付けられているベース url
+* **protectionCloudEndpointBaseUrl**:保護エンドポイントに関連付けられているベース url
 
 
   
-### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-保護クラウド エンドポイントのベース url を取得します。
+### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl 関数
+保護クラウドエンドポイントのベース url を取得します。
 
   
-**返します**:保護のエンドポイントに関連付けられているベース url
+次の**値を返し**ます。保護エンドポイントに関連付けられているベース url
   
 ### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl 関数
-ポリシー クラウド エンドポイント ベースの url を設定、クラウドの境界を指定するために使用します。
+クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
 
 パラメーター:  
-* **policyCloudEndpointBaseUrl**:ポリシーのエンドポイントに関連付けられているベース url
+* **policyCloudEndpointBaseUrl**:ポリシーエンドポイントに関連付けられているベース url
 
 
   
-### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
-ポリシーのクラウド エンドポイントのベース url を取得します。
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl 関数
+ポリシークラウドエンドポイントのベース url を取得します。
 
   
-**返します**:ポリシーのエンドポイントに関連付けられているベース url
+次の**値を返し**ます。ポリシーエンドポイントに関連付けられているベース url
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine 関数
 保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
@@ -145,7 +148,31 @@ public bool IsLoadSensitivityTypesEnabled() const  |  取得、負荷の機密�
 保護のみのエンジン インジケーターを返します (ポリシー/ラベルなし)。
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled 関数
-取得、負荷の機密ラベルが有効になっているかどうかを示すフラグ。
+読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 
   
-**返します**:他の false を有効になっている場合は true。
+次の**値を返し**ます。有効な場合は True、それ以外の場合は false。
+  
+### <a name="enablepfile-function"></a>EnablePFile 関数
+が PFiles を生成するかどうかを示すフラグを設定します。
+  
+### <a name="ispfileenabled-function"></a>IsPFileEnabled 関数
+が PFiles を生成するかどうかを示すフラグを取得します。
+
+  
+次の**値を返し**ます。有効な場合は True、それ以外の場合は false。
+  
+### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
+委任されたユーザーを設定します。
+
+パラメーター:  
+* **delegatedUserEmail**: 委任の電子メール。
+
+
+委任されたユーザーは、他のユーザーの代理として認証を行うユーザーまたはアプリケーションが動作するときに指定します。
+  
+### <a name="getdelegateduseremail-function"></a>GetDelegatedUserEmail 関数
+委任されたユーザーを取得します。
+
+  
+次の**値を返し**ます。委任されたユーザー認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。

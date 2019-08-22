@@ -14,16 +14,23 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6fdef7a9d92880fa6754ffc7b2f889acdecd0bfc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
+ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791192"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894460"
 ---
 # <a name="release-notes"></a>リリース ノート
 
 この記事には、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
+
+## <a name="april-2019---update"></a>2019年4月-更新
+- ファイル API のバグ修正。
+- ファイル API が更新され、コンテンツの復号化時に抽出権限ではなく、エクスポート権限がチェックされるようになりました。
+- インストーラーを修正して、アップグレード時に新しい PDF v2 プロテクターが確実にインストールされるようにしました。
+- テレメトリの変更。 この変更には、C ランタイムライブラリをインストールするインストールパッケージの更新が必要でした。
+- サービスバックエンドの認証の変更です。中断を最小限に抑えるには、この SDK バージョンに更新してください
 
 ## <a name="october-2017---update"></a>2017 年 10 月の更新
 

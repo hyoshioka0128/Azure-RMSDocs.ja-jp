@@ -4,19 +4,19 @@ description: サポートされているファイルの種類、ファイル名�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/16/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef2b68b531b39a83f88ee9f8f37a64955950f00d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f99432b428e952791e4a5797d246c53e7dba5aef
+ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789934"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894427"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントでサポートされるファイルの種類
 
@@ -108,7 +108,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
   - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合:.pst ファイルに対してサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
 
-    ヒント :大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
+    ヒント:大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -176,7 +176,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 |アプリケーションの種類|ファイルの種類|
 |--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
+|Word|ドック.docx; .docm; .dot; normal.dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|

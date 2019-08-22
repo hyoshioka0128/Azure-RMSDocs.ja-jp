@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: f4d96da36eb41025df5d280c62a3831cd5afa9a1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 55bfba6da57fa07614165f4d5fcc5fba226cfca7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175294"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886231"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - 認証の概念
 
@@ -24,15 +24,15 @@ MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の
 
 `mip::AuthDelegate::AcquireOAuth2Token` は、次のパラメーターを受け取り、トークンの取得に成功したかどうかを示すブール値を返します。
 
-- `mip::Identity`:既知の場合は、認証されるユーザーまたはサービスの id。
-- `mip::AuthDelegate::OAuth2Challenge`:2 つのパラメーターを受け取る**機関**と**リソース**します。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。
-- `mip::AuthDelegate::OAuth2Token`:トークンの結果は、このオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
+- `mip::Identity`:認証されるユーザーまたはサービスの id (既知の場合)。
+- `mip::AuthDelegate::OAuth2Challenge` :4つのパラメーター、**権限**、**リソース**、**要求**、および**スコープ**を受け取ります。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。 **要求**は、保護サービスに必要なラベル固有の要求です。 **スコープ**は、リソースにアクセスするために必要な Azure AD のアクセス許可スコープです。 
+- `mip::AuthDelegate::OAuth2Token`:トークンの結果がこのオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
 
-**重要:** アプリケーションは呼び出さないでください`AcquireOAuth2Token`直接します。 必要に応じて SDK がこの関数を呼び出します。
+**重要:** アプリケーションが直接`AcquireOAuth2Token`を呼び出すことはありません。 必要に応じて SDK がこの関数を呼び出します。
 
 ## <a name="consent"></a>同意
 
-Azure AD では、アプリケーションが、セキュリティで保護されたリソース/API にアカウントの ID でアクセスする権限を付与される前に、同意を取得する必要があります。 同意は、アカウントのテナントで、特定の (ユーザーの同意) またはすべてのアカウント (管理者の同意) に対するアクセス許可の永続的な確認として記録されます。 アクセスされる API、アプリケーションが求めるアクセス許可、およびサインインに使用されるアカウントに基づいて、次のさまざまなシナリオで同意が行われます。 
+Azure AD では、アプリケーションが、セキュリティで保護されたリソース/API にアカウントの ID でアクセスする権限を付与される前に、同意を取得する必要があります。 同意は、特定のアカウント (ユーザーの同意) またはすべてのアカウント (管理者の同意) について、アカウントのテナントでのアクセス許可の永続的な確認として記録されます。 アクセスされる API、アプリケーションが求めるアクセス許可、およびサインインに使用されるアカウントに基づいて、次のさまざまなシナリオで同意が行われます。 
 
 - お客様または管理者が、[アクセス許可の付与] 機能を使用して事前にアクセスに明示的に同意しなかった場合、アプリケーションが登録されている*同じテナント*のアカウント。
 - アプリケーションがマルチテナントとして登録されており、テナント管理者が事前にすべてのユーザーに対して同意していない場合、*別のテナント*のアカウント。
@@ -49,15 +49,15 @@ Azure AD では、アプリケーションが、セキュリティで保護さ�
 
 ### <a name="consent-options"></a>同意オプション
 
-- **AcceptAlways**:同意し、意思決定に注意してください。
-- **受け入れる**:1 回同意します。
+- **Acceptalways**:同意し、決定を忘れないでください。
+- **同意**:同意します。
 - **拒否**:同意しません。
 
 このメソッドを使用して SDK でユーザーの同意が求められる場合、クライアント アプリケーションではユーザーに URL を提示する必要があります。 クライアント アプリケーションでは、ユーザーの同意を取得するための手段を提供し、ユーザーの決定に対応する適切な Consent 列挙型を返す必要があります。
 
 ### <a name="sample-implementation"></a>実装例
 
-#### <a name="consentdelegateimplh"></a>consent_delegate_impl.h
+#### <a name="consent_delegate_implh"></a>consent_delegate_impl.h
 
 ```cpp
 class ConsentDelegateImpl final : public mip::ConsentDelegate {
@@ -69,9 +69,9 @@ public:
 };
 ```
 
-#### <a name="consentdelegateimplcpp"></a>consent_delegate_impl.cpp
+#### <a name="consent_delegate_implcpp"></a>consent_delegate_impl.cpp
 
-SDK が同意を必要とする場合、*SDK によって* `GetUserConsent` メソッドが呼び出され、パラメーターとして URL が渡されます。 次の例では、SDK がその指定された URL に接続されてから `Consent::AcceptAlways` を返すことが、ユーザーに通知されます。 ユーザーに実際の選択肢が提示されなかったので、良い例ではありません。
+SDK が同意を必要とする場合、*SDK によって* `GetUserConsent` メソッドが呼び出され、パラメーターとして URL が渡されます。 次のサンプルでは、SDK がその指定された URL に接続し、コマンドラインのオプションをユーザーに提供することがユーザーに通知されます。 ユーザーが選択した内容に基づいて、ユーザーは同意を受け入れたり拒否したりして、SDK に渡されます。 ユーザーが同意を拒否すると、アプリケーションは例外をスローし、保護サービスへの呼び出しは行われません。 
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -101,6 +101,16 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
   }  
 }
 ```
+
+テストと開発を目的として`ConsentDelegate` 、次のような単純なを実装できます。
+
+```cpp
+Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
+  return Consent::AcceptAlways;
+}
+```
+
+ただし、運用環境のコードでは、地域または業務上の要件や規制に応じて、ユーザーに同意するかどうかを選択するよう求められる場合があります。 
 
 ## <a name="next-steps"></a>次の手順
 

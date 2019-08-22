@@ -5,24 +5,24 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fcdcb5c11646fd7d32284b6df31cda33abbfde4a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175515"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886099"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK - ファイル API エンジンの概念
 
 MIP SDK のファイル API の `mip::FileEngine` では、指定した ID の代わりに実行されるすべての操作へのインターフェイスを提供します。 アプリケーションにサインインするユーザーごとにエンジンが 1 つ追加され、エンジンで実行される操作がすべてその ID のコンテキストで実行されます。
 
-`FileEngine`が 2 つの主な責務。認証されたユーザーのラベルを一覧表示するユーザーの代理としてのファイル操作を実行するファイルのハンドラーを作成しています。 
+に`FileEngine`は、次の2つの主要な役割があります。認証されたユーザーのラベルを一覧表示し、ファイルハンドラーを作成してユーザーの代わりにファイル操作を実行します。 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
 - `ListSensitivityLabels()`:読み込まれたエンジンのラベルの一覧を取得します。
-- `CreateFileHandler()`:作成、`mip::FileHandler`特定のファイルまたはストリームにします。
+- `CreateFileHandler()`:特定の`mip::FileHandler`ファイルまたはストリームのを作成します。
 
 ## <a name="add-a-file-engine"></a>ファイル エンジンの追加
 
@@ -32,10 +32,24 @@ MIP SDK のファイル API の `mip::FileEngine` では、指定した ID の�
 
 プロファイルと同様に、エンジンにも設定オブジェクト `mip::FileEngine::Settings` が必要です。 このオブジェクトには、一意のエンジン ID、デバッグやテレメトリで使用できるカスタマイズ可能なクライアント データ、および必要に応じてロケールが格納されます。
 
-ここでは、*engineSettings* という `FileEngine::Settings` オブジェクトを作成します。 
+ここでは、 `FileEngine::Settings`アプリケーションユーザーの id を使用して、 *engineSettings*という名前のオブジェクトを作成します。
 
 ```cpp
-FileEngine::Settings engineSettings("UniqueID", "");
+FileEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+また、カスタムエンジン ID を指定することもできます。
+
+```cpp
+FileEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 ベスト プラクティスとして、最初のパラメーターである `id` を、関連付けられているユーザーにエンジンを簡単に接続できるようなものにする必要があります。 電子メール アドレス、UPN、または AAD オブジェクト GUID などは、その ID がどちらも一意で、サービスを呼び出すことなく、ローカルの状態から読み込むことができることが確認されます。
@@ -72,7 +86,7 @@ FileEngine::Settings engineSettings("UniqueID", "");
 
 `ListSensitivityLabels()` により、サービスの特定のユーザー用のラベルの一覧とそれらのラベルの属性がフェッチされます。 結果は `std::shared_ptr<mip::Label>` のベクターに格納されます。
 
-`mip::Label` の詳細については、[こちら]()をご覧ください。
+`mip::Label` の詳細については、[こちら](reference/class_mip_label.md)をご覧ください。
 
 ### <a name="listsensitivitylabels"></a>ListSensitivityLabels()
 
@@ -108,4 +122,3 @@ for (const auto& label : labels) {
 ## <a name="next-steps"></a>次の手順
 
 これでプロファイルが読み込まれ、エンジンが追加され、ラベルの準備ができたため、ハンドラーを追加して、ファイルに対するラベルの読み取り、書き込み、削除を開始できます。 「[File handlers in the MIP SDK](concept-handler-file-cpp.md)」 (MIP SDK でのファイル ハンドラー) を参照してください。
-

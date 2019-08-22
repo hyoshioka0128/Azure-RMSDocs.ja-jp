@@ -1,30 +1,29 @@
 ---
 title: class mip::PolicyProfile
-description: Mip::policyprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: Microsoft Information Protection (MIP) SDK の mip::p olicyprofile クラスについて説明します。
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 45af1f4d072a1d8a690aa8f459950ae500df3db8
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 13d24afe87bc04f7a92dde8daf88c1ada38cedc2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173339"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883750"
 ---
 # <a name="class-mippolicyprofile"></a>class mip::PolicyProfile 
 [PolicyProfile](class_mip_policyprofile.md) クラスは、Microsoft Information Protection 操作を使用するためのルート クラスです。 一般的なアプリケーションでは [PolicyProfile](class_mip_policyprofile.md) は 1 つしか必要ありませんが、必要に応じて複数のプロファイルを作成できます。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  プロファイルに設定されている設定値を取得します。
-public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。
-public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  指定した ID を持つポリシー エンジンのアンロードを開始します。
-public void AddEngineAsync(const PolicyEngine::Settings& settings, const std::shared_ptr\<void\>& context)  |  プロファイルへの新しいポリシー エンジンの追加を開始します。
-public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  指定した ID を持つポリシー エンジンの削除を開始します。 指定したプロファイルのデータがすべて削除されます。
+public void ListEnginesAsync (const std:: shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。
+public void UnloadEngineAsync (const std:: string & id、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つポリシー エンジンのアンロードを開始します。
+public void AddEngineAsync (const policyengine:: settings & settings, const std:: shared_ptr\<void\>& context)  |  プロファイルへの新しいポリシー エンジンの追加を開始します。
+public void DeleteEngineAsync (const std:: string & id、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つポリシー エンジンの削除を開始します。 指定したプロファイルのデータがすべて削除されます。
   
 ## <a name="members"></a>メンバー
   
@@ -32,7 +31,7 @@ public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void
 プロファイルに設定されている設定値を取得します。
 
   
-**返します**:プロファイルの設定を設定します。
+次の**値を返し**ます。プロファイルに設定された設定。
   
 ### <a name="listenginesasync-function"></a>ListEnginesAsync 関数
 エンジンの一覧操作を開始します。

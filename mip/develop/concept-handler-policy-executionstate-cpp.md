@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: dbe6db5fe54f9d26d072d3f6fcad1f2595d61040
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 34576337726e8974e65076bc1358d316ad32d9d2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175277"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886172"
 ---
 # <a name="implement-executionstate"></a>ExecutionState を実装する
 
@@ -28,20 +28,20 @@ ms.locfileid: "60175277"
 
 `ExecutionState` では、次の仮想メンバーが公開されます。 各メンバーからポリシー エンジンに何らかのコンテキストが渡されると、アプリケーションによって実行される必要があるアクションに関する情報が返されます。 さらに、この情報は、Azure Information Protection レポート機能に監査情報を提供するために、使用される場合もあります。
 
-
-| Member                                                                           | 戻り値                                                                                                              |
-|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| `std::string GetNewLabelId()`                                                      | オブジェクトに適用するラベル ID が返されます。                                                                    |
-| `mip::DataState GetDataState()`                                              | オブジェクトの mip::DataState を返します。                                                                         |
+| メンバー                                                                             | 戻り値                                                                                                              |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `std::shared_ptr<mip::Label> GetNewLabel()`                                        | オブジェクトに適用するラベルを返します。                                                                       |
+| `mip::DataState GetDataState()`                                                    | オブジェクトの mip::D ataState を返します。                                                                            |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | ダウングレードの正当性と理由を表す std::pair が返されます。                                 |
-| `std::string GetContentIdentifier()`                                               | コンテンツの識別子が返されます。 オブジェクトの位置を示していて人間が判読できる識別子である必要があります。   |
+| `std::string GetContentIdentifier()`                                               | コンテンツの識別子が返されます。 オブジェクトの位置を示していて人間が判読できる識別子である必要があります。        |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | ラベルの mip::ActionSource が返されます。                                                                          |
-| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | ラベルの mip::AssignmentMethod が返されます。                                                                        |
+| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | ラベルの mip::AssignmentMethod が返されます。                                                                       |
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | ドキュメントに適用されるカスタム メタデータを含む文字列の std::pairs の std::vector が返されます。 |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | 現在のコンテンツのメタデータを含む文字列の std::pairs の std::vector が返されます。                               |
-| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`           | mip::ProtectionDescriptor にポインターが返されます。                                                                     |
+| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | mip::ProtectionDescriptor にポインターが返されます。                                                                     |
 | `mip::ContentFormat GetContentFormat()`                                            | mip::ContentFormat が返されます。                                                                                           |
-| `mip::ActionType GetSupportedActions()`                                           | ラベルの mip::ActionTypes が返されます。                                                                              |
+| `mip::ActionType GetSupportedActions()`                                            | ラベルの mip::ActionTypes が返されます。                                                                              |
+| `std::shared_ptr<mip::ClassificationResults>`                                      | 実装されている場合、分類の結果の一覧を返します。                                                            |
 
 `mip::ExecutionState` から派生したクラスの実装内で、それぞれをオーバーライドする必要があります。 上記のリンクされたサンプル アプリケーションにおいて、このプロセスは `ExecutionStateOptions` と呼ばれる構造体を実装しそれを派生クラスのコンストラクターに渡すことにより達成されます。
 
@@ -59,6 +59,8 @@ struct ExecutionStateOptions {
     std::string downgradeJustification;
     std::string templateId;
     mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    mip::ActionType supportedActions;
+    bool generateAuditEvent;
 };
 ```
 
@@ -66,5 +68,5 @@ struct ExecutionStateOptions {
 
 ### <a name="next-steps"></a>次の手順
 
-- 確認する方法について[新規または既存のラベルの操作をコンピューティング](concept-handler-policy-computeactions-cpp.md)現在と目的の状態に基づいて、します。
-- ダウンロード、[ポリシー API のサンプルを GitHub ポリシー API を試すから](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- 現在の状態と目的の状態に基づいて、[新規または既存のラベルの計算アクション](concept-handler-policy-computeactions-cpp.md)を確認する方法について説明します。
+- [GitHub からポリシー Api サンプルをダウンロードし、ポリシー api を試す](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

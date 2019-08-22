@@ -1,48 +1,47 @@
 ---
 title: class mip::ProtectionDescriptorBuilder
-description: Mip::protectiondescriptorbuilder クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: Microsoft Information Protection (MIP) SDK の mip::p rotectiondescriptorbuilder クラスについて説明します。
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7ed2c118d2f57f93d0445c113fd6127704e52637
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 5985aad4f4cb9b8276ca855026119507febc9445
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174155"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885122"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
 コンテンツの一部に関連付けられている保護を説明する、[ProtectionDescriptor](class_mip_protectiondescriptor.md) を構築します。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
+public MIP_API std:: shared_ptr\<protectiondescriptor\> Build ()  |  この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
 public void SetName(const std::string& value)  |  保護ポリシー名を設定します。
 public void SetDescription(const std::string& value)  |  保護ポリシーの説明を設定します。
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  保護ポリシーの有効期限を設定します。
 public void SetAllowOfflineAccess(bool value)  |  保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 public void SetReferrer(const std::string& uri)  |  保護ポリシーの参照元のアドレスを設定します。
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  暗号化する必要のあるアプリ固有のデータを設定します。
-public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  署名する必要があるアプリ固有のデータを設定します。
+public void setsignedappdata (const std:: map\<std:: string, std:: string\>& value)  |  署名する必要があるアプリ固有のデータを設定します。
 public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   
-### <a name="build-function"></a>関数を構築します。
+### <a name="build-function"></a>ビルド関数
 この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
 
   
-**返します**:新しい[ProtectionDescriptor](class_mip_protectiondescriptor.md)インスタンス
+次の**値を返し**ます。新しい[Protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス
   
 ### <a name="setname-function"></a>SetName 関数
 保護ポリシー名を設定します。
 
 パラメーター:  
-* **値**:保護ポリシーの名前
+* **値**:保護ポリシー名
 
 
   
@@ -66,7 +65,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 
 パラメーター:  
-* **値**:かどうか、ポリシーがオフライン コンテンツへのアクセスを許可する場合
+* **値**:ポリシーでオフラインコンテンツへのアクセスが許可されているかどうか
 
 
   
@@ -97,5 +96,5 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 
 アプリケーションでは、保護サービスによって署名されるアプリ固有のデータのディクショナリを指定できます。 この署名済みデータは、SetEncryptedAppData によって設定される暗号化データに依存しません。
   
-### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder 関数
+### <a name="protectiondescriptorbuilder-function"></a>~ Protection記述子ビルダー関数
 _まだ文書化されていません。_

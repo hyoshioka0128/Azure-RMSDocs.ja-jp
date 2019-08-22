@@ -5,26 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: dd38b8e6c9deb45b4ce7df9ec3363ac8036a7ef4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175349"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886153"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Microsoft Information Protection SDK - 保護ハンドラーの概念
 
-MIP SDK 保護 API では、`mip::ProtectionHandler` により、保護されたストリームとバッファーの暗号化と暗号化解除、アクセス確認の実行、発行ライセンスの取得、および保護された情報からの属性の取得のための関数が示されます。 
+MIP SDK 保護 API では、`mip::ProtectionHandler` により、保護されたストリームとバッファーの暗号化と暗号化解除、アクセス確認の実行、発行ライセンスの取得、および保護された情報からの属性の取得のための関数が示されます。
 
 ## <a name="requirements"></a>必要条件
 
 特定のファイルを操作するための `ProtectionHandler` を作成するには、以下のものが必要です。
 
-- `ProtectionProfile`
-- `ProtectionProfile` に追加された `ProtectionEngine`
-- [ここ]()で概説されているパターンに似た、`mip::ProtectionHandler::Observer` を継承するクラス。
+- `mip::MipContext`
+- `mip::ProtectionProfile`
+- `ProtectionProfile` に追加された `mip::ProtectionEngine`
+- を継承`mip::ProtectionHandler::Observer`するクラス。
 - `mip::ProtectionDescriptor` または発行ライセンス
 
 ## <a name="create-a-protection-handler"></a>保護ハンドラーを作成する

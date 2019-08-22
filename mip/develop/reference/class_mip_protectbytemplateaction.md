@@ -1,39 +1,30 @@
 ---
 title: class mip::ProtectByTemplateAction
-description: Mip::protectbytemplateaction クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+description: Microsoft Information Protection (MIP) SDK の mip::p rotectbytemplateaction クラスについて説明します。
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 18bdf3caa5eba2f335376d81f525fe93da4d0352
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: dffd1698e61f55d5c4d65fee9f0d9489939356d6
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173262"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885134"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>class mip::ProtectByTemplateAction 
 テンプレートによる保護をドキュメントに追加することを指定するアクション クラス。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  アクションに関連付けられている保護テンプレート ID を取得します。
-public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-
+  
 ## <a name="members"></a>メンバー
   
 ### <a name="gettemplateid-function"></a>GetTemplateId 関数
 アクションに関連付けられている保護テンプレート ID を取得します。
 
   
-**返します**:保護テンプレート ID
-
-
-### <a name="gettype-function"></a>GetType 関数
-[アクション](class_mip_action.md)の種類を取得します。
-
-  
-**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
+次の**値を返し**ます。保護テンプレート ID。

@@ -6,18 +6,18 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/01/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: df0d51d976f7f900011688d2f328f3a2ddb1e378
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176926"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884744"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>MIP SDK ファイル API での監査
 
-Azure Information Protection の管理ポータルでは、管理者レポートにアクセスできます。 これらのレポートにより、MIP SDK が統合された任意のアプリケーションとサービスの間にユーザーが手動または自動で適用したラベルの可視性が提供されます。 SDK を使用している開発パートナーは、自分のアプリケーションからの情報が顧客レポートに表示されるように、この機能を簡単に有効にすることができます。
+Azure Information Protection の管理ポータルでは、管理者レポートにアクセスできます。 これらのレポートでは、MIP SDK を統合しているアプリケーションまたはサービス全体で、ユーザーがどのラベルを手動または自動で適用しているかが表示されます。 SDK を使用する開発パートナーは、この機能を有効にすることで、アプリケーションからの情報を顧客レポートに表示できます。
 
 ## <a name="event-types"></a>イベントの種類
 
@@ -63,8 +63,8 @@ auto label = handler->GetLabel();
 ```cpp
 // Create labeling options, set label
 string contentId = "C:\users\myuser\Documents\MyPlan.docx";
-mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-handler->SetLabel(labelId, labelingOptions);
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
@@ -79,8 +79,8 @@ if(commitFuture.get()) {
 
 ## <a name="audit-dashboard"></a>監査ダッシュボード
 
-Azure Information Protection 監査パイプラインに送信されたイベントは、 https://portal.azure.com にあるレポートに表示されます。 Azure Information Protection Analytics はパブリック プレビュー段階にあり、機能は変更される可能性があります。
+Azure Information Protection 監査パイプラインに送信されたイベントは、 https://portal.azure.com にあるレポートに表示されます。 
 
 ## <a name="next-steps"></a>次の手順
 
-Azure Information Protection の監査エクスペリエンスの詳細については、[Tech Community でのプレビューのお知らせ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)に関するブログ記事を参照してください。
+Azure Information Protection の監査エクスペリエンスの詳細については、 [Tech Community のプレビュー発表のブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)を参照してください。

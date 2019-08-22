@@ -5,18 +5,18 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/16/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: cc35475086de76b869428c62cfc35e73fc3060db
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184928"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886186"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Microsoft Information Protection SDK - ポリシー ハンドラーの概念
 
-API では、ポリシー、`mip::PolicyHandler`ポリシーのアクションを計算し、監査イベントを送信するために使用する操作を公開します。
+ポリシー API では、 `mip::PolicyHandler`は、ポリシーアクションを計算し、監査イベントを送信するために使用される操作を公開します。
 
 ## <a name="policy-handler-functions"></a>ポリシー ハンドラー関数
 
@@ -31,17 +31,18 @@ API では、ポリシー、`mip::PolicyHandler`ポリシーのアクション�
 
 `PolicyHandler` を作成するには、以下が必要です。
 
-- `PolicyProfile`
-- `PolicyProfile` に追加された `PolicyEngine`
-- `mip::PolicyHandler::Observer` を継承するクラス
+- `mip::MipContext`
+- `mip::PolicyProfile`
+- `mip::PolicyProfile` に追加された `mip::PolicyEngine`
+- を実装するクラス`mip::PolicyHandler::Observer`
 
 ## <a name="create-a-policy-handler"></a>ポリシー ハンドラーの作成
 
-ポリシー アクションを取得する際に必要な最初の手順は、`PolicyHandler` オブジェクトを作成することです。 このクラスは、特定のラベルを実行する必要がありますアクションの一覧を取得するために必要な機能を実装します。 監査イベントをトリガーする関数も実装します。
+ポリシー アクションを取得する際に必要な最初の手順は、`PolicyHandler` オブジェクトを作成することです。 このクラスは、特定のラベルが受け取る必要のあるアクションの一覧を取得するために必要な機能を実装します。 また、監査イベントをトリガーする関数も実装します。
 
 `PolicyHandler` の作成は、promise/future パターンを使用して `PolicyEngine` の `CreatePolicyHandlerAsync` 関数を呼び出すのと同じくらい簡単です。
 
-`CreatePolicyHandlerAsync` で受け入れられるパラメーターは **isAuditDiscoveryEnabled** が 1 つです。 監査ログにおいてアプリケーションでハートビート イベントを表示する必要がある場合は、この値を **true** に設定します。
+`CreatePolicyHandlerAsync` で受け入れられるパラメーターは **isAuditDiscoveryEnabled** が 1 つです。 アプリケーションでハートビートイベントと検出イベントを監査ログに記録する必要がある場合は、この値を**true**に設定します。
 
 > [!NOTE]
 > `mip::PolicyHandler::Observer` クラスは派生クラスで実装する必要があります。これは、`CreatePolicyHandler` に `Observer` オブジェクトが必要であるためです。 
@@ -57,7 +58,7 @@ auto handler = createPolicyHandlerFuture.get();
 
 ## <a name="next-steps"></a>次の手順
 
-これで、ポリシーのハンドラーの作成について説明しました。
+これで、ポリシーハンドラーの作成について学習できました。
 
-- について説明する方法[実行状態クラスを作成する](concept-handler-policy-executionstate-cpp.md)コンピューティングのアクションの決定に使用されます。
-- ダウンロード、[ポリシー API のサンプルを GitHub ポリシー API を試すから](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- [実行状態クラスを作成](concept-handler-policy-executionstate-cpp.md)する方法について説明します。このクラスは、コンピューティングアクションを決定するために使用されます。
+- [GitHub からポリシー Api サンプルをダウンロードし、ポリシー api を試す](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

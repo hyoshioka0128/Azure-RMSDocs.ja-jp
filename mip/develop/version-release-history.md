@@ -1,5 +1,5 @@
 ---
-title: Microsoft Information Protection (MIP) SDK のバージョン リリース履歴とサポート ポリシー
+title: Microsoft Information Protection (MIP) SDK バージョンリリース履歴とサポートポリシー
 description: Microsoft Information Protection (MIP) SDK クライアント アプリケーションの初期化ロジックを記述する方法を示すクイック スタートです。
 author: msmbaldwin
 ms.service: information-protection
@@ -8,80 +8,89 @@ ms.collection: M365-security-compliance
 ms.date: 01/08/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 9f02d682164dac8ee28ed023dd7b21b53937f4bb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c2a5d89bf318d9e685d00033ba3ad53915659cdb
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184220"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882666"
 ---
-# <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK のバージョン リリース履歴とサポート ポリシー
+# <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK バージョンリリース履歴とサポートポリシー
 
 ## <a name="servicing"></a>サービス 
 
-各一般 (公開 GA) バージョンは、次の GA バージョンがリリース後 6 か月間でサポートされています。 ドキュメントは、サポートされていないバージョンに関する情報を含まない場合があります。 修正プログラムおよび新しい機能は最新の GA バージョンにのみ適用されます。
+各一般公開 (GA) バージョンは、次の GA バージョンがリリースされると6か月間サポートされます。 ドキュメントには、サポートされていないバージョンに関する情報が含まれない場合があります。 修正プログラムと新機能は、最新の GA バージョンにのみ適用されます。
 
-プレビュー バージョンは、運用環境にデプロイしないでください。 代わりに、最新のプレビュー バージョンを使用して、新しい機能や、次の GA バージョンで予定されている修正プログラムをテストします。 最新のプレビュー バージョンのみがサポートされています。
+プレビューバージョンを運用環境にデプロイすることはできません。 代わりに、最新のプレビューバージョンを使用して、次の GA バージョンに含まれる新しい機能や修正をテストします。 最新のプレビューバージョンのみがサポートされています。
 
 ## <a name="release-history"></a>リリース履歴
 
-次の情報を使用すると、新機能やサポートされているリリースの変更を参照してください。 最新のリリースは一番上に表示されます。 
+サポートされているリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。 
 
 > [!NOTE]
-> 細かい修正点は記載されていないので修正のかどうかを確認することをお勧め、SDK に問題が発生した場合、最新の GA リリースでします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
+> マイナー修正は記載されていないので、SDK に問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
 >  
-> テクニカル サポートは、次を参照してください、 [Stack Overflow Microsoft Information Protection のフォーラム](https://stackoverflow.com/questions/tagged/microsoft-information-protection)します。 
+> テクニカルサポートについては、 [Stack Overflow Microsoft Information Protection フォーラム](https://stackoverflow.com/questions/tagged/microsoft-information-protection)を参照してください。 
 
-## <a name="version-110"></a>バージョン 1.1.0
+
+## <a name="version-130"></a>バージョン1.3.0
 
 **リリース日**:TBD
 
-このバージョンには、次のプラットフォームのサポートが導入されています。
+## <a name="version-120"></a>バージョン1.2.0
+
+**リリース日**:2019年4月15日
+
+## <a name="version-110"></a>バージョン1.1.0
+
+**リリース日**:2019年1月15日
+
+このバージョンでは、次のプラットフォームのサポートが導入されています。
 
   - .NET
-  - iOS SDK (API のポリシー)
-  - Android SDK (API と API の保護のポリシー)
+  - iOS SDK (ポリシー API)
+  - Android SDK (ポリシー API と保護 API)
 
 **新機能:**
 
-- ADRMS サポート
-- 保護 API 操作が (Win32)、真に非同期で同時に非ブロッキング暗号化/暗号解除の操作のことができます
-  - アプリケーションのコールバック (authdelegate:、HTTPDelegate など) を呼び出すようになりましたが*任意*バック グラウンド スレッド
-- Mip::Label::GetCustomSettings で、IT 管理者によって設定されるカスタム ラベルのプロパティを読み取るようになりましたことができます。
-- シリアル化された発行ライセンスを mip::FileHandler::GetSerializedPublishingLicense 経由で任意の HTTP 操作なしのファイルから直接取得できるようになりました
-- アプリケーションは、mip::FileEngine/mip::PolicyEngine mip::FileProfile::Observer::OnAddPolicyEngineStarting 経由での作成を完了する HTTP 操作が必要かどうかが通知/mip::PolicyProfile::Observer::OnAddEngineStarting
-- 便利なメソッド mip::ProtectionDescriptor::DoesContentExpire で保護されたコンテンツが有効期限の日付にするかどうかどうかの検出が簡略化されました
-- 分類:
-  - 機密の種類 (正規表現の式の CC # の passport # など) SCC サービスから取得できます
-    - Mip::FileEngine::Settings を設定して機能を有効にする::settings フラグ/
-    - Mip::FileEngine::ListSensitivityTypes を使用して型を読み取る/mip::PolicyEngine::ListSensitivityTypes
-  - ドキュメントの外部スキャナー ユーティリティから分類結果は、ドキュメントの内容を基に推奨される必要なラベルをドライブに MIP に取り込むことができます。
-    - MIP に mip::FileExecutionState::GetClassificationResults を使用して結果を渡す/mip::ExecutionState::GetClassificationResults
-    - 分類の結果に必要な推奨ラベルを示すポリシー ルールが一致する場合、mip::ApplyLabelAction と mip::RecommendLabelAction を mip::PolicyEngine::ComputeActions によって返されることができます。
+- ADRMS のサポート
+- 保護 API の操作は (Win32 上で) 真の非同期であり、非ブロッキングの暗号化/復号化操作を同時に行うことができます。
+  - バックグラウンドスレッドでアプリケーションコールバック (AuthDelegate、HTTPDelegate など) を呼び出すことができるようになりました
+- IT 管理者によって設定されたカスタムラベルのプロパティを mip:: Label:: GetCustomSettings を使用して読み取ることができるようになりました。
+- シリアル化された発行ライセンスをファイルから直接取得できるようになりました。 mip:: FileHandler:: GetSerializedPublishingLicense を使用して HTTP 操作を行う必要はありません。
+- Mip:: Fileengine:: Observer:: OnAddPolicyEngineStarting/mip::P Olicyengine:: Observer:: OnAddEngineStarting を使用して mip:: FileEngine/mip::P olicyEngine の作成を完了するために HTTP 操作が必要かどうかがアプリケーションに通知されます。
+- 保護されたコンテンツの有効期限が切れているかどうかを検出します。また、便宜的な方法 mip::P rotectionDescriptor::D oesContentExpire 切れ
+- 分類
+  - 秘密度の種類 (CC # の、passport # などの正規表現式) は、SCC サービスから取得できます。
+    - Mip:: FileEngine:: Settings/mip::P olicyEngine:: Settings フラグを設定して機能を有効にします
+    - Mip:: FileEngine:: ListSensitivityTypes/mip::P olicyEngine:: ListSensitivityTypes を使用した型の読み取り
+  - 外部ドキュメントスキャナーユーティリティからの分類の結果を MIP に渡すことで、ドキュメントの内容に基づいて推奨されるラベルや必要なラベルを作成できます。
+    - Mip:: FileExecutionState:: GetClassificationResults/mip:: ExecutionState:: GetClassificationResults を使用して結果を MIP に渡します
+    - mip:: ApplyLabelAction および mip:: RecommendLabelAction は mip::P olicyEngine:: ComputeActions によって返されます。分類の結果が、必須ラベルまたは推奨ラベルを示すポリシールールと一致する場合に使用します。
 
 - 新しい要件:
-  - ID/名前/バージョン フィールド mip::ApplicationInfo mip::FileProfile、mip::PolicyProfile、および mip::ProtectionProfile を作成するときの強制の作成
-  - Mip::FileHandlers を作成するときに、アプリケーションは新しい mip::FileExecutionState インターフェイスを実装する必要があります。
+  - Mip:: FileProfile、mip::P olicyProfile、mip::P rotectionProfile を作成するときに、ID/名前/バージョンフィールド mip:: ApplicationInfo を強制的に作成します
+  - Mip:: Fileハンドラを作成するときは、アプリケーションで新しい mip:: FileExecutionState インターフェイスを実装する必要があります
   
-- 更新された例外処理:
-  - アプリケーションの authdelegate: (キャンセル) により空のトークンを返す場合にスローされる mip::NoAuthTokenError
-    - 作成に適用されます。
-      - mip::FileEngine
-      - mip::FileHandler
-      - mip::PolicyEngine
-      - mip::ProtectionHandler
-  - mip::NoPolicyError ラベルのテナントが構成されていない場合にスローされます。
-    - 作成に適用されます。
-      - mip::FileEngine
-      - mip::PolicyEngine
-  - mip::ServiceDisabledError RMS サービスが特定のユーザー/デバイス/プラットフォーム/テナントで無効になっている場合にスローされます。
-    - 作成に適用されます。
-      - mip::FileHandler
-      - mip::ProtectionHandler
-  - ユーザーがドキュメントまたはコンテンツを復号化する権限を持っていない場合にスロー mip::NoPermissionsError の期限が切れています
-    - 作成に適用されます。
-      - mip::FileHandler
-      - mip::ProtectionHandler
+- 更新された例外:
+  - mip:: NoAuthTokenError がスローされました (キャンセルにより、アプリケーションの AuthDelegate から空のトークンが返された場合)
+    - 次の作成に適用されます:
+      - mip:: FileEngine
+      - mip:: FileHandler
+      - mip::P olicyEngine
+      - mip::P rotectionHandler
+  - mip:: NoPolicyError が、テナントがラベルに対して構成されていない場合にスローされる
+    - 次の作成に適用されます:
+      - mip:: FileEngine
+      - mip::P olicyEngine
+  - 特定のユーザー/デバイス/プラットフォーム/テナントに対して RMS サービスが無効になっている場合、mip:: ServiceDisabledError がスローされる
+    - 次の作成に適用されます:
+      - mip:: FileHandler
+      - mip::P rotectionHandler
+  - mip:: NoPermissionsError は、ユーザーがドキュメントの暗号化を解除する権限を持っていないか、コンテンツの有効期限が切れている場合にスローされます。
+    - 次の作成に適用されます:
+      - mip:: FileHandler
+      - mip::P rotectionHandler
 
 **修正内容**:
 
@@ -89,5 +98,5 @@ TBD
 
 ## <a name="next-steps"></a>次の手順
 
-- 参照してください[MIP SDK よく寄せられる質問と問題](faqs-known-issues.md)サポートされているプラットフォームと詳細について。
-- 参照してください[MIP SDK のセットアップと構成](setup-configure-mip.md)MIP SDK を使用する方法について。
+- サポートされているプラットフォームなどの詳細については[、MIP SDK に関する faq と問題](faqs-known-issues.md)を参照してください。
+- MIP SDK の使用を開始する方法については、「 [MIP sdk のセットアップと構成](setup-configure-mip.md)」を参照してください。

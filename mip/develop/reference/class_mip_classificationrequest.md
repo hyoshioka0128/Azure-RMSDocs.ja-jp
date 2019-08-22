@@ -1,27 +1,26 @@
 ---
-title: mip::ClassificationRequest をクラスします。
-description: Mip::classificationrequest クラスの Microsoft Information Protection (MIP) SDK について説明します。
-author: msmbaldwin
+title: 'クラス mip:: ClassificationRequest'
+description: 'Microsoft Information Protection (MIP) SDK の mip:: classificationrequest クラスについて説明します。'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3fddd870b6aebb9f5209fc43160c32d87b1d7129
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 1966123c8a0975ea42aa119883cabd47db594bc4
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184758"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884487"
 ---
-# <a name="class-mipclassificationrequest"></a>mip::ClassificationRequest をクラスします。 
-実行状態の分類の呼び出しの要求を含むクラスです。
+# <a name="class-mipclassificationrequest"></a>クラス mip:: ClassificationRequest 
+実行状態に対する分類呼び出しの要求を含むクラス。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>Summary
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string GetClassificationId() const  |  分類ポリシーの ID を取得します。
-public std::string GetRulePackageId() const  |  ルールのパッケージの ID を取得します。
+public std::string GetRulePackageId() const  |  ルールパッケージの ID を取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -29,10 +28,10 @@ public std::string GetRulePackageId() const  |  ルールのパッケージの I
 分類ポリシーの ID を取得します。
 
   
-**返します**:分類ポリシーの ID。
+次の**値を返し**ます。分類ポリシーの ID。
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId 関数
-ルールのパッケージの ID を取得します。
+ルールパッケージの ID を取得します。
 
   
-**返します**:ルールのパッケージの ID。 事前構築済みの分類は、空の guid に設定されます。
+次の**値を返し**ます。規則パッケージの ID。 事前構築済みの分類は空の guid に設定されます。
