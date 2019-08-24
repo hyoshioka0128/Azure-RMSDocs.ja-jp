@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
-ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
+ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
+ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894460"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999214"
 ---
 # <a name="release-notes"></a>リリース ノート
 
@@ -30,7 +30,9 @@ ms.locfileid: "69894460"
 - ファイル API が更新され、コンテンツの復号化時に抽出権限ではなく、エクスポート権限がチェックされるようになりました。
 - インストーラーを修正して、アップグレード時に新しい PDF v2 プロテクターが確実にインストールされるようにしました。
 - テレメトリの変更。 この変更には、C ランタイムライブラリをインストールするインストールパッケージの更新が必要でした。
-- サービスバックエンドの認証の変更です。中断を最小限に抑えるには、この SDK バージョンに更新してください
+- アプリケーションで対称キー認証を使用している場合、サービスバックエンドの認証の変更、# # # # # #please この SDK のバージョンに対する更新によって中断が発生します。
+- VC 15.9 のサポート
+
 
 ## <a name="october-2017---update"></a>2017 年 10 月の更新
 
