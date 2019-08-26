@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
-ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
+ms.openlocfilehash: f60c1bdc8dabd586e96c758afe1f93f46d6afb16
+ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584612"
+ms.lasthandoff: 08/25/2019
+ms.locfileid: "70017660"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -773,11 +773,9 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 同じラベルに対して複数のルールが必要な場合は、同じキーに対して複数の文字列値を定義します。 
 
-この例では:
+この例では、"Confidential" と "Secret" という名前のセキュリティ保護された諸島ラベルが "**分類**" という名前のカスタムプロパティに格納されていて、Azure Information Protection 統合ラベル付けクライアントに "" という名前の秘密度ラベルを適用します。社外秘 ":
 
-- "Confidential" と "Secret" という名前のセキュリティで保護された諸島ラベルは、* * 分類という名前のカスタムプロパティに格納されます。 Azure Information Protection 統合ラベル付けクライアントは、"Confidential" という名前の秘密度ラベルを適用します。
-
-    Set-Label-Identity Confidential-Advanced Settings @ {labelByCustomProperties = Convertto-html ("社外秘ラベル、分類、機密情報の移行"、"シークレットラベルの移行、分類、シークレット")}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>ラベルの移行ルールを電子メールに拡張する
 
