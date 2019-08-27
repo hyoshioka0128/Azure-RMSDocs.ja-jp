@@ -33,6 +33,10 @@
   items:
     - name: API
       href: concept-apis-use-cases.md
+    - name: MipContext オブジェクトの概念
+      href: concept-mipcontext.md
+    - name: キャッシュ ストレージ
+      href: concept-cache-storage.md
     - name: プロファイルとエンジン (C++)
       items:
         - name: プロファイルとエンジンのオブジェクトの概念
@@ -93,7 +97,7 @@
           href: concept-async-observers-policy-cpp.md
         - name: 保護 API オブザーバー (C++)
           href: concept-async-observers-protection-cpp.md
-- name: リファレンス
+- name: 参照先
   items:
     - name: C++ ライブラリ
       items:
@@ -139,7 +143,7 @@
               href: reference/class_mip_contentlabel.md
             - name: CustomAction
               href: reference/class_mip_customaction.md
-            - name: エラー
+            - name: Error
               href: reference/class_mip_error.md
             - name: ExecutionState
               href: reference/class_mip_executionstate.md
@@ -267,7 +271,7 @@
               href: reference/class_mip_userroles.md
     - name: .NET API ブラウザー
       href: /dotnet/api/?term=microsoft.informationprotection
-- name: リソース
+- name: 参照情報
   items:
     - name: 開発者のブログ
       href: 'https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers'
