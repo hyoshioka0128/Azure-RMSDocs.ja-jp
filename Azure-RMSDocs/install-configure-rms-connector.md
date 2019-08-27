@@ -4,7 +4,7 @@ description: Azure Rights Management (RMS) コネクタをインストールし�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 83193a4f84df3d56129030676d79c20ea3dfe666
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fef260a3cadfc2ffdc7748e7be058c250db22a3a
+ms.sourcegitcommit: 923227861c00beabb7ed997ef7cba47f06facc94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794042"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027430"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -57,7 +57,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 ## <a name="entering-credentials"></a>資格情報の入力
 RMS コネクタを構成する前に、RMS コネクタを構成するのに十分な特権を持つアカウントの資格情報を入力する必要があります。 たとえば、「<strong>admin@contoso.com</strong>」と入力してから、このアカウントのパスワードを指定します。
 
-このアカウントの多要素認証 (MFA) は Microsoft Rights Management 管理ツールでサポートされていないため、このアカウントでは MFA を使用できません。 
+このアカウントの多要素認証 (MFA) は Microsoft Rights Management 管理ツールでサポートされていないため、このアカウントでは MFA を使用できません。 また、Azure AD 条件付きアクセスを使用する場合は、このアカウントの[レガシ認証をブロック](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication)しないでください。
 
 また、コネクタには、このパスワードに文字の制限もあります。 次の文字のいずれかを含むパスワードは使用できません。アンパサンド ( **&** )、左山かっこ ( **[** )、右山かっこ ( **]** )、二重引用符 ( **"** )、アポストロフィ ( **'** )。 パスワードにこのいずれかの文字が含まれる場合は、他の状況でこのアカウントとパスワードを使用して正常にサインインできたとしても、RMS コネクタの認証は失敗し、 **[このユーザー名とパスワードの組み合わせは正しくありません]** というエラー メッセージが表示されます。 このシナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
 
