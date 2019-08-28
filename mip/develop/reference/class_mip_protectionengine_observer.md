@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionEngine::Observer
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionengine クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 7873ed66eb131e3d551c19fb103eb04f9279dc54
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 8985b5646849338213855017da042538a27c935b
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883461"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057634"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
 [ProtectionEngine](class_mip_protectionengine.md) に関連する通知を受け取るインターフェイス。

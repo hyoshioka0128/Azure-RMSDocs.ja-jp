@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: NoPermissionsError'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: nopermissionserror クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: eb1b124b1b50a402b018763d96321c9e941e0ef1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: ca81d5a51bd79860884ff60906103663e49a9005
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885336"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055852"
 ---
 # <a name="class-mipnopermissionserror"></a>クラス mip:: NoPermissionsError 
 ユーザーがコンテンツにアクセスできませんでした。 例: アクセス許可がない、コンテンツが取り消された。

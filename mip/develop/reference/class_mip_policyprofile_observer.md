@@ -1,17 +1,17 @@
 ---
 title: class mip::PolicyProfile::Observer
 description: Microsoft Information Protection (MIP) SDK の mip::p olicyprofile クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 09c7203ed023a07bc25dcca382ad04799ae17783
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 1315f4c1289c63184b8fa029b3668b363b88b143
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885195"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054200"
 ---
 # <a name="class-mippolicyprofileobserver"></a>class mip::PolicyProfile::Observer 
 クライアントがプロファイル関連のイベントに関する通知を取得するための [Observer](class_mip_policyprofile_observer.md) インターフェイス。

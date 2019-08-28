@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: Operationcancel-Error'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: operationcancel/error クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 08e185ba2e196120270a4dd87528e0bd93b1eb2f
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: d6f63dddf2c7f138e2debf01eb06f0346a63c104
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885308"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054221"
 ---
 # <a name="class-mipoperationcancellederror"></a>クラス mip:: Operationcancel-Error 
 操作が取り消されました。

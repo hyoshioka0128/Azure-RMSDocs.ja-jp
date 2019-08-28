@@ -1,17 +1,17 @@
 ---
 title: class mip::RecommendLabelAction
 description: 'Microsoft Information Protection (MIP) SDK の mip:: recommendlabelaction クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: dd3d2d0ecf7b549105e1a6373a998e77d4e77de8
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: a36158153216a0e8fe2324580256cb61ec708dbc
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883208"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057353"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 このアクションの目的は、ユーザーにラベルを提案することです。 ユーザーが推奨ラベルを無視した後にこの呼び出しを抑制する場合、実行状態のサポートされるアクションを使用して行う必要があります。

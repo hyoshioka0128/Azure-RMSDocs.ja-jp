@@ -1,17 +1,17 @@
 ---
 title: class mip::RemoveProtectionAction
 description: 'Microsoft Information Protection (MIP) SDK の mip:: removeprotectionaction クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: d8ff940b2a452d1bdeab8d50af51d94d68df44f1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: cb07bca0e88346cf76016d24f860492965a08cf0
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883174"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057265"
 ---
 # <a name="class-mipremoveprotectionaction"></a>class mip::RemoveProtectionAction 
 ドキュメントからの保護の削除を指定するアクション クラス。

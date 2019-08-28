@@ -1,17 +1,17 @@
 ---
 title: class mip::FileHandler
 description: 'Microsoft Information Protection (MIP) SDK の mip:: filehandler クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: a75187820cea8b806a65eebea937ed091f0c62e0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 93e4ed2210632a051bc9e1aaa06069d246860041
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884316"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055017"
 ---
 # <a name="class-mipfilehandler"></a>class mip::FileHandler 
 すべてのファイル処理関数のインターフェイス。
@@ -25,6 +25,7 @@ public void classid (const std:: shared_ptr\<void\>& context)  |  ハンドラ�
 public void InspectAsync (const std:: shared_ptr\<void\>& context)  |  互換性のあるファイル形式からファイルの内容を取得するために使用するファイルインスペクタオブジェクトを作成します。
 public void setlabel (const std:: shared_ptr\<ラベル\>& Label、const labelingoptions & labelingoptions、const protectionsettings & protectionsettings)  |  機密ラベルをファイルに設定します。
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  ファイルから機密ラベルを削除します。
+static bool isprotected (const std:: string & filePath、const std:: shared_ptr<MipContext>& mipContext) | ファイルが保護されているかどうかを確認します。
 public void setprotection (const std:: shared_ptr\<protectiondescriptor\>& protectiondescriptor、const protectiondescriptor & protectiondescriptor)  |  カスタムまたはテンプレート ベースのアクセス許可 (protectionDescriptor->GetProtectionType に従う) のいずれかをファイルに設定します。
 public void RemoveProtection()  |  ファイルから保護を削除します。 ファイルにラベルが付いている場合、ラベルは失われます。
 public void commitasync (const std:: string & outputfilepath、const std:: shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  パラメーターを使用して指定します。
@@ -62,6 +63,10 @@ CommitAsync が呼び出されるまで、変更はファイルに書き込ま�
 ファイルから機密ラベルを削除します。
 CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。 Privileged および Auto メソッドでは、既存のラベルを API でオーバーライドできます。ラベルの設定に labelingOptions パラメーターを介して正当性を示す操作が必要な場合は、[JustificationRequiredError](class_mip_justificationrequirederror.md) をスローします。
   
+
+### <a name="isprotected-function"></a>IsProtected 関数
+ファイルが保護されているかどうかを確認します。
+
 ### <a name="setprotection-function"></a>SetProtection 関数
 カスタムまたはテンプレート ベースのアクセス許可 (protectionDescriptor->GetProtectionType に従う) のいずれかをファイルに設定します。
 CommitAsync が呼び出されるまで、変更はファイルに書き込まれません。

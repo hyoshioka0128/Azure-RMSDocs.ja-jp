@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: SyncFileBaseData'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: syncfilebasedata クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 4f48bef8b16f4b64142f55ad0d179cb4ea6caf3d
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: b8c78bcaf54a3b0ff735450897bce8adc8351b1c
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892598"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056684"
 ---
 # <a name="class-mipsyncfilebasedata"></a>クラス mip:: SyncFileBaseData 
   

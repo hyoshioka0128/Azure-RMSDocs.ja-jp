@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip::P rotectionHandler:: ConsumptionSettings'
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 259c29cb0da2635bc1aa8973b5e975e526fb81b3
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: d99b7c3468cc98ad655e41bdd2aaa771a287aca2
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893142"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057567"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>クラス mip::P rotectionHandler:: ConsumptionSettings 
 既存のコンテンツを使用する[Protectionhandler](class_mip_protectionhandler.md)を作成するために使用される設定。

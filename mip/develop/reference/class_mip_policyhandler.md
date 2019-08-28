@@ -1,17 +1,17 @@
 ---
 title: class mip::PolicyHandler
 description: Microsoft Information Protection (MIP) SDK の mip::p olicyhandler クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 7185af867a94e4b72663f818d5d1f7233e4219b3
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 58186e1b445bdfc6d1d3d1ebfa2680697ab67404
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883798"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055767"
 ---
 # <a name="class-mippolicyhandler"></a>class mip::PolicyHandler 
 このクラスは、ファイル上のすべてのポリシー ハンドラー関数にインターフェイスを提供します。

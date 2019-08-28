@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionHandler
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 306748121e34122a5623aea3e1d7ff4ba7f14787
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 28250cc27adeb18c2ca723084267341798f5efa7
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883421"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057590"
 ---
 # <a name="class-mipprotectionhandler"></a>class mip::ProtectionHandler 
 特定の保護構成のための保護に関連するアクションを管理します。

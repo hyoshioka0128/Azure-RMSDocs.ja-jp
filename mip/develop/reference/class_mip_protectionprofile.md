@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionProfile
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionprofile クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: cc69e167a5b5a8dc46157443c13d70732ace62c0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: aa660990885356f887bb310e7049d166e3bdc190
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883322"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057493"
 ---
 # <a name="class-mipprotectionprofile"></a>class mip::ProtectionProfile 
 [ProtectionProfile](class_mip_protectionprofile.md) は、保護操作を実行するためのルート クラスです。

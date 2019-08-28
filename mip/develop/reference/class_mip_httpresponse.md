@@ -1,17 +1,17 @@
 ---
 title: class mip::HttpResponse
 description: 'Microsoft Information Protection (MIP) SDK の mip:: httpresponse.cache クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 4d7711f755f4ffde923eb7d913abdb5bd2a905db
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 3fe574665d6a51c03135cf863fcec9d2106e549d
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884126"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056024"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
 [HttpDelegate](class_mip_httpdelegate.md) をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。

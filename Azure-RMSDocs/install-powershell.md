@@ -4,7 +4,7 @@ description: Azure Information Protection から保護サービス用の PowerSh
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/05/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5b97a4b474647a52948e9c41535e0fabb871c3c3
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 89820a815e664589051a91f273cb63280e70713a
+ms.sourcegitcommit: 72ae1f635e51ef6c6deb1833a30ff11e5918a3e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788449"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063729"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>AIPService PowerShell モジュールのインストール
 
@@ -25,7 +25,7 @@ ms.locfileid: "68788449"
 
 Azure Information Protection から保護サービス用の Windows PowerShell モジュールをインストールするには、次の情報を参照してください。 このモジュールの名前は AIPService で、AADRM という名前の以前のバージョンと置き換えられます。
 
-この PowerShell モジュールを使用すると、インターネットに接続され、次のセクションに記載されている前提条件を満たす任意のコンピューターを使用して、コマンドラインから保護サービス (Azure Rights Management) を管理できます。 Azure Information Protection 用の Windows PowerShell は、自動化のためのスクリプトをサポートするか、高度な構成シナリオで必要になる場合があります。 モジュールでサポートされている管理タスクと構成の詳細については、「 [PowerShell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)」を参照してください。
+この PowerShell モジュールを使用すると、インターネットに接続され、次のセクションに記載されている前提条件を満たす任意の Windows コンピューターを使用して、コマンドラインから保護サービス (Azure Rights Management) を管理できます。 Azure Information Protection 用の Windows PowerShell は、自動化のためのスクリプトをサポートするか、高度な構成シナリオで必要になる場合があります。 モジュールでサポートされている管理タスクと構成の詳細については、「 [PowerShell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 次の表に、Azure Information Protection から保護サービス用の AIPService PowerShell モジュールをインストールして使用するための前提条件を示します。

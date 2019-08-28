@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: AuthDelegate:: OAuth2Token'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: authdelegate クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: b7b9b73d9f1f3952af1d6a9bdea94c75a8032fb7
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 93c73f632410bf6b1c6898746d1fcbd2c4f67e72
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885901"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056249"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>クラス mip:: AuthDelegate:: OAuth2Token 
 Mipmap SDK が oauth2 トークンを SDK に渡すことを要求する方法を定義するクラス。

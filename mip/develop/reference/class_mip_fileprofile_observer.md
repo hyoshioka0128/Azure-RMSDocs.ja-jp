@@ -1,17 +1,17 @@
 ---
 title: class mip::FileProfile::Observer
 description: 'Microsoft Information Protection (MIP) SDK の mip:: fileprofile クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: fd7c1d1fba060c8b3ff0ea5dbf605568a68ad1e0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: fef75e5990a89a5a52dd1810bc15b62d1d82171b
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885619"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054904"
 ---
 # <a name="class-mipfileprofileobserver"></a>class mip::FileProfile::Observer 
 クライアントがプロファイル関連のイベントに関する通知を取得するための [Observer](class_mip_fileprofile_observer.md) インターフェイス。

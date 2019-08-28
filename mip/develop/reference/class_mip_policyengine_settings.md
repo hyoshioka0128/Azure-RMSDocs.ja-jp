@@ -1,17 +1,17 @@
 ---
 title: class mip::PolicyEngine::Settings
 description: Microsoft Information Protection (MIP) SDK の mip::p olicyengine クラスについて説明します。
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: d4eef1af6e738e7fbd2c33e961dcbffca8781924
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: db96d00d268158b072d2052a5e98f39bf0efa425
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885284"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054313"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
 [PolicyEngine](class_mip_policyengine.md) に関連付けられている設定を定義します。
