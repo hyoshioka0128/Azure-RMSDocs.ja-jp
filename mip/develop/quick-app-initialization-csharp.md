@@ -5,14 +5,14 @@ author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 156d7bb4c41a6ce593e66add3aea0a290a9b73ac
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184986"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886014"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -34,16 +34,16 @@ ms.locfileid: "60184986"
 
 まず、その他のクイック スタートをビルドする対象の初期の Visual Studio ソリューションを作成して構成します。
 
-1. Visual Studio 2017 を開いて、**[ファイル]** メニュー、**[新規]**、**[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
-   - 左側のウィンドウの **[インストール済み]**、**[Visual C#]** の下で **[Windows Desktop]** を選択します。
-   - 中央のウィンドウで、**[コンソール アプリ (.NET Framework)]** を選択します。
-   - 下のウィンドウで、プロジェクトの **[名前]**、**[場所]**、およびそれに応じて含める **[ソリューション名]** を更新します。
+1. Visual Studio 2017 を開いて、 **[ファイル]** メニュー、 **[新規]** 、 **[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
+   - 左側のウィンドウの **[インストール済み]** 、 **[Visual C#]** の下で **[Windows Desktop]** を選択します。
+   - 中央のウィンドウで、 **[コンソール アプリ (.NET Framework)]** を選択します。
+   - 下のウィンドウで、プロジェクトの **[名前]** 、 **[場所]** 、およびそれに応じて含める **[ソリューション名]** を更新します。
    - 完了したら、右下の **[OK]** ボタンをクリックします。 
 
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、**[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -58,7 +58,7 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
 
 SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイスを拡張し、`IAuthDelegate.AcquireToken()` 仮想関数をオーバーライド/実装することで、認証の委任に対して実装を作成します。 この認証の委任はインスタンス化され、`FileProfile` オブジェクトと `FileEngine` オブジェクトによって後で使用されます。
 
-1. Visual Studio でプロジェクト名を右クリックし、**[追加]**、**[クラス]** の順に選択します。
+1. Visual Studio でプロジェクト名を右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
 2. **[名前]** フィールドに「AuthDelegateImplementation」と入力します。 **[追加]** をクリックします。
 3. 次のように Active Directory Authentication Library (ADAL) と MIP ライブラリの using ステートメントを追加します。
 
@@ -81,15 +81,15 @@ SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイス
      }
      ```
 
-`ApplicationInfo` オブジェクトには 2 つのプロパティが含まれています。 `_appInfo.ApplicationId` は認証ライブラリにクライアント ID を提供するために `AuthDelegateImplementation` クラスで使用されます。
+`ApplicationInfo` オブジェクトには 3 つのプロパティが含まれています。 `_appInfo.ApplicationId` は認証ライブラリにクライアント ID を提供するために `AuthDelegateImplementation` クラスで使用されます。 `ApplicationName` と `ApplicationVersion` は Azure Information Protection Analytics レポートに表示されます。
 
-5. `public string AcquireToken()` メソッドを追加します。 このメソッドは `Microsoft.InformationProtection.Identity` と、機関とリソースという 2 つの文字列を受け入れる必要があります。 これらの文字列変数は API によって認証ライブラリに渡されるため、操作することはできません。 編集することで認証に失敗する可能性があります。
+5. `public string AcquireToken()` メソッドを追加します。 このメソッドには、`Microsoft.InformationProtection.Identity` と、必要に応じて 3 つの文字列: 権限 URL、リソース URI、および要求を指定することができます。 これらの文字列変数は API によって認証ライブラリに渡されるため、操作することはできません。 編集することで認証に失敗する可能性があります。
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource)
+     public string AcquireToken(Identity identity, string authority, string resource, string claims)
      {
           AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = authContext.AcquireTokenAsync(resource, _appInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Auto, null), UserIdentifier.AnyUser).Result;
+          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
           return result.AccessToken;
      }
      ```
@@ -98,7 +98,7 @@ SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイス
 
 SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイスを拡張し、`GetUserConsent()` をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意の委任によりサービスのアドレスが提供され、これを `url` パラメーターで使用することをユーザーが同意する必要があります。 委任では一般に、サービスへのアクセスに同意することをユーザーが許可/拒否できるようにするフローがいくつか提供されます。 このクイック スタートでは `Consent.Accept` をハードコーディングします。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。 
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。 
 
 2. ここで **ConsentDelegateImpl.cs** を更新して、新しい同意の委任クラスを実装します。 `Microsoft.InformationProtection` に using ステートメントを追加し、`IConsentDelegate` を継承するようにクラスを設定します。
 
@@ -120,15 +120,17 @@ SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイ
 
 2. 生成された `main()` の実装を削除します。 
 
-3. マネージド ラッパーには、初期化、プロファイルの読み込み、リソースのリリースに使用された静的クラス `Microsoft.InformationProtection.MIP` が含まれています。 ファイル API の操作のためにラッパーを初期化するには、MIP.Initialize を呼び出し、`MipComponent.File` で渡して、ファイル操作に必要なライブラリを読み込みます。 
+3. マネージド ラッパーには、初期化、`MipContext` の作成、プロファイルの読み込み、リソースのリリースに使用された静的クラス `Microsoft.InformationProtection.MIP` が含まれています。 ファイル API の操作のためにラッパーを初期化するには、`MIP.Initialize()` を呼び出し、`MipComponent.File` を渡して、ファイル操作に必要なライブラリを読み込みます。 
 
-4. *Program.cs* の `Main()` で次を追加し、**\<application-id\>** を前に作成した Azure AD アプリケーションの登録の ID と置き換えます。
+4. *Program.cs* の `Main()` で次を追加し、 **\<application-id\>** を前に作成した Azure AD アプリケーションの登録の ID と置き換えます。
 
 ```csharp
 using System;
 using System.Threading.Tasks;
 using Microsoft.InformationProtection;
+using Microsoft.InformationProtection.Exceptions;
 using Microsoft.InformationProtection.File;
+using Microsoft.InformationProtection.Protection;
 
 namespace mip_sdk_dotnet_quickstart
 {
@@ -150,6 +152,8 @@ namespace mip_sdk_dotnet_quickstart
 
 前述のように、MIP API を使用する SDK クライアントには、プロファイル オブジェクトとエンジン オブジェクトが必要です。 ネイティブの DLL を読み込んでプロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためのコードを追加することで、このクイック スタートのコード部分を完了します。
 
+
+
    ```csharp
 using System;
 using System.Threading.Tasks;
@@ -165,10 +169,10 @@ namespace mip_sdk_dotnet_quickstart
 
           static void Main(string[] args)
           {
-               //Initialize Wrapper for File API operations
+               // Initialize Wrapper for File API operations.
                MIP.Initialize(MipComponent.File);
 
-               //Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId
+               // Create ApplicationInfo, setting the clientID from Azure AD App Registration as the ApplicationId.
                ApplicationInfo appInfo = new ApplicationInfo()
                {
                     ApplicationId = clientId,
@@ -176,24 +180,40 @@ namespace mip_sdk_dotnet_quickstart
                     ApplicationVersion = "1.0.0"
                };
 
-               //Instatiate the AuthDelegateImpl object, passing in AppInfo. 
+               // Instantiate the AuthDelegateImpl object, passing in AppInfo.
                AuthDelegateImplementation authDelegate = new AuthDelegateImplementation(appInfo);
 
-               //Initialize and instantiate the File Profile
-               //Create the FileProfileSettings object
-               var profileSettings = new FileProfileSettings("mip_data", false, authDelegate, new ConsentDelegateImplementation(), appInfo, LogLevel.Trace);
+               MipContext mipContext = MIP.CreateMipContext(appInfo,
+                                        "mip_data",
+                                        LogLevel.Trace,
+                                        null,
+                                        null);
 
-               //Load the Profile async and wait for the result
+               // Initialize and instantiate the File Profile.
+               // Create the FileProfileSettings object.
+               // Initialize file profile settings to create/use local state.
+               var profileSettings = new FileProfileSettings(mipContext,
+                                        CacheStorageType.OnDiskEncrypted,
+                                        authDelegate,
+                                        new ConsentDelegateImplementation());
+
+               // Load the Profile async and wait for the result.
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
-               //Create a FileEngineSettings object, then use that to add an engine to the profile
+               // Create a FileEngineSettings object, then use that to add an engine to the profile.
                var engineSettings = new FileEngineSettings("user1@tenant.com", "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
+
+               // Application Shutdown
+               // handler = null; // This will be used in later quick starts.
+               fileEngine = null;
+               fileProfile = null;
+               mipContext = null;
           }
      }
 }
-``` 
+```
 
 3. 貼り付けたソース コードのプレースホルダー値を、次の値で置き換えます。
 
