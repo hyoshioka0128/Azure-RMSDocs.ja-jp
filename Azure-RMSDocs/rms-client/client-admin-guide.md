@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4162e3df46377a4de859d1bb2dce1363d7146d08
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0ec64a51d26543d0777bdab8180579793251b8fd
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793593"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159223"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -116,6 +116,9 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 **ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
 
 **[設定のリセット]** を選択すると、ユーザーがサインアウトした状態になり、現在ダウンロードされている Azure Information Protection ポリシーが削除され、Azure Rights Management サービスのユーザー設定がリセットされます。
+
+> [!NOTE]
+> クライアントで技術的な問題が発生した場合は、「[サポートオプションとコミュニティリソース](../information-support.md#support-options-and-community-resources)」を参照してください。
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>[設定のリセット] オプションの詳細
 

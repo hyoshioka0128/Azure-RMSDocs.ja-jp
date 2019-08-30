@@ -4,7 +4,7 @@ description: 現在の一般公開バージョンより古いバージョンの 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 128fa8111271d55f3386246687b53132fa37c659
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 47e345a82427ccdf3d8cf727dd205e9a00965323
+ms.sourcegitcommit: 16b1ae6d29c4bea3fc032c21e522b5dd14b59df5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054306"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70150217"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>以前のバージョンの Azure Information Protection スキャナーの展開
 
@@ -109,6 +109,21 @@ Sysadmin ロールが一時的に付与されていない場合は、スキャ�
 |スキャナーの構成用のユーザー アカウント |db_owner|
 
 通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 別々のアカウントを使用する場合は、両方に AzInfoProtectionScanner データベースの db_owner ロールが必要です。
+
+このデータベースに対してユーザーを作成し、db_owner 権限を付与するには、Sysadmin に次の SQL スクリプトを2回実行するように依頼します。 スキャナーを実行するサービスアカウントと、スキャナーをインストールして管理するための2回目の時間。 スクリプトを実行する前に、 *domain\user*を、サービスアカウントまたはユーザーアカウントのドメイン名とユーザーアカウント名に置き換えます。
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+
+補足:
+
+- スキャナーを実行するサーバーのローカル管理者である必要があります。
+- スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
+    
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+
+これらのアクセス許可を構成した後、スキャナーをインストールするときにエラーが表示される場合は、エラーを無視して、スキャナーサービスを手動で開始することができます。
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>制限: スキャナーのサービス アカウントに**ローカル ログオン**権限を付与できない
 

@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c855701b1fc8de2e3f9f458b2cd760a3abdd4b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb9f7319227ea95afce1251c2ccae979dd5c8468
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793224"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159200"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -93,11 +93,16 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
-既定では、[詳細を表示]**リンク**を[Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) web サイトに移動します。 ラベル管理ポータルでポリシー設定の1つとしてカスタムヘルプページに移動する独自の URL リンクを構成することができます。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。
+既定では、[詳細を表示]**リンク**を[Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) web サイトに移動します。 ラベル管理センターのポリシー設定の1つとして、カスタムヘルプページに移動する独自の URL リンクを構成することができます。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。
+
+**[問題の報告]** リンクは、[詳細設定](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)を指定した場合にのみ表示されます。 この設定を構成するときに、ヘルプ デスクの電子メール アドレスなどの HTTP リンクを指定します。 
 
 これらを Microsoft サポートに送信するように求められた場合は、**エクスポートログ**によって、Azure Information Protection 統合されたラベル付けクライアントのログファイルが自動的に収集され、アタッチされます。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
 
 **リセット設定**では、ユーザーをサインアウトし、現在ダウンロードされている機密ラベルとラベルポリシーを削除して、Azure Rights Management サービスのユーザー設定をリセットします。
+
+> [!NOTE]
+> クライアントで技術的な問題が発生した場合は、「[サポートオプションとコミュニティリソース](../information-support.md#support-options-and-community-resources)」を参照してください。
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>[設定のリセット] オプションの詳細
 

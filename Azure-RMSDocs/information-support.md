@@ -4,7 +4,7 @@ description: 管理者向けのリソース。新しいリリース、サポー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d29a8918244f1e3dcdf615d3959df2b3969ffb5f
-ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
+ms.openlocfilehash: 3e07a6b23e9b500953024cb953612d1a44cc3a0d
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68994454"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159152"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -89,7 +89,7 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 トラブルシューティング:
 
-- 機能について質問がある場合は: [よく寄せられる質問](faqs.md)のページで既に回答されているかどうかを確認してください。
+- 機能について質問がある場合は: [よく寄せられる質問](faqs.md)として質問が既に回答されているかどうかを確認します。
 
 - Azure Information Protection のサポートに関する声明について質問がある場合: 定期的に更新される[要件](requirements.md)の情報を参照してください。
 
@@ -97,7 +97,11 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 - オンプレミスのサーバー用に Rights Management コネクタをデプロイした場合: [監視](monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
 
-- Windows 用 Azure Information Protection クライアントについて: 管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照し、[サポートされているバージョン](./rms-client/client-version-release-history.md#servicing-information-and-timelines)を使用していることを確認してください。
+- Azure Information Protection クライアント:
+    
+    - 統一されたラベル付けクライアント:このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認してください。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
+    
+    - 従来のクライアント:このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/client-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認してください。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
 
 ### <a name="community-resources"></a>コミュニティ リソース
 
