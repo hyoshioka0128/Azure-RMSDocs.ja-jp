@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e8f2029122ba489aff6a0cf50e2d961ea28ed50e
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
+ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180662"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209268"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -148,7 +148,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 これらの言語の場合、メニューオプション、ダイアログボックス、および Azure Information Protection 統合ラベルクライアントからのメッセージは、ユーザーの言語で表示されます。 言語を検出するインストーラーが1つあるので、Azure Information Protection 統合されたラベル付けクライアントを別の言語用にインストールするために、追加の構成は必要ありません。 
 
-ただし、Azure Information Protection の統一されたラベル付けクライアントは、現在、ラベルに対して異なる言語をサポートしていません。 また、視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
+ただし、ラベルの名前と説明を指定した説明は、ラベル付けセンターでラベルを構成するときに自動的には変換されません。 ユーザーが好みの言語でラベルを表示できるようにするには、独自の翻訳を提供し、Office 365 Security & Compliance PowerShell を使用してラベルを[設定](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)し、 *LocaleSettings*パラメーターを使用してラベルを設定します。 視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
