@@ -163,7 +163,7 @@
                   href: migrate-portal.md
             - name: 言語の構成
               href: configure-policy-languages.md
-            - name: Office 365 にラベルを移行する
+            - name: 統合ラベルのアクティブ化
               href: configure-policy-migrate-labels.md
         - name: セキュリティで保護されたドキュメントのコラボレーションを構成する
           href: secure-collaboration-documents.md
