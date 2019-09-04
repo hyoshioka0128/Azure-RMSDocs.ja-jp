@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
-ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
+ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69650879"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214103"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -112,7 +112,7 @@ Azure Information Protection クライアントは、次のいずれかの Offic
 
 - Office Professional Plus 2010 Service Pack 2
 
-Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Azure Information Protection バーまたは Office リボンの **[保護]** ボタンでユーザーに表示されません。 
+Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Office リボンの Azure Information Protection バー、または **[保護]** ボタン (クラシッククライアント) または **[秘密度]** ボタン (統合ラベル付けクライアント) では表示されません。 
 
 Azure Information Protection クライアントは、同じコンピューター上で複数のバージョンの Office をサポートしていません。 これらのクライアントは、Office のユーザーアカウントの切り替えもサポートしていません。
 

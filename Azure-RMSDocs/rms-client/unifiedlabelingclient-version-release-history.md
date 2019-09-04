@@ -4,20 +4,20 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/06/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b38a46f02812e93f936d5e62276d34c10bdbb19d
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 614435c39458462449f71955215e9e6adef06754
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180628"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214082"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -43,7 +43,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 ### <a name="release-information"></a>リリース情報
 
-次の情報を使用して、Windows 用の Azure Information Protection 統合ラベルクライアントのサポートされているリリースの新機能と変更点を確認してください。 最新のリリースは一番上に表示されます。 
+次の情報を使用して、Windows 用の Azure Information Protection 統合ラベルクライアントのサポートされているリリースの新機能と変更点を確認してください。 最新のリリースは一番上に表示されます。 このページで使用される日付形式は、*月/日/年*です。
 
 > [!NOTE]
 > マイナー修正は記載されていないので、統一されたラベル付けクライアントで問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が引き続き発生する場合は、現在のプレビューバージョン (使用可能な場合) を確認します。
@@ -52,9 +52,21 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「[クライアントを比較](use-client.md#compare-the-clients)する」を参照してください。
 
+## <a name="version-22210"></a>バージョン2.2.21.0
+
+**リリース日**: 09/03/2019
+
+**関する**
+
+- 詳細設定の[Outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)を使用して Outlook に別の既定のラベルを設定し、指定したラベルにラベルポリシーのサブラベルがない場合は、ラベルが正しく適用されます。
+
+- Azure Information Protection クライアントが Office アプリで使用されている場合、シングルサインオン用に構成されていない Active Directory アカウントを持つユーザーには、Azure Information Protection の認証を求めるメッセージが表示されます。 正常に認証されると、クライアントのステータスが [オンライン] に正しく変更され、ラベル付け機能が有効になります。
+
 ## <a name="version-22190"></a>バージョン2.2.19.0
 
 **リリース日**: 08/06/2019
+
+03/03/2020 でサポート
 
 **関する**
 
@@ -66,7 +78,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 **リリース日**: 07/15/2019
 
-04/06/2020 でサポート
+02/06/2020 でサポート
 
 **新機能:**
 

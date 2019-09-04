@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v1client
-ms.reviewer: esaggese
+ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1bf26b600c5ea1ad4d1065b503ea25685fad0a0e
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: fd11916ceb130522bc031024aeeb24fdd20e1f0a
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978726"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214077"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
 
@@ -45,7 +45,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>サポートされなくなった一般提供のバージョン:
 
 |クライアントのバージョン|リリース日|
-|--------------|--------------------------|
+|--------------|-------------|
 |1.37.19.0|2018 年 9 月 17 日|
 |1.29.5.0|2018 年 6 月 26 日|
 |1.27.48.0|2018 年 5 月 30 日|
@@ -57,13 +57,15 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
+このページで使用される日付形式は、*月/日/年*です。
+
 6/2/2019 以降、Azure Information Protection のラベル付けサービスには、TLS 1.2 を使用する接続が必要です。
 
 1\.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0**は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
 
 ### <a name="release-history"></a>リリース履歴
 
-Windows 用 Azure Information Protection クライアントのサポートされるリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。 
+Windows 用 Azure Information Protection クライアントのサポートされるリリースの新機能と変更点については、次の情報を参照してください。 最新のリリースは一番上に表示されます。
 
 > [!NOTE]
 > 細かい修正点は記載されていないので、Azure Information Protection クライアントで問題が発生した場合は、最新の GA リリースで問題が修正されているかどうかを確認することをお勧めします。 問題が引き続き発生する場合は、現在のプレビューバージョン (使用可能な場合) を確認します。
