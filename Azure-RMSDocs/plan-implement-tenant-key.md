@@ -4,7 +4,7 @@ description: Azure Information Protection のルートキーをマイクロソ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48bd5775c1c3858ec2dac0412e4a02e7d2a2bd48
-ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
+ms.openlocfilehash: 5490122285549d3fd21ce63b8951cb09a1310f84
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820722"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800837"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -86,6 +86,8 @@ Azure Information Protection テナント キーとは
 > 追加の保護措置として、Azure Key Vault では北米、EMEA (ヨーロッパ、中東、アフリカ)、アジアなどの地域のデータ センターで独立したセキュリティ ドメインを使用しています。 また、Azure Key Vault では、Microsoft Azure Germany や Azure Government など、Azure のさまざまなインスタンスを使用します。 
 
 オプションとして、テナント キーの使用状況と使用時期を正確に把握するために Azure Information Protection のほぼリアルタイムの使用状況ログを使用することもできます。
+
+Azure Information Protection テナントキーの BYOK を使用する場合、信頼された発行ドメイン (TPD) をエクスポートすることはできません。 Azure Information Protection を使用しない場合でも、Azure Information Protection によって保護されていたコンテンツの暗号化を解除できる必要がある場合は、TPD が必要です。 適切な TPD を事前に作成してこのシナリオを準備するには、次の手順に従って、 [Azure Information Protection "Cloud Exit" プランを準備する方法](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)を参照してください。
 
 ### <a name="when-you-have-decided-your-tenant-key-topology"></a>テナント キー トポロジを決定した場合
 

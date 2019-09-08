@@ -4,7 +4,7 @@ description: Azure Information Protection からクラウドベースの保護�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c5e1234d1cba034f1e8ed21488a5b87dada4dcb
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792692"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800824"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Azure Information Protection の使用停止と非アクティブ化
 
@@ -28,12 +28,14 @@ Azure Information Protection から Azure Rights Management サービスを使�
 
 以前に保護されていたコンテンツに引き続きアクセスする必要がない場合、サービスを無効にして、Azure Information Protection のサブスクリプションの有効期限を終わらせることができます。 たとえば、これは、Azure Information Protection を運用環境にデプロイする前のテストが完了した場合も該当します。
 
-ただし、運用環境で Azure Information Protection を展開し、文書やメールを保護している場合、Azure Rights Management サービスを無効にする前に Azure Information Protection テナント キーのコピーを用意してください。 サービスの無効化後に Azure Rights Management で保護されていたコンテンツに引き続きアクセスできるように、サブスクリプションが期限切れになる前にキーのコピーを用意しておいてください。 BYOK (Bring Your Own Key) ソリューションを使用し、HSM で独自のキーを生成して管理している場合、Azure Information Protection テナント キーが既に与えられています。 ただし、そのキーが Microsoft により管理されていた場合 (既定) は、「[Azure Information Protection テナント キーに対する操作](operations-tenant-key.md)」に記載されたテナント キーのエクスポート手順を参照してください。
+ただし、運用環境および保護されたドキュメントと電子メールに Azure Information Protection をデプロイしている場合は、Azure を非アクティブ化する前に、Azure Information Protection テナントキーと適切な信頼された発行ドメイン (TPD) のコピーがあることを確認してください。Rights Management サービス。 サービスが非アクティブになった後に Azure Rights Management によって保護されていたコンテンツへのアクセスを保持できるように、サブスクリプションの有効期限が切れる前に、キーと TPD のコピーがあることを確認してください。 
+
+BYOK (Bring Your Own Key) ソリューションを使用し、HSM で独自のキーを生成して管理している場合、Azure Information Protection テナント キーが既に与えられています。 [今後のクラウド終了の準備](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)手順に従っている場合は、適切な TPD もあります。 ただし、テナントキーが Microsoft によって管理されている場合 (既定)、 [Azure Information Protection テナントキーの操作](operations-tenant-key.md)でテナントキーをエクスポートする手順に関する記事を参照してください。
 
 > [!TIP]
 > サブスクリプションの有効期限が切れた後も、延長された期間中、Azure Information Protection テナントでコンテンツを利用できます。 ただし、テナント キーをエクスポートすることはできなくなります。
 
-Azure Information Protection テナント キーがある場合は、オンプレミスで Rights Management (AD RMS) をデプロイし、信頼された発行ドメイン (TPD) としてテナント キーをインポートできます。 Azure Information Protection のデプロイは次の方法で使用停止できます。
+Azure Information Protection テナントキーと TPD がある場合は Rights Management オンプレミス (AD RMS) をデプロイし、信頼された発行ドメイン (TPD) としてテナントキーをインポートできます。 Azure Information Protection のデプロイは次の方法で使用停止できます。
 
 |条件|… 手順|
 |----------------------------|--------------|

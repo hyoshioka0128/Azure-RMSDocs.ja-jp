@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/01/2019
+ms.date: 09/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
-ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
+ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209268"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800798"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -69,8 +69,6 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 - PowerShell コマンドを使って、ドキュメントを分類 (および必要に応じて保護) するスクリプトを実行したい。
 
-- オンプレミスに格納されているファイルを検出、分類 (および必要に応じて保護) する、現在プレビュー中のサービスをテストします。
-
 - ファイルを表示するネイティブ アプリケーションがインストールされていないか、ドキュメントを開くことができない場合に、保護されているドキュメントを表示したい。
 
 Azure Information Protection 統合ラベル付けクライアント用の Office アドインを示す例。リボンに新しい **[秘密度]** ボタンが表示され、オプションの Azure Information Protection バーが表示されます。
@@ -114,7 +112,7 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - \\ *%LocalAppData%\Microsoft\MSIP\mipアプリ\>\mip\<*
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
