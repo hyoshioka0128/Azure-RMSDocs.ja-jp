@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
+ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800798"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808678"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -106,13 +106,15 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 - このオプションを使用するためにローカル管理者の権限は必要ありません。また、この操作はイベント ビューアーのログに記録されません。 
 
-- ファイルがロックされている場合を除き、この操作は、次の場所のすべてのファイルを削除します。 これらのファイルには、ラベル管理ポータルのクライアント証明書、保護テンプレート、秘密度ラベル、ポリシー、およびキャッシュされたユーザー資格情報が含まれます。 クライアント ログ ファイルは削除されません。
+- ファイルがロックされている場合を除き、この操作は、次の場所のすべてのファイルを削除します。 これらのファイルには、ラベル管理センターのクライアント証明書、保護テンプレート、秘密度ラベル、ポリシー、およびキャッシュされたユーザー資格情報が含まれます。 クライアント ログ ファイルは削除されません。
     
     - %LocalAppData%\Microsoft\DRM
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - \\ *%LocalAppData%\Microsoft\MSIP\mipアプリ\>\mip\<*
+    - \\ *%LocalAppData%\Microsoft\MSIP\mipprocessname\>/mip\<*
+    
+    - %LocalAppData%\Microsoft\MSIP\AppDetails
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
