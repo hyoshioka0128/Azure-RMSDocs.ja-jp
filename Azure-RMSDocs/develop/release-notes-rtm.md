@@ -14,23 +14,32 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
-ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
+ms.openlocfilehash: 8782889ab2acd630831b3b8ed472f5740b904cb7
+ms.sourcegitcommit: 9ed9013fb79f34d49173acb1b200fbe05ce6b316
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69999214"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892571"
 ---
 # <a name="release-notes"></a>リリース ノート
 
 この記事には、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
+
+## <a name="september-2019---update"></a>2019年9月-更新 
+
+- 他のいくつかの RMS クライアントメソッドと同時に初期化メソッドを呼び出そうとしたときに発生する可能性のあるデッドロックを修正しました。
+- パスワードで保護された Office ファイルが RMS で保護されているかどうかを判断する際の問題を修正します。
+-   特別な目的のライセンスのライセンス検証を更新します。
+- PDF プロテクターを更新します。
+- その他のバグ修正。
+- C ランタイムライブラリに対して静的にリンクするように更新します。
 
 ## <a name="april-2019---update"></a>2019年4月-更新
 - ファイル API のバグ修正。
 - ファイル API が更新され、コンテンツの復号化時に抽出権限ではなく、エクスポート権限がチェックされるようになりました。
 - インストーラーを修正して、アップグレード時に新しい PDF v2 プロテクターが確実にインストールされるようにしました。
 - テレメトリの変更。 この変更には、C ランタイムライブラリをインストールするインストールパッケージの更新が必要でした。
-- アプリケーションで対称キー認証を使用している場合、サービスバックエンドの認証の変更、# # # # # #please この SDK のバージョンに対する更新によって中断が発生します。
+- サービスバックエンドの認証の変更**です。アプリケーションで対称キー認証を使用する場合は、この SDK バージョンに更新して中断を最小限に抑えるようにしてください。**
 - VC 15.9 のサポート
 
 
