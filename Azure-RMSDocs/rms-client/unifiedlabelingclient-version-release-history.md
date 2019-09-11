@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 614435c39458462449f71955215e9e6adef06754
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: 94679d642ec2b83d0b7bb979f1ba6e2b0f2fbfe4
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214082"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888119"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -105,7 +105,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     - [ラベルの色を指定します](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
 - Word、Excel、PowerPoint、エクスプローラーのユーザー定義アクセス許可用に構成されたラベルのサポート:
-    - この構成のラベルが Azure portal から作成されている場合、現在、管理センターに同等の構成はありませんが、統一されたラベル付けクライアントでサポートされるようになりました。
     - ユーザーがこの構成でラベルを選択すると、ドキュメントのユーザーと保護の設定を選択するように求められます。
 
 - AzureInformationProtection モジュールでの PowerShell の変更点は次のとおりです。

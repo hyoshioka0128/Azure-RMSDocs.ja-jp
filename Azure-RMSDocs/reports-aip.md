@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 08/19/2019
+ms.date: 09/05/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
-ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
+ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
+ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630072"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70872357"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -40,6 +40,9 @@ Azure Information Protection analytics for central reporting を使用すると�
 - 内部または外部のユーザーが保護されたドキュメントにアクセスするタイミングと、アクセスが許可または拒否されたかどうかを識別します。
 
 表示されるデータは、統一された[ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)、および[保護の使用状況ログ](log-analyze-usage.md)から、Azure Information Protection のクライアントとスキャナーから集計されます。
+
+> [!NOTE]
+> 現時点では、Azure Information Protection analytics には、統一されたラベル付けをサポートするクライアントとサービスのカスタム情報の種類は含まれていません。
 
 たとえば、次のようなことを確認できます。
 
@@ -114,7 +117,9 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - 電子メールの場合: ラベル付けされた電子メールの件名と電子メールの送信者。 
 
-- コンテンツ内で検出された機密情報の種類 ([定義済み](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for)およびカスタム)。
+- コンテンツ内で検出された[定義済みの機密情報の種類](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for)。
+    
+    カスタム条件で Azure Information Protection ラベルを使用している場合は、カスタム情報の種類の名前も送信されます。 Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンターで作成したカスタム機微な情報の種類は送信されません。
 
 - Azure Information Protection クライアントのバージョン。
 
@@ -122,13 +127,13 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)に関するセクションをご覧ください。
 
-Azure Information Protection クライアント (クラシック) からこのデータが送信されないようにするには、 **[監査データを Azure Information Protection log analytics に送信する]** の[ポリシー設定](configure-policy-settings.md)を **[オフ]** に設定します。
+Azure Information Protection クライアント (クラシック) がこのデータを送信できないようにするには、 **[監査データを Azure Information Protection analytics に送信する]** の[ポリシー設定](configure-policy-settings.md)を **[オフ]** に設定します。
 
 - ほとんどのユーザーがこのデータを送信し、ユーザーのサブセットが監査データを送信できない場合: 
-    - ユーザーのサブセットに対するスコープ付きポリシーで、 **[監査データを Azure Information Protection ログ分析に送信します]** を **[オフ]** に設定します。 この構成は、運用環境のシナリオに一般的なものです。
+    - ユーザーのサブセットのスコープ**ポリシーで**  **監査データを Azure Information Protection analytics に送信**する。 この構成は、運用環境のシナリオに一般的なものです。
 
 - ユーザーのサブセットだけが監査データを送信する場合: 
-    - **[監査データを Azure Information Protection ログ分析に送信します]** を、グローバル ポリシーでは **[オフ]** に設定し、ユーザーのサブセットに対するスコープ付きポリシーでは **[オン]** に設定します。 この構成は、テストのシナリオに一般的なものです。
+    - グローバルポリシーで [**監査データを Azure Information Protection analytics に送信**する] を [オフ] に、ユーザーのサブセットに対してスコープポリシーを **[** **オフ**] に設定します。 この構成は、テストのシナリオに一般的なものです。
 
 Azure Information Protection 統合クライアントがこのデータを送信できないようにするには、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)を構成します。
 
@@ -230,7 +235,13 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
-ワークスペースが構成されている場合は、レポートを表示する準備ができています。
+ワークスペースが構成されている場合は、次のいずれかの管理センターで機密ラベルを公開する場合は、次の手順を実行します。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター:
+
+- Azure portal で、[ **Azure Information Protection** > の**統合ラベル**の**管理** > ] にアクセスし、 **[発行]** を選択します。
+    
+    ラベル付けセンターでラベルの変更 (作成、変更、削除) を行うたびに、この**発行**オプションを選択します。 
+
+これで、レポートを表示する準備ができました。
 
 ## <a name="how-to-view-the-reports"></a>レポートの表示方法
 

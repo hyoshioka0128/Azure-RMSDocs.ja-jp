@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: cfe7d97bf7140b8f48f3f32b1d1f7a88de5ca933
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e3499c7a5d659217bd10055648bc0c00b5c3a5c8
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789510"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888114"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -67,12 +67,12 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 |機能|従来のクライアント|統一されたラベル付けクライアント|
 |-------|-----------------------------------|----------------------------------------------------|
 |ラベル付けアクション:手動、推奨、自動| [はい] | [はい] |
-|中央レポート機能 (分析):| [はい] | [はい] |
+|中央レポート機能 (分析):| [はい] | はい (制限あり):<br /><br /> -カスタム機微な情報の種類は表示されません |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| [はい] | [はい] |
 |ラベルの多言語サポート:| [はい] | [はい] |
 |メールの添付ファイルからのラベル継承:| [はい] | [はい]  |
 |次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] <br /><br /> [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。| [はい] <br /><br /> [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされます。 |
-|ユーザー定義のアクセス許可:| [はい] | [はい] <br /><br />Word、Excel、PowerPoint、エクスプローラーの場合:Azure portal でラベルを構成する |
+|ユーザー定義のアクセス許可:| [はい] | [はい] |
 |カスタム アクセス許可:| [はい] | エクスプローラーと PowerShell <br /><br /> Office アプリでは、別の方法として、ユーザーが **ファイル情報** >  **ドキュメント** > の保護 **アクセスの制限** または 管理者がユーザー定義のアクセス許可のラベルを構成できる を選択できます。|
 |Office アプリの Information Protection バー:| [はい] | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> - ラベルの色は適用されたラベルに表示されません|
 |ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| [はい] | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
