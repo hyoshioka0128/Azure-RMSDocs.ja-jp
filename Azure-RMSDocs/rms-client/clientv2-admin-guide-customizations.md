@@ -3,7 +3,7 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 13401d61990298a039bc1d74284d45177564efd8
-ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
+ms.openlocfilehash: 1c8391bd4c7ab4cf57e4f0ddeeb6310259e7cceb
+ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872383"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923310"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -254,7 +254,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成は Outlook ではサポートされていません。そのため、この構成を Word、Excel、PowerPoint で使用すると、ユーザーのこれらのアプリのパフォーマンスに悪影響が生じる場合があります。 この構成ではアプリケーションごとの設定を定義することができます。たとえば、Word 文書のヘッダーとフッターのテキストは検索し、Excel のスプレッドシートや PowerPoint のプレゼンテーションのテキストは検索しないようにできます。
 
-パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**Ord、 **E**x)、 **P**owerpoint) は、検索する必要があるものだけに制限することをお勧めします。
+パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**Ord、E**X**セル、 **P**owerpoint) は、検索する必要があるものだけに制限することをお勧めします。
 
 選択したラベルポリシーについて、次の文字列を指定します。
 

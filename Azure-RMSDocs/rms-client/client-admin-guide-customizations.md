@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/16/2019
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e2cce9e76ae1b583aacc30df7d2abe5940106455
-ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
+ms.openlocfilehash: 784b51f91a19069c33f5a6dd5a6a655c95e59c0c
+ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546064"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923314"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -502,7 +502,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 次のような S/MIME アクションが可能です。
 
-- `Sign;Encrypt` :デジタル署名と S/MIME 暗号化を適用する
+- `Sign;Encrypt`:デジタル署名と S/MIME 暗号化を適用する
 
 - `Encrypt`:S/MIME 暗号化のみを適用する
 
@@ -729,7 +729,7 @@ Azure Portal で Azure Information Protection ポリシーを表示または構�
 
 この構成は Outlook ではサポートされていません。そのため、この構成を Word、Excel、PowerPoint で使用すると、ユーザーのこれらのアプリのパフォーマンスに悪影響が生じる場合があります。 この構成ではアプリケーションごとの設定を定義することができます。たとえば、Word 文書のヘッダーとフッターのテキストは検索し、Excel のスプレッドシートや PowerPoint のプレゼンテーションのテキストは検索しないようにできます。
 
-パターン マッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**ord、**E**xcel、**P**owerPoint) は検索を必要とするもののみに制限することをお勧めします。
+パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**Ord、E**X**セル、 **P**owerpoint) は、検索する必要があるもののみに制限することをお勧めします。
 
 - 重要:**RemoveExternalContentMarkingInApp**
 

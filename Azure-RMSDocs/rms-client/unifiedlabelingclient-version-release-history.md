@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 94679d642ec2b83d0b7bb979f1ba6e2b0f2fbfe4
-ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
+ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
+ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888119"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936953"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -104,8 +104,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     - [親ラベルに既定のサブラベルを指定する](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [ラベルの色を指定します](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Word、Excel、PowerPoint、エクスプローラーのユーザー定義アクセス許可用に構成されたラベルのサポート:
-    - ユーザーがこの構成でラベルを選択すると、ドキュメントのユーザーと保護の設定を選択するように求められます。
+- Word、Excel、PowerPoint、およびエクスプローラーのユーザー定義アクセス許可用に構成されたラベルのサポート。 詳細については、Office ドキュメントの「[ユーザーにアクセス許可の割り当てを許可](/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions)する」セクションを参照してください。
 
 - AzureInformationProtection モジュールでの PowerShell の変更点は次のとおりです。
     - 新しいコマンドレット:[New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -RMSProtectionLicense を置き換えて、カスタムアクセス許可のアドホックポリシーを作成します。

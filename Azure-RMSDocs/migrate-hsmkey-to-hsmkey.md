@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行パスの一
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 445dcb34b2d3de3ed81761537332ad0be20b000d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8c1649fe32c88d0a97b002a5e6ca73047412737f
+ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794007"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907258"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2:HSM で保護されているキーから HSM で保護されているキーへの移行
 
@@ -49,9 +49,11 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 1. Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の Bring Your Own Key (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」に記載された手順に従います。ただし、次の例外があります。
 
-   - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 代わりに、nCipher インストールから AD RMS サーバーで使用されているキーを特定し、移行中にこのキーを使用します。 nCipher 暗号化キー ファイルの名前は通常 **キー<*keyAppName*><*keyIdentifier*>** サーバー上のローカルです。
-
-     Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
+   - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 代わりに、nCipher インストールから AD RMS サーバーが使用するキーを特定し、それらのキーを転送用に準備してから、Azure Key Vault に転送します。 
+        
+        NCipher の暗号化されたキーファイルには、サーバー上でローカルに**key_ <*keyappname*> _ <*keyappname* >** という名前が付けられます。 たとえば、`C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` のようにします。 KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として**mscapi**値を指定し、キー識別子に独自の値を指定する必要があります。
+        
+        Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
 2. インターネットに接続されたワークステーションの PowerShell セッションで、 [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、Azure Information Protection テナントキーを格納する key vault にアクセスするように Azure Rights Management サービスプリンシパルを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
     
