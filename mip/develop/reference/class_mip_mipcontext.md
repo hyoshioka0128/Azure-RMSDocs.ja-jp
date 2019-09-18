@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: f6bc8d5a61ec259b85ae9e2479afeb9a2f00412f
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 20ce55ec371582ee16c70f311e0fc38ffc79d2fc
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054578"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070610"
 ---
 # <a name="class-mipmipcontext"></a>クラス mip:: MipContext 
 MipContext は、すべてのプロファイル、エンジン、ハンドラー間で共有される状態を表します。
@@ -25,7 +25,9 @@ public const ApplicationInfo& GetApplicationInfo() const  |  アプリケーシ�
 public const std:: string & GetMipPath () const  |  ログ、キャッシュなどのファイルパスを取得します。
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Logger の実装を取得します。
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Logger の実装を取得します。
-  
+public static MIP_API std:: shared_ptr&lt;MipContext&gt; __cdecl MIP:: MipContext:: Create | プロファイルを初期化するときに使用する新しい MipContext インスタンスを作成します。
+public static MIP_API std:: shared_ptr&lt;MipContext&gt; __cdecl MIP:: MipContext:: createwithcustomfeaturesettings | カスタム機能設定を使用して、新しい MipContext インスタンスを作成します。
+
 ## <a name="members"></a>メンバー
   
 ### <a name="shutdown-function"></a>ShutDown 関数
@@ -64,5 +66,15 @@ Logger の実装を取得します。
 ### <a name="getrawloggerdelegate-function"></a>GetRawLoggerDelegate 関数
 Logger の実装を取得します。
 
-  
 次の**値を返し**ます。Lnm
+
+### <a name="create-function"></a>関数の作成
+プロファイルを初期化するときに使用する新しい MipContext インスタンスを作成します。
+
+次の**値を返し**ます。MipContext インスタンス。
+
+### <a name="createwithcustomfeaturesettings-function"></a>CreateWithCustomFeatureSettings 関数
+カスタム機能設定を使用して、新しい MipContext インスタンスを作成します。
+
+次の**値を返し**ます。MipContext インスタンス。
+

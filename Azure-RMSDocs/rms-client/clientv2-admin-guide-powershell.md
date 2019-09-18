@@ -4,19 +4,19 @@ description: 管理者が PowerShell を使用して Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056440"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060048"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>管理者ガイド: Azure Information Protection 統合クライアントでの PowerShell の使用
 
@@ -33,7 +33,7 @@ Azure Information Protection 統合ラベル付けクライアントをインス
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|共有フォルダーで、すべてのファイルを特定のラベルで識別します。|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|共有フォルダーで、ファイルの内容を検査したあと、指定した条件に基づいて、ラベル付けされていないファイルに自動的にラベルを付与します。|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|共有フォルダーで、ラベルが付いていないすべてのファイルに指定したラベルを適用します。|
-|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|別のユーザーアカウントを使用して、対話形式でファイルにラベルを付けます。|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
 
 > [!TIP]
 > 260 文字よりも長いパスとともにコマンドレットを使用するには、Windows 10 バージョン 1607 以降で利用できる次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用します。<br /> **ローカルコンピューターポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべての設定** > で**Win32 の長いパスを有効にする** 
@@ -59,7 +59,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>前提条件 1: Azure Rights Management サービスをアクティブ化する必要があります
 
-Azure Information Protection テナントが保護を適用するためにアクティブ化されていない場合は、 [Azure Rights Management をアクティブ化](../activate-service.md)するための手順を参照してください。
+Azure Information Protection テナントがアクティブ化されていない場合は、「[Azure Information Protection からの保護サービスのアクティブ化](../activate-service.md)」の手順を参照してください。
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>前提条件 2: 自分のアカウントを使って他のユーザーのファイルから保護を削除するには
 
@@ -84,11 +84,14 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
 
 パラメーターを指定せずにこのコマンドレットを実行すると、アカウントは 90 日間またはパスワードの有効期限が切れるまで有効なアクセス トークンを取得します。  
 
-アクセス トークンの有効期限を制御するには、パラメーターを指定してこのコマンドレットを実行します。 この構成では、1年間、2年間、または期限切れにならないように Azure AD にアクセストークンを構成できます。 Azure Active Directory に登録されている2つのアプリケーションが必要です。**Web アプリ/API** アプリケーションと**ネイティブ アプリケーション**を登録する必要があります。 これらのアプリケーションの値は、Set-AIPAuthentication のパラメーターで使用されます。
+アクセス トークンの有効期限を制御するには、パラメーターを指定してこのコマンドレットを実行します。 この構成では、1年間、2年間、または期限切れにならないように Azure AD にアクセストークンを構成できます。 Set-AIPAuthentication のパラメーターは、Azure AD のアプリ登録プロセスの値を使用します。
 
 このコマンドレットを実行すると、作成したサービスアカウントのコンテキストでラベル付けコマンドレットを実行できます。
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Set-AIPAuthentication 用の Azure AD アプリケーションを作成し、構成するには
+
+> [!NOTE]
+> 現在のプレビューバージョンの統一されたラベル付けクライアントを使用していない場合は、「 [Set-AIPAuthentication-preview client の Azure AD アプリケーションを作成および構成するに](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client)は」を参照してください。
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
@@ -184,6 +187,80 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
 2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 例えば:
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
+
+
+#### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client"></a>Azure AD アプリケーションを作成して設定するには-AIPAuthentication-プレビュークライアント
+
+次の手順は、統合ラベル付けクライアントのプレビューバージョンがインストールされている場合にのみ、別の手順として使用してください。 
+
+このバージョンのクライアントでは、Set-AIPAuthentication の*AppId*と*appsecret*パラメーターの新しいアプリ登録を作成する必要があります。 以前のバージョンのクライアントからアップグレードし、以前の*webappid*パラメーターとのアプリケーション登録を作成した場合は、このバージョンのクライアントでは*動作しませ*ん。
+
+1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
+
+2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory** > **Manage** > **アプリの登録** を参照してください。 
+
+3. **[+ 新規登録]** を選択します。 **[アプリケーションの登録]** ブレードで、次の値を指定し、 **[登録]** をクリックします。
+
+   - **名前**:`AIPv2OnBehalfOf`
+        
+        必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
+    
+    - **サポートされているアカウントの種類**:**この組織ディレクトリ内のアカウントのみ**
+    
+    - **リダイレクト URI (省略可能)** :**Web**および`https://localhost`
+
+4. **[AIPv2OnBehalfOf]** ブレードで、**アプリケーション (クライアント) ID**の値をコピーします。 値は次の例`77c3c1c3-abf9-404e-8b2b-4652836c8c66`のようになります。 この値は、Set-AIPAuthentication コマンドレットを実行するときに*AppId*パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
+
+5. **AIPv2OnBehalfOf**ブレードの **[管理]** メニューで、 **[証明書 & シークレット]** を選択します。
+
+6. **[AIPv2OnBehalfOf & シークレット]** ブレードの **[クライアントシークレット]** セクションで、 **[+ 新しいクライアントシークレット]** を選択します。
+
+7. **[クライアントシークレットの追加]** で、次のように指定し、 **[追加]** を選択します。
+    
+    - **説明**:`Azure Information Protection unified labeling client`
+    - **有効期限**:選択した期間 (1 年、2年間、または無期限) を指定します
+
+8. **[AIPv2OnBehalfOf & シークレット]** ブレードに戻り、 **[クライアントシークレット]** セクションで、**値**の文字列をコピーします。 この文字列は次の例`OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`のようになります。 すべての文字がコピーされるようにするには、**クリップボードにコピー**するアイコンを選択します。 
+    
+    この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に、保存した値を安全に保存し、アクセスを制限します。
+
+9. **[管理]** メニューの **[API のアクセス許可]** を選択します。
+
+10. **[AIPv2OnBehalfOf のアクセス許可]** ブレードで、 **[+ アクセス許可の追加]** を選択します。
+
+11. **[API のアクセス許可の要求]** ブレードで、 **[Azure Rights Management サービス]** を選択し、アプリケーションに必要なアクセス許可の種類を確認するメッセージが表示されたら、 **[アプリケーションのアクセス許可]** を選択します。
+
+12. **[アクセス許可]** で、[コンテンツ] を展開し、次の**内容**を選択します。
+    
+    -  **DelegatedWriter** (常に必須)
+    -  **Content-type** (常に必須)
+    -  **Content. スーパー** [ユーザー (スーパーユーザー機能](../configure-super-users.md)が必要な場合は必須) 
+    
+    スーパーユーザー機能を使用すると、アカウントは常にコンテンツの暗号化を解除できます。 たとえば、ファイルを再保護し、他のユーザーが保護しているファイルを検査します。
+
+13. **[アクセス許可の追加]** を選択します。
+
+14. [AIPv2OnBehalfOf の**アクセス許可**] ブレードに戻り、[ ***テナント名*>に\<管理者の同意を付与**する] を選択し、確認プロンプトで [**はい]** を選択します。
+
+これで、シークレットを使用したこのアプリの登録が完了しました。パラメーター *AppId*と*appsecret*を使用して、 [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)を実行する準備ができました。 また、テナント ID も必要になります。 
+
+> [!TIP]
+>Azure portal を使用して、テナント ID を簡単にコピーできます。 > **Manage**PropertiesDirectory > IDAzureActiveDirectoryします。 > 
+
+この例では、テナント ID 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a を使用しています。
+
+`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
+
+このコマンドを初めて実行するとき、サインインが求められます。それにより、アカウントのアクセス トークンが作成され、%localappdata%\Microsoft\MSIP に安全に保管されます。 この初回サインイン後、コンピューターで非対話式でファイルにラベルを付け、保護できます。 ただし、サービスアカウントを使用してファイルのラベル付けと保護を行っていて、このサービスアカウントが対話形式でサインインできない場合は、次のように、 *OnBehalfOf*パラメーターを Set-AIPAuthentication と共に使用します。
+
+1. 対話形式でサインインするためのユーザー権利の割り当てが付与されている Active Directory アカウントの資格情報を格納する変数を作成します。 例えば:
+    
+        $pscreds = Get-Credential "scv_scanner@contoso.com"
+
+2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 例えば:
+    
+        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+
 
 ## <a name="next-steps"></a>次の手順
 PowerShell セッションでコマンドレットのヘルプを表示するには`Get-Help <cmdlet name> -online`、「」と入力します。 例えば: 

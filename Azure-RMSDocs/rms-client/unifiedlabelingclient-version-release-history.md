@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
-ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
+ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936953"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070649"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -51,6 +51,46 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「[クライアントを比較](use-client.md#compare-the-clients)する」を参照してください。
+
+## <a name="versions-later-than-22210"></a>2\.2.21.0 よりも後のバージョン
+
+2\.2.21.0 よりも後のバージョン2のクライアントがある場合は、テストと評価のためのプレビュービルドです。
+
+**リリース日**: 09/17/2019
+
+**新機能:**
+
+- [スキャナー](../deploy-aip-scanner.md)のサポートにより、オンプレミスのデータストアを検査してラベル付けすることができます。 このバージョンのスキャナーでは、次のことを行います。
+    
+    - 同じスキャナープロファイルを使用するようにスキャナーを構成するときに、複数のスキャナーが同じ SQL Server データベースを共有できます。 この構成により、複数のスキャナーの管理が容易になり、スキャン時間が短縮されます。 この構成を使用する場合は、スキャナーのインストールが完了するのを待ってから、同じプロファイルを使用して別のスキャナーをインストールします。
+    
+    - スキャナーをインストールするときにプロファイルを指定し、スキャナーデータベースに **\<AIPScannerUL_ profile_name >** という名前を付けておく必要があります。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
+    
+    - ドキュメントにラベルが既に付いている場合でも、すべてのドキュメントに既定のラベルを設定できます。 スキャナープロファイルまたはリポジトリの設定で、[ラベルの再設定 **] オプションを** **[オン**] に設定し、新しい [既定の**ラベルを強制**する] チェックボックスをオンにします。
+    
+    - すべてのドキュメントから既存のラベルを削除できます。ラベルによって以前に適用されていた場合、この操作には保護の削除が含まれます。 ラベルとは独立して適用された保護が保持されます。 このスキャナーの構成は、スキャナープロファイルまたはリポジトリの設定で次の設定を使用して実現されます。
+        - **[コンテンツに基づいてファイルにラベルを付ける]** :**Off**
+        - **[既定のラベル]** :**None**
+        - **[ファイルのラベルを書き換える]** : **[** 既定の**ラベルを強制**する] チェックボックスがオンになっている状態
+    
+    - 従来のクライアントのスキャナーと同様に、スキャナーは Office ファイルと PDF ファイルを保護します。 現時点では、このバージョンのスキャナーによって保護される他のファイルの種類を構成することはできません。
+    
+    Azure Information Protection クライアント (クラシック) からスキャナーをアップグレードすることができます。 アップグレード後に新しいデータベースが作成されると、スキャナーは初回実行時にすべてのファイルを再スキャンします。 手順については、管理者ガイドの「 [Azure Information Protection スキャナーをアップグレードする](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。
+
+- PowerShell コマンドレットの[セット-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)は、[ファイルに非対話形式でラベル](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)を付ける場合の新しいパラメーターと、 [Azure AD にアプリを登録する新しい手順](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client)を備えています。 シナリオ例としては、スキャナーや、ドキュメントにラベルを付けるための自動 PowerShell スクリプトがあります。
+
+- 一致したカスタム機密情報の種類が[Azure Information Protection analytics](../reports-aip.md)に送信されます。
+
+- 適用されたラベルには、[色が構成され](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)ている場合、ラベルに構成されている色が表示されます。
+
+- ラベルに保護設定を追加または変更すると、クライアントは、ドキュメントが次に保存されるときに、これらの最新の保護設定でラベルを再適用します。 同様に、スキャナーは、強制モードでドキュメントが次回スキャンされるときに、これらの最新の保護設定でラベルを再適用します。
+
+- %Localappdata%\Microsoft\MSIP\Logs からすべてのログファイルを収集し、.zip 形式の1つの圧縮されたファイルに保存する新しいコマンドレットである[Export](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)。 このファイルは、報告された問題の調査に役立つログファイルを送信するように要求された場合に Microsoft サポートに送信できます。
+
+**関する**
+
+- ファイルエクスプローラーを使用して保護されたファイルを正常に変更できます。ファイルのパスワードが削除されたら、右クリックします。
+
 
 ## <a name="version-22210"></a>バージョン2.2.21.0
 

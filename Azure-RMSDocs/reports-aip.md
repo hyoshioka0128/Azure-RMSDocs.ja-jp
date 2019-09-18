@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 09/05/2019
+ms.date: 09/17/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
-ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
+ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872357"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060180"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -42,7 +42,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 表示されるデータは、統一された[ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)、および[保護の使用状況ログ](log-analyze-usage.md)から、Azure Information Protection のクライアントとスキャナーから集計されます。
 
 > [!NOTE]
-> 現時点では、Azure Information Protection analytics には、統一されたラベル付けをサポートするクライアントとサービスのカスタム情報の種類は含まれていません。
+> 現在、統合されたラベル付けクライアントのプレビューバージョンを除き、Azure Information Protection analytics には、統一されたラベル付けをサポートするクライアントとサービスのカスタム情報の種類は含まれていません。
 
 たとえば、次のようなことを確認できます。
 
@@ -119,7 +119,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - コンテンツ内で検出された[定義済みの機密情報の種類](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for)。
     
-    カスタム条件で Azure Information Protection ラベルを使用している場合は、カスタム情報の種類の名前も送信されます。 Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンターで作成したカスタム機微な情報の種類は送信されません。
+    カスタム条件で Azure Information Protection ラベルを使用している場合は、カスタム情報の種類の名前も送信されます。 統一されたラベル付けクライアントのプレビューバージョンを除き、ラベル付けセンターで作成したカスタム機微な情報の種類は送信されません。
 
 - Azure Information Protection クライアントのバージョン。
 
@@ -183,7 +183,7 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
     > [!NOTE] 
     > テナントが統合ラベルストアに移行されている場合、Azure Information Protection 管理者ロールを使用することはできません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments)のいずれかが必要です。
+2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles)のいずれかが必要です。
     
     - ワークスペースを作成する、またはカスタム クエリを作成するには、次のいずれか:
     

@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/07/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
-ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
+ms.openlocfilehash: eb73cba39d65a4e2c925f73afe7fa3e46ab204cd
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808678"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060058"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -50,11 +50,13 @@ Azure Information Protection の統合ラベル付けクライアントには、
 
 - ネイティブ アプリケーションで開くことができないときに、保護されたファイルを表示するビューアー。
 
-- ファイルに対して分類ラベルと保護を適用および削除するための PowerShell モジュール。 
+- ファイル内の機密情報を検出し、ファイルの分類ラベルと保護を適用または削除する PowerShell モジュール。 
+    
+    クライアントのプレビューバージョンには、Windows Server 上でサービスとして実行される[Azure Information Protection スキャナー](../deploy-aip-scanner.md)をインストールして構成するためのコマンドレットが含まれています。 このサービスでは、ネットワーク共有や SharePoint サーバーライブラリなどのデータストア上のファイルを検出、分類、保護できます。
 
-- Azure Rights Management (Azure RMS) サービスと通信してファイルを暗号化および保護する Rights Management クライアント。
+- 保護サービス (Azure Rights Management) と通信してファイルを暗号化および保護する Rights Management クライアント。
 
-ビューアーを除き、Azure Information Protection 統合されたラベル付けクライアントは、Azure Rights Management サービスまたは Active Directory Rights Management サービスと直接通信するアプリケーションやサービスでは使用できません。
+ビューアーを除き、Azure Information Protection 統合されたラベル付けクライアントは、保護サービスまたは Active Directory Rights Management サービスと直接通信するアプリケーションやサービスでは使用できません。
 
 AD RMS を所有していて、Azure Information Protection に移行する場合は、「[AD RMS から Azure Information Protection に移行する](../migrate-from-ad-rms-to-azure-rms.md)」をご覧ください。
 
@@ -68,6 +70,8 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 - Office でサポートされているよりも多くのファイルの種類、複数選択、およびフォルダーをサポートするエクスプローラーを使って、ファイルを分類 (および必要に応じて保護) したい。
 
 - PowerShell コマンドを使って、ドキュメントを分類 (および必要に応じて保護) するスクリプトを実行したい。
+
+- オンプレミスに格納されているファイルを検出、分類 (および必要に応じて保護) する、現在プレビュー中のサービスをテストします。
 
 - ファイルを表示するネイティブ アプリケーションがインストールされていないか、ドキュメントを開くことができない場合に、保護されているドキュメントを表示したい。
 
@@ -95,7 +99,7 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 **[問題の報告]** リンクは、[詳細設定](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)を指定した場合にのみ表示されます。 この設定を構成するときに、ヘルプ デスクの電子メール アドレスなどの HTTP リンクを指定します。 
 
-これらを Microsoft サポートに送信するように求められた場合は、**エクスポートログ**によって、Azure Information Protection 統合されたラベル付けクライアントのログファイルが自動的に収集され、アタッチされます。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
+これらを Microsoft サポートに送信するように求められた場合は、**エクスポートログ**によって、Azure Information Protection 統合されたラベル付けクライアントのログファイルが自動的に収集され、アタッチされます。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。 または、 [Export-aiの gs](/powershell/module/azureinformationprotection/export-aiplogs) PowerShell コマンドレット (プレビュークライアントが必要) を使用することもできます。
 
 **リセット設定**では、ユーザーをサインアウトし、現在ダウンロードされている機密ラベルとラベルポリシーを削除して、Azure Rights Management サービスのユーザー設定をリセットします。
 
@@ -118,7 +122,7 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- 次のレジストリ キーと設定が削除されます。 これらいずれかのレジストリ キーの設定にカスタムの値がある場合、クライアントをリセットした後に、設定を再構成する必要があります。 
+- 次のレジストリ キーと設定が削除されます。 これらいずれかのレジストリ キーの設定にカスタムの値がある場合、クライアントをリセットした後に、設定を再構成する必要があります。
     
     通常、エンタープライズ ネットワークでは、グループ ポリシーをコンピューター上で更新するときに、これらの設定が自動的に再適用される場合、設定はグループ ポリシーを使用して構成されます。 ただし、スクリプトで一度構成されているか、手動で構成されている設定がある場合があります。 これらの場合、設定を再構成するには、追加の手順を行う必要があります。 たとえば、AD RMS から移行しても、内部ネットワーク上にまだサービス接続ポイントがあるため、Azure Information Protection へのリダイレクトの設定を構成するには、コンピューターでスクリプトが一度実行される場合があります。 クライアントをリセットした後、コンピューターでこのスクリプトをもう一度実行する必要があります。
     
@@ -158,6 +162,14 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
+## <a name="installing-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのインストール
+
+統一されたラベル付けクライアント用の現在のバージョンのスキャナーは、テストのためにプレビュー段階にあります。 このプレビューでは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統一されたラベル付けクライアントの現在のプレビューバージョンをインストールします。
+
+コンピューターに初めてスキャナーをインストールする場合は、このクライアントをダウンロードしてインストールし、「Azure Information Protection スキャナーの展開」の手順に従って、[ファイルを自動的に分類して保護](../deploy-aip-scanner.md)します。
+
+スキャナーを Azure Information Protection クライアント (クラシック) からアップグレードする場合は、 [Azure Information Protection スキャナーのアップグレード](#upgrading-the-azure-information-protection-scanner)に関するセクションを参照してください。
+
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントのアップグレードと保守
 
 > [!NOTE]
@@ -174,6 +186,66 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 手動でアップグレードし、かつインストール方法を変更する場合は、最初に以前のバージョンをアンインストールします。 たとえば、実行可能 (.exe) バージョンのクライアントから Windows インストーラ― (.msi) バージョンのクライアントに変更する場合です。 または、クライアントの以前のバージョンをインストールする必要がある場合です。 たとえば、テスト用に現在のプレビュー バージョンがインストールされていて、現在の一般公開バージョンに戻す必要がある場合です。
 
 バージョンの[リリース履歴とサポートポリシー](unifiedlabelingclient-version-release-history.md)を使用して、Azure Information Protection 統合されたラベル付けクライアントのサポートポリシー、現在サポートされているバージョン、サポートされているリリースの新機能と変更された機能について理解します。 
+
+### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
+
+現在、Azure Information Protection クライアント (クラシック) の Azure Information Protection スキャナーを使用している場合は、Office 365 セキュリティから発行された機密情報の種類と機密ラベルを使用するようにアップグレードすることができ &コンプライアンスセンター (または Microsoft 365 security center または Microsoft 365 コンプライアンスセンター)。
+
+#### <a name="to-upgrade-the-scanner-to-the-preview-version"></a>スキャナーをプレビューバージョンにアップグレードするには
+
+スキャナーをアップグレードする方法は、現在実行している Azure Information Protection クライアント (クラシック) のバージョンによって異なります。
+
+- [バージョン1.48.204.0 以降のバージョンからのアップグレード](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+
+- [1.48.204.0 より前のバージョンからのアップグレード](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+
+Azure Information Protection クライアント (クラシック) のスキャナーとは異なり、統合クライアント用のこのプレビューバージョンのスキャナーは、接続されていないコンピューターでの実行をサポートしていません。
+
+このアップグレードでは、 **\<AIPScannerUL_ profile_name >** という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
+
+##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>このクライアントの Azure Information Protection クライアント (クラシック) バージョン1.48.204.0 以降のバージョンからのアップグレード
+
+1. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
+
+2. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、unifield ラベルクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベルクライアントにアップグレードします。
+
+3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、`Update-AIPScanner –Profile Europe` のように指定します。
+    
+    この手順では、 **AIPScannerUL_\<profile_name**という名前の新しいデータベースを作成し >
+
+4. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
+
+これで、「Azure Information Protection スキャナーの展開」に記載されている残りの手順を使用して、[ファイルを自動的に分類して保護](../deploy-aip-scanner.md)し、スキャナーをインストールする手順を省略できます。 スキャナーは既にインストールされているので、再インストールする必要はありません。
+
+##### <a name="upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040"></a>1\.48.204.0 より前の Azure Information Protection クライアント (クラシック) バージョンからのアップグレード
+
+> [!IMPORTANT]
+> スムーズなアップグレードパスの場合は、スキャナーをアップグレードする最初の手順として、スキャナーを実行しているコンピューターに Azure Information Protection 統合されたラベル付けクライアントをインストールしないでください。 代わりに、次のアップグレード手順を使用します。
+
+バージョン1.48.204.0 以降では、スキャナーは構成プロファイルを使用して、Azure portal から構成設定を取得します。 スキャナーをアップグレードすると、このオンライン構成を使用するようにスキャナーに指示があります。また、統合されたラベル付けクライアントでは、スキャナーのオフライン構成はサポートされていません。
+
+1. Azure portal を使用して、スキャナーの設定とデータ リポジトリ、およびそれに必要なすべての設定を含む新しいスキャナー プロファイルを作成します。 この手順の詳細については、スキャナーの展開手順に関するトピックの Azure portal セクションの「[スキャナーの構成](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)」を参照してください。
+
+2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
+
+3. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統合されたラベル付けクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントにアップグレードします。
+
+4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile Europe`
+
+5. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
+
+これで、「Azure Information Protection スキャナーの展開」に記載されている残りの手順を使用して、[ファイルを自動的に分類して保護](../deploy-aip-scanner.md)し、スキャナーをインストールする手順を省略できます。 スキャナーは既にインストールされているので、再インストールする必要はありません。
+
+###### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>推奨される手順と異なる順序でのアップグレード
+
+1\.48.204.0 より前のバージョンからアップグレードするときに、Azure portal でスキャナーを構成せずに、[更新-AIPScanner] コマンドを実行すると、アップグレードのためにスキャナーの構成設定を識別するプロファイル名を指定することはできません。process. 
+
+このシナリオでは、Azure portal 上でスキャナーを構成するときに、Update-AIPScanner コマンドの実行時に使用したのとまったく同じプロファイル名を指定する必要があります。 名前が一致しない場合、スキャナーは設定に対して構成されません。 
+
+> [!TIP]
+> この正しく構成されていないスキャナーを識別するには、Azure portal 上で **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードを使用します。
+>  
+> インターネットに接続されているスキャナーの場合、コンピューター名は Azure Information Protection クライアントの GA バージョン番号で表示されますが、プロファイル名は表示されません。 バージョン番号が 1.41.51.0 のスキャナーの場合のみ、このブレードにプロファイル名が表示されません。 
 
 ## <a name="uninstalling-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントのアンインストール
 

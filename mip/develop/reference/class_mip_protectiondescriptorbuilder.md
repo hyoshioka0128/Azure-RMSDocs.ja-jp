@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: 7f177685cfb3314f201c56de59f47ea00d154fba
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: cf3007c7d75b669de3f9952223f4f3920489251e
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057670"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070588"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
 コンテンツの一部に関連付けられている保護を説明する、[ProtectionDescriptor](class_mip_protectiondescriptor.md) を構築します。
@@ -28,7 +28,11 @@ public void SetReferrer(const std::string& uri)  |  保護ポリシーの参照�
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  暗号化する必要のあるアプリ固有のデータを設定します。
 public void setsignedappdata (const std:: map\<std:: string, std:: string\>& value)  |  署名する必要があるアプリ固有のデータを設定します。
 public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていません。_
-  
+public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MIP::P rotectiondescriptorbuilder:: createfromuserrights | ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
+public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MIP::P rotectiondescriptorbuilder:: createfromuserroles | ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
+public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MIP::P rotectiondescriptorbuilder:: CreateFromTemplate | 保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
+
+
 ## <a name="members"></a>メンバー
   
 ### <a name="build-function"></a>ビルド関数
@@ -51,8 +55,6 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 パラメーター:  
 * **値**:ポリシーの説明
 
-
-  
 ### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil 関数
 保護ポリシーの有効期限を設定します。
 
@@ -67,8 +69,6 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 パラメーター:  
 * **値**:ポリシーでオフラインコンテンツへのアクセスが許可されているかどうか
 
-
-  
 ### <a name="setreferrer-function"></a>SetReferrer 関数
 保護ポリシーの参照元のアドレスを設定します。
 
@@ -98,3 +98,30 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
   
 ### <a name="protectiondescriptorbuilder-function"></a>~ Protection記述子ビルダー関数
 _まだ文書化されていません。_
+
+### <a name="createfromuserrights-function"></a>CreateFromUserRights 関数
+ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
+
+パラメーター:
+* **usersAndRights**:ユーザーから権限へのマッピングのコレクション。
+
+次の**値を返し**ます。新しい[Protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス 
+
+### <a name="createfromuserroles-function"></a>CreateFromUserRoles 関数
+ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
+
+パラメーター:
+* **usersAndRoles**:ユーザーからロールへのマッピングのコレクション。
+
+次の**値を返し**ます。ユーザーおよびロールによってアクセス許可が定義されている[Protectiondescriptor](class_mip_protectiondescriptor.md)を作成します。
+
+### <a name="createfromtemplate-function"></a>CreateFromTemplate 関数
+保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
+
+パラメーター:
+* **templateId**:保護テンプレート ID。
+
+次の**値を返し**ます。新しい[Protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス。
+
+
+

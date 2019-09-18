@@ -3,7 +3,7 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/12/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c8391bd4c7ab4cf57e4f0ddeeb6310259e7cceb
-ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
+ms.openlocfilehash: 004f37973d045bcf1a2809a226c150f5bc749681
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923310"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060074"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -655,7 +655,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-Azure Information Protection 統合されたラベル付けクライアントが Office アプリで使用されると、ドキュメントが最初に保存されたときに、その情報を検索します。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)詳細設定を**False**に設定していない場合、検出された定義済みの機密情報の種類が Azure Information Protection analytics に送信されます。
+Azure Information Protection 統合されたラベル付けクライアントが Office アプリで使用されると、ドキュメントが最初に保存されたときに、その情報を検索します。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)詳細設定を**False**に設定していない場合、定義済みのカスタム (プレビュークライアントのみ) の機密情報の種類が検出され Azure Information Protection analytics に送信されます。
 
 この動作を変更して、統一されたラベル付けクライアントによって検出された機密情報の種類が Azure Information Protection analytics に送信されないようにするには、選択したラベルポリシーに次の文字列を入力します。
 
@@ -944,14 +944,15 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 - **Error**: エラーのみ。
 
-- **[情報]** :最小のログ記録 (イベント ID は含まれません)。
+- **警告**: エラーと警告。
+
+- **[情報]** :最小のログ記録 (イベント ID は含まれません) (スキャナーの既定の設定)。
 
 - **[デバッグ]** :完全な情報。
 
 - **[トレース]** :詳細なログ記録 (クライアントの既定の設定)。
 
 このレジストリ設定では、[中央レポート](../reports-aip.md)の Azure Information Protection に送信される情報は変更されません。
-
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
