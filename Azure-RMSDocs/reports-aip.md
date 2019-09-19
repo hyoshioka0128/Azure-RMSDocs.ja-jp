@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 09/17/2019
+ms.date: 09/18/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
+ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060180"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71101322"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -37,7 +37,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - 保護されていないと組織をリスクにさらす可能性がある機密情報が含まれるドキュメントを識別し、次の推奨事項に従ってリスクを軽減します。
 
-- 内部または外部のユーザーが保護されたドキュメントにアクセスするタイミングと、アクセスが許可または拒否されたかどうかを識別します。
+- Windows コンピューターからの内部ユーザーまたは外部ユーザーが保護されたドキュメントにアクセスするタイミングと、アクセスが許可または拒否されたかどうかを特定します。
 
 表示されるデータは、統一された[ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)、および[保護の使用状況ログ](log-analyze-usage.md)から、Azure Information Protection のクライアントとスキャナーから集計されます。
 
@@ -181,7 +181,7 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
         - **セキュリティ閲覧者**
     
     > [!NOTE] 
-    > テナントが統合ラベルストアに移行されている場合、Azure Information Protection 管理者ロールを使用することはできません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure Information Protection 管理者ロールは使用できません。
 
 2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles)のいずれかが必要です。
     

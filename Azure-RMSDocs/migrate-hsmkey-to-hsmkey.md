@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8c1649fe32c88d0a97b002a5e6ca73047412737f
-ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
+ms.openlocfilehash: aea5eab301555b928427cd51d553302ff4468bcd
+ms.sourcegitcommit: 853a7ccd7e3f4ac65b6bf9732e336f375932e897
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907258"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094498"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2:HSM で保護されているキーから HSM で保護されているキーへの移行
 
@@ -51,7 +51,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
    - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 代わりに、nCipher インストールから AD RMS サーバーが使用するキーを特定し、それらのキーを転送用に準備してから、Azure Key Vault に転送します。 
         
-        NCipher の暗号化されたキーファイルには、サーバー上でローカルに**key_ <*keyappname*> _ <*keyappname* >** という名前が付けられます。 たとえば、`C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` のようにします。 KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として**mscapi**値を指定し、キー識別子に独自の値を指定する必要があります。
+        NCipher の暗号化されたキーファイルには、サーバー上でローカルに**key_ <<em>keyappname</em>> _ <<em>keyappname</em> >** という名前が付けられます。 たとえば、`C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` のようにします。 KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として**mscapi**値を指定し、キー識別子に独自の値を指定する必要があります。
         
         Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
