@@ -26,7 +26,7 @@ ms.locfileid: "68788587"
 このチュートリアルで学習する内容は次のとおりです。
 > [!div class="checklist"]
 > * ポリシー設定を構成する
-> * 新しいラベルの作成 
+> * 新しいラベルを作成する 
 > * 視覚的なマーキング、推奨される分類、および保護用のラベルを構成する
 > * 設定とラベルの動作を確認する
 
@@ -34,7 +34,7 @@ ms.locfileid: "68788587"
 
 このチュートリアルを完了するための所要時間は約 15 分です。
 
-## <a name="prerequisites"></a>必要条件 
+## <a name="prerequisites"></a>前提条件 
 
 このチュートリアルを完了するための必要条件を次に示します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "68788587"
     
     クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
 
-4. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、このコンピューターで、次のいずれかのカテゴリから Office アプリにサインインしている必要があります。
+4. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、そのコンピューターで、次のいずれかのカテゴリから Office アプリにサインインしている。
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
@@ -64,7 +64,7 @@ ms.locfileid: "68788587"
     
     - Office Professional Plus 2010 Service Pack 2
 
-Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
+Azure Information Protection を使用するための前提条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
 では、始めましょう。
 
