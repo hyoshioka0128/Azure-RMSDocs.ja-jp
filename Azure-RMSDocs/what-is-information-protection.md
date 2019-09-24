@@ -45,7 +45,7 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 ## <a name="how-data-is-protected"></a>データ保護のしくみ
 
-保護テクノロジには *Azure Rights Management* (しばしば Azure RMS と略される) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
+保護テクノロジには *Azure Rights Management* (Azure RMS と略されることが多い) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
 
 この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
 
@@ -67,15 +67,15 @@ Azure Rights Management での保護の詳細については、「[Azure Rights 
 
 ## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>ドキュメントおよび電子メール用のエンドユーザー ワークフローとの統合
 
-Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、Word にこのバーを表示した最初の図のように Information Protection バーをインストールします。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 次に例を示します。
+Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントを使うと、Office アプリケーションに情報保護バーがインストールできます。このバーは、最初の図で Word に表示されています。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 次に例を示します。
 
 ![Excel の Azure Information Protection バーの例](./media/excelproplus-infoprotect-bar.png)
 
 ###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット 
 
-エンド ユーザーはこの Information Protection バーを使用して、正しい分類のラベルを簡単に選択できるようになります。 必要に応じて、ラベルを自動的に適用してユーザーの推測を排除したり、組織のポリシーに準拠したりすることもできます。
+エンド ユーザーはこの Information Protection バーを使用して、正しい分類のラベルを簡単に選択できるようになります。 ユーザーによる迷いの解消や、ご自分の組織のポリシーへの準拠を目的として、必要に応じてラベルを自動的に適用することもできます。
 
-追加のファイルの種類を分類して保護し、複数のファイルを一度にサポートするには、次のようにして、エクスプローラーからファイルまたはフォルダーを右クリックします。
+追加のファイルの種類を分類して保護したり、一度に複数のファイルを処理したりするには、次のようにエクスプローラーからファイルまたはフォルダーを右クリックします。
 
 ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](./media/right-click-classify-protect-folder.png)
 
@@ -99,7 +99,7 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ![OME と AIP の Gmail 受信者エクスペリエンス](./media/ome-message.png)
 
-電子メールを送信するユーザーにとって、ワークフローは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。 次に例を示します。
+この電子メールを送信するユーザーのワークフローは、所属する組織のユーザーに保護された電子メールを送信する場合と変わりません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。 次に例を示します。
 
 ![[転送不可] として構成されたラベルを選択](./media/recipients-only-label2.png)
 
@@ -113,7 +113,7 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ドキュメントと電子メールは、最初に作成したときにラベル付けすることが理想的です。 しかし、データ ストアには既存のドキュメントが多数ある場合があり、これらのドキュメントも分類して保護する必要があります。 これらのデータ ストアは、オンプレミスか、またはクラウド内にある場合があります。
 
-オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。 
+オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、保有していることに気付いていなかった機密情報を検出することもできます。 
 
 スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。
 
