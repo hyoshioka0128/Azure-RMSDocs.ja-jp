@@ -31,13 +31,13 @@ Azure Information Protection (AIP とも呼ばれます) は、ラベルを適�
 
 ###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント (クラシック)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) からのスクリーンショット
 
-コンテンツを分類し (オプションで保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
+コンテンツを分類し (必要に応じて保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
 
 ## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
 
 Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングを含めることができます。 メタデータはクリア テキストでファイルと電子メール ヘッダーに追加されます。 クリア テキストなので、データ損失防止ソリューションなど、その他のサービスが分類を識別して適切なアクションを取ることができます。 
 
-たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、フッター "秘密度:一般" がメール メッセージに追加されました。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
+たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、フッター ''秘密度:一般'' がメール メッセージに追加されています。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
 
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](./media/example-email-footerv2.png)
 
@@ -47,15 +47,15 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 保護テクノロジには *Azure Rights Management* (Azure RMS と略されることが多い) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
 
-この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
+この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションでは、データが他者と共有されている場合でも、所有者がデータを制御し続けることになります。
 
 たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 
 
-これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 ただし、保護をサポートするアプリケーションとサービスから同じ保護設定を使用することもできますが、ラベルを付けることはできません。 これらのアプリケーションとサービスでは、保護設定は "*Rights Management テンプレート*" として使用できるようになります。
+これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 保護をサポートするアプリケーションとサービスで同じ保護設定を使用することもできますが、ラベルは付けることができません。 これらのアプリケーションとサービスでは、保護設定は "*Rights Management テンプレート*" として使用できるようになります。
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
-Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定のテンプレートが使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
+Azure Rights Management サービスが有効になると、データ アクセスを組織内のユーザーに制限するための 2 つの既定のテンプレートがすぐに使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
 
 保護設定を含む Azure Information Protection のラベルを作成すると、その処理の裏では、このアクションによって対応する Rights Management テンプレートが作成されます。 さらに、そのテンプレートは、Azure Rights Management をサポートするアプリケーションとサービスで使用できます。
 
@@ -89,11 +89,11 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ### <a name="additional-integration-for-email"></a>電子メールにおける追加の統合
 
-Exchange Online で Azure Information Protection を使用する場合は、追加の利点を得られます:保護されたメールを任意のユーザーに送信し、そのユーザーが任意のデバイス上でそのメールを読み取れるようにすることができます。
+Exchange Online で Azure Information Protection を使用すると、追加のメリットを得られます。保護されたメールを任意のユーザーに送信し、そのユーザーが任意のデバイス上でそのメールを読み取れるようにすることができます。
 
-たとえば、ユーザーが機密情報を、**Gmail**、**Hotmail**、または**Microsoft** アカウントを使用している個人用メール アドレスに送信する必要があるとします。 または、Office 365 用のアカウントまたは Azure AD 内のアカウントを持っていないユーザーに機密情報を送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
+たとえば、ユーザーが機密情報を、**Gmail**、**Hotmail**、または **Microsoft** アカウントを使用している個人用メール アドレスに送信する必要があるとします。 または、Office 365 用のアカウントまたは Azure AD 内のアカウントを持っていないユーザーに機密情報を送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
 
-このシナリオには、[Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要です。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことはできない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
+このシナリオでは、[Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要になります。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことができない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
 
 たとえば、Gmail ユーザーには、電子メール メッセージに次の内容が表示されます。
 
@@ -127,19 +127,19 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 
-- 無料試用版:[Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- 無料試用版: [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- サブスクリプションのオプションと価格:[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
+- サブスクリプションのオプションと価格: [Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
 
-- クライアントのダウンロード:[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- クライアントのダウンロード: [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
 - カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- よく寄せられる質問:[Azure Information Protection に関してよく寄せられる質問](faqs.md)
+- よく寄せられる質問: [Azure Information Protection に関してよく寄せられる質問](faqs.md)
 
-- Yammer:[Azure Information Protection](https://www.yammer.com/AskIPTeam)
+- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-- ドキュメントの新しい項目:[Azure Information Protection テクニカル ブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
+- ドキュメントの新しい項目: [Azure Information Protection テクニカル ブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
 
 その他のリソース: [Azure Information Protection の情報とサポート](information-support.md)
 

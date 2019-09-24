@@ -29,11 +29,11 @@ ms.locfileid: "68793801"
 
 ## <a name="prerequisites"></a>必要条件
 
-このクイック スタートを完了するには、次の要件があります。
+このクイック スタートを完了するには、次が必要です。
 
 - Azure Information Protection プラン 1 またはプラン 2 を含むサブスクリプション。
     
-    このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
+    これらのいずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
@@ -80,7 +80,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 1. **[分類]**  >  **[ラベル]** を選択します。
     
-    **[既定のラベルの生成]** オプションが表示される場合は、ラベルはまだ存在していません。
+    **[既定のラベルを生成します]** オプションが表示される場合は、ラベルはまだ存在していません。
     
      ![Azure Information Protection の既定のラベルなし](./media/info-protect-nodefaultlabels.png)
     
@@ -88,7 +88,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
     
     ![Azure Information Protection の既定のラベルあり](./media/info-protect-defaultlabels.png)
 
-2. ラベルが存在する場合は、次のセクションに進んでラベルを表示します。 ラベルが存在しない場合は、 **[既定のラベルの生成]** オプションを選択します。
+2. ラベルが存在する場合は、次のセクションに進んでラベルを表示します。 ラベルが存在しない場合は、 **[既定のラベルを生成します]** オプションを選択します。
 
 4. 次に、すべてのユーザーに対してラベルを発行するために、 **[分類]**  >  **[ポリシー]**  >  **[グローバル]** で次の操作を行います。
     
