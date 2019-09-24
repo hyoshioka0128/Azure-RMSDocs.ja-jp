@@ -95,7 +95,7 @@
           items:
             - name: 概要
               href: plan-implement-tenant-key.md
-            - name: BYOK の料金と制限事項
+            - name: BYOK の詳細
               href: byok-price-restrictions.md
         - name: ユーザーとグループの準備
           href: prepare.md
