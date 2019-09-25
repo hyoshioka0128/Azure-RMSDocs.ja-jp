@@ -4,19 +4,19 @@ description: 管理者が PowerShell を使用して Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: b1db49d2a6033301b5922e66bc76be190b6162af
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060048"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227792"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>管理者ガイド: Azure Information Protection 統合クライアントでの PowerShell の使用
 
@@ -26,7 +26,7 @@ ms.locfileid: "71060048"
 
 Azure Information Protection 統合ラベル付けクライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール**Azureinformationprotection**と共にインストールされます。 例えば:
+コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール**Azureinformationprotection**と共にインストールされます。 以下に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -109,11 +109,11 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
 
 4. **[Aiponbehalfof]** ブレードで、**アプリケーション (クライアント) ID**の値をコピーします。 値は次の例`57c3c1c3-abf9-404e-8b2b-4652836c8c66`のようになります。 この値は、Set AIPAuthentication コマンドレットを実行するときに*Webappid*パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
-5. **[Aiponbehalfof]** ブレードで、 **[管理]** メニューから **[認証]** を選択します。
+5. **[Aiponbehalfof]** ブレードで、 **[管理]** サイドバーの **[認証]** を選択します。
 
 6. **[Aiponbehalfof-Authentication]** ブレードの **[詳細設定]** セクションで、 **[ID トークン]** チェックボックスをオンにして、 **[保存]** を選択します。
 
-7. **[Aiponbehalfof-Authentication]** ブレードで、 **[管理]** メニューから **[証明書 & シークレット]** を選択します。
+7. **[Aiponbehalfof-Authentication]** ブレードの **[管理]** サイドバーで、 **[証明書 & シークレット]** を選択します。
 
 8. **[Aiponbehalfof-証明書 & シークレット]** ブレードの **[クライアントシークレット]** セクションで、 **[+ 新しいクライアントシークレット]** を選択します。 
 
@@ -126,7 +126,7 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
     
     この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に、保存した値を安全に保存し、アクセスを制限します。
 
-10. **[Aiponbehalfof-Certificates & シークレット]** ブレードで、 **[管理]** メニューの **[API の公開]** を選択します。
+10. **[Aiponbehalfof-Certificates & シークレット]** ブレードで、 **[管理]** サイドバーの **[API の公開]** を選択します。
 
 11. **[Aiponbehalfof-api を公開]** する ブレードで、 **[アプリケーション id uri]** オプションに **[設定]** を選択し、 **[アプリケーション id uri]** の値で **[api]** を **[http]** に変更します。 この文字列は次の例`http://d244e75e-870b-4491-b70d-65534953099e`のようになります。 
     
@@ -156,13 +156,13 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
     
     この値は、Set-AIPAuthentication コマンドレットを実行するときに、パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
-18. **[Aipclient]** ブレードで、 **[管理]** メニューから **[認証]** を選択します。
+18. **[Aipclient]** ブレードで、 **[管理]** サイドバーの **[認証]** を選択します。
 
 19. **[Aipclient-Authentication]** ブレードで、次のように指定し、 **[保存]** を選択します。
     - **[詳細設定]** セクションで、 **[ID トークン]** を選択します。
     - **[既定のクライアントの種類]** セクションで、[**はい]** を選択します。
 
-20. **[Aipclient-Authentication]** ブレードで、 **[管理]** メニューの **[API アクセス許可]** を選択します。
+20. **[Aipclient-Authentication]** ブレードで、 **[管理]** サイドバーの **[API アクセス許可]** を選択します。
 
 21. **[Aipclient-アクセス許可]** ブレードで、 **[+ アクセス許可の追加]** を選択します。
 
@@ -180,11 +180,11 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
 
 このコマンドを初めて実行するとき、サインインが求められます。それにより、アカウントのアクセス トークンが作成され、%localappdata%\Microsoft\MSIP に安全に保管されます。 この初回サインイン後、コンピューターで非対話式でファイルにラベルを付け、保護できます。 ただし、サービスアカウントを使用してファイルのラベル付けと保護を行っていて、このサービスアカウントが対話形式でサインインできない場合は、次のように、 *OnBehalfOf*パラメーターを Set-AIPAuthentication と共に使用します。
 
-1. 対話形式でサインインするためのユーザー権利の割り当てが付与されている Active Directory アカウントの資格情報を格納する変数を作成します。 例えば:
+1. 対話形式でサインインするためのユーザー権利の割り当てが付与されている Active Directory アカウントの資格情報を格納する変数を作成します。 以下に例を示します。
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 例えば:
+2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 以下に例を示します。
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
 
@@ -211,7 +211,7 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
 
 4. **[AIPv2OnBehalfOf]** ブレードで、**アプリケーション (クライアント) ID**の値をコピーします。 値は次の例`77c3c1c3-abf9-404e-8b2b-4652836c8c66`のようになります。 この値は、Set-AIPAuthentication コマンドレットを実行するときに*AppId*パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
-5. **AIPv2OnBehalfOf**ブレードの **[管理]** メニューで、 **[証明書 & シークレット]** を選択します。
+5. **AIPv2OnBehalfOf**ブレードの **[管理]** サイドバーで、 **[証明書 & シークレット]** を選択します。
 
 6. **[AIPv2OnBehalfOf & シークレット]** ブレードの **[クライアントシークレット]** セクションで、 **[+ 新しいクライアントシークレット]** を選択します。
 
@@ -224,23 +224,35 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
     
     この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に、保存した値を安全に保存し、アクセスを制限します。
 
-9. **[管理]** メニューの **[API のアクセス許可]** を選択します。
+9. サイドバーの **[管理]** で、 **[API のアクセス許可]** を選択します。
 
 10. **[AIPv2OnBehalfOf のアクセス許可]** ブレードで、 **[+ アクセス許可の追加]** を選択します。
 
-11. **[API のアクセス許可の要求]** ブレードで、 **[Azure Rights Management サービス]** を選択し、アプリケーションに必要なアクセス許可の種類を確認するメッセージが表示されたら、 **[アプリケーションのアクセス許可]** を選択します。
+11. **[Api のアクセス許可の要求]** ブレードで、 **[Microsoft api]** タブが表示されていることを確認し、 **[Azure Rights Management Services]** を選択します。 アプリケーションで必要なアクセス許可の種類を確認するメッセージが表示されたら、 **[アプリケーションのアクセス許可]** を選択します。
 
 12. **[アクセス許可]** で、[コンテンツ] を展開し、次の**内容**を選択します。
     
     -  **DelegatedWriter** (常に必須)
+    -  **Content. スーパー** [ユーザー (スーパーユーザー機能](../configure-super-users.md)が必要な場合は必須)
     -  **Content-type** (常に必須)
-    -  **Content. スーパー** [ユーザー (スーパーユーザー機能](../configure-super-users.md)が必要な場合は必須) 
     
     スーパーユーザー機能を使用すると、アカウントは常にコンテンツの暗号化を解除できます。 たとえば、ファイルを再保護し、他のユーザーが保護しているファイルを検査します。
 
 13. **[アクセス許可の追加]** を選択します。
 
-14. [AIPv2OnBehalfOf の**アクセス許可**] ブレードに戻り、[ ***テナント名*>に\<管理者の同意を付与**する] を選択し、確認プロンプトで [**はい]** を選択します。
+14. AIPv2OnBehalfOf の **[アクセス許可]** ブレードに戻り、 **[+ アクセス許可をもう一度追加する]** を選択します。
+
+15. **[AIP のアクセス許可の要求]** ブレードで、組織が使用する **[api]** を選択し、 **[Microsoft Information Protection Sync Service]** を検索します。
+
+16. **[API のアクセス許可の要求]** ブレードで、アプリケーションの **[アクセス許可]** を選択します。
+
+17. **[アクセス許可]** で、 **[UnifiedPolicy]** を展開し、次のように選択します。
+    
+    -  **UnifiedPolicy**
+
+18. **[アクセス許可の追加]** を選択します。
+
+19. [API のアクセス許可] ブレードに戻り、[  **\<*テナント名*>に管理者の同意を付与**する] を選択し、確認プロンプトで [**はい]** を選択します。
 
 これで、シークレットを使用したこのアプリの登録が完了しました。パラメーター *AppId*と*appsecret*を使用して、 [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)を実行する準備ができました。 また、テナント ID も必要になります。 
 
@@ -253,17 +265,17 @@ Azure AD のトークンの有効期限が切れた場合は、もう一度コ�
 
 このコマンドを初めて実行するとき、サインインが求められます。それにより、アカウントのアクセス トークンが作成され、%localappdata%\Microsoft\MSIP に安全に保管されます。 この初回サインイン後、コンピューターで非対話式でファイルにラベルを付け、保護できます。 ただし、サービスアカウントを使用してファイルのラベル付けと保護を行っていて、このサービスアカウントが対話形式でサインインできない場合は、次のように、 *OnBehalfOf*パラメーターを Set-AIPAuthentication と共に使用します。
 
-1. 対話形式でサインインするためのユーザー権利の割り当てが付与されている Active Directory アカウントの資格情報を格納する変数を作成します。 例えば:
+1. 対話形式でサインインするためのユーザー権利の割り当てが付与されている Active Directory アカウントの資格情報を格納する変数を作成します。 以下に例を示します。
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 例えば:
+2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 以下に例を示します。
     
         Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 
 
 ## <a name="next-steps"></a>次の手順
-PowerShell セッションでコマンドレットのヘルプを表示するには`Get-Help <cmdlet name> -online`、「」と入力します。 例えば: 
+PowerShell セッションでコマンドレットのヘルプを表示するには`Get-Help <cmdlet name> -online`、「」と入力します。 以下に例を示します。 
 
     Get-Help Set-AIPFileLabel -online
 
