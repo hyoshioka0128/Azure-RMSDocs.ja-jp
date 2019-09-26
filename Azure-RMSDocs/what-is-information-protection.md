@@ -4,7 +4,7 @@ description: Azure Information Protection サービスの技術的な概要で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 09/24/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e89fcb967ea72bd61bf7c8ca73d72ccb08fdef47
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0588efa277c75199afc2d357a8152257c120376c
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792919"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227819"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -31,13 +31,13 @@ Azure Information Protection (AIP とも呼ばれます) は、ラベルを適�
 
 ###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection クライアント (クラシック)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) からのスクリーンショット
 
-コンテンツを分類し (必要に応じて保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
+コンテンツを分類し (オプションで保護すると)、それを追跡したり、その用途を管理できるようになります。 データのフローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、文書へのアクセスを追跡したり、データの漏えいや誤用を防ぐことができます。
 
 ## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
 
 Azure Information Protection のラベルは、文書と電子メールを分類するために使用します。 これを行うと、データの保存場所やデータの共有者に関係なく分類を識別できるようになります。 ラベルには、ヘッダー、フッター、透かしなどの視覚的なマーキングを含めることができます。 メタデータはクリア テキストでファイルと電子メール ヘッダーに追加されます。 クリア テキストなので、データ損失防止ソリューションなど、その他のサービスが分類を識別して適切なアクションを取ることができます。 
 
-たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、フッター ''秘密度:一般'' がメール メッセージに追加されています。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
+たとえば、次の電子メール メッセージは "一般" と分類されています。 ラベルでは、フッター "秘密度:一般" がメール メッセージに追加されました。 このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 このラベルは、電子メール サービスがこの値を調べて監査エントリを作成したり、組織外への送信を回避したりできるように、電子メールのヘッダーに埋め込まれます。
 
 ![Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例](./media/example-email-footerv2.png)
 
@@ -45,17 +45,17 @@ Azure Information Protection のラベルは、文書と電子メールを分類
 
 ## <a name="how-data-is-protected"></a>データ保護のしくみ
 
-保護テクノロジには *Azure Rights Management* (Azure RMS と略されることが多い) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
+保護テクノロジには *Azure Rights Management* (しばしば Azure RMS と略される) が使用されています。 このテクノロジは、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) にも統合されています。 また、独自の基幹業務アプリケーションや情報ベンダーの情報保護ソリューションで使用できます。アプリケーションやソリューションは、オンプレミスまたはクラウドのどちらにあってもかまいません。
 
-この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションでは、データが他者と共有されている場合でも、所有者がデータを制御し続けることになります。
+この保護テクノロジでは、暗号化、ID、および承認ポリシーが使用されます。 文書や電子メールが Rights Management で保護されている場合、適用されるラベルの場合と同様に、どこに保存されているか (組織、ネットワーク、ファイル サーバー、アプリケーションの内部または外部) にかかわらず、適用される保護は維持されます。 この情報保護ソリューションならば、データが他者と共有されているときでも、所有者がデータの制御を維持できます。
 
 たとえば、組織内のユーザーのみがアクセスできるようにレポート文書や売上予測のスプレッドシートを構成したり、その文書の編集の許可を制御したり、読み取り専用に制限したり、印刷できないよう制御することもできます。 電子メールについても同様に構成することができます。さらに、電子メールを転送不可に設定したり、[全員に返信] オプションを使用不可に設定したりできます。 
 
-これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 保護をサポートするアプリケーションとサービスで同じ保護設定を使用することもできますが、ラベルは付けることができません。 これらのアプリケーションとサービスでは、保護設定は "*Rights Management テンプレート*" として使用できるようになります。
+これらの保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールの両方を分類できます。 ただし、保護をサポートするアプリケーションとサービスから同じ保護設定を使用することもできますが、ラベルを付けることはできません。 これらのアプリケーションとサービスでは、保護設定は "*Rights Management テンプレート*" として使用できるようになります。
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
-Azure Rights Management サービスが有効になると、データ アクセスを組織内のユーザーに制限するための 2 つの既定のテンプレートがすぐに使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
+Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定のテンプレートが使用可能になります。 これらのテンプレートでは、即座に組織からのデータの漏えいを防止できます。 これらの既定のテンプレートを補うこともできます。その場合、より厳しい制御を適用する独自の保護設定を構成します。
 
 保護設定を含む Azure Information Protection のラベルを作成すると、その処理の裏では、このアクションによって対応する Rights Management テンプレートが作成されます。 さらに、そのテンプレートは、Azure Rights Management をサポートするアプリケーションとサービスで使用できます。
 
@@ -67,15 +67,15 @@ Azure Rights Management での保護の詳細については、「[Azure Rights 
 
 ## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>ドキュメントおよび電子メール用のエンドユーザー ワークフローとの統合
 
-Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントを使うと、Office アプリケーションに情報保護バーがインストールできます。このバーは、最初の図で Word に表示されています。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 次に例を示します。
+Azure Information Protection は、Azure Information Protection クライアントがインストールされている場合、エンド ユーザーの既存のワークフローと統合されます。 このクライアントは、Office アプリケーションに、Word にこのバーを表示した最初の図のように Information Protection バーをインストールします。 同じ Information Protection バーが Excel、PowerPoint、および Outlook に追加されます。 次に例を示します。
 
 ![Excel の Azure Information Protection バーの例](./media/excelproplus-infoprotect-bar.png)
 
 ###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>[Azure Information Protection 統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)からのスクリーンショット 
 
-エンド ユーザーはこの Information Protection バーを使用して、正しい分類のラベルを簡単に選択できるようになります。 ユーザーによる迷いの解消や、ご自分の組織のポリシーへの準拠を目的として、必要に応じてラベルを自動的に適用することもできます。
+エンド ユーザーはこの Information Protection バーを使用して、正しい分類のラベルを簡単に選択できるようになります。 必要に応じて、ラベルを自動的に適用してユーザーの推測を排除したり、組織のポリシーに準拠したりすることもできます。
 
-追加のファイルの種類を分類して保護したり、一度に複数のファイルを処理したりするには、次のようにエクスプローラーからファイルまたはフォルダーを右クリックします。
+追加のファイルの種類を分類して保護し、複数のファイルを一度にサポートするには、次のようにして、エクスプローラーからファイルまたはフォルダーを右クリックします。
 
 ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](./media/right-click-classify-protect-folder.png)
 
@@ -89,17 +89,17 @@ Azure Information Protection は、Azure Information Protection クライアン�
 
 ### <a name="additional-integration-for-email"></a>電子メールにおける追加の統合
 
-Exchange Online で Azure Information Protection を使用すると、追加のメリットを得られます。保護されたメールを任意のユーザーに送信し、そのユーザーが任意のデバイス上でそのメールを読み取れるようにすることができます。
+Exchange Online で Azure Information Protection を使用する場合は、追加の利点を得られます:保護されたメールを任意のユーザーに送信し、そのユーザーが任意のデバイス上でそのメールを読み取れるようにすることができます。
 
-たとえば、ユーザーが機密情報を、**Gmail**、**Hotmail**、または **Microsoft** アカウントを使用している個人用メール アドレスに送信する必要があるとします。 または、Office 365 用のアカウントまたは Azure AD 内のアカウントを持っていないユーザーに機密情報を送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
+たとえば、ユーザーが機密情報を、**Gmail**、**Hotmail**、または**Microsoft** アカウントを使用している個人用メール アドレスに送信する必要があるとします。 または、Office 365 用のアカウントまたは Azure AD 内のアカウントを持っていないユーザーに機密情報を送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
 
-このシナリオでは、[Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要になります。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことができない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
+このシナリオには、[Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要です。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことはできない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
 
 たとえば、Gmail ユーザーには、電子メール メッセージに次の内容が表示されます。
 
 ![OME と AIP の Gmail 受信者エクスペリエンス](./media/ome-message.png)
 
-この電子メールを送信するユーザーのワークフローは、所属する組織のユーザーに保護された電子メールを送信する場合と変わりません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。 次に例を示します。
+電子メールを送信するユーザーにとって、ワークフローは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、ユーザーは Azure Information Protection クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択することができます。 または、ユーザーが選択したラベルに [転送不可] 機能を統合することができます。これにより、電子メールは分類され保護されます。 次に例を示します。
 
 ![[転送不可] として構成されたラベルを選択](./media/recipients-only-label2.png)
 
@@ -113,7 +113,7 @@ Exchange Online で Azure Information Protection を使用すると、追加の�
 
 ドキュメントと電子メールは、最初に作成したときにラベル付けすることが理想的です。 しかし、データ ストアには既存のドキュメントが多数ある場合があり、これらのドキュメントも分類して保護する必要があります。 これらのデータ ストアは、オンプレミスか、またはクラウド内にある場合があります。
 
-オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、保有していることに気付いていなかった機密情報を検出することもできます。 
+オンプレミスのデータ ストアの場合、Azure Information Protection スキャナーを使用して、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行います。 スキャナーは、Windows Server 上のサービスとして実行されます。 ポリシー内の同じ規則を使用して、機密データを検出し、ドキュメントに特定のラベルを適用することができます。 または、ファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用できます。 また、スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。 
 
 スキャナーのデプロイと使用方法については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。
 
@@ -127,19 +127,19 @@ Exchange Online で Azure Information Protection を使用すると、追加の�
 
 ## <a name="resources-for-azure-information-protection"></a>Azure Information Protection の参考資料
 
-- 無料試用版: [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- 無料試用版:[Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- サブスクリプションのオプションと価格: [Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
+- サブスクリプションのオプションと価格:[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
 
-- クライアントのダウンロード: [Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- クライアントのダウンロード:[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
 - カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- よく寄せられる質問: [Azure Information Protection に関してよく寄せられる質問](faqs.md)
+- よく寄せられる質問:[Azure Information Protection に関してよく寄せられる質問](faqs.md)
 
-- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
+- Yammer:[Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-- ドキュメントの新しい項目: [Azure Information Protection テクニカル ブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
+- ドキュメントの新しい項目:[Azure Information Protection テクニカル ブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
 
 その他のリソース: [Azure Information Protection の情報とサポート](information-support.md)
 
@@ -147,15 +147,15 @@ Exchange Online で Azure Information Protection を使用すると、追加の�
 
 オーランドでの Microsoft Ignite 2018 では、[Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) に関する多くのセッションが行われました。 参加できなかった方も後でセッションを確認できるように、すべてのセッションが記録されています。 推奨されるトップ 5 のセッションは次のとおりです。
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Microsoft Information Protection (MIP) を使用して、ライフサイクル全体を通してあらゆる場所の機密データを保護する)](https://myignite.techcommunity.microsoft.com/sessions/64297) - [YouTube ビデオ](https://youtu.be/gmHVF-1cLXA)をご覧ください
+- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Microsoft Information Protection (MIP) を使用して、ライフサイクル全体を通してあらゆる場所の機密データを保護する)](https://myignite.techcommunity.microsoft.com/sessions/64297)
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Microsoft Information Protection の機能を連携させて、デバイス、アプリ、およびサービスの間で機密情報を保護する方法について)](https://myignite.techcommunity.microsoft.com/sessions/64299) - [YouTube ビデオ](https://youtu.be/kL9Y7NGTyQQ)をご覧ください
+- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Microsoft Information Protection の機能を連携させて、デバイス、アプリ、およびサービスの間で機密情報を保護する方法について)](https://myignite.techcommunity.microsoft.com/sessions/64299)
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Microsoft Information Protection ソリューションのデプロイと導入を加速させる)](https://myignite.techcommunity.microsoft.com/sessions/64283) - [YouTube ビデオ](https://www.youtube.com/watch?v=JsCyIVyQJmE)をご覧ください
+- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Microsoft Information Protection ソリューションのデプロイと導入を加速させる)](https://myignite.techcommunity.microsoft.com/sessions/64283)
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Office 365 Message Encryption で、機密性の高いメールを保護および管理する)](https://myignite.techcommunity.microsoft.com/sessions/64327) - [YouTube ビデオ](https://www.youtube.com/watch?v=Ld4b4pFua0g)をご覧ください
+- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Office 365 Message Encryption で、機密性の高いメールを保護および管理する)](https://myignite.techcommunity.microsoft.com/sessions/64327)
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、使用状況レポート、および分析を行う)](https://myignite.techcommunity.microsoft.com/sessions/64301) - [YouTube ビデオ](https://www.youtube.com/watch?v=nzDIXd0XaeA)をご覧ください
+- [THR2003 - Data discovery, reporting and analytics for all your data with Microsoft Information Protection (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、使用レポートの作成、および分析を行う)](https://myignite.techcommunity.microsoft.com/sessions/64301)
 
 この Ignite で行われた発表のロールアップについては、ブログ投稿「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」(機密データを保護するために使用できる情報保護機能の発表) を参照してください。
 
