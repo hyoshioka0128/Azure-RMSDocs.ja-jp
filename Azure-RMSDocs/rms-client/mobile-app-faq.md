@@ -4,7 +4,7 @@ description: iOS 用および Android 用の Azure Information Protection アプ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/15/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: user
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b4eb23ccc53beda8161cac2a0c0566d06e647b67
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fcd764187379fdfcb8dd1cc13c60ae9dad2069dd
+ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792966"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71301150"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
@@ -39,7 +39,7 @@ ms.locfileid: "68792966"
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>モバイル デバイスで Azure Information Protection アプリを実行するには
 
-Azure Information Protection アプリには、**iOS 8** 以降または **Android 4.4** 以降が必要になります。
+Azure Information Protection アプリには、 **iOS 11**または**Android 4.4**の最小バージョンが必要です。
 
 これらのバージョン以降を搭載している場合は、モバイル デバイスにアプリをインストールして実行できます。
 
