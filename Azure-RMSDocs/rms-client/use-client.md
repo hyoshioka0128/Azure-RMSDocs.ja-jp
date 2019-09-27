@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 94348ea8b214e0ece964dba2d0a49f6e03de49d0
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 63220621a6c3bbf7ad84ba4c76c38353b56c256d
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060114"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313995"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象:Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 
 Azure Information Protection は、組織の文書や電子メールを保護するクライアント/サーバー型のソリューションです。
 
@@ -68,27 +68,27 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 
 |機能|従来のクライアント|統一されたラベル付けクライアント|
 |-------|-----------------------------------|----------------------------------------------------|
-|ラベル付けアクション:手動、推奨、自動| [はい] | [はい] |
-|中央レポート機能 (分析):| [はい] | はい (制限あり):<br /><br /> -カスタム機微な情報の種類は、プレビューバージョンでサポートされています |
-|保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| [はい] | [はい] |
-|ラベルの多言語サポート:| [はい] | [はい] |
-|メールの添付ファイルからのラベル継承:| [はい] | [はい]  |
-|次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] <br /><br /> [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。| [はい] <br /><br /> [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされます。 |
-|ユーザー定義のアクセス許可:| [はい] | [はい] |
-|オンプレミスのデータ ストア用のスキャナー:| [はい] | はい-プレビューバージョン |
-|カスタム アクセス許可:| [はい] | エクスプローラーと PowerShell <br /><br /> Office アプリでは、別の方法として、ユーザーが **ファイル情報** >  **ドキュメント** > の保護 **アクセスの制限** または 管理者がユーザー定義のアクセス許可のラベルを構成できる を選択できます。|
-|Office アプリの Information Protection バー:| [はい] | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> -プレビューバージョンを使用しない限り、適用されたラベルのラベルの色は表示されません|
-|ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| [はい] | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
-|エクスプローラー、右クリック アクション:| [はい] | はい (制限あり):<br /><br /> -以前の ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
-|PowerShell コマンド:| [はい] | はい (制限あり):<br /><br />-コンテナーファイル (zip、rar、7z、.msg、および .pst) から保護を削除することはできません|
-|保護アクションに対するオフライン サポート:| [はい] | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
-|オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| [はい] |いいえ |
-|HYOK のサポート:| [はい] | いいえ <br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
-|イベント ビューアーに対する使用状況ログの記録:| [はい] | いいえ|
-|Outlook の [転送不可] ボタンを表示する| [はい] | いいえ |
-|追跡と取り消し:| [はい] | いいえ |
-|テンプレートを使用した保護専用モード (ラベルなし):| [はい] | いいえ |
-|AD RMS のサポート:| [はい] | 次のアクションのみがサポートされます。<br /><br /> - [Active Directory Rights Management サービスのモバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))をデプロイすると、保護されたドキュメントをビューアーで開くことができます|
+|ラベル付けアクション:手動、推奨、自動| はい | はい |
+|中央レポート機能 (分析):| はい | はい (制限あり):<br /><br /> -カスタム機微な情報の種類は、プレビューバージョンでサポートされています |
+|保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| はい | はい |
+|ラベルの多言語サポート:| はい | はい |
+|メールの添付ファイルからのラベル継承:| はい | はい  |
+|次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| はい <br /><br /> [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。| はい <br /><br /> [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされます。 |
+|ユーザー定義のアクセス許可:| はい | はい |
+|オンプレミスのデータ ストア用のスキャナー:| はい | はい-プレビューバージョン |
+|カスタム アクセス許可:| はい | エクスプローラーと PowerShell <br /><br /> Office アプリでは、別の方法として、ユーザーが **ファイル情報** >  **ドキュメント** > の保護 **アクセスの制限** または 管理者がユーザー定義のアクセス許可のラベルを構成できる を選択できます。|
+|Office アプリの Information Protection バー:| はい | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> -プレビューバージョンを使用しない限り、適用されたラベルのラベルの色は表示されません|
+|ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| はい | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
+|エクスプローラー、右クリック アクション:| はい | はい (制限あり):<br /><br /> -以前の ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
+|PowerShell コマンド:| はい | はい (制限あり):<br /><br />-コンテナーファイル (zip、rar、7z、.msg、および .pst) から保護を削除することはできません|
+|保護アクションに対するオフライン サポート:| はい | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
+|オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| はい |いいえ |
+|HYOK のサポート:| はい | いいえ <br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
+|イベント ビューアーに対する使用状況ログの記録:| はい | いいえ|
+|Outlook の [転送不可] ボタンを表示する| はい | いいえ |
+|追跡と取り消し:| はい | いいえ |
+|テンプレートを使用した保護専用モード (ラベルなし):| はい | いいえ |
+|AD RMS のサポート:| はい | 次のアクションのみがサポートされます。<br /><br /> - [Active Directory Rights Management サービスのモバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))をデプロイすると、保護されたドキュメントをビューアーで開くことができます|
 
 #### <a name="detailed-comparisons-for-the-clients"></a>クライアントの詳細な比較
 
@@ -108,8 +108,8 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度:ファイルごと <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度:セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
 |自動および推奨ラベル: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
-|自動および推奨ラベルのカスタマイズ可能なポリシーヒント: | [はい] <br /><br />Azure portal を使用して、既定のメッセージをユーザーに置き換えます。 | いいえ <br /><br /> 管理センターには、カスタマイズされたポリシーヒントを指定するオプションがありますが、このオプションは、統一されたラベル付けクライアントでは現在サポートされていません。|
-|ファイルの既定の保護レベルを変更します。 | [はい] <br /><br />[レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)を使用して、ネイティブ保護と汎用保護の既定値を上書きすることができます。 | いいえ |
+|自動および推奨ラベルのカスタマイズ可能なポリシーヒント: | はい <br /><br />Azure portal を使用して、既定のメッセージをユーザーに置き換えます。 | いいえ <br /><br /> 管理センターには、カスタマイズされたポリシーヒントを指定するオプションがありますが、このオプションは、統一されたラベル付けクライアントでは現在サポートされていません。|
+|ファイルの既定の保護レベルを変更します。 | はい <br /><br />[レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)を使用して、ネイティブ保護と汎用保護の既定値を上書きすることができます。 | いいえ |
 
 特定の保護設定の動作の違いの詳細な比較については、「[ラベルの保護設定の動作の比較](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)」を参照してください。
 
