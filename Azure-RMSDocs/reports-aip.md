@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 09/18/2019
+ms.date: 09/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
-ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
+ms.openlocfilehash: c168cbfe672caecb0ebfbeea0e0c0e234599c223
+ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71101322"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322391"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -137,17 +137,19 @@ Azure Information Protection クライアント (クラシック) がこのデ�
 
 Azure Information Protection 統合クライアントがこのデータを送信できないようにするには、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)を構成します。
 
-#### <a name="content-matches-for-deeper-analysis"></a>詳細な分析のためのコンテンツ一致 
+#### <a name="content-matches-for-deeper-analysis"></a>詳細な分析のためのコンテンツ一致
 
-Azure Information Protection 用の Azure Log Analytics ワークスペースには、機密情報の種類 (定義済みまたはカスタムの条件) として識別されたデータを収集して格納するためのチェックボックスが含まれています。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 この追加データを送信しない場合は、[**機微なデータの分析をさらに有効に**する] チェックボックスをオンにしないでください。 ほとんどのユーザーがこの追加データを送信する必要があり、ユーザーのサブセットがそのデータを送信できないようにするには、チェックボックスをオンにして、次のようにします。
+Azure Information Protection を使用すると、機密情報の種類 (定義済みまたはカスタム) として識別された実際のデータを収集して保存することができます。 たとえば、これには検出されたクレジット カード番号だけでなく、社会保障番号、パスポート番号、銀行口座番号も含まれる場合があります。 コンテンツの一致は、**アクティビティログ**からエントリを選択すると表示され、**アクティビティの詳細**を表示します。 
 
-- 従来のクライアントとスキャナーの場合:ユーザーのサブセットに対してスコープポリシーの[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
+既定では Azure Information Protection クライアントはコンテンツの一致を送信しません。 コンテンツの一致が送信されるようにこの動作を変更するには:
 
-- 統一されたラベル付けクライアントの場合:ユーザーのサブセットのラベルポリシーで[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)を構成します。
+- クラシッククライアントの場合は、Azure Information Protection analytics の[構成](#configure-a-log-analytics-workspace-for-the-reports)の一部としてチェックボックスをオンにします。 このチェックボックスを**オンにすると、機微なデータに対してより深い分析を行う**ことができます。
+    
+    このクライアントを使用しているほとんどのユーザーがコンテンツの一致を送信できないが、一部のユーザーがコンテンツの一致を送信できないようにする場合は、チェックボックスをオンにして、ユーザーのサブセットのスコープポリシーの [[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)] を構成します。
 
-収集した後のコンテンツ一致は、アクティビティ ログからファイルにドリル ダウンして **[アクティビティの詳細]** を表示すると、レポートに表示されます。 この情報は、クエリで表示および取得することもできます。
+- 統一されたラベル付けクライアントの場合は、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches)を構成します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
@@ -232,10 +234,14 @@ Azure Monitor ログには、格納されているデータの量の見積もり
     - 新しい Log Analytics ワークスペースを作成するには: **[新しいワークスペースの作成]** を選択し、 **[Log Analytics ワークスペース]** ブレードで、要求された情報を指定します。
     
     - 既存の Log Analytics ワークスペースを使用するには: 一覧からワークスペースを選択します。
+    
+    Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
-Log Analytics ワークスペースの作成に関する情報については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
+4. Azure Information Protection クライアント (クラシック) を使用している場合は、機密情報の種類として識別された実際のデータを保存するには、[**機微なデータに対してより深い分析を有効に**する] チェックボックスをオンにします。 この設定の詳細については、このページの「詳細な[分析のためのコンテンツの一致](#content-matches-for-deeper-analysis)」を参照してください。
 
-ワークスペースが構成されている場合は、次のいずれかの管理センターで機密ラベルを公開する場合は、次の手順を実行します。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター:
+5. **[OK]** を選択します。
+
+ワークスペースを構成した後、次のいずれかの管理センターで機密ラベルを公開する場合は、次の手順を実行します。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター:
 
 - Azure portal で、[ **Azure Information Protection** > の**統合ラベル**の**管理** > ] にアクセスし、 **[発行]** を選択します。
     
@@ -282,10 +288,10 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 |列名|説明|
 |-----------|-----------|
-|アクセス権|保護されたドキュメントが正常に開かれました。ファイル名が追跡されている場合は、ファイル名で識別されます。追跡されていない場合は ID です。|
+|アクセス|保護されたドキュメントが正常に開かれました。ファイル名が追跡されている場合は、ファイル名で識別されます。追跡されていない場合は ID です。|
 |AccessDenied|保護されたドキュメントが、追跡されている場合はファイル名で識別されるアクセスを拒否されました。追跡されていない場合は ID。|
 |Time|イベント時間:形式の UTC (YYYY-MM-YYYY-MM-DDTHH: MM: SS)|
-|ユーザー|ユーザー:UPN またはドメイン \ ユーザーの書式設定|
+|User|ユーザー:UPN またはドメイン \ ユーザーの書式設定|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
 |ItemName|ファイル名または電子メールの件名 |
 |メソッド|ラベルの割り当て方法:手動、自動、推奨、既定、または必須|
@@ -324,7 +330,7 @@ Log Analytics ワークスペースの作成に関する情報については、
 
 次の例で、カスタム クエリを作成するフレンドリ スキーマを使用する方法を確認してください。
 
-##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>例 1: 過去 31 日間の監査データを送信したすべてのユーザーを返す 
+##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>例 1 : 過去 31 日間の監査データを送信したすべてのユーザーを返す 
 
 ```
 InformationProtectionEvents 

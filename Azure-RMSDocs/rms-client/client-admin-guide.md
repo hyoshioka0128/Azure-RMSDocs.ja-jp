@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのデ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0ec64a51d26543d0777bdab8180579793251b8fd
-ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
+ms.openlocfilehash: cac8377f4eb4a3d4b5678c9d0a976866aadeead8
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70159223"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314134"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象:Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -172,7 +172,7 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 例えば:
+Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 以下に例を示します。
 
 - オンライン ユーザーの手順:[Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
@@ -215,7 +215,7 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 3. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から現在の一般提供 (GA) バージョンをインストールして、Azure Information Protection クライアントをアップグレードします。
 
-4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile Europe`
+4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 たとえば次のようになります。`Update-AIPScanner –Profile Europe`
 
 5. スキャナーが切断されたコンピューター上で実行されている場合のみ: ここで [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) を実行し、エクスポートされた設定を含んでいるファイルを指定します。
 
@@ -248,7 +248,7 @@ GA バージョンのスキャナー構成データベースを移動するこ�
 
 3. [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) を使用し、新しい SQL Server インスタンスとプロファイル名を指定してスキャナーをインストールします。
 
-4. 省略可能:スキャナーですべてのファイルが再スキャンされないようにするには、ScannerFiles テーブルをエクスポートし、新しいデータベースにインポートします。
+4. 省略可能: スキャナーですべてのファイルが再スキャンされないようにするには、ScannerFiles テーブルをエクスポートし、新しいデータベースにインポートします。
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Azure Information Protection クライアントのアンインストール
 

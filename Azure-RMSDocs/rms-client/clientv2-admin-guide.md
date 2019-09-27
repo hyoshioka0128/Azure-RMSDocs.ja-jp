@@ -4,29 +4,29 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb73cba39d65a4e2c925f73afe7fa3e46ab204cd
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 5353fa25af08c8ef9c979d232945c7f203a0de07
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060058"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313957"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
 > *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このガイドの情報は、エンタープライズネットワーク上の Azure Information Protection の統合されたラベル付けクライアントを担当している場合、または Azure Information Protection 統合された[ラベル付けクライアントユーザーよりも詳細な技術情報が必要な場合に使用します。ガイド](clientv2-user-guide.md)。 
 
-例えば:
+以下に例を示します。
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -156,7 +156,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection の統一されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法についてユーザーに指示し、特定のシナリオに対して選択するラベルについてのガイダンスを提供してください。 例えば:
+Azure Information Protection の統一されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法についてユーザーに指示し、特定のシナリオに対して選択するラベルについてのガイダンスを提供してください。 以下に例を示します。
 
 - オンライン ユーザーの手順:[Azure Information Protection 統合されたラベル付けユーザーガイド](clientv2-user-guide.md)
 
@@ -209,7 +209,7 @@ Azure Information Protection クライアント (クラシック) のスキャ�
 
 2. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、unifield ラベルクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベルクライアントにアップグレードします。
 
-3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、`Update-AIPScanner –Profile Europe` のように指定します。
+3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、「 `Update-AIPScanner –Profile Europe`」のように入力します。
     
     この手順では、 **AIPScannerUL_\<profile_name**という名前の新しいデータベースを作成し >
 
@@ -230,7 +230,7 @@ Azure Information Protection クライアント (クラシック) のスキャ�
 
 3. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統合されたラベル付けクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントにアップグレードします。
 
-4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile Europe`
+4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 たとえば次のようになります。`Update-AIPScanner –Profile Europe`
 
 5. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
 

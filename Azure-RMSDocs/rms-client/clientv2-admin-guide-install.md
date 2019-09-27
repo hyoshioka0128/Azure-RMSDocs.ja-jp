@@ -4,23 +4,23 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e76f2a358042b09aee47088e43d898cf1e11784c
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 014145899b42b37d7fc757e9b3be1b33469e556b
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060171"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314099"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントをユーザーにインストールする
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012, Windows Server 2008 R2*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
 > *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -133,7 +133,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
  
     このファイルの名前は次の形式です: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
-    例えば:**Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    以下に例を示します。**Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     このログ ファイルで、次の文字列を検索します: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** インストールに失敗した場合、このログ ファイルには、問題の特定と解決に役立つ詳細が含まれます。
 
@@ -159,7 +159,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 2. 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
 
-    例えば:**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    以下に例を示します。**LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
 3. この値から、 **/_wmcs/licensing** 文字列を削除します。 例: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -174,7 +174,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 この Microsoft .NET Framework の新しいバージョンのインストールが現実的ではない場合は、**DowngradeDotNetRequirement = True** パラメーターと値を使用してクライアントをインストールすることで、Microsoft .NET Framework バージョン 4.5.1 がインストールされていれば要件を省略できます。
 
-例: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
+たとえば次のようになります。`AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
 
 このパラメーターは注意して使用することをお勧めします。また、この古いバージョンの Microsoft .NET で Azure Information Protection 統合されたラベル付けクライアントを使用した場合に、Office アプリケーションがハングする問題が報告されていることを知らせてください。フレームワーク. ハングすることがある場合は、その他のトラブルシューティングを行う前に推奨されているバージョンにアップグレードしてください。 
 
@@ -192,11 +192,11 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 2. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
     |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
-    |Office 2016|サポートされているすべてのバージョン|64ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン:1|インストール|
-    |Office 2013|サポートされているすべてのバージョン|64ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン:1|インストール|
+    |Office 2016|サポートされているすべてのバージョン|64ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32ビット:[KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン:1.0|インストール|
+    |Office 2013|サポートされているすべてのバージョン|64ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32ビット:[KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン:1.0|インストール|
     |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン:2.1|インストール|
     |Office 2010|Windows 8.1 と Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
     |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
@@ -204,8 +204,9 @@ Windows Update を使用した自動アップグレードをサポートし、Of
     |適用なし|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|インストール|
     |適用なし|Windows 7|KB2627273 <br /><br /> ファイル名に含まれるバージョン番号: v4|アンインストール|
 
-3. 既定のインストールでは、`AzInfoProtection_UL.msi /quiet` のように、 **/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。  
-
+3. 既定のインストールでは、`AzInfoProtection_UL.msi /quiet` のように、 **/quiet** を付けて .msi を実行します。 ただし、次の1つの例外を除き、[実行可能ファイルのインストーラーの指示](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)に記載されている追加のインストールパラメーターを指定することが必要になる場合があります。
+    
+    - **Allowtelemetry = 0**の代わりに、**使用状況の統計情報を Microsoft に送信して Azure Information Protection の向上に役立つ**インストールオプションを無効にするには、 **ENABLETELEMETRY = 0**を指定します。 
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection 統合されたラベル付けクライアントをインストールしたので、このクライアントのサポートに必要な追加情報については、次を参照してください。

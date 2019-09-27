@@ -4,7 +4,7 @@ description: Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 09a9272233a744027810ef65c12e8a3df5cac24b
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 51b39652a5f3ec8cd81f28c1a5ee485992a10375
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808088"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314344"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -81,7 +81,7 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > 
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
-IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、このファイルで次のことはできません: 共同編集、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
+IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、このファイルで次のことはできません: 共同編集、Web 用 Office、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
 
 SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 

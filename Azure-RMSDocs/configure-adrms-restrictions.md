@@ -4,19 +4,19 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: 149bf28e72f333eafa090e75e8703b6fe3a61165
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862708"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313950"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -70,22 +70,22 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 
 |プラットフォーム|アプリケーション|Supported|
 |----------------------|----------|-----------|
-|Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護:[はい]<br /><br />消費: [はい]|
-|Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Outlook|保護:[はい]<br /><br />消費: [はい]|
-|Windows|Azure Information Protection クライアントとファイル エクスプローラー|保護:[はい] <br /><br />消費: [はい]|
-|Windows|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: [はい]|
-|Windows|Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット|保護:[はい]<br /><br />消費: [はい]|
-|Windows|Azure Information Protection スキャナー|保護:[はい]<br /><br />消費: [はい]|
-|Windows|Rights Management 共有アプリ|保護:いいえ<br /><br />消費: [はい]|
-|MacOS|Office for Mac <br /><br /> - Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: [はい]|
-|MacOS|Office for Mac<br /><br />- Outlook|保護:いいえ<br /><br />消費: [はい]|
-|MacOS|Rights Management 共有アプリ|保護:いいえ<br /><br />消費: [はい]|
-|iOS|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: [はい]|
+|Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Outlook|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントとファイル エクスプローラー|保護:はい <br /><br />消費: はい|
+|Windows|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: はい|
+|Windows|Azure Information Protection クライアントと PowerShell のラベル付けコマンドレット|保護:はい<br /><br />消費: はい|
+|Windows|Azure Information Protection スキャナー|保護:はい<br /><br />消費: はい|
+|Windows|Rights Management 共有アプリ|保護:いいえ<br /><br />消費: はい|
+|MacOS|Office for Mac <br /><br /> - Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: はい|
+|MacOS|Office for Mac<br /><br />- Outlook|保護:いいえ<br /><br />消費: はい|
+|MacOS|Rights Management 共有アプリ|保護:いいえ<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: はい|
 |iOS|Office Mobile <br /><br />-Outlook|保護:いいえ<br /><br />消費: いいえ|
-|iOS|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: [はい]|
-|Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: [はい]|
+|iOS|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: はい|
+|Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: はい|
 |Android|Office Mobile <br /><br />- Outlook|保護:いいえ<br /><br />消費: いいえ|
-|Android|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: [はい]|
+|Android|Azure Information Protection ビューアー|保護:適用なし<br /><br />消費: はい|
 |Web|Outlook on the web|保護:いいえ<br /><br />消費: いいえ|
 |Web|Web 用 Office<br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: いいえ|
 |ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護:いいえ<br /><br />消費: いいえ|
@@ -189,9 +189,9 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 テンプレート GUID とライセンス URL の値は、Active Directory Rights Management サービス コンソールで確認できます。
 
-- テンプレート GUID を確認するには: クラスターを展開し、 **[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例えば:82bf3474-6efe-4fa1-8827-d1bd93339119
+- テンプレート GUID を確認するには: クラスターを展開し、 **[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 以下に例を示します。82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- ライセンス URL を確認するには: クラスター名を指定します。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: https://rmscluster.contoso.com 
+- ライセンス URL を確認するには: クラスター名を指定します。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 たとえば次のようになります。 https://rmscluster.contoso.com 
     
     エクストラネットのライセンスの値とイントラネットのライセンス値がある場合、それらは次のように異なります。エクストラネットの値は、保護されたドキュメントまたは電子メールを、明示的なポイントツーポイントの信頼関係によって定義されたパートナーと共有する場合にのみ指定してください。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 

@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214103"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314320"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -77,7 +77,9 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows 7 Service Pack 1 (x86、x64)
 
-- Windows Server 2016 
+- Windows Server 2019
+
+- Windows Server 2016
 
 - Windows Server 2012 R2 および Windows Server 2012
 
@@ -85,18 +87,21 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)(winword.exe、excel.exe、outlook.exe、powerpnt.exe) と、統合された Azure Information Protection の実行可能ファイルを無効にする必要がある場合があります。クライアントまたは Azure Information Protection クライアント (msip .exe、msip) にラベルを付ける。
 
-一覧表示されているサーバーバージョンでは、Azure Information Protection クライアントがリモートデスクトップサービスでサポートされています。 リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect**フォルダーを削除しないでください。
+表示されるサーバーのバージョン:
+
+- リモートデスクトップサービスでは、Azure Information Protection クライアントがサポートされています。 リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect**フォルダーを削除しないでください。
+
+- Server Core と Nano Server はサポートされていません。
 
 Azure Information Protection クライアントが Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)でデータを使用できます。
 
 Azure Information Protection クライアントには、それぞれの管理者ガイドに記載されている追加の前提条件があります。
 
-- Azure Information Protection 統合ラベル付けクライアント:[必須コンポーネント](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Azure Information Protection 統合ラベル付けクライアント:[前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
-- Azure Information Protection クライアント:[必須コンポーネント](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- Azure Information Protection クライアント:[前提条件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-
-## <a name="applications"></a>アプリケーション
+## <a name="applications"></a>[アプリケーション]
 
 Azure Information Protection クライアントは、次のいずれかの Office エディションの Office アプリケーション**Word**、 **Excel**、 **PowerPoint**、 **Outlook**を使用して、ドキュメントや電子メールにラベルを付けて保護することができます。
 
