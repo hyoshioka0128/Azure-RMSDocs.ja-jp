@@ -1,72 +1,79 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Azure Information Protection のドキュメント
+summary: お客様の会社の内外で、メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Azure Information Protection での簡単な分類から埋め込みラベルとアクセス許可、データ保護の強化は常時提供され、保存場所、共有先は関係ありません。
 metadata:
   title: Azure Information Protection のドキュメント
   description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。
   services: information-protection
-  author: msmbaldwin
-  manager: barbkess
   ms.service: information-protection
-  ms.tgt_pltfrm: na
-  ms.devlang: na
   ms.topic: landing-page
-  ms.date: 01/30/2019
-  ms.author: mbaldwin
-  layout: LandingPage
-abstract:
-  description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Azure Information Protection での簡単な分類から埋め込みラベルとアクセス許可、データ保護の強化は常時提供され、保存場所、共有先は関係ありません。
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsFTitle
-        items:
-          - title: Azure Information Protection について詳しく知る
-            href: what-is-information-protection.md
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
-              href: what-is-information-protection.md
-          - title: Azure Information Protection を使用して作業を開始する
-            href: quickstart-viewpolicy.md
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_quick-start.svg'
-              href: quickstart-viewpolicy.md
-          - title: Azure Information Protection を含む完全なソリューションである Microsoft 365 の詳細を説明する
-            href: 'https://docs.microsoft.com/microsoft-365/'
-            image:
-              src: /office/media/icons/caret-right-blue.svg
-              href: 'https://docs.microsoft.com/microsoft-365/'
-  - title: 5 分のクイックスタート
-    items:
-      - type: paragraph
-        text: 次のクイックスタートを使用してデータを保護する方法について説明します。
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_portal.svg'
-            text: Azure Portal
-            href: quickstart-viewpolicy.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_search.svg'
-            text: 機密情報を検索する
-            href: quickstart-findsensitiveinfo.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-            text: ラベルの構成
-            href: quickstart-label-dnf-protectedemail.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_categorize.svg'
-            text: 新しいラベルの作成
-            href: quickstart-label-specificusers.md
-  - title: ステップバイステップ チュートリアル
-    items:
-      - type: paragraph
-        text: ポリシーの編集、新しいラベルの作成、および設定を構成する方法について説明します。
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/azure/information-protection/infoprotect-quick-start-tutorial">Azure Information Protection ポリシーを編集して新しいラベルを作成する</a>
-          - html: <a href="/azure/information-protection/infoprotect-settings-tutorial">連携させる Azure Information Protection のポリシー設定を構成する</a>
+  ms.collection: M365-security-compliance
+  author: cabailey
+  ms.author: cabailey
+  manager: rkarlin
+  ms.date: 09/17/2019
+  ms.openlocfilehash: 326f521f2f160b6425db15e22084e02fbecd4f55
+  ms.sourcegitcommit: 569446a78a217288198bd499c03bd634f3a92f7e
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71342557"
+landingContent:
+- title: Azure Information Protection について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Information Protection とは
+      url: what-is-information-protection.md
+    - text: 機密ラベルの概要
+      url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
+- title: 作業開始
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: 要件
+      url: requirements.md
+    - text: 機密ラベルを自動的に適用する
+      url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
+    - text: コンテンツへのアクセスを制限する
+      url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
+    - text: 統合ラベル付けクライアントのインストールと構成
+      url: ./rms-client/clientv2-admin-guide.md
+- title: キー持ち込み (BYOK)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: テナント キーの計画と実装
+      url: plan-implement-tenant-key.md
+- title: オンプレミスのデータ ストアのデータを分類および保護する
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 機密情報の検索 (プレビュー)
+      url: quickstart-findsensitiveinfo.md
+  - linkListType: how-to-guide
+    links:
+    - text: スキャナーのデプロイ (プレビュー)
+      url: deploy-aip-scanner.md
+- title: ラベルの使用状況の監視と機密情報の検出
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 中央レポート機能 (プレビュー)
+      url: reports-aip.md
+- title: Microsoft Information Protection SDK
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: MIP SDK について
+      url: /information-protection/develop/overview
+  - linkListType: quickstart
+    links:
+    - text: セットアップと構成
+      url: /information-protection/develop/setup-configure-mip
+    - text: AD RMS の保護
+      url: /information-protection/develop/quick-app-adrms
+  - linkListType: reference
+    links:
+    - text: C++ の API リファレンス
+      url: /information-protection/develop/mip-sdk-reference
