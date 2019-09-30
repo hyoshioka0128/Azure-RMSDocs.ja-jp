@@ -4,25 +4,30 @@ description: Azure Information Protection ポリシーで言語を指定して�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 89d5d94807de29ebe03fd3d205ed4804b25588eb
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e1f5b3c05ae7e8c0717ef4d0227eacda8eeade3e
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789116"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71673902"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE]
+> これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
+> 
+> 機密ラベル用にさまざまな言語を構成する方法については、Office 365 Security & Compliance PowerShell と、 *LocaleSettings*パラメーター[を使用してください。](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)
 
 Azure Information Protection の既定のラベルは複数の言語をサポートしますが、指定するラベルの名前と説明のサポートを構成する必要があります。 この構成では、次のことを行う必要があります。
 
@@ -69,7 +74,7 @@ Azure Information Protection の既定のラベルは複数の言語をサポー
 
 7. 各 .xml ファイルを編集したら、これらのファイルを含めた新しい圧縮 (zip 形式) フォルダーを作成します。 圧縮フォルダーには任意の名前を付けることができますが、.zip の拡張子が必要です。
     
-    ヒント :ダウンロードした各言語ファイルを編集するまで待つ必要はありません。 代わりに、ダウンロードしたすべてのファイルのサブセットを .zip ファイルに含めることで、段階的に異なる言語をロールアウトできます。 その後、他の言語の翻訳を完了した時点で、手順 7 と 8 を繰り返します。
+    ヒント:ダウンロードした各言語ファイルを編集するまで待つ必要はありません。 代わりに、ダウンロードしたすべてのファイルのサブセットを .zip ファイルに含めることで、段階的に異なる言語をロールアウトできます。 その後、他の言語の翻訳を完了した時点で、手順 7 と 8 を繰り返します。
 
 8. **[Azure Information Protection - 言語]** ブレードに戻り、 **[インポート]** を選択します。 このオプションが使用できない場合は、まず **[言語名]** のチェック ボックス、または個別に選択した言語のチェック ボックスをオフにします。
     

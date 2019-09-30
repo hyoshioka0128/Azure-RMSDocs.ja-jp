@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6fa8adbc3e9c5cc31c7b752ec0e94eb1346bb7d0
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: 3c75773948fd86ca6b39651c5a9d5d904c68a3cf
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301129"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71673926"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -25,9 +25,12 @@ ms.locfileid: "71301129"
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Azure Information Protection でラベルを移行して、統一されたラベル付けを[サポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)による機密ラベルとして使用できるようにします。
+Azure Information Protection ラベルを統一されたラベル付けプラットフォームに移行して、統一されたラベル付けを[サポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)による機密ラベルとして使用できるようにします。
 
-これらのラベルは、Azure Information Protection 統合されたラベル付けクライアントで使用できます。 Azure Information Protection クライアント (クラシック) を引き続き使用する場合、このクライアントは Azure portal から Azure Information Protection ポリシーを使用してラベルのダウンロードを続行します。
+> [!NOTE]
+> Azure Information Protection サブスクリプションが非常に新しい場合は、テナントが既に統合されたラベル付けプラットフォームにあるため、ラベルを移行する必要はありません。 詳細については、「[テナントが統一されたラベル付けプラットフォームにあるかどうかを確認する方法](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)」を参照してください。
+
+ラベルを移行しても、Azure Information Protection クライアント (クラシック) との違いはありません。このクライアントは、Azure portal から Azure Information Protection ポリシーを使用してラベルをダウンロードし続けるためです。 ただし、ラベルを Azure Information Protection 統合されたラベル付けクライアントや、機密ラベルを使用するその他のクライアントやサービスで使用できるようになりました。
 
 ラベルを移行するための手順を確認する前に、次のよく寄せられる質問が役に立つ場合があります。
 
@@ -132,7 +135,7 @@ Outlook for Mac では、保護は保持されますが例外が 1 つありま�
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Azure Information Protection ラベルを移行するには
 
-次の手順に従い、テナントと Azure Information Protection ラベルを移行して、統合ラベル付けの新しいストアを使います。
+次の手順を使用して、テナントと Azure Information Protection ラベルを移行し、統一されたラベル付けストアを使用するようにします。
 
 ラベルを移行するには、コンプライアンス管理者、コンプライアンスデータ管理者、セキュリティ管理者、または全体管理者である必要があります。
 

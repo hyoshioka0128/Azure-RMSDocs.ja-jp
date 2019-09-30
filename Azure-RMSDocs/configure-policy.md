@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection ポリシーを構成する - AIP
-description: 分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
+description: Azure Information Protection クライアント (クラシック) の分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-ms.date: 08/01/2019
+ms.date: 09/28/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e52c57efdf8ff0754e24b18c8318a58fed561b60
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 2a23660b43f0186c78953695eccbc4b531dbca9a
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788867"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71673824"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -26,7 +26,12 @@ ms.locfileid: "68788867"
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-分類、ラベル付け、および保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
+> [!NOTE]
+> Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
+> 
+> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Office ドキュメントの「[秘密度ラベルの概要](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)」を参照してください。
+
+クラシッククライアントの分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
 
 ポリシーにはラベルと設定が含まれています。
 

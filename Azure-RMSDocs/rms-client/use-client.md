@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 63220621a6c3bbf7ad84ba4c76c38353b56c256d
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 15050d18e1aab19ec80b2be47fdefd16e8f60ba6
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313995"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674152"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -36,7 +36,7 @@ Rights Management (RMS) クライアントは、Office アプリケーション�
 
 **Azure Information Protection クライアント (クラシック)** は、Azure portal からラベルとポリシー設定をダウンロードします。 このクライアントの詳細については、 [Azure Information Protection クライアントに関する説明を参照してください。バージョン リリース履歴とサポート ポリシー](client-version-release-history.md)」をご覧ください。
 
-**Azure Information Protection 統合ラベル付けクライアント**では、次の管理センターからラベルとポリシー設定をダウンロードします: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 このクライアントの詳細については、 [Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。
+**Azure Information Protection 統合ラベル付けクライアント**では、次の管理センターからラベルとポリシー設定をダウンロードします: Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。 このクライアントの詳細については、 [Azure Information Protection 統合ラベル付けクライアント:バージョン リリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。 
 
 どのクライアントをインストールすべきでしょうか?
 
@@ -148,8 +148,9 @@ Azure Information Protection クライアント (クラシック) では、サ�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="see-also"></a>関連項目
-これらのクライアントをデプロイおよび使用する方法について詳しい情報が必要な場合は、次のドキュメントを使用してください。
+## <a name="next-steps"></a>次の手順
+
+クライアントをインストールして構成するには、次のドキュメントを参照してください。
 
 - [Azure Information Protection クライアント](AIP-client.md)
 

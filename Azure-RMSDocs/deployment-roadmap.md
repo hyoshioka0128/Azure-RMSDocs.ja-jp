@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection を準備、実装、管理�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2220572757081ad35a90a2dcebb23531e1ebee14
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 7f688b53f56254be52668d25b63e03734dde71de
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788811"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71673835"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -25,10 +25,11 @@ ms.locfileid: "68788811"
 
 組織の Azure Information Protection を準備、実装、管理するための推奨事項として、次の手順に従ってください。
 
-ただし、シナリオに基づく手順をお探しの場合は、「[How to guides for common scenarios that use Azure Information Protection (Azure Information Protection を使用する一般的なシナリオ向けの攻略ガイド)](how-to-guides.md)」を参照してください。
+方法 
 
-> [!NOTE]
-> 製品リリースのロードマップをお探しの場合は、「[新しいリリースと更新プログラムに関する情報](information-support.md#information-about-new-releases-and-updates)」セクションを参照してください。
+- Azure Information Protection のシナリオベースの命令を探していますか? [Azure Information Protection を使用する一般的なシナリオについては、「ハウツーガイド](how-to-guides.md)」を参照してください。
+
+- Azure Information Protection リリースロードマップをお探しですか? [新しいリリースと更新プログラムに関する情報を](information-support.md#information-about-new-releases-and-updates)参照してください。
 
 ### <a name="identify-your-deployment-roadmap"></a>デプロイ ロードマップを特定する
 
@@ -37,9 +38,14 @@ ms.locfileid: "68788811"
 次に、ご自分の組織に適用可能で、必要な[サブスクリプション機能](https://azure.microsoft.com/pricing/details/information-protection/)に一致するデプロイ ロードマップを選択します。
 
 - [分類、ラベル付け、保護を使用する](#deployment-roadmap-for-classification-labeling-and-protection)
+    
+    サポートされているサブスクリプションがある場合に推奨されるパス。これは、追加機能が機密情報の検出、分類のためのドキュメントや電子メールのラベル付けをサポートするためです。 ラベルは、この複雑さをユーザーから抽象化して、保護を適用することもできます。
+    
+    デプロイの手順は、ラベルの Azure Information Protection に適しています。また、統一されたラベル[付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)を使用する秘密度ラベルにも適しています。
 
 - [データ保護のみを使用する](#deployment-roadmap-for-data-protection-only)
-
+    
+    分類とラベルをサポートするサブスクリプションがなくても、ラベルのない保護をサポートする場合に使用するパス。
 
 ## <a name="deployment-roadmap-for-classification-labeling-and-protection"></a>分類、ラベル付け、保護のデプロイ ロードマップ
 
@@ -59,16 +65,22 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>手順 3:分類とラベル付けを構成し、デプロイする
 
+ラベルとポリシー設定を構成する前に、使用する Azure Information Protection クライアントを決定します。従来のクライアントまたは統一されたラベル付けクライアント。 または、両方のクライアントが必要になる場合もあります。 ここでは、このクライアントの決定が必要であるため、ラベルとポリシー設定を構成するために使用する管理ポータルを把握しておく必要があります。 この決定に役立つ詳細については、「[使用する Azure Information Protection クライアントを選択](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)する」を参照してください。
+
 > [!TIP]
-> **省略可能だが推奨される手順**: ローカル データ ストアにどのような機密情報があるかを検出するため、Azure Information Protection スキャナーのデプロイを検討してください。 このシナリオに対応した[クイック スタート](quickstart-findsensitiveinfo.md)を用意しています。 スキャナーで検出される情報は、ご使用の分類法で役立ち、必要なラベルおよび保護が必要なファイルに関する貴重な情報を提供します。
+> **省略可能だが推奨される手順**: ローカルデータストアに格納されている機密情報を検出するには、[スキャナーのクイックスタート](quickstart-findsensitiveinfo.md)を使用することを検討してください。 スキャナーで検出される情報は、ご使用の分類法で役立ち、必要なラベルおよび保護が必要なファイルに関する貴重な情報を提供します。
 > 
-> スキャナーは、Windows Server 上のローカル ファイル、ネットワーク共有内のファイル、および SharePoint のオンプレミス バージョンのファイル内のよく知られている機密情報の種類を検索するように構成できます。 この構成にラベルを構成する必要はなく、また分類法を定義する必要もないため、デプロイの非常に早い段階には、この方法でスキャナーを実行するのが適しています。 ラベルの条件を構成するまで、次の手順に従ってスキャナーのこの構成を並列で使用することもできます。
+> スキャナー検出モードではラベルを構成する必要がなく、分類分類を定義することもできないため、この方法でスキャナーを実行すると、展開の初期段階に適しています。 このスキャナーの構成は、推奨ラベルまたは自動ラベル付けを構成するまで、次の展開手順と並行して使用することもできます。
 
-分類方法がまだ用意されていない場合、[既定の Azure Information Protection ポリシー](./configure-policy-default.md)を確認し、組織データに割り当てる分類ラベルを決める際の基準として利用します。 ビジネス要件に合わせてこれらをカスタマイズできます。
+分類方法がまだない場合は、[既定の Azure Information Protection ポリシー](./configure-policy-default.md)を確認し、これを組織のデータに割り当てる分類ラベルを決定するための基準として使用します。 ビジネス要件に合わせてこれらをカスタマイズできます。
 
-分類決定をサポートするために必要な変更を行うには、既定の Azure Information Protection ラベルを再構成します。 ユーザーによる手動ラベル付けのポリシーを構成し、適用するラベルとタイミングを説明するユーザー ガイダンスを記述します。 自動的に保護を適用するラベルで既定のポリシーが作成されている場合、保護設定を一時的に削除するか、ラベルを無効化します。 Azure Information Protection ポリシーの構成方法については、「[Azure Information Protection ポリシーの構成](./configure-policy.md)」を参照してください。
+ラベルを再構成して、分類の決定をサポートするために必要な変更を行います。 ユーザーによる手動ラベル付けのポリシーを構成し、適用するラベルとタイミングを説明するユーザー ガイダンスを記述します。 自動的に保護を適用するラベルで既定のポリシーが作成されている場合、保護設定を一時的に削除するか、ラベルを無効化します。 ラベルとポリシー設定を構成する方法の詳細については、次のドキュメントを参照してください。
 
-次に、ユーザーに対して[Azure Information Protection クライアントまたは Azure Information Protection の統一されたラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)を展開し、ラベルを選択する際のユーザートレーニングと具体的な指示を提供します。 クライアントのインストールとサポートの詳細については、管理者ガイドを参照してください。
+- クラシッククライアントのラベルを Azure Information Protection します。[Azure Information Protection ポリシーの構成](./configure-policy.md)
+
+- 統一されたラベル付けクライアントの秘密度ラベル:[機密ラベルの概要](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+
+次に、Azure Information Protection クライアント (クラシック) または Azure Information Protection 統合されたラベル付けクライアントをユーザーに展開します。 ラベルを選択するときに、ユーザートレーニングと具体的な指示を提供します。 クライアントのインストールとサポートの詳細については、管理者ガイドを参照してください。
 
 - [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
 
@@ -84,7 +96,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 - カスタマイズされたヘッダー、フッター、透かし
 
-- 推奨事項や自動ラベル付けをサポートする条件
+- 推奨ラベルと自動ラベル付け
 
 この段階では、文書や電子メールを保護するためのオプションを選択しないでください。 ただし、自動ラベル付け用のラベルを構成した後は、ローカル データ ストアで [Azure Information Protection スキャナー](deploy-aip-scanner.md)を検索モードで実行して、ポリシーに適合させます。 この構成でスキャナーを実行すると、ファイルにどのラベルが適用されるかがわかります。 この情報は、ラベル構成の微調整に役立ち、ファイルを一括で分類して保護するための準備ができます。 
 
@@ -104,11 +116,11 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 - 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)」を参照してください。
 
-### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>手順 5:データ保護のために Azure Information Protection ポリシー、アプリケーション、サービスを構成する
+### <a name="step-5-configure-labels-and-settings-applications-and-services-for-data-protection"></a>手順 5:データ保護のためのラベル、設定、アプリケーション、およびサービスを構成する
 
 1. 保護を適用するラベルを更新する
     
-    Azure Information Protection クライアントについては、「 [Rights Management 保護のラベルを構成する方法](./configure-policy-protection.md)」を参照してください。
+    Azure Information Protection クライアント (クラシック) については、「 [Rights Management 保護のラベルを構成する方法](./configure-policy-protection.md)」を参照してください。
     
     Azure Information Protection の統合ラベル付けクライアントについては、「[秘密度ラベルの暗号化を使用したコンテンツへのアクセスの制限](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)」を参照してください。
     
@@ -126,22 +138,26 @@ Azure Information Protection を使用するには、事前に Office 365 また
     
     オンプレミス データ ストアに対し、ファイルが自動的にラベル付けされるように、[Azure Information Protection スキャナー](deploy-aip-scanner.md)を強制モードで実行します。 クラウド ベースのデータ ストアに対しては、[Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security) を使用します。
     
-    PC 上のファイルに対しては、PowerShell コマンドレットを使用してファイルを分類して保護することができます。 詳細については、管理者ガイドの「[Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
+    PC 上のファイルに対しては、PowerShell コマンドレットを使用してファイルを分類して保護することができます。 詳細については、次の管理者ガイドを参照してください。
+    
+    - Azure Information Protection クライアント (クラシック):[Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)
+    
+    - Azure Information Protection 統合ラベル付けクライアント:[Azure Information Protection 統合ラベルクライアントでの PowerShell の使用](./rms-client/clientv2-admin-guide-powershell.md)
 
 6. SharePoint サーバー上で IRM で保護されたライブラリ用のコネクタと、Exchange On-Premises 用の IRM で保護された電子メールをデプロイする
     
     SharePoint と Exchange On-Premises をお持ちで、これらの Information Rights Management (IRM) 機能を使用する場合は、Rights Management コネクタをインストールして構成します。 詳細については、「[Azure Rights Management コネクタをデプロイする](./deploy-rms-connector.md)」を参照してください。
 
-### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>手順 6: データ保護ソリューションを使用および監視する
+### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>手順 6:データ保護ソリューションを使用および監視する
 これで、構成したラベルを組織がどのように使用しているかを監視して、機密情報を保護していることを確認する準備ができました。 このデプロイ フェーズのサポートの詳細については、以下を参照してください。
 
-- [Azure Information Protection のレポート](reports-aip.md) - 現在プレビュー段階
+- [Azure Information Protection の中央レポート](reports-aip.md)-現在プレビュー中
 
-- [Azure Information Protection クライアント](./rms-client/client-admin-guide-files-and-logging.md)のクライアントファイルと使用状況ログ
+- Azure Information Protection クライアントの[Windows イベントモニターを使用したローカルの使用状況ログ](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)(クラシック)
 
 - [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)
 
-### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>手順 7: 必要に応じてテナント アカウントの保護サービスを管理する
+### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>手順 7:必要に応じてテナント アカウントの保護サービスを管理する
 
 保護サービスの使用を開始するときに、PowerShell がスクリプトまたは管理変更の自動化に役立つことがあります。 一部の高度な構成には、PowerShell も必要になる場合があります。 
 
@@ -177,11 +193,11 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 - 組織での保護サービスの使用方法を監視できるようにするための使用ログ。 この手順は、今実行しても後で実行しても構いません。 詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)」を参照してください。
 
-### <a name="step-3-install-the-azure-information-protection-client-and-configure-applications-and-services-for-rights-management"></a>手順 3:Azure Information Protection クライアントをインストールし、Rights Management 用のアプリケーションとサービスを構成する
+### <a name="step-3-install-the-azure-information-protection-client-classic-and-configure-applications-and-services-for-rights-management"></a>手順 3:Azure Information Protection クライアント (クラシック) をインストールし、Rights Management 用のアプリケーションとサービスを構成する
 
-1. Azure Information Protection クライアントのデプロイ
+1. Azure Information Protection クライアントを展開する (クラシック)
     
-    Office 2010 のサポート、Office ドキュメントと電子メール以外のファイルの保護、保護されたドキュメントの追跡には、ユーザーに Azure Information Protection をインストールします。 このクライアントのユーザー トレーニングを行います。 詳細については、「[Azure Information Protection client for Windows](./rms-client/aip-client.md)」(Windows 用 Azure Information Protection クライアント) を参照してください。
+    Office 2010 をサポートし、Office ドキュメントや電子メール以外のファイルを保護し、保護されたドキュメントを追跡するために、ユーザー用のクラシッククライアントをインストールします。 このクライアントのユーザー トレーニングを行います。 詳細については、「[Azure Information Protection client for Windows](./rms-client/aip-client.md)」(Windows 用 Azure Information Protection クライアント) を参照してください。
 
 2. Office のアプリケーションとサービスを構成する
     
@@ -210,3 +226,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 保護サービスの使用を開始するときに、PowerShell がスクリプトまたは管理変更の自動化に役立つことがあります。 一部の高度な構成には、PowerShell も必要になる場合があります。 
 
 詳細については、「 [PowerShell を使用した Azure Information Protection からの保護の管理](./administer-powershell.md)」を参照してください。
+
+## <a name="next-steps"></a>次の手順
+
+Azure Information Protection を展開するときに、[よく寄せられる質問](faqs.md)と、その他のリソースの[情報とサポート](information-support.md)に関するページを確認すると役立つ場合があります。
