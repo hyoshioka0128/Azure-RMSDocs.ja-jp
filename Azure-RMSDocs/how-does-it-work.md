@@ -4,7 +4,7 @@ description: Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 29bbb0b080e39cad118b49f695d8ec1d1d5b5493
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794175"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689592"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -100,7 +100,7 @@ Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights
 
 **手順 2 の処理**: ユーザー認証の後、接続は組織の Azure Information Protection テナントに自動的にリダイレクトされます。このテナントは、保護されたコンテンツの消費およびコンテンツのオフライン保護のためにユーザーが Azure Rights Management サービスの認証を受けられるように証明書を発行します。
 
-これらの証明書の 1 つとして権利アカウント証明書 (RAC) があります。 この証明書は、Azure Active Directory にユーザーを認証し、31 日間有効です。 証明書は、ユーザー アカウントが Azure Active Directory にあり、アカウントが有効になっている場合、RMS クライアントによって自動的に更新されます。 この証明書は、管理者が構成することはできません。 
+これらの証明書の 1 つとして権利アカウント証明書 (RAC) があります。 この証明書は、Azure Active Directory するためにユーザーを認証し、31日間有効です。 証明書は、ユーザー アカウントが Azure Active Directory にあり、アカウントが有効になっている場合、RMS クライアントによって自動的に更新されます。 この証明書は、管理者が構成することはできません。 
 
 この証明書のコピーは Azure に保存され、ユーザーが別のデバイスに移動した場合は、同じキーを使用して証明書が作成されます。
 
@@ -121,7 +121,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 ![RMS ドキュメントの保護 - 手順 3、ポリシーがドキュメントに埋め込まれる](./media/AzRMS_documentprotection3.png)
 
-**手順 3 の処理**: 最後に、RMS クライアントは前に暗号化したドキュメントの本文と共にポリシーをファイルに埋め込みます。これらすべてが、保護されたドキュメントを構成します。
+**手順 3 の処理**: 最後に、RMS クライアントは、以前に暗号化されたドキュメントの本文と共にポリシーをファイルに埋め込みます。このファイルは、保護されたドキュメントを構成します。
 
 このドキュメントは、任意の場所に保存することも任意の方法を使用して共有することもでき、ポリシーは常に暗号化されたドキュメントと共にあります。
 

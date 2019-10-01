@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ff2f088358d6f15b4e5b67c3cc6929b1f29f19f4
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: acc19d8865c189e2852a2b870ea2028aab731f04
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793988"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684437"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -66,7 +66,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 現在の AD RMS のデプロイでは、次のいずれかの構成をサーバー ライセンス証明書 (SLC) キーに使用します。
 
-- AD RMS データベースでのパスワード保護。 これは既定の構成です。
+- AD RMS データベースでのパスワード保護。 これが既定の構成です。
 
 - NCipher ハードウェアセキュリティモジュール (HSM) を使用した HSM 保護。
 

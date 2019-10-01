@@ -4,7 +4,7 @@ description: この情報保護ソリューションをサポートするアプ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b226e0ed593ad9f5eab85140582267b079f9887
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4ef001b57f252d4b4c8736bb4b20e998cd6a756b
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788407"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679083"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Azure Information Protection からの保護サービスのアクティブ化
 

@@ -4,19 +4,19 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f600ec661f82b8738653cc340d8d803f21e80c8a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 044eafa1893c34745d49cc05b0ec029d88ecc318
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794151"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684098"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -88,9 +88,9 @@ ms.locfileid: "68794151"
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}`: 選択したラベル。 例えば:全般
+- `${Item.Label}`: 選択したラベル。 以下に例を示します。全般
 
-- `${Item.Name}`: ファイル名または電子メールの件名。 例えば:JulySales.docx
+- `${Item.Name}`: ファイル名または電子メールの件名。 以下に例を示します。JulySales.docx
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
@@ -98,7 +98,7 @@ ms.locfileid: "68794151"
 
 - `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}`: 選択したラベルが設定された日時。 例えば:8/16/2016 1:30 PM
+- `${Event.DateTime}`: 選択したラベルが設定された日時。 以下に例を示します。8/16/2016 1:30 PM
 
 例:**General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification:General** になります。
 

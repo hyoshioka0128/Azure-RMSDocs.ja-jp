@@ -4,19 +4,19 @@ description: Azure Information Protection を使用して、組織のデータ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a7662b0262e2c46e3b88861a967287070a5a1ed
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4f42951ff93e5de259ce9b952f340c5e597e3418
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794082"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689356"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
@@ -30,7 +30,7 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="common-scenarios"></a>一般的なシナリオ
 
-|シナリオ:目的:|手順|
+|よう目的:|手順|
 |----------------|---------------|
 |組織がオンプレミスに格納している機密情報を検索する|[クイック スタート: オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
 |ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
@@ -50,6 +50,8 @@ Azure Information Protection を使用して組織のドキュメントや電子
 - [Azure Information Protection デプロイの高速化ガイド](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 
 詳しい手順:
+
+- [カスタム AIP 追跡ポータルを構築する方法](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
 
 - [Microsoft Information Protection と Azure AD ログインデータを使用して、より豊富なレポートを作成する](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 

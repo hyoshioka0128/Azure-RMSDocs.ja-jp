@@ -4,7 +4,7 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fa37a5b1263eae5fe7f9739b9c8621334aae6a35
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3e83f11013f60d418f28c58cee10a84915f39ebc
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788428"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689223"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -91,7 +91,7 @@ LabelId                 :
 
 [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレットを実行して、Azure Information Protection から保護サービス (Azure Rights Management) の管理操作のログを取得します。 このログには、個人データが電子メール アドレスと IP アドレスの形式で記録されます。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-例えば:
+以下に例を示します。
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>保護サービスの使用状況ログ
 [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog)コマンドレットを実行して、Azure Information Protection から保護サービスを使用するエンドユーザーの操作のログを取得します。 ログには、個人データが電子メール アドレスと IP アドレスの形式で記録される場合があります。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-例えば:
+以下に例を示します。
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog)コマンドレットを実行して、特定のユーザーに関するドキュメント追跡サイトから情報を取得します。 ドキュメントログに関連付けられている追跡情報を取得するには、 [Get AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps)コマンドレットを使用します。
 
-例えば:
+以下に例を示します。
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -232,7 +232,7 @@ Azure Information Protection ポリシーのスコープ付きポリシーと保
 
 ### <a name="protection-templates"></a>保護テンプレート
 
-[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データは`RightsDefinitions`プロパティ内にあるため、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、権限定義オブジェクトを使用する必要があります。`Set-AipServiceTemplateProperty`コマンドレットを行います。
+[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データは `RightsDefinitions` プロパティ内にあるため、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、@no__t を持つ権限定義オブジェクトを使用する必要もあります。コマンドレット.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 

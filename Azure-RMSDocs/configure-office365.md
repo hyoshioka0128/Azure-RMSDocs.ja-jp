@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 279551bf15c17e901f4e690bb15d2ce22e3bbbc5
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4ffaaf7ed4b7463ba3b24d13434771156e4fbfce
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789222"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684171"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365:Azure Rights Management サービスを使用するためのオンラインサービスの構成
 
@@ -67,7 +67,7 @@ Exchange Online で既に Azure Rights Management サービスの使用が有効
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    例えば:<strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
+    以下に例を示します。<strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
     
     このコマンドは、サービスへの接続の確認、構成の取得、URI、ライセンス、および任意のテンプレートの取得を含む一連のチェックを実行します。 Windows PowerShell セッションでは、次のチェックに合格した場合、各との結果が最後に表示されます。**全体的な結果: 合格**
 

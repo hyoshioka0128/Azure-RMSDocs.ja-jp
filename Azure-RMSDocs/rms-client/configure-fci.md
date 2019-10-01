@@ -4,7 +4,7 @@ description: Rights Management (RMS) クライアントと Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e922ba01dfb358868a85be5631a962d3d7fd1ad1
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b3781b2de94a8b619f2dadce977f1284c9b26e31
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793293"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689981"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -54,7 +54,7 @@ ms.locfileid: "68793293"
     
   - 特定のファイル名拡張子に対する既定の保護レベル (ネイティブまたは汎用) を変更する場合は、管理者ガイドの「[Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)」(ファイルの既定の保護レベルを変更する) セクションの説明に従ってレジストリを編集します。
     
-  - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 例: `netsh winhttp import proxy source=ie`
+  - インターネットに接続し、プロキシ サーバーに必要な場合はコンピューターの設定を構成します。 たとえば次のようになります。`netsh winhttp import proxy source=ie`
     
 - オンプレミスの Active Directory ユーザー アカウントと Azure Active Directory または Office 365 を同期しました (電子メール アドレスを含みます)。 これは、FCI および Azure Rights Management サービスによって保護された後でファイルにアクセスする必要がある可能性のあるすべてのユーザーに必要です。 この手順を実行しないと (たとえばテスト環境で)、ユーザーはこれらのファイルにアクセスできない可能性があります。 この要件に関する詳細が必要な場合は、「[Azure Information Protection 向けのユーザーとグループの準備](../prepare.md)」をご覧ください。
     
@@ -132,7 +132,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
     -   **名前**: 「**RMS**」と入力します
 
-    -   **説明**:  「**Rights Management の保護**」と入力します
+    -   **説明**: 「**Rights Management の保護**」と入力します
 
     -   **プロパティの種類**: **[はい/いいえ]** を選択します
 
@@ -150,7 +150,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **有効**: 既定値のままにします。これは、このチェックボックスがオンになっていることを示します。
 
-        -   **説明**: 「**Classify all files in the &lt;フォルダー名&gt; folder for Rights Management**」と入力します。
+        -   **説明**:「**Classify all files in the &lt;フォルダー名&gt; folder for Rights Management**」と入力します。
 
             *&lt;フォルダー名&gt;* は選択したフォルダーの名前に置き換えます。 例: **Classify all files in the C:\FileShare folder for Rights Management**。
 
@@ -178,7 +178,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
     -   **新しいファイルの連続分類を許可する**: 新しいファイルが分類されるように、このチェック ボックスをオンにします。
 
-    -   省略可能:レポートや通知のオプションの構成など、必要なその他の変更を行います。
+    -   省略可能: レポートや通知のオプションの構成など、必要なその他の変更を行います。
 
 分類の構成が完了したので、ファイルに RMS 保護を適用する管理タスクを構成できます。
 
@@ -192,7 +192,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **[有効]** チェック ボックスはオンのままにします。
 
-        -   **説明**: 「**Protect files in &lt;フォルダー名&gt; with Rights Management and a template by using a Windows PowerShell script**」と入力します。
+        -   **説明**:「**Protect files in &lt;フォルダー名&gt; with Rights Management and a template by using a Windows PowerShell script**」と入力します。
 
             *&lt;フォルダー名&gt;* は選択したフォルダーの名前に置き換えます。 例: **Protect files in C:\FileShare with Rights Management and a template by using a Windows PowerShell script**。
 

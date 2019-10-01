@@ -4,7 +4,7 @@ description: この手順は、AD RMS から Azure Information Protection への
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5bbf064cb019b663b62a779bf58322e0b23302e8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 420cafdcc8fac3c1eb5198dacf8b150bc9da9733
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790548"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684347"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>手順 2:ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行
 

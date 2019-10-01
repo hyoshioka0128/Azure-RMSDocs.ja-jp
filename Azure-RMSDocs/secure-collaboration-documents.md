@@ -4,7 +4,7 @@ description: Azure Information Protection によって保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 743b9dc75a5cd39832ef02e0dc0730fc23fd14b9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ae95c9d4ffc7bae7004ad6e79a958c0c8836a22f
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789693"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679021"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -95,7 +95,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 例えば:
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 以下に例を示します。
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 

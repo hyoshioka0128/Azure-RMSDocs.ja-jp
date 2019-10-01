@@ -4,7 +4,7 @@ description: Azure Rights Management (RMS) コネクタを使用するオンプ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 05522bbb7f6357baac060062e6715fdf4807fa09
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: a6a3727c559c7b2268e84790a8f9377165a5c00a
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788909"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683844"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -108,7 +108,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、https:/\/connector.contoso.com のようになります。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
+スクリプトを実行するには、組織の RMS コネクタの URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、https: \//connector. contoso .com のようになります。 ツールは、この URL を使用して RMS コネクタが実行されているサーバーに接続し、必要な構成を作成するために使用されるその他のパラメーターを取得します。
 
 > [!IMPORTANT]
 > このツールを実行する場合、RMS コネクタ サービスを実行する単一のサーバー名ではなく、組織の負荷分散された RMS コネクタ名を指定する必要があります。
@@ -170,7 +170,7 @@ Exchange サーバーのオペレーティング システムがこれよりも�
 
    -   「[RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)」の情報を使用してサーバー上にレジストリ設定を追加し、手動でレジストリの編集を行います。 
 
-3. Exchange 用の IRM 機能を有効にするには、exchange PowerShell コマンドレットの[セット irmconfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)を使用し、とを`InternalLicensingEnabled $true` `ClientAccessServerEnabled $true`設定します。
+3. Exchange PowerShell コマンドレットの[セット IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)を使用して EXCHANGE の IRM 機能を有効にし、`InternalLicensingEnabled $true` と `ClientAccessServerEnabled $true` を設定します。
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>コネクタを使用するための SharePoint サーバーの構成
@@ -213,7 +213,7 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
 3.  SharePoint で IRM を有効にします。 詳細については、SharePoint ライブラリの「[Information Rights Management を構成する (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx)」をご覧ください。
 
-    これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に **[この RMS サーバーを使用する]** を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https:\//connector.contoso.com の場合、構成は次の図のようになります。
+    これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に **[この RMS サーバーを使用する]** を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https: \//connector. contoso .com の場合、構成は次の図のようになります。
 
     ![RMS コネクタのための SharePoint サーバーの構成](./media/AzRMS_SharePointConnector.png)
 

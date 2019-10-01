@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb9cfbe808e20f3b65a2d964e4f776f02b4b5ce8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793952"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684561"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
@@ -107,7 +107,7 @@ Windows クライアントを再構成する方法の詳細については、次
 
 - ユーザーがローカルの管理者特権を持つ場合は、ログオン スクリプトを使用します。
 
-ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 例えば:
+ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 以下に例を示します。
 
 - ログオン スクリプトを使用します。
 
@@ -134,7 +134,7 @@ Windows クライアントを再構成する方法の詳細については、次
    > [!IMPORTANT]
    > 前と同様に、アドレスの前後に余分なスペースが挿入されないように注意してください。
    > 
-   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、 https://rms.treyresearch.net:443/_wmcs/licensing のように指定します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、 **[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、 https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
+   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、「 https://rms.treyresearch.net:443/_wmcs/licensing 」のように入力します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、 **[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、 https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
     
    *&lt;YourTenantURL&gt;* の Azure Rights Management サービス URL を取得する必要がある場合は、前の「[Azure Rights Management サービス URL を識別するには](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url)」をご覧ください。
 

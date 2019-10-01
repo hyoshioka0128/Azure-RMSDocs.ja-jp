@@ -4,7 +4,7 @@ description: iOS および Android 用の Azure Information Protection アプリ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9c51fadc644288e86413d94d5d88f3484eb023f6
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: deca101aacd4d3026b0783581ccfe57be5a5dc7a
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792909"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679038"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始
 
@@ -32,7 +32,7 @@ ms.locfileid: "68792909"
 >
 > 同様に、サインインをうながされるまではアプリにサインインしないでください。
 
-次の手順を使用するには、アプリでサポートされているファイルの 1 つにモバイル デバイスがアクセスできる必要があります。 例えば:
+次の手順を使用するには、アプリでサポートされているファイルの 1 つにモバイル デバイスがアクセスできる必要があります。 以下に例を示します。
 
 - **.rpmsg ファイル**:モバイル デバイスの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合に、電子メール メッセージの添付ファイルとして表示する、権利が保護された電子メール メッセージ。 
     

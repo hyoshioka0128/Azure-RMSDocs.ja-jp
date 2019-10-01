@@ -4,7 +4,7 @@ description: Microsoft 365 管理センターを使用する場合の Azure Righ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f2a685894f7745951d8944e096895061493ed4f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9b0497efef3cd4f58aad92b5d33830a32b850b92
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788182"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679107"
 ---
 # <a name="how-to-activate-rights-management-protection-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Rights Management 保護をアクティブ化する方法
 

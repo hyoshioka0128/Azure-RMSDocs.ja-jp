@@ -4,7 +4,7 @@ description: Azure Information Protection 用の Azure Rights Management 保護�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48c31144fad67eb436eec13e999fc3c4333d684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d4fd33ee379660628a4a870e81d738e068f50482
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789681"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684242"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Azure Rights Management 用にアプリケーションを構成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "68789681"
 > [!IMPORTANT]
 > サポートされているバージョンとその他の要件については、「 [Azure Information Protection の要件](requirements.md)」を参照してください。
 
--   [Office 365: オンラインサービスの構成](configure-office365.md)
+-   [Office 365: オンラインサービス @ no__t の構成-0
 
     -   [Exchange Online: IRM 構成](configure-office365.md#exchangeonline-irm-configuration)
 

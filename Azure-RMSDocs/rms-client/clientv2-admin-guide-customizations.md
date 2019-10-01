@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3abc12674e0a59f78d473d709a4708affff5dcf
-ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
+ms.openlocfilehash: 86e914bf96e596a01243d2c4a74236f28c6ac9b5
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322400"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690144"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベルクライアントのカスタム構成
 
@@ -472,7 +472,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 ポップアップメッセージが特定のラベルに対して実行されている場合は、ドメイン名を使用して受信者の例外を構成できます。
 
 > [!TIP]
-> このチュートリアルは、統一されたラベル付けクライアントではなく Azure Information Protection クライアントを対象としていますが、チュートリアル[では、これらの詳細設定を実際に使用することができます。Outlook](../infoprotect-oversharing-tutorial.md)を使用して情報の過剰な共有を制御するように Azure Information Protection を構成します。
+> これらの設定を構成する方法のチュートリアルの例については、ビデオ[Azure Information Protection Outlook のポップアップ構成](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)を参照してください。
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>特定のラベルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 

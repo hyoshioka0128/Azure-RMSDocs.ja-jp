@@ -4,7 +4,7 @@ description: Azure Information Protection ラベルの Exchange Online メール
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 18a0d65d2ec2feeca7901bdfa4c843f2a359956a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 5eb5b435b520dca5cb4eed7095533be5a5984360
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789301"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684214"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 例えば:
+Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 以下に例を示します。
 
 - 既定のラベルは **[全般]** で、保護は適用されません。 このラベルを含む外部からの電子メールには、追加の [転送不可] 保護アクションが適用されます。
 
@@ -61,7 +61,7 @@ Azure Information Protection ラベルはメタデータに格納されるため
 この例では、電子メールが組織の外に送信されるときに保護を適用する条件が 1 つだけ含まれています。 選択できる他の条件について詳しくは、「[Exchange Online でのメール フロー ルールの条件と例外 (述語)](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx)」をご覧ください。
 
 
-### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>例 1:  **[全般]** ラベルの付いた電子メールが組織の外部に送信されるときに、それに [転送不可] オプションを適用するルール
+### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>例 1 :  **[全般]** ラベルの付いた電子メールが組織の外部に送信されるときに、それに [転送不可] オプションを適用するルール
 
 この例では、 **[全般]** ラベルの GUID は 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 です。 このルールで使用する独自のラベルまたはサブラベルの GUID で置き換えます。 
 

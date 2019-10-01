@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントを使�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6a2e34008481a0369156af751cdca074efb2bfe7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9aa4c1a1a9d5c909d77f229ba1817e8de2c14cd1
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793623"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690276"
 ---
 # <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントを使用してファイルまたは電子メールを分類する
 
@@ -79,13 +79,13 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 例えば:
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 以下に例を示します。
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類を設定します。 
     
-    選択できるラベルがない場合 (ラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 例えば:
+    選択できるラベルがない場合 (ラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 以下に例を示します。
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
 

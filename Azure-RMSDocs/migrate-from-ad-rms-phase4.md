@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/09/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ef0421c63489e8cd0706a77001ba611a929d1b1
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 17975a4a36ccb69a6cfa4ed945ee9fa0cdf9f839
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314370"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684369"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 

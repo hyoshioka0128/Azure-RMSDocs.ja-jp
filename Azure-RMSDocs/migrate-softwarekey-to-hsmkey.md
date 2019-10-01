@@ -4,7 +4,7 @@ description: この手順は、AD RMS から Azure Information Protection への
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/18/2019
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f6db67520c2bef7ff5f497bf45ae8a4e2f082c11
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b7190ef37fc41cafb4b4c2dffc2204c98d7a00f5
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793944"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684516"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2:ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
@@ -42,7 +42,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 > Azure Key Vault の構成手順を実行中で、この Azure サービスに慣れていない方は、最初に「[Azure Key Vault の概要](/azure/key-vault/key-vault-get-started)」を参照することをお勧めします。 
 
 
-## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>第 1 部:構成データから SLC キーを抽出し、ご利用のオンプレミス HSM にキーをインポートする
+## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>作業 1:構成データから SLC キーを抽出し、ご利用のオンプレミス HSM にキーをインポートする
 
 1.  Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の Bring Your Own Key (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を行います。
 
@@ -112,7 +112,7 @@ SLC キーが抽出され、オンプレミスの HSM にインポートされ�
 > [!IMPORTANT]
 > この手順を完了したら、未接続のワークステーションからこれらの PEM ファイルを確実に消去して、不正ユーザーがアクセスできないようにしてください。 たとえば、E: ドライブからすべてのファイルを確実に削除するには、"cipher /w: E" を実行します。
 
-## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>第 2 部:  ご利用の HSM キーをパッケージ化して Azure Key Vault に転送する
+## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>パート 2: ご利用の HSM キーをパッケージ化して Azure Key Vault に転送する
 
 Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の Bring Your Own Key (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を行います。
 

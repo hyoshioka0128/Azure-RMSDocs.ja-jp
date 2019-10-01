@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32461a7d3edb53003ea12a7dc26e8b78966e1a4f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6bde980df23bdfa11bd137966ab48221bdbe6512
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789252"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684197"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Office アプリ: Azure Rights Management サービスを使用するようにクライアントを構成する
 
@@ -31,7 +31,7 @@ Azure Information Protection から Office アプリと Azure Rights Management 
 
 ### <a name="user-instructions-for-office-for-mac"></a>Office for Mac のユーザー向けの手順
 
-Office for Mac を使用するユーザーは、コンテンツを保護する前に、まず資格情報を確認する必要があります。 例えば:
+Office for Mac を使用するユーザーは、コンテンツを保護する前に、まず資格情報を確認する必要があります。 以下に例を示します。
 
 1. Office 365 の職場または学校のアカウントを使用して、Outlook を開き、プロファイルを作成します。 
 
@@ -46,5 +46,5 @@ Office for Mac を使用するユーザーは、コンテンツを保護する�
 ## <a name="office2010"></a>Office 2010
 クライアントコンピューターが Office 2010 で Azure Rights Management サービスを使用するには、Azure Information Protection クライアント (クラシック) が必要です。 他の構成は必要ありません。ユーザーが各自の Office 365 資格情報でサインインしさえすれば、ファイルを保護したり、他のユーザーによって保護されたファイルを使用したりできます。
 
-Azure Information Protection クライアント (クラシック) の詳細については、 [「クライアントの Azure Information Protection」を参照してください。クライアントのインストールと構成](configure-client.md)」を参照してください。
+Azure Information Protection クライアント (クラシック) の詳細については、「@no__t 0Azure Information Protection client:クライアントのインストールと構成](configure-client.md)」を参照してください。
 

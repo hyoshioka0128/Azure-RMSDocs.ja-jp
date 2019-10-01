@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 608419325f3a38f607577ee0fd1cdcdeee40d212
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: c7c0de6f88262cf46398807541a929d734bd4d36
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790611"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684551"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -35,7 +35,7 @@ Azure Information Protection のデータ保護を提供するサービスを構
 
 移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、 **<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
-例えば:**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+以下に例を示します。**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Azure Rights Management サービス URL を確認するには
 

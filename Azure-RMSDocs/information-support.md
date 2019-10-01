@@ -4,7 +4,7 @@ description: 管理者向けのリソース。新しいリリース、サポー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e07a6b23e9b500953024cb953612d1a44cc3a0d
-ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
+ms.openlocfilehash: d15e7d022e0a872cb59fbca9344e4cdcdf0552c8
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70159152"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689159"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -80,10 +80,6 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 オンデマンド ビデオ:
 
 - [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014)のための Tech Community 記録されたウェビナー。
-
-- [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) の Microsoft Ignite 2018 セッション:
-    
-    - 推奨される[トップ 5](what-is-information-protection.md#microsoft-ignite) のセッションをご覧ください。
 
 - [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection) が含まれる Microsoft Virtual Academy セッション。
 

@@ -4,7 +4,7 @@ description: 最も一般的に使用されるアプリケーション (Office �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/02/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f57664cc5841f9bfde48e4bb50ea111414e5a910
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e45fadfa83e6327e8fc16db8e86f89c7ed1cf07c
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789520"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684277"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
@@ -36,7 +36,7 @@ ms.locfileid: "68789520"
 
 Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
 
-検索サービスは、さまざまな方法で Rights Management と統合できます。 例えば: 
+検索サービスは、さまざまな方法で Rights Management と統合できます。 以下に例を示します。 
 
 - Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの保護された電子メールが検索結果に自動的に表示されようにします。 
 
