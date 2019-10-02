@@ -12,12 +12,12 @@ metadata:
   ms.author: cabailey
   manager: rkarlin
   ms.date: 09/17/2019
-  ms.openlocfilehash: 326f521f2f160b6425db15e22084e02fbecd4f55
-  ms.sourcegitcommit: 569446a78a217288198bd499c03bd634f3a92f7e
+  ms.openlocfilehash: 15c2a7d7fdc458ab522554dd3420ada811791723
+  ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/27/2019
-  ms.locfileid: "71342557"
+  ms.lasthandoff: 09/30/2019
+  ms.locfileid: "71679160"
 landingContent:
 - title: Azure Information Protection について
   linkLists:
@@ -25,35 +25,47 @@ landingContent:
     links:
     - text: Azure Information Protection とは
       url: what-is-information-protection.md
-    - text: 機密ラベルの概要
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
+    - text: よく寄せられる質問
+      url: faqs.md
 - title: 作業開始
   linkLists:
-  - linkListType: deploy
+  - linkListType: overview
     links:
     - text: 要件
       url: requirements.md
-    - text: 機密ラベルを自動的に適用する
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
-    - text: コンテンツへのアクセスを制限する
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
-    - text: 統合ラベル付けクライアントのインストールと構成
-      url: ./rms-client/clientv2-admin-guide.md
-- title: キー持ち込み (BYOK)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: テナント キーの計画と実装
-      url: plan-implement-tenant-key.md
-- title: オンプレミスのデータ ストアのデータを分類および保護する
-  linkLists:
   - linkListType: quickstart
     links:
-    - text: 機密情報の検索 (プレビュー)
+    - text: Azure portal の利用
+      url: quickstart-viewpolicy.md
+    - text: 機密情報の検索
       url: quickstart-findsensitiveinfo.md
+  - linkListType: deploy
+    links:
+    - text: デプロイ ロードマップ
+      url: deployment-roadmap.md
+- title: クライアントのカスタマイズ
+  linkLists:
   - linkListType: how-to-guide
     links:
-    - text: スキャナーのデプロイ (プレビュー)
+    - text: クラシック クライアント:詳細設定
+      url: ./rms-client/client-admin-guide-customizations.md
+    - text: 統合ラベル付けクライアント:詳細設定
+      url: ./rms-client/clientv2-admin-guide-customizations.md
+- title: 統合ラベルのアクティブ化
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: クライアントの比較
+      url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Information Protection ラベルの移行
+      url: configure-policy-migrate-labels.md
+- title: オンプレミスのデータ ストアのデータを分類および保護する
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: スキャナーのデプロイ
       url: deploy-aip-scanner.md
 - title: ラベルの使用状況の監視と機密情報の検出
   linkLists:
