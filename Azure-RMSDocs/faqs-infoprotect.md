@@ -4,7 +4,7 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
-ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
+ms.openlocfilehash: 8266e7b6a7883be96571dfd2d493b3eac83bdb7c
+ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70215690"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835391"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -40,7 +40,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 > - 分類とラベル付け用の中央レポート。 詳細については、「[Central reporting for Azure Information Protection](reports-aip.md)」 (Azure Information Protection の中央レポート機能) を参照してください。
 >
 >**Office の秘密度ラベル**:
-> - 機密ラベルをサポートする Office アプリの最新情報については、「現在、この機能が利用可能な場所」を参照してください。 「」のセクションを参照し[て](https://aka.ms/officemipdocs)ください。
+> - 機密ラベルをサポートする Office アプリの最新情報については、office のドキュメントから、[現在 office でサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)されている機密ラベル機能についての説明を参照してください。
 
 Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com/)にアクセスし、新機能のご要望をお知らせください。また、リクエストへの投票も受け付けています。
 
@@ -82,7 +82,7 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>分類が自動的に含まれるドキュメント テンプレートを作成できますか?
 
-はい。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
+可能。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
 
 例として、ドキュメントのヘッダーに分類を表示するテーブルがあるとします。 または、概要向けにドキュメントの分類を参照する具体的な表現を使用します。
 
