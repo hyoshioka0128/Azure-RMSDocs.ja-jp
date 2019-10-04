@@ -4,18 +4,18 @@ description: Azure Information Protection クライアントでのクライア�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2fdb9e719ffcafb6923528fef6c63bb8eefb3cdc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ffbc65add0d5daceddbf02f454efac4a2a288243
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794127"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712595"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル: Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
@@ -43,15 +43,20 @@ ms.locfileid: "68794127"
     
     このプランを含むサブスクリプションを持っていない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure portal に [Azure Information Protection] ブレードを追加しており、少なくともラベルが 1 つある。
+2. Azure portal に [Azure Information Protection] ブレードが追加されていて、Azure Information Protection のグローバル ポリシーに少なくとも 1 つのラベルが公開されている。
     
-    このチュートリアルでは既定のラベル ( **[全般]** ) を使用しますが、希望する場合は、このラベルを別のラベルに置き換えることができます。 [Azure Information Protection] ブレードの追加に関するヘルプが必要な場合、またはラベルがまだない場合は、「[クイック スタート: Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
+    このチュートリアルでは既定のラベル ( **[全般]** ) を使用しますが、希望する場合は、このラベルを別のラベルに置き換えることができます。 [Azure Information Protection] ブレードの追加に関するヘルプが必要な場合や、グローバル ポリシーにまだラベルが公開されていない場合は、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
 3. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、このコンピューターで Outlook にサインインできる。 このチュートリアル中に Outlook を複数回再起動する準備をしておいてください。
 
-4. Azure Information Protection クライアントがコンピューターにインストールされている。
+4. お使いの Windows コンピューターに Azure Information Protection クライアント (クラシック) がインストールされている。
     
-    クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
+    
+    クラシック クライアントではなく統合ラベル付けクライアントを使用している場合は、PowerShell の詳細設定を使ってこのチュートリアルと同等の構成を行う方法について説明した以下の手順を参照してください。
+    
+    - 管理者ガイドの手順:[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    - ビデオ:[Azure Information Protection の Outlook ポップアップの構成](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 

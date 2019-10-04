@@ -4,26 +4,26 @@ description: 転送不可の保護を自動的に適用することで、ユー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ffc5aa43b44eedad30dbfdb501152e55f87fb510
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793838"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674182"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)* "
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このクイック スタートでは、転送不可の保護設定を自動的に適用するように既存のラベルを構成します。
+このクイック スタートでは、[転送不可] の保護設定を自動的に適用するように、既存の Azure Information Protection ラベルを構成します。
 
 現在の Azure Information Protection ポリシーには、この構成を持つ次の 2 つのラベルが既に含まれています。
 
@@ -51,9 +51,11 @@ ms.locfileid: "68793838"
     
     既定のいずれかのラベルまたは作成済みのラベルを使用できます。 新しいラベルの作成に関するヘルプが必要な場合は、「[クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する](quickstart-label-specificusers.md)」をご覧ください。
 
-4. 新しいラベルをテストする場合:ユーザーのコンピューターに Azure Information Protection クライアントをインストールする必要があります。 
+4. 新しいラベルをテストする場合:Windows コンピューターに Azure Information Protection クライアント (クラシック) がインストールされている必要があります。 
     
-    ラベルをご自分で試してみるには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードしてクライアントをインストールできます。
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    
+    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について Office ドキュメントを参照してください。 たとえば、「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」です。
 
 5. 新しいラベルをテストする場合:Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、このコンピューターで、次のいずれかのカテゴリから Office アプリにサインインしている必要があります。
     

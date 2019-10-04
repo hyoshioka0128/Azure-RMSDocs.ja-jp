@@ -4,18 +4,18 @@ description: 組織用の Microsoft Azure Information Protection ポリシーを
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44504efc4640bf3d07398b14da7539cbda20e45d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788587"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712621"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル: Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "68788587"
 このチュートリアルで学習する内容は次のとおりです。
 > [!div class="checklist"]
 > * ポリシー設定を構成する
-> * 新しいラベルを作成する 
+> * 新しいラベルの作成 
 > * 視覚的なマーキング、推奨される分類、および保護用のラベルを構成する
 > * 設定とラベルの動作を確認する
 
@@ -34,7 +34,7 @@ ms.locfileid: "68788587"
 
 このチュートリアルを完了するための所要時間は約 15 分です。
 
-## <a name="prerequisites"></a>前提条件 
+## <a name="prerequisites"></a>必要条件 
 
 このチュートリアルを完了するための必要条件を次に示します。
 
@@ -42,15 +42,15 @@ ms.locfileid: "68788587"
     
     Azure Information Protection プラン 2 を含むサブスクリプションを持っていない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure portal に [Azure Information Protection] ブレードを追加し、保護サービスがアクティブになっていることを確認済みである。
-
-    これらの操作に関するサポートが必要な場合は、[Azure portal にAzure Information Protection を追加し、ポリシーを表示するためのクイック スタート](quickstart-viewpolicy.md)をご覧ください。
-
-3. Azure Information Protection クライアントがコンピューターにインストールされている。 
+2. Azure portal に [Azure Information Protection] ブレードが追加され、保護サービスがアクティブ化されており、Azure Information Protection のグローバル ポリシーに 1 つ以上のラベルが公開されている。
     
-    クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    これらの手順については、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
-4. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、そのコンピューターで、次のいずれかのカテゴリから Office アプリにサインインしている。
+3. お使いの Windows コンピューター (Windows 7 Service Pack 1 以降) に Azure Information Protection クライアント (クラシック) がインストールされている。 
+    
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について [Office ドキュメント](/microsoft-365/compliance/sensitivity-labels)を参照してください。
+
+4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
@@ -64,7 +64,7 @@ ms.locfileid: "68788587"
     
     - Office Professional Plus 2010 Service Pack 2
 
-Azure Information Protection を使用するための前提条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
+Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
 では、始めましょう。
 
@@ -76,7 +76,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
 
 1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 **[Azure Information Protection]** を選択します。
+    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
@@ -90,9 +90,9 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
     チュートリアルの後半でこれらのポリシー設定を使用し、その動作を確認します。
 
-4. **[既定のラベルを選択]** で、 **[全般]** を選択します。 
-
-    以前のバージョンのポリシーを使用しているために、このラベルがない場合は、同等のラベルとして **[内部]** を選択します。
+4. **[既定のラベルを選択]** に対して、いずれかのラベル ( **[全般]** など) を選択します。 
+    
+    **[全般]** ラベルは、Azure Information Protection によって自動的に作成される既定のラベルの 1 つです。 この手順は、Azure portal に Azure Information Protection を追加するクイック スタートの「[ラベルの作成と公開](quickstart-viewpolicy.md#create-and-publish-labels)」セクションで説明されています。
 
 5. **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** オプションが [オン] になっていない場合は、 **[オン]** に設定します。
 
@@ -142,11 +142,11 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
     **[このラベルが付いたドキュメントにはフッターをつける]** 設定で、 **[オン]** をクリックし、 **[テキスト]** ボックスに「**Classified as Confidential**」と入力します。 
     
-    **[このラベルが付いたドキュメントには透かしをつける]** 設定では、 **[On]** (オン) をクリックし、 **[Text]** (テキスト) ボックスに組織の名前を入力します。 たとえば、「**VanArsdel, Ltd**」と入力します。 
+    **[Documents with this label have a watermark]** (このラベルのあるドキュメントに透かしを付ける) 設定では、 **[On]** (オン) をクリックし、 **[Text]** (テキスト) ボックスに組織の名前を入力します。 たとえば、「**VanArsdel, Ltd**」と入力します。 
     
     これらの視覚的なマーカーの外観を変更できますが、ここでは設定は既定値のままにしておきます。
     
-9. **[このラベルが自動で適用される場合の条件を構成]** セクションを見つけます。
+9. **[Configure conditions for automatically applying this label]** (このラベルに自動的に適用する条件を構成する) セクションを見つけます。
     
     **[新しい条件の追加]** をクリックし、 **[条件]** ブレードで次のように選択します。
     
@@ -154,11 +154,11 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
     b. **[業種の選択]** :既定値の **[すべて]** のままにします。
     
-    c. **「クレジット カード番号」** と入力します。「**クレジット カード番号**」と入力します。 検索結果から **[クレジット カード番号]** を選択します。
+    c. **[情報の種類を選択]** 検索ボックス:「**クレジット カード番号**」と入力します。 検索結果から **[クレジット カード番号]** を選択します。
     
-    d. **[最小出現回数]** :既定値の **1** のままにしておきます。
+    d. **[Minimum number of occurrences]\(最小出現回数\)** :既定値の **1** のままにしておきます。
     
-    e. **[一意の値のみを含む出現回数をカウント]** :既定値の **[Off]** (オフ) のままにしておきます。
+    e. **[Count occurrences with unique values only]\(一意の値のみを持つ出現回数のカウント\)** :既定値の **[Off]** (オフ) のままにしておきます。
     
     ![Azure Information Protection チュートリアル - クレジット カードの条件を構成する](./media/step2-configure-condition.png)
     
@@ -255,7 +255,7 @@ Word で新しいドキュメントを開きます。 Azure Information Protecti
     
     ラベルの保護構成のため、従業員のみが文書を開くことができ、一部のアクションは従業員に対して制限されます。 たとえば、印刷およびコンテンツのコピーと抽出のアクセス許可がないため、文書を印刷したりコピーしたりすることはできません。 このような制限は、データの損失を防ぐのに役立ちます。 ドキュメントの所有者は、ドキュメントを印刷したりコピーしたりできます。 ただし、組織内の他のユーザーに電子メールでドキュメントを送信しても、他のユーザーはこれらの操作を実行できません。
 
-4. これで、このドキュメントを閉じることができます。
+4. もうこのドキュメントを閉じてもかまいません。
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 

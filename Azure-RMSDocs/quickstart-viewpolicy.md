@@ -1,39 +1,37 @@
 ---
 title: クイック スタート - Azure portal で Azure Information Protection を表示する - AIP
-description: 組織で初めて Azure Information Protection を使用する場合は、このクイック スタートから開始して、サービスを Azure portal に追加し、この保護サービスがアクティブ化されていることを確認し、ラベルとポリシー設定を表示します。
+description: 組織で初めて Azure Information Protection を使用する場合は、このクイック スタートから開始して、サービスを Azure portal に追加し、この保護サービスがアクティブ化されていることを確認して、ラベルとポリシー設定を公開します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 10/01/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 096fdbb61be5d0223e94921cb02cb5d7550eafd0
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d48061cda0d13ad04dc05dbd5d260a56dec60166
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793801"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712568"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
->
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このクイック スタートでは、Azure portal に Azure Information Protection を追加し、この保護サービスがアクティブ化されていることを確認し、ラベルがまだ用意されていなければ既定のラベルを作成し、Azure Information Protection のポリシー設定を表示します。
+このクイック スタートでは、Azure portal に Azure Information Protection を追加し、この保護サービスがアクティブ化されていることを確認し、ラベルがまだ用意されていなければ既定のラベルを作成し、Azure Information Protection クライアント (クラシック) のポリシー設定を表示します。
 
 このクイック スタートは 10 分もかからずに終了できます。
 
 ## <a name="prerequisites"></a>必要条件
 
-このクイック スタートを完了するには、次が必要です。
+このクイック スタートを完了するには、次の要件があります。
 
 - Azure Information Protection プラン 1 またはプラン 2 を含むサブスクリプション。
     
-    これらのいずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
+    このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
@@ -72,41 +70,43 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 3. 保護がアクティブになっていない場合は、 **[アクティブ化]** を選択します。 
 
-    アクティブ化が完了すると、情報バーに **アクティブ化が正常に完了しました** と表示されます。
+    アクティブ化が完了すると、情報バーに **[Activation finished successfully]\(アクティブ化が正常に完了しました\)** と表示されます。
 
-## <a name="create-labels---if-necessary"></a>ラベルを作成する (必要な場合)
+## <a name="create-and-publish-labels"></a>ラベルの作成と公開
 
 お客様の組織に既にラベルが存在している場合があります。これは、お客様のテナント用のラベルが自動的に作成されていたため、または、Office 365 セキュリティ & コンプライアンス センター、Microsoft セキュリティ センター、または Microsoft コンプライアンス センターのラベルが存在するためです。 では、始めましょう。
 
 1. **[分類]**  >  **[ラベル]** を選択します。
     
-    **[既定のラベルを生成します]** オプションが表示される場合は、ラベルはまだ存在していません。
+    **[既定のラベルの生成]** オプションが表示される場合は、ラベルはまだ存在していません。
     
      ![Azure Information Protection の既定のラベルなし](./media/info-protect-nodefaultlabels.png)
     
-    既定のラベルを生成するためのこのオプションが表示されない場合は、おそらくは次の図に示すようなラベルが既に存在しています。これらは Azure Information Protection の既定のラベルです。
+    既定のラベルを生成するこのオプションが表示されない場合は、既にラベルが存在しています。それは、次の図に示すような Azure Information Protection の既定のラベルである可能性があります。
     
     ![Azure Information Protection の既定のラベルあり](./media/info-protect-defaultlabels.png)
 
-2. ラベルが存在する場合は、次のセクションに進んでラベルを表示します。 ラベルが存在しない場合は、 **[既定のラベルを生成します]** オプションを選択します。
+2. ラベルが存在しない場合は、 **[既定のラベルの生成]** オプションを選択します。
 
-4. 次に、すべてのユーザーに対してラベルを発行するために、 **[分類]**  >  **[ポリシー]**  >  **[グローバル]** で次の操作を行います。
+4. すべてのユーザーに対してラベルを公開するには、 **[分類]**  >  **[ポリシー]**  >  **[グローバル]** で次の操作を行います。
     
-    a. **[ラベルの追加または削除]** を選択します。
+    」を参照します。 **[ラベルの追加または削除]** を選択します。
     
     b. **[ポリシー: ラベルの追加または削除]** ブレードで、すべてのラベルを選択し、 **[OK]** を選択します。
     
     c. **[ポリシー:グローバル]** ブレードに戻り、 **[保存]** を選択します。
 
+Azure portal でラベルを公開すると、Azure Information Protection クライアント (クラシック) でそれらを使用できるようになります。
+
 ## <a name="view-your-labels"></a>ラベルを表示する
 
 **[分類]**  >  **[ラベル]** を選択し、少し時間を割いて **[Azure Information Protection - ラベル]** ブレードに表示されるラベルをよく理解しておきます。
 
-前のセクションで示されたラベルに似ていない場合は、Azure Information Protection の既定のラベルではなく、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで作成されたラベルが使用されてます。
+それが前のセクションの図で示されたラベルに似ていない場合、お客様が使用しているのは Azure Information Protection の既定のラベルではなく、おそらく Office 365 セキュリティ/コンプライアンス センターか、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで作成されたラベルです。
 
 > [!TIP]
 > カスタム ラベルを使用したくない場合は、Azure Information Protection の既定のラベルを代わりに使用してください。 
-> - カスタム ラベルを削除すると、[前のセクション](#create-labels---if-necessary)で説明したように、 **[ラベル]** ブレードに既定のラベルを生成するオプションが表示されます。 
+> - カスタム ラベルを削除すると、[前のセクション](#create-and-publish-labels)で説明したように、 **[ラベル]** ブレードに既定のラベルを生成するオプションが表示されます。 
 
 **[Azure Information Protection - ラベル]** ブレードでは:
 
@@ -122,11 +122,11 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 ## <a name="view-your-policy-settings"></a>ポリシー設定を表示する
 
-Azure portal を使用して Azure Information Protection サービスに初めて接続するときに、Azure Information Protection クライアントによって使用される既定のポリシー設定が常に自動的に作成されます。 このクライアントに対して、ポリシー設定と前述のラベルがクライアントの Azure Information Protection ポリシー内にダウンロードされます。
+Azure portal を使用して Azure Information Protection サービスに初めて接続するときに、Azure Information Protection クライアント (クラシック) によって使用される既定のポリシー設定が常に自動的に作成されます。 クラシック クライアントに対して、ポリシー設定と前述のラベルがクライアントの Azure Information Protection ポリシー内にダウンロードされます。
 
-Azure Information Protection の統合ラベル付けクライアントを使用している場合、このクライアントではこれらのポリシー設定は使用されません。 代わりに、このクライアントには、Office 365 コンプライアンス & セキュリティ センター、Microsoft 365 コンプライアンス センター、または Microsoft 365 セキュリティ センターからのラベルとポリシー設定がダウンロードされます。
+Azure Information Protection の統合ラベル付けクライアントを使用している場合、このクライアントではこれらのポリシー設定は使用されません。 代わりに、このクライアントには同じラベルがダウンロードされますが、Office 365 コンプライアンス & セキュリティ センター、Microsoft 365 コンプライアンス センター、または Microsoft 365 セキュリティ センターからのものとは異なるポリシー設定がダウンロードされます。 Azure portal の代わりに、これらの管理センターを使ってラベルとラベルのポリシーを編集します。
 
-Azure Information Protection の既定のポリシー設定を表示するには:
+クラシック クライアント用の Azure Information Protection の既定のポリシー設定を表示するには:
 
 1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、お客様のテナントに対して作成された既定の Azure Information Protection ポリシー設定を表示します。
     
@@ -134,10 +134,17 @@ Azure Information Protection の既定のポリシー設定を表示するには
     
     ![Azure Information Protection ポリシーのグローバル設定](./media/defaultsettings-aip.png)
 
-3. 設定を表示しただけなので、ポータルで開いたすべてのブレードは閉じるだけで問題ありません。
+3. これで、ポータルで開いたすべてのブレードを閉じることができます。
 
 ## <a name="next-steps"></a>次の手順
 
-ラベルとポリシー設定を Azure portal で確認したので、次の手順として次のチュートリアルが役に立つ可能性があります。[Azure Information Protection のポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)。
+クラシック クライアントを使用している場合:
 
-また、Azure Information Protection ポリシーのすべての要素を構成するための詳しい手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
+- 次の手順として、以下のチュートリアルが役に立つ場合があります。[Azure Information Protection のポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)。
+- また、Azure Information Protection ポリシーのすべての要素を構成するための詳しい手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
+
+統合ラベル付けクライアントを使用している場合:
+
+- Office ドキュメントの「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」をご覧ください。
+
+これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。

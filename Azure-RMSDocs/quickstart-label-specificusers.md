@@ -4,26 +4,26 @@ description: スコープ付きポリシーを使用してユーザーのサブ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cce7edf1428c9090f0b51b13170de9afbb89ce6f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e3960a2e4e0204fb879e55704f68ed8071d31e3b
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790295"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674124"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)* "
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる新しいラベルを作成します。
+このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる、新しい Azure Information Protection ラベルを作成します。
 
 この構成では、スコープ付きポリシーを使用します。
 
@@ -45,9 +45,11 @@ ms.locfileid: "68790295"
     
     適切なグループがない場合は、"**営業チーム**" という名前のグループを作成し、少なくとも 1 人のユーザーを追加します。
 
-4. 新しいラベルをテストする場合:ユーザーのコンピューターに Azure Information Protection クライアントをインストールする必要があります。 
+4. 新しいラベルをテストする場合:Windows コンピューターに Azure Information Protection クライアント (クラシック) がインストールされている必要があります。 
     
-    ラベルをご自分で試してみるには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードしてクライアントをインストールできます。
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+     
+    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について Office ドキュメントを参照してください。 たとえば、「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」です。
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
     

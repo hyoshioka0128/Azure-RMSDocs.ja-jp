@@ -4,7 +4,7 @@ description: Azure Information Protection サービスの技術的な概要で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 09/30/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0588efa277c75199afc2d357a8152257c120376c
-ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
+ms.openlocfilehash: b71bc14817aadd1c67452fecc228a339dfebcb42
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227819"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689902"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -145,17 +145,17 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-オーランドでの Microsoft Ignite 2018 では、[Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) に関する多くのセッションが行われました。 参加できなかった方も後でセッションを確認できるように、すべてのセッションが記録されています。 推奨されるトップ 5 のセッションは次のとおりです。
+オーランドでの Microsoft Ignite 2018 では、Azure Information Protection に関する多くのセッションが行われました。 すべてのセッションが記録されているため、ご参加いただけなかった方もセッションを視聴することができます。 推奨されるトップ 5 のセッションは次のとおりです。
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Microsoft Information Protection (MIP) を使用して、ライフサイクル全体を通してあらゆる場所の機密データを保護する)](https://myignite.techcommunity.microsoft.com/sessions/64297)
+- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Microsoft Information Protection (MIP) を使用して、ライフサイクル全体を通してあらゆる場所の機密データを保護する)](https://youtu.be/gmHVF-1cLXA)
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Microsoft Information Protection の機能を連携させて、デバイス、アプリ、およびサービスの間で機密情報を保護する方法について)](https://myignite.techcommunity.microsoft.com/sessions/64299)
+- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Microsoft Information Protection の機能を連携させて、デバイス、アプリ、およびサービスの間で機密情報を保護する方法について)](https://youtu.be/kL9Y7NGTyQQ)
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Microsoft Information Protection ソリューションのデプロイと導入を加速させる)](https://myignite.techcommunity.microsoft.com/sessions/64283)
+- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Microsoft Information Protection ソリューションのデプロイと導入を加速させる)](https://www.youtube.com/watch?v=JsCyIVyQJmE)
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Office 365 Message Encryption で、機密性の高いメールを保護および管理する)](https://myignite.techcommunity.microsoft.com/sessions/64327)
+- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Office 365 Message Encryption で、機密性の高いメールを保護および管理する)](https://www.youtube.com/watch?v=Ld4b4pFua0g)
 
-- [THR2003 - Data discovery, reporting and analytics for all your data with Microsoft Information Protection (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、使用レポートの作成、および分析を行う)](https://myignite.techcommunity.microsoft.com/sessions/64301)
+- [THR2003 - Data discovery, reporting and analytics for all your data with Microsoft Information Protection (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、使用レポートの作成、および分析を行う)](https://www.youtube.com/watch?v=nzDIXd0XaeA)
 
 この Ignite で行われた発表のロールアップについては、ブログ投稿「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」(機密データを保護するために使用できる情報保護機能の発表) を参照してください。
 
