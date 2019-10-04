@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314320"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923665"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -119,9 +119,13 @@ Azure Information Protection クライアントは、次のいずれかの Offic
 
 Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Office リボンの Azure Information Protection バー、または **[保護]** ボタン (クラシッククライアント) または **[秘密度]** ボタン (統合ラベル付けクライアント) では表示されません。 
 
-Azure Information Protection クライアントは、同じコンピューター上で複数のバージョンの Office をサポートしていません。 これらのクライアントは、Office のユーザーアカウントの切り替えもサポートしていません。
-
 保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
+
+### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の機能
+
+- Azure Information Protection クライアント (従来のクライアントおよび統合ラベル付けクライアント) では、同じコンピューター上で複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。
+
+- Office[メールのマージ](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、Azure Information Protection 機能ではサポートされていません。
 
 ## <a name="firewalls-and-network-infrastructure"></a>ファイアウォールとネットワーク インフラストラクチャ
 
