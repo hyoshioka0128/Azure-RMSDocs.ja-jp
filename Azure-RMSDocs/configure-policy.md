@@ -3,7 +3,7 @@ title: Azure Information Protection ポリシーを構成する - AIP
 description: Azure Information Protection クライアント (クラシック) の分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
 author: cabailey
 ms.author: cabailey
-ms.date: 09/28/2019
+ms.date: 10/04/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2a23660b43f0186c78953695eccbc4b531dbca9a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 858b745987edd73f12bfda903050e84ca97eaacb
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673824"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966785"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -69,18 +69,20 @@ Azure Portal にサインインするには、Azure Information Protection を�
     
     - **Azure Information Protection 管理者**
     
-    - **セキュリティ閲覧者** ([Azure Information Protection 分析](reports-aip.md)のみ)
-    
   - **コンプライアンス管理者**
     
   - **コンプライアンスデータ管理者**
     
   - **セキュリティ管理者**
     
+    **セキュリティ閲覧**者  - [Azure Information Protection analytics](reports-aip.md)のみ
+    
+    **グローバルリーダー** - [Azure Information Protection analytics](reports-aip.md)のみ
+    
   - **グローバル管理者**
     
     > [!NOTE] 
-    > テナントが統合ラベルストアに移行されている場合、Azure Information Protection 管理者 (旧称 "Information Protection administrator") はサポートされなくなりました。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > テナントが統一されたラベル付けプラットフォームにある場合、Azure Information Protection 管理者ロール (旧称 "Information Protection administrator") とグローバル閲覧者ロールは、Azure portal ではサポートされません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft アカウントは Azure Information Protection を管理できません。
 

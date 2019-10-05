@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b3d5355904494a8d9f64783b490ba6f7deb3bc1
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684412"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966844"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -57,7 +57,7 @@ Azure Portal の新機能:
 
 - テンプレートをラベルに変換できます。結果的に、テンプレートとラベルをそれぞれ管理するのではなく、1 つのオブジェクトを管理することになります。 方法については、「[テンプレートをラベルに変換するには](configure-policy-templates.md#to-convert-templates-to-labels)」を参照してください。
 
-- その他の管理者ロールのサポート: Azure Rights Management を構成するにはグローバル管理者として Azure クラシック ポータルにサインインする必要がありましたが、Azure Information Protection を構成する目的で Azure portal にサインインするときは、次のいずれかの管理者ロールを持つアカウントを使用できます。**全体管理者**、**セキュリティ管理者**、**コンプライアンス管理者**、**コンプライアンスデータ管理**者、または**Azure Information Protection 管理者**。 これらの各ロールの詳細については、Azure Active Directory ドキュメントの「[使用可能なロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」を参照してください。
+- その他の管理者ロールのサポート: Azure Rights Management を構成するには、グローバル管理者として Azure クラシックポータルにサインインする必要がありましたが、Azure portal にサインインして、コンプライアンスを含む他の多くの管理者ロールを使用して Azure Information Protection を管理できます。 **管理者**と**コンプライアンスデータ管理者**。 サポートされているロールの完全な一覧については、「 [Azure portal へのサインイン](configure-policy.md#signing-in-to-the-azure-portal)」セクションを参照してください。
 
 テンプレートの作成と管理、サービスの有効化と無効化のための PowerShell コマンドレットは、変更なく引き続きサポートされます。
 

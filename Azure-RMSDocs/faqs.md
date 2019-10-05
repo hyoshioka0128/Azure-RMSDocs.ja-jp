@@ -4,7 +4,7 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d2f3616d64a0405d1a0caf452d3491ee7a1fcac1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: e79954a33f78785ecdd32a2b7c9ba0fdbf2446bb
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884774"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966834"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -51,7 +51,7 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 テナントが統一されたラベル付けプラットフォームにある場合、[統一ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)は、秘密度ラベルを使用できます。 2019年6月以降に Azure Information Protection のサブスクリプションを取得した場合、テナントは自動的に統合されたラベル付けプラットフォームになり、それ以上の操作は必要ありません。 また、ユーザーが Azure Information Protection ラベルを移行したため、テナントがこのプラットフォーム上に存在する場合もあります。
 
-状態を確認するには、Azure portal で、[ **Azure Information Protection** > の**統合**されたラベルの**管理** > ] にアクセスし、**統合ラベル**の状態を確認します。
+状態を確認するには、Azure portal で、 **Azure Information Protection** >  **統合**されたラベルの @no__t**管理** にアクセスし、**統合ラベル**の状態を確認します。
 
 - **アクティブ**になっている場合は、テナントは統一されたラベル付けプラットフォームにあります。
 
@@ -126,7 +126,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 - **Azure Information Protection 管理者**:管理者はこの Azure Active Directory 管理者ロールを使用して Azure Information Protection を構成できますが、他のサービスは構成できません。 この役割を持つ管理者は、Azure Rights Management 保護サービスのアクティブ化と非アクティブ化、保護設定とラベルの構成、Azure Information Protection ポリシーの構成を行うことができます。 さらに、この役割を持つ管理者は、 [Azure Information Protection クライアント](./rms-client/client-admin-guide-powershell.md)および[aipservice モジュール](administer-powershell.md)から、すべての PowerShell コマンドレットを実行できます。 ただし、このロールは、ユーザーのドキュメントの追跡と取り消しをサポートしていません。
     
     > [!NOTE]
-    > ご自身の[テナントを統一ラベル付けストアに移行](configure-policy-migrate-labels.md)した後、このロールは、Azure portal ではサポートされなくなります。
+    > テナントが統一された[ラベル付けプラットフォーム](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、このロールは Azure portal ではサポートされません。
     
     ユーザーに管理者ロールを割り当てるには、「[Azure Active Directory でユーザーを管理者ロールに割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。
 
@@ -134,7 +134,10 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
     
     これらのいずれかの管理者ロールにユーザーを割り当てるには、「 [Azure Active Directory で管理者ロールにユーザーを割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。 これらのロールが割り当てられているユーザーの他のアクセス許可については、Azure Active Directory のドキュメントの「[利用可能な役割](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」セクションを参照してください。
 
-- **セキュリティ閲覧者**:[Azure Information Protection 分析](reports-aip.md)の場合のみ。 この Azure Active Directory の管理者ロールを持っている管理者は、ご自身のラベルの使用方法を確認したり、ラベル付きのドキュメントやメールに対するユーザー アクセスや、各分類への変更を監視したり、保護する必要がある機密情報を含んでいるドキュメントを識別したりできます。 この機能では Azure Log Analytics が使われるため、サポートする [RBAC ロール](reports-aip.md#permissions-required-for-azure-information-protection-analytics)も持っている必要があります。
+- **セキュリティ閲覧**者または**グローバルリーダー**:[Azure Information Protection 分析](reports-aip.md)の場合のみ。 この Azure Active Directory の管理者ロールを持っている管理者は、ご自身のラベルの使用方法を確認したり、ラベル付きのドキュメントやメールに対するユーザー アクセスや、各分類への変更を監視したり、保護する必要がある機密情報を含んでいるドキュメントを識別したりできます。 この機能は Azure Monitor を使用するため、サポート[RBAC ロール](reports-aip.md#permissions-required-for-azure-information-protection-analytics)も必要です。
+    
+    > [!NOTE]
+    > テナントが統一された[ラベル付けプラットフォーム](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)上にある場合、グローバル閲覧者ロールはサポートされません。
 
 - **セキュリティ管理者**:管理者はこの Azure Active Directory 管理者ロールを使用して、他の Azure サービスの一部を構成するだけでなく、Azure portal の Azure Information Protection を構成することができます。 このロールの管理者は、 [AIPService モジュールから PowerShell コマンドレット](administer-powershell.md)を実行したり、ユーザーのドキュメントを追跡したり取り消したりすることはできません。
     
@@ -156,7 +159,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
-はい。 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
+可能。 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
 
 Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect) を使用して、よりシームレスな認証方法をユーザーに提供できます。
 

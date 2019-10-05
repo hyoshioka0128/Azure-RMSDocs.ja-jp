@@ -4,7 +4,7 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8266e7b6a7883be96571dfd2d493b3eac83bdb7c
-ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
+ms.openlocfilehash: 4222e46b606c9c8de7ee05e5510aa60e5791a9dc
+ms.sourcegitcommit: 7cba3b612b9417ab92d9f002956c78fb97f2a787
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835391"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71959186"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -36,7 +36,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 - 分類およびラベル付けは Exchange Online や SharePoint Online とは統合されません。
 
 > [!NOTE]
-> **プレビュー段階**:
+> **プレビュー**:
 > - 分類とラベル付け用の中央レポート。 詳細については、「[Central reporting for Azure Information Protection](reports-aip.md)」 (Azure Information Protection の中央レポート機能) を参照してください。
 >
 >**Office の秘密度ラベル**:
@@ -46,7 +46,7 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 
 ## <a name="which-client-do-i-install-for-testing-new-functionality"></a>新しい機能をテストするためにどのクライアントをインストールしますか?
 
-現在、Windows には次の2つのクライアントがあります。 
+現時点では、Windows 用に2つの Azure Information Protection クライアントがあります。 
 
 - Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
 
@@ -55,6 +55,15 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
 
 機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)」をご覧ください。
+
+## <a name="where-can-i-find-information-about-using-sensitivity-labels-in-office"></a>Office での機密ラベルの使用に関する情報はどこで入手できますか。
+
+Office ドキュメントの次のリソースを参照してください。
+
+- [Office アプリでの感度ラベルの動作](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+
+- [Office 内のドキュメントと電子メールに機密ラベルを適用する](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
+
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 

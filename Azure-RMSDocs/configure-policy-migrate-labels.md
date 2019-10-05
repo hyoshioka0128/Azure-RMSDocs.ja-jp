@@ -4,7 +4,7 @@ description: Microsoft Information Protection framework をサポートするク
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ec565422044329948c624f8b6207d431c71dc0ac
-ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
+ms.openlocfilehash: 8be698e4cfbca2ec1cd7d990098d288762400196
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835379"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966813"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -44,7 +44,7 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 
 組織内の代理管理に管理者ロールを使用する場合は、統一されたラベル付けプラットフォームに対していくつかの変更を行う必要があります。
 
-**Azure Information Protection 管理者**(旧称**Information Protection administrator**) の[Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)は、統一されたラベル付けプラットフォームではサポートされていません。 この管理者ロールが組織内で使用されている場合は、このロールを持つユーザーを、**コンプライアンス管理者**、**コンプライアンスデータ管理者**、または**セキュリティ管理者**の Azure AD ロールに追加します。 この手順に関してサポートが必要な場合は、「[Office 365 セキュリティ&コンプライアンスセンターへのアクセス権をユーザーに付与する](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」をご覧ください。 Azure AD ポータル、Microsoft 365 セキュリティ センター、および Microsoft 365 コンプライアンス センターで、これらのロールを割り当てることもできます。
+**Azure Information Protection 管理者**(旧称**Information Protection 管理者**) と**グローバルリーダー**の[Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)は、統一されたラベル付けプラットフォームではサポートされていません。 これらの管理者ロールのいずれかを使用して Azure Information Protection を管理する場合は、このロールを持つユーザーを、**コンプライアンス管理者**、**コンプライアンスデータ管理者**、またはセキュリティの Azure AD ロールに追加します。 **管理者**。 この手順に関してサポートが必要な場合は、「[Office 365 セキュリティ&コンプライアンスセンターへのアクセス権をユーザーに付与する](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center)」をご覧ください。 Azure AD ポータル、Microsoft 365 セキュリティ センター、および Microsoft 365 コンプライアンス センターで、これらのロールを割り当てることもできます。
 
 これらのロールを使用する代わりに、管理センターで、これらのユーザー用の新しいロール グループを作成し、そのグループに **[秘密度ラベル管理者]** ロールまたは **[組織構成]** ロールを追加できます。
 

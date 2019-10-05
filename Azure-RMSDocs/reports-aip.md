@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edc87fe3422bbfe6805a4c3f0d012d0a76e7c5ce
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: d33650b879939ce4a23efd77b1ac3de6c9f2ad06
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923687"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966875"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -178,12 +178,13 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
         - **コンプライアンスデータ管理者**
         - **グローバル管理者**
     
-    - ワークスペースが作成された後は、アクセス許可がさらに少ない次のロールを使用して、収集されたデータを表示できます。
+    - ワークスペースが作成された後、次のロールを使用して、収集されるデータを表示するアクセス許可を減らすことができます。
     
         - **セキュリティ閲覧者**
+        - **グローバルリーダー**
     
     > [!NOTE] 
-    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure Information Protection 管理者ロールは使用できません。
+    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure Information Protection 管理者ロールまたはグローバル閲覧者ロールは使用できません。
 
 2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles)のいずれかが必要です。
     
@@ -243,7 +244,7 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 ワークスペースを構成した後、次のいずれかの管理センターで機密ラベルを公開する場合は、次の手順を実行します。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター:
 
-- Azure portal で、[ **Azure Information Protection** > の**統合ラベル**の**管理** > ] にアクセスし、 **[発行]** を選択します。
+- Azure portal で、[ **Azure Information Protection** > ] [**統合**されたラベルの @no__t**管理**] を選択し、 **[発行]** を選択します。
     
     ラベル付けセンターでラベルの変更 (作成、変更、削除) を行うたびに、この**発行**オプションを選択します。 
 

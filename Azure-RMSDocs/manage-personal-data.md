@@ -4,7 +4,7 @@ description: Azure Information Protection で使用される個人データと�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e83f11013f60d418f28c58cee10a84915f39ebc
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689223"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966891"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -218,7 +218,11 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **セキュリティ管理者**
 
+- **セキュリティ閲覧者**
+
 - **グローバル管理者**
+
+- **グローバルリーダー**
 
 AIPService モジュール (または以前のモジュール AADRM) を使用して表示および指定した個人データは、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、**コンプライアンス対応に割り当てられているユーザーのみがアクセスできます。データ管理**者、または Azure Active Directory からの**グローバル管理者**ロール、または保護サービスのグローバル管理者ロール。
 
