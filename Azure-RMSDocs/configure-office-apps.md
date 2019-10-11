@@ -46,5 +46,5 @@ Office for Mac を使用するユーザーは、コンテンツを保護する�
 ## <a name="office2010"></a>Office 2010
 クライアントコンピューターが Office 2010 で Azure Rights Management サービスを使用するには、Azure Information Protection クライアント (クラシック) が必要です。 他の構成は必要ありません。ユーザーが各自の Office 365 資格情報でサインインしさえすれば、ファイルを保護したり、他のユーザーによって保護されたファイルを使用したりできます。
 
-Azure Information Protection クライアント (クラシック) の詳細については、「@no__t 0Azure Information Protection client:クライアントのインストールと構成](configure-client.md)」を参照してください。
+Azure Information Protection クライアント (クラシック) の詳細については、 [Azure Information Protection client:クライアントのインストールと構成](configure-client.md)」を参照してください。
 
