@@ -4,19 +4,19 @@ description: ラベルの条件を使うと、ドキュメントや電子メー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ce645af880b90c12bed284c0b57d597cfd540fd7
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: e8379d001fdfeccbdeace6572d32b9dc88ef088c
+ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673934"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314288"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -50,15 +50,15 @@ ms.locfileid: "71673934"
 
 ## <a name="how-automatic-or-recommended-labels-are-applied"></a>自動ラベルと推奨ラベルが適用されるしくみ
 
-- 自動分類は、Word、Excel、PowerPoint でドキュメントが保存されるときと、Outlook で電子メールが送信されるときに適用されます。 
+- 自動分類は、ドキュメントを保存するときに Word、Excel、PowerPoint に適用され、電子メールの送信時に Outlook に適用されます。 
     
     以前に手動でラベルが付けられているか、以前に上位の分類で自動的にラベルが付けられているドキュメントと電子メールには自動分類を使用できません。 
 
-- 推奨分類は、Word、Excel、および PowerPoint でドキュメントが保存されるときに適用されます。 現在プレビュー段階にある[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)を構成しない限り、推奨分類を Outlook に使用することはできません。
+- 推奨分類は、ドキュメントを保存するときに Word、Excel、および PowerPoint に適用されます。 現在プレビュー段階にある[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)を構成しない限り、推奨分類を Outlook に使用することはできません。
     
     以前に上位の分類でラベルが付けられているドキュメントには推奨分類を使用できません。 
 
-ドキュメントに指定された条件規則が Azure Information Protection クライアントによって定期的にチェックされるように、この動作を変更できます。 この構成には、現在プレビュー版の[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)が必要です。
+ドキュメントに指定された条件規則が Azure Information Protection クライアントによって定期的にチェックされるように、この動作を変更できます。 たとえば、SharePoint Online、OneDrive、または OneDrive for Business に自動的に保存される Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用している場合に適しています。 このシナリオをサポートするには、現在プレビューの段階にある[アドバンストクライアント設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)を構成できます。 この設定により、分類がバックグラウンドで継続的に実行されるようになります。
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>複数のラベルに適用するときの複数の条件の評価方法
 

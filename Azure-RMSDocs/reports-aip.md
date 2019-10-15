@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 10/04/2019
+ms.date: 10/14/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d33650b879939ce4a23efd77b1ac3de6c9f2ad06
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.openlocfilehash: 22ec828b0ee0c6c4719e938383c1952dbf42e33e
+ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71966875"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314310"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -155,10 +155,10 @@ Azure Information Protection レポートを表示し、独自のレポートを
 |要件|詳細情報|
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプションで、Azure Information Protection と同じテナント用のサブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
-|Azure Information Protection クライアント|統一されたラベル付けクライアントと従来のクライアントの両方がサポートされています。 <br /><br />これらのクライアントのいずれもまだ所有していない場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
-|Microsoft Cloud App Security |Microsoft Cloud App Security から情報を表示するには[Azure Information Protection 統合](https://docs.microsoft.com/cloud-app-security/azip-integration)を構成します。|
-|**検出とリスク** レポートの場合: <br /><br />-オンプレミスのデータストアのデータを表示するには、Azure Information Protection スキャナーのインスタンスを少なくとも1つデプロイします。 <br /><br />-Windows 10 コンピューターからのデータを表示するには、1809の最小ビルドであり、Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を使用していて、Microsoft の Azure Information Protection 統合機能を有効にしている必要があります。Defender Security Center|スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 <br /><br />Microsoft Defender Security Center の Azure Information Protection 統合機能を構成して使用する方法の詳細については、「 [Windows の情報保護の概要](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview)」を参照してください。|
-|**推奨事項**レポートの場合: <br /><br />-推奨される操作として Azure portal から新しいデータリポジトリを追加するには、で構成されているバージョンの Azure Information Protection スキャナーを使用している必要があり Azure portal |スキャナーを展開するには、「[ファイルを自動的に分類して保護するための Azure Information Protection スキャナーの展開](deploy-aip-scanner.md)」を参照してください。|
+|クライアントにラベルを付けるためのレポート情報の場合: <br /><br />-Azure Information Protection クライアント|統一されたラベル付けクライアントと従来のクライアントの両方がサポートされています。 <br /><br />これらのクライアントは、まだインストールされていない場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
+|クラウドベースのデータストアからの情報を報告する場合: <br /><br />-Microsoft Cloud App Security |Microsoft Cloud App Security から情報を表示するには[Azure Information Protection 統合](https://docs.microsoft.com/cloud-app-security/azip-integration)を構成します。|
+|オンプレミスのデータストアからのレポート情報の場合: <br /><br />-Azure Information Protection スキャナー |スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 |
+|Windows 10 コンピューターからの情報を報告する場合:  <br /><br />-Microsoft Defender Advanced Threat Protection を使用した1809の最小ビルド (Microsoft Defender ATP)|Azure Information Protection 統合機能を Microsoft Defender Security Center から有効にする必要があります。 詳細については、「 [Windows の情報保護の概要](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview)」を参照してください。|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Azure Information Protection 分析に必要なアクセス許可
 
