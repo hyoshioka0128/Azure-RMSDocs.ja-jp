@@ -34,7 +34,7 @@ ms.locfileid: "71684242"
 > [!IMPORTANT]
 > サポートされているバージョンとその他の要件については、「 [Azure Information Protection の要件](requirements.md)」を参照してください。
 
--   [Office 365: オンラインサービス @ no__t の構成-0
+-   [Office 365: オンラインサービス の構成-](configure-office365.md)
 
     -   [Exchange Online: IRM 構成](configure-office365.md#exchangeonline-irm-configuration)
 
