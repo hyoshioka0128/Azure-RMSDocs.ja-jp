@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 51b39652a5f3ec8cd81f28c1a5ee485992a10375
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 1250960a27deed4121bf0fd090250de30e56632b
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314344"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447717"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -30,7 +30,7 @@ ms.locfileid: "71314344"
 
 たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、 **[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
 
-Office アプリを構成する準備ができて[いる場合は、「office アプリ:クライアントの構成](configure-office-apps.md)」を参照してください。
+Office アプリを構成する準備ができている場合は、「 [office アプリ: クライアントの構成](configure-office-apps.md)」を参照してください。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
@@ -39,13 +39,13 @@ Exchange Online または Exchange Server を使用すると、Azure Information
 
 -   **Outlook on the web** の電子メール保護サポート。Outlook クライアントと同様に実装されます。 この構成では、ユーザーは保護テンプレートまたはオプションを使用することでメール メッセージを保護できます。 ユーザーは、自分に送信された保護メールのメッセージを読み、利用できます。
 
--   Outlook クライアントの**保護ルール**。保護テンプレートおよびオプションが特定受信者のメール メッセージに自動的に適用されるように管理者が構成します。 たとえば、社内電子メールが法務部門に送信されるときに、法務部門の所属者のみが読むことが可能で、ただし転送できないようにすることができます。 送信前に電子メール メッセージに保護が適用されたことがユーザーに表示され、既定では、ユーザーは不要と判断した場合にこの保護を削除できます。 電子メールは送信される前に暗号化されます。 詳細については、Exchange ライブラリの「[Outlook の保護ルール](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx)」および「[Outlook 保護ルールを作成する](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx)」を参照してください。
+-   Outlook クライアントの**保護ルール**。保護テンプレートおよびオプションが特定受信者のメール メッセージに自動的に適用されるように管理者が構成します。 たとえば、社内電子メールが法務部門に送信されるときに、法務部門の所属者のみが読むことが可能で、ただし転送できないようにすることができます。 送信前に電子メール メッセージに保護が適用されたことがユーザーに表示され、既定では、ユーザーは不要と判断した場合にこの保護を削除できます。 電子メールは送信される前に暗号化されます。 詳細については、Exchange ライブラリの「 [Outlook 保護ルール](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) 」と「 [Outlook 保護ルールの作成](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) 」を参照してください。
 
 -   **メール フロー ルール**。保護テンプレートまたはオプションがメール メッセージに自動的に適用されるように管理者が構成します。 ルールの基盤は送信者、受信者、メッセージの件名、内容などのプロパティになります。 ルールは概念上、保護ルールに似ていますが、ユーザーは保護を削除できません。これは、保護がクライアントではなく Exchange サービスによって設定されるためです。 保護がサービスによって設定されるので、ユーザーがどのようなデバイスまたはオペレーティング システムを使用していても関係ありません。 詳細については、Exchange オンプレミスに関する「[Exchange Online のメール フロー ルール (トランスポート ルール)](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules)」および「[トランスポート保護ルールを作成する](https://technet.microsoft.com/library/dd302432.aspx)」を参照してください。
 
 -   **データ損失防止 (DLP) ポリシー**。このポリシーは、メール メッセージにフィルターを適用するための条件のセットを含み、機密コンテンツのデータの損失を防ぐために役立つ操作を実行します。 指定できるアクションの 1 つは、保護テンプレートまたはオプションの 1 つを指定することで、保護として暗号化を適用することです。 ポリシーのヒントを使用すると、機密データが検出されたときに、保護の適用が必要な可能性があることをユーザーに警告できます。 詳細については、Exchange Online ドキュメントの「[データ損失防止](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)」を参照してください。
 
--   **Office 365 Message Encryption** では、保護されているメール メッセージと保護されている Office ドキュメントを添付ファイルとして、あらゆるデバイスであらゆるメール アドレスに送信できます。 Azure AD を使用しないユーザー アカウントの場合、インターネットがあれば、ソーシャル ID プロバイダーやワンタイム パスコードを利用できます。 詳細については、Office 365 ドキュメントの「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](/office365/securitycompliance/set-up-new-message-encryption-capabilities)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) を参照してください。 この構成に関連する追加情報については、「[Office 365 Message Encryption](https://docs.microsoft.com/office365/securitycompliance/ome)」を参照してください。
+-   **Office 365 Message Encryption** では、保護されているメール メッセージと保護されている Office ドキュメントを添付ファイルとして、あらゆるデバイスであらゆるメール アドレスに送信できます。 Azure AD を使用しないユーザー アカウントの場合、インターネットがあれば、ソーシャル ID プロバイダーやワンタイム パスコードを利用できます。 詳細については、Office 365 ドキュメントの「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](/microsoft-365/compliance/set-up-new-message-encryption-capabilities)」 (Azure Information Protection 上に構築される新しい Office 365 メッセージの暗号化機能の設定) を参照してください。 この構成に関連する追加情報については、「[Office 365 Message Encryption](https://docs.microsoft.com/microsoft-365/compliance/ome)」を参照してください。
 
 オンプレミスで Exchange を使用している場合、Azure Rights Management コネクタを展開し、IRM 機能と Azure Rights Management サービスを利用できます。 このコネクタはオンプレミス サーバーと Azure Rights Management サービスの間のリレーとして機能します。
 
@@ -81,11 +81,11 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > 
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
-IRM で保護されていないライブラリについては、SharePoint または OneDrive にアップロードするファイルを保護する場合、このファイルで次のことはできません: 共同編集、Web 用 Office、検索、ドキュメント プレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
+IRM で保護されていないライブラリの場合、SharePoint または OneDrive にアップロードするファイルを保護すると、次のファイルは使用できません。共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)).
 
 SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 
-新しい投稿ではありませんが、Office 365 ブログの次の記事に追加情報があります: [What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/) (SharePoint と SharePoint Online の Information Rights Management の新機能)
+新しい投稿ではありませんが、「[What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)」 (SharePoint の Information Rights Management と SharePoint Online の新機能) という Office 365 ブログの投稿に追加情報があります。
 
 今後の変更については、「 [SharePoint のセキュリティ、管理、および移行に対する更新](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585)」を参照してください。
 
@@ -96,7 +96,7 @@ SharePoint の IRM を構成する用意ができている場合:
 - Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Office 365 をお持ちの場合、「[Office 365 のファイル保護ソリューション](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect)」をご覧になることをお勧めします。Office 365 のファイルを保護するための推奨機能を説明しています。
 

@@ -12,23 +12,23 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b6874bfc2e3431779891262e33e542058d4f2cf4
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: 3a59984f3829ed3305d2e6f6dbd3e121bfff6ba3
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301172"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447389"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
 >
 > [!NOTE]
 > この記事は、Azure Information Protection スキャナーの現在の一般公開バージョンを Azure Information Protection クライアント (クラシック) と共に使用するためのものであり、現在のプレビューバージョンの Azure Information 用スキャナーのプレビュー版でもあります。保護の統合されたラベル付けクライアント。
 > 
 > 以前にスキャナーをインストールし、アップグレードする場合は、次のアップグレード手順を実行し、このページの手順を使用して、スキャナーをインストールする手順を省略します。
-> - クラシック クライアントの場合: [Azure Information Protection スキャナーをアップグレードする](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
-> - 統合ラベル付けクライアントの場合: [Azure Information Protection スキャナーをアップグレードする](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
+> - クラシッククライアントの場合: [Azure Information Protection スキャナーのアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
+> - 統一されたラベル付けクライアントの場合: [Azure Information Protection スキャナーのアップグレード](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
 > 
 > 1\.48.204.0 よりも前のバージョンのスキャナーを使用していて、アップグレードする準備ができていない場合は、「[ファイルを自動的に分類して保護するために以前のバージョンの Azure Information Protection スキャナーを展開する](deploy-aip-scanner-previousversions.md)」を参照してください。
 
@@ -53,9 +53,9 @@ ms.locfileid: "71301172"
 
 スキャナーは、コンピューターにインストールされている IFilters を使うことで、Windows によってインデックス化できるすべてのファイルを検証できます。 そして、ファイルでラベル付けが必要かどうかを判断するため、スキャナーで Office 365 に組み込まれたデータ損失防止 (DLP) の機密情報の種類とパターン検出、または Office 365 の正規表現パターンが使われます。 スキャナーは Azure Information Protection クライアント (従来のクライアントまたは統一されたラベル付けクライアント) を使用するため、スキャナーは同じファイルの種類を分類して保護することができます。
 
-- クラシック クライアント: [Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)
+- クラシッククライアント: [Azure Information Protection クライアントによってサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)
 
-- 統一されたラベル付けクライアント:[Azure Information Protection 統合ラベル付けクライアントでサポートされるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md)
+- 統一されたラベル付けクライアント: [Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md)
 
 スキャナーを実行できるのは検索モードでのみです。この場合、レポートを使用して、ファイルがラベル付けされた場合に何が発生するかをチェックします。 またはスキャナーを実行して、自動的にラベルを適用できます。 機密情報の種類を含んだファイルを検出するためにスキャナーを実行することもできます (自動分類を適用する条件用にラベルを構成する必要はありません)。
 
@@ -67,16 +67,16 @@ ms.locfileid: "71301172"
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの前提条件
 Azure Information Protection スキャナーをインストールする前に、次の要件を満たしていることを確認してください。
 
-|要件|詳細情報|
+|要件|説明を見る|
 |---------------|--------------------|
-|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />メモ:非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br /> 組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。 それ以外の場合は、HTTPS (ポート 443) 経由で次の URL を許可するインターネット接続がこのコンピューターにあることを確認します。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*. protection.outlook.com (統合ラベル付けクライアントのスキャナーのみ)|
-|スキャナー サービスを実行するサービス アカウント|Windows Server コンピューター上でのスキャナー サービスの実行に加えて、この Windows アカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />-  **[Log on locally]\(ローカル ログオン\)** ユーザー権限の割り当て。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />-  **[サービスとしてログオン]** ユーザー権限の割り当て。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーで保護されたファイルに常に確実にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能を確実に有効にします。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」を参照してください。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
+|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br /> 組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。 それ以外の場合は、HTTPS (ポート 443) 経由で次の URL を許可するインターネット接続がこのコンピューターにあることを確認します。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.protection.outlook.com (統合ラベル付けクライアントからのスキャナーのみ)|
+|スキャナー サービスを実行するサービス アカウント|Windows Server コンピューター上でのスキャナー サービスの実行に加えて、この Windows アカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />-  **[Log on locally]\(ローカル ログオン\)** ユーザー権限の割り当て。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />-  **[サービスとしてログオン]** ユーザー権限の割り当て。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />- 再保護または保護を解除するラベル: スキャナーが保護されたファイルに常にアクセスできるようにするには、このアカウントを Azure Rights Management サービスの[スーパー ユーザー](configure-super-users.md)にして、スーパー ユーザー機能が有効になっていることを確認します。 保護を適用するためのアカウント要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」を参照してください。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
 |スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス<br /><br />- スキャナーをインストールする sysadmin ロール|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Azure Information Protection スキャナーでは、スキャナーのカスタム プロファイル名を指定するときに同じ SQL Server インスタンス上の複数の構成データベースがサポートされます。 統一されたラベル付けクライアントのプレビューバージョンのスキャナーを使用すると、複数のスキャナーで同じ構成データベースを共有できます。<br /><br />Sysadmin ロールを持つアカウントでスキャナーをインストールすると、インストールのプロセスでスキャナーの構成データベースが自動的に作成され、スキャナーを実行するサービス アカウントに対して必要な db_owner ロールが付与されます。 Sysadmin ロールが付与されない場合や、組織のポリシーがデータベースを手動で作成し構成することを要求している場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」をご覧ください。<br /><br />構成データベースのサイズはデプロイごとに異なりますが、スキャンしたい 1,000,000 ファイルごとに 500 MB を割り当てることをお勧めします。 |
-|次のいずれかの Azure Information Protection クライアントが Windows Server コンピューターにインストールされている <br /><br /> -クラシッククライアント <br /><br /> -統一されたラベル付けクライアント ([プレビューバージョンのみ](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />インストールおよびアップグレードの手順については、次のとおりです。 <br /> - [従来のクライアント](./rms-client/client-admin-guide.md)<br /> - [統一されたラベル付けクライアント](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
-|自動分類と、必要に応じて保護を適用する構成済みのラベル|クラシッククライアントで条件のラベルを構成し、保護を適用する手順については、次を参照してください。<br /> - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)<br /> - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md) <br /><br />ヒント:[チュートリアル](infoprotect-quick-start-tutorial.md)の手順に従うと、準備した Word 文書内のクレジット カード番号を検索するラベルを使ってスキャナーをテストすることができます。 ただし、オプション **[このラベルの適用方法を選択]** が **[推奨]** ではなく **[自動]** に設定されるように、ラベルの構成を変更する必要があります。 その後、(適用される場合は) ドキュメントからラベルを削除して、スキャナー用のデータ リポジトリにファイルをコピーします。 簡単なテストの場合、これにはスキャナー コンピューター上のローカル フォルダーを使用できます。<br /><br /> ラベルを自動ラベル付けするようにラベルを構成し、保護を適用するための統一されたラベル付けクライアントの手順については、以下を参照してください。<br /> - [コンテンツに機密ラベルを自動的に適用する](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)<br /> - [秘密度ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)<br /><br /> 自動分類を適用するラベルを構成していない場合でもスキャナーを実行できますが、このシナリオについては、これらの手順では説明されていません。 [詳細情報](#using-the-scanner-with-alternative-configurations)|
-|スキャンする SharePoint ドキュメントライブラリおよびフォルダーの場合:<br /><br />-SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|スキャナーでは SharePoint の他のバージョンはサポートされていません。<br /><br />[バージョン管理](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning)を使用すると、スキャナーは最後に発行されたバージョンを検査してラベルを付けます。 スキャナーがファイルと[コンテンツの承認](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval)を必要とする場合は、そのラベルの付いたファイルをユーザーが使用できるように承認する必要があります。 <br /><br />大規模な SharePoint ファームの場合は、スキャナーがすべてのファイルにアクセスするために、リスト ビューのしきい値 (既定では 5,000) を増やす必要があるかどうかを確認します。 詳細については、次の SharePoint のドキュメントを参照してください。[SharePoint で大規模なリストとライブラリを管理する](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
-|スキャンされる Office ドキュメントの場合:<br /><br />- Word、Excel、PowerPoint の 97-2003 ファイル形式および Office Open XML 形式|これらのファイル形式でスキャナーがサポートするファイルの種類の詳細については、次の情報を参照してください。 <br />-クラシッククライアント:[Azure Information Protection クライアントでサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)<br />-統一されたラベル付けクライアント:[Azure Information Protection 統合ラベル付けクライアントでサポートされるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md)|
-|長いパスの場合:<br /><br />- 最大 260 文字 (スキャナーが Windows 2016 にインストールされていて、コンピューターが長いパスをサポートするように構成されているのでない場合)|Windows 10 および Windows Server 2016 では、次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)により、260 文字を超えるパスの長さがサポートされます。**ローカルコンピューターポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべての設定** > で**Win32 の長いパスを有効にする**<br /><br /> 長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
+|次のいずれかの Azure Information Protection クライアントが Windows Server コンピューターにインストールされている <br /><br /> -クラシッククライアント <br /><br /> -統一されたラベル付けクライアント ([プレビューバージョンのみ](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />インストールおよびアップグレードの手順については、次のとおりです。 <br /> -  の[クラシッククライアント](./rms-client/client-admin-guide.md)<br /> -  の統一された[ラベル付けクライアント](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
+|自動分類と、必要に応じて保護を適用する構成済みのラベル|クラシッククライアントで条件のラベルを構成し、保護を適用する手順については、次を参照してください。<br /> - [自動および推奨分類の条件を構成する方法](configure-policy-classification.md)<br /> - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md) <br /><br />ヒント:[チュートリアル](infoprotect-quick-start-tutorial.md)の指示に従って、準備された Word 文書でクレジットカード番号を検索するラベルを使用してスキャナーをテストできます。 ただし、オプション **[このラベルの適用方法を選択]** が **[推奨]** ではなく **[自動]** に設定されるように、ラベルの構成を変更する必要があります。 その後、(適用される場合は) ドキュメントからラベルを削除して、スキャナー用のデータ リポジトリにファイルをコピーします。 簡単なテストの場合、これにはスキャナー コンピューター上のローカル フォルダーを使用できます。<br /><br /> ラベルを自動ラベル付けするようにラベルを構成し、保護を適用するための統一されたラベル付けクライアントの手順については、以下を参照してください。<br /> - [コンテンツに機密ラベルを自動的に適用する](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)<br /> - [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)<br /><br /> 自動分類を適用するラベルを構成していない場合でもスキャナーを実行できますが、このシナリオについては、これらの手順では説明されていません。 [詳細情報](#using-the-scanner-with-alternative-configurations)|
+|スキャンする SharePoint ドキュメントライブラリおよびフォルダーの場合:<br /><br />-SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|スキャナーでは SharePoint の他のバージョンはサポートされていません。<br /><br />[バージョン管理](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning)を使用すると、スキャナーは最後に発行されたバージョンを検査してラベルを付けます。 スキャナーがファイルと[コンテンツの承認](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval)を必要とする場合は、そのラベルの付いたファイルをユーザーが使用できるように承認する必要があります。 <br /><br />大規模な SharePoint ファームの場合は、スキャナーがすべてのファイルにアクセスするために、リスト ビューのしきい値 (既定では 5,000) を増やす必要があるかどうかを確認します。 詳細については、SharePoint のドキュメント「 [sharepoint での大規模なリストとライブラリの管理](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)」を参照してください。|
+|スキャンされる Office ドキュメントの場合:<br /><br />- Word、Excel、PowerPoint の 97-2003 ファイル形式および Office Open XML 形式|これらのファイル形式でスキャナーがサポートするファイルの種類の詳細については、次の情報を参照してください。 <br />-Classic クライアント: [Azure Information Protection クライアントによってサポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)<br />-統一されたラベル付けクライアント: [Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md)|
+|長いパスの場合:<br /><br />- 最大 260 文字 (スキャナーが Windows 2016 にインストールされていて、コンピューターが長いパスをサポートするように構成されているのでない場合)|Windows 10 および Windows Server 2016 は、次の[グループポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用して、260文字を超えるパスの長さをサポートしています:**ローカルコンピューターポリシー** > **コンピューターの構成** > **管理用テンプレート** > **すべての設定** > **Win32 長いパスを有効にする**<br /><br /> 長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
 
 組織のポリシーによる禁止のためにテーブルの要件をすべて満たすことができない場合は、代替案として次のセクションをご覧ください。
 
@@ -99,7 +99,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 #### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>制限: スキャナー サーバーがインターネット接続できない
 
-従来のクライアントでのみサポートされます。[切断されたコンピューター](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)向けの手順に従ってください。 その後、次の手順を実行します。
+従来のクライアントでのみサポートされます。切断された[コンピューター](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers)の指示に従います。 次に、以下の操作を行います。
 
 1. スキャナーのプロファイルを作成して、Azure portal でスキャナーを構成します。 この手順に関してサポートが必要な場合は、「[Azure portal でスキャナーを構成する](#configure-the-scanner-in-the-azure-portal)」をご覧ください。
 
@@ -123,9 +123,9 @@ Sysadmin ロールが一時的に付与されていない場合は、スキャ�
 
 通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 ただし、別々のアカウントを使用する場合は、両方にスキャナー構成データベースの db_owner ロールが必要です。
 
-- スキャナーに独自のプロファイル名を指定しない場合 (クラシッククライアントのみ)、構成データベースの名前は**AIPScanner_\<** コンピューター名 > になります。 
+- スキャナーに独自のプロファイル名を指定しない場合 (クラシッククライアントのみ)、構成データベースの名前は**AIPScanner_ @ no__t-1computer_name >** になります。 
 
-- 独自のプロファイル名を指定した場合、構成データベースに**は\<AIPScanner_ profile_name >** (クラシッククライアント) または **\<AIPScannerUL_ profile_name >** (統合ラベル付けクライアント) という名前が付けられます。
+- 独自のプロファイル名を指定した場合、構成データベースの名前は**AIPScanner_ @ no__t-1profile_name >** (クラシッククライアント) または**AIPScannerUL_ @ no__t-3profile_name >** (統合ラベル付けクライアント) になります。
 
 このデータベースに対してユーザーを作成し、db_owner 権限を付与するには、Sysadmin に次の SQL スクリプトを2回実行するように依頼します。 スキャナーを実行するサービスアカウントと、スキャナーをインストールして管理するための2回目の時間。 スクリプトを実行する前に:
 1. *Domain\user*は、サービスアカウントまたはユーザーアカウントのドメイン名とユーザーアカウント名に置き換えます。
@@ -136,7 +136,7 @@ SQL スクリプト:
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
-補足:
+さらに、本サービスには以下の規定が適用されます。
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
@@ -151,19 +151,19 @@ SQL スクリプト:
 
 組織のポリシーによって、サービスアカウントに**ローカルでログオン**する権限が禁止されていても、**バッチジョブとしてログオン**する権限が許可されている場合は、次の手順に従います。
 
-- クラシック クライアントの場合: クライアントの管理者ガイドの「 [Set-AIPAuthentication」の「Token パラメーターを指定して使用する](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。
+- クラシッククライアントの場合: クライアントの管理者ガイドの「 [Set-AIPAuthentication」の「Token パラメーターを指定して使用する](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。
 
-- 統合ラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)の最後」で説明されているように、 *OnBehalfOf*パラメーターを Set-aipauthentication と共に使用します。
+- 統一されたラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)の最後」で説明されているように、 *OnBehalfOf*パラメーターを Set-aipauthentication と共に使用します。
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>制限: スキャナーのサービス アカウントを Azure Active Directory と同期できないが、サーバーはインターネット接続できる
+#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>制限: スキャナーのサービス アカウントを Azure Active Directory と同期できないが、サーバーがインターネット接続できる
 
 スキャナーのサービスを実行するために 1 つのアカウントを持ち、Azure Active Directory を認証するために別のアカウントを使用することができます。
 
 - スキャナーのサービス アカウントのためには、ローカルの Windows アカウントか Active Directory アカウントを使用できます。
 
 - Azure Active Directory アカウントについては、次の手順を使用します。
-    - クラシック クライアントの場合: クライアントの管理者ガイドの「 [Set-AIPAuthentication」の「Token パラメーターを指定して使用する](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。
-    - 統合ラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)の最後」で説明されているように、 *OnBehalfOf*パラメーターを Set-aipauthentication と共に使用します。
+    - クラシッククライアントの場合: クライアントの管理者ガイドの「 [Set-AIPAuthentication」の「Token パラメーターを指定して使用する](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。
+    - 統一されたラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)の最後」で説明されているように、 *OnBehalfOf*パラメーターを Set-aipauthentication と共に使用します。
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Azure portal でスキャナーを構成する
 
@@ -186,20 +186,20 @@ SQL スクリプト:
 5. この初期構成では、次の設定を構成して **[保存]** を選択しますが、ブレードは閉じないでください。
     
     **[プロファイルの設定]** セクションの場合:
-    - **スケジュール**:既定の **[手動]** のままにしておきます
-    - **[検出する情報の種類]** : **[ポリシーのみ]** に変更します
-    - **[リポジトリの構成]** :最初にプロファイルを保存する必要があるため、この時点では構成しないでください。
+    - **スケジュール**:**既定のままにし**ておきます。
+    - **検出される情報の種類**:**ポリシーのみ**に変更
+    - **リポジトリを構成**する: プロファイルを最初に保存する必要があるため、現時点では構成しないでください。
     
     **[ポリシーの適用]** セクションの場合:
-    - **[強制]** : **[オフ]** を選択します
-    - **[コンテンツに基づいてファイルにラベルを付ける]** :既定の **[オン]** のままにしておきます
-    - **[既定のラベル]** :既定の **[ポリシーの既定値]** のままにしておきます
-    - **[ファイルのラベルを書き換える]** :既定の **[オフ]** のままにしておきます
+    - **強制**: **[オフ]** を選択します。
+    - **コンテンツに基づいてファイルにラベルを付ける**: の既定値のまま**に**します。
+    - **既定のラベル**: 既定の**ポリシー**の既定値のままにします。
+    - **ファイルのラベル**を変更する: 既定値を**オフ**のままにします。
     
     **[ファイル設定の構成]** セクションでは、次の手順を実行します。
-    - **[Preserve "Date modified", "Last modified" and "Modified by"]\("更新日"、"最終変更日時"、"更新者" を保持する\)** :既定の **[オン]** のままにしておきます
-    - **[スキャンするファイルの種類]** :既定のファイルの種類を **[対象外]** のままにしておきます
-    - **[既定の所有者]** :既定の **[スキャナー アカウント]** のままにしておきます
+    - [**更新日]、[最終更新日]、[変更者] を保持し**ます。の既定値のまま**に**します。
+    - **スキャンするファイルの種類**: **除外**するファイルの種類を既定のままにする。
+    - **既定の所有者**: 既定の**スキャナーアカウント**を保持します
 
 6. これでプロファイルの作成と保存が完了したので、 **[リポジトリの構成]** オプションに戻って、スキャンするデータ ストアを指定する準備が整いました。 SharePoint オンプレミスのドキュメントライブラリおよびフォルダーに対して、ローカルフォルダー、UNC パス、および SharePoint サーバーの Url を指定できます。 
     
@@ -217,7 +217,7 @@ SQL スクリプト:
     
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
-    例 :
+    例:
     
     - ローカル パスの場合: `C:\Folder`
     
@@ -280,13 +280,13 @@ Azure AD トークンを使用することで、Azure Information Protection サ
     
     これらのアプリケーションを作成するには、関連するクライアントの管理者ガイドの指示に従います。
     
-    - クラシック クライアントの場合: [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - Classic クライアントの場合: [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
     
-    - 統合ラベル付けクライアントの場合: [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - 統一されたラベル付けクライアントの場合: [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
         > [!NOTE]
         > プレビュークライアントに新しく追加された[一連の手順](./rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client)に従っていることを確認します。
 
-2. スキャナーのサービス アカウントにインストールのための**ローカル ログオン**権限が付与されている場合は、Windows Server コンピューターから、このアカウントを使用してサインインし、PowerShell セッションを開始します。 前の手順でコピーした値を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行します。
+2. スキャナーのサービス アカウントにインストール用に**ローカルでログオン**する権限が付与されている場合、Windows Server コンピューターから、このアカウントを使用してサインインし、PowerShell セッションを開始します。 前の手順でコピーした値を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行します。
     
     クラシック クライアントの場合:
     
@@ -304,9 +304,9 @@ Azure AD トークンを使用することで、Azure Information Protection サ
     
     スキャナーのサービス アカウントにインストールのための**ローカル ログオン**権限を付与できない場合は、
     
-    -  クラシック クライアントの場合: クライアントの管理者ガイドの「 [Set-AIPAuthentication」の「Token パラメーターを指定して使用する](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。
+    -  クラシッククライアントの場合: クライアントの管理者ガイドの「 [Set-AIPAuthentication」の「Token パラメーターを指定して使用する](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)」を参照してください。
     
-    -  統合ラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)の最後」で説明されているように、 *OnBehalfOf*パラメーターを Set-aipauthentication と共に使用します。
+    -  統一されたラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)の最後」で説明されているように、 *OnBehalfOf*パラメーターを Set-aipauthentication と共に使用します。
 
 スキャナーには Azure AD に対して認証するためのトークンが用意されています。これは、 **Web アプリ/API** (クラシッククライアント) の構成または Azure AD でのクライアントシークレット (統合ラベル付けクライアント) の構成に従って、1年間、2年間、または期限切れになります。 トークンが期限切れになったら、手順 1 と 2 を繰り返す必要があります。
 
@@ -356,8 +356,8 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 2. \<**プロファイル名**> ブレード上で、次の 2 つの設定を変更した後、 **[保存]** を選択します。
     
-   - **[プロファイルの設定]** セクションから:**スケジュール**を**常**に変更する
-   - **[ポリシーの適用]** セクションから:**適用**先を**オン**に変更
+   - **[プロファイルの設定]** セクション: [**スケジュール**を**常**に変更する]
+   - **[ポリシーの適用]** セクションから: **[適用]** 先 を **[オン**] に変更します。
     
      変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、またはスキャナーでファイルのラベルを書き換えられるかどうかなどです。 情報のポップアップ ヘルプを使って、各構成設定について詳しく学習してください。
 
@@ -379,12 +379,12 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 スキャナーでは、ファイルをスキャンするとき、次のプロセスが実行されます。
 
-### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. ファイルがスキャンに含まれるか、または除外されるかを判断する 
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. スキャンのためにファイルが含まれるか除外されるかを決定します。 
 実行可能ファイルやシステムファイルなど、分類と保護から除外されたファイルは、スキャナーによって自動的にスキップされます。 詳細については、次の管理者ガイドを参照してください。
 
-- クラシック クライアントの場合: [分類と保護から除外されるファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- クラシッククライアントの場合:[分類と保護から除外されるファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
-- 統合ラベル付けクライアントの場合: [分類と保護から除外されるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- 統一されたラベル付けクライアントの場合:[分類と保護から除外されるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 スキャンする (またはスキャン対象から除外する) ファイルの種類のリストを定義することで、この動作を変更できます。 スキャナーに対してこのリストを指定し、既定ですべてのデータ リポジトリに適用させることができます。また、データ リポジトリごとに 1 つのリストを指定することができます。 このリストを指定するには、スキャナーのプロファイルの **[スキャンするファイルの種類]** 設定を使います。
 
@@ -396,8 +396,8 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 既定でサポートされているファイルの種類の完全な一覧と、.zip ファイルと tiff ファイルを含む既存のフィルターを構成する方法の詳細については、次の管理者ガイドを参照してください。
 
-- クラシック クライアントの場合: [検査がサポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
-- 統合ラベル付けクライアントの場合: [検査がサポートされているファイルの種類](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
+- クラシッククライアントの場合:[検査がサポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
+- 統一されたラベル付けクライアントの場合:[検査でサポートされるファイルの種類](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
 
 検査が済むと、ユーザーがラベルに対して指定した条件を使用して、これらのファイルの種類にラベルを付けることができます。 または、検出モードを使用している場合は、ユーザーがラベルに対して指定した条件、またはすべての既知の機密情報の種類を含むように、これらのファイルを報告できます。 
 
@@ -416,13 +416,13 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 > 
 > - ファイルをホストしているオペレーティング システムに対し、動的ポートの数を増やす必要がある場合があります。 SharePoint 用にサーバーのセキュリティが強化されている場合、スキャナーが許可されているネットワーク接続の数を超えて、そのために停止する原因の 1 つになる可能性があります。
 >     
->     これがスキャナー停止の原因であるかどうかを確認するには、%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog にスキャナーに対する以下のエラー メッセージが記録されているかどうかを確認します (複数のログがある場合は zip 形式になっています)。**リモート サーバー 'System.Net.Sockets.SocketException' に接続できません:通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます IP:ポート**
+>     これがスキャナーの停止の原因であるかどうかを確認するには、%*localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog (複数のログがある場合は zip) でスキャナーの次のエラーメッセージが記録されているかどうかを確認してください: に**接続できません。リモートサーバー---> の .Net Sockets. SocketException: 各ソケットアドレス (プロトコル/ネットワークアドレス/ポート) の使用は、通常、IP: port で許可されているのは1つだけです**。
 >    
 >     現在のポート範囲を表示し、範囲を拡大する方法について詳しくは、「[ネットワーク パフォーマンスを向上させるために変更可能な設定](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」をご覧ください。
 > 
-> - 大規模な SharePoint ファームの場合、リスト ビューのしきい値 (既定では 5,000) を増やす必要がある場合があります。 詳細については、次の SharePoint のドキュメントを参照してください。[SharePoint で大規模なリストとライブラリを管理する](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)。
+> - 大規模な SharePoint ファームの場合、リスト ビューのしきい値 (既定では 5,000) を増やす必要がある場合があります。 詳細については、SharePoint のドキュメント「 [sharepoint での大きなリストとライブラリの管理](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)」を参照してください。
 
-### <a name="3-label-files-that-cant-be-inspected"></a>3.検査できないファイルにラベルを付ける
+### <a name="3-label-files-that-cant-be-inspected"></a>3. 検査できないファイルにラベルを付ける
 検査できないファイルの種類に対し、スキャナーでは Azure Information Protection ポリシーの既定のラベル、またはユーザーがスキャナー用に構成した既定のラベルが適用されます。
 
 前のステップと同じように、以下の状況では、スキャナーでファイルにラベルを付けることはできません。
@@ -441,7 +441,7 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 
 - スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
-- Azure Information Protection クライアントと同じ既定の保護動作が必要な場合は、すべてのファイルが自動的にネイティブ保護または汎用保護で保護されます。ワイルドカードをレジストリキーとして`Encryption` 、値 (REG_SZ)、および`Default`値のデータとして指定します。 `*`
+- すべてのファイルがネイティブ保護または汎用保護で自動的に保護される Azure Information Protection クライアントと同じ既定の保護動作が必要な場合は、`*` ワイルドカードをレジストリキーとして指定し、値 (REG_SZ) として-1 を @no__t し @no__値のデータとしての t-sql。
 
 レジストリを編集するときには、各ファイル名拡張子のキーと共に、**MSIPC** キーと **FileProtection** キーが存在しない場合には手動で作成します。
 
@@ -468,16 +468,16 @@ Azure portal の  **Azure Information Protection プロファイル**のブレ�
 
 スキャナーは、次のトリガーに従ってポリシーを更新します。
 
-- クラシッククライアントからのスキャナー:1時間ごとに、サービスが開始され、ポリシーが1時間を過ぎています。 
+- クラシッククライアントからのスキャナー: 1 時間ごと、およびサービスが開始され、ポリシーが1時間を経過した場合。 
 
-- 統一されたラベル付けクライアントからのスキャナー:4時間ごと、およびサービスの開始時。 
+- 統合ラベル付けクライアントからのスキャナー: 4 時間ごと、およびサービスの開始時に実行されます。 
 
 > [!TIP]
 > テスト期間中など、既定の間隔よりも早くポリシーを更新する必要がある場合は、次のようにします。 
 >
-> - クラシッククライアントからのスキャナー:ポリシーファイル **%LocalAppData%\Microsoft\MSIP\Policy.msip** **を手動**で削除します。
+> - クラシッククライアントからのスキャナー: ポリシーファイル **%LocalAppData%\Microsoft\MSIP\Policy.msip**からポリシーファイルを手動で削除し**ます。**
 >
-> - 統一されたラベル付けクライアントからのスキャナー: **%LocalAppData%\Microsoft\MSIP\mip\\processname>/mip から手動でコンテンツを削除します。<**
+> - 統一されたラベル付けクライアントからのスキャナー: **%LocalAppData%\Microsoft\MSIP\mip @ no__t-1 @ no__t-2*processname*>/mip**から内容を手動で削除します。
 >
 その後、Azure Information Scanner サービスを再起動します。 ラベルの保護設定を変更した場合は、保護設定を保存してから15分待ってから、サービスを再起動してください。
 
@@ -510,21 +510,21 @@ Azure Information Protection スキャナーでは、どのような状況でも
     この構成では、統一されたラベル付けクライアントからのスキャナーにのみ適用できます。既存のラベルを削除することもできます。このラベルに適用されている場合は、保護が含まれます。 ラベルとは独立して適用された保護が保持されます。 リポジトリ内のファイルからすべてのラベルを削除する必要がある場合は、この構成を使用します。
     
     次の設定を構成します。
-    - **[コンテンツに基づいてファイルにラベルを付ける]** :**Off**
-    - **[既定のラベル]** :**なし**
-    - **[ファイルのラベルを書き換える]** : **[** 既定の**ラベルを強制**する] チェックボックスがオンになっている状態
+    - **コンテンツに基づいてファイルにラベルを付ける**:**オフ**
+    - **既定のラベル**:**なし**
+    - **ファイル**のラベルの再設定: **[** **既定のラベルを強制**する] チェックボックスがオンになっている
 
 - すべてのカスタム条件と、既知の機密情報の種類を特定する。
     
     この構成では、 **[検出する情報の種類]** を **[すべて]** に設定します。
     
-    クラシッククライアントからのスキャナーの場合:スキャナーでは、Azure Information Protection ポリシー内のラベルに対して指定したカスタム条件と、Azure Information Protection ポリシー内のラベルに指定できる情報の種類のリストが使用されます。 
+    クラシッククライアントからのスキャナーの場合: スキャナーは、Azure Information Protection ポリシーでラベルに指定したカスタム条件、および Azure 情報のラベルに指定できる情報の種類の一覧を使用します。保護ポリシー。 
     
-    統合ラベル付けクライアントからのスキャナーの場合:スキャナーは、指定したカスタムの機密情報の種類、およびラベル付け管理センターで選択できる組み込みの機密情報の種類の一覧を使用します。
+    統一されたラベル付けクライアントのスキャナーの場合: スキャナーは、指定したカスタムの機密情報の種類、およびラベル付け管理センターで選択できる組み込みの機密情報の種類の一覧を使用します。
     
     この設定は、気付かない可能性がある機密情報を発見するのに役立ちますが、スキャナーのスキャン速度が犠牲になります。
     
-    スキャナーの次のクイックスタートでは、この構成を使用します。[クイック スタート:所有している機密情報の検索](quickstart-findsensitiveinfo.md)に関するページで使用されます。
+    スキャナーの次のクイックスタートでは、この構成を使用します。[クイックスタート: 使用している機密情報を検索](quickstart-findsensitiveinfo.md)します。
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>スキャナーのパフォーマンスの最適化
 
@@ -562,7 +562,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 - カスタム条件に対する正規表現式の構築
     
-    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 以下に例を示します。
+    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 たとえば、次のようになります。
     
     - [最長の量指定子](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)を開始します
     
@@ -580,7 +580,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
     
     - 大きいファイルは明らかに小さいファイルよりも時間がかかります。
 
-- 補足:
+- さらに、本サービスには以下の規定が適用されます。
     
     - スキャナーを実行するサービスアカウントに、「[スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner)」セクションに記載されている権限のみがあることを確認し、[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner)を構成して、スキャナーの低整合性レベルを無効にします (クラシッククライアントのみ)。
     
@@ -604,7 +604,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 - [Export-Ai/gs](/powershell/module/azureinformationprotection/Export-AIPLogs) -統一されたラベル付けクライアントのみ
 
-- [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
+- [インポート-Aipscanの構成](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
@@ -643,14 +643,14 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 ----
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」 (Azure Information Protection スキャナーを使用したデータ保護の自動化) をお読みください。
+Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 
-次に、[Windows Server FCI と Azure Information Protection スキャナーの違い](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)について確認します
+[Windows Server FCI と Azure Information Protection スキャナーの違い](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。
 
 また、PowerShell を使用して、デスクトップ コンピューターからファイルを対話的に分類し、保護することができます。 PowerShell を使用するその他のシナリオの詳細については、管理者ガイドの次のセクションを参照してください。
 
-- クラシック クライアントの場合: [Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)
+- クラシッククライアントの場合: [Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)
 
-- 統合ラベル付けクライアントの場合: [Azure Information Protection 統合ラベルクライアントでの PowerShell の使用](./rms-client/clientv2-admin-guide-powershell.md)
+- 統一されたラベル付けクライアントの場合: [Azure Information Protection 統合されたラベル付けクライアントでの PowerShell の使用](./rms-client/clientv2-admin-guide-powershell.md)

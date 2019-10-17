@@ -11,22 +11,22 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 4fb1c9ca3800e46ffcf3b8946823e4c43ca9d284
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690100"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447613"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
-> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 このガイドの情報は、エンタープライズネットワーク上の Azure Information Protection の統合されたラベル付けクライアントを担当している場合、または Azure Information Protection 統合された[ラベル付けクライアントユーザーよりも詳細な技術情報が必要な場合に使用します。ガイド](clientv2-user-guide.md)。 
 
-以下に例を示します。
+たとえば、次のようになります。
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -63,7 +63,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 ## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合されたラベル付けクライアントを展開する必要がありますか。
 
-[Office 365 セキュリティ/コンプライアンスセンターで機密ラベル](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)を使用していて、次のいずれかに該当する場合は、Azure Information Protection 統合されたラベル付けクライアントを展開します。
+[Office 365 セキュリティ/コンプライアンスセンターで機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用していて、次のいずれかに該当する場合は、Azure Information Protection 統合されたラベル付けクライアントを展開します。
 
 - Windows コンピューター上の Office アプリ (Word、Excel、PowerPoint、Outlook) 内からラベルを選択して、ドキュメントや電子メールメッセージを分類 (および必要に応じて保護) する。
 
@@ -89,13 +89,13 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 クライアントがインストールされたら、 **[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
 
-- Office アプリケーションから: **[ホーム]** タブの **[秘密度]** グループで、 **[秘密度]** を選択し、 **[ヘルプとフィードバック]** を選択します。
+- Office アプリケーションから: **[ホーム]** タブの **[秘密度]** グループで、 **[感度]** を選択し、 **[ヘルプとフィードバック]** を選択します。
 
-- ファイル エクスプローラーから:単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、 **[分類して保護する]** 、 **[ヘルプとフィードバック]** の順に選択します。 
+- エクスプローラーから単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、 **[分類して保護する]** 、 **[ヘルプとフィードバック]** の順に選択します。 
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
-既定では、[詳細を表示]**リンク**を[Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) web サイトに移動します。 ラベル管理センターのポリシー設定の1つとして、カスタムヘルプページに移動する独自の URL リンクを構成することができます。Office 365 セキュリティ/コンプライアンス センター、Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター。
+既定では、[詳細を表示]**リンク**を[Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) web サイトに移動します。 ラベル付け管理センター (Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンター) のポリシー設定の1つとして、カスタムヘルプページに移動する独自の URL リンクを構成することができます。
 
 **[問題の報告]** リンクは、[詳細設定](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)を指定した場合にのみ表示されます。 この設定を構成するときに、ヘルプ デスクの電子メール アドレスなどの HTTP リンクを指定します。 
 
@@ -156,11 +156,11 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection の統一されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法についてユーザーに指示し、特定のシナリオに対して選択するラベルについてのガイダンスを提供してください。 以下に例を示します。
+Azure Information Protection の統一されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法についてユーザーに指示し、特定のシナリオに対して選択するラベルについてのガイダンスを提供してください。 たとえば、次のようになります。
 
-- オンライン ユーザーの手順:[Azure Information Protection 統合されたラベル付けユーザーガイド](clientv2-user-guide.md)
+- オンラインユーザー手順: [Azure Information Protection 統一されたラベル付けユーザーガイド](clientv2-user-guide.md)
 
-- カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- カスタマイズ可能なユーザー ガイドのダウンロード: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのインストール
 
@@ -209,7 +209,7 @@ Azure Information Protection クライアント (クラシック) のスキャ�
 
 2. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統合されたラベル付けクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントにアップグレードします。
 
-3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、「 `Update-AIPScanner –Profile Europe`」のように入力します。
+3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、 `Update-AIPScanner –Profile Europe`と指定します。
     
     この手順では、 **AIPScannerUL_ @ no__t-1profile_name**という名前の新しいデータベースを作成し >
 
@@ -251,13 +251,13 @@ Azure Information Protection クライアント (クラシック) のスキャ�
 
 クライアントは、以下のいずれかの方法でアンインストールできます。
 
-- [コントロール パネル] を使用してプログラムをアンインストールする: **[Microsoft Azure Information Protection]**  >  **[アンインストール]** をクリックします。
+- コントロール パネルを使って、プログラムをアンインストールします。 **[Microsoft Azure Information Protection]**  >  **[アンインストール]** をクリックします。
 
 - 実行可能ファイル (たとえば、 **AzInfoProtection_UL**) を再実行し、 **[セットアップの変更]** ページで **[アンインストール]** をクリックします。 
 
-- **/uninstall** を付けて実行可能ファイルを実行します。 例: `AzInfoProtection.exe /uninstall`
+- **/uninstall** を付けて実行可能ファイルを実行します。 たとえば次のようになります。`AzInfoProtection.exe /uninstall`
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 クライアントをインストールするには、「[ユーザー用に Azure Information Protection 統合ラベルクライアントをインストール](clientv2-admin-guide-install.md)する」を参照してください。
 
 クライアントを既にインストールしている場合、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。

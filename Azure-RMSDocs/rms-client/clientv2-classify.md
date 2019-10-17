@@ -11,33 +11,33 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 67c65fa592bd08fbcdc195793cd8576ef5ed5a25
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: c7ae1a038ab3b499767cc892bd1b99ae27c8dbdc
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214130"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447341"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザー ガイド: Windows 用の Azure Information Protection 統合ラベルクライアントを使用してファイルまたは電子メールを分類する
+# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザーガイド: Windows 用の Azure Information Protection 統合ラベル付けクライアントを使用してファイルまたは電子メールを分類する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類します (保護はしません)。 ドキュメントや電子メールを保護する必要もある場合は、[分類して保護する手順](clientv2-classify-protect.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
 
-次の Office デスクトップ アプリでドキュメントや電子メールを作成または編集している場合、それらを最も簡単な方法で分類できます: **Word**、**Excel**、**PowerPoint**、**Outlook**。 
+Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) でドキュメントや電子メールを作成したり編集すると、分類が簡単になります。 
 
 ただし、**エクスプローラー**を利用してファイルを分類することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類できるので便利です。 
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類する
 
-**[ホーム]** タブで、リボンの **[感度]** ボタンを選択し、構成されているラベルのいずれかを選択します。 例えば:
+**[ホーム]** タブで、リボンの **[感度]** ボタンを選択し、構成されているラベルのいずれかを選択します。 たとえば、次のようになります。
 
 ![感度ボタンの例](../media/sensitivity-not-set-callout.png)
 
-または、 **[感度]** ボタンから **[バーの表示]** を選択した場合は、Azure Information Protection バーからラベルを選択できます。 例えば:
+または、 **[感度]** ボタンから **[バーの表示]** を選択した場合は、Azure Information Protection バーからラベルを選択できます。 たとえば、次のようになります。
 
 ![Azure Information Protection バーの例](../media/info-protect-barv2-not-set-callout.png)
 
@@ -76,17 +76,17 @@ ms.locfileid: "70214130"
 
 エクスプローラーを使用してファイルを分類する際に、1 つまたは複数のラベルが淡色表示になっている場合、選択したファイルは保護なしの分類をサポートしません。
 
-管理者ガイドには、保護なしの分類をサポートするファイルの種類の詳細な一覧が含まれています。「[分類のみにサポートされているファイルの種類](clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only)」を参照してください。
+管理者ガイドには、保護なしの分類をサポートするファイルの種類の完全なリスト (「[分類のみにサポートされているファイルの種類](clientv2-admin-guide-file-types.md#file-types-supported-for-classification-only)」) が含まれています。
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 例えば:
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 たとえば、次のようになります。
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類を設定します。 
     
-    選択できるラベルがない場合 (ラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 例えば:
+    選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 たとえば、次のようになります。
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -102,9 +102,9 @@ ms.locfileid: "70214130"
 
 Windows 用の Azure Information Protection 統合ラベル付けクライアントのユーザーガイドの詳細な手順については、次を参照してください。
 
-- [目的に合ったトピックをクリックしてください](clientv2-user-guide.md#what-do-you-want-to-do)
+- [作業内容](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報
 
-「[秘密度ラベルの概要」を](/Office365/SecurityCompliance/sensitivity-labels)参照してください。
+「[秘密度ラベルの概要」を](/microsoft-365/compliance/sensitivity-labels)参照してください。
 

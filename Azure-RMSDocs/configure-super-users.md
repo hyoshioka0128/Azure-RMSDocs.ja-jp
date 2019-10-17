@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6eb9c8755e1b5fb1007c4be23932ea1da1c51fbb
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b7e8d2b2f510a97c01ecf02040a404b11ffdc9be
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683743"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446990"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能によって、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 必要であれば、保護は削除したり、変更したりできます。
 
@@ -42,7 +42,7 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 既定では、スーパー ユーザー機能は無効であり、このロールはどのユーザーにも割り当てられていません。 これは、Exchange に Rights Management コネクタを構成すると自動的に有効にされますが、Exchange Online、SharePoint Online、または SharePoint Server を実行する標準的なサービスには必要ありません。
 
-スーパー ユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレット [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature) を使用します。次に、必要に応じて [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) コマンドレットを使用してユーザー (またはサービス アカウント) を割り当てたり、[Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) コマンドレットを使用して、必要に応じてこのグループにユーザー (または他のグループ) を追加したりします。 
+スーパーユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレット[enable-AipAipServiceSuperUser Uperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)を使用し、必要に応じてユーザー (またはサービスアカウント) を[割り当てます。](/powershell/module/aipservice/add-aipservicesuperuser)そのためには、次のコマンドレットを使用します[。AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup)コマンドレットを追加し、必要に応じてユーザー (またはその他のグループ) をこのグループに追加します。 
 
 スーパー ユーザーにグループを使用すると管理しやすくなりますが、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](prepare.md#group-membership-caching-by-azure-information-protection)ことに注意してください。 そのため、新しいユーザーを、すぐにコンテンツの暗号化を解除するスーパーユーザーに割り当てる必要がある場合は、AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、AipServiceSuperUser を使用してそのユーザーを追加します。
 
@@ -87,7 +87,7 @@ Azure Rights Management のスーパー ユーザーが割り当てられてい�
 
 Unprotect-RMSFile コマンドレットを使用し、PST ファイルの保護コンテンツを復号できますが、このコマンドレットは電子情報開示プロセスの一環としてよく考えて使用してください。 1 台のコンピューター上で大きなファイルに対して Unprotect-RMSFile を実行すると、リソースが大量に消費されます (メモリとディスク領域)。このコマンドレットでサポートされている最大ファイル サイズは 5GB です。
 
-理想としては、[Office 365 の電子情報開示](/office365/securitycompliance/ediscovery)は、保護されているメールとメールに添付されている保護ファイルを検索し、抽出する目的で使用します。 スーパー ユーザー機能は Exchange Online と自動的に統合されるので、Office 365 セキュリティ/コンプライアンス センターまたは Microsoft 365 コンプライアンス センターの電子情報開示では、暗号化されているアイテムをエクスポート前に検索したり、暗号化されているメールをエクスポート時に復号したりできます。
+理想としては、[Office 365 の電子情報開示](https://docs.microsoft.com/microsoft-365/compliance/ediscovery)は、保護されているメールとメールに添付されている保護ファイルを検索し、抽出する目的で使用します。 スーパー ユーザー機能は Exchange Online と自動的に統合されるので、Office 365 セキュリティ/コンプライアンス センターまたは Microsoft 365 コンプライアンス センターの電子情報開示では、暗号化されているアイテムをエクスポート前に検索したり、暗号化されているメールをエクスポート時に復号したりできます。
 
 Office 365 の電子情報開示を利用できない場合、Azure Rights Management サービスと統合されており、同じようにデータを解決する別の電子情報開示ソリューションを用意できることがあります。 あるいは、ご利用の電子情報開示ソリューションで保護コンテンツが自動的に読み取られず、復号できない場合、複数の手順からなる以下の解決策を利用できます。この解決策では Unprotect-RMSFile をより効率的に実行できます。
 
@@ -99,5 +99,5 @@ Office 365 の電子情報開示を利用できない場合、Azure Rights Manag
 
 4. 小さくなったこの 2 つ目の PST ファイルで Unprotect-RMSFile を実行し、そのコンテンツを復号します。 出力から、新しく復号された PST ファイルを情報開示ツールにインポートします。
 
-さまざまなメールボックスと PST ファイルで電子情報開示を実行する方法については、次のブログ記事を参照してください: [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216) (Azure Information Protection と電子情報開示プロセス)
+メールボックスと PST ファイル全体で電子情報開示を実行する方法について詳しくは、ブログ投稿「[Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216)」 (Azure Information Protection と電子情報開示プロセス) をご覧ください。
 
