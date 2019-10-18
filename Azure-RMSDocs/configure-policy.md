@@ -170,7 +170,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - メールでは、この情報は **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** の X ヘッダーに格納されます 
 
-- Word 文書 (.doc および .docx)、Excel スプレッドシート (.xls および .xlsx)、PowerPoint プレゼンテーション (.ppt および .pptx)、および PDF ドキュメントの場合、このメタデータは、次のカスタムプロパティに格納されます。 **MSIP_Label_ @ no__t-1 guid >/有効 = True**  
+- Word 文書 (.doc および .docx)、Excel スプレッドシート (.xls および .xlsx)、PowerPoint プレゼンテーション (.ppt および .pptx)、および PDF ドキュメントの場合、このメタデータは、次のカスタムプロパティに格納されます: **MSIP_Label_ \<GUID > Enabled = True**  
 
 電子メールの場合は、電子メールの送信時にラベル情報が保存されます。 ドキュメントについては、ファイルの保存時にラベル情報が保存されます。 
 
