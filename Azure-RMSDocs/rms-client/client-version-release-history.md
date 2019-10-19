@@ -3,8 +3,8 @@ title: Azure Information Protection クライアント-バージョン履歴 & �
 description: Windows 用 Azure Information Protection クライアントのリリースの新機能と変更点、サポートのライフサイクル ポリシーについて説明します。
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+manager: rkarlin
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,24 +12,24 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b64e10f93abd89299405e8b4df8e20ca2393616d
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 98861fcabfb6e00edbc0206f3c80a45d6287f70f
+ms.sourcegitcommit: e007bffd33c959124baa5719236981c93947a3e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314060"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535342"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
->*適用対象:Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection チームは、Azure Information Protection クライアントの修正点と新機能を定期的に更新しています。 
 
 最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 
 
-通常は数週間後に、一般公開されている最新バージョンが、 **Microsoft Azure Information Protection** > Microsoft Azure 情報の製品名と共に Microsoft Update カタログにも含まれるようになります。**保護クライアント**および**更新プログラム**の分類。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログに含まれ、 **Microsoft Azure Information Protection**  >  Microsoft Azure 情報の製品名が付けられます。**保護クライアント**および**更新プログラム**の分類。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
@@ -46,6 +46,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 |クライアントのバージョン|リリース日|
 |--------------|-------------|
+|1.41.51.0|2018 年 11 月 27 日|
 |1.37.19.0|2018 年 9 月 17 日|
 |1.29.5.0|2018 年 6 月 26 日|
 |1.27.48.0|2018 年 5 月 30 日|
@@ -74,7 +75,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="version-153100"></a>バージョン1.53.10.0
 
-**リリース日**: 07/15/2019
+**リリース**日: 07/15/2019
 
 このバージョンには、RMS クライアントの MSIPC バージョン1.0.3889.0419 が含まれています。
 
@@ -90,15 +91,15 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - 電子メールスレッドの [転送不可] オプションを、ユーザー定義のアクセス許可用に構成され、転送しないラベルに置き換えると、元の受信者は引き続き電子メールメッセージを開くことができます。
 
-- 次のシナリオでは、ラベルが自動的に設定されたことを示すラベルのツールヒントにユーザーが表示されなくなりました。ユーザーは、ラベルが付けられているが自動的に保護されていないドキュメントが添付された保護された電子メールを受信します。 差出人と同じ組織のユーザーがドキュメントを開くと、保護設定の対応するラベルがドキュメントに適用されます。
+- 次のシナリオでは、ラベルが自動的に設定されたというラベルのツールヒントにユーザーが表示されなくなりました。ユーザーは、ラベルが付けられていないが自動的に保護されたドキュメントを添付して、保護された電子メールを受け取ります。 差出人と同じ組織のユーザーがドキュメントを開くと、保護設定の対応するラベルがドキュメントに適用されます。
 
 - [Protect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile)コマンドレットを実行するための最小[使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)は、**コピー** (EXTRACT) ではなく **、名前を付けて保存、エクスポート**(エクスポート) されるようになりました。
 
 ## <a name="version-1482040"></a>バージョン1.48.204.0
 
-**リリース日**: 04/16/2019
+**リリース**日: 04/16/2019
 
-01/15/2020 までサポート
+01/15/2020 でサポート
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 
@@ -129,13 +130,13 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Outlook で送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する、新しいクライアント詳細設定。 [詳細情報](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
-    プレビューバージョンの OutlookCollaborationTrustedDomains のアドバンストクライアントプロパティを構成した場合、この設定は3つの新しい設定に置き換えられるため、ドメインがアクションごとに除外されるようになりました。OutlookWarnTrustedDomains、Outlookジャスト Ifytrusteddomains、および OutlookBlockTrustedDomains。
+    プレビューバージョンの OutlookCollaborationTrustedDomains のアドバンストクライアントプロパティを構成した場合、この設定は3つの新しい設定に置き換えられるため、ドメインがアクションごとに除外されるようになりました。 OutlookWarnTrustedDomains、Outlookジャストの信頼ドメインと OutlookBlockTrustedDomains。
 
 - [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 [詳細情報](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
 - Azure portal のチェックボックスをオンにして、機密データをより深く分析できるようにするための、 [Azure Information Protection analytics](../reports-aip.md)の新しいクライアント設定の1つ。 この設定は、クライアントとスキャナーに適用されます。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
-- カスタム アクセス許可を表示しないようポリシー設定を構成する場合にのみ適用される、新しいクライアント詳細設定。カスタム アクセス許可で保護されているファイルがある場合に、ユーザーが (保護設定を変更するアクセス許可を持っていれば) 表示および変更できるように、ファイル エクスプローラーにカスタム アクセス許可オプションが表示されます。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+- カスタムアクセス許可を表示しないようにポリシー設定を構成した場合にのみ適用可能な新しいアドバンストクライアント設定: カスタムアクセス許可で保護されたファイルがある場合は、ユーザーが表示できるように、エクスプローラーで [カスタムアクセス許可] オプションを表示します。(保護設定を変更するアクセス許可がある場合) を変更します。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
 
 **修正内容**:
@@ -155,8 +156,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - クライアント詳細設定を使用して [Outlook の既定のラベル](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook)を設定すると、ユーザーに対してすべてのサブラベルが無効化されている場合でも、これらのサブラベルを含む親ラベルを適用できます。
 
 - [ポリシー設定](../configure-policy-settings.md)の **[添付ファイルのあるメール メッセージの場合、それらの添付ファイルの最上位の分類に一致するラベルを適用します]** を使用し、ユーザー定義のアクセス許可で最上位の分類のラベルが構成されている場合、以前はそのラベルが電子メールに適用されましたが、保護は適用されませんでした。 現在の動作は次のとおりです。
-    - ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれる場合: そのラベルとその転送不可保護を電子メールに適用します。
-    - ラベルのユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびファイル エクスプローラーのみを対象とする場合: 電子メールにラベルが適用されず、保護も適用されません。
+    - ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれている場合は、そのラベルを適用し、電子メールに [転送不可] を設定します。
+    - ラベルのユーザー定義アクセス許可が Word、Excel、PowerPoint、およびエクスプローラー専用の場合: ラベルを適用せず、電子メールに保護を適用しません。
 
 **その他の変更:**
 
@@ -179,55 +180,10 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - [ポリシー設定](../configure-policy-settings.md) **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** がスキャナーに適用されなくなりました。 スキャナーのプロファイルで [**ファイル**のラベルを **[オン**] に設定する] を構成し、[**ラベルダウングレードを許可**する] チェックボックスをオンにすると、これらの操作が実行されます。
 
-## <a name="version-141510"></a>バージョン 1.41.51.0
-
-**リリース日**: 2018 年 11 月 27 日
-
-10/16/2019 までサポート
-
-このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
-
-**新機能:**
-
-- Azure Information Protection により、既定で PDF 暗号化の ISO 標準を使用して PDF ファイルが保護されるようになりました。 以前は、クライアントの詳細設定を使ってこのサポートを有効にする必要がありました。
-    
-    クライアントを元に戻して、ファイル名拡張子 .ppdf を使って PDF ファイルを保護させるようにするには、同じ[クライアントの詳細設定](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)を使いますが、ここでは **False** を指定します。
-
-- Azure Information Protection analytics を使用した、[中央レポート](../reports-aip.md)のデータサポートの監査。 この情報には、ラベルの使用状況を監視したり、ラベル付きドキュメントや電子メールにユーザーがアクセスしたりするためのラベルの使用方法が含まれています。
-
-- Excel で異なる色の[視覚的なマーキング](../configure-policy-markings.md)もサポートされるようになりました。
-
-- 既存の S/MIME の展開について、Outlook で S/MIME の保護を自動的に適用するようにラベルを構成する、新しいクライアントの詳細設定。 [詳細情報](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-
-- [切断されたコンピューター](client-admin-guide-customizations.md#support-for-disconnected-computers)に対して Azure Information Protection サービスのサインイン プロンプトが表示されないようにするためのレジストリの編集に代わる、新しいクライアントの詳細設定。
-
-- 以下のポリシー設定を使う際に[サブラベルの順序をサポートする](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)ための、新しいクライアントの詳細設定。
-    - **添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します**
-
-**修正内容**:
-
-- Azure Information Protection クライアントで、エクスプローラー (右クリック) や PowerShell コマンドに対してファイル名拡張子 .msg、.rar、.zip が除外されなくなりました。 ただし、これらのファイル名拡張子は、スキャナーに対しては既定で除外されたままです。 
-
-- Azure Information Protection クライアントでは、エクスプローラー (右クリック) を使う場合に、複数のファイル (複数選択および保護されたファイルを含むフォルダー) の保護を解除できます。
-
-- Excel の場合:
-    
-    - セルの編集中にスプレッドシートを保存する場合、視覚的なマーキングが適用されるようになりました。
-    
-    - Excel 2010: スプレッドシートが共同作成者の[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使って保護されている場合、ファイルを右クリックして **[分類して保護する]** を選択したときに、 **[ラベルの削除]** ボタンを使用できるようになりました。
-
-- [他のラベル付けソリューションからヘッダーとフッターを削除する](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)ことができるクライアントの詳細設定で、カスタム レイアウトがサポートされるようになりました。
-
-**その他の変更:**
-
-- スキャナーのスケジュールを **[常時]** に設定した場合、スキャンの間に 30 秒の遅延が追加されるようになりました。
-
-- スキャナーで、ファイルが既に保護されていた場合にそれがラベル付けする、ファイルの Rights Management 所有者が変更されなくなりました。
-
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 クライアントのインストールと使用の詳細: 
 
-- ユーザー向け: [クライアントのダウンロードとインストール](install-client-app.md)
+- ユーザー向け: [クライアントをダウンロードしてインストールする](install-client-app.md)
 
 - 管理者向け: [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
