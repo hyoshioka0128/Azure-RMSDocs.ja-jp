@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 4c8a22670a7e76a8e949b8cbdc0fcfb947282a7d
-ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
+ms.openlocfilehash: 9e4899d918701d59f5fc14db9264d1f983c9df60
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227797"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447689"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
@@ -193,5 +193,5 @@ Excel では、データ ストア リポジトリとファイル名が最初の
     - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)
 
 - 統合ラベル付けクライアントの場合:
-    - [機密ラベルをコンテンツに自動的に適用する](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
-    - [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)
+    - [機密ラベルをコンテンツに自動的に適用する](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
+    - [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
