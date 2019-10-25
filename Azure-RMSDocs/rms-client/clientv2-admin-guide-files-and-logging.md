@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f568c3bf2a2e6cd9b94b0a7a8bd9a49b35c4958
-ms.sourcegitcommit: ef57eb7896cf0aeb592f5e8ab37452f1e95aa20d
+ms.openlocfilehash: 8e2b6d0b3e0436800cd73959107bd544dae348b0
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542365"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805585"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントファイルとクライアント使用状況ログの統合
 
@@ -34,9 +34,14 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - 32 ビット オペレーティング システムの場合: **\Program Files\Microsoft Azure Information Protection**
 
-クライアントログファイル:
+クライアントログファイルと現在インストールされているポリシーファイル:
 
-- 64ビットおよび32ビットのオペレーティングシステムの場合: **%localappdata%\Microsoft\MSIP\Logs**
+- 64 ビットおよび 32 ビット オペレーティング システムの場合: **%localappdata%\Microsoft\MSIP**
+
+
+## <a name="usage-logging-for-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントの使用状況ログ
+
+統一されたラベル付けクライアントは、ユーザーアクティビティをローカルの Windows イベントログに記録しません。 代わりに、Azure Information Protection の[中央レポート](../reports-aip.md)機能を使用します。 
 
 
 ## <a name="next-steps"></a>次のステップ

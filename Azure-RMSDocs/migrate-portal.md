@@ -13,10 +13,10 @@ ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71966844"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
@@ -27,7 +27,7 @@ Azure Rights Management サービスの管理には Azure クラシック ポー
 
 Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃止されました。 この日付以降は、クラシック ポータルから Azure Rights Management サービスとカスタム テンプレートを管理することができません。 クラシック ポータルにアクセスしようとすると、新しい Azure Portal に移動するためのリンクが表示されます。
 
-クラシック ポータルの廃止の詳細については、ブログ記事でのお知らせ「[Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/)」 (Azure AD 管理は未来に向かいます: Azure クラシック ポータルは使用停止に) を参照してください。 元々の廃止日の一時的な延長については、「[Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/)」 (Azure AD クラシック ポータル エクスペリエンスの廃止と条件付きアクセス ポリシーの移行に関する更新) を参照してください。
+クラシック ポータルの廃止については、ブログ投稿でのお知らせ「[Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/)」 (Azure AD 管理は未来に向かいます: Azure クラシック ポータルは使用停止に) を参照してください。 元々の廃止日の一時的な延長については、「[Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/)」 (Azure AD クラシック ポータル エクスペリエンスの廃止と条件付きアクセス ポリシーの移行に関する更新) を参照してください。
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>使い慣れた管理タスクの実行方法
 
@@ -35,9 +35,9 @@ Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃�
 
 |Azure クラシック ポータル|このタスクを Azure Portal で実行する方法
 |-----------|--------------------|
-|構成設定に初めてアクセスする|1. [Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。<br /><br />2. 「[初めて [Azure Information Protection] ブレードにアクセスするには](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)」に記載されている手順に従います。
+|構成設定に初めてアクセスする|1. [Azure portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。<br /><br />2. の指示に従って[Azure Information Protection ブレードに初めてアクセス](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)します。
 |新しいテンプレートを作成する|保護を適用するラベルを作成します。 **[権限の設定]** を利用し、アクセス許可、有効期限、オフライン アクセスを定義します。 <br /><br />その処理の裏では、この構成により、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。<br /><br />詳細については、「[新しいテンプレートを作成するには](configure-policy-templates.md#to-create-a-new-template)」を参照してください。
-|テンプレートのプロパティを編集する: <br /><br />- テンプレート名と説明<br /><br />- 使用権限、コンテンツの有効期限、オフライン アクセス設定|まだ行っていない場合、[テンプレートをラベルに変換し](configure-policy-templates.md#to-convert-templates-to-labels)、次の作業を行ってください。<br /><br />1. ラベル名と説明を変更します。<br /><br />2. ラベルの保護設定を変更し、アクセス許可、有効期限、オフライン アクセス設定を更新します。<br /><br />詳しくは、[ラベルの保護設定の構成](configure-policy-protection.md#to-configure-a-label-for-protection-settings)に関するページをご覧ください。
+|テンプレートのプロパティを編集する: <br /><br />- テンプレート名と説明<br /><br />- 使用権限、コンテンツの有効期限、オフライン アクセス設定|まだ行っていない場合、[テンプレートをラベルに変換し](configure-policy-templates.md#to-convert-templates-to-labels)、次の作業を行ってください。<br /><br />1. ラベルの名前と説明を変更します。<br /><br />2. ラベルの保護設定を変更して、アクセス許可、有効期限、およびオフラインアクセスの設定を更新します。<br /><br />詳しくは、[ラベルの保護設定の構成](configure-policy-protection.md#to-configure-a-label-for-protection-settings)に関するページをご覧ください。
 |テンプレートをアーカイブに収める|ラベル状態を **[無効]** に設定します。
 |スコープ テンプレートを作成する|スコープ テンプレートを作成し、その範囲で保護を適用するラベルを作成します。 <br /><br />詳細については、「[スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法](configure-policy-scope.md)」を参照してください。
 |テンプレートをコピーする|Azure Portal では、テンプレートをコピーできません。 2 つのラベルに同じ保護設定を与える場合、ラベルごとにアクセス許可を設定する必要があります。 <br /><br />詳しくは、[ラベルの保護設定の構成](configure-policy-protection.md#to-configure-a-label-for-protection-settings)に関するページをご覧ください。
@@ -57,10 +57,10 @@ Azure Portal の新機能:
 
 - テンプレートをラベルに変換できます。結果的に、テンプレートとラベルをそれぞれ管理するのではなく、1 つのオブジェクトを管理することになります。 方法については、「[テンプレートをラベルに変換するには](configure-policy-templates.md#to-convert-templates-to-labels)」を参照してください。
 
-- その他の管理者ロールのサポート: Azure Rights Management を構成するには、グローバル管理者として Azure クラシックポータルにサインインする必要がありましたが、Azure portal にサインインして、コンプライアンスを含む他の多くの管理者ロールを使用して Azure Information Protection を管理できます。 **管理者**と**コンプライアンスデータ管理者**。 サポートされているロールの完全な一覧については、「 [Azure portal へのサインイン](configure-policy.md#signing-in-to-the-azure-portal)」セクションを参照してください。
+- 他の管理者ロールのサポート: azure Rights Management を構成するには、グローバル管理者として Azure クラシックポータルにサインインする必要がありましたが、他の多くの管理者ロールを使用して Azure Information Protection を管理するために Azure portal にサインインできます。これには、**コンプライアンス管理者**と**コンプライアンスデータ管理者**が含まれます。 サポートされているロールの完全な一覧については、「 [Azure portal へのサインイン](configure-policy.md#signing-in-to-the-azure-portal)」セクションを参照してください。
 
 テンプレートの作成と管理、サービスの有効化と無効化のための PowerShell コマンドレットは、変更なく引き続きサポートされます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>「
 詳細については、「[Azure Information Protection ポリシーでテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 

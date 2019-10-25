@@ -14,20 +14,20 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: b7190ef37fc41cafb4b4c2dffc2204c98d7a00f5
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684516"
 ---
-# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2:ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
+# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 
 この手順は、[AD RMS から Azure Information Protection への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーが HSM で保護されているときに Azure Key Vault 内のソフトウェアで保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。 
 
-選択した構成シナリオでない場合、[手順 4 に戻り、AD RMS から構成データをエクスポートし、それを Azure RMS にインポートし](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)、別の構成を選択します。
+これが選択した構成シナリオでない場合は、[手順4に戻ります。構成データを AD RMS からエクスポートし、Azure RMS にインポート](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection)して、別の構成を選択します。
 
 これは、AD RMS 構成を Azure Information Protection にインポートする 4 段階の手順で、結果は Azure Key Vault でお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
 
@@ -42,13 +42,13 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 > Azure Key Vault の構成手順を実行中で、この Azure サービスに慣れていない方は、最初に「[Azure Key Vault の概要](/azure/key-vault/key-vault-get-started)」を参照することをお勧めします。 
 
 
-## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>作業 1:構成データから SLC キーを抽出し、ご利用のオンプレミス HSM にキーをインポートする
+## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>パート 1: 構成データから SLC キーを抽出し、オンプレミス HSM にキーをインポートする
 
-1.  Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の Bring Your Own Key (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を行います。
+1.  Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の独自のキー (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を実行します。
 
-    -   **キーを作成し、Azure Key Vault HSM に転送する**: [手順 1: インターネット接続ワークステーションを準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
+    -   **キーを生成し、Azure Key Vault HSM に転送する**: [手順 1: インターネット接続ワークステーションを準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
 
-    -   **テナント キーを作成して転送する – インターネット経由**: [手順 2: 未接続ワークステーションを準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
+    -   **テナント キーを生成して転送する – インターネット経由**: [手順 2: 未接続ワークステーションを準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
 
     手順に従ってテナント キーを生成しないでください。既に、エクスポートされた構成データ (.xml) ファイルに同等のものがあります。 代わりに、ツールを実行してファイルからこのキーを抽出し、オンプレミス HSM にインポートします。 ツールを実行すると、次の 2 つのファイルが作成されます。
 
@@ -112,17 +112,17 @@ SLC キーが抽出され、オンプレミスの HSM にインポートされ�
 > [!IMPORTANT]
 > この手順を完了したら、未接続のワークステーションからこれらの PEM ファイルを確実に消去して、不正ユーザーがアクセスできないようにしてください。 たとえば、E: ドライブからすべてのファイルを確実に削除するには、"cipher /w: E" を実行します。
 
-## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>パート 2: ご利用の HSM キーをパッケージ化して Azure Key Vault に転送する
+## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>パート 2: HSM キーをパッケージ化して Azure Key Vault に転送する
 
-Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の Bring Your Own Key (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を行います。
+Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の独自のキー (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を実行します。
 
-- [手順 4: ](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)キーの転送を準備する
+- [手順 4: キーの転送を準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)
 
 - [手順 5: Azure Key Vault にキーを転送する](/azure/key-vault/key-vault-hsm-protected-keys#step-5-transfer-your-key-to-azure-key-vault)
 
 キー ペアを生成する手順は実行しないでください。キーは既にあります。 代わりに、オンプレミスの HSM からこのキーを転送するコマンドを実行します (例では、KeyIdentifier パラメーターに "contosobyok" を使用しています)。
 
-権限が制限されたキーのコピーを作成したとき (手順 4.1) およびキーを暗号化したとき (手順 4.3) に、KeyTransferRemote.exe ユーティティから **[Result: SUCCESS]** が返されていることを確認してから、Azure Key Vault へのキーの転送を行ってください。
+権限が制限されたキーのコピーを作成したとき (手順 4.1) およびキーを暗号化したとき (手順 4.3) に、KeyTransferRemote.exe ユーティティが **: SUCCESS**を返していることを確認してから、Azure Key Vault へのキーの転送を行ってください。
 
 Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Information Protection からの Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
@@ -134,7 +134,7 @@ Azure Key Vault にキーがアップロードされるとき、表示された�
 
 これで、HSM キーが Azure Key Vault に転送されたので、AD RMS 構成データをインポートできます。
 
-## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>パート 3:構成データを Azure Information Protection にインポートする
+## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>パート 3: 構成データを Azure Information Protection にインポートする
 
 1. Azure Information Protection 管理者: インターネットに接続されたワークステーションでの PowerShell セッションで、TpdUtil ツールの実行後に、SLC キーが削除されている新しい構成データ ファイル (.xml) をコピーしてください。
 
@@ -167,6 +167,6 @@ Azure Key Vault にキーがアップロードされるとき、表示された�
 Azure Information Protection テナントキーが Azure Key Vault で使用しているキーを後で確認する必要がある場合は、 [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS コマンドレットを使用します。
 
 
-以上で「[手順 5. Azure Rights Management サービスをアクティブにする](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)」に進む準備ができました。
+これで、手順 5. に進むことができ[ます。Azure Rights Management サービスをアクティブ化](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service)します。
 
 

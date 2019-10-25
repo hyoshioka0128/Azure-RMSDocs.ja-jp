@@ -3,7 +3,7 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c873af126c9882bcb74790e8e68834149738e8
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: e396296e896dad79deaf8caf3474e7297ccd2080
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447833"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805693"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -123,6 +123,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 |EnableCustomPermissions|[エクスプローラーでカスタムアクセス許可を無効にする](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|EnableLabelBySharePointProperties|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault デフォルト)|[Office アプリの Information Protection バーを表示します](##display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[情報の種類の一致を Azure Information Protection analytics に送信する](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -472,7 +473,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 ポップアップメッセージが特定のラベルに対して実行されている場合は、ドメイン名を使用して受信者の例外を構成できます。
 
 > [!TIP]
-> これらの設定を構成する方法のチュートリアルの例については、ビデオ[Azure Information Protection Outlook のポップアップ構成](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)を参照してください。
+> これらの設定を構成する方法のチュートリアルの例については、ビデオ[Azure Information Protection Outlook のポップアップ構成](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)を参照してください。
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>特定のラベルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
@@ -485,19 +486,19 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
     
     - キー: **OutlookWarnUntrustedCollaborationLabel**
     
-    - 値: @no__t 0 の**ラベル guid、コンマ区切り**>
+    - 値: \<**ラベル guid、コンマ区切り**>
 
 - 理由の入力メッセージ:
     
     - キー: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - 値: @no__t 0 の**ラベル guid、コンマ区切り**>
+    - 値: \<**ラベル guid、コンマ区切り**>
 
 - ブロック メッセージ:
     
     - キー: **OutlookBlockUntrustedCollaborationLabel**
     
-    - 値: @no__t 0 の**ラベル guid、コンマ区切り**>
+    - 値: \<**ラベル guid、コンマ区切り**>
 
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
@@ -655,7 +656,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-Azure Information Protection 統合されたラベル付けクライアントが Office アプリで使用されると、ドキュメントが最初に保存されたときに、その情報を検索します。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)詳細設定を**False**に設定していない場合、定義済みのカスタム (プレビュークライアントのみ) の機密情報の種類が検出され[Azure Information Protection analytics](../reports-aip.md)に送信されます。
+Azure Information Protection 統合されたラベル付けクライアントが Office アプリで使用されると、ドキュメントが最初に保存されたときに、その情報を検索します。 [Enableaudit](#disable-sending-audit-data-to-azure-information-protection-analytics)詳細設定を**False**に設定していない場合、定義済みのカスタムの機密情報の種類がすべて[Azure Information Protection analytics](../reports-aip.md)に送信されます。
 
 この動作を変更して、統一されたラベル付けクライアントによって検出された機密情報の種類が送信されないようにするには、選択したラベルポリシーに対して次の文字列を入力します。
 
@@ -793,6 +794,22 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
+### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>ラベルの移行ルールを SharePoint プロパティに拡張する
+
+ユーザーに列として公開される SharePoint プロパティで labelByCustomProperties の詳細設定を使用できます。
+
+この設定は、Word、Excel、PowerPoint を使用する場合にサポートされます。
+
+この詳細設定を構成するには、選択したラベルポリシーに対して次の文字列を入力します。
+
+- キー: **EnableLabelBySharePointProperties**
+
+- 値: **True**
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+
 ## <a name="apply-a-custom-property-when-a-label-is-applied"></a>ラベルが適用されたときにカスタムプロパティを適用する
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるラベルの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
@@ -889,6 +906,7 @@ Outlook でのみラベルを表示する場合は、 **outlook の電子メー�
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
+
 ## <a name="specify-a-color-for-the-label"></a>ラベルの色を指定します
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるラベルの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
@@ -931,6 +949,43 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 - **[ヘルプとフィードバック]** の **[設定のリセット]** オプションを使用すると、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 セキュリティセンター、また Microsoft 365 はから、現在ダウンロードされているラベルとポリシー設定をサインアウトしたり、削除したりできます。コンプライアンスセンター。
 
+
+## <a name="support-for-disconnected-computers"></a>切断されたコンピューターのサポート
+
+> [!IMPORTANT]
+> 切断されたコンピューターは、ファイルエクスプローラー、PowerShell、およびスキャナーのラベル付けのシナリオでのみサポートされます。 Office アプリでドキュメントにラベルを付けるには、インターネットに接続している必要があります。
+
+既定では、Azure Information Protection の統一されたラベル付けクライアントは、インターネットへの接続を自動的に試みて、ラベル付け管理センターからラベルとラベルポリシー設定をダウンロードします。 Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 security center、または Microsoft 365 コンプライアンスセンター。 一定期間インターネットに接続できないコンピューターがある場合は、統一されたラベル付けクライアントのポリシーを手動で管理するファイルをエクスポートしてコピーできます。
+
+マニュアル
+
+1. 切断されたコンピューターで使用するラベルおよびポリシー設定をダウンロードするために使用する Azure AD でユーザーアカウントを選択または作成します。
+
+2. このアカウントの追加のラベルポリシー設定として、 **enableaudit**詳細設定を使用して[Azure Information Protection analytics への監査データの送信を無効](#disable-sending-audit-data-to-azure-information-protection-analytics)にします。
+    
+    切断されたコンピューターがインターネットに接続している場合は、手順1のユーザー名を含む Azure Information Protection analytics にログ情報を送信するので、この手順をお勧めします。 このユーザーアカウントは、切断されたコンピューターで使用しているローカルアカウントとは異なる場合があります。
+
+3. 統一されたラベル付けクライアントがインストールされ、手順1のユーザーアカウントでサインインしているインターネット接続があるコンピューターから、ラベルとポリシー設定をダウンロードします。
+
+4. このコンピューターから、ログファイルをエクスポートします。
+    
+    たとえば、 [export-Aiの gs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)コマンドレットを実行するか、クライアントの [[ヘルプとフィードバック](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client)] ダイアログボックスの **[ログのエクスポート]** オプションを使用します。 
+    
+    ログファイルは、1つの圧縮ファイルとしてエクスポートされます。
+
+5.  圧縮ファイルを開き、MSIP フォルダーから、.xml ファイル名拡張子を持つファイルをコピーします。
+
+6. これらのファイルを、切断されたコンピューターの **%localappdata%\Microsoft\MSIP**フォルダーに貼り付けます。
+
+7. 選択したユーザーアカウントが通常インターネットに接続している場合は、 **enableaudit**値を**True**に設定して、監査データの送信を再度有効にします。
+
+8. 切断されたコンピューターがファイルを保護する、ファイルを再保護する、ファイルから保護を削除する、または保護されたファイルを検査するために、 *DelegatedUser*パラメーターを指定して[Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドレットを実行し、手順 1. でユーザーコンテキストを設定するユーザーアカウント。 たとえば、次のようになります。
+    
+        Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
+
+このコンピューターのユーザーが [[ヘルプとフィードバック](clientv2-admin-guide.md#help-and-feedback-section)] から **[設定のリセット]** オプションを選択した場合、この操作によってポリシーファイルが削除され、クライアントがファイルを手動で置き換えるか、クライアントがインターネットに接続するまでクライアントが動作しないことに注意してください。ファイルをダウンロードします。
+
+切断されたコンピューターが Azure Information Protection スキャナーを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開手順から[インターネットに接続できない](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
 
 ## <a name="change-the-local-logging-level"></a>ローカルのログ記録レベルを変更する
 

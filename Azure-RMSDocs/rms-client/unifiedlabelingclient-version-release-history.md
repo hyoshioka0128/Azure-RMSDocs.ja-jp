@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a9413cce67eda1cfb36e46ca199205faceafef73
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 7a41debe26783b530ec92dd38aa308b5e9da7546
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447915"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805271"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -47,21 +47,19 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「[クライアントを比較](use-client.md#compare-the-clients)する」を参照してください。
+このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md##compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="versions-later-than-22210"></a>2\.2.21.0 よりも後のバージョン
+## <a name="version-25330"></a>バージョン2.5.33.0
 
-2\.2.21.0 よりも後のバージョン2のクライアントがある場合は、テストと評価のためのプレビュービルドです。
-
-**リリース**日: 09/17/2019
+**リリース**日: 10/23/2019
 
 **新機能:**
 
-- [スキャナー](../deploy-aip-scanner.md)のサポートにより、オンプレミスのデータストアを検査してラベル付けすることができます。 このバージョンのスキャナーでは、次のことを行います。
+- [スキャナー](../deploy-aip-scanner.md)のプレビューバージョン。オンプレミスのデータストアを検査してラベル付けします。 このバージョンのスキャナーでは、次のことを行います。
     
     - 同じスキャナープロファイルを使用するようにスキャナーを構成するときに、複数のスキャナーが同じ SQL Server データベースを共有できます。 この構成により、複数のスキャナーの管理が容易になり、スキャン時間が短縮されます。 この構成を使用する場合は、スキャナーのインストールが完了するのを待ってから、同じプロファイルを使用して別のスキャナーをインストールします。
     
-    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースには、 **AIPScannerUL_ @ no__t-1profile_name >** という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
+    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースには、 **AIPScannerUL_\<profile_name >** という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
     
     - ドキュメントにラベルが既に付いている場合でも、すべてのドキュメントに既定のラベルを設定できます。 スキャナープロファイルまたはリポジトリの設定で、[ラベルの再設定 **] オプションを** **[オン**] に設定し、新しい [既定の**ラベルを強制**する] チェックボックスをオンにします。
     
@@ -74,13 +72,17 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     
     - 既知の問題: 新しいラベルと名前が変更されたラベルは、スキャナープロファイルまたはリポジトリの設定の既定のラベルとして選択できません。 法
         - 新しいラベルの場合: Azure portal で、グローバルポリシーまたはスコープポリシーに使用する[ラベルを追加](../configure-policy-add-remove-label.md)します。
-        - 名前を変更したラベルの場合: Azure portal で、 **Azure Information Protection** >  **統合**されたラベルの @no__t**管理** を選択し、**発行** を選択します。
+        - 名前を変更したラベルの場合: Azure portal で、 **Azure Information Protection** >  > の**統合ラベル**の**管理** をクリックし、**発行** を選択します。
     
     Azure Information Protection クライアント (クラシック) からスキャナーをアップグレードすることができます。 アップグレード後に新しいデータベースが作成されると、スキャナーは初回実行時にすべてのファイルを再スキャンします。 手順については、管理者ガイドの「 [Azure Information Protection スキャナーをアップグレードする](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。
     
     詳細については、ブログ投稿のお知らせを参照してください。統合された[ラベル付け AIP スキャナーのプレビューにより、スケールアウトなど](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)ができます。
 
-- PowerShell コマンドレットの[セット-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)は、[ファイルに非対話形式でラベル](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)を付ける場合の新しいパラメーターと、 [Azure AD にアプリを登録する新しい手順](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client)を備えています。 シナリオ例としては、スキャナーや、ドキュメントにラベルを付けるための自動 PowerShell スクリプトがあります。
+- PowerShell コマンドレットの[セット-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)には、ファイルに非対話的にラベルを付ける場合の新しいパラメーター (*AppId*、 *appsecret*、 *TenantId*、 *DelegatedUser*、 *OnBehalfOf*) があります。Azure AD にアプリを登録する手順。 シナリオ例としては、スキャナーや、ドキュメントにラベルを付けるための自動 PowerShell スクリプトがあります。 手順については、管理者ガイドの「[非対話形式でファイルにラベルを付ける方法](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
+    
+    *DelegatedUser*は、統合されたラベル付けクライアントの最後のプレビューバージョン以降の新しいパラメーターであり、登録済みアプリの API アクセス許可が変更されたことに注意してください。
+
+- 新しい PowerShell ラベルポリシーの詳細設定を[使用して、ラベルの移行ルールを SharePoint プロパティに拡張](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties)します。
 
 - 一致したカスタム機密情報の種類が[Azure Information Protection analytics](../reports-aip.md)に送信されます。
 
@@ -88,16 +90,29 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 - ラベルに保護設定を追加または変更すると、クライアントは、ドキュメントが次に保存されるときに、これらの最新の保護設定でラベルを再適用します。 同様に、スキャナーは、強制モードでドキュメントが次回スキャンされるときに、これらの最新の保護設定でラベルを再適用します。
 
+- 1つのクライアントからファイルをエクスポートし、切断されたコンピューターに手動でコピーすることによって、切断された[コンピューターをサポート](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)します。 この構成は、ファイルエクスプローラー、PowerShell、およびスキャナーを使用したラベル付けでサポートされていることに注意してください。 この構成は、Office アプリのラベル付けではサポートされていません。
+
 - %Localappdata%\Microsoft\MSIP\Logs からすべてのログファイルを収集し、.zip 形式の1つの圧縮されたファイルに保存する新しいコマンドレットである[Export](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)。 このファイルは、報告された問題の調査に役立つログファイルを送信するように要求された場合に Microsoft サポートに送信できます。
 
 **関する**
 
 - ファイルエクスプローラーを使用して保護されたファイルを正常に変更できます。ファイルのパスワードが削除されたら、右クリックします。
 
+- ネイティブ保護されたファイルをビューアーで正常に開くには、[名前を付けて保存]、[エクスポート (エクスポート) [] の使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)を必要としません。
+
+- ラベルとポリシー設定は[、クリア-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?)を実行しなくても期待どおりに更新されます。または、%LocalAppData%\Microsoft\MSIP\mip フォルダーを手動で削除します。
+
+**その他の変更**
+
+- [設定をリセット](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)すると、%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>* /mip ではなく、%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>* フォルダーが削除されるようになりました。フォルダー.
+
+- [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)に、保護されたドキュメントのコンテンツ ID が含まれるようになりました。
 
 ## <a name="version-22210"></a>バージョン2.2.21.0
 
-**リリース**日: 09/03/2019
+**リリース**日: 09/03/2020
+
+04/23/2020 でサポート
 
 **関する**
 
@@ -219,7 +234,7 @@ Windows 用の Azure Information Protection 統合ラベルクライアントの
 
 ## <a name="next-steps"></a>次のステップ
 
-完全な詳細については、[比較表](use-client.md#compare-the-clients)をご覧ください。
+完全な詳細については、[比較表](use-client.md#compare-the-labeling-clients-for-windows-computers)をご覧ください。
 
 このクライアントをインストールして使用する方法の詳細については、次を参照してください。 
 

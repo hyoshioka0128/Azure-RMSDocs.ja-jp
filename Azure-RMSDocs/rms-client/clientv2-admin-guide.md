@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4fb1c9ca3800e46ffcf3b8946823e4c43ca9d284
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 1c7458e1e936b464e8f4666911c3f23fb96dd3fe
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447613"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805289"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -52,7 +52,7 @@ Azure Information Protection の統合ラベル付けクライアントには、
 
 - ファイル内の機密情報を検出し、ファイルの分類ラベルと保護を適用または削除する PowerShell モジュール。 
     
-    クライアントのプレビューバージョンには、Windows Server 上でサービスとして実行される[Azure Information Protection スキャナー](../deploy-aip-scanner.md)をインストールして構成するためのコマンドレットが含まれています。 このサービスでは、ネットワーク共有や SharePoint サーバーライブラリなどのデータストア上のファイルを検出、分類、保護できます。
+    クライアントには、Windows Server 上でサービスとして実行される[Azure Information Protection スキャナー](../deploy-aip-scanner.md)のプレビューバージョンをインストールして構成するためのコマンドレットが含まれています。 このサービスでは、ネットワーク共有や SharePoint サーバーライブラリなどのデータストア上のファイルを検出、分類、保護できます。
 
 - 保護サービス (Azure Rights Management) と通信してファイルを暗号化および保護する Rights Management クライアント。
 
@@ -99,7 +99,7 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 **[問題の報告]** リンクは、[詳細設定](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)を指定した場合にのみ表示されます。 この設定を構成するときに、ヘルプ デスクの電子メール アドレスなどの HTTP リンクを指定します。 
 
-これらを Microsoft サポートに送信するように求められた場合は、**エクスポートログ**によって、Azure Information Protection 統合されたラベル付けクライアントのログファイルが自動的に収集され、アタッチされます。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。 または、 [Export-aiの gs](/powershell/module/azureinformationprotection/export-aiplogs) PowerShell コマンドレット (プレビュークライアントが必要) を使用することもできます。
+これらを Microsoft サポートに送信するように求められた場合は、**エクスポートログ**によって、Azure Information Protection 統合されたラベル付けクライアントのログファイルが自動的に収集され、アタッチされます。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。 または、 [Export-Aiの gs](/powershell/module/azureinformationprotection/export-aiplogs) PowerShell コマンドレットを使用することもできます。
 
 **リセット設定**では、ユーザーをサインアウトし、現在ダウンロードされている機密ラベルとラベルポリシーを削除して、Azure Rights Management サービスのユーザー設定をリセットします。
 
@@ -116,7 +116,7 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\mip @ no__t-0 *\<processname @ no__t-3*\ mip
+    - %LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>*
     
     - %LocalAppData%\Microsoft\MSIP\AppDetails
     
@@ -164,11 +164,11 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのインストール
 
-統一されたラベル付けクライアント用の現在のバージョンのスキャナーは、テストのためにプレビュー段階にあります。 このプレビューでは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統一されたラベル付けクライアントの現在のプレビューバージョンをインストールします。
+統一されたラベル付けクライアント用のスキャナーは、テストのためにプレビュー段階にあります。 このプレビューでは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統一されたラベル付けクライアントの現在の一般公開バージョンをインストールします。
 
 コンピューターに初めてスキャナーをインストールする場合は、このクライアントをダウンロードしてインストールし、「Azure Information Protection スキャナーの展開」の手順に従って、[ファイルを自動的に分類して保護](../deploy-aip-scanner.md)します。
 
-スキャナーを Azure Information Protection クライアント (クラシック) からアップグレードする場合は、 [Azure Information Protection スキャナーのアップグレード](#upgrading-the-azure-information-protection-scanner)に関するセクションを参照してください。
+スキャナーを Azure Information Protection クライアント (クラシック) または以前のバージョンの統一されたラベル付けクライアントからアップグレードする場合は、 [Azure Information Protection スキャナーのアップグレード](#upgrading-the-azure-information-protection-scanner)に関するセクションを参照してください。
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントのアップグレードと保守
 
@@ -179,7 +179,7 @@ Azure Information Protection チームは、新しい機能と修正を行うた
 
 Windows Update を使用している場合は、クライアントのインストール方法に関係なく、Azure Information Protection の統一されたラベル付けクライアントがこのクライアントの一般公開バージョンを自動的にアップグレードします。 新しいクライアントのリリースは、リリースの数週間後にカタログに公開されます。
 
-または、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から新しいリリースをダウンロードして、クライアントを手動でアップグレードすることもできます。 ダウンロードしたら、新しいバージョンをインストールして、クライアントをアップグレードします。 Azure Information Protection クライアントからアップグレードする場合は、この方法を使用してプレビューバージョンをアップグレードする必要があります。
+または、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から新しいリリースをダウンロードして、クライアントを手動でアップグレードすることもできます。 ダウンロードしたら、新しいバージョンをインストールして、クライアントをアップグレードします。 Azure Information Protection クライアント (クラシック) からアップグレードする場合は、この方法を使用してプレビューバージョンをアップグレードする必要があります。
 
 Windows 7 の Azure Information Protection クライアント (クラシック) からアップグレードする場合、クライアントのアップグレード中に、すべての Office アプリケーションが自動的に再起動されます。 この自動再起動は、それ以降のオペレーティングシステムには適用されません。また、以前のバージョンの統一されたラベル付けクライアントからアップグレードする場合にも当てはまりません。
 
@@ -189,29 +189,43 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーのアップグレード
 
+スキャナーをアップグレードする手順は、以前のバージョンのスキャナーから Azure Information Protection 統合されたラベル付けクライアントからアップグレードするか、Azure Information Protection クライアント (クラシック) からアップグレードするかによって異なります。
+
+#### <a name="to-upgrade-the-scanner-from-an-earlier-version-of-the-unified-labeling-client"></a>以前のバージョンの統合ラベル付けクライアントからスキャナーをアップグレードするには
+
+1. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
+
+2.  [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統一されたラベル付けクライアントの最新バージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントをアップグレードします。
+
+3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば次のようになります。`Update-AIPScanner –Profile Europe`
+
+4. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
+
+これで、「Azure Information Protection スキャナーの展開」に記載されている残りの手順を使用して、[ファイルを自動的に分類して保護](../deploy-aip-scanner.md)し、スキャナーをインストールする手順を省略できます。 スキャナーは既にインストールされているので、再インストールする必要はありません。
+
+#### <a name="to-upgrade-the-scanner-from-the-classic-client"></a>クラシッククライアントからスキャナーをアップグレードするには
+
 現在、Azure Information Protection クライアント (クラシック) の Azure Information Protection スキャナーを使用している場合は、Office 365 セキュリティから発行された機密情報の種類と機密ラベルを使用するようにアップグレードすることができ &コンプライアンスセンター (または Microsoft 365 security center または Microsoft 365 コンプライアンスセンター)。
 
-#### <a name="to-upgrade-the-scanner-to-the-preview-version"></a>スキャナーをプレビューバージョンにアップグレードするには
-
-スキャナーをアップグレードする方法は、現在実行している Azure Information Protection クライアント (クラシック) のバージョンによって異なります。
+スキャナーをアップグレードする方法は、現在実行している従来のクライアントのバージョンによって異なります。
 
 - [バージョン1.48.204.0 以降のバージョンからのアップグレード](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
 
 - [1.48.204.0 より前のバージョンからのアップグレード](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-Azure Information Protection クライアント (クラシック) のスキャナーとは異なり、統合クライアント用のこのプレビューバージョンのスキャナーは、接続されていないコンピューターでの実行をサポートしていません。
-
-このアップグレードでは、 **AIPScannerUL_ @ no__t-1profile_name >** という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、以前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
+このアップグレードでは、 **AIPScannerUL_\<profile_name >** という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>このクライアントの Azure Information Protection クライアント (クラシック) バージョン1.48.204.0 以降のバージョンからのアップグレード
 
+統合ラベル付けクライアントのプレビューバージョンを使用してスキャナーをアップグレードした場合は、これらの手順を再度実行する必要はありません。
+
 1. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
 
-2. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統合されたラベル付けクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントにアップグレードします。
+2. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統一されたラベル付けクライアントをダウンロードしてインストールし、Azure Information Protection の統合ラベル付けクライアントにアップグレードします。
 
 3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、 `Update-AIPScanner –Profile Europe`と指定します。
     
-    この手順では、 **AIPScannerUL_ @ no__t-1profile_name**という名前の新しいデータベースを作成し >
+    この手順では、 **AIPScannerUL_\<profile_name**という名前の新しいデータベースを作成 >
 
 4. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
 
@@ -228,7 +242,7 @@ Azure Information Protection クライアント (クラシック) のスキャ�
 
 2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
 
-3. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統合されたラベル付けクライアントのプレビューバージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントにアップグレードします。
+3. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から、統一されたラベル付けクライアントをダウンロードしてインストールし、Azure Information Protection の統合ラベル付けクライアントにアップグレードします。
 
 4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 たとえば次のようになります。`Update-AIPScanner –Profile Europe`
 

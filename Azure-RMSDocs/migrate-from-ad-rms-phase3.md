@@ -14,15 +14,15 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684561"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 AD RMS から Azure Information Protection への移行フェーズ 3 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 7 を説明します。
 
@@ -62,9 +62,9 @@ Windows クライアントを再構成する方法の詳細については、次
     
     |フィールド|値|  
     |-----------|-----------|  
-    |**[ドメイン]**|_tcp.rmscluster.contoso.com|  
+    |**ドメイン**|_tcp.rmscluster.contoso.com|  
     |**サービス**|_rmsredir|  
-    |**[プロトコル]**|_http|  
+    |**プロトコール**|_http|  
     |**優先度**|0|  
     |**重み**|0|  
     |**ポート番号**|80|  
@@ -72,7 +72,7 @@ Windows クライアントを再構成する方法の詳細については、次
 
 2. Office 365 アプリまたは Office 2016 (またはそれ以降) を実行しているユーザーに対し、AD RMS の発行エンドポイントで拒否のアクセス許可を設定します。
 
-    a. クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
+    に設定する必要があります。 クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
 
     b. **既定の Web サイト** >  **_wmcs** > **licensing** > **licensing.asmx** に移動します。
 
@@ -107,7 +107,7 @@ Windows クライアントを再構成する方法の詳細については、次
 
 - ユーザーがローカルの管理者特権を持つ場合は、ログオン スクリプトを使用します。
 
-ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 以下に例を示します。
+ユーザー構成スクリプト (Migrate-User.cmd) は、ユーザー レベルの設定を構成し、クライアントのライセンス ストアをクリーンアップします。 つまり、このスクリプトは、実際のユーザーのコンテキストで実行する必要があります。 たとえば、次のようになります。
 
 - ログオン スクリプトを使用します。
 
@@ -129,16 +129,16 @@ Windows クライアントを再構成する方法の詳細については、次
 
 1. 移行スクリプト **Migrate-Client.cmd** および **Migrate-User.cmd** に戻ります。[準備段階](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration) でこれらのスクリプトをダウンロードしたときに抽出済みです。
 
-2. **MigrateClient.cmd** の指示に従ってスクリプトを修正し、テナントの Azure Rights Management サービスの URL と、AD RMS クラスターのエクストラネット ライセンス URL およびイントラネット ライセンス URL のサーバー名を追加します。 次に、前述したスクリプトのバージョンをインクリメントします。 スクリプトのバージョンを追跡するには、今日の日付を次の形式で表現することをお勧めします: YYYYMMDD
+2. **MigrateClient.cmd** の指示に従ってスクリプトを修正し、テナントの Azure Rights Management サービスの URL と、AD RMS クラスターのエクストラネット ライセンス URL およびイントラネット ライセンス URL のサーバー名を追加します。 次に、前述したスクリプトのバージョンをインクリメントします。 スクリプトのバージョンを追跡するには、今日の日付を YYYYMMDD 形式で表現することをお勧めします。
     
    > [!IMPORTANT]
    > 前と同様に、アドレスの前後に余分なスペースが挿入されないように注意してください。
    > 
-   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、「 https://rms.treyresearch.net:443/_wmcs/licensing 」のように入力します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、 **[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、 https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
+   > さらに、AD RMS サーバーが SSL/TLS サーバー証明書を使用している場合は、ライセンス URL の文字列にポート番号 **443** が含まれることを確認します。 たとえば、 https://rms.treyresearch.net:443/_wmcs/licensing と指定します。 この情報は、Active Directory Rights Management サービス コンソールでクラスター名をクリックして、 **[クラスターの詳細]** で確認できます。 ポート番号 443 が URL に含まれる場合は、スクリプトを変更するときにこの値を含めます。 たとえば、 https://rms.treyresearch.net:<strong>443</strong> のように指定します。 
     
    *&lt;YourTenantURL&gt;* の Azure Rights Management サービス URL を取得する必要がある場合は、前の「[Azure Rights Management サービス URL を識別するには](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url)」をご覧ください。
 
 3. この手順の先頭に示した説明に従って、AIPMigrated グループのメンバーによって使用されている Windows クライアント コンピューター上で **Migrate-Client.cmd** および **Migrate-User.cmd** を実行するようにスクリプト デプロイ方法を構成します。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 移行を続行するには、「[移行フェーズ 4 - サービス構成のサポート](migrate-from-ad-rms-phase4.md)」に進んでください。

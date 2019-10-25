@@ -12,17 +12,17 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 78d136db7e35b1fb263d5bcd6ff64376c43cf315
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71683807"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Azure Information Protection の新しいラベルを作成する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection にはカスタマイズできる既定のラベルが付属していますが、独自のラベルを作成することもできます。
 
@@ -38,7 +38,7 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
 
 2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、次のいずれかのアクションを実行します。
     
-    - 新しいラベルを作成するには: **[新しいラベルの追加]** をクリックします。
+    - 新しいラベルを作成するには: **[Add a new label]** (新しいラベルの追加) をクリックします。
     
     - 新しいサブラベルを作成するには: サブラベルを作成するラベルを右クリックするかコンテキスト メニュー ( **...** ) をクリックし、 **[サブラベルの追加]** をクリックします。
 
@@ -46,9 +46,9 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
     
     表示名を指定する際、一部の文字 (円記号やアンパサンドなど) は使用できません。Azure Information Protection を使用するすべてのサービスとアプリケーションで、これらの文字をサポートできるとは限らないためです。 ブロックされる文字に加えて、 **#** 文字も指定しないでください。    
     
-    新しいラベルには自動的に黒色が割り当てられます。 識別のための色を一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力します。 たとえば、 **#DAA520** と入力します。 これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \<色の >](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。画像編集できるさまざまなアプリケーションでもコードを参照できます。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+    新しいラベルには自動的に黒色が割り当てられます。 識別のための色を一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力します。 たとえば、 **#DAA520** と入力します。 これらのコードの参照が必要な場合は、MSDN web ドキュメントの[\< 色 >](https://developer.mozilla.org/docs/Web/CSS/color_value)のページにある便利な表を参照してください。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-4. 新しいラベルをユーザーが利用できるようにするには: **[分類]**  >  **[ポリシー]** メニュー オプションから、新しいラベルを含むポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードからラベルを選択し、 **[OK]** 、 **[保存]** の順に選択します。
+4. 新しいラベルをユーザーが利用できるようにするには、 **[分類]**  >  **[ポリシー]** メニュー オプションから、新しいラベルを含むポリシーを選択します。 **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードからラベルを選択し、 **[OK]** 、 **[保存]** の順に選択します。
     
     >[!TIP]
     >新しいラベルについては、まず、テストに使用するスコープ ポリシーに追加することを検討してください。 結果に満足したら、このテスト スコープからラベルを削除し、運用環境で使用するポリシーにラベルを追加します。     
@@ -57,9 +57,9 @@ Azure Information Protection ポリシーに追加できる新しいラベルを
     
     変更内容はユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
-5. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには: [異なる言語のラベルを構成する方法](configure-policy-languages.md)のページにある手順に従ってください。 
+5. この新しいラベル名と説明をユーザーが他の言語で見られるようにするには、[異なる言語のラベルを構成する方法](configure-policy-languages.md)に関する記事の手順に従ってください。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

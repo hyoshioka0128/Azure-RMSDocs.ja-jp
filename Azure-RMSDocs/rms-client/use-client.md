@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0bdbceef280310223483df80fda2cc5c09cd4f26
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 7076f761a08db66b6f9caeb08bac3b6b66169a54
+ms.sourcegitcommit: 4c72e9549fda4e4324e9b07480d3c200aa867770
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447892"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72814656"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -25,28 +25,44 @@ ms.locfileid: "72447892"
 
 Azure Information Protection は、組織の文書や電子メールを保護するクライアント/サーバー型のソリューションです。
 
-- クライアントには、Azure Information Protection クライアント (クラシック)、Azure Information Protection 統合されたラベル付けクライアント、または Rights Management クライアントを使用できます。 どちらのクライアントを使用しても、コンピューターやモバイルデバイスで実行するアプリケーションと統合されます。 
-- サービスは、クラウド (データの保護用に Azure Rights Management サービスを使用する Azure Information Protection)、またはオンプレミス (Active Directory Rights Management サービス、より一般的には AD RMS) にあります。 
+- クライアントには、Office 用の組み込みのラベル付けクライアント、Windows 用の Azure Information Protection 統合ラベルクライアント、Windows 用 Azure Information Protection クライアント (クラシック)、または Rights Management クライアントを使用できます。
+    
+    これらのクライアントは、多くの場合、 **Office 組み込みラベルクライアント**、統一された**ラベル付けクライアント**、**従来のクライアント**、および**RMS クライアント**と呼ばれます。 どちらのクライアントを使用するかは、コンピューターやモバイルデバイスで実行するアプリケーションと統合されます。
 
-Azure Information Protection クライアント (クラシック) と Azure Information Protection の統一されたラベル付けクライアントは、ラベル付きの分類と保護をサポートします。 クラシッククライアントは、ラベル付けを行わずに保護もサポートします。 両方のクライアントが Office アプリケーションと統合されているため、個別にインストールする必要があります。
+- このサービスはクラウドまたはオンプレミスに存在します。 クラウドサービスは Azure Information Protection であり、データ保護に Azure Rights Management サービスを使用します。 オンプレミスのサービスは Active Directory Rights Management サービスであり、より一般的に AD RMS と呼ばれています。 
 
-Rights Management (RMS) クライアントは、Office アプリケーション、Azure Information Protection クライアント (クラシック)、Azure Information Protection の統一されたラベル付けクライアント、RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。ソフトウェアベンダーから。 ただし、[IRM で保護されたライブラリと OneDrive for Business のファイルの同期](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)をサポートするため、および Rights Management の保護を基幹業務アプリケーションに統合したい開発者向けに、これを[単体でインストールする](https://www.microsoft.com/en-us/download/details.aspx?id=38396)ことも可能です。
+これらのクライアントはすべて Office アプリケーションと統合されますが、統一されたラベル付けクライアントとクラシッククライアントは個別にインストールし、追加の機能とコンポーネントをサポートする必要があります。 たとえば、これらのクライアントにはエクスプローラーのサポートが含まれているので、Office 以外でファイルを分類して保護することができます。 追加のコンポーネントには、保護された PDF ドキュメントと保護されたイメージのビューアー、およびオンプレミスのデータストアのスキャナーが含まれます。
 
-## <a name="choose-which-azure-information-protection-client-to-use"></a>使用する Azure Information Protection クライアントを選択する
+RMS クライアントは保護のみを提供します。 このクライアントは、Office アプリケーション、Azure Information Protection クライアント、ソフトウェアベンダーからの RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、[IRM で保護されたライブラリと OneDrive for Business のファイルの同期](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)をサポートするため、および Rights Management の保護を基幹業務アプリケーションに統合したい開発者向けに、これを[単体でインストールする](https://www.microsoft.com/en-us/download/details.aspx?id=38396)ことも可能です。
 
-**Azure Information Protection クライアント (クラシック)** は、Azure portal からラベルとポリシー設定をダウンロードします。 このクライアントの詳細については、 [Azure Information Protection クライアント: バージョンリリース履歴とサポートポリシー](client-version-release-history.md)」を参照してください。
+## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Windows コンピューターに使用するラベル付けクライアントを選択する
 
-Azure Information Protection の統一されたラベル**付けクライアント**は、管理センター (Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、および Microsoft 365 コンプライアンスセンター) からラベルとポリシー設定をダウンロードします。 このクライアントの詳細については、 [Azure Information Protection 統合ラベル付けクライアント: バージョンリリース情報](unifiedlabelingclient-version-release-history.md)」を参照してください。 
+可能な場合は、ラベル付けクライアントのいずれかを使用します。ラベルはユーザーの保護の適用の複雑さを抽象化し、ラベルも分類を提供してデータの追跡と管理を行うことができるためです。
 
-どのクライアントをインストールすべきでしょうか?
+Windows コンピューターのクライアントにラベルを付ける方法は、使用する管理ポータルの影響を受ける可能性があります。
 
-- Azure Information Protection 統合されたラベル付けクライアントをインストールして、MacOS、iOS、および Android でも使用できるラベルを作成します。また、まだサポートされていない機能が必要ない場合はインストールします。 これらの機能には、オンプレミスのキー (HYOK) でコンテンツを保護し、オンプレミスのデータストア用のスキャナーの一般公開バージョンを保護する機能が含まれます。
+- Office に組み込まれているラベル付けクライアントと Azure Information Protection は、次の管理センターのラベルとポリシー設定をクライアントにダウンロードします。 
+    - Office 365 セキュリティ/コンプライアンスセンター
+    - Microsoft 365 security center
+    - Microsoft 365 コンプライアンスセンター
 
-- 統一されたラベル付けクライアントでまだ使用できない機能を持つクライアントのバージョンが必要な場合は、Azure Information Protection クライアント (クラシック) をインストールします。 トレードオフとは、他のクライアントプラットフォームや別の管理ポータルを使用した管理でラベルを使用できないことです。
+- Azure Information Protection クライアント (クラシック) は、Azure portal からラベルとポリシー設定をダウンロードします。
 
-統一されたラベル付けクライアントの最新の一般公開バージョンでは、従来のクライアントとの機能のパリティを閉じることができます。 このギャップが閉じられると、新しい機能は、統合されたラベル付けクライアントにのみ追加されることを期待できます。 このため、現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントを展開することをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](../configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
+統一されたラベル付けクライアントと従来のクライアントは Office に個別にインストールする必要があるため、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からこれらのクライアントをダウンロードしてインストールする必要があります。 
 
-次の例に示すように、両方のクライアントを同じ環境にインストールし、さまざまなビジネス要件をサポートすることもできます。 このシナリオでは、管理を容易にするために、両方のクライアントセットが同じラベルのセットを共有するように、Azure portal のラベルを移行することをお勧めします。
+どのクライアントを使用する必要がありますか。
+
+- Windows コンピューターの**office に組み込ま**れているラベル付けクライアントを使用する office 365 アプリが最小バージョン1910の場合、MacOS、iOS、および Android でも使用できるのと同じラベルとポリシー設定を使用する必要があります。また、の機能は必要ありません。 統一されたラベル付けクライアントまたは従来のクライアントを必要とする Office アプリ。 現在、これらの機能には、ラベルの選択と表示を容易にするために、自動と推奨のラベル、およびリボンの下にある Information Protection バーが含まれています。 このクライアントは、アカウントの切り替えをサポートしています。また、Office アドインを使用していないため、Azure Information Protection クライアントのどちらを使用しても Office アプリのパフォーマンスが向上します。
+
+- MacOS、iOS、および Android で使用できるラベルとポリシー設定については、Windows コンピューター上の Azure Information Protection のラベル**付けクライアント**を使用します。これは、Office 365 アプリとは別にファイルにラベルを付けることができます。また、これらの機能は必要ありません。は、クラシッククライアントでのみサポートされています。 現在、これらの機能には、オンプレミスのキー (HYOK) を使用したコンテンツの保護と、オンプレミスのデータストア用の一般公開バージョンのスキャナーが含まれています。
+
+- 統一されたラベル付けクライアントでまだ使用できない機能を持つクライアントのバージョンが必要な場合は、Windows コンピューターに**Azure Information Protection クライアント (クラシック)** をインストールします。 このクライアントでは、MacOS、iOS、および Android で使用されるものと同じラベルを使用できますが、ポリシー設定は異なります。 そのため、別の管理ポータルを使用した管理と、ユーザーに対する別のユーザーエクスペリエンスが可能になります。
+
+最新バージョンのラベル付けクライアントでは、従来のクライアントを使用して機能のパリティを閉じることができます。 このギャップが閉じられると、新しい機能は、統合されたラベル付けクライアントにのみ追加されることを期待できます。 このため、現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントを展開することをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](../configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
+
+次の展開例に示すように、同じ環境で異なるクライアントを使用して、さまざまなビジネス要件をサポートできます。 混合クライアント環境では、管理を容易にするためにクライアントが同じラベルのセットを共有できるように、統一されたラベルを使用することをお勧めします。 新しい顧客は、テナントが統一されたラベル付けプラットフォーム上にあるため、既定では統合ラベルを持ちます。 詳細については、「[テナントが統一されたラベル付けプラットフォームにあるかどうかを確認する方法](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)」を参照してください。
+
+Office 365 アプリを実行している Windows コンピューターに最小バージョン1910がインストールされており、いずれかの Azure Information Protection クライアントがインストールされている場合、既定では、組み込みのラベル付けクライアントは Office アプリで無効になっています。 ただし、この動作を変更して、Office アプリ専用のラベル付けクライアントを使用することができます。 この構成では、Azure Information Protection クライアント (クラシックまたは統合されたラベル付け) は、ファイルエクスプローラー、PowerShell、およびスキャナーでラベル付けできます。 Office 365 アプリで Azure Information Protection クライアントを無効にする手順については、「office ドキュメント」の「 [office の Azure Information Protection クライアントと共に機密ラベルを実行](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#can-sensitivity-labels-run-alongside-the-azure-information-protection-client-in-office-for-windows)する」を参照してください。
 
 ##### <a name="example-deployment-strategy"></a>展開方法の例:
 
@@ -54,7 +70,7 @@ Azure Information Protection の統一されたラベル**付けクライアン�
     
     これらのユーザーには、Windows、Mac、iOS、および Android に共通のラベルが発行されており、同じポリシー設定が発行されているため、ラベル付けのエクスペリエンスが非常によく似ています。 管理者は、これらのラベルとポリシー設定を同じ管理センターで管理します。
 
-- また、自分用に統一されたラベル付けクライアントをインストールし、Azure Information Protection スキャナーと新しいクライアント機能のプレビューバージョンをテストします。
+- また、自分用に統一されたラベル付けクライアントをインストールし、Azure Information Protection スキャナーのプレビューバージョンをテストします。
 
 - ユーザーのサブセットでは、従来のクライアントを展開します。これらのユーザーには、独自のキーの保持 (HYOK) 保護を適用するラベルが必要なためです。
     
@@ -62,49 +78,81 @@ Azure Information Protection の統一されたラベル**付けクライアン�
 
 - 機密情報のスキャンや分類、保護が必要なドキュメントを含むオンプレミスのデータストアがある。 実稼働環境で使用する場合は、クラシッククライアントをサーバーに展開して Azure Information Protection スキャナーを実行します。
 
-### <a name="compare-the-clients"></a>クライアントの比較
 
-次の表を使用して、2つの Azure Information Protection クライアントでサポートされている機能を比較してください。
 
-|機能|従来のクライアント|統一されたラベル付けクライアント|
-|-------|-----------------------------------|----------------------------------------------------|
-|ラベル付け操作: 手動、推奨、自動| [はい] | [はい] |
-|中央レポート機能 (分析):| [はい] | はい (制限あり):<br /><br /> -カスタム機微な情報の種類は、プレビューバージョンでサポートされています |
-|保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| [はい] | [はい] |
-|ラベルの多言語サポート:| [はい] | [はい] |
-|メールの添付ファイルからのラベル継承:| [はい] | [はい]  |
-|次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| [はい] <br /><br /> [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。| [はい] <br /><br /> [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされます。 |
-|ユーザー定義のアクセス許可:| [はい] | [はい] |
-|オンプレミスのデータ ストア用のスキャナー:| [はい] | はい-プレビューバージョン |
-|カスタム アクセス許可:| [はい] | エクスプローラーと PowerShell <br /><br /> Office アプリでは、別の方法として、ユーザーは**ファイル情報**@no__t 選択できます。-1**保護ドキュメント** > **アクセスを制限**するまたは管理者は、ユーザー定義のアクセス許可のラベルを構成できます。|
-|Office アプリの Information Protection バー:| [はい] | はい (制限あり):<br /><br /> - タイトルもカスタマイズ可能なヒントもありません<br /><br /> -プレビューバージョンを使用しない限り、適用されたラベルのラベルの色は表示されません|
-|ラベルでは視覚的なマーキング (ヘッダー、フッター、透かし) を適用できます。| [はい] | はい (制限あり):<br /><br /> ヘッダーとフッターでは、動的な値の変数はサポートされていません <br /><br /> Word、Excel、PowerPoint、Outlook で異なる視覚的なマーキングを使うためのサポートはありません|
-|エクスプローラー、右クリック アクション:| [はい] | はい (制限あり):<br /><br /> -以前の ppdf 形式の PDF ドキュメントを保護できません <br /><br />  - 保護のみモードはサポートされません|
-|PowerShell コマンド:| [はい] | はい (制限あり):<br /><br />-コンテナーファイル (zip、rar、7z、.msg、および .pst) から保護を削除することはできません|
-|保護アクションに対するオフライン サポート:| [はい] | はい (制限あり): <br /><br />- エクスプローラーおよび PowerShell コマンドについては、ファイルを保護するためにユーザーがインターネットに接続している必要があります。 |
-|オフラインのコンピュータに対するポリシー ファイルを使用した手動での管理:| [はい] |[いいえ] |
-|HYOK のサポート:| [はい] | [いいえ] <br /><br /> Azure portal から移行する HYOK 保護用に構成されたラベルは、Azure Information Protection 統合ラベル付けクライアントにより表示されますが、保護は適用されません。 |
-|イベント ビューアーに対する使用状況ログの記録:| [はい] | [いいえ]|
-|Outlook の [転送不可] ボタンを表示する| [はい] | [いいえ] |
-|追跡と取り消し:| [はい] | [いいえ] |
-|テンプレートを使用した保護専用モード (ラベルなし):| [はい] | [いいえ] |
-|AD RMS のサポート:| [はい] | 次のアクションのみがサポートされます。<br /><br /> - [Active Directory Rights Management サービスのモバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))をデプロイすると、保護されたドキュメントをビューアーで開くことができます|
 
-#### <a name="detailed-comparisons-for-the-clients"></a>クライアントの詳細な比較
+## <a name="compare-the-labeling-clients-for-windows-computers"></a>Windows コンピューターのラベル付けクライアントを比較する
 
-両方のクライアントが同じ機能をサポートしている場合は、次の表を使用して、2つのクライアントの機能上の相違点を特定してください。
+次の表を使用して、Windows コンピューターの3つのラベル付けクライアントでサポートされている機能を比較してください。
+
+さまざまなオペレーティングシステムプラットフォーム (Windows、MacOS、iOS、Android) で Office に組み込まれている機密情報のラベル付け機能を比較するには、office のドキュメント「[今日ではどのような機密ラベル機能がサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)されていますか?」を参照してください。
+
+|機能|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベルクライアント|
+|:------|:------------:|:---------------------:|:-----------------------------:|
+|手動によるラベル付け:| **はい** | **はい** |**はい** |
+|既定のラベル:| **はい** | **はい** | **はい** |
+|推奨または自動ラベル付け:| **はい** | **はい** | [いいえ] |
+|必須ラベル:| **はい** | **はい** | [いいえ] |
+|ラベルに対するユーザー定義のアクセス許可:<br />-メールの転送不可<br />-Word、Excel、PowerPoint、エクスプローラーのカスタムアクセス許可| **はい** | **はい** | [いいえ] |
+|ラベルの多言語サポート:| **はい** | **はい** |**はい** |
+|メールの添付ファイルからのラベル継承:| **はい** | **はい**  |[いいえ] |
+|次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| **はい** <sup>1</sup> | **はい** <sup>2</sup> | [いいえ] |
+|オンプレミスのデータ ストア用のスキャナー:| **はい** | **はい <br />(プレビュー)** | [いいえ] |
+|中央レポート機能 (分析):| **はい** | **はい** | [いいえ] |
+|ラベルとは別に設定するカスタムのアクセス許可:| **はい** | **はい** <sup>3</sup>| [いいえ] |
+|Office アプリの Information Protection バー:| **はい** | **はい**| [いいえ] |
+|ラベルアクションとしての視覚的なマーキング (ヘッダー、フッター、透かし):| **はい** | **はい** | **はい**|
+|アプリごとの視覚的マーキング:| **はい** | [いいえ] | [いいえ] |
+|変数を使用した動的な視覚的マーキング:| **はい** | [いいえ] | [いいえ] |
+|ファイルエクスプローラーでラベルを付ける:| **はい** | **はい** | [いいえ] |
+|保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **はい** | **はい** | [いいえ]|
+|ラベルを適用するための PPDF のサポート:| **はい** | [いいえ] | [いいえ] |
+|PowerShell のラベル付けコマンドレット:| **はい** | **はい** <sup>4</sup> | [いいえ] |
+|切断されたコンピューターの手動ポリシーファイル管理:| **はい** |**はい** <sup>6</sup>| [いいえ] |
+|保護アクションに対するオフライン サポート:| **はい** | **可** <sup>5</sup> | **はい** |
+|HYOK のサポート:| **はい** | [いいえ] | [いいえ] |
+|イベントビューアーの使用状況ログ:| **はい** | [いいえ] |[いいえ] |
+|Outlook の [転送不可] ボタンを表示します。| **はい** | [いいえ] | [いいえ] |
+|保護されたトラックの文書化:| **はい** | **○** <sup>7</sup> | [いいえ] |
+|保護されたドキュメントの取り消し:| **はい** | [いいえ] | [いいえ] |
+|保護のみモード (ラベルなし):| **はい** | [いいえ] | [いいえ] |
+|アカウントの切り替えのサポート:| [いいえ] | [いいえ] | **はい** |
+|AD RMS のサポート:| **はい** | <sup>8</sup>なし | [いいえ] |
+
+脚注:
+
+<sup>1</sup>これらの設定は、 [Azure portal で構成するアドバンストクライアント設定](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)としてサポートされています。
+
+<sup>2</sup>これらの設定とその他の多くは、 [PowerShell で構成する詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)としてサポートされています。
+
+<sup>3</sup>ファイルエクスプローラーと PowerShell でサポートされます。 Office アプリでは、ユーザーは**ファイル > 情報**を選択して**ドキュメントを保護**し、**アクセスを制限** > できます。
+
+<sup>4</sup>コンテナーファイル (zip、rar、7z、.msg、および .pst) からの保護の削除はサポートされていません。
+
+<sup>5</sup>ファイルエクスプローラーと PowerShell コマンドの場合、ユーザーはファイルを保護するためにインターネットに接続されている必要があります。
+
+<sup>6</sup>ファイルエクスプローラー、PowerShell、およびスキャナーによるラベル付けがサポートされています。 Office アプリでのラベル付けはサポートされていません。
+
+<sup>7</sup>クラシッククライアントでサポートされているドキュメント追跡サイトは、統合ラベル付けクライアントではサポートされていません。 ただし、ドキュメントを追跡するために最初に登録する必要がない場合は、[中央レポート](../reports-aip.md)を使用して、Windows コンピューターから文書化されている保護されているかどうか、およびアクセスが許可または拒否されたかどうかを識別できます。 
+
+<sup>8 個</sup>のラベル付けおよび保護操作はサポートされていません。 ただし、AD RMS 展開の場合、 [Active Directory Rights Management サービスモバイルデバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))を使用すると、ビューアーは保護されたドキュメントを開くことができます。
+
+
+### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Azure Information Protection クライアントの詳細な比較
+
+Azure Information Protection クライアント (クラシック) と Azure Information Protection の統一されたラベル付けクライアントの両方で同じ機能がサポートされている場合は、次の表を使用して、2つのクライアントの機能上の違いを特定してください。
 
 |機能 |従来のクライアント|統一されたラベル付けクライアント|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |セットアップ:| ローカルのデモ ポリシーをインストールするオプション | ローカルのデモ ポリシーなし|
 |Office アプリで適用した場合のラベルの選択と表示:|リボン上の **[保護]** ボタンから <br /><br /> Information Protection バーから (リボンの下の水平バー)|リボン上の **[秘密度]** ボタンから<br /><br /> Information Protection バーから (リボンの下の水平バー)|
 |Office アプリの Information Protection バーを管理する:|ユーザー向け: <br /><br />- リボン上の **[保護]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択した場合、既定では、バーはそのアプリ内で非表示になりますが、新しく開いたアプリでは自動的に表示され続けます <br /><br /> 管理者向け: <br /><br />- アプリを最初に開いたときにバーを自動的に表示または非表示にする、および、ユーザーがバーの非表示を選択した後に新しく開いたアプリに対してバーを自動的に非表示のままにするかどうかを制御するポリシー設定|ユーザー向け: <br /><br />- リボン上の **[秘密度]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択すると、バーはそのアプリ内でも新しく開いたアプリ内でも非表示になります <br /><br />管理者向け: <br /><br />-バーを管理するための PowerShell 設定 |
-|ラベルの色: | Azure portal で構成します | Office 365 へのラベルの移行後に保持され、PowerShell で構成可能 <br /><br /> 色は[PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)を使用して構成できます。|
+|ラベルの色: | Azure portal で構成します | ラベルの移行後に保持され、 [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)で構成可能|
 |ラベルは、さまざまな言語をサポートします。| Azure portal で構成します | Office 365 Security & Compliance PowerShell を使用して構成し、 *LocaleSettings*パラメーターと[新しいラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps)と[セットラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)を使用して構成します。|
 |ポリシーの更新: | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />24 時間ごと | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />4 時間ごと|
 |サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
 |ビューアーで開かれた一般的な保護されたファイル (pfile):| ファイルは元のアプリで開き、保護なしで表示、変更、および保存できます。 | ファイルは元のアプリで開くことができ、それを表示して変更することはできますが、保存することはできません。|
-|サポートされているコマンドレット:| ラベル付けのためのコマンドレットと保護のみのコマンドレット | ラベル付け用のコマンドレット:<br /><br />プレビューバージョンを使用していない場合、Set-aipfileclassification、Set-aipfilelabel、および Get-AIPFileStatus では SharePoint のパスがサポートされません <br /><br /> Set-aipfileclassification と Set-aipfilelabel は*Owner*パラメーターをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-aipfileclassification は*WhatIf*パラメーターをサポートするため、検出モードで実行できます。 <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />また、Get-AIPFileStatus の*Labelingmethod*パラメーターには、**手動**または**自動**ではなく**Privileged**または**Standard**が表示されます。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
+|サポートされているコマンドレット:| ラベル付けのためのコマンドレットと保護のみのコマンドレット | ラベル付け用のコマンドレット:<br /><br /> Set-aipfileclassification と Set-aipfilelabel は*Owner*パラメーターをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-aipfileclassification は*WhatIf*パラメーターをサポートするため、検出モードで実行できます。 <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />また、Get-AIPFileStatus の*Labelingmethod*パラメーターには、**手動**または**自動**ではなく**Privileged**または**Standard**が表示されます。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度: ファイルあたり <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度: セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
 |自動および推奨ラベル: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
@@ -113,7 +161,7 @@ Azure Information Protection の統一されたラベル**付けクライアン�
 
 特定の保護設定の動作の違いの詳細な比較については、「[ラベルの保護設定の動作の比較](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)」を参照してください。
 
-#### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合されたラベル付けクライアントに含まれていない機能
+### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合されたラベル付けクライアントに含まれていない機能
 
 Azure Information Protection 統合されたラベル付けクライアントはまだ開発中ですが、従来のクライアントとの次の機能と動作の違いは、現在、統合されたラベル付けクライアントの今後のリリースで使用できるとは想定されていません。 
 
@@ -137,12 +185,10 @@ Azure Information Protection 統合されたラベル付けクライアントは
 
 - 確認プロンプト **[このラベルを削除しますか?]** ポリシー設定を使用しない場合、ユーザーに対してこのラベルを削除します。
 
-- 既存のカスタム プロパティを使用して Office ドキュメントにラベルを付ける (SyncPropertyName および SyncPropertyState クライアント詳細設定)
-
 - Rights Management サービスに接続するために PowerShell コマンドレットを分離させる
 
 
-#### <a name="parent-labels-and-their-sublabels"></a>親ラベルとそのサブラベル 
+### <a name="parent-labels-and-their-sublabels"></a>親ラベルとそのサブラベル 
 
 Azure Information Protection クライアント (クラシック) では、サブラベルを持つ親ラベルを指定する構成はサポートされていません。 これらの構成には、既定のラベルと、推奨または自動分類のラベルの指定が含まれます。 ラベルにサブラベルがある場合は、親ラベルではなく、サブラベルのいずれかを指定できます。
 
@@ -150,12 +196,10 @@ Azure Information Protection クライアント (クラシック) では、サ�
 
 ## <a name="next-steps"></a>次のステップ
 
-クライアントをインストールして構成するには、次のドキュメントを参照してください。
+Azure Information Protection クライアントをインストールして構成するには、次のドキュメントを参照してください。
 
 - [Azure Information Protection クライアント](AIP-client.md)
 
 - [Azure Information Protection 統合ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)
 
-- [RMS クライアントのデプロイに関する注意事項](client-deployment-notes.md)
-
-Azure Information Protection クライアント (クラシック) は AD RMS と共に使用できますが、このクライアントは Azure サービスを使用する場合に最も適しています。Azure Information Protection とその保護サービス、Azure Rights Management。 Azure Information Protection のサービス側の比較については、「[Azure Information Protection と AD RMS の比較](../compare-on-premise.md)」をご覧ください。
+Office 365 アプリ用の組み込みのラベル付けクライアントの使用の詳細については、「 [office アプリの感度ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)」を参照してください。

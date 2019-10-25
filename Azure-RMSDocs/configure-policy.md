@@ -14,10 +14,10 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "72447037"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
@@ -170,7 +170,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - メールでは、この情報は **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** の X ヘッダーに格納されます 
 
-- Word 文書 (.doc および .docx)、Excel スプレッドシート (.xls および .xlsx)、PowerPoint プレゼンテーション (.ppt および .pptx)、および PDF ドキュメントの場合、このメタデータは、次のカスタムプロパティに格納されます: **MSIP_Label_ \<GUID > Enabled = True**  
+- Word 文書 (.doc および .docx)、Excel スプレッドシート (.xls および .xlsx)、PowerPoint プレゼンテーション (.ppt および .pptx)、および PDF ドキュメントの場合、このメタデータは、次のカスタムプロパティに格納されます: **MSIP_Label_\<GUID > 有効にする = True**  
 
 電子メールの場合は、電子メールの送信時にラベル情報が保存されます。 ドキュメントについては、ファイルの保存時にラベル情報が保存されます。 
 

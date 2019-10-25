@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 00ce2f31b5215a954c64135e9d41d39b1eeb1d72
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 4a94787ad611ca52206629362a7ac1bf9df9f174
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447759"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805542"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -51,7 +51,7 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 テナントが統一されたラベル付けプラットフォームにある場合、[統一ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)は、秘密度ラベルを使用できます。 2019年6月以降に Azure Information Protection のサブスクリプションを取得した場合、テナントは自動的に統合されたラベル付けプラットフォームになり、それ以上の操作は必要ありません。 また、ユーザーが Azure Information Protection ラベルを移行したため、テナントがこのプラットフォーム上に存在する場合もあります。
 
-状態を確認するには、Azure portal で、 **Azure Information Protection** >  **統合**されたラベルの @no__t**管理** にアクセスし、**統合ラベル**の状態を確認します。
+状態を確認するには、Azure portal で  **Azure Information Protection**にアクセスして > の**統合**されたラベルを**管理** > 、**統合ラベル**の状態を表示します。
 
 - **アクティブ**になっている場合は、テナントは統一されたラベル付けプラットフォームにあります。
 
@@ -63,7 +63,7 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 Azure Information Protection の統一された**ラベル付けクライアント**は、複数のアプリケーションやサービスがサポートする、統一されたラベル付けストアをサポートするために、より新しい追加機能です。 このクライアントは、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、および Microsoft 365 コンプライアンスセンターの管理センターから、機密ラベルとポリシー設定をダウンロードします。 詳細については、「[秘密度ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)」を参照してください。
 
-使用するクライアントがわからない場合は、「[使用する Azure Information Protection クライアントを選択](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)する」を参照してください。
+使用するクライアントがわからない場合は、「[使用する Azure Information Protection クライアントを選択](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
 ### <a name="identify-which-client-you-have-installed"></a>インストールしたクライアントを特定する
 

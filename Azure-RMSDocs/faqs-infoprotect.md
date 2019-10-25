@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4222e46b606c9c8de7ee05e5510aa60e5791a9dc
-ms.sourcegitcommit: 7cba3b612b9417ab92d9f002956c78fb97f2a787
+ms.openlocfilehash: 7de86d9f6f21ac9dd7839793d02b97b394930f1a
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71959186"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805504"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -48,13 +48,13 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 
 現時点では、Windows 用に2つの Azure Information Protection クライアントがあります。 
 
-- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
+- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**です: Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
 
 - Azure portal からラベルとポリシー設定をダウンロードする**Azure Information Protection クライアント (クラシック)** 。 このクライアントは、以前の一般公開バージョンのクライアント上に構築されます。
 
 現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
 
-機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)」をご覧ください。
+機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)」をご覧ください。
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-in-office"></a>Office での機密ラベルの使用に関する情報はどこで入手できますか。
 
@@ -79,7 +79,7 @@ Office ドキュメントの次のリソースを参照してください。
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
-No. 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
+いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
@@ -91,7 +91,7 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>分類が自動的に含まれるドキュメント テンプレートを作成できますか?
 
-可能。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
+○ ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
 
 例として、ドキュメントのヘッダーに分類を表示するテーブルがあるとします。 または、概要向けにドキュメントの分類を参照する具体的な表現を使用します。
 

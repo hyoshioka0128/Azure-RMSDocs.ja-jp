@@ -14,15 +14,15 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0052d3474c728518d3acdd9af3ef2d9aae1a2d0a
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684354"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Azure Information Protection からの保護の使用状況のログと分析
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 この情報は、Azure Information Protection から保護サービス (Azure Rights Management) の使用状況ログを使用する方法を理解するのに役立ちます。 この保護サービスは、組織のドキュメントと電子メールのデータ保護を提供し、すべての要求をログに記録できます。 これらの要求には、ユーザーがドキュメントや電子メールを保護していて、このコンテンツも利用している場合に、このサービスのために管理者が実行した操作や、Azure Information Protection のデプロイをサポートするために Microsoft オペレーターが実行した操作が含まれます。 
 
@@ -44,7 +44,7 @@ ms.locfileid: "71684354"
 
 この使用状況ログだけでなく、次のログ オプションもあります。
 
-|ログ オプション|説明|
+|ログ オプション|[説明]|
 |----------------|---------------|
 |管理ログ|保護サービスの管理タスクをログに記録します。 たとえば、このサービスが非アクティブ化されていて、スーパー ユーザー機能が有効で、ユーザーがサービスに対する管理者権限を委任されている場合などです。 <br /><br />詳細については、PowerShell コマンドレットの[Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)に関する説明を参照してください。|
 |ドキュメント追跡|ユーザーが Azure Information Protection クライアントで追跡したドキュメントを追跡したり取り消したりできるようにします。 ユーザーに代わって、グローバル管理者がこれらのドキュメントを追跡することもできます。 <br /><br />詳細については、「[Azure Information Protection のドキュメント追跡の構成と使用](./rms-client/client-admin-guide-document-tracking.md)」をご覧ください。|
@@ -110,9 +110,9 @@ Azure Information Protection は、ログを一連の blob として書き込み
 ### <a name="the-blob-format"></a>BLOB の形式
 各 BLOB は、W3C 拡張ログ形式です。 BLOB は、次の 2 行で始まります。
 
-**# ソフトウェア:RMS**
+**#Software: RMS**
 
-**# バージョン:1.1**
+**#Version: 1.1**
 
 最初の行は、これらが Azure Information Protection からの保護ログであることを示しています。 2 番目の行は、BLOB の残りの部分がバージョン 1.1 の仕様に準拠していることを示します。 これらのログを解析するアプリケーションでは、上の 2 つの行を検証してから BLOB の残りを解析することをお勧めします。
 
@@ -123,10 +123,10 @@ Azure Information Protection は、ログを一連の blob として書き込み
 後続の各行はログ レコードです。 フィールド値の順序は前の行と同じで、タブで区切られます。 フィールドを解釈するには、次の表を参照してください。
 
 
-|   [フィールド名]   | W3C データ型 |                                                                                                                                                                          説明                                                                                                                                                                          |                                                            値の例                                                            |
+|   フィールド名   | W3C データ型 |                                                                                                                                                                          [説明]                                                                                                                                                                          |                                                            値の例                                                            |
 |----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 |      日付      |     日付      |                                                                                                                     要求が処理された UTC 日付。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。                                                                                                                     |                                                             2013-06-25                                                              |
-|      time      |     時刻      |                                                                                                            要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。                                                                                                            |                                                              21:59:28                                                               |
+|      時間      |     ［時間］      |                                                                                                            要求が処理された UTC 時間 (24 時間形式)。<br /><br />ソースは、要求にサービスを提供したサーバーのローカル クロックです。                                                                                                            |                                                              21:59:28                                                               |
 |     row-id     |     テキスト      |                                                                           このログ レコードの固有 GUID。 値が存在しない場合は、correlation-id の値を使用してエントリを識別します。<br /><br />この値は、ログを別の形式に集約またはコピーするときに役立ちます。                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
 |  request-type  |     名前      |                                                                                                                                                            要求された RMS API の名前。                                                                                                                                                            |                                                           AcquireLicense                                                            |
 |    user-id     |    文字列型     |                                                               要求を行ったユーザー。<br /><br />この値は単一引用符で囲まれます。 顧客管理 (BYOK) の Azure RMS テナント キーからの呼び出しには **"** の値があり、これは要求の種類が匿名のときにも適用されます。                                                                |                                                          ‘joe@contoso.com’                                                          |
@@ -137,9 +137,9 @@ Azure Information Protection は、ログを一連の blob として書き込み
 |     issuer     |    文字列型     |                                                                                                                          ドキュメントの発行者の電子メール アドレス。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                          |                       alice@contoso.com (または) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
 |  template-id   |    文字列型     |                                                                                                                    ドキュメントを保護するために使用されるテンプレートの ID。 <br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
 |   file-name    |    文字列型     | Windows 用 Azure Information Protection クライアントを使用して追跡される保護されたドキュメント名。 <br /><br />現時点では、(Office 文書などの) 一部のファイルには、実際のファイル名ではなく GUID が表示されます。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。 |                                                       TopSecretDocument.docx                                                        |
-| date-published |     date      |                                                                                                                          ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
+| date-published |     日付      |                                                                                                                          ドキュメントが保護された日付。<br /><br /> 要求の種類が RevokeAccess の場合、このフィールドは空白になります。                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
 |     c-info     |    文字列型     |                                                                                   要求を行っているクライアント プラットフォームに関する情報。<br /><br />この文字列はアプリケーション (オペレーティング システム、ブラウザーなど) によって異なります。                                                                                   | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
-|      c-ip      |    住所    |                                                                                                                                                       要求を行ったクライアントの IP アドレス。                                                                                                                                                        |                                                            64.51.202.144                                                            |
+|      c-ip      |    番地    |                                                                                                                                                       要求を行ったクライアントの IP アドレス。                                                                                                                                                        |                                                            64.51.202.144                                                            |
 |  admin-action  |     Bool      |                                                                                                                                    管理者が管理者モードでドキュメント追跡サイトにアクセスしたかどうかを示します。                                                                                                                                    |                                                                True                                                                 |
 | acting-as-user |    文字列型     |                                                                                                                               管理者がドキュメント追跡サイトにアクセスする場合に使用するユーザーの電子メール アドレス。                                                                                                                                |                                                          'joe@contoso.com'                                                          |
 
@@ -157,7 +157,7 @@ Azure Information Protection は、ログを一連の blob として書き込み
 #### <a name="typical-request-types"></a>一般的な要求の種類
 保護サービスには多くの要求の種類がありますが、次の表に、最も一般的に使用される要求の種類を示します。
 
-|要求の種類|説明|
+|要求の種類|[説明]|
 |----------------|---------------|
 |AcquireLicense|Windows ベースのコンピューターのクライアントが、保護されたコンテンツのライセンスを要求しています。|
 |AcquirePreLicense|ユーザーに代わってクライアントが、保護されたコンテンツのライセンスを要求しています。|
@@ -175,7 +175,7 @@ Azure Information Protection は、ログを一連の blob として書き込み
 |FECreatePublishingLicenseV1|Certify および GetClientLicensorCert の組み合わせと同じですが、要求元はモバイル クライアントです。|
 |FEGetAllTemplates|モバイル デバイス (フロントエンド) から、テンプレートを取得するための呼び出しが行われます。|
 |FindServiceLocationsForUser|Certify または AcquireLicense の呼び出しに使用される URL を照会するための呼び出しが行われます。|
-|GetAllDocs|ドキュメント追跡サイトから呼び出し、ユーザーの **[すべてのドキュメント]** ページを読み込むか、テナントのすべてのドキュメントを検索します。 この値は、admin-action フィールドと acting-as-admin フィールドで使用します。<br /><br />- admin-action が空: ユーザーには、自分のドキュメントの **[すべてのドキュメント]** ページが表示されます。<br /><br />- admin-action が true、acting-as-user が空: 管理者には、そのテナントのすべてのドキュメントが表示されます。<br /><br />- admin-action が true、acting-as-user が空ではない: 管理者には、ユーザーの **[すべてのドキュメント]** ページが表示されます。|
+|GetAllDocs|ドキュメント追跡サイトから呼び出し、ユーザーの **[すべてのドキュメント]** ページを読み込むか、テナントのすべてのドキュメントを検索します。 この値は、admin-action フィールドと acting-as-admin フィールドで使用します。<br /><br />- admin-action が空: ユーザーには、自分のドキュメントの **[すべてのドキュメント]** ページが表示されます。<br /><br />- admin-action が true で acting-as-user が空: 管理者には、テナントのすべてのテナントが表示されます。<br /><br />- admin-action が true で acting-as-user が空ではない: 管理者には、ユーザーの **[すべてのドキュメント]** ページが表示されます。|
 |GetAllTemplates|Azure Portal から、すべてのテンプレートを取得するための呼び出しが行われます。|
 |GetClientLicensorCert|クライアントは Windows ベースのコンピューターから発行元証明書 (後でコンテンツの保護に使用する) を要求しています。|
 |GetConfiguration|Azure RMS テナントの構成を取得するために、Azure PowerShell コマンドレットが呼ばれます。|

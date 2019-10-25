@@ -14,15 +14,15 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71689506"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 RMS コネクタのインストールと構成を行うと、以下の方法と情報を使用することで、コネクタと組織の Azure Rights Management サービスの使用状況を Azure Information Protection から監視できます。
 
@@ -133,7 +133,7 @@ HTTPS 接続用の RMS コネクタを構成する方法については、「[HT
 
 警告 **2003**
 
-**承認の一覧が空です。サービスは、コネクタ用に承認されたユーザーとグループの一覧が設定されるまで、使用できません。**
+**承認の一覧が空です。このサービスは、コネクタに対して承認されたユーザーとグループの一覧が作成されるまで使用できません。**
 
 このイベントは、承認されたアカウントの一覧が RMS コネクタに含まれていないため、オンプレミスのサーバーが接続できないときに記録されます。 RMS コネクタは、Azure RMS から一覧を 15 分ごとにダウンロードします。 
 
@@ -167,11 +167,11 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 たとえば、ドキュメントまたは電子メールが保護されている場合は、定期的に遅延が発生します。 あるいは、保護されているドキュメントまたは電子メールが開かれるとき、遅延が発生します。 このような場合は、パフォーマンス カウンターによって、遅延の原因がコネクタの処理時間や Azure Rights Management サービスの処理時間なのか、それともネットワークの遅延なのかを判断できます。 
 
-遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 以下に例を示します。**Licensing Successful Batched Request Average Connector Response Time**。
+遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
-## <a name="logging"></a>ログの記録
+## <a name="logging"></a>ログ記録
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 

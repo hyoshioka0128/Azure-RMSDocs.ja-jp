@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7af3b59138eecbcac40ac09003ab365454e5630
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: d304664bb3573bc1a90989f11927264450d01c0d
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447204"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805567"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -65,7 +65,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>手順 3: 分類とラベル付けを構成し、デプロイする
 
-ラベルとポリシー設定を構成する前に、使用する Azure Information Protection クライアント (従来のクライアントまたは統一されたラベル付けクライアント) を決定します。 または、両方のクライアントが必要になる場合もあります。 ここでは、このクライアントの決定が必要であるため、ラベルとポリシー設定を構成するために使用する管理ポータルを把握しておく必要があります。 この決定に役立つ詳細については、「[使用する Azure Information Protection クライアントを選択](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)する」を参照してください。
+ラベルとポリシー設定を構成する前に、使用する Azure Information Protection クライアント (従来のクライアントまたは統一されたラベル付けクライアント) を決定します。 または、両方のクライアントが必要になる場合もあります。 ここでは、このクライアントの決定が必要であるため、ラベルとポリシー設定を構成するために使用する管理ポータルを把握しておく必要があります。 この決定に役立つ詳細については、「[使用する Azure Information Protection クライアントを選択](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
 > [!TIP]
 > **省略可能ですが推奨される**方法: ローカルデータストアに格納されている機密情報を検出するには、[スキャナーのクイックスタート](quickstart-findsensitiveinfo.md)を使用することを検討してください。 スキャナーで検出される情報は、ご使用の分類法で役立ち、必要なラベルおよび保護が必要なファイルに関する貴重な情報を提供します。
@@ -78,7 +78,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 - クラシッククライアントの Azure Information Protection ラベル: [Azure Information Protection ポリシーの構成](./configure-policy.md)
 
-- 統一されたラベル付けクライアントの秘密度ラベル:[機密ラベルの概要](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+- 統一されたラベル付けクライアントの秘密度ラベル:[機密ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 次に、Azure Information Protection クライアント (クラシック) または Azure Information Protection 統合されたラベル付けクライアントをユーザーに展開します。 ラベルを選択するときに、ユーザートレーニングと具体的な指示を提供します。 クライアントのインストールとサポートの詳細については、管理者ガイドを参照してください。
 

@@ -12,34 +12,34 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a404bfbc36c8952214ed3c6814bab44368366170
-ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
+ms.openlocfilehash: 86f53fd6fa1be34399d104bd33a9b0e749f3f949
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017621"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805631"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Active Directory Rights Management サービス (AD RMS) を知っているか、以前にデプロイしたことがある場合、Azure Information Protection には情報保護ソリューションとしての機能や要件にどのような違いがあるのか疑問に思われるかもしれません。
 
 Azure Information Protection の主な違いの一部:
 
-- **サーバー インフラストラクチャは必要ない**: AD RMS で必要とされる追加サーバーと PKI 証明書が、Azure Information Protection では必要ありません。Microsoft Azure により処理されるためです。 そのため、クラウド ソリューションを短時間でデプロイして簡単に管理できます。
+- **サーバー インフラストラクチャが必要ない**: AD RMS で必要とされる追加サーバーと PKI 証明書が、Azure Information Protection では必要ありません。Microsoft Azure により処理されるためです。 そのため、クラウド ソリューションを短時間でデプロイして簡単に管理できます。
 
-- **クラウド ベースの認証**:Azure Information Protection は、内部ユーザーと他の組織からのユーザー両方の認証に Azure AD を使用します。 つまり、ユーザーは内部ネットワークに接続されていなくても認証でき、保護されたコンテンツを他の組織のユーザーと共有することが容易になります。 多くの組織は、Azure サービスや Office 365 を使用しているため、Azure AD に既にユーザー アカウントがあります。 ただし、そうでない場合は、個人向け RMS サブスクリプションを使用して無料アカウントを作成するか、[Azure Information Protection への認証をサポートしているアプリケーション](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)用に、Microsoft アカウントを使用することができます。 これに対して、保護されたコンテンツを別の組織と AD RMS 共有するには、各組織に対して明示的な信頼を構成する必要があります。
+- **クラウド ベースの認証**: Azure Information Protection は、内部ユーザーと他の組織からのユーザー両方の認証に Azure AD を使用します。 つまり、ユーザーは内部ネットワークに接続されていなくても認証でき、保護されたコンテンツを他の組織のユーザーと共有することが容易になります。 多くの組織は、Azure サービスや Office 365 を使用しているため、Azure AD に既にユーザー アカウントがあります。 ただし、そうでない場合は、個人向け RMS サブスクリプションを使用して無料アカウントを作成するか、[Azure Information Protection への認証をサポートしているアプリケーション](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)用に、Microsoft アカウントを使用することができます。 これに対して、保護されたコンテンツを別の組織と AD RMS 共有するには、各組織に対して明示的な信頼を構成する必要があります。
 
-- **モバイル デバイスの組み込みサポート**: Azure Information Protection がモバイルデバイスと Mac コンピューターをサポートするために、展開の変更は必要ありません。 AD RMS でこれらのデバイスをサポートするには、モバイル デバイス拡張機能をインストールし、フェデレーション用に AD FS を構成して、パブリック DNS サービスの追加レコードを作成する必要があります。
+- **モバイルデバイスの組み込みサポート**: モバイルデバイスと Mac コンピューターをサポートするために Azure Information Protection に展開の変更は必要ありません。 AD RMS でこれらのデバイスをサポートするには、モバイル デバイス拡張機能をインストールし、フェデレーション用に AD FS を構成して、パブリック DNS サービスの追加レコードを作成する必要があります。
 
 - **既定のテンプレート**: Azure Information Protection によって、自分の組織へのコンテンツのアクセスを制限する既定のテンプレートが自動的に作成されます。 これらのテンプレートを使用すると、機密データの保護をすぐに開始することが簡単になります。 AD RMS には既定のテンプレートはありません。
 
-- **部門別テンプレート**: スコープ テンプレートとも呼ばれます。 Azure Information Protection では、ユーザーが作成する追加テンプレートに対する部門別テンプレートがサポートされています。 この構成では、ユーザーのサブセットを指定して、そのユーザーのクライアント アプリケーションで特定のテンプレートを表示することができます。 ユーザーに表示されるテンプレートの数を制限すると、異なるユーザー グループに対して定義した適切なポリシーを簡単に選択できるようになります。 AD RMS では、部門別テンプレートはサポートされていません。
+- **部門別テンプレート**: スコープ付きテンプレートとも呼ばれます。 Azure Information Protection では、ユーザーが作成する追加テンプレートに対する部門別テンプレートがサポートされています。 この構成では、ユーザーのサブセットを指定して、そのユーザーのクライアント アプリケーションで特定のテンプレートを表示することができます。 ユーザーに表示されるテンプレートの数を制限すると、異なるユーザー グループに対して定義した適切なポリシーを簡単に選択できるようになります。 AD RMS では、部門別テンプレートはサポートされていません。
 
-- **ドキュメントの追跡と取り消し**: Azure Information Protection は Azure Information Protection クライアント (クラシック) でこれらの機能をサポートしていますが、AD RMS はサポートしていません。
+- **ドキュメントの追跡と失効**: Azure Information Protection は Azure Information Protection クライアント (クラシック) でこれらの機能をサポートしていますが、AD RMS ではサポートされていません。
 
-- **分類とラベル付け**: Azure Information Protection は、分類、および必要に応じて保護を適用するラベルをサポートします。 これらの機能は、 [Azure Information Protection クライアント (クラシック) と Azure Information Protection 統合されたラベル付けクライアント](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)で提供されます。 これらのクライアントを使用すると、分類とラベル付けを Office アプリケーション、ファイルエクスプローラー、PowerShell、およびオンプレミスデータストアのスキャナーと統合できます。 AD RMS は、これらの分類とラベル付け機能をサポートしていません。
+- **分類とラベル付け**: Azure Information Protection では、分類、および必要に応じて保護を適用するラベルがサポートされます。 これらの機能は、 [Azure Information Protection クライアント (クラシック) と Azure Information Protection 統合されたラベル付けクライアント](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)で提供されます。 これらのクライアントを使用すると、分類とラベル付けを Office アプリケーション、ファイルエクスプローラー、PowerShell、およびオンプレミスデータストアのスキャナーと統合できます。 AD RMS は、これらの分類とラベル付け機能をサポートしていません。
 
 さらに、Azure Information Protection はクラウド サービスであるため、オンプレミスのサーバー ベースのソリューションより速く新しい機能や修正を提供できます。 Windows Server では AD RMS の新機能は計画されていません。
 
@@ -65,7 +65,7 @@ Azure Information Protection は、テナント キーのサイズが 2048 ビ�
 暗号化の制御の詳細については、「[Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」を参照してください。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 デバイスのサポートや最小バージョンなど、Azure Information Protection を使用するための要件の詳細については、「 [Azure Information Protection の要件](requirements.md)」を参照してください。
 
 AD RMS から Azure Information Protection に移行する場合は、「 [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照してください。

@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 10/17/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 98861fcabfb6e00edbc0206f3c80a45d6287f70f
-ms.sourcegitcommit: e007bffd33c959124baa5719236981c93947a3e4
+ms.openlocfilehash: 37f50c51588b908b558c60e9387e918f26393f07
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535342"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805673"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -73,9 +73,19 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
+## <a name="version-154330"></a>バージョン1.54.33.0
+
+**リリース**日: 10/23/2019
+
+このバージョンには、RMS クライアントの MSIPC バージョン1.0.4008.0813 が含まれています。
+
+このリリースには、安定性とパフォーマンスに関する一般的な修正が含まれています。
+
 ## <a name="version-153100"></a>バージョン1.53.10.0
 
 **リリース**日: 07/15/2019
+
+04/23/2020 でサポート
 
 このバージョンには、RMS クライアントの MSIPC バージョン1.0.3889.0419 が含まれています。
 

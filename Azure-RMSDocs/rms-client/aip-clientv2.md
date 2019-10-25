@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection 統合ラベルクラ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d357f5ddbaa4387e16ac476588d1651fe583b374
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: ddfcabc7237c66d95bc9f6dab15dc5326a92d6be
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447882"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805252"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Windows 用の統一されたラベル付けクライアント Azure Information Protection
 
@@ -29,7 +29,7 @@ ms.locfileid: "72447882"
 Windows 用の Azure Information Protection 統合ラベル付けクライアントは、[機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用してドキュメントや電子メールを分類および保護する組織用のダウンロード可能なクライアントです。 このクライアントには、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Microsoft の Rights Management サービスを使って保護しているコンテンツを使いたい組織のためのビューアーもあります。
 
 > [!NOTE]
-> このクライアントは、"統合されたラベル付けクライアント" とも呼ばれ、Azure Information Protection クライアント (クラシック) に置き換わるものではありません。 使用するクライアントがわからない場合は、「[使用する Azure Information Protection クライアントを選択](use-client.md#choose-which-azure-information-protection-client-to-use)する」を参照してください。
+> このクライアントは、"統合されたラベル付けクライアント" とも呼ばれ、Azure Information Protection クライアント (クラシック) に置き換わるものではありません。 どのクライアントを使用するかわからない場合は、「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
 統一されたラベル付けクライアントには、次のリソースを使用します。
 
