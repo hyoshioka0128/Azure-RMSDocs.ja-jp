@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a4a507423ed0a06627fcf5e28bb053d622ca252f
-ms.sourcegitcommit: b1ca785ae8ea5a91393a1602aded899be1951b2d
+ms.openlocfilehash: db282701b5374652d8469e5eadf42cd0a3472c3b
+ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811193"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916290"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -972,7 +972,9 @@ Azure Information Protection スキャナーは、1分間に数十から数百�
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Exchange メッセージ分類との統合によるモバイル デバイスのラベル付けソリューション
 
-Outlook on the web では、Azure Information Protection の分類と保護の機能がまだネイティブでサポートされていませんが、ユーザーが Outlook on the web を使用する場合は、Exchange のメッセージ分類を使用して Azure Information Protection ラベルをモバイル ユーザーに拡張することができます。 Outlook Mobile では、Exchange のメッセージ分類がサポートされません。
+Web 上の outlook では、Exchange Online のラベル付けがサポートされるようになりました。これは、Outlook で電子メールにラベルを付ける方法として推奨されています。 ただし、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft コンプライアンスセンターから公開されている機密ラベルをまだ使用していない場合は、Exchange メッセージ分類を使用して Azure の情報を拡張できます。モバイルユーザーが web 上で Outlook を使用する場合の保護ラベル。 この方法は、Exchange Server にも使用できます。 
+
+Outlook Mobile では、Exchange のメッセージ分類がサポートされません。
 
 このソリューションを実現するには: 
 

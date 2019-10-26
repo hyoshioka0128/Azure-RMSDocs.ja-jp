@@ -4,7 +4,7 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de86d9f6f21ac9dd7839793d02b97b394930f1a
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 649aca255019ea5992e7901c2275ca0fe3c61cba
+ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805504"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916287"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -107,12 +107,14 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 現在のラベルの分類がドキュメントに表示され、この値はドキュメントを開くかテンプレートを使用するたびに自動的に更新されます。 このため、ラベルが変更されると、このフィールド コードに対して表示される分類がドキュメント内で自動的に更新されます。
 
-## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
+## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>Azure Information Protection を使用した電子メールの分類は、Exchange メッセージ分類とはどのように異なりますか。
 
-Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 
+Exchange メッセージ分類は、電子メールを分類できる古い機能であり、Azure Information Protection ラベルや分類を適用する機密ラベルとは別に実装されています。
 
-ただし、ユーザーが Outlook on the web や一部のモバイル用メール アプリケーションを使用して電子メールを分類する場合に、これら 2 つのソリューションを統合し、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 
+ただし、この古い機能をラベルと統合すると、ユーザーが Outlook on the web および一部のモバイルメールアプリケーションを使用して電子メールを分類するときに、ラベル分類および対応するラベルマーキングが自動的に追加されるようになります。
 
 同じ手法を使用して、Outlook on the web とこれらのモバイル用メール アプリケーションで独自のラベルを使用できます。
 
-構成手順については、「[Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution (Exchange のメッセージ分類と Azure Information Protection を統合したモバイル デバイス用ラベル付けソリューション)](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution)」をご覧ください。
+Outlook を Exchange Online で使用している場合は、これを行う必要はないことに注意してください。これは、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security Center から機密ラベルを公開する場合に、組み込みのラベル付けをサポートするためです。、または Microsoft コンプライアンスセンター。
+
+Web 上の Outlook で組み込みのラベル付けを使用できない場合は、この回避策の構成手順を参照してください。[モバイルデバイスのラベル付けソリューションの Exchange メッセージ分類を Azure Information Protection と統合](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution)します。
