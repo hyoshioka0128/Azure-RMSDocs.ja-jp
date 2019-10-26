@@ -4,7 +4,7 @@ description: Microsoft Information Protection framework をサポートするク
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d117c68f9adb1d133cb16d7a44fad3cdaaafd973
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 75c0d64f298b98408a8e1fb55c78c1bded1ecc1a
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447098"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890310"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -121,7 +121,7 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 
 ###### <a name="footnote-1"></a>脚注 1:
 
-Outlook for Mac では、保護が保持されます。ただし、暗号化のみのオプションで電子メールが保護されている場合、その保護は削除されます。
+Outlook では、保護は保持されます。ただし、暗号化のみのオプションで電子メールが保護されている場合、その保護は削除されます。
 
 
 ###### <a name="footnote-2"></a>脚注 2
@@ -154,17 +154,38 @@ Outlook for Mac では、保護が保持されます。ただし、暗号化の�
 > [!IMPORTANT]
 > Azure portal の外部にあるラベルを編集する場合は Azure Information Protection クライアント (クラシック) の場合は、この Azure Information Protection 統合された**ラベル付け**ブレードに戻り、 **[発行]** を選択します。
 
+### <a name="copy-policies"></a>ポリシーのコピー
+
+> [!NOTE]
+> このオプションは、テナントに徐々にロールアウトされています。 また、プレビュー段階であり、変更される可能性があります。
+
+ラベルを移行したら、ポリシーをコピーするオプションを選択できます。 このオプションを選択した場合、[ポリシー設定](configure-policy-settings.md)と[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings)を含むポリシーの1回限りのコピーが、ラベルを管理する管理センター (Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 セキュリティ) に送信されます。センター、Microsoft 365 コンプライアンスセンター。
+
+**[Azure Information Protection 統合ラベル]** ブレードで **[ポリシーのコピー (プレビュー)]** オプションを選択する前に、次の点に注意してください。
+
+- コピーするポリシーと設定を選択的に選択することはできません。 すべてのポリシー (**グローバル**ポリシーとスコープポリシー) がコピーされ、ラベルポリシー設定としてサポートされているすべての設定がコピーされます。 同じ名前のラベルポリシーが既にある場合は、Azure portal のポリシー設定で上書きされます。
+
+- Azure Information Protection 統合ラベル付けクライアントの場合、ポリシー設定ではなく*ラベルの詳細設定*としてサポートされるため、一部のアドバンストクライアント設定はコピーされません。 [Office 365 セキュリティ/コンプライアンスセンター PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用して、これらのラベルの詳細設定を構成できます。 コピーされないアドバンストクライアントの設定:
+    - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+
+- ラベルへの後続の変更が同期されるラベルの移行とは異なり、[ポリシーのコピー] アクションでは、ポリシーまたはポリシー設定に対する後続の変更は同期されません。 Azure portal に変更を加えた後、[ポリシーのコピー] アクションを繰り返すと、既存のポリシーとその設定が再度上書きされます。 または、Office 365 セキュリティ/コンプライアンスセンター PowerShell の *[設定] パラメーターを*使用して、Set labelpolicy または Set-label コマンドレットを使用します。
+
+- テナントに対して統合ラベルをアクティブ化するまで、 **[ポリシーのコピー (プレビュー)]** オプションは使用できません。
+
+Azure Information Protection の統一されたラベル付けクライアントのポリシー設定、クライアントの詳細設定、およびラベル設定の構成の詳細については、「 [Azure Information Protection 統合ラベル付けクライアントのカスタム構成」を参照してください。](./rms-client/clientv2-admin-guide-customizations.md)管理者ガイドを参照してください。
+
 ### <a name="clients-and-services-that-support-unified-labeling"></a>統合ラベル付けをサポートするクライアントおよびサービス
 
 使用するクライアントとサービスが、統一されたラベル付けをサポートしているかどうかを確認するには、ドキュメントを参照して、管理センターの1つから発行された機密ラベルを使用できるかどうかを確認します。 Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365security center または Microsoft 365 コンプライアンスセンター。 
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているクライアント:
 
-- [Windows 用の Azure Information Protection 統合ラベル付け](./rms-client/unifiedlabelingclient-version-release-history.md)されたクライアント。 このクライアントと Azure Information Protection クライアント (クラシック) の比較については、「[クライアントを比較](./rms-client/use-client.md#compare-the-clients)する」を参照してください。
+- [Windows 用の Azure Information Protection 統合ラベル付け](./rms-client/unifiedlabelingclient-version-release-history.md)されたクライアント。 このクライアントと Azure Information Protection クライアント (クラシック) の比較については、「 [Windows コンピューターのラベル付けクライアントの比較](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
 - 可用性の段階が異なる Office からのアプリ。 詳細については、Office ドキュメントの「 [office でサポートされている機密ラベル機能](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)について」を参照してください。
     
-- [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのアプリです。
+- [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのアプリです。
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているサービス:
 
@@ -178,7 +199,7 @@ Outlook for Mac では、保護が保持されます。ただし、暗号化の�
     
     - 管理センターが Azure portal 内のラベルと同じラベルを持っていない場合: 管理センターから統合ラベルは使用されず、代わりにラベルが Azure portal から取得されます。
 
-- [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのサービスです。
+- [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのサービスです。
 
 ## <a name="next-steps"></a>次のステップ
 

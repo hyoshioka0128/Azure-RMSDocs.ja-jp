@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 10/14/2019
+ms.date: 10/24/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b7884de10999518d0c6cf9806b546181277a113
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447839"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890297"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -39,10 +39,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - Windows コンピューターからの内部ユーザーまたは外部ユーザーが保護されたドキュメントにアクセスするタイミングと、アクセスが許可または拒否されたかどうかを特定します。
 
-表示されるデータは、統一された[ラベル付けをサポートするクライアントとサービス](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)、および[保護の使用状況ログ](log-analyze-usage.md)から、Azure Information Protection のクライアントとスキャナーから集計されます。
-
-> [!NOTE]
-> 現在、統合されたラベル付けクライアントのプレビューバージョンを除き、Azure Information Protection analytics には、統一されたラベル付けをサポートするクライアントとサービスのカスタム情報の種類は含まれていません。
+表示されるデータは、Azure Information Protection のクライアントとスキャナー、Microsoft Cloud App Security、Microsoft Defender Advanced Threat Protection を使用した Windows 10 コンピューター、および保護の[使用状況ログ](log-analyze-usage.md)から集計されます。
 
 たとえば、次のようなことを確認できます。
 
@@ -76,7 +73,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - **データ検出**レポートからは、次のことが確認できます。
 
-    - スキャンしたデータリポジトリ、Windows 10 コンピューター、または Azure Information Protection クライアントを実行しているコンピューター、または統一され[たラベル付けをサポートするクライアント](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)を実行しているコンピューターにあるファイル
+    - スキャンされたデータリポジトリ、Windows 10 コンピューター、または Azure Information Protection クライアントを実行しているコンピューターにあるファイル
     
     - ラベル付けされ、保護されているファイルと、ラベルごとのファイルの場所
     
@@ -117,9 +114,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - 電子メールの場合: ラベルが付けられている電子メールの件名と電子メールの送信者。 
 
-- コンテンツ内で検出された[定義済みの機密情報の種類](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for)。
-    
-    カスタム条件で Azure Information Protection ラベルを使用している場合は、カスタム情報の種類の名前も送信されます。 統一されたラベル付けクライアントのプレビューバージョンを除き、ラベル付けセンターで作成したカスタム機微な情報の種類は送信されません。
+- コンテンツ内で検出された機密情報の種類 ([定義済み](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for)およびカスタム)。
 
 - Azure Information Protection クライアントのバージョン。
 
@@ -244,7 +239,7 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 ワークスペースを構成した後、次のいずれかの管理センターで機密ラベルを公開する場合は、次の手順を実行します。 Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター:
 
-- Azure portal で、[ **Azure Information Protection** > ] [**統合**されたラベルの @no__t**管理**] を選択し、 **[発行]** を選択します。
+- Azure portal で  **Azure Information Protection**にアクセスして > の**統合ラベル**を**管理** > 、**発行** を選択します。
     
     ラベル付けセンターでラベルの変更 (作成、変更、削除) を行うたびに、この**発行**オプションを選択します。 
 
@@ -289,8 +284,6 @@ Azure Information Protection のログに記録されたデータは、テーブ
 
 |列名|[説明]|
 |-----------|-----------|
-|アクセス権|保護されたドキュメントが正常に開かれました。ファイル名が追跡されている場合は、ファイル名で識別されます。追跡されていない場合は ID です。|
-|AccessDenied|保護されたドキュメントが、追跡されている場合はファイル名で識別されるアクセスを拒否されました。追跡されていない場合は ID。|
 |［時間］|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
 |User|User: UPN または DOMAIN\USER の形式を設定します。|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
