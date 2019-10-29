@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7fa0bcfabb3165e5126b32613565c78caf41e72
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 350f687a61899046346f26b5beb2944b9f3caf13
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314214"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984869"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類
 
@@ -223,7 +223,7 @@ Azure Information Protection クライアントがファイルを保護する方
 > [!NOTE]
 > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。 
 
-既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 このスキャナーの動作を変更するには、レジストリを編集し、保護する追加のファイルの種類を指定します。 方法については、スキャナーのデプロイに関する説明の「[スキャナーのレジストリの編集](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)」をご覧ください。
+既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 このスキャナーの動作を変更するには、レジストリを編集し、保護する追加のファイルの種類を指定します。 手順については、「レジストリの編集」を参照して、[保護するファイルの種類](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected)をスキャナーの展開手順から変更します。
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>既定では保護できないファイル
 
@@ -254,7 +254,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 |アプリケーションの種類|ファイルの種類|
 |--------------------------------|-------------------------------------|
 |Word|ドック.docx; .docm; .dot; normal.dotm; .dotx|
-|[エクスポート]|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|
 |テキスト|.txt; .xml; .csv|
@@ -271,7 +271,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
 
-2. スキャナーの場合:機密情報を検索した後、.zip ファイルをラベルで分類および保護する必要がある場合は、スキャナーのデプロイに関する説明の「[スキャナーのレジストリの編集](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)」に従って、汎用的な保護 (pfile) が行われるようにこのファイル名拡張子に対するレジストリ エントリを追加します。
+2. スキャナーの場合:機密情報を検索した後、.zip ファイルをラベルで分類して保護する必要がある場合は、「[レジストリの編集による保護されるファイルの種類の変更」の説明に従って、汎用的な保護 (pfile) を持つように、このファイル名拡張子のレジストリエントリを追加します。](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected)スキャナーのデプロイ手順から。
 
 これらの手順の実行後のシナリオ例: 
 
@@ -283,7 +283,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 スキャナーまたは PowerShell セッションが実行されているコンピューターに Windows TIFF IFilter 機能をインストールして、[Windows TIFF IFilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成すると、Azure Information Protection スキャナーおよび [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで光学式文字認識 (OCR) を使用して、ファイル名拡張子 .tiff を持つ TIFF イメージを検査できます。
 
-スキャナーの場合:機密情報を検索した後、.tiff ファイルをラベルで分類および保護する必要がある場合は、スキャナーのデプロイに関する説明の「[スキャナーのレジストリの編集](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)」に従って、ネイティブな保護が行われるようにこのファイル名拡張子に対するレジストリ エントリを追加します。
+スキャナーの場合:機密情報を検索した後、tiff ファイルを分類してラベルで保護する必要がある場合は、「レジストリの編集」の説明に従って、このファイル名拡張子のレジストリエントリを追加して、[保護するファイルの種類を変更](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected)します。スキャナーの展開手順。
 
 ## <a name="next-steps"></a>次の手順
 Azure Information Protection クライアントによってサポートされるファイルの種類がわかったので、このクライアントのサポートに必要な追加情報を以下のリソースで参照してください。
