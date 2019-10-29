@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7076f761a08db66b6f9caeb08bac3b6b66169a54
-ms.sourcegitcommit: 4c72e9549fda4e4324e9b07480d3c200aa867770
+ms.openlocfilehash: 551aaa12a4a567b955b7d5e005e205c4029aa382
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72814656"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984901"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -157,7 +157,7 @@ Azure Information Protection クライアント (クラシック) と Azure Info
 |適用されたラベルのアクションを削除する: | ユーザーは確認するよう求められます <br /><br />既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されません  <br /><br />| ユーザーは確認するよう求められません<br /><br /> 既定のラベルや自動ラベル (構成している場合) は、Office アプリで次にファイルを開いたときに自動的に適用されます|
 |自動および推奨ラベル: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
 |自動および推奨ラベルのカスタマイズ可能なポリシーヒント: | [はい] <br /><br />Azure portal を使用して、既定のメッセージをユーザーに置き換えます。 | [いいえ] <br /><br /> 管理センターには、カスタマイズされたポリシーヒントを指定するオプションがありますが、このオプションは、統一されたラベル付けクライアントでは現在サポートされていません。|
-|ファイルの既定の保護レベルを変更します。 | [はい] <br /><br />[レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)を使用して、ネイティブ保護と汎用保護の既定値を上書きすることができます。 | [いいえ] |
+|ファイルの種類の既定の保護動作を変更します。 | [レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)を使用して、ネイティブ保護と汎用保護の既定値を上書きすることができます。 | [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)を使用して、保護するファイルの種類を変更できます。|
 
 特定の保護設定の動作の違いの詳細な比較については、「[ラベルの保護設定の動作の比較](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label)」を参照してください。
 

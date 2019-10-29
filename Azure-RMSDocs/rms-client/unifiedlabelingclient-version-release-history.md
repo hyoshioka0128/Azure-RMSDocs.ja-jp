@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7a41debe26783b530ec92dd38aa308b5e9da7546
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 1f0ed559646acb36931a55ed2cd321bae91395fc
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805271"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984839"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -68,11 +68,11 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
         - **既定のラベル**:**なし**
         - **ファイル**のラベルの再設定: **[** **既定のラベルを強制**する] チェックボックスがオンになっている
     
-    - 従来のクライアントのスキャナーと同様に、スキャナーは Office ファイルと PDF ファイルを保護します。 現時点では、このバージョンのスキャナーによって保護される他のファイルの種類を構成することはできません。
+    - 従来のクライアントのスキャナーと同様、既定では、スキャナーは Office ファイルと PDF ファイルを保護します。 [PowerShell の詳細設定](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)を使用すると、他の種類のファイルを保護できます。
     
     - 既知の問題: 新しいラベルと名前が変更されたラベルは、スキャナープロファイルまたはリポジトリの設定の既定のラベルとして選択できません。 法
         - 新しいラベルの場合: Azure portal で、グローバルポリシーまたはスコープポリシーに使用する[ラベルを追加](../configure-policy-add-remove-label.md)します。
-        - 名前を変更したラベルの場合: Azure portal で、 **Azure Information Protection** >  > の**統合ラベル**の**管理** をクリックし、**発行** を選択します。
+        - 名前を変更したラベルの場合: Azure portal を閉じてから再度開きます。
     
     Azure Information Protection クライアント (クラシック) からスキャナーをアップグレードすることができます。 アップグレード後に新しいデータベースが作成されると、スキャナーは初回実行時にすべてのファイルを再スキャンします。 手順については、管理者ガイドの「 [Azure Information Protection スキャナーをアップグレードする](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。
     
@@ -81,6 +81,8 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - PowerShell コマンドレットの[セット-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)には、ファイルに非対話的にラベルを付ける場合の新しいパラメーター (*AppId*、 *appsecret*、 *TenantId*、 *DelegatedUser*、 *OnBehalfOf*) があります。Azure AD にアプリを登録する手順。 シナリオ例としては、スキャナーや、ドキュメントにラベルを付けるための自動 PowerShell スクリプトがあります。 手順については、管理者ガイドの「[非対話形式でファイルにラベルを付ける方法](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
     
     *DelegatedUser*は、統合されたラベル付けクライアントの最後のプレビューバージョン以降の新しいパラメーターであり、登録済みアプリの API アクセス許可が変更されたことに注意してください。
+
+- [保護するファイルの種類を変更](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)するための新しい PowerShell ラベルポリシーの詳細設定。
 
 - 新しい PowerShell ラベルポリシーの詳細設定を[使用して、ラベルの移行ルールを SharePoint プロパティに拡張](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties)します。
 

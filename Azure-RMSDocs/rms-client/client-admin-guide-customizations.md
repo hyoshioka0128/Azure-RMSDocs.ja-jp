@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのカ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/25/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: db282701b5374652d8469e5eadf42cd0a3472c3b
-ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
+ms.openlocfilehash: a9226d20962d1d51608ef0d5d487e785006fd8dc
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916290"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984922"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -576,7 +576,7 @@ Azure Information Protection クライアントがユーザーによって指定
 
 たとえば、PDF 暗号化の ISO 標準をサポートしていない PDF リーダーを使用している場合は、すべてのユーザーに対してこの設定が必要です。 または、新しい形式をサポートする PDF リーダーを段階的に導入する場合は、一部のユーザーに対してその設定を構成する必要があります。 この設定を使用する別の理由としては、署名された PDF ドキュメントに保護を追加することが必要な場合が挙げられます。 署名された PDF ドキュメントを .ppdf 形式を使用してさらに保護することができます。これは、この保護がファイルのラッパーとして実装されるために可能になります。 
 
-Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 EnablePDFv2Protection が False に設定されているときにスキャナーで PDF ドキュメントを保護する場合は、[レジストリを編集する](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner)必要があります。
+Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 EnablePDFv2Protection が False に設定されているときにスキャナーで PDF ドキュメントを保護する場合は、[レジストリを編集する](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected)必要があります。
 
 新しい PDF の暗号化について詳しくは、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 

@@ -4,7 +4,7 @@ description: 現在のバージョンの Azure Information Protection スキャ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b83fcc4a7f5d8a586e6e2f8c4b51ef93d0cb257
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 05ccffd1370a73bf5f5286f40be0510316e3f883
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805751"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984960"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -411,9 +411,9 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 - ラベルで分類と保護が適用されるが、スキャナーでファイルの種類が保護されていない場合。
     
-    既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 クラシッククライアントのスキャナーでは、次のセクションで説明するように、[レジストリを編集](#editing-the-registry-for-the-scanner)するときに他のファイルの種類を保護できます。
+    既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 次のセクションで説明するように、[保護するファイルの種類を変更](#change-which-file-types-to-protect)するときに、その他のファイルの種類を保護することができます。
 
-たとえば、.txt ファイルの種類では "分類のみ" がサポートされていないため、ファイル名拡張子が .txt であるファイルを検査した後は、分類用にだけ構成されていて保護用には構成されていないラベルを、スキャナーで適用することはできません。 ラベルが分類用と保護用に構成されていて、レジストリが .txt ファイルの種類用に編集されている場合は、スキャナーでファイルにラベルを付けることができます。 
+たとえば、.txt ファイルの種類では "分類のみ" がサポートされていないため、ファイル名拡張子が .txt であるファイルを検査した後は、分類用にだけ構成されていて保護用には構成されていないラベルを、スキャナーで適用することはできません。 ラベルが分類および保護用に構成されていて、拡張子 .txt が付いている場合は、スキャナーによってファイルにラベルを付けることができます。 
 
 > [!TIP]
 > このプロセス中にスキャナーが停止し、リポジトリ内の大量のファイルのスキャンが完了しない場合:
@@ -435,13 +435,19 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 - ラベルで分類と保護が適用されるが、スキャナーでファイルの種類が保護されていない場合。
     
-    既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 クラシッククライアントのスキャナーでは、次に説明するように、レジストリを[編集](#editing-the-registry-for-the-scanner)するときに他のファイルの種類を保護できます。
+    既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 次に説明するように、保護するファイルの種類を変更するときに、その他のファイルの種類を保護できます。
 
-### <a name="editing-the-registry-for-the-scanner"></a>スキャナーのレジストリの編集
+## <a name="change-which-file-types-to-protect"></a>保護するファイルの種類を変更する
+
+既定では、スキャナーは Office ファイルの種類と PDF ファイルのみを保護します。 この動作は、たとえばスキャナーがすべてのファイルの種類を保護するように変更できます。これは、クライアントと同じ保護動作です。 また、スキャナーは、Office のファイルの種類と PDF ファイルに加えて、指定した追加のファイルの種類を保護します。 
+
+構成手順については、次のセクションを参照してください。
+
+### <a name="scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected"></a>クラシッククライアントからのスキャナー: レジストリを使用して、保護するファイルの種類を変更します。
 
 このセクションは、クラシッククライアントからのスキャナーにのみ適用されます。
 
-Office ファイルと PDF 以外のファイルの種類を保護するためにスキャナーの既定の動作を変更するには、レジストリを手動で編集し、保護する他のファイルの種類と、保護の種類 (ネイティブまたは汎用) を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
+Office ファイルや Pdf 以外のファイルの種類を保護するための既定のスキャナー動作を変更するには、レジストリを編集し、保護するファイルの種類と保護の種類 (ネイティブまたは汎用) を指定する必要があります。 詳しくは、開発者ガイダンスの「[ファイル API の構成](develop/file-api-configuration.md)」をご覧ください。 この開発者向けドキュメントでは、汎用的な保護は "PFile" と呼ばれています。 さらに、スキャナーの場合:
 
 - スキャナーには独自の既定の動作があります。既定では、Office ファイル形式と PDF ドキュメントのみが保護されます。 レジストリを変更しない場合、その他のファイル形式は、スキャナーによってラベル付けまたは保護されません。
 
@@ -456,6 +462,25 @@ Office ファイルと PDF 以外のファイルの種類を保護するため�
 ネイティブ保護をサポートしていても、レジストリで指定する必要がある、テキストおよびイメージファイルの種類の一覧については、「[分類と保護のサポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection)」を参照してください。
 
 ネイティブ保護がサポートされていないファイルの場合は、新しいキーとしてファイル名拡張子を指定し、汎用的な保護のために **PFile** を指定します。 結果として、保護されるファイルのファイル名拡張子は .pfile になります。
+
+### <a name="scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected"></a>統合されたラベル付けクライアントからのスキャナー: PowerShell を使用して、保護するファイルの種類を変更します。
+
+このセクションは、統合されたラベル付けクライアントからのスキャナーにのみ適用されます。
+
+スキャナーのラベルをダウンロードするユーザーアカウントに適用されるラベルポリシーについては、 **PFileSupportedExtensions**という名前の PowerShell の詳細設定を指定します。 
+
+> [!NOTE]
+> インターネットにアクセスできるスキャナーの場合、このユーザーアカウントは、 *DelegatedUser*パラメーターに指定するアカウントで、Set-AIPAuthentication コマンドを使用します。
+
+例 1: すべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド: ラベルポリシーの名前は "Scanner" です。
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+例 2: スキャナーの PowerShell コマンドを使用して、Office ファイルと PDF ファイルに加えて .xml ファイルと tiff ファイルを保護します。ここで、ラベルポリシーには "Scanner" という名前を付けます。
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
+
+詳細な手順については、管理者ガイドの「[保護するファイルの種類を変更](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)する」を参照してください。
 
 
 ## <a name="when-files-are-rescanned"></a>ファイルが再スキャンされる場合

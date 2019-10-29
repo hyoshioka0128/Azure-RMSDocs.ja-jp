@@ -3,7 +3,7 @@ title: カスタム構成-Azure Information Protection 統合されたラベル�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e396296e896dad79deaf8caf3474e7297ccd2080
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 6db8efdd32d945ad5e604041b87e7da2a2ee1b8b
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805693"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984907"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -136,6 +136,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|PFileSupportedExtensions|[保護するファイルの種類を変更する](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[必須のラベル付けを使用するときにドキュメントの "後で" を削除する](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[他のラベル付けソリューションからヘッダーとフッターを削除する](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[ユーザーの "問題の報告" を追加する](#add-report-an-issue-for-users)|
@@ -226,6 +227,39 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
+## <a name="change-which-file-types-to-protect"></a>保護するファイルの種類を変更する
+
+この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
+
+既定では、Azure Information Protection の統一されたラベル付けクライアントは、すべてのファイルの種類を保護します。クライアントのスキャナーは、Office のファイルの種類と PDF ファイルのみを保護します。
+
+次のように指定すると、選択したラベルポリシーの既定の動作を変更できます。
+
+- キー: **PFileSupportedExtensions**
+
+- 値: **<string value>** 
+
+次の表を使用して、指定する文字列値を指定します。
+
+| 文字列値| クライアント| スキャナー|
+|-------------|-------|--------|
+|\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
+|\<null 値 >| Office ファイルの種類と PDF ファイルに保護を適用する| 既定値: Office ファイルの種類と PDF ファイルに保護を適用する|
+|Convertto-html (".jpg", ".png")|Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。 | Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。
+
+例 1: Office ファイルの種類と PDF ファイルのみを保護する統合クライアント用の PowerShell コマンド。ラベルポリシーには "Client" という名前が付けられています。
+
+    Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+
+例 2: すべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド: ラベルポリシーに "Scanner" という名前を付けます。
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+例 3: スキャナーの PowerShell コマンドを使用して、Office ファイルと PDF ファイルに加え、.txt ファイルと .csv ファイルを保護します。ここで、ラベルポリシーには "Scanner" という名前を付けます。
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+
+この設定では、保護するファイルの種類を変更できますが、既定の保護レベルをネイティブから汎用に変更することはできません。 たとえば、統一されたラベル付けクライアントを実行しているユーザーに対しては、既定の設定を変更して、Office ファイルと PDF ファイルのみをすべてのファイルの種類ではなく保護するようにすることができます。 ただし、これらのファイルの種類は、pfile ファイル名拡張子で汎用的に保護されるように変更することはできません。
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>必須のラベル付けを使用するときにドキュメントの "後で" を削除する
 
