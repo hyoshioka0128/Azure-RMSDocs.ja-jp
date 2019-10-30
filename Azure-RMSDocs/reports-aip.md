@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 10/24/2019
+ms.date: 10/29/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
-ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
+ms.openlocfilehash: 8f8022ba40b04c7a579cdf4caf7f9a8d60c19014
+ms.sourcegitcommit: e90658d1a43e883f8abef9a8c242a920cd484cbc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890297"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057680"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -294,7 +294,6 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |LabelNameBefore |変更前のラベル名 (ローカライズされていない) |
 |ProtectionType|保護の種類 [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |保護の開始|変更前の保護の種類 [JSON] |
-|Informationmatches の一致|[SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for)の JSON 配列が見つかりませんでした。空の配列は、情報の種類が見つからないことを意味し、null は使用できる情報がないことを意味します。|
 |MachineName |FQDN (使用可能な場合)。それ以外のホスト名|
 |DeviceRisk|WDATP からのデバイスのリスクスコア (利用可能な場合)|
 |プラットフォーム|デバイスプラットフォーム (Win、OSX、Android、iOS) |
