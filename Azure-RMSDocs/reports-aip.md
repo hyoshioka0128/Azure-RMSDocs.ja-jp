@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 10/29/2019
+ms.date: 11/01/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8f8022ba40b04c7a579cdf4caf7f9a8d60c19014
-ms.sourcegitcommit: e90658d1a43e883f8abef9a8c242a920cd484cbc
+ms.openlocfilehash: 616e273f3d3a9a615e752e4fb9587165aac15a23
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057680"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445065"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -120,7 +120,7 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - クライアント オペレーティング システムのバージョン。
 
-この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions)に関するセクションをご覧ください。
+この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)に関するセクションをご覧ください。
 
 Azure Information Protection クライアント (クラシック) がこのデータを送信できないようにするには、 **[監査データを Azure Information Protection analytics に送信する]** の[ポリシー設定](configure-policy-settings.md)を **[オフ]** に設定します。
 

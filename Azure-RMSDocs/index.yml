@@ -11,13 +11,13 @@ metadata:
   author: cabailey
   ms.author: cabailey
   manager: rkarlin
-  ms.date: 09/17/2019
-  ms.openlocfilehash: d742e972ab50a297641de26723f05b4129806ca0
-  ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+  ms.date: 11/01/2019
+  ms.openlocfilehash: 433565965e0f3cdf8dfd94ed11769b547c75a01c
+  ms.sourcegitcommit: 260bf72bbc04e825c825805824546d203821f6c6
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/23/2019
-  ms.locfileid: "72805493"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73428743"
 landingContent:
 - title: Azure Information Protection について
   linkLists:
@@ -45,6 +45,22 @@ landingContent:
       url: deployment-roadmap.md
     - text: 一般的なシナリオ
       url: how-to-guides.md
+- title: 最新のままにする
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 10 月のドキュメントの更新
+      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog
+    - text: バージョン 2.5.33.0 の詳細 - ラベル付けクライアントの統合
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: 上位 5 つの推奨される Ignite セッション
+      url: what-is-information-protection.md#microsoft-ignite
+- title: オンプレミスのデータ ストアのデータを分類および保護する
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: スキャナーのデプロイ
+      url: deploy-aip-scanner.md
 - title: クライアントのカスタマイズ
   linkLists:
   - linkListType: how-to-guide
@@ -53,28 +69,6 @@ landingContent:
       url: ./rms-client/client-admin-guide-customizations.md
     - text: 統合ラベル付けクライアント:詳細設定
       url: ./rms-client/clientv2-admin-guide-customizations.md
-- title: 統合ラベルのアクティブ化
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: クライアントの比較
-      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
-  - linkListType: how-to-guide
-    links:
-    - text: Azure Information Protection ラベルの移行
-      url: configure-policy-migrate-labels.md
-- title: オンプレミスのデータ ストアのデータを分類および保護する
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: スキャナーのデプロイ
-      url: deploy-aip-scanner.md
-- title: ラベルの使用状況の監視と機密情報の検出
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 中央レポート機能 (プレビュー)
-      url: reports-aip.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -91,3 +85,19 @@ landingContent:
     links:
     - text: C++ の API リファレンス
       url: /information-protection/develop/mip-sdk-reference
+- title: 統合ラベルのアクティブ化
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ラベル付けクライアントを選択する
+      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Information Protection ラベルの移行
+      url: configure-policy-migrate-labels.md
+- title: ラベルの使用状況の監視と機密情報の検出
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 中央レポート機能 (プレビュー)
+      url: reports-aip.md

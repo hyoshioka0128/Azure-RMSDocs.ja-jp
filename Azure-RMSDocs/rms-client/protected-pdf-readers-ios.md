@@ -4,19 +4,19 @@ description: 分類と保護のラベルが付けられている PDF ドキュ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 3d6ee4c9a265908c8fe1f6c73593d0f3ad84c1ba
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 6f492e46c02329747c2ba4b1eee5f64294e65f2d
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978373"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445153"
 ---
 # <a name="install-a-pdf-reader-for-ios"></a>IOS 用 PDF リーダーのインストール
 
@@ -24,7 +24,7 @@ ms.locfileid: "69978373"
 
 保護された PDF ドキュメントを iOS デバイスで開く必要がある場合は、Apple App store から[Azure Information Protection アプリ](https://go.microsoft.com/fwlink/?LinkId=325338)をダウンロードしてください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 保護されたドキュメントのリーダーと、他のプラットフォームのダウンロードリーダーへのリンクについては、「 [Microsoft Information Protection をサポートする PDF リーダー](protected-pdf-readers.md)」を参照してください。
 

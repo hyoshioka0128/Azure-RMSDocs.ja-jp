@@ -4,7 +4,7 @@ description: 分類と保護のラベルが付けられた PDF ドキュメン�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 390eb0bd48b4b9ca6f36957a2ac63ed6903a83fc
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 23d9f5cf45b579542ecb9c297270bc426c2a914b
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69974781"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444839"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Microsoft Information Protection をサポートする PDF リーダー
 
@@ -29,9 +29,9 @@ Microsoft Information Protection によって保護されている PDF ドキュ
 
 保護された PDF ドキュメントを開くことができる PDF リーダーのインストールに使用しているデバイスを選択します。 これらのすべての閲覧者は、ISO 標準の PDF 暗号化に準拠した保護されたドキュメントを開くことができます。
 
-- **コンピューター**:[Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
+- **コンピューター**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
 
-- **モバイル デバイス**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
+- **モバイルデバイス**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>以前の形式のサポート
 
@@ -44,7 +44,7 @@ Microsoft Information Protection によって保護されている PDF ドキュ
 |----------------|-----------------------------------|
 |Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF<br /><br />RMS 共有アプリ|
 |Android|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />GigaTrust App for Android|
-|iOS|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|
+|[iOS]|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|
 
 ## <a name="using-adobe-acrobat-reader-with-the-adobe-plug-in"></a>Adobe Acrobat Reader と Adobe プラグインの使用
 

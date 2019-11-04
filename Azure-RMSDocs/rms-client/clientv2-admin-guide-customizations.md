@@ -1,9 +1,10 @@
 ---
 title: カスタム構成-Azure Information Protection 統合されたラベル付けクライアント
+description: Windows 用に Azure Information Protection 統合ラベルクライアントをカスタマイズする方法について説明します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6db8efdd32d945ad5e604041b87e7da2a2ee1b8b
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 9c0ccde192774f90c95afd70ce1acb766d6a66f1
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984907"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445164"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -902,7 +903,7 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるラベルの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-これらの設定は、動作中の[S/MIME 展開](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption)があり、Azure Information Protection からの Rights Management 保護ではなく、電子メールに対してこの保護方法を自動的に適用するラベルが必要な場合にのみ使用してください。 結果として得られる保護は、ユーザーが Outlook から手動で S/MIME オプションを選択した場合と同じものです。
+これらの設定は、動作中の[S/MIME 展開](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption)があり、Azure Information Protection からの Rights Management 保護ではなく、電子メールに対してこの保護方法を自動的に適用するラベルが必要な場合にのみ使用してください。 結果として得られる保護は、ユーザーが Outlook から手動で S/MIME オプションを選択した場合と同じものです。
 
 S/MIME デジタル署名の詳細設定を構成するには、選択したラベルに次の文字列を入力します。
 

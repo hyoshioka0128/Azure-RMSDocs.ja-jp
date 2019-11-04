@@ -3,8 +3,8 @@ title: Azure Information Protection 用の AIPService PowerShell モジュール
 description: Azure Information Protection から保護サービス用の PowerShell をインストールする手順を説明します。 このモジュールの名前は AIPService です。
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 08/27/2019
+manager: rkarlin
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,28 +12,28 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 89820a815e664589051a91f273cb63280e70713a
-ms.sourcegitcommit: 72ae1f635e51ef6c6deb1833a30ff11e5918a3e7
+ms.openlocfilehash: 1061b548e0996f27fdf3bcdea8bfc523e3a19af5
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063729"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444958"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>AIPService PowerShell モジュールのインストール
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection から保護サービス用の Windows PowerShell モジュールをインストールするには、次の情報を参照してください。 このモジュールの名前は AIPService で、AADRM という名前の以前のバージョンと置き換えられます。
 
 この PowerShell モジュールを使用すると、インターネットに接続され、次のセクションに記載されている前提条件を満たす任意の Windows コンピューターを使用して、コマンドラインから保護サービス (Azure Rights Management) を管理できます。 Azure Information Protection 用の Windows PowerShell は、自動化のためのスクリプトをサポートするか、高度な構成シナリオで必要になる場合があります。 モジュールでサポートされている管理タスクと構成の詳細については、「 [PowerShell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 次の表に、Azure Information Protection から保護サービス用の AIPService PowerShell モジュールをインストールして使用するための前提条件を示します。
 
-|必要条件|詳細情報|
+|要件|説明を見る|
 |---------------|--------------------|
-|Windows PowerShell の最小バージョン:3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
-|Microsoft .NET Framework の最小バージョン:4.5<br /><br />メモ:このバージョンの Microsoft .NET Framework は、以降のオペレーティングシステムに含まれています。そのため、クライアントのオペレーティングシステムが Windows 8.0 より小さい場合、またはサーバーのオペレーティングシステムが Windows Server 2012 よりも小さい場合にのみ、手動でインストールする必要があります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この Microsoft .NET Framework の最小バージョンは、AIPService モジュールで使用されるクラスの一部に必要です。|
+|Windows PowerShell の最小バージョン: 3.0|PowerShell セッションで「`$PSVersionTable`」と入力すると、実行中の Windows PowerShell のバージョンを確認できます。 <br /><br /> 新しいバージョンの Windows PowerShell をインストールする必要がある場合は、「[既存の Windows PowerShell をアップグレードする](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell)」を参照してください。|
+|Microsoft .NET Framework の最小バージョン: 4.5<br /><br />注: このバージョンの Microsoft .NET Framework は、以降のオペレーティングシステムに含まれています。そのため、クライアントのオペレーティングシステムが Windows 8.0 より小さい場合、またはサーバーのオペレーティングシステムが Windows Server 2012 よりも小さい場合にのみ、手動でインストールする必要があります。|Microsoft .NET Framework の最小バージョンがまだインストールされていない場合は、[Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) をダウンロードできます。<br /><br />この Microsoft .NET Framework の最小バージョンは、AIPService モジュールで使用されるクラスの一部に必要です。|
 
 ## <a name="if-you-have-the-aadrm-module-installed"></a>AADRM モジュールがインストールされている場合
 
@@ -49,11 +49,11 @@ Azure Rights Management 管理ツールを使用して AADRM モジュールを�
 
 ## <a name="how-to-install-the-aipservice-module"></a>AIPService モジュールをインストールする方法
 
-AIPService モジュールは[PowerShell ギャラリー](/powershell/gallery/readme)上にあり、Microsoft ダウンロードセンターからは使用できません。 
+AIPService モジュールは[PowerShell ギャラリー](https://www.powershellgallery.com/)上にあり、Microsoft ダウンロードセンターからは使用できません。 
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>PowerShell ギャラリーから AIPService モジュールをインストールするには
 
-PowerShell ギャラリーを初めてお使いの場合は、「[PowerShell ギャラリーの概要](/powershell/gallery/psgallery/psgallery_gettingstarted)」を参照してください。 PowerShellGet モジュールと NuGet プロバイダーのインストールを含む、ギャラリー要件の手順に従います。
+PowerShell ギャラリーを初めてお使いの場合は、「[PowerShell ギャラリーの概要](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6)」を参照してください。 PowerShellGet モジュールと NuGet プロバイダーのインストールを含む、ギャラリー要件の手順に従います。
 
 PowerShell ギャラリーの AIPService モジュールの詳細を確認するには、 [Aipservice のページ](https://www.powershellgallery.com/packages/AIPService)にアクセスしてください。
 
@@ -61,21 +61,21 @@ AIPService モジュールをインストールするには、 **[管理者と�
 
     Install-Module -Name AIPService
 
-信頼されていないリポジトリからのインストールについての警告が表示される場合は、Y キーを押して確認できます。 または、N キーを押し、コマンド`Set-PSRepository -Name PSGallery -InstallationPolicy Trusted`を使用して PowerShell ギャラリーを信頼できるリポジトリとして構成してから、コマンドを再実行して aipservice モジュールをインストールします。  
+信頼されていないリポジトリからのインストールについての警告が表示される場合は、Y キーを押して確認できます。 または、N キーを押し、コマンド `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` を使用して PowerShell ギャラリーを信頼されたリポジトリとして構成してから、コマンドを再実行して AIPService モジュールをインストールします。  
 
 以前のバージョンの AIPService モジュールがギャラリーからインストールされている場合は、次のように入力して最新のバージョンに更新します。
 
     Update-Module -Name AIPService
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 Windows PowerShell セッションで、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。
 
 ```
 (Get-Module AIPService –ListAvailable).Version
 ```
 
-メモ:このコマンドが失敗した場合は、最初に**インポートモジュール AIPService**を実行します。
+注: このコマンドが失敗した場合は、最初に**インポートモジュール AIPService**を実行します。
 
 使用可能なコマンドレットを確認するには、次のコマンドを入力します。
 
@@ -83,17 +83,17 @@ Windows PowerShell セッションで、インストールされているモジ�
 Get-Command -Module AIPService
 ```
 
-`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、 **-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 例えば:
+`Get-Help <cmdlet_name>` コマンドを使って特定のコマンドレットのヘルプをご覧ください。また、 **-online** パラメーターを使って Microsoft のドキュメント サイトで最新のヘルプをご覧ください。 たとえば、次のようになります。
 
 ```
 Get-Help Connect-AipService -online
 ```
 
-詳しくは、次のトピックをご覧ください。
+詳細情報:
 
--   使用可能なコマンドレットの完全な一覧:[AIPService モジュール](/powershell/module/aipservice/?view=azureipps#aipservice)
+-   使用可能なコマンドレットの完全な一覧: [Aipservice モジュール](/powershell/module/aipservice/?view=azureipps#aipservice)
 
--   PowerShell をサポートする主要な構成シナリオの一覧:[PowerShell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)
+-   PowerShell をサポートする主要な構成シナリオの一覧: [powershell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)
 
 保護サービスを構成するコマンドを実行する前に、 [connect-AipService](/powershell/module/aipservice/connect-aipservice)コマンドレットを使用してサービスに接続する必要があります。
 

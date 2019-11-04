@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37f50c51588b908b558c60e9387e918f26393f07
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805673"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446016"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -191,6 +191,8 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 - [ポリシー設定](../configure-policy-settings.md) **[分類ラベルを低くする、ラベルを削除する、保護を削除する場合、ユーザーは理由を提供する必要があります]** がスキャナーに適用されなくなりました。 スキャナーのプロファイルで [**ファイル**のラベルを **[オン**] に設定する] を構成し、[**ラベルダウングレードを許可**する] チェックボックスをオンにすると、これらの操作が実行されます。
 
 ## <a name="next-steps"></a>次のステップ
+
+インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
 クライアントのインストールと使用の詳細: 
 

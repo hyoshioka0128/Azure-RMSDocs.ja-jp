@@ -4,7 +4,7 @@ description: Azure Information Protection のデータ保護サービス、Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/09/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01b0e866105eeb69e46db9deb497425b627f9ef5
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 170e171ba3eb57e568762bc4745d613934c6af53
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314385"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445105"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -28,7 +28,7 @@ Azure Information Protection のデータ保護サービス、Azure Rights Manag
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>ファイルを Azure Rights Management で保護するには、クラウドに置いておく必要があるのでしょうか。
 よくある誤解ですが、そのようなことはありません。 Azure Rights Management サービス (と Microsoft) では、情報保護の一環としてユーザーのデータを閲覧したり、保存したりすることはありません。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。
 
-詳細については、「[Azure RMS の機能の詳細](./how-does-it-work.md)」を参照してください。(コーラのレシピのように) オンプレミスで作成および保管している機密性の高いデータを Azure Rights Management サービスで保護しながら、引き続きオンプレミスに置いておくことができるしくみについて説明しています。
+詳細については、「Azure RMS のしくみ」を参照してください[。内部](./how-does-it-work.md)設置型で格納され、オンプレミスに格納されている secret cola 式が Azure Rights Management サービスによって保護されていても、オンプレミスのままになっていることを理解するためのものです。
 
 ## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Azure Rights Management 暗号化と Microsoft のその他のクラウド サービスでの暗号化の違いは何ですか。
 
@@ -80,7 +80,7 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 カスタム アクセス許可を使用してドキュメントが保護されている場合は、既存のドキュメントのアクセス許可を変更できません。 ドキュメントを再度保護し、この新しいバージョンのドキュメントに必要なすべてのユーザーとすべての使用権限を指定する必要があります。 保護されたドキュメントを再保護するには、"フル コントロール" 使用権限が必要です。
 
-ヒント:ドキュメントがテンプレートで保護されているのか、それともカスタム アクセス許可を使用して保護されているのかを確認するには、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを使用してください。 [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) を実行したときに一意のテンプレート ID が表示されない場合は、カスタム アクセス許可の **[制限されたアクセス]** に関するテンプレートの説明を必ず確認してください。
+ヒント: ドキュメントがテンプレートで保護されているのか、それともカスタム アクセス許可を使用して保護されているのかを確認するには、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを使用してください。 [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) を実行したときに一意のテンプレート ID が表示されない場合は、カスタム アクセス許可の **[制限されたアクセス]** に関するテンプレートの説明を必ず確認してください。
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>一部のユーザーが Exchange Online 上の Exchange に、他のユーザーが Exchange Server 上の Exchange に登録されているハイブリッド デプロイメント構成です。この構成は、Azure RMS でサポートされていますか。
 はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ化し](activate-service.md)、[IRM for Exchange Online を有効にして](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)、[RMS コネクタをデプロイして](deploy-rms-connector.md) Exchange Server 用に構成します。
@@ -110,7 +110,7 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>社外のユーザーをカスタム テンプレートに追加できますか?
 
-可能。 Azure Portal で構成できる[保護設定](configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 これについては、必要に応じて「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。 
+○ Azure Portal で構成できる[保護設定](configure-policy-protection.md)では、組織の外部からユーザーとグループや、別組織の全ユーザーに対しても、アクセス許可を追加することができます。 これについては、必要に応じて「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。 
 
 Azure Information Protection ラベルがある場合は、最初にカスタム テンプレートをラベルに変換してから、Azure Potal でこれらの保護設定を構成する必要があります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 
@@ -120,7 +120,7 @@ Azure Information Protection ラベルがある場合は、最初にカスタム
 
 2. RightsDefinition パラメーターにこの変数を指定します。これには、 [Set AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを使用します。
 
-    ユーザーを既存のテンプレートを追加するときに、新しいユーザーに加え、テンプレート内の既存のユーザーに対して、権限定義オブジェクトを定義する必要があります。 このシナリオでは、「**Example 3: Add new users and rights to a custom template**」 (例 3: カスタム テンプレートへの新しいユーザーと権利の追加) が役に立ちます。この例は、コマンドレットの「[例](/powershell/module/aipservice/set-aipservicetemplateproperty#examples)」セクションにあります。
+    ユーザーを既存のテンプレートを追加するときに、新しいユーザーに加え、テンプレート内の既存のユーザーに対して、権限定義オブジェクトを定義する必要があります。 このシナリオでは、コマンドレットの「[例](/powershell/module/aipservice/set-aipservicetemplateproperty#examples)」セクションの「**Example 3: Add new users and rights to a custom template**」 (例 3: カスタム テンプレートへの新しいユーザーと権利の追加) が役に立ちます。
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Azure RMS では、どの種類のグループを使用できますか?
 ほとんどのシナリオでは、電子メール アドレスを持つ、Azure AD 内の任意の種類のグループを使用できます。 この経験則は、使用権限を割り当てる際に常に適用されますが、Azure Rights Management サービスの管理の場合はいくつか例外があります。 詳細については、「[グループ アカウントに関する Azure Information Protection の要件](prepare.md#azure-information-protection-requirements-for-group-accounts)」を参照してください。
@@ -131,9 +131,9 @@ Exchange Online と Azure Rights Management サービスを使用する場合は
 
 受信者には Gmail、Yahoo、または Microsoft アカウントにサインインするためのオプションが表示され、保護された電子メールを読むことができます。 また、ブラウザーで電子メールを読み取るためにワンタイム パスワードのオプションを選択することもできます。
 
-このシナリオをサポートするには、Exchange Online を Azure Rights Management サービスおよび Office 365 のメッセージの暗号化の新しい機能で使用できるようにする必要があります。 この構成の詳細については、「[Exchange Online: IRM 構成](configure-office365.md#exchangeonline-irm-configuration)」を参照してください。
+このシナリオをサポートするには、Exchange Online を Azure Rights Management サービスおよび Office 365 のメッセージの暗号化の新しい機能で使用できるようにする必要があります。 この構成の詳細については、「[Exchange Online: IRM 構成](configure-office365.md#exchangeonline-irm-configuration)」をご覧ください。
 
-すべてのデバイスですべての電子メール アカウントをサポートする新機能の詳細については、ブログ記事「[Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)」 (Office 365 のメッセージの暗号化で使用できる新機能のお知らせ) を参照してください。
+すべてのデバイスですべての電子メール アカウントをサポートする新機能の詳細については、ブログの投稿「[Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)」 (Office 365 のメッセージの暗号化で使用できる新機能のお知らせ) を参照してください。
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Azure RMS でサポートされているデバイスとファイルの種類を教えてください。
 Azure Rights Management サービスをサポートするデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](./requirements-client-devices.md)」をご覧ください。 サポートされているデバイスによっては一部の Rights Management 機能がサポートされていないため、[RMS 対応のアプリケーション](./requirements-applications.md#rms-enlightened-applications)の表も確認してください。
@@ -154,12 +154,12 @@ Office 365 の職場または学校のアカウントを使用して、Outlook �
 
     これによって Azure Rights Management テンプレートがダウンロードされ、**資格情報の確認**が、**無制限**、**転送不可**、およびユーザーのテナント用に公開されたすべての Azure Rights Management テンプレートを含むオプションで置換されます。 この新しいメッセージを今すぐ取り消すことができます。
 
-電子メール メッセージやドキュメントを保護するには: **[オプション]** タブで、 **[アクセス許可]** をクリックして、電子メールやドキュメントを保護するオプションまたはテンプレートを選択します。
+電子メール メッセージやドキュメントを保護するには、 **[オプション]** タブで、 **[アクセス許可]** をクリックして、電子メールやドキュメントを保護するオプションまたはテンプレートを選択します。
 
-ドキュメントを保護した後、ドキュメントを追跡するには: Azure Information Protection クライアントをインストールした Windows コンピューターから、Office アプリケーションまたはエクスプローラーを使用して、ドキュメントをドキュメント追跡サイトに登録します。 手順については、[ドキュメントの追跡と取り消し](./rms-client/client-track-revoke.md)に関する記事を参照してください。 Mac コンピューターからは、現在、Web ブラウザーを使用してドキュメント追跡サイト (https://track.azurerms.com) ) に移動し、このドキュメントを追跡して取り消すことができます。
+ドキュメントを保護した後、ドキュメントを追跡するには、Azure Information Protection クライアントをインストールした Windows コンピューターから、Office アプリケーションまたはエクスプローラーを使用して、ドキュメントをドキュメント追跡サイトに登録します。 手順については、[ドキュメントの追跡と取り消し](./rms-client/client-track-revoke.md)に関する記事を参照してください。 Mac コンピューターからは、現在、Web ブラウザーを使用してドキュメント追跡サイト (https://track.azurerms.com) ) に移動し、このドキュメントを追跡して取り消すことができます。
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>RMS で保護されている Office ドキュメントを開いた場合、関連付けられた一時ファイルも RMS で保護されたものになりますか。
-No. このシナリオでは、関連付けられている一時ファイルには元のドキュメントのデータは含まれず、ユーザーがファイルを開いているときに入力したもののみが含まれます。 元のファイルとは異なり、一時ファイルは明らかに共有用に設計されておらず、BitLocker や EFS などのローカル セキュリティ コントロールによって保護されデバイス上に残ります。
+いいえ。 このシナリオでは、関連付けられている一時ファイルには元のドキュメントのデータは含まれず、ユーザーがファイルを開いているときに入力したもののみが含まれます。 元のファイルとは異なり、一時ファイルは明らかに共有用に設計されておらず、BitLocker や EFS などのローカル セキュリティ コントロールによって保護されデバイス上に残ります。
 
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>必要な機能があるのですが、SharePoint で保護されたライブラリには使用できないようです。この機能のサポートは予定されていますか。
 現在のところ、SharePoint は、IRM で保護されたライブラリを使用して、RMS で保護されたドキュメントをサポートしています。IRM で保護されたライブラリは、Rights Management テンプレートやドキュメントの追跡などの機能をサポートしていません。 詳細については、記事「[Office アプリケーションおよびサービス](./office-apps-services-support.md)」の「[SharePoint Online と SharePoint Server](./office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションを参照してください。
@@ -169,20 +169,20 @@ No. このシナリオでは、関連付けられている一時ファイルに�
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>ユーザーが社内や社外の人間とファイルを安全に共有できるように SharePoint Online で OneDrive for Business を構成するには、どうすればよいですか。
 既定では、Office 365 管理者は構成しません。ユーザーが構成します。
 
-SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、「[SharePoint Online と OneDrive for Business: IRM 構成](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)」セクション (「[Office 365: クライアントとオンライン サービスの構成](configure-office365.md)」の記事) を参照してください。
+SharePoint サイト管理者が、所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive for Business は、ユーザーが自身の OneDrive for Business ライブラリの IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、記事「[Office 365: クライアントとオンライン サービスの構成](configure-office365.md)」の「[SharePoint Online と OneDrive for Business:IRM 構成](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)」セクションをご覧ください。
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>正常にデプロイするためのヒントやコツがあれば教えてください。
 
-多くのデプロイを監視し、お客様、パートナー、コンサルタント、サポートエンジニアにご参加いただくと、経験から次のような最大のヒントを得られます。**シンプルなポリシーを設計してデプロイすること**です。
+これまでに多数のデプロイをサポートし、顧客、パートナー、コンサルタント、サポート エンジニアから話を聞いてきた経験から言える一番のヒントは、**シンプルなポリシーを設計してデプロイすること**です。
 
-Azure Information Protection では、他のユーザーと情報を安全に共有できるため、データ保護の範囲を詳細に指定することができます。 使用権限の制限の構成は慎重に行ってください。 多くの組織にとって、業務上最も重要な利点は、組織内のユーザーのアクセス許可を制限して、データ漏えいを防止できることです。 もちろん、印刷や編集などの操作を制限する必要があれば、より詳細なポリシーを作成することもできます。ただし、そのような細かい制限は、高レベルのセキュリティが本当に必要なドキュメントに限定してください。最初から制限の厳しい使用権限を実装するのではなく、より段階的な方法を計画することをお勧めします。
+Azure Information Protection では、他のユーザーと情報を安全に共有できるため、データ保護の範囲を詳細に指定することができます。 使用権限の制限の構成は慎重に行ってください。 多くの組織にとって、業務上最も重要な利点は、組織内のユーザーのアクセス許可を制限して、データ漏えいを防止できることです。 もちろん、印刷や編集などを防ぐ必要がある場合に比べて、はるかに詳細な情報を得ることができます。ただし、高レベルのセキュリティが本当に必要なドキュメントについては、例外としてより細かい制限を設け、1日に制限の厳しい使用権限を実装するのではなく、より段階的なアプローチを計画することをお勧めします。
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>退職した従業員が保護していたファイルにアクセスするには、どうすればよいですか。
 [スーパー ユーザー機能](configure-super-users.md)を使用してください。この機能により、テナントで保護されているすべてのドキュメントと電子メールに対して承認されたユーザーにフル コントロール使用権限が与えられます。 スーパー ユーザーは常にこの保護されたコンテンツを読み取ることができ、必要に応じて、保護を解除したり、別のユーザーのために再度保護したりすることができます。 また必要に応じて、スーパー ユーザー機能を使用すると、権限を持つサービスのインデックス化とファイルの検証を行うことができます。
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>ドキュメント追跡サイトで失効をテストすると、最大 30 日間はドキュメントにアクセスできるというメッセージが表示されます。この期間を構成することはできますか。
 
-可能。 このメッセージは、その特定のファイルの[使用ライセンス](configure-usage-rights.md#rights-management-use-license)を反映します。
+○ このメッセージは、その特定のファイルの[使用ライセンス](configure-usage-rights.md#rights-management-use-license)を反映します。
 
 ファイルを取り消すと、そのアクションは、Azure Rights Management サービスにユーザーを認証する場合にのみ適用できます。 そのため、ファイルに 30 日間の使用ライセンス有効期間があり、ユーザーが既にそのドキュメントを開いている場合、ユーザーは引き続きその使用ライセンスの期間中はドキュメントにアクセスすることができます。 使用ライセンスの期限が切れた後は、ドキュメントが取り消されているため、ユーザーのアクセスが拒否される時点で、ユーザーの再認証が必要になります。
 

@@ -3,8 +3,8 @@ title: Azure Information Protection 統合されたラベル付けクライア�
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+manager: rkarlin
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f0ed559646acb36931a55ed2cd321bae91395fc
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 0ee20b6063dffd18b5067663de05c2d7a25cabd4
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984839"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446026"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -37,6 +37,15 @@ Azure Information Protection 統合されたラベル付けクライアントは
 Azure Information Protection 統合ラベルクライアントの各一般公開 (GA) バージョンは、以降の GA バージョンのリリースから最大6か月間サポートされます。 ドキュメントには、サポートされていないバージョンのクライアントに関する情報は含まれません。 修正プログラムや新しい機能は常に最新の GA バージョンに適用され、古い GA バージョンには適用されません。
 
 実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
+
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>サポートされなくなった一般提供のバージョン:
+
+|クライアントのバージョン|リリース日|
+|--------------|-------------|
+|2.0.778.0|04/16/2019|
+
+このページで使用される日付形式は、*月/日/年*です。
+
 
 ### <a name="release-information"></a>リリース情報
 
@@ -69,6 +78,8 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
         - **ファイル**のラベルの再設定: **[** **既定のラベルを強制**する] チェックボックスがオンになっている
     
     - 従来のクライアントのスキャナーと同様、既定では、スキャナーは Office ファイルと PDF ファイルを保護します。 [PowerShell の詳細設定](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)を使用すると、他の種類のファイルを保護できます。
+    
+    - スキャナーサイクルの開始と終了に関するイベント Id は、Windows イベントログには書き込まれません。 代わりに、この情報に Azure portal を使用します。
     
     - 既知の問題: 新しいラベルと名前が変更されたラベルは、スキャナープロファイルまたはリポジトリの設定の既定のラベルとして選択できません。 法
         - 新しいラベルの場合: Azure portal で、グローバルポリシーまたはスコープポリシーに使用する[ラベルを追加](../configure-policy-add-remove-label.md)します。
@@ -195,48 +206,9 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このリリースでは、Office アプリやエクスプローラーにラベルが表示されない場合がある競合状態の問題を解決するための修正プログラムが1つあります。
 
-## <a name="version-207780"></a>バージョン2.0.778.0
-
-**リリース**日: 04/16/2019
-
-11/01/2019 でサポート
-
-Windows 用の Azure Information Protection 統合ラベルクライアントの最初の一般公開バージョンでは、次の機能がサポートされています。 
-
-- Azure Information Protection クライアントからのアップグレード。
-
-- 手動、自動、および推奨のラベル付け: このクライアントに対して自動および推奨のラベル付けを構成する方法の詳細については、「[コンテンツに機密ラベルを自動的に適用](/microsoft-365/compliance/apply-sensitivity-label-automatically)する」を参照してください。
-
-- エクスプローラー、右クリック アクションによるファイルの分類と保護、保護の削除、およびカスタムのアクセス許可の適用。
-
-- 保護されたテキストとイメージ ファイル、保護された PDF ファイル、一般的に保護されているファイル用のビューアー。
-
-- 次を実行するための PowerShell コマンド:
-    - [ドキュメント上のラベルを設定または削除する](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [内容を検査してからドキュメントをラベル付けする](/powershell/module/azureinformationprotection/set-aipfileclassification)
-    - [ドキュメントに適用されているラベル情報を読み取る](/powershell/module/azureinformationprotection/get-aipfilestatus)
-    - [無人の PowerShell セッションをサポートするために認証する](/powershell/module/azureinformationprotection/set-aipauthentication)
-
-- [Azure Information Protection analytics](../reports-aip.md)を使用した中央レポート作成のデータとエンドポイント検出の監査のサポート。
-
-- 次のラベルおよびポリシー設定:
-    - 視覚的なマーキング (ヘッダー、フッター、透かし)
-    - 既定のラベル付け-現在、サブラベルなしでラベルに制限されています
-    - 転送不可を適用し、Outlook でのみ表示されるラベル
-    - ユーザーが分類レベルを下げるかどうか、またはラベルを削除するかどうかを確認する理由プロンプト
-    - ラベルの色
-
-- 管理センターからのポリシー更新:
-    - Office アプリの起動ごと、および 4 時間ごと
-    - 右クリックしてファイルまたはフォルダーを分類して保護したとき
-    - ラベル付けと保護のために PowerShell コマンドレット を実行したとき
-
-- 設定のリセットとログのエクスポートを含む、ヘルプとフィードバックのダイアログ ボックス。
-
-
 ## <a name="next-steps"></a>次のステップ
 
-完全な詳細については、[比較表](use-client.md#compare-the-labeling-clients-for-windows-computers)をご覧ください。
+インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
 このクライアントをインストールして使用する方法の詳細については、次を参照してください。 
 

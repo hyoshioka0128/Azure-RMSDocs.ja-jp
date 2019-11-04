@@ -4,19 +4,19 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/29/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 9d4d3dfe2ccba6bf3f1f2aa46098e02e6a9a514d
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 28c63107581e6560686845b7f9a77293f505da41
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72447163"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445011"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -35,7 +35,7 @@ Information Protection バーに表示されるタイトルとヒントのほか
 
 Azure Information Protection のサブスクリプションを購入した時期に応じて、ポリシー設定の既定の値が異なることに注意してください。 一部の設定は、[カスタム クライアント設定](./rms-client/client-admin-guide-customizations.md)から設定することもできます。
 
-設定を構成するには:
+## <a name="to-configure-the-policy-settings"></a>ポリシー設定を構成するには
 
 1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
     

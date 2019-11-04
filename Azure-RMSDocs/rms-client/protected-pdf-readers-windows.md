@@ -4,19 +4,19 @@ description: 分類と保護のラベルが付けられた PDF ドキュメン�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: c600b706a1081d0693ecc50fc60adc9b94f23ab7
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 4f51ccb9bf11f6d692978cb24cf5b9bad186c690
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978356"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445119"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Windows 用 PDF リーダーのインストール
 
@@ -24,7 +24,7 @@ ms.locfileid: "69978356"
 
 Windows コンピューターで保護された PDF ドキュメントを開く必要がある場合は、adobe Acrobat Reader 用の Adobe プラグインをインストールします。
 
-**サポートされているバージョン**:Windows 7 Service Pack 1 を使用した windows 10 以前のバージョン
+**サポートされているバージョン**: windows 10 以前のバージョン (Windows 7 Service Pack 1)
 
 マニュアル 
 
@@ -45,7 +45,7 @@ PDF 暗号化の ISO 標準に準拠する保護された PDF ドキュメント
 
 ドキュメントが開いていない場合は、古い形式で保護されている可能性があります。 この場合は、[以前の形式でサポートさ](protected-pdf-readers.md#support-for-previous-formats)れているリーダーのいずれかを試してみてください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 保護されたドキュメントのリーダーと、他のプラットフォームのダウンロードリーダーへのリンクについては、「 [Microsoft Information Protection をサポートする PDF リーダー](protected-pdf-readers.md)」を参照してください。
 
