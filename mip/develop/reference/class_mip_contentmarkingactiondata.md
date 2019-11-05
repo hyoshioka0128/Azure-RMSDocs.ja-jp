@@ -5,27 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 694cb45a91136279aa6e997735e0b041a50b3744
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056158"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559313"
 ---
 # <a name="class-mipcontentmarkingactiondata"></a>クラス mip:: ContentMarkingActionData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _まだ文書化されていません。_
-public const std::string& GetFontName() const  | _まだ文書化されていません。_
-public const std::string& GetFontColor() const  | _まだ文書化されていません。_
-public ContentMarkAlignment GetContentMarkAlignment () const  | _まだ文書化されていません。_
-public int GetFontSize() const  | _まだ文書化されていません。_
-public int GetMargin() const  | _まだ文書化されていません。_
-public ContentMarkPlacement GetContentMarkPlacement () const  | _まだ文書化されていません。_
-パブリック仮想 ~ ContentMarkingActionData ()  | _まだ文書化されていません。_
+public const std::string& GetText() const  | まだ文書化されていません。
+public const std::string& GetFontName() const  | まだ文書化されていません。
+public const std::string& GetFontColor() const  | まだ文書化されていません。
+public ContentMarkAlignment GetContentMarkAlignment () const  | まだ文書化されていません。
+public int GetFontSize() const  | まだ文書化されていません。
+public int GetMargin() const  | まだ文書化されていません。
+public ContentMarkPlacement GetContentMarkPlacement () const  | まだ文書化されていません。
+パブリック仮想 ~ ContentMarkingActionData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

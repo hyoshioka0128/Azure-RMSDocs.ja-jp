@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 5018e69cf1798592d07b053eaeaccef234f71561
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71966844"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559876"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -35,7 +35,7 @@ Azure クラシック ポータルは、**2018 年 1 月 8 日**をもって廃�
 
 |Azure クラシック ポータル|このタスクを Azure Portal で実行する方法
 |-----------|--------------------|
-|構成設定に初めてアクセスする|1. [Azure portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。<br /><br />2. の指示に従って[Azure Information Protection ブレードに初めてアクセス](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)します。
+|構成設定に初めてアクセスする|1. [Azure portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。<br /><br />2. [ [Azure Information Protection] ウィンドウに初めてアクセスするに](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time)は、の指示に従います。
 |新しいテンプレートを作成する|保護を適用するラベルを作成します。 **[権限の設定]** を利用し、アクセス許可、有効期限、オフライン アクセスを定義します。 <br /><br />その処理の裏では、この構成により、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。<br /><br />詳細については、「[新しいテンプレートを作成するには](configure-policy-templates.md#to-create-a-new-template)」を参照してください。
 |テンプレートのプロパティを編集する: <br /><br />- テンプレート名と説明<br /><br />- 使用権限、コンテンツの有効期限、オフライン アクセス設定|まだ行っていない場合、[テンプレートをラベルに変換し](configure-policy-templates.md#to-convert-templates-to-labels)、次の作業を行ってください。<br /><br />1. ラベルの名前と説明を変更します。<br /><br />2. ラベルの保護設定を変更して、アクセス許可、有効期限、およびオフラインアクセスの設定を更新します。<br /><br />詳しくは、[ラベルの保護設定の構成](configure-policy-protection.md#to-configure-a-label-for-protection-settings)に関するページをご覧ください。
 |テンプレートをアーカイブに収める|ラベル状態を **[無効]** に設定します。

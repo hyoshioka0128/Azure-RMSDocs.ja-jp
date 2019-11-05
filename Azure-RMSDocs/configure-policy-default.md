@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ea2c89c2ddbebc7a3efe6248a6073ceb82a8f21f
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 892d19f9318a01f527b4dc5df686300321497f29
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447090"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559620"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Azure Information Protection の既定のポリシー
 
@@ -37,7 +37,7 @@ ms.locfileid: "72447090"
 > [!IMPORTANT]
 > 2019年4月以降、既定のラベルは新規顧客に対して自動的に作成されません。 これらのテナントには、統一ラベル付けプラットフォームが自動的にプロビジョニングされるため、Azure portal でラベルを構成した後、それらを移行する必要はありません。
 > 
-> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、 **[ラベル]** ブレードで **[既定のラベルの生成]** を選択し、グローバル ポリシーにラベルを追加します。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
+> これらのテナントでは、Office 365 セキュリティ & コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 コンプライアンス センターで既に作成されている秘密度ラベルが存在しない場合は、Azure Information Protection の現在の既定のポリシーから既定のラベルを作成できます。 これを行うには、 **[ラベル]** ウィンドウで **[既定のラベルを生成]** する を選択し、グローバルポリシーにラベルを追加します。 詳しい手順については、「[クイック スタート - Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
 
 ## <a name="current-default-policy"></a>最新の既定のポリシー

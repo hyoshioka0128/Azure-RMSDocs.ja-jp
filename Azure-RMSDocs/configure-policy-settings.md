@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 28c63107581e6560686845b7f9a77293f505da41
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: c4a889c021d6a66a5cde7e071137d9f13dcc0ab1
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445011"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559515"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -37,15 +37,15 @@ Azure Information Protection のサブスクリプションを購入した時期
 
 ## <a name="to-configure-the-policy-settings"></a>ポリシー設定を構成するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ウィンドウに移動します。
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
 
-2. **[分類]**  >  **[ポリシー]** メニュー オプションから: 構成する設定がすべてのユーザーに適用される場合は、 **[Azure Information Protection - ポリシー]** ブレードで **[グローバル]** を選択します。
+2. [**分類** > **ポリシー** ] メニューオプションから: **[Azure Information Protection ポリシー]** ウィンドウで、構成する設定がすべてのユーザーに適用される場合は **[グローバル]** を選択します。
     
     構成する設定が[スコープ ポリシー](configure-policy-scope.md)にあり、選択したユーザーだけに適用される場合は、代わりにスコープ ポリシーを選びます。
 
-3. **[ポリシー]** ブレードで、設定を構成します。
+3. **[ポリシー]** ウィンドウで、次の設定を構成します。
     
    - **Select the default label** (既定のラベルを選択します): このオプションを設定した場合、ラベルを持たないドキュメントや電子メールに割り当てるラベルを選択します。 サブラベルがあるラベルは、既定値として設定することはできません。
         

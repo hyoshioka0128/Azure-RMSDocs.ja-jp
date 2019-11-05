@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: d7fd12bbec2d9604bab9a1ee204e704bebe32c20
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f03c06df069406f9a97bf7b321a14ab79cab16a4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057758"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560804"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>class mip::ProtectByTemplateAction 
 テンプレートによる保護をドキュメントに追加することを指定するアクション クラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  アクションに関連付けられている保護テンプレート ID を取得します。
@@ -27,4 +27,4 @@ public const std::string& GetTemplateId() const  |  アクションに関連付�
 アクションに関連付けられている保護テンプレート ID を取得します。
 
   
-次の**値を返し**ます。保護テンプレート ID。
+**戻り値**: 保護テンプレート ID。

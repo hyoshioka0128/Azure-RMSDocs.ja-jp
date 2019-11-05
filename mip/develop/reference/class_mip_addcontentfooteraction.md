@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a9dc9b68dbe2a4ca1a670f608f2ae3e0010affe6
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 83452da929250dac907dd53868733c77eb26b877
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056381"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560394"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>class mip::AddContentFooterAction 
 コンテンツ フッターをドキュメントに追加することを指定するアクション クラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ フッター要素をマークするために使用する API。
@@ -33,42 +33,42 @@ public int GetMargin() const  |  一番下からのフッターの余白を取�
 コンテンツ フッター要素をマークするために使用する API。
 
   
-次の**値を返し**ます。コンテンツフッターを保持する UI 要素に使用する名前。 コンテンツ フッターを削除する必要がある場合は、[RemoveContentFooterAction](class_mip_removecontentfooteraction.md) でも同じ名前が返されます。
+**戻り値**: コンテンツ フッターを保持する UI 要素に使用する必要のある名前。 コンテンツフッターを削除する必要がある場合、RemoveContentFooterAction でも同じ名前が返されます。
   
 ### <a name="gettext-function"></a>GetText 関数
 コンテンツ フッターに移動されるテキストを取得します。
 
   
-次の**値を返し**ます。コンテンツフッターのテキスト。
+**戻り値**: コンテンツ フッターのテキスト。
   
 ### <a name="getfontname-function"></a>GetFontName 関数
 コンテンツ フッターの表示に使用されるフォント名を取得します。
 
   
-次の**値を返し**ます。フォント名。 ポリシーで何も設定されていない場合、規定値は Calibri です。
+**戻り値**: フォント名。 ポリシーで何も設定されていない場合、規定値は Calibri です。
   
 ### <a name="getfontsize-function"></a>GetFontSize 関数
 コンテンツ フッターの表示に使用されるフォント サイズを取得します。
 
   
-次の**値を返し**ます。整数としてのフォントサイズ。
+**戻り値**: 整数値としてのフォント サイズ。
   
 ### <a name="getfontcolor-function"></a>GetFontColor 関数
 コンテンツ フッターの表示に使用されるフォントの色を取得します。
 
   
-次の**値を返し**ます。文字列としてのフォントの色 (たとえば、"#000000")。
+**戻り値**: 文字列としてのフォントの色 (例: "#000000")。
   
 ### <a name="getalignment-function"></a>GetAlignment 関数
 フッターの配置を取得します。
 
   
-次の**値を返し**ます。ContentMarkAlignment 列挙子:左 |RIGHT |点. 
+**戻り値**: ContentMarkAlignment 列挙子: LEFT|RIGHT|CENTER。 
   
-**関連**項目:[ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**関連**項目: [contentmarkalignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### <a name="getmargin-function"></a>GetMargin 関数
 一番下からのフッターの余白を取得します。
 
   
-次の**値を返し**ます。ドキュメントの下部にある余白 (10 mm など)。
+**戻り値**: ドキュメントの一番下からの余白 (例: 10 mm)。

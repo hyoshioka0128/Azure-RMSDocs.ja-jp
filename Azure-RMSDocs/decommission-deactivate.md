@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 4af20afcbf89ce25bc758299e42e794b3ee6b908
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800824"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559693"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Azure Information Protection の使用停止と非アクティブ化
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection から Azure Rights Management サービスを使用することで、組織でコンテンツを保護するかどうかを常に制御できます。 この情報保護サービスを使用しないことに決定した場合、以前に保護されていたコンテンツから締め出されることはありません。
 
@@ -37,7 +37,7 @@ BYOK (Bring Your Own Key) ソリューションを使用し、HSM で独自の�
 
 Azure Information Protection テナントキーと TPD がある場合は Rights Management オンプレミス (AD RMS) をデプロイし、信頼された発行ドメイン (TPD) としてテナントキーをインポートできます。 Azure Information Protection のデプロイは次の方法で使用停止できます。
 
-|条件|… 手順|
+|条件|… 操作内容:|
 |----------------------------|--------------|
 |すべてのユーザーに Rights Management を引き続き利用させたいが、Azure Information Protection ではなくオンプレミス ソリューションを利用する場合    →|Office 2016 または Office 2013 の**LicensingRedirection**レジストリキーを使用して、オンプレミスのデプロイにクライアントをリダイレクトします。 手順については、「RMS クライアントのデプロイに関する注意事項」の「[サービスの検出」セクション](./rms-client/client-deployment-notes.md)を参照してください。 Office 2010 の場合は、「 [Office レジストリ設定](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)」で説明されているように、office 2010 の**licenseserverredirection**レジストリキーを使用します。|
 |Rights Management テクノロジの使用を完全に停止する場合|指定の管理者に[スーパー ユーザー権限](configure-super-users.md)を付与し、このユーザー用の [Azure Information Protection クライアント](./rms-client/client-admin-guide-install.md)をインストールします。<br /><br />この管理者は、このクライアントから PowerShell モジュールを使用して、Azure Information Protection によって保護されていたフォルダー内のファイルの一括暗号化解除を行うことができます。 ファイルは保護のない状態に戻り、Azure Information Protection や AD RMS などの、Rights Management テクノロジなしで読めるようになります。 この PowerShell モジュールは Azure Information Protection と AD RMS の両方で使用できるため、Azure Information Protection から保護サービスを非アクティブ化する前または後にファイルを復号化するか、またはその組み合わせを選択できます。|
@@ -74,12 +74,12 @@ Azure Information Protection から保護サービスを非アクティブ化す
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Azure ポータルから Rights Management を非アクティブ化するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ウィンドウに移動します。
 
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
 
-2. 最初の **[Azure Information Protection]** ブレードで、 **[Protection activation]\(保護のアクティブ化\)** を選択します。 
+2. 初期**Azure Information Protection**ウィンドウで、 **[保護のアクティブ化]** を選択します。 
 
-3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、 **[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
+3.  **[Azure Information Protection 保護のアクティブ化]** ウィンドウで、 **[非アクティブ化]** を選択します。 **[はい]** を選択して選択肢を確定します。
 
 情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、 **[非アクティブ化]** が **[アクティブ化]** に変わります。 

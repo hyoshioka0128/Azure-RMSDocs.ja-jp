@@ -5,47 +5,46 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: cf3007c7d75b669de3f9952223f4f3920489251e
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070588"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560772"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
-コンテンツの一部に関連付けられている保護を説明する、[ProtectionDescriptor](class_mip_protectiondescriptor.md) を構築します。
+コンテンツの一部に関連付けられた保護を記述する ProtectionDescriptor を構築します。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public MIP_API std:: shared_ptr\<protectiondescriptor\> Build ()  |  この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
+public MIP_API std:: shared_ptr\<ProtectionDescriptor\> Build ()  |  この ProtectionDescriptor ビルダーインスタンスによってアクセス許可が定義されている ProtectionDescriptor を作成します。
 public void SetName(const std::string& value)  |  保護ポリシー名を設定します。
 public void SetDescription(const std::string& value)  |  保護ポリシーの説明を設定します。
-public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  保護ポリシーの有効期限を設定します。
+public void SetContentValidUntil (const std:: chrono:: time_point\<std:: chrono:: system_clock\>& 値)  |  保護ポリシーの有効期限を設定します。
 public void SetAllowOfflineAccess(bool value)  |  保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 public void SetReferrer(const std::string& uri)  |  保護ポリシーの参照元のアドレスを設定します。
-public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  暗号化する必要のあるアプリ固有のデータを設定します。
-public void setsignedappdata (const std:: map\<std:: string, std:: string\>& value)  |  署名する必要があるアプリ固有のデータを設定します。
-public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていません。_
-public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MIP::P rotectiondescriptorbuilder:: createfromuserrights | ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
-public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MIP::P rotectiondescriptorbuilder:: createfromuserroles | ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
-public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MIP::P rotectiondescriptorbuilder:: CreateFromTemplate | 保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
-
+public void SetEncryptedAppData (const std:: map\<std:: string、std:: string\>& 値)  |  暗号化する必要のあるアプリ固有のデータを設定します。
+public void SetSignedAppData (const std:: map\<std:: string、std:: string\>& 値)  |  署名する必要があるアプリ固有のデータを設定します。
+public virtual ~ProtectionDescriptorBuilder()  | まだ文書化されていません。
+public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRights | ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
+public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRoles | ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
+public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromTemplate | 保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
 
 ## <a name="members"></a>メンバー
   
 ### <a name="build-function"></a>ビルド関数
-この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
+この ProtectionDescriptor ビルダーインスタンスによってアクセス許可が定義されている ProtectionDescriptor を作成します。
 
   
-次の**値を返し**ます。新しい[Protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス
+**戻り値**: 新しい protectiondescriptor インスタンス
   
 ### <a name="setname-function"></a>SetName 関数
 保護ポリシー名を設定します。
 
 パラメーター:  
-* **値**:保護ポリシー名
+* **value**: 保護ポリシー名
 
 
   
@@ -53,13 +52,15 @@ public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MI
 保護ポリシーの説明を設定します。
 
 パラメーター:  
-* **値**:ポリシーの説明
+* **value**: ポリシーの説明
 
+
+  
 ### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil 関数
 保護ポリシーの有効期限を設定します。
 
 パラメーター:  
-* **値**:ポリシーの有効期限
+* **value**: ポリシーの有効期限
 
 
   
@@ -67,13 +68,15 @@ public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MI
 保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 
 パラメーター:  
-* **値**:ポリシーでオフラインコンテンツへのアクセスが許可されているかどうか
+* **value**: ポリシーがオフライン コンテンツへのアクセスを許可するかどうか
 
+
+  
 ### <a name="setreferrer-function"></a>SetReferrer 関数
 保護ポリシーの参照元のアドレスを設定します。
 
 パラメーター:  
-* **uri**:ポリシーの参照元アドレス
+* **uri**: ポリシーの参照元のアドレス
 
 
 参照元は、保護ポリシーの取得に失敗したときにユーザーが表示できる URI であり、ユーザーがコンテンツへのアクセス許可を取得する方法に関する情報が含まれます。
@@ -82,7 +85,7 @@ public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MI
 暗号化する必要のあるアプリ固有のデータを設定します。
 
 パラメーター:  
-* **値**:アプリ固有のデータ
+* **value**: アプリ固有のデータ
 
 
 アプリケーションでは、保護サービスによって暗号化されるアプリ固有のデータのディクショナリを指定できます。 この暗号化データは、SetSignedAppData によって設定される署名済みデータに依存しません。
@@ -91,7 +94,7 @@ public static MIP_API std:: shared_ptr&lt;protection記述子ビルダー&gt; MI
 署名する必要があるアプリ固有のデータを設定します。
 
 パラメーター:  
-* **値**:アプリ固有のデータ
+* **value**: アプリ固有のデータ
 
 
 アプリケーションでは、保護サービスによって署名されるアプリ固有のデータのディクショナリを指定できます。 この署名済みデータは、SetEncryptedAppData によって設定される暗号化データに依存しません。
@@ -103,25 +106,22 @@ _まだ文書化されていません。_
 ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
 
 パラメーター:
-* **usersAndRights**:ユーザーから権限へのマッピングのコレクション。
+* **usersAndRights**: ユーザーから権限へのマッピングのコレクション。
 
-次の**値を返し**ます。新しい[Protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス 
+**戻り値**: 新しい [ProtectionDescriptor](class_mip_protectiondescriptor.md) インスタンス 
 
 ### <a name="createfromuserroles-function"></a>CreateFromUserRoles 関数
 ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
 
 パラメーター:
-* **usersAndRoles**:ユーザーからロールへのマッピングのコレクション。
+* **usersAndRoles**: ユーザーからロールへのマッピングのコレクション。
 
-次の**値を返し**ます。ユーザーおよびロールによってアクセス許可が定義されている[Protectiondescriptor](class_mip_protectiondescriptor.md)を作成します。
+**を返し**ます。ユーザーとロールによってアクセス許可が定義されている[protectiondescriptor](class_mip_protectiondescriptor.md)を作成します。
 
 ### <a name="createfromtemplate-function"></a>CreateFromTemplate 関数
 保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
 
 パラメーター:
-* **templateId**:保護テンプレート ID。
+* **templateId**: 保護テンプレート ID。
 
-次の**値を返し**ます。新しい[Protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス。
-
-
-
+**戻り値**: 新しい[protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス。

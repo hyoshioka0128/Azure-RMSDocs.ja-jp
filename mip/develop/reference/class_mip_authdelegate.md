@@ -5,22 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f1f2a9f1f1f61d381cbf0da58cfdef9cad6044e2
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 3dc5679893c0de02eb9b9cb4f197c5ea39bf356f
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056293"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560327"
 ---
 # <a name="class-mipauthdelegate"></a>クラス mip:: AuthDelegate 
 認証関連の操作のデリゲート。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public virtual bool AcquireOAuth2Token (const mip:: Identity & identity, const OAuth2Challenge & チャレンジ, OAuth2Token & token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
-パブリック仮想 bool AcquireOAuth2Token (const mip:: identity & identity、const OAuth2Challenge & チャレンジ、const std:: shared_ptr\<void\>& context、OAuth2Token & token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
+パブリック仮想 bool AcquireOAuth2Token (const mip:: Identity & identity、const OAuth2Challenge & チャレンジ、const std:: shared_ptr\<void\>& context、OAuth2Token & token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
   
 ## <a name="members"></a>メンバー
   
@@ -37,19 +37,19 @@ public virtual bool AcquireOAuth2Token (const mip:: Identity & identity, const O
 * **トークン**: 
 
 
-> れこのメソッドは、コンテキストパラメーターを受け入れるものを優先することで、すぐに非推奨となります。 新しいバージョンが実装されている場合は、このバージョンを実装する必要はありません。
+> 非推奨: コンテキストパラメーターを受け入れるものを優先するため、このメソッドはまもなく非推奨とされます。 新しいバージョンが実装されている場合は、このバージョンを実装する必要はありません。
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token 関数
 このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
 
 パラメーター:  
-* **id**:トークンが要求されたユーザー 
+* **id**: トークンが要求されたユーザー 
 
 
-* **課題**:OAuth2 チャレンジ 
+* **課題**: OAuth2 チャレンジ 
 
 
-* **コンテキスト**:ホストアプリケーションによって MIP API に渡された不透明なコンテキスト 
+* **コンテキスト**: ホストアプリケーションによって MIP API に渡された不透明なコンテキスト 
 
 
 * **トークン**: [出力] Base64 でエンコードされた OAuth2 トークン

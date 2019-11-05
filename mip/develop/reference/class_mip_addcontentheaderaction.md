@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 131d2902efc988a75e7aee262d09e8a71e655bcc
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 40e9b648799008bcc75b48ae9379f7a3010bd7bd
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056418"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559062"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>class mip::AddContentHeaderAction 
 コンテンツ ヘッダーの追加を指定するアクション クラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ ヘッダー要素をマークするために使用する API。
@@ -33,42 +33,42 @@ public int GetMargin() const  |  一番下からのヘッダーの余白を取�
 コンテンツ ヘッダー要素をマークするために使用する API。
 
   
-次の**値を返し**ます。コンテンツヘッダーを保持する UI 要素に使用する名前。 コンテンツ ヘッダーを削除する必要がある場合は、[RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) に同じ名前が返されます。
+**戻り値**: コンテンツ ヘッダーを保持する UI 要素に使用する必要のある名前。 コンテンツヘッダーを削除する必要がある場合、RemoveContentHeaderAction でも同じ名前が返されます。
   
 ### <a name="gettext-function"></a>GetText 関数
 コンテンツ ヘッダーに移動されるテキストを取得します。
 
   
-次の**値を返し**ます。コンテンツヘッダーのテキスト。
+**戻り値**: コンテンツ ヘッダーのテキスト。
   
 ### <a name="getfontname-function"></a>GetFontName 関数
 コンテンツ ヘッダーの表示に使用されるフォント名を取得します。
 
   
-次の**値を返し**ます。フォント名。 ポリシーで何も設定されていない場合、規定値は Calibri です。
+**戻り値**: フォント名。 ポリシーで何も設定されていない場合、規定値は Calibri です。
   
 ### <a name="getfontsize-function"></a>GetFontSize 関数
 コンテンツ ヘッダーの表示に使用されるフォント サイズを取得します。
 
   
-次の**値を返し**ます。整数としてのフォントサイズ。
+**戻り値**: 整数値としてのフォント サイズ。
   
 ### <a name="getfontcolor-function"></a>GetFontColor 関数
 コンテンツ ヘッダーの表示に使用されるフォントの色を取得します。
 
   
-次の**値を返し**ます。文字列としてのフォントの色 (たとえば、#000000 ")。
+**戻り値**: 文字列としてのフォントの色 (例: #000000")。
   
 ### <a name="getalignment-function"></a>GetAlignment 関数
 ヘッダーの配置を取得します。
 
   
-次の**値を返し**ます。ContentMarkAlignment 列挙子:左 |RIGHT |点. 
+**戻り値**: ContentMarkAlignment 列挙子: LEFT|RIGHT|CENTER。 
   
-**関連**項目:[ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**関連**項目: [contentmarkalignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### <a name="getmargin-function"></a>GetMargin 関数
 一番下からのヘッダーの余白を取得します。
 
   
-次の**値を返し**ます。ドキュメントの下部にある余白 (10 mm など)。
+**戻り値**: ドキュメントの一番下からの余白 (例: 10 mm)。

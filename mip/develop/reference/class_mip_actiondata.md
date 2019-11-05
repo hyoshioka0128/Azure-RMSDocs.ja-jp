@@ -5,22 +5,47 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a62654cedbba03d9d22a1ea38e6fc59380e94d35
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d0bd4fc28eaee1544a2c7334e8fcc8f06151b9b6
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056388"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559074"
 ---
 # <a name="class-mipactiondata"></a>クラス mip:: ActionData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 ~ ActionData ()  | _まだ文書化されていません。_
+public ActionDataType GetType () const  | まだ文書化されていません。
+public const std:: map\<std:: string、std:: string\>& GetProperties () const  | まだ文書化されていません。
+public std:: string GetArgumentValue (const std:: string & key) const  | まだ文書化されていません。
+public const std::string& GetName() const  | まだ文書化されていません。
+public std:: vector\<std::p air\<std:: string、std:: string\>\> GetArguments () const  | まだ文書化されていません。
+パブリック仮想 ~ ActionData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
+  
+### <a name="gettype-function"></a>GetType 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getproperties-function"></a>GetProperties 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getargumentvalue-function"></a>GetArgumentValue 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getname-function"></a>GetName 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getarguments-function"></a>GetArguments 関数
+_まだ文書化されていません。_
+
   
 ### <a name="actiondata-function"></a>~ ActionData 関数
 _まだ文書化されていません。_

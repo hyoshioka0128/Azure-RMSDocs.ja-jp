@@ -3,8 +3,8 @@ title: Office のアプリとサービスが AIP から Azure RMS をサポー�
 description: Word や Outlook などのエンド ユーザー Office アプリケーションと Exchange や SharePoint などの Office サービスで AIP から Azure Rights Management サービスを使用し、組織のデータを保護するしくみ。
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 08/09/2019
+manager: rkarlin
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1250960a27deed4121bf0fd090250de30e56632b
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 279fc1cd21486115fc270456d28d0d2598d8d271
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447717"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559839"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -73,7 +73,7 @@ Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保�
 SharePoint Server を使用する場合、Azure Rights Management コネクタをデプロイすることでこの IRM 保護を使用できます。 このコネクタはオンプレミス サーバーと Rights Management クラウド サービスの間のリレーとして機能します。 詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 > [!NOTE]
-> 現在のところ、SharePoint IRM を使用するとき、いくつかの制限があります。
+> SharePoint IRM を使用する場合、いくつかの制限があります。
 > 
 > - Azure Portal で管理する既定のテンプレートまたはカスタム保護テンプレートを使用できません。 
 > 
@@ -82,6 +82,9 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
 IRM で保護されていないライブラリの場合、SharePoint または OneDrive にアップロードするファイルを保護すると、次のファイルは使用できません。共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)).
+
+> [!TIP]
+> SharePoint IRM を使用する代わりに、機密ラベルを使用して、 [sharepoint と OneDrive (パブリックプレビュー) で暗号化を適用し、Office ファイルの機密ラベルを有効に](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)することを検討してください。
 
 SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
 

@@ -5,22 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 39fde4fa5fb0fe6f91545c9cffa36ed976a4b8b1
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 62b600a377d195c693c94dff7a0472305b53b3f2
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055318"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558993"
 ---
 # <a name="class-mipclassificationrequest"></a>クラス mip:: ClassificationRequest 
 実行状態に対する分類呼び出しの要求を含むクラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std::string GetClassificationId() const  |  分類ポリシーの ID を取得します。
-public std::string GetRulePackageId() const  |  ルールパッケージの ID を取得します。
+public std:: string GetClassificationId () const  |  分類ポリシーの ID を取得します。
+public std:: string GetRulePackageId () const  |  ルールパッケージの ID を取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -28,10 +28,10 @@ public std::string GetRulePackageId() const  |  ルールパッケージの ID �
 分類ポリシーの ID を取得します。
 
   
-次の**値を返し**ます。分類ポリシーの ID。
+**戻り値**: 分類ポリシーの ID。
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId 関数
 ルールパッケージの ID を取得します。
 
   
-次の**値を返し**ます。規則パッケージの ID。 事前構築済みの分類は空の guid に設定されます。
+**戻り値**: 規則パッケージの ID。 事前構築済みの分類は空の guid に設定されます。

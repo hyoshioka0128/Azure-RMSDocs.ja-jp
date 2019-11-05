@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a36158153216a0e8fe2324580256cb61ec708dbc
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 629e6410657fcb799e3f71c0ccb3752b82437428
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057353"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560023"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 このアクションの目的は、ユーザーにラベルを提案することです。 ユーザーが推奨ラベルを無視した後にこの呼び出しを抑制する場合、実行状態のサポートされるアクションを使用して行う必要があります。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: shared_ptr\<ラベル\>& getlabel () const  |  推奨されるラベルを取得します。
+public const std:: shared_ptr\<Label\>& GetLabel () const  |  推奨されるラベルを取得します。
 public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一致し、このラベルが表示される原因となった分類 Id を取得します。
   
 ## <a name="members"></a>メンバー
@@ -28,10 +28,10 @@ public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一
 推奨されるラベルを取得します。
 
   
-次の**値を返し**ます。ラベル。
+は、ラベルを**返し**ます。
   
 ### <a name="getclassificationids-function"></a>GetClassificationIds 関数
 一致し、このラベルが表示される原因となった分類 Id を取得します。
 
   
-次の**値を返し**ます。Const std:: vector < std:: string >、このラベルが表示される原因となった分類 Id の一覧を & します。
+は、Const std:: vector < std:: string > &、このラベルが表示される原因となった分類 Id の一覧を**返し**ます。

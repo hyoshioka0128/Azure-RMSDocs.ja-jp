@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a82a0e27eb2a3f9e292c7862778b01f23390ee35
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8ced12000bace295be4571158ae0f05364c5aec7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055498"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559476"
 ---
 # <a name="class-mipaddwatermarkactiondata"></a>クラス mip:: AddWatermarkActionData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _まだ文書化されていません。_
-public const std::string& GetFontName() const  | _まだ文書化されていません。_
-public const std::string& GetFontColor() const  | _まだ文書化されていません。_
-public int GetFontSize() const  | _まだ文書化されていません。_
-public WatermarkLayout GetWatermarkLayout () const  | _まだ文書化されていません。_
-パブリック仮想 ~ AddWatermarkActionData ()  | _まだ文書化されていません。_
+public const std::string& GetText() const  | まだ文書化されていません。
+public const std::string& GetFontName() const  | まだ文書化されていません。
+public const std::string& GetFontColor() const  | まだ文書化されていません。
+public int GetFontSize() const  | まだ文書化されていません。
+public WatermarkLayout GetWatermarkLayout () const  | まだ文書化されていません。
+パブリック仮想 ~ AddWatermarkActionData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

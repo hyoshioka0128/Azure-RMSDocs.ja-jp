@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 23b6758df7ffd9bb9ac393463798bc696c3894a5
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5c65cbaaed77cfee3b06eadb9b72de634d26bbdf
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054429"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560941"
 ---
 # <a name="class-mippolicypackagedata"></a>クラス mip::P olicyPackageData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: unique_ptr\<rulepackagedata\>\>& GetRules () const  | _まだ文書化されていません。_
-パブリック仮想 ~ PolicyPackageData ()  | _まだ文書化されていません。_
+public const std:: vector\<std:: unique_ptr\<RulePackageData\>\>& GetRules () const  | まだ文書化されていません。
+パブリック仮想 ~ PolicyPackageData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

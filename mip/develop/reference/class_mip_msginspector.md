@@ -5,24 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 274ada562bae46add2429a2f87442bb77528ea05
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d1234168e4ce3996077b705e904f5765b761ec4c
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054260"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558610"
 ---
 # <a name="class-mipmsginspector"></a>クラス mip:: MsgInspector 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<uint8_t\>& getbody ()  |  メッセージの本文を取得します。 TXT/HTML が utf8 として書式設定されている場合はです。
+public const std:: vector\<uint8_t\>& GetBody ()  |  メッセージの本文を取得します。 TXT/HTML が utf8 として書式設定されている場合はです。
 パブリック BodyType GetBodyType () const  |  本文の種類を取得します。
-public const std:: vector\<std:: unique_ptr\<msgattachmentdata\>\>& getattachments () const  |  添付ファイルの一覧を msg 添付データオブジェクトとして取得します。
-public InspectorType GetInspectorType () const  |  ファイルの種類を取得します。
-public std:: shared_ptr\<ストリーム\> getfilestream () const  |  ファイルストリームを取得します。
+public const std:: vector\<std:: unique_ptr\<MsgAttachmentData\>\>& GetAttachments () const  |  添付ファイルの一覧を msg 添付データオブジェクトとして取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -30,28 +28,16 @@ public std:: shared_ptr\<ストリーム\> getfilestream () const  |  ファイ�
 メッセージの本文を取得します。 TXT/HTML が utf8 として書式設定されている場合はです。
 
   
-次の**値を返し**ます。バイトのベクター。
+は、バイトのベクターを**返し**ます。
   
 ### <a name="getbodytype-function"></a>GetBodyType 関数
 本文の種類を取得します。
 
   
-次の**値を返し**ます。メッセージの本文の種類。
+は、メッセージの本文の種類を**返し**ます。
   
 ### <a name="getattachments-function"></a>GetAttachments 関数
 添付ファイルの一覧を msg 添付データオブジェクトとして取得します。
 
   
-次の**値を返し**ます。Std:: unique_ptr のベクター<MsgAttachmentData>
-  
-### <a name="getinspectortype-function"></a>GetInspectorType 関数
-ファイルの種類を取得します。
-
-  
-次の**値を返し**ます。InspectorType.
-  
-### <a name="getfilestream-function"></a>GetFileStream 関数
-ファイルストリームを取得します。
-
-  
-次の**値を返し**ます。ファイルストリームへの共有 ptr。
+は、std::<MsgAttachmentData> unique_ptr のベクターを**返し**ます。

@@ -5,27 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 9706844d0558c6c4f31ac5b9490ac77cb1a57824
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 45a3c37acf9137f7e8f3567ce8b1d44c637d2402
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057713"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560786"
 ---
 # <a name="class-mipprotectionactiondata"></a>クラス mip::P rotectionActionData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public ProtectionActionType GetProtectionType () const  | _まだ文書化されていません。_
-public const std::string& GetTemplateId() const  | _まだ文書化されていません。_
-パブリック仮想 ~ ProtectionActionData ()  | _まだ文書化されていません。_
-public ActionDataType GetType () const  | _まだ文書化されていません。_
-public const std:: map\<std:: string、std:: string\>& GetProperties () const  | _まだ文書化されていません。_
-public std:: string GetArgumentValue (const std:: string & key) const  | _まだ文書化されていません。_
-public const std::string& GetName() const  | _まだ文書化されていません。_
-public std:: vector\<std::p air\<std:: string, std:: string\> \> GetArguments () const  | _まだ文書化されていません。_
+public ProtectionActionType GetProtectionType () const  | まだ文書化されていません。
+public const std::string& GetTemplateId() const  | まだ文書化されていません。
+パブリック仮想 ~ ProtectionActionData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   
@@ -38,24 +33,4 @@ _まだ文書化されていません。_
 
   
 ### <a name="protectionactiondata-function"></a>~ ProtectionActionData 関数
-_まだ文書化されていません。_
-
-  
-### <a name="gettype-function"></a>GetType 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getproperties-function"></a>GetProperties 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getargumentvalue-function"></a>GetArgumentValue 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getname-function"></a>GetName 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getarguments-function"></a>GetArguments 関数
 _まだ文書化されていません。_

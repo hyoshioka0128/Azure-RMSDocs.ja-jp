@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d78743f9b2a2350a16e26d311abc1e9948851bc5
-ms.sourcegitcommit: 1615c805dafac7ee6c8576c284663c39662a6a28
+ms.openlocfilehash: 76e074719b031543436cb367ca08e8238c2dbfa7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441861"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559815"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -69,7 +69,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 |要件|説明を見る|
 |---------------|--------------------|
-|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br /> 組織のポリシーによってインターネットに接続できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。 それ以外の場合は、HTTPS (ポート 443) 経由で次の URL を許可するインターネット接続がこのコンピューターにあることを確認します。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.protection.outlook.com (統合ラベル付けクライアントからのスキャナーのみ)|
+|スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br /> 組織のポリシーのためにインターネット接続ができない場合は、「[代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」セクションを参照してください。 それ以外の場合は、このコンピューターがインターネットに接続されていることを確認し、HTTPS 経由で次の Url を使用できるようにします (ポート 443)。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.protection.outlook.com (統合ラベル付けクライアントからのスキャナーのみ)|
 |スキャナー サービスを実行するサービス アカウント|Windows Server コンピューター上でのスキャナー サービスの実行に加えて、この Windows アカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />-  **[Log on locally]\(ローカル ログオン\)** ユーザー権限の割り当て。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />-  **[サービスとしてログオン]** ユーザー権限の割り当て。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />-保護を再保護または削除するラベルの場合: スキャナーが常に保護されたファイルにアクセスできるようにするには、このアカウントを Azure Information Protection の[スーパーユーザー](configure-super-users.md)にして、スーパーユーザー機能が有効になっていることを確認します。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
 |スキャナーの構成を格納する SQL Server:<br /><br />- ローカルまたはリモート インスタンス<br /><br />- スキャナーをインストールする sysadmin ロール|次のエディションでは、SQL Server 2012 が最小バージョンとなります。<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Azure Information Protection スキャナーでは、スキャナーのカスタム プロファイル名を指定するときに同じ SQL Server インスタンス上の複数の構成データベースがサポートされます。 統一されたラベル付けクライアントのプレビューバージョンのスキャナーを使用すると、複数のスキャナーで同じ構成データベースを共有できます。<br /><br />Sysadmin ロールを持つアカウントでスキャナーをインストールすると、インストールのプロセスでスキャナーの構成データベースが自動的に作成され、スキャナーを実行するサービス アカウントに対して必要な db_owner ロールが付与されます。 Sysadmin ロールが付与されない場合や、組織のポリシーがデータベースを手動で作成し構成することを要求している場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」をご覧ください。<br /><br /> 容量のガイダンスについては、「 [SQL Server のストレージ要件と容量計画](#storage-requirements-and-capacity-planning-for-sql-server)」を参照してください。|
 |次のいずれかの Azure Information Protection クライアントが Windows Server コンピューターにインストールされている <br /><br /> -クラシッククライアント <br /><br /> -統一されたラベル付けクライアント ([現在の一般公開バージョンのみ](./rms-client/unifiedlabelingclient-version-release-history.md#version-25330)) |スキャナーに対する完全なクライアントをインストールする必要があります。 PowerShell モジュールだけで、クライアントをインストールしないでください。<br /><br />インストールおよびアップグレードの手順については、次のとおりです。 <br /> -  の[クラシッククライアント](./rms-client/client-admin-guide.md)<br /> -  の統一された[ラベル付けクライアント](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
@@ -110,18 +110,18 @@ Azure Information Protection スキャナーをインストールする前に、
 
 テーブルに一覧表示されている前提条件は、スキャナーの既定の要件であり、推奨されます。何故なら、これらはスキャナーをデプロイするための最も簡単な構成であるためです。 これらは、スキャナーの機能を確認するための最初のテスト用に適しています。 ただし、運用環境では、次の制限の 1 つ以上に該当するために組織のポリシーによって既定の要件が禁止される場合があります。
 
-- サーバーのインターネット接続が許可されていない
+- サーバーはインターネット接続を許可されていません
 
 - Sysadmin の付与が認められない、または手動でデータベースを作成し構成する必要がある
 
 - サービス アカウントに**ローカル ログオン**権限を付与できない
 
-- サービス アカウントを Azure Active Directory と同期できないが、サーバーがインターネット接続できる
+- サービスアカウントを Azure Active Directory に同期することはできませんが、サーバーがインターネットに接続しています
 
 スキャナーをこれらの制限に対応させることは可能ですが、追加構成が必要です。
 
 
-#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>制限: スキャナー サーバーがインターネット接続できない
+#### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>制限: スキャナーサーバーはインターネットに接続できません
 
 切断されたコンピューターをサポートするには、管理者ガイドの指示に従います。
 
@@ -137,7 +137,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 1. スキャナーのプロファイルを作成して、Azure portal でスキャナーを構成します。 この手順に関してサポートが必要な場合は、「[Azure portal でスキャナーを構成する](#configure-the-scanner-in-the-azure-portal)」をご覧ください。
 
-2. **[エクスポート]** オプションを使用して、 **[Azure Information Protection プロファイル]** ブレードからスキャナープロファイルをエクスポートします。
+2. **[Azure Information Protection-プロファイル]** ウィンドウから **[エクスポート]** オプションを使用して、スキャナープロファイルをエクスポートします。
 
 3. 最後に、PowerShell セッションで、[Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) を実行し、エクスポートされた設定を含んでいるファイルを指定します。
 
@@ -187,7 +187,7 @@ SQL スクリプト:
 
 - 統一されたラベル付けクライアントの場合: クライアントの管理者ガイドの「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」で説明されているように、Set-AIPAuthentication で*OnBehalfOf*パラメーターを使用します。
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>制限: スキャナーのサービス アカウントを Azure Active Directory と同期できないが、サーバーがインターネット接続できる
+#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>制限: スキャナーサービスアカウントを Azure Active Directory に同期することはできませんが、サーバーがインターネットに接続しています
 
 スキャナーのサービスを実行するために 1 つのアカウントを持ち、Azure Active Directory を認証するために別のアカウントを使用することができます。
 
@@ -202,21 +202,21 @@ SQL スクリプト:
 
 スキャナーをインストールする前、または以前の一般公開バージョンのスキャナーからアップグレードする前に、Azure portal でスキャナー用のプロファイルを作成します。 スキャナーの設定に関するプロファイルと、スキャンするデータ リポジトリを構成します。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ウィンドウに移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
     
 2. **[スキャナー]** メニュー オプションを見つけて、 **[プロファイル]** を選択します。
 
-3. **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードで、 **[追加]** を選択します。
+3. **[Azure Information Protection-プロファイル]** ウィンドウで、 **[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのプロファイルを追加する](./media/scanner-add-profile.png)
 
-4. **[新しいプロファイルを追加する]** ブレードで、その構成設定とスキャンするデータ リポジトリを識別するために使うスキャナーの名前を指定します。 たとえば、スキャナーの対象となるデータ リポジトリの地理的な場所を識別するために、**Europe** を指定する場合があります。 後でスキャナーをインストールまたはアップグレードするときに、同じプロファイル名を指定する必要があります。
+4. **[新しいプロファイルの追加]** ウィンドウで、スキャンする構成設定とデータリポジトリを識別するために使用されるスキャナーの名前を指定します。 たとえば、スキャナーの対象となるデータ リポジトリの地理的な場所を識別するために、**Europe** を指定する場合があります。 後でスキャナーをインストールまたはアップグレードするときに、同じプロファイル名を指定する必要があります。
     
     スキャナーのプロファイル名を識別するために、必要に応じて管理目的の説明を指定します。
 
-5. この初期構成では、次の設定を構成して **[保存]** を選択しますが、ブレードは閉じないでください。
+5. この初期構成では、次の設定を構成してから、 **[保存]** を選択しますが、ウィンドウは閉じないでください。
     
     **[プロファイルの設定]** セクションの場合:
     - **スケジュール**:**既定のままにし**ておきます。
@@ -238,15 +238,15 @@ SQL スクリプト:
     
     Sharepoint では、sharepoint server 2019、SharePoint Server 2016、および SharePoint Server 2013 がサポートされています。 また、SharePoint Server 2010 も、[このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)を受けている場合はサポートされます。
     
-    最初のデータ ストアを追加するには、引き続き **[新しいプロファイルを追加する]** ブレード上で、 **[リポジトリの構成]** を選択して **[リポジトリ]** ブレードを開きます。
+    最初のデータストアを追加するには、 **[新しいプロファイルの追加]** ウィンドウの **[リポジトリの構成]** を選択し、 **[リポジトリ]** ペインを開きます。
     
     ![Azure Information Protection スキャナーのデータ リポジトリを構成する](./media/scanner-repositories-bar.png)
 
-7. **[リポジトリ]** ブレードで、 **[追加]** を選択します。
+7. **[リポジトリ]** ウィンドウで、 **[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのデータ リポジトリを追加する](./media/scanner-repository-add.png)
 
-8. **[リポジトリ]** ブレードで、データ リポジトリのパスを指定します。 
+8. **[リポジトリ]** ウィンドウで、データリポジトリのパスを指定します。 
     
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
@@ -267,13 +267,13 @@ SQL スクリプト:
      >
      >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 たとえば次のようになります。`http://sp2013/Documents/Sales Reports`
     
-    このブレード上の残りの設定に関しては、この初期構成では変更せず、 **[既定のプロファイル]** のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
+    このウィンドウのその他の設定については、この初期構成では変更せず、**プロファイルの既定値**のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
     
     **[保存]** を選択します。
 
 9. 別のデータ リポジトリを追加する場合は、手順 7 と 8 を繰り返します。
 
-10. これで、 **[リポジトリ]** ブレードとプロファイルブレードを閉じることができます。 **[Azure Information Protection プロファイル]** ブレードに戻ると、プロファイル名が表示されます。 **[スケジュール]** 列に **[手動]** が表示され、 **[適用]** 列が空白になっています。
+10. これで、 **[リポジトリ]** ウィンドウとプロファイルウィンドウを閉じることができます。 **[Azure Information Protection-プロファイル]** ウィンドウに戻り、 **[スケジュール]** 列に **[手動]** が表示され、 **[適用]** 列が空白になっていることを確認します。
 
 これで、先ほど作成したスキャナーのプロファイルを使ってスキャナーをインストールする準備ができました。
 
@@ -343,7 +343,7 @@ Azure AD トークンを使用すると、スキャナーは Azure Information P
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>探索サイクルの実行とスキャナーのレポートの表示
 
-1. Azure portal の **[Azure Information Protection プロファイル]** ブレードで、スキャナーのプロファイルを選択し、 **[今すぐスキャン]** オプションを選択します。
+1. Azure portal の **[Azure Information Protection プロファイル]** ウィンドウで、スキャナーのプロファイルを選択し、 **[今すぐスキャン]** オプションを選択します。
     
     ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
     
@@ -353,7 +353,7 @@ Azure AD トークンを使用すると、スキャナーは Azure Information P
 
 2. スキャナーのサイクルが完了するまで待ちます。 スキャナーが指定したデータ ストア内のすべてのファイルをクロールし終わると、スキャナー サービスの動作が続いていてもスキャナーは停止します。
     
-    - **[Azure Information Protection プロファイル]** ブレードで、[最新の**スキャン結果** **] 列**の値と **[最後のスキャン (終了時刻)]** 列の値が表示されるまで待機します。
+    - **Azure Information Protection プロファイル** ウィンドウで、最新の情報に**更新** オプションを使用して、**最後のスキャン結果** 列の値と **最後のスキャン (終了時刻)** 列の値が表示されるまで待ちます。
     
     - PowerShell を使用すると、`Get-AIPScannerStatus` を実行して状態の変化を監視できます。
     
@@ -381,16 +381,16 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 これらの手順に従っている場合、スキャナーは、レポートのみモードで 1 回だけ実行されます。 これらの設定を変更するには、スキャナーのプロファイルを編集します。
 
-1. **[Azure Information Protection プロファイル]** ブレードに戻り、スキャナープロファイルを選択して編集します。
+1. **[Azure Information Protection-プロファイル]** ウィンドウに戻り、スキャナープロファイルを選択して編集します。
 
-2. \<**プロファイル名**> ブレード上で、次の 2 つの設定を変更した後、 **[保存]** を選択します。
+2. [**プロファイル名**の \<>] ウィンドウで、次の2つの設定を変更し、 **[保存]** を選択します。
     
    - **[プロファイルの設定]** セクション: [**スケジュール**を**常**に変更する]
    - **[ポリシーの適用]** セクションから: **[適用]** 先 を **[オン**] に変更します。
     
      変更する可能性があるその他の構成があります。 たとえば、ファイル属性を変更するかどうか、またはスキャナーでファイルのラベルを書き換えられるかどうかなどです。 情報のポップアップ ヘルプを使って、各構成設定について詳しく学習してください。
 
-3. 現在の時刻をメモし、 **[Azure Information Protection プロファイル]** ブレードからもう一度スキャナーを起動します。
+3. 現在の時刻をメモし、 **[Azure Information Protection プロファイル]** ウィンドウからもう一度スキャナーを起動します。
     
     ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
     
@@ -512,7 +512,7 @@ Office ファイルや Pdf 以外のファイルの種類を保護するため�
 
 最初のスキャン サイクルではスキャナーは構成されているデータ ストアのすべてのファイルを検査し、後続のスキャンでは、新しいファイルまたは変更されたファイルのみが検査されます。 
 
-Azure portal の  **Azure Information Protection プロファイル**のブレードから、すべてのファイルを再検査するようにスキャナーに強制することができます。 一覧からスキャナープロファイルを選択し、 **[すべてのファイルを再スキャン]** オプションを選択します。
+Azure portal の **[Azure Information Protection-プロファイル]** ウィンドウから、すべてのファイルを再度検査するようスキャナーに強制できます。 一覧からスキャナープロファイルを選択し、 **[すべてのファイルを再スキャン]** オプションを選択します。
 
 ![Azure Information Protection スキャナーの再スキャンを開始する](./media/scanner-rescan-files2.png)
 
@@ -540,11 +540,11 @@ Azure portal の  **Azure Information Protection プロファイル**のブレ�
 
 スキャナーのプロファイルに追加したデータ リポジトリに対して、 **[エクスポート]** と **[インポート]** オプションを使って簡単に設定を変更することができます。 たとえば、ご自分の SharePoint データ リポジトリに対して、スキャンから除外する新しいファイルの種類を追加したいことがあります。
 
-Azure portal で各データ リポジトリを編集する代わりに、 **[リポジトリ]** ブレードの **[エクスポート]** オプションを使います。
+Azure portal 内の各データリポジトリを編集するのではなく、 **[リポジトリ]** ペインの **[エクスポート]** オプションを使用します。
 
 ![スキャナーのデータ リポジトリの設定をエクスポートする](./media/export-scanner-repositories.png)
 
-手動でファイルを編集して変更を加えたら、同じブレード上で **[インポート]** オプションを使います。
+ファイルを手動で編集して変更を加え、同じウィンドウで **[インポート]** オプションを使用します。
 
 ## <a name="using-the-scanner-with-alternative-configurations"></a>代替構成でのスキャナーの使用
 

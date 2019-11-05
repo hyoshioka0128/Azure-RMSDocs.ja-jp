@@ -5,79 +5,78 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: dcd50c403f20486e479fc00016ed6c0ef8885efa
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: a6c78e7311f3af3920df19d7a3a6ca92bb09e819
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070493"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560050"
 ---
 # <a name="class-mipprotectionprofile"></a>class mip::ProtectionProfile 
-[ProtectionProfile](class_mip_protectionprofile.md) は、保護操作を実行するためのルート クラスです。
-アプリケーションでは、保護操作を実行する前に [ProtectionProfile](class_mip_protectionprofile.md) を作成する必要があります
+ProtectionProfile は、保護操作を実行するためのルートクラスです。
+アプリケーションは、保護操作を実行する前に ProtectionProfile を作成する必要があります。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  初期化時および有効期間全体にわたって [ProtectionProfile](class_mip_protectionprofile.md) によって使用される設定を取得します。
+public const Settings& GetSettings() const  |  初期化中および有効期間全体にわたって ProtectionProfile によって使用される設定を取得します。
 public void ListEnginesAsync (const std:: shared_ptr\<void\>& context)  |  エンジンの一覧操作を開始します。
-public std:: vector\<std:: string\> listengines ()  |  エンジンを一覧表示します。
-public void AddEngineAsync (const protectionengine:: settings & settings, const std:: shared_ptr\<void\>& context)  |  プロファイルへの新しい保護エンジンの追加を開始します。
-public std:: shared_ptr\<protectionengine\> addengine (const protectionengine:: settings & settings)  |  プロファイルに新しい保護エンジンを追加します。
+public std:: vector\<std:: string\> ListEngines ()  |  エンジンを一覧表示します。
+public void AddEngineAsync (const ProtectionEngine:: Settings & settings, const std:: shared_ptr\<void\>& context)  |  プロファイルへの新しい保護エンジンの追加を開始します。
+public std:: shared_ptr\<ProtectionEngine\> AddEngine (const ProtectionEngine:: Settings & settings)  |  プロファイルに新しい保護エンジンを追加します。
 public void DeleteEngineAsync (const std:: string & engineId、const std:: shared_ptr\<void\>& context)  |  指定した ID を持つ保護エンジンの削除を開始します。 指定したエンジンのすべてのデータが削除されます。
 public void DeleteEngine(const std::string& engineId)  |  指定した ID を持つ保護エンジンを削除します。 指定したエンジンのすべてのデータが削除されます。
 public static MIP_API void __CDECL MIP::P rotectionProfile:: LoadAsync | 初期化中および有効期間全体にわたって ProtectionProfile によって使用される設定
-public static MIP_API std:: shared_ptr&lt;protectionprofile&gt; __cdecl MIP::P rotectionprofile:: Load | 指定された設定に基づいてプロファイルを読み込んでいます。
+public static MIP_API std:: shared_ptr&lt;ProtectionProfile&gt; __CDECL MIP::P rotectionProfile:: Load | 指定された設定に基づいてプロファイルを読み込んでいます。
 public static const MIP_API char * __CDECL MIP::P rotectionProfile:: GetVersion | ライブラリのバージョンを取得します。
-public static MIP_API std:: shared_ptr&lt;発行 licenseinfo&gt; __cdecl MIP::P rotectionprofile:: get licenseinfo | 発行ライセンスの詳細のホルダーを作成し、保護ハンドラーを作成するために使用できます。 
-
+public static MIP_API std:: shared_ptr&lt;発行 Licenseinfo&gt; __CDECL MIP::P rotectionProfile:: Get Licenseinfo | 発行ライセンスの詳細のホルダーを作成し、保護ハンドラーを作成するために使用できます。 
 
 ## <a name="members"></a>メンバー
   
 ### <a name="getsettings-function"></a>GetSettings 関数
-初期化時および有効期間全体にわたって [ProtectionProfile](class_mip_protectionprofile.md) によって使用される設定を取得します。
+初期化中および有効期間全体にわたって ProtectionProfile によって使用される設定を取得します。
 
   
-次の**値を返し**ます。初期化時および有効期間全体にわたって [ProtectionProfile](class_mip_protectionprofile.md) によって使用される[設定](class_mip_protectionprofile_settings.md)
+**戻り値**: の初期化中および有効期間全体にわたって protectionprofile によって使用される設定
   
 ### <a name="listenginesasync-function"></a>ListEnginesAsync 関数
 エンジンの一覧操作を開始します。
 
 パラメーター:  
-* **コンテキスト**:オブザーバーに戻される不透明クライアントコンテキスト
+* **context**: オブザーバーに不透明に返されるクライアント コンテキスト
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) は成功または失敗時に呼び出されます。
+ProtectionProfile:: オブザーバーは、成功または失敗時に呼び出されます。
   
 ### <a name="listengines-function"></a>ListEngines 関数
 エンジンを一覧表示します。
 
   
-次の**値を返し**ます。キャッシュされたエンジン Id
+**戻り値**: キャッシュされたエンジン ID
   
 ### <a name="addengineasync-function"></a>AddEngineAsync 関数
 プロファイルへの新しい保護エンジンの追加を開始します。
 
 パラメーター:  
-* **settings**: エンジンの設定を指定する [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) オブジェクト。 
+* **設定**: エンジンの設定を指定する mip::P rotectionengine:: settings オブジェクト。 
 
 
-* **コンテキスト**:オブザーバーに戻される不透明クライアントコンテキスト
+* **context**: オブザーバーに不透明に返されるクライアント コンテキスト
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) は成功または失敗時に呼び出されます。
+ProtectionProfile:: オブザーバーは、成功または失敗時に呼び出されます。
   
 ### <a name="addengine-function"></a>AddEngine 関数
 プロファイルに新しい保護エンジンを追加します。
 
 パラメーター:  
-* **settings**: エンジンの設定を指定する [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) オブジェクト。
+* **設定**: エンジンの設定を指定する mip::P rotectionengine:: settings オブジェクト。
 
 
 
   
-次の**値を返し**ます。新しく作成された[Protectionengine](class_mip_protectionengine.md)
+**戻り値**: 新しく作成された protectionengine
   
 ### <a name="deleteengineasync-function"></a>DeleteEngineAsync 関数
 指定した ID を持つ保護エンジンの削除を開始します。 指定したエンジンのすべてのデータが削除されます。
@@ -86,10 +85,10 @@ public static MIP_API std:: shared_ptr&lt;発行 licenseinfo&gt; __cdecl MIP::P 
 * **id**: 一意のエンジン ID。 
 
 
-* **コンテキスト**:オブザーバーに戻される不透明クライアントコンテキスト
+* **context**: オブザーバーに不透明に返されるクライアント コンテキスト
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) は成功または失敗時に呼び出されます。
+ProtectionProfile:: オブザーバーは、成功または失敗時に呼び出されます。
   
 ### <a name="deleteengine-function"></a>DeleteEngine 関数
 指定した ID を持つ保護エンジンを削除します。 指定したエンジンのすべてのデータが削除されます。
@@ -103,8 +102,8 @@ public static MIP_API std:: shared_ptr&lt;発行 licenseinfo&gt; __cdecl MIP::P 
 [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) は成功または失敗時に呼び出されます。
 
 パラメーター:
-* **設定**:初期化中および有効期間全体にわたって ProtectionProfile によって使用される設定。
-* **コンテキスト**:この同じコンテキストは、ProtectionProfile:: Observer:: OnLoadSuccess または ProtectionProfile:: Observer:: Onloadsuccess にそのように転送されます。
+* **設定**: 初期化中および有効期間全体にわたって protectionprofile によって使用される設定。
+* **コンテキスト**: この同じコンテキストは、protectionprofile:: observer:: OnLoadSuccess または protectionprofile:: observer:: Onloadsuccess にそのように転送されます。
 
 ### <a name="load-function"></a>Load 関数
 指定された設定に基づいてプロファイルを読み込んでいます。
@@ -112,19 +111,19 @@ public static MIP_API std:: shared_ptr&lt;発行 licenseinfo&gt; __cdecl MIP::P 
 [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) は成功または失敗時に呼び出されます。
 
 パラメーター:
-* **設定**:初期化中および有効期間全体にわたって ProtectionProfile によって使用される設定。
+* **設定**: 初期化中および有効期間全体にわたって protectionprofile によって使用される設定。
 
-次の**値を返し**ます。新しく作成されたプロファイル。
+は、新しく作成されたプロファイル**を返し**ます。
 
 ### <a name="getversion-function"></a>GetVersion 関数
 ライブラリのバージョンを取得します。 
 
-次の**値を返し**ます。ライブラリのバージョン。
+**戻り値**: ライブラリのバージョン。
 
 ### <a name="getpublishinglicenseinfo-function"></a>Get発行 Licenseinfo 関数
 発行ライセンスの詳細のホルダーを作成し、保護ハンドラーを作成するために使用できます。 
 
 パラメーター:
-* **serializedPublishingLicense**:シリアル化された公開ライセンス。
+* **serializedPublishingLicense**: シリアル化された公開ライセンス。
 
-次の**値を返し**ます。発行ライセンスの詳細のホルダー 
+**を返し**ます: 発行ライセンスの詳細のホルダー 

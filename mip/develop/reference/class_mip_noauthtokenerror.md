@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 7f66270d18c6401e8154f4f62e44be983a5e627b
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 45b58bd7f5760a1ee5fd334d54f1c806f97bfbd9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054256"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559287"
 ---
 # <a name="class-mipnoauthtokenerror"></a>クラス mip:: NoAuthTokenError 
 認証トークンがないため、ユーザーはコンテンツにアクセスできませんでした。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   

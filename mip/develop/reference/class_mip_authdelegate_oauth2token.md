@@ -5,35 +5,35 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 93c73f632410bf6b1c6898746d1fcbd2c4f67e72
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d8bce56e02778d48e6e3c0cfdb02f1c3f1f4054a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056249"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560348"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>クラス mip:: AuthDelegate:: OAuth2Token 
 Mipmap SDK が oauth2 トークンを SDK に渡すことを要求する方法を定義するクラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック OAuth2Token ()  |  新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md)オブジェクトを構築します。
-public OAuth2Token(const std::string& accessToken)  |  AccessToken から新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md)オブジェクトを構築します。
-public const std::string& GetAccessToken() const  |  アクセストークン文字列を取得します。
+パブリック OAuth2Token ()  |  新しい OAuth2Token オブジェクトを構築します。
+public OAuth2Token (const std:: string & accessToken)  |  AccessToken から新しい OAuth2Token オブジェクトを構築します。
+public const std:: string & GetAccessToken () const  |  アクセストークン文字列を取得します。
 public void SetAccessToken (const std:: string & accessToken)  |  アクセストークン文字列を設定します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="oauth2token-function"></a>OAuth2Token 関数
-新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md)オブジェクトを構築します。
+新しい OAuth2Token オブジェクトを構築します。
   
 ### <a name="oauth2token-function"></a>OAuth2Token 関数
-AccessToken から新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md)オブジェクトを構築します。
+AccessToken から新しい OAuth2Token オブジェクトを構築します。
 
 パラメーター:  
-* **accessToken**:SDK に渡される実際のアクセストークン。
+* **accessToken**: SDK に渡される実際のアクセストークン。
 
 
   
@@ -41,7 +41,7 @@ AccessToken から新しい[OAuth2Token](class_mip_authdelegate_oauth2token.md)�
 アクセストークン文字列を取得します。
 
   
-次の**値を返し**ます。アクセストークン文字列。
+は、アクセストークンの文字列を**返し**ます。
   
 ### <a name="setaccesstoken-function"></a>SetAccessToken 関数
 アクセストークン文字列を設定します。

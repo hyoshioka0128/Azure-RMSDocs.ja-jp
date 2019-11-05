@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8df8af6462a1e574186f096c919b070d4c7b6812
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: dcab49ef780916ac5ddbcb0acba2a555da92ebbe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444929"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559732"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Azure Information Protection の使用権限を構成する
 
@@ -132,7 +132,13 @@ Exchange Online で Office 365 Message Encryption の新機能を使用する場
 
 元の保護を保持するために添付されたドキュメントが必要な場合は、「[Azure Information Protection を使用したセキュアなドキュメント コラボレーション](secure-collaboration-documents.md)」をご覧ください。
 
-注: **DecryptAttachmentFromPortal**への参照が表示されている場合、このパラメーターは、 [Set irmconfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)では非推奨となりました。 このパラメーターを以前に設定したことがない場合は使用できません。 
+注: **DecryptAttachmentFromPortal**への参照が表示されている場合、このパラメーターは、 [Set irmconfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)では非推奨となりました。 このパラメーターを以前に設定したことがない場合は使用できません。
+
+## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>PDF ドキュメントを Exchange Online で自動的に暗号化する
+
+Exchange Online で Office 365 Message Encryption の新機能を使用すると、暗号化された電子メールに添付されている場合、保護されていない PDF ドキュメントを自動的に暗号化することができます。 ドキュメントは、電子メールメッセージと同じ権限を継承します。 この構成を有効にするには、 [set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)を使用して**EnablePdfEncryption $True**を設定します。
+
+ISO 規格の PDF 暗号化をサポートするリーダーがまだインストールされていない受信者は、 [Microsoft Information Protection をサポートする pdf リーダー](./rms-client/protected-pdf-readers.md)に記載されているいずれかのリーダーをインストールできます。 または、OME ポータルで、保護された PDF ドキュメントを受信者が読み取ることができます。
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management 発行者と Rights Management 所有者
 
@@ -168,7 +174,7 @@ Azure Rights Management によって保護されたドキュメントまたは�
 
 ユーザーはコンテンツを開くために、有効な使用ライセンスと権利アカウント証明書 (RAC) を持つ必要があります。この証明書は、[ユーザー環境が初期化され](how-does-it-work.md#initializing-the-user-environment)て 31 日ごとに更新されたときに付与されます。
 
-使用ライセンスの期間中、ユーザーはコンテンツについて再認証も再承認も行われません。 これにより、ユーザーは、インターネットに接続しなくても、保護されたドキュメントまたは電子メールを引き続き開くことができます。 使用ライセンスの有効期限を過ぎると、次に保護されたドキュメントまたは電子メールにアクセスしたときに、ユーザーは再認証および再承認される必要があります。 
+使用ライセンスの期間中、ユーザーはコンテンツについて再認証も再承認も行われません。 これにより、ユーザーはインターネットに接続しなくても、保護されたドキュメントまたは電子メールを引き続き開くことができます。 使用ライセンスの有効期限を過ぎると、次に保護されたドキュメントまたは電子メールにアクセスしたときに、ユーザーは再認証および再承認される必要があります。 
 
 保護設定を定義したラベルまたはテンプレートによってドキュメントおよび電子メールメッセージが保護されている場合は、ラベルまたはテンプレート内でこれらの設定を変更することができ、コンテンツを再保護する必要はありません。 ユーザーが既にコンテンツにアクセスしている場合は、使用ライセンスの有効期限が過ぎた後で変更が有効になります。 ただし、ユーザーがカスタム アクセス許可 (アドホック権利ポリシーとも呼ばれる) を適用した場合、ドキュメントまたは電子メールが保護された後でこれらのアクセス許可を変更する必要があるときは、そのコンテンツを新しいアクセス許可で再度保護する必要があります。 電子メール メッセージのカスタム アクセス許可は、[転送不可] オプションで実装されます。
 

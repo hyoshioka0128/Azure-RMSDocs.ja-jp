@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d15e7d022e0a872cb59fbca9344e4cdcdf0552c8
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: ee402ae5c713fda68e731d15a132a217576a4705
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689159"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559663"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -63,11 +63,11 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 その他のお客様は、Azure Information Protection のサブスクリプションに応じて、以下の表のサポート チャネルをご利用ください。
 
-|サブスクリプション|手順|
+|Subscription|手順|
 |----------------|---------------|
-|Azure Information Protection (スタンドアロン)|1. Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2. 要求されたら、 **[基本]** ブレードで、 **[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のいずれかのオプションが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - included]\(テクニカル サポート - 含む\)** : Azure のサブスクリプションがない場合、このオプションが表示されます。|
+|Azure Information Protection (スタンドアロン)|1. Azure portal で [ヘルプと[サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)] の **[新しいサポート要求]** を選択します。<br /><br />2. メッセージが表示されたら、 **[基本]** ウィンドウで、 **[問題の種類]** に **[技術]** を選択し、サービスに**Information Protection**します。 <br /><br />3. さらに、次のいずれかのオプションが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - Included]\(テクニカル サポート - 含む\)** : Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Microsoft 365 管理センターによるサポートへの問い合わせ方法、および連絡先電話番号については、「[ビジネス製品についてサポートに問い合わせる - 管理者ヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
-|Azure Information Protection と Enterprise Mobility + Security (EMS)|1. Azure Portal の [[ヘルプとサポート]](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) の **[新しいサポート要求]** を選択します。<br /><br />2. 要求されたら、 **[基本]** ブレードで、 **[問題の種類]** に対して **[テクニカル]** を、サービスに対して **[Information Protection]** を選択します。 <br /><br />3.さらに、次のいずれかのオプションが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - included]\(テクニカル サポート - 含む\)** : Azure のサブスクリプションがない場合、このオプションが表示されます。|
+|Azure Information Protection と Enterprise Mobility + Security (EMS)|1. Azure portal で [ヘルプと[サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)] の **[新しいサポート要求]** を選択します。<br /><br />2. メッセージが表示されたら、 **[基本]** ウィンドウで、 **[問題の種類]** に **[技術]** を選択し、サービスに**Information Protection**します。 <br /><br />3. さらに、次のいずれかのオプションが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - Included]\(テクニカル サポート - 含む\)** : Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
 |Azure Information Protection と Microsoft 365 Enterprise|[Office 365 サポート チャネル](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) をご利用いただけます。|
 
 その他のサポート オプションについては、Microsoft 連絡先担当者にお問い合わせください。 
@@ -75,7 +75,7 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 ### <a name="self-help"></a>セルフヘルプ
 
-ハンズオン ラボ: 「[Azure Information Protection Hands On Lab](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)」 (Azure Information Protection ハンズオン ラボ) をご覧ください。
+ハンズオンラボ: [Azure Information Protection ハンズオンラボを](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)参照してください。
 
 オンデマンド ビデオ:
 
@@ -83,23 +83,23 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 - [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection) が含まれる Microsoft Virtual Academy セッション。
 
-トラブルシューティング:
+トラブルシューティング :
 
-- 機能について質問がある場合は: [よく寄せられる質問](faqs.md)として質問が既に回答されているかどうかを確認します。
+- 何かのしくみについて質問がある場合は、[よく寄せられる質問](faqs.md)として質問が既に回答されているかどうかを確認してください。
 
-- Azure Information Protection のサポートに関する声明について質問がある場合: 定期的に更新される[要件](requirements.md)の情報を参照してください。
+- Azure Information Protection のサポートに関する声明について質問がある場合は、定期的に更新される「[要件](requirements.md)」の情報を参照してください。
 
-- エンドユーザー、ヘルプ デスク、および Azure Information Protection の保護サービスを使用するサービスとアプリケーションを構成する管理者をサポートするための情報については、[ユーザーを支援するヘルプ](help-users.md)に関するページを参照してください。
+- エンドユーザー、ヘルプ デスク、および Azure Information Protection の保護サービスを使用するサービスとアプリケーションを構成する管理者をサポートするための情報については、「[ユーザーにファイルを保護するためのヘルプを提供する](help-users.md)」をご覧ください。
 
-- オンプレミスのサーバー用に Rights Management コネクタをデプロイした場合: [監視](monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
+- オンプレミスのサーバー用に Rights Management コネクタをデプロイした場合は、[監視](monitor-rms-connector.md)に関する情報を参照してください。イベント ログ エントリ、パフォーマンス カウンター、およびログについての詳細が含まれます。
 
 - Azure Information Protection クライアント:
     
-    - 統一されたラベル付けクライアント:このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認してください。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
+    - 統一されたラベル付けクライアント: このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認します。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
     
-    - 従来のクライアント:このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/client-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認してください。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
+    - 従来のクライアント: このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/client-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認します。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
 
-### <a name="community-resources"></a>コミュニティ リソース
+### <a name="community-resources"></a>コミュニティのリソース
 
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 

@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 3e5ba734400000b1b1a324520e9595828c2f6ff9
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: cb3ff8c247ad4dbcf4d85ba31608b07f3aaceddf
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056315"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559034"
 ---
 # <a name="class-mipapplylabelaction"></a>class mip::ApplyLabelAction 
 ラベルのアクションを適用するには、呼び出し元のアプリケーションで特定のラベルを適用する必要があります。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: shared_ptr\<ラベル\>& getlabel () const  |  ラベルを取得する必要があります。
+public const std:: shared_ptr\<Label\>& GetLabel () const  |  ラベルを取得する必要があります。
 public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一致し、このラベルが表示される原因となった分類 Id を取得します。
   
 ## <a name="members"></a>メンバー
@@ -28,10 +28,10 @@ public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一
 ラベルを取得する必要があります。
 
   
-次の**値を返し**ます。ラベル。
+は、ラベルを**返し**ます。
   
 ### <a name="getclassificationids-function"></a>GetClassificationIds 関数
 一致し、このラベルが表示される原因となった分類 Id を取得します。
 
   
-次の**値を返し**ます。Const std:: vector < std:: string >、このラベルが表示される原因となった分類 Id の一覧を & します。
+は、Const std:: vector < std:: string > &、このラベルが表示される原因となった分類 Id の一覧を**返し**ます。

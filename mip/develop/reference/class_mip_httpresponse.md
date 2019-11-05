@@ -5,23 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 3fe574665d6a51c03135cf863fcec9d2106e549d
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 876de8047abc4e2f13ee8e103cdfa1648738aa84
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056024"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558754"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
-[HttpDelegate](class_mip_httpdelegate.md) をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。
+HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 応答を記述するインターフェイス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  応答 ID を取得します。
 public int32_t GetStatusCode() const  |  応答の状態コードを取得します。
-public const std:: vector\<uint8_t\>& getbody () const  |  要求本文を取得します。
+public const std:: vector\<uint8_t\>& GetBody () const  |  要求本文を取得します。
 public const std:: map\<std:: string、std:: string、CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
   
 ## <a name="members"></a>メンバー
@@ -30,22 +30,22 @@ public const std:: map\<std:: string、std:: string、CaseInsensitiveComparator\
 応答 ID を取得します。
 
   
-次の**値を返し**ます。対応する HttpRequest が同じ ID を持つ応答 ID
+**戻り値**: 対応する HTTPREQUEST の id が同じである応答 id
   
 ### <a name="getstatuscode-function"></a>GetStatusCode 関数
 応答の状態コードを取得します。
 
   
-次の**値を返し**ます。状態コード
+**戻り値**: 状態コード
   
 ### <a name="getbody-function"></a>GetBody 関数
 要求本文を取得します。
 
   
-次の**値を返し**ます。要求本文
+**戻り値**: 要求本文
   
 ### <a name="getheaders-function"></a>GetHeaders 関数
 要求ヘッダーを取得します。
 
   
-次の**値を返し**ます。要求ヘッダー
+**戻り値**: 要求ヘッダー

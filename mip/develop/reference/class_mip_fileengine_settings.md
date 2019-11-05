@@ -5,50 +5,52 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 7d0845c2bf7516a4fc0a85b690fa94059253cde8
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 387d3819e8abe9fb24283cd0f62a78c15ce27b49
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055034"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558849"
 ---
 # <a name="class-mipfileenginesettings"></a>class mip::FileEngine::Settings 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [FileEngine::Settings](class_mip_fileengine_settings.md) コンストラクター。
-パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
+パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための FileEngine:: Settings コンストラクター。
+パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための FileProfile:: Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を返します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
-public const Identity& GetIdentity() const  |  エンジン[id](class_mip_identity.md)を返します。
+public const Identity& GetIdentity() const  |  エンジン ID を返します。
 public void SetIdentity(const Identity& identity)  |  エンジン ID を設定します。
 public const std::string& GetClientData() const  |  エンジンのクライアント データを返します。
 public const std::string& GetLocale() const  |  エンジンのロケールを返します。
-public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\>\>& 値)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
+public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& value)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
 public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
 public void SetSessionId(const std::string& sessionId)  |  エンジンのセッション ID を設定します。
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を返します。
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  保護クラウドエンドポイントのベース url を取得します。
-public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
-public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  ポリシークラウドエンドポイントのベース url を取得します。
+public void SetPolicyCloudEndpointBaseUrl (const std:: string & policyCloudEndpointBaseUrl)  |  クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
+public const std:: string & GetPolicyCloudEndpointBaseUrl () const  |  ポリシークラウドエンドポイントのベース url を取得します。
 public void SetProtectionOnlyEngine (bool protectionOnly)  |  保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
 public const bool IsProtectionOnlyEngine() const  |  保護のみのエンジン インジケーターを返します (ポリシー/ラベルなし)。
-public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
+public bool IsLoadSensitivityTypesEnabled () const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 public void EnablePFile (bool 値)  |  が PFiles を生成するかどうかを示すフラグを設定します。
 public const bool IsPFileEnabled ()  |  が PFiles を生成するかどうかを示すフラグを取得します。
 public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。
 public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
+public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelFilter)  |  ラベルフィルターを設定します。
+public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベルフィルターを取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="settings-function"></a>Settings 関数
-既存のエンジンを読み込むための [FileEngine::Settings](class_mip_fileengine_settings.md) コンストラクター。
+既存のエンジンを読み込むための FileEngine:: Settings コンストラクター。
 
 パラメーター:  
-* **engineId**:AddEngineAsync によって生成される一意のエンジン ID に設定します。 
+* **engineId**: AddEngineAsync によって生成される一意のエンジン ID に設定します。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -57,15 +59,15 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 * **locale**: エンジンのローカライズ可能な出力はこのロケールで提供されます。 
 
 
-* **loadSensitivityTypes**:エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示す省略可能なフラグです。 true の場合は、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルの OnPolicyChange オブザーバーが呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
+* **loadSensitivityTypes**: エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示す省略可能なフラグです。 true の場合は、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルに対して true が呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
 
 
   
 ### <a name="settings-function"></a>Settings 関数
-新しいエンジンを作成するための [FileProfile::Settings](class_mip_fileprofile_settings.md) コンストラクター。
+新しいエンジンを作成するための FileProfile:: Settings コンストラクター。
 
 パラメーター:  
-* **id**:新しいエンジンに関連付けられているユーザーの[id](class_mip_identity.md)情報。 
+* **identity**: 新しいエンジンに関連付けられているユーザーの ID 情報。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -74,7 +76,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 * **locale**: エンジンのローカライズ可能な出力はこのロケールで提供されます。 
 
 
-* **loadSensitivityTypes**:エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示す省略可能なフラグです。 true の場合は、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルの OnPolicyChange オブザーバーが呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
+* **loadSensitivityTypes**: エンジンが読み込まれるときに、カスタム感度の種類も読み込む必要があることを示す省略可能なフラグです。 true の場合は、カスタム感度の種類の更新とポリシーの変更に対して、プロファイルに対して true が呼び出されます。 false の場合、ListSensitivityTypes call は常に空のリストを返します。
 
 
   
@@ -90,7 +92,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 
   
 ### <a name="getidentity-function"></a>GetIdentity 関数
-エンジン[id](class_mip_identity.md)を返します。
+エンジン ID を返します。
   
 ### <a name="setidentity-function"></a>SetIdentity 関数
 エンジン ID を設定します。
@@ -117,7 +119,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
 
 パラメーター:  
-* **protectionCloudEndpointBaseUrl**:保護エンドポイントに関連付けられているベース url
+* **protectionCloudEndpointBaseUrl**: 保護エンドポイントに関連付けられたベース URL
 
 
   
@@ -125,13 +127,13 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 保護クラウドエンドポイントのベース url を取得します。
 
   
-次の**値を返し**ます。保護エンドポイントに関連付けられているベース url
+**戻り値**: 保護エンドポイントに関連付けられたベース URL
   
 ### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl 関数
 クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
 
 パラメーター:  
-* **policyCloudEndpointBaseUrl**:ポリシーエンドポイントに関連付けられているベース url
+* **policyCloudEndpointBaseUrl**: ポリシーエンドポイントに関連付けられているベース url
 
 
   
@@ -139,7 +141,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 ポリシークラウドエンドポイントのベース url を取得します。
 
   
-次の**値を返し**ます。ポリシーエンドポイントに関連付けられているベース url
+**戻り値**: ポリシーエンドポイントに関連付けられているベース url
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine 関数
 保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
@@ -151,7 +153,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 
   
-次の**値を返し**ます。有効な場合は True、それ以外の場合は false。
+が**返さ**れます。有効な場合は True、それ以外の場合は false です。
   
 ### <a name="enablepfile-function"></a>EnablePFile 関数
 が PFiles を生成するかどうかを示すフラグを設定します。
@@ -160,7 +162,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 が PFiles を生成するかどうかを示すフラグを取得します。
 
   
-次の**値を返し**ます。有効な場合は True、それ以外の場合は false。
+が**返さ**れます。有効な場合は True、それ以外の場合は false です。
   
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
@@ -175,4 +177,20 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 委任されたユーザーを取得します。
 
   
-次の**値を返し**ます。委任されたユーザー認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。
+**戻り値**: 委任されたユーザー: 認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。
+  
+### <a name="setlabelfilter-function"></a>SetLabelFilter 関数
+ラベルフィルターを設定します。
+
+パラメーター:  
+* **labelfilter**: ラベルフィルター。
+
+
+ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+  
+### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
+ラベルフィルターを取得します。
+
+  
+**戻り値**: ラベルフィルター。
+ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。

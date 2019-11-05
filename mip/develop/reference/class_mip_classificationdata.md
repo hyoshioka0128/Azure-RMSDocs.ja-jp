@@ -5,26 +5,26 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8ad0f1a2623adc36fa2ffdcf531d0e9e810d954e
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 273b095ca0d6dc97ce440c4645bc2d07e6e760d4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056268"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559412"
 ---
 # <a name="class-mipclassificationdata"></a>クラス mip:: ClassificationData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: string & GetClassificationId () const  | _まだ文書化されていません。_
-public const std::string& GetRulePackageId() const  | _まだ文書化されていません。_
-public int GetMaxCount () const  | _まだ文書化されていません。_
-public int GetMinCount () const  | _まだ文書化されていません。_
-public int GetMinConfidence () const  | _まだ文書化されていません。_
-public int GetMaxConfidence () const  | _まだ文書化されていません。_
-パブリック仮想 ~ ClassificationData ()  | _まだ文書化されていません。_
+public const std:: string & GetClassificationId () const  | まだ文書化されていません。
+public const std:: string & GetRulePackageId () const  | まだ文書化されていません。
+public int GetMaxCount () const  | まだ文書化されていません。
+public int GetMinCount () const  | まだ文書化されていません。
+public int GetMinConfidence () const  | まだ文書化されていません。
+public int GetMaxConfidence () const  | まだ文書化されていません。
+パブリック仮想 ~ ClassificationData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

@@ -5,39 +5,40 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f5d54ef2a274b0167d407c19cd5fbb0ca97349fb
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055929"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558697"
 ---
 # <a name="class-miplabelgroupdata"></a>クラス mip:: LabelGroupData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | _まだ文書化されていません。_
-public const std:: vector\<std:: unique_ptr\<labelgroupdata\>\>& getlabelgroupdata () const  | _まだ文書化されていません。_
-public int GetOrder () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string、std:: string\>& getcolor () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string、std:: string\>& GetName () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string、std:: string\>& getdescription () const  | _まだ文書化されていません。_
-public const std::string& GetTemplateId() const  | _まだ文書化されていません。_
-public const std:: string & GetInvariantName () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string、std:: string\>& gettooltip () const  | _まだ文書化されていません。_
-public bool IsEnabled () const  | _まだ文書化されていません。_
-public bool IsDowngradeJustificationRequired () const  | _まだ文書化されていません。_
-public const std:: string & GetDefaultLabelId () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string, std:: string\>& GetMoreInfoUrl () const  | _まだ文書化されていません。_
-public bool IsMandatory () const  | _まだ文書化されていません。_
-public bool Hasの Forwardaction () const  | _まだ文書化されていません。_
-public bool IsAuditEnabled () const  | _まだ文書化されていません。_
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: string\>& GetLabelByCustomProperties () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: string\>& GetCustomPropertiesByLabel () const  | _まだ文書化されていません。_
-パブリック仮想 ~ LabelGroupData ()  | _まだ文書化されていません。_
+public const std::string& GetLabelId() const  | まだ文書化されていません。
+public const std:: vector\<std:: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | まだ文書化されていません。
+public int GetOrder () const  | まだ文書化されていません。
+public const std::p air\<std:: string、std:: string\>& GetColor () const  | まだ文書化されていません。
+public const std::p air\<std:: string、std:: string\>& GetName () const  | まだ文書化されていません。
+public const std::p air\<std:: string、std:: string\>& GetDescription () const  | まだ文書化されていません。
+public const std::string& GetTemplateId() const  | まだ文書化されていません。
+public const std:: string & GetInvariantName () const  | まだ文書化されていません。
+public const std::p air\<std:: string、std:: string\>& GetTooltip () const  | まだ文書化されていません。
+public const std::p air\<std:: string、std:: string\>& GetAutoTooltip () const  | まだ文書化されていません。
+public bool IsEnabled () const  | まだ文書化されていません。
+public bool IsDowngradeJustificationRequired () const  | まだ文書化されていません。
+public const std:: string & GetDefaultLabelId () const  | まだ文書化されていません。
+public const std::p air\<std:: string、std:: string\>& GetMoreInfoUrl () const  | まだ文書化されていません。
+public bool IsMandatory () const  | まだ文書化されていません。
+public const std:: vector\<ProtectionActionType\>& GetProtectionActionTypes () const  | まだ文書化されていません。
+public bool IsAuditEnabled () const  | まだ文書化されていません。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  | まだ文書化されていません。
+public const std:: vector\<std:: string\>& GetLabelByCustomProperties () const  | まだ文書化されていません。
+public const std:: vector\<std:: string\>& GetCustomPropertiesByLabel () const  | まだ文書化されていません。
+パブリック仮想 ~ LabelGroupData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   
@@ -77,6 +78,10 @@ _まだ文書化されていません。_
 _まだ文書化されていません。_
 
   
+### <a name="getautotooltip-function"></a>GetAutoTooltip 関数
+_まだ文書化されていません。_
+
+  
 ### <a name="isenabled-function"></a>IsEnabled 関数
 _まだ文書化されていません。_
 
@@ -97,7 +102,7 @@ _まだ文書化されていません。_
 _まだ文書化されていません。_
 
   
-### <a name="hasdonotforwardaction-function"></a>Hasの Forwardaction 関数
+### <a name="getprotectionactiontypes-function"></a>GetProtectionActionTypes 関数
 _まだ文書化されていません。_
 
   

@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: e5d81b5437fef69438fac5d8729b4beb8c9641a9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72447037"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559470"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -86,13 +86,13 @@ Azure Portal にサインインするには、Azure Information Protection を�
     
     Microsoft アカウントは Azure Information Protection を管理できません。
 
-## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>初めて [Azure Information Protection] ブレードにアクセスするには
+## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>初めて [Azure Information Protection] ウィンドウにアクセスするには
 
 1. Azure ポータルにサインインします。
 
-2. ハブ メニューで **[リソースの作成]** を選択し、Marketplace の検索ボックスに **Azure Information Protection** と入力します。 
+2. **[+ リソースの作成]** を選択し、Marketplace の検索ボックスで「 **Azure Information Protection**」と入力します。 
     
-3. 結果一覧から **[Azure Information Protection]** を選択します。 **[Azure Information Protection]** ブレードで **[作成]** をクリックします。
+3. 結果一覧から **[Azure Information Protection]** を選択します。 **Azure Information Protection**ウィンドウで、 **[作成]** をクリックします。
     
     > [!TIP] 
     > 必要に応じて、 **[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
@@ -101,15 +101,15 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 4. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページが表示されます。 推奨リソースを参照するか、他のメニュー オプションを使用します。 ユーザーが選択できるラベルを構成するには、次の手順に従います。
 
-次に **[Azure Information Protection]** ブレードにアクセスすると、すべてのユーザーのラベルを表示および構成できるように、 **[ラベル]** オプションが自動的に選択されます。 **[クイック スタート]** ページに戻るには、 **[全般]** メニューから選択します。
+次に **[Azure Information Protection]** ウィンドウにアクセスしたときに、すべてのユーザーのラベルを表示および構成できるように、 **[ラベル]** オプションが自動的に選択されます。 **[クイック スタート]** ページに戻るには、 **[全般]** メニューから選択します。
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
 1. Azure Information Protection 管理者、セキュリティ管理者、またはグローバル管理のいずれかの管理者ロールを使用して、Azure portal にサインインしていることを確認します。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
 
-2. 必要に応じて、 **[Azure Information Protection]** ブレードに移動します。たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information Protection**」と入力します。 結果から **[Azure Information Protection]** を選択します。 
+2. 必要に応じて、**Azure Information Protection** ウィンドウに移動します。たとえば、ハブメニューで **すべてのサービス** をクリックし、フィルター ボックスに「 **Information Protection**の入力を開始します。 結果から **[Azure Information Protection]** を選択します。 
     
-    **[Azure Information Protection - ラベル]** ブレードが自動的に開き、使用可能なラベルを表示、編集できます。 ラベルをポリシーに追加または削除して、すべてのユーザーまたは選択したユーザーに対して利用可能にしたり、どのユーザーに対しても利用不可にしたりできます。
+    **[Azure Information Protection ラベル]** ウィンドウが自動的に開き、使用可能なラベルを表示および編集できます。 ラベルをポリシーに追加または削除して、すべてのユーザーまたは選択したユーザーに対して利用可能にしたり、どのユーザーに対しても利用不可にしたりできます。
 
 3. ポリシーを表示および編集するには、メニュー オプションから **[ポリシー]** を選択します。 すべてのユーザーが取得するポリシーを表示および編集するには、 **[グローバル]** ポリシーを選択します。 選択したユーザー用のカスタム ポリシーを作成するには、 **[Add a new policy]\(新しいポリシーの追加\)** を選択します。
     
@@ -118,7 +118,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 任意の数のラベルを作成できます。 ただし、多すぎて正しいラベルを発見して選択する作業が困難になるとき、スコープ ポリシーを作成し、あるユーザーに関連するラベルのみがそのユーザーに表示されるようにします。 保護を適用するラベルには 500 という上限があります。
 
-[Azure Information Protection] ブレードで変更を行ったら、 **[保存]** をクリックして変更を保存します。または、 **[破棄]** をクリックして、最後に保存した設定に戻します。 ポリシーに変更を保存したり、ポリシーに追加されたラベルを変更したりすると、それらの変更は自動的に発行されます。 独立した公開オプションはありません。
+Azure Information Protection ウィンドウで変更を行った場合は、 **[保存]** をクリックして変更を保存するか、 **[破棄]** をクリックして最後に保存した設定に戻します。 ポリシーに変更を保存したり、ポリシーに追加されたラベルを変更したりすると、それらの変更は自動的に発行されます。 独立した公開オプションはありません。
 
 Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する最新の Azure Information Protection ポリシーに変更をダウンロードします。 ポリシーをクライアントに更新するトリガーには、他に次のものがあります。
 
@@ -174,7 +174,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 電子メールの場合は、電子メールの送信時にラベル情報が保存されます。 ドキュメントについては、ファイルの保存時にラベル情報が保存されます。 
 
-ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の **[ラベル]** ブレード上の [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
+ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の**ラベル**ペインで [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
 ## <a name="next-steps"></a>次のステップ
 

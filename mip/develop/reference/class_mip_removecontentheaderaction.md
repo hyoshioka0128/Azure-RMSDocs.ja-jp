@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: bec17f75afcb08053898766e22952c5e3014f929
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5d9f054c692909f394113c46ec8e533e385ee83d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057278"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559997"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>class mip::RemoveContentHeaderAction 
 ドキュメントからのコンテンツ ヘッダーの削除を指定するアクション クラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std:: vector\<std:: string\>& GetUIElementNames ()  |  削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
@@ -27,4 +27,4 @@ public const std:: vector\<std:: string\>& GetUIElementNames ()  |  削除する
 削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
 
   
-次の**値を返し**ます。Ui 要素名の一覧。
+**戻り値**: UI 要素名の一覧。

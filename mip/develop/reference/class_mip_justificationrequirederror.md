@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: dbac2ee9908b5c84fcdf37a5718c4c78d5c53d36
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f1964e9212088966d421e7b946ca2148b8f56e19
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054731"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560133"
 ---
 # <a name="class-mipjustificationrequirederror"></a>class mip::JustificationRequiredError 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 std:: shared_ptr\<エラー\> Clone () const  |  エラーを複製します。
+パブリック仮想 std:: shared_ptr\<Error\> Clone () const  |  エラーを複製します。
   
 ## <a name="members"></a>メンバー
   
@@ -26,4 +26,4 @@ ms.locfileid: "70054731"
 エラーを複製します。
 
   
-次の**値を返し**ます。エラーの複製。
+**戻り値**: エラーの複製。

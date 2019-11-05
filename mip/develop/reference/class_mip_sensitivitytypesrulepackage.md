@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: de16991643ced6e1731bb43bddd010704459b7f9
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f52495b61aa4b74d8080bde33c5082107b22caf7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057164"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560527"
 ---
 # <a name="class-mipsensitivitytypesrulepackage"></a>クラス mip:: SensitivityTypesRulePackage 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetRulePackageId() const  |  規則パッケージ Id を取得します。
-public const std::string& GetRulePackage() const  |  ルールパッケージを取得します。
+public const std:: string & GetRulePackageId () const  |  規則パッケージ Id を取得します。
+public const std:: string & GetRulePackage () const  |  ルールパッケージを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -27,10 +27,10 @@ public const std::string& GetRulePackage() const  |  ルールパッケージを
 規則パッケージ Id を取得します。
 
   
-次の**値を返し**ます。ルールパッケージ Id
+**戻り値**: 規則パッケージ Id
   
 ### <a name="getrulepackage-function"></a>GetRulePackage 関数
 ルールパッケージを取得します。
 
   
-次の**値を返し**ます。ルールパッケージ
+**戻り値**: ルールパッケージ

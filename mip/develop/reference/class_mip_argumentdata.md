@@ -5,23 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: ddbd2fdab7f6096f7cfbc1ec671096767be5bb42
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 67548522a3516871ceb06fdf604a55ad355ae18a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055478"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559425"
 ---
 # <a name="class-mipargumentdata"></a>クラス mip:: ArgumentData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: string & GetValue () const  | _まだ文書化されていません。_
-public const std:: string & GetKey () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: string\>& GetValues () const  | _まだ文書化されていません。_
-パブリック仮想 ~ ArgumentData ()  | _まだ文書化されていません。_
+public const std:: string & GetValue () const  | まだ文書化されていません。
+public const std:: string & GetKey () const  | まだ文書化されていません。
+public const std:: vector\<std:: string\>& GetValues () const  | まだ文書化されていません。
+パブリック仮想 ~ ArgumentData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

@@ -5,46 +5,48 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: db96d00d268158b072d2052a5e98f39bf0efa425
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: c215b7e25908cc3f7984f68b63e3ea1be4d4a718
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054313"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560973"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
-[PolicyEngine](class_mip_policyengine.md) に関連付けられている設定を定義します。
+PolicyEngine に関連付けられた設定を定義します。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
-パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
+パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための PolicyEngine:: Settings コンストラクター。
+パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための PolicyEngine:: Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を取得します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
-public const Identity& GetIdentity() const  |  [Id](class_mip_identity.md)オブジェクトを取得します。
-public void SetIdentity(const Identity& identity)  |  [Id](class_mip_identity.md)オブジェクトを設定します。
+public const Identity& GetIdentity() const  |  ID オブジェクトを取得します。
+public void SetIdentity(const Identity& identity)  |  ID オブジェクトを設定します。
 public const std::string& GetClientData() const  |  設定で設定されたクライアント データを取得します。
 public void SetClientData(const std::string& clientData)  |  クライアント データ文字列を設定します。
 public const std::string& GetLocale() const  |  設定で設定されたロケールを取得します。
-public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\>\>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& customSettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
 public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
 public void SetSessionId(const std::string& sessionId)  |  クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID、一意識別子を取得します。
-public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
+public bool IsLoadSensitivityTypesEnabled () const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  必要に応じて、クラウド エンドポイントのベース URL を設定します。
 public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
 public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。
 public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
+public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelFilter)  |  ラベルフィルターを設定します。
+public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベルフィルターを取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="settings-function"></a>Settings 関数
-既存のエンジンを読み込むための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
+既存のエンジンを読み込むための PolicyEngine:: Settings コンストラクター。
 
 パラメーター:  
-* **engineId**:AddEngineAsync または自己生成された一意のエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
+* **engineId**: AddEngineAsync によって生成されたか、または自分で生成した一意のエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -58,10 +60,10 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 
   
 ### <a name="settings-function"></a>Settings 関数
-新しいエンジンを作成するための [PolicyEngine::Settings](class_mip_policyengine_settings.md) コンストラクター。
+新しいエンジンを作成するための PolicyEngine:: Settings コンストラクター。
 
 パラメーター:  
-* **id**:新しいエンジンに関連付けられているユーザーの[id](class_mip_identity.md)情報。 
+* **identity**: 新しいエンジンに関連付けられているユーザーの ID 情報。 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -78,7 +80,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 エンジン ID を取得します。
 
   
-次の**値を返し**ます。エンジンを識別する一意の文字列。
+**戻り値**: エンジンを識別する一意の文字列。
   
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
@@ -89,28 +91,28 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 
   
 ### <a name="getidentity-function"></a>GetIdentity 関数
-[Id](class_mip_identity.md)オブジェクトを取得します。
+ID オブジェクトを取得します。
 
   
-次の**値を返し**ます。設定オブジェクト内の id への参照。 
+**戻り値**: 設定オブジェクト内の ID への参照。 
   
-**関連**項目: [Mip:: Identity](class_mip_identity.md)
+**関連項目**: mip::Identity
   
 ### <a name="setidentity-function"></a>SetIdentity 関数
-[Id](class_mip_identity.md)オブジェクトを設定します。
+ID オブジェクトを設定します。
 
 パラメーター:  
 * **identity**: ユーザーの一意の ID。 
 
 
   
-**関連**項目: [Mip:: Identity](class_mip_identity.md)
+**関連項目**: mip::Identity
   
 ### <a name="getclientdata-function"></a>GetClientData 関数
 設定で設定されたクライアント データを取得します。
 
   
-次の**値を返し**ます。クライアントによって指定されたデータの文字列。
+**戻り値**: クライアントで指定されたデータの文字列。
   
 ### <a name="setclientdata-function"></a>SetClientData 関数
 クライアント データ文字列を設定します。
@@ -124,13 +126,13 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 設定で設定されたロケールを取得します。
 
   
-次の**値を返し**ます。ロケール。
+**戻り値**: ロケール。
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
 パラメーター:  
-* **Customsettings**:名前と値のペアの一覧。
+* **customSettings**: 名前と値のペアの一覧。
 
 
   
@@ -138,7 +140,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 機能のゲーティングとテストに使用するカスタム設定を取得します。
 
   
-次の**値を返し**ます。名前と値のペアの一覧。
+**戻り値**: 名前と値のペアのリスト。
   
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
@@ -152,13 +154,13 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 セッション ID、一意識別子を取得します。
 
   
-次の**値を返し**ます。セッション ID。
+**戻り値**: セッション ID。
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled 関数
 読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 
   
-次の**値を返し**ます。有効な場合は True、それ以外の場合は false。
+が**返さ**れます。有効な場合は True、それ以外の場合は false です。
   
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
 必要に応じて、クラウド エンドポイントのベース URL を設定します。
@@ -172,7 +174,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
 
   
-次の**値を返し**ます。[基本 URL]
+**戻り値**: ベース URL
   
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
@@ -187,4 +189,20 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 委任されたユーザーを取得します。
 
   
-次の**値を返し**ます。委任されたユーザー認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。
+**戻り値**: 委任されたユーザー: 認証を行っているユーザーまたはアプリケーションが別のユーザーの代理で動作しているときに、委任されたユーザーを指定します。
+  
+### <a name="setlabelfilter-function"></a>SetLabelFilter 関数
+ラベルフィルターを設定します。
+
+パラメーター:  
+* **labelfilter**: ラベルフィルター。
+
+
+ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+  
+### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
+ラベルフィルターを取得します。
+
+  
+**戻り値**: ラベルフィルター。
+ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。

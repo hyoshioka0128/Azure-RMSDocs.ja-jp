@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: c799708931103c595ce1ad66a41accb9f0dcfc85
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f1bd4220369d036c2071453412844e0691efb2ec
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056843"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559971"
 ---
 # <a name="class-mipstream"></a>class mip::Stream 
 MIP SDK とストリーム ベースのコンテンツの間のインターフェイスを定義するクラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  ストリームからバッファーに読み取ります。
@@ -43,7 +43,7 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 
 
   
-次の**値を返し**ます。読み取ったバイト数。
+**戻り値**: 読み込まれたバイト数。
   
 ### <a name="write-function"></a>Write 関数
 バッファーからストリームに書き込みます。
@@ -57,13 +57,13 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 
 
   
-次の**値を返し**ます。書き込まれたバイト数。
+**戻り値**: 書き込まれたバイト数。
   
 ### <a name="flush-function"></a>Flush 関数
 ストリームをフラッシュします。
 
   
-次の**値を返し**ます。成功した場合は True、それ以外の場合は false。
+**戻り値**: 正常終了した場合は true、それ以外の場合は false。
   
 ### <a name="seek-function"></a>Seek 関数
 ストリーム内の特定の位置をシークします。
@@ -77,25 +77,25 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 ストリームから読み込めるかどうかのチェックです。
 
   
-次の**値を返し**ます。読み取り可能な場合は True。それ以外の場合は false。
+**戻り値**: 読み取り可能な場合は true、それ以外の場合は false。
   
 ### <a name="canwrite-function"></a>CanWrite 関数
 ストリームに書き込めるかどうかのチェックです。
 
   
-次の**値を返し**ます。書き込み可能な場合は false。
+**戻り値**: 書き出し可能な場合は true、それ以外の場合は false。
   
 ### <a name="position-function"></a>Position 関数
 ストリーム内の現在の位置を取得します。
 
   
-次の**値を返し**ます。ストリーム内の位置。
+**戻り値**: ストリーム内の位置。
   
 ### <a name="size-function"></a>Size 関数
 ストリーム内のコンテンツのサイズを取得します。
 
   
-次の**値を返し**ます。ストリームのサイズ。
+**戻り値**: ストリームのサイズ。
   
 ### <a name="size-function"></a>Size 関数
 ストリームのサイズを設定します。

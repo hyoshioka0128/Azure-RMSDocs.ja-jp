@@ -5,21 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 2744e2d5fe188667ff7c1c93a7f98719f200aecd
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 6f4b1147ef6831ca622d095c0cada67b9f0cf023
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056226"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559392"
 ---
 # <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
 実行状態での分類呼び出しの結果を含むクラス。
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  分類ポリシーの ID を取得します。
+public std::string GetName() const  |  分類ポリシーの名前を取得します。
 public int GetCount() const  |  インスタンス数を取得します。
 public int GetConfidenceLevel() const  |  結果の信頼度を取得します。
 public std:: string GetSensitiveInformationDetections () const  |  機密情報の検出を取得します。
@@ -30,13 +31,19 @@ public std:: string GetSensitiveInformationDetections () const  |  機密情報�
 分類ポリシーの ID を取得します。
 
   
-次の**値を返し**ます。分類ポリシーの ID。
+**戻り値**: 分類ポリシーの ID。
+  
+### <a name="getname-function"></a>GetName 関数
+分類ポリシーの名前を取得します。
+
+  
+**戻り値**: 分類ポリシーの名前。
   
 ### <a name="getcount-function"></a>GetCount 関数
 インスタンス数を取得します。
 
   
-次の**値を返し**ます。インスタンス数。
+**戻り値**: インスタンス数。
   
 ### <a name="getconfidencelevel-function"></a>GetConfidenceLevel 関数
 結果の信頼度を取得します。
@@ -45,4 +52,4 @@ public std:: string GetSensitiveInformationDetections () const  |  機密情報�
 機密情報の検出を取得します。
 
   
-次の**値を返し**ます。すべての機密情報の検出の Json 文字列。
+は、すべての機密情報の検出の Json 文字列**を返し**ます。

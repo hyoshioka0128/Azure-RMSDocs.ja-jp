@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: e9a0bdc6c641e1138606b5960bf3b41e82c956ad
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 000da66a931e46151eaf67183257da9efdfdd539
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055305"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558947"
 ---
 # <a name="class-mipcomputeenginecontext"></a>クラス mip:: ComputeEngineContext 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 ~ ComputeEngineContext ()  | _まだ文書化されていません。_
-protected ComputeEngineContext ()  | _まだ文書化されていません。_
+パブリック仮想 ~ ComputeEngineContext ()  | まだ文書化されていません。
+protected ComputeEngineContext ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

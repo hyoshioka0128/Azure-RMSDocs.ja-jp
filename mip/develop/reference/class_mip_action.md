@@ -5,20 +5,26 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: dd67cb1be823e6e0cf6bb367250924f6d3b5d8b0
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d3cc1aecfb5ca8bf2d78dd9d6c8c280b5541389d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056361"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560407"
 ---
 # <a name="class-mipaction"></a>class mip::Action 
 アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
+public ActionType GetType() const  |  アクションの種類を取得します。
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+  
+### <a name="gettype-function"></a>GetType 関数
+アクションの種類を取得します。
+
+  
+**戻り値**: ActionType: この基底クラスをキャストできる派生アクションの種類。

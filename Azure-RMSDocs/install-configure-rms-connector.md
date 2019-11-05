@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d8d60a170e587b7aa6b9e21f4368b26cb33d84bb
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444941"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559691"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -171,7 +171,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 ## <a name="configuring-load-balancing-and-high-availability"></a>負荷分散と高可用性の構成
 RMS コネクタの2つ目または最後のインスタンスをインストールしたら、コネクタ URL のサーバー名を定義し、負荷分散システムを構成します。
 
-コネクタ URL のサーバー名には、管理している名前空間内で任意の名前を指定できます。 たとえば、DNS システムの**rmsconnector.contoso.com**にエントリを作成し、負荷分散システムの IP アドレスを使用するようにこのエントリを構成することができます。 この名前に特別な要件はありません。また、コネクタ サーバー自体での構成は不要です。 Exchange サーバーと SharePoint サーバーがインターネット経由でコネクタと通信する場合を除き、この名前はインターネット上で解決する必要はありません。
+コネクタ URL のサーバー名には、管理している名前空間内で任意の名前を指定できます。 たとえば、DNS システムの**rmsconnector.contoso.com**にエントリを作成し、負荷分散システムの IP アドレスを使用するようにこのエントリを構成することができます。 この名前に特別な要件はありません。また、コネクタ サーバー自体での構成は不要です。 Exchange および SharePoint サーバーがインターネット経由でコネクタと通信する予定がない限り、この名前はインターネット上で解決する必要はありません。
 
 > [!IMPORTANT]
 > コネクタを使用するように Exchange サーバーまたは SharePoint サーバーを構成した後は、この名前を変更しないことをお勧めします。名前を変更すると、これらのサーバーですべての IRM 構成を消去し、再構成する必要があります。
@@ -208,7 +208,7 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 > - 証明書を使用するように IIS を構成するには、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[サイトにバインドを追加する (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx)」を参照してください。
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Web プロキシ サーバーを使用するための RMS コネクタの構成
-コネクタ サーバーが配置されているネットワークがインターネットに直接接続されておらず、インターネットに発信アクセスを行うために Web プロキシ サーバーの手動構成が必要な場合、これらのサーバーのレジストリで RMS コネクタを構成する必要があります。
+コネクタサーバーがインターネットに直接接続されていないネットワークにインストールされており、インターネットに発信アクセスするために web プロキシサーバーを手動で構成する必要がある場合は、これらのサーバーのレジストリを RMS コネクタ用に構成する必要があります。
 
 #### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>Web プロキシ サーバーを使用するように RMS コネクタを構成するには
 
@@ -233,7 +233,7 @@ RMS コネクタがインストールされていないコンピューターで 
 
 -   1 つ以上のネットワーク インターフェイス。
 
--   ファイアウォール (または Web プロキシ) 経由でのインターネット アクセス。
+-   ファイアウォール (または web プロキシ) 経由でインターネットにアクセスします。
 
 RMS コネクタ管理ツールをインストールするには、次のファイルを実行します。
 

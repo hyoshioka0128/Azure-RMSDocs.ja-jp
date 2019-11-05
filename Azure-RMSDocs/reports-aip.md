@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 616e273f3d3a9a615e752e4fb9587165aac15a23
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: de74d15b2db84cc13cbc54943675232e8d659df4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445065"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561369"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -163,7 +163,7 @@ Azure Information Protection 分析に固有の機能として、ご自身の Az
 
 詳細:
 
-1. Azure Information Protection 分析ブレードにアクセスするには、次の [Azure AD の管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)のいずれか:
+1. Azure Information Protection analytics ウィンドウにアクセスするには、次のいずれかの[Azure AD 管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を使用します。
     
     - Log Analytics ワークスペースを作成する、またはカスタム クエリを作成するには:
     
@@ -219,15 +219,15 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
-1. まだそれを実行していない場合、新しいブラウザー ウィンドウを開き、[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)を備えたアカウントを使って [Azure portal にサインインします](https://portal.azure.com)。 次に、 **[Azure Information Protection]** ブレードに移動します。 
+1. まだそれを実行していない場合、新しいブラウザー ウィンドウを開き、[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)を備えたアカウントを使って [Azure portal にサインインします](https://portal.azure.com)。 次に、 **[Azure Information Protection]** ウィンドウに移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
     
 2. **[管理]** メニュー オプションを探し、 **[Configure analytics (Preview)]\(分析の構成 (プレビュー)\)** を選択します。
 
-3. **[Azure Information Protection ログ分析]** ブレードには、テナントによって所有されているすべての Log Analytics ワークスペースの一覧が表示されます。 以下のいずれかを実行します。
+3. **[Log analytics の Azure Information Protection]** ウィンドウに、テナントが所有している Log Analytics ワークスペースの一覧が表示されます。 以下のいずれかを実行します。
     
-    - 新しい Log Analytics ワークスペースを作成するには、 **[新しいワークスペースの作成]** を選択し、 **[Log Analytics ワークスペース]** ブレードで、要求された情報を指定します。
+    - 新しい Log Analytics ワークスペースを作成するには、 **[新しいワークスペースの作成]** を選択し、 **[Log Analytics ワークスペース]** ウィンドウで、要求された情報を入力します。
     
     - 既存の Log Analytics ワークスペースを使用するには、一覧からワークスペースを選択します。
     
@@ -247,7 +247,7 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 ## <a name="how-to-view-the-reports"></a>レポートの表示方法
 
-[Azure Information Protection] ブレードから **[ダッシュボード]** メニュー オプションを探し、次のいずれかのオプションを選択します。
+Azure Information Protection ウィンドウで、 **[ダッシュボード]** メニューオプションを見つけて、次のいずれかのオプションを選択します。
 
 - **使用状況レポート (プレビュー)** : ラベルがどのように使用されているかを確認するには、このレポートを使用します。
 
@@ -269,7 +269,7 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 ## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>レポートを変更し、カスタム クエリを作成する方法
 
-ダッシュボードでクエリ アイコンを選択して、 **[ログ検索]** ブレードを開きます。 
+ダッシュボードのクエリアイコンを選択して、**ログ検索**ウィンドウを開きます。 
 
 ![Azure Information Protection のレポートをカスタマイズする [Log Analytics] アイコン](./media/log-analytics-icon.png)
 

@@ -5,27 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8fc121385a294ae32da9d6707618990a1920b815
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 2094f6d2d0a243f73f9c19f08dcc68877ca5d16a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055615"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560844"
 ---
 # <a name="class-mippolicyruledata"></a>クラス mip::P olicyRuleData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetName() const  | _まだ文書化されていません。_
-public const std::string& GetId() const  | _まだ文書化されていません。_
-public const std:: vector\<std:: unique_ptr\<actiondata\>\>& getactions data () const  | _まだ文書化されていません。_
-public bool Is互換 Version () const  | _まだ文書化されていません。_
-public const std:: map\<std:: string、std:: string\>& getattributedata () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: map\<std:: string, std:: string\>\>& GetRuleTags () const  | _まだ文書化されていません。_
-public const ConditionData * GetConditionData () const  | _まだ文書化されていません。_
-パブリック仮想 ~ PolicyRuleData ()  | _まだ文書化されていません。_
+public const std::string& GetName() const  | まだ文書化されていません。
+public const std::string& GetId() const  | まだ文書化されていません。
+public const std:: vector\<std:: unique_ptr\<ActionData\>\>& Getactions Data () const  | まだ文書化されていません。
+public bool Is互換 Version () const  | まだ文書化されていません。
+public const std:: map\<std:: string、std:: string\>& GetAttributeData () const  | まだ文書化されていません。
+public const std:: vector\<std:: map\<std:: string、std:: string\>\>& GetRuleTags () const  | まだ文書化されていません。
+public const ConditionData * GetConditionData () const  | まだ文書化されていません。
+パブリック仮想 ~ PolicyRuleData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

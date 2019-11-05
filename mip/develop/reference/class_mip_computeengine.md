@@ -5,35 +5,37 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 24f22f28bf8082d0a0347526f5bc87453c9ba4e2
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: 18cf28b380e5636b8948f133bceabd61b504d8fb
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070512"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558969"
 ---
 # <a name="class-mipcomputeengine"></a>クラス mip:: ComputeEngine 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels ()  | _まだ文書化されていません。_
-public std:: shared_ptr\<contentlabel\> GetSensitivityLabel (ComputeEngineContext & context、const documentstate & 状態)  | _まだ文書化されていません。_
-public std:: vector\<std:: shared_ptr\<アクション\> \> computeactions (ComputeEngineContext & context、const documentstate & documentstate、const applicationactionstate & actionstate)  | _まだ文書化されていません。_
-public void NotifyCommittedActions (ComputeEngineContext & context、const DocumentState & documentState、const ApplicationActionState & actionState)  | _まだ文書化されていません。_
-パブリック仮想 ~ ComputeEngine ()  | _まだ文書化されていません。_
-public static MIP_UPE_CORE_API std:: shared_ptr&lt;computeengine&gt; MIP:: computeengine:: Create  | _まだ文書化されていません。_
-public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngineContext&gt; MIP:: computeengine:: CreateContext  | _まだ文書化されていません。_
+public const std:: vector\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels ()  | まだ文書化されていません。
+public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (ComputeEngineContext & context、const DocumentState & 状態)  | まだ文書化されていません。
+public std:: vector\<std:: shared_ptr\<アクション\>\> ComputeActions (ComputeEngineContext & context、const DocumentState & documentState、const ApplicationActionState & actionState)  | まだ文書化されていません。
+public void NotifyCommittedActions (ComputeEngineContext & context、const DocumentState & documentState、const ApplicationActionState & actionState)  | まだ文書化されていません。
+パブリック仮想 ~ ComputeEngine ()  | まだ文書化されていません。
+public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngine&gt; MIP:: ComputeEngine:: Create  | まだ文書化されていません。
+public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngineContext&gt; MIP:: ComputeEngine:: CreateContext  | まだ文書化されていません。
 
 ## <a name="members"></a>メンバー
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels 関数
 _まだ文書化されていません。_
 
+  
 ### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel 関数
 _まだ文書化されていません。_
 
+  
 ### <a name="computeactions-function"></a>ComputeActions 関数
 _まだ文書化されていません。_
 

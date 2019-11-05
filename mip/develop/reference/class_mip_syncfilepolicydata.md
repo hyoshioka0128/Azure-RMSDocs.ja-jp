@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 96b494fb84fc7c71eda5ea09ba7c96388452f786
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: c4464c4705af082c8c5f1e63fde217b083a24d7e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056783"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560518"
 ---
 # <a name="class-mipsyncfilepolicydata"></a>クラス mip:: SyncFilePolicyData 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const LabelGroupData * GetLabelGroupData () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: unique_ptr\<policypackagedata\>\>& getの packagedata () const  | _まだ文書化されていません。_
-public const std:: string & GetUpn () const  | _まだ文書化されていません。_
-public const std:: unordered_map\<std:: string, std:: string\>& GetClassificationList () const  | _まだ文書化されていません。_
-public const std:: string & GetUserObjectId () const  | _まだ文書化されていません。_
-パブリック仮想 ~ SyncFilePolicyData ()  | _まだ文書化されていません。_
+public const LabelGroupData * GetLabelGroupData () const  | まだ文書化されていません。
+public const std:: vector\<std:: unique_ptr\<PolicyPackageData\>\>& Get Packagedata () const  | まだ文書化されていません。
+public const std:: string & GetUpn () const  | まだ文書化されていません。
+public const std:: unordered_map\<std:: string、std:: string\>& GetClassificationList () const  | まだ文書化されていません。
+public const std:: string & GetUserObjectId () const  | まだ文書化されていません。
+パブリック仮想 ~ SyncFilePolicyData ()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   

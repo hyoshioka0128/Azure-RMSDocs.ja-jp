@@ -5,27 +5,29 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 78917c686c1c7da42af13d3f6e6a5349bc509a0d
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: bc27cae6020034029712e96fa5ae500d7afebf9b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056242"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559383"
 ---
 # <a name="class-mipcomputeenginesettings"></a>クラス mip:: ComputeEngine:: Settings 
   
-## <a name="summary"></a>Summary
+## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const applicationinfo & applicationinfo、const std:: shared_ptr\<TelemetryDelegate\>& TelemetryDelegate、const std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate, const std:: vector\<std::p air\<std:: string, std:: string\>\>& customProperties)  | _まだ文書化されていません。_
-public const ApplicationInfo& GetApplicationInfo() const  | _まだ文書化されていません。_
-public std:: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | _まだ文書化されていません。_
-public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | _まだ文書化されていません。_
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomProperties () const  | _まだ文書化されていません。_
-public void SetParentCorrelationId (const std:: string correlationId, const std:: string description)  | _まだ文書化されていません。_
-public const std:: string & GetParentCorrelationId () const  | _まだ文書化されていません。_
-public const std:: string & GetParentCorrelationIdDescription () const  | _まだ文書化されていません。_
+パブリック設定 (const ApplicationInfo & applicationInfo、const std:: shared_ptr\<TelemetryDelegate\>& telemetryDelegate、const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate、const std:: string& hostName、const std:: vector\<std::p air\<std:: string、std:: string\>\>& customProperties、const std:: vector\<LabelFilterType\>& labelFilter)  | まだ文書化されていません。
+public const ApplicationInfo& GetApplicationInfo() const  | まだ文書化されていません。
+public std:: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | まだ文書化されていません。
+public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | まだ文書化されていません。
+public const std:: string & GetHostName () const  | まだ文書化されていません。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomProperties () const  | まだ文書化されていません。
+public void SetParentCorrelationId (const std:: string correlationId, const std:: string description)  | まだ文書化されていません。
+public const std:: string & GetParentCorrelationId () const  | まだ文書化されていません。
+public const std:: string & GetParentCorrelationIdDescription () const  | まだ文書化されていません。
+public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   
@@ -45,6 +47,10 @@ _まだ文書化されていません。_
 _まだ文書化されていません。_
 
   
+### <a name="gethostname-function"></a>GetHostName 関数
+_まだ文書化されていません。_
+
+  
 ### <a name="getcustomproperties-function"></a>GetCustomProperties 関数
 _まだ文書化されていません。_
 
@@ -58,4 +64,8 @@ _まだ文書化されていません。_
 
   
 ### <a name="getparentcorrelationiddescription-function"></a>GetParentCorrelationIdDescription 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
 _まだ文書化されていません。_
