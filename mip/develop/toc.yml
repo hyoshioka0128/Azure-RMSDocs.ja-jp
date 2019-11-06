@@ -339,6 +339,16 @@
               href: reference/class_mip_userrights.md
             - name: UserRoles
               href: reference/class_mip_userroles.md
+    - name: C ライブラリ
+      items:
+        - name: 概要
+          href: reference/c/overview.md
+        - name: 列挙型
+          href: reference/c/enumerations.md
+        - name: 構造体
+          href: reference/c/structures.md
+        - name: 関数
+          href: reference/c/functions.md
     - name: .NET API ブラウザー
       href: /dotnet/api/?term=microsoft.informationprotection
 - name: リソース
