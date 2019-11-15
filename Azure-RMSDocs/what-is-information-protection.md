@@ -4,7 +4,7 @@ description: Azure Information Protection サービスの技術的な概要で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/18/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0659abcb6211bc05a6db435db759eed8f6c44cea
-ms.sourcegitcommit: 2f092b395e31ce64df8b9148433032be5702217e
+ms.openlocfilehash: 08360f357acd10d8f832f7aa5efcfb271539c8fe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589606"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561149"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -145,7 +145,7 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Microsoft Ignite 2019 オーランドが間もなく開催されます。 そこでは、最新の更新プログラムと機能強化を含む Azure Information Protection に関する有益な情報が多数提供されます。 ご参加いただければ幸いですが、ご参加いただけない場合でも、後から視聴できるようにセッションが録画されます。
+Microsoft Ignite 2019 オーランドが開催されます。 そこでは、最新の更新プログラムと機能強化を含む Azure Information Protection に関する有益な情報が多数提供されます。 ご参加いただければ幸いですが、ご参加いただけない場合でも、後から視聴できるようにセッションが録画されます。
 
 お勧めする上位 5 つのセッションについて、次の一覧をご覧ください。 リンクは、録画が利用可能になると追加されます。
 
@@ -158,6 +158,9 @@ Microsoft Ignite 2019 オーランドが間もなく開催されます。 そこ
 - BRK2120 - Azure Information Protection をご理解いただけましたか。 統一ラベル付け、ポリシーの構成、クライアント、分析について説明します
 
 - BRK2121 - Microsoft Information Protection SDK を使用して、機密ラベル付けと保護の機能を独自のアプリと ISV ソリューションにまで拡張します
+
+最新のブログ投稿: [機密データがある場所を把握し、Microsoft 365 でインテリジェントに保護する](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
+
 
 ## <a name="next-steps"></a>次の手順
 
