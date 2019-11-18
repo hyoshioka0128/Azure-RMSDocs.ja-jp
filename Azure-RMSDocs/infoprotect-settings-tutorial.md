@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 73f242b50e53eb7f5408bf99902daf0214d37268
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: 98aeeb0b858690327904e8fcd3932f9b38e7cf30
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712582"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559213"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -44,7 +44,7 @@ ms.locfileid: "71712582"
     
     このプランを含むサブスクリプションを持っていない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure portal に [Azure Information Protection] ブレードが追加されていて、Azure Information Protection のグローバル ポリシーに 1 つ以上のラベルが公開されている。
+2. Azure portal に [Azure Information Protection] ペインが追加されていて、Azure Information Protection のグローバル ポリシーに 1 つ以上のラベルが公開されている。
     
     これらの手順については、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
@@ -80,11 +80,11 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
 
 1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ブレードを開きます。 
+2. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ペインを開きます。 
 
 3. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後にポリシー設定があるのを見つけます。 設定の値は次に表示する値とは異なる場合があります。
     
@@ -103,7 +103,7 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
     
     ![Azure Information Protection チュートリアル - 既定の設定の変更](./media/defaultsettings-aip-changed.png)
 
-5. **[保存]** を選択し (この **[ポリシー:グローバル]** ブレード上)、操作を確認するメッセージが表示されたら **[OK]** を選択します。 
+5. **[保存]** を選択し (この **[ポリシー:グローバル]** ペイン上)、操作を確認するメッセージが表示されたら **[OK]** を選択します。 
 
 ## <a name="see-your-policy-settings-in-action"></a>ポリシー設定の動作を確認する 
 
@@ -170,7 +170,7 @@ Outlook を起動し、新しい電子メール メッセージを作成しま�
 
 このチュートリアルで行った変更を保持したくない場合は、次の操作を行います。
 
-1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ブレードを開きます。
+1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ペインを開きます。
 
 2. ポリシー設定をメモしておいた元の値に戻した後、 **[保存]** を選択します。
 

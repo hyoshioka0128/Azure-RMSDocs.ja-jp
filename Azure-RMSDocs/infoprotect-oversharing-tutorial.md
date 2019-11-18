@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ffbc65add0d5daceddbf02f454efac4a2a288243
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: ef93a0ee7bdcfd2caf2216bed15bd2d1d9e5436e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712595"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559368"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル: Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
@@ -43,9 +43,9 @@ ms.locfileid: "71712595"
     
     このプランを含むサブスクリプションを持っていない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure portal に [Azure Information Protection] ブレードが追加されていて、Azure Information Protection のグローバル ポリシーに少なくとも 1 つのラベルが公開されている。
+2. Azure portal に [Azure Information Protection] ペインが追加されていて、Azure Information Protection のグローバル ポリシーに少なくとも 1 つのラベルが公開されている。
     
-    このチュートリアルでは既定のラベル ( **[全般]** ) を使用しますが、希望する場合は、このラベルを別のラベルに置き換えることができます。 [Azure Information Protection] ブレードの追加に関するヘルプが必要な場合や、グローバル ポリシーにまだラベルが公開されていない場合は、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
+    このチュートリアルでは既定のラベル ( **[全般]** ) を使用しますが、希望する場合は、このラベルを別のラベルに置き換えることができます。 [Azure Information Protection] ペインの追加に関するヘルプが必要な場合や、グローバル ポリシーにまだラベルが公開されていない場合は、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
 3. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、このコンピューターで Outlook にサインインできる。 このチュートリアル中に Outlook を複数回再起動する準備をしておいてください。
 
@@ -56,7 +56,7 @@ ms.locfileid: "71712595"
     クラシック クライアントではなく統合ラベル付けクライアントを使用している場合は、PowerShell の詳細設定を使ってこのチュートリアルと同等の構成を行う方法について説明した以下の手順を参照してください。
     
     - 管理者ガイドの手順:[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - ビデオ:[Azure Information Protection の Outlook ポップアップの構成](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+    - ビデオ:[Azure Information Protection の Outlook ポップアップの構成](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
@@ -70,33 +70,33 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]**  >  **[ラベル]** を選択し、 **[全般]** ラベルを選択して **[ラベル: 全般]** ブレードを開きます。 
+2. **[分類]**  >  **[ラベル]** を選択し、 **[全般]** ラベルを選択して **[ラベル: 全般]** ペインを開きます。 
 
-3. ブレードの下部でラベル ID を確認します。
+3. ペインの下部でラベル ID を確認します。
     
     ![Azure Information Protection チュートリアル - ラベル ID を確認する](./media/label-id.png)
 
 4. 後の手順でこの値を簡単にコピーできるように、ラベル ID の値をコピーして一時ファイルに貼り付けます。 この例では、ラベル ID の値は **0e421e6d-ea17-4fdb-8f01-93a3e71333b8** です。
 
-5. **[ラベル: 全般]** ブレードを閉じますが、Azure portal は閉じないでください。
+5. **[ラベル: 全般]** ペインを閉じますが、Azure portal は閉じないでください。
 
 ## <a name="create-a-scoped-policy-to-test-the-new-advanced-client-settings"></a>スコープ ポリシーを作成して新しいクライアントの詳細設定をテストする
 
 テストのために、新しいクライアントの詳細設定がお客様だけに適用されるように、新しいスコープ ポリシーを作成します。
 
-1. **[Azure Information Protection - ポリシー]** ブレードで、 **[新しいポリシーの追加]** を選択します。 既存のグローバル ポリシーからラベルと設定を示す **[ポリシー]** ブレードが表示されます。
+1. **[Azure Information Protection - ポリシー]** ペインで、 **[新しいポリシーの追加]** を選択します。 既存のグローバル ポリシーからラベルと設定を示す **[ポリシー]** ペインが表示されます。
 
 2. **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** のポリシー名を指定し、必要に応じて、**Outlook を使用した過剰な共有を制御するクライアントの詳細設定**という説明を指定します。
 
-3. **[Specify which users/groups get this policy]\(このポリシーを取得するユーザー/グループを指定する\)** を選択し、後のブレードを使用して、自分のユーザー アカウントを指定します。
+3. **[Specify which users/groups get this policy]\(このポリシーを取得するユーザー/グループを指定する\)** を選択し、後のペインを使用して、自分のユーザー アカウントを指定します。
 
-4. お客様のアカウント名が **[ポリシー]** ブレードに表示され、このブレードのラベルや設定をさらに変更することなく、 **[保存]** を選択します。 選択を確認するメッセージが表示される場合があります。 
+4. 自分のアカウント名が **[ポリシー]** ペインに表示されたら、このペインのラベルや設定をさらに変更することなく、 **[保存]** を選択します。 選択を確認するメッセージが表示される場合があります。 
 
-このスコープ ポリシーに、クライアントの詳細設定を追加する準備ができました。 **[Policy: Oversharing tutorial]\(ポリシー: 過剰な共有のチュートリアル\)** ブレードを閉じますが、Azure portal は閉じないでください。
+このスコープ ポリシーに、クライアントの詳細設定を追加する準備ができました。 **[Policy: Oversharing tutorial]\(ポリシー: 過剰な共有のチュートリアル\)** ペインを閉じますが、Azure portal は閉じないでください。
 
 ## <a name="configure-and-test-advanced-client-settings-to-warn-prompt-for-justification-or-block-emails-that-have-the-general-label"></a>クライアントの詳細設定を構成してテストし、[全般] ラベルがある電子メールに対する警告、理由の確認、またはブロックを行う
 
@@ -110,16 +110,16 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 新しく作成したスコープ ポリシーを使用して、 **[全般]** ラベルの ID と共に **OutlookWarnUntrustedCollaborationLabel** という名前を付けた新しいクライアントの詳細設定を追加します。 
 
-1. **[Azure Information Protection - ポリシー]** ブレードに戻って、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. **[Azure Information Protection - ポリシー]** ペインに戻って、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、詳細設定の名前 (**OutlookWarnUntrustedCollaborationLabel**) を入力し、値として自分のラベル ID を貼り付けます。 Microsoft のラベル ID の例を使用します。
+2. **[詳細設定]** ペインで、詳細設定の名前 (**OutlookWarnUntrustedCollaborationLabel**) を入力し、値として自分のラベル ID を貼り付けます。 Microsoft のラベル ID の例を使用します。
     
     
     ![Azure Information Protection チュートリアル - OutlookWarnUntrustedCollaborationLabel クライアントの詳細設定を作成する ](./media/configure-warnmessage.png)
 
 3. **[保存して閉じる]** を選択します。
 
-**[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+**[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 ### <a name="test-the-advanced-client-setting-to-warn-users-if-an-email-or-attachment-has-the-general-label"></a>電子メールまたは添付ファイルに [全般] ラベルがある場合、クライアントの詳細設定をテストしてユーザーに警告する
 
@@ -145,15 +145,15 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 既存のクライアントの詳細設定を編集して、 **[全般]** ラベル ID を保持しますが、名前を「**OutlookJustifyUntrustedCollaborationLabel**」に変更します。 
 
-1. **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. **[Azure Information Protection - ポリシー]** ペインで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、作成した前の詳細設定の名前 **OutlookWarnUntrustedCollaborationLabel** を **OutlookJustifyUntrustedCollaborationLabel** という新しい名前に置き換えます。
+2. **[詳細設定]** ペインで、作成した前の詳細設定の名前 **OutlookWarnUntrustedCollaborationLabel** を **OutlookJustifyUntrustedCollaborationLabel** という新しい名前に置き換えます。
     
     ![Azure Information Protection チュートリアル - OutlookJustifyUntrustedCollaborationLabel クライアントの詳細設定を作成する ](./media/configure-justifymessage.png)
 
 3. **[保存して閉じる]** を選択します。
 
-**[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+**[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 ### <a name="test-the-advanced-client-setting-to-prompt-users-to-justify-if-an-email-has-the-general-label"></a>電子メールに [全般] ラベルがある場合、クライアントの詳細設定をテストしてユーザーに理由を確認する
 
@@ -177,15 +177,15 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 既存のクライアントの詳細設定をもう 1 回編集して、 **[全般]** ラベル ID を保持しますが、名前を「**OutlookBlockUntrustedCollaborationLabel**」に変更します。 
 
-1. Azure portal の **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. Azure portal の **[Azure Information Protection - ポリシー]** ペインで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、作成した前の詳細設定の名前 **OutlookJustifyUntrustedCollaborationLabel** を **OutlookBlockUntrustedCollaborationLabel** という新しい名前に置き換えます。
+2. **[詳細設定]** ペインで、作成した前の詳細設定の名前 **OutlookJustifyUntrustedCollaborationLabel** を **OutlookBlockUntrustedCollaborationLabel** という新しい名前に置き換えます。
     
     ![Azure Information Protection チュートリアル - OutlookBlockUntrustedCollaborationLabel クライアントの詳細設定を作成する ](./media/configure-blockmessage.png)
 
 3. **[保存して閉じる]** を選択します。
 
-**[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+**[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 ### <a name="test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label"></a>クライアントの詳細設定をテストして、ユーザーが [全般] ラベルがある電子メールを送信できないようにする
 
@@ -282,13 +282,13 @@ Action Source:
 
 このしくみを説明するために、**OutlookBlockTrustedDomains** という名前の追加のクライアントの詳細設定を作成し、自分のメール アドレスの独自のドメイン名を指定します。 これによって、自分のドメイン名を各自のメール アドレスに共有している受信者には、以前は表示されていたブロック メッセージが表示されなくなります。ただし、その他の受信者には引き続き表示されます。 同様に、**OutlookWarnTrustedDomains** と **OutlookJustifyTrustedDomains** に対して追加のクライアントの詳細設定を作成することができます。
 
-1. Azure portal の **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. Azure portal の **[Azure Information Protection - ポリシー]** ペインで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、詳細設定の名前 (**OutlookBlockTrustedDomains**) を入力して、値として自分の電子メール アドレスからドメイン名を貼り付けます。 次に例を示します。
+2. **[詳細設定]** ペインで、詳細設定の名前 (**OutlookBlockTrustedDomains**) を入力して、値として自分の電子メール アドレスからドメイン名を貼り付けます。 次に例を示します。
     
     ![Azure Information Protection チュートリアル - OutlookBlockTrustedDomains クライアントの詳細設定を作成する](./media/configure-exemptblockdomain.png)
 
-4. **[保存して閉じる]** を選択します。 **[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+4. **[保存して閉じる]** を選択します。 **[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 5. ここで、[ユーザーが [全般] ラベルがある電子メールを送信できないようにする前のテスト](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label)をもう一度実行します。自分のメール アドレスを使用すると、ブロック メッセージが表示されなくなります。 メールは中断されることなく送信されます。
     
@@ -304,15 +304,15 @@ Action Source:
 
 **OutlookUnlabeledCollaborationAction** という名前が付けられたこの新しいクライアントの詳細設定にラベル ID は必要ありませんが、ラベル付けされていないコンテンツに対して行うアクションを指定します。 
 
-1. Azure portal で **[Azure Information Protection - ポリシー]** ブレードに戻り、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. Azure portal で **[Azure Information Protection - ポリシー]** ペインに戻り、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、詳細設定の名前 (**OutlookUnlabeledCollaborationAction**) を入力して、値に **[警告]** を指定します。
+2. **[詳細設定]** ペインで、詳細設定の名前 (**OutlookUnlabeledCollaborationAction**) を入力して、値に **[警告]** を指定します。
     
     ![Azure Information Protection tutorial - [警告] 値を使って OutlookUnlabeledCollaborationAction クライアントの詳細設定を作成する ](./media/configure-nolablewarn.png)
 
 3. **[保存して閉じる]** を選択します。
 
-**[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+**[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 ### <a name="test-the-advanced-client-setting-to-warn-users-if-an-email-doesnt-have-a-label"></a>電子メールにラベルがない場合、クライアントの詳細設定をテストしてユーザーに警告する
 
@@ -334,15 +334,15 @@ Action Source:
 
 既存のクライアントの詳細設定を編集して、**OutlookUnlabeledCollaborationAction** の名前を保持しますが、値を **[理由]** に変更します。 
 
-1. **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. **[Azure Information Protection - ポリシー]** ペインで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、**OutlookUnlabeledCollaborationAction** 設定を見つけて、 **[警告]** の前の値を **[理由]** という新しい値に置き換えます。
+2. **[詳細設定]** ペインで、**OutlookUnlabeledCollaborationAction** 設定を見つけて、 **[警告]** の前の値を **[理由]** という新しい値に置き換えます。
     
     ![Azure Information Protection tutorial - OutlookUnlabeledCollaborationAction クライアントの詳細設定を [理由] 値に変更する](./media/configure-justifymessage2.png)
 
 3. **[保存して閉じる]** を選択します。
 
-**[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+**[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 ### <a name="test-the-advanced-client-setting-to-prompt-users-to-justify-if-an-email-isnt-labeled"></a>電子メールにラベルが付けられていない場合、クライアントの詳細設定をテストしてユーザーに理由を確認する
 
@@ -364,15 +364,15 @@ Action Source:
 
 前述のように、既存のクライアントの詳細設定を編集して、**OutlookUnlabeledCollaborationAction** の名前を保持しますが、値を **[ブロック]** に変更します。 
 
-1. **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 次に **[詳細設定]** を選択します。
+1. **[Azure Information Protection - ポリシー]** ペインで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 次に **[詳細設定]** を選択します。
 
-2. **[詳細設定]** ブレードで、**OutlookUnlabeledCollaborationAction** 設定を確認し、 **[理由]** の前の値を **[ブロック]** という新しい値に置き換えます。
+2. **[詳細設定]** ペインで、**OutlookUnlabeledCollaborationAction** 設定を確認し、 **[理由]** の前の値を **[ブロック]** という新しい値に置き換えます。
     
     ![Azure Information Protection tutorial - OutlookUnlabeledCollaborationAction クライアントの詳細設定を [ブロック] 値に変更する](./media/configure-blockmessage2.png)
 
 3. **[保存して閉じる]** を選択します。
 
-**[ポリシー]** ブレードまたは Azure portal は閉じないでください。
+**[ポリシー]** ペインまたは Azure portal は閉じないでください。
 
 ### <a name="test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled"></a>クライアントの詳細設定をテストして、ユーザーが [全般] ラベルのない電子メールを送信できないようにする
 
@@ -420,7 +420,7 @@ User Response: Confirmed
 
 このチュートリアルで行った変更を保持したくない場合は、次の操作を行います。
 
-1. Azure portal の **[Azure Information Protection - ポリシー]** ブレードで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー ( **...** ) を選択します。 その後、 **[ポリシーの削除]** を選択します。
+1. Azure portal の **[Azure Information Protection - ポリシー]** ペインで、 **[Oversharing tutorial]\(過剰な共有のチュートリアル\)** の横にあるコンテキスト メニュー **[...]** を選択します。 その後、 **[ポリシーの削除]** を選択します。
 
 2. 確認するメッセージが表示されたら、 **[OK]** を選択します。
 

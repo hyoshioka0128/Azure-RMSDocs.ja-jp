@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 02a036a3ab72cc0dcd16d2d3d7e9edaa4c0338ad
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674182"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559148"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
@@ -43,7 +43,7 @@ ms.locfileid: "71674182"
     
     このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure portal に [Azure Information Protection] ブレードを追加し、保護サービスがアクティブになっていることを確認した。
+2. Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。
 
     これらの操作に関するサポートが必要な場合は、[Azure portal での作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。
 
@@ -77,19 +77,19 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、保護を適用するように構成するラベルを選択します。 
+2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ペインで、保護を適用するように構成するラベルを選択します。 
 
-3. **[ラベル]** ブレードで、 **[Set permissions for documents and emails containing this label]** (このラベルを含むドキュメントと電子メールにアクセス許可を設定する) を見つけます。 **[保護]** を選択すると、 **[未構成]** または **[保護の削除]** が以前に選択されていた場合に **[保護]** ブレードが自動的に開きます。
+3. **[ラベル]** ペインで、 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけます。 **[保護]** を選択すると、 **[未構成]** または **[保護の削除]** が以前に選択されていた場合に **[保護]** ペインが自動的に開きます。
     
-    **[保護]** ブレードが自動的に開かない場合は、 **[保護]** を選択します。
+    **[保護]** ペインが自動的に開かない場合は、 **[保護]** を選択します。
     
     ![Azure Information Protection ラベルの保護を構成する](./media/info-protect-protection-bar-configured.png)。
 
-4. **[保護]** ブレードで、 **[Azure (cloud key)]\(Azure (クラウド キー)\)** が選択されていることを確認します。
+4. **[保護]** ペインで、 **[Azure (クラウド キー)]** が選択されていることを確認します。
     
 5. **[ユーザー定義のアクセス許可の設定 (プレビュー)]** を選択します。
 
@@ -97,7 +97,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 7. 選択されている場合は、次のオプションをオフにします。 **[Word、Excel、PowerPoint、エクスプローラーでは、カスタム アクセス許可を指定するようユーザーに促す]** 。
 
-8. **[保護]** ブレードで **[OK]** をクリックしてから、 **[ラベル]** ブレードで **[保存]** をクリックします。
+8. **[保護]** ペインで **[OK]** をクリックしてから、 **[ラベル]** ペインで **[保存]** をクリックします。
 
 これで、Outlook でのみ表示し、転送不可の保護を電子メールに適用するようにラベルが構成されました。
 
@@ -119,9 +119,9 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 この構成を保持しない場合や、保護を適用しないようなラベルを返さない場合は、次の手順を実行します。
 
-1. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、構成したラベルを選択します。 
+1. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ペインで、構成したラベルを選択します。 
 
-3. **[ラベル]** ブレードで、 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけ、 **[未構成]** を選択して **[保存]** を選択します。
+3. **[ラベル]** ペインで、 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけ、 **[未構成]** を選択して **[保存]** を選択します。
 
 ## <a name="next-steps"></a>次の手順
 
