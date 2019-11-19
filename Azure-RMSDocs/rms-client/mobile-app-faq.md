@@ -4,7 +4,7 @@ description: iOS 用および Android 用の Azure Information Protection アプ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.custom: user
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fcd764187379fdfcb8dd1cc13c60ae9dad2069dd
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: a8f6871f322765abf07087ce3c7bd629bfc9748f
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301150"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160825"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
-*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 このページでは、iOS 用および Android 用の Azure Information Protection アプリの使用に役立つよく寄せられる質問への回答を示します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "71301150"
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>モバイル デバイスで Azure Information Protection アプリを実行するには
 
-Azure Information Protection アプリには、 **iOS 11**または**Android 4.4**の最小バージョンが必要です。
+Azure Information Protection アプリには、 **iOS 11**または**Android 6.0**の最小バージョンが必要です。
 
 これらのバージョン以降を搭載している場合は、モバイル デバイスにアプリをインストールして実行できます。
 
@@ -51,7 +51,7 @@ Azure Information Protection アプリには、 **iOS 11**または**Android 4.4
 
 アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、 **[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
 
-ただし、待機しない場合は、次の手順に従って、表示対象の保護されたメールまたはファイルを自分自身に送信できます。[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md) 
+ただし、待機しない場合は、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md)」の手順に従って、表示対象の保護された電子メールまたはファイルを自分自身に送信できます 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>このアプリにサインインするにはどのような資格情報を使用する必要がありますか?
 
