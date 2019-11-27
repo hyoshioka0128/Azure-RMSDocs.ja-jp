@@ -1,6 +1,6 @@
 ---
-title: Concepts - The core concepts in the MIP SDK - Telemetry Control
-description: This article will help you understand how to opt out of telemetry and which events are still sent when opted out.
+title: 概念-MIP SDK-テレメトリコントロールの主要な概念
+description: この記事は、テレメトリを無効にする方法と、オプトアウト時に送信されるイベントを理解するのに役立ちます。
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
@@ -14,139 +14,139 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74484855"
 ---
-# <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK - Telemetry Configuration
+# <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-テレメトリ構成
 
-## <a name="telemetry"></a>製品利用統計情報
+## <a name="telemetry"></a>テレメトリ
 
-By default, the Microsoft Information Protection SDK sends telemetry data to Microsoft. This telemetry data is useful for troubleshooting bugs, quality, and performance issues across the SDK install base that we may not capture in our internal testing. When implementing your application with the SDK, it's important to give users and admins the ability to opt out of telemetry if required.
+既定では、Microsoft Information Protection SDK はテレメトリデータを Microsoft に送信します。 このテレメトリデータは、内部テストではキャプチャされない可能性がある SDK インストールベース全体のバグ、品質、およびパフォーマンスの問題のトラブルシューティングに役立ちます。 SDK を使用してアプリケーションを実装する場合は、必要に応じて、ユーザーと管理者にテレメトリをオプトアウトする機能を提供することが重要です。
 
-## <a name="telemetry-configuration"></a>Telemetry Configuration
+## <a name="telemetry-configuration"></a>テレメトリの構成
 
-Telemetry options in the MIP SDK can be controlled via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Create an instance of this class, then set **IsTelemetryOptedOut** to true. Provide the object of class **TelemetryConfiguration** to the function used to create **MipContext**. This doesn't completely eliminate telemetry data, but reduces to a minimum set with all end-user identifiable information scrubbed.
+MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet)を使用して制御できます。 このクラスのインスタンスを作成し、 **IsTelemetryOptedOut**を true に設定します。 **MipContext**を作成するために使用される関数に、 **TelemetryConfiguration**クラスのオブジェクトを指定します。 これにより、テレメトリデータが完全に削除されるわけではありませんが、エンドユーザーを特定できるすべての情報スキャンされを使用して最小限のセットに減らすことができます。
 
-### <a name="minimum-telemetry-events"></a>Minimum Telemetry Events
+### <a name="minimum-telemetry-events"></a>最小テレメトリイベント
 
-When telemetry is set to *opted out*, a minimum set of data is sent to Microsoft. All personally identifiable information is scrubbed from this information. This data includes heartbeat information to understand that the SDK is being used, and system metadata. **No user content or end user identifiable information is set to the service.**
+テレメトリが*オプトアウト*に設定されている場合、データの最小セットが Microsoft に送信されます。 個人を特定できる情報はすべて、この情報からスキャンされます。 このデータには、SDK が使用されていること、およびシステムメタデータを理解するためのハートビート情報が含まれています。 **ユーザーのコンテンツまたはエンドユーザーを特定できる情報がサービスに設定されていません。**
 
-Review the tables below to see exactly what events and data are sent with minimum telemetry set.
+以下の表を確認して、最小テレメトリセットと共に送信されるイベントとデータを正確に確認してください。
 
-#### <a name="event-heartbeat"></a>Event: Heartbeat
+#### <a name="event-heartbeat"></a>イベント: ハートビート
 
-| 名前                                 | [説明]                                                                            | Scrubbed |
+| 名前                                 | 説明                                                                            | スキャンされ |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | [いいえ]       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | [いいえ]       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | [いいえ]       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | [いいえ]       |
-| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | [いいえ]       |
-| CreationTime                         | Time event was generated.                                                              | [いいえ]       |
-| DefaultLabel.Id                      | Tenant default label ID.                                                               | [いいえ]       |
-| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | [いいえ]       |
-| Engine.UserObjectId                  | User object ID in Azure Active Directory.                                              | [いいえ]       |
-| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | [いいえ]       |
-| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | [いいえ]       |
-| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | [いいえ]       |
-| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | [いいえ]       |
-| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | [いいえ]       |
-| MachineName                          | Name of the system that generated the event.                                           | **はい**  |
-| MIP.Version                          | Version of the MIP SDK.                                                                | [いいえ]       |
-| 操作                            | ハートビート                                                                              | [いいえ]       |
-| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | [いいえ]       |
-| プラットフォーム                             | Operating system version.                                                              | [いいえ]       |
-| ProcessName                          | Name of the process using the SDK.                                                     | [いいえ]       |
-| ProductVersion                       | Same as “App.ApplicationVersion”.                                                      | [いいえ]       |
-| SDKVersion                           | Same as MIP.Version.                                                                   | [いいえ]       |
+| アプリケーションの ApplicationId                    | Mip:: ApplicationInfo を使用して指定されたアプリケーション id。                          | いいえ       |
+| App.xaml                  | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | いいえ       |
+| App.config バージョン               | Mip:: ApplicationInfo を使用してアプリケーションのバージョンを示します。                             | いいえ       |
+| ApplicationId                        | Mip:: ApplicationInfo を使用してアプリケーションのバージョンを示します。                             | いいえ       |
+| ApplicationName                      | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | いいえ       |
+| CreationTime                         | タイムイベントが生成されました。                                                              | いいえ       |
+| DefaultLabel.Id                      | テナントの既定のラベル ID。                                                               | いいえ       |
+| エンジン TenantId                      | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
+| エンジン. UserObjectId                  | Azure Active Directory のユーザーオブジェクト ID。                                              | いいえ       |
+| イベント id                  | イベントをトリガーしたオブジェクトに関連付けられている一意の ID が生成されました。                   | いいえ       |
+| イベント. CorrelationIdDescription       | C++イベントを発生させたオブジェクトのクラス名。                                     | いいえ       |
+| イベント ParentCorrelationId            | 親イベントの相関 ID。                                                           | いいえ       |
+| イベント ParentCorrelationIdDescription | イベントをトリガーしたオブジェクトの親に関連付けられた一意の ID が生成されます。 | いいえ       |
+| イベント UniqueId                       | イベントに割り当てられた一意の ID が生成されます。                                             | いいえ       |
+| MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
+| MIP.バージョン                          | MIP SDK のバージョン。                                                                | いいえ       |
+| 演算                            | ハートビート                                                                              | いいえ       |
+| OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
+| プラットフォーム                             | オペレーティングシステムのバージョン。                                                              | いいえ       |
+| ProcessName                          | SDK を使用したプロセスの名前。                                                     | いいえ       |
+| ProductVersion                       | "App.config バージョン" と同じです。                                                      | いいえ       |
+| SDKVersion                           | MIP と同じです。バージョン。                                                                   | いいえ       |
 | UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | [いいえ]       |
-| バージョン                              | Audit version schema (“1.1”).                                                          | [いいえ]       |
+| UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | いいえ       |
+| バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
 
-#### <a name="event-discovery"></a>Event: Discovery
+#### <a name="event-discovery"></a>イベント: 検出
 
-| 名前                                 | [説明]                                                                            | Scrubbed |
+| 名前                                 | 説明                                                                            | スキャンされ |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
-| ActionId                             | Unique action ID for this event, used for event correlation.                           | [いいえ]       |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | [いいえ]       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | [いいえ]       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | [いいえ]       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | [いいえ]       |
-| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | [いいえ]       |
-| CreationTime                         | Time event was generated.                                                              | [いいえ]       |
-| DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | [いいえ]       |
-| DefaultLabel.Id                      | Tenant default label identifier.                                                       | [いいえ]       |
-| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | [いいえ]       |
-| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | [いいえ]       |
-| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | [いいえ]       |
-| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | [いいえ]       |
-| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | [いいえ]       |
-| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | [いいえ]       |
-| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | [いいえ]       |
-| LabelId                              | Content label identifier on the opened file or data.                                   | [いいえ]       |
-| MachineName                          | Name of the system that generated the event.                                           | **はい**  |
-| MIP.Version                          | Version of the MIP SDK.                                                                | [いいえ]       |
-| ObjectId                             | File path/description of the file or data.                                             | **はい**  |
-| 操作                            | "Discovery".                                                                           | [いいえ]       |
-| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | [いいえ]       |
-| プラットフォーム                             | Operating system version.                                                              | [いいえ]       |
-| ProcessName                          | Name of the process using the SDK.                                                     | [いいえ]       |
-| 保護                            | Bool indicating if the file is protected or not.                                       | [いいえ]       |
-| Protection                           | The protection template identifier.                                                    | **はい**  |
-| ProtectionOwner                      | Email address of the protection owner.                                                 | **はい**  |
-| SDKVersion                           | Same as MIP.Version.                                                                   | [いいえ]       |
+| ActionId                             | イベントの関連付けに使用される、このイベントの一意のアクション ID。                           | いいえ       |
+| アプリケーションの ApplicationId                    | Mip:: ApplicationInfo を使用して指定されたアプリケーション id。                          | いいえ       |
+| App.xaml                  | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | いいえ       |
+| App.config バージョン               | Mip:: ApplicationInfo を使用してアプリケーションのバージョンを示します。                             | いいえ       |
+| ApplicationId                        | Mip:: ApplicationInfo を使用してアプリケーションのバージョンを示します。                             | いいえ       |
+| ApplicationName                      | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | いいえ       |
+| CreationTime                         | タイムイベントが生成されました。                                                              | いいえ       |
+| dataState                            | アプリケーションとしてのデータの状態は、"REST"、"MOTION"、"USE" に対して動作します。           | いいえ       |
+| DefaultLabel.Id                      | テナントの既定のラベル識別子。                                                       | いいえ       |
+| エンジン TenantId                      | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
+| エンジン. UserObjectId                  | Azure Active Directory のユーザーオブジェクト識別子。                                      | いいえ       |
+| イベント id                  | イベントをトリガーしたオブジェクトに関連付けられている一意の ID が生成されました。                   | いいえ       |
+| イベント. CorrelationIdDescription       | C++イベントを発生させたオブジェクトのクラス名。                                     | いいえ       |
+| イベント ParentCorrelationId            | 親イベントの相関 ID。                                                           | いいえ       |
+| イベント ParentCorrelationIdDescription | イベントをトリガーしたオブジェクトの親に関連付けられた一意の ID が生成されます。 | いいえ       |
+| イベント UniqueId                       | イベントに割り当てられた一意の ID が生成されます。                                             | いいえ       |
+| LabelId                              | 開いているファイルまたはデータのコンテンツラベル識別子。                                   | いいえ       |
+| MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
+| MIP.バージョン                          | MIP SDK のバージョン。                                                                | いいえ       |
+| ObjectId                             | ファイルのパスとファイルの説明。                                             | **はい**  |
+| 演算                            | "検出"。                                                                           | いいえ       |
+| OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
+| プラットフォーム                             | オペレーティングシステムのバージョン。                                                              | いいえ       |
+| ProcessName                          | SDK を使用したプロセスの名前。                                                     | いいえ       |
+| 保護                            | ファイルが保護されているかどうかを示すブール値。                                       | いいえ       |
+| 保護                           | 保護テンプレート識別子。                                                    | **はい**  |
+| ProtectionOwner                      | 保護所有者の電子メールアドレス。                                                 | **はい**  |
+| SDKVersion                           | MIP と同じです。バージョン。                                                                   | いいえ       |
 | UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | [いいえ]       |
-| バージョン                              | Audit version schema (“1.1”).                                                          | [いいえ]       |
+| UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | いいえ       |
+| バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
 
-#### <a name="event-label-change"></a>Event: Label Change
+#### <a name="event-label-change"></a>イベント: ラベルの変更
 
-| 名前                                 | [説明]                                                                            | Scrubbed |
+| 名前                                 | 説明                                                                            | スキャンされ |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
-| ActionId                             | Unique action ID for this event, used for event correlation.                           | [いいえ]       |
-| ActionIdBefore                       | Previous action ID. Used to chain to new action ID.                                    | [いいえ]       |
-| ActionSource                         | Value of MIP::ActionSource.                                                            | [いいえ]       |
-| App.ApplicationId                    | The application ID provided via mip::ApplicationInfo.                                  | [いいえ]       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | [いいえ]       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | [いいえ]       |
-| ApplicationId                        | The application ID provided via mip::ApplicationInfo.                                  | [いいえ]       |
-| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | [いいえ]       |
-| CreationTime                         | Time the event was generated.                                                          | [いいえ]       |
-| DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | [いいえ]       |
-| DefaultLabel.Id                      | Tenant default label identifier.                                                       | [いいえ]       |
-| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | [いいえ]       |
-| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | [いいえ]       |
-| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | [いいえ]       |
-| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | [いいえ]       |
-| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | [いいえ]       |
-| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | [いいえ]       |
-| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | [いいえ]       |
-| IsLabelChanged                       | Bool indicating if the label changed.                                                  | [いいえ]       |
-| IsProtectionChanged                  | Bool indicating if protection changed.                                                 | [いいえ]       |
-| LabelId                              | Label ID that is to be applied to the file or data.                                    | [いいえ]       |
-| LabelIdBefore                        | Previous label ID that was on the file or data.                                        | [いいえ]       |
-| MachineName                          | Name of the system that generated the event.                                           | **はい**  |
-| MIP.Version                          | Version of the MIP SDK.                                                                | [いいえ]       |
-| ObjectId                             | File path/description of the file or data.                                             | **はい**  |
-| 操作                            | "Change".                                                                              | [いいえ]       |
-| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | [いいえ]       |
-| プラットフォーム                             | Operating system version.                                                              | [いいえ]       |
-| ProcessName                          | Name of the process using the SDK.                                                     | [いいえ]       |
-| 製品バージョン                      |                                                                                        | [いいえ]       |
-| 保護                            | Bool indicating if the file is protected or not.                                       | [いいえ]       |
-| Protected Before                     | Bool indicating if the file was previously protected or not.                           | [いいえ]       |
-| Protection                           | The protection template identifier.                                                    | [いいえ]       |
-| Protection Before                    | The previous protection template identifier.                                           | [いいえ]       |
-| ProtectionContentId                  | The new content identifier (GUID).                                                     | [いいえ]       |
-| ProtectionContentIdBefore            | The previous content identifier (GUID).                                                | [いいえ]       |
-| ProtectionOwner                      | Email address of the protection owner.                                                 | **はい**  |
-| ProtectionOwnerBefore                | Previous email address of the protection owner.                                        | **はい**  |
-| SDKVersion                           | Same as MIP.Version.                                                                   | [いいえ]       |
+| ActionId                             | イベントの関連付けに使用される、このイベントの一意のアクション ID。                           | いいえ       |
+| ActionIdBefore                       | 以前のアクション ID。 新しいアクション ID にチェーンするために使用されます。                                    | いいえ       |
+| ActionSource                         | MIP:: ActionSource の値。                                                            | いいえ       |
+| アプリケーションの ApplicationId                    | Mip:: ApplicationInfo を使用して提供されたアプリケーション ID。                                  | いいえ       |
+| App.xaml                  | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | いいえ       |
+| App.config バージョン               | Mip:: ApplicationInfo を使用してアプリケーションのバージョンを示します。                             | いいえ       |
+| ApplicationId                        | Mip:: ApplicationInfo を使用して提供されたアプリケーション ID。                                  | いいえ       |
+| ApplicationName                      | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | いいえ       |
+| CreationTime                         | イベントが生成された時刻。                                                          | いいえ       |
+| dataState                            | アプリケーションとしてのデータの状態は、"REST"、"MOTION"、"USE" に対して動作します。           | いいえ       |
+| DefaultLabel.Id                      | テナントの既定のラベル識別子。                                                       | いいえ       |
+| エンジン TenantId                      | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
+| エンジン. UserObjectId                  | Azure Active Directory のユーザーオブジェクト識別子。                                      | いいえ       |
+| イベント id                  | イベントをトリガーしたオブジェクトに関連付けられている一意の ID が生成されました。                   | いいえ       |
+| イベント. CorrelationIdDescription       | C++イベントを発生させたオブジェクトのクラス名。                                     | いいえ       |
+| イベント ParentCorrelationId            | 親イベントの相関 ID。                                                           | いいえ       |
+| イベント ParentCorrelationIdDescription | イベントをトリガーしたオブジェクトの親に関連付けられた一意の ID が生成されます。 | いいえ       |
+| イベント UniqueId                       | イベントに割り当てられた一意の ID が生成されます。                                             | いいえ       |
+| IsLabelChanged                       | ラベルが変更されたかどうかを示すブール値。                                                  | いいえ       |
+| IsProtectionChanged                  | 保護が変更されたかどうかを示すブール値。                                                 | いいえ       |
+| LabelId                              | ファイルまたはデータに適用されるラベル ID。                                    | いいえ       |
+| Labの前に                        | ファイルまたはデータに対する以前のラベル ID。                                        | いいえ       |
+| MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
+| MIP.バージョン                          | MIP SDK のバージョン。                                                                | いいえ       |
+| ObjectId                             | ファイルのパスとファイルの説明。                                             | **はい**  |
+| 演算                            | "変更"。                                                                              | いいえ       |
+| OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
+| プラットフォーム                             | オペレーティングシステムのバージョン。                                                              | いいえ       |
+| ProcessName                          | SDK を使用したプロセスの名前。                                                     | いいえ       |
+| 製品バージョン                      |                                                                                        | いいえ       |
+| 保護                            | ファイルが保護されているかどうかを示すブール値。                                       | いいえ       |
+| 保護前                     | ファイルが既に保護されているかどうかを示すブール値。                           | いいえ       |
+| 保護                           | 保護テンプレート識別子。                                                    | いいえ       |
+| 以前の保護                    | 以前の保護テンプレート識別子。                                           | いいえ       |
+| ProtectionContentId                  | 新しいコンテンツ識別子 (GUID)。                                                     | いいえ       |
+| ProtectionContentIdBefore            | 以前のコンテンツ識別子 (GUID)。                                                | いいえ       |
+| ProtectionOwner                      | 保護所有者の電子メールアドレス。                                                 | **はい**  |
+| ProtectionOwnerBefore                | 保護所有者の前の電子メールアドレス。                                        | **はい**  |
+| SDKVersion                           | MIP と同じです。バージョン。                                                                   | いいえ       |
 | UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | [いいえ]       |
-| バージョン                              | Audit version schema (“1.1”).                                                          | [いいえ]       |
+| UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | いいえ       |
+| バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
 
 
-### <a name="opting-out-in-c"></a>Opting out in C++
+### <a name="opting-out-in-c"></a>オプトインC++
 
-To set telemetry to minimum only, create a shared pointer of **mip::TelemetryConfiguration()** and set **isTelemetryOptedOut** to true. Pass the configuration object in to **MipContent::Create()** .
+テレメトリを [最小のみ] に設定するには、 **mip:: TelemetryConfiguration ()** の共有ポインターを作成し、 **isTelemetryOptedOut**を true に設定します。 構成オブジェクトを**MipContent:: Create ()** に渡します。
 
 ```cpp
 auto telemetryConfig = std::make_shared<mip::TelemetryConfiguration>();                                     
@@ -163,9 +163,9 @@ mMipContext = mip::MipContext::Create(
 );
 ```
 
-### <a name="opting-out-in-net"></a>Opting out in .NET
+### <a name="opting-out-in-net"></a>.NET でのオプトイン
 
-To set telemetry to minimum only, create a **TelemetryConfiguration()** object and set **isTelemetryOptedOut** to true. Pass the configuration object in to **MIP.CreateMipContext()** .
+テレメトリを最小値のみに設定するには、 **TelemetryConfiguration ()** オブジェクトを作成し、 **isTelemetryOptedOut**を true に設定します。 構成オブジェクトを MIP に渡し**ます。CreateMipContext ()** 。
 
 ```csharp
 TelemetryConfiguration telemetryConfiguration = new TelemetryConfiguration();
