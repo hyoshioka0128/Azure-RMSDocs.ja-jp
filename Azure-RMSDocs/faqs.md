@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f4583260708267575f35d4c67d6cd2afc5add68d
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.openlocfilehash: c4abec07a3e091c40990f30e34acdda1a3ede012
+ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74474339"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564519"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -115,7 +115,7 @@ Azure Rights Management データ保護を含む Office 365 サブスクリプ�
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Azure Information Protection client は分類とラベル付けを含むサブスクリプション用のみでしょうか。
 
-不可。 Azure Information Protection クライアント (クラシック) は、データを保護するために Azure Rights Management サービスだけを含むサブスクリプションでも使用できます。
+いいえ。 Azure Information Protection クライアント (クラシック) は、データを保護するために Azure Rights Management サービスだけを含むサブスクリプションでも使用できます。
 
 クラシッククライアントがインストールされていて、Azure Information Protection ポリシーがない場合、このクライアントは自動的に[保護のみモード](./rms-client/client-protection-only-mode.md)で動作します。 このモードでは、ユーザーは Rights Management テンプレートとカスタム アクセス許可に簡単に適用できます。 分類とラベル付けを含むサブスクリプションを後で購入した場合、Azure Information Protection ポリシーをダウンロードする際に、クライアントは自動的に標準モードへと切り替わります。
 
@@ -135,9 +135,6 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
     これらのいずれかの管理者ロールにユーザーを割り当てるには、「 [Azure Active Directory で管理者ロールにユーザーを割り当てる](/azure/active-directory/active-directory-users-assign-role-azure-portal)」を参照してください。 これらのロールが割り当てられているユーザーの他のアクセス許可については、Azure Active Directory のドキュメントの「[利用可能な役割](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles)」セクションを参照してください。
 
 - **セキュリティ閲覧**者または**グローバルリーダー**: [Azure Information Protection analytics](reports-aip.md)のみ。 この Azure Active Directory の管理者ロールを持っている管理者は、ご自身のラベルの使用方法を確認したり、ラベル付きのドキュメントやメールに対するユーザー アクセスや、各分類への変更を監視したり、保護する必要がある機密情報を含んでいるドキュメントを識別したりできます。 この機能は Azure Monitor を使用するため、サポート[RBAC ロール](reports-aip.md#permissions-required-for-azure-information-protection-analytics)も必要です。
-    
-    > [!NOTE]
-    > テナントが統一された[ラベル付けプラットフォーム](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)上にある場合、セキュリティ閲覧者ロールとグローバル閲覧者ロールはサポートされません。
 
 - **セキュリティ管理者**: 管理者は、この Azure Active Directory 管理者ロールを使用して、他の Azure サービスの一部を構成するだけでなく、Azure portal の Azure Information Protection を構成することができます。 このロールの管理者は、 [AIPService モジュールから PowerShell コマンドレット](administer-powershell.md)を実行したり、ユーザーのドキュメントを追跡したり取り消したりすることはできません。
     
@@ -159,11 +156,11 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
-可能。 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
+○ Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
 
 Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect) を使用して、よりシームレスな認証方法をユーザーに提供できます。
 
-必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md)」セクションを参照してください。
+必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Azure Information Protection ではどのようなデータの種類を分類し、保護できますか?
 

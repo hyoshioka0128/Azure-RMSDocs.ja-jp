@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 498028d071e2af3a908518020b142cc1dea39a4d
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.openlocfilehash: 2c34ed49b9a88373de514a44ebadf2800c23c298
+ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74479150"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564513"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -82,7 +82,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
   - **グローバル管理者**
     
     > [!NOTE] 
-    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure Information Protection 管理者ロール (旧称 "Information Protection administrator")、セキュリティ閲覧者ロール、およびグローバル閲覧者ロールは、Azure portal ではサポートされません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure portal に対して Azure Information Protection 管理者ロール (旧称 "Information Protection administrator") はサポートされません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft アカウントは Azure Information Protection を管理できません。
 
@@ -176,7 +176,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の**ラベル**ペインで [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
 

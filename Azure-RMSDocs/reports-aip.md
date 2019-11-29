@@ -3,7 +3,7 @@ title: Azure Information Protection の中央レポート機能
 description: 中央レポート機能を使用して、Azure Information Protection ラベルの導入を追跡し、機密情報を含むファイルを特定する方法
 author: cabailey
 ms.author: cabailey
-ms.date: 11/25/2019
+ms.date: 11/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c310122ac72bc7312fe0bd8d41bd3dc80715d76
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
+ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74474297"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564540"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -27,7 +27,7 @@ ms.locfileid: "74474297"
 > [!NOTE]
 > 現在のところ、この機能はプレビュー段階で、変更される可能性があります。
 
-Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに:
+Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに
 
 - ラベル付けされた保護の対象となるドキュメントと組織全体の電子メールを監視します。
 
@@ -144,10 +144,10 @@ Azure Information Protection を使用すると、機密情報の種類 (定義�
 
 - 統一されたラベル付けクライアントの場合は、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)を構成します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
-|要件|詳細情報|
+|要件|説明を見る|
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプションで、Azure Information Protection と同じテナント用のサブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
 |クライアントにラベルを付けるためのレポート情報の場合: <br /><br />-Azure Information Protection クライアント|統一されたラベル付けクライアントと従来のクライアントの両方がサポートされています。 <br /><br />これらのクライアントは、まだインストールされていない場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
@@ -177,16 +177,13 @@ Azure Information Protection analytics では Azure 監視が使用されるた�
     
         - **セキュリティ閲覧者**
         - **グローバルリーダー**
-    
-    > [!NOTE] 
-    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure Information Protection 管理者ロール、セキュリティ閲覧者ロール、またはグローバル閲覧者ロールは使用できません。
 
 2. さらに、自分の Azure Log Analytics ワークスペースにアクセスするには、次の [Azure Log Analytics ロール](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)または標準の [Azure ロール](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles)のいずれかが必要です。
     
     - ワークスペースを作成する、またはカスタム クエリを作成するには、次のいずれか:
     
         - **Log Analytics 共同作成者**
-        - **寄稿者**
+        - **共同作成者**
         - **所有者**
     
     - ワークスペースが作成された後は、アクセス許可がさらに少ない次のロールのいずれかを使用して、収集されたデータを表示できます。
@@ -219,13 +216,13 @@ Azure Monitor ログには、格納されているデータの量の見積もり
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>レポート用に Log Analytics ワークスペースを構成する
 
-1. まだそれを実行していない場合、新しいブラウザー ウィンドウを開き、[Azure Information Protection 分析に必要なアクセス許可](https://portal.azure.com)を備えたアカウントを使って [Azure portal にサインインします](#permissions-required-for-azure-information-protection-analytics)。 次に、 **[Azure Information Protection]** ペインに移動します。 
+1. まだそれを実行していない場合、新しいブラウザー ウィンドウを開き、[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)を備えたアカウントを使って [Azure portal にサインインします](https://portal.azure.com)。 次に、 **[Azure Information Protection]** ペインに移動します。 
     
     たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
     
 2. **[管理]** メニュー オプションを探し、 **[Configure analytics (Preview)]\(分析の構成 (プレビュー)\)** を選択します。
 
-3. **[Log analytics の Azure Information Protection]** ウィンドウに、テナントが所有している Log Analytics ワークスペースの一覧が表示されます。 次のいずれかの操作を行います。
+3. **[Log analytics の Azure Information Protection]** ウィンドウに、テナントが所有している Log Analytics ワークスペースの一覧が表示されます。 以下のいずれかを実行します。
     
     - 新しい Log Analytics ワークスペースを作成するには、 **[新しいワークスペースの作成]** を選択し、 **[Log Analytics ワークスペース]** ウィンドウで、要求された情報を入力します。
     
@@ -276,13 +273,13 @@ Azure Information Protection のログに記録されたデータは、テーブ
 
 次の表を使用して、Azure Information Protection 分析のカスタム クエリで使用できるイベント関数のフレンドリ名を識別してください。
 
-|列名|説明|
+|列名|[説明]|
 |-----------|-----------|
-|Time|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
-|ユーザー|User: UPN または DOMAIN\USER の形式を設定します。|
+|［時間］|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
+|User|User: UPN または DOMAIN\USER の形式を設定します。|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
 |ItemName|ファイル名または電子メールの件名 |
-|メソッド|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
+|認証方法|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
 |作業内容|監査アクティビティ: DowngradeLabel、UpgradeLabel、RemoveLabel、NewLabel、Discover、Access、RemoveCustomProtection、ChangeCustomProtection、または NewCustomProtection |
 |LabelName|ラベル名 (ローカライズされていない)|
 |LabelNameBefore |変更前のラベル名 (ローカライズされていない) |
@@ -352,7 +349,7 @@ InformationProtectionEvents
 この例では、アクション前のラベルの名前に **Confidential** (社外秘) が含まれ、アクション後の名前に **Confidential** が含まれていない場合のみ、ダウングレードされたラベルとしてカウントされます。 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 レポートの情報を確認した後、Azure Information Protection クライアントを使用している場合は、Azure Information Protection ポリシーに変更を加えることができます。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。
 
 Microsoft 365 のサブスクリプションがある場合は、Microsoft 365 コンプライアンス センターと Microsoft 365 セキュリティ センターでラベルの使用状況を表示することもできます。 詳しくは、「[ラベル分析によるラベル使用状況の表示](/microsoft-365/compliance/label-analytics)」をご覧ください。
