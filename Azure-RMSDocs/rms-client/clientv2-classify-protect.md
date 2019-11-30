@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 00ad46e033116b1a39421cbfbc04a316ee2d7da7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 7eb4b4223f9fb8c53aec3ebe341384001175feda
+ms.sourcegitcommit: bc45a127fc4d5871f6e7b3bba8774bcfb194397a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561189"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74661840"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントを使用して分類および保護する
 
@@ -91,9 +91,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 電子メールで Office ドキュメントを共有するとき、保護しているメールにドキュメントを添付できます。メールに適用されているものと同じ制約でドキュメントが自動的に保護されます。 
 
-ただし、まずドキュメントを保護し、次に電子メールに添付することもできます。 メール メッセージに機密情報が含まれている場合、メールも保護します。 電子メールに添付する前にドキュメントを保護することの利点は次のとおりです。
-
-- メール メッセージとは異なるアクセス許可をドキュメントに適用できます。
+ただし、まずドキュメントを保護し、次に電子メールに添付することもできます。 メール メッセージに機密情報が含まれている場合、メールも保護します。 電子メールに添付する前にドキュメントを保護することの利点は、電子メールメッセージとは異なるアクセス許可をドキュメントに適用できることです。
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>エクスプローラーを使用してファイルを分類および保護する
 
