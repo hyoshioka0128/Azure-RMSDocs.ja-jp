@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/01/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fdc74c7c1366afe17c6c7b6ac02ec63c973b0bce
-ms.sourcegitcommit: 488a941642f82e49503b4c2c4216a003be4db054
+ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
+ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2019
-ms.locfileid: "74666839"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74780917"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -162,8 +162,6 @@ Azure Information Protection クライアント (クラシック) と Azure Info
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合されたラベル付けクライアントに含まれていない機能
 
 Azure Information Protection 統合されたラベル付けクライアントはまだ開発中ですが、従来のクライアントとの次の機能と動作の違いは、現在、統合されたラベル付けクライアントの今後のリリースで使用できるとは想定されていません。 
-
-- ポリシーファイルの手動管理を使用して、切断されたコンピューターの Office アプリをサポートする
 
 - Office アプリでユーザーが選択できる別のオプションとしてのカスタムアクセス許可: Word、Excel、PowerPoint
 
