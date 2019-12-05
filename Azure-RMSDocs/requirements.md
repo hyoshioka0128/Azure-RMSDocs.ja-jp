@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923665"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74831699"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -28,7 +28,7 @@ ms.locfileid: "71923665"
 
 ## <a name="subscription-for-azure-information-protection"></a>Azure Information Protection のサブスクリプション
 
-**分類、ラベル付け、保護の場合**: [Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)を取得する必要があります。 
+**Azure Information Protection クライアント (クラシックまたは統合されたラベル付け) またはスキャナーを使用した分類、ラベル付け、保護については**、 [Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)が必要です。 
 
 **保護のみの場合**: [Azure Information Protection を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。
 
@@ -55,7 +55,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure Information Protection で多要素認証 (MFA) がサポートされます。
 
-条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次の FAQ を参照してください: [条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次の FAQ の「[条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)」を参照してください。
 
 認証要件の詳細については、「[Azure Information Protection の Azure Active Directory の要件](requirements-azure-ad.md)」をご覧ください。 
 
@@ -85,7 +85,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows Server 2008 R2 
 
-クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)(winword.exe、excel.exe、outlook.exe、powerpnt.exe) と、統合された Azure Information Protection の実行可能ファイルを無効にする必要がある場合があります。クライアントまたは Azure Information Protection クライアント (msip .exe、msip) にラベルを付ける。
+クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office (winword.exe、excel.exe、outlook.exe、powerpnt.exe) 用の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)と、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアント (msip. app-v, msip) の実行可能ファイルを無効にすることが必要になる場合があります。
 
 表示されるサーバーのバージョン:
 
@@ -97,11 +97,11 @@ Azure Information Protection クライアントが Azure Rights Management サ�
 
 Azure Information Protection クライアントには、それぞれの管理者ガイドに記載されている追加の前提条件があります。
 
-- Azure Information Protection 統合ラベル付けクライアント:[前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Azure Information Protection 統合されたラベル付けクライアント:[前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
 - Azure Information Protection クライアント:[前提条件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>[アプリケーション]
+## <a name="applications"></a>アプリケーション
 
 Azure Information Protection クライアントは、次のいずれかの Office エディションの Office アプリケーション**Word**、 **Excel**、 **PowerPoint**、 **Outlook**を使用して、ドキュメントや電子メールにラベルを付けて保護することができます。
 
@@ -133,7 +133,7 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 Office の記事の情報に加えて、Azure Information Protection に固有の要件は以下のとおりです。
 
-- ラベルとラベルポリシーをダウンロードするための統一されたラベル付けクライアントの場合:URL * **. protection.outlook.com**を HTTPS 経由で許可します。
+- ラベルとラベルポリシーをダウンロードするための統一されたラベル付けクライアントの場合: URL * **. protection.outlook.com**を HTTPS 経由で許可します。
 
 - 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
@@ -145,7 +145,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
         $request.GetResponse()
         $request.ServicePoint.Certificate.Issuer
     
-    結果には、発行元の CA が Microsoft CA からのものであること`CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`が示されます。たとえば、のようになります。 発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
+    結果には、発行元の CA が Microsoft CA からのものであることが示されます (例: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`)。 発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
 
 ### <a name="on-premises-servers"></a>オンプレミス サーバー
 
