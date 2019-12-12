@@ -7,11 +7,11 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a29ea5be05d928f25b9a4255416d93acedcb1c0b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73558924"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74840277"
 ---
 # <a name="class-mipcontentlabel"></a>class mip::ContentLabel 
 コンテンツの一部 (通常はドキュメント) に適用される Microsoft Information Protection ラベルの抽象化。
@@ -22,7 +22,7 @@ ms.locfileid: "73558924"
 --------------------------------|---------------------------------------------
 public std:: chrono:: time_point\<std:: chrono:: system_clock\> Get Time () const  |  ラベルの作成時間を取得します。
 public AssignmentMethod GetAssignmentMethod() const  |  ラベルの割り当て方法を取得します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetExtendedProperties () const  |  拡張プロパティを取得します。
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  拡張プロパティを取得します。
 public bool IsProtectionAppliedFromLabel() const  |  保護がラベルによって適用されたかどうかを取得します。
 public std:: shared_ptr\<Label\> GetLabel () const  |  コンテンツに適用された実際のラベル オブジェクトを取得します。
   

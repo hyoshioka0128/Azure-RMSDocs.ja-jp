@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
 ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886142"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-メタデータ
@@ -34,16 +34,16 @@ GUID は、組織内の各ラベルの一意の識別子です。
 
 MIP SDK は、次の一連のメタデータを適用します。
 
-| 属性 | 型または値                 | 説明                                                                                                                                                                                                                                        | 必須 |
+| 属性 | 型または値                 | [説明]                                                                                                                                                                                                                                        | [必須] |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **有効**   | True または False                 | この属性は、このキーと値のペアのセットによって表される分類がデータ項目に対して有効になっているかどうかを示します。 DLP 製品は、通常、このキーが存在するかどうかを検証して分類ラベルを識別します。 | [はい]       |
+| **Enabled**   | True または False                 | この属性は、このキーと値のペアのセットによって表される分類がデータ項目に対して有効になっているかどうかを示します。 DLP 製品は、通常、このキーが存在するかどうかを検証して分類ラベルを識別します。 | [はい]       |
 | **SiteId**    | GUID                          | Azure Active Directory テナント ID                                                                                                                                                                                                                   | [はい]       |
 | **ActionId**  | GUID                          | ActionID は、ラベルが設定されるたびに変更されます。 監査ログには、古い actionID と新しい actionID の両方が含まれます。これにより、データ項目にラベルアクティビティを連鎖させることができます。                                                                                 | [はい]       |
-| **メソッド**    | 標準または特権        | [Mip::](reference/mip-enums-and-structs.md#assignmentmethod-enum)の設定メソッドを使用して設定します。 標準は、ラベルが既定で適用されるか、自動的に適用されることを意味します。 Privileged は、ラベルが手動で選択されたことを意味します。                                                                                                                                                                                                                 | いいえ        |
-| **SetDate**   | 拡張 ISO 8601 日付形式 | ラベルが設定されたときのタイムスタンプ。                                                                                                                                                                                                              | いいえ        |
-| **名前**      | string                        | テナント内の一意の名前をラベル付けします。 必ずしも表示名に対応しているわけではありません。                                                                                                                                                              | いいえ      |
-| **ContentBits** | 整数 | ファイルに適用するコンテンツマークの種類を記述するビットマスク。 CONTENT_HEADER = 0X1、CONTENT_FOOTER = 0X2、透かし = 0X4、ENCRYPT = 0x8
- | いいえ |
+| **方法**    | 標準または特権        | [Mip::](reference/mip-enums-and-structs.md#assignmentmethod-enum)の設定メソッドを使用して設定します。 標準は、ラベルが既定で適用されるか、自動的に適用されることを意味します。 Privileged は、ラベルが手動で選択されたことを意味します。                                                                                                                                                                                                                 | [いいえ]        |
+| **SetDate**   | 拡張 ISO 8601 日付形式 | ラベルが設定されたときのタイムスタンプ。                                                                                                                                                                                                              | [いいえ]        |
+| **名前**      | string                        | テナント内の一意の名前をラベル付けします。 必ずしも表示名に対応しているわけではありません。                                                                                                                                                              | [いいえ]      |
+| **ContentBits** | integer | ファイルに適用するコンテンツマークの種類を記述するビットマスク。 CONTENT_HEADER = 0X1、CONTENT_FOOTER = 0X2、透かし = 0X4、ENCRYPT = 0x8
+ | [いいえ] |
 
 ファイルに適用すると、結果は次の表のようになります。
 
@@ -51,17 +51,17 @@ MIP SDK は、次の一連のメタデータを適用します。
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
-| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Method      | インストラクション                           |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Method      | 特権付き                           |
 | MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_Name        | 社外秘                         |
 | MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
-| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_ContentBits | 2                                    |
+| MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_ContentBits | 2 で保護されたプロセスとして起動されました                                    |
 | MSIP_Label_2096f6a2-d2f7-48be-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
 ## <a name="extending-metadata-with-custom-attributes"></a>カスタム属性を使用したメタデータの拡張
 
-カスタムメタデータは、ファイルおよびポリシー API を使用して追加できます。 カスタム属性では、ベース`MSIP_Label_GUID`プレフィックスを維持する必要があります。 
+カスタムメタデータは、ファイルおよびポリシー API を使用して追加できます。 カスタム属性では、基本 `MSIP_Label_GUID` プレフィックスを維持する必要があります。 
 
-たとえば、Contoso Corporation によって作成されたアプリケーションは、ラベル付きファイルを生成したシステムを示すメタデータを適用する必要があります。 アプリケーションでは、というプレフィックスが付いた`MSIP_Label_GUID`新しいラベルを作成できます。 カスタムメタデータを生成するために、ソフトウェアベンダー名とカスタム属性がプレフィックスに追加されます。
+たとえば、Contoso Corporation によって作成されたアプリケーションは、ラベル付きファイルを生成したシステムを示すメタデータを適用する必要があります。 アプリケーションでは、`MSIP_Label_GUID`で始まる新しいラベルを作成できます。 カスタムメタデータを生成するために、ソフトウェアベンダー名とカスタム属性がプレフィックスに追加されます。
 
 ```
 MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRReportingSystem
@@ -80,7 +80,7 @@ MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRRepo
 
 ## <a name="email"></a>電子メール
 
-電子メールに適用されるメタデータは、ドキュメントの場合と同様に、キーと値のペアの形式を保持します。 主な違いは、すべての属性が**MSIP_Labels**という1つの電子メールヘッダーにシリアル化されることです。 キーと値のペアは、セミコロンと空白で区切られ、新しいヘッダーに配置されます。
+電子メールに適用されるメタデータは、ドキュメントの場合と同様に、キーと値のペアの形式を保持します。 主な違いは、すべての属性が**MSIP_Labels**と呼ばれる1つの電子メールヘッダーにシリアル化されることです。 キーと値のペアは、セミコロンと空白で区切られ、新しいヘッダーに配置されます。
 
 上記のサンプルメタデータを使用します。
 

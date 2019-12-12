@@ -4,7 +4,7 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 381439513d86102bb0c08fde63015b417f192be3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559920"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934706"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -140,7 +140,7 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 2. Azure RMS PowerShell コマンドレットの[export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)を使用して、テンプレートをエクスポートします。
 
-3. Azure RMS PowerShell コマンドレットを使用して、テンプレートをインポート[します。](/powershell/module/aipservice/import-aipservicetpd)
+3. Azure RMS PowerShell コマンドレット [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd) を使用して、テンプレートをインポートします。
 
 その後は、移行後に作成した他のテンプレートと同様に、これらのテンプレートを発行したりアーカイブしたりできます。
 

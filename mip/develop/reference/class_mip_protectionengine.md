@@ -7,17 +7,17 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 9eb44a39f32c2997729e6d77ddace96c580328cd
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557738"
 ---
 # <a name="class-mipprotectionengine"></a>class mip::ProtectionEngine 
 特定の ID に関連する、保護関連のアクションを管理します。
   
 ## <a name="summary"></a>要約
- [メンバー]                        | [説明]                                
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  エンジンの設定を取得します。
 public void Gettemplates Async (const std:: shared_ptr\<ProtectionEngine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
@@ -29,7 +29,7 @@ public std:: shared_ptr\<ProtectionHandler\> Createprotectionハンドラ Forpub
 public void CreateProtectionHandlerForConsumptionAsync (const ProtectionHandler:: ConsumptionSettings & settings、const std:: shared_ptr\<ProtectionHandler:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
 public std:: shared_ptr\<ProtectionHandler\> Createprotectionハンドラ For従量課金 (const ProtectionHandler:: ConsumptionSettings & settings, const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
   
-## <a name="members"></a>[メンバー]
+## <a name="members"></a>メンバー
   
 ### <a name="getsettings-function"></a>GetSettings 関数
 エンジンの設定を取得します。

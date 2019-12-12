@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7e8d2b2f510a97c01ecf02040a404b11ffdc9be
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446990"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934961"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成
 
@@ -42,7 +42,7 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 既定では、スーパー ユーザー機能は無効であり、このロールはどのユーザーにも割り当てられていません。 これは、Exchange に Rights Management コネクタを構成すると自動的に有効にされますが、Exchange Online、SharePoint Online、または SharePoint Server を実行する標準的なサービスには必要ありません。
 
-スーパーユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレット[enable-AipAipServiceSuperUser Uperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)を使用し、必要に応じてユーザー (またはサービスアカウント) を[割り当てます。](/powershell/module/aipservice/add-aipservicesuperuser)そのためには、次のコマンドレットを使用します[。AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup)コマンドレットを追加し、必要に応じてユーザー (またはその他のグループ) をこのグループに追加します。 
+スーパー ユーザー機能を手動で有効にする必要がある場合は、PowerShell コマンドレット [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature) を使用します。次に、必要に応じて [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) コマンドレットを使用してユーザー (またはサービス アカウント) を割り当てたり、[Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) コマンドレットを使用して、必要に応じてこのグループにユーザー (または他のグループ) を追加したりします。 
 
 スーパー ユーザーにグループを使用すると管理しやすくなりますが、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](prepare.md#group-membership-caching-by-azure-information-protection)ことに注意してください。 そのため、新しいユーザーを、すぐにコンテンツの暗号化を解除するスーパーユーザーに割り当てる必要がある場合は、AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、AipServiceSuperUser を使用してそのユーザーを追加します。
 

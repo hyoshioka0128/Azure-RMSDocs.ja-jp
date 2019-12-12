@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: aa544dfbd046ae8c3137cbc115d9af6ea219bc07
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591597"
 ---
 # <a name="structures"></a>構造
@@ -41,8 +41,8 @@ OAuth2 トークンを生成するためにサーバーによって提供され�
 
 | フィールド | [説明] |
 |---|---|
-| 第一機 | OAuth2 機関  |
-| センター | OAuth2 リソース  |
+| authority | OAuth2 機関  |
+| resource | OAuth2 リソース  |
 | scope | OAuth2 スコープ  |
 
 
@@ -108,11 +108,11 @@ HTTP 要求
 
 | フィールド | [説明] |
 |---|---|
-| id | 一意の要求 ID--mip_cc_http_response の同じプロパティと相関関係  |
+| id | 一意の要求 ID--mip_cc_http_response の同じプロパティと相関しています  |
 | type | HTTP 要求の種類 (GET、POST など)  |
-| 先 | HTTP 要求 URL  |
+| url | HTTP 要求 URL  |
 | bodySize | HTTP 要求本文のサイズ (バイト単位)  |
-| 部位 | Buffer 格納 HTTP 要求本文  |
+| body | Buffer 格納 HTTP 要求本文  |
 | headersCount | HTTP 要求ヘッダーの数  |
 | ヘッダー | HTTP 要求ヘッダーを格納しているバッファー  |
 
@@ -136,10 +136,10 @@ HTTP 応答
 
 | フィールド | [説明] |
 |---|---|
-| id | 一意の要求 ID--mip_cc_http_request の同じプロパティと相関関係  |
-| statusCode | HTTP 応答の状態コード  |
+| id | 一意の要求 ID--mip_cc_http_request の同じプロパティと相関しています  |
+| StatusCode | HTTP 応答の状態コード  |
 | bodySize | HTTP 応答本文のサイズ (バイト単位)  |
-| 部位 | Buffer 格納 HTTP 応答本文  |
+| body | Buffer 格納 HTTP 応答本文  |
 | headersCount | HTTP 応答ヘッダーの数  |
 | ヘッダー | HTTP 応答ヘッダーを含むバッファー  |
 
@@ -162,7 +162,7 @@ typedef struct {
 
 | フィールド | [説明] |
 |---|---|
-| 電子メール | ユーザーの電子メールアドレス  |
+| 電子メール | ユーザーの電子メール アドレス  |
 
 
 ```c
@@ -220,7 +220,7 @@ typedef struct {
 |---|---|
 | ユーザー | ユーザーの一覧  |
 | ユーザ数 | ユーザー数  |
-| ロール | ロールの一覧  |
+| roles | ロールの一覧  |
 | ロール数 | ロール数  |
 
 
@@ -240,7 +240,7 @@ typedef struct {
 
 | フィールド | [説明] |
 |---|---|
-| id | タスク ID  |
+| id | [タスク ID]  |
 | delayMs | タスクの実行までの遅延時間 (ミリ秒)  |
 | executeOnIndependentThread | このタスクを完全に独立したスレッドで実行するか、共有スレッドを再利用できるかを指定します。  |
 

@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 8ade287531ee9f1c18678d42ef5e51a4c70ee13f
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886195"
 ---
 # <a name="compute-an-action"></a>アクションを計算する
@@ -65,7 +65,7 @@ Add: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits : 3
 
 ## <a name="compute-actions-with-an-existing-label"></a>既存のラベルに対してアクションを計算する
 
-ポリシー API を使用する場合は、コンテンツからメタデータを読み取るアプリケーションである必要があります。 このメタデータは `mip::ExecutionState` の一部として API に渡されます。 `ComputeActions()` を使用すると、ラベルの付いていないドキュメントに新しいラベルを適用する操作よりもっと複雑な操作を処理することができます。 次の例では、より機密性の高いラベルから、より重要度の低いラベルにラベルをダウングレードする方法を示します。 このプロセスをシミュレートするには、メタデータのコンマ区切りの文字列を読み取り、を使用`mip::ExecutionState`して API に渡します。
+ポリシー API を使用する場合は、コンテンツからメタデータを読み取るアプリケーションである必要があります。 このメタデータは `mip::ExecutionState` の一部として API に渡されます。 `ComputeActions()` を使用すると、ラベルの付いていないドキュメントに新しいラベルを適用する操作よりもっと複雑な操作を処理することができます。 次の例では、より機密性の高いラベルから、より重要度の低いラベルにラベルをダウングレードする方法を示します。 このプロセスをシミュレートするには、メタデータのコンマ区切りの文字列を読み取り、`mip::ExecutionState`を使用して API に渡します。
 
 > [!NOTE]
 > サンプルでは、`SplitString()` と呼ばれるユーティリティ関数が使用されています。 例については、[こちら](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)を参照してください。
@@ -116,7 +116,7 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits
 Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [監査イベントを Azure Information Protection Analytics に渡す](concept-handler-policy-auditing-cpp.md)方法について説明します
 - [GitHub からポリシー Api サンプルをダウンロードし、ポリシー api を試す](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

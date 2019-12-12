@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: b61fba6a678ec625ac2dc7d78c2550cfba87bb60
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792113"
 ---
-# <a name="overview"></a>概要
+# <a name="overview"></a>[ポリシー]
 
 Microsoft Rights Management SDK 4.2 は情報保護テクノロジであり、複数のプラットフォームで利用できます。  クライアント コンピューターおよびデバイス向けに "権限が有効になった" アプリケーションからの情報へのアクセスおよび使用を保護するために設計されている Software Developer Kit (SDK) またはフレームワークを提供します。 これらのプラットフォーム用の SDK によって、デジタル コンテンツの保護と使用、テンプレートの取得、サーバーからのポリシーの取得、およびその他の関連する権限関連タスクの実行を行うための単純な API がアプリケーション開発者に提供されます。
 
@@ -50,9 +50,9 @@ MS RMS SDK 4.2 には、次のような便利な新機能があります。
 
 [作業開始](get-started.md)ガイドを使用して、保護されている情報のデバイス アプリ プロジェクトを開始してください。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
-* [開始するには](get-started.md)
+* [作業開始](get-started.md)
 * [Azure AD 認証ライブラリ](https://msdn.microsoft.com/library/jj573266.aspx)
 * [GitHub アカウント](https://github.com/AzureAD/)

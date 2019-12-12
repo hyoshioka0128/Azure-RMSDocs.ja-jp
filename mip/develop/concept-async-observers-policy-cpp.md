@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175498"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - ポリシー API オブザーバー
@@ -28,9 +28,9 @@ ms.locfileid: "60175498"
 
 次の例では、`mip::Profile::Observer` から派生される `ProfileObserver` クラスを作成しています。 メンバー関数は、サンプル全体で使用される future/promise パターンを使用するためにオーバーライドされています。
 
-**注意**:以下のサンプルのみ部分的に実装され、用の上書きを含めないでください、`mip::ProfileEngine`オブザーバーに関連します。
+**注**: 以下のサンプルは部分的にのみ実装され、`mip::ProfileEngine` 関連のオブザーバーに対するオーバーライドは含まれていません。
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 ヘッダーで、`mip::Profile::Observer` から派生する `ProfileObserver` を定義し、各メンバー関数をオーバーライドします。
 
@@ -44,7 +44,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 それ自体の実装では、各オブザーバーのメンバー関数を実行するアクションを定義します。
 

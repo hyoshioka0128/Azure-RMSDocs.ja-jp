@@ -8,23 +8,23 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5fac6b39cb3770748336fac7264134acf2627a02
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886063"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK - ポリシー API エンジンの概念
 
 `mip::PolicyEngine` は、ポリシー API で実行できる、プロファイルの読み込みを除くすべての操作を実装します。
 
-## <a name="implementation-add-a-policy-engine"></a>ションポリシーエンジンを追加する
+## <a name="implementation-add-a-policy-engine"></a>実装: ポリシー エンジンを追加する
 
-### <a name="implementation-create-policy-engine-settings"></a>ションポリシーエンジン設定の作成
+### <a name="implementation-create-policy-engine-settings"></a>実装: ポリシー エンジンの設定を作成する
 
 プロファイルと同様に、エンジンにも設定オブジェクト `mip::PolicyEngine::Settings` が必要です。 このオブジェクトには、一意のエンジン ID、デバッグやテレメトリで使用できるカスタマイズ可能なクライアント データ、および必要に応じてロケールが格納されます。
 
-ここでは、 `FileEngine::Settings`アプリケーションユーザーの id を使用して、 *engineSettings*という名前のオブジェクトを作成します。
+ここでは、アプリケーションユーザーの id を使用して、 *engineSettings*という名前の `FileEngine::Settings` オブジェクトを作成します。
 
 ```cpp
 PolicyEngine::Settings engineSettings(
@@ -46,7 +46,7 @@ PolicyEngine::Settings engineSettings(
 
 ベスト プラクティスとして、最初のパラメーターである **id** には、望ましくはユーザー プリンシパル名など、関連付けられているユーザーにエンジンを簡単に接続できるものにする必要があります。
 
-### <a name="implementation-add-the-policy-engine"></a>ションポリシーエンジンを追加する
+### <a name="implementation-add-the-policy-engine"></a>実装: ポリシー エンジンを追加する
 
 エンジンを追加するため、プロファイルの読み込みに使用した future/promise パターンに戻ります。 `mip::Profile` の promise を作成するのではなく、`mip::PolicyEngine` を使用します。
 
@@ -73,19 +73,19 @@ PolicyEngine::Settings engineSettings(
 
 上記のコードの最終結果では、認証済みユーザーのエンジンがプロファイルに正常に追加されます。
 
-## <a name="implementation-list-sensitivity-labels"></a>ション機密ラベルの一覧表示
+## <a name="implementation-list-sensitivity-labels"></a>実装: 機密ラベルの列挙
 
 追加されたエンジンを使用すると、`engine->ListSensitivityLabels()` を呼び出すことで、認証済みユーザーが利用可能な機密ラベルをすべて一覧表示することができるようになりました。
 
 `ListSensitivityLabels()` により、サービスの特定のユーザー用のラベルの一覧とそれらのラベルの属性がフェッチされます。 結果は `std::shared_ptr<mip::Label>` のベクターに格納されます。
 
-### <a name="implementation-listsensitivitylabels"></a>ションListSensitivityLabels()
+### <a name="implementation-listsensitivitylabels"></a>実装: ListSensitivityLabels()
 
 ```cpp
 std::vector<shared_ptr<mip::Label>> labels = engine->ListSensitivityLabels();
 ```
 
-### <a name="implementation-print-the-labels"></a>ションラベルを印刷する
+### <a name="implementation-print-the-labels"></a>実装: レベルの出力
 
 ```cpp
 //Iterate through all labels in the vector

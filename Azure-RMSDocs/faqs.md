@@ -13,10 +13,10 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: c4abec07a3e091c40990f30e34acdda1a3ede012
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564519"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
@@ -142,7 +142,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 - Azure Rights Management**グローバル管理**者と**コネクタ管理者**: これらの azure Rights Management 管理者ロールについては、最初に、他のクラウドサービスのグローバル管理者になることなく、 [aipservice モジュールからすべての PowerShell コマンドレット](administer-powershell.md)を実行するアクセス許可を付与します。2つ目のロールは、Rights Management (RMS) コネクタのみを実行する権限を付与します これらの管理者ロールは、管理コンソールにアクセス許可を付与したり、ユーザーのドキュメントを追跡したり取り消したりすることはありません。
     
-    これらの管理者ロールのいずれかを割り当てるには、AIPService PowerShell コマンドレットを使用し[ます。](/powershell/module/aipservice/add-aipservicerolebasedadministrator)
+    これらの管理者ロールのいずれかを割り当てるには、[AIPService](/powershell/module/aipservice/add-aipservicerolebasedadministrator)PowerShell コマンドレットを使用します。
 
 注意事項:
 

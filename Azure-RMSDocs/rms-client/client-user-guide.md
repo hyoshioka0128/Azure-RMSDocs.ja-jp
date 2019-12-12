@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントは、�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,25 +13,25 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: d3bdca8b4676c0a3a32aefe9a0fdb5d59788637c
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: c374e9b73a9f6c11a512d679c78458ec52f97a31
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690110"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935658"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection ユーザー ガイド
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Windows 用 Azure Information Protection クライアントは、電子メールが転送されたりドキュメントが別の場所に保存されている場合でも、重要なドキュメントや電子メールを閲覧すべきでないユーザーから保護するうえで役立ちます。 また、このクライアントを使用して、他のユーザーが Azure Information Protection の Rights Management 保護テクノロジを使って保護したドキュメントを開くこともできます。
 
-必要なのは、Windows 7 Service Pack 1 を実行しているコンピューターのみです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
+必要なものは、Windows 7 with Service Pack 1 以降を搭載しているコンピューターだけです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
 
 
-## <a name="what-do-you-want-to-do"></a>作業内容
+## <a name="what-do-you-want-to-do"></a>実行したい操作
 
 - [Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)
 

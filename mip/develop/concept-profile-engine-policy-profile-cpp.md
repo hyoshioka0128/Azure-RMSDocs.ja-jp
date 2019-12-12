@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 9b3b32464cae35560c74a05b28506ca60dc963d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886050"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK - ポリシー API プロファイルの概念
@@ -22,16 +22,16 @@ ms.locfileid: "69886050"
 
 ## <a name="load-a-profile"></a>プロファイルの読み込み
 
-、、および`mip::PolicyProfile`が定義されたので、それらを使用してインスタンス化します。 `AuthDelegateImpl` `ProfileObserver` `MipContext` オブジェクトを`mip::PolicyProfile`作成する[`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md)に`mip::MipContext`は、とが必要です。
+`MipContext`、`ProfileObserver`、`AuthDelegateImpl` が定義されたので、それらを使用して `mip::PolicyProfile`をインスタンス化します。 `mip::PolicyProfile` オブジェクトを作成するには[`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md)と `mip::MipContext`が必要です。
 
 ### <a name="profilesettings-parameters"></a>Profile::Settings パラメーター
 
-コンストラクター `PolicyProfile::Settings`は、次に示す4つのパラメーターを受け取ります。
+`PolicyProfile::Settings` コンストラクターは、次に示す4つのパラメーターを受け取ります。
 
-- `const std::shared_ptr<MipContext>`:アプリケーション情報や状態パスなどを格納するために初期化されたオブジェクト。`mip::MipContext`
-- `mip::CacheStorageType`:状態を格納する方法を定義します。メモリ内、ディスク上、またはディスク上で暗号化されます。 詳細については、「[キャッシュストレージの概念](concept-cache-storage.md)」を参照してください。
-- `std::shared_ptr<mip::AuthDelegate>`:クラス`mip::AuthDelegate`の共有ポインター。
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`:プロファイル`Observer`の実装[`PolicyProfile`](reference/class_mip_policyprofile_observer.md)(、 [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)、および[`FileProfile`](reference/class_mip_fileprofile_observer.md)) への共有ポインター。
+- `const std::shared_ptr<MipContext>`: アプリケーション情報や状態パスなどを格納するために初期化された `mip::MipContext` オブジェクト。
+- `mip::CacheStorageType`: 状態をメモリ内、ディスク上、またはディスク上に格納し、暗号化する方法を定義します。 詳細については、「[キャッシュストレージの概念](concept-cache-storage.md)」を参照してください。
+- `std::shared_ptr<mip::AuthDelegate>`: クラス `mip::AuthDelegate` の共有ポインター。
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: プロファイル `Observer` の実装 ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)、 [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)、 [`FileProfile`](reference/class_mip_fileprofile_observer.md)) への共有ポインター。
 
 次の 2 つの例では、状態ストレージに対するローカル ストレージ、およびメモリ内のみを使用する profileSettings オブジェクト作成する方法を示します。 いずれも、`authDelegateImpl` オブジェクトが作成済みであると想定しています。
 
@@ -124,7 +124,7 @@ int main()
 
 最終結果は、プロファイルの読み込みが成功し、それが `profile` と呼ばれるオブジェクトに格納されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これでプロファイルが追加されました。次の手順では、エンジンをプロファイルに追加します。
 

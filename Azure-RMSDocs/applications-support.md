@@ -4,7 +4,7 @@ description: 最も一般的に使用されるアプリケーション (Office �
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e45fadfa83e6327e8fc16db8e86f89c7ed1cf07c
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 795c260430305492b19aded923c01cf4d918b70f
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684277"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935199"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
@@ -36,7 +36,7 @@ ms.locfileid: "71684277"
 
 Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
 
-検索サービスは、さまざまな方法で Rights Management と統合できます。 以下に例を示します。 
+検索サービスは、さまざまな方法で Rights Management と統合できます。 たとえば、次のようになります。 
 
 - Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの保護された電子メールが検索結果に自動的に表示されようにします。 
 
@@ -44,7 +44,7 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 - Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルが含まれませんが、PC にサインインまたは接続する他のユーザーの検索結果に、機密データを含むファイルが表示されないことが保証されます。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の各アプリケーションとサービスで Azure Rights Management サービスをサポートする方法について説明します。
 

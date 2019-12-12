@@ -14,10 +14,10 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60178235"
 ---
 # <a name="file-api-configuration"></a>ファイル API の構成
@@ -40,13 +40,13 @@ ms.locfileid: "60178235"
 
 **種類**: キー
 
-**説明**:ファイル API の一般的な構成が含まれています。
+**説明**: ファイル API の一般的な構成が含まれています。
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
 **種類**: キー
 
-**説明**:特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
+**説明**: 特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
 
 - ワイルドカード文字 "*" を使用できます。ただし、特定の拡張子の設定は、ワイルドカードの設定よりも優先されます。 ワイルドカード文字は、Microsoft Office ファイルの設定には影響しません。これらは、ファイルの種類ごとに明示的に無効する必要があります。
 - 拡張子がないファイルを指定するには、"." を使用します。
@@ -59,7 +59,7 @@ ms.locfileid: "60178235"
 
 **種類**: REG_SZ
 
-**説明**:次の 3 つの値のいずれかが含まれています。
+**説明**: 次の 3 つの値のいずれかが含まれています。
 
 - **Off**: 暗号化が無効です。
 
@@ -92,21 +92,21 @@ ms.locfileid: "60178235"
 
 -   ファイル拡張子: doc、dot、xla、xls、xlt、pps、ppt、docm、docx、dotm、dotx、xlam、xlsb、xlsm、xlsx、xltm、xltx、xps、potm、potx、ppsx、ppsm、pptm、pptx、thmx、vsdx、vsdm、vssx、vssm、vstx、vstm。 
 -   保護の種類 = ネイティブ (既定): sample.docx を暗号化すると、sample.docx のままです。
--   保護の種類 = Pfile:Office ファイルの場合は、ネイティブと同じ結果になります。
--   オフします。暗号化を無効にします。
+-   保護の種類 = Pfile: Office ファイルの場合は、ネイティブと同じ結果になります。
+-   Off: 暗号化を無効にします。
 
 **PDF ファイル**
 
 -   保護の種類 = ネイティブ: sample.pdf を暗号化すると、sample.ppdf という名前になります。
 -   保護の種類 = Pfile: sample.pdf を暗号化すると、sample.pdf.pfile という名前になります。
--   オフします。暗号化を無効にします。
+-   Off: 暗号化を無効にします。
 
 **その他のすべてのファイル形式**
 
 -   保護の種類 = Pfile: sample.*zzz* を暗号化すると、sample.*zzz*.pfile という名前になります。*zzz* は元のファイル拡張子です。
--   オフします。暗号化を無効にします。
+-   Off: 暗号化を無効にします。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の設定は、txt ファイルの PFile 暗号化を有効にします。 Office ファイルには (既定で) ネイティブ保護が適用され、txt ファイルには PFile 保護が適用され、その他のすべてのファイルの保護は (既定で) ブロックされます。
 

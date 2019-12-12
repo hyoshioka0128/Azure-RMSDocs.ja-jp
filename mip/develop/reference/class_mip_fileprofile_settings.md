@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 21bbda3424f5c436324ce97137082200ee8d9837
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561097"
 ---
 # <a name="class-mipfileprofilesettings"></a>class mip::FileProfile::Settings 
@@ -19,10 +19,10 @@ ms.locfileid: "73561097"
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、std:: shared_ptr\<AuthDelegate\> authDelegate、std:: shared_ptr\<Con Delegate\>Conのデリゲート、std:: shared_ptr\<オブザーバー\> オブザーバー)  |  FileProfile:: Settings コンストラクター。
+パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、std:: shared_ptr\<AuthDelegate\> authDelegate、std:: shared_ptr\<Con Delegate\> Con Delegate、std:: shared_ptr\<オブザーバー\> オブザーバー)  |  FileProfile:: Settings コンストラクター。
 パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
 public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  認証トークンを取得するために使用する認証委任を取得します。
-public std:: shared_ptr\<Conのデリゲート\> Getconの Delegate () const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
+public std:: shared_ptr\<Con\> Getconの Delegate () const  |  サービスに接続しているユーザーの同意を要求するために使用する同意委任を取得します。
 public std:: shared_ptr\<オブザーバー\> GetObserver () const  |  FileProfile に関連するイベントの通知を受け取るオブザーバーを取得します。
 public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
 public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。

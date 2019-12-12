@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: b396d65b821f258d08e867bad8331b8603d8ccb9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788633"
 ---
-# <a name="server"></a>サーバー
+# <a name="server"></a>Server (サーバー)
 
 このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "68788633"
 
 インストールされる多くの Web サービスの中でも、Windows Server の RMS サーバーの場合、アプリケーション開発にとっては次のサービスが重要です。
 
-| サービス | 説明 |
+| [サービス] | [説明] |
 |---------|-------------|
 | Administration | RMS を管理することができる管理 Web サイトをホストします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。 Active Directory Rights Management サービス スクリプト API を使用して管理スクリプトを記述できます。|
 | アカウント証明書 |RMS 証明書階層内のコンピューターを識別するコンピューター証明書と、ユーザーを特定のコンピューターに関連付ける Rights Account Certificate を作成します。 詳細については、「Activating a Computer (コンピューターのアクティブ化)」と「Activating a User (ユーザーのアクティブ化)」を参照してください。<p><p>このサービスは、ルート証明サーバーで動作します。 |
@@ -43,7 +43,7 @@ ms.locfileid: "68788633"
 |事前証明 | サーバーがユーザーに代わって *Rights Account Certificate* を要求できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 |サービス ロケーター | アカウント証明サービス、ライセンス サービス、および発行サービスの URL を Active Directory に提供し、RMS クライアントがこれらのサービスを検出できるようにします。 このサービスは、ルート証明サーバーとライセンス サーバーで動作します。|
 
-## <a name="related-topics"></a>関連トピック ##
+## <a name="related-topics"></a>関連項目 ##
 * [概要](ad-rms-overview.md)
 * [Microsoft インターネット インフォメーション サービス](https://www.iis.net/overview)
 * [クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)

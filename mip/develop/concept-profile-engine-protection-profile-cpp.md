@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: fc25c35c1aea9690c0ec696a41c2f7346b4d6b8a
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69885996"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK - 保護 API プロファイルの概念
@@ -24,11 +24,11 @@ ms.locfileid: "69885996"
 
 ### <a name="protectionprofilesettings-parameters"></a>ProtectionProfile::Settings Parameters
 
-- `std::shared_ptr<MipContext>` :アプリケーション情報や状態パスなどを格納するために初期化されたオブジェクト。`mip::MipContext`
-- `mip::CacheStorageType`:状態を格納する方法を定義します。メモリ内、ディスク上、またはディスク上で暗号化されます。
-- `std::shared_ptr<mip::AuthDelegate>`:クラス`mip::AuthDelegate`の共有ポインター。
-- `std::shared_ptr<mip::ConsentDelegate>`:クラス[`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)の共有ポインター。
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`:プロファイル`Observer`の実装[`PolicyProfile`](reference/class_mip_policyprofile_observer.md)(、 [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)、および[`FileProfile`](reference/class_mip_fileprofile_observer.md)) への共有ポインター。
+- `std::shared_ptr<MipContext>`: アプリケーション情報や状態パスなどを格納するために初期化された `mip::MipContext` オブジェクト。
+- `mip::CacheStorageType`: 状態をメモリ内、ディスク上、またはディスク上に格納し、暗号化する方法を定義します。
+- `std::shared_ptr<mip::AuthDelegate>`: クラス `mip::AuthDelegate` の共有ポインター。
+- `std::shared_ptr<mip::ConsentDelegate>`: クラス[`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)の共有ポインター。
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: プロファイル `Observer` の実装 ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)、 [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)、 [`FileProfile`](reference/class_mip_fileprofile_observer.md)) への共有ポインター。
 
 次の 2 つの例では、状態ストレージに対するローカル ストレージ、およびメモリ内のみを使用する profileSettings オブジェクト作成する方法を示します。 いずれも、`authDelegateImpl` オブジェクトが作成済みであると想定しています。
 
@@ -122,7 +122,7 @@ int main()
 
 最終結果は、プロファイルの読み込みが成功し、それが `profile` と呼ばれるオブジェクトに格納されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これでプロファイルが追加されました。次の手順では、エンジンをプロファイルに追加します。
 

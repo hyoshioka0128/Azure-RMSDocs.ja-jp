@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791300"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
@@ -26,9 +26,9 @@ ms.locfileid: "68791300"
 この例では、Azure Information Protection サービス (AIP) と連携する簡単なコンソール アプリケーションを作成します。  保護するドキュメントのパスを入力し、アドホック ポリシーまたは Azure テンプレートを使用してドキュメントを保護する手順を説明します。 アプリケーションは入力に従って正しいポリシーを適用し、情報が保護されたドキュメントを作成します。 使用するサンプル コードは、[Azure IP テスト アプリケーション](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test)および Github を参照してください。
 
 ## <a name="sample-app-prerequisites"></a>サンプル アプリの前提条件
-- **オペレーティング システム**:Windows 10、Windows 8、Windows 7、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012 のいずれか
-- **プログラミング言語**:C# (.NET Framework 3.0 以降)
-- **開発環境**:Visual Studio 2015 (以降)
+- **オペレーティング システム**: Windows 10、Windows 8、Windows 7、Windows Server 2008、Windows Server 2008 R2、Windows Server 2012 のいずれか
+- **プログラミング言語**: C# (.NET Framework 3.0 以降)
+- **開発環境**: Visual Studio 2015 (およびそれ以降)
 
 ## <a name="setting-up-your-azure-configuration"></a>Azure 構成のセットアップ
 

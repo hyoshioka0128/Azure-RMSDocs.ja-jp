@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 0087255c3028ed28f6b4729445d6c224344f0dde
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558880"
 ---
 # <a name="class-mipexecutionstate"></a>class mip::ExecutionState 
@@ -25,13 +25,13 @@ public std::string GetContentIdentifier() const  |  ドキュメントを説明�
 パブリック仮想 DataState GetDataState () const  |  アプリケーションで操作中のコンテンツの状態を取得します。
 public std::p air\<bool、std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
-パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\>\> GetNewLabelExtendedProperties () const  |  新しいラベルの拡張プロパティを返します。
-public std:: vector\<std::p air\<std:: string、std:: string\>\> GetContentMetadata (const std:: vector\<std:: string\>& names、const std:: vector\<std:: string\>& namePrefixes)const  |  コンテンツからメタデータ項目を取得します。
+public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  新しいラベルの拡張プロパティを返します。
+public std:: vector\<std::p air\<std:: string、std:: string\>\> GetContentMetadata (const std:: vector\<std:: string\>& names、const std:: vector\<std:: string\>& namePrefixes) const  |  コンテンツからメタデータ項目を取得します。
 public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  保護記述子を取得します。
 public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
 public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
-public 仮想 std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
-パブリック仮想 std:: map\<std:: string、std:: string\> GetAuditMetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
+public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  アプリケーション固有のキーと値のペアのマップを返します。
   
 ## <a name="members"></a>メンバー
   
@@ -118,4 +118,4 @@ ActionType::Justify must be supported. ポリシーとラベルの変更に理�
 アプリケーション固有のキーと値のペアのマップを返します。
 
   
-**戻り**値: アプリケーション固有の監査メタデータの登録済みキー: 値のペア送信者: 送信者受信者の電子メール id: 電子メールの受信者の JSON 配列を表します。最後にコンテンツを変更したユーザーの電子メール id。LastModifiedDate: コンテンツが最後に変更された日付
+**戻り**値: アプリケーション固有の監査メタデータの登録済みキー: 値のペア送信者: 送信者受信者の電子メール id: 電子メールの受信者の JSON 配列: コンテンツを最後に変更したユーザーの電子メール id LastModifiedDate: コンテンツが最後に変更された日付

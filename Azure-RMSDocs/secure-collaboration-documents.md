@@ -4,7 +4,7 @@ description: Azure Information Protection によって保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561112"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934468"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -47,11 +47,11 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例としては、「[例 5: コンテンツを暗号化するがアクセスを制限しないラベル](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)」をご覧ください。  
 
-1. グローバル ポリシーまたはスコープ付きポリシーに含まれている既存のラベルを選択します。 **[保護]** ウィンドウで、 **[Azure (クラウドキー)]** が選択されていることを確認します。
+1. グローバル ポリシーまたはスコープ付きポリシーに含まれている既存のラベルを選択します。 **[保護]** ペインで、 **[Azure (クラウド キー)]** が選択されていることを確認します。
     
 2. **[アクセス許可の設定]** が選択されていることを確認し、 **[アクセス許可の追加]** を選択します。
 
-3. **[アクセス許可の追加]** ウィンドウで次のようにします。 
+3. **[アクセス許可の追加]** ペインで、次の操作を行います。 
     
    - 内部グループ: **[ディレクトリを参照]** を選択し、グループを選択します (電子メールが有効になっている必要があります)。
     
@@ -67,11 +67,11 @@ Azure Information Protection では、承認済みユーザーのコラボレー
         
     ![セキュアなコラボレーションのための権限の構成](./media/collaboration-permissions.png)
 
-5. **[アクセス許可の追加]** ウィンドウで [ **OK]** をクリックします。
+5. **[アクセス許可の追加]** ペインで **[OK]** をクリックします。
 
 6. **[保護]** ウィンドウで、[ **OK]** をクリックします。
 
-7. **[ラベル]** ウィンドウで、 **[保存]** を選択します。 
+7. **[ラベル]** ペインで、 **[保存]** を選択します。 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>セキュアなコラボレーションをサポートするラベルの適用
 

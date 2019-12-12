@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560772"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
@@ -22,10 +22,10 @@ ms.locfileid: "73560772"
 public MIP_API std:: shared_ptr\<ProtectionDescriptor\> Build ()  |  この ProtectionDescriptor ビルダーインスタンスによってアクセス許可が定義されている ProtectionDescriptor を作成します。
 public void SetName(const std::string& value)  |  保護ポリシー名を設定します。
 public void SetDescription(const std::string& value)  |  保護ポリシーの説明を設定します。
-public void SetContentValidUntil (const std:: chrono:: time_point\<std:: chrono:: system_clock\>& 値)  |  保護ポリシーの有効期限を設定します。
+public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  保護ポリシーの有効期限を設定します。
 public void SetAllowOfflineAccess(bool value)  |  保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 public void SetReferrer(const std::string& uri)  |  保護ポリシーの参照元のアドレスを設定します。
-public void SetEncryptedAppData (const std:: map\<std:: string、std:: string\>& 値)  |  暗号化する必要のあるアプリ固有のデータを設定します。
+public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  暗号化する必要のあるアプリ固有のデータを設定します。
 public void SetSignedAppData (const std:: map\<std:: string、std:: string\>& 値)  |  署名する必要があるアプリ固有のデータを設定します。
 public virtual ~ProtectionDescriptorBuilder()  | まだ文書化されていません。
 public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRights | ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。

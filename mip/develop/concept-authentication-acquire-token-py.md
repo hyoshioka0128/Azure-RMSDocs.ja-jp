@@ -8,17 +8,17 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69884733"
 ---
 # <a name="acquire-an-access-token-python"></a>アクセス トークンを取得する (Python)
 
 この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 認証デリゲートの実装では、有効な OAuth2 アクセストークンが必要です。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 次のサンプルを実行します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "69884733"
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-単純な認証の例では、パラメーターを`AcquireToken()`使用せず、ハードコーディングされたトークン値を返す単純な関数について説明しました。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
+単純な認証の例では、パラメーターを使用せず、ハードコーディングされたトークン値を返す単純な `AcquireToken()` 関数について説明しました。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
 
 ### <a name="authh"></a>auth.h
 

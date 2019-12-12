@@ -4,7 +4,7 @@ description: Windows コンピューターとモバイルデバイスに Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,14 +12,14 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 17b15050ce012b5c81cece5537a34fb3a7402213
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: f91052c45a3246d3ed63ab9945e09a3dd7ab3789
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684191"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935165"
 ---
-# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント:クライアントのインストールと構成
+# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -35,17 +35,17 @@ Office 2010 を実行しているコンピューターでは、Azure Information
 
 Windows 用のクライアントのエンタープライズインストールおよび構成については、次の管理者ガイドを参照してください。
 
-- 統一されたラベル付けクライアント:[Azure Information Protection 統合されたラベル付けクライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)](./rms-client/client-admin-guide.md)
+- 統一されたラベル付けクライアント: Azure Information Protection 統合された[クライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
 
-- 従来のクライアント:[Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
+- 従来のクライアント: [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
 
 ただし、これらのクライアントを1台のコンピューターに簡単にインストールしてテストする場合は、ユーザーガイドの次の手順を参照してください。
 
-- 統一されたラベル付けクライアント:[Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールする](./rms-client/install-unifiedlabelingclient-app.md)
+- 統一されたラベル付けクライアント: [Azure Information Protection 統合されたラベル付けクライアントをダウンロードしてインストール](./rms-client/install-unifiedlabelingclient-app.md)します。
 
-- 従来のクライアント:[Azure Information Protection クライアントユーザーガイド](./rms-client/client-user-guide.md)から[Azure Information Protection クライアントをダウンロードしてインストール](./rms-client/install-client-app.md)します。
+- 従来のクライアント: [Azure Information Protection クライアントユーザーガイド](./rms-client/client-user-guide.md)から[Azure Information Protection クライアントをダウンロードしてインストール](./rms-client/install-client-app.md)します。
 
-## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>IOS および Android 用の Azure Information Protection アプリ:インストールと管理
+## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>IOS および Android 用の Azure Information Protection アプリ: インストールと管理
 
 IOS および Android 用の Azure Information Protection アプリビューアーをインストールするには、[ [Microsoft Azure Information Protection] ページ](https://go.microsoft.com/fwlink/?LinkId=303970)のリンクを使用します。 構成は必要ありません。
 
@@ -66,14 +66,14 @@ Azure Information Protection viewer アプリは Microsoft Intune アプリソ�
 
 Azure Information Protection アプリを Intune に追加するときの追加情報:
 
-- IOS の場合:Intune からアプリを検索して追加します。
+- IOS の場合: Intune からアプリを検索して追加します。
 
-- Android の場合:アプリを追加するときに、次の **Appstore URL** を使用します。
+- Android の場合: アプリを追加するときに、次の**Appstore URL**を使用します。
         
         https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 
 Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection クライアントをインストールして構成した後、ドキュメントや電子メールを保護するために使用できるさまざまな使用権限をクライアントが解釈する方法について、詳細を確認する必要がある場合があります。 詳細については、「 [Azure Information Management の使用権限を構成する](configure-usage-rights.md)」を参照してください。

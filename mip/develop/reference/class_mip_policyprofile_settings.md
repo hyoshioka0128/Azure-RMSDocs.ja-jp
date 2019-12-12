@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 324b31a9589cff75a758da2936a3aba242fd63c2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560880"
 ---
 # <a name="class-mippolicyprofilesettings"></a>class mip::PolicyProfile::Settings 
@@ -21,7 +21,7 @@ ms.locfileid: "73560880"
 --------------------------------|---------------------------------------------
 パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、const std:: shared_ptr\<AuthDelegate\>& authDelegate、const std:: shared_ptr\<PolicyProfile:: Observer\>& オブザーバー)  |  プロファイルを構成するためのインターフェイス。
 パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
-public const std:: shared_ptr\<AuthDelegate\>& GetAuthDelegate () const  |  認証委任を取得します。
+public const std::shared_ptr\<AuthDelegate\>& GetAuthDelegate() const  |  認証委任を取得します。
 public const std:: shared_ptr\<PolicyProfile:: オブザーバー\>& GetObserver () const  |  イベント オブザーバーを取得します。
 public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
 public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。

@@ -8,15 +8,15 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886186"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Microsoft Information Protection SDK - ポリシー ハンドラーの概念
 
-ポリシー API では、 `mip::PolicyHandler`は、ポリシーアクションを計算し、監査イベントを送信するために使用される操作を公開します。
+ポリシー API では、`mip::PolicyHandler` は、ポリシーアクションを計算し、監査イベントを送信するために使用される操作を公開します。
 
 ## <a name="policy-handler-functions"></a>ポリシー ハンドラー関数
 
@@ -27,14 +27,14 @@ ms.locfileid: "69886186"
 - `ComputeActions`
 - `NotifyCommittedActions`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 `PolicyHandler` を作成するには、以下が必要です。
 
 - `mip::MipContext`
 - `mip::PolicyProfile`
 - `mip::PolicyProfile` に追加された `mip::PolicyEngine`
-- を実装するクラス`mip::PolicyHandler::Observer`
+- を実装するクラス `mip::PolicyHandler::Observer`
 
 ## <a name="create-a-policy-handler"></a>ポリシー ハンドラーの作成
 
@@ -56,7 +56,7 @@ auto handler = createPolicyHandlerFuture.get();
 
 `PolicyHandler` オブジェクトが正常に作成されると、アクションを計算し、監査イベントを送信することができます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、ポリシーハンドラーの作成について学習できました。
 

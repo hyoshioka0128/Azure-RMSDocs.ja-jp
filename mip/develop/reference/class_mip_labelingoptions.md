@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 0a6ffd159115283b461c1f7455d4aafeb4c36623
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561063"
 ---
 # <a name="class-miplabelingoptions"></a>class mip::LabelingOptions 
@@ -23,7 +23,7 @@ public LabelingOptions (メソッドの設定)  | まだ文書化されていま
 public AssignmentMethod GetAssignmentMethod() const  | まだ文書化されていません。
 public bool IsDowngradeJustified() const  | まだ文書化されていません。
 public const std::string& GetJustificationMessage() const  | まだ文書化されていません。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetExtendedProperties () const  | まだ文書化されていません。
+public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | まだ文書化されていません。
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | まだ文書化されていません。
 public void SetExtendedProperties (const std:: vector\<std::p air\<std:: string、std:: string\>\>& extendedProperties)  | まだ文書化されていません。
   

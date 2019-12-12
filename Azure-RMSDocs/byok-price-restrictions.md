@@ -4,7 +4,7 @@ description: お客様が管理するキーを使用する場合の詳細と制�
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 09/22/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc78119434cc969a97d27e5aa964be7445963638
-ms.sourcegitcommit: 6641b39a788a5c1c62fb7d9286acc83b35c76f32
+ms.openlocfilehash: 4a82afdeee9459b460b98a385102147c6c78ff28
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198647"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935182"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (BYOK) の詳細を表示する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Azure Information Protection が含まれているサブスクリプションを持っている組織は、ユーザーが管理するキーを使用して[その使用状況をログに記録](log-analyze-usage.md)するように Azure Information Protection テナントを構成できます。 お客様が管理するキー構成は、"自分のキーを持ち込む"、BYOK と呼ばれることがよくあります。
@@ -63,7 +63,7 @@ BYOK と[使用状況ログ](log-analyze-usage.md)は、データを保護する
 
 Azure Rights Management サービスに要求を送信するアプリケーションによって、キー使用状況ログを取得します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 独自のキーを管理する場合は、「[Azure Information Protection テナント キーを実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
 

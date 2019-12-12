@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/07/2018
 ms.author: tommos
 ms.openlocfilehash: 729570c902ad3175b65ddd8167005c0cb4e4078c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175226"
 ---
 # <a name="auditing-in-the-mip-sdk"></a>MIP SDK での監査
@@ -41,7 +41,7 @@ SDK を介して Azure Information Protection Analytics に送信できるイベ
 
 検出イベントでは、ポリシー API によって読み取られたり使用されたりするラベル付き情報に関する情報が提供されます。 これらのイベントは、情報にアクセスしているデバイス、場所、およびユーザーを組織全体にわたって確認できるので便利です。
 
-作成するときに、フラグを設定して、ポリシー API で検出イベントが生成されます、`mip::PolicyHandler`オブジェクト。 値は、次の例で**isAuditDiscoveryEnabled**に設定されている`true`します。 ときに`mip::ExecutionState`に渡される`ComputeActions()`または`GetSensitivityLabel()`(識別子を持つ既存のメタデータ情報およびコンテンツ)、探索情報を Azure 情報保護 Analytics に送信されます。
+探索イベントは、`mip::PolicyHandler` オブジェクトを作成するときにフラグを設定することによって、ポリシー API で生成されます。 次の例では、 **Isauditdiscoveryenabled**の値が `true`に設定されています。 (既存のメタデータ情報とコンテンツ識別子を使用して) `ComputeActions()` または `GetSensitivityLabel()` に `mip::ExecutionState` が渡されると、探索情報が Azure Information Protection Analytics に送信されます。
 
 アプリケーションによって `ComputeActions()` または `GetSensitivityLabel()` が呼び出され、`mip::ExecutionState` が指定されると、検出監査が作成されます。 このイベントは、ハンドラーごとに 1 回だけ作成されます。
 
@@ -72,10 +72,10 @@ handler->NotifyCommittedActions(*state);
 
 ## <a name="audit-dashboard"></a>監査ダッシュボード
 
-Azure Information Protection 監査パイプラインに送信されたイベントは、 https://portal.azure.com にあるレポートに表示されます。 Azure 情報保護の Analytics はパブリック プレビューであり、機能/機能を変更することがあります。
+Azure Information Protection 監査パイプラインに送信されたイベントは、 https://portal.azure.com にあるレポートに表示されます。 Azure Information Protection Analytics はパブリックプレビュー段階であり、機能や機能が変更される可能性があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- 詳細については、Azure Information Protection での監査操作は、次を参照してください。、[技術コミュニティでの発表に関するブログをプレビュー](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)します。
-- ダウンロード、[ポリシー API のサンプルを GitHub ポリシー API を試すから](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Azure Information Protection の監査エクスペリエンスの詳細については、 [Tech Community のプレビュー発表のブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)を参照してください。
+- [GitHub からポリシー Api サンプルをダウンロードし、ポリシー api を試す](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

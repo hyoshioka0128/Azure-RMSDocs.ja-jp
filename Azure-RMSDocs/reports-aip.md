@@ -14,10 +14,10 @@ ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564540"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
@@ -307,7 +307,7 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |ProtectionOwnerBefore|変更前に所有者を Rights Management |
 |UserJustification|ラベルをダウングレードまたは削除するときの理由|
 |LastModifiedBy|ファイルを最後に変更したユーザー (UPN 形式)。 Office および SharePoint Online でのみ利用可能|
-|lastModifiedDate|形式の UTC-YYYY-MM-DDTHH: MM: SS: Office & SharePoint Online のみで使用可能 |
+|LastModifiedDate|形式の UTC-YYYY-MM-DDTHH: MM: SS: Office & SharePoint Online のみで使用可能 |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>InformationProtectionEvents の使用例

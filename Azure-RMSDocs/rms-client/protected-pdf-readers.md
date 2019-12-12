@@ -4,7 +4,7 @@ description: 分類と保護のラベルが付けられた PDF ドキュメン�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,16 +14,18 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 23d9f5cf45b579542ecb9c297270bc426c2a914b
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 1ab7dbd201d18289eb7823172f104d8693a3c3e3
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444839"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907391"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Microsoft Information Protection をサポートする PDF リーダー
 
 Microsoft Information Protection によって保護されている PDF ドキュメントを開く必要がある場合は、次のリンクと情報を参照してください。
+
+保護されている PDF ドキュメントには、機密情報が含まれている可能性があります。 セキュリティを強化するために、ドキュメントは暗号化されているため、承認されていない人物が読み取ることはできません。 このドキュメントを開くには、ドキュメントを開くためのアクセス許可が付与されていることを確認してから、暗号化を解除するリーダー (ビューアーと呼ばれることもあります) が必要です。
 
 ## <a name="install-pdf-readers-for-your-device"></a>デバイスの PDF リーダーをインストールする
 
@@ -42,7 +44,7 @@ Microsoft Information Protection によって保護されている PDF ドキュ
 
 |オペレーティング システム|サポートされるリーダー|
 |----------------|-----------------------------------|
-|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF<br /><br />RMS 共有アプリ|
+|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />GigaTrust App for Android|
 |[iOS]|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|
 
@@ -67,3 +69,9 @@ Microsoft と Adobe の連携により、分類され、必要に応じて保護
 - [Adobe Acrobat Reader と Microsoft Information Protection との統合の一般提供](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-Integration-with/ba-p/298396)
 
 - [Adobe reader と Microsoft Information Protection 統合に関してよく寄せられる質問](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
+
+## <a name="next-steps"></a>次のステップ
+
+このページのリンクを使用して PDF リーダーをインストールすると、保護された PDF ドキュメントを開くことができます。
+
+インストール後にリーダーを使用するためのヘルプが必要な場合は、そのリーダーに付属の指示とドキュメントを参照してください。 たとえば、Windows 用の Azure Information Protection ビューアーについては、「[ユーザーガイド: Azure Information Protection ユニファイドラベルクライアントを使用して保護されたファイルを表示](clientv2-view-use-files.md)する」を参照してください。

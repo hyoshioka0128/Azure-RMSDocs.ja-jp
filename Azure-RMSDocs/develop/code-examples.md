@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 40fcde97afba3278b57834b9c4740de9a5f3703d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792567"
 ---
 # <a name="code-examples"></a>コード例
@@ -32,7 +32,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 - iOS - [iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)
 - Windows ストア アプリ - [Windows ストア アプリ用の UI ライブラリ](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore)と [Windows ストア向けのサンプル アプリ](https://github.com/AzureADSamples/rms-samples-for-windowsstore)
 
-## <a name="examples"></a>使用例 ##
+## <a name="examples"></a>例 ##
 これらのトピックでは、RMS SDK の該当するバージョンの重要なコード要素について説明しています。
 - [Android のコード例](android-code.md)
 - [Linux のコード例](linux-c-code-examples.md)

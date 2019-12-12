@@ -4,7 +4,7 @@ description: Azure RMS の機能、Azure RMS で使用される暗号化制御�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29bbb0b080e39cad118b49f695d8ec1d1d5b5493
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 274889b59e40157bf0a4fb3e02a350b17907ddfa
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689592"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934774"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -36,21 +36,21 @@ Azure RMS が暗号化および復号化、承認、制限の適用を行う保�
 
 ![Azure RMS がファイルを保護する方法](./media/AzRMS_SecretColaFormula_final.png)
 
-処理の詳細については、この記事の「[Azure RMS の動作のチュートリアル: 初めての使用、コンテンツ保護、コンテンツ消費](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」をご覧ください。
+処理の詳細については、この記事の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
 
 Azure RMS が使用するアルゴリズムおよびキー長に関する技術的詳細については、次のセクションを参照してください。
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Azure RMS によって使用される暗号化コントロール:アルゴリズムとキーの長さ
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Azure RMS で使用される暗号化の制御:アルゴリズムとキーの長さ
 このテクノロジのしくみを詳しく理解する必要がない場合でも、このテクノロジが使用する暗号化コントロールについてたずねられる可能性があります。 たとえば、セキュリティ保護が業界標準であることを確認するためです。
 
 
 |暗号化コントロール|Azure RMS での使用|
 |-|-|
-|アルゴリズムAES<br /><br />キーの長さ:128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
-|アルゴリズムRSA<br /><br />キーの長さ:2048 ビット [[2]](#footnote-2)|キーの保護|
+|アルゴリズム:AES<br /><br />キーの長さ: 128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
+|アルゴリズム:RSA<br /><br />キーの長さ: 2048 ビット [[2]](#footnote-2)|キーの保護|
 |SHA-256|証明書の署名|
 
-###### <a name="footnote-1"></a>脚注 1 
+###### <a name="footnote-1"></a>脚注 1: 
 
 次のシナリオでは、Azure Information Protection クライアントによって 256 ビットが使用されます。
 
@@ -79,7 +79,7 @@ Azure RMS は、Azure RMS によって保護されているドキュメントま
 Windows デバイスに送信されるライセンスと証明書は、クライアントのデバイス秘密キーによって保護されます。このキーは、デバイスのユーザーが初めて Azure RMS を使用したときに作成されます。 一方、この秘密キーは、クライアント上の DPAPI によって保護されます。DPAPI は、ユーザーのパスワードから派生したキーを使用して、これらのシークレットを保護します。 モバイル デバイスでは、キーは 1 回しか使われず、クライアントに格納されないため、これらのキーをデバイス上で保護する必要はありません。 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Azure RMS の動作のチュートリアル:最初の使用、コンテンツ保護、コンテンツ消費
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費
 Azure RMS の動作方法をさらに詳しく理解するため、[Azure Rights Management サービスがアクティブ化](activate-service.md)された後、ユーザーが初めて Windows コンピューターで Rights Management サービスを使用し (**ユーザー環境の初期化**とも呼ばれます)、**コンテンツ (ドキュメントまたは電子メール) を保護**し、他のユーザーによって保護されているコンテンツを**消費する** (開いて使用する) ときの、一般的なフローを説明します。
 
 ユーザー環境が初期化された後、ユーザーはそのコンピューターでドキュメントを保護したり、保護されているドキュメントを消費したりできます。
@@ -121,7 +121,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 ![RMS ドキュメントの保護 - 手順 3、ポリシーがドキュメントに埋め込まれる](./media/AzRMS_documentprotection3.png)
 
-**手順 3 の処理**: 最後に、RMS クライアントは、以前に暗号化されたドキュメントの本文と共にポリシーをファイルに埋め込みます。このファイルは、保護されたドキュメントを構成します。
+**手順3で**行われること: 最後に、RMS クライアントは、以前に暗号化されたドキュメントの本文と共にポリシーをファイルに埋め込みます。これは、保護されたドキュメントを構成します。
 
 このドキュメントは、任意の場所に保存することも任意の方法を使用して共有することもでき、ポリシーは常に暗号化されたドキュメントと共にあります。
 
@@ -153,15 +153,15 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 - **電子メールの保護**: Exchange Online と新しい機能を備えた Office 365 Message Encryption を使ってメール メッセージを保護するとき、消費するための認証では、ソーシャル ID プロバイダーとのフェデレーションまたはワンタイム パスコードを使うこともできます。 その後のプロセス フローは、送信メールの一時的なキャッシュ コピーを介して Web ブラウザー セッションのサービス側でコンテンツの消費が行われるのを除けば、よく似ています。
 
-- **モバイル デバイス**: モバイル デバイスが Azure Rights Management サービスでファイルを保護または消費するときのプロセス フローはとても簡単です。 モバイル デバイスでは、コンテンツを保護または消費するための各トランザクションは独立しているので、ユーザー初期化プロセスは行われません。 Windows コンピューターと同じように、モバイル デバイスは Azure Rights Management サービスに接続して認証します。 コンテンツを保護する場合、モバイル デバイスはポリシーを送信し、Azure Rights Management サービスは発行ライセンスとドキュメントを保護する対称キーをモバイル デバイスに送信します。 コンテンツを消費する場合、モバイル デバイスは、Azure Rights Management サービスに接続して認証するときに、ドキュメントのポリシーを Azure Rights Management サービスに送信し、ドキュメントを消費するための使用ライセンスを要求します。 応答として、Azure Rights Management サービスは必要なキーと制限をモバイル デバイスに送信します。 どちらのプロセスも、TLS を使用してキーの交換およびその他の通信を保護します。
+- **モバイル デバイス**:モバイル デバイスが Azure Rights Management サービスでファイルを保護または消費するときのプロセス フローはとても簡単です。 モバイル デバイスでは、コンテンツを保護または消費するための各トランザクションは独立しているので、ユーザー初期化プロセスは行われません。 Windows コンピューターと同じように、モバイル デバイスは Azure Rights Management サービスに接続して認証します。 コンテンツを保護する場合、モバイル デバイスはポリシーを送信し、Azure Rights Management サービスは発行ライセンスとドキュメントを保護する対称キーをモバイル デバイスに送信します。 コンテンツを消費する場合、モバイル デバイスは、Azure Rights Management サービスに接続して認証するときに、ドキュメントのポリシーを Azure Rights Management サービスに送信し、ドキュメントを消費するための使用ライセンスを要求します。 応答として、Azure Rights Management サービスは必要なキーと制限をモバイル デバイスに送信します。 どちらのプロセスも、TLS を使用してキーの交換およびその他の通信を保護します。
 
-- **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
+- **RMS コネクタ**: Azure Rights Management サービスを RMS コネクタで使用するときのプロセス フローは同じです。 唯一の違いは、コネクタがオンプレミス サービス (Exchange Server や SharePoint Server など) と Azure Rights Management サービスの間のリレーとして機能することです。 コネクタ自体は、ユーザー環境の初期化や暗号化または復号化などのいかなる操作も実行しません。 コネクタは、通常は AD RMS サーバーに送られる通信をリレーするだけであり、両側で使用されているプロトコルの変換を処理します。 このシナリオでは、Azure Rights Management サービスをオンプレミス サービスと併用できます。
 
-- **汎用的な保護 (.pfile)** : Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
+- **汎用的な保護 (.pfile)** :Azure Rights Management サービスがファイルを一般的に保護するときは、RMS クライアントがすべての権限を許可するポリシーを作成する点を除けば、フローは基本的にコンテンツ保護と同じです。 ファイルを消費するときは、対象のアプリケーションに渡される前に暗号化が解除されます。 このシナリオでは、RMS をネイティブにサポートしない場合であっても、すべてのファイルを保護できます。
 
 - **Microsoft アカウント**: Microsoft アカウントで認証されていれば、Azure Information Protection で消費用の電子メール アドレスを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 詳しくは[こちら](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Rights Management サービスの詳細については、**概要と詳細**のセクションの他の記事を使用してください。たとえば、既存のアプリケーションと Azure Rights Management を統合して情報保護ソリューションを提供する方法を確認するには、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。 
 

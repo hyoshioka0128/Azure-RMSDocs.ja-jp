@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 10/16/2018
 ms.author: mbaldwin
 ms.openlocfilehash: d4bef66f8e3d808b195ac49f7bb42ab0eb62b7d5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60180860"
 ---
 # <a name="microsoft-information-protection-sdk---api-concepts"></a>Microsoft Information Protection SDK - API の概念
@@ -68,6 +68,6 @@ Microsoft Information Protection (MIP) SDK は、次の図に示すように 3 �
   - コンテンツをスキャンする
   - スコープ外の場合は破棄し、スコープ内の場合はパッケージ化する
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで利用可能な MIP API の概念と使用方法がわかりました。次は、[プロファイルおよびエンジン オブジェクトの概念](concept-profile-engine-cpp.md)を確認します。 これらの概念は基本的なものであり、すべての MIP API セットに適用されます。

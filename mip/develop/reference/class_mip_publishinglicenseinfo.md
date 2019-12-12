@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: d95edcf9fd08296392e44a77a49c900c3b1b4d4f
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560641"
 ---
 # <a name="class-mippublishinglicenseinfo"></a>クラス mip::P ublishingLicenseInfo 
@@ -19,7 +19,7 @@ ms.locfileid: "73560641"
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-公開発行ライセンス情報 (const std:: vector\<uint8_t\>& serializedPublishingLicense)  | まだ文書化されていません。
+公開発行 Licenseinfo (const std:: vector\<uint8_t\>& serializedPublishingLicense)  | まだ文書化されていません。
 public void SetParsedData (const std:: vector\<std:: string\>& ドメイン、const std:: string & serverPublicCert、const std:: string & contentId、const std:: string &)  | まだ文書化されていません。
 public const std:: vector\<uint8_t\>& GetSerializedPublishingLicense () const  | まだ文書化されていません。
 public const std:: vector\<std:: string\>& GetDomains () const  | まだ文書化されていません。

@@ -4,7 +4,7 @@ description: Azure Information Protection が使用する保護テクノロジ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,14 +15,14 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0cc51afb848dc754d33e5f0d425741ef84eff453
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: a09ee41507dae2aa54cf8cde326d70be143d403c
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679171"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934078"
 ---
-# <a name="what-is-azure-rights-management"></a>Azure Active Directory Rights Management の概要
+# <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -52,7 +52,7 @@ Azure Rights Management (多くの場合は Azure RMS に省略して表現) と
 |複数のファイルの種類を保護する|√ 初期の Rights Management の実装では、Rights Management のネイティブな保護を使って、Office ファイルのみを保護できました。 現在の**汎用的な保護**は、さらに多くの[ファイルの種類](./rms-client/client-admin-guide-file-types.md)がサポートされることを意味します。汎用的な保護は、Rights Management 共有アプリケーションによって最初に提供され、現在は Azure Information Protection クライアントによって提供されています。|
 |あらゆる場所のファイルを保護する|√ ファイルが[保護](./rms-client/client-classify-protect.md)されると、クラウド ストレージ サービスなど、IT の制御下にないストレージにファイルが保存またはコピーされる場合でも、その保護は維持されます。|
 |情報を安全に共有する|√ [保護された](./rms-client/client-classify-protect.md)ファイルは、他のユーザーと安全に共有できます (例: メールの添付ファイル、SharePoint サイトへのリンク)。 機密情報がメール メッセージ内にある場合は、メールを保護するか、または単に Outlook の [転送不可] オプションを使うことができます。 <br /><br />メール メッセージ全体を保護するのではなく、保護されたファイルを添付する利点は、メールのテキストが暗号化されないため、組織外にメールを送る場合に、初めて使うときの説明をメールに含めることができることです。 説明を読むことは誰でもできますが、添付されたドキュメントは保護されているので、メールまたはドキュメントが他の人に転送されたとしても、承認されているユーザーだけがドキュメントを開くことができます。|
-|監査と監視|√ 保護されたファイルが組織外部に出た後も、ファイルの[使用状況を監査および監視](log-analyze-usage.md)できます。<br /><br />たとえば、Contoso, Ltd の社員がFabrikam, Inc. の 3 人の社員と共同プロジェクトに携わっていて、読み取り専用の保護ドキュメントをこの 3 人に電子メールで送信するものとします。 Azure Rights Management の監査機能では次の情報を提供できます。<br /><br />- Fabrikam 社内の指定されたユーザーがドキュメントを開いたかどうか、および開いた日時。<br /><br />- ドキュメントが転送されたり他のユーザーがアクセスできる共有場所に保存されたりして、指定外のユーザーがドキュメントを開こうとしたかどうか (試みは失敗します)。<br /><br />- 指定されたユーザーがドキュメントを印刷または変更しようとしたかどうか (試みは失敗します)。<br /><br />さらに、[ドキュメント追跡サイト](./rms-client/client-track-revoke.md)を使うと、ユーザーや管理者は、保護されたドキュメントを追跡でき、必要な場合は、ドキュメントへのアクセスを取り消すことができます。|
+|監査と監視|√ 保護されたファイルが組織外部に出た後も、ファイルの[使用状況を監査および監視](log-analyze-usage.md)できます。<br /><br />たとえば、Contoso, Ltd. で作業しているとします。Fabrikam, Inc. の3人のユーザーと共同プロジェクトで作業しています。これらの3人のユーザーに、保護するドキュメントを電子メールで送信し、読み取り専用に制限します。 Azure Rights Management の監査機能では次の情報を提供できます。<br /><br />- Fabrikam 社内の指定されたユーザーがドキュメントを開いたかどうか、および開いた日時。<br /><br />- ドキュメントが転送されたり他のユーザーがアクセスできる共有場所に保存されたりして、指定外のユーザーがドキュメントを開こうとしたかどうか (試みは失敗します)。<br /><br />- 指定されたユーザーがドキュメントを印刷または変更しようとしたかどうか (試みは失敗します)。<br /><br />さらに、[ドキュメント追跡サイト](./rms-client/client-track-revoke.md)を使うと、ユーザーや管理者は、保護されたドキュメントを追跡でき、必要な場合は、ドキュメントへのアクセスを取り消すことができます。|
 |Windows コンピューターに限らず、広く使われているデバイスをサポートする|√ [サポートされるデバイス](./requirements-client-devices.md)には次のものが含まれます。<br /><br />- Windows コンピューターと携帯電話<br /><br />- Mac コンピューター<br /><br />- iOS タブレットと携帯電話<br /><br />- Android タブレットと携帯電話|
 |企業間のコラボレーションをサポートする|√ Azure Rights Management はクラウド サービスであるため、保護されたコンテンツを他の組織と共有する前に、信頼関係を明示的に構成する必要がありません。 相手組織が Office 365 または Azure AD ディレクトリを既に導入している場合、組織間のコラボレーションは自動的にサポートされます。 そうでない場合、ユーザーは無料の[個人向け RMS](rms-for-individuals.md) サブスクリプションにサインアップするか、[Azure Information Protection への認証をサポートしているアプリケーション](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)用に Microsoft アカウントを使用することができます。|
 |オンプレミスのサービスや Office 365 をサポートする|√  Azure Rights Management は、[Office 365 とシームレスに](office-apps-services-support.md)連携するだけでなく、[RMS コネクタ](deploy-rms-connector.md)をデプロイすると、次のオンプレミス サービスで使うこともできます。<br /><br />- Exchange Server<br /><br />- SharePoint Server<br /><br />- ファイル分類インフラストラクチャを実行する Windows Server|
@@ -67,7 +67,7 @@ Azure Rights Management (多くの場合は Azure RMS に省略して表現) と
 ## <a name="security-compliance-and-regulatory-requirements"></a>セキュリティ、コンプライアンス、および規制の要件
 Azure Rights Management は、次のセキュリティ、コンプライアンス、および規制の要件をサポートしています。
 
-√ 業界標準の暗号化を使用し、FIPS 140-2 をサポートします。 詳細については、「[Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」の情報を参照してください。
+√ 業界標準の暗号化を使用し、FIPS 140-2 をサポートします。 詳細については、「[Cryptographic controls used by Azure RMS: Algorithms and key lengths (Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ)](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」を参照してください。
 
 テナントキーを Microsoft Azure データセンターに格納するための nCipher nShield ハードウェアセキュリティモジュール (HSM) のサポートを√。 自社の地域でのみキーを使用できるように、Azure Rights Management では北米、EMEA (ヨーロッパ、中東、およびアフリカ)、およびアジアのデータ センターで独立したセキュリティ ワールドを使っています。
 
@@ -87,7 +87,7 @@ Azure Rights Management は、次のセキュリティ、コンプライアン�
 
 外部の証明書の詳細については、「 [Azure トラスト センター](https://azure.microsoft.com/support/trust-center/compliance/)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Rights Management サービスの動作に関する技術的な詳細については、「[Azure RMS の機能の詳細](how-does-it-work.md)」をご覧ください。
 

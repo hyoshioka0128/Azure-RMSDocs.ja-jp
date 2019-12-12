@@ -4,7 +4,7 @@ description: Azure Information Protection のテナント キーを自分で管�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/28/2019
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 682ed03cfafa9dad1d9696d51e0b64c71dea6fa3
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445058"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898907"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
@@ -27,7 +27,10 @@ ms.locfileid: "73445058"
 Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) は、次のセクションでこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
 ## <a name="revoke-your-tenant-key"></a>テナント キーの取り消し
-Azure Key Vault では、Azure Information Protection テナント キーが格納されたキー コンテナーに対するアクセス許可を変更して、Azure Rights Management サービスがキーにアクセスできないようにすることができます。 ただし、これを行うと、以前に Azure Rights Management サービスで保護したドキュメントや電子メールを誰も開けなくなります。
+
+キーを更新する代わりに、キーを失効させることが必要になるシナリオはごくわずかです。 キーを取り消すと、そのキーを使用してテナントによって保護されているすべてのコンテンツは、復元可能なキーのバックアップがない限り、すべてのユーザー (Microsoft、グローバル管理者、およびスーパーユーザー) がアクセスできなくなります。 キーを取り消した後は、Azure Information Protection 用に新しいテナントキーを作成して構成するまで、新しいコンテンツを保護することはできません。 
+
+お客様が管理するテナントキーを失効させるには、Azure Key Vault で、Azure Information Protection テナントキーを含む key Vault のアクセス許可を変更して、Azure Rights Management サービスがキーにアクセスできなくなるようにします。 この操作により、Azure Information Protection のテナントキーが実質的に取り消されます。
 
 Azure Information Protection のサブスクリプションをキャンセルすると、Azure Information Protection ではお客様のテナント キーの使用を停止します。操作を行う必要はありません。
 

@@ -4,7 +4,7 @@ description: 保護のみモードで Azure Information Protection クライア�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2b604593dfaf72b20e68d09fbd1928849b83ae9d
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: f7a2a84e6a6b180685594deb6b7ea455454dd161
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690207"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935692"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントの保護のみモード
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection クライアントにドキュメントや電子メールを分類するラベルが割り当てられていない場合、このクライアントは**保護のみ**モードで実行されます。 たとえば、このモードでは、Windows ファイル エクスプローラーの使用時に右クリックして **[分類して保護する]** を選択すると、以下が表示される場合があります。
 
@@ -59,9 +59,9 @@ Azure Information Protection クライアントにドキュメントや電子メ
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>保護のみモードでサポートされるタスク
 
-- Office アプリ内からドキュメントと電子メールを保護する (または保護を解除する) には、Office Information Rights Management (IRM) 機能を使用します。以下に例を示します。 **[ファイル]**  >  **[情報]**  >  **[文書の保護]**  >  **[アクセスの制限]** をクリックします。 詳細については、「[Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013)」を参照してください。
+- Office アプリからドキュメントと電子メールを保護する (または保護を解除する) には、Office Information Rights Management (IRM) 機能を使用します。たとえば、 **[ファイル]**  >  **[情報]**  >  **[文書の保護]**  >  **[アクセスの制限]** をクリックします。 詳細については、「[Office 365、Office 2019、Office 2016、または Office 2013 での情報保護の使用](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013)」を参照してください。
 
-- ファイルを保護する (または保護を解除する) には、エクスプローラーを使用します。単一ファイル、複数ファイル、またはフォルダーを右クリックし、 **[分類して保護する]** を選択します。 管理者が構成した保護を適用するには、 **[分類と保護 - Azure Information Protection]** ダイアログ ボックスの **[テンプレートの選択]** をクリックし、使用できるテンプレートのいずれかを選択します。
+- ファイルを保護する (または保護を解除する) には、エクスプローラーを使用します。たとえば、1 つまたは複数のファイルまたはフォルダーを右クリックし、 **[分類して保護する]** をクリックします。 管理者が構成した保護を適用するには、 **[分類と保護 - Azure Information Protection]** ダイアログ ボックスの **[テンプレートの選択]** をクリックし、使用できるテンプレートのいずれかを選択します。
 
 - 保護されたファイルを表示するには、Azure Information Protection ビューアーを使用します。
 

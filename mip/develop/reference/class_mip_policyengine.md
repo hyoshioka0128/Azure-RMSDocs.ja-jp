@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a1938601e036f7fb4d84a9a5815016dbda4509b7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558519"
 ---
 # <a name="class-mippolicyengine"></a>class mip::PolicyEngine 
@@ -28,13 +28,13 @@ public std:: shared_ptr\<Label\> GetDefaultSensitivityLabel ()  |  既定の機�
 public std:: shared_ptr\<Label\> GetLabelById (const std:: string & id) const  |  指定された id に従ってラベルを取得します。
 public std:: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  ポリシー ハンドラーを作成して、ファイルの事項状態でポリシー関連の関数を実行します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
-public const std:: string & GetPolicyDataXml () const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
+public const std::string& GetPolicyDataXml() const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
 public const std:: string & GetSensitivityTypesDataXml () const  |  このポリシーに関連付けられている感度の種類を記述する、秘密度の種類のデータ XML を取得します。
 public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
 public const std:: string & GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
 public const std:: string & GetSensitivityFileId () const  |  感度ファイル ID を取得します。
 public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。
-public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastPolicyFetchTime () const  |  ポリシーが最後にフェッチされた時刻を取得します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチされた時刻を取得します。
   
 ## <a name="members"></a>メンバー
   

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: 0187739b1f37a23051dbf6c3ddde8e992757f088
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73592123"
 ---
 # <a name="mip-sdk-for-c-reference"></a>MIP SDK for C リファレンス
@@ -19,7 +19,7 @@ Microsoft Information Protection (MIP) SDK for C を使用すると、開発者�
 
 MIP SDK for C には、
 
-- [列挙](enumerations.md)
+- [列挙体](enumerations.md)
 - [構造体](structures.md)
 - 次の関数:
 

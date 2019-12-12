@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 8205d207a48d90832b5961b14d37c7a7226293a2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559013"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>クラス mip:: AuthDelegate:: OAuth2Challenge 
@@ -20,9 +20,9 @@ oauth2 トークンを生成するために、呼び出し元アプリケーシ�
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 パブリック OAuth2Challenge (const std:: string & authority、const std:: string & resource、const std:: string & scope、const std:: string & claim)  |  新しい OAuth2Challenge オブジェクトを構築します。
-public const std:: string & GetAuthority () const  |  権限文字列を取得します。
-public const std:: string & GetResource () const  |  リソース文字列を取得します。
-public const std:: string & GetScope () const  |  スコープ文字列を取得します。
+public const std::string& GetAuthority() const  |  権限文字列を取得します。
+public const std::string& GetResource() const  |  リソース文字列を取得します。
+public const std::string& GetScope() const  |  スコープ文字列を取得します。
 public const std:: string & GetClaims () const  |  クレーム文字列を取得します。
   
 ## <a name="members"></a>メンバー

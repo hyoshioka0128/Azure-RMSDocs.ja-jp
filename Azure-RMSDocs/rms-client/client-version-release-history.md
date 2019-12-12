@@ -13,10 +13,10 @@ ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
-ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73446016"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
@@ -29,7 +29,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 
 
-通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログに含まれ、 **Microsoft Azure Information Protection**  >  Microsoft Azure 情報の製品名が付けられます。**保護クライアント**および**更新プログラム**の分類。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログにも含まれます。これには、 **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection クライアント**の製品名と、**更新**の分類が含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
@@ -109,7 +109,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **リリース**日: 04/16/2019
 
-01/15/2020 でサポート
+01/15/2020 までサポート
 
 このバージョンには、MSIPC バージョン 1.0.3592.627 の RMS クライアントが含まれています。
 

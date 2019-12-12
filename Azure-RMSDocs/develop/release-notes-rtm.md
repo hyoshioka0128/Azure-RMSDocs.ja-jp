@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: ab71c7156fa55e09ca22bdaf61c4bcfcd590fb16
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72690136"
 ---
 # <a name="release-notes"></a>リリース ノート
@@ -59,7 +59,7 @@ ms.locfileid: "72690136"
 >[!Note]
 > このセクションの機能文書更新は、日付を 2015 年 11 月 12 日とする SDK ダウンロードに適用されます。
 
-- **認証フローの改善** - [Azure Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 経由の OAuth2 トークン ベース認証を使用します。 このプロセスとその API 拡張機能の詳細については、「[ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md)」 (RMS 対応アプリケーションの ADAL 認証)を参照してください。
+- **認証フローの改善** - [Azure Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) 経由の OAuth2 トークン ベース認証を使用します。 このプロセスとその API 拡張機能の詳細については、「[ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md)」 (RMS 対応アプリケーションの ADAL 認証) を参照してください。
 
 - **ADAL の更新** Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は以下を利用できるようになります。
 
@@ -91,13 +91,13 @@ ms.locfileid: "72690136"
 
     **注**  API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
 
--   **サーバー モード アプリケーション**は [IPC](https://msdn.microsoft.com/library/hh535236.aspx)API**MODE\_SERVER\_ の \_API モード値** を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
+-   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [API モード値](https://msdn.microsoft.com/library/hh535236.aspx) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
 -   **ログ**は、ファイルと Event Tracing for Windows メソッドの両方で実装されました。
 -   **Windows 7 SP1 または Windows Server 2008 R2 コンピューター**を実行している場合は、「開発者向けの重要な注意事項」の下の記述を参照してください。
 
 ## <a name="january-2015-update"></a>2015 年 1 月の更新
 
--   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポート されるファイル形式) を参照してください。
+-   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポートされるファイル形式) を参照してください。
 -   **ログの強化による診断の向上** – 確認する必要があるメッセージが**エラー**または**警告**のログ レベルで表示されます。 表示されている例外など、他のすべてのメッセージは**情報**としてログに記録されます。
 
     詳細情報が失われないようにするために、この方法を選択しました。 これにより、重要なメッセージだけが警告レベルで表示されるようになりました。
@@ -168,7 +168,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
-    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで **IpcCreateLicenseFromScratch** を使用して、ライセンス所有者に[所有者](https://msdn.microsoft.com/library/hh535256.aspx)権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
+    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
 
 -   **問題点**: アプリケーションがハンドルを使用して同じウィンドウに対して[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx)または[IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx)を2回呼び出す場合、RMS SDK 2.1 は**HRESULT**でエラーを返します。
 
@@ -176,7 +176,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **問題**: 複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
 
-    **ソリューション**: Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\*Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\\isv.dll ファイルをコピーする必要があります。
+    **ソリューション**: Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 

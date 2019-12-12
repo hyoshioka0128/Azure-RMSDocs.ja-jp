@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a6c78e7311f3af3920df19d7a3a6ca92bb09e819
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560050"
 ---
 # <a name="class-mipprotectionprofile"></a>class mip::ProtectionProfile 
@@ -30,7 +30,7 @@ public void DeleteEngine(const std::string& engineId)  |  指定した ID を持
 public static MIP_API void __CDECL MIP::P rotectionProfile:: LoadAsync | 初期化中および有効期間全体にわたって ProtectionProfile によって使用される設定
 public static MIP_API std:: shared_ptr&lt;ProtectionProfile&gt; __CDECL MIP::P rotectionProfile:: Load | 指定された設定に基づいてプロファイルを読み込んでいます。
 public static const MIP_API char * __CDECL MIP::P rotectionProfile:: GetVersion | ライブラリのバージョンを取得します。
-public static MIP_API std:: shared_ptr&lt;発行 Licenseinfo&gt; __CDECL MIP::P rotectionProfile:: Get Licenseinfo | 発行ライセンスの詳細のホルダーを作成し、保護ハンドラーを作成するために使用できます。 
+public static MIP_API std:: shared_ptr&lt;発行 Licenseinfo&gt; __CDECL MIP::P rotectionProfile:: Get発行 Licenseinfo | 発行ライセンスの詳細のホルダーを作成し、保護ハンドラーを作成するために使用できます。 
 
 ## <a name="members"></a>メンバー
   

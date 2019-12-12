@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560443"
 ---
 # <a name="enumerations-and-structures"></a>列挙型と構造体
@@ -67,26 +67,26 @@ RIGHT            | コンテンツのマークが右側に揃います
 #### <a name="assignmentmethod-enum"></a>メソッドの列挙型
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-規格            | ラベルの割り当て方法は標準です
+STANDARD            | ラベルの割り当て方法は標準です
 インストラクション            | ラベルの割り当て方法は特権です
-自動            | ラベルの割り当て方法は自動です
+AUTO            | ラベルの割り当て方法は自動です
 ドキュメントのラベルの割り当て方法。 ラベルの割り当てが自動的に行われたか、標準または特権操作 (管理者操作と同等) であったか。
   
 #### <a name="actionsource-enum"></a>ActionSource 列挙型
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-手動            | ユーザーによって手動で選択されました
-自動            | ポリシー条件による設定
-しない            | ポリシー条件によってラベルが推奨された後にユーザーが設定する
+MANUAL            | ユーザーによって手動で選択されました
+AUTOMATIC            | ポリシー条件による設定
+RECOMMENDED            | ポリシー条件によってラベルが推奨された後にユーザーが設定する
 DEFAULT            | ポリシーに既定で設定する
 SetLabel イベントのトリガーを定義します。
   
 #### <a name="datastate-enum"></a>DataState 列挙型
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-休息            | 物理的にデータベース/ファイル/ウェアハウスに格納されている非アクティブなデータ
+REST            | 物理的にデータベース/ファイル/ウェアハウスに格納されている非アクティブなデータ
 動く            | ネットワークを通過するデータ、またはコンピューターのメモリ内で一時的に存在し、読み取りまたは更新されるデータ
-使用            | データベース/ファイル/ウェアハウスなどに物理的に格納されている定数の変更によるアクティブなデータ
+USE            | データベース/ファイル/ウェアハウスなどに物理的に格納されている定数の変更によるアクティブなデータ
 アプリケーションが動作するデータの状態を定義します。
   
 #### <a name="contentformat-enum"></a>ContentFormat 列挙型
@@ -149,9 +149,9 @@ POLICY_SYNC_ERROR            | ポリシー データを同期しようとして
 NO_PERMISSIONS            | ユーザーがコンテンツにアクセスできませんでした。 たとえば、アクセス許可はありません。コンテンツは失効します。
 NO_AUTH_TOKEN            | 認証トークンが空であるため、ユーザーはコンテンツにアクセスできませんでした。
 DISABLED_SERVICE            | サービスが無効になっているため、ユーザーはコンテンツにアクセスできませんでした
-PROXY_AUTH_ERROR            | プロキシ認証に失敗しました。
+PROXY_AUTH_ERROR            | プロキシ認証が失敗しました。
 NO_POLICY            | ユーザー/テナントに対してポリシーが構成されていません
-OPERATION_CANCELLED            | 操作が取り消されました
+OPERATION_CANCELLED            | 操作が取り消されました。
 ADHOC_PROTECTION_REQUIRED            | ファイルに対する操作を完了するには、アドホック保護を設定する必要があります
 DEPRECATED_API            | 呼び出し元が非推奨の API を呼び出しました
 TEMPLATE_NOT_FOUND            | テンプレート ID が認識されません
@@ -259,7 +259,7 @@ Header            |
 #### <a name="labelactiondatatype-enum"></a>LabelActionDataType 列挙型
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-おすすめ            | 
+推奨            | 
 適用            | 
   
 #### <a name="protectionactiontype-enum"></a>ProtectionActionType 列挙型

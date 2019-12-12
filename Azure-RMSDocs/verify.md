@@ -4,7 +4,7 @@ description: Azure Information Protection からの保護サービスが想定�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4e5892ccbd4e173a9354c62a780ef480382a0921
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: fdf9caff7e1f1052f65f8126de3f3427cc9b4e44
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689693"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934367"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Azure Rights Management サービスの検証
 
@@ -35,7 +35,7 @@ Azure Information Protection から保護サービス (Azure Rights Management) 
 > [!TIP]
 > さらにサポートが必要な場合は、「[Azure Information Protection の情報とサポート](information-support.md)」の「[サポート オプションとコミュニティ リソース](information-support.md#support-options-and-community-resources)」セクションを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 使用状況ログを使用して、組織でこの保護サービスをどのように使用しているかを監視できます。 詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](log-analyze-usage.md)」を参照してください。
 

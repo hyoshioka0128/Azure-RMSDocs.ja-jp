@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68794111"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>方法: RMS サーバーをインストールし、構成し、それでテストする
@@ -27,7 +27,7 @@ ms.locfileid: "68794111"
  
 ## <a name="instructions"></a>手順
 
-### <a name="step-1-setup-your-rms-server"></a>手順 1:RMS サーバーをセットアップする
+### <a name="step-1-setup-your-rms-server"></a>手順 1: RMS サーバーをセットアップする
 
 次の手順で RMS サーバーをセットアップする方法について説明します。この手順には、次が含まれています。
 

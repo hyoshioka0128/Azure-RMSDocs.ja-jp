@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/03/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
-ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
+ms.openlocfilehash: 024e785faf06abde45177fe8049ae8c7c24294fd
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74780917"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933295"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -42,9 +42,9 @@ RMS クライアントは保護のみを提供します。 このクライアン
 Windows コンピューターのクライアントにラベルを付ける方法は、使用する管理ポータルの影響を受ける可能性があります。
 
 - Office に組み込まれているラベル付けクライアントと Azure Information Protection は、次の管理センターのラベルとポリシー設定をクライアントにダウンロードします。 
-    - Office 365 セキュリティ/コンプライアンスセンター
+    - Office 365 セキュリティ/コンプアライアンス センター
     - Microsoft 365 security center
-    - Microsoft 365 コンプライアンスセンター
+    - Microsoft 365 コンプライアンス センター
 
 - Azure Information Protection クライアント (クラシック) は、Azure portal からラベルとポリシー設定をダウンロードします。
 
@@ -52,7 +52,9 @@ Windows コンピューターのクライアントにラベルを付ける方法
 
 どのクライアントを使用する必要がありますか。
 
-- Office 365 アプリが最小バージョン1910であり、MacOS、iOS、および Android でも使用できるのと同じラベルとポリシー設定を使用する場合、統一されたラベル付けクライアントまたは従来のクライアントを必要とする Office アプリの機能が不要な場合は、Windows コンピューターに**office に組み込まれているラベル付けクライアント**を使用します。 これらの機能には、ラベルの選択と表示を容易にするために、リボンの下に Information Protection バーがあります。 このクライアントは、アカウントの切り替えをサポートしています。また、Office アドインを使用していないため、Azure Information Protection クライアントのどちらを使用しても Office アプリのパフォーマンスが向上します。
+- Office 365 アプリが最小バージョン1910であり、MacOS、iOS、および Android でも使用できるのと同じラベルとポリシー設定を使用する場合、統一されたラベル付けクライアントまたは従来のクライアントを必要とする Office アプリの機能が不要な場合は、Windows コンピューターに**office に組み込まれているラベル付けクライアント**を使用します。 これらの機能には、ラベルの選択と表示を容易にするために、リボンの下に Information Protection バーがあります。 
+    
+    このクライアントは、アカウントの切り替えをサポートしています。また、Office アドインを使用していないため、Azure Information Protection クライアントのどちらを使用しても Office アプリのパフォーマンスが向上します。 ラベル付けは Office に組み込まれているため、このラベル付けクライアントに個別のインストールと保守はありません。 また、Office アドインとは異なり、無効にすることはできません。
 
 - MacOS、iOS、および Android でも使用できるラベルおよびポリシー設定については、Windows コンピューター上の Azure Information Protection のラベル**付けクライアント**を使用します。 Office 365 アプリとは別にファイルにラベルを付けることができ、従来のクライアントでのみサポートされている機能は必要ありません。 現在、これらの機能には、オンプレミスのキー (HYOK) を使用したコンテンツの保護と、オンプレミスのデータストア用の一般公開バージョンのスキャナーが含まれています。
 

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 8b48d6e5aacacb6f678fc7d5aea2aee531da88fa
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560097"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>class mip::ProtectionHandler::Observer 
@@ -21,7 +21,7 @@ ProtectionHandler に関連する通知を受信するインターフェイス�
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public virtual void Oncreateprotectionハンドラ Success (const std:: shared_ptr\<ProtectionHandler\>& protectionHandler、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler が正常に作成されたときに呼び出されます。
-public virtual void Oncreateprotectionハンドラ Failure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  ProtectionHandler の作成に失敗したときに呼び出されます。
+パブリック仮想 void Oncreateprotectionハンドラ Failure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler の作成に失敗したときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   

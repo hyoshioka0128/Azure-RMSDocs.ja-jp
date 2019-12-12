@@ -12,10 +12,10 @@ ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 2d26e7d80a37fd5ae8b52539a09fcbb9c924a13d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561203"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
@@ -24,7 +24,7 @@ ms.locfileid: "73561203"
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このガイドの情報は、エンタープライズネットワーク上の Azure Information Protection の統合されたラベル付けクライアントを担当している場合、または Azure Information Protection 統合された[ラベル付けクライアントユーザーよりも詳細な技術情報が必要な場合に使用します。ガイド](clientv2-user-guide.md)。 
+このガイドの情報は、エンタープライズネットワーク上で Azure Information Protection 統合されたラベル付けクライアントを担当している場合、または、「 [Azure Information Protection ユニファイドラベルクライアントユーザーガイド](clientv2-user-guide.md)」に記載されている技術情報が必要な場合に使用します。 
 
 たとえば、次のようになります。
 
@@ -213,7 +213,7 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 - [1.48.204.0 より前のバージョンからのアップグレード](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-このアップグレードでは、 **AIPScannerUL_\<profile_name >** という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
+アップグレードによって**AIPScannerUL_\<profile_name >** という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>このクライアントの Azure Information Protection クライアント (クラシック) バージョン1.48.204.0 以降のバージョンからのアップグレード
 
@@ -225,7 +225,7 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、 `Update-AIPScanner –Profile Europe`と指定します。
     
-    この手順では、 **AIPScannerUL_\<profile_name**という名前の新しいデータベースを作成 >
+    この手順では、 **AIPScannerUL_\<profile_name**という名前の新しいデータベースを作成し >
 
 4. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
 

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: bc27cae6020034029712e96fa5ae500d7afebf9b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559383"
 ---
 # <a name="class-mipcomputeenginesettings"></a>クラス mip:: ComputeEngine:: Settings 
@@ -18,7 +18,7 @@ ms.locfileid: "73559383"
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const ApplicationInfo & applicationInfo、const std:: shared_ptr\<TelemetryDelegate\>& telemetryDelegate、const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate、const std:: string& hostName、const std:: vector\<std::p air\<std:: string、std:: string\>\>& customProperties、const std:: vector\<LabelFilterType\>& labelFilter)  | まだ文書化されていません。
+パブリック設定 (const ApplicationInfo & applicationInfo、const std:: shared_ptr\<TelemetryDelegate\>& telemetryDelegate、const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate、const std:: string & hostName、const std:: vector\<std::p air\<std:: string、std:: string\>\>& customProperties、const std:: vector\<LabelFilterType\>& labelFilter)  | まだ文書化されていません。
 public const ApplicationInfo& GetApplicationInfo() const  | まだ文書化されていません。
 public std:: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | まだ文書化されていません。
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | まだ文書化されていません。

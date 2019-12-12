@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2c8b3407f31819614605fb77fb86a86159a898fd
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788540"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
@@ -31,14 +31,14 @@ AIP/RMS を使用して開発したアプリケーションをリリースする
 ### <a name="begin-the-process"></a>プロセスを開始する
 次の情報を記載した電子メールを <strong>IPIA@microsoft.com</strong> に送信して、IPIA を入手します。
 
-**件名:** *会社名*の IPIA 申し込み
+**件名:** *会社名* の IPIA 申し込み
 
 電子メールの本文に、次の情報を含めます。
 - アプリケーションと製品名
 - 要求者の氏名
 - 要求者の電子メール アドレス
 
-### <a name="next-steps"></a>次の手順
+### <a name="next-steps"></a>次のステップ
 IPIA 申請が受信されると、(Word 文書形式の) フォームがお客様に送信されます。
 IPIA の使用条件を確認し、次の情報をフォームに入力して <strong>IPIA@microsoft.com</strong> に返送します。
 - 会社の正式名称
@@ -103,7 +103,7 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 > [!NOTE]
 > 認証用に新しい ADAL モデルに移行した場合は、**SIA** をインストールする必要はありません。 詳細については、「[ADAL authentication for your RMS enabled application (RMS 対応アプリケーションの ADAL 認証)](adal-auth.md)」をご覧ください。
-> **Windows 10 のアプリケーション認定を受ける**こともできます。Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は以下を利用できるようになります。多要素認証を使用する。コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールする
+> あるいは、**Windows 10 のアプリケーション認定を受ける**ことができます。 - Microsoft Online サインイン アシスタントではなく、ADAL 認証を使用するようにアプリケーションを更新すると、ユーザーと顧客は多要素認証を利用したり、コンピューターの管理者特権なしで RMS クライアント 2.1 をインストールしたりできるようになります。
 
 エンドユーザーが Information Protection/サービスを活用できるようにするには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者には、エンドユーザーが RMS (オンプレミス) または Azure Information Protection のどちらで Information Protection を使用するのかわかりません。
 
@@ -120,7 +120,7 @@ RMS クライアント 2.1 とアプリケーションの統合の例として�
 
 アプリケーションによる Azure Rights Management サービスでの RMS の使用を有効にする方法の詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」をご覧ください。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Rights Management を構成する](https://TechNet.Microsoft.Com/library/jj585002.aspx)

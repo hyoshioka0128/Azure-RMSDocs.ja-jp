@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560753"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
@@ -20,10 +20,10 @@ ProtectionEngine に関連する通知を受信するインターフェイスで
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& templateIds const std:: shared_ptr\<void\>& context)  |  テンプレートが正しく取得されると呼び出されます。
-public virtual void OnGetTemplatesFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
+public virtual void OnGetTemplatesSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& templateIds、const std:: shared_ptr\<void\>& context)  |  テンプレートが正しく取得されると呼び出されます。
+public virtual void OnGetTemplatesFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
 public virtual void OnGetRightsForLabelIdSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& 権限、const std:: shared_ptr\<void\>& context)  |  権限が正しく取得されると呼び出されます。
-public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
+public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   

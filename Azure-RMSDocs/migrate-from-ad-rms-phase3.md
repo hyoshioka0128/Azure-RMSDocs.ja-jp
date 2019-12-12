@@ -3,8 +3,8 @@ title: AD RMS から Azure Information Protection への移行 - フェーズ 3
 description: AD RMS から Azure Information Protection への移行のフェーズ 3 には、手順 7 が含まれます。
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+manager: rkarlin
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 613dcf3e6b35ed801fafc7718dbb0db8b664483c
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71684561"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898910"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>移行フェーズ 3 - クライアント側の構成
 
@@ -64,27 +64,29 @@ Windows クライアントを再構成する方法の詳細については、次
     |-----------|-----------|  
     |**ドメイン**|_tcp.rmscluster.contoso.com|  
     |**サービス**|_rmsredir|  
-    |**プロトコール**|_http|  
+    |**[プロトコル]**|_http|  
     |**優先度**|0|  
     |**重み**|0|  
-    |**ポート番号**|80|  
+    |**[ポート番号]**|80|  
     |**このサービスを提供しているホスト**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Office 365 アプリまたは Office 2016 (またはそれ以降) を実行しているユーザーに対し、AD RMS の発行エンドポイントで拒否のアクセス許可を設定します。
 
     に設定する必要があります。 クラスター内の AD RMS サーバーのいずれかで、Internet Information Services (IIS) マネージャー コンソールを開始します。
 
-    b. **既定の Web サイト** >  **_wmcs** > **licensing** > **licensing.asmx** に移動します。
+    b. **[既定の Web サイト]** に移動し、 **[_wmcs]** を展開します。
 
-    c. **licensing.asmx** >  **[プロパティ]**  >  **[編集]** を右クリックして選択します。
+    c. **[ライセンス]** を右クリックし、 **[コンテンツビューに切り替え]** を選択します。
 
-    d. **[licensing.asmx の権限]** ダイアログ ボックスで、すべてのユーザーにリダイレクトを設定するために **[ユーザー]** を選択するか、 **[追加]** を選択してリダイレクトするユーザーを含むグループを指定します。
+    d. 詳細ペインで、[ > の**プロパティ**] を右クリックし >  **[編集]** をクリックし**ます。**
+
+    e. **[Permissions のアクセス許可]** ダイアログボックスで、すべてのユーザーにリダイレクトを設定する場合は **[ユーザー]** を選択し、 **[追加]** をクリックして、リダイレクトするユーザーを含むグループを指定します。
     
     すべてのユーザーが DNS リダイレクトをサポートする Office のバージョンを使用している場合でも、段階的な移行のために、最初にユーザーのサブセットを指定したい場合があります。
     
-    e. 選択したグループの **[読み取りと実行]** と **[読み取り]** のアクセス許可に **[拒否]** を選択して、 **[OK]** を 2 回クリックします。
+    f. 選択したグループの **[読み取りと実行]** と **[読み取り]** のアクセス許可に **[拒否]** を選択して、 **[OK]** を 2 回クリックします。
 
-    f. この構成が想定どおりに動作することを確認するには、ブラウザーから直接 licensing.asmx ファイルへの接続を試みます。 次のエラー メッセージが表示されます。これにより、Office 365 アプリ、Office 2019、または Office 2016 を実行しているクライアントが SRV レコードの検索を開始します。
+    g. この構成が想定どおりに動作することを確認するには、ブラウザーから直接 licensing.asmx ファイルへの接続を試みます。 次のエラー メッセージが表示されます。これにより、Office 365 アプリ、Office 2019、または Office 2016 を実行しているクライアントが SRV レコードの検索を開始します。
     
     **エラー メッセージ 401.3: 指定した資格情報を使用して、このディレクトリまたはページを表示するアクセス許可がありません (アクセス制御リストにより、アクセスが拒否されました)。**
 

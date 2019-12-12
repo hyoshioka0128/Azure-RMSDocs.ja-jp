@@ -4,7 +4,7 @@ description: 組織のデータを保護するために Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fe3b91fb094705b82d3fd07ad74691eee8e74399
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: a1a3f9f20c5f1dc7f43ccf5ee0dc6daa4c108af2
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684306"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935216"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Rights Management API をサポートするその他のアプリケーション
 
@@ -29,6 +29,6 @@ Azure Information Protection SDK を使用すると、社内開発者は、Azure
 
 同様に、多くのソフトウェア ベンダーが情報保護ソリューションを提供するアプリケーションを提供しています。これらは ERM (Enterprise Rights Management) 製品とも呼ばれます。 一般的な例は、特定のプラットフォームで Azure Rights Management サービスをサポートする PDF リーダーです。 「[Azure Rights Management データ保護をサポートするアプリケーション](./requirements-applications.md)」にある表を使用して Rights Management をサポートするアプリケーション (RMS 対応アプリケーション) を特定してから、Web 検索を使用してそのアプリケーションを購入またはダウンロードすることができます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 他のアプリケーションおよびサービスで Azure Rights Management サービスをサポートする方法については、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。

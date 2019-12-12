@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 8f1ef9e1ca46037243e170a59717be74954d4cb1
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560276"
 ---
 # <a name="class-mipfileengine"></a>class mip::FileEngine 
@@ -28,9 +28,9 @@ public const std::string& GetMoreInfoUrl() const  |  ポリシー/ラベルに�
 public const std:: string & GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
 public const std:: string & GetSensitivityFileId () const  |  感度ファイル ID を取得します。
 public bool IsLabelingRequired() const  |  ドキュメントにラベルを付ける必要があることを、ポリシーで指示するかどうかを確認します。
-public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastPolicyFetchTime () const  |  ポリシーが最後にフェッチされた時刻を取得します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチされた時刻を取得します。
 public void Createfilehandler Async (const std:: string & inputFilePath、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
-public void Createfilehandler Async (const std:: shared_ptr\<Stream\>& inputStream、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: Observer\>&Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<Filehandlerobserver\>& Filehandlerobserver)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
+public void Createfilehandler Async (const std:: shared_ptr\<Stream\>& inputStream、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
 public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 4479cd9419d51e841906e6268427e184d4e1b4d3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558002"
 ---
 # <a name="functions"></a>関数
@@ -27,15 +27,15 @@ public static std:: string GetActionSourceString (ActionSource actionSource)    
 public static std:: string GetDataStateString (mip::D ataState state)       |  コンテンツの状態名を取得します。
 public const std::string& GetCustomSettingPolicyDataName()       |  ポリシー データを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingExportPolicyFileName()       |  SCC ポリシー データをエクスポートするファイルのパスを明示的に指定する設定の名前。
-public const std:: string & GetCustomSettingSensitivityTypesDataName ()       |  秘密度データを明示的に指定する設定の名前。
+public const std::string& GetCustomSettingSensitivityTypesDataName()       |  秘密度データを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingPolicyDataFile()       |  ポリシー データのファイルのパスを明示的に指定する設定の名前。
-public const std:: string & GetCustomSettingSensitivityTypesDataFile ()       |  感度の種類のデータファイルパスを明示的に指定する設定の名前。
+public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  感度の種類のデータファイルパスを明示的に指定する設定の名前。
 public const std:: string & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  ラベル機能によってカスタムプロパティとカスタムプロパティによってラベルを有効にできる設定の名前。
 public const std:: map\<、GetDefaultFeatureSettings () のように、フライト機能、bool\>& ます。       |  機能が既定で有効になっているかどうかを取得します。
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: istream\>& stdIStream)       |  Std:: istream からストリームを作成します。
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: ostream\>& stdOStream)       |  Std:: ostream からストリームを作成します。
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: iostream\>& stdIOStream)       |  Std:: iostream からストリームを作成します。
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromBuffer (uint8_t * buffer, const int64_t size)       |  バッファーからストリームを作成します。
+public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromBuffer (uint8_t * buffer、const int64_t size)       |  バッファーからストリームを作成します。
 public MIP_API std:: vector\<uint8_t\> ReadFromStream (const std:: shared_ptr\<MIP:: Stream\>& stream)       |  ストリームのすべてのバイトを読み取ります。
 public ActionType operator & (ActionType a、ActionType b)       |  アクションの種類が enum の and (&) 演算子。
 public ActionType operator ^ (ActionType a, ActionType b)       |  アクションの種類の列挙型に対する Xor (^) 演算子。

@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
 ms.openlocfilehash: 34576337726e8974e65076bc1358d316ad32d9d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886172"
 ---
 # <a name="implement-executionstate"></a>ExecutionState を実装する
@@ -28,7 +28,7 @@ ms.locfileid: "69886172"
 
 `ExecutionState` では、次の仮想メンバーが公開されます。 各メンバーからポリシー エンジンに何らかのコンテキストが渡されると、アプリケーションによって実行される必要があるアクションに関する情報が返されます。 さらに、この情報は、Azure Information Protection レポート機能に監査情報を提供するために、使用される場合もあります。
 
-| メンバー                                                                             | 戻り値                                                                                                              |
+| Member                                                                             | 戻り値                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | オブジェクトに適用するラベルを返します。                                                                       |
 | `mip::DataState GetDataState()`                                                    | オブジェクトの mip::D ataState を返します。                                                                            |
@@ -66,7 +66,7 @@ struct ExecutionStateOptions {
 
 アプリケーションによって各プロパティが設定され、次に、`mip::ExecutionState` から派生したクラスのコンストラクターに `ExecutionStateOptions` が渡されます。 この情報は、実行するアクションを決定するために使用されます。 `mip::ExecutionState` 内に指定されたデータは、Azure Information Protection Analytics にも表示されます。
 
-### <a name="next-steps"></a>次の手順
+### <a name="next-steps"></a>次のステップ
 
 - 現在の状態と目的の状態に基づいて、[新規または既存のラベルの計算アクション](concept-handler-policy-computeactions-cpp.md)を確認する方法について説明します。
 - [GitHub からポリシー Api サンプルをダウンロードし、ポリシー api を試す](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

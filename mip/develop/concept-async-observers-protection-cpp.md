@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: 2d1cf81e20a317ecb1eb9e71b5b4e0ab32482877
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175549"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Microsoft Information Protection SDK - 保護 API オブザーバー
@@ -54,7 +54,7 @@ public:
 
 2 つ目のパラメーターは、*コンテキスト*への共有ポインターです。 この実装では、コンテキストは `std::promise` への参照で、`shared_ptr<void>` として渡されます。 関数の最初の行は、これを `std::promise` にキャストし、`promise` という名前のオブジェクトに格納されます。
 
-最後に、`promise->set_value()` を設定し、`mip::ProtectionProtection`オブジェクトに渡すことで、future の準備ができます。
+最後に、`promise->set_value()` を設定し、`mip::ProtectionProtection` オブジェクトに渡すことで、future の準備ができます。
 
 ```cpp
 //protection_observers.cpp

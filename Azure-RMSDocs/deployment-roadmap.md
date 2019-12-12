@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection を準備、実装、管理�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 11/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3dc822a9653aabc86a8f54ac16890700dca454d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: bc7370507cce3b8ff783190cc82fcd8230329bf1
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559744"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934876"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -25,7 +25,7 @@ ms.locfileid: "73559744"
 
 組織の Azure Information Protection を準備、実装、管理するための推奨事項として、次の手順に従ってください。
 
-方法 
+または、次のようにします。 
 
 - Azure Information Protection のシナリオベースの命令を探していますか? [Azure Information Protection を使用する一般的なシナリオについては、「ハウツーガイド](how-to-guides.md)」を参照してください。
 

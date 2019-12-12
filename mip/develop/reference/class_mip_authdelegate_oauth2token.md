@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: d8bce56e02778d48e6e3c0cfdb02f1c3f1f4054a
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560348"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>クラス mip:: AuthDelegate:: OAuth2Token 
@@ -20,8 +20,8 @@ Mipmap SDK が oauth2 トークンを SDK に渡すことを要求する方法�
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 パブリック OAuth2Token ()  |  新しい OAuth2Token オブジェクトを構築します。
-public OAuth2Token (const std:: string & accessToken)  |  AccessToken から新しい OAuth2Token オブジェクトを構築します。
-public const std:: string & GetAccessToken () const  |  アクセストークン文字列を取得します。
+public OAuth2Token(const std::string& accessToken)  |  AccessToken から新しい OAuth2Token オブジェクトを構築します。
+public const std::string& GetAccessToken() const  |  アクセストークン文字列を取得します。
 public void SetAccessToken (const std:: string & accessToken)  |  アクセストークン文字列を設定します。
   
 ## <a name="members"></a>メンバー

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a9138e497655dfa939a9ac9b15d7ed228331e9e0
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560713"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>class mip::ProtectionProfile::Observer 
@@ -20,14 +20,14 @@ ProtectionProfile に関連する通知を受信するインターフェイス�
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 void OnLoadSuccess (const std:: shared_ptr\<ProtectionProfile\>& プロファイル、const std:: shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
+パブリック仮想 void OnLoadSuccess (const std:: shared_ptr\<ProtectionProfile\>& profile、const std:: shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
 パブリック仮想 void OnLoadFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
 public virtual void OnListEnginesSuccess (const std:: vector\<std:: string\>& engineIds、const std:: shared_ptr\<void\>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
-public virtual void OnListEnginesFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  エンジンの一覧の作成中にエラーが発生すると呼び出されます。
+public virtual void OnListEnginesFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  エンジンの一覧の作成中にエラーが発生すると呼び出されます。
 public virtual void OnAddEngineSuccess (const std:: shared_ptr\<ProtectionEngine\>& engine、const std:: shared_ptr\<void\>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
-public virtual void OnAddEngineFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  新しいエンジンの追加でエラーが発生すると呼び出されます。
+public virtual void OnAddEngineFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  新しいエンジンの追加でエラーが発生すると呼び出されます。
 public virtual void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr & error, const std:: shared_ptr\<void\>& context)  |  エンジンの削除でエラーが発生すると呼び出されます。
+public virtual void OnDeleteEngineFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  エンジンの削除でエラーが発生すると呼び出されます。
   
 ## <a name="members"></a>メンバー
   

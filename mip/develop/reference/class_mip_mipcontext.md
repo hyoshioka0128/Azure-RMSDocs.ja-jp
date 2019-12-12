@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561031"
 ---
 # <a name="class-mipmipcontext"></a>クラス mip:: MipContext 
@@ -76,7 +76,7 @@ Logger の実装を取得します。
   
 **戻り値**: ロガー
 
-### <a name="create-function"></a>関数の作成
+### <a name="create-function"></a>Create 関数
 プロファイルを初期化するときに使用する新しい MipContext インスタンスを作成します。
 
 は、MipContext インスタンス**を返し**ます。

@@ -13,10 +13,10 @@ ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561295"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
@@ -529,7 +529,7 @@ AzureInformationProtection モジュールをインストールするための�
 13. **[スコープの追加]** ウィンドウで、推奨される文字列を例として使用して、次のように指定し、 **[スコープの追加]** を選択します。
     - **スコープ名**: `user-impersonation`
     - **同意できるユーザー**:**管理者とユーザー**
-    - **管理者の同意表示名**: `Access Azure Information Protection scanner`
+    - **管理者の同意の表示名**: `Access Azure Information Protection scanner`
     - **管理者の同意の説明**: `Allow the application to access the scanner for the signed-in user`
     - **ユーザーの同意表示名**: `Access Azure Information Protection scanner`
     - **ユーザーの同意の説明**: `Allow the application to access the scanner for the signed-in user`

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 387d3819e8abe9fb24283cd0f62a78c15ce27b49
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558849"
 ---
 # <a name="class-mipfileenginesettings"></a>class mip::FileEngine::Settings 
@@ -32,11 +32,11 @@ public void SetSessionId(const std::string& sessionId)  |  エンジンのセッ
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を返します。
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  保護クラウドエンドポイントのベース url を取得します。
-public void SetPolicyCloudEndpointBaseUrl (const std:: string & policyCloudEndpointBaseUrl)  |  クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
-public const std:: string & GetPolicyCloudEndpointBaseUrl () const  |  ポリシークラウドエンドポイントのベース url を取得します。
+public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  ポリシークラウドエンドポイントのベース url を取得します。
 public void SetProtectionOnlyEngine (bool protectionOnly)  |  保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
 public const bool IsProtectionOnlyEngine() const  |  保護のみのエンジン インジケーターを返します (ポリシー/ラベルなし)。
-public bool IsLoadSensitivityTypesEnabled () const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
+public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 public void EnablePFile (bool 値)  |  が PFiles を生成するかどうかを示すフラグを設定します。
 public const bool IsPFileEnabled ()  |  が PFiles を生成するかどうかを示すフラグを取得します。
 public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。

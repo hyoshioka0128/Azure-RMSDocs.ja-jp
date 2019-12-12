@@ -9,15 +9,15 @@ ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
 ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479112"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK バージョンリリース履歴とサポートポリシー
 
-## <a name="servicing"></a>I/o 
+## <a name="servicing"></a>サービス 
 
 各一般公開 (GA) バージョンは、次の GA バージョンがリリースされると6か月間サポートされます。 ドキュメントには、サポートされていないバージョンに関する情報が含まれない場合があります。 修正プログラムと新機能は、最新の GA バージョンにのみ適用されます。
 
@@ -38,7 +38,7 @@ ms.locfileid: "74479112"
 
 このバージョンでは、.NET パッケージ (Microsoft. InformationProtection. File) の保護 API のサポートが導入されています。
 
-### <a name="sdk-changes"></a>SDK の変更
+### <a name="sdk-changes"></a>SDK の変更内容
 - パフォーマンスの向上とバグの修正
 - StorageType 列挙型を CacheStorageType に変更しました
 - Gnustl ではなく、libc + + への Android リンク
@@ -104,7 +104,7 @@ ms.locfileid: "74479112"
     - MIP_CC_CreateMipContext は ' isOfflineOnly ' および ' loggerDelegateOverride ' パラメーターを受け取ります
 
 
-## <a name="version-130"></a>バージョン1.3.0
+## <a name="version-130"></a>バージョン 1.3.0
 
 **リリース日**: 2019 年8月22日
 
@@ -135,7 +135,7 @@ ms.locfileid: "74479112"
 * `AcquireToken()` および `mip::AuthDelegate::OAuth2Challenge()`の要求パラメーターを使用したラベルベースの条件付きアクセスのサポートが追加されました。 この機能は、セキュリティとコンプライアンスセンターのポータルを通じて公開されていません。
 
 
-## <a name="version-120"></a>バージョン1.2.0
+## <a name="version-120"></a>バージョン 1.2.0
 
 **リリース日**: 2019 年4月15日
 
@@ -159,7 +159,7 @@ ms.locfileid: "74479112"
  - Mip:: ContentState を mip::D ataState に名前変更し、アプリケーションが高レベルのデータと対話する方法を記述しました。
  - mip:: AdhocProtectionRequiredError exception は、ラベルを適用する前にアドホック保護を最初に適用する必要があることをアプリケーションに通知するために、FileHandler:: SetLabel によってスローされます。
  - mip:: Operationcancel/Error 例外は、操作がキャンセルされた場合にスローされます (シャットダウンや HTTP のキャンセルなどによって)。
- - 新しい Api:
+ - 新しい API:
     - mip:: ClassificationResult:: GetSensitiveInformationDetections
     - mip:: FileEngine:: GetLastPolicyFetchTime
     - mip:: FileEngine:: GetDefaultSensitivityLabel
@@ -195,7 +195,7 @@ ms.locfileid: "74479112"
  - mip::P olicyHandler:: NotifyCommitedActions から mip::P olicyHandler:: NotifyCommittedActions に名前変更されました
 
 
-## <a name="version-110"></a>バージョン1.1.0
+## <a name="version-110"></a>バージョン 1.1.0
 
 **リリース日**: 2019 年1月15日
 
@@ -214,7 +214,7 @@ ms.locfileid: "74479112"
 - シリアル化された発行ライセンスをファイルから直接取得できるようになりました。 mip:: FileHandler:: GetSerializedPublishingLicense を使用して HTTP 操作を行う必要はありません。
 - Mip:: Fileengine:: Observer:: OnAddPolicyEngineStarting/mip::P Olicyengine:: Observer:: OnAddEngineStarting を使用して mip:: FileEngine/mip::P olicyEngine の作成を完了するために HTTP 操作が必要かどうかがアプリケーションに通知されます。
 - 保護されたコンテンツの有効期限が切れているかどうかを検出します。また、便宜的な方法 mip::P rotectionDescriptor::D oesContentExpire 切れ
-- 分類
+- 分類:
   - 秘密度の種類 (CC # の、passport # などの正規表現式) は、SCC サービスから取得できます。
     - Mip:: FileEngine:: Settings/mip::P olicyEngine:: Settings フラグを設定して機能を有効にします
     - Mip:: FileEngine:: ListSensitivityTypes/mip::P olicyEngine:: ListSensitivityTypes を使用した型の読み取り
@@ -248,7 +248,7 @@ ms.locfileid: "74479112"
       - mip:: FileHandler
       - mip::P rotectionHandler
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - サポートされているプラットフォームなどの詳細については[、MIP SDK に関する faq と問題](faqs-known-issues.md)を参照してください。
 - MIP SDK の使用を開始する方法については、「 [MIP sdk のセットアップと構成](setup-configure-mip.md)」を参照してください。

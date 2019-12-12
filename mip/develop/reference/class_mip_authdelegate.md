@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 3dc5679893c0de02eb9b9cb4f197c5ea39bf356f
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560327"
 ---
 # <a name="class-mipauthdelegate"></a>クラス mip:: AuthDelegate 
@@ -34,7 +34,7 @@ public virtual bool AcquireOAuth2Token (const mip:: Identity & identity, const O
 * **課題**: 
 
 
-* **トークン**: 
+* **token**: 
 
 
 > 非推奨: コンテキストパラメーターを受け入れるものを優先するため、このメソッドはまもなく非推奨とされます。 新しいバージョンが実装されている場合は、このバージョンを実装する必要はありません。

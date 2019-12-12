@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557733"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
@@ -25,14 +25,14 @@ public std::string GetName() const  |  保護の名前を取得します。
 public std::string GetDescription() const  |  保護の説明を取得します。
 public std::string GetTemplateId() const  |  存在する場合、保護テンプレート ID を取得します。
 public std::string GetLabelId() const  |  存在する場合、ラベル ID を取得します。
-public std:: string GetContentId () const  |  コンテンツ ID (存在する場合) を取得します。
+public std::string GetContentId() const  |  コンテンツ ID (存在する場合) を取得します。
 public std:: vector\<UserRights\> GetUserRights () const  |  ユーザーから権限へのマッピングのコレクションを取得します。
 public std:: vector\<UserRoles\> GetUserRoles () const  |  ユーザーからロールへのマッピングのコレクションを取得します。
-public bool の有効期限 () const  |  コンテンツの有効期限が切れているかどうかを確認します。
-public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetContentValidUntil () const  |  保護の有効期限を取得します。
+public bool DoesContentExpire() const  |  コンテンツの有効期限が切れているかどうかを確認します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  保護の有効期限を取得します。
 public bool DoesAllowOfflineAccess() const  |  保護がオフライン コンテンツへのアクセスを許可するかどうかを取得します。
 public std::string GetReferrer() const  |  保護の参照元のアドレスを取得します。
-public std:: map\<std:: string、std:: string\> GetEncryptedAppData () const  |  暗号化されたアプリ固有のデータを取得します。
+public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  暗号化されたアプリ固有のデータを取得します。
 public std:: map\<std:: string、std:: string\> GetSignedAppData () const  |  署名されたアプリ固有のデータを取得します。
   
 ## <a name="members"></a>メンバー

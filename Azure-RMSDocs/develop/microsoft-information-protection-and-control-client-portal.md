@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: f8d11222ec554c16ce1b3c0113d3bbe7cb291004
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790905"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management サービス SDK 2.1
@@ -37,7 +37,7 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 
 
 特定のプログラミング要素の実行時の要件については、その要素のリファレンス トピックの要件に関するセクションを参照してください。
 
-|トピック|説明|
+|トピック|[説明]|
 |-----|--------|
 |[概要](ad-rms-overview.md)|Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。|
 |[はじめに](getting-started-with-ad-rms-2-0.md)|RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。|
@@ -47,7 +47,7 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 
 
  
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [RMS SDK 2.1 のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=38397)
 * [RMS FAQ](https://aka.ms/adrmsfaq )

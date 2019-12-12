@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: f1ad15819d10bcded670fe519db07667b7e7331e
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591615"
 ---
 # <a name="enumerations"></a>列挙
@@ -193,7 +193,7 @@ typedef enum {
 
 ## <a name="mip_cc_log_level"></a>mip_cc_log_level
 
-ログレベル
+ログ レベル
 
 | フィールド | [説明] |
 |---|---|
@@ -255,7 +255,7 @@ API の成功/失敗の結果
 |  MIP_RESULT_ERROR_SERVICE_DISABLED           | サービスが無効になっているため、ユーザーはコンテンツにアクセスできませんでした  |
 |  MIP_RESULT_ERROR_PROXY_AUTH                 | プロキシ認証に失敗しました  |
 |  MIP_RESULT_ERROR_NO_POLICY                  | ユーザー/テナントに対してポリシーが構成されていません  |
-|  MIP_RESULT_ERROR_OPERATION_CANCELLED        | 操作が取り消されました  |
+|  MIP_RESULT_ERROR_OPERATION_CANCELLED        | 操作が取り消されました。  |
 |  MIP_RESULT_ERROR_ADHOC_PROTECTION_REQUIRED  | ファイルに対する操作を完了するには、アドホック保護を設定する必要があります  |
 |  MIP_RESULT_ERROR_DEPRECATED_API             | 呼び出し元が非推奨の API を呼び出しました  |
 |  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND         | テンプレート ID が認識されません  |
