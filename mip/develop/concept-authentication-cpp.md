@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 55bfba6da57fa07614165f4d5fcc5fba226cfca7
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886231"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - 認証の概念
@@ -24,11 +24,11 @@ MIP SDK での認証は、クラス `mip::AuthDelegate` を拡張して目的の
 
 `mip::AuthDelegate::AcquireOAuth2Token` は、次のパラメーターを受け取り、トークンの取得に成功したかどうかを示すブール値を返します。
 
-- `mip::Identity`:認証されるユーザーまたはサービスの id (既知の場合)。
-- `mip::AuthDelegate::OAuth2Challenge` :4つのパラメーター、**権限**、**リソース**、**要求**、および**スコープ**を受け取ります。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。 **要求**は、保護サービスに必要なラベル固有の要求です。 **スコープ**は、リソースにアクセスするために必要な Azure AD のアクセス許可スコープです。 
-- `mip::AuthDelegate::OAuth2Token`:トークンの結果がこのオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
+- `mip::Identity`: 認証されるユーザーまたはサービスの ID (既知の場合)。
+- `mip::AuthDelegate::OAuth2Challenge`: 4 つのパラメーター、**権限**、**リソース**、**要求**、および**スコープ**を受け取ります。 **Authority** は、トークンが生成される対象のサービスです。 **Resource** は、アクセスしようとしている対象のサービスです。 SDK は、呼び出されたときにこれらのパラメーターをデリゲートに渡す処理を行います。 **要求**は、保護サービスに必要なラベル固有の要求です。 **スコープ**は、リソースにアクセスするために必要な Azure AD のアクセス許可スコープです。 
+- `mip::AuthDelegate::OAuth2Token`: トークンの結果はこのオブジェクトに書き込まれます。 エンジンが読み込まれるときに SDK によって使用されます。 認証実装の外部では、いずれの場所でもこの値を取得または設定する必要はありません。
 
-**重要:** アプリケーションが直接`AcquireOAuth2Token`を呼び出すことはありません。 必要に応じて SDK がこの関数を呼び出します。
+**重要:** アプリケーションは `AcquireOAuth2Token` を直接呼び出しません。 必要に応じて SDK がこの関数を呼び出します。
 
 ## <a name="consent"></a>同意
 
@@ -49,9 +49,9 @@ Azure AD では、アプリケーションが、セキュリティで保護さ�
 
 ### <a name="consent-options"></a>同意オプション
 
-- **Acceptalways**:同意し、決定を忘れないでください。
-- **同意**:同意します。
-- **拒否**:同意しません。
+- **AcceptAlways**: 同意し、決定事項を保存します。
+- **Accept**: 一度同意します。
+- **Reject**: 同意しません。
 
 このメソッドを使用して SDK でユーザーの同意が求められる場合、クライアント アプリケーションではユーザーに URL を提示する必要があります。 クライアント アプリケーションでは、ユーザーの同意を取得するための手段を提供し、ユーザーの決定に対応する適切な Consent 列挙型を返す必要があります。
 
@@ -102,7 +102,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-テストと開発を目的として`ConsentDelegate` 、次のような単純なを実装できます。
+テストと開発を目的として、次のような単純な `ConsentDelegate` を実装できます。
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -112,7 +112,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 
 ただし、運用環境のコードでは、地域または業務上の要件や規制に応じて、ユーザーに同意するかどうかを選択するよう求められる場合があります。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 わかりやすくするため、デリゲートを示すサンプルで、外部のスクリプトを呼び出すことによってトークンの取得を実装します。 このスクリプトは、他の任意の種類のスクリプト、オープン ソースの OAuth2 ライブラリ、またはカスタムの OAuth2 ライブラリに置き換えられます。
 

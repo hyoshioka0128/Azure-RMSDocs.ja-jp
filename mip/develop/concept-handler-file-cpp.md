@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886225"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK - ファイル ハンドラーの概念
@@ -37,7 +37,7 @@ MIP SDK ファイル API では、`mip::FileHandler` によって、さまざま
 - `DeleteLabel()`
 - `CommitAsync()`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 特定のファイルを操作するための `FileHandler` を作成するには、以下のものが必要です。
 
@@ -51,7 +51,7 @@ MIP SDK ファイル API では、`mip::FileHandler` によって、さまざま
 
 `FileHandler` の作成は、promise/future パターンを使用して `FileEngine` の `CreateFileHandlerAsync` 関数を呼び出すのと同じくらい簡単です。
 
-`CreateFileHandlerAsync`次の3つのパラメーターを受け取ります。読み取りまたは変更`mip::FileHandler::Observer`するファイルへのパス、非同期イベント通知の場合は、およびの promise。 `FileHandler`
+`CreateFileHandlerAsync` では 3 つのパラメーターが受け入れられます。つまり、読み取りまたは変更が必要なファイルへのパス、非同期イベント通知のための `mip::FileHandler::Observer`、および `FileHandler` の promise です。
 
 **注:** `mip::FileHandler::Observer` クラスは派生クラスで実装する必要があります。これは、`CreateFileHandler` に `Observer` オブジェクトが必要であるためです。 
 
@@ -94,11 +94,11 @@ auto label = loadFuture.get();
 
 ## <a name="set-a-label"></a>ラベルを設定する
 
-ラベルの設定は、2 つの部分からなるプロセスになります。 まず、問題のファイルを指すハンドラーを作成し、、 `FileHandler->SetLabel()` 、および`mip::ProtectionOptions`の`mip::Label`パラメーター `mip::LabelingOptions`を指定してを呼び出すことによって、ラベルを設定できます。 まず、ラベル id をラベルに解決して、ラベル付けオプションを定義する必要があります。 
+ラベルの設定は、2 つの部分からなるプロセスになります。 まず、問題のファイルを指すハンドラーを作成し、`mip::Label`、`mip::LabelingOptions`、および `mip::ProtectionOptions`のいくつかのパラメーターを指定して `FileHandler->SetLabel()` を呼び出すことによって、ラベルを設定できます。 まず、ラベル id をラベルに解決して、ラベル付けオプションを定義する必要があります。 
 
 ### <a name="resolve-label-id-to-miplabel"></a>ラベル id を mip:: Label に解決します
 
-**Setlabel**関数の最初のパラメーターは、 `mip::Label`です。 多くの場合、アプリケーションはラベルではなくラベル識別子を使用します。 ファイルまたはポリシーエンジンで**GetLabelById**を`mip::Label`呼び出すことによって、ラベル識別子をに解決できます。
+**Setlabel**関数の最初のパラメーターは、`mip::Label`です。 多くの場合、アプリケーションはラベルではなくラベル識別子を使用します。 ファイルまたはポリシーエンジンで**GetLabelById**を呼び出すことによって、ラベル識別子を `mip::Label` に解決できます。
 
 ```cpp
 mip::Label label = mEngine->GetLabelById(labelId);
@@ -106,14 +106,14 @@ mip::Label label = mEngine->GetLabelById(labelId);
 
 ### <a name="labeling-options"></a>ラベル オプション
 
-ラベルを設定するために必要な 2 `mip::LabelingOptions`番目のパラメーターは、です。 
+ラベルを設定するために必要な2番目のパラメーターは `mip::LabelingOptions`です。 
 
 `LabelingOptions` では、`AssignmentMethod` などのラベルに関する追加情報と、アクションの理由を指定します。
 
 - `mip::AssignmentMethod` は単なる列挙子であり、`STANDARD`、`PRIVILEGED`、`AUTO` という 3 つの値があります。 詳細については、`mip::AssignmentMethod` のリファレンスを確認してください。
 - 理由が必要になるのは、サービス ポリシーで要求され、*かつ*、ファイルの*既存の*機密度を下げる場合のみです。
 
-この領域切り取りは、 `mip::LabelingOptions`オブジェクトの作成とダウングレードの理由とメッセージの設定を示します。
+この領域切り取りは、`mip::LabelingOptions` オブジェクトを作成し、ダウングレードの理由とメッセージを設定する方法を示しています。
 
 ```cpp
 auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
@@ -122,9 +122,9 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 ### <a name="protection-settings"></a>保護設定
 
-アプリケーションによっては、委任されたユーザー id の代わりに操作を実行することが必要になる場合があります。 クラスを使用すると、アプリケーションで*ハンドラーごと*に委任された id を定義できます。 `mip::ProtectionSettings` 以前は、この委任はエンジンクラスによって実行されていました。 これには、アプリケーションのオーバーヘッドとサービスのラウンドトリップに大きな欠点がありました。 委任されたユーザー設定を`mip::ProtectionSettings`に移動し、ハンドラークラスのその部分を作成することにより、このオーバーヘッドが解消されるため、さまざまなユーザー id のセットに代わって多くの操作を実行するアプリケーションのパフォーマンスが向上します。 
+アプリケーションによっては、委任されたユーザー id の代わりに操作を実行することが必要になる場合があります。 `mip::ProtectionSettings` クラスを使用すると、アプリケーションで*ハンドラーごと*に委任された id を定義できます。 以前は、この委任はエンジンクラスによって実行されていました。 これには、アプリケーションのオーバーヘッドとサービスのラウンドトリップに大きな欠点がありました。 委任されたユーザー設定を `mip::ProtectionSettings` に移動し、ハンドラークラスのその部分を作成することにより、このオーバーヘッドが解消されるため、さまざまなユーザー id のセットに代わって多くの操作を実行するアプリケーションのパフォーマンスが向上します。 
 
-委任が不要な場合は、単`mip::ProtectionSettings()`に**setlabel**関数に渡します。 委任が必要な場合は、 `mip::ProtectionSettings`オブジェクトを作成し、委任されたメールアドレスを設定することで実現できます。
+委任が不要な場合は、単に**Setlabel**関数に `mip::ProtectionSettings()` を渡します。 委任が必要な場合は、`mip::ProtectionSettings` オブジェクトを作成し、委任されたメールアドレスを設定することで実現できます。
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 
@@ -133,9 +133,9 @@ protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
 
 ### <a name="set-the-label"></a>ラベルを設定する
 
-Id `mip::Label`からをフェッチし、ラベル付けオプションを設定し、必要に応じて保護設定を設定して、ラベルを設定できるようになりました。
+Id から `mip::Label` をフェッチし、ラベル付けオプションを設定し、必要に応じて保護設定を設定して、ラベルを設定できるようになりました。
 
-保護設定を設定していない場合は、ハンドラー `SetLabel`でを呼び出すことによってラベルを設定します。
+保護設定を設定していない場合は、ハンドラーで `SetLabel` を呼び出してラベルを設定します。
 
 ```cpp
 handler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
@@ -155,7 +155,7 @@ MIP SDK のファイルに対する変更をコミットする最後の手順は
 
 コミットメント関数を実装するため、promise/future に戻り、`bool` の promise を作成します。 `CommitAsync()` 関数では、操作が成功した場合は true、何らかの理由で失敗した場合は false が返されます。 
 
-`promise`と`CommitAsync()`を作成した後、が呼び出され、2つのパラメーターが提供されます。 `future`出力ファイルパス (`std::string`)、および約束。 最後に、`future` オブジェクトの値を取得することで、結果が得られます。
+`promise` と `future` を作成した後、`CommitAsync()` が呼び出され、2 つのパラメーター、つまり、出力ファイル パス (`std::string`)、と promise が指定されます。 最後に、`future` オブジェクトの値を取得することで、結果が得られます。
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -164,7 +164,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**重要:** で`FileHandler`は、既存のファイルが更新または上書きされることはありません。 ラベルが付けられるファイルを**置き換える**のは開発者の責任です。 
+**重要:** `FileHandler` では、既存のファイルの更新や上書きは行われません。 ラベルが付けられるファイルを**置き換える**のは開発者の責任です。 
 
 ラベルを **FileA.docx** に書き込む場合、ラベルを適用して、**FileB.docx** ファイルのコピーを作成する必要があります。 **FileA.docx**の削除/名前変更、および**FileB.docx** の名前変更を行う場合は、コードを記述する必要があります。
 

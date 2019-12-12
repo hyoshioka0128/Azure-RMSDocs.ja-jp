@@ -4,7 +4,7 @@ description: この手順は、AD RMS から Azure Information Protection への
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/18/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb23ceb2721e18f8028ec5b0bb19a2c7230d9c1f
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: fd3962a5b1020b4bf5e2db12125e4df29dc80db6
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559173"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935437"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
@@ -105,7 +105,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     **キーへのパス: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-この出力は、キーに保存された暗号化コピーを使用して、秘密キーがオンプレミスの nCipher HSM デバイスに移行されたことを確認します (この例では "key_simple_contosobyok")。 
+この出力は、キーに保存されている暗号化されたコピーを使用して、秘密キーがオンプレミスの nCipher HSM デバイスに移行されたことを確認します (この例では、"key_simple_contosobyok")。 
 
 SLC キーが抽出され、オンプレミスの HSM にインポートされたので、HSM で保護されたキーをパッケージ化し、Azure Key Vault に転送することができます。
 

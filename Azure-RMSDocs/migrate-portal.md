@@ -4,7 +4,7 @@ description: Azure クラシック ポータルで行っていた管理タスク
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5018e69cf1798592d07b053eaeaccef234f71561
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b4e4e093eacd7903a382ba779d0a4b5b7a2aa7ec
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559876"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935454"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
@@ -57,7 +57,7 @@ Azure Portal の新機能:
 
 - テンプレートをラベルに変換できます。結果的に、テンプレートとラベルをそれぞれ管理するのではなく、1 つのオブジェクトを管理することになります。 方法については、「[テンプレートをラベルに変換するには](configure-policy-templates.md#to-convert-templates-to-labels)」を参照してください。
 
-- 他の管理者ロールのサポート: azure Rights Management を構成するには、グローバル管理者として Azure クラシックポータルにサインインする必要がありましたが、他の多くの管理者ロールを使用して Azure Information Protection を管理するために Azure portal にサインインできます。これには、**コンプライアンス管理者**と**コンプライアンスデータ管理者**が含まれます。 サポートされているロールの完全な一覧については、「 [Azure portal へのサインイン](configure-policy.md#signing-in-to-the-azure-portal)」セクションを参照してください。
+- 他の管理者ロールのサポート: azure Rights Management を構成するには、グローバル管理者として Azure クラシックポータルにサインインする必要がありましたが、Azure portal にサインインして、**コンプライアンス管理者**と**コンプライアンスデータ管理者**を含む他の多くの管理者ロールを使用して Azure Information Protection を管理できます。 サポートされているロールの完全な一覧については、「 [Azure portal へのサインイン](configure-policy.md#signing-in-to-the-azure-portal)」セクションを参照してください。
 
 テンプレートの作成と管理、サービスの有効化と無効化のための PowerShell コマンドレットは、変更なく引き続きサポートされます。
 
