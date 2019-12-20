@@ -14,11 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
+experimental: true
+experiment_id: priyamo-test-20160729
 ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792019"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
@@ -88,7 +90,7 @@ ms.locfileid: "68792019"
 - [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## <a name="2-register-the-document-with-the-rms-service"></a>2. RMS サービスでドキュメントを登録する
+## <a name="2-register-the-document-with-the-rms-service"></a>2. ドキュメントを RMS サービスに登録する
 
 ドキュメント追跡メタデータの設定と追跡システムに登録するための呼び出しの例を表すコード スニペットを次に示します。
 
@@ -147,7 +149,7 @@ ms.locfileid: "68792019"
 
 このクライアントでは、適切な URL でブラウザーを開く必要があります。 RMS ドキュメント追跡ポータルが認証と必要なリダイレクトを処理します。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [ライセンス メタデータ プロパティの種類](https://msdn.microsoft.com/library/dn974062.aspx)
 * [通知の基本設定](https://msdn.microsoft.com/library/dn974063.aspx)

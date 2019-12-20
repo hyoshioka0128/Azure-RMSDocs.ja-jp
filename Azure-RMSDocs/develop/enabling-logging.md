@@ -15,16 +15,16 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792422"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>方法: エラーとパフォーマンスのログを有効にする
 Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードが 1 つのデバイス プロパティで管理されます。
 
-## <a name="overview"></a>概要 ##
+## <a name="overview"></a>[ポリシー] ##
 診断、パフォーマンス、およびテレメトリに関するデータ ログの Microsoft への自動アップロードを有効にすると、ユーザーのエクスペリエンスとトラブルシューティングを改善できます。 
 
 > [!IMPORTANT] 
@@ -33,7 +33,7 @@ Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマン�
 > [!NOTE]
 > たとえば、Microsoft の標準のメッセージでは、ログ記録について次のように通知しています。 
 >
-> *エラーとパフォーマンス ログの記録を有効にすると、エラーとパフォーマンス データの Microsoft への送信に同意することになります。Microsoft はインターネット経由でエラーとパフォーマンス データ (以下 "データ") を収集します。Microsoft は、Microsoft 製品およびサービスの品質、セキュリティ、および整合性を向上するためにこのデータを使用します。たとえば、ユーザーが使用している機能、その機能の反応速度、デバイスのパフォーマンス、ユーザー インターフェイスの操作、製品の使用時に発生した問題など、パフォーマンスと信頼性を分析しています。データには、ユーザーが現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。*  
+> *エラーとパフォーマンスのログ記録をオンにすると、エラーとパフォーマンスのデータを Microsoft に送信することに同意したことになります。 マイクロソフトは、インターネット経由でエラーとパフォーマンスのデータを収集します ("データ")。 Microsoft はこのデータを使用して、Microsoft の製品およびサービスの品質、セキュリティ、および整合性を提供し、改善します。 たとえば、使用する機能、機能の反応速度、デバイスのパフォーマンス、ユーザーインターフェイスの操作、製品で発生した問題など、パフォーマンスと信頼性を分析します。 データには、現在実行しているソフトウェアや IP アドレスなど、ソフトウェアの構成に関する情報も含まれます。*  
 
 ログ コントロールは、2 つのプロパティを使用して管理します。
 
@@ -61,7 +61,7 @@ Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマン�
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
     Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
 
-## <a name="ios"></a>iOS ##
+## <a name="ios"></a>[iOS] ##
 自動更新を有効にする
 
     NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];

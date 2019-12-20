@@ -3,32 +3,32 @@ title: Azure Information Protection 統合されたラベル付けクライア�
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 08/06/2019
+manager: rkarlin
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 565b9d061bf148d0b1e6e2ef2ea45eb93c6cb6ec
-ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
+ms.openlocfilehash: 0ee20b6063dffd18b5067663de05c2d7a25cabd4
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820696"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73446026"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
-> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Azure Information Protection 統合されたラベル付けクライアントは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。
 
-通常は数週間後に、一般公開されている最新バージョンが、 **Microsoft Azure Information Protection** > Microsoft Azure 情報の製品名と共に Microsoft Update カタログにも含まれるようになります。**保護の統合されたラベル付けクライアント**、および**更新**の分類。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログにも含まれます。これには、 **Microsoft Azure Information Protection** > の製品名と Microsoft Azure Information Protection の統合された**ラベル付けクライアント**、および**更新**の分類が含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「 [Azure Information Protection の統合ラベル付けクライアントのアップグレードと保守](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client)」を参照してください。
 
@@ -38,25 +38,108 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 実稼働ネットワークのエンド ユーザー向けにプレビュー バージョンをデプロイしないでください。 最新のプレビュー バージョンは、次の GA バージョンに含まれる新しい機能や修正内容の確認と試用にお使いください。 最新でないプレビュー バージョンはサポートされません。
 
-> [!NOTE]
-> テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>サポートされなくなった一般提供のバージョン:
+
+|クライアントのバージョン|リリース日|
+|--------------|-------------|
+|2.0.778.0|04/16/2019|
+
+このページで使用される日付形式は、*月/日/年*です。
+
 
 ### <a name="release-information"></a>リリース情報
 
-次の情報を使用して、Windows 用の Azure Information Protection 統合ラベルクライアントのサポートされているリリースの新機能と変更点を確認してください。 最新のリリースは一番上に表示されます。 
+次の情報を使用して、Windows 用の Azure Information Protection 統合ラベルクライアントのサポートされているリリースの新機能と変更点を確認してください。 最新のリリースは一番上に表示されます。 このページで使用される日付形式は、*月/日/年*です。
 
 > [!NOTE]
 > マイナー修正は記載されていないので、統一されたラベル付けクライアントで問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が引き続き発生する場合は、現在のプレビューバージョン (使用可能な場合) を確認します。
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「[クライアントを比較](use-client.md#compare-the-clients)する」を参照してください。
+このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md##compare-the-labeling-clients-for-windows-computers)」を参照してください。
+
+## <a name="version-25330"></a>バージョン2.5.33.0
+
+**リリース**日: 10/23/2019
+
+**新機能:**
+
+- [スキャナー](../deploy-aip-scanner.md)のプレビューバージョン。オンプレミスのデータストアを検査してラベル付けします。 このバージョンのスキャナーでは、次のことを行います。
+    
+    - 同じスキャナープロファイルを使用するようにスキャナーを構成するときに、複数のスキャナーが同じ SQL Server データベースを共有できます。 この構成により、複数のスキャナーの管理が容易になり、スキャン時間が短縮されます。 この構成を使用する場合は、スキャナーのインストールが完了するのを待ってから、同じプロファイルを使用して別のスキャナーをインストールします。
+    
+    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースは**AIPScannerUL_\<profile_name >** という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
+    
+    - ドキュメントにラベルが既に付いている場合でも、すべてのドキュメントに既定のラベルを設定できます。 スキャナープロファイルまたはリポジトリの設定で、[ラベルの再設定 **] オプションを** **[オン**] に設定し、新しい [既定の**ラベルを強制**する] チェックボックスをオンにします。
+    
+    - すべてのドキュメントから既存のラベルを削除できます。ラベルによって以前に適用されていた場合、この操作には保護の削除が含まれます。 ラベルとは独立して適用された保護が保持されます。 このスキャナーの構成は、スキャナープロファイルまたはリポジトリの設定で次の設定を使用して実現されます。
+        - **コンテンツに基づいてファイルにラベルを付ける**:**オフ**
+        - **既定のラベル**:**なし**
+        - **ファイル**のラベルの再設定: **[** **既定のラベルを強制**する] チェックボックスがオンになっている
+    
+    - 従来のクライアントのスキャナーと同様、既定では、スキャナーは Office ファイルと PDF ファイルを保護します。 [PowerShell の詳細設定](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)を使用すると、他の種類のファイルを保護できます。
+    
+    - スキャナーサイクルの開始と終了に関するイベント Id は、Windows イベントログには書き込まれません。 代わりに、この情報に Azure portal を使用します。
+    
+    - 既知の問題: 新しいラベルと名前が変更されたラベルは、スキャナープロファイルまたはリポジトリの設定の既定のラベルとして選択できません。 回避策:
+        - 新しいラベルの場合: Azure portal で、グローバルポリシーまたはスコープポリシーに使用する[ラベルを追加](../configure-policy-add-remove-label.md)します。
+        - 名前を変更したラベルの場合: Azure portal を閉じてから再度開きます。
+    
+    Azure Information Protection クライアント (クラシック) からスキャナーをアップグレードすることができます。 アップグレード後に新しいデータベースが作成されると、スキャナーは初回実行時にすべてのファイルを再スキャンします。 手順については、管理者ガイドの「 [Azure Information Protection スキャナーをアップグレードする](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)」を参照してください。
+    
+    詳細については、ブログ投稿のお知らせを参照してください。統合された[ラベル付け AIP スキャナーのプレビューにより、スケールアウトなど](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)ができます。
+
+- PowerShell コマンドレットの[セット-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)は、ファイルに非対話形式でラベルを付ける場合の新しいパラメーター (*AppId*、 *appsecret*、 *TenantId*、 *DelegatedUser*、 *OnBehalfOf*) を備えています。また、新しい手順では、アプリを Azure AD に登録します。 シナリオ例としては、スキャナーや、ドキュメントにラベルを付けるための自動 PowerShell スクリプトがあります。 手順については、管理者ガイドの「[非対話形式でファイルにラベルを付ける方法](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
+    
+    *DelegatedUser*は、統合されたラベル付けクライアントの最後のプレビューバージョン以降の新しいパラメーターであり、登録済みアプリの API アクセス許可が変更されたことに注意してください。
+
+- [保護するファイルの種類を変更](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)するための新しい PowerShell ラベルポリシーの詳細設定。
+
+- 新しい PowerShell ラベルポリシーの詳細設定を[使用して、ラベルの移行ルールを SharePoint プロパティに拡張](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties)します。
+
+- 一致したカスタム機密情報の種類が[Azure Information Protection analytics](../reports-aip.md)に送信されます。
+
+- 適用されたラベルには、[色が構成され](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)ている場合、ラベルに構成されている色が表示されます。
+
+- ラベルに保護設定を追加または変更すると、クライアントは、ドキュメントが次に保存されるときに、これらの最新の保護設定でラベルを再適用します。 同様に、スキャナーは、強制モードでドキュメントが次回スキャンされるときに、これらの最新の保護設定でラベルを再適用します。
+
+- 1つのクライアントからファイルをエクスポートし、切断されたコンピューターに手動でコピーすることによって、切断された[コンピューターをサポート](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)します。 この構成は、ファイルエクスプローラー、PowerShell、およびスキャナーを使用したラベル付けでサポートされていることに注意してください。 この構成は、Office アプリのラベル付けではサポートされていません。
+
+- %Localappdata%\Microsoft\MSIP\Logs からすべてのログファイルを収集し、.zip 形式の1つの圧縮されたファイルに保存する新しいコマンドレットである[Export](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)。 このファイルは、報告された問題の調査に役立つログファイルを送信するように要求された場合に Microsoft サポートに送信できます。
+
+**修正:**
+
+- ファイルエクスプローラーを使用して保護されたファイルを正常に変更できます。ファイルのパスワードが削除されたら、右クリックします。
+
+- ネイティブ保護されたファイルをビューアーで正常に開くには、[名前を付けて保存]、[エクスポート (エクスポート) [] の使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)を必要としません。
+
+- ラベルとポリシー設定は[、クリア-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?)を実行しなくても期待どおりに更新されます。または、%LocalAppData%\Microsoft\MSIP\mip フォルダーを手動で削除します。
+
+**その他の変更**
+
+- [設定をリセット](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)すると、%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>* \ mip フォルダーではなく、%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>* フォルダーが削除されるようになりました。
+
+- [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)に、保護されたドキュメントのコンテンツ ID が含まれるようになりました。
+
+## <a name="version-22210"></a>バージョン2.2.21.0
+
+**リリース**日: 09/03/2020
+
+04/23/2020 でサポート
+
+**修正:**
+
+- 詳細設定の[Outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)を使用して Outlook に別の既定のラベルを設定し、指定したラベルにラベルポリシーのサブラベルがない場合は、ラベルが正しく適用されます。
+
+- Azure Information Protection クライアントが Office アプリで使用されている場合、シングルサインオン用に構成されていない Active Directory アカウントを持つユーザーには、Azure Information Protection の認証を求めるメッセージが表示されます。 正常に認証されると、クライアントのステータスが [オンライン] に正しく変更され、ラベル付け機能が有効になります。
 
 ## <a name="version-22190"></a>バージョン2.2.19.0
 
-**リリース日**: 08/06/2019
+**リリース**日: 08/06/2019
 
-**関する**
+03/03/2020 でサポート
+
+**修正:**
 
 - クライアントは、ポリシーを正常にダウンロードし、現在の機密ラベルを表示できます。 以前のバージョンからアップグレードした後で、ラベル付けセンターでカスタム情報の種類を構成していない場合は、この修正が必要です。
 
@@ -64,9 +147,9 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 ## <a name="version-22140"></a>バージョン2.2.14.0
 
-**リリース日**: 07/15/2019
+**リリース**日: 07/15/2019
 
-04/06/2020 でサポート
+02/06/2020 でサポート
 
 **新機能:**
 
@@ -85,27 +168,25 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     - [ユーザーの "問題の報告" を追加する](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
     - [Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     - [ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [ユーザーのサブセットに対して送信情報の種類の一致を無効にする](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - [情報の種類の一致を Azure Information Protection analytics に送信する](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
     - [Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [ラベルが適用されたときにカスタムプロパティを適用する](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
     - [ラベルを構成して Outlook で S/MIME 保護を適用する](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
     - [親ラベルに既定のサブラベルを指定する](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [ラベルの色を指定します](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Word、Excel、PowerPoint、エクスプローラーのユーザー定義アクセス許可用に構成されたラベルのサポート:
-    - この構成のラベルが Azure portal から作成されている場合、現在、管理センターに同等の構成はありませんが、統一されたラベル付けクライアントでサポートされるようになりました。
-    - ユーザーがこの構成でラベルを選択すると、ドキュメントのユーザーと保護の設定を選択するように求められます。
+- Word、Excel、PowerPoint、およびエクスプローラーのユーザー定義アクセス許可用に構成されたラベルのサポート。 詳細については、Office ドキュメントの「[ユーザーにアクセス許可の割り当てを許可](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions)する」セクションを参照してください。
 
 - AzureInformationProtection モジュールでの PowerShell の変更点は次のとおりです。
-    - 新しいコマンドレット:[New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -RMSProtectionLicense を置き換えて、カスタムアクセス許可のアドホックポリシーを作成します。
+    - 新しいコマンドレット: [new-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -RMSProtectionLicense を置き換えて、カスタムアクセス許可のアドホックポリシーを作成します。
     - 新しいパラメーター:
         -  *Custompermissions*と*Removeprotection* - [set-aipfilelabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)に追加されました
         -  *OnBeHalfOf* -非対話型セッションの*トークン*パラメーターの代わりに使用される、 [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)に追加されました。
         -  *WhatIf*および*Discoveryinfotypes* - [set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification)に追加され、このコマンドレットがラベルを適用せずに検出モードで実行できるようになりました。
-    - 保護サービスに直接接続する非推奨のコマンドレット:RMSAuthentication、も get-rmsfilestatus、RMSServer、、Set-rmsserverauthentication、get-rmstemplate、protect-rmsfile、set-rmsserverauthentication、protect-rmsfile、保護解除-のようになります。
+    - 保護サービスに直接接続されている非推奨のコマンドレット: RMSAuthentication、も get-rmsfilestatus、RMSServer、Set-rmsserverauthentication、get-rmstemplate、protect-rmsfile、set-rmsserverauthentication、protect-rmsfile、保護解除-
 
 
-**関する**
+**修正:**
 
 - *Discoveryinfotypes*パラメーターを使用して、Analytics と[set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps)の[コンテンツの一致](../reports-aip.md#content-matches-for-deeper-analysis)をサポートします。
 
@@ -119,58 +200,19 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 ## <a name="version-207790"></a>バージョン2.0.779.0
 
-**リリース日**: 05/01/2019
+**リリース**日: 05/01/2019
 
 02/15/2020 でサポート
 
 このリリースでは、Office アプリやエクスプローラーにラベルが表示されない場合がある競合状態の問題を解決するための修正プログラムが1つあります。
 
-## <a name="version-207780"></a>バージョン2.0.778.0
+## <a name="next-steps"></a>次のステップ
 
-**リリース日**: 04/16/2019
-
-11/01/2019 でサポート
-
-Windows 用の Azure Information Protection 統合ラベルクライアントの最初の一般公開バージョンでは、次の機能がサポートされています。 
-
-- Azure Information Protection クライアントからのアップグレード。
-
-- 手動、自動、および推奨ラベル付け:このクライアントの自動ラベル付けおよび推奨ラベル付けを構成する方法について詳しくは、「[機密ラベルをコンテンツに自動的に適用する](/Office365/SecurityCompliance/apply-sensitivity-label-automatically)」をご覧ください。
-
-- エクスプローラー、右クリック アクションによるファイルの分類と保護、保護の削除、およびカスタムのアクセス許可の適用。
-
-- 保護されたテキストとイメージ ファイル、保護された PDF ファイル、一般的に保護されているファイル用のビューアー。
-
-- 次を実行するための PowerShell コマンド:
-    - [ドキュメント上のラベルを設定または削除する](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [内容を検査してからドキュメントをラベル付けする](/powershell/module/azureinformationprotection/set-aipfileclassification)
-    - [ドキュメントに適用されているラベル情報を読み取る](/powershell/module/azureinformationprotection/get-aipfilestatus)
-    - [無人の PowerShell セッションをサポートするために認証する](/powershell/module/azureinformationprotection/set-aipauthentication)
-
-- [Azure Information Protection analytics](../reports-aip.md)を使用した中央レポート作成のデータとエンドポイント検出の監査のサポート。
-
-- 次のラベルおよびポリシー設定:
-    - 視覚的なマーキング (ヘッダー、フッター、透かし)
-    - 既定のラベル付け-現在、サブラベルなしでラベルに制限されています
-    - 転送不可を適用し、Outlook でのみ表示されるラベル
-    - ユーザーが分類レベルを下げるかどうか、またはラベルを削除するかどうかを確認する理由プロンプト
-    - ラベルの色
-
-- 管理センターからのポリシー更新:
-    - Office アプリの起動ごと、および 4 時間ごと
-    - 右クリックしてファイルまたはフォルダーを分類して保護したとき
-    - ラベル付けと保護のために PowerShell コマンドレット を実行したとき
-
-- 設定のリセットとログのエクスポートを含む、ヘルプとフィードバックのダイアログ ボックス。
-
-
-## <a name="next-steps"></a>次の手順
-
-完全な詳細については、[比較表](use-client.md#compare-the-clients)をご覧ください。
+インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
 このクライアントをインストールして使用する方法の詳細については、次を参照してください。 
 
-- ユーザー向け: [クライアントのダウンロードとインストール](install-unifiedlabelingclient-app.md)
+- ユーザー向け: [クライアントをダウンロードしてインストールする](install-unifiedlabelingclient-app.md)
 
-- 管理者向け: [Azure Information Protection 統合されたラベル付けクライアント管理者ガイド](clientv2-admin-guide.md)
+- 管理者向け: Azure Information Protection 統一された[ラベル付けクライアント管理者ガイド](clientv2-admin-guide.md)
 

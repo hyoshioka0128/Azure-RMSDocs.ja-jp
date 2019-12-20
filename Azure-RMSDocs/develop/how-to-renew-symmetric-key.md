@@ -12,13 +12,13 @@ ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 ms.custom: dev
 ms.openlocfilehash: 61eda99c43493ad4221b470781f4a8ea319ce5fc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788461"
 ---
-# <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>方法:Azure Information Protection で対称キーを更新する
+# <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>方法: Azure Information Protection で対称キーを更新する
 
 **対称キー**は、対称キー暗号化方式でメッセージを暗号化および復号化するシークレットです。  
 
@@ -26,7 +26,7 @@ Azure Active Directory (Azure AD) では、アプリケーションを表すサ�
 
 次の手順では、対称キーを更新する方法を示します。 
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 * 「[Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/)」(Azure AD Powershell リファレンス) の説明に従って、Azure Active Directory (Azure AD) PowerShell モジュールをインストールする必要があります。
 
@@ -100,7 +100,7 @@ Usage : Verify
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
 ```
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [方法: クラウドベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)
 * [Azure Active Directory MSOnline Powershell リファレンス](https://docs.microsoft.com/powershell/msonline/)

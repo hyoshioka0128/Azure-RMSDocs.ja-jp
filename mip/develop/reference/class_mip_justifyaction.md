@@ -1,33 +1,26 @@
 ---
 title: class mip::JustifyAction
-description: Mip::justifyaction クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: ジャスト ifyaction クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: c0968fd019e8c251703a8f23f35ce03e421fffc3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 60b215289426da20a61737bc18d98c6ddcd127cb
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174002"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73558716"
 ---
 # <a name="class-mipjustifyaction"></a>class mip::JustifyAction 
-正当化[アクション](class_mip_action.md)は、ラベルをダウングレードする理由の提供と実行状態での応答の設定を要求します。
+ジャスティフィケーションアクションでは、ラベルダウングレードに対する根拠を提示し、応答を実行状態に設定する必要があります。
   
-**関連項目**: [mip::ExecutionState::IsDowngradeJustified](class_mip_executionstate.md#isdowngradejustified-function)
+**関連**項目: mip:: executionstate:: IsDowngradeJustified
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-
+  
 ## <a name="members"></a>メンバー
-  
-### <a name="gettype-function"></a>GetType 関数
-[アクション](class_mip_action.md)の種類を取得します。
-
-  
-**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
+_まだ文書化されていません。_

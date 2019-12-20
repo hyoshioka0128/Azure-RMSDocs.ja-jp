@@ -8,21 +8,21 @@ ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175470"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
 この記事では、よく寄せられる質問 (FAQ) に対する回答と、既知の問題と一般的なエラーに関するトラブルシューティングのガイダンスを示します。
 
-## <a name="frequently-asked-questions"></a>よく寄せられる質問 
+## <a name="frequently-asked-questions"></a>AppLocker: Frequently Asked Questions (AppLocker: よく寄せられる質問) 
 
-### <a name="sdk-string-handling"></a>SDK の文字列の処理
+### <a name="sdk-string-handling"></a>SDK 文字列の処理
 
-**質問**:SDK は、文字列処理する方法と、どのような文字列型では、する必要がありますで自分のコードを使用するでしょうか。
+**質問**: SDK はどのようにして文字列を処理しますか? また、コードで使用する文字列型はどのようなものですか。
 
 SDK はクロスプラットフォームでの使用を想定しています。文字列の処理には [UTF-8 (Unicode Transformation Format - 8 ビット)](https://wikipedia.org/wiki/UTF-8) が使用されます。 具体的なガイダンスは、使用するプラットフォームによって異なります。
 
@@ -34,34 +34,34 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 ## <a name="issues-and-errors-reference"></a>問題とエラーのリファレンス
 
-### <a name="error-file-format-not-supported"></a>エラー:「ファイルの形式がサポートされていません」  
+### <a name="error-file-format-not-supported"></a>エラー: "ファイル形式がサポートされていません"  
 
-**質問**:PDF ファイルのラベルまたは保護しようとしています。 ときに、次のエラーするはなぜですか。
+**質問**: PDF ファイルを保護またはラベル付けしようとすると、次のエラーが表示されるのはなぜですか。
 
-> ファイル形式がサポートされていません
+> ファイル形式はサポートされていません
 
-この例外は、デジタル署名されている PDF ファイルにラベル付けまたは保護しようとしています。 またはパスワードで保護の結果です。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
+この例外は、デジタル署名またはパスワードで保護されている PDF ファイルを保護またはラベル付けしようとした場合に発生します。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 
-### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>エラー:「を取得したコンプライアンス ポリシーを解析できませんでした」  
+### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>エラー: "取得したコンプライアンス ポリシーを解析できませんでした"  
 
-**質問**:MIP SDK をダウンロードして、すべてのラベルを一覧表示するファイルのサンプルを使用しようとした後、次のエラーが発生する理由
+**質問**: MIP SDK をダウンロードし、ファイルのサンプルを使用してすべてのラベルを表示しようとした後に、次のエラーが表示されるのはなぜですか。
 
-> 何か問題が発生しました。取得したコンプライアンス ポリシーを解析できませんでした。 失敗しました: [クラス mip::CompliancePolicyParserException] タグが見つかりません: ポリシーでは、NodeType:15、名前:ない名前が見つかった値: 先祖: <SyncFile> <Content>、関連付け Id: [34668a40-blll-4ef8-b2af-00005aa674z9]
+> 問題が発生しました: 取得したコンプライアンスポリシーを解析できませんでした。 で失敗しました: [クラス mip:: CompliancePolicyParserException] タグが見つかりません: ポリシー、NodeType:15、名前: 名前が見つかりません、値:、先祖: <SyncFile><Content>、correlationId: [34668a40-blll-4ef8-b2af-00005aa674z9]
 
-これは、ラベル、統一されたラベル付けエクスペリエンスに Azure Information Protection から移行していないことを示します。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 
+これは、ラベルを Azure Information Protection から統合されたラベル付けエクスペリエンスに移行していないことを示しています。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 
 
-### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>エラー:"System.ComponentModel.Win32Exception:LoadLibrary が失敗しました"
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>エラー: "System.componentmodel. Win32Exception: LoadLibrary が失敗しました"
 
-**質問**:MIP SDK の .NET ラッパーを使用する場合、次のエラーするはなぜですか。
+**質問**: MIP SDK .net ラッパーを使用すると、次のエラーが表示されるのはなぜですか。
 
-> : System.ComponentModel.Win32ExceptionLoadLibrary に失敗しました: [sdk_wrapper_dotnet.dll] MIP を呼び出すときにします。Initialize() します。
+> System.componentmodel: Win32Exception: MIP の呼び出し時に、: [sdk_wrapper_dotnet .dll] の LoadLibrary が失敗しました。Initialize ()。
 
-アプリケーションでは、必要なランタイムがないか、リリースとしてビルドされませんでした。 参照してください[アプリに必要なランタイム](setup-configure-mip.md#ensure-your-app-has-the-required-runtime)詳細についてはします。 
+アプリケーションに必要なランタイムがないか、またはリリースとしてビルドされていません。 詳細については、「[アプリに必要なランタイムがあることを確認](setup-configure-mip.md#ensure-your-app-has-the-required-runtime)する」を参照してください。 
 
-### <a name="error-proxyautherror-exception"></a>エラー:「ProxyAuthError 例外」
+### <a name="error-proxyautherror-exception"></a>エラー: "ProxyAuthError 例外"
 
-**質問**:MIP SDK を使用する場合、次のエラーするはなぜですか。
+**質問**: MIP SDK を使用すると、次のエラーが表示されるのはなぜですか。
 
-> "ProxyAuthenticatonError:プロキシ認証はサポートされていません"
+> "Proxyauthentication Atonerror: プロキシ認証がサポートされていません"
 
-MIP SDK には、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するのには、プロキシの管理者が、プロキシをバイパスする Microsoft Information Protection サービス エンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「、 [Office 365 Url および IP アドレス範囲](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)ページ。 MIP SDK である必要があります`*.protection.outlook.com`(行 9) と Azure Information Protection サービス エンドポイント (行 73) プロキシ認証をバイパスします。
+MIP SDK は、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するには、プロキシ管理者は、プロキシをバイパスするように Microsoft Information Protection サービスエンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「 [Office 365 の url と IP アドレス範囲](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)」ページを参照してください。 MIP SDK を使用するには、`*.protection.outlook.com` (行 9) と Azure Information Protection サービスエンドポイント (行 73) がプロキシ認証をバイパスする必要があります。

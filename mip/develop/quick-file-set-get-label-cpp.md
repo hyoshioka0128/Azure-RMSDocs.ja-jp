@@ -6,14 +6,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: d671aeed3e05882ba8d41c6d7069cd4e548ecec2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184900"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884719"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:機密ラベルの設定と取得 (C++)
 
@@ -36,10 +36,10 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
 
 2. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、**[追加]**、**[クラス]** の順に選択します。
+   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
-     - **[クラス名]** フィールドに「filehandler_observer」と入力します。 入力した名前に基づき、**[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
-     - 完了したら、**[OK]** ボタンをクリックします。
+     - **[クラス名]** フィールドに「filehandler_observer」と入力します。 入力した名前に基づき、 **[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
+     - 完了したら、 **[OK]** ボタンをクリックします。
 
 3. クラスの .h ファイルおよび .cpp ファイルを作成すると、両ファイルは [エディター グループ] タブに表示されます。 ここで各ファイルを更新して、新しいオブザーバー クラスを実装します。
 
@@ -85,7 +85,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
      }
      ```
 
-4. 必要に応じて、F6 (**[ソリューションのビルド]**) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
+4. 必要に応じて、F6 ( **[ソリューションのビルド]** ) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>機密ラベルを設定および取得するためのロジックの追加
 
@@ -132,8 +132,8 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
    {
         string labelId = "<label-id>";
         cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
-        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-        handler->SetLabel(labelId, labelingOptions);
+        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, new ProtectionSettings());
    }
    catch (const std::exception& e)
    {
@@ -205,7 +205,18 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
    system("pause");
    ```
 
-4. 貼り付けたばかりのソース コードのプレースホルダー値を、次の文字列定数を使って置き換えます。
+4. `main()` の末尾で、最初のクイック スタートで作成したアプリケーション シャットダウンのブロックを探し、ハンドラーの行をコメント解除します。
+
+   ```cpp
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   profile = nullptr;
+   engine = nullptr;
+   handler = nullptr;
+   mipContext = nullptr;
+   ```
+
+5. ソース コードのプレースホルダー値を、次の文字列定数を使って以下のように置き換えます。
 
    | [プレースホルダ] | 値 |
    |:----------- |:----- |
@@ -218,7 +229,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
 
 クライアント アプリケーションを構築してテストします。 
 
-1. F6 (**[ソリューションのビルド]**) を使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 (**[デバッグ開始]**) を使用してアプリケーションを実行します。
+1. F6 ( **[ソリューションのビルド]** ) を使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
 2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireOAuth2Token()` メソッドを呼び出すたびに、アプリケーションによりアクセス トークンが求められます。 「機密ラベルの一覧表示」クイック スタートで前に実行したとおり、PowerShell スクリプトを実行し、$authority と $resourceUrl に指定された値を使用して、都度トークンを取得します。 
 

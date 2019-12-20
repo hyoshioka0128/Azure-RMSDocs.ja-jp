@@ -1,44 +1,37 @@
 ---
 title: class mip::RecommendLabelAction
-description: Mip::recommendlabelaction クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: recommendlabelaction クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: eeab9022b257ff327e2c83b1d8860662355180e5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 629e6410657fcb799e3f71c0ccb3752b82437428
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173244"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560023"
 ---
 # <a name="class-miprecommendlabelaction"></a>class mip::RecommendLabelAction 
 このアクションの目的は、ユーザーにラベルを提案することです。 ユーザーが推奨ラベルを無視した後にこの呼び出しを抑制する場合、実行状態のサポートされるアクションを使用して行う必要があります。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  |  提案されたラベル ID を取得します。
-public const std::vector\<std::string\>& GetClassificationIds() const  |  一致し、このラベルを表示するが発生した分類 Id を取得します。
-public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-
+public const std:: shared_ptr\<Label\>& GetLabel () const  |  推奨されるラベルを取得します。
+public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一致し、このラベルが表示される原因となった分類 Id を取得します。
+  
 ## <a name="members"></a>メンバー
   
-### <a name="getlabelid-function"></a>GetLabelId 関数
-提案されたラベル ID を取得します。
+### <a name="getlabel-function"></a>GetLabel 関数
+推奨されるラベルを取得します。
 
   
-**返します**:ラベル ID
+は、ラベルを**返し**ます。
   
 ### <a name="getclassificationids-function"></a>GetClassificationIds 関数
-一致し、このラベルを表示するが発生した分類 Id を取得します。
+一致し、このラベルが表示される原因となった分類 Id を取得します。
 
   
-**返します**:Const std::vector < std::string > & 分類ラベルを表示するを原因となった Id の一覧。
-
-### <a name="gettype-function"></a>GetType 関数    
-[アクション](class_mip_action.md)の種類を取得します。  
-
-**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
+は、Const std:: vector < std:: string > &、このラベルが表示される原因となった分類 Id の一覧を**返し**ます。

@@ -4,7 +4,7 @@ description: Azure Information Protection からコネクタと組織の Azure R
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 54e0a7470681608bcd38b3a0211718de6059d6e4
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 139c434bd1877ebae827beaef47531fc171d298a
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793900"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934689"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
 
 RMS コネクタのインストールと構成を行うと、以下の方法と情報を使用することで、コネクタと組織の Azure Rights Management サービスの使用状況を Azure Information Protection から監視できます。
 
@@ -40,14 +40,14 @@ RMS コネクタは、アプリケーション イベント ログを使用し�
 
 HTTPS を使用するようにコネクタを構成していない場合は、クライアントがセキュリティで保護されていない (HTTP) 接続を使用していることを示す警告 ID 2002 が表示されます。
 
-コネクタが Azure Rights Management サービスへの接続に失敗した場合は、通常、エラー 3001 が表示されます。 たとえば、この接続エラーの原因として、DNS の問題や、RMS コネクタを実行している 1 つまたは複数のサーバーでインターネットにアクセスできないことが考えられます。 
+コネクタが Azure Rights Management サービスへの接続に失敗した場合は、通常、エラー 3001 が表示されます。 たとえば、この接続エラーは、DNS の問題や、RMS コネクタを実行している1つ以上のサーバーでインターネットにアクセスできないことが原因である可能性があります。 
 
 > [!TIP]
 > RMS コネクタ サーバーが Azure Rights Management サービスに接続できない場合、その理由の多くが Web プロキシの構成によるものです。
 
 詳細については、すべてのイベント ログ エントリと同様に、メッセージも詳しく調べてください。
 
-初めてコネクタをデプロイするときは、イベント ログを確認するだけでなく、警告やエラーも継続的に確認してください。 当初はコネクタが期待どおりに動作していても、依存する構成を他の管理者が変更してしまう可能性があります。 たとえば、他の管理者が Web プロキシ サーバー構成を変更したために RMS コネクタ サーバーがインターネットにアクセスできなくなったり (エラー 3001)、コネクタの使用を承認されているグループからコンピューター アカウントを削除してしまったりすることがあります (警告 2001)。
+初めてコネクタをデプロイするときは、イベント ログを確認するだけでなく、警告やエラーも継続的に確認してください。 当初はコネクタが期待どおりに動作していても、依存する構成を他の管理者が変更してしまう可能性があります。 たとえば、別の管理者が web プロキシサーバーの構成を変更して、RMS コネクタサーバーがインターネットにアクセスできないようにする (エラー 3001) か、コネクタを使用する権限が指定されているグループからコンピューターアカウントを削除します (警告 2001).
 
 ### <a name="event-log-ids-and-descriptions"></a>イベント ログ ID と説明
 
@@ -133,7 +133,7 @@ HTTPS 接続用の RMS コネクタを構成する方法については、「[HT
 
 警告 **2003**
 
-**承認の一覧が空です。サービスは、コネクタ用に承認されたユーザーとグループの一覧が設定されるまで、使用できません。**
+**承認の一覧が空です。このサービスは、コネクタに対して承認されたユーザーとグループの一覧が作成されるまで使用できません。**
 
 このイベントは、承認されたアカウントの一覧が RMS コネクタに含まれていないため、オンプレミスのサーバーが接続できないときに記録されます。 RMS コネクタは、Azure RMS から一覧を 15 分ごとにダウンロードします。 
 
@@ -167,11 +167,11 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 たとえば、ドキュメントまたは電子メールが保護されている場合は、定期的に遅延が発生します。 あるいは、保護されているドキュメントまたは電子メールが開かれるとき、遅延が発生します。 このような場合は、パフォーマンス カウンターによって、遅延の原因がコネクタの処理時間や Azure Rights Management サービスの処理時間なのか、それともネットワークの遅延なのかを判断できます。 
 
-遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例えば:**Licensing Successful Batched Request Average Connector Response Time**。
+遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
-## <a name="logging"></a>ログの記録
+## <a name="logging"></a>ログ記録
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 

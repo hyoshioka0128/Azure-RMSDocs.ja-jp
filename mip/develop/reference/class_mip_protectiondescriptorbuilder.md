@@ -1,48 +1,50 @@
 ---
 title: class mip::ProtectionDescriptorBuilder
-description: Mip::protectiondescriptorbuilder クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: Microsoft Information Protection (MIP) SDK の mip::p rotectiondescriptorbuilder クラスについて説明します。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7ed2c118d2f57f93d0445c113fd6127704e52637
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174155"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560772"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>class mip::ProtectionDescriptorBuilder 
-コンテンツの一部に関連付けられている保護を説明する、[ProtectionDescriptor](class_mip_protectiondescriptor.md) を構築します。
+コンテンツの一部に関連付けられた保護を記述する ProtectionDescriptor を構築します。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
+public MIP_API std:: shared_ptr\<ProtectionDescriptor\> Build ()  |  この ProtectionDescriptor ビルダーインスタンスによってアクセス許可が定義されている ProtectionDescriptor を作成します。
 public void SetName(const std::string& value)  |  保護ポリシー名を設定します。
 public void SetDescription(const std::string& value)  |  保護ポリシーの説明を設定します。
 public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  保護ポリシーの有効期限を設定します。
 public void SetAllowOfflineAccess(bool value)  |  保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 public void SetReferrer(const std::string& uri)  |  保護ポリシーの参照元のアドレスを設定します。
 public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  暗号化する必要のあるアプリ固有のデータを設定します。
-public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  署名する必要があるアプリ固有のデータを設定します。
-public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていません。_
-  
+public void SetSignedAppData (const std:: map\<std:: string、std:: string\>& 値)  |  署名する必要があるアプリ固有のデータを設定します。
+public virtual ~ProtectionDescriptorBuilder()  | まだ文書化されていません。
+public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRights | ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
+public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRoles | ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
+public static MIP_API std:: shared_ptr&lt;Protection記述子ビルダー&gt; MIP::P rotectionDescriptorBuilder:: CreateFromTemplate | 保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
+
 ## <a name="members"></a>メンバー
   
-### <a name="build-function"></a>関数を構築します。
-この [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md) インスタンスによってアクセス許可が定義される [ProtectionDescriptor](class_mip_protectiondescriptor.md) を作成します。
+### <a name="build-function"></a>ビルド関数
+この ProtectionDescriptor ビルダーインスタンスによってアクセス許可が定義されている ProtectionDescriptor を作成します。
 
   
-**返します**:新しい[ProtectionDescriptor](class_mip_protectiondescriptor.md)インスタンス
+**戻り値**: 新しい protectiondescriptor インスタンス
   
 ### <a name="setname-function"></a>SetName 関数
 保護ポリシー名を設定します。
 
 パラメーター:  
-* **値**:保護ポリシーの名前
+* **value**: 保護ポリシー名
 
 
   
@@ -50,7 +52,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 保護ポリシーの説明を設定します。
 
 パラメーター:  
-* **値**:ポリシーの説明
+* **value**: ポリシーの説明
 
 
   
@@ -58,7 +60,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 保護ポリシーの有効期限を設定します。
 
 パラメーター:  
-* **値**:ポリシーの有効期限
+* **value**: ポリシーの有効期限
 
 
   
@@ -66,7 +68,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 保護ポリシーがオフライン コンテンツへのアクセスを許可するかどうかを設定します。
 
 パラメーター:  
-* **値**:かどうか、ポリシーがオフライン コンテンツへのアクセスを許可する場合
+* **value**: ポリシーがオフライン コンテンツへのアクセスを許可するかどうか
 
 
   
@@ -74,7 +76,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 保護ポリシーの参照元のアドレスを設定します。
 
 パラメーター:  
-* **uri**:ポリシーの参照元アドレス
+* **uri**: ポリシーの参照元のアドレス
 
 
 参照元は、保護ポリシーの取得に失敗したときにユーザーが表示できる URI であり、ユーザーがコンテンツへのアクセス許可を取得する方法に関する情報が含まれます。
@@ -83,7 +85,7 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 暗号化する必要のあるアプリ固有のデータを設定します。
 
 パラメーター:  
-* **値**:アプリ固有のデータ
+* **value**: アプリ固有のデータ
 
 
 アプリケーションでは、保護サービスによって暗号化されるアプリ固有のデータのディクショナリを指定できます。 この暗号化データは、SetSignedAppData によって設定される署名済みデータに依存しません。
@@ -92,10 +94,34 @@ public virtual ~ProtectionDescriptorBuilder()  | _まだ文書化されていま
 署名する必要があるアプリ固有のデータを設定します。
 
 パラメーター:  
-* **値**:アプリ固有のデータ
+* **value**: アプリ固有のデータ
 
 
 アプリケーションでは、保護サービスによって署名されるアプリ固有のデータのディクショナリを指定できます。 この署名済みデータは、SetEncryptedAppData によって設定される暗号化データに依存しません。
   
-### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder 関数
+### <a name="protectiondescriptorbuilder-function"></a>~ Protection記述子ビルダー関数
 _まだ文書化されていません。_
+
+### <a name="createfromuserrights-function"></a>CreateFromUserRights 関数
+ユーザーと権限によって定義されるアクセス権限を持つ Protection記述子ビルダーを作成します。
+
+パラメーター:
+* **usersAndRights**: ユーザーから権限へのマッピングのコレクション。
+
+**戻り値**: 新しい [ProtectionDescriptor](class_mip_protectiondescriptor.md) インスタンス 
+
+### <a name="createfromuserroles-function"></a>CreateFromUserRoles 関数
+ユーザーおよびロールによってアクセス許可が定義されている Protection記述子ビルダーを作成します。
+
+パラメーター:
+* **usersAndRoles**: ユーザーからロールへのマッピングのコレクション。
+
+**を返し**ます。ユーザーとロールによってアクセス許可が定義されている[protectiondescriptor](class_mip_protectiondescriptor.md)を作成します。
+
+### <a name="createfromtemplate-function"></a>CreateFromTemplate 関数
+保護テンプレートによって定義されたアクセス許可を持つ Protection記述子ビルダーを作成します。 
+
+パラメーター:
+* **templateId**: 保護テンプレート ID。
+
+**戻り値**: 新しい[protectiondescriptor](class_mip_protectiondescriptor.md)インスタンス。

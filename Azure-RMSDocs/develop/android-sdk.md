@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792661"
 ---
 # <a name="android-setup"></a>Android のセットアップ
@@ -27,12 +27,12 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
--   [必須コンポーネント](#prerequisites)
+-   [必要条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -57,13 +57,13 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>Optional
+## <a name="optional"></a>オプション
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for Android](https://github.com/AzureAD/rms-sdk-ui-for-android)」 (Android 用の UI ライブラリとサンプル アプリ) 参照。
 
 ## <a name="configuring-your-development-environment"></a>開発環境の構成
 
-**注**  MS RMS SDK 4.2 プレビュー リリース: このプレビュー リリースでは、com/microsoft/protection から com/microsoft/rightsmanagment へのパス名の変更を表示するようにスクリーンショットが更新されていません。 テキストは更新されています。
+**注**  MS RMS SDK 4.2 preview リリース: このプレビューリリースでは、スクリーンショットが更新されていないため、ようの名前の変更が com/microsoft/protection から com/microsoft/rightsmanagment に反映されていません。 テキストは更新されています。
 
  
 -   Eclipse の開発環境を開きます。
@@ -103,7 +103,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
   ![ワークスペースにインポートする](../media/Android-setup-07.png)
 
-- **[Next]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
+- **[次へ]** をクリックします。 *adrms\_android\_sdk.zip* を展開したフォルダーに移動して選択します。 SDK が **com.microsoft.rightsmanagement** として一覧に表示されます。
 
   ![フォルダーに移動して選択する](../media/Android-setup-08c.jpg)
 
@@ -140,9 +140,9 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の Android アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
-[開始するには](get-started.md)
+[作業開始](get-started.md)
 
 [新機能](release-notes.md)
 

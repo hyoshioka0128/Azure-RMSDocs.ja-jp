@@ -4,25 +4,25 @@ description: サポートされているファイルの種類、ファイル名�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/16/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef2b68b531b39a83f88ee9f8f37a64955950f00d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9574d9e2089169878c44cb4827ac58e94f177f88
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74666856"
 ---
-# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合ラベル付けクライアントでサポートされるファイルの種類
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*>
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、windows 7 SP1、windows Server 2019、windows Server 2016、Windows server 2012 R2、windows Server 2012、Windows server 2008 r2*>
 >
-> *手順:[Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のものをドキュメントや電子メールに適用できます。
 
@@ -58,9 +58,9 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**:次の表のファイルの種類。
+- **Microsoft Office**: 次の表のファイルの種類
 
-    これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です:Word、Excel、PowerPoint。
+    これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。
 
     |Office ファイルの種類|Office ファイルの種類|
     |----------------------------------|----------------------------------|
@@ -68,23 +68,23 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 他のファイルの種類では、保護されている場合に分類がサポートされます。 これらのファイルの種類については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」を参照してください。
 
-次に例を示します。
+例:
 
-- **一般**秘密度ラベルが分類を適用し、保護を適用しない場合:**全般ラベル**の場合 sales.pdf という名前のファイルに適用することは可能ですが、sales.txt という名前のファイルに適用することはできません。 
+- **一般**秘密度ラベルが分類を適用し、保護を適用しない場合: "sales. .pdf" という名前のファイルに**general**ラベルを適用できますが、このラベルを「sales .txt」という名前のファイルに適用することはできません。 
 
-- **社外秘 \ すべての従業員の機密**度ラベルに分類と保護が適用される場合:このラベルの場合は、sales.pdf とい名前のファイルと sales.txt という名前のファイルに、このラベルを適用することが可能です。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
+- [**社外秘 \ すべての従業員の機密**度] ラベルに分類と保護が適用される場合は、このラベルを「sales .pdf」という名前のファイルに、「sales .txt」という名前のファイルに適用します。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
 ## <a name="file-types-supported-for-protection"></a>保護がサポートされているファイルの種類
 
 Azure Information Protection の統合ラベル付けクライアントは、次の表に示すように、2つの異なるレベルの保護をサポートします。
 
-|保護の種類|ネイティブ|ジェネリック|
+|保護の種類|ネイティブ|一般|
 |----------------------|----------|-----------|
-|説明|テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、および Rights Management サービスをサポートする他のアプリケーションのファイルの種類については、ネイティブ保護で、暗号化と権限の適用 (アクセス許可) の両方を含む強力なレベルの保護が提供されます。|他のすべてのアプリケーションとファイルの種類については、ジェネリック保護で、ファイルの種類として .pfile を使用したファイルのカプセル化と、ユーザーにファイルを開く権限があるかどうかを確認する認証の両方を含むレベルの保護が提供されます。|
-|保護|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、電子メールでファイルを受け取るユーザー、あるいはファイルや共有のアクセス許可によってそれに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。<br /><br />- さらに、ファイルが保護されたときにコンテンツの所有者によって設定された使用権限およびポリシーは、コンテンツが Azure Information Protection ビューアーで表示される (保護されたテキストとイメージ ファイルの場合) か、関連付けられたアプリケーションで表示される (他のサポートされているすべてのファイルの種類の場合) ときに適用されます。|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、ファイルを開く権限があり、それに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。 承認に失敗すると、ファイルは開きません。<br /><br />- コンテンツの所有者によって設定された使用権限とポリシーが表示され、目的の使用ポリシーが承認済みユーザーに通知されます。<br /><br />- 承認済みユーザーがファイルを開きアクセスしていることを確認する監査ログが実行されます。 ただし、使用権限は適用されません。|
-|ファイルの種類の既定値|次のファイルの種類の既定の保護レベルを次に示します。<br /><br />- テキストとイメージ ファイル<br /><br />- Microsoft Office (Word、Excel、PowerPoint) ファイル<br /><br />- Portable Document Format (.pdf)<br /><br />詳細については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」 を参照してください。|これは、ネイティブな保護によってサポートされない他のすべてのファイルの種類 (.vsdx、.rtf など) の既定の保護です。|
+|[説明]|テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、および Rights Management サービスをサポートする他のアプリケーションのファイルの種類については、ネイティブ保護で、暗号化と権限の適用 (アクセス許可) の両方を含む強力なレベルの保護が提供されます。|他のすべてのアプリケーションとファイルの種類では、.pfile ファイルの種類を使用したファイルのカプセル化と、ユーザーがファイルを開くことを許可されているかどうかの検証を含む、一般的な保護が提供されます。|
+|Protection|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、電子メールでファイルを受け取るユーザー、あるいはファイルや共有のアクセス許可によってそれに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。<br /><br />- さらに、ファイルが保護されたときにコンテンツの所有者によって設定された使用権限およびポリシーは、コンテンツが Azure Information Protection ビューアーで表示される (保護されたテキストとイメージ ファイルの場合) か、関連付けられたアプリケーションで表示される (他のサポートされているすべてのファイルの種類の場合) ときに適用されます。|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、ファイルを開く権限があり、それに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。 認証が失敗した場合、ファイルは開きません。<br /><br />- コンテンツの所有者によって設定された使用権限とポリシーが表示され、目的の使用ポリシーが承認済みユーザーに通知されます。<br /><br />- 承認済みユーザーがファイルを開きアクセスしていることを確認する監査ログが実行されます。 ただし、使用権限は適用されません。|
+|ファイルの種類ごとの既定値|次のファイルの種類の既定の保護レベルを次に示します。<br /><br />- テキストとイメージ ファイル<br /><br />- Microsoft Office (Word、Excel、PowerPoint) ファイル<br /><br />- Portable Document Format (.pdf)<br /><br />詳細については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」 を参照してください。|これは、ネイティブな保護によってサポートされない他のすべてのファイルの種類 (.vsdx、.rtf など) の既定の保護です。|
 
-現時点では、Azure Information Protection 統合ラベル付けクライアントに適用される既定の保護レベルを変更することはできません。
+Azure Information Protection 統合されたラベル付けクライアントまたはスキャナーによって適用される既定の保護レベルを変更することはできません。 ただし、保護するファイルの種類を変更することはできます。 詳細については、「[保護するファイルの種類を変更](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)する」を参照してください。
 
 保護は、管理者が構成した機密ラベルをユーザーが選択したときに自動的に適用することも、ユーザーが[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使用して独自のカスタム保護設定を指定することもできます。 
 
@@ -97,18 +97,18 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
   |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-  |             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32ビット:512 MB<br /><br />64ビット:512 MB                                          |
-  |           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32ビット:2 GB<br /><br />64ビット:使用可能なディスク領域とメモリによってのみ制限されます                       |
-  | PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32ビット:使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64ビット:使用可能なディスク領域とメモリによってのみ制限されます |
+  |             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット: 512 MB<br /><br />64 ビット: 512 MB                                          |
+  |           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます                       |
+  | PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます |
 
 
 - **その他のすべてのファイル**: 
 
-  - その他のファイルの種類を保護し、これらのファイルの種類を Azure Information Protection ビューアーで開く場合:ファイルの最大サイズは、使用可能なディスク領域とメモリによってのみ制限されます。
+  - その他のファイルの種類を保護し、これらのファイルの種類を Azure Information Protection ビューアーで開く場合: ファイルの最大サイズは、使用可能なディスク領域とメモリによってのみ制限されます。
 
-  - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合:.pst ファイルに対してサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
+  - [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用してファイルの保護を解除する場合: .pst ファイル向けにサポートされるファイルの最大サイズは 5 GB です。 その他のファイルの種類の場合は、使用可能なディスク領域とメモリによってのみ制限されます。
 
-    ヒント :大きな .pst ファイルの保護された項目を検索したり復元したりする必要がある場合は、「[電子情報開示での Unprotect-RMSFile の使用に関するガイダンス](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」をご覧ください。
+    ヒント: 大きな .pst ファイルの保護された項目を検索したり復元する必要がある場合、「[Guidance for using Unprotect-RMSFile for eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery)」 (電子情報開示での Unprotect-RMSFile の使用に関するガイダンス) を参照してください。
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
@@ -121,7 +121,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 |元のファイル名拡張子|保護されるファイル名拡張子|
 |--------------------------------|-------------------------------------|
-|.txt|.ptxt|
+|。txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
 |.jpeg|.pjpeg|
@@ -132,29 +132,48 @@ Azure Information Protection 統合されたラベル付けクライアントが
 |.gif|.pgif|
 |.jpe|.pjpe|
 |.jfif|。pjfif|
-|.jt|.pjt|
+|.jt|。pjt|
 
-次の表に、Azure Information Protection 統合されたラベル付けクライアントによるネイティブ保護をサポートするその他のファイルの種類の一覧を示します。これは、分類することもできます。 これらは、Microsoft Office アプリのファイルの種類であることがわかります。 これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です:Word、Excel、PowerPoint。
+次の表に、Azure Information Protection 統合されたラベル付けクライアントによるネイティブ保護をサポートするその他のファイルの種類の一覧を示します。これは、分類することもできます。 これらは、Microsoft Office アプリのファイルの種類であることがわかります。 これらのファイルの種類に対してサポートされるファイル形式は、次の Office プログラム用の 97-2003 ファイル形式と Office Open XML 形式です: Word、Excel、PowerPoint。
 
 これらのファイルの場合、ファイル名拡張子は、ファイルが Rights Management サービスで保護された後も変更されません。
 
-|Office でサポートされているファイルの種類|Office でサポートされているファイルの種類|
+|Office でサポートされるファイルの種類|Office でサポートされるファイルの種類|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />。xps|
 
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>分類と保護から除外されるファイルの種類
 
 コンピューターの動作に不可欠なファイルをユーザーが変更しないように、一部のファイルの種類とフォルダーは分類と保護から自動的に除外されます。 ユーザーが Azure Information Protection 統合されたラベル付けクライアントを使用してこれらのファイルを分類または保護しようとすると、除外されていることを示すメッセージが表示されます。
 
-- **除外されるファイルの種類**: .lnk、.exe、.com、.cmd、.bat、.dll、.ini、.pst、.sca、.drm、.sys、.cpl、.inf、.drv、.dat、.tmp、msg、.msp、.msi、.pdb、.jar
-
+- **除外されるファイルの種類**: .lnk、.exe、.com、.cmd、.bat、.dll、.ini、.pst、.sca、.drm、.sys、.cpl、.inf、.drv、.dat、.tmp、.msp、.msi、.pdb、.jar
+    
+    > [!NOTE]
+    > 従来のクライアントとは異なり、.msg ファイルは除外されません。 現在、分類および保護されている .msg ファイルを正常に開くことはできません。 これらのファイルについては、ラベルを削除してファイルを開きます。
 
 - **除外されるフォルダー**: 
     - Windows
     - Program Files (\Program Files および \Program Files (x86))
     - \ProgramData 
     - \AppData (すべてのユーザー)
+
+### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーによる分類と保護から除外されるファイルの種類
+
+既定では、スキャナーは、次の例外を除き、Azure Information Protection 統合されたラベル付けクライアントと同じファイルの種類を除外します。
+
+- .msg、.rtf、および rar も除外されます。
+
+スキャナーによるファイル検査について、対象または対象外となるファイルの種類を変更することができます。
+
+- [Azure portal を使って](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)、スキャナー プロファイルの **[スキャンするファイルの種類]** を構成します。
+    
+    > [!NOTE]
+    > 前のセクションで説明した .msg ファイルの既知の問題により、.msg ファイルを除外することをお勧めします。
+    > 
+    > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。 
+
+既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 スキャナーのこの動作を変更するには、PowerShell の詳細設定の**PFileSupportedExtensions**を使用します。 詳細については、「PowerShell の構成」を参照して、[保護するファイルの種類](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected)をスキャナーのデプロイ手順で変更します。
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>既定では保護できないファイル
 
@@ -176,7 +195,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 |アプリケーションの種類|ファイルの種類|
 |--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
+|Word|ドック.docx; .docm; .dot; normal.dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|
@@ -190,19 +209,26 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 ### <a name="to-inspect-zip-files"></a>.zip ファイルを検査するには
 
-[Set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification) powershell コマンドは、powershell セッションを実行しているコンピューターに[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2)をインストールするときに .zip ファイルを検査できます。
+以下の手順のようにすると、Azure Information Protection スキャナーおよび [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで .zip ファイルを検査できます。
+
+1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
+
+2. スキャナーの場合: 機密情報を見つけた後、.zip ファイルをラベルで分類して保護する必要がある場合は、「Powershell の構成」で説明されているように、PowerShell の詳細設定**PFileSupportedExtensions**を使用して .zip ファイル名拡張子を指定し、「スキャナーの展開手順から[保護するファイルの種類を変更する](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected)」を参照してください。
+
 
 これらの手順の実行後のシナリオ例: 
 
 **accounts.zip** という名前のファイルには、クレジット カード番号が含まれる Excel のスプレッドシートが含まれています。 **機密 \ Finance**という名前の秘密度ラベルがあり、クレジットカード番号を検出するように構成されています。また、金融グループへのアクセスを制限する保護を使用してラベルを自動的に適用します。 
 
-ファイルを検査した後、PowerShell セッションの統一されたラベル付けクライアントはこのファイルを**機密 \ Finance**として分類し、ファイルに汎用的な保護を適用します。これにより、Finance グループのメンバーだけがそのファイルを解凍し、ファイル**の名前を変更できるようになります。pfile**。
+ファイルを検査した後、PowerShell セッションからの統一されたラベル付けクライアントは、このファイルを**機密 \ Finance**として分類し、ファイルに汎用的な保護を適用して、Finance グループのメンバーだけがそのファイルを解凍し、ファイル**アカウント pfile**の名前を変更できるようにします。
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>OCR を使用して .tiff ファイルを検査するには
 
-[AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドは、Windows tiff ifilter 機能をインストールするときに、光学式文字認識 (OCR) を使用して tiff ファイル名拡張子を持つ tiff イメージを検査し、 [windows tiff ifilter を構成できます。](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)PowerShell セッションを実行しているコンピューターの設定。
+[AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) powershell コマンドは、Windows tiff ifilter 機能をインストールするときに、光学式文字認識 (OCR) を使用して tiff ファイル名拡張子を持つ tiff イメージを検査し、powershell セッションを実行しているコンピューターで[Windows tiff ifilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成できます。
 
-## <a name="next-steps"></a>次の手順
+スキャナーの場合: 機密情報を見つけた後に、tiff ファイルをラベルで分類して保護する必要がある場合は、「Powershell の構成」の説明に従って、PowerShell の詳細設定の**PFileSupportedExtensions**でこのファイル名拡張子を指定します。「スキャナーの展開手順から[保護するファイルの種類を変更するには](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected)」を参照してください。
+
+## <a name="next-steps"></a>次のステップ
 Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類を確認したので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [カスタマイズ](clientv2-admin-guide-customizations.md)

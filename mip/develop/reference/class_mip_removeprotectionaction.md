@@ -1,30 +1,24 @@
 ---
 title: class mip::RemoveProtectionAction
-description: Mip::removeprotectionaction クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: removeprotectionaction クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1c6a9a1e772de52a060b776a78fc7748218adec4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: bf801330de894914c26cfe3592bad9d0cf0826fd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184299"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560544"
 ---
 # <a name="class-mipremoveprotectionaction"></a>class mip::RemoveProtectionAction 
 ドキュメントからの保護の削除を指定するアクション クラス。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-
+  
 ## <a name="members"></a>メンバー
-
-### <a name="gettype-function"></a>GetType 関数    
-[アクション](class_mip_action.md)の種類を取得します。  
-
-**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
+_まだ文書化されていません。_

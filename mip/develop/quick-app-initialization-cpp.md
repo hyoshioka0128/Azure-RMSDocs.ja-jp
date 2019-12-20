@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 30066f1bbb8b5a4cdd556b7aa34a40d696371a91
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60185075"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884806"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C++)
 
@@ -35,16 +35,16 @@ ms.locfileid: "60185075"
 
 まず、その他のクイック スタートをビルドする対象の初期の Visual Studio ソリューションを作成して構成します。 
 
-1. Visual Studio 2017 を開いて、**[ファイル]** メニュー、**[新規]**、**[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
-   - 左側のウィンドウの **[インストール済み]** の下の **[その他の言語]** で、**[Visual C++]** を選択します。
-   - 中央のウィンドウで、**[Windows コンソール アプリケーション]** を選択します。
-   - 下のウィンドウで、プロジェクトの **[名前]**、**[場所]**、およびそれに応じて含める **[ソリューション名]** を更新します。
+1. Visual Studio 2017 を開いて、 **[ファイル]** メニュー、 **[新規]** 、 **[プロジェクト]** の順に選択します。 **[新しいプロジェクト]** ダイアログで次の操作を行います。
+   - 左側のウィンドウの **[インストール済み]** の下の **[その他の言語]** で、 **[Visual C++]** を選択します。
+   - 中央のウィンドウで、 **[Windows コンソール アプリケーション]** を選択します。
+   - 下のウィンドウで、プロジェクトの **[名前]** 、 **[場所]** 、およびそれに応じて含める **[ソリューション名]** を更新します。
    - 完了したら、右下の **[OK]** ボタンをクリックします。
 
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、**[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -59,10 +59,10 @@ ms.locfileid: "60185075"
 
 1. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
-   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、**[追加]**、**[クラス]** の順に選択します。
+   - **ソリューション エクスプローラー**でもう一度プロジェクト ノードを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
    - **[クラスの追加]** ダイアログで以下の操作を行います。
-     - **[クラス名]** フィールドに「profile_observer」と入力します。 入力した名前に基づき、**[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
-     - 完了したら、**[OK]** ボタンをクリックします。
+     - **[クラス名]** フィールドに「profile_observer」と入力します。 入力した名前に基づき、 **[.h file]\(.h ファイル\)** と **[.cpp file]\(.cpp ファイル\)** の両フィールドが自動入力されたことを確認してください。
+     - 完了したら、 **[OK]** ボタンをクリックします。
 
      [![Visual Studio によるクラスの追加](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
 
@@ -116,7 +116,7 @@ ms.locfileid: "60185075"
      }
      ```
 
-3. 必要に応じて、F6 (**[ソリューションのビルド]**) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
+3. 必要に応じて、F6 ( **[ソリューションのビルド]** ) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
 
 ## <a name="implement-an-authentication-delegate"></a>認証の委任を実装する
 
@@ -124,7 +124,7 @@ MIP SDK では、クラスの拡張機能を使用して認証を実装します
 
 SDK の `mip::AuthDelegate` クラスを拡張し、`mip::AuthDelegate::AcquireOAuth2Token()` 純粋仮想関数をオーバーライド/実装することで、認証の委任に対して実装を作成します。 この認証の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。
 
-1. 前のセクションの手順 1 で使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「auth_delegate」と入力します。 
+1. 前のセクションの手順 1 で使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「auth_delegate」と入力します。 
 
 2. ここで、各ファイルを更新して、新しい認証の委任クラスを実装します。
 
@@ -137,7 +137,7 @@ SDK の `mip::AuthDelegate` クラスを拡張し、`mip::AuthDelegate::AcquireO
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
-          
+
           AuthDelegateImpl(
             const std::string& appId)         // AppID for registered AAD app
             : mAppId(appId) {};
@@ -146,6 +146,7 @@ SDK の `mip::AuthDelegate` クラスを拡張し、`mip::AuthDelegate::AcquireO
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
             const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
             OAuth2Token& token) override;     // Token handed back to MIP SDK
+
      private:
           std::string mAppId;
           std::string mToken;
@@ -194,14 +195,15 @@ SDK の `mip::AuthDelegate` クラスを拡張し、`mip::AuthDelegate::AcquireO
           // True = successful token acquisition; False = failure
           return true;
      }
-     ``` 
-3. 必要に応じて、F6 (**[ソリューションのビルド]**) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
+     ```
+
+3. 必要に応じて、F6 ( **[ソリューションのビルド]** ) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
 
 ## <a name="implement-a-consent-delegate"></a>同意の委任を実装する
 
 SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUserConsent()` 純粋仮想関数をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「consent_delegate」と入力します。 
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「consent_delegate」と入力します。 
 
 2. ここで各ファイルを更新して、新しい同意の委任クラスを実装します。
 
@@ -232,7 +234,8 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
           return Consent::AcceptAlways;
      }
      ``` 
-3. 必要に応じて、F6 (**[ソリューションのビルド]**) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
+     
+3. 必要に応じて、F6 ( **[ソリューションのビルド]** ) を使用して、続行する前にソリューションのテスト コンパイル/リンクを実行し、正しくビルドされることを確認します。
 
 ## <a name="construct-a-file-profile-and-engine"></a>ファイルのプロファイルとエンジンを構築する
 
@@ -243,6 +246,8 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 2. 生成された `main()` の実装を削除します。 プロジェクトの作成時に Visual Studio で生成された、プリプロセッサ ディレクティブは削除**しないでください** (#pragma, #include)。 任意のプリプロセッサ ディレクティブの後に次のコードを追加します。
 
    ```cpp
+   #include "mip/mip_init.h"
+   #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
    #include "profile_observer.h"
@@ -253,7 +258,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
    using std::shared_ptr;
    using std::string;
    using std::cout;
-   using mip::ApplicationInfo; 
+   using mip::ApplicationInfo;
    using mip::FileProfile;
    using mip::FileEngine;
 
@@ -263,18 +268,25 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
      ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
                  "<application-name>",
                  "<application-version>"};
-     auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
+
+     auto mipContext = mip::MipContext::Create(appInfo,
+                         "file_sample",
+                         mip::LogLevel::Trace,
+                         nullptr /*loggerDelegateOverride*/,
+                         nullptr /*telemetryOverride*/);
+
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
-       true,                                      // true = use in-memory state storage (vs disk)
-       authDelegateImpl,                            
-       consentDelegateImpl,                     
-       profileObserver,                         
-       appInfo);                                    
+     FileProfile::Settings profileSettings(
+       mipContext,
+       mip::CacheStorageType::OnDisk,
+       authDelegateImpl,
+       consentDelegateImpl,
+       profileObserver);
 
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
@@ -296,7 +308,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
-       "<engine-state>",                          // User-defined engine state      
+       "<engine-state>",                          // User-defined engine state
        "en-US");                                  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
@@ -306,7 +318,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();             
+       engine = engineFuture.get();
      }
      catch (const std::exception& e)
      {
@@ -315,6 +327,13 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
        system("pause");
        return 1;
      }
+
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   // handler = nullptr; // This will be used in later quick starts.
+   engine = nullptr;
+   profile = nullptr;   
+   mipContext = nullptr;
 
    return 0;
    }

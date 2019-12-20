@@ -1,159 +1,132 @@
 ---
 title: class mip::PolicyProfile::Settings
-description: Mip::policyprofile クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: Microsoft Information Protection (MIP) SDK の mip::p olicyprofile クラスについて説明します。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: d3105bd9c13e91108c44e847c3eae74f166c5e04
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 324b31a9589cff75a758da2936a3aba242fd63c2
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173441"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560880"
 ---
 # <a name="class-mippolicyprofilesettings"></a>class mip::PolicyProfile::Settings 
-作成時および有効期間全体にわたって [PolicyProfile](class_mip_policyprofile.md) に使用される[設定](class_mip_policyprofile_settings.md)。
+作成時および有効期間全体にわたって PolicyProfile によって使用される設定。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std::string & パス、bool useinmemorystorage: const std::shared_ptr\<authdelegate:\>& authdelegate:、const std::shared_ptr\<PolicyProfile::Observer\>(& a)observer, const ApplicationInfo & applicationInfo)  |  プロファイルを構成するためのインターフェイス。
-public const std::string& GetPath() const  |  保存された状態へのパスを取得します。
-public bool GetUseInMemoryStorage() const  |  Use In Memory Storage フラグを取得します。
+パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、const std:: shared_ptr\<AuthDelegate\>& authDelegate、const std:: shared_ptr\<PolicyProfile:: Observer\>& オブザーバー)  |  プロファイルを構成するためのインターフェイス。
+パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
 public const std::shared_ptr\<AuthDelegate\>& GetAuthDelegate() const  |  認証委任を取得します。
-public const std::shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  |  イベント オブザーバーを取得します。
-public const ApplicationInfo GetApplicationInfo() const  |  アプリケーション情報を取得します。
-public std::shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
-public void SetLoggerDelegate(const std::shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  既定のロガーをオーバーライドします。
-public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate (const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
-public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  アプリケーションによって提供される TaskDispatcher デリゲート (指定されている場合) を取得します。
-public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアントの処理をディスパッチ既定 asynchonous タスクをオーバーライドします。
-public void OptOutTelemetry()  |  テレメトリの収集をすべて無効にします。
-public bool IsTelemetryOptedOut() const  |  テレメトリの収集を無効にする必要があるかどうかを取得します。
-public void SetMinimumLogLevel(LogLevel logLevel)  |  ログ イベントをトリガーする最小のログ レベルを設定します。
-public LogLevel GetMinimumLogLevel() const  |  最小のログ レベル オブジェクトを取得します。
+public const std:: shared_ptr\<PolicyProfile:: オブザーバー\>& GetObserver () const  |  イベント オブザーバーを取得します。
+public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
+public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
+public void SetSessionId(const std::string& sessionId)  | まだ文書化されていません。
+public const std::string& GetSessionId() const  | まだ文書化されていません。
+public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& customSettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public ~Settings()  | まだ文書化されていません。
   
 ## <a name="members"></a>メンバー
   
-### <a name="settings-function"></a>ポリシーの設定
+### <a name="settings-function"></a>Settings 関数
 プロファイルを構成するためのインターフェイス。
 
 パラメーター:  
-* **パス**:SDK がプロファイル状態を格納するディレクトリへのパス。 
+* **mipContext**: グローバルコンテキスト設定 
 
 
-* **useInMemoryStorage**:ディスクではなくメモリにキャッシュされている任意の状態を格納します。 
+* **Cachestoragetype**: キャッシュされた状態をメモリまたはディスクに格納します。 
 
 
-* **authDelegate**:認証トークンを取得する SDK によって使用される認証デリゲート。 
+* **authDelegate**: 認証トークンを取得するために SDK によって使用される認証委任。 
 
 
-* **オブザーバー**:実装するクラス、 [PolicyProfile::Observer](class_mip_policyprofile_observer.md)インターフェイス。 nullptr にすることができます。 
-
-
-* **applicationInfo**:サービスへのアクセスに使用されるアプリケーション識別子。
+* **オブザーバー**: policyprofile:: observer インターフェイスを実装するクラス。 nullptr にすることができます。
 
 
   
-### <a name="getpath-function"></a>GetPath 関数
-保存された状態へのパスを取得します。
+### <a name="getcachestoragetype-function"></a>GetCacheStorageType 関数
+キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
 
   
-**返します**:保存された状態へのパス。
-  
-### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage 関数
-Use In Memory Storage フラグを取得します。
-
-  
-**返します**:メモリでの使用が false それ以外の場合に設定されている場合は true。
+**戻り値**: 使用されているストレージの種類
   
 ### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
 認証委任を取得します。
 
   
-**返します**:認証委任。
+**戻り値**: 認証委任。
   
 ### <a name="getobserver-function"></a>GetObserver 関数
 イベント オブザーバーを取得します。
 
   
-**返します**:イベント オブザーバー。
+**戻り値**: イベント オブザーバー。
   
-### <a name="getapplicationinfo-function"></a>GetApplicationInfo 関数
-アプリケーション情報を取得します。
+### <a name="getmipcontext-function"></a>GetMipContext 関数
+すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
 
   
-**返します**:アプリケーションの情報です。
-  
-### <a name="getloggerdelegate-function"></a>GetLoggerDelegate 関数
-アプリケーションによって提供されるロガー委任を取得します (提供される場合)。
-
-  
-**返します**:ロガー
-  
-### <a name="setloggerdelegate-function"></a>SetLoggerDelegate 関数
-既定のロガーをオーバーライドします。
-
-パラメーター:  
-* **loggerDelegate**:クライアント アプリケーションによって実装されるコールバック インターフェイスをログ記録
-
-
-このメソッドは、独自のロガー実装を使用するクライアント アプリケーションによって呼び出される必要があります
+**戻り値**: mipmap コンテキスト
   
 ### <a name="gethttpdelegate-function"></a>GetHttpDelegate 関数
 アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
 
   
-**返します**:HTTP 操作に使用する http デリゲート
+**戻り値**: HTTP 操作に使用される HTTP 委任
   
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
 パラメーター:  
-* **httpDelegate**:クライアント アプリケーションによって実装される http コールバック インターフェイス
+* **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
 
 
   
 ### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate 関数
-アプリケーションによって提供される TaskDispatcher デリゲート (指定されている場合) を取得します。
+アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
 
   
-**返します**:非同期タスクの実行に使用する TaskDispatcher デリゲート
+は、非同期タスクの実行に使用される taskdispatcher デリゲートを**返し**ます。
   
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
-クライアントの処理をディスパッチ既定 asynchonous タスクをオーバーライドします。
+クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 
 パラメーター:  
-* **taskDispatcherDelegate**:クライアント アプリケーションによって実装されるコールバック インターフェイスをディスパッチするタスク
+* **taskDispatcherDelegate**: クライアントアプリケーションによって実装されたタスクのディスパッチコールバックインターフェイス
 
 
+タスクはプロファイルオブジェクトを参照することができるため、結果としてその破棄が妨げられます。 taskdispatcher キューは共有しないでください。
   
-### <a name="optouttelemetry-function"></a>OptOutTelemetry 関数
-テレメトリの収集をすべて無効にします。
-  
-### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut 関数
-テレメトリの収集を無効にする必要があるかどうかを取得します。
+### <a name="setsessionid-function"></a>SetSessionId 関数
+_まだ文書化されていません。_
 
   
-**返します**:テレメトリの収集を無効にする場合は true false のその他。
+### <a name="getsessionid-function"></a>GetSessionId 関数
+_まだ文書化されていません。_
+
   
-### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel 関数
-ログ イベントをトリガーする最小のログ レベルを設定します。
+### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
+機能のゲーティングとテストに使用するカスタム設定を設定します。
 
 パラメーター:  
-* **logLevel**: ログ イベントをトリガーする最小のログ レベル。 
-
+* **customSettings**: 名前と値のペアの一覧。
 
 
   
-**返します**:True
-  
-### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel 関数
-最小のログ レベル オブジェクトを取得します。
+### <a name="getcustomsettings-function"></a>GetCustomSettings 関数
+機能のゲーティングとテストに使用するカスタム設定を取得します。
 
   
-**返します**:ログ イベントをトリガーするための最小ログ レベル。
+**戻り値**: 名前と値のペアのリスト。
+  
+### <a name="settings-function"></a>~ Settings 関数
+_まだ文書化されていません。_

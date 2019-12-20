@@ -4,25 +4,25 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f600ec661f82b8738653cc340d8d803f21e80c8a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 472bf634c1eb43e000b26fa1bb11387442ff91c1
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794151"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935046"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。 
@@ -33,9 +33,9 @@ ms.locfileid: "68794151"
 
 - 透かしは、Word、Excel、および PowerPoint に適用されます。
 
-    - Excel:透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
+    - Excel: 透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
     
-    - PowerPoint:透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、 **[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
+    - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、 **[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
 
 - 透かしと、Word、Excel、PowerPoint のヘッダーおよびフッターでは、複数の行がサポートされています。 Outlook で適用されるラベルのヘッダーまたはフッターに対して複数の行を指定した場合、その行は連結されます。 このシナリオでは、[Word、Excel、PowerPoint、Outlook にさまざまな視覚的なマーキングを設定する](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成の使用を検討します。
 
@@ -61,25 +61,25 @@ ms.locfileid: "68794151"
 
 - エクスプローラー、PowerShell、Azure Information Protection スキャナーを使用してドキュメントにラベルを付けると、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに、Azure Information Protection クライアントによって適用されます。
     
-    例外は、SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office アプリで[自動保存](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)を使用している場合です。自動保存が有効な場合、[高度なクライアント設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)で、バックグラウンドで連続的に実行される分類を有効にしない限り、視覚的なマーキングは適用されません。 
+    SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用すると、[自動更新] がオンになっている場合を除き、分類をバックグラウンドで継続的に実行するように [[アドバンストクライアント] 設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)を構成しない限り、視覚的なマーキングは適用されません。 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ペインに移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
 
-2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、追加または変更する視覚的なマーキングを含むラベルを選択します。
+2. [**分類** > **ラベル**] メニューオプションから: **[Azure Information Protection ラベル]** ウィンドウで、追加または変更する視覚的なマーキングが含まれているラベルを選択します。
 
-3. **[ラベル]** ブレードの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、使用する視覚的なマーキングの設定を構成した後、 **[保存]** をクリックします。
+3. **[ラベル]** ウィンドウの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、目的の視覚的なマーキングの設定を構成し、 **[保存]** をクリックします。
     
-    - ヘッダーを構成するには: **[Documents with this label have a header]\(このラベルを持つドキュメントにヘッダーを設定する\)** で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
+    - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
     
-    - フッターを構成するには: **[Documents with this label have a footer]\(このラベルを持つドキュメントにフッターを設定する\)** で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
+    - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
     
-    - 透かしを構成するには: **[Documents with this label have a watermark]\(このラベルを持つドキュメントに透かしを設定する\)** で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
+    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
     
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
@@ -88,19 +88,19 @@ ms.locfileid: "68794151"
 
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
-- `${Item.Label}`: 選択したラベル。 例えば:全般
+- `${Item.Label}`: 選択したラベル。 例: General
 
-- `${Item.Name}`: ファイル名または電子メールの件名。 例えば:JulySales.docx
+- `${Item.Name}`: ファイル名または電子メールの件名。 例: JulySales.docx
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
 - `${User.Name}`: ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone
 
-- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
+- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) たとえば次のようになります。rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}`: 選択したラベルが設定された日時。 例えば:8/16/2016 1:30 PM
+- `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
-例:**General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification:General** になります。
+例: **General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
 
 >[!TIP]
 > また、ドキュメントやテンプレートに[ラベル名を挿入するフィールド コード](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)も使用します。
@@ -109,7 +109,7 @@ ms.locfileid: "68794151"
 
 既定では、指定した視覚的マーキングは Word、Excel、PowerPoint、Outlook のすべてに適用されます。 ただし、テキスト文字列に "If.App" という変数ステートメントを入れると、Office アプリケーションごとに視覚的マーキングを指定できます。**Word**、**Excel**、**PowerPoint**、**Outlook** という値を利用し、アプリケーションの種類を区別できます。 このような値は省略することもできます。同じ If.App ステートメントで複数回指定する場合に必要になります。
 
-使用する構文は以下のとおりです。
+次の構文を使用します。
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
@@ -145,9 +145,9 @@ Calibri は、ヘッダー、フッター、透かしのテキストに使われ
 
 利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**は水色の RGB 16 進値です。 
 
-これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \<色の >](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。画像編集できるさまざまなアプリケーションでもコードを参照できます。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+これらのコードの参照が必要な場合は、MSDN web ドキュメントの[\<色 >](https://developer.mozilla.org/docs/Web/CSS/color_value)のページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

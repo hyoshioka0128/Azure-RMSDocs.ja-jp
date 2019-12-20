@@ -1,31 +1,30 @@
 ---
 title: class mip::Action
-description: Mip::action クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: action クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: a8e160f31dbf696944f7c6d40c1826233883f00a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: d3cc1aecfb5ca8bf2d78dd9d6c8c280b5541389d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184911"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560407"
 ---
 # <a name="class-mipaction"></a>class mip::Action 
 アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
+public ActionType GetType() const  |  アクションの種類を取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="gettype-function"></a>GetType 関数
-[アクション](class_mip_action.md)の種類を取得します。
+アクションの種類を取得します。
 
   
-**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
+**戻り値**: ActionType: この基底クラスをキャストできる派生アクションの種類。

@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791448"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
@@ -30,12 +30,12 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 **注**  この SDK では iPod Touch はサポートされていません。
 
 
--   [必須コンポーネント](#prerequisites)
+-   [必要条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -54,7 +54,7 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>省略可
+## <a name="optional"></a>オプション
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for iOS (iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)」参照。
 
@@ -85,7 +85,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
     ![リソース バンドルの追加](../media/iOS-add-resource-bundle-02a.png)
 
 -   フレームワークをコピーしたときと同様に、 **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、 **[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
--   SDK は次のような他のフレームワークに依存しています:**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security**。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
+-   SDK は、**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security** などの他のフレームワークに依存しています。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
 
     **UIKit** と **Foundation** フレームワークが必要ですが、通常は既定で表示されます。
 
@@ -101,9 +101,9 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
-* [開始するには](get-started.md)
+* [作業開始](get-started.md)
 
 * [新機能](release-notes.md)
 

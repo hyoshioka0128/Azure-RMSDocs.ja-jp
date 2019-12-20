@@ -5,33 +5,33 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 02/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e325dc6c3b79cdd7e7720f0bca50d8bdda045979
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175431"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "69884733"
 ---
 # <a name="acquire-an-access-token-python"></a>アクセス トークンを取得する (Python)
 
-この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 有効な OAuth2 アクセス トークンは、認証のデリゲートの実装で必要です。
+この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 認証デリゲートの実装では、有効な OAuth2 アクセストークンが必要です。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
-以下のサンプルを実行します。
+次のサンプルを実行します。
 
-- Python 2.7 をインストールします。
+- Python 2.7 以降をインストールします。
 - プロジェクトに utils.h/cpp を実装します。 
-- Auth.py はプロジェクトに追加する必要があり、ビルドのバイナリと同じディレクトリに存在します。
-- 完全な[(MIP) SDK のセットアップと構成](setup-configure-mip.md)します。 その他のタスク間で、Azure Active Directory (Azure AD) テナント、クライアント アプリケーションを登録します。 Azure AD では、これは、トークンの取得ロジックで使用すると、クライアント ID とも呼ばれる、アプリケーション ID を提供します。
+- Auth.py をプロジェクトに追加し、ビルド時にバイナリと同じディレクトリに配置する必要があります。
+- 完成した[(MIP) SDK のセットアップと構成](setup-configure-mip.md)。 他のタスクでは、クライアントアプリケーションを Azure Active Directory (Azure AD) テナントに登録します。 Azure AD は、トークン取得ロジックで使用されるアプリケーション ID (クライアント ID とも呼ばれます) を提供します。
 
-このコードは、運用環境で使用目的としています。 開発と認証の概念についてのみ使用できます。 このサンプルは、クロス プラットフォームです。
+このコードは、運用環境で使用するためのものではありません。 これは、開発と認証の概念を理解するためにのみ使用できます。 このサンプルは、クロス プラットフォームです。
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-単純な認証の例で、単純なお見せしました`AcquireToken()`関数パラメーターがありませんでしたし、ハード コーディングされたトークンの値が返されます。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
+単純な認証の例では、パラメーターを使用せず、ハードコーディングされたトークン値を返す単純な `AcquireToken()` 関数について説明しました。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
 
 ### <a name="authh"></a>auth.h
 
@@ -42,9 +42,7 @@ auth.h では、`AcquireToken()` がオーバーロードされます。オー�
 #include <string>
 
 namespace sample {
-  namespace auth {
-    std::string AcquireToken();
-
+  namespace auth {    
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -76,9 +74,6 @@ using std::runtime_error;
 
 namespace sample {
     namespace auth {
-
-    string AcquireToken() { //ignore in this sample
-    }
 
     //This function implements token acquisition in the application by calling an external Python script.
     //The Python script requires username, password, clientId, resource, and authority.
@@ -122,15 +117,22 @@ namespace sample {
 
 ## <a name="python-script"></a>Python スクリプト
 
-このスクリプトは、シンプルな http 要求を使用して、認証トークンを取得します。 これは、サンプル アプリが認証トークンを取得するためのみに含まれており、実稼働のコードで使用されることは意図していません。 このスクリプトは、単純な古いユーザー名/パスワード http 認証をサポートするテナントに対してのみ動作します。 MFA または証明書ベースの認証は失敗します。
+このスクリプト[は、ADAL For Python を介して](https://github.com/AzureAD/azure-activedirectory-library-for-python)認証トークンを直接取得します。 このコードは、サンプルアプリで使用する認証トークンを取得する手段としてのみ含まれており、運用環境での使用を目的としたものではありません。 このスクリプトは、単純な古いユーザー名/パスワード http 認証をサポートするテナントに対してのみ動作します。 MFA または証明書ベースの認証は失敗します。
+
+> [!NOTE] 
+> このサンプルを実行する前に、次のコマンドのいずれかを実行して、ADAL for Python をインストールする必要があります。
+
+```shell
+pip install adal
+pip3 install adal
+```
 
 ```python
 import getopt
 import sys
 import json
-import urllib
-import urllib2
 import re
+from adal import AuthenticationContext
 
 def printUsage():
   print('auth.py -u <username> -p <password> -a <authority> -r <resource> -c <clientId>')
@@ -146,8 +148,9 @@ def main(argv):
   password = ''
   authority = ''
   resource = ''
-  clientId = ''
 
+  clientId = ''
+    
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -172,33 +175,13 @@ def main(argv):
     regex = re.compile('^(.*[\/])')
     match = regex.match(authority)
     authority = match.group()
-    authority = authority + 'token'
+    authority = authority + username.split('@')[1]
 
-  # Build REST call
-  headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Accept': 'application/json'
-  }
+  auth_context = AuthenticationContext(authority)
+  token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
+  print(token["accessToken"])
 
-  params = {
-    'resource': resource,
-    'client_id': clientId,
-    'grant_type': 'password',
-    'username': username,
-    'password': password
-  }
-
-  req = urllib2.Request(
-    url = authority,
-    headers = headers,
-    data = urllib.urlencode(params))
-
-  f = urllib2.urlopen(req)
-  response = f.read()
-  f.close()
-  sys.stdout.write(json.loads(response)['access_token'])
-
-if __name__ == '__main__':
+if __name__ == '__main__':  
   main(sys.argv[1:])
 ```
 

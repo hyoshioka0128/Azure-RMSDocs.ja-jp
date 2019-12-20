@@ -4,7 +4,7 @@ description: Microsoft 365 管理センターを使用する場合の Azure Righ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f2a685894f7745951d8944e096895061493ed4f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f3599957b636f90b1b838fd25e71532fa568331f
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788182"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934809"
 ---
 # <a name="how-to-activate-rights-management-protection-from-the-microsoft-365-admin-center"></a>Microsoft 365 管理センターから Rights Management 保護をアクティブ化する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Microsoft 365 管理センターから Azure Rights Management サービスにアクセスでき、かつご自分がグローバル管理者である場合は、次の手順を使用します。 
 
@@ -45,6 +45,6 @@ Azure Rights Management サービスをアクティブ化するには、[Azure I
 
 **[Rights Management はアクティブ化されています]** というテキストと、非アクティブ化するオプションが表示されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [Azure Information Protection からの保護サービスのアクティブ化の読み取りを](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)再開します。
 

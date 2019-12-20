@@ -4,7 +4,7 @@ description: Azure Information Protection の使用について、特に分類�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 238da139e7ef3a2226464002b8b151195d18e2d5
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808046"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73561426"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -25,36 +25,26 @@ ms.locfileid: "68808046"
 
 Azure Information Protection に関して、特に分類とラベル付けに関して質問はございますか。  ここで回答を探してみてください。 
 
-## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Azure Information Protection の分類機能はどのように使用しますか。
-
-[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルに従えば、わずか数分でこの動作を確認できます。
-
-追加の分類機能が利用可能になる時期については、[Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)および [Yammer サイト](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)での案内をご確認ください。 現在のリリースには、次のような制限がいくつかあります。
-
-- Office web apps (web 用 Office) にラベル付け機能がありません。
-
-- 分類およびラベル付けは Exchange Online や SharePoint Online とは統合されません。
-
-> [!NOTE]
-> **プレビュー段階**:
-> - 分類とラベル付け用の中央レポート。 詳細については、「[Central reporting for Azure Information Protection](reports-aip.md)」 (Azure Information Protection の中央レポート機能) を参照してください。
->
->**最近リリースされた機能**:
-> - モバイル デバイス (iOS および Android) および Mac コンピューター用の Office アプリに組み込まれたラベル付け機能。 詳細については、「[Office 内の文書やメールに機密ラベルを適用する](https://aka.ms/officemipdocs)」を参照してください。
-
-Azure Information Protection の [UserVoice サイト](https://msip.uservoice.com/)にアクセスし、新機能のご要望をお知らせください。また、リクエストへの投票も受け付けています。
-
 ## <a name="which-client-do-i-install-for-testing-new-functionality"></a>新しい機能をテストするためにどのクライアントをインストールしますか?
 
-現在、Windows には次の2つのクライアントがあります。 
+現時点では、Windows 用に2つの Azure Information Protection クライアントがあります。 
 
-- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**。Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビュー版が用意されています。
+- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**です: Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
 
 - Azure portal からラベルとポリシー設定をダウンロードする**Azure Information Protection クライアント (クラシック)** 。 このクライアントは、以前の一般公開バージョンのクライアント上に構築されます。
 
 現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
 
-機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)」をご覧ください。
+機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)」をご覧ください。
+
+## <a name="where-can-i-find-information-about-using-sensitivity-labels-in-office"></a>Office での機密ラベルの使用に関する情報はどこで入手できますか。
+
+Office ドキュメントの次のリソースを参照してください。
+
+- [Office アプリでの感度ラベルの動作](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+
+- [Office 内のドキュメントと電子メールに機密ラベルを適用する](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
+
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
@@ -70,7 +60,7 @@ Azure Information Protection の [UserVoice サイト](https://msip.uservoice.co
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
-No. 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
+いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
@@ -82,7 +72,7 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>分類が自動的に含まれるドキュメント テンプレートを作成できますか?
 
-はい。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それがご自身の要件を満たしていない場合は、好みの書式設定を持つドキュメント テンプレートを作成し、フィールド コードとして分類を追加することができます。 
+○ ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
 
 例として、ドキュメントのヘッダーに分類を表示するテーブルがあるとします。 または、概要向けにドキュメントの分類を参照する具体的な表現を使用します。
 
@@ -98,12 +88,14 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 現在のラベルの分類がドキュメントに表示され、この値はドキュメントを開くかテンプレートを使用するたびに自動的に更新されます。 このため、ラベルが変更されると、このフィールド コードに対して表示される分類がドキュメント内で自動的に更新されます。
 
-## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Azure Information Protection の電子メールの分類は、Exchange のメッセージ分類とどのように違いますか?
+## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>Azure Information Protection を使用した電子メールの分類は、Exchange メッセージ分類とはどのように異なりますか。
 
-Exchange のメッセージ分類は電子メールを分類する古い機能で、Azure Information Protection の分類機能とは別に実装されます。 
+Exchange メッセージ分類は、電子メールを分類できる古い機能であり、Azure Information Protection ラベルや分類を適用する機密ラベルとは別に実装されています。
 
-ただし、ユーザーが Outlook on the web や一部のモバイル用メール アプリケーションを使用して電子メールを分類する場合に、これら 2 つのソリューションを統合し、Azure Information Protection の分類および対応するラベル マーキングが自動的に追加されるようにすることができます。 
+ただし、この古い機能をラベルと統合すると、ユーザーが Outlook on the web および一部のモバイルメールアプリケーションを使用して電子メールを分類するときに、ラベル分類および対応するラベルマーキングが自動的に追加されるようになります。
 
 同じ手法を使用して、Outlook on the web とこれらのモバイル用メール アプリケーションで独自のラベルを使用できます。
 
-構成手順については、「[Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution (Exchange のメッセージ分類と Azure Information Protection を統合したモバイル デバイス用ラベル付けソリューション)](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution)」をご覧ください。
+Outlook を Exchange Online で使用している場合は、これを行う必要はないことに注意してください。これは、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security Center から機密ラベルを公開する場合に、組み込みのラベル付けをサポートするためです。、または Microsoft コンプライアンスセンター。
+
+Web 上の Outlook で組み込みのラベル付けを使用できない場合は、この回避策の構成手順を参照してください。[モバイルデバイスのラベル付けソリューションの Exchange メッセージ分類を Azure Information Protection と統合](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution)します。

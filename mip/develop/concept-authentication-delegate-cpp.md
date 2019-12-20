@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 20e82e52a293b7723513fbd0990a3d5e66ea568a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e3436acdd6a2900f4a21bb50b283d12065cd659b
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175532"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "69886261"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Microsoft Information Protection SDK - 認証委任の実装 (C++)
 
@@ -22,7 +22,7 @@ MIP SDK は認証チャレンジとトークンで応答を処理する、認証
 
 基底クラス `mip::AuthDelegate` を拡張するには、`sample::auth::AuthDelegateImpl` と呼ばれる新しいクラスを作成します。 このクラスは `AcquireOAuth2Token` 関数を実装し、認証パラメーターを取り入れるコンストラクターを設定します。
 
-### <a name="authdelegateimplh"></a>auth_delegate_impl.h
+### <a name="auth_delegate_implh"></a>auth_delegate_impl.h
 
 この例では、既定のコンストラクターがユーザー名、パスワード、およびアプリケーションの[アプリケーション ID](/azure/active-directory/develop/developer-glossary#application-id-client-id) のみを許可します。 これらは、プライベート変数 `mUserName`、`mPassword`、および `mClientId` に格納されます。
 
@@ -39,26 +39,29 @@ class AuthDelegateImpl final : public mip::AuthDelegate { //extend mip::AuthDele
 public:
   AuthDelegateImpl() = delete;
 
-  //constructor accepts username, password, and clientId, all plain strings.
-  AuthDelegateImpl(
-    const std::string& userName,
-    const std::string& password,
-    const std::string& clientId
-  );
+//constructor accepts username, password, and mip::ApplicationInfo.
+  AuthDelegateImpl::AuthDelegateImpl(
+    const mip::ApplicationInfo& applicationInfo,
+    std::string& username,
+    const std::string& password)
+    : mApplicationInfo(applicationInfo),
+      mUserName(username),
+      mPassword(password) {
+  }
 
   bool AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) override;
 
-private:
-  std::string mUserName;
-  std::string mPassword;
-  std::string mClientId;
+  private:
+    std::string mUserName;
+    std::string mPassword;
+    std::string mClientId;
+    mip::ApplicationInfo mApplicationInfo;
 };
-
 }
 }
 ```
 
-### <a name="authdelegateimplcpp"></a>auth_delegate_impl.cpp
+### <a name="auth_delegate_implcpp"></a>auth_delegate_impl.cpp
 
 OAuth2 プロバイダーへの呼び出しは、`AcquireOAuth2Token` で行われます。 例の `AcquireToken()` への 2 つの呼び出しを以下に示します。 実際には 1 回の呼び出しのみが行われます。 これらの実装については、「[次の手順](#next-steps)」以下のセクションで扱います。
 
@@ -78,9 +81,9 @@ AuthDelegateImpl::AuthDelegateImpl(
     const string& userName,
     const string& password,
     const string& clientId)
-    : mUserName(userName),
-    mPassword(password),
-    mClientId(clientId) {
+    : mApplicationInfo(applicationInfo),
+    mUserName(userName),
+    mPassword(password) {
 }
 
 //Here we could simply add our token acquisition code to AcquireOAuth2Token
@@ -97,7 +100,7 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
       string accessToken = sample::auth::AcquireToken();
 
       //Practical example for calling external OAuth2 library with provided authentication details.
-      string accessToken = sample::auth::AcquireToken(mUserName, mPassword, mClientId, challenge.GetAuthority(), challenge.GetResource());  
+      string accessToken = sample::auth::AcquireToken(mUserName, mPassword, mApplicationInfo.applicationId, challenge.GetAuthority(), challenge.GetResource());
 
       //set the passed in OAuth2Token value to the access token acquired by our provider
       token.SetAccessToken(accessToken);
@@ -107,7 +110,7 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 }
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 認証の実装を完了するには、`AcquireToken()` 関数の背後のコードを構築する必要があります。 以下の例では、トークンを取得する方法をいくつか説明します。
 

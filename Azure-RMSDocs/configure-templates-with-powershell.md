@@ -1,10 +1,10 @@
 ---
 title: 保護テンプレート用の PowerShell - Azure Information Protection
-description: Azure Portal で保護テンプレートを作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 さらに、テナント間でテンプレートをコピーしたり、多言語の名前や説明など、テンプレート内の複雑なプロパティを一括編集したりすることができます。
+description: PowerShell を使用して Azure Information Protection の保護テンプレートを作成および管理します。
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 105286f907df4f8c8f0f329e4467d4dc1d95422e
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 12456200687cd907bb82a8b489414d3c9fa91bbe
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791542"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934927"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>保護テンプレート用の PowerShell リファレンス
 
@@ -52,6 +52,6 @@ Azure Information Protection の保護設定は、保護テンプレートに保
 
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
 

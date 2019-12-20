@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 883dc9375e3e862726dd4f0ccf55985b3c8ddd61
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792809"
 ---
 # <a name="api-sdk-42-reference"></a>API SDK 4.2 リファレンス
@@ -34,9 +34,9 @@ Azure Information Protection SDK 4.2 は、複数のオペレーティング �
 ### <a name="linux"></a>Linux
 - [Linux API リファレンス](linux-c-api-reference.md) - Linux オペレーティング システムの各種エディションのサポート向けの API リファレンスは GitHub でホストされています: [C++ 用の RMS SDK](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)。
 
-### <a name="microsoft"></a>マイクロソフト
+### <a name="microsoft"></a>Microsoft
 - [Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx) - Windows Phone および Windows ストア アプリケーション SDK 向けの API リファレンスです。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
-* [開始するには](get-started.md)
+* [作業開始](get-started.md)

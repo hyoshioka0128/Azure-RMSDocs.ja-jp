@@ -4,28 +4,29 @@ description: Azure Information Protection スキャナーを使用して、オ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 11/12/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 888ddafcea6dd855d970fc959e1bb7447c3d2573
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
+ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790419"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73979974"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
->
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)* "
 
 このクイック スタートでは、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
 
-注: このクイックスタートでは現在の一般提供バージョンのスキャナーを使います。これでは、前のバージョンで使われていた PowerShell コマンドレットではなく Azure portal が構成用に使われます。
+> [!NOTE]
+> このクイックスタートは、Azure Information Protection クライアント (クラシック) の現在一般提供されているバージョン、またはスキャナーのプレビュー バージョンが含まれる Azure Information Protection 統合ラベル付けクライアントの現在一般提供されているバージョンで使用できます。
+>  
+> これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 
 この構成は 10 分未満で完了します。
 
@@ -37,9 +38,11 @@ ms.locfileid: "68790419"
     
     このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure Information Protection クライアントがコンピューターにインストールされている。 
+2. 次のいずれかの Azure Information Protection クライアントがコンピューターにインストールされている。
     
-    クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    - クラシック クライアント: このクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    
+    - 統合ラベル付けクライアント: このクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection_UL.exe** をダウンロードします。
     
 3. SQL Server Express もコンピューターにインストールされている。
     
@@ -55,47 +58,49 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 1. コンピューターにローカル フォルダーを作成します。 たとえば、ローカルの C ドライブ上の **TestScanner** です。
 
-2. **4242-4242-4242-4242** というテキスト (テスト用の既知のクレジット カード番号) を含む Word ドキュメントを作成して、そのフォルダー内に保存します。
+2. **Credit card: 4242-4242-4242-4242** というテキストを含む Word 文書を作成して、そのフォルダー内に保存します。
 
 ## <a name="configure-a-profile-for-the-scanner"></a>スキャナー用のプロファイルを構成する
 
 スキャナーをインストールする前に、Azure portal でそのためのプロファイルを作成します。 このプロファイルには、スキャナーの設定と、スキャンするデータ リポジトリの場所が含まれます。
 
-1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、 **[Azure Information Protection]** ブレードに移動します。 
+1. 新しいブラウザー ウィンドウを開いて、[Azure portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、 **[Azure Information Protection]** ペインに移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
     
-2. **[スキャナー]** メニュー オプションを見つけて、 **[プロファイル]** を選択します。
+2. 左側のペインで **[スキャナー]** オプションを見つけて、 **[プロファイル]** を選択します。
 
-3. **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードで、 **[追加]** を選択します。
+3. **[Azure Information Protection] - [プロファイル]** ペインで、 **[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのプロファイルを追加する](./media/scanner-add-profile.png)
 
-4. **[新しいプロファイルを追加する]** ブレードで、その構成設定とスキャンするデータ リポジトリを識別するために使うスキャナーの名前を指定します。 たとえば、このクイックスタートでは、**Quickstart** を指定できます。 後でスキャナーをインストールするときに、同じプロファイル名を指定する必要があります。
+4. **[新しいプロファイルを追加する]** ペインで、その構成設定とスキャンするデータ リポジトリを識別するために使うスキャナーの名前を指定します。 たとえば、このクイックスタートでは、**Quickstart** を指定できます。 後でスキャナーをインストールするときに、同じプロファイル名を指定する必要があります。
     
     スキャナーのプロファイル名を識別するために、必要に応じて管理目的の説明を指定します。
 
-5. このクイックスタートでは、設定を 1 つだけ選択します。 **[ポリシーの適用]** に対して、 **[オフ]** を選択します。 次に **[保存]** を選択しますが、ブレードは閉じないでください。
+5. **[ポリシーの適用]** セクションを探します。このクイックスタートでは、このセクションで 1 つの設定のみを選択します。 **[強制]** で **[オフ]** を選択します。 次に **[保存]** を選択しますが、ペインは閉じないでください。
     
-    この設定では、指定したデータ リポジトリ内にあるすべてのファイルの 1 回限りの探索を実行するようにスキャナーを構成します。 このスキャンでは、機密情報の既知の種類がすべて検索されます。また、最初に Azure Information Protection ラベルやポリシー設定を構成する必要はありません
+    この設定では、指定したデータ リポジトリ内にあるすべてのファイルの 1 回限りの探索を実行するようにスキャナーを構成します。 このスキャンでは、機密情報の既知の種類がすべて検索されます。また、最初に Azure Information Protection ラベルやポリシー設定を構成する必要はありません。
 
 6. これでプロファイルの作成と保存が完了したので、 **[リポジトリの構成]** オプションに戻って、スキャンするデータ ストアとしてローカル フォルダーを指定する準備が整いました。
     
-    引き続き **[新しいプロファイルを追加する]** ブレード上で、 **[リポジトリの構成]** を選択して **[リポジトリ]** ブレードを開きます。
+    引き続き **[新しいプロファイルを追加する]** ペインで、 **[リポジトリの構成]** を選択して **[リポジトリ]** ペインを開きます。
     
     ![Azure Information Protection スキャナーのデータ リポジトリを構成する](./media/scanner-repositories-bar.png)
 
-7. **[リポジトリ]** ブレードで、 **[追加]** を選択します。
+7. **[リポジトリ]** ペインで、 **[追加]** を選択します。
     
     ![Azure Information Protection スキャナーのデータ リポジトリを追加する](./media/scanner-repository-add.png)
 
-8. **[リポジトリ]** ブレード上で、一番最初の手順で作成したローカル フォルダーを指定します。 例: `C:\TestScanner`
+8. **[リポジトリ]** ペインで、一番最初のステップで作成したローカル フォルダーを指定します。 例: `C:\TestScanner`
     
-    このブレード上の残りの設定に関しては、変更せずに **[既定のプロファイル]** のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
+    このペインの残りの設定に関しては、変更せずに **[既定のプロファイル]** のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
     
     **[保存]** を選択します。
 
-9. これで **[新しいプロファイルを追加する]** ブレードを閉じることができ、 **[Azure Information Protection - Profiles]\(Azure Information Protection - プロファイル\)** ブレードにご自分のプロファイル名が表示されます。 **[スケジュール]** 列には **[手動]** が表示され、 **[強制]** 列は空白です。
+9. **[Azure Information Protection] - [プロファイル]** ペインに戻ると、自分のプロファイルが表示されています。 **[スケジュール]** 列には **[手動]** が表示され、 **[強制]** 列は空白です。 
+    
+    このプロファイル用のスキャナーをまだインストールしていないので、 **[ノード]** 列には **0** が表示されます。
 
 これで、先ほど作成したスキャナーのプロファイルを使ってスキャナーをインストールする準備ができました。
 
@@ -111,15 +116,19 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>スキャンの開始および完了の確認
 
-1. 再び Azure portal で、Azure Information Protection に戻ってスキャナーを起動します。 **[スキャナー]** メニュー オプションから、 **[ノード]** を選択します。 自分のコンピューター名を選択したら、 **[今すぐスキャン]** オプションを選択します。
+1. Azure portal に戻り、 **[Azure Information Protection] - [プロファイル]** ペインを最新の情報に更新すると、 **[ノード]** 列に **1** と表示されるようになります。
+
+2. ご自身のプロファイル名を選択してから、 **[今すぐスキャン]** オプションを選択します。
     
     ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
+    
+    プロファイルを選択した後にこのオプションを使用できない場合は、スキャナーが Azure Information Protection に接続されていません。 構成とインターネット接続を確認します。
 
-2. 調べる対象が小さなファイル 1 つだけなので、この最初のテスト スキャンは非常に高速です。
+3. 調べる対象が小さなファイル 1 つだけなので、この最初のテスト スキャンは非常に高速です。
     
-    - **[Azure Information Protection - Nodes]\(Azure Information Protection - ノード\)** ブレードで、 **[状態]** 列の値が **[スキャン]** から **[アイドル]** に変化します。
+    **[前回のスキャン結果]** 列と **[前回のスキャン (終了時刻)]** 列に値が表示されるまで待ちます。
     
-    - または、ローカル Windows イベント ログの **[アプリケーションとサービス]** の **[Azure Information Protection]** を確認します。 **MSIP.Scanner** プロセスの情報イベント ID **911** を確認します。 イベント ログ エントリには、スキャンの結果の概要も含まれています。
+    または、クラシック クライアントのスキャナーの場合のみ: ローカル Windows イベント ログの **[アプリケーションとサービス]** の **[Azure Information Protection]** を確認します。 **MSIP.Scanner** プロセスの情報イベント ID **911** を確認します。 イベント ログ エントリには、スキャンの結果の概要も含まれています。
 
 ## <a name="see-detailed-results"></a>詳細結果を確認する
 
@@ -129,8 +138,7 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 
 ## <a name="scan-your-own-data"></a>独自のデータをスキャンする
 
-1. 今回は、機密情報をスキャンする独自のオンプレミスのデータ ストアを指定して、スキャナー プロファイルを編集して新しいデータ リポジトリを追加します。 
-    
+1. 今回は、機密情報をスキャンする独自のオンプレミスのデータ ストアを指定して、スキャナー プロファイルを編集して新しいデータ リポジトリを追加します。     
     ローカル フォルダー、ネットワーク共有 (UNC パス)、または SharePoint サイトや SharePoint ライブラリの SharePoint サーバーの URL を指定することができます。 
     
     - ローカル フォルダーについての例:
@@ -145,7 +153,7 @@ Excel では、データ ストア リポジトリとファイル名が最初の
         
             http://sp2016/Shared Documents
 
-2. もう一度スキャナーを再起動します。 **[スキャナー]** メニュー オプションから、 **[ノード]** を選択し、自分のコンピューター名を選択した後、 **[今すぐスキャン]** オプションを選択します。
+2. もう一度スキャナーを再起動します。 **[Azure Information Protection] - [プロファイル]** ペインで、プロファイルが選択されていることを確認し、 **[今すぐスキャン]** オプションを選択します。
     
     ![Azure Information Protection スキャナーのスキャンを開始する](./media/scanner-scan-now.png)
 
@@ -165,7 +173,9 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 
 このコマンドでは以下の項目は削除されません。このクイック スタートの後にこれらを削除する場合は、手動で削除する必要があります。
 
-- Azure Information Protection スキャナーをインストールしたときに、Install-AIPScanner コマンドレットを実行することによって作成された **AIPScanner_\<プロファイル>** という名前の SQL Server データベース。 
+- Azure Information Protection スキャナーをインストールしたときに、Install-AIPScanner コマンドレットを実行することによって作成された SQL Server データベース:
+    - クラシック クライアントの場合: **AIPScanner_\<profile>**
+    - 統合ラベル付けクライアントの場合: **AIPScannerUL_\<profile_name>**
 
 - %*localappdata*%\Microsoft\MSIP\Scanner\Reports にあるスキャナー レポート。
 
@@ -174,10 +184,14 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 
 ## <a name="next-steps"></a>次の手順
 
-このクイック スタートには、スキャナーがネットワーク共有内にある機密情報を検索するしくみを簡単に確認するための最小構成が含まれています。 運用環境にスキャナーをインストールする準備が整った場合は、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。
+このクイックスタートには、オンプレミスのデータ ストア内にある機密情報がスキャナーによって検索されるしくみを簡単に確認するための最小構成が含まれています。 運用環境にスキャナーをインストールする準備が整った場合は、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。
 
-機密情報が含まれているファイルを分類して保護する場合は、自動的な分類と保護のために Azure Information Protection ラベルを構成する必要があります。
+機密情報が含まれているファイルを分類して保護する場合は、自動的な分類と保護のためにラベルを構成する必要があります。
 
-- [Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)
+- クラシック クライアントの場合:
+    - [Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)
+    - [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)
 
-- [Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)
+- 統合ラベル付けクライアントの場合:
+    - [機密ラベルをコンテンツに自動的に適用する](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
+    - [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)

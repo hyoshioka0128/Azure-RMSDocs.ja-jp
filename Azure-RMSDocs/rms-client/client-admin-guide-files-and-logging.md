@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのク�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6ea0c6787680a86fde0c3a7d2919caac4fcdd811
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9011a6b7fc282c1e170959c31ce1e01bc22aa9c5
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793767"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935301"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>管理者ガイド: Azure Information Protection クライアントのファイルとクライアント使用状況ログ
 
->*適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows 10、Windows 8.1、Windows 8、Windows 7 SP1、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Azure Information Protection クライアントをインストールした後、どこにファイルがあるかを知り、クライアントがどのように使われているのかを監視することが必要になる場合があります。
 
@@ -54,23 +54,23 @@ Azure Information Protection クライアントをインストールした後、
 
     - ラベルの設定: 情報 ID 101
     
-    - ラベルの設定 (下位): 情報 ID 101
+    - ラベルの設定 (下): 情報 ID 101
     
     - ラベルの設定 (上位): 情報 ID 101
     
     - ラベルの削除: 情報 ID 104
     
-    - 推奨されるラベルのヒント: 情報 105
+    - 推奨ラベルのヒント: 情報105
     
     - カスタム保護の適用: 情報 ID 201
     
     - カスタム保護の削除: 情報 ID 202
     
-    - Outlook 警告メッセージ: 情報 ID 301
+    - Outlook の警告メッセージ: 情報 ID 301
     
-    - Outlook 理由メッセージ: 情報 ID 302
+    - Outlook でメッセージを表示する: 情報 ID 302
     
-    - Outlook ブロック メッセージ: 情報 ID 303
+    - Outlook ブロックメッセージ: 情報 ID 303
     
     - サインイン (操作): 情報 ID 902
     
@@ -86,7 +86,7 @@ Azure Information Protection クライアントをインストールした後、
     
     - システム (サインインおよびダウンロードポリシー用)
     
-    - 既定値
+    - 既定
     
 - 操作前後のラベル 
     
@@ -96,11 +96,10 @@ Azure Information Protection クライアントをインストールした後、
 
 - 指定したユーザー、グループ、または組織の[エンコーディング名に基づく使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)が含まれるカスタム アクセス許可 (該当する場合)
 
-Outlook の警告、ブロック、およびブロックメッセージのイベントには、現在の一般公開クライアントとクライアントの詳細設定が必要です。 詳細については、「[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)」を参照してください。
+Outlook の警告、ブロック、およびブロックメッセージのイベントには、高度なクライアント設定が必要です。 詳細については、「[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)」を参照してください。
 
-保護サービスの使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](../log-analyze-usage.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 Azure Information Protection クライアントに関連付けられているすべてのログ ファイルがわかったので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
 
 - [カスタマイズ](client-admin-guide-customizations.md)

@@ -4,7 +4,7 @@ description: Azure Information Protection から保護サービスの PowerShell
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1cfd0f1337556ae682022ea951194017f94d9bb4
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 39746dbd2959b2d3fcff90fbf367481d09bb56d4
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788190"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934843"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>PowerShell を使用した Azure Information Protection からの保護の管理
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection から、PowerShell を使用して保護サービスを管理する必要がありますか。 すべての構成を Azure portal または Microsoft 365 管理センターで行える場合は、使用する必要がない場合もあります。 ただし、一部の詳細な構成には PowerShell を使用する必要があり、効率的なコマンドライン コントロールとスクリプトのために PowerShell の使用を選ぶ可能性もあります。
 
@@ -45,7 +45,7 @@ Azure Information Protection から、PowerShell を使用して保護サービ�
 |Azure Information Protection のドキュメント追跡サイトを管理する。|[-AipServiceDocumentTrackingFeature を無効にします。](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature)<br /><br />[-AipServiceDocumentTrackingFeature の有効化](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)<br /><br />[Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)<br /><br />[AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/set-aipservicedonottrackusergroup)<br /><br />[AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Clear-AipServiceDoNotTrackUserGroup)<br /><br />[Get-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/get-AipServiceDoNotTrackUserGroup)<br /><br />[Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)<br /><br />[Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)|
 |Azure Rights Management サービスの段階的なデプロイのためのオンボード コントロールを構成する。|[Get-Aipserviceonworkplace Ingcontrolpolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy)<br /><br />[設定-Aipserviceonworkplace Ingcontrolpolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy)|
 |組織の Rights Management テンプレートを作成および管理する。<br /><br />PowerShell の方がきめ細かく制御できますが、これらのアクションの大部分は Azure Portal で実行することもできます。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。|[AipServiceTemplate を追加します。](/powershell/module/aipservice/add-aipservicetemplate)<br /><br />[Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)<br /><br />[Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)<br /><br />[Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)<br /><br />[インポート-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetemplate)<br /><br />[AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)<br /><br />[-AipServiceTemplate を削除します。](/powershell/module/aipservice/remove-aipservicetemplate)<br /><br />[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)|
-|インターネット接続を利用しないで、組織によって保護されたコンテンツにアクセスできる最大日数を構成します (使用ライセンスの有効期間)。|[AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/get-aipservicemaxuselicensevaliditytime)<br /><br />[AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime)|
+|インターネットに接続せずに、組織が保護するコンテンツにアクセスできる最大日数を構成します (使用ライセンスの有効期間)。|[AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/get-aipservicemaxuselicensevaliditytime)<br /><br />[AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime)|
 |組織の Rights Management のスーパー ユーザー機能を管理する。|[有効にする-Aipサービス Uperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)<br /><br />[無効にする-Aipサービス Uperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature)<br /><br />[AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)<br /><br />[AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)<br /><br />[AipServiceSuperUser](/powershell/module/aipservice/remove-aipservicesuperuser)<br /><br />[AAipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup)<br /><br />[AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup)<br /><br />[AipServiceSuperUserGroup](/powershell/module/aipservice/clear-aipservicesuperusergroup)|
 |組織の Rights Management サービスの管理が許可されているユーザーとグループを管理する。|[Aip-Serviceroleby Administrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator)<br /><br />[Aip-Serviceroleby Administrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator)<br /><br />[Aip-Serviceroleby Administrator](/powershell/module/aipservice/remove-aipservicerolebasedadministrator)|
 |組織の Rights Management 管理タスクのログを取得する。|[Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)|

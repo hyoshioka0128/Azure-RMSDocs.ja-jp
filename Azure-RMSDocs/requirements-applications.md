@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,21 +13,21 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dfc933dfa753ecee2bf23861d8151df02fe172b5
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 81c95640f22e6234a3cc6d3487db6c12345a57b8
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808105"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73710239"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-次の各表を使用して、Azure Information Protection のデータ保護を提供する、Azure Rights Management サービス (Azure RMS) をネイティブでサポートするアプリケーションおよびソリューションを特定します。
+次の情報を使用して、Azure Rights Management サービス (Azure RMS) をネイティブでサポートしているアプリケーションとソリューションを特定し、Azure Information Protection のデータ保護を提供します。
 
-これらのアプリケーションおよびソリューションでは、Rights Management サポートは、使用制限をサポートするために Rights Management API を使用して密接に統合されています。 このようなアプリケーションおよびソリューションは、"RMS 対応" とも呼ばれます。
+これらのアプリケーションとソリューションでは、Rights Management Api を使用して Rights Management サポートを緊密に統合し、[使用制限](configure-usage-rights.md)をサポートします。 このようなアプリケーションおよびソリューションは、"RMS 対応" とも呼ばれます。
 
 別途明記されていない限り、サポートされる機能は Azure RMS と AD RMS の両方に適用されます。 また、iOS、Android、macOS、Windows Phone 8.1 で AD RMS をサポートするには、[Active Directory Rights Management サービス モバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))が必要です。
 
@@ -39,24 +39,24 @@ ms.locfileid: "68808105"
 
 表の列に関する情報
 
--   **電子メール**: 表示されている電子メール クライアントは、電子メール メッセージ自体を保護できるため、まだ保護されていない添付の Office ファイルも自動的に保護されます。 このシナリオでは、クライアントのプレビュー機能で、許可された受信者に対して保護されたコンテンツ (メッセージと添付ファイル) を表示できます。 ただし、電子メール メッセージが保護さておらず、添付ファイルが保護されている場合、クライアントのプレビュー機能では、許可された受信者に対する場合も保護された添付ファイルを表示できません。 
+-   **電子メール**: 表示されている電子メール クライアントは、電子メール メッセージを保護できるため、まだ保護されていない添付の Office ファイルも自動的に保護されます。 このシナリオでは、クライアントのプレビュー機能で、許可された受信者に対して保護されたコンテンツ (メッセージと添付ファイル) を表示できます。 ただし、電子メール メッセージが保護さておらず、添付ファイルが保護されている場合、クライアントのプレビュー機能では、許可された受信者に対する場合も保護された添付ファイルを表示できません。 
     
-    ヒント :電子メールの保護をサポートしていない電子メール クライアントの場合は、[Exchange Online メール フロー ルールを使用してこの保護を適用する](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8)ことを検討してください。
+    ヒント: 電子メールの保護をサポートしていない電子メールクライアントの場合は、「[Office 365 でメール メッセージを暗号化するメール フロー ルールを定義する](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8)」の使用を検討してください。
 
 -   **他のファイルの種類**: テキスト ファイルと画像ファイルには、.txt、.xml、.jpg、.jpeg などのファイル名拡張子が付いているファイルがあります。 これらのファイルでは、Rights Management によりネイティブで保護された後に、ファイル名拡張子が変更され、読み取り専用になります。 ネイティブで保護できないファイルでは、Rights Management によって一般的に保護された後に、ファイル名拡張子が .pfile になります。 詳細については、Azure Information Protection クライアント管理者ガイドの[サポートされるファイルの種類](./rms-client/client-admin-guide-file-types.md)に関する記述を参照してください。
 
 
-|**デバイス オペレーティング システム**|Word、Excel、PowerPoint|Email|他のファイルの種類|
+|**デバイス オペレーティング システム**|Word、Excel、PowerPoint|電子メール|他のファイルの種類|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 365 アプリ [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Web 用 Office (保護されたドキュメントの表示) [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web ブラウザー [[4]](#footnote-4)<br /><br />Windows メール[[5]](#footnote-5) |Windows 用 Azure Information Protection クライアント: テキスト、画像、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
-|**Android**|GigaTrust<br /><br /> Office Mobile <br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />iPad および iPhone 用 Outlook [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs:Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />Office Mobile (機密ラベルを使用しない場合、保護されたドキュメントの表示と編集に制限) <br /><br />Web ブラウザー [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 以降) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
+|**Windows**|Office 365 アプリ [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Web 用 Office (保護されたドキュメントの表示) [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Office 365 ProPlus の Outlook<br /><br />Web ブラウザー [[4]](#footnote-4)<br /><br />Windows メール[[5]](#footnote-5) |Office 365 アプリからの Visio、Office 2019、および Office 2016: vsdm、.vsdx、vssm、vstm、vssx、.vstx <br /><br />Windows 用 Azure Information Protection クライアント: テキスト、イメージ、pfile<br /><br />AutoCAD 用 SealPath RMS プラグイン: .dwg|
+|**Android**|GigaTrust<br /><br /> Office Mobile <br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web ブラウザー [[3]](#footnote-3)|Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />iPad および iPhone 用 Outlook [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)<br /><br />TITUS Docs: Pfile|
+|**Outlook Web Access (OWA)**|GigaTrust App for Android<br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />Office Mobile (機密ラベルを使用しない場合、保護されたドキュメントの表示と編集に制限) <br /><br />Web ブラウザー [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection アプリ (保護された電子メールの表示)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook for Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 以降) [[5]](#footnote-5)<br /><br />TITUS Classification for Mobile <br /><br />Web ブラウザー [[4]](#footnote-4)|Azure Information Protection アプリ (保護されたテキストとイメージの表示)|
 |**macOS**|Office 365 アプリ<br /><br />Office 2019 for Mac<br /><br />Office 2016 for Mac<br /><br />Web 用 Office [[2]](#footnote-2)<br /><br />Web ブラウザー [[3]](#footnote-3)|Outlook 2019 for Mac<br /><br /> Outlook 2016 for Mac<br /><br />Web ブラウザー [[4]](#footnote-4)|RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)|
-|**Windows 10 Mobile**|Office Mobile アプリ (Azure RMS で保護されたドキュメントの表示) <br /><br />Web ブラウザー [[3]](#footnote-3)|Citrix WorxMail <br /><br />Outlook メール (保護されたメールの表示) <br /><br />Web ブラウザー [[4]](#footnote-4)|サポートなし|
-|**Blackberry 10**|Web ブラウザー [[3]](#footnote-3)|Blackberry の電子メール [[5]](#footnote-5) <br /><br />Web ブラウザー [[4]](#footnote-4)|サポートなし|
+|**Windows 10 Mobile**|Office Mobile アプリ (Azure RMS で保護されたドキュメントの表示) <br /><br />Web ブラウザー [[3]](#footnote-3)|Citrix WorxMail <br /><br />Outlook メール (保護されたメールの表示) <br /><br />Web ブラウザー [[4]](#footnote-4)|サポートされていません。|
+|**Blackberry 10**|Web ブラウザー [[3]](#footnote-3)|Blackberry の電子メール [[5]](#footnote-5) <br /><br />Web ブラウザー [[4]](#footnote-4)|サポートされていません。|
 
-###### <a name="footnote-1"></a>脚注 1
-次の値が含まれます。 
+###### <a name="footnote-1"></a>脚注 1:
+主な機能: 
 - ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ
 - Office 365 ProPlus アプリ
 
@@ -80,7 +80,7 @@ Exchange ActiveSync IRM が有効になっていないために、電子メー�
 
 Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケーションと緊密に統合されています。多くの場合、この機能は Information Rights Management (IRM) と呼ばれます。 
 
-参照:[Office アプリケーション サービスの説明](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+関連項目: [Office アプリケーション サービスの説明](https://technet.microsoft.com/library/office-applications-service-description.aspx)
 
 #### <a name="windows-computers-for-information-rights-management-irm"></a>Information Rights Management (IRM) 用の Windows コンピューター
 
@@ -124,7 +124,7 @@ Office Professional Plus 2010 Service Pack 2 または Office Professional 2010 
 
 Office for Mac 2019 および Office for Mac 2016 のすべてのエディションで、保護されたコンテンツの使用がサポートされます。
 
-ヒント :Office for Mac を使用してドキュメントの保護を開始するには、次の FAQ が役に立ちます: [ドキュメントを保護および追跡するように Mac コンピューターを設定するにはどうすればよいのですか?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
+ヒント: Office for Mac を使用してドキュメントの保護を開始するには、よくあるご質問の「[ドキュメントを保護および追跡するように Mac コンピューターを設定するにはどうすればよいのですか?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)」が役に立ちます。
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Azure Information Protection アプリに関する詳細
 
@@ -139,9 +139,13 @@ iOS デバイスや Android デバイスを Microsoft Intune で登録してい�
 
 詳細については、次のリソースを参照してください。
 
-- [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
+- Azure Information Protection クライアント管理者ガイド:
+    - [統一されたラベル付けクライアント](./rms-client/clientv2-admin-guide.md)
+    - [従来のクライアント](./rms-client/client-admin-guide.md)
 
-- [Azure Information Protection クライアントユーザー ガイド](./rms-client/client-user-guide.md)
+- Azure Information Protection クライアントユーザーガイド:
+    - [統一されたラベル付けクライアント](./rms-client/clientv2-user-guide.md)
+    - [従来のクライアント](./rms-client/client-user-guide.md)
 
 - [iOS 用と Android 用の Azure Information Protection の FAQ](./rms-client/mobile-app-faq.md)
 
@@ -178,34 +182,16 @@ Azure RMS では、現在のところ以下のアプリケーションはサポ�
 
 また、Azure Information Protection クライアントには次の制限があります。
 
-- Windows コンピューターの場合:Windows 7 Service Pack 1 以降のバージョンが必要です。
+- Windows コンピューターの場合: Windows 7 Service Pack 1 以降が必要です
 
 ## <a name="rms-enlightened-solutions"></a>RMS 対応ソリューション
 
-次の表に、ソフトウェア ベンダーによる RMS 対応のソリューションを示します。
+Azure Rights Management サービスと Azure Information Protection をサポートするソリューションの最新情報については、ブログの投稿「 [Microsoft Ignite 2019 – microsoft Information Protection Solutions Partner エコシステムショーケース](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024)」を参照してください。
 
-御社がソフトウェア ベンダーで、御社のソリューションがこの表に該当するにもかかわらず表示されていない場合は、Azure AD でアプリケーションを登録してください。 詳細については、「[Azure AD でアプリの登録と RMS の有効化を行う方法](./develop/authentication-integration.md)」を参照してください。
-
-
-|製品|ベンダー|説明|
-|-------------------------------|---------------------------|-----------------|
-|Absolute|Absolute|データ損失防止 (DLP) を使用したコンテンツの保護。|
-|コンテンツ保管ボックス|VMware|保護されたコンテンツの保管、使用、および作成。|
-|Controle|TakeControle|ラベル付けおよび保護を使用した eDiscovery。|
-|Forcepoint|Forcepoint DLP|組織のデータのセキュリティ ポリシーを適用するエンドポイント データ損失防止 (DLP) ソリューション。|
-|Halocore|Secude|SAP 環境からエクスポートされたファイルの保護。|
-|MaaS 360|IBM|ドキュメントの使用および保護のための統合。|
-|Mobiliya|Mobiliya|EMC Documentum レポジトリのドキュメントのセキュリティ保護。
-|Ramessys|Ramessys|Chemcart と Documentum の統合。
-|Sealpath|Sealpath Technologies|AutoCAD や Siemens Jt2GO などの CAD デザイン ツールとの統合。
-|SecRMM|Sqaudra Technologies |外付けメディアのドキュメント保護。
-|Security Sheriff|CryptZone |分類およびアクセス許可に基づいた SharePoint 上のアクセス管理およびドキュメント保護。
-|Symantec DLP|Symantec |保護されたファイルの検出と監視。
-
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
-これらの最も一般的に使用されるアプリケーションが Azure RMS をサポートする方法の詳細については、「[アプリケーションによる Azure Rights Management サービスのサポート](./applications-support.md)」をご覧ください。
+最もよく使用されるアプリケーションが Azure Rights Management サービスをサポートする方法の詳細については、「[アプリケーションが azure Rights Management サービスをサポートする方法](./applications-support.md)」を参照してください。
 
-Azure RMS で最も一般的に使用されるアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
+Azure Rights Management サービスで最もよく使用されるアプリケーションを構成する方法の詳細については、「 [azure Rights Management 用のアプリケーションの構成](configure-applications.md)」を参照してください。
 

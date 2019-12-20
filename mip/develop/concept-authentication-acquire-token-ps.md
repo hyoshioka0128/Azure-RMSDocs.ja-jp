@@ -8,27 +8,27 @@ ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175311"
 ---
 # <a name="acquire-an-access-token-powershell"></a>アクセス トークンを取得する (PowerShell)
 
-この例では、OAuth2 トークンを取得する外部の PowerShell スクリプトを呼び出す方法を示します。 有効な OAuth2 アクセス トークンは、認証のデリゲートの実装で必要です。
+次の例は、外部 PowerShell スクリプトを呼び出して OAuth2 トークンを取得する方法を示しています。 認証デリゲートの実装では、有効な OAuth2 アクセストークンが必要です。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必要条件
 
-- 完全な[(MIP) SDK のセットアップと構成](setup-configure-mip.md)します。 その他のタスク間で、Azure Active Directory (Azure AD) テナント、クライアント アプリケーションを登録します。 Azure AD では、これは、トークンの取得ロジックで使用すると、クライアント ID とも呼ばれる、アプリケーション ID を提供します。
+- 完成した[(MIP) SDK のセットアップと構成](setup-configure-mip.md)。 他のタスクでは、クライアントアプリケーションを Azure Active Directory (Azure AD) テナントに登録します。 Azure AD は、トークン取得ロジックで使用されるアプリケーション ID (クライアント ID とも呼ばれます) を提供します。
 
-このコードは、運用環境で使用目的としています。 開発と認証の概念についてのみ使用できます。 
+このコードは、運用環境で使用するためのものではありません。 これは、開発と認証の概念を理解するためにのみ使用できます。 
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
 ### <a name="authh"></a>auth.h
 
-AcquireToken という単一の関数を作成します。 戻り値になるため、ハードコーディングこのチュートリアルでは、パラメーターを受け付けずお文字列 (トークン) を返します。
+AcquireToken という単一の関数を作成します。 このチュートリアルでは戻り値をハードコーディングするため、パラメーターを受け入れず、文字列 (トークン) を返します。
 
 ```cpp
 //auth.h
@@ -43,7 +43,7 @@ namespace sample {
 
 ### <a name="authcpp"></a>auth.cpp
 
-ソース ファイルは、後の手順で、ハードコーディングされるトークンの値を返します。
+ソースファイルは、後の手順でハードコーディングされるトークン値を返します。
 
 ```cpp
 //auth.cpp
@@ -66,7 +66,7 @@ namespace sample {
 
 ### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>PS ギャラリーから [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) をインストールする
 
-既に完了している場合は、この手順をスキップすることができます[(MIP) SDK のセットアップと構成](setup-configure-mip.md)します。
+以前に[(MIP) SDK のセットアップと構成](setup-configure-mip.md)を完了している場合は、この手順を省略できます。
 
 ```PowerShell
 Install-Module -Name ADAL.PS

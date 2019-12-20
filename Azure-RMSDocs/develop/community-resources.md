@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 6a58d8b9b1a445a8a41ba428ea1e40af6989dbf9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788558"
 ---
-# <a name="community-resources"></a>コミュニティ リソース
+# <a name="community-resources"></a>コミュニティのリソース
 
 Active Directory Rights Management サービスは、複数のプラットフォームで、拡大を続ける開発者コミュニティによる力強いサポートを受けています。
 

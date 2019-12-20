@@ -1,38 +1,33 @@
 ---
 title: class mip::ProtectionEngine
-description: Mip::protectionengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: Microsoft Information Protection (MIP) SDK の mip::p rotectionengine クラスについて説明します。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 60a61f5e06b5e76cbf0c557e7d489a8d618a8261
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 9eb44a39f32c2997729e6d77ddace96c580328cd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173157"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73557738"
 ---
 # <a name="class-mipprotectionengine"></a>class mip::ProtectionEngine 
 特定の ID に関連する、保護関連のアクションを管理します。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  エンジンの設定を取得します。
-public void GetTemplatesAsync (const std::shared_ptr\<ProtectionEngine::Observer\>& observer、const std::shared_ptr\<void\>& コンテキスト)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
-public std::vector\<std::string\> GetTemplates(const std::shared_ptr\<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
-public void GetRightsForLabelIdAsync (const std::string & documentId、const std::string & labelId、const std::string & ownerEmail、const std::shared_ptr\<ProtectionEngine::Observer\>& observer、const std:: shared_ptr\<void\>& コンテキスト)  |  ラベル ID に関する、ユーザーが利用可能な権限のコレクションを取得します。
-public std::vector\<std::string\> GetRightsForLabelId (const std::string & documentId、const std::string & labelId、const std::string & ownerEmail、const std::shared_ptr\<void\>(& a) コンテキスト)  |  labelId に関する、ユーザーが利用可能な権限のコレクションを取得します。
-public void CreateProtectionHandlerFromDescriptorAsync (const std::shared_ptr\<ProtectionDescriptor\>& 記述子、const ProtectionHandlerCreationOptions & オプション、const std::shared_ptr\<ProtectionHandler::Observer\>& observer、const std::shared_ptr\<void\>& コンテキスト)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
-public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromDescriptor (const std::shared_ptr\<ProtectionDescriptor\>& 記述子、const ProtectionHandlerCreationOptions(& a) オプション, const std::shared_ptr\<void\>& コンテキスト)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
-public void CreateProtectionHandlerFromPublishingLicenseAsync (const std::vector\<uint8_t\>& serializedPublishingLicense、const ProtectionHandlerCreationOptions & オプション、const std::shared_ptr\<ProtectionHandler::Observer\>& observer、const std::shared_ptr\<void\>& コンテキスト)  |  シリアル化された発行ライセンスから保護ハンドラーを作成します。
-public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicense (const std::vector\<uint8_t\>& serializedPublishingLicense、constProtectionHandlerCreationOptions & オプション、const std::shared_ptr\<void\>& コンテキスト)  |  シリアル化された発行ライセンスから保護ハンドラーを作成します。
-public void CreateProtectionHandlerFromProtectionInfoAsync (const std::vector\<uint8_t\>& serializedPublishingLicense、const std::vector\<uint8_t\>& serializedProtectionInfo、const std::shared_ptr\<ProtectionHandler::Observer\>& observer、const std::shared_ptr\<void\>& コンテキスト)  |  シリアル化された発行ライセンスと、情報をシリアル化された保護から、保護のハンドラーを作成します。
-public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromProtectionInfo (const std::vector\<uint8_t\>& serializedPublishingLicense、const std::vector\<uint8_t\>& serializedProtectionInfo、const std::shared_ptr\<void\>& コンテキスト)  |  シリアル化された発行ライセンスと、情報をシリアル化された保護から、保護のハンドラーを作成します。
-public void CreateProtectionHandlerFromPublishingLicenseContextAsync (const PublishingLicenseContext & publishingLicenseContext、const ProtectionHandlerCreationOptions & オプション、const std::shared_ptr\<ProtectionHandler::Observer\>& observer、const std::shared_ptr\<void\>& コンテキスト)  |  発行ライセンス コンテキストから保護ハンドラーを作成します。
-public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicenseContext (const PublishingLicenseContext & publishingLicenseContext、const ProtectionHandlerCreationOptions (& a)オプション、const std::shared_ptr\<void\>& コンテキスト)  |  発行ライセンス コンテキストから保護ハンドラーを作成します。
+public void Gettemplates Async (const std:: shared_ptr\<ProtectionEngine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
+public std:: vector\<std:: string\> GetTemplates (const std:: shared_ptr\<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
+public void GetRightsForLabelIdAsync (const std:: string & documentId、const std:: string & Lab d、const std:: string & ownerEmail、const std:: string & delegatedUserEmail、const std:: shared_ptr\<ProtectionEngine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  ラベル ID に関する、ユーザーが利用可能な権限のコレクションを取得します。
+public std:: vector\<std:: string\> GetRightsForLabelId (const std:: string & documentId、const std:: string & Lab d、const std:: string & ownerEmail、const std:: string & delegatedUserEmail、const std:: shared_ptr\<void\>& context)  |  labelId に関する、ユーザーが利用可能な権限のコレクションを取得します。
+public void Createprotectionhandler For発行非同期 (const ProtectionHandler::P ublishingSettings & 設定、const std:: shared_ptr\<ProtectionHandler:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public std:: shared_ptr\<ProtectionHandler\> Createprotectionハンドラ Forpublishing (const ProtectionHandler::P ublishingSettings & settings、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public void CreateProtectionHandlerForConsumptionAsync (const ProtectionHandler:: ConsumptionSettings & settings、const std:: shared_ptr\<ProtectionHandler:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public std:: shared_ptr\<ProtectionHandler\> Createprotectionハンドラ For従量課金 (const ProtectionHandler:: ConsumptionSettings & settings, const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
   
 ## <a name="members"></a>メンバー
   
@@ -40,16 +35,16 @@ public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishin
 エンジンの設定を取得します。
 
   
-**返します**:エンジンの設定
+**戻り値**: エンジンの設定
   
-### <a name="gettemplatesasync-function"></a>GetTemplatesAsync 関数
+### <a name="gettemplatesasync-function"></a>Gettemplates Async 関数
 ユーザーが利用できるテンプレートのコレクションを取得します。
 
 パラメーター:  
-* **オブザーバー**:実装するクラス、 [ProtectionEngine::Observer](class_mip_protectionengine_observer.md)インターフェイス 
+* **オブザーバー**: protectionengine:: observer インターフェイスを実装するクラス 
 
 
-* **コンテキスト**:不透明オブザーバーに渡されたと省略可能となるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
+* **コンテキスト**: オブザーバーとオプションの httpdelegate に不透明に戻されるクライアントコンテキスト
 
 
   
@@ -57,30 +52,33 @@ public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishin
 ユーザーが利用できるテンプレートのコレクションを取得します。
 
 パラメーター:  
-* **コンテキスト**:クライアント コンテキスト不透明に渡される省略可能に[HttpDelegate](class_mip_httpdelegate.md)
+* **コンテキスト**: オプションの httpdelegate に不透明渡されるクライアントコンテキスト
 
 
 
   
-**返します**:テンプレート Id の一覧
+**戻り値**: テンプレート ID の一覧
   
 ### <a name="getrightsforlabelidasync-function"></a>GetRightsForLabelIdAsync 関数
 ラベル ID に関する、ユーザーが利用可能な権限のコレクションを取得します。
 
 パラメーター:  
-* **documentId**:ドキュメント メタデータに関連付けられたドキュメント ID 
+* **documentId**: ドキュメント メタデータに関連付けられているドキュメント ID 
 
 
-* **labelId**:[ラベル](class_mip_label.md)ドキュメントを作成するドキュメントのメタデータに関連付けられている ID 
+* **Lab/d**: ドキュメントが作成されたドキュメントメタデータに関連付けられているラベル ID 
 
 
 * **ownerEmail**: ドキュメントの所有者 
 
 
-* **オブザーバー**:実装するクラス、 [ProtectionEngine::Observer](class_mip_protectionengine_observer.md)インターフェイス 
+* **A**: 委任されたユーザーは、認証を行うユーザーまたはアプリケーションが別のユーザーの代理として動作しているときに指定され、none の場合は空になります。 
 
 
-* **コンテキスト**:この同じコンテキストに転送される[ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function)または[ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
+* **オブザーバー**: protectionengine:: observer インターフェイスを実装するクラス 
+
+
+* **コンテキスト**: この同じコンテキストは protectionengine:: observer:: OnGetRightsForLabelIdSuccess または protectionengine:: observer:: OnGetRightsForLabelIdFailure に転送されます。
 
 
   
@@ -88,160 +86,77 @@ public std::shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishin
 labelId に関する、ユーザーが利用可能な権限のコレクションを取得します。
 
 パラメーター:  
-* **documentId**:ドキュメント メタデータに関連付けられたドキュメント ID 
+* **documentId**: ドキュメント メタデータに関連付けられているドキュメント ID 
 
 
-* **labelId**:[ラベル](class_mip_label.md)ドキュメントを作成するドキュメントのメタデータに関連付けられている ID 
+* **Lab/d**: ドキュメントが作成されたドキュメントメタデータに関連付けられているラベル ID 
 
 
-* **ownerEmail**:ドキュメントの所有者 
+* **ownerEmail**: ドキュメントの所有者 
 
 
-* **コンテキスト**:このコンテキストは、省略可能に転送される[HttpDelegate](class_mip_httpdelegate.md)
+* **A**: 委任されたユーザーは、認証を行うユーザーまたはアプリケーションが別のユーザーの代理として動作しているときに指定され、none の場合は空になります。 
+
+
+* **コンテキスト**: この同じコンテキストは、オプションの httpdelegate に転送されます
 
 
 
   
-**返します**:権限の一覧
+**戻り値**: 権限の一覧
   
-### <a name="createprotectionhandlerfromdescriptorasync-function"></a>CreateProtectionHandlerFromDescriptorAsync 関数
+### <a name="createprotectionhandlerforpublishingasync-function"></a>Createprotectionハンドラ For発行非同期関数
 権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
 
 パラメーター:  
-* **記述子**:A [ProtectionDescriptor](class_mip_protectiondescriptor.md)保護構成を記述します。 
+* **設定**: 保護設定 
 
 
-* **オプション**:作成オプション 
+* **オブザーバー**: protectionhandler:: observer インターフェイスを実装するクラス 
 
 
-* **オブザーバー**:実装するクラス、 [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)インターフェイス 
-
-
-* **コンテキスト**:不透明オブザーバーに渡されたと省略可能となるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
+* **コンテキスト**: オブザーバーおよびオプションの httpdelegate に不透明に転送されるクライアントコンテキスト
 
 
   
-### <a name="createprotectionhandlerfromdescriptor-function"></a>CreateProtectionHandlerFromDescriptor 関数
+### <a name="createprotectionhandlerforpublishing-function"></a>Createprotectionハンドラ Forpublishing 関数
 権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
 
 パラメーター:  
-* **記述子**:A [ProtectionDescriptor](class_mip_protectiondescriptor.md)保護構成を記述します。 
+* **設定**: 保護設定 
 
 
-* **オプション**:作成オプション 
-
-
-* **コンテキスト**:不透明オプションに渡されるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
+* **コンテキスト**: オプションの httpdelegate に不透明転送されるクライアントコンテキスト
 
 
 
   
-**返します**:[ProtectionHandler](class_mip_protectionhandler.md)
+**戻り値**: protectionhandler
   
-### <a name="createprotectionhandlerfrompublishinglicenseasync-function"></a>CreateProtectionHandlerFromPublishingLicenseAsync 関数
-シリアル化された発行ライセンスから保護ハンドラーを作成します。
+### <a name="createprotectionhandlerforconsumptionasync-function"></a>CreateProtectionHandlerForConsumptionAsync 関数
+権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
 
 パラメーター:  
-* **serializedPublishingLicense**:シリアル化された発行ライセンス 
+* **設定**: 保護設定 
 
 
-* **オプション**:作成オプション 
+* **オブザーバー**: protectionhandler:: observer インターフェイスを実装するクラス 
 
 
-* **オブザーバー**:実装するクラス、 [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)インターフェイス 
-
-
-* **コンテキスト**:不透明オブザーバーに渡されたと省略可能となるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
+* **コンテキスト**: オブザーバーおよびオプションの httpdelegate に不透明に転送されるクライアントコンテキスト
 
 
   
-### <a name="createprotectionhandlerfrompublishinglicense-function"></a>CreateProtectionHandlerFromPublishingLicense 関数
-シリアル化された発行ライセンスから保護ハンドラーを作成します。
+### <a name="createprotectionhandlerforconsumption-function"></a>Createprotectionハンドラ For従量課金関数
+権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
 
 パラメーター:  
-* **serializedPublishingLicense**:シリアル化された発行ライセンス 
+* **設定**: 保護設定 
 
 
-* **オプション**:作成オプション 
-
-
-* **オブザーバー**:実装するクラス、 [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)インターフェイス 
-
-
-* **コンテキスト**:不透明オプションに渡されるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
+* **コンテキスト**: オプションの httpdelegate に不透明転送されるクライアントコンテキスト
 
 
 
   
-**返します**:[ProtectionHandler](class_mip_protectionhandler.md)
-  
-### <a name="createprotectionhandlerfromprotectioninfoasync-function"></a>CreateProtectionHandlerFromProtectionInfoAsync 関数
-シリアル化された発行ライセンスと、情報をシリアル化された保護から、保護のハンドラーを作成します。
-
-パラメーター:  
-* **serializedPublishingLicense**:シリアル化された発行ライセンス 
-
-
-* **serializedProtectionInfo**:シリアル化された保護情報 
-
-
-* **オブザーバー**:実装するクラス、 [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)インターフェイス 
-
-
-* **コンテキスト**:オブザーバーに不透明渡されるクライアント コンテキスト
-
-
-  
-### <a name="createprotectionhandlerfromprotectioninfo-function"></a>CreateProtectionHandlerFromProtectionInfo 関数
-シリアル化された発行ライセンスと、情報をシリアル化された保護から、保護のハンドラーを作成します。
-
-パラメーター:  
-* **serializedPublishingLicense**:シリアル化された発行ライセンス 
-
-
-* **serializedProtectionInfo**:シリアル化された保護情報 
-
-
-* **コンテキスト**:オブザーバーに不透明渡されるクライアント コンテキスト
-
-
-
-  
-**返します**:[ProtectionHandler](class_mip_protectionhandler.md)
-  
-### <a name="createprotectionhandlerfrompublishinglicensecontextasync-function"></a>CreateProtectionHandlerFromPublishingLicenseContextAsync 関数
-発行ライセンス コンテキストから保護ハンドラーを作成します。
-
-パラメーター:  
-* **publishingLicenseContext**:シリアル化された公開ライセンスの前処理されたフォーム 
-
-
-* **オプション**:作成オプション 
-
-
-* **オブザーバー**:実装するクラス、 [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)インターフェイス 
-
-
-* **コンテキスト**:不透明オブザーバーに渡されたと省略可能となるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
-
-
-  
-### <a name="createprotectionhandlerfrompublishinglicensecontext-function"></a>CreateProtectionHandlerFromPublishingLicenseContext 関数
-発行ライセンス コンテキストから保護ハンドラーを作成します。
-
-パラメーター:  
-* **publishingLicenseContext**:シリアル化された公開ライセンスの前処理されたフォーム 
-
-
-* **オプション**:作成オプション 
-
-
-* **オブザーバー**:実装するクラス、 [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md)インターフェイス 
-
-
-* **コンテキスト**:不透明オプションに渡されるクライアント コンテキスト[HttpDelegate](class_mip_httpdelegate.md)
-
-
-
-  
-**返します**:[ProtectionHandler](class_mip_protectionhandler.md)
+**戻り値**: protectionhandler

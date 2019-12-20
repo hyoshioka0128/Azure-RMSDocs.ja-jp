@@ -1,28 +1,26 @@
 ---
-title: mip::FileExecutionState をクラスします。
-description: Mip::fileexecutionstate クラスの Microsoft Information Protection (MIP) SDK について説明します。
+title: 'クラス mip:: FileExecutionState'
+description: 'Microsoft Information Protection (MIP) SDK の mip:: fileexecutionstate クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: bdf0814e56d64bd16918a6f4d269a057620f92f5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 063f1b0227415dc413e0c56d26f60fc39274a817
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184673"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560241"
 ---
-# <a name="class-mipfileexecutionstate"></a>mip::FileExecutionState をクラスします。 
+# <a name="class-mipfileexecutionstate"></a>クラス mip:: FileExecutionState 
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual DataState GetDataState() const  |  アプリケーションで操作中のコンテンツの状態を取得します。
-パブリック仮想 std::shared_ptr\<ClassificationResults\> GetClassificationResults (const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\> \> (& a)) 定数  |  分類結果のマップを返します。
-public virtual std::vector\<uint8_t\> GetSerializedProtectionInfo() const  |  シリアル化されたプランを使用して、バッファーを返す
-public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  アプリケーションの特定の監査のキー/値ペアのマップを返します。
+パブリック仮想 DataState GetDataState () const  |  アプリケーションで操作中のコンテンツの状態を取得します。
+public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: shared_ptr\<FileHandler\> &、const std:: vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  アプリケーション固有のキーと値のペアのマップを返します。
   
 ## <a name="members"></a>メンバー
   
@@ -30,30 +28,24 @@ public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  | 
 アプリケーションで操作中のコンテンツの状態を取得します。
 
   
-**返します**:コンテンツ データの状態
+**戻り値**: コンテンツ データの状態
   
 ### <a name="getclassificationresults-function"></a>GetClassificationResults 関数
 分類結果のマップを返します。
 
 パラメーター:  
-* **fileHandler**:-使用されるファイルのファイル ハンドラー 
+* **Filehandler**:-使用されたファイルのファイルハンドラー 
 
 
-* **classificationIds**: 分類 Id の一覧。 
+* **classificationIds**: 分類 id の一覧。 
 
 
-
-  
-**返します**:分類の結果の一覧。
-  
-### <a name="getserializedprotectioninfo-function"></a>GetSerializedProtectionInfo 関数
-シリアル化されたプランを使用して、バッファーを返す
 
   
-**返します**:シリアル化されたプランを使用して、バッファー
+**戻り値**: 分類結果の一覧。
   
 ### <a name="getauditmetadata-function"></a>GetAuditMetadata 関数
-アプリケーションの特定の監査のキー/値ペアのマップを返します。
+アプリケーション固有のキーと値のペアのマップを返します。
 
   
-**返します**:アプリケーションの特定の監査メタデータの登録キーと値ペア送信者の一覧:送信者が受信者の電子メール Id:LastModifiedBy、電子メールの受信者の JSON 配列を表します。コンテンツの LastModifiedDate を前回変更したユーザーの電子メール Id:コンテンツの最終変更日
+**戻り**値: アプリケーション固有の監査メタデータの登録済みキー: 値のペア送信者: 送信者受信者の電子メール id: 電子メールの受信者の JSON 配列: コンテンツを最後に変更したユーザーの電子メール id LastModifiedDate: コンテンツが最後に変更された日付

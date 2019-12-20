@@ -1,30 +1,29 @@
 ---
 title: class mip::ProtectionEngine::Observer
-description: Mip::protectionengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: Microsoft Information Protection (MIP) SDK の mip::p rotectionengine クラスについて説明します。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 2473e4bc1e64e3e8de498d2976d07b5324346a53
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173140"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560753"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
-[ProtectionEngine](class_mip_protectionengine.md) に関連する通知を受け取るインターフェイス。
+ProtectionEngine に関連する通知を受信するインターフェイスです。
 このインターフェイスは、保護 SDK を使用してアプリケーションによって実装する必要があります
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 void OnGetTemplatesSuccess (const std::shared_ptr\<std::vector\<std::string\>\>& templateIds、const std::shared_ptr\<void\>& コンテキスト)  |  テンプレートが正しく取得されると呼び出されます。
-public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
-パブリック仮想 void OnGetRightsForLabelIdSuccess (const std::shared_ptr\<std::vector\<std::string\>\>& rights、const std::shared_ptr\<void\>& コンテキスト)  |  権限が正しく取得されると呼び出されます。
-public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
+public virtual void OnGetTemplatesSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& templateIds、const std:: shared_ptr\<void\>& context)  |  テンプレートが正しく取得されると呼び出されます。
+public virtual void OnGetTemplatesFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
+public virtual void OnGetRightsForLabelIdSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& 権限、const std:: shared_ptr\<void\>& context)  |  権限が正しく取得されると呼び出されます。
+public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   
@@ -32,46 +31,46 @@ public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error
 テンプレートが正しく取得されると呼び出されます。
 
 パラメーター:  
-* **templateIds**:テンプレートの一覧への参照を取得 
+* **templateIds**: 取得したテンプレートのリストへの参照 
 
 
-* **コンテキスト**:同じコンテキストに渡された[ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function)
+* **コンテキスト**: protectionengine:: Gettemplates async に渡されたものと同じコンテキスト
 
 
-アプリケーションは、任意の種類のコンテキスト (例: std::promise、std::function) を [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) に渡すことができ、その同じコンテキストがそのまま [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) または [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function) に転送されます
+アプリケーションは任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: Gettemplates Async に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnGetTemplatesSuccess または ProtectionEngine:: O にそのまま転送されます。bserver:: OnGetTemplatesFailure
   
 ### <a name="ongettemplatesfailure-function"></a>OnGetTemplatesFailure 関数
 テンプレートの取得でエラーが発生すると呼び出されます。
 
 パラメーター:  
-* **エラー**:[エラー](class_mip_error.md)テンプレートを取得中に発生しました。 
+* **エラー**: テンプレートの取得中にエラーが発生しました 
 
 
-* **コンテキスト**:同じコンテキストに渡された[ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function)
+* **コンテキスト**: protectionengine:: Gettemplates async に渡されたものと同じコンテキスト
 
 
-アプリケーションは、任意の種類のコンテキスト (例: std::promise、std::function) を [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) に渡すことができ、その同じコンテキストがそのまま [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) または [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function) に転送されます
+アプリケーションは任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: Gettemplates Async に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnGetTemplatesSuccess または ProtectionEngine:: O にそのまま転送されます。bserver:: OnGetTemplatesFailure
   
 ### <a name="ongetrightsforlabelidsuccess-function"></a>OnGetRightsForLabelIdSuccess 関数
 権限が正しく取得されると呼び出されます。
 
 パラメーター:  
-* **rights**:権限の一覧への参照を取得 
+* **rights**: 取得する権限の一覧への参照 
 
 
-* **コンテキスト**:同じコンテキストに渡された[ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function)
+* **コンテキスト**: protectionengine:: GetRightsForLabelIdAsync に渡されたものと同じコンテキスト
 
 
-アプリケーションは、任意の種類のコンテキスト (例: std::promise、std::function) を [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function) に渡すことができ、その同じコンテキストがそのまま [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) または [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function) に転送されます
+アプリケーションでは、任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: GetRightsForLabelIdAsync に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnGetRightsForLabelIdSuccess に対してそのまま転送されます。ProtectionEngine:: Observer:: OnGetRightsForLabelIdFailure
   
 ### <a name="ongetrightsforlabelidfailure-function"></a>OnGetRightsForLabelIdFailure 関数
 ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
 
 パラメーター:  
-* **エラー**:[エラー](class_mip_error.md)権利を取得中に発生しました。 
+* **エラー**: 権限を取得中にエラーが発生しました 
 
 
-* **コンテキスト**:同じコンテキストに渡された[ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function)
+* **コンテキスト**: protectionengine:: GetRightsForLabelIdAsync に渡されたものと同じコンテキスト
 
 
-アプリケーションは、任意の種類のコンテキスト (例: std::promise、std::function) を [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function) に渡すことができ、その同じコンテキストがそのまま [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) または [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function) に転送されます
+アプリケーションでは、任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: GetRightsForLabelIdAsync に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnGetRightsForLabelIdSuccess に対してそのまま転送されます。ProtectionEngine:: Observer:: OnGetRightsForLabelIdFailure

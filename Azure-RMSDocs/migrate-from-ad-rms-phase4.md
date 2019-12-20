@@ -4,23 +4,25 @@ description: AD RMS から Azure Information Protection への移行のフェー
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/07/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 064cf6db8551caa12bb06540fd598f70f02e6c0d
-ms.sourcegitcommit: bdaf9809fcf78602ec7675c04f97ad5d3cc47b44
+ms.custom: admin
+ms.openlocfilehash: 61a17f9d4b80dcc5ada82adeab4e215fc17b0963
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748346"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934672"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
->*適用対象:Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 AD RMS から Azure Information Protection への移行フェーズ 4 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 8 から手順 9 を説明します。
@@ -36,7 +38,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
     
     この DNS レコードが配置されると、Web とモバイルの電子メール クライアントに Outlook を使用しているユーザーはそのアプリで AD RMS によって保護された電子メールを表示できるようになります。また、Exchange では AD RMS からインポートしたキーを使用して、AD RMS によって保護されたコンテンツを暗号化解除、インデックス化、保管、保護できるようになります。  
 
-2. Exchange Online の [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) コマンドを実行します。 このコマンドの実行に関してサポートが必要な場合は、「[Exchange Online: IRM 構成](configure-office365.md#exchangeonline-irm-configuration)」を参照してください。
+2. Exchange Online の [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
     
     出力で、**AzureRMSLicensingEnabled** が **True** に設定されているかどうかを確認します。
     
@@ -44,7 +46,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
     
     - AzureRMSLicensingEnabled が **False** に設定されている場合は、`Set-IRMConfiguration -AzureRMSLicensingEnabled $true` を実行し、[Azure Information Protection に基づいて構築された新しい Office 365 Message Encryption 機能を設定する方法](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に関するページの検証手順を行い、Exchange Online が Azure Rights Management サービスを使用する準備が整っていることを確認します。 
 
-## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9. Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9: Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
 
 AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使っている場合は、Rights Management (RMS) コネクタをデプロイする必要があります。このコネクタは、オンプレミスのサーバーと Azure Information Protection の保護サービスの間の通信インターフェイス (リレー) として機能します。
 
@@ -60,9 +62,9 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 ### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Exchange サーバーで IRM を無効にし、AD RMS の構成を削除する
 
 > [!IMPORTANT]
-> 任意の Exchange サーバーで IRM をまだ構成していない、だけ手順 2 ~ 6 の操作を行います。
+> どの Exchange サーバーでも IRM をまだ構成していない場合は、手順 2. と 6. を実行します。
 > 
-> これらすべての手順を行うには、すべての AD RMS クラスターのすべてのライセンス Url が表示されない場合、 *LicensingLocation*パラメーターを実行すると[Get-irmconfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)します。
+> [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) を実行し、*LicensingLocation* パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順をすべて実行します。
 
 1. 各 Exchange サーバーでフォルダー **\ProgramData\Microsoft\DRM\Server\S-1-5-18** を見つけて、そのフォルダーのすべてのエントリを削除します。
 
@@ -75,7 +77,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
         $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
     
-    実行すると[Get-irmconfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)、ライセンス Url と、Azure Rights Management サービスの URL が表示される、すべての AD RMS クラスターを表示する必要があります、 *LicensingLocation*パラメーター。
+    これで、 [Get IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)を実行すると、すべての AD RMS クラスターのライセンス url と、 *LicensingLocation*パラメーターに表示される AZURE Rights Management サービスの url が表示されます。
 
 3.  次に、内部受信者に送信されるメッセージの IRM 機能を無効にします。
 
@@ -111,7 +113,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>コネクタを使うように Exchange と SharePoint を構成する
 
-1. RMS コネクタのデプロイ手順に戻る: [手順 5: RMS コネクタを使用するためのサーバーの構成](./configure-servers-rms-connector.md)
+1. 「[手順 5: RMS コネクタを使用するためのサーバーの構成](./configure-servers-rms-connector.md)」の RMS コネクタのデプロイ手順に戻ります。
 
     SharePoint サーバーだけを使っている場合は、[次の手順](#next-steps)に進んで移行を続けます。 
 
@@ -136,7 +138,7 @@ Exchange 2013 および Exchange 2016 の場合 - レジストリ編集 1:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**次のように入力します。** Reg_SZ
+**種類:** Reg_SZ
 
 **値:** https://\<AD RMS イントラネット ライセンス URL\>/_wmcs/licensing
 
@@ -157,7 +159,7 @@ Exchange 2013 - レジストリの編集 2:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
 
-**次のように入力します。** Reg_SZ
+**種類:** Reg_SZ
 
 **値:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
 
@@ -215,5 +217,5 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 ---
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 移行を続行するには、「[移行フェーズ 5 - 移行後のタスク](migrate-from-ad-rms-phase5.md)」に進んでください。

@@ -4,7 +4,7 @@ description: 分類、ラベル付け、組織のドキュメントと電子メ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9c57385119f8bad8ce6c98c0d3c9bb6cee4c3118
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 56a61e558f72812517d21201aa6e4215624d903d
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793819"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934587"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -53,7 +53,7 @@ Azure Information Protection でユーザーとグループを使用するシナ
 
 - 使用権限は、ドキュメントや電子メールをユーザーが開くことができるかと、その使用方法を決定します。 たとえば、読み取り専用、読み取りと印刷、または読み取りと編集などができます。 
 
-- アクセス制御には、有効期限日とアクセスのためにインターネット接続が必要かどうかが含まれます。 
+- アクセス制御には有効期限が含まれ、アクセスにはインターネットへの接続が必要かどうかが表示されます。 
 
 **Azure Rights Management サービスを構成する場合**: 特定のシナリオをサポートするためであり、したがって、管理者のみがこれらのグループを選択します。 たとえば、次のような構成の例があります。
 
@@ -77,9 +77,9 @@ Azure Information Protection でユーザーとグループを使用するシナ
 
     ドメインがテナントに追加されている場合 ("確認済みドメイン")、Azure Information Protection では Azure AD proxyAddresses 属性にある任意の値を使用できます。 ドメインの確認の詳細については、以下の項目をご覧ください。
 
-    - Azure AD の場合: [Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)
+    - Azure AD: 「[Azure Active Directory へのカスタム ドメイン名の追加](/azure/active-directory/fundamentals/add-custom-domain)」
 
-    - Office 365 の場合:[Office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Office 365 の場合: [office 365 にドメインを追加する](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - **Azure AD userPrincipalName** 属性は、テナントにあるアカウントに対する値が Azure AD proxyAddresses 属性にない場合にのみ使用されます。 たとえば、Azure Portal でユーザーを作成するか、メールボックスのない Office 365 のユーザーを作成する場合です。
 
@@ -132,7 +132,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
     Connect-MsolService
 
 
-メモ:このコマンドが機能しない場合は、`Install-Module MSOnline` を実行して MSOnline モジュールをインストールできます。
+注: このコマンドが機能しない場合は、`Install-Module MSOnline` を実行して MSOnline モジュールをインストールできます。
 
 次に、PowerShell セッションを構成して、値を切り捨てないようにします。
 
@@ -150,7 +150,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
 **ProxyAddresses** 列が設定されていない場合は、**UserPrincipalName** の値が Azure Rights Management サービスのユーザーを承認するために使用されます。
 
-次に例を示します。
+たとえば、次のようになります。
 
 
 |  表示名   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -158,7 +158,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 | Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
 |    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
 
-この例では、次の点に注意してください。
+この例では:
 
 - Jagannath Reddy のユーザー アカウントは <strong>jagannathreddy@contoso.com</strong> によって承認されることになります。
 
@@ -177,7 +177,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 > [!TIP]
 > Export-Csv コマンドレットを使用すると、結果をスプレッド シートにエクスポートでき、インポートの検索や一括編集などの管理が容易になります。
 >
-> 例: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> たとえば次のようになります。`Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>グループ アカウントが Azure Information Protection の準備ができていることを確認する
 
@@ -208,11 +208,11 @@ Azure Information Protection で使用したいグループが表示されるこ
 使用権限の割り当てまたは Azure Rights Management サービスの構成を行うためにグループを使用する場合、またはスコープ付きポリシーを構成する場合は、すべての変更や、実行するテストで、この遅延を考慮してください。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ユーザーとグループを Azure Information Protection に使用できることと、ドキュメントと電子メールの保護を開始する準備ができたことを確認したら、Azure Rights Management サービスをアクティブにする必要があるかどうかを確認します。 組織のドキュメントと電子メールを保護するには、このサービスをアクティブにする必要があります。 
 
-- 2018 年 2 月以降: Azure Rights Management または Azure Information Protection を含むサブスクリプションをこの月以降に取得した場合は、サービスが自動的にアクティブ化されます。 
+- 2018 年 2 月以降: Azure Rights Management または Azure Information Protection を含むサブスクリプションを今月以降に取得した場合は、サービスが自動的にアクティブ化されます。 
 
 - 2018 年 2 月より前にサブスクリプションを取得した場合: 自分でサービスをアクティブにする必要があります。 
 

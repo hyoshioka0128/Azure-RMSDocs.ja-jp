@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175447"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Microsoft Information Protection SDK - ファイル API オブザーバー
@@ -29,9 +29,9 @@ ms.locfileid: "60175447"
 
 次の例では、`mip::FileProfile::Observer` から派生される `ProfileObserver` クラスを作成しています。 メンバー関数は、サンプル全体で使用される future/promise パターンを使用するためにオーバーライドされています。
 
-**注意**:以下のサンプルのみ部分的に実装され、用の上書きを含めないでください、`mip::FileEngine`オブザーバーに関連します。
+**注**: 以下のサンプルは部分的にのみ実装され、`mip::FileEngine` 関連のオブザーバーに対するオーバーライドは含まれていません。
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 ヘッダーで、`mip::FileProfile::Observer` から派生する `ProfileObserver` を定義し、各メンバー関数をオーバーライドします。
 
@@ -45,7 +45,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 それ自体の実装では、各オブザーバーのメンバー関数を実行するアクションを定義します。
 
@@ -53,7 +53,7 @@ ProfileObserver() { }
 
 2 つ目のパラメーターは、*コンテキスト*への共有ポインターです。 この実装では、コンテキストは `std::promise` への参照で、`std::shared_ptr<void>` として参照によって渡されます。 関数の最初の行は、これを `std::promise` にキャストし、`promise` という名前のオブジェクトに格納されます。
 
-最後に、`promise->set_value()` を設定し、`mip::FileProfile`オブジェクトに渡すことで、future の準備ができます。
+最後に、`promise->set_value()` を設定し、`mip::FileProfile` オブジェクトに渡すことで、future の準備ができます。
 
 ```cpp
 #include "profile_observer.h"
@@ -83,7 +83,7 @@ void ProfileObserver::OnLoadFailure(const std::exception_ptr& error, const std::
 
 プロファイル オブザーバーと同じく、`mip::FileHandler` もファイル操作中に非同期のイベント通知を処理するために `mip::FileHandler::Observers` クラスを実装します。 実装は、上記で説明したのとほぼ同じです。 `FileHandlerObserver` は以下で部分的に定義されます。 
 
-### <a name="filehandlerobserverh"></a>file_handler_observer.h
+### <a name="file_handler_observerh"></a>file_handler_observer.h
 
 ```cpp
 #include "mip/file/file_handler.h"
@@ -102,7 +102,7 @@ public:
 };
 ```
 
-### <a name="filehandlerobservercpp"></a>file_handler_observer.cpp
+### <a name="file_handler_observercpp"></a>file_handler_observer.cpp
 
 このサンプルは、最初の 2 つの関数だけですが、残りの関数でもこれらおよび `ProfileObserver` と同様のパターンを使用します。
 

@@ -1,24 +1,23 @@
 ---
 title: class mip::Stream
-description: Mip::stream クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: stream クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1987aea2e90a3ded3a55f509e3d49a689d361c62
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: f1bd4220369d036c2071453412844e0691efb2ec
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185115"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73559971"
 ---
 # <a name="class-mipstream"></a>class mip::Stream 
 MIP SDK とストリーム ベースのコンテンツの間のインターフェイスを定義するクラス。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  ストリームからバッファーに読み取ります。
 public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  バッファーからストリームに書き込みます。
@@ -44,7 +43,7 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 
 
   
-**返します**:読み取られたバイト数。
+**戻り値**: 読み込まれたバイト数。
   
 ### <a name="write-function"></a>Write 関数
 バッファーからストリームに書き込みます。
@@ -58,13 +57,13 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 
 
   
-**返します**:書き込まれたバイト数。
+**戻り値**: 書き込まれたバイト数。
   
 ### <a name="flush-function"></a>Flush 関数
 ストリームをフラッシュします。
 
   
-**返します**:成功した場合は true。 他は false。
+**戻り値**: 正常終了した場合は true、それ以外の場合は false。
   
 ### <a name="seek-function"></a>Seek 関数
 ストリーム内の特定の位置をシークします。
@@ -78,27 +77,27 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 ストリームから読み込めるかどうかのチェックです。
 
   
-**返します**:読み取り可能な場合は true。 他は false。
+**戻り値**: 読み取り可能な場合は true、それ以外の場合は false。
   
 ### <a name="canwrite-function"></a>CanWrite 関数
 ストリームに書き込めるかどうかのチェックです。
 
   
-**返します**:書き込み可能な場合は true。 他は false。
+**戻り値**: 書き出し可能な場合は true、それ以外の場合は false。
   
 ### <a name="position-function"></a>Position 関数
 ストリーム内の現在の位置を取得します。
 
   
-**返します**:ストリーム内の位置。
+**戻り値**: ストリーム内の位置。
   
-### <a name="size-function"></a>サイズ関数
+### <a name="size-function"></a>Size 関数
 ストリーム内のコンテンツのサイズを取得します。
 
   
-**返します**:ストリームのサイズ。
+**戻り値**: ストリームのサイズ。
   
-### <a name="size-function"></a>サイズ関数
+### <a name="size-function"></a>Size 関数
 ストリームのサイズを設定します。
 
 パラメーター:  

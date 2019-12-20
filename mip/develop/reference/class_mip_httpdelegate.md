@@ -1,29 +1,28 @@
 ---
 title: class mip::HttpDelegate
-description: Mip::httpdelegate クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: httpdelegate クラスを文書にします。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 6dedd5e52b0599a58acabd85f7bd076169b3758e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: a29673c71aaa0357ebb52bc4cab3b3fef74a21d1
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174053"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560193"
 ---
 # <a name="class-miphttpdelegate"></a>class mip::HttpDelegate 
 HTTP の処理をオーバーライドするインターフェイス。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr\<HttpOperation\>送信 (const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& コンテキスト)  |  HTTP 要求を送信します。
-public std::shared_ptr\<HttpOperation\> SendAsync (const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& コンテキストには、const std:。関数\<void (std::shared_ptr\<HttpOperation\>)\>& callbackFn)  |  HTTP 要求を非同期的に送信します。
-public void CancelOperation(const std::string& requestId)  |  特定の HTTP 操作をキャンセルします。
-public void CancelAllOperations()  |  実行中の HTTP 要求をキャンセルします。
+public std:: shared_ptr\<HttpOperation\> Send (const std:: shared_ptr\<HttpRequest\>& request、const std:: shared_ptr\<void\>& context)  |  HTTP 要求を送信します。
+public std:: shared_ptr\<HttpOperation\> SendAsync (const std:: shared_ptr\<HttpRequest\>& request、const std:: shared_ptr\<void\>& context、const std:: function\<void (std:: shared_ptr\<HttpOperation\>)  |  HTTP 要求を非同期に送信します。
+public void CancelOperation (const std:: string & requestId)  |  特定の HTTP 操作をキャンセルします。
+public void CancelAllOperations ()  |  進行中の HTTP 要求を取り消します。
   
 ## <a name="members"></a>メンバー
   
@@ -31,40 +30,40 @@ public void CancelAllOperations()  |  実行中の HTTP 要求をキャンセル
 HTTP 要求を送信します。
 
 パラメーター:  
-* **要求**:HTTP 要求 
+* **要求**: HTTP 要求 
 
 
-* **コンテキスト**:この HTTP 要求が発生する API に渡された同じ不透明なクライアント コンテキスト
+* **コンテキスト**: HTTP 要求となった、API に渡された同じ不透明なクライアント コンテキスト
 
 
 
   
-**返します**:HTTP 操作のコンテナー
+**戻り値**: HTTP 操作コンテナー
   
 ### <a name="sendasync-function"></a>SendAsync 関数
-HTTP 要求を非同期的に送信します。
+HTTP 要求を非同期に送信します。
 
 パラメーター:  
-* **要求**:HTTP 要求 
+* **要求**: HTTP 要求 
 
 
-* **コンテキスト**:この HTTP 要求が発生する API に渡された同じ不透明なクライアント コンテキスト 
+* **コンテキスト**: HTTP 要求となった、API に渡された同じ不透明なクライアント コンテキスト 
 
 
-* **callbackFn**:完了時に実行される関数
+* の**実行が**完了したときに実行される関数
 
 
 
   
-**返します**:HTTP 操作のコンテナー
+**戻り値**: HTTP 操作コンテナー
   
 ### <a name="canceloperation-function"></a>CancelOperation 関数
 特定の HTTP 操作をキャンセルします。
 
 パラメーター:  
-* **requestId**:取り消し要求の ID
+* **requestId**: 取り消す要求の ID
 
 
   
 ### <a name="cancelalloperations-function"></a>CancelAllOperations 関数
-実行中の HTTP 要求をキャンセルします。
+進行中の HTTP 要求を取り消します。

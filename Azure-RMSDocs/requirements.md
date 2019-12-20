@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ac767525efeaf97d1d3b39f3b25191e7926412b
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808117"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74831699"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -28,7 +28,7 @@ ms.locfileid: "68808117"
 
 ## <a name="subscription-for-azure-information-protection"></a>Azure Information Protection のサブスクリプション
 
-**分類、ラベル付け、保護の場合**: [Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)を取得する必要があります。 
+**Azure Information Protection クライアント (クラシックまたは統合されたラベル付け) またはスキャナーを使用した分類、ラベル付け、保護については**、 [Azure Information Protection プラン](https://azure.microsoft.com/pricing/details/information-protection/)が必要です。 
 
 **保護のみの場合**: [Azure Information Protection を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を取得する必要があります。
 
@@ -55,7 +55,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 必要なクライアント ソフトウェアと正しく構成された MFA サポート インフラストラクチャがある場合は、Azure Information Protection で多要素認証 (MFA) がサポートされます。
 
-条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次の FAQ を参照してください: [条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次の FAQ の「[条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)」を参照してください。
 
 認証要件の詳細については、「[Azure Information Protection の Azure Active Directory の要件](requirements-azure-ad.md)」をご覧ください。 
 
@@ -77,24 +77,29 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows 7 Service Pack 1 (x86、x64)
 
-- Windows Server 2016 
+- Windows Server 2019
+
+- Windows Server 2016
 
 - Windows Server 2012 R2 および Windows Server 2012
 
 - Windows Server 2008 R2 
 
-クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)(winword.exe、excel.exe、outlook.exe、powerpnt.exe) と、統合された Azure Information Protection の実行可能ファイルを無効にする必要がある場合があります。クライアントまたは Azure Information Protection クライアント (msip .exe、msip) にラベルを付ける。
+クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office (winword.exe、excel.exe、outlook.exe、powerpnt.exe) 用の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)と、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアント (msip. app-v, msip) の実行可能ファイルを無効にすることが必要になる場合があります。
 
-一覧表示されているサーバーバージョンでは、Azure Information Protection クライアントがリモートデスクトップサービスでサポートされています。 リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect**フォルダーを削除しないでください。
+表示されるサーバーのバージョン:
+
+- リモートデスクトップサービスでは、Azure Information Protection クライアントがサポートされています。 リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect**フォルダーを削除しないでください。
+
+- Server Core と Nano Server はサポートされていません。
 
 Azure Information Protection クライアントが Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)でデータを使用できます。
 
 Azure Information Protection クライアントには、それぞれの管理者ガイドに記載されている追加の前提条件があります。
 
-- Azure Information Protection 統合ラベル付けクライアント:[必須コンポーネント](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Azure Information Protection 統合されたラベル付けクライアント:[前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
-- Azure Information Protection クライアント:[必須コンポーネント](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
-
+- Azure Information Protection クライアント:[前提条件](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## <a name="applications"></a>アプリケーション
 
@@ -112,11 +117,15 @@ Azure Information Protection クライアントは、次のいずれかの Offic
 
 - Office Professional Plus 2010 Service Pack 2
 
-Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Azure Information Protection バーまたは Office リボンの **[保護]** ボタンでユーザーに表示されません。 
-
-Azure Information Protection クライアントは、同じコンピューター上で複数のバージョンの Office をサポートしていません。 これらのクライアントは、Office のユーザーアカウントの切り替えもサポートしていません。
+Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Office リボンの Azure Information Protection バー、または **[保護]** ボタン (クラシッククライアント) または **[秘密度]** ボタン (統合ラベル付けクライアント) では表示されません。 
 
 保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
+
+### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の機能
+
+- Azure Information Protection クライアント (従来のクライアントおよび統合ラベル付けクライアント) では、同じコンピューター上で複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。
+
+- Office[メールのマージ](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、Azure Information Protection 機能ではサポートされていません。
 
 ## <a name="firewalls-and-network-infrastructure"></a>ファイアウォールとネットワーク インフラストラクチャ
 
@@ -124,17 +133,19 @@ Azure Information Protection クライアントは、同じコンピューター
 
 Office の記事の情報に加えて、Azure Information Protection に固有の要件は以下のとおりです。
 
-- ラベルとラベルポリシーをダウンロードするための統一されたラベル付けクライアントの場合:URL * **. protection.outlook.com**を HTTPS 経由で許可します。
+- ラベルとラベルポリシーをダウンロードするための統一されたラベル付けクライアントの場合: URL * **. protection.outlook.com**を HTTPS 経由で許可します。
 
 - 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
 - **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
     
-    - ヒント :Chrome ではセキュリティで保護された接続の状態がアドレス バーに表示されるため、このブラウザーを使うと、Azure Rights Management サービスに到達する前にクライアント接続が終了するかどうかをすぐに確認できます。 ブラウザーのアドレス バーに次の URL を入力します: `https://admin.na.aadrm.com/admin/admin.svc` 
+    次の PowerShell コマンドを使用して、Azure Rights Management サービスに到達する前にクライアント接続が終了しているかどうかを判断できます。
+   
+        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+        $request.GetResponse()
+        $request.ServicePoint.Certificate.Issuer
     
-        ブラウザー ウィンドウに表示されるものについては気に留める必要はありません。 その代わりに、アドレス バーの鍵マークをクリックしてサイトの情報を確認します。 サイトの情報で発行元の証明機関 (CA) を確認できます。 証明書が Microsoft CA によって発行されたものでない場合、クライアントとサービス間のセキュリティで保護された接続は終了し、ファイアウォール上で再構成する必要がある場合があります。 次の図は、Microsoft が発行した CA の例です。 証明書を発行したのが内部 CA である場合、この構成は Azure Information Protection との互換性がありません。
-        
-        ![Azure Information Protection 接続に対して発行された証明書の確認](./media/certificate-checking.png)
+    結果には、発行元の CA が Microsoft CA からのものであることが示されます (例: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`)。 発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
 
 ### <a name="on-premises-servers"></a>オンプレミス サーバー
 

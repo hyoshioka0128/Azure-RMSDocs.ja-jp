@@ -13,10 +13,10 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60176020"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
@@ -41,7 +41,7 @@ ms.locfileid: "60176020"
 
 7 月リリースの更新で SDK が改訂され、4.2.5 になりました。
 
-- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[方法: エラーとパフォーマンスのログを有効にする](https://docs.microsoft.com/information-protection/develop/enabling-logging)」を参照してください。
+- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
 - iOS SDK では、ログ記録レベルを設定できません。 
 - SDK は、NULL アクセス トークンに対してエラーを返すようになりました。
 
@@ -81,7 +81,7 @@ ms.locfileid: "60176020"
 
     [UserPolicy.acquire 同期メソッド](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [UserPolicy.create (PolicyDescriptor…) 同期メソッド**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [UserPolicy.create (PolicyDescriptor…) 同期メソッド** ](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [UserPolicy.create (TempalteDescriptor…) 同期メソッド](https://msdn.microsoft.com/library/mt631386.aspx)
 
@@ -101,7 +101,7 @@ ms.locfileid: "60176020"
 
 このリリースでは、以下の更新のサポートが追加されています。
 
--   iOS
+-   [iOS]
 
     アプリケーションの暗号化および復号化を独立して、並列的に実行できます。
 
@@ -109,7 +109,7 @@ ms.locfileid: "60176020"
 
     ログ レベルの制御の設定が可能になりました。
 
-    詳細については、「[方法: エラーとパフォーマンスのログを有効にする](enabling-logging.md)」を参照してください。
+    詳細については、「[How to: Enable error and performance logging](enabling-logging.md)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
 
     キャッシュ クリアのサポートが追加されました。
 
@@ -143,7 +143,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   **AD RMS のサポート** – 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
 -   **オフラインで使用** - エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
--   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) を使用することもできます)。
+-   **認証の分離** – 開発者は、独自の認証ライブラリ (または推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) を Azure RMS と AD RMS に使用できます。
 -   **UI の分離** – 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
 -   **再設計された API** – 暗号化/復号化の API が単純でわかりやすくなりました。RMS の動作と操作方法に一貫性があり、労力が最小限に抑えられます。
 
@@ -151,7 +151,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   RMS SDK 4.x API は*スレッド セーフ*ではありません。
 
-**Android**
+**Outlook Web Access (OWA)**
 
 -   Amazon® Kindle デバイスで .ptxt の添付ファイルを表示するサンプル アプリケーションを使用する際に、表示する前に、まずファイルをダウンロードする必要があります。
 
@@ -200,15 +200,15 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 なぜでしょうか。
+**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 どうしてでしょうか。
 
-**A**: これは既知の問題であり、今後対応する予定です。
+**A** – これは既知の問題であり、今後対応する予定です。
 
 **Q**: SDK およびサンプル アプリケーションを試すために新しい組織のテナントを取得するにはどうすればよいですか。
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜでしょうか。
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 どうしてでしょうか。
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -216,22 +216,22 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: いいえ、マニフェストは Rights Management SDK バージョン 3.0 以降では不要です。
 
-**Android**
+**Outlook Web Access (OWA)**
 
 **Q**: SDK はどの開発環境でテストされていますか。
 
 **A**: Google API 15 以降を使用した Eclipse Juno です。
 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
-**A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから呼び出す必要があります。
+**A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから を呼び出す必要があります。
 
-**iOS**
+**Android**
 
 **Q**: SDK の開発はどのプラットフォームで検証されましたか。
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜでしょうか。
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 どうしてでしょうか。
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 

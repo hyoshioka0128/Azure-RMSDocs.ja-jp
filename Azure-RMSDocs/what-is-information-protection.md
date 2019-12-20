@@ -4,7 +4,7 @@ description: Azure Information Protection サービスの技術的な概要で�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 11/10/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e89fcb967ea72bd61bf7c8ca73d72ccb08fdef47
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 97008a7ecb7979780454bee990ae905d87655f45
+ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792919"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73979961"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -145,19 +145,21 @@ Exchange Online で Azure Information Protection を使用する場合は、追�
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-オーランドでの Microsoft Ignite 2018 では、[Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection) に関する多くのセッションが行われました。 参加できなかった方も後でセッションを確認できるように、すべてのセッションが記録されています。 推奨されるトップ 5 のセッションは次のとおりです。
+Microsoft Ignite 2019 オーランドは大成功でした。 そこでは、最新の更新プログラムと機能強化を含む Azure Information Protection に関する有益な情報が多数提供されました。 ご参加いただけなかった場合でも、後から視聴できるようにセッションが録画されています。
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Microsoft Information Protection (MIP) を使用して、ライフサイクル全体を通してあらゆる場所の機密データを保護する)](https://myignite.techcommunity.microsoft.com/sessions/64297) - [YouTube ビデオ](https://youtu.be/gmHVF-1cLXA)をご覧ください
+お勧めする上位 5 つのセッションについて、次の一覧をご覧ください。
+
+- [BRK2119 - 機密データをセキュリティで保護しましょう。Microsoft Information Protection の最新機能について理解します](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Microsoft Information Protection の機能を連携させて、デバイス、アプリ、およびサービスの間で機密情報を保護する方法について)](https://myignite.techcommunity.microsoft.com/sessions/64299) - [YouTube ビデオ](https://youtu.be/kL9Y7NGTyQQ)をご覧ください
+- [THR3067 - データを理解する:ご自分の機密データ環境をよりよく理解するための上位 5 つのヒントとテクニック](https://myignite.techcommunity.microsoft.com/sessions/81183)
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Microsoft Information Protection ソリューションのデプロイと導入を加速させる)](https://myignite.techcommunity.microsoft.com/sessions/64283) - [YouTube ビデオ](https://www.youtube.com/watch?v=JsCyIVyQJmE)をご覧ください
+- [BRK3103 - 機密性の高いファイルとデータを保護することは、困難な場合があります。セキュリティと従業員の生産性を両立させる、適切なデータ保護オプションを選択します](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Office 365 Message Encryption で、機密性の高いメールを保護および管理する)](https://myignite.techcommunity.microsoft.com/sessions/64327) - [YouTube ビデオ](https://www.youtube.com/watch?v=Ld4b4pFua0g)をご覧ください
+- [BRK2120 - Azure Information Protection をご理解いただけましたか。統一ラベル付け、ポリシーの構成、クライアント、分析について説明します](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection (Microsoft Information Protection を使用して、すべてのデータに対してデータ検出、使用状況レポート、および分析を行う)](https://myignite.techcommunity.microsoft.com/sessions/64301) - [YouTube ビデオ](https://www.youtube.com/watch?v=nzDIXd0XaeA)をご覧ください
+- [BRK2121 - Microsoft Information Protection SDK を使用して、機密ラベル付けと保護の機能を独自のアプリと ISV ソリューションにまで拡張します](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
 
-この Ignite で行われた発表のロールアップについては、ブログ投稿「[Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967)」(機密データを保護するために使用できる情報保護機能の発表) を参照してください。
+最新のブログ投稿: [機密データがある場所を把握し、Microsoft 365 でインテリジェントに保護する](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
 
 
 ## <a name="next-steps"></a>次の手順

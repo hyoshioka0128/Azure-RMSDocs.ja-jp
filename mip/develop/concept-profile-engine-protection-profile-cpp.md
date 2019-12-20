@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: c8e2785f68ea76c34384dccb079260b6c3ed45cb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: fc25c35c1aea9690c0ec696a41c2f7346b4d6b8a
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175087"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "69885996"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK - 保護 API プロファイルの概念
 
@@ -24,36 +24,50 @@ ms.locfileid: "60175087"
 
 ### <a name="protectionprofilesettings-parameters"></a>ProtectionProfile::Settings Parameters
 
-- `std::string path`:ファイルのパスをログ、テレメトリ、およびその他の永続的な状態が格納されます。
-- `bool useInMemoryStorage`:すべての状態をディスク上ではなくメモリに格納する必要があるかどうかを定義します。
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`:クラスの共有ポインター`mip::AuthDelegate`します。
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`:共有へのポインター、`ProtectionProfile::Observer`実装します。
-- `mip::ApplicationInfo applicationInfo`: オブジェクト。 SDK を利用しているアプリケーションに関する情報を定義するために使用します。
+- `std::shared_ptr<MipContext>`: アプリケーション情報や状態パスなどを格納するために初期化された `mip::MipContext` オブジェクト。
+- `mip::CacheStorageType`: 状態をメモリ内、ディスク上、またはディスク上に格納し、暗号化する方法を定義します。
+- `std::shared_ptr<mip::AuthDelegate>`: クラス `mip::AuthDelegate` の共有ポインター。
+- `std::shared_ptr<mip::ConsentDelegate>`: クラス[`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)の共有ポインター。
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: プロファイル `Observer` の実装 ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)、 [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)、 [`FileProfile`](reference/class_mip_fileprofile_observer.md)) への共有ポインター。
 
 次の 2 つの例では、状態ストレージに対するローカル ストレージ、およびメモリ内のみを使用する profileSettings オブジェクト作成する方法を示します。 いずれも、`authDelegateImpl` オブジェクトが作成済みであると想定しています。
 
 #### <a name="store-state-in-memory-only"></a>メモリ内の状態のみを格納
 
 ```cpp
+mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+mMipContext = mip::MipContext::Create(appInfo,
+                "mip_app_data",
+                mip::LogLevel::Trace,
+                nullptr /*loggerDelegateOverride*/,
+                nullptr /*telemetryOverride*/);
+
 ProtectionProfile::Settings profileSettings(
-    "",                                     //path to store settings
-    true,                                   //useInMemoryStorage
-    authDelegateImpl,                       //auth delegate object
-    std::make_shared<ConsentDelegateImpl>(),//new consent delegate
-    std::make_shared<ProtectionProfileObserverImpl>(), //new protection profile observer
-    mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" }); //ApplicationInfo object
+    mipContext,                                        // mipContext object
+    mip::CacheStorageType::InMemory,                   // use in memory storage
+    authDelegateImpl,                                  // auth delegate object
+    std::make_shared<ConsentDelegateImpl>(),           // new consent delegate
+    std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile observer
 ```
 
 #### <a name="readwrite-profile-settings-from-storage-path-on-disk"></a>ディスク上のストレージ パスからのプロファイル設定の読み取り/書き込み
 
 ```cpp
+mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+mMipContext = mip::MipContext::Create(appInfo,
+                "mip_app_data",
+                mip::LogLevel::Trace,
+                nullptr /*loggerDelegateOverride*/,
+                nullptr /*telemetryOverride*/);
+
 ProtectionProfile::Settings profileSettings(
-    "./mip_app_data",                       //path to store settings
-    false,                                  //useInMemoryStorage
-    authDelegateImpl,                       //auth delegate object
-    std::make_shared<ConsentDelegateImpl>(),//new consent delegate
-    std::make_shared<ProtectionProfileObserverImpl>(), //new protection profile
-    mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" }); //ApplicationInfo object
+    mipContext,                                         // mipContext object
+    mip::CacheStorageType::OnDisk,                      // use on disk storage
+    authDelegateImpl,                                   // auth delegate object
+    std::make_shared<ConsentDelegateImpl>(),            // new consent delegate
+    std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile
 ```
 
 次に、promise/future パターンを使用して `ProtectionProfile` を読み込みます。
@@ -81,14 +95,23 @@ int main()
     const string userName = "MyTestUser@contoso.com";
     const string password = "P@ssw0rd!";
     const string clientId = "MyClientId";
-    auto authDelegateImpl = make_shared<sample::auth::AuthDelegateImpl>(userName, password, clientId);
 
-    ProtectionProfile::Settings profileSettings("",
-        false,
-        authDelegateImpl,
-        std::make_shared<ConsentDelegateImpl>(),
-        std::make_shared<ProfileObserver>(),
-        mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" });
+    mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+    auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
+
+    auto mipContext = mip::MipContext::Create(appInfo,
+                        "mip_app_data",
+                        mip::LogLevel::Trace,
+                        nullptr /*loggerDelegateOverride*/,
+                        nullptr /*telemetryOverride*/);
+
+    ProtectionProfile::Settings profileSettings(
+        mipContext,                                    // mipContext object
+        mip::CacheStorageType::OnDisk,                 // use on disk storage
+        authDelegateImpl,                              // auth delegate object
+        std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
+        std::make_shared<ProfileObserver>());          // new protection profile observer
 
     auto profilePromise = std::make_shared<promise<shared_ptr<ProtectionProfile>>>();
     auto profileFuture = profilePromise->get_future();
@@ -99,7 +122,7 @@ int main()
 
 最終結果は、プロファイルの読み込みが成功し、それが `profile` と呼ばれるオブジェクトに格納されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これでプロファイルが追加されました。次の手順では、エンジンをプロファイルに追加します。
 

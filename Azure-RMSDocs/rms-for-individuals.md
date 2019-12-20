@@ -4,7 +4,7 @@ description: 個人向け RMS について説明します。これは、保護�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a6fb98b54c5305206123076b8c9c3b2fad0f9876
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 39452080b5c3696241f4257f87eb99a53e2e821c
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792864"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933108"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
@@ -61,6 +61,6 @@ ms.locfileid: "68792864"
 > このアカウントを使用してファイルを保護することもできるようになりましたが、組織が Azure Information Protection の[試用版または有料サブスクリプション](https://azure.microsoft.com/pricing/details/information-protection/)を取得するまでは実行しないでください。 この無料サブスクリプションを使用してファイルや電子メールを保護した後で、組織がアカウントを制御した場合、前に保護したコンテンツにアクセスできなくなる可能性があります。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 個人用 RMS は、Azure Active Directory でサポートされているセルフサービスサインアップ機能を使用する例です。 この機能の動作の詳細については、Azure Active Directory のドキュメントの「 [Azure Active Directory のセルフサービスサインアップとは](/azure/active-directory/users-groups-roles/directory-self-service-signup)」を参照してください。
 

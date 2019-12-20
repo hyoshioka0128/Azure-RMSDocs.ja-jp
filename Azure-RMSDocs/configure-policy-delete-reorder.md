@@ -4,25 +4,25 @@ description: ユーザーに表示される Azure Information Protection ラベ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8e6e7da3ef542c83b71e64ae37f557b6440b7756
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cd38bef41bd2e1d0f422958c150ad06eba1793b9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791777"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935063"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 ラベルに対してこれらのアクションを選択することで、Office アプリケーションでユーザーに表示される Azure Information Protection ラベルを削除または順序変更することができます。
 
@@ -56,19 +56,19 @@ Information Protection バーにラベルが論理的な流れで表示される
 
 これらの変更を行うには、次の手順を実行します。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。 
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ペインに移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
 
-2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、次の 1 つ以上のアクションを実行します。 
+2. [**分類** > **ラベル**] メニューオプションから: **[Azure Information Protection ラベル]** ウィンドウで、次の操作の1つまたは複数を実行します。 
 
-    - ラベルを削除するには: 削除するラベルを右クリックするかコンテキスト メニュー ( **[...]** ) を選択し、 **[このラベルを削除]** をクリックし、 **[OK]** をクリックして確定します。 
+    - ラベルを削除するには: 削除するラベルを右クリックするかコンテキスト メニュー ( **[...]** ) を選択し、 **[Delete this label]\(このラベルを削除する\)** をクリックし、 **[OK]** をクリックして確定します。 
 
-    - ラベルを無効にするには: 無効にするラベルを選択します。 **[ラベル]** ブレードで、 **[有効]** に対して **[オフ]** を選択し、 **[保存]** をクリックします。
+    - ラベルを無効にする: 無効にするラベルを選択します。 **[ラベル]** ウィンドウで、 **[有効]** の **[オフ]** を選択し、 **[保存]** をクリックします。
 
-    - ラベルの順序を変更するには: 順序を変更するラベルを右クリックするかコンテキスト メニュー ( **...** ) を選択し、ラベルが目的の順序になるまで、 **[上へ移動]** または **[下へ移動]** をクリックします。  
+    - ラベルの順序を変更する: 順序を変更するラベルを右クリックするかコンテキスト メニュー ( **...** ) を選択し、ラベルが目的の順序になるまで、 **[上へ移動]** または **[下へ移動]** をクリックします。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

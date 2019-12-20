@@ -1,133 +1,150 @@
 ---
 title: class mip::PolicyEngine
-description: Mip::policyengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: Microsoft Information Protection (MIP) SDK の mip::p olicyengine クラスについて説明します。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: a1938601e036f7fb4d84a9a5815016dbda4509b7
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173650"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73558519"
 ---
 # <a name="class-mippolicyengine"></a>class mip::PolicyEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  ポリシー エンジン[設定](class_mip_policyengine_settings.md)を取得します。
-public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  ポリシー エンジンに関連付けられている機密ラベルの一覧を示します。
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  ポリシー エンジンに関連付けられている機密の種類を一覧表示します。
+public const Settings& GetSettings() const  |  ポリシーエンジンの設定を取得します。
+public const std:: vector\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels ()  |  ポリシー エンジンに関連付けられている機密ラベルの一覧を示します。
+public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
 public const std::string& GetMoreInfoUrl() const  |  ポリシー/ラベルに関する詳細情報を検索するための URL を提供します。
 public bool IsLabelingRequired() const  |  ドキュメントにラベルを付ける必要があるかどうかを、ポリシーで指示するかどうかを確認します。
-public std::shared_ptr\<ラベル\>GetDefaultSensitivityLabel()  |  既定の機密ラベルを取得します。
-public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  ポリシー ハンドラーを作成して、ファイルの事項状態でポリシー関連の関数を実行します。
+public std:: shared_ptr\<Label\> GetDefaultSensitivityLabel ()  |  既定の機密ラベルを取得します。
+public std:: shared_ptr\<Label\> GetLabelById (const std:: string & id) const  |  指定された id に従ってラベルを取得します。
+public std:: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscoveryEnabled)  |  ポリシー ハンドラーを作成して、ファイルの事項状態でポリシー関連の関数を実行します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
-public const std::string& GetPolicyDataXml() const  |  ポリシー データの設定、ラベル、およびこのポリシーに関連付けられているルールを記述する XML を取得します。
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  カスタム設定の一覧を取得します。
-public const std::string& GetPolicyId() const  |  ポリシー ID を取得します
-public bool HasClassificationRules() const  |  場合は、ポリシーは自動または推奨事項ルールを取得します。
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチした時刻を取得します。
+public const std::string& GetPolicyDataXml() const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
+public const std:: string & GetSensitivityTypesDataXml () const  |  このポリシーに関連付けられている感度の種類を記述する、秘密度の種類のデータ XML を取得します。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
+public const std:: string & GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
+public const std:: string & GetSensitivityFileId () const  |  感度ファイル ID を取得します。
+public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチされた時刻を取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="getsettings-function"></a>GetSettings 関数
-ポリシー エンジン[設定](class_mip_policyengine_settings.md)を取得します。
+ポリシーエンジンの設定を取得します。
 
   
-**返します**:ポリシー エンジン設定。 
+**戻り値**: ポリシー エンジン設定。 
   
-**関連項目**: [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)
+**関連**項目: mip::P olicyEngine:: Settings
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels 関数
 ポリシー エンジンに関連付けられている機密ラベルの一覧を示します。
 
   
-**返します**:機密ラベルの一覧。
+**戻り値**: 機密ラベルの一覧。
   
 ### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes 関数
-ポリシー エンジンに関連付けられている機密の種類を一覧表示します。
+ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
 
   
-**返します**:機密ラベルの一覧。 LoadSensitivityTypesEnabled されました (false の場合は、空
+**戻り値**: 機密ラベルの一覧。 LoadSensitivityTypesEnabled が false の場合は空 (
   
-**参照してください**:[PolicyEngine::Settings](class_mip_policyengine_settings.md))。
+**関連**項目: policyengine:: Settings)
   
 ### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl 関数
 ポリシー/ラベルに関する詳細情報を検索するための URL を提供します。
 
   
-**返します**:文字列の形式で url です。
+**戻り値**: 文字列形式の URL。
   
 ### <a name="islabelingrequired-function"></a>IsLabelingRequired 関数
 ドキュメントにラベルを付ける必要があるかどうかを、ポリシーで指示するかどうかを確認します。
 
   
-**返します**:必須、それ以外の場合は false にはラベルを付ける場合は true。
+**戻り値**: ラベルが必須の場合は true、それ以外の場合は false。
   
 ### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel 関数
 既定の機密ラベルを取得します。
 
   
-**返します**:既定の機密ラベルの場合は存在の場合は、既定のラベルが設定されていない場合は nullptr。
+**戻り値**: 存在する場合は既定の機密ラベル、既定のラベルが設定されていない場合は nullptr。
+  
+### <a name="getlabelbyid-function"></a>GetLabelById 関数
+指定された id に従ってラベルを取得します。
   
 ### <a name="createpolicyhandler-function"></a>CreatePolicyHandler 関数
 ポリシー ハンドラーを作成して、ファイルの事項状態でポリシー関連の関数を実行します。
 
 パラメーター:  
-* **A**: 監査検出が有効か無効かどうかを表すブール値。
+* **A**: 監査検出が有効かどうかを表すブール値。
 
 
 
   
-**返します**:ポリシーのハンドラー。
-アプリケーションは、ドキュメントの有効期間ポリシーのハンドラー オブジェクトを保持する必要があります。
+**戻り値**: ポリシー ハンドラー。
+アプリケーションでは、ドキュメントの有効期間にわたってポリシーハンドラーオブジェクトを保持する必要があります。
   
 ### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent 関数
 アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 
 パラメーター:  
-* **レベル**: のログ レベル。情報/エラー/警告します。 
+* **レベル**: ログレベル: Info/Error/Warning。 
 
 
 * **eventType**: イベントの種類の説明。 
 
 
-* **eventData**: イベントに関連付けられたデータ。
+* **eventData**: イベントに関連付けられているデータ。
 
 
   
 ### <a name="getpolicydataxml-function"></a>GetPolicyDataXml 関数
-ポリシー データの設定、ラベル、およびこのポリシーに関連付けられているルールを記述する XML を取得します。
+このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
 
   
-**返します**:ポリシー データは XML です。
+は、ポリシーデータ XML**を返し**ます。
+  
+### <a name="getsensitivitytypesdataxml-function"></a>GetSensitivityTypesDataXml 関数
+このポリシーに関連付けられている感度の種類を記述する、秘密度の種類のデータ XML を取得します。
+
+  
+**を返し**ます。秘密度の種類のデータ XML です。
   
 ### <a name="getcustomsettings-function"></a>GetCustomSettings 関数
 カスタム設定の一覧を取得します。
 
   
-**返します**:カスタム設定のベクター。
+**戻り**値: カスタム設定のベクター。
   
-### <a name="getpolicyid-function"></a>GetPolicyId 関数
-ポリシー ID を取得します
+### <a name="getpolicyfileid-function"></a>GetPolicyFileId 関数
+ポリシーファイル ID を取得します。
 
   
-**返します**:ポリシー ID を表す文字列です。
+**戻り値**: ポリシーファイル ID を表す文字列
+  
+### <a name="getsensitivityfileid-function"></a>GetSensitivityFileId 関数
+感度ファイル ID を取得します。
+
+  
+**戻り値**: ポリシーファイル ID を表す文字列
   
 ### <a name="hasclassificationrules-function"></a>HasClassificationRules 関数
-場合は、ポリシーは自動または推奨事項ルールを取得します。
+ポリシーに自動または推奨規則があるかどうかを取得します。
 
   
-**返します**:かどうかがあります、自動または recommandation 規則、ポリシーでのかを示すブール値
+**戻り値**: ポリシーに自動または推奨規則があるかどうかを示すブール値
   
 ### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime 関数
-ポリシーが最後にフェッチした時刻を取得します。
+ポリシーが最後にフェッチされた時刻を取得します。
 
   
-**返します**:ポリシーが最後にフェッチした時間
+**戻り値**: ポリシーが最後にフェッチされた時刻

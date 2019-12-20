@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 1ce52c18e1fb7569ea1b02f56f0564aab0f09129
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791034"
 ---
 # <a name="install-the-sdk"></a>SDK のインストール
@@ -38,6 +38,6 @@ ms.locfileid: "68791034"
 
 "setup\_sdk.exe" によってシステムにインストールされるファイルの詳細については、「[開発環境ファイル](sdk-elements.md)」を参照してください。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [開発環境ファイル](sdk-elements.md)

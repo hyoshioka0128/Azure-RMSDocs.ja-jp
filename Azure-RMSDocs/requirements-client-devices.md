@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/15/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49eec868f5d03f8bc1852f53cab380d8ec149b94
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: bd88649f5e66358a97bb446e4e3d7c9f43c78500
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790174"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74160852"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするクライアント デバイス
 
@@ -26,7 +26,7 @@ ms.locfileid: "68790174"
 
 次のセクションでは、Azure Rights Management サービスをサポートするデバイスについて説明します。 このサービスは、Azure Information Protection 向けにデータ保護を提供します。
 
-## <a name="computers"></a>コンピューター
+## <a name="computers"></a>[コンピューター]
 次のコンピューター オペレーティング システムで Azure Rights Management サービスがサポートされています。
 
 -   **Windows 7** (x86、x64)
@@ -37,18 +37,18 @@ ms.locfileid: "68790174"
 
 -   **Windows 10** (x86、x64)
 
--   **macOS**: macOS 10.8 (Mountain Lion) 以降
+-   **macos**: macos 10.8 (マウンテンライオン) の最小バージョン
 
 ## <a name="mobile-devices"></a>モバイル デバイス
 次のモバイル デバイス オペレーティング システムで Azure Rights Management サービスがサポートされています。
 
--   **Android 端末およびタブレット**: Android 4.4 以降
+-   **Android フォンとタブレット**: android 6.0 の最小バージョン
 
--   **iPhone および iPad**: iOS 8.0 以降
+-   **iPhone と iPad**: iOS 11.0 の最小バージョン
 
--   **Windows 携帯電話とタブレット**:Windows 10 Mobile
+-   **Windows phone およびタブレット**: Windows 10 Mobile
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 

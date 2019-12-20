@@ -1,45 +1,44 @@
 ---
-title: mip::HttpOperation をクラスします。
-description: Mip::httpoperation クラスの Microsoft Information Protection (MIP) SDK について説明します。
+title: 'クラス mip:: HttpOperation'
+description: 'Microsoft Information Protection (MIP) SDK の mip:: httpoperation クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: e3eaedbf508f116b19521286b686bc955d108efe
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 6f0c3cc726d72d89a8682907ebc350270db5daee
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173560"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73558786"
 ---
-# <a name="class-miphttpoperation"></a>mip::HttpOperation をクラスします。 
-オーバーライドする場合、クライアント アプリケーションによって実装される単一の HTTP 操作を表すインターフェイスを[HttpDelegate](class_mip_httpdelegate.md)します。
+# <a name="class-miphttpoperation"></a>クラス mip:: HttpOperation 
+HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 操作を記述するインターフェイス。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  操作 ID を取得します
-public std::shared_ptr\<HttpResponse\> GetResponse()  |  存在する場合は、応答を取得します。
-public bool IsCancelled()  |  操作のキャンセル状態を取得します。
+public const std::string& GetId() const  |  操作 ID を取得します。
+public std:: shared_ptr\<Httpresponse.cache\> GetResponse ()  |  応答を取得します (存在する場合)。
+public bool IsCancelled ()  |  操作のキャンセルステータスを取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="getid-function"></a>GetId 関数
-操作 ID を取得します
+操作 ID を取得します。
 
   
-**返します**:操作 ID が、対応する[HttpRequest](class_mip_httprequest.md)と[HttpResponse](class_mip_httpresponse.md)同じ ID を持つ
+**戻り値**: 操作 id 対応する HttpRequest と HTTPRESPONSE.CACHE の id は同じになります
   
 ### <a name="getresponse-function"></a>GetResponse 関数
-存在する場合は、応答を取得します。
+応答を取得します (存在する場合)。
 
   
-**返します**:応答
+**戻り値**: Response
   
 ### <a name="iscancelled-function"></a>IsCancelled 関数
-操作のキャンセル状態を取得します。
+操作のキャンセルステータスを取得します。
 
   
-**返します**:取り消しの状態
+**戻り値**: キャンセル状態

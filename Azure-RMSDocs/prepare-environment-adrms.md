@@ -4,7 +4,7 @@ description: Azure Rights Management が AD RMS デプロイされている場�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b5ee3f68f0f1fb6d82e0e3abaf2d2c0d5585bf8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 5fba2e27abaf59e9b9b50322baa0d93b2af93aa9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790370"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935386"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS がある場合に Azure Rights Management 用に環境を準備する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Active Directory Rights Management サービス (AD RMS) を使用する場合のガイダンス
@@ -56,7 +56,7 @@ Azure Information Protection に移行する場合でも、制限事項を受け
 
 2018 年 2 月末日まで、Azure Information Protection を含む新しいサブスクリプションでは、既定により Azure Rights Management サービスがアクティブになります。 このサービスが自動的にアクティブ化されていて、Active Directory Rights Management サービス (AD RMS) も使用している場合は、この組み合わせには互換性がありません。したがって、でくるだけ早く Azure Rights Management サービスを非アクティブ化することが重要です。 
 
-### <a name="step-1-deactivate-azure-rights-management"></a>手順 1:Azure Rights Management を非アクティブ化する
+### <a name="step-1-deactivate-azure-rights-management"></a>手順 1: Azure Rights Management を非アクティブ化する
 Azure Rights Management を非アクティブ化するには、次のいずれかの手順を使用します。
 
 > [!TIP]
@@ -76,21 +76,21 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Azure ポータルから Rights Management を非アクティブ化するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ペインに移動します。
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
     
-    以前に [Azure Information Protection] ブレードにアクセスしたことがない場合、このブレードをポータルに追加するには、1 回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time)を参照してください。
+    以前に Azure Information Protection ウィンドウにアクセスしていない場合は、このウィンドウをポータルに追加するための1回限りの[追加の手順](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time)を参照してください。
 
 2. メニュー オプションで、 **[保護のアクティブ化]** を選択します。 
 
-3.  **[Azure Information Protection - Protection activation]\(Azure Information Protection - 保護のアクティブ化\)** ブレードで、 **[非アクティブ化]** を選びます。 **[はい]** を選択して選択肢を確定します。
+3.  **[Azure Information Protection 保護のアクティブ化]** ウィンドウで、 **[非アクティブ化]** を選択します。 **[はい]** を選択して選択肢を確定します。
 
 情報バーに **[非アクティブ化が正常に完了しました]\(Deactivation finished successfully\)** と表示され、 **[非アクティブ化]** が **[アクティブ化]** に変わります。 
 
-### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
+### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
 
-移行ガイダンスをご覧ください: [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
+移行ガイダンス「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」をご覧ください
 
 
 ## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>サブスクリプションの購入が 2018 年 2 月以前であり、Exchange Online がある場合
@@ -99,32 +99,32 @@ Azure Rights Management を非アクティブ化するには、次のいずれ�
 
 サービスが自動的にアクティブ化され、かつ AD RMS を使用している場合、この組み合わせには互換性がないため、サービスの自動更新からテナントを除外することが重要です。 
 
-### <a name="step-1-opt-out-from-the-automatic-service-update"></a>手順 1:サービスの自動更新から除外する
+### <a name="step-1-opt-out-from-the-automatic-service-update"></a>手順 1: サービスの自動更新から除外する
 
 次の [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell コマンドを使用します: `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
 
 [詳細情報](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
+### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
 
-移行ガイダンスをご覧ください: [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
+移行ガイダンス「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」をご覧ください
 
 
 ## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Azure Information Protection を構成する際に保護をアクティブにするためのオプションが表示される
 
-**[Azure Information Protection - 保護のアクティブ化]** のブレードには、Azure Rights Management サービスをアクティブ化するためのオプションがあります。  
+**Azure Information Protection 保護のアクティブ化**ウィンドウには、Azure Rights Management サービスをアクティブ化するオプションがあります。  
 
 AD RMS も使用している場合は、 **[アクティブ化]** オプションを選択しないでください。 Azure Rights Management サービスがアクティブになっていない場合でも、分類のみを適用するラベルで Azure Information Protection を使用できます。 データ保護を含まない特別な既定ポリシーが自動的に作成されます。これらの構成オプションは、Azure Rights Management サービスがアクティブになるまで使用不可のままです。
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1:分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>手順 1: 分類とラベル付けのために Azure Information Protection ポリシーを構成する (保護なし)
 
-**[Azure Information Protection - ラベル]** ブレードから、データ保護のためのオプションが含まれていないラベルを表示して構成します。 ラベルとポリシーの設定を構成する方法について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
+**[Azure Information Protection ラベル]** ウィンドウで、データ保護のオプションを含まないラベルを表示および構成します。 ラベルとポリシーの設定を構成する方法について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 
-### <a name="step-2-start-planning-for-migration"></a>手順 2:移行の計画を開始する
+### <a name="step-2-start-planning-for-migration"></a>手順 2: 移行の計画を開始する
 
-移行ガイダンスをご覧ください: [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)
+移行ガイダンス「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」をご覧ください
 
-### <a name="step-3-configure-labels-for-protection"></a>手順 3:保護のためのラベルを構成する
+### <a name="step-3-configure-labels-for-protection"></a>手順 3: 保護のためのラベルを構成する
 
 移行プロセス時に Azure Rights Management サービスをアクティブにした場合は、データ保護のためにラベルを構成できます。 ただし、ユーザーをバッチで移行する場合は、保護を適用するラベルの範囲が移行対象のユーザーのみに指定されていることを確認してください。
 

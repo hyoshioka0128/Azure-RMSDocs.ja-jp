@@ -4,7 +4,7 @@ description: Microsoft が Azure Information Protection のテナント キー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,20 +13,20 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ee94f0a4966ce16ae8b87f23bf4a9a734cc015a0
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790484"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73444971"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理:テナント キーのライフサイクル操作
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Microsoft が Azure Information Protection のテナント キーを管理する場合 (既定)、次のセクションを使用してこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
-## <a name="revoke-your-tenant-key"></a>テナント キーを取り消します
+## <a name="revoke-your-tenant-key"></a>テナント キーの取り消し
 Azure Information Protection のサブスクリプションをキャンセルすると、Azure Information Protection ではお客様のテナント キーの使用を停止します。操作を行う必要はありません。
 
 ## <a name="rekey-your-tenant-key"></a>テナント キーの再入力
@@ -54,35 +54,35 @@ Azure Information Protection のアクティブなテナントキーとして別
 
 キー トポロジを、お客様による管理 (BYOK) に変更するには、「[Azure Information Protection テナント キーの BYOK を実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
 
-## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
+## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
 テナント キーのバックアップは Microsoft が行うため、ユーザーの操作は必要ありません。
 
-## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
+## <a name="export-your-tenant-key"></a>テナント キーのエクスポート
 Azure Information Protection の構成およびテナント キーをエクスポートするには、次の 3 つの手順に従います。
 
-### <a name="step-1-initiate-export"></a>手順 1:エクスポートの開始
+### <a name="step-1-initiate-export"></a>手順 1:エクスポートを開始する
 
-- [Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)し、**Azure Information Protection キーのエクスポートの要求で Azure Information Protection サポート ケース**を開きます。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 Standard サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
+- [Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)し、**Azure Information Protection キーのエクスポートの要求で Azure Information Protection サポート ケース**を開きます。 テナントのグローバル管理者であることを証明し、このプロセスの確認に数日かかることを理解しておく必要があります。 Standard サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
 
-### <a name="step-2-wait-for-verification"></a>手順 2:確認を待機する
+### <a name="step-2-wait-for-verification"></a>手順 2:検証が完了するまで待機する
 
 - Microsoft は Azure Information Protection テナント キーのリリース要求が正当であることを確認します。 このプロセスには、最大 3 週間を要することがあります。
 
-### <a name="step-3-receive-key-instructions-from-css"></a>手順 3:CSS からの主要な命令の受信
+### <a name="step-3-receive-key-instructions-from-css"></a>手順 3:CSS からキーの手順を受領する
 
 - Microsoft カスタマー サポート サービス (CSS) は、Azure Information Protection の構成およびテナント キーを、パスワードで保護されたファイルで暗号化した状態で送付します。 このファイルのファイル名拡張子は、 **.tpd** です。 これにあたって、CSS はまずエクスポートを開始したユーザーにツールを電子メールで送信します。 このツールをコマンド プロンプトから次のように実行します。
 
     ```
     AadrmTpd.exe -createkey
     ```
-    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 例えば:**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** や **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
+    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 たとえば、**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** と **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
 
-    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 例えば:
+    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 たとえば、次のようになります。
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    このコマンドの出力は、次の2つのファイルである必要があります。一方にはパスワードで保護された TPD のプレーンテキスト パスワードが含まれ、もう一方にはパスワードで保護された TPD 自体が含まれています。 ファイルには、以下のような新しい GUID が付けられます。
+    このコマンドの出力は 2 つのファイルです。一方のファイルにはパスワードで保護された TPD のプレーン テキスト パスワードが含まれ、他方のファイルにはパスワードで保護された TPD 自体が含まれています。 ファイルには、以下のような新しい GUID が付けられます。
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -90,16 +90,16 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
     これらのファイルをバックアップし、安全な場所に保存します。これにより、このテナント キーで保護されたコンテンツを継続して暗号化解除できるようになります。 また、AD RMS に移行する場合は、この TPD ファイル (名前が **ExportedTDP** で始まるファイル) を AD RMS サーバーにインポートできます。
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>手順 4:メンテナンステナントキーを保護する
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>手順 4:継続:テナント キーを保護する
 
 テナント キーを受領したら、厳重に保護してください。だれかがそれにアクセスできる場合、そのキーを使用して保護されているすべてのドキュメントを暗号化解除できるからです。
 
 テナント キーをエクスポートする理由が、Azure Information Protection を使用しなくなったためである場合、ベスト プラクティスとして、直ちに Azure Information Protection テナントから Azure Rights Management サービスを非アクティブ化してください。 これは、テナント キーの受領後すぐに実行してください。この予防策によって、アクセスすべきでないだれかがテナント キーにアクセスした場合の影響を最小限にできます。 手順については、「[Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)」を参照してください。
 
-## <a name="respond-to-a-breach"></a>侵害に反応します
+## <a name="respond-to-a-breach"></a>侵害への対応
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の生成キー技術、または現在のキーの長さおよびアルゴリズムに脆弱性が見つかる可能性があります。
 
-製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントがあなたの資産に影響を与える場合、マイクロソフトは Azure Information Protection テナント管理者に電子メールで通知します。その場合、サブスクリプションで指定されたメール アドレスが使われます。
+製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントが資産に影響する場合、Microsoft はテナントのグローバル管理者に電子メールで通知します。
 
 侵害がある場合、あなたまたはマイクロソフトがとれる最善策は侵害の範囲によって異なります。マイクロソフトはあなたと連携し、このプロセスを進めます。 次の表は一般的な状況と、考えられる対応をいくつかまとめたものです。ただし、実際の対応は調査中に明らかになった情報によって変わります。
 

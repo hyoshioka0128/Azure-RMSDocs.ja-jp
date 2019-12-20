@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2a71fcddecbe688f38360c42cf83946f82269013
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790796"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>方法: API セキュリティ モードの設定
@@ -31,7 +31,7 @@ ms.locfileid: "68790796"
 
 **重要**  セキュリティ モードは、他の Rights Management サービス SDK 2.1 関数を呼び出す前に設定する必要があります。 セキュリティ モードは、設定後に現在のプロセスに対して変更することはできません。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [アプリケーションの種類](application-types.md)
 * [API mode values (API のモード値)](https://msdn.microsoft.com/library/hh535236.aspx)

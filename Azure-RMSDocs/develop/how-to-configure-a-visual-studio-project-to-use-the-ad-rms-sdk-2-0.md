@@ -15,23 +15,23 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792405"
 ---
 # <a name="configure-visual-studio"></a>Configure Visual Studio (Visual Studio の構成)
 
 このトピックでは、Rights Management サービス SDK 2.1 を使用するように Visual Studio プロジェクトを構成する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 -   [SDK のインストール](install-the-rms-sdk.md)
 
 **手順**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>手順 1:RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>手順 1: RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する
 
 ここでは、Microsoft Visual Studio 2010 に固有の手順を紹介します。 Microsoft Visual Studio の別のバージョンを使用している場合、設定ダイアログ ボックスが多少異なる場合があります。
 
@@ -70,6 +70,6 @@ ms.locfileid: "68792405"
 
     ![[ソリューション エクスプローラー] の [リソース ファイル] フィールド](../media/original_file_name.png)
 
-## <a name="related-topics"></a>関連トピック
+## <a name="related-topics"></a>関連項目
 
 * [SDK のインストール](install-the-rms-sdk.md)

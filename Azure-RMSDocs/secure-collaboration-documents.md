@@ -4,7 +4,7 @@ description: Azure Information Protection によって保護されたドキュ�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 743b9dc75a5cd39832ef02e0dc0730fc23fd14b9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789693"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934468"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection では、承認済みユーザーのコラボレーション機能を損なうことなく、ドキュメントを保護できます。 1 人のユーザーが作成し、表示や編集の権限を他のユーザーと共有するドキュメントの多くは、Word、Excel、PowerPoint の Office ドキュメントになります。 これらのドキュメントでは、保護機能がネイティブにサポートされます。つまり、認証と暗号化の機能だけでなく、より詳細に制御するための制限付き権限もサポートされます。 
 
@@ -30,13 +30,13 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 これらの権限を構成する際には、その対象となるユーザーを指定できます。
 
-- **Azure Active Directory を使用する自社または他の組織のユーザーの場合**: その組織の Azure AD ユーザー アカウント、Azure AD グループ、またはすべてのユーザーを指定できます。 
+- **お客様の組織か、Azure Active Directory を使用している別の組織内のユーザーの場合**: で Azure AD ユーザー アカウント、Azure AD グループ、またはその組織内のすべてのユーザーを指定できます。 
 
-- **Azure Active Directory アカウントのないユーザーの場合**: Microsoft アカウントで使用されるメール アドレスを指定します。 既存のアカウントを使用することもできますし、保護されたドキュメントを開くときにアカウントを作成することもできます。 
+- **Azure Active Directory アカウントを持っていないユーザーの場合**: Microsoft アカウントで使用される電子メール アドレスを指定します。 既存のアカウントを使用することもできますし、保護されたドキュメントを開くときにアカウントを作成することもできます。 
     
     Microsoft アカウントを使ってドキュメントを開くには、Office 365 アプリ (クイック実行) を使用する必要があります。 他のエディションやバージョンの Office では、Office の保護されたドキュメントを Microsoft アカウントで開く機能は、まだサポートされていません。
 
-- **認証されたユーザーの場合**: 保護されたドキュメントへのアクセスを制御する必要がなく、ユーザーが認証されていれば、このオプションが適しています。 認証は、Azure AD、Microsoft アカウントの使用、コンテンツが Office 365 メッセージの暗号化の新機能で保護されている場合はフェデレーション ソーシャル プロバイダーやワンタイム パスコードなど、さまざまな方法で行われます。 
+- **認証されたユーザーの場合**: 認証されたユーザーであれば保護されたドキュメントへのアクセスを制御する必要がない場合、このオプションが適しています。 認証は、Azure AD、Microsoft アカウントの使用、コンテンツが Office 365 メッセージの暗号化の新機能で保護されている場合はフェデレーション ソーシャル プロバイダーやワンタイム パスコードなど、さまざまな方法で行われます。 
 
 管理者は、Azure Information Protection ラベルを構成して、権限と承認済みユーザーを適用できます。 この構成により、ユーザーや他の管理者は詳細を指定することなく、ラベルを適用するだけで正しい保護設定を簡単に適用できるようになります。 次のセクションでは、ドキュメントを保護し、内部や外部のユーザーと安全にコラボレーションできるようにする方法について、例を使って説明します。
 
@@ -45,39 +45,39 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 この例では、既存のラベルを構成して保護を適用し、組織内のユーザーが他のユーザーとドキュメントでコラボレーションできるようにする手順について説明します。コラボレーションに含めるのは、Office 365 または Azure AD を使用している他の組織内の全ユーザー、Office 365 または Azure AD を使用している他の組織内のグループ、および Azure AD のアカウントを持たずに Gmail のメール アドレスを使用しているユーザーです。
 
-シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例は、[例 5: コンテンツを暗号化するが、アクセスできるユーザーは制限しないラベル](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)を参照してください。  
+シナリオによって特定の相手に対するアクセスが制限されるため、認証されたユーザーの設定は含まれません。 この設定でラベルを構成する方法の例としては、「[例 5: コンテンツを暗号化するがアクセスを制限しないラベル](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it)」をご覧ください。  
 
-1. グローバル ポリシーまたはスコープ付きポリシーに含まれている既存のラベルを選択します。 **[保護]** ブレードで、 **[Azure (クラウド キー)]** が選択されていることを確認します。
+1. グローバル ポリシーまたはスコープ付きポリシーに含まれている既存のラベルを選択します。 **[保護]** ペインで、 **[Azure (クラウド キー)]** が選択されていることを確認します。
     
 2. **[アクセス許可の設定]** が選択されていることを確認し、 **[アクセス許可の追加]** を選択します。
 
-3. **[アクセス許可の追加]** ブレードで、次の操作を行います。 
+3. **[アクセス許可の追加]** ペインで、次の操作を行います。 
     
    - 内部グループ: **[ディレクトリを参照]** を選択し、グループを選択します (電子メールが有効になっている必要があります)。
     
    - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
     
-   - 第 2 外部組織内のグループ: 同様に **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com のようにします。
+   - 第 2 外部組織内のグループ: **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、 sales@contoso.comのように指定します。
     
-   - Azure AD アカウントを持っていないユーザー: この場合も **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com のようにします。 
+   - Azure AD アカウントを持っていないユーザー: **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、 bengi.turan@gmail.comのように指定します。 
 
-4. これらすべてのユーザーに同じアクセス許可を与える場合: **[事前設定されたものの中からアクセス許可を選択する]** に対し、 **[共同所有者]** 、 **[共同作成者]** 、 **[レビュー担当者]** 、 **[カスタム]** のいずれかを選択し、付与するアクセス許可を選択します。
+4. これらすべてのユーザーに同じ権限を付与するには、 **[事前設定されたものの中からアクセス許可を選択する]** で、 **[共同所有者]** 、 **[共同作成者]** 、 **[レビュー担当者]** 、または **[カスタム]** を選択し、付与する権限を選択します。
     
     たとえば、構成後の権限は次のようになります。
         
     ![セキュアなコラボレーションのための権限の構成](./media/collaboration-permissions.png)
 
-5. **[アクセス許可の追加]** ブレードで **[OK]** をクリックします。
+5. **[アクセス許可の追加]** ペインで **[OK]** をクリックします。
 
-6. **[保護]** ブレードで、 **[OK]** をクリックします。
+6. **[保護]** ウィンドウで、[ **OK]** をクリックします。
 
-7. **[ラベル]** ブレードで、 **[保存]** を選択します。 
+7. **[ラベル]** ペインで、 **[保存]** を選択します。 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>セキュアなコラボレーションをサポートするラベルの適用
 
 ラベルを構成したら、次に示す各種の方法でラベルをドキュメントに適用できます。
 
-|ラベルの適用方法|詳細情報|
+|ラベルの適用方法|説明を見る|
 |---------------|----------|
 |Office アプリケーションでのドキュメント作成時に、手動でラベルを選択する。|Office リボンの **[保護]** ボタンか、Azure Information Protection バーからラベルを選択します。|
 |新規ドキュメントの保存時に、ラベルを選択するように求められる。|**[すべてのドキュメントとメールにラベルを付ける]** という Azure Information Protection [ポリシー設定](configure-policy-settings.md)を構成した場合です。|
@@ -95,7 +95,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 例えば:
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 たとえば、次のようになります。
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 
@@ -103,7 +103,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ![Azure Information Protection の権限に関するダイアログ ボックスの例](./media/example-permisisons-popup.png)
 
-メモ:Azure Information Protection を使用している外部ユーザーによってドキュメントが開かれた場合、Office アプリケーションでは、そのドキュメントの分類ラベルの視覚的なマーキングは残りますが、ラベルは表示されません。 代わりに、外部ユーザーはそれぞれの組織の分類法に沿って各自のラベルを適用できます。 外部ユーザーが編集したドキュメントを送り返してきた場合、Office でドキュメントを再び開くと元の分類ラベルが表示されます。
+注: Azure Information Protection を使用している外部ユーザーによってドキュメントが開かれた場合、Office アプリケーションでは、そのドキュメントの分類ラベルの視覚的なマーキングは残りますが、ラベルは表示されません。 代わりに、外部ユーザーはそれぞれの組織の分類法に沿って各自のラベルを適用できます。 外部ユーザーが編集したドキュメントを送り返してきた場合、Office でドキュメントを再び開くと元の分類ラベルが表示されます。
 
 保護されたドキュメントが開く前に、次のいずれかの認証フローが発生します。
 
@@ -135,11 +135,11 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 |ドキュメントの表示と編集のためのプラットフォーム: <br />Word、Excel、PowerPoint|認証方法:<br />Azure AD|認証方法:<br />Microsoft アカウント|
 |---------------|----------|-----------|-----------|
 |Windows|はい [[1]](#footnote-1)|はい [[2]](#footnote-2)|
-|iOS|はい [[1]](#footnote-1)|いいえ|
-|Android|はい [[1]](#footnote-1)|いいえ|
-|MacOS|はい [[1]](#footnote-1)|いいえ|
+|[iOS]|はい [[1]](#footnote-1)|[いいえ]|
+|Android|はい [[1]](#footnote-1)|[いいえ]|
+|MacOS|はい [[1]](#footnote-1)|[いいえ]|
 
-###### <a name="footnote-1"></a>脚注 1
+###### <a name="footnote-1"></a>脚注 1:
 ユーザー アカウント、電子メールが有効なグループ、すべてのメンバーがサポートされています。 ユーザー アカウント、および電子メールが有効なグループには、ゲスト アカウントが含まれる場合があります。 すべてのメンバーには、ゲスト アカウントは含まれません。
 
 ###### <a name="footnote-2"></a>脚注 2
@@ -148,7 +148,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 一般的なシナリオで保護を適用するためのラベルについては、他の[構成例](configure-policy-protection.md#example-configurations)をご覧ください。 この記事には、保護設定に関する詳細も含まれています。
 

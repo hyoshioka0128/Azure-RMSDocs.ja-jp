@@ -4,7 +4,7 @@ description: Azure Information Protection のテナント キーを自分で管�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,21 +13,24 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1b3dc6b5a557339a33abfb5cf8b54d995b1da21
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793870"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898907"
 ---
-# <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理:テナント キーのライフサイクル操作
+# <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) は、次のセクションでこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
-## <a name="revoke-your-tenant-key"></a>テナント キーを取り消します
-Azure Key Vault では、Azure Information Protection テナント キーが格納されたキー コンテナーに対するアクセス許可を変更して、Azure Rights Management サービスがキーにアクセスできないようにすることができます。 ただし、これを行うと、以前に Azure Rights Management サービスで保護したドキュメントや電子メールを誰も開けなくなります。
+## <a name="revoke-your-tenant-key"></a>テナント キーの取り消し
+
+キーを更新する代わりに、キーを失効させることが必要になるシナリオはごくわずかです。 キーを取り消すと、そのキーを使用してテナントによって保護されているすべてのコンテンツは、復元可能なキーのバックアップがない限り、すべてのユーザー (Microsoft、グローバル管理者、およびスーパーユーザー) がアクセスできなくなります。 キーを取り消した後は、Azure Information Protection 用に新しいテナントキーを作成して構成するまで、新しいコンテンツを保護することはできません。 
+
+お客様が管理するテナントキーを失効させるには、Azure Key Vault で、Azure Information Protection テナントキーを含む key Vault のアクセス許可を変更して、Azure Rights Management サービスがキーにアクセスできなくなるようにします。 この操作により、Azure Information Protection のテナントキーが実質的に取り消されます。
 
 Azure Information Protection のサブスクリプションをキャンセルすると、Azure Information Protection ではお客様のテナント キーの使用を停止します。操作を行う必要はありません。
 
@@ -46,7 +49,7 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 管理している別のキーにキーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。 
 
-1. 新しいキーが Azure Information Protection で既に使用しているキーとは異なるキー コンテナーにある場合にのみ: [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、キーコンテナーを使用する Azure Information Protection を承認します。
+1. 新しいキーが Azure Information Protection に既に使用しているキーコンテナーとは別のキーコンテナーにある場合にのみ: [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、キーコンテナーを使用する Azure Information Protection を承認します。
 
 2. Azure Information Protection 使用するキーがまだわからない場合は、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットを実行します。
 
@@ -60,20 +63,20 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 - キーを再入力し、マイクロソフトが代わりに管理するキーに変更するには、マイクロソフト管理操作の「[テナント キーの再入力](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key)」セクションをご覧ください。
 
-## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
+## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
 あなたはテナント キーを管理しているので、Azure Information Protection で使用されるキーをバックアップする責任があります。 
 
-オンプレミスでテナントキーを生成した場合は、nCipher HSM で次のようになります。キーをバックアップするにはトークン化されたキー ファイル、World ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、このトークン化されたキー ファイルを完全なバックアップとは考えないでください。 たとえば、nCipher HSM の外部で使用するためにキーのプレーンテキストコピーが必要な場合、Azure Key Vault は回復不可能なコピーしかないため、このキーを取得することはできません。
+オンプレミスでテナントキーを生成した場合は、nCipher HSM: キーをバックアップするには、トークン化されたキーファイル、world ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、このトークン化されたキー ファイルを完全なバックアップとは考えないでください。 たとえば、nCipher HSM の外部で使用するためにキーのプレーンテキストコピーが必要な場合、Azure Key Vault は回復不可能なコピーしかないため、このキーを取得することはできません。
 
 Azure Key Vault には、[バックアップ コマンドレット](/powershell/module/az.keyvault/backup-azkeyvaultkey)が用意されています。これを使用すれば、キーをダウンロードしてファイルに保存することで、キーのバックアップを作成できます。 ダウンロードされたコンテンツは暗号化されているため、Azure Key Vault の外部で使用することはできません。 
 
-## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
+## <a name="export-your-tenant-key"></a>テナント キーのエクスポート
 BYOK を使用する場合、テナント キーを Azure Key Vault または Azure Information Protection からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 
 
-## <a name="respond-to-a-breach"></a>侵害に反応します
+## <a name="respond-to-a-breach"></a>侵害への対応
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の生成キー技術、または現在のキーの長さおよびアルゴリズムに脆弱性が見つかる可能性があります。
 
-製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントがあなたの資産に影響を与える場合、Microsoft は Azure Information Protection テナント管理者に電子メールで通知します。その場合、サブスクリプションで指定されたアドレスが使われます。
+製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントが資産に影響する場合、Microsoft はテナントのグローバル管理者に電子メールで通知します。
 
 侵害がある場合、あなたまたはマイクロソフトがとれる最善策は侵害の範囲によって異なります。マイクロソフトはあなたと連携し、このプロセスを進めます。 次の表は一般的な状況と、考えられる対応をいくつかまとめたものです。ただし、実際の対応は調査中に明らかになった情報によって変わります。
 

@@ -12,10 +12,10 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60179163"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
@@ -45,7 +45,7 @@ Azure Rights Management 管理者によって使用される、PowerShell コマ
 ## <a name="user-applications"></a>ユーザー アプリケーション
 
 ユーザー アプリケーションは、RMS SDK 2.1 または RMS SDK 4.2 を使用して作成することができます。
-RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Windows) 用の特定の.API をベースとした REST クライアントです。 2.1 バージョンは、Windows ベースのネイティブ アプリケーションの作成に使用されます。
+RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Windows) 用の特定の.API をベースとした REST クライアントです。 2\.1 バージョンは、Windows ベースのネイティブ アプリケーションの作成に使用されます。
 
 ### <a name="user-application-development-guides"></a>ユーザー アプリケーション開発ガイド
 
@@ -139,7 +139,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) は、RMS SDK の最初のバージョンです。
 - [AD RMS スクリプト ツール](https://msdn.microsoft.com/library/bb968797.aspx)は、AD RMS のインストールのための管理ツールです。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>「
 
 - [開発者の用語](terms.md)
 - [Azure Information Protection の用語 - ITPro](../terminology.md)

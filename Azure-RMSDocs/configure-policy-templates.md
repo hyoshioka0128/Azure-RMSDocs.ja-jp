@@ -4,7 +4,7 @@ description: Azure portal から、rights management テンプレートとも呼
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,28 +13,28 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a6e4c8be3ee6ab061fea56825ea538b2404c7554
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fbb1e4792d4be7c725009a23db22ea176f374a11
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788967"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934995"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 保護テンプレート (Rights Management テンプレート) は、Azure Information Protection 用の管理者が定義した保護設定のグループです。 これらの設定には、承認されたユーザー向けの選択した[使用権限](configure-usage-rights.md)や、有効期限やオフライン アクセス向けのアクセス制御が含まれます。 これらのテンプレートは Azure Information Protection ポリシーに統合されています。 
 
 **分類、ラベル付け、保護を含むサブスクリプションの場合 (Azure Information Protection P1 または P2)**
 
-- テナントのラベルと統合されないテンプレートは、 **[Azure Information Protection - ラベル]** ブレードで、ラベルの後の **[保護テンプレート]** セクションに表示されます。 このブレードに移動するには、 **[分類]**  >  **[ラベル]** メニュー オプションを選択します。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
+- テナントのラベルと統合されていないテンプレートは、 **[Azure Information Protection ラベル]** ウィンドウのラベルの後の **[保護テンプレート]** セクションに表示されます。 このペインに移動するには、[**分類** > **ラベル**] メニューオプションを選択します。 これらのテンプレートをラベルに変換できるほか、ラベルの保護を構成するときにテンプレートに関連付けることもできます。 
 
 **保護のみを含むサブスクリプションの場合 (Azure Rights Management サービスを含む Office 365 サブスクリプション)**
 
-- テナントのテンプレートは、 **[Azure Information Protection - ラベル]** ブレードの **[保護テンプレート]** セクションに表示されます。 このブレードに移動するには、 **[分類]**  >  **[ラベル]** メニュー オプションを選択します。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、これらの設定はテンプレートには反映されず、構成することはできません。 
+- テナントのテンプレートは、 **[Azure Information Protection ラベル]** ウィンドウの **[保護テンプレート]** セクションに表示されます。 このペインに移動するには、[**分類** > **ラベル**] メニューオプションを選択します。 ラベルは表示されません。 分類とラベル付けに固有の構成設定も表示されますが、これらの設定はテンプレートには反映されず、構成することはできません。 
 
 >[!NOTE]
 >一部のアプリケーションやサービスでは、[[転送不可]](configure-usage-rights.md#do-not-forward-option-for-emails) や [[暗号化のみ]](configure-usage-rights.md#encrypt-only-option-for-emails) (または **[暗号化]** ) がテンプレートとして表示される場合があります。 これらは編集したり削除したりできるテンプレートではなく、Exchange サービスでの既定のオプションです。
@@ -70,11 +70,11 @@ Azure Rights Management サービスが含まれる Azure Information Protection
 Azure Portal を使っている場合、これらの既定テンプレートの名前を変更 (および再構成) できます。
 
 >[!NOTE]
->**[Azure Information Protection - ラベル]** ブレードに既定のテンプレートが表示されない場合、ラベルに変換されるか、ラベルにリンクされています。 テンプレートとして存在していますが、Azure Portal では、クラウド キーの保護設定を含むラベル構成の一部として表示されます。 [Aipservice PowerShell モジュール](administer-powershell.md)から[Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)を実行すると、いつでもテナントのテンプレートを確認できます。
+>**[Azure Information Protection ラベル]** ペインに既定のテンプレートが表示されない場合は、ラベルに変換されるか、ラベルにリンクされます。 テンプレートとして存在していますが、Azure Portal では、クラウド キーの保護設定を含むラベル構成の一部として表示されます。 [Aipservice PowerShell モジュール](administer-powershell.md)から[Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)を実行すると、いつでもテナントのテンプレートを確認できます。
 >
 >「[テンプレートをラベルに変更するには](#to-convert-templates-to-labels)」セクションに説明があるとおり、テンプレートは手動で変換できます。変換後、必要に応じて名前を変更します。 あるいは、既定の Azure Information Protection ポリシーが最近作成され、そのとき、テナントの Azure Rights Management サービスが有効化された場合、自動的に変換されます。
 
-アーカイブ済みのテンプレートは **[Azure Information Protection - ラベル]** ブレードに利用不可として表示されます。 そのようなテンプレートはラベルとして選択できませんが、ラベルに変換することはできます。
+アーカイブされたテンプレートは、 **[Azure Information Protection ラベル]** ウィンドウに使用できないものとして表示されます。 そのようなテンプレートはラベルとして選択できませんが、ラベルに変換することはできます。
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Azure Portal のテンプレートに関する考慮事項
 
@@ -84,7 +84,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
     
     - **マクロの許可** (共通名) が自動的に追加されます。 この使用権限は Office アプリの Azure Information Protection バーに必要です。
 
-- **[公開済み]** と **[アーカイブ済み]** の設定はそれぞれ、 **[有効]** : **[オン]** 、 **[有効]** : **[オフ]** とそれぞれ **[ラベル]** ブレードで表示されます。 維持するがユーザーまたはサービスには表示しないテンプレートの場合、これらのテンプレートを **[有効]** : **[オフ]** に設定します。
+- **発行済み**および**アーカイブ**済みの設定が**有効**として表示されます: **on**と**enabled**: それぞれ**ラベル**ペインで**オフ**にします。 維持するがユーザーまたはサービスには表示しないテンプレートの場合、これらのテンプレートを **[有効]** : **[オフ]** に設定します。
 
 - Azure ポータルでは、テンプレートをコピーまたは削除することはできません。 テンプレートがラベルに変換されると、テンプレートの使用を停止するようにラベルを構成できます。 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** オプションに **[構成されていません]** を選択します。 あるいは、ラベルを削除できます。 ただし、いずれのシナリオでもテンプレートは削除されず、アーカイブされた状態で残ります。
     
@@ -96,24 +96,24 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 - テンプレートをラベルに変換またはリンクすると、多のラベルで利用できなくなります。 また、このテンプレートは **[保護テンプレート]** セクションに表示されなくなりました。 
 
-- **[保護テンプレート]** セクションからは新しいテンプレートを作成しません。 代わりに、 **[保護]** を設定したラベルを作成し、 **[保護]** ブレードで使用権限と設定を構成します。 詳しい説明については、「[新しいテンプレートを作成するには](#to-create-a-new-template)」をご覧ください。
+- **[保護テンプレート]** セクションからは新しいテンプレートを作成しません。 代わりに、**保護**設定を含むラベルを作成し、 **[保護]** ウィンドウで使用権限と設定を構成します。 詳しい説明については、「[新しいテンプレートを作成するには](#to-create-a-new-template)」をご覧ください。
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーでテンプレートを構成するには
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection - ラベル]** ブレードに移動します。
+1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection ラベル]** ウィンドウに移動します。
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
 
-2. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、 **[保護テンプレート]** を展開し、構成するテンプレートを検索します。
+2. [**分類** > **ラベル**] メニューオプションから: **[Azure Information Protection ラベル]** ウィンドウで **[保護テンプレート]** を展開し、構成するテンプレートを見つけます。
     
-3. テンプレートを選択し、 **[ラベル]** ブレードで **[ラベルの表示名]** と **[説明]** を編集することにより、必要に応じてテンプレート名と説明を変更できます。 次に、値が **Azure (クラウド キー)** になっている **[保護]** を選択して **[保護]** ブレードを開きます。
+3. テンプレートを選択し、 **[ラベル]** ウィンドウで、**ラベルの表示名**と**説明**を編集することによって、必要に応じてテンプレートの名前と説明を変更できます。 次に、値が**Azure (クラウドキー)** の**保護**を選択して **[保護]** ウィンドウを開きます。
 
-4. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
+4. **[保護]** ウィンドウでは、アクセス許可、コンテンツの有効期限、およびオフラインアクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
     
-    変更を保存するには **[OK]** をクリックし、 **[ラベル]** ブレードで **[保存]** をクリックします。
+    **[OK]** をクリックして変更を保存し、 **[ラベル]** ウィンドウで **[保存]** をクリックします。
     
 > [!NOTE]
-> 定義済みのテンプレートを使うためのラベルを構成した場合は、 **[保護]** ブレードの **[テンプレートの編集]** ボタンを使ってテンプレートを編集することもできます。 選択したテンプレートを使っているラベルが他にない場合、このボタンはテンプレートをラベルに変換し、手順 5 に移動します。 テンプレートがラベルに変換される場合の処理について詳しくは、次のセクションをご覧ください。
+> 定義済みのテンプレートを使用するようにラベルを構成している場合は、 **[保護]** ウィンドウの **[テンプレートの編集]** ボタンを使用してテンプレートを編集することもできます。 選択したテンプレートを使っているラベルが他にない場合、このボタンはテンプレートをラベルに変換し、手順 5 に移動します。 テンプレートがラベルに変換される場合の処理について詳しくは、次のセクションをご覧ください。
 
 ## <a name="to-convert-templates-to-labels"></a>テンプレートをラベルに変換するには
 
@@ -141,25 +141,25 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 **Azure (クラウド キー)** の保護設定で新しいラベルを作成すると、この処理の裏では、Rights Management テンプレートと統合されるサービスとアプリケーションが次からアクセスできるようになる新しいカスタム テンプレートが作成されます。
 
-1. **[分類]**  >  **[ラベル]** メニュー オプションから: **[Azure Information Protection - ラベル]** ブレードで、 **[新しいラベルの追加]** を選択します。
+1. [**分類** > **ラベル**] メニューオプションから: **[Azure Information Protection ラベル]** ウィンドウで、 **[新しいラベルの追加]** を選択します。
 
-2. **[ラベル]** ブレードで、既定である **[有効]** : **[オン]** のままにします。次に [テンプレート名] と [説明] に、ラベルの名前と説明を入力します。
+2. **[ラベル]** ウィンドウで、 **[有効]** : **[オン**] のままにして、テンプレート名と説明のラベル名と説明を入力します。
 
 3. **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** では、 **[保護]** を選択してから、再び **[保護]** を選択します。
     
      ![Azure Information Protection ラベルの保護を構成する](./media/info-protect-protection-bar-configured.png)
 
-4. **[保護]** ブレードでは、アクセス許可、コンテンツの期限、オフライン アクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
+4. **[保護]** ウィンドウでは、アクセス許可、コンテンツの有効期限、およびオフラインアクセスの設定を変更できます。 保護設定の構成の詳細については、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」をご覧ください。
     
-    変更を保存するには **[OK]** をクリックし、 **[ラベル]** ブレードで **[保存]** をクリックします。
+    **[OK]** をクリックして変更を保存し、 **[ラベル]** ウィンドウで **[保存]** をクリックします。
     
-    **[Azure Information Protection - ラベル]** ブレードに新しいラベルが表示され、 **[保護]** 列には保護設定が含まれていることが示されます。 これらの保護設定は、Azure Rights Management サービスをサポートするアプリケーションとサービスに対してテンプレートとして表示されます。
+    **[Azure Information Protection ラベル]** ウィンドウに新しいラベルが表示され、**保護の設定**が含まれていることが示されます。 これらの保護設定は、Azure Rights Management サービスをサポートするアプリケーションとサービスに対してテンプレートとして表示されます。
     
     ラベルは有効ですが (既定)、テンプレートはアーカイブされます。 アプリケーションとサービスでテンプレートを使用してドキュメントや電子メールを保護できるようにするには、テンプレートを発行する最後の手順を完了します。
 
-5. **[分類]**  >  **[ポリシー]** メニュー オプションから、新しい保護設定を含むポリシーを選択します。 次に **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ブレードから、保護設定が含まれる新しく作成されたラベルを選択し、 **[OK]** 、 **[保存]** の順に選択します。
+5. **[分類]**  >  **[ポリシー]** メニュー オプションから、新しい保護設定を含むポリシーを選択します。 次に **[ラベルの追加または削除]** を選択します。 **[ポリシー: ラベルの追加または削除]** ウィンドウで、保護設定を含む新しく作成されたラベルを選択し、 **[OK]** 、 **[保存]** の順に選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection クライアントを実行しているコンピューターが変更された設定を取得するまで、最大で 15 分間かかる場合があります。 コンピューターとサービスにテンプレートをダウンロードおよび更新する方法の詳細については、[ユーザー用とサービス用のテンプレートの更新](refresh-templates.md)に関するページをご覧ください。
 

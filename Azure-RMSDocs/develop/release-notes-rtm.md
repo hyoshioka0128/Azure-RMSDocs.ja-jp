@@ -14,16 +14,40 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6fdef7a9d92880fa6754ffc7b2f889acdecd0bfc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ab71c7156fa55e09ca22bdaf61c4bcfcd590fb16
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791192"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "72690136"
 ---
 # <a name="release-notes"></a>リリース ノート
 
 この記事には、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。
+
+## <a name="october-2019---update"></a>2019年10月-更新
+
+- 状況によっては、対称キー認証を使用しても、Azure RMS によるユーザーの認証に失敗し、コンテンツの保護と復号化を防ぐことができます。
+- 以前に保護され、保護されていない一部の PDF ドキュメントが現在保護されているかどうかを確認しようとすると、RMS クライアントがクラッシュする場合があります。
+- 特別なポートで構成されている AD RMS サーバーに DNS リダイレクトを使用すると、正しく機能しません。
+
+## <a name="september-2019---update"></a>2019年9月-更新 
+
+- 他のいくつかの RMS クライアントメソッドと同時に初期化メソッドを呼び出そうとしたときに発生する可能性のあるデッドロックを修正しました。
+- パスワードで保護された Office ファイルが RMS で保護されているかどうかを判断する際の問題を修正します。
+-   特別な目的のライセンスのライセンス検証を更新します。
+- PDF プロテクターを更新します。
+- その他のバグ修正。
+- C ランタイムライブラリに対して静的にリンクするように更新します。
+
+## <a name="april-2019---update"></a>2019年4月-更新
+- ファイル API のバグ修正。
+- ファイル API が更新され、コンテンツの復号化時に抽出権限ではなく、エクスポート権限がチェックされるようになりました。
+- インストーラーを修正して、アップグレード時に新しい PDF v2 プロテクターが確実にインストールされるようにしました。
+- テレメトリの変更。 この変更には、C ランタイムライブラリをインストールするインストールパッケージの更新が必要でした。
+- サービスバックエンドの認証の変更**です。アプリケーションで対称キー認証を使用する場合は、この SDK バージョンに更新して中断を最小限に抑えるようにしてください。**
+- VC 15.9 のサポート
+
 
 ## <a name="october-2017---update"></a>2017 年 10 月の更新
 
@@ -109,7 +133,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **ファイル API のメモリ使用率** (特に大規模な PFile の場合) が大幅に改善されました。
 -   **コンテンツ ID** は、**IPC\_LI\_CONTENT\_ID** プロパティを使用して書き込み可能になりました。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
--   **運用マニフェストの要件** – RMS 対応のアプリケーション/サービスをサーバー モードで実行する場合には、マニフェストは不要になりました。 詳細については、「[Application types](application-types.md)」 (アプリケーションの種類) を参照してください。
+-   **運用マニフェストの要件** – RMS 対応のアプリケーション/サービスをサーバー モードで実行する場合には、マニフェストは不要になりました。 詳細については、「[Application types (アプリケーションの種類)](application-types.md)」を参照してください。
 -   **ドキュメントの更新**
 
     **ベスト プラクティスのテスト** – Azure RMS でテストする前にオンプレミス サーバーを使用する場合のガイダンスを追加しました。 詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
@@ -138,27 +162,27 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
       - システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
 
-    ファイル API は、次の 4 つの新しい関数によって実装されます:[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx)。
+    ファイル API は、[IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)、[IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx)、[IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx)、[IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx) という 4 つの新機能を介して実装されます。
 
     ファイル API は、Rights Management Service Client 2.1 がクライアント コンピューターにインストールされていること、コンピューターが RMS サーバーに接続されていることを必要とします。 RMS サーバー、RMS クライアント、およびそれらの機能の詳細については、[RMS の IT Pro ドキュメント](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx)に関する TechNet のコンテンツを参照してください。
 
--   **問題**:ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
+-   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
-    **解決策**:ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
+    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
 
--   **問題**:アプリケーションでそのハンドルを使用して同じウィンドウに対して [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) または [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) を 2 回呼び出した場合、RMS SDK 2.1 では **HRESULT** でエラーが返されます。
+-   **問題点**: アプリケーションがハンドルを使用して同じウィンドウに対して[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx)または[IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx)を2回呼び出す場合、RMS SDK 2.1 は**HRESULT**でエラーを返します。
 
-    **解決策**:この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
+    **ソリューション**: この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
 
--   **問題**:複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
+-   **問題**: 複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
 
-    **解決策**:Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
+    **ソリューション**: Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **Q**: LCID パラメーターを受け取る関数では、既定の言語の動作はどうなるでしょうか。
 
-**A**:既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序で検索し、使用可能な最初の値が取得されます。
+**A**: 既定のロケールには 0 を使用します。 この場合、AD RMS Client 2.1 では、名前と説明を次の順序で検索し、使用可能な最初の値が取得されます。
 
     1 - User preferred LCID.
     2 - System locale LCID.

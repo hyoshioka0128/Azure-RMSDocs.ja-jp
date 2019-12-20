@@ -4,18 +4,18 @@ description: Azure Information Protection のポリシー設定を構成して�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f2aa0d6b7068488212697f6f2f2e9b1d19c9d131
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 98aeeb0b858690327904e8fcd3932f9b38e7cf30
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794056"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559213"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "68794056"
 > * 連携されるポリシー設定を構成する
 > * 設定の動作を確認する
 
-各自のドキュメントや電子メールを手動でラベル付けするようユーザーに任せる代わりに、ポリシー設定を使用して次の操作を実行できます。
+各自のドキュメントや電子メールを手動でラベル付けするようユーザーに任せる代わりに、Azure Information Protection のポリシー設定を使用して次のことを行えます。
 
 - 新しいコンテンツと編集されたコンテンツに対して基本レベルの分類を保証する
 
@@ -44,15 +44,17 @@ ms.locfileid: "68794056"
     
     このプランを含むサブスクリプションを持っていない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
-2. Azure portal に [Azure Information Protection] ブレードを追加し、保護サービスがアクティブになっていることを確認した。
-
-    これらの操作に関するサポートが必要な場合は、[Azure portal にAzure Information Protection を追加し、ポリシーを表示するためのクイック スタート](quickstart-viewpolicy.md)をご覧ください。
-
-3. Azure Information Protection クライアントがコンピューターにインストールされている。 
+2. Azure portal に [Azure Information Protection] ペインが追加されていて、Azure Information Protection のグローバル ポリシーに 1 つ以上のラベルが公開されている。
     
-    クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    これらの手順については、「[クイック スタート:Azure portal で Azure Information Protection の使用を開始する](quickstart-viewpolicy.md)」を参照してください。
 
-4. Windows (Windows 7 Service Pack 1 以降) を搭載しているコンピューター。また、このコンピューターで、次のいずれかのカテゴリから Office アプリにサインインしている必要があります。
+3. お使いの Windows コンピューター (Windows 7 Service Pack 1 以降) に Azure Information Protection クライアント (クラシック) がインストールされている。 
+    
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
+    
+    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、Office ドキュメントで機密ラベルのポリシー設定の詳細を確認してください。 たとえば、「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」です。
+
+4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     
     - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
@@ -78,11 +80,11 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
 
 1. 新しいブラウザー ウィンドウを開き、全体管理者として [Azure portal](https://portal.azure.com) にサインインします。次に、 **[Azure Information Protection]** に移動します。 
     
-    たとえば、ハブ メニューで **[すべてのサービス]** をクリックし、[フィルター] ボックスに「**Information**」と入力します。 "**Azure Information Protection**" を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
     
     グローバル管理者でない場合は、次のリンクを使用して別のロールにします:「[Azure portal にサインインする](configure-policy.md#signing-in-to-the-azure-portal)」
 
-2. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ブレードを開きます。 
+2. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ペインを開きます。 
 
 3. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後にポリシー設定があるのを見つけます。 設定の値は次に表示する値とは異なる場合があります。
     
@@ -92,7 +94,7 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
 
     |Setting|値|説明|
     |-------|-----|-----|
-    |**既定のラベルの選択**|**全般**|**[全般]** という名前のラベルがない場合は、ドロップダウン リストから別のラベルを選択します。 ラベル付けされていないドキュメントや電子メールは、基本の分類として自動的にこのラベルを適用されます。 ただし、ユーザーは選択したラベルを別のラベルに変更できます。|
+    |**既定のラベルの選択**|**全般**|**[全般]** ラベルは、Azure Information Protection によって自動的に作成される既定のラベルの 1 つです。 その手順は「[ラベルの作成と公開](quickstart-viewpolicy.md#create-and-publish-labels)」のクイック スタートで説明されています。 **[全般]** という名前のラベルがない場合は、ドロップダウン リストから別のラベルを選択します。 ラベル付けされていないドキュメントや電子メールは、基本の分類として自動的にこのラベルを適用されます。 ただし、ユーザーは選択したラベルを別のラベルに変更できます。|
     |**すべてのドキュメントとメールにラベルを付ける**|**オン**|この設定は必須のラベル付けとも呼ばれます。ユーザーがラベルを付けずにドキュメントを保存したり電子メールを送信したりできないようにするためです。 既定のラベルと合わせると、ドキュメントと電子メールには、設定した既定のラベルか各自が選択したラベルのいずれかが付けられます。
     |**添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します**|**推奨**|この設定では、自分が選択した既定のラベルよりも上位の分類を持つドキュメントをユーザーが添付した場合に、その電子メール用の上位の分類のラベルを選択するようユーザーに求めます。
     |**Office アプリの Information Protection バーを表示します**|**オン**|Information Protection バーを表示させると、ユーザーが既定のラベルを確認および変更しやすくなります。
@@ -101,7 +103,7 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
     
     ![Azure Information Protection チュートリアル - 既定の設定の変更](./media/defaultsettings-aip-changed.png)
 
-5. **[保存]** を選択し (この **[ポリシー:グローバル]** ブレード上)、操作を確認するメッセージが表示されたら **[OK]** を選択します。 
+5. **[保存]** を選択し (この **[ポリシー:グローバル]** ペイン上)、操作を確認するメッセージが表示されたら **[OK]** を選択します。 
 
 ## <a name="see-your-policy-settings-in-action"></a>ポリシー設定の動作を確認する 
 
@@ -168,7 +170,7 @@ Outlook を起動し、新しい電子メール メッセージを作成しま�
 
 このチュートリアルで行った変更を保持したくない場合は、次の操作を行います。
 
-1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ブレードを開きます。
+1. **[分類]**  >  **[ポリシー]**  >  **[グローバル]** を選択して、 **[ポリシー:グローバル]** ペインを開きます。
 
 2. ポリシー設定をメモしておいた元の値に戻した後、 **[保存]** を選択します。
 

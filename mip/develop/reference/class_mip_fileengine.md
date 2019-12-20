@@ -1,38 +1,39 @@
 ---
 title: class mip::FileEngine
-description: Mip::fileengine クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: fileengine クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 15ce90a80430f50854580f6c7a2993d92db0a744
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8f1ef9e1ca46037243e170a59717be74954d4cb1
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184792"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560276"
 ---
 # <a name="class-mipfileengine"></a>class mip::FileEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  エンジンの設定を返します。
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  ポリシー エンジンに関連付けられている機密の種類を一覧表示します。
-public const std::shared_ptr\<ラベル\>GetDefaultSensitivityLabel() 定数  |  既定の機密ラベルを取得します。
-public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  機密ラベルの一覧を返します。
+public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
+public const std:: shared_ptr\<Label\> GetDefaultSensitivityLabel () const  |  既定の機密ラベルを取得します。
+public std:: shared_ptr\<Label\> GetLabelById (const std:: string & id) const  |  指定された id に従ってラベルを取得します。
+public const std:: vector\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels ()  |  機密ラベルの一覧を返します。
 public const std::string& GetMoreInfoUrl() const  |  ポリシー/ラベルに関する詳細情報を検索するための URL を提供します。
-public const std::string& GetPolicyId() const  |  ポリシー ID を取得します
+public const std:: string & GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
+public const std:: string & GetSensitivityFileId () const  |  感度ファイル ID を取得します。
 public bool IsLabelingRequired() const  |  ドキュメントにラベルを付ける必要があることを、ポリシーで指示するかどうかを確認します。
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチした時刻を取得します。
-public void CreateFileHandlerAsync (const std::string & inputFilePath、const std::string & actualFilePath、bool isAuditDiscoveryEnabled、const std::shared_ptr\<filehandler::observer\>& fileHandlerObserver、const std::shared_ptr\<void\>& コンテキストには、const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
-public void CreateFileHandlerAsync (const std::shared_ptr\<Stream\>& inputStream、const std::string & actualFilePath、bool isAuditDiscoveryEnabled、const std::shared_ptr\<filehandler::observer\>& fileHandlerObserver、const std::shared_ptr\<void\>& コンテキストには、const std::shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
+public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチされた時刻を取得します。
+public void Createfilehandler Async (const std:: string & inputFilePath、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
+public void Createfilehandler Async (const std:: shared_ptr\<Stream\>& inputStream、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetCustomSettings() const  |  カスタム設定の一覧を取得します。
-public bool HasClassificationRules() const  |  場合は、ポリシーは自動または推奨事項ルールを取得します。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
+public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -40,18 +41,21 @@ public bool HasClassificationRules() const  |  場合は、ポリシーは自動
 エンジンの設定を返します。
   
 ### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes 関数
-ポリシー エンジンに関連付けられている機密の種類を一覧表示します。
+ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
 
   
-**返します**:機密ラベルの一覧。 LoadSensitivityTypesEnabled されました (false の場合は、空
+**戻り値**: 機密ラベルの一覧。 LoadSensitivityTypesEnabled が false の場合は空 (
   
-**参照してください**:[FileEngine::Settings](class_mip_fileengine_settings.md))。
+**参照**: fileengine:: Settings)
   
 ### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel 関数
 既定の機密ラベルを取得します。
 
   
-**返します**:既定の機密ラベルの場合は存在の場合は、既定のラベルが設定されていない場合は nullptr。
+**戻り値**: 存在する場合は既定の機密ラベル、既定のラベルが設定されていない場合は nullptr。
+  
+### <a name="getlabelbyid-function"></a>GetLabelById 関数
+指定された id に従ってラベルを取得します。
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels 関数
 機密ラベルの一覧を返します。
@@ -60,63 +64,69 @@ public bool HasClassificationRules() const  |  場合は、ポリシーは自動
 ポリシー/ラベルに関する詳細情報を検索するための URL を提供します。
 
   
-**返します**:文字列の形式で url です。
+**戻り値**: 文字列形式の URL。
   
-### <a name="getpolicyid-function"></a>GetPolicyId 関数
-ポリシー ID を取得します
+### <a name="getpolicyfileid-function"></a>GetPolicyFileId 関数
+ポリシーファイル ID を取得します。
 
   
-**返します**:ポリシー ID を表す文字列です。
+**戻り値**: ポリシーファイル ID を表す文字列
+  
+### <a name="getsensitivityfileid-function"></a>GetSensitivityFileId 関数
+感度ファイル ID を取得します。
+
+  
+**戻り値**: ポリシーファイル ID を表す文字列
   
 ### <a name="islabelingrequired-function"></a>IsLabelingRequired 関数
 ドキュメントにラベルを付ける必要があることを、ポリシーで指示するかどうかを確認します。
 
   
-**返します**:必須、それ以外の場合は false にはラベルを付ける場合は true。
+**戻り値**: ラベルが必須の場合は true、それ以外の場合は false。
   
 ### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime 関数
-ポリシーが最後にフェッチした時刻を取得します。
+ポリシーが最後にフェッチされた時刻を取得します。
 
   
-**返します**:ポリシーが最後にフェッチした時間
+**戻り値**: ポリシーが最後にフェッチされた時刻
   
-### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync 関数
+### <a name="createfilehandlerasync-function"></a>Createfileハンドラ Async 関数
 指定されたファイル パスのファイル ハンドラーの作成を開始します。
 
 パラメーター:  
-* **inputFilePath**:開くファイル。 パスにはファイル名を含める必要があり、ファイル名拡張子が存在する場合はそれも含めます。 
+* **Inputfilepath**: 開くファイル。 パスにはファイル名を含める必要があり、ファイル名拡張子が存在する場合はそれも含めます。 
 
 
-* **actualFilePath**:実際の (一時的ではない) ファイルのパスは、監査に使用されます。 
+* **Actualfilepath**: 監査に使用される実際の (一時ではない) ファイルパス。 
 
 
-* **isAuditDiscoveryEnabled**: 監査検出が有効かどうかを表します。 
+* **Isauditdiscoveryenabled**: 監査検出が有効かどうかを表します。 
 
 
-* **fileHandlerObserver**:[FileHandler::Observer](class_mip_filehandler_observer.md) インターフェイスを実装するクラス。 
+* **Fileハンドラオブザーバー**: filehandler:: Observer インターフェイスを実装するクラス。 
 
 
-* **コンテキスト**:オブザーバーに不透明渡されるクライアント コンテキスト。
+* **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。
 
 
   
-### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync 関数
+### <a name="createfilehandlerasync-function"></a>Createfileハンドラ Async 関数
 指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 
 パラメーター:  
-* **inputStream**:ファイル データを含むストリーム。 
+* **inputStream**: ファイル データを含むストリーム。 
 
 
-* **actualFilePath**:ファイルへのパス。 パスにはファイル名を含める必要があり、ファイル名拡張子が存在する場合はそれも含めます。 監査ファイルを識別するためにも使用されます。 
+* **Actualfilepath**: ファイルへのパス。 パスにはファイル名を含める必要があり、ファイル名拡張子が存在する場合はそれも含めます。 は、監査でファイルを識別するためにも使用します。 
 
 
-* **isAuditDiscoveryEnabled**: 監査検出が有効かどうかを表します。 
+* **Isauditdiscoveryenabled**: 監査検出が有効かどうかを表します。 
 
 
-* **fileHandlerObserver**:[FileHandler::Observer](class_mip_filehandler_observer.md) インターフェイスを実装するクラス。 
+* **Fileハンドラオブザーバー**: filehandler:: Observer インターフェイスを実装するクラス。 
 
 
-* **コンテキスト**:オブザーバーに不透明渡されるクライアント コンテキスト。
+* **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。
 
 
   
@@ -124,7 +134,7 @@ public bool HasClassificationRules() const  |  場合は、ポリシーは自動
 アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 
 パラメーター:  
-* **レベル**: ログ レベルの説明。警告/情報/エラー 
+* **level**: ログ レベルの説明: 情報/エラー/警告 
 
 
 * **eventType**: イベントの種類の説明 
@@ -138,10 +148,10 @@ public bool HasClassificationRules() const  |  場合は、ポリシーは自動
 カスタム設定の一覧を取得します。
 
   
-**返します**:カスタム設定のベクター
+**戻り**値: カスタム設定のベクター
   
 ### <a name="hasclassificationrules-function"></a>HasClassificationRules 関数
-場合は、ポリシーは自動または推奨事項ルールを取得します。
+ポリシーに自動または推奨規則があるかどうかを取得します。
 
   
-**返します**:かどうかがあります、自動または recommandation 規則、ポリシーでのかを示すブール値
+**戻り値**: ポリシーに自動または推奨規則があるかどうかを示すブール値

@@ -1,50 +1,47 @@
 ---
-title: クラスの:identity
-description: :Identity クラスの Microsoft Information Protection (MIP) SDK について説明します。
+title: 'クラス mip:: Identity'
+description: 'Microsoft Information Protection (MIP) SDK の mip:: identity クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 75d11fae7d79cadc4dd8909be371cbde2e87f289
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: 633a0ac8536f7bbd285eee67934f27d65b399bf4
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173543"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73560156"
 ---
-# <a name="class-mipidentity"></a>クラスの:identity 
-Id の抽象化です。
+# <a name="class-mipidentity"></a>クラス mip:: Identity 
+Id の抽象化。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック Identity()  |  既定の[Identity](class_mip_identity.md)ユーザーの電子メール アドレスが不明の場合に使用されるコンス トラクター。
-public Identity(const Identity& other)  |  [Identity](class_mip_identity.md)コピー コンス トラクター。
-パブリックの明示的な Id (const std::string & 電子メール)  |  [Identity](class_mip_identity.md)ユーザーの電子メール アドレスがわかっている場合に使用されるコンス トラクター。
+パブリック Id ()  |  ユーザーの電子メールアドレスが不明な場合に使用される既定の Id コンストラクター。
+パブリック Id (const Identity & その他)  |  Id コピーコンストラクター。
+パブリック明示的な Id (const std:: string & email)  |  ユーザーの電子メールアドレスがわかっている場合に使用される id コンストラクター。
 public const std::string& GetEmail() const  |  電子メールを取得します。
-public void SetDelegatedEmail(const std::string& delegatedEmail)  |  On behalf of、opertations の実行をユーザーが委任された電子メール、委任された電子メール アドレスを設定します。
-public const std::string& GetDelegatedEmail() const  |  委任された電子メールを取得、委任された電子メール アドレスを on behalf of ユーザー、opertations が実行されます。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="identity-function"></a>Identity 関数
-既定の[Identity](class_mip_identity.md)ユーザーの電子メール アドレスが不明の場合に使用されるコンス トラクター。
+ユーザーの電子メールアドレスが不明な場合に使用される既定の Id コンストラクター。
   
 ### <a name="identity-function"></a>Identity 関数
-[Identity](class_mip_identity.md)コピー コンス トラクター。
+Id コピーコンストラクター。
 
 パラメーター:  
-* **[Identity](class_mip_identity.md)**: コピーを作成するために使用します。
+* **Id**: コピーの作成に使用されます。
 
 
   
 ### <a name="identity-function"></a>Identity 関数
-[Identity](class_mip_identity.md)ユーザーの電子メール アドレスがわかっている場合に使用されるコンス トラクター。
+ユーザーの電子メールアドレスがわかっている場合に使用される id コンストラクター。
 
 パラメーター:  
-* **電子メール**: ユーザーの電子メール アドレス。
+* **email**: ユーザーの電子メールアドレス。
 
 
   
@@ -52,18 +49,4 @@ public const std::string& GetDelegatedEmail() const  |  委任された電子メ
 電子メールを取得します。
 
   
-**返します**:電子メール アドレス。
-  
-### <a name="setdelegatedemail-function"></a>SetDelegatedEmail 関数
-On behalf of、opertations の実行をユーザーが委任された電子メール、委任された電子メール アドレスを設定します。
-
-パラメーター:  
-* **delegatedEmail**: 委任電子メール。
-
-
-  
-### <a name="getdelegatedemail-function"></a>GetDelegatedEmail 関数
-委任された電子メールを取得、委任された電子メール アドレスを on behalf of ユーザー、opertations が実行されます。
-
-  
-**返します**:委任された電子メール アドレス。
+は、電子メールを**返し**ます。

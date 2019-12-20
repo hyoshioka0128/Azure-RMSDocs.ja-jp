@@ -4,7 +4,7 @@ description: Azure Information Protection から Azure Rights Management サー�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 484f311927033d5279404fb706ac380fe9202b09
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788379"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933363"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -43,7 +43,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
 -   **ヘルプ デスク情報**
     
-    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、 **[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」を参照してください。
+    ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、 **[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
     
     保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection[スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
@@ -86,7 +86,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
-2.  **[ファイル]** メニュー: **[情報]**  >  **[文書の保護]**  >   **[アクセスの制限]** 。
+2.  **[ファイル]** メニューの **[情報]**  >  **[ドキュメントの保護]**  >  アクセスの **[制限]** を使用します。
 
 3. テンプレートを選択して適切な使用権限をすぐに適用するか、 **[アクセスの制限]** を選択して使用権限を自分で選択します。
 
@@ -105,7 +105,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  **[オプション]** タブ: **[アクセス許可]** > オプションを選択します。 例えば: **[転送不可]** 、 **[\<会社名>- 社外秘]** 、 **[\<会社名> - 社外秘、表示のみ]** 。
+2.  **オプション** タブの **アクセス許可**> オプションを選択します。 たとえば、 **[転送不可]** 、または **[\<会社名> - 社外秘]** 、 **[\<会社名> - 社外秘、表示のみ]** です。
 
 3.  メッセージを送信します。
 
@@ -117,7 +117,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、 **[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、 **[アクセス許可の変更]** を選択し、ドロップダウンからオプションを選択します。 例えば: **[暗号化]** または **[\<会社名> - 社外秘]** 。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、 **[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、 **[アクセス許可の変更]** を選択し、ドロップダウンからオプションを選択します。 例:**暗号化**または **\<会社名 >-社外秘**。
 
 3. メッセージを送信します。
 

@@ -1,45 +1,37 @@
 ---
 title: class mip::ApplyLabelAction
-description: Mip::applylabelaction クラスの Microsoft Information Protection (MIP) SDK について説明します。
+description: 'Microsoft Information Protection (MIP) SDK の mip:: applylabelaction クラスについて説明します。'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 70f226cc112062582b5441f6c3ae7fc3dc7de118
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 10/29/2019
+ms.openlocfilehash: cb3ff8c247ad4dbcf4d85ba31608b07f3aaceddf
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173322"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "73559034"
 ---
 # <a name="class-mipapplylabelaction"></a>class mip::ApplyLabelAction 
 ラベルのアクションを適用するには、呼び出し元のアプリケーションで特定のラベルを適用する必要があります。
   
-## <a name="summary"></a>まとめ
- メンバー                        | [説明]                                
+## <a name="summary"></a>要約
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  |  必要なラベル ID を取得します。
-public const std::vector\<std::string\>& GetClassificationIds() const  |  一致し、このラベルを表示するが発生した分類 Id を取得します。
-public ActionType GetType() const  |  [アクション](class_mip_action.md)の種類を取得します。
-
+public const std:: shared_ptr\<Label\>& GetLabel () const  |  ラベルを取得する必要があります。
+public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一致し、このラベルが表示される原因となった分類 Id を取得します。
+  
 ## <a name="members"></a>メンバー
   
-### <a name="getlabelid-function"></a>GetLabelId 関数
-必要なラベル ID を取得します。
+### <a name="getlabel-function"></a>GetLabel 関数
+ラベルを取得する必要があります。
 
   
-**返します**:ラベル ID
+は、ラベルを**返し**ます。
   
 ### <a name="getclassificationids-function"></a>GetClassificationIds 関数
-一致し、このラベルを表示するが発生した分類 Id を取得します。
+一致し、このラベルが表示される原因となった分類 Id を取得します。
 
   
-**返します**:Const std::vector < std::string > & 分類ラベルを表示するを原因となった Id の一覧。
-
-### <a name="gettype-function"></a>GetType 関数
-[アクション](class_mip_action.md)の種類を取得します。
-
-  
-**返します**:ActionType: この基底クラスをキャストできる派生アクションの種類。
+は、Const std:: vector < std:: string > &、このラベルが表示される原因となった分類 Id の一覧を**返し**ます。
