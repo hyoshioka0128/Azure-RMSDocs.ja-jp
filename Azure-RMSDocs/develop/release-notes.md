@@ -1,5 +1,5 @@
 ---
-title: 新機能とリリース ノート
+title: Rights Management Services SDK v4. x の rrelease note
 description: 重要な変更点、今度のバージョンの機能、前のバージョンの機能について説明します。
 author: msmbaldwin
 ms.author: mbaldwin
@@ -12,18 +12,18 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
+ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60176020"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303626"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
 ## <a name="whats-new"></a>新機能
 
-このトピックでは、重要な変更点と、この新しいバージョンの RMS SDK v4.x の機能について説明します。
+このトピックでは、この新しいバージョンの RMS SDK v4. x における重要な変更点と機能について説明します。
 
 -   [2017 年 7 月の新機能](#new-for-july-2017)
 -   [2016 年 10 月の更新](#october-2016-update)
