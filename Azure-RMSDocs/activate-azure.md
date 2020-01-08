@@ -1,10 +1,10 @@
 ---
 title: Azure Portal で Azure RMS をアクティブ化する - AIP
 description: 組織でドキュメントや電子メールの保護を開始できるように、Azure Portal から保護をアクティブ化するための手順。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,19 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 256cb5dd2251c650a621412b6a13768479597f4e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: 06c2027468e8e1d321921aca2526edbdc7d4fe31
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934791"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674413"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Azure portal から Rights Management 保護サービスをアクティブ化する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 Azure portal を使用して Azure Information Protection から Rights Management 保護サービス (Azure RMS) をアクティブ化する場合は、次の手順に従います。
 
@@ -41,6 +44,6 @@ Azure portal を使用して Azure Information Protection から Rights Manageme
 アクティブ化が完了すると、情報バーに **[Activation finished successfully]\(アクティブ化が正常に完了しました\)** と表示されます。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 [Azure Information Protection からの保護サービスのアクティブ化の読み取りを](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)再開します。
 
