@@ -1,28 +1,31 @@
 ---
 title: Azure Information Protection ラベルの削除または順序変更 - AIP
 description: ユーザーに表示される Azure Information Protection ラベルを削除または順序変更できます。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/17/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cd38bef41bd2e1d0f422958c150ad06eba1793b9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: 2d25ddd47d3067fa965faa94aebcb0a933628894
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935063"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674685"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 ラベルに対してこれらのアクションを選択することで、Office アプリケーションでユーザーに表示される Azure Information Protection ラベルを削除または順序変更することができます。
 
@@ -68,7 +71,7 @@ Information Protection バーにラベルが論理的な流れで表示される
 
     - ラベルの順序を変更する: 順序を変更するラベルを右クリックするかコンテキスト メニュー ( **...** ) を選択し、ラベルが目的の順序になるまで、 **[上へ移動]** または **[下へ移動]** をクリックします。  
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection クライアント - インストールと構成
 description: Windows コンピューターとモバイルデバイスに Azure Information Protection クライアントを展開する方法に関する管理者向けの情報。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,19 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f91052c45a3246d3ed63ab9945e09a3dd7ab3789
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: 61de188f78e0a64ce99100b2e32cbbf4dedcc953
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935165"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675127"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+> [!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 Office 2010 を実行しているコンピューターでは、Azure Information Protection サービスに対して認証を行うために、Azure Information Protection クライアント (クラシック) または Azure Information Protection 統合ラベルクライアントが必要です。
 
@@ -74,6 +77,6 @@ Azure Information Protection アプリを Intune に追加するときの追加�
 
 Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection クライアントをインストールして構成した後、ドキュメントや電子メールを保護するために使用できるさまざまな使用権限をクライアントが解釈する方法について、詳細を確認する必要がある場合があります。 詳細については、「 [Azure Information Management の使用権限を構成する](configure-usage-rights.md)」を参照してください。

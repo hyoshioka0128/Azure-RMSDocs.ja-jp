@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection ラベルを統合された秘密度ラベルに移行する-AIP
 description: Microsoft Information Protection framework をサポートするクライアントとサービスの統合された秘密度ラベルに Azure Information Protection ラベルを移行します。
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 12/08/2019
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,21 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 31140c7591f2846090a73627fe1f146bc5609cef
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: d094070b3f7c2973b99c9ca212b8b25873026faa
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935029"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674617"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 Azure Information Protection ラベルを統一されたラベル付けプラットフォームに移行して、統一されたラベル付けを[サポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)による機密ラベルとして使用できるようにします。
 
@@ -91,7 +94,7 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 
 |ラベル構成|統合ラベル付けのクライアントによるサポート| 管理センターのガイダンス|
 |-------------------|---------------------------------------------|-------------------------|
-|有効または無効の状態<br /><br />この状態は管理センターと同期されていません |適用できません|ラベルが発行されているかどうかに対応します。 |
+|有効または無効の状態<br /><br />この状態は管理センターと同期されていません |Not applicable|ラベルが発行されているかどうかに対応します。 |
 |一覧から選択するか、RGB コードを使用して指定するラベルの色 |[はい]|ラベルの色に対する構成オプションはありません。 代わりに、Azure portal でラベルの色を構成することも、 [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)を使用することもできます。|
 |事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |[いいえ]|事前に定義されたテンプレート用の構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
 |Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |[はい]|管理センターには、ユーザー定義のアクセス許可の構成オプションが含まれるようになりました。 <br /><br /> この構成でラベルを発行する場合は、[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)のラベルを適用した結果を確認してください。|
@@ -101,7 +104,7 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 |視覚的なマーキング (ヘッダー、フッター、透かし) 向けのカスタム フォントと RGB コードによるカスタム フォントの色|[はい]|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal を使用します。 しかし、管理をより簡単にするには、管理センターに一覧されるオプションのいずれかに、色を変更することを検討してください。|
 |視覚的なマーキングの変数 (ヘッダー、フッター)|[いいえ]|変更なしでこのラベルを発行した場合、変数は動的な値を表示するのでなく、クライアント上でテキストとして表示されます。 ラベルを発行する前に、文字列を編集して変数を削除してください。|
 |アプリごとの視覚的なマーキング|[いいえ]|変更なしでこのラベルを発行した場合、アプリ変数は、選択したアプリ上にご利用のテキスト文字列を表示するのでなく、クライアント上ですべてのアプリにテキストとして表示されます。 このラベルはすべてのアプリに適している場合にのみ発行します。文字列を編集してアプリ変数を削除します。|
-|条件と関連設定 <br /><br /> 自動の推奨ラベル付けとそのヒントが含まれます|適用できません|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
+|条件と関連設定 <br /><br /> 自動の推奨ラベル付けとそのヒントが含まれます|Not applicable|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>ラベルの保護設定の動作を比較する
 
@@ -125,7 +128,7 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 Outlook では、保護は保持されます。ただし、暗号化のみのオプションで電子メールが保護されている場合、その保護は削除されます。
 
 
-###### <a name="footnote-2"></a>脚注 2
+###### <a name="footnote-2"></a>脚注 2:
 
 次の操作をサポートする使用権限またはロールをユーザーが持っている場合、保護は削除されます。
 - [使用権限](configure-usage-rights.md#usage-rights-and-descriptions)エクスポートまたはフル コントロール。
@@ -220,7 +223,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのサービスです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 カスタマーエクスペリエンスチームのその他のガイダンスとヒントについては、次のブログ記事を参照してください。統合された[ラベルの移行について理解](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)します。
 

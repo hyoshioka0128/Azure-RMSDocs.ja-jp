@@ -1,28 +1,31 @@
 ---
 title: Azure Information Protection の HYOK 保護
 description: Azure Information Protection による HYOK (AD RMS) 保護の概要、サポートされるシナリオ、制限事項、前提条件、推奨事項。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 6157f321b04a4c0b755b1d8e17a663f8f58d281f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
-ms.translationtype: MT
+ms.openlocfilehash: 2481911194864eaf4642cf4455d4c1c98b70f957
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444812"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675231"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 次の情報を使用して、Azure Information Protection の Hold your own key (HYOK) 保護とは何か、およびクラウド ベースの既定の保護と異なる点について把握してください。 HYOK 保護を使用する前に、適切な場合、サポートされるシナリオ、制限事項、要件を理解していることを確認してください。 
 
@@ -196,6 +199,6 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 HYOK 保護のラベルを構成するには、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」を参照してください。 

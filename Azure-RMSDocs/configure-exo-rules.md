@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection ラベルの Exchange Online メールフロールール
 description: Azure Information Protection ラベルの Exchange Online メール フロー ルールを構成するための手順と例を示します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/07/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,21 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0e07754dd7b8197883ab7a71fbe48e4cb142534c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
-ms.translationtype: MT
+ms.openlocfilehash: fe1d7ee0d1deb14c294014c3542e02808aa5def7
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73750484"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675077"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 たとえば、次のようになります。
+> [!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照し、 [Microsoft 365 セキュリティとコンプライアンスセンターの指示に従っ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て、これらの手順を完了してください。
+
+Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 たとえば次のようになります。
 
 - 既定のラベルは **[全般]** で、保護は適用されません。 このラベルを含む外部からの電子メールには、追加の [転送不可] 保護アクションが適用されます。
 
@@ -120,7 +123,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
 暗号化オプションについて詳しくは、「[電子メールの暗号化のみオプション](configure-usage-rights.md#encrypt-only-option-for-emails)」をご覧ください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Exchange Online メール フロー ルールで使用するラベルの作成と構成について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 
