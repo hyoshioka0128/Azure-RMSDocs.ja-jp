@@ -4,21 +4,20 @@ description: MIP C++ SDK の構造体と列挙型に関するリファレンス�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a641ace68d6999e3d452fa7f5c014ec1215556a
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560443"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556012"
 ---
 # <a name="enumerations-and-structures"></a>列挙型と構造体
 
 ## <a name="namespace-mip"></a>名前空間 mip
 
-メンバー                        | 説明                                
+[メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 enum WatermarkLayout       |  透かしのレイアウト。
 enum ContentMarkAlignment       |  コンテンツマーク (コンテンツヘッダーまたはコンテンツフッター) の配置。
@@ -119,7 +118,7 @@ AcceptAlways            | 同意し、この決定を記憶します
 #### <a name="cachestoragetype-enum"></a>CacheStorageType 列挙型
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-InMemory            | メモリストレージ内
+インメモリ            | メモリストレージ内
 Ondisk です            | ディスク記憶域
 OnDiskEncrypted            | 暗号化を使用するディスクストレージ (プラットフォームでサポートされている場合)
 キャッシュのストレージの種類。
@@ -232,7 +231,7 @@ CUSTOM は汎用的なアクション タイプです。 その他のアクシ�
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 NoChange            | 
-削除            | 
+Remove            | 
 更新プログラム、更新            | 
   
 #### <a name="actiondatatype-enum"></a>ActionDataType 列挙型
@@ -242,7 +241,7 @@ NoChange            |
 Protection            | 
 ContentMarking            | 
 AddWatermark            | 
-Label            | 
+ラベル            | 
   
 #### <a name="conditiondatatype-enum"></a>ConditionDataType 列挙型
  値                         | 説明                                
@@ -260,7 +259,7 @@ Header            |
  値                         | 説明                                
 --------------------------------|---------------------------------------------
 推奨            | 
-適用            | 
+[適用]            | 
   
 #### <a name="protectionactiontype-enum"></a>ProtectionActionType 列挙型
  値                         | 説明                                
@@ -279,7 +278,7 @@ RemoveProtection            |
 #### <a name="struct-mipapplicationinfo"></a>struct mip:: ApplicationInfo 
 アプリケーション固有の情報を含む構造体。
   
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string applicationId  |  AAD ポータルで設定されたアプリケーション id (角かっこなしの GUID である必要があります)。
 public std::string applicationName  |  アプリケーション名 ('; ' を除く有効な ASCII 文字のみを含める必要があります)
@@ -298,7 +297,7 @@ AAD ポータルで設定されたアプリケーション id (角かっこな�
 #### <a name="struct-miptelemetryconfiguration"></a>struct mip:: TelemetryConfiguration 
 カスタムテレメトリ設定 (一般的には使用されません)
   
-メンバー                        | 説明                                
+[メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std:: string hostNameOverride  |  ホストテレメトリのインスタンス名。 設定されていない場合、MIP は独自のホストとして機能します。
 public std:: string libraryNameOverride  |  代替テレメトリライブラリ (DLL) ファイル名。
@@ -344,14 +343,14 @@ public std:: map\<std:: string、std:: string\> customSettings  |  カスタム�
 ## <a name="namespace-mipauditmetadatakeys"></a>名前空間 mip:: auditmetadatakeys
   
 ### <a name="summary"></a>要約
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std:: string Sender ()       |  文字列形式のメタデータキーを監査します。
 public std:: string Recipients ()       | まだ文書化されていません。
 public std:: string Lastsystem.string ()       | まだ文書化されていません。
 public std:: string LastModifiedDate ()       | まだ文書化されていません。
   
-### <a name="members"></a>メンバー
+### <a name="members"></a>[メンバー]
   
 #### <a name="sender-function"></a>Sender 関数
 文字列形式のメタデータキーを監査します。
@@ -371,7 +370,7 @@ _まだ文書化されていません。_
   
 ### <a name="summary"></a>要約
  
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  '所有者' 権限の文字列識別子を取得します。
 public std::string View()       |  '表示' 権限の文字列識別子を取得します。
@@ -388,7 +387,7 @@ public std:: vector\<std:: string\> EmailRights ()       |  電子メールに�
 public std:: vector\<std:: string\> EditableDocumentRights ()       |  ドキュメントに適用される権限の一覧を取得します。
 public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナリオで適用される権限の一覧を取得します。
   
-### <a name="members"></a>メンバー
+### <a name="members"></a>[メンバー]
   
 #### <a name="owner-function"></a>Owner 関数
 '所有者' 権限の文字列識別子を取得します。
@@ -477,14 +476,14 @@ public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナ�
 ## <a name="namespace-miproles"></a>名前空間 mip:: roles
   
 ### <a name="summary"></a>要約
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  'ビューアー' ロールの文字列識別子を取得します。
 public std::string Reviewer()       |  'レビュー担当者' ロールの文字列識別子を取得します。
 public std::string Author()       |  '作成者' ロールの文字列識別子を取得します。
 public std::string CoOwner()       |  '共同所有者' ロールの文字列識別子を取得します。
   
-### <a name="members"></a>メンバー
+### <a name="members"></a>[メンバー]
   
 #### <a name="viewer-function"></a>ビューアー関数
 'ビューアー' ロールの文字列識別子を取得します。

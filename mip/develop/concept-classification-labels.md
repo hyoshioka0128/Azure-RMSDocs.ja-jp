@@ -4,15 +4,14 @@ description: この記事は、データの分類にラベルをどのように�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e1101bd505a35e02fdeeed032d5dec61364bfb8d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b2be24e1703d4831a95feaa51012cf7469a481b7
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175244"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556216"
 ---
 # <a name="microsoft-information-protection-sdk---classification-label-concepts"></a>Microsoft Information Protection SDK - 分類ラベルの概念
 
@@ -63,6 +62,6 @@ MIP SDK に存在するラベルの 2 つの種類。 `Label` および `Content
 
 また、SDK はキーと値のペアのフォームで追加のメタデータをドキュメントに追加することもサポートされます。 組織により具体的な方法で情報を記述する下位分類またはタグがある場合、SDK を使用してそのメタデータに適用することができます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 米国政府の分類システムの詳細については、 https://www.gpo.gov/fdsys/pkg/FR-2010-01-05/html/E9-31418.htm を参照してください。

@@ -4,15 +4,14 @@ description: この記事は、MIP SDK のキャッシュストレージに関�
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: a72ae5169e4a7ee9a201876afbef0f5d33fc9b89
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ed6407e99677bbed293959e15720c4c7d418aa54
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69893754"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555825"
 ---
 # <a name="microsoft-information-protection-sdk---cache-storage"></a>Microsoft Information Protection SDK-キャッシュストレージ
 
@@ -26,9 +25,9 @@ SDK のセキュリティ体制を向上させるために、プラットフォ�
 
 MIP SDK リリース1.3 以降では、次のストレージキャッシュの種類を使用できます。
 
-| 種類            | 目的                                                                                                                         |
+| 「            | 目的                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| InMemory        | では、アプリケーションのメモリにストレージキャッシュを保持します。                                                                       |
+| インメモリ        | では、アプリケーションのメモリにストレージキャッシュを保持します。                                                                       |
 | Ondisk です          | 設定オブジェクトで指定されたディレクトリに、ディスク上にデータベースを格納します。 データベースはプレーンテキストで格納されます。              |
 | OnDiskEncrypted | 設定オブジェクトで指定されたディレクトリに、ディスク上にデータベースを格納します。 データベースは OS 固有の Api を使用して暗号化されます。 |
 

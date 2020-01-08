@@ -4,15 +4,14 @@ description: 関数
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 4479cd9419d51e841906e6268427e184d4e1b4d3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: fb6c857d06da7a68d01d095db556216fee990dc6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558002"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555978"
 ---
 # <a name="functions"></a>関数
 
@@ -181,7 +180,7 @@ Std:: iostream からストリームを作成します。
 
 ## <a name="namespace-mipauditmetadatakeys"></a>名前空間 mip:: auditmetadatakeys
 
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std:: string Sender ()       |  文字列形式のメタデータキーを監査します。
 public std:: string Recipients ()       | まだ文書化されていません。
@@ -205,7 +204,7 @@ _まだ文書化されていません。_
 
 ## <a name="namespace-miprights"></a>名前空間の `mip::rights` 
   
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  '所有者' 権限の文字列識別子を取得します。
 public std::string View()       |  '表示' 権限の文字列識別子を取得します。
@@ -309,7 +308,7 @@ public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナ�
 
 ## <a name="namespace-miproles"></a>名前空間 mip:: roles
   
- メンバー                        | 説明                                
+ [メンバー]                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  'ビューアー' ロールの文字列識別子を取得します。
 public std::string Reviewer()       |  'レビュー担当者' ロールの文字列識別子を取得します。

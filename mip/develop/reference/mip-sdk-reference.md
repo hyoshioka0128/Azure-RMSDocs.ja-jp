@@ -4,15 +4,14 @@ description: 参照用C++ MIP SDK
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f1e5e06332cac6c0f8beba089d92654781ff6f71
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 69896e60fcf8aa33b2181fd22aeda803ab35b1cf
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560434"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555995"
 ---
 # <a name="mip-sdk-for-c-reference"></a>参照用C++ MIP SDK
 
@@ -24,7 +23,7 @@ MIP SDK for C++ には次が含まれます。
 - [関数](mip-functions.md)
 - 次のクラス:
 
- クラス                         | [説明]                                
+ インスタンス                         | Description                                
 --------------------------------|---------------------------------------------
 [クラス mip:: AccessDeniedError](class_mip_accessdeniederror.md)  |  ユーザーがコンテンツにアクセスできませんでした。 例: アクセス許可がない、コンテンツが取り消された。
 [クラス mip:: Action](class_mip_action.md)  |  アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します

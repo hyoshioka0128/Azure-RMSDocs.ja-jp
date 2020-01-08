@@ -4,21 +4,20 @@ description: この記事は、保護 API ハンドラーがどのように作�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 892e492351d3779667629ff4522891bb527fd782
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886153"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556165"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Microsoft Information Protection SDK - 保護ハンドラーの概念
 
 MIP SDK 保護 API では、`mip::ProtectionHandler` により、保護されたストリームとバッファーの暗号化と暗号化解除、アクセス確認の実行、発行ライセンスの取得、および保護された情報からの属性の取得のための関数が示されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>［要件］
 
 特定のファイルを操作するための `ProtectionHandler` を作成するには、以下のものが必要です。
 

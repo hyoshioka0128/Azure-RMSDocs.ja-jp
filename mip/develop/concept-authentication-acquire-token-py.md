@@ -4,21 +4,20 @@ description: この記事は、Python を使用して OAuth2 アクセス トー
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69884733"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556250"
 ---
 # <a name="acquire-an-access-token-python"></a>アクセス トークンを取得する (Python)
 
 この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 認証デリゲートの実装では、有効な OAuth2 アクセストークンが必要です。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 次のサンプルを実行します。
 

@@ -4,15 +4,14 @@ description: この記事は、テレメトリを無効にする方法と、オ�
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 3d97bdbf5307d7f0faefe6b6434b1df1ebc67798
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e2c8d8726edc483b35c7b9931bc83a3ddb3b5a2c
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74484855"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556148"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-テレメトリ構成
 
@@ -32,7 +31,7 @@ MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https:/
 
 #### <a name="event-heartbeat"></a>イベント: ハートビート
 
-| 名前                                 | [説明]                                                                            | スキャンされ |
+| 名前                                 | Description                                                                            | スキャンされ |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | アプリケーションの ApplicationId                    | Mip:: ApplicationInfo を使用して指定されたアプリケーション id。                          | [いいえ]       |
 | App.xaml                  | Mip:: ApplicationInfo を使用して指定されたアプリケーション名。                                | [いいえ]       |
@@ -48,7 +47,7 @@ MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https:/
 | イベント ParentCorrelationId            | 親イベントの相関 ID。                                                           | [いいえ]       |
 | イベント ParentCorrelationIdDescription | イベントをトリガーしたオブジェクトの親に関連付けられた一意の ID が生成されます。 | [いいえ]       |
 | イベント UniqueId                       | イベントに割り当てられた一意の ID が生成されます。                                             | [いいえ]       |
-| MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
+| MachineName                          | イベントを生成したシステムの名前。                                           | **あり**  |
 | MIP.バージョン                          | MIP SDK のバージョン。                                                                | [いいえ]       |
 | 操作                            | ハートビート                                                                              | [いいえ]       |
 | OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | [いいえ]       |
@@ -56,13 +55,13 @@ MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https:/
 | ProcessName                          | SDK を使用したプロセスの名前。                                                     | [いいえ]       |
 | ProductVersion                       | "App.config バージョン" と同じです。                                                      | [いいえ]       |
 | SDKVersion                           | MIP と同じです。バージョン。                                                                   | [いいえ]       |
-| UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
+| UserId                               | ユーザーの電子メール アドレス。                                                             | **あり**  |
 | UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | [いいえ]       |
 | バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | [いいえ]       |
 
 #### <a name="event-discovery"></a>イベント: 検出
 
-| 名前                                 | [説明]                                                                            | スキャンされ |
+| 名前                                 | Description                                                                            | スキャンされ |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | イベントの関連付けに使用される、このイベントの一意のアクション ID。                           | [いいえ]       |
 | アプリケーションの ApplicationId                    | Mip:: ApplicationInfo を使用して指定されたアプリケーション id。                          | [いいえ]       |
@@ -81,24 +80,24 @@ MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https:/
 | イベント ParentCorrelationIdDescription | イベントをトリガーしたオブジェクトの親に関連付けられた一意の ID が生成されます。 | [いいえ]       |
 | イベント UniqueId                       | イベントに割り当てられた一意の ID が生成されます。                                             | [いいえ]       |
 | LabelId                              | 開いているファイルまたはデータのコンテンツラベル識別子。                                   | [いいえ]       |
-| MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
+| MachineName                          | イベントを生成したシステムの名前。                                           | **あり**  |
 | MIP.バージョン                          | MIP SDK のバージョン。                                                                | [いいえ]       |
-| ObjectId                             | ファイルのパスとファイルの説明。                                             | **はい**  |
+| ObjectId                             | ファイルのパスとファイルの説明。                                             | **あり**  |
 | 操作                            | "検出"。                                                                           | [いいえ]       |
 | OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | [いいえ]       |
 | プラットフォーム                             | オペレーティング システムのバージョン。                                                              | [いいえ]       |
 | ProcessName                          | SDK を使用したプロセスの名前。                                                     | [いいえ]       |
-| 保護                            | ファイルが保護されているかどうかを示すブール値。                                       | [いいえ]       |
-| Protection                           | 保護テンプレート識別子。                                                    | **はい**  |
-| ProtectionOwner                      | 保護所有者の電子メールアドレス。                                                 | **はい**  |
+| プロテクト                            | ファイルが保護されているかどうかを示すブール値。                                       | [いいえ]       |
+| Protection                           | 保護テンプレート識別子。                                                    | **あり**  |
+| ProtectionOwner                      | 保護所有者の電子メールアドレス。                                                 | **あり**  |
 | SDKVersion                           | MIP と同じです。バージョン。                                                                   | [いいえ]       |
-| UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
+| UserId                               | ユーザーの電子メール アドレス。                                                             | **あり**  |
 | UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | [いいえ]       |
 | バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | [いいえ]       |
 
 #### <a name="event-label-change"></a>イベント: ラベルの変更
 
-| 名前                                 | [説明]                                                                            | スキャンされ |
+| 名前                                 | Description                                                                            | スキャンされ |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | イベントの関連付けに使用される、このイベントの一意のアクション ID。                           | [いいえ]       |
 | ActionIdBefore                       | 以前のアクション ID。 新しいアクション ID にチェーンするために使用されます。                                    | [いいえ]       |
@@ -122,24 +121,24 @@ MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https:/
 | IsProtectionChanged                  | 保護が変更されたかどうかを示すブール値。                                                 | [いいえ]       |
 | LabelId                              | ファイルまたはデータに適用されるラベル ID。                                    | [いいえ]       |
 | Labの前に                        | ファイルまたはデータに対する以前のラベル ID。                                        | [いいえ]       |
-| MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
+| MachineName                          | イベントを生成したシステムの名前。                                           | **あり**  |
 | MIP.バージョン                          | MIP SDK のバージョン。                                                                | [いいえ]       |
-| ObjectId                             | ファイルのパスとファイルの説明。                                             | **はい**  |
+| ObjectId                             | ファイルのパスとファイルの説明。                                             | **あり**  |
 | 操作                            | "変更"。                                                                              | [いいえ]       |
 | OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | [いいえ]       |
 | プラットフォーム                             | オペレーティング システムのバージョン。                                                              | [いいえ]       |
 | ProcessName                          | SDK を使用したプロセスの名前。                                                     | [いいえ]       |
 | 製品バージョン                      |                                                                                        | [いいえ]       |
-| 保護                            | ファイルが保護されているかどうかを示すブール値。                                       | [いいえ]       |
+| プロテクト                            | ファイルが保護されているかどうかを示すブール値。                                       | [いいえ]       |
 | 保護前                     | ファイルが既に保護されているかどうかを示すブール値。                           | [いいえ]       |
 | Protection                           | 保護テンプレート識別子。                                                    | [いいえ]       |
 | 以前の保護                    | 以前の保護テンプレート識別子。                                           | [いいえ]       |
 | ProtectionContentId                  | 新しいコンテンツ識別子 (GUID)。                                                     | [いいえ]       |
 | ProtectionContentIdBefore            | 以前のコンテンツ識別子 (GUID)。                                                | [いいえ]       |
-| ProtectionOwner                      | 保護所有者の電子メールアドレス。                                                 | **はい**  |
-| ProtectionOwnerBefore                | 保護所有者の前の電子メールアドレス。                                        | **はい**  |
+| ProtectionOwner                      | 保護所有者の電子メールアドレス。                                                 | **あり**  |
+| ProtectionOwnerBefore                | 保護所有者の前の電子メールアドレス。                                        | **あり**  |
 | SDKVersion                           | MIP と同じです。バージョン。                                                                   | [いいえ]       |
-| UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
+| UserId                               | ユーザーの電子メール アドレス。                                                             | **あり**  |
 | UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | [いいえ]       |
 | バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | [いいえ]       |
 

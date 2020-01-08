@@ -4,15 +4,14 @@ description: MIP SDK は、ほぼ完全に非同期になるように設計さ�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e42b9996d737ace5b25988eb72fa02aa87230f13
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: bd709b75c5b98c4241bc80f4a8542de30f48ff66
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175141"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555876"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Microsoft Information Protection SDK - オブザーバーの概念
 
@@ -31,12 +30,12 @@ MIP SDK は、ほぼ完全に非同期になるように設計されています
 - これでは、`FileProfile::AddEngineAsync` を介してプロファイルに新しいエンジンを追加できます。 
 - これでは、`FileProfile::UnloadEngineAsync` を使用してプロファイルからエンジンをアンロードできます。
 
-2 つの `Observer` 関数は非同期操作ごとに実装されるので、`FileProfile` には **4 つ**の `Observer` メソッドが関連付けられていると想定できます。 
+2つの `Observer` 関数は非同期操作ごとに実装されるため、`FileProfile`に関連付けられている**4 つ**の `Observer` メソッドがあると想定できます。 
 
 - `FileProfileObserver::OnAddEngineSuccess()`
 - `FileProfileObserver::OnAddEngineError()`
 - `FileProfileObserver::OnUnloadEngineSuccess`
-- `FileProfileObserver::OnUnloadEngineError()` の順にクリックします。 
+- `FileProfileObserver::OnUnloadEngineError()` にする必要があります。 
 
 ## <a name="mip-sdk-observer-classes"></a>MIP SDK オブザーバー クラス
 

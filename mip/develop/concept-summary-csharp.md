@@ -4,15 +4,14 @@ description: MIP SDK .NET ラッパーの使用を開始する方法の概要と
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 6b2f26a61cd491574fd9f4a1e74fbfab4752257a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 21fc590388615b2917ca62fdd848b3a63ce26912
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175208"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556114"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Microsoft Information Protection .NET ラッパーを使用したはじめに
 
@@ -43,7 +42,7 @@ Visual Studio 2017 のパッケージマネージャーコンソールから、�
 
 SDK とマネージラッパーのバージョンにC++は、いくつかの基本的な違いがあります。
 
-* .NET ラッパーでは、非同期操作にオブザーバーを使用する必要はありません。 非同期操作は、[タスクベースの非同期パターン](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)を介して実装されます。
+* .NET ラッパーでは、非同期操作にオブザーバーを使用する必要はありません。 非同期操作は、[タスクベースの非同期パターン](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)を介して実装されます。
 * .NET ラッパーには、 C++ SDK: authdelegate デリゲートと conのデリゲートの一部であるデリゲートが必要です。 これらのデリゲートは、インターフェイス `IAuthDelegate` および `IConsentDelegate` を介して実装されています。
 
 ## <a name="next-steps"></a>次のステップ

@@ -4,15 +4,14 @@ description: この記事は、Microsoft Information Protection SDK によって
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886142"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555689"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-メタデータ
 
@@ -34,7 +33,7 @@ GUID は、組織内の各ラベルの一意の識別子です。
 
 MIP SDK は、次の一連のメタデータを適用します。
 
-| 属性 | 型または値                 | [説明]                                                                                                                                                                                                                                        | [必須] |
+| 属性 | 型または値                 | Description                                                                                                                                                                                                                                        | [必須] |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | **Enabled**   | True または False                 | この属性は、このキーと値のペアのセットによって表される分類がデータ項目に対して有効になっているかどうかを示します。 DLP 製品は、通常、このキーが存在するかどうかを検証して分類ラベルを識別します。 | [はい]       |
 | **SiteId**    | GUID                          | Azure Active Directory テナント ID                                                                                                                                                                                                                   | [はい]       |

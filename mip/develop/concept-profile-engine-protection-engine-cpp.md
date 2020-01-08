@@ -4,15 +4,14 @@ description: この記事は、アプリケーションの初期化中に作成�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 1ccfc81e4b45c6ec4e4316b748d9ccc0f73561a4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 116bd67298195e66de26ab278802e93644a095dd
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886028"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556097"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK - 保護 API エンジンの概念
 
@@ -35,7 +34,7 @@ ProtectionEngine::Settings engineSettings("UniqueID", "");
 > [!NOTE]
 > この方法を使用して保護設定オブジェクトを作成する場合は、CloudEndpointBaseUrl を手動で https://api.aadrm.com に設定するか、Active Directory Rights Management サービスクラスターの URL を tp に設定する必要もあります。
 
-ベスト プラクティスとして、最初のパラメーターである **id** を、関連付けられているユーザーにエンジンを簡単に接続できるようなものにする必要があります。**または** `mip::Identity` オブジェクトを使用します。 `mip::Identity` で設定を初期化するには、次のようにします。
+ベスト プラクティスとして、最初のパラメーターである **id** を、関連付けられているユーザーにエンジンを簡単に接続できるようなものにする必要があります。**または**`mip::Identity` オブジェクトを使用します。 `mip::Identity` で設定を初期化するには、次のようにします。
 
 ```cpp
 ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");

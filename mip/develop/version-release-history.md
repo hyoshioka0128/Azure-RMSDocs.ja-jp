@@ -1,19 +1,18 @@
 ---
 title: Microsoft Information Protection (MIP) SDK バージョンリリース履歴とサポートポリシー
-description: MIP SDK のリリース履歴と変更メモをバージョンします。
+description: MIP SDK のバージョンリリース履歴と変更メモ。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c28ab93feedea4c27ef9fe032f889d17da078d49
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479112"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555944"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK バージョンリリース履歴とサポートポリシー
 
@@ -248,7 +247,7 @@ ms.locfileid: "74479112"
       - mip:: FileHandler
       - mip::P rotectionHandler
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - サポートされているプラットフォームなどの詳細については[、MIP SDK に関する faq と問題](faqs-known-issues.md)を参照してください。
 - MIP SDK の使用を開始する方法については、「 [MIP sdk のセットアップと構成](setup-configure-mip.md)」を参照してください。

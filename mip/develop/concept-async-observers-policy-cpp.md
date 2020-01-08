@@ -4,15 +4,14 @@ description: MIP SDK は、ほぼ完全に非同期になるように設計さ�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: db2926809ccd7d29628a2b729ce59879e6e513fd
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175498"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555893"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - ポリシー API オブザーバー
 
@@ -52,7 +51,7 @@ ProfileObserver() { }
 
 2 つ目のパラメーターは、*コンテキスト*への共有ポインターです。 この実装では、コンテキストは `std::promise` への参照で、`shared_ptr<void>` として渡されます。 関数の最初の行は、これを `std::promise` にキャストし、`promise` という名前のオブジェクトに格納されます。
 
-最後に、`promise->set_value()` を設定し、`mip::Profile` オブジェクトに渡すことで、future の準備ができます。
+最後に、`promise->set_value()` を設定し、`mip::Profile`オブジェクトに渡すことで、future の準備ができます。
 
 ```cpp
 #include "profile_observer.h"

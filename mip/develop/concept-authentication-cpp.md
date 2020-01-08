@@ -4,15 +4,14 @@ description: この記事は、MIP SDK によって認証を実装する方法�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 55bfba6da57fa07614165f4d5fcc5fba226cfca7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e4f734560c4d3942995f7547f41648bd765bb1b1
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886231"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555842"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - 認証の概念
 
@@ -71,7 +70,7 @@ public:
 
 #### <a name="consent_delegate_implcpp"></a>consent_delegate_impl.cpp
 
-SDK が同意を必要とする場合、*SDK によって* `GetUserConsent` メソッドが呼び出され、パラメーターとして URL が渡されます。 次のサンプルでは、SDK がその指定された URL に接続し、コマンドラインのオプションをユーザーに提供することがユーザーに通知されます。 ユーザーが選択した内容に基づいて、ユーザーは同意を受け入れたり拒否したりして、SDK に渡されます。 ユーザーが同意を拒否すると、アプリケーションは例外をスローし、保護サービスへの呼び出しは行われません。 
+SDK が同意を必要とする場合、*SDK によって*`GetUserConsent` メソッドが呼び出され、パラメーターとして URL が渡されます。 次のサンプルでは、SDK がその指定された URL に接続し、コマンドラインのオプションをユーザーに提供することがユーザーに通知されます。 ユーザーが選択した内容に基づいて、ユーザーは同意を受け入れたり拒否したりして、SDK に渡されます。 ユーザーが同意を拒否すると、アプリケーションは例外をスローし、保護サービスへの呼び出しは行われません。 
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -112,7 +111,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 
 ただし、運用環境のコードでは、地域または業務上の要件や規制に応じて、ユーザーに同意するかどうかを選択するよう求められる場合があります。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 わかりやすくするため、デリゲートを示すサンプルで、外部のスクリプトを呼び出すことによってトークンの取得を実装します。 このスクリプトは、他の任意の種類のスクリプト、オープン ソースの OAuth2 ライブラリ、またはカスタムの OAuth2 ライブラリに置き換えられます。
 
