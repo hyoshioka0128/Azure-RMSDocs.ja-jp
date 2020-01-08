@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアントで PowerShell を使用する
 description: 管理者が PowerShell を使用して Azure Information Protection 統合されたラベル付けクライアントを管理するための手順と情報です。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: da0d578d06081667e4d8a25be841c2feb2c1fbd5
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 44b30188cdae6e41f830afd283c22ca58e9afea2
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561250"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675569"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>管理者ガイド: Azure Information Protection 統合クライアントでの PowerShell の使用
 
@@ -26,7 +26,7 @@ ms.locfileid: "73561250"
 
 Azure Information Protection 統合ラベル付けクライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール**Azureinformationprotection**と共にインストールされます。 たとえば、次のようになります。
+コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール**Azureinformationprotection**と共にインストールされます。 たとえば次のようになります。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -170,15 +170,15 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
     
     このアカウントのパスワードを入力するように求められます。
 
-2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 また、アプリの登録値、テナント ID、および Azure AD で委任されたユーザーアカウントの名前を指定します。 たとえば、次のようになります。
+2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 また、アプリの登録値、テナント ID、および Azure AD で委任されたユーザーアカウントの名前を指定します。 たとえば次のようになります。
     
         Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
 
 > [!NOTE]
 > コンピューターがインターネットにアクセスできない場合は、Azure AD でアプリを作成し、Set-AIPAuthentication を実行する必要はありません。 代わりに、切断された[コンピューター](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)の指示に従います。  
 
-## <a name="next-steps"></a>次のステップ
-PowerShell セッションでコマンドレットのヘルプを表示するには、「`Get-Help <cmdlet name> -online`」と入力します。 たとえば、次のようになります。 
+## <a name="next-steps"></a>次の手順
+PowerShell セッションでコマンドレットのヘルプを表示するには、「`Get-Help <cmdlet name> -online`」と入力します。 たとえば次のようになります。 
 
     Get-Help Set-AIPFileLabel -online
 

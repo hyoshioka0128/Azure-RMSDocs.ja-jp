@@ -1,9 +1,9 @@
 ---
 title: カスタム構成-Azure Information Protection 統合されたラベル付けクライアント
 description: Windows 用に Azure Information Protection 統合ラベルクライアントをカスタマイズする方法について説明します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1fcab238281326ff8e885f655a936392e1519eb1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474378"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675620"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -32,7 +32,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用してクライアントの詳細設定を構成する方法
 
-PowerShell セキュリティ/コンプライアンスセンター Office 365 を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 たとえば、次のようになります。
+PowerShell セキュリティ/コンプライアンスセンター Office 365 を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 たとえば次のようになります。
 
 - Office アプリの Information Protection バーを表示する設定は、***ラベルポリシーの詳細設定***です。
 - ラベルの色を指定する設定は、***ラベルの詳細設定***です。
@@ -115,7 +115,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 [新しい-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps)と[設定-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps)を指定して、 *advanced settings*パラメーターを使用します。
 
-|設定|シナリオと手順|
+|Setting|シナリオと手順|
 |----------------|---------------|
 |AttachmentAction|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
@@ -125,7 +125,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 |EnableCustomPermissionsForCustomProtectedFiles|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-|HideBarByDefault デフォルト)|[Office アプリの Information Protection バーを表示します](##display-the-information-protection-bar-in-office-apps)|
+|HideBarByDefault デフォルト)|[Office アプリの Information Protection バーを表示します](#display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[情報の種類の一致を Azure Information Protection analytics に送信する](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -152,7 +152,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 [新しいラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps)と[セットラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)を使用して、 *advanced settings*パラメーターを使用します。
 
-|設定|シナリオと手順|
+|Setting|シナリオと手順|
 |----------------|---------------|
 |色|[ラベルの色を指定します](#specify-a-color-for-the-label)|
 |customPropertiesByLabel|[ラベルが適用されたときにカスタムプロパティを適用する](#apply-a-custom-property-when-a-label-is-applied)|
@@ -299,7 +299,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - 値: \<**Office アプリケーションの種類 WXP**> 
 
-例:
+次に例を示します。
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -702,7 +702,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 この高度なクライアント設定を設定した場合でも、クライアントから監査情報を送信できますが、ユーザーがラベル付きコンテンツにアクセスした場合、情報はレポートに限定されます。
 
-たとえば、次のようになります。
+たとえば次のようになります。
 
 - この設定を使用すると、**社外秘 \ Sales**というラベルが付けられたユーザーによってアクセスされたことを確認できます。
 
@@ -871,7 +871,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-たとえば、次のようになります。
+たとえば次のようになります。
 
 - セキュリティで保護された島など、[別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1034,7 +1034,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 7. 選択したユーザーアカウントが通常インターネットに接続している場合は、 **enableaudit**値を**True**に設定して、監査データの送信を再度有効にします。
 
-8. 接続が切断されたコンピューターがファイルを保護する、ファイルを再保護する、ファイルから保護を削除する、または保護されたファイルを検査するには、 *DelegatedUser*パラメーターを指定して[Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドレットを実行し、手順 1. のユーザーアカウントを指定してユーザーコンテキストを設定します。 たとえば、次のようになります。
+8. 接続が切断されたコンピューターがファイルを保護する、ファイルを再保護する、ファイルから保護を削除する、または保護されたファイルを検査するには、 *DelegatedUser*パラメーターを指定して[Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドレットを実行し、手順 1. のユーザーアカウントを指定してユーザーコンテキストを設定します。 たとえば次のようになります。
     
         Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
 
@@ -1066,7 +1066,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 このレジストリ設定では、[中央レポート](../reports-aip.md)の Azure Information Protection に送信される情報は変更されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)

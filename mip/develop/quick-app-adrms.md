@@ -4,15 +4,14 @@ description: Active Directory Rights Management Server (AD RMS) を使うよう�
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 49abf94c735b1ba14771adb9c2fe5dc126722b48
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.openlocfilehash: 424a260b1646a381dca23de71785dd34f92fc281
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070580"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555162"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>クイック スタート:Active Directory Rights Management Server (AD RMS) の保護
 
@@ -21,7 +20,7 @@ ms.locfileid: "71070580"
 > [!NOTE]
 > このクイック スタートで説明されている手順は、C# または C++ 用のファイル API と、C++ 用の保護 API にのみ適用できます。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 
 まだ完了していない場合は、必ず次の操作を行ってください。
 
@@ -134,6 +133,6 @@ engineSettings.SetProtectionCloudEndpointBaseUrl("https://RMS.CONTOSO.COM");
 
 クイック スタート ガイドのいずれかからアプリケーションを構築する場合、`fileEngine.SensitivityLabels` または `engine->ListSensitivityLabels();` という形式で、アプリケーションにラベルへの参照が含まれていることがわかります。 このアプリケーションは保護専用に設定されているため、これらのコード ブロックはコメント アウトするか、削除する必要があります。これらを実行すると例外が発生します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで AD RMS をサポートするための変更を行ったので、お客様のアプリケーションでは、保護プロバイダーとして AD RMS サービスを使い、任意の保護専用の操作を実行できるようになりました。

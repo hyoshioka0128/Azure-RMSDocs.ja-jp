@@ -4,15 +4,14 @@ description: Microsoft Information Protection (MIP) は、Microsoft の分類、
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: overview
-ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d8efb7ceef890d0c2a0ea72f64d3047e0cfb25a5
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 45d2e4fb96bb81d8eb7bb982502693e9d5ebf981
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184945"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556063"
 ---
 # <a name="overview"></a>概要
 
@@ -45,7 +44,7 @@ MIP SDK は、次のプラットフォームで使用できます。
 
 [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで SDK を使用する準備ができました。 最初に、[MIP SDK の設定と構成の手順を完了する](setup-configure-mip.md)必要があります。 この手順により、Office 365 サブスクリプションとクライアント マシンが正しく設定されます。
 

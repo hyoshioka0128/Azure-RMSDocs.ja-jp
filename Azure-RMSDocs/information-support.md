@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection AIP の情報 & サポート
 description: 管理者向けのリソース。新しいリリース、サポートオプション、および Microsoft に連絡して問題を報告する方法に関する情報が含まれています。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,16 +15,19 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fac66b2b8719965286bdce6cb10b15a4b8b4f710
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: 4c462d051953d3d80297b09b8228409c9d97f90b
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934740"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675450"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+> [!NOTE] 
+> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 以下のリソースは、組織の Azure Information Protection とそのデプロイおよびサポートについて理解するのに役立ちます。
 
@@ -99,7 +102,7 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
     
     - 従来のクライアント: このクライアントの管理者ガイドの「[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)」セクションを参照して、[サポートされ](./rms-client/client-version-release-history.md#servicing-information-and-timelines)ているバージョンを使用していることを確認します。 使用可能なプレビューバージョンがある場合は、問題が解決されるかどうかを確認してください。バージョン履歴には、すべての修正プログラムが記載されているわけではありません。
 
-### <a name="community-resources"></a>コミュニティのリソース
+### <a name="community-resources"></a>コミュニティ リソース
 
 [Azure Information Protection の Yammer サイト](https://www.yammer.com/AskIPTeam)をお勧めします。 このリソースでは、他の管理者コンサルタントの経験や知識を得られるだけでなく、Azure Information Protection チームから直接の返信を受けることができます。
 
