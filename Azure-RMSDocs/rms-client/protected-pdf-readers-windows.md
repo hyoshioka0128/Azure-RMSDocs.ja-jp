@@ -1,9 +1,9 @@
 ---
 title: Windows 用の保護された PDF リーダー
 description: 分類と保護のラベルが付けられた PDF ドキュメント用のリーダーを Windows にインストールする
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 3fbf6b04f6c9b67e8b0b3a9f679428c4af0a6505
-ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
+ms.openlocfilehash: a2e62bfb199d9531c08db8e956a2a25db4d2b82f
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907459"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326322"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Windows 用 PDF リーダーのインストール
 
@@ -47,7 +47,7 @@ PDF 暗号化の ISO 標準に準拠する保護された PDF ドキュメント
 
 ドキュメントが開いていない場合は、古い形式で保護されている可能性があります。 この場合は、[以前の形式でサポートさ](protected-pdf-readers.md#support-for-previous-formats)れているリーダーのいずれかを試してみてください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 保護されたドキュメントのリーダーと、他のプラットフォームのダウンロードリーダーへのリンクについては、「 [Microsoft Information Protection をサポートする PDF リーダー](protected-pdf-readers.md)」を参照してください。
 

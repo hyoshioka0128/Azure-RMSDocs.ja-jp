@@ -1,9 +1,9 @@
 ---
 title: Microsoft Information Protection の保護された PDF Reader
 description: 分類と保護のラベルが付けられた PDF ドキュメント用のリーダーをインストールする
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 1ab7dbd201d18289eb7823172f104d8693a3c3e3
-ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
+ms.openlocfilehash: 6d9dc21d2541ab9aeb6d6fc6772781e1c23c1f2e
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907391"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326380"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Microsoft Information Protection をサポートする PDF リーダー
 
@@ -70,7 +70,7 @@ Microsoft と Adobe の連携により、分類され、必要に応じて保護
 
 - [Adobe reader と Microsoft Information Protection 統合に関してよく寄せられる質問](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このページのリンクを使用して PDF リーダーをインストールすると、保護された PDF ドキュメントを開くことができます。
 

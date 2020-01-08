@@ -1,9 +1,9 @@
 ---
 title: Windows Server FCI での Azure RMS 保護 - AIP
 description: Rights Management (RMS) クライアントと Azure Information Protection クライアントを使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成するための手順です。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 265f6ee9fcf5e3fb3a4e658ab1c114a8e3ce7d4e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 5d03aa523c22e66c79748cd378b67d7124686972
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935522"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326518"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
@@ -251,7 +251,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 1.  分類規則を実行します。
 
-    1.  **[分類規則]** &gt; **[すべての規則で今すぐ分類を実行する]** の順にクリックします。
+    1.  **[分類規則]** **をクリックして、すべての規則と共に分類を実行**&gt;
 
     2.  **[分類の完了を待つ]** をクリックし、 **[OK]** をクリックします。
 
@@ -259,7 +259,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
 3.  ファイル管理タスクを実行します。
 
-    1.  **[ファイル管理タスク]** &gt; **[Protect files with RMS (RMS でファイルを保護)]** &gt; **[ファイル管理タスクを今すぐ実行する]** の順にクリックします。
+    1.  [ファイル**管理タスク**&gt; **RMS でファイルを保護**する &gt;**ファイル管理タスクを今すぐ実行**する] をクリックします。
 
     2.  **[タスクの完了を待つ]** をクリックし、 **[OK]** をクリックします。
 
@@ -302,7 +302,7 @@ FCI で使用する新しいテンプレートを発行し、カスタム ファ
 
 そのためには、同じスクリプトとおそらく異なるテンプレートを使用する新しいファイル管理タスクを作成し、構成した分類プロパティの条件を構成する必要があります。 たとえば、前に構成した条件 ( **[RMS]** プロパティ、 **[EQUAL]** 、 **[はい]** ) の代わりに、 **[個人の身元を特定する情報]** プロパティを選択し、 **[演算子]** を **[EQUAL]** に、 **[値]** を **[高]** に設定します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [Windows Server FCI と Azure Information Protection スキャナーの違い](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)についてご説明します。 
 

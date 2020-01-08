@@ -1,9 +1,9 @@
 ---
 title: MacOS 用の保護された PDF リーダー
 description: 分類と保護のラベルが付けられた PDF ドキュメント用の閲覧者を Mac コンピューターにインストールする
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 1eb186053241fe86b70eeff82286d3e62801b015
-ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
+ms.openlocfilehash: edb58bdd93ff573015decb8edf3b68e4fecd212c
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907427"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326458"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>MacOS 用 PDF リーダーのインストール
 
@@ -38,7 +38,7 @@ ms.locfileid: "74907427"
     
     この手順の管理者向け手順は、「リリースの発表: [Adobe Acrobat Reader と Microsoft Information Protection の統合の一般提供](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)」に記載されています。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 保護されたドキュメントのリーダーと、他のプラットフォームのダウンロードリーダーへのリンクについては、「 [Microsoft Information Protection をサポートする PDF リーダー](protected-pdf-readers.md)」を参照してください。
 
