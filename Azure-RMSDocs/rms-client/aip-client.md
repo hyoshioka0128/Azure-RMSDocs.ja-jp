@@ -12,21 +12,18 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5775a62e7f2a84541d153765a554476db534eb32
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: ec40deb985ebc26304dc8d53c8f2685b7a235272
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675858"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743740"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアント
 
 >*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、Windows 8、windows 7 SP1、windows Server 2019、windows Server 2016、Windows server 2012 R2、windows Server 2012、Windows server 2008 r2**
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
-
-> [!NOTE] 
-> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 Azure Information Protection クライアント (クラシック) は、 [Azure Information Protection](../what-is-information-protection.md)を使用してドキュメントや電子メールを分類および保護したり、Rights Management サービスを使用してデータを保護したりする組織のための、元のダウンロード可能なクライアントです。 このクライアントには、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Microsoft の Rights Management サービスを使って保護しているコンテンツを使いたい組織のためのビューアーもあります。
 

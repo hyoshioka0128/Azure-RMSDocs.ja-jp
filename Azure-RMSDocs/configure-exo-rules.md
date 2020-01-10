@@ -12,19 +12,16 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fe1d7ee0d1deb14c294014c3542e02808aa5def7
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: f2cbf08059c5bcbbf014dab6b19be83516132d87
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675077"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75742972"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
-
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-> [!NOTE] 
-> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照し、 [Microsoft 365 セキュリティとコンプライアンスセンターの指示に従っ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て、これらの手順を完了してください。
 
 Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 たとえば次のようになります。
 
@@ -78,7 +75,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
  
 4. **[and]** で、 **[メッセージ ヘッダー]** を選択し、 **[これらの単語を含む]** を選択します。
      
-    に設定する必要があります。 **[テキストの入力]** を選択し、`msip_labels` と入力します。
+    」を参照します。 **[テキストの入力]** を選択し、`msip_labels` と入力します。
      
     b. **[Enter words]\(単語の入力\)** を選択し、`MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True` と入力します。
     
@@ -106,7 +103,7 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
  
 4. **[and]** で、 **[Any attachment]\(添付ファイル\)** を選択し、 **[これらのプロパティが次の単語のいずれかを含む]** を選択します。
      
-    に設定する必要があります。 **[+]**  >  **[カスタム添付ファイルのプロパティを指定]** を選択します。
+    」を参照します。 **[+]**  >  **[カスタム添付ファイルのプロパティを指定]** を選択します。
   
     b. **[プロパティ]** に `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` を入力します。
     

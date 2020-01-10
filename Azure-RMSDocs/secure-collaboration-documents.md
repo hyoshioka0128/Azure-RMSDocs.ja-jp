@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d62c2946fed73c3f7ac69182b9558ee233935b4a
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: 57e40899f3c386b076a8642c17f019ea0767ab22
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675586"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743783"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -43,8 +43,6 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>ラベルの構成例: 保護を適用して内部や外部とのコラボレーションを可能にする
 
-> [!NOTE] 
-> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照し、 [Microsoft 365 セキュリティとコンプライアンスセンターの指示に従っ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て、これらの手順を完了してください。 
 
 この例では、既存のラベルを構成して保護を適用し、組織内のユーザーが他のユーザーとドキュメントでコラボレーションできるようにする手順について説明します。コラボレーションに含めるのは、Office 365 または Azure AD を使用している他の組織内の全ユーザー、Office 365 または Azure AD を使用している他の組織内のグループ、および Azure AD のアカウントを持たずに Gmail のメール アドレスを使用しているユーザーです。
 
