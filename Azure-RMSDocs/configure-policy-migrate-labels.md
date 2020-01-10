@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d094070b3f7c2973b99c9ca212b8b25873026faa
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: 60f1ea855d2ec666f2d22bb53d8856a6461157dc
+ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75674617"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827538"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -25,8 +25,6 @@ ms.locfileid: "75674617"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-> [!NOTE] 
-> 統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)を参照してください。
 
 Azure Information Protection ラベルを統一されたラベル付けプラットフォームに移行して、統一されたラベル付けを[サポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)による機密ラベルとして使用できるようにします。
 
@@ -197,7 +195,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - [Windows 用の Azure Information Protection 統合ラベル付け](./rms-client/unifiedlabelingclient-version-release-history.md)されたクライアント。 このクライアントと Azure Information Protection クライアント (クラシック) の比較については、「 [Windows コンピューターのラベル付けクライアントの比較](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-- 可用性の段階が異なる Office からのアプリ。 詳細については、Office ドキュメントの「 [office でサポートされている機密ラベル機能](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)について」を参照してください。
+- 可用性の段階が異なる Office からのアプリ。 詳細については、Office ドキュメントの「[アプリでの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)」を参照してください。
     
 - [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのアプリです。
 
@@ -225,8 +223,12 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ## <a name="next-steps"></a>次の手順
 
-カスタマーエクスペリエンスチームのその他のガイダンスとヒントについては、次のブログ記事を参照してください。統合された[ラベルの移行について理解](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)します。
+カスタマーエクスペリエンスチームのその他のガイダンスとヒントについては、次のリソースを参照してください。
 
-いずれかの管理センターで構成および発行できるようになった移行済みラベルについて詳しくは、「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」をご覧ください。
+- ブログの投稿: 統合された[ラベル付けの移行につい](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)て
+
+- ウェビナー: [AIP の統合ラベル付けウェビナーの記録](https://aka.ms/AIP-UL-Webinar-Join1)
+
+管理センターのラベルのいずれかで構成および発行できるようになった移行済みラベルの詳細については、「[秘密度ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」を参照してください。
 
 まだインストールしていない場合は、Azure Information Protection 統合されたラベル付けクライアントをインストールします。 リリース情報、管理者ガイド、およびユーザーガイドについては、「 [Windows 用の統合ラベルクライアント Azure Information Protection](./rms-client/aip-clientv2.md)」を参照してください。

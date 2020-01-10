@@ -12,22 +12,19 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: feaffa2397a016d8284075a2ab5bf38f468f5ae7
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: e9fc95f47273b6d604ba6a1151106ae64298fce0
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675416"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743649"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント:バージョン リリース履歴とサポート ポリシー
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
-> [!NOTE] 
->Azure portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**については、製品の廃止に関する通知が表示されます。<br>
->統合された効率的なカスタマーエクスペリエンスを提供するために、Azure Portal での**Azure Information Protection クライアント (クラシック)** と**ラベル管理**は **、2021年3月31日**に**非推奨**とされる予定です。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection の統一されたラベル付けプラットフォームを使用して、統一されたラベル付けソリューションに移行できます。 統合ラベルへの移行により、Azure Information Protection のお客様は、すべてのプラットフォーム上の Office アプリケーションと Microsoft 以外の生産性アプリケーションの間で、包括的な情報保護戦略をシームレスに実施できます。 すべての計画された変更の詳細については、非[推奨の通知](https://aka.ms/aipclassicsunset)に関するページを参照してください。
 
->*適用対象:Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
-> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 
@@ -48,7 +45,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>サポートされなくなった一般提供のバージョン:
 
-|クライアントのバージョン|リリース日|
+|クライアント バージョン|リリース日|
 |--------------|-------------|
 |1.41.51.0|2018 年 11 月 27 日|
 |1.37.19.0|2018 年 9 月 17 日|
@@ -66,7 +63,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 6/2/2019 以降、Azure Information Protection のラベル付けサービスには、TLS 1.2 を使用する接続が必要です。
 
-1.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0**は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
+1\.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0**は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
 
 ### <a name="release-history"></a>リリース履歴
 
@@ -80,7 +77,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="version-154330"></a>バージョン1.54.33.0
 
-**リリース日**: 2019/10/23
+**リリース**日: 10/23/2019
 
 このバージョンには、RMS クライアントの MSIPC バージョン1.0.4008.0813 が含まれています。
 
@@ -88,7 +85,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 ## <a name="version-153100"></a>バージョン1.53.10.0
 
-**リリース日**: 07/15/2019
+**リリース**日: 07/15/2019
 
 04/23/2020 でサポート
 
@@ -106,13 +103,13 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - 電子メールスレッドの [転送不可] オプションを、ユーザー定義のアクセス許可用に構成され、転送しないラベルに置き換えると、元の受信者は引き続き電子メールメッセージを開くことができます。
 
-- 次のシナリオでは、ラベルが自動的に設定されたことを示すラベルのツールヒントにユーザーが表示されなくなりました。ユーザーは、ラベルが付けられているが自動的に保護されていないドキュメントが添付された保護された電子メールを受信します。 差出人と同じ組織のユーザーがドキュメントを開くと、保護設定の対応するラベルがドキュメントに適用されます。
+- 次のシナリオでは、ラベルが自動的に設定されたというラベルのツールヒントにユーザーが表示されなくなりました。ユーザーは、ラベルが付けられていないが自動的に保護されたドキュメントを添付して、保護された電子メールを受け取ります。 差出人と同じ組織のユーザーがドキュメントを開くと、保護設定の対応するラベルがドキュメントに適用されます。
 
 - [Protect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile)コマンドレットを実行するための最小[使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)は、**コピー** (EXTRACT) ではなく **、名前を付けて保存、エクスポート**(エクスポート) されるようになりました。
 
 ## <a name="version-1482040"></a>バージョン1.48.204.0
 
-**リリース日**: 04/16/2019
+**リリース**日: 04/16/2019
 
 01/15/2020 までサポート
 
@@ -145,18 +142,18 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - Outlook で送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する、新しいクライアント詳細設定。 [詳細情報](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
-    プレビューバージョンの OutlookCollaborationTrustedDomains のアドバンストクライアントプロパティを構成した場合、この設定は3つの新しい設定に置き換えられるため、ドメインがアクションごとに除外されるようになりました。OutlookWarnTrustedDomains、Outlookジャスト Ifytrusteddomains、および OutlookBlockTrustedDomains。
+    プレビューバージョンの OutlookCollaborationTrustedDomains のアドバンストクライアントプロパティを構成した場合、この設定は3つの新しい設定に置き換えられるため、ドメインがアクションごとに除外されるようになりました。 OutlookWarnTrustedDomains、Outlookジャストの信頼ドメインと OutlookBlockTrustedDomains。
 
 - [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 [詳細情報](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
 - Azure portal のチェックボックスをオンにして、機密データをより深く分析できるようにするための、 [Azure Information Protection analytics](../reports-aip.md)の新しいクライアント設定の1つ。 この設定は、クライアントとスキャナーに適用されます。 [詳細情報](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
-- カスタム アクセス許可を表示しないようポリシー設定を構成する場合にのみ適用される、新しいクライアント詳細設定。カスタム アクセス許可で保護されているファイルがある場合に、ユーザーが (保護設定を変更するアクセス許可を持っていれば) 表示および変更できるように、ファイル エクスプローラーにカスタム アクセス許可オプションが表示されます。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+- カスタムアクセス許可を表示しないようにポリシー設定を構成した場合にのみ適用可能な新しいアドバンストクライアント設定: カスタムアクセス許可で保護されたファイルがある場合は、ユーザーが表示できるように、エクスプローラーで [カスタムアクセス許可] オプションを表示します。(保護設定を変更するアクセス許可がある場合) を変更します。 [詳細情報](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
 
 **修正内容**:
 
-- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 (**?**) で表示されません。
+- Azure Information Protection 分析で、送信元オペレーティング システムのロケールが英語の場合に、パスおよびファイル名に含まれる非 ASCII 文字が疑問符 ( **?** ) で表示されません。
 
 - ユーザーがWord 文書に新しいセクションを追加した後で再度ラベルを付ける場合、新しい視覚的なマーキングが一貫して適用されます。
 
@@ -170,9 +167,9 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 - クライアント詳細設定を使用して [Outlook の既定のラベル](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook)を設定すると、ユーザーに対してすべてのサブラベルが無効化されている場合でも、これらのサブラベルを含む親ラベルを適用できます。
 
-- [ポリシー設定](../configure-policy-settings.md)の **[添付ファイルのあるメール メッセージの場合、それらの添付ファイルの最上位の分類に一致するラベルを適用します]** を使用し、ユーザー定義のアクセス許可で最上位の分類のラベルが構成されている場合、以前はそのラベルが電子メールに適用されましたが、保護は適用されませんでした。 現在の動作は次のとおりです。
-    - ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれる場合: そのラベルとその転送不可保護を電子メールに適用します。
-    - ラベルのユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびファイル エクスプローラーのみを対象とする場合: 電子メールにラベルが適用されず、保護も適用されません。
+- [policy setting](../configure-policy-settings.md) **添付ファイル付きの電子メールメッセージにポリシー設定を使用する場合は、それらの添付ファイルの最上位の分類に一致するラベルを適用**し、最も高い分類のラベルをユーザー定義のアクセス許可用に構成します。これまでの結果は、ラベルが電子メールに適用されたものですが、保護されませんでした。 現在の動作は次のとおりです。
+    - ラベルのユーザー定義のアクセス許可に Outlook (転送不可) が含まれている場合は、そのラベルを適用し、電子メールに [転送不可] を設定します。
+    - ラベルのユーザー定義アクセス許可が Word、Excel、PowerPoint、およびエクスプローラー専用の場合: ラベルを適用せず、電子メールに保護を適用しません。
 
 **その他の変更:**
 
@@ -201,6 +198,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 クライアントのインストールと使用の詳細: 
 
-- ユーザー向け: [クライアントのダウンロードとインストール](install-client-app.md)
+- ユーザー向け: [クライアントをダウンロードしてインストールする](install-client-app.md)
 
 - 管理者向け: [Azure Information Protection クライアント管理者ガイド](client-admin-guide.md)
