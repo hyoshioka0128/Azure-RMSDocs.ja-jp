@@ -1,28 +1,29 @@
 ---
 title: 保護用に Azure Information Protection ラベルを構成する - AIP
 description: Rights Management 保護を使用するようにラベルを構成すると、最も機密性の高いドキュメントや電子メールを保護できます。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 7e455e54832113b1a4f67665ddad8455080b4970
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 84d72965d0438b17b23f194d4ec085765853608c
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933771"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75742727"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 > [!NOTE]
 > これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
@@ -153,7 +154,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
     
      ###### <a name="information-about-the-protection-settings"></a>保護の設定に関する情報
     
-     |Setting|詳細情報|推奨される設定
+     |設定|説明|推奨される設定
      |-----------|--------------------|--------------------|
      |**[ファイル コンテンツの有効期限]**|これらの設定によって保護されているドキュメントを、選択したユーザーが開けなくなる日付またはそれまでの日数を定義します。 電子メールの場合は、一部の電子メール クライアントで使用されるキャッシュ メカニズムにより、有効期限が常に適用されるとは限りません。<br /><br />日付を指定するか、保護がコンテンツに適用された時点からの日数を指定できます。<br /><br />日付を指定する場合は、現在のタイム ゾーンの午前 0 時から有効になります。|**[コンテンツには有効期限がありません]** (コンテンツに期限付きの特定の要件が含まれる場合を除く)。|
      |**[オフライン アクセスの許可]**|この設定を使用すると、選択されたユーザーはインターネットに接続していないときに保護されたコンテンツを開くことができるため、セキュリティ要件 (失効後のアクセスを含む) のバランスを取ることができます。<br /><br />インターネットに接続されていないときにコンテンツを使用できないように指定するか、コンテンツが指定された日数のみ利用できるように指定した場合、そのしきい値に達すると、ユーザーは再認証される必要があり、アクセスがログに記録されます。 この場合、ユーザーの資格情報がキャッシュされていない場合、ユーザーはドキュメントまたは電子メールを開く前にサインインするように要求されます。<br /><br />再認証に加えて、ポリシーおよびユーザー グループのメンバーシップが再評価されます。 つまり、ユーザーが最後にコンテンツにアクセスした後にポリシーまたはグループ メンバーシップが変更された場合、ユーザーが同じドキュメントまたは電子メールにアクセスしたときに異なる結果になる可能性があります。 これには、ドキュメントが[失効](./rms-client/client-track-revoke.md)された場合にアクセスできないことも含まれます。|コンテンツの重要度に応じて次のように設定します。<br /><br />-  **[インターネットに接続せずにコンテンツを利用できる日数]**  = **7** (不正ユーザーの手に渡った場合にビジネス上の損失を招く可能性がある機密性の高いビジネス データ)。 この推奨設定では、柔軟性とセキュリティのバランスを取ることができます。 例としては、契約書、セキュリティ レポート、予測の概要、および販売取引データなどがあります。<br /><br />-  **[Never\(常に不可\)]** (承認されていない人と共有した場合、ビジネスに損害を与える可能性のある非常に機密性の高いビジネス データ)。 この推奨では柔軟性よりもセキュリティが優先され、ドキュメントが失効されると、承認されたすべてのユーザーが直ちにそのドキュメントを開けなくなります。 例としては、従業員と顧客の情報、パスワード、ソース コード、および発表前の財務レポートなどがあります。|
@@ -285,7 +286,7 @@ Azure AD のアカウントを持たない外部ユーザーを指定する場�
 
 4. **[事前設定されたものの中からアクセス許可を選択する]** に対し、 **[共同所有者]** 、 **[共同作成者]** 、 **[レビュー担当者]** 、 **[カスタム]** のいずれかを選択し、付与するアクセス許可を選択します。
     
-    注: 電子メールには **[ビューアー]** を選択しないでください。また、 **[カスタム]** を選択した場合は、 **[編集と保存]** を必ず含めてください。
+    注:電子メールには **[ビューアー]** を選択しないでください。また、 **[カスタム]** を選択した場合は、 **[編集と保存]** を必ず含めてください。
     
     Exchange Online の新しい **[Encrypt-Only]** \(暗号化のみ\) オプションと同じアクセス許可を選択するには、 **[カスタム]** を選択します。 次いで、 **[名前を付けて保存]、[エクスポート] \(エクスポート)** と **[フル コントロール] \(所有者)** を除くすべてのアクセス許可を選択します。
 
@@ -327,7 +328,7 @@ Azure AD のアカウントを持たない外部ユーザーを指定する場�
 
 3. **[ラベル]** ペインで、 **[保存]** を選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。 
 
