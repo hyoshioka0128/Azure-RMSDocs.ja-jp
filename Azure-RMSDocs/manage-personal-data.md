@@ -13,10 +13,10 @@ ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71966891"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
@@ -84,7 +84,7 @@ LabelId                 :
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 
-[AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを実行し、 [-aipserviceroleベースの管理者](/powershell/module/aipservice/get-aipservicerolebasedadministrator)コマンドレットを実行して、azure から保護サービス (azure Rights Management) のスーパーユーザーロールまたは全体管理者ロールが割り当てられているユーザーを確認します。Information Protection。 これらいずれかのロールが割り当てられているユーザーについては、電子メール アドレスが表示されます。
+[AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) コマンドレットを実行し、[get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) コマンドレットを実行して、Azure Information Protection から保護サービス (Azure Rights Management) のスーパーユーザーロールまたは全体管理者ロールが割り当てられているユーザーを確認します。 これらいずれかのロールが割り当てられているユーザーについては、電子メール アドレスが表示されます。
 
 
 ### <a name="administration-logs-for-the-protection-service"></a>保護サービスの管理ログ
@@ -224,7 +224,7 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **グローバルリーダー**
 
-AIPService モジュール (または以前のモジュール AADRM) を使用して表示および指定した個人データは、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、**コンプライアンス対応に割り当てられているユーザーのみがアクセスできます。データ管理**者、または Azure Active Directory からの**グローバル管理者**ロール、または保護サービスのグローバル管理者ロール。
+AIPService モジュール (または以前のモジュール AADRM) を使用して表示および指定する個人データにアクセスできるのは、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、**コンプライアンスデータ管理者**、または Azure Active Directory の**グローバル管理者**ロールが割り当てられたユーザー、または保護サービスのグローバル管理者ロールです。
 
 ## <a name="updating-personal-data"></a>個人データの更新
 
@@ -236,7 +236,7 @@ Azure Information Protection ポリシーのスコープ付きポリシーと保
 
 ### <a name="protection-templates"></a>保護テンプレート
 
-[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データは `RightsDefinitions` プロパティ内にあるため、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、と `Set-AipServiceTemplateProperty` 共に権限定義オブジェクトを使用する必要もあります。コマンドレット.
+[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データは `RightsDefinitions` プロパティ内にあるため、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、`Set-AipServiceTemplateProperty` コマンドレットで権限定義オブジェクトを使用する必要もあります。
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 
