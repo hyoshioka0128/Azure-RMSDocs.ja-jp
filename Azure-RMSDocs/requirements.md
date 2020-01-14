@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection の要件 - AIP
 description: 組織の Azure Information Protection をデプロイするための前提条件を特定します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 12/04/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ecde2ec34dd27cb3bd2a176e8d205de6ee865421
+ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74831699"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75913273"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -75,8 +75,6 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows 8 (x86、x64)
 
-- Windows 7 Service Pack 1 (x86、x64)
-
 - Windows Server 2019
 
 - Windows Server 2016
@@ -85,6 +83,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 - Windows Server 2008 R2 
 
+以前のバージョンの Windows のサポートオプションについては、Microsoft アカウントまたはサポート担当者にお問い合わせください。   
 クライアントを物理コンピューターにインストールするだけでなく、仮想マシンにインストールすることもできます。 仮想デスクトップソリューションのソフトウェアベンダーに、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアントの実行に必要な追加の構成があるかどうかを確認します。 たとえば、Citrix ソリューションの場合、Office (winword.exe、excel.exe、outlook.exe、powerpnt.exe) 用の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)と、Azure Information Protection 統合ラベルクライアントまたは Azure Information Protection クライアント (msip. app-v, msip) の実行可能ファイルを無効にすることが必要になる場合があります。
 
 表示されるサーバーのバージョン:
@@ -166,4 +165,18 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 - 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照)。
 
 [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aipservice/Set-AipServiceMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
+
+### <a name="service-tags"></a>サービス タグ
+
+次のサービスタグのすべてのポートへのアクセスを許可してください。
+
+- **AzureInformationProtection**
+- **AzureActiveDirectory**
+- **AzureFrontDoor**
+
+Azure Information Protection サービスは、次の2つの特定の IP アドレスにも依存します。
+ - **13.107.6.181** 
+ - **13.107.9.181**
+
+これらの特定の IP アドレスへの発信アクセスを許可する規則を作成してください。 
 
