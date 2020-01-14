@@ -1,40 +1,43 @@
 ---
 title: チュートリアル - Azure Information Protection ポリシーを編集する - AIP
 description: 組織用の Microsoft Azure Information Protection ポリシーを編集するための簡単なチュートリアルです。所要時間は約 15 分です。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c425fcc71f8400b945ec684f45f5c1622fedbbef
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 358308fe111eb1c3762d3e6a98fbea0d2e065bbc
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559221"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675518"
 ---
-# <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル: Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
+# <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル:Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このチュートリアルで学習する内容は次のとおりです。
+このチュートリアルでは、以下を実行する方法について説明します。
 > [!div class="checklist"]
 > * ポリシー設定を構成する
 > * 新しいラベルの作成 
 > * 視覚的なマーキング、推奨される分類、および保護用のラベルを構成する
 > * 設定とラベルの動作を確認する
 
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+
 この構成を行うと、ユーザーは新しいドキュメントまたは電子メールを作成するときに既定のラベルが適用されることを確認できます。 ただし、クレジット カード情報が検出された場合は、新しいラベルを適用するように求められます。 新しいラベルが適用されると、コンテンツは、対応するフッターと透かしと共に再分類され、保護されます。 
 
 このチュートリアルを完了するための所要時間は約 15 分です。
 
-## <a name="prerequisites"></a>必要条件 
+## <a name="prerequisites"></a>[前提条件] 
 
 このチュートリアルを完了するための必要条件を次に示します。
 
@@ -164,7 +167,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
     **[保存]** をクリックして **[サブラベル]** ペインに戻ります。
 
-10. **[サブラベル]** ペインでは、以下のように、 **[条件名]** に **[クレジット カード番号]** と表示され、 **[出現回数]** に **1** が設定されています。
+10. **[サブラベル]** ウィンドウでは、以下のように、 **[条件名]** に **[クレジット カード番号]** と表示され、 **[出現回数]** に **1** が設定されています。
     
     ![Azure Information Protection チュートリアル - クレジット カード条件の概要](./media/step2-see-condition.png)
 
@@ -271,7 +274,7 @@ Word で新しいドキュメントを開きます。 Azure Information Protecti
 
 Word を再起動してこれらの変更をダウンロードします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの編集について詳しくは、「[Azure Information Protection ポリシーの構成](configure-policy.md)」をご覧ください。
 

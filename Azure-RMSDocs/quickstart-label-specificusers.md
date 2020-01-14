@@ -1,27 +1,30 @@
 ---
 title: クイック スタート - 特定のユーザー向けの新しい Azure Information Protection ラベル - AIP
 description: スコープ付きポリシーを使用してユーザーのサブセットに向けたドキュメントや電子メールを分類する新しいラベルを作成および構成します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3e69706b786227cd41e215bc48c6caf9fab250bb
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: a321d0034760e4daf67154f09d843302f1fb9974
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935369"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675892"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる、新しい Azure Information Protection ラベルを作成します。
 
@@ -67,7 +70,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 3. **[ラベル]** ペインで、少なくとも以下の項目を指定します。
     
-    - **[ラベルの表示名]** :ユーザーに表示されるラベルの名前。これによりコンテンツの分類を識別します。 たとえば、`Sales - Restricted` と指定します。
+    - **[ラベルの表示名]** :ユーザーに表示されるラベルの名前。これによりコンテンツの分類を識別します。 例: `Sales - Restricted`。
     
     - **説明**:ユーザーがこの新しいラベルを選択するタイミングを識別するために役立つヒント。 例: `Business data that is restricted to the Sales Team.`
 
@@ -79,7 +82,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 1. **[分類]**  >  **[ポリシー]** メニュー オプションから: **[Azure Information Protection - ポリシー]** ペインで、 **[新しいポリシーの追加]** を選択します。 
 
-2. **[ポリシー]** ペインの **[ポリシー名]** ボックスに、新しく作成したラベルを表示するユーザー グループを識別する名前を入力します。 たとえば、`Sales` のように指定します。
+2. **[ポリシー]** ペインの **[ポリシー名]** ボックスに、新しく作成したラベルを表示するユーザー グループを識別する名前を入力します。 たとえば、`Sales` となります。
 
 3. **[このポリシーを取得するユーザーまたはグループを選択してください]** オプションを選択します。
 
@@ -114,7 +117,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 4.  **[このラベルを削除]** を選択し、確認を求められたら **[OK]** を選択します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このクイック スタートには、特定のユーザー向けの新しいラベルをすばやく作成するための最低限のオプションが含まれています。 詳しい手順については、次の記事をご覧ください。
 

@@ -1,27 +1,30 @@
 ---
 title: クイック スタート - ラベルを構成して、ユーザーが電子メールを簡単に保護できるようにする - AIP
 description: 転送不可の保護を自動的に適用することで、ユーザーの電子メールを保護するラベルを構成します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 4d3ee0b82c99c093dcc66363b8aed98c5a151e60
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 24f4b8e4412dffcd9047c5b80643b5a2aca7dc39
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934570"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675926"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 このクイック スタートでは、[転送不可] の保護設定を自動的に適用するように、既存の Azure Information Protection ラベルを構成します。
 
@@ -35,7 +38,7 @@ ms.locfileid: "74934570"
 
 この構成は 5 分で完了します。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 
 このクイック スタートを完了するには、次の要件があります。
 
@@ -123,7 +126,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 3. **[ラベル]** ペインで、 **[このラベルを含むドキュメントやメールに対するアクセス許可の設定]** を見つけ、 **[未構成]** を選択して **[保存]** を選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このクイック スタートには、ラベルをすばやく構成するための最低限のオプションが含まれています。ラベルを使用すると、ユーザーは電子メールを簡単に保護できます。 ただし、構成の制限が厳しすぎる場合や、制限が不十分な場合は、以下に示す他の構成例をご覧ください。
 

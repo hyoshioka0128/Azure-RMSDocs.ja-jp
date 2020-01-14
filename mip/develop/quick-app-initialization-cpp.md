@@ -4,15 +4,14 @@ description: Microsoft Information Protection (MIP) SDK クライアント ア�
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 30066f1bbb8b5a4cdd556b7aa34a40d696371a91
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884806"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556080"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C++)
 
@@ -21,12 +20,12 @@ ms.locfileid: "69884806"
 > [!NOTE]
 > MIP ファイル、ポリシー、または保護 API を使用する任意のクライアント アプリケーションには、このクイック スタートで概説されている手順が必要です。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 それぞれが前のクイック スタートをベースにビルドされるので、今後のクイック スタートは連続的に実行する必要があります。このクイック スタートが最初になっています。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 
 まだ完了していない場合は、必ず次の操作を行ってください。
 
 - 「[Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md)」 (Microsoft Information Protection (MIP) SDK のセットアップと構成) の手順を完了します。 この "クライアント アプリケーションの初期化" クイック スタートは、適切な SDK のセットアップと構成に依存します。
-- 必要に応じて、次の操作を行います。
+- 省略可能:
   - [プロファイル オブジェクトとエンジン オブジェクト](concept-profile-engine-cpp.md)を確認します。 プロファイル オブジェクトとエンジン オブジェクトは、MIP ファイル/ポリシー/保護 API を使用するクライアントによって必要とされる、ユニバーサルな概念です。 
   - [認証の概念](concept-authentication-cpp.md)を確認して、認証と同意が SDK とクライアント アプリケーションによってどのように実装されるかについて学習します。
   - [オブザーバーの概念](concept-async-observers.md)を確認して、オブザーバーの詳細および実装方法について学習します。 MIP SDK では、非同期イベントの通知を実装するために、オブザーバー パターンを使用します。
@@ -360,7 +359,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
    Enter access token:
    ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで初期化コードが完了し、MIP ファイル API の操作を開始する次のクイック スタートの準備ができました。
 

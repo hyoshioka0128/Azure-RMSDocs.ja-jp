@@ -1,33 +1,36 @@
 ---
 title: チュートリアル - Azure Information Protection を使って過剰な共有を制御する - AIP
 description: Azure Information Protection クライアントでのクライアントの詳細設定を構成して動作を確認し、警告、理由の入力、または Outlook からのメッセージの送信のブロックを行うための導入チュートリアルです。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ef93a0ee7bdcfd2caf2216bed15bd2d1d9e5436e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559368"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675365"
 ---
-# <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル: Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
+# <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル:Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このチュートリアルで学習する内容は次のとおりです。
+このチュートリアルでは、以下を実行する方法について説明します。
 > [!div class="checklist"]
 > * Outlook で警告、理由の入力、またはポップアップ メッセージをブロックする設定を構成する
 > * 設定の動作を確認する
 > * イベント ログに記録されたユーザー メッセージとアクションを確認する 
+
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 電子メールは、電子メールのメッセージ自体または添付ファイルに含まれているかにかかわらず、ユーザーによる不適切な情報共有の最も一般的な方法の 1 つです。 既知の機密情報を特定して、それが組織から流出することを防ぐデータ損失防止 (DLP) ソリューションを使用することができます。 しかし、一部のクライアントの詳細設定と共に Azure Information Protection クライアントを使用して、過剰な共有を防いだり、リアルタイムでフィードバックを提供する対話型メッセージでユーザーに説明したりすることもできます。
 
@@ -35,7 +38,7 @@ ms.locfileid: "73559368"
 
 このチュートリアルを完了するための所要時間は約 15 分です。
 
-## <a name="prerequisites"></a>必要条件 
+## <a name="prerequisites"></a>[前提条件] 
 
 このチュートリアルを完了するための必要条件を次に示します。
 
@@ -276,7 +279,7 @@ Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
 
-### <a name="optional-create-an-additional-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>省略可能: 追加のクライアントの詳細設定を作成して、内部受信者に対するこれらのメッセージの適用を除外する
+### <a name="optional-create-an-additional-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>オプション:追加のクライアントの詳細設定を作成して、内部受信者に対するこれらのメッセージの適用を除外する
 
 自分のメール アドレスを受信者として使用して、警告、理由、およびブロック メッセージをテストしてきました。 運用環境では、受信者が自分の組織の外部にいる場合にのみ、指定したラベルに対するこれらのメッセージを表示させるよう選択する場合があります。 この例外は、組織が常に共同作業をしているパートナーにまで広げることができます。
 
@@ -426,7 +429,7 @@ User Response: Confirmed
 
 Outlook を再起動すると、このチュートリアルで構成した設定は構成されなくなります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 テストを速く済ませるために、このチュートリアルでは、添付ファイルのない、1 人の受信者への電子メール メッセージを使用しました。 しかし、複数の受信者、複数のラベルを含む同じメソッドを適用し、ユーザーにとってラベル付けの状態がわかりにくい添付ファイルにも同じロジックを適用することもできます。 たとえば、電子メール メッセージ自体には [公開] のラベルが付けられていますが、添付の PowerPoint プレゼンテーションには [全般] のラベルが付けられています。 構成オプションについて詳しくは、管理者ガイドの次のセクションをご覧ください。[Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 

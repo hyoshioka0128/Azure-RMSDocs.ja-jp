@@ -4,21 +4,20 @@ description: Microsoft Information Protection SDK でビルドされたアプリ
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 06/13/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 906d8cb104c5c8639c4ffe52ecd1f4ff1ff0a8d0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: a7159374ab736bc2f5df151ade82874b33875e56
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69882996"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555961"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
 
 クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Office 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 
 開始する前に、次のトピックを確認してください。
 
@@ -232,7 +231,7 @@ MIP SDK でビルドされたアプリケーションに Visual C++ 2015 また�
 
 これらは、アプリケーションがリリースとしてビルドされている場合にのみ機能します。 アプリケーションがデバッグとしてビルドされている場合、Visual C++ ランタイム デバッグ DLL をアプリケーションに含めるか、マシンにインストールする必要があります。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - C++ 開発者の場合
   - クイック スタートのセクションを開始する前に、[オブザーバーの概念](concept-async-observers.md)について読み、C++ の API の非同期的な性質について理解してください。

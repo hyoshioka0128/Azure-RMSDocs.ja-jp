@@ -4,15 +4,14 @@ description: Microsoft Information Protection (MIP) SDK C# クライアント �
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: 156d7bb4c41a6ce593e66add3aea0a290a9b73ac
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 637e2474f0f40ec776cf21bf22d41821f0f9fbb6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69886014"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555400"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -21,12 +20,12 @@ ms.locfileid: "69886014"
 > [!NOTE]
 > MIP .NET ラッパーのファイルまたはポリシー API を使用するすべてのクライアント アプリケーションには、このクイック スタートで概説されている手順が必要です。 保護 API はまだ使用できません。 このクイック スタートではファイル API の使い方を示しますが、この同じパターンをポリシーと保護 API を使用するクライアントに適用できます。 今後のクイック スタートは、それぞれが前のクイック スタートをベースにビルドされるので、連続的に実行される必要があります。このクイック スタートが最初になっています。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 
 まだ完了していない場合は、必ず次の操作を行ってください。
 
 - 「[Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md)」 (Microsoft Information Protection (MIP) SDK のセットアップと構成) の手順を完了します。 この "クライアント アプリケーションの初期化" クイック スタートは、適切な SDK のセットアップと構成に依存します。
-- 必要に応じて、次の操作を行います。
+- 省略可能:
   - [プロファイル オブジェクトとエンジン オブジェクト](concept-profile-engine-cpp.md)を確認します。 プロファイル オブジェクトとエンジン オブジェクトは、MIP ファイル/ポリシー/保護 API を使用するクライアントによって必要とされる、ユニバーサルな概念です。 
   - [認証の概念](concept-authentication-cpp.md)を確認して、認証と承認が SDK とクライアント アプリケーションによってどのように実装されるかについて学習します。
 
@@ -225,7 +224,7 @@ namespace mip_sdk_dotnet_quickstart
 
 4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 コードは正常にビルドされるはずです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで初期化コードが完了し、MIP ファイル API の操作を開始する次のクイック スタートの準備ができました。
 

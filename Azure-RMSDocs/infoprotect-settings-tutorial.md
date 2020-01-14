@@ -1,32 +1,35 @@
 ---
 title: チュートリアル - Azure Information Protection ポリシー設定を使ってデータを分類する
 description: Azure Information Protection のポリシー設定を構成して、組織のドキュメントや電子メールを分類する手順について説明した簡単なチュートリアルです。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 98aeeb0b858690327904e8fcd3932f9b38e7cf30
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: edc6fe02c5b11624e88e393dbaff20bb8ed1a620
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559213"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675501"
 ---
-# <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル: 連携させる Azure Information Protection のポリシー設定を構成する
+# <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル:連携させる Azure Information Protection のポリシー設定を構成する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-このチュートリアルで学習する内容は次のとおりです。
+このチュートリアルでは、以下を実行する方法について説明します。
 > [!div class="checklist"]
 > * 連携されるポリシー設定を構成する
 > * 設定の動作を確認する
+
+> [!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 各自のドキュメントや電子メールを手動でラベル付けするようユーザーに任せる代わりに、Azure Information Protection のポリシー設定を使用して次のことを行えます。
 
@@ -36,7 +39,7 @@ ms.locfileid: "73559213"
 
 このチュートリアルを完了するための所要時間は約 15 分です。
 
-## <a name="prerequisites"></a>必要条件 
+## <a name="prerequisites"></a>[前提条件] 
 
 このチュートリアルを完了するための必要条件を次に示します。
 
@@ -92,7 +95,7 @@ Azure portal を使用してグローバル ポリシーを編集し、すべて
 
 4. 設定を変更して、次の表の値に合わせます。 このチュートリアルの完了時に設定を元に戻す必要がある場合は、変更する設定をメモしておきます。 
 
-    |Setting|値|説明|
+    |設定|値|説明|
     |-------|-----|-----|
     |**既定のラベルの選択**|**全般**|**[全般]** ラベルは、Azure Information Protection によって自動的に作成される既定のラベルの 1 つです。 その手順は「[ラベルの作成と公開](quickstart-viewpolicy.md#create-and-publish-labels)」のクイック スタートで説明されています。 **[全般]** という名前のラベルがない場合は、ドロップダウン リストから別のラベルを選択します。 ラベル付けされていないドキュメントや電子メールは、基本の分類として自動的にこのラベルを適用されます。 ただし、ユーザーは選択したラベルを別のラベルに変更できます。|
     |**すべてのドキュメントとメールにラベルを付ける**|**オン**|この設定は必須のラベル付けとも呼ばれます。ユーザーがラベルを付けずにドキュメントを保存したり電子メールを送信したりできないようにするためです。 既定のラベルと合わせると、ドキュメントと電子メールには、設定した既定のラベルか各自が選択したラベルのいずれかが付けられます。
@@ -176,7 +179,7 @@ Outlook を起動し、新しい電子メール メッセージを作成しま�
 
 Word アプリと Outlook アプリを再起動して、これらの変更をダウンロードします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection のポリシー設定の編集について詳しくは、「[Azure Information Protection のポリシー設定を構成する方法](configure-policy-settings.md)」をご覧ください。
 
