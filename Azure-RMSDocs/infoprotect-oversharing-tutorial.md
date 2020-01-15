@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 7f4ed4ba4962246bc6466807f492c8ac18f18cc2
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675365"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743565"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル:Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
@@ -29,8 +29,6 @@ ms.locfileid: "75675365"
 > * 設定の動作を確認する
 > * イベント ログに記録されたユーザー メッセージとアクションを確認する 
 
-> [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 電子メールは、電子メールのメッセージ自体または添付ファイルに含まれているかにかかわらず、ユーザーによる不適切な情報共有の最も一般的な方法の 1 つです。 既知の機密情報を特定して、それが組織から流出することを防ぐデータ損失防止 (DLP) ソリューションを使用することができます。 しかし、一部のクライアントの詳細設定と共に Azure Information Protection クライアントを使用して、過剰な共有を防いだり、リアルタイムでフィードバックを提供する対話型メッセージでユーザーに説明したりすることもできます。
 

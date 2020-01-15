@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 358308fe111eb1c3762d3e6a98fbea0d2e065bbc
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675518"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743680"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル:Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
@@ -30,8 +30,6 @@ ms.locfileid: "75675518"
 > * 視覚的なマーキング、推奨される分類、および保護用のラベルを構成する
 > * 設定とラベルの動作を確認する
 
-> [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 この構成を行うと、ユーザーは新しいドキュメントまたは電子メールを作成するときに既定のラベルが適用されることを確認できます。 ただし、クレジット カード情報が検出された場合は、新しいラベルを適用するように求められます。 新しいラベルが適用されると、コンテンツは、対応するフッターと透かしと共に再分類され、保護されます。 
 

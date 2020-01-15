@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: edc6fe02c5b11624e88e393dbaff20bb8ed1a620
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675501"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743527"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル:連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -28,8 +28,6 @@ ms.locfileid: "75675501"
 > * 連携されるポリシー設定を構成する
 > * 設定の動作を確認する
 
-> [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 各自のドキュメントや電子メールを手動でラベル付けするようユーザーに任せる代わりに、Azure Information Protection のポリシー設定を使用して次のことを行えます。
 

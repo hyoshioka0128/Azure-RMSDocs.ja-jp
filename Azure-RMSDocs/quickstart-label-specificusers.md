@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a321d0034760e4daf67154f09d843302f1fb9974
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: b2ae9852ec1603c0fa3ab5009ea94f6f49bb2714
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675892"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743874"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
@@ -23,8 +23,6 @@ ms.locfileid: "75675892"
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-> [!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる、新しい Azure Information Protection ラベルを作成します。
 
