@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b061ac3e067184d1af8b55756a7b3ac3fc0c8a35
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: eb50c150ee908c14c04e0786c57b4ae53e2599a0
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743534"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960563"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -156,9 +156,19 @@ Sysadmin ロールが一時的に付与されていない場合は、スキャ�
 
 通常、スキャナーのインストールと構成には同じユーザー アカウントを使用します。 ただし、別々のアカウントを使用する場合は、両方にスキャナー構成データベースの db_owner ロールが必要です。
 
-- スキャナーに独自のプロファイル名を指定しない場合 (クラシッククライアントのみ)、構成データベースの名前は**computer_name > AIPScanner_\<** になります。 
+- クラシック クライアントの場合:
 
-- 独自のプロファイル名を指定した場合、構成データベースには**AIPScanner_\<profile_name >** (クラシッククライアント)**または AIPScannerUL_\<** profile_name > (統合ラベル付けクライアント) という名前が付けられます。
+    スキャナーに独自のプロファイル名を指定しない場合、構成データベースの名前は computer_name > (クラシッククライアントのみ) **AIPScanner_\<** になります。 次の手順に進み、ユーザーを作成し、データベースに対する db_owner 権限を付与します。 
+
+- 統合ラベル付けクライアントの場合:
+    
+    独自のプロファイル名を指定した場合、構成データベースには**AIPScannerUL_ < profile_name >** (統合ラベル付けクライアント) という名前が付けられます。
+    
+    次のスクリプトを使用してデータベースを設定します。 
+
+
+
+    存在しない場合 (select * from master. sys. server_principals where sid = SUSER_SID ("domain\user")) BEGIN declare @T nvarchar (500) Set @T = ' CREATE LOGIN ' + quotename (' domain\user ') + ' FROM WINDOWS ' exec (@T) END 
 
 このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の SQL スクリプトを2回実行するように依頼します。 スキャナーを実行するサービスアカウントと、スキャナーをインストールして管理するための2回目の時間。 スクリプトを実行する前に:
 1. *Domain\user*は、サービスアカウントまたはユーザーアカウントのドメイン名とユーザーアカウント名に置き換えます。
@@ -404,6 +414,16 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
     次に、レポートをチェックして、ラベル付けされたファイル、各ファイルに適用された分類、それらに保護が適用されたかどうかについての詳細を確認します。 または、Azure portal を使用してより簡単にこの情報を確認します。
 
 スケジュールを継続的に実行するように構成したため、スキャナーはすべてのファイルの作業を完了すると、新しいファイルや変更されたファイルをすべて検出するために新しいサイクルを自動的に開始します。
+
+## <a name="stop-a-scan"></a>スキャンを停止する 
+
+以前に開始したスキャンを完了する前に停止するには、インターフェイスから **[スキャンの停止]** オプションを使用します。
+ 
+![Azure Information Protection スキャナーのスキャンを停止する](./media/scanner-stop-scan.png)
+    
+または、PowerShell セッションで次のコマンドを実行できます。
+    
+        Stop-AIPScan 
 
 ## <a name="how-files-are-scanned"></a>ファイルをスキャンする方法
 

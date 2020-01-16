@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/24/2019
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 74ff92fd76ca12fd77e0eb29d4e22c1dfacde084
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675620"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960001"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -285,7 +285,43 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-この設定では、その視覚的マーキングが別のラベル付けソリューションによって適用されている場合に、テキスト ベースのヘッダーまたはフッターをドキュメントから削除したり置き換えたりできるようになります。 たとえば、古いフッターには、新しいラベル名とその独自のフッターを使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
+他のラベル付けソリューションから分類を削除するには、次の2つの方法があります。 最初のメソッドは、図形名が詳細プロパティ**WordShapeNameToRemove**で定義されている名前と一致する word 文書から図形を削除します。2番目の方法では、 **Removeexternalcontentmarkinginapp**詳細プロパティで定義されている、word、Excel、および PowerPoint ドキュメントからテキストベースのヘッダーまたはフッターを削除または置換できます。 
+
+### <a name="use-the-wordshapenametoremove-advanced-property-preview"></a>WordShapeNameToRemove advanced プロパティの使用 (プレビュー)
+
+***WordShapeNameToRemove** advanced プロパティは、バージョン2.6.101.0 以降でサポートされています。*
+
+この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、Word 文書から図形ベースのラベルを削除または置換できます。 たとえば、図形には、新しいラベル名と独自の図形を使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
+
+この詳細プロパティを使用するには、Word 文書で図形名を検索し、図形の**WordShapeNameToRemove**詳細プロパティリストで定義する必要があります。 この詳細プロパティの図形の一覧で定義されている名前で始まる Word の図形は、サービスによって削除されます。
+
+削除するすべての図形の名前を定義し、リソースを集中的に使用するプロセスであるすべての図形のテキストをチェックしないようにすることで、無視するテキストを含む図形を削除しないようにします。
+
+この追加の詳細プロパティ設定で Word 図形を指定せず、 **Removeexternalcontentmarkinginapp**キー値に word が含まれている場合は、 **Externalcontentmarkingtorclean**値で指定したテキストのすべての図形がチェックされます。 
+
+使用していて除外する図形の名前を検索するには、次のようにします。
+
+1. Word で、**選択**ウィンドウを表示します。 **ホーム** タブ >**編集**グループ > 選択 ウィンドウの オプション > 選択 **ウィンドウ** **を選択**します。
+
+2. 削除対象としてマークするページ上の図形を選択します。 マークした図形の名前が**選択**ウィンドウで強調表示されるようになりました。
+
+図形の名前を使用して、* * * * WordShapeNameToRemove * * * キーの文字列値を指定します。 
+
+例: シェイプ名は**dc**です。 この名前の図形を削除するには、値 `dc` を指定します。
+
+- キー: **WordShapeNameToRemove**
+
+- 値: \<**Word 図形の名前**> 
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+複数の単語図形を削除する場合は、削除する図形の数を指定します。
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>RemoveExternalContentMarkingInApp 詳細設定プロパティの使用
+この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、テキストベースのヘッダーまたはフッターをドキュメントから削除したり置き換えることができます。 たとえば、古いフッターには、新しいラベル名とその独自のフッターを使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
 
 統一されたラベル付けクライアントがポリシーでこの構成を取得すると、Office アプリでドキュメントを開いたときに古いヘッダーとフッターが削除されるか、またはドキュメントに機密ラベルが適用されます。
 
@@ -1008,7 +1044,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 ## <a name="support-for-disconnected-computers"></a>切断されたコンピューターのサポート
 
 > [!IMPORTANT]
-> 切断されたコンピューターは、ファイルエクスプローラー、PowerShell、およびスキャナーのラベル付けのシナリオでのみサポートされます。 Office アプリでドキュメントにラベルを付けるには、インターネットに接続している必要があります。
+> 切断されたコンピューターは、ファイルエクスプローラー、PowerShell、Office アプリ、およびスキャナーのラベル付けシナリオでサポートされています。
 
 既定では、Azure Information Protection の統一されたラベル付けクライアントは、インターネットへの接続を自動的に試みて、ラベル付け管理センターからラベルとラベルポリシー設定をダウンロードします。 Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 security center、または Microsoft 365 コンプライアンスセンター。 一定期間インターネットに接続できないコンピューターがある場合は、統一されたラベル付けクライアントのポリシーを手動で管理するファイルをエクスポートしてコピーできます。
 
