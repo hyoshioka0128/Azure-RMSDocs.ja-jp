@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/02/2019
+ms.date: 1/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c7291b63971d34e7dd7e3e369cd13dfca7e44729
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 9298022feecc4be60b3e528e5195fcec485502b2
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326390"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960818"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -42,6 +42,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 |クライアント バージョン|リリース日|
 |--------------|-------------|
+|2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
 このページで使用される日付形式は、*月/日/年*です。
@@ -57,6 +58,42 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
+
+## <a name="version-261010"></a>バージョン2.6.101.0
+
+**リリース**1/15/2020
+
+**新機能:**
+
+- [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)コマンドレット**set-aipfilelabel**を変更すると、PST、rar、7ZIP、および MSG ファイルから保護を削除できるようになります。 
+
+- Azure Information Protection の管理者がファイルに対して pfile 拡張機能を使用するかどうかを制御できるようになりました。 [保護されたファイルの種類の変更](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect)に関する詳細情報。 
+
+- アプリケーションと変数に対して動的な視覚的マーキングのサポートが追加されました。 [視覚的なマーキングのラベルを構成](https://docs.microsoft.com/azure/information-protection/configure-policy-markings)する方法については、こちらを参照してください。 
+
+- [自動および推奨ラベルに対するカスタマイズ可能なポリシーのヒント](use-client.md)が強化されました。   
+
+- 統一されたラベル付けクライアントで Office アプリを使用して、[オフラインラベル機能](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers)のサポートが追加されました。
+
+- New **WordShapeNameToRemove** advanced プロパティを使用すると、サードパーティ製アプリケーションによって作成された Word 文書でコンテンツマークを削除できます。 [ **WordShapeNameToRemove**を使用して、既存の図形名を識別し、削除対象と](https://docs.microsoft.com/azure/information-protection/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)して定義する方法について説明します。 
+
+- [スキャナー](../deploy-aip-scanner.md)関連の機能:
+    - [SharePoint オンプレミスおよびサブサイトの検出が容易に](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories)なりました。 各サイトの設定は必須ではなくなりました。 
+    - [SQL チャンクのサイズ変更](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server)の詳細プロパティが追加されました。
+    - 管理者は、既存の[スキャンを停止し](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan)、既定のラベルが変更された場合に再スキャンを実行できるようになりました。
+    - 既定では、スキャナーは、高速なスキャンのために最小のテレメトリを設定し、ログのサイズを小さくし、情報の種類をデータベースにキャッシュするようになりました。 [スキャナーの最適化](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner)の詳細についてはこちらをご覧ください。 
+
+**修正:**
+
+- スキャナーはデータベースとサービスの個別の配置をサポートするようになりましたが、 **Sysadmin**権限はデータベースの配置にのみ必要です。 
+- RightFax によって作成された、保護された TIFF ファイルと TIFF ファイルを開こうとしてユーザーが失敗したインスタンスでは、TIFF ファイルが開き、予想どおりに安定した状態が維持されるようになりました。  
+- 保護された txt ファイルと PDF ファイルの以前の破損が解決されます。
+- Log Analytics の**自動**と**手動**の間に一貫性のないラベル付けが修正されました。 
+- 新しいメールとユーザーの最後に開いた電子メールの間で、予期しない継承の問題が解決されました。  
+- .Msg ファイルの保護が正常に機能するようになりました。 
+- Office ユーザー定義の設定から追加された共同所有者のアクセス許可が、期待どおりに適用されるようになりました。 
+- [アクセス許可のダウングレードを入力する] をオンにすると、他のオプションが既に選択されている場合はテキストを入力できなくなります。 
+
 
 ## <a name="version-25330"></a>バージョン2.5.33.0
 
@@ -197,14 +234,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - 自動ラベル付けが構成されている場合、ドキュメントを初めて保存するときにラベルが適用されます。
 
 - 既定のラベル付けは、サブラベルをサポートします。
-
-## <a name="version-207790"></a>バージョン2.0.779.0
-
-**リリース**日: 05/01/2019
-
-02/15/2020 でサポート
-
-このリリースでは、Office アプリやエクスプローラーにラベルが表示されない場合がある競合状態の問題を解決するための修正プログラムが1つあります。
 
 ## <a name="next-steps"></a>次の手順
 

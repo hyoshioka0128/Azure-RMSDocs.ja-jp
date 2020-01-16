@@ -4,7 +4,7 @@ description: Azure Rights Management サービスを使用する場合、テン�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6aae4636fe717bdaf81ae3e2461e56e17751c2f9
-ms.sourcegitcommit: 68cf1e0fda06c6f20cbd829dc4fbc8c12686947b
+ms.openlocfilehash: 52d00883b19c2c595dd098a9be6d79d3b3183355
+ms.sourcegitcommit: 800339fed1c516d627dbb91ed804a7c7d5b892a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952981"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031460"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -31,7 +31,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />トランスポート ルールと Outlook Web アプリに該当 |1 時間以内の自動更新 - 追加の手順は必要ありません。|
 |Azure Information Protection クライアント|Azure Information Protection ポリシーがクライアントに更新されるたびに自動的に更新されます。<br /><br /> - Azure Information Protection バーをサポートしている Office アプリケーションが開いたとき。 <br /><br /> - ファイルまたはフォルダーを分類して保護するために右クリックしたとき。 <br /><br /> - ラベル付けおよび保護のために PowerShell コマンドレット (Get-AIPFileStatus および Set-AIPFileLabel) を実行するとき。<br /><br /> - Azure Information Protection スキャナー サービスが開始され、ローカル ポリシーが 1 時間前よりも古いとき。 また、スキャナー サービスは 1 時間おきに変更を確認し、次のスキャン サイクルには変更を適用します。<br /><br /> - 24 時間ごと。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 365 アプリ、Office 2019、Office 2016、または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection クライアントでも更新されます。|
-|Azure Information Protection 統合ラベル付けクライアント|4 時間ごとに自動で更新されます (Office アプリごとに)。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 365 アプリ、Office 2019、Office 2016、または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection 統合ラベル付けクライアントでも更新されます。|
+|Azure Information Protection 統合ラベル付けクライアント|Office アプリの場合、テンプレートはアプリが開かれるたびに自動的に更新されます。<br /><br /> さらに、このクライアントは Office と密接に統合されているため、Office 365 アプリ、Office 2019、Office 2016、または Office 2013 で更新されたテンプレートはすべて、Azure Information Protection 統合ラベル付けクライアントでも更新されます。<br /><br /> ファイルエクスプローラー、PowerShell、およびスキャナーの場合、クライアントはテンプレートをダウンロードせず、オンラインでアクセスします。追加の手順は必要ありません。|
 |Office 365 アプリ、Office 2019、Office 2016、および Office 2013|自動更新 - スケジュールどおりに更新されます。<br /><br />- 以降のバージョンの Office の場合: 既定の更新間隔は 7 日ごとです。<br /><br />スケジュールよりも早く強制的に更新するには、次の「 [office 365 アプリ、office 2019、office 2016、および office 2013: テンプレートを強制的に更新する方法](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates)」セクションを参照してください。|
 |Office 2010|ユーザーが Windows からサインアウトして、もう一度サインインし、最大で 1 時間待つと自動的に更新されます。|
 |Exchange On-Premises と Rights Management コネクタ<br /><br />トランスポート ルールと Outlook Web アプリに該当|自動更新 - 追加の手順は必要ありません。 ただし、Outlook Web アプリは UI を一日キャッシュします。|

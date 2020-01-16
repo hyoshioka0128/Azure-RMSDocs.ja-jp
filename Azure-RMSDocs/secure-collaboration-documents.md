@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57e40899f3c386b076a8642c17f019ea0767ab22
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743783"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960884"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -38,7 +38,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 - **認証されたユーザーの場合**: 認証されたユーザーであれば保護されたドキュメントへのアクセスを制御する必要がない場合、このオプションが適しています。 認証は、Azure AD、Microsoft アカウントの使用、コンテンツが Office 365 メッセージの暗号化の新機能で保護されている場合はフェデレーション ソーシャル プロバイダーやワンタイム パスコードなど、さまざまな方法で行われます。 
 
-管理者は、Azure Information Protection ラベルを構成して、権限と承認済みユーザーを適用できます。 この構成により、ユーザーや他の管理者は詳細を指定することなく、ラベルを適用するだけで正しい保護設定を簡単に適用できるようになります。 次のセクションでは、ドキュメントを保護し、内部や外部のユーザーと安全にコラボレーションできるようにする方法について、例を使って説明します。
+管理者は、Azure Information Protection ラベルを構成して、権限と承認済みユーザーを適用できます。 この構成により、ユーザーや他の管理者は詳細を指定することなく、ラベルを適用するだけで正しい保護設定を簡単に適用できるようになります。 次のセクションでは、内部および外部ユーザーとの安全なコラボレーションをサポートするドキュメントを保護するためのチュートリアルの例を示します。
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>ラベルの構成例: 保護を適用して内部や外部とのコラボレーションを可能にする

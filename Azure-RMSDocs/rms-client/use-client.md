@@ -12,16 +12,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 24a0ee1b4627002284d5861287ec7a3133813902
-ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.openlocfilehash: 221623101c75a5834947c7f29a4f4df4f8d68a35
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827555"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960748"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、WINDOWS 7 SP1、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012、windows Server 2008 r2*
 
 
 Azure Information Protection は、組織の文書や電子メールを保護するクライアント/サーバー型のソリューションです。
@@ -102,23 +102,23 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |ラベルとは別に設定するカスタムのアクセス許可:| **あり** | **はい** <sup>3</sup>| [いいえ] |
 |Office アプリの Information Protection バー:| **あり** | **あり**| [いいえ] |
 |ラベルアクションとしての視覚的なマーキング (ヘッダー、フッター、透かし):| **あり** | **あり** | **あり**|
-|アプリごとの視覚的マーキング:| **あり** | [いいえ] | [いいえ] |
-|変数を使用した動的な視覚的マーキング:| **あり** | [いいえ] | [いいえ] |
+|アプリごとの視覚的マーキング:| **あり** | **Yes* | [いいえ] |
+|変数を使用した動的な視覚的マーキング:| **あり** | **** | [いいえ] |
 |ファイルエクスプローラーでラベルを付ける:| **あり** | **あり** | [いいえ] |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **あり** | **あり** | [いいえ]|
 |ラベルを適用するための PPDF のサポート:| **あり** | [いいえ] | [いいえ] |
 |PowerShell のラベル付けコマンドレット:| **あり** | **はい** <sup>4</sup> | [いいえ] |
 |保護アクションに対するオフライン サポート:| **あり** | **可** <sup>5</sup> | **あり** |
-|切断されたコンピューターの手動ポリシーファイル管理:| **あり** |**はい** <sup>6</sup>| [いいえ] |
+|切断されたコンピューターの手動ポリシーファイル管理:| **あり** |**あり**| [いいえ] |
 |HYOK のサポート:| **あり** | [いいえ] | [いいえ] |
 |イベントビューアーの使用状況ログ:| **あり** | [いいえ] |[いいえ] |
 |Outlook の [転送不可] ボタンを表示します。| **あり** | [いいえ] | [いいえ] |
-|保護されたトラックの文書化:| **あり** | **○** <sup>7</sup> | [いいえ] |
+|保護されたトラックの文書化:| **あり** | **はい** <sup>6</sup> | [いいえ] |
 |保護されたドキュメントの取り消し:| **あり** | [いいえ] | [いいえ] |
 |保護のみモード (ラベルなし):| **あり** | [いいえ] | [いいえ] |
 |アカウントの切り替えのサポート:| [いいえ] | [いいえ] | **あり** |
 |リモートデスクトップサービスのサポート:| **あり** | **あり** | **あり** |
-|AD RMS のサポート:| **あり** | <sup>8</sup>なし | [いいえ] |
+|AD RMS のサポート:| **あり** | × <sup>7</sup> | [いいえ] |
 
 脚注:
 
@@ -128,15 +128,13 @@ Office 365 アプリを実行している Windows コンピューターに最小
 
 <sup>3</sup>ファイルエクスプローラーと PowerShell でサポートされます。 Office アプリでは、ユーザーは**ファイル > 情報**を選択して**ドキュメントを保護**し、**アクセスを制限** > できます。
 
-<sup>4</sup>コンテナーファイル (zip、rar、7z、.msg、および .pst) からの保護の削除はサポートされていません。
+<sup>4</sup>コンテナーファイル (zip) からの保護の削除はサポートされていません。
 
 <sup>5</sup>ファイルエクスプローラーと PowerShell コマンドの場合、ユーザーはファイルを保護するためにインターネットに接続されている必要があります。
 
-<sup>6</sup>ファイルエクスプローラー、PowerShell、およびスキャナーによるラベル付けがサポートされています。 Office アプリでのラベル付けはサポートされていません。
+<sup>6</sup>クラシッククライアントでサポートされているドキュメント追跡サイトは、統合ラベル付けクライアントでサポートされていません。 ただし、ドキュメントを追跡するために最初に登録する必要がない場合は、[中央レポート](../reports-aip.md)を使用して、Windows コンピューターから文書化されている保護されているかどうか、およびアクセスが許可または拒否されたかどうかを識別できます。 
 
-<sup>7</sup>クラシッククライアントでサポートされているドキュメント追跡サイトは、統合ラベル付けクライアントではサポートされていません。 ただし、ドキュメントを追跡するために最初に登録する必要がない場合は、[中央レポート](../reports-aip.md)を使用して、Windows コンピューターから文書化されている保護されているかどうか、およびアクセスが許可または拒否されたかどうかを識別できます。 
-
-<sup>8 個</sup>のラベル付けおよび保護操作はサポートされていません。 ただし、AD RMS 展開の場合、 [Active Directory Rights Management サービスモバイルデバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))を使用すると、ビューアーは保護されたドキュメントを開くことができます。
+<sup>7</sup>ラベル付けおよび保護操作はサポートされていません。 ただし、AD RMS 展開の場合、 [Active Directory Rights Management サービスモバイルデバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))を使用すると、ビューアーは保護されたドキュメントを開くことができます。
 
 
 ### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Azure Information Protection クライアントの詳細な比較
