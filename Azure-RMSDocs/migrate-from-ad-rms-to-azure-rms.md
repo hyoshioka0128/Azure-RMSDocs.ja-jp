@@ -1,10 +1,10 @@
 ---
 title: AD RMS から Azure Information Protection への移行
 description: Active Directory Rights Management サービス (AD RMS) のデプロイを Azure Information Protection に移行する方法を説明します。 移行後も、ユーザーは AD RMS を使用して組織が保護したドキュメントや電子メールメッセージにアクセスできます。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/25/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 978feb26639a3c8f05ac2576a2e922c744cae9cf
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0d78151a9eb2ecc64a21ed1076095b6a6f56278a
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474304"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117971"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -53,9 +53,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
 - **サポートされる RMS のデプロイ:**
     
   - AD RMS の次のリリースでは、Azure Information Protection への移行をサポートします。
-    
-      - Windows Server 2008 R2 (x64)
-        
+           
       - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
@@ -109,8 +107,6 @@ AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開�
 AD RMS 暗号化モードを確認するには:
  
 - Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > **[全般]** タブ。 
-
-- Windows Server 2008 R2 の場合: 「[RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008 (Windows Server 2008 R2 と Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました)](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server )」の修正プログラムがインストールされているかを確認します。 インストールされていない場合は、ご使用の AD RMS クラスターは暗号化モード 1 で実行されています。
 
 ### <a name="migration-limitations"></a>移行の制限
 
@@ -217,6 +213,6 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
     移行前に暗号化モード 2 で実行されていない場合は、この手順の使用をお勧めします。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 移行を始めるには、「[フェーズ 1 - 準備](migrate-from-ad-rms-phase1.md)」に進んでください。
 

@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ba1aa80dc667e28530ca8f73344f9a6dce35dd26
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 8278395afacca4d30b67f88d82e98779dcda8871
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743632"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117579"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -38,14 +38,15 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)」をご覧ください。
 
-## <a name="where-can-i-find-information-about-using-sensitivity-labels-in-office"></a>Office での機密ラベルの使用に関する情報はどこで入手できますか。
+## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Office アプリの秘密度ラベルの使用に関する情報はどこで入手できますか。
 
-Office ドキュメントの次のリソースを参照してください。
+次のドキュメントリソースを参照してください。
 
-- [Office アプリでの感度ラベルの動作](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [秘密度ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+
+- [Office アプリの機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
 
 - [Office 内のドキュメントと電子メールに機密ラベルを適用する](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
-
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 

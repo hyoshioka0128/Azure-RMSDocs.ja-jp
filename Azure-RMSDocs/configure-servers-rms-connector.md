@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86c908f2c53ed66853b7f3b16e02a406748055be
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934978"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117622"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2016、windows Server 2012 R2、windows server 2012*
 
 
 Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーを構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 5 を説明します。
@@ -41,7 +41,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 -   **ファイル分類インフラストラクチャの場合**:ファイル リソース マネージャーをインストールした Windows Server コンピューター
 
-この構成にはレジストリの設定が必要です。 レジストリの構成は、Microsoft RMS コネクタのサーバー構成ツールを使用することによって自動で、またはレジストリを編集することによって手動で行うことができます。
+この構成にはレジストリの設定が必要です。 レジストリの構成は、Microsoft RMS コネクタのサーバー構成ツールを使用することによって自動で、 またはレジストリを編集することによって手動で行うことができます。
 
 ---
 
@@ -133,7 +133,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 
 -   Exchange 2016 および Exchange 2013 の場合: クライアント アクセス サーバーおよびメールボックス サーバー
 
--   Exchange 2010 の場合: クライアント アクセス サーバーとハブ トランスポート サーバー
+-   Exchange 2010 の場合:クライアント アクセス サーバーおよびハブ トランスポート サーバー
 
 RMS コネクタを使用するには、サーバーで実行されている Exchange が、次のいずれかのソフトウェア バージョンである必要があります。
 
@@ -145,11 +145,6 @@ RMS コネクタを使用するには、サーバーで実行されている Exc
 
 さらに、これらのサーバーには、RMS 暗号化モード 2 をサポートするバージョン 1 の RMS クライアント (別名 MSDRM) が存在する必要があります。 どの Windows オペレーティング システムにも MSDRM クライアントは含まれていますが、初期のバージョンのクライアントは暗号化モード 2 をサポートしていませんでした。 Exchange サーバーのオペレーティング システムが Windows Server 2012 以上ならば、特に対応は必要ありません。オペレーティング システムとともにインストールされる RMS クライアントは、暗号化モード 2 をネイティブでサポートしているためです。 
 
-Exchange サーバーのオペレーティング システムがこれよりも前のバージョンである場合は、インストール済みの RMS クライアントのバージョンが暗号化モード 2 をサポートしていることを確認してください。 これを行うには、インストール済みのファイル Windows\System32\Msdrm.dll のバージョンを、次のサポート技術情報記事に記載されているバージョン番号と比較します。 インストール済みのバージョン番号が、記載されているバージョン番号以上ならば、特に対応は必要ありません。 インストール済みのバージョン番号がそれよりも低い場合は、その記事から修正プログラムをダウンロードしてインストールしてください。
-
-- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
-
-- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
 > ここに示したバージョン以降の Exchange と MSDRM クライアントがインストールされていない場合は、コネクタを使用するように Exchange を構成することはできません。 続行する前に、これらのバージョンがインストールされていることを確認してください。
@@ -193,7 +188,7 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 >
 > クライアントのバージョンを確認するには、MSIPC.dll のバージョン番号を確認します。このファイルは、 **\Program Files\Active Directory Rights Management Services Client 2.1** にあります。 プロパティ ダイアログ ボックスに、MSIPC 2.1 クライアントのバージョン番号が表示されます。
 
-SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 のサポートが含まれる MSDRM クライアントのバージョンがインストールされている必要があります。 Windows Server 2008 でサポートされている最小バージョンは修正プログラムに含まれており、「 [Windows Server 2008 R2 および Windows Server 2008 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](https://support.microsoft.com/kb/2627272)」からダウンロードできます。Windows Server 2008 R2 用の最小バージョンは、「 [Windows 7 または Windows Server 2008 R2 の AD RMS では、RSA キーの長さが 2048 ビットに増加しました](https://support.microsoft.com/kb/2627273)」からダウンロードできます。 Windows Server 2012 と Windows Server 2012 R2 は、暗号化モード 2 をネイティブでサポートしています。
+SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 のサポートが含まれる MSDRM クライアントのバージョンがインストールされている必要があります。 Windows Server 2012 と Windows Server 2012 R2 は、暗号化モード 2 をネイティブでサポートしています。
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>コネクタを使用するように SharePoint サーバーを構成するには
 
@@ -211,7 +206,7 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
     -   SharePoint 2016 または SharePoint 2013 を使用している場合は、「[RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)」の情報を使用してサーバー上にレジストリ設定を追加し、手動でレジストリの編集を行います。 
 
-3.  SharePoint で IRM を有効にします。 詳細については、SharePoint ライブラリの「 [Information Rights Management を構成する (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) 」をご覧ください。
+3.  SharePoint で IRM を有効にします。 詳細については、SharePoint ライブラリの「[Information Rights Management を構成する (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx)」をご覧ください。
 
     これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に **[この RMS サーバーを使用する]** を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https:\//connector.contoso.com の場合、構成は次の図のようになります。
 
@@ -247,7 +242,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 
 3. RMS Encryption を使用してドキュメントを保護する分類ロールとファイル管理タスクを作成し、自動的に RMS ポリシーを適用するように RMS テンプレートを指定します。 詳細については、Windows Server ドキュメント ライブラリの「 [ファイル サーバー リソース マネージャーの概要](https://technet.microsoft.com/library/hh831701.aspx) 」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーを構成しました。IT 管理者とユーザーは、Azure Rights Management サービスを使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、Azure Information Protection クライアントをデプロイします。これによって、Office 用のアドオンがインストールされ、エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)」を参照してください。
 
 Exchange トランスポート ルールまたは Windows Server FCI と共に使用する部門別テンプレートを構成する場合は、 **[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があることに注意してください。

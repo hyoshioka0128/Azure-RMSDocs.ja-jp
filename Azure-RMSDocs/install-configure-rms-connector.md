@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b1f98a5d01d90cc25d6ffc378201ae90711eead
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: 4d4ba8a3093e1bef32e42b562c93e787e603614b
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882047"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117988"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012 R2、Windows Server 2012、Windows Server 2008 R2*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2016、windows Server 2012 R2、windows server 2012*
 
 Azure Rights Management (RMS) コネクタをインストールして構成するには、次の情報を活用してください。 これらの手順では、「[Azure Rights Management コネクタを展開する](deploy-rms-connector.md)」の手順 1 から手順 4 を説明します。
 
@@ -151,7 +151,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 -   SharePoint を実行するサーバー:
 
-    -   SharePoint 2010 サーバーが (サービス アカウントを使用しないで) ローカル システムとして実行するように構成されている場合は、Active Directory ドメイン サービスにセキュリティ グループを手動で作成し、この構成でのサーバーのコンピューター名オブジェクトを、このグループに追加します。
+    -   SharePoint 2010 サーバーが (サービス アカウントを使用しないで) ローカル システムとして実行するように構成されている場合は、Active Directory Domain Services にセキュリティ グループを手動で作成し、この構成でのサーバーのコンピューター名オブジェクトを、このグループに追加します。
 
     -   SharePoint サーバーがサービス アカウントを使用するように構成されている場合は (SharePoint 2010 の場合は推奨される方法、SharePoint 2016 と SharePoint 2013 の場合は唯一のオプション)、次のようにします。
 
@@ -176,7 +176,7 @@ RMS コネクタの2つ目または最後のインスタンスをインストー
 > [!IMPORTANT]
 > コネクタを使用するように Exchange サーバーまたは SharePoint サーバーを構成した後は、この名前を変更しないことをお勧めします。名前を変更すると、これらのサーバーですべての IRM 構成を消去し、再構成する必要があります。
 
-DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 このためには、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、「 [負荷分散デプロイ ガイド](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)」を参照してください。
+DNS で名前を作成して IP アドレスを構成したら、そのアドレスに対する負荷分散を構成し、トラフィックを複数のコネクタ サーバーに振り分けます。 このためには、Windows Server のネットワーク負荷分散 (NLB) 機能など、IP ベースの任意のロード バランサーを使用できます。 詳細については、「[Load Balancing Deployment Guide (負荷分散デプロイ ガイド)](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx)」を参照してください。
 
 次の設定を使用して、NLB クラスターを構成します。
 
@@ -225,7 +225,7 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 ## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>管理用コンピューターへの RMS コネクタ管理ツールのインストール
 RMS コネクタがインストールされていないコンピューターで RMS コネクタ管理ツールを実行するには、次の要件を満たす必要があります。
 
--   次のいずれかの OS を搭載している物理または仮想コンピューター: Windows Server 2012 または Windows Server 2012 R2 (すべてのエディション)、Windows Server 2008 R2 または Windows Server 2008 R2 Service Pack 1 (すべてのエディション)、Windows 8.1、Windows 8、または Windows 7。
+-   Windows Server 2012 または Windows Server 2012 R2 (すべてのエディション)、Windows 8.1、Windows 8 を実行する物理または仮想コンピューター。
 
 -   1 GB 以上の RAM。
 
@@ -244,6 +244,6 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 RMS コネクタのインストールと構成が完了したので、コネクタを使用するためにオンプレミス サーバーを構成することができます。 「[Configuring servers for the Azure Rights Management connector (Azure Rights Management コネクタ用にサーバーを構成する)](configure-servers-rms-connector.md)」に進みます。
 

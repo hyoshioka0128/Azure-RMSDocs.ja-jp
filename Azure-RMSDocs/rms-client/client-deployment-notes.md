@@ -12,16 +12,16 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f75664fda8277622ba209d1d0972c3588de1959
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 56782458ea9fd605c76b975bf84cb0429fbae021
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960265"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117716"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Rights Management サービスクライアントの展開に関する注意事項
 
->*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 8、Windows 8.1、windows 10、windows Server 2008 R2、windows server 2012、windows Server 2012 R2、windows server 2016*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 8、Windows 8.1、windows 10、windows server 2012、windows Server 2012 R2、windows server 2016*
 
 Rights Management サービス クライアント (RMS クライアント) バージョン 2 は、MSIPC クライアントとも呼ばれます。 Microsoft Rights Management サービスと通信する Windows コンピューター (オンプレミスまたはクラウド) 用のソフトウェアであり、組織内または管理対象外の組織内における、アプリケーションとデバイスを行き来する情報へのアクセスや使用を保護することができます。 
 
