@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c91ad278b9ce4e699a9756cc228fd8bccd4b65e2
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: cb5bd910d69b85feae4c96b9bc8deb34369ccedb
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742913"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75959842"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -110,7 +110,7 @@ ms.locfileid: "75742913"
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>クライアントの最小バージョンが必要な機密情報の種類
 
-次の機密情報の種類には、Azure Information Protection クライアントの[1.48.204.0](./rms-client/client-version-release-history.md#version-1482040)の最小バージョンが必要です。
+次の機密情報の種類には、Azure Information Protection クライアントの1.48.204.0 の最小バージョンが必要です。
 
 - **Azure Service Bus の接続文字列**
 - **Azure IoT の接続文字列**
