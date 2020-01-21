@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7325f81ff67cf8fe23548a966c55ef42a1cf00f3
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: c3babbe6a0470df498567f6614362e87c14a24cf
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117733"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281600"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -75,23 +75,6 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 >  
 > テクニカル サポートについては、「[サポート オプションとコミュニティ リソース](../information-support.md#support-options-and-community-resources)」の情報を参照してください。 [Yammer サイト](https://www.yammer.com/askipteam/)で Azure Information Protection チームと情報交換することもできます。
 
-## <a name="version-154590"></a>バージョン1.54.59.0
-
-**リリース**日: 1/29/2020
-
-**修正内容**:
-
-- 保護が削除された後に、IQP によって保護されているファイルが **回復** オプションまたは 保存 オプションを表示し**て**解決される問題 
-
-- わかりやすく、理解しやすいように、多くの製品機能のツールヒントが改善されました。 
-
-- 保護された PDF ファイルを操作するときに、クライアントの安定性に関連する問題が解決されます。 
-
-- 一時フォルダーから暗号化を解除された一時ファイルには、ユーザーがアクセスできなくなります。 
-
-- 電子メールの作成プロセス中に電子メールでラベルが削除されると、保護ラベルが期待どおりに削除されるようになりました。 
-
-このリリースには、安定性とパフォーマンスに関する一般的な修正プログラムも含まれています。
 
 ## <a name="version-154330"></a>バージョン1.54.33.0
 

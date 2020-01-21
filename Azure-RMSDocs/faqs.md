@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 2b473c242cdddd09c9902c56bd183e19c0a62267
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 90fb51a4b17ccf8f6b0689d41b86dbee284da024
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743608"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281651"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -90,7 +90,7 @@ Azure portal のラベルを移行するオプションが一般に利用でき�
 
 Azure portal でラベルを移行した場合:
 
-- [クライアントとサービスを統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)したラベルを作成している場合は、管理センター (Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンター) のいずれかにアクセスして、これらのラベルを公開し、ポリシー設定を構成します。 転送されるラベル変更には、いずれかの管理センターを使用します。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。
+- [クライアントとサービスを統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)したラベルを作成している場合は、管理センター (Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンター) のいずれかにアクセスして、これらのラベルを公開し、ポリシー設定を構成します。 転送されるラベル変更には、いずれかの管理センターを使用します。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。 手順については、「[秘密度ラベルとそのポリシーを作成して構成する](/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。
 
 - [Azure Information Protection クライアント (クラシック)](./rms-client/aip-client.md)を使用している場合は、引き続き Azure portal を使用してラベルとポリシー設定を編集します。 クラシッククライアントは、Azure からラベルとポリシー設定を引き続きダウンロードします。
 

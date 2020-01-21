@@ -4,7 +4,7 @@ description: Microsoft Information Protection framework をサポートするク
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60f1ea855d2ec666f2d22bb53d8856a6461157dc
-ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.openlocfilehash: 45802279809a73c7338ff622fcd545e6e9eab7e7
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827538"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281583"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -151,7 +151,7 @@ Outlook では、保護は保持されます。ただし、暗号化のみのオ
     
     アクティブ化するためのオプションが使用できない場合は、**統合ラベルの状態**を確認します。 [**アクティブ化**済み] が表示されている場合、テナントは既に統一されたラベル付けストアを使用しているため、ラベルを移行する必要はありません。
 
-正常に移行されたラベルについては、[統合ラベル付けをサポートするクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)で使用できるようになりました。 ただし、まず、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンターのいずれかの管理センターでこれらのラベルを発行する必要があります。
+正常に移行されたラベルについては、[統合ラベル付けをサポートするクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)で使用できるようになりました。 ただし、まず、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンターのいずれかの管理センターで[これらのラベルを発行](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)する必要があります。
 
 > [!IMPORTANT]
 > Azure portal の外部にあるラベルを編集する場合は Azure Information Protection クライアント (クラシック) の場合は、この**Azure Information Protection の統合**されたラベル付けウィンドウに戻り、 **[発行]** を選択します。
@@ -229,6 +229,6 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - ウェビナー: [AIP の統合ラベル付けウェビナーの記録](https://aka.ms/AIP-UL-Webinar-Join1)
 
-管理センターのラベルのいずれかで構成および発行できるようになった移行済みラベルの詳細については、「[秘密度ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」を参照してください。
+管理センターのラベルのいずれかで構成および発行できるようになった移行済みラベルの詳細については、「[秘密度ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」と「[秘密度ラベルとそのポリシーの作成と構成](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。
 
 まだインストールしていない場合は、Azure Information Protection 統合されたラベル付けクライアントをインストールします。 リリース情報、管理者ガイド、およびユーザーガイドについては、「 [Windows 用の統合ラベルクライアント Azure Information Protection](./rms-client/aip-clientv2.md)」を参照してください。
