@@ -1,36 +1,36 @@
 ---
 title: クイック スタート - Azure Information Protection スキャナーを使って機密情報を検索する
 description: Azure Information Protection スキャナーを使用して、オンプレミスに格納しているファイル内の機密情報を検索します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/12/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
-ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
+ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73979974"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960448"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-このクイック スタートでは、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
+このクイックスタートでは、SharePoint にスキャンを許可し、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
 
 > [!NOTE]
 > このクイックスタートは、Azure Information Protection クライアント (クラシック) の現在一般提供されているバージョン、またはスキャナーのプレビュー バージョンが含まれる Azure Information Protection 統合ラベル付けクライアントの現在一般提供されているバージョンで使用できます。
 >  
 > これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 
-この構成は 10 分未満で完了します。
+この構成は 15 分未満で完了します。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 
 このクイック スタートを完了するには、次の要件があります。
 
@@ -52,6 +52,8 @@ ms.locfileid: "73979974"
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
+5. SharePoint にスキャンを許可すると、SharePoint のポリシーにアクセスが許可されます。
+
 ## <a name="prepare-a-test-folder-and-file"></a>テスト用のフォルダーとファイルを準備する
 
 スキャナーが動作していることを確認する最初のテスト用に、次の操作を実行します。
@@ -59,6 +61,29 @@ Azure Information Protection を使用するための必要条件の完全な一
 1. コンピューターにローカル フォルダーを作成します。 たとえば、ローカルの C ドライブ上の **TestScanner** です。
 
 2. **Credit card: 4242-4242-4242-4242** というテキストを含む Word 文書を作成して、そのフォルダー内に保存します。
+
+## <a name="permission-users-to-scan-sharepoint-repositories"></a>ユーザーに SharePoint リポジトリのスキャンを許可する
+
+サイトの URL を指定すると、SharePoint リポジトリ間でスキャナーを使用することができます。Azure Information Protection は、その URL の下にあるすべてのサイトを検出してスキャンします。
+
+リポジトリ間でのスキャンを有効にするには、スキャンに使用するユーザーに対して次の SharePoint アクセス許可を追加します。
+
+1. SharePoint を開き、 **[アクセス許可ポリシー]** を選択し、 **[アクセス許可ポリシー レベルの追加]** を選択します。 
+
+    ![特定のユーザーに対して新しいアクセス許可ポリシー レベルを作成する](./media/aip-quick-set-sp-permissions.png)
+
+
+2. **[サイト コレクションの権限]** で **[Site Collector Auditor]\(サイト コレクター監査人\)** オプションを選択します。   
+
+3. **[アクセス許可]** の **[アプリケーション ページの表示]** オプションに **[許可]** を選択して、変更を**保存**します。  
+
+    ![特定のユーザーに対して [Site Collector Auditor]\(サイトコレクターの監査人\) とアクセス許可のオプションを選択する](./media/aip-quick-set-site-permissions.png)
+
+4. 変更を確認すると、 **[Web アプリケーションのポリシー]** の通知が開くので、 **[OK]** をクリックします。   
+
+5. **[ユーザーの追加]** ページの **[ユーザーの選択]** フィールドで、スキャンに使用するユーザーを追加します。 **[権限の選択]** で **[サイト コレクション]** オプションを選択し、 **[完了]** をクリックして、作成したアクセス許可を追加または選択したユーザーに適用します。 
+
+    ![新しいアクセス許可のオプションにユーザーを追加する](./media/aip-quick-set-user-permissions.png)
 
 ## <a name="configure-a-profile-for-the-scanner"></a>スキャナー用のプロファイルを構成する
 
@@ -182,7 +207,7 @@ Excel では、データ ストア リポジトリとファイル名が最初の
 - ドメイン アカウントがローカル コンピューターに対して付与された、 **[サービスとしてログオン]** ユーザー権限の割り当て。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このクイックスタートには、オンプレミスのデータ ストア内にある機密情報がスキャナーによって検索されるしくみを簡単に確認するための最小構成が含まれています。 運用環境にスキャナーをインストールする準備が整った場合は、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。
 
