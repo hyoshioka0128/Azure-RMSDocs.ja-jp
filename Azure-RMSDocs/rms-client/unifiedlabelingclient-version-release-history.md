@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32d0ac2669e0cc304d0f06c603f64d623c216c68
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: f9e25f0fc43d5aa6f7c94cc0aefea1595ba0eef4
+ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117655"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517662"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -59,7 +59,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="version-261010"></a>バージョン2.6.101.0
+## <a name="version-261010-preview"></a>バージョン 2.6.101.0 (プレビュー)
 
 **リリース**1/15/2020
 

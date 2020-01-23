@@ -4,7 +4,7 @@ description: Microsoft Information Protection framework をサポートするク
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/18/2020
+ms.date: 1/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 45802279809a73c7338ff622fcd545e6e9eab7e7
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 382688a769513ba8540f844b86906ef078cee754
+ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281583"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517645"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -227,7 +227,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - ブログの投稿: 統合された[ラベル付けの移行につい](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)て
 
-- ウェビナー: [AIP の統合ラベル付けウェビナーの記録](https://aka.ms/AIP-UL-Webinar-Join1)
+- ウェビナー:[ラベル記録、デッキ、faq の統合](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
 
 管理センターのラベルのいずれかで構成および発行できるようになった移行済みラベルの詳細については、「[秘密度ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」と「[秘密度ラベルとそのポリシーの作成と構成](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。
 
