@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 1/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b452dcd3e212316d73c75e4075b471c5e363a86a
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
+ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281617"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755801"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -43,9 +43,9 @@ RMS クライアントは保護のみを提供します。 このクライアン
 Windows コンピューターのクライアントにラベルを付ける方法は、使用する管理ポータルの影響を受ける可能性があります。
 
 - Office に組み込まれているラベル付けクライアントと Azure Information Protection は、次の管理センターのラベルとポリシー設定をクライアントにダウンロードします。 
-    - Office 365 セキュリティ/コンプアライアンス センター
+    - Office 365 セキュリティ/コンプライアンスセンター
     - Microsoft 365 security center
-    - Microsoft 365 コンプライアンス センター
+    - Microsoft 365 コンプライアンスセンター
 
 - Azure Information Protection クライアント (クラシック) は、Azure portal からラベルとポリシー設定をダウンロードします。
 
@@ -85,15 +85,17 @@ Office 365 アプリを実行している Windows コンピューターに最小
 
 次の表を使用して、Windows コンピューターの3つのラベル付けクライアントでサポートされている機能を比較してください。
 
-さまざまなオペレーティングシステムプラットフォーム (Windows、MacOS、iOS、Android) における Office の組み込みの機密ラベル付け機能を比較するには、Office のドキュメント「[アプリの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)」を参照してください。
+さまざまなオペレーティングシステムプラットフォーム (Windows、MacOS、iOS、Android) における Office の組み込みの機密ラベル付け機能を比較するには、Microsoft 365 のコンプライアンスドキュメント、[アプリでの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)を参照してください。 このドキュメントには、サポートされている機能の Office ビルド番号または Office 更新チャネルに関する情報も含まれています。
 
 |機能|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベルクライアント|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |手動によるラベル付け:| **あり** | **あり** |**あり** |
 |既定のラベル:| **あり** | **あり** | **あり** |
-|推奨または自動ラベル付け:| **あり** | **あり** | [いいえ] |
+|推奨または自動ラベル付け: <br />-Word、Excel、PowerPoint の場合| **あり** | **あり** | **あり** |
+|推奨または自動ラベル付け:<br />-Outlook の場合| **あり** | **あり** | [いいえ] |
 |必須ラベル:| **あり** | **あり** | [いいえ] |
-|ラベルに対するユーザー定義のアクセス許可:<br />-メールの転送不可<br />-Word、Excel、PowerPoint、エクスプローラーのカスタムアクセス許可| **あり** | **あり** | [いいえ] |
+|ラベルに対するユーザー定義のアクセス許可: <br />-メールの転送不可| **あり** | **あり** | **あり** |
+|ラベルに対するユーザー定義のアクセス許可: <br />-Word、Excel、PowerPoint、エクスプローラーのカスタムアクセス許可| **あり** | **あり** | [いいえ] |
 |ラベルの多言語サポート:| **あり** | **あり** |**あり** |
 |メールの添付ファイルからのラベル継承:| **あり** | **あり**  |[いいえ] |
 |次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| **はい** <sup>1</sup> | **はい** <sup>2</sup> | [いいえ] |
@@ -102,7 +104,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |ラベルとは別に設定するカスタムのアクセス許可:| **あり** | **はい** <sup>3</sup>| [いいえ] |
 |Office アプリの Information Protection バー:| **あり** | **あり**| [いいえ] |
 |ラベルアクションとしての視覚的なマーキング (ヘッダー、フッター、透かし):| **あり** | **あり** | **あり**|
-|アプリごとの視覚的マーキング:| **あり** | **Yes* | [いいえ] |
+|アプリごとの視覚的マーキング:| **あり** | **はい* | [いいえ] |
 |変数を使用した動的な視覚的マーキング:| **あり** | **** | [いいえ] |
 |ファイルエクスプローラーでラベルを付ける:| **あり** | **あり** | [いいえ] |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **あり** | **あり** | [いいえ]|
