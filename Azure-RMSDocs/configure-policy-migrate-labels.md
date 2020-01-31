@@ -4,7 +4,7 @@ description: Microsoft Information Protection framework をサポートするク
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/21/2020
+ms.date: 1/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 382688a769513ba8540f844b86906ef078cee754
-ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
+ms.openlocfilehash: a62fbe465eda5dec253da938878f343bb00b8173
+ms.sourcegitcommit: 200c710a675180cc0488defff299f2cc3c66922f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517645"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812587"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -215,9 +215,9 @@ Azure Information Protection の統一されたラベル付けクライアント
     
     このサービスでは、統合ラベル付けストアに移行する前と後の両方で、次のロジックを使用してラベルがサポートされます。
     
-    - 管理センターのラベルが Azure portal のラベルと同じ場合: 管理センターから統合ラベルが取得されます。 Cloud App Security でこれらのラベルを選択するには、少なくとも 1 つのユーザーに少なくとも 1 つのラベルを発行する必要があります。
+    - 管理センターに機密ラベルがある場合、これらのラベルは管理センターから取得されます。 Cloud App Security でこれらのラベルを選択するには、少なくとも 1 つのユーザーに少なくとも 1 つのラベルを発行する必要があります。
     
-    - 管理センターが Azure portal 内のラベルと同じラベルを持っていない場合: 管理センターから統合ラベルは使用されず、代わりにラベルが Azure portal から取得されます。
+    - 管理センターに機密ラベルがない場合は、Azure Information Protection ラベルが Azure portal から取得されます。
 
 - [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのサービスです。
 
