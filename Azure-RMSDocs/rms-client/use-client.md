@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
-ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
+ms.openlocfilehash: 93cc71a60c1037e5e59338b1bde096b8d74ae2e4
+ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755801"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912969"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -166,15 +166,15 @@ Azure Information Protection クライアント (クラシック) と Azure Info
 
 Azure Information Protection 統合されたラベル付けクライアントはまだ開発中ですが、従来のクライアントとの次の機能と動作の違いは、現在、統合されたラベル付けクライアントの今後のリリースで使用できるとは想定されていません。 
 
-- Office アプリでユーザーが選択できる別のオプションとしてのカスタムアクセス許可: Word、Excel、PowerPoint
+- [Office アプリでユーザーが選択できる別のオプション](client-classify-protect.md#set-custom-permissions-for-a-document)としてのカスタムアクセス許可: Word、Excel、PowerPoint
 
-- Office アプリとエクスプローラーからの追跡と取り消し
+- Office アプリとエクスプローラーのオプションを[追跡および取り消す](client-track-revoke.md)
 
 - Information Protection バーのタイトルとヒント
 
-- テンプレートを使用した保護のみのモード (ラベルなし)
+- テンプレートを使用した[保護のみのモード](client-protection-only-mode.md)(ラベルなし)
 
-- .ppdf 形式で PDF ドキュメントを保護する
+- ドキュメントを ppdf として保護する[(古い形式)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
 - Outlook の [転送不可] ボタンを表示する
 
