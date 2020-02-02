@@ -69,7 +69,7 @@ Azure Rights Management は、次のセキュリティ、コンプライアン�
 
 √ 業界標準の暗号化を使用し、FIPS 140-2 をサポートします。 詳細については、「[Cryptographic controls used by Azure RMS: Algorithms and key lengths (Azure RMS で使用される暗号化の制御: アルゴリズムとキーの長さ)](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)」を参照してください。
 
-テナントキーを Microsoft Azure データセンターに格納するための nCipher nShield ハードウェアセキュリティモジュール (HSM) のサポートを√。 自社の地域でのみキーを使用できるように、Azure Rights Management では北米、EMEA (ヨーロッパ、中東、およびアフリカ)、およびアジアのデータ センターで独立したセキュリティ ワールドを使っています。
+テナントキーを Microsoft Azure データセンターに格納するための nCipher nShield ハードウェアセキュリティモジュール (HSM) のサポートを√。 自社の地域でのみキーを使用できるように、Azure Rights Management では北米、EMEA (ヨーロッパ、中東およびアフリカ)、およびアジアのデータ センターで独立したセキュリティ ワールドを使っています。
 
 √ 次の認定を受けています。
 
