@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 127d3c2e80f586e69255378eaf7422899c3a325f
-ms.sourcegitcommit: 4b13f8f04e3f2c37cfe512fd9a5ea4019e9c1dec
+ms.openlocfilehash: 01852416ece6046ad5132e8dd36ff2ee931ae393
+ms.sourcegitcommit: eb04292842a97c6813dbd9e5310db2e1652da011
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001558"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034299"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -78,7 +78,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - New **WordShapeNameToRemove** advanced プロパティを使用すると、サードパーティ製アプリケーションによって作成された Word 文書でコンテンツマークを削除できます。 [ **WordShapeNameToRemove**を使用して、既存の図形名を識別し、削除対象と](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)して定義する方法について説明します。 
 
 - [スキャナー](../deploy-aip-scanner.md)関連の機能:
-    - [SharePoint オンプレミスおよびサブサイトの検出が容易に](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories)なりました。 各サイトの設定は必須ではなくなりました。 
+    - [SharePoint オンプレミスおよびサブサイトの検出が容易に](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories)なりました。 各サイトの設定は必須ではなくなりました。 
     - [SQL チャンクのサイズ変更](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server)の詳細プロパティが追加されました。
     - 管理者は、既存の[スキャンを停止し](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan)、既定のラベルが変更された場合に再スキャンを実行できるようになりました。
     - 既定では、スキャナーは、高速なスキャンのために最小のテレメトリを設定し、ログのサイズを小さくし、情報の種類をデータベースにキャッシュするようになりました。 [スキャナーの最適化](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner)の詳細についてはこちらをご覧ください。 
@@ -118,7 +118,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     
     - スキャナーサイクルの開始と終了に関するイベント Id は、Windows イベントログには書き込まれません。 代わりに、この情報に Azure portal を使用します。
     
-    - 既知の問題: 新しいラベルと名前が変更されたラベルは、スキャナープロファイルまたはリポジトリの設定の既定のラベルとして選択できません。 法
+    - 既知の問題: 新しいラベルと名前が変更されたラベルは、スキャナープロファイルまたはリポジトリの設定の既定のラベルとして選択できません。 回避策:
         - 新しいラベルの場合: Azure portal で、グローバルポリシーまたはスコープポリシーに使用する[ラベルを追加](../configure-policy-add-remove-label.md)します。
         - 名前を変更したラベルの場合: Azure portal を閉じてから再度開きます。
     
@@ -235,7 +235,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 - 既定のラベル付けは、サブラベルをサポートします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
