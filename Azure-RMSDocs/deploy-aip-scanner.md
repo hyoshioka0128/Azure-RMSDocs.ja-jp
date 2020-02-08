@@ -4,7 +4,7 @@ description: 現在のバージョンの Azure Information Protection スキャ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 2/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb50c150ee908c14c04e0786c57b4ae53e2599a0
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 272e5898859efd29033b8dc3430bb4a2d193fa75
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960563"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77044988"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -68,7 +68,7 @@ ms.locfileid: "75960563"
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの前提条件
 Azure Information Protection スキャナーをインストールする前に、次の要件を満たしていることを確認してください。
 
-|要件|説明を見る|
+|要件|説明|
 |---------------|--------------------|
 |スキャナー サービスを実行する Windows Server コンピューター:<br /><br />- 4 コア プロセッサ<br /><br />- 8 GB の RAM<br /><br />- 一時ファイルのための空き容量 10 GB (平均)|Windows Server 2019、Windows Server 2016、または Windows Server 2012 R2。 <br /><br />注: 非運用環境でテストまたは評価を行う場合、[Azure Information Protection クライアントでサポートされている](requirements.md#client-devices) Windows クライアント オペレーティング システムを使用できます。<br /><br />このコンピューターは、スキャンするデータ ストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。<br /><br /> スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。 <br /><br /> 組織のポリシーのためにインターネット接続ができない場合は、「[代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」セクションを参照してください。 それ以外の場合は、このコンピューターがインターネットに接続されていることを確認し、HTTPS 経由で次の Url を使用できるようにします (ポート 443)。<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*。 protection.outlook.com (統合ラベル付けクライアントのスキャナーのみ)|
 |スキャナー サービスを実行するサービス アカウント|Windows Server コンピューター上でのスキャナー サービスの実行に加えて、この Windows アカウントは Azure AD で認証され、Azure Information Protection ポリシーをダウンロードします。 このアカウントは Active Directory アカウントであり、かつ Azure AD と同期している必要があります。 組織のポリシーによってこのアカウントを同期できない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />このサービス アカウントには次の要件があります。<br /><br />-  **[Log on locally]\(ローカル ログオン\)** ユーザー権限の割り当て。 この権限は、スキャナーのインストールと構成に必要ですが、操作には必要ありません。 この権限をサービス アカウントに付与する必要がありますが、スキャナーがファイルを検出、分類、保護できることを確認したら、この権限を削除することができます。 組織のポリシーによって、短時間でもこの権限を付与することができない場合は、「[代替構成でのスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」セクションをご覧ください。<br /><br />-  **[サービスとしてログオン]** ユーザー権限の割り当て。 この権限は、スキャナーのインストール中にサービス アカウントに自動的に付与され、スキャナーのインストール、構成、操作に必要です。 <br /><br />- データ リポジトリへのアクセス許可: ファイルをスキャンして、Azure Information Protection ポリシーの条件を満たすファイルに分類と保護を適用するには、**読み取り**と**書き込み**のアクセス許可を付与する必要があります。 スキャナーを検索モードでのみ実行するには、**読み取り**アクセス許可で十分です。<br /><br />-保護を再保護または削除するラベルの場合: スキャナーが常に保護されたファイルにアクセスできるようにするには、このアカウントを Azure Information Protection の[スーパーユーザー](configure-super-users.md)にして、スーパーユーザー機能が有効になっていることを確認します。 さらに、段階的な展開の[オンボーディング制御](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、このアカウントが構成したオンボーディング制御に含まれていることを確認してください。|
@@ -130,11 +130,11 @@ Azure Information Protection スキャナーをインストールする前に、
     
     この構成では、クラシッククライアントのスキャナーは、組織のクラウドベースのキーを使用して保護を適用したり、保護を削除したり、保護されたファイルを検査したりすることはできません。 代わりに、分類のみを適用するラベルを使用するか、 [HYOK](configure-adrms-restrictions.md)を使用する保護を適用するようにスキャナーを制限します。
 
-- 統一されたラベル付けクライアントの場合: 切断された[コンピューターのサポート](./rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers)
+- 統一されたラベル付けクライアントの場合: 統合ラベル付けクライアントは、オンライン接続を使用せずに保護を適用できません。 
     
-    この構成では、 *DelegatedUser*パラメーターと[Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドレットを使用して、統一されたラベル付けクライアントのスキャナーが保護を適用し、保護を削除し、保護されたファイルを検査できます。
+    統一されたラベル付けクライアントのスキャナーは、 [import-Aipscanの configuration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps)コマンドレットを使用してインポートされたポリシーポリシーに基づいてラベルを適用できます。
 
-次に、以下の操作を行います。
+次に、次の操作を行います。
 
 1. スキャナーのプロファイルを作成して、Azure portal でスキャナーを構成します。 この手順に関してサポートが必要な場合は、「[Azure portal でスキャナーを構成する](#configure-the-scanner-in-the-azure-portal)」をご覧ください。
 
@@ -179,7 +179,7 @@ SQL スクリプト:
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
-さらに、本サービスには以下の規定が適用されます。
+補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
 - スキャナーを実行するサービスアカウントには、次のレジストリキーに対するフルコントロールのアクセス許可が付与されている必要があります。
@@ -261,7 +261,7 @@ SQL スクリプト:
     
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
-    次に例を示します。
+    例:
     
     - ローカル パスの場合: `C:\Folder`
     
@@ -274,9 +274,9 @@ SQL スクリプト:
     > [!TIP]
     > "共有ドキュメント" の SharePoint パスを追加する場合:
     >
-     >- 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 たとえば次のようになります。`http://sp2013/Shared Documents`
+     >- 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 例: `http://sp2013/Shared Documents`
      >
-     >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 たとえば次のようになります。`http://sp2013/Documents/Sales Reports`
+     >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 例: `http://sp2013/Documents/Sales Reports`
     
     このウィンドウのその他の設定については、この初期構成では変更せず、**プロファイルの既定値**のままにしておきます。 これは、データ リポジトリがスキャナーのプロファイルから設定を継承することを意味します。 
     
@@ -373,7 +373,7 @@ Azure AD トークンを使用すると、スキャナーは Azure Information P
 3. %*localappdata*%\Microsoft\MSIP\Scanner\Reports に格納されているレポートを確認します。 .txt の概要ファイルには、スキャンにかかった時間、スキャンされたファイルの数、情報の種類と一致したファイルの数が含まれています。 .csv ファイルには各ファイルに関する詳細情報が記載されています。 このフォルダーには、スキャンのサイクルごとに最大 60 のレポートが格納され、必要なディスク領域を最小限に抑えるために最新のもの以外のすべてのレポートが圧縮されます。
     
     > [!NOTE]
-    > [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) と共に *ReportLevel* パラメーターを使って、ログ記録のレベルを変更することができます。ただし、レポート フォルダーの場所または名前を変更することはできません。 別のボリュームまたはパーティションにレポートを保存したい場合は、フォルダーに対するディレクトリのジャンクションの使用を検討してください。
+    > *Set-AIPScannerConfiguration* と共に [ReportLevel](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) パラメーターを使って、ログ記録のレベルを変更することができます。ただし、レポート フォルダーの場所または名前を変更することはできません。 別のボリュームまたはパーティションにレポートを保存したい場合は、フォルダーに対するディレクトリのジャンクションの使用を検討してください。
     >
     > たとえば、[Mklink](/windows-server/administration/windows-commands/mklink) コマンドを使います。`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
     
@@ -641,15 +641,15 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 - カスタム条件に対する正規表現式の構築
     
-    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 たとえば次のようになります。
+    メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 例 :
     
     - [最長の量指定子](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)を開始します
     
-    - `(expression)` ではなく、`(?:expression)` などの非キャプチャ グループを使用します
+    - `(?:expression)` ではなく、`(expression)` などの非キャプチャ グループを使用します
 
 - 選択したログ レベル
     
-    スキャナー レポートに対して **[デバッグ]** 、 **[情報]** 、 **[エラー]** 、 **[オフ]** から選択できます。 **[オフ]** を選択すると、最適なパフォーマンスになります。 **[デバッグ]** は大幅にスキャナーのスピードを低下させるので、トラブルシューティング時にのみ使用してください。 詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。
+    スキャナー レポートに対して **[デバッグ]** 、 **[情報]** 、 **[エラー]** 、 **[オフ]** から選択できます。 **[オフ]** を選択すると、最適なパフォーマンスになります。 **[デバッグ]** は大幅にスキャナーのスピードを低下させるので、トラブルシューティング時にのみ使用してください。 詳細については、*Set-AIPScannerConfiguration* コマンドレットの [ReportLevel](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) パラメーターを参照してください。
 
 - ファイル自体
     
@@ -659,7 +659,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
     
     - 大きいファイルは明らかに小さいファイルよりも時間がかかります。
 
-- さらに、本サービスには以下の規定が適用されます。
+- 補足:
     
     - スキャナーを実行するサービスアカウントに、「[スキャナーの前提条件](#prerequisites-for-the-azure-information-protection-scanner)」セクションに記載されている権限のみがあることを確認し、[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner)を構成して、スキャナーの低整合性レベルを無効にします (クラシッククライアントのみ)。
     
@@ -683,7 +683,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 - [Export-Ai/gs](/powershell/module/azureinformationprotection/Export-AIPLogs) -統一されたラベル付けクライアントのみ
 
-- [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
+- [インポート-Aipscanの構成](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
@@ -725,7 +725,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 ----
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 

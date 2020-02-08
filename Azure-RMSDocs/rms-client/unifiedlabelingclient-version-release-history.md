@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01852416ece6046ad5132e8dd36ff2ee931ae393
-ms.sourcegitcommit: eb04292842a97c6813dbd9e5310db2e1652da011
+ms.openlocfilehash: 3f30cd7aea2498c101937aacc8f3cbf3ffdc6364
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034299"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77044968"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -42,6 +42,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 |クライアント バージョン|リリース日|
 |--------------|-------------|
+|2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
@@ -181,59 +182,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - クライアントは、ポリシーを正常にダウンロードし、現在の機密ラベルを表示できます。 以前のバージョンからアップグレードした後で、ラベル付けセンターでカスタム情報の種類を構成していない場合は、この修正が必要です。
 
 - 一般的なパフォーマンスと安定性の向上。
-
-## <a name="version-22140"></a>バージョン2.2.14.0
-
-**リリース**日: 07/15/2019
-
-02/06/2020 でサポート
-
-**新機能:**
-
-- セキュリティ/コンプライアンスセンター用に PowerShell を使用して構成する[詳細設定](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)のサポート。
-    
-    これらの詳細設定では、次のカスタマイズがサポートされています。
-     - [Office アプリの Information Protection バーを表示します](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
-    - [必須ラベルから Outlook メッセージを除外する](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-    - [Outlook で推奨分類を有効にする](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-    - [Outlook に別の既定ラベルを設定する](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
-    - [必須のラベル付けを使用するときにドキュメントの "後で" を削除する](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
-    - [他のラベル付けソリューションからヘッダーとフッターを削除する](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-    - [エクスプローラーでカスタムアクセス許可を無効にする](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
-    - [カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-    - [添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-    - [ユーザーの "問題の報告" を追加する](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
-    - [Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [情報の種類の一致を Azure Information Protection analytics に送信する](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
-    - [Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [ラベルが適用されたときにカスタムプロパティを適用する](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
-    - [ラベルを構成して Outlook で S/MIME 保護を適用する](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-    - [親ラベルに既定のサブラベルを指定する](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
-    - [ラベルの色を指定します](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
-
-- Word、Excel、PowerPoint、およびエクスプローラーのユーザー定義アクセス許可用に構成されたラベルのサポート。 詳細については、Office ドキュメントの「[ユーザーにアクセス許可の割り当てを許可](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions)する」セクションを参照してください。
-
-- AzureInformationProtection モジュールでの PowerShell の変更点は次のとおりです。
-    - 新しいコマンドレット: [new-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -RMSProtectionLicense を置き換えて、カスタムアクセス許可のアドホックポリシーを作成します。
-    - 新しいパラメーター:
-        -  *Custompermissions*と*Removeprotection* - [set-aipfilelabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)に追加されました
-        -  *OnBeHalfOf* -非対話型セッションの*トークン*パラメーターの代わりに使用される、 [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)に追加されました。
-        -  *WhatIf*および*Discoveryinfotypes* - [set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification)に追加され、このコマンドレットがラベルを適用せずに検出モードで実行できるようになりました。
-    - 保護サービスに直接接続されている非推奨のコマンドレット: RMSAuthentication、も get-rmsfilestatus、RMSServer、Set-rmsserverauthentication、get-rmstemplate、protect-rmsfile、set-rmsserverauthentication、protect-rmsfile、保護解除-
-
-
-**関する**
-
-- *Discoveryinfotypes*パラメーターを使用して、Analytics と[set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps)の[コンテンツの一致](../reports-aip.md#content-matches-for-deeper-analysis)をサポートします。
-
-- Windows で別のロケールに変更した後も、保護付きのラベルを PDF ドキュメントに適用できます。
-
-- コンテンツからラベルを削除すると、ラベル構成の一部として適用された場合にのみ、保護も削除されます。 ラベルとは別に保護が適用されている場合、その保護は維持されます。 たとえば、ユーザーがファイルにカスタムアクセス許可を適用したとします。
-
-- 自動ラベル付けが構成されている場合、ドキュメントを初めて保存するときにラベルが適用されます。
-
-- 既定のラベル付けは、サブラベルをサポートします。
 
 ## <a name="next-steps"></a>次のステップ:
 

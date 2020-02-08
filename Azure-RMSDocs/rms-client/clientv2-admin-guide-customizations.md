@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b18beab3c6a2dd3b01991fdb9755b943ec62fe5a
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 8e91257484ccb148475d16e3fd5de2905b8691c3
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117699"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77045020"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -32,7 +32,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用してクライアントの詳細設定を構成する方法
 
-PowerShell セキュリティ/コンプライアンスセンター Office 365 を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 たとえば次のようになります。
+PowerShell セキュリティ/コンプライアンスセンター Office 365 を使用すると、ラベルポリシーとラベルのカスタマイズをサポートする詳細設定を構成できます。 例 :
 
 - Office アプリの Information Protection バーを表示する設定は、***ラベルポリシーの詳細設定***です。
 - ラベルの色を指定する設定は、***ラベルの詳細設定***です。
@@ -115,7 +115,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 [新しい-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps)と[設定-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps)を指定して、 *advanced settings*パラメーターを使用します。
 
-|Setting|シナリオと手順|
+|設定|シナリオと手順|
 |----------------|---------------|
 |AttachmentAction|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
@@ -152,7 +152,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 [新しいラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps)と[セットラベル](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)を使用して、 *advanced settings*パラメーターを使用します。
 
-|Setting|シナリオと手順|
+|設定|シナリオと手順|
 |----------------|---------------|
 |色|[ラベルの色を指定します](#specify-a-color-for-the-label)|
 |customPropertiesByLabel|[ラベルが適用されたときにカスタムプロパティを適用する](#apply-a-custom-property-when-a-label-is-applied)|
@@ -243,7 +243,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 次の表を使用して、指定する文字列値を指定します。
 
-| 文字列値| クライアント| スキャナー|
+| 文字列値| クライアント| スキャナ|
 |-------------|-------|--------|
 |\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
 |\<null 値 >| Office ファイルの種類と PDF ファイルに保護を適用する| 既定値: Office ファイルの種類と PDF ファイルに保護を適用する|
@@ -335,7 +335,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - 値: \<**Office アプリケーションの種類 WXP**> 
 
-次に例を示します。
+例:
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -738,7 +738,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 この高度なクライアント設定を設定した場合でも、クライアントから監査情報を送信できますが、ユーザーがラベル付きコンテンツにアクセスした場合、情報はレポートに限定されます。
 
-たとえば次のようになります。
+例 :
 
 - この設定を使用すると、**社外秘 \ Sales**というラベルが付けられたユーザーによってアクセスされたことを確認できます。
 
@@ -907,7 +907,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 機密ラベルによって適用されるメタデータに加えて、1つまたは複数のカスタムプロパティをドキュメントまたは電子メールメッセージに適用する場合は、いくつかのシナリオが考えられます。
 
-たとえば次のようになります。
+例 :
 
 - セキュリティで保護された島など、[別のラベル付けソリューションから移行](#migrate-labels-from-secure-islands-and-other-labeling-solutions)しています。 移行中の相互運用性を確保するために、機密ラベルを使用して、他のラベル付けソリューションで使用されるカスタムプロパティを適用することもできます。
 
@@ -1016,7 +1016,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
     Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
-## <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
+## <a name="sign-in-as-a-different-user"></a>別のユーザーとしてサインインする
 
 運用環境では、ユーザーが Azure Information Protection 統合されたラベル付けクライアントを使用している場合、通常は別のユーザーとしてサインインする必要はありません。 ただし管理者の場合は、テスト段階のときに別ユーザーとしてサインインする必要がある場合があります。 
 
@@ -1030,7 +1030,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 2. 開いている Office アプリケーションがあれば再起動し、別のユーザー アカウントでサインインします。 Azure Information Protection サービスにサインインするためのプロンプトが Office アプリケーションに表示されない場合は、 **[Microsoft Azure Information Protection]** ダイアログボックスに戻り、更新された **[クライアントステータス]** セクションから **[サインイン]** を選択します。
 
-さらに、本サービスには以下の規定が適用されます。
+補足:
 
 - これらの手順を完了した後も、Azure Information Protection 統合されたラベル付けクライアントが古いアカウントでサインインしている場合は、Internet Explorer からすべての cookie を削除してから、手順 1. と 2. を繰り返します。
 
@@ -1070,10 +1070,6 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 7. 選択したユーザーアカウントが通常インターネットに接続している場合は、 **enableaudit**値を**True**に設定して、監査データの送信を再度有効にします。
 
-8. 接続が切断されたコンピューターがファイルを保護する、ファイルを再保護する、ファイルから保護を削除する、または保護されたファイルを検査するには、 *DelegatedUser*パラメーターを指定して[Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)コマンドレットを実行し、手順 1. のユーザーアカウントを指定してユーザーコンテキストを設定します。 たとえば次のようになります。
-    
-        Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
-
 このコンピューターのユーザーが [[ヘルプとフィードバック](clientv2-admin-guide.md#help-and-feedback-section)] から **[設定のリセット]** オプションを選択した場合、この操作によってポリシーファイルが削除され、クライアントがファイルを手動で置き換えるか、クライアントがインターネットに接続してファイルをダウンロードするまで、クライアントが動作しなくなります。
 
 切断されたコンピューターが Azure Information Protection スキャナーを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開手順から[インターネットに接続できない](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
@@ -1102,7 +1098,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 このレジストリ設定では、[中央レポート](../reports-aip.md)の Azure Information Protection に送信される情報は変更されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
