@@ -12,12 +12,12 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dd65c04165b125df6239792e528f28586a75e78f
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 0c6d9de295be95fde6459849d4e9abb5161cf998
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959869"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422826"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>ユーザーガイド: Azure Information Protection によってラベル付けされたファイルと電子メールからラベルと保護を削除する
 
@@ -74,5 +74,5 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 
-「[秘密度ラベルの概要」を](/microsoft-365/compliance/sensitivity-labels)参照してください。
+「[秘密度ラベルについ](/microsoft-365/compliance/sensitivity-labels)て」を参照してください。
 

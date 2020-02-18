@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8278395afacca4d30b67f88d82e98779dcda8871
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 7ce40d404ce092c7ac6be2598e4a85fe54166654
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117579"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422893"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -42,7 +42,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 次のドキュメントリソースを参照してください。
 
-- [秘密度ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+- [秘密度ラベルについて](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
 
 - [Office アプリの機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
 
@@ -62,7 +62,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
-いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
+No: 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
@@ -74,7 +74,7 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>分類が自動的に含まれるドキュメント テンプレートを作成できますか?
 
-対応 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
+はい。 ラベルを構成して、[ラベル名を含むヘッダーまたはフッターを適用する](configure-policy-markings.md)ことができます。 ただし、それが要件を満たしていない場合は、Azure Information Protection クライアント (クラシック) のみに対して、必要な書式を持つドキュメントテンプレートを作成し、フィールドコードとして分類を追加することができます。 
 
 例として、ドキュメントのヘッダーに分類を表示するテーブルがあるとします。 または、概要向けにドキュメントの分類を参照する具体的な表現を使用します。
 

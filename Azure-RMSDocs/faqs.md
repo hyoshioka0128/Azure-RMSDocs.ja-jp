@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c690329492732cbc446575335f57e9dae83979f5
-ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
+ms.openlocfilehash: 09c83a38d08efa6be464124ae1bfdae45d4fdbdc
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912990"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423174"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -66,7 +66,7 @@ Azure Information Protection とは異なり、Microsoft Information Protection 
 
 **Azure Information Protection クライアント (クラシック)** は、ファイルと電子メールを分類して保護するための新しいサービスとして Azure Information Protection が最初に発表されたため、利用可能になりました。 このクライアントは、Azure からラベルとポリシー設定をダウンロードし、Azure portal から Azure Information Protection ポリシーを構成します。 詳細については、「 [Azure Information Protection ポリシーの概要](overview-policy.md)」を参照してください。 
 
-Azure Information Protection の統一された**ラベル付けクライアント**は、複数のアプリケーションやサービスがサポートする、統一されたラベル付けストアをサポートするために、より新しい追加機能です。 このクライアントは、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、および Microsoft 365 コンプライアンスセンターの管理センターから、機密ラベルとポリシー設定をダウンロードします。 詳細については、「[秘密度ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)」を参照してください。
+Azure Information Protection の統一された**ラベル付けクライアント**は、複数のアプリケーションやサービスがサポートする、統一されたラベル付けストアをサポートするために、より新しい追加機能です。 このクライアントは、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、および Microsoft 365 コンプライアンスセンターの管理センターから、機密ラベルとポリシー設定をダウンロードします。 詳細については、「[秘密度ラベルについ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て」を参照してください。
 
 使用するクライアントがわからない場合は、「[使用する Azure Information Protection クライアントを選択](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
@@ -120,7 +120,7 @@ Azure Rights Management データ保護を含む Office 365 サブスクリプ�
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Azure Information Protection client は分類とラベル付けを含むサブスクリプション用のみでしょうか。
 
-いいえ。 Azure Information Protection クライアント (クラシック) は、データを保護するために Azure Rights Management サービスだけを含むサブスクリプションでも使用できます。
+No: Azure Information Protection クライアント (クラシック) は、データを保護するために Azure Rights Management サービスだけを含むサブスクリプションでも使用できます。
 
 クラシッククライアントがインストールされていて、Azure Information Protection ポリシーがない場合、このクライアントは自動的に[保護のみモード](./rms-client/client-protection-only-mode.md)で動作します。 このモードでは、ユーザーは Rights Management テンプレートとカスタム アクセス許可に簡単に適用できます。 分類とラベル付けを含むサブスクリプションを後で購入した場合、Azure Information Protection ポリシーをダウンロードする際に、クライアントは自動的に標準モードへと切り替わります。
 
@@ -147,7 +147,7 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 - Azure Rights Management**グローバル管理**者と**コネクタ管理者**: これらの azure Rights Management 管理者ロールについては、最初に、他のクラウドサービスのグローバル管理者になることなく、 [aipservice モジュールからすべての PowerShell コマンドレット](administer-powershell.md)を実行するアクセス許可を付与します。2つ目のロールは、Rights Management (RMS) コネクタのみを実行する権限を付与します これらの管理者ロールは、管理コンソールにアクセス許可を付与したり、ユーザーのドキュメントを追跡したり取り消したりすることはありません。
     
-    これらの管理者ロールのいずれかを割り当てるには、[AIPService](/powershell/module/aipservice/add-aipservicerolebasedadministrator)PowerShell コマンドレットを使用します。
+    これらの管理者ロールのいずれかを割り当てるには、AIPService PowerShell コマンドレットを使用し[ます。](/powershell/module/aipservice/add-aipservicerolebasedadministrator)
 
 注意事項:
 
@@ -161,11 +161,11 @@ Office 365 テナントまたは Azure AD テナントのグローバル管理�
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Azure Information Protection はオンプレミスおよびハイブリッドのシナリオをサポートしますか?
 
-対応 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
+はい。 Azure Information Protection はクラウドベースのソリューションですが、クラウドだけでなく、オンプレミスに保存されているドキュメントや電子メールの分類、ラベル付け、および保護が可能です。
 
 Exchange Server、SharePoint Server、および Windows ファイル サーバーがある場合は、これらのオンプレミス サーバーで Azure Rights Management サービスを使用して電子メールやドキュメントを保護できるように、[Rights Management コネクタ](deploy-rms-connector.md)をデプロイすることができます。 また、Active Directory ドメイン コントローラーを Azure AD と同期し、連携することで、たとえば [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect) を使用して、よりシームレスな認証方法をユーザーに提供できます。
 
-必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」セクションを参照してください。
+必要に応じて、Azure Rights Management サービスで XrML 証明書の生成と管理が自動的に行われるので、オンプレミスの PKI は使用されません。 Azure Rights Management での証明書の使用方法については、記事「[Azure RMS の機能の詳細](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption)」の「[Azure RMS の動作のチュートリアル:初めての使用、コンテンツ保護、コンテンツ消費](./how-does-it-work.md)」セクションを参照してください。
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Azure Information Protection ではどのようなデータの種類を分類し、保護できますか?
 

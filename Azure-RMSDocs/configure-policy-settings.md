@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0aa45184d927d673f225a71301770e1c9430662d
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: b6919c45441c5a6b2e3e9cc8cccc470b422d9b8c
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743494"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422779"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -28,7 +28,7 @@ ms.locfileid: "75743494"
 > [!NOTE]
 > これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 > 
-> 統一されたラベル付けクライアントのポリシー設定を構成する方法については、Office のドキュメントを参照してください。 たとえば、「[機密ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)」です。
+> 統一されたラベル付けクライアントのポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントを参照してください。 たとえば、[機密ラベルについて説明](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)します。
 
 Information Protection バーに表示されるタイトルとヒントのほかに、ラベルから個別に構成できる Azure Information Protection ポリシーにはいくつかの設定があります。
 
@@ -58,7 +58,7 @@ Azure Information Protection のサブスクリプションを購入した時期
     
     - **All documents and emails must have a label** (すべてのドキュメントと電子メールにラベルを設定する必要があります): このオプションを **[オン]** に設定した場合は、すべての保存されるドキュメントと送信される電子メールにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または ( **[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。
         
-       ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 たとえば次のようになります。
+       ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 例 :
         
        ![ラベル付けが必須である場合の Azure Information Protection のプロンプト](./media/info-protect-enforce-labelv2.png)
         
@@ -94,7 +94,7 @@ Azure Information Protection のサブスクリプションを購入した時期
         
        - エクスプローラー: 右クリック > **[分類して保護する]**  >  **[カスタムのアクセス許可]**
     
-   - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Azure Information Protection クライアントの "詳細情報を表示する" Web ページのカスタム URL を入力する)** : このリンクは、 **[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで **[保護]**  >  **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
+   - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Azure Information Protection クライアントの "詳細情報を表示する" Web ページのカスタム URL を入力する)** : このリンクは、 **[Microsoft Azure Information Protection]** ダイアログ ボックスの **[ヘルプとフィードバック]** セクションにあり、ユーザーが Office アプリケーションの **[ホーム]** タブで  > [保護] **[ヘルプとフィードバック]** を選択したときに表示されます。 このリンクの既定のリンク先は [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) Web サイトです。 このリンクをクリックしたときに別の Web ページが表示されるようにするには、HTTP または HTTPS (推奨) の URL を入力します。 入力されたカスタム URL がどのデバイスでもアクセス可能で正しく表示できるかどうかの確認は行われません。
         
        たとえば、ヘルプデスクの場合、クライアントのインストールと使用に関する情報が記載された Microsoft のドキュメントページを参照してください: `https://docs.microsoft.com/information-protection/rms-client/info-protect-client`。 またはリリースバージョン情報: `https://docs.microsoft.com/information-protection/rms-client/client-version-release-history`。 あるいは、ユーザー向けの Web ページを独自に作成して、ヘルプ デスクへの連絡方法を掲載したり、ラベルを使用する手順をユーザーに説明するビデオを公開したりすることが考えられます。
 
@@ -102,7 +102,7 @@ Azure Information Protection のサブスクリプションを購入した時期
 
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 このような一部のポリシー設定を連携させる方法を確認するには、チュートリアル「[Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)」をご覧ください。
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cb5bd910d69b85feae4c96b9bc8deb34369ccedb
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 919a31bfbc4d173aa9658eaf8725b1dd3da5f5d1
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959842"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422764"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Azure Information Protection 用の自動および推奨分類の条件を構成する方法
 
@@ -28,7 +28,7 @@ ms.locfileid: "75959842"
 > [!NOTE]
 > これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 > 
-> 統一されたラベル付けクライアントの自動および推奨分類を構成するための情報を探している場合は、Office のドキュメントを参照してください。 たとえば、[コンテンツに自動的に機密ラベルを適用](/microsoft-365/compliance/apply-sensitivity-label-automatically)します。
+> 統一されたラベル付けクライアントの自動および推奨分類を構成するための情報を探している場合は、Microsoft 365 のコンプライアンスドキュメントを参照してください。 たとえば、[コンテンツに自動的に機密ラベルを適用](/microsoft-365/compliance/apply-sensitivity-label-automatically)します。
 
 ラベルの条件を構成するときに、ドキュメントまたは電子メールにラベルを自動的に割り当てることができます。 または、自分が推奨するラベルを選択するようにユーザーに求めることもできます。 
 
@@ -130,7 +130,7 @@ ms.locfileid: "75959842"
 - **EU の電話番号**
 - **EU の GPS 座標**
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 [Azure Information Protection スキャナー](deploy-aip-scanner.md)のデプロイについて検討します。このスキャナーは自動分類規則を利用し、ネットワーク共有やオンプレミス ファイル ストアのファイルを検出、分類、保護できます。  
 

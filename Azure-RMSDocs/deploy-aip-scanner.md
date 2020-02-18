@@ -4,7 +4,7 @@ description: 現在のバージョンの Azure Information Protection スキャ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 2/06/2020
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 977dca2ab04071e0f58847d3a1d045e95a6c3a4f
-ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
+ms.openlocfilehash: 03ec95f3e53bd522c1d1775e54dfae7305a578e3
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155944"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423185"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -166,19 +166,27 @@ Sysadmin ロールが一時的に付与されていない場合は、スキャ�
     
     次のスクリプトを使用してデータベースを設定します。 
 
-
-
     存在しない場合 (select * from master. sys. server_principals where sid = SUSER_SID ("domain\user")) BEGIN declare @T nvarchar (500) Set @T = ' CREATE LOGIN ' + quotename (' domain\user ') + ' FROM WINDOWS ' exec (@T) END 
 
-このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の SQL スクリプトを2回実行するように依頼します。 スキャナーを実行するサービスアカウントと、スキャナーをインストールして管理するための2回目の時間。 スクリプトを実行する前に:
-1. *Domain\user*は、サービスアカウントまたはユーザーアカウントのドメイン名とユーザーアカウント名に置き換えます。
-2. *DBName*をスキャナー構成データベースの名前に置き換えます。
+このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の操作を依頼します。
+
+1. スキャナー用の DB を作成します。 <br>
+    **CREATE database AIPScannerUL_ [profilename]** **ALTER Database AIPScannerUL_ [PROFILENAME] の信頼を設定**
+    - この手順は省略可能ですが、必要に応じてより簡単にトラブルシューティングを行うことができます。
+
+2. インストールコマンドを実行するユーザーに権限を付与します。これは、スキャナー管理コマンドの実行に使用されます。
 
 SQL スクリプト:
 
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
+3. スキャナーサービスアカウントに権限を付与する:
+
+SQL スクリプト:
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    
 補足:
 
 - スキャナーを実行するサーバーのローカル管理者である必要があります。
@@ -261,7 +269,7 @@ SQL スクリプト:
     
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
-    例:
+    次に例を示します。
     
     - ローカル パスの場合: `C:\Folder`
     

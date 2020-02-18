@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c665a6e5ba7ebdc6097e20e0de1854065325bc49
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 363fc709334ac3974ec657d72c44e88a2e9c828a
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743514"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422817"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -30,7 +30,7 @@ ms.locfileid: "75743514"
 > [!NOTE]
 > Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 > 
-> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Office ドキュメントの「[秘密度ラベルの概要](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)」を参照してください。
+> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「[秘密度ラベルについ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て」を参照してください。
 
 クラシッククライアントの分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、[Azure Information Protection クライアント](https://www.microsoft.com/en-us/download/details.aspx?id=53018)がインストールされたコンピューターにダウンロードされます。
 
@@ -177,13 +177,13 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の**ラベル**ペインで [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
 
 - [Azure Information Protection ポリシーを編集して新しいラベルを作成する](infoprotect-quick-start-tutorial.md)
 
-- [Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)
+- [連携させる Azure Information Protection のポリシー設定を構成する](infoprotect-settings-tutorial.md)
 
 ポリシーの実行方法を確認するには、「 [Azure Information Protection の中央レポート](reports-aip.md)」を参照してください。
 
