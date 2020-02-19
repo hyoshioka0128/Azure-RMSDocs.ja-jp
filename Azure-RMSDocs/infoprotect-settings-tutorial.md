@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 266f796d6d3abc594a1447995d09687eaabb1ad7
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743527"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423206"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル:連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -53,7 +53,7 @@ ms.locfileid: "75743527"
     
     クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
     
-    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、Office ドキュメントで機密ラベルのポリシー設定の詳細を確認してください。 たとえば、「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」です。
+    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、Microsoft 365 のコンプライアンス ドキュメントで機密ラベルのポリシー設定の詳細を確認してください。 たとえば、「[機密ラベルについて](/microsoft-365/compliance/sensitivity-labels)」です。
 
 4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     

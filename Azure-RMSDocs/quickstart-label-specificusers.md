@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: b2ae9852ec1603c0fa3ab5009ea94f6f49bb2714
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 9a95f73dd7f27604a2ebc3a9ffcf30a8a6ed5e09
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743874"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423114"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
@@ -50,7 +50,7 @@ ms.locfileid: "75743874"
     
     クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
      
-    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について Office ドキュメントを参照してください。 たとえば、「[機密ラベルの概要](/microsoft-365/compliance/sensitivity-labels)」です。
+    クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について Microsoft 365 のコンプライアンス ドキュメントを参照してください。 たとえば、「[機密ラベルについて](/microsoft-365/compliance/sensitivity-labels)」です。
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
     
