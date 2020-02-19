@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 84d72965d0438b17b23f194d4ec085765853608c
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742727"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422563"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -28,7 +28,7 @@ ms.locfileid: "75742727"
 > [!NOTE]
 > これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 > 
-> Rights Management 保護を適用するための秘密度ラベルを構成する方法については、Office のドキュメントを参照してください。 たとえば、[機密ラベルの暗号化を使用してコンテンツへのアクセスを制限します](/microsoft-365/compliance/encryption-sensitivity-labels)。
+> Rights Management 保護を適用するための秘密度ラベルを構成する方法については、Microsoft 365 コンプライアンスに関するドキュメントを参照してください。 たとえば、[機密ラベルの暗号化を使用してコンテンツへのアクセスを制限します](/microsoft-365/compliance/encryption-sensitivity-labels)。
 
 Rights Management サービスを使用すれば、ほとんどの機密文書や機密メールを保護できます。 このサービスでは、暗号化ポリシー、ID ポリシー、認証ポリシーを使用し、データ損失を防止します。 この保護は、ドキュメントと電子メールに Rights Management 保護を使用するように構成されたラベルで適用されます。Outlook の **[転送不可]** ボタンを選択することもできます。
 
