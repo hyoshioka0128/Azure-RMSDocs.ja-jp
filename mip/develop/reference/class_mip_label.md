@@ -1,23 +1,23 @@
 ---
 title: class mip::Label
 description: 'Microsoft Information Protection (MIP) SDK の mip:: label クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5bdc88746a8921f306d9d52dbe75f3c2b826a5b6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a108cdccef1747ec2b06a981f993fa8ad438d011
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560138"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487992"
 ---
 # <a name="class-miplabel"></a>class mip::Label 
 単一の Microsoft Information Protection ラベルの抽象化。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  ラベル ID を取得します。
 public const std::string& GetName() const  |  ラベル名を取得します。
@@ -32,7 +32,7 @@ public const std:: vector\<std:: shared_ptr\<Label\>\>& GetChildren () const  | 
 public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  ラベルのカスタム設定を取得します。
 public ActionSource GetActionSource() const  |  ラベルのアクションソースを取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId 関数
 ラベル ID を取得します。

@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionProfile::Settings
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionprofile クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e39260036f1e4f4413b008e75cbbd761aea7d751
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0622f4db00c2f4baca7845aa0ca061bf2ccf294b
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560076"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489607"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>class mip::ProtectionProfile::Settings 
 作成時および有効期間全体にわたって ProtectionProfile によって使用される設定。
@@ -42,7 +42,7 @@ public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCusto
 ### <a name="settings-function"></a>Settings 関数
 ProtectionProfile:: Settings コンストラクター。非同期操作に使用するオブザーバーを指定します。
 
-パラメーター:  
+パラメータ:  
 * **mipContext**: グローバルコンテキスト設定 
 
 
@@ -65,7 +65,7 @@ ProtectionProfile:: Settings コンストラクター。非同期操作に使用
 ### <a name="settings-function"></a>Settings 関数
 ProtectionProfile:: Settings コンストラクター。同期操作に使用されます。
 
-パラメーター:  
+パラメータ:  
 * **mipContext**: グローバルコンテキスト設定 
 
 
@@ -121,7 +121,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
-パラメーター:  
+パラメータ:  
 * **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
 
 
@@ -135,7 +135,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
 クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 
-パラメーター:  
+パラメータ:  
 * **taskDispatcherDelegate**: クライアントアプリケーションによって実装されたタスクのディスパッチコールバックインターフェイス
 
 
@@ -144,7 +144,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 セッション ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **sessionId**: ログ/テレメトリを関連付けるために使用されるセッション ID
 
 
@@ -158,7 +158,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="setcancachelicenses-function"></a>SetCanCacheLicenses 関数
 エンドユーザーライセンス (Eul) がローカルにキャッシュされるかどうかを構成します。
 
-パラメーター:  
+パラメータ:  
 * **canCacheLicenses**: エンジンが保護されたコンテンツを開くときにライセンスをキャッシュする必要があるかどうか
 
 
@@ -173,7 +173,7 @@ True の場合、保護されたコンテンツを開くと、関連付けられ
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
-パラメーター:  
+パラメータ:  
 * **customSettings**: 名前と値のペアの一覧。
 
 

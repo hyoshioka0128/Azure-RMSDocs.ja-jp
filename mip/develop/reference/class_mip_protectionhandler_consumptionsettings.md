@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip::P rotectionHandler:: ConsumptionSettings'
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 63a7f3c377a40a5faf82afe332a12efed0d646c4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0f505d919f36819ce77285c77d6eebf7156d481c
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560724"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486785"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>クラス mip::P rotectionHandler:: ConsumptionSettings 
 既存のコンテンツを使用する ProtectionHandler を作成するために使用される設定。
@@ -20,6 +20,7 @@ ms.locfileid: "73560724"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public ConsumptionSettings (const std:: vector\<uint8_t\>& serializedPublishingLicense)  |  新しいハンドラーを作成するための ProtectionHandler:: ConsumptionSettings コンストラクター。
+public ConsumptionSettings (const std:: vector\<uint8_t\>& serializedPreLicense、const std:: vector\<uint8_t\>& serializedPublishingLicense)  |  新しいハンドラーを作成するための ProtectionHandler:: ConsumptionSettings コンストラクター。
 パブリック ConsumptionSettings (const std:: shared_ptr\<発行 Licenseinfo\>& licenseInfo)  |  新しいハンドラーを作成するための ProtectionHandler:: ConsumptionSettings コンストラクター。
 public std:: shared_ptr\<発行 Licenseinfo\> Get発行 Licenseinfo () const  |  保護されたコンテンツに関連付けられている公開ライセンスを取得します。
 public bool GetIsOfflineOnly () const  |  ProtectionHandler の作成でオンライン HTTP 操作が許可されているかどうかを取得します。
@@ -32,7 +33,7 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 ### <a name="consumptionsettings-function"></a>ConsumptionSettings 関数
 新しいハンドラーを作成するための ProtectionHandler:: ConsumptionSettings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **serializedPublishingLicense**: 保護されたコンテンツからのシリアル化された公開ライセンス
 
 
@@ -40,7 +41,18 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 ### <a name="consumptionsettings-function"></a>ConsumptionSettings 関数
 新しいハンドラーを作成するための ProtectionHandler:: ConsumptionSettings コンストラクター。
 
-パラメーター:  
+パラメータ:  
+* **serializedPreLicense**: シリアル化されたプレライセンスをコンテンツに添付します。 
+
+
+* **serializedPublishingLicense**: 保護されたコンテンツからのシリアル化された公開ライセンス
+
+
+  
+### <a name="consumptionsettings-function"></a>ConsumptionSettings 関数
+新しいハンドラーを作成するための ProtectionHandler:: ConsumptionSettings コンストラクター。
+
+パラメータ:  
 * **licenseinfo**: 保護されたコンテンツからライセンス情報を公開しています
 
 
@@ -61,7 +73,7 @@ ProtectionHandler の作成でオンライン HTTP 操作が許可されてい�
 ### <a name="setisofflineonly-function"></a>SetIsOfflineOnly 関数
 ProtectionHandler の作成でオンライン HTTP 操作が許可されるかどうかを設定します。
 
-パラメーター:  
+パラメータ:  
 * **Isofflineonly**: HTTP 操作が許可されていない場合は True、それ以外の場合は false
 
 
@@ -70,7 +82,7 @@ ProtectionHandler の作成でオンライン HTTP 操作が許可されるか�
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
 
-パラメーター:  
+パラメータ:  
 * **delegatedUserEmail**: 委任の電子メール。
 
 

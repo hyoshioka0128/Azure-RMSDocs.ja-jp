@@ -1,23 +1,23 @@
 ---
 title: 'クラス mip:: TaskDispatcherDelegate'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: taskdispatcherdelegate クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e73a03b842b1216bcc4ef71941ca4bc0b0233945
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: dca6a5fa04b62abf23f0116f63fd4a91c6081da0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559958"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489335"
 ---
 # <a name="class-miptaskdispatcherdelegate"></a>クラス mip:: TaskDispatcherDelegate 
 MIP SDK タスクディスパッチャーへのインターフェイスを定義するクラス。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public void DispatchTask (const std:: string & taskId, std:: function\<void ()\> タスク)  |  バックグラウンドスレッドでタスクを実行します。
 public void DispatchTask (const std:: string & taskId、std:: function\<void ()\> タスク、int64_t delaySeconds)  |  指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
@@ -25,12 +25,12 @@ public void ExecuteTaskOnIndependentThread (const std:: string & taskId, std:: f
 public bool CancelTask (const std:: string & taskId)  |  バックグラウンドタスクをキャンセルします。
 public void CancelAllTasks ()  |  すべてのバックグラウンドタスクを取り消します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="dispatchtask-function"></a>DispatchTask 関数
 バックグラウンドスレッドでタスクを実行します。
 
-パラメーター:  
+パラメータ:  
 * **taskId**: タスクを一意に識別する ID 
 
 
@@ -41,7 +41,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 ### <a name="dispatchtask-function"></a>DispatchTask 関数
 指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
 
-パラメーター:  
+パラメータ:  
 * **taskId**: タスクを一意に識別する ID 
 
 
@@ -55,7 +55,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 ### <a name="executetaskonindependentthread-function"></a>ExecuteTaskOnIndependentThread 関数
 独立したスレッドでタスクを直ちに実行します。
 
-パラメーター:  
+パラメータ:  
 * **taskId**: タスクを一意に識別する ID 
 
 
@@ -66,7 +66,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 ### <a name="canceltask-function"></a>CancelTask 関数
 バックグラウンドタスクをキャンセルします。
 
-パラメーター:  
+パラメータ:  
 * **taskId**: 取り消すタスクの ID
 
 

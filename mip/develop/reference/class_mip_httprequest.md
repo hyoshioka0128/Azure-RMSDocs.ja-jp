@@ -1,23 +1,23 @@
 ---
 title: class mip::HttpRequest
 description: 'Microsoft Information Protection (MIP) SDK の mip:: httprequest クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: bfe55f09caaa20687750b055e10828f8cc6df2bd
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f3b26ad07b8b3bfc556646cfd96a71aa9188bbb0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560169"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488094"
 ---
 # <a name="class-miphttprequest"></a>class mip::HttpRequest 
 1 つの HTTP 要求を表すインターフェイス。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  要求 ID を取得します。
 public HttpRequestType GetRequestType() const  |  要求の種類を取得します。
@@ -25,7 +25,7 @@ public const std::string& GetUrl() const  |  要求 URL を取得します。
 public const std:: vector\<uint8_t\>& GetBody () const  |  要求本文を取得します。
 public const std:: map\<std:: string、std:: string、CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId 関数
 要求 ID を取得します。

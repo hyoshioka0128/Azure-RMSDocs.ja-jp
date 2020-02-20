@@ -1,17 +1,17 @@
 ---
 title: class mip::FileHandler::Observer
 description: 'Microsoft Information Protection (MIP) SDK の mip:: filehandler クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d1c1a66ce3821bf3d552ee0daa0648940b645fcb
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 86043ab5fdcc22884ce3c483d43947d46e51ac9c
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560257"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490015"
 ---
 # <a name="class-mipfilehandlerobserver"></a>class mip::FileHandler::Observer 
 クライアントがファイルハンドラーに関連する通知イベントを取得するためのオブザーバーインターフェイス。

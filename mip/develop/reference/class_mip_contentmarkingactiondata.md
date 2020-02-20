@@ -1,33 +1,33 @@
 ---
 title: 'クラス mip:: ContentMarkingActionData'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: contentmarkingactiondata クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6652cf38163a461af49675c5009dba6461ffa544
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559313"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488910"
 ---
 # <a name="class-mipcontentmarkingactiondata"></a>クラス mip:: ContentMarkingActionData 
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | まだ文書化されていません。
-public const std::string& GetFontName() const  | まだ文書化されていません。
-public const std::string& GetFontColor() const  | まだ文書化されていません。
-public ContentMarkAlignment GetContentMarkAlignment () const  | まだ文書化されていません。
-public int GetFontSize() const  | まだ文書化されていません。
-public int GetMargin() const  | まだ文書化されていません。
-public ContentMarkPlacement GetContentMarkPlacement () const  | まだ文書化されていません。
-パブリック仮想 ~ ContentMarkingActionData ()  | まだ文書化されていません。
+public const std::string& GetText() const  | _まだ文書化されていません。_
+public const std::string& GetFontName() const  | _まだ文書化されていません。_
+public const std::string& GetFontColor() const  | _まだ文書化されていません。_
+public ContentMarkAlignment GetContentMarkAlignment () const  | _まだ文書化されていません。_
+public int GetFontSize() const  | _まだ文書化されていません。_
+public int GetMargin() const  | _まだ文書化されていません。_
+public ContentMarkPlacement GetContentMarkPlacement () const  | _まだ文書化されていません。_
+パブリック仮想 ~ ContentMarkingActionData ()  | _まだ文書化されていません。_
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="gettext-function"></a>GetText 関数
 _まだ文書化されていません。_

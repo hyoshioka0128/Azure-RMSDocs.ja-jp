@@ -1,26 +1,26 @@
 ---
 title: クラス mip::P rotectionHandler::P ublishingSettings
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 358c96b15b4e9eeb10a42937602487ec4d59b050
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e61eb300cbc787ecbb7fd14ec5dcb060d4f47d0a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560739"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490763"
 ---
 # <a name="class-mipprotectionhandlerpublishingsettings"></a>クラス mip::P rotectionHandler::P ublishingSettings 
 新しいコンテンツを保護する ProtectionHandler を作成するために使用される設定。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 公開発行設定 (const std:: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor)  |  新しいエンジンを作成するための ProtectionHandler:: Settings コンストラクター。
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | まだ文書化されていません。
+public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  | _まだ文書化されていません。_
 public bool GetIsAuditedExtractionAllowed () const  |  非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されているかどうかを取得します。
 public void SetIsAuditedExtractionAllowed (bool isAuditedExtractionAllowed)  |  非 MIP 対応アプリケーションで保護されたコンテンツを開くことを許可するかどうかを設定します。
 public bool GetIsDeprecatedAlgorithmPreferred () const  |  非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを取得します。
@@ -30,12 +30,12 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 public bool IsPublishingFormatJson () const  |  返された pl が json 形式であるかどうかを取得します (xml 形式は広く受け入れられており、既定値です)。
 public void Set発行 Formatjson (bool isPublishingFormatJson)  |  返された pl が json 形式であるかどうかを示します (xml 形式は広く受け入れられており、既定値です)。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="publishingsettings-function"></a>発行設定関数
 新しいエンジンを作成するための ProtectionHandler:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **Protectiondescriptor**: 保護の詳細
 
 
@@ -53,7 +53,7 @@ _まだ文書化されていません。_
 ### <a name="setisauditedextractionallowed-function"></a>SetIsAuditedExtractionAllowed 関数
 非 MIP 対応アプリケーションで保護されたコンテンツを開くことを許可するかどうかを設定します。
 
-パラメーター:  
+パラメータ:  
 * **Isauditedextractionallowed**: 非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されている場合
 
 
@@ -67,7 +67,7 @@ _まだ文書化されていません。_
 ### <a name="setisdeprecatedalgorithmpreferred-function"></a>SetIsDeprecatedAlgorithmPreferred 関数
 非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを設定します。
 
-パラメーター:  
+パラメータ:  
 * : Deprectated crypto アルゴリズムが推奨される**場合**
 
 
@@ -75,7 +75,7 @@ _まだ文書化されていません。_
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
 
-パラメーター:  
+パラメータ:  
 * **delegatedUserEmail**: 委任の電子メール。
 
 
@@ -96,6 +96,6 @@ _まだ文書化されていません。_
 ### <a name="setpublishingformatjson-function"></a>Set発行 Formatjson 関数
 返された pl が json 形式であるかどうかを示します (xml 形式は広く受け入れられており、既定値です)。
 
-パラメーター:  
+パラメータ:  
 * **isPublishingFormatJson**: json 形式が有効になっている場合。
 

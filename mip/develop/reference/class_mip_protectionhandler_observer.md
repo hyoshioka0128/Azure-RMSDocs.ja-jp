@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionHandler::Observer
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8b48d6e5aacacb6f678fc7d5aea2aee531da88fa
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 8f661f3ebf9bc657a4dd6f6356b26cd582d4aa2e
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560097"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486819"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>class mip::ProtectionHandler::Observer 
 ProtectionHandler に関連する通知を受信するインターフェイスです。
@@ -28,7 +28,7 @@ public virtual void Oncreateprotectionハンドラ Success (const std:: shared_p
 ### <a name="oncreateprotectionhandlersuccess-function"></a>Oncreateprotectionハンドラ Success 関数
 ProtectionHandler が正常に作成されたときに呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **protectionhandler**: 新しく作成された protectionhandler
 
 
@@ -40,7 +40,7 @@ ProtectionHandler が正常に作成されたときに呼び出されます。
 ### <a name="oncreateprotectionhandlerfailure-function"></a>Oncreateprotectionハンドラ Failure 関数
 ProtectionHandler の作成に失敗したときに呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **error**: 作成中に発生するエラー 
 
 

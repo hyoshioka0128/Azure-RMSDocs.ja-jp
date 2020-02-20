@@ -1,23 +1,23 @@
 ---
 title: class mip::PolicyEngine::Settings
 description: Microsoft Information Protection (MIP) SDK の mip::p olicyengine クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: c215b7e25908cc3f7984f68b63e3ea1be4d4a718
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 620775649ee0fa593f141b1a4f983ad8b52caafe
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560973"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487618"
 ---
 # <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
 PolicyEngine に関連付けられた設定を定義します。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための PolicyEngine:: Settings コンストラクター。
 パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための PolicyEngine:: Settings コンストラクター。
@@ -39,13 +39,15 @@ public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  
 public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
 public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelFilter)  |  ラベルフィルターを設定します。
 public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベルフィルターを取得します。
+public void Setバリエーション Abmarkextmarkingtype (可変 abている extmarkmarkingtype)  |  変数テキストのマークの種類を設定します。
+パブリック型のバリエーション Abmarkextmarkingtype () const。  |  変数のテキストのマーク付けの種類を取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings 関数
 既存のエンジンを読み込むための PolicyEngine:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **engineId**: AddEngineAsync によって生成されたか、または自分で生成した一意のエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
 
 
@@ -62,7 +64,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="settings-function"></a>Settings 関数
 新しいエンジンを作成するための PolicyEngine:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **identity**: 新しいエンジンに関連付けられているユーザーの ID 情報。 
 
 
@@ -85,7 +87,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **id**: エンジン ID。
 
 
@@ -101,7 +103,7 @@ ID オブジェクトを取得します。
 ### <a name="setidentity-function"></a>SetIdentity 関数
 ID オブジェクトを設定します。
 
-パラメーター:  
+パラメータ:  
 * **identity**: ユーザーの一意の ID。 
 
 
@@ -117,7 +119,7 @@ ID オブジェクトを設定します。
 ### <a name="setclientdata-function"></a>SetClientData 関数
 クライアント データ文字列を設定します。
 
-パラメーター:  
+パラメータ:  
 * **clientData**: ユーザーが指定したデータ。
 
 
@@ -131,7 +133,7 @@ ID オブジェクトを設定します。
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
-パラメーター:  
+パラメータ:  
 * **customSettings**: 名前と値のペアの一覧。
 
 
@@ -145,7 +147,7 @@ ID オブジェクトを設定します。
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **sessionId**: テレメトリ イベントを接続する一意の文字列。
 
 
@@ -165,7 +167,7 @@ ID オブジェクトを設定します。
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
 必要に応じて、クラウド エンドポイントのベース URL を設定します。
 
-パラメーター:  
+パラメータ:  
 * **cloudEndpointBaseUrl**: すべてのサービス要求で使用されるベース URL (たとえば、"https://dataservice.protection.outlook.com")
 
 
@@ -179,7 +181,7 @@ ID オブジェクトを設定します。
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
 
-パラメーター:  
+パラメータ:  
 * **delegatedUserEmail**: 委任の電子メール。
 
 
@@ -194,7 +196,7 @@ ID オブジェクトを設定します。
 ### <a name="setlabelfilter-function"></a>SetLabelFilter 関数
 ラベルフィルターを設定します。
 
-パラメーター:  
+パラメータ:  
 * **labelfilter**: ラベルフィルター。
 
 
@@ -206,3 +208,17 @@ ID オブジェクトを設定します。
   
 **戻り値**: ラベルフィルター。
 ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+  
+### <a name="setvariabletextmarkingtype-function"></a>Setバリエーション Abmarkextmarkingtype 関数
+変数テキストのマークの種類を設定します。
+
+パラメータ:  
+* 可変**Abmarkextmarkingtype**: 変数テキストのマーク付けの種類。
+
+
+  
+### <a name="getvariabletextmarkingtype-function"></a>Getバリエーション Abmarkextmarkingtype 関数
+変数のテキストのマーク付けの種類を取得します。
+
+  
+は、変数テキストのマーク付けの種類を**返し**ます。

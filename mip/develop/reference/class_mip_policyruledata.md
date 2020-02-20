@@ -1,31 +1,31 @@
 ---
 title: クラス mip::P olicyRuleData
 description: Microsoft Information Protection (MIP) SDK の mip::p olicyruledata クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 2094f6d2d0a243f73f9c19f08dcc68877ca5d16a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: db35427c2531edf0653d4f1a05ecbfe8cb93d8d7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560844"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486989"
 ---
 # <a name="class-mippolicyruledata"></a>クラス mip::P olicyRuleData 
   
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetName() const  | まだ文書化されていません。
-public const std::string& GetId() const  | まだ文書化されていません。
-public const std:: vector\<std:: unique_ptr\<ActionData\>\>& Getactions Data () const  | まだ文書化されていません。
-public bool Is互換 Version () const  | まだ文書化されていません。
-public const std:: map\<std:: string、std:: string\>& GetAttributeData () const  | まだ文書化されていません。
-public const std:: vector\<std:: map\<std:: string、std:: string\>\>& GetRuleTags () const  | まだ文書化されていません。
-public const ConditionData * GetConditionData () const  | まだ文書化されていません。
-パブリック仮想 ~ PolicyRuleData ()  | まだ文書化されていません。
+public const std::string& GetName() const  | _まだ文書化されていません。_
+public const std::string& GetId() const  | _まだ文書化されていません。_
+public const std:: vector\<std:: unique_ptr\<ActionData\>\>& Getactions Data () const  | _まだ文書化されていません。_
+public bool Is互換 Version () const  | _まだ文書化されていません。_
+public const std:: map\<std:: string、std:: string\>& GetAttributeData () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: map\<std:: string、std:: string\>\>& GetRuleTags () const  | _まだ文書化されていません。_
+public const ConditionData * GetConditionData () const  | _まだ文書化されていません。_
+パブリック仮想 ~ PolicyRuleData ()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   

@@ -1,23 +1,23 @@
 ---
 title: class mip::AddContentFooterAction
 description: 'Microsoft Information Protection (MIP) SDK の mip:: addcontentフッターアクションクラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 83452da929250dac907dd53868733c77eb26b877
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 7313976d8856a3aa807245a5c48ac22bf16b469a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560394"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490746"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>class mip::AddContentFooterAction 
 コンテンツ フッターをドキュメントに追加することを指定するアクション クラス。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ フッター要素をマークするために使用する API。
 public const std::string& GetText() const  |  コンテンツ フッターに移動されるテキストを取得します。
@@ -27,7 +27,7 @@ public const std::string& GetFontColor() const  |  コンテンツ フッター�
 public ContentMarkAlignment GetAlignment() const  |  フッターの配置を取得します。
 public int GetMargin() const  |  一番下からのフッターの余白を取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
 コンテンツ フッター要素をマークするために使用する API。

@@ -1,31 +1,41 @@
 ---
 title: 'クラス mip:: SyncFileSensitivityData'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: syncfilesensitivitydata クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 702e56461f61374956f95a01799a8bc81ae32557
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ab7b3286080d21bc09db12b39a470694cee9bb79
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560495"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489369"
 ---
 # <a name="class-mipsyncfilesensitivitydata"></a>クラス mip:: SyncFileSensitivityData 
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages () const  | まだ文書化されていません。
-パブリック仮想 ~ SyncFileSensitivityData ()  | まだ文書化されていません。
+public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages () const  | _まだ文書化されていません。_
+パブリック仮想 ~ SyncFileSensitivityData ()  | _まだ文書化されていません。_
+public const std:: string & GetFileId () const  | _まだ文書化されていません。_
+public const std:: string & GetTenantId () const  | _まだ文書化されていません。_
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getsensitivitytypesrulepackages-function"></a>GetSensitivityTypesRulePackages 関数
 _まだ文書化されていません。_
 
   
 ### <a name="syncfilesensitivitydata-function"></a>~ SyncFileSensitivityData 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getfileid-function"></a>GetFileId 関数
+_まだ文書化されていません。_
+
+  
+### <a name="gettenantid-function"></a>GetTenantId 関数
 _まだ文書化されていません。_

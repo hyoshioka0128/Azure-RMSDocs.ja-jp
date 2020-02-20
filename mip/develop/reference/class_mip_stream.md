@@ -1,23 +1,23 @@
 ---
 title: class mip::Stream
 description: 'Microsoft Information Protection (MIP) SDK の mip:: stream クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f1bd4220369d036c2071453412844e0691efb2ec
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 65e50fc9751b2ac38e2dae216e3e81cacba5c832
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559971"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489403"
 ---
 # <a name="class-mipstream"></a>class mip::Stream 
 MIP SDK とストリーム ベースのコンテンツの間のインターフェイスを定義するクラス。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  ストリームからバッファーに読み取ります。
 public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  バッファーからストリームに書き込みます。
@@ -29,12 +29,12 @@ public int64_t Position()  |  ストリーム内の現在の位置を取得し�
 public int64_t Size()  |  ストリーム内のコンテンツのサイズを取得します。
 public void Size(int64_t value)  |  ストリームのサイズを設定します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="read-function"></a>Read 関数
 ストリームからバッファーに読み取ります。
 
-パラメーター:  
+パラメータ:  
 * **buffer**: バッファーへのポインター 
 
 
@@ -48,7 +48,7 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 ### <a name="write-function"></a>Write 関数
 バッファーからストリームに書き込みます。
 
-パラメーター:  
+パラメータ:  
 * **buffer**: バッファーへのポインター 
 
 
@@ -68,7 +68,7 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 ### <a name="seek-function"></a>Seek 関数
 ストリーム内の特定の位置をシークします。
 
-パラメーター:  
+パラメータ:  
 * **position**: ストリームをシークする位置。
 
 
@@ -100,6 +100,6 @@ public void Size(int64_t value)  |  ストリームのサイズを設定しま�
 ### <a name="size-function"></a>Size 関数
 ストリームのサイズを設定します。
 
-パラメーター:  
+パラメータ:  
 * **stream**: ストリームのサイズ。
 

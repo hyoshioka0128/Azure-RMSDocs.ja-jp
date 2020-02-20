@@ -1,31 +1,31 @@
 ---
 title: 'クラス mip:: AddWatermarkActionData'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: addwatermarkactiondata クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8ced12000bace295be4571158ae0f05364c5aec7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 719d376cdf2b8b9d2d38de08ba74a654d562b605
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559476"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490695"
 ---
 # <a name="class-mipaddwatermarkactiondata"></a>クラス mip:: AddWatermarkActionData 
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | まだ文書化されていません。
-public const std::string& GetFontName() const  | まだ文書化されていません。
-public const std::string& GetFontColor() const  | まだ文書化されていません。
-public int GetFontSize() const  | まだ文書化されていません。
-public WatermarkLayout GetWatermarkLayout () const  | まだ文書化されていません。
-パブリック仮想 ~ AddWatermarkActionData ()  | まだ文書化されていません。
+public const std::string& GetText() const  | _まだ文書化されていません。_
+public const std::string& GetFontName() const  | _まだ文書化されていません。_
+public const std::string& GetFontColor() const  | _まだ文書化されていません。_
+public int GetFontSize() const  | _まだ文書化されていません。_
+public WatermarkLayout GetWatermarkLayout () const  | _まだ文書化されていません。_
+パブリック仮想 ~ AddWatermarkActionData ()  | _まだ文書化されていません。_
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="gettext-function"></a>GetText 関数
 _まだ文書化されていません。_

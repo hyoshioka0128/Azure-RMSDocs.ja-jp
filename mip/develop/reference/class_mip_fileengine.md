@@ -1,17 +1,17 @@
 ---
 title: class mip::FileEngine
 description: 'Microsoft Information Protection (MIP) SDK の mip:: fileengine クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8f1ef9e1ca46037243e170a59717be74954d4cb1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 60be23f1cda4403936ba1e334ae437f6d82d3e20
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560276"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490066"
 ---
 # <a name="class-mipfileengine"></a>class mip::FileEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。
@@ -28,9 +28,10 @@ public const std::string& GetMoreInfoUrl() const  |  ポリシー/ラベルに�
 public const std:: string & GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
 public const std:: string & GetSensitivityFileId () const  |  感度ファイル ID を取得します。
 public bool IsLabelingRequired() const  |  ドキュメントにラベルを付ける必要があることを、ポリシーで指示するかどうかを確認します。
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  ポリシーが最後にフェッチされた時刻を取得します。
-public void Createfilehandler Async (const std:: string & inputFilePath、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
-public void Createfilehandler Async (const std:: shared_ptr\<Stream\>& inputStream、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
+public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastPolicyFetchTime () const  |  ポリシーが最後にフェッチされた時刻を取得します。
+public const std::string& GetPolicyDataXml() const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
+パブリック std:: shared_ptr\<Asyncfilehandler Async\> (const std:: string & inputFilePath、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Filehandler オブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
+public std:: shared_ptr\<AsyncControl Createfileハンドラ Async (const std:: shared_ptr\<Stream\>& inputStream、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)\>  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
 public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。
@@ -90,10 +91,16 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
   
 **戻り値**: ポリシーが最後にフェッチされた時刻
   
+### <a name="getpolicydataxml-function"></a>GetPolicyDataXml 関数
+このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
+
+  
+は、ポリシーデータ XML**を返し**ます。
+  
 ### <a name="createfilehandlerasync-function"></a>Createfileハンドラ Async 関数
 指定されたファイル パスのファイル ハンドラーの作成を開始します。
 
-パラメーター:  
+パラメータ:  
 * **Inputfilepath**: 開くファイル。 パスにはファイル名を含める必要があり、ファイル名拡張子が存在する場合はそれも含めます。 
 
 
@@ -106,14 +113,17 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 * **Fileハンドラオブザーバー**: filehandler:: Observer インターフェイスを実装するクラス。 
 
 
-* **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。
+* **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。 
 
 
+
+  
+**戻り値**: Async control オブジェクト。
   
 ### <a name="createfilehandlerasync-function"></a>Createfileハンドラ Async 関数
 指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 
-パラメーター:  
+パラメータ:  
 * **inputStream**: ファイル データを含むストリーム。 
 
 
@@ -126,14 +136,17 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 * **Fileハンドラオブザーバー**: filehandler:: Observer インターフェイスを実装するクラス。 
 
 
-* **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。
+* **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。 
 
 
+
+  
+**戻り値**: Async control オブジェクト。
   
 ### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent 関数
 アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 
-パラメーター:  
+パラメータ:  
 * **level**: ログ レベルの説明: 情報/エラー/警告 
 
 

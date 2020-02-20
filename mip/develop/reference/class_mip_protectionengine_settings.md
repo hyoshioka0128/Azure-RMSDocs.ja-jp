@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionEngine::Settings
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionengine クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 746309afc21637c85ec53dd9af7214151c5bb75a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 71f428667bf485d0abd4f953aa2d94181b1bd8f1
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557679"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486887"
 ---
 # <a name="class-mipprotectionenginesettings"></a>class mip::ProtectionEngine::Settings 
 作成時および有効期間全体にわたって ProtectionEngine によって使用される設定。
@@ -40,7 +40,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="settings-function"></a>Settings 関数
 新しいエンジンを作成するための ProtectionEngine:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **id**: protectionengine に関連付けられる id
 
 
@@ -54,7 +54,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="settings-function"></a>Settings 関数
 既存のエンジンを読み込むための ProtectionEngine:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **engineId**: 読み込まれるエンジンの一意識別子 
 
 
@@ -74,7 +74,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **engineId**: エンジン ID。
 
 
@@ -88,7 +88,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="setidentity-function"></a>SetIdentity 関数
 エンジンに関連付けられるユーザー ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **identity**: エンジンに関連付けられるユーザー ID
 
 
@@ -102,7 +102,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="setclientdata-function"></a>SetClientData 関数
 クライアントに指定されたカスタム データを設定します。
 
-パラメーター:  
+パラメータ:  
 * **Custom**: クライアントに指定されたデータ
 
 
@@ -116,7 +116,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 テストや実験に使用する名前と値のペアを設定します。
 
-パラメーター:  
+パラメータ:  
 * **customSettings**: テストや実験に使用する名前と値のペア
 
 
@@ -130,7 +130,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 ログ/テレメトリの相関関係に使用する、エンジンのセッション ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **sessionId**: ログ/テレメトリの相関関係に使用する、エンジンのセッション ID
 
 
@@ -144,7 +144,7 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサー
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
 必要に応じて、クラウド エンドポイントのベース URL を設定します。
 
-パラメーター:  
+パラメータ:  
 * **cloudEndpointBaseUrl**: すべてのサービス要求で使用されるベース URL (たとえば、"https://api.aadrm.com")
 
 

@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionHandler
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4b245ea2a579aa3d9a0fddfb503830d75577c2b7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560108"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489658"
 ---
 # <a name="class-mipprotectionhandler"></a>class mip::ProtectionHandler 
 特定の保護構成のための保護に関連するアクションを管理します。
@@ -40,7 +40,7 @@ public const std:: vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Prote
 ### <a name="createprotectedstream-function"></a>CreateProtectedStream 関数
 コンテンツの暗号化/暗号化解除を可能にする、保護されたストリームを作成します。
 
-パラメーター:  
+パラメータ:  
 * **backingStream**: 読み取り/書き込みを行うバッキング ストリーム 
 
 
@@ -57,7 +57,7 @@ public const std:: vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Prote
 ### <a name="encryptbuffer-function"></a>EncryptBuffer 関数
 バッファーを暗号化します。
 
-パラメーター:  
+パラメータ:  
 * **offsetFromStart**: クリア テキスト コンテンツの先頭からの、inputBuffer の相対位置 
 
 
@@ -83,7 +83,7 @@ public const std:: vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Prote
 ### <a name="decryptbuffer-function"></a>DecryptBuffer 関数
 バッファーを暗号化解除します。
 
-パラメーター:  
+パラメータ:  
 * **offsetFromStart**: 暗号化されたコンテンツの先頭からの、inputBuffer の相対位置 
 
 
@@ -109,7 +109,7 @@ public const std:: vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Prote
 ### <a name="getprotectedcontentlength-function"></a>GetProtectedContentLength 関数
 この ProtectionHandler で暗号化された場合、コンテンツのサイズ (バイト単位) を計算します。
 
-パラメーター:  
+パラメータ:  
 * **unprotectedLength**: 保護されないコンテンツのサイズ (バイト単位) 
 
 
@@ -135,7 +135,7 @@ public const std:: vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Prote
 ### <a name="accesscheck-function"></a>AccessCheck 関数
 保護ハンドラーが指定された権限へのアクセス権をユーザーに付与するかどうかを確認します。
 
-パラメーター:  
+パラメータ:  
 * **right**: 確認する権限
 
 

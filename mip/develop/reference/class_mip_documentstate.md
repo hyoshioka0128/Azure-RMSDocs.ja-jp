@@ -1,17 +1,17 @@
 ---
 title: クラス mip::D ocumentState
 description: Microsoft Information Protection (MIP) SDK の mip::d ocumentstate クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5cdcf04a68269581dc032f753247ba88e9f118d7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a49683730f120b3d43e2c8f9381a86f0df1a400d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558869"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490134"
 ---
 # <a name="class-mipdocumentstate"></a>クラス mip::D ocumentState 
   
@@ -24,7 +24,8 @@ public std:: vector\<std::p air\<std:: string、std:: string\>\> GetContentMetad
 public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  保護記述子を取得します。
 public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
 public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
-public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  アプリケーション固有のキーと値のペアのマップを返します。
+パブリック仮想 std:: map\<std:: string、std:: string\> GetAuditMetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
+public virtual std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastModifiedTime () const  |  ドキュメントが最後に変更された時刻までの時間を返します。
   
 ## <a name="members"></a>メンバー
   
@@ -64,7 +65,7 @@ public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  | 
 ### <a name="getclassificationresults-function"></a>GetClassificationResults 関数
 分類結果のマップを返します。
 
-パラメーター:  
+パラメータ:  
 * **classificationIds**: 分類 id の一覧。 
 
 
@@ -77,3 +78,9 @@ public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  | 
 
   
 **戻り**値: アプリケーション固有の監査メタデータの登録済みキー: 値のペア送信者: 送信者受信者の電子メール id: 電子メールの受信者の JSON 配列: コンテンツを最後に変更したユーザーの電子メール id LastModifiedDate: コンテンツが最後に変更された日付
+  
+### <a name="getlastmodifiedtime-function"></a>GetLastModifiedTime 関数
+ドキュメントが最後に変更された時刻までの時間を返します。
+
+  
+**戻り値**: ドキュメントのタイムポイントの最終更新時刻。

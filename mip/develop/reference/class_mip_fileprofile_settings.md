@@ -1,17 +1,17 @@
 ---
 title: class mip::FileProfile::Settings
 description: 'Microsoft Information Protection (MIP) SDK の mip:: fileprofile クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 21bbda3424f5c436324ce97137082200ee8d9837
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4987919875c297ace2246e77eadab279238cc205
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561097"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490032"
 ---
 # <a name="class-mipfileprofilesettings"></a>class mip::FileProfile::Settings 
 作成時および有効期間全体にわたって FileProfile によって使用される設定。
@@ -39,7 +39,7 @@ public bool CanCacheLicenses () const  |  エンドユーザーライセンス (
 ### <a name="settings-function"></a>Settings 関数
 FileProfile:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **mipContext**: グローバルコンテキスト設定 
 
 
@@ -95,7 +95,7 @@ FileProfile に関連するイベントの通知を受け取るオブザーバ�
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
-パラメーター:  
+パラメータ:  
 * **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
 
 
@@ -109,7 +109,7 @@ FileProfile に関連するイベントの通知を受け取るオブザーバ�
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
 クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 
-パラメーター:  
+パラメータ:  
 * **taskDispatcherDelegate**: クライアントアプリケーションによって実装されたタスクのディスパッチコールバックインターフェイス
 
 
@@ -118,7 +118,7 @@ FileProfile に関連するイベントの通知を受け取るオブザーバ�
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 セッション ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **sessionId**: ログ/テレメトリを関連付けるために使用されるセッション ID
 
 
@@ -132,7 +132,7 @@ FileProfile に関連するイベントの通知を受け取るオブザーバ�
 ### <a name="setcancachelicenses-function"></a>SetCanCacheLicenses 関数
 エンドユーザーライセンス (Eul) がローカルにキャッシュされるかどうかを構成します。
 
-パラメーター:  
+パラメータ:  
 * **canCacheLicenses**: エンジンが保護されたコンテンツを開くときにライセンスをキャッシュする必要があるかどうか
 
 

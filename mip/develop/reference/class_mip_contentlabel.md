@@ -1,17 +1,17 @@
 ---
 title: class mip::ContentLabel
 description: 'Microsoft Information Protection (MIP) SDK の mip:: contentlabel クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a29ea5be05d928f25b9a4255416d93acedcb1c0b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f131885572ab5ad3a2664a6b50162a011529bfbb
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840277"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490338"
 ---
 # <a name="class-mipcontentlabel"></a>class mip::ContentLabel 
 コンテンツの一部 (通常はドキュメント) に適用される Microsoft Information Protection ラベルの抽象化。
@@ -22,7 +22,7 @@ ms.locfileid: "74840277"
 --------------------------------|---------------------------------------------
 public std:: chrono:: time_point\<std:: chrono:: system_clock\> Get Time () const  |  ラベルの作成時間を取得します。
 public AssignmentMethod GetAssignmentMethod() const  |  ラベルの割り当て方法を取得します。
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  拡張プロパティを取得します。
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetExtendedProperties () const  |  拡張プロパティを取得します。
 public bool IsProtectionAppliedFromLabel() const  |  保護がラベルによって適用されたかどうかを取得します。
 public std:: shared_ptr\<Label\> GetLabel () const  |  コンテンツに適用された実際のラベル オブジェクトを取得します。
   

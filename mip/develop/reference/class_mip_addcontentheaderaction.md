@@ -1,23 +1,23 @@
 ---
 title: class mip::AddContentHeaderAction
 description: 'Microsoft Information Protection (MIP) SDK の mip:: addcontentheaderaction クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 40e9b648799008bcc75b48ae9379f7a3010bd7bd
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f58fe47de4ee1f79f64415013fc1949ef53b2adf
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559062"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490729"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>class mip::AddContentHeaderAction 
 コンテンツ ヘッダーの追加を指定するアクション クラス。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ ヘッダー要素をマークするために使用する API。
 public const std::string& GetText() const  |  コンテンツ ヘッダーに移動されるテキストを取得します。
@@ -27,7 +27,7 @@ public const std::string& GetFontColor() const  |  コンテンツ ヘッダー�
 public ContentMarkAlignment GetAlignment() const  |  ヘッダーの配置を取得します。
 public int GetMargin() const  |  一番下からのヘッダーの余白を取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
 コンテンツ ヘッダー要素をマークするために使用する API。

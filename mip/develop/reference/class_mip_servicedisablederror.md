@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: ServiceDisabledError'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: servicedisablederror クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 766d3747c2dbe6a9fdecc6cb6e21eb3d4000d3ec
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 1481e81707e84d7ba977d36bec152ba86b5e60b6
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558201"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489420"
 ---
 # <a name="class-mipservicedisablederror"></a>クラス mip:: ServiceDisabledError 
 サービスが無効になっているため、ユーザーはコンテンツにアクセスできませんでした。
@@ -33,7 +33,7 @@ public Extent GetExtent() const  |  サービスが無効になっている範�
 ### <a name="extent-enum"></a>エクステント列挙型
  値                         | 説明                                
 --------------------------------|---------------------------------------------
-User            | ユーザーのサービスが無効になっています。
+ユーザー            | ユーザーのサービスが無効になっています。
 デバイス            | デバイスのサービスが無効になっています。
 プラットフォーム            | プラットフォームでサービスが無効になっています。
 テナント            | テナントのサービスが無効になっています。

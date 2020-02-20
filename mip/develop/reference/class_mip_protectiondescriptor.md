@@ -1,23 +1,23 @@
 ---
 title: class mip::ProtectionDescriptor
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectiondescriptor クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557733"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487040"
 ---
 # <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
 コンテンツの一部に関連付けられている保護の説明。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public ProtectionType GetProtectionType() const  |  保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
 public std::string GetOwner() const  |  保護するために所有者を取得します。
@@ -29,13 +29,13 @@ public std::string GetContentId() const  |  コンテンツ ID (存在する場�
 public std:: vector\<UserRights\> GetUserRights () const  |  ユーザーから権限へのマッピングのコレクションを取得します。
 public std:: vector\<UserRoles\> GetUserRoles () const  |  ユーザーからロールへのマッピングのコレクションを取得します。
 public bool DoesContentExpire() const  |  コンテンツの有効期限が切れているかどうかを確認します。
-public std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  保護の有効期限を取得します。
+public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetContentValidUntil () const  |  保護の有効期限を取得します。
 public bool DoesAllowOfflineAccess() const  |  保護がオフライン コンテンツへのアクセスを許可するかどうかを取得します。
 public std::string GetReferrer() const  |  保護の参照元のアドレスを取得します。
-public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  暗号化されたアプリ固有のデータを取得します。
+public std:: map\<std:: string、std:: string\> GetEncryptedAppData () const  |  暗号化されたアプリ固有のデータを取得します。
 public std:: map\<std:: string、std:: string\> GetSignedAppData () const  |  署名されたアプリ固有のデータを取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getprotectiontype-function"></a>GetProtectionType 関数
 保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。

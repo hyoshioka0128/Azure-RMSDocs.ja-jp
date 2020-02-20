@@ -1,17 +1,17 @@
 ---
 title: クラス mip::P rotectionSettings
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionsettings クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5c0354b69912e437f87dc9b9b614338091a5b163
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a44d404fed5ebdac535bac586f4ce54a61e94f6d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560665"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489573"
 ---
 # <a name="class-mipprotectionsettings"></a>クラス mip::P rotectionSettings 
 SetLabel メソッドの保護オプションを構成するためのインターフェイスです。
@@ -19,12 +19,12 @@ SetLabel メソッドの保護オプションを構成するためのインタ�
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public ProtectionSettings () = default  | まだ文書化されていません。
-パブリック ProtectionSettings (const std:: string & delegatedUserEmail、PFileExtensionBehavior pfileExtensionBehavior)  | まだ文書化されていません。
-public void SetDelegatedUserEmail (const std:: string delegatedUserEmail)  | まだ文書化されていません。
-public std:: string GetDelegatedUserEmail () const  | まだ文書化されていません。
-public void SetPFileExtensionBehavior (PFileExtensionBehavior pfileExtensionBehavior)  | まだ文書化されていません。
-パブリック PFileExtensionBehavior GetPFileExtensionBehavior () const  | まだ文書化されていません。
+public ProtectionSettings () = default  | _まだ文書化されていません。_
+パブリック ProtectionSettings (const std:: string & delegatedUserEmail、PFileExtensionBehavior pfileExtensionBehavior)  | _まだ文書化されていません。_
+public void SetDelegatedUserEmail (const std:: string delegatedUserEmail)  | _まだ文書化されていません。_
+public std:: string GetDelegatedUserEmail () const  | _まだ文書化されていません。_
+public void SetPFileExtensionBehavior (PFileExtensionBehavior pfileExtensionBehavior)  | _まだ文書化されていません。_
+パブリック PFileExtensionBehavior GetPFileExtensionBehavior () const  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   

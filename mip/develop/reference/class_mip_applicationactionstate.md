@@ -1,32 +1,32 @@
 ---
 title: 'クラス mip:: ApplicationActionState'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: applicationactionstate クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a3a5bde734c62859d2f2a03967a61d9ec14a2056
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 70128f67f758145be2b03954d3385a8428d63fe9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559440"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490644"
 ---
 # <a name="class-mipapplicationactionstate"></a>クラス mip:: ApplicationActionState 
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック LabelState GetNewLabelState () const  |  新しいラベルの状態を取得します。
 public std:: shared_ptr\<Label\> GetNewLabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
 public std::p air\<bool、std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
-public virtual std::vector\<std::pair\<std::string, std::string\>\> GetNewLabelExtendedProperties() const  |  新しいラベルの拡張プロパティを返します。
+パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\>\> GetNewLabelExtendedProperties () const  |  新しいラベルの拡張プロパティを返します。
 public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
 public bool IsRecommendationEnabled () const  |  推奨アクションを表すブール値を取得します。 既定では、ユーザーが else を指定しない限り、true になります。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="getnewlabelstate-function"></a>GetNewLabelState 関数
 新しいラベルの状態を取得します。

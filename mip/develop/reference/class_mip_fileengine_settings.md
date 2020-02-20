@@ -1,22 +1,22 @@
 ---
 title: class mip::FileEngine::Settings
 description: 'Microsoft Information Protection (MIP) SDK の mip:: fileengine クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 387d3819e8abe9fb24283cd0f62a78c15ce27b49
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6105a542c3c01b31598796912211f97562b25f08
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558849"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488791"
 ---
 # <a name="class-mipfileenginesettings"></a>class mip::FileEngine::Settings 
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための FileEngine:: Settings コンストラクター。
 パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための FileProfile:: Settings コンストラクター。
@@ -44,12 +44,12 @@ public const std:: string & GetDelegatedUserEmail () const  |  委任された�
 public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelFilter)  |  ラベルフィルターを設定します。
 public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベルフィルターを取得します。
   
-## <a name="members"></a>メンバー
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings 関数
 既存のエンジンを読み込むための FileEngine:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **engineId**: AddEngineAsync によって生成される一意のエンジン ID に設定します。 
 
 
@@ -66,7 +66,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="settings-function"></a>Settings 関数
 新しいエンジンを作成するための FileProfile:: Settings コンストラクター。
 
-パラメーター:  
+パラメータ:  
 * **identity**: 新しいエンジンに関連付けられているユーザーの ID 情報。 
 
 
@@ -86,7 +86,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
 
-パラメーター:  
+パラメータ:  
 * **id**: エンジン ID。
 
 
@@ -118,7 +118,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl 関数
 クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
 
-パラメーター:  
+パラメータ:  
 * **protectionCloudEndpointBaseUrl**: 保護エンドポイントに関連付けられたベース URL
 
 
@@ -132,7 +132,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl 関数
 クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
 
-パラメーター:  
+パラメータ:  
 * **policyCloudEndpointBaseUrl**: ポリシーエンドポイントに関連付けられているベース url
 
 
@@ -167,7 +167,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
 
-パラメーター:  
+パラメータ:  
 * **delegatedUserEmail**: 委任の電子メール。
 
 
@@ -182,7 +182,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setlabelfilter-function"></a>SetLabelFilter 関数
 ラベルフィルターを設定します。
 
-パラメーター:  
+パラメータ:  
 * **labelfilter**: ラベルフィルター。
 
 

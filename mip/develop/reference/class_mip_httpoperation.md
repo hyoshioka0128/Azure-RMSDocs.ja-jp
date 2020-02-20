@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: HttpOperation'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: httpoperation クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6f0c3cc726d72d89a8682907ebc350270db5daee
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4be7b54dd5df255c488043d84ebcfebbce7e6ac2
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558786"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489998"
 ---
 # <a name="class-miphttpoperation"></a>クラス mip:: HttpOperation 
 HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 操作を記述するインターフェイス。

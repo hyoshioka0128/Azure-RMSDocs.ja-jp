@@ -1,17 +1,17 @@
 ---
 title: class mip::RemoveContentHeaderAction
 description: 'Microsoft Information Protection (MIP) SDK の mip:: removecontentheaderaction クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5d9f054c692909f394113c46ec8e533e385ee83d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4a0ccc8e5f6d2d5b88af68e75eeb8d0535262879
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559997"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489522"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>class mip::RemoveContentHeaderAction 
 ドキュメントからのコンテンツ ヘッダーの削除を指定するアクション クラス。

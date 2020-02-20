@@ -1,17 +1,17 @@
 ---
 title: class mip::ClassificationResult
 description: 'Microsoft Information Protection (MIP) SDK の mip:: classificationresult クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6f4b1147ef6831ca622d095c0cada67b9f0cf023
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a245cd4d9505de8adbf3cc1a2de6d2fa20369ce7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559392"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490406"
 ---
 # <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
 実行状態での分類呼び出しの結果を含むクラス。
@@ -52,4 +52,4 @@ public std:: string GetSensitiveInformationDetections () const  |  機密情報�
 機密情報の検出を取得します。
 
   
-は、すべての機密情報の検出の Json 文字列**を返し**ます。
+は、すべての機密情報の検出の Json 文字列**を返し**ます。 空でない場合は、有効な json 形式である必要があります。

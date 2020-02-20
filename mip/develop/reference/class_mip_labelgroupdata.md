@@ -1,44 +1,46 @@
 ---
 title: 'クラス mip:: LabelGroupData'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: labelgroupdata クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a780ac706b547049a6b1de9adce237b405fea711
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558697"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489947"
 ---
 # <a name="class-miplabelgroupdata"></a>クラス mip:: LabelGroupData 
   
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | まだ文書化されていません。
-public const std:: vector\<std:: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | まだ文書化されていません。
-public int GetOrder () const  | まだ文書化されていません。
-public const std::p air\<std:: string、std:: string\>& GetColor () const  | まだ文書化されていません。
-public const std::p air\<std:: string、std:: string\>& GetName () const  | まだ文書化されていません。
-public const std::p air\<std:: string、std:: string\>& GetDescription () const  | まだ文書化されていません。
-public const std::string& GetTemplateId() const  | まだ文書化されていません。
-public const std:: string & GetInvariantName () const  | まだ文書化されていません。
-public const std::p air\<std:: string、std:: string\>& GetTooltip () const  | まだ文書化されていません。
-public const std::p air\<std:: string、std:: string\>& GetAutoTooltip () const  | まだ文書化されていません。
-public bool IsEnabled () const  | まだ文書化されていません。
-public bool IsDowngradeJustificationRequired () const  | まだ文書化されていません。
-public const std:: string & GetDefaultLabelId () const  | まだ文書化されていません。
-public const std::p air\<std:: string、std:: string\>& GetMoreInfoUrl () const  | まだ文書化されていません。
-public bool IsMandatory () const  | まだ文書化されていません。
-public const std:: vector\<ProtectionActionType\>& GetProtectionActionTypes () const  | まだ文書化されていません。
-public bool IsAuditEnabled () const  | まだ文書化されていません。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  | まだ文書化されていません。
-public const std:: vector\<std:: string\>& GetLabelByCustomProperties () const  | まだ文書化されていません。
-public const std:: vector\<std:: string\>& GetCustomPropertiesByLabel () const  | まだ文書化されていません。
-パブリック仮想 ~ LabelGroupData ()  | まだ文書化されていません。
+public const std::string& GetLabelId() const  | _まだ文書化されていません。_
+public const std:: vector\<std:: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | _まだ文書化されていません。_
+public int GetOrder () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string、std:: string\>& GetColor () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string、std:: string\>& GetName () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string、std:: string\>& GetDescription () const  | _まだ文書化されていません。_
+public const std::string& GetTemplateId() const  | _まだ文書化されていません。_
+public const std:: string & GetInvariantName () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string、std:: string\>& GetTooltip () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string、std:: string\>& GetAutoTooltip () const  | _まだ文書化されていません。_
+public bool IsEnabled () const  | _まだ文書化されていません。_
+public bool IsDowngradeJustificationRequired () const  | _まだ文書化されていません。_
+public const std:: string & GetDefaultLabelId () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string、std:: string\>& GetMoreInfoUrl () const  | _まだ文書化されていません。_
+public bool IsMandatory () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData () const  | _まだ文書化されていません。_
+public bool IsAuditEnabled () const  | _まだ文書化されていません。_
+public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: string\>& GetLabelByCustomProperties () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: string\>& GetCustomPropertiesByLabel () const  | _まだ文書化されていません。_
+public std:: vector\<std::p air\<std:: string、std:: string\>\> GetParsedCustomPropertiesByLabel () const  | _まだ文書化されていません。_
+public std:: vector\<std:: tuple\<std:: string、std:: string、std:: string\>\> GetLabelByCustomPropertiesSettings () const  | _まだ文書化されていません。_
+パブリック仮想 ~ LabelGroupData ()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   
@@ -102,7 +104,7 @@ _まだ文書化されていません。_
 _まだ文書化されていません。_
 
   
-### <a name="getprotectionactiontypes-function"></a>GetProtectionActionTypes 関数
+### <a name="getprotectionactiondata-function"></a>GetProtectionActionData 関数
 _まだ文書化されていません。_
 
   
@@ -119,6 +121,14 @@ _まだ文書化されていません。_
 
   
 ### <a name="getcustompropertiesbylabel-function"></a>GetCustomPropertiesByLabel 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getparsedcustompropertiesbylabel-function"></a>GetParsedCustomPropertiesByLabel 関数
+_まだ文書化されていません。_
+
+  
+### <a name="getlabelbycustompropertiessettings-function"></a>GetLabelByCustomPropertiesSettings 関数
 _まだ文書化されていません。_
 
   

@@ -1,17 +1,17 @@
 ---
 title: class mip::ProtectionEngine::Observer
 description: Microsoft Information Protection (MIP) SDK の mip::p rotectionengine クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 688bc59b992e885b2b9724111c19f69f860badd9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560753"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489675"
 ---
 # <a name="class-mipprotectionengineobserver"></a>class mip::ProtectionEngine::Observer 
 ProtectionEngine に関連する通知を受信するインターフェイスです。
@@ -20,18 +20,20 @@ ProtectionEngine に関連する通知を受信するインターフェイスで
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& templateIds、const std:: shared_ptr\<void\>& context)  |  テンプレートが正しく取得されると呼び出されます。
+public virtual void OnGetTemplatesSuccess (const std:: vector\<std:: shared_ptr\<TemplateDescriptor\>\>& Templatedescriptor、const std:: shared_ptr\<void\>& context)  |  テンプレートが正しく取得されると呼び出されます。
 public virtual void OnGetTemplatesFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  テンプレートの取得でエラーが発生すると呼び出されます。
 public virtual void OnGetRightsForLabelIdSuccess (const std:: shared_ptr\<std:: vector\<std:: string\>\>& 権限、const std:: shared_ptr\<void\>& context)  |  権限が正しく取得されると呼び出されます。
 public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
+public virtual void OnLoadUserCertSuccess (const std:: shared_ptr\<void\>& context)  |  ユーザー証明書が正常に読み込まれたときに呼び出されます。
+パブリック仮想 void OnLoadUserCertFailure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  ユーザー証明書の読み込みに失敗したときに呼び出されます。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="ongettemplatessuccess-function"></a>OnGetTemplatesSuccess 関数
 テンプレートが正しく取得されると呼び出されます。
 
-パラメーター:  
-* **templateIds**: 取得したテンプレートのリストへの参照 
+パラメータ:  
+* **templatedescriptors**: テンプレート記述子のリストへの参照 
 
 
 * **コンテキスト**: protectionengine:: Gettemplates async に渡されたものと同じコンテキスト
@@ -42,7 +44,7 @@ public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & er
 ### <a name="ongettemplatesfailure-function"></a>OnGetTemplatesFailure 関数
 テンプレートの取得でエラーが発生すると呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **エラー**: テンプレートの取得中にエラーが発生しました 
 
 
@@ -54,7 +56,7 @@ public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & er
 ### <a name="ongetrightsforlabelidsuccess-function"></a>OnGetRightsForLabelIdSuccess 関数
 権限が正しく取得されると呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **rights**: 取得する権限の一覧への参照 
 
 
@@ -66,7 +68,7 @@ public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & er
 ### <a name="ongetrightsforlabelidfailure-function"></a>OnGetRightsForLabelIdFailure 関数
 ユーザーのラベル ID に対する権限を取得するときに呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **エラー**: 権限を取得中にエラーが発生しました 
 
 
@@ -74,3 +76,24 @@ public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & er
 
 
 アプリケーションでは、任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: GetRightsForLabelIdAsync に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnGetRightsForLabelIdSuccess に対してそのまま転送されます。ProtectionEngine:: Observer:: OnGetRightsForLabelIdFailure
+  
+### <a name="onloadusercertsuccess-function"></a>OnLoadUserCertSuccess 関数
+ユーザー証明書が正常に読み込まれたときに呼び出されます。
+
+パラメータ:  
+* **コンテキスト**: protectionengine:: LoadUserCert に渡されたものと同じコンテキスト
+
+
+アプリケーションでは、任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: LoadUserCertAsync に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnLoadUserCertSuccess または ProtectionEngine:: O にそのまま転送されます。bserver:: OnLoadUserCertFailure
+  
+### <a name="onloadusercertfailure-function"></a>OnLoadUserCertFailure 関数
+ユーザー証明書の読み込みに失敗したときに呼び出されます。
+
+パラメータ:  
+* **エラー**: 権限を取得中にエラーが発生しました 
+
+
+* **コンテキスト**: protectionengine:: LoadUserCert に渡されたものと同じコンテキスト
+
+
+アプリケーションでは、任意の種類のコンテキスト (std::p romise、std:: function など) を ProtectionEngine:: LoadUserCertAsync に渡すことができ、同じコンテキストは ProtectionEngine:: Observer:: OnLoadUserCertSuccess または ProtectionEngine:: O にそのまま転送されます。bserver:: OnLoadUserCertFailure

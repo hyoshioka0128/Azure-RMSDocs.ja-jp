@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fb6c857d06da7a68d01d095db556216fee990dc6
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555978"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489250"
 ---
 # <a name="functions"></a>関数
 
@@ -19,7 +19,7 @@ ms.locfileid: "75555978"
 
 ## <a name="namespace-mip"></a>名前空間 mip
 
-| 名前空間スコープ別の関数   | 説明                                |
+| 名前空間スコープ別の関数   | [説明]                                |
 |--------------------------------|---------------------------------------------|
 public std:: string GetAssignmentMethodString (メソッドの指定)       |  指定されたメソッドの列挙型を文字列の説明に変換します。
 public static std:: string GetActionSourceString (ActionSource actionSource)       |  アクションのソース名を取得します。
@@ -30,6 +30,8 @@ public const std::string& GetCustomSettingSensitivityTypesDataName()       |  �
 public const std::string& GetCustomSettingPolicyDataFile()       |  ポリシー データのファイルのパスを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  感度の種類のデータファイルパスを明示的に指定する設定の名前。
 public const std:: string & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  ラベル機能によってカスタムプロパティとカスタムプロパティによってラベルを有効にできる設定の名前。
+public const std:: string & GetCustomSettingPolicyTtlDays ()       |  ポリシー ttl の上書きを有効にする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
+public const std:: string & GetCustomSettingSensitivityPolicyTtlDays ()       |  秘密度ポリシーの ttl を上書きできるようにする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
 public const std:: map\<、GetDefaultFeatureSettings () のように、フライト機能、bool\>& ます。       |  機能が既定で有効になっているかどうかを取得します。
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: istream\>& stdIStream)       |  Std:: istream からストリームを作成します。
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: ostream\>& stdOStream)       |  Std:: ostream からストリームを作成します。
@@ -42,29 +44,24 @@ public ActionType operator ^ (ActionType a, ActionType b)       |  アクショ�
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString 関数
 指定されたメソッドの列挙型を文字列の説明に変換します。
 
-パラメーター:  
+パラメータ:  
 * **メソッド**: 割り当てメソッド。 
 
 
-
-  
 **戻り値**: 割り当てメソッドの文字列の説明。
   
 ### <a name="getactionsourcestring-function"></a>GetActionSourceString 関数
 アクションのソース名を取得します。
 
-パラメーター:  
+パラメータ:  
 * **actionsource**: アクションのソース。 
 
-
-
-  
 は、アクションソースの文字列形式を**返し**ます。
   
 ### <a name="getdatastatestring-function"></a>GetDataStateString 関数
 コンテンツの状態名を取得します。
 
-パラメーター:  
+パラメータ:  
 * **Actionsource**: 作業中のコンテンツの状態。 
 
 
@@ -108,6 +105,18 @@ SCC ポリシー データをエクスポートするファイルのパスを明
   
 **戻り値**: カスタムの設定キー。
   
+### <a name="getcustomsettingpolicyttldays-function"></a>GetCustomSettingPolicyTtlDays 関数
+ポリシー ttl の上書きを有効にする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
+
+  
+**戻り値**: カスタムの設定キー。
+  
+### <a name="getcustomsettingsensitivitypolicyttldays-function"></a>GetCustomSettingSensitivityPolicyTtlDays 関数
+秘密度ポリシーの ttl を上書きできるようにする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
+
+  
+**戻り値**: カスタムの設定キー。
+  
 ### <a name="getdefaultfeaturesettings-function"></a>GetDefaultFeatureSettings 関数
 機能が既定で有効になっているかどうかを取得します。
 
@@ -117,7 +126,7 @@ SCC ポリシー データをエクスポートするファイルのパスを明
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
 Std:: istream からストリームを作成します。
 
-パラメーター:  
+パラメータ:  
 * **stdIStream**: std::istream のバッキング
 
 
@@ -128,7 +137,7 @@ Std:: istream からストリームを作成します。
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
 Std:: ostream からストリームを作成します。
 
-パラメーター:  
+パラメータ:  
 * **stdOStream**: std::ostream のバッキング
 
 
@@ -139,7 +148,7 @@ Std:: ostream からストリームを作成します。
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
 Std:: iostream からストリームを作成します。
 
-パラメーター:  
+パラメータ:  
 * **stdIOStream**: std::iostream のバッキング
 
 
@@ -150,7 +159,7 @@ Std:: iostream からストリームを作成します。
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer 関数
 バッファーからストリームを作成します。
 
-パラメーター:  
+パラメータ:  
 * **buffer**: バッファーへのポインター
 
 
@@ -161,7 +170,7 @@ Std:: iostream からストリームを作成します。
 ### <a name="readfromstream-function"></a>ReadFromStream 関数
 ストリームのすべてのバイトを読み取ります。
 
-パラメーター:  
+パラメータ:  
 * **ポインター**: ストリームへのポインター。
 
 
@@ -180,12 +189,12 @@ Std:: iostream からストリームを作成します。
 
 ## <a name="namespace-mipauditmetadatakeys"></a>名前空間 mip:: auditmetadatakeys
 
- [メンバー]                        | 説明                                
+Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std:: string Sender ()       |  文字列形式のメタデータキーを監査します。
-public std:: string Recipients ()       | まだ文書化されていません。
-public std:: string Lastsystem.string ()       | まだ文書化されていません。
-public std:: string LastModifiedDate ()       | まだ文書化されていません。
+public std:: string Recipients ()       | _まだ文書化されていません。_
+public std:: string Lastsystem.string ()       | _まだ文書化されていません。_
+public std:: string LastModifiedDate ()       | _まだ文書化されていません。_
   
 ### <a name="sender-function"></a>Sender 関数
 文字列形式のメタデータキーを監査します。
@@ -204,7 +213,7 @@ _まだ文書化されていません。_
 
 ## <a name="namespace-miprights"></a>名前空間の `mip::rights` 
   
- [メンバー]                        | 説明                                
+Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  '所有者' 権限の文字列識別子を取得します。
 public std::string View()       |  '表示' 権限の文字列識別子を取得します。
@@ -221,7 +230,6 @@ public std:: vector\<std:: string\> EmailRights ()       |  電子メールに�
 public std:: vector\<std:: string\> EditableDocumentRights ()       |  ドキュメントに適用される権限の一覧を取得します。
 public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナリオで適用される権限の一覧を取得します。
   
-
 ### <a name="owner-function"></a>Owner 関数
 '所有者' 権限の文字列識別子を取得します。
 
@@ -306,9 +314,9 @@ public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナ�
   
 **戻り値**: すべてのシナリオで適用される権限の一覧
 
-## <a name="namespace-miproles"></a>名前空間 mip:: roles
+## <a name="namespace-miproles"></a>名前空間の `mip::roles` 
   
- [メンバー]                        | 説明                                
+Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  'ビューアー' ロールの文字列識別子を取得します。
 public std::string Reviewer()       |  'レビュー担当者' ロールの文字列識別子を取得します。
@@ -338,4 +346,3 @@ public std::string CoOwner()       |  '共同所有者' ロールの文字列識
 
   
 **戻り値**: '共同所有者' ロールの文字列識別子。共同所有者はすべてのアクセス許可を持ちます。
-

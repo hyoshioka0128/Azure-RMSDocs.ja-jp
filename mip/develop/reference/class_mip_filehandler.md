@@ -1,23 +1,23 @@
 ---
 title: class mip::FileHandler
 description: 'Microsoft Information Protection (MIP) SDK の mip:: filehandler クラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: b2a6e3cd6de886c3e3983442a1ec7185b688b662
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 52c28c1763fc3e7513f98a23a18cb6c91e0ed508
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558834"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488740"
 ---
 # <a name="class-mipfilehandler"></a>class mip::FileHandler 
 すべてのファイル処理関数のインターフェイス。
   
 ## <a name="summary"></a>要約
- メンバー                        | 説明                                
+ Members                        | [説明]                                
 --------------------------------|---------------------------------------------
 public std:: shared_ptr\<ContentLabel\> GetLabel ()  |  ファイルからの機密ラベルの取得を開始します。
 public std:: shared_ptr\<ProtectionHandler\> GetProtection ()  |  ファイルからの保護ポリシーの取得を開始します。
@@ -28,17 +28,15 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  ファイル
 public void SetProtection (const std:: shared_ptr\<ProtectionDescriptor\>& protectionDescriptor、const Protectiondescriptor & Protectiondescriptor)  |  カスタムまたはテンプレート ベースのアクセス許可 (protectionDescriptor->GetProtectionType に従う) のいずれかをファイルに設定します。
 public void SetProtection (const std:: shared_ptr\<ProtectionHandler\>& protectionHandler)  |  既存の保護ハンドラーを使用して、ドキュメントの保護を設定します。
 public void RemoveProtection()  |  ファイルから保護を削除します。 ファイルにラベルが付いている場合、ラベルは失われます。
-public void CommitAsync (const std:: string & outputFilePath、const std:: shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  パラメーターに渡します。
-public void CommitAsync (const std:: shared_ptr\<Stream\>& outputStream、const std:: shared_ptr\<void\>& context) | \|outputStream\ で指定されたストリームに変更を書き込みます。 |  パラメーターに渡します。
+public void CommitAsync (const std:: string & outputFilePath、const std:: shared_ptr\<void\>& context) | \|outputFilePath\ で指定されたファイルに変更を書き込みます。 |  パラメーターの値として false を渡します。
+public void CommitAsync (const std:: shared_ptr\<Stream\>& outputStream、const std:: shared_ptr\<void\>& context) | \|outputStream\ で指定されたストリームに変更を書き込みます。 |  パラメーターの値として false を渡します。
 public bool IsModified ()  |  ファイルにコミットする変更があるかどうかを確認します。
 public void GetDecryptedTemporaryFileAsync (const std:: shared_ptr\<void\>& context)  |  復号化されたコンテンツを表す一時ファイル (可能であれば削除される) へのパスを返します。
 public void GetDecryptedTemporaryStreamAsync (const std:: shared_ptr\<void\>& context)  |  復号化されたコンテンツを表すストリームを返します。
 public void NotifyCommitSuccessful (const std:: string & actualFilePath)  |  変更がディスクにコミットされたときに、呼び出されます。
 public std::string GetOutputFileName()  |  元のファイル名および累積された変更に基づいて出力ファイル名と拡張子を計算します。
-public static bool IsProtected (const std:: string & filePath、const std:: shared_ptr<MipContext>& mipContext) | ファイルが保護されているかどうかを確認します。
-public static FILE_API std:: vector&lt;uint8_t&gt; __CDECL mip:: FileHandler:: GetSerializedPublishingLicense | ファイルに公開ライセンスがある場合は、それを返します。
-
-## <a name="members"></a>メンバー
+  
+## <a name="members"></a>Members
   
 ### <a name="getlabel-function"></a>GetLabel 関数
 ファイルからの機密ラベルの取得を開始します。
@@ -101,7 +99,7 @@ FileHandler:: オブザーバーは、成功または失敗時に呼び出され
 ### <a name="notifycommitsuccessful-function"></a>NotifyCommitSuccessful 関数
 変更がディスクにコミットされたときに、呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **Actualfilepath**: 出力ファイルの実際のファイルパス 
 
 
@@ -109,9 +107,3 @@ FileHandler:: オブザーバーは、成功または失敗時に呼び出され
   
 ### <a name="getoutputfilename-function"></a>GetOutputFileName 関数
 元のファイル名および累積された変更に基づいて出力ファイル名と拡張子を計算します。
-
-### <a name="isprotected-function"></a>IsProtected 関数
-ファイルが保護されているかどうかを確認します。
-
-### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense 関数
-ファイルに公開ライセンスがある場合は、それを返します。

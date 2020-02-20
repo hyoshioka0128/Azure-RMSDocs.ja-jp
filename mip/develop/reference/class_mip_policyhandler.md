@@ -1,17 +1,17 @@
 ---
 title: class mip::PolicyHandler
 description: Microsoft Information Protection (MIP) SDK の mip::p olicyhandler クラスについて説明します。
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 71b1a9dff879cde728e7fa1aa9e1f871d292ec4c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f270a628a6320b005145aab8cd0611acc907d68
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560923"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489794"
 ---
 # <a name="class-mippolicyhandler"></a>class mip::PolicyHandler 
 このクラスは、ファイル上のすべてのポリシー ハンドラー関数にインターフェイスを提供します。
@@ -28,7 +28,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 ### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel 関数
 既存のコンテンツから機密ラベルを取得します。
 
-パラメーター:  
+パラメータ:  
 * **state**: コンテンツの現在の状態。 
 
 
@@ -39,7 +39,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 ### <a name="computeactions-function"></a>ComputeActions 関数
 指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
 
-パラメーター:  
+パラメータ:  
 * **state**: ルールが実行されているコンテンツの現在の実行状態。 
 
 
@@ -50,7 +50,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 ### <a name="notifycommittedactions-function"></a>NotifyCommittedActions 関数
 計算されたアクションが適用され、データがディスクにコミットされると呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **状態**: アクションがコミットされた後のコンテンツの現在の実行状態。 
 
 

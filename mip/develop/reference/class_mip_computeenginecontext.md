@@ -1,25 +1,25 @@
 ---
 title: 'クラス mip:: ComputeEngineContext'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: computeenginecontext クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 000da66a931e46151eaf67183257da9efdfdd539
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 78109b683d163dfec80a3cf0831abd2f1d9c97de
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558947"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490355"
 ---
 # <a name="class-mipcomputeenginecontext"></a>クラス mip:: ComputeEngineContext 
   
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 ~ ComputeEngineContext ()  | まだ文書化されていません。
-protected ComputeEngineContext ()  | まだ文書化されていません。
+パブリック仮想 ~ ComputeEngineContext ()  | _まだ文書化されていません。_
+protected ComputeEngineContext ()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   

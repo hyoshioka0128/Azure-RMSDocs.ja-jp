@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 69896e60fcf8aa33b2181fd22aeda803ab35b1cf
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: fb1657bc39f49b161c5ed986cd381cfd5d4cab49
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555995"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489233"
 ---
 # <a name="mip-sdk-for-c-reference"></a>参照用C++ MIP SDK
 
@@ -23,7 +23,9 @@ MIP SDK for C++ には次が含まれます。
 - [関数](mip-functions.md)
 - 次のクラス:
 
- インスタンス                         | Description                                
+## <a name="namespace-mip-classes"></a>名前空間 mip クラス
+
+ クラス                         | 説明                                
 --------------------------------|---------------------------------------------
 [クラス mip:: AccessDeniedError](class_mip_accessdeniederror.md)  |  ユーザーがコンテンツにアクセスできませんでした。 例: アクセス許可がない、コンテンツが取り消された。
 [クラス mip:: Action](class_mip_action.md)  |  アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します
@@ -36,15 +38,13 @@ MIP SDK for C++ には次が含まれます。
 [クラス mip:: ApplicationActionState](class_mip_applicationactionstate.md)  | まだ文書化されていません。
 [クラス mip:: ApplyLabelAction](class_mip_applylabelaction.md)  |  ラベルのアクションを適用するには、呼び出し元のアプリケーションで特定のラベルを適用する必要があります。
 [クラス mip:: ArgumentData](class_mip_argumentdata.md)  | まだ文書化されていません。
+[クラス mip:: AsyncControl](class_mip_asynccontrol.md)  |  非同期操作を取り消すために使用されるクラスです。
 [クラス mip:: AuthDelegate](class_mip_authdelegate.md)  |  認証関連の操作のデリゲート。
-[クラス mip:: AuthDelegate:: OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md)  |  oauth2 トークンを生成するために、呼び出し元アプリケーションから必要なすべての情報を含むクラス。
-[クラス mip:: AuthDelegate:: OAuth2Token](class_mip_authdelegate_oauth2token.md)  |  Mipmap SDK が oauth2 トークンを SDK に渡すことを要求する方法を定義するクラス。
 [クラス mip:: BadInputError](class_mip_badinputerror.md)  |  無効な入力エラー。SDK の API への入力が無効だった場合にスローされます。
 [クラス mip:: ClassificationData](class_mip_classificationdata.md)  | まだ文書化されていません。
 [クラス mip:: ClassificationRequest](class_mip_classificationrequest.md)  |  実行状態に対する分類呼び出しの要求を含むクラス。
 [クラス mip:: ClassificationResult](class_mip_classificationresult.md)  |  実行状態での分類呼び出しの結果を含むクラス。
 [クラス mip:: ComputeEngine](class_mip_computeengine.md)  | まだ文書化されていません。
-[クラス mip:: ComputeEngine:: Settings](class_mip_computeengine_settings.md)  | まだ文書化されていません。
 [クラス mip:: ComputeEngineContext](class_mip_computeenginecontext.md)  | まだ文書化されていません。
 [クラス mip:: ConditionData](class_mip_conditiondata.md)  | まだ文書化されていません。
 [クラス mip:: Conのデリゲート](class_mip_consentdelegate.md)  |  同意に関連する操作の委任。
@@ -57,20 +57,17 @@ MIP SDK for C++ には次が含まれます。
 [クラス mip:: Error](class_mip_error.md)  |  MIP SDK からレポートされる (スローまたは返される) すべてのエラーの基底クラス。
 [クラス mip:: ExecutionState](class_mip_executionstate.md)  |  エンジンの実行に必要なすべての状態のインターフェイス。
 [クラス mip:: FileEngine](class_mip_fileengine.md)  |  このクラスは、すべてのエンジン関数のインターフェイスを提供します。
-[クラス mip:: FileEngine:: Settings](class_mip_fileengine_settings.md)  | まだ文書化されていません。
 [クラス mip:: FileExecutionState](class_mip_fileexecutionstate.md)  | まだ文書化されていません。
 [クラス mip:: FileHandler](class_mip_filehandler.md)  |  すべてのファイル処理関数のインターフェイス。
-[クラス mip:: FileHandler:: オブザーバー](class_mip_filehandler_observer.md)  |  クライアントがファイルハンドラーに関連する通知イベントを取得するためのオブザーバーインターフェイス。
 [クラス mip:: FileInspector](class_mip_fileinspector.md)  | まだ文書化されていません。
 [クラス mip:: FileIOError](class_mip_fileioerror.md)  |  ファイル IO エラー。
 [クラス mip:: FileProfile](class_mip_fileprofile.md)  |  FileProfile クラスは、Microsoft Information Protection 操作を使用するためのルートクラスです。
-[クラス mip:: FileProfile:: オブザーバー](class_mip_fileprofile_observer.md)  |  クライアントがプロファイル関連イベントの通知を取得するためのオブザーバーインターフェイス。
-[クラス mip:: FileProfile:: Settings](class_mip_fileprofile_settings.md)  |  作成時および有効期間全体にわたって FileProfile によって使用される設定。
 [クラス mip:: HttpDelegate](class_mip_httpdelegate.md)  |  HTTP の処理をオーバーライドするインターフェイス。
 [クラス mip:: HttpOperation](class_mip_httpoperation.md)  |  HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 操作を記述するインターフェイス。
 [クラス mip:: HttpRequest](class_mip_httprequest.md)  |  1 つの HTTP 要求を表すインターフェイス。
 [クラス mip:: Httpresponse.cache](class_mip_httpresponse.md)  |  HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 応答を記述するインターフェイス。
 [クラス mip:: Identity](class_mip_identity.md)  |  Id の抽象化。
+[クラス mip:: InsufficientBufferError](class_mip_insufficientbuffererror.md)  |  バッファーエラーが不足しています。
 [クラス mip:: InternalError](class_mip_internalerror.md)  |  内部エラー。 このエラーは、実行中に予期しない事態が発生するとスローされます。
 [クラス mip:: JustificationRequiredError](class_mip_justificationrequirederror.md)  | まだ文書化されていません。
 [クラス mip:: ジャスト Ifyaction](class_mip_justifyaction.md)  |  ジャスティフィケーションアクションでは、ラベルダウングレードに対する根拠を提示し、応答を実行状態に設定する必要があります。
@@ -92,14 +89,10 @@ MIP SDK for C++ には次が含まれます。
 [クラス mip:: NotSupportedError](class_mip_notsupportederror.md)  |  アプリケーションによって要求された操作は、SDK ではサポートされていません。
 [クラス mip:: Operationcancel-Error](class_mip_operationcancellederror.md)  |  操作が取り消されました。
 [クラス mip::P olicyEngine](class_mip_policyengine.md)  |  このクラスは、すべてのエンジン関数のインターフェイスを提供します。
-[クラス mip::P olicyEngine:: Settings](class_mip_policyengine_settings.md)  |  PolicyEngine に関連付けられた設定を定義します。
 [クラス mip::P olicyHandler](class_mip_policyhandler.md)  |  このクラスは、ファイル上のすべてのポリシー ハンドラー関数にインターフェイスを提供します。
 [クラス mip::P olicyPackageData](class_mip_policypackagedata.md)  | まだ文書化されていません。
 [クラス mip::P olicyProfile](class_mip_policyprofile.md)  |  PolicyProfile クラスは、Microsoft Information Protection 操作を使用するためのルートクラスです。 一般的なアプリケーションで必要な PolicyProfile は1つだけですが、必要に応じて複数のプロファイルを作成できます。
-[クラス mip::P olicyProfile:: オブザーバー](class_mip_policyprofile_observer.md)  |  クライアントがプロファイル関連イベントの通知を取得するためのオブザーバーインターフェイス。
-[クラス mip::P olicyProfile:: Settings](class_mip_policyprofile_settings.md)  |  作成時および有効期間全体にわたって PolicyProfile によって使用される設定。
 [クラス mip::P olicyRuleData](class_mip_policyruledata.md)  | まだ文書化されていません。
-[クラス mip::P olicySyncError](class_mip_policysyncerror.md)  |  ポリシー データを同期しようとして失敗しました。
 [クラス mip::P rivilegedRequiredError](class_mip_privilegedrequirederror.md)  |  現在のラベルは特権操作 (管理者の操作と同等) として割り当てられています。このため、オーバーライドできません。
 [クラス mip::P ropertyData](class_mip_propertydata.md)  | まだ文書化されていません。
 [クラス mip::P rotectAdhocAction](class_mip_protectadhocaction.md)  |  アドホック保護をドキュメントに追加することを指定するアクション クラス。
@@ -109,15 +102,8 @@ MIP SDK for C++ には次が含まれます。
 [クラス mip::P rotectionDescriptor](class_mip_protectiondescriptor.md)  |  コンテンツの一部に関連付けられている保護の説明。
 [クラス mip::P rotectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)  |  コンテンツの一部に関連付けられた保護を記述する ProtectionDescriptor を構築します。
 [クラス mip::P rotectionEngine](class_mip_protectionengine.md)  |  特定の ID に関連する、保護関連のアクションを管理します。
-[クラス mip::P rotectionEngine:: オブザーバー](class_mip_protectionengine_observer.md)  |  ProtectionEngine に関連する通知を受信するインターフェイスです。
-[クラス mip::P rotectionEngine:: Settings](class_mip_protectionengine_settings.md)  |  作成時および有効期間全体にわたって ProtectionEngine によって使用される設定。
 [クラス mip::P rotectionHandler](class_mip_protectionhandler.md)  |  特定の保護構成のための保護に関連するアクションを管理します。
-[クラス mip::P rotectionHandler:: ConsumptionSettings](class_mip_protectionhandler_consumptionsettings.md)  |  既存のコンテンツを使用する ProtectionHandler を作成するために使用される設定。
-[クラス mip::P rotectionHandler:: オブザーバー](class_mip_protectionhandler_observer.md)  |  ProtectionHandler に関連する通知を受信するインターフェイスです。
-[クラス mip::P rotectionHandler::P ublishingSettings](class_mip_protectionhandler_publishingsettings.md)  |  新しいコンテンツを保護する ProtectionHandler を作成するために使用される設定。
 [クラス mip::P rotectionProfile](class_mip_protectionprofile.md)  |  ProtectionProfile は、保護操作を実行するためのルートクラスです。
-[クラス mip::P rotectionProfile:: オブザーバー](class_mip_protectionprofile_observer.md)  |  ProtectionProfile に関連する通知を受信するインターフェイスです。
-[クラス mip::P rotectionProfile:: Settings](class_mip_protectionprofile_settings.md)  |  作成時および有効期間全体にわたって ProtectionProfile によって使用される設定。
 [クラス mip::P rotectionSettings](class_mip_protectionsettings.md)  |  SetLabel メソッドの保護オプションを構成するためのインターフェイスです。
 [クラス mip::P roxyAuthenticationError](class_mip_proxyauthenticationerror.md)  |  プロキシ認証エラーです。
 [クラス mip::P ublishingLicenseInfo](class_mip_publishinglicenseinfo.md)  |  保護ハンドラーを作成するために使用する発行ライセンスの詳細を保持します。
@@ -135,7 +121,11 @@ MIP SDK for C++ には次が含まれます。
 [クラス mip:: SyncFilePolicyData](class_mip_syncfilepolicydata.md)  | まだ文書化されていません。
 [クラス mip:: SyncFileSensitivityData](class_mip_syncfilesensitivitydata.md)  | まだ文書化されていません。
 [クラス mip:: TaskDispatcherDelegate](class_mip_taskdispatcherdelegate.md)  |  MIP SDK タスクディスパッチャーへのインターフェイスを定義するクラス。
+[クラス mip:: TemplateDescriptor](class_mip_templatedescriptor.md)  | まだ文書化されていません。
 [クラス mip:: Templatenotfound エラー](class_mip_templatenotfounderror.md)  |  テンプレート ID は RMS サービスによって認識されません。
-[クラス mip:: 遷移 Entnetworkerror](class_mip_transientnetworkerror.md)  |  一時的なネットワーク エラー。 サービス エンドポイントに対するネットワーク呼び出しを作成する際の、予期しない動作によって発生します。 このエラーは一時的なエラーであるため、この操作は再試行できます。
 [クラス mip:: UserRights](class_mip_userrights.md)  |  ユーザーのグループおよびそれらに関連付けられている権限。
 [クラス mip:: UserRoles](class_mip_userroles.md)  |  ユーザーのグループおよびそれらに関連付けられているロール。
+struct mip:: ApplicationInfo  |  アプリケーション固有の情報を含む構造体。
+struct mip:: TelemetryConfiguration  |  カスタムテレメトリ設定 (一般的には使用されません)
+
+

@@ -1,17 +1,17 @@
 ---
 title: class mip::Error
 description: 'Microsoft Information Protection (MIP) SDK の mip:: error クラスについて説明します。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f59a2b394cbf0bfa5deb555e2c4cdd8c427ed7ea
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: c27458e658af47d14d718dbbf9bc19e7687603fd
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560294"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490100"
 ---
 # <a name="class-miperror"></a>class mip::Error 
 MIP SDK からレポートされる (スローまたは返される) すべてのエラーの基底クラス。
@@ -19,48 +19,6 @@ MIP SDK からレポートされる (スローまたは返される) すべて�
 ## <a name="summary"></a>要約
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public char const* what() const  |  エラー メッセージを取得します。
-public std:: shared_ptr\<Error\> Clone () const  |  エラーを複製します。
-public virtual ErrorType GetErrorType() const  |  エラーの種類を取得します。
-public virtual const std::string& GetErrorName() const  |  エラー名を取得します。
-public virtual const std::string& GetMessage() const  |  エラー メッセージを取得します。
-public virtual void SetMessage(const std::string& msg)  |  エラー メッセージを設定します。
   
 ## <a name="members"></a>メンバー
-  
-### <a name="what-function"></a>機能
-エラー メッセージを取得します。
-
-  
-**戻り値**: エラー メッセージ
-  
-### <a name="clone-function"></a>Clone 関数
-エラーを複製します。
-
-  
-**戻り値**: エラーの複製。
-  
-### <a name="geterrortype-function"></a>GetErrorType 関数
-エラーの種類を取得します。
-
-  
-**戻り値**: エラーの種類。
-  
-### <a name="geterrorname-function"></a>GetErrorName 関数
-エラー名を取得します。
-
-  
-**戻り値**: エラー名。
-  
-### <a name="getmessage-function"></a>GetMessage 関数
-エラー メッセージを取得します。
-
-  
-**戻り値**: エラー メッセージ。
-  
-### <a name="setmessage-function"></a>SetMessage 関数
-エラー メッセージを設定します。
-
-パラメーター:  
-* **msg**: エラー メッセージ。
-
+_まだ文書化されていません。_

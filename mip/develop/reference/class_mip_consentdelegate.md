@@ -1,17 +1,17 @@
 ---
 title: 'クラス mip:: Conのデリゲート'
 description: 'Microsoft Information Protection (MIP) SDK の mip:: conのデリゲートクラスを文書にします。'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 479ce747334de7e8e73efb84738b6793584c55ab
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: bbeca67a1ffcd5a7b159883c97a2eb3a08bfb3e2
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840243"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490321"
 ---
 # <a name="class-mipconsentdelegate"></a>クラス mip:: Conのデリゲート 
 同意に関連する操作の委任。
@@ -27,7 +27,7 @@ public Consent GetUserConsent(const std::string& url)  |  SDK でサービス �
 ### <a name="getuserconsent-function"></a>GetUserConsent 関数
 SDK でサービス エンドポイントに接続するためのユーザーの同意が求められたときに呼び出されます。
 
-パラメーター:  
+パラメータ:  
 * **url**: SDK でユーザーの同意が求められる URL
 
 
