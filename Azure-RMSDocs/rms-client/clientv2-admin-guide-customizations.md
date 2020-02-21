@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8e91257484ccb148475d16e3fd5de2905b8691c3
-ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
+ms.openlocfilehash: b4ddfa8a7746de36030cb38b726949a19eebf73d
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77045020"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507707"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -57,6 +57,8 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 詳細設定を削除するには、同じ構文を使用しますが、null 文字列値を指定します。
 
+> [!IMPORTANT]
+> 文字列に空白を使用すると、ラベルの適用ができなくなります。 
 
 #### <a name="examples-for-setting-advanced-settings"></a>詳細設定の設定例
 
@@ -111,6 +113,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 
 ラベルポリシーの詳細設定は、逆の順序で適用されます。1つの例外として、管理センターのポリシーの順序に従って、最初のポリシーの詳細設定が適用されます。 例外は、Outlook に別の既定のラベルを設定する、 *Outlookdefaultlabel*の詳細設定です。 このラベルポリシーの詳細設定のみの場合、最後の設定は管理センターのポリシーの順序に従って適用されます。
 
+
 #### <a name="available-advanced-settings-for-label-policies"></a>ラベルポリシーの使用可能な詳細設定
 
 [新しい-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps)と[設定-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps)を指定して、 *advanced settings*パラメーターを使用します。
@@ -121,6 +124,7 @@ PowerShell セキュリティ/コンプライアンスセンター Office 365 �
 |AttachmentActionTip|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableAudit|[Azure Information Protection analytics への監査データの送信を無効にする](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|EnableContainerSupport|[PST、rar、7zip、および MSG ファイルからの保護の削除を有効にする](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[エクスプローラーでカスタムアクセス許可を無効にする](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Secure Islands からのラベルの移行と、その他のラベル付けのソリューション](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -212,6 +216,20 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+
+## <a name="enable-removal-of-protection-from-compressed-files"></a>圧縮ファイルからの保護の削除を有効にする
+
+この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
+
+この設定を構成すると、 [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)コマンドレット**set-aipfilelabel**が有効になり、PST、rar、7ZIP、および MSG ファイルからの保護の削除が可能になります。
+
+- キー:**設定-LabelPolicy**
+
+- 値: **True**
+
+ポリシーが有効になっている PowerShell コマンドの例:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
 
@@ -335,7 +353,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - 値: \<**Office アプリケーションの種類 WXP**> 
 
-例:
+次に例を示します。
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -364,7 +382,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
     例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 正確にこの文字列が含まれているヘッダーまたはフッターを削除したいとします。 値 `^TEXT TO REMOVE$` を指定します。
     
 
-指定した文字列のパターン マッチングでは大文字と小文字が区別されます。 文字列の最大長は 255 文字です。
+指定した文字列のパターン マッチングでは大文字と小文字が区別されます。 文字列の最大長は255文字で、空白を含めることはできません。 
 
 一部のドキュメントには非表示の文字やさまざまな種類のスペースやタブが含まれているため、語句や文に指定した文字列が検出されない可能性があります。 値には、できるだけ単独の特徴的な単語を指定し、運用環境に展開する前に結果をテストしてください。
 
@@ -928,6 +946,9 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 この構成では、追加のカスタムプロパティを適用する各機密ラベルに対して、 **Custompropertiesbylabel**という名前の詳細設定を指定する必要があります。 次に、各エントリに対して、次の構文を使用して値を設定します。
 
 `[custom property name],[custom property value]`
+
+> [!IMPORTANT]
+> 文字列に空白を使用すると、ラベルの適用ができなくなります。
 
 #### <a name="example-1-add-a-single-custom-property-for-a-label"></a>例 1: ラベルに対して1つのカスタムプロパティを追加する
 

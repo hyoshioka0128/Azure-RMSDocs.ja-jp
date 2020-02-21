@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d78151a9eb2ecc64a21ed1076095b6a6f56278a
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 7e1ec5241cfedf89b33258115afbc1ee86eae3b3
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117971"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507639"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
@@ -44,7 +44,7 @@ Active Directory Rights Management サービス (AD RMS) デプロイを Azure I
 
 - [Microsoft Rights Management コネクタの概要](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): RMS コネクタに関するドキュメントのこのセクションでは、オンプレミス サービスから Azure Rights Management サービスに接続してドキュメントと電子メールを保護する方法について説明しています。
 
-また、AD RMS のしくみを理解している場合は、Azure RMS のしくみを確認すると役立つことがあり[ます。内部で](./how-does-it-work.md)は、クラウドのバージョンと同じまたは異なるテクノロジプロセスを特定するのに役立ちます。
+また、AD RMS の動作に慣れていない場合は、Azure RMS のしくみを確認すると役立つことがあり[ます。内部で](./how-does-it-work.md)は、クラウドのバージョンと同じまたは異なるテクノロジプロセスを特定するのに役立ちます。
 
 ## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行の前提条件
 
@@ -213,6 +213,6 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
     移行前に暗号化モード 2 で実行されていない場合は、この手順の使用をお勧めします。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 移行を始めるには、「[フェーズ 1 - 準備](migrate-from-ad-rms-phase1.md)」に進んでください。
 

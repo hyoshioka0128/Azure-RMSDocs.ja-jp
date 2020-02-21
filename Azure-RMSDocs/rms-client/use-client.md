@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 8585245243813977c6c7442fab4d5687e89882c1
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 96a1af247d9c65077be3dc7706cc1976850540fd
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422844"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494881"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -105,7 +105,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |Office アプリの Information Protection バー:| **○** | **○**| いいえ |
 |ラベルアクションとしての視覚的なマーキング (ヘッダー、フッター、透かし):| **○** | **○** | **○**|
 |アプリごとの視覚的マーキング:| **○** | **はい* | いいえ |
-|変数を使用した動的な視覚的マーキング:| **○** | **** | いいえ |
+|変数を使用した動的な視覚的マーキング:| **○** | **はい**(プレビュー) | いいえ |
 |ファイルエクスプローラーでラベルを付ける:| **○** | **○** | いいえ |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **○** | **○** | いいえ|
 |ラベルを適用するための PPDF のサポート:| **○** | いいえ | いいえ |

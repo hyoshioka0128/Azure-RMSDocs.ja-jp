@@ -1,10 +1,10 @@
 ---
 title: Configure servers for the Rights Management コネクタ用にサーバーを構成する - AIP
 description: Azure Rights Management (RMS) コネクタを使用するオンプレミス サーバーの構成に役立つ情報です。 これらの手順では、「Azure Rights Management コネクタを展開する」の手順 5 について説明します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 96e8c633201731796c7aecfdda0ef513fc2e261d
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117622"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494874"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -41,13 +41,13 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 -   **ファイル分類インフラストラクチャの場合**:ファイル リソース マネージャーをインストールした Windows Server コンピューター
 
-この構成にはレジストリの設定が必要です。 レジストリの構成は、Microsoft RMS コネクタのサーバー構成ツールを使用することによって自動で、 またはレジストリを編集することによって手動で行うことができます。
+この構成にはレジストリの設定が必要です。 レジストリの構成は、Microsoft RMS コネクタのサーバー構成ツールを使用することによって自動で、またはレジストリを編集することによって手動で行うことができます。
 
 ---
 
 **Microsoft RMS コネクタ用のサーバー構成ツールを使用した自動構成:**
 
-- 利点:
+- 利点 :
 
     - レジストリを直接編集する必要はありません。 スクリプトを使用して自動構成されます。
 
@@ -63,7 +63,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 **レジストリの編集による手動構成:**
 
-- 利点:
+- 利点 :
 
     - RMS コネクタが実行されているサーバーに接続する必要はありません。
 
@@ -175,6 +175,8 @@ RMS コネクタを使用するには、サーバーで実行されている Exc
 
 RMS コネクタを使用するには、サーバーで実行されている SharePoint が、次のいずれかのソフトウェア バージョンである必要があります。
 
+-   SharePoint Server 2019
+
 -   SharePoint Server 2016
 
 -   SharePoint Server 2013
@@ -208,11 +210,11 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
 3.  SharePoint で IRM を有効にします。 詳細については、SharePoint ライブラリの「[Information Rights Management を構成する (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx)」をご覧ください。
 
-    これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に **[この RMS サーバーを使用する]** を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https:\//connector.contoso.com の場合、構成は次の図のようになります。
+    これらの手順に従う場合は、 **[この RMS サーバーを使用する]** を指定して、このコネクタを使用するように SharePoint を構成してから、 構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https:\//connector.contoso.com の場合、構成は次の図のようになります。
 
     ![RMS コネクタのための SharePoint サーバーの構成](./media/AzRMS_SharePointConnector.png)
 
-    SharePoint ファームで IRM が有効になったら、各ライブラリの **[ライブラリの設定]** ページにある **[Information Rights Management]** オプションを使用して、個々のライブラリで IRM を有効にできます。
+    SharePoint ファームで IRM が有効になったら、各ライブラリの **[ライブラリの設定]** ページの **[Information Rights Management]** オプションを使用して、個々のライブラリで IRM を有効にできます。
 
 
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成
@@ -242,7 +244,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 
 3. RMS Encryption を使用してドキュメントを保護する分類ロールとファイル管理タスクを作成し、自動的に RMS ポリシーを適用するように RMS テンプレートを指定します。 詳細については、Windows Server ドキュメント ライブラリの「 [ファイル サーバー リソース マネージャーの概要](https://technet.microsoft.com/library/hh831701.aspx) 」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーを構成しました。IT 管理者とユーザーは、Azure Rights Management サービスを使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、Azure Information Protection クライアントをデプロイします。これによって、Office 用のアドオンがインストールされ、エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)」を参照してください。
 
 Exchange トランスポート ルールまたは Windows Server FCI と共に使用する部門別テンプレートを構成する場合は、 **[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があることに注意してください。
