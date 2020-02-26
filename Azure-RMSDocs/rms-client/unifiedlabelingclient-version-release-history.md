@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/06/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 82e8f2a4462897bc26609db76658742aeec73e51
-ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
+ms.openlocfilehash: 3960ab26aabd89c41707c6cf96917253174f8cab
+ms.sourcegitcommit: adbbfae6a94f43792a5a732c7eca5078c1fdc95f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507690"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77599847"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -66,7 +66,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 **新機能:**
 
-- PST、rar、7zip、および MSG ファイルからの保護の削除を有効にするための[PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)コマンドレットの**set-aipfilelabel**の変更。 この機能は既定で無効になっており、[ここで](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies)説明するように、 [Set labelpolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations)コマンドレットを使用して有効にする必要があります。  
+- PST、rar、7zip、および MSG ファイルからの保護の削除を有効にするための[PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)コマンドレットの**set-aipfilelabel**の変更。 この機能は既定で無効になっており、[ここで](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files)説明するように、 [Set labelpolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations)コマンドレットを使用して有効にする必要があります。  
 
 - Azure Information Protection の管理者がファイルに対して pfile 拡張機能を使用するかどうかを制御できるようになりました。 [保護されたファイルの種類の変更](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect)に関する詳細情報。 
 

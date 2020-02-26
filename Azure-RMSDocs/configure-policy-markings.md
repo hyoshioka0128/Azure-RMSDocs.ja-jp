@@ -4,19 +4,19 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0b38d57c17fd9025135cc7edd15fa69973b9cd70
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
+ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959936"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600677"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -84,6 +84,8 @@ ms.locfileid: "75959936"
 
 ## <a name="using-variables-in-the-text-string"></a>テキスト文字列に変数を使用する
 
+次の変数は、Azure Information Protection クラシッククライアントを使用しているときに一般に使用でき、Azure Information Protection 統合ラベル付けクライアントを使用するとパブリックプレビューの可用性になります。  
+
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
 - `${Item.Label}`: 選択したラベル。 例: General
@@ -92,13 +94,16 @@ ms.locfileid: "75959936"
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}`: ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone
+- `${User.Name}`: ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone 
 
-- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) たとえば次のようになります。rsimone@vanarsdelltd.com
+- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
-例: **General** ラベル フッターに `Document: ${item.name}  Classification: ${item.label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
+例: `Document: ${item.name}  Classification: ${item.label}`General**ラベル フッターに** という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
+
+> [!NOTE]
+> `${User.Name}` 変数と `${User.PrincipalName}` 変数のどちらを使用しても、Azure Information Protection の統合ラベル付けクライアントでは現在サポートされていません。 
 
 >[!TIP]
 > また、ドキュメントやテンプレートに[ラベル名を挿入するフィールド コード](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)も使用します。
@@ -133,6 +138,9 @@ ms.locfileid: "75959936"
     
     Word と PowerPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルはいかなる透かしテキストも適用しません。
 
+> [!NOTE]
+> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、**フォント名**や**フォントの色**の値を設定できるのは、Azure Information Protection ポータルを使用する場合のみです。 
+
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
 Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、視覚的なマーキングを適用するクライアント デバイスでそれが利用できることを確認してください。 
@@ -145,7 +153,7 @@ Calibri は、ヘッダー、フッター、透かしのテキストに使われ
 
 これらのコードの参照が必要な場合は、MSDN web ドキュメントの[\<色 >](https://developer.mozilla.org/docs/Web/CSS/color_value)のページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

@@ -4,7 +4,7 @@ description: Microsoft Information Protection framework をサポートするク
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/12/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7dcb133d2c5089bc543c392434af1e5f7e8db4b9
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: da214b424227d63636c4d216f640568dca8d14f1
+ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422797"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600711"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -182,6 +182,8 @@ Outlook では、保護は保持されます。ただし、暗号化のみのオ
     - グローバルポリシーに少なくとも1つのラベルが含まれています。 管理者ラベル付けセンターではラベルのないラベルポリシーはサポートされていないため、ラベルのないグローバルポリシーはコピーされません。
 
 - ポリシーをコピーして管理者ラベルセンターから削除した場合は、 **[ポリシーのコピー]** アクションをもう一度実行してから、削除がレプリケートされるのに十分な時間を確保してから、少なくとも2時間待機してください。
+
+- Azure Information Protection からコピーされたポリシーの名前は同じではなく、 **AIP_** のプレフィックスを使用して名前が付けられます。 ポリシー名を後で変更することはできません。 
 
 Azure Information Protection の統一されたラベル付けクライアントのポリシー設定、クライアントの詳細設定、およびラベル設定の構成の詳細については、管理者ガイドの「 [Azure Information Protection 統合ラベル付けクライアントのカスタム構成](./rms-client/clientv2-admin-guide-customizations.md)」を参照してください。
 
