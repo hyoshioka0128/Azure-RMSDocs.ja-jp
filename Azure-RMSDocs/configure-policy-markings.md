@@ -4,19 +4,19 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/25/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
-ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
+ms.openlocfilehash: 33bb27b5b1d79236d1a1c65bdb109b9697a73302
+ms.sourcegitcommit: 2964d0c06033a0933ea569c11475de5abf95cf92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600677"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629455"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -139,7 +139,7 @@ ms.locfileid: "77600677"
     Word と PowerPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルはいかなる透かしテキストも適用しません。
 
 > [!NOTE]
-> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、**フォント名**や**フォントの色**の値を設定できるのは、Azure Information Protection ポータルを使用する場合のみです。 
+> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、 **[フォント名]** の値を設定できるのは Azure Information Protection ポータルを使用した場合のみです。 5つの既定値の1つを超える**フォントの色**の値を設定する場合、は Azure Information Protection ポータルを使用することによってのみ可能です。
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
