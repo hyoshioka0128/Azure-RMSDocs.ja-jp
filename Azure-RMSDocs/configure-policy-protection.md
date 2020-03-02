@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422563"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778553"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -208,7 +208,7 @@ Azure Rights Management での保護のしくみについて詳しくは、「[A
 
 このラベルは、Outlook でのみ使用でき、Exchange Online が [Office 365 Message Encryption の新しい機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)のために構成されている場合に適しています。 ユーザーが Gmail アカウント (または組織外のその他の電子メール アカウント) を使用しているユーザーに保護された電子メールを送信する必要がある場合は、このラベルを選択するように指示します。 
 
-**[宛先]** ボックスにユーザーが Gmail 電子メール アドレスを入力します。  次に、ユーザーがラベルを選択すると、[転送不可] オプションが自動的にメールに追加されます。 その結果、受信者はメールの転送、印刷、メールからのコピー、添付ファイルの保存を行ったり、メールを別の名前で保存したりすることはできません。 
+**[宛先]** ボックスにユーザーが Gmail 電子メール アドレスを入力します。  次に、ユーザーがラベルを選択すると、[転送不可] オプションが自動的にメールに追加されます。 その結果、受信者は、メールを転送したり、印刷したり、コピーしたり、または **[名前を付けて保存]** オプションを使用してメールボックスの外部にメールを保存したりできなくなります。 
 
 1. **[保護]** ペインで、 **[Azure (クラウド キー)]** が選択されていることを確認します。
     
