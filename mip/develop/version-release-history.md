@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 89536031de20349e070c2577d958868b33a33b09
-ms.sourcegitcommit: df503528b19351a5257a8c72ac3fcb2674494d29
+ms.openlocfilehash: 06a57fa7510722da9ed119c573abe2ef0db09407
+ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521092"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238483"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) ソフトウェア開発キット (SDK) バージョンリリース履歴とサポートポリシー
 
@@ -31,9 +31,9 @@ ms.locfileid: "77521092"
 >  
 > テクニカルサポートについては、 [Stack Overflow Microsoft Information Protection フォーラム](https://stackoverflow.com/questions/tagged/microsoft-information-protection)を参照してください。 
 
-## <a name="version-15117"></a>バージョン1.5.117
+## <a name="version-15124"></a>バージョン1.5.124
 
-**リリース日**: 2020 年2月20日
+**リリース日**: 2020 年3月2日
 
 ### <a name="general-sdk-changes"></a>一般的な SDK の変更
 
@@ -84,10 +84,9 @@ ms.locfileid: "77521092"
   - mip::P rotectionEngine:: IsFeatureSupported ()
 - RMS テンプレートを取得するときの豊富な詳細情報
 - **重大な変更**
-  - mip::P rotectionEngine:: GetTemplates () vector < shared_ptr<string>> ベクター < shared_ptr < mip:: TemplateDescriptor > > (C++) に置き換えられました。
-  - mip::P rotectionEngine:: Observer:: OnGetTemplatesSuccess () コールバック shared_ptr < vector<string>>
-    パラメーターを vector < shared_ptr < mip:: TemplateDescriptor > > (C++) に置き換えます。
-  - IProtectionEngine。 GetTemplates |Async () 戻り値のリスト<string> リスト<TemplateDescriptor>に置き換えられます。 (C#)
+  - `mip::ProtectionEngine::GetTemplates()` `vector<shared_ptr<string>>` 戻り値が `vector<shared_ptr<mip::TemplateDescriptor>>` (C++) に置き換えられました
+  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()` コールバック `shared_ptr<vector<string>>` パラメーターが `vector<shared_ptr<mip::TemplateDescriptor>>` (C++) に置き換えられました
+  - IProtectionEngine。 GetTemplates |Async () 戻り値 `List<string>` `List<TemplateDescriptor>`に置き換えられます。 (C#)
   - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param mip_cc_template_descriptor * (C API) に置き換えられました
 
 ### <a name="c-api"></a>C API

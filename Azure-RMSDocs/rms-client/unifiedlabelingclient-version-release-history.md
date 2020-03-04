@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3960ab26aabd89c41707c6cf96917253174f8cab
-ms.sourcegitcommit: adbbfae6a94f43792a5a732c7eca5078c1fdc95f
+ms.openlocfilehash: 543fd7af43dc235fbe8faca2f0dae332b0b493f1
+ms.sourcegitcommit: 1eed9a57596b67255c45a604595cc77a56350557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77599847"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238632"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -42,6 +42,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 |クライアント バージョン|リリース日|
 |--------------|-------------|
+|2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
@@ -170,18 +171,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - 詳細設定の[Outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)を使用して Outlook に別の既定のラベルを設定し、指定したラベルにラベルポリシーのサブラベルがない場合は、ラベルが正しく適用されます。
 
 - Azure Information Protection クライアントが Office アプリで使用されている場合、シングルサインオン用に構成されていない Active Directory アカウントを持つユーザーには、Azure Information Protection の認証を求めるメッセージが表示されます。 正常に認証されると、クライアントのステータスが [オンライン] に正しく変更され、ラベル付け機能が有効になります。
-
-## <a name="version-22190"></a>バージョン2.2.19.0
-
-**リリース**日: 08/06/2019
-
-03/03/2020 でサポート
-
-**関する**
-
-- クライアントは、ポリシーを正常にダウンロードし、現在の機密ラベルを表示できます。 以前のバージョンからアップグレードした後で、ラベル付けセンターでカスタム情報の種類を構成していない場合は、この修正が必要です。
-
-- 一般的なパフォーマンスと安定性の向上。
 
 ## <a name="next-steps"></a>次のステップ:
 

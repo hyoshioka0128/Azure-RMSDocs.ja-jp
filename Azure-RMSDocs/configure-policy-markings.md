@@ -4,19 +4,19 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/27/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c9aca3acb5d047a6d1b24dd453b0f2126ce4ce37
-ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
+ms.openlocfilehash: 66e209340ada675a2a91b72e3553d98dc309c96b
+ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778604"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238502"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -100,7 +100,7 @@ ms.locfileid: "77778604"
 
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
-例: `Document: ${Item.name}  Classification: ${Item.label}`General**ラベル フッターに** という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
+例: `Document: ${Item.Name}  Classification: ${Item.Label}`General**ラベル フッターに** という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
 
 > [!NOTE]
 > `${User.Name}` 変数と `${User.PrincipalName}` 変数のどちらを使用しても、Azure Information Protection の統合ラベル付けクライアントでは現在サポートされていません。 
