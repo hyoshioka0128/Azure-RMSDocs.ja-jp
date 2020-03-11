@@ -45,7 +45,7 @@
       items:
         - name: 概要
           href: what-is-azure-rms.md
-        - name: 具体的な作用を教えてください。
+        - name: 機能
           href: how-does-it-work.md
         - name: アプリケーションで Azure Rights Management 保護をサポートする方法
           items:
@@ -61,7 +61,7 @@
       href: rms-for-individuals.md
     - name: 別名について
       href: aka.md
-- name: 操作方法ガイド
+- name: 攻略ガイド
   items:
     - name: 一般的なシナリオの操作方法
       href: how-to-guides.md
@@ -323,6 +323,8 @@
         - name: Rights Management SDK 4.2
           href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
           items:
+            - name: 非推奨の通知
+              href: ./develop/deprecation-notice.md
             - name: 概要
               href: ./develop/overview.md
             - name: 作業開始
@@ -442,7 +444,7 @@
               items:
                 - name: 定数
                   href: 'https://msdn.microsoft.com/library/hh535291.aspx'
-                - name: データ型
+                - name: データの種類
                   href: 'https://msdn.microsoft.com/library/hh535288.aspx'
                 - name: 関数
                   href: 'https://msdn.microsoft.com/library/hh535289.aspx'
@@ -450,7 +452,7 @@
                   href: 'https://msdn.microsoft.com/library/hh535294.aspx'
                 - name: エラー コード
                   href: 'https://msdn.microsoft.com/library/hh535248.aspx'
-        - name: 利用規約
+        - name: 用語
 - name: リソース
   items:
     - name: よく寄せられる質問

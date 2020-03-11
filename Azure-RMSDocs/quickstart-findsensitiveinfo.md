@@ -4,18 +4,18 @@ description: Azure Information Protection スキャナーを使用して、オ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/09/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960448"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973168"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
@@ -24,7 +24,7 @@ ms.locfileid: "75960448"
 このクイックスタートでは、SharePoint にスキャンを許可し、Azure Information Protection スキャナーをインストールして構成し、オンプレミスのデータ ストアに格納されているファイル内にある機密情報を検索します。 たとえば、ローカル フォルダー、ネットワーク共有、SharePoint サーバーなどです。
 
 > [!NOTE]
-> このクイックスタートは、Azure Information Protection クライアント (クラシック) の現在一般提供されているバージョン、またはスキャナーのプレビュー バージョンが含まれる Azure Information Protection 統合ラベル付けクライアントの現在一般提供されているバージョンで使用できます。
+> このクイックスタートは、Azure Information Protection クライアント (クラシック) の現在一般提供されているバージョン、またはスキャナーが含まれる Azure Information Protection 統合ラベル付けクライアントの現在一般提供されているバージョンで使用できます。
 >  
 > これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 
