@@ -4,25 +4,28 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 8ae21a207dd122066fc4dac659bd1e2e9e7c243f
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742760"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972695"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 
 次の情報を使用して、Azure Information Protection の Hold your own key (HYOK) 保護とは何か、およびクラウド ベースの既定の保護と異なる点について把握してください。 HYOK 保護を使用する前に、適切な場合、サポートされるシナリオ、制限事項、要件を理解していることを確認してください。 
@@ -69,7 +72,7 @@ HYOK 保護を適用するには、Azure Information Protection のラベルを�
 
 HYOK 向けに構成されているラベルを使用して、HYOK によって保護されているコンテンツを開き (消費し) コンテンツを保護するための、サポートされているシナリオを次の表に示します。
 
-|プラットフォーム|アプリケーション|サポート|
+|プラットフォーム|アプリケーション|Supported|
 |----------------------|----------|-----------|
 |Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護: はい<br /><br />消費: はい|
 |Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Outlook|保護: はい<br /><br />消費: はい|
@@ -81,9 +84,9 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 |MacOS|Office for Mac <br /><br /> - Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
 |MacOS|Office for Mac<br /><br />- Outlook|保護: なし<br /><br />消費: はい|
 |MacOS|Rights Management 共有アプリ|保護: なし<br /><br />消費: はい|
-|[iOS]|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
-|[iOS]|Office Mobile <br /><br />-Outlook|保護: なし<br /><br />消費: いいえ|
-|[iOS]|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
+|iOS|Office Mobile <br /><br />-Outlook|保護: なし<br /><br />消費: いいえ|
+|iOS|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
 |Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
 |Android|Office Mobile <br /><br />- Outlook|保護: なし<br /><br />消費: いいえ|
 |Android|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
@@ -182,7 +185,7 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
         
             http://<cluster_name>/_wmcs/certification/certification.asmx
 
-2. IIS を再開します。
+2. IIS を再起動します。
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Azure Information Protection ラベルによる AD RMS の保護を指定する情報の確認
 
@@ -192,7 +195,7 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 - テンプレート GUID を確認するには: クラスターを展開し、 **[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 たとえば次のようになります。 https://rmscluster.contoso.com 
+- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: https://rmscluster.contoso.com 
     
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 

@@ -4,19 +4,19 @@ description: Azure Information Protection ポリシーで言語を指定して�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/18/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3ffb6b844d73d1b2b7f21651123f10599aeef562
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 21b4cf65be0b4f31a1b98df58f0578aaf41b797c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281634"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972599"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Azure Information Protection で異なる言語のラベルとテンプレートを構成する方法
 
@@ -24,6 +24,8 @@ ms.locfileid: "76281634"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 > [!NOTE]
 > これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。

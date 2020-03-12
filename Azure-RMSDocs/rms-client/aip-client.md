@@ -4,7 +4,7 @@ description: Windows 用の Azure Information Protection クライアント (ク
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 726d6d23eed218bdaead585f17625193f56800ff
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: a42c504c744d1033d55e7a196defe286049e3e00
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117920"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973104"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Windows 用 Azure Information Protection クライアント
 
@@ -25,7 +25,10 @@ ms.locfileid: "76117920"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Azure Information Protection クライアント (クラシック) は、 [Azure Information Protection](../what-is-information-protection.md)を使用してドキュメントや電子メールを分類および保護したり、Rights Management サービスを使用してデータを保護したりする組織のための、元のダウンロード可能なクライアントです。 このクライアントには、情報保護インフラストラクチャを独自に備えてはいないが、他の組織が Microsoft の Rights Management サービスを使って保護しているコンテンツを使いたい組織のためのビューアーもあります。
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+
+Azure Information Protection クライアント (クラシック) は、 [Azure Information Protection](../what-is-information-protection.md)を使用してドキュメントや電子メールを分類および保護したり、Rights Management サービスを使用してデータを保護したりする組織のための、元のダウンロード可能なクライアントです。 このクライアントには、独自の情報保護インフラストラクチャを持たないが、Microsoft の Rights Management サービスを使用する他の組織によって保護されているコンテンツを使用する組織向けのビューアーもあります。
 
 > [!NOTE]
 > このクライアントは、従来のクライアントとも呼ばれ、Azure Information Protection 統合されたラベル付けクライアントによって置き換えられます。 どのクライアントを使用するかわからない場合は、「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。

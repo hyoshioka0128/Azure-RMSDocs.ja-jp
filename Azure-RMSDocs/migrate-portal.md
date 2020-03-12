@@ -4,7 +4,7 @@ description: Azure クラシック ポータルで行っていた管理タスク
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,19 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2d0c6035d8955195b4a61b4464c2ce9724c74f02
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: dceeee125fb08eae70faab5d956a3382e725b64a
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743904"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973192"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Azure クラシック ポータルで行っていたタスク
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Rights Management サービスの管理には Azure クラシック ポータルが利用されていました。Azure Portal への移行でサポートが必要ですか?
 
@@ -62,6 +64,6 @@ Azure Portal の新機能:
 
 テンプレートの作成と管理、サービスの有効化と無効化のための PowerShell コマンドレットは、変更なく引き続きサポートされます。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 詳細については、「[Azure Information Protection ポリシーでテンプレートを構成して管理する](configure-policy-templates.md)」を参照してください。
 

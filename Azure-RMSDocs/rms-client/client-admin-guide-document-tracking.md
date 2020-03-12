@@ -4,7 +4,7 @@ description: 管理者が Azure Information Protection のドキュメント追�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9a04156d41bd062f4f182fd4133d938c189157e5
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: e4537e9a84f83eaf3865e01dbf4c5b702a8bbc50
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117835"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973086"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -26,6 +26,8 @@ ms.locfileid: "76117835"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 [ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features)がある場合、組織内のすべてのユーザーに対してドキュメント追跡サイトが既定で有効になっています。 ユーザーと管理者は、保護されたドキュメントにいつアクセスがあったのかをドキュメント追跡によって知ることができ、必要に応じて追跡対象のドキュメントへのアクセス権を取り消すことができます。
 
@@ -56,7 +58,7 @@ ms.locfileid: "76117835"
 
 ドキュメント追跡サイトからログ情報をダウンロードするには、次のコマンドレットを使用します。
 
-- [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
+- [Get AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
     このコマンドレットは、ドキュメントを保護した特定のユーザー (Rights Management の発行者) または保護されたドキュメントにアクセスしたユーザーの保護されたドキュメントに関する追跡情報を返します。 このコマンドレットは、"指定したユーザーがどの保護されたドキュメントにアクセスまたは追跡したか?" という質問に回答するために役立ちます。
 
@@ -105,7 +107,7 @@ ms.locfileid: "76117835"
 
 ドキュメントを追跡および取り消しできるようにするためには、まずこれをドキュメント追跡サイトに登録する必要があります。 ユーザーが Azure Information Protection クライアントを使っている場合、このアクションは、エクスプローラーまたは各 Office アプリの **[追跡と取り消し]** オプションを選択すると発生します。
 
-[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 たとえば次のようになります。
+[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 以下に例を示します。
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 

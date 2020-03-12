@@ -4,19 +4,19 @@ description: すべてのユーザーとデバイスに適用される Azure Inf
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: b6919c45441c5a6b2e3e9cc8cccc470b422d9b8c
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: d8afb466a119bdedb03082d6a2d59c59fad4564c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422779"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972712"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Azure Information Protection のポリシー設定を構成する方法
 
@@ -24,11 +24,13 @@ ms.locfileid: "77422779"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 > [!NOTE]
 > これらの手順は、Azure Information Protection の統合ラベル付けクライアントではなく、Azure Information Protection クライアント (クラシック) に適用されます。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) を参照してください。
 > 
-> 統一されたラベル付けクライアントのポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントを参照してください。 たとえば、[機密ラベルについて説明](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)します。
+> 統一されたラベル付けクライアントのポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントを参照してください。 たとえば、「[機密ラベルについて](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)」です。
 
 Information Protection バーに表示されるタイトルとヒントのほかに、ラベルから個別に構成できる Azure Information Protection ポリシーにはいくつかの設定があります。
 
@@ -58,7 +60,7 @@ Azure Information Protection のサブスクリプションを購入した時期
     
     - **All documents and emails must have a label** (すべてのドキュメントと電子メールにラベルを設定する必要があります): このオプションを **[オン]** に設定した場合は、すべての保存されるドキュメントと送信される電子メールにラベルを適用する必要があります。 ラベル付けは、ユーザーが手動で割り当てる、[条件](configure-policy-classification.md)の結果として自動的に割り当てる、または ( **[Select the default label]** (既定のラベルを選択) オプションを設定することで) 既定で割り当てることができます。
         
-       ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 例 :
+       ユーザーがドキュメントを保存または電子メールを送信するときにラベルが割り当てられなかった場合は、ラベルの選択を求めるメッセージが表示されます。 以下に例を示します。
         
        ![ラベル付けが必須である場合の Azure Information Protection のプロンプト](./media/info-protect-enforce-labelv2.png)
         
@@ -102,7 +104,7 @@ Azure Information Protection のサブスクリプションを購入した時期
 
 **[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次の手順
 
 このような一部のポリシー設定を連携させる方法を確認するには、チュートリアル「[Configure Azure Information Protection policy settings that work together (連携させる Azure Information Protection のポリシー設定を構成する)](infoprotect-settings-tutorial.md)」をご覧ください。
 

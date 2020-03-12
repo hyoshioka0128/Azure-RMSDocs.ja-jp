@@ -4,7 +4,7 @@ description: 組織でドキュメントや電子メールの保護を開始で�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 003/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,17 +13,19 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6e34c0127645db9d4dee9dc61c5b2a331a27c9f6
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 990f65adea28711f9c90382197be3f4730cbef09
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742797"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972748"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Azure portal から Rights Management 保護サービスをアクティブ化する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure portal を使用して Azure Information Protection から Rights Management 保護サービス (Azure RMS) をアクティブ化する場合は、次の手順に従います。
 

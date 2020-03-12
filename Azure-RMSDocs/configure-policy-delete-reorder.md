@@ -4,19 +4,19 @@ description: ユーザーに表示される Azure Information Protection ラベ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5d15bf43294e634844dee2d856b9fe67cccd78ee
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 3edb56da95274608dae79e3e0694eda67737228c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742977"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972566"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Azure Information Protection のラベルを削除または順序変更する方法
 
@@ -24,6 +24,8 @@ ms.locfileid: "75742977"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 ラベルに対してこれらのアクションを選択することで、Office アプリケーションでユーザーに表示される Azure Information Protection ラベルを削除または順序変更することができます。
 

@@ -4,7 +4,7 @@ description: Azure Rights Management (RMS) コネクタを使用するオンプ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 96e8c633201731796c7aecfdda0ef513fc2e261d
-ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
+ms.openlocfilehash: 0411b0360607da80dcabf5dfb8117957a5c67cf6
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77494874"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973271"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Azure Rights Management コネクタ用にサーバーを構成する
 
@@ -47,7 +47,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 **Microsoft RMS コネクタ用のサーバー構成ツールを使用した自動構成:**
 
-- 利点 :
+- 利点:
 
     - レジストリを直接編集する必要はありません。 スクリプトを使用して自動構成されます。
 
@@ -63,7 +63,7 @@ RMS コネクタのインストールと構成が完了したら、Azure Rights 
 
 **レジストリの編集による手動構成:**
 
-- 利点 :
+- 利点:
 
     - RMS コネクタが実行されているサーバーに接続する必要はありません。
 
@@ -87,7 +87,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Microsoft RMS コネクタ用のサーバー構成ツールの使用方法
 
-1.  Microsoft RMS コネクタ用のサーバー構成ツールのスクリプト (GenConnectorConfig.ps1) をまだダウンロードしていない場合は、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)からダウンロードできます。
+1.  Microsoft RMS コネクタ用のサーバー構成ツール (Genコネクタ構成) のスクリプトをまだダウンロードしていない場合は、 [Microsoft ダウンロードセンター](https://go.microsoft.com/fwlink/?LinkId=314106)からダウンロードしてください。
 
 2.  ツールを実行するコンピューターに GenConnectorConfig.ps1 ファイルを保存します。 ツールをローカルで実行する場合、これは RMS コネクタと通信するように構成したサーバーである必要があります。 そうでない場合は、任意のコンピューターに保存できます。
 
@@ -124,7 +124,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 > [!NOTE]
 > コネクタを使用するようにサーバーを構成すると、そのサーバーのローカルにインストールされたクライアント アプリケーションで RMS が動作しない場合があります。 この問題が発生するのは、アプリケーションが RMS を直接使用せずにコネクタを使用しようとする (これはサポートされていません) ことが原因です。
 >
-> また、Exchange サーバーのローカルに Office 2010 がインストールされている場合、コネクタを使用するようにサーバーを構成すると、そのコンピューターからクライアント アプリケーションの IRM 機能が動作する場合がありますが、これはサポートされていません。
+> さらに、Office 2010 が Exchange server にローカルでインストールされている場合、コネクタを使用するようにサーバーを構成した後、クライアントアプリの IRM 機能がそのコンピューターから機能する可能性がありますが、これはサポートされていません。
 >
 > いずれの場合も、コネクタを使用するように構成されていない別のコンピューターにクライアント アプリケーションをインストールする必要があります。 そうすれば、クライアント アプリケーションで RMS が直接使用されるようになります。
 
@@ -133,7 +133,7 @@ Exchange または SharePoint を実行しており、AD RMS を使用するよ�
 
 -   Exchange 2016 および Exchange 2013 の場合: クライアント アクセス サーバーおよびメールボックス サーバー
 
--   Exchange 2010 の場合:クライアント アクセス サーバーおよびハブ トランスポート サーバー
+-   Exchange 2010 の場合: クライアント アクセス サーバーとハブ トランスポート サーバー
 
 RMS コネクタを使用するには、サーバーで実行されている Exchange が、次のいずれかのソフトウェア バージョンである必要があります。
 
@@ -183,7 +183,7 @@ RMS コネクタを使用するには、サーバーで実行されている Sha
 
 -   SharePoint Server 2010
 
-また、SharePoint 2016 または SharePoint 2013 を実行しているサーバーでは、RMS コネクタでサポートされているバージョンの MSIPC クライアント 2.1 も実行されている必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。
+SharePoint 2019、2016、または SharePoint 2013 を実行するサーバーでは、RMS コネクタでサポートされている MSIPC client 2.1 のバージョンも実行している必要があります。 サポートされているバージョンであることを確認するには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=38396)から最新のクライアントをダウンロードしてください。
 
 > [!WARNING]
 > MSIPC 2.1 クライアントには複数のバージョンがあるため、必ずバージョン 1.0.2004.0 以降を使用します。
@@ -200,21 +200,21 @@ SharePoint 2010 を実行するサーバーには、RMS 暗号化モード 2 の
 
     -   Microsoft RMS コネクタのサーバー構成ツールを実行します。 詳細については、「[Microsoft RMS コネクタ用のサーバー構成ツールの使用方法](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector)」を参照してください。
 
-        たとえば、ツールをローカルで実行し、SharePoint 2016 または SharePoint 2013 を実行しているサーバーを構成します。
+        たとえば、ツールをローカルで実行して、SharePoint 2019、2016、または SharePoint 2013 が実行されているサーバーを構成するには、次のようにします。
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   SharePoint 2016 または SharePoint 2013 を使用している場合は、「[RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)」の情報を使用してサーバー上にレジストリ設定を追加し、手動でレジストリの編集を行います。 
+    -   SharePoint 2019、2016、または SharePoint 2013 を使用している場合は、手動でレジストリの編集を行います。そのためには、 [RMS コネクタのレジストリ設定](rms-connector-registry-settings.md)に関する情報を参照して、サーバーにレジストリ設定を手動で追加します。 
 
 3.  SharePoint で IRM を有効にします。 詳細については、SharePoint ライブラリの「[Information Rights Management を構成する (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx)」をご覧ください。
 
-    これらの手順に従う場合は、 **[この RMS サーバーを使用する]** を指定して、このコネクタを使用するように SharePoint を構成してから、 構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https:\//connector.contoso.com の場合、構成は次の図のようになります。
+    これらの手順に従う場合は、コネクタを使用するように SharePoint を構成する際に **[この RMS サーバーを使用する]** を指定し、構成した負荷分散コネクタ URL を入力する必要があります。 プロトコルのプレフィックス (HTTP:// または HTTPS://) に続いて、コネクタの負荷分散アドレス用に DNS で定義したコネクタ名を入力してください。 たとえば、コネクタ名が https:\//connector.contoso.com の場合、構成は次の図のようになります。
 
     ![RMS コネクタのための SharePoint サーバーの構成](./media/AzRMS_SharePointConnector.png)
 
-    SharePoint ファームで IRM が有効になったら、各ライブラリの **[ライブラリの設定]** ページの **[Information Rights Management]** オプションを使用して、個々のライブラリで IRM を有効にできます。
+    SharePoint ファームで IRM が有効になったら、各ライブラリの **[ライブラリの設定]** ページにある **[Information Rights Management]** オプションを使用して、個々のライブラリで IRM を有効にできます。
 
 
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成
@@ -244,7 +244,7 @@ RMS コネクタとファイル分類インフラストラクチャを使用し�
 
 3. RMS Encryption を使用してドキュメントを保護する分類ロールとファイル管理タスクを作成し、自動的に RMS ポリシーを適用するように RMS テンプレートを指定します。 詳細については、Windows Server ドキュメント ライブラリの「 [ファイル サーバー リソース マネージャーの概要](https://technet.microsoft.com/library/hh831701.aspx) 」を参照してください。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次の手順
 RMS コネクタのインストールと構成が完了し、RMS コネクタを使用するようにサーバーを構成しました。IT 管理者とユーザーは、Azure Rights Management サービスを使用して電子メール メッセージとドキュメントを保護し、使用することができます。 ユーザーがこの処理を実行しやすいように、Azure Information Protection クライアントをデプロイします。これによって、Office 用のアドオンがインストールされ、エクスプローラーに新しい右クリック オプションが追加されます。 詳細については、「[Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)」を参照してください。
 
 Exchange トランスポート ルールまたは Windows Server FCI と共に使用する部門別テンプレートを構成する場合は、 **[アプリケーションでユーザー ID がサポートされていないときにこのテンプレートをすべてのユーザーに表示する]** チェック ボックスがオンになるように、スコープ構成にアプリケーション互換性オプションを含める必要があることに注意してください。

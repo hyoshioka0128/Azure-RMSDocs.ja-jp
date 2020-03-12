@@ -4,19 +4,19 @@ description: Azure Information Protection 統合ラベルクライアントを�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f51d3a901808a4689e651c6736c6ac8294e1e602
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 06ac8dd5923fb4275aeaa833bf40f0ac660e1c26
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77423073"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973073"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントを使用して分類および保護する
 
@@ -31,7 +31,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ただし、**エクスプローラー**を利用してファイルを分類し、保護することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類し、保護できるので便利です。 この方法は、Office ドキュメント、PDF ファイル、テキスト ファイル、画像ファイルなどさまざまなファイルの保護をサポートしています。 
 
-ラベルによってドキュメントに保護が適用される場合、保護されたドキュメントは SharePoint または OneDrive に保存するのに適していない可能性があります。 管理者が[SharePoint および OneDrive (パブリックプレビュー) で Office ファイルの秘密度ラベルを有効](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)にしているかどうかを確認します。
+ラベルによってドキュメントに保護が適用される場合、保護されたドキュメントは SharePoint または OneDrive に保存するのに適していない可能性があります。 管理者が[SharePoint と OneDrive で Office ファイルの秘密度ラベルを有効](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)にしているかどうかを確認します。
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>組織外の相手と安全にファイルを共有する
 
@@ -46,11 +46,11 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
-**[ホーム]** タブで、リボンの **[感度]** ボタンを選択し、構成されているラベルのいずれかを選択します。 例 :
+**[ホーム]** タブで、リボンの **[感度]** ボタンを選択し、構成されているラベルのいずれかを選択します。 以下に例を示します。
 
 ![感度ボタンの例](../media/sensitivity-not-set-callout.png)
 
-または、 **[感度]** ボタンから **[バーの表示]** を選択した場合は、Azure Information Protection バーからラベルを選択できます。 例 :
+または、 **[感度]** ボタンから **[バーの表示]** を選択した場合は、Azure Information Protection バーからラベルを選択できます。 以下に例を示します。
 
 ![Azure Information Protection バーの例](../media/info-protect-barv2-not-set-callout.png)
 
@@ -108,13 +108,13 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類および保護するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 例 :
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 以下に例を示します。
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 例 :
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 以下に例を示します。
 
      ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -136,7 +136,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 5. **[適用]** をクリックし、 **"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
 
-選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 例 :
+選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 以下に例を示します。
 
 ![Azure Information Protection のロック アイコンが付いた保護されたファイル](../media/Pfile.png)
 

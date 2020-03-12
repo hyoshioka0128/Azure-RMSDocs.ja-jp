@@ -4,24 +4,27 @@ description: ドキュメントまたは電子メール メッセージにラベ
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 66e209340ada675a2a91b72e3553d98dc309c96b
-ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
+ms.openlocfilehash: 6492c4dcbe9ba408d2d4efd9c751933a6eefe6b4
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238502"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972806"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
+
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 ドキュメントまたは電子メール メッセージにラベルを割り当てるときに、選択した分類を見やすくするためのさまざまなオプションを選択できます。 これらの視覚的なマーキングには、ヘッダー、フッター、および透かしがあります。 
 
@@ -100,25 +103,29 @@ ms.locfileid: "78238502"
 
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
+> [!NOTE]
+>この構文では、大文字と小文字が区別されます。
+
 例: `Document: ${Item.Name}  Classification: ${Item.Label}`General**ラベル フッターに** という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
 
 > [!NOTE]
 > `${User.Name}` 変数と `${User.PrincipalName}` 変数のどちらを使用しても、Azure Information Protection の統合ラベル付けクライアントでは現在サポートされていません。 
 
 >[!TIP]
-> また、ドキュメントやテンプレートに[ラベル名を挿入するフィールド コード](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)も使用します。
+> フィールドコードを使用し[て、ラベル名](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)をドキュメントまたはテンプレートに挿入することもできます。
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定する
 
 既定では、指定した視覚的マーキングは Word、Excel、PowerPoint、Outlook のすべてに適用されます。 ただし、テキスト文字列に "If.App" という変数ステートメントを入れると、Office アプリケーションごとに視覚的マーキングを指定できます。**Word**、**Excel**、**PowerPoint**、**Outlook** という値を利用し、アプリケーションの種類を区別できます。 このような値は省略することもできます。同じ If.App ステートメントで複数回指定する場合に必要になります。
 
-次の構文を使用します。
+使用する構文は以下のとおりです。
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
-このステートメントのこの構文では、大文字と小文字が区別されます。
+> [!NOTE]
+>このステートメントのこの構文では、大文字と小文字が区別されます。
 
-次に例を示します。
+例:
 
 - **Word 文書だけにヘッダー テキストを設定する:**
     
@@ -153,7 +160,7 @@ Calibri は、ヘッダー、フッター、透かしのテキストに使われ
 
 これらのコードの参照が必要な場合は、MSDN web ドキュメントの[\<色 >](https://developer.mozilla.org/docs/Web/CSS/color_value)のページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

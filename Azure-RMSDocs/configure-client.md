@@ -4,7 +4,7 @@ description: Windows コンピューターとモバイルデバイスに Azure I
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,19 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43850c44b4dbce0e9aeac68939c9d2fe915faa78
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 180e6c29580c87ebdf813df0dc6aae40007f1d86
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742695"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972767"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Office 2010 を実行しているコンピューターでは、Azure Information Protection サービスに対して認証を行うために、Azure Information Protection クライアント (クラシック) または Azure Information Protection 統合ラベルクライアントが必要です。
 

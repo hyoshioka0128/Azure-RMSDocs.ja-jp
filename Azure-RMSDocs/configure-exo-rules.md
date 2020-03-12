@@ -4,7 +4,7 @@ description: Azure Information Protection ラベルの Exchange Online メール
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,23 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f2cbf08059c5bcbbf014dab6b19be83516132d87
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: b48e2a041baa9e9e782a2021fdbcd1e5da3e379a
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742972"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972554"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Azure Information Protection ラベルの Exchange Online メール フロー ルールの構成
+
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 たとえば次のようになります。
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+
+
+Exchange Online でメール フロー ルールを構成して Azure Information Protection ラベルを使用し、特定のシナリオに向けた追加の保護を適用するときに、次の情報を参考にしてください。 以下に例を示します。
 
 - 既定のラベルは **[全般]** で、保護は適用されません。 このラベルを含む外部からの電子メールには、追加の [転送不可] 保護アクションが適用されます。
 
@@ -75,9 +80,9 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
  
 4. **[and]** で、 **[メッセージ ヘッダー]** を選択し、 **[これらの単語を含む]** を選択します。
      
-    」を参照します。 **[テキストの入力]** を選択し、`msip_labels` と入力します。
+    A. **[テキストの入力]** を選択し、`msip_labels` と入力します。
      
-    b. **[Enter words]\(単語の入力\)** を選択し、`MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True` と入力します。
+    B. **[Enter words]\(単語の入力\)** を選択し、`MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True` と入力します。
     
     c. **[+]** を選択し、 **[OK]** を選択します。
 
@@ -103,9 +108,9 @@ Azure Information Protection ポリシーでは、このラベルは電子メー
  
 4. **[and]** で、 **[Any attachment]\(添付ファイル\)** を選択し、 **[これらのプロパティが次の単語のいずれかを含む]** を選択します。
      
-    」を参照します。 **[+]**  >  **[カスタム添付ファイルのプロパティを指定]** を選択します。
+    A. **[+]**  >  **[カスタム添付ファイルのプロパティを指定]** を選択します。
   
-    b. **[プロパティ]** に `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` を入力します。
+    B. **[プロパティ]** に `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` を入力します。
     
     c. **[値]** に `True` を入力します。
     
