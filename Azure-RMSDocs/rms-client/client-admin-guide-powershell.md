@@ -4,7 +4,7 @@ description: 管理者が PowerShell を使って Azure Information Protection �
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0820004870c3a391a2dcea9fa3c81b8577374c54
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: ff48c873b55a0aa0f973885c65fd3b68701dbca8
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117767"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79082257"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -25,11 +25,12 @@ ms.locfileid: "76117767"
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection クライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 たとえば次のようになります。
+コマンドレットは PowerShell モジュール **AzureInformationProtection** と共にインストールされます。 このモジュールには、(サポートされなくなった) RMS 保護ツールの Rights Management コマンドレットがすべて含まれます。 ラベル付けに Azure Information Protection を利用するコマンドレットもあります。 たとえば、次のように入力します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -39,7 +40,7 @@ Azure Information Protection クライアントをインストールすると、
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|スケジュールに基づいて実行されるスクリプトを利用するなど、非対話式にファイルにラベルを付けます。|
 
 > [!TIP]
-> 260 文字よりも長いパスとともにコマンドレットを使用するには、Windows 10 バージョン 1607 以降で利用できる次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用します。<br /> **ローカルコンピューターポリシー** > **コンピューターの構成** > 管理用テンプレート**すべて**の > 設定 > **Win32 の長いパスを有効にする** 
+> 260 文字よりも長いパスとともにコマンドレットを使用するには、Windows 10 バージョン 1607 以降で利用できる次の[グループ ポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用します。<br /> **ローカルコンピューターポリシー** > **コンピューターの構成** > 管理用テンプレート**すべて**の > 設定 > **Win32 の長いパスを有効にする** **Administrative Templates** 
 > 
 > Windows Server 2016 の場合、Windows 10 用の最新の管理用テンプレート (.admx) をインストールすれば、同じグループ ポリシー設定を使用できます。
 >
@@ -76,7 +77,7 @@ AzureInformationProtection モジュールの現在のリリースには、以�
 組織が分類と保護に Azure Information Protection を使用しているとき、あるいはデータ保護に Azure Rights Management サービスを使用しているとき、PowerShell コマンドを使い始める前にこのセクションをお読みください。
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>[前提条件]
 
 AzureInformationProtection モジュールのインストールに関する前提条件に加えて、Azure Information Protection ラベル付けと Azure Rights Management データ保護サービスに関する追加の前提条件があります。
 
@@ -315,7 +316,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-フォルダー内のすべてのファイルを保護するには、 **-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 たとえば次のようになります。
+フォルダー内のすべてのファイルを保護するには、 **-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 たとえば、次のように入力します。
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -328,7 +329,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 たとえば次のようになります。
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 たとえば、次のように入力します。
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -338,7 +339,7 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 たとえば次のようになります。
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 たとえば、次のように入力します。
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -350,12 +351,12 @@ Set-RMSServerAuthentication コマンドを実行しなかった場合は、自�
 
 Rights Management テンプレートが変更された場合は、もう一度 `Get-RMSTemplate -force` でダウンロードしてください。 
 
-## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management Services
+## <a name="active-directory-rights-management-services"></a>Active Directory Rights Management サービス
 
 Active Directory Rights Management サービスだけを使っている場合は、PowerShell コマンドを使ってファイルを保護または保護解除する前に、このセクションをお読みください。
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>[前提条件]
 
 AzureInformationProtection モジュールをインストールするための前提条件に加えて、ファイルの保護と保護解除に使用するアカウントには、ServerCertification.asmx にアクセスする読み取り許可と実行許可を与える必要があります。
 
@@ -431,7 +432,7 @@ AzureInformationProtection モジュールをインストールするための�
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 たとえば次のようになります。
+フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 たとえば、次のように入力します。
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -444,7 +445,7 @@ AzureInformationProtection モジュールをインストールするための�
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 たとえば次のようになります。 
+保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 たとえば、次のように入力します。 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -454,7 +455,7 @@ AzureInformationProtection モジュールをインストールするための�
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 たとえば次のようになります。
+ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 たとえば、次のように入力します。
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -531,7 +532,7 @@ AzureInformationProtection モジュールをインストールするための�
 13. **[スコープの追加]** ウィンドウで、推奨される文字列を例として使用して、次のように指定し、 **[スコープの追加]** を選択します。
     - **スコープ名**: `user-impersonation`
     - **同意できるユーザー**:**管理者とユーザー**
-    - **管理者の同意の表示名**: `Access Azure Information Protection scanner`
+    - **管理者の同意表示名**: `Access Azure Information Protection scanner`
     - **管理者の同意の説明**: `Allow the application to access the scanner for the signed-in user`
     - **ユーザーの同意表示名**: `Access Azure Information Protection scanner`
     - **ユーザーの同意の説明**: `Allow the application to access the scanner for the signed-in user`
@@ -566,7 +567,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 24. API の **[アクセス許可]** ウィンドウに戻り、 **[許可の同意]** セクションで、[ ***テナント>名*の \<に管理者の同意を付与する**] を選択し、確認プロンプトで **[はい]** を選択します。
 
-2 つのアプリの構成を完了し、パラメーターとして *WebAppId*、*WebAppKey*、*NativeAppId* を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行するために必要な値を取得しました。 例を次に示します。
+2 つのアプリの構成を完了し、パラメーターとして [WebAppId](/powershell/module/azureinformationprotection/set-aipauthentication)、*WebAppKey*、*NativeAppId* を指定して *Set-AIPAuthentication* を実行するために必要な値を取得しました。 例を次に示します。
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
@@ -600,7 +601,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 3. 先のセクションの指示に従ってこのコマンドを修正します。**WebAppId**、**WebAppkey**、**NativeAppId** パラメーターに独自の値を指定してください。 今回は **Token** パラメーターの値を指定しません。これは後で指定します。 
 
-    たとえば次のようになります。`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    例: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
 
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>手順 2: Set-AIPAuthentication を実行してアクセス トークンを取得し、それをクリップボードにコピーします。
 
@@ -610,7 +611,7 @@ AzureInformationProtection モジュールをインストールするための�
 
         (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
 
-    たとえば次のようになります。`(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    例: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>手順 3: PowerShell スクリプトを修正し、トークンを指定します。
 
@@ -644,8 +645,8 @@ AzureInformationProtection モジュールをインストールするための�
 
     必要に応じて、タスクを削除します。 トークンの有効期限が切れた場合、この過程を繰り返す必要があります。その場合、構成したタスクを残しておくと便利です。新しい PowerShell スクリプトを新しいトークン値で上書きコピーするとき、すぐに再実行できます。
 
-## <a name="next-steps"></a>次の手順
-PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 たとえば次のようになります。 
+## <a name="next-steps"></a>次のステップ
+PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 たとえば、次のように入力します。 
 
     Get-Help Get-RMSTemplate -online
 
