@@ -16,11 +16,11 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: 0eda64683a498c69ff710319547b1349e1c1cfc5
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743600"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404251"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -64,7 +64,7 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 その他のお客様は、Azure Information Protection のサブスクリプションに応じて、以下の表のサポート チャネルをご利用ください。
 
-|Subscription|手順|
+|サブスクリプション|手順|
 |----------------|---------------|
 |Azure Information Protection (スタンドアロン)|1. Azure portal で [ヘルプと[サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)] の **[新しいサポート要求]** を選択します。<br /><br />2. メッセージが表示されたら、 **[基本]** ウィンドウで、 **[問題の種類]** に **[技術]** を選択し、サービスに**Information Protection**します。 <br /><br />3. さらに、次のいずれかのオプションが選択されていることを確認します。<br /><br />-  **[テクニカル サポートを含むサブスクリプション]** : Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> -  **[Technical support - Included]\(テクニカル サポート - 含む\)** : Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Microsoft 365 管理センターによるサポートへの問い合わせ方法、および連絡先電話番号については、「[ビジネス製品についてサポートに問い合わせる - 管理者ヘルプ](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|
@@ -84,7 +84,7 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 - [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection) が含まれる Microsoft Virtual Academy セッション。
 
-トラブルシューティング :
+トラブルシューティング:
 
 - 何かのしくみについて質問がある場合は、[よく寄せられる質問](faqs.md)として質問が既に回答されているかどうかを確認してください。
 

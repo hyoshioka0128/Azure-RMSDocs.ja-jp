@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 543fd7af43dc235fbe8faca2f0dae332b0b493f1
-ms.sourcegitcommit: 1eed9a57596b67255c45a604595cc77a56350557
+ms.openlocfilehash: c8baa3a52c257b82f3cc7e6091bf316cdb5111a4
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238632"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403809"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -61,11 +61,21 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="version-261010-preview"></a>バージョン 2.6.101.0 (プレビュー)
+## <a name="version-261110"></a>バージョン2.6.111.0 
 
-**リリース**1/15/2020
+**リリース**03/09/2020
 
 **新機能:**
+
+- [スキャナー](../deploy-aip-scanner.md)の一般公開バージョン。オンプレミスのデータストアのドキュメントを検査してラベル付けします。 
+
+- [スキャナー](../deploy-aip-scanner.md)関連:
+    - [SharePoint オンプレミスおよびサブサイトの検出が容易に](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories)なりました。 各サイトの設定は必須ではなくなりました。 
+    - [SQL チャンクのサイズ変更](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server)の詳細プロパティが追加されました。
+    - 管理者は、既存の[スキャンを停止し](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan)、既定のラベルが変更された場合に再スキャンを実行できるようになりました。
+    - 既定では、スキャナーは、高速なスキャンのために最小のテレメトリを設定し、ログのサイズを小さくし、情報の種類をデータベースにキャッシュするようになりました。 [スキャナーの最適化](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner)の詳細についてはこちらをご覧ください。 
+    - スキャナーはデータベースとサービスの個別の配置をサポートするようになりましたが、 **Sysadmin**権限はデータベースの配置にのみ必要です。
+    - スキャナーのパフォーマンスが向上しました。 
 
 - PST、rar、7zip、および MSG ファイルからの保護の削除を有効にするための[PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)コマンドレットの**set-aipfilelabel**の変更。 この機能は既定で無効になっており、[ここで](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files)説明するように、 [Set labelpolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations)コマンドレットを使用して有効にする必要があります。  
 
@@ -79,15 +89,10 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 - New **WordShapeNameToRemove** advanced プロパティを使用すると、サードパーティ製アプリケーションによって作成された Word 文書でコンテンツマークを削除できます。 [ **WordShapeNameToRemove**を使用して、既存の図形名を識別し、削除対象と](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)して定義する方法について説明します。 
 
-- [スキャナー](../deploy-aip-scanner.md)関連の機能:
-    - [SharePoint オンプレミスおよびサブサイトの検出が容易に](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories)なりました。 各サイトの設定は必須ではなくなりました。 
-    - [SQL チャンクのサイズ変更](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server)の詳細プロパティが追加されました。
-    - 管理者は、既存の[スキャンを停止し](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan)、既定のラベルが変更された場合に再スキャンを実行できるようになりました。
-    - 既定では、スキャナーは、高速なスキャンのために最小のテレメトリを設定し、ログのサイズを小さくし、情報の種類をデータベースにキャッシュするようになりました。 [スキャナーの最適化](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner)の詳細についてはこちらをご覧ください。 
+
 
 **関する**
 
-- スキャナーはデータベースとサービスの個別の配置をサポートするようになりましたが、 **Sysadmin**権限はデータベースの配置にのみ必要です。 
 - RightFax によって作成された、保護された TIFF ファイルと TIFF ファイルを開こうとしてユーザーが失敗したインスタンスでは、TIFF ファイルが開き、予想どおりに安定した状態が維持されるようになりました。  
 - 保護された txt ファイルと PDF ファイルの以前の破損が解決されます。
 - Log Analytics の**自動**と**手動**の間に一貫性のないラベル付けが修正されました。 
@@ -100,6 +105,8 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 ## <a name="version-25330"></a>バージョン2.5.33.0
 
 **リリース**日: 10/23/2019
+
+09/09/2020 でサポート
 
 **新機能:**
 

@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fd48222d2b137c8c823e3d233562905da4d4ddc2
-ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
+ms.openlocfilehash: a4e7206bb02c29649d6e5807a445bb3970f35ca6
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215748"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404880"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -73,11 +73,11 @@ Office 365 アプリを実行している Windows コンピューターに最小
     
     これらのユーザーには、Windows、Mac、iOS、および Android に共通のラベルが発行されており、同じポリシー設定が発行されているため、ラベル付けのエクスペリエンスが非常によく似ています。 管理者は、これらのラベルとポリシー設定を同じ管理センターで管理します。
 
-- また、自分用に統一されたラベル付けクライアントをインストールし、Azure Information Protection スキャナーのプレビューバージョンをテストします。
+- また、自分用に統一されたラベル付けクライアントをインストールし、Azure Information Protection スキャナーをテストします。
 
 - ユーザーのサブセットでは、従来のクライアントを展開します。これらのユーザーには、独自のキーの保持 (HYOK) 保護を適用するラベルが必要なためです。
     
-    このようなユーザーの場合、このクライアントを使用すると、ラベル付けエクスペリエンスが若干異なります。 たとえば、Office アプリの [**秘密度**] ボタンではなく、[**保護**] ボタンが表示されます。 管理者は、別の管理センターにある HYOK の設定とポリシー設定のラベルを、他のクライアントプラットフォームのラベルと設定に管理する必要があります。
+    このようなユーザーの場合、このクライアントを使用すると、ラベル付けエクスペリエンスが若干異なります。 たとえば、Office アプリの **[秘密度]** ボタンではなく、 **[保護]** ボタンが表示されます。 管理者は、別の管理センターにある HYOK の設定とポリシー設定のラベルを、他のクライアントプラットフォームのラベルと設定に管理する必要があります。
 
 - 機密情報のスキャンや分類、保護が必要なドキュメントを含むオンプレミスのデータストアがある。 実稼働環境で使用する場合は、クラシッククライアントをサーバーに展開して Azure Information Protection スキャナーを実行します。
 
@@ -99,13 +99,13 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |ラベルの多言語サポート:| **○** | **○** |**○** |
 |メールの添付ファイルからのラベル継承:| **○** | **○**  |いいえ |
 |次のようなカスタマイズが含まれます。<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| **はい** <sup>1</sup> | **はい** <sup>2</sup> | いいえ |
-|オンプレミスのデータ ストア用のスキャナー:| **○** | **はい <br />(プレビュー)** | いいえ |
+|オンプレミスのデータ ストア用のスキャナー:| **○** | **はい <br />** | いいえ |
 |中央レポート機能 (分析):| **○** | **○** | いいえ |
 |ラベルとは別に設定するカスタムのアクセス許可:| **○** | **はい** <sup>3</sup>| いいえ |
-|Office アプリの Information Protection バー: | **○** | **○**| いいえ |
+|Office アプリの Information Protection バー:| **○** | **○**| いいえ |
 |ラベルアクションとしての視覚的なマーキング (ヘッダー、フッター、透かし):| **○** | **○** | **○**|
-|アプリごとの視覚的マーキング:| **○** | **はい* | いいえ |
-|変数を使用した動的な視覚的マーキング:| **○** | **はい**(プレビュー) | いいえ |
+|アプリごとの視覚的マーキング:| **○** | **○** | いいえ |
+|変数を使用した動的な視覚的マーキング:| **○** | **○** | いいえ |
 |ファイルエクスプローラーでラベルを付ける:| **○** | **○** | いいえ |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **○** | **○** | いいえ|
 |ラベルを適用するための PPDF のサポート:| **○** | いいえ | いいえ |
@@ -147,11 +147,11 @@ Azure Information Protection クライアント (クラシック) と Azure Info
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |セットアップ:| ローカルのデモ ポリシーをインストールするオプション | ローカルのデモ ポリシーなし|
 |Office アプリで適用した場合のラベルの選択と表示:|リボン上の **[保護]** ボタンから <br /><br /> Information Protection バーから (リボンの下の水平バー)|リボン上の **[秘密度]** ボタンから<br /><br /> Information Protection バーから (リボンの下の水平バー)|
-|Office アプリの Information Protection バーを管理する:|ユーザー向け:  <br /><br />- リボン上の **[保護]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択した場合、既定では、バーはそのアプリ内で非表示になりますが、新しく開いたアプリでは自動的に表示され続けます <br /><br /> 管理者向け:  <br /><br />- アプリを最初に開いたときにバーを自動的に表示または非表示にする、および、ユーザーがバーの非表示を選択した後に新しく開いたアプリに対してバーを自動的に非表示のままにするかどうかを制御するポリシー設定|ユーザー向け:  <br /><br />- リボン上の **[秘密度]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択すると、バーはそのアプリ内でも新しく開いたアプリ内でも非表示になります <br /><br />管理者向け:  <br /><br />-バーを管理するための PowerShell 設定 |
-|ラベルの色:  | Azure portal で構成します | ラベルの移行後に保持され、 [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)で構成可能|
+|Office アプリの Information Protection バーを管理する:|ユーザー向け: <br /><br />- リボン上の **[保護]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択した場合、既定では、バーはそのアプリ内で非表示になりますが、新しく開いたアプリでは自動的に表示され続けます <br /><br /> 管理者向け: <br /><br />- アプリを最初に開いたときにバーを自動的に表示または非表示にする、および、ユーザーがバーの非表示を選択した後に新しく開いたアプリに対してバーを自動的に非表示のままにするかどうかを制御するポリシー設定|ユーザー向け: <br /><br />- リボン上の **[秘密度]** ボタンからバーを表示または非表示にするオプション<br /><br />- ユーザーがバーを非表示にするよう選択すると、バーはそのアプリ内でも新しく開いたアプリ内でも非表示になります <br /><br />管理者向け: <br /><br />-バーを管理するための PowerShell 設定 |
+|ラベルの色: | Azure portal で構成します | ラベルの移行後に保持され、 [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)で構成可能|
 |ラベルは、さまざまな言語をサポートします。| Azure portal で構成します | [Office 365 Security & Compliance PowerShell](/microsoft-365/compliance/create-sensitivity-labels#additional-label-settings-with-office-365-security--compliance-center-powershell)を使用して構成する|
 |ポリシーの更新: | Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />24 時間ごと <br /><br />スキャナーの場合: 1 時間ごと、およびサービスが開始され、ポリシーが1時間を経過した場合| Office アプリを開いたとき <br /><br /> 右クリックしてファイルまたはフォルダーを分類して保護したとき <br /><br />ラベル付けと保護のために PowerShell コマンドレット を実行したとき<br /><br />4 時間ごと <br /><br />スキャナーの場合: 4 時間ごと|
-|サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費:  <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費:  <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
+|サポートされている PDF 形式:| 保護: <br /><br /> - PDF の暗号化における ISO 標準 (既定) <br /><br /> - .ppdf <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護| 保護: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br /> <br /><br /> 消費: <br /><br /> - PDF の暗号化における ISO 標準 <br /><br />- .ppdf<br /><br />- SharePoint IRM 保護|
 |ビューアーで開かれた一般的な保護されたファイル (pfile):| ファイルは元のアプリで開き、保護なしで表示、変更、および保存できます。 | ファイルは元のアプリで開くことができ、それを表示して変更することはできますが、保存することはできません。|
 |サポートされているコマンドレット:| ラベル付けのためのコマンドレットと保護のみのコマンドレット | ラベル付け用のコマンドレット:<br /><br /> Set-aipfileclassification と Set-aipfilelabel は*Owner*パラメーターをサポートしていません <br /><br /> さらに、ラベルが適用されないすべてのシナリオに対して、"No label to apply" (適用するラベルがありません) というコメントが 1 つ付きます <br /><br /> Set-aipfileclassification は*WhatIf*パラメーターをサポートするため、検出モードで実行できます。 <br /><br /> Set-AIPFileLabel は *EnableTracking* パラメーターをサポートしていません <br /><br /> Get-AIPFileStatus は他のテナントからのラベル情報を返しません。また、*RMSIssuedTime* パラメーターを表示しません<br /><br />また、Get-AIPFileStatus の*Labelingmethod*パラメーターには、**手動**または**自動**ではなく**Privileged**または**Standard**が表示されます。 詳細については、[オンライン ドキュメント](/powershell/module/azureinformationprotection/get-aipfilestatus)をご覧ください。|
 |Office でのアクションごとの理由プロンプト (構成している場合): | 頻度: ファイルあたり <br /><br /> 秘密度レベルを下げる <br /><br /> ラベルの削除<br /><br /> 保護の削除 | 頻度: セッションごと <br /><br /> 秘密度レベルを下げる<br /><br /> ラベルの削除|
@@ -179,8 +179,6 @@ Azure Information Protection 統合されたラベル付けクライアントは
 - Outlook の [転送不可] ボタンを表示する
 
 - デモ ポリシー
-
-- 保護を削除する場合の理由
 
 - 確認プロンプト **[このラベルを削除しますか?]** ポリシー設定を使用しない場合、ユーザーに対してこのラベルを削除します。
 

@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960884"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403724"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成
 
@@ -58,9 +58,9 @@ Azure Information Protection では、承認済みユーザーのコラボレー
     
    - 第 1 外部組織内の全ユーザー: **[詳細を入力]** を選択し、組織のテナント内のドメイン名を入力します (たとえば、fabrikam.com)。
     
-   - 第 2 外部組織内のグループ: **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、 sales@contoso.comのように指定します。
+   - 第 2 外部組織内のグループ: **[詳細を入力]** タブで、組織のテナント内のグループの電子メール アドレスを入力します。 たとえば、sales@contoso.com となります。
     
-   - Azure AD アカウントを持っていないユーザー: **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、 bengi.turan@gmail.comのように指定します。 
+   - Azure AD アカウントを持っていないユーザー: **[詳細を入力]** タブで、ユーザーの電子メール アドレスを入力します。 たとえば、bengi.turan@gmail.com となります。 
 
 4. これらすべてのユーザーに同じ権限を付与するには、 **[事前設定されたものの中からアクセス許可を選択する]** で、 **[共同所有者]** 、 **[共同作成者]** 、 **[レビュー担当者]** 、または **[カスタム]** を選択し、付与する権限を選択します。
     
@@ -78,10 +78,10 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ラベルを構成したら、次に示す各種の方法でラベルをドキュメントに適用できます。
 
-|ラベルの適用方法|説明を見る|
+|ラベルの適用方法|説明|
 |---------------|----------|
 |Office アプリケーションでのドキュメント作成時に、手動でラベルを選択する。|Office リボンの **[保護]** ボタンか、Azure Information Protection バーからラベルを選択します。|
-|新規ドキュメントの保存時に、ラベルを選択するように求められる。|**[すべてのドキュメントとメールにラベルを付ける]** という Azure Information Protection [ポリシー設定](configure-policy-settings.md)を構成した場合です。|
+|新規ドキュメントの保存時に、ラベルを選択するように求められる。|[[すべてのドキュメントとメールにラベルを付ける]](configure-policy-settings.md) という Azure Information Protection **ポリシー設定**を構成した場合です。|
 |電子メールによってドキュメントを共有し、Outlook でラベルを手動で選択する。|Office リボンの **[保護]** ボタン (または Azure Information Protection バー) からラベルを選択すると、添付されたドキュメントが同じ設定で自動的に保護されます。|
 |管理者が PowerShell を使用してドキュメントにラベルを適用する。|[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) コマンドレットを使用して、特定のドキュメントや、フォルダー内のすべてのドキュメントにラベルを適用します。|
 |自動分類を適用するようにラベルを構成する (これは、Azure Information Protection スキャナーまたは PowerShell を使用して適用できるようになりました)。|「[Azure Information Protection 用の自動および推奨分類の条件を構成する方法](configure-policy-classification.md)」をご覧ください。|
@@ -96,7 +96,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 ## <a name="opening-and-editing-the-protected-document"></a>保護されたドキュメントを開いて編集する
 
-承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 たとえば次のようになります。
+承認済みのユーザーがドキュメントを編集用に開くと、ドキュメントが開く際、権限が制限されていることを知らせる情報バナーが表示されます。 例 :
 
 ![Azure Information Protection の権限に関する情報バナーの例](./media/example-restricted-access-banner.png)
 
@@ -136,9 +136,9 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 |ドキュメントの表示と編集のためのプラットフォーム: <br />Word、Excel、PowerPoint|認証方法:<br />Azure AD|認証方法:<br />Microsoft アカウント|
 |---------------|----------|-----------|-----------|
 |Windows|はい [[1]](#footnote-1)|はい [[2]](#footnote-2)|
-|[iOS]|はい [[1]](#footnote-1)|[いいえ]|
-|Android|はい [[1]](#footnote-1)|[いいえ]|
-|MacOS|はい [[1]](#footnote-1)|[いいえ]|
+|iOS|はい [[1]](#footnote-1)|いいえ|
+|Android|はい [[1]](#footnote-1)|いいえ|
+|MacOS|はい [[1]](#footnote-1)|いいえ|
 
 ###### <a name="footnote-1"></a>脚注 1:
 ユーザー アカウント、電子メールが有効なグループ、すべてのメンバーがサポートされています。 ユーザー アカウント、および電子メールが有効なグループには、ゲスト アカウントが含まれる場合があります。 すべてのメンバーには、ゲスト アカウントは含まれません。
@@ -149,7 +149,7 @@ Azure Information Protection では、承認済みユーザーのコラボレー
 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 一般的なシナリオで保護を適用するためのラベルについては、他の[構成例](configure-policy-protection.md#example-configurations)をご覧ください。 この記事には、保護設定に関する詳細も含まれています。
 
