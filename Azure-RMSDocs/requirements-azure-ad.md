@@ -13,11 +13,11 @@ ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72890280"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404642"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -51,7 +51,7 @@ Office 2010 を実行しているコンピューターの場合:
 
 AD FS または同等の認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
 
-- 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
+- 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、または OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
 Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
@@ -90,6 +90,6 @@ Rights Management コネクタおよび Azure Information Protection スキャ�
  
 - スキャナーを実行するサービス アカウント。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 

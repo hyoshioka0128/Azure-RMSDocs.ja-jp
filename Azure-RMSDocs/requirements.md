@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117886"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403962"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
@@ -61,7 +61,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 承認用のユーザーとグループ アカウントの要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
-## <a name="client-devices"></a>クライアント デバイス
+## <a name="client-devices"></a>[クライアントのデバイス]
 
 ユーザーは Azure Information Protection をサポートするオペレーティング システムを実行するクライアント デバイス (コンピューターまたはモバイル デバイス) を所有している必要があります。
 
@@ -149,7 +149,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 オンプレミス サーバーで Azure Information Protection から Azure Rights Management サービスを使用する必要がある場合、次の製品がサポートされます。
 
-- Exchange Server
+- Exchange Server
 
 - SharePoint Server
 
@@ -165,7 +165,7 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 [AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aipservice/Set-AipServiceMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
 
-### <a name="service-tags"></a>サービス タグ
+### <a name="service-tags"></a>サービスタグ
 
 次のサービスタグのすべてのポートへのアクセスを許可してください。
 

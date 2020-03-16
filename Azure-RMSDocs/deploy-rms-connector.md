@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 894f2cd0b2cfc2a8cf15278b46bf508314ebaf71
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117639"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404353"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
@@ -58,7 +58,7 @@ Azure RMS の自分のテナント キーを管理する場合 (Bring Your Own K
 ## <a name="prerequisites-for-the-rms-connector"></a>RMS コネクタの前提条件
 RMS コネクタをインストールする前に、次の要件を満たしていることを確認してください。
 
-|要件|説明を見る|
+|要件|説明|
 |---------------|--------------------|
 |保護サービスがアクティブ化されています|[Azure Information Protection からの保護サービスのアクティブ化](activate-service.md)|
 |オンプレミス Active Directory フォレストと Azure Active Directory の間のディレクトリ同期|RMS をアクティブ化した後に、Azure Active Directory を構成して Active Directory データベース内のユーザーおよびグループを使用できるようにする必要があります。<br /><br />**重要**: RMS コネクタが動作するためには、テスト ネットワークに対してもこのディレクトリ同期手順を実行する必要があります。 Office 365 および Azure Active Directory では、Azure Active Directory で手動作成したアカウントを使用できますが、このコネクタでは、Azure Active Directory のアカウントが Active Directory Domain Services と同期している必要があります。手動によるパスワードの同期では不十分です。<br /><br />詳細については、次のリソースを参照してください。<br /><br />- [オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [ハイブリッド ID ディレクトリ統合ツールの比較](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
@@ -92,6 +92,6 @@ RMS コネクタをインストールする前に、次の要件を満たして�
     -   [コネクタを使用するためのファイル分類インフラストラクチャ用ファイル サーバーの構成](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 手順 1: [Azure Rights Management コネクタのインストールと構成](install-configure-rms-connector.md) に進みます。

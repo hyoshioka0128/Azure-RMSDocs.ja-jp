@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 73e087934d6858bf7ce3644ac47b8c7f6e2327f9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935114"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404336"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Azure Rights Management サービスを使用するためのオンラインサービスの構成
 
@@ -31,7 +31,7 @@ Exchange Online が Azure Rights Management サービスと連携する方法の
 
 Exchange Online で既に Azure Rights Management サービスの使用が有効になっている可能性があります。 これを確認するには、次のコマンドを実行します。
 
-1. コンピューターで Exchange Online 用 Windows PowerShell を使用するのが初めての場合は、署名済みスクリプトを実行するように Windows PowerShell を構成する必要があります。 **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開始し、次のように入力します。
+1. コンピューターで Exchange Online 用 Windows PowerShell を初めて使用する場合は、署名済みスクリプトを実行するように Windows PowerShell を構成する必要があります。 **[管理者として実行]** オプションを使用して Windows PowerShell セッションを開始し、次のように入力します。
     
         Set-ExecutionPolicy RemoteSigned
     
@@ -75,7 +75,7 @@ Azure Rights Management サービスを使用するように Exchange Online を
 
 ## <a name="sharepointonline-and-onedrive-for-business-irm-configuration"></a>SharePoint Online と OneDrive for Business: IRM 構成
 
-SharePoint Online IRM と Azure Rights Management サービスが連動するしくみについては、このドキュメントの「**Rights Management の保護**」セクションの「[SharePoint Online と SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」を参照してください。
+SharePoint Online IRM と Azure Rights Management サービスが連動するしくみについては、このドキュメントの「[Rights Management の保護](office-apps-services-support.md#sharepoint-online-and-sharepoint-server)」セクションの「**SharePoint Online と SharePoint Server**」を参照してください。
 
 Azure Rights Management サービスをサポートするように SharePoint Online と OneDrive for Business を構成するには、最初に SharePoint 管理センターを使用して、SharePoint Online の Information Rights Management (IRM) サービスを有効にする必要があります。 これで、サイトの所有者は SharePoint リストとドキュメント ライブラリを IRM で保護でき、ユーザーは OneDrive for Business ライブラリを IRM で保護することができます。それらの場所に保存されたドキュメント、および他のユーザーと共有しているドキュメントが、自動的に Azure Rights Management サービスで保護されるようになります。
 
@@ -514,7 +514,7 @@ SharePoint Online の IRM サービスを有効にした後、ユーザーの On
 
       たとえば、contoso テナントのユーザーのユーザー名が "rsimone" の場合、 **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com** と指定します。
 
-   4. スクリプトを使用して OneDrive for Business を構成しているので、`$listTitle` 変数の **ドキュメント** の値は変更しないでください。
+   4. スクリプトを使用して OneDrive for Business を構成しているので、**変数の**ドキュメント`$listTitle` の値は変更しないでください。
 
    5. `ADMIN INSTRUCTIONS` を探します。 このセクションを変更しないと、ユーザーの OneDrive for Business はポリシーのタイトル "Protected Files"、説明 "This policy restricts access to authorized users" で IRM 用に構成されます。  その他の IRM オプションは設定されません、おそらくほとんどの環境に最適です。 ただし、推奨されているポリシーのタイトルと説明を変更でき、環境に合わせて他の IRM オプションも追加できます。 Set-IrmConfiguration コマンドの独自のパラメーター セットの作成については、スクリプトのコメント付きの例を参照してください。
 

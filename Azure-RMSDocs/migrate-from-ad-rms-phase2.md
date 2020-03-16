@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934706"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404047"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -42,7 +42,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
 1. AD RMS の管理権限を持つユーザーとして AD RMS クラスターにログオンします。
 
-2. AD RMS 管理コンソール (**Active Directory Rights Management サービス**) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]** を展開し、 **[信頼された発行ドメイン]** をクリックします。
+2. AD RMS 管理コンソール ( **[Active Directory Rights Management Services]** ) から、AD RMS クラスター名を展開し、 **[信頼ポリシー]** を展開して、 **[信頼された発行ドメイン]** をクリックします。
 
 3. 結果ウィンドウで信頼された発行ドメインを選択し、操作ウィンドウから **[信頼された発行ドメインのエクスポート]** をクリックします。
 
@@ -140,7 +140,7 @@ Azure Rights Management サービスをアクティブ化する前でも後で�
 
 2. Azure RMS PowerShell コマンドレットの[export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)を使用して、テンプレートをエクスポートします。
 
-3. Azure RMS PowerShell コマンドレット [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd) を使用して、テンプレートをインポートします。
+3. Azure RMS PowerShell コマンドレットを使用して、テンプレートをインポート[します。](/powershell/module/aipservice/import-aipservicetpd)
 
 その後は、移行後に作成した他のテンプレートと同様に、これらのテンプレートを発行したりアーカイブしたりできます。
 
@@ -194,5 +194,5 @@ Remove-PSDrive MyRmsAdmin -force
 ```
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 「[フェーズ 3 - クライアント側の構成](migrate-from-ad-rms-phase3.md)」に進みます。

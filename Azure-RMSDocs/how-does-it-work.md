@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 274889b59e40157bf0a4fb3e02a350b17907ddfa
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934774"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403639"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Azure RMS の機能の 詳細
 
@@ -48,7 +48,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 |-|-|
 |アルゴリズム:AES<br /><br />キーの長さ: 128 ビットと 256 ビット [[1]](#footnote-1)|コンテンツの保護|
 |アルゴリズム:RSA<br /><br />キーの長さ: 2048 ビット [[2]](#footnote-2)|キーの保護|
-|SHA-256|証明書の署名|
+|SHA-256|[証明書の署名]|
 
 ###### <a name="footnote-1"></a>脚注 1: 
 
@@ -60,7 +60,7 @@ Azure RMS が使用するアルゴリズムおよびキー長に関する技術�
 
 - テキスト ファイルまたはイメージ ファイル (.ptxt や .pjpg など) のネイティブ保護。
 
-###### <a name="footnote-2"></a>脚注 2
+###### <a name="footnote-2"></a>脚注 2:
 
 2048 ビットは、Azure Rights Management サービスがアクティブ化されているときのキーの長さです。 1024 ビットは、省略可能な次のシナリオでサポートされています。
 
@@ -161,7 +161,7 @@ RMS クライアントは、ユーザー環境の初期化時に取得した組�
 
 - **Microsoft アカウント**: Microsoft アカウントで認証されていれば、Azure Information Protection で消費用の電子メール アドレスを承認できます。 ただし、Microsoft アカウントが認証に使用されている場合、アプリケーションによっては、保護されたコンテンツを開けない場合があます。 詳しくは[こちら](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)をご覧ください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 Azure Rights Management サービスの詳細については、**概要と詳細**のセクションの他の記事を使用してください。たとえば、既存のアプリケーションと Azure Rights Management を統合して情報保護ソリューションを提供する方法を確認するには、「[アプリケーションによる Azure Rights Management サービスのサポート](applications-support.md)」を参照してください。 
 

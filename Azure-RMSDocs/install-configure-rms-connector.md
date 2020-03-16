@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 4d4ba8a3093e1bef32e42b562c93e787e603614b
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117988"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404149"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -40,7 +40,7 @@ Azure Rights Management (RMS) コネクタをインストールして構成す�
 
     RMS コネクタをインストールするには、RMSConnectorSetup.exe をダウンロードしてください。
 
-    さらに
+    さらに:
 
     -   後で 32 ビット コンピューターからコネクタを構成する場合、RMSConnectorAdminToolSetup_x86.exe もダウンロードします。
 
@@ -108,14 +108,14 @@ RMS コネクタのインストール プロセスでは、すべての前提条
 
 ウィザードの最終ページで、次の操作を実行して **[完了]** をクリックします。
 
--   最初のコネクタをインストールした段階では、 **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択しないでください。 このオプションは、2 つ目 (または最後) の RMS コネクタをインストールした後に選択します。 代わりに、少なくとも 1 つの他のコンピューターで、ウィザードをもう一度実行してください。 2 つ以上のコネクタをインストールする必要があります。
+-   最初のコネクタをインストールした場合は、現時点で **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択しないでください。 このオプションは、2 つ目 (または最後) の RMS コネクタをインストールした後に選択します。 代わりに、少なくとも 1 つの他のコンピューターで、ウィザードをもう一度実行してください。 2 つ以上のコネクタをインストールする必要があります。
 
--   2 つ目 (または最後) のコネクタをインストールした後で、 **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択します。
+-   2 つ目 (または最後) のコネクタをインストールしたら、 **[コネクタ管理者コンソールを起動してサーバーを承認する]** を選択します。
 
 > [!TIP]
 > この時点で、検証テストを実行して、RMS コネクタ用の Web サービスが機能しているかどうかを確認できます。
 >
-> -   Web ブラウザーから **http://&lt;connectoraddress&gt;/_wmcs/certification/servercertification.asmx** に接続します。 *&lt;connectoraddress&gt;* は、RMS コネクタがインストールされているサーバーのアドレスまたは名前に置き換えてください。 接続に成功すると、 **ServerCertificationWebService** ページが表示されます。
+> -   Web ブラウザーから **http://&lt;connectoraddress&gt;/_wmcs/certification/servercertification.asmx** に接続します。 *&lt;connectoraddress&gt;* は、RMS コネクタがインストールされているサーバーのアドレスまたは名前に置き換えてください。 接続に成功すると、**ServerCertificationWebService** ページが表示されます。
 
 RMS コネクタをアンインストールする必要がある場合は、ウィザードを再実行してアンインストール オプションを選択します。
 
@@ -134,7 +134,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 - 複数のサーバーを 1 つのエントリとして追加するには、Active Directory のセキュリティ グループや配布グループ、または複数のサーバーで使用されているサービス アカウントを指定します。 この構成を使用すると、サーバーのグループは同じ RMS 証明書を共有し、グループに属するすべてのサーバーは、グループ内の各サーバーが保護しているコンテンツの所有者と見なされます。 管理オーバーヘッドを最小限に抑えるため、個々のサーバー単位ではなく、この単一グループ構成を使用して組織の Exchange サーバーまたは SharePoint サーバー ファームを承認することを推奨します。
 
-**[コネクタの使用が許可されているサーバー]** ページで **[追加]** をクリックします。
+**[コネクタの使用が許可されているサーバー]** ページで、 **[追加]** をクリックします。
 
 > [!NOTE]
 > サーバーの承認は、サービスまたはサーバーのコンピューター アカウントの ServerCertification.asmx に NTFS アクセス許可を手動で適用して、Exchange アカウントにユーザー スーパー権限を手動で付与する AD RMS 構成に対する Azure RMS の同等の構成です。 コネクタでは、ServerCertification.asmx に NTFS アクセス許可を適用する必要はありません。
@@ -151,7 +151,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 
 -   SharePoint を実行するサーバー:
 
-    -   SharePoint 2010 サーバーが (サービス アカウントを使用しないで) ローカル システムとして実行するように構成されている場合は、Active Directory Domain Services にセキュリティ グループを手動で作成し、この構成でのサーバーのコンピューター名オブジェクトを、このグループに追加します。
+    -   SharePoint 2010 サーバーが (サービス アカウントを使用しないで) ローカル システムとして実行するように構成されている場合は、Active Directory ドメイン サービスにセキュリティ グループを手動で作成し、この構成でのサーバーのコンピューター名オブジェクトを、このグループに追加します。
 
     -   SharePoint サーバーがサービス アカウントを使用するように構成されている場合は (SharePoint 2010 の場合は推奨される方法、SharePoint 2016 と SharePoint 2013 の場合は唯一のオプション)、次のようにします。
 
@@ -184,7 +184,7 @@ DNS で名前を作成して IP アドレスを構成したら、そのアドレ
 
     HTTP または HTTPS のどちらを使用するかについては、次のセクションを参照してください。
 
--   アフィニティ:なし
+-   関係: なし
 
 -   分散方法:Equal
 
@@ -204,8 +204,8 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 > 次の情報およびリソースを使用して、サーバー認証証明書を要求してインストールし、その証明書を IIS の既定の Web サイトにバインドできます。
 >
 > - Active Directory 証明書サービス (AD CS) とエンタープライズ証明機関 (CA) を使用してこれらのサーバー認証証明書を展開する場合は、Web サーバー証明書テンプレートを複製して使用することができます。 この証明書テンプレートでは、証明書のサブジェクト名で **[要求に含まれる]** オプションを使用しています。これにより、証明書を要求する際に、証明書のサブジェクト名またはサブジェクトの別名に RMS コネクタ名の FQDN を指定できます。
-> -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[インターネット サーバー証明書を構成する (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx)」を参照してください。
-> - 証明書を使用するように IIS を構成するには、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[サイトにバインドを追加する (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx)」を参照してください。
+> -   スタンドアロン CA を使用する場合や、この証明書を別の会社から購入している場合は、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx)」ドキュメント ライブラリにある「[インターネット サーバー証明書を構成する (IIS 7)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」を参照してください。
+> - 証明書を使用するように IIS を構成するには、TechNet の「[Web サーバー (IIS)](https://technet.microsoft.com/library/cc731692.aspx)」ドキュメント ライブラリにある「[サイトにバインドを追加する (IIS 7)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)」を参照してください。
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Web プロキシ サーバーを使用するための RMS コネクタの構成
 コネクタサーバーがインターネットに直接接続されていないネットワークにインストールされており、インターネットに発信アクセスするために web プロキシサーバーを手動で構成する必要がある場合は、これらのサーバーのレジストリを RMS コネクタ用に構成する必要があります。
@@ -244,6 +244,6 @@ RMS コネクタ管理ツールをインストールするには、次のファ�
 これらのファイルをまだダウンロードしていない場合は、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)から入手できます。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 RMS コネクタのインストールと構成が完了したので、コネクタを使用するためにオンプレミス サーバーを構成することができます。 「[Configuring servers for the Azure Rights Management connector (Azure Rights Management コネクタ用にサーバーを構成する)](configure-servers-rms-connector.md)」に進みます。
 

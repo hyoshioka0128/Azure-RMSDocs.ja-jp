@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 9bd7768d478301e090518f86bd119c99436ca8a3
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935505"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79405084"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -33,7 +33,7 @@ Azure Information Protection のデータ保護を提供するサービスを構
 
 手順については、「 [AIPService PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。
 
-移行手順の一部では、\<*実際のテナント URL*\> が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、 **<GUID>.rms.<リージョン>.aadrm.com** という形式です。
+移行手順の一部では、 *\<実際のテナント URL\>* が参照されたときに置き換えることができるように、テナントの Azure Rights Management サービス URL を確認しておく必要があります。 Azure Rights Management サービス URL は、 **<GUID>.rms.<リージョン>.aadrm.com** という形式です。
 
 例: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -147,6 +147,6 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 Exchange Online またはオンプレミスの Exchange に対してこれらのコマンドを実行すると、移行前に AD RMS によって保護されたコンテンツをサポートするように構成されていた Exchange 展開は、移行後も Azure RMS によって保護されたコンテンツをサポートします。 Exchange 展開では、後の移行手順まで、引き続き AD RMS を使って保護されたコンテンツをサポートします。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 「[フェーズ 2: サーバー側の構成](migrate-from-ad-rms-phase2.md)」に進みます。
 

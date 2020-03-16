@@ -13,11 +13,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 56a61e558f72812517d21201aa6e4215624d903d
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934587"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404982"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -150,7 +150,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 
 **ProxyAddresses** 列が設定されていない場合は、**UserPrincipalName** の値が Azure Rights Management サービスのユーザーを承認するために使用されます。
 
-たとえば、次のようになります。
+例 :
 
 
 |  表示名   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -177,7 +177,7 @@ Azure AD PowerShell を使用して、ユーザーとグループを Azure Infor
 > [!TIP]
 > Export-Csv コマンドレットを使用すると、結果をスプレッド シートにエクスポートでき、インポートの検索や一括編集などの管理が容易になります。
 >
-> たとえば次のようになります。`Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> 例: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>グループ アカウントが Azure Information Protection の準備ができていることを確認する
 
@@ -208,7 +208,7 @@ Azure Information Protection で使用したいグループが表示されるこ
 使用権限の割り当てまたは Azure Rights Management サービスの構成を行うためにグループを使用する場合、またはスコープ付きポリシーを構成する場合は、すべての変更や、実行するテストで、この遅延を考慮してください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 ユーザーとグループを Azure Information Protection に使用できることと、ドキュメントと電子メールの保護を開始する準備ができたことを確認したら、Azure Rights Management サービスをアクティブにする必要があるかどうかを確認します。 組織のドキュメントと電子メールを保護するには、このサービスをアクティブにする必要があります。 
 

@@ -14,11 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
 ms.openlocfilehash: 99127a66ffc062308d915d701f6f1d8b8f521753
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960693"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403843"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection ユーザー ガイド
 
@@ -28,10 +28,10 @@ ms.locfileid: "75960693"
 
 Windows 用 Azure Information Protection クライアントは、電子メールが転送されたりドキュメントが別の場所に保存されている場合でも、重要なドキュメントや電子メールを閲覧すべきでないユーザーから保護するうえで役立ちます。 また、このクライアントを使用して、他のユーザーが Azure Information Protection の Rights Management 保護テクノロジを使って保護したドキュメントを開くこともできます。
 
-必要なものは、Windows 7 with Service Pack 1 以降を搭載しているコンピューターだけです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
+必要なのは、Windows 7 Service Pack 1 を実行しているコンピューターのみです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
 
 
-## <a name="what-do-you-want-to-do"></a>実行したい操作
+## <a name="what-do-you-want-to-do"></a>作業内容
 
 - [Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)
 
