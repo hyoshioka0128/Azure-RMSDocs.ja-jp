@@ -4,7 +4,7 @@ description: Windows コンピューターとモバイルデバイスに Azure I
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 180e6c29580c87ebdf813df0dc6aae40007f1d86
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 2219c1267d9c271106a7605f1947990bd1ea21a6
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972767"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482676"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
@@ -77,6 +77,6 @@ Azure Information Protection アプリを Intune に追加するときの追加�
 
 Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 Azure Information Protection クライアントをインストールして構成した後、ドキュメントや電子メールを保護するために使用できるさまざまな使用権限をクライアントが解釈する方法について、詳細を確認する必要がある場合があります。 詳細については、「 [Azure Information Management の使用権限を構成する](configure-usage-rights.md)」を参照してください。

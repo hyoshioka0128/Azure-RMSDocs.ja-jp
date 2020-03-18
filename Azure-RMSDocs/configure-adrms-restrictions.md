@@ -4,19 +4,19 @@ description: Azure Information Protection による HYOK (AD RMS) 保護の概�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 4fb1018d75717faeb2e19a1ac63bc74b9cb44b07
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972695"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482693"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -26,7 +26,6 @@ ms.locfileid: "78972695"
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
-
 
 次の情報を使用して、Azure Information Protection の Hold your own key (HYOK) 保護とは何か、およびクラウド ベースの既定の保護と異なる点について把握してください。 HYOK 保護を使用する前に、適切な場合、サポートされるシナリオ、制限事項、要件を理解していることを確認してください。 
 
@@ -72,7 +71,7 @@ HYOK 保護を適用するには、Azure Information Protection のラベルを�
 
 HYOK 向けに構成されているラベルを使用して、HYOK によって保護されているコンテンツを開き (消費し) コンテンツを保護するための、サポートされているシナリオを次の表に示します。
 
-|プラットフォーム|アプリケーション|Supported|
+|プラットフォーム|アプリケーション|サポートされています|
 |----------------------|----------|-----------|
 |Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護: はい<br /><br />消費: はい|
 |Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Outlook|保護: はい<br /><br />消費: はい|
@@ -90,8 +89,8 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 |Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
 |Android|Office Mobile <br /><br />- Outlook|保護: なし<br /><br />消費: いいえ|
 |Android|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
-|Web|Outlook on the web|保護: なし<br /><br />消費: いいえ|
-|Web|Web 用 Office<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
+|[Web]|Outlook on the web|保護: なし<br /><br />消費: いいえ|
+|[Web]|Web 用 Office<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
 |ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
 
 
@@ -200,6 +199,6 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 HYOK 保護のラベルを構成するには、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」を参照してください。 

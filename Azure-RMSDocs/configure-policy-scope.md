@@ -4,7 +4,7 @@ description: 特定のユーザーに対して異なる設定やラベルを構�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d0a370950bb5853453106e59af3da9c9a2f8f463
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 1922348a9d6075eb9843588515a24a5896fc41cf
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972887"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482727"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法
 
@@ -57,6 +57,9 @@ Azure Information Protection クライアントをサポートする Office デ�
     
     パフォーマンス上の理由から、スコープ ポリシー用のグループのメンバーシップは[キャッシュ](prepare.md#group-membership-caching-by-azure-information-protection)されます。
 
+    > [!NOTE]
+    > 最大200のユーザーまたはグループを選択します。 スコープポリシーを取得するために200人以上のユーザーが必要な場合は、新しいグループを作成し、関連するユーザーをそのグループに追加して、ポリシースコープを新しいグループに設定します。 
+
 4. ここで、新しいラベルを追加したり、スコープ ポリシーの設定を構成します。 グローバル ポリシーは常に最初に適用されるため、新しいラベルでグローバル ポリシーを補い、グローバル設定をオーバーライドすることができます。 たとえば、グローバル ポリシーに既定のラベルが何も指定されていない場合は、特定の部門の別のスコープ ポリシーで、既定のラベルを別途構成することができます。
 
     ラベルまたは設定の構成に関するヘルプが必要な場合は、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
@@ -67,6 +70,6 @@ Azure Information Protection クライアントをサポートする Office デ�
 
 Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時、またはエクスプローラーが開かれたときに常に変更の有無を確認します。 変更があった場合、クライアントはそのユーザーに適用されるグローバル ポリシーまたはスコープ ポリシーに変更をダウンロードします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ:
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルをご覧ください。

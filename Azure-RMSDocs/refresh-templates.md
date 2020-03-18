@@ -4,7 +4,7 @@ description: Azure Rights Management サービスを使用する場合、テン�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcbfd0db4da98f6f59131e652d1ef34f3519d92e
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 00ddb823fca83f09d40ad30c8242b3a8e5ce71a8
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973125"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483050"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -75,7 +75,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
 ### <a name="to-force-an-immediate-refresh"></a>直ちに更新するには
 
-1. レジストリ エディターを使用して、 **LastUpdatedTime** 値のデータを削除します。 たとえば、"**2015-04-20T15:52**" と表示されている場合は、この 2015-04-20T15:52 を削除して、何も表示されていない状態にします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
+1. レジストリ エディターを使用して、**LastUpdatedTime** 値のデータを削除します。 たとえば、このデータに **2015-04-20T15:52** が表示されている場合、この 2015-04-20T15:52 を削除して、データが表示されないようにします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
 
    **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
@@ -88,7 +88,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
    > 
    > Azure Information Protection に対して[AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)コマンドレットを実行します。 AIPService PowerShell モジュールをまだインストールしていない場合は、「 [AIPService powershell モジュールのインストール](install-powershell.md)」を参照してください。
    > 
-   > 出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
+   > 出力から、**LicensingIntranetDistributionPointUrl** の値を確認します。
    > 
    > 例: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
    > 
