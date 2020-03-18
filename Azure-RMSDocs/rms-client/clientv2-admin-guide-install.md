@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f50db0279d5611e3e62698a6a4ca7f871f00dd04
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: ca7b0b879af117bc198c1a4224a44639c39d5548
+ms.sourcegitcommit: 03c9f8d24c65bffc14b9701ea83a2ac05b681023
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403656"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416380"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -57,18 +57,6 @@ Azure Information Protection 統合されたラベル付けクライアントを
     
     Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。
 
-- KB 2533623
-    
-    Windows 7 Service Pack 1 を実行しているコンピューターには、KB 2533623 が必要です。 この更新プログラムの詳細については、「[マイクロソフト セキュリティ アドバイザリ: 安全でないライブラリの読み込みにより、リモートでコードが実行される](https://support.microsoft.com/en-us/kb/2533623)」を参照してください。 この更新プログラムは直接インストールすることもでき、また、その更新プログラムを包括する別の更新プログラムによって置き換えられることもあります。
-    
-    この必要な更新プログラムがインストールされていない場合、クライアントのインストールにより、インストールが必要だと警告が表示されます。 クライアントのインストール後にこの更新プログラムをインストールできますが、一部の操作はブロックされ、メッセージが再び表示されます。  
-
-- Visual Studio 2015 の Visual C++ 再頒布可能パッケージ (32 ビット バージョン)
-    
-    Windows 7 Service Pack 1 を実行しているコンピューターでは、次のダウンロード ページから **vc_redist.x86.exe** をインストールしてください: [Visual Studio 2015 の Visual C++ 再頒布可能パッケージ](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
-    
-    クライアントインストールでは、この前提条件は確認されませんが、Azure Information Protection 統合されたラベル付けクライアントが PDF ファイルを分類して保護するために必要です。
-
 - グループ ポリシーを構成して Azure Information Protection アドインが無効にならないようにする
     
     Office 2013 およびそれ以降のバージョンの場合、グループ ポリシーを構成して、Office アプリケーション用の **Microsoft Azure Information Protection** アドインが常に有効になるようにします。 この構成を行わないと、Microsoft Azure Information Protection アドインが無効にされる場合があり、ユーザーが Office アプリケーションで自分のドキュメントや電子メールにラベル付けできなくなります。
@@ -88,6 +76,21 @@ Azure Information Protection 統合されたラベル付けクライアントを
 > [!IMPORTANT]
 > Azure Information Protection の統合ラベル付けクライアントをインストールするには、ローカルの管理アクセス許可が必要です。
 
+## <a name="applications"></a>アプリケーション
+
+Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
+
+Office アプリの最小バージョン1805、ユーザーに Azure Rights Management (Office 365 の Azure Information Protection とも呼ばれます) のライセンスが割り当てられている場合の Office 365 Business または Microsoft 365 Business からのビルド 9330.2078 office 365 ProPlus Office Professional+ 2019 Office Professional Plus 2016 Office Professional Plus 2013 with Service Pack 1 Office Professional 2010 Plus Service Pack 2
+
+Office の他のエディション (**標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、**ラベル付け**のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
+
+保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](https://docs.microsoft.com/azure/information-protection/requirements-applications)」を参照してください。
+
+### <a name="office-features-and-capabilities-not-supported"></a>サポートされていない Office の機能
+
+Azure Information Protection 統合ラベル付けクライアントは、同じコンピューター上で複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。
+
+Office メールのマージ機能は、Azure Information Protection 機能ではサポートされていません。
 
 ## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Azure Information Protection 統合されたラベル付けクライアントをインストールするためのオプション
 
@@ -200,9 +203,8 @@ Windows Update を使用した自動アップグレードをサポートし、Of
     |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|Install|
     |Office 2010|Windows 8.1 と Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
     |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|Install|
-    |Office 2010|Windows 7 および Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB3125574 がインストールされていない場合はインストールします|
-    |適用できません|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
-    |適用できません|Windows 7|KB2627273 <br /><br /> ファイル名に含まれるバージョン番号: v4|アンインストール|
+    
+   
 
 3. 既定のインストールでは、 **のように、** /quiet`AzInfoProtection_UL.msi /quiet` を付けて .msi を実行します。 ただし、次の1つの例外を除き、[実行可能ファイルのインストーラーの指示](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)に記載されている追加のインストールパラメーターを指定することが必要になる場合があります。
     
