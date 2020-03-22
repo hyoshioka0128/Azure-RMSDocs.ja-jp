@@ -14,25 +14,26 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8c36466511749b6148f58c439702c8cd0f252a64
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792084"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068510"
 ---
 # <a name="windows-phone-setup"></a>Windows Phone のセットアップ
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
--   [必要条件](#prerequisites)
+-   [前提条件](#prerequisites)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 
 開発システムには、以下のソフトウェアが必要です。
@@ -43,7 +44,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 -   Windows Phone 向け MS RMS SDK 4.2 パッケージ。 詳細については、「[作業開始](get-started.md)」を参照してください。
 -   認証ライブラリ: [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) または他の使用可能な認証ライブラリを使用することをお勧めします。
 
-「[新機能](release-notes.md)」のトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
+[新機能](release-notes.md)に関するトピックで、API の更新情報、デバイスと環境情報、リリース ノート、よく寄せられる質問 (FAQ) をお読みください。
 
 [Windows Phone の開発](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)の詳細については、Windows Phone デベロッパー センターでご確認ください。
 
@@ -69,7 +70,7 @@ Windows Phone アプリケーションは Microsoft Rights Management SDK 4.2 �
 
 これで、独自の Windows Phone アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 [作業開始](get-started.md)
 

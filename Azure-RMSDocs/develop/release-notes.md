@@ -12,14 +12,16 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 2a3ef40991e2ba4fd5bac9c9eca947f269a77f47
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303626"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068318"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 ## <a name="whats-new"></a>新機能
 
@@ -101,7 +103,7 @@ ms.locfileid: "75303626"
 
 このリリースでは、以下の更新のサポートが追加されています。
 
--   [iOS]
+-   iOS
 
     アプリケーションの暗号化および復号化を独立して、並列的に実行できます。
 
@@ -143,7 +145,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   **AD RMS のサポート** – 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
 -   **オフラインで使用** - エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
--   **認証の分離** – 開発者は、独自の認証ライブラリ (または推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) を Azure RMS と AD RMS に使用できます。
+-   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) を使用することもできます)。
 -   **UI の分離** – 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
 -   **再設計された API** – 暗号化/復号化の API が単純でわかりやすくなりました。RMS の動作と操作方法に一貫性があり、労力が最小限に抑えられます。
 
@@ -151,7 +153,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   RMS SDK 4.x API は*スレッド セーフ*ではありません。
 
-**Outlook Web Access (OWA)**
+**Android**
 
 -   Amazon® Kindle デバイスで .ptxt の添付ファイルを表示するサンプル アプリケーションを使用する際に、表示する前に、まずファイルをダウンロードする必要があります。
 
@@ -200,7 +202,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 どうしてでしょうか。
+**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 その理由を教えてください。
 
 **A** – これは既知の問題であり、今後対応する予定です。
 
@@ -208,7 +210,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 どうしてでしょうか。
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 その理由を教えてください。
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -216,7 +218,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: いいえ、マニフェストは Rights Management SDK バージョン 3.0 以降では不要です。
 
-**Outlook Web Access (OWA)**
+**Android**
 
 **Q**: SDK はどの開発環境でテストされていますか。
 
@@ -225,13 +227,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
 **A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから を呼び出す必要があります。
 
-**Android**
+**iOS**
 
 **Q**: SDK の開発はどのプラットフォームで検証されましたか。
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 どうしてでしょうか。
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 その理由を教えてください。
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 

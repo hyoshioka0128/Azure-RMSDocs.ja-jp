@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791448"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068562"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 iOS および OS X アプリケーションでは、Microsoft Rights Management SDK 4.2 を使用して、Azure Rights Management (Azure RMS) を使用することにより、そのアプリケーション内で統合情報保護を有効にできます。
 
@@ -30,12 +32,12 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 **注**  この SDK では iPod Touch はサポートされていません。
 
 
--   [必要条件](#prerequisites)
+-   [前提条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -54,7 +56,7 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>オプション
+## <a name="optional"></a>［オプション］
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for iOS (iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)」参照。
 
@@ -101,7 +103,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 * [作業開始](get-started.md)
 

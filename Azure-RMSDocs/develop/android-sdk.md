@@ -14,25 +14,27 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792661"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068425"
 ---
 # <a name="android-setup"></a>Android のセットアップ
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Android アプリケーションは Microsoft Rights Management SDK 4.2 を使用して、Azure Active Directory Rights Management (AAD RM) を使用することでそのアプリケーション内で統合情報保護を有効にできます。
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
--   [必要条件](#prerequisites)
+-   [前提条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [関連項目](#see-also)
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -57,7 +59,7 @@ Android アプリケーションは Microsoft Rights Management SDK 4.2 を使�
 
 「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>オプション
+## <a name="optional"></a>［オプション］
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for Android](https://github.com/AzureAD/rms-sdk-ui-for-android)」 (Android 用の UI ライブラリとサンプル アプリ) 参照。
 
@@ -88,7 +90,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![アクティビティの名前を指定する](../media/Android-setup-05a.jpg)
 
--   **[Finish]** をクリックします。
+-   **[完了]** をクリックします。
 
     ![作成を終了する](../media/Android-setup-06.jpg)
 
@@ -117,7 +119,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
   ![ライブラリを追加する](../media/Android-setup-10b.jpg)
 
-- **[OK]** をクリックします。
+- **[OK]** をクリックすると、
 
   MS RMS SDK 4.2 は AAD RM に接続するため、アプリケーションに **INTERNET** および **ACCESS\_NETWORK\_STATE** が許可されている必要があります。 これを行うには、プロジェクトのルートで *AndroidManifest.xml* ファイルを開きます。
 
@@ -140,7 +142,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の Android アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 [作業開始](get-started.md)
 

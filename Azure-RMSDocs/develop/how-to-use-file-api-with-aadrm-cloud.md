@@ -14,21 +14,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 00f056e5e8dae9721933e041a766f72da99bb380
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 47107a9cbe9c7ba941475f83798a323cb4ff74d9
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792238"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068238"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)」を参照してください。
 
 **重要**  
 Rights Management Services SDK 2.1 サービスを Azure RMS で利用するには、独自のテナントを作成する必要があります。 詳細については、「[Azure RMS の要件: Azure RMS をサポートするクラウド サブスクリプション](../requirements.md)」を参照してください。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 -   RMS SDK 2.1 をインストールして構成する必要があります。 詳細については、[RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)を参照してください。
 -   対称キーのオプションを使用するかその他の方法で、[ACS を介してサービス ID を作成](https://msdn.microsoft.com/library/gg185924.aspx)して、その処理中にキー情報をメモします。
@@ -43,13 +45,13 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
         IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
-  **注** 詳細については、「[Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
+  **注** 詳細については、「[Setting the API security mode (API セキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
 
 -   次の手順は、[IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) 構造体のインスタンスを作成するためのセットアップです。*pcCredential* ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) メンバーに Azure Rights Management サービスの接続情報を設定します。
--   対称キーのサービス ID 作成時にメモした情報 (このトピックの前述の前提条件を参照してください) を使用して、[IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) 構造体のインスタンスを作成するときに *wszServicePrincipal*、*wszBposTenantId*、*cbKey* パラメーターを設定します。
+-   対称キーのサービス ID 作成時にメモした情報 (このトピックの前述の前提条件を参照してください) を使用して、*IPC*CREDENTIAL*SYMMETRIC*KEY*構造体のインスタンスを作成するときに*wszServicePrincipal[、\_wszBposTenantId\_、\_cbKey](https://msdn.microsoft.com/library/dn133062.aspx) パラメーターを設定します。
 
-**注** - 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 これを行うには、*pConnectionInfo* パラメーターの [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) または [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx) に [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) を入力します。
+**注** - 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 これを行うには、*pConnectionInfo* パラメーターの [IpcGetTemplateList\_ または \_IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535274.aspx) に [IPC](https://msdn.microsoft.com/library/hh535267.aspx)CONNECTION[INFO](https://msdn.microsoft.com/library/hh535266.aspx) を入力します。
 
 ## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>対称キーの生成と必要な情報の収集
 
@@ -171,7 +173,7 @@ hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),
 
 アプリケーションでの Azure Rights Management 使用の有効化に必要な手順が完了しました。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [Azure Rights Management の作業の開始](https://technet.microsoft.com/library/jj585016.aspx)
 * [RMS SDK 2.1 の概要](getting-started-with-ad-rms-2-0.md)

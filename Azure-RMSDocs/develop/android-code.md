@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791336"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068386"
 ---
 # <a name="android-code-examples"></a>Android のコード例
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 この記事では、Android バージョンの RMS SDK の要素をコーディングする方法を示します。
 
@@ -187,7 +189,7 @@ ms.locfileid: "68791336"
                      }
    ```
 
-- **手順 3**. [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
+- **手順 3**. **UserPolicy.accessCheck** メソッドを呼び出して、このユーザーにこのコンテンツの[編集](https://msdn.microsoft.com/library/dn790885.aspx)権限があるかを確認します。
 
     **ソース**: *TextEditorFragment.java*
 
@@ -361,7 +363,7 @@ ms.locfileid: "68791336"
 
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
-- **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 1**. [serializedContentPolicy](https://msdn.microsoft.com/library/dn790887.aspx) から *UserPolicy* を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -419,7 +421,7 @@ ms.locfileid: "68791336"
    ```
 
 
-- **手順 2**. **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
+- **手順 2**. [手順 1](https://msdn.microsoft.com/library/dn758271.aspx) の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、**CustomProtectedInputStream** を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -550,7 +552,7 @@ ms.locfileid: "68791336"
     ```
 
 
-- **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 2**. ポリシー記述子 [selectedDescriptor](https://msdn.microsoft.com/library/dn790887.aspx) からカスタムの *UserPolicy* を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 

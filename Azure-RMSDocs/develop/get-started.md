@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: ef9e600f05d4935a03e105cca370a8afa82fa5d9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 38f9c8b6d5b916e025409e1f639749d186c20faa
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792367"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068589"
 ---
-# <a name="get-started"></a>開始
+# <a name="get-started"></a>作業開始
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 この Microsoft Rights Management SDK 4.2 リリースでは、最初のアプリケーションをすばやく開発するために、各オペレーティング システム/プラットフォームの開発環境のセットアップ ガイドを使用します。 次の手順を行って、権限保護対応アプリケーションの作成を開始します。
 
@@ -50,7 +52,7 @@ ms.locfileid: "68792367"
 3. [SDK の概要マップ](api-reference-4-2.md)を参照してください。
 4. 重要な**リリース ノート**と**開発者ガイド**については、[新機能](release-notes.md)に関する記事を参照してください。
 
-   |トピック|[説明]|
+   |トピック|説明|
    |-----|-----------|
    |[新機能](release-notes.md)|MS RMS SDK 4.2 では、RMS アプリケーションが一段と簡素化され、柔軟性が向上しています。|
    |[開発環境のセットアップ](setup-developer-environment.md)|次のトピックは、特定のオペレーティング システム用の AD RMS SDK API を使用するための開発環境を設定する必要があることを示しています。|

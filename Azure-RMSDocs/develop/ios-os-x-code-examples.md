@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: eada5335d234b080dcb7be882eddfc4437a59370
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 34e7a531d117daaef54480c027effedb56c97137
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792230"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068397"
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
 
@@ -55,7 +57,7 @@ ms.locfileid: "68792230"
             }];
         }
 
-- **手順 2**: Active Directory 認証ライブラリ (ADAL) を使用する認証をセットアップする
+- **手順 2**. Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
 
   **説明**: この手順では、例の認証パラメーターで [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
 
@@ -96,7 +98,7 @@ ms.locfileid: "68792230"
                           }];
        }
 
-- **手順 3**. [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
+- **手順 3**. [MSUserPolicy](https://msdn.microsoft.com/library/dn790789.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790796.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
 
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
       {
@@ -158,7 +160,7 @@ ms.locfileid: "68792230"
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
 
--   **手順 1**. *serializedContentPolicy* から [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
+-   **手順 1**. [serializedContentPolicy](https://msdn.microsoft.com/library/dn790796.aspx) から *MSUserPolicy* を作成します。
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -186,7 +188,7 @@ ms.locfileid: "68792230"
             }];
          }
 
--   **手順 2**. **手順 1** の [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を使用して [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) を作成し、読み取りを行います。
+-   **手順 2**. [手順 1](https://msdn.microsoft.com/library/dn758321.aspx) の [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を使用して **MSCustomProtectedData** を作成し、読み取りを行います。
 
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
@@ -229,7 +231,7 @@ ms.locfileid: "68792230"
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
+-   **手順 2**. ポリシー記述子 [selectedDescriptor](https://msdn.microsoft.com/library/dn790796.aspx) からカスタムの *MSUserPolicy* を作成します。
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
