@@ -4,7 +4,7 @@ description: Azure Information Protection とその保護サービス、Azure Ri
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 13e6b4ea47c2aafeec24984c7db6aab99a16e9a0
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 586932ce196769a49e5901dbe6b1290e9d7390ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483186"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138290"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -82,9 +82,9 @@ Azure Information Protection の統一された**ラベル付けクライアン�
 
 表示された**バージョン**番号を使用して、クライアントを識別します。
 
-- バージョン**1**(たとえば、 **1.53.10.0**) は、Azure Information Protection クライアント (クラシック) を識別します。
+- バージョン**1**(たとえば、 **1.54.59.0**) は、Azure Information Protection クライアント (クラシック) を識別します。
 
-- バージョン**2**(たとえば、 **2.2.14.0**) は、Azure Information Protection 統合されたラベル付けクライアントを識別します。
+- バージョン**2**(たとえば、 **2.6.111.0**) は、Azure Information Protection 統合されたラベル付けクライアントを識別します。
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels"></a>ラベルを移行するのに最適なタイミング
 

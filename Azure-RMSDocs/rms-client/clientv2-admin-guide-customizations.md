@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/11/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 76109514c88b90826d2f258f86f2bc97dc7cbce1
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: d28386d43df47ff0aaacf039d6649e622077b6ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404948"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138307"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -302,158 +302,8 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
 
-この構成では、Office 365 セキュリティ/コンプライアンスセンター PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
-
-他のラベル付けソリューションから分類を削除するには、次の2つの方法があります。 最初のメソッドは、図形名が詳細プロパティ**WordShapeNameToRemove**で定義されている名前と一致する word 文書から図形を削除します。2番目の方法では、 **Removeexternalcontentmarkinginapp**詳細プロパティで定義されている、word、Excel、および PowerPoint ドキュメントからテキストベースのヘッダーまたはフッターを削除または置換できます。 
-
-### <a name="use-the-wordshapenametoremove-advanced-property"></a>WordShapeNameToRemove advanced プロパティを使用する
-
-***WordShapeNameToRemove** advanced プロパティは、バージョン2.6.101.0 以降でサポートされています。*
-
-この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、Word 文書から図形ベースのラベルを削除または置換できます。 たとえば、図形には、新しいラベル名と独自の図形を使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
-
-この詳細プロパティを使用するには、Word 文書で図形名を検索し、図形の**WordShapeNameToRemove**詳細プロパティリストで定義する必要があります。 この詳細プロパティの図形の一覧で定義されている名前で始まる Word の図形は、サービスによって削除されます。
-
-削除するすべての図形の名前を定義し、リソースを集中的に使用するプロセスであるすべての図形のテキストをチェックしないようにすることで、無視するテキストを含む図形を削除しないようにします。
-
-この追加の詳細プロパティ設定で Word 図形を指定せず、 **Removeexternalcontentmarkinginapp**キー値に word が含まれている場合は、 **Externalcontentmarkingtorclean**値で指定したテキストのすべての図形がチェックされます。 
-
-使用していて除外する図形の名前を検索するには、次のようにします。
-
-1. Word で、**選択**ウィンドウを表示します。 **ホーム** タブ >**編集**グループ > 選択 ウィンドウの オプション > 選択 **ウィンドウ** **を選択**します。
-
-2. 削除対象としてマークするページ上の図形を選択します。 マークした図形の名前が**選択**ウィンドウで強調表示されるようになりました。
-
-図形の名前を使用して、* * * * WordShapeNameToRemove * * * キーの文字列値を指定します。 
-
-例: シェイプ名は**dc**です。 この名前の図形を削除するには、値 `dc` を指定します。
-
-- キー: **WordShapeNameToRemove**
-
-- 値: \<**Word 図形の名前**> 
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
-
-複数の単語図形を削除する場合は、削除する図形の数を指定します。
-
-
-### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>RemoveExternalContentMarkingInApp 詳細設定プロパティの使用
-この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、テキストベースのヘッダーまたはフッターをドキュメントから削除したり置き換えることができます。 たとえば、古いフッターには、新しいラベル名とその独自のフッターを使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
-
-統一されたラベル付けクライアントがポリシーでこの構成を取得すると、Office アプリでドキュメントを開いたときに古いヘッダーとフッターが削除されるか、またはドキュメントに機密ラベルが適用されます。
-
-この構成は Outlook ではサポートされていません。そのため、この構成を Word、Excel、PowerPoint で使用すると、ユーザーのこれらのアプリのパフォーマンスに悪影響が生じる場合があります。 この構成ではアプリケーションごとの設定を定義することができます。たとえば、Word 文書のヘッダーとフッターのテキストは検索し、Excel のスプレッドシートや PowerPoint のプレゼンテーションのテキストは検索しないようにできます。
-
-パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**Ord、E**X**セル、 **P**owerpoint) は、検索する必要があるものだけに制限することをお勧めします。
-
-選択したラベルポリシーについて、次の文字列を指定します。
-
-- キー: **RemoveExternalContentMarkingInApp**
-
-- 値: \<**Office アプリケーションの種類 WXP**> 
-
-次に例を示します。
-
-- Word 文書のみを検索するには、**W** を指定します。
-
-- Word 文書と PowerPoint プレゼンテーションを検索するには、**WP** を指定します。
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
-
-この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 **ExternalContentMarkingToRemove** が必要です。
-
-### <a name="how-to-configure-externalcontentmarkingtoremove"></a>ExternalContentMarkingToRemove を構成する方法
-
-**ExternalContentMarkingToRemove** キーに文字列値を指定するときには、正規表現を使用する 3 つのオプションがあります。
-
-- ヘッダーまたはフッターのすべてを削除する部分一致。
-    
-    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 これらのヘッダーまたはフッターを完全に削除したいとします。 値 `*TEXT*` を指定します。
-
-- ヘッダーまたはフッターの特定の単語のみを削除する完全一致。
-    
-    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 単語 **TEXT** のみを削除し、ヘッダーまたはフッター文字列は **TO REMOVE** として残したいとします。 値 `TEXT ` を指定します。
-
-- ヘッダーまたはフッターのすべてを削除する完全一致。
-    
-    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 正確にこの文字列が含まれているヘッダーまたはフッターを削除したいとします。 値 `^TEXT TO REMOVE$` を指定します。
-    
-
-指定した文字列のパターン マッチングでは大文字と小文字が区別されます。 文字列の最大長は255文字で、空白を含めることはできません。 
-
-一部のドキュメントには非表示の文字やさまざまな種類のスペースやタブが含まれているため、語句や文に指定した文字列が検出されない可能性があります。 値には、できるだけ単独の特徴的な単語を指定し、運用環境に展開する前に結果をテストしてください。
-
-同じラベルポリシーについて、次の文字列を指定します。
-
-- キー: **ExternalContentMarkingToRemove**
-
-- 値: \<**正規表現として定義された、マッチングする文字列**> 
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
-
-#### <a name="multiline-headers-or-footers"></a>複数行のヘッダーまたはフッター
-
-ヘッダーまたはフッターのテキストが複数行にわたる場合は、行ごとにキーと値を作成します。 たとえば、2 行にわたる次のフッターがあるとします。
-
-**ファイルは社外秘として分類**
-
-**ラベルは手動で適用**
-
-この複数行のフッターを削除するには、同じラベルポリシーに対して次の2つのエントリを作成します。
-
-- キー: **ExternalContentMarkingToRemove**
-
-- キーの値 1: **\*社外秘***
-
-- キーの値 2: **\*ラベルの適用*** 
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-
-
-#### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
-
-PowerPoint では、フッターが図形として実装されます。 指定したテキストのうち、ヘッダーまたはフッターでない図形が削除されるのを防ぐには、**PowerPointShapeNameToRemove** という名前の、追加のクライアントの詳細設定を使用します。 また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。
-
-この追加のクライアントの詳細設定を指定せず、PowerPoint が **RemoveExternalContentMarkingInApp** キーの値に含まれている場合、**ExternalContentMarkingToRemove** で指定したテキストがすべての図形でチェックされます。 
-
-ヘッダーまたはフッターとして使用している図形の名前を検索するには:
-
-1. PowerPoint の**選択**ウィンドウを表示し、 **[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
-
-2. ヘッダーまたはフッターを含むスライド上の図形を選択します。 選択した図形の名前が、**選択**ウィンドウで強調表示されます。
-
-図形の名前を使用して、**PowerPointShapeNameToRemove** キーの文字列値を指定します。 
-
-例: 図形の名前は **fc** です。 この名前の図形を削除するには、値 `fc` を指定します。
-
-- キー: **PowerPointShapeNameToRemove**
-
-- 値: \<**PowerPoint の図形の名前**> 
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
-
-複数の PowerPoint 図形を削除する場合は、削除する図形の数を指定します。
-
-既定では、マスター スライドのヘッダーとフッターのみがチェックされます。 この検索の対象をすべてのスライドに広げるには、**RemoveExternalContentMarkingInAllSlides** という名前の、追加のクライアントの詳細設定を使用します。ただし、このプロセスはリソースをより多く消費します。
-
-- キー: **RemoveExternalContentMarkingInAllSlides**
-
-- 値: **True**
-
-PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
-
+> [!NOTE]
+> 現在、この構成には既知の制限があり、今後のバージョンで再リリースされる予定です。 
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>エクスプローラーでカスタムアクセス許可を無効にする
 

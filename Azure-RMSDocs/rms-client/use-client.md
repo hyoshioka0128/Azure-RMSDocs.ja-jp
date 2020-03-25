@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b91a5e495ef625595d3453d306b6352f36d07d1e
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 2adce92f9507a31feb3c2a8acd5f9d62979f187a
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138251"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -124,6 +124,8 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |アカウントの切り替えのサポート:| いいえ | いいえ | **○** |
 |リモートデスクトップサービスのサポート:| **○** | **○** | **○** |
 |AD RMS のサポート:| **○** | × <sup>7</sup> | いいえ |
+|アプリ内の外部コンテンツマークの削除| **○**| いいえ| **○**|
+
 
 脚注:
 
