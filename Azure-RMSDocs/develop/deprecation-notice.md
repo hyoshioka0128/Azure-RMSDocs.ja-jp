@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 7a590457f04daf57bd8143883a6a29c9dd0e7219
-ms.sourcegitcommit: e36c2dba68caac6e3d2b094bd38a67758665ca76
+ms.openlocfilehash: 81c1ae66ebe1580255469c7008996ea633ca358d
+ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78934441"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375595"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>RMS SDK 4.2 の非推奨の通知 
 
@@ -33,7 +33,7 @@ ms.locfileid: "78934441"
 
 最新のブラウザーでは、証明書の透過性ログを使用して、証明書が正当なドメイン所有者に発行されていること、および信頼されたルート証明機関によって証明書が発行されたことを確認  
 
-最新のブラウザーをより適切にサポートするために、2020年9月15日に、Microsoft は、 https://api.aadrm.com の証明書を、発行された証明書を、最新のブラウザーによって信頼されている証明書の透過性ログに報告する、グローバルに信頼されたルート CA によって発行された新しい証明書 この変更が完了すると、予期したルート証明書に対して証明書の固定を実行しようとする RMS SDK のレガシバージョンは、その証明書を見つけることができず、接続に失敗します。  
+最新のブラウザーをより適切にサポートするために、2020年9月15日に、Microsoft は、`https://api.aadrm.com` の証明書を、発行された証明書を、最新のブラウザーによって信頼されている証明書の透過性ログに報告する、グローバルに信頼されたルート CA によって発行された新しい証明書 この変更が完了すると、予期したルート証明書に対して証明書の固定を実行しようとする RMS SDK のレガシバージョンは、その証明書を見つけることができず、接続に失敗します。  
 
 ## <a name="client-impact"></a>クライアントへの影響 
 

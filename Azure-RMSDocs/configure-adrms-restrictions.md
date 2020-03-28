@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 4fb1018d75717faeb2e19a1ac63bc74b9cb44b07
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 83fc8228b664acc067c6a604f3d438f39669a49a
+ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482693"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375628"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
@@ -194,7 +194,7 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 - テンプレート GUID を確認するには: クラスターを展開し、 **[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: https://rmscluster.contoso.com 
+- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: `https://rmscluster.contoso.com` 
     
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
