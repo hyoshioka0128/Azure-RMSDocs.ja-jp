@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c8baa3a52c257b82f3cc7e6091bf316cdb5111a4
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 9db865f64e2780d680a05cc8deae873b8cc975ea
+ms.sourcegitcommit: 1ade392edac5842adb14996012efb6e605c39d8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403809"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80382052"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -86,9 +86,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 - [自動および推奨ラベルに対するカスタマイズ可能なポリシーのヒント](use-client.md)が強化されました。   
 
 - 統一されたラベル付けクライアントで Office アプリを使用して、[オフラインラベル機能](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers)のサポートが追加されました。
-
-- New **WordShapeNameToRemove** advanced プロパティを使用すると、サードパーティ製アプリケーションによって作成された Word 文書でコンテンツマークを削除できます。 [ **WordShapeNameToRemove**を使用して、既存の図形名を識別し、削除対象と](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)して定義する方法について説明します。 
-
 
 
 **関する**
