@@ -1,10 +1,10 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 4
 description: AD RMS から Azure Information Protection への移行のフェーズ 4 には、手順 8 から 9 が含まれます。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 61a17f9d4b80dcc5ada82adeab4e215fc17b0963
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: b17f87f569b613a1583b82060b05bcbdeb943284
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934672"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670223"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -34,7 +34,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
 
 選択した Azure Information Protection テナント キー トポロジから個別に、次の操作を行います。
 
-1. AD RMS によって保護された電子メールを Exchange Online で暗号化解除できるようにするには、クラスターの AD RMS URL とテナントで利用できるキーが一致することを把握する必要があります。 これは、AD RMS クラスターの DNS SRV レコードを使用して実行されます。これは、Azure Information Protection を使用する Office クライアントを再構成するためにも使用されます。 手順 7 でクライアントの再構成用に DNS SRV レコードを作成しなかった場合は、ここで Exchange Online をサポートするためにこのレコードを作成します。 [手順](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+1. AD RMS によって保護されている電子メールを Exchange Online が復号化できるようにするには、クラスターの AD RMS URL がテナントで使用可能なキーに対応していることを確認する必要があります。 これは、AD RMS クラスターの DNS SRV レコードを使用して実行されます。これは、Azure Information Protection を使用する Office クライアントを再構成するためにも使用されます。 手順 7 でクライアントの再構成用に DNS SRV レコードを作成しなかった場合は、ここで Exchange Online をサポートするためにこのレコードを作成します。 [手順](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
     
     この DNS レコードが配置されると、Web とモバイルの電子メール クライアントに Outlook を使用しているユーザーはそのアプリで AD RMS によって保護された電子メールを表示できるようになります。また、Exchange では AD RMS からインポートしたキーを使用して、AD RMS によって保護されたコンテンツを暗号化解除、インデックス化、保管、保護できるようになります。  
 
@@ -46,7 +46,7 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
     
     - AzureRMSLicensingEnabled が **False** に設定されている場合は、`Set-IRMConfiguration -AzureRMSLicensingEnabled $true` を実行し、[Azure Information Protection に基づいて構築された新しい Office 365 Message Encryption 機能を設定する方法](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に関するページの検証手順を行い、Exchange Online が Azure Rights Management サービスを使用する準備が整っていることを確認します。 
 
-## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9: Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9. Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
 
 AD RMS で Exchange サーバーまたは SharePoint サーバーの Information Rights Management (IRM) 機能を使っている場合は、Rights Management (RMS) コネクタをデプロイする必要があります。このコネクタは、オンプレミスのサーバーと Azure Information Protection の保護サービスの間の通信インターフェイス (リレー) として機能します。
 
@@ -64,13 +64,13 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 > [!IMPORTANT]
 > どの Exchange サーバーでも IRM をまだ構成していない場合は、手順 2. と 6. を実行します。
 > 
-> [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) を実行し、*LicensingLocation* パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順をすべて実行します。
+> *LicensingLocation*パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順を[すべて実行します。](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)
 
 1. 各 Exchange サーバーでフォルダー **\ProgramData\Microsoft\DRM\Server\S-1-5-18** を見つけて、そのフォルダーのすべてのエントリを削除します。
 
 2. Exchange サーバーのいずれかで次の PowerShell コマンドを実行して、Azure Rights Management を使って保護されているメールをユーザーが読めるようにします。
 
-    これらのコマンドを実行する前に、\<*Your Tenant URL*> を実際の Azure Rights Management サービスの URL に置き換えます。
+    これらのコマンドを実行する前に、 *\<Your Tenant URL*> を実際の Azure Rights Management サービスの URL に置き換えます。
 
         $irmConfig = Get-IRMConfiguration
         $list = $irmConfig.LicensingLocation 
@@ -121,7 +121,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
     これらのレジストリの編集を行うときは、次の手順を使用します。
 
-    -   *connector FQDN* は、DNS で定義したコネクタの名前に置き換えます。 たとえば、 **rmsconnector.contoso.com**です。
+    -   *connector FQDN* は、DNS で定義したコネクタの名前に置き換えます。 たとえば、**rmsconnector.contoso.com** です。
 
     -   オンプレミス サーバーとの通信に HTTP または HTTPS のどちらを使用するようにコネクタを構成しているかにより、コネクタの URL に HTTP または HTTPS プレフィックスを使用してください。
 
@@ -217,5 +217,5 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 ---
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 移行を続行するには、「[移行フェーズ 5 - 移行後のタスク](migrate-from-ad-rms-phase5.md)」に進んでください。

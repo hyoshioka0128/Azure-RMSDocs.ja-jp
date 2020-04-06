@@ -1,10 +1,10 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 2
 description: AD RMS から Azure Information Protection への移行のフェーズ 2 には、手順 4 から 6 が含まれます。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 1fbe3fd2f91b63e7111b4de92e95ec4cad20fa4f
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404047"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670160"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>移行フェーズ 2 - AD RMS のサーバー側の構成
 
@@ -54,7 +54,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 
     - 信頼されたドメイン ファイルを RMS バージョン 1.0 で保存するチェック ボックスをオンにしないでください。
 
-信頼された発行ドメインをすべてエクスポートしたら、このデータを Azure Information Protection にインポートする手順を開始できます。
+信頼された発行ドメインをすべてエクスポートしたら、Azure Information Protection にこのデータをインポートする手順を開始できます。
 
 信頼された発行ドメインには、保護済みのファイルの暗号化を解除するサーバー ライセンス証明書 (SLC) キーが含まれているため、現在アクティブな信頼された発行ドメインだけではなく、すべての信頼された発行ドメインをエクスポートすること (そして後で Azure にインポートすること) が重要です。
 
@@ -77,7 +77,7 @@ AD RMS から Azure Information Protection への移行フェーズ 2 では、�
 > [!NOTE]
 > AD RMS でのハードウェア セキュリティ モジュールの使用に関する詳細については、「 [AD RMS でのハードウェア セキュリティ モジュールの使用](https://technet.microsoft.com/library/jj651024.aspx)」を参照してください。
 
-Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 独自の Azure Information Protection テナント キーを管理する場合は、“Bring Your Own Key” (BYOK) と呼ばれることもあります。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
+Azure Information Protection テナント キー トポロジには、テナント キーを Microsoft が管理するか (**マイクロソフト管理**) または Azure Key Vault でユーザーが自分で管理するか (**顧客管理**) の 2 つのオプションがあります。 独自の Azure Information Protection テナントキーを管理する場合、"独自のキーを持ち込む" (BYOK) と呼ばれることもあります。 詳細については、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
 次の表を参考にして、移行に使用する手順を識別してください。 
 

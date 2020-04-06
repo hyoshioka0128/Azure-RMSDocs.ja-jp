@@ -1,10 +1,10 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 5
 description: AD RMS から Azure Information Protection への移行のフェーズ 5 には、手順 10 から 12 が含まれます。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee5ecddb5ba3c5c1add15b7e75fd2fe6f53a2271
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 8efcf7554b7c701ca5dc4e1c90a72b1afd93c195
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935488"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670222"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -43,7 +43,7 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 
 次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx)、[ServiceRequest テーブルの確認](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx)、[保護コンテンツに対するユーザー アクセスの監査](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。 
 
-RMS クライアントがこれらのサーバーと通信していないこと、およびクライアントが Azure Information Protection を正常に使用していることを確認できたら、これらのサーバーから AD RMS サーバーの役割を削除できます。 専用のサーバーを使用している場合は、最初のサーバーのシャットダウン期間に警告手順を使用してもかまいません。 この方法では、サービス継続性のためにこれらのサーバーを再起動する必要がある問題の報告が発生していないことを確認でき、クライアントが Azure Information Protection を使用していない理由を調査する時間を確保できます。
+RMS クライアントがこれらのサーバーと通信していないこと、およびクライアントが Azure Information Protection を正常に使用していることを確認できたら、これらのサーバーから AD RMS サーバーの役割を削除できます。 専用サーバーを使用している場合は、最初にサーバーをシャットダウンするときの警告手順を使用することをお勧めします。 この方法では、サービス継続性のためにこれらのサーバーを再起動する必要がある問題の報告が発生していないことを確認でき、クライアントが Azure Information Protection を使用していない理由を調査する時間を確保できます。
 
 また、AD RMS サーバーのプロビジョニングを解除した後に、Azure Portal でテンプレートを見直す機会が必要な場合があります。 たとえば、ユーザーが選択または再構成する対象が少なくなるように、ラベルに変換して統合する場合です。 これは、既定のテンプレートを発行する絶好のタイミングでもあります。 詳細については、「[Azure Information Protection のテンプレートを構成して管理する](./configure-policy-templates.md)」を参照してください。
 
@@ -68,7 +68,7 @@ DNS を使用したリダイレクト:
 
 モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
 
-このような DNS の変更が伝達されると、これらのクライアントは自動的に検出され、Azure Rights Management サービスの使用を開始します。 ただし、Office Mac を実行する Mac コンピューターは、AD RMS からの情報をキャッシュに入れます。 これらのコンピューターの場合、このプロセスには最大で 30 日かかることがあります。 
+これらの DNS の変更が反映されると、これらのクライアントは Azure Rights Management サービスを自動的に検出して使用を開始します。 ただし、Office Mac を実行する Mac コンピューターは、AD RMS からの情報をキャッシュに入れます。 これらのコンピューターの場合、このプロセスには最大で 30 日かかることがあります。 
 
 Mac コンピューターが検出プロセスを直ちに実行するようにするには、キーチェーンで "adal" を検索し、すべての ADAL エントリを削除します。 これらのコンピューターで次のコマンドを実行します。
 
@@ -112,7 +112,7 @@ killall cfprefsd
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))** " タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所で見つけることができます: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス クライアント**
+最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))** " タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所で見つけることができます: **Microsoft** > **Windows** > **Active Directory Rights Management サービス クライアント**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 
@@ -124,7 +124,7 @@ AD RMS のデプロイで暗号化モード 2 が使用されている場合も�
 
 Azure Information Protection テナント キーの再入力を行うと ("キーをロールする" とも言われる)、現在アクティブなキーはアーカイブされ、Azure Information Protection は、指定した別のキーの使用を開始します。 この別のキーは、Azure Key Vault で自分で作成した新しいキーとすることも、テナント用に自動的に作成された既定のキーとすることもできます。
 
-あるキーから別のキーへの移行は、即時には実行されず、数週間かかります。 即時には行われないために、元のキーの侵害が疑われるまで待たず、移行が完了したらすぐにこの手順を実行してください。
+あるキーから別のキーへの移動は、すぐには行われませんが、数週間かかります。 即時には行われないために、元のキーの侵害が疑われるまで待たず、移行が完了したらすぐにこの手順を実行してください。
 
 Azure Information Protection テナント キーを更新するには:
 
@@ -137,7 +137,7 @@ Azure Information Protection テナント キーを更新するには:
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 移行が完了した後は、[デプロイ ロードマップ](deployment-roadmap.md)を参照して、必要になる可能性があるその他のデプロイ タスクを確認します。
 
