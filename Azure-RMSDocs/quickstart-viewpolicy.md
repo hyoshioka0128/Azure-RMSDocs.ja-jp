@@ -11,15 +11,15 @@ ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: c3c38ea55406b85dabda3e94101d268a9505c085
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "77423081"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
->「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 このクイック スタートでは、Azure portal に Azure Information Protection を追加し、この保護サービスがアクティブ化されていることを確認し、ラベルがまだ用意されていなければ既定のラベルを作成し、Azure Information Protection クライアント (クラシック) のポリシー設定を表示します。
 
@@ -92,7 +92,7 @@ Azure Information Protection は、Azure portal で自動的に使用可能に�
 
 4. すべてのユーザーに対してラベルを公開するには、 **[分類]**  >  **[ポリシー]**  >  **[グローバル]** で次の操作を行います。
     
-    」を参照します。 **[ラベルの追加または削除]** を選択します。
+    a. **[ラベルの追加または削除]** を選択します。
     
     b. **[ポリシー: ラベルの追加または削除]** ペインで、すべてのラベルを選択し、 **[OK]** を選択します。
     

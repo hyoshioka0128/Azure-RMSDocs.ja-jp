@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 424a260b1646a381dca23de71785dd34f92fc281
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 32e2cc1cb3924c5a4181bd4cafaaf3f53f085c00
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555162"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764216"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>クイック スタート:Active Directory Rights Management Server (AD RMS) の保護
 
@@ -49,7 +49,7 @@ MDE の DNS SRV レコードが発行済みで、エンジン設定の一部と�
 
 ```csharp
 // Configure FileEngineSettings as protection only engine.
-var engineSettings = new FileEngineSettings("", "", "en-US")
+var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 {
      // Provide the identity for service discovery.
      Identity = identity,
@@ -64,7 +64,7 @@ MDE の DNS SRV レコードが発行されていない場合、またはを `Fi
 
 ```csharp
 // Configure FileEngineSettings as protection only engine and generate a unique engine id.
-var engineSettings = new FileEngineSettings("", "", "en-US")
+var engineSettings = new FileEngineSettings("", authDelegate, "", "en-US")
 {
      // Set ProtectionOnlyEngine to true for AD RMS as labeling isn't supported
      ProtectionOnlyEngine = true,
@@ -101,7 +101,7 @@ engineSettings.SetProtectionOnlyEngine = true;
 MDE の DNS SRV レコードが発行されていない場合、またはサービス検出に ID を使用できない場合は、エンジンを保護専用に、かつ `SetProtectionCloudEndpointBaseUrl()` 経由で指定される明示的なクラウド エンドポイントの URL に設定する必要があります。
 
 ```cpp
-FileEngine::Settings engineSettings("", "");
+FileEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionOnlyEngine = true;
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 ```
@@ -117,7 +117,7 @@ engineSettings.SetProtectionCloudEndpointBaseUrl("https://rms.contoso.com");
 モバイル デバイス拡張機能の DNS SRV レコードが発行済みで、`ProtectionEngine::Settings` で ID が提供されている場合は、AD RMS を使うために追加のコード変更を行う必要はありません。 サービス検出によって AD RMS エンドポイントが検索され、それを使って保護操作が実行されます。
 
 ```cpp
-ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
+ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), authDelegate, "");
 ```
 
 ### <a name="set-the-protectionenginesettings-to-use-ad-rms-with-an-explicit-endpoint"></a>明示的なエンドポイントと共に AD RMS を使うように ProtectionEngine::Settings を設定する
@@ -125,7 +125,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity(mUsername), "");
 DNS SRV レコードが発行されていない場合、または `ProtectionEngine::Settings` で ID が提供されていない場合は、`SetProtectionCloudEndpointBaseUrl()` を使って明示的に保護エンドポイントの URL を設定する必要があります。
 
 ```cpp
-ProtectionEngine::Settings engineSettings("", "");
+ProtectionEngine::Settings engineSettings("", authDelegate, "");
 engineSettings.SetProtectionCloudEndpointBaseUrl("https://RMS.CONTOSO.COM");
 ```
 

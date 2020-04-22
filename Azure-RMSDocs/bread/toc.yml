@@ -13,7 +13,7 @@
             - name: 理解と調査
               tocHref: /azure/information-protection/understand-explore/
               topicHref: /azure/information-protection/understand-explore/what-is-azure-rights-management
-            - name: 作業の開始
+            - name: 作業開始
               tocHref: /azure/information-protection/get-started/
               topicHref: /azure/information-protection/get-started/requirements-for-azure-rights-management
             - name: 計画と設計

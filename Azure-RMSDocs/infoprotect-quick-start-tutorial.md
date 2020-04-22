@@ -11,15 +11,15 @@ ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 904898a5832a2c178ca7e1a8308d95998e926ad7
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79483322"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル:Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
->「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -154,7 +154,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
     **[新しい条件の追加]** をクリックし、 **[条件]** ペインで次のように選択します。
     
-    」を参照します。 **[条件のタイプを選択]** :既定値の **[情報の種類]** のままにします。
+    a. **[条件のタイプを選択]** :既定値の **[情報の種類]** のままにします。
     
     b. **[業種の選択]** :既定値の **[すべて]** のままにします。
     

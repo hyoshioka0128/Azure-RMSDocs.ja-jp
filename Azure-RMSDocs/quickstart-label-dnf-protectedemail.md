@@ -11,15 +11,15 @@ ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 18b7af904512698af155caf1bcc02da38ca25ad9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79483407"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
->「オブジェクトの*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
