@@ -7,13 +7,13 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556080"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C++)
+# <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++)
 
 このクイック スタートでは、実行時に MIP C++ SDK によって使用される、クライアントの初期化パターンを実装する方法を示します。 
 

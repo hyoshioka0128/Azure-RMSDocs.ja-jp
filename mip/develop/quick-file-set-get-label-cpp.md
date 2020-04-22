@@ -8,13 +8,13 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556029"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:機密ラベルの設定と取得 (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート: 機密ラベルの設定および取得 (C++)
 
 このクイック スタートでは、MIP File API をさらに活用する方法について説明します。 前のクイック スタートで列挙した機密ラベルの 1 つを使用して、ファイル ハンドラーを使用し、ファイルのラベルを設定および取得します。 ファイル ハンドラー クラスでは、ラベルの設定および取得操作、またはサポートされている種類のファイルの保護のさまざまな操作を公開しています。
 
@@ -22,8 +22,8 @@ ms.locfileid: "75556029"
 
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
-- 「[クイック スタート: 機密ラベルの一覧表示 (C++)](quick-file-list-labels-cpp.md)」をまず完了し、組織の機密ラベルを列挙するスターター Visual Studio ソリューションを構築します。 この「機密ラベルの設定および取得」クイック スタートは、前のものに基づいて進められます。
-- 省略可能: [MIP SDK のファイル ハンドラー](concept-handler-file-cpp.md)の概念を確認してください。
+- 「[クイック スタート: 機密ラベルの列挙 (C++)](quick-file-list-labels-cpp.md)」をまず完了し、組織の機密ラベルを列挙するスターター Visual Studio ソリューションを構築します。 この「機密ラベルの設定および取得」クイック スタートは、前のものに基づいて進められます。
+- オプションで「[File handlers in the MIP SDK](concept-handler-file-cpp.md)」 (MIP SDK のファイル ハンドラー) の概念を確認してください。
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>ファイル ハンドラー オブジェクトを監視するためのオブザーバー クラスの実装
 
@@ -31,7 +31,7 @@ ms.locfileid: "75556029"
 
 SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハンドラー オブザーバーの基本実装を作成します。 ファイル ハンドラーの操作を監視するために、オブザーバーはインスタンス化され、後で使用されます。
 
-1. 前の「クイック スタート: 機密ラベルの一覧表示 (C++)」の記事で使用した Visual Studio ソリューションを開きます。
+1. 前の「クイック スタート: 機密ラベルの列挙 (C++)」の記事で使用した Visual Studio ソリューションを開きます。
 
 2. header/.h ファイルと implementation/.cpp ファイルの両方を作成する、新しいクラスをご自分のプロジェクトに追加します。
 
@@ -220,7 +220,7 @@ SDK の `mip::FileHandler::Observer` クラスを拡大し、ファイル ハン
    | [プレースホルダ] | 値 |
    |:----------- |:----- |
    | \<input-file-path\> | テスト入力ファイルへの完全なパス。たとえば `"c:\\Test\\Test.docx"`。 |
-   | \<content-identifier\> | コンテンツに対する人間が判読できる識別子。 次に例を示します。 <ul><li>ファイルの場合は、path\filename を検討してください: `"c:\Test\Test.docx"`</li><li>電子メールの場合は、subject:sender を検討してください: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | コンテンツに対する人間が判読できる識別子。 例: <ul><li>ファイルの場合は、path\filename を検討してください: `"c:\Test\Test.docx"`</li><li>電子メールの場合は、subject:sender を検討してください: `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | 前のクイック スタートでコンソールの出力からコピーした機密ラベル ID。たとえば `"f42a3342-8706-4288-bd31-ebb85995028z"`。 |
    | \<output-file-path\> | 入力ファイルのラベル付きコピーである出力ファイルへの完全なパス。たとえば、`"c:\\Test\\Test_labeled.docx"`。 |
 
