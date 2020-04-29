@@ -4,8 +4,12 @@
   items:
     - name: Azure Information Protection とは
       href: what-is-information-protection.md
-    - name: Azure Information Protection と AD RMS の比較
-      href: compare-on-premise.md
+    - name: Azure Information Protection と AD RMS
+      items:
+        - name: オンプレミスと AD RMS の比較
+          href: compare-on-premise.md
+        - name: Active Directory モバイル デバイス拡張機能の管理
+          href: active-directory-rights-manage-mobile-device.md
     - name: 要件
       items:
         - name: 概要
@@ -299,7 +303,7 @@
               href: ./rms-client/protected-pdf-readers.md
             - name: Windows
               href: ./rms-client/protected-pdf-readers-windows.md
-            - name: MacOS
+            - name: macOS
               href: ./rms-client/protected-pdf-readers-mac.md
             - name: iOS
               href: ./rms-client/protected-pdf-readers-ios.md
@@ -419,7 +423,7 @@
                   href: ./develop/tracking-content.md
                 - name: 電子メール通知の有効化方法
                   href: ./develop/how-to-enable-email-notification.md
-                - name: クラウド ベース RMS でのサービス アプリケーション使用の有効化方法
+                - name: クラウドベース RMS でのサービス アプリケーション使用の有効化方法
                   href: ./develop/how-to-use-file-api-with-aadrm-cloud.md
                 - name: RMS サーバーをインストールして構成する方法
                   href: ./develop/how-to-install-and-configure-an-rms-server.md
