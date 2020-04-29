@@ -1,37 +1,36 @@
 ---
-title: class mip::PolicyProfile::Settings
-description: Microsoft Information Protection (MIP) SDK の mip::p olicyprofile クラスについて説明します。
+title: 'クラス PolicyProfile:: Settings'
+description: 'Microsoft Information Protection (MIP) SDK の policyprofile:: settings クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6c2d7f26e12f03bd886f2a3fedab8e0a3d976c45
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 317a6cfaaac7572ae320860a0d5a11fabce356e9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489760"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760655"
 ---
-# <a name="class-mippolicyprofilesettings"></a>class mip::PolicyProfile::Settings 
-作成時および有効期間全体にわたって PolicyProfile によって使用される設定。
+# <a name="class-policyprofilesettings"></a>クラス PolicyProfile:: Settings 
+作成時および有効期間全体にわたって PolicyProfile に使用される設定。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、const std:: shared_ptr\<AuthDelegate\>& authDelegate、const std:: shared_ptr\<PolicyProfile:: Observer\>& オブザーバー)  |  プロファイルを構成するためのインターフェイス。
+パブリック設定 (const std:: shared_ptr\<mipContext\>& MipContext、cachestoragetype cachestoragetype、const std:: shared_ptr\<policyprofile:: observer\>& オブザーバー)  |  プロファイルを構成するためのインターフェイス。
 パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
-public const std:: shared_ptr\<AuthDelegate\>& GetAuthDelegate () const  |  認証委任を取得します。
-public const std:: shared_ptr\<PolicyProfile:: オブザーバー\>& GetObserver () const  |  イベント オブザーバーを取得します。
+public const std:: shared_ptr\<policyprofile:: オブザーバー\>& GetObserver () const  |  イベント オブザーバーを取得します。
 public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
-public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public std:: shared_ptr\<httpdelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate (const std:: shared_ptr\<httpdelegate\>& httpdelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
-public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアント独自のを使用して、既定の非同期タスクのディスパッチ処理をオーバーライドします。
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  クライアント独自のを使用して、既定の非同期タスクのディスパッチ処理をオーバーライドします。
 public void SetSessionId(const std::string& sessionId)  | _まだ文書化されていません。_
 public const std::string& GetSessionId() const  | _まだ文書化されていません。_
-public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& customSettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
 public ~Settings()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
@@ -39,17 +38,14 @@ public ~Settings()  | _まだ文書化されていません。_
 ### <a name="settings-function"></a>Settings 関数
 プロファイルを構成するためのインターフェイス。
 
-パラメータ:  
+パラメーター:  
 * **mipContext**: グローバルコンテキスト設定 
 
 
 * **Cachestoragetype**: キャッシュされた状態をメモリまたはディスクに格納します。 
 
 
-* **authDelegate**: 認証トークンを取得するために SDK によって使用される認証委任。 
-
-
-* **オブザーバー**: policyprofile:: observer インターフェイスを実装するクラス。 nullptr にすることができます。
+* **observer**: PolicyProfile::Observer インターフェイスを実装するクラス。 nullptr にすることができます。
 
 
   
@@ -58,12 +54,6 @@ public ~Settings()  | _まだ文書化されていません。_
 
   
 **戻り値**: 使用されているストレージの種類
-  
-### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
-認証委任を取得します。
-
-  
-**戻り値**: 認証委任。
   
 ### <a name="getobserver-function"></a>GetObserver 関数
 イベント オブザーバーを取得します。
@@ -81,12 +71,12 @@ public ~Settings()  | _まだ文書化されていません。_
 アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
 
   
-**戻り値**: HTTP 操作に使用される HTTP 委任
+は、HTTP 操作に使用される http デリゲートを**返し**ます。
   
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
-パラメータ:  
+パラメーター:  
 * **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
 
 
@@ -100,7 +90,7 @@ public ~Settings()  | _まだ文書化されていません。_
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
 クライアント独自のを使用して、既定の非同期タスクのディスパッチ処理をオーバーライドします。
 
-パラメータ:  
+パラメーター:  
 * **taskDispatcherDelegate**: クライアントアプリケーションによって実装されたタスクのディスパッチコールバックインターフェイス
 
 
@@ -117,8 +107,8 @@ _まだ文書化されていません。_
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
-パラメータ:  
-* **customSettings**: 名前と値のペアの一覧。
+パラメーター:  
+* **Customsettings**: 名前と値のペアの一覧。
 
 
   

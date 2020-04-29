@@ -1,22 +1,22 @@
 ---
-title: class mip::NotSupportedError
-description: 'Microsoft Information Protection (MIP) SDK の mip:: notsupportederror クラスについて説明します。'
+title: クラス NotSupportedError
+description: 'Microsoft Information Protection (MIP) SDK の notsupportederror:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c929b8dd7e554f906a27817d30fb801dbf7d105d
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 744b3971d0f0025d868faa77542434aa9d8e085b
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489862"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761232"
 ---
-# <a name="class-mipnotsupportederror"></a>class mip::NotSupportedError 
+# <a name="class-notsupportederror"></a>クラス NotSupportedError 
 アプリケーションによって要求された操作は、SDK ではサポートされていません。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   

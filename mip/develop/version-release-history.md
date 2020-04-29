@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 06a57fa7510722da9ed119c573abe2ef0db09407
-ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
+ms.openlocfilehash: bd786925f22774c3e9173a69d88a08618da299fe
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238483"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760713"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) ソフトウェア開発キット (SDK) バージョンリリース履歴とサポートポリシー
 
-## <a name="servicing"></a>I/o 
+## <a name="servicing"></a>サービス 
 
 各一般公開 (GA) バージョンは、次の GA バージョンがリリースされると6か月間サポートされます。 ドキュメントには、サポートされていないバージョンに関する情報が含まれない場合があります。 修正プログラムと新機能は、最新の GA バージョンにのみ適用されます。
 
@@ -30,6 +30,63 @@ ms.locfileid: "78238483"
 > マイナー修正は記載されていないので、SDK に問題が発生した場合は、最新の GA リリースで修正されているかどうかを確認することをお勧めします。 問題が解決されていない場合は、最新のプレビュー バージョンを確認します。
 >  
 > テクニカルサポートについては、 [Stack Overflow Microsoft Information Protection フォーラム](https://stackoverflow.com/questions/tagged/microsoft-information-protection)を参照してください。 
+
+## <a name="version-16103"></a>バージョン1.6.103
+
+**リリース日**: 2020 年4月16日
+
+### <a name="general-sdk-changes"></a>一般的な SDK の変更
+
+- TLS 1.2 は、ADRMS 以外のすべての HTTP 通信に適用されます。
+- IOS/MacOS HTTP 実装を Nn 接続から Nの Lsession に移行した。
+- Aria SDK から 1DS SDK に移行された iOS テレメトリコンポーネント。
+- テレメトリコンポーネントでは、iOS、MacOs、Linux で MIP の HttpDelegate が使用されるようになりました。 (以前は win32 のみ)。
+- C API のタイプセーフが改善されました。
+- C++、C#、および Java Api で、プロファイルからの AuthDelegate をエンジンに移動しました。
+- AuthDelegate がのコンストラクターから`Profile::Settings`に`Engine::Settings`移動しました。
+- ポリシー同期に失敗した理由に関する詳細情報を提供するために、カテゴリを NoPolicyError に追加しました。
+- メソッド`PolicyEngine::GetTenantId`を追加しました。
+- 明示的なソブリン cloud のサポートが追加されました。
+  - ターゲット`Engine::Settings::SetCloud`クラウド (GCC High、21 Vianet など) を設定する新しいメソッド。
+  - 認識`Engine::Settings::SetCloudEndpointBaseUrl`されたクラウドでは、既存のメソッド呼び出しは不要になりました。
+- IOS バイナリのビットコードを有効にしました。
+
+### <a name="file-sdk"></a>ファイル SDK
+
+- C# `IFileHandler::InspectAsync`および Java ラッパーに追加されました
+- で`FileProfile::AcquirePolicyAuthToken`は、アプリケーションがトークンキャッシュをウォームアップできるようにするために、ポリシートークンの取得をトリガーするためのが新たにサポートされています。    
+- `MsgInspector::GetAttachments`の`vector<shared_ptr<MsgAttachmentData>>`代わりにを返します。`vector<unique_ptr<MsgAttachmentData>>`
+- `TelemetryConfiguration::isOptedOut`設定すると、テレメトリが完全に無効になります。 以前は、一連の最小のテレメトリが送信されていました。
+
+### <a name="policy-sdk"></a>ポリシー SDK
+
+- アプリケーションがを介し`PolicyProfile::AcquireAuthToken`てトークンキャッシュをウォームアップできるようにするための、トークン取得のトリガーの新しいサポート。
+- 既定では、HYOK ラベルがフィルター処理されます。
+- 削除されたラベルに関連付けられたメタデータが削除されます。
+- キャッシュされたラベルポリシーと感度ポリシーが一致していない場合、ポリシーキャッシュはクリアされます。
+- バージョン管理されたメタデータの新しいサポート:
+  - ファイル形式は、ラベルメタデータの場所/形式を改訂する場合があります。 この場合、アプリケーションはすべてのメタデータを使用して MIP を提供する必要があり、mipmap はどのメタデータが "true" であるかを判断します。
+  - `ContentLabel::GetExtendedProperties`では`vector<MetadataEntry>`なく、 `vector<pair<string, string>>`が返されるようになりました。
+  - `MetadataAction::GetMetadataToAdd`では`vector<MetadataEntry>`なく、 `vector<pair<string, string>>`が返されるようになりました。
+  - `ExecutionState::GetContentMetadata`ではなく`vector<MetadataEntry>`が返さ`vector<pair<string, string>>`れるようになりました。
+  - `ExecutionState::GetContentMetadataVersion`は、現在のファイル形式 (通常は 0) に対してアプリケーションが認識するメタデータの最上位バージョンを返す必要があります。
+  - `PolicyEngine::GetWxpMetadataVersion`テナント管理者によって構成された Office ドキュメントのメタデータバージョンを返します (0 = 既定、1 = coauth-有効形式)。
+  - C API における同等の変更点:
+    - `MIP_CC_ContentLabel_GetExtendedProperties`
+    - `MIP_CC_MetadataAction_GetMetadataToAdd`
+    - `mip_cc_metadata_callback`
+    - `mip_cc_document_state`
+    - `MIP_CC_PolicyEngine_GetWxpMetadataVersion`
+- `TelemetryConfiguration::isOptedOut`設定すると、テレメトリが完全に無効になります。 以前は、一連の最小のテレメトリが送信されていました。 
+
+### <a name="protection-sdk"></a>保護 SDK
+
+- ドキュメント追跡の登録と取り消しの新しいサポート。
+- 発行時に事前ライセンスを生成するための新しいサポート。
+- 保護サービスによって使用される公開された Microsoft SSL 証明書を公開します。
+   - `GetMsftCert` および `GetMsftCertPEM`
+   - アプリケーションがインターフェイスを`HttpDelegate`オーバーライドする場合は、この CA によって発行されたサーバー証明書を信頼する必要があります。
+   - この要件は、2020の後半で削除される予定です。    
 
 ## <a name="version-15124"></a>バージョン1.5.124
 
@@ -84,9 +141,9 @@ ms.locfileid: "78238483"
   - mip::P rotectionEngine:: IsFeatureSupported ()
 - RMS テンプレートを取得するときの豊富な詳細情報
 - **重大な変更**
-  - `mip::ProtectionEngine::GetTemplates()` `vector<shared_ptr<string>>` 戻り値が `vector<shared_ptr<mip::TemplateDescriptor>>` (C++) に置き換えられました
-  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()` コールバック `shared_ptr<vector<string>>` パラメーターが `vector<shared_ptr<mip::TemplateDescriptor>>` (C++) に置き換えられました
-  - IProtectionEngine。 GetTemplates |Async () 戻り値 `List<string>` `List<TemplateDescriptor>`に置き換えられます。 (C#)
+  - `mip::ProtectionEngine::GetTemplates()``vector<shared_ptr<string>>`戻り値がに`vector<shared_ptr<mip::TemplateDescriptor>>`置き換えられました (C++)
+  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()`コール`shared_ptr<vector<string>>`バックパラメーターが`vector<shared_ptr<mip::TemplateDescriptor>>`に置き換えられました (C++)
+  - IProtectionEngine。 GetTemplates |Async () 戻り値`List<string>`がに`List<TemplateDescriptor>`置き換えられました。 (C#)
   - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param mip_cc_template_descriptor * (C API) に置き換えられました
 
 ### <a name="c-api"></a>C API
@@ -127,7 +184,7 @@ ms.locfileid: "78238483"
   - NotSupportedError: 操作は現在の状態ではサポートされていません
   - Operationcancelのエラー: 操作が取り消されました
   - PrivilegedRequiredError: 割り当て方法が特権の場合を除き、ラベルを変更することはできません
-- 変更
+- [変更点]
   - 未使用の PolicySyncError を削除しました。 NetworkError で置き換えられました
   - 使用されていないのを削除しました。 NetworkError カテゴリに置き換えられました
 
@@ -137,7 +194,7 @@ ms.locfileid: "78238483"
 
 このバージョンでは、.NET パッケージ (Microsoft. InformationProtection. File) の保護 SDK のサポートが導入されています。
 
-### <a name="sdk-changes"></a>SDK の変更
+### <a name="sdk-changes"></a>SDK の変更内容
 - パフォーマンスの向上とバグの修正
 - StorageType 列挙型を CacheStorageType に変更しました
 - Gnustl ではなく、libc + + への Android リンク
@@ -160,7 +217,7 @@ ms.locfileid: "78238483"
 - .RPMSG
   - 暗号化
   - String8 復号化のサポートを追加しました
-- 構成可能な PFILE 拡張動作 (既定、<EXT>)。PFILE、または P<EXT>)
+- 構成可能な PFILE 拡張機能の<EXT>動作 (既定値、。PFILE または P<EXT>)
   - ProtectionSettings:: SetPFileExtensionBehavior
 
 ### <a name="policy-sdk"></a>ポリシー SDK
@@ -174,7 +231,7 @@ ms.locfileid: "78238483"
 - 廃止された、非推奨の Api を削除しました
   - ProtectionEngine:: Createprotectionハンドラ Fromdescriptor [Async] を削除しました (ProtectionEngine:: Createprotectionハンドラ Forpublishing [Async] を使用します)
   - ProtectionEngine:: Createprotectionハンドラ From発行ライセンス [Async] (ProtectionEngine:: Createprotectionハンドラ For従量課金の使用 [Async]) が削除されました
-- 完全C#な API
+- 完全な C# API
 - 完全な C API
   - V 1.3 C API preview からの c API 正規化の変更:
     - Mip_cc_storage_type 名前が mip_cc_cache_storage_type に変更されました
@@ -203,38 +260,38 @@ ms.locfileid: "78238483"
     - MIP_CC_CreateMipContext は ' isOfflineOnly ' および ' loggerDelegateOverride ' パラメーターを受け取ります
 
 
-## <a name="version-130"></a>バージョン1.3.0
+## <a name="version-130"></a>バージョン 1.3.0
 
 **リリース日**: 2019 年8月22日
 
 ### <a name="new-features"></a>新機能
 
-- `mip::MipContext` は、新しい最上位レベルのオブジェクトです。
+- `mip::MipContext`は、新しい最上位レベルのオブジェクトです。
 - 保護された MSG ファイルの暗号化解除がサポートされるようになりました。
-- メッセージの検査。 `mip::FileInspector` および `mip::FileHandler::InspectAsync()`経由でサポートされています。
+- メッセージの検査。および`mip::FileInspector` `mip::FileHandler::InspectAsync()`でサポートされています。
 - ディスク上のキャッシュが必要に応じて暗号化されるようになりました。
 - 保護 SDK で中国ソブリン cloud がサポートされるようになりました。
 - Android での Arm64 のサポート。
 - IOS での Arm64e のサポート。
 - エンドユーザーライセンス (使用可能) のキャッシュを無効にすることができるようになりました。
-- pfile 暗号化が無効になっている可能性があり `mip::FileEngine::EnablePFile`
+- . pfile 暗号化は、`mip::FileEngine::EnablePFile`
 - HTTP 呼び出しの数を減らすことによる保護操作のパフォーマンスの向上
-- 委任された id の詳細を `mip::Identity` から削除し、代わりに `mip::FileEngine::Settings`、`mip::ProtectionSettings`、`mip::PolicyEngine::Settings`、`mip::ProtectionHandler`の `PublishingSettings` と `ConsumptionSettings`に `DelegatedUserEmail` を追加しました。
-- 以前に Lab/d を返した関数は、`mip::Label` オブジェクトを返すようになりました。
+- から`mip::Identity`委任された id の詳細を`DelegatedUserEmail`削除`mip::FileEngine::Settings`し`mip::ProtectionSettings`、 `mip::PolicyEngine::Settings`代わりに、 `mip::ProtectionHandler`、 `PublishingSettings` 、 `ConsumptionSettings`、およびの各に追加しました。
+- 以前に Labを返した関数は、オブジェクト`mip::Label`を返すようになりました。
 
-### <a name="changes"></a>変更
+### <a name="changes"></a>[変更点]
 
-* 以前のバージョンでは、`mip::ReleaseAllResources`を呼び出す必要がありました。 バージョン1.3 では、これが `mip::MipContext::~MipContext` または `mip::MipContext::Shutdown`で置き換えられます。
-* `mip::LabelingOptions` から削除された `ActionSource` `mip::ExecutionState::GetNewLabelActionSource`
-* `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` を `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`に置き換えました。
-* `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` を `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`に置き換えました。
-* `mip::PublishingLicenseContext` 名前を `mip::PublishingLicenseInfo` に変更して更新し、生のシリアル化されたバイトではなく、リッチフィールドを含むようにしました。
-* `mip::PublishingLicenseInfo` には、公開ライセンス (PL) を解析した後の MIP に関連するデータが含まれています。
-* `mip::TemplateNotFoundError` および `mip::LabelNotFoundError`、アプリケーションが、認識されないテンプレート ID またはラベル ID を渡したときにスローされます。
-* `AcquireToken()` および `mip::AuthDelegate::OAuth2Challenge()`の要求パラメーターを使用したラベルベースの条件付きアクセスのサポートが追加されました。 この機能は、セキュリティとコンプライアンスセンターのポータルを通じて公開されていません。
+* 以前のバージョンでは、を呼び出す`mip::ReleaseAllResources`必要がありました。 バージョン1.3 は、これ`mip::MipContext::~MipContext`を`mip::MipContext::Shutdown`またはに置き換えます。
+* および`ActionSource`から`mip::LabelingOptions`削除されました`mip::ExecutionState::GetNewLabelActionSource`
+* で`mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`置き換えられます。
+* で`mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`置き換えられます。
+* 生`mip::PublishingLicenseContext`の`mip::PublishingLicenseInfo`シリアル化されたバイトではなく、リッチフィールドを含むように名前が変更され、更新されました。
+* `mip::PublishingLicenseInfo`公開ライセンス (PL) を解析した後の MIP に関連するデータが含まれています。
+* `mip::TemplateNotFoundError`また`mip::LabelNotFoundError` 、アプリケーションが、認識されないテンプレート id またはラベル id を渡すとスローされます。
+* および`AcquireToken()` `mip::AuthDelegate::OAuth2Challenge()`の要求パラメーターを使用したラベルベースの条件付きアクセスのサポートが追加されました。 この機能は、セキュリティとコンプライアンスセンターのポータルを通じて公開されていません。
 
 
-## <a name="version-120"></a>バージョン1.2.0
+## <a name="version-120"></a>バージョン 1.2.0
 
 **リリース日**: 2019 年4月15日
 
@@ -270,7 +327,7 @@ ms.locfileid: "78238483"
     - mip:: FileHandler:: Observer:: OnGetDecryptedTemporaryFileSuccess
     - mip:: File/Policy/ProtectionProfile:: SetTaskDispatcherDelegate
     - mip:: File/Policy/ProtectionProfile:: SetTelemetryConfiguration
-    - mip:: HttpRequest:: GetBody は std:: string の代わりに std:: vector < uint8_t > を返します
+    - mip:: HttpRequest:: GetBody は std:: string の代わりに std:: vector<uint8_t> を返します
     - mip:: HttpRequest:: GetId
     - mip::P olicyEngine:: GetLastPolicyFetchTime
     - mip::P olicyEngine:: GetPolicyId
@@ -287,14 +344,14 @@ ms.locfileid: "78238483"
  - (インターフェイス) mip:: FileExecutionState:: GetDataState は、アプリケーションが contentIdentifier と対話する方法を指定するために、アプリケーションによって実装される必要があります。
  - (インターフェイス) mip:: HttpDelegate インターフェイスには、' CancelOperation ' および ' CancelAllOperations ' メソッドが必要です
  - (インターフェイス) mip:: HttpDelegate インターフェイス ' Send ' と ' SendAsync ' は mip:: Httpresponse.cache の代わりに mip:: HttpOperation を返します
- - (インターフェイス) mip:: Httpresponse.cache:: GetBody は std:: string の代わりに std:: vector < uint8_t > を返します
+ - (インターフェイス) mip:: Httpresponse.cache:: GetBody は std:: string の代わりに std:: vector<uint8_t> を返します
  - (インターフェイス) mip:: Httpresponse.cache インターフェイスには ' GetId ' メソッドの実装が必要です
  - mip:: ContentLabel:: Getchrono Time は std:: string の代わりに std:::: time_point を返します
  - mip:: FileEngine:: Createfileハンドラ Async は ' contentIdentifier ' パラメーターを受け入れなくなりました
  - mip::P olicyHandler:: NotifyCommitedActions から mip::P olicyHandler:: NotifyCommittedActions に名前変更されました
 
 
-## <a name="version-110"></a>バージョン1.1.0 
+## <a name="version-110"></a>バージョン 1.1.0 
 
 **リリース日**: 2019 年1月15日
 
@@ -313,7 +370,7 @@ ms.locfileid: "78238483"
 - シリアル化された発行ライセンスをファイルから直接取得できるようになりました。 mip:: FileHandler:: GetSerializedPublishingLicense を使用して HTTP 操作を行う必要はありません。
 - Mip:: Fileengine:: Observer:: OnAddPolicyEngineStarting/mip::P Olicyengine:: Observer:: OnAddEngineStarting を使用して mip:: FileEngine/mip::P olicyEngine の作成を完了するために HTTP 操作が必要かどうかがアプリケーションに通知されます。
 - 保護されたコンテンツの有効期限が切れているかどうかを検出します。また、便宜的な方法 mip::P rotectionDescriptor::D oesContentExpire 切れ
-- 分類
+- 分類: 
   - 秘密度の種類 (CC # の、passport # などの正規表現式) は、SCC サービスから取得できます。
     - Mip:: FileEngine:: Settings/mip::P olicyEngine:: Settings フラグを設定して機能を有効にします
     - Mip:: FileEngine:: ListSensitivityTypes/mip::P olicyEngine:: ListSensitivityTypes を使用した型の読み取り
@@ -330,24 +387,24 @@ ms.locfileid: "78238483"
 
   - mip:: NoAuthTokenError がスローされました (キャンセルにより、アプリケーションの AuthDelegate から空のトークンが返された場合)
     - 次の作成に適用されます:
-      - mip:: FileEngine
-      - mip:: FileHandler
-      - mip::P olicyEngine
-      - mip::P rotectionHandler
+      - mip::FileEngine
+      - mip::FileHandler
+      - mip::PolicyEngine
+      - mip::ProtectionHandler
   - mip:: NoPolicyError が、テナントがラベルに対して構成されていない場合にスローされる
     - 次の作成に適用されます:
-      - mip:: FileEngine
-      - mip::P olicyEngine
+      - mip::FileEngine
+      - mip::PolicyEngine
   - 特定のユーザー/デバイス/プラットフォーム/テナントに対して RMS サービスが無効になっている場合、mip:: ServiceDisabledError がスローされる
     - 次の作成に適用されます:
-      - mip:: FileHandler
-      - mip::P rotectionHandler
+      - mip::FileHandler
+      - mip::ProtectionHandler
   - mip:: NoPermissionsError は、ユーザーがドキュメントの暗号化を解除する権限を持っていないか、コンテンツの有効期限が切れている場合にスローされます。
     - 次の作成に適用されます:
-      - mip:: FileHandler
-      - mip::P rotectionHandler
+      - mip::FileHandler
+      - mip::ProtectionHandler
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 - サポートされているプラットフォームなどの詳細については[、MIP SDK に関する faq と問題](faqs-known-issues.md)を参照してください。
 - MIP SDK の使用を開始する方法については、「 [MIP sdk のセットアップと構成](setup-configure-mip.md)」を参照してください。

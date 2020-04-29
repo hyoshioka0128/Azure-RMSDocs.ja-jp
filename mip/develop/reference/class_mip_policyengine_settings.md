@@ -1,26 +1,26 @@
 ---
-title: class mip::PolicyEngine::Settings
-description: Microsoft Information Protection (MIP) SDK の mip::p olicyengine クラスについて説明します。
+title: 'クラス PolicyEngine:: Settings'
+description: 'Microsoft Information Protection (MIP) SDK の policyengine:: settings クラスに関するドキュメントを示します。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 620775649ee0fa593f141b1a4f983ad8b52caafe
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5e745dd011f9626e031cfcb9c9ae0466e91e2bfe
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487618"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761077"
 ---
-# <a name="class-mippolicyenginesettings"></a>class mip::PolicyEngine::Settings 
-PolicyEngine に関連付けられた設定を定義します。
+# <a name="class-policyenginesettings"></a>クラス PolicyEngine:: Settings 
+PolicyEngine に関連付けられている設定を定義します。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための PolicyEngine:: Settings コンストラクター。
-パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための PolicyEngine:: Settings コンストラクター。
+パブリック設定 (const std:: string& engineId、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための PolicyEngine::Settings コンストラクター。
+パブリック設定 (const Id& id、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための PolicyEngine::Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を取得します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
 public const Identity& GetIdentity() const  |  ID オブジェクトを取得します。
@@ -28,27 +28,34 @@ public void SetIdentity(const Identity& identity)  |  ID オブジェクトを�
 public const std::string& GetClientData() const  |  設定で設定されたクライアント データを取得します。
 public void SetClientData(const std::string& clientData)  |  クライアント データ文字列を設定します。
 public const std::string& GetLocale() const  |  設定で設定されたロケールを取得します。
-public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& customSettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
 public void SetSessionId(const std::string& sessionId)  |  クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID、一意識別子を取得します。
-public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
-public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  必要に応じて、クラウド エンドポイントのベース URL を設定します。
+public bool IsLoadSensitivityTypesEnabled () const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
+パブリック void SetCloud (クラウドクラウド)  |  必要に応じて、ターゲットクラウドを設定します。
+パブリッククラウドの GetCloud () const  |  すべてのサービス要求によって使用されるターゲットクラウドを取得します。
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  カスタムクラウドのクラウドエンドポイントベース URL を設定します。
 public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
-public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。
-public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
-public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelFilter)  |  ラベルフィルターを設定します。
-public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベルフィルターを取得します。
+public void SetDelegatedUserEmail (const std:: string& delegatedUserEmail)  |  委任されたユーザーを設定します。
+public const std:: string& GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
+public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelfilter)  |  ラベルフィルターを設定します。
+public const std:: vector\<LabelFilterType\>& getlabelfilter () const  |  ラベルフィルターを取得します。
 public void Setバリエーション Abmarkextmarkingtype (可変 abている extmarkmarkingtype)  |  変数テキストのマークの種類を設定します。
 パブリック型のバリエーション Abmarkextmarkingtype () const。  |  変数のテキストのマーク付けの種類を取得します。
+public void SetAuthDelegate (const std:: shared_ptr\<authdelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
+public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジン認証デリゲートを取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="settings-function"></a>Settings 関数
-既存のエンジンを読み込むための PolicyEngine:: Settings コンストラクター。
+既存のエンジンを読み込むための PolicyEngine::Settings コンストラクター。
 
-パラメータ:  
-* **engineId**: AddEngineAsync によって生成されたか、または自分で生成した一意のエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
+パラメーター:  
+* **engineId**: AddEngineAsync または自己生成された1つのエンジン ID に設定します。 既存のエンジンを読み込む場合は ID を再利用し、それ以外の場合は新しいエンジンが作成されます。 
+
+
+* **Authdelegate**: 認証トークンを取得するために SDK によって使用される認証デリゲートは、両方が指定されている場合は policyprofile:: Settings:: authdelegate をオーバーライドします 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -62,10 +69,13 @@ public void Setバリエーション Abmarkextmarkingtype (可変 abている ex
 
   
 ### <a name="settings-function"></a>Settings 関数
-新しいエンジンを作成するための PolicyEngine:: Settings コンストラクター。
+新しいエンジンを作成するための PolicyEngine::Settings コンストラクター。
 
-パラメータ:  
+パラメーター:  
 * **identity**: 新しいエンジンに関連付けられているユーザーの ID 情報。 
+
+
+* **Authdelegate**: 認証トークンを取得するために SDK によって使用される認証デリゲートは、両方が指定されている場合は policyprofile:: Settings:: authdelegate をオーバーライドします 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -87,7 +97,7 @@ public void Setバリエーション Abmarkextmarkingtype (可変 abている ex
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
 
-パラメータ:  
+パラメーター:  
 * **id**: エンジン ID。
 
 
@@ -103,8 +113,8 @@ ID オブジェクトを取得します。
 ### <a name="setidentity-function"></a>SetIdentity 関数
 ID オブジェクトを設定します。
 
-パラメータ:  
-* **identity**: ユーザーの一意の ID。 
+パラメーター:  
+* **id**: ユーザーの一意の id。 
 
 
   
@@ -119,8 +129,8 @@ ID オブジェクトを設定します。
 ### <a name="setclientdata-function"></a>SetClientData 関数
 クライアント データ文字列を設定します。
 
-パラメータ:  
-* **clientData**: ユーザーが指定したデータ。
+パラメーター:  
+* **clientdata**: ユーザーが指定したデータ。
 
 
   
@@ -133,8 +143,8 @@ ID オブジェクトを設定します。
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
-パラメータ:  
-* **customSettings**: 名前と値のペアの一覧。
+パラメーター:  
+* **Customsettings**: 名前と値のペアの一覧。
 
 
   
@@ -147,8 +157,8 @@ ID オブジェクトを設定します。
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 クライアントによって定義されたテレメトリに使用するセッション ID を設定します。
 
-パラメータ:  
-* **sessionId**: テレメトリ イベントを接続する一意の文字列。
+パラメーター:  
+* **sessionId**: テレメトリイベントを接続する一意の文字列。
 
 
   
@@ -164,13 +174,29 @@ ID オブジェクトを設定します。
   
 が**返さ**れます。有効な場合は True、それ以外の場合は false です。
   
-### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
-必要に応じて、クラウド エンドポイントのベース URL を設定します。
+### <a name="setcloud-function"></a>SetCloud 関数
+必要に応じて、ターゲットクラウドを設定します。
 
-パラメータ:  
+パラメーター:  
+* **クラウド**: クラウド
+
+
+クラウドが指定されていない場合、既定では商用クラウドになります。
+  
+### <a name="getcloud-function"></a>GetCloud 関数
+すべてのサービス要求によって使用されるターゲットクラウドを取得します。
+
+  
+**返される値**: クラウド
+  
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl 関数
+カスタムクラウドのクラウドエンドポイントベース URL を設定します。
+
+パラメーター:  
 * **cloudEndpointBaseUrl**: すべてのサービス要求で使用されるベース URL (たとえば、"https://dataservice.protection.outlook.com")
 
 
+この値は読み取り専用であり、Cloud = Custom に設定されている必要があります
   
 ### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl 関数
 すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
@@ -181,7 +207,7 @@ ID オブジェクトを設定します。
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
 
-パラメータ:  
+パラメーター:  
 * **delegatedUserEmail**: 委任の電子メール。
 
 
@@ -196,11 +222,11 @@ ID オブジェクトを設定します。
 ### <a name="setlabelfilter-function"></a>SetLabelFilter 関数
 ラベルフィルターを設定します。
 
-パラメータ:  
+パラメーター:  
 * **labelfilter**: ラベルフィルター。
 
 
-ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。 HyokProtection と DoubleKeyProtection が設定されていない場合は、フィルター処理されます。
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
 ラベルフィルターを取得します。
@@ -212,7 +238,7 @@ ID オブジェクトを設定します。
 ### <a name="setvariabletextmarkingtype-function"></a>Setバリエーション Abmarkextmarkingtype 関数
 変数テキストのマークの種類を設定します。
 
-パラメータ:  
+パラメーター:  
 * 可変**Abmarkextmarkingtype**: 変数テキストのマーク付けの種類。
 
 
@@ -222,3 +248,17 @@ ID オブジェクトを設定します。
 
   
 は、変数テキストのマーク付けの種類を**返し**ます。
+  
+### <a name="setauthdelegate-function"></a>SetAuthDelegate 関数
+エンジン認証デリゲートを設定します。
+
+パラメーター:  
+* **authdelegate**: Auth デリゲート
+
+
+  
+### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
+エンジン認証デリゲートを取得します。
+
+  
+**戻り値**: エンジンの認証デリゲート。

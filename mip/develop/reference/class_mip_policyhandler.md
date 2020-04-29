@@ -1,26 +1,26 @@
 ---
-title: class mip::PolicyHandler
-description: Microsoft Information Protection (MIP) SDK の mip::p olicyhandler クラスについて説明します。
+title: クラス PolicyHandler
+description: 'Microsoft Information Protection (MIP) SDK の policyhandler:: undefined クラスについて説明します。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 9f270a628a6320b005145aab8cd0611acc907d68
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: c46b72f3a040204b4485da14f00f38ca69fa8222
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489794"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760958"
 ---
-# <a name="class-mippolicyhandler"></a>class mip::PolicyHandler 
+# <a name="class-policyhandler"></a>クラス PolicyHandler 
 このクラスは、ファイル上のすべてのポリシー ハンドラー関数にインターフェイスを提供します。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (const ExecutionState & 状態)  |  既存のコンテンツから機密ラベルを取得します。
-public std:: vector\<std:: shared_ptr\<アクション\>\> ComputeActions (const ExecutionState & state)  |  指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
+public std:: shared_ptr\<contentlabel\> GetSensitivityLabel (const executionstate& 状態)  |  既存のコンテンツから機密ラベルを取得します。
+public std:: vector\<std:: shared_ptr\<Action\> \> computeactions (const executionstate& state)  |  指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
 public void NotifyCommittedActions(const ExecutionState& state)  |  計算されたアクションが適用され、データがディスクにコミットされると呼び出されます。
   
 ## <a name="members"></a>メンバー
@@ -28,7 +28,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 ### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel 関数
 既存のコンテンツから機密ラベルを取得します。
 
-パラメータ:  
+パラメーター:  
 * **state**: コンテンツの現在の状態。 
 
 
@@ -39,7 +39,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 ### <a name="computeactions-function"></a>ComputeActions 関数
 指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
 
-パラメータ:  
+パラメーター:  
 * **state**: ルールが実行されているコンテンツの現在の実行状態。 
 
 
@@ -50,7 +50,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  計算され
 ### <a name="notifycommittedactions-function"></a>NotifyCommittedActions 関数
 計算されたアクションが適用され、データがディスクにコミットされると呼び出されます。
 
-パラメータ:  
+パラメーター:  
 * **状態**: アクションがコミットされた後のコンテンツの現在の実行状態。 
 
 

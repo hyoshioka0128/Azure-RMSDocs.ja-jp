@@ -1,34 +1,34 @@
 ---
-title: class mip::LoggerDelegate
-description: 'Microsoft Information Protection (MIP) SDK の mip:: loggerdelegate クラスについて説明します。'
+title: LoggerDelegate クラス
+description: 'Microsoft Information Protection (MIP) SDK の loggerdelegate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c9e4f4db31c12a84f888964694ffa4c88585c884
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: e213f243a0e46bb804b224c7a0752a0b9b270103
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487737"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761817"
 ---
-# <a name="class-miploggerdelegate"></a>class mip::LoggerDelegate 
+# <a name="class-loggerdelegate"></a>LoggerDelegate クラス 
 MIP SDK のロガーに対してインターフェイスを定義するクラス。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public void Init(const std::string& storagePath)  |  ロガーを初期化します。
 public void Flush()  |  ロガーをフラッシュします。
 public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  ログ ファイルにログ ステートメントを書き込みます。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
-### <a name="init-function"></a>Init 関数
+### <a name="init-function"></a>init 関数
 ロガーを初期化します。
 
-パラメータ:  
+パラメーター:  
 * **storagePath**: ログを含む継続状態が格納される可能性のある場所へのパス。
 
 
@@ -39,7 +39,7 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
 ### <a name="writetolog-function"></a>WriteToLog 関数
 ログ ファイルにログ ステートメントを書き込みます。
 
-パラメータ:  
+パラメーター:  
 * **level**: ログ ステートメントのログ レベル。 
 
 

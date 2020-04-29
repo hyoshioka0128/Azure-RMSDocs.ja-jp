@@ -1,31 +1,31 @@
 ---
-title: 'クラス mip:: MsgAttachmentData'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: msgattachmentdata クラスについて説明します。'
+title: クラス MsgAttachmentData
+description: 'Microsoft Information Protection (MIP) SDK の msgattachmentdata:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f9f47ca1503c912840fe1ed43542b5a4b4f2d0ec
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: cec59e4bea8b62ff16005c02fa7a9516c4fb339d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487669"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761447"
 ---
-# <a name="class-mipmsgattachmentdata"></a>クラス mip:: MsgAttachmentData 
+# <a name="class-msgattachmentdata"></a>クラス MsgAttachmentData 
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<uint8_t\>& GetBytes ()  |  バイナリバイトベクトルとして添付ファイルを取得します。
-public std:: shared_ptr\<Stream\> System.resources.resourcemanager.getstream () const  |  バイナリストリームとして添付ファイルを取得します。
+public const std:: vector\<Uint8_t\>& GetBytes ()  |  バイナリバイトベクトルとして添付ファイルを取得します。
+public std:: shared_ptr\<Stream\> system.resources.resourcemanager.getstream () const  |  バイナリストリームとして添付ファイルを取得します。
 public const std::string& GetName() const  |  添付ファイルの名前を文字列として取得します。
-public const std:: string & GetLongName () const  |  添付ファイルの長い名前を文字列として取得します。
+public const std:: string& GetLongName () const  |  添付ファイルの長い名前を文字列として取得します。
 public const std::string& GetPath() const  |  添付ファイルのパス名を文字列として取得します。 パスが空でない場合は、添付ファイルを参照します。
-public const std:: string & GetLongPath () const  |  添付ファイルの長いパス名を文字列として取得します。 パスが空でない場合は、添付ファイルを参照します。
+public const std:: string& GetLongPath () const  |  添付ファイルの長いパス名を文字列として取得します。 パスが空でない場合は、添付ファイルを参照します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getbytes-function"></a>GetBytes 関数
 バイナリバイトベクトルとして添付ファイルを取得します。

@@ -1,32 +1,33 @@
 ---
-title: 'クラス mip:: MipContext'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: mipcontext クラスについて説明します。'
+title: MipContext クラス
+description: 'Microsoft Information Protection (MIP) SDK の mipcontext:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 82c39cd6f716bde9232f6a5a461b2ffbfbae1dd0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: cf191a1e770d13d84603fe593d63dedb98bbb14b
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489913"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761468"
 ---
-# <a name="class-mipmipcontext"></a>クラス mip:: MipContext 
+# <a name="class-mipcontext"></a>MipContext クラス 
 MipContext は、すべてのプロファイル、エンジン、ハンドラー間で共有される状態を表します。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public void ShutDown ()  |  MIP を終了します。
 public bool IsFeatureEnabled (フライト Ingfeature 機能) const  |  機能が有効かどうかを取得します。
 public const ApplicationInfo& GetApplicationInfo() const  |  アプリケーションの説明を取得します。
-public const std:: string & GetMipPath () const  |  ログ、キャッシュなどのファイルパスを取得します。
+public const std:: string& GetMipPath () const  |  ログ、キャッシュなどのファイルパスを取得します。
 public bool IsOfflineOnly ()  |  オフラインのみの設定を取得します。
 public LogLevel GetThresholdLogLevel () const  |  しきい値ログレベルを取得します。
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Logger の実装を取得します。
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Logger の実装を取得します。
+public const std:: map\<のフライト機能、Bool\>& get観光 ingfeatures () const  |  フライト機能セットを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -37,7 +38,7 @@ MIP を終了します。
 ### <a name="isfeatureenabled-function"></a>IsFeatureEnabled 関数
 機能が有効かどうかを取得します。
 
-パラメータ:  
+パラメーター:  
 * **機能**: 有効/無効にする機能
 
 
@@ -80,3 +81,9 @@ Logger の実装を取得します。
 
   
 **戻り値**: ロガー
+  
+### <a name="getflightingfeatures-function"></a>Getフライト機能関数
+フライト機能セットを取得します。
+
+  
+**戻り値**: flighting 機能マップ

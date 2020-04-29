@@ -1,29 +1,29 @@
 ---
-title: クラス mip::P olicyRuleData
-description: Microsoft Information Protection (MIP) SDK の mip::p olicyruledata クラスについて説明します。
+title: クラス PolicyRuleData
+description: 'Microsoft Information Protection (MIP) SDK の policyruledata:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: db35427c2531edf0653d4f1a05ecbfe8cb93d8d7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 8d1561be2825b0db43d3070e9793f1e9fa0c4679
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486989"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760576"
 ---
-# <a name="class-mippolicyruledata"></a>クラス mip::P olicyRuleData 
+# <a name="class-policyruledata"></a>クラス PolicyRuleData 
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  | _まだ文書化されていません。_
 public const std::string& GetId() const  | _まだ文書化されていません。_
-public const std:: vector\<std:: unique_ptr\<ActionData\>\>& Getactions Data () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: unique_ptr\<actiondata\> \>& getactions data () const  | _まだ文書化されていません。_
 public bool Is互換 Version () const  | _まだ文書化されていません。_
-public const std:: map\<std:: string、std:: string\>& GetAttributeData () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: map\<std:: string、std:: string\>\>& GetRuleTags () const  | _まだ文書化されていません。_
+public const std:: map\<std:: string、std:: String\>& getattributedata () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: map\<std:: string, std:: string\> \>& GetRuleTags () const  | _まだ文書化されていません。_
 public const ConditionData * GetConditionData () const  | _まだ文書化されていません。_
 パブリック仮想 ~ PolicyRuleData ()  | _まだ文書化されていません。_
   
