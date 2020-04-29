@@ -1,23 +1,23 @@
 ---
-title: class mip::AddContentFooterAction
-description: 'Microsoft Information Protection (MIP) SDK の mip:: addcontentフッターアクションクラスについて説明します。'
+title: クラス Addcontentフッターアクション
+description: 'Microsoft Information Protection (MIP) SDK の addcontentフッター action:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 7313976d8856a3aa807245a5c48ac22bf16b469a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 58c0767f2c880a52ef4a831e5d57670820187fc7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490746"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763779"
 ---
-# <a name="class-mipaddcontentfooteraction"></a>class mip::AddContentFooterAction 
+# <a name="class-addcontentfooteraction"></a>クラス Addcontentフッターアクション 
 コンテンツ フッターをドキュメントに追加することを指定するアクション クラス。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ フッター要素をマークするために使用する API。
 public const std::string& GetText() const  |  コンテンツ フッターに移動されるテキストを取得します。
@@ -27,13 +27,13 @@ public const std::string& GetFontColor() const  |  コンテンツ フッター�
 public ContentMarkAlignment GetAlignment() const  |  フッターの配置を取得します。
 public int GetMargin() const  |  一番下からのフッターの余白を取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
 コンテンツ フッター要素をマークするために使用する API。
 
   
-**戻り値**: コンテンツ フッターを保持する UI 要素に使用する必要のある名前。 コンテンツフッターを削除する必要がある場合、RemoveContentFooterAction でも同じ名前が返されます。
+**戻り値**: コンテンツ フッターを保持する UI 要素に使用する必要のある名前。 コンテンツ フッターを削除する必要がある場合は、[RemoveContentFooterAction](class_mip_removecontentfooteraction.md) でも同じ名前が返されます。
   
 ### <a name="gettext-function"></a>GetText 関数
 コンテンツ フッターに移動されるテキストを取得します。
@@ -65,7 +65,7 @@ public int GetMargin() const  |  一番下からのフッターの余白を取�
   
 **戻り値**: ContentMarkAlignment 列挙子: LEFT|RIGHT|CENTER。 
   
-**関連**項目: [contentmarkalignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**関連項目**: ContentMarkAlignment
   
 ### <a name="getmargin-function"></a>GetMargin 関数
 一番下からのフッターの余白を取得します。

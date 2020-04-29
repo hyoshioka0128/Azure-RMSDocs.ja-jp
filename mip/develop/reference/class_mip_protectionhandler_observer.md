@@ -1,50 +1,50 @@
 ---
-title: class mip::ProtectionHandler::Observer
-description: Microsoft Information Protection (MIP) SDK の mip::p rotectionhandler クラスについて説明します。
+title: 'クラス ProtectionHandler:: オブザーバー'
+description: 'Microsoft Information Protection (MIP) SDK の protectionhandler:: observer クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 8f661f3ebf9bc657a4dd6f6356b26cd582d4aa2e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 66453d343505cc57427e177eac258b83a2663eb0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486819"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764437"
 ---
-# <a name="class-mipprotectionhandlerobserver"></a>class mip::ProtectionHandler::Observer 
-ProtectionHandler に関連する通知を受信するインターフェイスです。
+# <a name="class-protectionhandlerobserver"></a>クラス ProtectionHandler:: オブザーバー 
+ProtectionHandler に関連する通知を受け取るインターフェイス。
 このインターフェイスは、保護 SDK を使用してアプリケーションによって実装する必要があります
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual void Oncreateprotectionハンドラ Success (const std:: shared_ptr\<ProtectionHandler\>& protectionHandler、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler が正常に作成されたときに呼び出されます。
-パブリック仮想 void Oncreateprotectionハンドラ Failure (const std:: exception_ptr & error、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler の作成に失敗したときに呼び出されます。
+public virtual void Oncreateprotectionハンドラ Success (const std:: shared_ptr\<protectionhandler\>& protectionhandler、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler が正しく作成されると呼び出されます。
+パブリック仮想 void Oncreateprotectionハンドラ Failure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  ProtectionHandler の作成に失敗すると呼び出されます。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="oncreateprotectionhandlersuccess-function"></a>Oncreateprotectionハンドラ Success 関数
-ProtectionHandler が正常に作成されたときに呼び出されます。
+ProtectionHandler が正しく作成されると呼び出されます。
 
-パラメータ:  
-* **protectionhandler**: 新しく作成された protectionhandler
-
-
-* **コンテキスト**: protectionengine:: Createprotectionハンドラ From記述子 async または protectionengine:: Createprotectionハンドラ Fromはっこう licenseasync に渡されたものと同じコンテキスト
+パラメーター:  
+* **protectionHandler**: 新しく作成された ProtectionHandler
 
 
-アプリケーションは、任意の種類のコンテキスト (たとえば、std::p romise、std:: function) を ProtectionEngine:: Createprotectionハンドラ From記述子 Async または ProtectionEngine:: Createprotectionハンドラ From Licenseasync に渡すことができ、同じコンテキストになります。ProtectionEngine:: Observer:: Oncreateprotectionハンドラ Success または ProtectionEngine:: Observer:: Oncreateprotectionハンドラエラーには、その状態として転送されます。
+* **context**: ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync または ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync に渡されたのと同じコンテキスト
+
+
+アプリケーションは、任意の種類のコンテキスト (例: std::promise、std::function) を ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync または ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync に渡すことができ、その同じコンテキストがそのまま ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess または ProtectionEngine::Observer::OnCreateProtectionHandlerFailure に転送されます
   
 ### <a name="oncreateprotectionhandlerfailure-function"></a>Oncreateprotectionハンドラ Failure 関数
-ProtectionHandler の作成に失敗したときに呼び出されます。
+ProtectionHandler の作成に失敗すると呼び出されます。
 
-パラメータ:  
+パラメーター:  
 * **error**: 作成中に発生するエラー 
 
 
-* **コンテキスト**: protectionengine:: Createprotectionハンドラ From記述子 async または protectionengine:: Createprotectionハンドラ Fromはっこう licenseasync に渡されたものと同じコンテキスト
+* **context**: ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync または ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync に渡されたのと同じコンテキスト
 
 
-アプリケーションは、任意の種類のコンテキスト (たとえば、std::p romise、std:: function) を ProtectionEngine:: Createprotectionハンドラ From記述子 Async または ProtectionEngine:: Createprotectionハンドラ From Licenseasync に渡すことができ、同じコンテキストになります。ProtectionEngine:: Observer:: Oncreateprotectionハンドラ Success または ProtectionEngine:: Observer:: Oncreateprotectionハンドラエラーには、その状態として転送されます。
+アプリケーションは、任意の種類のコンテキスト (例: std::promise、std::function) を ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync または ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync に渡すことができ、その同じコンテキストがそのまま ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess または ProtectionEngine::Observer::OnCreateProtectionHandlerFailure に転送されます

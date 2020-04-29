@@ -1,56 +1,63 @@
 ---
-title: class mip::FileEngine::Settings
-description: 'Microsoft Information Protection (MIP) SDK の mip:: fileengine クラスについて説明します。'
+title: 'クラス FileEngine:: Settings'
+description: 'Microsoft Information Protection (MIP) SDK の fileengine:: settings クラスについて説明します。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6105a542c3c01b31598796912211f97562b25f08
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488791"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763270"
 ---
-# <a name="class-mipfileenginesettings"></a>class mip::FileEngine::Settings 
+# <a name="class-fileenginesettings"></a>クラス FileEngine:: Settings 
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: string & engineId、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための FileEngine:: Settings コンストラクター。
-パブリック設定 (定数 Id & id、const std:: string & clientData、const std:: string & locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための FileProfile:: Settings コンストラクター。
+パブリック設定 (const std:: string& engineId、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  既存のエンジンを読み込むための FileEngine::Settings コンストラクター。
+パブリック設定 (const Id& id、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale、bool loadSensitivityTypes)  |  新しいエンジンを作成するための FileProfile::Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を返します。
 public void SetEngineId(const std::string& id)  |  エンジン ID を設定します。
 public const Identity& GetIdentity() const  |  エンジン ID を返します。
 public void SetIdentity(const Identity& identity)  |  エンジン ID を設定します。
 public const std::string& GetClientData() const  |  エンジンのクライアント データを返します。
 public const std::string& GetLocale() const  |  エンジンのロケールを返します。
-public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& value)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
+public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& 値)  |  テストや実験に使用する名前と値のペアの一覧を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアの一覧を取得します。
 public void SetSessionId(const std::string& sessionId)  |  エンジンのセッション ID を設定します。
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を返します。
-public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
+パブリック void SetCloud (クラウドクラウド)  |  必要に応じて、ターゲットクラウドを設定します。
+パブリッククラウドの GetCloud () const  |  すべてのサービス要求によって使用されるターゲットクラウドを取得します。
+public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  カスタムクラウドの保護クラウドエンドポイントベース URL を設定します。
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  保護クラウドエンドポイントのベース url を取得します。
-public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
-public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  ポリシークラウドエンドポイントのベース url を取得します。
+public void SetPolicyCloudEndpointBaseUrl (const std:: string& policyCloudEndpointBaseUrl)  |  カスタムクラウドのポリシークラウドエンドポイントベース URL を設定します。
+public const std:: string& GetPolicyCloudEndpointBaseUrl () const  |  ポリシークラウドエンドポイントのベース url を取得します。
 public void SetProtectionOnlyEngine (bool protectionOnly)  |  保護のみのエンジン インジケーターを設定します (ポリシー/ラベルなし)。
 public const bool IsProtectionOnlyEngine() const  |  保護のみのエンジン インジケーターを返します (ポリシー/ラベルなし)。
-public bool IsLoadSensitivityTypesEnabled() const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
+public bool IsLoadSensitivityTypesEnabled () const  |  読み込み感度ラベルが有効かどうかを示すフラグを取得します。
 public void EnablePFile (bool 値)  |  が PFiles を生成するかどうかを示すフラグを設定します。
 public const bool IsPFileEnabled ()  |  が PFiles を生成するかどうかを示すフラグを取得します。
-public void SetDelegatedUserEmail (const std:: string & delegatedUserEmail)  |  委任されたユーザーを設定します。
-public const std:: string & GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
-public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelFilter)  |  ラベルフィルターを設定します。
-public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベルフィルターを取得します。
+public void SetDelegatedUserEmail (const std:: string& delegatedUserEmail)  |  委任されたユーザーを設定します。
+public const std:: string& GetDelegatedUserEmail () const  |  委任されたユーザーを取得します。
+public void SetLabelFilter (const std:: vector\<LabelFilterType\>& labelfilter)  |  ラベルフィルターを設定します。
+public const std:: vector\<LabelFilterType\>& getlabelfilter () const  |  ラベルフィルターを取得します。
+public void SetAuthDelegate (const std:: shared_ptr\<authdelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
+public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジン認証デリゲートを取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="settings-function"></a>Settings 関数
-既存のエンジンを読み込むための FileEngine:: Settings コンストラクター。
+既存のエンジンを読み込むための FileEngine::Settings コンストラクター。
 
-パラメータ:  
+パラメーター:  
 * **engineId**: AddEngineAsync によって生成される一意のエンジン ID に設定します。 
+
+
+* **Authdelegate**: 認証トークンを取得するために SDK によって使用される認証デリゲートは、両方が指定されている場合は policyprofile:: Settings:: authdelegate をオーバーライドします 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -64,10 +71,13 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 
   
 ### <a name="settings-function"></a>Settings 関数
-新しいエンジンを作成するための FileProfile:: Settings コンストラクター。
+新しいエンジンを作成するための FileProfile::Settings コンストラクター。
 
-パラメータ:  
+パラメーター:  
 * **identity**: 新しいエンジンに関連付けられているユーザーの ID 情報。 
+
+
+* **Authdelegate**: 認証トークンを取得するために SDK によって使用される認証デリゲートは、両方が指定されている場合は policyprofile:: Settings:: authdelegate をオーバーライドします 
 
 
 * **clientData**: アンロード時にエンジンと共に格納でき、読み込まれたエンジンから取得できるカスタマイズ可能なクライアント データ。 
@@ -86,7 +96,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setengineid-function"></a>SetEngineId 関数
 エンジン ID を設定します。
 
-パラメータ:  
+パラメーター:  
 * **id**: エンジン ID。
 
 
@@ -115,24 +125,40 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="getsessionid-function"></a>GetSessionId 関数
 エンジンのセッション ID を返します。
   
-### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl 関数
-クラウド境界を指定するために使用する、保護クラウド エンドポイント ベース URL を設定します。
+### <a name="setcloud-function"></a>SetCloud 関数
+必要に応じて、ターゲットクラウドを設定します。
 
-パラメータ:  
+パラメーター:  
+* **クラウド**: クラウド
+
+
+クラウドが指定されていない場合、既定ではグローバルクラウドになります。
+  
+### <a name="getcloud-function"></a>GetCloud 関数
+すべてのサービス要求によって使用されるターゲットクラウドを取得します。
+
+  
+**返される値**: クラウド
+  
+### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl 関数
+カスタムクラウドの保護クラウドエンドポイントベース URL を設定します。
+
+パラメーター:  
 * **protectionCloudEndpointBaseUrl**: 保護エンドポイントに関連付けられたベース URL
 
 
+この値は読み取り専用であり、Cloud = Custom に設定されている必要があります
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl 関数
 保護クラウドエンドポイントのベース url を取得します。
 
   
-**戻り値**: 保護エンドポイントに関連付けられたベース URL
+**戻り**値: 保護エンドポイントに関連付けられているベース url この値は読み取り専用で、Cloud = Custom に設定する必要があります
   
 ### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl 関数
-クラウドの境界を指定するために使用されるポリシークラウドエンドポイントのベース url を設定します。
+カスタムクラウドのポリシークラウドエンドポイントベース URL を設定します。
 
-パラメータ:  
+パラメーター:  
 * **policyCloudEndpointBaseUrl**: ポリシーエンドポイントに関連付けられているベース url
 
 
@@ -167,7 +193,7 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail 関数
 委任されたユーザーを設定します。
 
-パラメータ:  
+パラメーター:  
 * **delegatedUserEmail**: 委任の電子メール。
 
 
@@ -182,11 +208,11 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
 ### <a name="setlabelfilter-function"></a>SetLabelFilter 関数
 ラベルフィルターを設定します。
 
-パラメータ:  
+パラメーター:  
 * **labelfilter**: ラベルフィルター。
 
 
-ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。 HyokProtection と DoubleKeyProtection が設定されていない場合は、フィルター処理されます。
   
 ### <a name="getlabelfilter-function"></a>GetLabelFilter 関数
 ラベルフィルターを取得します。
@@ -194,3 +220,17 @@ public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  |  ラベ
   
 **戻り値**: ラベルフィルター。
 ラベルは、既定でスコープにフィルターを適用します。この api は、可能なアクションによってフィルター処理を許可します。
+  
+### <a name="setauthdelegate-function"></a>SetAuthDelegate 関数
+エンジン認証デリゲートを設定します。
+
+パラメーター:  
+* **authdelegate**: Auth デリゲート
+
+
+  
+### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
+エンジン認証デリゲートを取得します。
+
+  
+**戻り値**: エンジンの認証デリゲート。

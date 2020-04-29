@@ -1,10 +1,10 @@
 ---
 title: BYOK の詳細-Azure Information Protection
 description: お客様が管理するキーを使用する場合の詳細と制限事項について説明します ("your your key" または BYOK と呼ばれます)。 Azure Information Protection を使用します。
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 11/22/2019
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,21 +13,21 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a82afdeee9459b460b98a385102147c6c78ff28
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935182"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224565"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (BYOK) の詳細を表示する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Azure Information Protection が含まれているサブスクリプションを持っている組織は、ユーザーが管理するキーを使用して[その使用状況をログに記録](log-analyze-usage.md)するように Azure Information Protection テナントを構成できます。 お客様が管理するキー構成は、"自分のキーを持ち込む"、BYOK と呼ばれることがよくあります。
 
-このユーザーが管理するキーは、Azure サブスクリプションを必要とする Azure Key Vault に格納する必要があります。 HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/pricing/details/key-vault/)を参照してください。
+このユーザーが管理するキーは、Azure サブスクリプションを必要とする Azure Key Vault に格納する必要があります。 HSM 保護キーを使用するには、Azure Key Vault Premium サービス レベルが必要です。 Azure Key Vault のキーを使用する場合は、月単位の料金が発生します。 詳細については、 [Azure Key Vault の価格](https://azure.microsoft.com/pricing/details/key-vault/)に関するページを参照してください。
 
 Azure Information Protection テナント キーに対して Azure Key Vault を使用する場合は、このキーの専用のキー コンテナーを使用することで、それが Azure Rights Management サービスのみで使用されるようにすることをお勧めします。 この構成によって、その他のサービスの呼び出しがキー コンテナーの[サービスの制限](/azure/key-vault/key-vault-service-limits)を超えないようにすることができます。このために、Azure Rights Management サービスの応答時間が調整されることもあります。  
 

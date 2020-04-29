@@ -1,22 +1,22 @@
 ---
-title: 'クラス mip:: ContentMarkingActionData'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: contentmarkingactiondata クラスについて説明します。'
+title: クラス ContentMarkingActionData
+description: 'Microsoft Information Protection (MIP) SDK の contentmarkingactiondata:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6652cf38163a461af49675c5009dba6461ffa544
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 31362a636498c0c12be9f1b24783d6a7bde166db
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488910"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763387"
 ---
-# <a name="class-mipcontentmarkingactiondata"></a>クラス mip:: ContentMarkingActionData 
+# <a name="class-contentmarkingactiondata"></a>クラス ContentMarkingActionData 
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetText() const  | _まだ文書化されていません。_
 public const std::string& GetFontName() const  | _まだ文書化されていません。_
@@ -27,7 +27,7 @@ public int GetMargin() const  | _まだ文書化されていません。_
 public ContentMarkPlacement GetContentMarkPlacement () const  | _まだ文書化されていません。_
 パブリック仮想 ~ ContentMarkingActionData ()  | _まだ文書化されていません。_
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="gettext-function"></a>GetText 関数
 _まだ文書化されていません。_

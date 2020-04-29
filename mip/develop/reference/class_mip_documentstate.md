@@ -1,30 +1,31 @@
 ---
-title: クラス mip::D ocumentState
-description: Microsoft Information Protection (MIP) SDK の mip::d ocumentstate クラスについて説明します。
+title: クラス DocumentState
+description: 'Microsoft Information Protection (MIP) SDK の documentstate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a49683730f120b3d43e2c8f9381a86f0df1a400d
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 674e43b89a43fe90fa1fb38fb7c6d1d51a7326e0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490134"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763320"
 ---
-# <a name="class-mipdocumentstate"></a>クラス mip::D ocumentState 
+# <a name="class-documentstate"></a>クラス DocumentState 
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string GetContentIdentifier() const  |  ドキュメントを説明するコンテンツの説明を取得します。 ファイルの例: [表し] 電子メールの例: [件名: 送信者]。
 パブリック仮想 DataState GetDataState () const  |  アプリケーションで操作中のコンテンツの状態を取得します。
-public std:: vector\<std::p air\<std:: string、std:: string\>\> GetContentMetadata (const std:: vector\<std:: string\>& names、const std:: vector\<std:: string\>& namePrefixes) const  |  コンテンツからメタデータ項目を取得します。
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  保護記述子を取得します。
+public std:: vector\<metadataentry\> getcontentmetadata (const std:: vector\<std:: string\>& names, const std:: vector\<std:: string\>& nameprefixes) const  |  コンテンツからメタデータ項目を取得します。
+public std:: shared_ptr\<protectiondescriptor\> getprotectiondescriptor () const  |  保護記述子を取得します。
 public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
-public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
-パブリック仮想 std:: map\<std:: string、std:: string\> GetAuditMetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
+パブリック仮想署名なし int GetContentMetadataVersion () const  |  テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
+public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\> \> &) const  |  分類結果のマップを返します。
+public virtual std:: map\<std:: string、std:: string\> getauditmetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
 public virtual std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastModifiedTime () const  |  ドキュメントが最後に変更された時刻までの時間を返します。
   
 ## <a name="members"></a>メンバー
@@ -46,7 +47,9 @@ public virtual std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastM
 コンテンツからメタデータ項目を取得します。
 
   
-**戻り値**: コンテンツに適用されるメタデータ。 各メタデータ項目は名前と値のペアです。
+**戻り値**: コンテンツに適用されるメタデータ。 
+  
+「Mip:: MetadataEntry **」も参照してください**。
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor 関数
 保護記述子を取得します。
@@ -60,12 +63,18 @@ public virtual std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastM
   
 **戻り値**: DEFAULT、EMAIL 
   
-**関連**項目: [Mip:: contentformat](mip-enums-and-structs.md#contentformat-enum)
+**次も参照**: mip::ContentFormat
+  
+### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion 関数
+テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
+
+  
+は、コンテンツメタデータのバージョン**を返し**ます。 0の場合、メタデータはバージョンが解除されます。 ファイル形式で複数のメタデータがサポートされている場合、MIP はすべてのメタデータを理解し、バージョンごとに詳細なメタデータの変更を報告できます。
   
 ### <a name="getclassificationresults-function"></a>GetClassificationResults 関数
 分類結果のマップを返します。
 
-パラメータ:  
+パラメーター:  
 * **classificationIds**: 分類 id の一覧。 
 
 

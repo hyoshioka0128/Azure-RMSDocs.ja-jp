@@ -1,25 +1,25 @@
 ---
-title: class mip::RemoveContentFooterAction
-description: 'Microsoft Information Protection (MIP) SDK の mip:: removecontentfooteraction クラスについて説明します。'
+title: RemoveContentFooterAction クラス
+description: 'Microsoft Information Protection (MIP) SDK の removecontentfooteraction:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f995e6e2e276890e6442c80a24cb597c8aaf22c3
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 7b7cc1d9d5be2d2a2e066cdfaf2c162695d5b2b9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489556"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764525"
 ---
-# <a name="class-mipremovecontentfooteraction"></a>class mip::RemoveContentFooterAction 
+# <a name="class-removecontentfooteraction"></a>RemoveContentFooterAction クラス 
 ドキュメントからのコンテンツ フッターの削除を指定するアクション クラス。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: vector\<std:: string\>& GetUIElementNames ()  |  削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
+public const std:: vector\<std:: String\>& GetUIElementNames ()  |  削除する必要のある UI 要素の検索に使用する必要がある名前の一覧を取得します。
   
 ## <a name="members"></a>メンバー
   

@@ -1,39 +1,39 @@
 ---
-title: class mip::FileEngine
-description: 'Microsoft Information Protection (MIP) SDK の mip:: fileengine クラスについて説明します。'
+title: クラス FileEngine
+description: 'Microsoft Information Protection (MIP) SDK の fileengine:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 60be23f1cda4403936ba1e334ae437f6d82d3e20
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 03751a2a2c2e1a4457aacf3a28dd4e6ac2436b4a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490066"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763287"
 ---
-# <a name="class-mipfileengine"></a>class mip::FileEngine 
+# <a name="class-fileengine"></a>クラス FileEngine 
 このクラスは、すべてのエンジン関数のインターフェイスを提供します。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  エンジンの設定を返します。
-public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes () const  |  ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
+public const std:: vector\<std:: shared_ptr\<SensitivityTypesRulePackage\> \>& ListSensitivityTypes () const  |  ポリシーエンジンに関連付けられている感度の種類を一覧表示します。
 public const std:: shared_ptr\<Label\> GetDefaultSensitivityLabel () const  |  既定の機密ラベルを取得します。
-public std:: shared_ptr\<Label\> GetLabelById (const std:: string & id) const  |  指定された id に従ってラベルを取得します。
-public const std:: vector\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels ()  |  機密ラベルの一覧を返します。
+public std:: shared_ptr\<Label\> GetLabelById (const std:: string& id) const  |  指定された id に従ってラベルを取得します。
+public const std:: vector\<std:: shared_ptr\<Label\> \>& ListSensitivityLabels ()  |  機密ラベルの一覧を返します。
 public const std::string& GetMoreInfoUrl() const  |  ポリシー/ラベルに関する詳細情報を検索するための URL を提供します。
-public const std:: string & GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
-public const std:: string & GetSensitivityFileId () const  |  感度ファイル ID を取得します。
+public const std:: string& GetPolicyFileId () const  |  ポリシーファイル ID を取得します。
+public const std:: string& GetSensitivityFileId () const  |  感度ファイル ID を取得します。
 public bool IsLabelingRequired() const  |  ドキュメントにラベルを付ける必要があることを、ポリシーで指示するかどうかを確認します。
-public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetLastPolicyFetchTime () const  |  ポリシーが最後にフェッチされた時刻を取得します。
-public const std::string& GetPolicyDataXml() const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
-パブリック std:: shared_ptr\<Asyncfilehandler Async\> (const std:: string & inputFilePath、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Filehandler オブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
-public std:: shared_ptr\<AsyncControl Createfileハンドラ Async (const std:: shared_ptr\<Stream\>& inputStream、const std:: string & actualFilePath、bool isAuditDiscoveryEnabled、const std:: shared_ptr\<FileHandler:: オブザーバー\>& Fileハンドラオブザーバー、const std:: shared_ptr\<void\>& context、const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)\>  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
+public std:: chrono:: time_point\<std:: chrono:: system_clock\> getlastpolicyfetchtime () const  |  ポリシーが最後にフェッチされた時刻を取得します。
+public const std:: string& GetPolicyDataXml () const  |  このポリシーに関連付けられている設定、ラベル、および規則を記述するポリシーデータ XML を取得します。
+public std:: shared_ptr\<asynccontrol\> createfilehandler async (const std:: string& inputfilepath、const std:: string& Actualfilepath、Bool isauditdiscoveryenabled、const std:: shared_ptr\<Filehandler:: オブザーバー\>& filehandler オブザーバー、const std:: shared_ptr\<void\>& Context、const std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  指定されたファイル パスのファイル ハンドラーの作成を開始します。
+public std:: shared_ptr\<asynccontrol\> createfilehandler async (const std:: shared_ptr\<Stream\>& InputStream、const std:: String& actualfilepath、bool isauditdiscoveryenabled、const Std:: Shared_ptr\<filehandler:: オブザーバー\>& fileハンドラオブザーバー、const std:: shared_ptr\<Void\>& context、const std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  アプリケーションに固有のイベントを監査パイプラインにログを記録します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
+public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  カスタム設定の一覧を取得します。
 public bool HasClassificationRules () const  |  ポリシーに自動または推奨規則があるかどうかを取得します。
   
 ## <a name="members"></a>メンバー
@@ -47,7 +47,7 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
   
 **戻り値**: 機密ラベルの一覧。 LoadSensitivityTypesEnabled が false の場合は空 (
   
-**参照**: fileengine:: Settings)
+**参照**: [Fileengine:: Settings](class_mip_fileengine_settings.md)
   
 ### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel 関数
 既定の機密ラベルを取得します。
@@ -100,7 +100,7 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 ### <a name="createfilehandlerasync-function"></a>Createfileハンドラ Async 関数
 指定されたファイル パスのファイル ハンドラーの作成を開始します。
 
-パラメータ:  
+パラメーター:  
 * **Inputfilepath**: 開くファイル。 パスにはファイル名を含める必要があり、ファイル名拡張子が存在する場合はそれも含めます。 
 
 
@@ -110,7 +110,7 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 * **Isauditdiscoveryenabled**: 監査検出が有効かどうかを表します。 
 
 
-* **Fileハンドラオブザーバー**: filehandler:: Observer インターフェイスを実装するクラス。 
+* **fileHandlerObserver**: FileHandler::Observer インターフェイスを実装するクラス。 
 
 
 * **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。 
@@ -123,7 +123,7 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 ### <a name="createfilehandlerasync-function"></a>Createfileハンドラ Async 関数
 指定されたファイル ストリームのファイル ハンドラーの作成を開始します。
 
-パラメータ:  
+パラメーター:  
 * **inputStream**: ファイル データを含むストリーム。 
 
 
@@ -133,7 +133,7 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 * **Isauditdiscoveryenabled**: 監査検出が有効かどうかを表します。 
 
 
-* **Fileハンドラオブザーバー**: filehandler:: Observer インターフェイスを実装するクラス。 
+* **fileHandlerObserver**: FileHandler::Observer インターフェイスを実装するクラス。 
 
 
 * **context**: オブザーバーに不透明に渡されるクライアント コンテキスト。 
@@ -146,7 +146,7 @@ public bool HasClassificationRules () const  |  ポリシーに自動または�
 ### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent 関数
 アプリケーションに固有のイベントを監査パイプラインにログを記録します。
 
-パラメータ:  
+パラメーター:  
 * **level**: ログ レベルの説明: 情報/エラー/警告 
 
 

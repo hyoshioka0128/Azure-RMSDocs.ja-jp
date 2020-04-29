@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントのリ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 987e44dcd5d5c690f581fd47a4047b65260b71d9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: f10f55393fe5b72d46897a8a894e5e9a44f2db46
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482840"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224701"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -31,12 +31,12 @@ ms.locfileid: "79482840"
 
 最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 
 
-通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログにも含まれます。これには、 **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection クライアント**の製品名と、**更新**の分類が含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+通常は数週間後に、一般公開されている最新バージョンが、 **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection クライアント**の製品名と**更新プログラム**の分類によって Microsoft Update カタログにも含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
 > [!TIP]
-> ラベルが Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンターから公開されているため、Azure Information Protection 統合ラベルクライアントの使用に関心がある場合は、 Microsoft ダウンロードセンターから、統合されたラベル付けクライアントをダウンロードしてインストールすると、Azure Information Protection クライアントを、統一された[ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)にアップグレードできます。
+> ラベルが Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security Center、または Microsoft 365 コンプライアンスセンターから公開されているため、Azure Information Protection 統合ラベルクライアントの使用に関心がある場合は、 Microsoft ダウンロードセンターから、統合されたラベル付けクライアントをダウンロードしてインストールすると、Azure Information Protection クライアントを、統一された[ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)にアップグレードできます。
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
@@ -46,8 +46,9 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>サポートされなくなった一般提供のバージョン:
 
-|クライアント バージョン|リリース日|
+|クライアントのバージョン|リリース日|
 |--------------|-------------|
+|1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|2018 年 11 月 27 日|
 |1.37.19.0|2018 年 9 月 17 日|
@@ -65,7 +66,7 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 
 6/2/2019 以降、Azure Information Protection のラベル付けサービスには、TLS 1.2 を使用する接続が必要です。
 
-1\.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0**は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
+1.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0**は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
 
 ### <a name="release-history"></a>リリース履歴
 
@@ -84,7 +85,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **修正内容**:
 
-- 保護が削除された後に、IQP によって保護されているファイルが **回復** オプションまたは 保存 オプションを選択**して**解決される問題。 
+- 保護が削除された後に、IQP によって保護されているファイルが [**回復**] オプションまたは [保存] オプションを選択**して**解決される問題。 
 
 - わかりやすく、理解しやすいように、多くの製品機能のツールヒントが改善されました。 
 
@@ -102,31 +103,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 このリリースには、安定性とパフォーマンスに関する一般的な修正が含まれています。
 
-## <a name="version-153100"></a>バージョン1.53.10.0
-
-**リリース**日: 07/15/2019
-
-04/23/2020 でサポート
-
-このバージョンには、RMS クライアントの MSIPC バージョン1.0.3889.0419 が含まれています。
-
-**新機能:**
-
-- ポリシー設定から Outlook メッセージを除外する新しい高度なクライアント設定**すべてのドキュメントと電子メールにラベルを付ける必要があり**ます。 [詳細情報](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-
-- 新しい高度なクライアント設定。 Outlook でポップアップメッセージを実装する設定をカスタマイズして、送信される電子メールを警告、ブロック、またはブロックします。 この新しい詳細設定では、添付ファイルのない電子メールメッセージに対して別のアクションを設定できます。 [詳細情報](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
-
-**修正内容**:
-
-- エクスプローラーを使用する場合、右クリックすると、保護がラベルとは別に適用されているファイルにラベルを付けることができます。 たとえば、ユーザーがファイルにカスタムアクセス許可を適用したとします。
-
-- 電子メールスレッドの [転送不可] オプションを、ユーザー定義のアクセス許可用に構成され、転送しないラベルに置き換えると、元の受信者は引き続き電子メールメッセージを開くことができます。
-
-- 次のシナリオでは、ラベルが自動的に設定されたというラベルのツールヒントにユーザーが表示されなくなりました。ユーザーは、ラベルが付けられていないが自動的に保護されたドキュメントを添付して、保護された電子メールを受け取ります。 差出人と同じ組織のユーザーがドキュメントを開くと、保護設定の対応するラベルがドキュメントに適用されます。
-
-- [Protect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile)コマンドレットを実行するための最小[使用権限](../configure-usage-rights.md#usage-rights-and-descriptions)は、**コピー** (EXTRACT) ではなく **、名前を付けて保存、エクスポート**(エクスポート) されるようになりました。
-
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 

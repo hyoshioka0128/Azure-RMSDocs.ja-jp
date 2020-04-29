@@ -1,36 +1,36 @@
 ---
-title: 'クラス mip:: TaskDispatcherDelegate'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: taskdispatcherdelegate クラスについて説明します。'
+title: TaskDispatcherDelegate クラス
+description: 'Microsoft Information Protection (MIP) SDK の taskdispatcherdelegate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: dca6a5fa04b62abf23f0116f63fd4a91c6081da0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b7cd2267b795540a8bb4035a695f5b34f0580b87
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489335"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764279"
 ---
-# <a name="class-miptaskdispatcherdelegate"></a>クラス mip:: TaskDispatcherDelegate 
+# <a name="class-taskdispatcherdelegate"></a>TaskDispatcherDelegate クラス 
 MIP SDK タスクディスパッチャーへのインターフェイスを定義するクラス。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public void DispatchTask (const std:: string & taskId, std:: function\<void ()\> タスク)  |  バックグラウンドスレッドでタスクを実行します。
-public void DispatchTask (const std:: string & taskId、std:: function\<void ()\> タスク、int64_t delaySeconds)  |  指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
-public void ExecuteTaskOnIndependentThread (const std:: string & taskId, std:: function\<void ()\> タスク)  |  独立したスレッドでタスクを直ちに実行します。
-public bool CancelTask (const std:: string & taskId)  |  バックグラウンドタスクをキャンセルします。
+public void DispatchTask (const std:: string& taskId, std:: function\<void ()\>タスク)  |  バックグラウンドスレッドでタスクを実行します。
+public void DispatchTask (const std:: string& taskId、std:: function\<void ()\>タスク、int64_t delayseconds)  |  指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
+public void ExecuteTaskOnIndependentThread (const std:: string& taskId, std:: function\<void ()\>タスク)  |  独立したスレッドでタスクを直ちに実行します。
+public bool CancelTask (const std:: string& taskId)  |  バックグラウンドタスクをキャンセルします。
 public void CancelAllTasks ()  |  すべてのバックグラウンドタスクを取り消します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="dispatchtask-function"></a>DispatchTask 関数
 バックグラウンドスレッドでタスクを実行します。
 
-パラメータ:  
+パラメーター:  
 * **taskId**: タスクを一意に識別する ID 
 
 
@@ -41,7 +41,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 ### <a name="dispatchtask-function"></a>DispatchTask 関数
 指定された遅延を使用して、バックグラウンドスレッドでタスクを実行します。
 
-パラメータ:  
+パラメーター:  
 * **taskId**: タスクを一意に識別する ID 
 
 
@@ -55,7 +55,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 ### <a name="executetaskonindependentthread-function"></a>ExecuteTaskOnIndependentThread 関数
 独立したスレッドでタスクを直ちに実行します。
 
-パラメータ:  
+パラメーター:  
 * **taskId**: タスクを一意に識別する ID 
 
 
@@ -66,7 +66,7 @@ public void CancelAllTasks ()  |  すべてのバックグラウンドタスク�
 ### <a name="canceltask-function"></a>CancelTask 関数
 バックグラウンドタスクをキャンセルします。
 
-パラメータ:  
+パラメーター:  
 * **taskId**: 取り消すタスクの ID
 
 

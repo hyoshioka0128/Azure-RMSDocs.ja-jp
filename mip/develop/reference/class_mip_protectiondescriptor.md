@@ -1,23 +1,23 @@
 ---
-title: class mip::ProtectionDescriptor
-description: Microsoft Information Protection (MIP) SDK の mip::p rotectiondescriptor クラスについて説明します。
+title: クラス ProtectionDescriptor
+description: 'Microsoft Information Protection (MIP) SDK の protectiondescriptor:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b4257be5475b1225f79efe00c11df4b79ee67ee9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487040"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763951"
 ---
-# <a name="class-mipprotectiondescriptor"></a>class mip::ProtectionDescriptor 
+# <a name="class-protectiondescriptor"></a>クラス ProtectionDescriptor 
 コンテンツの一部に関連付けられている保護の説明。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public ProtectionType GetProtectionType() const  |  保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
 public std::string GetOwner() const  |  保護するために所有者を取得します。
@@ -25,17 +25,18 @@ public std::string GetName() const  |  保護の名前を取得します。
 public std::string GetDescription() const  |  保護の説明を取得します。
 public std::string GetTemplateId() const  |  存在する場合、保護テンプレート ID を取得します。
 public std::string GetLabelId() const  |  存在する場合、ラベル ID を取得します。
-public std::string GetContentId() const  |  コンテンツ ID (存在する場合) を取得します。
-public std:: vector\<UserRights\> GetUserRights () const  |  ユーザーから権限へのマッピングのコレクションを取得します。
-public std:: vector\<UserRoles\> GetUserRoles () const  |  ユーザーからロールへのマッピングのコレクションを取得します。
-public bool DoesContentExpire() const  |  コンテンツの有効期限が切れているかどうかを確認します。
-public std:: chrono:: time_point\<std:: chrono:: system_clock\> GetContentValidUntil () const  |  保護の有効期限を取得します。
+public std:: string GetContentId () const  |  コンテンツ ID (存在する場合) を取得します。
+public std:: vector\<userrights\> getuserrights () const  |  ユーザーから権限へのマッピングのコレクションを取得します。
+public std:: vector\<userroles\> getuserroles () const  |  ユーザーからロールへのマッピングのコレクションを取得します。
+public bool の有効期限 () const  |  コンテンツの有効期限が切れているかどうかを確認します。
+public std:: chrono:: time_point\<std:: chrono:: system_clock\> getcontentvaliduntil () const  |  保護の有効期限を取得します。
 public bool DoesAllowOfflineAccess() const  |  保護がオフライン コンテンツへのアクセスを許可するかどうかを取得します。
 public std::string GetReferrer() const  |  保護の参照元のアドレスを取得します。
-public std:: map\<std:: string、std:: string\> GetEncryptedAppData () const  |  暗号化されたアプリ固有のデータを取得します。
-public std:: map\<std:: string、std:: string\> GetSignedAppData () const  |  署名されたアプリ固有のデータを取得します。
+public std:: map\<std:: string、std:: string\> getencryptedappdata () const  |  暗号化されたアプリ固有のデータを取得します。
+public std:: map\<std:: string、std:: string\> getsignedappdata () const  |  署名されたアプリ固有のデータを取得します。
+public std:: string GetDoubleKeyUrl () const  |  カスタム保護に使用する2つのキーの url を取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getprotectiontype-function"></a>GetProtectionType 関数
 保護 SDK テンプレートが基になっているかどうかに関係なく、保護の種類を取得します。
@@ -83,7 +84,7 @@ public std:: map\<std:: string、std:: string\> GetSignedAppData () const  |  �
 ユーザーから権限へのマッピングのコレクションを取得します。
 
   
-**戻り**値: ユーザーから権限へのマッピングのコレクション。現在のユーザーがこの情報へのアクセス権を持っていない場合 (つまり、ユーザーが所有者ではなく、VIEWRIGHT .sdata 権限を持っていない場合)、userrights プロパティの値は空になります。
+**戻り値**: ユーザーから権限へのマッピングのコレクション。現在のユーザーがこの情報へのアクセス権を持っていない (つまり、ユーザーが所有者ではなく VIEWRIGHTSDATA 権限がない) 場合、[UserRights](class_mip_userrights.md) プロパティの値は空になります。
   
 ### <a name="getuserroles-function"></a>GetUserRoles 関数
 ユーザーからロールへのマッピングのコレクションを取得します。
@@ -119,10 +120,16 @@ public std:: map\<std:: string、std:: string\> GetSignedAppData () const  |  �
 暗号化されたアプリ固有のデータを取得します。
 
   
-が**返さ**れます: アプリ固有のデータ保護サービスによって暗号化されたアプリ固有のデータの辞書を保持することができます。 この暗号化されたデータは、ProtectionDescriptor:: GetSignedAppData を使用してアクセスできる署名済みデータに依存しません。
+**戻り値**: アプリ固有のデータ。ProtectionHandler では、保護サービスによって暗号化されたアプリ固有のデータのディクショナリを保持する場合があります。 この暗号化されたデータは、ProtectionDescriptor:: GetSignedAppData を使用してアクセスできる署名済みデータに依存しません。
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData 関数
 署名されたアプリ固有のデータを取得します。
 
   
-が**返さ**れます: アプリ固有のデータ保護サービスによって署名されたアプリ固有のデータの辞書を保持することができます。 この署名付きデータは、ProtectionDescriptor:: GetEncryptedAppData を使用してアクセスできる暗号化されたデータに依存しません。
+**戻り値**: アプリ固有のデータ。ProtectionHandler では、保護サービスが署名したアプリ固有のデータのディクショナリを保持する場合があります。 この署名付きデータは、ProtectionDescriptor:: GetEncryptedAppData からアクセスできる暗号化されたデータに依存しません。
+  
+### <a name="getdoublekeyurl-function"></a>GetDoubleKeyUrl 関数
+カスタム保護に使用する2つのキーの url を取得します。
+
+  
+**返される値**: 2 番目のキーで情報を保護するためにカスタム要求で使用される2つのキーの url。

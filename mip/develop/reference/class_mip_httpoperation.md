@@ -1,26 +1,26 @@
 ---
-title: 'クラス mip:: HttpOperation'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: httpoperation クラスについて説明します。'
+title: HttpOperation クラス
+description: 'Microsoft Information Protection (MIP) SDK の httpoperation:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 4be7b54dd5df255c488043d84ebcfebbce7e6ac2
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 09fac96f16bf18e72d6217842728d48244b9c412
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489998"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762807"
 ---
-# <a name="class-miphttpoperation"></a>クラス mip:: HttpOperation 
+# <a name="class-httpoperation"></a>HttpOperation クラス 
 HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 操作を記述するインターフェイス。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  操作 ID を取得します。
-public std:: shared_ptr\<Httpresponse.cache\> GetResponse ()  |  応答を取得します (存在する場合)。
+public std:: shared_ptr\<httpresponse.cache\> GetResponse ()  |  応答を取得します (存在する場合)。
 public bool IsCancelled ()  |  操作のキャンセルステータスを取得します。
   
 ## <a name="members"></a>メンバー
@@ -29,7 +29,7 @@ public bool IsCancelled ()  |  操作のキャンセルステータスを取得�
 操作 ID を取得します。
 
   
-**戻り値**: 操作 id 対応する HttpRequest と HTTPRESPONSE.CACHE の id は同じになります
+**戻り値**: 操作 id 対応する[HttpRequest](class_mip_httprequest.md)と[httpresponse.cache](class_mip_httpresponse.md)の id は同じになります
   
 ### <a name="getresponse-function"></a>GetResponse 関数
 応答を取得します (存在する場合)。

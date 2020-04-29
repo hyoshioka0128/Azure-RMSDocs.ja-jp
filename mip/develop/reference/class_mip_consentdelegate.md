@@ -1,23 +1,23 @@
 ---
-title: 'クラス mip:: Conのデリゲート'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: conのデリゲートクラスを文書にします。'
+title: class ConsentDelegate
+description: 'Microsoft Information Protection (MIP) SDK の conの delegate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: bbeca67a1ffcd5a7b159883c97a2eb3a08bfb3e2
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: d6c4efddf5b70c1a4a97f0b036cffa107a6cac3e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490321"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763437"
 ---
-# <a name="class-mipconsentdelegate"></a>クラス mip:: Conのデリゲート 
+# <a name="class-consentdelegate"></a>class ConsentDelegate 
 同意に関連する操作の委任。
 この委任は、同意を要求する通知がいつユーザーに表示されるかを把握するために、クライアント アプリケーションによって実装されます。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public Consent GetUserConsent(const std::string& url)  |  SDK でサービス エンドポイントに接続するためのユーザーの同意が求められたときに呼び出されます。
@@ -27,7 +27,7 @@ public Consent GetUserConsent(const std::string& url)  |  SDK でサービス �
 ### <a name="getuserconsent-function"></a>GetUserConsent 関数
 SDK でサービス エンドポイントに接続するためのユーザーの同意が求められたときに呼び出されます。
 
-パラメータ:  
+パラメーター:  
 * **url**: SDK でユーザーの同意が求められる URL
 
 

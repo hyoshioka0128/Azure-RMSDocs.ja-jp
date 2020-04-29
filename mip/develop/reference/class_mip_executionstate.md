@@ -1,37 +1,38 @@
 ---
-title: class mip::ExecutionState
-description: 'Microsoft Information Protection (MIP) SDK の mip:: executionstate クラスについて説明します。'
+title: クラス ExecutionState
+description: 'Microsoft Information Protection (MIP) SDK の executionstate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e0bf26124a7181dd8e6477a303868b51d6275c6e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ff22cebbcb4a83015248c8f6990f04dfad4538e0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490083"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763298"
 ---
-# <a name="class-mipexecutionstate"></a>class mip::ExecutionState 
+# <a name="class-executionstate"></a>クラス ExecutionState 
 エンジンの実行に必要なすべての状態のインターフェイス。
 クライアントでは、必要な状態を取得するメソッドのみを呼び出す必要があります。 そのため、効率を高めるために、クライアントは対応する状態が事前に計算されるのではなく動的に計算されるようにこのインターフェイスを実装できます。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<Label\> GetNewLabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
+public std:: shared_ptr\<Label\> getnewlabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
 public std::string GetContentIdentifier() const  |  ドキュメントを説明するコンテンツの説明を取得します。 ファイルの例: [表し] 電子メールの例: [件名: 送信者]。
 パブリック仮想 DataState GetDataState () const  |  アプリケーションで操作中のコンテンツの状態を取得します。
-public std::p air\<bool、std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
+public std::p air\<bool, std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
-パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\>\> GetNewLabelExtendedProperties () const  |  新しいラベルの拡張プロパティを返します。
-public std:: vector\<std::p air\<std:: string、std:: string\>\> GetContentMetadata (const std:: vector\<std:: string\>& names、const std:: vector\<std:: string\>& namePrefixes) const  |  コンテンツからメタデータ項目を取得します。
-public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor () const  |  保護記述子を取得します。
+パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\> \> getnewlabelextendedproperties () const  |  新しいラベルの拡張プロパティを返します。
+public std:: vector\<metadataentry\> getcontentmetadata (const std:: vector\<std:: string\>& names, const std:: vector\<std:: string\>& nameprefixes) const  |  コンテンツからメタデータ項目を取得します。
+public std:: shared_ptr\<protectiondescriptor\> getprotectiondescriptor () const  |  保護記述子を取得します。
 public ContentFormat GetContentFormat() const  |  コンテンツの形式を取得します。
+パブリック仮想署名なし int GetContentMetadataVersion () const  |  テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
 public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
-public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\>\> &) const  |  分類結果のマップを返します。
-パブリック仮想 std:: map\<std:: string、std:: string\> GetAuditMetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
+public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResults (const std:: vector\<std:: shared_ptr\<ClassificationRequest\> \> &) const  |  分類結果のマップを返します。
+public virtual std:: map\<std:: string、std:: string\> getauditmetadata () const  |  アプリケーション固有のキーと値のペアのマップを返します。
   
 ## <a name="members"></a>メンバー
   
@@ -68,7 +69,7 @@ public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResult
   
 **戻り値**: 割り当て方法: STANDARD、PRIVILEGED、AUTO。 
   
-**関連**項目: [mip::](mip-enums-and-structs.md#assignmentmethod-enum)を実行するメソッド
+**関連項目**: mip::AssignmentMethod
   
 ### <a name="getnewlabelextendedproperties-function"></a>GetNewLabelExtendedProperties 関数
 新しいラベルの拡張プロパティを返します。
@@ -94,7 +95,13 @@ public virtual std:: shared_ptr\<ClassificationResults\> GetClassificationResult
   
 **戻り値**: DEFAULT、EMAIL 
   
-**関連**項目: [Mip:: contentformat](mip-enums-and-structs.md#contentformat-enum)
+**次も参照**: mip::ContentFormat
+  
+### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion 関数
+テナントのアプリケーションでサポートされている最大のメタデータバージョンを取得します。
+
+  
+は、コンテンツメタデータのバージョン**を返し**ます。 0の場合、メタデータはバージョンが解除されます。 ファイル形式で複数のメタデータがサポートされている場合、MIP はすべてのメタデータを理解し、バージョンごとに詳細なメタデータの変更を報告できます。
   
 ### <a name="getsupportedactions-function"></a>GetSupportedActions 関数
 サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
@@ -106,7 +113,7 @@ ActionType::Justify must be supported. ポリシーとラベルの変更に理�
 ### <a name="getclassificationresults-function"></a>GetClassificationResults 関数
 分類結果のマップを返します。
 
-パラメータ:  
+パラメーター:  
 * **classificationIds**: 分類 id の一覧。 
 
 

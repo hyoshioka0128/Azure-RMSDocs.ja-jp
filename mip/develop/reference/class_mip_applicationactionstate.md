@@ -1,32 +1,32 @@
 ---
-title: 'クラス mip:: ApplicationActionState'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: applicationactionstate クラスについて説明します。'
+title: クラス ApplicationActionState
+description: 'Microsoft Information Protection (MIP) SDK の applicationactionstate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 70128f67f758145be2b03954d3385a8428d63fe9
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 389fd02b47153c6953fefad3ba068add6ff431ee
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490644"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763675"
 ---
-# <a name="class-mipapplicationactionstate"></a>クラス mip:: ApplicationActionState 
+# <a name="class-applicationactionstate"></a>クラス ApplicationActionState 
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 パブリック LabelState GetNewLabelState () const  |  新しいラベルの状態を取得します。
-public std:: shared_ptr\<Label\> GetNewLabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
-public std::p air\<bool、std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
+public std:: shared_ptr\<Label\> getnewlabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
+public std::p air\<bool, std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
-パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\>\> GetNewLabelExtendedProperties () const  |  新しいラベルの拡張プロパティを返します。
+パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\> \> getnewlabelextendedproperties () const  |  新しいラベルの拡張プロパティを返します。
 public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
 public bool IsRecommendationEnabled () const  |  推奨アクションを表すブール値を取得します。 既定では、ユーザーが else を指定しない限り、true になります。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getnewlabelstate-function"></a>GetNewLabelState 関数
 新しいラベルの状態を取得します。
@@ -56,7 +56,7 @@ public bool IsRecommendationEnabled () const  |  推奨アクションを表す�
   
 **戻り値**: 割り当て方法: STANDARD、PRIVILEGED、AUTO。 
   
-**関連**項目: [mip::](mip-enums-and-structs.md#assignmentmethod-enum)を実行するメソッド
+**関連項目**: mip::AssignmentMethod
   
 ### <a name="getnewlabelextendedproperties-function"></a>GetNewLabelExtendedProperties 関数
 新しいラベルの拡張プロパティを返します。

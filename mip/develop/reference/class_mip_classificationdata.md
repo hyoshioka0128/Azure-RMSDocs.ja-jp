@@ -1,25 +1,25 @@
 ---
-title: 'クラス mip:: ClassificationData'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: classificationdata クラスについて説明します。'
+title: ClassificationData クラス
+description: 'Microsoft Information Protection (MIP) SDK の classificationdata:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d609dbbfc86e58b172e4cd5ee4d532be65ee0a8d
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5d3b98f121d4ed73df4d6b5af167f8088805ff91
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490423"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763560"
 ---
-# <a name="class-mipclassificationdata"></a>クラス mip:: ClassificationData 
+# <a name="class-classificationdata"></a>ClassificationData クラス 
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: string & GetClassificationId () const  | _まだ文書化されていません。_
-public const std::string& GetRulePackageId() const  | _まだ文書化されていません。_
+public const std:: string& GetClassificationId () const  | _まだ文書化されていません。_
+public const std:: string& GetRulePackageId () const  | _まだ文書化されていません。_
 public int GetMaxCount () const  | _まだ文書化されていません。_
 public int GetMinCount () const  | _まだ文書化されていません。_
 public int GetMinConfidence () const  | _まだ文書化されていません。_

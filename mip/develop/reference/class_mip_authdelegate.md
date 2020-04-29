@@ -1,33 +1,33 @@
 ---
-title: 'クラス mip:: AuthDelegate'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: authdelegate クラスを文書にします。'
+title: クラス AuthDelegate
+description: 'Microsoft Information Protection (MIP) SDK の authdelegate:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 30907f3bf4a08f72305a59290c8cbd891def44c9
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: a7cbc6789fc6baa8fbb01ffb8c6d6ea7e9294d4f
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490610"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763630"
 ---
-# <a name="class-mipauthdelegate"></a>クラス mip:: AuthDelegate 
+# <a name="class-authdelegate"></a>クラス AuthDelegate 
 認証関連の操作のデリゲート。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public virtual bool AcquireOAuth2Token (const mip:: Identity & identity, const OAuth2Challenge & チャレンジ, OAuth2Token & token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
-パブリック仮想 bool AcquireOAuth2Token (const mip:: Identity & identity、const OAuth2Challenge & チャレンジ、const std:: shared_ptr\<void\>& context、OAuth2Token & token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
+public virtual bool AcquireOAuth2Token (const Identity& Identity, const OAuth2Challenge& チャレンジ, OAuth2Token& token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
+パブリック仮想 bool AcquireOAuth2Token (const Identity& Identity、const OAuth2Challenge& チャレンジ、const std:: shared_ptr\<void\>& context、OAuth2Token& token)  |  このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token 関数
 このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
 
-パラメータ:  
+パラメーター:  
 * **id**: トークンが要求されたユーザー 
 
 
@@ -45,7 +45,7 @@ public virtual bool AcquireOAuth2Token (const mip:: Identity & identity, const O
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token 関数
 このメソッドは、指定された id とチャレンジを持つポリシーエンジンに認証トークンが必要な場合に呼び出されます。 クライアントは、トークンの取得に成功したかどうかを返す必要があります。 成功した場合は、指定されたトークンオブジェクトを初期化する必要があります。
 
-パラメータ:  
+パラメーター:  
 * **id**: トークンが要求されたユーザー 
 
 

@@ -1,28 +1,28 @@
 ---
-title: class mip::ApplyLabelAction
-description: 'Microsoft Information Protection (MIP) SDK の mip:: applylabelaction クラスについて説明します。'
+title: クラス ApplyLabelAction
+description: 'Microsoft Information Protection (MIP) SDK の applylabelaction:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e1551adddec611c6f9a0982c5a267fad39c436c4
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: df208a53f6cd6ec3806e91c28901a3005b801742
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490678"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763702"
 ---
-# <a name="class-mipapplylabelaction"></a>class mip::ApplyLabelAction 
+# <a name="class-applylabelaction"></a>クラス ApplyLabelAction 
 ラベルのアクションを適用するには、呼び出し元のアプリケーションで特定のラベルを適用する必要があります。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: shared_ptr\<Label\>& GetLabel () const  |  ラベルを取得する必要があります。
-public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一致し、このラベルが表示される原因となった分類 Id を取得します。
+public const std:: shared_ptr\<Label\>& getlabel () const  |  ラベルを取得する必要があります。
+public const std:: vector\<std:: String\>& GetClassificationIds () const  |  一致し、このラベルが表示される原因となった分類 Id を取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getlabel-function"></a>GetLabel 関数
 ラベルを取得する必要があります。
@@ -34,4 +34,4 @@ public const std:: vector\<std:: string\>& GetClassificationIds () const  |  一
 一致し、このラベルが表示される原因となった分類 Id を取得します。
 
   
-は、Const std:: vector < std:: string > &、このラベルが表示される原因となった分類 Id の一覧を**返し**ます。
+は、Const std:: vector<std:: string>& 、このラベルが表示される原因となった分類 Id の一覧を**返し**ます。

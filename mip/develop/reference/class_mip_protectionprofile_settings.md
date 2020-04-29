@@ -1,55 +1,51 @@
 ---
-title: class mip::ProtectionProfile::Settings
-description: Microsoft Information Protection (MIP) SDK の mip::p rotectionprofile クラスについて説明します。
+title: 'クラス ProtectionProfile:: Settings'
+description: 'Microsoft Information Protection (MIP) SDK の protectionprofile:: settings クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 0622f4db00c2f4baca7845aa0ca061bf2ccf294b
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: f0b9ef139762621205f69d46094a6729f3ec19d9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489607"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763889"
 ---
-# <a name="class-mipprotectionprofilesettings"></a>class mip::ProtectionProfile::Settings 
+# <a name="class-protectionprofilesettings"></a>クラス ProtectionProfile:: Settings 
 作成時および有効期間全体にわたって ProtectionProfile によって使用される設定。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、const std:: shared_ptr\<AuthDelegate\>& authDelegate、const std:: shared_ptr\<Con Delegate\>& Con Delegate、const std:: shared_ptr\<ProtectionProfile:: Observer\>& オブザーバー)  |  ProtectionProfile:: Settings コンストラクター。非同期操作に使用するオブザーバーを指定します。
-パブリック設定 (const std:: shared_ptr\<MipContext\>& mipContext、CacheStorageType cacheStorageType、const std:: shared_ptr\<AuthDelegate\>& authDelegate、const std:: shared_ptr\<Conを Delegate\>& Con デリゲート)  |  ProtectionProfile:: Settings コンストラクター。同期操作に使用されます。
+パブリック設定 (const std:: shared_ptr\<mipContext\>& MipContext、cacheStorageType cachestoragetype、const std:: shared_ptr\<conのデリゲート\>& con delegate、const Std:: shared_ptr\<protectionprofile:: observer\>& オブザーバー)  |  非同期操作に使用されるオブザーバーを指定する ProtectionProfile::Settings コンストラクター。
+パブリック設定 (const std:: shared_ptr\<mipContext\>& MipContext、cachestoragetype cachestoragetype、const std:: shared_ptr\<con delegate\>& conのデリゲート)  |  同期操作に使用される、ProtectionProfile::Settings コンストラクター。
 パブリック CacheStorageType GetCacheStorageType () const  |  キャッシュをメモリまたはディスクのどちらに格納するかを取得します。
-public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  認証トークンを取得するために使用する認証委任を取得します。
-public std:: shared_ptr\<Con\> Getconの Delegate () const  |  サービスに接続するために使用する同意委任を取得します。
-public std:: shared_ptr\<ProtectionProfile:: Observer\> GetObserver () const  |  ProtectionProfile に関連するイベントの通知を受信するオブザーバーを取得します。
+public std:: shared_ptr\<con、delegate\> getconの delegate () const  |  サービスに接続するために使用する同意委任を取得します。
+public std:: shared_ptr\<protectionprofile:: Observer\> GetObserver () const  |  ProtectionProfile に関連するイベントの通知を受信するオブザーバーを取得します。
 public std:: shared_ptr\<MipContext\> GetMipContext () const  |  すべてのプロファイルで共有状態を表す mipmap コンテキストを取得します。
-public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
-public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
+public std:: shared_ptr\<httpdelegate\> GetHttpDelegate () const  |  アプリケーションによって提供される HTTP 委任が取得されます (提供される場合)。
+public void SetHttpDelegate (const std:: shared_ptr\<httpdelegate\>& httpdelegate)  |  クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  アプリケーションによって提供される TaskDispatcher デリゲート (存在する場合) を取得します。
-public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<taskDispatcherDelegate\>& TaskDispatcherDelegate)  |  クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 public void SetSessionId(const std::string& sessionId)  |  セッション ID を設定します。
 public const std::string& GetSessionId() const  |  セッション ID を取得します。
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  エンドユーザーライセンス (Eul) がローカルにキャッシュされるかどうかを構成します。
 public bool CanCacheLicenses () const  |  エンドユーザーライセンス (Eul) がローカルにキャッシュされているかどうかを取得します。
-public void SetCustomSettings (const std:: vector\<std::p air\<std:: string、std:: string\>\>& customSettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
+public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& customsettings)  |  機能のゲーティングとテストに使用するカスタム設定を設定します。
+public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  機能のゲーティングとテストに使用するカスタム設定を取得します。
   
 ## <a name="members"></a>メンバー
   
 ### <a name="settings-function"></a>Settings 関数
-ProtectionProfile:: Settings コンストラクター。非同期操作に使用するオブザーバーを指定します。
+非同期操作に使用されるオブザーバーを指定する ProtectionProfile::Settings コンストラクター。
 
-パラメータ:  
+パラメーター:  
 * **mipContext**: グローバルコンテキスト設定 
 
 
 * **Cachestoragetype**: キャッシュされた状態をメモリまたはディスクに格納します。 
-
-
-* **authDelegate**: 認証に使用される callback オブジェクト (クライアント アプリケーションで実装されます) 
 
 
 * **Conのデリゲート**: 外部リソースにアクセスするためのユーザーアクセス許可を取得するために使用されるデリゲート 
@@ -63,16 +59,13 @@ ProtectionProfile:: Settings コンストラクター。非同期操作に使用
 
   
 ### <a name="settings-function"></a>Settings 関数
-ProtectionProfile:: Settings コンストラクター。同期操作に使用されます。
+同期操作に使用される、ProtectionProfile::Settings コンストラクター。
 
-パラメータ:  
+パラメーター:  
 * **mipContext**: グローバルコンテキスト設定 
 
 
 * **Cachestoragetype**: キャッシュされた状態をメモリまたはディスクに格納します。 
-
-
-* **authDelegate**: 認証に使用される callback オブジェクト (クライアント アプリケーションで実装されます) 
 
 
 * **Conのデリゲート**: 外部リソースにアクセスするためのユーザーアクセス許可を取得するために使用されるデリゲート 
@@ -87,12 +80,6 @@ ProtectionProfile:: Settings コンストラクター。同期操作に使用さ
 
   
 **戻り値**: 使用されているストレージの種類
-  
-### <a name="getauthdelegate-function"></a>GetAuthDelegate 関数
-認証トークンを取得するために使用する認証委任を取得します。
-
-  
-**戻り値**: 認証トークンを取得するために使用する認証委任
   
 ### <a name="getconsentdelegate-function"></a>Getconのデリゲート関数
 サービスに接続するために使用する同意委任を取得します。
@@ -121,8 +108,8 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate 関数
 クライアント自体のスタックで既定の HTTP スタックをオーバーライドします。
 
-パラメータ:  
-* **httpDelegate**: クライアント アプリケーションによって実装される HTTP コールバック インターフェイス
+パラメーター:  
+* **Httpdelegate**: クライアントアプリケーションによって実装される HTTP コールバックインターフェイス
 
 
   
@@ -135,7 +122,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate 関数
 クライアント独自のを使用して、既定の asynchonous タスクのディスパッチ処理をオーバーライドします。
 
-パラメータ:  
+パラメーター:  
 * **taskDispatcherDelegate**: クライアントアプリケーションによって実装されたタスクのディスパッチコールバックインターフェイス
 
 
@@ -144,7 +131,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="setsessionid-function"></a>SetSessionId 関数
 セッション ID を設定します。
 
-パラメータ:  
+パラメーター:  
 * **sessionId**: ログ/テレメトリを関連付けるために使用されるセッション ID
 
 
@@ -158,7 +145,7 @@ ProtectionProfile に関連するイベントの通知を受信するオブザ�
 ### <a name="setcancachelicenses-function"></a>SetCanCacheLicenses 関数
 エンドユーザーライセンス (Eul) がローカルにキャッシュされるかどうかを構成します。
 
-パラメータ:  
+パラメーター:  
 * **canCacheLicenses**: エンジンが保護されたコンテンツを開くときにライセンスをキャッシュする必要があるかどうか
 
 
@@ -173,8 +160,8 @@ True の場合、保護されたコンテンツを開くと、関連付けられ
 ### <a name="setcustomsettings-function"></a>SetCustomSettings 関数
 機能のゲーティングとテストに使用するカスタム設定を設定します。
 
-パラメータ:  
-* **customSettings**: 名前と値のペアの一覧。
+パラメーター:  
+* **Customsettings**: 名前と値のペアの一覧。
 
 
   

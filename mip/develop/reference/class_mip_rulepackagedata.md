@@ -1,26 +1,26 @@
 ---
-title: 'クラス mip:: RulePackageData'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: rulepackagedata クラスについて説明します。'
+title: クラス RulePackageData
+description: 'Microsoft Information Protection (MIP) SDK の rulepackagedata:: undefined クラスについて説明します。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ace2e5c8eb1b5d72c8d9410ba9b5e7fd3f008049
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: f04e2cfb00420b8752cdc998e52c77d41ae480b4
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489471"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764358"
 ---
-# <a name="class-miprulepackagedata"></a>クラス mip:: RulePackageData 
+# <a name="class-rulepackagedata"></a>クラス RulePackageData 
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const PolicyRuleData * GetRuleData () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string、std:: string\>& GetLabelToTemplateId () const  | _まだ文書化されていません。_
-public const std::p air\<std:: string、std:: shared_ptr\<ProtectionActionData\>\>& GetLabelToProtectionType () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string, std:: String\>& GetLabelToTemplateId () const  | _まだ文書化されていません。_
+public const std::p air\<std:: string, std:: shared_ptr\<protectionactiondata\> \>& getlabeltoprotectiontype () const  | _まだ文書化されていません。_
 パブリック仮想 ~ RulePackageData ()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー

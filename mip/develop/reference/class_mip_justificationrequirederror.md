@@ -1,28 +1,28 @@
 ---
-title: class mip::JustificationRequiredError
-description: 'Microsoft Information Protection (MIP) SDK の mip:: justificationrequirederror クラスについて説明します。'
+title: JustificationRequiredError クラス
+description: 'Microsoft Information Protection (MIP) SDK の justificationrequirederror:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 610a76514416da4c2c14e8ed45fa32fca8f25efb
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2f654fef22571392b8e7bdb4b5c32888e2d9e3c1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488009"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762222"
 ---
-# <a name="class-mipjustificationrequirederror"></a>class mip::JustificationRequiredError 
+# <a name="class-justificationrequirederror"></a>JustificationRequiredError クラス 
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 std:: shared_ptr\<エラー\> Clone () const  |  エラーを複製します。
+public virtual std:: shared_ptr\<Error\> Clone () const  |  エラーを複製します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
-### <a name="clone-function"></a>複製関数
+### <a name="clone-function"></a>Clone 関数
 エラーを複製します。
 
   

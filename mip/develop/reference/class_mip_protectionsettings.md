@@ -1,26 +1,26 @@
 ---
-title: クラス mip::P rotectionSettings
-description: Microsoft Information Protection (MIP) SDK の mip::p rotectionsettings クラスについて説明します。
+title: クラス ProtectionSettings
+description: 'Microsoft Information Protection (MIP) SDK の protectionsettings:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a44d404fed5ebdac535bac586f4ce54a61e94f6d
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 640963295ec3809aa6478a1c04c5f43f04a5d3b5
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489573"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763879"
 ---
-# <a name="class-mipprotectionsettings"></a>クラス mip::P rotectionSettings 
+# <a name="class-protectionsettings"></a>クラス ProtectionSettings 
 SetLabel メソッドの保護オプションを構成するためのインターフェイスです。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public ProtectionSettings () = default  | _まだ文書化されていません。_
-パブリック ProtectionSettings (const std:: string & delegatedUserEmail、PFileExtensionBehavior pfileExtensionBehavior)  | _まだ文書化されていません。_
+パブリック ProtectionSettings (const std:: string& delegatedUserEmail、PFileExtensionBehavior pfileExtensionBehavior)  | _まだ文書化されていません。_
 public void SetDelegatedUserEmail (const std:: string delegatedUserEmail)  | _まだ文書化されていません。_
 public std:: string GetDelegatedUserEmail () const  | _まだ文書化されていません。_
 public void SetPFileExtensionBehavior (PFileExtensionBehavior pfileExtensionBehavior)  | _まだ文書化されていません。_

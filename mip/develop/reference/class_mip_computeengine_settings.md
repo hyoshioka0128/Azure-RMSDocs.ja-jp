@@ -1,35 +1,35 @@
 ---
-title: 'クラス mip:: ComputeEngine:: Settings'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: computeengine クラスについて説明します。'
+title: 'クラス ComputeEngine:: Settings'
+description: 'Microsoft Information Protection (MIP) SDK の computeengine:: settings クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 2d9a4f6c4ccdf9c68feed6f3cd0681481b10c01a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 166692c33b960e91e7a1cb3efd20ca18f695540b
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490372"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763485"
 ---
-# <a name="class-mipcomputeenginesettings"></a>クラス mip:: ComputeEngine:: Settings 
+# <a name="class-computeenginesettings"></a>クラス ComputeEngine:: Settings 
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const Identity & id、const ApplicationInfo & applicationInfo、const std:: shared_ptr\<TelemetryDelegate\>& telemetryDelegate、LogLevel thresholdLogLevel、const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate、const std:: string & hostName、const std:: vector\<std::p air\<std:: string、std:: string\>\>& customProperties、const std:: vector\<LabelFilterType\>&labelFilter)  | _まだ文書化されていません。_
+パブリック設定 (const id& id、const applicationinfo& applicationinfo、const std:: shared_ptr\<TelemetryDelegate\>& TelemetryDelegate、LogLevel thresholdLogLevel、const std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate、const std:: string& hostName、const std:: vector\<std::p air\<std:: string、std:: string\> \>& customProperties、const std:: vector\<LabelFilterType\>& labelfilter)  | _まだ文書化されていません。_
 public const Identity& GetIdentity() const  | _まだ文書化されていません。_
 public void SetIdentity(const Identity& identity)  | _まだ文書化されていません。_
 public const ApplicationInfo& GetApplicationInfo() const  | _まだ文書化されていません。_
 public std:: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | _まだ文書化されていません。_
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | _まだ文書化されていません。_
-public const std:: string & GetHostName () const  | _まだ文書化されていません。_
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetCustomProperties () const  | _まだ文書化されていません。_
+public const std:: string& GetHostName () const  | _まだ文書化されていません。_
+public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomProperties () const  | _まだ文書化されていません。_
 public void SetParentCorrelationId (const std:: string correlationId, const std:: string description)  | _まだ文書化されていません。_
-public const std:: string & GetParentCorrelationId () const  | _まだ文書化されていません。_
-public const std:: string & GetParentCorrelationIdDescription () const  | _まだ文書化されていません。_
-public const std:: vector\<LabelFilterType\>& GetLabelFilter () const  | _まだ文書化されていません。_
+public const std:: string& GetParentCorrelationId () const  | _まだ文書化されていません。_
+public const std:: string& GetParentCorrelationIdDescription () const  | _まだ文書化されていません。_
+public const std:: vector\<LabelFilterType\>& getlabelfilter () const  | _まだ文書化されていません。_
 public void Setバリエーション Abmarkextmarkingtype (可変 abている extmarkmarkingtype)  | _まだ文書化されていません。_
 パブリック型のバリエーション Abmarkextmarkingtype () const。  | _まだ文書化されていません。_
 public LogLevel GetThresholdLogLevel () const  | _まだ文書化されていません。_

@@ -1,24 +1,24 @@
 ---
-title: class mip::ConsentDeniedError
-description: 'Microsoft Information Protection (MIP) SDK の mip:: consentdeniederror クラスについて説明します。'
+title: ConsentDeniedError クラス
+description: 'Microsoft Information Protection (MIP) SDK の consentdeniederror:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 07aa6d39bf14e6995d9dc60be88d02928105aa2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9ae93f60a878827cd0a56253c84386534d10ab0a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488961"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763453"
 ---
-# <a name="class-mipconsentdeniederror"></a>class mip::ConsentDeniedError 
+# <a name="class-consentdeniederror"></a>ConsentDeniedError クラス 
 ユーザーに同意を求めた操作で、同意が得られませんでした。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
 _まだ文書化されていません。_

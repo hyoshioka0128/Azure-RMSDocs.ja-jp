@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 11/4/2019
-ms.openlocfilehash: 0187739b1f37a23051dbf6c3ddde8e992757f088
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.date: 4/16/2020
+ms.openlocfilehash: 438cdc93989ffbd5b294adb24175c443aeaf1024
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73592123"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763868"
 ---
 # <a name="mip-sdk-for-c-reference"></a>MIP SDK for C リファレンス
 
@@ -19,7 +19,7 @@ Microsoft Information Protection (MIP) SDK for C を使用すると、開発者�
 
 MIP SDK for C には、
 
-- [列挙体](enumerations.md)
+- [列挙型](enumerations.md)
 - [構造体](structures.md)
 - 次の関数:
 
@@ -57,6 +57,8 @@ MIP SDK for C には、
 | [MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess](functions.md#mip_cc_protectiondescriptor_doesallowofflineaccess) | オフラインアクセスが許可されているかどうかを取得します。 |
 | [MIP_CC_ProtectionDescriptor_GetReferrerSize](functions.md#mip_cc_protectiondescriptor_getreferrersize) | 参照元を格納するために必要なバッファーのサイズを取得します。 |
 | [MIP_CC_ProtectionDescriptor_GetReferrer](functions.md#mip_cc_protectiondescriptor_getreferrer) | 保護参照元を取得します |
+| [MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize](functions.md#mip_cc_protectiondescriptor_getdoublekeyurlsize) | 2つのキーの URL を格納するために必要なバッファーのサイズを取得します。 |
+| [MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl](functions.md#mip_cc_protectiondescriptor_getdoublekeyurl) | 2つのキーの URL を取得します |
 | [MIP_CC_ReleaseProtectionDescriptor](functions.md#mip_cc_releaseprotectiondescriptor) | 保護記述子に関連付けられているリソースを解放する |
 | [MIP_CC_CreateStringList](functions.md#mip_cc_createstringlist) | 文字列リストの作成 |
 | [MIP_CC_StringList_GetStrings](functions.md#mip_cc_stringlist_getstrings) | 文字列リストを構成する文字列を取得します。 |
@@ -66,14 +68,17 @@ MIP SDK for C には、
 | [MIP_CC_CreateTaskDispatcherDelegate](functions.md#mip_cc_createtaskdispatcherdelegate) | MIP の既定の非同期タスク処理をオーバーライドするために使用できるタスクディスパッチャーデリゲートを作成します。 |
 | [MIP_CC_ExecuteDispatchedTask](functions.md#mip_cc_executedispatchedtask) | タスクが現在のスレッドで実行するようにスケジュールされていることを TaskDispatcher デリゲートに通知します |
 | [MIP_CC_ReleaseTaskDispatcherDelegate](functions.md#mip_cc_releasetaskdispatcherdelegate) | タスクディスパッチャーデリゲートハンドルに関連付けられているリソースの解放 |
+| [MIP_CC_CreateTelemetryConfiguration](functions.md#mip_cc_createtelemetryconfiguration) | 保護プロファイルの作成に使用する設定オブジェクトを作成する |
 | [MIP_CC_TelemetryConfiguration_SetHostName](functions.md#mip_cc_telemetryconfiguration_sethostname) | 内部テレメトリ設定を上書きするテレメトリホスト名を設定する |
 | [MIP_CC_TelemetryConfiguration_SetLibraryName](functions.md#mip_cc_telemetryconfiguration_setlibraryname) | テレメトリ共有ライブラリオーバーライドの設定 |
 | [MIP_CC_TelemetryConfiguration_SetHttpDelegate](functions.md#mip_cc_telemetryconfiguration_sethttpdelegate) | 既定のテレメトリ HTTP スタックをクライアント独自にオーバーライドする |
+| [MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate](functions.md#mip_cc_telemetryconfiguration_settaskdispatcherdelegate) | 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする |
 | [MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled](functions.md#mip_cc_telemetryconfiguration_setisnetworkdetectionenabled) | バックグラウンドスレッドでテレメトリコンポーネントがネットワークステータスに ping を実行できるかどうかを設定します。 |
 | [MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled](functions.md#mip_cc_telemetryconfiguration_setislocalcachingenabled) | テレメトリコンポーネントでディスクへのキャッシュの書き込みが許可されているかどうかを設定します。 |
 | [MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled](functions.md#mip_cc_telemetryconfiguration_setistraceloggingenabled) | テレメトリコンポーネントでディスクへのログの書き込みが許可されているかどうかを設定します |
 | [MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut](functions.md#mip_cc_telemetryconfiguration_setistelemetryoptedout) | アプリケーション/ユーザーがオプションのテレメトリをオプトアウトしたかどうかを設定します。 |
 | [MIP_CC_TelemetryConfiguration_SetCustomSettings](functions.md#mip_cc_telemetryconfiguration_setcustomsettings) | カスタムテレメトリ設定を設定します |
+| [MIP_CC_TelemetryConfiguration_AddMaskedProperty](functions.md#mip_cc_telemetryconfiguration_addmaskedproperty) | テレメトリプロパティを mask に設定します |
 | [MIP_CC_ReleaseTelemetryConfiguration](functions.md#mip_cc_releasetelemetryconfiguration) | 保護プロファイル設定に関連付けられているリソースを解放する |
 | [MIP_CC_ReleaseProtectionEngine](functions.md#mip_cc_releaseprotectionengine) | 保護エンジンに関連付けられているリソースを解放する |
 | [MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing](functions.md#mip_cc_protectionengine_createprotectionhandlerforpublishing) | 新しいコンテンツを公開するための保護ハンドラーを作成します |
@@ -89,6 +94,7 @@ MIP SDK for C には、
 | [MIP_CC_ProtectionEngineSettings_SetClientData](functions.md#mip_cc_protectionenginesettings_setclientdata) | このエンジンと共に不透明に格納され、セッション間で保持されるクライアントデータを設定します |
 | [MIP_CC_ProtectionEngineSettings_SetCustomSettings](functions.md#mip_cc_protectionenginesettings_setcustomsettings) | 機能のゲートとテストに使用されるカスタム設定を構成します。 |
 | [MIP_CC_ProtectionEngineSettings_SetSessionId](functions.md#mip_cc_protectionenginesettings_setsessionid) | ログとテレメトリを関連付けるために使用できるセッション ID を設定します。 |
+| [MIP_CC_ProtectionEngineSettings_SetCloud](functions.md#mip_cc_protectionenginesettings_setcloud) | すべてのサービス要求のエンドポイント Url に影響するクラウドを設定します |
 | [MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl](functions.md#mip_cc_protectionenginesettings_setcloudendpointbaseurl) | すべてのサービス要求のベース URL を設定します |
 | [MIP_CC_ReleaseProtectionEngineSettings](functions.md#mip_cc_releaseprotectionenginesettings) | 保護エンジンの設定に関連付けられているリソースを解放する |
 | [MIP_CC_CreateProtectionHandlerPublishingSettings](functions.md#mip_cc_createprotectionhandlerpublishingsettings) | 新しいコンテンツを公開するための保護ハンドラーの作成に使用される設定オブジェクトを作成する |
@@ -96,11 +102,15 @@ MIP SDK for C には、
 | [MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionAllowed](functions.md#mip_cc_protectionhandlerpublishingsettings_setisauditedextractionallowed) | 非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されるかどうかを設定します |
 | [MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJson](functions.md#mip_cc_protectionhandlerpublishingsettings_setispublishingformatjson) | PL が JSON 形式であるかどうかを設定します (既定は XML) |
 | [MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail](functions.md#mip_cc_protectionhandlerpublishingsettings_setdelegateduseremail) | 委任されたユーザーを設定します |
+| [MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail](functions.md#mip_cc_protectionhandlerpublishingsettings_setprelicenseuseremail) | ライセンス前のユーザーを設定します |
 | [MIP_CC_CreateProtectionHandlerConsumptionSettings](functions.md#mip_cc_createprotectionhandlerconsumptionsettings) | 既存のコンテンツを使用するための保護ハンドラーの作成に使用される設定オブジェクトを作成する |
+| [MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense](functions.md#mip_cc_createprotectionhandlerconsumptionsettingswithprelicense) | 既存のコンテンツを使用するための保護ハンドラーの作成に使用される設定オブジェクトを作成する |
 | [MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly](functions.md#mip_cc_protectionhandlerconsumptionsettings_setisofflineonly) | 保護ハンドラーの作成でオンライン HTTP 操作が許可されるかどうかを設定します |
 | [MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail](functions.md#mip_cc_protectionhandlerconsumptionsettings_setdelegateduseremail) | 委任されたユーザーを設定します |
 | [MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize](functions.md#mip_cc_protectionhandler_getserializedpublishinglicensesize) | 発行ライセンスのサイズを取得します (バイト単位) |
 | [MIP_CC_ProtectionHandler_GetSerializedPublishingLicense](functions.md#mip_cc_protectionhandler_getserializedpublishinglicense) | 発行ライセンスを取得します。 |
+| [MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize](functions.md#mip_cc_protectionhandler_getserializedprelicensesize) | プレライセンスのサイズを取得します (バイト単位) |
+| [MIP_CC_ProtectionHandler_GetSerializedPreLicense](functions.md#mip_cc_protectionhandler_getserializedprelicense) | ライセンスの取得 |
 | [MIP_CC_ProtectionHandler_GetProtectionDescriptor](functions.md#mip_cc_protectionhandler_getprotectiondescriptor) | 保護記述子を取得します。 |
 | [MIP_CC_ProtectionHandler_GetRights](functions.md#mip_cc_protectionhandler_getrights) | ユーザーに付与されている権限の一覧を取得します。 |
 | [MIP_CC_ProtectionHandler_GetProtectedContentSize](functions.md#mip_cc_protectionhandler_getprotectedcontentsize) | 保護されたコンテンツのサイズ、埋め込みのファクタリングなどを計算します。 |
@@ -117,12 +127,19 @@ MIP SDK for C には、
 | [MIP_CC_ReleaseProtectionHandler](functions.md#mip_cc_releaseprotectionhandler) | 保護ハンドラーに関連付けられているリソースを解放する |
 | [MIP_CC_LoadProtectionProfile](functions.md#mip_cc_loadprotectionprofile) | プロファイルの読み込み |
 | [MIP_CC_ReleaseProtectionProfile](functions.md#mip_cc_releaseprotectionprofile) | 保護プロファイルに関連付けられているリソースを解放する |
+| [MIP_CC_CreateProtectionProfileSettings](functions.md#mip_cc_createprotectionprofilesettings) | 保護プロファイルの作成に使用する設定オブジェクトを作成する |
 | [MIP_CC_ProtectionProfileSettings_SetSessionId](functions.md#mip_cc_protectionprofilesettings_setsessionid) | ログとテレメトリを関連付けるために使用できるセッション ID を設定します。 |
 | [MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses](functions.md#mip_cc_protectionprofilesettings_setcancachelicenses) | エンドユーザーライセンス (Eul) をローカルにキャッシュするかどうかを構成します |
 | [MIP_CC_ProtectionProfileSettings_SetHttpDelegate](functions.md#mip_cc_protectionprofilesettings_sethttpdelegate) | 既定の HTTP スタックをクライアント独自にオーバーライドする |
 | [MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate](functions.md#mip_cc_protectionprofilesettings_settaskdispatcherdelegate) | 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする |
 | [MIP_CC_ProtectionProfileSettings_SetCustomSettings](functions.md#mip_cc_protectionprofilesettings_setcustomsettings) | 機能のゲートとテストに使用されるカスタム設定を構成します。 |
 | [MIP_CC_ReleaseProtectionProfileSettings](functions.md#mip_cc_releaseprotectionprofilesettings) | 保護プロファイル設定に関連付けられているリソースを解放する |
+| [MIP_CC_TemplateDescriptor_GetId](functions.md#mip_cc_templatedescriptor_getid) | テンプレート ID を取得します。 |
+| [MIP_CC_TemplateDescriptor_GetNameSize](functions.md#mip_cc_templatedescriptor_getnamesize) | 名前を格納するために必要なバッファーのサイズを取得します。 |
+| [MIP_CC_TemplateDescriptor_GetName](functions.md#mip_cc_templatedescriptor_getname) | テンプレート名を取得します。 |
+| [MIP_CC_TemplateDescriptor_GetDescriptionSize](functions.md#mip_cc_templatedescriptor_getdescriptionsize) | 説明を格納するために必要なバッファーのサイズを取得します。 |
+| [MIP_CC_TemplateDescriptor_GetDescription](functions.md#mip_cc_templatedescriptor_getdescription) | テンプレートの説明を取得します。 |
+| [MIP_CC_ReleaseTemplateDescriptor](functions.md#mip_cc_releasetemplatedescriptor) | テンプレート記述子に関連付けられているリソースを解放する |
 | [MIP_CC_Action_GetType](functions.md#mip_cc_action_gettype) | アクションの型を取得します。 |
 | [MIP_CC_Action_GetId](functions.md#mip_cc_action_getid) | アクションの ID を取得します。 |
 | [MIP_CC_ActionResult_GetActions](functions.md#mip_cc_actionresult_getactions) | アクションの結果を構成するアクションを取得します。 |
@@ -189,6 +206,9 @@ MIP SDK for C には、
 | [MIP_CC_Label_GetCustomSettings](functions.md#mip_cc_label_getcustomsettings) | ラベルのポリシーで定義されたカスタム設定を取得します。 |
 | [MIP_CC_MetadataAction_GetMetadataToRemove](functions.md#mip_cc_metadataaction_getmetadatatoremove) | 削除する "メタデータ" アクションのメタデータを取得します。 |
 | [MIP_CC_MetadataAction_GetMetadataToAdd](functions.md#mip_cc_metadataaction_getmetadatatoadd) | 追加する "メタデータ" アクションのメタデータを取得します。 |
+| [MIP_CC_CreateMetadataDictionary](functions.md#mip_cc_createmetadatadictionary) | 文字列のキー/値の辞書を作成する |
+| [MIP_CC_MetadataDictionary_GetEntries](functions.md#mip_cc_metadatadictionary_getentries) | ディクショナリを構成するメタデータエントリを取得する |
+| [MIP_CC_ReleaseMetadataDictionary](functions.md#mip_cc_releasemetadatadictionary) | ディクショナリに関連付けられているリソースを解放する |
 | [MIP_CC_ReleasePolicyEngine](functions.md#mip_cc_releasepolicyengine) | ポリシーエンジンに関連付けられているリソースを解放する |
 | [MIP_CC_PolicyEngine_GetEngineIdSize](functions.md#mip_cc_policyengine_getengineidsize) | エンジン ID に必要なバッファーのサイズを取得します。 |
 | [MIP_CC_PolicyEngine_GetEngineId](functions.md#mip_cc_policyengine_getengineid) | エンジン ID を取得します。 |
@@ -208,6 +228,8 @@ MIP SDK for C には、
 | [MIP_CC_PolicyEngine_GetSensitivityTypes](functions.md#mip_cc_policyengine_getsensitivitytypes) | ポリシーエンジンに関連付けられている感度の種類を取得します。 |
 | [MIP_CC_PolicyEngine_CreatePolicyHandler](functions.md#mip_cc_policyengine_createpolicyhandler) | ポリシー関連の関数を実行するポリシーハンドラーを作成する |
 | [MIP_CC_PolicyEngine_SendApplicationAuditEvent](functions.md#mip_cc_policyengine_sendapplicationauditevent) | アプリケーション固有のイベントを監査パイプラインに記録します。 |
+| [MIP_CC_PolicyEngine_GetTenantIdSize](functions.md#mip_cc_policyengine_gettenantidsize) | テナント ID のサイズを取得します。 |
+| [MIP_CC_PolicyEngine_GetTenantId](functions.md#mip_cc_policyengine_gettenantid) | テナント ID を取得します |
 | [MIP_CC_PolicyEngine_GetPolicyDataXmlSize](functions.md#mip_cc_policyengine_getpolicydataxmlsize) | ポリシーデータ xml のサイズを取得します。 |
 | [MIP_CC_PolicyEngine_GetPolicyDataXml](functions.md#mip_cc_policyengine_getpolicydataxml) | ポリシーデータ xml を取得します。 |
 | [MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize](functions.md#mip_cc_policyengine_getsensitivitytypesdataxmlsize) | 感度の種類のデータ xml のサイズを取得します。 |
@@ -218,21 +240,32 @@ MIP SDK for C には、
 | [MIP_CC_PolicyEngineSettings_SetClientData](functions.md#mip_cc_policyenginesettings_setclientdata) | このエンジンと共に不透明に格納され、セッション間で保持されるクライアントデータを設定します |
 | [MIP_CC_PolicyEngineSettings_SetCustomSettings](functions.md#mip_cc_policyenginesettings_setcustomsettings) | 機能のゲートとテストに使用されるカスタム設定を構成します。 |
 | [MIP_CC_PolicyEngineSettings_SetSessionId](functions.md#mip_cc_policyenginesettings_setsessionid) | ログとテレメトリを関連付けるために使用できるセッション ID を設定します。 |
+| [MIP_CC_PolicyEngineSettings_SetCloud](functions.md#mip_cc_policyenginesettings_setcloud) | すべてのサービス要求のエンドポイント Url に影響するクラウドを設定します |
 | [MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl](functions.md#mip_cc_policyenginesettings_setcloudendpointbaseurl) | すべてのサービス要求のベース URL を設定します |
 | [MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail](functions.md#mip_cc_policyenginesettings_setdelegateduseremail) | 委任されたユーザーを設定します |
+| [MIP_CC_PolicyEngineSettings_SetLabelFilter](functions.md#mip_cc_policyenginesettings_setlabelfilter) | ラベルフィルターを設定します |
 | [MIP_CC_ReleasePolicyEngineSettings](functions.md#mip_cc_releasepolicyenginesettings) | ポリシーエンジン設定に関連付けられているリソースを解放する |
 | [MIP_CC_ReleasePolicyHandler](functions.md#mip_cc_releasepolicyhandler) | ポリシーハンドラーに関連付けられているリソースを解放する |
 | [MIP_CC_PolicyHandler_GetSensitivityLabel](functions.md#mip_cc_policyhandler_getsensitivitylabel) | ドキュメントの現在のラベルを取得します。 |
 | [MIP_CC_PolicyHandler_ComputeActions](functions.md#mip_cc_policyhandler_computeactions) | 指定された状態に基づいてポリシー規則を実行し、対応するアクションを決定します。 |
 | [MIP_CC_PolicyHandler_NotifyCommittedActions](functions.md#mip_cc_policyhandler_notifycommittedactions) | 計算されたアクションが適用され、データがディスクにコミットされた後に、アプリケーションによって呼び出されます |
+| [MIP_CC_PolicyProfile_AcquireAuthToken](functions.md#mip_cc_policyprofile_acquireauthtoken) | 認証コールバックをトリガーする |
 | [MIP_CC_LoadPolicyProfile](functions.md#mip_cc_loadpolicyprofile) | プロファイルの読み込み |
 | [MIP_CC_ReleasePolicyProfile](functions.md#mip_cc_releasepolicyprofile) | ポリシープロファイルに関連付けられているリソースを解放する |
+| [MIP_CC_CreatePolicyProfileSettings](functions.md#mip_cc_createpolicyprofilesettings) | ポリシープロファイルの作成に使用される設定オブジェクトを作成する |
 | [MIP_CC_PolicyProfileSettings_SetSessionId](functions.md#mip_cc_policyprofilesettings_setsessionid) | ログとテレメトリを関連付けるために使用できるセッション ID を設定します。 |
 | [MIP_CC_PolicyProfileSettings_SetHttpDelegate](functions.md#mip_cc_policyprofilesettings_sethttpdelegate) | 既定の HTTP スタックをクライアント独自にオーバーライドする |
 | [MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate](functions.md#mip_cc_policyprofilesettings_settaskdispatcherdelegate) | 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする |
 | [MIP_CC_PolicyProfileSettings_SetCustomSettings](functions.md#mip_cc_policyprofilesettings_setcustomsettings) | 機能のゲートとテストに使用されるカスタム設定を構成します。 |
 | [MIP_CC_ReleasePolicyProfileSettings](functions.md#mip_cc_releasepolicyprofilesettings) | ポリシープロファイル設定に関連付けられているリソースを解放する |
+| [MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectadhocdkaction_getdoublekeyencryptionurlsize) | 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。 |
+| [MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectadhocdkaction_getdoublekeyencryptionurl) | 二重キー暗号化 url を取得します。 |
 | [MIP_CC_ProtectByTemplateAction_GetTemplateId](functions.md#mip_cc_protectbytemplateaction_gettemplateid) | "テンプレートによる保護" アクションのテンプレート ID を取得します。 |
+| [MIP_CC_ProtectByTemplateDkAction_GetTemplateId](functions.md#mip_cc_protectbytemplatedkaction_gettemplateid) | "2 つのキーで保護されるテンプレートによる保護" アクションのテンプレート ID を取得します |
+| [MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurlsize) | 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。 |
+| [MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectbytemplatedkaction_getdoublekeyencryptionurl) | 二重キー暗号化 url を取得します。 |
+| [MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize](functions.md#mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurlsize) | 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。 |
+| [MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl](functions.md#mip_cc_protectdonotforwarddkaction_getdoublekeyencryptionurl) | 二重キー暗号化 url を取得します。 |
 | [MIP_CC_RemoveContentFooterAction_GetUIElementNames](functions.md#mip_cc_removecontentfooteraction_getuielementnames) | 削除する "コンテンツフッターの削除" アクションの UI 要素名を取得します。 |
 | [MIP_CC_RemoveContentHeaderAction_GetUIElementNames](functions.md#mip_cc_removecontentheaderaction_getuielementnames) | 削除する "コンテンツヘッダーの削除" アクションの UI 要素名を取得します。 |
 | [MIP_CC_RemoveWatermarkAction_GetUIElementNames](functions.md#mip_cc_removewatermarkaction_getuielementnames) | 削除する "透かしの削除" アクションの UI 要素名を取得します。 |

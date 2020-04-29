@@ -1,28 +1,28 @@
 ---
-title: class mip::TemplateDescriptor
-description: 'Microsoft Information Protection (MIP) SDK の mip:: templatedescriptor クラスについて説明します。'
+title: クラステンプレート記述子
+description: 'Microsoft Information Protection (MIP) SDK の templatedescriptor:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 3429d659b839f2150f1ec87c3b9ae20631b8f715
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 45537a7309efb20a3c5cfcb0df0349a7d3ec01ee
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77492734"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764274"
 ---
-# <a name="class-miptemplatedescriptor"></a>class mip::TemplateDescriptor 
+# <a name="class-templatedescriptor"></a>クラステンプレート記述子 
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  テンプレート ID を取得します。
 public std::string GetName() const  |  テンプレート名を取得します。
 public std::string GetDescription() const  |  テンプレートの説明を取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getid-function"></a>GetId 関数
 テンプレート ID を取得します。

@@ -1,24 +1,24 @@
 ---
-title: class mip::JustifyAction
-description: 'Microsoft Information Protection (MIP) SDK の mip:: ジャスト ifyaction クラスについて説明します。'
+title: クラスジャスト Ifyaction
+description: 'Microsoft Information Protection (MIP) SDK のジャスト ifyaction:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: aaf842feb4d7c4f33b7af897378ae308e11b012f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ae2c1dd96c07febf374c50791c915597deea7c76
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489981"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762186"
 ---
-# <a name="class-mipjustifyaction"></a>class mip::JustifyAction 
-ジャスティフィケーションアクションでは、ラベルダウングレードに対する根拠を提示し、応答を実行状態に設定する必要があります。
+# <a name="class-justifyaction"></a>クラスジャスト Ifyaction 
+正当化アクションは、ラベルをダウングレードする理由の提供と実行状態での応答の設定を要求します。
   
 **関連**項目: mip:: executionstate:: IsDowngradeJustified
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   

@@ -1,30 +1,30 @@
 ---
-title: class mip::ContentLabel
-description: 'Microsoft Information Protection (MIP) SDK の mip:: contentlabel クラスについて説明します。'
+title: クラス ContentLabel
+description: 'Microsoft Information Protection (MIP) SDK の contentlabel:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f131885572ab5ad3a2664a6b50162a011529bfbb
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: e69a4a8146eb7e7251645ef83a8db0926d383166
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490338"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763404"
 ---
-# <a name="class-mipcontentlabel"></a>class mip::ContentLabel 
+# <a name="class-contentlabel"></a>クラス ContentLabel 
 コンテンツの一部 (通常はドキュメント) に適用される Microsoft Information Protection ラベルの抽象化。
 特定の適用されたラベル インスタンスに対するプロパティも保持します。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: chrono:: time_point\<std:: chrono:: system_clock\> Get Time () const  |  ラベルの作成時間を取得します。
+public std:: chrono:: time_point\<std:: chrono:: system_clock\> get time () const  |  ラベルの作成時間を取得します。
 public AssignmentMethod GetAssignmentMethod() const  |  ラベルの割り当て方法を取得します。
-public const std:: vector\<std::p air\<std:: string、std:: string\>\>& GetExtendedProperties () const  |  拡張プロパティを取得します。
+パブリック const std:: vector\<metadataentry\>& getextendedproperties () const  |  拡張プロパティを取得します。
 public bool IsProtectionAppliedFromLabel() const  |  保護がラベルによって適用されたかどうかを取得します。
-public std:: shared_ptr\<Label\> GetLabel () const  |  コンテンツに適用された実際のラベル オブジェクトを取得します。
+public std:: shared_ptr\<Label\> getlabel () const  |  コンテンツに適用された実際のラベル オブジェクトを取得します。
   
 ## <a name="members"></a>メンバー
   
@@ -40,7 +40,7 @@ public std:: shared_ptr\<Label\> GetLabel () const  |  コンテンツに適用�
   
 **戻り値**: AssignmentMethod STANDARD | PRIVILEGED | AUTO。 
   
-**関連**項目: [mip::](mip-enums-and-structs.md#assignmentmethod-enum)を実行するメソッド
+**関連項目**: mip::AssignmentMethod
   
 ### <a name="getextendedproperties-function"></a>GetExtendedProperties 関数
 拡張プロパティを取得します。

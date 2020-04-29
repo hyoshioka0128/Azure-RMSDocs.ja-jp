@@ -1,22 +1,22 @@
 ---
-title: class mip::ClassificationResult
-description: 'Microsoft Information Protection (MIP) SDK の mip:: classificationresult クラスについて説明します。'
+title: ClassificationResult クラス
+description: 'Microsoft Information Protection (MIP) SDK の classificationresult:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a245cd4d9505de8adbf3cc1a2de6d2fa20369ce7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b87db224bdd7a571c22de9e382ff9faf3ce656b8
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490406"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763516"
 ---
-# <a name="class-mipclassificationresult"></a>class mip::ClassificationResult 
+# <a name="class-classificationresult"></a>ClassificationResult クラス 
 実行状態での分類呼び出しの結果を含むクラス。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  分類ポリシーの ID を取得します。

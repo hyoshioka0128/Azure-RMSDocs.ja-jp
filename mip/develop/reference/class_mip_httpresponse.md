@@ -1,30 +1,30 @@
 ---
-title: class mip::HttpResponse
-description: 'Microsoft Information Protection (MIP) SDK の mip:: httpresponse.cache クラスについて説明します。'
+title: Httpresponse.cache クラス
+description: 'Microsoft Information Protection (MIP) SDK の httpresponse.cache:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e24eef471b11daffadb84235edbc93ff14696c25
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 6e37613adce0397ed543c4df793a59e74795fb26
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488060"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762465"
 ---
-# <a name="class-miphttpresponse"></a>class mip::HttpResponse 
-HttpDelegate をオーバーライドするときにクライアントアプリによって実装される、単一の HTTP 応答を記述するインターフェイス。
+# <a name="class-httpresponse"></a>Httpresponse.cache クラス 
+HttpDelegate をオーバーライドするときに、クライアント アプリによって実装される 1 つの HTTP 要求を表すインターフェイス。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  応答 ID を取得します。
 public int32_t GetStatusCode() const  |  応答の状態コードを取得します。
-public const std:: vector\<uint8_t\>& GetBody () const  |  要求本文を取得します。
-public const std:: map\<std:: string、std:: string、CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
+public const std:: vector\<Uint8_t\>& getbody () const  |  要求本文を取得します。
+public const std:: map\<std:: string、std:: String、CaseInsensitiveComparator\>& GetHeaders () const  |  要求ヘッダーを取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getid-function"></a>GetId 関数
 応答 ID を取得します。

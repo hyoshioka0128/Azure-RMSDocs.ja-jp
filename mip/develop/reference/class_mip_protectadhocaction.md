@@ -1,22 +1,22 @@
 ---
-title: class mip::ProtectAdhocAction
-description: Microsoft Information Protection (MIP) SDK の mip::p rotectadhocaction クラスについて説明します。
+title: ProtectAdhocAction クラス
+description: 'Microsoft Information Protection (MIP) SDK の protectadhocaction:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 15fc6a1ebb455e0e38fb301c9d92299763dbf7f0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 084ab7ac8b961e21291bffc38d14b05acb28db55
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486904"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763998"
 ---
-# <a name="class-mipprotectadhocaction"></a>class mip::ProtectAdhocAction 
+# <a name="class-protectadhocaction"></a>ProtectAdhocAction クラス 
 アドホック保護をドキュメントに追加することを指定するアクション クラス。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   

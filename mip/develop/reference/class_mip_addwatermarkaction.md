@@ -1,23 +1,23 @@
 ---
-title: class mip::AddWatermarkAction
-description: 'Microsoft Information Protection (MIP) SDK の mip:: addwatermarkaction クラスについて説明します。'
+title: AddWatermarkAction クラス
+description: 'Microsoft Information Protection (MIP) SDK の addwatermarkaction:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 80ae66e54fe00ad96652b3568d49e256211dffc4
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: fe2cc80e5abb225a5e83c1b10c1c5f9f99401628
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490712"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763739"
 ---
-# <a name="class-mipaddwatermarkaction"></a>class mip::AddWatermarkAction 
+# <a name="class-addwatermarkaction"></a>AddWatermarkAction クラス 
 ウォーターマークの追加を指定するアクション クラス。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  ウォーターマーク要素を示すために使用される API。
 public WatermarkLayout GetLayout() const  |  ウォーターマーク レイアウトを取得するために使用される API。
@@ -26,7 +26,7 @@ public const std::string& GetFontName() const  |  ウォーターマークの表
 public int GetFontSize() const  |  ウォーターマークの表示に使用されるフォント サイズを取得します。
 public const std::string& GetFontColor() const  |  ウォーターマークの表示に使用されるフォントの色を取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
 ウォーターマーク要素を示すために使用される API。

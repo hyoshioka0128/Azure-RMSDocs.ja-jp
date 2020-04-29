@@ -1,24 +1,24 @@
 ---
-title: class mip::Action
-description: 'Microsoft Information Protection (MIP) SDK の mip:: action クラスについて説明します。'
+title: クラスアクション
+description: 'Microsoft Information Protection (MIP) SDK の action:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 0f95ec9d4b89a8efdc118d584f7f73ec2128ef8a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 4cc432d4bed173eeb20c7544c742037095feeb8f
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489165"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763805"
 ---
-# <a name="class-mipaction"></a>class mip::Action 
+# <a name="class-action"></a>クラスアクション 
 アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
 _まだ文書化されていません。_

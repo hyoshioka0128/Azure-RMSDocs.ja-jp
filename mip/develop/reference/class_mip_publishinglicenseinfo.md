@@ -1,39 +1,39 @@
 ---
-title: クラス mip::P ublishingLicenseInfo
-description: Microsoft Information Protection (MIP) SDK の mip::p ublishinglicenseinfo クラスについて説明します。
+title: クラス発行 Licenseinfo
+description: 'Microsoft Information Protection (MIP) SDK の発行 licenseinfo:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f9283a9cc52ef803e35a6d714e43bfce9b137771
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 6477af8499020aed08e0a0178558da54ca73e19d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489641"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764553"
 ---
-# <a name="class-mippublishinglicenseinfo"></a>クラス mip::P ublishingLicenseInfo 
+# <a name="class-publishinglicenseinfo"></a>クラス発行 Licenseinfo 
 保護ハンドラーを作成するために使用する発行ライセンスの詳細を保持します。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-公開発行 Licenseinfo (const std:: vector\<uint8_t\>& serializedPublishingLicense)  | _まだ文書化されていません。_
-公開発行 Licenseinfo (const std:: vector\<uint8_t\>& serializedPreLicense、const std:: vector\<uint8_t\>& serializedPublishingLicense)  | _まだ文書化されていません。_
-public void SetParsedData (const std:: vector\<std:: string\>& ドメイン、const std:: string & serverPublicCert、const std:: string & contentId、const std:: string &)  | _まだ文書化されていません。_
-public void SetDoubleKeyData (const std:: string & algorithm、const std:: map\<std:: string、std:: string\>& doubleKeyApplicationData)  | _まだ文書化されていません。_
-public const std:: vector\<uint8_t\>& GetSerializedPublishingLicense () const  | _まだ文書化されていません。_
-public const std:: vector\<uint8_t\>& GetPreLicense () const  | _まだ文書化されていません。_
-public const std:: vector\<std:: string\>& GetDomains () const  | _まだ文書化されていません。_
-public const std:: string & GetServerPublicCertificate () const  | _まだ文書化されていません。_
-public const std:: string & GetIssuerId () const  | _まだ文書化されていません。_
-public const std:: string & GetContentId () const  | _まだ文書化されていません。_
+公開発行 Licenseinfo (const std:: vector\<Uint8_t\>& serializedPublishingLicense)  | _まだ文書化されていません。_
+公開発行 Licenseinfo (const std:: vector\<Uint8_t\>& serializedPreLicense、const std:: vector\<uint8_t\>& serializedPublishingLicense)  | _まだ文書化されていません。_
+public void SetParsedData (const std:: vector\<std:: string\>& domains、const std:: String& serverpubliccert、const std:: string& contentId、const std:: string&)  | _まだ文書化されていません。_
+public void SetDoubleKeyData (const std:: string& algorithm、const std:: map\<std:: string、std:: string\>& doubleKeyApplicationData)  | _まだ文書化されていません。_
+public const std:: vector\<Uint8_t\>& GetSerializedPublishingLicense () const  | _まだ文書化されていません。_
+public const std:: vector\<Uint8_t\>& GetPreLicense () const  | _まだ文書化されていません。_
+public const std:: vector\<std:: String\>& getdomains () const  | _まだ文書化されていません。_
+public const std:: string& GetServerPublicCertificate () const  | _まだ文書化されていません。_
+public const std:: string& GetIssuerId () const  | _まだ文書化されていません。_
+public const std:: string& GetContentId () const  | _まだ文書化されていません。_
 public bool IsLicenseParsed () const  | _まだ文書化されていません。_
 public bool HasPreLicense () const  | _まだ文書化されていません。_
 public bool GetIsDoubleKeyLicense () const  | _まだ文書化されていません。_
-public const std:: string & GetDoubleKeyAlgorithm () const  | _まだ文書化されていません。_
-public const std:: map\<std:: string、std:: string\>& GetDoubleKeyApplicationData () const  | _まだ文書化されていません。_
+public const std:: string& GetDoubleKeyAlgorithm () const  | _まだ文書化されていません。_
+public const std:: map\<std:: string、std:: String\>& GetDoubleKeyApplicationData () const  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   

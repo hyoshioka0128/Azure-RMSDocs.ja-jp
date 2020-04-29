@@ -1,23 +1,23 @@
 ---
-title: class mip::AddContentHeaderAction
-description: 'Microsoft Information Protection (MIP) SDK の mip:: addcontentheaderaction クラスについて説明します。'
+title: AddContentHeaderAction クラス
+description: 'Microsoft Information Protection (MIP) SDK の addcontentheaderaction:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f58fe47de4ee1f79f64415013fc1949ef53b2adf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490729"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763767"
 ---
-# <a name="class-mipaddcontentheaderaction"></a>class mip::AddContentHeaderAction 
+# <a name="class-addcontentheaderaction"></a>AddContentHeaderAction クラス 
 コンテンツ ヘッダーの追加を指定するアクション クラス。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  コンテンツ ヘッダー要素をマークするために使用する API。
 public const std::string& GetText() const  |  コンテンツ ヘッダーに移動されるテキストを取得します。
@@ -27,13 +27,13 @@ public const std::string& GetFontColor() const  |  コンテンツ ヘッダー�
 public ContentMarkAlignment GetAlignment() const  |  ヘッダーの配置を取得します。
 public int GetMargin() const  |  一番下からのヘッダーの余白を取得します。
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
   
 ### <a name="getuielementname-function"></a>GetUIElementName 関数
 コンテンツ ヘッダー要素をマークするために使用する API。
 
   
-**戻り値**: コンテンツ ヘッダーを保持する UI 要素に使用する必要のある名前。 コンテンツヘッダーを削除する必要がある場合、RemoveContentHeaderAction でも同じ名前が返されます。
+**戻り値**: コンテンツ ヘッダーを保持する UI 要素に使用する必要のある名前。 コンテンツ ヘッダーを削除する必要がある場合は、[RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) に同じ名前が返されます。
   
 ### <a name="gettext-function"></a>GetText 関数
 コンテンツ ヘッダーに移動されるテキストを取得します。
@@ -57,7 +57,7 @@ public int GetMargin() const  |  一番下からのヘッダーの余白を取�
 コンテンツ ヘッダーの表示に使用されるフォントの色を取得します。
 
   
-**戻り値**: 文字列としてのフォントの色 (例: #000000")。
+は、文字列としてのフォントの色 (たとえば、#000000 ") を**返し**ます。
   
 ### <a name="getalignment-function"></a>GetAlignment 関数
 ヘッダーの配置を取得します。
@@ -65,7 +65,7 @@ public int GetMargin() const  |  一番下からのヘッダーの余白を取�
   
 **戻り値**: ContentMarkAlignment 列挙子: LEFT|RIGHT|CENTER。 
   
-**関連**項目: [contentmarkalignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**関連項目**: ContentMarkAlignment
   
 ### <a name="getmargin-function"></a>GetMargin 関数
 一番下からのヘッダーの余白を取得します。

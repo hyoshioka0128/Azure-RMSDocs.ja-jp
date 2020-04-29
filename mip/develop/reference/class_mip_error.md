@@ -1,22 +1,22 @@
 ---
-title: class mip::Error
-description: 'Microsoft Information Protection (MIP) SDK の mip:: error クラスについて説明します。'
+title: クラスエラー
+description: 'Microsoft Information Protection (MIP) SDK の error:: undefined クラスをドキュメントに記載しています。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c27458e658af47d14d718dbbf9bc19e7687603fd
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 08e770c22f59bf0757039c623cb6ed1ed5b66cd7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490100"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763328"
 ---
-# <a name="class-miperror"></a>class mip::Error 
+# <a name="class-error"></a>クラスエラー 
 MIP SDK からレポートされる (スローまたは返される) すべてのエラーの基底クラス。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   

@@ -1,10 +1,10 @@
 ---
 title: アプリが AIP から Azure Rights Management をサポートするしくみ
 description: 最も一般的に使用されるアプリケーション (Office アプリなど) とサービス (Exchange や SharePoint など) が Azure Information Protection の Azure Rights Management サービスを使用して、組織のドキュメントや電子メールを保護する方法について説明します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/02/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 795c260430305492b19aded923c01cf4d918b70f
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 9e14cd34dd31dda6942c028fa9a68778eaaaed3a
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935199"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224582"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-以下では、幅広く使用されているエンド ユーザー アプリケーションとサービスが組織の文書や電子メールを保護するために、Azure Information Protection の Azure Rights Management をどのように使用するかを説明します。 アプリケーションには、Word、Excel、PowerPoint、Outlook があります。 サービスには Exchange や SharePoint があります。
+次の情報は、一般的に使用されているエンドユーザーアプリケーションとサービスが Azure Information Protection の Azure Rights Management サービスを使用して組織のドキュメントや電子メールを保護する方法を理解するのに役立ちます。 アプリケーションには、Word、Excel、PowerPoint、Outlook があります。 サービスには Exchange や SharePoint があります。
 
 > [!NOTE]
 > Azure Rights Management サービスをサポートするアプリケーションおよびバージョンを確認するには、「[Azure Rights Management データ保護をサポートするアプリケーション](./requirements-applications.md)」をご覧ください。
@@ -36,13 +36,13 @@ ms.locfileid: "74935199"
 
 Azure Information Protection から Azure Rights Management サービス用にこれらのアプリケーションを構成する方法の詳細については、「[Azure Rights Management 用にアプリケーションを構成する](configure-applications.md)」を参照してください。
 
-検索サービスは、さまざまな方法で Rights Management と統合できます。 たとえば、次のようになります。 
+検索サービスは、さまざまな方法で Rights Management と統合できます。 次に例を示します。 
 
 - Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの保護された電子メールが検索結果に自動的に表示されようにします。 
 
 - SharePoint Online と SharePoint Server は Rights Management 保護をダウンロード時にのみファイルに適用します。 この実装は、SharePoint のインデックス作成と検索結果がこのドキュメント保護ソリューションによる影響を受けないことを意味します。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前にドキュメントを保護します。
 
-- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、検索結果には保護されたファイルが含まれませんが、PC にサインインまたは接続する他のユーザーの検索結果に、機密データを含むファイルが表示されないことが保証されます。 
+- Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、保護されているファイルは検索結果に含まれませんが、機密データを含むファイルが、PC にサインインしたり、PC に接続したりする可能性のある他のユーザーの検索結果に表示されないことを保証できます。 
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -50,7 +50,7 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 -   [Office アプリケーションおよびサービス](office-apps-services-support.md)
 
--   [Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイル サーバー](file-server-support.md)
+-   [Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイルサーバー](file-server-support.md)
 
--   [RMS API をサポートするその他のアプリケーション](api-support.md)
+-   [RMS Api をサポートするその他のアプリケーション](api-support.md)
 

@@ -1,24 +1,24 @@
 ---
-title: 'クラス mip:: AdhocProtectionRequiredError'
-description: 'Microsoft Information Protection (MIP) SDK の mip:: adhocprotectionrequirederror クラスについて説明します。'
+title: AdhocProtectionRequiredError クラス
+description: 'Microsoft Information Protection (MIP) SDK の adhocprotectionrequirederror:: undefined クラスを文書にします。'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d02c7e3eeafe012968986d69b3be127ebca223d1
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 0cbd82862816c5996ce84a5861e6ea19c3c91ff1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490661"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763695"
 ---
-# <a name="class-mipadhocprotectionrequirederror"></a>クラス mip:: AdhocProtectionRequiredError 
+# <a name="class-adhocprotectionrequirederror"></a>AdhocProtectionRequiredError クラス 
 ファイルに対する操作を完了するには、アドホック保護を設定する必要があります。
   
-## <a name="summary"></a>要約
- Members                        | [説明]                                
+## <a name="summary"></a>まとめ
+ メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>メンバー
 _まだ文書化されていません。_
