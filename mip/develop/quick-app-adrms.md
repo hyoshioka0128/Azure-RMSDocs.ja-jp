@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 32e2cc1cb3924c5a4181bd4cafaaf3f53f085c00
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: eafcf65b9478cc8a2d2c104c3e98194c40e9c941
+ms.sourcegitcommit: 80d7c1a1afb3e54fac434f10a7dca4f8076384a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764216"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255601"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>クイック スタート:Active Directory Rights Management Server (AD RMS) の保護
 
@@ -26,12 +26,12 @@ ms.locfileid: "81764216"
 
 - 「[クイック スタート: クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)」をまず完了し、スターター Visual Studio ソリューションを構築します。
 - 「[クイック スタート: 機密ラベルの一覧表示 (C++)](quick-file-list-labels-cpp.md)」または「[クイック スタート: 機密ラベルの一覧表示 (C#)](quick-file-list-labels-csharp.md)」を完了します
-- [モバイル デバイス拡張機能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11))を使って AD RMS を展開します。
-- 必要に応じて、[AD RMS MDE 用の DNS SRV レコード](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension)が発行されていることを確認します。
+- [モバイル デバイス拡張機能](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device)を使って AD RMS を展開します。
+- 必要に応じて、[AD RMS MDE 用の DNS SRV レコード](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension)が発行されていることを確認します。
 
 ## <a name="service-discovery"></a>サービス検出
 
-SDK では、UPN またはメール アドレスのサフィックスを使うことで、`FileEngineSettings` または `ProtectionEngineSettings` 経由で提供される `mip::Identity` に基づいてサービス検出を実行します。 まず、MDE の *_rmsdisco* レコードのドメイン階層が検索されます。 このプロセスの詳細については、「[AD RMS モバイル デバイス拡張機能用の DNS SRV レコードの指定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension)」をご確認ください。 その DNS SRV レコードが見つからない場合は、サービスの場所として Azure Information Protection サービスが規定値となります。
+SDK では、UPN またはメール アドレスのサフィックスを使うことで、`FileEngineSettings` または `ProtectionEngineSettings` 経由で提供される `mip::Identity` に基づいてサービス検出を実行します。 まず、MDE の *_rmsdisco* レコードのドメイン階層が検索されます。 このプロセスの詳細については、「[AD RMS モバイル デバイス拡張機能用の DNS SRV レコードの指定](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension)」をご確認ください。 その DNS SRV レコードが見つからない場合は、サービスの場所として Azure Information Protection サービスが規定値となります。
 
 ID が使用できない場合、または MDE の DNS SRV レコードが発行されていない場合は、[クラウド エンドポイントの URL](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function) を明示的に設定することによって、サービス検出のプロセスをオーバーライドできます。
 
