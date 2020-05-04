@@ -4,7 +4,7 @@ description: ユーザーが Windows 用 Azure Information Protection クライ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 65ce454504be04d7f3e5881dbefad3053d8a082c
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 9dd4e4f461c5a3643e8e9cb250e9bc1430b5efad
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960789"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736747"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントをダウンロードしてインストールする
 
@@ -29,11 +29,10 @@ ms.locfileid: "75960789"
 
 管理者が Azure Information Protection クライアントをインストールしない場合、自分でインストールできます。 ドキュメントや電子メールにラベルを付けて保護できるように、このクライアントをインストールするには対象となる PC のローカル管理者である必要があります。
 
-さらに
+さらに:
 
 - Azure Information Protection クライアントでは、Microsoft .NET Framework 4.6.2 の最小バージョンが必要になります。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。
 
-- Windows 7 SP1 を使用する場合、Azure Information Protection クライアントには特定の更新プログラム KB 2533623 が必要です。 この更新プログラムが必要な PC にまだインストールされていない場合、インストールは完了しますが、Azure Information Protection クライアントにこの更新プログラムが必要だというメッセージが表示されます。 この更新プログラムがインストールされるまで、Azure Information Protection クライアントの機能すべてを使用できるようにはなりません。 
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>Azure Information Protection クライアントをダウンロードしてインストールするには    
 
@@ -43,14 +42,14 @@ ms.locfileid: "75960789"
 
 2. **Azure Information Protection クライアント** セクションを見つけて、Windows アイコンをクリックします。 **[ダウンロード]** をクリックし、**AzInfoProtection.exe** ファイルを保存します。     
 
-3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、 **[はい]** をクリックします。    
+3. ダウンロードした実行可能ファイルを実行します。 続行を確認するメッセージが表示されたら、[**はい**] をクリックします。    
 
 4. **Azure Information Protection クライアントのインストール** ページで、     
     - クラウドに接続できない場合に、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。    
 
-    - ライセンス条項および使用条件を読み、 **[同意する]** をクリックします。    
+    - ライセンス条項および使用条件を読み、**[同意する]** をクリックします。    
 
-5. 続行を確認するメッセージが表示されたら、 **[はい]** をクリックしてインストールが完了するまで待機します。    
+5. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。    
 
 6. **[閉じる]** をクリックします。 Azure Information Protection クライアントの使用を開始する前に次の操作を行います。    
 
@@ -61,18 +60,18 @@ ms.locfileid: "75960789"
 ### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Office 2010 で Azure Information Protection クライアントをインストールする    
 前の指示に従い、Azure Information Protection クライアントをインストールしたら、次の操作を行います。    
 
-1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、 **[Microsoft Azure Information Protection]** ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
+1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、[**Microsoft Azure Information Protection**] ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
 
-2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、 **[OK]** をクリックします。
+2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[OK]** をクリックします。
 
-3. **[ユーザーアクセス制御]** ダイアログ ボックスが表示された場合、 **[はい]** をクリックします。Azure Information Protection でレジストリが更新されます。
+3. [**ユーザーアクセス制御**] ダイアログ ボックスが表示された場合、[**はい**] をクリックします。Azure Information Protection でレジストリが更新されます。
 
 インストールはこれで完了となります。Azure Information Protection を利用し、文書や電子メールにラベルを付けたり、保護したりできます。
 
 ## <a name="other-instructions"></a>その他の手順    
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
-- [作業内容](client-user-guide.md#what-do-you-want-to-do)
+- [目的に合ったトピックをクリックしてください](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 [管理者ガイド](client-admin-guide.md)の「[Install the Azure Information Protection client for users](client-admin-guide-install.md)」(ユーザー向けに Azure Information Protection クライアントをインストールする) を参照してください。

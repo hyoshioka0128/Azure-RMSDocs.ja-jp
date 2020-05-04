@@ -4,7 +4,7 @@ description: 組織の Azure Information Protection をデプロイするため�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: b7cc3bff14c5e16ca43fe8f204609e67b531e566
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403962"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736781"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Azure Information Protection の要件
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 組織の Azure Information Protection をデプロイする前に、次の前提条件が満たされていることを確認します。 
 
@@ -61,7 +61,7 @@ Azure Information Protection ではシングル サインオン (SSO) がサポ�
 
 承認用のユーザーとグループ アカウントの要件の詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
-## <a name="client-devices"></a>[クライアントのデバイス]
+## <a name="client-devices"></a>クライアント デバイス
 
 ユーザーは Azure Information Protection をサポートするオペレーティング システムを実行するクライアント デバイス (コンピューターまたはモバイル デバイス) を所有している必要があります。
 
@@ -115,7 +115,7 @@ Azure Information Protection クライアントは、次のいずれかの Offic
 
 - Office Professional Plus 2010 Service Pack 2
 
-Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Office リボンの Azure Information Protection バー、または **[保護]** ボタン (クラシッククライアント) または **[秘密度]** ボタン (統合ラベル付けクライアント) では表示されません。 
+Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションの場合、Azure Information Protection は分類についてのみサポートされます。 そのため、保護を適用するラベルは、Office リボンの Azure Information Protection バー、または [**保護**] ボタン (クラシッククライアント) または [**秘密度**] ボタン (統合ラベル付けクライアント) では表示されません。 
 
 保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
 
@@ -129,13 +129,13 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 特定の接続を許可するように構成されたファイアウォール、または同様の中間ネットワーク デバイスがある場合、ネットワーク接続の要件は、Office の記事「[Office 365 URL および IP アドレス範囲](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)」に記載されています。 「**Microsoft 365 Common および Office Online**」セクションをご覧ください。
 
-Office の記事の情報に加えて、Azure Information Protection に固有の要件は以下のとおりです。
+Office のこの記事のほかに、Azure Information Protection 固有の情報があります。
 
-- ラベルとラベルポリシーをダウンロードするための統一されたラベル付けクライアントの場合: URL * **. protection.outlook.com**を HTTPS 経由で許可します。
+- ラベルとラベルポリシーをダウンロードするための統一されたラベル付けクライアントの場合: URL ***. protection.outlook.com**を HTTPS 経由で許可します。
 
-- 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
+- 認証が必要な Web プロキシを使用する場合は、ユーザーの Active Directory ログオン資格情報に統合された Windows 認証を使用するように構成する必要があります。
 
-- **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 終了すると、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA とともに使用されているものです。
+- **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえばパケット レベルの検査を行うために)。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
     
     次の PowerShell コマンドを使用して、Azure Rights Management サービスに到達する前にクライアント接続が終了しているかどうかを判断できます。
    
@@ -143,9 +143,9 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
         $request.GetResponse()
         $request.ServicePoint.Certificate.Issuer
     
-    結果には、発行元の CA が Microsoft CA からのものであることが示されます (例: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`)。 発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
+    結果には、発行元の CA が Microsoft CA からのものであること`CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`が示されます。たとえば、のようになります。 発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
 
-### <a name="on-premises-servers"></a>オンプレミス サーバー
+### <a name="on-premises-servers"></a>オンプレミスのサーバー
 
 オンプレミス サーバーで Azure Information Protection から Azure Rights Management サービスを使用する必要がある場合、次の製品がサポートされます。
 
@@ -159,13 +159,15 @@ Office の記事の情報に加えて、Azure Information Protection に固有�
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>AD RMS と Azure RMS の共存
 
-次のデプロイ シナリオは、Azure Information Protection を使った [HYOK 保護](configure-adrms-restrictions.md) ("Hold Your Own Key" 構成) 用に AD RMS を 使用している場合を除き、サポートされません。
+次のシナリオで AD RMS と Azure RMS を使用すると、同じ組織内の同じユーザーによってコンテンツが保護されるのは、Azure Information Protection を使用した[HYOK 保護](configure-adrms-restrictions.md)のための AD RMS ("独自のキーを保持する" 構成)**のみ**です。
 
-- 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照)。
+- 同一組織での AD RMS および Azure RMS の並列実行 (移行時を除く。詳細については、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」を参照)。
 
-[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aipservice/Set-AipServiceMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
+[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)、および [Azure Information Protection から AD RMS への移行](/powershell/module/aipservice/Set-AipServiceMigrationUrl)には、サポートされている移行パスがあります。 Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。 
 
-### <a name="service-tags"></a>サービスタグ
+同じ組織内で両方のサービスがアクティブになっている他のシナリオでは、いずれか1つのユーザーがコンテンツを保護できるようにサービスを構成する必要があります。 これは、[移行を Azure RMS する AD RMS](migrate-from-ad-rms-to-azure-rms.md)の場合にリダイレクトを使用して構成できます。また、両方のサービスが同時に複数のユーザーに対してアクティブになる必要がある場合は、サービス側の構成を使用して、クラウドサービスで排他性: Azure RMS のオンボードコントロールを適用し、発行 URL に ACL を設定して AD RMS の読み取り専用モードを   
+
+### <a name="service-tags"></a>サービス タグ
 
 次のサービスタグのすべてのポートへのアクセスを許可してください。
 
