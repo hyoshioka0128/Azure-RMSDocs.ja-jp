@@ -4,19 +4,19 @@ description: ドキュメントと電子メールを分類して保護できる�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 535f7dde9f8dd0fd6fc709b4fe8bd0d2bc0f1fbf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 95c0af617e88b4201243f4b12381799d8202a595
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960868"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852083"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントをダウンロードしてインストールする
 
@@ -26,11 +26,10 @@ ms.locfileid: "75960868"
 
 管理者が Azure Information Protection 統合されたラベル付けクライアントをインストールしていない場合は、自分で行うことができます。 ドキュメントや電子メールにラベルを付けて保護できるように、このクライアントをインストールするには対象となる PC のローカル管理者である必要があります。
 
-さらに
+さらに:
 
 - Azure Information Protection 統合ラベル付けクライアントでは、Microsoft .NET Framework 4.6.2 の最小バージョンが必要になります。これがない場合、インストーラーでこの必須コンポーネントのダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。
 
-- Windows 7 SP1 を使用する場合、Azure Information Protection 統合ラベル付けクライアントには特定の更新プログラム KB 2533623 が必要です。 ご利用の PC にこの更新プログラムが必要で、まだインストールされていない場合、インストールは完了しますが、Azure Information Protection クライアントにこの更新プログラムが必要だというメッセージが表示されます。 この更新プログラムがインストールされるまで、Azure Information Protection 統合ラベル付けクライアントの機能すべてを使用できるようにはなりません。 
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールするには
 
@@ -40,9 +39,9 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 2. ダウンロードした実行可能ファイルを実行し、続行を確認するメッセージが表示されたら、[**はい]** をクリックします。
 
-3. **[Azure Information Protection クライアントのインストール]** ページ上で、ライセンス条項および条件を読み、 **[同意する]** をクリックします。
+3. **[Azure Information Protection クライアントのインストール]** ページ上で、ライセンス条項および条件を読み、**[同意する]** をクリックします。
 
-4. 続行を確認するメッセージが表示されたら、 **[はい]** をクリックしてインストールが完了するまで待機します。
+4. 続行を確認するメッセージが表示されたら、**[はい]** をクリックしてインストールが完了するまで待機します。
 
 6. **[閉じる]** をクリックします。 Azure Information Protection 統合ラベル付けクライアントの使用を開始する前に、次の操作を行います。
 
@@ -54,18 +53,18 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 前の指示に従い、Azure Information Protection 統合ラベル付けクライアントをインストールしたら、次の操作を行います。
 
-1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、 **[Microsoft Azure Information Protection]** ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
+1. Microsoft Word を開きます。 Azure Information Protection クライアントのインストール後に初めて Office 2010 アプリケーションを実行した場合、[**Microsoft Azure Information Protection**] ダイアログ ボックスが表示されます。 このダイアログ ボックスには、サインイン プロセスを完了するには管理者の資格情報が必要であることが記されています。
 
-2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、 **[OK]** をクリックします。
+2. **[Microsoft Azure Information Protection]** ダイアログ ボックスで、**[OK]** をクリックします。
 
-3. **[ユーザーアクセス制御]** ダイアログ ボックスが表示された場合、 **[はい]** をクリックします。Azure Information Protection でレジストリが更新されます。
+3. [**ユーザーアクセス制御**] ダイアログ ボックスが表示された場合、[**はい**] をクリックします。Azure Information Protection でレジストリが更新されます。
 
 インストールはこれで完了となります。Azure Information Protection 統合ラベル付けクライアントを利用し、ドキュメントや電子メールにラベルを付けたり、保護したりすることができます。
 
 ## <a name="other-instructions"></a>その他の手順    
 Azure Information Protection 統合されたラベル付けクライアントユーザーガイドのその他の操作方法については、次を参照してください。
 
-- [作業内容](clientv2-user-guide.md#what-do-you-want-to-do)
+- [目的に合ったトピックをクリックしてください](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 [管理者ガイド](clientv2-admin-guide.md)の「[ユーザー用に Azure Information Protection 統合されたラベル付けクライアントをインストール](clientv2-admin-guide-install.md)する」を参照してください。

@@ -4,7 +4,7 @@ description: Windows 用の統一されたラベル付けクライアントを A
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 5e8cf81bc2f9f4de76bdc868603af0cf7e6a76a3
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 06c9f0b81cfca3118c6b83e4fc5e67f55724cbe8
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403520"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852050"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Azure Information Protection 統合されたラベル付けユーザーガイド 
 
@@ -27,10 +27,10 @@ ms.locfileid: "79403520"
 
 Windows 用の Azure Information Protection 統一されたラベル付けクライアントを使用すると、電子メールが転送されたり、ドキュメントが別の場所に保存されたりした場合でも、重要なドキュメントや電子メールを表示しないユーザーから保護することができます。 また、このクライアントを使用して、他のユーザーが Azure Information Protection の Rights Management 保護テクノロジを使って保護したドキュメントを開くこともできます。
 
-必要なのは、Windows 7 Service Pack 1 を実行しているコンピューターのみです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
+必要なのは、Windows 8 以降を実行しているコンピューターだけです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
 
 
-## <a name="what-do-you-want-to-do"></a>作業内容
+## <a name="what-do-you-want-to-do"></a>目的に合ったトピックをクリックしてください
 
 - [Azure Information Protection 統合ラベル付けクライアントをダウンロードしてインストールする](install-unifiedlabelingclient-app.md)
 

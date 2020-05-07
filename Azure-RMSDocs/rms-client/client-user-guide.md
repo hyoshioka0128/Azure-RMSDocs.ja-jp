@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントは、�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 99127a66ffc062308d915d701f6f1d8b8f521753
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 70560867707fd58dc5b4580ab67006ea6fb4ce13
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403843"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852066"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection ユーザー ガイド
 
@@ -28,10 +28,10 @@ ms.locfileid: "79403843"
 
 Windows 用 Azure Information Protection クライアントは、電子メールが転送されたりドキュメントが別の場所に保存されている場合でも、重要なドキュメントや電子メールを閲覧すべきでないユーザーから保護するうえで役立ちます。 また、このクライアントを使用して、他のユーザーが Azure Information Protection の Rights Management 保護テクノロジを使って保護したドキュメントを開くこともできます。
 
-必要なのは、Windows 7 Service Pack 1 を実行しているコンピューターのみです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
+必要なのは、Windows 8 以降を実行しているコンピューターだけです。 次に、この無料のクライアントを Microsoft からダウンロードしてインストールします。
 
 
-## <a name="what-do-you-want-to-do"></a>作業内容
+## <a name="what-do-you-want-to-do"></a>目的に合ったトピックをクリックしてください
 
 - [Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)
 
@@ -39,13 +39,13 @@ Windows 用 Azure Information Protection クライアントは、電子メール
 
 - [ファイルや電子メールを分類して保護する](client-classify-protect.md)
 
-- [ドキュメントを追跡して取り消す](client-track-revoke.md)
+- [ドキュメントを追跡および取り消す](client-track-revoke.md)
 
 - [保護されているファイルを開く](client-view-use-files.md)
 
 - [ファイルと電子メールからラベルと保護を削除する](client-remove-label-protection.md)
 
-- [RMS 共有アプリケーションを使用して実行するタスク](upgrade-client-app.md)
+- [RMS 共有アプリケーションで実行していたタスク](upgrade-client-app.md)
 
 
 > [!NOTE]

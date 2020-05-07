@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 760a4eddf40f344a47d335192e15d73d0d70dbaf
-ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
+ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
+ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736764"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82799131"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -675,7 +675,27 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
+## <a name="limit-cpu-consumption"></a>CPU 消費量の制限
+
+スキャナーバージョン 2.7. x. x から、CPU の使用量を制限することをお勧めします。この場合 **、cpu の詳細設定**方法として、次の**スキャン**を行います。 
+
+> [!IMPORTANT]
+> **Scanを**使用することはできません。 **cpu**の詳細設定メソッドと、スレッドを制限するポリシーを使用することはできません。 メソッドを使用して CPU 使用量を制限するには、既に設定されている[スレッド制限ポリシー](#limit-the-number-of-threads-used-by-the-scanner)の使用を中止する必要があります。 
+
+スキャナーコンピューターの CPU 使用量を制限するために、 **Scanmachines maxcpu**と**Scanmachines mincpu**の2つの詳細設定を作成することにより、管理が容易になります。 
+
+既定では、 **Scanで maxcpu**は100に設定されています。つまり、cpu の最大消費量に制限はありません。 この場合、スキャナープロセスは、使用可能なすべての CPU 時間を使用してスキャンレートを最大化しようとします。
+
+**Scan@ Maxcpu**を100未満に設定すると、スキャナーは過去30分間の cpu 使用量を監視し、最大 cpu が設定した制限を超えた場合は、新しいファイルに割り当てられたスレッドの数を減らし始めます。 スレッド数の制限は、CPU 消費量が、 **scanで**設定されている値よりも大きい場合に限り、続行します。
+
+Scanに**cpu**がチェックされるのは、 **scan@ cpu**が100と等しくない場合のみです。 **Scanに cpu**を設定することはできません、 **scanている cpu**の数。 Scanの**cpu**を少なくとも15点以上に設定する**ことをお**勧めします。   
+
+この設定の既定値は50です。つまり、過去30分間の CPU 使用量がこの値を下回ると、スキャナーは新しいスレッドを追加して、より多くのファイルを同時にスキャンするようにします。これにより、CPU 使用量がスキャンに**よって設定**されたレベルに達します。 
+
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>スキャナーで使用されるスレッドの数を制限する
+
+> [!IMPORTANT]
+> 次のスレッド制限ポリシーが使用されている場合、 **Scanare maxcpu**および**Scanare mincpu**の詳細設定は無視されます。 **スキャン**を使用して cpu 消費を制限し、cpu の詳細設定を**スキャン**するには、スレッドの数を制限するポリシーの使用を取り消します。 
 
 この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
