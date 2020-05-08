@@ -13,13 +13,13 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: ab71c7156fa55e09ca22bdaf61c4bcfcd590fb16
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: bd2e9284eb43e319b6060c86ef2848c7a2c13b3a
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690136"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971933"
 ---
 # <a name="release-notes"></a>リリース ノート
 
@@ -31,7 +31,7 @@ ms.locfileid: "72690136"
 - 以前に保護され、保護されていない一部の PDF ドキュメントが現在保護されているかどうかを確認しようとすると、RMS クライアントがクラッシュする場合があります。
 - 特別なポートで構成されている AD RMS サーバーに DNS リダイレクトを使用すると、正しく機能しません。
 
-## <a name="september-2019---update"></a>2019年9月-更新 
+## <a name="september-2019---update"></a>2019年9月-更新
 
 - 他のいくつかの RMS クライアントメソッドと同時に初期化メソッドを呼び出そうとしたときに発生する可能性のあるデッドロックを修正しました。
 - パスワードで保護された Office ファイルが RMS で保護されているかどうかを判断する際の問題を修正します。
@@ -52,7 +52,7 @@ ms.locfileid: "72690136"
 ## <a name="october-2017---update"></a>2017 年 10 月の更新
 
 - 環境の初期化と初期化解除のための API が新しく 2 つ追加されました。 詳細については、「[IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx)」と「[IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx)」を参照してください。
-- サポートされるファイルの種類に Visio が加わりました。 詳細については、「 [ファイル API の構成](file-api-configuration.md)」を参照してください。
+- サポートされるファイルの種類に Visio が加わりました。 詳細については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
 
 ## <a name="february-2016---sdk-documentation-update"></a>2016 年 2 月 - SDK 文書更新
 
@@ -82,23 +82,23 @@ ms.locfileid: "72690136"
 
 ## <a name="may-2015-update"></a>2015 年 5 月の更新
 
--   **サービス アプリケーションとクラウド ベースの RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) には 3 つの情報 (対称キー、**AppPrincipalId**、**TenantBposId**) が必要です。 この点についての記事が更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
+-   **サービスアプリとクラウドベースの RMS** - [\_IPC\_資格\_情報対称キー](https://msdn.microsoft.com/library/dn133062.aspx)には、3つの情報が必要です。symmetric key、 **AppPrincipalId**、および**tenantbposid)**。 この点についての記事が更新され、この情報の処理に関するガイダンスが用意されました。 この更新については、改訂版の「[方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
 
 ## <a name="april-2015-update"></a>2015 年 4 月の更新
 
 -   一連の新しい API で**ドキュメント追跡** が可能になりました。 詳細については、「[Tracking Content](tracking-content.md)」 (コンテンツの追跡) を参照してください。
--   **暗号化の種類** – 暗号化パッケージの選択の API レベルでの制御をサポートします。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
+-   **暗号化の種類** – 暗号化パッケージの選択の API レベルでの制御をサポートします。 詳細については、「[暗号化の](working-with-encryption.md)使用」を参照してください。
 
-    **注**  API の **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** フラグは非公開となりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[Working with encryption](working-with-encryption.md)」 (暗号化の処理) を参照してください。
+    **メモ**  API では、 **IPC\_LI\_非\_推奨の暗号化\_アルゴリズム**フラグは公開されなくなりました。 今後、このフラグを参照しても、アプリケーションでコンパイルされませんが、既にビルドされたアプリケーションではこのフラグを API コード内でプライベートに評価するため、引き続き機能します。 フラグを変更するだけでも、古い非推奨の暗号化アルゴリズムのフラグの機能を利用できます。 詳細については、「[暗号化の](working-with-encryption.md)使用」を参照してください。
 
--   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [API モード値](https://msdn.microsoft.com/library/hh535236.aspx) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバー モード アプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
+-   **サーバー モード アプリケーション**は **IPC\_API\_MODE\_SERVER** の [API モード値](https://msdn.microsoft.com/library/hh535236.aspx) を使用し、アプリケーション マニフェストは不要になりました。 運用 RMS サーバーに対してアプリケーションをテストすることができ、運用環境に切り替えるときに運用のライセンスを取得する必要はありません。 サーバーモードアプリケーションの詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
 -   **ログ**は、ファイルと Event Tracing for Windows メソッドの両方で実装されました。
 -   **Windows 7 SP1 または Windows Server 2008 R2 コンピューター**を実行している場合は、「開発者向けの重要な注意事項」の下の記述を参照してください。
 
 ## <a name="january-2015-update"></a>2015 年 1 月の更新
 
 -   **保護されたファイル (pfile) のサポート対象サイズの増加** – 1 GB より大きいサイズの pfile がサポートされるようになりました。 pfile の詳細については、「[Support File Formats](supported-file-formats.md)」 (サポートされるファイル形式) を参照してください。
--   **ログの強化による診断の向上** – 確認する必要があるメッセージが**エラー**または**警告**のログ レベルで表示されます。 表示されている例外など、他のすべてのメッセージは**情報**としてログに記録されます。
+-   **ログの強化による診断の向上** – 確認する必要があるメッセージが**エラー**または**警告**のログ レベルで表示されます。 まだ表示されている例外も含め、他のすべてのメッセージは**情報**としてログに記録されます。
 
     詳細情報が失われないようにするために、この方法を選択しました。 これにより、重要なメッセージだけが警告レベルで表示されるようになりました。
 
@@ -107,7 +107,7 @@ ms.locfileid: "72690136"
 
 ## <a name="october-2014-update"></a>2014 年 10 月の更新
 
--   SDK のファイル API のコンポーネントの既定の動作が更新されました。 詳細については、「 [ファイル API の構成](file-api-configuration.md)」を参照してください。
+-   SDK のファイル API のコンポーネントの既定の動作が更新されました。 詳細については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
 -   新機能の電子メール通知については、開発者向け注意事項の記事「[電子メール通知の有効化](how-to-enable-email-notification.md)」を参照してください。
 
 ## <a name="july-2014-update"></a>2014 年 7 月の更新
@@ -119,7 +119,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
     このリリースで追加された関数:
 
-    **注** - ここに記載されている以外に、ファイル API の拡張機能として、サポートされるデータ型と構造体が追加されました。 このリリースで更新されているすべての記事に、"**暫定的なものであり、変更される可能性があります**" と記載されています。
+    **注** -ここに記載されていない、その他のデータ型と構造体については、ファイル API 拡張機能に追加されました。 このリリースで更新されているすべての記事に、"**暫定的なものであり、変更される可能性があります**" と記載されています。
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -132,8 +132,8 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 ## <a name="april-2014-update"></a>2014 年 4 月の更新
 
 -   **ファイル API のメモリ使用率** (特に大規模な PFile の場合) が大幅に改善されました。
--   **コンテンツ ID** は、**IPC\_LI\_CONTENT\_ID** プロパティを使用して書き込み可能になりました。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
--   **運用マニフェストの要件** – RMS 対応のアプリケーション/サービスをサーバー モードで実行する場合には、マニフェストは不要になりました。 詳細については、「[Application types (アプリケーションの種類)](application-types.md)」を参照してください。
+-   **コンテンツ id**は、 **IPC\_\_LI content\_id**プロパティを使用して書き込み可能になりました。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
+-   **運用マニフェストの要件** – RMS 対応のアプリケーション/サービスをサーバー モードで実行する場合には、マニフェストは不要になりました。 詳細については、「[アプリケーションの種類](application-types.md)」を参照してください。
 -   **ドキュメントの更新**
 
     **ベスト プラクティスのテスト** – Azure RMS でテストする前にオンプレミス サーバーを使用する場合のガイダンスを追加しました。 詳細については、「[クラウド ベース RMS でのサービス アプリケーション使用の有効化](how-to-use-file-api-with-aadrm-cloud.md)」を参照してください。
@@ -148,9 +148,9 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **Windows 7 SP1 および Windows Server 2008 R2 SP1 コンピューター**に更新プログラム [KB2533623](https://support.microsoft.com/kb/2533623) が適用されていない場合、office ファイルを保護する際に "パラメーターが正しくありません。 エラー コード 0x80070057" というエラーが発生することがあります。 このエラーが表示された場合は、更新プログラムをインストールしてやり直してください。 それでも問題が解決しない場合は、RMS SDK ベータ フィードバック エイリアス(<rmcstbeta@microsoft.com>) にお問い合わせください。
 
-    **注**  2015 年 4 月のリリース時点で、この更新プログラムのインストール プロセスにチェックが追加されました。
+    **Note**  2015 年4月のリリース時点では、この KB のインストールプロセスにチェックが追加されています。
 
-     
+
 
 -   **ファイル API の統合**
 
@@ -158,7 +158,7 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
       - 機密データを自動化された方法で保護することが可能であり、さまざまなファイル形式で使用される Information Rights Management (IRM) の実装の詳細を知る必要はありません。
 
-      - Microsoft Office ファイル、Portable Document Format (PDF) ファイル、および他の一部のファイルの種類は、ネイティブ保護を使用して保護することができます。 ネイティブ保護で保護できるファイルの種類の一覧については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
+      - Microsoft Office ファイル、Portable Document Format (PDF) ファイル、および他の一部のファイルの種類は、ネイティブ保護を使用して保護することができます。 ネイティブ保護で保護できるファイルの種類の完全な一覧については、「[ファイル API の構成](file-api-configuration.md)」を参照してください。
 
       - システム ファイルと Office ファイルを除く、すべてのファイルは、RMS 保護されたファイル形式 (PFile) を使用して保護できます。
 
@@ -168,15 +168,15 @@ SDK のファイル API のコンポーネントが拡張され、次の機能�
 
 -   **問題**: ライセンスを最初から作成する場合は、所有権を明示的に許可する必要があります。
 
-    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[Add explicit owner rights](add-explicit-owner-rights.md)」 (所有権を明示的に追加する) を参照してください。
+    **ソリューション**: ライセンスを最初から作成する場合は、アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使用して、ライセンス所有者に**所有者**権限を明示的に追加する必要があります。 詳細については、「[明示的な所有者権限の追加](add-explicit-owner-rights.md)」を参照してください。
 
 -   **問題点**: アプリケーションがハンドルを使用して同じウィンドウに対して[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx)または[IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx)を2回呼び出す場合、RMS SDK 2.1 は**HRESULT**でエラーを返します。
 
-    **ソリューション**: この問題に対する具体的なガイダンスについては、[IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) および [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) の「解説」を参照してください。
+    **解決方法**: 詳細については、 [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx)と[IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx)の「解説」を参照してください。
 
 -   **問題**: 複数のアーキテクチャをビルドする場合は、このガイダンスに従う必要があります。
 
-    **ソリューション**: Ipcsecproc\*isv.dll を異なるアーキテクチャに使用する場合 (たとえば、64 ビット コンピューターに 64 ビット SDK がインストールされていて、Ipcsecproc\*isv.dll を必要とする 32 ビット コンピューターに 32 ビット SDK を展開しなければならない場合)、32 ビット SDK を別のコンピューターにインストールし、%PROGRAMFILES%\\Microsoft Information Protection And Control フォルダー (既定の場所または SDK のインストール先として選択した任意の場所) から Ipcsecproc\*isv.dll ファイルをコピーする必要があります。
+    **解決方法**: ipcsecproc\*isv .dll を別のアーキテクチャに対して使用する場合 (たとえば、64ビットコンピューターに64ビット SDK をインストールしたが、ipcsecproc\*isv を必要とする32ビットコンピューターにを展開する場合など)。 dll) を使用するには、32ビット版の sdk を別のコンピューターにインストールし、"%\*PROGRAMFILES%\\Microsoft Information Protection と Control" フォルダー (SDK のインストール先として選択した場所) から、ipcsecproc isv .dll ファイルをそこにコピーする必要があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 

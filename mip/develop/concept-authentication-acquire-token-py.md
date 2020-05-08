@@ -6,23 +6,24 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.custom: has-adal-ref
+ms.openlocfilehash: 6a78bbfb94bd479feb7f2b8bebd203ed69eba9d0
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556250"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971712"
 ---
 # <a name="acquire-an-access-token-python"></a>アクセス トークンを取得する (Python)
 
 この例では、外部の Python スクリプトを呼び出して OAuth2 トークンを取得する方法を示します。 認証デリゲートの実装では、有効な OAuth2 アクセストークンが必要です。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>[前提条件]
 
 次のサンプルを実行します。
 
 - Python 2.7 以降をインストールします。
-- プロジェクトに utils.h/cpp を実装します。 
+- プロジェクトに utils.h/cpp を実装します。
 - Auth.py をプロジェクトに追加し、ビルド時にバイナリと同じディレクトリに配置する必要があります。
 - 完成した[(MIP) SDK のセットアップと構成](setup-configure-mip.md)。 他のタスクでは、クライアントアプリケーションを Azure Active Directory (Azure AD) テナントに登録します。 Azure AD は、トークン取得ロジックで使用されるアプリケーション ID (クライアント ID とも呼ばれます) を提供します。
 
@@ -30,7 +31,7 @@ ms.locfileid: "75556250"
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-単純な認証の例では、パラメーターを使用せず、ハードコーディングされたトークン値を返す単純な `AcquireToken()` 関数について説明しました。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
+単純な認証の例では、パラメーターを`AcquireToken()`使用せず、ハードコーディングされたトークン値を返す単純な関数について説明しました。 この例では、AcquireToken() をオーバーロードして、認証パラメータを受け入れ、外部の Python スクリプトを呼び出し、トークンを戻します。
 
 ### <a name="authh"></a>auth.h
 
@@ -41,7 +42,7 @@ auth.h では、`AcquireToken()` がオーバーロードされます。オー�
 #include <string>
 
 namespace sample {
-  namespace auth {    
+  namespace auth {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
@@ -52,7 +53,7 @@ namespace sample {
 }
 ```
 
-最初の 3 つのパラメーターはユーザー入力によって得られるか、アプリケーションにハード コーディングされています。 最後の 2 つのパラメーターは、認証委任に SDK によって提供されます。 
+最初の 3 つのパラメーターはユーザー入力によって得られるか、アプリケーションにハード コーディングされています。 最後の 2 つのパラメーターは、認証委任に SDK によって提供されます。
 
 
 ### <a name="authcpp"></a>auth.cpp
@@ -118,7 +119,7 @@ namespace sample {
 
 このスクリプト[は、ADAL For Python を介して](https://github.com/AzureAD/azure-activedirectory-library-for-python)認証トークンを直接取得します。 このコードは、サンプルアプリで使用する認証トークンを取得する手段としてのみ含まれており、運用環境での使用を目的としたものではありません。 このスクリプトは、単純な古いユーザー名/パスワード http 認証をサポートするテナントに対してのみ動作します。 MFA または証明書ベースの認証は失敗します。
 
-> [!NOTE] 
+> [!NOTE]
 > このサンプルを実行する前に、次のコマンドのいずれかを実行して、ADAL for Python をインストールする必要があります。
 
 ```shell
@@ -149,7 +150,7 @@ def main(argv):
   resource = ''
 
   clientId = ''
-    
+
   for option, arg in options:
     if option == '-h':
       printUsage()
@@ -180,13 +181,13 @@ def main(argv):
   token = auth_context.acquire_token_with_username_password(resource, username, password, clientId)
   print(token["accessToken"])
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
   main(sys.argv[1:])
 ```
 
 ## <a name="update-acquireoauth2token"></a>AcquireOAuth2Token の更新
 
-最後に、`AuthDelegateImpl` の `AcquireOAuth2Token` 関数を更新し、オーバーロードされた `AcquireToken` 関数を呼び出します。 リソースおよび権限 URL は、`challenge.GetResource()` と `challenge.GetAuthority()` を読むことによって取得されます。 エンジンの追加時に、`OAuth2Challenge` は認証委任に渡されます。 この作業は SDK が行います。開発者側では他に何も行う必要はありません。 
+最後に、`AuthDelegateImpl` の `AcquireOAuth2Token` 関数を更新し、オーバーロードされた `AcquireToken` 関数を呼び出します。 リソースおよび権限 URL は、`challenge.GetResource()` と `challenge.GetAuthority()` を読むことによって取得されます。 エンジンの追加時に、`OAuth2Challenge` は認証委任に渡されます。 この作業は SDK が行います。開発者側では他に何も行う必要はありません。
 
 ```cpp
 bool AuthDelegateImpl::AcquireOAuth2Token(
@@ -202,5 +203,3 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
 ```
 
 `engine` が追加されると、SDK が `AcquireOAuth2Token 関数を呼び出し、チャレンジを渡し、Python スクリプトを実行し、トークンを受け取り、トークンをサービスに提示します。
-
-

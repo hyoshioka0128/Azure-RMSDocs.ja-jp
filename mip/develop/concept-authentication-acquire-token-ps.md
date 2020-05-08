@@ -6,22 +6,23 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: ddc962f97e6e7d6b0e7ff091821fa83063e9f068
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.custom: has-adal-ref
+ms.openlocfilehash: c66199f7ae22f6b4dca4406e847f41b56317beae
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555859"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971661"
 ---
 # <a name="acquire-an-access-token-powershell"></a>アクセス トークンを取得する (PowerShell)
 
 次の例は、外部 PowerShell スクリプトを呼び出して OAuth2 トークンを取得する方法を示しています。 認証デリゲートの実装では、有効な OAuth2 アクセストークンが必要です。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>[前提条件]
 
 - 完成した[(MIP) SDK のセットアップと構成](setup-configure-mip.md)。 他のタスクでは、クライアントアプリケーションを Azure Active Directory (Azure AD) テナントに登録します。 Azure AD は、トークン取得ロジックで使用されるアプリケーション ID (クライアント ID とも呼ばれます) を提供します。
 
-このコードは、運用環境で使用するためのものではありません。 これは、開発と認証の概念を理解するためにのみ使用できます。 
+このコードは、運用環境で使用するためのものではありません。 これは、開発と認証の概念を理解するためにのみ使用できます。
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
@@ -61,9 +62,9 @@ namespace sample {
 
 ## <a name="mint-a-token"></a>トークンを mint する
 
-最後に、mToken 変数に入れるトークンを mint します。 次の例では、Windows で ADAL および PowerShell を使用して、OAuth2 トークンをすばやく取得するために使用できる PowerShell スクリプトを示します。 このトークンは、Office 365 セキュリティとコンプライアンス センターのエンドポイントに対してのみ付与されます。 そのため、リソース URL が更新されない限り、保護アクションは失敗します。 
+最後に、mToken 変数に入れるトークンを mint します。 次の例では、Windows で ADAL および PowerShell を使用して、OAuth2 トークンをすばやく取得するために使用できる PowerShell スクリプトを示します。 このトークンは、Office 365 セキュリティとコンプライアンス センターのエンドポイントに対してのみ付与されます。 そのため、リソース URL が更新されない限り、保護アクションは失敗します。
 
-### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>PS ギャラリーから [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) をインストールする
+### <a name="install-adalps-from-ps-gallery"></a>PS ギャラリーから [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) をインストールする
 
 以前に[(MIP) SDK のセットアップと構成](setup-configure-mip.md)を完了している場合は、この手順を省略できます。
 
@@ -77,7 +78,7 @@ Install-Module -Name ADAL.PS
 #Install the ADAL.PS package if it's not installed.
 if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 
-$authority = "https://login.windows.net/common/oauth2/authorize" 
+$authority = "https://login.windows.net/common/oauth2/authorize"
 #this is the security and compliance center endpoint
 $resourceUrl = "https://syncservice.o365syncservice.com/"
 #replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
@@ -89,5 +90,3 @@ $response.AccessToken | clip
 ```
 
 `string mToken` の値として、トークンをクリップボードから auth.cpp にコピーして、上記の "your token here" を置き換えます。 次の手順の所要時間に応じて、スクリプトをもう一度実行する必要がある場合があります。
-
-

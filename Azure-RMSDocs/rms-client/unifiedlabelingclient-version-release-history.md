@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/04/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e77e2a39f1d75883de9bff8a446493ce0005cd2e
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: 51691ed4ae5e6a8cebdc372f4be21e25bf12db27
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799097"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972069"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -78,7 +78,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     - [スキャナーによって以前に検出されたファイルをスキャンしたリポジトリから削除したこと](https://docs.microsoft.com/azure/information-protection/reports-aip)を確認するこれらの削除されたファイルは、以前に AIP analytics で報告されていなかったため、スキャナー検出レポートで使用できるようになりました。
     - [エラー発生時にスキャナーからレポートを取得して、アクションイベントを適用](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions)します。 レポートを使用して、失敗したアクションイベントの詳細を確認し、今後発生しないようにする方法を見つけます。 
     - 一般的なスキャナーエラーの検出と分析を行うための AIP scanner diagnostics analyzer ツールの導入。 AIP スキャナー診断の使用を開始するには、[新しい**Start-Aipscan**コマンドレットを実行](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool)します。 
-    - スキャナーコンピューターの最大 CPU 消費量を管理し、制限できるようになりました。 100% の CPU 使用率を防ぎ、CPU 使用率を管理する方法について説明します。 [2 つの新しい詳細設定である [ **Scan@ cpu**] と [ **scan、cpu**](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner)] を使用します。 
+    - スキャナーコンピューターの最大 CPU 消費量を管理し、制限できるようになりました。 100% の CPU 使用率を防ぎ、CPU 使用率を管理する方法について説明します。 [2 つの新しい詳細設定である [ **Scan@ cpu**] と [ **scan、cpu**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption)] を使用します。 
 
 - **修正プログラムと機能強化** 
     - スキャナー SQL のパフォーマンスの向上

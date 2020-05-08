@@ -1,6 +1,6 @@
 ---
 title: Rights Management Services SDK v4. x の rrelease note
-description: 重要な変更点、今度のバージョンの機能、前のバージョンの機能について説明します。
+description: このバージョンと以前のバージョンの重要な変更点と機能について概要を説明します。
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
@@ -12,12 +12,13 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 2a3ef40991e2ba4fd5bac9c9eca947f269a77f47
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: has-adal-ref
+ms.openlocfilehash: 5d4aa9206865493c5fd2c4b2abdb96c3f72e5399
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068318"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971950"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -30,12 +31,12 @@ ms.locfileid: "80068318"
 -   [2017 年 7 月の新機能](#new-for-july-2017)
 -   [2016 年 10 月の更新](#october-2016-update)
 -   [2016 年 6 月の更新](#june-2016-update)
--   [2015 年 12 月の更新](#december-2015-update)
--   [2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加](#july-2015-update---adds-support-for-linux--c-development)
--   [2015 年 5 月の更新 – ログの制御を追加](#may-2015-update---adds-logging-control)
--   [2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加](#february-2015-update---adds-windows-store-application-support)
--   [2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加](#january-2015-update---adds-winphone-platform-support)
--   [2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
+-   [2015 年 12 月更新](#december-2015-update)
+-   [2015 年 7 月の更新 - Linux / C++ による開発のサポートを追加](#july-2015-update---adds-support-for-linux--c-development)
+-   [2015年5月の更新-ログの制御を追加](#may-2015-update---adds-logging-control)
+-   [2015 年 2 月の更新 - Windows ストア アプリケーションのサポートを追加](#february-2015-update---adds-windows-store-application-support)
+-   [2015 年 1 月の更新 - WinPhone プラットフォームのサポートを追加](#january-2015-update---adds-winphone-platform-support)
+-   [2014 年 10 月の更新 - Microsoft RMS SDK 4.1 にアップグレード](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [リリース ノート](#release-notes)
 -   [よく寄せられる質問](#frequently-asked-questions)
 
@@ -43,8 +44,8 @@ ms.locfileid: "80068318"
 
 7 月リリースの更新で SDK が改訂され、4.2.5 になりました。
 
-- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
-- iOS SDK では、ログ記録レベルを設定できません。 
+- Android SDK: Android SDK で、**ログ記録レベルをその場で設定 (オンザフライ設定)** できるようになりました。 詳細については、「[方法: エラーとパフォーマンスのログを有効にする](https://docs.microsoft.com/information-protection/develop/enabling-logging)」を参照してください。
+- iOS SDK では、ログ記録レベルを設定できません。
 - SDK は、NULL アクセス トークンに対してエラーを返すようになりました。
 
 ### <a name="october-2016-update"></a>2016 年 10 月の更新
@@ -55,7 +56,7 @@ ms.locfileid: "80068318"
 ### <a name="june-2016-update"></a>2016 年 6 月の更新
 
 - **先進認証のサポート** - Active Directory Authentication Library (ADAL) ベースのサインインを RMS 対応アプリに導入。 これによって利用可能になるサインイン機能としては、Multi-Factor Authentication (MFA)、SAML ベースのサードパーティ ID プロバイダーと RMS クライアント アプリケーションの組み合わせ、スマート カードや証明書をベースとする認証などがあります。また、RMS 対応アプリで基本認証プロトコルを使用する必要がなくなります。
-- **ドキュメント追跡のサポート** -開発するアプリの中でドキュメントを保護するときに、ドキュメント追跡を有効化できるようになりました。
+- **ドキュメント追跡のサポート** - 開発するアプリの中でドキュメントを保護するときに、ドキュメント追跡を有効化できるようになりました。
 - パフォーマンスの向上
 - バグの修正
 
@@ -63,7 +64,7 @@ ms.locfileid: "80068318"
 
 このリリースでは、デバイス用の RMS SDK はバージョン 4.2 であり、以下の機能が追加されています。
 
--   ドキュメント追跡 (IOS/OS X および Android オペレーティング システムでは RMS オンラインのみ)
+-   ドキュメント追跡 (iOS/OS X および Android オペレーティング システムでは RMS オンラインのみ)
 
     iOS/OS X の場合の詳細と使用方法については、[MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) クラスを参照してください。追跡情報と [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) での追加の文書追跡登録メソッドを提供します。 Android 用の同様の機能も [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) および [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) に追加されています。
 
@@ -83,7 +84,7 @@ ms.locfileid: "80068318"
 
     [UserPolicy.acquire 同期メソッド](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [UserPolicy.create (PolicyDescriptor…) 同期メソッド** ](https://msdn.microsoft.com/library/mt631385.aspx)
+    [UserPolicy.create (PolicyDescriptor…) 同期メソッド**](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [UserPolicy.create (TempalteDescriptor…) 同期メソッド](https://msdn.microsoft.com/library/mt631386.aspx)
 
@@ -91,7 +92,7 @@ ms.locfileid: "80068318"
 -   エラー メッセージやトラブルシューティングを向上させる更新プログラム
 -   暗号化操作の重要なパフォーマンスの向上
 
-### <a name="july-2015-update---adds-support-for-linux--c-development"></a>2015 年 7 月の更新 – Linux / C++ による開発のサポートを追加
+### <a name="july-2015-update---adds-support-for-linux--c-development"></a>2015 年 7 月の更新 - Linux / C++ による開発のサポートを追加
 
 このリリースでは、以下の更新が追加されています。
 
@@ -99,7 +100,7 @@ ms.locfileid: "80068318"
 
     詳細については、「[作業開始](get-started.md)」を参照してください。
 
-### <a name="may-2015-update---adds-logging-control"></a>2015 年 5 月の更新 – ログの制御を追加
+### <a name="may-2015-update---adds-logging-control"></a>2015 年 5 月の更新 - ログの制御を追加
 
 このリリースでは、以下の更新のサポートが追加されています。
 
@@ -111,21 +112,21 @@ ms.locfileid: "80068318"
 
     ログ レベルの制御の設定が可能になりました。
 
-    詳細については、「[How to: Enable error and performance logging](enabling-logging.md)」 (方法: エラーとパフォーマンスのログを有効にする) を参照してください。
+    詳細については、「[方法: エラーとパフォーマンスのログを有効にする](enabling-logging.md)」を参照してください。
 
     キャッシュ クリアのサポートが追加されました。
 
     詳細については、「[MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx)」を参照してください。
 
-### <a name="february-2015-update---adds-windows-store-application-support"></a>2015 年 2 月の更新 – Windows ストア アプリケーションのサポートを追加
+### <a name="february-2015-update---adds-windows-store-application-support"></a>2015 年 2 月の更新 - Windows ストア アプリケーションのサポートを追加
 
 このリリースでは、Windows ストア アプリケーションのサポートを追加し、RMS SDK 4.1 の Windows Phone、Android、iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
-### <a name="january-2015-update---adds-winphone-platform-support"></a>2015 年 1 月の更新 – WinPhone プラットフォームのサポートを追加
+### <a name="january-2015-update---adds-winphone-platform-support"></a>2015 年 1 月の更新 - WinPhone プラットフォームのサポートを追加
 
 このリリースでは、Windows Phone オペレーティング システムのサポートを追加し、RMS SDK 4.1 の Android 版および iOS/OS X 版リリースにそれぞれ同等の機能を提供しています。
 
-### <a name="october-2014-update---upgrade-to-microsoft-rms-sdk-41"></a>2014 年 10 月の更新 – Microsoft RMS SDK 4.1 にアップグレード
+### <a name="october-2014-update---upgrade-to-microsoft-rms-sdk-41"></a>2014 年 10 月の更新 - Microsoft RMS SDK 4.1 にアップグレード
 
 RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple iOS/OS X に以下の新機能が追加されています。
 
@@ -141,13 +142,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 このセクションでは、開発者が知っておくと便利な、Microsoft Rights Management SDK 4.x API の現在および以前のリリースに関する情報をまとめています。
 
-**AD RMS SDK 4.1 – iOS/OS X および Android プラットフォームのグローバル公開リリース**
+**AD RMS SDK 4.1 - iOS/OS X および Android プラットフォームのグローバル公開リリース**
 
--   **AD RMS のサポート** – 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
+-   **AD RMS のサポート** - 新しい AD RMS サーバーのモバイル デバイス拡張機能により、IT 管理者はモバイル デバイスで RMS 対応アプリケーションを使用できます。
 -   **オフラインで使用** - エンドユーザーが RMS 保護されたデータにオフラインでアクセスできます。
 -   **認証の分離** - 独自に開発した認証ライブラリを Azure RMS と AD RMS に使用できます (推奨される [Azure AD 認証ライブラリ (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) を使用することもできます)。
--   **UI の分離** – 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
--   **再設計された API** – 暗号化/復号化の API が単純でわかりやすくなりました。RMS の動作と操作方法に一貫性があり、労力が最小限に抑えられます。
+-   **UI の分離** - 開発者は、RMS 保護されたドキュメントを保護および使用するためのユーザー インターフェイスを構築できます。
+-   **再設計された API** - 暗号化/復号化の API が単純でわかりやすくなりました。RMS の動作と操作方法に一貫性があり、労力が最小限に抑えられます。
 
 **すべてのプラットフォームに共通**
 
@@ -157,21 +158,21 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 -   Amazon® Kindle デバイスで .ptxt の添付ファイルを表示するサンプル アプリケーションを使用する際に、表示する前に、まずファイルをダウンロードする必要があります。
 
-    **解決策** - 既知の問題には後に対処されます。
+    **解決方法** - 既知の問題には後に対処されます。
 
 -   複数のインスタンスが許可されていると、SDK を使用するアプリケーションがクラッシュすることがあります。
 
-    **ソリューション** – アプリケーションが Android API への複数インスタンスの呼び出しを許可しないようにします。
+    **解決方法** - アプリケーションが Android API への複数インスタンスの呼び出しを許可しないようにします。
 
--   [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) メソッドを使用するときに、長さが *array.length* の値と異なっていると、後で SDK を使用してコンテンツを使用することができません。
+-   [Protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(byte\[ \] array, int offset, int length) メソッドを使用する場合、*配列*の長さの値とは別の長さであるため、SDK を使用して後でコンテンツを使用することはできません。
 
-    **ソリューション** – これは既知の問題です。 対策としては、*byte \[\]* 配列に渡す長さの値は常に length パラメーターと同じにするか、[ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array) メソッドを使用します。
+    **解決方法** - これは既知の問題です。 これを軽減するには、長さのパラメーターと同じ長さの値を持つ*バイト\[ *配列を常に渡すか、 [protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(バイト\[ \]配列) メソッドを使用します。
 
 **iOS および OS X**
 
--   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は 2 つありますが、 バグがあるため、現在のところ、最初の言語仕様のローカライズは完全にサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されますが、UI は翻訳されません。
+-   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は 2 つありますが、 バグがあるため、現在のところ、最初の言語仕様のローカライズは完全にサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されていますが、UI は翻訳されていません。
 
-    1. ポルトガル語
+    1. Portuguese
 
     2. ポルトガル語 (ポルトガル)
 
@@ -187,7 +188,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     Apple のヒューマン インターフェイス ガイドラインによると、これは OS X の既知の省略可能な動作です。
 
--   **ソリューション** – マルチ ドキュメント インターフェイス (MDI) アプリケーションを作成する場合には、次のガイダンスに従って OS X SDK を使用します。
+-   **ソリューション** - マルチ ドキュメント インターフェイス (MDI) アプリケーションを作成する場合には、次のガイダンスに従って OS X SDK を使用します。
 
     次のメソッドは同時に実行しないでください。 実行の完了を監視するには、説明に従って完了ブロック アプローチを使用します。
 
@@ -202,15 +203,15 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 その理由を教えてください。
+**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 なぜですか?
 
-**A** – これは既知の問題であり、今後対応する予定です。
+**A**: これは既知の問題であり、今後対応する予定です。
 
 **Q**: SDK およびサンプル アプリケーションを試すために新しい組織のテナントを取得するにはどうすればよいですか。
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 その理由を教えてください。
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜですか?
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -225,19 +226,19 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **A**: Google API 15 以降を使用した Eclipse Juno です。
 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
-**A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから を呼び出す必要があります。
+**A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから cancel() を呼び出す必要があります。
 
-**iOS**
+**Android**
 
 **Q**: SDK の開発はどのプラットフォームで検証されましたか。
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 その理由を教えてください。
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜですか?
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 
-**OS X**
+**OS x**
 
 **Q**: サンプル アプリケーションのフレームワークは Xcode 5 に対応していますが、Xcode 4.6 でも使用できますか。
 

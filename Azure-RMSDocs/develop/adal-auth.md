@@ -13,13 +13,13 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: ef2e1755c6a86984227b09c95020a26a976a2c52
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791657"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971967"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>ADAL 認証用のアプリの構成
 
@@ -27,7 +27,7 @@ ms.locfileid: "68791657"
 
 ## <a name="azure-authentication-setup"></a>Azure 認証のセットアップ
 
-以下のものが必要です。
+以下のものが必要になります。
 
 - [Microsoft Azure のサブスクリプション](https://azure.microsoft.com/) (無料試用版で十分です)。 詳細については、「[How users sign up for RMS for individuals](../rms-for-individuals-user-sign-up.md)」 (ユーザーが個人向け RMS にサインアップする方法) を参照してください。
 - Microsoft Azure Rights Management のサブスクリプション (無料の[個人向け RMS](https://technet.microsoft.com/library/dn592127.aspx) アカウントで十分です)。
@@ -39,17 +39,17 @@ Microsoft Azure にサインアップした後:
 
 - 管理者特権を持つアカウントを使用して、組織の [Microsoft Azure の管理ポータル](https://manage.windowsazure.com)にログインします。
 
-![Azure にログインする](../media/AzurePortalLogin.png)
+![Azure ログイン](../media/AzurePortalLogin.png)
 
 - ポータルの左下にある **[Active Directory]** アプリケーションを参照します。
 
-![[Active Directory] を選択する](../media/AzureADPick.png)
+![Active Directory の選択](../media/AzureADPick.png)
 
 - ディレクトリをまだ作成していない場合は、ポータルの左下隅にある **[新規]** ボタンを選択します。
 
 ![[新規] を選択する](../media/AzureNewBtn.png)
 
-- **[Rights Management]** タブを選択し、 **[Rights Management のステータス]** が **[アクティブ]** 、 **[不明]** 、または **[許可されていません]** であることを確認します。 ステータスが **[非アクティブ]** の場合は、ポータル中央下部にある **[アクティブ化]** ボタンを選択し、選択を確認します。
+- **[Rights Management]** タブを選択し、**[Rights Management のステータス]** が **[アクティブ]**、**[不明]**、または **[許可されていません]** であることを確認します。 ステータスが **[非アクティブ]** の場合は、ポータル中央下部にある **[アクティブ化]** ボタンを選択し、選択を確認します。
 
 ![[アクティブ化] を選択する](../media/RMTab.png)
 
@@ -61,7 +61,7 @@ Microsoft Azure にサインアップした後:
 
 ![[追加] を選択する](../media/AddAppBtn.png)
 
-- メッセージが表示されたら、 **[組織で開発中のアプリケーションを追加]** を選択します。
+- メッセージが表示されたら、**[組織で開発中のアプリケーションを追加]** を選択します。
 
 ![[組織で開発中のアプリケーションを追加] の選択](../media/AddAnAppPick.png)
 
@@ -74,7 +74,7 @@ Microsoft Azure にサインアップした後:
 
 ![リダイレクト URI を追加する](../media/RedirectURI.png)
 
-- ディレクトリでアプリケーションを選択し、 **[構成]** を選択します。
+- ディレクトリでアプリケーションを選択し、**[構成]** を選択します。
 
 ![[構成] を選択する](../media/ConfigYourApp.png)
 
@@ -96,11 +96,10 @@ Microsoft Azure にサインアップした後:
 
 ![チェック マークを選択する](../media/choosecheck01.png)
 
-- Azure RMS 用アプリケーションに依存関係を追加する準備ができました。 依存関係を追加するには、 **[他のアプリケーションに対するアクセス許可]** で新しい **[Microsoft Rights Management サービス]** エントリを選択し、 **[デリゲートされたアクセス許可]** ドロップ ボックスで **[ユーザー用の保護されたコンテンツを作成してアクセスする]** チェック ボックスをオンにします。
+- Azure RMS 用アプリケーションに依存関係を追加する準備ができました。 依存関係を追加するには、**[他のアプリケーションに対するアクセス許可]** で新しい **[Microsoft Rights Management サービス]** エントリを選択し、**[デリゲートされたアクセス許可]** ドロップ ボックスで **[ユーザー用の保護されたコンテンツを作成してアクセスする]** チェック ボックスをオンにします。
 
 ![アクセス許可を設定する](../media/AddDependency.png)
 
-- ポータル中央下部の **[保存]** アイコンを選択して、アプリケーションを保存します。
+- ポータルの下部にある [**保存**] アイコンを選択して、アプリケーションを保存し、変更を保持します。
 
 ![[保存] を選択する](../media/SaveApplication.png)
-

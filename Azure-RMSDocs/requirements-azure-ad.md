@@ -11,42 +11,42 @@ ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
-ms.custom: admin
-ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.custom: admin, has-adal-ref
+ms.openlocfilehash: 803980b071de64c053f1ad0bf3cac06488fc410b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404642"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972103"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection を使用するには、Azure AD ディレクトリが必要です。 このディレクトリのアカウントを使用して Azure Portal にサインインします。ここでは、たとえば、Azure Information Protection ラベルや Rights Management テンプレートを構成し、管理できます。
 
-Azure Information Protection または Azure Rights Management を含むサブスクリプションをお持ちの場合は、必要に応じて Azure AD ディレクトリが自動的に作成されます。  
+Azure Information Protection または Azure Rights Management を含むサブスクリプションをお持ちの場合は、必要に応じて Azure AD ディレクトリが自動的に作成されます。
 
 Azure AD の詳細については、「[Azure Active Directory とは](/azure/active-directory/fundamentals/active-directory-whatis)」をご覧ください。
 
 Azure AD ディレクトリをオンプレミス AD フォレストと統合するには、「[オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)」をご覧ください。
 
-### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ 
+### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ
 
-Office 2010 を実行しているコンピューターの場合: 
+Office 2010 を実行しているコンピューターの場合:
 
 - これらのコンピューターでは、Azure Information Protection 統合された[ラベル付けクライアント](./rms-client/aip-clientv2.md)または[Azure Information Protection クライアント](./rms-client/aip-client.md)が Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行う必要があります。
 
 - ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
 
-証明書ベースの認証 (CBA) のサポート:
+証明書ベースの認証 (CBA) のサポート: 
 
 - iOS および Android 用の Azure Information Protection アプリでは、証明書ベースの認証をサポートしています。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/azure/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
 
 ユーザーの UPN 値がユーザーの電子メール アドレスと一致しない：
 
-- これは推奨される構成ではなく、Azure Information Protection のシングルサインオンをサポートしていません。 UPN 値を変更できない場合は、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法をユーザーに指示してください。 詳細については、「[代替ログイン ID を構成する](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)」と「[Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online (Office アプリケーションは SharePoint のオンライン、OneDrive、 Lync オンラインの資格情報を定期的に要求する)](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)」をご覧ください。
-    
+- これは推奨される構成ではなく、Azure Information Protection のシングルサインオンをサポートしていません。 UPN 値を変更できない場合は、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法をユーザーに指示してください。 詳細については、「[Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)」 (代替ログイン ID を設定する) と「[Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)」 (Office アプリケーションでは、SharePoint Online、OneDrive、Lync Online の資格情報が定期的に要求されます) を参照してください。
+
     UPN 値内のドメイン名が、テナントを確認するためのドメインである場合は、ユーザーの UPN 値を別の電子メール アドレスとして Azure AD proxyAddresses 属性に追加します。 これにより、使用権限が与えられる時点でユーザーの UPN 値が指定されている場合は、このユーザーの Azure Rights Management が承認されます。 この要件に関する詳細とユーザー アカウントの承認方法については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
 
 AD FS または同等の認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
@@ -62,7 +62,7 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
 - Azure Information Protection クライアント:
 
-    - Windows 用の Azure Information Protection クライアントおよび iOS および Android 用のビューアーアプリでは、常に MFA がサポートされています。最小バージョンは必要ありません。 
+    - Windows 用の Azure Information Protection クライアントおよび iOS および Android 用のビューアーアプリでは、常に MFA がサポートされています。最小バージョンは必要ありません。
 
 -   Mac コンピューター用の Rights Management 共有アプリ:
 
@@ -80,16 +80,15 @@ Azure Information Protection で多要素認証 (MFA) を使用するには、�
 
     - 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば、AD FS を使用する場合は、「 [AD FS の追加の認証方法を構成](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)する」を参照してください。
 
-        このシナリオの詳細については、Office ブログの「[The Works with Office 365 – Identity program now streamlined (Office 365 の機能 – 合理化された ID プログラム)](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)」を参照してください。
+        このシナリオの詳細については、Office ブログの「 [Works With office 365 – Identity program が合理化](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)されました。」を参照してください。
 
 Rights Management コネクタおよび Azure Information Protection スキャナーでは、MFA はサポートされません。 コネクタまたはスキャナーをデプロイする場合は、次のアカウントで MFA を要求することはできません。
 
 - コネクタをインストールおよび構成するアカウント。
 
 - コネクタが作成する、Azure AD のサービス プリンシパル アカウント (**Aadrm_S-1-7-0**)。
- 
+
 - スキャナーを実行するサービス アカウント。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
-

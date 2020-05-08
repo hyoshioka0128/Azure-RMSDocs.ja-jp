@@ -13,13 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 5319ff8ca9424d1c1273df1bdf347abf65881209
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791300"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971865"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -48,10 +48,10 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
 - RMS が有効になっていることを確認します: `enable-aipservice`
 - `Get-AipServiceConfiguration` を実行してテナント ID を取得します。
 
->BPOS ID (テナント ID) 値を記録します。 後の手順でこの値が必要になります。
+>BPOS ID (テナント ID) 値を記録します。 後の手順で必要になります。
 
-*出力例*
-![コマンドレットの出力](../media/develop/output-of-Get-AadrmConfiguration.png)
+*Example output*
+出力![コマンドレットの出力例](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - サービスから切断します: `Disconnect-AipServiceService`
 
@@ -66,13 +66,13 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
 - サービス プリンシパルの名前を入力します。
   > 後で使用するために、対称キーとアプリケーションのプリンシパル ID を記録します。
 
-*出力例*
-![コマンドレットの出力](../media/develop/output-of-NewMsolServicePrincipal.png)
+*Example output*
+出力![コマンドレットの出力例](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - アプリケーションのプリンシパル ID、対称キー、およびテナント ID をアプリケーションの App.config ファイルに追加します。
 
-*App.config ファイルの例*
-![コマンドレットの出力](../media/develop/example-App.config-file.png)
+*App.config ファイル*
+![のコマンドレットの出力例](../media/develop/example-App.config-file.png)
 
 - *ClientID* と *RedirectUri* は、Azure にアプリケーションを登録したときに入手できます。 Azure にアプリケーションを登録する方法、および *ClientID* と *RedirectUri* の取得方法の詳細については、「[Azure RMS の ADAL 認証を構成する](adal-auth.md)」を参照してください。
 
@@ -132,7 +132,7 @@ Azure への接続に必要なパラメーターを読み込みます。
 
      public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
      {
-       // Gets the available templates for this tenant             
+       // Gets the available templates for this tenant
        Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
            false, true, null, null, symmetricKeyCredential);
 
@@ -161,7 +161,7 @@ Azure への接続に必要なパラメーターを読み込みます。
          {
            templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template             
+           // Encrypts the file using the selected template
            TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
            string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
@@ -176,7 +176,7 @@ Azure への接続に必要なパラメーターを読み込みます。
 
     if (issuerDisplayName.Trim() != "")
     {
-      // Gets the available issuers of rights policy templates.              
+      // Gets the available issuers of rights policy templates.
       // The available issuers is a list of RMS servers that this user has already contacted.
       try
       {
@@ -186,7 +186,7 @@ Azure への接続に必要なパラメーターを読み込みます。
                                                         false,
                                                         false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it             
+        // Creates the policy and associates the chosen user rights with it
         SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
                                                             templateIssuers.ElementAt(0));
         SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
@@ -197,7 +197,7 @@ Azure への接続に必要なパラメーターを読み込みます。
                                                                 issuerDisplayName,
                                                                 false));
 
-        //Encrypts the file using the ad hoc policy             
+        //Encrypts the file using the ad hoc policy
         string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
                                        filePath,
                                        handle,
@@ -230,4 +230,3 @@ Azure への接続に必要なパラメーターを読み込みます。
    ![アプリの出力 - 手順 5](../media/develop/app-output-5.png)
 
 6. 最後に、ポリシーのメタデータの一部 (ポリシー名、説明、発行者 (Azure AD テナント) の表示名) を入力します。![アプリの出力 - 手順 6](../media/develop/app-output-6.png)
-

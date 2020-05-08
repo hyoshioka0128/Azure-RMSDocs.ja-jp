@@ -13,13 +13,13 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 34e7a531d117daaef54480c027effedb56c97137
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 7ed06af67d004845de7a5a55090da9fc3b40388c
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068397"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972001"
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
@@ -27,7 +27,7 @@ ms.locfileid: "80068397"
 
 このトピックでは、iOS/OS X バージョンの RMS SDK の重要なコード要素について説明します。
 
-**注** 以下のコード例と説明では、クライアント プロセスを参照するために MSIPC (Microsoft Information Protection and Control) という用語を使用します。
+**注**: 以下のコード例と説明では、クライアント プロセスを参照するために MSIPC (Microsoft Information Protection and Control) という用語を使用します。
 
 
 
@@ -57,7 +57,7 @@ ms.locfileid: "80068397"
             }];
         }
 
-- **手順 2**. Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
+- **手順 2**: Active Directory 認証ライブラリ (ADAL) を使用する認証をセットアップする
 
   **説明**: この手順では、例の認証パラメーターで [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
 
@@ -98,7 +98,7 @@ ms.locfileid: "80068397"
                           }];
        }
 
-- **手順 3**. [MSUserPolicy](https://msdn.microsoft.com/library/dn790789.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790796.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
+- **手順 3**. [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
 
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
       {
@@ -160,7 +160,7 @@ ms.locfileid: "80068397"
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
 
--   **手順 1**. [serializedContentPolicy](https://msdn.microsoft.com/library/dn790796.aspx) から *MSUserPolicy* を作成します。
+-   **手順 1**. *serializedContentPolicy* から [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -188,7 +188,7 @@ ms.locfileid: "80068397"
             }];
          }
 
--   **手順 2**. [手順 1](https://msdn.microsoft.com/library/dn758321.aspx) の [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を使用して **MSCustomProtectedData** を作成し、読み取りを行います。
+-   **手順 2**. **手順 1** の [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を使用して [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) を作成し、読み取りを行います。
 
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
@@ -218,7 +218,7 @@ ms.locfileid: "80068397"
 ### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>シナリオ: カスタム (アドホック) ポリシーを使用してカスタム保護ファイルを作成する
 
 
--   **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
+-   **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。
 
     **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) と [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) からのユーザー入力を使用して作成されます。
 
@@ -231,7 +231,7 @@ ms.locfileid: "80068397"
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **手順 2**. ポリシー記述子 [selectedDescriptor](https://msdn.microsoft.com/library/dn790796.aspx) からカスタムの *MSUserPolicy* を作成します。
+-   **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {

@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: has-adal-ref
+ms.openlocfilehash: 05036616c77d559dc82a0334b99b548da724df18
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60179163"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971797"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -40,12 +41,12 @@ ms.locfileid: "60179163"
 
 ## <a name="powershell-guides"></a>PowerShell ガイド
 
-Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳細については、「[Using PowerShell with the Azure Information Protection client](/azure/information-protection/rms-client/client-admin-guide-powershell)」(Azure Information Protection クライアントでの PowerShell の使用) を参照してください。
+Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳しくは、「[Azure Information Protection クライアントでの PowerShell の使用](/azure/information-protection/rms-client/client-admin-guide-powershell)」をご覧ください。
 
 ## <a name="user-applications"></a>ユーザー アプリケーション
 
 ユーザー アプリケーションは、RMS SDK 2.1 または RMS SDK 4.2 を使用して作成することができます。
-RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Windows) 用の特定の.API をベースとした REST クライアントです。 2\.1 バージョンは、Windows ベースのネイティブ アプリケーションの作成に使用されます。
+RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Windows) 用の特定の.API をベースとした REST クライアントです。 2.1 バージョンは、Windows ベースのネイティブ アプリケーションの作成に使用されます。
 
 ### <a name="user-application-development-guides"></a>ユーザー アプリケーション開発ガイド
 
@@ -63,14 +64,14 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 次のガイドでは、一般的なツールを使用したアプリケーション開発環境のセットアップ手順を、OS ごとに説明します。
 
-[![iOS および OSX のセットアップ](../media/develop/ios-icon.png)](ios-sdk.md)
-[![Android のセットアップ](../media/develop/android-icon.png)](android-sdk.md)
-[![Windows Phone のセットアップ](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![Windows サービスのセットアップ](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
-[![Linux のセットアップ](../media/develop/linux-icon.png)](linux-setup.md)
+[![iOS/OSX セットアップ](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Android セットアップ](../media/develop/android-icon.png)](android-sdk.md)
+[![Windows Phone セットアップ](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Windows サービスセットアップ](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Linux セットアップ](../media/develop/linux-icon.png)](linux-setup.md)
 
 
-## <a name="how-tos"></a>手順ガイド
+## <a name="how-tos"></a>方法
 
 次の各トピックでは、アプリケーションの実装に関する具体的なガイダンスを提供しています。 サービス アプリケーションは、RMS SDK 2.x. を使用して作成します。 ユーザー アプリケーションは、RMS SDK 4.x. を使用して作成します。 記事のリンクは、アプリケーションの種類、サービス、ユーザー別になっています。
 
@@ -85,7 +86,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ### <a name="security-and-authentication"></a>セキュリティと認証
 
-- [Azure Active Directory ログインを使用するように App Service アプリケーションを構成する方法](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Azure Active Directory ログインを使用するように app service アプリケーションを構成する方法](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [方法: Azure Active Directory Authentication (ADAL) 認証の使用](how-to-use-adal-authentication.md)
 - [Azure RMS の認証を構成する (サービス)](adal-auth.md)
 - [方法: API セキュリティ モードの設定 (サービス)](setting-the-api-security-mode-api-mode.md)
@@ -108,7 +109,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [セキュリティのベスト プラクティス ガイド](security-guidelines.md)
 - [Azure Information Protection に関してよく寄せられる質問](/azure/information-protection/faqs)
 
-### <a name="support-articles"></a>サポート記事
+### <a name="support-articles"></a>サポート技術情報
 
 - [サポートされるファイル形式](supported-file-formats.md)
 - [サポートされているプラットフォーム](supported-platforms.md)
@@ -125,7 +126,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [.MSG ファイル形式 (パート 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
 - [.MSG ファイル形式 (パート 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
-### <a name="api-reference"></a>API reference
+### <a name="api-reference"></a>API リファレンス
 
 - [Windows API リファレンス](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Windows SDK エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
@@ -139,8 +140,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 - [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) は、RMS SDK の最初のバージョンです。
 - [AD RMS スクリプト ツール](https://msdn.microsoft.com/library/bb968797.aspx)は、AD RMS のインストールのための管理ツールです。
 
-### <a name="see-also"></a>「
+### <a name="see-also"></a>関連項目
 
 - [開発者の用語](terms.md)
 - [Azure Information Protection の用語 - ITPro](../terminology.md)
-

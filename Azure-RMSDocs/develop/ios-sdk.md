@@ -13,13 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068562"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972052"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 
@@ -29,15 +29,15 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
-**注**  この SDK では iPod Touch はサポートされていません。
+**注**  この SDK は iPod touch をサポートしていません。
 
 
--   [前提条件](#prerequisites)
+-   [必要条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
--   [関連項目](#see-also)
+-   [参照](#see-also)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -54,18 +54,18 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
     詳細については、「[ADAL for iOS (iOS 用の ADAL)](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios)」または「[ADAL for OS X (OS X 用の ADAL)](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)」を参照してください。
 
-「[What's new (新機能)](release-notes.md)」トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
+「[What's new](release-notes.md)」 (新機能) トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>［オプション］
+## <a name="optional"></a>省略可能
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for iOS (iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)」参照。
 
 ## <a name="configuring-your-development-environment"></a>開発環境の構成
 
--   新しいプロジェクトを作成するために、 **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。
+-   新しいプロジェクトを作成するために、**[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。
 -   **[Single View Application (単一枠ビュー アプリケーション)]** を選択します。
 
-    ![新しいプロジェクトの作成](../media/iOS-Project.png)
+    ![新しいプロジェクトを作成する](../media/iOS-Project.png)
 
 -   新しいプロジェクトの名前および識別子を入力します。
 
@@ -76,22 +76,22 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![場所の設定](../media/ios-add-dependencies-01a.png)
 
--   **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンをクリックし、 **[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
+-   **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンをクリックし、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
 
     この操作により、コピーを作成する代わりに、SDK のインストール フォルダーへの参照を保持します。
 
     ![SDK のインストール フォルダーへの参照の設定](../media/iOS-create-groups.png)
 
--   リソース バンドル用の MS RMS SDK 4.2 を追加するには、MSRightsManagementResources.bundle ファイルを MSRightsManagement.framework/Resources フォルダーから Project Navigator の **[Frameworks]\(フレームワーク\)** セクションにドラッグします。
+-   リソース バンドルの MS RMS SDK 4.2 を追加するために、MSRightsManagementResources.bundle ファイルを MSRightsManagement.framework/Resources フォルダーからプロジェクト ナビゲーターの **Frameworks** セクションにドラッグします。
 
     ![リソース バンドルの追加](../media/iOS-add-resource-bundle-02a.png)
 
--   フレームワークをコピーしたときと同様に、 **[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、 **[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
+-   フレームワークをコピーしたときと同様に、**[Create groups for any added folders (追加されたすべてのフォルダーのグループを作成する)]** オプション ボタンを選択し、**[Copy items into destination group's folder (if needed) (出力先グループのフォルダーに項目をコピーする (必要な場合))]** チェック ボックスをオフにします。
 -   SDK は、**CoreData**、**MessageUI**、**SystemConfiguration**、**Libresolv**、**Security** などの他のフレームワークに依存しています。 これらのフレームワークを追加するために、ターゲットの **[サマリー]** ウィンドウの **[Linked Frameworks and Libraries (リンク フレームワークとライブラリ)]** セクションに移動して、フレームワークを追加するセクションを展開します。
 
     **UIKit** と **Foundation** フレームワークが必要ですが、通常は既定で表示されます。
 
-    ![リソースの追加](../media/iOS-add-libraries.png)
+    ![リソースを追加する](../media/iOS-add-libraries.png)
 
 -   ターゲットの **[ビルド設定]** の **[Other Linker Flags (その他のリンカー フラグ)]** に **- ObjC** フラグを追加します。
 
@@ -103,12 +103,12 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 -   新しい独自の iOS/OS X アプリを作成する準備が整いました。
 
-### <a name="see-also"></a>関連項目
+### <a name="see-also"></a>参照
 
-* [作業開始](get-started.md)
+* [開始するには](get-started.md)
 
 * [新機能](release-notes.md)
 
 * [開発者の用語と概念](core-concepts.md)
 
-* [iOS / OS X API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)
+* [iOS/OS X API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)

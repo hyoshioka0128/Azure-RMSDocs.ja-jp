@@ -13,13 +13,13 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: be43f28a737b45926e247caf2bce932484641052
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068386"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971916"
 ---
 # <a name="android-code-examples"></a>Android のコード例
 
@@ -91,7 +91,7 @@ ms.locfileid: "80068386"
                     catch (IOException e)
                     {
                       …
-                    }  
+                    }
               }
             };
             try
@@ -110,7 +110,7 @@ ms.locfileid: "80068386"
 
 - **手順 2**: Active Directory 認証ライブラリ (ADAL) を使用して認証をセットアップします。
 
-    **ソース**: *MsipcAuthenticationCallback.java*
+    **ソース**: *msipcauthenticationcallback. java*。
 
     **説明**: この手順では、ADAL を使用して、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) に関するページをご覧ください。
 
@@ -189,7 +189,7 @@ ms.locfileid: "80068386"
                      }
    ```
 
-- **手順 3**. **UserPolicy.accessCheck** メソッドを呼び出して、このユーザーにこのコンテンツの[編集](https://msdn.microsoft.com/library/dn790885.aspx)権限があるかを確認します。
+- **手順 3**. [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
 
     **ソース**: *TextEditorFragment.java*
 
@@ -250,7 +250,7 @@ ms.locfileid: "80068386"
               …
       }
     ```
-    
+
 
 - **手順 2**. 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
@@ -295,7 +295,7 @@ ms.locfileid: "80068386"
               …
       }
     ```
-    
+
 
 -  **手順 3**. [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
 
@@ -363,7 +363,7 @@ ms.locfileid: "80068386"
 
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
-- **手順 1**. [serializedContentPolicy](https://msdn.microsoft.com/library/dn790887.aspx) から *UserPolicy* を作成します。
+- **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -421,7 +421,7 @@ ms.locfileid: "80068386"
    ```
 
 
-- **手順 2**. [手順 1](https://msdn.microsoft.com/library/dn758271.aspx) の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、**CustomProtectedInputStream** を作成します。
+- **手順 2**. **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -491,7 +491,7 @@ ms.locfileid: "80068386"
       ...
     }
     ```
-    
+
 
 - **手順 3**. [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
 
@@ -504,7 +504,7 @@ ms.locfileid: "80068386"
       mUserPolicy = customProtectedInputStream.getUserPolicy();
       ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
-      int nRead;                      
+      int nRead;
       byte[] dataChunk = new byte[16384];
 
       try
@@ -527,11 +527,11 @@ ms.locfileid: "80068386"
       }
     }
     ```
-    
+
 
 ### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>シナリオ: カスタム ポリシーを使用してカスタム保護ファイルを作成する
 
-- **手順 1**: ユーザーが指定した電子メール アドレスでポリシー記述子を作成する
+- **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -552,7 +552,7 @@ ms.locfileid: "80068386"
     ```
 
 
-- **手順 2**. ポリシー記述子 [selectedDescriptor](https://msdn.microsoft.com/library/dn790887.aspx) からカスタムの *UserPolicy* を作成します。
+- **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
