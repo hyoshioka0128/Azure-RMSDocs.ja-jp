@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
-ms.openlocfilehash: 11011510bbc3124ecd400632045837be306f157d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: c3de3c7de8a604221732dd0398e019721b51116b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766458"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972137"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>クイック スタート:保護テンプレートを一覧表示する (C++)
 
@@ -110,7 +111,7 @@ ms.locfileid: "81766458"
 
 4. アクセス トークンを手順 2 番のプロンプトに貼り付けると、次の例のように、コンソール出力に保護テンプレートが表示されます。
 
-   ```console 
+   ```console
    *** Template List:
    Name: Confidential \ All Employees : a74f5027-f3e3-4c55-abcd-74c2ee41b607
    Name: Highly Confidential \ All Employees : bb7ed207-046a-4caf-9826-647cff56b990

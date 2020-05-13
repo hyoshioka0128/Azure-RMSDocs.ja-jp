@@ -7,12 +7,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c081d20ba3cfffdc1db06ade5d918230f3b9eff8
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75554992"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972171"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>クイック スタート:機密ラベルの設定と取得 (C#)
 
@@ -27,9 +28,9 @@ ms.locfileid: "75554992"
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>機密ラベルを設定および取得するためのロジックの追加
 
-ファイル エンジン オブジェクトを使用し、ファイルに機密ラベルを設定および取得するためのロジックを追加します。 
+ファイル エンジン オブジェクトを使用し、ファイルに機密ラベルを設定および取得するためのロジックを追加します。
 
-1. **ソリューション エクスプローラー**を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
+1. **ソリューション エクスプローラー**を使用して、Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. `Main()` 本文の末尾の `Console.ReadKey()` の下の `}` の上 (前のクイック スタートが終わった場所) に次のコードを挿入します。
 
@@ -42,7 +43,7 @@ ms.locfileid: "75554992"
      string actualOutputFilePath = outputFilePath;
 
      //Create a file handler for that file
-     //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing. 
+     //Note: the 2nd inputFilePath is used to provide a human-readable content identifier for admin auditing.
      var handler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
 
      //Set Labeling Options
@@ -88,13 +89,13 @@ ms.locfileid: "75554992"
 
 ## <a name="build-and-test-the-application"></a>アプリケーションの構築とテスト
 
-クライアント アプリケーションを構築してテストします。 
+クライアント アプリケーションを構築してテストします。
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
 2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
 
-  ```console   
+  ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
   Public : 73254501-3d5b-4426-979a-657881dfcb1e
   General : da480625-e536-430a-9a9e-028d16a29c59
@@ -110,10 +111,10 @@ ms.locfileid: "75554992"
 
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
-   
+
    Label committed to file: c:\Test\Test_labeled.docx
    Press any key to continue . . .
-  
+
    Getting the label committed to file: c:\Test\Test_labeled.docx
    Name: Confidential
    Id: 074e457c-5848-4542-9a6f-34a182080e7z
@@ -123,4 +124,4 @@ ms.locfileid: "75554992"
 ラベルのアプリケーションは、出力ファイルを開き、ドキュメントの情報保護設定を目で確認して確認できます。
 
 > [!NOTE]
-> Office ドキュメントをラベル付けする場合で、アクセス トークンを取得済み (および機密ラベルが構成済み) の Azure Active Directory (AD) テナントのアカウントを使用してサインインしていないときは、ラベル付きのドキュメントを開く前にサインインを求められることがあります。 
+> Office ドキュメントをラベル付けする場合で、アクセス トークンを取得済み (および機密ラベルが構成済み) の Azure Active Directory (AD) テナントのアカウントを使用してサインインしていないときは、ラベル付きのドキュメントを開く前にサインインを求められることがあります。

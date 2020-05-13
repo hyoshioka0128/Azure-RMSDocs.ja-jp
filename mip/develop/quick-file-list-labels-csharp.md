@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9f12ff856e7d70c76e3c89700d05aeb653d030cd
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: a9e9a2d6534cc674f8bf697543e865a3596d457b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75555281"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972188"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C#)
 
@@ -26,16 +27,16 @@ ms.locfileid: "75555281"
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>機密ラベルを列挙するためのロジックの追加
 
-ファイル エンジン オブジェクトを使用して、組織の機密ラベルを列挙するロジックを追加します。 
+ファイル エンジン オブジェクトを使用して、組織の機密ラベルを列挙するロジックを追加します。
 
 1. 前の「クイック スタート: クライアント アプリケーションの初期化 (C#)」の記事で作成した、Visual Studio ソリューションを開きます。
 
-2. **ソリューション エクスプローラー**を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
+2. **ソリューション エクスプローラー**を使用して、`Main()` メソッドの実装を含む .cs ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 3. `Main()` 本文の末尾の、`Main()` 関数のアプリケーション シャットダウンのセクションの上 (前のクイック スタートが終わった場所) に、次のコードを挿入します。
 
   ```csharp
-  // List sensitivity labels from fileEngine and display name and id  
+  // List sensitivity labels from fileEngine and display name and id
   foreach(var label in fileEngine.SensitivityLabels)
   {
       Console.WriteLine(string.Format("{0} : {1}", label.Name, label.Id));
@@ -56,7 +57,7 @@ ms.locfileid: "75555281"
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。 
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
 
      [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 

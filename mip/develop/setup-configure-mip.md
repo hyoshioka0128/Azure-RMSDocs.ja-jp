@@ -6,14 +6,15 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a7159374ab736bc2f5df151ade82874b33875e56
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79403486"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971678"
 ---
-# <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成 
+# <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成
 
 クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Office 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
 
@@ -44,7 +45,7 @@ ms.locfileid: "79403486"
 
 ## <a name="configure-sensitivity-labels"></a>機密ラベルの構成
 
-現在 Azure Information Protection を使用している場合は、ラベルを Office 365 セキュリティとコンプライアンス センターに移行する必要があります。 プロセスの詳細については、「[How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels)」 (Azure Information Protection ラベルを Office 365 セキュリティとコンプライアンス センターに移行する方法) を参照してください。 
+現在 Azure Information Protection を使用している場合は、ラベルを Office 365 セキュリティとコンプライアンス センターに移行する必要があります。 プロセスの詳細については、「[How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels)」 (Azure Information Protection ラベルを Office 365 セキュリティとコンプライアンス センターに移行する方法) を参照してください。
 
 ## <a name="configure-your-client-workstation"></a>クライアント ワークステーションの構成
 
@@ -68,11 +69,11 @@ ms.locfileid: "79403486"
      - **C++ ユニバーサル Windows プラットフォーム ツール**
      - **Windows 10 SDK 10.0.16299.0 SDK** 以降 (既定で含まれていない場合)
    - **C++ によるデスクトップ開発** Windows ワークロード、および次のオプション コンポーネント:
-     - **Windows 10 SDK 10.0.16299.0 SDK** 以降 (既定で含まれていない場合) 
+     - **Windows 10 SDK 10.0.16299.0 SDK** 以降 (既定で含まれていない場合)
 
      [![Visual Studio のセットアップ](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. [ADAL.PS PowerShell モジュール](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2)をインストールします。 
+3. [ADAL.PS PowerShell モジュール](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2)をインストールします。
 
    - モジュールをインストールするには管理者権限が必要なため、最初に次のいずれかを行う必要があります。
 
@@ -95,7 +96,7 @@ ms.locfileid: "79403486"
 
 4. SDK ファイルをダウンロードする:
 
-   MIP SDK は、次のプラットフォームでサポートされています。ダウンロードはサポートされているプラットフォーム/言語ごとに行われます。  
+   MIP SDK は、次のプラットフォームでサポートされています。ダウンロードはサポートされているプラットフォーム/言語ごとに行われます。
 
    [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
@@ -106,7 +107,7 @@ ms.locfileid: "79403486"
    - **Bins:** 各プラットフォーム アーキテクチャのコンパイル済みバイナリ (該当する場合)。
    - **Include:** ヘッダー ファイル (C++)。
    - **Samples:** サンプル アプリケーションのソース コード。
-    
+
    **NuGet パッケージ**
 
    Visual Studio の開発を行っている場合は、NuGet パッケージ マネージャー コンソールを使用して SDK をインストールすることもできます。
@@ -115,7 +116,7 @@ ms.locfileid: "79403486"
     Install-Package Microsoft.InformationProtection.File
     Install-Package Microsoft.InformationProtection.Policy
     Install-Package Microsoft.InformationProtection.Protection
-    ```  
+    ```
 
 5. NuGet パッケージを使用していない場合、SDK のバイナリのパスを PATH 環境変数に追加します。 PATH 変数は、実行時にクライアント アプリケーションによって依存バイナリ (DLL) が見つかるようにします (省略可能)。
 
@@ -129,7 +130,7 @@ ms.locfileid: "79403486"
      - \<API\> = `file`、`protection`、`upe`
      - \<target\> = `debug`、`release`
      - \<platform\> = `amd64` (x64)、`x86` など。
-   
+
    - **パス**変数の更新が完了したら、 **[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、 **[OK]** をクリックします。
 
 6. GitHub から SDK サンプルをダウンロードします (省略可能)。
@@ -137,48 +138,48 @@ ms.locfileid: "79403486"
    - [GitHub プロファイル](https://github.com/join)をまだお持ちでない場合は、まずそれを作成します。
    - 次に、[Software Freedom Conservancy の Git クライアント ツール (Git Bash)](https://git-scm.com/download/) の最新バージョンをインストールします。
    - Git Bash を使用して、関心のあるサンプルをダウンロードします。
-     - 次のクエリを使用して、リポジトリを表示します。 https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk 
+     - 次のクエリを使用して、リポジトリを表示します。 https://github.com/Azure-Samples?utf8=%E2%9C%93&q=MipSdk
      - Git Bash で、`git clone https://github.com/azure-samples/<repo-name>` を使用して各サンプル リポジトリをダウンロードします。
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Azure Active Directory へのクライアント アプリケーションの登録
 
 Office 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
 
-実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。 
+実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。
 
 クイック スタートおよび MIP SDK のサンプルで使用するために Azure AD でアプリケーション アカウントを登録するには、次の手順を実行します。
 
-  > [!IMPORTANT] 
+  > [!IMPORTANT]
   > アカウント作成のために Azure AD テナントの管理にアクセスするには、[サブスクリプションで "所有者" ロール](/azure/billing/billing-add-change-azure-subscription-administrator)のメンバーであるユーザー アカウントを使用して、Azure portal にサインインする必要があります。 テナントの構成によっては、[アプリケーションを登録する](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)には、"グローバル管理者" ディレクトリ ロールのメンバーである必要もあります。
   > 制限付きのアカウントを使用してテストすることをお勧めします。 アカウントには、必要な SCC エンドポイントにアクセスするための適切な権限のみがあることを確認します。 コマンドラインを通じて渡されたクリア テキスト パスワードは、ログ システムによって収集することができます。
 
-1. 「[Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)」(Azure AD によるアプリの登録、新しいアプリケーションの登録) のセクションに示されている手順を行います。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。 
+1. 「[Register an app with Azure AD, Register a new application](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal)」(Azure AD によるアプリの登録、新しいアプリケーションの登録) のセクションに示されている手順を行います。 テスト目的のため、ガイドの手順を進めるときに、指定されたプロパティに次の値を使用します。
     - **[サポートされているアカウントの種類]** - [この組織ディレクトリのみに含まれるアカウント] を選択します。
     - **[リダイレクト URI]** - リダイレクト URI の種類を [パブリック クライアント (モバイルとデスクトップ)] に設定します。 SDK ではシンプルなコンソール クライアント アプリケーションが使用されるため、`<app-name>://authorize` という形式の URI を使用します。
 
-2. 完了すると、新しいアプリケーションを登録するため、 **[登録されているアプリ]** ページに戻ります。 **[アプリケーション (クライアント) ID]** フィールド内の GUID をコピーして保存します。これはクイック スタートで必要になります。 
+2. 完了すると、新しいアプリケーションを登録するため、 **[登録されているアプリ]** ページに戻ります。 **[アプリケーション (クライアント) ID]** フィールド内の GUID をコピーして保存します。これはクイック スタートで必要になります。
 
 3. 次に、 **[API のアクセス許可]** をクリックして、クライアントがアクセスする必要がある API とアクセス許可を追加します。 **[アクセス許可の追加]** をクリックして、[API アクセス許可の要求] ブレードを開きます。
 
 4. 次に、実行時にアプリケーションで要求される MIP API とアクセス許可を追加します。
    - **[API を選択します]** ページで、**Azure Rights Management サービス**をクリックします。
-   - **Azure Rights Management サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。   
+   - **Azure Rights Management サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。
    - **[アクセス許可の選択]** セクションで、**user_impersonation** アクセス許可をオンにします。 これにより、アプリケーションがユーザーに代わって、保護されたコンテンツの作成やアクセスを行うことが可能になります。
    - **[アクセス許可の追加]** をクリックして保存します。
 
 5. 手順 4 を繰り返しますが、今回は **[API の選択]** ページで API を検索する必要があります。
    - **[API を選択します]** ページで、 **[所属する組織で使用している API]** をクリックした後、検索ボックスに「**Microsoft Information Protection 同期サービス**」と入力して、それを選択します。
    - **Microsoft Information Protection 同期サービス**の API ページで、 **[委任されたアクセス許可]** をクリックします。
-   - **[UnifiedPolicy]** ノードを展開し、 **[UnifiedPolicy.User.Read]** をオンにします。 
+   - **[UnifiedPolicy]** ノードを展開し、 **[UnifiedPolicy.User.Read]** をオンにします。
    - **[アクセス許可の追加]** をクリックして保存します。
 
-6. **[API のアクセス許可]** ページに戻ったら、 **[(テナント名) に管理者の同意を与えます]** 、 **[はい]** の順にクリックします。 この手順により、指定されたアクセス許可で API にアクセスするための事前の同意が、この登録を使用してアプリケーションに与えられます。 グローバル管理者としてサインインした場合は、アプリケーションを実行しているテナント内のすべてのユーザーに対して同意が記録されます。それ以外の場合は、自分のユーザー アカウントにのみ同意が適用されます。 
+6. **[API のアクセス許可]** ページに戻ったら、 **[(テナント名) に管理者の同意を与えます]** 、 **[はい]** の順にクリックします。 この手順により、指定されたアクセス許可で API にアクセスするための事前の同意が、この登録を使用してアプリケーションに与えられます。 グローバル管理者としてサインインした場合は、アプリケーションを実行しているテナント内のすべてのユーザーに対して同意が記録されます。それ以外の場合は、自分のユーザー アカウントにのみ同意が適用されます。
 
 完了すると、アプリケーションの登録と API のアクセス許可は、次の例のようになるはずです。
 
    [![Azure AD アプリの登録](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD アプリの登録](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
-登録に API とアクセス許可を追加する方法の詳細については、「[Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)」(Web API にアクセスするためのクライアント アプリケーションを構成する) を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。  
+登録に API とアクセス許可を追加する方法の詳細については、「[Configure a client application to access web APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis)」(Web API にアクセスするためのクライアント アプリケーションを構成する) を参照してください。 ここでは、クライアント アプリケーションで必要な API とアクセス許可の追加に関する情報が見つかります。
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を申請する
 
@@ -229,7 +230,7 @@ MIP SDK でビルドされたアプリケーションに Visual C++ 2015 また�
 - [Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
 - [Microsoft Visual Studio 2017 の Visual C++ 再頒布可能パッケージ](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
 
-これらは、アプリケーションがリリースとしてビルドされている場合にのみ機能します。 アプリケーションがデバッグとしてビルドされている場合、Visual C++ ランタイム デバッグ DLL をアプリケーションに含めるか、マシンにインストールする必要があります。 
+これらは、アプリケーションがリリースとしてビルドされている場合にのみ機能します。 アプリケーションがデバッグとしてビルドされている場合、Visual C++ ランタイム デバッグ DLL をアプリケーションに含めるか、マシンにインストールする必要があります。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -237,5 +238,3 @@ MIP SDK でビルドされたアプリケーションに Visual C++ 2015 また�
   - クイック スタートのセクションを開始する前に、[オブザーバーの概念](concept-async-observers.md)について読み、C++ の API の非同期的な性質について理解してください。
   - SDK を使ってみる準備ができたら、「[クイック スタート: クライアント アプリケーションの初期化 (C++)](quick-app-initialization-cpp.md)」から開始します。
 - C# の開発者である場合、SDK を使ってみる準備ができたら、「[クイック スタート: クライアント アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md)」から開始します。
-
-

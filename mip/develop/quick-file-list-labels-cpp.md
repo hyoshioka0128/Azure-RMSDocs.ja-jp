@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 330ceb37e0c8324a083bf5c5d7240035b9b86a0a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556046"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971610"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>クイック スタート:機密ラベルの一覧表示 (C++)
 
@@ -26,11 +27,11 @@ ms.locfileid: "75556046"
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>機密ラベルを列挙するためのロジックの追加
 
-ファイル エンジン オブジェクトを使用して、組織の機密ラベルを列挙するロジックを追加します。 
+ファイル エンジン オブジェクトを使用して、組織の機密ラベルを列挙するロジックを追加します。
 
 1. 前の「クイック スタート: クライアント アプリケーションの初期化 (C++)」の記事で作成した、Visual Studio ソリューションを開きます。
 
-2. **ソリューション エクスプローラー**を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。 
+2. **ソリューション エクスプローラー**を使用して、`main()` メソッドの実装を含む .cpp ファイルをプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 3. 次の `using` ディレクティブをファイル上部の `using mip::FileEngine;` の後に追加します。
 
@@ -54,23 +55,23 @@ ms.locfileid: "75556046"
       }
    }
    system("pause");
-   ``` 
+   ```
 
 ## <a name="create-a-powershell-script-to-generate-access-tokens"></a>アクセス トークンを生成するための PowerShell スクリプトの作成
 
-次の PowerShell スクリプトを使用すると、`AuthDelegateImpl::AcquireOAuth2Token` の実装に SDK によって求められているアクセス トークンを作成できます。 このスクリプトでは、「MIP SDK Setup and configuration」 (MIP SDK の設定と構成) で以前インストールした ADAL.PS モジュールの `Get-ADALToken` コマンドレットを使用しています。 
+次の PowerShell スクリプトを使用すると、`AuthDelegateImpl::AcquireOAuth2Token` の実装に SDK によって求められているアクセス トークンを作成できます。 このスクリプトでは、「MIP SDK Setup and configuration」 (MIP SDK の設定と構成) で以前インストールした ADAL.PS モジュールの `Get-ADALToken` コマンドレットを使用しています。
 
 1. PowerShell Script ファイル (.ps1 extension) を作成し、次のスクリプトをファイルにコピーして貼り付けます。
 
    - `$authority` と `$resourceUrl` は、後のセクションで更新します。
-   - `$appId` と `$redirectUri` を Azure AD アプリ登録に指定した値と一致するように更新します。 
+   - `$appId` と `$redirectUri` を Azure AD アプリ登録に指定した値と一致するように更新します。
 
    ```powershell
-   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token()
    $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
@@ -78,7 +79,7 @@ ms.locfileid: "75556046"
 
 ## <a name="build-and-test-the-application"></a>アプリケーションの構築とテスト
 
-最後に、クライアント アプリケーションを構築してテストします。 
+最後に、クライアント アプリケーションを構築してテストします。
 
 1. F6 ( **[ソリューションのビルド]** ) を使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
@@ -122,7 +123,7 @@ ms.locfileid: "75556046"
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-### <a name="problems-during-execution-of-powershell-script"></a>PowerShell スクリプトの実行時の問題 
+### <a name="problems-during-execution-of-powershell-script"></a>PowerShell スクリプトの実行時の問題
 
 | [概要] | エラー メッセージ | 解決策: |
 |---------|---------------|----------|

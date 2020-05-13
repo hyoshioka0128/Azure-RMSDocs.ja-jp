@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: 5b64da83fad3ca9187398f77780fd0810740668a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: fa8b41850468ed545512f8facc488ff0517a8b41
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764180"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972086"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -26,7 +27,7 @@ ms.locfileid: "81764180"
 
 - 「[Microsoft Information Protection (MIP) SDK setup and configuration](setup-configure-mip.md)」 (Microsoft Information Protection (MIP) SDK のセットアップと構成) の手順を完了します。 この "クライアント アプリケーションの初期化" クイック スタートは、適切な SDK のセットアップと構成に依存します。
 - 省略可能:
-  - [プロファイル オブジェクトとエンジン オブジェクト](concept-profile-engine-cpp.md)を確認します。 プロファイル オブジェクトとエンジン オブジェクトは、MIP ファイル/ポリシー/保護 API を使用するクライアントによって必要とされる、ユニバーサルな概念です。 
+  - [プロファイル オブジェクトとエンジン オブジェクト](concept-profile-engine-cpp.md)を確認します。 プロファイル オブジェクトとエンジン オブジェクトは、MIP ファイル/ポリシー/保護 API を使用するクライアントによって必要とされる、ユニバーサルな概念です。
   - [認証の概念](concept-authentication-cpp.md)を確認して、認証と承認が SDK とクライアント アプリケーションによってどのように実装されるかについて学習します。
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Visual Studio のソリューションとプロジェクトの作成
@@ -37,7 +38,7 @@ ms.locfileid: "81764180"
    - 左側のウィンドウの **[インストール済み]** 、 **[Visual C#]** の下で **[Windows Desktop]** を選択します。
    - 中央のウィンドウで、 **[コンソール アプリ (.NET Framework)]** を選択します。
    - 下のウィンドウで、プロジェクトの **[名前]** 、 **[場所]** 、およびそれに応じて含める **[ソリューション名]** を更新します。
-   - 完了したら、右下の **[OK]** ボタンをクリックします。 
+   - 完了したら、右下の **[OK]** ボタンをクリックします。
 
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
@@ -97,7 +98,7 @@ SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイス
 
 SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイスを拡張し、`GetUserConsent()` をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意の委任によりサービスのアドレスが提供され、これを `url` パラメーターで使用することをユーザーが同意する必要があります。 委任では一般に、サービスへのアクセスに同意することをユーザーが許可/拒否できるようにするフローがいくつか提供されます。 このクイック スタートでは `Consent.Accept` をハードコーディングします。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。 
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
 
 2. ここで **ConsentDelegateImpl.cs** を更新して、新しい同意の委任クラスを実装します。 `Microsoft.InformationProtection` に using ステートメントを追加し、`IConsentDelegate` を継承するようにクラスを設定します。
 
@@ -117,9 +118,9 @@ SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイ
 
 1. **ソリューション エクスプローラー**から、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
-2. 生成された `main()` の実装を削除します。 
+2. 生成された `main()` の実装を削除します。
 
-3. マネージド ラッパーには、初期化、`MipContext` の作成、プロファイルの読み込み、リソースのリリースに使用された静的クラス `Microsoft.InformationProtection.MIP` が含まれています。 ファイル API の操作のためにラッパーを初期化するには、`MIP.Initialize()` を呼び出し、`MipComponent.File` を渡して、ファイル操作に必要なライブラリを読み込みます。 
+3. マネージド ラッパーには、初期化、`MipContext` の作成、プロファイルの読み込み、リソースのリリースに使用された静的クラス `Microsoft.InformationProtection.MIP` が含まれています。 ファイル API の操作のためにラッパーを初期化するには、`MIP.Initialize()` を呼び出し、`MipComponent.File` を渡して、ファイル操作に必要なライブラリを読み込みます。
 
 4. *Program.cs* の `Main()` で次を追加し、 **\<application-id\>** を前に作成した Azure AD アプリケーションの登録の ID と置き換えます。
 
@@ -140,7 +141,7 @@ namespace mip_sdk_dotnet_quickstart
 
         static void Main(string[] args)
         {
-            //Initialize Wrapper for File API operations 
+            //Initialize Wrapper for File API operations
             MIP.Initialize(MipComponent.File);
         }
     }
@@ -192,7 +193,7 @@ namespace mip_sdk_dotnet_quickstart
                // Create the FileProfileSettings object.
                // Initialize file profile settings to create/use local state.
                var profileSettings = new FileProfileSettings(mipContext,
-                                        CacheStorageType.OnDiskEncrypted,                                        
+                                        CacheStorageType.OnDiskEncrypted,
                                         new ConsentDelegateImplementation());
 
                // Load the Profile async and wait for the result.

@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 0a71ac710aec82c7a5de16c7f603ccdfe4803f79
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: ec6439747b7a826a09851739a96ccdec3f5705f4
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766305"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972120"
 ---
 # <a name="quickstart-list-templates-c"></a>クイック スタート:テンプレートを一覧表示する (C#)
 
@@ -22,7 +23,7 @@ ms.locfileid: "81766305"
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
 - 「[クイック スタート: クライアント アプリケーションの初期化 - Protection API (C#)](quick-protection-app-initialization-csharp.md)」をまず完了し、スターター Visual Studio ソリューションを構築します。 この「保護テンプレートを一覧表示する」クイック スタートでは、前のクイック スタートでスターター ソリューションが正しく構築されている必要があります。
-- 省略可能: 「[RMS テンプレート](https://docs.microsoft.com/azure/information-protection/configure-policy-templates)」概念を確認します。 
+- 省略可能: 「[RMS テンプレート](https://docs.microsoft.com/azure/information-protection/configure-policy-templates)」概念を確認します。
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>保護テンプレートを一覧表示するロジックを追加する
 
@@ -35,15 +36,15 @@ ms.locfileid: "81766305"
 3. `Main()` 本文の末尾の、`Main()` 関数のアプリケーション シャットダウンのセクションの上 (前のクイック スタートが終わった場所) に、次のコードを挿入します。
 
   ```csharp
-  // List protection templates using protectionEngine and display the list  
-  
+  // List protection templates using protectionEngine and display the list
+
   var templates=protectionEngine.GetTemplates();
 
   for(int i = 0; i < templates.Count; i++)
   {
       Console.WriteLine("{0}: {1}", i.ToString(), templates[i].Name + " : " + templates[i].Id);
   }
-  
+
   Console.WriteLine("Press a key to continue...");
   ```
 
@@ -55,7 +56,7 @@ ms.locfileid: "81766305"
 
 2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインを求められることはなく、ラベルの一覧が表示されます。
 
-     [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) 
+     [![Visual Studio のトークンでのサインインの取得](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
    - サインイン アカウントで実行中に、アプリケーションが MIP API にアクセスできるようにするには、同意をする必要もあります。 これは、Azure AD のアプリケーションの登録が事前に同意されていないか (「MIP SDK setup and configuration」 (MIP SDK の設定と構成) で説明)、(アプリケーションが登録されている以外の) 別のテナントのアカウントを使用してサインインしている場合に発生します。 単純に **[承諾]** をクリックして、同意を記録します。
 
