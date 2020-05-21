@@ -6,18 +6,18 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c599fdf5f44458aa390bade3736060919cb552e6
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 974995056b14d714dbda7e00df4255cbd54302e1
+ms.sourcegitcommit: 44b874f32cbd1e0552ba8a1f8c9496344ecf8adc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555332"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630386"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
 この記事では、よく寄せられる質問 (FAQ) に対する回答と、既知の問題と一般的なエラーに関するトラブルシューティングのガイダンスを示します。
 
-## <a name="frequently-asked-questions"></a>AppLocker: Frequently Asked Questions (AppLocker: よく寄せられる質問) 
+## <a name="frequently-asked-questions"></a>よく寄せられる質問 
 
 ### <a name="sdk-string-handling"></a>SDK 文字列の処理
 
@@ -27,7 +27,7 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 | プラットフォーム | ガイダンス |
 |-|-|
-| Windows ネイティブ | C++ の SDK クライアントでは、API 関数との文字列のやり取りには C++ 標準ライブラリの型 [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) が使用されます。 UTF-8 との間での変換は、MIP SDK によって内部的に管理されます。 API から `std::string` が返されるときは、UTF-8 エンコードを想定し、文字列を変換する場合はそれに応じて管理する必要があります。 場合によっては、文字列が `uint8_t` ベクター (発行ライセンス (PL) など) の一部として返されることがありますが、これは不透明な BLOB として扱う必要があります。<br><br>詳細および例については、次をご覧ください。<ul><li>ワイド文字の文字列を UTF-8 などの複数バイトに変換するのをサポートする [WideCharToMultiByte 関数](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)。<li>[SDK ダウンロード](setup-configure-mip.md#configure-your-client-workstation)に含まれる次のサンプル ファイル:<ul><li>ワイド UTF-8 文字列との間で変換するための、`file\samples\common\string_utils.cpp` の文字列ユーティリティ関数のサンプル。<li>前の文字列変換関数を使用する、`file\samples\file\main.cpp` の `wmain(int argc, wchar_t *argv[])` の実装。</li></ul></ul>|
+| Windows ネイティブ | C++ SDK クライアントの場合、 [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) API 関数との間で文字列を渡すために C++ 標準ライブラリの型が使用されます。 UTF-8 との間での変換は、MIP SDK によって内部的に管理されます。 API から `std::string` が返されるときは、UTF-8 エンコードを想定し、文字列を変換する場合はそれに応じて管理する必要があります。 場合によっては、文字列が `uint8_t` ベクター (発行ライセンス (PL) など) の一部として返されることがありますが、これは不透明な BLOB として扱う必要があります。<br><br>詳細および例については、次をご覧ください。<ul><li>ワイド文字の文字列を UTF-8 などの複数バイトに変換するのをサポートする [WideCharToMultiByte 関数](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)。<li>[SDK ダウンロード](setup-configure-mip.md#configure-your-client-workstation)に含まれる次のサンプル ファイル:<ul><li>ワイド UTF-8 文字列との間で変換するための、`file\samples\common\string_utils.cpp` の文字列ユーティリティ関数のサンプル。<li>前の文字列変換関数を使用する、`file\samples\file\main.cpp` の `wmain(int argc, wchar_t *argv[])` の実装。</li></ul></ul>|
 | .NET | .NET SDK クライアントでは、すべての文字列で既定の UTF-16 エンコードが使用され、特別な変換は必要ありません。 UTF-16 との間での変換は、MIP SDK によって内部的に管理されます。 |
 | その他のプラットフォーム | MIP SDK でサポートされているその他のすべてのプラットフォームでは、UTF-8 がネイティブでサポートされています。 |
 
@@ -37,7 +37,7 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 **質問**: PDF ファイルを保護またはラベル付けしようとすると、次のエラーが表示されるのはなぜですか。
 
-> ファイル形式はサポートされていません
+> ファイル形式がサポートされていません
 
 この例外は、デジタル署名またはパスワードで保護されている PDF ファイルを保護またはラベル付けしようとした場合に発生します。 PDF ファイルの保護とラベル付けについて詳しくは、「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」(Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 
@@ -45,7 +45,7 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 **質問**: MIP SDK をダウンロードし、ファイルのサンプルを使用してすべてのラベルを表示しようとした後に、次のエラーが表示されるのはなぜですか。
 
-> 問題が発生しました: 取得したコンプライアンスポリシーを解析できませんでした。 で失敗しました: [クラス mip:: CompliancePolicyParserException] タグが見つかりません: ポリシー、NodeType:15、名前: 名前が見つかりません、値:、先祖: <SyncFile><Content>、correlationId: [34668a40-blll-4ef8-b2af-00005aa674z9]
+> エラーが発生しました: 取得したコンプライアンス ポリシーを解析できませんでした。 Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
 
 これは、ラベルを Azure Information Protection から統合されたラベル付けエクスペリエンスに移行していないことを示しています。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 
 
@@ -63,4 +63,10 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 > "Proxyauthentication Atonerror: プロキシ認証がサポートされていません"
 
-MIP SDK は、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するには、プロキシ管理者は、プロキシをバイパスするように Microsoft Information Protection サービスエンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「 [Office 365 の url と IP アドレス範囲](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)」ページを参照してください。 MIP SDK を使用するには、`*.protection.outlook.com` (行 9) と Azure Information Protection サービスエンドポイント (行 73) がプロキシ認証をバイパスする必要があります。
+MIP SDK は、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するには、プロキシ管理者は、プロキシをバイパスするように Microsoft Information Protection サービスエンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「 [Office 365 の url と IP アドレス範囲](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)」ページを参照してください。 MIP SDK で `*.protection.outlook.com` は、(行 9) と Azure Information Protection サービスエンドポイント (行 73) がプロキシ認証をバイパスする必要があります。
+
+### <a name="issues-in-net-core"></a>.NET Core での問題
+
+**質問**: NuGet パッケージは .net Core で動作しますか。 
+
+NuGet パッケージは .NET Core プロジェクトにインストールされますが、実行は失敗します。 Windows での修正に取り組んでいますが、現在、他のプラットフォームをサポートするタイムラインがありません。 

@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/08/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 51691ed4ae5e6a8cebdc372f4be21e25bf12db27
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 56194d242f6b079fc04765c8ceeeac5cddbf557d
+ms.sourcegitcommit: 93376be8c80776e572f1233812ef39fbabbbd0b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972069"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550856"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -28,7 +28,7 @@ ms.locfileid: "82972069"
 
 Azure Information Protection 統合されたラベル付けクライアントは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。
 
-通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログにも含まれます。これには、 **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection**の製品名と、**更新プログラム**の分類が含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログにも含まれます。これには、 **Microsoft Azure Information Protection**Microsoft Azure Information Protection の製品名と、  >  **Microsoft Azure Information Protection Unified Labeling Client****更新プログラム**の分類が含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「 [Azure Information Protection の統合ラベル付けクライアントのアップグレードと保守](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client)」を参照してください。
 
@@ -63,7 +63,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
 ## <a name="version-27930"></a>バージョン2.7.93.0
-統一されたラベル付けクライアント (一般提供) 
 
 統一されたラベル付けスキャナー (パブリックプレビュー) バージョン2.7.93.0
 
@@ -134,7 +133,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     
     - 同じスキャナープロファイルを使用するようにスキャナーを構成するときに、複数のスキャナーが同じ SQL Server データベースを共有できます。 この構成により、複数のスキャナーの管理が容易になり、スキャン時間が短縮されます。 この構成を使用する場合は、スキャナーのインストールが完了するのを待ってから、同じプロファイルを使用して別のスキャナーをインストールします。
     
-    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースには**\<AIPScannerUL_ profile_name>** という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
+    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースには**AIPScannerUL_ \< profile_name>** という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
     
     - ドキュメントにラベルが既に付いている場合でも、すべてのドキュメントに既定のラベルを設定できます。 スキャナープロファイルまたはリポジトリの設定で、[ラベルの再設定 **] オプションを** **[オン**] に設定し、新しい [既定の**ラベルを強制**する] チェックボックスをオンにします。
     
@@ -183,12 +182,12 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 **追加の変更**
 
-- [設定をリセット](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)すると、\\%LocalAppData%\Microsoft\MSIP\mip\\*\<ProcessName\>* \ mip フォルダーではなく、%LocalAppData%\Microsoft\MSIP\mip*\<\> ProcessName*フォルダーが削除されるようになりました。
+- [設定をリセット](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)すると、 \\ * \< \> * %LocalAppData%\Microsoft\MSIP\mip \\ * \< ProcessName \> *\ mip フォルダーではなく、%LocalAppData%\Microsoft\MSIP\mip ProcessName フォルダーが削除されるようになりました。
 
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)に、保護されたドキュメントのコンテンツ ID が含まれるようになりました。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
