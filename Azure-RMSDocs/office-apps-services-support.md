@@ -12,30 +12,30 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 279fc1cd21486115fc270456d28d0d2598d8d271
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 113a69605c1971047c7afef6a5f153ef5026d251
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559839"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747197"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-エンド ユーザー Office アプリケーションと Office サービスで Azure Information Protection から Azure Rights Management サービスを使用し、組織のデータを保護できます。 これらの Office アプリケーションは Word、Excel、PowerPoint、および Outlook です。 Office サービスは Exchange および SharePoint です。 Azure Rights Management サービスをサポートする Office 構成では、多くの場合、**IRM (Information Rights Management)** という用語が使用されます。
+エンド ユーザー Office アプリケーションと Office サービスで Azure Information Protection から Azure Rights Management サービスを使用し、組織のデータを保護できます。 これらの Office アプリケーションは Word、Excel、PowerPoint、および Outlook です。 Office サービスは Exchange および Microsoft SharePoint です。 Azure Rights Management サービスをサポートする Office 構成では、多くの場合、**IRM (Information Rights Management)** という用語が使用されます。
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office アプリケーション:Word、Excel、PowerPoint、Outlook
 これらのアプリケーションは Azure Rights Management をネイティブでサポートし、ユーザーは保存済みのドキュメントまたは送信する電子メール メッセージに保護を適用できます。 ユーザーは[テンプレート](configure-policy-templates.md)を適用して保護を適用できます。 あるいは、Word、Excel、PowerPoint の場合、アクセス、権限、使用制限にカスタマイズ設定を選択できます。
 
-たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、 **[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
+たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、**[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
 
 Office アプリを構成する準備ができている場合は、「 [office アプリ: クライアントの構成](configure-office-apps.md)」を参照してください。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
 
--   **Exchange ActiveSync IRM** 。モバイル デバイスで、保護された電子メール メッセージを保護および使用することができます。
+-   **Exchange ActiveSync IRM**。モバイル デバイスで、保護された電子メール メッセージを保護および使用することができます。
 
 -   **Outlook on the web** の電子メール保護サポート。Outlook クライアントと同様に実装されます。 この構成では、ユーザーは保護テンプレートまたはオプションを使用することでメール メッセージを保護できます。 ユーザーは、自分に送信された保護メールのメッセージを読み、利用できます。
 
@@ -60,17 +60,17 @@ Exchange Online または Exchange Server を使用すると、Azure Information
 - Exchange On-Premises については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
-## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online と SharePoint Server
+## <a name="sharepoint-in-microsoft-365-and-sharepoint-server"></a>Microsoft 365 と SharePoint Server の SharePoint
 
-SharePoint Online または SharePoint Server を使用するとき、SharePoint IRM (Information Rights Management) でドキュメントを保護できます。 この機能では、管理者がリストやライブラリを保護できます。ユーザーが文書をチェックアウトしたときに、指定した情報保護ポリシーに従って許可されたユーザーのみがファイルを表示および使用できるようにダウンロードされたファイルが保護されます。 たとえば、ファイルが読み取り専用のときに、テキストのコピーを無効にし、ローカル コピーの保存やファイルの印刷を防止することができます。
+Microsoft 365 または SharePoint Server で SharePoint を使用する場合は、SharePoint information rights management (IRM) 機能を使用してドキュメントを保護できます。 この機能では、管理者がリストやライブラリを保護できます。ユーザーが文書をチェックアウトしたときに、指定した情報保護ポリシーに従って許可されたユーザーのみがファイルを表示および使用できるようにダウンロードされたファイルが保護されます。 たとえば、ファイルが読み取り専用のときに、テキストのコピーを無効にし、ローカル コピーの保存やファイルの印刷を防止することができます。
 
-Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保護に対応しています。 既定では、保護はドキュメントをダウンロードした人に限定されます。 この既定を変更するには、 **[グループの保護を許可します]** という名前の構成オプションを使用します。これは、指定したグループに保護を拡張します。 たとえば、ライブラリ内のドキュメントを編集するアクセス許可を持つグループを指定して、同じユーザーのグループが、どのユーザーがドキュメントをダウンロードしたかに関係なく、SharePoint の外部でドキュメントを編集できるようにすることができます。 または、SharePoint でアクセス許可を付与されていないグループ内のユーザーが、SharePoint の外部でドキュメントにアクセスする必要がある場合に、このグループを指定できます。 SharePoint のリストとライブラリについては、この保護は常にエンド ユーザーではなく管理者によって構成されます。 アクセス許可はサイト レベルで設定します。そのようなアクセス許可は、既定では、そのサイトのリストまたはライブラリにより継承されます。 SharePoint Online を使用する場合、ユーザーは OneDrive for Business ライブラリの IRM 保護も構成できます。
+Word、PowerPoint、Excel、PDF ドキュメントがこの SharePoint IRM 保護に対応しています。 既定では、保護はドキュメントをダウンロードした人に限定されます。 この既定を変更するには、**[グループの保護を許可します]** という名前の構成オプションを使用します。これは、指定したグループに保護を拡張します。 たとえば、ライブラリ内のドキュメントを編集するアクセス許可を持つグループを指定して、同じユーザーのグループが、どのユーザーがドキュメントをダウンロードしたかに関係なく、SharePoint の外部でドキュメントを編集できるようにすることができます。 または、SharePoint でアクセス許可を付与されていないグループ内のユーザーが、SharePoint の外部でドキュメントにアクセスする必要がある場合に、このグループを指定できます。 SharePoint のリストとライブラリについては、この保護は常にエンド ユーザーではなく管理者によって構成されます。 アクセス許可はサイト レベルで設定します。そのようなアクセス許可は、既定では、そのサイトのリストまたはライブラリにより継承されます。 Microsoft 365 で SharePoint を使用する場合、ユーザーは Microsoft OneDrive ライブラリを IRM で保護するように構成することもできます。
 
 さらに細かく制御するには、サイトのリストまたはライブラリを構成し、親からアクセス許可を継承することを停止できます。 その後、そのレベル (リストまたはライブラリ) で IRM アクセス許可を構成できます。構成後、アクセス許可は "固有のアクセス許可" と呼ばれます。 ただし、アクセス許可は常にコンテナー レベルで設定されます。個々のファイルにアクセス許可を設定することはできません。 
 
-最初に SharePoint の IRM サービスを有効にする必要があります。 次に、ライブラリの IRM アクセス許可を指定します。 SharePoint Online と OneDrive for Business の場合、ユーザーは OneDrive for Business ライブラリに対しても IRM アクセス許可を指定できます。 SharePoint は権限ポリシー テンプレートを使用しませんが、テンプレートに指定できるいくつかの設定と同じ設定を SharePoint の構成で選択できます。
+最初に SharePoint の IRM サービスを有効にする必要があります。 次に、ライブラリの IRM アクセス許可を指定します。 SharePoint と OneDrive の場合、ユーザーは OneDrive ライブラリに対する IRM アクセス許可を指定することもできます。 SharePoint は権限ポリシー テンプレートを使用しませんが、テンプレートに指定できるいくつかの設定と同じ設定を SharePoint の構成で選択できます。
 
-SharePoint Server を使用する場合、Azure Rights Management コネクタをデプロイすることでこの IRM 保護を使用できます。 このコネクタはオンプレミス サーバーと Rights Management クラウド サービスの間のリレーとして機能します。 詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
+SharePoint Server を使用する場合、Azure Rights Management コネクタをデプロイすることでこの IRM 保護を使用できます。 このコネクタはオンプレミス サーバーと Rights Management クラウド サービスの間のリレーとして機能します。 詳細については、「 [Azure Rights Management コネクタのデプロイ](deploy-rms-connector.md)」を参照してください。
 
 > [!NOTE]
 > SharePoint IRM を使用する場合、いくつかの制限があります。
@@ -81,20 +81,20 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > 
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
-IRM で保護されていないライブラリの場合、SharePoint または OneDrive にアップロードするファイルを保護すると、次のファイルは使用できません。共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)).
+IRM で保護されていないライブラリの場合、SharePoint または OneDrive にアップロードするファイルを保護すると、次のファイルは使用できません。共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
 
 > [!TIP]
 > SharePoint IRM を使用する代わりに、機密ラベルを使用して、 [sharepoint と OneDrive (パブリックプレビュー) で暗号化を適用し、Office ファイルの機密ラベルを有効に](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)することを検討してください。
 
-SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「[OneDrive for Business および SharePoint Online のデータ暗号化](https://technet.microsoft.com/library/dn905447.aspx)」をご覧ください。
+SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「 [OneDrive と sharepoint でのデータの暗号化](https://technet.microsoft.com/library/dn905447.aspx)」を参照してください。
 
-新しい投稿ではありませんが、「[What’s New with Information Rights Management in SharePoint and SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)」 (SharePoint の Information Rights Management と SharePoint Online の新機能) という Office 365 ブログの投稿に追加情報があります。
+Office 365 ブログの次の投稿には、新しい機能が追加されていますが、便利な情報がいくつかあります。これは、 [SharePoint の情報 Rights Management の新機能](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)です。
 
 今後の変更については、「 [SharePoint のセキュリティ、管理、および移行に対する更新](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585)」を参照してください。
 
 SharePoint の IRM を構成する用意ができている場合:
 
-- SharePoint Online については、「[SharePoint Online と OneDrive for Business: IRM 構成](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)」を参照してください。
+- Microsoft 365 の SharePoint については、「 [Microsoft 365 と OneDrive: IRM の構成](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration)」を参照してください。
 
 - Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 

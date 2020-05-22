@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cd8cef4bae59fbffa66ce18737558888f101ef47
-ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
+ms.openlocfilehash: 0ccc3ae77d8113a6a3d1a1595a474bd39b1f3ede
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75913266"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747077"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ
 
@@ -31,11 +31,11 @@ ms.locfileid: "75913266"
 
 このアプリはビューアーであるため、これを使って保護されたメール メッセージを新規作成したり、それらに返信したり、保護されたファイルを作成または編集したりすることはできません。 さらに、表示するファイルの添付ファイルをアプリで開くことはできません。 たとえば、保護された PDF ドキュメントや、権利で保護されたメール メッセージの添付ファイルです。
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>SharePoint の保護されているライブラリと OneDrive for Business にある PDF ファイルを開くことはできますか。
+## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive"></a>SharePoint で保護されているライブラリと OneDrive にある PDF ファイルを開くことはできますか。
 
-はい。SharePoint と OneDrive for Business によって、他のユーザーがお客様と共有している保護された PDF ファイルを開くことができます。 リンクをタップし、このアプリを選択してファイルを自分用に開きます。 
+はい、他のユーザーが Microsoft SharePoint と OneDrive を使用して共有している、保護された PDF ファイルを開くことができます。 リンクをタップし、このアプリを選択してファイルを自分用に開きます。 
 
-このアプリで、SharePoint と OneDrive for Business の外部で保護されている PDF ファイル (保護されている PDF ファイルと .ppdf ファイル) を開くこともできます。
+このアプリでは、SharePoint と OneDrive (保護された PDF および ppdf ファイル) 以外で保護されている PDF ファイルを開くこともできます。
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>モバイル デバイスで Azure Information Protection アプリを実行するには
 
@@ -49,7 +49,7 @@ Azure Information Protection アプリには、 **iOS 11**または**Android 6.0
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>ビューアー アプリを開始するにはどうすればよいですか。
 
-アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、 **[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
+アプリをインストールした後、その時点では何もする必要はありません。 表示対象の保護された電子メールまたはファイルを取得するまで待機し、**[AIP Viewer]** を選択して開きます。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、コンテンツを読み取ることができます。
 
 ただし、待機しない場合は、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始](mobile-app-get-started.md)」の手順に従って、表示対象の保護された電子メールまたはファイルを自分自身に送信できます 
 
@@ -73,7 +73,7 @@ Azure Information Protection アプリには、 **iOS 11**または**Android 6.0
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>このアプリに関するフィードバックを提供する方法
 
-アプリで、 **[設定]**  >  **[フィードバックの送信]** に移動します。
+アプリで、[**設定**] [フィードバックの送信] の順番に移動  >  **Send feedback**します。
 
 
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>自分の質問が回答されていません。どうすればよいですか。

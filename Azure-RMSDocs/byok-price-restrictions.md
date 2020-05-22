@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: dd07fe942f9f715dea6d6dc17d5c5d00e2da0d65
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224565"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746337"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (BYOK) の詳細を表示する
 
@@ -59,7 +59,7 @@ Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/ke
 
 ## <a name="byok-support-for-services-and-clients"></a>サービスとクライアントの BYOK のサポート
 
-BYOK と[使用状況ログ](log-analyze-usage.md)は、データを保護するために Azure Information Protection によって使用される Azure Rights Management サービスと統合されているすべてのアプリケーションでシームレスに動作します。 これには SharePoint Online などのクラウド サービス、Exchange や SharePoint を実行し、RMS コネクタを使用して Azure Rights Management サービスと連携するオンプレミス サーバー、Office 2019、Office 2016、および Office 2013 などのクライアント アプリケーションが含まれます。 
+BYOK と[使用状況ログ](log-analyze-usage.md)は、データを保護するために Azure Information Protection によって使用される Azure Rights Management サービスと統合されているすべてのアプリケーションでシームレスに動作します。 これには、Microsoft SharePoint などのクラウドサービス、Exchange を実行するオンプレミスサーバー、RMS コネクタを使用して Azure Rights Management サービスを使用するオンプレミスサーバー、Office 2019、Office 2016、Office 2013 などのクライアントアプリケーションが含まれます。 
 
 Azure Rights Management サービスに要求を送信するアプリケーションによって、キー使用状況ログを取得します。
 

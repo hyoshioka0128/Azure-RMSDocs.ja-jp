@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb9393c637b71771789efcdcfa7b9b5aeb378226
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 6dc8a5aa43b6f5d3dc53c014dd770fa87ff683a5
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82230816"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746373"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services モバイル デバイス拡張機能
 
@@ -28,7 +28,7 @@ Active Directory Rights Management サービス (AD RMS) モバイルデバイ�
 - Azure Information Protection アプリを使用して、保護されたイメージファイル (.jpg、.gif、.tif など) を使用します。
 - Azure Information Protection アプリを使用して、一般的に保護されているファイル (. pfile 形式) を開きます。
 - Azure Information Protection アプリを使用して、PDF コピー (.pdf および ppdf 形式) である Office ファイル (Word、Excel、PowerPoint) を開きます。
-- Azure Information Protection アプリを使用して、SharePoint Online 上の保護された電子メールメッセージ (rpq msg) と保護された PDF ファイルを開きます。
+- 保護された電子メールメッセージ (...) と保護された PDF ファイルを Microsoft SharePoint で開くには、Azure Information Protection アプリを使用します。
 - クロスプラットフォームでの表示や、AIP 対応アプリケーションで保護された PDF ファイルを開くには、AIP-対応 PDF ビューアーを使用します。
 - [MIP SDK](https://aka.ms/mipsdkdocs)を使用して作成された、社内で開発された AIP-対応アプリを使用します。
 
@@ -47,7 +47,7 @@ AD RMS モバイルデバイス拡張機能をインストールする前に、�
 
 |要件|詳細情報|
 |---------------|------------------------|
-|Windows Server 2019、2016、2012 R2、または2012における既存の AD RMS の展開には、次のものが含まれます。<br /><br /> -AD RMS クラスターには、インターネットからアクセスできる必要があります。 <br /><br /> -AD RMS は、同じサーバー上でのテストによく使用される Windows Internal Database ではなく、別のサーバー上の完全な Microsoft SQL Server ベースのデータベースを使用する必要があります。 <br /><br />-モバイルデバイス拡張機能のインストールに使用するアカウントには、AD RMS に使用している SQL Server インスタンスに対する sysadmin 権限が必要です。 <br /><br />-AD RMS サーバーは、モバイルデバイスクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように構成されている必要があります。<br /><br /> -AD RMS サーバーがファイアウォールの内側にある場合、またはリバースプロキシを使用して公開されている場合は、 **/_wmcs**フォルダーをインターネットに発行するだけでなく、/マイフォルダーも発行する必要があります (例: **\/\/_https: RMSserver.contoso.com/my**)。|AD RMS の前提条件と展開情報の詳細については、この記事の「前提条件」セクションを参照してください。|
+|Windows Server 2019、2016、2012 R2、または2012における既存の AD RMS の展開には、次のものが含まれます。<br /><br /> -AD RMS クラスターには、インターネットからアクセスできる必要があります。 <br /><br /> -AD RMS は、同じサーバー上でのテストによく使用される Windows Internal Database ではなく、別のサーバー上の完全な Microsoft SQL Server ベースのデータベースを使用する必要があります。 <br /><br />-モバイルデバイス拡張機能のインストールに使用するアカウントには、AD RMS に使用している SQL Server インスタンスに対する sysadmin 権限が必要です。 <br /><br />-AD RMS サーバーは、モバイルデバイスクライアントによって信頼されている有効な x.509 証明書で SSL/TLS を使用するように構成されている必要があります。<br /><br /> -AD RMS サーバーがファイアウォールの内側にある場合、またはリバースプロキシを使用して公開されている場合は、 **/_wmcs**フォルダーをインターネットに発行するだけでなく、/マイフォルダーも発行する必要があります (例: **_https: \/ \/ RMSserver.contoso.com/my**)。|AD RMS の前提条件と展開情報の詳細については、この記事の「前提条件」セクションを参照してください。|
 |AD FS Windows Server に展開されます。<br /><br /> -AD FS サーバーファームは、インターネット (フェデレーションサーバープロキシを展開済み) からアクセスできる必要があります。 <br /><br />-フォームベースの認証はサポートされていません。Windows 統合認証を使用する必要があります。 <br /><br /> **重要**: AD FS は、AD RMS を実行しているコンピューターとモバイルデバイスの拡張機能とは別のコンピューターを実行している必要があります。|AD FS に関するドキュメントについては、windows server ライブラリの[Windows server AD FS 展開ガイド](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on)を参照してください。<br /><br /> AD FS をモバイル デバイス拡張機能用に構成する必要があります。 手順については、このトピックの「 **AD RMS モバイルデバイス拡張機能の AD FS の構成**」セクションを参照してください。|
 |モバイルデバイスは、RMS サーバー (またはサーバー) の PKI 証明書を信頼する必要があります。|VeriSign や Comodo などのパブリック CA からサーバー証明書を購入する場合、モバイルデバイスでは、これらの証明書のルート CA が既に信頼されている可能性があります。これにより、これらのデバイスは、追加の構成なしにサーバー証明書を信頼できるようになります。<br /><br /> ただし、独自の内部 CA を使用して RMS 用のサーバー証明書を展開する場合は、追加の手順を実行して、ルート CA 証明書をモバイルデバイスにインストールする必要があります。 そうしないと、モバイルデバイスは RMS サーバーとの接続を正常に確立できなくなります。|
 |DNS の SRV レコード|会社のドメインに 1 つ以上の SRV レコードを作成します。<br /><br />1: ユーザーが使用する電子メールドメインサフィックスごとにレコードを作成します。 <br /><br />2: RMS クラスターで使用されるすべての FQDN のレコードを作成し、クラスター名を含めずにコンテンツを保護します。 <br /><br />これらのレコードは、接続しているモバイルデバイスが使用するすべてのネットワークから解決できる必要があります。これには、モバイルデバイスがイントラネット経由で接続されている場合、イントラネットが含まれます。<br /><br /> ユーザーがモバイルデバイスから電子メールアドレスを入力すると、ドメインサフィックスを使用して、AD RMS インフラストラクチャと Azure AIP のどちらを使用する必要があるかを識別します。 SRV レコードが見つかると、クライアントはその URL に応答する AD RMS サーバーにリダイレクトされます。<br /><br /> ユーザーが保護されたコンテンツをモバイルデバイスで使用すると、クライアントアプリケーションは、コンテンツを保護したクラスターの URL (クラスター名なし) の FQDN に一致するレコードを DNS で検索します。 その後、デバイスは DNS レコードで指定された AD RMS クラスターに送られて、コンテンツを開くためのライセンスを取得します。 ほとんどの場合、RMS クラスターはコンテンツを保護したものと同じ RMS クラスターです。<br /><br /> SRV レコードを指定する方法の詳細については、このトピックの「 **AD RMS モバイルデバイス拡張機能の DNS SRV レコードの指定**」セクションを参照してください。|
@@ -123,10 +123,10 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 
 - AD RMS モバイルデバイス拡張機能の AD FS を手動で構成するには、次の設定を使用します。
 
-|**Configuration**|**Value**|
+|**構成**|**Value**|
 |-----|-----|
 |**証明書利用者の信頼**|_api します。|
-|**要求ルール**|**属性ストア**: Active Directory <br /><br />**電子メールアドレス**: 電子メールアドレス<br /><br>**ユーザープリンシパル名**: UPN<br /><br /> **プロキシアドレス**: _https:\/\/schemas.xmlsoap.org/claims/ProxyAddresses|
+|**要求ルール**|**属性ストア**: Active Directory <br /><br />**電子メールアドレス**: 電子メールアドレス<br /><br>**ユーザープリンシパル名**: UPN<br /><br /> **プロキシアドレス**: _https: \/ \/ schemas.xmlsoap.org/claims/ProxyAddresses|
 
 > [!TIP]
 > AD FS を使用した AD RMS の展開例の詳細な手順については、「 [Active Directory フェデレーションサービス (AD FS) で Active Directory Rights Management サービスを展開](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on)する」を参照してください。
@@ -148,10 +148,10 @@ Add-AdfsClient -Name "Fabrikam application for MIP" -ClientId "96731E97-2204-4D7
 ### <a name="specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension"></a>AD RMS モバイルデバイス拡張機能の DNS SRV レコードの指定
 
 ユーザーが使用する各電子メール ドメインに対して DNS SRV レコードを作成する必要があります。 すべてのユーザーが 1 つの親ドメインからの子ドメインを使用し、この連続する名前空間のすべてのユーザーが同じ RMS クラスターを使用する場合は、親ドメインの SRV レコードを 1 つだけ使用すれば済みます。RMS が、適切な DNS レコードを検索します。
-SRV レコードの形式は次のとおりです。 _rmsdisco. _http. _tcp。 \<emailsuffix>\<ポート番号\<>RMSClusterFQDN>
+SRV レコードの形式は次のとおりです。 _rmsdisco. _http. _tcp。 \<emailsuffix>\< ポート番号>\< RMSClusterFQDN>
 
 > [!NOTE]
-> \<ポート番号> に443を指定します。 DNS で別のポート番号を指定することもできますが、モバイルデバイス拡張機能を使用するデバイスでは常に443が使用されます。
+> ポート番号> に443を指定し \< ます。 DNS で別のポート番号を指定することもできますが、モバイルデバイス拡張機能を使用するデバイスでは常に443が使用されます。
 
 たとえば、組織に次の電子メール アドレスを使用するユーザーがいて、
   - _user@contoso.com
@@ -166,7 +166,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |ドメイン|_tcp. contoso .com
 |サービス|_rmsdisco
-|Protocol|_http
+|プロトコル|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -176,7 +176,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |ドメイン|_tcp. fabrikam .com
 |サービス|_rmsdisco
-|Protocol|_http
+|プロトコル|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -192,7 +192,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |------|------|
 |ドメイン|_tcp. contoso .com
 |サービス|_rmsdisco
-|Protocol|_http
+|プロトコル|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -230,9 +230,9 @@ AD RMS クラスターと AD FS サーバーの間にプロキシサーバーが
 <system.net>
 ```
 1. 次の変更を行い、ファイルを保存します。
-- プロキシ\<サーバー> をプロキシサーバーの名前またはアドレスに置き換えます。
-- ポート\<> を、プロキシサーバーが使用するように構成されているポート番号に置き換えます。
-- AD FS \<url> を、フェデレーションサービスの url に置き換えます。 HTTP プレフィックスを含めないでください。
+- \<プロキシサーバー> をプロキシサーバーの名前またはアドレスに置き換えます。
+- \<ポート> を、プロキシサーバーが使用するように構成されているポート番号に置き換えます。
+- \<AD FS url> を、フェデレーションサービスの url に置き換えます。 HTTP プレフィックスを含めないでください。
 
     > [!NOTE]
     > プロキシ設定の上書きの詳細については、[プロキシ構成](https://msdn.microsoft.com/library/dkwyc043(v=vs.110).aspx)のドキュメントを参照してください。
@@ -242,7 +242,7 @@ AD RMS クラスターと AD FS サーバーの間にプロキシサーバーが
 RMS クラスター内のすべてのノードで、この手順を繰り返します。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 Azure Information Protection の詳細を確認し、他の AIP のお客様と連絡をとって、AIP 製品マネージャーと[API yammer グループ](https://www.yammer.com/askipteam/)を使用します。 
 

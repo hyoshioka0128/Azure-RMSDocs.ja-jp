@@ -12,18 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9e14cd34dd31dda6942c028fa9a68778eaaaed3a
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: cc23496dc8ceedeb463205147a076d8a98d58c75
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224582"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746153"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>アプリケーションによる Azure Rights Management サービスのサポート
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-次の情報は、一般的に使用されているエンドユーザーアプリケーションとサービスが Azure Information Protection の Azure Rights Management サービスを使用して組織のドキュメントや電子メールを保護する方法を理解するのに役立ちます。 アプリケーションには、Word、Excel、PowerPoint、Outlook があります。 サービスには Exchange や SharePoint があります。
+次の情報は、一般的に使用されているエンドユーザーアプリケーションとサービスが Azure Information Protection の Azure Rights Management サービスを使用して組織のドキュメントや電子メールを保護する方法を理解するのに役立ちます。 アプリケーションには、Word、Excel、PowerPoint、Outlook があります。 サービスには、Exchange と Microsoft SharePoint が含まれます。
 
 > [!NOTE]
 > Azure Rights Management サービスをサポートするアプリケーションおよびバージョンを確認するには、「[Azure Rights Management データ保護をサポートするアプリケーション](./requirements-applications.md)」をご覧ください。
@@ -40,7 +40,7 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 - Exchange Online と Exchange Server は、サービス側インデックス作成を使用して、ユーザーの保護された電子メールが検索結果に自動的に表示されようにします。 
 
-- SharePoint Online と SharePoint Server は Rights Management 保護をダウンロード時にのみファイルに適用します。 この実装は、SharePoint のインデックス作成と検索結果がこのドキュメント保護ソリューションによる影響を受けないことを意味します。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前にドキュメントを保護します。
+- Microsoft 365 と SharePoint サーバーの SharePoint では、ダウンロード時にのみファイルに保護 Rights Management 適用されます。 この実装は、SharePoint のインデックス作成と検索結果がこのドキュメント保護ソリューションによる影響を受けないことを意味します。 ただし、ドキュメントを SharePoint に保存し、検索結果で返されないようにしたい場合は、SharePoint にアップロードする前にドキュメントを保護します。
 
 - Windows デスクトップ検索はデバイスの異なるユーザー間で共有インデックスを使用するので、保護されたドキュメント内のデータを保護するため、保護されたファイルのインデックスを作成しません。 つまり、保護されているファイルは検索結果に含まれませんが、機密データを含むファイルが、PC にサインインしたり、PC に接続したりする可能性のある他のユーザーの検索結果に表示されないことを保証できます。 
 
@@ -52,5 +52,5 @@ Azure Information Protection から Azure Rights Management サービス用に�
 
 -   [Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイルサーバー](file-server-support.md)
 
--   [RMS Api をサポートするその他のアプリケーション](api-support.md)
+-   [RMS API をサポートするその他のアプリケーション](api-support.md)
 

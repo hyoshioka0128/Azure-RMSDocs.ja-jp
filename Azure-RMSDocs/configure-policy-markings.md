@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f48a131588d2087a1cf37a65f4e7d3a1f32ee0cd
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 64f1d03931e346d7f27ce35a3837c336a4468e7a
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482336"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746840"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "79482336"
 
     - Excel: 透かしが表示されるのは、ページ レイアウト モード、印刷プレビュー モード、および印刷時のみです。
     
-    - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、 **[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
+    - PowerPoint: 透かしは、マスター スライドに背景画像として適用されます。 **[表示]** タブの **[スライド マスター]** で、**[背景グラフィックを表示しない]** チェック ボックスがオフになっていることを確認します。
 
 - 透かしと、Word、Excel、PowerPoint のヘッダーおよびフッターでは、複数の行がサポートされています。 Outlook で適用されるラベルのヘッダーまたはフッターに対して複数の行を指定した場合、その行は連結されます。 このシナリオでは、[Word、Excel、PowerPoint、Outlook にさまざまな視覚的なマーキングを設定する](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)構成の使用を検討します。
 
@@ -62,19 +62,19 @@ ms.locfileid: "79482336"
 
 - エクスプローラー、PowerShell、Azure Information Protection スキャナーを使用してドキュメントにラベルを付けると、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに、Azure Information Protection クライアントによって適用されます。
     
-    SharePoint Online、OneDrive、または OneDrive for Business に保存されているファイルに対して Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用すると、[自動更新] がオンになっている場合を除き、分類をバックグラウンドで継続的に実行するように [[アドバンストクライアント] 設定](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)を構成しない限り、視覚的なマーキングは適用されません。 
+    この例外は、Microsoft SharePoint、OneDrive for work、学校、または OneDrive for home に保存されているファイルに対して、Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用する場合です。自動保存が有効になっている場合は、 [[詳細](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)設定] をオンにしている場合を除き、分類をバックグラウンドで継続的に実行します。 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. まだサインインしていない場合は、新しいブラウザー ウィンドウを開き、[Azure Portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)します。 次に、 **[Azure Information Protection]** ペインに移動します。 
+1. まだ実行していない場合は、新しいブラウザー ウィンドウを開いて、[Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、**[Azure Information Protection]** ペインに移動します。 
     
-    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、 **[Azure Information Protection]** を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、[ **Azure Information Protection**] を選択します。
 
-2. [**分類** > **ラベル**] メニューオプションから: **[Azure Information Protection ラベル]** ウィンドウで、追加または変更する視覚的なマーキングが含まれているラベルを選択します。
+2. [**分類**  >  **ラベル**] メニューオプションから: [ **Azure Information Protection ラベル**] ウィンドウで、追加または変更する視覚的なマーキングが含まれているラベルを選択します。
 
-3. **[ラベル]** ウィンドウの **[視覚的なマーキングの設定 (ヘッダーやフッターなど)]** セクションで、目的の視覚的なマーキングの設定を構成し、 **[保存]** をクリックします。
+3. [**ラベル**] ウィンドウの [**視覚的なマーキングの設定 (ヘッダーやフッターなど)** ] セクションで、目的の視覚的なマーキングの設定を構成し、[**保存**] をクリックします。
     
     - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
     
@@ -106,10 +106,10 @@ ms.locfileid: "79482336"
 > [!NOTE]
 >この構文では、大文字と小文字が区別されます。
 
-例: `Document: ${Item.Name}  Classification: ${Item.Label}`General**ラベル フッターに** という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
+例: **General** ラベル フッターに `Document: ${Item.Name}  Classification: ${Item.Label}` という文字列を指定する場合、project.docx というドキュメントに適用されるフッター テキストは、**Document: project.docx  Classification: General** になります。
 
 > [!NOTE]
-> `${User.Name}` 変数と `${User.PrincipalName}` 変数のどちらを使用しても、Azure Information Protection の統合ラベル付けクライアントでは現在サポートされていません。 
+> とのいずれか `${User.Name}` または両方の変数の使用 `${User.PrincipalName}` は、Azure Information Protection 統合ラベル付けクライアントによって現在サポートされていません。 
 
 >[!TIP]
 > フィールドコードを使用し[て、ラベル名](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)をドキュメントまたはテンプレートに挿入することもできます。
@@ -118,7 +118,7 @@ ms.locfileid: "79482336"
 
 既定では、指定した視覚的マーキングは Word、Excel、PowerPoint、Outlook のすべてに適用されます。 ただし、テキスト文字列に "If.App" という変数ステートメントを入れると、Office アプリケーションごとに視覚的マーキングを指定できます。**Word**、**Excel**、**PowerPoint**、**Outlook** という値を利用し、アプリケーションの種類を区別できます。 このような値は省略することもできます。同じ If.App ステートメントで複数回指定する場合に必要になります。
 
-次の構文を使用します。
+使用する構文は以下のとおりです。
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
@@ -146,7 +146,7 @@ ms.locfileid: "79482336"
     Word と PowerPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルはいかなる透かしテキストも適用しません。
 
 > [!NOTE]
-> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、 **[フォント名]** の値を設定できるのは Azure Information Protection ポータルを使用した場合のみです。 5つの既定値の1つを超える**フォントの色**の値を設定する場合、は Azure Information Protection ポータルを使用することによってのみ可能です。
+> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、[**フォント名**] の値を設定できるのは Azure Information Protection ポータルを使用した場合のみです。 5つの既定値の1つを超える**フォントの色**の値を設定する場合、は Azure Information Protection ポータルを使用することによってのみ可能です。
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
@@ -158,9 +158,9 @@ Calibri は、ヘッダー、フッター、透かしのテキストに使われ
 
 利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**は水色の RGB 16 進値です。 
 
-これらのコードの参照が必要な場合は、MSDN web ドキュメントの[\<色 >](https://developer.mozilla.org/docs/Web/CSS/color_value)のページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \< 色の>](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
 

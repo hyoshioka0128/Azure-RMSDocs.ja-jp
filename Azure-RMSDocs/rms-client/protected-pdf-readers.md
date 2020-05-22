@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 6d9dc21d2541ab9aeb6d6fc6772781e1c23c1f2e
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326380"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746946"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Microsoft Information Protection をサポートする PDF リーダー
 
@@ -31,22 +31,22 @@ Microsoft Information Protection によって保護されている PDF ドキュ
 
 保護された PDF ドキュメントを開くことができる PDF リーダーのインストールに使用しているデバイスを選択します。 これらのすべての閲覧者は、ISO 標準の PDF 暗号化に準拠した保護されたドキュメントを開くことができます。
 
-- **コンピューター**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
+- **コンピューター**: [Windows](protected-pdf-readers-windows.md)  |  [MacOS](protected-pdf-readers-mac.md)
 
-- **モバイルデバイス**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
+- **モバイルデバイス**: [Android](protected-pdf-readers-android.md)  |  [iOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>以前の形式のサポート
 
 次の表の PDF リーダーは、ファイル名拡張子が ppdf である保護された PDF ドキュメントと、.pdf ファイル名拡張子を持つ古い形式をサポートしています。 
 
-現在、SharePoint Online とオンプレミスの SharePoint では、IRM で保護されたライブラリで PDF ドキュメントの古い形式を使用します。
+現在、Microsoft SharePoint では、IRM で保護されたライブラリ内の PDF ドキュメントに古い形式が使用されています。
 
 
 |オペレーティング システム|サポートされるリーダー|
 |----------------|-----------------------------------|
 |Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
 |Android|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />GigaTrust App for Android|
-|[iOS]|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|
+|iOS|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|
 
 ## <a name="using-adobe-acrobat-reader-with-the-adobe-plug-in"></a>Adobe Acrobat Reader と Adobe プラグインの使用
 
@@ -70,7 +70,7 @@ Microsoft と Adobe の連携により、分類され、必要に応じて保護
 
 - [Adobe reader と Microsoft Information Protection 統合に関してよく寄せられる質問](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このページのリンクを使用して PDF リーダーをインストールすると、保護された PDF ドキュメントを開くことができます。
 

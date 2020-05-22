@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29c41a53bef195a1a80d728fdf40cfc262533373
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799165"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747167"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
 
@@ -27,7 +27,7 @@ ms.locfileid: "82799165"
 > [!NOTE]
 > 現在のところ、この機能はプレビュー段階で、変更される可能性があります。
 
-Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに:
+Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに
 
 - ラベル付けされた保護の対象となるドキュメントと組織全体の電子メールを監視します。
 
@@ -145,7 +145,7 @@ Azure Information Protection を使用すると、機密情報の種類 (定義�
 
 - 統一されたラベル付けクライアントの場合は、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)を構成します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>[前提条件]
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
@@ -171,7 +171,7 @@ Azure Information Protection analytics では Azure 監視が使用されるた�
         - **Azure Information Protection 管理者**
         - **セキュリティ管理者**
         - **コンプライアンス管理者**
-        - **コンプライアンスデータ管理者**
+        - **コンプライアンス データ管理者**
         - **グローバル管理者**
     
     - ワークスペースが作成された後、次のロールを使用して、収集されるデータを表示するアクセス許可を減らすことができます。
@@ -277,10 +277,10 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |列名|説明|
 |-----------|-----------|
 |Time|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
-|User|User: UPN または DOMAIN\USER の形式を設定します。|
+|ユーザー|User: UPN または DOMAIN\USER の形式を設定します。|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
 |ItemName|ファイル名または電子メールの件名 |
-|Method|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
+|メソッド|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
 |アクティビティ|監査アクティビティ: DowngradeLabel、UpgradeLabel、RemoveLabel、NewLabel、Discover、Access、RemoveCustomProtection、ChangeCustomProtection、NewCustomProtection、または FileRemoved |
 |ResultStatus|アクションの結果の状態:<br /><br /> 成功または失敗 (AIP スキャナーのみによって報告)|
 |ErrorMessage_s|ResultStatus = Failed の場合、エラーメッセージの詳細が含まれます。 AIP スキャナーのみによって報告されました|
@@ -309,8 +309,8 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |ProtectedBefore|変更前にコンテンツが保護されていたかどうか: はい/いいえ |
 |ProtectionOwnerBefore|変更前に所有者を Rights Management |
 |UserJustification|ラベルをダウングレードまたは削除するときの理由|
-|LastModifiedBy|ファイルを最後に変更したユーザー (UPN 形式)。 Office および SharePoint Online でのみ利用可能|
-|LastModifiedDate|形式の UTC-YYYY-MM-DDTHH: MM: SS: Office & SharePoint Online のみで使用可能 |
+|LastModifiedBy|ファイルを最後に変更したユーザー (UPN 形式)。 Office および SharePoint のみで使用可能|
+|LastModifiedDate|形式の UTC-YYYY-MM-DDTHH: MM: SS: Office および SharePoint のみで使用可能 |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>InformationProtectionEvents の使用例

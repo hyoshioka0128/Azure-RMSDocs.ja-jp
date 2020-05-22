@@ -13,38 +13,38 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 4b8115ffc0b4af968f2dbfdcb7747f288876b271
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404608"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746040"
 ---
-# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection および探索サービスまたはデータ回復用のスーパーユーザーの構成
+# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Azure Information Protection と、検出サービスまたはデータ復旧用のスーパー ユーザーの構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Azure Information Protection からの Azure Rights Management サービスのスーパー ユーザー機能によって、Azure Rights Management で保護している組織のデータを、権限を持つユーザーとサービスが常に読み取り、検査することができるようにします。 必要であれば、保護は削除したり、変更したりできます。
+Azure Information Protection の Azure Rights Management サービスのスーパー ユーザー機能を使用すると、承認されたユーザーやサービスにのみ、Azure Rights Management が保護する組織のデータの読み取りと検査を許可することができます。 必要であれば、保護は削除したり、変更したりできます。
 
-スーパー ユーザーは、組織の Azure Information Protection テナントによって保護されているドキュメントと電子メールに対する Rights Management のフル コントロール[使用権限](configure-usage-rights.md)を常に持ちます。 この機能は “データに対する推論” と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。 たとえば、次のいずれかのシナリオでこの機能を使用することがあります。
+スーパー ユーザーは、組織の Azure Information Protection テナントで保護されているドキュメントと電子メールに対して、Rights Management フル コントロール[使用権限](configure-usage-rights.md)を常に持っています。 この機能は “データに対する推論” と呼ばれることがあり、組織のデータの管理を維持する上で重要な要素です。 たとえば、次のようなシナリオでこの機能を使用します。
 
-- 退職した従業員によって保護されたファイルを読み取る必要がある。
+- ある従業員が退職するので、その従業員が保護したファイルを読み取る必要がある。
 
-- IT 管理者は、ファイルに対して構成されている現在の保護ポリシーを削除し、新しい保護ポリシーを適用する必要がある。
+- IT 管理者が、ファイルに構成されていた現行の保護ポリシーを削除し、新しい保護ポリシーを適用する必要がある。
 
-- Exchange Server で、検索操作のためにメールボックスにインデックスを付ける必要がある。
+- Exchange Server で、検索操作のためにメールボックスのインデックスを作成する必要がある。
 
 - 既に保護されているファイルを検査する必要があるデータ損失防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、およびマルウェア対策製品用の既存の IT サービスがある。
 
-- 監査、法律、またはその他のコンプライアンス上の理由で、ファイルを一括で復号化する必要があります。
+- 監査、法律などのコンプライアンス上の理由からファイルの暗号化を一括解除する必要がある。
 
 ## <a name="configuration-for-the-super-user-feature"></a>スーパー ユーザー機能の構成
 
-既定では、スーパー ユーザー機能は無効であり、このロールはどのユーザーにも割り当てられていません。 これは、Exchange に Rights Management コネクタを構成すると自動的に有効にされますが、Exchange Online、SharePoint Online、または SharePoint Server を実行する標準的なサービスには必要ありません。
+既定でスーパー ユーザー機能は有効ではないので、このロールが割り当てられているユーザーはいません。 Exchange 用の Rights Management コネクタを構成すると、自動的に有効になります。また、Exchange Online、Microsoft Sharepoint Server、または SharePoint を実行する標準サービスでは、Microsoft 365 には必要ありません。
 
 スーパーユーザー機能を手動で有効にする必要がある場合は、 [PowerShell コマンドレットを使用](/powershell/module/aipservice/enable-aipservicesuperuserfeature)して、 [AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser)コマンドレットまたは[AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup)コマンドレットを使用し、必要に応じてユーザー (またはサービスアカウント) を割り当てます。また、必要に応じて、ユーザー (またはその他のグループ) をこのグループに追加します。 
 
-スーパー ユーザーにグループを使用すると管理しやすくなりますが、パフォーマンス上の理由から、Azure Rights Management では[グループ メンバーシップがキャッシュされる](prepare.md#group-membership-caching-by-azure-information-protection)ことに注意してください。 そのため、新しいユーザーを、すぐにコンテンツの暗号化を解除するスーパーユーザーに割り当てる必要がある場合は、AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、AipServiceSuperUser を使用してそのユーザーを追加します。
+スーパー ユーザーのグループを使用する方が管理は簡単ですが、パフォーマンス上の理由から、Azure Rights Management では[グループのメンバーシップをキャッシュ](prepare.md#group-membership-caching-by-azure-information-protection)している点に注意してください。 そのため、新しいユーザーを、すぐにコンテンツの暗号化を解除するスーパーユーザーに割り当てる必要がある場合は、AipServiceSuperUserGroup を使用して構成した既存のグループにユーザーを追加するのではなく、AipServiceSuperUser を使用してそのユーザーを追加します。
 
 > [!NOTE]
 > Azure Rights Management 用の Windows PowerShell モジュールをまだインストールしていない場合は、「 [AIPService PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
@@ -53,9 +53,9 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>スーパー ユーザー機能のセキュリティ ベスト プラクティス
 
-- Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または、 [Add Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドレットを使用して globaladministrator ロールが割り当てられている管理者を制限および監視します。 これらのユーザーは、スーパー ユーザー機能を有効にし、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができ、組織で保護するすべてのファイルを複合化できます。
+- Office 365 または Azure Information Protection テナントのグローバル管理者が割り当てられている管理者、または、 [Add Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドレットを使用して globaladministrator ロールが割り当てられている管理者を制限および監視します。 これらのユーザーは、スーパー ユーザー機能を有効にして、ユーザー (および自分自身) をスーパー ユーザーとして割り当てることができます。また、組織が保護するすべてのファイルの暗号化を解除することもできます。
 
-- スーパーユーザーとして個別に割り当てられているユーザーとサービスアカウントを確認するには、 [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを使用します。 スーパーユーザーグループが構成されているかどうかを確認するには、 [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup)コマンドレットと標準のユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを確認します。 すべての管理操作と同様に、スーパー機能の有効化または無効化、スーパーユーザーの追加または削除はログに記録され、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドを使用して監査することができます。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルを復号化すると、この操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
+- スーパーユーザーとして個別に割り当てられているユーザーとサービスアカウントを確認するには、 [AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを使用します。 スーパーユーザーグループが構成されているかどうかを確認するには、 [AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup)コマンドレットと標準のユーザー管理ツールを使用して、どのユーザーがこのグループのメンバーであるかを確認します。 すべての管理操作と同様に、スーパー機能の有効化または無効化、スーパーユーザーの追加または削除はログに記録され、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドを使用して監査することができます。 例については、次のセクションを参照してください。 スーパー ユーザーがファイルの暗号化を解除すると、その操作はログに記録され、[使用状況ログ](log-analyze-usage.md)で監査できます。
 
 - 日常的なサービスでスーパーユーザー機能を必要としない場合は、必要なときにのみ機能を有効にし、 [disable-Aipservices Uperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature)コマンドレットを使用して再度無効にします。
 
@@ -63,7 +63,7 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 次のログの抜粋では、 [Get AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレットの使用に関するいくつかのエントリの例を示しています。 
 
-この例では、Contoso 社の管理者は、スーパー ユーザー機能が無効になっていることを確認し、スーパー ユーザーとして Richard Simone を追加します。Richard が Azure Rights Management サービス用に構成された唯一のスーパー ユーザーであることを確認してから、Richard は退職した従業員によって保護されたいくつかのファイルを復号化できるようにスーパー ユーザー機能を有効にします。
+この例では、Contoso Ltd の管理者はスーパー ユーザー機能が無効であることを確認し、Richard Simone をスーパー ユーザーとして追加し、Richard が Azure Rights Management サービスに構成されている唯一のスーパー ユーザーであることを確認してから、スーパー ユーザー機能を有効にします。これで、Richard は、退職した従業員が保護していたファイルの暗号化を解除できるようになりました。
 
 `2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
@@ -73,12 +73,12 @@ Azure Information Protection からの Azure Rights Management サービスの�
 
 `2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
-## <a name="scripting-options-for-super-users"></a>スーパー ユーザーのスクリプト作成オプション
-Azure Rights Management のスーパー ユーザーが割り当てられているだれかが、複数の場所で、複数のファイルから保護を削除することが必要になる場合がよくあります。 これは手動で行うことができますが、スクリプト化するとより効率的に (そしてより確実に) 行うことができます。 この場合、[Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットを使用し、必要に応じて [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドレットも使用します。 
+## <a name="scripting-options-for-super-users"></a>スーパー ユーザー向けのスクリプト オプション
+Azure Rights Management のスーパー ユーザーが割り当てられているだれかが、複数の場所で、複数のファイルから保護を削除することが必要になる場合がよくあります。 手動でこの操作を実行することもできますが、スクリプト化する方が効率的です (多くの場合、信頼性も高くなります)。 そのためには、必要に応じて [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) コマンドレットと [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) コマンドレットを使用します。 
 
-分類と保護を使用している場合、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、保護を適用しない新しいラベルを適用したり、保護を適用したラベルを削除したりすることもできます。 
+分類と保護を使用している場合は、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して保護を適用しない新しいラベルを適用するか、保護を適用したラベルを削除する方法もあります。 
 
-これらのコマンドレットの詳細については、「Azure Information Protection クライアント管理者ガイド」の「[Using PowerShell with the Azure Information Protection client](./rms-client/client-admin-guide-powershell.md)」(PowerShell と Azure Information Protection クライアントの使用) を参照してください。
+これらのコマンドレットの詳細については、Azure Information Protection クライアントの管理者ガイドの「[Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)」を参照してください。
 
 > [!NOTE]
 > AzureInformationProtection モジュールは、Azure Information Protection 用に Azure Rights Management サービスを管理する[Aipservice PowerShell モジュール](administer-powershell.md)とは異なり、補足しています。

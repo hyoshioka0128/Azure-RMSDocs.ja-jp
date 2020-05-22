@@ -13,21 +13,21 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 181320c5046137d96816723c9b9ae55979998453
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 3b4dd50ba7afd8a6d3d1c85e66b6cfab12fa88ed
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403622"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746411"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Azure Information Protection からの保護サービスのアクティブ化
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > この構成情報は、組織内のすべてのユーザーに適用されるサービスを担当する管理者のためのものです。 特定のアプリケーション用の Rights Management 機能の使用、または権利保護されたファイルや電子メールを開く方法に関するユーザー向けヘルプや情報をお探しの場合は、アプリケーションに付属しているヘルプとガイダンスを使用してください。
 >
-> たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「**Rights Management**」、「**IRM**」などの検索語句を入力します。 Windows 用 Azure Information Protection クライアントについては、「[Azure Information Protection ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
+> たとえば、Office アプリケーションの場合、[ヘルプ] アイコンをクリックし、「**Rights Management**」または「**IRM**」などの検索語句を入力します。 Windows 用 Azure Information Protection クライアントについては、「[Azure Information Protection ユーザー ガイド](./rms-client/client-user-guide.md)」を参照してください。
 >
 > このサービスのテクニカル サポートとその他の質問については、「[サポート オプションとコミュニティ リソース](information-support.md#support-options-and-community-resources)」の情報を参照してください。
 
@@ -38,9 +38,9 @@ Azure Information Protection の保護サービスが組織に対してアクテ
 
 Azure Rights Management を含むサービス プランを持っている場合は、サービスをアクティブにする必要がない可能性があります。
 
-- **Azure Rights Management または Azure Information Protection を含むサブスクリプションを 2018 年 2 月末日以降を対象として取得した場合**、サービスが自動的にアクティブになります。 お客様または組織の他のグローバル管理者が Azure Rights Management を非アクティブ化しない限り、サービスをアクティブ化する必要はありません。
+- **Azure Rights Management または Azure Information Protection を含むサブスクリプションが2018年2月以降に取得された場合は、次のようになります。** サービスが自動的にアクティブ化されます。 お客様または組織の他のグローバル管理者が Azure Rights Management を非アクティブ化しない限り、サービスをアクティブ化する必要はありません。
 
-- **Azure Rights Management または Azure Information Protection を含むサブスクリプションを 2018 年 2 月以前に取得した場合**については、Microsoft は、テナントで Exchange Online を使用している場合にこれらのサブスクリプションの Azure Rights Management サービスのアクティブ化を開始しています。 これらのサブスクリプションの場合、サービスがアクティブ化される 2018 年 8 月 1 日から自動アクティブ化のロール アウトが開始されます。ただし、**Get-IRMConfiguration** を実行するときに **AutomaticServiceUpdateEnabled** が [false](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) に設定されていない場合に限ります。 
+- **Azure Rights Management または Azure Information Protection を含むサブスクリプションを 2018 年 2 月以前に取得した場合**については、Microsoft は、テナントで Exchange Online を使用している場合にこれらのサブスクリプションの Azure Rights Management サービスのアクティブ化を開始しています。 これらのサブスクリプションの場合、サービスがアクティブ化される 2018 年 8 月 1 日から自動アクティブ化のロール アウトが開始されます。ただし、[Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) を実行するときに **AutomaticServiceUpdateEnabled** が **false** に設定されていない場合に限ります。 
 
 後続のシナリオがどちらも当てはまらない場合は、保護サービスを手動でアクティブ化する必要があります。 
 
@@ -105,10 +105,10 @@ Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
 これらのオンボーディング コントロールを使用するときは、保護されたコンテンツを組織内のすべてのユーザーがいつでも使用できますが、コンテンツを保護できるのは組織内の一部のユーザーのみとなり、それ以外のユーザーは情報保護を自分でクライアント アプリケーションから適用することはできません。 たとえば、保護サービスがアクティブになったときに自動的に公開される既定の保護テンプレートや、構成されているカスタムテンプレートは、Office アプリに表示されません。 Exchange などのサーバー側アプリケーションは、ユーザーごとのコントロールを実装して、同じ結果を得ることができます。 たとえば、ユーザーが Outlook on the web 内の電子メールを保護できないようにするには、[Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) を使用して *IRMEnabled* パラメーターを *$false* に設定します。
 
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 保護サービスが組織に対してアクティブ化されている場合は、 [Azure Information Protection 展開ロードマップ](deployment-roadmap.md)を使用して、Azure Information Protection をユーザーと管理者にロールアウトする前に他の構成手順が必要かどうかを確認します。 
 
 たとえば、[テンプレート](configure-policy-templates.md)を使用して、ユーザーがファイルに保護を適用し、 [Rights Management コネクタ](deploy-rms-connector.md)をインストールすることによってオンプレミスのサーバーを接続して保護サービスを使用するようにし、すべてのデバイスですべてのファイルの種類の保護をサポートする[Azure Information Protection クライアント](./rms-client/aip-client.md)を展開することができます。 
 
-Exchange Online や SharePoint Online などの Office サービスの Information Rights Management (IRM) 機能を使用するには、あらかじめ追加の構成手順が必要です。 アプリケーションが保護サービス、Azure Rights Management でどのように機能するかについては、「[アプリケーションが azure Rights Management サービスをサポートする方法](applications-support.md)」を参照してください。
+Exchange Online や Microsoft SharePoint などの Office サービスでは、Information Rights Management (IRM) 機能を使用する前に、追加の構成が必要です。 アプリケーションが保護サービス、Azure Rights Management でどのように機能するかについては、「[アプリケーションが azure Rights Management サービスをサポートする方法](applications-support.md)」を参照してください。
 

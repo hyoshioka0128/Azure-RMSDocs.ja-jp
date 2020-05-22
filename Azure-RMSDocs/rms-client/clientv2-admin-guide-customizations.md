@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799131"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746306"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -86,7 +86,7 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 - [**表示名**] はユーザーに表示されるラベルの名前であり、すべてのラベルで一意である必要はありません。 たとえば、"**社外**秘" と表示され**ている****すべて**の従業員をサブラベル、他の**すべての従業員**にサブラベルを持つユーザーがいるとします。 これらのサブラベルの両方に同じ名前が表示されますが、ラベルは同じではなく、設定も異なります。
 
-ラベルの詳細設定を構成するには、[**名前**] の値を使用します。 たとえば、次の図でラベルを識別するには、次の`-Identity "All Company"`ように指定します。
+ラベルの詳細設定を構成するには、[**名前**] の値を使用します。 たとえば、次の図でラベルを識別するには、次のように指定し `-Identity "All Company"` ます。
 
 ![秘密度ラベルを識別するには、' 表示名 ' ではなく ' Name ' を使用してください](../media/labelname_scc.png)
 
@@ -120,7 +120,7 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 |設定|シナリオと手順|
 |----------------|---------------|
-|AdditionalPPrefixExtensions|[EXT> の\<変更のサポート。この詳細プロパティ\<を使用して PFILE を P EXT> にする](#additionalpprefixextensions)
+|AdditionalPPrefixExtensions|[EXT> の変更のサポート \< 。\<この詳細プロパティを使用して PFILE を P EXT> にする](#additionalpprefixextensions)
 |AttachmentAction|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling)
@@ -243,7 +243,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **OutlookDefaultLabel**
 
-- 値: \<**ラベル GUID**> または**None**
+- 値: \< **ラベル GUID**> または**None**
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
@@ -261,7 +261,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **PFileSupportedExtensions**
 
-- 値: ** \<文字列値>** 
+- 値: ** \< 文字列値>** 
 
 次の表を使用して、指定する文字列値を指定します。
 
@@ -287,19 +287,19 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ### <a name="additionalpprefixextensions"></a>AdditionalPPrefixExtensions
 
-統一されたラベル付け\<クライアントは、EXT> の変更をサポートします。PFILE は、\<詳細プロパティ**AdditionalPPrefixExtensions**を使用して、P EXT> にします。 この詳細プロパティは、右クリック、PowerShell、およびスキャナーでサポートされています。 すべてのアプリの動作は似ています。   
+統一されたラベル付けクライアントは、EXT> の変更をサポートし \< ます。PFILE は、 \< 詳細プロパティ**AdditionalPPrefixExtensions**を使用して、P EXT> にします。 この詳細プロパティは、右クリック、PowerShell、およびスキャナーでサポートされています。 すべてのアプリの動作は似ています。   
 
 - キー: **AdditionalPPrefixExtensions**
 
-- 値: ** \<文字列値>** 
+- 値: ** \< 文字列値>** 
 
 次の表を使用して、指定する文字列値を指定します。
 
 | 文字列値| クライアントとスキャナー|
 |-------------|---------------|
-|\*|すべての PFile 拡張機能\<は P EXT> になります|
+|\*|すべての PFile 拡張機能は P EXT> になります \<|
 |\<null 値>| 既定値は、既定の保護値のように動作します。|
-|Convertto-html (".dwg", ".zip")|前の一覧に加えて、".dwg" と ".zip" は P\<EXT になり>| 
+|Convertto-html (".dwg", ".zip")|前の一覧に加えて、".dwg" と ".zip" は P EXT になり \<>| 
 
 例 1: 保護 ".dwg" が "pfile" になる既定の動作と同じように動作する PowerShell コマンド。
 
@@ -313,7 +313,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-この設定では、次の拡張機能 (「」を使用します。 txt "、" .xml "、" .bmp "、" jfif "、" .jpg "、" .jpeg "、" "、" .png "、" .png "、" .xml "、" .gif "など) は常に P\<EXT> になりますが、このようにすることはできませんでした。 注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
+この設定では、次の拡張機能 (「」を使用します。 txt "、" .xml "、" .bmp "、" jfif "、" .jpg "、" .jpeg "、" "、" .png "、" .png "、" .xml "、" .gif "など) は常に P EXT> になりますが、このようにすることはでき \< ませんでした。 注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
 **AdditionalPPrefixExtensions**は、advanced プロパティ- [**Pfilesupportedexテンション**](#pfilesupportedextension)が有効になっている場合にのみ機能します。 
 
 たとえば、次のコマンドが使用されているとします。
@@ -386,7 +386,7 @@ PowerShell コマンドの例:
 
 この設定は、ユーザーがラベル付きドキュメントを電子メールに添付するときに、電子メールメッセージ自体にラベルを付けない場合に使用します。 このシナリオでは、添付ファイルに適用される分類ラベルに基づいて、ラベルが自動的に選択されます。 最高の分類ラベルが選択されます。
 
-添付ファイルは物理ファイルである必要があり、ファイルへのリンク (たとえば、SharePoint または OneDrive for Business 上のファイルへのリンク) はできません。
+添付ファイルは物理ファイルである必要があり、ファイルへのリンク (たとえば、Microsoft SharePoint または OneDrive 上のファイルへのリンク) を指定することはできません。
 
 この設定を [**推奨**] に構成すると、ユーザーは、カスタマイズ可能なツールヒントを使用して、選択したラベルを電子メールメッセージに適用するように求められます。 ユーザーは、推奨設定を受け入れるか、通知を閉じます。 または、この設定を [**自動**] に構成できます。選択したラベルは自動的に適用されますが、ユーザーは電子メールを送信する前に、ラベルを削除したり、別のラベルを選択したりできます。
 
@@ -403,7 +403,7 @@ PowerShell コマンドの例:
 
 - キー 2: **Attachmentactiontip**
 
-- キー値 2: "\<カスタマイズされたツールヒント>"
+- キー値 2: "カスタマイズされた \< ツールヒント>"
 
 カスタマイズしたツールヒントでは、単一の言語のみがサポートされます。
 
@@ -421,7 +421,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **ReportAnIssueLink**
 
-- 値: ** \<HTTP 文字列>**
+- 値: ** \< HTTP 文字列>**
 
 Web サイトの値の例: `https://support.contoso.com`
 
@@ -467,19 +467,19 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
     
     - キー: **OutlookWarnUntrustedCollaborationLabel**
     
-    - 値: \<**ラベル guid、コンマ区切り**>
+    - 値: \< **ラベル guid、コンマ区切り**>
 
 - 理由の入力メッセージ: 
     
     - キー: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - 値: \<**ラベル guid、コンマ区切り**>
+    - 値: \< **ラベル guid、コンマ区切り**>
 
 - ブロック メッセージ: 
     
     - キー: **OutlookBlockUntrustedCollaborationLabel**
     
-    - 値: \<**ラベル guid、コンマ区切り**>
+    - 値: \< **ラベル guid、コンマ区切り**>
 
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
@@ -707,7 +707,7 @@ Scanに**cpu**がチェックされるのは、 **scan@ cpu**が100と等しく�
 
 - キー: **ScannerConcurrencyLevel**
 
-- 値: ** \<同時実行スレッドの数>**
+- 値: ** \< 同時実行スレッドの数>**
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" です。
 
@@ -742,7 +742,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" で�
 
 要件: "社外秘" というセキュリティ保護された島ラベルを持つドキュメントは、Azure Information Protection によって "社外秘" というラベルが付けられます。
 
-次の点に注意してください。
+この例では:
 
 - Secure Islands のラベルは、**Confidential** という名前が付けられ、**Classification** という名前のカスタム プロパティに保存されます。
 
@@ -760,7 +760,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" で�
 
 要件: セキュリティで保護されたアイランドによって "機微な" というラベルが付けられたドキュメントは、Azure Information Protection によって "機密性の高い" というラベルに再設定する
 
-次の点に注意してください。
+この例では:
 
 - Secure Islands のラベルは **Sensitive** という名前が付けられ、**Classification** という名前のカスタム プロパティに保存されます。
 
@@ -778,7 +778,7 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 要件: "Internal" という語を含む2つのセキュリティ保護された島々ラベルがあり、これらのセキュリティ保護された島々ラベルのいずれかを持つドキュメントを、Azure Information Protection の統合ラベル付けクライアントによって "全般" というラベルに書き換えます。
 
-次の点に注意してください。
+この例では:
 
 - Secure Islands のラベルには、**Internal** という単語が含まれ、**Classification** という名前のカスタム プロパティに保存されます。
 
@@ -786,7 +786,7 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 - キー: **labelByCustomProperties**
 
-- 値:**セキュリティ保護された諸島ラベルには\* 、内部、分類、およびが含まれます。イントラネット.\***
+- 値:**セキュリティ保護された諸島ラベルには、内部、分類、およびが含まれます。 \*内部。 \* **
 
 たとえば、"General" というラベルが付いた PowerShell コマンドの例を次に示します。
 
@@ -865,7 +865,7 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 要件: Azure Information Protection の統一されたラベル付けクライアントによって "Confidential" というラベルが付けられているドキュメントには、"Secret" という値を持つ "分類" という名前の追加のカスタムプロパティが必要です。
 
-次の点に注意してください。
+この例では:
 
 - 秘密度ラベルは**Confidential**という名前で、 **Secret**という値を持つ**分類**という名前のカスタムプロパティを作成します。
 
@@ -923,7 +923,7 @@ Outlook でのみラベルを表示する場合は、 **outlook の電子メー�
 
 - キー: **DefaultSubLabelId**
 
-- 値: \<サブラベル GUID>
+- 値: \< サブラベル GUID>
 
 たとえば、親ラベルの名前が "Confidential" で、"All Employees" サブラベルの GUID が8faca7b8-8d20-48a3-8ea2-0f96310a848e である PowerShell コマンドの例を次に示します。
 
@@ -938,7 +938,7 @@ Outlook でのみラベルを表示する場合は、 **outlook の電子メー�
 Word、Excel、PowerPoint に対して、自動分類はバックグラウンドで継続的に実行されます。
 
 この動作は Outlook でも変わりません。
-Azure Information Protection 統合されたラベル付けクライアントが指定された条件ルールのドキュメントを定期的にチェックすると、この動作により、SharePoint Online に格納されているドキュメントの自動および推奨の分類と保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。
+Azure Information Protection 統合されたラベル付けクライアントが指定された条件ルールのドキュメントを定期的にチェックすると、この動作により、SharePoint に格納されているドキュメントの自動および推奨の分類と保護が有効になります。 条件規則が既に実行されているため、大きなファイルもすばやく保存されます。
 
 条件規則がユーザーの入力と同時にリアルタイムで実行されることはありません。 ドキュメントが変更された場合、バックグラウンド タスクとして定期的に実行されます。
 
@@ -959,13 +959,13 @@ PowerShell コマンドの例:
 
 この詳細設定を使用して、ラベルの色を設定します。 色を指定するには、色の赤、緑、および青 (RGB) コンポーネントの16進数の16進コードを入力します。 たとえば、#40e0d0 は水色の RGB 16 進値です。
 
-これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \<色の>](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \< 色の>](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
 ラベルの色の詳細設定を構成するには、選択したラベルに次の文字列を入力します。
 
 - キー: **color**
 
-- 値: \<RGB の16進数値>
+- 値: \< RGB の16進数値>
 
 PowerShell コマンドの例: ラベルの名前は "Public" です。
 
