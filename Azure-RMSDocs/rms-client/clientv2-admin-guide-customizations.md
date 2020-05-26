@@ -4,7 +4,7 @@ description: Windows 用に Azure Information Protection 統合ラベルクラ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/05/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: fdfbd6bded95a8fc2c156a34fb17f5241b65cf70
+ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746306"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825460"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -680,7 +680,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 スキャナーバージョン 2.7. x. x から、CPU の使用量を制限することをお勧めします。この場合 **、cpu の詳細設定**方法として、次の**スキャン**を行います。 
 
 > [!IMPORTANT]
-> **Scanを**使用することはできません。 **cpu**の詳細設定メソッドと、スレッドを制限するポリシーを使用することはできません。 メソッドを使用して CPU 使用量を制限するには、既に設定されている[スレッド制限ポリシー](#limit-the-number-of-threads-used-by-the-scanner)の使用を中止する必要があります。 
+> 次のスレッド制限ポリシーが使用されている場合、 **Scanare maxcpu**および**Scanare mincpu**の詳細設定は無視されます。 **スキャン**を使用して cpu 消費を制限し、cpu の詳細設定を**スキャン**するには、スレッドの数を制限するポリシーの使用を取り消します。 
+
+この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
 スキャナーコンピューターの CPU 使用量を制限するために、 **Scanmachines maxcpu**と**Scanmachines mincpu**の2つの詳細設定を作成することにより、管理が容易になります。 
 
