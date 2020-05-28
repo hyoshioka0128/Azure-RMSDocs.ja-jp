@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 51d5ea830335e86007a3caabbbf724d16c33f97b
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
+ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825445"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84022950"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -111,7 +111,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |変数を使用した動的な視覚的マーキング:| **はい** | **はい** | いいえ |
 |ファイルエクスプローラーでラベルを付ける:| **はい** | **はい** | いいえ |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **はい** | **はい** | いいえ|
-|ラベルを適用するための PPDF のサポート:| **はい** | いいえ | いいえ |
+|ラベルを適用するための PDF サポート:| **はい** | いいえ | いいえ |
 |PowerShell のラベル付けコマンドレット:| **はい** | **はい** <sup>4</sup> | いいえ |
 |保護アクションに対するオフライン サポート:| **はい** | **可** <sup>5</sup> | **はい** |
 |切断されたコンピューターの手動ポリシーファイル管理:| **はい** |**はい**| いいえ |
@@ -124,7 +124,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |アカウントの切り替えのサポート:| いいえ | いいえ | **はい** |
 |リモートデスクトップサービスのサポート:| **はい** | **はい** | **はい** |
 |AD RMS のサポート:| **はい** | いいえ <sup>7</sup> | いいえ |
-|アプリ内の外部コンテンツマークの削除| **はい**| いいえ| **はい**|
+|アプリ内の外部コンテンツマークの削除| **はい**| いいえ| いいえ|
 
 
 脚注:
