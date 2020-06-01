@@ -4,7 +4,7 @@ description: Word や Outlook などのエンド ユーザー Office アプリ�
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/04/2019
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 113a69605c1971047c7afef6a5f153ef5026d251
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 3dcb4d386e5a7c6fca1506f04b478f93da251f5a
+ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747197"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "84238730"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -81,10 +81,10 @@ SharePoint Server を使用する場合、Azure Rights Management コネクタ�
 > 
 > - 複数のユーザーが同時にドキュメントを編集する共同編集はサポートされていません。 IRM で保護されたライブラリ内のドキュメントを編集するには、まずドキュメントをチェック アウトしてダウンロードし、Office アプリケーションで編集する必要があります。 そのため、一度に編集できるのは 1 人のみです。
 
-IRM で保護されていないライブラリの場合、SharePoint または OneDrive にアップロードするファイルを保護すると、次のファイルは使用できません。共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP)。
+IRM で保護されていないライブラリの場合、SharePoint または OneDrive にアップロードするファイルに保護のみを適用すると、このファイルは使用できません。共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP) です。
 
-> [!TIP]
-> SharePoint IRM を使用する代わりに、機密ラベルを使用して、 [sharepoint と OneDrive (パブリックプレビュー) で暗号化を適用し、Office ファイルの機密ラベルを有効に](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)することを検討してください。
+> [!IMPORTANT]
+> SharePoint IRM は、保護を適用する機密ラベルと組み合わせて使用できます。 両方の機能を同時に使用すると、保護されたファイルの動作が変わります。 詳細については、「 [SharePoint および OneDrive での Office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
 
 SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「 [OneDrive と sharepoint でのデータの暗号化](https://technet.microsoft.com/library/dn905447.aspx)」を参照してください。
 
@@ -99,7 +99,7 @@ SharePoint の IRM を構成する用意ができている場合:
 - Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Office 365 をお持ちの場合、「[Office 365 のファイル保護ソリューション](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect)」をご覧になることをお勧めします。Office 365 のファイルを保護するための推奨機能を説明しています。
 
