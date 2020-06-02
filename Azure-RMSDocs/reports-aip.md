@@ -13,19 +13,16 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: ea0081e4f81a3ea123c3ff58e57334b46df00521
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747167"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249897"
 ---
-# <a name="central-reporting-for-azure-information-protection"></a>Azure Information Protection の中央レポート機能
+# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Azure Information Protection の中央レポート (パブリックプレビュー)
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
-> [!NOTE]
-> 現在のところ、この機能はプレビュー段階で、変更される可能性があります。
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに
 
@@ -121,7 +118,13 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - クライアント オペレーティング システムのバージョン。
 
-この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 詳細については、「[Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)」セクションをご覧ください。 ワークスペースへのアクセスの管理の詳細については、Azure ドキュメントの [Azure アクセス許可を使用した Log Analytics ワークスペースへのアクセスの管理](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)に関するセクションをご覧ください。
+この情報は、ご自身の組織が所有している Azure Log Analytics ワークスペースに格納され、Azure Information Protection とは別に、このワークスペースへのアクセス権を持つユーザーが表示できます。 
+
+詳細については、次のリンクを参照してください。
+
+- [Azure Information Protection 分析に必要なアクセス許可](#permissions-required-for-azure-information-protection-analytics)
+- [Azure のアクセス許可を使用して Log Analytics ワークスペースへのアクセスを管理する](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [監査ログの参照の Azure Information Protection](audit-logs.md)
 
 Azure Information Protection クライアント (クラシック) がこのデータを送信できないようにするには、[**監査データを Azure Information Protection analytics に送信する**] の[ポリシー設定](configure-policy-settings.md)を [**オフ**] に設定します。
 
@@ -145,7 +148,7 @@ Azure Information Protection を使用すると、機密情報の種類 (定義�
 
 - 統一されたラベル付けクライアントの場合は、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)を構成します。
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>必須コンポーネント
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
@@ -352,7 +355,7 @@ InformationProtectionEvents
 この例では、アクション前のラベルの名前に **Confidential** (社外秘) が含まれ、アクション後の名前に **Confidential** が含まれていない場合のみ、ダウングレードされたラベルとしてカウントされます。 
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 レポートの情報を確認した後、Azure Information Protection クライアントを使用している場合は、Azure Information Protection ポリシーに変更を加えることができます。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。
 
 Microsoft 365 のサブスクリプションがある場合は、Microsoft 365 コンプライアンス センターと Microsoft 365 セキュリティ センターでラベルの使用状況を表示することもできます。 詳しくは、「[ラベル分析によるラベル使用状況の表示](/microsoft-365/compliance/label-analytics)」をご覧ください。

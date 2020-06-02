@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection のクライアント
 description: Microsoft Azure Information Protection は、組織のデータを保護するクライアント/サーバー型のソリューションです。 クライアント (Azure Information Protection クライアントまたは Rights Management クライアント) は、コンピューターおよびモバイル デバイスで実行するアプリケーションに統合されます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
-ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
+ms.openlocfilehash: 13128b48be4dd4e64e767e121551c4c2e8692e78
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84022950"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250052"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -37,7 +37,7 @@ Azure Information Protection は、組織の文書や電子メールを保護す
 
 これらのクライアントはすべて Office アプリケーションと統合されますが、統一されたラベル付けクライアントとクラシッククライアントは個別にインストールし、追加の機能とコンポーネントをサポートする必要があります。 たとえば、これらのクライアントにはエクスプローラーのサポートが含まれているので、Office 以外でファイルを分類して保護することができます。 追加のコンポーネントには、保護された PDF ドキュメントと保護されたイメージのビューアー、およびオンプレミスのデータストアのスキャナーが含まれます。
 
-RMS クライアントは保護のみを提供します。 このクライアントは、Office アプリケーション、Azure Information Protection クライアント、ソフトウェアベンダーからの RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、IRM で保護され[たライブラリや OneDrive からのファイルの同期](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)、および rights management による保護を基幹業務アプリケーションに統合する開発者のために、[単独でインストール](https://www.microsoft.com/en-us/download/details.aspx?id=38396)することもできます。
+RMS クライアントは保護のみを提供します。 このクライアントは、Office アプリケーション、Azure Information Protection クライアント、ソフトウェアベンダーからの RMS 対応アプリケーションなど、一部のアプリケーションと共に自動的にインストールされます。 ただし、IRM で保護され[たライブラリや OneDrive からのファイルの同期](https://docs.microsoft.com/onedrive/deploy-on-windows)、および rights management による保護を基幹業務アプリケーションに統合する開発者のために、[単独でインストール](https://www.microsoft.com/download/details.aspx?id=38396)することもできます。
 
 ## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Windows コンピューターに使用するラベル付けクライアントを選択する
 
@@ -46,13 +46,13 @@ RMS クライアントは保護のみを提供します。 このクライアン
 Windows コンピューターのクライアントにラベルを付ける方法は、使用する管理ポータルの影響を受ける可能性があります。
 
 - Office に組み込まれているラベル付けクライアントと Azure Information Protection は、次の管理センターのラベルとポリシー設定をクライアントにダウンロードします。 
-    - Office 365 セキュリティ/コンプライアンス センター
+    - Office 365 セキュリティ/コンプアライアンス センター
     - Microsoft 365 セキュリティ センター
     - Microsoft 365 コンプライアンス センター
 
 - Azure Information Protection クライアント (クラシック) は、Azure portal からラベルとポリシー設定をダウンロードします。
 
-統一されたラベル付けクライアントと従来のクライアントは Office に個別にインストールする必要があるため、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からこれらのクライアントをダウンロードしてインストールする必要があります。 
+統一されたラベル付けクライアントと従来のクライアントは Office に個別にインストールする必要があるため、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からこれらのクライアントをダウンロードしてインストールする必要があります。 
 
 どのクライアントを使用する必要がありますか。
 
@@ -101,30 +101,30 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |ラベルに対するユーザー定義のアクセス許可: <br />-Word、Excel、PowerPoint、エクスプローラーのカスタムアクセス許可| **はい** | **はい** | **はい** |
 |ラベルの多言語サポート:| **はい** | **はい** |**はい** |
 |メールの添付ファイルからのラベル継承:| **はい** | **はい**  |いいえ |
-|以下を含むカスタマイズ:<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| **はい** <sup>1</sup> | **はい** <sup>2</sup> | いいえ |
-|オンプレミスのデータ ストア用のスキャナー:| **はい** | **うん<br />** | いいえ |
+|以下を含むカスタマイズ:<br />- メールの既定のラベル<br />-Outlook のポップアップメッセージ <br />- S/MIME のサポート<br />- [問題の報告] オプション| **はい** <sup>1</sup> | **はい** <sup>2</sup> | No |
+|オンプレミスのデータ ストア用のスキャナー:| **はい** | **うん<br />** | No |
 |中央レポート機能 (分析):| **はい** | **はい** | いいえ |
-|ラベルとは別に設定するカスタムのアクセス許可:| **はい** | **はい** <sup>3</sup>| いいえ |
+|ラベルとは別に設定するカスタムのアクセス許可:| **はい** | **はい** <sup>3</sup>| No |
 |Office アプリの Information Protection バー: | **はい** | **はい**| いいえ |
 |ラベルアクションとしての視覚的なマーキング (ヘッダー、フッター、透かし):| **はい** | **はい** | **はい**|
 |アプリごとの視覚的マーキング:| **はい** | **はい** | いいえ |
 |変数を使用した動的な視覚的マーキング:| **はい** | **はい** | いいえ |
 |ファイルエクスプローラーでラベルを付ける:| **はい** | **はい** | いいえ |
 |保護されたファイルのビューアー (テキスト、画像、PDF、pfile):| **はい** | **はい** | いいえ|
-|ラベルを適用するための PDF サポート:| **はい** | いいえ | いいえ |
-|PowerShell のラベル付けコマンドレット:| **はい** | **はい** <sup>4</sup> | いいえ |
+|ラベルを適用するための PDF サポート:| **はい** | いいえ | No |
+|PowerShell のラベル付けコマンドレット:| **はい** | **はい** <sup>4</sup> | No |
 |保護アクションに対するオフライン サポート:| **はい** | **可** <sup>5</sup> | **はい** |
 |切断されたコンピューターの手動ポリシーファイル管理:| **はい** |**はい**| いいえ |
-|HYOK のサポート:| **はい** | いいえ | いいえ |
-|イベントビューアーの使用状況ログ:| **はい** | いいえ |いいえ |
-|Outlook の [転送不可] ボタンを表示します。| **はい** | いいえ | いいえ |
-|保護されたトラックの文書化:| **はい** | **はい** <sup>6</sup> | いいえ |
-|保護されたドキュメントの取り消し:| **はい** | いいえ | いいえ |
-|保護のみモード (ラベルなし):| **はい** | いいえ | いいえ |
-|アカウントの切り替えのサポート:| いいえ | いいえ | **はい** |
+|HYOK のサポート:| **はい** | いいえ | No |
+|イベントビューアーの使用状況ログ:| **はい** | いいえ |No |
+|Outlook の [転送不可] ボタンを表示します。| **はい** | いいえ | No |
+|保護されたトラックの文書化:| **はい** | **はい** <sup>6</sup> | No |
+|保護されたドキュメントの取り消し:| **はい** | いいえ | No |
+|保護のみモード (ラベルなし):| **はい** | いいえ | No |
+|アカウントの切り替えのサポート:| No | いいえ | **はい** |
 |リモートデスクトップサービスのサポート:| **はい** | **はい** | **はい** |
-|AD RMS のサポート:| **はい** | いいえ <sup>7</sup> | いいえ |
-|アプリ内の外部コンテンツマークの削除| **はい**| いいえ| いいえ|
+|AD RMS のサポート:| **はい** | いいえ <sup>7</sup> | No |
+|アプリ内の外部コンテンツマークの削除| **はい**| いいえ| No|
 
 
 脚注:
@@ -198,7 +198,7 @@ Azure Information Protection クライアント (クラシック) では、サ�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection クライアントをインストールして構成するには、次のドキュメントを参照してください。
 

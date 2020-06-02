@@ -1,10 +1,10 @@
 ---
 title: カスタム構成-Azure Information Protection 統合されたラベル付けクライアント
 description: Windows 用に Azure Information Protection 統合ラベルクライアントをカスタマイズする方法について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/25/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fdfbd6bded95a8fc2c156a34fb17f5241b65cf70
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: c1e662644bd84fd1ec6ba40d838ace505693fd68
+ms.sourcegitcommit: a4e367f8a51074a4cbde14943ca4d24918138ef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825460"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256595"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -120,7 +120,7 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 |設定|シナリオと手順|
 |----------------|---------------|
-|AdditionalPPrefixExtensions|[EXT> の変更のサポート \< 。\<この詳細プロパティを使用して PFILE を P EXT> にする](#additionalpprefixextensions)
+|AdditionalPPrefixExtensions|[変更のサポート \<EXT> 。\<EXT>この詳細プロパティを使用して PFILE を P に](#additionalpprefixextensions)
 |AttachmentAction|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[添付ファイルのある電子メール メッセージの場合、その添付ファイルの最上位の分類と一致するラベルを適用します](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |DisableMandatoryInOutlook|[必須ラベルから Outlook メッセージを除外する](#exempt-outlook-messages-from-mandatory-labeling)
@@ -149,6 +149,8 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 |Runauditinformationタイプの検出|[ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)|
+|Scantaskattributeattributeskip | [ファイル属性に応じてスキャン中にファイルをスキップまたは無視する](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|UseCopyAndPreserveNTFSOwner | [ラベル付け中に NTFS 所有者を保持する](#preserve-ntfs-owners-during-labeling-public-preview)
 
 "Global" という名前のラベルポリシーに対してラベルポリシー設定が有効であることを確認する PowerShell コマンドの例を次に示します。
 
@@ -225,7 +227,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この設定を構成すると、 [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)コマンドレット**set-aipfilelabel**が有効になり、PST、rar、7ZIP、および MSG ファイルからの保護の削除が可能になります。
 
-- キー:**設定-LabelPolicy**
+- キー: **EnableContainerSupport**
 
 - 値: **True**
 
@@ -243,7 +245,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **OutlookDefaultLabel**
 
-- 値: \< **ラベル GUID**> または**None**
+- 値: \<**label GUID**> または**None**
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
@@ -261,14 +263,14 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **PFileSupportedExtensions**
 
-- 値: ** \< 文字列値>** 
+- 数値**\<string value>** 
 
 次の表を使用して、指定する文字列値を指定します。
 
-| 文字列値| Client| スキャナー|
+| 文字列値| クライアント| スキャナー|
 |-------------|-------|--------|
 |\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
-|\<null 値>| Office ファイルの種類と PDF ファイルに保護を適用する| 既定値: Office ファイルの種類と PDF ファイルに保護を適用する|
+|\<null value>| Office ファイルの種類と PDF ファイルに保護を適用する| 既定値: Office ファイルの種類と PDF ファイルに保護を適用する|
 |Convertto-html (".jpg", ".png")|Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。 | Office のファイルの種類と PDF ファイルに加えて、指定したファイル名拡張子に保護を適用します。
 
 例 1: Office ファイルの種類と PDF ファイルのみを保護する統合クライアント用の PowerShell コマンド。ラベルポリシーには "Client" という名前が付けられています。
@@ -287,19 +289,19 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ### <a name="additionalpprefixextensions"></a>AdditionalPPrefixExtensions
 
-統一されたラベル付けクライアントは、EXT> の変更をサポートし \< ます。PFILE は、 \< 詳細プロパティ**AdditionalPPrefixExtensions**を使用して、P EXT> にします。 この詳細プロパティは、右クリック、PowerShell、およびスキャナーでサポートされています。 すべてのアプリの動作は似ています。   
+統一されたラベル付けクライアントは、変更をサポート \<EXT> します。詳細プロパティの AdditionalPPrefixExtensions を使用して、PFILE を P にし \<EXT> ます。 **AdditionalPPrefixExtensions** この詳細プロパティは、右クリック、PowerShell、およびスキャナーでサポートされています。 すべてのアプリの動作は似ています。   
 
 - キー: **AdditionalPPrefixExtensions**
 
-- 値: ** \< 文字列値>** 
+- 数値**\<string value>** 
 
 次の表を使用して、指定する文字列値を指定します。
 
 | 文字列値| クライアントとスキャナー|
 |-------------|---------------|
-|\*|すべての PFile 拡張機能は P EXT> になります \<|
-|\<null 値>| 既定値は、既定の保護値のように動作します。|
-|Convertto-html (".dwg", ".zip")|前の一覧に加えて、".dwg" と ".zip" は P EXT になり \<>| 
+|\*|すべての PFile 拡張機能は P になります\<EXT>|
+|\<null value>| 既定値は、既定の保護値のように動作します。|
+|Convertto-html (".dwg", ".zip")|前の一覧に加えて、".dwg" と ".zip" は P になります。\<EXT>| 
 
 例 1: 保護 ".dwg" が "pfile" になる既定の動作と同じように動作する PowerShell コマンド。
 
@@ -313,7 +315,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-この設定では、次の拡張機能 (「」を使用します。 txt "、" .xml "、" .bmp "、" jfif "、" .jpg "、" .jpeg "、" "、" .png "、" .png "、" .xml "、" .gif "など) は常に P EXT> になりますが、このようにすることはでき \< ませんでした。 注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
+この設定では、次の拡張機能 (「」を使用します。 txt "、" .xml "、" .bmp "、" jfif "、" .jpg "、" .jpeg "、" jpe "、". .png "、" "、". jpe "、" .png "、" .tif "、" tiff "、" .gif ") は常に P になり \<EXT> ます。注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
 **AdditionalPPrefixExtensions**は、advanced プロパティ- [**Pfilesupportedexテンション**](#pfilesupportedextension)が有効になっている場合にのみ機能します。 
 
 たとえば、次のコマンドが使用されているとします。
@@ -342,8 +344,155 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
 
-> [!NOTE]
-> 現在、この構成には既知の制限があり、今後のバージョンで再リリースされる予定です。 
+この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
+
+他のラベル付けソリューションから分類を削除するには、次の2つの方法があります。 最初のメソッドは、図形名が詳細プロパティ**WordShapeNameToRemove**で定義されている名前と一致する word 文書から図形を削除します。2番目の方法では、 **Removeexternalcontentmarkinginapp**詳細プロパティで定義されている、word、Excel、および PowerPoint ドキュメントからテキストベースのヘッダーまたはフッターを削除または置換できます。 
+
+### <a name="use-the-wordshapenametoremove-advanced-property"></a>WordShapeNameToRemove advanced プロパティを使用する
+
+***WordShapeNameToRemove** advanced プロパティは、バージョン2.6.101.0 以降でサポートされています。*
+
+この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、Word 文書から図形ベースのラベルを削除または置換できます。 たとえば、図形には、新しいラベル名と独自の図形を使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
+
+この詳細プロパティを使用するには、Word 文書で図形名を検索し、図形の**WordShapeNameToRemove**詳細プロパティリストで定義する必要があります。 この詳細プロパティの図形の一覧で定義されている名前で始まる Word の図形は、サービスによって削除されます。
+
+削除するすべての図形の名前を定義し、リソースを集中的に使用するプロセスであるすべての図形のテキストをチェックしないようにすることで、無視するテキストを含む図形を削除しないようにします。
+
+この追加の詳細プロパティ設定で Word 図形を指定せず、 **Removeexternalcontentmarkinginapp**キー値に word が含まれている場合は、 **Externalcontentmarkingtorclean**値で指定したテキストのすべての図形がチェックされます。 
+
+使用していて除外する図形の名前を検索するには、次のようにします。
+
+1. Word で、**選択**ウィンドウを表示します。 [**ホーム**] タブ >**編集**グループ > 選択] ウィンドウの [オプション > 選択 **] ウィンドウ****を選択**します。
+
+2. 削除対象としてマークするページ上の図形を選択します。 マークした図形の名前が**選択**ウィンドウで強調表示されるようになりました。
+
+図形の名前を使用して、* * * * WordShapeNameToRemove * * * キーの文字列値を指定します。 
+
+例: シェイプ名は**dc**です。 この名前の図形を削除するには、値 `dc` を指定します。
+
+- キー: **WordShapeNameToRemove**
+
+- 値: \<**Word shape name**> 
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+複数の単語図形を削除する場合は、削除する図形の数を指定します。
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>RemoveExternalContentMarkingInApp 詳細設定プロパティの使用
+この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、テキストベースのヘッダーまたはフッターをドキュメントから削除したり置き換えることができます。 たとえば、古いフッターには、新しいラベル名とその独自のフッターを使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
+
+統一されたラベル付けクライアントがポリシーでこの構成を取得すると、Office アプリでドキュメントを開いたときに古いヘッダーとフッターが削除されるか、またはドキュメントに機密ラベルが適用されます。
+
+この構成は Outlook ではサポートされていません。そのため、この構成を Word、Excel、PowerPoint で使用すると、ユーザーのこれらのアプリのパフォーマンスに悪影響が生じる場合があります。 この構成ではアプリケーションごとの設定を定義することができます。たとえば、Word 文書のヘッダーとフッターのテキストは検索し、Excel のスプレッドシートや PowerPoint のプレゼンテーションのテキストは検索しないようにできます。
+
+パターンマッチングはユーザーのパフォーマンスに影響するため、Office アプリケーションの種類 (**W**Ord、E**X**セル、 **P**owerpoint) は、検索する必要があるものだけに制限することをお勧めします。
+選択したラベルポリシーについて、次の文字列を指定します。
+- キー: **RemoveExternalContentMarkingInApp**
+
+- 値: \<**Office application types WXP**> 
+
+例 :
+
+- Word 文書のみを検索するには、**W** を指定します。
+
+- Word 文書と PowerPoint プレゼンテーションを検索するには、**WP** を指定します。
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+
+この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 **ExternalContentMarkingToRemove** が必要です。
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>ExternalContentMarkingToRemove を構成する方法
+
+**ExternalContentMarkingToRemove** キーに文字列値を指定するときには、正規表現を使用する 3 つのオプションがあります。
+
+- ヘッダーまたはフッターのすべてを削除する部分一致。
+
+    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 これらのヘッダーまたはフッターを完全に削除したいとします。 値 `*TEXT*` を指定します。
+
+- ヘッダーまたはフッターの特定の単語のみを削除する完全一致。
+
+    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 単語 **TEXT** のみを削除し、ヘッダーまたはフッター文字列は **TO REMOVE** として残したいとします。 値 `TEXT ` を指定します。
+
+- ヘッダーまたはフッターのすべてを削除する完全一致。
+
+    例: ヘッダーまたはフッターに文字列 **TEXT TO REMOVE** が含まれている場合。 正確にこの文字列が含まれているヘッダーまたはフッターを削除したいとします。 値 `^TEXT TO REMOVE$` を指定します。
+
+
+指定した文字列のパターン マッチングでは大文字と小文字が区別されます。 文字列の最大長は255文字で、空白を含めることはできません。 
+
+一部のドキュメントには非表示の文字やさまざまな種類のスペースやタブが含まれているため、語句や文に指定した文字列が検出されない可能性があります。 値には、できるだけ単独の特徴的な単語を指定し、運用環境に展開する前に結果をテストしてください。
+
+同じラベルポリシーについて、次の文字列を指定します。
+
+- キー: **ExternalContentMarkingToRemove**
+
+- 値: \<**string to match, defined as regular expression**> 
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+
+#### <a name="multiline-headers-or-footers"></a>複数行のヘッダーまたはフッター
+
+ヘッダーまたはフッターのテキストが複数行にわたる場合は、行ごとにキーと値を作成します。 たとえば、2 行にわたる次のフッターがあるとします。
+
+**ファイルは社外秘として分類**
+
+**ラベルは手動で適用**
+
+この複数行のフッターを削除するには、同じラベルポリシーに対して次の2つのエントリを作成します。
+
+- キー: **ExternalContentMarkingToRemove**
+
+- キー値 1: ** \* 社外秘***
+
+- キー値 2: ** \* ラベルが適用され**ました* 
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+
+
+#### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
+
+PowerPoint では、フッターが図形として実装されます。 指定したテキストのうち、ヘッダーまたはフッターでない図形が削除されるのを防ぐには、**PowerPointShapeNameToRemove** という名前の、追加のクライアントの詳細設定を使用します。 また、すべての図形のテキストのチェックはリソースを消費するプロセスであるため、この設定を使用して回避することをお勧めします。
+
+この追加のクライアントの詳細設定を指定せず、PowerPoint が **RemoveExternalContentMarkingInApp** キーの値に含まれている場合、**ExternalContentMarkingToRemove** で指定したテキストがすべての図形でチェックされます。 
+
+ヘッダーまたはフッターとして使用している図形の名前を検索するには:
+
+1. PowerPoint の**選択**ウィンドウを表示し、**[書式]** タブ > **[配置]** グループ > **[選択ウィンドウ]** の順に選択します。
+
+2. ヘッダーまたはフッターを含むスライド上の図形を選択します。 選択した図形の名前が、**選択**ウィンドウで強調表示されます。
+
+図形の名前を使用して、**PowerPointShapeNameToRemove** キーの文字列値を指定します。 
+
+例: 図形の名前は **fc** です。 この名前の図形を削除するには、値 `fc` を指定します。
+
+- キー: **PowerPointShapeNameToRemove**
+
+- 値: \<**PowerPoint shape name**> 
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+
+複数の PowerPoint 図形を削除する場合は、削除する図形の数を指定します。
+
+既定では、マスター スライドのヘッダーとフッターのみがチェックされます。 この検索の対象をすべてのスライドに広げるには、**RemoveExternalContentMarkingInAllSlides** という名前の、追加のクライアントの詳細設定を使用します。ただし、このプロセスはリソースをより多く消費します。
+
+- キー: **RemoveExternalContentMarkingInAllSlides**
+
+- 値: **True**
+
+PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>エクスプローラーでカスタムアクセス許可を無効にする
 
@@ -403,7 +552,7 @@ PowerShell コマンドの例:
 
 - キー 2: **Attachmentactiontip**
 
-- キー値 2: "カスタマイズされた \< ツールヒント>"
+- キー値 2: " \<customized tooltip> "
 
 カスタマイズしたツールヒントでは、単一の言語のみがサポートされます。
 
@@ -421,7 +570,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **ReportAnIssueLink**
 
-- 値: ** \< HTTP 文字列>**
+- 数値**\<HTTP string>**
 
 Web サイトの値の例: `https://support.contoso.com`
 
@@ -467,19 +616,19 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
     
     - キー: **OutlookWarnUntrustedCollaborationLabel**
     
-    - 値: \< **ラベル guid、コンマ区切り**>
+    - 値: \<**label GUIDs, comma-separated**>
 
 - 理由の入力メッセージ: 
     
     - キー: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - 値: \< **ラベル guid、コンマ区切り**>
+    - 値: \<**label GUIDs, comma-separated**>
 
 - ブロック メッセージ: 
     
     - キー: **OutlookBlockUntrustedCollaborationLabel**
     
-    - 値: \< **ラベル guid、コンマ区切り**>
+    - 値: \<**label GUIDs, comma-separated**>
 
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
@@ -504,19 +653,19 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
     
     - キー: **OutlookWarnTrustedDomains**
     
-    - 値: **\<** ドメイン名、コンマ区切り**>**
+    - 数値**\<**domain names, comma separated**>**
 
 - 理由の入力メッセージ: 
     
     - キー: **Outlookジャスト Ifytrusteddomains**
     
-    - 値: **\<** ドメイン名、コンマ区切り**>**
+    - 数値**\<**domain names, comma separated**>**
 
 - ブロック メッセージ: 
     
     - キー: **Outlookblocktrusteddomains**
     
-    - 値: **\<** ドメイン名、コンマ区切り**>**
+    - 数値**\<**domain names, comma separated**>**
 
 たとえば、[**社外秘 \ すべての従業員**] ラベルに対して**OutlookBlockUntrustedCollaborationLabel**アドバンストクライアント設定を指定したとします。 ここで、 **Outlookジャスト Ifytrusteddomains**と**contoso.com**の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" john@sales.contoso.com **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
 
@@ -573,7 +722,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - キー: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- 値: **\<** メッセージを表示するファイル名拡張子 (コンマ区切り)**>**
+- 数値**\<**file name extensions to display messages, comma separated**>**
 
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
@@ -709,7 +858,7 @@ Scanに**cpu**がチェックされるのは、 **scan@ cpu**が100と等しく�
 
 - キー: **ScannerConcurrencyLevel**
 
-- 値: ** \< 同時実行スレッドの数>**
+- 数値**\<number of concurrent threads>**
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" です。
 
@@ -925,7 +1074,7 @@ Outlook でのみラベルを表示する場合は、 **outlook の電子メー�
 
 - キー: **DefaultSubLabelId**
 
-- 値: \< サブラベル GUID>
+- 値: \<sublabel GUID>
 
 たとえば、親ラベルの名前が "Confidential" で、"All Employees" サブラベルの GUID が8faca7b8-8d20-48a3-8ea2-0f96310a848e である PowerShell コマンドの例を次に示します。
 
@@ -961,13 +1110,13 @@ PowerShell コマンドの例:
 
 この詳細設定を使用して、ラベルの色を設定します。 色を指定するには、色の赤、緑、および青 (RGB) コンポーネントの16進数の16進コードを入力します。 たとえば、#40e0d0 は水色の RGB 16 進値です。
 
-これらのコードの参照が必要な場合は、MSDN web ドキュメントの「 [ \< 色の>](https://developer.mozilla.org/docs/Web/CSS/color_value) 」ページから役に立つテーブルを見つけることができます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
+これらのコードの参照が必要な場合は、MSDN web docs のページにある役に立つテーブルを確認でき [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) ます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
 ラベルの色の詳細設定を構成するには、選択したラベルに次の文字列を入力します。
 
 - キー: **color**
 
-- 値: \< RGB の16進数値>
+- 値: \<RGB hex value>
 
 PowerShell コマンドの例: ラベルの名前は "Public" です。
 
@@ -1055,7 +1204,57 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 このレジストリ設定では、[中央レポート](../reports-aip.md)の Azure Information Protection に送信される情報は変更されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview"></a>ファイル属性に応じてスキャン中にファイルをスキップまたは無視する (パブリックプレビュー)
+
+この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
+
+既定では、Azure Information Protection 統合されたラベル付けスキャナーは、関連するすべてのファイルをスキャンします。 ただし、アーカイブされたファイルや移動されたファイルなど、スキップする特定のファイルを定義することもできます。 
+
+スキャナーで、**スキャン**の詳細設定を使用して、ファイル属性に基づいて特定のファイルをスキップできるようにします。 [設定] の値に、ファイルがすべて**true**に設定されている場合にスキップされるファイルの属性を一覧表示します。 このファイル属性の一覧では、ロジックとロジックを使用します。
+
+次のサンプルの PowerShell コマンドは、"Global" という名前のラベルでこの詳細設定を使用する方法を示しています。
+
+**読み取り専用のファイルとアーカイブされたファイルの両方をスキップする**
+
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+
+**読み取り専用またはアーカイブ済みのファイルをスキップする**
+
+ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+
+> [!TIP]
+> 次の属性を使用してファイルをスキップするようにスキャナーを有効にすることをお勧めします。
+> * FILE_ATTRIBUTE_SYSTEM
+> * FILE_ATTRIBUTE_HIDDEN
+> * FILE_ATTRIBUTE_DEVICE
+> * FILE_ATTRIBUTE_OFFLINE
+> * FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
+> * FILE_ATTRIBUTE_RECALL_ON_OPEN
+> * FILE_ATTRIBUTE_TEMPORARY
+
+**Scannerfsattributestoskip**詳細設定で定義できるすべてのファイル属性の一覧については、「 [Win32 ファイル属性定数](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants)」を参照してください。
+
+## <a name="preserve-ntfs-owners-during-labeling-public-preview"></a>ラベル付け中に NTFS 所有者を保持する (パブリックプレビュー)
+
+この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
+
+既定では、スキャナー、PowerShell、およびエクスプローラーの拡張機能のラベル付けによって、ラベル付けの前に定義された NTFS 所有者が保持されません。 
+
+NTFS 所有者の値が保持されるようにするには、選択したラベルポリシーの**UseCopyAndPreserveNTFSOwner** advanced 設定を**true**に設定します。
+
+> [!CAUTION]
+> この詳細設定を定義するのは、スキャナーとスキャンされたリポジトリの間に低待機時間で信頼性の高いネットワーク接続を確保できる場合だけにしてください。 ラベルの自動処理中にネットワークエラーが発生すると、ファイルが失われる可能性があります。
+
+ラベルポリシーの名前が "Global" の場合のサンプルの PowerShell コマンド:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+
+
+## <a name="next-steps"></a>次の手順
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [クライアントのファイルと使用状況ログ](client-admin-guide-files-and-logging.md)

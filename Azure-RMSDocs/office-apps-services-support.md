@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3dcb4d386e5a7c6fca1506f04b478f93da251f5a
-ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
+ms.openlocfilehash: 8dc7cc5f8e7c7a09293fedf0b4bb9874df339437
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "84238730"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249880"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -31,6 +31,9 @@ ms.locfileid: "84238730"
 たとえば、組織内の人だけがアクセスできるように Word 文書を設定できます。 あるいは、Excel スプレッドシートを編集可能にしたり、読み取り専用にしたり、印刷禁止にするかどうかを制御できます。 時間が重要なファイルの場合、ファイルにアクセスできなくなる有効期限を構成できます。 この構成はユーザーが直接行うか、保護テンプレートを適用して行うことができます。 Outlook の場合、ユーザーは、**[転送不可]** オプションを選択して、データの漏えいを防ぐこともできます。
 
 Office アプリを構成する準備ができている場合は、「 [office アプリ: クライアントの構成](configure-office-apps.md)」を参照してください。
+
+> [!NOTE]
+> 最近の Windows 更新プログラムの制限のため、電子メールに添付されているファイルは、ファイルを開いた後にロックされることがあります。
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。

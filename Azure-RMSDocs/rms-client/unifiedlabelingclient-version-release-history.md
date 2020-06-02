@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアント-バージョン履歴 & サポートポリシー
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/14/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 56194d242f6b079fc04765c8ceeeac5cddbf557d
-ms.sourcegitcommit: 93376be8c80776e572f1233812ef39fbabbbd0b2
+ms.openlocfilehash: b1e91bcbfca3d4f925750fd8d1f135bd8f4ff2c4
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550856"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250053"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -25,8 +25,7 @@ ms.locfileid: "83550856"
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-
-Azure Information Protection 統合されたラベル付けクライアントは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。
+Azure Information Protection 統合されたラベル付けクライアントは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードできます。
 
 通常、数週間の遅延が発生すると、最新の一般公開バージョンが Microsoft Update カタログにも含まれます。これには、 **Microsoft Azure Information Protection**Microsoft Azure Information Protection の製品名と、  >  **Microsoft Azure Information Protection Unified Labeling Client****更新プログラム**の分類が含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
@@ -62,26 +61,80 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="version-27930"></a>バージョン2.7.93.0
+## <a name="version-27950-public-preview"></a>バージョン2.7.95.0 パブリックプレビュー
 
-統一されたラベル付けスキャナー (パブリックプレビュー) バージョン2.7.93.0
+統一されたラベル付けスキャナーとクライアント (パブリックプレビュー) バージョン2.7.95.0
 
-**リリース**05/05/2020
+**リリース**06/01/2020
 
-**新機能:**
+**統一されたラベル付けスキャナーの新機能:**
 
-- この制限付きリリースは、以下で説明するように、統合されたラベル付けスキャナーバージョン2.7.93.0 のパブリックプレビューバージョンのみに焦点を絞っています。 
+- [スキャナーを使用して、推奨される条件に基づいてラベルを適用](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner)します。 AIP のお客様は、サービス側のみの自動ラベル付けを実装することを選択できるようになりました。 この機能により、AIP エンドユーザーは、前のシナリオではなく、常に推奨事項に従うことができます。これにより、ユーザー側での自動ラベル付けのみが有効になります。
 
-- **スキャナーの新プログラム**
-    - [スキャナーを使用して、推奨される条件に基づいてラベルを適用](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner)します。 AIP スキャナーでは、自動ラベル付け規則を "推奨ラベル" アクションで自動規則として扱うことができるようになりました。 この変更は、AIP の顧客がサービス側でのみ自動ラベル付けを実装することを選択できるように実装されました。これにより、エンドユーザーは、ユーザー側での自動ラベル付けのみを有効にする前のオプションの代わりに、常に推奨事項に従うことができます。
-    - [スキャナーによって以前に検出されたファイルをスキャンしたリポジトリから削除したこと](https://docs.microsoft.com/azure/information-protection/reports-aip)を確認するこれらの削除されたファイルは、以前に AIP analytics で報告されていなかったため、スキャナー検出レポートで使用できるようになりました。
-    - [エラー発生時にスキャナーからレポートを取得して、アクションイベントを適用](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions)します。 レポートを使用して、失敗したアクションイベントの詳細を確認し、今後発生しないようにする方法を見つけます。 
-    - 一般的なスキャナーエラーの検出と分析を行うための AIP scanner diagnostics analyzer ツールの導入。 AIP スキャナー診断の使用を開始するには、[新しい**Start-Aipscan**コマンドレットを実行](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool)します。 
-    - スキャナーコンピューターの最大 CPU 消費量を管理し、制限できるようになりました。 100% の CPU 使用率を防ぎ、CPU 使用率を管理する方法について説明します。 [2 つの新しい詳細設定である [ **Scan@ cpu**] と [ **scan、cpu**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption)] を使用します。 
+- [スキャナーによって以前に検出されたファイルをスキャンしたリポジトリから削除したこと](https://docs.microsoft.com/azure/information-protection/reports-aip)を確認するこれらの削除されたファイルは、以前に AIP analytics で報告されていなかったため、スキャナー検出レポートで使用できるようになりました。
 
-- **修正プログラムと機能強化** 
-    - スキャナー SQL のパフォーマンスの向上
-    - SharePoint のスキャンのパフォーマンスの向上
+- [エラー発生時にスキャナーからレポートを取得して、アクションイベントを適用](https://docs.microsoft.com/azure/information-protection/reports-aip#friendly-schema-reference-for-event-functions)します。 レポートを使用して、失敗したアクションイベントの詳細を確認し、今後発生しないようにする方法を見つけます。 
+
+- 一般的なスキャナーエラーの検出と分析を行うための AIP scanner diagnostics analyzer ツールの導入。 AIP スキャナー診断の使用を開始するには、[新しい**Start-Aipscan**コマンドレットを実行](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#troubleshooting-using-scanner-diagnostic-tool)します。 
+
+- スキャナーコンピューターの最大 CPU 消費量を管理し、制限できるようになりました。 100% の CPU 使用率を防ぎ、CPU 使用率を管理する方法について説明します。 [2 つの新しい詳細設定である [ **Scan@ cpu**] と [ **scan、cpu**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption)] を使用します。 
+
+- これで、ファイル属性に応じて特定のファイルをスキップするように、統一されたラベル付けスキャナーを構成できるようになりました。 新しい**[Scanthe Fsattributestoskip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)** 設定を使用してスキップするファイルをトリガーするファイル属性の一覧を定義します。
+
+**統一されたラベル付けクライアントの新機能:**
+
+- 統一されたラベル付けクライアントの既定のラベルに加えられた変更に対して、[理由ポップアップ](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)が表示されるようになりました。
+    
+- Office によって適用されたビジュアルコンテンツマーキングとの円滑な統合。 Office ドキュメントでコンテンツのマーキングを構成する方法の詳細については、「 [Azure information protection の視覚的なマーキングのラベルを構成する方法](../configure-policy-markings.md)」を参照してください。
+
+- New **WordShapeNameToRemove** advanced プロパティを使用すると、サードパーティ製のアプリケーションによって作成された Word 文書でコンテンツマークを削除できます。 [ **WordShapeNameToRemove**を使用して、既存の図形名を識別し、削除対象と](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)して定義する方法について説明します。
+
+**削除されたファイルに対して生成された新しい監査ログ**
+
+スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
+
+詳細については、次を参照してください。
+- [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
+- [Azure Information Protection の Central Reporting](../reports-aip.md)
+
+**TLS 1.2 の適用**
+
+このバージョンの Azure Information Protection クライアント以降では、1.2 以上の TLS バージョンのみがサポートされています。
+    
+Tls 1.2 をサポートしていない TLS セットアップを使用しているお客様は、Azure Information Protection ポリシー、トークン、監査、および保護を使用し、Azure Information Protection ベースの通信を受信するために、tls 1.2 をサポートするセットアップに移行する必要があります。 
+    
+要件の詳細については、「[ファイアウォールとネットワークインフラストラクチャの要件](../requirements.md#firewalls-and-network-infrastructure)」を参照してください。
+
+**修正プログラムと機能強化** 
+- スキャナー SQL の機能強化:
+    - パフォーマンス
+    - 大量の情報の種類が含まれるファイル
+    
+- SharePoint のスキャンの機能強化:
+    - スキャンのパフォーマンス
+    - パスに特殊文字が含まれるファイル
+    - ファイル数が大きいライブラリ
+    
+    SharePoint で Azure Information Protection を使用するためのクイックスタートを表示するには、「[クイックスタート: オンプレミスに格納されているファイルに保存されている機密情報を検索](../quickstart-findsensitiveinfo.md)する」を参照してください。
+        
+- ポリシーが不足している場合のユーザー通知の向上。 統一されたラベル付けクライアントのラベルポリシーの詳細については、Microsoft 365 のドキュメントで、[どのようなラベルポリシーを使用できるか](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)を参照してください。
+
+- [自動ラベル](../configure-policy-classification.md)が Excel で適用されるようになりました。ユーザーがファイルをアクティブに保存する場合と同じように、ユーザーが保存せずにファイルを閉じようとする場合です。
+
+- [Externalcontentmarkingtoremove](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)設定が構成されている場合、ヘッダーとフッターは想定どおりに削除され、各ドキュメントの保存では削除されません。
+
+- [動的ユーザー変数](../configure-policy-markings.md#using-variables-in-the-text-string)が、ドキュメントの視覚的なマーキングに期待どおりに表示されるようになりました。
+
+- 複数の Exchange アカウントが構成されていて、Azure Information Protection Outlook クライアントが有効になっている場合、メールは正常にセカンダリアカウントから送信されます。 Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
+
+- 高いレベルの機密性ラベルを持つドキュメントをドラッグして電子メールにドロップすると、電子メールでは、より高い機密性ラベルが期待どおりに自動的に受信されるようになります。 クライアント機能のラベル付けの詳細については、「[クライアント比較表](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
+
+- 電子メールアドレスにアポストロフィ (') とピリオド (.) の両方が含まれている場合、カスタムアクセス許可が意図したとおりに電子メールに適用されるようになりました。Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
+
+- 既定では、ファイルの NTFS 所有者は、統一されたラベル付けスキャナー、PowerShell、またはエクスプローラーの拡張機能によってラベルが付けられたときに失われます。 これで、新しい**[UseCopyAndPreserveNTFSOwner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** advanced 設定を**true**に設定して、ファイルの NTFS 所有者を保持するようにシステムを構成できます。 
+
+    **UseCopyAndPreserveNTFSOwner**の詳細設定では、スキャナーとスキャンされたリポジトリの間に、待機時間が短く、信頼性の高いネットワーク接続が必要です。
+
 
 ## <a name="version-261110"></a>バージョン2.6.111.0 
 
@@ -109,7 +162,6 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 - 統一されたラベル付けクライアントで Office アプリを使用して、[オフラインラベル機能](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers)のサポートが追加されました。
 
-
 **修正:**
 
 - RightFax によって作成された、保護された TIFF ファイルと TIFF ファイルを開こうとしてユーザーが失敗したインスタンスでは、TIFF ファイルが開き、予想どおりに安定した状態が維持されるようになりました。  
@@ -133,7 +185,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
     
     - 同じスキャナープロファイルを使用するようにスキャナーを構成するときに、複数のスキャナーが同じ SQL Server データベースを共有できます。 この構成により、複数のスキャナーの管理が容易になり、スキャン時間が短縮されます。 この構成を使用する場合は、スキャナーのインストールが完了するのを待ってから、同じプロファイルを使用して別のスキャナーをインストールします。
     
-    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースには**AIPScannerUL_ \< profile_name>** という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
+    - スキャナーをインストールするときにプロファイルを指定する必要があります。スキャナーデータベースには**AIPScannerUL_ \<profile_name> **という名前が付けられます。 *プロファイル*パラメーターは、Set-AIPScanner にも必須です。
     
     - ドキュメントにラベルが既に付いている場合でも、すべてのドキュメントに既定のラベルを設定できます。 スキャナープロファイルまたはリポジトリの設定で、[ラベルの再設定 **] オプションを** **[オン**] に設定し、新しい [既定の**ラベルを強制**する] チェックボックスをオンにします。
     
@@ -182,16 +234,16 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 **追加の変更**
 
-- [設定をリセット](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)すると、 \\ * \< \> * %LocalAppData%\Microsoft\MSIP\mip \\ * \< ProcessName \> *\ mip フォルダーではなく、%LocalAppData%\Microsoft\MSIP\mip ProcessName フォルダーが削除されるようになりました。
+- [設定をリセット](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)すると、 \\ *\<ProcessName.exe\>* %LocalAppData%\Microsoft\MSIP\mip/ \\ *\<ProcessName\>* mip フォルダーではなく%LocalAppData%\Microsoft\MSIP\mip フォルダーが削除されるようになりました。
 
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)に、保護されたドキュメントのコンテンツ ID が含まれるようになりました。
 
 
 ## <a name="next-steps"></a>次の手順
 
-インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
+統合ラベルが適切なクライアントでインストールされているかどうかわからない場合は、  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 
-このクライアントをインストールして使用する方法の詳細については、次を参照してください。 
+統合ラベル付けクライアントのインストールと使用の詳細については、次を参照してください。 
 
 - ユーザー向け: [クライアントをダウンロードしてインストールする](install-unifiedlabelingclient-app.md)
 

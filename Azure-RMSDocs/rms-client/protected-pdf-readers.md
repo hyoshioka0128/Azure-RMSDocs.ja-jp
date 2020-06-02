@@ -1,10 +1,10 @@
 ---
 title: Microsoft Information Protection の保護された PDF Reader
 description: 分類と保護のラベルが付けられた PDF ドキュメント用のリーダーをインストールする
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,18 +14,20 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 755424c1f3c813ca517ae4afcbe1e4d7a134276f
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746946"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250051"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>Microsoft Information Protection をサポートする PDF リーダー
 
 Microsoft Information Protection によって保護されている PDF ドキュメントを開く必要がある場合は、次のリンクと情報を参照してください。
 
-保護されている PDF ドキュメントには、機密情報が含まれている可能性があります。 セキュリティを強化するために、ドキュメントは暗号化されているため、承認されていない人物が読み取ることはできません。 このドキュメントを開くには、ドキュメントを開くためのアクセス許可が付与されていることを確認してから、暗号化を解除するリーダー (ビューアーと呼ばれることもあります) が必要です。
+保護されている PDF ドキュメントには、機密情報が含まれている可能性があります。 セキュリティを強化するために、ドキュメントは暗号化されており、承認されていない人物がドキュメントを閲覧することはできません。また、ドキュメントを表示している画面やスクリーンショットを共有することもできません 
+
+このドキュメントを開くには、ドキュメントを開くためのアクセス許可が付与されていることを確認してから、暗号化を解除するリーダー (ビューアーと呼ばれることもあります) が必要です。
 
 ## <a name="install-pdf-readers-for-your-device"></a>デバイスの PDF リーダーをインストールする
 
@@ -70,7 +72,7 @@ Microsoft と Adobe の連携により、分類され、必要に応じて保護
 
 - [Adobe reader と Microsoft Information Protection 統合に関してよく寄せられる質問](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このページのリンクを使用して PDF リーダーをインストールすると、保護された PDF ドキュメントを開くことができます。
 

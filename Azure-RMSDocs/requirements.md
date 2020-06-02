@@ -4,7 +4,7 @@ description: Azure Information Protection を組織に展開するために必�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/21/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 240dc9112d49ff2a3ad3c4e6f886062ca6529d97
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746248"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249846"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -128,7 +128,7 @@ Azure Information Protection クライアントは、次のいずれかの Offic
 
 - **Office アプリの最小バージョン 1805**。 Office 365 Business または Microsoft 365 Business から9330.2078 をビルドします。 
 
-このエディションは、ユーザーに Azure Rights Management のライセンスが割り当てられている場合にのみサポートされます (Office 365 の Azure Information Protection とも呼ばれます)。
+    このエディションは、ユーザーに Azure Rights Management のライセンスが割り当てられている場合にのみサポートされます (Office 365 の Azure Information Protection とも呼ばれます)。
 
 - **Office 365 ProPlus**
 
@@ -162,8 +162,9 @@ Azure Information Protection には、次の追加要件があります。
 
 - **Web プロキシ**。 認証が必要な web プロキシを使用する場合は、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
+    
 - **TLS クライアントとサービス間の接続**。 **Aadrm.com** URL に対してパケットレベルの検査を実行するなど、TLS クライアントからサービスへの接続を終了しないでください。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
-
+     
     Azure Rights Management サービスに到達する前にクライアント接続が終了しているかどうかを確認するには、次の PowerShell コマンドを使用します。
     
         $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
@@ -174,6 +175,8 @@ Azure Information Protection には、次の追加要件があります。
     
     発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
 
+- **TLS バージョン1.2 以降**(統一されたラベル付けクライアントのみ)。 統一されたラベル付けクライアントを使用するには、1.2 以上の TLS バージョンが必要です。これにより、暗号化が安全なプロトコルを使用し、Microsoft のセキュリティガイドラインに合わせることができます。
+    
 ### <a name="on-premises-servers"></a>オンプレミスのサーバー
 
 Azure Information Protection の Azure Rights Management サービスでは、次のオンプレミスサーバーがサポートされています。
