@@ -4,7 +4,7 @@ description: 現在のバージョンの Azure Information Protection スキャ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/05/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7d410c7cf697005750790fdb705c2a6e358aeec
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
+ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249914"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326320"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -278,21 +278,17 @@ SQL スクリプト:
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
     例 :
-    
-    - ローカル パスの場合: `C:\Folder`
-    
+      
     - ネットワーク共有の場合: `C:\Folder\Filename`
-    
-    - UNC パスの場合: `\\Server\Folder`
     
     - SharePoint ライブラリの場合: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
     > [!TIP]
     > "共有ドキュメント" の SharePoint パスを追加する場合:
     >
-     >- 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 たとえば次のようになります。`http://sp2013/Shared Documents`
+     >- 共有ドキュメントのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Shared Documents** を指定します。 例: `http://sp2013/Shared Documents`
      >
-     >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 たとえば次のようになります。`http://sp2013/Documents/Sales Reports`
+     >- 共有ドキュメント下のサブフォルダーのすべてのドキュメントとすべてのフォルダーをスキャンしたい場合は、パスに **Documents** を指定します。 例: `http://sp2013/Documents/Sales Reports`
     
     このウィンドウの残りの設定については、この初期構成では変更せず、[**コンテンツスキャンジョブ] の既定値**のままにしておきます。 これは、データリポジトリがコンテンツスキャンジョブから設定を継承することを意味します。 
     
@@ -462,7 +458,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 診断スキャンツールは、次のチェックを実行し、ログをエクスポートします。
 
-|チェック|考えられる結果|
+|○|考えられる結果|
 |-----------|----------|
 |データベースのチェック| は最新です。アクセス可能です|
 |ネットワークチェック| アクセス可能な Url|
@@ -783,7 +779,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 ----
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 
