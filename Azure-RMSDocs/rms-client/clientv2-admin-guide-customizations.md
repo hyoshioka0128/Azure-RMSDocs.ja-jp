@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c1e662644bd84fd1ec6ba40d838ace505693fd68
-ms.sourcegitcommit: a4e367f8a51074a4cbde14943ca4d24918138ef6
+ms.openlocfilehash: 8d9914a696355d376847a85a20b8918856aac5f5
+ms.sourcegitcommit: a44977027d3fbc33b580fd034700ea91d6a2548b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627676"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -346,7 +346,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
-他のラベル付けソリューションから分類を削除するには、次の2つの方法があります。 最初のメソッドは、図形名が詳細プロパティ**WordShapeNameToRemove**で定義されている名前と一致する word 文書から図形を削除します。2番目の方法では、 **Removeexternalcontentmarkinginapp**詳細プロパティで定義されている、word、Excel、および PowerPoint ドキュメントからテキストベースのヘッダーまたはフッターを削除または置換できます。 
+他のラベル付けソリューションから分類を削除するには、2つの方法があります。 最初のメソッドは、図形名が詳細プロパティ**WordShapeNameToRemove**で定義されている名前と一致する word 文書から図形を削除します。2番目の方法では、 **Removeexternalcontentmarkinginapp**詳細プロパティで定義されている、word、Excel、および PowerPoint ドキュメントからテキストベースのヘッダーまたはフッターを削除または置換できます。 
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>WordShapeNameToRemove advanced プロパティを使用する
 
@@ -893,7 +893,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" で�
 
 要件: "社外秘" というセキュリティ保護された島ラベルを持つドキュメントは、Azure Information Protection によって "社外秘" というラベルが付けられます。
 
-この例では:
+次の点に注意してください。
 
 - Secure Islands のラベルは、**Confidential** という名前が付けられ、**Classification** という名前のカスタム プロパティに保存されます。
 
@@ -911,7 +911,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" で�
 
 要件: セキュリティで保護されたアイランドによって "機微な" というラベルが付けられたドキュメントは、Azure Information Protection によって "機密性の高い" というラベルに再設定する
 
-この例では:
+次の点に注意してください。
 
 - Secure Islands のラベルは **Sensitive** という名前が付けられ、**Classification** という名前のカスタム プロパティに保存されます。
 
@@ -929,7 +929,7 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 要件: "Internal" という語を含む2つのセキュリティ保護された島々ラベルがあり、これらのセキュリティ保護された島々ラベルのいずれかを持つドキュメントを、Azure Information Protection の統合ラベル付けクライアントによって "全般" というラベルに書き換えます。
 
-この例では:
+次の点に注意してください。
 
 - Secure Islands のラベルには、**Internal** という単語が含まれ、**Classification** という名前のカスタム プロパティに保存されます。
 
@@ -1016,7 +1016,7 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 要件: Azure Information Protection の統一されたラベル付けクライアントによって "Confidential" というラベルが付けられているドキュメントには、"Secret" という値を持つ "分類" という名前の追加のカスタムプロパティが必要です。
 
-この例では:
+次の点に注意してください。
 
 - 秘密度ラベルは**Confidential**という名前で、 **Secret**という値を持つ**分類**という名前のカスタムプロパティを作成します。
 
