@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25ad77fb68f6d26891eaae62318388ce21fe54b4
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 21a174d8daca5376cd4071d579a50628e1a4d91c
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746775"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665794"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -147,7 +147,7 @@ Azure Rights Management でネイティブでサポートされているファ�
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>ドキュメントを保護および追跡するように Mac コンピューターを構成するにはどうすればよいですか。
 
-まず、https://admin.microsoft.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 手順については、「[Office 365 または Office 2019 を PC または Mac にダウンロードしてインストールまたは再インストールします](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
+まず、https://admin.microsoft.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 手順については、「[Office 365 または Office 2019 を PC または Mac にダウンロードしてインストールまたは再インストールします](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
 
 Office 365 の職場または学校アカウントを使用して、Outlook を開き、プロファイルを作成します。 次に新しいメッセージを作成し、次の操作を行って、Azure Rights Management サービスを使用してドキュメントや電子メールを保護できるように Office を構成します。
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6a47441ad344166c9723d7c9969681dd7c26c219
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: 6640ac4706f064e8e7f3ba87b691268a17aa0f41
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825423"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666117"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -104,11 +104,11 @@ Azure Information Protection 統合ラベル付けクライアントがインス
 
 Microsoft Update カタログを使用していない場合、または Intune などの一元的な展開方法を使用して .msi を展開する場合は、次の手順に従ってクライアントをインストールします。
 
-1. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から Azure Information Protection 統合されたラベル付けクライアント (ファイル名 AzInfoProtection_UL) の実行可能バージョンをダウンロードします。 
+1. [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から Azure Information Protection 統合されたラベル付けクライアント (ファイル名 AzInfoProtection_UL) の実行可能バージョンをダウンロードします。 
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。 
 
-2. 既定のインストールの場合は、実行可能ファイル ( **AzInfoProtection_UL**など) を実行するだけです。 ただし、インストールオプションを表示するには、まず、次のように **/help**を使用して実行可能ファイルを実行します。`AzInfoProtection_UL.exe /help`
+2. 既定のインストールの場合は、実行可能ファイル ( **AzInfoProtection_UL.exe**など) を実行するだけです。 ただし、インストールオプションを表示するには、まず、次のように **/help**を使用して実行可能ファイルを実行します。`AzInfoProtection_UL.exe /help`
 
     サイレント モードでクライアントをインストールする例: `AzInfoProtection_UL.exe /quiet`
     
@@ -175,7 +175,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 この Microsoft .NET Framework の新しいバージョンのインストールが現実的ではない場合は、**DowngradeDotNetRequirement = True** パラメーターと値を使用してクライアントをインストールすることで、Microsoft .NET Framework バージョン 4.5.1 がインストールされていれば要件を省略できます。
 
-たとえば次のようになります。`AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
+例: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
 
 このパラメーターは注意して使用することをお勧めします。また、この古いバージョンの Microsoft .NET Framework で Azure Information Protection 統合されたラベル付けクライアントを使用した場合に、Office アプリケーションがハングする問題が報告されていることを知らせてください。 ハングすることがある場合は、その他のトラブルシューティングを行う前に推奨されているバージョンにアップグレードしてください。 
 
@@ -187,7 +187,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 ソフトウェアの展開方法に Intune を使用する場合は、次の手順を実行するとともに、「[Microsoft Intune でアプリを追加する](/intune/deploy-use/add-apps)」をご覧ください。
 
-1. Azure Information Protection 統合されたラベル付けクライアント (AzInfoProtection_UL) の .msi バージョンを[Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードします。 
+1. Azure Information Protection 統合されたラベル付けクライアント (AzInfoProtection_UL) の .msi バージョンを[Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードします。 
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。
 
@@ -196,11 +196,11 @@ Windows Update を使用した自動アップグレードをサポートし、Of
     |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
     |--------------------|--------------|----------------|---------------------|
     |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
-    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
-    |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
-    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインインアシスタント](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
-    |Office 2010|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
-    |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
+    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
+    |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
+    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインインアシスタント](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
+    |Office 2010|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
+    |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
     
    
 

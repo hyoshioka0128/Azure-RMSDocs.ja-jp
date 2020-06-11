@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd9f9358ad9abaafc2fc67de8beb548173d9fee9
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: 9bafeded86eeaedf588335932dead370831c3568
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161352"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666100"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類
 
@@ -70,9 +70,9 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 例 :
 
-- **一般**秘密度ラベルが分類を適用し、保護を適用しない場合: "sales. .pdf" という名前のファイルに**general**ラベルを適用できますが、このラベルを「sales .txt」という名前のファイルに適用することはできません。 
+- **一般**秘密度ラベルが分類を適用し、保護を適用しない場合: sales.pdf という名前のファイルに**general**ラベルを適用できますが、このラベルを sales.txt という名前のファイルに適用することはできません。 
 
-- [**社外秘 \ すべての従業員の機密**度] ラベルに分類と保護が適用される場合は、このラベルを「sales .pdf」という名前のファイルに、「sales .txt」という名前のファイルに適用します。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
+- [**社外秘 \ すべての従業員の機密**度] ラベルに分類と保護が適用される場合は、このラベルを sales.pdf という名前のファイルと sales.txt という名前のファイルに適用できます。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
 ## <a name="file-types-supported-for-protection"></a>保護がサポートされているファイルの種類
 
@@ -195,7 +195,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|
-|Text|.txt; .xml; .csv|
+|テキスト|.txt; .xml; .csv|
 
 構成を追加すると、その他のファイルの種類も検査できます。 たとえば、[カスタム ファイル名拡張子を登録してテキスト ファイルに既存の Windows フィルター ハンドラーを使用する](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters)ことや、ソフトウェア ベンダーから追加のフィルターをインストールすることができます。
 
@@ -207,7 +207,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 以下の手順のようにすると、Azure Information Protection スキャナーおよび [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) PowerShell コマンドで .zip ファイルを検査できます。
 
-1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
+1. スキャナーまたは PowerShell セッションが実行されているコンピューターに、[Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2) をインストールします。
 
 2. スキャナーの場合: 機密情報を見つけた後、.zip ファイルをラベルで分類して保護する必要がある場合は、「Powershell の構成」で説明されているように、PowerShell の詳細設定**PFileSupportedExtensions**を使用して .zip ファイル名拡張子を指定し、「スキャナーの展開手順から[保護するファイルの種類を変更する](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected)」を参照してください。
 
@@ -216,7 +216,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 **accounts.zip** という名前のファイルには、クレジット カード番号が含まれる Excel のスプレッドシートが含まれています。 **機密 \ Finance**という名前の秘密度ラベルがあり、クレジットカード番号を検出するように構成されています。また、金融グループへのアクセスを制限する保護を使用してラベルを自動的に適用します。 
 
-ファイルを検査した後、PowerShell セッションからの統一されたラベル付けクライアントは、このファイルを**機密 \ Finance**として分類し、ファイルに汎用的な保護を適用して、Finance グループのメンバーだけがそのファイルを解凍し、ファイル**アカウント pfile**の名前を変更できるようにします。
+ファイルを検査した後、PowerShell セッションからの統一されたラベル付けクライアントは、このファイルを**機密 \ Finance**として分類し、ファイルに汎用的な保護を適用して、Finance グループのメンバーだけがそのファイルを解凍し、ファイル**accounts.zip pfile**の名前を変更します。
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>OCR を使用して .tiff ファイルを検査するには
 
@@ -229,7 +229,7 @@ Azure Information Protection 統合されたラベル付けクライアントで
 
 - [カスタマイズ](clientv2-admin-guide-customizations.md)
 
-- [クライアント ファイルおよび使用状況ログの記録](clientv2-admin-guide-files-and-logging.md)
+- [クライアントのファイルと使用状況ログ](clientv2-admin-guide-files-and-logging.md)
 
 - [PowerShell コマンド](clientv2-admin-guide-powershell.md)
 

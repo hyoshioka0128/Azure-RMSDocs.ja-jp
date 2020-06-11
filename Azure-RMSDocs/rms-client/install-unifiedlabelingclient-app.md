@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 95c0af617e88b4201243f4b12381799d8202a595
-ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
+ms.openlocfilehash: b1c86b828cccb660bc56168ce9bbb7f5dfbcce83
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852083"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666083"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントをダウンロードしてインストールする
 
@@ -35,7 +35,7 @@ ms.locfileid: "82852083"
 
 Azure Information Protection の統一されたラベル付けクライアントをインストールする前に、管理者またはヘルプデスクに問い合わせて、ドキュメントや電子メールの分類と保護に[機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用していることを確認してください。
 
-1. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から**AzInfoProtection_UL**をダウンロードします。
+1. [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から**AzInfoProtection_UL.exe**をダウンロードします。
 
 2. ダウンロードした実行可能ファイルを実行し、続行を確認するメッセージが表示されたら、[**はい]** をクリックします。
 
@@ -64,7 +64,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 ## <a name="other-instructions"></a>その他の手順    
 Azure Information Protection 統合されたラベル付けクライアントユーザーガイドのその他の操作方法については、次を参照してください。
 
-- [目的に合ったトピックをクリックしてください](clientv2-user-guide.md#what-do-you-want-to-do)
+- [どうしたいんですか。](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 [管理者ガイド](clientv2-admin-guide.md)の「[ユーザー用に Azure Information Protection 統合されたラベル付けクライアントをインストール](clientv2-admin-guide-install.md)する」を参照してください。

@@ -11,16 +11,16 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 83fc8228b664acc067c6a604f3d438f39669a49a
-ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
+ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80375628"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666032"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -71,7 +71,7 @@ HYOK 保護を適用するには、Azure Information Protection のラベルを�
 
 HYOK 向けに構成されているラベルを使用して、HYOK によって保護されているコンテンツを開き (消費し) コンテンツを保護するための、サポートされているシナリオを次の表に示します。
 
-|プラットフォーム|アプリケーション|サポートされています|
+|プラットフォーム|Application|サポートされています|
 |----------------------|----------|-----------|
 |Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Word、Excel、PowerPoint|保護: はい<br /><br />消費: はい|
 |Windows|Azure Information Protection クライアントと Office 365 アプリ、Office 2019、Office 2016、および Office 2013 <br /><br />- Outlook|保護: はい<br /><br />消費: はい|
@@ -89,8 +89,8 @@ HYOK 向けに構成されているラベルを使用して、HYOK によって�
 |Android|Office Mobile <br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: はい|
 |Android|Office Mobile <br /><br />- Outlook|保護: なし<br /><br />消費: いいえ|
 |Android|Azure Information Protection ビューアー|保護: 適用なし<br /><br />消費: はい|
-|[Web]|Outlook on the web|保護: なし<br /><br />消費: いいえ|
-|[Web]|Web 用 Office<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
+|Web|Outlook on the web|保護: なし<br /><br />消費: いいえ|
+|Web|Web 用 Office<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
 |ユニバーサル|Office のユニバーサル アプリ<br /><br />- Word、Excel、PowerPoint|保護: なし<br /><br />消費: いいえ|
 
 
@@ -158,7 +158,7 @@ Azure Information Protection ラベルに HYOK 保護を適用するには、AD 
 
 - ユーザーは、Information Rights Management (IRM) をサポートしている Office のバージョンと、Windows 7 Service Pack 1 以降で実行されている Office 2013 Professional Plus Service Pack 1 以降を持っている。 ただし、このシナリオでは、Office 2010 と Office 2007 は、サポートされません。
     
-    - Office 2016 の場合、Microsoft インストーラー (.msi) ベースのエディション:[年3月 2018 6 日にリリースされた Microsoft Office 2016 の update 4018295](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295)がインストールされています。
+    - Office 2016 の Microsoft インストーラー (.msi) ベースのエディションの場合: [2018 年 3 月 6 日にリリースされた Microsoft Office 2016 の更新プログラム 4018295](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295) をインストールしてあります。
 
 > [!IMPORTANT]
 > HYOK 保護が提供する高い確実性を実現するために、AD RMS サーバーは DMZ に配置せず、マネージド デバイスでのみ使用することをお勧めします。 
@@ -174,7 +174,7 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
     `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
     
-    \<文字列値> の場合、次のいずれかを指定します。
+    では、 \<string value> 次のいずれかを指定します。
     
     - SSL/TLS を使用した AD RMS クラスターの場合:
 
@@ -192,13 +192,13 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 テンプレート GUID とライセンス URL の値は、Active Directory Rights Management サービス コンソールで確認できます。
 
-- テンプレート GUID を確認するには: クラスターを展開し、 **[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例: 82bf3474-6efe-4fa1-8827-d1bd93339119
+- テンプレート GUID を確認するには: クラスターを展開し、**[権利ポリシー テンプレート]** をクリックします。 **[配布権利ポリシー テンプレート]** の情報から、使用するテンプレートの GUID をコピーできます。 例: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、 **[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: `https://rmscluster.contoso.com` 
+- ライセンス URL を確認するには: クラスター名をクリックします。 **[クラスターの詳細]** の情報から、**[ライセンス]** 値の **/_wmcs/licensing** 文字列以外をコピーします。 例: `https://rmscluster.contoso.com` 
     
     エクストラネット ライセンス値とイントラネット ライセンス値があり、異なる値の場合: 明示的なポイント間の信頼で定義したパートナーとの間で、保護されたドキュメントを共有する場合にのみ、エクストラネット値を指定します。 それ以外の場合、イントラネット値を使用し、Azure Information Protection 接続で AD RMS の保護を使用するすべてのクライアント コンピューターが、イントラネット接続を使用して接続するようにします (たとえば、リモート コンピューターは VPN 接続を使用する)。
 
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 HYOK 保護のラベルを構成するには、「[Rights Management による保護でラベルを構成する方法](configure-policy-protection.md)」を参照してください。 

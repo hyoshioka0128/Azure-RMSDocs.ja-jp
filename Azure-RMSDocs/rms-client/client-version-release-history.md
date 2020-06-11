@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f10f55393fe5b72d46897a8a894e5e9a44f2db46
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: bafbc183005200463ea73075f6c597cc73f61d38
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224701"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665321"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -29,9 +29,9 @@ ms.locfileid: "82224701"
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードできます。 
+最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードできます。 
 
-通常は数週間後に、一般公開されている最新バージョンが、 **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection クライアント**の製品名と**更新プログラム**の分類によって Microsoft Update カタログにも含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
+通常は数週間後に、一般公開されている最新バージョンが、 **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection クライアント**の製品名と**更新プログラム**の分類によって Microsoft Update カタログにも含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
 
 詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 

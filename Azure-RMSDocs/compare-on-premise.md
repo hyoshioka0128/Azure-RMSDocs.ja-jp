@@ -12,12 +12,12 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2eeae09e3fe8bca00eb7d80df60418a246c0ca86
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 59caaa9eba68758595ab05be3b8abaadca715862
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224548"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666049"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Azure Information Protection と AD RMS の比較
 
@@ -53,7 +53,7 @@ Azure Information Protection の主な違いの一部:
 |では、Azure Information Protection クライアント (クラシック) と Azure Information Protection 統合されたラベル付けクライアントがサポートされています。|では、保護と消費アクティビティのために Azure Information Protection クライアント (クラシック) がサポートされています。 <br /><br />では、Azure Information Protection 統合されたラベル付けクライアントの使用のみがサポートされており、 [Active Directory Rights Management サービスモバイルデバイス拡張機能](./active-directory-rights-manage-mobile-device.md)をインストールする必要があります。
 |コンピューターとモバイル デバイス用の多要素認証 (MFA) をサポートします。<br /><br />詳細については、「[多要素認証 (MFA) と Azure RMS](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection)」を参照してください。|IIS が証明書を要求するように構成されている場合は、スマート カード認証をサポートします。|
 |では、暗号化モード2が既定でサポートされています。これは、キーの長さと暗号化アルゴリズムに推奨されるセキュリティレベルを提供するためです。|では暗号化モード1が既定でサポートされており、推奨されるセキュリティレベルで暗号化モード2をサポートするには追加の構成が必要です。<br /><br />詳細については、「[AD RMS の暗号化モード](https://go.microsoft.com/fwlink/?LinkId=266659)」を参照してください。|
-|コンテンツを保護するには、Office 365 の Azure Information Protection ライセンスまたは Azure Rights Management ライセンスが必要です。 <br /><br />Azure Information Protection で保護されたコンテンツを使用するには、ライセンスは必要ありません (別組織のユーザーも含まれます)。<br /><br />ライセンスの詳細 (P1 ライセンスと P2 ライセンスの違いを含む) については、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)を参照してください。|AD RMS によってコンテンツを保護し、保護されたコンテンツを使用するには、RMS ライセンスが必要です。<br /><br />ライセンスの詳細については、「[クライアントアクセスライセンス」および](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx)「一般的な情報の管理ライセンス」を参照してください。ただし、特定の情報については、microsoft パートナーまたは microsoft 担当者にお問い合わせください。|
+|コンテンツを保護するには、Office 365 の Azure Information Protection ライセンスまたは Azure Rights Management ライセンスが必要です。 <br /><br />Azure Information Protection で保護されたコンテンツを使用するには、ライセンスは必要ありません (別組織のユーザーも含まれます)。<br /><br />ライセンスの詳細 (P1 ライセンスと P2 ライセンスの違いを含む) については、Azure Information Protection サイトの[機能一覧](https://www.microsoft.com/cloud-platform/azure-information-protection-features)を参照してください。|AD RMS によってコンテンツを保護し、保護されたコンテンツを使用するには、RMS ライセンスが必要です。<br /><br />ライセンスの詳細については、「[クライアントアクセスライセンス」および](https://www.microsoft.com/Licensing/product-licensing/client-access-license.aspx)「一般的な情報の管理ライセンス」を参照してください。ただし、特定の情報については、microsoft パートナーまたは microsoft 担当者にお問い合わせください。|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>署名と暗号化のための暗号化制御
 Azure Information Protection は既定で、すべての公開キーの暗号化に RSA 2048 を、署名操作に SHA 256 を使用します。 これに対し、AD RMS は、RSA 1024 および RSA 2048 をサポートし、署名操作用に SHA 1 または SHA 256 をサポートします。

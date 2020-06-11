@@ -13,18 +13,18 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ea0081e4f81a3ea123c3ff58e57334b46df00521
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 824e246a0e979a478dbd135e8497434b0c2b6762
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249897"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665658"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Azure Information Protection の中央レポート (パブリックプレビュー)
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに
+Azure Information Protection analytics for central reporting を使用すると、組織のデータを分類して保護するラベルの導入を追跡するのに役立ちます。 さらに:
 
 - ラベル付けされた保護の対象となるドキュメントと組織全体の電子メールを監視します。
 
@@ -148,13 +148,13 @@ Azure Information Protection を使用すると、機密情報の種類 (定義�
 
 - 統一されたラベル付けクライアントの場合は、ラベルポリシーの[詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)を構成します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
 |---------------|--------------------|
 |Log Analytics を含む Azure サブスクリプションで、Azure Information Protection と同じテナント用のサブスクリプション|「[Azure Monitor の価格](https://azure.microsoft.com/pricing/details/log-analytics)」ページをご覧ください。<br /><br />Azure サブスクリプションをお持ちでない場合、または現在 Azure Log Analytics をご使用でない場合、価格ページには無料試用版へのリンクが含まれます。|
-|クライアントにラベルを付けるためのレポート情報の場合: <br /><br />-Azure Information Protection クライアント|統一されたラベル付けクライアントと従来のクライアントの両方がサポートされています。 <br /><br />これらのクライアントは、まだインストールされていない場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
+|クライアントにラベルを付けるためのレポート情報の場合: <br /><br />-Azure Information Protection クライアント|統一されたラベル付けクライアントと従来のクライアントの両方がサポートされています。 <br /><br />これらのクライアントは、まだインストールされていない場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードしてインストールできます。|
 |クラウドベースのデータストアからの情報を報告する場合: <br /><br />-Microsoft Cloud App Security |Microsoft Cloud App Security から情報を表示するには[Azure Information Protection 統合](https://docs.microsoft.com/cloud-app-security/azip-integration)を構成します。|
 |オンプレミスのデータストアからのレポート情報の場合: <br /><br />-Azure Information Protection スキャナー |スキャナーのインストール手順については、「[Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する](deploy-aip-scanner.md)」をご覧ください。 |
 |Windows 10 コンピューターからの情報を報告する場合:  <br /><br />-Microsoft Defender Advanced Threat Protection を使用した1809の最小ビルド (Microsoft Defender ATP)|Azure Information Protection 統合機能を Microsoft Defender Security Center から有効にする必要があります。 詳細については、「 [Windows の情報保護の概要](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview)」を参照してください。|
@@ -280,10 +280,10 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |列名|説明|
 |-----------|-----------|
 |Time|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
-|ユーザー|User: UPN または DOMAIN\USER の形式を設定します。|
+|User|User: UPN または DOMAIN\USER の形式を設定します。|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
 |ItemName|ファイル名または電子メールの件名 |
-|メソッド|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
+|Method|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
 |アクティビティ|監査アクティビティ: DowngradeLabel、UpgradeLabel、RemoveLabel、NewLabel、Discover、Access、RemoveCustomProtection、ChangeCustomProtection、NewCustomProtection、または FileRemoved |
 |ResultStatus|アクションの結果の状態:<br /><br /> 成功または失敗 (AIP スキャナーのみによって報告)|
 |ErrorMessage_s|ResultStatus = Failed の場合、エラーメッセージの詳細が含まれます。 AIP スキャナーのみによって報告されました|
@@ -355,7 +355,7 @@ InformationProtectionEvents
 この例では、アクション前のラベルの名前に **Confidential** (社外秘) が含まれ、アクション後の名前に **Confidential** が含まれていない場合のみ、ダウングレードされたラベルとしてカウントされます。 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 レポートの情報を確認した後、Azure Information Protection クライアントを使用している場合は、Azure Information Protection ポリシーに変更を加えることができます。 手順については、「[Azure Information Protection ポリシーの構成](configure-policy.md)」を参照してください。
 
 Microsoft 365 のサブスクリプションがある場合は、Microsoft 365 コンプライアンス センターと Microsoft 365 セキュリティ センターでラベルの使用状況を表示することもできます。 詳しくは、「[ラベル分析によるラベル使用状況の表示](/microsoft-365/compliance/label-analytics)」をご覧ください。

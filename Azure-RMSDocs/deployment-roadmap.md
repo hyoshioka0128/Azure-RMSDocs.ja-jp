@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection デプロイ ロードマップ
 description: 組織の Azure Information Protection を準備、実装、管理するには、これらの手順に従ってください。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,19 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 88ddfd13cdee34b20f8d1014a0d564654fa594e1
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 9852c792e732a0d84326e7dfc6f8b291af56fcad
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746930"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665862"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+>[!NOTE] 
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 組織の Azure Information Protection を準備、実装、管理するための推奨事項として、次の手順に従ってください。
 
@@ -149,7 +152,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
     SharePoint と Exchange On-Premises をお持ちで、これらの Information Rights Management (IRM) 機能を使用する場合は、Rights Management コネクタをインストールして構成します。 詳細については、「 [Azure Rights Management コネクタのデプロイ](./deploy-rms-connector.md)」を参照してください。
 
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>手順 6: データ保護ソリューションを使用および監視する
-これで、構成したラベルを組織がどのように使用しているかを監視して、機密情報を保護していることを確認する準備ができました。 このデプロイ フェーズのサポートの詳細については、以下を参照してください。
+これで、組織が構成したラベルをどのように使用しているかを監視し、機密情報を保護していることを確認する準備ができました。 このデプロイ フェーズのサポートの詳細については、以下を参照してください。
 
 - [Azure Information Protection の中央レポート](reports-aip.md)-現在プレビュー中
 
@@ -219,7 +222,7 @@ Azure Information Protection の保護サービスの使用を開始する前に
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>手順 4: データ保護ソリューションを使用し、監視する
 
-これでデータを保護し、会社で保護サービスを使用する方法を記録する準備が整いました。 このデプロイフェーズをサポートするための追加情報については、「 [Azure Rights Management サービスを使用](./help-users.md)したファイルの保護」および「 [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)」を参照してください。
+これで、データを保護し、会社が保護サービスを使用している方法をログに記録する準備が整いました。 このデプロイフェーズをサポートするための追加情報については、「 [Azure Rights Management サービスを使用](./help-users.md)したファイルの保護」および「 [Azure Information Protection からの保護の使用状況のログと分析](./log-analyze-usage.md)」を参照してください。
 
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>手順 5: 必要に応じてテナント アカウントの保護サービスを管理する
 

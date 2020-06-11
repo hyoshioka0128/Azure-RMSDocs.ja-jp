@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: de442c9ea7c28bba55e7dbeebfdf458254e98678
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 751add440b97259d6c897af385581f4b5efb9d2f
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483288"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665502"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -31,7 +31,7 @@ ms.locfileid: "79483288"
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
-例 :
+次に例を示します。
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -53,7 +53,7 @@ ms.locfileid: "79483288"
 
 Azure Information Protection クライアントには次のものが含まれます。
 
-- Office アドイン。ユーザーが分類ラベルを選択するための Azure Information Protection バーと、追加オプションのためのリボンの **[保護]** ボタンをインストールします。 Outlook の場合、 **[転送不可]** ボタンはリボンでも使用できます。
+- Office アドイン。ユーザーが分類ラベルを選択するための Azure Information Protection バーと、追加オプションのためのリボンの **[保護]** ボタンをインストールします。 Outlook の場合、**[転送不可]** ボタンはリボンでも使用できます。
 
 - エクスプローラー。ユーザーがファイルに分類ラベルと保護を適用するための右クリック オプション。
 
@@ -72,7 +72,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Azure Information Protection クライアントのデプロイが必要な場合
 
-[Office 365 セキュリティ/コンプライアンスセンターで機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用していないが、Azure からダウンロードした Azure Information Protection ラベルを使用している場合は、Azure Information Protection クライアントをデプロイします。また、次のいずれかが適用されます。
+[Office 365 Security & コンプライアンスセンターで機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用していないが、Azure からダウンロードした Azure Information Protection ラベルを使用している場合は、Azure Information Protection クライアントをデプロイします。また、次のいずれかが適用されます。
 
 - Office アプリケーション (Word、Excel、PowerPoint、Outlook) 内からラベルを選んで、ドキュメントとメール メッセージを分類 (および必要に応じて保護) したい。
 
@@ -104,11 +104,11 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 ### <a name="installation-checks-and-troubleshooting"></a>インストールのチェックとトラブルシューティング
 
-クライアントがインストールされたら、 **[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
+クライアントがインストールされたら、**[ヘルプとフィードバック]** オプションで **[Microsoft Azure Information Protection]** ダイアログ ボックスを開きます。
 
-- Office アプリケーションから、 **[ホーム]** タブの **[保護]** グループで、 **[保護]** 、 **[ヘルプとフィードバック]** の順に選択します。
+- Office アプリケーションから、**[ホーム]** タブの **[保護]** グループで、**[保護]**、**[ヘルプとフィードバック]** の順に選択します。
 
-- エクスプローラーから単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、 **[分類して保護する]** 、 **[ヘルプとフィードバック]** の順に選択します。 
+- エクスプローラーから単一ファイル、複数ファイル、またはフォルダーを右クリックで選択し、**[分類して保護する]**、**[ヘルプとフィードバック]** の順に選択します。 
 
 #### <a name="help-and-feedback-section"></a>**[ヘルプとフィードバック]** セクション
 
@@ -116,7 +116,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 **[問題の報告]** リンクは、[クライアントの詳細設定](client-admin-guide-customizations.md#add-report-an-issue-for-users)を指定した場合にのみ表示されます。 この設定を構成するときに、ヘルプ デスクの電子メール アドレスなどの HTTP リンクを指定します。
 
-**ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 このオプションは、エンド ユーザーがログ ファイルをヘルプ デスクに送信するために使用することもできます。
+**ログのエクスポート**は、Azure Information Protection クライアントのログ ファイルの収集と添付を自動的に行うもので、Microsoft サポートから要求された場合にこれらのログ ファイルを送信します。 エンドユーザーがこのオプションを使用して、ヘルプ デスクにこれらのログ ファイルを送信することもできます。
 
 **[設定のリセット]** を選択すると、ユーザーがサインアウトした状態になり、現在ダウンロードされている Azure Information Protection ポリシーが削除され、Azure Rights Management サービスのユーザー設定がリセットされます。
 
@@ -141,15 +141,15 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
     
     通常、エンタープライズ ネットワークでは、グループ ポリシーをコンピューター上で更新するときに、これらの設定が自動的に再適用される場合、設定はグループ ポリシーを使用して構成されます。 ただし、スクリプトで一度構成されているか、手動で構成されている設定がある場合があります。 これらの場合、設定を再構成するには、追加の手順を行う必要があります。 たとえば、AD RMS から移行しても、内部ネットワーク上にまだサービス接続ポイントがあるため、Azure Information Protection へのリダイレクトの設定を構成するには、コンピューターでスクリプトが一度実行される場合があります。 クライアントをリセットした後、コンピューターでこのスクリプトをもう一度実行する必要があります。
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - 現在サインインしているユーザーは、サインアウトします。
 
@@ -157,7 +157,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 **接続**の値を使って、表示されているユーザー名が Azure Information Protection 認証に使用されるアカウントを識別するか確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントに一致する必要があります。 また、アカウントも、Azure Information Protection 用に構成されたテナントに属している必要があります。
 
-表示されているユーザーとは別のユーザーでサインインする必要がある場合は、[別のユーザーでのサイン イン](client-admin-guide-customizations.md#sign-in-as-a-different-user)に関するページのカスタマイズをご覧ください。
+表示されているユーザーとは別のユーザーでサインインする必要がある場合は、[別のユーザーでのサインイン](client-admin-guide-customizations.md#sign-in-as-a-different-user)に関するページのカスタマイズをご覧ください。
 
 **[前回の接続]** には、クライアントが組織の Azure Information Protection サービスに前回接続した時刻が表示されます。 この情報と **[<日時> に Information Protection ポリシーがインストールされました]** を使用して、Azure Information Protection ポリシーが最後にインストールまたは更新された日時を確認できます。 クライアントはサービスへの接続時に、現在のポリシーからの変更を見つけると最新のポリシーを自動的にダウンロードし、24 時間ごとに確認を行います。 表示された時刻以降にポリシーを変更している場合は、Office アプリケーションを閉じて再度開きます。
 
@@ -165,9 +165,9 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 **[バージョン]** 情報を使用して、どちらのバージョンのクライアントがインストールされているか確認します。 **新機能**のリンクをクリックし、クライアントの[バージョン リリース履歴](client-version-release-history.md)を読むことで、使用しているクライアントが最新のリリースバージョンかどうかや、各バージョンの修正と新しい機能を確認できます。
 
-## <a name="support-for-multiple-languages"></a>複数言語のサポート
+## <a name="support-for-multiple-languages"></a>多言語のサポート
 
-Azure Information Protection クライアントでは、Office 365 でサポートされる言語と同じ言語がサポートされます。 サポートされる言語の一覧については、Office の「**ご利用いただける国と地域**」ページの「[Office 365、Exchange Online Protection、Power BI](https://products.office.com/business/international-availability)」セクションを参照してください。
+Azure Information Protection クライアントでは、Office 365 でサポートされる言語と同じ言語がサポートされます。 サポートされる言語の一覧については、Office の「[ご利用いただける国と地域](https://products.office.com/business/international-availability)」ページの「**Office 365、Exchange Online Protection、Power BI**」セクションを参照してください。
 
 これらの言語については、Azure Information Protection クライアントのメニュー オプション、ダイアログ ボックス、およびメッセージがユーザーの言語で表示されます。 言語を検出するインストーラーが 1 つあるため、他言語の Azure Information Protection クライアントをインストールするための追加の構成は必要ありません。 
 
@@ -175,11 +175,11 @@ Azure Information Protection クライアントでは、Office 365 でサポー�
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 例 :
+Azure Information Protection クライアントをインストールしたら、各自のドキュメントや電子メールにラベルを付ける方法の手順と、特定のシナリオ用にどのラベルを選択するかについてのガイダンスを、必ずユーザーに提供してください。 次に例を示します。
 
 - オンライン ユーザーの手順: [Azure Information Protection ユーザー ガイド](client-user-guide.md)
 
-- カスタマイズ可能なユーザー ガイドのダウンロード: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Azure Information Protection クライアントのアップグレードと保守
 
@@ -187,7 +187,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 Windows Update を使用する場合、Azure Information Protection クライアントによって、クライアントの一般公開バージョンが自動的にアップグレードされます。クライアントがインストールされた方法は関係ありません。 新しいクライアントのリリースは、リリースの数週間後にカタログに公開されます。
 
-または、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から新しいリリースをダウンロードして、クライアントを手動でアップグレードすることもできます。 ダウンロードしたら、新しいバージョンをインストールして、クライアントをアップグレードします。 プレビュー バージョンをアップグレードするには、この方法を使用する必要があります。
+または、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)から新しいリリースをダウンロードして、クライアントを手動でアップグレードすることもできます。 ダウンロードしたら、新しいバージョンをインストールして、クライアントをアップグレードします。 プレビュー バージョンをアップグレードするには、この方法を使用する必要があります。
 
 手動でアップグレードし、かつインストール方法を変更する場合は、最初に以前のバージョンをアンインストールします。 たとえば、実行可能 (.exe) バージョンのクライアントから Windows インストーラ― (.msi) バージョンのクライアントに変更する場合です。 または、クライアントの以前のバージョンをインストールする必要がある場合です。 たとえば、テスト用に現在のプレビュー バージョンがインストールされていて、現在の一般公開バージョンに戻す必要がある場合です。
 
@@ -204,9 +204,9 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 バージョン1.48.204.0 以降では、以前のバージョンのアップグレードプロセスによってスキャナーが自動的に変更され、その構成設定が Azure portal から取得されます。 さらに、スキーマがスキャナーの構成データベース用に更新され、このデータベースの名前も AzInfoProtection から次のように変更されます。
 
-- 独自のプロファイル名を指定しない場合、構成データベースの名前が **AIPScanner_\<computer_name>** に変更されます。 
+- 独自のプロファイル名を指定しない場合は、構成データベースの名前**が \<computer_name> AIPScanner_** に変更されます。 
 
-- 独自のプロファイル名を指定すると、構成データベースの名前が **AIPScanner_\<profile_name>** に変更されます。
+- 独自のプロファイル名を指定した場合は、構成データベースの名前が**AIPScanner_ \<profile_name> **に変更されます。
 
 別の順序でスキャナーをアップグレードすることもできますが、次の手順をお勧めします。
 
@@ -216,7 +216,7 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
 
-3. [Microsoft ダウンロードセンター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)から現在の一般提供 (GA) バージョンをインストールして、Azure Information Protection クライアントをアップグレードします。
+3. [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から現在の一般提供 (GA) バージョンをインストールして、Azure Information Protection クライアントをアップグレードします。
 
 4. PowerShell セッションで、手順 1 で指定したのと同じプロファイル名を指定して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile Europe`
 
@@ -233,7 +233,7 @@ Update-AIPScanner コマンドを実行する前に Azure portal 上でスキャ
 このシナリオでは、Azure portal 上でスキャナーを構成するときに、Update-AIPScanner コマンドの実行時に使用したのとまったく同じプロファイル名を指定する必要があります。 名前が一致しない場合、スキャナーは設定に対して構成されません。 
 
 > [!TIP]
-> この構成の誤りがあるスキャナーを特定するには、Azure portal の **[Azure Information Protection ノード]** ウィンドウを使用します。
+> この構成の誤りがあるスキャナーを特定するには、Azure portal の [ **Azure Information Protection ノード**] ウィンドウを使用します。
 >  
 > インターネットに接続されているスキャナーの場合、コンピューター名は Azure Information Protection クライアントの GA バージョン番号で表示されますが、プロファイル名は表示されません。 このウィンドウには、バージョン番号が1.41.51.0 のスキャナーのみが表示されます。 
 
@@ -257,20 +257,20 @@ GA バージョンのスキャナー構成データベースを移動するこ�
 
 クライアントは、以下のいずれかの方法でアンインストールできます。
 
-- コントロール パネルを使って、プログラムをアンインストールします。 **[Microsoft Azure Information Protection]**  >  **[アンインストール]** をクリックします。
+- コントロールパネルを使用してプログラムをアンインストールする: [ **Microsoft Azure Information Protection**  >  **アンインストール**] をクリックします。
 
-- 実行可能ファイル (例: **AzInfoProtection.exe**) を再実行し、 **[セットアップの変更]** ページの **[アンインストール]** をクリックします。 
+- 実行可能ファイル (例: **AzInfoProtection.exe**) を再実行し、**[セットアップの変更]** ページの **[アンインストール]** をクリックします。 
 
 - **/uninstall** を付けて実行可能ファイルを実行します。 例: `AzInfoProtection.exe /uninstall`
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 クライアントをインストールする方法については、「[Install the Azure Information Protection client for users](client-admin-guide-install.md)」 (ユーザー向けに Azure Information Protection クライアントをインストールする) を参照してください。
 
 クライアントを既にインストールしている場合、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
 
 - [カスタマイズ](client-admin-guide-customizations.md)
 
-- [クライアント ファイルおよび使用状況ログの記録](client-admin-guide-files-and-logging.md)
+- [クライアントのファイルと使用状況ログ](client-admin-guide-files-and-logging.md)
 
 - [ドキュメント追跡](client-admin-guide-document-tracking.md)
 
