@@ -21,13 +21,19 @@
               href: quick-file-list-labels-cpp.md
             - name: 機密ラベルの設定/取得 (C++)
               href: quick-file-set-get-label-cpp.md
+            - name: ファイルの機密ラベルを下げる (C++)
+              href: quick-file-justify-actions-cpp.md
+            - name: ファイル API の再発行 (C++)
+              href: quick-file-republishing-cpp.md
+            - name: 電子メール .msg ファイルの処理 (C++)
+              href: quick-email-msg-cpp.md
         - name: 保護 API
           items:
             - name: アプリケーションの初期化 (C++)
               href: quick-protection-app-initialization-cpp.md
-            - name: リスト テンプレート
+            - name: テンプレートを一覧表示する (C++)
               href: quick-protection-list-templates-cpp.md
-            - name: テキストの暗号化と暗号化解除
+            - name: テキストの暗号化と暗号化解除 (C++)
               href: quick-protection-encrypt-decrypt-text-cpp.md
     - name: 'C#'
       items:
@@ -39,13 +45,19 @@
               href: quick-file-list-labels-csharp.md
             - name: '機密ラベルの設定/取得 (C#)'
               href: quick-file-set-get-label-csharp.md
+            - name: 'ファイルの機密ラベルを下げる (C#)'
+              href: quick-file-justify-actions-csharp.md
+            - name: 'ファイル API の再発行 (C#)'
+              href: quick-file-republishing-csharp.md
+            - name: '電子メール .msg ファイルの処理 (C#)'
+              href: quick-email-msg-csharp.md
         - name: 保護 API
           items:
             - name: 'アプリケーションの初期化 (C#)'
               href: quick-protection-app-initialization-csharp.md
-            - name: リスト テンプレート
+            - name: 'テンプレートを一覧表示する (C#)'
               href: quick-protection-list-templates-csharp.md
-            - name: テキストの暗号化と暗号化解除
+            - name: 'テキストの暗号化と暗号化解除 (C#)'
               href: quick-protection-encrypt-decrypt-text-csharp.md
 - name: 概念
   items:
@@ -119,6 +131,14 @@
           href: concept-async-observers-protection-cpp.md
     - name: SDK テレメトリ
       href: concept-mip-telemetry.md
+    - name: ユース ケース
+      items:
+        - name: ファイル API - ファイルの秘密度ラベルを下げるためのアクションの理由 (C++)
+          href: concept-justification-cpp.md
+        - name: ファイル API - 再発行 (C++)
+          href: concept-republishing-cpp.md
+        - name: ファイル API - 電子メール .msg ファイルの処理 (C++)
+          href: concept-email-cpp.md
 - name: 参照先
   items:
     - name: C++ ライブラリ
