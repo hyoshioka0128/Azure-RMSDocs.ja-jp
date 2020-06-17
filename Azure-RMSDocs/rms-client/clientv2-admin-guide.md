@@ -4,23 +4,25 @@ description: Azure Information Protection 統合された Windows 用ラベル�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2e2530c058ed9af08c33bddddc5c83cb9ea4adf9
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 76f87d66c2eacafc7883b905c3bc364f9b69f5a1
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666134"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802853"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>
+> **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 

@@ -4,7 +4,7 @@ description: 現在のバージョンの Azure Information Protection スキャ�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/03/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
-ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
+ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326320"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802929"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -169,7 +169,7 @@ Sysadmin ロールが一時的に付与されていない場合は、スキャ�
     
     次のスクリプトを使用してデータベースを設定します。 
 
-    存在しない場合 (select * from master. sys. server_principals where sid = SUSER_SID ("domain\user")) BEGIN declare @T nvarchar (500) Set @T = ' CREATE LOGIN ' + quotename (' domain\user ') + ' from WINDOWS ' exec ( @T ) END 
+    存在しない場合は、select * from master.sys. server_principals where sid = SUSER_SID (' domain\user ')) BEGIN declare @T nvarchar (500) Set @T = ' CREATE LOGIN ' + quotename (' domain\user ') + ' from WINDOWS ' exec ( @T ) END 
 
 このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の操作を依頼します。
 
@@ -277,9 +277,9 @@ SQL スクリプト:
     
     ワイルドカードはサポートされていません。また、WebDav の場所はサポートされていません。
     
-    例 :
+    次に例を示します。
       
-    - ネットワーク共有の場合: `C:\Folder\Filename`
+    - ネットワーク共有の場合: `\\Server\Folder`
     
     - SharePoint ライブラリの場合: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
@@ -458,7 +458,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 診断スキャンツールは、次のチェックを実行し、ログをエクスポートします。
 
-|○|考えられる結果|
+|チェック|考えられる結果|
 |-----------|----------|
 |データベースのチェック| は最新です。アクセス可能です|
 |ネットワークチェック| アクセス可能な Url|
@@ -602,7 +602,7 @@ Azure portal の [ **Azure Information Protection-コンテンツスキャンジ
 > [!TIP]
 > テスト期間中など、既定の間隔よりも早くポリシーを更新する必要がある場合は、次のようにします。 
 >
-> - クラシッククライアントからのスキャナー: ポリシーファイル **%LocalAppData%\Microsoft\MSIP\Policy.msip**からポリシーファイルを手動で削除し**ます。**
+> - クラシッククライアントからのスキャナー: ポリシーファイルを手動で削除し、 **% Localappdata% \Microsoft\MSIP\Policy.msip**から**Policy.msip**を削除します。
 >
 > - 統一されたラベル付けクライアントからのスキャナー: **%LocalAppData%\Microsoft\MSIP\mip \\ < *processname*>/mip**から手動でコンテンツを削除します。
 >

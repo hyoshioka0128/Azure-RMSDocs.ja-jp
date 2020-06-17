@@ -4,19 +4,19 @@ description: AIP 向けのモバイルデバイス拡張機能の Active Directo
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 06/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6dc8a5aa43b6f5d3dc53c014dd770fa87ff683a5
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: f20ebed9647570e1f9395791f346eb175a3a8c5e
+ms.sourcegitcommit: 43c9a5c3130a3a8e2ee2644207d07382bed09679
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879992"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services モバイル デバイス拡張機能
 
@@ -126,32 +126,90 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 |**構成**|**Value**|
 |-----|-----|
 |**証明書利用者の信頼**|_api します。|
-|**要求ルール**|**属性ストア**: Active Directory <br /><br />**電子メールアドレス**: 電子メールアドレス<br /><br>**ユーザープリンシパル名**: UPN<br /><br /> **プロキシアドレス**: _https: \/ \/ schemas.xmlsoap.org/claims/ProxyAddresses|
+|**要求ルール**|**属性ストア**: Active Directory <br /><br />**電子メールアドレス**: 電子メールアドレス<br /><br>**ユーザープリンシパル名**: UPN<br /><br /> **プロキシアドレス**: _https: \/ \/schemas.xmlsoap.org/claims/ProxyAddresses|
 
 > [!TIP]
 > AD FS を使用した AD RMS の展開例の詳細な手順については、「 [Active Directory フェデレーションサービス (AD FS) で Active Directory Rights Management サービスを展開](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on)する」を参照してください。
 
 #### <a name="step-2-authorize-apps-for-your-devices"></a>手順 2: デバイスのアプリを承認する
 
-1. 変数を置き換えた後、次の Windows PowerShell コマンドを実行して、Azure Information Protection アプリのサポートを追加します。
+- 変数を置き換えた後、次の Windows PowerShell コマンドを実行して、 **Azure Information Protection**アプリのサポートを追加します。 次に示す順序で両方のコマンドを実行してください。
 
 
 ```powershell
 Add-AdfsClient -Name "R<your application name> " -ClientId "<YOUR CLIENT ID >" -RedirectUri @("<YOUR REDIRECT URI >")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '<YOUR CLIENT ID>' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
 ```
 
 **Powershell の例**
 ```powershell
 Add-AdfsClient -Name "Fabrikam application for MIP" -ClientId "96731E97-2204-4D74-BEA5-75DCA53566C3" -RedirectUri @("com.fabrikam.MIPAPP://authorize")
 ```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '96731E97-2204-4D74-BEA5-75DCA53566C3' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- Azure Information Protection 統合された**ラベル付けクライアント**の場合は、次の Windows PowerShell コマンドを実行して、デバイスに Azure Information Protection クライアントのサポートを追加します。
+
+```powershell
+Add-AdfsClient -Name "Azure Information Protection Client" -ClientId "c00e9d32-3c8d-4a7d-832b-029040e7db99" -RedirectUri @("com.microsoft.azip://authorize")
+Grant-AdfsApplicationPermission -ClientRoleIdentifier "c00e9d32-3c8d-4a7d-832b-029040e7db99" -ServerRoleIdentifier api.rms.rest.com -ScopeName "openid"
+```
+- **Windows 2016 および2019での ADFS**とサードパーティ製品用の**ADRMS MDE**をサポートするには、次の windows PowerShell コマンドを実行します。
+
+```powershell
+Add-AdfsClient -Name "YOUR APP" -ClientId 'YOUR CLIENT ID' -RedirectUri @("YOUR REDIRECT") 
+Grant-AdfsApplicationPermission -ClientRoleIdentifier 'YOUR CLIENT ID' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+Windows、Mac、モバイル、および windows **Server 2012 R2 以降の AD FS**で**保護されたコンテンツ**を使用する AD RMS ために、 **windows**、 **Mac**、mobile、および**Office mobile**で AIP クライアントを構成するには、次のようにします。 
+
+- (RMS 共有アプリを使用して) Mac デバイスの場合は、次に示す順序で両方のコマンドを実行してください。
+
+```powershell
+Add-AdfsClient -Name "RMS Sharing App for macOS" -ClientId "96731E97-2204-4D74-BEA5-75DCA53566C3" -RedirectUri @("com.microsoft.rms-sharing-for-osx://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '96731E97-2204-4D74-BEA5-75DCA53566C3' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- (Azure Information Protection アプリを使用して) iOS デバイスの場合は、次に示す順序で両方のコマンドを実行してください。
+```powershell
+Add-AdfsClient -Name "Azure Information Protection app for iOS" -ClientId "9D7590FB-9536-4D87-B5AA-FAA863DCC3AB" -RedirectUri @("com.microsoft.rms-sharing-for-ios://authorize")
+```
+
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier '9D7590FB-9536-4D87-B5AA-FAA863DCC3AB' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+- (Azure Information Protection アプリを使用して) Android デバイスの場合は、次に示す順序で両方のコマンドを実行してください。
+```powershell
+Add-AdfsClient -Name "Azure Information Protection app for Android" -ClientId "ECAD3080-3AE9-4782-B763-2DF1B1373B3A" -RedirectUri @("com.microsoft.rms-sharing-for-android://authorize")
+```
+```powershell
+Grant-AdfsApplicationPermission -ClientRoleIdentifier 'ECAD3080-3AE9-4782-B763-2DF1B1373B3A' -ServerRoleIdentifier api.rms.rest.com -ScopeNames "openid"
+```
+
+デバイスに Microsoft Office アプリのサポートを追加するには、次の PowerShell コマンドを実行します。
+- Mac、iOS、Android デバイスの場合は、次の順序で両方のコマンドを実行してください。
+
+```powershell
+Add-AdfsClient –Name "Office for Mac and Office Mobile" –ClientId "d3590ed6-52b3-4102-aeff-aad2292ab01c" –RedirectUri @("urn:ietf:wg:oauth:2.0:oob")
+```
+
+```powershell
+Set-AdfsClient -TargetClientId d3590ed6-52b3-4102-aeff-aad2292ab01c -RedirectUri "urn:ietf:wg:oauth:2.0:oob","launch-word://com.microsoft.Office.Word","launch-excel://com.microsoft.Office.Excel","launch-ppt://com.microsoft.Office.Powerpoint"
+```
 
 ### <a name="specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension"></a>AD RMS モバイルデバイス拡張機能の DNS SRV レコードの指定
 
 ユーザーが使用する各電子メール ドメインに対して DNS SRV レコードを作成する必要があります。 すべてのユーザーが 1 つの親ドメインからの子ドメインを使用し、この連続する名前空間のすべてのユーザーが同じ RMS クラスターを使用する場合は、親ドメインの SRV レコードを 1 つだけ使用すれば済みます。RMS が、適切な DNS レコードを検索します。
-SRV レコードの形式は次のとおりです。 _rmsdisco. _http. _tcp。 \<emailsuffix>\< ポート番号>\< RMSClusterFQDN>
+SRV レコードの形式は次のとおりです。 _rmsdisco. _http. _tcp。 \<emailsuffix>\<portnumber>\<RMSClusterFQDN>
 
 > [!NOTE]
-> ポート番号> に443を指定し \< ます。 DNS で別のポート番号を指定することもできますが、モバイルデバイス拡張機能を使用するデバイスでは常に443が使用されます。
+> に443を指定し \<portnumber> ます。 DNS で別のポート番号を指定することもできますが、モバイルデバイス拡張機能を使用するデバイスでは常に443が使用されます。
 
 たとえば、組織に次の電子メール アドレスを使用するユーザーがいて、
   - _user@contoso.com
@@ -164,9 +222,9 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 
 |フィールド|値|
 |------|------|
-|ドメイン|_tcp. contoso .com
+|Domain|_tcp. contoso .com
 |サービス|_rmsdisco
-|プロトコル|_http
+|Protocol|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -174,9 +232,9 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 
 |フィールド|値|
 |------|------|
-|ドメイン|_tcp. fabrikam .com
+|Domain|_tcp. fabrikam .com
 |サービス|_rmsdisco
-|プロトコル|_http
+|Protocol|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -190,9 +248,9 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 
 |フィールド|値|
 |------|------|
-|ドメイン|_tcp. contoso .com
+|Domain|_tcp. contoso .com
 |サービス|_rmsdisco
-|プロトコル|_http
+|Protocol|_http
 |Priority|0
 |Weight|0
 |ポート番号|443
@@ -202,14 +260,14 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 
 AD RMS モバイルデバイス拡張機能をインストールする前に、前のセクションの前提条件が満たされていることと、AD FS サーバーの URL がわかっていることを確認してください。 次に、次を実行します。
 
-1. AD RMS モバイルデバイス拡張機能 (ADRMS) をダウンロードします。MobileDeviceExtension) をダウンロードします。
-1. **ADRMS を実行します。MobileDeviceExtension**を実行して、モバイルデバイス拡張機能のセットアップウィザード Active Directory Rights Management サービスを開始します。
+1. Microsoft ダウンロードセンターから AD RMS モバイルデバイス拡張機能 (ADRMS.MobileDeviceExtension.exe) をダウンロードします。
+1. **ADRMS.MobileDeviceExtension.exe**を実行して、モバイルデバイス拡張機能のセットアップウィザード Active Directory Rights Management サービスを開始します。
 メッセージが表示されたら、以前に構成した AD FS サーバーの URL を入力します。
 1. ウィザードを完了します。
 
 RMS クラスター内のすべてのノードで、このウィザードを実行します。
 
-AD RMS クラスターと AD FS サーバーの間にプロキシサーバーがある場合、既定では、AD RMS クラスターはフェデレーションサービスに接続できません。 この場合、AD RMS はモバイルクライアントから受信したトークンを検証できず、要求を拒否します。 この通信をブロックするプロキシサーバーがある場合は、AD RMS モバイルデバイス拡張機能 web サイトから web.config ファイルを更新して、AD RMS が AD FS サーバーに接続する必要があるときにプロキシサーバーをバイパスできるようにする必要があります。
+AD RMS クラスターと AD FS サーバーの間にプロキシサーバーがある場合、既定では、AD RMS クラスターはフェデレーションサービスに接続できません。 この場合、AD RMS はモバイルクライアントから受信したトークンを検証できず、要求を拒否します。 この通信をブロックするプロキシサーバーがある場合は、AD RMS が AD FS サーバーに接続する必要があるときにプロキシサーバーをバイパスできるように、AD RMS mobile device extension web サイトから web.config ファイルを更新する必要があります。
 
 #### <a name="updating-proxy-settings-for-the-ad-rms-mobile-device-extension"></a>AD RMS モバイルデバイス拡張機能のプロキシ設定を更新しています
 
@@ -230,9 +288,9 @@ AD RMS クラスターと AD FS サーバーの間にプロキシサーバーが
 <system.net>
 ```
 1. 次の変更を行い、ファイルを保存します。
-- \<プロキシサーバー> をプロキシサーバーの名前またはアドレスに置き換えます。
-- \<ポート> を、プロキシサーバーが使用するように構成されているポート番号に置き換えます。
-- \<AD FS url> を、フェデレーションサービスの url に置き換えます。 HTTP プレフィックスを含めないでください。
+- \<proxy-server>をプロキシサーバーの名前またはアドレスに置き換えます。
+- を、 \<port> プロキシサーバーが使用するように構成されているポート番号に置き換えます。
+- \<AD FS URL>をフェデレーションサービスの URL に置き換えます。 HTTP プレフィックスを含めないでください。
 
     > [!NOTE]
     > プロキシ設定の上書きの詳細については、[プロキシ構成](https://msdn.microsoft.com/library/dkwyc043(v=vs.110).aspx)のドキュメントを参照してください。
@@ -246,3 +304,4 @@ RMS クラスター内のすべてのノードで、この手順を繰り返し�
 
 Azure Information Protection の詳細を確認し、他の AIP のお客様と連絡をとって、AIP 製品マネージャーと[API yammer グループ](https://www.yammer.com/askipteam/)を使用します。 
 
+"

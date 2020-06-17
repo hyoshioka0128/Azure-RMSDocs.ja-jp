@@ -1,10 +1,10 @@
 ---
 title: カスタム構成-Azure Information Protection 統合されたラベル付けクライアント
 description: Windows 用に Azure Information Protection 統合ラベルクライアントをカスタマイズする方法について説明します。
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8d9914a696355d376847a85a20b8918856aac5f5
-ms.sourcegitcommit: a44977027d3fbc33b580fd034700ea91d6a2548b
+ms.openlocfilehash: 901b036a333e5d801888176a020a8f60932ec2c8
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627676"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802969"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>
+> **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -394,7 +396,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - 値: \<**Office application types WXP**> 
 
-例 :
+次に例を示します。
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -798,9 +800,9 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 次に例を示します。
 
-- この設定を使用すると、**社外秘 \ Sales**というラベルが付けられたユーザーによってアクセスされたことを確認できます。
+- この設定を使用すると、" **Confidential \ Sales**" というラベルが付いた Financial.docx にアクセスしたユーザーが表示されます。
 
-- この設定を行わないと、".docx" に6個のクレジットカード番号が含まれていることがわかります。
+- この設定がないと、Financial.docx に6個のクレジットカード番号が含まれていることがわかります。
     
     - [詳細な分析のためのコンテンツ一致](../reports-aip.md#content-matches-for-deeper-analysis)も有効にすると、これらのクレジット カードの番号も追加で確認できます。
 
@@ -1224,7 +1226,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
 
 > [!TIP]
 > 次の属性を使用してファイルをスキップするようにスキャナーを有効にすることをお勧めします。
@@ -1254,7 +1256,7 @@ NTFS 所有者の値が保持されるようにするには、選択したラベ
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [クライアントのファイルと使用状況ログ](client-admin-guide-files-and-logging.md)

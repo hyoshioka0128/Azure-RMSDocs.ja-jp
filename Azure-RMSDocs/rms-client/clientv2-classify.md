@@ -4,23 +4,25 @@ description: Azure Information Protection 統合ラベルクライアントを�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 29731d98c27454daa30bdb43f2e01238d6808633
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: bb75b769039670a7d7ec162f3c8122e7630fb8c4
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224752"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802904"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザーガイド: Windows 用の Azure Information Protection 統合ラベル付けクライアントを使用してファイルまたは電子メールを分類する
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
+>
+> **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -102,7 +104,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 Windows 用の Azure Information Protection 統合ラベル付けクライアントのユーザーガイドの詳細な手順については、次を参照してください。
 
-- [目的に合ったトピックをクリックしてください](clientv2-user-guide.md#what-do-you-want-to-do)
+- [どうしたいんですか。](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報
 
