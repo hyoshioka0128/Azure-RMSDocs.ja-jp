@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: c1efdbcf7d6738b5dd1d0cfb6b5d4495cec60f4b
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802929"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126715"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Azure Information Protection スキャナーをデプロイして、ファイルを自動的に分類して保護する
 
@@ -451,7 +451,9 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 スキャナーの問題をトラブルシューティングするには、PowerShell セッションで次のコマンドを実行します。
 
-        Start-AIPScannerDiagnostics
+        $scanner_account_creds= Get-Credential 
+        Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+
 
 1. コマンドを実行するのは、% scanner_account% 
 2. このコマンドは前提条件のチェックツールではないことに注意してください。 ツールは、現在のスキャナーの展開が正常であるかどうかを確認します。 スキャナーのデプロイが完了し、プロファイルの構成が完了した後にのみ、このコマンドを実行してください。 
@@ -779,7 +781,7 @@ Azure Information Protection スキャナーでは、どのような状況でも
 
 ----
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 
