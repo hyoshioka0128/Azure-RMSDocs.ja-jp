@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 14dda765c2cf695d0da3ee23d4012103b346905a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: af90e644608c99d6b5d628ff0d57e8cc48b5e162
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483339"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665981"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>チュートリアル:Azure Information Protection を構成して Outlook を使用した情報の過剰な共有を制御する
 
@@ -55,7 +55,7 @@ ms.locfileid: "79483339"
 
 4. お使いの Windows コンピューターに Azure Information Protection クライアント (クラシック) がインストールされている。
     
-    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
     
     クラシック クライアントではなく統合ラベル付けクライアントを使用している場合は、PowerShell の詳細設定を使ってこのチュートリアルと同等の構成を行う方法について説明した以下の手順を参照してください。
     

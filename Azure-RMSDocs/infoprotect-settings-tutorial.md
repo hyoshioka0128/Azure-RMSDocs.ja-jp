@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1412567cdc0b7d6dcb1365c7aad3fceaa9dc44ba
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 175657a4dffd1dfde76c4521576253aeadeced22
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483305"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665845"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル:連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -54,7 +54,7 @@ ms.locfileid: "79483305"
 
 3. お使いの Windows コンピューター (Windows 7 Service Pack 1 以降) に Azure Information Protection クライアント (クラシック) がインストールされている。 
     
-    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 
     
     クラシック クライアントとは別のラベル付けクライアントを使用している場合は、Microsoft 365 のコンプライアンス ドキュメントで機密ラベルのポリシー設定の詳細を確認してください。 たとえば、「[機密ラベルについて](/microsoft-365/compliance/sensitivity-labels)」です。
 
