@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "78973168"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665709"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
@@ -40,13 +40,13 @@ ms.locfileid: "78973168"
 
 2. 次のいずれかの Azure Information Protection クライアントがコンピューターにインストールされている。
     
-    - クラシック クライアント: このクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
+    - クラシック クライアント: このクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。
     
-    - 統合ラベル付けクライアント: このクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection_UL.exe** をダウンロードします。
+    - 統合ラベル付けクライアント: このクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection_UL.exe** をダウンロードします。
     
 3. SQL Server Express もコンピューターにインストールされている。
     
-    この SQL Server エディションがまだインストールされていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express)からダウンロードして、基本インストールを選択できます。
+    この SQL Server エディションがまだインストールされていない場合は、[Microsoft ダウンロード センター](https://www.microsoft.com/sql-server/sql-server-editions-express)からダウンロードして、基本インストールを選択できます。
 
 4. 自分のドメイン アカウントが Azure AD に同期されている。
 
@@ -137,7 +137,7 @@ Azure Information Protection を使用するための必要条件の完全な一
     
         Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
     
-    プロンプトが表示されたら、\<ドメイン\ユーザー名> の形式を使用してスキャナー用の資格情報を独自に指定し、次にパスワードを指定します。 
+    プロンプトが表示されたら、\<domain\user name> の形式でご自分のスキャナー用の資格情報をに指定し、次にご自分のパスワードを指定します。 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>スキャンの開始および完了の確認
 

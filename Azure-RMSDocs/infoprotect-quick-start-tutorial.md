@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 904898a5832a2c178ca7e1a8308d95998e926ad7
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: e218d27a877263d450e965b3a8a6ec97d527dacb
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483322"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665998"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>チュートリアル:Azure Information Protection ポリシーの設定を構成して新しいラベルを作成する
 
@@ -52,7 +52,7 @@ ms.locfileid: "79483322"
 
 3. お使いの Windows コンピューター (Windows 7 Service Pack 1 以降) に Azure Information Protection クライアント (クラシック) がインストールされている。 
     
-    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について [Microsoft 365 のコンプライアンス ドキュメント](/microsoft-365/compliance/sensitivity-labels)を参照してください。
+    クラシック クライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection.exe** をダウンロードします。 クラシック クライアントとは別のラベル付けクライアントを使用している場合は、このチュートリアルと同等の手順について [Microsoft 365 のコンプライアンス ドキュメント](/microsoft-365/compliance/sensitivity-labels)を参照してください。
 
 4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     
@@ -122,7 +122,7 @@ Azure portal を使用して、最初にいくつかのポリシー設定を変�
     
 4. **[保護]** ペインで、 **[Azure (クラウド キー)]** が選択されていることを確認します。 このオプションが選択されていると、Azure Rights Management サービスによって文書と電子メールが保護されます。 また、 **[アクセス許可の設定]** オプションが選択されていることを確認します。 次に、 **[アクセス許可の追加]** を選択します。
 
-5. **[アクセス許可の追加]** ペインで、 **[\<組織名> の追加 - すべてのメンバー]** を選択します。 たとえば、組織名が VanArsdel Ltd の場合、次のようなオプションが表示されます。
+5. **[アクセス許可の追加]** ウィンドウで、 **[Add \<organization name> - All members]** \(\<organization name> のすべてのメンバーを追加\) を選択します。 たとえば、組織名が VanArsdel Ltd の場合、次のようなオプションが表示されます。
     
     ![すべてのメンバーに Azure Information Protection ラベルの保護アクセス許可を付与する](./media/info-protect-protection-all-members.png) 
     
