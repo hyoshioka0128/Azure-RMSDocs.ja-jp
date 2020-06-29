@@ -1,62 +1,94 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Microsoft Information Protection SDK のドキュメント
+summary: Microsoft Information Protection SDK のドキュメント - チュートリアル、API リファレンス
 metadata:
-  title: Microsoft Information Protection SDK のドキュメント - チュートリアル、API リファレンス
-  description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Microsoft Information Protection での簡単な分類から埋め込みラベルとアクセス許可、データ保護の強化は常時提供され、保存場所、共有先は関係ありません。
+  title: Microsoft Information Protection SDK のドキュメント
+  description: Microsoft Information Protection SDK のドキュメント - チュートリアル、API リファレンス
   services: information-protection
-  author: msmbaldwin
-  manager: barbkess
-  layout: LandingPage
-  ms.assetid: null
   ms.service: information-protection
-  ms.tgt_pltfrm: na
-  ms.devlang: na
   ms.topic: landing-page
-  ms.date: 09/26/2018
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
   ms.author: mbaldwin
-abstract:
-  description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Microsoft Information Protection での簡単な分類から埋め込みラベルとアクセス許可、データ保護の強化は常時提供され、保存場所、共有先は関係ありません。
-  aside:
-    image:
-      alt: MIP SDK @ Ignite 2018 のビデオ
-      height: 112
-      src: media/index/kartik-tom-mip-sdk.png
-      width: 250
-    title: MIP SDK @ Ignite 2018
-    href: 'https://www.youtube.com/embed/V02HTllv54s'
-    width: 250
-sections:
-  - title: 5 分のクイックスタート
-    description: <a href="setup-configure-mip">セットアップと構成</a>を完了した後、MIP SDK クイックスタートを確認してください。
-    items:
-      - type: table
-        style: dataMatrix
-        columns:
-          - image:
-              src: ./media/index/logo_Cplusplus.svg
-            title: C++
-          - image:
-              src: media/index/logo_Csharp.svg
-            title: 'C#'
-        rows:
-          - title: アプリケーションの初期化
-            values:
-              - href: quick-app-initialization-cpp.md
-              - href: quick-app-initialization-csharp.md
-          - title: ファイル API を使用した機密ラベルの一覧
-            values:
-              - href: quick-file-list-labels-cpp.md
-              - href: quick-file-list-labels-csharp.md
-          - title: ファイル API を使用したファイルでのラベルの設定/取得
-            values:
-              - href: quick-file-set-get-label-cpp.md
-              - href: quick-file-set-get-label-csharp.md
-  - title: 参照先
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: 言語
-            html: <p><a href="reference/mip-sdk-reference">C++</a></p>
+  ms.date: 06/24/2020
+  ms.openlocfilehash: 9c12d77f61a85446c04c5ba706206edd204faf96
+  ms.sourcegitcommit: 6b5fd79603d55f67d47885595e704065dda2bda9
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/25/2020
+  ms.locfileid: "85372419"
+landingContent:
+- title: 概要
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Information Protection SDK について
+      url: overview.md
+- title: 作業開始
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: MIP SDK のセットアップと構成
+      url: setup-configure-mip.md
+    - text: AD RMS 保護の実装
+      url: quick-app-adrms.md
+- title: C++ クイックスタート
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: クライアント アプリケーションの初期化
+      url: quick-app-initialization-cpp.md
+    - text: 秘密度ラベルの一覧表示
+      url: quick-file-list-labels-cpp.md
+    - text: 秘密度ラベルの設定と取得
+      url: quick-file-set-get-label-cpp.md
+    - text: ファイルの秘密度ラベルを下げる
+      url: quick-file-justify-actions-cpp.md
+    - text: ファイルの再発行
+      url: quick-file-republishing-cpp.md
+    - text: 電子メール .msg ファイルの処理
+      url: quick-email-msg-cpp.md
+    - text: アプリケーションの初期化
+      url: quick-protection-app-initialization-cpp.md
+    - text: リスト テンプレート
+      url: quick-protection-list-templates-cpp.md
+    - text: テキストの暗号化と暗号化解除
+      url: quick-protection-encrypt-decrypt-text-cpp.md
+- title: C# クイックスタート
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: クライアント アプリケーションの初期化
+      url: quick-app-initialization-csharp.md
+    - text: 秘密度ラベルの一覧表示
+      url: quick-file-list-labels-csharp.md
+    - text: 秘密度ラベルの設定と取得
+      url: quick-file-set-get-label-csharp.md
+    - text: ファイルの秘密度ラベルを下げる
+      url: quick-file-justify-actions-csharp.md
+    - text: ファイルの再発行
+      url: quick-file-republishing-csharp.md
+    - text: 電子メール .msg ファイルの処理
+      url: quick-email-msg-csharp.md
+    - text: アプリケーションの初期化
+      url: quick-protection-app-initialization-csharp.md
+    - text: リスト テンプレート
+      url: quick-protection-list-templates-csharp.md
+    - text: テキストの暗号化と暗号化解除
+      url: quick-protection-encrypt-decrypt-text-csharp.md
+- title: 概念
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: API の概念
+      url: concept-apis-use-cases.md
+    - text: MipContext オブジェクトの概念
+      url: concept-mipcontext.md
+    - text: キャッシュ ストレージ
+      url: concept-cache-storage.md
+    - text: 承認
+      url: concept-consent-cpp.md
+    - text: ラベル
+      url: concept-classification-labels.md
+    - text: メタデータ
+      url: concept-mip-metadata.md

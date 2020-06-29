@@ -1,21 +1,28 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Microsoft Information Protection
+### YamlMime:Landing
+title: Microsoft Information Protection のドキュメント
+summary: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Microsoft Information Protection では、保存場所や共有者にかかわらず、簡単な分類から埋め込みラベル、アクセス許可、データ保護の強化が常時提供されています。
 metadata:
   title: Microsoft Information Protection のドキュメント
   description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Microsoft Information Protection では、保存場所や共有者にかかわらず、簡単な分類から埋め込みラベル、アクセス許可、データ保護の強化が常時提供されています。
-  author: msmbaldwin
-  manager: barbkess
-  ms.service: information-protection
   services: information-protection
+  ms.service: information-protection
   ms.topic: landing-page
-  ms.date: 09/26/2018
+  ms.collection: M365-security-compliance
+  author: msmbaldwin
   ms.author: mbaldwin
-  layout: LandingPage
-abstract:
-  description: 社外で共有する電子メール、ドキュメント、および機密データを制御し、セキュリティで保護します。 Microsoft Information Protection では、保存場所や共有者にかかわらず、簡単な分類から埋め込みラベル、アクセス許可、データ保護の強化が常時提供されています。
-sections:
-  - title: Microsoft Information Protection SDK
-    items:
-      - type: paragraph
-        text: 概要については、<a href="develop/">Microsoft Information Protection SDK の概要</a>に関するページを参照してください。
+  ms.date: 06/24/2020
+  ms.openlocfilehash: e009dd37014b10d9d48ea7fe72eabda31abc15c8
+  ms.sourcegitcommit: 6b5fd79603d55f67d47885595e704065dda2bda9
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/25/2020
+  ms.locfileid: "85372402"
+landingContent:
+- title: Microsoft Information Protection SDK
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: MIP SDK を使用した場合の詳細情報
+      url: ./develop/overview.md
+    - text: MIP SDK の概要
+      url: ./develop/setup-configure-mip.md
