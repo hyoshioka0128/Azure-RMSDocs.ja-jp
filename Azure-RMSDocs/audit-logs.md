@@ -4,7 +4,7 @@ description: AIP Azure Information Protection によって生成される監査�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/08/2020
+ms.date: 06/29/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 682b7e7c51c270257046e3817399d3eeedb23c93
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: cfcbc67d67375e1513373c26d935a5acdc041911
+ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716048"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection 監査ログの参照 (パブリックプレビュー)
 
@@ -89,7 +89,7 @@ Microsoft Azure Information Protection は、次のアクティビティイベ�
 ## <a name="file-removed-audit-logs"></a>ファイルが削除された監査ログ
 
 > [!NOTE]
-> 削除されたファイルの監査ログは、Azure Information Protection スキャナーバージョン[2.7.95.0](rms-client/unifiedlabelingclient-version-release-history.md#version-27950-public-preview)以降でのみサポートされます。
+> 削除されたファイルの監査ログは、Azure Information Protection スキャナーバージョン[2.7.96.0](rms-client/unifiedlabelingclient-version-release-history.md#version-27960)以降でのみサポートされます。
 
 **削除さ**れたファイルの監査ログは、次のアクティビティに対して生成されます。
 

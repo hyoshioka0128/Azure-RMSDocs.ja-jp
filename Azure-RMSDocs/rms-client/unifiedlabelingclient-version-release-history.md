@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアント-バージョン履歴 & サポートポリシー
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,18 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1e91bcbfca3d4f925750fd8d1f135bd8f4ff2c4
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 7e3ac45d3665d342ddee3f1523b964c2f768db84
+ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84250053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716081"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
+>
+> **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -61,11 +63,11 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="version-27950-public-preview"></a>バージョン2.7.95.0 パブリックプレビュー
+## <a name="version-27960"></a>バージョン2.7.96.0 
 
-統一されたラベル付けスキャナーとクライアント (パブリックプレビュー) バージョン2.7.95.0
+統一されたラベル付けスキャナーとクライアントバージョン2.7.96.0
 
-**リリース**06/01/2020
+**リリース**06/29/2020
 
 **統一されたラベル付けスキャナーの新機能:**
 
@@ -79,7 +81,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 - スキャナーコンピューターの最大 CPU 消費量を管理し、制限できるようになりました。 100% の CPU 使用率を防ぎ、CPU 使用率を管理する方法について説明します。 [2 つの新しい詳細設定である [ **Scan@ cpu**] と [ **scan、cpu**](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#limit-cpu-consumption)] を使用します。 
 
-- これで、ファイル属性に応じて特定のファイルをスキップするように、統一されたラベル付けスキャナーを構成できるようになりました。 新しい**[Scanthe Fsattributestoskip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)** 設定を使用してスキップするファイルをトリガーするファイル属性の一覧を定義します。
+- これで、ファイル属性に応じて特定のファイルをスキップするように、統一されたラベル付けスキャナーを構成できるようになりました。 新しい**[Scanthe Fsattributestoskip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** 設定を使用してスキップするファイルをトリガーするファイル属性の一覧を定義します。
 
 **統一されたラベル付けクライアントの新機能:**
 
@@ -125,6 +127,8 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
 - [動的ユーザー変数](../configure-policy-markings.md#using-variables-in-the-text-string)が、ドキュメントの視覚的なマーキングに期待どおりに表示されるようになりました。
 
+- PDF のコンテンツの最初のページのみが自動分類規則を適用するために使用されていた問題が解決され、PDF のすべてのコンテンツに基づく自動分類が正常に実行されるようになりました。 分類とラベル付けの詳細については、「[分類とラベル付け](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect)に関する FAQ」を参照してください。 
+
 - 複数の Exchange アカウントが構成されていて、Azure Information Protection Outlook クライアントが有効になっている場合、メールは正常にセカンダリアカウントから送信されます。 Outlook で統一されたラベル付けクライアントを構成する方法の詳細については、「 [Azure Information Protection の統合ラベル付けクライアントの追加の前提条件](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)」を参照してください。
 
 - 高いレベルの機密性ラベルを持つドキュメントをドラッグして電子メールにドロップすると、電子メールでは、より高い機密性ラベルが期待どおりに自動的に受信されるようになります。 クライアント機能のラベル付けの詳細については、「[クライアント比較表](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
@@ -135,10 +139,11 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 
     **UseCopyAndPreserveNTFSOwner**の詳細設定では、スキャナーとスキャンされたリポジトリの間に、待機時間が短く、信頼性の高いネットワーク接続が必要です。
 
-
 ## <a name="version-261110"></a>バージョン2.6.111.0 
 
 **リリース**03/09/2020
+
+12/29/2020 でサポート
 
 **新機能:**
 
@@ -239,7 +244,7 @@ Tls 1.2 をサポートしていない TLS セットアップを使用してい�
 - [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)に、保護されたドキュメントのコンテンツ ID が含まれるようになりました。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 統合ラベルが適切なクライアントでインストールされているかどうかわからない場合は、  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 

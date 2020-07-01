@@ -2,9 +2,9 @@
 title: カスタム構成-Azure Information Protection 統合されたラベル付けクライアント
 description: Windows 用に Azure Information Protection 統合ラベルクライアントをカスタマイズする方法について説明します。
 author: mlottner
-ms.author: bagol
+ms.author: mlottner
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 901b036a333e5d801888176a020a8f60932ec2c8
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: 9e77e09d19e19d2d062dc526927176c1645abbe0
+ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716151"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -151,7 +151,7 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 |Runauditinformationタイプの検出|[ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[バックグラウンドでの分類の継続的実行をオンにする](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[スキャナーで使用されるスレッドの数を制限する](#limit-the-number-of-threads-used-by-the-scanner)|
-|Scantaskattributeattributeskip | [ファイル属性に応じてスキャン中にファイルをスキップまたは無視する](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|Scantaskattributeattributeskip | [ファイル属性に応じてスキャン中にファイルをスキップまたは無視する](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
 |UseCopyAndPreserveNTFSOwner | [ラベル付け中に NTFS 所有者を保持する](#preserve-ntfs-owners-during-labeling-public-preview)
 
 "Global" という名前のラベルポリシーに対してラベルポリシー設定が有効であることを確認する PowerShell コマンドの例を次に示します。
@@ -269,7 +269,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 次の表を使用して、指定する文字列値を指定します。
 
-| 文字列値| クライアント| スキャナー|
+| 文字列値| Client| スキャナー|
 |-------------|-------|--------|
 |\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
 |\<null value>| Office ファイルの種類と PDF ファイルに保護を適用する| 既定値: Office ファイルの種類と PDF ファイルに保護を適用する|
@@ -1206,7 +1206,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 このレジストリ設定では、[中央レポート](../reports-aip.md)の Azure Information Protection に送信される情報は変更されません。
 
-## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview"></a>ファイル属性に応じてスキャン中にファイルをスキップまたは無視する (パブリックプレビュー)
+## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes"></a>ファイル属性に応じてスキャン中にファイルをスキップまたは無視する
 
 この構成では、Office 365 セキュリティ & コンプライアンスセンターの PowerShell を使用して構成する必要があるポリシーの[詳細設定](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用します。
 
