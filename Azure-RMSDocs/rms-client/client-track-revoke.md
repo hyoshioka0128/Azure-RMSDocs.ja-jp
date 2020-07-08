@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7eb260815def6727fcdbd393fd9453ac89cb8baf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 956eccb942893d6d8850185449118f4027895a81
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960739"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047509"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>ユーザー ガイド: Azure Information Protection を使用してドキュメントを追跡および取り消す
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection を使用してドキュメントを保護した後は、保護されたドキュメントのユーザーによる使用状況を追跡できます。 ドキュメントが読まれる必要がなくなった場合は、必要に応じて、ドキュメントへのアクセスを取り消すこともできます。 このような場合は、**ドキュメント追跡サイト**を使用します。 このサイトには、Windows コンピューター、Mac コンピューターだけでなく、タブレットやスマートフォンからもアクセスできます。
 
@@ -56,7 +56,7 @@ Azure Information Protection を使用してドキュメントを保護した後
         
         ![ドキュメント追跡サイトの [管理者] アイコン](../media/tracking-site-admin-icon.png)
         
-        グローバル管理者でもこのアイコンが表示されない場合、ドキュメントが共有されていません。 その場合、 https://portal.azurerms.com/#/admin の URL からドキュメント追跡サイトにアクセスします。
+        グローバル管理者でもこのアイコンが表示されない場合、ドキュメントが共有されていません。 その場合、https://portal.azurerms.com/#/admin の URL からドキュメント追跡サイトにアクセスします。
 
 管理者でない場合は、自分が保護したドキュメントのみを追跡してアクセスを取り消すことができます。 ドキュメント追跡サイトを使用して、保護した電子メールを追跡することはできません。
 
@@ -73,7 +73,7 @@ Office アプリケーション、Word、Excel、および PowerPoint の場合:
 
 1. 追跡または取り消し対象の保護されたドキュメントを開きます。
 
-2. **[ホーム]** タブの **[保護]** グループで **[保護]**  >  **[追跡と取り消し]** をクリックします。
+2. [**ホーム**] タブの [**保護**] グループで、[**保護**] [  >  **追跡と取り消し**] をクリックします。
 
     ![使用の追跡オプション](../media/track-usage-callout.png)
     
@@ -89,9 +89,9 @@ Azure Information Protection クライアントのインストール方法の詳
 
 ## <a name="using-file-explorer-to-track-or-revoke-the-document"></a>エクスプローラーを使用したドキュメントの追跡または取り消し
 
-1. 保護されたファイルを右クリックし、 **[分類して保護する]** を選択します。
+1. 保護されたファイルを右クリックし、**[分類して保護する]** を選択します。
 
-2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスから、 **[追跡と取り消し]** を選択します。
+2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスから、**[追跡と取り消し]** を選択します。
 
     ![[分類と保護 - Azure Information Protection] ダイアログ ボックスの [追跡と取り消し] アイコン](../media/track-and-revoke.png)
 
@@ -118,7 +118,7 @@ Office アプリまたはエクスプローラーを使用して保護された�
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
-- [作業内容](client-user-guide.md#what-do-you-want-to-do)
+- [実行する操作](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 [管理者ガイド](client-admin-guide.md)の「[Azure Information Protection のドキュメント追跡の構成と使用](client-admin-guide-document-tracking.md)」をご覧ください。

@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 5f2bb77ff65f0d9c314edfb66021307580345fca
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: f5b0ab0eacd7c95edf53135c81fe3184e9f3c46d
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960716"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047288"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>ユーザーガイド: Azure Information Protection ビューアーで保護されたファイルを表示する
 
 >*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
@@ -56,9 +56,9 @@ ms.locfileid: "75960716"
 
 ## <a name="to-view-and-use-a-protected-document"></a>保護されたファイルを表示して使用するには
 
-1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、 **[Azure Information Protection ビューアー]** を選択します。 
+1. 保護されたファイルを開きます (例：ファイルや添付ファイルをダブルクリック、またはファイルへのリンクをクリックする)。 アプリの選択を求められたら、**[Azure Information Protection ビューアー]** を選択します。 
 
-2. **[サインイン]** または **[サインアップ]** ページが表示されたら、 **[サインイン]** をクリックして資格情報を入力します。 保護されたファイルが添付ファイルとして送信されてきた場合は、ファイルの送信に使用されたものと同じメール アドレスを指定するようにします。
+2. **[サインイン]** または **[サインアップ]** ページが表示されたら、**[サインイン]** をクリックして資格情報を入力します。 保護されたファイルが添付ファイルとして送信されてきた場合は、ファイルの送信に使用されたものと同じメール アドレスを指定するようにします。
     
     承認されているアカウントがない場合は、このページの「[認証のプロンプト](#prompts-for-authentication)」を参照してください。
 
@@ -68,21 +68,21 @@ ms.locfileid: "75960716"
     
     アクセス許可と、各アクセス許可に含まれる使用権限の詳細については、「[アクセス許可レベルに含まれる権限](../configure-usage-rights.md#rights-included-in-permissions-levels)」を参照してください。
 
-4. ファイルを編集するには、 **[名前を付けて保存]** をクリックし、保護されたファイルを元のファイル名拡張子に保存します。 そのファイルの種類に関連付けられているアプリケーションを使用してファイルを編集することができます。 この時点で、ファイルのラベルと保護が削除されます。
+4. ファイルを編集するには、**[名前を付けて保存]** をクリックし、保護されたファイルを元のファイル名拡張子に保存します。 そのファイルの種類に関連付けられているアプリケーションを使用してファイルを編集することができます。 この時点で、ファイルのラベルと保護が削除されます。
     
-    ビューアーは保護されたファイル用のため、 **[名前を付けて保存]** ボタンは、保護されたファイルに対してのみ有効になることに注意してください。
+    ビューアーは保護されたファイル用のため、**[名前を付けて保存]** ボタンは、保護されたファイルに対してのみ有効になることに注意してください。
     
 5. ファイルの編集が完了したら、エクスプローラーで、ラベルを再適用するファイルを右クリックします。 このアクションにより保護が再適用されます。
 
-6. 追加の保護されたファイルを開く場合は、 **[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
+6. 追加の保護されたファイルを開く場合は、**[開く]** オプションを使用して、ビューアーから直接参照できます。 ビューアーで、元のファイルが選択したファイルに置き換えられます。 
 
 > [!TIP]
-> 保護されたファイルが開かず、Azure Information Protection クライアントが完全にインストールされている場合は、 **[設定のリセット]** オプションを試してください。 このオプションにアクセスするには、Office アプリから **[保護]** ボタン > **[ヘルプとフィードバック]**  >  **[設定のリセット]** の順に選択します。 
+> 保護されたファイルが開かず、Azure Information Protection クライアントが完全にインストールされている場合は、**[設定のリセット]** オプションを試してください。 このオプションにアクセスするには、Office アプリから **[保護]** ボタン > **[ヘルプとフィードバック]** > **[設定のリセット]** の順に選択します。 
 > 
 > [[設定のリセット] オプションの詳細](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
--   [作業内容](client-user-guide.md#what-do-you-want-to-do)
+-   [実行する操作](client-user-guide.md#what-do-you-want-to-do)
 

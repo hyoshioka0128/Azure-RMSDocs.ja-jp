@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7a19cc91578b3c18423c2e4d1116f07ae678e30e
-ms.sourcegitcommit: 1ade392edac5842adb14996012efb6e605c39d8c
+ms.openlocfilehash: a43de12b834f838e2d82641e96f1ce5cadb7670f
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80382086"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048886"
 ---
 # <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>ユーザーガイド: Azure Information Protection クライアントを使用してファイルまたは電子メールを分類する
 
 >*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -40,14 +40,14 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 Azure Information Protection バーを使用して、構成されているラベルを 1 つ選択します。 
 
-たとえば、次の図は、 **[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 "General" など、ラベルを設定するには、 **[全般]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。 
+たとえば、次の図は、**[秘密度]** が **[未設定]** のため、ドキュメントにまだラベルが設定されていないことを示します。 "General" など、ラベルを設定するには、**[全般]** をクリックします。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。 
 
 ![Azure Information Protection バーの例](../media/info-protect-bar-not-set-callout.png)
 
 ラベルがドキュメントに既に適用され、ラベルを変更する場合は、別のラベルを選択できます。 ラベルがバーに表示されない場合は、現在のラベル値の横にある **[ラベルの編集]** アイコンをクリックします。
 
 > [!TIP]
-> または、 **[ファイル]** タブで **[保護]** ボタンからラベルを選択できます。
+> または、**[ファイル]** タブで **[保護]** ボタンからラベルを選択できます。
 
 ラベルの手動選択に加え、次の方法でラベルを適用することもできます。
 
@@ -61,7 +61,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 - Azure Information Protection クライアントが[インストール](install-client-app.md)されていない可能性があります。
 
-- お客様はクライアントをインストールしていますが、管理者がバーを表示しないように設定を構成しています。 代わりに、Office リボンの **[ファイル]** タブで、 **[保護]** ボタンからラベルを選択します。 
+- お客様はクライアントをインストールしていますが、管理者がバーを表示しないように設定を構成しています。 代わりに、Office リボンの **[ファイル]** タブで、**[保護]** ボタンからラベルを選択します。 
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>表示されるはずのラベルがバーに表示されない場合 
 
@@ -82,19 +82,19 @@ Azure Information Protection バーを使用して、構成されているラベ
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>エクスプローラーを使用してファイルを分類するには
 
-1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 例 :
+1. エクスプローラーで、1 つのファイル、複数のファイル、またはフォルダーを選択します。 右クリックして **[分類して保護する]** を選択します。 次に例を示します。
     
     ![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](../media/right-click-classify-protect-folder.png)
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類を設定します。 
     
-    選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 例 :
+    選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていません。 次に例を示します。
     
     ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/info-protect-dialog-labels-dimmed.png)
 
-3. 分類をサポートしていないファイルを選択した場合は、 **[閉じる]** をクリックします。 このファイルは保護せずに分類することはできません。
+3. 分類をサポートしていないファイルを選択した場合は、**[閉じる]** をクリックします。 このファイルは保護せずに分類することはできません。
     
-    ラベルを選択した場合は、 **[適用]** をクリックし、 **"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、 **[閉じる]** をクリックします。
+    ラベルを選択した場合は、**[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、**[閉じる]** をクリックします。
 
 選択したラベルを変更する場合は、この手順を繰り返して、別のラベルを選択します。
 
@@ -102,7 +102,7 @@ Azure Information Protection バーを使用して、構成されているラベ
 ## <a name="other-instructions"></a>その他の手順
 他の操作手順については、Azure Information Protection ユーザー ガイドを参照してください。
 
-- [作業内容](client-user-guide.md#what-do-you-want-to-do)
+- [実行する操作](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 「[Azure Information Protection ポリシーの構成](../configure-policy.md)」を参照してください。

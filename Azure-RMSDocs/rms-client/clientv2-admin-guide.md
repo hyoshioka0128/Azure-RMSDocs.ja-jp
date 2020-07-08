@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 76f87d66c2eacafc7883b905c3bc364f9b69f5a1
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: fcd773904dc9570715313a856d512c0bce54811c
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802853"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048767"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合されたラベル付けクライアント管理者ガイド
 
@@ -24,7 +24,7 @@ ms.locfileid: "84802853"
 >
 > **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 このガイドの情報は、エンタープライズネットワーク上で Azure Information Protection 統合されたラベル付けクライアントを担当している場合、または、「 [Azure Information Protection ユニファイドラベルクライアントユーザーガイド](clientv2-user-guide.md)」に記載されている技術情報が必要な場合に使用します。 
 
@@ -240,7 +240,7 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 バージョン1.48.204.0 以降では、スキャナーは構成プロファイルを使用して、Azure portal から構成設定を取得します。 スキャナーをアップグレードすると、このオンライン構成を使用するようにスキャナーに指示があります。また、統合されたラベル付けクライアントでは、スキャナーのオフライン構成はサポートされていません。
 
-1. Azure portal を使用して、スキャナーの設定とデータ リポジトリ、およびそれに必要なすべての設定を含む新しいスキャナー プロファイルを作成します。 この手順の詳細については、スキャナーの展開手順に関するトピックの Azure portal セクションの「[スキャナーの構成](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)」を参照してください。
+1. Azure portal を使用して、スキャナーの設定とデータ リポジトリ、およびそれに必要なすべての設定を含む新しいスキャナー プロファイルを作成します。 この手順の詳細については、スキャナーの展開手順に関する「 [Azure portal でのスキャナーの構成](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)」を参照してください。
 
 2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
 

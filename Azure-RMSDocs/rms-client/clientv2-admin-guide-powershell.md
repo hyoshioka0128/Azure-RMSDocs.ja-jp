@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01149b9f12fce4c88f250548eaa86dd87eeaa689
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: 26a6b96a8f0de79d78bb5fdb456158f15e86b1e0
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802868"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048818"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>管理者ガイド: Azure Information Protection 統合クライアントでの PowerShell の使用
 
@@ -24,7 +24,7 @@ ms.locfileid: "84802868"
 >
 > **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection 統合ラベル付けクライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
@@ -167,14 +167,18 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
 1. [**管理者として実行] オプション**を使用して Windows PowerShell を開きます。 
 
 2. PowerShell セッションで、非対話形式で実行される Windows ユーザーアカウントの資格情報を格納する変数を作成します。 たとえば、スキャナー用のサービスアカウントを作成した場合は、次のようになります。
-    
-        $pscreds = Get-Credential "CONTOSO\srv-scanner"
-    
+
+    ```ps
+    $pscreds = Get-Credential "CONTOSO\srv-scanner"
+    ```
+
     このアカウントのパスワードを入力するように求められます。
 
 2. *OnBeHalfOf*パラメーターを指定して、Set-AIPAuthentication コマンドレットを実行します。これには、作成した変数の値を指定します。 また、アプリの登録値、テナント ID、および Azure AD で委任されたユーザーアカウントの名前を指定します。 次に例を示します。
     
-        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+    ```ps
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+    ```
 
 > [!NOTE]
 > コンピューターがインターネットにアクセスできない場合は、Azure AD でアプリを作成し、Set-AIPAuthentication を実行する必要はありません。 代わりに、切断された[コンピューター](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)の指示に従います。  
@@ -182,7 +186,9 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
 ## <a name="next-steps"></a>次のステップ
 PowerShell セッションでコマンドレットのヘルプを表示するには、「」と入力 `Get-Help <cmdlet name> -online` します。 次に例を示します。 
 
-    Get-Help Set-AIPFileLabel -online
+```ps
+Get-Help Set-AIPFileLabel -online
+```
 
 Azure Information Protection クライアントのサポートに必要な詳細については、以下をご覧ください。
 

@@ -1,10 +1,10 @@
 ---
 title: はじめに - iOS用および Android 用の AIP アプリ
 description: iOS および Android 用の Azure Information Protection アプリを使って電子メールやファイルを表示する
-author: rkarlin
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,38 +12,53 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cfae5de653497a448d10e0ac65c10ea2a6e9e4f3
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960839"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048699"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始
 
 *適用対象: Active Directory Rights Management サービス、[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-このページの手順を利用する前に、「[iOS 用および Android 用の Microsoft Azure Information Protection アプリに関する FAQ](mobile-app-faq.md)」をお読みください。 そのページでは、アプリの概要、サポートされているデバイス、アプリの使用方法に関する基本情報が説明されています。
+このページでは、iOS または Android 用の Azure Information Protection アプリの実行をテストする方法について説明します。
 
-保護された電子メールまたはファイルを開く必要がある場合、ほとんどのユーザーは通常、Azure Information Protection アプリを使用します。 ユーザーのアプリをテストするか、必要になる前に単に試用する管理者の場合は、次の手順に従ってください。
+保護された電子メールまたはファイルを開く必要がある場合、ほとんどのユーザーは通常、Azure Information Protection アプリを使用します。 ただし、管理者がユーザーのアプリをテストする場合、または必要なときに単に試してみる場合は、以下の手順に従って、デバイス上の保護されたファイルを表示してください。
+
+> [!IMPORTANT]
+> 開始する前に、 [iOS または Android 用の Azure Information Protection アプリ](mobile-app-faq.md)の要件と手順を確認してください。
+> 
+
+## <a name="access-a-protected-file-from-your-device"></a>デバイスから保護されたファイルにアクセスする
+
+AIP モバイルアプリをテストするには、次のいずれかの種類の保護されたファイルにデバイスからアクセスできることを確認します。
+
+|ファイルの種類  |Instructions  |
+|---------|---------|
+|**... メッセージファイル**     | 権利で保護された電子メールメッセージ。 モバイル電子メールアプリが rights management データ保護をネイティブでサポートしていない場合、保護された電子メールメッセージは電子メールの添付ファイルとして表示されます。 </br></br>Windows コンピューターの Outlook などの別のデバイスを使用して、権限で保護された電子メールメッセージを自分宛てに送信し、モバイルデバイスからアクセスできるようにします。 </br></br>**注:** Rights management をネイティブでサポートしている電子メールクライアントの一覧については、「 [RMS 対応 applications](../requirements-applications.md#rms-enlightened-applications)」の「 **email** 」列を参照してください。 |
+|**権限で保護された PDF ファイル**     | 1. Windows コンピューターから、AIP[クラシック](client-classify-protect.md)または統合された[ラベル付けクライアント](clientv2-classify-protect.md)クライアントを使用して PDF ファイルを保護します。 </br>2. 保護された PDF を自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。        |
+|**. Ptxt または ptxt または ppng**     | 1. Windows コンピューターから、AIP[クラシック](client-classify-protect.md)または統合された[ラベル付けクライアント](clientv2-classify-protect.md)クライアントを使用してテキストまたはイメージファイルを保護します。 </br></br>2. 保護されたファイルを自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。 </br></br>**注:** 詳細については、「[分類と保護のサポートされるファイルの種類](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)」を参照してください。   |
+| | |
+
+### <a name="open-the-protected-file-on-your-mobile"></a>モバイルで保護されたファイルを開く
+
+1. 電子メールの添付ファイルまたはリンクをタップして、保護されたコンテンツを開きます。
+
+1. メッセージが表示されたら、 **AIP Viewer**アプリを選択して、保護されたコンテンツを表示します。
+
+1. メッセージが表示されたら、職場または学校のアカウントでサインインするか、証明書を選択します。
+
+認証が完了すると、AIP Viewer アプリに電子メールまたはファイルが表示されます。
 
 > [!NOTE]
-> アプリを起動してから、表示するドキュメントや電子メールを選ぶのではなく、 ドキュメントや電子メールを開いてから、このアプリを選び、ドキュメントまたは電子メールを表示します。
->
-> 同様に、サインインをうながされるまではアプリにサインインしないでください。
+> 常に、保護されたコンテンツを開いて AIP アプリを開きます。 メッセージが表示されるまで、または AIP Viewer アプリ内から保護されたファイルを開くために、アプリへのサインインを試行しないでください。
+> 
 
-次の手順を使用するには、アプリでサポートされているファイルの 1 つにモバイル デバイスがアクセスできる必要があります。 たとえば次のようになります。
+## <a name="next-steps"></a>次のステップ
 
-- **.rpmsg ファイル**: モバイル デバイスの電子メール アプリが Rights Management データ保護をネイティブにサポートしていない場合に、電子メール メッセージの添付ファイルとして表示する、権利が保護された電子メール メッセージ。 
-    
-    別のデバイスを使用して、モバイル デバイスからアクセスできる権利が保護された電子メール メッセージを自分自身に送信します。 たとえば、Windows コンピューターから Outlook を使用します。 Rights management をネイティブでサポートしている電子メールクライアントの一覧については、「 [Azure Rights Management データ保護をサポートするアプリケーション](../requirements-applications.md)」の最初の表の「 **email** 」列を参照してください。
+AIP モバイルアプリに関するフィードバックを提供するには、次のいずれかの方法を使用します。
 
-- **権利が保護された pdf ファイル**: Windows コンピューターでは、Azure Information Protection クライアント ([クラシック](client-classify-protect.md)または統一された[ラベル付けクライアント](clientv2-classify-protect.md)) を使用して pdf ファイルを保護し、この権利で保護された pdf ファイルを電子メールの添付ファイルとして送信します。 または、自分の電子メール アドレスを使用し、SharePoint で保護されたライブラリに PDF ファイルをアップロードして共有します。
-
-- **A. ptxt または ptxt または ppng**: Windows コンピューターから Azure Information Protection クライアントを使用してテキストまたはイメージファイルを保護し、この保護されたファイルを電子メールの添付ファイルとして送信します。 テストのために使用できるファイルの種類の全リストについては、Azure Information Protection クライアント管理ガイドの [「分類と保護がサポートされているファイルの種類」](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) セクションの最初の表を参照してください。 
-
-これらのファイルを Azure Information Protection ビューアー アプリで表示するには、電子メールの添付ファイルまたはリンクをタップします。 ファイルを開くアプリの選択を求められたら、 **[AIP Viewer]** (AIP ビューアー) アプリを選択します。 職場または学校アカウントでサインインするか、証明書を選択するように求められます。 これらの資格情報が認証されると、Azure Information Protection アプリで電子メールまたはファイルが表示されて読めるようになります。
-
-## <a name="next-steps"></a>次の手順
-
-[FAQ](mobile-app-faq.md) に記載されていない、このアプリに関する質問または意見があれば、[Yammer サイト](https://www.yammer.com/AskIPTeam)にアクセスしてください。
+- [**設定**] [  >  **フィードバックの送信**] に移動
+- [Yammer サイト](https://www.yammer.com/AskIPTeam)に質問を投稿する

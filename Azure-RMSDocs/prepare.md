@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7f9dd0059b0fc3e24d709d7a0237b93a49ee92c1
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 880e3b8acd3d17bcb3aec424e3aef96c2aeadbaf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746387"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048308"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Azure Information Protection 向けのユーザーとグループの準備
 
@@ -129,20 +129,25 @@ Azure AD PowerShell を利用し、ユーザーとグループを Azure Informat
 
 たとえば、PowerShell セッションで Azure Active Directory 向け V1 PowerShell モジュール、[MSOnline](/powershell/module/msonline/?view=azureadps-1.0) を利用し、最初にサービスに接続し、グローバル管理者の資格情報を入力します。
 
-    Connect-MsolService
-
+```ps
+Connect-MsolService
+```
 
 注: このコマンドでうまくいかない場合、`Install-Module MSOnline` を実行して MSOnline モジュールをインストールできます。
 
 次に、値が切り詰められないように PowerShell セッションを設定します。
 
-    $Formatenumerationlimit =-1
+```ps
+$Formatenumerationlimit =-1
+```
 
 ### <a name="confirm-user-accounts-are-ready-for-azure-information-protection"></a>ユーザー アカウントが Azure Information Protection で使えることを確認する
 
 ユーザー アカウントを確認するには、次のコマンドを実行します。
 
-    Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+```ps
+Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+```
 
 最初に、Azure Information Protection で使用するユーザーが表示されていることを確認します。
 
@@ -158,7 +163,7 @@ Azure AD PowerShell を利用し、ユーザーとグループを Azure Informat
 | Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
 |    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
 
-この例では:
+次の点に注意してください。
 
 - Jagannath reddy Reddy のユーザーアカウントは、によって承認され <strong>jagannathreddy@contoso.com</strong> ます。
 
@@ -183,7 +188,9 @@ Azure AD PowerShell を利用し、ユーザーとグループを Azure Informat
 
 グループ アカウントを確認するには、次のコマンドを使用します。
 
-    Get-MsolGroup | select DisplayName, ProxyAddresses
+```ps
+Get-MsolGroup | select DisplayName, ProxyAddresses
+```
 
 Azure Information Protection で使用するグループが表示されていることを確認します。 表示されているグループについては、**ProxyAddresses** 列のメール アドレスを利用し、Azure Rights Management サービスのためにグループ メンバーに承認できます。
 
@@ -191,7 +198,9 @@ Azure Information Protection で使用するグループが表示されている
 
 セキュリティ グループを利用する 2 つの Azure Rights Management サービス構成シナリオについては、次の PowerShell コマンドを利用し、それらのグループの識別に利用できるオブジェクト ID と表示名を見つけることができます。 Azure Portal を利用してこれらのグループを見つけ、オブジェクト ID と表示名の値をコピーすることもできます。
 
-    Get-MsolGroup | where {$_.GroupType -eq "Security"}
+```ps
+Get-MsolGroup | where {$_.GroupType -eq "Security"}
+```
 
 ## <a name="considerations-for-azure-information-protection-if-email-addresses-change"></a>メール アドレスが変更された場合の Azure Information Protection の考慮事項
 

@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: bcb3006bdd7575385d37be066b627ef49f770c70
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249846"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047713"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -91,7 +91,7 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 - **Windows server 2012 R2**および**windows server 2012**
 
-[どちらのクライアントも](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)、ユーザーがドキュメントや電子メールを分類してラベル付けすることができます。
+[どちらのクライアントも](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)、ユーザーがドキュメントや電子メールを分類してラベル付けすることができます。
 
 以前のバージョンの Windows でのサポートの詳細については、Microsoft アカウントまたはサポート担当者にお問い合わせください。
 
@@ -104,7 +104,7 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 たとえば、Citrix ソリューションでは、Office 用の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)、Azure Information Protection 統合されたラベル付けクライアント、または Azure Information Protection クライアントを無効にする必要がある場合があります。 
 
-これらのアプリケーションでは、次のファイルを使用します。それぞれ、 **winword.exe** **、excel.exe**、 **outlook.exe**、 **powerpnt.exe**、msip. **app-v**、 **msip. .exe**
+これらのアプリケーションは、それぞれ**winword.exe**、 **excel.exe**、 **outlook.exe**、 **powerpnt.exe**、 **msip.app.exe**、 **msip.viewer.exe**の各ファイルを使用します。
 
 ### <a name="server-support"></a>サーバー サポート
 
@@ -166,10 +166,12 @@ Azure Information Protection には、次の追加要件があります。
 - **TLS クライアントとサービス間の接続**。 **Aadrm.com** URL に対してパケットレベルの検査を実行するなど、TLS クライアントからサービスへの接続を終了しないでください。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
      
     Azure Rights Management サービスに到達する前にクライアント接続が終了しているかどうかを確認するには、次の PowerShell コマンドを使用します。
-    
-        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-        $request.GetResponse()
-        $request.ServicePoint.Certificate.Issuer
+
+    ```ps
+    $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+    $request.GetResponse()
+    $request.ServicePoint.Certificate.Issuer
+    ```
 
     結果には、発行元の CA が Microsoft CA からのものであることが示されます。たとえば、のようになり `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` ます。 
     

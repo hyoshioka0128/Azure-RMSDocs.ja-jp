@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 9a912db81e293575d74000d79ddc4f6592ab8046
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666032"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046319"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Azure Information Protection の Hold your own key (HYOK) 保護
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -172,17 +172,23 @@ AD RMS のデプロイの情報と手順については、Windows Server ライ�
 
 1. クラスターの各 AD RMS サーバーで、次のレジストリ エントリを作成します。
 
-    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
-    
+    ``` md
+    Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"
+    ```
+
     では、 \<string value> 次のいずれかを指定します。
     
     - SSL/TLS を使用した AD RMS クラスターの場合:
-
-            https://<cluster_name>/_wmcs/certification/certification.asmx
     
+        ``` md
+        https://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
+
     - SSL/TLS を使用しない AD RMS クラスターの場合 (テスト ネットワークのみ):
         
-            http://<cluster_name>/_wmcs/certification/certification.asmx
+        ``` md
+        http://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
 
 2. IIS を再起動します。
 

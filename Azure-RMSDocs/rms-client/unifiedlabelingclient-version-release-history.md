@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7e3ac45d3665d342ddee3f1523b964c2f768db84
-ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
+ms.openlocfilehash: aca29a142c0735755c343535b3df43e175c59e80
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716081"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048614"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -25,7 +25,7 @@ ms.locfileid: "85716081"
 >
 > **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection 統合されたラベル付けクライアントは、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードできます。
 
@@ -95,7 +95,7 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
 

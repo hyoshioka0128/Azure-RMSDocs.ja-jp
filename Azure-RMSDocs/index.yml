@@ -12,12 +12,12 @@ metadata:
   ms.author: mlottner
   manager: rkarlin
   ms.date: 04/02/2019
-  ms.openlocfilehash: 28aee5d35982e832cbe6a43782a3b9c7a85700ee
-  ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+  ms.openlocfilehash: 63026df891e74f05bf8bcf570f852840aa991cce
+  ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "80587492"
+  ms.lasthandoff: 07/07/2020
+  ms.locfileid: "86048427"
 landingContent:
 - title: Azure Information Protection について
   linkLists:
@@ -51,8 +51,8 @@ landingContent:
     links:
     - text: 上位 5 つの推奨される Ignite セッション
       url: what-is-information-protection.md#microsoft-ignite
-    - text: バージョン 2.6.111.0 の詳細 - ラベル付けクライアントの統合
-      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: 最新の統合ラベル クライアント バージョン
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: オンプレミスのデータ ストアのデータを分類および保護する
   linkLists:
   - linkListType: how-to-guide
@@ -97,5 +97,5 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 中央レポート機能 (プレビュー)
+    - text: 中央レポート
       url: reports-aip.md

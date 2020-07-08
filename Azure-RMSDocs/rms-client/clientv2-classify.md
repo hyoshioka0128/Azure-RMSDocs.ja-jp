@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: bb75b769039670a7d7ec162f3c8122e7630fb8c4
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: 053dc282a05a5d37518c533ff78282610c54d320
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802904"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048716"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザーガイド: Windows 用の Azure Information Protection 統合ラベル付けクライアントを使用してファイルまたは電子メールを分類する
 
@@ -24,7 +24,7 @@ ms.locfileid: "84802904"
 >
 > **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類します (保護はしません)。 ドキュメントや電子メールを保護する必要もある場合は、[分類して保護する手順](clientv2-classify-protect.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
@@ -61,7 +61,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 - Azure Information Protection 統合ラベルクライアントが[インストールさ](install-unifiedlabelingclient-app.md)れていない可能性があります。
 
-- リボンに [**秘密度**] ボタンが表示されていない場合でも、ラベル付きの [**保護**] ボタンが表示されている場合は、Azure Information Protection クライアント (クラシック) がインストールされており、Azure Information Protection 統一されたラベル付けクライアントではありません。 [詳細情報](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- リボンに [**秘密度**] ボタンが表示されていない場合でも、ラベル付きの [**保護**] ボタンが表示されている場合は、Azure Information Protection クライアント (クラシック) がインストールされており、Azure Information Protection 統一されたラベル付けクライアントではありません。 [詳細情報](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>表示されるはずのラベルが表示されない場合 
 
@@ -104,7 +104,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 Windows 用の Azure Information Protection 統合ラベル付けクライアントのユーザーガイドの詳細な手順については、次を参照してください。
 
-- [どうしたいんですか。](clientv2-user-guide.md#what-do-you-want-to-do)
+- [実行する操作](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報
 

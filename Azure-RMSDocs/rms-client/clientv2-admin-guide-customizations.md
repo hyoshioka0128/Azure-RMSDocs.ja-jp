@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9e77e09d19e19d2d062dc526927176c1645abbe0
-ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
+ms.openlocfilehash: 390f89d124d68591e8eaade67f6666d3f7c32ed4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716151"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048869"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントのカスタム構成
 
@@ -26,7 +26,7 @@ ms.locfileid: "85716151"
 >
 > **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection の統一されたラベル付けクライアントを管理するときに、特定のシナリオまたはユーザーのサブセットに必要となる可能性がある詳細な構成については、次の情報を参照してください。
 
@@ -43,19 +43,27 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 ラベルポリシー設定の場合、単一の文字列値:
 
-    Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
+```ps
+Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
+```
 
 ラベルポリシー設定の場合は、同じキーに対して複数の文字列値を指定します。
 
-    Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```ps
+Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```
 
 ラベル設定の場合、単一の文字列値:
 
-    Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
+```ps
+Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
+```
 
 ラベル設定の場合は、同じキーに対して複数の文字列値を指定します。
 
-    Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```ps
+Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
+```
 
 詳細設定を削除するには、同じ構文を使用しますが、null 文字列値を指定します。
 
@@ -66,19 +74,27 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 例 1: 1 つの文字列値のラベルポリシーの詳細設定を設定します。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```
 
 例 2: 1 つの文字列値に対して、ラベルの詳細設定を設定します。
 
-    Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
+```ps
+Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
+```
 
 例 3: 複数の文字列値に対して、ラベルの詳細設定を設定します。
 
-    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```ps
+Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```
 
 例 4: null 文字列値を指定して、ラベルポリシーの詳細設定を削除します。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
+```
 
 #### <a name="specifying-the-identity-for-the-label-policy-or-label"></a>ラベルポリシーまたはラベルの id の指定
 
@@ -94,8 +110,9 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 ラベル GUID を指定する場合、ラベルを管理する管理センターにはこの値が表示されません。 ただし、次の Office 365 セキュリティ & コンプライアンスセンターの PowerShell コマンドを使用して、この値を見つけることができます。
 
-    Get-Label | Format-Table -Property DisplayName, Name, Guid
-
+```ps
+Get-Label | Format-Table -Property DisplayName, Name, Guid
+```
 
 #### <a name="order-of-precedence---how-conflicting-settings-are-resolved"></a>優先順位-競合する設定の解決方法
 
@@ -156,7 +173,9 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 "Global" という名前のラベルポリシーに対してラベルポリシー設定が有効であることを確認する PowerShell コマンドの例を次に示します。
 
-    (Get-LabelPolicy -Identity Global).settings
+```ps
+(Get-LabelPolicy -Identity Global).settings
+```
 
 #### <a name="available-advanced-settings-for-labels"></a>ラベルに使用できる詳細設定
 
@@ -173,7 +192,9 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 "Public" という名前のラベルに対して有効なラベル設定を確認する PowerShell コマンドの例を次に示します。
 
-    (Get-Label -Identity Public).settings
+```ps
+(Get-Label -Identity Public).settings
+```
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Display the Information Protection bar in Office apps\(Office アプリの Information Protection バーを表示する\)
 
@@ -189,7 +210,9 @@ Office 365 Security & コンプライアンスセンターの PowerShell を使�
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+```
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>必須ラベルから Outlook メッセージを除外する
 
@@ -205,7 +228,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
+```
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Outlook で推奨分類を有効にする
 
@@ -221,7 +246,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+```
 
 ## <a name="enable-removal-of-protection-from-compressed-files"></a>圧縮ファイルからの保護の削除を有効にする
 
@@ -235,7 +262,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 ポリシーが有効になっている PowerShell コマンドの例:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
+```
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Outlook に別の既定ラベルを設定します
 
@@ -251,7 +280,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
+```
 
 ## <a name="change-which-file-types-to-protect"></a>保護するファイルの種類を変更する
 
@@ -269,7 +300,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 次の表を使用して、指定する文字列値を指定します。
 
-| 文字列値| Client| スキャナー|
+| 文字列値| クライアント| スキャナー|
 |-------------|-------|--------|
 |\*|既定値: すべてのファイルの種類に保護を適用します。|すべてのファイルの種類に保護を適用する|
 |\<null value>| Office ファイルの種類と PDF ファイルに保護を適用する| 既定値: Office ファイルの種類と PDF ファイルに保護を適用する|
@@ -277,15 +308,21 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 例 1: Office ファイルの種類と PDF ファイルのみを保護する統合クライアント用の PowerShell コマンド。ラベルポリシーには "Client" という名前が付けられています。
 
-    Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+```ps
+Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+```
 
 例 2: すべてのファイルの種類を保護するためのスキャナーの PowerShell コマンド: ラベルポリシーに "Scanner" という名前を付けます。
 
-    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+```ps
+Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+```
 
 例 3: スキャナーの PowerShell コマンドを使用して、Office ファイルと PDF ファイルに加え、.txt ファイルと .csv ファイルを保護します。ここで、ラベルポリシーには "Scanner" という名前を付けます。
 
-    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+```ps
+Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+```
 
 この設定では、保護するファイルの種類を変更できますが、既定の保護レベルをネイティブから汎用に変更することはできません。 たとえば、統一されたラベル付けクライアントを実行しているユーザーに対しては、既定の設定を変更して、Office ファイルと PDF ファイルのみをすべてのファイルの種類ではなく保護するようにすることができます。 ただし、これらのファイルの種類は、pfile ファイル名拡張子で汎用的に保護されるように変更することはできません。
 
@@ -307,22 +344,30 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 例 1: 保護 ".dwg" が "pfile" になる既定の動作と同じように動作する PowerShell コマンド。
 
-    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
+```ps
+Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
+```
 
 例 2: ファイルが保護されている場合、すべての PFile 拡張機能を汎用保護 (PFile) からネイティブ保護 (. pdwg) に変更する PowerShell コマンド:
 
-    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
+```ps
+Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
+```
 
 例 3: このサービスを使用するときに ".dwg" を ". pdwg" に変更する PowerShell コマンドを次のように保護します。
 
-    Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
+```ps
+Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
+```
 
 この設定では、次の拡張機能 (「」を使用します。 txt "、" .xml "、" .bmp "、" jfif "、" .jpg "、" .jpeg "、" jpe "、". .png "、" "、". jpe "、" .png "、" .tif "、" tiff "、" .gif ") は常に P になり \<EXT> ます。注目すべき除外とは、"ptxt" が "pfile" にならないことです。 
 **AdditionalPPrefixExtensions**は、advanced プロパティ- [**Pfilesupportedexテンション**](#pfilesupportedextension)が有効になっている場合にのみ機能します。 
 
 たとえば、次のコマンドが使用されているとします。
 
-    Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
+```ps
+Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
+```
 
 PFile protection は使用できません。 **AdditionalPPrefixExtensions**の値は無視されます。 
 
@@ -342,7 +387,9 @@ PFile protection は使用できません。 **AdditionalPPrefixExtensions**の�
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
+```
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>他のラベル付けソリューションからヘッダーとフッターを削除する
 
@@ -378,12 +425,14 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+```
 
 複数の単語図形を削除する場合は、削除する図形の数を指定します。
 
-
 ### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>RemoveExternalContentMarkingInApp 詳細設定プロパティの使用
+
 この設定を使用すると、別のラベル付けソリューションによって視覚的なマーキングが適用されている場合に、テキストベースのヘッダーまたはフッターをドキュメントから削除したり置き換えることができます。 たとえば、古いフッターには、新しいラベル名とその独自のフッターを使用するために、機密ラベルに移行した古いラベルの名前が含まれています。
 
 統一されたラベル付けクライアントがポリシーでこの構成を取得すると、Office アプリでドキュメントを開いたときに古いヘッダーとフッターが削除されるか、またはドキュメントに機密ラベルが適用されます。
@@ -396,7 +445,7 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 - 値: \<**Office application types WXP**> 
 
-次に例を示します。
+例 :
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -404,7 +453,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+```
 
 この後、ヘッダーまたはフッターの内容と、その削除または置換方法を指定したりするために、少なくとも 1 つのより詳細なクライアント設定 **ExternalContentMarkingToRemove** が必要です。
 
@@ -437,7 +488,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+```
 
 #### <a name="multiline-headers-or-footers"></a>複数行のヘッダーまたはフッター
 
@@ -457,8 +510,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+```
 
 #### <a name="optimization-for-powerpoint"></a>PowerPoint 用の最適化
 
@@ -482,7 +536,9 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
 
 複数の PowerPoint 図形を削除する場合は、削除する図形の数を指定します。
 
@@ -494,7 +550,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>エクスプローラーでカスタムアクセス許可を無効にする
 
@@ -510,7 +568,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
+```
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>カスタム アクセス許可で保護されているファイルについて、ファイル エクスプローラーでカスタム アクセス許可を常にユーザーに表示する
 
@@ -528,8 +588,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
+```
 
 ## <a name="for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments"></a>添付ファイル付きの電子メール メッセージの場合、添付ファイルの最上位の分類に一致するラベルを適用します
 
@@ -541,10 +602,12 @@ PowerShell コマンドの例:
 
 この設定を [**推奨**] に構成すると、ユーザーは、カスタマイズ可能なツールヒントを使用して、選択したラベルを電子メールメッセージに適用するように求められます。 ユーザーは、推奨設定を受け入れるか、通知を閉じます。 または、この設定を [**自動**] に構成できます。選択したラベルは自動的に適用されますが、ユーザーは電子メールを送信する前に、ラベルを削除したり、別のラベルを選択したりできます。
 
-注: 最高の分類ラベルを持つ添付ファイルが、ユーザー定義のアクセス許可の設定で保護するように構成されている場合:
-
-- ラベルのユーザー定義のアクセス許可に Outlook ([転送不可]) が含まれている場合、そのラベルが選択され、電子メールに [転送防止] が適用されません。
-- ラベルのユーザー定義アクセス許可が Word、Excel、PowerPoint、およびエクスプローラー専用の場合、そのラベルは電子メールメッセージには適用されず、保護もされません。
+> [!NOTE]
+> 最高の分類ラベルを持つ添付ファイルが、ユーザー定義のアクセス許可の設定を使用して保護するように構成されている場合は、次のようになります。
+> 
+> - ラベルのユーザー定義のアクセス許可に Outlook ([転送不可]) が含まれている場合、そのラベルが選択され、電子メールに [転送防止] が適用されません。
+> - ラベルのユーザー定義アクセス許可が Word、Excel、PowerPoint、およびエクスプローラー専用の場合、そのラベルは電子メールメッセージには適用されず、保護もされません。
+> 
 
 この詳細設定を構成するには、選択したラベルポリシーに対して次の文字列を入力します。
 
@@ -560,7 +623,9 @@ PowerShell コマンドの例:
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
+```
 
 ## <a name="add-report-an-issue-for-users"></a>ユーザー向けの "問題の報告" を追加する
 
@@ -580,7 +645,9 @@ Web サイトの値の例: `https://support.contoso.com`
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
+```
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Outlook で、送信される電子メールに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装する
 
@@ -611,8 +678,11 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 選択したポリシーについて、次のキーを使用して次の詳細設定を1つ以上作成します。 値には、1つまたは複数のラベルを Guid で指定し、それぞれをコンマで区切って指定します。
 
-複数のラベル Guid の値の例 (コンマ区切り文字列):`dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+複数のラベル Guid の値の例 (コンマ区切り文字列): 
 
+```sh
+dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f
+```
 
 - 警告メッセージ: 
     
@@ -635,11 +705,13 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedCollaborationLabel="dc284177-b2ac-4c96-8d78-e3e1e960318f,d8bb73c3-399d-41c2-a08a-6f0642766e31,750e87d4-0e91-4367-be44-c9c24c9103b4,32133e19-ccbd-4ff1-9254-3a6464bf89fd,74348570-5f32-4df9-8a6b-e6259b74085b,3e8d34df-e004-45b5-ae3d-efdc4731df24"}
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
+```
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>特定のラベル用に構成されたポップアップメッセージのドメイン名を除外するには
 
@@ -673,9 +745,11 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
+```
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>ラベルのない電子メールまたは添付ファイルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
 
@@ -708,8 +782,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
+```
 
 #### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>ラベルのない電子メールの添付ファイルのポップアップメッセージに対して、警告、配置、またはブロックを行うための特定のファイル名拡張子を定義するには
 
@@ -729,7 +804,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+```
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>添付ファイルのない電子メールメッセージに対して別のアクションを指定するには
 
@@ -765,7 +842,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
 
 ## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Azure Information Protection analytics への監査データの送信を無効にする
 
@@ -781,8 +860,9 @@ Azure Information Protection 統合されたラベル付けクライアントは
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+```
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>ドキュメント内の検出された機密情報の Azure Information Protection analytics への送信を無効にする
 
@@ -808,7 +888,9 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
+```
 
 ## <a name="send-information-type-matches-to-azure-information-protection-analytics"></a>情報の種類の一致を Azure Information Protection analytics に送信する
  
@@ -824,7 +906,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+```
 
 ## <a name="limit-cpu-consumption"></a>CPU 消費量の制限
 
@@ -864,8 +948,9 @@ Scanに**cpu**がチェックされるのは、 **scan@ cpu**が100と等しく�
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" です。
 
-    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
-
+```ps
+Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
+```
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Secure Islands からのラベルの移行と、その他のラベル付けのソリューション
 
@@ -907,7 +992,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" で�
 
 たとえば、"Confidential" というラベルが付いた PowerShell コマンドの例を次に示します。
 
-    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
+```ps
+Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
+```
 
 #### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>例 2: 異なるラベル名の 1 対 1 のマッピング
 
@@ -925,7 +1012,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Scanner" で�
 
 PowerShell コマンドの例。ラベルの名前は「非常に機密性の高い」です。
 
-    Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
+```ps
+Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
+```
 
 #### <a name="example-3-many-to-one-mapping-of-label-names"></a>例 3: ラベル名の多対一のマッピング
 
@@ -943,7 +1032,9 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 たとえば、"General" というラベルが付いた PowerShell コマンドの例を次に示します。
 
-    Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
+```ps
+Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
+```
 
 #### <a name="example-4-multiple-rules-for-the-same-label"></a>例 4: 同じラベルに対して複数のルールを使用する
 
@@ -951,7 +1042,9 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 この例では、"Confidential" と "Secret" という名前のセキュリティで保護された諸島ラベルが "**分類**" という名前のカスタムプロパティに格納されていて、Azure Information Protection 統合ラベル付けクライアントに "confidential" という名前の秘密度ラベルを適用します。
 
-    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```ps
+Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
+```
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>ラベルの移行ルールを電子メールに拡張する
 
@@ -965,7 +1058,9 @@ PowerShell コマンドの例。ラベルの名前は「非常に機密性の高
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
+```
 
 ### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>ラベルの移行ルールを SharePoint プロパティに拡張する
 
@@ -981,7 +1076,9 @@ PowerShell コマンドの例: ラベルポリシーの名前は "Global" です
 
 PowerShell コマンドの例: ラベルポリシーの名前は "Global" です。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+```
 
 ## <a name="apply-a-custom-property-when-a-label-is-applied"></a>ラベルが適用されたときにカスタムプロパティを適用する
 
@@ -1009,7 +1106,9 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 この構成では、追加のカスタムプロパティを適用する各機密ラベルに対して、 **Custompropertiesbylabel**という名前の詳細設定を指定する必要があります。 次に、各エントリに対して、次の構文を使用して値を設定します。
 
-`[custom property name],[custom property value]`
+```sh
+[custom property name],[custom property value]
+```
 
 > [!IMPORTANT]
 > 文字列に空白を使用すると、ラベルの適用ができなくなります。
@@ -1030,7 +1129,9 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 たとえば、"Confidential" というラベルが付いた PowerShell コマンドの例を次に示します。
 
+```ps
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
+```
 
 #### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>例 2: ラベルに対して複数のカスタムプロパティを追加する
 
@@ -1038,7 +1139,9 @@ Azure Information Protection 統合ラベル付けクライアントを使用し
 
 たとえば、ラベルに "General" という名前が付けられていて、" **general** " と**いう名前の**カスタムプロパティと、" **Internal**" の値が指定さ**れた 2**番目のカスタムプロパティを追加する PowerShell コマンドの例を次に示します。
 
-    Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+```ps
+Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
+```
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>ラベルを構成して Outlook で S/MIME 保護を適用する
 
@@ -1064,9 +1167,11 @@ Outlook でのみラベルを表示する場合は、 **outlook の電子メー�
 
 たとえば、"受信者のみ" というラベルが付いた PowerShell コマンドの例を次に示します。
 
-    Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
+```ps
+Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
-    Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
+Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
+```
 
 ## <a name="specify-a-default-sublabel-for-a-parent-label"></a>親ラベルに既定のサブラベルを指定する
 
@@ -1080,7 +1185,9 @@ Outlook でのみラベルを表示する場合は、 **outlook の電子メー�
 
 たとえば、親ラベルの名前が "Confidential" で、"All Employees" サブラベルの GUID が8faca7b8-8d20-48a3-8ea2-0f96310a848e である PowerShell コマンドの例を次に示します。
 
-    Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+```ps
+Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+```
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>バックグラウンドでの分類の継続的実行をオンにする
 
@@ -1104,7 +1211,9 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 PowerShell コマンドの例: 
 
-    Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
+```ps
+Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
+```
 
 ## <a name="specify-a-color-for-the-label"></a>ラベルの色を指定します
 
@@ -1122,7 +1231,9 @@ PowerShell コマンドの例:
 
 PowerShell コマンドの例: ラベルの名前は "Public" です。
 
-    Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
+```ps
+Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
+```
 
 ## <a name="sign-in-as-a-different-user"></a>別のユーザーでのサイン イン
 
@@ -1180,7 +1291,7 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 このコンピューターのユーザーが [[ヘルプとフィードバック](clientv2-admin-guide.md#help-and-feedback-section)] から [**設定のリセット**] オプションを選択した場合、この操作によってポリシーファイルが削除され、クライアントがファイルを手動で置き換えるか、クライアントがインターネットに接続してファイルをダウンロードするまで、クライアントが動作しなくなります。
 
-切断されたコンピューターが Azure Information Protection スキャナーを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開手順から[インターネットに接続できない](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
+切断されたコンピューターが Azure Information Protection スキャナーを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開手順から[インターネットに接続できない](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
 
 ## <a name="change-the-local-logging-level"></a>ローカルのログ記録レベルを変更する
 
@@ -1218,15 +1329,18 @@ PowerShell コマンドの例: ラベルの名前は "Public" です。
 
 **読み取り専用のファイルとアーカイブされたファイルの両方をスキップする**
 
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+```
 
 **読み取り専用またはアーカイブ済みのファイルをスキップする**
 
 ロジックまたはロジックを使用するには、同じプロパティを複数回実行します。 次に例を示します。
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
+```
 
 > [!TIP]
 > 次の属性を使用してファイルをスキップするようにスキャナーを有効にすることをお勧めします。
@@ -1253,10 +1367,12 @@ NTFS 所有者の値が保持されるようにするには、選択したラベ
 
 ラベルポリシーの名前が "Global" の場合のサンプルの PowerShell コマンド:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
-
+```ps
+Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+```
 
 ## <a name="next-steps"></a>次のステップ
+
 Azure Information Protection 統合されたラベル付けクライアントをカスタマイズしたので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [クライアントのファイルと使用状況ログ](client-admin-guide-files-and-logging.md)

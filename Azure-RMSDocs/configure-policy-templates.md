@@ -13,18 +13,18 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 797fcbbffd91882b2400fc1f5350d2782420a762
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: 6af7c9af0e954c6eb2cb2e4cb29a796d4cdfdb99
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825410"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048036"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Azure Information Protection のテンプレートを構成して管理する
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -66,9 +66,9 @@ Azure Rights Management サービスが含まれる Azure Information Protection
 
 しばらく前にサブスクリプションを取得した場合、既定のテンプレートは次の名前で作成される可能性があります。
 
-- **\<組織名>-社外秘**
+- **\<organization name>-社外秘**
 
-- **\<組織名>-社外秘、表示のみ** 
+- **\<organization name>-社外秘、表示のみ** 
 
 Azure Portal を使っている場合、これらの既定テンプレートの名前を変更 (および再構成) できます。
 
@@ -105,7 +105,7 @@ Azure Portal を使っている場合、これらの既定テンプレートの�
 
 1. まだ実行していない場合は、新しいブラウザー ウィンドウを開いて、[Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、[ **Azure Information Protection ラベル**] ウィンドウに移動します。
     
-    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、[ **Azure Information Protection**] を選択します。
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
 
 2. [**分類**  >  **ラベル**] メニューオプションから: [ **Azure Information Protection ラベル**] ウィンドウで [**保護テンプレート**] を展開し、構成するテンプレートを見つけます。
     

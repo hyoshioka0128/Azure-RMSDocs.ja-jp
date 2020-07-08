@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 4168a75bebb9fb34ce4ba36c0d10b4b78c67dac4
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24bc2db20b7dc469a8c6fb3d39e2f399be12c0c6
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747119"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048563"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -29,7 +29,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ## <a name="word-phrase-or-acronym"></a>単語、語句、または頭字語
 
-|項目|定義|
+|用語|定義|
 |--------|--------------|
 |AADRM|保護サービス (Azure Rights Management) 用の最初の PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management と呼ばれていた Azure Rights Management の非公式な略語から派生したものです。 この PowerShell モジュールは、AIPService モジュールに置き換えられました。|
 |アクティブ化|組織がドキュメントと電子メールを保護できるように保護サービス (Azure Rights Management) を有効にする。 この操作により、Exchange Online と Microsoft SharePoint の IRM 機能も有効になります。|
@@ -41,7 +41,7 @@ AzureInformationProtection|Azure Information Protection クライアント (ク�
 Azure Information Protection クライアント (クラシック)|*従来のクライアント*と省略されることもあります。<br /><br />Azure Information Protection の元のクライアント側では、ユーザー、管理者、およびサービスが Azure Information Protection ポリシーのラベルと設定を使用できるようにします。 これで、Azure Information Protection 統合されたラベル付けクライアントに置き換えられるようになりました。|
 |Azure Information Protection のラベル|この項目によってドキュメントや電子メールに分類値を常に適用し、それらを保護することもできます。 ラベルが適用されると、ラベル情報はアプリケーションおよびサービスのメタデータに格納され、読み取ったり、必要に応じて操作したりできます。|
 |Azure Information Protection ポリシー|Azure Information Protection のラベルとポリシーの設定を使用するクライアントとサービスに向けた、管理者が定義する構成です。|
-|Azure Information Protection スキャナー|Windows Server 上で実行するサービスです。これにより、ローカル フォルダー、ネットワーク共有、SharePoint Server のサイトとライブラリにあるドキュメントの検出、分類、保護を行うことができます。|
+|Azure Information Protection スキャナー|Windows Server 上で実行されるサービスで、ネットワーク共有、SharePoint サーバーサイト、およびライブラリのドキュメントを検出、分類、および保護できます。|
 |Azure Information Protection 統合ラベル付けクライアント|統一された*ラベル付けクライアント*に省略されることがあります。<br /><br />ユーザー、管理者、およびサービスが使用できる Windows コンピューターのクライアントは、Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 セキュリティセンター、および Microsoft 365 コンプライアンスセンターの機密ラベルとラベルポリシー設定を使用します。 Azure Information Protection クライアント (クラシック) を置き換えます。|
 |Azure RMS|**「Azure Rights Management」を参照してください。|
 |Azure Information Protection ビューアー|保護されたファイルを表示するために、Windows コンピューターやモバイル デバイスで実行するアプリです。|

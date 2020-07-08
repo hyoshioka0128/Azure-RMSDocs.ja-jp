@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 624d9e8a6f2a25388f3488c6f15be84fcf82bb4b
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: ab2a3791a8b271a1cd340c3e3c52a980a39ed0a4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802986"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047475"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Windows 用の統一されたラベル付けクライアント Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "84802986"
 >
 > **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Windows 用の Azure Information Protection 統合ラベル付けクライアントは、[機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用してドキュメントや電子メールを分類および保護する組織用のダウンロード可能なクライアントです。 このクライアントには、独自の情報保護インフラストラクチャを持たないが、Microsoft の Rights Management サービスを使用する他の組織によって保護されているコンテンツを使用する組織向けのビューアーもあります。
 

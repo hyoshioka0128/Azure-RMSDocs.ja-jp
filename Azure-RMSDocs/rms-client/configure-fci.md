@@ -13,18 +13,18 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3afd356ee64d337bf171488e8be6aa65049d7ee
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224735"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046540"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Windows Server ファイル分類インフラストラクチャ (FCI) での RMS の保護
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 この記事では、Azure Information Protection クライアントと PowerShell を使用して、ファイル サーバー リソース マネージャーおよびファイル分類インフラストラクチャ (FCI) を構成する方法とスクリプトを示します。
 
@@ -152,7 +152,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **[説明]**: 「**Rights Management 用に &lt;フォルダー名&gt; フォルダーのすべてのファイルを分類する**」と入力します。
 
-            * &lt;フォルダー名&gt; *を、選択したフォルダー名に置き換えます。 例: **Rights Management 用に C:\FileShare フォルダーのすべてのファイルを分類する**
+            * &lt; フォルダー名 &gt; *を、選択したフォルダー名に置き換えます。 例: **Rights Management 用に C:\FileShare フォルダーのすべてのファイルを分類する**
 
         -   [**スコープ**]:選択したフォルダーを追加します。 例: **C:\FileShare**。
 
@@ -194,7 +194,7 @@ FCI で使用する Rights Management テンプレートに変更を加える場
 
         -   **説明**: 「**&lt;フォルダー名&gt; のファイルを Windows PowerShell スクリプトを使用して Rights Management とテンプレートで保護する**」と入力します。
 
-            * &lt;フォルダー名&gt; *を、選択したフォルダー名に置き換えます。 例: **C:\FileShare のファイルを Windows PowerShell スクリプトを使用して Rights Management とテンプレートで保護する**
+            * &lt; フォルダー名 &gt; *を、選択したフォルダー名に置き換えます。 例: **C:\FileShare のファイルを Windows PowerShell スクリプトを使用して Rights Management とテンプレートで保護する**
 
         -   [**スコープ**]:選択したフォルダーを選択します。 例: **C:\FileShare**。
 

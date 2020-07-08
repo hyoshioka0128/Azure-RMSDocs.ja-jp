@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 58053a5ee3dae935a3d160f14bc610d2487e03d2
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: a038d70cfbeb75f4bcabbfab0391582cdb0b5e87
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747051"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047373"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
 >*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -146,7 +146,7 @@ Azure Information Protection のライセンスを保有せず、Azure Rights Ma
 
 - キー: **ReportAnIssueLink**
 
-- 値: ** \< HTTP 文字列>**
+- 数値**\<HTTP string>**
 
 Web サイトの値の例: `https://support.contoso.com`
 
@@ -198,9 +198,9 @@ Azure Portal からポリシーをエクスポートすると、ポリシーの�
     |Policy1.3.msip |バージョン 1.8 - 1.29|
     |Policy1.4.msip |バージョン 1.32 以降|
     
-2. 識別されたファイルの名前を **%LocalAppData%\Microsoft\MSIP** **に変更し、Azure Information Protection**クライアントがインストールされているコンピューターのフォルダーにコピーします。 
+2. 識別されたファイルの名前を**Policy.msip**に変更し、Azure Information Protection クライアントがインストールされているコンピューターの **%LocalAppData%\Microsoft\MSIP**フォルダーにコピーします。 
 
-接続が切断されたコンピューターが Azure Information Protection スキャナーの現在の GA バージョンを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開手順から[インターネットに接続できない](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
+接続が切断されたコンピューターが Azure Information Protection スキャナーの現在の GA バージョンを実行している場合は、追加の構成手順を実行する必要があります。 詳細については、「制限: スキャナーサーバーがスキャナーの展開の前提条件で[インターネットに接続できない](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity)」を参照してください。
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Outlook の [転送不可] ボタンを表示または非表示にする
 
@@ -331,7 +331,7 @@ Azure Information Protection バーが非表示のままであっても、推奨
 
 理由メッセージからのイベント エントリの例: 
 
-```
+```ps
 Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
@@ -342,6 +342,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
+
 以下のセクションでは、各アドバンストクライアント設定の構成手順について説明します。また、 [Outlook を使用して情報の過剰な共有を制御するように Azure Information Protection を構成する](../infoprotect-oversharing-tutorial.md)方法についても説明します。
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>特定のラベルに対する警告、理由の入力、またはブロックのためのポップアップ メッセージを実装するには:
@@ -357,19 +358,19 @@ User Response: Confirmed
     
     - キー: **OutlookWarnUntrustedCollaborationLabel**
     
-    - 値: \< **ラベル id、コンマ区切り**>
+    - 値: \<**label IDs, comma-separated**>
 
 - 理由の入力メッセージ: 
     
     - キー: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - 値: \< **ラベル id、コンマ区切り**>
+    - 値: \<**label IDs, comma-separated**>
 
 - ブロック メッセージ: 
     
     - キー: **OutlookBlockUntrustedCollaborationLabel**
     
-    - 値: \< **ラベル id、コンマ区切り**>
+    - 値: \<**label IDs, comma-separated**>
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>特定のラベル用に構成されたポップアップメッセージのドメイン名を除外するには
 
@@ -385,19 +386,19 @@ User Response: Confirmed
     
     - キー: **OutlookWarnTrustedDomains**
     
-    - 値: **\<** ドメイン名、コンマ区切り**>**
+    - 数値**\<**domain names, comma separated**>**
 
 - 理由の入力メッセージ: 
     
     - キー: **Outlookジャスト Ifytrusteddomains**
     
-    - 値: **\<** ドメイン名、コンマ区切り**>**
+    - 数値**\<**domain names, comma separated**>**
 
 - ブロック メッセージ: 
     
     - キー: **Outlookblocktrusteddomains**
     
-    - 値: **\<** ドメイン名、コンマ区切り**>**
+    - 数値**\<**domain names, comma separated**>**
 
 たとえば、[**社外秘 \ すべての従業員**] ラベルに対して**OutlookBlockUntrustedCollaborationLabel**アドバンストクライアント設定を指定したとします。 ここで、 **Outlookblocktrusteddomains**と**contoso.com**の追加のアドバンストクライアント設定を指定します。 その結果、ユーザーは、" john@sales.contoso.com **社外秘 \ すべての従業員**" というラベルが付いたときに電子メールをに送信できますが、Gmail アカウントに同じラベルの電子メールを送信することは禁止されます。
 
@@ -440,7 +441,7 @@ User Response: Confirmed
 
 - キー: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- 値: **\<** メッセージを表示するファイル名拡張子 (コンマ区切り)**>**
+- 数値**\<**file name extensions to display messages, comma separated**>**
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>添付ファイルのない電子メールメッセージに対して別のアクションを指定するには
 
@@ -489,7 +490,7 @@ Outlook で既定のラベルが適用されないように、**[なし]** を�
 
 - キー: **OutlookDefaultLabel**
 
-- 値: \<**ラベル ID**> または**なし**
+- 値: \<**label ID**> または**None**
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>ラベルを構成して Outlook で S/MIME 保護を適用する
 
@@ -579,7 +580,7 @@ Azure Information Protection クライアントが指定した条件規則のド
 
 たとえば、PDF 暗号化の ISO 標準をサポートしていない PDF リーダーを使用している場合は、すべてのユーザーに対してこの設定が必要です。 または、新しい形式をサポートする PDF リーダーを段階的に導入する場合は、一部のユーザーに対してその設定を構成する必要があります。 この設定を使用する別の理由としては、署名された PDF ドキュメントに保護を追加することが必要な場合が挙げられます。 署名された PDF ドキュメントを .ppdf 形式を使用してさらに保護することができます。これは、この保護がファイルのラッパーとして実装されるために可能になります。 
 
-Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 EnablePDFv2Protection が False に設定されているときにスキャナーで PDF ドキュメントを保護する場合は、[レジストリを編集する](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected)必要があります。
+Azure Information Protection スキャナーで新しい設定を使用するには、スキャナー サービスを再起動する必要があります。 また、スキャナーでは既定で PDF ドキュメントが保護されなくなります。 **EnablePDFv2Protection**が False に設定されている場合に PDF ドキュメントをスキャナーで保護するには **、** [レジストリを編集](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect)する必要があります。
 
 新しい PDF の暗号化について詳しくは、ブログ投稿「[New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757)」 (Microsoft Information Protection での PDF の新しい暗号化のサポート) をご覧ください。
 
@@ -597,7 +598,9 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
 
 1. .ppdf ファイルに [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) を使用します。 次に例を示します。
     
-        Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+    ```ps
+    Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+    ```
 
 2. 出力の次のパラメーター値のメモを取ります。
     
@@ -608,12 +611,16 @@ PowerShell コマンドを使用して既存の .ppdf ファイルを保護さ�
    - **RMSTemplateId** の値。 この値が **Restricted Access** の場合、ユーザーはファイルを、ラベルに構成されている保護設定ではなく、カスタム アクセス許可を使用して保護しています。 続行すると、それらのカスタム設定はラベルの保護設定により上書きされます。 続行するか、ユーザー (**RMSIssuer** に表示される値) に対してラベルを削除し、元のカスタム アクセス許可と共にそれを再適用することを依頼するかどうかを決定します。
 
 3. *RemoveLabel* パラメーターを使用し、[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) を使用して、ラベルを削除します。 **[Users must provide justification to set a lower classification label, remove a label, or remove protection]** \(ユーザーは分類ラベルの秘密度を下げる、ラベルを削除する、または保護を解除するときにその理由を示す必要があります) の[ポリシー設定](../configure-policy-settings.md)を使用している場合は、理由付きで *[位置揃え]* パラメーターも指定する必要があります。 次に例を示します。 
-    
-        Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+
+    ```ps    
+    Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    ```
 
 4. 手順 1 で指定したラベルの値を指定して、元のラベルを最適用します。 次に例を示します。
     
-        Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+    ```ps    
+    Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+    ```
 
 ファイルは .pdf ファイル名拡張子を維持しますが、以前と同様に分類され、PDF の暗号化のための ISO 標準を使用して保護されます。
 
@@ -673,7 +680,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: "社外秘" というセキュリティ保護された島ラベルを持つドキュメントは、Azure Information Protection によって "社外秘" というラベルが付けられます。
 
-この例では:
+次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **Confidential** という名前が付けられ、ラベル ID は **1ace2cc3-14bc-4142-9125-bf946a70542c** です。 
 
@@ -690,7 +697,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: セキュリティで保護されたアイランドによって "機微な" というラベルが付けられたドキュメントは、Azure Information Protection によって "機密性の高い" というラベルに再設定する
 
-この例では:
+次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **Highly Confidential** という名前が付けられ、ラベル ID は **3e9df74d-3168-48af-8b11-037e3021813f** です。
 
@@ -708,7 +715,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 要件: "Internal" という語を含む2つのセキュリティ保護された島々ラベルがあり、これらのセキュリティ保護された島々ラベルのいずれかを持つドキュメントを、Azure Information Protection によって "General" というラベルに書き換えます。
 
-この例では:
+次の点に注意してください。
 
 - 使用する Azure Information Protection のラベルは **General** という名前が付けられ、ラベル ID は **2beb8fe7-8293-444c-9768-7fdc6f75014d** です。
 
@@ -736,9 +743,9 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 - キー: **RemoveExternalContentMarkingInApp**
 
-- 値: \< **Office アプリケーションの種類 wxp**> 
+- 値: \<**Office application types WXP**> 
 
-次に例を示します。
+例 :
 
 - Word 文書のみを検索するには、**W** を指定します。
 
@@ -769,7 +776,7 @@ Secure Islands によってラベル付けされた Office ドキュメントや
 
 - キー: **ExternalContentMarkingToRemove**
 
-- 値: \< **一致する文字列。正規表現として定義され**ます。> 
+- 値: \<**string to match, defined as regular expression**> 
 
 #### <a name="multiline-headers-or-footers"></a>複数行のヘッダーまたはフッター
 
@@ -807,7 +814,7 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 - キー: **PowerPointShapeNameToRemove**
 
-- 値: \< **PowerPoint 図形名**> 
+- 値: \<**PowerPoint shape name**> 
 
 削除する PowerPoint の図形が複数ある場合は、削除する図形と同じ数だけ **PowerPointShapeNameToRemove** キーを作成します。 各エントリに、削除する図形の名前を指定します。
 
@@ -834,7 +841,7 @@ PowerPoint では、フッターが図形として実装されます。 指定�
 
 - キー 1: **SyncPropertyName**
 
-- キー1の値: \< **プロパティ名**> 
+- キー1の値:\<**property name**> 
 
 - キー 2: **SyncPropertyName**
 
@@ -864,9 +871,9 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 次に例を示します。
 
-- この設定を使用すると、**社外秘 \ Sales**というラベルが付けられたユーザーによってアクセスされたことを確認できます。
+- この設定を使用すると、" **Confidential \ Sales**" というラベルが付いた Financial.docx にアクセスしたユーザーが表示されます。
 
-- この設定を行わないと、".docx" に6個のクレジットカード番号が含まれていることがわかります。
+- この設定がないと、Financial.docx に6個のクレジットカード番号が含まれていることがわかります。
     
     - また、機密性の[高いデータに](../reports-aip.md#content-matches-for-deeper-analysis)対してより深い分析を有効にすると、そのクレジットカード番号を確認することができます。
 
@@ -893,7 +900,7 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 - キー: **ScannerConcurrencyLevel**
 
-- 値: ** \< 同時実行スレッドの数>**
+- 数値**\<number of concurrent threads>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>スキャナーの低整合性レベルを無効にする
 
@@ -901,7 +908,7 @@ Office アプリで Azure Information Protection クライアントが使用さ�
 
 既定では、Azure Information Protection スキャナーは低整合性レベルで実行されます。 この設定では、より高度なセキュリティ分離が提供されますが、パフォーマンスが低下します。 低整合性レベルは、特権を持ったアカウント (ローカル管理者アカウントなど) でスキャナーを実行する場合に適しています。この設定は、スキャナーを実行しているコンピューターを保護するのに役立ちます。
 
-ただし、スキャナーを実行するサービス アカウントに、[スキャナーの前提条件](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner)のセクションで説明されている権限だけが付与されている場合、低整合性レベルは必要ありません。これはパフォーマンスに悪影響を及ぼすため、推奨されません。 
+ただし、スキャナーを実行するサービスアカウントに、[スキャナーの展開の前提条件](../deploy-aip-scanner-prereqs.md)に記載されている権限しかない場合、低整合性レベルは必要ありません。パフォーマンスに悪影響を及ぼすため、このレベルは推奨されません。 
 
 Windows 整合性レベルについて詳しくは、「[What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx)」(Windows 整合性メカニズムとは何ですか) をご覧ください。
 
@@ -921,7 +928,7 @@ Windows 整合性レベルについて詳しくは、「[What is the Windows Int
 
 - キー: **Contentextractiontimeout**
 
-- 値: ** \< hh: min: sec>**
+- 数値**\<hh:min:sec>**
 
 ファイルの種類は、ファイルのスキャンにかかる時間に影響を与える可能性があります。 スキャン時間の例:
 
@@ -945,7 +952,7 @@ Azure Information Protection スキャナーは、1分あたり数百から数�
 
 - キー: **Fileprocessingtimeout**
 
-- 値: ** \< hh: min: sec>**
+- 数値**\<hh:min:sec>**
 
 ## <a name="change-the-local-logging-level"></a>ローカルのログ記録レベルを変更する
 
@@ -957,7 +964,7 @@ Azure Information Protection スキャナーは、1分あたり数百から数�
 
 - キー: **LogLevel**
 
-- 値: ** \< ログ記録レベル>**
+- 数値**\<logging level>**
 
 ログ記録レベルに次の値のいずれかを設定します。
 

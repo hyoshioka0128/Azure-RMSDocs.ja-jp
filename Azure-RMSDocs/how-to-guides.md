@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f3bc3064aa4a3a723197dcb171eaba018bca6b3e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 5059215c9883552e1a4ccf3b902664d1d357e51a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933329"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048444"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection を使用して組織のドキュメントや電子メールを分類したり、必要に応じて保護したりするためには、多くの方法があります。 
 
@@ -30,9 +30,9 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="common-scenarios"></a>一般的なシナリオ
 
-|シナリオの目的|手順|
+|シナリオの目的|Instructions|
 |----------------|---------------|
-|組織がオンプレミスに格納している機密情報を検索する|[クイック スタート: オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
+|組織がオンプレミスに格納している機密情報を検索する|[クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
 |ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
 |ユーザーがデータを作成または編集したときに簡単に分類し、機密情報を含む場合は保護できるようにする| [チュートリアル: ポリシーを編集して新しいラベルを作成する](infoprotect-quick-start-tutorial.md)|
 |ユーザーが保護されたドキュメントに対して簡単に共同作業できるようにする|[Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成](secure-collaboration-documents.md)|

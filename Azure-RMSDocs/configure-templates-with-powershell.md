@@ -13,16 +13,16 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 12456200687cd907bb82a8b489414d3c9fa91bbe
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 6f37e0dc2132c85985135c512a6e369641a1bf01
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934927"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047050"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>保護テンプレート用の PowerShell リファレンス
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection の保護設定は、保護テンプレートに保存されます。 Azure Portal で保護設定を作成し、管理するためにできることはすべて、PowerShell を使用してコマンド ラインからも実行できます。 
 
@@ -50,8 +50,6 @@ Azure Information Protection の保護設定は、保護テンプレートに保
 
 - [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
 
-
-
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Azure Information Protection のテンプレートを構成して管理する](configure-policy-templates.md)
 

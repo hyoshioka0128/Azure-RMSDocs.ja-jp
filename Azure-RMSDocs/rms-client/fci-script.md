@@ -13,24 +13,24 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 73ba9a365b38804c8caf0d9e9b06e8b53be8560a
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: ee4a8cedd056da0baca75d3b475884618e081fbf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326492"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046472"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>ファイル サーバー リソース マネージャー FCI を使用する Azure RMS 保護のための Windows PowerShell スクリプト
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、Windows Server 2016、Windows Server 2012、Windows Server 2012 R2*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 このページには、[Windows Server ファイル分類インフラストラクチャでの RMS の保護](configure-fci.md)に関するページに説明されているサンプル スクリプトが含まれています。このスクリプトをコピーし、編集してください。
 
 このスクリプトでは、AzureInformationProtection モジュールに **1.3.155.2** という最小バージョンを使用しています。 次のコマンドを実行してバージョンを確認してください。`(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;免責&#42;&#42;事項: このサンプルスクリプトは、Microsoft の標準サポートプログラムまたはサービスではサポートされていません。このサンプルスクリプトは、どのような種類の保証も伴わず、現状有姿のままで提供されます。*
+*&#42;&#42;免責事項&#42;&#42;: このサンプルスクリプトは、Microsoft の標準サポートプログラムまたはサービスではサポートされていません。このサンプルスクリプトは、どのような種類の保証も伴わず、現状有姿のままで提供されます。*
 
 ```
 <#

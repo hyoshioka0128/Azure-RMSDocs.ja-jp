@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a0a0f5e712c0313b281fc2bafa64719ed61d2e03
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: 8057d0599cdd1f01dc32adb6b7e20b359f9fea0e
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249863"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048257"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -61,28 +61,27 @@ ms.locfileid: "84249863"
 
 - エクスプローラー、PowerShell、Azure Information Protection スキャナーを使用してドキュメントにラベルを付けると、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに、Azure Information Protection クライアントによって適用されます。
 
-    この例外は、Microsoft SharePoint、OneDrive for work、学校、または OneDrive for home に保存されているファイルに対して、Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用する場合です。自動保存が有効になっている場合は、 [[詳細](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)設定] をオンにしている場合を除き、分類をバックグラウンドで継続的に実行します。 
+    この例外は、Microsoft SharePoint、OneDrive for work、学校、または OneDrive for home に保存されているファイルに対して、Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用する場合です。自動保存が有効になっている場合は、 [[詳細](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)設定] をオンにしている場合を除き、分類をバックグラウンドで継続的に実行します。
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 
 ラベルの視覚的なマーキングを構成するには、次の手順に従います。
 
-1. まだ実行していない場合は、新しいブラウザー ウィンドウを開いて、[Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、**[Azure Information Protection]** ペインに移動します。 
-    
-    たとえば、リソース、サービス、ドキュメントの検索ボックスで、「**情報**の入力を開始し、[ **Azure Information Protection**] を選択します。
+1. まだ実行していない場合は、新しいブラウザー ウィンドウを開いて、[Azure Portal にサインインします](configure-policy.md#signing-in-to-the-azure-portal)。 次に、 **[Azure Information Protection]** ペインに移動します。
+
+    たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
 
 2. [**分類**  >  **ラベル**] メニューオプションから: [ **Azure Information Protection ラベル**] ウィンドウで、追加または変更する視覚的なマーキングが含まれているラベルを選択します。
 
 3. [**ラベル**] ウィンドウの [**視覚的なマーキングの設定 (ヘッダーやフッターなど)** ] セクションで、目的の視覚的なマーキングの設定を構成し、[**保存**] をクリックします。
-    
-    - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
-    
-    - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
-    
-    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
-    
-**[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
+    - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
+
+    - フッターを構成するには: **[Documents with this label have a footer]** (このラベルを持つドキュメントにフッターを設定する) で、フッターを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、フッターのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、フッターの配置を指定します。
+
+    - 透かしを構成するには: **[Documents with this label have a watermark]** (このラベルを持つドキュメントに透かしを設定する) で、透かしを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、透かしのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、透かしの配置を指定します。
+
+**[保存]** をクリックすると、変更内容がユーザーとサービスに対して自動的に利用可能になります。 独立した公開オプションはなくなりました。
 
 ## <a name="using-variables-in-the-text-string"></a>テキスト文字列に変数を使用する
 
@@ -96,14 +95,14 @@ ms.locfileid: "84249863"
 
 - `${Item.Location}`: ドキュメントのパスとファイル名、電子メールの件名。 例: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}`: ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone 
+- `${User.Name}`: ドキュメントまたは電子メールの所有者、Windows のサインイン ユーザー名。 例: rsimone
 
-- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) たとえば次のようになります。rsimone@vanarsdelltd.com
+- `${User.PrincipalName}`: ドキュメントまたは電子メールの所有者、Azure Information Protection クライアントのサインイン電子メール アドレス (UPN) 例: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
 > [!NOTE]
->この構文では、大文字と小文字が区別されます。 たとえば、一般ラベルフッターに文字列を指定した場合、 `Document: ${Item.Name}  Classification: ${Item.Label}` プロジェクト .docx という名前のドキュメントに適用されるフッターテキストは、 **document: プロジェクト .docx 分類: General** **General**になります。
+>この構文では、大文字と小文字が区別されます。 たとえば、一般ラベルフッターに文字列を指定した場合、 `Document: ${Item.Name}  Classification: ${Item.Label}` project.docx という名前のドキュメントに適用されるフッターテキストは "**ドキュメント: project.docx 分類: 全般**" になります。 **General**
 
 <!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
@@ -117,7 +116,9 @@ ms.locfileid: "84249863"
 
 使用する構文は以下のとおりです。
 
-    ${If.App.<application type>}<your visual markings text> ${If.End}
+```ps
+${If.App.<application type>}<your visual markings text> ${If.End}
+```
 
 > [!NOTE]
 >このステートメントのこの構文では、大文字と小文字が区別されます。
@@ -125,21 +126,21 @@ ms.locfileid: "84249863"
 例 :
 
 - **Word 文書だけにヘッダー テキストを設定する:**
-    
+
     `${If.App.Word}This Word document is sensitive ${If.End}`
-    
+
     Word 文書のヘッダーのみに、ラベルは "This Word document is sensitive" (この Word 文書では大文字と小文字が区別されます) という見出しテキストを適用します。 他の Office アプリケーションには、ヘッダー テキストは適用されません。
 
 - **Word、Excel、Outlook と PowerPoint で異なるフッター テキストを設定する:**
-    
+
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
-    
+
     Word、Excel、Outlook で、ラベルは "This content is confidential" (このコンテンツは社外秘です) というフッター テキストを適用します。 PowerPoint では、ラベルは "This presentation is confidential" (このプレゼンテーションは社外秘です) というフッター テキストを適用します。
 
 - **Word と PowerPoint に特定の透かしテキストを設定し、Word、Excel、PowerPoint に透かしテキストを設定する:**
-    
+
     `${If.App.WP}This content is ${If.End}Confidential`
-    
+
     Word と PowerPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルはいかなる透かしテキストも適用しません。
 
 > [!NOTE]
@@ -147,17 +148,15 @@ ms.locfileid: "84249863"
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
-Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、視覚的なマーキングを適用するクライアント デバイスでそれが利用できることを確認してください。 
-
+Calibri は、ヘッダー、フッター、透かしのテキストに使われる既定のフォントです。 別のフォント名を指定する場合、視覚的なマーキングを適用するクライアント デバイスでそれが利用できることを確認してください。
 指定したフォントが使用可能でない場合、クライアントは Calibri フォントの使用にフォールバックします。
 
 ### <a name="setting-the-font-color"></a>フォントの色を設定する
 
-利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**は水色の RGB 16 進値です。 
+利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**は水色の RGB 16 進値です。
 
 これらのコードの参照が必要な場合は、MSDN web docs のページにある役に立つテーブルを確認でき [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) ます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーの構成の詳細については、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。  
-

@@ -13,20 +13,20 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee94f0a4966ce16ae8b87f23bf4a9a734cc015a0
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 68eb4e9518ef43c314dd21d1c8713f7c0c0dee69
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403928"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048376"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Microsoft が Azure Information Protection のテナント キーを管理する場合 (既定)、次のセクションを使用してこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
-## <a name="revoke-your-tenant-key"></a>テナント キーの取り消し
+## <a name="revoke-your-tenant-key"></a>テナント キーを取り消します
 Azure Information Protection のサブスクリプションをキャンセルすると、Azure Information Protection ではお客様のテナント キーの使用を停止します。操作を行う必要はありません。
 
 ## <a name="rekey-your-tenant-key"></a>テナント キーの再入力
@@ -50,14 +50,16 @@ Active Directory Rights Management サービス (AD RMS) から移行済みで�
 
 Azure Information Protection のアクティブなテナントキーとして別のキーを選択するには、AIPService モジュールの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレットを使用します。 使用するキーを識別できるように、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを使用します。 Azure Information Protection テナント用に自動的に作成された既定のキーを特定するには、次のコマンドを実行します。
 
-    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```ps
+(Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+```
 
 キー トポロジを、お客様による管理 (BYOK) に変更するには、「[Azure Information Protection テナント キーの BYOK を実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
 
-## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
+## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 テナント キーのバックアップは Microsoft が行うため、ユーザーの操作は必要ありません。
 
-## <a name="export-your-tenant-key"></a>テナント キーのエクスポート
+## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
 Azure Information Protection の構成およびテナント キーをエクスポートするには、次の 3 つの手順に従います。
 
 ### <a name="step-1-initiate-export"></a>手順 1:エクスポートを開始する
@@ -70,18 +72,20 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>手順 3:CSS からキーの手順を受領する
 
-- Microsoft カスタマー サポート サービス (CSS) は、Azure Information Protection の構成およびテナント キーを、パスワードで保護されたファイルで暗号化した状態で送付します。 このファイルのファイル名拡張子は、 **.tpd** です。 これにあたって、CSS はまずエクスポートを開始したユーザーにツールを電子メールで送信します。 このツールをコマンド プロンプトから次のように実行します。
+- Microsoft カスタマー サポート サービス (CSS) は、Azure Information Protection の構成およびテナント キーを、パスワードで保護されたファイルで暗号化した状態で送付します。 このファイルのファイル名拡張子は、**.tpd** です。 これにあたって、CSS はまずエクスポートを開始したユーザーにツールを電子メールで送信します。 このツールをコマンド プロンプトから次のように実行します。
 
-    ```
+    ```ps
     AadrmTpd.exe -createkey
     ```
-    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 たとえば、**PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** と **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** のようになります。
 
-    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 例 :
+    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 例: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**および**PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**。
 
-    ```
+    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 次に例を示します。
+
+    ```ps
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
+
     このコマンドの出力は 2 つのファイルです。一方のファイルにはパスワードで保護された TPD のプレーン テキスト パスワードが含まれ、他方のファイルにはパスワードで保護された TPD 自体が含まれています。 ファイルには、以下のような新しい GUID が付けられます。
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
@@ -94,9 +98,9 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
 テナント キーを受領したら、厳重に保護してください。だれかがそれにアクセスできる場合、そのキーを使用して保護されているすべてのドキュメントを暗号化解除できるからです。
 
-テナント キーをエクスポートする理由が、Azure Information Protection を使用しなくなったためである場合、ベスト プラクティスとして、直ちに Azure Information Protection テナントから Azure Rights Management サービスを非アクティブ化してください。 これは、テナント キーの受領後すぐに実行してください。この予防策によって、アクセスすべきでないだれかがテナント キーにアクセスした場合の影響を最小限にできます。 手順については、「[Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)」を参照してください。
+テナント キーをエクスポートする理由が、Azure Information Protection を使用しなくなったためである場合、ベスト プラクティスとして、直ちに Azure Information Protection テナントから Azure Rights Management サービスを非アクティブ化してください。 これは、テナント キーの受領後すぐに実行してください。この予防策によって、アクセスすべきでないだれかがテナント キーにアクセスした場合の影響を最小限にできます。 手順については、「 [Azure Rights Management の使用停止と非アクティブ](decommission-deactivate.md)化」を参照してください。
 
-## <a name="respond-to-a-breach"></a>侵害への対応
+## <a name="respond-to-a-breach"></a>侵害に反応します
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の生成キー技術、または現在のキーの長さおよびアルゴリズムに脆弱性が見つかる可能性があります。
 
 製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントが資産に影響する場合、Microsoft はテナントのグローバル管理者に電子メールで通知します。
@@ -108,5 +112,4 @@ Azure Information Protection の構成およびテナント キーをエクス�
 |テナント キーが漏れています。|テナント キーを再入力します。 この記事の「[テナント キーの再入力](#rekey-your-tenant-key)」セクションをご覧ください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Information Protection を更新し、すべてのお客様にテナント キーの再入力を指示する必要があります。|
-
-
+| | |

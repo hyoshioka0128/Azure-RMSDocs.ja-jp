@@ -13,21 +13,21 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b17f87f569b613a1583b82060b05bcbdeb943284
-ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
+ms.openlocfilehash: 5e1bdf52fd8d73231e9084d36d5d648a2e1ee88c
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2020
-ms.locfileid: "80670223"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048631"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 AD RMS から Azure Information Protection への移行フェーズ 4 では、次の情報を使用してください。 これらの手順では、「[AD RMS から Azure Information Protection への移行](migrate-from-ad-rms-to-azure-rms.md)」の手順 8 から手順 9 を説明します。
 
-## <a name="step-8-configure-irm-integration-for-exchange-online"></a>手順 8. IRM と Exchange Online の統合を構成する
+## <a name="step-8-configure-irm-integration-for-exchange-online"></a>手順 8.  IRM と Exchange Online の統合を構成する
 
 > [!IMPORTANT]
 > ユーザーを移行したどの受信者が保護されたメールを選択するか制御できないため、組織内のすべてのユーザーとメールを有効にしたグループに、Azure Information Protection で使用できる Azure AD のアカウントがあることを確認します。 [詳細情報](prepare.md)
@@ -66,34 +66,36 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 > 
 > *LicensingLocation*パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順を[すべて実行します。](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)
 
-1. 各 Exchange サーバーでフォルダー **\ProgramData\Microsoft\DRM\Server\S-1-5-18** を見つけて、そのフォルダーのすべてのエントリを削除します。
+1. 各 Exchange サーバーで、次のフォルダーを見つけて、そのフォルダー内のすべてのエントリを削除します。 **\programdata\microsoft\drm\server\s-1-5-18**
 
 2. Exchange サーバーのいずれかで次の PowerShell コマンドを実行して、Azure Rights Management を使って保護されているメールをユーザーが読めるようにします。
 
-    これらのコマンドを実行する前に、 *\<Your Tenant URL*> を実際の Azure Rights Management サービスの URL に置き換えます。
+    これらのコマンドを実行する前に、独自の Azure Rights Management サービスの URL に置き換えて *\<Your Tenant URL>* ください。
 
-        $irmConfig = Get-IRMConfiguration
-        $list = $irmConfig.LicensingLocation 
-        $list += "<Your Tenant URL>/_wmcs/licensing"
-        Set-IRMConfiguration -LicensingLocation $list
-    
+    ```ps
+    $irmConfig = Get-IRMConfiguration
+    $list = $irmConfig.LicensingLocation 
+    $list += "<Your Tenant URL>/_wmcs/licensing"
+    Set-IRMConfiguration -LicensingLocation $list
+    ```
+
     これで、 [Get IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)を実行すると、すべての AD RMS クラスターのライセンス url と、 *LicensingLocation*パラメーターに表示される AZURE Rights Management サービスの url が表示されます。
 
 3.  次に、内部受信者に送信されるメッセージの IRM 機能を無効にします。
 
-    ```
+    ```ps
     Set-IRMConfiguration -InternalLicensingEnabled $false
     ```
 
 4. その後、同じコマンドレットを使って、Microsoft Office Outlook Web App および Microsoft Exchange ActiveSync で IRM を無効にします。
 
-    ```
+    ```ps
     Set-IRMConfiguration -ClientAccessServerEnabled $false
     ```
 
 5.  最後に、同じコマンドレットを使用してキャッシュされている証明書をクリアします。
 
-    ```
+    ```ps
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
@@ -103,13 +105,13 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 1.  RMS で保護されたライブラリからドキュメントがチェックアウトされていないことを確認します。 ある場合、この手順の最後でそれらにアクセスできなくなります。
 
-2.  SharePoint サーバーの全体管理 Web サイトの **[サイド リンク バー]** セクションで、 **[セキュリティ]** をクリックします。
+2.  SharePoint サーバーの全体管理 Web サイトの **[サイド リンク バー]** セクションで、**[セキュリティ]** をクリックします。
 
-3.  **[セキュリティ]** ページの **[情報ポリシー]** セクションで、 **[Information Rights Management の構成]** をクリックします。
+3.  **[セキュリティ]** ページの **[情報ポリシー]** セクションで、**[Information Rights Management の構成]** をクリックします。
 
-4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、 **[このサーバーでは IRM を使用しない]** を選択して、 **[OK]** をクリックします。
+4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、**[このサーバーでは IRM を使用しない]** を選択して、**[OK]** をクリックします。
 
-5.  各 SharePoint サーバー コンピューターで、\ProgramData\Microsoft\MSIPC\Server\\<*SharePoint サーバーを実行しているアカウントの SID*> フォルダーの内容を削除します。
+5.  各 sharepoint サーバーコンピューターで、 \\ < *sharepoint server>を実行しているアカウントの \ProgramData\Microsoft\MSIPC\Server SID*フォルダーの内容を削除します。
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>コネクタを使うように Exchange と SharePoint を構成する
 
@@ -134,63 +136,63 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 Exchange 2013 および Exchange 2016 の場合 - レジストリ編集 1:
 
 
-**レジストリ パス:**
+**レジストリパス:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **種類:** Reg_SZ
 
-**値:** https://\<AD RMS イントラネット ライセンス URL\>/_wmcs/licensing
+**値:** https:// \<AD RMS Intranet Licensing URL\> /_wmcs/ライセンス
 
-**データ:**
+**データ**
 
 Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://\<コネクタの FQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<コネクタの FQDN\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 
 ---
 
 Exchange 2013 - レジストリの編集 2:
 
-**レジストリ パス:**
+**レジストリパス:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
 
 **種類:** Reg_SZ
 
-**値:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
+**値:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/ライセンス
 
-**データ:**
+**データ**
 
 Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://\<コネクタの FQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<コネクタの FQDN\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 ---
 
 Exchange 2010 の場合 - レジストリの編集 1:
 
 
-**レジストリ パス:**
+**レジストリパス:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **種類:** Reg_SZ
 
-**値:** https://\<AD RMS イントラネット ライセンス URL\>/_wmcs/licensing
+**値:** https:// \<AD RMS Intranet Licensing URL\> /_wmcs/ライセンス
 
-**データ:**
+**データ**
 
 Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://\<コネクタの FQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<コネクタの名前\>/_wmcs/licensing
+- https://\<connector Name\>/_wmcs/licensing
 
 
 ---
@@ -198,24 +200,24 @@ Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS
 Exchange 2010 の場合 - レジストリの編集 2:
 
 
-**レジストリ パス:**
+**レジストリパス:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **種類:** Reg_SZ
 
-**値:** https://\<AD RMS エクストラネット ライセンス URL\>/_wmcs/licensing
+**値:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/ライセンス
 
-**データ:**
+**データ**
 
 Exchange サーバーから RMS コネクタへの通信で HTTP または HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http://\<コネクタの FQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<コネクタの FQDN\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 ---
 
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 移行を続行するには、「[移行フェーズ 5 - 移行後のタスク](migrate-from-ad-rms-phase5.md)」に進んでください。

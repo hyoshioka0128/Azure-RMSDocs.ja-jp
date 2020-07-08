@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 00ddb823fca83f09d40ad30c8242b3a8e5ce71a8
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: f4bb3bcf13def75a90945757203a3b2cd5d05d5d
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483050"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047696"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -57,7 +57,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
         **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **種類:** REG_DWORD
+        **型:** REG_DWORD
 
         **値:** TemplateUpdateFrequency
 
@@ -65,7 +65,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
         **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-        **種類:** REG_DWORD
+        **型:** REG_DWORD
 
         **値:** TemplateUpdateFrequencyInSeconds
 
@@ -77,9 +77,9 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
 1. レジストリ エディターを使用して、**LastUpdatedTime** 値のデータを削除します。 たとえば、このデータに **2015-04-20T15:52** が表示されている場合、この 2015-04-20T15:52 を削除して、データが表示されないようにします。 次の情報を使用して、このレジストリ値データを削除するレジストリ パスを見つけてください。
 
-   **レジストリ パス:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
+   **レジストリパス:** HKEY_CURRENT_USER \software\classes\local Settings\Software\Microsoft\MSIPC \\ < *MicrosoftRMS_FQDN*> テンプレート \\ < *user_alias*>
 
-   **種類:** REG_SZ
+   **型:** REG_SZ
 
    **値:** LastUpdatedTime
 
@@ -106,11 +106,13 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
 1. ターミナルを開き、次のコマンドを入力します。
     
-        defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```sh
+    defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```
 
 2. Mac 用 Outlook を再起動します。
 
-3. 新しい電子メールを作成し、 **[暗号化]** を選択して、**資格情報を確認**します。
+3. 新しい電子メールを作成し、[**暗号化**] を選択して、**資格情報を確認**します。
 
 
 ## <a name="see-also"></a>関連項目

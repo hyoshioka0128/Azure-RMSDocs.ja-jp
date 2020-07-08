@@ -12,18 +12,18 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f844fa7220a4d608e6757099992c967052367d00
-ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
+ms.openlocfilehash: 32880671c46efb9cb82f13235f98ac42566b65fc
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "84238766"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048903"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
 >*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
 >
-> *手順: [Windows 用の Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -123,7 +123,7 @@ Azure Information Protection テナントがアクティブ化されていない
 
 値を自動で取得し、Set-RMSServerAuthentication を実行するには:
 
-````
+```ps
 # Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
@@ -138,7 +138,7 @@ New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 $symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
 $appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $ServicePrincipalName }).AppPrincipalId
 Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
-````
+```
 
 次のセクションでは、値を手動で取得し、指定する方法について説明します。それぞれの値について詳しく説明します。
 
@@ -151,30 +151,35 @@ Azure RMS Windows PowerShell モジュールから AipServiceConfiguration コ�
 2. [**管理者として実行**] オプションを使用して Windows PowerShell を起動します。
 
 3. `Connect-AipService` コマンドレットを使って、Azure Rights Management サービスに接続します。
-    
-        Connect-AipService
-    
+   ```ps 
+    Connect-AipService
+    ```
+
     プロンプトが表示されたら、Azure Information Protection テナント管理者資格情報を入力します。 通常、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使用します。
     
 4. `Get-AipServiceConfiguration` を実行して、BPOSId の値をコピーします。
     
     AipServiceConfiguration からの出力の例を次に示します。
-    
-            BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
+
+    ```ps    
+    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
-            RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
+    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
         
-            LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
         
-            LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
         
-            CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
         
-            CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+    ```
 
 5. サービスから切断します。
-    
-        Disconnect-AipService
+
+    ```
+    Disconnect-AipService
+    ```
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>AppPrincipalId と対称キーを取得するには
 
@@ -189,36 +194,42 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 3. **Connect-MsolService** コマンドレットを使って、Azure AD に接続します。
 
-        Connect-MsolService
+    ```ps
+    Connect-MsolService
+    ```
 
     プロンプトが表示されたら、Azure AD のテナント管理者の資格情報を入力します (通常は、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使います)。
 
 4. New-MsolServicePrincipal コマンドレットを実行して、新しいサービス プリンシパルを作成します。
 
-        New-MsolServicePrincipal
+    ```ps
+    New-MsolServicePrincipal
+    ```
 
     プロンプトが表示されたら、Azure Rights Management サービスに接続してファイルの保護と保護解除を行うアカウントであることが後に分かるように、サービス プリンシパルの表示名を入力します。
 
     New-MsolServicePrincipal の出力例を次に示します。
 
-        Supply values for the following parameters:
+    ```ps
+    Supply values for the following parameters:
 
-        DisplayName: AzureRMSProtectionServicePrincipal
-        The following symmetric key was created as one was not supplied
-        zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
+    DisplayName: AzureRMSProtectionServicePrincipal
+    The following symmetric key was created as one was not supplied
+    zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
 
-        Display Name: AzureRMSProtectionServicePrincipal
-        ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
-        ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
-        AppPrincialId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
-        TrustedForDelegation: False
-        AccountEnabled: True
-        Addresses: ()
-        KeyType: Symmetric
-        KeyId: 8ef61651-ca11-48ea-a350-25834a1ba17c
-        StartDate: 3/7/2014 4:43:59 AM
-        EndDate: 3/7/2014 4:43:59 AM
-        Usage: Verify
+    Display Name: AzureRMSProtectionServicePrincipal
+    ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
+    ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
+    AppPrincialId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
+    TrustedForDelegation: False
+    AccountEnabled: True
+    Addresses: ()
+    KeyType: Symmetric
+    KeyId: 8ef61651-ca11-48ea-a350-25834a1ba17c
+    StartDate: 3/7/2014 4:43:59 AM
+    EndDate: 3/7/2014 4:43:59 AM
+    Usage: Verify
+    ```
 
 5. この出力から、対称キーと AppPrincialId を書き写しておきます。
 
@@ -234,7 +245,9 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 ここで使うコマンドの例は、次のようになります。
 
-    Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
+```ps
+Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
+```
 
 前のコマンドのように、単一のコマンドで値を指定できます。これは、非対話的に実行するスクリプトの場合と同じです。 ただし、テストが目的の場合は、単に Set-RMSServerAuthentication と入力し、プロンプトに 1 つずつ値を入力してもかまいません。 コマンドが完了すると、クライアントは "サーバー モード" で動作するようになります。これは、スクリプトや Windows Server ファイル分類インフラストラクチャなどの非対話型の使用に適しています。
 
@@ -279,75 +292,96 @@ Azure Active Directory の MSOnline PowerShell モジュールから `New-MsolSe
 
 最初に、自分のアカウントではなくサービス プリンシパル アカウントを使って Azure Rights Management サービスの認証を行う場合は、PowerShell セッションで次のように入力します。
 
-    Set-RMSServerAuthentication
+```ps
+Set-RMSServerAuthentication
+```
 
 メッセージが表示されたら、「[前提条件 3: ユーザーの介入なしにファイルを保護または保護解除するには](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction)」で説明されているように、3 つの識別子を入力します。
 
 ファイルを保護するには、Rights Management テンプレートをお使いのコンピューターにダウンロードして、使用するものとそれに対応する ID 番号を確認する必要があります。 出力から、テンプレート ID をコピーできます。
 
-    Get-RMSTemplate
-
+```ps
+Get-RMSTemplate
+```
 出力は次のようになります。
 
-    TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
-    Name              : Contoso, Ltd - Confidential View Only
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
+```ps
+TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
+Name              : Contoso, Ltd - Confidential View Only
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
 
-    TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
-    Name              : Contoso, Ltd - Confidential
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
-    FromTemplate      : True
+TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
+Name              : Contoso, Ltd - Confidential
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
+FromTemplate      : True
+```
 
 Set-RMSServerAuthentication コマンドを実行しなかった場合は、自分のユーザー アカウントを使用して Azure Rights Management サービスの認証を行うことに注意してください。 ドメインに参加しているコンピューターの場合は、現在の資格情報が常に自動的に使用されます。 ワークグループ コンピューターの場合は、Azure へのサインインを求められ、これらの資格情報は後続のコマンドのためにキャッシュされます。 このシナリオでは、後で別のユーザーとしてサインインする必要がある場合は、`Clear-RMSAuthentication` コマンドレットを使います。
 
 テンプレート ID がわかったので、`Protect-RMSFile` コマンドレットでそれを使って、フォルダー内の 1 つのファイルまたはすべてのファイルを保護できます。 たとえば、1 つのファイルだけを保護し、元のファイルを上書きする場合は、"Contoso, Ltd - Confidential" テンプレートを使います。
 
-    Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 出力は次のようになります。
 
-    InputFile             EncryptedFile
-    ---------             -------------
-    C:\Test.docx          C:\Test.docx
+```ps
+InputFile             EncryptedFile
+---------             -------------
+C:\Test.docx          C:\Test.docx
+```
 
 フォルダー内のすべてのファイルを保護するには、**-Folder** パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
-    Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 出力は次のようになります。
 
-    InputFile                          EncryptedFile
-    ---------                          -------------
-    \Server1\Documents\Test1.docx     \Server1\Documents\Test1.docx
-    \Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx
-    \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
-    \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
+```ps
+InputFile                          EncryptedFile
+---------                          -------------
+\Server1\Documents\Test1.docx     \Server1\Documents\Test1.docx
+\Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx
+\Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
+\Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
+```
 
 保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも `Get-RMSFileStatus` コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。
 
-    Get-RMSFileStatus -File \Server1\Documents\Test1.docx
+```ps
+Get-RMSFileStatus -File \Server1\Documents\Test1.docx
+```
 
 出力は次のようになります。
 
-    FileName                              Status
-    --------                              ------
-    \Server1\Documents\Test1.docx         Protected
+```ps
+FileName                              Status
+--------                              ------
+\Server1\Documents\Test1.docx         Protected
+```
 
 ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の権限を持っている必要があります。 あるいは、スーパー ユーザーとしてコマンドレットを実行する必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
-    Unprotect-RMSFile C:\test.docx -InPlace
+```ps
+Unprotect-RMSFile C:\test.docx -InPlace
+```
 
 出力は次のようになります。
 
-    InputFile                             DecryptedFile
-    ---------                             -------------
-    C:\Test.docx                          C:\Test.docx
+```ps
+InputFile                             DecryptedFile
+---------                             -------------
+C:\Test.docx                          C:\Test.docx
+```
 
 Rights Management テンプレートが変更された場合は、もう一度 `Get-RMSTemplate -force` でダウンロードしてください。 
 
@@ -388,82 +422,104 @@ AzureInformationProtection モジュールをインストールするための�
 
 最初に、AD RMS のデプロイが複数ある場合は、AD RMS サーバーの名前が必要になります。Get-RMSServer コマンドレットを使用することで、使用可能なサーバーの一覧が表示されます。
 
-    Get-RMSServer
-
+```ps
+Get-RMSServer
+```
 出力は次のようになります。
 
-    Number of RMS Servers that can provide templates: 2 
-    ConnectionInfo             DisplayName          AllowFromScratch
-    --------------             -------------        ----------------
-    Microsoft.InformationAnd…  RmsContoso                       True
-    Microsoft.InformationAnd…  RmsFabrikam                      True
+```ps
+Number of RMS Servers that can provide templates: 2 
+ConnectionInfo             DisplayName          AllowFromScratch
+--------------             -------------        ----------------
+Microsoft.InformationAnd…  RmsContoso                       True
+Microsoft.InformationAnd…  RmsFabrikam                      True
+```
 
 ファイルを保護するには、先に、RMS テンプレートを取得して使うものを確認し、それに対応する ID 番号の一覧を確認する必要があります。 AD RMS のデプロイが複数ある場合のみ、RMS サーバーも指定する必要があります。 
 
 出力から、テンプレート ID をコピーできます。
 
-    Get-RMSTemplate -RMSServer RmsContoso
+```ps
+Get-RMSTemplate -RMSServer RmsContoso
+```
 
 出力は次のようになります。
 
-    TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
-    Name              : Contoso, Ltd - Confidential View Only
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
+```ps
+TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
+Name              : Contoso, Ltd - Confidential View Only
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
 
-
-    TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
-    CultureInfo       : en-US
-    Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
-    Name              : Contoso, Ltd - Confidential
-    IssuerDisplayName : Contoso, Ltd
-    FromTemplate      : True
-    FromTemplate      : True
+TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
+CultureInfo       : en-US
+Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
+Name              : Contoso, Ltd - Confidential
+IssuerDisplayName : Contoso, Ltd
+FromTemplate      : True
+FromTemplate      : True
+```
 
 テンプレート ID がわかったので、Protect-RMSFile コマンドレットでそれを使って、フォルダー内の 1 つのファイルまたはすべてのファイルを保護できます。 たとえば、1 つのファイルだけを保護し、元のファイルを置き換える場合は、"Contoso, Ltd - Confidential" テンプレートを使います。
 
-    Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 出力は次のようになります。
 
-    InputFile             EncryptedFile
-    ---------             -------------
-    C:\Test.docx          C:\Test.docx   
+```ps
+InputFile             EncryptedFile
+---------             -------------
+C:\Test.docx          C:\Test.docx   
+```
 
 フォルダー内のすべてのファイルを保護するには、-Folder パラメーターにドライブ文字とパスまたは UNC パスを指定して実行します。 次に例を示します。
 
-    Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```ps
+Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
+```
 
 出力は次のようになります。
 
-    InputFile                          EncryptedFile
-    ---------                          -------------
-    \\Server1\Documents\Test1.docx     \\Server1\Documents\Test1.docx   
-    \\Server1\Documents\Test2.docx     \\Server1\Documents\Test2.docx   
-    \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
-    \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
+```ps
+InputFile                          EncryptedFile
+---------                          -------------
+\\Server1\Documents\Test1.docx     \\Server1\Documents\Test1.docx   
+\\Server1\Documents\Test2.docx     \\Server1\Documents\Test2.docx   
+\\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
+\\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
+```
 
 保護を適用した後でファイル名拡張子が変わっていない場合は、いつでも Get-RMSFileStatus コマンドレットを使って、ファイルが保護されているかどうかを確認できます。 次に例を示します。 
 
-    Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
+```ps
+Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
+```
 
 出力は次のようになります。
 
-    FileName                              Status
-    --------                              ------
-    \\Server1\Documents\Test1.docx        Protected
+```ps
+FileName                              Status
+--------                              ------
+\\Server1\Documents\Test1.docx        Protected
+```
 
 ファイルの保護を解除するには、ファイルを保護したときから所有者または抽出の使用権限を持っているか、AD RMS のスーパー ユーザーである必要があります。 その後、Unprotect コマンドレットを使います。 次に例を示します。
 
-    Unprotect-RMSFile C:\test.docx -InPlace
+```ps
+Unprotect-RMSFile C:\test.docx -InPlace
+```
 
 出力は次のようになります。
 
-    InputFile                             DecryptedFile
-    ---------                             -------------
-    C:\Test.docx                          C:\Test.docx
+```ps
+InputFile                             DecryptedFile
+---------                             -------------
+C:\Test.docx                          C:\Test.docx
+```
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>非対話形式でファイルに Azure Information Protection のラベル付けをする方法
 
@@ -494,7 +550,7 @@ AzureInformationProtection モジュールをインストールするための�
 
 3. [ **+ 新規登録**] を選択して、Web アプリ/API アプリケーションを作成します。 [**アプリケーションの登録**] ウィンドウで、次の値を指定し、[**登録**] をクリックします。
 
-   - **名前**:`AIPOnBehalfOf`
+   - **名前**: `AIPOnBehalfOf`
         
         必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
     
@@ -554,7 +610,7 @@ AzureInformationProtection モジュールをインストールするための�
 20. [**アプリの登録**] ウィンドウで、[ **+ 新しいアプリケーションの登録**] を選択してネイティブアプリケーションを作成します。
 
 21. [**アプリケーションの登録**] ウィンドウで、次の設定を指定し、[**登録**] を選択します。
-    - **名前**:`AIPClient`
+    - **名前**: `AIPClient`
     - **サポートされているアカウントの種類**:**この組織ディレクトリ内のアカウントのみ**
     - **リダイレクト URI (省略可能)**:**パブリッククライアント (モバイル & デスクトップ)** と`http://localhost`
 
@@ -570,13 +626,15 @@ AzureInformationProtection モジュールをインストールするための�
 
 26. [ **Api のアクセス許可の要求**] ウィンドウで、[**マイ api**] を選択します。
 
-27. [ **API の選択**] セクションで [ **apionbehalfof**] を選択し、アクセス許可として [**ユーザー偽装**] のチェックボックスをオンにします。 **[アクセス許可の追加]** を選択します。 
+27. [ **API の選択**] セクションで [ **apionbehalfof**] を選択し、アクセス許可として [**ユーザー偽装**] のチェックボックスをオンにします。 **[アクセス許可の追加]** を選択します. 
 
 28. [API の**アクセス許可**] ウィンドウに戻り、[**同意**する] セクションで、[**管理者の同意を許可 \<*your tenant name*> する**] を選択し、確認プロンプトで [**はい]** を選択します。
 
 これで、2つのアプリの構成が完了しました。設定を実行するために必要な値が、 *Webappid*、 *WebAppKey* 、およびの各パラメーターを*使用して*[設定](/powershell/module/azureinformationprotection/set-aipauthentication)されています。 例を次に示します。
 
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+```ps
+Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
+```
 
 アカウントで非対話式で文書にラベルを付け、保護するという状況でこのコマンドを実行します。 たとえば、PowerShell スクリプトのユーザー アカウントやサービス アカウントで Azure Information Protection スキャナーを実行します。  
 
@@ -604,11 +662,17 @@ AzureInformationProtection モジュールをインストールするための�
 
 2. 次のコマンドをコピーし、このスクリプトに貼り付けます。
 
-         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+    ```ps
+    Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+    ```
 
 3. 先のセクションの指示に従ってこのコマンドを修正します。**WebAppId**、**WebAppkey**、**NativeAppId** パラメーターに独自の値を指定してください。 今回は **Token** パラメーターの値を指定しません。これは後で指定します。 
 
-    例: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    次に例を示します。 
+
+    ```ps
+    Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
+    ```
 
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>手順 2: Set-AIPAuthentication を実行してアクセス トークンを取得し、それをクリップボードにコピーします。
 
@@ -616,9 +680,15 @@ AzureInformationProtection モジュールをインストールするための�
 
 2. スクリプトに指定したものと同じ値を利用し、次のコマンドを実行します。
 
-        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    ```ps
+    (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    ```
 
-    例: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    次に例を示します。 
+
+    ```ps
+    (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    ```
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>手順 3: PowerShell スクリプトを修正し、トークンを指定します。
 
@@ -628,7 +698,7 @@ AzureInformationProtection モジュールをインストールするための�
 
     Windows PowerShell スクリプトの署名の詳細については、PowerShell のドキュメント ライブラリの「[about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing)」を参照してください。
 
-3. ファイルにラベルを付けて保護するコンピューターにこの PowerShell スクリプトをコピーし、自分のコンピューターのオリジナルを削除します。 たとえば、PowerShell スクリプトを Windows Server コンピューターの C:\Scripts\Aipauthentication.ps1 にコピーします。
+3. ファイルにラベルを付けて保護するコンピューターにこの PowerShell スクリプトをコピーし、自分のコンピューターのオリジナルを削除します。 たとえば、PowerShell スクリプトを Windows Server コンピューター上の**C:\Scripts\Aipauthentication.ps1**にコピーします。
 
 #### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>手順 4: PowerShell スクリプトを実行するタスクを作成します。
 
@@ -646,16 +716,18 @@ AzureInformationProtection モジュールをインストールするための�
 
 #### <a name="step-5-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>手順 5: トークンが保存されていることを確認し、PowerShell スクリプトを削除します。
 
-1. サービス アカウント プロファイルの %localappdata%\Microsoft\MSIP フォルダーにトークンが保存されていることを確認します。 この値はサービス アカウントによって保護されます。
+1. トークンがサービスアカウントプロファイルの **%localappdata%\Microsoft\MSIP**フォルダーに格納されていることを確認します。 この値はサービス アカウントによって保護されます。
 
-2. トークン値が含まれている PowerShell スクリプトを削除します (たとえば、Aipauthentication.ps1)。
+2. トークン値を含む PowerShell スクリプト (Aipauthentication.ps1 など) を削除**します。**
 
     必要に応じて、タスクを削除します。 トークンの有効期限が切れた場合、この過程を繰り返す必要があります。その場合、構成したタスクを残しておくと便利です。新しい PowerShell スクリプトを新しいトークン値で上書きコピーするとき、すぐに再実行できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 PowerShell セッションでコマンドレットのヘルプを表示するには `Get-Help <cmdlet name> cmdlet` と入力します。また、最新情報を参照するには -online パラメーターを使用します。 次に例を示します。 
 
-    Get-Help Get-RMSTemplate -online
+```ps
+Get-Help Get-RMSTemplate -online
+```
 
 Azure Information Protection クライアントのサポートに必要な詳細については、以下をご覧ください。
 
@@ -666,5 +738,3 @@ Azure Information Protection クライアントのサポートに必要な詳細
 - [ドキュメント追跡](client-admin-guide-document-tracking.md)
 
 - [サポートされるファイルの種類](client-admin-guide-file-types.md)
-
-

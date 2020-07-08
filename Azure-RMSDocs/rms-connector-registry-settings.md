@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5a05d26d22e072db051ca4c9eb02d4e093b10776
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 82ff7c593d7557428d8201c9c87e3d563d2daed6
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117087"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048580"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
@@ -29,23 +29,25 @@ ms.locfileid: "76117087"
 
 これらの設定を使用する場合の手順:
 
--   *\<YourTenantURL>* は Azure Information Protection テナントの Azure Rights Management サービス URL です。 この値を見つけるには、次の操作を実行します。
+-   *\<YourTenantURL>* は、Azure Information Protection テナントの Azure Rights Management サービスの URL です。 この値を見つけるには、次の操作を実行します。
 
     1.  Azure Rights Management サービスに対して[AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)コマンドレットを実行します。 AIPService モジュールをまだインストールしていない場合は、「 [Aipservice PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
-    2.  出力から、 **LicensingIntranetDistributionPointUrl** の値を確認します。
+    2.  出力から、**LicensingIntranetDistributionPointUrl** の値を確認します。
 
         例: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
-    3.  この値から、 **/_wmcs/licensing** 文字列を削除します。 残りの文字列が Azure Rights Management サービス URL です。 この例では、Azure Rights Management サービス URL は次の値になります。
+    3.  この値から、**/_wmcs/licensing** 文字列を削除します。 残りの文字列が Azure Rights Management サービス URL です。 この例では、Azure Rights Management サービス URL は次の値になります。
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
         
         次の PowerShell コマンドを実行することで、値が正しいことを確認できます。
-        
-            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
--   *\<ConnectorFQDN>* は、DNS で定義したコネクタの負荷分散名です。 たとえば、 **rmsconnector.contoso.com**です。
+        ```ps
+        (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+        ```
+
+-   *\<ConnectorFQDN>* は、コネクタの DNS で定義した負荷分散名です。 たとえば、**rmsconnector.contoso.com** です。
 
 -   オンプレミス サーバーとの通信に HTTPS を使用するようにコネクタを構成している場合は、コネクタの URL に HTTPS プレフィックスを使用してください。 詳細については、「[HTTPS を使用するための RMS コネクタの構成](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)」セクションを参照してください。 Azure Rights Management サービス URL では常に HTTPS が使用されます。
 
@@ -58,7 +60,7 @@ ms.locfileid: "76117087"
 
 **値:** 既定
 
-**データ:** https:// *\<YourTenantURL>* /_wmcs/certification
+**データ:** https:// *\<YourTenantURL>* /_wmcs/認定
 
 ---
 
@@ -68,7 +70,7 @@ ms.locfileid: "76117087"
 
 **値:** 既定
 
-**データ:** https:// *\<YourTenantURL>* /_wmcs/Licensing
+**データ:** https:// *\<YourTenantURL>* /_wmcs/ライセンス
 
 ---
 
@@ -76,14 +78,14 @@ ms.locfileid: "76117087"
 
 **種類:** Reg_SZ
 
-**値:** https:// *\<YourTenantURL>*
+**値:** https://*\<YourTenantURL>*
 
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>*
+- http://*< \ コネクタ fqdn>*
 
-- https:// *<\ConnectorFQDN>*
+- https://*< \ コネクタ fqdn>*
 
 ---
 
@@ -91,14 +93,14 @@ ms.locfileid: "76117087"
 
 **種類:** Reg_SZ
 
-**値:** https:// *<\YourTenantURL>*
+**値:** https://*< の>*
 
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>*
+- http://*< \ コネクタ fqdn>*
 
-- https:// *<\ConnectorFQDN>*
+- https://*< \ コネクタ fqdn>*
 
 
 ## <a name="exchange-2010-registry-settings"></a>Exchange 2010 のレジストリ設定
@@ -109,7 +111,7 @@ ms.locfileid: "76117087"
 
 **値:** 既定
 
-**データ:** https:// *<\YourTenantURL>* /_wmcs/certification
+**データ:** https://*<\YourTenantURL>*/_wmcs/certification
 
 ---
 
@@ -119,7 +121,7 @@ ms.locfileid: "76117087"
 
 **値:** 既定
 
-**データ:** https:// *<\YourTenantURL>* /_wmcs/Licensing
+**データ:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
 ---
 
@@ -127,13 +129,13 @@ ms.locfileid: "76117087"
 
 **種類:** Reg_SZ
 
-**値:** https:// *<\YourTenantURL>*
+**値:** https://*< の>*
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>*
+- http://*< \ コネクタ fqdn>*
 
-- https:// *<\ConnectorFQDN>*
+- https://*< \ コネクタ fqdn>*
 
 ---
 
@@ -141,13 +143,13 @@ ms.locfileid: "76117087"
 
 **種類:** Reg_SZ
 
-**値:** https:// *<\YourTenantURL>*
+**値:** https://*< の>*
 
 **データ:** Exchange サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>*
+- http://*< \ コネクタ fqdn>*
 
-- https:// *<\ConnectorFQDN>*
+- https://*< \ コネクタ fqdn>*
 
 
 ## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>SharePoint 2016 または SharePoint 2013 のレジストリ設定
@@ -156,14 +158,14 @@ ms.locfileid: "76117087"
 
 **種類:** Reg_SZ
 
-**値:** https:// *<\YourTenantURL>* /_wmcs/licensing
+**値:** https://*<\YourTenantURL>*/_wmcs/licensing
 
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>* /_wmcs/licensing
+- http://*< \ コネクタ fqdn>*/_wmcs/ライセンス
 
-- https:// *<\ConnectorFQDN>* /_wmcs/licensing
+- https://*< \ コネクタ fqdn>*/_wmcs/ライセンス
 
 ---
 
@@ -175,9 +177,9 @@ ms.locfileid: "76117087"
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>* /_wmcs/certification
+- http://*< \ コネクタ fqdn>*/_wmcs/認定
 
-- https:// *<\ConnectorFQDN>* /_wmcs/certification
+- https://*< \ コネクタ fqdn>*/_wmcs/認定
 
 ---
 
@@ -190,32 +192,32 @@ ms.locfileid: "76117087"
 
 **データ:** SharePoint サーバーから RMS コネクタへの通信で HTTP と HTTPS のどちらを使用しているかによって、次のいずれかの形式を使用します。
 
-- http:// *<\ConnectorFQDN>* /_wmcs/licensing
+- http://*< \ コネクタ fqdn>*/_wmcs/ライセンス
 
-- https:// *<\ConnectorFQDN>* /_wmcs/licensing
+- https://*< \ コネクタ fqdn>*/_wmcs/ライセンス
 
 
 
 
 ## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>ファイル サーバーとファイル分類インフラストラクチャのレジストリ設定
 
-**レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+**レジストリパス:** HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
 **種類:** Reg_SZ
 
 **値:** 既定
 
-**データ:** http:// *<\ConnectorFQDN>* /_wmcs/licensing
+**データ:** Http://*< \ コネクタ fqdn>*/_wmcs/ライセンス
 
 ---
 
-**レジストリ パス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+**レジストリパス:** HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 **種類:** Reg_SZ
 
 **値:** 既定
 
-**データ:** http:// *<\ConnectorFQDN>* /_wmcs/certification
+**データ:** Http://*< \ コネクタ fqdn>*/_wmcs/認定
 
 
 「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」に戻ります。
