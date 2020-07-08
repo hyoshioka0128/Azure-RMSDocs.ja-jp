@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9fccaa7995b47dbabd9f0308eb206965cdaa7392
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: ba24185e8f8da86bc3801aa9307ae35f671a6c09
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117903"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049022"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
@@ -47,7 +47,7 @@ HTTPS を使用するようにコネクタを構成していない場合は、�
 
 詳細については、すべてのイベント ログ エントリと同様に、メッセージも詳しく調べてください。
 
-初めてコネクタをデプロイするときは、イベント ログを確認するだけでなく、警告やエラーも継続的に確認してください。 当初はコネクタが期待どおりに動作していても、依存する構成を他の管理者が変更してしまう可能性があります。 たとえば、別の管理者が web プロキシサーバーの構成を変更して、RMS コネクタサーバーがインターネットにアクセスできないようにする (エラー 3001) か、コネクタを使用する権限が指定されているグループからコンピューターアカウントを削除します (警告 2001).
+初めてコネクタをデプロイするときは、イベント ログを確認するだけでなく、警告やエラーも継続的に確認してください。 当初はコネクタが期待どおりに動作していても、依存する構成を他の管理者が変更してしまう可能性があります。 たとえば、別の管理者が web プロキシサーバーの構成を変更して、RMS コネクタサーバーがインターネットにアクセスできないようにする (エラー 3001) か、コネクタを使用する権限が指定されているグループからコンピューターアカウントを削除します (警告 2001)。
 
 ### <a name="event-log-ids-and-descriptions"></a>イベント ログ ID と説明
 
@@ -171,7 +171,7 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
-## <a name="logging"></a>ログの記録
+## <a name="logging"></a>ログ記録
 
 使用状況ログ記録を使用すると、電子メールやドキュメントが保護および使用された日時を特定できます。 RMS コネクタを使用してコンテンツを保護および使用する際、ログ内のユーザー ID フィールドには **Aadrm_S-1-7-0** のサービス プリンシパル名が含まれます。 この名前は、RMS コネクタ用に自動的に作成されます。
 
@@ -181,15 +181,17 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 1. **%programfiles%\Microsoft Rights Management connector\Web Service** で web.config ファイルを探します。
 
-2. 次の行を探します。
+2. 次の行を見つけます。
 
-        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 3. その行を次のテキストに置き換えます。
-
-        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 4.  IIS を停止してから起動し、トレースをアクティブ化します。 
 
 5.  必要なトレースをキャプチャしたら、手順 3. の行を元に戻し、IIS を停止してから再起動します。
-

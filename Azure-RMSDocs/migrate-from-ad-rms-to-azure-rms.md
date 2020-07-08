@@ -13,16 +13,16 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7e1ec5241cfedf89b33258115afbc1ee86eae3b3
-ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
+ms.openlocfilehash: 9543490585d01e9592ec63d53775ff46ad3fc415
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507639"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049107"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>AD RMS から Azure Information Protection への移行
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Active Directory Rights Management サービス (AD RMS) デプロイを Azure Information Protection に移行するには、以下の一連の手順を使います。 
 
@@ -40,7 +40,7 @@ Active Directory Rights Management サービス (AD RMS) デプロイを Azure I
 
 - [Azure Information Protection テナント キーを計画して実装する](./plan-implement-tenant-key.md): クラウドで SLC キーと同等のキーを Microsoft が管理するか (既定)、ユーザーが管理するか ("Bring Your Own Key" (BYOK) 構成) という、Azure Information Protection テナントで利用できるキー管理オプションについて説明しています。 
 
-- [Rms サービスの検出](./rms-client/client-deployment-notes.md#rms-service-discovery): rms クライアントのデプロイに関するメモのこのセクションでは、サービス検出の順序が**レジストリ**、**サービス接続ポイント (SCP)** 、**クラウド**の順に説明されています。 SCP がインストールされている環境の移行プロセスでは、SCP から返される AD RMS クラスターを使用しないように、レジストリ設定で Azure Information Protection テナントのクライアントを構成します。
+- [Rms サービスの検出](./rms-client/client-deployment-notes.md#rms-service-discovery): rms クライアントのデプロイに関するメモのこのセクションでは、サービス検出の順序が**レジストリ**、**サービス接続ポイント (SCP)**、**クラウド**の順に説明されています。 SCP がインストールされている環境の移行プロセスでは、SCP から返される AD RMS クラスターを使用しないように、レジストリ設定で Azure Information Protection テナントのクライアントを構成します。
 
 - [Microsoft Rights Management コネクタの概要](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): RMS コネクタに関するドキュメントのこのセクションでは、オンプレミス サービスから Azure Rights Management サービスに接続してドキュメントと電子メールを保護する方法について説明しています。
 
@@ -74,7 +74,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
     「[Azure Information Protection の要件](./requirements.md)」をご覧ください。
 
-    Office 2010 を実行しているコンピューターがある場合は、 [Azure Information Protection クライアントまたは Azure Information Protection 統合されたラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)をインストールする必要があります。これは、これらのクライアントがクラウドサービスに対してユーザーを認証する機能を提供するためです。 新しいバージョンの Office では、これらのクライアントは分類とラベル付けに必要であり、Azure Information Protection クライアントは省略可能ですが、データの保護のみを行う場合に推奨されます。 詳細については、 [Azure Information Protection クライアント](./rms-client/client-admin-guide.md)の管理者ガイドと[Azure Information Protection 統合ラベル付けクライアント](./rms-client/clientv2-admin-guide.md)に関する情報を参照してください。
+    Office 2010 を実行しているコンピューターがある場合は、 [Azure Information Protection クライアントまたは Azure Information Protection 統合されたラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)をインストールする必要があります。これは、これらのクライアントがクラウドサービスに対してユーザーを認証する機能を提供するためです。 新しいバージョンの Office では、これらのクライアントは分類とラベル付けに必要であり、Azure Information Protection クライアントは省略可能ですが、データの保護のみを行う場合に推奨されます。 詳細については、 [Azure Information Protection クライアント](./rms-client/client-admin-guide.md)の管理者ガイドと[Azure Information Protection 統合ラベル付けクライアント](./rms-client/clientv2-admin-guide.md)に関する情報を参照してください。
 
     AD RMS からの移行を行うには、その前に Azure Information Protection のサブスクリプションを用意しておく必要がありますが、移行を始める前はテナントの Rights Management サービスをアクティブにしないことをお勧めします。 移行プロセスには、AD RMS からキーとテンプレートをエクスポートし、それらを Azure Information Protection のテナントにインポートした後の、このアクティブ化の手順が含まれています。 ただし、Rights Management サービスが既にアクティブ化されている場合でも、いくつかの追加手順を行って AD RMS から移行することができます。
 
@@ -97,7 +97,7 @@ Azure Information Protection への移行を始める前に、次の前提条件
 
 - **HSM で保護されたキーを使用して自分で Azure Information Protection テナント キーを管理する場合**:
 
-    - このオプション構成では、Azure Key Vault と、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 詳細については、[Azure Key Vault の価格のページ](https://azure.microsoft.com/pricing/details/key-vault/)を参照してください。 
+    - このオプション構成では、Azure Key Vault と、HSM で保護されたキーを保持する Key Vault をサポートする Azure サブスクリプションが必要です。 詳細については、 [Azure Key Vault の価格](https://azure.microsoft.com/pricing/details/key-vault/)に関するページを参照してください。 
 
 
 ### <a name="cryptographic-mode-considerations"></a>暗号化モードに関する注意事項
@@ -106,9 +106,9 @@ AD RMS クラスターが現在暗号化モード 1 の場合は、移行を開�
 
 AD RMS 暗号化モードを確認するには:
  
-- Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > **[全般]** タブ。 
+- Windows Server 2012 R2 および Windows 2012 の場合: AD RMS クラスターのプロパティ > [**全般**] タブ。 
 
-### <a name="migration-limitations"></a>移行の制限
+### <a name="migration-limitations"></a>移行の上限
 
 - Azure Information Protection で使われる Rights Management サービスによってサポートされていないソフトウェアやクライアントでは、Azure Rights Management によって保護されているコンテンツを保護または使用できません。 「 [Azure Information Protection の要件](./requirements.md)」の「サポートされているアプリケーションとクライアント」セクションを必ず確認してください。
 
@@ -166,7 +166,7 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
 
     - **ソフトウェアで保護されているキーから HSM で保護されているキーへの移行**:
 
-        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 これには、最初にソフトウェアキーを抽出してオンプレミスの HSM にインポートし、オンプレミスの nCipher HSM から Azure Key Vault HSM にキーを転送して Azure の権利を承認するための追加手順を実行する必要があるため、ほとんどの構成が必要です。キーを格納する key vault を使用する管理サービス。
+        AD RMS の一元管理されたパスワード ベースのキーを、顧客が管理する Azure Information Protection テナント キーに移行します (“bring your own key” つまり BYOK シナリオ)。 最初にソフトウェアキーを抽出し、オンプレミスの HSM にインポートしてから、オンプレミスの nCipher HSM から Azure Key Vault HSM にキーを転送し、キーを格納する key Vault を使用するように Azure Rights Management サービスを承認する必要があるため、ほとんどの構成が必要です。
 
 - **手順 5.Azure Rights Management サービスをアクティブ化する**
 
@@ -206,13 +206,13 @@ AD RMS パートナーも Azure Information Protection に移行する必要が�
     
     準備フェーズ中に構成したオンボーディング制御はもう必要ありません。 ただし、段階的な移行ではなく、同時にすべてを移行することを選んだためにオンボーディング制御を使用しなかった場合は、この手順をスキップしてオンボーディング制御を削除することができます。
     
-    Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))** " タスクを無効にする必要があるかどうかを確認します。
+    Windows コンピューターで Office 2010 を実行している場合は、"**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを無効にする必要があるかどうかを確認します。
 
-- **手順 12: Azure Information Protection テナント キーを更新する**
+- **手順 12: Azure Information Protection テナントキーのキーを更新する**
 
     移行前に暗号化モード 2 で実行されていない場合は、この手順の使用をお勧めします。
 
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 移行を始めるには、「[フェーズ 1 - 準備](migrate-from-ad-rms-phase1.md)」に進んでください。
 

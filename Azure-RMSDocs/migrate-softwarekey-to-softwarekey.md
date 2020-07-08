@@ -13,16 +13,16 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b96c9d12277ec85ca1a726907eb5d8c6ca7c391
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 628942a2cf49c934928b8e67908ba40cd4d5898a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935420"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049039"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>手順 2. ソフトウェアで保護されているキーからソフトウェアで保護されているキーへの移行
 
->*適用対象: Active Directory Rights Management サービス[、Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: Active Directory Rights Management サービス、 [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 この手順は、[AD RMS から Azure Information Protection への移行パス](migrate-from-ad-rms-to-azure-rms.md)の一部であり、AD RMS キーがソフトウェアで保護されているときにソフトウェアで保護されているテナント キーを持つ Azure Information Protection に移行する場合にのみ適用されます。 
@@ -35,9 +35,10 @@ ms.locfileid: "74935420"
 
 1. インターネットに接続されたワークステーションで、 [connect-AipService](/powershell/module/aipservice/connect-aipservice)コマンドレットを使用して、Azure Rights Management サービスに接続します。
 
-    ```
+    ```ps
     Connect-AipService
     ```
+    
     プロンプトが表示されたら、Azure Rights Management テナント管理者の資格情報を入力します (通常は、Azure Active Directory または Office 365 のグローバル管理者であるアカウントを使います)。
 
 2. [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)コマンドレットを使用して、エクスポートされた各信頼された発行ドメイン (.xml) ファイルをアップロードします。 たとえば、暗号化モード 2 用に AD RMS クラスターをアップグレードした場合、少なくとも 1 つの追加ファイルが必要です。 
@@ -46,10 +47,13 @@ ms.locfileid: "74935420"
     
     たとえば、最初に以下を実行してパスワードを格納します。
     
-        $TPD_Password = Read-Host -AsSecureString
-    
-    指定したパスワードを入力して、最初の構成データ ファイルをエクスポートします。 次に、構成ファイルの例として E:\contosokey1.xml を使用して次のコマンドを実行し、この操作の実行を確定します。
+    ```ps
+    $TPD_Password = Read-Host -AsSecureString
     ```
+
+    指定したパスワードを入力して、最初の構成データ ファイルをエクスポートします。 次に、構成ファイルの例として E:\contosokey1.xml を使用して次のコマンドを実行し、この操作の実行を確定します。
+
+    ```ps
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
@@ -57,7 +61,7 @@ ms.locfileid: "74935420"
 
 4.  [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice)コマンドレットを使用して、Azure Rights Management サービスとの接続を切断します。
 
-    ```
+    ```ps
     Disconnect-AipServiceService
     ```
 

@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fd3962a5b1020b4bf5e2db12125e4df29dc80db6
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: df049f9071c05c1e1a25e57ecb96730aedd5646f
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935437"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049073"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>手順 2. ソフトウェアで保護されているキーから HSM で保護されているキーへの移行
 
@@ -31,7 +31,7 @@ ms.locfileid: "74935437"
 
 これは、AD RMS 構成を Azure Information Protection にインポートする 4 段階の手順で、結果は Azure Key Vault でお客様が管理 (BYOK) する Azure Information Protection テナント キーです。
 
-まず、AD RMS 構成データからサーバーライセンサー証明書 (SLC) キーを抽出し、キーをオンプレミスの nCipher HSM に転送し、次に HSM キーをパッケージ化して Azure Key Vault に転送してから、Azure Rights Management サービスを承認する必要があります。キーコンテナーへのアクセスを Azure Information Protection し、構成データをインポートします。
+まず、AD RMS 構成データからサーバーライセンサー証明書 (SLC) キーを抽出し、キーをオンプレミスの nCipher HSM に転送します。次に、HSM キーをパッケージ化して Azure Key Vault に転送してから、Azure Rights Management サービスに対して Azure Information Protection から key Vault へのアクセスを承認してから、構成データをインポートします。
 
 Azure Information Protection テナント キーは Azure Key Vault によって格納され管理されるので、移行のこの部分では、Azure Information Protection だけでなく、Azure Key Vault での管理も必要です。 Azure Key Vault が組織で自分以外の管理者によって管理されている場合は、その管理者と調整し、連携してこれらの手順を完了する必要があります。
 
@@ -58,8 +58,8 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 2. Azure Information Protection 管理者または Azure Key Vault 管理者: 未接続のワークステーションで、[Azure RMS 移行ツールキット](https://go.microsoft.com/fwlink/?LinkId=524619)から TpdUtil ツールを実行します。 たとえば、ContosoTPD.xml という名前の構成データ ファイルをコピーする E ドライブにツールがインストールされている場合:
 
-    ```
-        E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
+    ```ps
+    E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
 
     RMS 構成データ ファイルが複数ある場合は、残りのファイルに対してこのツールを実行します。
@@ -78,7 +78,9 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 3. 同じ未接続のワークステーションで、nCipher のドキュメントに従って、nCipher HSM をアタッチして構成します。 次のコマンドを使用して、接続されている nCipher HSM にキーをインポートできるようになりました。その場合は、独自のファイル名を Contosotpd.pem に置き換える必要があります。
 
-        generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    ```sh
+    generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    ```
 
     > [!NOTE]
     >ファイルが複数ある場合は、移行後にコンテンツを保護するために Azure RMS で使用する HSM キーに対応するファイルを選択します。
@@ -87,19 +89,19 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
     **キーの生成パラメーター:**
 
-    **operation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 実行する操作 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; インポート**
+    **&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; インポートを実行する操作操作**
 
-    **application &nbsp;&nbsp;&nbsp;&nbsp;アプリケーション&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; シンプル**
+    **&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 単純なアプリケーションアプリケーション**
 
-    **verify &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 構成キーのセキュリティの検証&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; はい**
+    **検証 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 構成キーのセキュリティの検証 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; はい**
 
-    **type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; キーの種類 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RSA**
+    **型 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; キー型 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RSA**
 
-    **pemreadfile &nbsp;&nbsp; RSA キーを含む PEM ファイル &nbsp;&nbsp; e:\ContosoTPD.pem**
+    **&nbsp; &nbsp; RSA キー e:\ContosoTPD.pem を含む pemreadfile PEM ファイル &nbsp; &nbsp;**
 
-    **ident &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; キー識別子 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contosobyok**
+    **ident &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; キー識別子 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; contosobyok**
 
-    **plainname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; キー名 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ContosoBYOK**
+    **plainname &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; キー名 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ContosoBYOK**
 
     **キーは正常にインポートされました。**
 
@@ -116,21 +118,23 @@ SLC キーが抽出され、オンプレミスの HSM にインポートされ�
 
 Azure Key Vault 管理者: Azure Key Vault で格納するエクスポート済みの各 SLC キーに対して、Azure Key Vault のドキュメントの「[Azure Key Vault の独自のキー (BYOK) の実装](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault)」セクションに記載された次の手順を実行します。
 
-- [手順 4: キーの転送を準備する](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)
+- [手順 4:キーの転送準備をする](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)
 
-- [手順 5: Azure Key Vault にキーを転送する](/azure/key-vault/key-vault-hsm-protected-keys#step-5-transfer-your-key-to-azure-key-vault)
+- [手順 5:キーを Azure Key Vault に転送する](/azure/key-vault/key-vault-hsm-protected-keys#step-5-transfer-your-key-to-azure-key-vault)
 
 キー ペアを生成する手順は実行しないでください。キーは既にあります。 代わりに、オンプレミスの HSM からこのキーを転送するコマンドを実行します (例では、KeyIdentifier パラメーターに "contosobyok" を使用しています)。
 
 権限が制限されたキーのコピーを作成したとき (手順 4.1) およびキーを暗号化したとき (手順 4.3) に、KeyTransferRemote.exe ユーティティが **: SUCCESS**を返していることを確認してから、Azure Key Vault へのキーの転送を行ってください。
 
-Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 出力は、 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Information Protection からの Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
+Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 これはのようになり **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** ます。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Information Protection からの Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
 次に、 [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、key vault にアクセスするための Azure Rights Management サービスプリンシパルを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
 
 たとえば、Azure Information Protection 用に作成したキー コンテナーの名前が contosorms-byok-kv、リソース グループの名前が contosorms-byok-rg である場合は、次のコマンドを実行します。
-    
-    Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+
+```sh
+Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+```
 
 これで、HSM キーが Azure Key Vault に転送されたので、AD RMS 構成データをインポートできます。
 
@@ -144,13 +148,13 @@ Azure Key Vault にキーがアップロードされるとき、表示された�
 
     たとえば、C:\contoso_keyless.xml の構成データ ファイルと前の手順で取得したキーの URL 値を使用して、まず以下を実行してパスワードを格納します。
     
-    ```
+    ```ps
     $TPD_Password = Read-Host -AsSecureString
     ```
     
    指定したパスワードを入力して構成データ ファイルをエクスポートします。 次に、以下のコマンドを実行して、この操作を行うことを確認します。
 
-    ```
+    ```ps
     Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
@@ -160,7 +164,7 @@ Azure Key Vault にキーがアップロードされるとき、表示された�
 
 4. [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice)コマンドレットを使用して、Azure Rights Management サービスとの接続を切断します。
 
-    ```
+    ```ps
     Disconnect-AipServiceService
     ```
 

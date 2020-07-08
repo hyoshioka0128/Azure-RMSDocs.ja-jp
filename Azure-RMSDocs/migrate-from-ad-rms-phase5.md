@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: cf946837e928c976cb3c8bc18fb6063866d5087e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971729"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049124"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -56,9 +56,11 @@ RMS クライアントがこれらのサーバーと通信していないこと�
 
 ローカルホストファイルを使用したリダイレクト:
 
-- ローカルホストファイルに次の行を追加します`<AD RMS URL FQDN>` 。を AD RMS クラスターの値に置き換えます。プレフィックスや web ページは使用しません。
+- ローカルホストファイルに次の行を追加し `<AD RMS URL FQDN>` ます。を AD RMS クラスターの値に置き換えます。プレフィックスや web ページは使用しません。
 
-        127.0.0.1 <AD RMS URL FQDN>
+    ```sh
+    127.0.0.1 <AD RMS URL FQDN>
+    ```
 
 DNS を使用したリダイレクト:
 
@@ -72,7 +74,7 @@ DNS を使用したリダイレクト:
 
 Mac コンピューターが検出プロセスを直ちに実行するようにするには、キーチェーンで "adal" を検索し、すべての ADAL エントリを削除します。 これらのコンピューターで次のコマンドを実行します。
 
-````
+````sh
 
 rm -r ~/Library/Cache/MSRightsManagement
 
@@ -98,21 +100,26 @@ killall cfprefsd
 
 1. PowerShell セッションで Azure Rights Management サービスに接続し、メッセージが表示されたら、グローバル管理者の資格情報を指定します。
 
-        Connect-AipService
+    ```ps
+    Connect-AipService
 
-2. 次のコマンドを実行し、「**Y**」と入力して確認します。
+2. Run the following command, and enter **Y** to confirm:
 
-        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```ps
+    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```
 
     このコマンドを実行すると、Azure Rights Management 保護サービスのライセンスの強制が解除され、すべてのコンピューターでドキュメントおよび電子メールを保護できるようになります。
 
 3. オンボーディング制御が設定されていないことを確認します。
 
-        Get-AipServiceOnboardingControlPolicy
+    ```ps    
+    Get-AipServiceOnboardingControlPolicy
+    ```
 
     出力で、**License** が **False** と表示され、**SecurityGroupOjbectId** に対して GUID が表示されないことを確認します。
 
-最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所にあります。 **Microsoft** > **Windows** > **Active Directory Rights Management サービス Client**
+最後に、Office 2010 を使用していて、Windows タスク スケジューラ ライブラリで "**AD RMS Rights Policy Template Management (Automated) (AD RMS 権利ポリシー テンプレート管理 (自動))**" タスクを有効にしている場合、Azure Information Protection クライアントでは使用されていないため、このタスクを無効にします。 通常、このタスクはグループ ポリシーを使用して有効にされ、AD RMS デプロイをサポートします。 このタスクは次の場所にあります。 **Microsoft**  >  **Windows**  >  **Active Directory Rights Management サービス Client**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>手順 12. Azure Information Protection テナント キーを再入力する
 
@@ -130,7 +137,10 @@ Azure Information Protection テナント キーを更新するには:
 
 - **テナントキーが Microsoft によって管理されている場合**: PowerShell コマンドレットの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)を実行し、テナント用に自動的に作成されたキーのキー識別子を指定します。 指定する値を特定するには、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
 
-        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+        
+    ```ps
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+    ```
 
 - **テナントキーがユーザーによって管理されている場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントのキー作成プロセスを繰り返してから、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットをもう一度実行して、この新しいキーの URI を指定します。
 

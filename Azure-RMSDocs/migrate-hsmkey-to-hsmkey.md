@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 888da129f3b6897303cb2731d23afc52f6261cce
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 43df572d29d98127de8cbdf594d85cd58f4db483
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117954"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049090"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>手順 2. HSM で保護されているキーから HSM で保護されているキーへの移行
 
@@ -51,16 +51,17 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
    - 「**テナント キーを生成する**」の手順を実行しないでください。それと同等のものが、既に AD RMS のデプロイメントから取得されています。 代わりに、nCipher インストールから AD RMS サーバーが使用するキーを特定し、それらのキーを転送用に準備してから、Azure Key Vault に転送します。 
         
-        NCipher の暗号化されたキーファイルの名前は、サーバー上のローカルの **<em>keyappname</em>> _ <<em>keyappname</em>>に key_ <** ます。 たとえば、 `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`のように指定します。 KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として**mscapi**値を指定し、キー識別子に独自の値を指定する必要があります。
+        NCipher の暗号化されたキーファイルには**key_<<em>keyappname</em>>_<<em>keyappname</em> > **がサーバー上でローカルに指定されます。 例: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` KeyTransferRemote コマンドを実行して、アクセス許可が制限されたキーのコピーを作成する場合は、keyAppName として**mscapi**値を指定し、キー識別子に独自の値を指定する必要があります。
         
-        Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 これは、https\://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになります。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
+        Azure Key Vault にキーがアップロードされるとき、表示されたキーのプロパティ (キーの ID が含まれている) を確認できます。 これは、https//contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 のようになり \: ます。 この URL をメモしてください。Azure Information Protection の管理者は、Azure Rights Management サービスにそのテナント キーとしてこのキーを使用するように指示するときに、この URL を使用する必要があります。
 
 2. インターネットに接続されたワークステーションの PowerShell セッションで、 [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、Azure Information Protection テナントキーを格納する key vault にアクセスするように Azure Rights Management サービスプリンシパルを承認します。 必要な権限は、decrypt、encrypt、unwrapkey、wrapkey、verify、および sign です。
     
     たとえば、Azure Information Protection 用に作成したキー コンテナーの名前が contoso-byok-ky、リソース グループの名前が contoso-byok-rg である場合は、次のコマンドを実行します。
-    
-        Set-AzKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
+    ```sh
+    Set-AzKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+    ```
 
 これで、Azure Information Protection から Azure Rights Management サービスに対して Azure Key Vault の HSM キーが準備されたので、AD RMS 構成データをインポートできます。
 
@@ -76,13 +77,13 @@ Azure Information Protection テナント キーは Azure Key Vault によって
     
     たとえば、\contoso-tpd1.xml の構成データ ファイルと前の手順で取得したキーの URL 値を使用し、まず以下を実行してパスワードを格納します。
     
-    ```
+    ```ps
     $TPD_Password = Read-Host -AsSecureString
     ```
     
     指定したパスワードを入力して構成データ ファイルをエクスポートします。 次に、以下のコマンドを実行して、この操作を行うことを確認します。
     
-    ```
+    ```ps
     Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
@@ -92,7 +93,7 @@ Azure Information Protection テナント キーは Azure Key Vault によって
 
 3.  [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice)コマンドレットを使用して、Azure Rights Management サービスとの接続を切断します。
 
-    ```
+    ```ps
     Disconnect-AipServiceService
     ```
 
