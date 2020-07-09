@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection 用の AIPService PowerShell モジュールをインストールする
 description: Azure Information Protection から保護サービス用の PowerShell をインストールする手順を説明します。 このモジュールの名前は AIPService です。
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c37a9c2e09626406eac2060c76375177ba49f118
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 23c18236413aaa2056d3eaaa30a64430de1e608b
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048393"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136836"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>AIPService PowerShell モジュールのインストール
 
@@ -27,7 +27,7 @@ Azure Information Protection から保護サービス用の Windows PowerShell �
 
 この PowerShell モジュールを使用すると、インターネットに接続され、次のセクションに記載されている前提条件を満たす任意の Windows コンピューターを使用して、コマンドラインから保護サービス (Azure Rights Management) を管理できます。 Azure Information Protection 用の Windows PowerShell は、自動化のためのスクリプトをサポートするか、高度な構成シナリオで必要になる場合があります。 モジュールでサポートされている管理タスクと構成の詳細については、「 [PowerShell を使用した Azure Information Protection からの保護の管理](administer-powershell.md)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 次の表に、Azure Information Protection から保護サービス用の AIPService PowerShell モジュールをインストールして使用するための前提条件を示します。
 
@@ -74,7 +74,7 @@ Install-Module -Name AIPService
 Update-Module -Name AIPService
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Windows PowerShell セッションで、インストールされているモジュールのバージョンを確認します。 このチェックは、以前のバージョンからアップグレードした場合に特に重要です。
 

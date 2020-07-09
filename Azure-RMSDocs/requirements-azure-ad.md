@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection に対する Azure AD の要件 - AIP
 description: ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 6ff6aa3956064c9c116e2d8f7a9ad2cbeef0da9c
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 1cf555a6c49c3554d230a10832fccb25efa0bfdf
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746703"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136402"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
 
@@ -90,5 +90,5 @@ Rights Management コネクタおよび Azure Information Protection スキャ�
 
 - スキャナーを実行するサービス アカウント。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。

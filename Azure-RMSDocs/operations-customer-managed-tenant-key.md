@@ -1,9 +1,9 @@
 ---
 title: 'お客様が管理: AIP テナント キーのライフサイクル操作'
 description: Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) に関連するライフサイクル操作についての情報です。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,20 +13,20 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
-ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
+ms.openlocfilehash: 14b3c9d4db202abb18555eb695fe7e3e0769af40
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898907"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136314"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) は、次のセクションでこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
-## <a name="revoke-your-tenant-key"></a>テナント キーの取り消し
+## <a name="revoke-your-tenant-key"></a>テナント キーを取り消します
 
 キーを更新する代わりに、キーを失効させることが必要になるシナリオはごくわずかです。 キーを取り消すと、そのキーを使用してテナントによって保護されているすべてのコンテンツは、復元可能なキーのバックアップがない限り、すべてのユーザー (Microsoft、グローバル管理者、およびスーパーユーザー) がアクセスできなくなります。 キーを取り消した後は、Azure Information Protection 用に新しいテナントキーを作成して構成するまで、新しいコンテンツを保護することはできません。 
 
@@ -63,17 +63,17 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 - キーを再入力し、マイクロソフトが代わりに管理するキーに変更するには、マイクロソフト管理操作の「[テナント キーの再入力](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key)」セクションをご覧ください。
 
-## <a name="backup-and-recover-your-tenant-key"></a>テナント キーのバックアップ/復旧
+## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 あなたはテナント キーを管理しているので、Azure Information Protection で使用されるキーをバックアップする責任があります。 
 
 オンプレミスでテナントキーを生成した場合は、nCipher HSM: キーをバックアップするには、トークン化されたキーファイル、world ファイル、および管理者カードをバックアップします。 Azure Key Vault にキーを転送すると、サービス ノードの障害から守るために、トークン化されたキー ファイルがサービスによって保存されます。 このファイルは、特定の Azure リージョンまたはインスタンスを対象としたセキュリティ ワールドにバインドされます。 ただし、このトークン化されたキー ファイルを完全なバックアップとは考えないでください。 たとえば、nCipher HSM の外部で使用するためにキーのプレーンテキストコピーが必要な場合、Azure Key Vault は回復不可能なコピーしかないため、このキーを取得することはできません。
 
 Azure Key Vault には、[バックアップ コマンドレット](/powershell/module/az.keyvault/backup-azkeyvaultkey)が用意されています。これを使用すれば、キーをダウンロードしてファイルに保存することで、キーのバックアップを作成できます。 ダウンロードされたコンテンツは暗号化されているため、Azure Key Vault の外部で使用することはできません。 
 
-## <a name="export-your-tenant-key"></a>テナント キーのエクスポート
+## <a name="export-your-tenant-key"></a>テナント キーをエクスポートします
 BYOK を使用する場合、テナント キーを Azure Key Vault または Azure Information Protection からエクスポートできません。 Azure Key Vault 内のコピーは回復不可能です。 
 
-## <a name="respond-to-a-breach"></a>侵害への対応
+## <a name="respond-to-a-breach"></a>侵害に反応します
 違反対応プロセスがなければ、どれほど強固でも、セキュリティ システムは完全になりません。 あなたのテナント キーが盗まれた可能性があります。 たとえ十分に保護されていても、現在の生成キー技術、または現在のキーの長さおよびアルゴリズムに脆弱性が見つかる可能性があります。
 
 製品とサービスのセキュリティ インシデントに対応するためにマイクロソフトは専用のチームを置いています。 インシデントが認められる報告があった場合、至急、このチームは範囲、根本原因、軽減の調査にあたります。 このインシデントが資産に影響する場合、Microsoft はテナントのグローバル管理者に電子メールで通知します。
@@ -82,7 +82,7 @@ BYOK を使用する場合、テナント キーを Azure Key Vault または Az
 
 |インシデントの説明|考えられる対応|
 |------------------------|-------------------|
-|テナント キーが漏れています。|テナント キーを再入力します。 「[テナント キーの再入力](#rekey-your-tenant-key)」をご覧ください。|
+|テナント キーが漏れています。|テナント キーを再入力します。 「[テナントキーのキー更新](#rekey-your-tenant-key)」を参照してください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを再入力するように指示します。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure Information Protection を更新し、すべてのお客様にテナント キーの再入力を指示する必要があります。|

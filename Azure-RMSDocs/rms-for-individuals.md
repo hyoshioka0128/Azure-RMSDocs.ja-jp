@@ -1,9 +1,9 @@
 ---
 title: 個人用 RMS と Azure Information Protection
 description: 個人向け RMS について説明します。これは、保護されたファイルを送信されているものの、IT 部門が Azure でユーザー用のアカウントを管理していないために認証されないユーザー向けの、無料のセルフサービス サブスクリプションです。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,16 +12,16 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 39452080b5c3696241f4257f87eb99a53e2e821c
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d02f0e3e848e4a4743f7e61344f12108cca8c714
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933108"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136920"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 個人用 RMS は、Azure Information Protection によって保護されたファイルを開く必要があるユーザー向けの、無料セルフサービス サブスクリプションです。 そのようなユーザーを Azure Active Directory で認証できない場合は、この無料登録サービスでユーザーのために Azure Active Directory にアカウントを作成できます。 結果的に、会社のメール アドレスでユーザーを認証できるようになり、保護されているファイルをコンピューターまたはモバイル デバイスで読み取ることができます。
 
@@ -49,9 +49,9 @@ ms.locfileid: "74933108"
 
 4. 入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
 
-5. このメールが届いたら、 **[はい、私です]** をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
+5. このメールが届いたら、[**はい、私です**] をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
 
-6. **[最後に...]** というページが表示され、アカウントの詳細情報を入力できるようになります。 氏名とパスワードを入力し、パスワードを確認のため再入力してから **[開始]** をクリックします。
+6. [**最後に...**] というページが表示され、アカウントの詳細情報を入力できるようになります。 氏名とパスワードを入力し、パスワードを確認のため再入力してから [**開始**] をクリックします。
 
 7. アカウントが作成されると、Microsoft Azure Information Protection の新しいページが表示されます。ここで、Azure Information Protection クライアントをダウンロードしてインストールすることができます。また、[ユーザー ガイド](./rms-client/client-user-guide.md) リンクをクリックして、Windows コンピューター用の操作手順を表示することができます。
 
@@ -61,6 +61,6 @@ ms.locfileid: "74933108"
 > このアカウントを使用してファイルを保護することもできるようになりましたが、組織が Azure Information Protection の[試用版または有料サブスクリプション](https://azure.microsoft.com/pricing/details/information-protection/)を取得するまでは実行しないでください。 この無料サブスクリプションを使用してファイルや電子メールを保護した後で、組織がアカウントを制御した場合、前に保護したコンテンツにアクセスできなくなる可能性があります。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 個人用 RMS は、Azure Active Directory でサポートされているセルフサービスサインアップ機能を使用する例です。 この機能の動作の詳細については、Azure Active Directory のドキュメントの「 [Azure Active Directory のセルフサービスサインアップとは](/azure/active-directory/users-groups-roles/directory-self-service-signup)」を参照してください。
 

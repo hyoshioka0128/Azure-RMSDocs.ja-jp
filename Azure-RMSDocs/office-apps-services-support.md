@@ -1,8 +1,8 @@
 ---
 title: Office のアプリとサービスが AIP から Azure RMS をサポートするしくみ
 description: Word や Outlook などのエンド ユーザー Office アプリケーションと Exchange や SharePoint などの Office サービスで AIP から Azure Rights Management サービスを使用し、組織のデータを保護するしくみ。
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 05/31/2020
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0fa79e8e9562739c59a2052dd97c9a1c96a2e90d
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: b453bde76cfc8709d955e3fc6e0b25f35ce02c4f
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665624"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136984"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -102,7 +102,7 @@ SharePoint の IRM を構成する用意ができている場合:
 - Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Office 365 をお持ちの場合、「[Office 365 のファイル保護ソリューション](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect)」をご覧になることをお勧めします。Office 365 のファイルを保護するための推奨機能を説明しています。
 

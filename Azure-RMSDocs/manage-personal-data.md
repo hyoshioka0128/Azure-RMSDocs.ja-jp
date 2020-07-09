@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection の個人データの管理
 description: Azure Information Protection で使用される個人データと、その表示、エクスポート、削除方法について説明します。
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b808fd6e3c1080d7c6d9f06384408bd196aadc45
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71966891"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136813"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Azure Information Protection の個人データの管理
 
@@ -54,7 +54,7 @@ Azure Information Protection を使用してドキュメントや電子メール
 
 [Get AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)コマンドレットを実行して、保護テンプレートの一覧を取得します。 テンプレート ID を使用すると、特定のテンプレートの詳細を取得できます。 `RightsDefinitions` オブジェクトは個人データを表示します (存在する場合)。 
 
-次に例を示します。
+例:
 ```
 PS C:\Users> Get-AipServiceTemplate -TemplateId fcdbbc36-1f48-48ca-887f-265ee1268f51 | select *
 
@@ -84,14 +84,14 @@ LabelId                 :
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 
-[AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) コマンドレットを実行し、[get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) コマンドレットを実行して、Azure Information Protection から保護サービス (Azure Rights Management) のスーパーユーザーロールまたは全体管理者ロールが割り当てられているユーザーを確認します。 これらいずれかのロールが割り当てられているユーザーについては、電子メール アドレスが表示されます。
+AipServiceSuperUser コマンド[レットを実行し、](/powershell/module/aipservice/get-aipservicerolebasedadministrator) [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser)コマンドレットを実行して、Azure Information Protection から保護サービス (Azure Rights Management) のスーパーユーザーロールまたは全体管理者ロールが割り当てられているユーザーを確認します。 これらいずれかのロールが割り当てられているユーザーについては、電子メール アドレスが表示されます。
 
 
 ### <a name="administration-logs-for-the-protection-service"></a>保護サービスの管理ログ
 
 [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog)コマンドレットを実行して、Azure Information Protection から保護サービス (Azure Rights Management) の管理操作のログを取得します。 このログには、個人データが電子メール アドレスと IP アドレスの形式で記録されます。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-たとえば、次のようになります。
+次に例を示します。
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>保護サービスの使用状況ログ
 [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog)コマンドレットを実行して、Azure Information Protection から保護サービスを使用するエンドユーザーの操作のログを取得します。 ログには、個人データが電子メール アドレスと IP アドレスの形式で記録される場合があります。 ログはプレーン テキストで、ダウンロード後は特定の管理者の詳細をオフラインで検索できます。
 
-たとえば、次のようになります。
+次に例を示します。
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog)コマンドレットを実行して、特定のユーザーに関するドキュメント追跡サイトから情報を取得します。 ドキュメントログに関連付けられている追跡情報を取得するには、 [Get AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps)コマンドレットを使用します。
 
-たとえば、次のようになります。
+次に例を示します。
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -195,7 +195,7 @@ ObjectID による検索はできません。 ただし、`-UserEmail` パラメ
 
 - RMS クライアントの場合: %localappdata%\Microsoft\MSIPC\msip\Logs
 
-また、Azure Information Protection クライアントは、この個人データをローカル Windows イベント ログの **[アプリケーションとサービス ログ]**  >  **[Azure Information Protection]** に記録します。
+さらに、Azure Information Protection クライアントは、この個人データをローカルの Windows イベントログの **[アプリケーションとサービスログ**] Azure Information Protection に記録し  >  **Azure Information Protection**ます。
 
 Azure Information Protection クライアントがスキャナーを実行した場合、個人データは、スキャナーを実行する Windows Server コンピューター上の %localappdata%\Microsoft\MSIP\Scanner\Reports に保存されます。
 
@@ -214,7 +214,7 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **コンプライアンス管理者**
 
-- **コンプライアンスデータ管理者**
+- **コンプライアンス データ管理者**
 
 - **セキュリティ管理者**
 
@@ -222,7 +222,7 @@ Azure Portal で表示および指定する個人データは、次のいずれ�
 
 - **グローバル管理者**
 
-- **グローバルリーダー**
+- **グローバル閲覧者**
 
 AIPService モジュール (または以前のモジュール AADRM) を使用して表示および指定する個人データにアクセスできるのは、 **Azure Information Protection 管理者**、**コンプライアンス管理者**、**コンプライアンスデータ管理者**、または Azure Active Directory の**グローバル管理者**ロールが割り当てられたユーザー、または保護サービスのグローバル管理者ロールです。
 
@@ -236,7 +236,7 @@ Azure Information Protection ポリシーのスコープ付きポリシーと保
 
 ### <a name="protection-templates"></a>保護テンプレート
 
-[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データは `RightsDefinitions` プロパティ内にあるため、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、`Set-AipServiceTemplateProperty` コマンドレットで権限定義オブジェクトを使用する必要もあります。
+[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを実行して、保護テンプレートを更新します。 個人データはプロパティ内にあるため `RightsDefinitions` 、 [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して、更新された情報を含む権限定義オブジェクトを作成し、コマンドレットで権限定義オブジェクトを使用する必要もあり `Set-AipServiceTemplateProperty` ます。
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>保護サービスのスーパーユーザーと代理管理者
 
@@ -267,8 +267,8 @@ Azure Information Protection ポリシーのスコープ付きポリシーと保
 
 次の3つの手順を使用して、保護サービスのドキュメント追跡ログ、管理ログ、または使用状況ログで個人データを削除するように要求します。 
 
-**手順 1: 削除リクエストを開始する**
-[Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)して Azure Information Protection のサポート ケースを開き、テナントからデータを削除するよう要請します。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 リクエストを発行する際には、削除するデータの種類に応じて、追加情報を提供する必要があります。
+**手順 1: 削除要求** 
+ を開始する[Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)して、テナントからデータを削除する要求で Azure Information Protection サポートケースを開きます。 自分が Azure Information Protection テナントの管理者であることを証明する必要があります。また、このプロセスの確認には数日かかることを承知しておく必要があります。 リクエストを発行する際には、削除するデータの種類に応じて、追加情報を提供する必要があります。
 
 - 管理ログを削除するには、**終了日**を指定します。 その終了日までのすべての管理者ログが削除されます。
 - 使用状況ログを削除するには、**終了日**を指定します。 その終了日までのすべての使用状況ログが削除されます。
@@ -283,7 +283,7 @@ Azure Information Protection ポリシーのスコープ付きポリシーと保
 ## <a name="exporting-personal-data"></a>個人データのエクスポート
 AIPService または AADRM PowerShell コマンドレットを使用すると、個人データを PowerShell オブジェクトとして検索およびエクスポートできるようになります。 `ConvertTo-Json` コマンドレットを使用すると、PowerShell オブジェクトを JSON に変換して保存できます。
 
-## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>プロファイリングやマーケティングに個人データを同意なく使用することの制限
+## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>同意のないプロファイルまたはマーケティングのための個人データの使用の制限
 Azure Information Protection では、個人データに基くプロファイリングやマーケティングに関して、Microsoft の[プライバシー条項](https://privacy.microsoft.com/privacystatement)が適用されます。
 
 ## <a name="auditing-and-reporting"></a>監査とレポート
