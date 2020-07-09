@@ -173,8 +173,26 @@
           href: secure-collaboration-documents.md
         - name: Azure Information Protection ラベルのメール フロー ルールの構成
           href: configure-exo-rules.md
-        - name: Azure Information Protection スキャナーの展開
-          href: deploy-aip-scanner.md
+        - name: Azure Information Protection 統合ラベル付けスキャナー
+          items:
+            - name: 概要
+              href: deploy-aip-scanner.md
+            - name: 統合ラベル付けスキャナーの前提条件
+              href: deploy-aip-scanner-prereqs.md
+            - name: 統合ラベル付けスキャナーを構成してインストールする
+              href: deploy-aip-scanner-configure-install.md
+            - name: 統合ラベル付けスキャナーを実行する
+              href: deploy-aip-scanner-manage.md
+        - name: Azure Information Protection クラシック スキャナー
+          items:
+            - name: 概要
+              href: deploy-aip-scanner-classic.md
+            - name: クラシック スキャナーの前提条件
+              href: deploy-aip-scanner-prereqs-classic.md
+            - name: クラシック スキャナーを構成してインストールする
+              href: deploy-aip-scanner-configure-install-classic.md
+            - name: クラシック スキャナーを実行する
+              href: deploy-aip-scanner-manage-classic.md
         - name: Azure Information Protection のレポート
           href: reports-aip.md
         - name: RMS コネクタのデプロイ
@@ -297,6 +315,12 @@
                       href: ./rms-client/client-protection-only-mode.md
                     - name: RMS 共有アプリケーションで実行していたタスク
                       href: ./rms-client/upgrade-client-app.md
+        - name: iOS 用と Android 用の Azure Information Protection
+          items:
+            - name: 概要
+              href: ./rms-client/mobile-app-faq.md
+            - name: AIP モバイル アプリの使用を開始する
+              href: ./rms-client/mobile-app-get-started.md
         - name: 保護された PDF リーダー
           items:
             - name: 概要
