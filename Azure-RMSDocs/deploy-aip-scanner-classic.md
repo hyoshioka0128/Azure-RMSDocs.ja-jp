@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 65c3a37f68676616d7342879d9621a143842f4bf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049609"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281955"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーとは何ですか。
 
@@ -115,15 +115,6 @@ AIP スキャナーは、次の状況でファイルにラベルを付けるこ�
 **例:**.Txt ファイルの種類では分類のみがサポートされていないため、.txt ファイルを検査した後は、[分類のみ] に構成されたラベルをスキャナーで適用することはできません。
 
 ただし、ラベルが分類と保護の両方に構成されていて、保護するスキャナーに .txt ファイルの種類が含まれている場合は、スキャナーでファイルにラベルを付けることができます。
-
-## <a name="upgrading-your-scanner"></a>スキャナーをアップグレードする
-
-以前にスキャナーをインストールし、アップグレードする場合は、「 [Azure Information Protection スキャナーをアップグレード](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)する」を参照してください。
-
-次に、スキャナーを通常どおりに[構成](deploy-aip-scanner-configure-install.md)して[使用](deploy-aip-scanner-manage.md)し、スキャナーをインストールする手順をスキップします。
-
->[!NOTE]
-> 1.48.204.0 よりも前のバージョンのスキャナーを使用していて、アップグレードする準備ができていない場合は、「[ファイルを自動的に分類して保護するために以前のバージョンの Azure Information Protection スキャナーを展開する](deploy-aip-scanner-previousversions.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
