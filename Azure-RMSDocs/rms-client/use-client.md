@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection は、組織のデータを�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 56d58578527a6df64091ed4c1569999ddad4fd69
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: 08c5658ed0997da058e2542826d336581bba4bb7
+ms.sourcegitcommit: 76bb452442ed42f066ee23fb3bcd9fef92440b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281938"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308506"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -126,7 +126,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 
 さまざまなオペレーティングシステムプラットフォーム (Windows、macOS、iOS、Android) における Office の組み込みの機密ラベル付け機能を比較するには、Microsoft 365 のコンプライアンスドキュメント、[アプリでの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)を参照してください。 このドキュメントには、サポートされている機能の Office ビルド番号または Office 更新チャネルに関する情報も含まれています。
 
-|機能|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベルクライアント|
+|特徴量|従来のクライアント|統一されたラベル付けクライアント|Office 組み込みラベルクライアント|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |手動によるラベル付け:| **はい** | **はい** |**はい** |
 |既定のラベル:| **はい** | **はい** | **はい** |
@@ -134,7 +134,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 |推奨または自動ラベル付け:<br />-Outlook の場合| **はい** | **あり** | いいえ |
 |必須ラベル:| **はい** | **あり** | いいえ |
 |ラベルに対するユーザー定義のアクセス許可: <br />-メールの転送不可| **はい** | **あり** | **あり** |
-|ラベルに対するユーザー定義のアクセス許可: <br />-Word、Excel、PowerPoint、エクスプローラーのカスタムアクセス許可| **はい** | **あり** | **あり** |
+|ラベルに対するユーザー定義のアクセス許可: <br />-Word、Excel、PowerPoint のカスタムアクセス許可| **はい** | **あり** | **あり** |
 |ラベルの多言語サポート:| **はい** | **あり** |**あり** |
 |メールの添付ファイルからのラベル継承:| **はい** | **あり**  |いいえ |
 |以下を含むカスタマイズ:<br />- メールの既定のラベル<br />-Outlook でメッセージをポップアップ表示する <br />- S/MIME のサポート<br />- [問題の報告] オプション| **はい** <sup>1</sup> | **はい** <sup>2</sup> | いいえ |
@@ -234,7 +234,7 @@ Azure Information Protection クライアント (クラシック) では、サ�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection クライアントをインストールして構成するには、次のドキュメントを参照してください。
 
