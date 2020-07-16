@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 87c9884f497cd0020b7252b6ef5a466fe858a8c1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 22f98a6781dc0ff0b43d1da73c72c2029c960021
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764118"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403376"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-テレメトリ構成
 
@@ -21,11 +21,13 @@ ms.locfileid: "81764118"
 
 ## <a name="telemetry-configuration"></a>テレメトリの構成
 
-MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet)を使用して制御できます。 このクラスのインスタンスを作成し、 **IsTelemetryOptedOut**を true に設定します。 **MipContext**を作成するために使用される関数に、 **TelemetryConfiguration**クラスのオブジェクトを指定します。 
+MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet)を使用して制御できます。 このクラスのインスタンスを作成し、 **IsTelemetryOptedOut**を true に設定します。 **MipContext**を作成するために使用される関数に、 **TelemetryConfiguration**クラスのオブジェクトを指定します。
 
 MIP SDK バージョン1.6 以降では、設定オプションによってテレメトリが**完全に無効**になります。 Verisons 1.5 以前では、最小のテレメトリ情報のセットを送信しています。
 
 ### <a name="minimum-telemetry-events"></a>最小テレメトリイベント
+
+MIP SDK 1.6 以降では、テレメトリが*オプトアウト*に設定されていると、**テレメトリイベントは送信されません。** 1.6 より前のバージョンでは、次の動作があります。
 
 テレメトリが*オプトアウト*に設定されている場合、データの最小セットが Microsoft に送信されます。 個人を特定できる情報はすべて、この情報からスキャンされます。 このデータには、SDK が使用されていること、およびシステムメタデータを理解するためのハートビート情報が含まれています。 **ユーザーのコンテンツまたはエンドユーザーを特定できる情報がサービスに設定されていません。**
 
@@ -51,7 +53,7 @@ MIP SDK バージョン1.6 以降では、設定オプションによってテ�
 | イベント UniqueId                       | イベントに割り当てられた一意の ID が生成されます。                                             | いいえ       |
 | MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
 | MIP.バージョン                          | MIP SDK のバージョン。                                                                | いいえ       |
-| Operation                            | Heartbeat                                                                              | いいえ       |
+| 操作                            | Heartbeat                                                                              | いいえ       |
 | OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
 | プラットフォーム                             | オペレーティングシステムのバージョン。                                                              | いいえ       |
 | ProcessName                          | SDK を使用したプロセスの名前。                                                     | いいえ       |
@@ -85,7 +87,7 @@ MIP SDK バージョン1.6 以降では、設定オプションによってテ�
 | MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
 | MIP.バージョン                          | MIP SDK のバージョン。                                                                | いいえ       |
 | ObjectId                             | ファイルのパスとファイルの説明。                                             | **はい**  |
-| Operation                            | "検出"。                                                                           | いいえ       |
+| 操作                            | "検出"。                                                                           | いいえ       |
 | OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
 | プラットフォーム                             | オペレーティングシステムのバージョン。                                                              | いいえ       |
 | ProcessName                          | SDK を使用したプロセスの名前。                                                     | いいえ       |
@@ -126,7 +128,7 @@ MIP SDK バージョン1.6 以降では、設定オプションによってテ�
 | MachineName                          | イベントを生成したシステムの名前。                                           | **はい**  |
 | MIP.バージョン                          | MIP SDK のバージョン。                                                                | いいえ       |
 | ObjectId                             | ファイルのパスとファイルの説明。                                             | **はい**  |
-| Operation                            | "変更"。                                                                              | いいえ       |
+| 操作                            | "変更"。                                                                              | いいえ       |
 | OrganizationId                       | 認証されたユーザーのホームテナント GUID。                                            | いいえ       |
 | プラットフォーム                             | オペレーティングシステムのバージョン。                                                              | いいえ       |
 | ProcessName                          | SDK を使用したプロセスの名前。                                                     | いいえ       |
