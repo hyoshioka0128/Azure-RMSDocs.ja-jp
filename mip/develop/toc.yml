@@ -23,7 +23,7 @@
               href: quick-file-set-get-label-cpp.md
             - name: ファイルの機密ラベルを下げる (C++)
               href: quick-file-justify-actions-cpp.md
-            - name: ファイル API の再発行 (C++)
+            - name: ファイル API の再発行 ( C++ )
               href: quick-file-republishing-cpp.md
             - name: 電子メール .msg ファイルの処理 (C++)
               href: quick-email-msg-cpp.md
@@ -35,29 +35,29 @@
               href: quick-protection-list-templates-cpp.md
             - name: テキストの暗号化と暗号化解除 (C++)
               href: quick-protection-encrypt-decrypt-text-cpp.md
-    - name: 'C#'
+    - name: C#
       items:
         - name: ファイル API
           items:
-            - name: 'アプリケーションの初期化 (C#)'
+            - name: アプリケーションの初期化 (C#)
               href: quick-app-initialization-csharp.md
-            - name: '機密ラベルの一覧表示 (C#)'
+            - name: 機密ラベルの一覧表示 (C#)
               href: quick-file-list-labels-csharp.md
-            - name: '機密ラベルの設定/取得 (C#)'
+            - name: 機密ラベルの設定/取得 (C#)
               href: quick-file-set-get-label-csharp.md
-            - name: 'ファイルの機密ラベルを下げる (C#)'
+            - name: ファイルの機密ラベルを下げる (C#)
               href: quick-file-justify-actions-csharp.md
-            - name: 'ファイル API の再発行 (C#)'
+            - name: ファイル API の再発行 (C#)
               href: quick-file-republishing-csharp.md
-            - name: '電子メール .msg ファイルの処理 (C#)'
+            - name: 電子メール .msg ファイルの処理 (C#)
               href: quick-email-msg-csharp.md
         - name: 保護 API
           items:
-            - name: 'アプリケーションの初期化 (C#)'
+            - name: アプリケーションの初期化 (C#)
               href: quick-protection-app-initialization-csharp.md
-            - name: 'テンプレートを一覧表示する (C#)'
+            - name: テンプレートを一覧表示する (C#)
               href: quick-protection-list-templates-csharp.md
-            - name: 'テキストの暗号化と暗号化解除 (C#)'
+            - name: テキストの暗号化と暗号化解除 (C#)
               href: quick-protection-encrypt-decrypt-text-csharp.md
 - name: 概念
   items:
@@ -133,12 +133,12 @@
       href: concept-mip-telemetry.md
     - name: ユース ケース
       items:
-        - name: ファイル API - ファイルの秘密度ラベルを下げるためのアクションの理由 (C++)
-          href: concept-justification-cpp.md
-        - name: ファイル API - 再発行 (C++)
-          href: concept-republishing-cpp.md
-        - name: ファイル API - 電子メール .msg ファイルの処理 (C++)
-          href: concept-email-cpp.md
+        - name: ファイル API - ファイルの秘密度ラベルを下げるためのアクションの理由
+          href: concept-justification.md
+        - name: File API - 再発行
+          href: concept-republishing.md
+        - name: File API - 電子メール .msg ファイルの処理
+          href: concept-email.md
 - name: 参照先
   items:
     - name: C++ ライブラリ
