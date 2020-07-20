@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアント-バージョン履歴 & サポートポリシー
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aca29a142c0735755c343535b3df43e175c59e80
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
+ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048614"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86471725"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -63,7 +63,17 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="version-27960"></a>バージョン2.7.96.0 
+## <a name="version-27990"></a>バージョン2.7.99.0
+
+統一されたラベル付けスキャナーとクライアントバージョン2.7.99.0
+
+**修正と改善:**
+
+**新しいラベル**監査ログのファイルラベル付け操作の問題を修正した。
+
+詳細については、「 [Version 2.7.96.0](#version-27960) and [Azure Information Protection audit log reference (public preview)](../audit-logs.md)」を参照してください。
+
+## <a name="version-27960"></a>バージョン2.7.96.0
 
 統一されたラベル付けスキャナーとクライアントバージョン2.7.96.0
 
@@ -95,9 +105,14 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
+
+> [!IMPORTANT]
+> このバージョンでは、ファイルのラベル付け操作によって**新しいラベル**監査ログが生成されません。
+> **[強制**] モードでスキャナーを実行する場合は、[バージョン 2.7.99.0](#version-27990)にアップグレードすることをお勧めします。
+> 
 
 **TLS 1.2 の適用**
 

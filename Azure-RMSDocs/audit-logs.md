@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cfcbc67d67375e1513373c26d935a5acdc041911
-ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
+ms.openlocfilehash: cbffb68eb997b5d539ddd31a1f85fb25bb797976
+ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716048"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86471741"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection 監査ログの参照 (パブリックプレビュー)
 
@@ -82,7 +82,7 @@ Microsoft Azure Information Protection は、次のアクティビティイベ�
 
 | 報告者      | プラットフォーム                       | Application              | アクション/説明      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
-|Azure Information Protection:</br>-クラシッククライアント</br>-統一されたラベル付けクライアント | Windows、SharePoint、1台のドライブ | Office                   | 重要度の低いラベルでドキュメントラベルが更新されるたびに生成されます。|
+|Azure Information Protection:</br>-従来のスキャナーとクライアント</br>-スキャナーとクライアントの統一されたラベル付け | Windows、SharePoint、1台のドライブ | Office                   | 重要度の低いラベルでドキュメントラベルが更新されるたびに生成されます。|
 | Microsoft Defender ATP            | Windows                        | OS                       | 重要度の低いラベルでドキュメントラベルが更新されるたびに生成されます。 |
 | Microsoft Information Protection (MIP) SDK          | Any                            | サードパーティ アプリケーション | 重要度の低いラベルでドキュメントラベルが更新されるたびに生成されます。<br>サードパーティのアプリケーションでサポートされている場合にのみ生成されます。 |
 
@@ -103,7 +103,7 @@ Microsoft Azure Information Protection は、次のアクティビティイベ�
 
 | 報告者                                                                      | プラットフォーム                       | Application              | アクション/説明                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-クラシッククライアント</br>-統一されたラベル付けクライアント | Windows、SharePoint、1台のドライブ | Office                   | 新しいラベルが適用されるたびに生成されます。                                                                  |
+| Azure Information Protection:</br>-従来のスキャナーとクライアント</br>-スキャナーとクライアントの統一されたラベル付け | Windows、SharePoint、1台のドライブ | Office                   | 新しいラベルが適用されるたびに生成されます。                                                                  |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | 新しいドキュメントラベルが適用されるたびに生成されます。                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | サードパーティ アプリケーション | 新しいドキュメントラベルが適用されるたびに生成されます。<br>サードパーティのアプリケーションでサポートされている場合にのみ生成されます。 |
 
@@ -122,7 +122,7 @@ Microsoft Azure Information Protection は、次のアクティビティイベ�
 
 | 報告者                                                                      | プラットフォーム                       | Application              | アクション/説明                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-クラシッククライアント</br>-統一されたラベル付けクライアント | Windows、SharePoint、1台のドライブ | Office                   | ラベルが削除されるたびに生成されます。                                                                  |
+| Azure Information Protection:</br>-従来のスキャナーとクライアント</br>-スキャナーとクライアントの統一されたラベル付け | Windows、SharePoint、1台のドライブ | Office                   | ラベルが削除されるたびに生成されます。                                                                  |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | ラベルが削除されるたびに生成されます。                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | サードパーティ アプリケーション | ラベルが削除されるたびに生成されます。<br>サードパーティのアプリケーションでサポートされている場合にのみ生成されます。 |
 
@@ -141,6 +141,6 @@ Microsoft Azure Information Protection は、次のアクティビティイベ�
 
 | 報告者                                                                      | プラットフォーム                       | Application              | アクション/説明                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-クラシッククライアント</br>-統一されたラベル付けクライアント | Windows、SharePoint、1台のドライブ | Office                   | より機密性の高いラベルでドキュメントラベルが更新されるたびに生成されます。                                                                   |
+| Azure Information Protection:</br>-従来のスキャナーとクライアント</br>-スキャナーとクライアントの統一されたラベル付け | Windows、SharePoint、1台のドライブ | Office                   | より機密性の高いラベルでドキュメントラベルが更新されるたびに生成されます。                                                                   |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | より機密性の高いラベルでドキュメントラベルが更新されるたびに生成されます。                                                                   |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | サードパーティ アプリケーション | より機密性の高いラベルでドキュメントラベルが更新されるたびに生成されます。<br>サードパーティのアプリケーションでサポートされている場合にのみ生成されます。 |
