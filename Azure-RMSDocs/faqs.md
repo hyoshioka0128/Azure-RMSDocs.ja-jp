@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a62ebab99a6cf9672942dcc7b447c29365c6440b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 82280d50bdd16139e53d4906e908f7efcb9b6281
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048497"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927388"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -75,7 +75,7 @@ Azure Information Protection とは異なり、 [Microsoft Information Protectio
 
 また、[ **Azure Information Protection**の  >  統合ラベルの**管理**] に移動して、統一さ  >  **Unified labeling**れた**ラベル**の状態を確認することもできます。
 
-|状態 |説明  |
+|Status |説明  |
 |---------|---------|
 |**アクティブ**     |  テナントは、統一されたラベル付けプラットフォーム上にあります。 </br>Microsoft 365 コンプライアンスセンターで[ラベルを作成、構成、および発行](/microsoft-365/compliance/create-sensitivity-labels)することができます。       |
 |**非アクティブ化**    |  テナントは、統一されたラベル付けプラットフォーム上にありません。 </br>移行の手順とガイダンスについては、「 [Azure Information Protection ラベルを統合秘密度ラベルに移行する方法](configure-policy-migrate-labels.md)」を参照してください。       |
@@ -132,7 +132,7 @@ Azure Information Protection (AIP) は、組織のドキュメントや電子メ
 
 コンテンツは、AIP のコンポーネントである Azure Rights Management サービスを使用して保護されます。 
 
-詳細については、「[データの保護方法](what-is-information-protection.md#how-data-is-protected)」と「 [Azure Rights Management とは](what-is-azure-rms.md)」を参照してください。
+詳細については、「[データの保護方法](what-is-information-protection.md#how-aip-protects-your-data)」と「 [Azure Rights Management とは](what-is-azure-rms.md)」を参照してください。
 
 ## <a name="whats-the-role-of-identity-management-for-azure-information-protection"></a>Azure Information Protection の id 管理の役割は何ですか。
 
@@ -285,7 +285,7 @@ Azure Information Protection で保護されているドキュメントをユー
 |**管理者アカウント**     |条件付きアクセスポリシーに管理者アカウントを追加しないことをお勧めします。これらのアカウントは、Azure portal の [Azure Information Protection] ウィンドウにアクセスできないためです。         |
 |**MFA と B2B コラボレーション**     | 他の組織とのコラボレーション (B2B) のための条件付きアクセス ポリシーで MFA を使用する場合は、[Azure AD B2B コラボレーション](/azure/active-directory/b2b/what-is-b2b)を使用して、他の組織と共有するユーザーのためのゲスト アカウントを作成する必要があります。        |
 |**使用条件のプロンプト**     |  Azure AD 12 月2018プレビューリリースでは、保護されたドキュメントを初めて開く前に、[使用条件に同意するようにユーザーに求める](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822)ことができるようになりました。       |
-|**クラウドアプリ**     |  多くのクラウド アプリで条件付きアクセスを使用する場合、選択対象の一覧に **Microsoft Azure Information Protection** が表示されないことがあります。 </br></br>その場合、一覧の上にある検索ボックスを使用します。 「Microsoft Azure Information Protection」と入力し、利用可能アプリを絞り込みます。 サポートされているサブスクリプションがある場合、選択対象として **Microsoft Azure Information Protection** が表示されます。        |
+|**クラウド アプリ**     |  多くのクラウド アプリで条件付きアクセスを使用する場合、選択対象の一覧に **Microsoft Azure Information Protection** が表示されないことがあります。 </br></br>その場合、一覧の上にある検索ボックスを使用します。 「Microsoft Azure Information Protection」と入力し、利用可能アプリを絞り込みます。 サポートされているサブスクリプションがある場合、選択対象として **Microsoft Azure Information Protection** が表示されます。        |
 
 
 ## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Azure Information Protection が Microsoft Graph Security のセキュリティ プロバイダーとして記載されています。これはどのように動作しますか? また、どのようなアラートを受信できますか?
@@ -310,7 +310,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 |---------|---------|---------|
 |**サポートされているデータ ストア**    | Windows Server 上のローカルフォルダー        | - Windows ファイル共有とネットワーク接続ストレージ<br /></br>- SharePoint Server 2016 と SharePoint Server 2013。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 もサポートされています。        |
 |**操作モード**     |リアルタイム         |データストアを体系的に1回または繰り返しクロールする         |
-|**サポートされているファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
+|**サポートされるファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
 
 ### <a name="setting-rights-management-owners"></a>Rights Management 所有者の設定
 

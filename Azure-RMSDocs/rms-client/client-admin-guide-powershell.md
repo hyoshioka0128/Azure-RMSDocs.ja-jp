@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32880671c46efb9cb82f13235f98ac42566b65fc
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048903"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868996"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントでの PowerShell の使用
 
@@ -54,12 +54,6 @@ Azure Information Protection クライアントをインストールすると、
 
 現時点では、モジュールをインストールするときに使うユーザーと、同じコンピューターでコマンドレットを実行するときに使うユーザーが異なる場合は、最初に `Import-Module AzureInformationProtection` コマンドを実行する必要があります。 このシナリオでは、コマンドレットを初めて実行するときに、モジュールは自動的に読み込まれません。
 
-AzureInformationProtection モジュールの現在のリリースには、以下の制限があります。
-
-- Outlook 個人フォルダー (.pst ファイル) の保護を解除することはできますが、現在は、この PowerShell モジュールを使ってこれらのファイルまたは他のコンテナー ファイルをネイティブに保護することはできません。
-
-- Outlook の保護された電子メール メッセージ (.rpmsg ファイル) が Outlook 個人フォルダー (.pst) 内にある場合は、メッセージの保護を解除できますが、個人フォルダー外にある場合は .rpmsg ファイルの保護を解除できません。
-
 これらのコマンドレットを使い始める前に、デプロイに対応する追加の前提条件と手順を参照してください。
 
 - [Azure Information Protection と Azure Rights Management サービス](#azure-information-protection-and-azure-rights-management-service)
@@ -71,13 +65,14 @@ AzureInformationProtection モジュールの現在のリリースには、以�
 
     - オンプレミス バージョンの Azure Rights Management で保護のみを使っている場合に適用: Active Directory Rights Management サービス (AD RMS)。
 
+詳細については、 [Azure Information Protection 既知の問題](../known-issues.md#powershell-support-for-the-azure-information-protection-client)の関連コレクションを参照してください。
 
 ## <a name="azure-information-protection-and-azure-rights-management-service"></a>Azure Information Protection と Azure Rights Management サービス
 
 組織が分類と保護に Azure Information Protection を使用しているとき、あるいはデータ保護に Azure Rights Management サービスを使用しているとき、PowerShell コマンドを使い始める前にこのセクションをお読みください。
 
 
-### <a name="prerequisites"></a>必須コンポーネント
+### <a name="prerequisites"></a>前提条件
 
 AzureInformationProtection モジュールのインストールに関する前提条件に加えて、Azure Information Protection ラベル付けと Azure Rights Management データ保護サービスに関する追加の前提条件があります。
 
@@ -390,7 +385,7 @@ Rights Management テンプレートが変更された場合は、もう一度 `
 Active Directory Rights Management サービスだけを使っている場合は、PowerShell コマンドを使ってファイルを保護または保護解除する前に、このセクションをお読みください。
 
 
-### <a name="prerequisites"></a>必須コンポーネント
+### <a name="prerequisites"></a>前提条件
 
 AzureInformationProtection モジュールをインストールするための前提条件に加えて、ファイルの保護と保護解除に使用するアカウントには、ServerCertification.asmx にアクセスする読み取り許可と実行許可を与える必要があります。
 

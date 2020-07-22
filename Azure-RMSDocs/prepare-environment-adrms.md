@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 9196f02e63f7eb433237613fe44c43cf74ab3262
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136943"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869030"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>AD RMS がある場合に Azure Rights Management 用に環境を準備する
 
@@ -41,7 +41,7 @@ Azure Rights Management サービスがアクティブ化されていて、か�
 
 組織に AD RMS がデプロイされる場合は、Azure Information Protection に移行可能かどうかを検討してください。 Azure Information Protection には、AD RMS よりも優れた点が多数あります。 たとえば、モバイル デバイスのサポート強化や、Exchange Server や SharePoint Server に加えて Office 365 サービスとの統合を備えています。 詳細については、「[Azure Information Protection と AD RMS の比較](compare-on-premise.md)」をご覧ください。
 
-Azure Information Protection に移行しても、以前に保護されていたコンテンツへのアクセスを失うことはありません。また、コンテンツの保護の解除したり、コンテンツを再保護する必要はありません。 AD RMS をプロビジョニング解除した後でも、AD RMS によって保護されていたドキュメントと電子メールを引き続き開くことができます。
+Azure Information Protection に移行すると、以前に保護されていたコンテンツにアクセスできなくなり、コンテンツを保護または保護解除する必要がなくなります。 AD RMS によって保護されたドキュメントと電子メールは、AD RMS をプロビジョニング解除した後でも開くことができます。
 
 Azure Information Protection に移行する場合でも、制限事項を受け入れて現在の AD RMS デプロイを使用する場合でも、Azure Rights Management サービスが非アクティブ化されていることをまず確認する必要があります。 手順については、該当するシナリオ向けの手順に従います。
 

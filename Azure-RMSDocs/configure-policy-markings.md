@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8057d0599cdd1f01dc32adb6b7e20b359f9fea0e
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048257"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927371"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -85,8 +85,6 @@ ms.locfileid: "86048257"
 
 ## <a name="using-variables-in-the-text-string"></a>テキスト文字列に変数を使用する
 
-次の変数は、Azure Information Protection クラシッククライアントを使用しているときに一般に使用でき、Azure Information Protection 統合ラベル付けクライアントを使用するとパブリックプレビューの可用性になります。  
-
 ヘッダー、フッター、または透かしのテキスト文字列には、次の変数を使用できます。
 
 - `${Item.Label}`: 選択したラベル。 例: General
@@ -114,7 +112,7 @@ ms.locfileid: "86048257"
 
 既定では、指定した視覚的マーキングは Word、Excel、PowerPoint、Outlook のすべてに適用されます。 ただし、テキスト文字列に "If.App" という変数ステートメントを入れると、Office アプリケーションごとに視覚的マーキングを指定できます。**Word**、**Excel**、**PowerPoint**、**Outlook** という値を利用し、アプリケーションの種類を区別できます。 このような値は省略することもできます。同じ If.App ステートメントで複数回指定する場合に必要になります。
 
-使用する構文は以下のとおりです。
+次の構文を使用します。
 
 ```ps
 ${If.App.<application type>}<your visual markings text> ${If.End}

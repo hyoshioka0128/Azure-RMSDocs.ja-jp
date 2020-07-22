@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 635732301320538d58e9b34011291bce0fe07ce4
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a10e0f8c1af8134de0665ce3255cf42be4900783
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136572"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869064"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
@@ -54,7 +54,7 @@ Azure Information Protection のアクティブなテナントキーとして別
 (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 ```
 
-キー トポロジを、お客様による管理 (BYOK) に変更するには、「[Azure Information Protection テナント キーの BYOK を実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
+キートポロジを顧客管理 (BYOK) に変更するには、「 [Azure Information Protection テナントキーの計画と実装](plan-implement-tenant-key.md)」を参照してください。
 
 ## <a name="backup-and-recover-your-tenant-key"></a>テナント キーをバックアップ/復旧します
 テナント キーのバックアップは Microsoft が行うため、ユーザーの操作は必要ありません。

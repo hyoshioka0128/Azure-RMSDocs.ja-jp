@@ -1,22 +1,22 @@
 ---
 title: '& 保護を分類する-Azure Information Protection の統一されたラベル付けクライアント'
 description: Azure Information Protection 統合ラベルクライアントを使用して Windows 用にドキュメントと電子メールを分類および保護する方法について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 184ac5493d63de27b7db462c3a7d4b977dce357d
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5da4eca4af78083c1b5090f6621706e91d4a1680
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927762"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントを使用して分類および保護する
 
@@ -84,7 +84,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 - 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、[**秘密度**の  >  **ヘルプとフィードバック**] をクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
     
-    ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の Office アプリがあれば、Office Professional Plus は必要ありません。
+    Office Professional Plus は、ユーザーに Azure Rights Management (Office 365 の場合は Azure Information Protection とも呼ばれます) のライセンスが割り当てられている場合に、 [Microsoft 365 app For Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)の office アプリを持っている必要はありません。
 
 - 自分のアカウントを含まない範囲のポリシーのラベルである可能性があります。 ヘルプ デスクまたは管理者に問い合わせてください。
 
@@ -149,7 +149,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 ## <a name="other-instructions"></a>その他の手順
 Azure Information Protection 統合されたラベル付けクライアントのユーザーガイドの詳細な手順については、次を参照してください。
 
--   [実行する操作](client-user-guide.md#what-do-you-want-to-do)
+-   [目的に合ったトピックをクリックしてください](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>管理者向け追加情報    
 

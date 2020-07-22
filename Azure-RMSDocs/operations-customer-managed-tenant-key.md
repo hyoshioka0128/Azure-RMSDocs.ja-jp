@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 14b3c9d4db202abb18555eb695fe7e3e0769af40
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 5e6cffeb02cb22f65a5108e96ffa1b0cc8974142
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136314"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869098"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
@@ -57,7 +57,8 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 これらの段階の詳細については、次を参照してください。
 
-- 管理する別のキーにキーを再入力するには、「[Azure Information Protection テナント キーの BYOK を実装する](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key)」を参照してください。
+- 管理する別のキーにキーを再入力する方法については、「 [Azure Information Protection テナントキーの計画と実装](plan-implement-tenant-key.md)」を参照してください。
+
     
     オンプレミスで作成し Key Vault に転送する、HSM で保護されているキーを再入力する場合は、現在のキーで使用したものと同じセキュリティ ワールドとアクセス カードを使用できます。
 

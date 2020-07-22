@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 1fd421e047c4a157a1632635ac091ae1be952029
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 7530329b1f3e25eabb622087a575d5c6e34c66b3
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665454"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869149"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -37,6 +37,7 @@ ms.locfileid: "84665454"
 |製品に関するヘルプを取得する|このページ上の「[サポート オプションとコミュニティ リソース](#support-options-and-community-resources)」セクションをご覧ください。|
 |サブスクリプション情報とサポート対象の機能の確認|「[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)」ページのサブスクリプション情報と機能一覧を使用します。|
 |ライセンスについてよく寄せられる質問の回答を確認する|ライセンスに関する[よく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)に目を通してください。|
+|現在の既知の問題の一覧を検索または参照する | [[既知の問題-Azure Information Protection](known-issues.md) ] ページを参照してください。
 |新機能や機能変更の要求|Azure Information Protection の [UserVoice](https://msip.uservoice.com) のサイトにアクセスし、会社の電子メールを使用してサインインします。|
 |製品チームや同僚との連携|Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)にアクセスします。|
 |特定の Azure Information Protection 用語を理解する|[用語](terminology.md)ページで用語や省略形を検索します。|

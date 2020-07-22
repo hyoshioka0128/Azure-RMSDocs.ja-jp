@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f011f71bfe330a4ec559fba600aca7a7a1e2ae12
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 779eb6e3847aaccaef47753bd75c1052a56c1180
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048852"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868895"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類
 
@@ -72,7 +72,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 例 :
 
-- **一般**秘密度ラベルが分類を適用し、保護を適用しない場合: sales.pdf という名前のファイルに**general**ラベルを適用できますが、このラベルを sales.txt という名前のファイルに適用することはできません。 
+- **一般**秘密度ラベルが分類を適用し、保護を適用しない場合: sales.pdf という名前のファイルに**general**ラベルを適用できますが、このラベルを sales.txt という名前のファイルに適用することはできません。
 
 - [**社外秘 \ すべての従業員の機密**度] ラベルに分類と保護が適用される場合は、このラベルを sales.pdf という名前のファイルと sales.txt という名前のファイルに適用できます。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
@@ -88,7 +88,7 @@ Azure Information Protection の統合ラベル付けクライアントは、次
 
 Azure Information Protection 統合されたラベル付けクライアントまたはスキャナーによって適用される既定の保護レベルを変更することはできません。 ただし、保護するファイルの種類を変更することはできます。 詳細については、「[保護するファイルの種類を変更](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)する」を参照してください。
 
-保護は、管理者が構成した機密ラベルをユーザーが選択したときに自動的に適用することも、ユーザーが[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使用して独自のカスタム保護設定を指定することもできます。 
+保護は、管理者が構成した機密ラベルをユーザーが選択したときに自動的に適用することも、ユーザーが[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使用して独自のカスタム保護設定を指定することもできます。
 
 ### <a name="file-sizes-supported-for-protection"></a>保護がサポートされているファイルのサイズ
 
@@ -96,15 +96,13 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 - **Office ファイル:**
 
-
   |                                                     Office アプリケーション                                                      |                                                サポートされる最大ファイル サイズ                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
   |             Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 ビット: 512 MB<br /><br />64 ビット: 512 MB                                          |
   |           Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 ビット: 2 GB<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます                       |
   | PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 ビット: 使用可能なディスク領域とメモリによってのみ制限されます<br /><br />64 ビット: 使用可能なディスク領域とメモリによってのみ制限されます |
 
-
-- **その他のすべてのファイル**: 
+- **その他のすべてのファイル**:
 
   - その他のファイルの種類を保護し、これらのファイルの種類を Azure Information Protection ビューアーで開く場合: ファイルの最大サイズは、使用可能なディスク領域とメモリによってのみ制限されます。
 
@@ -114,7 +112,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>分類と保護がサポートされているファイルの種類
 
-次の表に、Azure Information Protection 統合されたラベル付けクライアントによるネイティブ保護をサポートするファイルの種類のサブセットを示します。これは、分類することもできます。 
+次の表に、Azure Information Protection 統合されたラベル付けクライアントによるネイティブ保護をサポートするファイルの種類のサブセットを示します。これは、分類することもできます。
 
 これらの種類のファイルは、ネイティブに保護されると、元のファイルの拡張子が変更され読み取り専用になるため、別々に識別されます。 一般的に保護されるファイルの場合、元のファイル名拡張子が常に .pfile に変わる点に注意してください。
 
@@ -144,18 +142,16 @@ Azure Information Protection 統合されたラベル付けクライアントが
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>分類と保護から除外されるファイルの種類
 
 コンピューターの動作に不可欠なファイルをユーザーが変更しないように、一部のファイルの種類とフォルダーは分類と保護から自動的に除外されます。 ユーザーが Azure Information Protection 統合されたラベル付けクライアントを使用してこれらのファイルを分類または保護しようとすると、除外されていることを示すメッセージが表示されます。
 
 - **除外されるファイルの種類**: .lnk、.exe、.com、.cmd、.bat、.dll、.ini、.pst、.sca、.drm、.sys、.cpl、.inf、.drv、.dat、.tmp、.msp、.msi、.pdb、.jar
-    
 
-- **除外されるフォルダー**: 
+- **除外されるフォルダー**:
     - Windows
     - Program Files (\Program Files および \Program Files (x86))
-    - \ProgramData 
+    - \ProgramData
     - \AppData (すべてのユーザー)
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーによる分類と保護から除外されるファイルの種類
@@ -169,7 +165,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 - [Azure portal を使って](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)、スキャナー プロファイルの **[スキャンするファイルの種類]** を構成します。
     
     > [!NOTE]
-    > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。 
+    > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。
 
 既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 スキャナーのこの動作を変更するには、PowerShell の詳細設定の**PFileSupportedExtensions**を使用します。 詳細については、「 [PowerShell を使用して、保護するファイルの種類](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)をスキャナーの展開手順から変更する」を参照してください。
 
@@ -179,13 +175,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>.zip ファイルなど、コンテナー ファイルの制限事項
 
-コンテナー ファイルは、その他のファイルが含まれるファイルです。典型的な例は、圧縮ファイルが含まれる .zip ファイルです。 その他の例には、.rar、.7z、.msg ファイルや、添付ファイルを含む PDF ドキュメントなどが含まれます。
-
-これらのコンテナー ファイルを分類し、保護できますが、分類と保護はコンテナー内の各ファイルに適用されません。
-
-分類され、保護されているファイルがコンテナー ファイル内にある場合、先にファイルを抽出し、分類または保護設定を変更する必要があります。
-
-Azure Information Protection ビューアーでは、保護された PDF ドキュメント内の添付ファイルを開くことはできません。 このシナリオでは、ビューアーでドキュメントを開いたときに、添付ファイルは表示されません。
+詳細については、 [Azure Information Protection](../known-issues.md#client-support-for-container-files-such-as-zip-files)に関する既知の問題を参照してください。
 
 ## <a name="file-types-supported-for-inspection"></a>検査に対してサポートされているファイルの種類
 
@@ -213,10 +203,9 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 2. スキャナーの場合: 機密情報を見つけた後、.zip ファイルをラベルで分類して保護する必要がある場合は、「 [powershell を使用して保護するファイルの種類](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)をスキャナーの展開手順から変更する」の説明に従って、powershell の詳細設定**PFileSupportedExtensions**を使用して .zip ファイル名拡張子を指定します。
 
+これらの手順の実行後のシナリオ例:
 
-これらの手順の実行後のシナリオ例: 
-
-**accounts.zip** という名前のファイルには、クレジット カード番号が含まれる Excel のスプレッドシートが含まれています。 **機密 \ Finance**という名前の秘密度ラベルがあり、クレジットカード番号を検出するように構成されています。また、金融グループへのアクセスを制限する保護を使用してラベルを自動的に適用します。 
+**accounts.zip** という名前のファイルには、クレジット カード番号が含まれる Excel のスプレッドシートが含まれています。 **機密 \ Finance**という名前の秘密度ラベルがあり、クレジットカード番号を検出するように構成されています。また、金融グループへのアクセスを制限する保護を使用してラベルを自動的に適用します。
 
 ファイルを検査した後、PowerShell セッションからの統一されたラベル付けクライアントは、このファイルを**機密 \ Finance**として分類し、ファイルに汎用的な保護を適用して、Finance グループのメンバーだけがそのファイルを解凍し、ファイル**accounts.zip pfile**の名前を変更します。
 
@@ -227,6 +216,7 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 スキャナーの場合: 機密情報を見つけた後、tiff ファイルをラベルで分類して保護する必要がある場合は、powershell の詳細設定**PFileSupportedExtensions**でこのファイル名拡張子を指定します。詳細については、「Powershell を使用して、スキャナーの展開手順から[保護するファイルの種類を変更する](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
+
 Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類を確認したので、このクライアントのサポートに必要な追加情報については、次のリソースを参照してください。
 
 - [カスタマイズ](clientv2-admin-guide-customizations.md)
@@ -234,4 +224,3 @@ Azure Information Protection 統合されたラベル付けクライアントで
 - [クライアントのファイルと使用状況ログ](clientv2-admin-guide-files-and-logging.md)
 
 - [PowerShell コマンド](clientv2-admin-guide-powershell.md)
-

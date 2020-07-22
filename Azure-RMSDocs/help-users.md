@@ -1,10 +1,10 @@
 ---
 title: Azure RMS を使用してユーザーによるファイル保護を支援する - AIP
 description: Azure Information Protection から Azure Rights Management サービスをデプロイして構成した後に、ユーザー、管理者、ヘルプ デスクにヘルプとガイダンスを提供するための情報です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2019
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c828903f4849dd63de95a401b88acdc4f92dd7e
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 833659878def719263d0410f086eb3445a6531d1
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136597"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927422"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -82,7 +82,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
-#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Office 365 ProPlus の Word でドキュメントを保護するには
+#### <a name="to-protect-a-document-in-wordfrom-microsoft-365-apps-for-enterprise"></a>エンタープライズ向け Microsoft 365 アプリから Word でドキュメントを保護するには
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
@@ -101,7 +101,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 使用権限は、制限バナーを使用してドキュメントの上部に表示されます。 このバナーには、ドキュメントに適用されるアクセス許可やそれらを表示するためのリンクが表示される場合があります。
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Exchange Online に接続し、Office 365 ProPlus の Outlook を使ってメール メッセージを保護するには、
+#### <a name="to-protect-an-email-message-using-outlookfrom-microsoft-365-apps-for-enterprise-connecting-to-exchange-online"></a>企業の Microsoft 365 アプリから Outlook を使用して電子メールメッセージを保護するには、Exchange Online に接続する
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 

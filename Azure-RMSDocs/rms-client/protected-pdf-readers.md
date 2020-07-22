@@ -1,8 +1,8 @@
 ---
 title: Microsoft Information Protection の保護された PDF Reader
 description: 分類と保護のラベルが付けられた PDF ドキュメント用のリーダーをインストールする
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 07/17/2020
 ms.topic: conceptual
@@ -14,67 +14,49 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 25bc9d18badcb6bb79e17795f7f86912968a44ee
-ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
+ms.openlocfilehash: dd8a895c0fb6fb94311d7e028265bf9bbdbfe668
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437778"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927722"
 ---
-# <a name="pdf-readers-that-support-microsoft-information-protection"></a>Microsoft Information Protection をサポートする PDF リーダー
+# <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>保護された Pdf ではどの PDF リーダーがサポートされていますか。
 
-Microsoft Information Protection によって保護されている PDF ドキュメントを開く必要がある場合は、次のリンクと情報を参照してください。
+分類済みまたは保護された pdf の PDF リーダーを使用すると、機密情報を含む暗号化された Pdf を開くことができます。
 
-保護されている PDF ドキュメントには、機密情報が含まれている可能性があります。 セキュリティを強化するために、ドキュメントは暗号化されており、承認されていない人物がドキュメントを閲覧することはできません。また、ドキュメントを表示している画面やスクリーンショットを共有することもできません 
+[Azure Information Protection (AIP)](../what-is-information-protection.md)を使用して pdf を暗号化すると、承認されていないユーザーがファイルの内容を読み取ることができなくなります。また、承認されたユーザーでも、コンテンツを表示する画面やスクリーンショットを共有することはできません。
 
-このドキュメントを開くには、ドキュメントを開くためのアクセス許可が付与されていることを確認してから、暗号化を解除するリーダー (ビューアーと呼ばれることもあります) が必要です。
+Azure Information Protection をサポートする保護された PDF リーダーは、ドキュメントを開くためのアクセス許可が付与されていることを確認し、コンテンツの暗号化を解除します。
 
-## <a name="install-pdf-readers-for-your-device"></a>デバイスの PDF リーダーをインストールする
+たとえば、次の図は、Adobe Acrobat Reader で開かれた暗号化されたドキュメントを示しています。 上部のバーは、ドキュメントが Microsoft Information Protection ソリューションによって保護されていることを示します。
 
-保護された PDF ドキュメントを開くことができる PDF リーダーのインストールに使用しているデバイスを選択します。 これらのすべての閲覧者は、ISO 標準の PDF 暗号化に準拠した保護されたドキュメントを開くことができます。
+:::image type="content" source="../media/protected-pdf-in-adobe-reader.png" alt-text="Adobe Acrobat Reader で開かれている保護された PDF":::
 
-- **コンピューター**: [Windows](protected-pdf-readers-windows.md)  |  [MacOS](protected-pdf-readers-mac.md)
+手順については、次のセクションを参照してください。
 
-- **モバイルデバイス**: [Android](protected-pdf-readers-android.md)  |  [iOS](protected-pdf-readers-ios.md)
+- [Windows または Mac での Microsoft Edge での保護された Pdf の表示](#viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac)
 
-### <a name="support-for-previous-formats"></a>以前の形式のサポート
+- [Windows または Mac 用の保護された PDF リーダーのインストール](#installing-a-protected-pdf-reader-for-windows-or-mac)
 
-次の表の PDF リーダーは、ファイル名拡張子が .ppdf である保護された PDF ドキュメントと、.pdf ファイル名拡張子を持つ古い形式をサポートしています。 
+- [モバイル用の保護された PDF リーダーのインストール (iOS/Android)](#installing-a-protected-pdf-reader-for-mobile-iosandroid)
 
-現在、Microsoft SharePoint では、IRM で保護されたライブラリ内の PDF ドキュメントに古い形式が使用されています。
+> [!TIP]
+> 推奨されるリーダーをインストールした後にドキュメントが開かない場合は、ドキュメントが古い形式で保護されている可能性があります。 
+>
+> この場合は、以前の形式でサポートされているリーダーのいずれかを試してみてください。 詳細については、「[以前の形式のサポート](#support-for-previous-formats)」を参照してください。
+> 
+### <a name="iso-standards-for-pdf-encryption"></a>PDF 暗号化の ISO 標準
 
+このページで参照されている PDF リーダーは、PDF 暗号化の ISO 標準に準拠するすべての保護されたドキュメントを開くことができます。 
 
-|オペレーティング システム|サポートされるリーダー|
-|----------------|-----------------------------------|
-|Windows 10 と以前のバージョン<br />から Windows 7 Service Pack 1|Microsoft Edge<br /><br />Azure Information Protection ビューアー<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF|
-|Android|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />GigaTrust App for Android|
-|iOS|Azure Information Protection アプリ<br /><br />RMS を使用する Foxit MobilePDF<br /><br />TITUS Docs|
+この標準は、[管理者によって無効](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)にされている場合を除き、AIP クラシックおよび統合ラベルクライアントの両方で既定で使用されます。
 
-## <a name="using-microsoft-edge-to-view-protected-pdf-files"></a>Microsoft Edge を使用して保護された PDF ファイルを表示する
+### <a name="viewing-protected-pdfs-in-adobe-acrobat-reader"></a>Adobe Acrobat Reader での保護された Pdf の表示
 
-Microsoft Edge では、分類および保護されている PDF ファイルを表示するネイティブサポートを提供しています。 Microsoft Edge を使用することにより、ユーザーは追加の設定やソフトウェアをインストールまたは構成しなくても、保護された PDF ファイルをシームレスに開くことができます。  設定をグループ化します。
+Adobe Acrobat Reader は、 [Azure Information Protection](../what-is-information-protection.md)などの Microsoft Information Protection ソリューションと統合して、分類された、または保護された pdf について、シンプルで一貫したエクスペリエンスをユーザーに提供します。
 
-Microsoft Edge では、ローカルに保存されている保護された PDF ファイルをユーザーが検出すると、ブラウザーで直接ファイルを表示できます。 ファイルが SharePoint で使用可能な場合、ユーザーは **、[**  >  Microsoft Edge から**ブラウザーで**開く] をクリックするだけでファイルを表示できます。 
-
-:::image type="content" source="../media/edge_open_browser.png" alt-text="ブラウザーで [ブラウザーで開く] オプションを使用して、Microsoft Edge を使用して保護された PDF を開きます。":::
-
-保護されたファイルは、 [Windows](./protected-pdf-readers-windows.md)と[MacOS](./protected-pdf-readers-mac.md)の両方で開くことができます。
-
-## <a name="using-adobe-acrobat-reader-with-adobe-plug-in"></a>Adobe Acrobat Reader と Adobe プラグインの使用
-
-Microsoft と Adobe の連携により、分類され、必要に応じて保護されている PDF ドキュメントに対して、よりシンプルで一貫性のあるエクスペリエンスを提供します。 このコラボレーションでは、[Azure Information Protection](../what-is-information-protection.md) など、Microsoft Information Protection ソリューションとの Adobe Acrobat のネイティブ統合がサポートされます。 
-
-このネイティブ統合には次の利点があります。
-
-- 機密情報が含まれるために保護されている PDF ドキュメントを表示できます。
-
-- ドキュメントに適用されている組織のラベルに対する分類の値を表示できます。
-
-- PDF の暗号化における ISO 標準をサポートします。
-    
-    この機能が[管理者によって無効](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)にされていない限り、この保護された PDF ファイル形式は Azure Information Protection クライアント (クラシック) に対して既定で有効になり、Azure Information Protection の統合されたラベル付けクライアントで常に使用されます。
-
-[Windows](protected-pdf-readers-windows.md)および[MacOS](protected-pdf-readers-mac.md)で Adobe プラグを使用することができます。
+Microsoft Information Protection 統合を使用した Adobe Acrobat Reader は、 [Windows](protected-pdf-readers-windows.md)および[macOS](protected-pdf-readers-mac.md)でサポートされています。
 
 詳細については、次のブログ投稿を参照してください。 
 
@@ -82,8 +64,116 @@ Microsoft と Adobe の連携により、分類され、必要に応じて保護
 
 - [Adobe reader と Microsoft Information Protection 統合に関してよく寄せられる質問](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Adobe-reader-and-Microsoft-Information-Protection-integration/ba-p/482219)
 
+## <a name="viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac"></a>Windows または Mac での Microsoft Edge での保護された Pdf の表示
+
+Microsoft Edge では、分類および保護されている PDF ファイルを表示するネイティブサポートを提供しています。 Microsoft Edge を使用することにより、ユーザーは追加の設定やソフトウェアをインストールまたは構成しなくても、保護された PDF ファイルをシームレスに開くことができます。
+
+サポートされているバージョンは次のとおりです。
+
+- **Windows:** Windows 10 以前のバージョン。 
+    
+    以前のバージョンの詳細については、「[以前の形式のサポート](#support-for-previous-formats)」を参照してください。
+
+- **Mac:** macOS バージョン10.12 以降 
+
+
+
+<!--
+With Microsoft Edge, when a user encounters a locally saved protected PDF file, they can view the file directly in the browser. If the file is available on SharePoint, the user only needs to click **Open** > **Open in browser** from Microsoft Edge, to view the file. 
+-->
+
+**マニュアル** 
+
+1. システムにインストールされている[Microsoft Edge のバージョン](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have)を確認します。 
+1. Microsoft Edge のバージョンが83.0.478.37 以上の場合は、Microsoft edge ブラウザーで直接保護されたファイルを開くことができます。 
+
+1. SharePoint で PDF ファイルを開くには、[ブラウザーで**開く] をクリックし**  >  **Open in browser**ます。 
+
+    :::image type="content" source="../media/edge_open_browser.png" alt-text="ブラウザーで [ブラウザーで開く] オプションを使用して、Microsoft Edge を使用して保護された PDF を開きます。":::
+ 
+## <a name="installing-a-protected-pdf-reader-for-windows-or-mac"></a>Windows または Mac 用の保護された PDF リーダーのインストール
+
+保護された PDF ドキュメントをデスクトップコンピューターで開くには、オペレーティングシステム用に、 [acrobat および Acrobat Reader 用の関連する Microsoft Information Protection (MIP) プラグイン](https://go.microsoft.com/fwlink/?linkid=2050049)をインストールすることをお勧めします。
+
+**マニュアル**
+
+1. Adobe Reader がまだインストールされていない場合は、 [adobe サイト](https://www.adobe.com/)からインストールします。
+
+    [Adobe の一般的な使用条件](https://www.adobe.com/legal/terms.html)を読んで同意してください。
+
+1. オペレーティングシステム用に、 [acrobat と Acrobat Reader 用の MIP プラグイン](https://go.microsoft.com/fwlink/?linkid=2050049)をインストールします。  
+
+    ダウンロード: [![ダウンロード](../media/download.png "Acrobat および Acrobat Reader 用 MIP プラグインをダウンロードする")](https://go.microsoft.com/fwlink/?linkid=2050049)
+
+    サポートされているバージョンは次のとおりです。
+
+    - **Windows:** Windows 10 以前のバージョン。 
+    
+        以前のバージョンの詳細については、「[以前の形式のサポート](#support-for-previous-formats)」を参照してください。
+
+    - **Mac:** macOS バージョン 10.12-10.14 
+
+1. 管理者の承認を求めるメッセージが表示された場合は、管理者にプラグインの承認を依頼してください。
+
+    次に例を示します。
+    
+    :::image type="content" source="../media/admin-approval-for-mip-in-adobe-reader.png" alt-text="Acrobat および Acrobat Reader 用 MIP プラグインをインストールするために管理者の承認が必要":::
+    
+> [!NOTE]
+> 詳細については、 [Microsoft Information Protection と Adobe release の発表](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)を参照してください。
+> 
+
+### <a name="alternative-protected-pdf-readers-for-windows"></a>Windows 用の保護された別の PDF リーダー
+
+または、ISO standard for PDF の暗号化に準拠している次のいずれかの Windows の PDF リーダーを使用します。
+
+- Azure Information Protection ビューアーの[![ダウンロード](../media/download.png "AIP ビューアーをダウンロードする")](https://go.microsoft.com/fwlink/?linkid=838993) 
+
+- Foxit Reader の[![ダウンロード](../media/download.png "Foxit Reader ビューアーのダウンロード")](https://www.foxitsoftware.com/pdf-reader/)
+
+## <a name="installing-a-protected-pdf-reader-for-mobile-iosandroid"></a>モバイル用の保護された PDF リーダーのインストール (iOS/Android)
+
+IOS または Android デバイスで保護された PDF を開くには、オペレーティングシステム用のアプリをダウンロードしてインストールします。
+
+- IOS 用アプリの[![ダウンロード](../media/download.png "IOS 用アプリの Azure Information Protection")Azure Information Protection  ](https://go.microsoft.com/fwlink/?LinkId=325338)
+
+- Android 用 Azure Information Protection アプリの[![ダウンロード](../media/download.png "Android 用アプリの Azure Information Protection")](https://go.microsoft.com/fwlink/?LinkId=325340)
+
+詳細については、「 [iOS または Android 用の Azure Information Protection アプリとは](mobile-app-faq.md)」を参照してください。
+
+## <a name="support-for-previous-formats"></a>以前の形式のサポート
+
+次の PDF リーダーは、拡張子が**ppdf**の保護された pdf と、 **.pdf**拡張子を持つ古い形式の両方をサポートしています。
+
+推奨される閲覧者を使用して保護された PDF を開くことができない場合、ドキュメントは以前の形式で保護されている可能性があります。 たとえば、現在、Microsoft SharePoint では、IRM で保護されたライブラリ内の PDF ドキュメントに古い形式が使用されています。
+
+- **Windows 7 Service Pack 1 を使用した windows 10 以前のバージョン**
+
+    - [Azure Information Protection ビューアー](https://go.microsoft.com/fwlink/?linkid=838993)
+    - Gaaiho Doc
+    - GigaTrust Desktop PDF Client for Adobe
+    - Foxit Reader
+    - Nitro PDF Reader
+    - Nuance Power PDF
+    - Edge Chromium
+
+- **Android**:
+
+    - [Azure Information Protection アプリ](mobile-app-faq.md)
+    - RMS を使用する Foxit MobilePDF
+    - GigaTrust App for Android
+
+- **iOS**:
+
+    - [Azure Information Protection アプリ](mobile-app-faq.md)
+    - RMS を使用する Foxit MobilePDF
+    - TITUS Docs
+
+- **MacOS catalina.properties**: Edge Chromium
+
 ## <a name="next-steps"></a>次のステップ
 
-このページのリンクを使用して PDF リーダーをインストールすると、保護された PDF ドキュメントを開くことができます。
+をインストールした後でさらにヘルプが必要な場合は、各リーダーの指示とドキュメントを参照してください。 たとえば、次の記事を参照してください。
 
-インストール後にリーダーを使用するためのヘルプが必要な場合は、そのリーダーに付属の指示とドキュメントを参照してください。 たとえば、Windows 用の Azure Information Protection ビューアーについては、「[ユーザーガイド: Azure Information Protection ユニファイドラベルクライアントを使用して保護されたファイルを表示](clientv2-view-use-files.md)する」を参照してください。
+- [ユーザーガイド: Azure Information Protection 統合ラベルクライアントを使用して保護されたファイルを表示する](clientv2-view-use-files.md)
+- [IOS または Android 用の Azure Information Protection アプリとは](mobile-app-faq.md)

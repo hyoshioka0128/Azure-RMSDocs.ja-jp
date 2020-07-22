@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9852c792e732a0d84326e7dfc6f8b291af56fcad
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 63a3fcc9ee6b7e59ceab31eb63455d53929d028c
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665862"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927813"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Azure Information Protection デプロイ ロードマップ
 
@@ -121,7 +121,7 @@ Azure Information Protection を使用するには、事前に Office 365 また
 
 ### <a name="step-5-configure-labels-and-settings-applications-and-services-for-data-protection"></a>手順 5: データ保護のためのラベル、設定、アプリケーション、およびサービスを構成する
 
-1. 保護を適用するラベルを更新する
+1. **保護を適用するラベルを更新する**
     
     Azure Information Protection クライアント (クラシック) については、「 [Rights Management 保護のラベルを構成する方法](./configure-policy-protection.md)」を参照してください。
     
@@ -129,25 +129,30 @@ Azure Information Protection を使用するには、事前に Office 365 また
     
     Exchange が Information Rights Management (IRM) 用に構成されていない場合でも、ユーザーは Outlook で Rights Management による保護を適用するラベルを適用できます。 ただし、IRM または [Office 365 Message Encryption と新機能](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に適するように Exchange が構成されるまで、組織は Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 この追加の構成は、次のリストに含まれています (Exchange Online 用は 2、Exchange オンプレミス用は 5)。 
 
-2. Office のアプリケーションとサービスを構成する
+2. **Office のアプリケーションとサービスを構成する**
     
     Microsoft SharePoint または Exchange Online で information rights management (IRM) 機能を使用するように Office アプリケーションとサービスを構成します。 詳細については、「 [Azure Rights Management 用のアプリケーションの構成](configure-applications.md)」を参照してください。
 
-3. データ回復のスーパー ユーザー機能を構成する
+3. **データ回復のスーパー ユーザー機能を構成する**
     
     Azure Information Protection によって保護されるファイルを確認する必要がある既存の IT サービスがある場合 (情報漏えい防止 (DLP) ソリューション、コンテンツ暗号化ゲートウェイ (CEG)、マルウェア対策製品など)、サービス アカウントを Azure Rights Management のスーパー ユーザーとして構成します。 詳細については、「 [Azure Information Protection および探索サービスまたはデータの回復用のスーパーユーザーの構成](./configure-super-users.md)」を参照してください。
 
-4. 既存ファイルを一括で分類および保護する
+4. **既存ファイルを一括で分類および保護する**
     
-    オンプレミス データ ストアに対し、ファイルが自動的にラベル付けされるように、[Azure Information Protection スキャナー](deploy-aip-scanner.md)を強制モードで実行します。 クラウド ベースのデータ ストアに対しては、[Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security) を使用します。
+    オンプレミス データ ストアに対し、ファイルが自動的にラベル付けされるように、[Azure Information Protection スキャナー](deploy-aip-scanner.md)を強制モードで実行します。
     
-    PC 上のファイルに対しては、PowerShell コマンドレットを使用してファイルを分類して保護することができます。 詳細については、次の管理者ガイドを参照してください。
+    Pc 上のファイルについては、PowerShell コマンドレットを使用してファイルを分類および保護します。 詳細については、次の管理者ガイドを参照してください。
     
     - Azure Information Protection クライアント (クラシック): [Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)
     
     - Azure Information Protection 統合されたラベル付けクライアント: [Azure Information Protection のラベル付けクライアントでの PowerShell の使用](./rms-client/clientv2-admin-guide-powershell.md)
 
-6. SharePoint サーバー上で IRM で保護されたライブラリ用のコネクタと、Exchange On-Premises 用の IRM で保護された電子メールをデプロイする
+    クラウド ベースのデータ ストアに対しては、[Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security) を使用します。 
+
+    > [!TIP]
+    > 既存のファイルを一括で分類して保護することは、cloud app security の主なユースケースの1つではありませんが、ドキュメントに記載されている[回避策](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection)は、ファイルを分類および保護するのに役立ちます。
+
+6. **SharePoint サーバー上で IRM で保護されたライブラリ用のコネクタと、Exchange On-Premises 用の IRM で保護された電子メールをデプロイする**
     
     SharePoint と Exchange On-Premises をお持ちで、これらの Information Rights Management (IRM) 機能を使用する場合は、Rights Management コネクタをインストールして構成します。 詳細については、「 [Azure Rights Management コネクタのデプロイ](./deploy-rms-connector.md)」を参照してください。
 

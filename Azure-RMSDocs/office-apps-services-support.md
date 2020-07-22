@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b453bde76cfc8709d955e3fc6e0b25f35ce02c4f
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 4d935e797e4f08c2d8f82d4e797f9d60cc97a5d4
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136984"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869115"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -32,9 +32,12 @@ ms.locfileid: "86136984"
 
 Office アプリを構成する準備ができている場合は、「 [office アプリ: クライアントの構成](configure-office-apps.md)」を参照してください。
 
+関連する既知の問題については、「 [AIP の既知の問題](known-issues.md#aip-known-issues-in-office-applications)」を参照してください。
+
+<!-->
 > [!NOTE]
 > 最近の Windows 更新プログラムの制限のため、電子メールに添付されているファイルは、ファイルを開いた後にロックされることがあります。
-
+-->
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
 
@@ -102,7 +105,7 @@ SharePoint の IRM を構成する用意ができている場合:
 - Sharepoint Server の詳細については、「[Azure Rights Management コネクタをデプロイする](deploy-rms-connector.md)」を参照してください。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Office 365 をお持ちの場合、「[Office 365 のファイル保護ソリューション](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect)」をご覧になることをお勧めします。Office 365 のファイルを保護するための推奨機能を説明しています。
 

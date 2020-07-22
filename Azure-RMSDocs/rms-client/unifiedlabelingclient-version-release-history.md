@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
-ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
+ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86471725"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868792"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -95,17 +95,23 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 **統一されたラベル付けクライアントの新機能:**
 
-- 統一されたラベル付けクライアントの既定のラベルに加えられた変更に対して、[理由ポップアップ](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)が表示されるようになりました。
+- 統一されたラベル付けクライアントの既定のラベルに加えられた変更に対して、[**理由ポップアップ**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)が表示されるようになりました。
     
 - Office によって適用されたビジュアルコンテンツマーキングとの円滑な統合。 Office ドキュメントでコンテンツのマーキングを構成する方法の詳細については、「 [Azure information protection の視覚的なマーキングのラベルを構成する方法](../configure-policy-markings.md)」を参照してください。
 
 - New **WordShapeNameToRemove** advanced プロパティを使用すると、サードパーティ製のアプリケーションによって作成された Word 文書でコンテンツマークを削除できます。 [ **WordShapeNameToRemove**を使用して、既存の図形名を識別し、削除対象と](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions)して定義する方法について説明します。
 
+- **二重キー暗号化 (DKE)** のサポート (パブリックプレビュー)。 
+
+    これで、統一されたラベル付けクライアントを使用して、キーの完全な制御を維持しながら、機密性の高いコンテンツを保護することができます。 保護されたコンテンツにアクセスするには、2つのキーが必要です。1つのキーが Azure に格納され、もう一方のキーは顧客によって保持されます。 
+
+    既定のクラウドベースのテナントルートキーの詳細については、「 [Azure Information Protection テナントキーの計画と実装](../plan-implement-tenant-key.md)」を参照してください。 二重キー暗号化の実装の詳細については、Microsoft 365 ドキュメントの「 [double キー encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) 」を参照してください。
+
 **削除されたファイルに対して生成された新しい監査ログ**
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については、次を参照してください。
+詳細については、次をご覧ください。
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
 

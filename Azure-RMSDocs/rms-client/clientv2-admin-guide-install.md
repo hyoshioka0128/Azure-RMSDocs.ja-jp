@@ -1,22 +1,22 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアントをユーザーにインストールする
 description: Azure Information Protection 統合された Windows 用のラベル付けクライアントを企業ネットワークに展開するための管理者向けの手順と情報です。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fd0ca7caa2a32e35774bccedee867d0f7cafee68
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 24471ecb326009495082e697f96ea241eafd9d39
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048801"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927643"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -80,7 +80,13 @@ Azure Information Protection 統合されたラベル付けクライアントを
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-Office アプリの最小バージョン1805、ユーザーに Azure Rights Management (Office 365 の場合は Azure Information Protection とも呼ばれます) のライセンスが割り当てられている場合の office 365 Business または Microsoft 365 Business からのビルド 9330.2078 office 365 ProPlus Office Professional Plus 2019 office professional plus 2016 office professional plus 2013 with service Pack 1 Office Professional Plus 2010 Service Pack 2
+Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合の[Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)からのビルド 9330.2078 (office 365 の場合は Azure Information Protection とも呼ばれます)
+
+- [Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Enterprise 2019 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Enterprise 2016 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Enterprise 2013 Service Pack 1[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Enterprise 2010 Service Pack 2[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
 
 Office の他のエディション (**標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、**ラベル付け**のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
 
