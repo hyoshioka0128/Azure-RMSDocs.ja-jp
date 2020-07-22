@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: a9280d545cb997bef32c464685532afe7c4020df
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: e9bbbde050f868fda5a31d5bab25e02280e5e826
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548107"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403318"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>File API - 電子メール .msg ファイルの処理 (C#)
 
@@ -24,7 +24,7 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
 - 「[クイック スタート: File API アプリケーションの初期化 (C#)](quick-app-initialization-csharp.md) に関する説明をまず完了し、スターターとなる Visual Studio ソリューションを構築します。 この「方法: 電子メール .msg ファイルの処理 (C#)」のクイックスタートは、前のものを基にしています。
-- [電子メール ファイル MIP SDK](concept-email-cpp.md) の概念に関するページをご確認ください。
+- [電子メール ファイル MIP SDK](concept-email.md) の概念に関するページをご確認ください。
 - 省略可能: [MIP SDK のファイル エンジン](concept-profile-engine-file-engine-cpp.md)の概念に関するページをご確認ください。
 - 省略可能: [MIP SDK のファイル ハンドラー](concept-handler-file-cpp.md)の概念を確認してください。
 
@@ -60,7 +60,9 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
         // Initialize and instantiate the File Profile.
         // Create the FileProfileSettings object.
         // Initialize file profile settings to create/use local state.
-        var profileSettings = new FileProfileSettings(mipContext, CacheStorageType.OnDiskEncrypted, new ConsentDelegateImplementation());
+        var profileSettings = new FileProfileSettings(mipContext, 
+                                    CacheStorageType.OnDiskEncrypted, 
+                                    new ConsentDelegateImplementation());
 
         // Load the Profile async and wait for the result.
         var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
@@ -85,7 +87,9 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
         string actualOutputFilePath = outputFilePath;
 
         //Create a file handler for original file
-        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, actualFilePath, true)).Result;
+        var fileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(inputFilePath, 
+                                                                    actualFilePath, 
+                                                                    true)).Result;
 
         // List templates available to the user and use one of them to protect the mail file.
 
@@ -101,7 +105,9 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
         var result = Task.Run(async () => await fileHandler.CommitAsync(outputFilePath)).Result;
 
         // Create a new handler to read the protected file metadata
-        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, actualOutputFilePath, true)).Result;
+        var handlerModified = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(outputFilePath, 
+                                                                        actualOutputFilePath, 
+                                                                        true)).Result;
 
         Console.WriteLine(string.Format("Original file: {0}", inputFilePath));
         Console.WriteLine(string.Format("Protected file: {0}", outputFilePath));
