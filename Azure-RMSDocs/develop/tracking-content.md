@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792019"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135608"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>方法: ドキュメント追跡の有効化と取り消し
 
@@ -94,7 +94,9 @@ ms.locfileid: "68792019"
 
 ドキュメント追跡メタデータの設定と追跡システムに登録するための呼び出しの例を表すコード スニペットを次に示します。
 
-      C++
+**C++**:
+
+  ```cpp
       HRESULT hr = S_OK;
       LPCWSTR wszOutputFile = NULL;
       wstring wszWorkingFile;
@@ -124,7 +126,7 @@ ms.locfileid: "68792019"
      /* the context to use for the call */
      PCIPC_PROMPT_CTX pContext;
 
-     wstring wstrContentName(“MyDocument.txt”);
+     wstring wstrContentName("MyDocument.txt");
      bool sendLicenseRegistrationNotificationEmail = FALSE;
 
      hr = IpcRegisterLicense( pSerializedLicense,
@@ -132,6 +134,7 @@ ms.locfileid: "68792019"
                         pContext,
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
+  ```
 
 ## <a name="add-a-track-usage-button-to-your-app"></a>**[使用の追跡]** ボタンをアプリに追加する
 
@@ -139,17 +142,17 @@ ms.locfileid: "68792019"
 
 - コンテンツ ID の使用
   - ライセンスがシリアル番号になっており、ライセンス プロパティの **IPC_LI_CONTENT_ID** が使用される場合、[IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) または [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) を使用してコンテンツ ID を入手します。 詳細については、「[License property types](https://msdn.microsoft.com/library/hh535287.aspx)」 (ライセンスのプロパティの種類) を参照してください。
-  - メタデータの **ContentId** と **Issuer** については、次の形式を使用します。`https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - **ContentId**と**Issuer**メタデータを使用して、次の形式を使用します。`https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     例 - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- そのメタデータにアクセスできない場合 (すなわち、保護されていないバージョンのドキュメントを調べている)、次の形式で **Content_Name** を使用できます。`https://track.azurerms.com/#/?q={ContentName}`
+- そのメタデータにアクセスできない場合 (つまり、保護されていないバージョンのドキュメントを調べている場合) は、次の形式で**Content_Name**を使用できます。`https://track.azurerms.com/#/?q={ContentName}`
 
   例: https://track.azurerms.com/#/?q=Secret!.txt
 
 このクライアントでは、適切な URL でブラウザーを開く必要があります。 RMS ドキュメント追跡ポータルが認証と必要なリダイレクトを処理します。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [ライセンス メタデータ プロパティの種類](https://msdn.microsoft.com/library/dn974062.aspx)
 * [通知の基本設定](https://msdn.microsoft.com/library/dn974063.aspx)

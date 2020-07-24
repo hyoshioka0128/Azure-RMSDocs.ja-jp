@@ -14,17 +14,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4a9f0b375f9e152d44f4d5b5251a9259456db53c
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792422"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135710"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>方法: エラーとパフォーマンスのログを有効にする
 Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードが 1 つのデバイス プロパティで管理されます。
 
-## <a name="overview"></a>[ポリシー] ##
+## <a name="overview"></a>概要 ##
 診断、パフォーマンス、およびテレメトリに関するデータ ログの Microsoft への自動アップロードを有効にすると、ユーザーのエクスペリエンスとトラブルシューティングを改善できます。 
 
 > [!IMPORTANT] 
@@ -51,50 +51,64 @@ Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマン�
 ### <a name="android"></a>Android ###
 自動更新を有効にする
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    SharedPreferences.Editor editor = preferences.edit();
-    editor.putBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, true);
-    editor.commit();
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+SharedPreferences.Editor editor = preferences.edit();
+editor.putBoolean("IpcCustomerExperienceDataCollectionEnabled", true);
+editor.commit();
+```
 
 現在のログ コントロール フラグ設定を取得する
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```
 
-## <a name="ios"></a>[iOS] ##
+## <a name="ios"></a>iOS ##
 自動更新を有効にする
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:FALSE forKey:@&quot;IpcCustomerExperienceDataCollectionEnabled”];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+```objectivec
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setBool:FALSE forKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 現在のログ コントロール フラグ設定を取得する
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcCustomerExperienceDataCollectionEnabled&quot;];
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+```
 
 ログ レベル コントロールを設定する
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-      [prefs setInteger:1 forKey:@&quot;IpcLogLevel”];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+```java
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:1 forKey:@"IpcLogLevel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 ログ コントロール設定を取得する
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcLogLevel"];
+```
 
 ## <a name="windows"></a>Windows ##
 自動更新を有効にする
 
-    CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```cpp
+CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```
 
 オプションの設定の詳細については、「[CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx)」を参照してください。
 
 現在のログ コントロール フラグ設定を取得する
 
-    CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
+```cpp
+CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
+```
 
+**注**: 上記の Windows コード スニペットは C++ で記述されています。 C\# の場合は、構文の "::" を  "." に置き換えてください。
 
-**注**: 上記の Windows コード スニペットは C++ で記述されています。 C\# の場合は、構文の "::" を "." に置き換えてください。
-
-**Linux/C++** - この SDK には、他のプラットフォームほど大規模ではないいくつかの基本的なログ記録機能が含まれています。 詳細については、「[RMS SDK for portable C++ (移植可能 C++ のための RMS SDK)](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting)」の "README.md" の「**Troubleshooting (トラブルシューティング)** 」セクションを参照してください。
+**Linux/C++** - この SDK には、他のプラットフォームほど大規模ではないいくつかの基本的なログ記録機能が含まれています。 詳細については、「[RMS SDK for portable C++ (移植可能 C++ のための RMS SDK)](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting)」の "README.md" の「**Troubleshooting (トラブルシューティング)**」セクションを参照してください。

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 53bfc93ce31322922fdadcc0f5bcc7a92e242bed
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 09823af031db2968c951c6c3610bc14e6a31bd17
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971845"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135642"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
@@ -82,7 +82,7 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
 **Android ユーザー認証** - 詳しくは、「[Android のコード例](android-code.md)、最初のシナリオの**ステップ 2**、「RMS 保護ファイルを使用する」をご覧ください。
 
-
+```java
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
     {
     ...
@@ -94,8 +94,8 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
         String authority = authenticationParametersMap.get("oauth2.authority");
         String resource = authenticationParametersMap.get("oauth2.resource");
         String userId = authenticationParametersMap.get("userId");
-        mClientId = “12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”; // get your registered Azure AD application ID here
-        mRedirectUri = “urn:ietf:wg:oauth:2.0:oob”;
+        mClientId = "12345678-ABCD-ABCD-ABCD-ABCDEFGH12"; // get your registered Azure AD application ID here
+        mRedirectUri = "urn:ietf:wg:oauth:2.0:oob";
         final String userHint = (userId == null)? "" : userId;
         AuthenticationContext authenticationContext = App.getInstance().getAuthenticationContext();
         if (authenticationContext == null || !authenticationContext.getAuthority().equalsIgnoreCase(authority))
@@ -153,11 +153,11 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
                             }
                         });
                          }
-
+```
 
 **iOS/OS X ユーザー認証** - 詳しくは、「[iOS/OS X のコード例](ios-os-x-code-examples.md)」の*最初のシナリオ「RMS 保護ファイルを使用する」のステップ 2* をご覧ください。
 
-
+```objectivec
     // AuthenticationCallback holds the necessary information to retrieve an access token.
     @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
 
@@ -173,11 +173,11 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
     ADAuthenticationError *error;
     ADAuthenticationContext* context = [ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority error:&error];
 
-    NSString *appClientId = @”12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”;
+    NSString *appClientId = @"12345678-ABCD-ABCD-ABCD-ABCDEFGH12";
 
     // get your registered Azure AD application ID here
 
-    NSURL *redirectURI = [NSURL URLWithString:@”ms-sample://com.microsoft.sampleapp”];
+    NSURL *redirectURI = [NSURL URLWithString:@"ms-sample://com.microsoft.sampleapp"];
 
     // get your <app-scheme>://<bundle-id> here
     // Retrieve token using ADAL
@@ -200,13 +200,12 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
         ];
     }
-
-
+```
 
 **Linux ユーザー認証** - 詳しくは、「[Linux のコード例](linux-c-code-examples.md)」をご覧ください。
 
 
-
+```cpp
     // Class Header
     class AuthCallback : public IAuthenticationCallback {
     private:
@@ -266,3 +265,4 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
         throw;
       }
     }
+```

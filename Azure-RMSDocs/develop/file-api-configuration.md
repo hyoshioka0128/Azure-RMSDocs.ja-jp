@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60178235"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135625"
 ---
 # <a name="file-api-configuration"></a>ファイル API の構成
 
@@ -46,7 +46,7 @@ ms.locfileid: "60178235"
 
 **種類**: キー
 
-**説明**: 特定のファイル拡張子 (TXT、JPG など) の構成情報を指定します。
+**説明**: 特定のファイル拡張子の構成情報を指定します。たとえば、TXT、JPG などです。
 
 - ワイルドカード文字 "*" を使用できます。ただし、特定の拡張子の設定は、ワイルドカードの設定よりも優先されます。 ワイルドカード文字は、Microsoft Office ファイルの設定には影響しません。これらは、ファイルの種類ごとに明示的に無効する必要があります。
 - 拡張子がないファイルを指定するには、"." を使用します。
@@ -59,12 +59,12 @@ ms.locfileid: "60178235"
 
 **種類**: REG_SZ
 
-**説明**: 次の 3 つの値のいずれかが含まれています。
+**説明**: 次の3つの値のいずれかが含まれます。
 
 - **Off**: 暗号化が無効です。
 
 > [!Note]
-> この設定は、解読には影響しません。 ユーザーが **EXTRACT** 権限を持っている限り、ネイティブ保護と PFile 保護のどちらを使用して暗号化されたファイルでも解読できます。
+> この設定は、解読には影響しません。 ネイティブまたは Pfile 保護を使用して暗号化されている暗号化されたファイルは、ユーザーが**EXTRACT**権限を持っている限り、復号化できます。
 
 - **Native**: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p*zzz* になります。*zzz* は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
 
@@ -72,7 +72,7 @@ ms.locfileid: "60178235"
 
 
 > [!Note]
-> この設定は、Office ファイル形式には影響しません。 たとえば、`HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が &quot;Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルの拡張子は .docx のままです。
+> この設定は、Office ファイル形式には影響しません。 たとえば、 `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` 値が "Pfile" に設定されている場合、.docx ファイルはネイティブ保護を使用して暗号化され、暗号化されたファイルのファイル拡張子は .docx のままになります。
 
 その他の値を設定する場合や、値を設定しない場合は、既定の動作が実行されます。
 
@@ -103,10 +103,10 @@ ms.locfileid: "60178235"
 
 **その他のすべてのファイル形式**
 
--   保護の種類 = Pfile: sample.*zzz* を暗号化すると、sample.*zzz*.pfile という名前になります。*zzz* は元のファイル拡張子です。
+-   保護の種類 = Pfile: sample。*zzz*は暗号化され、名前付きサンプルです。*zzz*. pfile;ここで、 *zzz*は元のファイル拡張子です。
 -   Off: 暗号化を無効にします。
 
-### <a name="examples"></a>例
+### <a name="examples"></a>使用例
 
 次の設定は、txt ファイルの PFile 暗号化を有効にします。 Office ファイルには (既定で) ネイティブ保護が適用され、txt ファイルには PFile 保護が適用され、その他のすべてのファイルの保護は (既定で) ブロックされます。
 
@@ -148,5 +148,5 @@ HKEY_LOCAL_MACHINE
 
 ## <a name="related-articles"></a>関連記事
 
-- [開発者向け注意事項](developer-notes.md)
+- [開発者向けのメモ](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
