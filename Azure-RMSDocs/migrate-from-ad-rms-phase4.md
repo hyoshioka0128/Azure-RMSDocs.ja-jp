@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e1bdf52fd8d73231e9084d36d5d648a2e1ee88c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 01cf998fc6d4c872339d5bfa241eed4f1c9f4b6b
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048631"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298157"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -53,7 +53,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 ここでは、コネクタをインストールして構成し、Exchange および SharePoint で IRM を無効にして、コネクタを使うようにこれらのサーバーを構成する手順を説明します。 最後に、メール メッセージの保護に使われていた AD RMS データ構成ファイル (.xml) を Azure Information Protection にインポートしてある場合、Exchange Server コンピューターのレジストリを手動で編集して、すべての信頼された発行ドメインの URL を RMS コネクタにリダイレクトする必要があります。
 
 > [!NOTE]
-> 開始する前に、「[Azure RMS をサポートするオンプレミス サーバー](./requirements-servers.md)」で、Azure Rights Management サービスがサポートしているオンプレミス サーバーのバージョンを確認してください。
+> 開始する前に、「[Azure RMS をサポートするオンプレミス サーバー](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection)」で、Azure Rights Management サービスがサポートしているオンプレミス サーバーのバージョンを確認してください。
 
 ### <a name="install-and-configure-the-rms-connector"></a>RMS コネクタのインストールと構成
 
