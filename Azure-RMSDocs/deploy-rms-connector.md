@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 405989dae3fb7f37edc4fdd8b213ae5dae3ac592
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: f69c7071c7e4bb257d4325f4404c51a6e0a81046
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665913"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298276"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Azure Rights Management コネクタをデプロイする
 
@@ -42,7 +42,7 @@ RMS コネクタでサポートされるオンプレミス サーバーは、Exc
 > [!NOTE]
 > Office ドキュメントだけでなく、複数の種類のファイルをファイル分類インフラストラクチャで保護したい場合は、RMS コネクタではなく [AzureInformationProtection コマンドレット](/powershell/azureinformationprotection/vlatest/aip)を使用してください。
 
-これらのオンプレミス サーバーのうち、どのバージョンが RMS コネクタでサポートされるかについては、「[Azure RMS をサポートするオンプレミス サーバー](requirements-servers.md)」をご覧ください。
+これらのオンプレミス サーバーのうち、どのバージョンが RMS コネクタでサポートされるかについては、「[Azure RMS をサポートするオンプレミス サーバー](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection)」をご覧ください。
 
 
 ### <a name="support-for-hybrid-scenarios"></a>ハイブリッド シナリオのサポート

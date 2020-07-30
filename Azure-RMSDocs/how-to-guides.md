@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a6f657db4cce2d62562ff7f20c28aae2f6e8af3
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136235"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298225"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
@@ -30,7 +30,7 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="common-scenarios"></a>一般的なシナリオ
 
-|シナリオの目的|Instructions|
+|シナリオの目的|手順|
 |----------------|---------------|
 |組織がオンプレミスに格納している機密情報を検索する|[クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
 |ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
@@ -69,8 +69,8 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 - [Discovery of Sensitive Data Using the AIP Scanner (AIP Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040) (AIP スキャナーを使用した機密データの検出 (AIP Premium P1))
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-目的のシナリオが見つかりませんでしたか。 計画と展開の手順に関する完全な一覧については、[デプロイ ロードマップ](deployment-roadmap.md)を参照してください。
+目的のシナリオが見つかりませんでしたか。 計画と展開の手順の完全な一覧については、[デプロイのロードマップ](deployment-roadmap.md)を確認してください。
 
 Azure Information Protection を使用した経験がない場合は、ご自身の展開を開始する前に、サービスの概略を説明した「[Azure Information Protection とは](what-is-information-protection.md)」をご覧ください。

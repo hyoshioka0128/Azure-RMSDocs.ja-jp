@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 6c479bbb5f63bbbdc98165bc0c99f43a4e9503b4
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 1a239e489dee616ba13050a9fa6614d85bee1429
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927405"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87297869"
 ---
 # <a name="what-is-azure-rights-management"></a>Azure Rights Management とは
 
@@ -61,7 +61,7 @@ Azure RMS によって、検索やインデックス作成などの承認され�
 
 ### <a name="protection-features"></a>保護機能
 
-|機能  |説明  |
+|特徴量  |説明  |
 |---------|---------|
 |**複数のファイルの種類を保護する**     | Rights Management の初期の実装では、ネイティブの Rights Management 保護を使用して、Office ファイルのみを保護できます。 </br></br>現在、Rights Management 共有アプリケーションによって最初に提供され、Azure Information Protection クライアントによって提供される一般的な保護は、より多くの[ファイルの種類](./rms-client/client-admin-guide-file-types.md)がサポートされていることを意味します。        |
 |**どこ**からでもファイルを保護できます。 | ファイルが[保護](./rms-client/client-classify-protect.md)されている場合、クラウドストレージサービスなどの管理下にないストレージに保存またはコピーされていても、ファイルは保護されたままになります。|
@@ -70,7 +70,7 @@ Azure RMS によって、検索やインデックス作成などの承認され�
 
 ### <a name="collaboration-features"></a>コラボレーション機能
 
-|機能  |説明  |
+|特徴量  |説明  |
 |---------|---------|
 |**情報を安全に共有する**     |  [保護されたファイル](./rms-client/client-classify-protect.md)は、電子メールの添付ファイルや SharePoint サイトへのリンクなど、他のユーザーと安全に共有できます。 </br></br> 機密情報が電子メールメッセージ内にある場合は、電子メールを保護するか、Outlook の [**転送不可**] オプションを使用します。       |
 |**企業間のコラボレーションをサポートする**     |  Azure Rights Management はクラウドサービスなので、保護されたコンテンツを共有する前に、他の組織との信頼を明示的に構成する必要はありません。 </br></br>Office 365 または Azure AD directory を既に所有している他の組織との共同作業が自動的にサポートされます。 </br></br>Office 365 または Azure AD directory を使用していない組織の場合、ユーザーは無料の個人用[RMS](rms-for-individuals.md)サブスクリプションにサインアップすることも、[サポートされているアプリケーション](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)に対して Microsoft アカウントを使用することもできます。       |
@@ -85,9 +85,9 @@ Azure RMS によって、検索やインデックス作成などの承認され�
 
 Azure RMS は、次のようなさまざまなプラットフォームとアプリケーションをサポートしています。
 
-|機能  |説明  |
+|特徴量  |説明  |
 |---------|---------|
-|**一般的に使用されるデバイス** </br>Windows コンピューターだけではありません     | [サポートされているデバイス](./requirements-client-devices.md)は次のとおりです。 </br></br>- Windows コンピューターと携帯電話 </br>- Mac コンピューター </br>- iOS タブレットと携帯電話 </br>- Android タブレットと携帯電話        |
+|**一般的に使用されるデバイス** </br>Windows コンピューターだけではありません     | [クライアントデバイス](requirements.md#client-devices)は次のとおりです。 </br></br>- Windows コンピューターと携帯電話 </br>- Mac コンピューター </br>- iOS タブレットと携帯電話 </br>- Android タブレットと携帯電話        |
 |**オンプレミスのサービス**     | [Office 365 とのシームレスな](office-apps-services-support.md)連携に加えて、 [RMS コネクタ](deploy-rms-connector.md)をデプロイするときに、次のオンプレミスサービスで Azure Rights Management を使用します。 </br></br>- Exchange Server </br>- SharePoint Server </br>- ファイル分類インフラストラクチャを実行する Windows Server        |
 |**アプリケーションの拡張**     |Azure Rights Management は Microsoft Office のアプリケーションやサービスと緊密に統合されており、 [Azure Information Protection クライアント](./rms-client/aip-client.md )を使用して他のアプリケーションのサポートを拡張します。 </br></br>[Azure Information Protection sdk](./develop/developers-guide.md)は、Azure Information Protection をサポートするカスタムアプリケーションを作成するための api を社内開発者やソフトウェアベンダーに提供します。 </br></br>詳しくは、「[Rights Management API をサポートするその他のアプリケーション](api-support.md)」をご覧ください。         |
 | | |
@@ -118,7 +118,7 @@ Azure RMS には、IT 部門とインフラストラクチャの組織をサポ�
 
 - **データの制御を維持**します。 組織は、次のような IT 管理機能を利用できます。
 
-    |機能  |説明  |
+    |特徴量  |説明  |
     |---------|---------|
     |テナントキーの管理    |   "[Bring Your Own Key](plan-implement-tenant-key.md)" (byok) ソリューションを使用して独自のテナントキーを管理し、テナントキーをハードウェアセキュリティモジュール (hsm) に格納します。      |
     |監査と使用状況ログ    |   監査と[使用状況ログ](log-analyze-usage.md)機能を使用して、ビジネス上の洞察を分析し、不正使用を監視し、情報の漏洩に関するフォレンジック分析を実行します。      |

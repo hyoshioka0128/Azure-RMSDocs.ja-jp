@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ebe0b506862e87e8dc99b9995eb0529f10805207
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 758e3ed214815393206ebe04085c9d61b5116d80
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927660"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298123"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -63,17 +63,23 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 - 必要なクライアントソフトウェアがあり、MFA をサポートするインフラストラクチャが正しく構成されている場合は、Azure Information Protection で**multi-factor authentication (MFA)** がサポートされます。
 
-条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細について[は、「条件付きアクセスに使用できるクラウドアプリとして Azure Information Protection が表示される」を参照してください。これはどのように動作しますか](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)。
+条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、「[条件付きアクセスに使用できるクラウドアプリとして Azure Information Protection が表示される](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)」を参照してください。これはどのように動作しますか。
 
-詳細については、次のリンクを参照してください。
+Office 2010、証明書ベースまたは multi-factor authentication を使用する場合や、UPN 値がユーザーの電子メールアドレスと一致しない場合など、特定のシナリオには追加の前提条件が必要です。 詳細については、「 [Azure Information Protection の追加 Azure AD 要件](requirements-azure-ad.md)」を参照してください。
 
-- [Azure Information Protection の Azure Active Directory の要件](requirements-azure-ad.md)
+詳細については、次を参照してください。
 
-- [Azure Information Protection 向けのユーザーとグループの準備](prepare.md)
+- [What is Azure AD Directory? (Azure AD ディレクトリとは)](/azure/active-directory/fundamentals/active-directory-whatis)
+- [オンプレミスの Active Directory ドメインを Azure Active Directory と統合](/azure/architecture/reference-architectures/identity/azure-ad)します。
 
 ## <a name="client-devices"></a>クライアント デバイス
 
-ユーザーのコンピューターまたはモバイルデバイスは、Azure Information protection をサポートするオペレーティングシステム上で実行する必要があります。
+ユーザーコンピューターまたはモバイルデバイスは、Azure Information Protection をサポートするオペレーティングシステム上で実行する必要があります。
+
+- [クライアントデバイスでサポートされているオペレーティングシステム](#supported-operating-systems-for-client-devices)
+- [仮想マシン](#virtual-machines)
+- [サーバーのサポート](#server-support)
+- [クライアントごとの追加要件](#additional-requirements-per-client)
 
 ### <a name="supported-operating-systems-for-client-devices"></a>クライアントデバイスでサポートされているオペレーティングシステム
 
@@ -96,7 +102,7 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 以前のバージョンの Windows でのサポートの詳細については、Microsoft アカウントまたはサポート担当者にお問い合わせください。
 
 > [!NOTE]
-> Azure Information Protection クライアントが Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](requirements-client-devices.md)でデータを使用できます。
+> Azure Information Protection クライアントが Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](#client-devices)でデータを使用できます。
 >
 
 ### <a name="virtual-machines"></a>仮想マシン
@@ -160,7 +166,7 @@ Azure Information Protection には、次の追加要件があります。
 
 - 統一された**ラベル付けクライアント**。 ラベルとラベルポリシーをダウンロードするには、HTTPS で次の URL を許可してください: ***. protection.outlook.com**
 
-- **Web プロキシ**。 認証が必要な web プロキシを使用する場合は、ユーザーの Active Directory ログオン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
+- **Web プロキシ**。 認証が必要な web プロキシを使用する場合は、ユーザー Active Directory のサインイン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
     
 - **TLS クライアントとサービス間の接続**。 **Aadrm.com** URL に対してパケットレベルの検査を実行するなど、TLS クライアントからサービスへの接続を終了しないでください。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
@@ -175,25 +181,13 @@ Azure Information Protection には、次の追加要件があります。
 
     結果には、発行元の CA が Microsoft CA からのものであることが示されます。たとえば、のようになり `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` ます。 
     
-    発行元 CA の名前が Microsoft からのものではない場合、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性が非常に高くなります。
+    発行元 CA の名前が Microsoft からのものではない場合は、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性があります。
 
 - **TLS バージョン1.2 以降**(統一されたラベル付けクライアントのみ)。 統一されたラベル付けクライアントを使用するには、1.2 以上の TLS バージョンが必要です。これにより、暗号化が安全なプロトコルを使用し、Microsoft のセキュリティガイドラインに合わせることができます。
-    
-### <a name="on-premises-servers"></a>オンプレミスのサーバー
-
-Azure Information Protection の Azure Rights Management サービスでは、次のオンプレミスサーバーがサポートされています。
-
-- **Exchange Server**
-
-- **SharePoint Server**
-
-- ファイル分類インフラストラクチャをサポートする**Windows Server ファイルサーバー**
-
-このシナリオに関する追加の要件については、「[Azure Rights Management データ保護をサポートするオンプレミス サーバー](requirements-servers.md)」をご覧ください。
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>AD RMS と Azure RMS の共存
 
-同じ組織内で AD RMS と Azure RMS をサイドバイサイドで使用して、同じ組織内の同じユーザーがコンテンツを保護することは、Azure Information Protection での[HYOK (独自のキーの保持) 保護](configure-adrms-restrictions.md)の AD RMS で**のみ**サポートされています。
+同じ組織内で AD RMS と Azure RMS を並行して使用することで、同じ組織内の同じユーザーがコンテンツを保護できるようになります。これは、Azure Information Protection で[HYOK (独自のキーを保持する) 保護](configure-adrms-restrictions.md)の AD RMS で**のみ**サポートされます。
 
 このシナリオは、[移行](migrate-from-ad-rms-to-azure-rms.md)中にはサポートされ*ません*。
 サポートされている移行パスは次のとおりです。
@@ -205,7 +199,7 @@ Azure Information Protection の Azure Rights Management サービスでは、�
 > [!TIP]
 > Azure Information Protection をデプロイした後で、このクラウド サービスを使用したくなくなった場合は、「[Azure Information Protection の使用停止と非アクティブ化](decommission-deactivate.md)」をご覧ください。
 
-同じ組織内で両方のサービスがアクティブになっているその他の非移行シナリオについては、両方のサービスが、特定のユーザーがコンテンツを保護できるように、両方のサービスを構成する必要があります。 これは次のようにして構成できます。
+同じ組織内で両方のサービスがアクティブになっているその他の非移行シナリオについては、両方のサービスが、特定のユーザーがコンテンツを保護できるように、両方のサービスを構成する必要があります。 このようなシナリオは次のように構成します。
 
 * AD RMS にリダイレクトを使用して[Azure RMS 移行を行う](migrate-from-ad-rms-to-azure-rms.md)
 
@@ -217,10 +211,53 @@ Azure Information Protection の Azure Rights Management サービスでは、�
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
-- **AzureFrontDoor**
+- **AzureFrontDoor.Frontend**
 
 Azure Information Protection サービスは、次の2つの特定の IP アドレスにも依存します。
  - **13.107.6.181** 
  - **13.107.9.181**
 
-これらの特定の IP アドレスへの発信アクセスを許可する規則を作成してください。 
+これらの特定の IP アドレスへの発信アクセスを許可する規則を作成してください。
+
+## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Azure Rights Management データ保護でサポートされているオンプレミスサーバー
+
+Azure Rights Management コネクタを使用すると、次のオンプレミスサーバーが Azure Information Protection でサポートされます。
+
+このコネクタは、通信インターフェイスとして機能し、オンプレミスのサーバーと Azure Rights Management サービス間のリレーを行います。これは、Azure Information Protection が Office ドキュメントや電子メールを保護するために使用されます。 
+
+このコネクタを使用するには、Active Directory フォレストと Azure Active Directory とのディレクトリ同期を構成する必要があります。
+
+サポートされているサーバーは次のとおりです。
+
+|サーバーの種類  |サポートされているバージョン  |
+|---------|---------|
+|**Exchange Server**     | -Exchange Server 2016 </br>-Exchange Server 2013 </br>-Exchange Server 2010       |
+|**Office SharePoint Server**     |-Office SharePoint Server 2016 </br>-Office SharePoint Server 2013 </br>-Office SharePoint Server 2010         |
+|**Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイルサーバー**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
+| | |
+
+<!-- i think that half of this note was removed at some point, without this other half. keeping it here in case we ever need it..>
+    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
+-->
+
+詳細については、「 [Azure Rights Management コネクタのデプロイ](deploy-rms-connector.md)」を参照してください。
+
+## <a name="supported-operating-systems-for-azure-rights-management"></a>Azure Rights Management でサポートされているオペレーティングシステム
+
+次のオペレーティングシステムでは、AIP のデータ保護を提供する Azure Rights Management サービスがサポートされています。
+
+|OS  |サポートされているバージョン  |
+|---------|---------|
+|**Windows コンピューター**     |-Windows 7 (x86、x64) </br>- Windows 8 (x86、x64) </br>- Windows 8.1 (x86、x64) </br>- Windows 10 (x86、x64)       | 
+|**macOS**     |   macOS 10.8 (Mountain Lion) 以降      |
+|**Android フォンとタブレット**     | Android 6.0 の最小バージョン        |
+|**iPhone と iPad**     | IOS 11.0 の最小バージョン        |
+|**Windows phone とタブレット** | Windows 10 Mobile|
+| | |
+
+
+
+## <a name="next-steps"></a>次のステップ
+
+AIP のすべての要件を確認し、システムが準拠していることを確認したら、 [Azure Information Protection 用のユーザーとグループの準備](prepare.md)を続行します。
+

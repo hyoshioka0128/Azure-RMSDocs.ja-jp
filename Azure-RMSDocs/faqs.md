@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 82280d50bdd16139e53d4906e908f7efcb9b6281
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: c72d1764ace998b21c17be97639239da2a6a6c19
+ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927388"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334183"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Azure Information Protection に関してよく寄せられる質問
 
@@ -120,7 +120,7 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 
 Azure portal でラベルを移行したら、インストールしたクライアントに応じて、次のいずれかの場所で管理を続行します。
 
-|クライアント  |Column2  |
+|Client  |Column2  |
 |---------|---------|
 |[クライアントとサービスのみの統一](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)されたラベル付け    |  統一されたラベル付けクライアントがインストールされている場合は、管理センターの1つでラベルを管理します。 Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security center、または Microsoft 365 コンプライアンスセンターです。 統合ラベル付けのクライアントは、これらの管理センターからラベルとポリシー設定をダウンロードします。 </br></br>手順については、「[秘密度ラベルとそのポリシーを作成して構成する](/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。     |
 |[従来のクライアント](./rms-client/aip-client.md)のみ  | ラベルを移行した後も従来のクライアントがインストールされている場合は、引き続き Azure portal を使用してラベルとポリシー設定を編集します。 クラシッククライアントは、Azure からラベルとポリシー設定を引き続きダウンロードします。
@@ -267,7 +267,7 @@ Azure Information Protection では、メール メッセージやドキュメ�
 > 
 
 > [!TIP]
-> Power BI では、機密ラベルを使用した分類がサポートされるようになりました。また、次のファイル形式 (.pdf、.xls、.ppt) にエクスポートされたデータに、これらのラベルからの保護を適用できます。 詳細については、「 [Power BI でのデータ保護 (プレビュー)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)」を参照してください。
+> Power BI では、機密ラベルを使用した分類がサポートされるようになりました。また、次のファイル形式 (.pdf、.xls、.ppt) にエクスポートされたデータに、これらのラベルからの保護を適用できます。 詳細については、「[Power BI におけるデータ保護](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)」を参照してください。
 > 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。
 
@@ -310,7 +310,7 @@ Microsoft Graph Security API について詳しくは、「[Microsoft Graph Secu
 |---------|---------|---------|
 |**サポートされているデータ ストア**    | Windows Server 上のローカルフォルダー        | - Windows ファイル共有とネットワーク接続ストレージ<br /></br>- SharePoint Server 2016 と SharePoint Server 2013。 [このバージョンの SharePoint の延長サポート](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010)が含まれるお客様向けに SharePoint Server 2010 もサポートされています。        |
 |**操作モード**     |リアルタイム         |データストアを体系的に1回または繰り返しクロールする         |
-|**サポートされるファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
+|**サポートされているファイルの種類**     | - すべてのファイルの種類が既定で保護されます <br /><br />- レジストリを編集することで、特定のファイルの種類を保護から除外できます|ファイルの種類ごとのサポート: <br /><br />- Office ファイルの種類と PDF ドキュメントは既定で保護されます <br /><br />- レジストリを編集することで、保護に含めるファイルの種類を追加できます|
 
 ### <a name="setting-rights-management-owners"></a>Rights Management 所有者の設定
 

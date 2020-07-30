@@ -4,19 +4,19 @@ description: AIP 向けのモバイルデバイス拡張機能の Active Directo
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f20ebed9647570e1f9395791f346eb175a3a8c5e
-ms.sourcegitcommit: 43c9a5c3130a3a8e2ee2644207d07382bed09679
+ms.openlocfilehash: 4351fbd3a7cbbcfbc49df69c1103a6d3a90fb920
+ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879992"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87255150"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services モバイル デバイス拡張機能
 
@@ -82,7 +82,7 @@ $TransformRules = @"
 @RuleTemplate = "LdapClaims"
 @RuleName = "Jwt Token"
 c:[Type ==
-"https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
 Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types =
 ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -225,7 +225,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |Domain|_tcp. contoso .com
 |サービス|_rmsdisco
 |Protocol|_http
-|Priority|0
+|優先度|0
 |Weight|0
 |ポート番号|443
 |このサービスを提供しているホスト|_rmsserver. contoso .com
@@ -235,7 +235,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |Domain|_tcp. fabrikam .com
 |サービス|_rmsdisco
 |Protocol|_http
-|Priority|0
+|優先度|0
 |Weight|0
 |ポート番号|443
 |このサービスを提供しているホスト|_rmsserver. contoso .com|
@@ -251,7 +251,7 @@ Windows Server で DNS サーバーの役割を使用する場合は、DNS マ�
 |Domain|_tcp. contoso .com
 |サービス|_rmsdisco
 |Protocol|_http
-|Priority|0
+|優先度|0
 |Weight|0
 |ポート番号|443
 |このサービスを提供しているホスト|_rmsserver. contoso .com|

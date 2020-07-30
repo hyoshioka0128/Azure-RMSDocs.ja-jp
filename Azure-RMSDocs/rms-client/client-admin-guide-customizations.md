@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a038d70cfbeb75f4bcabbfab0391582cdb0b5e87
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 58d96afe47d6d3fc993c7c7e213e64097777b21e
+ms.sourcegitcommit: edd0614ef6f687ff2745f56e4171cd72e03edc9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047373"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438190"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>管理者ガイド: Azure Information Protection クライアントのカスタム構成
 
@@ -980,9 +980,9 @@ Azure Information Protection スキャナーは、1分あたり数百から数�
 
 このクライアントの詳細設定によって、[中央レポート機能](../reports-aip.md)のために Azure Information Protection に送信される情報が変更されたり、ローカルの[イベント ログ](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)に書き込まれる情報が変更されたりすることはありません。
 
-## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Exchange メッセージ分類との統合によるモバイル デバイスのラベル付けソリューション
+## <a name="integration-with-the-legacy-exchange-message-classification"></a>従来の Exchange メッセージ分類との統合
 
-Web 上の outlook では、Exchange Online のラベル付けがサポートされるようになりました。これは、Outlook で電子メールにラベルを付ける方法として推奨されています。 ただし、Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security center、または Microsoft コンプライアンスセンターから公開されている機密ラベルをまだ使用していない場合は、Exchange メッセージ分類を使用して、web 上で Outlook を使用するときに Azure Information Protection ラベルをモバイルユーザーに拡張することができます。 この方法は、Exchange Server にも使用できます。 
+Web 上の outlook では、Exchange Online のラベル付けがサポートされるようになりました。これは、Outlook で電子メールにラベルを付ける方法として推奨されています。 ただし、OWA で電子メールにラベルを付ける必要があり、まだ機密ラベルをサポートしていない Exchange Server を使用している場合は、Exchange メッセージ分類を使用して、Azure Information Protection ラベルを web 上の Outlook に拡張することができます。
 
 Outlook Mobile では、Exchange のメッセージ分類がサポートされません。
 

@@ -4,19 +4,19 @@ description: Azure Information Protection の既知の問題と制限を検索�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/02/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cec682216c07f93b36d189f3c385dc935b2f887d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
+ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869660"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87378286"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題-Azure Information Protection
 
@@ -84,14 +84,14 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|機能  |既知の問題  |
+|特徴量  |既知の問題  |
 |---------|---------|
-|複数のバージョンの Office    | Azure Information Protection クライアントは、従来のラベル付けと統一されたラベル付けの両方を含み、同じコンピューターで複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。       |
-|Office 2016 での IRM のサポート | Office 2016 でのメタデータの暗号化を制御する[Drmencryptproperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options)レジストリ設定は、Azure Information Protection ラベルではサポートされていません。|
-|Word のコンテンツのマーキング    | フッターにテーブルが含まれている場合、Microsoft Word のフッターで Azure Information Protection コンテンツの[マーキング](configure-policy-markings.md)が非表示になることがあります。 詳細については、「[視覚的なマーキングが適用されるタイミング](configure-policy-markings.md#when-visual-markings-are-applied)」を参照してください。 |
-|メールでのコンテンツのマーキング | 電子メールにマクロを含むヘッダー/フッターを追加するなど、動的なコンテンツのマーク付けは、Azure Information Protection クライアントを使用している場合にのみ、Outlook でサポートされます。 </br></br>動的なコンテンツのマーキングは、ネイティブの Outlook アプリケーションまたは Outlook online ではサポートされていません。 |
-|電子メールに添付されたファイル |Windows の最新の更新プログラムの制限により、 [Microsoft Outlook が Azure Rights Management によって保護](office-apps-services-support.md)されている場合、電子メールに添付されたファイルは、ファイルを開いた後にロックされる可能性があります。 |
-|差し込み印刷    |  Office[メールのマージ](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、Azure Information Protection 機能ではサポートされていません。       |
+|**複数のバージョンの Office**    | Azure Information Protection クライアントは、従来のラベル付けと統一されたラベル付けの両方を含み、同じコンピューターで複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。       |
+|**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、1つまたは両方の画面で、Azure Information Protection バーが Office 画面の中央に表示されることがあります。 </br></br>バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[全般] で **、** [**最適な外観に最適化**する] ではなく [**互換性のために最適化**する] を選択します。    |
+|**Office 2016 での IRM のサポート**| Office 2016 でメタデータの暗号化を制御する[Drmencryptproperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options)レジストリ設定は、Azure Information Protection ラベルではサポートされていません。|
+|**Word のコンテンツのマーキング**    | フッターにテーブルが含まれている場合、Microsoft Word のフッターで Azure Information Protection コンテンツの[マーキング](configure-policy-markings.md)が非表示になることがあります。 詳細については、「[視覚的なマーキングが適用されるタイミング](configure-policy-markings.md#when-visual-markings-are-applied)」を参照してください。 |
+|**電子メールに添付されたファイル** |Windows の最新の更新プログラムの制限により、 [Microsoft Outlook が Azure Rights Management によって保護](office-apps-services-support.md)されている場合、電子メールに添付されたファイルは、ファイルを開いた後にロックされる可能性があります。 |
+|**差し込み印刷**    |  Office[メールのマージ](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、Azure Information Protection 機能ではサポートされていません。       |
 | | |
 
 <!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.
@@ -114,7 +114,7 @@ Depending on your policy rule size limit, configuring more than 200 users or use
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="クライアントビューアーで拡大されるイメージ":::
     
-    詳細については、次をご覧ください。
+    詳細については、次を参照してください。
 
     - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
     - [統一された**ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)

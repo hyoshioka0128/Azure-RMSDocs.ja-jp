@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7530329b1f3e25eabb622087a575d5c6e34c66b3
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 5c90580a099d1eab3d6d9cca297fda24d7339820
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869149"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298208"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Azure Information Protection の情報とサポート
 
@@ -38,7 +38,7 @@ ms.locfileid: "86869149"
 |サブスクリプション情報とサポート対象の機能の確認|「[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)」ページのサブスクリプション情報と機能一覧を使用します。|
 |ライセンスについてよく寄せられる質問の回答を確認する|ライセンスに関する[よく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)に目を通してください。|
 |現在の既知の問題の一覧を検索または参照する | [[既知の問題-Azure Information Protection](known-issues.md) ] ページを参照してください。
-|新機能や機能変更の要求|Azure Information Protection の [UserVoice](https://msip.uservoice.com) のサイトにアクセスし、会社の電子メールを使用してサインインします。|
+|新機能や機能変更の要求|Azure Information Protection の [UserVoice](https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip) のサイトにアクセスし、会社の電子メールを使用してサインインします。|
 |製品チームや同僚との連携|Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)にアクセスします。|
 |特定の Azure Information Protection 用語を理解する|[用語](terminology.md)ページで用語や省略形を検索します。|
 
@@ -46,7 +46,7 @@ ms.locfileid: "86869149"
 
 Azure Information Protection の公式ロードマップは、Microsoft 365 の[ロードマップ](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent)にあります。
 
-Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://msip.uservoice.com)で要求された機能の状態をチェックすることも役立つ場合があります。
+Azure Information Protection 製品チームは、主要な新しいリリースに関するお知らせを [Enterprise Mobility + Security のブログ](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection)に投稿しています。 小さいリリースは、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)上で発表されます。[UserVoice サイト](https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip)で要求された機能の状態をチェックすることも役立つ場合があります。
 
 追加情報および詳細情報については、[Azure Information Protection テクニカル ブログ](https://aka.ms/AIPblog)を参照してください。 
 
@@ -67,7 +67,7 @@ Premier サポートがある場合は、 [Microsoft サービスハブ](https:/
 
 その他のお客様は、Azure Information Protection のサブスクリプションに応じて、以下の表のサポート チャネルをご利用ください。
 
-|サブスクリプション|Instructions|
+|サブスクリプション|手順|
 |----------------|---------------|
 |Azure Information Protection (スタンドアロン)|1. Azure portal で [ヘルプと[サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)] の [**新しいサポート要求**] を選択します。<br /><br />2. メッセージが表示されたら、[**基本**] ウィンドウで、[**問題の種類**] に [**技術**] を選択し、サービスに**Information Protection**します。 <br /><br />3. さらに、次のいずれかのオプションが選択されていることを確認します。<br /><br />- **[テクニカル サポートを含むサブスクリプション]**: Azure の有料または試用サブスクリプションを持っている場合、このオプションが表示されます。<br /><br /> - **[Technical support - Included]\(テクニカル サポート - 含む\)**: Azure サブスクリプションを持っていない場合、このオプションが表示されます。|
 |Azure Information Protection と Office 365 サブスクリプション<br /><br />Azure Rights Management と Office 365 サブスクリプション|Microsoft 365 管理センターによるサポートへの問い合わせ方法、および連絡先電話番号については、「[ビジネス製品についてサポートに問い合わせる - 管理者ヘルプ](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)」を参照してください。|

@@ -1,10 +1,10 @@
 ---
-title: Azure Information Protection に対する Azure AD の要件 - AIP
-description: ユーザーを正常に認証できるように、Azure Information Protection を使用するための Azure AD の要件を特定します。
-author: mlottner
-ms.author: mlottner
+title: Azure AD と Azure Information Protection の追加の前提条件
+description: Multi-factor authentication、証明書ベースの認証、Office 2010 を使用するコンピューターなど、特定のシナリオで Azure Information Protection を Azure AD するための追加の前提条件について説明します。
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 10/24/2019
+ms.date: 07/22/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,83 +12,92 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 1cf555a6c49c3554d230a10832fccb25efa0bfdf
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: b23afa0975f5d8f353b3ed8a5d4cf5332712f3b7
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136402"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298191"
 ---
-# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Information Protection の Azure Active Directory の要件
+# <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Azure Information Protection に関する追加の Azure AD 要件
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Azure Information Protection を使用するには、Azure AD ディレクトリが必要です。 このディレクトリのアカウントを使用して Azure Portal にサインインします。ここでは、たとえば、Azure Information Protection ラベルや Rights Management テンプレートを構成し、管理できます。
+Azure Information protection を使用するに[は、Azure AD ディレクトリが必要](requirements.md#azure-active-directory)です。 Azure AD ディレクトリのアカウントを使用して Azure portal にサインインし、Azure Information Protection 設定を構成できます。
 
 Azure Information Protection または Azure Rights Management を含むサブスクリプションをお持ちの場合は、必要に応じて Azure AD ディレクトリが自動的に作成されます。
 
-Azure AD の詳細については、「[Azure Active Directory とは](/azure/active-directory/fundamentals/active-directory-whatis)」をご覧ください。
+次のセクションでは、特定のシナリオに関する追加の AIP と Azure AD の要件について説明します。 
 
-Azure AD ディレクトリをオンプレミス AD フォレストと統合するには、「[オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)」をご覧ください。
+## <a name="computers-running-office-2010"></a>Office 2010 を実行しているコンピューター
 
-### <a name="scenarios-that-have-specific-requirements"></a>特定の要件があるシナリオ
+Microsoft Office 2010 を実行しているコンピューターでは Azure AD アカウントに加えて、Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行うために、Azure Information Protection の統一された[ラベル付けクライアント](./rms-client/aip-clientv2.md)または[Azure Information Protection クラシッククライアント](./rms-client/aip-client.md)が必要です。
 
-Office 2010 を実行しているコンピューターの場合:
+ユーザーアカウントがフェデレーションされている場合 (たとえば、AD FS を使用する場合)、これらのコンピューターは Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
 
-- これらのコンピューターでは、Azure Information Protection 統合された[ラベル付けクライアント](./rms-client/aip-clientv2.md)または[Azure Information Protection クライアント](./rms-client/aip-client.md)が Azure Information Protection とそのデータ保護サービスである Azure Rights Management に対して認証を行う必要があります。
+## <a name="support-for-certificate-based-authentication-cba"></a>証明書ベースの認証 (CBA) のサポート
 
-- ユーザー アカウントがフェデレーションされる (たとえば、AD FS を使用する) 場合、Windows 統合認証を使用する必要があります。 このシナリオでのフォーム ベース認証は、Azure Information Protection のユーザー認証に失敗します。
+iOS および Android 用の Azure Information Protection アプリでは、証明書ベースの認証をサポートしています。 
 
-証明書ベースの認証 (CBA) のサポート: 
-
-- iOS および Android 用の Azure Information Protection アプリでは、証明書ベースの認証をサポートしています。 証明書ベースの認証を構成する手順については、[「Azure Active Directory の証明書ベースの認証の概要」](/azure/active-directory/active-directory-certificate-based-authentication-get-started) を参照してください。
-
-ユーザーの UPN 値がユーザーの電子メール アドレスと一致しない：
-
-- これは推奨される構成ではなく、Azure Information Protection のシングルサインオンをサポートしていません。 UPN 値を変更できない場合は、ユーザーの代替ログイン ID を構成し、この代替ログインを使用して Office にサインインする方法をユーザーに指示してください。 詳細については、「[代替ログイン ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)と Office アプリケーションの構成」を参照して、 [SharePoint、OneDrive、および Lync Online への資格情報を定期的に確認](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)してください。
-
-    UPN 値内のドメイン名が、テナントを確認するためのドメインである場合は、ユーザーの UPN 値を別の電子メール アドレスとして Azure AD proxyAddresses 属性に追加します。 これにより、使用権限が与えられる時点でユーザーの UPN 値が指定されている場合は、このユーザーの Azure Rights Management が承認されます。 この要件に関する詳細とユーザー アカウントの承認方法については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
-
-AD FS または同等の認証プロバイダーを使用してオンプレミスで認証を行うモバイル デバイスまたは Mac コンピューターの場合:
-
-- 最小サーバー バージョンの **Windows Server 2012 R2** で AD FS を使用するか、または OAuth 2.0 プロトコルをサポートするその他の認証プロバイダーを使用する必要があります。
+詳細については、「 [Azure Active Directory で証明書ベースの認証の使用を開始](/azure/active-directory/active-directory-certificate-based-authentication-get-started)する」を参照してください。
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>多要素認証 (MFA) と Azure Information Protection
-Azure Information Protection で多要素認証 (MFA) を使用するには、次のうち 1 つ以上が必要です。
 
--   Office 2013 (最小バージョン):
+Azure Information Protection で multi-factor authentication (MFA) を使用するには、次のうち少なくとも1つがインストールされている必要があります。
 
-    -   Office 2013 をご使用の場合に Active Directory Authentication Library (ADAL) をサポートするには、追加の更新プログラムのインストールが必要な場合があります。 たとえば、[Office 2013 用の更新プログラム (KB3054853) (2015 年 6 月 9 日)](https://support.microsoft.com/kb/3054853) です。 この更新プログラムの詳細や、Active Directory 認証ライブラリ (ADAL) を使用した最新の認証による Office 2013 へのサインインの詳細については、Office ブログの「[Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)」(Office 2013 最新認証パブリック プレビューの公開) を参照してください。
+- **Microsoft Office、** バージョン2013以降
+- **AIP クライアント**。 最小バージョンは必要ありません。 AIP clients for Windows、および iOS および Android 用のビューアーアプリはすべて MFA をサポートしています。
+- **Mac コンピューター用の Rights Management 共有アプリ**。 RMS 共有アプリでは、2015年9月のリリース以降、MFA がサポートされています。
 
-- Azure Information Protection クライアント:
+> [!NOTE]
+> Office 2013 を使用している場合は、Active Directory 認証ライブラリ (ADAL) をサポートするための追加の更新プログラムをインストールすることが必要になる場合があります。[たとえば、June 9、2015、update For Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853)などです。 
+>
+> 詳細については、Office ブログの「 [office 2013 先進認証のパブリックプレビュー](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) 」を参照してください。       
 
-    - Windows 用の Azure Information Protection クライアントおよび iOS および Android 用のビューアーアプリでは、常に MFA がサポートされています。最小バージョンは必要ありません。
+これらの前提条件を確認したら、テナントの構成に応じて、次のいずれかの操作を行います。
 
--   Mac コンピューター用の Rights Management 共有アプリ:
+- **Azure AD または Office 365 を使用した Microsoft が管理するテナント**。 Azure MFA を構成してユーザー向けに MFA を適用します。 
 
-    -   MFA では、2015 の年 9 月以降にリリースされた RMS 共有アプリがサポートされます。
+    詳細については、次を参照してください。 
+    - [クラウドでの Azure Multi-Factor Authentication Server の概要](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
+    - [Azure Multi-Factor Authentication とは](/multi-factor-authentication/multi-factor-authentication)
 
-確認後、MFA ソリューションを構成します。
+- フェデレーション**テナント。フェデレーションサーバーはオンプレミスで動作**します。 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば、AD FS を使用する場合は、「 [AD FS の追加の認証方法を構成](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)する」を参照してください。 
 
--   Microsoft が管理するテナント (Azure Active Directory または Office 365) の場合:
+    このシナリオの詳細については、Office ブログの「 [Works With office 365 – Identity program が合理化](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)されました。」を参照してください。 
 
-    - Azure MFA を構成してユーザー向けに MFA を適用します。 手順については、Multi-Factor Authentication ドキュメントの「[Getting started with Azure Multi-Factor Authentication in the cloud (クラウドでの Azure Multi-Factor Authentication の概要)](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)」を参照してください。
+## <a name="rights-management-connector--aip-scanner-requirements"></a>Rights Management connector/AIP スキャナの要件
 
-        Azure MFA の詳細については、「[What is Azure Multi-Factor Authentication? (Azure Multi-Factor Authentication とは)](/multi-factor-authentication/multi-factor-authentication)」を参照してください。
+Rights Management コネクタおよび Azure Information Protection スキャナーでは、MFA はサポートされません。 
 
-- 統合テナント (オンプレミスのフェデレーション サーバー) の場合:
-
-    - 使用しているフェデレーション サーバーを Azure Active Directory または Office 365 向けに構成します。 たとえば、AD FS を使用する場合は、「 [AD FS の追加の認証方法を構成](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)する」を参照してください。
-
-        このシナリオの詳細については、Office ブログの「 [Works With office 365 – Identity program が合理化](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/)されました。」を参照してください。
-
-Rights Management コネクタおよび Azure Information Protection スキャナーでは、MFA はサポートされません。 コネクタまたはスキャナーをデプロイする場合は、次のアカウントで MFA を要求することはできません。
+コネクタまたはスキャナーをデプロイする場合は、次のアカウントで MFA を要求することはできません。
 
 - コネクタをインストールおよび構成するアカウント。
-
 - コネクタが作成する、Azure AD のサービス プリンシパル アカウント (**Aadrm_S-1-7-0**)。
-
 - スキャナーを実行するサービス アカウント。
 
-## <a name="next-steps"></a>次の手順
+## <a name="user-upn-values-dont-match-their-email-addresses"></a>ユーザー UPN の値が電子メールアドレスと一致しません
+
+ユーザーの UPN 値が電子メールアドレスと一致しない構成は、推奨される構成ではなく、Azure Information Protection のシングルサインオンをサポートしていません。
+
+UPN 値を変更できない場合は、関連するユーザーの代替 Id を構成し、この代替 ID を使用して Office にサインインする方法を指示します。 
+
+詳細については、次を参照してください。
+
+- [代替ログイン ID を構成する](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)
+- [Office アプリケーションは、SharePoint、OneDrive、および Lync Online の資格情報を定期的に要求](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online)します。
+
+> [!TIP]
+> UPN 値のドメイン名がテナントに対して検証されたドメインである場合は、ユーザーの UPN 値を別の電子メールアドレスとして Azure AD **proxyAddresses**属性に追加します。 これにより、使用権限が付与された時点で UPN 値が指定されている場合に、ユーザーに Azure Rights Management の承認を与えることができます。 
+
+詳細については、「[Azure Information Protection 向けのユーザーとグループの準備](prepare.md)」をご覧ください。
+
+## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>AD FS または別の認証プロバイダーを使用したオンプレミスの認証
+
+AD FS または同等の認証プロバイダーを使用してオンプレミスで認証を行うモバイルデバイスまたは Mac コンピューターを使用している場合は、次のいずれかの構成で AD FS を使用する必要があります。
+
+- **Windows server 2012 R2**の最小サーバーバージョン
+- OAuth 2.0 プロトコルをサポートする代替の認証プロバイダー
+
+## <a name="next-steps"></a>次のステップ
 その他の要件を確認するには、「[Azure Information Protection の要件](requirements.md)」をご覧ください。

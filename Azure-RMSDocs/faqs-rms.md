@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 21a174d8daca5376cd4071d579a50628e1a4d91c
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: c88186c163d1f712c657d9270a7a738289fac6b4
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665794"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298242"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
@@ -59,7 +59,7 @@ HYOK の詳細、制限についての正しい理解、およびどのような
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Azure RMS と統合するサード パーティのソリューションに関する情報はどこで入手できますか。
 
-既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、そのソリューションを実装中であり、そのようなベンダーが増え続けています。 [RMS 対応ソリューション](requirements-applications.md#rms-enlightened-solutions)の一覧に、役立つ情報が掲載されています。また Twitter の [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) からも最新の情報を入手できます。 さらに、[開発者ガイド](./develop/developers-guide.md)を参照したり、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)に統合の具体的な質問を投稿したりすることができます。
+既に多くのソフトウェア ベンダーが、Azure Rights Management と統合するソリューションを持っているか、そのソリューションを実装中であり、そのようなベンダーが増え続けています。 [対応アプリケーション](requirements-applications.md#)の一覧を確認し、Twitter の[Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility)から最新の更新プログラムを入手すると便利な場合があります。 さらに、[開発者ガイド](./develop/developers-guide.md)を参照したり、Azure Information Protection の [Yammer サイト](https://www.yammer.com/AskIPTeam)に統合の具体的な質問を投稿したりすることができます。
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>RMS コネクタには管理パックまたは同様の監視メカニズムがありますか。
 
@@ -139,7 +139,8 @@ Exchange Online と Azure Rights Management サービスを使用する場合は
 すべてのデバイスですべての電子メール アカウントをサポートする新機能の詳細については、ブログの投稿「[Announcing new capabilities available in Office 365 Message Encryption (Office 365 Message Encryption で使用できる新機能のお知らせ)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)」を参照してください。
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Azure RMS では、どのデバイスとファイルの種類がサポートされていますか。
-Azure Rights Management サービスをサポートしているデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](./requirements-client-devices.md)」を参照してください。 サポートされているデバイスによっては一部の Rights Management 機能がサポートされていないため、「[RMS 対応アプリケーション](./requirements-applications.md#rms-enlightened-applications)」の表も確認してください。
+
+Azure Rights Management サービスをサポートしているデバイスの一覧については、「[Azure Rights Management データ保護をサポートするクライアント デバイス](./requirements.md#client-devices)」を参照してください。 サポートされているデバイスによっては、一部の Rights Management 機能が現在サポートされていないため、 [RMS 対応のアプリケーション](./requirements-applications.md)の表も確認してください。
 
 Azure Rights Management サービスはあらゆる種類のファイルに対応しています。 テキスト、イメージ、Microsoft Office (Word、Excel、PowerPoint) ファイル、.pdf ファイル、他のいくつかのアプリケーションのファイルの種類については、Azure Rights Management は暗号化と権限の適用 (アクセス許可) の両方を含むネイティブな保護を提供します。 他のすべてのアプリケーションとファイルの種類については、ファイルのカプセル化と、ユーザーにファイルを開く権限があるかどうかを確認する認証という一般的な保護機能が提供されます。
 

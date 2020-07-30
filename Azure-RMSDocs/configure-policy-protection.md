@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 561997dd0807730379954c0b9eddacc8098bab93
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 141a8e6642745dc36dfd596d11b8153e20c09e69
+ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334166"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Rights Management による保護でラベルを構成する方法
 
@@ -56,7 +56,7 @@ Azure Rights Management 保護の詳細とそのしくみについては、「[A
 ラベルによる保護を適用する場合は、保護されたドキュメントを SharePoint や OneDrive に保存することはお勧めできません。 これらの場所では、保護されたファイルの共同作成、web 用 Office、検索、ドキュメントプレビュー、サムネイル、電子情報開示、データ損失防止 (DLP) はサポートされていません。
 
 > [!TIP]
-> 統合された秘密度ラベルに[ラベルを移行](configure-policy-migrate-labels.md)し、Microsoft 365 コンプライアンス センターなどのラベル管理センターのいずれかから公開すると、保護を適用するラベルはこれらの場所に対してサポートされます。 詳しくは、「[SharePoint および OneDrive で Office ファイルに対して秘密度ラベルを有効にする (パブリック プレビュー)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」をご覧ください。
+> 統合された秘密度ラベルに[ラベルを移行](configure-policy-migrate-labels.md)し、Microsoft 365 コンプライアンス センターなどのラベル管理センターのいずれかから公開すると、保護を適用するラベルはこれらの場所に対してサポートされます。 詳細については、「 [SharePoint および OneDrive での Office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
 
 ユーザーが電子メールを保護するラベルを Outlook で適用するために、Azure Information Protection 用に Exchange を構成する必要はありません。 ただし、Exchange が Azure Information Protection 用に構成されるまで、Exchange で Azure Rights Management による保護を使用するすべての機能を利用できません。 たとえば、ユーザーが携帯電話または Outlook on the web で保護された電子メールを表示できない、保護された電子メールで検索用のインデックスが作成できない、または Rights Management 保護用に Exchange Online DLP を構成できないなどが挙げられます。 このような追加のシナリオを Exchange がサポートできるようにするには、以下のリソースを参照してください。
 
@@ -104,7 +104,7 @@ Azure Rights Management 保護の詳細とそのしくみについては、「[A
     
     ほとんどの場合、アクセス許可設定には **[Azure (クラウド キー)]** を選択します。 **[HYOK (AD RMS)]** は、この "*Hold Your Own Key*" (HYOK) 構成に付随する前提条件と制限を読んで理解するまで選択しないでください。 詳細については、「[AD RMS 保護の Hold Your Own Key (HYOK) の要件と制限事項](configure-adrms-restrictions.md)」を参照してください。 HYOK (AD RMS) の構成を続行するには、手順 9 に進みます。
     
-6. 次のいずれかのオプションを選択します。
+6. 以下のオプションの 1 つを選択します。
     
    - **[アクセス許可を設定する]**: このポータルで新しい保護設定を定義します。
     

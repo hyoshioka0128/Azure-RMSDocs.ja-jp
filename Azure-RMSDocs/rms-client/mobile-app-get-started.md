@@ -12,12 +12,12 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 622786bc1192d6727ef748df970adeb53733f4f8
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048699"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298086"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>iOS 用および Android 用の Microsoft Azure Information Protection アプリの開始
 
@@ -35,9 +35,9 @@ ms.locfileid: "86048699"
 
 AIP モバイルアプリをテストするには、次のいずれかの種類の保護されたファイルにデバイスからアクセスできることを確認します。
 
-|ファイルの種類  |Instructions  |
+|ファイルの種類  |手順  |
 |---------|---------|
-|**... メッセージファイル**     | 権利で保護された電子メールメッセージ。 モバイル電子メールアプリが rights management データ保護をネイティブでサポートしていない場合、保護された電子メールメッセージは電子メールの添付ファイルとして表示されます。 </br></br>Windows コンピューターの Outlook などの別のデバイスを使用して、権限で保護された電子メールメッセージを自分宛てに送信し、モバイルデバイスからアクセスできるようにします。 </br></br>**注:** Rights management をネイティブでサポートしている電子メールクライアントの一覧については、「 [RMS 対応 applications](../requirements-applications.md#rms-enlightened-applications)」の「 **email** 」列を参照してください。 |
+|**... メッセージファイル**     | 権利で保護された電子メールメッセージ。 モバイル電子メールアプリが rights management データ保護をネイティブでサポートしていない場合、保護された電子メールメッセージは電子メールの添付ファイルとして表示されます。 </br></br>Windows コンピューターの Outlook などの別のデバイスを使用して、権限で保護された電子メールメッセージを自分宛てに送信し、モバイルデバイスからアクセスできるようにします。 </br></br>**注:** Rights management をネイティブでサポートしている電子メールクライアントの一覧については、「 [Azure Rights Management データ保護をサポートするアプリケーション](../requirements-applications.md)の**電子メール**行」を参照してください。 |
 |**権限で保護された PDF ファイル**     | 1. Windows コンピューターから、AIP[クラシック](client-classify-protect.md)または統合された[ラベル付けクライアント](clientv2-classify-protect.md)クライアントを使用して PDF ファイルを保護します。 </br>2. 保護された PDF を自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。        |
 |**. Ptxt または ptxt または ppng**     | 1. Windows コンピューターから、AIP[クラシック](client-classify-protect.md)または統合された[ラベル付けクライアント](clientv2-classify-protect.md)クライアントを使用してテキストまたはイメージファイルを保護します。 </br></br>2. 保護されたファイルを自分で送信するか、SharePoint で保護されたライブラリにアップロードして、自分の電子メールアドレスに共有します。 </br></br>**注:** 詳細については、「[分類と保護のサポートされるファイルの種類](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection)」を参照してください。   |
 | | |
