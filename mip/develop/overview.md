@@ -6,14 +6,14 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 45d2e4fb96bb81d8eb7bb982502693e9d5ebf981
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 05d8c070e5dc8f8562f59ff0e3d46b6542d8d74f
+ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556063"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87255167"
 ---
-# <a name="overview"></a>[概要]
+# <a name="overview"></a>概要
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
@@ -40,7 +40,7 @@ MIP SDK では、Office 365 セキュリティとコンプライアンス セン
 
 より網羅された一覧は、[API の概念](concept-apis-use-cases.md)に関するページを参照してください。
 
-MIP SDK は、次のプラットフォームでサポートされます。
+MIP SDK は、次のプラットフォームで使用できます。
 
 [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 

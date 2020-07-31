@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: e9bbbde050f868fda5a31d5bab25e02280e5e826
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 9dca0317e80f1b09331132988aad69bb5f259697
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403318"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135693"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>File API - 電子メール .msg ファイルの処理 (C#)
 
@@ -154,5 +154,5 @@ File API は、他の種類のファイルと同じ方法で .msg ファイル�
 
 | [概要] | エラー メッセージ | 解決策: |
 |---------|---------------|----------|
-| NetworkException:RMS サービスが、要求で不正な入力を検出しました。 RMS エラー コード:Microsoft.RightsManagement.Exceptions.BadInputException | * TemplateId と Policy の両方のパラメーターを null にすると無効です。, CorrelationId=f265b189-ebf6-4b30-a191-41539cdff215, CorrelationId.Description=FileHandler, HttpRequest.Id=04990d53-cf12-4969-9c80-06e365b312f2;d5fb4794-ac84-4445-abc6-647e41df62b2, HttpRequest.SanitizedUrl=https://api.aadrm.com/my/v2/publishinglicenses, HttpResponse.StatusCode=400, NetworkError.Category=FailureResponseCode* | ご自分のプロジェクトが正しくビルドされたにもかかわらず、左と同様な出力がある場合、templateID が不正である可能性があります。 コード ブロックに戻り、保護テンプレート ID を修正し、リビルドおよび再テストします。 |
+| NetworkException:RMS サービスが、要求で不正な入力を検出しました。 RMS エラー コード:Microsoft.RightsManagement.Exceptions.BadInputException | * TemplateID と Policy の両方が null である場合、パラメーターは無効です。, CorrelationId=f265b189-ebf6-4b30-a191-41539cdff215, CorrelationId.Description=FileHandler, HttpRequest.Id=04990d53-cf12-4969-9c80-06e365b312f2;d5fb4794-ac84-4445-abc6-647e41df62b2, HttpRequest.SanitizedUrl=https://api.aadrm.com/my/v2/publishinglicenses, HttpResponse.StatusCode=400, NetworkError.Category=FailureResponseCode* | ご自分のプロジェクトが正しくビルドされたにもかかわらず、左と同様な出力がある場合、templateID が不正である可能性があります。 コード ブロックに戻り、保護テンプレート ID を修正し、リビルドおよび再テストします。 |
 | TemplateNotFoundException | *認識できないテンプレート ID です。, CorrelationId=abb2ef59-ad09-4aa0-b731-f59a92711dad, CorrelationId.Description=FileHandler, HttpRequest.Id=8c688752-ccd2-4dca-ace3-b67b44176689;78538a57-a9fd-4717-8924-33581a04598b* | ご自分のプロジェクトが正しくビルドされたにもかかわらず、左と同様な出力がある場合、templateID が不正である可能性があります。 コード ブロックに戻り、保護テンプレート ID を修正し、リビルドおよび再テストします。 |

@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection (AIP) とは
-description: Azure Information Protection (AIP) は、組織によるドキュメントや電子メールのラベル付けに役立つサービスで、データがどこにあっても分類して保護することができます。
+description: Azure Information Protection (AIP) は、組織によるドキュメントやメールのラベル付けに役立つサービスです。 AIP によって、保存されている場所に関係なくデータの分類と保護を行うことができます。
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,28 +12,35 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 14626d02ca0b5d492312e9d17f0c801c782f5a15
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a728faf211fb34f2ef5b296f28cff97c4c76e8e4
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048742"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927490"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
 >*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection (AIP) は、組織がドキュメントや電子メールにラベルを適用して、分類および保護できるようにするクラウドベースのソリューションです。 ラベルの適用は、ルールと条件を使用して管理者が自動で実行するか、ユーザーが手動で実行するか、その組み合わせ (ユーザーに提示するレコメンデーションを管理者が定義する) で行うことができます。
+Azure Information Protection (AIP) は、組織がドキュメントや電子メールにラベルを適用して、分類および保護できるようにするクラウドベースのソリューションです。 次のようにラベルを適用できます。
 
-たとえば、管理者は、クレジット カート情報などの機密データを検出するルールを使用するラベルを構成することができます。 この場合、クレジット カード情報を Word ファイルに保存するすべてのユーザーに対し、ドキュメントの先頭に、このシナリオで構成されたラベルを適用することを推奨するヒントが表示される場合があります。
+- 管理者がルールと条件を使用して**自動的に**
+- ユーザーが**手動で**
+- **組み合わせによって** (管理者の定義した推奨事項がユーザーに表示される)
 
-ラベルはドキュメントを分類したり、任意で保護したりできます。
+たとえば、管理者は、クレジット カート情報などの機密データを検出するルールを使用するラベルを構成することができます。 この場合、Word ファイルにクレジット カード情報を保存するすべてのユーザーに対して、このシナリオに合った関連ラベルの適用を推奨するヒントをドキュメントの上部に表示することができます。
 
-コンテンツの[分類](#how-labels-apply-classification)と[保護](#how-data-is-protected)により、その使用方法を追跡および制御したり、データ フローを分析してビジネスに関する洞察を得たり、危険な動作を検出し修正措置を取ったり、ドキュメントへのアクセスを追跡したり、データの漏えいや誤用を防いだりできます。
+ラベルによってドキュメントを[分類](#how-labels-apply-classification-with-aip)し、必要に応じて[保護](#how-aip-protects-your-data)することができます。これにより、次の操作が可能になります。
 
-## <a name="how-labels-apply-classification"></a>ラベルによる分類のしくみ
+- コンテンツの使用方法を**追跡および制御する**
+- **データ フローを分析**してビジネスに関する分析情報を得る **- 危険な動作を検出**して修正措置を講じる
+- **ドキュメントへのアクセスを追跡**し、データの漏えいや悪用を防ぐ
+- その他...
 
-Azure Information Protection のラベルは、ドキュメントと電子メールの両方を分類するために使用します。 
+## <a name="how-labels-apply-classification-with-aip"></a>AIP でのラベルによる分類のしくみ
+
+Azure Information Protection を使用して、ドキュメントとメールの両方に分類ラベルを適用できます。
 
 次のようなコンテンツのラベル付けがあります。
 
@@ -47,16 +54,23 @@ Azure Information Protection のラベルは、ドキュメントと電子メー
 
 この例では、ラベルは次も行っています。
 
-- **フッター "*秘密度: 一般*" がメール メッセージに追加されました。** このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。 
+- **フッター "*秘密度: 一般*" がメール メッセージに追加されました。** このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。
 - **電子メール ヘッダーにメタデータが埋め込まれました。** ヘッダー データを使用すると、電子メール サービスはラベルを検査し、理論上、監査エントリを作成できるようになり、組織外への送信ができなくなります。
 
-## <a name="how-data-is-protected"></a>データ保護のしくみ
+## <a name="how-aip-protects-your-data"></a>AIP によってデータを保護する方法
 
-Azure Information Protection は *Azure Rights Management サービス* (Azure RMS) を使用してデータを保護します。 Azure RMS は、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) に統合されますが、独自に使用したり、サードパーティーのアプリケーションや情報保護ソリューションと共に使用したりもできます。 Azure RMS はオンプレミスとクラウド ソリューションの両方で動作します。
+Azure Information Protection では、データを保護するために ["*Azure Rights Management サービス*" (Azure RMS)](what-is-azure-rms.md) が使用されます。 
+
+Azure RMS は、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) に統合されますが、独自に使用したり、サードパーティーのアプリケーションや情報保護ソリューションと共に使用したりもできます。 Azure RMS はオンプレミスとクラウド ソリューションの両方で動作します。
 
 Azure RMS では暗号化、ID、および承認ポリシーが使用されます。 AIP ラベルと同様に、Azure RMS を使用して適用された保護は、ドキュメントや電子メールの場所に関係なく保持されます。そのため、他のユーザーと共有されている場合でも、コンテンツを確実に管理できます。
 
-保護設定は、ラベルの構成に含めることができます。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールを分類して保護できます。 保護をサポートするアプリケーションとサービスから自分で保護設定を使用することもできますが、ラベルを付けることはできません。 保護のみをサポートするアプリケーションとサービスでは、保護設定は [Rights Management テンプレート](#rights-management-templates)として表示されます。
+保護設定は:
+
+- **ラベルの構成に含めることができます**。そのため、ユーザーはラベルを適用するだけで、ドキュメントとメールを分類して保護できます。 
+- 保護をサポートするアプリケーションとサービスによって**独自に使用することもできます**。ただし、ラベルを付けることはできません。 
+
+    保護のみをサポートするアプリケーションとサービスでは、保護設定は [Rights Management テンプレート](#rights-management-templates)として表示されます。
 
 たとえば、組織内のユーザーのみがアクセスできるように、レポートや売上予測スプレッドシートを構成することができます。 この場合、保護設定を適用して、ドキュメントを編集できるかどうかを制御したり、読み取り専用に制限したり、印刷されないようにしたりできます。
 
@@ -64,13 +78,13 @@ Azure RMS では暗号化、ID、および承認ポリシーが使用されま�
 
 ### <a name="rights-management-templates"></a>Rights Management テンプレート
 
-Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定のテンプレートが使用可能になります。 これらのテンプレートをすぐに使用するか、独自の保護設定を構成して、新しいテンプレートにより制限の厳しいコントロールを適用します。 
+Azure Rights Management サービスを有効にするとすぐに、組織内のユーザーがデータにアクセスすることを制限する 2 つの既定の Rights Management テンプレートが使用可能になります。 これらのテンプレートをすぐに使用するか、独自の保護設定を構成して、新しいテンプレートにより制限の厳しいコントロールを適用します。
 
 Rights Management テンプレートは、Azure Rights Management をサポートするすべてのアプリケーションやサービスで使用できます。
 
 次の図は Exchange 管理センターの例を示しています。Exchange Online メール フロー ルールで RMS テンプレートを使用するように構成することができます。
 
-![Exchange Online のテンプレートを選択する場合の例](./media/templates-exchangeonline-callouts.png)
+:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="Exchange Online のテンプレートを選択する場合の例":::
 
 > [!NOTE]
 > 保護設定を含む AIP ラベルを作成すると、ラベルとは別に使用できる、対応する Rights Management テンプレートも作成されます。 
@@ -90,7 +104,7 @@ AIP クライアントにより、Office アプリケーションに Information
 
 さらに、AIP クライアントを使用すると、ユーザーは Windows エクスプローラーの右クリック メニューを使用して、追加のファイルの種類、または複数のファイルを一度に分類して保護できるようになります。 次に例を示します。
 
-![Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]](./media/right-click-classify-protect-folder.png)
+:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]":::
 
 **[分類して保護する]** メニュー オプションは、Office アプリケーションの Information Protection バーと同様に機能し、ユーザーがラベルを選択したり、カスタムのアクセス許可を設定したりできるようになります。
 
@@ -111,7 +125,7 @@ Exchange Online で AIP を使用すると、保護された電子メールが�
 
 たとえば、Gmail ユーザーが受信した電子メール メッセージに次のプロンプトが表示される場合があります。
 
-![OME と AIP の Gmail 受信者エクスペリエンス](./media/ome-message.png)
+:::image type="content" source="media/ome-message.png" alt-text="OME と AIP の Gmail 受信者エクスペリエンス":::
 
 電子メールを送信するユーザーに必要なアクションは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、AIP クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択します。 
 
@@ -143,23 +157,28 @@ Microsoft 365 を使用した、あらゆる場所にある機密情報の検出
 
 > [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
 
+詳細については、次をご覧ください。
+
+- [Microsoft 365 管理センターの新機能](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
+- [SharePoint 管理センターの新機能](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+
 ## <a name="additional-azure-information-protection-resources"></a>Azure Information Protection の追加資料
 
-- 無料試用版:[Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- **無料試用版:** [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- サブスクリプションのオプションと価格:[Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
+- **サブスクリプションのオプションと価格:** [Azure Information Protection の価格](https://azure.microsoft.com/pricing/details/information-protection)
 
-- クライアントのダウンロード:[Azure Information Protection クライアント](https://www.microsoft.com/download/details.aspx?id=53018)
+- **クライアントのダウンロード:** [Azure Information Protection クライアント](https://www.microsoft.com/download/details.aspx?id=53018)
 
-- カスタマイズ可能なユーザー ガイドをダウンロードする: [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- **カスタマイズ可能なエンド ユーザー ガイドのダウンロード:** [Azure Information Protection エンド ユーザー導入ガイド](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- よく寄せられる質問:[Azure Information Protection に関してよく寄せられる質問](faqs.md)
+- **よくあるご質問:** [Azure Information Protection に関してよく寄せられる質問](faqs.md)
 
-- Yammer:[Azure Information Protection](https://www.yammer.com/AskIPTeam)
+- **Yammer:** [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-- ドキュメントの新しい項目:[Azure Information Protection テクニカル ブログ](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
+- **Docs Twitter フィード:** [https://twitter.com/docsmsft](https://twitter.com/docsmsft)
 
-その他のリソース: [Azure Information Protection の情報とサポート](information-support.md)
+**その他のリソース:** [Azure Information Protection の情報とサポート](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
@@ -182,4 +201,6 @@ Microsoft Ignite 2019 オーランドは大成功でした。 そこでは、最
 
 ## <a name="next-steps"></a>次のステップ
 
-[クイック スタート](quickstart-viewpolicy.md)と[チュートリアル](infoprotect-quick-start-tutorial.md)を参照すれば、Azure Information Protection をご自分で構成および確認できます。 このサービスを組織向けにデプロイする準備ができている場合は、[攻略ガイド](how-to-guides.md)を参照してください。
+[クイック スタート](quickstart-viewpolicy.md)と[チュートリアル](infoprotect-quick-start-tutorial.md)を参照すれば、Azure Information Protection をご自分で構成および確認できます。 
+
+このサービスを組織向けにデプロイする準備ができている場合は、[攻略ガイド](how-to-guides.md)を参照してください。

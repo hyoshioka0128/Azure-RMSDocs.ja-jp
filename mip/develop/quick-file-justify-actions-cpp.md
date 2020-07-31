@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
-ms.openlocfilehash: f50613340cc4c977239910d5047943d25239b1bc
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403291"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135676"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK File API - ファイルの秘密度ラベルを下げるアクションの理由 (C++)
 
@@ -220,4 +220,4 @@ system("pause");
     Press any key to continue . . .
    ```
 
-なお、ファイルから削除するラベルの各ラベル ポリシーで理由が必要な場合、`DeleteLabel()` 操作で同様のアプローチをとる必要があります。`DeleteLabel()` 関数は、`mip::JustificationRequiredError` の例外をスローします。 ラベルを正常に削除するには、その前に例外処理で `isDowngradeJustified` フラグを true に設定する必要があります。
+なお、ファイルから削除するラベルの各ラベル ポリシーで理由が必要な場合、`DeleteLabel()` 操作で同様のアプローチをとる必要があります。 `DeleteLabel()` 関数からは、例外 `mip::JustificationRequiredError` がスローされます。 ラベルを正常に削除するには、その前に例外処理で `isDowngradeJustified` フラグを true に設定する必要があります。
