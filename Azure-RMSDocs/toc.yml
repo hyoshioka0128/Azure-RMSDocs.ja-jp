@@ -10,14 +10,10 @@
       items:
         - name: 概要
           href: requirements.md
-        - name: Azure Active Directory の要件
+        - name: Azure Active Directory の追加要件
           href: requirements-azure-ad.md
-        - name: クライアント デバイスでの保護のサポート
-          href: requirements-client-devices.md
         - name: アプリケーションでの保護のサポート
           href: requirements-applications.md
-        - name: オンプレミス サーバーでの保護のサポート
-          href: requirements-servers.md
     - name: AIP は ... とも呼ばれます
       href: aka.md
 - name: クイックスタート
@@ -94,7 +90,13 @@
     - name: サービスの計画と準備
       items:
         - name: デプロイ ロードマップ
-          href: deployment-roadmap.md
+          items:
+            - name: 概要
+              href: deployment-roadmap.md
+            - name: 分類、ラベル付け、保護のロードマップ
+              href: deployment-roadmap-classify-label-protect.md
+            - name: 保護のみのロードマップ (クラシック クライアント)
+              href: deployment-roadmap-protect-only.md
         - name: テナント キーの計画と実装
           items:
             - name: サポートされているキーの種類
