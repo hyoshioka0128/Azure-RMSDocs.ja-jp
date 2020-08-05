@@ -4,7 +4,7 @@ description: Azure Rights Management (RMS) コネクタをインストールし�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,36 +13,40 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a9bab55999334830c94f64bc32339135db70c5a
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 0a02d5bb811bd18698a0ca4ec0a797ff4e31ffa4
+ms.sourcegitcommit: a495476a439a57cf6a4b3446575e344504b3fefb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136845"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87554945"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2016、windows Server 2012 R2、windows server 2012*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、2016、2012 R2、および Windows server 2012*
 
 以下の情報は、Azure Rights Management (RMS) コネクタをインストールして構成する場合に役立ちます。 これらの手順では、「[Deploying the Azure Rights Management connector](deploy-rms-connector.md)」 (Azure Rights Management コネクタのデプロイ) の手順 1 から手順 4 を説明します。
 
 作業を開始する前に、このデプロイの[前提条件](deploy-rms-connector.md#prerequisites-for-the-rms-connector)を確認してください。
 
+セットアップと構成を完了するには、コネクタが適切な Azure ソブリン cloud インスタンスを認識していることを確認します。 
+- **Azurecloud**: Azure の商用サービス
+- **AzureChinaCloud**: 21vianet によって運営される Azure
+- **Azureusgovernment**: AZURE GOVERNMENT (GCC High/DoD)
+- **AzureUSGovernment2**: Azure Government 2
+- **AzureUSGovernment3**: Azure Government 3
 
 ## <a name="installing-the-rms-connector"></a>RMS コネクタのインストール
 
 1.  RMS コネクタを実行するコンピューター (2 つ以上) を特定します。 これらのコンピューターは、「前提条件」に記載されている最小仕様を満たしている必要があります。
 
     > [!NOTE]
-    > テナント (Office 365 テナントまたは Azure AD テナント) ごとに 1 つの RMS コネクタ (高可用性を実現するために複数のサーバーで構成されている) をインストールします。 Active Directory RMS とは異なり、RMS コネクタを各フォレストにインストールする必要はありません。
+    > テナント (Microsoft 365 テナントまたは Azure AD テナント) ごとに1つの RMS コネクタ (高可用性のために複数のサーバーで構成される) をインストールします。 Active Directory RMS とは異なり、RMS コネクタを各フォレストにインストールする必要はありません。
 
 2.  [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)から RMS コネクタのソース ファイルをダウンロードします。
 
     RMS コネクタをインストールするには、RMSConnectorSetup.exe をダウンロードします。
 
     さらに:
-
-    -   後で 32 ビット コンピューターからコネクタを構成する場合は、RMSConnectorAdminToolSetup_x86.exe もダウンロードします。
 
     -   RMS コネクタのサーバー構成ツールを使用してオンプレミス サーバーのレジストリ設定を自動構成する場合は、GenConnectorConfig.ps1 もダウンロードします。
 
@@ -52,20 +56,25 @@ ms.locfileid: "86136845"
 
 5.  RMS コネクタのライセンス条項を読んで同意したら、[**次へ**] をクリックします。
 
-続行するには、RMS コネクタを構成するためのアカウントとパスワードを入力します。
 
 ## <a name="entering-credentials"></a>資格情報の入力
-RMS コネクタを構成する前に、RMS コネクタを構成するのに十分な特権を持つアカウントの資格情報を入力する必要があります。 たとえば、「」と入力し、 <strong>admin@contoso.com</strong> このアカウントのパスワードを指定します。
 
-Microsoft Rights Management コネクタのセットアップでは MFA がサポートされていないため、このアカウントには多要素認証 (MFA) を必要としません。 また、Azure AD 条件付きアクセスを使用する場合は、このアカウントの[レガシ認証をブロック](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication)しないでください。
+RMS コネクタを構成する前に、ソリューションに一致するクラウド環境を最初に選択する必要があります。   
+- **Azurecloud**: Azure の商用サービス
+- **AzureChinaCloud**: 21vianet によって運営される Azure
+- **Azureusgovernment**: AZURE GOVERNMENT (GCC High/DoD)
+- **AzureUSGovernment2**: Azure Government 2
+- **AzureUSGovernment3**: Azure Government 3
 
-コネクタのセットアップでは、このパスワードに文字制限もあります。 次の文字のいずれかを含むパスワードは使用できません: アンパサンド ()、左山 **&** かっこ **([** )、右山かっこ ( **]** )、二重引用符 ( **"** )。とアポストロフィ ( **'** ) です。 パスワードにこれらの文字が含まれている場合、RMS コネクタのセットアップで認証が失敗し、他のシナリオでこのアカウントとパスワードを使用して正常にサインインできても、[**ユーザー名] と [パスワードの組み合わせは正しくありません**] というエラーメッセージが表示されます。 このシナリオがパスワードに適用される場合は、これらの特殊文字をまったく含まないパスワードと別のアカウントを使用するか、パスワードをリセットし、これらの特殊文字を使用しないようにします。
+:::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="新しい AAD RM コネクタを認証するための適切な Azure 環境を選択します":::
+
+クラウド環境を選択したら、**ユーザー名**と**パスワード**を入力します。 RMS コネクタを構成するための十分な特権を持つアカウントの資格情報を入力してください。 たとえば、「」と入力し、 <strong>admin@contoso.com</strong> このアカウントのパスワードを指定します。
 
 さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントでコンテンツを保護できることを確認してください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合、"**管理サービスと組織の場所を検出できませんでした。" というエラーメッセージが表示されます。組織で Microsoft Rights Management サービスが有効になっていることを確認します。**
 
 次のいずれかの特権を持つアカウントを使用できます。
 
--   **テナントのグローバル管理者**: Office 365 テナントまたは Azure AD テナントのグローバル管理者であるアカウント。
+-   **テナントのグローバル管理者**: Microsoft 365 テナントまたは Azure AD テナントのグローバル管理者であるアカウント。
 
 -   **Azure Rights Management のグローバル管理者**: Azure RMS グローバル管理者ロールを割り当てられている Azure Active Directory のアカウント。
 
@@ -81,7 +90,7 @@ Microsoft Rights Management コネクタのセットアップでは MFA がサ�
     >     [**管理者として実行**] コマンドを使用して Windows PowerShell を起動し、 [Connect-aipservice](/powershell/module/aipservice/connect-aipservice)コマンドを使用して保護サービスに接続します。
     >
     >     ```
-    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     Connect-AipService                   //provide Microsoft 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
     > 2.  次に、次のパラメーターのいずれかを使用して、 [Add-Aipserviceroleの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドを実行します。
     >
@@ -102,7 +111,7 @@ Microsoft Rights Management コネクタのセットアップでは MFA がサ�
 
 RMS コネクタのインストール プロセスでは、すべての前提条件ソフトウェアが検証されてインストールされます。また、インターネット インフォメーション サービス (IIS) が存在しない場合はインストールされ、その後、コネクタ ソフトウェアがインストールされて構成されます。 さらに、以下のものを作成することで、Azure RMS の構成準備が行われます。
 
--   コネクタを使用して Azure RMS と通信することが許可されているサーバーの空テーブル。 後で、このテーブルにサーバーを追加します。
+-   コネクタを使用して Azure RMS と通信することが許可されているサーバーの空テーブル。 後でこのテーブルにサーバーを追加します。
 
 -   Azure RMS での操作を承認する、コネクタ用の一連のセキュリティ トークン。 これらのトークンは Azure RMS からダウンロードされ、ローカル コンピューター上のレジストリにインストールされます。 これらはデータ保護アプリケーション プログラム (DPAPI) およびローカル システム アカウントの資格情報を使用して保護されます。
 
@@ -225,7 +234,7 @@ HTTPS オプションを使用する場合は、コネクタを実行するす�
 ## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>管理用コンピューターへの RMS コネクタ管理ツールのインストール
 RMS コネクタがインストールされていないコンピューターが次の要件を満たしている場合は、RMS コネクタ管理ツールを実行することができます。
 
--   Windows Server 2012 または Windows Server 2012 R2 (すべてのエディション)、Windows 8.1、Windows 8 を実行する物理または仮想コンピューター。
+-   Windows Server 2019、2016、2012、または Windows Server 2012 R2 (すべてのエディション)、Windows 10、Windows 8.1、Windows 8 を実行する物理または仮想コンピューター。
 
 -   1 GB 以上の RAM。
 
@@ -237,13 +246,11 @@ RMS コネクタがインストールされていないコンピューターが�
 
 RMS コネクタ管理ツールをインストールするには、次のファイルを実行します。
 
--   32 ビット コンピューターの場合: RMSConnectorAdminToolSetup_x86.exe
-
 -   64 ビット コンピューターの場合: RMSConnectorSetup.exe
 
 これらのファイルをまだダウンロードしていない場合は、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=314106)からダウンロードできます。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 これで RMS コネクタのインストールと構成が完了したので、コネクタを使用するようにオンプレミス サーバーを構成することができます。 「[Azure Rights Management コネクタ用にサーバーを構成する](configure-servers-rms-connector.md)」に進みます。
 
