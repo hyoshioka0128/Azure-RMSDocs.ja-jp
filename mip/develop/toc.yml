@@ -129,6 +129,8 @@
           href: concept-async-observers-policy-cpp.md
         - name: 保護 API オブザーバー (C++)
           href: concept-async-observers-protection-cpp.md
+    - name: プロキシのサポート
+      href: concept-mip-proxies.md
     - name: SDK テレメトリ
       href: concept-mip-telemetry.md
     - name: ユース ケース
