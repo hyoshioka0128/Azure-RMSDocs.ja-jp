@@ -4,7 +4,7 @@ description: Azure Rights Management サービスを使用する場合、テン�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a5afc20e616809a41d1e724ba657bb99667da858
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: d531269a9323de2f9157f1dafd8962a4f228733f
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927626"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802234"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -39,7 +39,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |Exchange On-Premises と Rights Management コネクタ<br /><br />トランスポート ルールと Outlook Web アプリに該当|自動更新 - 追加の手順は必要ありません。 ただし、Outlook Web アプリは UI を一日キャッシュします。|
 |Office 2019 for Mac と Office 2016 for Mac|保護されたコンテンツを開くと自動的に更新されます。 強制的に更新するには、次のセクションの「 [office 2019 For mac And office 2016 For mac: テンプレートを強制的に更新する方法](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates)」を参照してください。|
 |Mac コンピューター用 RMS 共有アプリ|自動更新 - 追加の手順は必要ありません。|
-|[組み込みラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)付き[のエンタープライズ向けアプリの Microsoft 365](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)|この組み込みラベル付けクライアントは、テンプレートをダウンロードせずにオンラインでアクセスします。追加の手順は必要ありません。|
+|[組み込みラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)付き Office 365 ProPlus|この組み込みラベル付けクライアントは、テンプレートをダウンロードせずにオンラインでアクセスします。追加の手順は必要ありません。|
 
 クライアントアプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更用に更新)、ダウンロードが完了して新しいテンプレートまたは更新されたテンプレートが完全に機能するまで、最大30分待機するように準備します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
 

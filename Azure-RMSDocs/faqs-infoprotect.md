@@ -12,16 +12,16 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e1b73aeed80314760c402cc313b367d543e7d5ab
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 20698241962b8dfe3e1fd81b7f0538a7ddfdd46a
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483203"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802183"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
@@ -32,7 +32,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 現時点では、Windows 用に2つの Azure Information Protection クライアントがあります。 
 
-- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**です: Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
+- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**: Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security Center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
 
 - Azure portal からラベルとポリシー設定をダウンロードする**Azure Information Protection クライアント (クラシック)** 。 このクライアントは、以前の一般公開バージョンのクライアント上に構築されます。
 
@@ -64,7 +64,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
-No: 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
+いいえ。 添付ファイルのある電子メール メッセージにラベルを付ける場合、これらの添付ファイルは同じラベルを継承しません。 添付ファイルは、ラベルがないか、個別に適用されたラベルが付けられた状態で保持されます。 ただし、電子メールのラベルが保護を適用する場合、その保護は Office の添付ファイルに適用されます。
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>DLP ソリューションや他のアプリケーションは Azure Information Protection とどのように統合できますか?
 
@@ -84,11 +84,11 @@ Exchange Online のメール フロー ルールで、このメタデータを�
 
 1. ドキュメントにラベルを付けて保存します。 このアクションにより新しいメタデータ フィールドが作成され、これをフィールド コード用に使用できます。
 
-2. ドキュメント内で、ラベルの分類を追加したい位置にカーソルを合わせた後、 **[挿入]** タブから **[テキスト]**  >  **[クイック パーツ]**  >  **[フィールド]** を選択します。
+2. ドキュメント内で、ラベルの分類を追加したい位置にカーソルを合わせた後、**[挿入]** タブから **[テキスト]** > **[クイック パーツ]** > **[フィールド]** を選択します。
 
-3. **[フィールド]** ダイアログ ボックスの **[カテゴリ]** ドロップダウンから、 **[ドキュメント情報]** を選択します。 次に、 **[フィールド名]** ドロップダウンから **[DocProperty (文書プロパティ)]** を選択します。
+3. **[フィールド]** ダイアログ ボックスの **[カテゴリ]** ドロップダウンから、**[ドキュメント情報]** を選択します。 次に、**[フィールド名]** ドロップダウンから **[DocProperty (文書プロパティ)]** を選択します。
 
-4. **[プロパティ]** ドロップダウンから **[秘密度]** を選択し、 **[OK]** を選択します。
+4. **[プロパティ]** ドロップダウンから **[秘密度]** を選択し、**[OK]** を選択します。
 
 現在のラベルの分類がドキュメントに表示され、この値はドキュメントを開くかテンプレートを使用するたびに自動的に更新されます。 このため、ラベルが変更されると、このフィールド コードに対して表示される分類がドキュメント内で自動的に更新されます。
 
@@ -100,6 +100,6 @@ Exchange メッセージ分類は、電子メールを分類できる古い機�
 
 同じ手法を使用して、Outlook on the web とこれらのモバイル用メール アプリケーションで独自のラベルを使用できます。
 
-Outlook を Exchange Online で使用している場合は、これを行う必要はないことに注意してください。これは、Office 365 セキュリティ/コンプライアンスセンター、Microsoft 365 Security Center から機密ラベルを公開する場合に、組み込みのラベル付けをサポートするためです。、または Microsoft コンプライアンスセンター。
+Outlook を Exchange Online と共に使用している場合は、これを行う必要はありません。これは、Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security center、または Microsoft コンプライアンスセンターから機密ラベルを公開する場合に、組み込みラベル付けをサポートするためです。
 
-Web 上の Outlook で組み込みのラベル付けを使用できない場合は、この回避策の構成手順を参照してください。[モバイルデバイスのラベル付けソリューションの Exchange メッセージ分類を Azure Information Protection と統合](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution)します。
+Web 上の Outlook で組み込みのラベル付けを使用できない場合は、この回避策の構成手順「[従来の Exchange メッセージ分類との統合](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)」を参照してください。

@@ -4,7 +4,7 @@ description: Azure Information Protection の Rights Management 保護を使用�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 779d527df4b95b985ae72b41414f5c91d7775d01
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 4d6ee5aedd67faec1afa088291a742f29c421d84
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927320"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802123"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Azure Information Protection の使用権限を構成する
 
@@ -43,7 +43,7 @@ ms.locfileid: "86927320"
 
 |使用権限|説明|実装|
 |-------------------------------|---------------------------|-----------------|
-|共通名: **コンテンツの編集、編集** <br /><br />ポリシーでのエンコード: **DOCEDIT**|アプリケーション内のコンテンツの変更、再配置、書式設定、または並べ替えをユーザーに許可します。 編集済みのコピーを保存する権限は付与されません。<br /><br />Word では、 [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25)の最小バージョンで[Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)を使用していない限り、この権限では、**変更の追跡**をオンまたはオフにしたり、変更の追跡機能をすべてレビュー担当者として使用したりするのに十分ではありません。 代わりに、変更の追跡オプションをすべて使用するには、次の権限が必要です: **フル コントロール**。 |Office カスタム権限: **変更**と**フル コントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツの編集**<br /><br />ラベル管理センターの名前と Azure portal:**コンテンツの編集、編集 (docedit)**<br /><br />AD RMS テンプレートでの名前: **編集** <br /><br />API の定数または値: 該当なし。|
+|共通名: **コンテンツの編集、編集** <br /><br />ポリシーでのエンコード: **DOCEDIT**|アプリケーション内のコンテンツの変更、再配置、書式設定、または並べ替えをユーザーに許可します。 編集済みのコピーを保存する権限は付与されません。<br /><br />Word では、バージョン [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25) 以降の Office 365 ProPlus を持っていない限り、**[変更の追跡]** をオンまたはオフにしたり、レビュー担当者として変更の追跡機能をすべて使用したりするには、この権限は十分ではありません。 代わりに、変更の追跡オプションをすべて使用するには、次の権限が必要です: **フル コントロール**。 |Office カスタム権限: **変更**と**フル コントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツの編集**<br /><br />ラベル管理センターの名前と Azure portal:**コンテンツの編集、編集 (docedit)**<br /><br />AD RMS テンプレートでの名前: **編集** <br /><br />API の定数または値: 該当なし。|
 |共通名: **保存** <br /><br />ポリシーでのエンコード: **EDIT**|ドキュメントを現在の場所に保存することをユーザーに許可します。<br /><br />Office アプリケーションでは、この権限により、ユーザーがドキュメントを変更してそれを新しい場所に保存することもできます。選択したファイル形式が Rights Management 保護をネイティブにサポートしている場合は、新しい名前でドキュメントが保存されます。 ファイル形式の制限により、ファイルから元の保護を削除することはできません。|Office カスタム権限: **変更**と**フル コントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **ファイルの保存**<br /><br />ラベル管理センターの名前と Azure portal:**保存 (編集)**<br /><br />AD RMS テンプレートでの名前: **保存** <br /><br />API の定数または値: `IPC_GENERIC_WRITE L"EDIT"`|
 |共通名: **コメント** <br /><br />ポリシーでのエンコード: **COMMENT**|コンテンツに注釈やコメントを追加するオプションを有効にします。<br /><br />この権限は SDK で使用でき、Azure Information Protection と Windows PowerShell の RMS 保護モジュールでアドホック ポリシーとして使用できます。また、いくつかのソフトウェア ベンダーのアプリケーションに実装されています。 ただし、これは広く使用されておらず、Office アプリケーションではサポートされていません。|Office カスタム権限: 実装されていません。 <br /><br />Azure クラシック ポータルでの名前: 実装されていません。<br /><br />ラベル管理センターの名前と Azure portal: 実装されていません。<br /><br />AD RMS テンプレートでの名前: 実装されていません。 <br /><br />API の定数または値: `IPC_GENERIC_COMMENT L"COMMENT`|
 |共通名: **名前を付けて保存、エクスポート** <br /><br />ポリシーでのエンコード: **EXPORT**|別のファイル名でコンテンツを保存するオプション (名前を付けて保存) を有効にします。 <br /><br />Azure Information Protection クライアントについては、ファイルを保護なしで保存し、新しい設定とアクセス許可で再保護することができます。 許可されているこれらの操作は、この権限を持つユーザーが保護されたドキュメントまたは電子メールから Azure Information Protection ラベルを変更または削除できることを意味します。 <br /><br />この権限は、アプリケーションでその他のエクスポート オプション (**[OneNote に送る]** など) を実行することもユーザーに許可します。|Office カスタム権限: **フル コントロール** オプションの一部。 <br /><br />Azure クラシック ポータルでの名前: **コンテンツのエクスポート (名前を付けて保存)** <br /><br />ラベル管理センターの名前と Azure portal: 名前を付け**て保存、エクスポート (エクスポート)**<br /><br />AD RMS テンプレートでの名前: **エクスポート (名前を付けて保存)** <br /><br />API の定数または値: `IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -109,7 +109,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 ### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>転送不可と転送の使用権限を付与しないことの違い
 
-**[転送不可]** オプションの適用と電子メールに**転送**使用権限を与えないテンプレートの適用には重要な違いがあります。**[転送不可]** オプションの場合、元の電子メールでユーザーが選択した受信者に基づく、許可されたユーザーの動的なリストが使用されます。テンプレートの権限の場合、管理者が前もって指定した許可されたユーザーの静的なリストが使用されます。 どのような違いがあるでしょうか。 例を見てみましょう。 
+**[転送不可]** オプションの適用と電子メールに**転送**使用権限を与えないテンプレートの適用には重要な違いがあります。**[転送不可]** オプションの場合、元の電子メールでユーザーが選択した受信者に基づく、許可されたユーザーの動的なリストが使用されます。テンプレートの権限の場合、管理者が前もって指定した許可されたユーザーの静的なリストが使用されます。 違いは何でしょうか。 例を見てみましょう。 
 
 あるユーザーがいくつかの情報をマーケティング部署の一部の人たちに電子メールで送信します。それ以外の人とこの情報を共有することは許されません。 権限 (表示、返信、保存) をマーケティング部署に限定するテンプレートで電子メールを保護するべきでしょうか。  それとも、**[転送不可]** オプションを選択するべきでしょうか。 いずれの場合でも、受信者は電子メールを転送できません。 
 
@@ -124,7 +124,7 @@ Exchange のクライアントとサービス (Outlook クライアント、Outl
 
 Exchange Online で Office 365 Message Encryption の新機能を使用する場合、新しい電子メール オプション (**暗号化のみ**) を利用できます。
 
-このオプションは、Exchange Online を使用するテナントに対して使用できます。また、web 上の Outlook で選択できます。また、メールフロールールの別の権利保護オプションとして、Office 365 DLP [Microsoft 365](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4)アクションとして、また、 [Azure RMS をサポートする office 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合は、1805の最小バージョンとして選択できます。 [暗号化のみ] オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
+このオプションは、Exchange Online を使用するテナントが利用可能であり、Outlook on the web でメール フロー ルールの別の権利保護オプションとして、Office 365 の DLP アクションとして、および Outlook (Office 365 ProPlus の最小バージョン [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4)、および [Azure RMS をサポートする Office 365 アプリ](requirements-applications.md#windows-computers-for-information-rights-management-irm)がある場合は、最小バージョン 1805) から選択することができます。 [暗号化のみ] オプションの詳細については、Office チームの次のブログ投稿のお知らせを参照してください。 [office 365 Message Encryption でのロールアウトのみを暗号化](https://aka.ms/omefeb2018)します。
 
 このオプションが選択されると、電子メールが暗号化され、受信者は認証される必要があります。 すると、受信者には**名前を付けて保存、エクスポート**と**フル コントロール**を除くすべての使用権限が割り当てられます。 この使用権限の組み合わせは、保護を削除できないこと以外は、受信者には制限がないということです。 たとえば、受信者は電子メールをコピー、印刷、および転送することができます。 
 

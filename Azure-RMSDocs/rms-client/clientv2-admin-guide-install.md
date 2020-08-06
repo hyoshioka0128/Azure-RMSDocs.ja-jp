@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ebc917204844e893a4ff27659e29fa29aa3638c2
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 010471368d219cc2ba45d24744a17c09ca83b85d
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298055"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802319"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -65,12 +65,12 @@ Office バージョン2013以降では、Office アプリケーション用の**
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-- Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合の[Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)からのビルド 9330.2078 (office 365 の場合は Azure Information Protection とも呼ばれます)
-- [Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Enterprise 2019 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Enterprise 2016 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- Enterprise 2013 Service Pack 1[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- Enterprise 2010 Service Pack 2[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ
+- Office 365 ProPlus
+- Office Professional Plus 2019
+- Office Professional Plus 2016
+- Office Professional Plus 2013 Service Pack 1
+- Office Professional Plus 2010 Service Pack 2
 
 Office の他のエディション (**標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、**ラベル付け**のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
 
@@ -185,14 +185,14 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 1. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
-    |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
-    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
-    |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
-    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインインアシスタント](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|インストール|
+    |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|[インストール]|
+    |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|[インストール]|
+    |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|[インストール]|
+    |Office 2010|サポートされているすべてのバージョン|[Microsoft Online Services サインインアシスタント](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> バージョン: 2.1|[インストール]|
     |Office 2010|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
-    |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
+    |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|[インストール]|
     
    
 

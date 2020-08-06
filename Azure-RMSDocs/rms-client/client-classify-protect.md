@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection クライアントを使�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 926809823e403cb5cd460412f1036000da487725
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 2e727e438f0baf5cb61a59b699da811e36e48d4f
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927779"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802081"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>ユーザーガイド: Azure Information Protection クライアントを使用した分類と保護
 
@@ -88,7 +88,7 @@ Azure Information Protection バーまたはリボンの **[保護]** ボタン�
 
 - 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには**Protect**、[  >  **ヘルプとフィードバック**の保護] をクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
     
-    Office Professional Plus は、ユーザーに Azure Rights Management (Office 365 の場合は Azure Information Protection とも呼ばれます) のライセンスが割り当てられている場合に、 [Microsoft 365 app For Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)の office アプリを持っている必要はありません。
+    ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の Office アプリがあれば、Office Professional Plus は必要ありません。
 
 - 自分のアカウントを含まない範囲のポリシーのラベルである可能性があります。 ヘルプ デスクまたは管理者に問い合わせてください。
 

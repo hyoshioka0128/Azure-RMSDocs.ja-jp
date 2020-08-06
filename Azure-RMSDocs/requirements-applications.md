@@ -4,7 +4,7 @@ description: Azure Rights Management (Azure RMS) サービスのネイティブ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ed56f635c4210c9989fb0e02209f4e3c29129a3
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298174"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802166"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -39,7 +39,7 @@ ms.locfileid: "87298174"
 |Type  |サポートされているアプリケーション   |
 |---------|---------|
 |**Word、Excel、PowerPoint**    | - [Office 365 アプリ](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Web 用 Office (保護されたドキュメントの表示)](#viewing-protected-documents-in-office-for-the-web)<br />- [Web ブラウザー](#web-browser-support)        |
-|[**電子メール**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-企業向け Microsoft 365 アプリからの Outlook Office<br />- [Web ブラウザー](#web-browser-support)<br />- [Windows メール](#email-clients-using-exchange-activesync-irm)|
+|[**電子メール**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Office 365 ProPlus の Outlook<br />- [Web ブラウザー](#web-browser-support)<br />- [Windows メール](#email-clients-using-exchange-activesync-irm)|
 |[**他のファイルの種類**](#supported-text-and-image-file-types)    |  -Office 365 アプリからの Visio、Office 2019、Office 2016: **vsdm、** **.vsdx、** **vssm**、 **vstm**、 **vssx**、 **.vstx** <br />-Azure Information Protection client for Windows: Text、images、 **pfile** <br />-SealPath RMS プラグイン (AutoCAD): **.dwg**       |
 | | |
 
@@ -123,8 +123,8 @@ Office ファイルや電子メールメッセージ以外のファイルの種�
 ### <a name="office-365-app-support"></a>Office 365 アプリのサポート
 
 含まれるもの: 
-- Office アプリの最小バージョン1805。 [Microsoft 365 app For Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)から9330.2078 をビルドします。 ユーザーに Azure Rights Management のライセンスが割り当てられている場合にのみサポートされます (Office 365 の Azure Information Protection とも呼ばれます)。
-- [Enterprise 用アプリを Microsoft 365](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)します。
+- Office アプリの最小バージョン1805。 Office 365 Business または Microsoft 365 Business から9330.2078 をビルドします。 ユーザーに Azure Rights Management のライセンスが割り当てられている場合にのみサポートされます (Office 365 の Azure Information Protection とも呼ばれます)。
+- Office 365 ProPlus アプリ。
 
 ### <a name="viewing-protected-documents-in-office-for-the-web"></a>Office での web 用の保護されたドキュメントの表示
 
@@ -170,16 +170,25 @@ Azure RMS は、Word、Excel、PowerPoint、および Outlook のアプリケー
 
 次の Office クライアント スイートは、Windows コンピューター上にあるファイルや電子メールの Azure Rights Management サービスを使用した保護をサポートします。
 
-|Office のバージョン  |サポートの詳細  |
-|---------|---------|
-|[**ビジネス向けアプリの Microsoft 365**](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)     |  Office アプリの最小バージョン1805、ビルド 9330.2078 (ユーザーに Azure Rights Management のライセンスが割り当てられている場合 (Office 365 の場合は Azure Information Protection とも呼ばれます)       |
-|[**Enterprise 用 Microsoft 365 アプリ**](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)     | Office の次のエディションは、Azure Information Protection からのデータ保護を含むほとんどの Office 365 サブスクリプションに含まれていますが、すべてではありません。 </br>サブスクリプション情報を調べて、Enterprise 用の Microsoft 365 アプリが含まれているかどうかを確認します。 この情報は、[Azure Information Protection データシート](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)にもあります。 </br></br>-Enterprise 2019 用 Microsoft 365 アプリ </br>-Enterprise 2016 用 Microsoft 365 アプリ </br>-Enterprise 2013 用 Microsoft 365 アプリ </br>-Enterprise 2010 Service Pack 2 の Microsoft 365 アプリ       |
+- Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合 (office 365 の場合は Azure Information Protection とも呼ばれます) に **、office 365 Business または Microsoft 365 Business から9330.2078 をビルド**します。
+
+- **Office 365 ProPlus**
+
+    Office のこれらのエディションは、Azure Information Protection のデータ保護を含むほぼすべての Office 365 サブスクリプションに含まれています。 Office 365 ProPlus が含まれているかどうかについては、サブスクリプション情報を確認してください。 この情報は、[Azure Information Protection データシート](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)にもあります。
+
+- **Office Professional Plus 2019**
+
+- **Office Professional Plus 2016**
+
+- **Office Professional Plus 2013**
+
+- **Office Professional Plus 2010 Service Pack 2**
 
 Office のすべてのエディション (Office 2007 を除く) で、保護されたコンテンツの使用がサポートされます。
 
-#### <a name="azure-rights-management-service-with-microsoft-365-apps-for-enterprise-2010"></a>Enterprise 2010 用 Microsoft 365 アプリを使用した Azure Rights Management サービス
+#### <a name="azure-rights-management-service-with-office-professional-plus-2010-and-service-pack-2-or-office-professional-2010-with-service-pack-2"></a>Office Professional Plus 2010 および Service Pack 2 または Office Professional 2010 Service Pack 2 を使用した Azure Rights Management サービス
 
-Enterprise 2010 および Service Pack 2 または Office Professional 2010 (Service Pack 2)[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)で Azure Rights Management サービスを使用する場合は、AIP Client for Windows も必要です。
+Office Professional Plus 2010 および Service Pack 2 または Office Professional 2010 (Service Pack 2) で Azure Rights Management サービスを使用する場合は、AIP client for Windows も必要です。
 
 また、この構成は次のようになります。
 
@@ -191,7 +200,7 @@ Enterprise 2010 および Service Pack 2 または Office Professional 2010 (Ser
 
 次の Office クライアント スイートは、macOS 上にあるファイルや電子メールの Azure RMS を使用した保護をサポートします。
 
-- [Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Office 365 ProPlus
 - Office Standard 2019 for Mac
 - Office Standard 2016 for Mac
 
@@ -227,7 +236,7 @@ Azure Information Protection (AIP) クライアントには、各バージョン
 > 
 ## <a name="rights-management-sharing-app"></a>Rights Management 共有アプリ
 
-Mac コンピューターの場合、Rights Management 共有アプリには、保護された PDF ファイル **(ppdf)、** 保護されたテキストイメージ、および一般的に保護されたファイルのビューアーが用意されています。 イメージ ファイルも保護できますが、他のファイルを保護することはできません。 これらのコンピューター上の Office ファイルを保護するには、Office for Mac または[Microsoft 365 Enterprise For Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)を使用します。 
+Mac コンピューターの場合、Rights Management 共有アプリには、保護された PDF ファイル **(ppdf)、** 保護されたテキストイメージ、および一般的に保護されたファイルのビューアーが用意されています。 イメージ ファイルも保護できますが、他のファイルを保護することはできません。 これらのコンピューターで Office ファイルを保護するには、Office for Mac または Office 365 ProPlus を使用します。 
 
 詳細については、「[モバイルプラットフォーム用の Microsoft Rights Management 共有アプリケーションの FAQ](https://technet.microsoft.com/dn451248) 」を参照してください。
 

@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection (AIP) に関連する単語�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0dafc8df5e9c48517b13c9d0204c8d4b159783a3
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 352e41b1ca511e3ef0487eb680a331339ce457dd
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927354"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802200"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Azure Information Protection の用語
 
@@ -35,10 +35,10 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 [A](#a)  | [B](#b)  | [C](#c)  | [D](#d)  | [E](#e)  | [G](#g)  | [H](#h)  | [I](#i)  | [K](#k)  | [L](#l)  | [M](#m) [N](#n)  |  [O](#o)  |  [P](#p)  |  [R](#r)  |  [S](#s)  |  [T](#t)  |  [U](#u)
 
 ### <a name="a"></a>A
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**AADRM**|保護サービス (Azure Rights Management) 用の最初の PowerShell モジュールの名前です。これは、以前に (Windows) Azure Active Directory Rights Management と呼ばれていた Azure Rights Management の非公式な略語から派生したものです。 </br></br>この PowerShell モジュールは、AIPService モジュールに置き換えられました。|
-|**アクティブ化**|組織がドキュメントと電子メールを保護できるように、Azure Rights Management protection service を有効にします。 </br></br>この操作により、Exchange Online と Microsoft SharePoint の IRM 機能も有効になります。|
+|**する**|組織がドキュメントと電子メールを保護できるように、Azure Rights Management protection service を有効にします。 </br></br>この操作により、Exchange Online と Microsoft SharePoint の IRM 機能も有効になります。|
 |**Active Directory Rights Management サービス**|多くの場合、**「AD RMS」という略称で呼ばれます。<br /><br />Windows Server の役割の 1 つで、暗号化とポリシーを使用した権限管理保護により、ドキュメント、ファイル、および電子メールを保護することができます。|
 |**AD RMS**|*Active Directory Rights Management サービス*をご覧ください。|
 |**AIPService**|保護サービスの PowerShell モジュールの現在の名前。これは、古い AADRM モジュールに置き換えられます。|
@@ -56,7 +56,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="b"></a>B
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**独自のキーを使用する**|*BYOK* という略称で呼ばれることもあります。<br /><br />組織が Azure Information Protection の独自のテナント キーを生成および管理するときに選択する構成およびトポロジ オプションです。|
 |**組み込みのラベル付け**|Office 365 アプリまたはサービス機能で、ラベル付けクライアントをインストールしなくても、機密ラベルをサポートすることができます。 *ネイティブラベル*付けとも呼ばれます。|
@@ -65,7 +65,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="c"></a>C
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**可能性**|**保護のみのコンテキストで: ** </br>コンテンツが Rights Management サービスで保護されているドキュメントや電子メールを、読み取りや使用のために開きます。 </br>ドキュメントの場合、使用処理には保護されたドキュメントの編集や、新しいコンテンツの追加が含まれます。 電子メール メッセージの場合、使用処理には保護されたメッセージへの返信が含まれます。<br /><br/>**ラベル付けのコンテキスト (保護あり、または保護なし) で: ** </br>ファイルおよび電子メールのメタデータに格納されているラベル情報を読み取ったり、場合によっては操作します。|
 |**コンテンツキー**|Rights Management を使用して保護されている各ドキュメントまたは電子メールに対して RMS 対応アプリケーションが作成する一意のキーです。情報漏えいの危険性を減らすのに役立ちます。|
@@ -73,7 +73,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="d"></a>D
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**非**|Rights Management サービスを無効化します。組織は Azure Information Protection を使用できなくなります。|
 |**既定のテンプレート**|Azure Information Protection のサブスクリプションを取得すると自動的に作成される保護テンプレートです。これにより、機密情報が記載されたドキュメントや電子メールの保護をすぐに開始できます。|
@@ -83,7 +83,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="e"></a>E
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**対応アプリケーション**|Rights Management をネイティブでサポートするアプリケーション。Word や Excel などの Office アプリケーションが含まれます。 </br></br>独立系ソフトウェア ベンダー (ISV) や開発者も、Rights Management をネイティブでサポートするアプリケーションを作成できます。|
 |**エンタープライズ権限管理**|業界標準の一般的な用語です。暗号化ツールとポリシー承認ツールを組み合わせて組織の機密情報や重要情報を保護する製品やソリューションを説明する際によく使用されます。 </br></br>Azure Information Protection は、エンタープライズ権限管理 (ERM) ソリューションの一例です。|
@@ -92,14 +92,14 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="g"></a>G
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**一般的な保護**|任意のファイルの種類を暗号化し、承認されていないユーザーがそのファイルを開けないようにする保護レベル。 </br></br>ファイルを開いた後は暗号化が解除され、Rights Management をネイティブでサポートしていないアプリケーションで使用できます。|
 | | |
 
 ### <a name="h"></a>H
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**独自のキーを保持する**|*HYOK* という略称で呼ばれることもあります。<br /><br />通常は規制やコンプライアンス上の理由から、キーをオンプレミスで生成および保存する組織の構成およびトポロジ オプション。 </br></br>HYOK は、AIP classic クライアントでのみサポートされています。|
 |**HYOK**|「*Hold Your Own Key*」を参照してください。|
@@ -107,7 +107,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="i"></a>I
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**情報の保護**|*IP* という略称で呼ばれることもあります。<br /><br />業界標準の一般的な用語です。データやファイルを未承認のアクセスから保護することを指します。これらのデータやファイルは、電子メールやドキュメント共有によって組織の外部に移動しても引き続き保護されます。 </br></br>Microsoft Azure Information Protection は、情報保護 (IP) ソリューションの一例です。|
 |**情報 Rights Management**|*IRM* という略称で呼ばれることもあります。<br /><br />Microsoft Rights Management サービスをサポートする機能を説明するために、Exchange Server、Word、SharePoint などの Office サービスと共に使用される用語。|
@@ -117,45 +117,45 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="k"></a>K
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**key オブジェクト**|テナント キーのコンテキストにおいて、暗号化操作のために Azure Rights Management サービスが必要とするメタデータを含むエンティティ。|
 | | |
 
 ### <a name="l"></a>L
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**label**|「*Azure Information Protection のラベル*」をご覧ください。|
 | | |
 
 ### <a name="m"></a>M
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**Microsoft Information Protection**| *MIP*と略記されることもあります。<br /><br /> 同じラベル付けストア ("統一されたラベル") を使用し、組織の機密情報を保護するための製品および統合機能のフレームワーク。|
 |**MIP**| *Microsoft Information Protection*を参照|
 |**MSDRM**|RMS クライアント 1.0 を指す用語として使用されることがあります。新しいクライアントでは、MSIPC という名前に置き換えられています。 </br></br>この古いクライアントでは、RMS SDK 1.0 を使用して開発されたアプリケーションと、Office 2010 および Office 2007、Exchange 2010 および Exchange 2013、SharePoint 2010 および SharePoint 2007 をサポートしています。|
-|**MSIPC**|RMS クライアント 2.0 を指す用語として使用されることがあります。古い RMS クライアントの MSDRM を置き換えるものです。 </br></br>この後のクライアントは、RMS SDK 2.0 を使用して開発されたアプリケーションをサポートし、Enterprise、Office 2019、Office 2016、Office 2013、SharePoint 2013、および Azure Information Protection クライアント用の Microsoft 365 アプリをサポートします。|
+|**MSIPC**|RMS クライアント 2.0 を指す用語として使用されることがあります。古い RMS クライアントの MSDRM を置き換えるものです。 </br></br>この新しいクライアントでは、RMS SDK 2.0 を使用して開発されたアプリケーションと、Office 365 ProPlus、Office 2019、Office 2016、Office 2013、SharePoint 2013、および Azure Information Protection クライアントをサポートしています。|
 | | |
 
 ### <a name="n"></a>N
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**ネイティブ保護**|すべての対応アプリケーションで使用できる保護レベル。承認されていないユーザーがファイルを開けないようにするだけでなく、読み取り専用や印刷不可など、より厳格なポリシーを適用できます。 </br></br>また、ファイルが他のユーザーに転送されたり、他のユーザーがアクセスできる公開された場所に保存された場合でも、ファイルに対する保護は維持されます。|
 | | |
 
 ### <a name="o"></a>O
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**Office Message Encryption**|*OME* という略称で呼ばれることもあります。<br /><br />新しい Office 365 Message Encryption 機能には、内部と外部のユーザーに対する同じ電子メール保護、テンプレートの自動更新、Bring Your Own Key (BYOK) シナリオのサポートを提供する Azure Rights Management サービスとのネイティブな統合が含まれています。 </br></br>以前の OME 実装は外部の受信者のみのために設計されており、メール フロー ルールが必要で、BYOK をサポートしていませんでした。|
 | | |
 
 ### <a name="p"></a>P
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**. pfile**|権限管理サービスが一般的に保護するすべてのファイルに付けられるファイル名拡張子。|
 |**アクセス許可レベル**|エンドユーザーと管理者が、役割ベースの構成オプションを選択しやすくするための使用権限の論理的なグループ化。 たとえば、レビュー担当者や共同作成者などがあります。|
@@ -167,7 +167,7 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="r"></a>R
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**Rights Management コネクタ**|Exchange Server や SharePoint などのオンプレミス サービスで Azure Rights Management サービスを使用してデータを保護するためにデプロイできる送信プロキシ リレー。|
 |**Rights Management 発行者**|ドキュメントまたは電子メールを保護したアカウントです。|
@@ -182,20 +182,20 @@ Microsoft Azure Information Protection に関連する単語、フレーズ、�
 
 ### <a name="s"></a>S
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**スキャナー**|「*Azure Information Protection スキャナー*」をご覧ください。|
 |**スーパーユーザー**|高度に信頼されている管理者グループ。権限管理サービスを使用して組織が保護しているファイルの暗号化を解除し、そのファイルにアクセスできます。 </br></br>通常、法的な電子情報開示や監査チームには、このレベルのアクセス許可が必要です。|
 
 ### <a name="t"></a>T
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**テナントキー**|*サーバーライセンサー証明書 (SLC) キー*とも呼ばれます。<br /><br />組織に対して一意のキーであり、このテナント キーにチェーンされているすべての Rights Management 暗号化機能を最終的に保護します。|
 
 ### <a name="u"></a>U
 
-|用語|定義|
+|期間|定義|
 |--------|--------------|
 |**統一されたラベル**| "*統合秘密度" ラベル*とも呼ばれます。<br /><br /> Microsoft Information Protection framework をサポートするアプリ、クライアント、およびサービスによって適用できるラベル。分類および必要に応じて保護を適用します。 </br></br>Office アプリとサービスでは、統合ラベルは機密ラベルとして実装されます。|
 |**保護の解除**|暗号化、ID、使用権限、アクセス制御ポリシーを使用してデータを保護していた保護制御を、ファイルや電子メール メッセージから削除します。|
