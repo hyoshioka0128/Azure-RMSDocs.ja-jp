@@ -155,7 +155,7 @@ Azure Rights Management は、次のセキュリティ、コンプライアン�
     -   Office 365 認証の Azure Active Directory の一部としての FedRAMP (HHS によって FedRAMP Agency Authority to Operate を発行)
     -   PCI DSS レベル 1
 
-これらの外部認定の詳細については、 [Azure セキュリティセンター](https://azure.microsoft.com/support/trust-center/compliance/)を参照してください。
+これらの外部認定の詳細については、 [Azure トラスト センター](https://azure.microsoft.com/support/trust-center/compliance/)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
