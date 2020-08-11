@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/08/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e37f2f3c56bb30075802ae5126179e094d41553
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: e97b66acfc56812f087246128c1bb15c2f22ae40
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048988"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073705"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -200,9 +200,14 @@ Windows Update を使用して Azure Information Protection クライアント�
     |Office 2010|Windows 8.1 および Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|KB2843630 または KB2919355 がインストールされていない場合はインストールします|
     |Office 2010|Windows 8 と Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> ファイル名に含まれるバージョン番号: v3|インストール|
 
-3. 既定のインストールでは、`AzInfoProtection.msi /quiet` のように、**/quiet** を付けて .msi を実行します。 ただし、次の1つの例外を除き、[実行可能ファイルのインストーラーの指示](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)に記載されている追加のインストールパラメーターを指定することが必要になる場合があります。
+3. 既定のインストールでは、`AzInfoProtection.msi /quiet` のように、**/quiet** を付けて .msi を実行します。 ただし、[実行可能ファイルのインストーラーの手順](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)に記載されている追加のインストール パラメーターを指定する必要がある場合があります。
 
-    - **Allowtelemetry = 0**の代わりに、**使用状況の統計情報を Microsoft に送信して Azure Information Protection の向上に役立つ**インストールオプションを無効にするには、 **ENABLETELEMETRY = 0**を指定します。
+    > [!NOTE]
+    > 既定では、[**使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる**] オプションが有効になっています。 このオプションを無効にするには、次のいずれかを実行してください。
+    >
+    >- インストール中に、 **Allowtelemetry = 0**を指定します。
+    >- インストール後、レジストリキーを次のように更新します: **EnableTelemetry = 0**。
+    >
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーをインストールする方法
 

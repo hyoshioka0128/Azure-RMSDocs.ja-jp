@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cef1f6f80865f813e613e717ea301176f8fcc317
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 38489d1d1ff7183e5e7a3963b401cdaecf2313dc
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049593"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073654"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための前提条件
 
@@ -52,7 +52,7 @@ Azure Information Protection スキャナーをインストールする前に、
 |---------|---------|
 |**プロセッサ**     |4コアプロセッサ         |
 |**RAM**     |8 GB         |
-|**ディスク領域**     |一時ファイルの場合、10 GB の空き領域 (平均)。 </br></br>スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 </br></br>推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。
+|**ディスク領域**     |一時ファイルの 10 GB の空き領域 (平均)。 </br></br>スキャナーは、スキャンする各ファイル用に、コアごとに 4 つの一時ファイルを作成するために、十分なディスク領域を必要とします。 </br></br>推奨される 10 GB のディスク領域を使用すると、4 コア プロセッサで、それぞれのサイズが 625 MB であるファイルを 16 個スキャンできます。
 |**オペレーティング システム**     |-Windows Server 2019 </br>- Windows Server 2016 </br>- Windows Server 2012 R2 </br></br>**注:** 非運用環境でのテストまたは評価の目的では、 [Azure Information Protection クライアントでサポート](requirements.md#client-devices)されている任意の Windows オペレーティングシステムを使用することもできます。
 |**ネットワーク接続**     | スキャナーコンピューターは、スキャンするデータストアへの高速で信頼性の高いネットワーク接続がある物理コンピューターまたは仮想コンピューターにすることができます。 </br></br> 組織のポリシーのためにインターネット接続ができない場合は、「[代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」を参照してください。 </br></br>それ以外の場合は、このコンピューターがインターネットに接続されていることを確認し、HTTPS 経由で次の Url を使用できるようにします (ポート 443)。</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.azure.com <br /> -informationprotection.hosting.portal.azure.net <br /> - \*. aria.microsoft.com <br />-  \*. protection.outlook.com |
 | ||
@@ -91,7 +91,7 @@ Windows Server コンピューターでスキャナーサービスを実行す�
 
 - **スキャナーをインストールする Sysadmin ロールを持つアカウント。**
 
-    これにより、インストールプロセスでスキャナー構成データベースが自動的に作成され、スキャナーを実行するサービスアカウントに必要な**db_owner**ロールが付与されます。
+    Sysadmin ロールを使用すると、インストールプロセスでスキャナー構成データベースを自動的に作成し、必要な**db_owner**の役割を、スキャナーを実行するサービスアカウントに付与できます。
 
     Sysadmin ロールが付与されていない場合、または組織のポリシーでデータベースを手動で作成して構成する必要がある場合は、「[代替構成を使用したスキャナーの展開](#deploying-the-scanner-with-alternative-configurations)」を参照してください。
 
@@ -121,7 +121,7 @@ Windows Server コンピューターでスキャナーサービスを実行す�
 - **最大10台のスキャナーを**使用します。
 
     - 4コアプロセッサ
-    - 8 GB の RAM (推奨）
+    - 8 GB の RAM を推奨
 
 - **10 台を超えるスキャナー** (最大 40) を使用します。
     - 8コアプロセス
@@ -143,7 +143,7 @@ Azure Information Protection クライアントの現在の[一般公開バー�
 
 これらのラベルが構成されていない場合は、「[代替構成を使用したスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」を参照してください。
 
-詳細については次を参照してください:
+詳細については、次をご覧ください。
 
 - [機密ラベルをコンテンツに自動的に適用する](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
@@ -169,12 +169,16 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 
 ## <a name="file-path-requirements"></a>ファイルパスの要件
 
-ファイルをスキャンするには、スキャナーが Windows 2016 にインストールされていて、長いパスをサポートするようにコンピューターが構成されていない限り、ファイルパスの文字数は最大260文字にする必要があります。
+既定では、ファイルをスキャンするには、ファイルパスの最大文字数が260文字である必要があります。
 
-Windows 10 および windows Server 2016 は、次の[グループポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を使用して、260文字を超えるパスの長さをサポートしています:**ローカルコンピューターポリシー**  >  **コンピューターの構成**  >  **管理用テンプレート**  >  **すべての設定**で  >  **Win32 の長いパスを有効にする**
+260文字を超えるファイルパスを使用してファイルをスキャンするには、次のいずれかのバージョンの Windows がインストールされているコンピューターにスキャナーをインストールし、必要に応じてコンピューターを構成します。
 
-長いファイルのパスのサポートについて詳しくは、Windows 10 開発者向けドキュメントの「[Maximum Path Length Limitation (パスの最大長の制限)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」をご覧ください。
-
+|Windows のバージョン  |説明  |
+|---------|---------|
+|**Windows 2016 以降**     |   長いパスをサポートするようにコンピューターを構成する      |
+|**Windows 10 または Windows Server 2016**     | 次の[グループポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を定義します。**ローカルコンピューターポリシー**  >  **コンピューターの構成**  >  **管理用テンプレート**  >  **すべての設定**で、  >  **Win32 の長いパスを有効に**します。    </br></br>これらのバージョンでのファイルパスのサポートの詳細については、Windows 10 開発者ドキュメントの「[パスの最大長の制限](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation)」セクションを参照してください。    |
+|**Windows 10 バージョン 1607 以降**     |  更新された**MAX_PATH**機能を選択します。 詳細については、「 [Windows 10 バージョン1607以降での長いパスの有効化](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later)」を参照してください。      |
+| | |
 ## <a name="usage-statistics-requirements"></a>使用状況の統計情報の要件
 
 次のいずれかの方法を使用して使用状況の統計を無効にします。
@@ -251,7 +255,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 #### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>ユーザーを作成し、手動で db_owner 権限を付与する
 
-このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の操作を依頼します。
+このデータベースに対してユーザーを作成し db_owner 権限を付与するには、Sysadmin に次の手順を実行するよう依頼します。
 
 1. スキャナー用の DB を作成します。
 

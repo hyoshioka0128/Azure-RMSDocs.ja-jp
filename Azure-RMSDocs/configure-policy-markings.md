@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: a532416acd134c2cb08117af2951aa1fef23ba82
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927371"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073552"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -100,7 +100,7 @@ ms.locfileid: "86927371"
 - `${Event.DateTime}`: 選択したラベルが設定された日時。 例: 8/16/2016 1:30 PM
 
 > [!NOTE]
->この構文では、大文字と小文字が区別されます。 たとえば、一般ラベルフッターに文字列を指定した場合、 `Document: ${Item.Name}  Classification: ${Item.Label}` project.docx という名前のドキュメントに適用されるフッターテキストは "**ドキュメント: project.docx 分類: 全般**" になります。 **General**
+>この構文では、大文字と小文字が区別されます。
 
 <!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
@@ -121,7 +121,7 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 > [!NOTE]
 >このステートメントのこの構文では、大文字と小文字が区別されます。
 
-例 :
+例:
 
 - **Word 文書だけにヘッダー テキストを設定する:**
 

@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 010471368d219cc2ba45d24744a17c09ca83b85d
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 3afb97e9094d74eb98b67b375def7a24f6dcc104
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802319"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073688"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -36,7 +36,7 @@ Azure Information Protection 統合されたラベル付けクライアントを
 
 |要件  |説明  |
 |---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | 既定では Azure Information Protection 統合されたラベル付けクライアントの完全インストールには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 </br></br>このフレームワークがインストールされていない場合は、実行可能ファイルインストーラーのセットアップウィザードによって、この前提条件のダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。 </br></br>**注:** 推奨されませんが、[カスタムインストールパラメーター](#more-information-about-the-downgradedotnetrequirement-installation-parameter)を使用してセットアップウィザードを使用する場合は、この前提条件を省略できます。        |
+|**Microsoft .NET Framework 4.6.2**     | 既定では Azure Information Protection 統合されたラベル付けクライアントの完全インストールには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 </br></br>このフレームワークがインストールされていない場合は、実行可能ファイルインストーラーのセットアップウィザードによって、この前提条件のダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。       |
 |**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 </br></br>**重要:** ビューアーにこのフレームワークがない場合は、実行可能ファイルのインストーラーによってダウンロードまたはインストール*されません*。        |
 |**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 </br></br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 </br></br>**重要:** インストーラーでは、この前提条件を確認したりインストールしたりすることは*ありません*。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
 |**800 x 600 より大きい画面の解像度**    |     解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。    |
@@ -201,7 +201,10 @@ Windows Update を使用した自動アップグレードをサポートし、Of
     場合によっては、追加のインストールパラメーターを指定する必要があります。 詳細については、「[実行可能ファイルインストーラーの手順](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)」を参照してください。
 
     > [!NOTE]
-    > 既定では、[**使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる**] オプションが有効になっています。 このオプションを無効にするには、 **Allowtelemetry = 0**ではなく、 **ENABLETELEMETRY = 0**を指定してください。
+    > 既定では、[**使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる**] オプションが有効になっています。 このオプションを無効にするには、次のいずれかを実行してください。
+    >
+    >- インストール中に、 **Allowtelemetry = 0**を指定します。
+    >- インストール後、レジストリキーを次のように更新します: **EnableTelemetry = 0**。
     >
 
 ## <a name="next-steps"></a>次のステップ

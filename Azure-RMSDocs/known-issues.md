@@ -4,19 +4,19 @@ description: Azure Information Protection の既知の問題と制限を検索�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
+ms.date: 08/10/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
-ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
+ms.openlocfilehash: 7c55faf0138e007ed1a8877ebb60cf01551c4dd3
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87378286"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073739"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題-Azure Information Protection
 
@@ -84,10 +84,10 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|特徴量  |既知の問題  |
+|機能  |既知の問題  |
 |---------|---------|
 |**複数のバージョンの Office**    | Azure Information Protection クライアントは、従来のラベル付けと統一されたラベル付けの両方を含み、同じコンピューターで複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。       |
-|**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、1つまたは両方の画面で、Azure Information Protection バーが Office 画面の中央に表示されることがあります。 </br></br>バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[全般] で **、** [**最適な外観に最適化**する] ではなく [**互換性のために最適化**する] を選択します。    |
+|**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 </br></br>-Office アプリでパフォーマンスの問題が発生する可能性があります。</br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 </br></br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [**オプション**] ダイアログを開き、[全般] で **、** [最適化] ではなく [**互換性のために最適化**] を選択し**ます。**    |
 |**Office 2016 での IRM のサポート**| Office 2016 でメタデータの暗号化を制御する[Drmencryptproperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options)レジストリ設定は、Azure Information Protection ラベルではサポートされていません。|
 |**Word のコンテンツのマーキング**    | フッターにテーブルが含まれている場合、Microsoft Word のフッターで Azure Information Protection コンテンツの[マーキング](configure-policy-markings.md)が非表示になることがあります。 詳細については、「[視覚的なマーキングが適用されるタイミング](configure-policy-markings.md#when-visual-markings-are-applied)」を参照してください。 |
 |**電子メールに添付されたファイル** |Windows の最新の更新プログラムの制限により、 [Microsoft Outlook が Azure Rights Management によって保護](office-apps-services-support.md)されている場合、電子メールに添付されたファイルは、ファイルを開いた後にロックされる可能性があります。 |
@@ -114,13 +114,13 @@ Depending on your policy rule size limit, configuring more than 200 users or use
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="クライアントビューアーで拡大されるイメージ":::
     
-    詳細については、次を参照してください。
+    詳細については、次をご覧ください。
 
     - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
     - [統一された**ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
 
 
-## <a name="more-information"></a>詳細情報
+## <a name="more-information"></a>説明を見る
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 
