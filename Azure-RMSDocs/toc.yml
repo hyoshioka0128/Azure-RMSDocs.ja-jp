@@ -318,11 +318,7 @@
                     - name: RMS 共有アプリケーションで実行していたタスク
                       href: ./rms-client/upgrade-client-app.md
         - name: iOS 用と Android 用の Azure Information Protection
-          items:
-            - name: 概要
-              href: ./rms-client/mobile-app-faq.md
-            - name: AIP モバイル アプリの使用を開始する
-              href: ./rms-client/mobile-app-get-started.md
+          href: ./rms-client/mobile-app-faq.md
         - name: 保護された PDF リーダー
           href: ./rms-client/protected-pdf-readers.md
         - name: RMS クライアントのデプロイに関する注意事項
@@ -347,7 +343,7 @@
               href: ./develop/deprecation-notice.md
             - name: 概要
               href: ./develop/overview.md
-            - name: 開始
+            - name: 作業開始
               href: ./develop/get-started.md
               items:
                 - name: 新機能
