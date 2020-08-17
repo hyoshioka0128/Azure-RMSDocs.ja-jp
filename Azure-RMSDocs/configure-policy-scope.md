@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection のスコープ ポリシーの構成 - AIP
 description: 特定のユーザーに異なる設定とラベルを構成するには、Azure Information Protection のスコープ付きポリシーを構成する必要があります。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 10402e9db78dc2e7dda4117bf30a255d9c2b3642
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6c7ab059ff19cc7f8b41bc345521e9e1798e7769
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264363"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法
 
@@ -29,7 +29,7 @@ ms.locfileid: "86048053"
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-[Azure Information Protection](https://www.microsoft.com/download/details.aspx?id=53018) クライアントがインストールされているコンピューターに Azure Information Protection ポリシーがダウンロードされると、すべてのユーザーは、既定のポリシーから設定とラベルを取得するか、グローバル ポリシー用に構成された変更を取得します。 異なる設定やラベルを使用して、特定のユーザーに対してこの構成を補完する場合は、それらのユーザー用に構成された**スコープ付きポリシー**を作成する必要があります。
+Azure Information Protection クライアントがインストールされているコンピューターに Azure Information Protection ポリシーがダウンロードされると、すべてのユーザーは、既定のポリシーから設定とラベルを取得するか、グローバル ポリシー用に構成された変更を取得します。 異なる設定やラベルを使用して、特定のユーザーに対してこの構成を補完する場合は、それらのユーザー用に構成された **スコープ付きポリシー** を作成する必要があります。
 
 ## <a name="how-scoped-policies-work"></a>スコープ付きポリシーのしくみ
 
@@ -51,9 +51,9 @@ Azure Information Protection クライアントをサポートする Office デ�
 
     たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
 
-2. [**分類**  >  **ポリシー** ] メニューオプションから: [ **Azure Information Protection-ポリシー** ] ウィンドウで、[**新しいポリシーの追加**] を選択します。 次に、既存のグローバルポリシーを表示する**ポリシー**ウィンドウが表示されます。ここで、新しいスコープ付きポリシーを構成できます。
+2. [**分類**  >  **ポリシー** ] メニューオプションから: [ **Azure Information Protection-ポリシー** ] ウィンドウで、[**新しいポリシーの追加**] を選択します。 次に、既存のグローバルポリシーを表示する **ポリシー** ウィンドウが表示されます。ここで、新しいスコープ付きポリシーを構成できます。
 
-3. Azure Portal で管理者にのみ表示されるポリシー名と説明を指定します。 名前はテナントに対して一意である必要があります。 次に、[**このポリシーを取得するユーザー/グループを指定**してください] を選択し、後続のウィンドウで、このポリシーのユーザーとグループを検索して選択します。 このスコープ付きポリシーで構成するラベルと設定は、これらのユーザーにのみ適用されます。
+3. Azure Portal で管理者にのみ表示されるポリシー名と説明を指定します。 名前はテナントに対して一意である必要があります。 次に、[ **このポリシーを取得するユーザー/グループを指定**してください] を選択し、後続のウィンドウで、このポリシーのユーザーとグループを検索して選択します。 このスコープ付きポリシーで構成するラベルと設定は、これらのユーザーにのみ適用されます。
     
     パフォーマンス上の理由から、スコープ付きポリシーのグループ メンバーシップは[キャッシュ](prepare.md#group-membership-caching-by-azure-information-protection)されます。
 
@@ -62,14 +62,14 @@ Azure Information Protection クライアントをサポートする Office デ�
 
 4. ここで、新しいラベルを追加したり、スコープ ポリシーの設定を構成します。 グローバル ポリシーは常に最初に適用されるため、新しいラベルでグローバル ポリシーを補い、グローバル設定をオーバーライドすることができます。 たとえば、グローバル ポリシーに既定のラベルを指定せず、特定の部門に対して異なるスコープ付きポリシーの異なる既定のラベルを構成します。
 
-    ラベルまたは設定の構成に関するヘルプが必要な場合は、「[組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy)」セクションのリンクを使用してください。
+    ラベルまたは設定の構成に関するヘルプが必要な場合は、「 [組織のポリシーの構成](configure-policy.md#configuring-your-organizations-policy) 」セクションのリンクを使用してください。
 
-6. グローバルポリシーを編集するときと同様に、Azure Information Protection ウィンドウで変更を行うときは、[**保存**] をクリックして変更を保存するか、[**破棄**] をクリックして最後に保存した設定に戻します。 
+6. グローバルポリシーを編集するときと同様に、Azure Information Protection ウィンドウで変更を行うときは、[ **保存** ] をクリックして変更を保存するか、[ **破棄** ] をクリックして最後に保存した設定に戻します。 
 
-7. このスコープポリシーに必要な変更が完了したら、[初期**Azure Information Protection-ポリシー** ] ウィンドウで、このスコープポリシーが適用する順序であることを確認します。 この手順は、複数のスコープ付きポリシーに対して同じユーザーを選択した場合に重要です。 順序を変更するには、コンテキスト メニュー (**[...]**) を選択し、**[上へ移動]** または **[下へ移動]** を選択します。 
+7. このスコープポリシーに必要な変更が完了したら、[初期 **Azure Information Protection-ポリシー** ] ウィンドウで、このスコープポリシーが適用する順序であることを確認します。 この手順は、複数のスコープ付きポリシーに対して同じユーザーを選択した場合に重要です。 順序を変更するには、コンテキスト メニュー (**[...]**) を選択し、**[上へ移動]** または **[下へ移動]** を選択します。 
 
 Azure Information Protection クライアントは、サポートされている Office アプリケーションが起動するか、ファイル エクスプローラーが開かれるたびに変更がないかどうかを確認します。 クライアントは、グローバル ポリシー、またはそのユーザーに適用されるスコープ付きポリシーの変更をダウンロードします。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルをご覧ください。

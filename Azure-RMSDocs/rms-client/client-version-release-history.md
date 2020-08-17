@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection クライアント-バージョン履歴 & サポートポリシー
 description: Windows 用 Azure Information Protection クライアントのリリースの新機能と変更点、サポートのライフサイクル ポリシーについて説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/28/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7fb6f9766ce4388fffccd5057d17feb01138fd88
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 4f04af1c6aceba5f3eb9d36bf1445ff33060da48
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264346"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection クライアント: バージョン リリース履歴とサポート ポリシー
 
@@ -29,14 +29,16 @@ ms.locfileid: "86047306"
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-最新の一般公開リリース バージョンと現在のプレビュー バージョン (利用できる場合) を [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードできます。 
-
-通常は数週間後に、一般公開されている最新バージョンが、 **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection クライアント**の製品名と**更新プログラム**の分類によって Microsoft Update カタログにも含まれます。 このようにカタログに含まれることで、WSUS や Configuration Manager、または Microsoft Update を使うその他のソフトウェア展開メカニズムを使って、クライアントをアップグレードできるようになります。
-
-詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
+<!--
+After a short delay of typically a couple of weeks, the latest general availability version is also included in the Microsoft Update Catalog with a product name of **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Client**, and the classification of **Updates**. This inclusion in the catalog means that you can upgrade the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+-->
 
 > [!TIP]
-> ラベルが Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security Center、または Microsoft 365 コンプライアンスセンターから公開されているため、Azure Information Protection 統合ラベルクライアントの使用に関心がある場合は、 Microsoft ダウンロードセンターから、統合されたラベル付けクライアントをダウンロードしてインストールすると、Azure Information Protection クライアントを、統一された[ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)にアップグレードできます。
+> ラベルが Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security Center、または Microsoft 365 コンプライアンスセンターから公開されているため、Azure Information Protection 統合ラベルクライアントの使用に関心がある場合は、 Microsoft ダウンロードセンターから、統合されたラベル付けクライアントをダウンロードしてインストールすると、Azure Information Protection クライアントを、統一された [ラベル付けクライアント](unifiedlabelingclient-version-release-history.md)にアップグレードできます。
+
+**AIP クラシッククライアントをデプロイするには、** サポートチケットを開いてダウンロードアクセスを取得します。
+
+詳細については、「[Azure Information Protection クライアントのアップグレードと保守](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client)」をご覧ください。
 
 ### <a name="servicing-information-and-timelines"></a>サービスの情報とタイムライン
 
@@ -62,11 +64,11 @@ Azure Information Protection クライアントの各一般公開 (GA) バージ
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
-このページで使用される日付形式は、*月/日/年*です。
+このページで使用される日付形式は、 *月/日/年*です。
 
 6/2/2019 以降、Azure Information Protection のラベル付けサービスには、TLS 1.2 を使用する接続が必要です。
 
-1.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン**1.3.155.2**、 **1.2.4.0**、および**1.1.23.0**は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
+1.4.21.0 リリース03/15/2017 のすべてのクライアントバージョンが TLS 1.2 をサポートしています。 クライアントバージョン **1.3.155.2**、 **1.2.4.0**、および **1.1.23.0** は TLS 1.2 を使用しないため、Azure Information Protection ポリシーをダウンロードできなくなります。
 
 ### <a name="release-history"></a>リリース履歴
 
@@ -85,7 +87,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 **修正内容**:
 
-- 保護が削除された後に、IQP によって保護されているファイルが [**回復**] オプションまたは [保存] オプションを選択**して**解決される問題。 
+- 保護が削除された後に、IQP によって保護されているファイルが [ **回復** ] オプションまたは [保存] オプションを選択 **して** 解決される問題。 
 
 - わかりやすく、理解しやすいように、多くの製品機能のツールヒントが改善されました。 
 
@@ -103,7 +105,7 @@ Windows 用 Azure Information Protection クライアントのサポートされ
 
 このリリースには、安定性とパフォーマンスに関する一般的な修正が含まれています。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 インストールするクライアントが適切かどうかは確認できません。  「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。
 

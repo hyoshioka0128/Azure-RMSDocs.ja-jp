@@ -1,9 +1,9 @@
 ---
 title: Azure Information Protection ポリシーを構成する - AIP
 description: Azure Information Protection クライアント (クラシック) の分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。
-author: mlottner
-ms.author: mlottner
-ms.date: 1/06/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f1c423aef10c23d84b6f8fcd2eac19872fdaa35b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264329"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -30,9 +30,9 @@ ms.locfileid: "86047951"
 > [!NOTE]
 > Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
 > 
-> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「[秘密度ラベルについ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)て」を参照してください。
+> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「 [秘密度ラベルについ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) て」を参照してください。
 
-クラシッククライアントの分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、 [Azure Information Protection クライアント](https://www.microsoft.com/download/details.aspx?id=53018)がインストールされているコンピューターにダウンロードされます。
+クラシッククライアントの分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、Azure Information Protection クライアントがインストールされたコンピューターにダウンロードされます。
 
 ポリシーにはラベルと設定が含まれています。
 
@@ -66,7 +66,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 - 以下のリンクを使用します。https://portal.azure.com
 
-- 次のいずれかの[管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を持つ Azure AD アカウントを使用します。
+- 次のいずれかの [管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)を持つ Azure AD アカウントを使用します。
     
     - **Azure Information Protection 管理者**
     
@@ -83,7 +83,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
   - **グローバル管理者**
     
     > [!NOTE] 
-    > テナントが統一された[ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure portal に対して Azure Information Protection 管理者ロール (旧称 "Information Protection administrator") はサポートされません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > テナントが統一された [ラベル付けプラットフォーム](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)にある場合、Azure portal に対して Azure Information Protection 管理者ロール (旧称 "Information Protection administrator") はサポートされません。 [詳細情報](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft アカウントは Azure Information Protection を管理できません。
 
@@ -102,15 +102,15 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 4. サービスに最初に接続するときに自動的に開く **[クイック スタート]** ページが表示されます。 推奨リソースを参照するか、他のメニュー オプションを使用します。 ユーザーが選択できるラベルを構成するには、次の手順に従います。
 
-次に [ **Azure Information Protection** ] ウィンドウにアクセスしたときに、すべてのユーザーのラベルを表示および構成できるように、[**ラベル**] オプションが自動的に選択されます。 **[全般**] メニューから選択すると、[**クイックスタート**] ページに戻ることができます。
+次に [ **Azure Information Protection** ] ウィンドウにアクセスしたときに、すべてのユーザーのラベルを表示および構成できるように、[ **ラベル** ] オプションが自動的に選択されます。 **[全般**] メニューから選択すると、[**クイックスタート**] ページに戻ることができます。
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーを構成する方法
 
 1. Azure Information Protection 管理者、セキュリティ管理者、またはグローバル管理のいずれかの管理者ロールを使用して、Azure portal にサインインしていることを確認します。 これらの管理者ロールの詳細については、[上記のセクション](#signing-in-to-the-azure-portal)を参照してください。
 
-2. 必要に応じて、[ **Azure Information Protection** ] ウィンドウに移動します。たとえば、ハブメニューで [**すべてのサービス**] をクリックし、[フィルター] ボックスに「 **Information Protection**の入力を開始します。 結果から [**Azure Information Protection**] を選択します。 
+2. 必要に応じて、[ **Azure Information Protection** ] ウィンドウに移動します。たとえば、ハブメニューで [ **すべてのサービス** ] をクリックし、[フィルター] ボックスに「 **Information Protection** の入力を開始します。 結果から [**Azure Information Protection**] を選択します。 
     
-    [ **Azure Information Protection ラベル**] ウィンドウが自動的に開き、使用可能なラベルを表示および編集できます。 ラベルをポリシーに追加または削除して、すべてのユーザーまたは選択したユーザーに対して利用可能にしたり、どのユーザーに対しても利用不可にしたりできます。
+    [ **Azure Information Protection ラベル** ] ウィンドウが自動的に開き、使用可能なラベルを表示および編集できます。 ラベルをポリシーに追加または削除して、すべてのユーザーまたは選択したユーザーに対して利用可能にしたり、どのユーザーに対しても利用不可にしたりできます。
 
 3. ポリシーを表示および編集するには、メニュー オプションから **[ポリシー]** を選択します。 すべてのユーザーが取得するポリシーを表示および編集するには、**[グローバル]** ポリシーを選択します。 選択したユーザー用のカスタム ポリシーを作成するには、**[Add a new policy]\(新しいポリシーの追加\)** を選択します。
     
@@ -119,7 +119,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 任意の数のラベルを作成できます。 ただし、多すぎて正しいラベルを発見して選択する作業が困難になるとき、スコープ ポリシーを作成し、あるユーザーに関連するラベルのみがそのユーザーに表示されるようにします。 保護を適用するラベルには 500 という上限があります。
 
-Azure Information Protection ウィンドウで変更を行った場合は、[**保存**] をクリックして変更を保存するか、[**破棄**] をクリックして最後に保存した設定に戻します。 ポリシーに変更を保存したり、ポリシーに追加されたラベルを変更したりすると、それらの変更は自動的に発行されます。 独立した公開オプションはありません。
+Azure Information Protection ウィンドウで変更を行った場合は、[ **保存** ] をクリックして変更を保存するか、[ **破棄** ] をクリックして最後に保存した設定に戻します。 ポリシーに変更を保存したり、ポリシーに追加されたラベルを変更したりすると、それらの変更は自動的に発行されます。 独立した公開オプションはありません。
 
 Azure Information Protection クライアントは、サポート対象の Office アプリケーションの起動時に常に変更の有無を確認し、変更があった場合は該当する最新の Azure Information Protection ポリシーに変更をダウンロードします。 ポリシーをクライアントに更新するトリガーには、他に次のものがあります。
 
@@ -127,7 +127,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - ラベル付けおよび保護のための [PowerShell コマンドレット](./rms-client/client-admin-guide-powershell.md) (Get-AIPFileStatus、Set-AIPFileClassification、および Set-AIPFileLabel) の実行。
 
-- 24 時間ごと。
+- 24 時間ごと
 
 - [Azure Information Protection スキャナー](deploy-aip-scanner.md)の場合: サービスが開始されたとき (ポリシーが 1 時間前よりも古い場合) と、操作中の 1 時間ごと。
 
@@ -175,9 +175,9 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 電子メールの場合は、電子メールの送信時にラベル情報が保存されます。 ドキュメントについては、ファイルの保存時にラベル情報が保存されます。 
 
-ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の**ラベル**ペインで [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
+ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の **ラベル** ペインで [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
 
