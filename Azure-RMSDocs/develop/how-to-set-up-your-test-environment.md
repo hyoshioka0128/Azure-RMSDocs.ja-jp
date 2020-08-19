@@ -1,6 +1,6 @@
 ---
 title: アプリケーションのテスト | Azure RMS
-description: アプリケーションのテストを設定する方法
+description: Azure RMS または Windows Server 上で実行されている RMS サーバーを使用して、アプリケーションテストを準備する方法について説明します。
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 987b9bb711f96d6622fb1972f13d50fa8cbbfa3d
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 638a8ec54a850a051795c00b2b1aef4ef47866ff
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972034"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564071"
 ---
 # <a name="testing-your-application"></a>アプリケーションのテスト
 

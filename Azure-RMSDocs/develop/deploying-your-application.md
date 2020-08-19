@@ -1,6 +1,6 @@
 ---
 title: アプリケーションのデプロイ - AIP
-description: このトピックでは、アプリケーションのデプロイの概要と手順を説明します
+description: Azure Information Protection (AIP)/Rights Management Services (RMS) が有効になっているアプリケーションのデプロイプロセスについて説明します。
 keywords: デプロイ, RMS, AIP
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: e9a9ce42476cc372b6486b524d99e55edf9d4a11
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971763"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564366"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -29,7 +29,7 @@ ms.locfileid: "82971763"
 AIP/RMS で開発されたアプリケーションをリリースする前に、Microsoft との正式な契約を申請し、完了する必要があります。
 
 ### <a name="begin-the-process"></a>プロセスを開始する
-次の情報を含む電子メールをに<strong>IPIA@microsoft.com</strong>送信して、ipia を入手します。
+次の情報を含む電子メールをに送信して、IPIA を入手し <strong>IPIA@microsoft.com</strong> ます。
 
 **件名:***会社名* の IPIA の申請
 
@@ -40,7 +40,7 @@ AIP/RMS で開発されたアプリケーションをリリースする前に、
 
 ### <a name="next-steps"></a>次のステップ
 IPIA 申請の受領後、フォームが届きます (Word 文書)。
-IPIA の使用条件を確認し、フォームをに<strong>IPIA@microsoft.com</strong>返します。次の情報を参照してください。
+IPIA の使用条件を確認し、フォームをに返し <strong>IPIA@microsoft.com</strong> ます。次の情報を参照してください。
 - 会社の正式名称
 - 法人の都道府県または国
 - 会社の URL

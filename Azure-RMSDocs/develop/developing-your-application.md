@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 5319ff8ca9424d1c1273df1bdf347abf65881209
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 841669b3db3e86e2ea6f1860a9d8e9d915c4d28d
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971865"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564245"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -50,8 +50,8 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
 
 >BPOS ID (テナント ID) 値を記録します。 後の手順で必要になります。
 
-*Example output*
-出力![コマンドレットの出力例](../media/develop/output-of-Get-AadrmConfiguration.png)
+*出力例* 
+ ![コマンドレットの出力](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - サービスから切断します: `Disconnect-AipServiceService`
 
@@ -66,13 +66,13 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
 - サービス プリンシパルの名前を入力します。
   > 後で使用するために、対称キーとアプリケーションのプリンシパル ID を記録します。
 
-*Example output*
-出力![コマンドレットの出力例](../media/develop/output-of-NewMsolServicePrincipal.png)
+*出力例* 
+ ![コマンドレットの出力](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - アプリケーションのプリンシパル ID、対称キー、およびテナント ID をアプリケーションの App.config ファイルに追加します。
 
-*App.config ファイル*
-![のコマンドレットの出力例](../media/develop/example-App.config-file.png)
+*App.config ファイル* 
+ ![ の例コマンドレットの出力](../media/develop/example-App.config-file.png)
 
 - *ClientID* と *RedirectUri* は、Azure にアプリケーションを登録したときに入手できます。 Azure にアプリケーションを登録する方法、および *ClientID* と *RedirectUri* の取得方法の詳細については、「[Azure RMS の ADAL 認証を構成する](adal-auth.md)」を参照してください。
 
@@ -91,131 +91,144 @@ Azure Information Protection の Azure AD 環境を構成するには、 [Azure 
 6. アプリケーションは、指定された場所の指定されたファイルを検索します。
 7. アプリケーションは、そのファイルに AIP 保護ポリシーを適用します。
 
-## <a name="how-the-code-works"></a>コードのしくみ
+## <a name="how-the-code-works"></a>コードの動作
 
 サンプルでは、Iprotect.cs ファイルを使用してソリューションの Azure IP テストを開始します。 Azure IP テストは C# コンソール アプリケーションであり、他の AIP 対応アプリケーションと同様に、`main()` メソッドで示されるように *MSIPC.dll* の読み込みで開始します。
 
-    //Loads MSIPC.dll
-    SafeNativeMethods.IpcInitialize();
-    SafeNativeMethods.IpcSetAPIMode(APIMode.Server);
+```csharp
+//Loads MSIPC.dll
+SafeNativeMethods.IpcInitialize();
+SafeNativeMethods.IpcSetAPIMode(APIMode.Server);
+```
 
 Azure への接続に必要なパラメーターを読み込みます。
 
-    //Loads credentials for the service principal from App.Config
-    SymmetricKeyCredential symmetricKeyCred = new SymmetricKeyCredential();
-    symmetricKeyCred.AppPrincipalId = ConfigurationManager.AppSettings["AppPrincipalId"];
-    symmetricKeyCred.Base64Key = ConfigurationManager.AppSettings["Base64Key"];
-    symmetricKeyCred.BposTenantId = ConfigurationManager.AppSettings["BposTenantId"];
+```csharp
+//Loads credentials for the service principal from App.Config
+SymmetricKeyCredential symmetricKeyCred = new SymmetricKeyCredential();
+symmetricKeyCred.AppPrincipalId = ConfigurationManager.AppSettings["AppPrincipalId"];
+symmetricKeyCred.Base64Key = ConfigurationManager.AppSettings["Base64Key"];
+symmetricKeyCred.BposTenantId = ConfigurationManager.AppSettings["BposTenantId"];
+```
 
 コンソール アプリケーションにファイルのパスを入力すると、アプリケーションはドキュメントが既に暗号化されているかどうかを確認します。 このメソッドは **SafeFileApiNativeMethods** クラスです。
 
-    var checkEncryptionStatus = SafeFileApiNativeMethods.IpcfIsFileEncrypted(filePath);
+```csharp
+var checkEncryptionStatus = SafeFileApiNativeMethods.IpcfIsFileEncrypted(filePath);
+```
 
 ドキュメントが暗号化されていない場合は、プロンプトで入力された選択に従ってドキュメントの暗号化処理が行われます。
 
-    if (!checkEncryptionStatus.ToString().ToLower().Contains(alreadyEncrypted))
-    {
-      if (method == EncryptionMethod1)
-      {
-        //Encrypt a file via AIP template
-        ProtectWithTemplate(symmetricKeyCred, filePath);
+```csharp
+if (!checkEncryptionStatus.ToString().ToLower().Contains(alreadyEncrypted))
+{
+  if (method == EncryptionMethod1)
+  {
+    //Encrypt a file via AIP template
+    ProtectWithTemplate(symmetricKeyCred, filePath);
 
-      }
-      else if (method == EncryptionMethod2)
-      {
-        //Encrypt a file using ad-hoc policy
-        ProtectWithAdHocPolicy(symmetricKeyCred, filePath);
-      }
+  }
+  else if (method == EncryptionMethod2)
+  {
+    //Encrypt a file using ad-hoc policy
+    ProtectWithAdHocPolicy(symmetricKeyCred, filePath);
+  }
+}
+```
 
 テンプレート オプションによる保護では、サーバーからテンプレートの一覧が取得され、選択するオプションがユーザーに提供されます。
 >テンプレートを変更していない場合は、AIP から既定のテンプレートを取得します。
 
-     public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
-     {
-       // Gets the available templates for this tenant
-       Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
-           false, true, null, null, symmetricKeyCredential);
+```csharp
+public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
+{
+  // Gets the available templates for this tenant
+  Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
+      false, true, null, null, symmetricKeyCredential);
 
-       //Requests tenant template to use for encryption
-       Console.WriteLine("Please select the template you would like to use to encrypt the file.");
+  //Requests tenant template to use for encryption
+  Console.WriteLine("Please select the template you would like to use to encrypt the file.");
 
-       //Outputs templates available for selection
-       int counter = 0;
-       for (int i = 0; i < templates.Count; i++)
-       {
-         counter++;
-         Console.WriteLine(counter + ". " + templates.ElementAt(i).Name + "\n" +
-             templates.ElementAt(i).Description);
-       }
+  //Outputs templates available for selection
+  int counter = 0;
+  for (int i = 0; i < templates.Count; i++)
+  {
+    counter++;
+    Console.WriteLine(counter + ". " + templates.ElementAt(i).Name + "\n" +
+        templates.ElementAt(i).Description);
+  }
 
-       //Parses template selection
-       string input = Console.ReadLine();
-       int templateSelection;
-       bool parseResult = Int32.TryParse(input, out templateSelection);
+  //Parses template selection
+  string input = Console.ReadLine();
+  int templateSelection;
+  bool parseResult = Int32.TryParse(input, out templateSelection);
 
-       //Returns error if no template selection is entered
-       if (parseResult)
-       {
-         //Ensures template value entered is valid
-         if (0 < templateSelection && templateSelection <= counter)
-         {
-           templateSelection -= templateSelection;
+  //Returns error if no template selection is entered
+  if (parseResult)
+  {
+    //Ensures template value entered is valid
+    if (0 < templateSelection && templateSelection <= counter)
+    {
+      templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template
-           TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
+      // Encrypts the file using the selected template
+      TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
-           string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
-               selectedTemplateInfo.TemplateId,
-               SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST, true, false, true, null,
-               symmetricKeyCredential);
-          }
-        }
-      }
+      string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
+          selectedTemplateInfo.TemplateId,
+          SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST, true, false, true, null,
+          symmetricKeyCredential);
+    }
+  }
+}
+```
 
 アドホック ポリシーを選択した場合、アプリケーションのユーザーは権限を持つユーザーのメール アドレスを入力する必要があります。 このセクションでは、**IpcCreateLicenseFromScratch()** メソッドを使用し、テンプレートに新しいポリシーを適用してライセンスが作成されます。
 
-    if (issuerDisplayName.Trim() != "")
-    {
-      // Gets the available issuers of rights policy templates.
-      // The available issuers is a list of RMS servers that this user has already contacted.
-      try
-      {
-        Collection<TemplateIssuer> templateIssuers = SafeNativeMethods.IpcGetTemplateIssuerList(
-                                                        null,
-                                                        true,
-                                                        false,
-                                                        false, true, null, symmetricKeyCredential);
+```csharp
+if (issuerDisplayName.Trim() != "")
+{
+  // Gets the available issuers of rights policy templates.
+  // The available issuers is a list of RMS servers that this user has already contacted.
+  try
+  {
+    Collection<TemplateIssuer> templateIssuers = SafeNativeMethods.IpcGetTemplateIssuerList(
+                                                    null,
+                                                    true,
+                                                    false,
+                                                    false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it
-        SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
-                                                            templateIssuers.ElementAt(0));
-        SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
-        SafeNativeMethods.IpcSetLicenseUserRightsList(handle, userRights);
-        SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture,
-                                                                policyName,
-                                                                policyDescription,
-                                                                issuerDisplayName,
-                                                                false));
+    // Creates the policy and associates the chosen user rights with it
+    SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
+                                                        templateIssuers.ElementAt(0));
+    SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
+    SafeNativeMethods.IpcSetLicenseUserRightsList(handle, userRights);
+    SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture,
+                                                            policyName,
+                                                            policyDescription,
+                                                            issuerDisplayName,
+                                                            false));
 
-        //Encrypts the file using the ad hoc policy
-        string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
-                                       filePath,
-                                       handle,
-                                       SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST,
-                                       true,
-                                       false,
-                                       true,
-                                       null,
-                                       symmetricKeyCredential);
-       }
+    //Encrypts the file using the ad hoc policy
+    string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
+                                    filePath,
+                                    handle,
+                                    SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST,
+                                    true,
+                                    false,
+                                    true,
+                                    null,
+                                    symmetricKeyCredential);
     }
+}
+```
 
 ## <a name="user-interaction-example"></a>ユーザー操作の例
 
 すべて作成して実行すると、アプリケーションの出力は次のようになります。
 
-1.暗号化方法の選択を求められます。
-![アプリの出力 - 手順 1](../media/develop/app-output-1.png)
+1. 暗号化方法を選択するように求められます。
+   ![アプリの出力 - 手順 1](../media/develop/app-output-1.png)
 
 2. 保護されるファイルのパスを入力するよう求められます。
    ![アプリの出力 - 手順 2](../media/develop/app-output-2.png)

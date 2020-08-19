@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68794111"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564105"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>方法: RMS サーバーをインストールし、構成し、それでテストする
 
 このトピックでは、権限保護対応アプリケーションをテストするために、RMS サーバーまたは Azure RMS に接続する手順について説明します。
  
-## <a name="instructions"></a>手順
+## <a name="instructions"></a>Instructions
 
 ### <a name="step-1-setup-your-rms-server"></a>手順 1: RMS サーバーをセットアップする
 
@@ -56,7 +56,7 @@ ms.locfileid: "68794111"
 
        AD RMS v1.0 SP2 を使用している場合は、オンラインでサーバーを登録できます。 登録はプロビジョニング プロセスの背後でで行われますが、インターネット接続が必要です。
 
-       **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
+       **HKEY \_ローカル \_ コンピューター** \\ **ソフトウェア** \\ **Microsoft** \\ **drms** \\ **1.0** \\ **uddiprovider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
 
 3. **RMS サーバーでテストする**
 
@@ -70,37 +70,44 @@ ms.locfileid: "68794111"
 
    クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS クライアントのデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
 
-4. **EnterpriseCertification**
+4. **、**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterpriseCertification
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterpriseCertification
+  ```
 
-   **値**: (既定): **[http|https]** ://RMSClusterName/ **_wmcs/Certification**
+   **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
-5. **EnterprisePublishing**
+5. **(Default) 値をダブルクリックし、**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterprisePublishing
-                  
-   **値**: (既定): **[http|https]** ://RMSClusterName/ **_wmcs/Licensing**
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterprisePublishing
+  ```
+
+   **値**: (既定): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 > [!NOTE]
 > 既定では、これらのキーはレジストリに存在しないため、作成する必要があります。
-> 
+>
+ 
 > [!IMPORTANT]
-> 64 ビット バージョンの Windows で 32 ビット アプリケーションを実行する場合は、これらのキーを次のキーの場所に設定する必要があります。<p>
->   ```    
->   HKEY_LOCAL_MACHINE
->     SOFTWARE
->       Wow6432Node
->         Microsoft
->           MSIPC
->             ```
+> 64 ビット バージョンの Windows で 32 ビット アプリケーションを実行する場合は、これらのキーを次のキーの場所に設定する必要があります。  
+>
+
+```console
+HKEY_LOCAL_MACHINE  
+  SOFTWARE  
+    Wow6432Node  
+      Microsoft  
+        MSIPC  
+```

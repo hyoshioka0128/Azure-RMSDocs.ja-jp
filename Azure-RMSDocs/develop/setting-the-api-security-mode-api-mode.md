@@ -1,6 +1,6 @@
 ---
 title: API セキュリティ モードを設定する方法 | Azure RMS
-description: File API アプリケーションをどのセキュリティ モードで実行するかを選択します。
+description: IpcSetGlobalProperty 関数を使用して、ファイル API アプリケーションを実行するセキュリティモードを選択することによって、API セキュリティモードを設定する方法について説明します。
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a71fcddecbe688f38360c42cf83946f82269013
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 942192690e06422246fa0ed7a4fb2d1d3ccf6cd6
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790796"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563602"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>方法: API セキュリティ モードの設定
 
@@ -29,9 +29,9 @@ ms.locfileid: "68790796"
 
 *サーバー モード*の詳細については、「[Application types (アプリケーションの種類)](application-types.md)」を参照してください。
 
-**重要**  セキュリティ モードは、他の Rights Management サービス SDK 2.1 関数を呼び出す前に設定する必要があります。 セキュリティ モードは、設定後に現在のプロセスに対して変更することはできません。
+**重要**   他の Rights Management Services SDK 2.1 関数が呼び出される前に、セキュリティモードを設定する必要があります。 セキュリティ モードは、設定後に現在のプロセスに対して変更することはできません。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [アプリケーションの種類](application-types.md)
 * [API mode values (API のモード値)](https://msdn.microsoft.com/library/hh535236.aspx)

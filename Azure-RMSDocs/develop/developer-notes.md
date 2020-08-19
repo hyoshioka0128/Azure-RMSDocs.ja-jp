@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection SDK 2.1 開発者ガイド |Microsoft Docs
-description: AIP SDK 2.1 での開発の操作方法に関するトピックのコレクション
+description: Rights Management Services SDK 2.1 を使用した開発に関するいくつかの重要な開発シナリオと一般情報に関するガイダンスを紹介します。
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 620464886d40c3f152a32f07952a924eee72920f
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: cfa9f00d7a69966c3a6819294e72c8dfccac02fc
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971814"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564262"
 ---
-# <a name="developer-guidance"></a>開発者ガイド
+# <a name="rights-management-services-sdk-21-developer-guidance"></a>Rights Management Services SDK 2.1 開発者ガイド
 
 このセクションでは、いくつかの重要な開発シナリオについて説明し、この SDK による開発に関する基本情報を提供します。 このセクションのシナリオは Rights Management サービス SDK 2.1 のこのリリースに固有のシナリオであり、将来のリリースで変更される可能性があります。
 - [方法: ADAL 認証の使用](how-to-use-adal-authentication.md) - Azure Active Directory Authentication Library (ADAL) を利用し、アプリに対して Azure RMS で認証を実行する。
-- [方法: 明示的な所有者権限を追加](add-explicit-owner-rights.md)する-アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります ([Ipccreatelicensefromscratch](https://msdn.microsoft.com/library/hh535256.aspx))。
+- [方法: 明示的な所有者権限を追加](add-explicit-owner-rights.md) する-アプリケーションでは、最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります ([Ipccreatelicensefromscratch](https://msdn.microsoft.com/library/hh535256.aspx))。
 - [方法: 権限保護対応アプリケーションのデバッグ](debugging-applications-that-use-ad-rms.md) - このトピックでは、アプリケーションをデバッグし、Windows イベント ログを使用する方法について説明します。
 - [方法: 顧客のテナントへのアプリのデプロイ](how-to-deploy-app.md) - Azure AD の開発テナントから Azure AD の運用テナントにアプリをデプロイする手順の概要を説明します。
 - [方法: ドキュメント追跡の有効化と取り消し](tracking-content.md) - このトピックでは、コンテンツのドキュメント追跡機能を導入する方法について、その基礎を説明し、また、メタデータ更新のサンプル コードとアプリの **[使用の追跡]** ボタンを作成するためのサンプルコードを紹介します。
