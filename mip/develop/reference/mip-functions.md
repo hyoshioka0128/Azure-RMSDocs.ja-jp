@@ -6,45 +6,43 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489250"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563707"
 ---
-# <a name="functions"></a>関数
-
-
+# <a name="functions-c"></a>関数 (C++) 
 
 ## <a name="namespace-mip"></a>名前空間 mip
 
-| 名前空間スコープ別の関数   | [説明]                                |
+| 名前空間スコープ別の関数   | 説明                                |
 |--------------------------------|---------------------------------------------|
 public std:: string GetAssignmentMethodString (メソッドの指定)       |  指定されたメソッドの列挙型を文字列の説明に変換します。
 public static std:: string GetActionSourceString (ActionSource actionSource)       |  アクションのソース名を取得します。
 public static std:: string GetDataStateString (mip::D ataState state)       |  コンテンツの状態名を取得します。
 public const std::string& GetCustomSettingPolicyDataName()       |  ポリシー データを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingExportPolicyFileName()       |  SCC ポリシー データをエクスポートするファイルのパスを明示的に指定する設定の名前。
-public const std::string& GetCustomSettingSensitivityTypesDataName()       |  秘密度データを明示的に指定する設定の名前。
+public const std:: string& GetCustomSettingSensitivityTypesDataName ()       |  秘密度データを明示的に指定する設定の名前。
 public const std::string& GetCustomSettingPolicyDataFile()       |  ポリシー データのファイルのパスを明示的に指定する設定の名前。
-public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  感度の種類のデータファイルパスを明示的に指定する設定の名前。
-public const std:: string & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  ラベル機能によってカスタムプロパティとカスタムプロパティによってラベルを有効にできる設定の名前。
-public const std:: string & GetCustomSettingPolicyTtlDays ()       |  ポリシー ttl の上書きを有効にする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
-public const std:: string & GetCustomSettingSensitivityPolicyTtlDays ()       |  秘密度ポリシーの ttl を上書きできるようにする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
-public const std:: map\<、GetDefaultFeatureSettings () のように、フライト機能、bool\>& ます。       |  機能が既定で有効になっているかどうかを取得します。
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: istream\>& stdIStream)       |  Std:: istream からストリームを作成します。
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: ostream\>& stdOStream)       |  Std:: ostream からストリームを作成します。
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: iostream\>& stdIOStream)       |  Std:: iostream からストリームを作成します。
-public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromBuffer (uint8_t * buffer、const int64_t size)       |  バッファーからストリームを作成します。
-public MIP_API std:: vector\<uint8_t\> ReadFromStream (const std:: shared_ptr\<MIP:: Stream\>& stream)       |  ストリームのすべてのバイトを読み取ります。
-public ActionType operator & (ActionType a、ActionType b)       |  アクションの種類が enum の and (&) 演算子。
-public ActionType operator ^ (ActionType a, ActionType b)       |  アクションの種類の列挙型に対する Xor (^) 演算子。
+public const std:: string& GetCustomSettingSensitivityTypesDataFile ()       |  感度の種類のデータファイルパスを明示的に指定する設定の名前。
+public const std:: string& GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  ラベル機能によってカスタムプロパティとカスタムプロパティによってラベルを有効にできる設定の名前。
+public const std:: string& GetCustomSettingPolicyTtlDays ()       |  ポリシー ttl の上書きを有効にする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
+public const std:: string& GetCustomSettingSensitivityPolicyTtlDays ()       |  秘密度ポリシーの ttl を上書きできるようにする設定の名前 (日数) 既定値は30日です。 値は文字列整数として設定する必要があります < 0 は無期限の有効期間を意味します。
+public const std:: map \<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  機能が既定で有効になっているかどうかを取得します。
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std:: shared_ptr \<std::istream\>& stdIStream)       |  std::istream からストリームを作成します。
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std:: shared_ptr \<std::ostream\>& stdOStream)       |  std::ostream からストリームを作成します。
+public MIP_API std:: shared_ptr \<mip::Stream\> CreateStreamFromStdStream (const std:: shared_ptr \<std::iostream\>& stdIOStream)       |  std::iostream からストリームを作成します。
+public MIP_API std:: shared_ptr \<mip::Stream\> createstreamfrombuffer (uint8_t * buffer, const int64_t size)       |  バッファーからストリームを作成します。
+public MIP_API std:: vector \<uint8_t\> readfromstream (const std:: shared_ptr \<mip::Stream\>& stream)       |  ストリームのすべてのバイトを読み取ります。
+public ActionType operator& (ActionType a、ActionType b)       |  アクションの種類が enum の and (&) 演算子。
+public ActionType operator ^ (ActionType a, ActionType b)       |  Action タイプの列挙型に対する Xor (^) 演算子。
 
 ### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString 関数
 指定されたメソッドの列挙型を文字列の説明に変換します。
 
-パラメータ:  
+パラメーター:  
 * **メソッド**: 割り当てメソッド。 
 
 
@@ -53,7 +51,7 @@ public ActionType operator ^ (ActionType a, ActionType b)       |  アクショ�
 ### <a name="getactionsourcestring-function"></a>GetActionSourceString 関数
 アクションのソース名を取得します。
 
-パラメータ:  
+パラメーター:  
 * **actionsource**: アクションのソース。 
 
 は、アクションソースの文字列形式を**返し**ます。
@@ -61,7 +59,7 @@ public ActionType operator ^ (ActionType a, ActionType b)       |  アクショ�
 ### <a name="getdatastatestring-function"></a>GetDataStateString 関数
 コンテンツの状態名を取得します。
 
-パラメータ:  
+パラメーター:  
 * **Actionsource**: 作業中のコンテンツの状態。 
 
 
@@ -124,9 +122,9 @@ SCC ポリシー データをエクスポートするファイルのパスを明
 **戻り**値: フライト機能の既定の状態
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
-Std:: istream からストリームを作成します。
+std::istream からストリームを作成します。
 
-パラメータ:  
+パラメーター:  
 * **stdIStream**: std::istream のバッキング
 
 
@@ -135,9 +133,9 @@ Std:: istream からストリームを作成します。
 **戻り値**: std:: istream をラップするストリーム
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
-Std:: ostream からストリームを作成します。
+std::ostream からストリームを作成します。
 
-パラメータ:  
+パラメーター:  
 * **stdOStream**: std::ostream のバッキング
 
 
@@ -146,9 +144,9 @@ Std:: ostream からストリームを作成します。
 **戻り値**: std:: ostream をラップするストリーム
   
 ### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream 関数
-Std:: iostream からストリームを作成します。
+std::iostream からストリームを作成します。
 
-パラメータ:  
+パラメーター:  
 * **stdIOStream**: std::iostream のバッキング
 
 
@@ -159,7 +157,7 @@ Std:: iostream からストリームを作成します。
 ### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer 関数
 バッファーからストリームを作成します。
 
-パラメータ:  
+パラメーター:  
 * **buffer**: バッファーへのポインター
 
 
@@ -170,7 +168,7 @@ Std:: iostream からストリームを作成します。
 ### <a name="readfromstream-function"></a>ReadFromStream 関数
 ストリームのすべてのバイトを読み取ります。
 
-パラメータ:  
+パラメーター:  
 * **ポインター**: ストリームへのポインター。
 
 
@@ -179,17 +177,17 @@ Std:: iostream からストリームを作成します。
 は、バイトのベクターを**返し**ます。
   
 ### <a name="operator-function"></a>operator |プロシージャ
-アクションの種類の列挙型の or (|) 演算子。
+Action タイプの列挙型に対する Or (|) 演算子。
   
-### <a name="operator-function"></a>operator & 関数
+### <a name="operator-function"></a>operator& 関数
 アクションの種類が enum の and (&) 演算子。
   
 ### <a name="operator-function"></a>operator ^ 関数
-アクションの種類の列挙型に対する Xor (^) 演算子。
+Action タイプの列挙型に対する Xor (^) 演算子。
 
 ## <a name="namespace-mipauditmetadatakeys"></a>名前空間 mip:: auditmetadatakeys
 
-Members                        | [説明]                                
+メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std:: string Sender ()       |  文字列形式のメタデータキーを監査します。
 public std:: string Recipients ()       | _まだ文書化されていません。_
@@ -211,9 +209,9 @@ _まだ文書化されていません。_
 _まだ文書化されていません。_
 
 
-## <a name="namespace-miprights"></a>名前空間の `mip::rights` 
+## <a name="namespace-miprights"></a>空間 `mip::rights` 
   
-Members                        | [説明]                                
+メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  '所有者' 権限の文字列識別子を取得します。
 public std::string View()       |  '表示' 権限の文字列識別子を取得します。
@@ -226,9 +224,9 @@ public std::string Comment()       |  'コメント' 権限の文字列識別子
 public std::string Reply()       |  '返信' 権限の文字列識別子を取得します。
 public std::string ReplyAll()       |  '全員に返信' 権限の文字列識別子を取得します。
 public std::string Forward()       |  '転送' 権限の文字列識別子を取得します。
-public std:: vector\<std:: string\> EmailRights ()       |  電子メールに適用される権限の一覧を取得します。
-public std:: vector\<std:: string\> EditableDocumentRights ()       |  ドキュメントに適用される権限の一覧を取得します。
-public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナリオで適用される権限の一覧を取得します。
+public std:: vector \<std::string\> emailrights ()       |  電子メールに適用される権限の一覧を取得します。
+public std:: vector \<std::string\> editabledocumentrights ()       |  ドキュメントに適用される権限の一覧を取得します。
+public std:: vector \<std::string\> commonrights ()       |  すべてのシナリオで適用される権限の一覧を取得します。
   
 ### <a name="owner-function"></a>Owner 関数
 '所有者' 権限の文字列識別子を取得します。
@@ -260,7 +258,7 @@ public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナ�
   
 **戻り値**: 'エクスポート' 権限の文字列識別子
   
-### <a name="extract-function"></a>Extract 関数
+### <a name="extract-function"></a>関数を抽出する
 '抽出' 権限の文字列識別子を取得します。
 
   
@@ -314,9 +312,9 @@ public std:: vector\<std:: string\> CommonRights ()       |  すべてのシナ�
   
 **戻り値**: すべてのシナリオで適用される権限の一覧
 
-## <a name="namespace-miproles"></a>名前空間の `mip::roles` 
+## <a name="namespace-miproles"></a>空間 `mip::roles` 
   
-Members                        | [説明]                                
+メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  'ビューアー' ロールの文字列識別子を取得します。
 public std::string Reviewer()       |  'レビュー担当者' ロールの文字列識別子を取得します。

@@ -1,6 +1,6 @@
 ---
 title: Azure AD でアプリを登録する方法 - AIP
-description: RMS 対応アプリケーションのユーザー認証の基本について説明します。
+description: Azure portal でのアプリの登録と RMS の有効化と、Azure Active Directory Authentication Library (ADAL) を使用したユーザー認証について説明します。
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 09823af031db2968c951c6c3610bc14e6a31bd17
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135642"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564401"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
@@ -70,9 +70,9 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 > [!NOTE]
 > **範囲**は現在使用されていませんが、今後の使用のために予約されています。
 
-    Android: `msauth://packagename/Base64UrlencodedSignature`
+Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS: `<app-scheme>://<bundle-id>`
+iOS: `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > アプリがこれらのガイドラインを遵守しない場合、Azure RMS および Azure AD ワークフローが失敗することがあり、Microsoft.com によってサポートされなくなります。 また、運用アプリケーションで無効なクライアント ID を使用した場合、Rights Management License Agreement (RMLA) 違反が発生する可能性があります。

@@ -1,6 +1,6 @@
 ---
-title: Rights Management Services SDK v4. x の rrelease note
-description: このバージョンと以前のバージョンの重要な変更点と機能について概要を説明します。
+title: Rights Management Services SDK v4. x のリリースノート
+description: Microsoft Rights Management Service SDK v4. x 2017 年7月およびそれ以前のリリースの新機能とリリースノートを参照してください。
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5d4aa9206865493c5fd2c4b2abdb96c3f72e5399
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971950"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563792"
 ---
 # <a name="whats-new-and-release-notes"></a>新機能とリリース ノート
 
@@ -164,15 +164,15 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
     **解決方法** - アプリケーションが Android API への複数インスタンスの呼び出しを許可しないようにします。
 
--   [Protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(byte\[ \] array, int offset, int length) メソッドを使用する場合、*配列*の長さの値とは別の長さであるため、SDK を使用して後でコンテンツを使用することはできません。
+-   [Protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(byte \[ \] array, int offset, int length) メソッドを使用する場合、*配列*の長さの値とは別の長さであるため、SDK を使用して後でコンテンツを使用することはできません。
 
-    **解決方法** - これは既知の問題です。 これを軽減するには、長さのパラメーターと同じ長さの値を持つ*バイト\[ *配列を常に渡すか、 [protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(バイト\[ \]配列) メソッドを使用します。
+    **解決方法** - これは既知の問題です。 これを軽減するには、長さのパラメーターと同じ長さの値を持つ*バイト \[ \] *配列を常に渡すか、 [protectedfileoutputstream .write](https://msdn.microsoft.com/library/dn790855.aspx)(バイト \[ \] 配列) メソッドを使用します。
 
 **iOS および OS X**
 
 -   iOS および OS X 用 SDK をサポートするポルトガル語の言語仕様は 2 つありますが、 バグがあるため、現在のところ、最初の言語仕様のローカライズは完全にサポートしていません。 このバグにより、ポルトガル語は完全にはサポートされていません。 テキストの大部分は翻訳されていますが、UI は翻訳されていません。
 
-    1. Portuguese
+    1. ポルトガル語
 
     2. ポルトガル語 (ポルトガル)
 
@@ -197,13 +197,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 
 
-**注**  MDI アプリケーションは、iOS API ではサポートされていません。
+**メモ**   MDI アプリケーションは、iOS API ではサポートされていません。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **すべてのプラットフォーム**
 
-**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 なぜですか?
+**Q**: 保護ワークフローに**カスタム アクセス許可**の選択 UI が表示されません。 なぜでしょうか?
 
 **A**: これは既知の問題であり、今後対応する予定です。
 
@@ -211,7 +211,7 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 
 **A**: Azure AD RMS のテスト組織の資格情報を要求するには、<rmcstbeta@microsoft.com> に電子メールを送信してください。
 
-**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜですか?
+**Q**: ドキュメントにテスト階層についての説明が見当たりません。 なぜでしょうか?
 
 **A**: 新しい AD RMS SDK にはテスト階層の概念はなく、 常に運用階層を使用します。
 
@@ -228,13 +228,13 @@ RMS SDK のバージョン 4.1 のリリースでは、Google Android と Apple 
 **Q**: UI スレッドから操作を取り消すメソッド cancel() を呼び出すことはできますか。
 **A**: cancel() は、ネットワーク接続を中止する可能性があるため、非 UI スレッドから cancel() を呼び出す必要があります。
 
-**Android**
+**iOS**
 
 **Q**: SDK の開発はどのプラットフォームで検証されましたか。
 
 **A**: iOS 7 以降を使用した Xcode 5.0 です。
 
-**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜですか?
+**Q**: 操作に対して cancel() メソッドを呼び出しましたが、まだ操作が完了したことを示す通知が届きます。 なぜでしょうか?
 
 **A**: すべての操作が取り消し可能なわけではなく、取り消し操作は可能な限りにおいて実行されます。
 

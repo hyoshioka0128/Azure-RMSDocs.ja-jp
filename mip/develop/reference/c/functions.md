@@ -6,24 +6,24 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 4/16/2020
-ms.openlocfilehash: c10c13212bf19ea27442626aa4bd900aa57a340d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 12aa46260b9c1ed2bac5f1e02c1e358292e86835
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764150"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564383"
 ---
-# <a name="functions"></a>関数
+# <a name="functions-c"></a>関数 (C)
 
 ## <a name="mip_cc_auth_callback"></a>mip_cc_auth_callback
 
 OAuth2 トークンを取得するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| identity | トークンを取得する対象の電子メールアドレス |
+| ID | トークンを取得する対象の電子メールアドレス |
 | challenge | OAuth2 チャレンジ |
 | context | この認証コールバックの原因となった MIP API に渡された非透過アプリケーションコンテキスト |
 | tokenBuffer | Outputトークンがコピーされるバッファー。 Null の場合、' actualTokenSize ' が設定されますが、 |
@@ -47,7 +47,7 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 ユーザーから外部サービスエンドポイントへのアクセスに同意するためのコールバック関数定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -65,7 +65,7 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 
 文字列のキー/値の辞書を作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -90,7 +90,7 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 ディクショナリを構成するキーと値のペアを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -115,7 +115,7 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 ディクショナリに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -129,7 +129,7 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 
 HTTP 要求を発行するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -147,7 +147,7 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 HTTP 要求をキャンセルするためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -163,7 +163,7 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 
 MIP の既定の HTTP スタックをオーバーライドするために使用できる HTTP デリゲートを作成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -186,7 +186,7 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 
 Http 応答の準備ができていることを HTTP デリゲートに通知します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -209,7 +209,7 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 HTTP デリゲートハンドルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -223,7 +223,7 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 
 Logger を初期化するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -239,11 +239,11 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 
 Log ステートメントを記述するためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| level | log ステートメントのログレベルです。 |
+| レベル | log ステートメントのログレベルです。 |
 | message | log ステートメントのメッセージ。 |
 | 関数 (function) | log ステートメントの関数名。 |
 | file | log ステートメントが生成されたファイルの名前。 |
@@ -263,7 +263,7 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 Mipmap の既定のロガーをオーバーライドするために使用できる logger デリゲートを作成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -288,7 +288,7 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 Logger デリゲートハンドルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -302,7 +302,7 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 
 すべてのプロファイルインスタンス間で共有される状態を管理する MIP コンテキストを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -333,7 +333,7 @@ mip_cc_result MIP_CC_CreateMipContext(
 
 すべてのプロファイルインスタンス間で共有される状態を管理する MIP コンテキストを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -368,7 +368,7 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 Mipmap コンテキストに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -382,7 +382,7 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 
 RMS テンプレートによって定義されているかどうかにかかわらず、保護の種類を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -403,7 +403,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 所有者を格納するために必要なバッファーのサイズを取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -424,7 +424,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 
 保護所有者を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -451,7 +451,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -472,7 +472,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 
 保護名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -499,7 +499,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 説明を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -520,7 +520,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 
 保護の説明を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -547,7 +547,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 テンプレート ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -568,7 +568,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 
 ラベル ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -589,7 +589,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 コンテンツ ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -610,7 +610,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 
 コンテンツの有効期限が切れているかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -631,7 +631,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 保護の有効期限 (エポックからの秒数) を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -652,7 +652,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 
 オフラインアクセスが許可されているかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -673,7 +673,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 参照元を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -694,7 +694,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 
 保護参照元を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -721,7 +721,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 2つのキーの URL を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -742,7 +742,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize(
 
 2つのキーの URL を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -769,7 +769,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl(
 
 保護記述子に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -783,7 +783,7 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 
 文字列リストの作成
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -808,7 +808,7 @@ mip_cc_result MIP_CC_CreateStringList(
 
 文字列リストを構成する文字列を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -833,7 +833,7 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 文字列リストに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -847,7 +847,7 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 
 非同期タスクをディスパッチするためのコールバック関数の定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -863,7 +863,7 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 
 バックグラウンドタスクをキャンセルするためのコールバック関数
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -881,7 +881,7 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 
 MIP の既定の非同期タスク処理をオーバーライドするために使用できるタスクディスパッチャーデリゲートを作成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -906,7 +906,7 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 タスクが現在のスレッドで実行するようにスケジュールされていることを TaskDispatcher デリゲートに通知します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -923,7 +923,7 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 タスクディスパッチャーデリゲートハンドルに関連付けられているリソースの解放
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -937,7 +937,7 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 
 保護プロファイルの作成に使用する設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -956,7 +956,7 @@ mip_cc_result MIP_CC_CreateTelemetryConfiguration(
 
 内部テレメトリ設定を上書きするテレメトリホスト名を設定する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -979,7 +979,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 テレメトリ共有ライブラリオーバーライドの設定
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -989,7 +989,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 **Return**: 成功または失敗を示す結果コード
 
-**注**: このプロパティは、mip_ClientTelemetry の代わりに使用する必要がある ARIA/1DS SDK の C API を実装する既存のテレメトリ DLL がクライアントにある場合に設定されます。 
+**注**: このプロパティは、の代わりに使用する必要がある ARIA/1DS SDK の C API を実装する既存のテレメトリ DLL がクライアントにある場合に設定され mip_ClientTelemetry.dll 
 
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
@@ -1002,7 +1002,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 
 既定のテレメトリ HTTP スタックをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1025,7 +1025,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1046,7 +1046,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate(
 
 バックグラウンドスレッドでテレメトリコンポーネントがネットワークステータスに ping を実行できるかどうかを設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1069,7 +1069,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 
 テレメトリコンポーネントでディスクへのキャッシュの書き込みが許可されているかどうかを設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1092,7 +1092,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 テレメトリコンポーネントでディスクへのログの書き込みが許可されているかどうかを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1115,7 +1115,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 
 アプリケーション/ユーザーがオプションのテレメトリをオプトアウトしたかどうかを設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1138,7 +1138,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 カスタムテレメトリ設定を設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1159,7 +1159,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 テレメトリプロパティを mask に設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1182,7 +1182,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
 
 保護プロファイル設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1196,7 +1196,7 @@ void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemet
 
 保護エンジンに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1210,7 +1210,7 @@ void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 
 新しいコンテンツを公開するための保護ハンドラーを作成します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1235,7 +1235,7 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
 
 既存のコンテンツを使用するための保護ハンドラーを作成します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1260,7 +1260,7 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
 
 エンジン ID に必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1281,7 +1281,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
 
 エンジン ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1308,7 +1308,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
 
 保護エンジンに関連付けられている RMS テンプレートの数を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1333,7 +1333,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
 
 ユーザーが使用できるテンプレートのコレクションを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1362,7 +1362,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
 
 ラベル ID に対してユーザーに付与された権限の一覧を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1395,7 +1395,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
 
 保護エンジンに関連付けられているクライアントデータのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1416,7 +1416,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
 
 保護エンジンに関連付けられているクライアントデータを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1443,11 +1443,11 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
 
 新しい保護エンジンを作成するために使用される設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| identity | ProtectionEngine に関連付けられる id |
+| ID | ProtectionEngine に関連付けられる id |
 | clientData | エンジンと共に保存されるカスタマイズ可能なクライアントデータ |
 | locale | テキスト結果が出力されるロケール |
 | engineSettings | Output新しく作成された設定インスタンス |
@@ -1468,7 +1468,7 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
 
 このエンジンと共に不透明に格納され、セッション間で保持されるクライアントデータを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1489,7 +1489,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
 
 機能のゲートとテストに使用されるカスタム設定を構成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1510,7 +1510,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
 
 ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1531,12 +1531,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
 
 すべてのサービス要求のエンドポイント Url に影響するクラウドを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
 | settings | エンジンの設定 |
-| クラウド | クラウド識別子 (既定 = 不明) |
+| cloud | クラウド識別子 (既定 = 不明) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
 **Return**: 成功または失敗を示す結果コード
@@ -1554,12 +1554,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloud(
 
 すべてのサービス要求のベース URL を設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
 | settings | エンジンの設定 |
-| cloudEndpointBaseUrl | ベース URL (例: 'https://api.aadrm.com') |
+| cloudEndpointBaseUrl | ベース URL (例: ' https://api.aadrm.com ') |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
 **Return**: 成功または失敗を示す結果コード
@@ -1577,7 +1577,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
 
 保護エンジンの設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1591,7 +1591,7 @@ void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings en
 
 新しいコンテンツを公開するための保護ハンドラーの作成に使用される設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1612,7 +1612,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
 
 非推奨の暗号アルゴリズム (ECB) が下位互換性のために推奨されるかどうかを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1633,7 +1633,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorith
 
 非 MIP 対応アプリケーションで保護されたコンテンツを開くことが許可されるかどうかを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1654,7 +1654,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionA
 
 PL が JSON 形式であるかどうかを設定します (既定は XML)
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1675,7 +1675,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJs
 
 委任されたユーザーを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1698,7 +1698,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
 
 ライセンス前のユーザーを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1721,7 +1721,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail(
 
 既存のコンテンツを使用するための保護ハンドラーの作成に使用される設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1744,7 +1744,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
 
 既存のコンテンツを使用するための保護ハンドラーの作成に使用される設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1771,7 +1771,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense(
 
 保護ハンドラーの作成でオンライン HTTP 操作が許可されるかどうかを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1794,7 +1794,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
 
 委任されたユーザーを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1817,7 +1817,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
 
 発行ライセンスのサイズを取得します (バイト単位)
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1838,7 +1838,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
 
 発行ライセンスを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1865,7 +1865,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
 
 プレライセンスのサイズを取得します (バイト単位)
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1888,7 +1888,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize(
 
 ライセンスの取得
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1917,7 +1917,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicense(
 
 保護記述子を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1938,7 +1938,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
 
 ユーザーに付与されている権限の一覧を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1961,7 +1961,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetRights(
 
 保護されたコンテンツのサイズ、埋め込みのファクタリングなどを計算します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -1986,7 +1986,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
 
 保護ハンドラーによって使用される暗号モードのブロックサイズ (バイト単位) を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2007,7 +2007,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
 
 保護されたコンテンツへのアクセスが許可されているユーザーを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2028,7 +2028,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
 
 保護されたコンテンツへのアクセスが許可されているユーザーを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2055,7 +2055,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
 
 保護されたコンテンツの所有者を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2076,7 +2076,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
 
 保護されたコンテンツの所有者を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2103,7 +2103,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
 
 保護されたコンテンツのコンテンツ IE を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2124,7 +2124,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
 
 保護ハンドラーが旧バージョンとの互換性のために非推奨の暗号アルゴリズム (ECB) を使用するかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2145,7 +2145,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
 
 バッファーの復号化
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2177,7 +2177,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
 
 保護ハンドラーの設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2191,7 +2191,7 @@ void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler
 
 保護ハンドラーの設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2205,7 +2205,7 @@ void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handle
 
 保護ハンドラーに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2219,7 +2219,7 @@ void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 
 プロファイルの読み込み
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2240,7 +2240,7 @@ mip_cc_result MIP_CC_LoadProtectionProfile(
 
 保護プロファイルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2254,7 +2254,7 @@ void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 
 保護プロファイルの作成に使用する設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2281,7 +2281,7 @@ mip_cc_result MIP_CC_CreateProtectionProfileSettings(
 
 ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2302,7 +2302,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
 
 エンドユーザーライセンス (Eul) をローカルにキャッシュするかどうかを構成します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2323,7 +2323,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
 
 既定の HTTP スタックをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2344,7 +2344,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
 
 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2365,7 +2365,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
 
 機能のゲートとテストに使用されるカスタム設定を構成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2386,7 +2386,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
 
 保護プロファイル設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2400,7 +2400,7 @@ void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings 
 
 テンプレート ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2421,7 +2421,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetId(
 
 名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2442,7 +2442,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetNameSize(
 
 テンプレート名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2469,7 +2469,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetName(
 
 説明を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2490,7 +2490,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescriptionSize(
 
 テンプレートの説明を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2517,7 +2517,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
 
 テンプレート記述子に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2531,7 +2531,7 @@ void MIP_CC_ReleaseTemplateDescriptor(mip_cc_template_descriptor templateDescrip
 
 アクションの型を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2552,7 +2552,7 @@ mip_cc_result MIP_CC_Action_GetType(
 
 アクションの ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2573,7 +2573,7 @@ mip_cc_result MIP_CC_Action_GetId(
 
 アクションの結果を構成するアクションを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2598,7 +2598,7 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 アクションの結果に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2612,7 +2612,7 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 
 "コンテンツフッターの追加" アクションの UI 要素名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2633,7 +2633,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 
 "コンテンツフッターの追加" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2660,7 +2660,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 "コンテンツフッターの追加" アクションのテキストを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2681,7 +2681,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 
 "コンテンツフッターの追加" アクションのテキストを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2708,7 +2708,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 "コンテンツフッターの追加" アクションのフォント名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2729,7 +2729,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 
 "コンテンツフッターの追加" アクションのフォント名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2756,7 +2756,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 整数のフォントサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2777,7 +2777,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 "コンテンツフッターの追加" アクションのフォントの色を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2798,7 +2798,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 
 "コンテンツフッターの追加" アクションのフォントの色 (例、"#000000") を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2825,7 +2825,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 配置を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2846,7 +2846,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 
 余白のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2867,7 +2867,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 "コンテンツヘッダーの追加" アクションの UI 要素名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2888,7 +2888,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 
 "コンテンツヘッダーの追加" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2915,7 +2915,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 "コンテンツヘッダーの追加" アクションのテキストを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2936,7 +2936,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 
 "コンテンツヘッダーの追加" アクションのテキストを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2963,7 +2963,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 "コンテンツヘッダーの追加" アクションのフォント名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -2984,7 +2984,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 
 "コンテンツヘッダーの追加" アクションのフォント名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3011,7 +3011,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 整数のフォントサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3032,7 +3032,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 "コンテンツヘッダーの追加" アクションのフォントの色を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3053,7 +3053,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 
 "コンテンツヘッダーの追加" アクションのフォントの色 (例、"#000000") を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3080,7 +3080,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 配置を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3101,7 +3101,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 
 余白のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3122,7 +3122,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 "透かしの追加" アクションの UI 要素名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3143,7 +3143,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 
 "透かしの追加" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3170,7 +3170,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 透かしのレイアウトを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3191,7 +3191,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 "透かしの追加" アクションのテキストを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3212,7 +3212,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 
 "透かしの追加" アクションのテキストを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3239,7 +3239,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 "透かしの追加" アクションのフォント名を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3260,7 +3260,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 
 "透かしの追加" アクションのフォント名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3287,7 +3287,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 整数のフォントサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3308,7 +3308,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 "透かしの追加" アクションのフォントの色を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3329,7 +3329,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 
 "透かしの追加" アクションのフォントの色 (例、"#000000") を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3356,7 +3356,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 コンテンツラベルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3370,7 +3370,7 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 
 ラベルが適用された時刻を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3391,7 +3391,7 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 ラベルの割り当て方法を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3412,7 +3412,7 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 
 拡張プロパティを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3435,7 +3435,7 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 ラベルによって保護が適用されたかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3456,7 +3456,7 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 
 コンテンツラベルのインスタンスから汎用ラベルのプロパティを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3479,7 +3479,7 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 "カスタム" アクションの名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3500,7 +3500,7 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 
 "カスタム" アクションの名前を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3527,7 +3527,7 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 "カスタム" アクションのプロパティを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3550,7 +3550,7 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
 
 名前/プレフィックスでフィルター処理されたドキュメント metatdata を取得するためのコールバック関数定義
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3576,7 +3576,7 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
 
 ラベルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3590,7 +3590,7 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 
 ラベル ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3611,7 +3611,7 @@ mip_cc_result MIP_CC_Label_GetId(
 
 名前を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3632,7 +3632,7 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 
 ラベル名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3659,7 +3659,7 @@ mip_cc_result MIP_CC_Label_GetName(
 
 説明を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3680,7 +3680,7 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 
 ラベルの説明を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3707,7 +3707,7 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 色を格納するために必要なバッファーのサイズを取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3728,7 +3728,7 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 
 ラベルの色を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3755,7 +3755,7 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 ラベルの感度レベルを取得します。 値が大きいほど、より機密性が高いことを意味します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3776,7 +3776,7 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 ツールヒントを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3797,7 +3797,7 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 
 ラベルのツールヒントを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3824,7 +3824,7 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 自動分類ツールヒントを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3845,7 +3845,7 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 
 ラベルの自動分類ツールヒントを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3872,7 +3872,7 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 ラベルがアクティブかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3895,7 +3895,7 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 親ラベル (存在する場合) を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3916,7 +3916,7 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 子ラベルの数を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3937,7 +3937,7 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 
 子ラベルを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3964,7 +3964,7 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 ラベルのポリシーで定義されたカスタム設定を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3987,7 +3987,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 削除する "メタデータ" アクションのメタデータを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -3997,7 +3997,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 **Return**: 成功または失敗を示す結果コード
 
-**注**: メタデータを追加する前にメタデータを削除する必要がある MIP_CC_ReleaseStringList @noteを呼び出すことによって、呼び出し元によって ' metadatanames 変数 ' 変数を解放する必要があります 
+**注**: メタデータを @note 追加する前にメタデータを削除する必要がある MIP_CC_ReleaseStringList を呼び出すことによって、呼び出し元によって ' metadatanames 変数 ' 変数を解放する必要があります 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
@@ -4010,7 +4010,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 追加する "メタデータ" アクションのメタデータを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4020,7 +4020,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 **Return**: 成功または失敗を示す結果コード
 
-**注**: メタデータを追加する前にメタデータを削除する必要が@noteある MIP_CC_ReleaseDictionary を呼び出すことによって、' metadata ' 変数を呼び出し元が解放する必要があります 
+**注**: メタデータを @note 追加する前にメタデータを削除する必要がある MIP_CC_ReleaseDictionary を呼び出すことによって、' metadata ' 変数を呼び出し元が解放する必要があります 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
@@ -4033,7 +4033,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 文字列のキー/値の辞書を作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4058,7 +4058,7 @@ mip_cc_result MIP_CC_CreateMetadataDictionary(
 
 ディクショナリを構成するメタデータエントリを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4083,7 +4083,7 @@ mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
 
 ディクショナリに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4097,7 +4097,7 @@ void MIP_CC_ReleaseMetadataDictionary(mip_cc_metadata_dictionary dictionary);
 
 ポリシーエンジンに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4111,7 +4111,7 @@ void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 
 エンジン ID に必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4132,7 +4132,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
 
 エンジン ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4159,7 +4159,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
 
 ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4180,7 +4180,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
 
 ポリシーエンジンに関連付けられているクライアントデータを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4207,7 +4207,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
 
 ドキュメントにラベルを付ける必要があるかどうかをポリシーが指示するかどうかを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4228,7 +4228,7 @@ mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
 
 ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4249,7 +4249,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
 
 ポリシーエンジンに関連付けられているクライアントデータを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4276,7 +4276,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
 
 ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4297,7 +4297,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
 
 ポリシーエンジンに関連付けられているクライアントデータを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4324,7 +4324,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
 
 ポリシーに自動または推奨規則があるかどうかを取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4345,7 +4345,7 @@ mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
 
 ポリシーが最後にフェッチされた時刻を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4366,7 +4366,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
 
 ポリシーエンジンに関連付けられている秘密度ラベルの数を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4387,7 +4387,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
 
 ポリシーエンジンに関連付けられている機密ラベルを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4414,7 +4414,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
 
 ID で感度ラベルを取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4437,7 +4437,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
 
 ポリシーエンジンに関連付けられている感度の種類の数を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4458,7 +4458,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
 
 ポリシーエンジンに関連付けられている感度の種類を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4485,7 +4485,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
 
 ポリシー関連の関数を実行するポリシーハンドラーを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4508,11 +4508,11 @@ mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
 
 アプリケーション固有のイベントを監査パイプラインに記録します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| level | イベントのレベル: 情報/エラー/警告 |
+| レベル | イベントのレベル: 情報/エラー/警告 |
 | eventType | イベントの種類の説明 |
 | eventData | イベントに関連付けられているデータ |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
@@ -4532,7 +4532,7 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
 
 テナント ID のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4553,7 +4553,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetTenantIdSize(
 
 テナント ID を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4580,7 +4580,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetTenantId(
 
 ポリシーデータ xml のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4601,7 +4601,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
 
 ポリシーデータ xml を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4628,7 +4628,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
 
 感度の種類のデータ xml のサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4649,7 +4649,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
 
 感度の種類のデータ xml を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4676,7 +4676,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
 
 ポリシーエンジンに関連付けられているクライアントデータのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4697,7 +4697,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
 
 ポリシーエンジンに関連付けられているクライアントデータを取得する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4724,11 +4724,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
 
 新しいポリシーエンジンを作成するために使用される設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
-| identity | PolicyEngine に関連付けられる id |
+| ID | PolicyEngine に関連付けられる id |
 | clientData | エンジンと共に保存されるカスタマイズ可能なクライアントデータ |
 | locale | テキスト結果が出力されるロケール |
 | loadSensitivityTypes | 感度の種類のデータ (分類の場合) も読み込むかどうか |
@@ -4753,7 +4753,7 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
 
 このエンジンと共に不透明に格納され、セッション間で保持されるクライアントデータを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4774,7 +4774,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
 
 機能のゲートとテストに使用されるカスタム設定を構成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4795,7 +4795,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
 
 ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4816,12 +4816,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
 
 すべてのサービス要求のエンドポイント Url に影響するクラウドを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
 | settings | エンジンの設定 |
-| クラウド | クラウド識別子 (既定 = 不明) |
+| cloud | クラウド識別子 (既定 = 不明) |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
 **Return**: 成功または失敗を示す結果コード
@@ -4839,12 +4839,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloud(
 
 すべてのサービス要求のベース URL を設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
 | settings | エンジンの設定 |
-| cloudEndpointBaseUrl | ベース URL (例: 'https://dataservice.protection.outlook.com') |
+| cloudEndpointBaseUrl | ベース URL (例: ' https://dataservice.protection.outlook.com ') |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
 **Return**: 成功または失敗を示す結果コード
@@ -4862,7 +4862,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
 
 委任されたユーザーを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4885,7 +4885,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
 
 ラベルフィルターを設定します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4906,7 +4906,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetLabelFilter(
 
 ポリシーエンジン設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4920,7 +4920,7 @@ void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 
 ポリシーハンドラーに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4934,7 +4934,7 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 
 ドキュメントの現在のラベルを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4959,7 +4959,7 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 
 指定された状態に基づいてポリシー規則を実行し、対応するアクションを決定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -4988,7 +4988,7 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 計算されたアクションが適用され、データがディスクにコミットされた後に、アプリケーションによって呼び出されます
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5015,12 +5015,12 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
 
 認証コールバックをトリガーする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
 | profile | プロファイル |
-| クラウド | Azure クラウド |
+| cloud | Azure cloud |
 | authCallback | 呼び出される認証コールバック |
 | errorInfo | OutputOptional操作の結果がエラーの場合のエラー情報 |
 
@@ -5040,7 +5040,7 @@ mip_cc_result MIP_CC_PolicyProfile_AcquireAuthToken(
 
 プロファイルの読み込み
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5061,7 +5061,7 @@ mip_cc_result MIP_CC_LoadPolicyProfile(
 
 ポリシープロファイルに関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5075,7 +5075,7 @@ void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 
 ポリシープロファイルの作成に使用される設定オブジェクトを作成する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5100,7 +5100,7 @@ mip_cc_result MIP_CC_CreatePolicyProfileSettings(
 
 ログとテレメトリを関連付けるために使用できるセッション ID を設定します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5121,7 +5121,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
 
 既定の HTTP スタックをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5142,7 +5142,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
 
 既定の非同期タスクディスパッチャーをクライアント独自にオーバーライドする
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5163,7 +5163,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
 
 機能のゲートとテストに使用されるカスタム設定を構成します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5184,7 +5184,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
 
 ポリシープロファイル設定に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5198,7 +5198,7 @@ void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profileS
 
 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5219,7 +5219,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize(
 
 二重キー暗号化 url を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5246,7 +5246,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl(
 
 "テンプレートによる保護" アクションのテンプレート ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5267,7 +5267,7 @@ mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
 
 "2 つのキーで保護されるテンプレートによる保護" アクションのテンプレート ID を取得します
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5288,7 +5288,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetTemplateId(
 
 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5309,7 +5309,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize(
 
 二重キー暗号化 url を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5336,7 +5336,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl(
 
 2つのキー暗号化 url を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5357,7 +5357,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize(
 
 二重キー暗号化 url を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5384,7 +5384,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl(
 
 削除する "コンテンツフッターの削除" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5407,7 +5407,7 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 削除する "コンテンツヘッダーの削除" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5430,7 +5430,7 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 削除する "透かしの削除" アクションの UI 要素名を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5453,7 +5453,7 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 秘密度の種類に関連付けられているリソースを解放する
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5467,7 +5467,7 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 
 秘密度の種類の規則パッケージ ID を格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5488,7 +5488,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 
 感度の種類の規則パッケージ ID を取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5515,7 +5515,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 感度の種類の規則パッケージを格納するために必要なバッファーのサイズを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
@@ -5536,7 +5536,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 
 感度の種類の規則パッケージを取得します。
 
-**Parameters**
+**パラメーター**
 
 パラメーター | 説明
 |---|---|
