@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 20698241962b8dfe3e1fd81b7f0538a7ddfdd46a
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: e54afaf29c01072a99bf943eec5326b5c839472f
+ms.sourcegitcommit: b9ed44cc71e2fa4927e046a3819f758c3e098e82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802183"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711971"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -32,13 +32,13 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 現時点では、Windows 用に2つの Azure Information Protection クライアントがあります。 
 
-- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル**付けクライアント**: Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security Center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
+- Azure Information Protection、次のいずれかの管理センターからラベルとポリシー設定をダウンロードする、統一されたラベル **付けクライアント** : Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security Center、Microsoft 365 コンプライアンスセンター。 このクライアントは現在一般公開されており、将来のリリースで追加機能をテストするためのプレビューバージョンがある可能性があります。
 
-- Azure portal からラベルとポリシー設定をダウンロードする**Azure Information Protection クライアント (クラシック)** 。 このクライアントは、以前の一般公開バージョンのクライアント上に構築されます。
+- Azure portal からラベルとポリシー設定をダウンロードする **Azure Information Protection クライアント (クラシック)** 。 このクライアントは、以前の一般公開バージョンのクライアント上に構築されます。
 
-現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または[統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。
+現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または [統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。 機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)」をご覧ください。
 
-機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)」をご覧ください。
+Azure Information Protection クライアントは、Windows でのみサポートされています。 IOS、Android、macOS、および web でドキュメントや電子メールを分類して保護するには、 [組み込みのラベル付けをサポートする Office アプリ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)を使用します。 
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Office アプリの秘密度ラベルの使用に関する情報はどこで入手できますか。
 
@@ -46,9 +46,13 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 - [秘密度ラベルについて](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
 
-- [Office アプリの機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Office アプリ内での機密ラベルの使用](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+
+- [SharePoint と OneDrive で Office ファイルの機密ラベルを有効にする](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
 
 - [Office 内のドキュメントと電子メールに機密ラベルを適用する](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
+
+機密ラベルをサポートするその他のシナリオについては、「 [秘密度ラベルの一般的なシナリオ](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels)」を参照してください。
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 
@@ -60,7 +64,7 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 ## <a name="how-do-i-prevent-somebody-from-removing-or-changing-a-label"></a>他のユーザーがラベルを削除または変更しないようにするには、どうすればいいですか?
 
-分類ラベルを下げたり、ラベルを削除したり、保護を解除したりする理由をユーザーに示す[ポリシー設定](configure-policy-settings.md)がありますが、この設定によってこれらの操作が妨げられることはありません。 ユーザーによるラベルの削除または変更を防ぐには、コンテンツが既に保護されている必要があります。保護のアクセス許可ではユーザーにエクスポートまたはフル コントロールの[使用権限](configure-usage-rights.md)が付与されません。 
+分類ラベルを下げたり、ラベルを削除したり、保護を解除したりする理由をユーザーに示す [ポリシー設定](configure-policy-settings.md) がありますが、この設定によってこれらの操作が妨げられることはありません。 ユーザーによるラベルの削除または変更を防ぐには、コンテンツが既に保護されている必要があります。保護のアクセス許可ではユーザーにエクスポートまたはフル コントロールの[使用権限](configure-usage-rights.md)が付与されません。 
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>電子メールにラベルが付けられた場合、添付ファイルにも同じラベルが自動的に付けられますか?
 
