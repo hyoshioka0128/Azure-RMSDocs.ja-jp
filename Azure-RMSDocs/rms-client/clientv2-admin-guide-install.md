@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3afb97e9094d74eb98b67b375def7a24f6dcc104
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 394c91c7503a9bb8995eacf8c9cec45ab85fe57d
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073688"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788953"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -37,8 +37,8 @@ Azure Information Protection 統合されたラベル付けクライアントを
 |要件  |説明  |
 |---------|---------|
 |**Microsoft .NET Framework 4.6.2**     | 既定では Azure Information Protection 統合されたラベル付けクライアントの完全インストールには、Microsoft .NET Framework 4.6.2 の最小バージョンが必要です。 </br></br>このフレームワークがインストールされていない場合は、実行可能ファイルインストーラーのセットアップウィザードによって、この前提条件のダウンロードとインストールが試行されます。 この必須コンポーネントがクライアントのインストール時にインストールされたら、コンピューターの再起動が必要になります。       |
-|**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 </br></br>**重要:** ビューアーにこのフレームワークがない場合は、実行可能ファイルのインストーラーによってダウンロードまたはインストール*されません*。        |
-|**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 </br></br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 </br></br>**重要:** インストーラーでは、この前提条件を確認したりインストールしたりすることは*ありません*。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
+|**Microsoft .NET Framework 4.5.2**     | Azure Information Protection ビューアーが個別にインストールされている場合、ビューアーアプリケーションには Microsoft .NET Framework 4.5.2 の最小バージョンが必要です。 </br></br>**重要:** ビューアーにこのフレームワークがない場合は、実行可能ファイルのインストーラーによってダウンロードまたはインストール *されません* 。        |
+|**Windows PowerShell の最小バージョン4.0**     |   クライアントの PowerShell モジュールには、Windows PowerShell 4.0 の最小バージョンが必要です。これは、古いオペレーティングシステムにインストールする必要がある場合があります。 </br></br>詳細については、「[How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx)」(Windows PowerShell 4.0 のインストール方法) を参照してください。 </br></br>**重要:** インストーラーでは、この前提条件を確認したりインストールしたりすることは *ありません* 。 実行中の Windows PowerShell のバージョンを確認するには、PowerShell セッションで「`$PSVersionTable`」と入力します。      |
 |**800 x 600 より大きい画面の解像度**    |     解像度が 800 x 600 以下だと、エクスプローラーでファイルやフォルダーを右クリックしても、**[分類と保護 - Azure Information Protection]** ダイアログ ボックスを完全に表示できません。    |
 |**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 </br></br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 </br></br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。      |
 |**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 </br></br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
@@ -47,12 +47,12 @@ Azure Information Protection 統合されたラベル付けクライアントを
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>AIP が無効にならないようにグループポリシーを構成する
 
-Office バージョン2013以降では、Office アプリケーション用の**Microsoft Azure Information Protection**アドインが常に有効になるように、グループポリシーを構成することをお勧めします。  このアドインがなければ、ユーザーは Office アプリケーションでドキュメントや電子メールにラベルを付けることができません。   
+Office バージョン2013以降では、Office アプリケーション用の **Microsoft Azure Information Protection** アドインが常に有効になるように、グループポリシーを構成することをお勧めします。  このアドインがなければ、ユーザーは Office アプリケーションでドキュメントや電子メールにラベルを付けることができません。   
 
-- **Outlook の場合:**「[システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」に記載されているグループポリシー設定を使用します。
+- **Outlook の場合:** 「 [システム管理者によるアドインの制御](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins)」に記載されているグループポリシー設定を使用します。
 - **Word、Excel、PowerPoint の場合:**[Office 2013 および office 2016 プログラムのグループポリシー設定が原因で、「アドインが読み込まれていません](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off)」に記載されている**管理対象アドインの**グループポリシー設定の一覧を使用します。 . 
 
-    AIP に次のプログラム識別子 (ProgID) を指定し、オプションを1に設定します。この**アドインは常に有効になっ**ています。
+    AIP に次のプログラム識別子 (ProgID) を指定し、オプションを1に設定します。この **アドインは常に有効になっ**ています。
 
     |Application  |ProgID  |
     |---------|---------|
@@ -65,14 +65,14 @@ Office バージョン2013以降では、Office アプリケーション用の**
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-- ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ
-- Office 365 ProPlus
-- Office Professional Plus 2019
-- Office Professional Plus 2016
-- Office Professional Plus 2013 Service Pack 1
-- Office Professional Plus 2010 Service Pack 2
+- Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合の [Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) からのビルド 9330.2078 (office 365 の場合は Azure Information Protection とも呼ばれます)
+- [Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Enterprise 2019 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Enterprise 2016 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Enterprise 2013 Service Pack 1[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- Enterprise 2010 Service Pack 2[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
 
-Office の他のエディション (**標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、**ラベル付け**のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
+Office の他のエディション ( **標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、 **ラベル付け** のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
 
 保護サービスをサポートする Office のエディションについては、「[Azure Rights Management データ保護をサポートするアプリケーション](https://docs.microsoft.com/azure/information-protection/requirements-applications)」を参照してください。
 
@@ -100,7 +100,7 @@ Microsoft Update カタログを使用していない場合、または Intune �
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。 
 
-2. 既定のインストールの場合は、実行可能ファイル ( **AzInfoProtection_UL.exe**など) を実行するだけです。 ただし、インストールオプションを表示するには、まず、次のように **/help**を使用して実行可能ファイルを実行します。`AzInfoProtection_UL.exe /help`
+2. 既定のインストールの場合は、実行可能ファイル ( **AzInfoProtection_UL.exe**など) を実行するだけです。 ただし、インストールオプションを表示するには、まず、次のように **/help**を使用して実行可能ファイルを実行します。 `AzInfoProtection_UL.exe /help`
 
     サイレント モードでクライアントをインストールする例: `AzInfoProtection_UL.exe /quiet`
     
@@ -146,7 +146,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>ServiceLocation パラメーターに指定する値を特定するには
 
-1. PowerShell セッションから、まず[connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice)を実行し、Azure Rights Management サービスに接続するための管理者の資格情報を指定します。 次[に、AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)を実行します。 
+1. PowerShell セッションから、まず [connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) を実行し、Azure Rights Management サービスに接続するための管理者の資格情報を指定します。 次 [に、AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)を実行します。 
  
     Azure Rights Management サービス用の PowerShell モジュールをまだインストールしていない場合は、「 [AIPService powershell モジュールのインストール](../install-powershell.md)」を参照してください。
 
@@ -179,7 +179,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 ソフトウェアの展開方法に Intune を使用する場合は、次の手順を実行するとともに、「[Microsoft Intune でアプリを追加する](/intune/deploy-use/add-apps)」をご覧ください。
 
-1. Azure Information Protection 統合されたラベル付けクライアント (AzInfoProtection_UL) の .msi バージョンを[Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードします。 
+1. Azure Information Protection 統合されたラベル付けクライアント (AzInfoProtection_UL) の .msi バージョンを [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)からダウンロードします。 
     
     プレビュー バージョンが利用可能な場合は、このバージョンはテスト用にのみ使用してください。 運用環境でのエンド ユーザー向けのものではありません。
 
@@ -198,10 +198,10 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 1. 既定のインストールでは、`AzInfoProtection_UL.msi /quiet` のように、**/quiet** を付けて .msi を実行します。
 
-    場合によっては、追加のインストールパラメーターを指定する必要があります。 詳細については、「[実行可能ファイルインストーラーの手順](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)」を参照してください。
+    場合によっては、追加のインストールパラメーターを指定する必要があります。 詳細については、「 [実行可能ファイルインストーラーの手順](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)」を参照してください。
 
     > [!NOTE]
-    > 既定では、[**使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる**] オプションが有効になっています。 このオプションを無効にするには、次のいずれかを実行してください。
+    > 既定では、[ **使用状況の統計情報を Microsoft インストールに送信して Azure Information Protection を向上させる** ] オプションが有効になっています。 このオプションを無効にするには、次のいずれかを実行してください。
     >
     >- インストール中に、 **Allowtelemetry = 0**を指定します。
     >- インストール後、レジストリキーを次のように更新します: **EnableTelemetry = 0**。

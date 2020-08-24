@@ -4,7 +4,7 @@ description: Azure Information Protection を組織に展開するために必�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb55fb0acedc56c2b866d7ce681320c2dc9c2fcd
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: c984af422a867f8821c21a6e52df37e5d36437c7
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802126"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788936"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -40,7 +40,7 @@ Azure Information Protection を展開する前に、システムが次の前提
 
 - ** [Azure Information Protection を含む Office 365 プラン](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)**。 保護のみに必要です。
 
-使用する Azure Information Protection 機能がサブスクリプションに含まれていることを確認するには Azure Information Protection の[価格](https://azure.microsoft.com/pricing/details/information-protection)に関する機能の一覧を確認してください。
+使用する Azure Information Protection 機能がサブスクリプションに含まれていることを確認するには Azure Information Protection の [価格](https://azure.microsoft.com/pricing/details/information-protection)に関する機能の一覧を確認してください。
 
 ライセンスについて質問がある場合は、ライセンスについての[よく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)に目を通してください。
 
@@ -67,10 +67,10 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 Office 2010、証明書ベースまたは multi-factor authentication を使用する場合や、UPN 値がユーザーの電子メールアドレスと一致しない場合など、特定のシナリオには追加の前提条件が必要です。 詳細については、「 [Azure Information Protection の追加 Azure AD 要件](requirements-azure-ad.md)」を参照してください。
 
-詳細については次を参照してください:
+詳細については、次を参照してください:
 
 - [What is Azure AD Directory? (Azure AD ディレクトリとは)](/azure/active-directory/fundamentals/active-directory-whatis)
-- [オンプレミスの Active Directory ドメインを Azure Active Directory と統合](/azure/architecture/reference-architectures/identity/azure-ad)します。
+- [オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)。
 
 ## <a name="client-devices"></a>クライアント デバイス
 
@@ -95,20 +95,20 @@ Office 2010、証明書ベースまたは multi-factor authentication を使用�
 
 - **Windows Server 2016**
 
-- **Windows server 2012 R2**および**windows server 2012**
+- **Windows server 2012 R2** および **windows server 2012**
 
-[どちらのクライアントも](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)、ユーザーがドキュメントや電子メールを分類してラベル付けすることができます。
+[どちらのクライアントも](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) 、ユーザーがドキュメントや電子メールを分類してラベル付けすることができます。
 
 以前のバージョンの Windows でのサポートの詳細については、Microsoft アカウントまたはサポート担当者にお問い合わせください。
 
 > [!NOTE]
-> Azure Information Protection クライアントが Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする[同じデバイス](#client-devices)でデータを使用できます。
+> Azure Information Protection クライアントが Azure Rights Management サービスを使用してデータを保護する場合、Azure Rights Management サービスをサポートする [同じデバイス](#client-devices) でデータを使用できます。
 >
 
 ### <a name="virtual-machines"></a>仮想マシン
 仮想マシンを使用している場合は、Azure Information Protection 統合されたラベル付けまたは Azure Information Protection クライアントの実行に必要な追加の構成として、仮想デスクトップソリューションのソフトウェアベンダーがあるかどうかを確認します。 
 
-たとえば、Citrix ソリューションでは、Office 用の[Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825)、Azure Information Protection 統合されたラベル付けクライアント、または Azure Information Protection クライアントを無効にする必要がある場合があります。 
+たとえば、Citrix ソリューションでは、Office 用の [Citrix アプリケーションプログラミングインターフェイス (API) フック](https://support.citrix.com/article/CTX107825) 、Azure Information Protection 統合されたラベル付けクライアント、または Azure Information Protection クライアントを無効にする必要がある場合があります。 
 
 これらのアプリケーションは、それぞれ**winword.exe**、 **excel.exe**、 **outlook.exe**、 **powerpnt.exe**、 **msip.app.exe**、 **msip.viewer.exe**の各ファイルを使用します。
 
@@ -116,7 +116,7 @@ Office 2010、証明書ベースまたは multi-factor authentication を使用�
 
 上に示した各サーバーバージョンでは、Azure Information Protection クライアントがリモートデスクトップサービスでサポートされています。 
 
-リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect**フォルダーを削除しないでください。
+リモートデスクトップサービスで Azure Information Protection クライアントを使用しているときにユーザープロファイルを削除する場合は、 **%Appdata%\Microsoft\Protect** フォルダーを削除しないでください。
 
 また、Server Core と Nano Server はサポートされていません。
 
@@ -130,25 +130,25 @@ Office 2010、証明書ベースまたは multi-factor authentication を使用�
 
 ## <a name="applications"></a>アプリケーション
 
-Azure Information Protection クライアントは、次のいずれかの Office エディションから Microsoft **Word**、 **Excel**、 **PowerPoint**、 **Outlook**を使用して、ドキュメントや電子メールのラベル付けと保護を行うことができます。
+Azure Information Protection クライアントは、次のいずれかの Office エディションから Microsoft **Word**、 **Excel**、 **PowerPoint**、 **Outlook** を使用して、ドキュメントや電子メールのラベル付けと保護を行うことができます。
 
-- **Office アプリの最小バージョン 1805**。 Office 365 Business または Microsoft 365 Business から9330.2078 をビルドします。 
+- **Office アプリの最小バージョン 1805**。 [Microsoft 365 app for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)から9330.2078 をビルドします。 
 
     このエディションは、ユーザーに Azure Rights Management のライセンスが割り当てられている場合にのみサポートされます (Office 365 の Azure Information Protection とも呼ばれます)。
 
-- **Office 365 ProPlus**
+- **[Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2019**
+- **[Enterprise 2019 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2016**
+- **[Enterprise 2016 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2013 Service Pack 1**
+- **Enterprise 2013 Service Pack 1[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2010 Service Pack 2**
+- **Enterprise 2010 Service Pack 2[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
 Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションでは、Azure Information Protection が分類のみでサポートされており、保護を適用するラベルはユーザーに対して表示されません。 
 
-これらのラベルは、Azure Information Protection バーまたは Office リボンの統一されたラベル付けクライアント (従来のクライアントの [**保護**] ボタンまたは統合ラベル付けクライアントの [**秘密度**] ボタンから) に表示されます。 
+これらのラベルは、Azure Information Protection バーまたは Office リボンの統一されたラベル付けクライアント (従来のクライアントの [ **保護** ] ボタンまたは統合ラベル付けクライアントの [ **秘密度** ] ボタンから) に表示されます。 
 
 詳細については、「 [Azure Rights Management データ保護をサポートするアプリケーション](requirements-applications.md)」を参照してください。
 
@@ -156,7 +156,7 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 - Azure Information Protection クライアントは、従来のラベル付けと統一されたラベル付けの両方を含み、同じコンピューターで複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。
 
-- Office[メールのマージ](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705)機能は、Azure Information Protection 機能ではサポートされていません。
+- Office [メールのマージ](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) 機能は、Azure Information Protection 機能ではサポートされていません。
 
 ## <a name="firewalls-and-network-infrastructure"></a>ファイアウォールとネットワーク インフラストラクチャ
 
@@ -183,7 +183,7 @@ Azure Information Protection には、次の追加要件があります。
     
     発行元 CA の名前が Microsoft からのものではない場合は、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性があります。
 
-- **TLS バージョン1.2 以降**(統一されたラベル付けクライアントのみ)。 統一されたラベル付けクライアントを使用するには、1.2 以上の TLS バージョンが必要です。これにより、暗号化が安全なプロトコルを使用し、Microsoft のセキュリティガイドラインに合わせることができます。
+- **TLS バージョン 1.2** 以降 (統一されたラベル付けクライアントのみ)。 統一されたラベル付けクライアントを使用するには、1.2 以降の TLS バージョンが必要です。これにより、暗号化による安全なプロトコルを使用し、Microsoft のセキュリティガイドラインに合わせることができます。
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>AD RMS と Azure RMS の共存
 
@@ -201,9 +201,9 @@ Azure Information Protection には、次の追加要件があります。
 
 同じ組織内で両方のサービスがアクティブになっているその他の非移行シナリオについては、両方のサービスが、特定のユーザーがコンテンツを保護できるように、両方のサービスを構成する必要があります。 このようなシナリオは次のように構成します。
 
-* AD RMS にリダイレクトを使用して[Azure RMS 移行を行う](migrate-from-ad-rms-to-azure-rms.md)
+* AD RMS にリダイレクトを使用して [Azure RMS 移行を行う](migrate-from-ad-rms-to-azure-rms.md)
 
-* 同時に複数のユーザーに対して両方のサービスをアクティブにする必要がある場合は、サービス側の構成を使用して排他性を適用します。  クラウドサービスの Azure RMS オンボードコントロールと、発行 URL の ACL を使用して、AD RMS の**読み取り**専用モードを設定します。
+* 同時に複数のユーザーに対して両方のサービスをアクティブにする必要がある場合は、サービス側の構成を使用して排他性を適用します。  クラウドサービスの Azure RMS オンボードコントロールと、発行 URL の ACL を使用して、AD RMS の **読み取り** 専用モードを設定します。
 
 ### <a name="service-tags"></a>サービス タグ
 

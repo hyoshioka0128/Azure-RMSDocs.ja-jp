@@ -1,19 +1,19 @@
 ---
-title: クイック スタート - Microsoft Information Protection (MIP) SDK C++ クライアントの初期化
-description: Microsoft Information Protection (MIP) SDK クライアント アプリケーションの初期化ロジックを記述する方法を示すクイック スタートです。
+title: クイックスタート - ファイル API を使用した MIP SDK C++ クライアントの初期化
+description: ファイル API を使用して Microsoft Information Protection (MIP) SDK クライアント アプリケーションの初期化ロジックを記述する方法を示すクイック スタートです。
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556080"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564132"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++)
+# <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++) 
 
 このクイック スタートでは、実行時に MIP C++ SDK によって使用される、クライアントの初期化パターンを実装する方法を示します。 
 
@@ -359,9 +359,9 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
    Enter access token:
    ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで初期化コードが完了し、MIP ファイル API の操作を開始する次のクイック スタートの準備ができました。
 
 > [!div class="nextstepaction"]
-> [機密ラベルの一覧表示](quick-file-list-labels-cpp.md)
+> [秘密度ラベルの一覧表示](quick-file-list-labels-cpp.md)

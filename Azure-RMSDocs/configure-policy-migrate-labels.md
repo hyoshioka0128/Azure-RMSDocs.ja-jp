@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a0ebdc684bea634707d09fb0b7d4dd8a4175c63b
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 4b97f7930e4d3a22746635a3d43436c59126e6fd
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073671"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788681"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -28,7 +28,7 @@ ms.locfileid: "88073671"
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
-Azure Information Protection ラベルを統一されたラベル付けプラットフォームに移行して、統一されたラベル付けを[サポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)による機密ラベルとして使用できるようにします。
+Azure Information Protection ラベルを統一されたラベル付けプラットフォームに移行して、統一されたラベル付けを [サポートするクライアントとサービス](#clients-and-services-that-support-unified-labeling)による機密ラベルとして使用できるようにします。
 
 > [!NOTE]
 > Azure Information Protection サブスクリプションが非常に新しい場合は、テナントが既に統合されたラベル付けプラットフォームにあるため、ラベルを移行する必要はありません。 詳細については、「[テナントが統一されたラベル付けプラットフォームにあるかどうかを確認する方法](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)」を参照してください。
@@ -47,7 +47,7 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 
 組織内の代理管理に管理者ロールを使用する場合は、統一されたラベル付けプラットフォームに対していくつかの変更を行う必要があります。
 
-**Azure Information Protection 管理者**(旧称**Information Protection administrator**) の[Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)は、統一されたラベル付けプラットフォームではサポートされていません。 この管理者ロールを使用して Azure Information Protection を管理する場合は、このロールを持つユーザーを、**コンプライアンス管理者**、**コンプライアンスデータ管理者**、または**セキュリティ管理者**の Azure AD ロールに追加します。 この手順に関してサポートが必要な場合は、「[Office 365 セキュリティ&コンプライアンスセンターへのアクセス権をユーザーに付与する](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center)」をご覧ください。 Azure AD ポータル、Microsoft 365 セキュリティ センター、および Microsoft 365 コンプライアンス センターで、これらのロールを割り当てることもできます。
+**Azure Information Protection 管理者**(旧称**Information Protection administrator**) の[Azure AD ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)は、統一されたラベル付けプラットフォームではサポートされていません。 この管理者ロールを使用して Azure Information Protection を管理する場合は、このロールを持つユーザーを、 **コンプライアンス管理者**、 **コンプライアンスデータ管理者**、または **セキュリティ管理者**の Azure AD ロールに追加します。 この手順に関してサポートが必要な場合は、「[Office 365 セキュリティ&コンプライアンスセンターへのアクセス権をユーザーに付与する](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center)」をご覧ください。 Azure AD ポータル、Microsoft 365 セキュリティ センター、および Microsoft 365 コンプライアンス センターで、これらのロールを割り当てることもできます。
 
 これらのロールを使用する代わりに、管理センターで、これらのユーザー用の新しいロール グループを作成し、そのグループに **[秘密度ラベル管理者]** ロールまたは **[組織構成]** ロールを追加できます。
 
@@ -77,7 +77,7 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 ポリシーとすべてのクライアント詳細設定は移行されません。移行されないポリシーには、ポリシー設定とそれにアクセスできるユーザーが含まれます (スコープ付きポリシー)。 ラベルの移行後に、これらの設定を構成するためのオプションは次のとおりです。
 
 - 機密ラベルの管理センター。
-- [Office 365 セキュリティ & コンプライアンス PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps)。[クライアントの詳細設定](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を構成するために使用する必要があります。
+- [Office 365 セキュリティ & コンプライアンス PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps)。 [クライアントの詳細設定](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を構成するために使用する必要があります。
     
 > [!IMPORTANT]
 > 管理センターでは、移行されたラベルの一部の設定がサポートされません。 「[管理センターでサポートされていないラベル設定](#label-settings-that-are-not-supported-in-the-admin-centers)」セクションに記載された表を使用すると、それらの設定と推奨される一連の措置を容易に確認できます。
@@ -90,7 +90,7 @@ Azure Information Protection ラベルを統一されたラベル付けプラッ
 - 定義済みのテンプレート用に構成されているラベルがある場合は、これらのラベルを編集し、**[アクセス許可を設定]** オプションを選択して、ご自分のテンプレートで使用していたのと同じ保護設定を構成します。 定義済みのテンプレートでのラベルによってラベルの移行はブロックされません。しかし、このラベル構成は管理センターではサポートされていません。
         
     > [!TIP]
-    > これらのラベルを再構成すると、2つのブラウザーウィンドウが役に立つ場合があります。1つは保護設定を表示するためにラベルの [**テンプレートの編集**] ボタンを選択するウィンドウで、もう1つは [**アクセス許可の設定**] を選択したときに同じ設定を構成するためのウィンドウです。
+    > これらのラベルを再構成すると、2つのブラウザーウィンドウが役に立つ場合があります。1つは保護設定を表示するためにラベルの [ **テンプレートの編集** ] ボタンを選択するウィンドウで、もう1つは [ **アクセス許可の設定**] を選択したときに同じ設定を構成するためのウィンドウです。
     
 - クラウドベースの保護設定を含むラベルを移行すると、保護テンプレートのスコープは、Azure portal (または AIPService PowerShell モジュールを使用) で定義されているスコープと、管理センターで定義されているスコープになります。 
 
@@ -115,9 +115,9 @@ Azure portal では、各ラベルのラベル表示名のみが表示されま�
     - **Secret\HR**
     - **Secret\Finance**
     
-この一覧では、**パブリック、** **一般、** **社外秘、** および**シークレット**はすべて親ラベルであり、重複する名前を持つことはできません。 さらに、 **Confidential\HR**と**Confidential\Finance**は階層内の同じ場所にあり、重複する名前を持つこともできません。
+この一覧では、 **パブリック、** **一般、** **社外秘、** および **シークレット** はすべて親ラベルであり、重複する名前を持つことはできません。 さらに、 **Confidential\HR** と **Confidential\Finance** は階層内の同じ場所にあり、重複する名前を持つこともできません。
 
-ただし、 **Confidential\HR**や**Secret\HR**など、異なる親のサブラベルは、階層内の同じ場所に存在しないため、同じ個別の名前を持つことができます。 
+ただし、 **Confidential\HR** や **Secret\HR** など、異なる親のサブラベルは、階層内の同じ場所に存在しないため、同じ個別の名前を持つことができます。 
 
 ### <a name="localized-strings-in-labels"></a>ラベル内のローカライズされた文字列
 
@@ -127,7 +127,7 @@ Azure portal では、各ラベルのラベル表示名のみが表示されま�
 
 移行後、移行したラベルを Azure portal で編集すると、管理センターで同じ変更内容が自動的に反映されます。 
 
-ただし、管理センターの1つで移行したラベルを編集する場合は、[Azure portal、 **Azure Information Protection 統合**されたラベル付け] ウィンドウに戻り、[**発行**] を選択する必要があります。 
+ただし、管理センターの1つで移行したラベルを編集する場合は、[Azure portal、 **Azure Information Protection 統合** されたラベル付け] ウィンドウに戻り、[ **発行**] を選択する必要があります。 
 
 この追加の操作は、Azure Information Protection クライアント (クラシック) がラベルの変更を取得するために必要です。
 
@@ -144,9 +144,9 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 |有効または無効の状態<br /><br />この状態は管理センターと同期されていません |適用なし|ラベルが発行されているかどうかに対応します。 |
 |一覧から選択するか、RGB コードを使用して指定するラベルの色 |はい|ラベルの色に対する構成オプションはありません。 代わりに、Azure portal でラベルの色を構成することも、 [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)を使用することもできます。|
 |事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |いいえ|事前に定義されたテンプレート用の構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
-|Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |はい|管理センターには、ユーザー定義のアクセス許可の構成オプションが含まれるようになりました。 <br /><br /> この構成でラベルを発行する場合は、[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)のラベルを適用した結果を確認してください。|
+|Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |はい|管理センターには、ユーザー定義のアクセス許可の構成オプションが含まれるようになりました。 <br /><br /> この構成でラベルを発行する場合は、 [次の表](#comparing-the-behavior-of-protection-settings-for-a-label)のラベルを適用した結果を確認してください。|
 |Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 ([転送不可]) |いいえ|HYOK に対する構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。 それを行った場合は、ラベルの適用結果が[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)に一覧表示されます。|
-|ビジュアルマーキング (ヘッダー、フッター、透かし) 用の RGB コードによるカスタムフォント名、サイズ、およびカスタムフォント色  |はい|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal、または[**新しいラベル**](https://docs.microsoft.com/powershell/module/exchange/new-label)の Office 365 Security & コンプライアンスセンターのコマンドレットを使用します。 管理を簡単にするために、管理センターで表示されているオプションの1つに色を変更することを検討してください。 <br /><br />**注**: セキュリティ & コンプライアンスセンター管理センターでは、定義済みのフォント定義リストがサポートされています。 カスタムフォントおよび色は、[**新しいラベル**](https://docs.microsoft.com/powershell/module/exchange/new-label)の Office 365 Security & コンプライアンスセンターのコマンドレットを使用してのみサポートされます。|
+|ビジュアルマーキング (ヘッダー、フッター、透かし) 用の RGB コードによるカスタムフォント名、サイズ、およびカスタムフォント色  |はい|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal、または [**新しいラベル**](https://docs.microsoft.com/powershell/module/exchange/new-label) の Office 365 Security & コンプライアンスセンターのコマンドレットを使用します。 管理を簡単にするために、管理センターで表示されているオプションの1つに色を変更することを検討してください。 <br /><br />**注**: セキュリティ & コンプライアンスセンター管理センターでは、定義済みのフォント定義リストがサポートされています。 カスタムフォントおよび色は、 [**新しいラベル**](https://docs.microsoft.com/powershell/module/exchange/new-label) の Office 365 Security & コンプライアンスセンターのコマンドレットを使用してのみサポートされます。|
 |視覚的なマーキングの変数 (ヘッダー、フッター) |はい|このラベルの構成は、AIP クライアントでのみサポートされ、Office 組み込みのラベル付けではサポートされません。 </br></br>組み込みのラベル付けを使用していて、変更せずにこのラベルを公開すると、変数は動的な値を表示するのではなく、クライアント上のテキストとして表示されます。 <!--Before you publish the label, edit the strings to remove the variables.-->|
 |アプリごとの視覚的なマーキング|はい|このラベルの構成は、AIP クライアントでのみサポートされ、Office 組み込みのラベル付けではサポートされません。 </br></br>組み込みのラベル付けを使用していて、このラベルを変更せずに発行すると、各アプリに表示するように構成した視覚的なマーキングではなく、視覚的なマーキングの構成が変数テキストとして表示されます。  <!--Publish this label only if it is suitable for all apps. We recommend editing the strings to remove the app variables if needed.-->|
 |"自分のためにのみ" 保護 |はい|管理センターでは、ユーザーを指定せずに、今すぐ適用する暗号化設定を保存することはできません。 この Azure portal では、この構成により、 ["自分だけ" の保護](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)が適用されるラベルが生成されます。 <br /><br /> 別の方法として、暗号化を適用するラベルを作成し、任意のアクセス許可を持つユーザーを指定してから、PowerShell を使用して関連する保護テンプレートを編集します。 まず、 [AipServiceRightsDefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用し (例3を参照)、次に*RightsDefinitions*パラメーターを指定して[-Aipservicetemplateproperty を設定](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples)します。|
@@ -156,7 +156,7 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 
 次の表を使用して、ラベルの同じ保護設定がどのように動作するかを特定します。これは、Azure Information Protection クライアント (クラシック)、Azure Information Protection のラベル付けクライアント、またはラベルが組み込まれている Office アプリ ("ネイティブオフィスラベル" とも呼ばれます) によって使用されているかどうかによって異なります。 ラベルの動作の違いによって、ラベルを公開するかどうかの決定が変わることがあります。これは、組織内にクライアントが混在している場合に特に当てはまります。
 
-保護設定がどのように構成されているかわからない場合は、[**保護**] ウィンドウの [Azure portal の設定を参照してください。 この手順に関してサポートが必要な場合は、「[保護設定用のラベルを構成するには](configure-policy-protection.md#to-configure-a-label-for-protection-settings)」をご覧ください。
+保護設定がどのように構成されているかわからない場合は、[ **保護** ] ウィンドウの [Azure portal の設定を参照してください。 この手順に関してサポートが必要な場合は、「[保護設定用のラベルを構成するには](configure-policy-protection.md#to-configure-a-label-for-protection-settings)」をご覧ください。
 
 同じ動作をする保護設定は一覧に含まれませんが、次の例外があります。
 - ラベル付けが組み込まれた Office アプリを使用すると、Azure Information Protection 統合ラベル付けクライアントもインストールされていない限り、ラベルはエクスプローラーに表示されません。
@@ -196,49 +196,49 @@ Outlook では、保護は保持されます。ただし、暗号化のみのオ
     
     たとえば、リソース、サービス、ドキュメントの検索ボックスで次のようにします: 「**Information**」と入力し、 **[Azure Information Protection]** を選択します。
 
-2. [**管理**] メニューオプションから、[**統合ラベル**] を選択します。
+2. [ **管理** ] メニューオプションから、[ **統合ラベル**] を選択します。
 
-3. [ **Azure Information Protection 統合ラベル**] ウィンドウで、[**アクティブ化**] を選択し、オンラインの指示に従います。
+3. [ **Azure Information Protection 統合ラベル** ] ウィンドウで、[ **アクティブ化** ] を選択し、オンラインの指示に従います。
     
-    アクティブ化するためのオプションが使用できない場合は、**統合ラベルの状態**を確認します。 [**アクティブ化**済み] が表示されている場合、テナントは既に統一されたラベル付けストアを使用しているため、ラベルを移行する必要はありません。
+    アクティブ化するためのオプションが使用できない場合は、 **統合ラベルの状態**を確認します。 [ **アクティブ化**済み] が表示されている場合、テナントは既に統一されたラベル付けストアを使用しているため、ラベルを移行する必要はありません。
 
-正常に移行されたラベルについては、[統合ラベル付けをサポートするクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)で使用できるようになりました。 ただし、まず、Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンターのいずれかの管理センターで[これらのラベルを発行](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)する必要があります。
+正常に移行されたラベルについては、[統合ラベル付けをサポートするクライアントおよびサービス](#clients-and-services-that-support-unified-labeling)で使用できるようになりました。 ただし、まず、Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security center、または Microsoft 365 コンプライアンスセンターのいずれかの管理センターで [これらのラベルを発行](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) する必要があります。
 
 > [!IMPORTANT]
-> Azure portal の外部にあるラベルを編集する場合は Azure Information Protection クライアント (クラシック) の場合は、この**Azure Information Protection の統合**されたラベル付けウィンドウに戻り、[**発行**] を選択します。
+> Azure portal の外部にあるラベルを編集する場合は Azure Information Protection クライアント (クラシック) の場合は、この **Azure Information Protection の統合** されたラベル付けウィンドウに戻り、[ **発行**] を選択します。
 
 ### <a name="copy-policies"></a>ポリシーのコピー
 
 > [!NOTE]
 > このオプションはプレビュー段階であり、変更される可能性があります。
 
-ラベルを移行したら、ポリシーをコピーするオプションを選択できます。 このオプションを選択すると、[ポリシー設定](configure-policy-settings.md)と[詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings)を含むポリシーの1回限りのコピーが、ラベルを管理する管理センターに送信されます。 Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security center、Microsoft 365 コンプライアンスセンターです。 
+ラベルを移行したら、ポリシーをコピーするオプションを選択できます。 このオプションを選択すると、 [ポリシー設定](configure-policy-settings.md) と [詳細なクライアント設定](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) を含むポリシーの1回限りのコピーが、ラベルを管理する管理センターに送信されます。 Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 security center、Microsoft 365 コンプライアンスセンターです。 
 
 ポリシーが設定されて正常にコピーされ、ラベルが、Azure portal のポリシーに割り当てられたユーザーとグループに自動的に発行されます。 グローバルポリシーでは、これはすべてのユーザーを意味します。 コピーしたポリシー内の移行されたラベルを公開する準備ができていない場合は、ポリシーをコピーした後で、管理者ラベルセンターのラベルポリシーからラベルを削除できます。
 
 [ **Azure Information Protection の統合ラベル**] ウィンドウで [**ポリシーのコピー (プレビュー)** ] オプションを選択する前に、次の点に注意してください。
 
-- テナントに対して統合ラベルをアクティブ化するまで、[**ポリシーのコピー (プレビュー)** ] オプションは使用できません。
+- テナントに対して統合ラベルをアクティブ化するまで、[ **ポリシーのコピー (プレビュー)** ] オプションは使用できません。
 
-- コピーするポリシーと設定を選択的に選択することはできません。 すべてのポリシー (**グローバル**ポリシーとスコープ付きポリシー) が自動的に選択されてコピーされ、ラベルポリシー設定としてサポートされているすべての設定がコピーされます。 同じ名前のラベルポリシーが既にある場合は、Azure portal のポリシー設定で上書きされます。
+- コピーするポリシーと設定を選択的に選択することはできません。 すべてのポリシー ( **グローバル** ポリシーとスコープ付きポリシー) が自動的に選択されてコピーされ、ラベルポリシー設定としてサポートされているすべての設定がコピーされます。 同じ名前のラベルポリシーが既にある場合は、Azure portal のポリシー設定で上書きされます。
 
-- Azure Information Protection 統合ラベル付けクライアントの場合、ポリシー設定ではなく*ラベルの詳細設定*としてサポートされるため、一部のアドバンストクライアント設定はコピーされません。 [Office 365 セキュリティ & コンプライアンスセンターの PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用して、これらのラベルの詳細設定を構成できます。 コピーされないアドバンストクライアントの設定:
+- Azure Information Protection 統合ラベル付けクライアントの場合、ポリシー設定ではなく *ラベルの詳細設定* としてサポートされるため、一部のアドバンストクライアント設定はコピーされません。 [Office 365 セキュリティ & コンプライアンスセンターの PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)を使用して、これらのラベルの詳細設定を構成できます。 コピーされないアドバンストクライアントの設定:
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- ラベルへの後続の変更が同期されるラベルの移行とは異なり、[**ポリシーのコピー** ] アクションでは、ポリシーまたはポリシー設定に対する後続の変更は同期されません。 Azure portal に変更を加えた後、[ポリシーのコピー] アクションを繰り返すと、既存のポリシーとその設定が再度上書きされます。 または、Office 365 セキュリティ & コンプライアンスセンターの PowerShell の*設定パラメーターを使用して*、Set-labelpolicy または Set-Label コマンドレットを使用します。
+- ラベルへの後続の変更が同期されるラベルの移行とは異なり、[ **ポリシーのコピー** ] アクションでは、ポリシーまたはポリシー設定に対する後続の変更は同期されません。 Azure portal に変更を加えた後、[ポリシーのコピー] アクションを繰り返すと、既存のポリシーとその設定が再度上書きされます。 または、Office 365 セキュリティ & コンプライアンスセンターの PowerShell の *設定パラメーターを使用して* 、Set-labelpolicy または Set-Label コマンドレットを使用します。
 
-- ポリシーの**コピー**操作では、ポリシーがコピーされる前に、次のことを確認します。
+- ポリシーの **コピー** 操作では、ポリシーがコピーされる前に、次のことを確認します。
     
     - ポリシーに割り当てられているユーザーとグループは、現在 Azure AD にあります。 1つまたは複数のアカウントがない場合、ポリシーはコピーされません。 グループメンバーシップは確認されません。
     
     - グローバルポリシーに少なくとも1つのラベルが含まれています。 管理者ラベル付けセンターではラベルのないラベルポリシーはサポートされていないため、ラベルのないグローバルポリシーはコピーされません。
 
-- ポリシーをコピーして管理者ラベルセンターから削除した場合は、[**ポリシーのコピー** ] アクションをもう一度実行してから、削除がレプリケートされるのに十分な時間を確保してから、少なくとも2時間待機してください。
+- ポリシーをコピーして管理者ラベルセンターから削除した場合は、[ **ポリシーのコピー** ] アクションをもう一度実行してから、削除がレプリケートされるのに十分な時間を確保してから、少なくとも2時間待機してください。
 
 - Azure Information Protection からコピーされたポリシーの名前は同じではなく、 **AIP_** のプレフィックスを使用して名前が付けられます。 ポリシー名を後で変更することはできません。 
 
-Azure Information Protection の統一されたラベル付けクライアントのポリシー設定、クライアントの詳細設定、およびラベル設定の構成の詳細については、管理者ガイドの「 [Azure Information Protection 統合ラベル付けクライアントのカスタム構成](./rms-client/clientv2-admin-guide-customizations.md)」を参照してください。
+Azure Information Protection の統一されたラベル付けクライアントのポリシー設定、クライアントの詳細設定、およびラベル設定の構成の詳細については、管理者ガイドの「 [Azure Information Protection 統合ラベル付けクライアントのカスタム構成](./rms-client/clientv2-admin-guide-customizations.md) 」を参照してください。
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>統合ラベル付けをサポートするクライアントおよびサービス
 
@@ -248,21 +248,19 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - [Windows 用の Azure Information Protection 統合ラベル付け](./rms-client/unifiedlabelingclient-version-release-history.md)されたクライアント。 このクライアントと Azure Information Protection クライアント (クラシック) の比較については、「 [Windows コンピューターのラベル付けクライアントの比較](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-- 可用性の段階が異なる Office からのアプリ。 詳細については、Microsoft 365 の準拠に関するドキュメントの「[アプリでの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)」を参照してください。
+- 可用性の段階が異なる Office からのアプリ。 詳細については、Microsoft 365 の準拠に関するドキュメントの「 [アプリでの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) 」を参照してください。
     
 - [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) を使用しているソフトウェア ベンダーおよび開発者からのアプリです。
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているサービス: 
 
-- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI (プレビュー)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Web 上の Office Online および Outlook
+- Office Online (プレビュー中) および Outlook (web 上)
 
-    詳細については、「 [SharePoint および OneDrive での Office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
-
-- Microsoft SharePoint、OneDrive for work または学校、OneDrive、チーム、Office 365 グループ
+- Microsoft SharePoint、OneDrive for work または学校、OneDrive、チーム、Office 365 グループ (プレビュー)
     
-    詳細については、「 [Microsoft Teams、Office 365 グループ、および SharePoint サイトでの機密ラベルの使用](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites)」を参照してください。
+    詳細については、「 [Microsoft Teams、office 365 グループ、および sharepoint サイトでの秘密度ラベルの使用 (パブリックプレビュー)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) 」および「 [sharepoint および OneDrive での office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
 
 - Microsoft Defender Advanced Threat Protection
 
@@ -282,8 +280,8 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - ブログの投稿: 統合された[ラベル付けの移行につい](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)て
 
-- ウェビナー:[ラベル記録、デッキ、faq の統合](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
+- ウェビナー: [ラベル記録、デッキ、faq の統合](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
 
-ラベル管理センターで構成および発行できるようになった移行済みラベルの詳細については、「[感度ラベルについて](/microsoft-365/compliance/sensitivity-labels)」および「[秘密度ラベルとそのポリシーの作成と構成](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。
+ラベル管理センターで構成および発行できるようになった移行済みラベルの詳細については、「 [感度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 」および「 [秘密度ラベルとそのポリシーの作成と構成](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)」を参照してください。
 
 まだインストールしていない場合は、Azure Information Protection 統合されたラベル付けクライアントをインストールします。 リリース情報、管理者ガイド、およびユーザーガイドについては、「 [Windows 用の統合ラベルクライアント Azure Information Protection](./rms-client/aip-clientv2.md)」を参照してください。

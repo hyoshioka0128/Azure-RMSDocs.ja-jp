@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a02d5bb811bd18698a0ca4ec0a797ff4e31ffa4
-ms.sourcegitcommit: a495476a439a57cf6a4b3446575e344504b3fefb
+ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87554945"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788724"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Azure Rights Management コネクタのインストールと構成
 
@@ -35,6 +35,7 @@ ms.locfileid: "87554945"
 - **AzureUSGovernment2**: Azure Government 2
 - **AzureUSGovernment3**: Azure Government 3
 
+
 ## <a name="installing-the-rms-connector"></a>RMS コネクタのインストール
 
 1.  RMS コネクタを実行するコンピューター (2 つ以上) を特定します。 これらのコンピューターは、「前提条件」に記載されている最小仕様を満たしている必要があります。
@@ -50,9 +51,9 @@ ms.locfileid: "87554945"
 
     -   RMS コネクタのサーバー構成ツールを使用してオンプレミス サーバーのレジストリ設定を自動構成する場合は、GenConnectorConfig.ps1 もダウンロードします。
 
-3.  RMS コネクタをインストールするコンピューターで、管理者特権を使用して**RMSConnectorSetup.exe**を実行します。
+3.  RMS コネクタをインストールするコンピューターで、管理者特権を使用して **RMSConnectorSetup.exe** を実行します。
 
-4.  Microsoft Rights Management Connector セットアップの [ようこそ] ページで、[ **microsoft Rights Management コネクタをコンピューターにインストールする**] を選択し、[**次へ**] をクリックします。
+4.  Microsoft Rights Management Connector セットアップの [ようこそ] ページで、[ **microsoft Rights Management コネクタをコンピューターにインストールする**] を選択し、[ **次へ**] をクリックします。
 
 5.  RMS コネクタのライセンス条項を読んで同意したら、[**次へ**] をクリックします。
 
@@ -68,9 +69,10 @@ RMS コネクタを構成する前に、ソリューションに一致するク�
 
 :::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="新しい AAD RM コネクタを認証するための適切な Azure 環境を選択します":::
 
-クラウド環境を選択したら、**ユーザー名**と**パスワード**を入力します。 RMS コネクタを構成するための十分な特権を持つアカウントの資格情報を入力してください。 たとえば、「」と入力し、 <strong>admin@contoso.com</strong> このアカウントのパスワードを指定します。
+クラウド環境を選択したら、 **ユーザー名** と **パスワード**を入力します。 RMS コネクタを構成するための十分な特権を持つアカウントの資格情報を入力してください。 たとえば、「」と入力し、 <strong>admin@contoso.com</strong> このアカウントのパスワードを指定します。
 
-さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントでコンテンツを保護できることを確認してください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合、"**管理サービスと組織の場所を検出できませんでした。" というエラーメッセージが表示されます。組織で Microsoft Rights Management サービスが有効になっていることを確認します。**
+
+さらに、[オンボーディング コントロール](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装済みの場合は、指定するアカウントでコンテンツを保護できることを確認してください。 たとえば、コンテンツの保護機能の使用を "IT 部門" グループに限り許可している場合、ここで指定するアカウントがそのグループのメンバーである必要があります。 それ以外の場合、" **管理サービスと組織の場所を検出できませんでした。" というエラーメッセージが表示されます。組織で Microsoft Rights Management サービスが有効になっていることを確認します。**
 
 次のいずれかの特権を持つアカウントを使用できます。
 
@@ -81,18 +83,18 @@ RMS コネクタを構成する前に、ソリューションに一致するク�
 -   **Azure Rights Management のコネクタ管理者**: 組織の RMS コネクタをインストールおよび管理する権限が付与されている Azure Active Directory のアカウント。
 
     > [!NOTE]
-    > Azure Rights Management のグローバル管理者ロールと Azure Rights Management コネクタ管理者ロールは、 [Add-Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドレットを使用してアカウントに割り当てられます。
+    > Azure Rights Management のグローバル管理者ロールと Azure Rights Management コネクタ管理者ロールは、 [Add-Aipserviceroleベースの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator) コマンドレットを使用してアカウントに割り当てられます。
     > 
     > RMS コネクタを最低限の特権で実行するには、この目的専用のアカウントを作成し、次のようにして Azure RMS コネクタ管理者ロールを割り当てます。
     >
     > 1. まだ行っていない場合は、AIPService PowerShell モジュールをダウンロードしてインストールします。 詳細については、「 [AIPService PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
     >
-    >     [**管理者として実行**] コマンドを使用して Windows PowerShell を起動し、 [Connect-aipservice](/powershell/module/aipservice/connect-aipservice)コマンドを使用して保護サービスに接続します。
+    >     [ **管理者として実行** ] コマンドを使用して Windows PowerShell を起動し、 [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) コマンドを使用して保護サービスに接続します。
     >
     >     ```
     >     Connect-AipService                   //provide Microsoft 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
-    > 2.  次に、次のパラメーターのいずれかを使用して、 [Add-Aipserviceroleの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator)コマンドを実行します。
+    > 2.  次に、次のパラメーターのいずれかを使用して、 [Add-Aipserviceroleの管理者](/powershell/module/aipservice/add-aipservicerolebasedadministrator) コマンドを実行します。
     >
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
@@ -180,7 +182,7 @@ RMS コネクタをアンインストールする必要がある場合は、ウ�
 ## <a name="configuring-load-balancing-and-high-availability"></a>負荷分散と高可用性の構成
 RMS コネクタの2つ目または最後のインスタンスをインストールしたら、コネクタ URL のサーバー名を定義し、負荷分散システムを構成します。
 
-コネクタ URL のサーバー名には、管理している名前空間で任意の名前を指定できます。 たとえば、DNS システムの**rmsconnector.contoso.com**にエントリを作成し、負荷分散システムの IP アドレスを使用するようにこのエントリを構成することができます。 この名前に特別な要件はありません。また、コネクタ サーバー自体での構成は不要です。 Exchange および SharePoint サーバーがインターネット経由でコネクタと通信する予定がない限り、この名前はインターネット上で解決する必要はありません。
+コネクタ URL のサーバー名には、管理している名前空間で任意の名前を指定できます。 たとえば、DNS システムの **rmsconnector.contoso.com** にエントリを作成し、負荷分散システムの IP アドレスを使用するようにこのエントリを構成することができます。 この名前に特別な要件はありません。また、コネクタ サーバー自体での構成は不要です。 Exchange および SharePoint サーバーがインターネット経由でコネクタと通信する予定がない限り、この名前はインターネット上で解決する必要はありません。
 
 > [!IMPORTANT]
 > コネクタを使用するように Exchange サーバーまたは SharePoint サーバーを構成した後は、この名前を変更しないことをお勧めします。名前を変更すると、これらのサーバーですべての IRM 構成を消去し、再構成する必要があります。
