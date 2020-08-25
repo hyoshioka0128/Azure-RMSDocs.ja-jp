@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7dd617a61071542196828a4701ab0c1db8336ee
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802285"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810264"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
@@ -45,7 +45,7 @@ Azure Information Protection を組織に合わせてデプロイして構成し
     
     ユーザーが Azure Information Protection クライアントを持っている場合、ヘルプ デスクはユーザーに、特定のエディションの Office で保護がサポートされているかどうか、および現在のサインインしているユーザーのアカウントの情報などについて、**[ヘルプとフィードバック]** オプションを利用するように依頼します。 また、このオプションを利用し、ログ ファイルを収集したり、クライアントをリセットしたりできます。 詳細については、管理者ガイドの[インストールのチェックとトラブルシューティング](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)に関するページを参照してください。
     
-    保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection[スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
+    保護されたドキュメントに対する完全な権限を持つ正当な要求がある場合は、Azure Information Protection [スーパーユーザー機能](configure-super-users.md)を使用して、ヘルプデスクにこのアクセスを要求するプロセスがあることを確認してください。 正当な要求とは、たとえば、従業員が組織を去った後の法務部門や管理者からの要求です。
     
     また、ユーザーから報告される可能性がある典型的な問題には、以下のようなものがあります。
     
@@ -82,7 +82,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 > [!TIP]
 > これらのアプリケーションで情報保護を使用するためのアプリケーション固有のヘルプおよび手順を見つけるには、**IRM**、アプリケーションの名前、およびアプリケーションのバージョンを検索します。
 
-#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Office 365 ProPlus の Word でドキュメントを保護するには
+#### <a name="to-protect-a-document-in-word-from-office-365-proplus"></a>Office 365 ProPlus の Word でドキュメントを保護するには
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
@@ -95,21 +95,21 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 3.  ドキュメントを保存します。
 
-他のユーザーがドキュメントを開いている場合、それらのユーザーが最初に認証されます。 ドキュメントを開く権限がない場合、ドキュメントは開きません。 ドキュメントを開く権限がある場合は、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)で開きます。 
+他のユーザーがドキュメントを開いている場合、それらのユーザーが最初に認証されます。 ドキュメントを開く権限がない場合、ドキュメントは開きません。 ドキュメントを開く権限がある場合は、そのユーザーに対して指定された制限付き [使用権限](configure-usage-rights.md) で開きます。 
 
 たとえば、使用権限が "表示のみ" の場合、ユーザーは別の場所にコピーした場合でもドキュメントを編集または保存できません。 
 
 使用権限は、制限バナーを使用してドキュメントの上部に表示されます。 このバナーには、ドキュメントに適用されるアクセス許可やそれらを表示するためのリンクが表示される場合があります。
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Exchange Online に接続し、Office 365 ProPlus の Outlook を使ってメール メッセージを保護するには、
+#### <a name="to-protect-an-email-message-using-outlook-from-office-365-proplus-connecting-to-exchange-online"></a>Exchange Online に接続し、Office 365 ProPlus の Outlook を使ってメール メッセージを保護するには、
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  [**オプション**] タブの [**アクセス許可**> オプションを選択します。 たとえば、[**転送不可**]、[ ** \<Company Name> -社外秘**]、または [ ** \<Company Name> -社外秘**] が表示されます。
+2.  [ **オプション** ] タブの [ **アクセス許可** > オプションを選択します。 たとえば、[**転送不可**]、[ ** \<Company Name> -社外秘**]、または [ ** \<Company Name> -社外秘**] が表示されます。
 
 3.  メッセージを送信します。
 
-保護された文書を表示するのと同様に、受信者が保護された電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)で開かれます。 
+保護された文書を表示するのと同様に、受信者が保護された電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き [使用権限](configure-usage-rights.md) で開かれます。 
 
 たとえば、電子メール メッセージが **[転送不可]** オプションを使用して保護されている場合、リボンの転送ボタンは使用できません。
 
@@ -117,10 +117,10 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、[**アクセス許可の変更**] を選択し、ドロップダウンからオプションを選択します。 例: **Encrypt**または** \<Company Name> -Confidential**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、[ **アクセス許可の変更** ] を選択し、ドロップダウンからオプションを選択します。 例: **Encrypt**または** \<Company Name> -Confidential**。
 
 3. メッセージを送信します。
 
-保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き[使用権限](configure-usage-rights.md)で開かれます。 
+保護された文書を表示するのと同様に、受信者が電子メール メッセージを開くと、最初に認証されます。 電子メールメッセージの表示が許可されている場合は、そのユーザーに対して指定された制限付き [使用権限](configure-usage-rights.md) で開かれます。 
 
 たとえば、既定の **[転送不可]** オプションを使う場合、メッセージ ウィンドウの **[転送]** オプションは使用できません。

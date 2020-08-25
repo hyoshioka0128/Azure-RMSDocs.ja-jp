@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788749"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810288"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの実行
 
@@ -124,9 +124,9 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 > [!TIP]
 > AIP [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)を変更した場合、Azure portal によって、完全な再スキャンをスキップするように求められます。 再スキャンが確実に行われるようにするには、表示されるプロンプトで [ **いいえ** ] を選択してください。
 > 
-### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>設定を変更して完全な再スキャンをトリガーする (バージョン2.7.99.0 以前)
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-271010-and-lower"></a>設定を変更して完全な再スキャンをトリガーします (バージョン2.7.101.0 およびそれ以降)
 
-スキャナーバージョン2.7.99.0 以前では、スキャナーが自動および推奨のラベル付けのために新規または変更された設定を検出するたびに、すべてのファイルがスキャンされます。 スキャナーは、4時間ごとにポリシーを自動的に更新します。
+スキャナーバージョン [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) およびそれ以降では、スキャナーが自動および推奨のラベル設定の新しい設定または変更された設定を検出するたびに、すべてのファイルがスキャンされます。 スキャナーは、4時間ごとにポリシーを自動的に更新します。
 
 テスト中など、ポリシーをすぐに更新するには、 **%LocalAppData%\Microsoft\MSIP\mip \<processname> ** ディレクトリの内容を手動で削除し、Azure Information Protection サービスを再起動します。
 
@@ -182,7 +182,7 @@ Start-AIPScannerDiagnostics
 > この **ツールで** は、完全な前提条件の確認は実行されません。 スキャナーで問題が発生している場合は、システムが [スキャナーの要件](deploy-aip-scanner-prereqs.md)を満たしていることと、 [スキャナーの構成とインストール](deploy-aip-scanner-configure-install.md) が完了していることを確認してください。
 >
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 

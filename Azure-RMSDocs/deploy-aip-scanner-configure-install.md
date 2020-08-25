@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7960c945ee51c5d2d81f26aa75f350aeb87c0f60
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 7f7964081893635052de8f5a8da32f7010f49cc5
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788830"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810356"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -210,7 +210,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
         SharePoint パスを追加するときは、次の構文を使用します。
     
-        |パス  |構文  |
+        |Path  |構文  |
         |---------|---------|
         |**ルートパス**     | `http://<SharePoint server name>` </br></br>スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 </br>ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
         |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれかになります。 </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
@@ -276,7 +276,7 @@ Azure AD トークンを使用すると、スキャナーを Azure Information P
 Azure AD トークンを取得するには:
 
 1. Azure portal に戻り、認証用のアクセストークンを指定する Azure AD アプリケーションを作成します。
-1. 
+
 1. Windows Server コンピューターから、スキャナーサービスアカウントにインストールの **ローカルログオン** 権限が付与されている場合は、このアカウントでサインインし、PowerShell セッションを開始します。 
 
     前の手順でコピーした値を指定して [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) を実行します。
@@ -507,7 +507,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 スキャナーのインストールと構成が完了したら、 [ファイルのスキャン](deploy-aip-scanner-manage.md)を開始します。
 

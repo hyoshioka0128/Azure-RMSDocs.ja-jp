@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d531269a9323de2f9157f1dafd8962a4f228733f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: cbdbf45f337b2647bb260c4a9d01c1c777d078a2
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802234"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810339"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>ユーザーとサービスのためのテンプレートの更新
 
@@ -40,6 +40,7 @@ Azure Information Protection から Azure Rights Management サービスを使�
 |Office 2019 for Mac と Office 2016 for Mac|保護されたコンテンツを開くと自動的に更新されます。 強制的に更新するには、次のセクションの「 [office 2019 For mac And office 2016 For mac: テンプレートを強制的に更新する方法](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates)」を参照してください。|
 |Mac コンピューター用 RMS 共有アプリ|自動更新 - 追加の手順は必要ありません。|
 |[組み込みラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)付き Office 365 ProPlus|この組み込みラベル付けクライアントは、テンプレートをダウンロードせずにオンラインでアクセスします。追加の手順は必要ありません。|
+| | |
 
 クライアントアプリケーションがテンプレートをダウンロードする必要がある場合 (最初または変更用に更新)、ダウンロードが完了して新しいテンプレートまたは更新されたテンプレートが完全に機能するまで、最大30分待機するように準備します。 待機時間はテンプレートの構成のサイズや複雑さ、ネットワークの接続などの要素によって異なります。 
 
@@ -86,7 +87,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
    > [!TIP]
    > レジストリ パスの <*MicrosoftRMS_FQDN*> は、Microsoft RMS サービスの FQDN を指します。 この値を確認するには:
    > 
-   > Azure Information Protection に対して[AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)コマンドレットを実行します。 AIPService PowerShell モジュールをまだインストールしていない場合は、「 [AIPService powershell モジュールのインストール](install-powershell.md)」を参照してください。
+   > Azure Information Protection に対して [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) コマンドレットを実行します。 AIPService PowerShell モジュールをまだインストールしていない場合は、「 [AIPService powershell モジュールのインストール](install-powershell.md)」を参照してください。
    > 
    > 出力から、**LicensingIntranetDistributionPointUrl** の値を確認します。
    > 
@@ -112,7 +113,7 @@ Office 365 アプリ、Office 2019、Office 2016、または Office 2013 を実�
 
 2. Mac 用 Outlook を再起動します。
 
-3. 新しい電子メールを作成し、[**暗号化**] を選択して、**資格情報を確認**します。
+3. 新しい電子メールを作成し、[ **暗号化**] を選択して、 **資格情報を確認**します。
 
 
 ## <a name="see-also"></a>参照

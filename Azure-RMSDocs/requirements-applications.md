@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 2bf09c4f5ff7587db251b3edeae556621a9aaede
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802166"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810322"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -26,7 +26,7 @@ ms.locfileid: "87802166"
 
 このページに記載されているアプリケーションとソリューションは、Azure Rights Management (Azure RMS) サービスをネイティブでサポートしており、Azure Information Protection のデータ保護を提供します。
 
-これらのアプリケーションとソリューションは "RMS-enlighted と呼ばれ、Rights Management と[使用制限](configure-usage-rights.md)が Rights Management api を使用して密接に統合されています。
+これらのアプリケーションとソリューションは "RMS-enlighted と呼ばれ、Rights Management と [使用制限](configure-usage-rights.md) が Rights Management api を使用して密接に統合されています。
 
 > [!NOTE]
 > 別途明記されていない限り、サポートされる機能は Azure RMS と AD RMS の両方に適用されます。 
@@ -85,7 +85,7 @@ ms.locfileid: "87802166"
 |Type  |サポートされているアプリケーション   |
 |---------|---------|
 |**Word、Excel、PowerPoint**    | - [Web ブラウザー](#web-browser-support)    |
-|[**電子メール**](#viewing-protected-content-in-email-clients)   | - [Blackberry の電子メール](#email-clients-using-exchange-activesync-irm) <br />- [Web ブラウザー](#web-browser-support)      |
+|[**電子メール**](#viewing-protected-content-in-email-clients)   | - [ Blackberry の電子メール](#email-clients-using-exchange-activesync-irm) <br />- [Web ブラウザー](#web-browser-support)      |
 |[**他のファイルの種類**](#supported-text-and-image-file-types)    | サポートされていません   |
 | | |
 
@@ -116,9 +116,9 @@ Office ファイルや電子メールメッセージ以外のファイルの種�
 
 これらのファイルは、Rights Management によってネイティブに保護された後、読み取り専用になると、ファイル名拡張子を変更します。 
 
-ネイティブに保護できないファイルは、Rights Management によって一般的に保護された後、 **pfile**ファイル名拡張子を持ちます。
+ネイティブに保護できないファイルは、Rights Management によって一般的に保護された後、 **pfile** ファイル名拡張子を持ちます。
 
-詳細については、[サポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md)を参照してください。
+詳細については、 [サポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md)を参照してください。
 
 ### <a name="office-365-app-support"></a>Office 365 アプリのサポート
 
@@ -211,7 +211,7 @@ Office for Mac 2019 および Office for Mac 2016 のすべてのエディショ
 > 
 ## <a name="azure-information-protection-apps-for-ios-and-android"></a>iOS 用と Android 用の Azure Information Protection
 
-IOS および Android 用の Azure Information Protection アプリでは、保護された電子メールを開くことができる電子メールアプリがこれらのモバイルデバイスにない場合に、権利で保護された電子メールメッセージ **(つまり、rpq msg**ファイル) 用のビューアーを提供します。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルも開くことができます。
+IOS および Android 用の Azure Information Protection アプリでは、保護された電子メールを開くことができる電子メールアプリがこれらのモバイルデバイスにない場合に、権利で保護された電子メールメッセージ **(つまり、rpq msg** ファイル) 用のビューアーを提供します。 このアプリでは、権利で保護された PDF ファイル、画像、テキスト ファイルも開くことができます。
 
 iOS デバイスや Android デバイスを Microsoft Intune で登録している場合、ユーザーは Intune ポータル サイトからアプリをインストールでき、管理者は Intune の[アプリ保護ポリシー](/intune/app-protection-policies)を使用してアプリを管理できます。
 
@@ -232,7 +232,7 @@ Azure Information Protection (AIP) クライアントには、各バージョン
 [Microsoft Azure Information Protection のページ](https://go.microsoft.com/fwlink/?LinkId=303970)から関連するアプリをダウンロードします。
 
 > [!NOTE]
-> これら2つのバージョンの違いについては、 関連する[FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を参照してください。
+> これら2つのバージョンの違いについては、 関連する [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を参照してください。
 > 
 ## <a name="rights-management-sharing-app"></a>Rights Management 共有アプリ
 
@@ -259,7 +259,7 @@ Mac コンピューターの場合、Rights Management 共有アプリには、�
 - Windows 7 Service Pack 1 より前のバージョンで実行されているアプリケーション
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 関連項目:
 

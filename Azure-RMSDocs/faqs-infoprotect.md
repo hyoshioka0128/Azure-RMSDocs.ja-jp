@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b41195e6eb50dffe5aada630b423a73c0024d244
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: fc4c86c020427066d519fec4ae6363f131ce64c2
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788630"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810263"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
@@ -106,4 +106,4 @@ Exchange メッセージ分類は、電子メールを分類できる古い機�
 
 Outlook を Exchange Online と共に使用している場合は、これを行う必要はありません。これは、Office 365 セキュリティ & コンプライアンスセンター、Microsoft 365 Security center、または Microsoft コンプライアンスセンターから機密ラベルを公開する場合に、組み込みラベル付けをサポートするためです。
 
-Web 上の Outlook で組み込みのラベル付けを使用できない場合は、この回避策の構成手順を参照してください。 [モバイルデバイスのラベル付けソリューションの Exchange メッセージ分類を Azure Information Protection と統合](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution)します。
+Web 上の Outlook で組み込みのラベル付けを使用できない場合は、この回避策の構成手順「[従来の Exchange メッセージ分類との統合](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification)」を参照してください。
