@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 9f7e93b8053779b4e3f55d2a1c8d20967ae5b441
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: acdf61bfbcd46ba58d65ccc4ecc5a387fce123dc
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802302"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810305"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 

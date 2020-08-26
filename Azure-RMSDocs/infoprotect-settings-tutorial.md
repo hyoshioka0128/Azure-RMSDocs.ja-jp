@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0439e22cd6b2b149bb142c7146e568a048d05df0
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: f0a84362a36609c90c6419d2c1be8746b3e52207
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264414"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788902"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>チュートリアル:連携させる Azure Information Protection のポリシー設定を構成する
 
@@ -61,17 +61,17 @@ ms.locfileid: "88264414"
 
 4. 次のいずれかのカテゴリから Office アプリにサインインしている。
     
-    - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
+    - Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、[Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。
     
-    - Office 365 ProPlus
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)。
     
-    - Office Professional Plus 2019
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019。
     
-    - Office Professional Plus 2016
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016。
     
-    - Office Professional Plus 2013 Service Pack 1
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 Service Pack 1。
     
-    - Office Professional Plus 2010 Service Pack 2
+    - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 Service Pack 2。
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。
 
