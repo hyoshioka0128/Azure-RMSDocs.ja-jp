@@ -4,7 +4,7 @@ description: Azure Information Protection を組織に展開するために必�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c984af422a867f8821c21a6e52df37e5d36437c7
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788936"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952829"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -67,7 +67,7 @@ Azure Information Protection の認証と承認をサポートするには、Azu
 
 Office 2010、証明書ベースまたは multi-factor authentication を使用する場合や、UPN 値がユーザーの電子メールアドレスと一致しない場合など、特定のシナリオには追加の前提条件が必要です。 詳細については、「 [Azure Information Protection の追加 Azure AD 要件](requirements-azure-ad.md)」を参照してください。
 
-詳細については、次を参照してください:
+詳細については、次を参照してください。
 
 - [What is Azure AD Directory? (Azure AD ディレクトリとは)](/azure/active-directory/fundamentals/active-directory-whatis)
 - [オンプレミスの Active Directory ドメインと Azure Active Directory を統合する](/azure/architecture/reference-architectures/identity/azure-ad)。
@@ -132,19 +132,19 @@ Office 2010、証明書ベースまたは multi-factor authentication を使用�
 
 Azure Information Protection クライアントは、次のいずれかの Office エディションから Microsoft **Word**、 **Excel**、 **PowerPoint**、 **Outlook** を使用して、ドキュメントや電子メールのラベル付けと保護を行うことができます。
 
-- **Office アプリの最小バージョン 1805**。 [Microsoft 365 app for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)から9330.2078 をビルドします。 
+- **Office アプリの最小バージョン 1805**。 Office 365 Business または Microsoft 365 Business から9330.2078 をビルドします。 
 
     このエディションは、ユーザーに Azure Rights Management のライセンスが割り当てられている場合にのみサポートされます (Office 365 の Azure Information Protection とも呼ばれます)。
 
-- **[Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office 365 ProPlus**
 
-- **[Enterprise 2019 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office Professional Plus 2019**
 
-- **[Enterprise 2016 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office Professional Plus 2016**
 
-- **Enterprise 2013 Service Pack 1[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office Professional Plus 2013 Service Pack 1**
 
-- **Enterprise 2010 Service Pack 2[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
+- **Office Professional Plus 2010 Service Pack 2**
 
 Office の他のエディションは、Rights Management サービスを使用してドキュメントや電子メールを保護できません。 これらのエディションでは、Azure Information Protection が分類のみでサポートされており、保護を適用するラベルはユーザーに対して表示されません。 
 
@@ -183,7 +183,7 @@ Azure Information Protection には、次の追加要件があります。
     
     発行元 CA の名前が Microsoft からのものではない場合は、セキュリティで保護されたクライアントとサービス間の接続が終了し、ファイアウォールで再構成が必要になる可能性があります。
 
-- **TLS バージョン 1.2** 以降 (統一されたラベル付けクライアントのみ)。 統一されたラベル付けクライアントを使用するには、1.2 以降の TLS バージョンが必要です。これにより、暗号化による安全なプロトコルを使用し、Microsoft のセキュリティガイドラインに合わせることができます。
+- **TLS バージョン1.2 以降** (統一されたラベル付けクライアントのみ)。 統一されたラベル付けクライアントを使用するには、1.2 以上の TLS バージョンが必要です。これにより、暗号化が安全なプロトコルを使用し、Microsoft のセキュリティガイドラインに合わせることができます。
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>AD RMS と Azure RMS の共存
 
@@ -235,10 +235,6 @@ Azure Rights Management コネクタを使用すると、次のオンプレミ�
 |**Office SharePoint Server**     |-Office SharePoint Server 2016 </br>-Office SharePoint Server 2013 </br>-Office SharePoint Server 2010         |
 |**Windows Server を実行し、ファイル分類インフラストラクチャ (FCI) を使用するファイルサーバー**     |- Windows Server 2016 </br>- Windows Server 2012 R2 </br>- Windows Server 2012       |
 | | |
-
-<!-- i think that half of this note was removed at some point, without this other half. keeping it here in case we ever need it..>
-    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](./rms-client/configure-fci.md).
--->
 
 詳細については、「 [Azure Rights Management コネクタのデプロイ](deploy-rms-connector.md)」を参照してください。
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a532416acd134c2cb08117af2951aa1fef23ba82
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 3730c8d781c9b53de1848ef2ebee1185cae38560
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073552"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953135"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Azure Information Protection 用の視覚的なマーキングのラベルを構成する方法
 
@@ -61,7 +61,7 @@ ms.locfileid: "88073552"
 
 - エクスプローラー、PowerShell、Azure Information Protection スキャナーを使用してドキュメントにラベルを付けると、視覚的なマーキングはすぐには適用されませんが、ドキュメントを Office アプリで開いたときと、ドキュメントが最初に保存されるときに、Azure Information Protection クライアントによって適用されます。
 
-    この例外は、Microsoft SharePoint、OneDrive for work、学校、または OneDrive for home に保存されているファイルに対して、Office アプリで[自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)保存を使用する場合です。自動保存が有効になっている場合は、 [[詳細](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)設定] をオンにしている場合を除き、分類をバックグラウンドで継続的に実行します。
+    この例外は、Microsoft SharePoint、OneDrive for work、学校、または OneDrive for home に保存されているファイルに対して、Office アプリで [自動](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) 保存を使用する場合です。自動保存が有効になっている場合は、 [[詳細](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) 設定] をオンにしている場合を除き、分類をバックグラウンドで継続的に実行します。
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>ラベルの視覚的なマーキングを構成するには
 
@@ -73,7 +73,7 @@ ms.locfileid: "88073552"
 
 2. [**分類**  >  **ラベル**] メニューオプションから: [ **Azure Information Protection ラベル**] ウィンドウで、追加または変更する視覚的なマーキングが含まれているラベルを選択します。
 
-3. [**ラベル**] ウィンドウの [**視覚的なマーキングの設定 (ヘッダーやフッターなど)** ] セクションで、目的の視覚的なマーキングの設定を構成し、[**保存**] をクリックします。
+3. [ **ラベル** ] ウィンドウの [ **視覚的なマーキングの設定 (ヘッダーやフッターなど)** ] セクションで、目的の視覚的なマーキングの設定を構成し、[ **保存**] をクリックします。
 
     - ヘッダーを構成するには: **[Documents with this label have a header]** (このラベルを持つドキュメントにヘッダーを設定する) で、ヘッダーを設定する場合は **[オン]** を、設定しない場合は **[オフ]** を選択します。 **[オン]** を選択した場合は、ヘッダーのテキスト、サイズ、[フォント](#setting-the-font-name)、[色](#setting-the-font-color)、ヘッダーの配置を指定します。
 
@@ -102,11 +102,8 @@ ms.locfileid: "88073552"
 > [!NOTE]
 >この構文では、大文字と小文字が区別されます。
 
-<!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
-> Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
--->
 >[!TIP]
-> フィールドコードを使用し[て、ラベル名](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification)をドキュメントまたはテンプレートに挿入することもできます。
+> フィールドコードを使用し [て、ラベル名](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) をドキュメントまたはテンプレートに挿入することもできます。
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Word、Excel、PowerPoint、Outlook にさまざまな視覚的マーキングを設定する
 
@@ -121,7 +118,7 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 > [!NOTE]
 >このステートメントのこの構文では、大文字と小文字が区別されます。
 
-例:
+例 :
 
 - **Word 文書だけにヘッダー テキストを設定する:**
 
@@ -142,7 +139,7 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
     Word と PowerPoint で、ラベルは "This content is Confidential" (このコンテンツは社外秘です) という透かしテキストを適用します。 Excel で、ラベルは "Confidential" (社外秘) という透かしテキストを適用します。 Outlook では、視覚的マーキングとしての透かしが Outlook に対応していないため、ラベルはいかなる透かしテキストも適用しません。
 
 > [!NOTE]
-> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、[**フォント名**] の値を設定できるのは Azure Information Protection ポータルを使用した場合のみです。 5つの既定値の1つを超える**フォントの色**の値を設定する場合、は Azure Information Protection ポータルを使用することによってのみ可能です。
+> Azure Information Protection の統一されたラベル付けクライアントを使用する場合、[ **フォント名** ] の値を設定できるのは Azure Information Protection ポータルを使用した場合のみです。 5つの既定値の1つを超える **フォントの色** の値を設定する場合、は Azure Information Protection ポータルを使用することによってのみ可能です。
 
 ### <a name="setting-the-font-name"></a>フォント名を設定する
 
@@ -151,7 +148,7 @@ Calibri は、ヘッダー、フッター、透かしのテキストに使われ
 
 ### <a name="setting-the-font-color"></a>フォントの色を設定する
 
-利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0**は水色の RGB 16 進値です。
+利用できる色の一覧から選択するか、赤、緑、青 (RGB) の色のコンポーネントの 16 進数コードを入力してカスタムの色を指定できます。 たとえば、 **#40e0d0** は水色の RGB 16 進値です。
 
 これらのコードの参照が必要な場合は、MSDN web docs のページにある役に立つテーブルを確認でき [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) ます。また、これらのコードは、画像を編集できる多くのアプリケーションでも見つかります。 たとえば、Microsoft ペイントでは、パレットからカスタム色を選択できます。RGB 値が自動的に表示されるので、それをコピーできます。
 

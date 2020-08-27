@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7f7964081893635052de8f5a8da32f7010f49cc5
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: fcc798a8b9b4a2e0472aad77123571ab03070324
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953152"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -46,7 +46,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 |[スキャナーをアップグレードする](#upgrading-your-scanner) | スキャナーをアップグレードして、最新の機能と改善点を活用します。|
 |[データリポジトリ設定の一括編集](#editing-data-repository-settings-in-bulk)| インポートとエクスポートのオプションを使用して、複数のデータリポジトリに対して一括変更を行います。|
 |[別の構成でスキャナーを使用する](#using-the-scanner-with-alternative-configurations)| 任意の条件でラベルを構成せずにスキャナーを使用する |
-|[パフォーマンスの最適化](#optimizing-scanner-performance)| スキャナーのパフォーマンスを最適化するためのガイダンス|
+|[パフォーマンスを最適化する](#optimizing-scanner-performance)| スキャナーのパフォーマンスを最適化するためのガイダンス|
 | | |
 
 詳細については、「 [スキャナーのコマンドレットの一覧](#list-of-cmdlets-for-the-scanner)」も参照してください。
@@ -210,20 +210,14 @@ Azure Information Protection スキャナーの構成とインストールを開
 
         SharePoint パスを追加するときは、次の構文を使用します。
     
-        |Path  |構文  |
+        |パス  |構文  |
         |---------|---------|
         |**ルートパス**     | `http://<SharePoint server name>` </br></br>スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 </br>ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
-        |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれかになります。 </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
-        |**特定の SharePoint ライブラリ**     | 次のいずれかになります。 </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+        |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれか: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
+        |**特定の SharePoint ライブラリ**     | 次のいずれか: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
         |**特定の SharePoint フォルダー**     | `http://<SharePoint server name>/.../<folder name>`        |
         | | |
 
-        <!--
-        > [!IMPORTANT]
-        > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-        >
-        > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-        -->
 
 1. 前の手順を繰り返して、必要な数のリポジトリを追加します。
 
@@ -439,9 +433,6 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 |**別の構成の使用方法を確認する** |[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのファイルに既定のラベルを適用すると、ファイル内容の検査がスキップされるため、スキャナーの実行速度が速くなります。 <br/></br>[代替構成](#using-the-scanner-with-alternative-configurations)を使ってすべてのカスタム条件と既知の機密情報の種類を特定すると、スキャナーの実行速度が遅くなりなります。|
 | | |
 
-<!-- removed when removing local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### <a name="additional-factors-that-affect-performance"></a>パフォーマンスに影響するその他の要因
 
@@ -507,7 +498,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 スキャナーのインストールと構成が完了したら、 [ファイルのスキャン](deploy-aip-scanner-manage.md)を開始します。
 

@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e6b5be8751e01c47b066963ef5ce3588b43cb86
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 3e25ff7d202b7cef964f6b83259b4ff2588c2616
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868962"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953169"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Azure Information Protection の独自のキー (BYOK) の詳細を表示する
 
@@ -26,7 +26,7 @@ ms.locfileid: "86868962"
 
 Azure Information Protection サブスクリプションを持つ組織は、Microsoft によって生成される既定のキーではなく、独自のキーを使用してテナントを構成することができます。 この構成は、一般に BYOK (Bring Your Own Key) と呼ばれます。
 
-BYOK と[使用状況ログ](log-analyze-usage.md)は、Azure Information Protection によって使用される Azure Rights Management サービスと統合するアプリケーションとシームレスに連携します。
+BYOK と [使用状況ログ](log-analyze-usage.md) は、Azure Information Protection によって使用される Azure Rights Management サービスと統合するアプリケーションとシームレスに連携します。
 
 サポートされているアプリケーションは次のとおりです。
 
@@ -37,7 +37,7 @@ BYOK と[使用状況ログ](log-analyze-usage.md)は、Azure Information Protec
 - Office 2019、Office 2016、Office 2013 など**のクライアントアプリケーション**
 
 > [!TIP]
-> 必要に応じて、追加のオンプレミスキーを使用して、特定のドキュメントに追加のセキュリティを適用します。 詳細については、「[独自のキー (HYOK) 保護](configure-adrms-restrictions.md)(クラシッククライアント)」または「[二重キー暗号化 (dke) 保護](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only)の保持」を参照してください。
+> 必要に応じて、追加のオンプレミスキーを使用して、特定のドキュメントに追加のセキュリティを適用します。 詳細については、「 [独自のキー (HYOK) 保護](configure-adrms-restrictions.md) (クラシッククライアント)」または「 [二重キー暗号化 (dke) 保護](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only)の保持」を参照してください。
 > 
 
 ## <a name="azure-key-vault-key-storage"></a>Azure Key Vault キーストレージ
@@ -45,13 +45,13 @@ BYOK と[使用状況ログ](log-analyze-usage.md)は、Azure Information Protec
 ユーザーが生成したキーは、BYOK 保護の Azure Key Vault に保存する必要があります。
 
 > [!NOTE]
-> Azure Key Vault で HSM で保護されたキーを使用するには[Azure Key Vault Premium サービスレベル](https://azure.microsoft.com/pricing/details/key-vault/)が必要です。これにより、月額サブスクリプション料金が追加で発生します。
+> Azure Key Vault で HSM で保護されたキーを使用するには [Azure Key Vault Premium サービスレベル](https://azure.microsoft.com/pricing/details/key-vault/)が必要です。これにより、月額サブスクリプション料金が追加で発生します。
 
 ### <a name="sharing-key-vaults-and-subscriptions"></a>キーコンテナーとサブスクリプションの共有
 
-テナントキーには**専用のキーコンテナー**を使用することをお勧めします。 専用のキーコンテナーを使用すると、他のサービスからの呼び出しによって[サービスの制限](https://docs.microsoft.com/azure/key-vault/general/service-limits)を超えないようにすることができます。 テナントキーが格納されている key vault のサービス制限を超えると、Azure Rights Management サービスの応答時間が調整される可能性があります。
+テナントキーには **専用のキーコンテナー** を使用することをお勧めします。 専用のキーコンテナーを使用すると、他のサービスからの呼び出しによって [サービスの制限](https://docs.microsoft.com/azure/key-vault/general/service-limits) を超えないようにすることができます。 テナントキーが格納されている key vault のサービス制限を超えると、Azure Rights Management サービスの応答時間が調整される可能性があります。
 
-さまざまなサービスのキー管理要件が異なるため、Microsoft では、key vault に**専用の Azure サブスクリプション**を使用することをお勧めします。 専用の Azure サブスクリプション:
+さまざまなサービスのキー管理要件が異なるため、Microsoft では、key vault に **専用の Azure サブスクリプション** を使用することをお勧めします。 専用の Azure サブスクリプション:
 
 - 誤ったミスから保護する
 
@@ -77,7 +77,7 @@ Azure Key Vault にテナントキーを格納すると、次のような利点�
 |**分離セキュリティドメイン**|Azure Key Vault は、北米、EMEA (ヨーロッパ、中東、アフリカ)、アジアなどの地域のデータセンターに個別のセキュリティドメインを使用します。 </br></br>また、Azure Key Vault では、Microsoft Azure Germany や Azure Government など、Azure のさまざまなインスタンスを使用します。 |
 |**統一されたエクスペリエンス**| また Azure Key Vault を使用すると、セキュリティ管理者は、暗号化を使用する他のサービスの証明書やシークレット (パスワードなど) の保存、アクセス、および管理を行うことができます。 <br></br>テナントキーに Azure Key Vault を使用すると、これらの要素のすべてを管理する管理者はシームレスなユーザーエクスペリエンスを実現できます。|
 
-最新の更新プログラムと、他のサービスが[Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts)を使用する方法については、 [Azure Key Vault チームのブログ](https://blogs.technet.microsoft.com/kv/)を参照してください。
+最新の更新プログラムと、他のサービスが  [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts)を使用する方法については、 [Azure Key Vault チームのブログ](https://blogs.technet.microsoft.com/kv/)を参照してください。
 
 ## <a name="usage-logging-for-byok"></a>BYOK の使用状況ログ
 
@@ -88,7 +88,7 @@ Azure Key Vault にテナントキーを格納すると、次のような利点�
 BYOK のキー使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログ記録と分析](log-analyze-usage.md)」を参照してください。
 
 > [!TIP]
-> さらなる保証のために、Azure Information Protection 使用状況ログは[Azure Key Vault ログ記録](https://docs.microsoft.com/azure/key-vault/general/logging)で相互参照できます。 Key Vault ログは、キーが Azure Rights Management サービスによってのみ使用されることを個別に監視するための信頼性の高い方法を提供します。
+> さらなる保証のために、Azure Information Protection 使用状況ログは [Azure Key Vault ログ記録](https://docs.microsoft.com/azure/key-vault/general/logging)で相互参照できます。 Key Vault ログは、キーが Azure Rights Management サービスによってのみ使用されることを個別に監視するための信頼性の高い方法を提供します。
 >
 > 必要に応じて、キーコンテナーに対するアクセス許可を削除することで、キーへのアクセスを直ちに取り消します。
 
@@ -144,21 +144,17 @@ BYOK の前提条件は、システムの構成によって異なります。 �
 |---------|---------|
 |**Azure サブスクリプション**     |すべての構成に必要です。 </br>詳細については、「 [BYOK と互換性のある Azure サブスクリプションがあることを確認](#verifying-that-you-have-a-byok-compatible-azure-subscription)する」を参照してください。         |
 |**Azure Information Protection 用の AIPService PowerShell モジュール**|すべての構成に必要です。 </br>詳細については、「 [AIPService PowerShell モジュールのインストール](./install-powershell.md)」を参照してください。|
-|**BYOK の前提条件 Azure Key Vault** | オンプレミスで作成された HSM で保護されたキーを使用している場合は、Azure Key Vault のドキュメントに記載されている[BYOK の前提条件](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites)も満たしていることを確認してください。         |
+|**BYOK の前提条件 Azure Key Vault** | オンプレミスで作成された HSM で保護されたキーを使用している場合は、Azure Key Vault のドキュメントに記載されている [BYOK の前提条件](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) も満たしていることを確認してください。         |
 |**Thales ファームウェアバージョン11.62**    |ソフトウェアキーからハードウェアキーへの移行時に、HSM に Thales ファームウェアを使用して AD RMS から Azure Information Protection に移行する場合は、Thales ファームウェアバージョン11.62 が必要です。
 |**信頼された Microsoft サービスに対するファイアウォールのバイパス** |テナントキーを含む key vault が Azure Key Vault に Virtual Network サービスエンドポイントを使用している場合は、信頼された Microsoft サービスにこのファイアウォールのバイパスを許可する必要があります。 </br>詳細については、「[Virtual Network Service Endpoints for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints)」(Azure Key Vault の仮想ネットワーク サービス エンドポイント) をご覧ください。       |
 
-<!--
->[!NOTE]
-> For more information about nCipher nShield hardware security module (HSM) and how they are used with Azure Key Vault, see the [nCipher website](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).-->
-
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>BYOK と互換性のある Azure サブスクリプションがあることを確認しています
 
-Azure Information Protection テナントには Azure サブスクリプションが必要です。 まだお持ちでない場合は、[無料アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。 ただし、HSM で保護されたキーを使用するには、Azure Key Vault Premium サービス階層が必要です。
+Azure Information Protection テナントには Azure サブスクリプションが必要です。 まだお持ちでない場合は、 [無料アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。 ただし、HSM で保護されたキーを使用するには、Azure Key Vault Premium サービス階層が必要です。
 
-Azure Active Directory 構成と Azure Rights Management カスタムテンプレート構成へのアクセスを提供する無料の Azure サブスクリプションでは、Azure Key Vault を使用するのに十分では*ありません*。
+Azure Active Directory 構成と Azure Rights Management カスタムテンプレート構成へのアクセスを提供する無料の Azure サブスクリプションでは、Azure Key Vault を使用するのに十分では *ありません* 。
 
-BYOK と互換性のある Azure サブスクリプションがあるかどうかを確認するには、次の手順を実行して、 [Azure PowerShell](https://docs.microsoft.com/powershell/azure/)コマンドレットを使用して確認します。
+BYOK と互換性のある Azure サブスクリプションがあるかどうかを確認するには、次の手順を実行して、 [Azure PowerShell](https://docs.microsoft.com/powershell/azure/) コマンドレットを使用して確認します。
 
 1. 管理者として Azure PowerShell セッションを開始します。
 
@@ -199,12 +195,12 @@ LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded47
 |Azure リージョンまたはインスタンス|Key Vault に推奨される場所|
 |---------------|--------------------|
 |rms.**na**.aadrm.com|**米国中北部**または**米国東部**|
-|rms.**eu**.aadrm.com|**北ヨーロッパ**または**西ヨーロッパ**|
-|rms.**ap**.aadrm.com|**東アジア**または**東南アジア**|
+|rms.**eu**.aadrm.com|**北ヨーロッパ** または **西ヨーロッパ**|
+|rms.**ap**.aadrm.com|**東アジア** または **東南アジア**|
 |rms.**sa**.aadrm.com|**米国西部**または**米国東部**|
 |rms.**govus**.aadrm.com|**米国中部**または**米国東部 2**|
-|**aadrm.us**|**US Gov バージニア**または**US Gov アリゾナ**|
-|**aadrm.cn**|**中国東部 2**または**中国北部 2**|
+|**aadrm.us**|**US Gov バージニア** または **US Gov アリゾナ**|
+|**aadrm.cn**|**中国東部 2** または **中国北部 2**|
 
 ### <a name="create-and-configure-your-key"></a>キーを作成して構成する
 
@@ -248,7 +244,7 @@ Hsm で保護されたキーをオンプレミスに作成し、それを HSM �
 (Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps
 ```
 
-必要に応じて、 [AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/update-azkeyvaultkey)と*keyops*パラメーターを使用して、許可される操作を追加します。
+必要に応じて、 [AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/update-azkeyvaultkey) と *keyops* パラメーターを使用して、許可される操作を追加します。
 
 #### <a name="configuring-azure-information-protection-with-your-key-id"></a>キー ID を使用した Azure Information Protection の構成
 
@@ -268,16 +264,16 @@ Azure Rights Management サービスは、キーを使用する権限を持っ�
 
 1. Azure portal にサインインし、[Key vault の**Key vaults**  >  **\<*your key vault name*>**  >  **アクセスポリシー**] [  >  **新規追加**] にアクセスします。
 
-1. [**アクセスポリシーの追加**] ウィンドウで、[**テンプレートからの構成 (オプション)** ] ボックスの一覧から [ **Azure Information Protection byok**] を選択し、[ **OK**] をクリックします。
+1. [ **アクセスポリシーの追加** ] ウィンドウで、[ **テンプレートからの構成 (オプション)** ] ボックスの一覧から [ **Azure Information Protection byok**] を選択し、[ **OK**] をクリックします。
 
     選択したテンプレートには次の構成が含まれます。
 
     - **Select principal**値は**Microsoft Rights Management Services**に設定されています。
-    - 選択した**キーのアクセス許可**には、 **Get、** **復号化、** および署名が含まれ**ます。**
+    - 選択した **キーのアクセス許可** には、 **Get、** **復号化、** および署名が含まれ **ます。**
 
 ##### <a name="enabling-key-authorization-using-powershell"></a>PowerShell を使用したキー承認の有効化
 
-Key Vault PowerShell コマンドレット[AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)を実行し、GUID **00000012-0000-0000-c000-000000000000**を使用して Azure Rights Management サービスプリンシパルにアクセス許可を付与します。
+Key Vault PowerShell コマンドレット [AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)を実行し、GUID **00000012-0000-0000-c000-000000000000**を使用して Azure Rights Management サービスプリンシパルにアクセス許可を付与します。
 
 次に例を示します。
 
@@ -303,17 +299,17 @@ Azure RMS コマンドレットを使用して、次のコマンドを実行し�
     ```
 
     > [!IMPORTANT]
-    > この例で `<key-version>` は、は使用するキーのバージョンです。 バージョンを指定しない場合は、既定で現在のバージョンのキーが使用され、コマンドが動作するように見えることがあります。 ただし、キーが後で更新または更新された場合、 **AipServiceKeyVaultKey**コマンドを再度実行しても、Azure Rights Management サービスはテナントに対して機能しなくなります。
+    > この例で `<key-version>` は、は使用するキーのバージョンです。 バージョンを指定しない場合は、既定で現在のバージョンのキーが使用され、コマンドが動作するように見えることがあります。 ただし、キーが後で更新または更新された場合、 **AipServiceKeyVaultKey** コマンドを再度実行しても、Azure Rights Management サービスはテナントに対して機能しなくなります。
     >
-    > 必要に応じて[AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey)コマンドを使用して、現在のキーのバージョン番号を取得します。
+    > 必要に応じて [AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey) コマンドを使用して、現在のキーのバージョン番号を取得します。
     >
     > 例: `Get-AzKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-    キーの URL が Azure Information Protection に対して正しく設定されていることを確認するには、Azure Key Vault で[AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey)コマンドを実行して、キーの url を表示します。
+    キーの URL が Azure Information Protection に対して正しく設定されていることを確認するには、Azure Key Vault で [AzKeyVaultKey](https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey) コマンドを実行して、キーの url を表示します。
 
-1. Azure Rights Management サービスが既にアクティブ化されている場合は、 [Set-AipServiceKeyProperties](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicekeyproperties)を実行して、このキーを azure Rights Management サービスのアクティブなテナントキーとして使用するように Azure Information Protection に指示します。
+1. Azure Rights Management サービスが既にアクティブ化されている場合は、 [Set-AipServiceKeyProperties](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicekeyproperties) を実行して、このキーを azure Rights Management サービスのアクティブなテナントキーとして使用するように Azure Information Protection に指示します。
 
 テナント用に自動的に作成された既定の Microsoft が作成したキーの代わりに、キーを使用するように Azure Information Protection が構成されるようになりました。
 
 ## <a name="next-steps"></a>次のステップ
-BYOK 保護を構成したら、「[テナントルートキー](get-started-tenant-root-keys.md)の概要」に進み、キーの使用と管理の詳細について説明します。
+BYOK 保護を構成したら、「 [テナントルートキー](get-started-tenant-root-keys.md) の概要」に進み、キーの使用と管理の詳細について説明します。

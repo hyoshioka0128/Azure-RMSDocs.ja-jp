@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b97f7930e4d3a22746635a3d43436c59126e6fd
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: c1b80fd786666faa20fe9f67fb72d67ed65a7392
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788681"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953118"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Azure Information Protection ラベルを統合秘密度ラベルに移行する方法
 
@@ -141,16 +141,16 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 
 |ラベル構成|統合ラベル付けのクライアントによるサポート| 管理センターのガイダンス|
 |-------------------|---------------------------------------------|-------------------------|
-|有効または無効の状態<br /><br />この状態は管理センターと同期されていません |適用なし|ラベルが発行されているかどうかに対応します。 |
+|有効または無効の状態<br /><br />この状態は管理センターと同期されていません |利用不可|ラベルが発行されているかどうかに対応します。 |
 |一覧から選択するか、RGB コードを使用して指定するラベルの色 |はい|ラベルの色に対する構成オプションはありません。 代わりに、Azure portal でラベルの色を構成することも、 [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)を使用することもできます。|
 |事前定義テンプレートを使用するクラウドベースの保護または HYOK ベースの保護 |いいえ|事前に定義されたテンプレート用の構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。|
 |Word、Excel、PowerPoint に対するユーザー定義のアクセス許可を使用するクラウドベースの保護 |はい|管理センターには、ユーザー定義のアクセス許可の構成オプションが含まれるようになりました。 <br /><br /> この構成でラベルを発行する場合は、 [次の表](#comparing-the-behavior-of-protection-settings-for-a-label)のラベルを適用した結果を確認してください。|
 |Outlook のユーザー定義のアクセス許可を使用する HYOK ベースの保護 ([転送不可]) |いいえ|HYOK に対する構成オプションはありません。 この構成を使用してラベルを発行することはお勧めしません。 それを行った場合は、ラベルの適用結果が[次の表](#comparing-the-behavior-of-protection-settings-for-a-label)に一覧表示されます。|
 |ビジュアルマーキング (ヘッダー、フッター、透かし) 用の RGB コードによるカスタムフォント名、サイズ、およびカスタムフォント色  |はい|視覚的なマーキングの構成は、色とフォント サイズの一覧に限定されます。 構成した値が管理センターで確認できなくても、このラベルは変更なしで発行することができます。 <br /><br />これらのオプションを変更するには、Azure portal、または [**新しいラベル**](https://docs.microsoft.com/powershell/module/exchange/new-label) の Office 365 Security & コンプライアンスセンターのコマンドレットを使用します。 管理を簡単にするために、管理センターで表示されているオプションの1つに色を変更することを検討してください。 <br /><br />**注**: セキュリティ & コンプライアンスセンター管理センターでは、定義済みのフォント定義リストがサポートされています。 カスタムフォントおよび色は、 [**新しいラベル**](https://docs.microsoft.com/powershell/module/exchange/new-label) の Office 365 Security & コンプライアンスセンターのコマンドレットを使用してのみサポートされます。|
-|視覚的なマーキングの変数 (ヘッダー、フッター) |はい|このラベルの構成は、AIP クライアントでのみサポートされ、Office 組み込みのラベル付けではサポートされません。 </br></br>組み込みのラベル付けを使用していて、変更せずにこのラベルを公開すると、変数は動的な値を表示するのではなく、クライアント上のテキストとして表示されます。 <!--Before you publish the label, edit the strings to remove the variables.-->|
-|アプリごとの視覚的なマーキング|はい|このラベルの構成は、AIP クライアントでのみサポートされ、Office 組み込みのラベル付けではサポートされません。 </br></br>組み込みのラベル付けを使用していて、このラベルを変更せずに発行すると、各アプリに表示するように構成した視覚的なマーキングではなく、視覚的なマーキングの構成が変数テキストとして表示されます。  <!--Publish this label only if it is suitable for all apps. We recommend editing the strings to remove the app variables if needed.-->|
+|視覚的なマーキングの変数 (ヘッダー、フッター) |はい|このラベルの構成は、AIP クライアントでのみサポートされ、Office 組み込みのラベル付けではサポートされません。 </br></br>組み込みのラベル付けを使用していて、変更せずにこのラベルを公開すると、変数は動的な値を表示するのではなく、クライアント上のテキストとして表示されます。 |
+|アプリごとの視覚的なマーキング|はい|このラベルの構成は、AIP クライアントでのみサポートされ、Office 組み込みのラベル付けではサポートされません。 </br></br>組み込みのラベル付けを使用していて、このラベルを変更せずに発行すると、各アプリに表示するように構成した視覚的なマーキングではなく、視覚的なマーキングの構成が変数テキストとして表示されます。  |
 |"自分のためにのみ" 保護 |はい|管理センターでは、ユーザーを指定せずに、今すぐ適用する暗号化設定を保存することはできません。 この Azure portal では、この構成により、 ["自分だけ" の保護](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)が適用されるラベルが生成されます。 <br /><br /> 別の方法として、暗号化を適用するラベルを作成し、任意のアクセス許可を持つユーザーを指定してから、PowerShell を使用して関連する保護テンプレートを編集します。 まず、 [AipServiceRightsDefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用し (例3を参照)、次に*RightsDefinitions*パラメーターを指定して[-Aipservicetemplateproperty を設定](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples)します。|
-|条件と関連設定 <br /><br /> 自動の推奨ラベル付けとそのヒントが含まれます|適用なし|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
+|条件と関連設定 <br /><br /> 自動の推奨ラベル付けとそのヒントが含まれます|利用不可|自動ラベル付けを使用して、ラベル設定とは個別の構成としてご自分の条件を再構成します。|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>ラベルの保護設定の動作を比較する
 
@@ -168,10 +168,6 @@ Azure Information Protection クライアント (クラシック) は、Azure po
 |ユーザー定義のアクセス許可が Word、Excel、PowerPoint、およびエクスプローラーを対象とする HYOK (AD RMS): | Word、Excel、PowerPoint、およびエクスプローラーで表示されます<br /><br /> このラベルが適用された場合: <br /><br /> - HYOK 保護はドキュメントや電子メールに適用されます。| Word、Excel、PowerPoint で表示されます <br /><br /> このラベルが適用された場合:  <br /><br />- 保護が以前にラベルによって適用されている場合、その保護は適用されず削除されます [[2]](#footnote-2) <br /><br />- 保護が以前にラベルから独立して適用されていた場合、その保護は保持されます|Word、Excel、PowerPoint で表示されます <br /><br /> このラベルが適用された場合:  <br /><br />- 保護が以前にラベルによって適用されている場合、その保護は適用されず削除されます [[2]](#footnote-2) <br /><br />- 保護が以前にラベルから独立して適用されていた場合、その保護は保持されます |
 |ユーザー定義のアクセス許可が Outlook を対象とする HYOK (AD RMS): |Outlook で表示されます<br /><br />このラベルが適用された場合: <br /><br />- HYOK 保護を使用した転送不可が電子メールに適用されます|Outlook で表示されます<br /><br />このラベルが適用された場合: <br /><br /> - 保護が以前にラベルによって適用されている場合、その保護は適用されず削除されます [[2]](#footnote-2) <br /><br />- 保護が以前にラベルから独立して適用されていた場合、その保護は保持されます|Outlook で表示されます<br /><br />このラベルが適用された場合: <br /><br />- 保護が以前にラベルによって適用されている場合、その保護は適用されず削除されます [[2]](#footnote-2) <br /><br />- 保護が以前にラベルから独立して適用されていた場合、その保護は保持されます [[1]](#footnote-1)|
 
-<!-- removed
-|Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key|Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
-
- -->
 ###### <a name="footnote-1"></a>脚注 1
 
 Outlook では、保護は保持されます。ただし、暗号化のみのオプションで電子メールが保護されている場合、その保護は削除されます。
@@ -254,13 +250,15 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>現在、統合ラベル付けをサポートしているサービス: 
 
-- [Power BI (プレビュー)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Office Online (プレビュー中) および Outlook (web 上)
+- Web 上の Office Online および Outlook
 
-- Microsoft SharePoint、OneDrive for work または学校、OneDrive、チーム、Office 365 グループ (プレビュー)
+    詳細については、「 [SharePoint および OneDrive での Office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
+
+- Microsoft SharePoint、OneDrive for work または学校、OneDrive、チーム、Office 365 グループ
     
-    詳細については、「 [Microsoft Teams、office 365 グループ、および sharepoint サイトでの秘密度ラベルの使用 (パブリックプレビュー)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) 」および「 [sharepoint および OneDrive での office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
+    詳細については、「 [Microsoft Teams、Office 365 グループ、および SharePoint サイトでの機密ラベルの使用](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites)」を参照してください。
 
 - Microsoft Defender Advanced Threat Protection
 

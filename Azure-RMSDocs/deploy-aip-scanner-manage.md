@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810288"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953067"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの実行
 
@@ -175,14 +175,14 @@ Start-AIPScannerDiagnostics
 - 構成されている規則が有効かどうか
 
 > [!TIP]
-> スキャナーユーザーではないユーザーでコマンドを実行している場合は、必ず **-onbehalf** パラメーターを追加してください。 <!--For more information, see <x>.-->
+> スキャナーユーザーではないユーザーでコマンドを実行している場合は、必ず **-onbehalf** パラメーターを追加してください。 
 >
 
 > [!NOTE]
 > この **ツールで** は、完全な前提条件の確認は実行されません。 スキャナーで問題が発生している場合は、システムが [スキャナーの要件](deploy-aip-scanner-prereqs.md)を満たしていることと、 [スキャナーの構成とインストール](deploy-aip-scanner-configure-install.md) が完了していることを確認してください。
 >
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - Microsoft の Core Services Engineering と Operations チームがどのようにこのスキャナーを実装したかについて関心をお持ちですか。  テクニカル ケース スタディ「[Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner)」(Azure Information Protection スキャナーを使用したデータ保護の自動化) をご覧ください。
 

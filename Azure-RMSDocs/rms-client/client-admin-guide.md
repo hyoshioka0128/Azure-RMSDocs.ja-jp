@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c5a7a774e06f53793151d8de02380b23b0083c4f
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: c4b450eb1356eb36bc7b3c18573146985e5c346d
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264397"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952982"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection クライアント管理者ガイド
 
@@ -29,7 +29,7 @@ ms.locfileid: "88264397"
 >[!NOTE] 
 > 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
-> **AIP クラシッククライアントをデプロイするには、** サポートチケットを開いてダウンロードアクセスを取得します。
+> **AIP クラシック クライアントをデプロイするには**、サポート チケットを作成してダウンロード アクセスを取得します。
 
 エンタープライズ ネットワークで Azure Information Protection クライアントを担当している場合、または [Azure Information Protection クライアント ユーザー ガイド](client-user-guide.md) に関するページに記載されていない詳細な技術情報が必要な場合は、このガイドの情報をご覧ください。 
 
@@ -189,7 +189,7 @@ Azure Information Protection チームは、Azure Information Protection クラ�
 
 Windows Update を使用する場合、Azure Information Protection クライアントによって、クライアントの一般公開バージョンが自動的にアップグレードされます。クライアントがインストールされた方法は関係ありません。 新しいクライアントのリリースは、リリースの数週間後にカタログに公開されます。
 
-または、新しいリリースのインストールでクライアントを手動でアップグレードすることもできます。 <!--by downloading the new release from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Then install the new version to upgrade the client. -->プレビュー バージョンをアップグレードするには、この方法を使用する必要があります。
+または、新しいリリースのインストールでクライアントを手動でアップグレードすることもできます。 プレビュー バージョンをアップグレードするには、この方法を使用する必要があります。
 
 手動でアップグレードし、かつインストール方法を変更する場合は、最初に以前のバージョンをアンインストールします。 たとえば、実行可能 (.exe) バージョンのクライアントから Windows インストーラ― (.msi) バージョンのクライアントに変更する場合です。 または、クライアントの以前のバージョンをインストールする必要がある場合です。 たとえば、テスト用に現在のプレビュー バージョンがインストールされていて、現在の一般公開バージョンに戻す必要がある場合です。
 
@@ -218,7 +218,7 @@ Azure Information Protection クライアントのサポート ポリシー、�
 
 2. スキャナーのコンピューター上で、スキャナー サービス **Azure Information Protection Scanner** を停止します。
 
-3. 現在の一般提供 (GA) バージョンをインストールして、Azure Information Protection クライアントをアップグレードします。 <!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).-->
+3. 現在の一般提供 (GA) バージョンをインストールして、Azure Information Protection クライアントをアップグレードします。 
 
 4. PowerShell セッションで、 **update-help** コマンドを実行し、手順 1. で指定したプロファイル名を使用します。 例: `Update-AIPScanner –Profile Europe`
 

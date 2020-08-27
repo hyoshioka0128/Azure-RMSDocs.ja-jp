@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f190a97e18533640b2edc60513bb29a7ad7d7728
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788664"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952897"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための前提条件
 
@@ -48,7 +48,7 @@ Azure Information Protection スキャナーをインストールする前に、
 
 スキャナーを実行するには、次のシステム仕様の Windows Server コンピューターが必要です。
 
-|仕様  |説明  |
+|仕様  |詳細  |
 |---------|---------|
 |**プロセッサ**     |4コアプロセッサ         |
 |**RAM**     |8 GB         |
@@ -143,7 +143,7 @@ Azure Information Protection クライアントの現在の [一般公開バー�
 
 これらのラベルが構成されていない場合は、「 [代替構成を使用したスキャナーのデプロイ](#deploying-the-scanner-with-alternative-configurations)」を参照してください。
 
-詳細については、次を参照してください:
+詳細については、次を参照してください。
 
 - [機密ラベルをコンテンツに自動的に適用する](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
@@ -203,6 +203,8 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 - [制限: スキャナーのサービスアカウントに **ローカルログオン** 権限を付与することはできません](#restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right)
 
 - [制限: Sysadmin の付与が認められない、または手動でデータベースを作成し構成する必要がある](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
+
+- [制限: ラベルにオートラベルの条件がありません](#restriction-your-labels-do-not-have-auto-labeling-conditions)
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>制限: スキャナーサーバーはインターネットに接続できません
 
@@ -295,6 +297,17 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 - **スキャナーサービスアカウントの** 場合は、ローカルの Windows アカウントまたは Active Directory アカウントを使用します。
 
 - **Azure Active Directory アカウントの** 場合は、Set-AIPAuthentication を使用して、 *OnBehalfOf* パラメーターのローカルアカウントを指定します。 詳細については、「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
+
+#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>制限: ラベルにオートラベルの条件がありません
+
+ラベルに自動ラベルの条件がない場合は、スキャナーを構成するときに、次のいずれかのオプションを使用することを計画します。
+
+|オプション  |説明  |
+|---------|---------|
+|**すべての情報の種類を検出**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[情報の**種類**] を [検出済み]**に設定します。** </br></br>このオプションは、すべての機密情報の種類についてコンテンツをスキャンするようにコンテンツスキャンジョブを設定します。      |
+|**推奨ラベルの使用**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[**推奨ラベルを自動的**に処理する] オプションを **[オン**] に設定します。</br></br> この設定により、推奨されるすべてのラベルがコンテンツに自動的に適用されるようにスキャナーが構成されます。      |
+|**既定のラベルを定義する**     |   [ポリシー](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do)、[コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)、または[リポジトリ](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository)で既定のラベルを定義します。 </br></br>この場合、スキャナーは、見つかったすべてのファイルに既定のラベルを適用します。       |
+| | |
 
 ## <a name="next-steps"></a>次のステップ
 

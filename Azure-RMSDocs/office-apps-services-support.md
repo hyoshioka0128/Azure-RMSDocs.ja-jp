@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4d935e797e4f08c2d8f82d4e797f9d60cc97a5d4
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 165833b5d3b768be322dcd15548ef9cdbb70927c
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869115"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953220"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Office のアプリケーションとサービスが Azure Rights Management をサポートするしくみ 
 
@@ -34,10 +34,6 @@ Office アプリを構成する準備ができている場合は、「 [office �
 
 関連する既知の問題については、「 [AIP の既知の問題](known-issues.md#aip-known-issues-in-office-applications)」を参照してください。
 
-<!-->
-> [!NOTE]
-> 最近の Windows 更新プログラムの制限のため、電子メールに添付されているファイルは、ファイルを開いた後にロックされることがあります。
--->
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online と Exchange Server
 Exchange Online または Exchange Server を使用すると、Azure Information Protection のオプションを構成できます。 この構成では、Exchange は次の保護ソリューションを提供します。
 
@@ -92,7 +88,7 @@ IRM で保護されていないライブラリの場合、SharePoint または O
 > [!IMPORTANT]
 > SharePoint IRM は、保護を適用する機密ラベルと組み合わせて使用できます。 両方の機能を同時に使用すると、保護されたファイルの動作が変わります。 詳細については、「 [SharePoint および OneDrive での Office ファイルの秘密度ラベルの有効化](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)」を参照してください。
 
-SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「 [OneDrive と sharepoint でのデータの暗号化](https://technet.microsoft.com/library/dn905447.aspx)」を参照してください。
+SharePoint IRM 保護を使用する場合、Azure Rights Management サービスは、ドキュメントが SharePoint からダウンロードされる際には使用制限およびデータ暗号化を適用し、ドキュメントが最初に SharePoint で作成される場合、またはライブラリにアップロードされる際には適用しません。 ドキュメントをダウンロードする前に保護する方法については、SharePoint ドキュメントの「 [OneDrive と sharepoint でのデータの暗号化](https://technet.microsoft.com/library/dn905447.aspx) 」を参照してください。
 
 Office 365 ブログの次の投稿には、新しい機能が追加されていますが、便利な情報がいくつかあります。これは、 [SharePoint の情報 Rights Management の新機能](https://www.microsoft.com/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)です。
 

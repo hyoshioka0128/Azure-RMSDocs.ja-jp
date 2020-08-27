@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a2d2441914c7f3efa02f1989de35c930019d3250
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 59029ba4ebd55cc687d529eec01c58c5cced15c3
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927796"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953203"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
@@ -46,7 +46,7 @@ Azure Information Protection テナント キーは組織のルート キーで�
 コンテンツは、クラシッククライアントを使用している場合にのみ、HYOK protection を使用して暗号化できます。 ただし、HYOK で保護されたコンテンツがある場合は、クラシックラベルクライアントと統合ラベルクライアントの両方で表示できます。 
 
 > [!TIP]
-> 従来のクライアントと、統一されたラベル付けクライアントの違いについては、 詳細については、この[FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を参照してください。
+> 従来のクライアントと、統一されたラベル付けクライアントの違いについては、 詳細については、この [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を参照してください。
 >
 
 ## <a name="tenant-root-keys-generated-by-microsoft"></a>Microsoft によって生成されたテナントルートキー
@@ -55,7 +55,7 @@ Microsoft によって自動的に生成された既定のキーは、テナン�
 
 特別なハードウェア、ソフトウェア、または Azure サブスクリプションを使用せずに Azure Information Protection をすばやくデプロイする場合は、既定の Microsoft キーを使い続けます。 例としては、キー管理に関する規制要件のないテスト環境や組織などがあります。
 
-既定のキーの場合、これ以上の手順は必要ありません。また、[テナントのルートキー](get-started-tenant-root-keys.md)の概要に直接進むことができます。
+既定のキーの場合、これ以上の手順は必要ありません。また、 [テナントのルートキー](get-started-tenant-root-keys.md)の概要に直接進むことができます。
 
 > [!NOTE]
 > Microsoft によって生成される既定のキーは、管理オーバーヘッドが最も少ない、最も簡単なオプションです。
@@ -70,7 +70,7 @@ BYOK-保護では、顧客組織の Azure Key Vault またはオンプレミス�
 
 詳細については、「 [BYOK 保護の構成](byok-price-restrictions.md)」を参照してください。 
 
-構成が完了したら、「[テナントルートキー](get-started-tenant-root-keys.md)の概要」に進み、キーの使用と管理の詳細について説明します。
+構成が完了したら、「 [テナントルートキー](get-started-tenant-root-keys.md) の概要」に進み、キーの使用と管理の詳細について説明します。
 
 ## <a name="hold-your-own-key-hyok-aip-classic-client-only"></a>独自のキーを保持する (HYOK) (AIP classic client のみ)
 
@@ -84,7 +84,7 @@ HYOK は、クラウドから分離された場所で、顧客によって作成
 
 これらのドキュメントでは、通常、組織内で最も高い分類が "上位シークレット" として使用されています。
 
-詳細については、「[独自のキーの保持 (HYOK) の詳細](configure-adrms-restrictions.md)」を参照してください。
+詳細については、「 [独自のキーの保持 (HYOK) の詳細](configure-adrms-restrictions.md)」を参照してください。
 
 ## <a name="double-key-encryption-dke-aip-unified-labeling-client-only"></a>二重キー暗号化 (DKE) (AIP のラベル付けクライアントのみ)
 
@@ -104,9 +104,4 @@ DKE はクラウドとオンプレミスのどちらにでもデプロイでき�
 > DKE は、アクセス権を取得するために銀行キーと顧客キーの両方を必要とする安全預金箱に似ています。
 > 保護されたコンテンツの暗号化を解除するには、Microsoft によって保持されているキーと、ユーザーが保持するキーの両方が必要です。
 
-<!--
-The following video shows how DKE works to secure your content.
-
-> [!VIDEO https://msit.microsoftstream.com/embed/video/f466a1ff-0400-a936-221c-f1eab45dc756]
--->
 詳細については、Microsoft 365 ドキュメントの「 [Double キー encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) 」を参照してください。 
