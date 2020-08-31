@@ -4,7 +4,7 @@ description: 管理者が企業ネットワークに Windows 用 Azure Informati
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eaa3c47599a2d314dd0af24442efcefe16ff3c61
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: bb2f7d2cacad3623eb590c338a7f19585e9c80d1
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952914"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176652"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>管理者ガイド: ユーザー向けに Azure Information Protection クライアントをインストールする
 
@@ -78,6 +78,8 @@ ms.locfileid: "88952914"
         Excel の場合: `MSIP.ExcelAddin`
 
         PowerPoint の場合: `MSIP.PowerPointAddin`
+
+- AIP クライアントは、 [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。 AIP クライアントをインストールする前に、 [Exploit protection が無効](../known-issues.md#known-issues-for-installing-the-aip-client) になっていることを確認してください。  
 
 > [!IMPORTANT]
 > Azure Information Protection クライアントのインストールには、ローカル管理者権限が必要です。
@@ -186,7 +188,7 @@ Windows Update を使用して Azure Information Protection クライアント�
 
 1. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
     |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
     |Office 2013|サポートされているすべてのバージョン|64 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32 ビット: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />バージョン: 1.0|インストール|
@@ -211,7 +213,7 @@ Azure Information Protection クライアントに含まれている PowerShell 
 
 このクライアントに付属するスキャナーをインストールするには、前のセクションの同じ手順に従います。 これで、スキャナーを構成してからインストールする準備が整いました。 詳細については、「 [Azure Information Protection クラシックスキャナーとは](../deploy-aip-scanner-classic.md)」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection クライアントをインストールしたので、このクライアントのサポートに必要な追加情報を以下の記事でご覧ください。
 

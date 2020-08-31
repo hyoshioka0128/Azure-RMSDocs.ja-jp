@@ -4,19 +4,19 @@ description: Azure Information Protection の既知の問題と制限を検索�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af4a6989dca815d204fee72aafa6d839d2673fc4
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 85a7325bf2bd80294436b233fb81fddbe707ea6e
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952863"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176618"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題-Azure Information Protection
 
@@ -37,6 +37,20 @@ Azure Information Protection ビューアーでは、保護された PDF ドキ�
 
 詳細については、「 [管理者ガイド: Azure Information Protection クライアントでサポートされるファイルの種類](rms-client/client-admin-guide-file-types.md)」を参照してください。
 
+## <a name="known-issues-for-installing-the-aip-client"></a>AIP クライアントのインストールに関する既知の問題
+
+Azure Information Protection クライアントは、 [Exploit Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。
+
+AIP をインストールする前に、Exploit protection を無効にしてください。 
+
+PowerShell を使用して Exploit protection を無効にするには、次のように実行します。
+
+```PowerShell
+Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
+```
+
+詳細については、「 [Azure Information Protection の要件](requirements.md)」を参照してください。
+
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>Azure Information Protection クライアントの PowerShell のサポート
 
 Azure Information Protection クライアントと共にインストールされる **Azureinformationprotection** PowerShell モジュールの現在のリリースには、次の既知の問題があります。
@@ -51,7 +65,7 @@ Azure Information Protection クライアントと共にインストールされ
 
 ## <a name="aip-known-issues-in-office-applications"></a>Office アプリケーションの AIP に関する既知の問題
 
-|特徴量  |既知の問題  |
+|機能  |既知の問題  |
 |---------|---------|
 |**複数のバージョンの Office**    | Azure Information Protection クライアントは、従来のラベル付けと統一されたラベル付けの両方を含み、同じコンピューターで複数のバージョンの Office をサポートしたり、Office のユーザーアカウントを切り替えたりすることはできません。       |
 |**複数のディスプレイ** |複数の表示を使用していて、Office アプリケーションを開いている場合は、次のようになります。 </br></br>-Office アプリでパフォーマンスの問題が発生する可能性があります。</br>-Azure Information Protection バーが、1つまたは両方の画面で、Office 画面の中央にフローティングするように見える場合があります。 </br></br>一貫したパフォーマンスを確保し、バーが正しい場所にあることを確認するには、Office アプリケーションの [ **オプション** ] ダイアログを開き、[全般] で **、** [最適化] ではなく [ **互換性のために最適化** ] を選択し **ます。**    |
@@ -80,8 +94,7 @@ Azure Information Protection クライアントと共にインストールされ
     - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
     - [統一された**ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
 
-
-## <a name="more-information"></a>詳細情報
+## <a name="more-information"></a>説明
 
 次の記事は、Azure Information Protection の既知の問題に関する質問に回答する際に役立つ場合があります。
 

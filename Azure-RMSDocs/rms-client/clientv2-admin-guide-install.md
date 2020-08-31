@@ -4,19 +4,19 @@ description: Azure Information Protection 統合された Windows 用のラベ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 08/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 394c91c7503a9bb8995eacf8c9cec45ab85fe57d
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: ec73048a8dcb306a1b8bc94670a80f9cbd8d2861
+ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788953"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176635"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -43,7 +43,8 @@ Azure Information Protection 統合されたラベル付けクライアントを
 |**Microsoft Online Services サインイン アシスタント 7.250.4303.0**     |   Office 2010 を実行しているコンピューターには、クライアントインストールに含まれている Microsoft Online Services サインインアシスタントバージョン7.250.4303.0 が必要です。 </br></br>新しいバージョンのサインインアシスタントがある場合は、Azure Information Protection 統合ラベル付けクライアントをインストールする前にアンインストールしてください。 </br></br>たとえば、バージョンを確認し、[**コントロールパネル]** プログラムを使用してサインインアシスタントをアンインストールし、[  >  **Program and Features**  >  **プログラムのアンインストールまたは変更**] を使用します。      |
 |**KB 4482887**     | Windows 10 バージョン 1809 の場合のみ、17763.348 より前のオペレーティング システム ビルドでは、Office アプリケーションに正しい Information Protection バーが確実に表示されるように、[2019 年 3 月 1 日—KB4482887 (OS ビルド 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) がインストールされます。 </br></br>Office 365 1902 以降をお持ちの場合、この更新プログラムは必要ありません。        |
 |**管理者のアクセス許可**| Azure Information Protection の統合ラベル付けクライアントをインストールするには、ローカルの管理アクセス許可が必要です。| 
-|   |  |
+|**Exploit protection を無効にする**   |AIP クライアントは、 [Exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) が有効になっているコンピューターではサポートされていません。 AIP クライアントをインストールする前に、 [Exploit protection が無効](../known-issues.md#known-issues-for-installing-the-aip-client) になっていることを確認してください。  |
+|||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>AIP が無効にならないようにグループポリシーを構成する
 
@@ -65,12 +66,12 @@ Office バージョン2013以降では、Office アプリケーション用の *
 
 Azure Information Protection の統一されたラベル付けクライアントは、次のいずれかの Office エディションの Office アプリケーション Word、Excel、PowerPoint、Outlook を使用して、ドキュメントや電子メールにラベルを付け、保護することができます。
 
-- Office アプリの最小バージョン1805、ユーザーに Azure Rights Management のライセンスが割り当てられている場合の [Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) からのビルド 9330.2078 (office 365 の場合は Azure Information Protection とも呼ばれます)
-- [Enterprise 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Enterprise 2019 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- [Enterprise 2016 用 Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- Enterprise 2013 Service Pack 1[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
-- Enterprise 2010 Service Pack 2[の Microsoft 365 アプリ](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ
+- Office 365 ProPlus
+- Office Professional Plus 2019
+- Office Professional Plus 2016
+- Office Professional Plus 2013 Service Pack 1
+- Office Professional Plus 2010 Service Pack 2
 
 Office の他のエディション ( **標準**など) では、Rights Management サービスを使用してドキュメントや電子メールを保護することはできません。 これらのエディションでは、 **ラベル付け** のためだけに Azure Information Protection がサポートされています。 そのため、保護を適用するラベルは、Azure Information Protection の秘密度ボタンまたはバーにユーザーに表示されません。
 
@@ -185,7 +186,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 1. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
     |--------------------|--------------|----------------|---------------------|
     |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
     |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
@@ -207,7 +208,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
     >- インストール後、レジストリキーを次のように更新します: **EnableTelemetry = 0**。
     >
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 Azure Information Protection 統合されたラベル付けクライアントをインストールしたので、このクライアントのサポートに必要な追加情報については、次を参照してください。
 
 - [クライアントのファイルと使用状況ログ](clientv2-admin-guide-files-and-logging.md)
