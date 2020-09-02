@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 274ef1ef2a7196aa9c25b8f488d83da77eba7c6c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952897"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316809"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーをインストールおよび展開するための前提条件
 
@@ -173,7 +173,7 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 
 260文字を超えるファイルパスを使用してファイルをスキャンするには、次のいずれかのバージョンの Windows がインストールされているコンピューターにスキャナーをインストールし、必要に応じてコンピューターを構成します。
 
-|Windows のバージョン  |説明  |
+|Windows のバージョン  |[説明]  |
 |---------|---------|
 |**Windows 2016 以降**     |   長いパスをサポートするようにコンピューターを構成する      |
 |**Windows 10 または Windows Server 2016**     | 次の[グループポリシー設定](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)を定義します。**ローカルコンピューターポリシー**  >  **コンピューターの構成**  >  **管理用テンプレート**  >  **すべての設定**で、  >  **Win32 の長いパスを有効に**します。    </br></br>これらのバージョンでのファイルパスのサポートの詳細については、Windows 10 開発者ドキュメントの「 [パスの最大長の制限](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) 」セクションを参照してください。    |
@@ -208,15 +208,35 @@ Office ドキュメントをスキャンするには、ドキュメントは次�
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>制限: スキャナーサーバーはインターネットに接続できません
 
+統一されたラベル付けクライアントは、インターネット接続を使用せずに保護を適用できませんが、インポートされたポリシーに基づいてラベルを適用することはできます。
+
 切断されたコンピューターをサポートするには、次の手順を実行します。
 
-1. ポリシーのラベルを構成してから、 [インポート](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) コマンドレットを使用してポリシーをインポートします。 統一されたラベル付けクライアントは、インターネット接続を使用せずに保護を適用できませんが、インポートされたポリシーに基づいてラベルを適用することはできます。
+1.  ポリシーのラベルを構成し、切断された [コンピューターをサポートする手順](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) を使用して、オフラインでの分類とラベル付けを有効にします。
 
-1. スキャナークラスターを作成して、Azure portal でスキャナーを構成します。 この手順に関してサポートが必要な場合は、「[Azure portal でスキャナーを構成する](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)」をご覧ください。
+1. コンテンツスキャンジョブのオフライン管理を有効にする:
 
-1. [**エクスポート**] オプションを使用して、[ **Azure Information Protection コンテンツスキャンジョブ**] ウィンドウからコンテンツジョブをエクスポートします。
+    1. スキャナーを **オフライン** モードで機能するように設定するには、 [Set-Aipscanの configuration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) コマンドレットを使用します。
 
-1. PowerShell セッションで、 [Import-Aipscanの構成](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) を実行し、エクスポートされた設定を含むファイルを指定します。
+    1. スキャナークラスターを作成して、Azure portal でスキャナーを構成します。 詳細については、「 [Azure portal でのスキャナーの構成](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)」を参照してください。
+
+    1. [**エクスポート**] オプションを使用して、[ **Azure Information Protection コンテンツスキャンジョブ**] ウィンドウからコンテンツジョブをエクスポートします。
+    
+    1. [インポート](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration)コマンドレットを使用して、ポリシーをインポートします。 
+    
+    オフラインコンテンツスキャンジョブの結果は次の場所にあります: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
+    
+1. ネットワークスキャンジョブのオフライン管理を有効にする:
+
+    1. ネットワーク探索サービスをオフラインモードで機能するように設定するには、 [MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) コマンドレットを使用します。
+
+    1. Azure portal でネットワークスキャンジョブを構成します。 詳細については、「 [ネットワークスキャンジョブの作成](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job)」を参照してください。
+    
+    1. [**エクスポート**] オプションを使用して、[ **Azure Information Protection-ネットワークスキャンジョブ (プレビュー)** ] ウィンドウからネットワークスキャンジョブをエクスポートします。 
+    
+    1.  [MIPNetworkDiscoveryConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration)コマンドレットを使用して、クラスター名と一致するファイルを使用してネットワークスキャンジョブをインポートします。  
+    
+    オフラインのネットワークスキャンジョブの結果は次の場所にあります: **%localappdata%\Microsoft\MSIP\Scanner\Reports**
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>制限: Sysadmin の付与が認められない、または手動でデータベースを作成し構成する必要がある
 
@@ -302,7 +322,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 ラベルに自動ラベルの条件がない場合は、スキャナーを構成するときに、次のいずれかのオプションを使用することを計画します。
 
-|オプション  |説明  |
+|オプション  |[説明]  |
 |---------|---------|
 |**すべての情報の種類を検出**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[情報の**種類**] を [検出済み]**に設定します。** </br></br>このオプションは、すべての機密情報の種類についてコンテンツをスキャンするようにコンテンツスキャンジョブを設定します。      |
 |**推奨ラベルの使用**     |  [コンテンツスキャンジョブ](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)で、[**推奨ラベルを自動的**に処理する] オプションを **[オン**] に設定します。</br></br> この設定により、推奨されるすべてのラベルがコンテンツに自動的に適用されるようにスキャナーが構成されます。      |

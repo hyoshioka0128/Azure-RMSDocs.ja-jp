@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953067"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316877"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの実行
 
@@ -133,7 +133,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 ラベルの保護設定を変更した場合は、Azure Information Protection サービスを再起動する前に、更新された保護設定を保存してから15分が経過するのを待ちます。
 
 > [!IMPORTANT]
-> バージョン [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) 以降にアップグレードした場合、AIP によって更新された設定の完全な再スキャンがスキップされ、パフォーマンスが一貫して保たれます。 アップグレードした場合は、必要に応じて [手動で完全な再スキャンを実行](#rescanning-files) してください。 
+> バージョン [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) 以降にアップグレードした場合、AIP によって更新された設定の完全な再スキャンがスキップされ、パフォーマンスが一貫して保たれます。 アップグレードした場合は、必要に応じて [手動で完全な再スキャンを実行](#rescanning-files) してください。 
 >
 > たとえば、 **ポリシー実施** 設定を [ **強制** ] から **[強制]** に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
 > 

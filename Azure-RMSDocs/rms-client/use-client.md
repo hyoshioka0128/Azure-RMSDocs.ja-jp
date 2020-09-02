@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 8b72c0b8efe31ad570bed684dbe63283c5f79b47
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788647"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316639"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>クライアント側での Azure Information Protection
 
@@ -126,7 +126,7 @@ Office 365 アプリを実行している Windows コンピューターに最小
 
 さまざまなオペレーティングシステムプラットフォーム (Windows、macOS、iOS、Android) における Office の組み込みの機密ラベル付け機能を比較するには、Microsoft 365 のコンプライアンスドキュメント、 [アプリでの機密ラベル機能のサポート](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)を参照してください。 このドキュメントには、サポートされている機能の Office ビルド番号または Office 更新チャネルに関する情報も含まれています。
 
-|機能|従来のクライアント|統合ラベル付けクライアント|Office 組み込みラベルクライアント|
+|特徴量|従来のクライアント|統合ラベル付けクライアント|Office 組み込みラベルクライアント|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |手動によるラベル付け:| **はい** | **はい** |**はい** |
 |既定のラベル:| **はい** | **はい** | **はい** |
@@ -200,7 +200,7 @@ Azure Information Protection クライアント (クラシック) と Azure Info
 |自動および推奨ラベル: | 組み込みの情報の種類と、語句や正規表現を使ったカスタム条件を使って、Azure portal で[ラベル条件](../configure-policy-classification.md)として構成されます <br /><br />構成のオプションには、次のようなものがあります。 <br /><br />- 一意の / 一意でない数 <br /><br /> - 最小数| 組み込みの機密情報の種類と[カスタムの情報の種類](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)を使用して、管理センターで構成されます<br /><br />構成のオプションには、次のようなものがあります。  <br /><br />- 一意の数のみ <br /><br />- 最小および最大数 <br /><br />- 情報の種類での AND と OR のサポート <br /><br />- キーワード ディクショナリ<br /><br />- カスタマイズ可能な信頼度レベルと文字の近接|
 |添付ファイルのサブラベルのサポートを注文します。 | [クライアントの詳細設定](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments)で有効 | 既定で有効になっています。構成は必要ありません|
 |ファイルの種類の既定の保護動作を変更します。 | [レジストリの編集](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files)を使用して、ネイティブ保護と汎用保護の既定値を上書きすることができます。 | [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)を使用して、保護するファイルの種類を変更できます。|
-|自動再スキャン | スキャナーがポリシーまたはラベル設定の変更を検出するたびに、フルスキャンが自動的に実行されます。 | バージョン [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview)以降では、ポリシーまたはコンテンツスキャンジョブの設定を変更した後、完全な再スキャンをスキップするように管理者が選択できます。 |
+|自動再スキャン | スキャナーがポリシーまたはラベル設定の変更を検出するたびに、フルスキャンが自動的に実行されます。 | バージョン [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview)以降では、ポリシーまたはコンテンツスキャンジョブの設定を変更した後、完全な再スキャンをスキップするように管理者が選択できます。 |
 |ネットワーク検出 |クラシックスキャナーではネットワーク探索機能を使用できません | 管理者は、指定された IP アドレスまたは範囲をスキャンすることで、他の危険なリポジトリを検出できます。|
 | | | |
 
@@ -237,7 +237,7 @@ Azure Information Protection クライアント (クラシック) では、サ�
 
 パリティについて、Azure Information Protection 統合ラベル付けクライアントでも、管理センターでこれらのラベルを選択できる場合でも、サブラベルのある親ラベルの適用はサポートされていません。 このシナリオでは、Azure Information Protection 統合ラベル付けクライアントで親ラベルが適用されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Information Protection クライアントをインストールして構成するには、次のドキュメントを参照してください。
 

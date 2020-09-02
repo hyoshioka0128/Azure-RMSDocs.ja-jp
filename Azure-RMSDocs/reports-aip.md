@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecc0a78a942dc4e0c6b1dc89b3d2d2ec57c87f6e
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 1bd48cd64616785a3b8f7c62a3e944cc5eb80097
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264380"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316826"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Azure Information Protection の中央レポート (パブリックプレビュー)
 
@@ -108,6 +108,12 @@ Azure Information Protection analytics for central reporting を使用すると�
 
 - ユーザーのデバイスの名前。
 
+- ユーザーのデバイスの IP アドレス。 
+
+- **Outlook**や**msip. app**など、関連するプロセス名。
+
+- **Outlook**や**エクスプローラー**など、ラベル付けを実行したアプリケーションの名前
+
 - ドキュメントの場合: ラベル付けされているドキュメントのファイル パスとファイル名。
 
 - 電子メールの場合: ラベルが付けられている電子メールの件名と電子メールの送信者。 
@@ -148,7 +154,7 @@ Azure Information Protection を使用すると、機密情報の種類 (定義�
 
 - 統一されたラベル付けクライアントの場合は、ラベルポリシーの [詳細設定](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) を構成します。
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>前提条件
 Azure Information Protection レポートを表示し、独自のレポートを作成するには、次の要件を満たしていることを確認してください。
 
 |要件|詳細情報|
@@ -280,10 +286,10 @@ Azure Information Protection のログに記録されたデータは、テーブ
 |列名|説明|
 |-----------|-----------|
 |Time|イベント時間: YYYY-MM-YYYY-MM-DDTHH: MM: SS 形式の UTC|
-|ユーザー|User: UPN または DOMAIN\USER の形式を設定します。|
+|User|User: UPN または DOMAIN\USER の形式を設定します。|
 |ItemPath|アイテムの完全なパスまたは電子メールの件名|
 |ItemName|ファイル名または電子メールの件名 |
-|メソッド|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
+|Method|ラベルの割り当て方法: 手動、自動、推奨、既定、または必須|
 |アクティビティ|監査アクティビティ: DowngradeLabel、UpgradeLabel、RemoveLabel、NewLabel、Discover、Access、RemoveCustomProtection、ChangeCustomProtection、NewCustomProtection、または FileRemoved |
 |ResultStatus|アクションの結果の状態:<br /><br /> 成功または失敗 (AIP スキャナーのみによって報告)|
 |ErrorMessage_s|ResultStatus = Failed の場合、エラーメッセージの詳細が含まれます。 AIP スキャナーのみによって報告されました|

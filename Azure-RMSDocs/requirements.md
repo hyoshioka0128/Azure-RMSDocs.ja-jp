@@ -4,7 +4,7 @@ description: Azure Information Protection を組織に展開するために必�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: e3d50f6857c2f7c3fd5f104d79997b00feeb2664
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952829"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316894"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
@@ -122,7 +122,7 @@ Office 2010、証明書ベースまたは multi-factor authentication を使用�
 
 ### <a name="additional-requirements-per-client"></a>クライアントごとの追加要件
 
-各 Azure Information Protection クライアントには、追加の前提条件があります。 詳細については、次の情報を参照してください。
+各 Azure Information Protection クライアントには、追加の前提条件があります。 詳細については、以下を参照してください。
 
 - [Azure Information Protection 統合されたラベル付けクライアントの前提条件](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
@@ -216,8 +216,9 @@ Azure Information Protection には、次の追加要件があります。
 Azure Information Protection サービスは、次の2つの特定の IP アドレスにも依存します。
  - **13.107.6.181** 
  - **13.107.9.181**
+ - HTTPS トラフィック用の**ポート 443**
 
-これらの特定の IP アドレスへの発信アクセスを許可する規則を作成してください。
+このポートを使用して、これらの特定の IP アドレスへの発信アクセスを許可する規則を作成してください。
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Azure Rights Management データ保護でサポートされているオンプレミスサーバー
 
@@ -253,7 +254,7 @@ Azure Rights Management コネクタを使用すると、次のオンプレミ�
 
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 AIP のすべての要件を確認し、システムが準拠していることを確認したら、 [Azure Information Protection 用のユーザーとグループの準備](prepare.md)を続行します。
 

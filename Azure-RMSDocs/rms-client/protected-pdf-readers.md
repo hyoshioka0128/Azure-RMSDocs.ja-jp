@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 6d14ee2cc1a8b2bddad79f2e5c0cfb7251522840
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 56aac3e677ab835b0345394be014c1a803bd0b2e
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952965"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316724"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>保護された Pdf ではどの PDF リーダーがサポートされていますか。
 
@@ -98,7 +98,7 @@ Microsoft Edge では、分類および保護されている PDF ファイルを
 
 1. オペレーティングシステム用に、 [acrobat と Acrobat Reader 用の MIP プラグイン](https://go.microsoft.com/fwlink/?linkid=2050049) をインストールします。  
 
-    ダウンロード: [![ダウンロード](../media/download.png "Acrobat および Acrobat Reader 用 MIP プラグインをダウンロードする")](https://go.microsoft.com/fwlink/?linkid=2050049)
+    ダウンロード: [ ![Acrobat および acrobat Reader 用の MIP プラグインをダウンロードする](../media/download.png "Acrobat および Acrobat Reader 用 MIP プラグインをダウンロードする")](https://go.microsoft.com/fwlink/?linkid=2050049)
 
     サポートされているバージョンは次のとおりです。
 
@@ -122,17 +122,17 @@ Microsoft Edge では、分類および保護されている PDF ファイルを
 
 または、ISO standard for PDF の暗号化に準拠している次のいずれかの Windows の PDF リーダーを使用します。
 
-- Azure Information Protection ビューアーの [![ダウンロード](../media/download.png "AIP ビューアーをダウンロードする")](https://go.microsoft.com/fwlink/?linkid=838993) 
+- Azure Information Protection ビューアー [ ![AIP ビューアーをダウンロードする](../media/download.png "AIP ビューアーをダウンロードする")](https://go.microsoft.com/fwlink/?linkid=838993) 
 
-- Foxit Reader の [![ダウンロード](../media/download.png "Foxit Reader ビューアーのダウンロード")](https://www.foxitsoftware.com/pdf-reader/)
+- Foxit Reader [![は Foxit reader ビューアーをダウンロードする](../media/download.png "Foxit Reader ビューアーのダウンロード")](https://www.foxitsoftware.com/pdf-reader/)
 
 ## <a name="installing-a-protected-pdf-reader-for-mobile-iosandroid"></a>モバイル用の保護された PDF リーダーのインストール (iOS/Android)
 
 IOS または Android デバイスで保護された PDF を開くには、オペレーティングシステム用のアプリをダウンロードしてインストールします。
 
-- IOS 用アプリの[![ダウンロード](../media/download.png "IOS 用アプリの Azure Information Protection")Azure Information Protection  ](https://go.microsoft.com/fwlink/?LinkId=325338)
+- Ios 用アプリの Azure Information Protection [ ![ios 用 Azure Information Protection アプリをダウンロードする](../media/download.png "IOS 用アプリの Azure Information Protection")  ](https://go.microsoft.com/fwlink/?LinkId=325338)
 
-- Android 用 Azure Information Protection アプリの [![ダウンロード](../media/download.png "Android 用アプリの Azure Information Protection")](https://go.microsoft.com/fwlink/?LinkId=325340)
+- Android 用アプリの Azure Information Protection [ ![android 用 Azure Information Protection アプリをダウンロード](../media/download.png "Android 用アプリの Azure Information Protection")する](https://go.microsoft.com/fwlink/?LinkId=325340)
 
 詳細については、「 [iOS または Android 用の Azure Information Protection アプリとは](mobile-app-faq.md)」を参照してください。
 

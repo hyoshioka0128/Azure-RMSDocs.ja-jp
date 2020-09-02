@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection 統合されたラベル付けクライアント-バージョン履歴 & サポートポリシー
 description: Windows 用 Azure Information Protection 統合ラベル付けクライアントのリリース情報を参照してください。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 08/23/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6a264c971be86e324f3541f20ab6c91735619f77
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: a8abcbf66f13498e3ff1fb45b979c6a53cf4f016
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788698"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316700"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -65,17 +65,25 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 このクライアントは Azure Information Protection クライアント (クラシック) に置き換わるものです。 従来のクライアントとの機能を比較するには、「 [Windows コンピューターのラベル付けクライアント](use-client.md#compare-the-labeling-clients-for-windows-computers)」を参照してください。
 
-## <a name="version-2883-public-preview"></a>バージョン 2.8.83 (パブリックプレビュー)
+## <a name="version-2885-public-preview"></a>バージョン 2.8.85 (パブリックプレビュー)
 
-ラベル付けされたスキャナーバージョン2.8.83 の統合
+統一されたラベル付けスキャナーとクライアントバージョン2.8.85
 
-**リリース** 08/24/2020
+**リリース** 09/02/2020
 
-**統一されたラベル付けスキャナーの新機能:**
+このバージョンには、統合されたラベル付けスキャナーとクライアントの次の新機能、修正プログラム、および拡張機能が含まれています。
+
+- [統一されたラベル付けスキャナーの新機能](#new-features-for-the-unified-labeling-scanner)
+- [統一されたラベル付けクライアントの新機能](#new-features-for-the-unified-labeling-client)
+- [修正プログラムと機能強化](#fixes-and-improvements)
+
+### <a name="new-features-for-the-unified-labeling-scanner"></a>統一されたラベル付けスキャナーの新機能
+
 - [検出された変更のフル再スキャン (オプション)](#optional-full-rescans-for-changes-detected)
-- [ネットワーク探索のサポート](#network-discovery-support)
+- [SharePoint のタイムアウトを構成する](#configure-sharepoint-timeouts)
+- [ネットワーク探索のサポート](#network-discovery-support) 
 
-### <a name="optional-full-rescans-for-changes-detected"></a>検出された変更のフル再スキャン (オプション)
+#### <a name="optional-full-rescans-for-changes-detected"></a>検出された変更のフル再スキャン (オプション)
 
 管理者は、ポリシーまたはコンテンツスキャンジョブを変更した後、完全な再スキャンをスキップできるようになりました。 完全な再スキャンをスキップすると、前回のスキャン以降に変更または作成されたファイルのみに変更が適用されます。
 
@@ -89,23 +97,34 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 > たとえば、 **ポリシー実施** 設定を [ **強制** ] から **[強制]** に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
 >
 
-### <a name="network-discovery-support"></a>ネットワーク探索のサポート
+#### <a name="configure-sharepoint-timeouts"></a>SharePoint のタイムアウトを構成する
+
+SharePoint との対話の既定のタイムアウトが2分に更新され、その後、AIP 操作の試行が失敗します。
+
+AIP 管理者は、すべての web 要求とファイル web 要求に対して個別に SharePoint タイムアウトを構成することもできます。 
+
+詳細については、「 [SharePoint のタイムアウトを構成する](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts)」を参照してください。
+
+#### <a name="network-discovery-support"></a>ネットワーク探索のサポート
 
 統一されたラベル付けスキャナーに新しい **ネットワーク探索** サービスが含まれるようになりました。これにより、機密性の高いコンテンツを持つ可能性のあるネットワークファイル共有の指定した IP アドレスまたは範囲をスキャンできます。 
 
 **ネットワーク探索**サービスは、検出されたアクセス許可とアクセス権に基づいて、リスクがある可能性のある共有の場所の一覧を使用して**リポジトリ**のレポートを更新します。 更新された **リポジトリ** レポートで、スキャンする必要があるすべてのリポジトリがコンテンツスキャンジョブに含まれていることを確認します。
 
-- [ネットワーク検出の前提条件](#network-discovery-prerequisites)
-- [ネットワーク探索サービスの使用](#using-the-network-discovery-service)
+> [!TIP]
+> 詳細については、「 [ネットワーク探索のコマンドレット](#network-discovery-cmdlets)」を参照してください。
 
-### <a name="network-discovery-prerequisites"></a>ネットワーク検出の前提条件
+**ネットワーク探索サービスを使用するには**
 
-|要件  |説明  |
-|---------|---------|
-|**アップグレードされたスキャナーとクラスターの構成**     |  スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 </br></br>詳細については、次を参照してください: </br>- [スキャナーをアップグレードする](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner) </br>- [スキャナークラスターを作成する](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)       |
-|**Azure Information Protection analytics**     | Azure Information Protection analytics が有効になっていることを確認します。 </br></br>Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。** </br></br>詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](../reports-aip.md)」を参照してください。        |
+1. スキャナーのバージョンをアップグレードし、スキャナークラスターが正しく構成されていることを確認してください。 詳細については、次を参照してください。
+    - [スキャナーをアップグレードする](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+    - [スキャナークラスターを作成する](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
+    
+1. Azure Information Protection analytics が有効になっていることを確認します。 
 
-### <a name="using-the-network-discovery-service"></a>ネットワーク探索サービスの使用
+    Azure portal で、[ **Azure Information Protection > [> 管理] [分析の構成] (プレビュー) にアクセスします。** 
+
+    詳細については、「 [Azure Information Protection の中央レポート (パブリックプレビュー)](../reports-aip.md)」を参照してください。
 
 1. [**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) PowerShell コマンドレットを実行して、ネットワーク探索を有効にします。 
 
@@ -116,37 +135,93 @@ Azure Information Protection 統合ラベルクライアントの各一般公開
 
 1. Azure portal で、[Azure Information Protection > **ネットワークスキャンジョブ** ] にアクセスし、[ [ジョブの作成] を使用してネットワークの特定の領域をスキャン](../deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview)します。 
 
-
 1. [新しい [**リポジトリ**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) ] ウィンドウで生成されたレポートを使用して、危険にさらされる可能性のある追加のネットワークファイル共有を見つけます。 リスクの高いファイル共有を [コンテンツスキャンジョブ](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) に追加して、追加されたリポジトリで機微なコンテンツをスキャンします。
 
-#### <a name="network-discovery-cmdlets"></a>ネットワーク探索のコマンドレット
+##### <a name="network-discovery-cmdlets"></a>ネットワーク探索のコマンドレット
 
-**ネットワーク探索**用に追加された PowerShell コマンドレットは次のとおりです。
+ネットワーク探索用に追加された PowerShell コマンドレットは次のとおりです。
 
 |コマンドレット  |説明  |
 |---------|---------|
-|[**MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   **ネットワーク探索**サービスがネットワークスキャンデータを既定、オンライン構成、または Azure portal からエクスポートされたオフラインファイルからプルするかどうかの現在の設定を取得します。      |
+|[**MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   ネットワーク探索サービスがネットワークスキャンデータを既定、オンライン構成、または Azure portal からエクスポートされたオフラインファイルからプルするかどうかの現在の設定を取得します。      |
 |[**MIPNetworkDiscoveryJobs**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    現在構成されているネットワークスキャンジョブの一覧を取得します。     |
-|[**MIPNetworkDiscoveryStatus**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     **ネットワーク探索**サービスの現在の状態を取得します。    |
+|[**MIPNetworkDiscoveryStatus**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     テナントで構成されているすべてのネットワークスキャンジョブの現在の状態を取得します。    |
 | [**MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    ファイルからネットワークスキャンジョブの構成をインポートします。     |
-| [**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| **ネットワーク探索**サービスをインストールします。 |
-|[**MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   **ネットワーク探索**サービスがネットワークスキャンデータを既定、オンライン構成、または Azure portal からエクスポートされたオフラインファイルからプルするかどうかの構成を設定します。      |
+| [**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| ネットワーク探索サービスをインストールします。 |
+|[**MIPNetworkDiscoveryConfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   ネットワーク探索サービスがネットワークスキャンデータを既定、オンライン構成、または Azure portal からエクスポートされたオフラインファイルからプルするかどうかの構成を設定します。      |
 |[**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  特定のネットワークスキャンジョブを直ちに実行します。       |
-|[**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  **ネットワーク探索**サービスをアンインストールします。       |
+|[**MIPNetworkDiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  ネットワーク探索サービスをアンインストールします。       |
+| | |
+
+### <a name="new-features-for-the-unified-labeling-client"></a>統一されたラベル付けクライアントの新機能
+
+- [Outlook での AIP ポップアップの管理者によるカスタマイズ](#administrator-customizations-for-aip-popups-in-outlook) 
+- [理由を確認するための管理者のカスタマイズ](#administrator-customizations-for-justification-prompts) 
+- [監査ログの更新](#audit-log-updates) 
+- [DKE テンプレートベースのラベル更新](#dke-template-based-labeling-updates)
+
+#### <a name="administrator-customizations-for-aip-popups-in-outlook"></a>Outlook での AIP ポップアップの管理者によるカスタマイズ
+
+AIP 管理者は、ブロックされた電子メールのポップアップ、警告メッセージ、および理由のプロンプトなど、Outlook に表示されるポップアップをカスタマイズできるようになりました。
+
+一般的なユースケースシナリオのいくつかのサンプルルールを含む詳細については、「 [Outlook ポップアップメッセージをカスタマイズ](clientv2-admin-guide-customizations.md#customize-outlook-popup-messages)する」を参照してください。
+
+#### <a name="administrator-customizations-for-justification-prompts"></a>理由を確認するための管理者のカスタマイズ
+
+AIP 管理者は、エンドユーザーがドキュメントや電子メールの分類ラベルを変更したときに表示される理由プロンプトで、オプションの1つをカスタマイズできるようになりました。 
+
+詳細については、「変更された [ラベルの理由プロンプトテキストをカスタマイズ](clientv2-admin-guide-customizations.md#customize-justification-prompt-texts-for-modified-labels)する」を参照してください。
+
+#### <a name="audit-log-updates"></a>監査ログの更新
+
+ラベル付きまたは保護されたファイルをユーザーが開いたときにのみ、ユーザーアクセスを明確に示すために、統合されたラベル付けクライアントからのアクセスイベントの監査ログが送信されるようになりました。
+
+詳細については、「 [監査ログへのアクセス](../audit-logs.md#access-audit-logs)」を参照してください。
+
+#### <a name="dke-template-based-labeling-updates"></a>DKE テンプレートベースのラベル更新
+
+Azure Information Protection は、スキャナーでのダブルキー暗号化 (DKE) テンプレートベースのラベル付けと、エクスプローラーと PowerShell の使用をサポートするようになりました。
+
+詳細については、次を参照してください。
+
+- [Azure Information Protection テナント キーを計画して実装する](../plan-implement-tenant-key.md)
+- Microsoft 365 ドキュメントの[二重キー暗号化](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption)
 
 ### <a name="fixes-and-improvements"></a>修正プログラムと機能強化
 
-Azure Information Protection 統合されたラベル付けスキャナーのバージョン2.8.83 では、次の修正プログラムが提供されました。
+- [スキャナーの修正と機能強化](#azure-information-protection-scanner-fixed-issues)
+- [クライアントの修正と機能強化](#azure-information-protection-client-fixed-issues)
 
-|機能  |修正された問題  |
-|---------|---------|
-|**ファイルパスの要件**     |  長いパスを使用したファイルのスキャンの機能強化。 詳細については、「 [ファイルパスの要件](../deploy-aip-scanner-prereqs.md#file-path-requirements)」を参照してください。       |
-|**[SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) による複数の contentdatabases のサポート**     |AIP スキャナーでは、複数の ContentDatabases がある場合に、SharePoint 環境全体をスキャンするようになりました。    |
-|**サポートされている [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) filepaths**     |AIP スキャナーでは、パスにピリオドが付いた SharePoint ファイルがサポートされるようになりましたが、拡張子はありません。 </br></br>たとえば、パスがで拡張子が付けら `https://sharepoint.contoso.com/shared documents/meeting-notes` れていないファイルは、正常にスキャンされるようになりました。      |
-|**機密情報の種類のカスタムサポート**     |   AIP スキャナーは、Microsoft のセキュリティとコンプライアンスセンターで作成され、どのポリシーにも属していない [カスタム機微な情報の種類](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) をサポートするようになりました。      |
+#### <a name="azure-information-protection-scanner-fixed-issues"></a>Azure Information Protection スキャナーの修正済みの問題
+
+Azure Information Protection 統合されたラベル付けスキャナーのバージョン2.8.85 では、次の修正プログラムが提供されました。
+
+- [長いパスを使用したファイルのスキャン](../deploy-aip-scanner-prereqs.md#file-path-requirements)の機能強化
+- AIP スキャナーでは、複数の ContentDatabases がある場合に、 [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) 環境全体をスキャンするようになりました。
+- AIP スキャナーでは、パスにピリオドが付いた [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) ファイルがサポートされるようになりましたが、拡張子はありません。 たとえば、パスがで拡張子が付けら `https://sharepoint.contoso.com/shared documents/meeting-notes` れていないファイルは、正常にスキャンされるようになりました。
+- AIP スキャナーは、Microsoft のセキュリティとコンプライアンスセンターで作成され、どのポリシーにも属していない [カスタム機微な情報の種類](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) をサポートするようになりました。
+
+#### <a name="azure-information-protection-client-fixed-issues"></a>Azure Information Protection クライアントの修正済みの問題
+
+Azure Information Protection 統合されたラベル付けクライアントのバージョン2.8.85 では、次の修正プログラムが提供されました。
+
+- Office アプリの [**秘密度**![列] アイコン](../media/selected-sensitivity-options.png "列アイコン")メニューで現在選択されている項目について、新しい担当が表示されます。 詳細については、 [Microsoft 365 docs の機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do)に関するページを参照してください。
+- [AIP ビューアー](clientv2-view-use-files.md)で JPEG ファイルを表示するための修正
+- ラベルのダウングレードにより、[監査イベント](../audit-logs.md#downgrade-label-audit-logs)の**前に protectionownerbefore**自動的に追加されるようになりました
+- 変更イベントに[監査ログ](../audit-logs.md#change-protection-audit-logs)の**LastModifiedDate**が含まれるようになりました。
+- [プロキシを使用して](../requirements.md#firewalls-and-network-infrastructure)トークンを取得するときの、 **proxy.config**ファイルのサポートが追加されました。 この修正プログラムを有効にするには、新しいレジストリキー **Usedefaultcredentialsinproxy = 1**を設定します。
+- [ポリシーを更新](../configure-policy.md#making-changes-to-the-policy)するときの認証に関する修正
+- 読み取り専用モードでの PowerPoint の [自動コンテンツマーク](../configure-policy-markings.md) 更新の修正
+- ポップアップとエラーテキストの機能強化
+- 電子メールと添付ファイルの分類の両方を考慮して、 [電子メールの添付ファイルの](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling)最高の分類を表示するツールヒントが更新されています。 
+- [**設定-LabelPolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy)コマンドレットを使用して感度ラベルポリシーを変更するときの問題のテキストを**報告**する修正
+- 無効なラベル ID で [**set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) コマンドレットを使用した場合に表示されるエラーの修正。 
+- Outlook の閲覧ウィンドウで [SMIME メールの暗号化を解除](clientv2-view-use-files.md) するためのパフォーマンスの修正。
+- パスワードで暗号化されたファイルを含む [PST ファイルの暗号化を解除](clientv2-admin-guide-file-types.md) するための修正。 Pst ファイルにパスワードで保護されたファイルが含まれている場合は、PST ファイルの暗号化解除が失敗しなくなりました。
+- [スコープポリシー](../configure-policy-scope.md)に含まれていない保護ラベルを削除すると、コンテンツから保護が削除されなくなります。
+
 
 ## <a name="version-271010"></a>バージョン2.7.101.0
-
 統一されたラベル付けスキャナーとクライアントバージョン2.7.101.0
 
 **リリース** 08/23/2020
@@ -163,8 +238,6 @@ Azure Information Protection 統合されたラベル付けスキャナーのバ
 
 **修正と改善:**
 
-**リリース** 07/19/2020
-
 **新しいラベル**監査ログのファイルラベル付け操作の問題を修正した。
 
 詳細については、「 [Version 2.7.96.0](#version-27960) and [Azure Information Protection audit log reference (public preview)](../audit-logs.md)」を参照してください。
@@ -176,7 +249,6 @@ Azure Information Protection 統合されたラベル付けスキャナーのバ
 **リリース** 06/29/2020
 
 **統一されたラベル付けスキャナーの新機能:**
-
 
 - [スキャナーを使用して、推奨される条件に基づいてラベルを適用](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner)します。 AIP のお客様は、autolabeling のみを実装することを選択できるようになりました。 この機能により、AIP エンドユーザーは、前のシナリオではなく、常に推奨事項に従うことができます。これにより、ユーザー側での自動ラベル付けのみが有効になります。
 
@@ -208,7 +280,7 @@ Azure Information Protection 統合されたラベル付けスキャナーのバ
 
 スキャン済みのファイルが削除されたことをスキャナーが検出するたびに、監査ログが生成されるようになりました。
 
-詳細については、次を参照してください:
+詳細については、次を参照してください。
 - [ファイルが削除された監査ログ](../audit-logs.md#file-removed-audit-logs)
 - [Azure Information Protection の Central Reporting](../reports-aip.md)
 

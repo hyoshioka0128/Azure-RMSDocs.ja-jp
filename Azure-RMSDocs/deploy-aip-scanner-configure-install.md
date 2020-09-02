@@ -4,7 +4,7 @@ description: Azure Information Protection 統合されたラベル付けスキ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcc798a8b9b4a2e0472aad77123571ab03070324
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 956b9f65c9dd5a4a5fdf66d3f70770ff5e7162d2
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953152"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316911"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Azure Information Protection 統合ラベルスキャナーの構成とインストール
 
@@ -26,7 +26,7 @@ ms.locfileid: "88953152"
 >[!NOTE] 
 > AIP クラシックスキャナーを使用している場合は、「 [クラシックスキャナー Azure Information Protection のインストールと構成](deploy-aip-scanner-configure-install-classic.md)」を参照してください。
 
-Azure Information Protection スキャナーの構成とインストールを開始する前に、システムが [必要な前提条件](deploy-aip-scanner-prereqs.md)に準拠していることを確認してください。
+Azure Information Protection スキャナーの構成とインストールを開始する前に、システムが [必要な前提条件](deploy-aip-scanner-prereqs.md)に準拠していることを確認してください。 
 
 準備ができたら、次の手順に進みます。
 
@@ -57,7 +57,14 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 スキャナーを構成するには: 
 
-1. [Azure portal にサインイン](configure-policy.md#signing-in-to-the-azure-portal)し、 **Azure Information Protection** ] ウィンドウに移動します。 
+1. 次のいずれかのロールで [Azure portal](https://portal.azure.com) にサインインします。
+
+    - **コンプライアンス管理者**
+    - **コンプライアンス データ管理者**
+    - **セキュリティ管理者**
+    - **グローバル管理者**
+
+    次に、[ **Azure Information Protection** ] ウィンドウに移動します。
     
     たとえば、リソース、サービス、およびドキュメントの検索ボックスで、「**Information**」と入力を開始し、**Azure Information Protection** を選択します。
 
@@ -85,7 +92,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 ### <a name="create-a-network-scan-job-public-preview"></a>ネットワークスキャンジョブの作成 (パブリックプレビュー)
 
-バージョン2.8.83 以降では、危険なリポジトリをネットワークでスキャンできます。 コンテンツスキャンジョブに検出されたリポジトリを1つ以上追加して、機密コンテンツをスキャンします。
+バージョン [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview)以降では、危険なリポジトリをネットワークでスキャンできます。 コンテンツスキャンジョブに検出されたリポジトリを1つ以上追加して、機密コンテンツをスキャンします。
 
 > [!NOTE]
 > 現在、 **ネットワーク探索** インターフェイスは段階的に展開されており、2020年9月15日までにすべてのリージョンで利用可能になります。 

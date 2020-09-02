@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ec73048a8dcb306a1b8bc94670a80f9cbd8d2861
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 5874103f099898bef603dd56c85371a65d24a74c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176635"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316656"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>管理者ガイド: Azure Information Protection 統合されたユーザー用ラベル付けクライアントのインストール
 
@@ -111,8 +111,6 @@ Microsoft Update カタログを使用していない場合、または Intune �
     
     - Office 2010 を実行するコンピューターにクライアントをインストールするとき、ユーザーがそのコンピューターのローカル管理者ではない場合またはそのユーザーを表示したくない場合は、**ServiceLocation** パラメーターを指定します。 [詳細情報](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement**: MICROSOFT.NET Framework 4.6.2 のバージョンの要件を省略する場合にこのパラメーターを使用します。 [詳細情報](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-    
     - **AllowTelemetry=0**: このパラメーターは、インストール オプション **[Microsoft に利用状況の統計を送信して、Azure Information Protection の改善に協力します]** を無効にするときに使用します。 
 
 3. インストールを完了するには: 
@@ -162,18 +160,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 Office 2010 と Azure RMS のクライアントのサイレント インストールの例: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
-#### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>DowngradeDotNetRequirement インストール パラメーターの詳細について
-
-Windows Update を使用した自動アップグレードをサポートし、Office アプリケーションとの信頼できる統合のために、Azure Information Protection 統合ラベル付けクライアントは Microsoft .NET Framework バージョン4.6.2 を使用します。 既定では、実行可能ファイルによる対話型インストールによってこのバージョンが確認され、ない場合はインストールが試行されます。 インストール後はコンピューターの再起動が必要です。
-
-この Microsoft .NET Framework の新しいバージョンのインストールが現実的ではない場合は、**DowngradeDotNetRequirement = True** パラメーターと値を使用してクライアントをインストールすることで、Microsoft .NET Framework バージョン 4.5.1 がインストールされていれば要件を省略できます。
-
-例: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
-
-このパラメーターは注意して使用することをお勧めします。また、この古いバージョンの Microsoft .NET Framework で Azure Information Protection 統合されたラベル付けクライアントを使用した場合に、Office アプリケーションがハングする問題が報告されていることを知らせてください。 ハングすることがある場合は、その他のトラブルシューティングを行う前に推奨されているバージョンにアップグレードしてください。 
-
-また、Windows Update を使用して Azure Information Protection の統一されたラベル付けクライアントを更新する場合、クライアントを新しいバージョンにアップグレードするには、別のソフトウェア展開メカニズムが必要であることに注意してください。
-
 ### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>.Msi インストーラーを使用して Azure Information Protection 統合されたラベル付けクライアントをインストールするには
 
 集中展開の場合は、Azure Information Protection 統合ラベル付けクライアントの .msi インストールバージョンに固有の次の情報を使用します。 
@@ -186,7 +172,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
 
 1. .msi ファイルを実行する各コンピューターで、次のソフトウェアの依存関係が満たされていることを確認する必要があります。 たとえば、.msi バージョンのクライアントとこれらをまとめるか、次の依存関係を満たすコンピューターにのみ展開します。
     
-    |Office のバージョン|オペレーティング システム|ソフトウェア|操作|
+    |Office のバージョン|オペレーティング システム|ソフトウェア|アクション|
     |--------------------|--------------|----------------|---------------------|
     |Office 365 1902 以降を除くすべてのバージョン|Windows 10 バージョン 1809 のみ、17763.348 より前のオペレーティング システム ビルド|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|インストール|
     |Office 2016|サポートされているすべてのバージョン|64 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32 ビット: [KB317866](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> バージョン: 1.0|インストール|
@@ -208,7 +194,7 @@ Windows Update を使用した自動アップグレードをサポートし、Of
     >- インストール後、レジストリキーを次のように更新します: **EnableTelemetry = 0**。
     >
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 Azure Information Protection 統合されたラベル付けクライアントをインストールしたので、このクライアントのサポートに必要な追加情報については、次を参照してください。
 
 - [クライアントのファイルと使用状況ログ](clientv2-admin-guide-files-and-logging.md)
