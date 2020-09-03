@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 926c24ae3bd7960df21aba508bdf2edc83f29e9f
-ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
+ms.openlocfilehash: 9566a20489ab24b1e13ca434caa4c2377902a058
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/03/2020
-ms.locfileid: "89422383"
+ms.locfileid: "89422858"
 ---
 # <a name="known-issues---azure-information-protection"></a>既知の問題-Azure Information Protection
 
@@ -94,6 +94,23 @@ Azure Information Protection クライアントと共にインストールされ
 
     - [**従来のクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/client-view-use-files.md)
     - [統一された**ラベル付けクライアント**: Azure Information Protection ビューアーで保護されたファイルを表示する](rms-client/clientv2-view-use-files.md)
+
+## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP for Windows および Office バージョンの拡張サポート
+
+- [**Windows 7 の拡張サポートは、2020年1月14日に終了しまし**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)た。 
+
+    Windows 10 の新しいバージョンにアップグレードすることを強くお勧めします。 ただし、強化されたセキュリティ更新プログラム (ESU) とサポート契約を締結している場合は、引き続き Windows 7 システムのセキュリティを維持するために AIP サポートを利用できます。
+
+    詳細については、サポート担当者にお問い合わせください。
+
+- [**Office 2010 は現在拡張サポートされ**](https://support.microsoft.com/lifecycle/search?alpha=office%202010)ています。 
+
+    このサポートは、2020年10月13日に終了し、拡張されません。 また、ESU は Office 2010 向けに提供されないため、新しいバージョンの Office 365 にアップグレードすることを強くお勧めします。 
+    
+    拡張サポートで Office 2010 を現在実行しているお客様の場合、AIP サポートは2020年10月13日まで利用できます。 
+
+    詳細については、サポート担当者にお問い合わせください。
+
 
 ## <a name="more-information"></a>詳細情報
 

@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 779eb6e3847aaccaef47753bd75c1052a56c1180
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: c4728e279d2d7c2e592d46f1c8e0a9a554d87133
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868895"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423232"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>管理者ガイド: Azure Information Protection 統合されたラベル付けクライアントでサポートされるファイルの種類
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*>
 >
-> **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -74,7 +74,7 @@ Azure Information Protection の統一されたラベル付けクライアント
 
 - **一般**秘密度ラベルが分類を適用し、保護を適用しない場合: sales.pdf という名前のファイルに**general**ラベルを適用できますが、このラベルを sales.txt という名前のファイルに適用することはできません。
 
-- [**社外秘 \ すべての従業員の機密**度] ラベルに分類と保護が適用される場合は、このラベルを sales.pdf という名前のファイルと sales.txt という名前のファイルに適用できます。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
+- [ **社外秘 \ すべての従業員の機密** 度] ラベルに分類と保護が適用される場合は、このラベルを sales.pdf という名前のファイルと sales.txt という名前のファイルに適用できます。 また、保護のみをこれらのファイルに適用し、分類は対象外とすることも可能です。
 
 ## <a name="file-types-supported-for-protection"></a>保護がサポートされているファイルの種類
 
@@ -86,9 +86,9 @@ Azure Information Protection の統合ラベル付けクライアントは、次
 |保護|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、電子メールでファイルを受け取るユーザー、あるいはファイルや共有のアクセス許可によってそれに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。<br /><br />- さらに、ファイルが保護されたときにコンテンツの所有者によって設定された使用権限およびポリシーは、コンテンツが Azure Information Protection ビューアーで表示される (保護されたテキストとイメージ ファイルの場合) か、関連付けられたアプリケーションで表示される (他のサポートされているすべてのファイルの種類の場合) ときに適用されます。|ファイルの保護は次の方法で適用されます。<br /><br />- 保護されたコンテンツが表示される前に、ファイルを開く権限があり、それに対するアクセス権が付与されるユーザーについて、認証が正しく行われる必要があります。 認証が失敗した場合、ファイルは開きません。<br /><br />- コンテンツの所有者によって設定された使用権限とポリシーが表示され、目的の使用ポリシーが承認済みユーザーに通知されます。<br /><br />- 承認済みユーザーがファイルを開きアクセスしていることを確認する監査ログが実行されます。 ただし、使用権限は適用されません。|
 |ファイルの種類ごとの既定値|これは、次のファイルの種類の既定の保護レベルです。<br /><br />- テキストとイメージ ファイル<br /><br />- Microsoft Office (Word、Excel、PowerPoint) ファイル<br /><br />- Portable Document Format (.pdf)<br /><br />詳細については、下記の「[分類と保護がサポートされているファイルの種類](#supported-file-types-for-classification-and-protection)」 を参照してください。|これは、ネイティブな保護によってサポートされない他のすべてのファイルの種類 (.vsdx、.rtf など) の既定の保護です。|
 
-Azure Information Protection 統合されたラベル付けクライアントまたはスキャナーによって適用される既定の保護レベルを変更することはできません。 ただし、保護するファイルの種類を変更することはできます。 詳細については、「[保護するファイルの種類を変更](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)する」を参照してください。
+Azure Information Protection 統合されたラベル付けクライアントまたはスキャナーによって適用される既定の保護レベルを変更することはできません。 ただし、保護するファイルの種類を変更することはできます。 詳細については、「 [保護するファイルの種類を変更](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)する」を参照してください。
 
-保護は、管理者が構成した機密ラベルをユーザーが選択したときに自動的に適用することも、ユーザーが[アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使用して独自のカスタム保護設定を指定することもできます。
+保護は、管理者が構成した機密ラベルをユーザーが選択したときに自動的に適用することも、ユーザーが [アクセス許可レベル](../configure-usage-rights.md#rights-included-in-permissions-levels)を使用して独自のカスタム保護設定を指定することもできます。
 
 ### <a name="file-sizes-supported-for-protection"></a>保護がサポートされているファイルのサイズ
 
@@ -167,7 +167,7 @@ Azure Information Protection 統合されたラベル付けクライアントが
     > [!NOTE]
     > スキャン対象に .rtf ファイルを含める場合は、スキャナーを注意深く監視してください。 一部の .rtf ファイルはスキャナーで正常に検査できません。このようなファイルの検査は完了せず、サービスを再開する必要があります。
 
-既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 スキャナーのこの動作を変更するには、PowerShell の詳細設定の**PFileSupportedExtensions**を使用します。 詳細については、「 [PowerShell を使用して、保護するファイルの種類](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)をスキャナーの展開手順から変更する」を参照してください。
+既定では、スキャナーによって保護されるのは、Office ファイルの種類と、PDF の暗号化のための ISO 標準を使用して保護されている PDF ファイルだけです。 スキャナーのこの動作を変更するには、PowerShell の詳細設定の **PFileSupportedExtensions**を使用します。 詳細については、「 [PowerShell を使用して、保護するファイルの種類](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) をスキャナーの展開手順から変更する」を参照してください。
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>既定では保護できないファイル
 
@@ -207,13 +207,13 @@ Azure Information Protection 統合されたラベル付けクライアントが
 
 **accounts.zip** という名前のファイルには、クレジット カード番号が含まれる Excel のスプレッドシートが含まれています。 **機密 \ Finance**という名前の秘密度ラベルがあり、クレジットカード番号を検出するように構成されています。また、金融グループへのアクセスを制限する保護を使用してラベルを自動的に適用します。
 
-ファイルを検査した後、PowerShell セッションからの統一されたラベル付けクライアントは、このファイルを**機密 \ Finance**として分類し、ファイルに汎用的な保護を適用して、Finance グループのメンバーだけがそのファイルを解凍し、ファイル**accounts.zip pfile**の名前を変更します。
+ファイルを検査した後、PowerShell セッションからの統一されたラベル付けクライアントは、このファイルを **機密 \ Finance**として分類し、ファイルに汎用的な保護を適用して、Finance グループのメンバーだけがそのファイルを解凍し、ファイル **accounts.zip pfile**の名前を変更します。
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>OCR を使用して .tiff ファイルを検査するには
 
 [AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) powershell コマンドは、Windows tiff ifilter 機能をインストールするときに、光学式文字認識 (OCR) を使用して tiff ファイル名拡張子を持つ tiff イメージを検査し、powershell セッションを実行しているコンピューターで[Windows tiff ifilter 設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29)を構成できます。
 
-スキャナーの場合: 機密情報を見つけた後、tiff ファイルをラベルで分類して保護する必要がある場合は、powershell の詳細設定**PFileSupportedExtensions**でこのファイル名拡張子を指定します。詳細については、「Powershell を使用して、スキャナーの展開手順から[保護するファイルの種類を変更する](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect)」を参照してください。
+スキャナーの場合: 機密情報を見つけた後、tiff ファイルをラベルで分類して保護する必要がある場合は、powershell の詳細設定 **PFileSupportedExtensions**でこのファイル名拡張子を指定します。詳細については、「Powershell を使用して、スキャナーの展開手順から [保護するファイルの種類を変更する](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) 」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

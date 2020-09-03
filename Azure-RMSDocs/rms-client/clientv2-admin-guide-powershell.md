@@ -11,24 +11,24 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26a6b96a8f0de79d78bb5fdb456158f15e86b1e0
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a7705a284690094c3db2ac5fd3ac3e3eca1ed2e5
+ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048818"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423130"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>管理者ガイド: Azure Information Protection 統合クライアントでの PowerShell の使用
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows 10、Windows 8.1、windows 8、windows server 2019、windows server 2016、windows Server 2012 R2、windows server 2012*
 >
-> **Windows 7 と Office 2010 向けに拡張された Microsoft サポートをご利用のお客様は、これらのバージョンの Azure Information Protection サポートを受けることもできます。詳細については、サポート担当者にお問い合わせください。*
+>*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
 > *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection 統合ラベル付けクライアントをインストールすると、PowerShell コマンドが自動的にインストールされます。 自動化のためのスクリプトに追加できるコマンドを実行することでクライアントを管理できます。
 
-コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール**Azureinformationprotection**と共にインストールされます。 次に例を示します。
+コマンドレットは、ラベル付け用のコマンドレットを持つ PowerShell モジュール **Azureinformationprotection**と共にインストールされます。 次に例を示します。
 
 |ラベル付けコマンドレット|使用例|
 |----------------|---------------|
@@ -88,51 +88,51 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
 
 - このアカウントにラベルポリシーが割り当てられていること、および使用する公開されたラベルがポリシーに含まれていることを確認してください。
 
-- このアカウントでコンテンツの暗号化を解除する必要がある場合 (たとえば、ファイルを再保護し、他のユーザーが保護しているファイルを検査する場合) は、Azure Information Protection の[スーパーユーザー](../configure-super-users.md)にして、スーパーユーザー機能が有効になっていることを確認してください。
+- このアカウントでコンテンツの暗号化を解除する必要がある場合 (たとえば、ファイルを再保護し、他のユーザーが保護しているファイルを検査する場合) は、Azure Information Protection の [スーパーユーザー](../configure-super-users.md) にして、スーパーユーザー機能が有効になっていることを確認してください。
 
-- 段階的展開の[オンボードコントロール](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)を実装している場合は、構成したオンボードコントロールにこのアカウントが含まれていることを確認してください。
+- 段階的展開の [オンボードコントロール](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) を実装している場合は、構成したオンボードコントロールにこのアカウントが含まれていることを確認してください。
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Set-AIPAuthentication 用の Azure AD アプリケーションを作成し、構成するには
 
 > [!IMPORTANT]
 > これらの手順は、統一されたラベル付けクライアントの現在の一般公開バージョンを対象としており、このクライアントのスキャナーの一般公開バージョンにも適用されます。
 
-設定-AIPAuthentication では、 *AppId*と*appsecret*パラメーターのアプリ登録が必要です。 以前のバージョンのクライアントからアップグレードし、以前の*webappid*パラメーターとのアプリケーション登録を*作成した*場合は、統合されたラベル付けクライアントでは動作しません。 次のように、新しいアプリの登録を作成する必要があります。
+設定-AIPAuthentication では、 *AppId* と *appsecret* パラメーターのアプリ登録が必要です。 以前のバージョンのクライアントからアップグレードし、以前の *webappid* パラメーターとのアプリケーション登録を *作成した* 場合は、統合されたラベル付けクライアントでは動作しません。 次のように、新しいアプリの登録を作成する必要があります。
 
 1. 新しいブラウザー ウィンドウで、[Azure Portal](https://portal.azure.com/) にサインインします。
 
 2. Azure Information Protection で使用する Azure AD テナントについては、 **Azure Active Directory**  >  **Manage**アプリの登録] を参照して  >  **App registrations**ください。 
 
-3. [ **+ 新規登録**] を選択します。 [**アプリケーションの登録**] ウィンドウで、次の値を指定し、[**登録**] をクリックします。
+3. [ **+ 新規登録**] を選択します。 [ **アプリケーションの登録** ] ウィンドウで、次の値を指定し、[ **登録**] をクリックします。
 
    - **名前**: `AIP-DelegatedUser`
         
         必要に応じて、別の名前を指定することもできます。 名前は、テナントごとに一意である必要があります。
     
-    - **サポートされているアカウントの種類**:**この組織ディレクトリ内のアカウントのみ**
+    - **サポートされているアカウントの種類**: **この組織ディレクトリ内のアカウントのみ**
     
-    - **リダイレクト URI (省略可能)**: **Web**および`https://localhost`
+    - **リダイレクト URI (省略可能)**: **Web** および `https://localhost`
 
-4. [ **AIP-DelegatedUser** ] ウィンドウで、**アプリケーション (クライアント) ID**の値をコピーします。 値は次の例のように `77c3c1c3-abf9-404e-8b2b-4652836c8c66` なります。 この値は、Set-AIPAuthentication コマンドレットを実行するときに*AppId*パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
+4. [ **AIP-DelegatedUser** ] ウィンドウで、 **アプリケーション (クライアント) ID**の値をコピーします。 値は次の例のように `77c3c1c3-abf9-404e-8b2b-4652836c8c66` なります。 この値は、Set-AIPAuthentication コマンドレットを実行するときに *AppId* パラメーターに使用されます。 後で参照するために値を貼り付けて保存します。
 
 5. サイドバーで、[ **Manage**  >  **証明書 & シークレット**を管理する] を選択します。
 
-6. [ **AIP-DelegatedUser & シークレット**] ウィンドウの [**クライアントシークレット**] セクションで、[ **+ 新しいクライアントシークレット**] を選択します。
+6. [ **AIP-DelegatedUser & シークレット** ] ウィンドウの [ **クライアントシークレット** ] セクションで、[ **+ 新しいクライアントシークレット**] を選択します。
 
-7. [**クライアントシークレットの追加**] で、次のように指定し、[**追加**] を選択します。
+7. [ **クライアントシークレットの追加**] で、次のように指定し、[ **追加**] を選択します。
     
-    - **説明**:`Azure Information Protection unified labeling client`
+    - **説明**: `Azure Information Protection unified labeling client`
     - **有効期限**: 選択した期間 (1 年、2年間、または無期限) を指定します
 
-8. [ **AIP-DelegatedUser & シークレット**] ウィンドウに戻り、[**クライアントシークレット**] セクションで、**値**の文字列をコピーします。 この文字列は次の例のように `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` なります。 すべての文字がコピーされるようにするには、**クリップボードにコピー**するアイコンを選択します。 
+8. [ **AIP-DelegatedUser & シークレット** ] ウィンドウに戻り、[ **クライアントシークレット** ] セクションで、 **値**の文字列をコピーします。 この文字列は次の例のように `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` なります。 すべての文字がコピーされるようにするには、 **クリップボードにコピー**するアイコンを選択します。 
     
     この文字列は再び表示されることがなく、取得することもできないため、保存しておくことが重要です。 使用する機密情報と同様に、保存した値を安全に保存し、アクセスを制限します。
 
 9. サイドバーで、[ **Manage**  >  **API のアクセス許可**の管理] を選択します。
 
-10. [ **AIP-DelegatedUser のアクセス許可**] ウィンドウで、[ **+ アクセス許可の追加**] を選択します。
+10. [ **AIP-DelegatedUser のアクセス許可** ] ウィンドウで、[ **+ アクセス許可の追加**] を選択します。
 
-11. [ **Api のアクセス許可の要求**] ウィンドウで、[ **Microsoft api** ] タブが表示されていることを確認し、[ **Azure Rights Management Services**] を選択します。 アプリケーションで必要なアクセス許可の種類を確認するメッセージが表示されたら、[**アプリケーションのアクセス許可**] を選択します。
+11. [ **Api のアクセス許可の要求** ] ウィンドウで、[ **Microsoft api** ] タブが表示されていることを確認し、[ **Azure Rights Management Services**] を選択します。 アプリケーションで必要なアクセス許可の種類を確認するメッセージが表示されたら、[ **アプリケーションのアクセス許可**] を選択します。
 
 12. **[アクセス許可]** で、[コンテンツ] を展開し、次の**内容**を選択します。
     
@@ -141,11 +141,11 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
 
 13. **[アクセス許可の追加]** を選択します.
 
-14. [ **AIP-DelegatedUser のアクセス許可**] ウィンドウに戻り、[ **+ アクセス許可をもう一度追加する**] を選択します。
+14. [ **AIP-DelegatedUser のアクセス許可** ] ウィンドウに戻り、[ **+ アクセス許可をもう一度追加する** ] を選択します。
 
-15. [ **AIP のアクセス許可の要求**] ウィンドウで、[組織が使用する**api**] を選択し、[ **Microsoft Information Protection Sync Service**] を検索します。
+15. [ **AIP のアクセス許可の要求** ] ウィンドウで、[組織が使用する **api**] を選択し、[ **Microsoft Information Protection Sync Service**] を検索します。
 
-16. [ **API のアクセス許可の要求**] ウィンドウで、[アプリケーションの**アクセス許可**] を選択します。
+16. [ **API のアクセス許可の要求** ] ウィンドウで、[アプリケーションの **アクセス許可**] を選択します。
 
 17. **[アクセス許可]** で、[ **UnifiedPolicy** ] を展開し、次のように選択します。
     
@@ -164,7 +164,7 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
 > [!TIP]
 >Azure portal: **Azure Active Directory**  >  **Manage**  >  **Properties**  >  **Directory id**を使用して、テナント id を簡単にコピーできます。
 
-1. [**管理者として実行] オプション**を使用して Windows PowerShell を開きます。 
+1. [ **管理者として実行] オプション**を使用して Windows PowerShell を開きます。 
 
 2. PowerShell セッションで、非対話形式で実行される Windows ユーザーアカウントの資格情報を格納する変数を作成します。 たとえば、スキャナー用のサービスアカウントを作成した場合は、次のようになります。
 
@@ -181,7 +181,7 @@ Azure AD のトークンの有効期限が切れた場合、新しいトーク�
     ```
 
 > [!NOTE]
-> コンピューターがインターネットにアクセスできない場合は、Azure AD でアプリを作成し、Set-AIPAuthentication を実行する必要はありません。 代わりに、切断された[コンピューター](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)の指示に従います。  
+> コンピューターがインターネットにアクセスできない場合は、Azure AD でアプリを作成し、Set-AIPAuthentication を実行する必要はありません。 代わりに、切断された [コンピューター](clientv2-admin-guide-customizations.md#support-for-disconnected-computers)の指示に従います。  
 
 ## <a name="next-steps"></a>次のステップ
 PowerShell セッションでコマンドレットのヘルプを表示するには、「」と入力 `Get-Help <cmdlet name> -online` します。 次に例を示します。 
