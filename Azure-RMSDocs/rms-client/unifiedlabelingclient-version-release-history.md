@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8abcbf66f13498e3ff1fb45b979c6a53cf4f016
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: 6e53817a7ba157ab8f7883c6b8d715f918680103
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316700"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422417"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -215,11 +215,10 @@ Azure Information Protection 統合されたラベル付けクライアントの
 - ポップアップとエラーテキストの機能強化
 - 電子メールと添付ファイルの分類の両方を考慮して、 [電子メールの添付ファイルの](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling)最高の分類を表示するツールヒントが更新されています。 
 - [**設定-LabelPolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy)コマンドレットを使用して感度ラベルポリシーを変更するときの問題のテキストを**報告**する修正
-- 無効なラベル ID で [**set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) コマンドレットを使用した場合に表示されるエラーの修正。 
-- Outlook の閲覧ウィンドウで [SMIME メールの暗号化を解除](clientv2-view-use-files.md) するためのパフォーマンスの修正。
+- 無効なラベル ID で [**set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) コマンドレットを使用した場合に表示されるエラーの修正。
+- Outlook の閲覧ウィンドウで [SMIME メールの暗号化を解除](clientv2-view-use-files.md) するためのパフォーマンスの修正。 この修正プログラムを実装するには、 [**OutlookSkipSmimeOnReadingPaneProperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced プロパティを有効にします。
 - パスワードで暗号化されたファイルを含む [PST ファイルの暗号化を解除](clientv2-admin-guide-file-types.md) するための修正。 Pst ファイルにパスワードで保護されたファイルが含まれている場合は、PST ファイルの暗号化解除が失敗しなくなりました。
 - [スコープポリシー](../configure-policy-scope.md)に含まれていない保護ラベルを削除すると、コンテンツから保護が削除されなくなります。
-
 
 ## <a name="version-271010"></a>バージョン2.7.101.0
 統一されたラベル付けスキャナーとクライアントバージョン2.7.101.0
