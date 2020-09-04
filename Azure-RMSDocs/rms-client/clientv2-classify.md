@@ -4,19 +4,19 @@ description: Azure Information Protection 統合ラベルクライアントを�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: db0f32149208581618d27cee2338a0cbd94ac594
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: 3e9fab4e091b3f83407007dac572d377a296b997
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423113"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447261"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>ユーザーガイド: Windows 用の Azure Information Protection 統合ラベル付けクライアントを使用してファイルまたは電子メールを分類する
 

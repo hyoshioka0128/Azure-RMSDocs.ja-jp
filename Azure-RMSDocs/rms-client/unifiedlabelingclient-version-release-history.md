@@ -4,7 +4,7 @@ description: Windows 用 Azure Information Protection 統合ラベル付けク�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/31/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1db7dd9a2d662689520480d7c5c8002a0b232450
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: 69799cb3ce484e5cd594e5520069bfec3586766c
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423079"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447227"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection 統合されたラベル付けクライアント-バージョンのリリース履歴とサポートポリシー
 
@@ -216,7 +216,7 @@ Azure Information Protection 統合されたラベル付けクライアントの
 - 電子メールと添付ファイルの分類の両方を考慮して、 [電子メールの添付ファイルの](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling)最高の分類を表示するツールヒントが更新されています。 
 - [**設定-LabelPolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy)コマンドレットを使用して感度ラベルポリシーを変更するときの問題のテキストを**報告**する修正
 - 無効なラベル ID で [**set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) コマンドレットを使用した場合に表示されるエラーの修正。
-- Outlook の閲覧ウィンドウで [SMIME メールの暗号化を解除](clientv2-view-use-files.md) するためのパフォーマンスの修正。 この修正プログラムを実装するには、 [**OutlookSkipSmimeOnReadingPaneProperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced プロパティを有効にします。
+- Outlook の閲覧ウィンドウで SMIME メールの暗号化を解除するためのパフォーマンスの修正。 この修正プログラムを実装するには、 [**OutlookSkipSmimeOnReadingPaneProperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) advanced プロパティを有効にします。
 - パスワードで暗号化されたファイルを含む [PST ファイルの暗号化を解除](clientv2-admin-guide-file-types.md) するための修正。 Pst ファイルにパスワードで保護されたファイルが含まれている場合は、PST ファイルの暗号化解除が失敗しなくなりました。
 - [スコープポリシー](../configure-policy-scope.md)に含まれていない保護ラベルを削除すると、コンテンツから保護が削除されなくなります。
 
