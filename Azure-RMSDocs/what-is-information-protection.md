@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a728faf211fb34f2ef5b296f28cff97c4c76e8e4
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 9330feb804a4991fd73f6e0895db69e401089e49
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927490"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91427918"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -50,18 +50,18 @@ Azure Information Protection を使用して、ドキュメントとメールの
 
 たとえば、次の図では、[統合ラベル付けクライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)を使用したラベル付けによって、電子メール メッセージが "*一般*" と分類されています。
 
-:::image type="content" source="media/example-email-footerv2.png" alt-text="Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例":::
+:::image type="content" source="media/example-email-footerv2.png" alt-text="Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例&quot;:::
 
 この例では、ラベルは次も行っています。
 
-- **フッター "*秘密度: 一般*" がメール メッセージに追加されました。** このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。
+- **フッター &quot;*秘密度: 一般*" がメール メッセージに追加されました。** このフッターは、組織外に送信すべきではない一般的なビジネス データ用を示す、すべての受信者向けのビジュアル インジケーターです。
 - **電子メール ヘッダーにメタデータが埋め込まれました。** ヘッダー データを使用すると、電子メール サービスはラベルを検査し、理論上、監査エントリを作成できるようになり、組織外への送信ができなくなります。
 
 ## <a name="how-aip-protects-your-data"></a>AIP によってデータを保護する方法
 
 Azure Information Protection では、データを保護するために ["*Azure Rights Management サービス*" (Azure RMS)](what-is-azure-rms.md) が使用されます。 
 
-Azure RMS は、Microsoft の他のクラウド サービスやアプリケーション (Office 365 や Azure Active Directory など) に統合されますが、独自に使用したり、サードパーティーのアプリケーションや情報保護ソリューションと共に使用したりもできます。 Azure RMS はオンプレミスとクラウド ソリューションの両方で動作します。
+Azure RMS は、Microsoft の他のクラウド サービスやアプリケーション (Microsoft 365 や Azure Active Directory など) に統合されますが、独自に使用したり、サードパーティーのアプリケーションや情報保護ソリューションと共に使用したりもできます。 Azure RMS はオンプレミスとクラウド ソリューションの両方で動作します。
 
 Azure RMS では暗号化、ID、および承認ポリシーが使用されます。 AIP ラベルと同様に、Azure RMS を使用して適用された保護は、ドキュメントや電子メールの場所に関係なく保持されます。そのため、他のユーザーと共有されている場合でも、コンテンツを確実に管理できます。
 
@@ -84,7 +84,11 @@ Rights Management テンプレートは、Azure Rights Management をサポー�
 
 次の図は Exchange 管理センターの例を示しています。Exchange Online メール フロー ルールで RMS テンプレートを使用するように構成することができます。
 
-:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="Exchange Online のテンプレートを選択する場合の例":::
+:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例&quot;:::
+
+この例では、ラベルは次も行っています。
+
+- **フッター &quot;*秘密度: 一般*":::
 
 > [!NOTE]
 > 保護設定を含む AIP ラベルを作成すると、ラベルとは別に使用できる、対応する Rights Management テンプレートも作成されます。 
@@ -104,7 +108,11 @@ AIP クライアントにより、Office アプリケーションに Information
 
 さらに、AIP クライアントを使用すると、ユーザーは Windows エクスプローラーの右クリック メニューを使用して、追加のファイルの種類、または複数のファイルを一度に分類して保護できるようになります。 次に例を示します。
 
-:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="Azure Information Protection を使用する場合のファイル エクスプローラーの右クリック オプション [分類して保護する]":::
+:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例&quot;:::
+
+この例では、ラベルは次も行っています。
+
+- **フッター &quot;*秘密度: 一般*":::
 
 **[分類して保護する]** メニュー オプションは、Office アプリケーションの Information Protection バーと同様に機能し、ユーザーがラベルを選択したり、カスタムのアクセス許可を設定したりできるようになります。
 
@@ -119,13 +127,17 @@ AIP クライアントにより、Office アプリケーションに Information
 
 Exchange Online で AIP を使用すると、保護された電子メールがどのデバイスでも読み取れることが保証されるため、任意のユーザーに送信できるというベネフィットもあります。
 
-たとえば、機密情報を、**Gmail**、**Hotmail**、または **Microsoft** アカウントを使用している個人用メール アドレス、または Office 365 や Azure AD のアカウントがないユーザーに送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
+たとえば、機密情報を、**Gmail**、**Hotmail**、または **Microsoft** アカウントを使用している個人用メール アドレス、または Microsoft 365 や Azure AD のアカウントがないユーザーに送信する必要があるとします。 これらの電子メールは、保存時または送信中に暗号化し、本来の受信者のみが読み取ることができるようにする必要があります。
 
 このシナリオには、[Office 365 Message Encryption の機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)が必要です。 保護された電子メールを自分のネイティブ電子メール クライアントで開くことはできない受信者の場合は、ワンタイム パスコードを使用することでブラウザー内で機密情報を閲覧することができます。
 
 たとえば、Gmail ユーザーが受信した電子メール メッセージに次のプロンプトが表示される場合があります。
 
-:::image type="content" source="media/ome-message.png" alt-text="OME と AIP の Gmail 受信者エクスペリエンス":::
+:::image type="content" source="media/ome-message.png" alt-text="Azure Information Protection の分類を示す電子メール フッターおよびヘッダーの例&quot;:::
+
+この例では、ラベルは次も行っています。
+
+- **フッター &quot;*秘密度: 一般*":::
 
 電子メールを送信するユーザーに必要なアクションは、所属する組織内のユーザーに保護された電子メールを送信する場合と変わりありません。 たとえば、AIP クライアントによって Outlook のリボンに追加される **[転送不可]** ボタンを選択します。 
 

@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 171132bd2e41dcde4dd879eb9314d909bccd74c3
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971678"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428295"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成
 
-クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Office 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
+クイック スタートとチュートリアルの記事では、MIP SDK ライブラリと API を使用するアプリケーションのビルドを中心に説明しています。 この記事では、SDK を使用するための準備として、Microsoft 365 サブスクリプションとクライアント ワークステーションをセットアップして構成する方法を示します。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -102,7 +102,7 @@ ms.locfileid: "82971678"
 
    **Tar.gz/.Zip のダウンロード**
 
-   Tar.gz と .Zip のダウンロードには、API ごとに追加の圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。`mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`: ここで、\<API\> = `file`、`protection`、または `upe` で、\<OS\> = プラットフォームです。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
+   Tar.gz と .Zip のダウンロードには、API ごとに追加の圧縮されたファイルが 1 つ含まれています。 圧縮されたファイルは次のように命名されます。\<API\> = `file`、`protection`、または `upe`。\<OS\> = the platform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`。 たとえば、Debian での保護 API のバイナリとヘッダーのファイルは次のようになります。`mip_sdk_protection_debian9_1.0.0.0.tar.gz` 含まれているそれぞれの .tar.gz/.zip は次の 3 つのディレクトリに分かれています。
 
    - **Bins:** 各プラットフォーム アーキテクチャのコンパイル済みバイナリ (該当する場合)。
    - **Include:** ヘッダー ファイル (C++)。
@@ -125,10 +125,10 @@ ms.locfileid: "82971678"
    - 左下にある Windows アイコンをクリックします。
    - 「パス」と入力して Enter キーを押すと、 **[Edit the system environment variables]\(システム環境変数の編集\)** 項目が表示されます。
    - **[システムのプロパティ]** ダイアログで、 **[環境変数]** をクリックします。
-   - **[環境変数]** ダイアログで、 **[User variables for \<user\>]\(<ユーザー> のユーザー変数\)** の下で **[パス]** 変数行をクリックして、 **[編集]** をクリックします。
+   - **[環境変数]** ダイアログの **[User variables for \<user\>]\(<ユーザー> のユーザー変数\)** の下で **[パス]** 変数行をクリックして、 **[編集]** をクリックします。
    - **[環境変数の編集]** ダイアログで、新しい編集可能な行を作成する **[新規]** をクリックします。 `file\bins\debug\amd64`、`protection\bins\debug\amd64`、`upe\bins\debug\amd64` の各サブディレクトリへの完全なパスを使用して、それぞれに新しい行を追加します。 SDK ディレクトリは `<API>\bins\<target>\<platform>` の形式で格納されます。
-     - \<API\> = `file`、`protection`、`upe`
-     - \<target\> = `debug`、`release`
+     - \<API\> = `file`, `protection`, `upe`
+     - \<target\> = `debug`, `release`
      - \<platform\> = `amd64` (x64)、`x86` など。
 
    - **パス**変数の更新が完了したら、 **[OK]** をクリックします。 **[環境変数]** ダイアログに戻ったら、 **[OK]** をクリックします。
@@ -143,7 +143,7 @@ ms.locfileid: "82971678"
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Azure Active Directory へのクライアント アプリケーションの登録
 
-Office 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Office 365 *ユーザー アカウント*と*アプリケーション アカウント*の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
+Microsoft 365 サブスクリプションのプロビジョニング プロセスの一環として、関連付けられた Azure Active Directory (Azure AD) テナントが作成されます。 Azure AD テナントでは、Microsoft 365 "*ユーザー アカウント*" と "*アプリケーション アカウント*" の ID とアクセス管理を提供します。 セキュリティで保護された API (MIP API など) へのアクセスを必要とするアプリケーションでは、アプリケーション アカウントが必要です。
 
 実行時の認証と承認では、アカウントの ID 情報から派生した*セキュリティ プリンシパル*によってアカウントが表されます。 アプリケーション アカウントを表すセキュリティ プリンシパルは、[*サービス プリンシパル*](/azure/active-directory/develop/developer-glossary#service-principal-object)と呼ばれます。
 

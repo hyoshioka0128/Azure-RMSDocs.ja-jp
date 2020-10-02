@@ -4,15 +4,15 @@ description: Microsoft Information Protection (MIP) SDK C# クライアント �
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 07/30/2019
+ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: fa8b41850468ed545512f8facc488ff0517a8b41
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 406068f5770f489c66963fc34a462ec7e205765b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972086"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91108954"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -50,7 +50,7 @@ ms.locfileid: "82972086"
      - [Microsoft.InformationProtection.File] パッケージを選択します。
      - **[変更のプレビュー]** の確認ダイアログが表示されたら、[インストール]、[OK] の順にクリックします。
 
-3. 上記の手順を繰り返して MIP SDK ファイルの API パッケージを追加します。ただし代わりに "Microsoft.IdentityModel.Clients.ActiveDirectory" をアプリケーションに追加します。
+3. MIP SDK File API パッケージを追加する上記のステップを繰り返します。ただし、アプリケーションには "Microsoft.Identity.Client" を追加します。
 
 ## <a name="implement-an-authentication-delegate"></a>認証の委任を実装する
 
@@ -60,45 +60,57 @@ SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイス
 
 1. Visual Studio でプロジェクト名を右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
 2. **[名前]** フィールドに「AuthDelegateImplementation」と入力します。 **[追加]** をクリックします。
-3. 次のように Active Directory Authentication Library (ADAL) と MIP ライブラリの using ステートメントを追加します。
+3. Microsoft Authentication Library (ADAL) および MIP ライブラリに using ステートメントを追加します。
 
      ```csharp
      using Microsoft.InformationProtection;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      ```
 
 4. `AuthDelegateImplementation` を設定して `Microsoft.InformationProtection.IAuthDelegate` を継承し、`Microsoft.InformationProtection.ApplicationInfo` のプライベート変数と、同じ型を受け入れるコンストラクターを実装します。
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
-     {
+    {
         private ApplicationInfo _appInfo;
-        private string redirectUri = "mip-sdk-app://authorize";
+        // Microsoft Authentication Library IPublicClientApplication
+        private IPublicClientApplication _app;
         public AuthDelegateImplementation(ApplicationInfo appInfo)
         {
             _appInfo = appInfo;
         }
-     }
+
+    }
      ```
 
-`ApplicationInfo` オブジェクトには 3 つのプロパティが含まれています。 `_appInfo.ApplicationId` は認証ライブラリにクライアント ID を提供するために `AuthDelegateImplementation` クラスで使用されます。 `ApplicationName` と `ApplicationVersion` は Azure Information Protection Analytics レポートに表示されます。
+    `ApplicationInfo` オブジェクトには 3 つのプロパティが含まれています。 `_appInfo.ApplicationId` は認証ライブラリにクライアント ID を提供するために `AuthDelegateImplementation` クラスで使用されます。 `ApplicationName` と `ApplicationVersion` は Azure Information Protection Analytics レポートに表示されます。
 
-5. `public string AcquireToken()` メソッドを追加します。 このメソッドには、`Microsoft.InformationProtection.Identity` と、必要に応じて 3 つの文字列: 権限 URL、リソース URI、および要求を指定することができます。 これらの文字列変数は API によって認証ライブラリに渡されるため、操作することはできません。 編集することで認証に失敗する可能性があります。
+5. `public string AcquireToken()` メソッドを追加します。 このメソッドには、`Microsoft.InformationProtection.Identity` と、必要に応じて 3 つの文字列: 権限 URL、リソース URI、および要求を指定することができます。 これらの文字列変数は API によって認証ライブラリに渡されるため、操作することはできません。 テナントの Azure portal からテナント GUID を入力してください。 テナント GUID 以外の文字列を編集すると、認証に失敗する可能性があります。
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource, string claims)
-     {
-          AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
-          return result.AccessToken;
-     }
+    public string AcquireToken(Identity identity, string authority, string resource, string claims)
+    {
+        var authorityUri = new Uri(authority);
+        authority = String.Format("https://{0}/{1}", authorityUri.Host, "<Tenant-GUID>");
+
+        _app = PublicClientApplicationBuilder.Create(_appInfo.ApplicationId).WithAuthority(authority).WithDefaultRedirectUri().Build();
+        var accounts = (_app.GetAccountsAsync()).GetAwaiter().GetResult();
+
+        // Append .default to the resource passed in to AcquireToken().
+        string[] scopes = new string[] { resource[resource.Length - 1].Equals('/') ? $"{resource}.default" : $"{resource}/.default" };
+        var result = _app.AcquireTokenInteractive(scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount)
+                   .ExecuteAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+
+        return result.AccessToken;
+    }
+
      ```
 
 ## <a name="implement-a-consent-delegate"></a>同意の委任を実装する
 
 SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイスを拡張し、`GetUserConsent()` をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意の委任によりサービスのアドレスが提供され、これを `url` パラメーターで使用することをユーザーが同意する必要があります。 委任では一般に、サービスへのアクセスに同意することをユーザーが許可/拒否できるようにするフローがいくつか提供されます。 このクイック スタートでは `Consent.Accept` をハードコーディングします。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
 
 2. ここで **ConsentDelegateImpl.cs** を更新して、新しい同意の委任クラスを実装します。 `Microsoft.InformationProtection` に using ステートメントを追加し、`IConsentDelegate` を継承するようにクラスを設定します。
 
@@ -151,7 +163,6 @@ namespace mip_sdk_dotnet_quickstart
 ## <a name="construct-a-file-profile-and-engine"></a>ファイルのプロファイルとエンジンを構築する
 
 前述のように、MIP API を使用する SDK クライアントには、プロファイル オブジェクトとエンジン オブジェクトが必要です。 ネイティブの DLL を読み込んでプロファイル オブジェクトとエンジン オブジェクトをインスタンス化するためのコードを追加することで、このクイック スタートのコード部分を完了します。
-
 
 
    ```csharp
@@ -216,17 +227,18 @@ namespace mip_sdk_dotnet_quickstart
 
 3. 貼り付けたソース コードのプレースホルダー値を、次の値で置き換えます。
 
-   | [プレースホルダ] | 値 | 例 |
+   | プレースホルダー | 値 | 例 |
    |:----------- |:----- |:--------|
    | \<application-id\> | "MIP SDK のセットアップと構成" で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (2 つのインスタンス)。  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 | AppInitialization |
+   | \<Tenant-GUID\> | Azure AD テナントのテナント ID | TenantId |
 
 
 4. アプリケーションの最終ビルドを行い、任意のエラーを解決します。 コードは正常にビルドされるはずです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで初期化コードが完了し、MIP ファイル API の操作を開始する次のクイック スタートの準備ができました。
 
 > [!div class="nextstepaction"]
-> [機密ラベルの一覧表示](quick-file-list-labels-csharp.md)
+> [秘密度ラベルの一覧表示](quick-file-list-labels-csharp.md)

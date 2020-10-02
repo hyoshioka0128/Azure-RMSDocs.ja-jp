@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 05d8c070e5dc8f8562f59ff0e3d46b6542d8d74f
-ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
+ms.openlocfilehash: 12b53af8ba70c41d7597139b9158e2ac441fa75b
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255167"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91427834"
 ---
 # <a name="overview"></a>概要
 
@@ -19,7 +19,7 @@ ms.locfileid: "87255167"
 
 Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル作成、および保護の各サービスを統合したものです。
 
-- Office 365、Azure Information Protection、Windows Information Protection、およびその他の Microsoft サービスの全体で統一された管理が提供されます。 
+- Microsoft 365、Azure Information Protection、Windows Information Protection、およびその他の Microsoft サービスの全体で統一された管理が提供されます。 
 - サード パーティは、標準的で一貫性のあるデータ ラベル スキーマと保護サービスを使用しているアプリケーションと統合するために、この MIP SDK を使用することができます。
 
 * [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/)
@@ -46,5 +46,5 @@ MIP SDK は、次のプラットフォームで使用できます。
 
 ## <a name="next-steps"></a>次のステップ
 
-これで SDK を使用する準備ができました。 最初に、[MIP SDK の設定と構成の手順を完了する](setup-configure-mip.md)必要があります。 この手順により、Office 365 サブスクリプションとクライアント マシンが正しく設定されます。
+これで SDK を使用する準備ができました。 最初に、[MIP SDK の設定と構成の手順を完了する](setup-configure-mip.md)必要があります。 このステップにより、Microsoft 365 サブスクリプションとクライアント マシンが正しく設定されます。
 
