@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: acdf61bfbcd46ba58d65ccc4ecc5a387fce123dc
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: 4d81f1406f1894acf6c820693e80d00dca1662f4
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810305"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428454"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする
 
@@ -48,7 +48,7 @@ ms.locfileid: "88810305"
 |**Azure portal に AIP が追加されている**    |  Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。 </br></br>詳細については、「[クイック スタート: 作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。       |
 |**構成する既存の Azure Information Protection ラベル**     | 既定のいずれかのラベルまたは作成済みのラベルを使用できます。 詳細については、「[クイック スタート: 特定のユーザー向けの新しい Azure Information Protection ラベルを作成する](quickstart-label-specificusers.md)」をご覧ください。 |
 |**クラシック クライアントがインストールされている**    |   新しいラベルをテストするには、使用するコンピューターにクラシック クライアントをインストールする必要があります。 </br></br>Azure Information Protection クラシック クライアントは、2021 年 3 月に非推奨となる予定です。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。  |
-|**Office アプリにサインインしている Windows コンピューター** |新しいラベルをテストするには、Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューターが必要です。 </br></br>このコンピューターで、次のいずれかのバージョンに該当する Office アプリにサインインします。 </br>- Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の最小バージョン 1805、ビルド 9330.2078 の Office アプリ。 </br>- Office 365 ProPlus。 </br>- Office Professional Plus 2019。 </br>- Office Professional Plus 2016。</br>- Office Professional Plus 2013 Service Pack 1。 </br>- Office Professional Plus 2010 Service Pack 2。|
+|**Office アプリにサインインしている Windows コンピューター** |新しいラベルをテストするには、Windows (Windows 7 Service Pack 1 以降) を実行しているコンピューターが必要です。 </br></br>このコンピューターで、次のいずれかのバージョンに該当する Office アプリにサインインします。 </br>- Azure Rights Management のライセンスが割り当てられている場合は Office アプリの最小バージョン 1805、Microsoft 365 Apps for Business のビルド 9330.2078、または Microsoft 365 Business Premium。 </br>- Microsoft 365 Apps for Enterprise。 </br>- Office Professional Plus 2019。 </br>- Office Professional Plus 2016。</br>- Office Professional Plus 2013 Service Pack 1。 </br>- Office Professional Plus 2010 Service Pack 2。|
 | | |
 
 Azure Information Protection を使用するための必要条件の完全な一覧については、「[Azure Information Protection の要件](requirements.md)」をご覧ください。

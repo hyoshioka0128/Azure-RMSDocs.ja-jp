@@ -5,23 +5,23 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 067e96c31c7bca2a098cbdf0f7b215c05bc4fa61
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
-ms.translationtype: MT
+ms.openlocfilehash: 0eb7119831e09abaa9655f6860053431edea7c23
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224616"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428760"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection の別名
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection (AIP という略称で呼ばれることもある) は、権利管理保護を実装する、Microsoft の長い歴史を持つ確立されたテクノロジから進化したものです。 このような進化により、このソリューションは以前のいずれかの名前で知られている可能性があります。 また、ドキュメント、UI およびログ ファイルでは以前の名前が使用されている可能性もあります。 
 
@@ -68,7 +68,7 @@ Azure Information Protection (AIP という略称で呼ばれることもある)
 
 クラウドベースのソリューションを購入された場合は、置き換えられています。 Azure Information Protection では、組織のドキュメントや電子メールの分類およびラベル付けに関する新しい機能が提供されます。したがって、Rights Management による保護を適用できます。 
 
-ただし、Azure Rights Management は Azure Information Protection の保護テクノロジとして、このクラウドベースの Rights Management 保護を使用する Office 365 サービスで引き続き使用されます。 したがって、Azure Information Protection で使用される保護テクノロジのコンテキストの場合、"Azure Rights Management" (Azure RMS) は現在の名前のままです。
+ただし、Azure Rights Management は、Azure Information Protection、およびこのクラウドベースの Rights Management 保護を使用する Office 365 サービス用の保護テクノロジとして、引き続き使用されます。 したがって、Azure Information Protection で使用される保護テクノロジのコンテキストの場合、"Azure Rights Management" (Azure RMS) は現在の名前のままです。
 
 同様に、"Active Directory Rights Management Services" (AD RMS) は、オンプレミスの Rights Management 保護を提供する Windows Server サーバー役割については現在の名前のままです。 この保護テクノロジは Azure Information Protection で使用でき、オンプレミス キーで保護する必要がある、ごく一部のドキュメントや電子メールに適している場合があります。 このシナリオでは、AD RMS は多くの場合、"Hold Your Own Key" (HYOK) ソリューションと呼ばれます。
 
