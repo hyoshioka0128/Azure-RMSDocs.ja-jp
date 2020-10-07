@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 3f74606e8f5caf4b4d0d480ba36830129249c9cf
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564132"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588310"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート: クライアント アプリケーションの初期化 (C++) 
 
@@ -342,7 +342,7 @@ SDK の `mip::ConsentDelegate` クラスを拡張し、`mip::AuthDelegate::GetUs
 
    | [プレースホルダ] | 値 | 例 |
    |:----------- |:----- |:--------|
-   | \<application-id\> | ["MIP SDK の設定と構成" に関する記事の手順 2 番](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory)で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (GUID)。 2 つのインスタンスを置き換えます。 | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-id\> | ["MIP SDK の設定と構成" に関する記事の手順 2 番](./setup-configure-mip.md#register-a-client-application-with-azure-active-directory)で登録したアプリケーションに割り当てられた Azure AD アプリケーション ID (GUID)。 2 つのインスタンスを置き換えます。 | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | ご利用のアプリケーションに対するユーザー定義のフレンドリ名。 有効な ASCII 文字が含まれている必要があります (';' を除く)。Azure AD 登録で使用したアプリケーション名と一致するものが理想的です。 | `"AppInitialization"` |
    | \<application-version\> | アプリケーションのユーザー定義のバージョン情報。 有効な ASCII 文字が含まれている必要があります (';' を除く)。 | `"1.1.0.0"` |
    | \<engine-account\> | エンジンの ID に使用されるアカウント。 トークンの取得時にユーザー アカウントを認証する場合、ユーザー アカウントはこの値に一致します。 | `"user1@tenant.onmicrosoft.com"` |

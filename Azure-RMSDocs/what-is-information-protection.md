@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 9330feb804a4991fd73f6e0895db69e401089e49
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 25b520e08d8379580226d589fec511d502065156
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91427918"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588407"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -117,7 +117,7 @@ AIP クライアントにより、Office アプリケーションに Information
 **[分類して保護する]** メニュー オプションは、Office アプリケーションの Information Protection バーと同様に機能し、ユーザーがラベルを選択したり、カスタムのアクセス許可を設定したりできるようになります。
 
 > [!TIP]
-> パワー ユーザーまたは管理者は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 クライアントには[関連する PowerShell コマンド](https://docs.microsoft.com/powershell/module/azureinformationprotection)が含まれており、個別にインストールすることもできます。
+> パワー ユーザーまたは管理者は、PowerShell コマンドを使用すれば、複数のファイルの分類と保護をより効率的に管理して設定できることに気付くかもしれません。 クライアントには[関連する PowerShell コマンド](/powershell/module/azureinformationprotection)が含まれており、個別にインストールすることもできます。
 
 ユーザーと管理者は、ドキュメント追跡サイトを使用して、保護されたドキュメントを監視したり、誰がいつアクセスしたかを観察したりできます。 不正使用が疑われる場合、これらの文書に対するアクセスを取り消すことも可能です。 次に例を示します。
 
@@ -161,7 +161,7 @@ Exchange Online で AIP を使用すると、保護された電子メールが�
 
     または、スキャナーを使用してファイルの内容を検査せずに、データ リポジトリ内のすべてのドキュメントに既定のラベルを適用します。 スキャナーを報告モードのみで使用して、所持していたことを知らなかった機密情報を発見することもできます。
 
-- **クラウド データ ストレージ**: [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration) を使用して、Box、SharePoint、OneDrive 内にあるドキュメントにラベルを適用します。 チュートリアルについては、「[Azure Information Protection 分類ラベルの自動適用](https://docs.microsoft.com/cloud-app-security/use-case-information-protection)」を参照してください 
+- **クラウド データ ストレージ**: [Microsoft Cloud App Security](/cloud-app-security/azip-integration) を使用して、Box、SharePoint、OneDrive 内にあるドキュメントにラベルを適用します。 チュートリアルについては、「[Azure Information Protection 分類ラベルの自動適用](/cloud-app-security/use-case-information-protection)」を参照してください 
 
 ## <a name="latest-labeling-updates-for-microsoft-365"></a>Microsoft 365 のラベル付けに関する最新の更新
 
@@ -171,8 +171,8 @@ Microsoft 365 を使用した、あらゆる場所にある機密情報の検出
 
 詳細については、次をご覧ください。
 
-- [Microsoft 365 管理センターの新機能](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
-- [SharePoint 管理センターの新機能](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+- [Microsoft 365 管理センターの新機能](/microsoft-365/admin/whats-new-in-preview)
+- [SharePoint 管理センターの新機能](/sharepoint/what-s-new-in-admin-center)
 
 ## <a name="additional-azure-information-protection-resources"></a>Azure Information Protection の追加資料
 

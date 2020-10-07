@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 12b53af8ba70c41d7597139b9158e2ac441fa75b
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 32f2895d8b52a5fd63d5c764eebb78736b1917a9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91427834"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588327"
 ---
 # <a name="overview"></a>概要
 
@@ -22,7 +22,7 @@ Microsoft Information Protection (MIP) は、Microsoft の分類、ラベル作�
 - Microsoft 365、Azure Information Protection、Windows Information Protection、およびその他の Microsoft サービスの全体で統一された管理が提供されます。 
 - サード パーティは、標準的で一貫性のあるデータ ラベル スキーマと保護サービスを使用しているアプリケーションと統合するために、この MIP SDK を使用することができます。
 
-* [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/)
+* [Office 365 セキュリティとコンプライアンス センターとは](/office365/securitycompliance/)
 * [Azure Information Protection とは](/azure/information-protection/understand-explore/what-is-information-protection)
 * [Azure Information Protection での保護のしくみ](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -47,4 +47,3 @@ MIP SDK は、次のプラットフォームで使用できます。
 ## <a name="next-steps"></a>次のステップ
 
 これで SDK を使用する準備ができました。 最初に、[MIP SDK の設定と構成の手順を完了する](setup-configure-mip.md)必要があります。 このステップにより、Microsoft 365 サブスクリプションとクライアント マシンが正しく設定されます。
-

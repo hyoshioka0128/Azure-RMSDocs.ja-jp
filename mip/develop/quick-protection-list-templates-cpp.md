@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: c3de3c7de8a604221732dd0398e019721b51116b
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: c8af932e5210bdf2445926c6584d4680a6fb0158
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972137"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588276"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>クイック スタート:保護テンプレートを一覧表示する (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "82972137"
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
 - 「[クイック スタート - クライアント アプリケーション初期化 - 保護 API (C++)](quick-protection-app-initialization-cpp.md)」をまず完了し、スターター Visual Studio ソリューションを構築します。 この「保護テンプレートを一覧表示する」クイック スタートでは、前のクイック スタートでスターター ソリューションが正しく構築されている必要があります。
-- 省略可能: 「[RMS テンプレート](https://docs.microsoft.com/azure/information-protection/configure-policy-templates)」概念を確認します。
+- 省略可能: 「[RMS テンプレート](/azure/information-protection/configure-policy-templates)」概念を確認します。
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>保護テンプレートを一覧表示するロジックを追加する
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d8f48a058f03b43e4f4835106c5f882942623740
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927983"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587883"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
@@ -96,11 +96,11 @@ SharePoint リポジトリ間でスキャナーを使用するには、Azure Inf
 
     引き続き **[新しいプロファイルを追加する]** ペインで、 **[リポジトリの構成]** を選択して **[リポジトリ]** ペインを開きます。
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Azure Information Protection スキャナーのデータ リポジトリを構成する":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
 
 1. **[リポジトリ]** ペインで、 **[追加]** を選択します。
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Azure Information Protection スキャナーのデータ リポジトリを追加する":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
 
 1. **[リポジトリ]** ペインで、前に作成したフォルダーを指定します。 例: `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ SharePoint リポジトリ間でスキャナーを使用するには、Azure Inf
 
 1. ご自身のプロファイル名を選択してから、 **[今すぐスキャン]** オプションを選択します。
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのスキャンを開始する":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
 
     プロファイルを選択した後にこのオプションを使用できない場合は、スキャナーが Azure Information Protection に接続されていません。 構成とインターネット接続を確認します。
 
@@ -171,7 +171,7 @@ Excel の場合:
 
     **[Azure Information Protection] - [プロファイル]** ペインで、プロファイルが選択されていることを確認し、 **[今すぐスキャン]** オプションを選択します。
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのスキャンを開始する":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
 
 1. スキャンが完了すると、新しい結果が表示されます。
 
@@ -213,5 +213,5 @@ Uninstall-AIPScanner
 
 **統合ラベル付けクライアントの場合:**
 
-- [機密ラベルをコンテンツに自動的に適用する](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+- [機密ラベルをコンテンツに自動的に適用する](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+- [機密ラベルの暗号化を使用してコンテンツへのアクセスを制限する](/microsoft-365/compliance/encryption-sensitivity-labels)

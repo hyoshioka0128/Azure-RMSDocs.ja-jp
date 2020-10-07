@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 171132bd2e41dcde4dd879eb9314d909bccd74c3
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 5edca37acb2f817173142c6638775c2e95bd7439
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428295"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588242"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK のセットアップと構成
 
@@ -22,7 +22,7 @@ ms.locfileid: "91428295"
 
 開始する前に、次のトピックを確認してください。
 
-- [Office 365 セキュリティとコンプライアンス センターとは](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [Office 365 セキュリティとコンプライアンス センターとは](/office365/securitycompliance/security-and-compliance)
 - [Azure Information Protection とは](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Azure Information Protection での保護のしくみ](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
