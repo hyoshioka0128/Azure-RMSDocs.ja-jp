@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ebe7260cdbd9a252323b13ffd91897e5cd423810
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 29c79c49de5d28c82281614846f5938ecbf40f89
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927927"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587900"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
@@ -64,7 +64,7 @@ Azure Information Protection プラン 1 またはプラン 2 を含むサブス
 
 1. テナントの保護がアクティブになっているかどうかを確認します。 次に例を示します。
 
-    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="AIP のアクティブ化を確認する":::
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Azure portal に Azure Information Protection を追加する":::
 
     どの時点でも、保護がアクティブになっておらず、アクティブにする必要がある場合は、 **[アクティブ化]** ![AIP のアクティブ化](media/qs-tutor/activate.png "AIP のアクティブ化") を選択します。 アクティブ化が完了すると、情報バーに **[Activation finished successfully]\(アクティブ化が正常に完了しました\)** と表示されます。
 
@@ -76,7 +76,7 @@ Azure Information Protection プラン 1 またはプラン 2 を含むサブス
 
     既定のラベルが既に作成されている場合があります。 次の図は、Azure Information Protection により既定で作成されるラベルを示しています。
 
-    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Azure Information Protection の既定のラベル":::
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Azure portal に Azure Information Protection を追加する":::
 
     **既定のラベル、またはいずれのラベルも表示されない場合**:
 
@@ -85,7 +85,7 @@ Azure Information Protection プラン 1 またはプラン 2 を含むサブス
     グリッドの上に **[既定のラベルの生成]** ボタンが表示されない場合は、 **[管理]** の下で **[統合ラベル付け]** を選択します。 [統合ラベル付け] の状態が **[アクティブ化されていません]** になっている場合は、 **[アクティブ化]** を選択してから、 **[分類]**  >  **[ラベル]** ペインに戻ります。
 
     > [!NOTE]
-    > 統合ラベル付けクライアントの場合、ラベルは Microsoft M365 で管理されます。 詳細については、[機密ラベルの暗号化を使用したコンテンツへのアクセスの制限](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)に関する記事をご覧ください。
+    > 統合ラベル付けクライアントの場合、ラベルは Microsoft M365 で管理されます。 詳細については、[機密ラベルの暗号化を使用したコンテンツへのアクセスの制限](/microsoft-365/compliance/encryption-sensitivity-labels)に関する記事をご覧ください。
     >
 
 1. Azure portal でラベルを公開し、Azure Information Protection クラシック クライアントで使用できるようにします。
@@ -129,7 +129,7 @@ Azure portal から初めて Azure Information Protection サービスに接続�
 
 - **統合ラベル付けクライアント。** 統合ラベル付けクライアントに対しては、ラベルのみがクライアントにダウンロードされます。 Office 365 コンプライアンス & セキュリティ センター、Microsoft 365 コンプライアンス センター、または Microsoft 365 セキュリティ センターからポリシー設定がダウンロードされます。 Azure portal の代わりに、これらの管理センターを使ってラベルとラベルのポリシーを編集します。
 
-    詳細については、Microsoft 365 のドキュメントに含まれる「[秘密度ラベルの詳細](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)」を参照してください。
+    詳細については、Microsoft 365 のドキュメントに含まれる「[秘密度ラベルの詳細](/microsoft-365/compliance/sensitivity-labels)」を参照してください。
 
 **クラシック クライアントの手順:**
 
@@ -139,7 +139,7 @@ Azure portal から初めて Azure Information Protection サービスに接続�
 
 1. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後にポリシー設定が表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
 
-    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Azure Information Protection ポリシーのグローバル設定":::
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Azure portal に Azure Information Protection を追加する":::
 
 1. これで、ポータルで開いたすべてのペインを閉じることができます。
 
