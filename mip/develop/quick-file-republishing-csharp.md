@@ -1,39 +1,39 @@
 ---
-title: '方法: シナリオ C を再発行する#'
-description: この記事は、再パブリッシュのシナリオで保護ハンドラーを再利用する方法のシナリオを理解するのに役立ちます。
+title: 方法 - シナリオの再発行 (C#)
+description: この記事は、シナリオの再発行に保護ハンドラーを再利用する方法のシナリオを理解するうえで役立ちます。
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 2b6e0b866144c4883ece29936c1a23cc946c5976
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: c72d284363c1ca988692d18b7007a88c88d808b5
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403342"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421191"
 ---
-# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK-ファイル API の再パブリッシュのクイックスタート (C#)
+# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK - ファイル API の再発行に関するクイックスタート (C#)
 
 ## <a name="overview"></a>概要
 
-このシナリオの概要と使用される場所については、「 [MIP SDK での再パブリッシュ」](concept-republishing.md)を参照してください。
+このシナリオの概要とそれを使用する場面については、[MIP SDK での再発行](concept-republishing.md)に関する記事を参照してください。
 
 ## <a name="prerequisites"></a>[前提条件]
 
 まだ行っていない場合、続行する前に、必ず以下の前提条件を完了してください。
 
-- 完全な[クイックスタート: "秘密度ラベルを設定/取得する (C#)](quick-file-set-get-label-csharp.md) first": 最初に、Visual Studio のスタートボタンを構築します。これにより、組織の秘密度ラベルの一覧が作成され、ファイルに対して機密ラベルを設定して読み取ることができます。 この「保護されたファイルを再発行する方法-C#」は、前のクイックスタートで作成したものです。
-- 必要に応じて、MIP SDK の概念の[ファイルハンドラー](concept-handler-file-cpp.md)を確認します。
-- 必要に応じて、MIP SDK の概念で[保護ハンドラー](concept-handler-protection-cpp.md)をレビューします。
+- 「[クイック スタート: 秘密度ラベルの設定と取得 (C#)](quick-file-set-get-label-csharp.md)」をまず完了し、組織の秘密度ラベルを一覧表示し、ファイルの秘密度ラベルを設定して読み取るための、スターターとなる Visual Studio ソリューションを構築します。 この "方法 - 保護されたファイルの再発行 - C#" に関するクイックスタートは、前のものを基にしています。
+- 省略可能: MIP SDK の[ファイル ハンドラー](concept-handler-file-cpp.md)の概念を確認します。
+- 省略可能: MIP SDK の[保護ハンドラー](concept-handler-protection-cpp.md)の概念を確認します。
 
 ## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>保護されたファイルを編集して再発行するためのロジックを追加する
 
-1. 前の「クイックスタート: 秘密ラベルの設定/取得 (C#)」で作成した Visual Studio ソリューションを開きます。
+1. 前の「クイック スタート: 秘密度ラベルの設定と取得 (C#)」の記事を開きます。
 
 2. ソリューション エクスプローラーを使用して、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
-3. 本文の末尾に向かっ `Main()` `Console.ReadKey()` て、アプリケーションのシャットダウンブロックの下 (前のクイックスタートでは、前のクイックスタートで終了したもの) の下に、次のコードを挿入します。
+3. `Main()` 本文の末尾の `Console.ReadKey()` の下のアプリケーション シャットダウン ブロックの上 (前のクイック スタートが終わった場所) に次のコードを挿入します。
 
 ```csharp
 string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
@@ -88,7 +88,7 @@ if (protectionHandler.AccessCheck("Edit"))
 }
 ```
 
-4. Main () の最後に向かって、前のクイックスタートで作成したアプリケーションシャットダウンブロックを見つけ、リソースを解放するために以下のハンドラー行を追加します。
+4. Main() の末尾の近くで、前のクイックスタートで作成したアプリケーション シャットダウン ブロックを探し、下のハンドラーの行を追加してリソースを解放します。
 
     ````csharp
         protectedFileHandler = null;
@@ -99,8 +99,8 @@ if (protectionHandler.AccessCheck("Edit"))
 
    | [プレースホルダ] | 値 |
    |:----------- |:----- |
-   | \<protected-file-path\> | 前のクイックスタートから保護されたファイル。 |
-   | \<reprotected-file-path\> | 再パブリッシュする変更されたファイルの出力ファイルパス。 |
+   | \<protected-file-path\> | 前のクイックスタートの保護されたファイル。 |
+   | \<reprotected-file-path\> | 再発行する修正されたファイルの出力ファイル パス。 |
 
 ## <a name="build-and-test-the-application"></a>アプリケーションの構築とテスト
 
@@ -108,7 +108,7 @@ if (protectionHandler.AccessCheck("Edit"))
 
 1. Ctrl + Shift + B ( **[ソリューションのビルド]** ) キーを使用して、クライアント アプリケーションを構築します。 ビルド エラーがない場合、F5 ( **[デバッグ開始]** ) を使用してアプリケーションを実行します。
 
-2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる*場合があります*。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
+2. プロジェクトが構築され、正しく実行されたら、SDK が `AcquireToken()` メソッドを呼び出すたびに、アプリケーションから ADAL を使用した認証が求められる *場合があります* 。 キャッシュされた資格情報が既に存在する場合は、サインインが求められることはなく、ラベルの一覧と、適用されたラベルおよび修正されたファイルに関する情報が表示されます。
 
   ```console
     Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
