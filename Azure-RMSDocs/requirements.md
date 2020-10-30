@@ -4,7 +4,7 @@ description: 組織に Azure Information Protection をデプロイするため�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d24383a3ae5312d9c690fdac61b0cbdf52072163
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
+ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178153"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92429184"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
->*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection をデプロイする前に、システムが次の前提条件を満たしていることを確認してください。
 
@@ -57,11 +57,11 @@ Azure Information Protection をデプロイする前に、システムが次の
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
-Azure Information Protection の認証と承認をサポートするには、Azure Active Directory (AD) が必要です。 オンプレミス ディレクター (AD DS) のユーザー アカウントを使用する場合は、ディレクトリ統合も構成する必要があります。
+Azure Information Protection の認証と承認をサポートするには、Azure Active Directory (AD) が必要です。 オンプレミスのディレクトリ (AD DS) のユーザー アカウントを使用する場合は、ディレクトリ統合も構成する必要があります。
 
-- Azure Information Protection では**シングル サインオン (SSO)** がサポートされているため、ユーザーが資格情報の入力を繰り返し求められることはありません。 フェデレーションに別のベンダーのソリューションを使用する場合は、そのベンダーで Azure AD 向けの構成方法を確認します。 WS-Trust は、これらのソリューションでシングル サインオンをサポートするための、一般的な要件です。 
+- Azure Information Protection では **シングル サインオン (SSO)** がサポートされているため、ユーザーが資格情報の入力を繰り返し求められることはありません。 フェデレーションに別のベンダーのソリューションを使用する場合は、そのベンダーで Azure AD 向けの構成方法を確認します。 WS-Trust は、これらのソリューションでシングル サインオンをサポートするための、一般的な要件です。 
 
-- Azure Information Protection で**多要素認証 (MFA)** がサポートされるのは、必要なクライアント ソフトウェアと正しく構成された MFA 対応インフラストラクチャがある場合です。
+- Azure Information Protection で **多要素認証 (MFA)** がサポートされるのは、必要なクライアント ソフトウェアと正しく構成された MFA 対応インフラストラクチャがある場合です。
 
 条件付きアクセスは、Azure Information Protection によって保護されているドキュメントのプレビューでサポートされます。 詳細については、次をご覧ください。[条件付きアクセスに利用できるクラウド アプリとして Azure Information Protection が一覧に記載されています。これはどのように動作しますか。](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
@@ -106,7 +106,7 @@ Office 2010 を使用する場合、証明書ベースまたは多要素認証�
 >
 ### <a name="arm64"></a>ARM64 
 
-現在、ARM64 はサポートされて**いません**。 
+現在、ARM64 はサポートされて **いません** 。 
 
 ### <a name="virtual-machines"></a>仮想マシン
 
@@ -114,7 +114,7 @@ Office 2010 を使用する場合、証明書ベースまたは多要素認証�
 
 たとえば、Citrix ソリューションでは、Office、Azure Information Protection 統合ラベル付けクライアント、または Azure Information Protection クライアントのために [Citrix アプリケーション プログラミング インターフェイス (API) フックを無効にする](https://support.citrix.com/article/CTX107825)ことが必要になる場合があります。 
 
-これらのアプリケーションでは、それぞれ次のファイルが使用されます: **winword.exe**、**excel.exe**、**outlook.exe**、**powerpnt.exe**、**msip.app.exe**、**msip.viewer.exe**
+これらのアプリケーションでは、それぞれ次のファイルが使用されます: **winword.exe** 、 **excel.exe** 、 **outlook.exe** 、 **powerpnt.exe** 、 **msip.app.exe** 、 **msip.viewer.exe**
 
 ### <a name="server-support"></a>サーバー サポート
 
@@ -134,9 +134,9 @@ Azure Information Protection クライアントとリモート デスクトッ�
 
 ## <a name="applications"></a>アプリケーション
 
-Azure Information Protection クライアントでは、次のいずれかの Office エディションの Microsoft **Word**、**Excel**、**PowerPoint**、**Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
+Azure Information Protection クライアントでは、次のいずれかの Office エディションの Microsoft **Word** 、 **Excel** 、 **PowerPoint** 、 **Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
 
-- Microsoft 365 Apps for Business または Microsoft 365 Business Premium の **Office アプリの最小バージョン 1805**、ビルド 9330.2078。 
+- Microsoft 365 Apps for Business または Microsoft 365 Business Premium の **Office アプリの最小バージョン 1805** 、ビルド 9330.2078。 
 
     このエディションは、ユーザーに Azure Rights Management (別名 Azure Information Protection for Microsoft 365) のライセンスが割り当てられている場合にのみサポートされます。
 
@@ -168,12 +168,18 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 Azure Information Protection には、次の追加要件があります。
 
-- **統合ラベル付けクライアント**。 ラベルとラベル ポリシーをダウンロードするには、HTTPS で次の URL を許可してください: * **.protection.outlook.com**
+- **統合ラベル付けクライアント** 。 ラベルとラベル ポリシーをダウンロードするには、HTTPS で次の URL を許可してください: * *_.protection.outlook.com_*
 
-- **Web プロキシ**。 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory サインイン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
+- **Web プロキシ** 。 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory サインイン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
+    プロキシを使用してトークンを取得するときに **Proxy.pac** ファイルをサポートするには、次の新しいレジストリ キーを追加します。
+
+    - **パス:** `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **キー:** `UseDefaultCredentialsInProxy`
+    - **種類:** `DWORD`
+    - **値:** `1`
     
-- **TLS クライアント/サービス間接続**。 **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえば、パケット レベルの検査を実行するためなど)。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
+- **TLS クライアント/サービス間接続** 。 **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえば、パケット レベルの検査を実行するためなど)。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
      
     クライアント接続が Azure Rights Management サービスに到達する前に終了しているかどうかを確認するには、次の PowerShell コマンドを使用します。
 
@@ -191,9 +197,9 @@ Azure Information Protection には、次の追加要件があります。
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>AD RMS と Azure RMS の共存
 
-同じ組織内の同じユーザーがコンテンツを保護できるように、同じ組織内で AD RMS と Azure RMS をサイド バイ サイドで使用することは、AD RMS で、Azure Information Protection での [HYOK (Hold Your Own Key) 保護](configure-adrms-restrictions.md)に対して**のみ**サポートされています。
+同じ組織内の同じユーザーがコンテンツを保護できるように、同じ組織内で AD RMS と Azure RMS をサイド バイ サイドで使用することは、AD RMS で、Azure Information Protection での [HYOK (Hold Your Own Key) 保護](configure-adrms-restrictions.md)に対して **のみ** サポートされています。
 
-このシナリオは、[移行](migrate-from-ad-rms-to-azure-rms.md)中にはサポート "*されません*"。
+このシナリオは、 [移行](migrate-from-ad-rms-to-azure-rms.md)中にはサポート " *されません* "。
 サポートされている移行パスは次のとおりです。
 
 * [AD RMS から Azure Information Protection へ](migrate-from-ad-rms-to-azure-rms.md)
@@ -207,7 +213,7 @@ Azure Information Protection には、次の追加要件があります。
 
 * [AD RMS から Azure RMS への移行](migrate-from-ad-rms-to-azure-rms.md)にリダイレクトを使用します
 
-* 同時に複数のユーザーに対して両方のサービスをアクティブにする必要がある場合は、サービス側の構成を使用して排他性を適用します。  クラウド サービスで Azure RMS オンボード制御を使用し、発行 URL の ACL を使用して AD RMS の**読み取り専用**モードを設定します。
+* 同時に複数のユーザーに対して両方のサービスをアクティブにする必要がある場合は、サービス側の構成を使用して排他性を適用します。  クラウド サービスで Azure RMS オンボード制御を使用し、発行 URL の ACL を使用して AD RMS の **読み取り専用** モードを設定します。
 
 ### <a name="service-tags"></a>サービス タグ
 
