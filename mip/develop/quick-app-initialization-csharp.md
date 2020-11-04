@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: 406068f5770f489c66963fc34a462ec7e205765b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: b0aeeabeabf6dc4c3bba39ea2f58374b98bac491
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91108954"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044384"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>クイック スタート:クライアント アプリケーションの初期化 (C#)
 
@@ -43,7 +43,7 @@ ms.locfileid: "91108954"
      [![Visual Studio ソリューションの作成](media/quick-app-initialization-csharp/create-vs-solution.png)](media/quick-app-initialization-csharp/create-vs-solution.png#lightbox)
 
 2. MIP SDK ファイル API 用の Nuget パッケージをご自分のプロジェクトに追加します。
-   - **ソリューション エクスプローラー**で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
+   - **ソリューション エクスプローラー** で、(最上位/ソリューション ノードの下から直接) プロジェクト ノードを右クリックして、 **[NuGet パッケージの管理]** を選択します。
    - **[NuGet パッケージ マネージャー]** タブが [エディター グループ] タブ領域で開かれたら、次の操作を行います。
      - **[参照]** を選択します。
      - 検索ボックスに「Microsoft.InformationProtection」と入力します。
@@ -110,7 +110,7 @@ SDK の `Microsoft.InformationProtection.IAuthDelegate` インターフェイス
 
 SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイスを拡張し、`GetUserConsent()` をオーバーライド/実装することで、同意の委任に対して実装を作成します。 この同意の委任はインスタンス化され、ファイル プロファイルとファイル エンジン オブジェクトによって後で使用されます。 同意の委任によりサービスのアドレスが提供され、これを `url` パラメーターで使用することをユーザーが同意する必要があります。 委任では一般に、サービスへのアクセスに同意することをユーザーが許可/拒否できるようにするフローがいくつか提供されます。 このクイック スタートでは `Consent.Accept` をハードコーディングします。
 
-1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、**[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
+1. 前に使用したのと同じ Visual Studio の [クラスの追加] 機能を使用して、別のクラスをご自分のプロジェクトに追加します。 ここでは、 **[クラス名]** フィールドに「ConsentDelegateImplementation」と入力します。
 
 2. ここで **ConsentDelegateImpl.cs** を更新して、新しい同意の委任クラスを実装します。 `Microsoft.InformationProtection` に using ステートメントを追加し、`IConsentDelegate` を継承するようにクラスを設定します。
 
@@ -128,7 +128,7 @@ SDK の `Microsoft.InformationProtection.IConsentDelegate` インターフェイ
 
 ## <a name="initialize-the-mip-sdk-managed-wrapper"></a>MIP SDK のマネージド ラッパーを初期化する
 
-1. **ソリューション エクスプローラー**から、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
+1. **ソリューション エクスプローラー** から、`Main()` メソッドの実装を含む .cs ファイルをご自分のプロジェクトで開きます。 これの既定の名前は、プロジェクトの作成時に指定した、それを含むプロジェクトと同じ名前です。
 
 2. 生成された `main()` の実装を削除します。
 
@@ -211,7 +211,7 @@ namespace mip_sdk_dotnet_quickstart
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
                // Create a FileEngineSettings object, then use that to add an engine to the profile.
-               var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate "", "en-US");
+               var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate, "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
 
