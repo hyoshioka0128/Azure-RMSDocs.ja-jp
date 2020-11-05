@@ -4,7 +4,7 @@ description: Azure Rights Management (Azure RMS) サービスがネイティブ�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3115cbbce67f3997ad12f1fdb8a4ddd1f5ed2ca6
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
+ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178188"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93245104"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Azure Rights Management データ保護をサポートするアプリケーション
 
@@ -47,8 +47,8 @@ ms.locfileid: "92178188"
 
 |Type  |サポートされているアプリケーション   |
 |---------|---------|
-|**Word、Excel、PowerPoint**    |  - Microsoft 365 アプリ<br />- Office 2019 for Mac<br />- Office 2016 for Mac<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web ブラウザー](#web-browser-support)    |
-|[**電子メール**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 for Mac<br />- Outlook 2016 for Mac<br />- [Web ブラウザー](#web-browser-support)     |
+|**Word、Excel、PowerPoint**    |  - Microsoft 365 アプリ、バージョン 16.40 以降 <br />- Office 2019 for Mac、バージョン 16.40 以降<br />- Office 2016 for Mac、バージョン 16.16.27 以降<br />- [Office for the web](#viewing-protected-documents-in-office-for-the-web)<br />- [Web ブラウザー](#web-browser-support)    |
+|[**電子メール**](#viewing-protected-content-in-email-clients)   |   - Outlook 2019 for Mac、バージョン 16.40 以降<br />- Outlook 2016 for Mac、バージョン 16.16.27 以降<br />- [Web ブラウザー](#web-browser-support)     |
 |[**他のファイルの種類**](#supported-text-and-image-file-types)    | RMS 共有アプリ (保護されているテキスト、イメージ、一般的に保護されているファイルの表示)   |
 | | |
 
