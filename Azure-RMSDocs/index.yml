@@ -12,12 +12,12 @@ metadata:
   ms.author: mlottner
   manager: rkarlin
   ms.date: 04/02/2019
-  ms.openlocfilehash: 63026df891e74f05bf8bcf570f852840aa991cce
-  ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+  ms.openlocfilehash: a2f73c9aa0207af5b7ba77b3b53c271eb8722cb2
+  ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/07/2020
-  ms.locfileid: "86048427"
+  ms.lasthandoff: 11/09/2020
+  ms.locfileid: "94379165"
 landingContent:
 - title: Azure Information Protection について
   linkLists:
@@ -35,22 +35,22 @@ landingContent:
       url: requirements.md
   - linkListType: quickstart
     links:
-    - text: Azure portal の利用
-      url: quickstart-viewpolicy.md
-    - text: 機密情報の検索
-      url: quickstart-findsensitiveinfo.md
-  - linkListType: deploy
+    - text: 統合ラベル付けクライアントのデプロイ
+      url: quickstart-deploy-client.md
+  - linkListType: tutorial
     links:
-    - text: デプロイ ロードマップ
-      url: deployment-roadmap.md
-    - text: 一般的なシナリオ
-      url: how-to-guides.md
+    - text: スキャナーのインストール
+      url: tutorial-install-scanner.md
+    - text: ネットワークとコンテンツをスキャンする
+      url: tutorial-scan-networks-and-content.md
+    - text: 過剰共有を禁止する
+      url: tutorial-preventing-oversharing.md
 - title: 最新のままにする
   linkLists:
   - linkListType: whats-new
     links:
     - text: 上位 5 つの推奨される Ignite セッション
-      url: what-is-information-protection.md#microsoft-ignite
+      url: what-is-information-protection.md#additional-resources
     - text: 最新の統合ラベル クライアント バージョン
       url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: オンプレミスのデータ ストアのデータを分類および保護する
@@ -63,10 +63,10 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: クラシック クライアント:詳細設定
-      url: ./rms-client/client-admin-guide-customizations.md
     - text: 統合ラベル付けクライアント:詳細設定
       url: ./rms-client/clientv2-admin-guide-customizations.md
+    - text: クラシック クライアント:詳細設定
+      url: ./rms-client/client-admin-guide-customizations.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -91,8 +91,8 @@ landingContent:
       url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
   - linkListType: how-to-guide
     links:
-    - text: Azure Information Protection ラベルの移行
-      url: configure-policy-migrate-labels.md
+    - text: 統合ラベル付けクライアントへの移行
+      url: tutorial-migrating-to-ul.md
 - title: ラベルの使用状況の監視と機密情報の検出
   linkLists:
   - linkListType: how-to-guide

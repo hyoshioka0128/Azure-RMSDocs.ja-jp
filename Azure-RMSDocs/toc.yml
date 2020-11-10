@@ -4,8 +4,6 @@
   items:
     - name: Azure Information Protection とは
       href: what-is-information-protection.md
-    - name: Azure Information Protection Rights Management
-      href: what-is-azure-rms.md
     - name: AIP の要件
       items:
         - name: 概要
@@ -19,24 +17,24 @@
 - name: クイックスタート
   expanded: true
   items:
-    - name: Azure portal の利用
-      href: quickstart-viewpolicy.md
-    - name: 所有している機密情報を確認する
-      href: quickstart-findsensitiveinfo.md
-    - name: 電子メールを保護するラベルを構成する - クラシック クライアント
-      href: quickstart-label-dnf-protectedemail.md
-    - name: 特定のユーザーの新しいラベルを作成する - クラシック クライアント
-      href: quickstart-label-specificusers.md
+    - name: クライアントのデプロイ
+      href: quickstart-deploy-client.md
 - name: チュートリアル
   items:
-    - name: ポリシーを編集して新しいラベルを作成する - クラシック クライアント
-      href: infoprotect-quick-start-tutorial.md
-    - name: 連携されるポリシー設定を構成する - クラシック クライアント
-      href: infoprotect-settings-tutorial.md
-    - name: Oversharing を制御するクライアント設定を構成する - クラシック クライアント
-      href: infoprotect-oversharing-tutorial.md
+    - name: スキャナーのインストール
+      href: tutorial-install-scanner.md
+    - name: 機密コンテンツの検出
+      href: tutorial-scan-networks-and-content.md
+    - name: 過剰共有の防止
+      href: tutorial-preventing-oversharing.md
+    - name: 従来のクライアントから、統合されたラベル付けクライアントへの移行
+      href: tutorial-migrating-to-ul.md
 - name: 概念
   items:
+    - name: AIP の分類と保護
+      href: aip-classification-and-protection.md
+    - name: Azure Information Protection Rights Management
+      href: what-is-azure-rms.md
     - name: Rights Management の保護
       items:
         - name: Rights Management 保護のしくみ
