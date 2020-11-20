@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2d0723dcbc28ef5d9820c23f41c6d36e860303c5
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: 210e556a2ecaab2dec7eb46b4b3b9b3c2c968ea4
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94423433"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503402"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>クイック スタート: Azure Information Protection (AIP) 統合ラベル付けクライアントのデプロイ
 
@@ -25,7 +25,7 @@ ms.locfileid: "94423433"
 
 Azure Information Protection (AIP) 統合ラベル付けクライアントは、[Microsoft Information Protection](https://aka.ms/MIPdocs) ソリューションの一部であり、これによって、Microsoft 365 で提供される秘密度ラベル用の組み込み機能が拡張されます。 
 
-このクライアントには、エクスプローラーと PowerShell でのラベル付けおよび保護のエンドユーザー サポートが用意されています。 また、これによって管理者は、ネットワークやコンテンツ共有をスキャンして機密コンテンツを探すこともできます。 
+このクライアントには、Office アプリケーションに加えて、エクスプローラーと PowerShell でのラベル付けおよび保護のエンドユーザー サポートが用意されています。 統合ラベル付けクライアントに付属するスキャナーを使用すると、管理者はネットワークやコンテンツ共有をスキャンして機密コンテンツを検索できます。 
 
 情報保護プラットフォームを備えていない組織の場合は、Microsoft Information Protection を使用して他の組織が保護しているコンテンツに対するビューアーがこのクライアントによって提供されます。
 

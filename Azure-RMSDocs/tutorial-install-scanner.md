@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d7c70cd8b9f44bb4babd00deb4229dc5cab0d214
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377215"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503691"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>チュートリアル:Azure Information Protection (AIP) 統合ラベル付けスキャナーのインストール
 
@@ -33,10 +33,10 @@ ms.locfileid: "94377215"
 
 |要件  |説明  |
 |---------|---------|
-|**サポート サブスクリプション**     |  [Azure Information Protection プラン 1 またはプラン 2](https://azure.microsoft.com/pricing/details/information-protection/) を含む Azure サブスクリプションが必要です。 <br /><br />これらのサブスクリプションのいずれかがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成してください。       |
+|**サポート サブスクリプション**     |  [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含む Azure サブスクリプションが必要です。 <br /><br />これらのサブスクリプションのいずれかがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成してください。       |
 |**Azure portal への管理者アクセス** |次のいずれかの管理者アカウントを使用して [Azure portal](https://portal.azure.com/) にサインインできることを確認します。 <br /><br />- **コンプライアンス管理者**<br />- **コンプライアンス データ管理者**<br />- **セキュリティ管理者**<br />- **グローバル管理者** |
 |**クライアントのインストール**    |   スキャナーのインストールにアクセスするには、ご利用のコンピューター上に AIP 統合ラベル付けクライアントをインストールします。 <br /><br />[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)から **AzInfoProtection_UL.exe** をダウンロードして実行します。 <br /><br />インストールが完了すると、コンピューターまたは Office ソフトウェアの再起動を求めるメッセージが表示される場合があります。 必要に応じて再起動して続行します。 <br /><br />詳細については、「[クイック スタート: Azure Information Protection (AIP) 統合ラベル付けクライアントのデプロイ](quickstart-deploy-client.md)」を参照してください。|
-|**SQL Server**     | スキャナーを実行するには、スキャナー コンピューター上に SQL Server がインストールされている必要があります。 <br /><br /> インストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/sql-server/sql-server-editions-express)に移動し、インストールするインストール オプションの下にある **[今すぐダウンロード]** を選択します。 インストーラーで、 **[基本]** をインストールの種類に選択します。 <br /><br />**注**:SQL Server Enterprise は運用環境に、そして Express はテスト環境のみにインストールすることをお勧めします。       |
+|**SQL Server**     | スキャナーを実行するには、スキャナー コンピューター上に SQL Server がインストールされている必要があります。 <br /><br /> インストールするには、[SQL Server のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-downloads)に移動し、インストールするインストール オプションの下にある **[今すぐダウンロード]** を選択します。 インストーラーで、 **[基本]** をインストールの種類に選択します。 <br /><br />**注**:SQL Server Enterprise は運用環境に、そして Express はテスト環境のみにインストールすることをお勧めします。       |
 |**Azure Active Directory アカウント**     |  標準的なクラウド接続環境で作業する場合は、スキャナーに使用するドメインサービス アカウントを [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) に同期させる必要があります。 これは、オフラインで作業する場合には必要ありません。 <br /><br />ご自身のアカウントについて不明な場合は、いずれかのシステム管理者に問い合わせて同期の状態を確認してください。   |
 |**秘密度ラベルと公開されたポリシー** |スキャナー サービス アカウント用に、秘密度ラベルを作成し、少なくとも 1 つのラベルが付いたポリシーをラベル付け管理センターに公開している必要があります。 <br /><br />Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 セキュリティ/コンプライアンス センターを含む、ご利用のラベル付け管理センター内で秘密度ラベルを構成します。 詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)を参照してください。 |
 | | |

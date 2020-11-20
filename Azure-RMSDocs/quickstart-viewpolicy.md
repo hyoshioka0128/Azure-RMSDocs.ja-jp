@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 29c79c49de5d28c82281614846f5938ecbf40f89
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: b0128abb8d75418596459ac142a49dbbfa06b646
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91587900"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503623"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>クイック スタート:Azure portal で Azure Information Protection の使用を開始する
 
@@ -33,7 +33,7 @@ ms.locfileid: "91587900"
 
 - [**Azure portal**](https://portal.azure.com/) アカウントへのアクセス。
 
-- [**Azure Information Protection プラン 1 またはプラン 2**](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプション。
+- [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプション。
 
     このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。
 
@@ -41,7 +41,7 @@ Azure Information Protection を使用するための必要条件の完全な一
 
 ## <a name="add-azure-information-protection-to-the-azure-portal"></a>Azure portal に Azure Information Protection を追加する
 
-Azure Information Protection プラン 1 またはプラン 2 を含むサブスクリプションをお持ちの場合でも、Azure portal で AIP が自動的に使用できるようにはなりません。
+[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションをお持ちの場合でも、Azure portal で AIP が自動的に使用できるようにはなりません。
 
 次の手順を実行して、Azure portal に AIP を追加してください。
 
@@ -64,7 +64,7 @@ Azure Information Protection プラン 1 またはプラン 2 を含むサブス
 
 1. テナントの保護がアクティブになっているかどうかを確認します。 次に例を示します。
 
-    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Azure portal に Azure Information Protection を追加する":::
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="AIP のアクティブ化を確認する":::
 
     どの時点でも、保護がアクティブになっておらず、アクティブにする必要がある場合は、 **[アクティブ化]** ![AIP のアクティブ化](media/qs-tutor/activate.png "AIP のアクティブ化") を選択します。 アクティブ化が完了すると、情報バーに **[Activation finished successfully]\(アクティブ化が正常に完了しました\)** と表示されます。
 
@@ -76,7 +76,7 @@ Azure Information Protection プラン 1 またはプラン 2 を含むサブス
 
     既定のラベルが既に作成されている場合があります。 次の図は、Azure Information Protection により既定で作成されるラベルを示しています。
 
-    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Azure portal に Azure Information Protection を追加する":::
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Azure Information Protection の既定のラベル":::
 
     **既定のラベル、またはいずれのラベルも表示されない場合**:
 
@@ -96,7 +96,7 @@ Azure Information Protection プラン 1 またはプラン 2 を含むサブス
 
     1. **[ポリシー: ラベルの追加または削除]** ペインで、すべてのラベルを選択し、 **[OK]** を選択します。
 
-    1. **[ポリシー:グローバル] ペイン**に戻り、 **[保存]** ![保存](media/qs-tutor/save-icon.png "[保存]") ボタンを選択します。
+    1. **[ポリシー:グローバル] ペイン** に戻り、 **[保存]** ![保存](media/qs-tutor/save-icon.png "[保存]") ボタンを選択します。
 
         プロンプトで **[OK]** をクリックして、加えた変更を公開します。
 
@@ -139,7 +139,7 @@ Azure portal から初めて Azure Information Protection サービスに接続�
 
 1. **[表示する設定を構成して、Information Protection のエンド ユーザーに適用する]** セクションで、ラベルの後にポリシー設定が表示されます。 たとえば、既定のラベル セットはなく、ドキュメントと電子メールはラベルが必須ではなく、ユーザーがラベルを変更するときに理由を示す必要はありません。
 
-    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Azure portal に Azure Information Protection を追加する":::
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Azure Information Protection ポリシーのグローバル設定":::
 
 1. これで、ポータルで開いたすべてのペインを閉じることができます。
 

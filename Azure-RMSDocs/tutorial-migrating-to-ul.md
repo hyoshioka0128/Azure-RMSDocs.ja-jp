@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e4c1ae01b35a19fc3cc84f207f4f17b510926931
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377260"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503640"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>チュートリアル:Azure Information Protection (AIP) クラシック クライアントから統合ラベル付けクライアントへの移行
 
@@ -103,7 +103,7 @@ AIP クラシック クライアントで使用できるほとんどの機能は
 
 ### <a name="synchronizing-labeling-edits"></a>ラベル付け編集の同期
 
-ラベルを管理センターに移行した後は、Azure portal 内で移行済みラベルに編集を行うと、管理センター内で同じラベルに自動的に同期されて、統合ラベル付けが行われます。
+ラベルをラベル付け管理センター (Microsoft 365 セキュリティ センター、Microsoft 365 コンプライアンス センター、または Microsoft 365 セキュリティ/コンプライアンス センターなど) に移行した後は、Azure portal 内で移行済みラベルに編集を行うと、管理センター内で同じラベルに自動的に同期されて、統合ラベル付けが行われます。
 
 その逆で、管理センター内の移行済みラベルに編集が行われても、Azure portal には同期され "*ません*"。 管理センターで編集を行い、Azure portal でそれらを更新する必要がある場合は、ポータルに戻って更新を発行します。
 

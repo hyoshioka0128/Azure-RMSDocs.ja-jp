@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f947edadde9b4dfecb91adf9bcb8fefe168bf38b
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: d452f2c6c1d58af8f352664e087514f798bc1b5b
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927840"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503572"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>クイック スタート:特定のユーザー向けの新しい Azure Information Protection ラベルを作成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "86927840"
 > *手順:[Windows 用 Azure Information Protection クラシック クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 このクイック スタートでは、ドキュメントや電子メールを分類および保護するために特定のユーザーのみが表示して適用できる、新しい Azure Information Protection ラベルを作成します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "86927840"
 
 |要件  |説明  |
 |---------|---------|
-|**サポート サブスクリプション**     |  [**Azure Information Protection プラン 1 またはプラン 2**](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 </br></br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
+|**サポート サブスクリプション**     |  [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 </br></br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
 |**Azure portal に AIP が追加されている**    |  Azure portal に [Azure Information Protection] ペインを追加し、保護サービスがアクティブになっていることを確認した。 </br></br>詳細については、「[クイック スタート: 作業の開始](quickstart-viewpolicy.md)に関するページをご覧ください。       |
 |**Azure AD のメール受信が有効なグループ**     | 新しいラベルを表示および適用するユーザーが含まれた、Azure AD のメール受信が有効なグループが必要です。 </br></br>適切なグループがない場合は、"**営業チーム**" という名前のグループを作成し、少なくとも 1 人のユーザーを追加します。 |
 |**クラシック クライアントがインストールされている**    |   新しいラベルをテストするには、使用するコンピューターにクラシック クライアントをインストールする必要があります。 </br></br>Azure Information Protection クラシック クライアントは、2021 年 3 月に非推奨となる予定です。 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。  |

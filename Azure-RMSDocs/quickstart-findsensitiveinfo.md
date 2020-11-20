@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0ab3f66437882f6c458b3e4793be935d5f14686d
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91587883"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503657"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する
 
@@ -33,7 +33,7 @@ ms.locfileid: "91587883"
 
 |要件  |説明  |
 |---------|---------|
-|**サポート サブスクリプション**     |  [**Azure Information Protection プラン 1 またはプラン 2**](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 </br></br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
+|**サポート サブスクリプション**     |  [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含むサブスクリプションが必要です。 </br></br>このようないずれかのサブスクリプションがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成できます。       |
 |**クライアントのインストール**    |   使用するコンピューターにクラシック クライアントか統合ラベル付けクライアントをインストールする必要があります。 </br></br>- 統合ラベル付けクライアントをインストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53018)に移動し、Azure Information Protection ページから **AzInfoProtection_UL.exe** をダウンロードします。 </br>- AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。       |
 |**SQL Server Express**     | 使用するコンピューターに SQL Server Express をインストールする必要があります。 </br></br> インストールするには、[Microsoft ダウンロード センター](https://www.microsoft.com/sql-server/sql-server-editions-express)に移動し、Express オプションの下にある **[今すぐダウンロード]** を選択します。 インストーラーで、 **[基本]** をインストールの種類に選択します。        |
 |**Azure AD**     |  ご自身のドメイン アカウントが Azure AD に同期されている必要があります。 </br></br>ご自身のアカウントについて不明な場合は、いずれかのシステム管理者にお問い合わせください。      |
@@ -60,7 +60,7 @@ SharePoint リポジトリ間でスキャナーを使用するには、Azure Inf
 
 1. **[サイト コレクションの権限]** で **[Site Collector Auditor]\(サイト コレクター監査人\)** オプションを選択します。
 
-1. **[アクセス許可]** の **[アプリケーション ページの表示]** オプションに **[許可]** を選択して、変更を**保存**します。  
+1. **[アクセス許可]** の **[アプリケーション ページの表示]** オプションに **[許可]** を選択して、変更を **保存** します。  
 
     ![特定のユーザーに対して [Site Collector Auditor]\(サイトコレクターの監査人\) とアクセス許可のオプションを選択する](./media/aip-quick-set-site-permissions.png)
 
@@ -96,11 +96,11 @@ SharePoint リポジトリ間でスキャナーを使用するには、Azure Inf
 
     引き続き **[新しいプロファイルを追加する]** ペインで、 **[リポジトリの構成]** を選択して **[リポジトリ]** ペインを開きます。
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Azure Information Protection スキャナーのデータ リポジトリを構成する":::
 
 1. **[リポジトリ]** ペインで、 **[追加]** を選択します。
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Azure Information Protection スキャナーのデータ リポジトリを追加する":::
 
 1. **[リポジトリ]** ペインで、前に作成したフォルダーを指定します。 例: `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ SharePoint リポジトリ間でスキャナーを使用するには、Azure Inf
 
 1. ご自身のプロファイル名を選択してから、 **[今すぐスキャン]** オプションを選択します。
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのスキャンを開始する":::
 
     プロファイルを選択した後にこのオプションを使用できない場合は、スキャナーが Azure Information Protection に接続されていません。 構成とインターネット接続を確認します。
 
@@ -171,7 +171,7 @@ Excel の場合:
 
     **[Azure Information Protection] - [プロファイル]** ペインで、プロファイルが選択されていることを確認し、 **[今すぐスキャン]** オプションを選択します。
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのプロファイルを追加する":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Azure Information Protection スキャナーのスキャンを開始する":::
 
 1. スキャンが完了すると、新しい結果が表示されます。
 

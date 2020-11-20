@@ -9,15 +9,15 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq1
+ms.custom: contperfq2
 search.appverid:
 - MET150
-ms.openlocfilehash: 5167d790c557661181b03f90055dfc75b0b1cf72
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 4a945f07532786c268886a44de23430be9a78700
+ms.sourcegitcommit: 822b23024cfd01ea41ac6ae9370489193782f078
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94379264"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634701"
 ---
 # <a name="what-is-azure-information-protection"></a>Azure Information Protection とは
 
@@ -47,7 +47,7 @@ Azure Information Protection 統合ラベル付けクライアントにより、
     
 ## <a name="aip-on-premises-scanner"></a>AIP オンプレミス スキャナー
 
-Azure Information Protection オンプレミス スキャナーを使用すると、管理者は自分のネットワークおよびファイル共有をスキャンして、ラベル付け、分類、保護を必要とする機密コンテンツを検索することができます。
+Azure Information Protection オンプレミス スキャナーを使用すると、管理者は自分のネットワークおよびオンプレミスのファイル リポジトリをスキャンして、ラベル付け、分類、保護を必要とする機密コンテンツを検索することができます。
 
 オンプレミス スキャナーは、統合ラベル付けクライアントの一部として提供されている PowerShell コマンドレットを使用してインストールします。そして、PowerShell、および Azure portal の Azure Information Protection 領域を使用して管理することができます。
 

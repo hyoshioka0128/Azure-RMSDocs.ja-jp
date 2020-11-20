@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8d86d6f114bd1a0886883b9cda277ffd6ae9904b
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377210"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503419"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>チュートリアル:Azure Information Protection (AIP) を使用した Outlook での過剰共有の防止
 
@@ -40,7 +40,7 @@ ms.locfileid: "94377210"
 |前提条件  |説明  |
 |---------|---------|
 |**コンピューターの要件**     | 次のことを確認してください。 <br /><br />- Windows コンピューターに Azure Information Protection 統合ラベル付けクライアントがインストールされている。 詳細については、「[クイック スタート: Azure Information Protection (AIP) 統合ラベル付けクライアントのデプロイ](quickstart-deploy-client.md)」を参照してください。 <br /><br />- PowerShell がインストールされており、PowerShell を管理者として実行できる。 <br /><br />- Outlook にサインインできる。 このチュートリアル中に Outlook を複数回再起動する準備をしておいてください。     |
-|**Azure Information Protection のサブスクリプション**     |   **Azure Information Protection プラン 2** を含む Azure [サブスクリプション](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)が必要です。      |
+|**Azure Information Protection のサブスクリプション**     |   [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) を含む Azure サブスクリプションが必要です。 <br /><br />これらのサブスクリプションのいずれかがない場合は、組織用の[無料](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)アカウントを作成してください。       |
 |**秘密度ラベルとテスト ポリシー**     |  ポリシーで構成されている **全般** 秘密度ラベル。 <br /><br />ラベル付け管理センター (Microsoft 365 コンプライアンス センター、Microsoft 365 セキュリティ センター、または Microsoft 365 セキュリティ/コンプライアンス センター) で秘密度ラベルを構成します。 詳細については、[Microsoft 365 のドキュメント](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels)を参照してください。 <br /><br />このチュートリアルでは、ライブ ポリシーに影響を与えないように、テスト ポリシーを使用することをお勧めします。 <br />お使いのポリシーの名前と **全般** ラベルの GUID が手元にあることを確認します。   |
 | | |
 

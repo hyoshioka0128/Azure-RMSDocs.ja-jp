@@ -13,16 +13,16 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
-ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
+ms.openlocfilehash: 5e52571568a54cf015269fde76603e334f0bc7b6
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92429184"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503555"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection の要件
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection をデプロイする前に、システムが次の前提条件を満たしていることを確認してください。
 
@@ -45,9 +45,11 @@ Azure Information Protection をデプロイする前に、システムが次の
 ライセンスについて質問がある場合は、ライセンスについての[よく寄せられる質問](https://azure.microsoft.com/pricing/details/information-protection#faq)に目を通してください。
 
 > [!TIP]
-> 保護された電子メールを個人用メール アドレスに送信するために、お使いの Microsoft 365 プランまたは Exchange Online スタンドアロン プランで [Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)がサポートされているかどうかを確認する必要がありますか? たとえば、Gmail、Yahoo、Microsoft などです。 次のリソースを参照してください。
+> 保護された電子メールを個人用のメール アドレスに送信するために、お使いのプランで [Office 365 Message Encryption の新機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)がサポートされているかどうかを確認する必要がありますか? たとえば、Gmail、Yahoo、Microsoft などです。 次のリソースを参照してください。
 >
 > - [Exchange Online サービスの説明](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description)
+>
+> - [Microsoft 365 コンプライアンス ライセンスの比較](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-business-service-description)
 >
 > - [Office 365 Education](/office365/servicedescriptions/office-365-platform-service-description/office-365-education)
 >
@@ -106,7 +108,7 @@ Office 2010 を使用する場合、証明書ベースまたは多要素認証�
 >
 ### <a name="arm64"></a>ARM64 
 
-現在、ARM64 はサポートされて **いません** 。 
+現在、ARM64 はサポートされて **いません**。 
 
 ### <a name="virtual-machines"></a>仮想マシン
 
@@ -114,7 +116,7 @@ Office 2010 を使用する場合、証明書ベースまたは多要素認証�
 
 たとえば、Citrix ソリューションでは、Office、Azure Information Protection 統合ラベル付けクライアント、または Azure Information Protection クライアントのために [Citrix アプリケーション プログラミング インターフェイス (API) フックを無効にする](https://support.citrix.com/article/CTX107825)ことが必要になる場合があります。 
 
-これらのアプリケーションでは、それぞれ次のファイルが使用されます: **winword.exe** 、 **excel.exe** 、 **outlook.exe** 、 **powerpnt.exe** 、 **msip.app.exe** 、 **msip.viewer.exe**
+これらのアプリケーションでは、それぞれ次のファイルが使用されます: **winword.exe**、**excel.exe**、**outlook.exe**、**powerpnt.exe**、**msip.app.exe**、**msip.viewer.exe**
 
 ### <a name="server-support"></a>サーバー サポート
 
@@ -134,9 +136,9 @@ Azure Information Protection クライアントとリモート デスクトッ�
 
 ## <a name="applications"></a>アプリケーション
 
-Azure Information Protection クライアントでは、次のいずれかの Office エディションの Microsoft **Word** 、 **Excel** 、 **PowerPoint** 、 **Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
+Azure Information Protection クライアントでは、次のいずれかの Office エディションの Microsoft **Word**、**Excel**、**PowerPoint**、**Outlook** を使用して、ドキュメントと電子メールにラベルを付け、保護することができます。
 
-- Microsoft 365 Apps for Business または Microsoft 365 Business Premium の **Office アプリの最小バージョン 1805** 、ビルド 9330.2078。 
+- Microsoft 365 Apps for Business または Microsoft 365 Business Premium の **Office アプリの最小バージョン 1805**、ビルド 9330.2078。 
 
     このエディションは、ユーザーに Azure Rights Management (別名 Azure Information Protection for Microsoft 365) のライセンスが割り当てられている場合にのみサポートされます。
 
@@ -168,9 +170,9 @@ Office の他のエディションは、Rights Management サービスを使用�
 
 Azure Information Protection には、次の追加要件があります。
 
-- **統合ラベル付けクライアント** 。 ラベルとラベル ポリシーをダウンロードするには、HTTPS で次の URL を許可してください: * *_.protection.outlook.com_*
+- **統合ラベル付けクライアント**。 ラベルとラベル ポリシーをダウンロードするには、HTTPS で次の URL を許可してください: **_.protection.outlook.com_*
 
-- **Web プロキシ** 。 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory サインイン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
+- **Web プロキシ**。 認証が必要な Web プロキシを使用している場合には、ユーザーの Active Directory サインイン資格情報による統合 Windows 認証を使用するようにプロキシを構成する必要があります。
 
     プロキシを使用してトークンを取得するときに **Proxy.pac** ファイルをサポートするには、次の新しいレジストリ キーを追加します。
 
@@ -179,7 +181,7 @@ Azure Information Protection には、次の追加要件があります。
     - **種類:** `DWORD`
     - **値:** `1`
     
-- **TLS クライアント/サービス間接続** 。 **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえば、パケット レベルの検査を実行するためなど)。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
+- **TLS クライアント/サービス間接続**。 **aadrm.com** URL への TLS クライアント/サービス間接続を終了しないでください (たとえば、パケット レベルの検査を実行するためなど)。 この操作によって、RMS クライアントが使用している証明書のピン留めが解除されます。この証明書とは、Azure Rights Management サービスとの通信を保護するために、Microsoft が管理する CA と共に使用されているものです。
      
     クライアント接続が Azure Rights Management サービスに到達する前に終了しているかどうかを確認するには、次の PowerShell コマンドを使用します。
 
@@ -199,7 +201,7 @@ Azure Information Protection には、次の追加要件があります。
 
 同じ組織内の同じユーザーがコンテンツを保護できるように、同じ組織内で AD RMS と Azure RMS をサイド バイ サイドで使用することは、AD RMS で、Azure Information Protection での [HYOK (Hold Your Own Key) 保護](configure-adrms-restrictions.md)に対して **のみ** サポートされています。
 
-このシナリオは、 [移行](migrate-from-ad-rms-to-azure-rms.md)中にはサポート " *されません* "。
+このシナリオは、[移行](migrate-from-ad-rms-to-azure-rms.md)中にはサポート "*されません*"。
 サポートされている移行パスは次のとおりです。
 
 * [AD RMS から Azure Information Protection へ](migrate-from-ad-rms-to-azure-rms.md)
