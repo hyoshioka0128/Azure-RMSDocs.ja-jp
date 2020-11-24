@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: be43f28a737b45926e247caf2bce932484641052
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 075eae9729ac9175e570a8f0386dadcbfc22bb05
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971916"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570702"
 ---
 # <a name="android-code-examples"></a>Android のコード例
 
@@ -34,7 +34,7 @@ ms.locfileid: "82971916"
 
 この SDK を理解する上で重要な開発シナリオを表す大規模なサンプル アプリケーションのコード例を次に示します。 これらは、以下の使用方法を示します。
 
-- Microsoft Protected File 形式。_保護されたファイル_とも呼ばれます。
+- Microsoft Protected File 形式。_保護されたファイル_ とも呼ばれます。
 - カスタム保護ファイル形式。
 - カスタム ユーザー インターフェイス (UI) コントロール
 
@@ -42,11 +42,11 @@ ms.locfileid: "82971916"
 
 ### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ: RMS 保護ファイルを使用する
 
-- **手順 1**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) を作成します。
+- **手順 1**: [ProtectedFileInputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) を作成します。
 
     **ソース**: *MsipcAuthenticationCallback.java*
 
-    **説明**: [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) の呼び出しを参照してください。
+    **説明**: [ProtectedFileInputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) オブジェクトをインスタンス化して、サービス認証を実装します。  [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java) を使用して、**AuthenticationRequestCallback** のインスタンスを *mRmsAuthCallback* パラメーターで MSIPC API に渡すことにより、トークンを取得します。 以下のコード例セクションの末尾近くの [ProtectedFileInputStream.create](/previous-versions/windows/desktop/msipcthin2/protectedfileinputstream-class-java) の呼び出しを参照してください。
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -112,7 +112,7 @@ ms.locfileid: "82971916"
 
     **ソース**: *msipcauthenticationcallback. java*。
 
-    **説明**: この手順では、ADAL を使用して、[AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) に関するページをご覧ください。
+    **説明**: この手順では、ADAL を使用して、[AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) を認証パラメーターの例とともに実装します。 詳細については、[Azure AD 認証ライブラリ (ADAL)](/previous-versions/azure/jj573266(v=azure.100)) に関するページをご覧ください。
 
 
    ``` java
@@ -189,7 +189,7 @@ ms.locfileid: "82971916"
                      }
    ```
 
-- **手順 3**. [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの**編集**権限があるかを確認します。
+- **手順 3**. [UserPolicy.accessCheck](/previous-versions/windows/desktop/msipcthin2/userpolicy-accesscheck-method-java) メソッドを呼び出して、このユーザーにこのコンテンツの **編集** 権限があるかを確認します。
 
     **ソース**: *TextEditorFragment.java*
 
@@ -209,7 +209,7 @@ ms.locfileid: "82971916"
 
 このシナリオは、はじめにテンプレートの一覧を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
-- **手順 1**. [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) オブジェクトを使用してテンプレートの一覧を取得します。
+- **手順 1**. [TemplateDescriptor](/previous-versions/windows/desktop/msipcthin2/templatedescriptor-class-java) オブジェクトを使用してテンプレートの一覧を取得します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -252,7 +252,7 @@ ms.locfileid: "82971916"
     ```
 
 
-- **手順 2**. 一覧の最初のテンプレートを使用して [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 2**. 一覧の最初のテンプレートを使用して [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -297,7 +297,7 @@ ms.locfileid: "82971916"
     ```
 
 
--  **手順 3**. [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) を作成して、コンテンツを書き込みます。
+-  **手順 3**. [ProtectedFileOutputStream](/previous-versions/windows/desktop/msipcthin2/protectedfileoutputstream-class-java) を作成して、コンテンツを書き込みます。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -363,7 +363,7 @@ ms.locfileid: "82971916"
 
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
-- **手順 1**. *serializedContentPolicy* から [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 1**. *serializedContentPolicy* から [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -421,7 +421,7 @@ ms.locfileid: "82971916"
    ```
 
 
-- **手順 2**. **手順 1** の [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を使用して、[CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) を作成します。
+- **手順 2**. **手順 1** の [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) を使用して、[CustomProtectedInputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-class-java) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -493,7 +493,7 @@ ms.locfileid: "82971916"
     ```
 
 
-- **手順 3**. [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
+- **手順 3**. [CustomProtectedInputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedinputstream-class-java) から *mDecryptedContent* にコンテンツを読み取り、閉じます。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -535,7 +535,7 @@ ms.locfileid: "82971916"
 
     **ソース**: *MsipcTaskFragment.java*
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) と [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) からのユーザー入力を使用して作成されます。
+    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [UserRights](/previous-versions/windows/desktop/msipcthin2/userrights-class-java) と [PolicyDescriptor](/previous-versions/windows/desktop/msipcthin2/policydescriptor-interface-java) からのユーザー入力を使用して作成されます。
 
     ``` java
       // create userRights list
@@ -552,7 +552,7 @@ ms.locfileid: "82971916"
     ```
 
 
-- **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) を作成します。
+- **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [UserPolicy](/previous-versions/windows/desktop/msipcthin2/userpolicy-class-java) を作成します。
 
     **ソース**: *MsipcTaskFragment.java*
 
@@ -562,7 +562,7 @@ ms.locfileid: "82971916"
     ```
 
 
-- **手順 3**. [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) を作成してコンテンツを書き込み、閉じます。
+- **手順 3**. [CustomProtectedOutputStream](/previous-versions/windows/desktop/msipcthin2/customprotectedoutputstream-class-java) を作成してコンテンツを書き込み、閉じます。
 
     **ソース**: *MsipcTaskFragment.java*
 

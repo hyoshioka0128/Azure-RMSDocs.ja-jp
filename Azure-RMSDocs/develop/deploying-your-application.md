@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: c600f6e332ec230d73c90faafe8fb602e1d3dd88
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564366"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570695"
 ---
 # <a name="deploy-into-production"></a>運用環境にデプロイする
 
@@ -29,39 +29,39 @@ ms.locfileid: "88564366"
 AIP/RMS で開発されたアプリケーションをリリースする前に、Microsoft との正式な契約を申請し、完了する必要があります。
 
 ### <a name="begin-the-process"></a>プロセスを開始する
-次の情報を含む電子メールをに送信して、IPIA を入手し <strong>IPIA@microsoft.com</strong> ます。
+次の情報を記載した電子メールを <strong>IPIA@microsoft.com</strong> に送信して、IPIA を入手します。
 
-**件名:***会社名* の IPIA の申請
+**件名:** *会社名* の IPIA 申し込み
 
-電子メールの本文には、次の内容を含めます。
-- アプリケーションと製品の名前
-- 申請者の氏名
-- 申請者の電子メール アドレス
+電子メールの本文に、次の情報を含めます。
+- アプリケーションと製品名
+- 要求者の氏名
+- 要求者の電子メール アドレス
 
 ### <a name="next-steps"></a>次のステップ
-IPIA 申請の受領後、フォームが届きます (Word 文書)。
-IPIA の使用条件を確認し、フォームをに返し <strong>IPIA@microsoft.com</strong> ます。次の情報を参照してください。
+IPIA 申請が受信されると、(Word 文書形式の) フォームがお客様に送信されます。
+IPIA の使用条件を確認し、次の情報をフォームに入力して <strong>IPIA@microsoft.com</strong> に返送します。
 - 会社の正式名称
 - 法人の都道府県または国
 - 会社の URL
 - 連絡先の電子メール アドレス
-- 会社のその他のアドレス (省略可能)
+- (省略可能) 会社の追加住所
 - 会社のアプリケーションの名前
 - アプリケーションの簡単な説明
-- *Azure のテナント ID*
-- アプリケーションの*アプリ ID*
-- 緊急時の会社の連絡先、電子メール、電話番号
+- *Azure テナント ID*
+- アプリケーションの *アプリ ID*
+- 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
 ### <a name="completing-the-agreement"></a>契約の完了
-フォームが受領されると、デジタル署名のための最終 IPIA リンクが送信されます。 署名後、適切な Microsoft の担当者による署名が行われ、契約が完了します。
+フォームが受信されると、デジタル署名を行うための最終的な IPIA リンクがお客様に送信されます。 お客様の署名後、適切な Microsoft 担当者が署名することで、契約が締結されます。
 
-### <a name="already-have-a-signed-ipia"></a>IPIA が署名済みの場合
-署名済み IPIA を所有しており、リリースしているアプリケーションに新しい*アプリ ID* を追加したい場合は、電子メールを <strong>IPIA@microsoft.com</strong> に送信し、次の情報を提供してください。
+### <a name="already-have-a-signed-ipia"></a>既に署名済みの IPIA がある場合
+署名済みの IPIA が既に存在し、リリースするアプリケーション用に新しい *アプリ ID* を追加する場合は、電子メールに次の情報を記載して <strong>IPIA@microsoft.com</strong> に送信します。
 - 会社のアプリケーションの名前
 - アプリケーションの簡単な説明
 - Azure のテナント ID (以前と同じ場合でも必要です)
 - アプリケーションのアプリ ID
-- 緊急時の会社の連絡先、電子メール、電話番号
+- 緊急時の会社の連絡先、電子メール アドレス、および電話番号
 
 電子メールの送信から受領確認まで、最大で 72 時間お待ちください。
 
@@ -89,7 +89,7 @@ RMS クライアント 2.1 は RMS クライアント 2.1 のインストーラ�
 -   RMS クライアント 2.1 インストーラーをダウンロードする
 -   実行する RMS クライアント 2.1 インストーラーをアプリケーションのインストーラーと統合する
 
-RMS クライアント 2.1 とアプリケーションの統合例が [Rights Protected Folder エクスプローラー](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx)です。 方法を理解するため、自分でインストールしてみてください。
+RMS クライアント 2.1 とアプリケーションの統合例が [Rights Protected Folder エクスプローラー](/previous-versions/orphan-topics/ws.10/hh538204(v=ws.10))です。 方法を理解するため、自分でインストールしてみてください。
 
 ### <a name="make-rmsclient21-a-pre-requisite-for-your-application-install"></a>RMS クライアント 2.1 をアプリケーションをインストールする際の前提条件とする
 
@@ -103,7 +103,7 @@ RMS クライアント 2.1 とアプリケーションの統合例が [Rights Pr
 
 > [!NOTE]
 > 認証のために新しい ADAL モデルに移行している場合は、**SIA** をインストールする必要はありません。 詳細については、[RMS 対応アプリケーションの ADAL 認証](adal-auth.md)に関するページを参照してください。
-> また、**Windows 10 のアプリケーションを認定する**こともできます - アプリケーションを更新して Microsoft Online サインイン アシスタントではなく ADAL 認証が使用されるようにすることで、多要素認証の使用、コンピューターの管理権限を必要としない RMS クライアント 2.1 のインストールが可能になります
+> また、**Windows 10 のアプリケーションを認定する** こともできます - アプリケーションを更新して Microsoft Online サインイン アシスタントではなく ADAL 認証が使用されるようにすることで、多要素認証の使用、コンピューターの管理権限を必要としない RMS クライアント 2.1 のインストールが可能になります
 
 エンド ユーザーが Information Protection サービスを活用するには、*Online Services サインイン アシスタント (SIA)* をデプロイする必要があります。 アプリケーション開発者はエンドユーザーが (オンプレミスの) RMS と Azure Information Protection のどちらを使用して Information Protection を使用するかわかりません。
 
@@ -114,14 +114,14 @@ RMS クライアント 2.1 とアプリケーションの統合例が [Rights Pr
 
 -   Microsoft ダウンロード センターから [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=28177)をダウンロードします。
 -   権利保護に対応したアプリケーションのデプロイにこのサービス選択のための前提条件チェックが含まれるようにしてください。
--   独自のテストおよびエンドユーザーによるオンライン サービスの使用については、[Rights Management の構成](https://TechNet.Microsoft.Com/library/jj585002.aspx)に関する TechNet のトピックを参照してください。
+-   独自のテストおよびエンドユーザーによるオンライン サービスの使用については、[Rights Management の構成](../deployment-roadmap.md)に関する TechNet のトピックを参照してください。
 
-このガイドはアプリの構成でも必要になります - 「[Azure Active Directory ログインを使用するよう App Service アプリを構成する](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)」
+このガイドはアプリの構成でも必要になります - 「[Azure Active Directory ログインを使用するよう App Service アプリを構成する](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)」
 
 Azure Rights Management サービスで RMS を使用するためのアプリケーションの有効化については、[クラウド ベースの RMS を使用するためのアプリケーションの有効化](how-to-use-file-api-with-aadrm-cloud.md)に関するページを参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 
 * [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=28177)
-* [Rights Management の構成](https://TechNet.Microsoft.Com/library/jj585002.aspx)
+* [Rights Management の構成](../deployment-roadmap.md)
 * [クラウド ベースの RMS を使用するためのアプリケーションの有効化](how-to-use-file-api-with-aadrm-cloud.md)

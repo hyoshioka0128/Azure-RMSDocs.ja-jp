@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 10/23/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
@@ -13,16 +13,16 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a10e0f8c1af8134de0665ce3255cf42be4900783
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 5121fb6acac65b5325376a047bfbfa40279619f0
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869064"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569751"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft が管理: テナント キーのライフサイクル操作
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Microsoft が Azure Information Protection のテナント キーを管理する場合 (既定)、次のセクションを使用してこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
@@ -48,7 +48,7 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 Active Directory Rights Management サービス (AD RMS) から移行済みである場合に、Azure Information Protection 用に Microsoft が管理するキー トポロジを選択すると、Microsoft が管理するキーを複数持つことができます。 このシナリオでは、テナントに対して Microsoft が管理するキーは少なくとも 2 つあります。 1 つ (または複数の) キーが、AD RMS からインポートしたキーとなります。 Azure Information Protection テナント用に自動的作成された既定のキーもあります。
 
-Azure Information Protection のアクティブなテナントキーとして別のキーを選択するには、AIPService モジュールの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレットを使用します。 使用するキーを識別できるように、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを使用します。 Azure Information Protection テナント用に自動的に作成された既定のキーを特定するには、次のコマンドを実行します。
+Azure Information Protection のアクティブなテナントキーとして別のキーを選択するには、AIPService モジュールの [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) コマンドレットを使用します。 使用するキーを識別できるように、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) コマンドレットを使用します。 Azure Information Protection テナント用に自動的に作成された既定のキーを特定するには、次のコマンドを実行します。
 
 ```ps
 (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
@@ -64,7 +64,7 @@ Azure Information Protection の構成およびテナント キーをエクス�
 
 ### <a name="step-1-initiate-export"></a>手順 1:エクスポートを開始する
 
-- [Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)し、**Azure Information Protection キーのエクスポートの要求で Azure Information Protection サポート ケース**を開きます。 テナントのグローバル管理者であることを証明し、このプロセスの確認に数日かかることを理解しておく必要があります。 Standard サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
+- [Microsoft サポートに連絡](information-support.md#to-contact-microsoft-support)し、**Azure Information Protection キーのエクスポートの要求で Azure Information Protection サポート ケース** を開きます。 テナントのグローバル管理者であることを証明し、このプロセスの確認に数日かかることを理解しておく必要があります。 Standard サポートの料金が適用されます。テナント キーのエクスポートは無料のサポート サービスではありません。
 
 ### <a name="step-2-wait-for-verification"></a>手順 2:検証が完了するまで待機する
 
@@ -78,9 +78,9 @@ Azure Information Protection の構成およびテナント キーをエクス�
     AadrmTpd.exe -createkey
     ```
 
-    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 例: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**および**PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**。
+    この結果、RSA キー ペアが生成され、公開キーおよび秘密キーが現在のフォルダーにファイルとして保存されます。 例: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** および **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**。
 
-    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 次に例を示します。
+    CSS からの電子メールに返信します。返信には名前が **PublicKey** で始まるファイルを添付します。 次に CSS は、TPD ファイルを、RSA キーで暗号化された .xml ファイルとして送信します。 AadrmTpd ツールを最初に実行したフォルダーにこのファイルをコピーし、名前が **PrivateKey** で始まるファイルと CSS から受け取ったこのファイルを使用して、AadrmTpd ツールをもう一度実行します。 例:
 
     ```ps
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml

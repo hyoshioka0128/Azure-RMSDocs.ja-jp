@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 44D3EB62-7A60-45D9-BA7E-45A06E7D598F
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: f8d11222ec554c16ce1b3c0113d3bbe7cb291004
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 1cbd7d5810e1f25e872507b76c07cc11c1e394d2
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790905"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569782"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management サービス SDK 2.1
 
@@ -37,17 +37,17 @@ RMS SDK 2.1 は、Microsoft ダウンロード センターの [RMS SDK 2.1 
 
 特定のプログラミング要素の実行時の要件については、その要素のリファレンス トピックの要件に関するセクションを参照してください。
 
-|トピック|[説明]|
+|トピック|説明|
 |-----|--------|
 |[概要](ad-rms-overview.md)|Rights Management サービス (RMS) は、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。|
 |[はじめに](getting-started-with-ad-rms-2-0.md)|RMS SDK 2.1 プラットフォームを使用すると、開発者は RMS 情報保護を利用するアプリケーションを作成できます。|
 |[リリース ノート](release-notes-rtm.md)|このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
-|[開発者向け注意事項](developer-notes.md)|このセクションでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。|
+|[開発者向けのメモ](developer-notes.md)|このセクションでは、いくつかの重要な開発シナリオの具体的なガイダンスについて説明します。|
 |[API リファレンス](api-reference-2-1.md)|このセクションには、すべての API 要素に関するリファレンス情報を説明するトピックが含まれています。|
 
  
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [RMS SDK 2.1 のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=38397)
 * [RMS FAQ](https://aka.ms/adrmsfaq )

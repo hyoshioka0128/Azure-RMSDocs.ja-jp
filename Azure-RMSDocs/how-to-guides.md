@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 56d465d8efbc0b5bc2c6b87e1b60e34cb4e091f8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298225"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569695"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Azure Information Protection を使用する一般的なシナリオに関する操作ガイド
 
@@ -30,10 +30,10 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="common-scenarios"></a>一般的なシナリオ
 
-|シナリオの目的|手順|
+|シナリオの目的|Instructions|
 |----------------|---------------|
 |組織がオンプレミスに格納している機密情報を検索する|[クイック スタート:オンプレミスに格納しているファイル内の機密情報を検索する](quickstart-findsensitiveinfo.md)|
-|ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート: ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
+|ユーザーが機密情報を含む電子メールを簡単に保護できるようにする|[クイック スタート:ラベルを構成して、ユーザーが機密情報を含む電子メールを簡単に保護できるようにする](quickstart-label-dnf-protectedemail.md)|
 |ユーザーがデータを作成または編集したときに簡単に分類し、機密情報を含む場合は保護できるようにする| [チュートリアル: ポリシーを編集して新しいラベルを作成する](infoprotect-quick-start-tutorial.md)|
 |ユーザーが保護されたドキュメントに対して簡単に共同作業できるようにする|[Azure Information Protection を使用したセキュアなドキュメント コラボレーションの構成](secure-collaboration-documents.md)|
 |組織の外部に送信されるユーザーの電子メールを自動的に保護する| [Azure Information Protection ラベルのメール フロー ルールの構成](configure-exo-rules.md)
@@ -71,6 +71,6 @@ Azure Information Protection を使用して組織のドキュメントや電子
 
 ## <a name="next-steps"></a>次のステップ
 
-目的のシナリオが見つかりませんでしたか。 計画と展開の手順の完全な一覧については、[デプロイのロードマップ](deployment-roadmap.md)を確認してください。
+目的のシナリオが見つかりませんでしたか。 計画と展開の手順の完全な一覧については、 [デプロイのロードマップ](deployment-roadmap.md) を確認してください。
 
 Azure Information Protection を使用した経験がない場合は、ご自身の展開を開始する前に、サービスの概略を説明した「[Azure Information Protection とは](what-is-information-protection.md)」をご覧ください。

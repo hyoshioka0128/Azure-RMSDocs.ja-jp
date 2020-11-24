@@ -1,17 +1,17 @@
 ---
 title: 'クラス AuthDelegate:: OAuth2Challenge'
 description: 'Microsoft Information Protection (MIP) SDK の authdelegate:: oauth2challenge クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: f8a350a8c9ddd68f484a98b0e63860d2965bd890
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: f422b99674213904316eab622bfc915f128228ec
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763609"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569286"
 ---
 # <a name="class-authdelegateoauth2challenge"></a>クラス AuthDelegate:: OAuth2Challenge 
 oauth2 トークンを生成するために、呼び出し元アプリケーションから必要なすべての情報を含むクラス。
@@ -45,22 +45,22 @@ public const std:: string& GetClaims () const  |  クレーム文字列を取得
 権限文字列を取得します。
 
   
-は、authority 文字列を**返し**ます。
+は、authority 文字列を **返し** ます。
   
 ### <a name="getresource-function"></a>GetResource 関数
 リソース文字列を取得します。
 
   
-は、リソース文字列を**返し**ます。
+は、リソース文字列を **返し** ます。
   
 ### <a name="getscope-function"></a>GetScope 関数
 スコープ文字列を取得します。
 
   
-は、スコープ文字列を**返し**ます。
+は、スコープ文字列を **返し** ます。
   
 ### <a name="getclaims-function"></a>GetClaims 関数
 クレーム文字列を取得します。
 
   
-は、要求文字列を**返し**ます。
+は、要求文字列を **返し** ます。

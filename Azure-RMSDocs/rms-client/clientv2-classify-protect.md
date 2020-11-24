@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: be6e853e8536db130436818aabc8b5289d16393e
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 1e975eb3449169609e7b283e690b4d9046d5902e
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447278"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570303"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>ユーザーガイド: Azure Information Protection 統合されたラベル付けクライアントを使用して分類および保護する
 
@@ -24,16 +24,16 @@ ms.locfileid: "89447278"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > 次の手順に従って、ドキュメントや電子メールを分類して保護します。 ドキュメントや電子メールを分類するだけで保護する必要がない場合は、[分類のみの手順](clientv2-classify.md)を参照してください。 どちらの手順を使用するかわからない場合は、管理者またはヘルプ デスクに確認してください。
 
 Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、**Outlook**) でドキュメントや電子メールを作成したり編集すると、分類と保護が簡単になります。 
 
-ただし、**エクスプローラー**を利用してファイルを分類し、保護することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類し、保護できるので便利です。 この方法は、Office ドキュメント、PDF ファイル、テキスト ファイル、画像ファイルなどさまざまなファイルの保護をサポートしています。 
+ただし、**エクスプローラー** を利用してファイルを分類し、保護することもできます。 この方法では対応しているファイルの種類が増えます。また、複数のファイルを一度に分類し、保護できるので便利です。 この方法は、Office ドキュメント、PDF ファイル、テキスト ファイル、画像ファイルなどさまざまなファイルの保護をサポートしています。 
 
-ラベルによってドキュメントに保護が適用される場合、保護されたドキュメントは SharePoint または OneDrive に保存するのに適していない可能性があります。 管理者が [SharePoint と OneDrive で Office ファイルの秘密度ラベルを有効](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)にしているかどうかを確認します。
+ラベルによってドキュメントに保護が適用される場合、保護されたドキュメントは SharePoint または OneDrive に保存するのに適していない可能性があります。 管理者が [SharePoint と OneDrive で Office ファイルの秘密度ラベルを有効](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)にしているかどうかを確認します。
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>組織外の相手と安全にファイルを共有する
 
@@ -48,15 +48,15 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Office アプリを使用してドキュメントや電子メールを分類して保護する
 
-[ **ホーム** ] タブで、リボンの [ **感度** ] ボタンを選択し、構成されているラベルのいずれかを選択します。 次に例を示します。
+[ **ホーム** ] タブで、リボンの [ **感度** ] ボタンを選択し、構成されているラベルのいずれかを選択します。 例:
 
 ![感度ボタンの例](../media/sensitivity-not-set-callout.png)
 
-または、[**感度**] ボタンから [**バーの表示**] を選択した場合は、Azure Information Protection バーからラベルを選択できます。 次に例を示します。
+または、[**感度**] ボタンから [**バーの表示**] を選択した場合は、Azure Information Protection バーからラベルを選択できます。 例:
 
 ![Azure Information Protection バーの例](../media/info-protect-barv2-not-set-callout.png)
 
-"**社外秘**すべての従業員" などのラベルを設定するには  \  **All Employees**、[**社外秘**]、[**すべての従業員**] の順に選択します。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。
+"**社外秘** すべての従業員" などのラベルを設定するには  \  **All Employees**、[**社外秘**]、[**すべての従業員**] の順に選択します。 現在のドキュメントや電子メールに適用するラベルがわからない場合は、ラベルのツールヒントで、各ラベルの詳細と適用する場合を参照してください。
 
 ラベルがドキュメントに既に適用され、ラベルを変更する場合は、別のラベルを選択できます。 Azure Information Protection バーが表示されていて、選択できるバーにラベルが表示されていない場合は、まず、現在のラベルの値の横にある [ **ラベルの編集** ] アイコンをクリックします。
 
@@ -82,9 +82,9 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 - 管理者が新しいラベルを構成したばかりの場合は、すべてのインスタンスの Office アプリを終了してから、開き直します。 この操作で、ラベルの変更が確認されます。
 
-- 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、[**秘密度**の  >  **ヘルプとフィードバック**] をクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
+- 存在しないラベルで保護を適用すると、Rights Management 保護の適用をサポートしていない Office のエディションになる可能性があります。 確認するには、[**秘密度** の  >  **ヘルプとフィードバック**] をクリックします。 ダイアログ ボックスで、**[クライアント ステータス]** セクションに **[このクライアントには Office Professional Plus のライセンスがありません]** というメッセージが表示されているかどうかを確認します。 
     
-    ユーザーに Azure Rights Management (別名: Azure Information Protection for Office 365) のライセンスが割り当てられている場合は、Office 365 Business または Microsoft 365 Business の Office アプリがあれば、Office Professional Plus は必要ありません。
+    Office Professional Plus は、ユーザーに Azure Rights Management のライセンスが割り当てられている場合に Microsoft 365 App for Business または Microsoft 365 Business Premium の Office アプリを持っている場合には必要ありません (Microsoft 365 の Azure Information Protection とも呼ばれます)。
 
 - 自分のアカウントを含まない範囲のポリシーのラベルである可能性があります。 ヘルプ デスクまたは管理者に問い合わせてください。
 
@@ -116,7 +116,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 2. **[分類と保護 - Azure Information Protection]** ダイアログ ボックスで、Office アプリケーションでの操作と同様にラベルを使用し、管理者によって定義されたとおりに分類と保護を設定します。 
 
-   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 次に例を示します。
+   - 選択できるラベルがない場合 (すべてのラベルが淡色表示されている場合): 選択したファイルは分類をサポートしていませんが、カスタム アクセス許可で保護できます (手順 3)。 例:
 
      ![[分類と保護 - Azure Information Protection]** ダイアログ ボックスで使用できるラベルがない](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -138,7 +138,7 @@ Office のデスクトップ アプリ (**Word**、**Excel**、**PowerPoint**、
 
 5. **[適用]** をクリックし、**"作業が終了しました"** というメッセージで結果が示されるまで待ちます。 次に、**[閉じる]** をクリックします。
 
-選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 次に例を示します。
+選択されたファイルは、指定した設定に従って分類および保護されます。 場合によっては (保護の追加によってファイル名の拡張子が変更される場合)、エクスプローラーの元のファイルが Azure Information Protection のロック アイコンの付いた新しいファイルに置き換えられます。 例:
 
 ![Azure Information Protection のロック アイコンが付いた保護されたファイル](../media/Pfile.png)
 

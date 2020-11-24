@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 974995056b14d714dbda7e00df4255cbd54302e1
-ms.sourcegitcommit: 44b874f32cbd1e0552ba8a1f8c9496344ecf8adc
+ms.openlocfilehash: 9b0f9e3fa619762e08d32fb17da576d58f92071d
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630386"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570031"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK のよく寄せられる質問と問題
 
@@ -49,13 +49,21 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 これは、ラベルを Azure Information Protection から統合されたラベル付けエクスペリエンスに移行していないことを示しています。 「[Azure Information Protection ラベルを Office 365 セキュリティ/コンプライアンス センターに移行する方法](/azure/information-protection/configure-policy-migrate-labels)」に従ってラベルを移行した後、Office 365 セキュリティとコンプライアンス センターでラベル ポリシーを作成します。 
 
+### <a name="error-nopolicyexception-label-policy-did-not-contain-data"></a>エラー: "NoPolicyException: ラベルポリシーにデータが含まれていません"
+
+**質問**: MIP SDK を使用してラベルを読み取り、ラベルを一覧表示しようとすると、次のエラーが表示されるのはなぜですか。
+
+> NoPolicyException: ラベルポリシーにデータが含まれていませんでした。 CorrelationId = GUID, CorrelationId. Description = PolicyProfile, Nopolicyexception. Category = SyncFile, Nopolicyexception. Category = SyncFile
+
+これは、Microsoft のセキュリティとコンプライアンスセンターで、ラベル付けポリシーが発行されていないことを示します。 ラベル付けポリシーを構成するには、「 [秘密度ラベルとそのポリシーを作成して構成](/microsoft-365/compliance/create-sensitivity-labels) する」に従ってください。
+
 ### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>エラー: "System.componentmodel. Win32Exception: LoadLibrary が失敗しました"
 
 **質問**: MIP SDK .net ラッパーを使用すると、次のエラーが表示されるのはなぜですか。
 
-> System.componentmodel: Win32Exception: MIP の呼び出し時に、: [sdk_wrapper_dotnet .dll] の LoadLibrary が失敗しました。Initialize ()。
+> MIP.Initialize () を呼び出すときに、: [sdk_wrapper_dotnet.dll] の System.componentmodel: LoadLibrary が失敗しました。
 
-アプリケーションに必要なランタイムがないか、またはリリースとしてビルドされていません。 詳細については、「[アプリに必要なランタイムがあることを確認](setup-configure-mip.md#ensure-your-app-has-the-required-runtime)する」を参照してください。 
+アプリケーションに必要なランタイムがないか、またはリリースとしてビルドされていません。 詳細については、「 [アプリに必要なランタイムがあることを確認](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) する」を参照してください。 
 
 ### <a name="error-proxyautherror-exception"></a>エラー: "ProxyAuthError 例外"
 
@@ -63,10 +71,10 @@ SDK はクロスプラットフォームでの使用を想定しています。�
 
 > "Proxyauthentication Atonerror: プロキシ認証がサポートされていません"
 
-MIP SDK は、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するには、プロキシ管理者は、プロキシをバイパスするように Microsoft Information Protection サービスエンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「 [Office 365 の url と IP アドレス範囲](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)」ページを参照してください。 MIP SDK で `*.protection.outlook.com` は、(行 9) と Azure Information Protection サービスエンドポイント (行 73) がプロキシ認証をバイパスする必要があります。
+MIP SDK は、認証されたプロキシの使用をサポートしていません。 このメッセージを修正するには、プロキシ管理者は、プロキシをバイパスするように Microsoft Information Protection サービスエンドポイントを設定する必要があります。 これらのエンドポイントの一覧については、「 [Office 365 の url と IP アドレス範囲](/office365/enterprise/urls-and-ip-address-ranges) 」ページを参照してください。 MIP SDK で `*.protection.outlook.com` は、(行 9) と Azure Information Protection サービスエンドポイント (行 73) がプロキシ認証をバイパスする必要があります。
 
 ### <a name="issues-in-net-core"></a>.NET Core での問題
 
 **質問**: NuGet パッケージは .net Core で動作しますか。 
 
-NuGet パッケージは .NET Core プロジェクトにインストールされますが、実行は失敗します。 Windows での修正に取り組んでいますが、現在、他のプラットフォームをサポートするタイムラインがありません。 
+NuGet パッケージは .NET Core プロジェクトにインストールされますが、実行は失敗します。 Windows での修正に取り組んでいますが、現在、他のプラットフォームをサポートするタイムラインがありません。

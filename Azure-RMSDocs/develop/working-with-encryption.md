@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d309f08866bc01cde2725581ccef796bdbe96e98
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 45b5b2b76abb7a2b2c5dcb826ed15774fb81c606
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563568"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570607"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>方法: 暗号化設定の操作
 
@@ -41,7 +41,7 @@ ms.locfileid: "88563568"
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (非推奨のアルゴリズムとも呼ばれます)
 
-暗号化パッケージ フラグ (「[Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx)」(推奨される暗号化) を参照) はライセンス プロパティ フラグ (*IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*) と併用できます。
+暗号化パッケージ フラグ (「[Preferred encryption](/previous-versions/windows/desktop/msipc/preferred-encryption)」(推奨される暗号化) を参照) はライセンス プロパティ フラグ (*IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*) と併用できます。
 
 新しいライセンス プロパティの使用方法を示すいくつかの単純なコード スニペットは次のとおりです。
 
@@ -81,7 +81,7 @@ hr = IpcSetLicenseProperty(pLicenseHandle,
 
 ## <a name="protect-files-with-aes-128-ecb-deprecated-algorithms"></a>AES 128 ECB (非推奨のアルゴリズム) によるファイルの保護
 
-この例は*非推奨のアルゴリズム*をサポートする新しい方法も示しています。
+この例は *非推奨のアルゴリズム* をサポートする新しい方法も示しています。
 
 ```cpp
 hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,

@@ -1,38 +1,38 @@
 ---
 title: PowerShell を使用した Azure Information Protection からの保護の管理
 description: Azure Information Protection から保護サービスの PowerShell モジュールを使用して、テナントのこのサービスを管理する方法について説明します。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: efb7f76b89e9918100c9fd092fe321c738fd44ba
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 49e2d716362ebc637015a1032ff373f1d33b9860
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224650"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569518"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>PowerShell を使用した Azure Information Protection からの保護の管理
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection から、PowerShell を使用して保護サービスを管理する必要がありますか。 すべての構成を Azure portal または Microsoft 365 管理センターで行える場合は、使用する必要がない場合もあります。 ただし、一部の詳細な構成には PowerShell を使用する必要があり、効率的なコマンドライン コントロールとスクリプトのために PowerShell の使用を選ぶ可能性もあります。
 
 次のセクションの表では、PowerShell を使う高度な構成シナリオの一部を示します。 PowerShell を使わずに構成できる場合は、そのことも表に示してあります。
 
-このモジュールで使用可能なコマンドレットの完全な一覧については、「 [Aipservice](/powershell/module/aipservice/?view=azureipps#aipservice)」を参照してください。
+このモジュールで使用可能なコマンドレットの完全な一覧については、「 [Aipservice](/powershell/module/aipservice/#aipservice)」を参照してください。
 
 > [!NOTE]
 > この PowerShell モジュールをインストールするには、「 [AIPService powershell モジュールのインストール](install-powershell.md)」を参照してください。
 
-このサービス側 PowerShell モジュールに加えて、Azure Information Protection クライアントでは補助 PowerShell モジュール **AzureInformationProtection** がインストールされます。 このクライアント モジュールは、たとえばフォルダー内のすべてのファイルを一括して保護できるように、複数のファイルの分類と保護をサポートしています。 詳細については、管理者ガイドの「 [Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md)」を参照してください。
+このサービス側 PowerShell モジュールに加えて、Azure Information Protection クライアントでは補助 PowerShell モジュール **AzureInformationProtection** がインストールされます。 このクライアント モジュールは、たとえばフォルダー内のすべてのファイルを一括して保護できるように、複数のファイルの分類と保護をサポートしています。 詳細については、管理者ガイドの「 [Azure Information Protection クライアントでの PowerShell の使用](./rms-client/client-admin-guide-powershell.md) 」を参照してください。
 
 ## <a name="cmdlets-grouped-by-administration-task"></a>管理タスク別にグループ化されたコマンドレット
 

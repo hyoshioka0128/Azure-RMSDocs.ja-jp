@@ -13,19 +13,19 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 59029ba4ebd55cc687d529eec01c58c5cced15c3
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 24479014fcbd0bd93b65d6958d004deb9c7e0c95
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953203"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570391"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Azure Information Protection テナント キーを計画して実装する
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection テナント キーは組織のルート キーです。 その他のキーは、ユーザーキー、コンピューターキー、ドキュメント暗号化キーなど、このルートキーから派生できます。 Azure Information Protection が組織でこれらのキーを使用するたびに、暗号化された Azure Information Protection ルートテナントキーにチェーンされます。
 
@@ -104,4 +104,4 @@ DKE はクラウドとオンプレミスのどちらにでもデプロイでき�
 > DKE は、アクセス権を取得するために銀行キーと顧客キーの両方を必要とする安全預金箱に似ています。
 > 保護されたコンテンツの暗号化を解除するには、Microsoft によって保持されているキーと、ユーザーが保持するキーの両方が必要です。
 
-詳細については、Microsoft 365 ドキュメントの「 [Double キー encryption](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) 」を参照してください。 
+詳細については、Microsoft 365 ドキュメントの「 [Double キー encryption](/microsoft-365/compliance/double-key-encryption) 」を参照してください。

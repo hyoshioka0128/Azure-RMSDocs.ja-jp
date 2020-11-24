@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 0487b9ed7c2f0c8cdc0cbea9aa70ebd3e29b268b
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: a7cf207b0976db31ffa4df83d20e172876c7ee88
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564026"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570678"
 ---
 # <a name="how-to-use-adal-authentication"></a>方法: ADAL 認証の使用
 
@@ -54,7 +54,7 @@ Microsoft Online サインイン アシスタントではなく、ADAL 認証を
 1. 「[Configure Azure RMS for ADAL authentication](adal-auth.md)」 (Azure RMS の ADAL 認証を構成する) の Azure 構成手順に従い、その後、次のアプリ初期化手順に戻ります。
 2. RMS SDK 2.1 で提供される内部 ADAL 認証を使用するようにアプリケーションを構成する準備が整いました。
 
-RMS クライアントを構成するには、[IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) の呼び出しの直後に [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) に呼び出しを追加し、RMS クライアントを構成します。 次のコード スニペットを例として使用できます。
+RMS クライアントを構成するには、[IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) の呼び出しの直後に [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty) に呼び出しを追加し、RMS クライアントを構成します。 次のコード スニペットを例として使用できます。
 
 ```cpp
 IpcInitialize();
@@ -116,13 +116,13 @@ HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out
 
 ## <a name="related-topics"></a>関連トピック
 
-- [データ型](https://msdn.microsoft.com/library/hh535288.aspx)
-- [環境のプロパティ](https://msdn.microsoft.com/library/hh535247.aspx)
-- [IpcCreateOAuth2Token](https://msdn.microsoft.com/library/mt661866.aspx)
-- [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
-- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
-- [IPC_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
-- [IPC_NAME_VALUE_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
-- [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
-- [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
-- [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
+- [データ型](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-data-types)
+- [環境プロパティ](/previous-versions/windows/desktop/msipc/environment-properties)
+- [IpcCreateOAuth2Token](/previous-versions/windows/desktop/msipc/ipccreateoauth2token)
+- [IpcGetKey](/previous-versions/windows/desktop/msipc/ipcgetkey)
+- [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize)
+- [IPC_CREDENTIAL](/previous-versions/windows/desktop/msipc/ipc-credential)
+- [IPC_NAME_VALUE_LIST](/previous-versions/windows/desktop/msipc/ipc-name-value-list)
+- [IPC_OAUTH2_CALLBACK_INFO](/previous-versions/windows/desktop/msipc/ipc-oath2-callback-info)
+- [IPC_PROMPT_CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx)
+- [IPC_AAD_APPLICATION_ID](/previous-versions/windows/desktop/msipc/ipc-aad-application-id)

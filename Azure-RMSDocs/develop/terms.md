@@ -14,19 +14,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 87aa190a87426e61d919b8781444239c4ce5d3c7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4f33a7a730ad8f6f48870ce4b2450007712e7bf1
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790762"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95569999"
 ---
-# <a name="terms"></a>利用規約
+# <a name="terms"></a>Terms
 
 Azure Information Protection に固有の開発者用語定義のコレクション。
 
 **非推奨のアルゴリズム**  
-以前のコンテンツ保護スキーム、具体的には電子コードブック暗号モード (ECB) を実装するモーダル設定。 この SDK では、この設定を使用して、[AD Rights Management サービス SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) で使用される MSDRM ライブラリと互換性のあるライセンスを生成できます。
+以前のコンテンツ保護スキーム、具体的には電子コードブック暗号モード (ECB) を実装するモーダル設定。 この SDK では、この設定を使用して、[AD Rights Management サービス SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal) で使用される MSDRM ライブラリと互換性のあるライセンスを生成できます。
 
 この設定を使用すると、顧客のコンテンツ保護の標準に準拠しない方法で、アプリケーションがコンテンツを保護する可能性があります。
 
@@ -37,4 +37,3 @@ Azure Information Protection に固有の開発者用語定義のコレクショ
 PFile 形式とも呼ばれる AD RMS の既定のファイル形式で、RMS 対応アプリケーション全体で標準として機能します。
 
 PFile 形式は Microsoft Rights Management SDK 4.2 の設計方法で埋め込まれているため、アプリケーション開発者が意識することはほとんどありません。
-

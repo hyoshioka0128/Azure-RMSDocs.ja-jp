@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8d2b5ad766f02a7c7861d64aaef39e905f578bd1
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 2af1d3fad0e831032d8c7f6aa2a312cdfb7a9558
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447177"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570319"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection 統合ラベル付けクライアント管理者ガイド
 
@@ -24,11 +24,11 @@ ms.locfileid: "89447177"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
-> *手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 このガイドの情報は、エンタープライズネットワーク上で Azure Information Protection 統合されたラベル付けクライアントを担当している場合、または、「 [Azure Information Protection ユニファイドラベルクライアントユーザーガイド](clientv2-user-guide.md)」に記載されている技術情報が必要な場合に使用します。 
 
-次に例を示します。
+例:
 
 - このクライアントのさまざまなコンポーネントについて知り、インストールする必要があるかどうかを理解する
 
@@ -65,7 +65,7 @@ AD RMS を所有していて、Azure Information Protection に移行する場�
 
 ## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Azure Information Protection 統合されたラベル付けクライアントを展開する必要がありますか。
 
-[Office 365 Security & コンプライアンスセンターで機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)を使用していて、次のいずれかに該当する場合は、Azure Information Protection 統一されたラベル付けクライアントを展開します。
+Microsoft 365 で [機密ラベル](/microsoft-365/compliance/sensitivity-labels) を使用していて、次のいずれかに該当する場合は、Azure Information Protection 統合されたラベル付けクライアントを展開します。
 
 - Windows コンピューター上の Office アプリ (Word、Excel、PowerPoint、Outlook) 内からラベルを選択して、ドキュメントや電子メールメッセージを分類 (および必要に応じて保護) する。
 
@@ -103,7 +103,7 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 これらを Microsoft サポートに送信するように求められた場合は、 **エクスポートログ** によって、Azure Information Protection 統合されたラベル付けクライアントのログファイルが自動的に収集され、アタッチされます。 エンドユーザーがこのオプションを使用して、ヘルプ デスクにこれらのログ ファイルを送信することもできます。 または、 [Export-Aiの gs](/powershell/module/azureinformationprotection/export-aiplogs) PowerShell コマンドレットを使用することもできます。
 
-**リセット設定**では、ユーザーをサインアウトし、現在ダウンロードされている機密ラベルとラベルポリシーを削除して、Azure Rights Management サービスのユーザー設定をリセットします。
+**リセット設定** では、ユーザーをサインアウトし、現在ダウンロードされている機密ラベルとラベルポリシーを削除して、Azure Rights Management サービスのユーザー設定をリセットします。
 
 > [!NOTE]
 > クライアントで技術的な問題が発生した場合は、「 [サポートオプションとコミュニティリソース](../information-support.md#support-options-and-community-resources)」を参照してください。
@@ -128,21 +128,21 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
     
     通常、エンタープライズ ネットワークでは、グループ ポリシーをコンピューター上で更新するときに、これらの設定が自動的に再適用される場合、設定はグループ ポリシーを使用して構成されます。 ただし、スクリプトで一度構成されているか、手動で構成されている設定がある場合があります。 これらの場合、設定を再構成するには、追加の手順を行う必要があります。 たとえば、AD RMS から移行しても、内部ネットワーク上にまだサービス接続ポイントがあるため、Azure Information Protection へのリダイレクトの設定を構成するには、コンピューターでスクリプトが一度実行される場合があります。 クライアントをリセットした後、コンピューターでこのスクリプトをもう一度実行する必要があります。
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - 現在サインインしているユーザーは、サインアウトします。
 
 #### <a name="client-status-section"></a>**クライアント ステータス** セクション
 
-**接続**の値を使って、表示されているユーザー名が Azure Information Protection 認証に使用されるアカウントを識別するか確認します。 このユーザー名は、Office 365 または Azure Active Directory に使用しているアカウントに一致する必要があります。 また、アカウントは、ラベル管理ポータルでの秘密度ラベルが構成されている Office 365 テナントに属している必要があります。
+**接続** の値を使って、表示されているユーザー名が Azure Information Protection 認証に使用されるアカウントを識別するか確認します。 このユーザー名は、Microsoft 365 または Azure Active Directory に使用されるアカウントと一致する必要があります。 また、このアカウントは、ラベル付け管理ポータルの秘密度ラベル用に構成されている Microsoft 365 テナントに属している必要があります。
 
 表示されているユーザーに別のユーザーとしてサインインする必要がある場合は、「 [別のユーザーとしてサインイン](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) する」を参照してください。
 
@@ -150,15 +150,15 @@ Azure Information Protection 統合ラベル付けクライアント用の Offic
 
 ## <a name="support-for-multiple-languages"></a>多言語のサポート
 
-Azure Information Protection の統一されたラベル付けクライアントは、Office 365 でサポートされている言語と同じ言語をサポートしています。 サポートされる言語の一覧については、Office の「[ご利用いただける国と地域](https://products.office.com/business/international-availability)」ページの「**Office 365、Exchange Online Protection、Power BI**」セクションを参照してください。
+Azure Information Protection の統一されたラベル付けクライアントは、Office 365 でサポートされている言語と同じ言語をサポートしています。 これらの言語の一覧については、「Office の [インターナショナル可用性](https://products.office.com/business/international-availability) 」ページを参照してください。
 
 これらの言語の場合、メニューオプション、ダイアログボックス、および Azure Information Protection 統合ラベルクライアントからのメッセージは、ユーザーの言語で表示されます。 言語を検出するインストーラーが1つあるので、Azure Information Protection 統合されたラベル付けクライアントを別の言語用にインストールするために、追加の構成は必要ありません。 
 
-ただし、ラベルの名前と説明を指定した説明は、ラベル付けセンターでラベルを構成するときに自動的には変換されません。 ユーザーが好みの言語でラベルを表示できるようにするには、独自の翻訳を提供し、Office 365 Security & コンプライアンス PowerShell を使用し、 *LocaleSettings* パラメーターを [設定](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)して、ラベル用に構成します。 視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
+ただし、ラベルの名前と説明を指定した説明は、ラベル付けセンターでラベルを構成するときに自動的には変換されません。 ユーザーが好みの言語でラベルを表示できるようにするには、独自の翻訳を提供し、Office 365 Security & コンプライアンス PowerShell を使用し、 *LocaleSettings* パラメーターを [設定](/powershell/module/exchange/policy-and-compliance/set-label)して、ラベル用に構成します。 視覚的なマーキングは翻訳されず、複数の言語をサポートしていません。
 
 ## <a name="post-installation-tasks"></a>インストール後のタスク
 
-Azure Information Protection の統一されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法についてユーザーに指示し、特定のシナリオに対して選択するラベルについてのガイダンスを提供してください。 次に例を示します。
+Azure Information Protection の統一されたラベル付けクライアントをインストールした後、ドキュメントや電子メールにラベルを付ける方法についてユーザーに指示し、特定のシナリオに対して選択するラベルについてのガイダンスを提供してください。 例:
 
 - オンラインユーザー手順: [Azure Information Protection 統一されたラベル付けユーザーガイド](clientv2-user-guide.md)
 
@@ -199,7 +199,7 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 2.    [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から、統一されたラベル付けクライアントの最新バージョンをダウンロードしてインストールすることによって、Azure Information Protection 統合ラベル付けクライアントをアップグレードします。
 
-3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile Europe`
+3. PowerShell セッションで、スキャナーのプロファイルを使用して Update-AIPScanner コマンドを実行します。 例: `Update-AIPScanner –Profile Europe`
 
 4. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
 
@@ -215,7 +215,7 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 - [1.48.204.0 より前のバージョンからのアップグレード](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-アップグレードによって**AIPScannerUL_ \<profile_name> **という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、以前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
+アップグレードによって **AIPScannerUL_ \<profile_name>** という名前の新しいデータベースが作成され、以前のバージョンで必要になった場合に備えて、以前のスキャナデータベースが保持されます。 以前のスキャナーデータベースが不要な場合は、削除することができます。 アップグレードによって新しいデータベースが作成されるため、スキャナーは初回の実行時にすべてのファイルを再スキャンします。
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>このクライアントの Azure Information Protection クライアント (クラシック) バージョン1.48.204.0 以降のバージョンからのアップグレード
 
@@ -225,9 +225,9 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 2. [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53018)から、統一されたラベル付けクライアントをダウンロードしてインストールし、Azure Information Protection の統合ラベル付けクライアントにアップグレードします。
 
-3. PowerShell セッションで、スキャナーのプロファイルを使用して、更新プログラム-AIPScanner コマンドを実行します。 たとえば、 `Update-AIPScanner –Profile Europe`と指定します。
+3. PowerShell セッションで、スキャナーのプロファイルを使用して Update-AIPScanner コマンドを実行します。 たとえば、`Update-AIPScanner –Profile Europe` のように指定します。
     
-    この手順では、という名前の新しいデータベースを作成し**AIPScannerUL_ \<profile_name> **
+    この手順では、という名前の新しいデータベースを作成し **AIPScannerUL_ \<profile_name>**
 
 4. Information Protection Scanner サービス **Azure Information Protection Scanner** を再起動します。
 
@@ -254,7 +254,7 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 
 ###### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>推奨される手順と異なる順序でのアップグレード
 
-1.48.204.0 より前のバージョンからアップグレードするときに、Azure portal でスキャナーを構成せずに、更新プログラムを実行する前に、アップグレードプロセスのスキャナー構成設定を識別するプロファイル名を指定することはできません。 
+1.48.204.0 より前のバージョンからアップグレードするときに、Update-AIPScanner コマンドを実行する前に Azure portal でスキャナーを構成しなかった場合、アップグレードプロセスのスキャナー構成設定を識別するプロファイル名を指定することはできません。 
 
 このシナリオでは、Azure portal 上でスキャナーを構成するときに、Update-AIPScanner コマンドの実行時に使用したのとまったく同じプロファイル名を指定する必要があります。 名前が一致しない場合、スキャナーは設定に対して構成されません。 
 
@@ -285,5 +285,3 @@ Windows 7 の Azure Information Protection クライアント (クラシック) 
 - [サポートされるファイルの種類](client-admin-guide-file-types.md)
 
 - [PowerShell コマンド](client-admin-guide-powershell.md)
-
-

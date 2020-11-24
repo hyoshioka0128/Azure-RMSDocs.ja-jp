@@ -1,17 +1,17 @@
 ---
 title: ClassificationRequest クラス
 description: 'Microsoft Information Protection (MIP) SDK の classificationrequest:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 0d4b8d3ed5e12698c0044975516b017d1c9376b0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2e509950bad2d219843c2d45ebd3922a19bef7f4
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763545"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569238"
 ---
 # <a name="class-classificationrequest"></a>ClassificationRequest クラス 
 実行状態に対する分類呼び出しの要求を含むクラス。

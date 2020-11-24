@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: fc2b1ab888de2cba020d22201807aabc64b85d8d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: a760f59effa09cf55f7618e6ab965c5e95f015d3
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564198"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570662"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>方法: クラウド ベース RMS でのサービス アプリケーション使用の有効化
 
 [!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
-このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)」を参照してください。
+このトピックでは、Azure Rights Management を使用するようにサービス アプリケーションをセットアップする手順について説明します。 詳細については、「[Azure Rights Management の概要](../requirements.md)」を参照してください。
 
 **重要**  
 Rights Management Services SDK 2.1 サービスを Azure RMS で利用するには、独自のテナントを作成する必要があります。 詳細については、「 [Azure RMS の要件: Azure RMS をサポートするクラウドサブスクリプション](../requirements.md)」を参照してください。
@@ -33,12 +33,12 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 ## <a name="prerequisites"></a>前提条件
 
 -   RMS SDK 2.1 をインストールして構成する必要があります。 詳細については、[RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)を参照してください。
--   対称キーのオプションを使用するかその他の方法で、[ACS を介してサービス ID を作成](https://msdn.microsoft.com/library/gg185924.aspx)して、その処理中にキー情報をメモします。
+-   対称キーのオプションを使用するかその他の方法で、[ACS を介してサービス ID を作成](/previous-versions/azure/azure-services/gg185924(v=azure.100))して、その処理中にキー情報をメモします。
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Azure Rights Management サービスへの接続
 
-- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) を呼び出します。
-- [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) を設定します。
+- [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) を呼び出します。
+- [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty) を設定します。
 
   ```cpp
   int mode = IPC_API_MODE_SERVER;
@@ -48,10 +48,10 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
   **注** 詳細については、「[Setting the API security mode (API セキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
 
--   次の手順は、 [ipc \_ PROMPT \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx) 構造体のインスタンスを作成するためのセットアップです。 *pccredential*  ([IPC \_ credential](https://msdn.microsoft.com/library/hh535275.aspx)) メンバーに Azure Rights Management サービスからの接続情報が設定されています。
--   [IPC \_ CREDENTIAL \_ symmetric \_ key](https://msdn.microsoft.com/library/dn133062.aspx)構造のインスタンスを作成するときに、 *WszServicePrincipal*、 *wszBposTenantId*、および*cbkey*パラメーターを設定するには、対称キーサービス id の作成に関する情報を使用します (このトピックで前述した「前提条件」を参照してください)。
+-   次の手順は、 [ipc \_ PROMPT \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx) 構造体のインスタンスを作成するためのセットアップです。 *pccredential*  ([IPC \_ credential](/previous-versions/windows/desktop/msipc/ipc-credential)) メンバーに Azure Rights Management サービスからの接続情報が設定されています。
+-   [IPC \_ CREDENTIAL \_ symmetric \_ key](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key)構造のインスタンスを作成するときに、 *WszServicePrincipal*、 *wszBposTenantId*、および *cbkey* パラメーターを設定するには、対称キーサービス id の作成に関する情報を使用します (このトピックで前述した「前提条件」を参照してください)。
 
-**注** - 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 これを行うには、*pConnectionInfo* パラメーターの [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) または [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx) に [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) を入力します。
+**注** - 探索サービスの既存の条件により、北米以外の地域では、対称キーの資格情報が他の地域から受け入れられないため、テナント URL を直接指定する必要があります。 これを行うには、*pConnectionInfo* パラメーターの [IpcGetTemplateList](/previous-versions/windows/desktop/msipc/ipcgettemplatelist) または [IpcGetTemplateIssuerList](/previous-versions/windows/desktop/msipc/ipcgettemplateissuerlist) に [IPC\_CONNECTION\_INFO](/previous-versions/windows/desktop/msipc/ipc-connection-info) を入力します。
 
 ## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>対称キーの生成と必要な情報の収集
 
@@ -85,7 +85,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 ### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>**TenantBposId** と **URL** を調べる手順
 
--   [Azure RMS PowerShell モジュール](https://technet.microsoft.com/library/jj585012.aspx)をインストールします。
+-   [Azure RMS PowerShell モジュール](../install-powershell.md)をインストールします。
 -   Powershell を起動し、次のコマンドを実行してテナントの RMS 構成を取得します。
 
     `Import-Module AIPService`
@@ -95,7 +95,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
     `Get-AipServiceConfiguration`
 
 
-- [IPC \_ CREDENTIAL \_ SYMMETRIC \_ KEY](https://msdn.microsoft.com/library/dn133062.aspx)のインスタンスを作成し、いくつかのメンバーを設定します。
+- [IPC \_ CREDENTIAL \_ SYMMETRIC \_ KEY](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key)のインスタンスを作成し、いくつかのメンバーを設定します。
 
   ```cpp
   // Create a key structure.
@@ -107,11 +107,11 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
   symKey.wszBposTenantId = "your tenant identifier";
   ```
 
-詳細については、「 [IPC \_ CREDENTIAL \_ SYMMETRIC \_ KEY](https://msdn.microsoft.com/library/dn133062.aspx)」を参照してください。
+詳細については、「 [IPC \_ CREDENTIAL \_ SYMMETRIC \_ KEY](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key)」を参照してください。
 
-- [Ipc \_ credential \_ SYMMETRIC \_ KEY](https://msdn.microsoft.com/library/dn133062.aspx)インスタンスを含む[ipc \_ credential](https://msdn.microsoft.com/library/hh535275.aspx)構造体のインスタンスを作成します。
+- [Ipc \_ credential \_ SYMMETRIC \_ KEY](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key)インスタンスを含む[ipc \_ credential](/previous-versions/windows/desktop/msipc/ipc-credential)構造体のインスタンスを作成します。
 
-  **メモ**  - *ConnectionInfo*メンバーは、以前のの呼び出しからの url で設定され、 `Get-AipServiceConfiguration` ここではこれらのフィールド名を使用しています。
+  **メモ**  - *ConnectionInfo* メンバーは、以前のの呼び出しからの url で設定され、 `Get-AipServiceConfiguration` ここではこれらのフィールド名を使用しています。
 
   ```cpp
   // Create a credential structure.
@@ -139,7 +139,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 ### <a name="identify-a-template-and-then-encrypt"></a>テンプレートの識別と暗号化
 
 - 暗号化に使用するテンプレートを選択します
-    [Ipcgettemplatelist](https://msdn.microsoft.com/library/hh535267.aspx)を呼び出して、同じ[IPC \_ PROMPT \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx)インスタンスに渡します。
+    [Ipcgettemplatelist](/previous-versions/windows/desktop/msipc/ipcgettemplatelist)を呼び出して、同じ[IPC \_ PROMPT \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx)インスタンスに渡します。
 
   ```cpp
   PCIPC_TIL pTemplates = NULL;
@@ -153,9 +153,9 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
          &pTemplates);
   ```
 
-- このトピックで既に説明したテンプレートを使用して、 [Ipcfencrcyptfile](https://msdn.microsoft.com/library/dn133059.aspx)を呼び出し、同じ [IPC \_ PROMPT \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx)インスタンスに渡します。
+- このトピックで既に説明したテンプレートを使用して、 [Ipcfencrcyptfile](/previous-versions/windows/desktop/msipc/ipcfencryptfile)を呼び出し、同じ [IPC \_ PROMPT \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx)インスタンスに渡します。
 
-  [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx) の使用例:
+  [IpcfEncrcyptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile) の使用例:
 
   ```cpp
   LPCWSTR wszContentTemplateId = pTemplates->aTi[0].wszID;
@@ -168,7 +168,7 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
          &wszOutputFilePath);
   ```
 
-  [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx) の使用例:
+  [IpcfDecryptFile](/previous-versions/windows/desktop/msipc/ipcfdecryptfile) の使用例:
 
   ```cpp
   hr = IpcfDecryptFile(wszInputFilePath,
@@ -182,17 +182,17 @@ Rights Management Services SDK 2.1 サービスを Azure RMS で利用するに�
 
 ## <a name="related-topics"></a>関連トピック
 
-* [Azure Rights Management の概要](https://technet.microsoft.com/library/jj585016.aspx)
+* [Azure Rights Management の概要](../requirements.md)
 * [RMS SDK 2.1 の概要のページ](getting-started-with-ad-rms-2-0.md)
-* [ACS を介したサービス ID 作成のページ](https://msdn.microsoft.com/library/gg185924.aspx)
-* [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
-* [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
-* [IPC \_ プロンプト \_ CTX](https://msdn.microsoft.com/library/hh535278.aspx)
-* [IPC \_ 資格情報](https://msdn.microsoft.com/library/hh535275.aspx)
-* [IPC \_ 資格情報の \_ 対称 \_ キー](https://msdn.microsoft.com/library/dn133062.aspx)
-* [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx)
-* [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx)
-* [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)
-* [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx)
-* [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
-* [IpcCreateLicenseFromTemplateID](https://msdn.microsoft.com/library/hh535257.aspx)
+* [ACS を介したサービス ID 作成のページ](/previous-versions/azure/azure-services/gg185924(v=azure.100))
+* [IpcSetGlobalProperty](/previous-versions/windows/desktop/msipc/ipcsetglobalproperty)
+* [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize)
+* [IPC \_ プロンプト \_ CTX](/previous-versions/windows/desktop/msipc/ipc-prompt-ctx)
+* [IPC \_ 資格情報](/previous-versions/windows/desktop/msipc/ipc-credential)
+* [IPC \_ 資格情報の \_ 対称 \_ キー](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key)
+* [IpcGetTemplateIssuerList](/previous-versions/windows/desktop/msipc/ipcgettemplateissuerlist)
+* [IpcGetTemplateList](/previous-versions/windows/desktop/msipc/ipcgettemplatelist)
+* [IpcfDecryptFile](/previous-versions/windows/desktop/msipc/ipcfdecryptfile)
+* [IpcfEncrcyptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile)
+* [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)
+* [IpcCreateLicenseFromTemplateID](/previous-versions/windows/desktop/msipc/ipccreatelicensefromtemplateid)

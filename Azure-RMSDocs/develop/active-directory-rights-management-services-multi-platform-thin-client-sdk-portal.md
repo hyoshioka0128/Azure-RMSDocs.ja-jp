@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 76bd7d42a00780520bd77c93c9e751d10bed5518
-ms.sourcegitcommit: fc0499f182e9203ccbd4a8685dd880d1311845ad
+ms.openlocfilehash: 163df2020eff0ed390a9c404c77fb8d4745e7227
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79084723"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569622"
 ---
 # <a name="rights-management-sdk42"></a>Rights Management SDK 4.2
 
 [!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
-## <a name="purpose"></a>用途
+## <a name="purpose"></a>目的
 
 Rights Management SDK 4.2 は、Rights Management サービスを介して、情報を保護しながらデバイスのアプリをアップグレードする際に軽量の開発エクスペリエンスを実現する、シンプルな次世代の API です。 開発者は、情報保護を提供するために Active Directory Rights Management サービス (AD RMS) または Azure Rights Management を利用するアプリを構築できます。また、キー管理、暗号化と復号化、ポリシーとアクセス許可の作成、セキュリティで保護されたキャッシュ、AD RMS および Azure RMS サービスとの通信などの複雑なセキュリティ プラクティスを透過的に処理しつつ、情報を簡単に保護または消費することができます。
 
@@ -47,8 +47,8 @@ RMS SDK 4.2 API では各オペレーティング システムに対して標準
 
 [Overview (概要)](overview.md) - Rights Management サービスは、デジタル情報を権限のない使用から保護するために役立つ情報保護テクノロジです。 コンテンツの所有者は、権限を有効にしたアプリケーションを通じて、そのコンテンツを開く、変更する、印刷する、転送する、などの操作を実行できるユーザーを定義することができます。
 
-[作業開始](get-started.md) - RMS SDK 4.2 のこのリリースでは、初めてのアプリケーションをすばやく開発するために、各オペレーティング システム/プラットフォームの開発環境のセットアップ ガイドを使用します。
+[Get started (はじめに)](get-started.md)– この RMS SDK 4.2 リリースでは、最初のアプリケーションをすばやく開発するために、各オペレーティング システム/プラットフォームの開発環境のセットアップ ガイドを使用します。
 
-[開発者ガイドと用語](core-concepts.md) - RMS SDK 4.2 では、Right Management サービスを利用する AD RMS 対応アプリケーションを、可能な限りシンプルに構築できるようにすることに重点が置かれています。
+[Developer guidance and terms (開発者ガイドと用語)](core-concepts.md) - MS SDK 4.2 は、Right Management サービスを利用する AD RMS 対応アプリケーションを、可能な限りシンプルに構築できるようにすることに重点を置いています。
 
-[API リファレンス](api-reference-4-2.md) - RMS SDK 4.2 では、目次に記載されたいくつかのオペレーティング システムがサポートされています。
+[API reference (API リファレンス)](api-reference-4-2.md) - RMS SDK 4.2 は、表に記載されたいくつかのオペレーティング システムをサポートしています。

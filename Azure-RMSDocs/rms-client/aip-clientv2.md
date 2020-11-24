@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a6f8f339dc467ef3ec184bd45e4b8babb447b38f
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: f1e753e15d9601083a29f58bee0e2a4a7f16334b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447023"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570359"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Windows 用の統一されたラベル付けクライアント Azure Information Protection
 
@@ -26,9 +26,9 @@ ms.locfileid: "89447023"
 >
 >*Windows 7 または Office 2010 を使用している場合は、「 [AIP For windows And office versions in extended support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)」を参照してください。*
 >
->*手順: [Windows 用の統一されたラベル付けクライアント Azure Information Protection](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>*手順: [Windows 用の Azure Information Protection 統合ラベル付けクライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Windows 用の Azure Information Protection 統合ラベル付けクライアントは、 [機密ラベル](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) を使用してドキュメントや電子メールを分類および保護する組織用のダウンロード可能なクライアントです。 このクライアントには、独自の情報保護インフラストラクチャを持たないが、Microsoft の Rights Management サービスを使用する他の組織によって保護されているコンテンツを使用する組織向けのビューアーもあります。
+Windows 用の Azure Information Protection 統合ラベル付けクライアントは、 [機密ラベル](/microsoft-365/compliance/sensitivity-labels) を使用してドキュメントや電子メールを分類および保護する組織用のダウンロード可能なクライアントです。 このクライアントには、独自の情報保護インフラストラクチャを持たないが、Microsoft の Rights Management サービスを使用する他の組織によって保護されているコンテンツを使用する組織向けのビューアーもあります。
 
 > [!NOTE]
 > このクライアントは、"統合されたラベル付けクライアント" とも呼ばれ、Azure Information Protection クライアント (クラシック) に置き換わるものではありません。 どのクライアントを使用するかわからない場合は、「 [Windows コンピューターに使用するラベル付けクライアントを選択](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)する」を参照してください。

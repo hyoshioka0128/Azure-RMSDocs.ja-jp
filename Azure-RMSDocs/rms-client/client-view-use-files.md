@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fe3309ac4ca51668b0c351f90baa79c97607e96a
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298038"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570334"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>ユーザーガイド: Azure Information Protection ビューアーで保護されたファイルを表示する
 
@@ -28,7 +28,7 @@ ms.locfileid: "87298038"
 
 多くの場合、保護されたファイルは開くだけで表示できます。 たとえば、電子メール メッセージの添付ファイルをダブルクリックしたり、エクスプローラーでファイルをダブルクリックしたり、ファイルへのリンクをクリックします。
 
-ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー**で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
+ファイルがすぐに開かない場合は、**Azure Information Protection ビューアー** で開くことができる場合があります。 このビューアーでは、保護されたテキスト ファイル、保護された画像ファイル、保護された PDF ファイル、およびファイル名拡張子が **.pfile** のすべてのファイルを開くことができます。
 
 このビューアーは、Azure Information Protection クライアントの一部として自動的にインストールされますが、個別にインストールすることもできます。 クライアントとビューアーの両方のクライアントは、Microsoft Web サイトの [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) ページからインストールできます。 クライアントのインストールの詳細については、「[Azure Information Protection クライアントをダウンロードしてインストールする](install-client-app.md)」を参照してください。
 
@@ -37,7 +37,7 @@ ms.locfileid: "87298038"
 > 
 > 別組織の誰かから保護されたドキュメントを送信された場合、またはお使いの PC でローカル管理者のアクセス許可を持っていない場合は、ビューアーをインストールします。
 
-保護されたドキュメントを開くには、アプリケーションが "RMS 対応" である必要があります。 RMS 対応アプリケーションは、たとえば Office アプリや Azure Information Protection ビューアーなどです。 種類とサポートされているデバイスごとにアプリケーションの一覧を表示するには、「 [RMS 対応 applications (RMS アプリケーション](../requirements-applications.md)テーブル)」を参照してください。
+保護されたドキュメントを開くには、アプリケーションが "RMS 対応" である必要があります。 RMS 対応アプリケーションは、たとえば Office アプリや Azure Information Protection ビューアーなどです。 種類とサポートされているデバイスごとにアプリケーションの一覧を表示するには、「 [RMS 対応 applications (RMS アプリケーション](../requirements-applications.md) テーブル)」を参照してください。
   
 ## <a name="messagerpmsg-as-an-email-attachment"></a>電子メールの添付ファイルとしての Message.rpmsg
 
@@ -49,7 +49,7 @@ ms.locfileid: "87298038"
 
 保護されたファイルを表示するには、そのファイルの保護に使用された Rights Management サービスで、ユーザーがファイルを表示する権限を持つことを先に確認する必要があります。 サービスはこの確認にユーザー名とパスワードを使用します。 場合によっては、これらの資格情報がキャッシュに格納されていて、サインインを求められないことがあります。 それ以外の場合は、資格情報を指定するように求められます。
 
-組織がユーザーのためにクラウドベースのアカウントを用意しておらず (Office 365 または Azure)、また、そのオンプレミス版 (AD RMS) も利用していない場合、次の 2 つの選択肢があります。
+使用するクラウドベースのアカウント (Microsoft 365 または Azure の場合) が組織になく、同等のオンプレミスバージョン (AD RMS) を使用していない場合は、次の2つの方法があります。
 
 - 保護されているメールが届いた場合、指示に従い、ご利用のソーシャル ID プロバイダー (Gmail アカウントの Google など) でサインインするか、ワンタイム パスコードを申請します。
 

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 568ed4dee01c59f8808442a4499b8a858f9ebcf5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971967"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570358"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>ADAL 認証用のアプリの構成
 
@@ -29,11 +29,11 @@ ms.locfileid: "82971967"
 
 以下のものが必要になります。
 
-- [Microsoft Azure のサブスクリプション](https://azure.microsoft.com/) (無料試用版で十分です)。 詳細については、「[How users sign up for RMS for individuals](../rms-for-individuals-user-sign-up.md)」 (ユーザーが個人向け RMS にサインアップする方法) を参照してください。
-- Microsoft Azure Rights Management のサブスクリプション (無料の[個人向け RMS](https://technet.microsoft.com/library/dn592127.aspx) アカウントで十分です)。
+- [Microsoft Azure のサブスクリプション](https://azure.microsoft.com/) (無料試用版で十分です)。 詳細については、「[How users sign up for RMS for individuals](../rms-for-individuals.md)」 (ユーザーが個人向け RMS にサインアップする方法) を参照してください。
+- Microsoft Azure Rights Management のサブスクリプション (無料の[個人向け RMS](../rms-for-individuals.md) アカウントで十分です)。
 
 > [!NOTE]
-> IT 管理者に、Microsoft Azure Rights Management のサブスクリプションがあるかどうかを問い合わせ、以下の手順の実行を依頼します。 組織にサブスクリプションがない場合、IT 管理者に作成してもらいます。 また、IT 管理者は、*Microsoft アカウント* (Hotmail など) ではなく、*職場または学校アカウント*でサブスクライブする必要があります。
+> IT 管理者に、Microsoft Azure Rights Management のサブスクリプションがあるかどうかを問い合わせ、以下の手順の実行を依頼します。 組織にサブスクリプションがない場合、IT 管理者に作成してもらいます。 また、IT 管理者は、*Microsoft アカウント* (Hotmail など) ではなく、*職場または学校アカウント* でサブスクライブする必要があります。
 
 Microsoft Azure にサインアップした後:
 
@@ -53,7 +53,7 @@ Microsoft Azure にサインアップした後:
 
 ![[アクティブ化] を選択する](../media/RMTab.png)
 
-- 次に、ディレクトリを選択して [アプリケーション] を選択し、ディレクトリに新しい*ネイティブ アプリケーション*を作成します。
+- 次に、ディレクトリを選択して [アプリケーション] を選択し、ディレクトリに新しい *ネイティブ アプリケーション* を作成します。
 
 ![[アプリケーション] を選択する](../media/CreateNativeApp.png)
 
@@ -100,6 +100,6 @@ Microsoft Azure にサインアップした後:
 
 ![アクセス許可を設定する](../media/AddDependency.png)
 
-- ポータルの下部にある [**保存**] アイコンを選択して、アプリケーションを保存し、変更を保持します。
+- ポータルの下部にある [ **保存** ] アイコンを選択して、アプリケーションを保存し、変更を保持します。
 
 ![[保存] を選択する](../media/SaveApplication.png)

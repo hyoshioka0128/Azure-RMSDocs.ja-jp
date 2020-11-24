@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 12/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
@@ -13,16 +13,16 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e6cffeb02cb22f65a5108e96ffa1b0cc8974142
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: b1e06581cb7291674d3a94c99338a9749b46f9a0
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869098"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569758"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>お客様が管理: テナント キーのライフサイクル操作
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection のテナント キーを自分で管理する場合 (Bring Your Own Key (BYOK) のシナリオ) は、次のセクションでこのトポロジに関連するライフサイクル操作に関する詳細を参照してください。
 
@@ -49,11 +49,11 @@ Azure Information Protection に対してキーの再入力が必要になる場
 
 管理している別のキーにキーを再入力するには、Azure Key Vault で新しいキーを作成することも、Azure Key Vault に既にある別のキーを使用することもできます。 Azure Information Protection に BYOK を実装したときと同じ手順を実行します。 
 
-1. 新しいキーが Azure Information Protection に既に使用しているキーコンテナーとは別のキーコンテナーにある場合にのみ: [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)コマンドレットを使用して、キーコンテナーを使用する Azure Information Protection を承認します。
+1. 新しいキーが Azure Information Protection に既に使用しているキーコンテナーとは別のキーコンテナーにある場合にのみ: [AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) コマンドレットを使用して、キーコンテナーを使用する Azure Information Protection を承認します。
 
-2. Azure Information Protection 使用するキーがまだわからない場合は、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットを実行します。
+2. Azure Information Protection 使用するキーがまだわからない場合は、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) コマンドレットを実行します。
 
-3. Run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)コマンドレットを使用して、テナントキーオブジェクトを構成します。
+3. Run [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) コマンドレットを使用して、テナントキーオブジェクトを構成します。
 
 これらの段階の詳細については、次を参照してください。
 
@@ -83,7 +83,7 @@ BYOK を使用する場合、テナント キーを Azure Key Vault または Az
 
 |インシデントの説明|考えられる対応|
 |------------------------|-------------------|
-|テナント キーが漏れています。|テナント キーを再入力します。 「[テナントキーのキー更新](#rekey-your-tenant-key)」を参照してください。|
+|テナント キーが漏れています。|テナント キーを再入力します。 「 [テナントキーのキー更新](#rekey-your-tenant-key)」を参照してください。|
 |無許可の個人またはマルウェアがテナント キーを使用する権利を手に入れましたが、キー自体は漏えいしていません。|テナント キーを再入力してもここでは役に立ちません。根本原因の分析が必要です。 無許可の個人がアクセスを得た原因がプロセスまたはソフトウェアのバグにある場合、その状況は解決する必要があります。|
 |現行世代の HSM テクノロジに脆弱性が発見された|Microsoft は HSM を更新する必要があります。 脆弱性によってキーが公開されたと信じるに足る理由が存在する場合、Microsoft はすべてのユーザーにテナント キーを再入力するように指示します。|
 |RSA アルゴリズム、キーの長さ、ブルート フォース攻撃に見られる脆弱性がコンピューターで実現可能になります。|Microsoft は回復力のある新しいアルゴリズムまたは長いキーをサポートするように Azure Key Vault または Azure Information Protection を更新し、すべてのお客様にテナント キーの再入力を指示する必要があります。|

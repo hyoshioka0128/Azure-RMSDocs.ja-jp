@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 06a92e4b2da227ede08249479554d12526fe2432
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0e67a086fb0fa3d1134a5f7768940b81c48947fd
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791286"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569614"
 ---
 # <a name="application-types"></a>アプリケーションの種類
 
@@ -34,9 +34,9 @@ Rights Management サービス SDK 2.1 では、次のアプリケーション�
 
 ### <a name="server-mode-applications"></a>サーバー モード アプリケーション
 
-*サーバー モード*は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止*アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp)を参照してください。
+*サーバー モード* は、RMS で保護されたコンテンツの使用、保護、処理を行う非対話型アプリケーションのためのモードです。 例として、ファイル サーバー上のサービスとして動作し、機密性の高いドキュメントを自動的に保護する、*データ損失防止* アプリケーションが挙げられます。 このアプリケーションの種類の例については、[IpcDlp サンプルのページ](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp)を参照してください。
 
-アプリケーションで*サーバー モード*を使用する場合は、RMS サーバーをサイレント認証する必要があります。 "*クライアント モード*" とは異なり、サイレント認証に失敗した場合でも、RMS SDK 2.1 で資格情報プロンプトは開かれません。 また、*サーバー モード*で実行しているときは、アプリケーション マニフェストも必要ありません。
+アプリケーションで *サーバー モード* を使用する場合は、RMS サーバーをサイレント認証する必要があります。 *クライアント モード* とは異なり、サイレント認証に失敗した場合にも、RMS SDK 2.1 は資格情報プロンプトを開きません。 また、*サーバー モード* で実行しているときは、アプリケーション マニフェストも必要ありません。
 
 API のセキュリティ モード設定の詳細については、「[Setting the API security mode (API のセキュリティ モードの設定)](setting-the-api-security-mode-api-mode.md)」を参照してください。
 
@@ -54,7 +54,7 @@ Microsoft のメモ帳は、単純なリッチ クライアント アプリケ�
 
 アプリケーションの保護の詳細については、「[Understanding usage restrictions (使用制限について)](understanding-usage-restrictions.md)」を参照してください。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 - [IpcDlp サンプルのページ](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 - [アプリケーションの開発](developing-your-application.md)

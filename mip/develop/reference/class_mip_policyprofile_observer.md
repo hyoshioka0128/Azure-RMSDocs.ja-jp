@@ -1,17 +1,17 @@
 ---
 title: 'クラス PolicyProfile:: オブザーバー'
 description: 'Microsoft Information Protection (MIP) SDK の policyprofile:: observer クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5fc8dab4c74b613ff199d16c7b39205476b87249
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 35768afacc22202721fb093c91e4a28a02a99d65
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760614"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569422"
 ---
 # <a name="class-policyprofileobserver"></a>クラス PolicyProfile:: オブザーバー 
 クライアントがプロファイル関連のイベントに関する通知を取得するための Observer インターフェイス。
@@ -20,17 +20,17 @@ ms.locfileid: "81760614"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック仮想 void OnLoadSuccess (const std:: shared_ptr\<policyprofile\>& profile, const std:: shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
-パブリック仮想 void OnLoadFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
-public virtual void OnListEnginesSuccess (const std:: vector\<std:: String\>& engineIds、const std:: shared_ptr\<void\>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
-public virtual void OnListEnginesFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
-public virtual void OnUnloadEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常にアンロードされたときに呼び出されます。
-public virtual void OnUnloadEngineFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
-public virtual void OnAddEngineSuccess (const std:: shared_ptr\<policyengine\>& engine、const std:: shared_ptr\<void\>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
+public virtual void OnLoadSuccess(const std::shared_ptr\<PolicyProfile\>& profile, const std::shared_ptr\<void\>& context)  |  プロファイルが正常に読み込まれたときに呼び出されます。
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  プロファイルの読み込みでエラーが発生したときに呼び出されます。
+public virtual void OnListEnginesSuccess (const std:: vector \<std::string\>& engineIds、const std:: shared_ptr \<void\>& context)  |  エンジンの一覧が正常に生成されたときに呼び出されます。
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エラーの原因となったエンジンを一覧表示するときに呼び出されます。
+public virtual void OnUnloadEngineSuccess(const std::shared_ptr\<void\>& context)  |  エンジンが正常にアンロードされたときに呼び出されます。
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エンジンのアンロードがエラーの原因となったときに呼び出されます。
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<PolicyEngine\>& engine, const std::shared_ptr\<void\>& context)  |  新しいエンジンが正常に追加されたときに呼び出されます。
 public virtual void OnAddEngineStarting (bool requiresPolicyFetch)  |  エンジンのポリシーデータをサーバーからフェッチする必要があるかどうか、またはローカルにキャッシュされたデータから作成できるかどうかを示すために、エンジンを作成する前に呼び出されます。
-public virtual void OnAddEngineFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
-public virtual void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr& error、const std:: shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  新しいエンジンの追加がエラーの原因となったときに呼び出されます。
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  エンジンが正常に削除されたときに呼び出されます。
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  エンジンの削除がエラーの原因となったときに呼び出されます。
 public virtual void OnPolicyChanged(const std::string& engineId)  |  指定された ID を持つエンジンに対してポリシーが変更された場合、または読み込まれたカスタム感度の種類が変更された場合に呼び出されます。
   
 ## <a name="members"></a>メンバー

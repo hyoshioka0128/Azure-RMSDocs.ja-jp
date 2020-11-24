@@ -1,17 +1,17 @@
 ---
 title: ComputeEngineContext クラス
 description: 'Microsoft Information Protection (MIP) SDK の computeenginecontext:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c9ab006606e8895b80231a793b9d1714829195d1
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0f53fb786ce231ab6b0c7b3180f16a0532f3e807
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763471"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569207"
 ---
 # <a name="class-computeenginecontext"></a>ComputeEngineContext クラス 
   
@@ -24,8 +24,8 @@ protected ComputeEngineContext ()  | _まだ文書化されていません。_
 ## <a name="members"></a>メンバー
   
 ### <a name="computeenginecontext-function"></a>~ ComputeEngineContext 関数
-_まだ文書化されていません。_
+まだ文書化されていません。
 
   
 ### <a name="computeenginecontext-function"></a>ComputeEngineContext 関数
-_まだ文書化されていません。_
+まだ文書化されていません。

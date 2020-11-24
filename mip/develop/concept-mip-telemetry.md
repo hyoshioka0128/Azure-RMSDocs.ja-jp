@@ -6,30 +6,26 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 22f98a6781dc0ff0b43d1da73c72c2029c960021
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 3df1283cd678167b7daa4a5fc64b5bb3d6d3fa33
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403376"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570142"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-テレメトリ構成
 
-## <a name="telemetry"></a>テレメトリ
+## <a name="telemetry"></a>製品利用統計情報
 
 既定では、Microsoft Information Protection SDK はテレメトリデータを Microsoft に送信します。 このテレメトリデータは、内部テストではキャプチャされない可能性がある SDK インストールベース全体のバグ、品質、およびパフォーマンスの問題のトラブルシューティングに役立ちます。 SDK を使用してアプリケーションを実装する場合は、必要に応じて、ユーザーと管理者にテレメトリをオプトアウトする機能を提供することが重要です。
 
 ## <a name="telemetry-configuration"></a>テレメトリの構成
 
-MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet)を使用して制御できます。 このクラスのインスタンスを作成し、 **IsTelemetryOptedOut**を true に設定します。 **MipContext**を作成するために使用される関数に、 **TelemetryConfiguration**クラスのオブジェクトを指定します。
-
-MIP SDK バージョン1.6 以降では、設定オプションによってテレメトリが**完全に無効**になります。 Verisons 1.5 以前では、最小のテレメトリ情報のセットを送信しています。
+MIP SDK のテレメトリオプションは、 [TelemetryConfiguration](/dotnet/api/microsoft.informationprotection.telemetryconfiguration)を使用して制御できます。 このクラスのインスタンスを作成し、 **IsTelemetryOptedOut** を true に設定します。 **MipContext** を作成するために使用される関数に、 **TelemetryConfiguration** クラスのオブジェクトを指定します。
 
 ### <a name="minimum-telemetry-events"></a>最小テレメトリイベント
 
-MIP SDK 1.6 以降では、テレメトリが*オプトアウト*に設定されていると、**テレメトリイベントは送信されません。** 1.6 より前のバージョンでは、次の動作があります。
-
-テレメトリが*オプトアウト*に設定されている場合、データの最小セットが Microsoft に送信されます。 個人を特定できる情報はすべて、この情報からスキャンされます。 このデータには、SDK が使用されていること、およびシステムメタデータを理解するためのハートビート情報が含まれています。 **ユーザーのコンテンツまたはエンドユーザーを特定できる情報がサービスに設定されていません。**
+テレメトリが *オプトアウト* に設定されている場合、データの最小セットが Microsoft に送信されます。 個人を特定できる情報はすべて、この情報からスキャンされます。 このデータには、SDK が使用されていること、およびシステムメタデータを理解するためのハートビート情報が含まれています。 **ユーザーのコンテンツまたはエンドユーザーを特定できる情報がサービスに設定されていません。**
 
 以下の表を確認して、最小テレメトリセットと共に送信されるイベントとデータを正確に確認してください。
 
@@ -61,7 +57,7 @@ MIP SDK 1.6 以降では、テレメトリが*オプトアウト*に設定され
 | SDKVersion                           | MIP と同じです。バージョン。                                                                   | いいえ       |
 | UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
 | UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | いいえ       |
-| Version                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
+| バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
 
 #### <a name="event-discovery"></a>イベント: 検出
 
@@ -97,7 +93,7 @@ MIP SDK 1.6 以降では、テレメトリが*オプトアウト*に設定され
 | SDKVersion                           | MIP と同じです。バージョン。                                                                   | いいえ       |
 | UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
 | UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | いいえ       |
-| Version                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
+| バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
 
 #### <a name="event-label-change"></a>イベント: ラベルの変更
 
@@ -144,12 +140,11 @@ MIP SDK 1.6 以降では、テレメトリが*オプトアウト*に設定され
 | SDKVersion                           | MIP と同じです。バージョン。                                                                   | いいえ       |
 | UserId                               | ユーザーの電子メール アドレス。                                                             | **はい**  |
 | UserObjectId                         | ユーザーのオブジェクト ID Azure AD ます。                                                        | いいえ       |
-| Version                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
-
+| バージョン                              | 監査バージョンスキーマ ("1.1")。                                                          | いいえ       |
 
 ### <a name="opting-out-in-c"></a>C++ でのオプトアウト
 
-テレメトリを [最小のみ] に設定するには、 **mip:: TelemetryConfiguration ()** の共有ポインターを作成し、 **isTelemetryOptedOut**を true に設定します。 構成オブジェクトを**MipContent:: Create ()** に渡します。
+テレメトリを [最小のみ] に設定するには、 **mip:: TelemetryConfiguration ()** の共有ポインターを作成し、 **isTelemetryOptedOut** を true に設定します。 構成オブジェクトを **MipContent:: Create ()** に渡します。
 
 ```cpp
 auto telemetryConfig = std::make_shared<mip::TelemetryConfiguration>();                                     
@@ -168,7 +163,7 @@ mMipContext = mip::MipContext::Create(
 
 ### <a name="opting-out-in-net"></a>.NET でのオプトイン
 
-テレメトリを最小値のみに設定するには、 **TelemetryConfiguration ()** オブジェクトを作成し、 **isTelemetryOptedOut**を true に設定します。 構成オブジェクトを MIP に渡し**ます。CreateMipContext ()**。
+テレメトリを最小値のみに設定するには、 **TelemetryConfiguration ()** オブジェクトを作成し、 **isTelemetryOptedOut** を true に設定します。 構成オブジェクトを MIP に渡し **ます。CreateMipContext ()**。
 
 ```csharp
 TelemetryConfiguration telemetryConfiguration = new TelemetryConfiguration();
@@ -182,3 +177,13 @@ mipContext = MIP.CreateMipContext(appInfo,
     telemetryConfiguration);
 ```
 
+## <a name="telemetry-in-mip-sdk-16102-to-16152"></a>MIP SDK 1.6.102 のテレメトリが1.6.152 に
+
+MIP SDK バージョン1.6.102、103、113、151、および152では、が true に設定されている場合に、テレメトリがゼロに送信されることがドキュメントに記載されてい `IsTelemetryOptedOut` ます。 **true** このフラグが設定されているときに、利用統計情報イベントが生成されたことを示すバグが特定されました。 これらのテレメトリイベントは、ポリシー SDK の下に一覧表示されている Api を呼び出すと発生します。
+
+- mip::P olicyEngine:: ListSensitivityLabels ()
+- mip::P olicyHandler:: ComputeActions ()
+- mip::P olicyHandler:: NotifyCommitAsync ()
+- mip::P olicyHandler:: GetSensitivityLabel ()
+
+MIP SDK 1.6. n の機能は、以前の動作に戻り、 [最小テレメトリイベント](#minimum-telemetry-events)で詳細なイベントを送信します。 MIP SDK 1.7 では、の名前がに更新され、 `IsTelemetryOptedOut` `SendMinimumTelemetry` 上記の動作と同じ動作に従います。

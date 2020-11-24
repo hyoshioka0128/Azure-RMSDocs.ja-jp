@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 35eb3d59031fb30de1c9d6b1c6cdd2745f7d7ef2
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264329"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570583"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Azure Information Protection ポリシーの構成
 
@@ -30,7 +30,7 @@ ms.locfileid: "88264329"
 > [!NOTE]
 > Azure Information Protection ポリシーは Azure Information Protection クライアント (クラシック) に適用され、Azure Information Protection の統合されたラベル付けクライアントには適用されません。 これらのクライアントの違いがわからない場合は、 こちらの [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) を参照してください。
 > 
-> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「 [秘密度ラベルについ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) て」を参照してください。
+> 統一されたラベル付けクライアントの秘密度ラベルとポリシー設定を構成するための情報を探している場合は、Microsoft 365 の準拠に関するドキュメントの「 [秘密度ラベルについ](/microsoft-365/compliance/sensitivity-labels) て」を参照してください。
 
 クラシッククライアントの分類、ラベル付け、保護を構成するには、Azure Information Protection ポリシーを構成する必要があります。 このポリシーは、Azure Information Protection クライアントがインストールされたコンピューターにダウンロードされます。
 
@@ -48,7 +48,7 @@ Azure Information Protection では、さまざまなレベルのサブスクリ
 
 - Azure Information Protection P1: ほとんどの分類、ラベル付け、保護機能をサポートしますが、自動分類や HYOK はサポートしません。
 
-- Azure Rights Management サービスを含む office 365: 保護をサポートしますが、分類とラベル付けはサポートしません。
+- Azure Rights Management サービスを含む Microsoft 365: 保護はサポートされますが、分類とラベル付けはサポートされていません。
 
 Azure Information Protection P2 サブスクリプションが必要なオプションはポータルで確認します。
 
@@ -56,7 +56,7 @@ Azure Information Protection P2 サブスクリプションが必要なオプシ
 
 - **組織が Azure Information Protection P1 と Azure Information Protection P2 の種類が異なるライセンスを保有している場合**: P2 ライセンスを保有しているユーザーは、Azure Information Protection P2 ライセンスが必要なオプションを構成する場合、[範囲設定されたポリシー](configure-policy-scope.md)を 1 つ以上作成して使用します。 Azure Information Protection P2 ライセンスを必要とするオプションがグローバル ポリシーに含まれないようにします。
 
-- **組織が Azure Information Protection のサブスクリプションを保有し、一部のユーザーが Azure Rights Management サービスを含む Office 365 のライセンスのみを保有している場合**: Azure Information Protection のライセンスを保有しないユーザー向けに、コンピューター上のレジストリを編集して、Azure Information Protection ポリシーがダウンロードされないようにします。 手順については、以下のカスタマイズについての管理ガイド、「[Enforce protection-only mode when your organization has a mix of licenses (組織が種類の異なるライセンスを保有している場合の保護のみモードの適用)](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses)」をご覧ください。
+- **組織が Azure Information Protection のサブスクリプションを持っていても、Azure Rights Management サービスを含む Microsoft 365 のライセンスのみを持つユーザーがいる場合**: Azure Information Protection のライセンスを持たないユーザーには、Azure Information Protection ポリシーをダウンロードしないように、コンピューター上のレジストリを編集します。 手順については、以下のカスタマイズについての管理ガイド、「[Enforce protection-only mode when your organization has a mix of licenses (組織が種類の異なるライセンスを保有している場合の保護のみモードの適用)](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses)」をご覧ください。
 
 サブスクリプションの詳細については、「[Azure Information Protection にはどのようなサブスクリプションが必要ですか。どのような機能が含まれていますか。](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)」を参照してください。
 
@@ -76,7 +76,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
     
   - **セキュリティ管理者**
     
-    **セキュリティ閲覧**  -  者[Azure Information Protection analytics](reports-aip.md)のみ
+    **セキュリティ閲覧**  -  者 [Azure Information Protection analytics](reports-aip.md)のみ
     
     **グローバルリーダー**  - [Azure Information Protection analytics](reports-aip.md)のみ
     
@@ -93,7 +93,7 @@ Azure Portal にサインインするには、Azure Information Protection を�
 
 2. **[+ リソースの作成]** を選択し、Marketplace の検索ボックスに「**Azure Information Protection**」と入力します。 
     
-3. 結果一覧から **[Azure Information Protection]** を選択します。 **Azure Information Protection**ウィンドウで、[**作成**] をクリックします。
+3. 結果一覧から **[Azure Information Protection]** を選択します。 **Azure Information Protection** ウィンドウで、[**作成**] をクリックします。
     
     > [!TIP] 
     > 必要に応じて、**[ダッシュボードにピン留めする]** を選択してダッシュボードの **[Azure Information Protection]** タイルを作成し、次にポータルにサインインするときにサービスの参照をスキップできるようにします。
@@ -163,7 +163,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 - [異なる言語のラベルを構成する方法](configure-policy-languages.md)
 
-- [Azure Information Protection ラベルを Office 365 に移行する方法](configure-policy-migrate-labels.md)
+- [Azure Information Protection ラベルを Microsoft 365 に移行する方法](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>メールやドキュメントに格納されるラベル情報
 
@@ -177,7 +177,7 @@ Azure Information Protection クライアントは、サポート対象の Offic
 
 ラベルの GUID を特定するには、Azure Information Protection ポリシーを表示または構成するときに、Azure portal の **ラベル** ペインで [ラベル ID] の値を見つけます。 ファイルにラベルが適用されている場合、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを実行して GUID (MainLabelId または SubLabelId) を特定することもできます。 ラベルにサブラベルがある場合、親ラベルではなく、サブラベルの GUID だけを常に指定してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Information Protection ポリシーをカスタマイズする方法や、ユーザーに対して結果の動作を表示する方法の例については、次のチュートリアルをご覧ください。
 
@@ -186,4 +186,3 @@ Azure Information Protection ポリシーをカスタマイズする方法や、
 - [連携させる Azure Information Protection のポリシー設定を構成する](infoprotect-settings-tutorial.md)
 
 ポリシーの実行方法を確認するには、「 [Azure Information Protection の中央レポート](reports-aip.md)」を参照してください。
-

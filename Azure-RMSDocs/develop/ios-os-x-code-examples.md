@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 22b6cd2ebc3d2caf3da74691753e6f4f5cc6c05b
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 3c50c4579d32add393b680616106b37e92d2364c
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135735"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570654"
 ---
 # <a name="iosos-x-code-examples"></a>iOS/OS X のコード例
 
@@ -39,9 +39,9 @@ ms.locfileid: "87135735"
 ### <a name="scenario-consume-an-rms-protected-file"></a>シナリオ: RMS 保護ファイルを使用する
 
 
-- **手順 1**. [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを作成します。
+- **手順 1**. [MSProtectedData](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-interface-objc) オブジェクトを作成します。
 
-  **説明**: [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) の呼び出しを参照してください。
+  **説明**: [MSProtectedData](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-interface-objc) オブジェクトを、その作成メソッドによりインスタンス化し、サービス認証を実装します。これには、[MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc) を使用し、**MSAuthenticationCallback** のインスタンスを、パラメーター *authenticationCallback* として MSIPC API に渡し、トークンを取得します。 次のコード例セクションの [MSProtectedData protectedDataWithProtectedFile](/previous-versions/windows/desktop/msipcthin2/msprotecteddata-protecteddatawithprotectedfile-completionblock-method-objc) の呼び出しを参照してください。
 
     ```objectivec
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -61,7 +61,7 @@ ms.locfileid: "87135735"
 
 - **手順 2**: Active Directory 認証ライブラリ (ADAL) を使用する認証をセットアップする
 
-  **説明**: この手順では、例の認証パラメーターで [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
+  **説明**: この手順では、例の認証パラメーターで [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc) を実装するために ADAL が使用されています。 ADAL の使用の詳細については、「Azure AD Authentication Library (ADAL) (Azure AD 認証ライブラリ (ADAL))」を参照してください。
 
     ```objectivec
       // AuthenticationCallback holds the necessary information to retrieve an access token.
@@ -102,7 +102,7 @@ ms.locfileid: "87135735"
        }
     ```
 
-- **手順 3**. [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) オブジェクトの [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
+- **手順 3**. [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) オブジェクトの [MSUserPolicy accessCheck](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-accesscheck-method-objc) メソッドを呼び出して、このユーザーにこのコンテンツの編集権限があるかどうかを確認します。
 
     ```objectivec
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
@@ -120,7 +120,7 @@ ms.locfileid: "87135735"
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>シナリオ: テンプレートを使用して新しい保護ファイルを作成する
 
-このシナリオは、初めにテンプレートの一覧 [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
+このシナリオは、初めにテンプレートの一覧 [MSTemplateDescriptor](/previous-versions/windows/desktop/msipcthin2/mstemplatedescriptor-interface-objc) を取得し、最初の 1 つを選択してポリシーを作成してから、新しい保護ファイルを作成して書き込みます。
 
 -   **手順 1**. テンプレートの一覧を取得します。
 
@@ -136,7 +136,7 @@ ms.locfileid: "87135735"
         }
     ```
 
--   **手順 2**. 一覧の最初のテンプレートを使用して [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
+-   **手順 2**. 一覧の最初のテンプレートを使用して [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) を作成します。
 
     ```objectivec
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -153,7 +153,7 @@ ms.locfileid: "87135735"
         }
     ```
 
--   **手順 3**. [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx) を作成し、コンテンツを書き込みます。
+-   **手順 3**. [MSMutableProtectedData](/previous-versions/windows/desktop/msipcthin2/msmutableprotecteddata-interface-objc) を作成し、コンテンツを書き込みます。
 
     ```objectivec
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
@@ -172,7 +172,7 @@ ms.locfileid: "87135735"
 ### <a name="scenario-open-a-custom-protected-file"></a>シナリオ: カスタム保護ファイルを開く
 
 
--   **手順 1**. *serializedContentPolicy* から [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
+-   **手順 1**. *serializedContentPolicy* から [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) を作成します。
 
     ```objectivec
         + (void)userPolicyWith:(NSData *)protectedData
@@ -202,7 +202,7 @@ ms.locfileid: "87135735"
          }
     ```
 
--   **手順 2**. **手順 1** の [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を使用して [MSCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) を作成し、読み取りを行います。
+-   **手順 2**. **手順 1** の [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) を使用して [MSCustomProtectedData](/previous-versions/windows/desktop/msipcthin2/msmutablecustomprotecteddata-interface-objc) を作成し、読み取りを行います。
 
     ```objectivec
         + (void)customProtectedDataWith:(NSData *)protectedData
@@ -236,7 +236,7 @@ ms.locfileid: "87135735"
 
 -   **手順 1**. ユーザーが指定した電子メール アドレスでポリシー記述子を作成します。
 
-    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) と [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) からのユーザー入力を使用して作成されます。
+    **説明**: 実際には、次のオブジェクトは、デバイス インターフェイス [MSUserRights](/previous-versions/windows/desktop/msipcthin2/msuserrights-interface-objc) と [MSPolicyDescriptor](/previous-versions/windows/desktop/msipcthin2/mspolicydescriptor-interface-objc) からのユーザー入力を使用して作成されます。
 
     ```objectivec
         + (void)policyDescriptor
@@ -249,7 +249,7 @@ ms.locfileid: "87135735"
         }
     ```
 
--   **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) を作成します。
+-   **手順 2**. ポリシー記述子 *selectedDescriptor* からカスタムの [MSUserPolicy](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-interface-objc) を作成します。
 
     ```objectivec
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
@@ -265,7 +265,7 @@ ms.locfileid: "87135735"
         }
     ```
 
--   **手順 3**. [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx) を作成してコンテンツを書き込み、閉じます。
+-   **手順 3**. [MSMutableCustomProtectedData](/previous-versions/windows/desktop/msipcthin2/msmutablecustomprotecteddata-interface-objc) を作成してコンテンツを書き込み、閉じます。
 
     ```objectivec
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect

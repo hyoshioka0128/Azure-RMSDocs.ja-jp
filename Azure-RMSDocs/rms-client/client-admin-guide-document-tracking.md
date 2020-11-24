@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 776cebe55505322895e1da80f87f0476f8a893f7
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 66ad27bb61e4cdc24d5c047b8f2c464ba98e5a8d
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047424"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569742"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>管理者ガイド: Azure Information Protection のドキュメント追跡の構成と使用
 
@@ -27,7 +27,7 @@ ms.locfileid: "86047424"
 > *手順:[Windows 用 Azure Information Protection クライアント](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 [ドキュメント追跡をサポートするサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-features)がある場合、既定では組織内のすべてのユーザーを対象にドキュメント追跡サイトが有効になります。 ドキュメント追跡では、保護されたドキュメントがアクセスされた日時についてユーザーおよび管理者に情報を提供します。ドキュメント追跡は必要に応じて取り消すこともできます。
 
@@ -39,17 +39,17 @@ ms.locfileid: "86047424"
 
 ### <a name="privacy-controls-for-your-document-tracking-site"></a>ドキュメント追跡サイトのプライバシー管理
 
-プライバシー要件により、組織ですべてのドキュメント追跡情報を表示できない場合は、 [disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature)コマンドレットを使用してドキュメント追跡を無効にすることができます。 
+プライバシー要件により、組織ですべてのドキュメント追跡情報を表示できない場合は、 [disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) コマンドレットを使用してドキュメント追跡を無効にすることができます。 
 
 このコマンドレットは、組織内のすべてのユーザーが保護されたドキュメントへのアクセスを追跡したり取り消ししたりできないように、ドキュメント追跡サイトへのアクセスを無効にします。 [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)を使用すると、いつでもドキュメント追跡を再度有効にできます。また、 [Get AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)を使用して、ドキュメント追跡が現在有効になっているか無効になっているかを確認できます。 
 
 ドキュメント追跡サイトを有効にすると、既定では、保護されたドキュメントにアクセスしようとしている人の電子メール アドレス、アクセスを試みた日時、その人がいる位置などの情報が表示されます。 このレベルの情報は、共有ドキュメントの使用方法を決めたり、不審なアクティビティが確認された際にアクセス権を取り消すべきかどうかを判断したりするのに役立ちます。 ただし、このユーザー情報へのアクセス権は、プライバシー保護の観点から一部またはすべてのユーザーに対して無効にする必要がある場合もあります。 
 
-このアクティビティが他のユーザーによって追跡されていないユーザーがいる場合は、Azure AD に格納されているグループにそのユーザーを追加し、 [AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup)コマンドレットでこのグループを指定します。 このコマンドレットを実行するとき、指定できるグループは 1 つだけです。 ただし、グループは入れ子構造にすることができます。 
+このアクティビティが他のユーザーによって追跡されていないユーザーがいる場合は、Azure AD に格納されているグループにそのユーザーを追加し、 [AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) コマンドレットでこのグループを指定します。 このコマンドレットを実行するとき、指定できるグループは 1 つだけです。 ただし、グループは入れ子構造にすることができます。 
 
 これらのグループ メンバーについて、ユーザーは、ドキュメント追跡サイトに対するアクティビティが共有ドキュメントに関連している場合、そのアクティビティを表示できません。 さらに、ドキュメントを共有するユーザーに電子メール通知は送信されません。
 
-この構成を使用する場合、引き続きすべてのユーザーがドキュメント追跡サイトを使用でき、保護されたドキュメントへのアクセスを取り消すことができます。 ただし、AipServiceDoNotTrackUserGroup コマンドレットを使用して指定したユーザーのアクティビティは表示されません。
+この構成を使用する場合、引き続きすべてのユーザーがドキュメント追跡サイトを使用でき、保護されたドキュメントへのアクセスを取り消すことができます。 ただし、Set-AipServiceDoNotTrackUserGroup コマンドレットを使用して指定したユーザーのアクティビティは表示されません。
 
 この設定では、エンド ユーザーのみに影響します。 Azure Information Protection の管理者は、AipServiceDoNotTrackUserGroup を使用してユーザーを指定した場合でも、常にすべてのユーザーのアクティビティを追跡できます。 管理者がユーザーのドキュメントを追跡する方法の詳細については、「[ユーザーのドキュメントの追跡と取り消し](#tracking-and-revoking-documents-for-users)」のセクションをご覧ください。
 
@@ -107,7 +107,7 @@ ms.locfileid: "86047424"
 
 ドキュメントを追跡および取り消しできるようにするためには、まずこれをドキュメント追跡サイトに登録する必要があります。 ユーザーが Azure Information Protection クライアントを使っている場合、このアクションは、エクスプローラーまたは各 Office アプリの **[追跡と取り消し]** オプションを選択すると発生します。
 
-[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 次に例を示します。
+[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) コマンドレットを使ってユーザーのファイルにラベルを付けて保護する場合、*EnableTracking* パラメーターを使ってドキュメント追跡サイトにファイルを登録できます。 例:
 
 ```ps
 Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking

@@ -1,17 +1,17 @@
 ---
 title: 'クラス ProtectionEngine:: Settings'
 description: 'Microsoft Information Protection (MIP) SDK の protectionengine:: settings クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 7c6b96a1ec78712cb256ab63efe869213fc71f8e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 47947ed2b9b815204e3843ad64c18ffccf39b913
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764596"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569102"
 ---
 # <a name="class-protectionenginesettings"></a>クラス ProtectionEngine:: Settings 
 作成時および有効期間全体にわたって ProtectionEngine によって使用される設定。
@@ -19,8 +19,8 @@ ms.locfileid: "81764596"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-パブリック設定 (const Id& id、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale)  |  新しいエンジンを作成するための ProtectionEngine::Settings コンストラクター。
-パブリック設定 (const std:: string& engineId、const std:: shared_ptr\<authdelegate\>& authdelegate、const std:: string& clientdata、const std:: string& locale)  |  既存のエンジンを読み込むための ProtectionEngine::Settings コンストラクター。
+パブリック設定 (const Identity& Identity、const std:: shared_ptr \<AuthDelegate\>& authDelegate、const std:: string& clientData、const std:: string& locale)  |  新しいエンジンを作成するための ProtectionEngine::Settings コンストラクター。
+パブリック設定 (const std:: string& engineId、const std:: shared_ptr \<AuthDelegate\>& authDelegate、const std:: string& clientData、const std:: string& locale)  |  既存のエンジンを読み込むための ProtectionEngine::Settings コンストラクター。
 public const std::string& GetEngineId() const  |  エンジン ID を取得します。
 public void SetEngineId(const std::string& engineId)  |  エンジン ID を設定します。
 public const Identity& GetIdentity() const  |  エンジンに関連付けられたユーザー ID を取得します。
@@ -28,16 +28,18 @@ public void SetIdentity(const Identity& identity)  |  エンジンに関連付�
 public const std::string& GetClientData() const  |  クライアントに指定されたカスタム データを取得します。
 public void SetClientData(const std::string& clientData)  |  クライアントに指定されたカスタム データを設定します。
 public const std::string& GetLocale() const  |  エンジン データが書き込まれるロケールを取得します。
-public void setcustomsettings (const std:: vector\<std::p air\<std:: string, std:: string\> \>& 値)  |  テストや実験に使用する名前と値のペアを設定します。
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアを取得します。
+public void SetCustomSettings (const std:: vector \<std::pair\<std::string, std::string\> \>& value)  |  テストや実験に使用する名前と値のペアを設定します。
+public const std:: vector \<std::pair\<std::string, std::string\> \>& GetCustomSettings () const  |  テストや実験に使用する名前と値のペアを取得します。
 public void SetSessionId(const std::string& sessionId)  |  ログ/テレメトリの相関関係に使用する、エンジンのセッション ID を設定します。
 public const std::string& GetSessionId() const  |  エンジンのセッション ID を取得します。
 パブリック void SetCloud (クラウドクラウド)  |  必要に応じて、ターゲットクラウドを設定します。
 パブリッククラウドの GetCloud () const  |  すべてのサービス要求によって使用されるターゲットクラウドを取得します。
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  カスタムクラウドのクラウドエンドポイントベース URL を設定します。
 public const std::string& GetCloudEndpointBaseUrl() const  |  すべてのサービス要求で使用されるクラウド ベースの URL を取得します (指定されている場合)。
-public void SetAuthDelegate (const std:: shared_ptr\<authdelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
-public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジン認証デリゲートを取得します。
+public void SetAuthDelegate (const std:: shared_ptr \<AuthDelegate\>& authdelegate)  |  エンジン認証デリゲートを設定します。
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  エンジン認証デリゲートを取得します。
+public const std:: string& GetUnderlyingApplicationId () const  |  基になるアプリケーション ID を取得します。
+public void SetUnderlyingApplicationId (const std:: string& underlyingApplicationId)  |  基になるアプリケーション ID を設定します。
   
 ## <a name="members"></a>メンバー
   
@@ -194,3 +196,16 @@ public std:: shared_ptr\<authdelegate\> getauthdelegate () const  |  エンジ�
 
   
 **戻り値**: エンジンの認証デリゲート。
+  
+### <a name="getunderlyingapplicationid-function"></a>GetUnderlyingApplicationId 関数
+基になるアプリケーション ID を取得します。
+
+  
+**戻り値**: 基になるアプリケーション ID
+  
+### <a name="setunderlyingapplicationid-function"></a>SetUnderlyingApplicationId 関数
+基になるアプリケーション ID を設定します。
+
+パラメーター:  
+* **UnderlyingApplicationId**: 基になるアプリケーション ID。
+

@@ -12,12 +12,12 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 06ffea8f623e55eaa482020a9bc8d7583f8c84f7
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d811cf998b6e2d5ce04c4e3ff2208030de15e49c
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935233"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570054"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Azure Information Protection のコンプライアンスとサポート情報
 
@@ -41,17 +41,17 @@ Azure Information Protection は他のサービスをサポートし、また�
 
 ## <a name="legal-and-privacy"></a>法律およびプライバシー
 
-- Microsoft Azure の契約情報について: [Microsoft Azure 契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Microsoft Azure の契約情報について: [Microsoft Azure の契約](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Microsoft Azure のプライバシー情報について: [Microsoft Azure のプライバシーに関する声明](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>セキュリティ、コンプライアンス、監査
 
-Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./azure-rms-problems-it-solves.md)」の「[セキュリティ、コンプライアンス、および規制の要件](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに
+Azure Rights Management サービスの特定の認証についての情報については、記事「[Azure RMS が解決する問題の種類](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management)」の「[セキュリティ、コンプライアンス、および規制の要件](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements)」のセクションを参照してください。 さらに:
 
 - Azure Information Protection の外部認証について: [Microsoft Azure セキュリティ センター](https://azure.microsoft.com/support/trust-center/)
 
-- FIPS 140 について: [FIPS 140 検証](https://technet.microsoft.com/library/security/cc750357.aspx)
+- FIPS 140 について: [FIPS 140 検証](/windows/security/threat-protection/fips-140-validation)
 
 保護テクノロジのしくみに関する詳細な技術情報については、「[Azure RMS の機能の詳細](./how-does-it-work.md)」を参照してください。 
 
@@ -67,5 +67,5 @@ Azure Rights Management サービスの特定の認証についての情報に�
 
 - Azure Active Directory のドキュメント: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Enterprise のドキュメント: [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
+- Microsoft 365 のドキュメント: [エンタープライズのドキュメントとリソースの Microsoft 365](/Office365/Enterprise/)
 

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 7066b6a13afd6c7a71b0b0740e3ffd71d56e3a43
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564401"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570351"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Azure AD でアプリの登録と RMS の有効化を行う方法
 
@@ -29,7 +29,7 @@ ms.locfileid: "88564401"
 ユーザー認証は、デバイス アプリケーションと RMS インフラストラクチャ間の通信を確立するために不可欠な手順です。 この認証プロセスでは、標準の OAuth 2.0 プロトコルを使用します。これには、現在のユーザーと認証要求に関する重要な情報が必要になります。
 
 ## <a name="registration-via-azure-portal"></a>Azure ポータルでの登録
-まず、Azure ポータルでアプリの登録を構成するためのガイド「[Configure Azure RMS for ADAL authentication (Azure RMS の ADAL 認証を構成する)](adal-auth.md)」に従ってください。 後で使用するために、このプロセスでの**クライアント ID** と**リダイレクト URI** をコピーして保存しておいてください。
+まず、Azure ポータルでアプリの登録を構成するためのガイド「[Configure Azure RMS for ADAL authentication (Azure RMS の ADAL 認証を構成する)](adal-auth.md)」に従ってください。 後で使用するために、このプロセスでの **クライアント ID** と **リダイレクト URI** をコピーして保存しておいてください。
 
 ## <a name="complete-your-information-protection-integration-agreement-ipia"></a>Information Protection Integration Agreement (IPIA) を完了する
 アプリケーションを展開する前に、Microsoft Information Protection チームとの IPIA を完了する必要があります。 完全な詳細については、トピック「[運用環境にデプロイする](deploying-your-application.md)」の最初のセクションを参照してください。
@@ -37,9 +37,9 @@ ms.locfileid: "88564401"
 ## <a name="implement-user-authentication-for-your-app"></a>アプリのユーザー認証の実装
 各 RMS API には、ユーザーの認証を有効にするために実装する必要があるコールバックがあります。 RMS SDK 4.2 は、アクセス トークンを指定しなかった場合、アクセス トークンを更新する必要がある場合、またはアクセス トークンの有効期限が切れている場合に、このコールバックの実装を使用します。
 
-- Android - [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) および [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx) インターフェイス。
-- iOS / OS X - [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) プロトコル。
--  Windows Phone / Window RT - [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx) インターフェイス。
+- Android - [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) および [AuthenticationCompletionCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java) インターフェイス。
+- iOS / OS X - [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc) プロトコル。
+-  Windows Phone / Window RT - [IAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/iauthenticationcallback) インターフェイス。
 - Linux - [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) インターフェイス。
 
 ### <a name="what-library-to-use-for-authentication"></a>認証に使用するライブラリ
@@ -62,13 +62,13 @@ ADAL は、Azure RMS (または AD RMS) に対してユーザーを認証する�
 
 - **権限** – 認証エンドポイントの URL。通常は AAD または ADFS です。
 - **リソース** - アクセスしようとしているサービス アプリケーション (通常 Azure RMS または AD RMS) の URL/URI。
-- **ユーザー ID** – UPN。通常は、アプリにアクセスするユーザーの電子メール アドレスです。 このパラメーターは、ユーザーが不明の場合は空にできます。また、ユーザー トークンをキャッシュしたり、キャッシュからトークンを要求したりする場合にも使用できます。 一般的に、ユーザー プロンプトの*ヒント*としても使用されます。
+- **ユーザー ID** – UPN。通常は、アプリにアクセスするユーザーの電子メール アドレスです。 このパラメーターは、ユーザーが不明の場合は空にできます。また、ユーザー トークンをキャッシュしたり、キャッシュからトークンを要求したりする場合にも使用できます。 一般的に、ユーザー プロンプトの *ヒント* としても使用されます。
 - **クライアント ID** – クライアント アプリの ID。 有効な Azure AD アプリケーションの ID である必要があります。
 また、前述の Azure ポータルでの登録手順で取得したものです。
 - **リダイレクト URI** – 認証コードの対象の URI で認証ライブラリを指定します。 iOS および Android では、特定の形式が必要になります。 これらの形式については、ADAL の対応する GitHub リポジトリの README ファイルで説明されています。 この値は、前述の Azure ポータルでの登録手順で取得したものです。
 
 > [!NOTE]
-> **範囲**は現在使用されていませんが、今後の使用のために予約されています。
+> **範囲** は現在使用されていませんが、今後の使用のために予約されています。
 
 Android: `msauth://packagename/Base64UrlencodedSignature`
 
@@ -80,7 +80,7 @@ iOS: `<app-scheme>://<bundle-id>`
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>認証コールバックの実装の例
 **認証コード例** - この SDK には、認証コールバックの使用を示すコード例が含まれています。 ご参考のためにここに、また以下のリンクされたトピックでいくつかのコード例を紹介します。
 
-**Android ユーザー認証** - 詳しくは、「[Android のコード例](android-code.md)、最初のシナリオの**ステップ 2**、「RMS 保護ファイルを使用する」をご覧ください。
+**Android ユーザー認証** - 詳しくは、「[Android のコード例](android-code.md)、最初のシナリオの **ステップ 2**、「RMS 保護ファイルを使用する」をご覧ください。
 
 ```java
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
@@ -155,7 +155,7 @@ iOS: `<app-scheme>://<bundle-id>`
                          }
 ```
 
-**iOS/OS X ユーザー認証** - 詳しくは、「[iOS/OS X のコード例](ios-os-x-code-examples.md)」の*最初のシナリオ「RMS 保護ファイルを使用する」のステップ 2* をご覧ください。
+**iOS/OS X ユーザー認証** - 詳しくは、「[iOS/OS X のコード例](ios-os-x-code-examples.md)」の *最初のシナリオ「RMS 保護ファイルを使用する」のステップ 2* をご覧ください。
 
 ```objectivec
     // AuthenticationCallback holds the necessary information to retrieve an access token.

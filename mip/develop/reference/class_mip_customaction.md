@@ -1,17 +1,17 @@
 ---
 title: CustomAction クラス
 description: 'Microsoft Information Protection (MIP) SDK の customaction:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 82f6ccc0e44fc5d055a1b4785c33d473dbedabf6
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: fc67920b517f3a9f75c395b42350cec9d75b23b3
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763376"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569151"
 ---
 # <a name="class-customaction"></a>CustomAction クラス 
 CustomAction は、アクションのすべてのサブプロパティをプロパティバッグとしてキャプチャする汎用アクションクラスです。 呼び出し元は、アクションの意味を理解する必要があります。
@@ -20,7 +20,7 @@ CustomAction は、アクションのすべてのサブプロパティをプロ�
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  アクション名を取得します。
-public const std:: vector\<std::p air\<std:: string、std:: string\> \>& GetProperties () const  |  プロパティ キーと値のペアの一覧を取得します。
+public const std:: vector \<std::pair\<std::string, std::string\> \>& GetProperties () const  |  プロパティ キーと値のペアの一覧を取得します。
   
 ## <a name="members"></a>メンバー
   

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: a07db66ed4edec0e80e3afa44741faecbe6a945b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972052"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570646"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS および OS X のセットアップ
 
@@ -29,15 +29,15 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
 このトピックでは、独自の新しいアプリを作成するために環境をセットアップする方法について説明します。
 
-**注**  この SDK は iPod touch をサポートしていません。
+**メモ**   この SDK は iPod Touch をサポートしていません。
 
 
--   [必要条件](#prerequisites)
+-   [前提条件](#prerequisites)
 -   [省略可能](#optional)
 -   [開発環境の構成](#configuring-your-development-environment)
 -   [参照](#see-also)
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>前提条件
 
 開発システムでは、次のソフトウェアをお勧めします。
 
@@ -50,13 +50,13 @@ iOS および OS X アプリケーションでは、Microsoft Rights Management 
 
     この SDK は、iOS 7.0 および OS X 10.8 以降を対象とする開発に使用できます。
 
--   認証ライブラリ: [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) を使用することをお勧めします。 ただし、OAuth 2.0 をサポートしている他の認証ライブラリも使用できます。
+-   認証ライブラリ: [Azure AD Authentication Library (ADAL)](/previous-versions/azure/jj573266(v=azure.100)) を使用することをお勧めします。 ただし、OAuth 2.0 をサポートしている他の認証ライブラリも使用できます。
 
     詳細については、「[ADAL for iOS (iOS 用の ADAL)](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios)」または「[ADAL for OS X (OS X 用の ADAL)](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)」を参照してください。
 
 「[What's new](release-notes.md)」 (新機能) トピックで、API の更新情報、リリース ノート、およびよく寄せられる質問 (FAQ) をお読みください。
 
-## <a name="optional"></a>省略可能
+## <a name="optional"></a>Optional
 
 UI ライブラリは、独自のカスタム UI 作成を望まない開発者のために、使用操作と保護操作用の再利用可能な UI を提供します。「[UI Library and Sample app for iOS (iOS 用の UI ライブラリとサンプル アプリ](https://github.com/AzureAD/rms-sdk-ui-for-ios)」参照。
 
@@ -72,7 +72,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
     ![プロジェクトの命名](../media/iOS-project-options.png)
 
 -   **[次へ]** をクリックして、プロジェクトの場所を選択します。
--   iOS フレームワークの **MSRightsManagement** フレームワークを追加するために、.framework フォルダーを SDK のインストール フォルダーから**プロジェクト ナビゲーター**の **Frameworks** セクションにドラッグします。
+-   iOS フレームワークの **MSRightsManagement** フレームワークを追加するために、.framework フォルダーを SDK のインストール フォルダーから **プロジェクト ナビゲーター** の **Frameworks** セクションにドラッグします。
 
     ![場所の設定](../media/ios-add-dependencies-01a.png)
 
@@ -97,7 +97,7 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
     ![ビルド設定の追加](../media/iOS-linker-flags.png)
 
--   これで、**プロジェクト ナビゲーター**はこのツリーのようになります。
+-   これで、**プロジェクト ナビゲーター** はこのツリーのようになります。
 
     ![プロジェクトの確認](../media/iOS-verify-setup-01a.png)
 
@@ -105,10 +105,10 @@ UI ライブラリは、独自のカスタム UI 作成を望まない開発者�
 
 ### <a name="see-also"></a>参照
 
-* [開始するには](get-started.md)
+* [作業開始](get-started.md)
 
 * [新機能](release-notes.md)
 
 * [開発者の用語と概念](core-concepts.md)
 
-* [iOS/OS X API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)
+* [iOS/OS X API リファレンス](/previous-versions/windows/desktop/msipcthin2/ios)

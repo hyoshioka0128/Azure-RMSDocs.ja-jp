@@ -14,29 +14,29 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 883dc9375e3e862726dd4f0ccf55985b3c8ddd61
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6aa1e633096a332b0071c721c0e96714fdd2d625
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792809"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570343"
 ---
 # <a name="api-sdk-42-reference"></a>API SDK 4.2 リファレンス
 
 Azure Information Protection SDK 4.2 は、複数のオペレーティング システムをサポートしています。 詳細については、[新機能](release-notes.md)に関するページを参照してください。
 
 ### <a name="apple"></a>Apple
-- [iOS および OS X API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx) - Apple iOS および OS X オペレーティング システム向けの API リファレンスです。
+- [iOS および OS X API リファレンス](/previous-versions/windows/desktop/msipcthin2/ios) - Apple iOS および OS X オペレーティング システム向けの API リファレンスです。
 
 ### <a name="google"></a>Google
-- [Android 名前空間](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Android 名前空間](/previous-versions/windows/desktop/msipcthin2/android)
 
 ### <a name="linux"></a>Linux
 - [Linux API リファレンス](linux-c-api-reference.md) - Linux オペレーティング システムの各種エディションのサポート向けの API リファレンスは GitHub でホストされています: [C++ 用の RMS SDK](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)。
 
 ### <a name="microsoft"></a>Microsoft
-- [Windows API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx) - Windows Phone および Windows ストア アプリケーション SDK 向けの API リファレンスです。
+- [Windows API リファレンス](/previous-versions/windows/desktop/msipcthin2/winrt) - Windows Phone および Windows ストア アプリケーション SDK 向けの API リファレンスです。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
-* [作業開始](get-started.md)
+* [開始するには](get-started.md)

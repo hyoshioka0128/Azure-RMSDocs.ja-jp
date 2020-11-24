@@ -6,19 +6,19 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
-ms.openlocfilehash: a3c7ac2396d89157b4d238fd37dbda3ff672896e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: cca355e35ca12a5d9d262b70aa9f957c50f9880d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560014"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569438"
 ---
 # <a name="class-miptransientnetworkerror"></a>class mip::TransientNetworkError 
 一時的なネットワーク エラー。 サービス エンドポイントに対するネットワーク呼び出しを作成する際の、予期しない動作によって発生します。 このエラーは一時的なエラーであるため、この操作は再試行できます。
   
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+まだ文書化されていません。

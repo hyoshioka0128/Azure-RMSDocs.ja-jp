@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d89ca9894c8d6a145235790fafc25f95570d93cc
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 9e6f2389c5cc552ed3a65485db9adb94af4a4d03
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303606"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569551"
 ---
-# <a name="getting-started"></a>概要
+# <a name="getting-started"></a>作業の開始
 
 Rights Management サービス SDK 2.1 プラットフォームを使用すると、開発者は RMS サーバーまたは Azure RMS を介して RMS 情報保護を利用するアプリケーションを作成できます。 このプラットフォームでは、キー管理、暗号化、復号化処理などの複雑なセキュリティ プラクティスを処理し、容易なアプリケーション開発のために簡略化された API を提供します。
 
@@ -31,9 +31,9 @@ Rights Management サービス SDK 2.1 プラットフォームを使用する�
 
 ## <a name="in-this-sections"></a>このセクションの内容
 
-| トピック | [説明] |
+| トピック | 説明 |
 |-------|-------------|
-| [リリース ノート](release-notes-rtm.md) | このトピックには、RMS SDK 2.1 のこのリリースとそれ以前のリリースに関する重要な情報が含まれています。|
+| [リリース ノート](release-notes-rtm.md) | このトピックには、RMS SDK 2.1 のこのリリースおよびそれ以前のリリースに関する重要な情報が含まれています。|
 | [SDK のインストール](install-the-rms-sdk.md) | このトピックでは、開発者ツールをインストールする方法について説明します。|
 | [Visual Studio の構成](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | このトピックでは、RMS SDK 2.1 を使用するように Visual Studio プロジェクトを構成する手順について説明します。|
 | [アプリケーションの開発](developing-your-application.md) | このトピックでは、RMS 対応アプリケーションの中心部分について基本的なことを説明します。独自のアプリケーションを開発する際に基礎となります。|
@@ -67,6 +67,6 @@ RMS SDK 2.1 では、重要なクライアントおよびサーバー プラ�
 **1 回の記述** - RMS SDK 2.1 アプリケーションでは、最新の RMS 機能を使用するためにコードの変更や再コンパイルは必要ありません。 RMS の新機能は、RMS サーバーに追加されるとすぐに既存のアプリケーションで使用可能になります。
 **一貫性** - RMS SDK 2.1 により、さまざまな RMS 構成に一貫して従うアプリケーションを記述しやすくなります。 アプリケーション開発者が作成する必要のある RMS ユーザー インターフェイスの量が大幅に減少するので、ルック アンド フィールの一貫性が強化され、ユーザー教育の必要性を減らすこともできます。
 
-## <a name="related-topics"></a>関連項目
+## <a name="related-topics"></a>関連トピック
 
 * [RMS 開発者ガイド](developers-guide.md)

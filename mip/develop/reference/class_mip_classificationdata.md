@@ -1,56 +1,26 @@
 ---
 title: ClassificationData クラス
 description: 'Microsoft Information Protection (MIP) SDK の classificationdata:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5d3b98f121d4ed73df4d6b5af167f8088805ff91
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: e575260b1c03fa71f4f454df2cd1d431b13a7650
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763560"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569255"
 ---
 # <a name="class-classificationdata"></a>ClassificationData クラス 
   
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public const std:: string& GetClassificationId () const  | _まだ文書化されていません。_
-public const std:: string& GetRulePackageId () const  | _まだ文書化されていません。_
-public int GetMaxCount () const  | _まだ文書化されていません。_
-public int GetMinCount () const  | _まだ文書化されていません。_
-public int GetMinConfidence () const  | _まだ文書化されていません。_
-public int GetMaxConfidence () const  | _まだ文書化されていません。_
 パブリック仮想 ~ ClassificationData ()  | _まだ文書化されていません。_
   
 ## <a name="members"></a>メンバー
   
-### <a name="getclassificationid-function"></a>GetClassificationId 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getrulepackageid-function"></a>GetRulePackageId 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getmaxcount-function"></a>GetMaxCount 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getmincount-function"></a>GetMinCount 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getminconfidence-function"></a>GetMinConfidence 関数
-_まだ文書化されていません。_
-
-  
-### <a name="getmaxconfidence-function"></a>GetMaxConfidence 関数
-_まだ文書化されていません。_
-
-  
 ### <a name="classificationdata-function"></a>~ ClassificationData 関数
-_まだ文書化されていません。_
+まだ文書化されていません。

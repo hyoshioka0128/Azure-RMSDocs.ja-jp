@@ -12,19 +12,19 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a890f7d9096b628489ceeaa156a9ce124d1535b3
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: dbfa9b0d7a4257f73071f2ff611a4c5fd2394bc0
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953033"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570566"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーの構成とインストール
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 > 統一されたラベル付けスキャナーを使用している場合は、「Azure Information Protection 統合された [ラベル付けスキャナーのインストールと構成](deploy-aip-scanner-configure-install.md)」を参照してください。
 
@@ -87,9 +87,9 @@ Azure Information Protection スキャナーの構成とインストールを開
 
     |Section  |設定  |
     |---------|---------|
-    |**コンテンツスキャンジョブの設定**     |    - **スケジュール**:**既定のままにし**ておきます。 </br>- **検出される情報の種類**:**ポリシーのみ**に変更 </br>- **リポジトリを構成**する: コンテンツスキャンジョブを最初に保存する必要があるため、現時点では構成しないでください。         |
-    |**ポリシーの適用**     | - **強制**: [**オフ**] を選択します。 </br>- **コンテンツに基づいてファイルにラベルを付ける**: の既定値のまま**に**します。 </br>- **既定のラベル**: 既定の**ポリシー**の既定値のままにします。 </br>- **ファイルのラベル**を変更する: 既定値を**オフ**のままにします。        |
-    |**ファイル設定の構成**     | - [**更新日]、[最終更新日]、[変更者] を保持し**ます。の既定値のまま**に**します。 </br>- **スキャンするファイルの種類**: [**除外**するファイルの種類を既定のままにする。 </br>- **既定の所有者**: 既定の**スキャナーアカウント**を保持します        |
+    |**コンテンツスキャンジョブの設定**     |    - **スケジュール**:**既定のままにし** ておきます。 </br>- **検出される情報の種類**:**ポリシーのみ** に変更 </br>- **リポジトリを構成** する: コンテンツスキャンジョブを最初に保存する必要があるため、現時点では構成しないでください。         |
+    |**ポリシーの適用**     | - **強制**: [**オフ**] を選択します。 </br>- **コンテンツに基づいてファイルにラベルを付ける**: の既定値のまま **に** します。 </br>- **既定のラベル**: 既定の **ポリシー** の既定値のままにします。 </br>- **ファイルのラベル** を変更する: 既定値を **オフ** のままにします。        |
+    |**ファイル設定の構成**     | - [**更新日]、[最終更新日]、[変更者] を保持し** ます。の既定値のまま **に** します。 </br>- **スキャンするファイルの種類**: [**除外** するファイルの種類を既定のままにする。 </br>- **既定の所有者**: 既定の **スキャナーアカウント** を保持します        |
     | | |
 
 1. コンテンツスキャンジョブの作成と保存が完了したら、[ **リポジトリの構成** ] オプションに戻り、スキャンするデータストアを指定できます。
@@ -109,7 +109,7 @@ Azure Information Protection スキャナーの構成とインストールを開
 
 1. [ **リポジトリ** ] ウィンドウで、データリポジトリのパスを指定し、[ **保存**] を選択します。
 
-    次に例を示します。 
+    例: 
 
     - ネットワーク共有の場合は、を使用 `\\Server\Folder` します。 
     - SharePoint ライブラリの場合は、を使用 `http://sharepoint.contoso.com/Shared%20Documents/Folder` します。
@@ -120,15 +120,15 @@ Azure Information Protection スキャナーの構成とインストールを開
 
     SharePoint パスを追加するときは、次の構文を使用します。
     
-    |パス  |構文  |
+    |パス  |Syntax  |
     |---------|---------|
     |**ルートパス**     | `http://<SharePoint server name>` </br></br>スキャナーユーザーに許可されているサイトコレクションも含め、すべてのサイトをスキャンします。 </br>ルートコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です        |
-    |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれか: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
-    |**特定の SharePoint ライブラリ**     | 次のいずれか: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+    |**特定の SharePoint サブサイトまたはコレクション**     | 次のいずれかです。 </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>サイトコレクションのコンテンツを自動的に検出するには、 [追加のアクセス許可](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) が必要です         |
+    |**特定の SharePoint ライブラリ**     | 次のいずれかです。 </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
     |**特定の SharePoint フォルダー**     | `http://<SharePoint server name>/.../<folder name>`        |
     | | |
 
-    このウィンドウの残りの設定については、この初期構成では変更せず、[ **コンテンツスキャンジョブ] の既定値**のままにしておきます。 既定の設定は、データリポジトリがコンテンツスキャンジョブから設定を継承することを意味します。
+    このウィンドウの残りの設定については、この初期構成では変更せず、[ **コンテンツスキャンジョブ] の既定値** のままにしておきます。 既定の設定は、データリポジトリがコンテンツスキャンジョブから設定を継承することを意味します。
 
 
 1. 別のデータリポジトリを追加する場合は、手順 8. と 9. を繰り返します。
@@ -167,9 +167,9 @@ Azure Information Protection スキャナーの構成とインストールを開
 
     プロンプトが表示されたら、スキャナーサービスアカウントの資格情報 ( `\<domain\user name>` ) とパスワードを入力します。
 
-1. **管理ツール**サービスを使用して、サービスがインストールされていることを確認し  >  **Services**ます。
+1. **管理ツール** サービスを使用して、サービスがインストールされていることを確認し  >  **Services** ます。
 
-    インストールされているサービスの名前は **Azure Information Protection スキャナー**で、作成したスキャナー サービス アカウントを使用して実行するように構成されます。
+    インストールされているサービスの名前は **Azure Information Protection スキャナー** で、作成したスキャナー サービス アカウントを使用して実行するように構成されます。
 
 スキャナーをインストールしたので、スキャナーを無人で実行できるように、スキャナーサービスアカウント [の Azure AD トークンを取得](#get-an-azure-ad-token-for-the-scanner) して認証する必要があります。
 
@@ -181,7 +181,7 @@ Azure AD トークンを取得するには:
 
 1. Azure portal に戻り、2つの Azure AD アプリケーションを作成し、認証用のアクセストークンを指定します。 このトークンを使用すると、スキャナーを非対話形式で実行できます。
 
-    詳細については、「 [Azure Information Protection のために非対話形式でファイルにラベルを付ける方法](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
+    「[非対話形式でファイルに Azure Information Protection のラベル付けをする方法](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)」を参照してください。
 
 2. Windows Server コンピューターから、スキャナーサービスアカウントにインストールの **ローカルログオン** 権限が付与されている場合は、このアカウントでサインインし、PowerShell セッションを開始します。
 
@@ -193,7 +193,7 @@ Azure AD トークンを取得するには:
 
     求められたら、Azure AD のサービス アカウントの資格情報のパスワードを指定し、**[同意する]** をクリックします。
 
-    次に例を示します。
+    例:
 
     ```powershell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
@@ -222,8 +222,8 @@ Azure AD トークンを取得するには:
 
 2. [コンテンツスキャンジョブ] ウィンドウで、次のように変更し、[ **保存**] を選択します。
 
-   - **コンテンツスキャンジョブ**セクション:**スケジュール**を**常**に変更する
-   - [**ポリシーの適用**] セクションから: [**適用**先] を **[オン**] に変更します。
+   - **コンテンツスキャンジョブ** セクション:**スケジュール** を **常** に変更する
+   - [**ポリシーの適用**] セクションから: [**適用** 先] を **[オン**] に変更します。
 
     > [!TIP]
     > ファイルの属性を変更するかどうかや、スキャナーがファイルのラベルを変更できるかどうかなど、このウィンドウの他の設定を変更することもできます。 情報のポップアップ ヘルプを使って、各構成設定について詳しく学習してください。
@@ -261,17 +261,17 @@ Azure AD トークンを取得するには:
     - `Encryption` 値として (REG_SZ)
     - `Default` 値のデータとして
 
-1. **MSIPC**キーと**fileprotection**キーが存在するかどうかを確認します。 そうでない場合は手動で作成し、ファイル名拡張子ごとにサブキーを作成します。
+1. **MSIPC** キーと **fileprotection** キーが存在するかどうかを確認します。 そうでない場合は手動で作成し、ファイル名拡張子ごとにサブキーを作成します。
 
     たとえば、スキャナーが Office ファイルや Pdf に加えて TIFF イメージを保護する場合、レジストリは編集後、次のようになります。
 
     ![保護を適用するためのスキャナーのレジストリの編集](./media/editregistry-scanner.png)
 
     > [!NOTE]
-    > 画像ファイルとして、TIFF ファイルはネイティブ保護をサポートし、結果として生成されるファイル名拡張子は**ptiff です**。
+    > 画像ファイルとして、TIFF ファイルはネイティブ保護をサポートし、結果として生成されるファイル名拡張子は **ptiff です**。
     >
 
-    ネイティブ保護がサポートされていないファイルの場合は、新しいキーとしてファイル名拡張子を指定し、汎用的な保護のために **PFile** を指定します。 保護されるファイルのファイル名拡張子は**pfile です**。
+    ネイティブ保護がサポートされていないファイルの場合は、新しいキーとしてファイル名拡張子を指定し、汎用的な保護のために **PFile** を指定します。 保護されるファイルのファイル名拡張子は **pfile です**。
 
 ネイティブ保護をサポートしていても、レジストリで指定する必要がある、テキストおよびイメージファイルの種類の一覧については、「 [分類と保護のサポートされているファイルの種類](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection)」を参照してください。
 
@@ -294,7 +294,7 @@ Azure AD トークンを取得するには:
 
 リポジトリ間で一括変更を行うには、次のようにします。
 
-1. [ **リポジトリ** ] ウィンドウの Azure portal で、[ **エクスポート** ] オプションを選択します。 次に例を示します。
+1. [ **リポジトリ** ] ウィンドウの Azure portal で、[ **エクスポート** ] オプションを選択します。 例:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="スキャナーのデータ リポジトリの設定をエクスポートする":::
 
@@ -317,7 +317,7 @@ Azure AD トークンを取得するには:
 
 次の設定を構成します。
 
-- **コンテンツに基づいてファイルにラベルを付ける:****Off**に設定
+- **コンテンツに基づいてファイルにラベルを付ける:****Off** に設定
 - **既定のラベル:** [ **カスタム**] に設定し、使用するラベルを選択します。
 
 ### <a name="identify-all-custom-conditions-and-known-sensitive-information-types"></a>すべてのカスタム条件と既知の機密情報の種類を識別する
@@ -358,7 +358,7 @@ Azure AD トークンを取得するには:
 |**読み込み/応答時間**     |スキャンするファイルが含まれているデータストアの現在の負荷と応答時間は、スキャナーのパフォーマンスにも影響します。         |
 |**スキャナーモード** (検出/強制)    | 通常、検出モードは、強制モードよりも高いスキャンレートを持ちます。 </br></br>検出には1つのファイル読み取り操作が必要ですが、強制モードでは読み取りと書き込みの操作が必要です。        |
 |**ポリシーの変更**     |Azure Information Protection ポリシーの条件を変更した場合、スキャナーのパフォーマンスが影響を受ける可能性があります。 </br></br>最初のスキャンサイクルでは、スキャナーがすべてのファイルを検査する必要があるときに、既定では、新しいファイルと変更されたファイルのみを検査する後続のスキャンサイクルよりも時間がかかります。 </br></br>条件を変更すると、すべてのファイルが再度スキャンされます。 詳細については、「ファイルの再 [スキャン](deploy-aip-scanner-manage-classic.md#rescanning-files)」を参照してください。|
-|**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 </br></br> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 </br></br>次に例を示します。 </br>-[最長一致の量指定子](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 </br>-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
+|**Regex の構造**    | スキャナーのパフォーマンスは、カスタム条件の regex 式がどのように構築されるかによって影響を受けます。 </br></br> メモリの大量消費とタイムアウト (1 ファイルあたり 15 分) のリスクを回避するには、ご利用の正規表現式を確認して効率的なパターン マッチングが行われているかを確認してください。 </br></br>例: </br>-[最長一致の量指定子](/dotnet/standard/base-types/quantifiers-in-regular-expressions)を避けます。 </br>-の代わりに、のような非キャプチャグループを使用し `(?:expression)` ます。 `(expression)`    |
 |**ログレベル**     |  ログレベルのオプションには、スキャナーレポートの [ **デバッグ**]、[ **情報**]、[ **エラー** ]、[ **オフ** ] があります。</br></br>- **オフ** にすると最適なパフォーマンスが得られる </br>- **デバッグ** によってスキャナーの速度が大幅に低下するため、トラブルシューティングにのみ使用してください。 </br></br>詳細については、[Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) コマンドレットの *ReportLevel* パラメーターを参照してください。       |
 |**スキャンされるファイル**     |-Excel ファイルを除き、Office ファイルは PDF ファイルよりもすばやくスキャンされます。 </br></br>-保護されていないファイルは、保護されたファイルよりもスキャンが高速です。 </br></br>-大きなファイルは、小さいファイルよりもスキャンに時間がかかることが明らかです。         |
 | | |

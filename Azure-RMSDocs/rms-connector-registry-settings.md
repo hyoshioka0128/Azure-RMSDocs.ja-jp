@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 536d3662c5e3e7a90a8da2f6b9d97f522d1f4111
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: fb2a081b03ae8b92fa58073b37336066f087da4c
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136928"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569878"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Rights Management コネクタのレジストリ設定
 
@@ -31,7 +31,7 @@ ms.locfileid: "86136928"
 
 -   *\<YourTenantURL>* は、Azure Information Protection テナントの Azure Rights Management サービスの URL です。 この値を見つけるには、次の操作を実行します。
 
-    1.  Azure Rights Management サービスに対して[AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)コマンドレットを実行します。 AIPService モジュールをまだインストールしていない場合は、「 [Aipservice PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
+    1.  Azure Rights Management サービスに対して [AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) コマンドレットを実行します。 AIPService モジュールをまだインストールしていない場合は、「 [Aipservice PowerShell モジュールのインストール](install-powershell.md)」を参照してください。
 
     2.  出力から、**LicensingIntranetDistributionPointUrl** の値を確認します。
 
@@ -201,7 +201,7 @@ ms.locfileid: "86136928"
 
 ## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>ファイル サーバーとファイル分類インフラストラクチャのレジストリ設定
 
-**レジストリパス:** HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+**レジストリパス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
 **種類:** Reg_SZ
 
@@ -211,7 +211,7 @@ ms.locfileid: "86136928"
 
 ---
 
-**レジストリパス:** HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+**レジストリパス:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 **種類:** Reg_SZ
 

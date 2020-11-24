@@ -1,17 +1,17 @@
 ---
 title: クラスアクション
 description: 'Microsoft Information Protection (MIP) SDK の action:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 4cc432d4bed173eeb20c7544c742037095feeb8f
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 5a5f6bdf2784b7f07023b5945f27c3f4c511c11b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763805"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569367"
 ---
 # <a name="class-action"></a>クラスアクション 
 アクションのインターフェイス。 各アクションは、(ポリシーで定義されているように) アプリケーションがラベルを適用するために実行する必要がある手順に対応します
@@ -21,4 +21,4 @@ ms.locfileid: "81763805"
 --------------------------------|---------------------------------------------
   
 ## <a name="members"></a>メンバー
-_まだ文書化されていません。_
+まだ文書化されていません。

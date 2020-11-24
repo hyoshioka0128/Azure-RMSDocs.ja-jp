@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 891f27a971c72465a4a0e61b1b2097c42fa06bd4
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135625"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570671"
 ---
 # <a name="file-api-configuration"></a>ファイル API の構成
 
@@ -64,9 +64,9 @@ ms.locfileid: "87135625"
 - **Off**: 暗号化が無効です。
 
 > [!Note]
-> この設定は、解読には影響しません。 ネイティブまたは Pfile 保護を使用して暗号化されている暗号化されたファイルは、ユーザーが**EXTRACT**権限を持っている限り、復号化できます。
+> この設定は、解読には影響しません。 ネイティブまたは Pfile 保護を使用して暗号化されている暗号化されたファイルは、ユーザーが **EXTRACT** 権限を持っている限り、復号化できます。
 
-- **Native**: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p*zzz* になります。*zzz* は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
+- **Native**: ネイティブ暗号化が使用されます。 Office ファイルの場合、暗号化されたファイルの拡張子は元のファイルと同じです。 たとえば、.docx ファイルの拡張子は、暗号化しても .docx のままです。 ネイティブ保護を適用できるその他のファイルの場合、暗号化されたファイルの拡張子の形式は p *zzz* になります。*zzz* は元のファイル拡張子です。 たとえば、.txt ファイルを暗号化すると、ファイル拡張子は .ptxt になります。 ネイティブ保護を適用できるファイル拡張子の一覧を以下に示します。
 
 - **Pfile**: PFile 暗号化が使用されます。 暗号化されたファイルでは、元の拡張子に .pfile が追加されます。 たとえば、.txt ファイルを暗号化すると、拡張子は .txt.pfile になります。
 
@@ -82,7 +82,7 @@ ms.locfileid: "87135625"
 -   **txt、xml、jpg、jpeg、pdf、png、tiff、bmp、gif、giff、jpe、jfif、jif ファイル** ネイティブ暗号化が有効になります (xxx は pxxx になります)。
 -   **その他のすべてのファイル** 暗号化は保護されたファイル (pfile) に対応します (xxx は xxx.pfile になります)。
 
-暗号化を試行したファイルの種類がブロックされている場合は、[IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) エラーが発生します。
+暗号化を試行したファイルの種類がブロックされている場合は、[IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes) エラーが発生します。
 
 ### <a name="file-api---file-support-details"></a>ファイル API - ファイルのサポートの詳細
 
@@ -103,10 +103,10 @@ ms.locfileid: "87135625"
 
 **その他のすべてのファイル形式**
 
--   保護の種類 = Pfile: sample。*zzz*は暗号化され、名前付きサンプルです。*zzz*. pfile;ここで、 *zzz*は元のファイル拡張子です。
+-   保護の種類 = Pfile: sample。*zzz* は暗号化され、名前付きサンプルです。*zzz*. pfile;ここで、 *zzz* は元のファイル拡張子です。
 -   Off: 暗号化を無効にします。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の設定は、txt ファイルの PFile 暗号化を有効にします。 Office ファイルには (既定で) ネイティブ保護が適用され、txt ファイルには PFile 保護が適用され、その他のすべてのファイルの保護は (既定で) ブロックされます。
 
@@ -149,4 +149,4 @@ HKEY_LOCAL_MACHINE
 ## <a name="related-articles"></a>関連記事
 
 - [開発者向けのメモ](developer-notes.md)
-- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes)

@@ -1,17 +1,17 @@
 ---
 title: クラス ApplicationActionState
 description: 'Microsoft Information Protection (MIP) SDK の applicationactionstate:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 389fd02b47153c6953fefad3ba068add6ff431ee
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 936f64f24211f000dc26153f17bd094f4d7d3c8d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763675"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569310"
 ---
 # <a name="class-applicationactionstate"></a>クラス ApplicationActionState 
   
@@ -19,10 +19,10 @@ ms.locfileid: "81763675"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 パブリック LabelState GetNewLabelState () const  |  新しいラベルの状態を取得します。
-public std:: shared_ptr\<Label\> getnewlabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
-public std::p air\<bool, std:: string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
+public std:: shared_ptr \<Label\> getnewlabel () const  |  ドキュメントに適用される必要のある機密ラベル ID を取得します。
+public std::p air \<bool, std::string\> IsDowngradeJustified () const  |  実装では、既存のラベルのダウングレードの理由が示されたかどうかを渡す必要があります。
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  新しいラベルの割り当て方法を取得します。
-パブリック仮想 std:: vector\<std::p air\<std:: string、std:: string\> \> getnewlabelextendedproperties () const  |  新しいラベルの拡張プロパティを返します。
+パブリック仮想 std:: vector \<std::pair\<std::string, std::string\> \> getnewlabelextendedproperties () const  |  新しいラベルの拡張プロパティを返します。
 public ActionType GetSupportedActions() const  |  サポートされているすべてのアクションの種類を表すマスクされた列挙型を取得します。
 public bool IsRecommendationEnabled () const  |  推奨アクションを表すブール値を取得します。 既定では、ユーザーが else を指定しない限り、true になります。
   
@@ -34,7 +34,7 @@ public bool IsRecommendationEnabled () const  |  推奨アクションを表す�
   
 **戻り値**: 新しいラベルの状態。 
   
-**関連**項目: mip:: labelstate
+**関連** 項目: mip:: labelstate
   
 ### <a name="getnewlabel-function"></a>GetNewLabel 関数
 ドキュメントに適用される必要のある機密ラベル ID を取得します。
@@ -48,7 +48,7 @@ public bool IsRecommendationEnabled () const  |  推奨アクションを表す�
   
 **戻り値**: ダウングレードの正当性が理由メッセージと共に示される場合は true、それ以外の場合は false。 
   
-**関連**項目: mip:: ジャスト Ifyaction
+**関連** 項目: mip:: ジャスト Ifyaction
   
 ### <a name="getnewlabelassignmentmethod-function"></a>Getnewlabelのメソッド関数
 新しいラベルの割り当て方法を取得します。
@@ -75,5 +75,5 @@ ActionType::Justify must be supported. ポリシーとラベルの変更に理�
 推奨アクションを表すブール値を取得します。 既定では、ユーザーが else を指定しない限り、true になります。
 
   
-**戻り値: 推奨**されるアクションを表すブール値を返します。
+**戻り値: 推奨** されるアクションを表すブール値を返します。
 このフィールドが影響を受けるには、ActionType:: RecommendLabel を有効にする必要があります。

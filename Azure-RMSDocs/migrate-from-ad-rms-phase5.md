@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: aba2381e5cc275e3b51156b32bdf88fdae974b5e
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049124"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570087"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>移行フェーズ 5 - 移行後のタスク
 
@@ -41,7 +41,7 @@ SCP を削除するには、ドメイン エンタープライズ管理者とし
 
 4. **[現在の SCP を削除する]** を選択して **[OK]** をクリックします。
 
-次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx)、[ServiceRequest テーブルの確認](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx)、[保護コンテンツに対するユーザー アクセスの監査](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。
+次に AD RMS サーバーのアクティビティを監視します。 たとえば、[システム正常性レポートの要求の確認](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221012(v=ws.10))、[ServiceRequest テーブルの確認](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772686(v=ws.10))、[保護コンテンツに対するユーザー アクセスの監査](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)などです。
 
 RMS クライアントがこれらのサーバーと通信していないこと、およびクライアントが Azure Information Protection を正常に使用していることを確認できたら、これらのサーバーから AD RMS サーバーの役割を削除できます。 専用サーバーを使用している場合は、最初にサーバーをシャットダウンするときの警告手順を使用することをお勧めします。 この方法では、サービス継続性のためにこれらのサーバーを再起動する必要がある問題の報告が発生していないことを確認でき、クライアントが Azure Information Protection を使用していない理由を調査する時間を確保できます。
 
@@ -68,7 +68,7 @@ DNS を使用したリダイレクト:
 
 ## <a name="step-11-complete-client-migration-tasks"></a>手順 11. クライアントの移行タスクを完了する
 
-モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](https://technet.microsoft.com/library/dn673574.aspx)をデプロイするときに作成した DNS SRV レコードを削除します。
+モバイル デバイス クライアントおよび Mac コンピューターの場合: [AD RMS モバイル デバイス拡張機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11))をデプロイするときに作成した DNS SRV レコードを削除します。
 
 これらの DNS の変更が反映されると、これらのクライアントは Azure Rights Management サービスを自動的に検出して使用を開始します。 ただし、Office Mac を実行する Mac コンピューターは、AD RMS からの情報をキャッシュに入れます。 これらのコンピューターの場合、このプロセスには最大で 30 日かかることがあります。
 
@@ -135,14 +135,14 @@ Azure Information Protection テナント キーの再入力を行うと ("キ�
 
 Azure Information Protection テナント キーを更新するには:
 
-- **テナントキーが Microsoft によって管理されている場合**: PowerShell コマンドレットの[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)を実行し、テナント用に自動的に作成されたキーのキー識別子を指定します。 指定する値を特定するには、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
+- **テナントキーが Microsoft によって管理されている場合**: PowerShell コマンドレットの [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) を実行し、テナント用に自動的に作成されたキーのキー識別子を指定します。 指定する値を特定するには、 [Get AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) コマンドレットを実行します。 テナント用に自動的に作成されたキーは作成日が最も古いので、次のコマンドを使用して識別することができます。
 
         
     ```ps
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
     ```
 
-- **テナントキーがユーザーによって管理されている場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントのキー作成プロセスを繰り返してから、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)コマンドレットをもう一度実行して、この新しいキーの URI を指定します。
+- **テナントキーがユーザーによって管理されている場合 (BYOK)**: Azure Key Vault で、Azure Information Protection テナントのキー作成プロセスを繰り返してから、 [AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) コマンドレットをもう一度実行して、この新しいキーの URI を指定します。
 
 Azure Information Protection テナント キーの管理について詳しくは、「[Azure Information Protection テナント キーに対する操作](./operations-tenant-key.md)」を参照してください。
 

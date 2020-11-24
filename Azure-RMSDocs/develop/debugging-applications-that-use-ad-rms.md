@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c0b53c0f749427f785bf12afa6b3f8cda461947e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7b8d3a47949483baca3768670bfcdbdf457f62ef
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792541"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569582"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>方法: 権限保護対応アプリケーションのデバッグ
 
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
 
 イベント ログの名前は "Microsoft-RMS-MSIPC/Debug" です。 これは、Windows イベント ビューアーでログが表示される場所が "アプリケーションとサービス ログ\\Microsoft\\RMS\\MSIPC\\Debug" であることを意味します。
 
-**注**:  ログは既定で有効に設定され、詳細レベル 3 に設定されます。
+**メモ**   ログは、既定で有効になり、詳細レベル3に設定されます。
 
  
 
@@ -64,4 +64,4 @@ Wevtutil インターフェイスを使うと、ログの詳細レベルを制�
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**注**:  Windows イベント ビューアーで、 **[表示]** メニューの **[分析およびデバッグ ログの表示]** を選択すると、MSIPC デバッグ ログが表示されます。
+**メモ**   Windows イベントビューアーの [**表示**] メニューで、[**分析およびデバッグログの表示**] を選択して、MSIPC デバッグログを表示します。

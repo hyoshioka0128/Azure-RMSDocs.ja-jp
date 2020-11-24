@@ -5,26 +5,26 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3cdbbeb2b2cd81036c9d736d63fd467ea7770c2
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: abab1e8a35b1928dd752cd287dc20aebded9bb14
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046218"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569679"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection クライアント: クライアントのインストールと構成
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Office 2010 を実行しているコンピューターでは、Azure Information Protection サービスに対して認証を行うために、Azure Information Protection クライアント (クラシック) または Azure Information Protection 統合ラベルクライアントが必要です。
 
@@ -38,7 +38,7 @@ Office 2010 を実行しているコンピューターでは、Azure Information
 
 Windows 用のクライアントのエンタープライズインストールおよび構成については、次の管理者ガイドを参照してください。
 
-- 統一されたラベル付けクライアント: Azure Information Protection 統合された[クライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
+- 統一されたラベル付けクライアント: Azure Information Protection 統合された [クライアント管理者ガイド](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
 
 - 従来のクライアント: [Azure Information Protection クライアント管理者ガイド](./rms-client/client-admin-guide.md)
 
@@ -59,25 +59,25 @@ IOS および Android 用の Azure Information Protection アプリビューア�
 
 Azure Information Protection viewer アプリは Microsoft Intune アプリソフトウェア開発キットを使用するため、iOS デバイスと Android デバイスが Intune に登録されている場合は、次のデバイス用の Azure Information Protection ビューアーアプリを展開して管理できます。
 
-1. [Intune に Azure Information Protection アプリを追加する](/intune/apps-add)
+1. [Intune に Azure Information Protection アプリを追加する](/intune/apps/apps-add)
 
 2. 次のオプションの一方または両方を実行します。
 
-    - アプリを[ユーザーに割り当てて](/intune/apps-deploy)デプロイする
+    - アプリを[ユーザーに割り当てて](/intune/apps/apps-deploy)デプロイする
 
-    - [アプリ保護ポリシー](/intune/app-protection-policies)を使用してアプリを管理する
+    - [アプリ保護ポリシー](/intune/apps/app-protection-policies)を使用してアプリを管理する
 
 Azure Information Protection アプリを Intune に追加するときの追加情報:
 
 - IOS の場合: Intune からアプリを検索して追加します。
 
-- Android の場合: アプリを追加するときに、次の**Appstore URL**を使用します。
+- Android の場合: アプリを追加するときに、次の **Appstore URL** を使用します。
 
     ```md
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
     ```
 
-Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
+Android デバイス用のアプリ保護ポリシーに対して Azure Information Protection アプリを構成すると、保護されたテキスト、イメージ、および PDF ドキュメントを開くだけでなく、このアプリではオーディオ ファイルとビデオ ファイルを開くこともできます。 詳細については、「[Azure Information Protection アプリでメディア ファイルを表示する](/intune/fundamentals/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

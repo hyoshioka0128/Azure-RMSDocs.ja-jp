@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf40f0ec6cbd2363f58aa403ec1f74c54b57d66
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 8a84ab3927859e384a96887b5636f4723ab942d5
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048682"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95569950"
 ---
 # <a name="migration-phase-1---preparation"></a>移行フェーズ 1 - 準備
 
@@ -64,7 +64,7 @@ Azure Information Protection のデータ保護を提供するサービスを構
 
 ほとんどの移行では、すべてのクライアントを一度に移行するのは実際的ではないため、少しずつクライアントを移行することがよくあります。 つまり、Azure Information Protection を使用するクライアントとまだ AD RMS を使用するクライアントが共存する期間があります。 移行前と移行後の両方のユーザーをサポートするには、オンボーディング制御を使用し、移行前のスクリプトをデプロイします。 まだ移行されていないユーザーが、Azure Rights Management を使用する移行の済んだユーザーによって保護されているコンテンツを使用できるように、移行プロセスの間はこの手順が必要です。
 
-1. たとえば **AIPMigrated** といった名前のグループを作成します。 このグループは、Active Directory で作成してクラウドに同期しても、Office 365 または Azure Active Directory で作成してもかまいません。 この時点では、このグループにユーザーを割り当てないでください。 後の手順でユーザーを移行するときに、このグループに追加します。
+1. たとえば **AIPMigrated** といった名前のグループを作成します。 このグループは Active Directory で作成し、クラウドに同期することも、Microsoft 365 または Azure Active Directory で作成することもできます。 この時点では、このグループにユーザーを割り当てないでください。 後の手順でユーザーを移行するときに、このグループに追加します。
 
     このグループのオブジェクト ID を記録しておきます。 そのためには、Azure AD PowerShell を使います。たとえば、バージョン 1.0 のモジュールについては、[Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) コマンドを使います。 または、Azure Portal から、グループのオブジェクト ID をコピーしてもかまいません。
 
@@ -84,7 +84,7 @@ Azure Information Protection のデータ保護を提供するサービスを構
 
     **Migration-Scripts.zip**
 
-4. ファイルを抽出し、 **Prepare-Client**の指示に従って、AD RMS クラスターのエクストラネットライセンス URL のサーバー名が含まれるようにします。
+4. ファイルを抽出し、 **Prepare-Client** の指示に従って、AD RMS クラスターのエクストラネットライセンス URL のサーバー名が含まれるようにします。
 
     この名前を調べるには、Active Directory Rights Management サービス コンソールで、クラスターの名前をクリックします。 **[クラスターの詳細]** で、[エクストラネット クラスターの URL] セクションの **[ライセンス]** からサーバー名をコピーします。 例: **rmscluster.contoso.com**。
 
@@ -123,7 +123,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **種類:** Reg_SZ
 
-**値:**`https://\<Your Tenant URL\>/_wmcs/licensing`
+**値:** `https://\<Your Tenant URL\>/_wmcs/licensing`
 
 **データ:**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 

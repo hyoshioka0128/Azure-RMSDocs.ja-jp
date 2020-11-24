@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,16 +13,16 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: a2b69b7744b17c4f5ccce32a1513015fb4e4cbcc
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810264"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569822"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Azure Rights Management サービスを利用したファイルの保護でユーザーを支援するヘルプ
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Azure Information Protection を組織に合わせてデプロイして構成したら、ユーザー、管理者、およびヘルプ デスクにヘルプおよびガイダンスを提供します。
 
@@ -86,7 +86,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Microsoft Word で、ドキュメントを作成します。
 
-2.  [**ファイル**] メニューの [**情報**] [ドキュメントの保護] [アクセスの制限] を使用  >  **Protect Document**  >   **Restrict Access**します。
+2.  [**ファイル**] メニューの [**情報**] [ドキュメントの保護] [アクセスの制限] を使用  >  **Protect Document**  >   **Restrict Access** します。
 
 3. テンプレートを選択して適切な使用権限をすぐに適用するか、**[アクセスの制限]** を選択して使用権限を自分で選択します。
 
@@ -105,7 +105,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1.  Outlook で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2.  [ **オプション** ] タブの [ **アクセス許可** > オプションを選択します。 たとえば、[**転送不可**]、[ ** \<Company Name> -社外秘**]、または [ ** \<Company Name> -社外秘**] が表示されます。
+2.  [ **オプション** ] タブの [ **アクセス許可** > オプションを選択します。 たとえば、[**転送不可**]、[ **\<Company Name> -社外秘**]、または [ **\<Company Name> -社外秘**] が表示されます。
 
 3.  メッセージを送信します。
 
@@ -117,7 +117,7 @@ Azure Rights Management サービスを使用していて、Azure Information Pr
 
 1. Outlook on the web で、組織内の受信者宛ての電子メール メッセージを作成します。
 
-2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、[ **アクセス許可の変更** ] を選択し、ドロップダウンからオプションを選択します。 例: **Encrypt**または** \<Company Name> -Confidential**。
+2. **[保護]** を選択します。 管理者によって既定値が変更されていない限り、**[転送不可]** オプションが自動的に選択されます。 既定値を変更する場合は、[ **アクセス許可の変更** ] を選択し、ドロップダウンからオプションを選択します。 例: **Encrypt** または **\<Company Name> -Confidential**。
 
 3. メッセージを送信します。
 

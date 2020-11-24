@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6c7ab059ff19cc7f8b41bc345521e9e1798e7769
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: f57529603a8d96a8621195ea4168eb2fe9cc3dc8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264363"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569646"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>スコープ ポリシーを使用して特定のユーザーの Azure Information Protection ポリシーを構成する方法
 
@@ -27,7 +27,7 @@ ms.locfileid: "88264363"
 > *手順:[Windows 用 Azure Information Protection クライアント](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection クライアントがインストールされているコンピューターに Azure Information Protection ポリシーがダウンロードされると、すべてのユーザーは、既定のポリシーから設定とラベルを取得するか、グローバル ポリシー用に構成された変更を取得します。 異なる設定やラベルを使用して、特定のユーザーに対してこの構成を補完する場合は、それらのユーザー用に構成された **スコープ付きポリシー** を作成する必要があります。
 
@@ -53,7 +53,7 @@ Azure Information Protection クライアントをサポートする Office デ�
 
 2. [**分類**  >  **ポリシー** ] メニューオプションから: [ **Azure Information Protection-ポリシー** ] ウィンドウで、[**新しいポリシーの追加**] を選択します。 次に、既存のグローバルポリシーを表示する **ポリシー** ウィンドウが表示されます。ここで、新しいスコープ付きポリシーを構成できます。
 
-3. Azure Portal で管理者にのみ表示されるポリシー名と説明を指定します。 名前はテナントに対して一意である必要があります。 次に、[ **このポリシーを取得するユーザー/グループを指定**してください] を選択し、後続のウィンドウで、このポリシーのユーザーとグループを検索して選択します。 このスコープ付きポリシーで構成するラベルと設定は、これらのユーザーにのみ適用されます。
+3. Azure Portal で管理者にのみ表示されるポリシー名と説明を指定します。 名前はテナントに対して一意である必要があります。 次に、[ **このポリシーを取得するユーザー/グループを指定** してください] を選択し、後続のウィンドウで、このポリシーのユーザーとグループを検索して選択します。 このスコープ付きポリシーで構成するラベルと設定は、これらのユーザーにのみ適用されます。
     
     パフォーマンス上の理由から、スコープ付きポリシーのグループ メンバーシップは[キャッシュ](prepare.md#group-membership-caching-by-azure-information-protection)されます。
 
@@ -70,6 +70,6 @@ Azure Information Protection クライアントをサポートする Office デ�
 
 Azure Information Protection クライアントは、サポートされている Office アプリケーションが起動するか、ファイル エクスプローラーが開かれるたびに変更がないかどうかを確認します。 クライアントは、グローバル ポリシー、またはそのユーザーに適用されるスコープ付きポリシーの変更をダウンロードします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 既定のポリシーをカスタマイズする方法や、Office アプリケーションで結果の動作を確認する方法の例については、[ポリシーの編集と新しいラベルの作成](infoprotect-quick-start-tutorial.md)に関するチュートリアルをご覧ください。

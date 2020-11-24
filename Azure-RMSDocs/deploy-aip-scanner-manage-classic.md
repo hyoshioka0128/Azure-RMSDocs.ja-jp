@@ -12,19 +12,19 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: c3292782a3a824db1166e255be3935978c8b8ce9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953101"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570119"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Azure Information Protection クラシックスキャナーの実行
 
 >*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、windows server 2019、windows server 2016、windows Server 2012 R2*
 
 >[!NOTE]
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 >
 > 統一されたラベル付けスキャナーを使用している場合は、「 [Azure Information Protection スキャナーの実行](deploy-aip-scanner-manage.md)」を参照してください。
 
@@ -66,17 +66,17 @@ ms.locfileid: "88953101"
 
     - **PowerShell コマンドを使用します。** を実行し `Get-AIPScannerStatus` て、状態の変更を監視します。
 
-    - **Windows イベントログを確認します。** **Azure Information Protection**という名前のローカルの Windows**アプリケーションとサービス**のイベントログを確認します。
+    - **Windows イベントログを確認します。** **Azure Information Protection** という名前のローカルの Windows **アプリケーションとサービス** のイベントログを確認します。
 
         また、このログには、スキャナーのスキャンが完了したこと (結果の概要など) が表示されます。 情報イベント ID **911** を探します。 詳細については、「 [イベントログ id」と「スキャナーの説明](#event-log-ids-and-descriptions-for-the-scanner)」を参照してください。
 
-1. スキャンが完了したら、 ** % *localappdata*% \ Microsoft\MSIP\Scanner\Reports**ディレクトリに格納されているレポートを確認します。
+1. スキャンが完了したら、 **% *localappdata*% \ Microsoft\MSIP\Scanner\Reports** ディレクトリに格納されているレポートを確認します。
 
     - .txt の概要ファイルには、スキャンにかかった時間、スキャンされたファイルの数、情報の種類と一致したファイルの数が含まれています。
 
     - .csv ファイルには各ファイルに関する詳細情報が記載されています。 このフォルダーには、スキャンのサイクルごとに最大 60 のレポートが格納され、必要なディスク領域を最小限に抑えるために最新のもの以外のすべてのレポートが圧縮されます。
 
-[初期構成](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) では、探索する **情報の種類** を **ポリシーのみ**に設定するように指示されます。 この構成は、自動分類用に構成した条件を満たすファイルのみが詳細レポートに含まれることを意味します。
+[初期構成](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) では、探索する **情報の種類** を **ポリシーのみ** に設定するように指示されます。 この構成は、自動分類用に構成した条件を満たすファイルのみが詳細レポートに含まれることを意味します。
 
 ラベルが適用されていない場合は、ラベルの構成に [推奨分類] ではなく [自動] が含まれていることを確認するか、[推奨される **ラベルを自動で扱う** (スキャナーバージョン 2.7. x. x 以降で使用可能)] をオンにします。
 
@@ -90,7 +90,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 ### <a name="changing-log-levels-or-locations"></a>ログレベルまたは場所の変更
 
-*Reportlevel*パラメーターを[設定](/powershell/module/azureinformationprotection/set-aipscannerconfiguration)して、ログ記録のレベルを変更します。
+*Reportlevel* パラメーターを [設定](/powershell/module/azureinformationprotection/set-aipscannerconfiguration)して、ログ記録のレベルを変更します。
 
 レポートフォルダーの場所または名前を変更することはできません。 レポートを別の場所に保存する場合は、フォルダーに対してディレクトリの接合を使用することを検討してください。
 
@@ -139,7 +139,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 スキャナーでは、ポリシーが1時間ごとに自動的に更新されます。また、サービスが開始され、ポリシーが1時間以上経過していることが判明した場合もあります。
 
-テスト中など、ポリシーをすぐに更新するには、 **%LocalAppData%\Microsoft\MSIP**ディレクトリから**Policy.msip**ポリシーファイルを手動で削除し、Azure Information Protection サービスを再起動します。
+テスト中など、ポリシーをすぐに更新するには、 **%LocalAppData%\Microsoft\MSIP** ディレクトリから **Policy.msip** ポリシーファイルを手動で削除し、Azure Information Protection サービスを再起動します。
 
 > [!NOTE]
 > ラベルの保護設定を変更した場合は、Azure Information Protection サービスを再起動する前に、更新された保護設定を保存してから15分が経過するのを待ちます。
@@ -151,14 +151,14 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 - **動的ポートの数**。 ファイルをホストしているオペレーティングシステムの動的ポートの数を増やすことが必要になる場合があります。 SharePoint 用にサーバーのセキュリティが強化されている場合、スキャナーが許可されているネットワーク接続の数を超えて、そのために停止する原因の 1 つになる可能性があります。
 
-    これがスキャナーの停止の原因であるかどうかを確認するには、次のエラーメッセージが、そのスキャナーの** % *localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog**ファイルに記録されているかどうかを確認してください。
+    これがスキャナーの停止の原因であるかどうかを確認するには、次のエラーメッセージが、そのスキャナーの **% *localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog** ファイルに記録されているかどうかを確認してください。
 
     **リモートサーバー---に接続できませんでした。ソケットの > 例外: 各ソケットアドレス (プロトコル/ネットワークアドレス/ポート) の使用は、通常、許可されている IP: ポートの1つのみです**
 
     > [!NOTE]
     > 複数のログがある場合、このファイルは圧縮されます。
 
-    現在のポート範囲を表示し、範囲を拡大する方法について詳しくは、「[ネットワーク パフォーマンスを向上させるために変更可能な設定](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」をご覧ください。
+    現在のポート範囲を表示し、範囲を拡大する方法について詳しくは、「[ネットワーク パフォーマンスを向上させるために変更可能な設定](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」をご覧ください。
 
 - **リストビューのしきい値。** 大規模な SharePoint ファームの場合は、リストビューのしきい値を大きくする必要があります。 既定では、リストビューのしきい値は5000に設定されています。
 
@@ -191,7 +191,7 @@ Start-AIPScannerDiagnostics
 
 ## <a name="event-log-ids-and-descriptions-for-the-scanner"></a>スキャナーのイベント ログ ID と説明
 
-次の AIP スキャナーログイベントは、 **Azure Information Protection**という名前の Windows**アプリケーションおよびサービス**イベントログに格納されます。
+次の AIP スキャナーログイベントは、 **Azure Information Protection** という名前の Windows **アプリケーションおよびサービス** イベントログに格納されます。
 
 |イベント ID  |アクティビティ  |説明  |
 |---------|---------|---------|

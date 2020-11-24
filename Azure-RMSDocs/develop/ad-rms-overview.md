@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 001cace1cdc3a9fd3e5cc1dd1a06a77215bd438c
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564321"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570230"
 ---
 # <a name="overview-of-rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1 の概要
 
@@ -39,7 +39,7 @@ Rights Management サービス SDK 2.1 に基づいて構築したアプリケ�
 -   ユーザーの ID に基づいて、ドキュメントの表示、印刷、または編集の権限を有効にすることを望むオンライン ドキュメント ライブラリの所有者。
 -   表示と編集の権限を特定のユーザーに制限する社内の Web サイトに従業員の機密情報を公開することを望む企業。
 
-AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳細については、[AD RMS の IT Pro ドキュメント](https://TechNet.Microsoft.Com/library/cc771234.aspx)に関する TechNet のコンテンツを参照してください。
+AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳細については、[AD RMS の IT Pro ドキュメント](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10))に関する TechNet のコンテンツを参照してください。
 
 このセクションの残りのトピックでは、RMS アーキテクチャとその実装について説明します。
 
@@ -47,12 +47,12 @@ AD RMS サーバー、AD RMS クライアントおよびそれらの機能の詳
 
 | トピック | 説明 |
 |-------|-------------|
-|[クライアント](ad-rms-client.md) |このトピックでは、Rights Management Service Client 2.1 の用途と機能について説明します。 |
+|[Client](ad-rms-client.md) |このトピックでは、Rights Management Service Client 2.1 の用途と機能について説明します。 |
 |[サーバー](ad-rms-server.md) | このトピックでは、Azure と Windows Server を対象に、RMS サーバーの目的と機能について説明します。|
 
 
 ## <a name="related-topics"></a>関連トピック
 
 * [RMS の概念](application-types.md)
-* [開始するには](getting-started-with-ad-rms-2-0.md)
-* [AD RMS の IT Pro ドキュメント](https://technet.microsoft.com/library/cc771234.aspx)
+* [作業開始](getting-started-with-ad-rms-2-0.md)
+* [AD RMS の IT Pro ドキュメント](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10))

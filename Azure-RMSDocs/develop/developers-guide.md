@@ -12,12 +12,12 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.custom: has-adal-ref
-ms.openlocfilehash: 05036616c77d559dc82a0334b99b548da724df18
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 1ce4499d20da066eddac8d01c29ef1b52ccea250
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971797"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570214"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection 開発者ガイド
 
@@ -41,7 +41,7 @@ ms.locfileid: "82971797"
 
 ## <a name="powershell-guides"></a>PowerShell ガイド
 
-Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳しくは、「[Azure Information Protection クライアントでの PowerShell の使用](/azure/information-protection/rms-client/client-admin-guide-powershell)」をご覧ください。
+Azure Rights Management 管理者によって使用される、PowerShell コマンドレットはサービス アプリケーションの開発とテストにも役立ちます。 詳しくは、「[Azure Information Protection クライアントでの PowerShell の使用](../rms-client/client-admin-guide-powershell.md)」をご覧ください。
 
 ## <a name="user-applications"></a>ユーザー アプリケーション
 
@@ -64,11 +64,11 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 次のガイドでは、一般的なツールを使用したアプリケーション開発環境のセットアップ手順を、OS ごとに説明します。
 
-[![iOS/OSX セットアップ](../media/develop/ios-icon.png)](ios-sdk.md)
-[![Android セットアップ](../media/develop/android-icon.png)](android-sdk.md)
-[![Windows Phone セットアップ](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![Windows サービスセットアップ](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
-[![Linux セットアップ](../media/develop/linux-icon.png)](linux-setup.md)
+[ ![ iOS/OSX セットアップ](../media/develop/ios-icon.png)](ios-sdk.md) 
+ [ ![ Android セットアップ](../media/develop/android-icon.png)](android-sdk.md) 
+ [ ![ Windows Phone セットアップ](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) 
+ [ ![ Windows サービスセットアップ](../media/develop/windows-icon.png)](install-the-rms-sdk.md) 
+ [ ![ Linux セットアップ](../media/develop/linux-icon.png)](linux-setup.md)
 
 
 ## <a name="how-tos"></a>方法
@@ -86,7 +86,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ### <a name="security-and-authentication"></a>セキュリティと認証
 
-- [Azure Active Directory ログインを使用するように app service アプリケーションを構成する方法](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Azure Active Directory ログインを使用するように app service アプリケーションを構成する方法](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [方法: Azure Active Directory Authentication (ADAL) 認証の使用](how-to-use-adal-authentication.md)
 - [Azure RMS の認証を構成する (サービス)](adal-auth.md)
 - [方法: API セキュリティ モードの設定 (サービス)](setting-the-api-security-mode-api-mode.md)
@@ -107,7 +107,7 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 ## <a name="other-resources"></a>その他のリソース
 
 - [セキュリティのベスト プラクティス ガイド](security-guidelines.md)
-- [Azure Information Protection に関してよく寄せられる質問](/azure/information-protection/faqs)
+- [Azure Information Protection に関してよく寄せられる質問](../faqs.md)
 
 ### <a name="support-articles"></a>サポート技術情報
 
@@ -117,28 +117,28 @@ RMS SDK 4.2 は、人気のある OS (iOS および OSX、Android、Linux、Wind
 
 ### <a name="message-protocol-and-file-formats"></a>メッセージのプロトコルとファイルの形式
 
-- [クライアント サーバー間のプロトコル](https://msdn.microsoft.com/library/cc243191.aspx)
-- [権限が管理される電子メール オブジェクトのプロトコル](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
-- [複合ファイル バイナリのファイル形式](https://msdn.microsoft.com/library/dd942138.aspx)
+- [クライアント サーバー間のプロトコル](/openspecs/windows_protocols/ms-rmpr/d8ed4b1e-e605-4668-b173-6312cba6977e)
+- [権限が管理される電子メール オブジェクトのプロトコル](/openspecs/exchange_server_protocols/ms-oxormms/a121dda4-48f3-41f8-b12f-170f533038bb)
+- [複合ファイル バイナリのファイル形式](/openspecs/windows_protocols/ms-cfb/53989ce4-7b05-4f8d-829b-d08d6148375b)
 
 #### <a name="rights-managed-email-message"></a>権限が管理される電子メールのメッセージ
 
-- [.MSG ファイル形式 (パート 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
-- [.MSG ファイル形式 (パート 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+- [.MSG ファイル形式 (パート 1)](/archive/blogs/openspecification/msg-file-format-part-1)
+- [.MSG ファイル形式 (パート 2)](/archive/blogs/openspecification/msg-file-format-rights-managed-email-message-part-2)
 
 ### <a name="api-reference"></a>API リファレンス
 
-- [Windows API リファレンス](https://msdn.microsoft.com/library/hh535292.aspx)
-  - [Windows SDK エラー コード](https://msdn.microsoft.com/library/hh535248.aspx)
-- [Windows Phone および Windows ストアの API リファレンス](https://msdn.microsoft.com/library/dn891914.aspx)
-- [iOS および OSX の API リファレンス](https://msdn.microsoft.com/library/dn758306.aspx)
-- [Android API リファレンス](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Windows API リファレンス](/previous-versions/windows/desktop/msipc/msipc-reference)
+  - [Windows SDK エラー コード](/previous-versions/windows/desktop/msipc/error-codes)
+- [Windows Phone および Windows ストアの API リファレンス](/previous-versions/windows/desktop/msipcthin2/winrt)
+- [iOS および OSX の API リファレンス](/previous-versions/windows/desktop/msipcthin2/ios)
+- [Android API リファレンス](/previous-versions/windows/desktop/msipcthin2/android)
 - [Linux API リファレンス](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>以前のバージョン
 
-- [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) は、RMS SDK の最初のバージョンです。
-- [AD RMS スクリプト ツール](https://msdn.microsoft.com/library/bb968797.aspx)は、AD RMS のインストールのための管理ツールです。
+- [AD RMS SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal) は、RMS SDK の最初のバージョンです。
+- [AD RMS スクリプト ツール](/previous-versions/windows/desktop/adrms_script/adrms-script-portal)は、AD RMS のインストールのための管理ツールです。
 
 ### <a name="see-also"></a>関連項目
 

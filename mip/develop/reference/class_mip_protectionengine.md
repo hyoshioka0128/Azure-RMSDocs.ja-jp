@@ -1,17 +1,17 @@
 ---
 title: クラス ProtectionEngine
 description: 'Microsoft Information Protection (MIP) SDK の protectionengine:: undefined クラスを文書にします。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 61311ec2ac7c622099e9e7f56f22191e0287278c
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: f87b65f85693850ea3344aa2b1340f9fc4de4e73
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763904"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569126"
 ---
 # <a name="class-protectionengine"></a>クラス ProtectionEngine 
 特定の ID に関連する、保護関連のアクションを管理します。
@@ -20,21 +20,21 @@ ms.locfileid: "81763904"
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  エンジンの設定を取得します。
-public std:: shared_ptr\<asynccontrol\> gettemplates async (const std:: shared_ptr\<protectionengine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
-public std:: vector\<std:: shared_ptr\<templatedescriptor\> \> gettemplates (const std:: shared_ptr\<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
+public std:: shared_ptr \<AsyncControl\> gettemplates async (const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
+public std:: vector \<std::shared_ptr\<TemplateDescriptor\> \> gettemplates (const std:: shared_ptr \<void\>& context)  |  ユーザーが利用できるテンプレートのコレクションを取得します。
 public bool IsFeatureSupported (FeatureId featureId)  |  チェックがサポートされています。
-public std:: shared_ptr\<asynccontrol\> GetRightsForLabelIdAsync (const std:: string& documentId、const std:: String& lab/d、const std:: string& owneremail、const std:: string& delegatedUserEmail、const std:: shared_ptr\<protectionengine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  ラベル ID に関する、ユーザーが利用可能な権限のコレクションを取得します。
-public std:: vector\<std:: string\> GetRightsForLabelId (const std:: string& documentId、const std:: String& lab d、const std:: string& owneremail、const std:: string& delegatedUserEmail、const std:: shared_ptr\<void\>& context)  |  labelId に関する、ユーザーが利用可能な権限のコレクションを取得します。
-public std:: shared_ptr\<asynccontrol\> createprotectionhandler for発行 Async (const Protectionhandler::P ublishingsettings& settings、const std:: shared_ptr\<protectionhandler:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
-public std:: shared_ptr\<protectionhandler\> createprotectionハンドラ Forpublishing (const Protectionhandler::P ublishingsettings& settings、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
-public std:: shared_ptr\<asynccontrol\> CreateProtectionHandlerForConsumptionAsync (const Protectionhandler:: ConsumptionSettings& settings、const std:: shared_ptr\<protectionhandler:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
-public std:: shared_ptr\<protectionhandler\> createprotectionハンドラ For従量課金 (const Protectionhandler:: ConsumptionSettings& settings, const std::\<shared_ptr\> void& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
-public bool LoadUserCert (const std:: shared_ptr\<void\>& context)  |  によっ事前 load ユーザーライセンサー証明書。 prelicense を使用している場合は、別のネットワーク呼び出しが incurr 可能性があります。
-public std:: shared_ptr\<asynccontrol\> loadusercertasync (const std:: shared_ptr\<protectionengine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  によっ事前 load ユーザーライセンサー証明書。 prelicense を使用している場合は、別のネットワーク呼び出しが incurr 可能性があります。
-public void RegisterContentForTrackingAndRevocation (const std:: vector\<Uint8_t\>& serializedPublishingLicense、const std:: string& Contentname、bool isOwnerNotificationEnabled、const std:: shared_ptr\<void\>& context)  |  ドキュメント追跡 & 失効のために発行ライセンス (PL) を登録します。
-public std:: shared_ptr\<asynccontrol\> RegisterContentForTrackingAndRevocationAsync (const std:: vector\<uint8_t\>& SerializedPublishingLicense、const std:: string& contentname、bool isOwnerNotificationEnabled、const Std:: shared_ptr\<protectionengine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  ドキュメント追跡 & 失効のために発行ライセンス (PL) を登録します。
-public void RevokeContent (const std:: vector\<Uint8_t\>& serializedPublishingLicense、const std:: shared_ptr\<void\>& context)  |  コンテンツの失効を実行します。
-public std:: shared_ptr\<asynccontrol\> RevokeContentAsync (const std:: vector\<uint8_t\>& serializedPublishingLicense、const Std:: shared_ptr\<protectionengine:: オブザーバー\>& オブザーバー、const std:: shared_ptr\<void\>& context)  |  コンテンツの失効を実行します。
+public std:: shared_ptr \<AsyncControl\> GetRightsForLabelIdAsync (const std:: string& documentId、const std:: string& Lab d、const std:: string& ownerEmail、const std:: string& delegatedUserEmail、const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr& \<void\> context)  |  ラベル ID に関する、ユーザーが利用可能な権限のコレクションを取得します。
+public std:: vector \<std::string\> GetRightsForLabelId (const std:: string& documentId、const std:: string& lab d、const std:: string& ownerEmail、const std:: string& delegatedUserEmail、const std:: shared_ptr \<void\>& context)  |  labelId に関する、ユーザーが利用可能な権限のコレクションを取得します。
+public std:: shared_ptr \<AsyncControl\> createprotectionhandler for発行非同期 (Const ProtectionHandler::P ublishingsettings& 設定、const std:: shared_ptr \<ProtectionHandler::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public std:: shared_ptr \<ProtectionHandler\> createprotectionハンドラ forpublishing (Const ProtectionHandler::P ublishingsettings& settings、const std:: shared_ptr \<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public std:: shared_ptr \<AsyncControl\> CreateProtectionHandlerForConsumptionAsync (Const ProtectionHandler:: ConsumptionSettings& settings、const std:: shared_ptr \<ProtectionHandler::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public std:: shared_ptr \<ProtectionHandler\> createprotectionハンドラ for従量課金 (Const ProtectionHandler:: ConsumptionSettings& settings、const std:: shared_ptr \<void\>& context)  |  権限/ロールが特定のユーザーに割り当てられる保護ハンドラーを作成します。
+public bool LoadUserCert (const std:: shared_ptr \<void\>& context)  |  によっ事前 load ユーザーライセンサー証明書。 prelicense を使用している場合は、別のネットワーク呼び出しが incurr 可能性があります。
+public std:: shared_ptr \<AsyncControl\> loadusercertasync (const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  によっ事前 load ユーザーライセンサー証明書。 prelicense を使用している場合は、別のネットワーク呼び出しが incurr 可能性があります。
+public void RegisterContentForTrackingAndRevocation (const std:: vector \<uint8_t\>& serializedPublishingLicense、const std:: string& contentName、Bool isOwnerNotificationEnabled、const std:: shared_ptr \<void\>& context)  |  ドキュメント追跡 & 失効のために発行ライセンス (PL) を登録します。
+public std:: shared_ptr \<AsyncControl\> RegisterContentForTrackingAndRevocationAsync (const std:: vector \<uint8_t\>& serializedPublishingLicense、const std:: String& contentname、bool isOwnerNotificationEnabled、const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  ドキュメント追跡 & 失効のために発行ライセンス (PL) を登録します。
+public void RevokeContent (const std:: vector \<uint8_t\>& serializedPublishingLicense、const std:: shared_ptr \<void\>& context)  |  コンテンツの失効を実行します。
+public std:: shared_ptr \<AsyncControl\> RevokeContentAsync (const std:: vector \<uint8_t\>& serializedPublishingLicense、const std:: shared_ptr \<ProtectionEngine::Observer\>& オブザーバー、const std:: shared_ptr \<void\>& context)  |  コンテンツの失効を実行します。
   
 ## <a name="members"></a>メンバー
   
@@ -48,7 +48,7 @@ public std:: shared_ptr\<asynccontrol\> RevokeContentAsync (const std:: vector\<
 ユーザーが利用できるテンプレートのコレクションを取得します。
 
 パラメーター:  
-* **observer**: [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) インターフェイスを実装するクラス 
+* **observer**: ProtectionEngine::Observer インターフェイスを実装するクラス 
 
 
 * **context**: オブザーバーと省略可能な HttpDelegate に不透明に返されるクライアント コンテキスト
@@ -78,7 +78,7 @@ public std:: shared_ptr\<asynccontrol\> RevokeContentAsync (const std:: vector\<
 
 
   
-**戻り**値: ブール型の結果
+**戻り** 値: ブール型の結果
   
 ### <a name="getrightsforlabelidasync-function"></a>GetRightsForLabelIdAsync 関数
 ラベル ID に関する、ユーザーが利用可能な権限のコレクションを取得します。
@@ -136,7 +136,7 @@ labelId に関する、ユーザーが利用可能な権限のコレクション
 * **設定**: 保護設定 
 
 
-* **observer**: [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) インターフェイスを実装するクラス 
+* **observer**: ProtectionHandler::Observer インターフェイスを実装するクラス 
 
 
 * **コンテキスト**: オブザーバーおよびオプションの httpdelegate に不透明に転送されるクライアントコンテキスト
@@ -200,7 +200,7 @@ labelId に関する、ユーザーが利用可能な権限のコレクション
 
 
   
-は、正常に読み込まれた場合は True、それ以外の場合は false**を返し**ます。
+は、正常に読み込まれた場合は True、それ以外の場合は false **を返し** ます。
   
 ### <a name="loadusercertasync-function"></a>LoadUserCertAsync 関数
 によっ事前 load ユーザーライセンサー証明書。 prelicense を使用している場合は、別のネットワーク呼び出しが incurr 可能性があります。

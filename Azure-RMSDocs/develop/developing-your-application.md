@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 841669b3db3e86e2ea6f1860a9d8e9d915c4d28d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564245"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570686"
 ---
 # <a name="developing-your-application"></a>アプリケーションの開発
 
@@ -36,9 +36,9 @@ ms.locfileid: "88564245"
 
 ### <a name="azure-ad-tenant-configuration"></a>Azure AD テナントの構成
 
-Azure Information Protection の Azure AD 環境を構成するには、 [Azure Information Protection からの保護サービスのアクティブ化](https://docs.microsoft.com/information-protection/deploy-use/activate-service)に関するガイダンスに従ってください。
+Azure Information Protection の Azure AD 環境を構成するには、 [Azure Information Protection からの保護サービスのアクティブ化](/information-protection/deploy-use/activate-service)に関するガイダンスに従ってください。
 
-サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 [PowerShell を使用した Azure Information Protection からの保護の管理](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell)については、こちらを参照してください。
+サービスをアクティブにすると、次の手順で PowerShell コンポーネントが必要になります。 [PowerShell を使用した Azure Information Protection からの保護の管理](/information-protection/deploy-use/administer-powershell)については、こちらを参照してください。
 
 ### <a name="getting-your-tenant-id"></a>テナント ID を取得する
 

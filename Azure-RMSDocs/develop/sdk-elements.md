@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3c9bca4e474306d3e73df8d9d41a7c4ef9c6e5e2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0b2e741a1ad50c28248bc36fd3895971d429d5f5
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790809"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570007"
 ---
 # <a name="development-environment-files"></a>開発環境ファイル
 
@@ -27,7 +27,7 @@ ms.locfileid: "68790809"
 
 Rights Management サービス SDK 2.1 には、次のファイルが含まれています。これらのファイルは、コンピューター上の既定の場所または指定された場所 (%MsipcSDKDir%) にインストールされます。
 
-|ファイル|パス|[説明]|
+|ファイル|Path|説明|
 |----|----|-----------|
 |ReadMe.htm| \ | RMS ヘルプおよび[リリース ノート](release-notes-rtm.md)へのリンクが含まれています。|
 |Isvtier5appsigningprivkey.dat|\bin|RMS 対応アプリケーションの開発時に使用するマニフェストを生成するための秘密キーが含まれています。|
@@ -44,7 +44,7 @@ Rights Management サービス SDK 2.1 には、次のファイルが含まれ�
 |Ipcerror.h|\inc|RMS SDK 2.1 によってエクスポートされたパブリック エラー コードが含まれています。|
 |Ipcfile.h|\inc|RMS SDK 2.1 によってエクスポートされた File API インターフェイスが含まれています。|
 |Msipc.lib|\lib|RMS SDK 2.1 を使用して x86 アプリケーションを構築するときにリンクするライブラリ。|
-|Msipc_s.lib|\lib|x86 アプリケーション用の [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) のエントリ ポイントを提供します。|
+|Msipc_s.lib|\lib|x86 アプリケーション用の [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) のエントリ ポイントを提供します。|
 |Msipc.lib|\lib\x64|RMS SDK 2.1 を使用して x64 アプリケーションを構築するときにリンクするライブラリ。|
-|Msipc_s.lib|\lib\x64|x64 アプリケーション用の [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) のエントリ ポイントを提供します。|
+|Msipc_s.lib|\lib\x64|x64 アプリケーション用の [IpcInitialize](/previous-versions/windows/desktop/msipc/ipcinitialize) のエントリ ポイントを提供します。|
 |Genmanifest.exe|\tools|RMS 対応アプリケーションの開発時に使用するマニフェストを生成します。|

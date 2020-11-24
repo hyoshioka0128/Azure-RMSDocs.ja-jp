@@ -1,17 +1,17 @@
 ---
 title: クラス PolicyHandler
 description: 'Microsoft Information Protection (MIP) SDK の policyhandler:: undefined クラスについて説明します。'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c46b72f3a040204b4485da14f00f38ca69fa8222
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: b70643c9db84cef329b64e515bef5c7c47801718
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760958"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95569430"
 ---
 # <a name="class-policyhandler"></a>クラス PolicyHandler 
 このクラスは、ファイル上のすべてのポリシー ハンドラー関数にインターフェイスを提供します。
@@ -19,8 +19,8 @@ ms.locfileid: "81760958"
 ## <a name="summary"></a>まとめ
  メンバー                        | 説明                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<contentlabel\> GetSensitivityLabel (const executionstate& 状態)  |  既存のコンテンツから機密ラベルを取得します。
-public std:: vector\<std:: shared_ptr\<Action\> \> computeactions (const executionstate& state)  |  指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
+public std::shared_ptr\<ContentLabel\> GetSensitivityLabel(const ExecutionState& state)  |  既存のコンテンツから機密ラベルを取得します。
+public std:: vector \<std::shared_ptr\<Action\> \> computeactions (Const executionstate& state)  |  指定された状態に基づいてハンドラー内でルールを実行し、実行するアクションの一覧を返します。
 public void NotifyCommittedActions(const ExecutionState& state)  |  計算されたアクションが適用され、データがディスクにコミットされると呼び出されます。
   
 ## <a name="members"></a>メンバー

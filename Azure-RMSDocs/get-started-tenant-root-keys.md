@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 06/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
@@ -13,16 +13,16 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d0fe05fa31e14c583362183e28cc14835d78268
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 1dbced335e32aa874309ead00f7c3f7a5fcc42f9
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869667"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569830"
 ---
 # <a name="getting-started-with-tenant-root-keys"></a>テナントルートキーの概要
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 必要に応じてテナントキーの計画、作成、および構成が完了したら、次の手順に進みます。
 
@@ -32,7 +32,7 @@ ms.locfileid: "86869667"
 テナントキーに対してサポートされているライフサイクル操作の詳細については、「 [Azure Information Protection テナントキーの操作](./operations-tenant-key.md)」を参照してください。
 
 > [!TIP]
-> 機密性の高いコンテンツに対してオンプレミスの保護を必要とする組織の場合は、 [HYOK protection](configure-adrms-restrictions.md) (クラシッククライアントのみ) または[dke 保護](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only)(統合ラベル付けクライアントのみ) を構成します。
+> 機密性の高いコンテンツに対してオンプレミスの保護を必要とする組織の場合は、 [HYOK protection](configure-adrms-restrictions.md) (クラシッククライアントのみ) または [dke 保護](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (統合ラベル付けクライアントのみ) を構成します。
 > 
 
 ## <a name="start-using-your-tenant-key"></a>テナントキーの使用を開始する
@@ -50,7 +50,7 @@ Rights Management サービスがまだアクティブになっていない場�
 
 使用状況ログは、Azure Rights Management サービスが実行するすべてのトランザクションをログに記録します。
 
-キー管理方法によっては、テナントキーの詳細がログ情報に含まれる場合があります。 次の図は、Excel に表示されるログファイルの例を示しています。この例では、テナントキーが使用されていることを示す**KeyVaultDecryptRequest**および**KeyVaultSignRequest**要求の種類が示されています。
+キー管理方法によっては、テナントキーの詳細がログ情報に含まれる場合があります。 次の図は、Excel に表示されるログファイルの例を示しています。この例では、テナントキーが使用されていることを示す **KeyVaultDecryptRequest** および **KeyVaultSignRequest** 要求の種類が示されています。
     
 ![Excel のログ ファイル、テナント キーが使用されていることがわかる](./media/RMS_Logging.png)
     

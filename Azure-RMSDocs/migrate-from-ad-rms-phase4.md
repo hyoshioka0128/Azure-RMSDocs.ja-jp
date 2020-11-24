@@ -1,8 +1,8 @@
 ---
 title: AD RMS から Azure Information Protection への移行 - フェーズ 4
 description: AD RMS から Azure Information Protection への移行のフェーズ 4 には、手順 8 から 9 が含まれます。
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/02/2020
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01cf998fc6d4c872339d5bfa241eed4f1c9f4b6b
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: e2faf09b40daac41eb1d42ee2dcbfc7ebbc7d549
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298157"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570094"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>移行フェーズ 4 - サービス構成のサポート
 
@@ -38,13 +38,13 @@ AD RMS から Azure Information Protection への移行フェーズ 4 では、�
     
     この DNS レコードが配置されると、Web とモバイルの電子メール クライアントに Outlook を使用しているユーザーはそのアプリで AD RMS によって保護された電子メールを表示できるようになります。また、Exchange では AD RMS からインポートしたキーを使用して、AD RMS によって保護されたコンテンツを暗号化解除、インデックス化、保管、保護できるようになります。  
 
-2. Exchange Online の [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
+2. Exchange Online の [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) コマンドを実行します。 このコマンドの実行でヘルプが必要な場合は、「[Exchange Online: IRM Configuration](configure-office365.md#exchangeonline-irm-configuration)」(Exchange Online: IRM 構成) の詳しい手順を参照してください。
     
     出力で、**AzureRMSLicensingEnabled** が **True** に設定されているかどうかを確認します。
     
     - AzureRMSLicensingEnabled が **True** に設定されている場合は、この手順の追加の構成は必要ありません。 
     
-    - AzureRMSLicensingEnabled が **False** に設定されている場合は、`Set-IRMConfiguration -AzureRMSLicensingEnabled $true` を実行し、[Azure Information Protection に基づいて構築された新しい Office 365 Message Encryption 機能を設定する方法](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に関するページの検証手順を行い、Exchange Online が Azure Rights Management サービスを使用する準備が整っていることを確認します。 
+    - AzureRMSLicensingEnabled が **False** に設定されている場合は、を実行 `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` してから、 [Azure Information Protection の上に構築された新しい Microsoft 365 メッセージの暗号化機能のセットアップに関するページ](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) の検証手順を使用して、Exchange Online が Azure Rights Management サービスを使用する準備ができていることを確認します。 
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>手順 9. Exchange サーバーおよび SharePoint サーバー用に IRM 統合を構成する
 
@@ -64,7 +64,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 > [!IMPORTANT]
 > どの Exchange サーバーでも IRM をまだ構成していない場合は、手順 2. と 6. を実行します。
 > 
-> *LicensingLocation*パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順を[すべて実行します。](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)
+> *LicensingLocation* パラメーターにすべての AD RMS クラスターのライセンス url が表示されない場合は、これらの手順を [すべて実行します。](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration)
 
 1. 各 Exchange サーバーで、次のフォルダーを見つけて、そのフォルダー内のすべてのエントリを削除します。 **\programdata\microsoft\drm\server\s-1-5-18**
 
@@ -79,7 +79,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
     Set-IRMConfiguration -LicensingLocation $list
     ```
 
-    これで、 [Get IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)を実行すると、すべての AD RMS クラスターのライセンス url と、 *LicensingLocation*パラメーターに表示される AZURE Rights Management サービスの url が表示されます。
+    これで、 [Get IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration)を実行すると、すべての AD RMS クラスターのライセンス url と、 *LicensingLocation* パラメーターに表示される AZURE Rights Management サービスの url が表示されます。
 
 3.  次に、内部受信者に送信されるメッセージの IRM 機能を無効にします。
 
@@ -111,7 +111,7 @@ AD RMS で Exchange サーバーまたは SharePoint サーバーの Information
 
 4.  **[Information Rights Management]** ページの **[Information Rights Management]** セクションで、**[このサーバーでは IRM を使用しない]** を選択して、**[OK]** をクリックします。
 
-5.  各 sharepoint サーバーコンピューターで、 \\ < *sharepoint server>を実行しているアカウントの \ProgramData\Microsoft\MSIPC\Server SID*フォルダーの内容を削除します。
+5.  各 sharepoint サーバーコンピューターで、 \\ < *sharepoint server>を実行しているアカウントの \ProgramData\Microsoft\MSIPC\Server SID* フォルダーの内容を削除します。
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>コネクタを使うように Exchange と SharePoint を構成する
 

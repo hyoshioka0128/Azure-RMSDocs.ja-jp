@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 4a9f0b375f9e152d44f4d5b5251a9259456db53c
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 4a9a0029cbf9d3d171b24fc7a20a146a4646f799
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135710"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570198"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>方法: エラーとパフォーマンスのログを有効にする
 Microsoft Rights Management SDK 4.2 では、診断ログとパフォーマンス ログのアップロードが 1 つのデバイス プロパティで管理されます。
@@ -101,7 +101,7 @@ NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
 CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 ```
 
-オプションの設定の詳細については、「[CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx)」を参照してください。
+オプションの設定の詳細については、「[CustomerExperienceOptions](/previous-versions/windows/desktop/msipcthin2/customerexperienceoptions)」を参照してください。
 
 現在のログ コントロール フラグ設定を取得する
 

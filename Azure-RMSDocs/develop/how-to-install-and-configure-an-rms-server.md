@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 25a45be35851035411436a58fc72682ff4e6d66d
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564105"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570535"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>方法: RMS サーバーをインストールし、構成し、それでテストする
 
@@ -68,7 +68,7 @@ ms.locfileid: "88564105"
    - サーバー側の検出では、管理者が Active Directory により RMS ルート クラスターに対してサービス接続ポイント (SCP) を登録すると、クライアントは Active Directory にクエリを実行して SCP を検出し、サーバーとの接続を確立します。
    - クライアント側の検出では、RMS クライアント 2.1 が実行されるコンピューター上のレジストリに RMS サービス検出の設定を構成します。 これにより、RMS クライアント 2.1 が RMS サーバーを使用するように設定されます。 これらの設定がある場合、サーバー側の検出は実行されません。
 
-   クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS クライアントのデプロイに関する注意事項](https://technet.microsoft.com/library/jj159267(WS.10).aspx)」を参照してください。
+   クライアント側の検出を構成する場合、次のレジストリ キーを RMS サーバーをポイントするように設定できます。 サービス側の検出を構成する方法については、「[RMS クライアントのデプロイに関する注意事項](../rms-client/client-deployment-notes.md)」を参照してください。
 
 4. **、**
 

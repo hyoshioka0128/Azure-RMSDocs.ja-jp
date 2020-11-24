@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fec116c8bd0c8f02d57a9772bacf87a11d0966ac
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: ab20a68a2895962095bc83904851ef3a9955dd79
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136965"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570390"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Azure Rights Management コネクタを監視する
 
@@ -28,7 +28,7 @@ RMS コネクタのインストールと構成を行うと、以下の方法と�
 
 ## <a name="application-event-log-entries"></a>アプリケーション イベント ログ エントリ
 
-RMS コネクタは、アプリケーション イベント ログを使用して、**Microsoft RMS コネクタ**のエントリを記録します。 
+RMS コネクタは、アプリケーション イベント ログを使用して、**Microsoft RMS コネクタ** のエントリを記録します。 
 
 たとえば、次のような情報イベントです。
 
@@ -163,11 +163,11 @@ HTTPS 接続用の RMS コネクタを構成する方法については、「[HT
 
 ## <a name="performance-counters"></a>パフォーマンス カウンター
 
-RMS コネクタをインストールすると、**Microsoft Rights Management コネクタ**のパフォーマンス カウンターが自動的に作成されます。これによって、Azure Rights Management サービスの使用に関するパフォーマンスを監視や改善することができ、役に立ちます。 
+RMS コネクタをインストールすると、**Microsoft Rights Management コネクタ** のパフォーマンス カウンターが自動的に作成されます。これによって、Azure Rights Management サービスの使用に関するパフォーマンスを監視や改善することができ、役に立ちます。 
 
 たとえば、ドキュメントまたは電子メールが保護されている場合は、定期的に遅延が発生します。 あるいは、保護されているドキュメントまたは電子メールが開かれるとき、遅延が発生します。 このような場合は、パフォーマンス カウンターによって、遅延の原因がコネクタの処理時間や Azure Rights Management サービスの処理時間なのか、それともネットワークの遅延なのかを判断できます。 
 
-遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および**コネクタ応答時間**の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
+遅延が発生している場所を特定するには、**コネクタの処理時間**、**サービス応答時間**、および **コネクタ応答時間** の平均カウントが含まれているカウンターを調べます。 例: **Licensing Successful Batched Request Average Connector Response Time**。
 
 コネクタを使用する新しいサーバー アカウントを最近追加した場合、確認するとよいカウンターは、**Time since last authorization policy update** です。リストの更新後にコネクタがリストをダウンロードしたことや、もう少し待機する必要があるかどうか (最大 15 分) を確認できます。
 
@@ -177,7 +177,7 @@ RMS コネクタをインストールすると、**Microsoft Rights Management �
 
 使用状況ログの詳細については、「 [Azure Information Protection からの保護の使用状況のログと分析](log-analyze-usage.md)」を参照してください。
 
-診断のためにより詳細なログを記録する必要がある場合は、Windows Sysinternals の [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) を使用できます。 IIS の既定サイトの web.config ファイルを変更することにより、RMS コネクタのトレースを有効にします。
+診断のためにより詳細なログを記録する必要がある場合は、Windows Sysinternals の [Debugview](/sysinternals/downloads/debugview) を使用できます。 IIS の既定サイトの web.config ファイルを変更することにより、RMS コネクタのトレースを有効にします。
 
 1. **%programfiles%\Microsoft Rights Management connector\Web Service** で web.config ファイルを探します。
 

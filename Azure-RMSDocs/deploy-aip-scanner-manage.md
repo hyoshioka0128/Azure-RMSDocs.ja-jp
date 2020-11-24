@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
+ms.sourcegitcommit: bf8867a2270bd9e9695f2a5fe53fa5653faf7f94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316877"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "95570190"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Azure Information Protection スキャナーの実行
 
@@ -49,7 +49,7 @@ ms.locfileid: "89316877"
 
     または、PowerShell セッションで、次のコマンドを実行します。
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -63,13 +63,13 @@ ms.locfileid: "89316877"
 
     - **PowerShell コマンドを使用します。** を実行し `Get-AIPScannerStatus` て、状態の変更を監視します。
 
-1. スキャンが完了したら、 ** % *localappdata*% \ Microsoft\MSIP\Scanner\Reports**ディレクトリに格納されているレポートを確認します。
+1. スキャンが完了したら、 **% *localappdata*% \ Microsoft\MSIP\Scanner\Reports** ディレクトリに格納されているレポートを確認します。
 
     - .txt の概要ファイルには、スキャンにかかった時間、スキャンされたファイルの数、情報の種類と一致したファイルの数が含まれています。
 
     - .csv ファイルには各ファイルに関する詳細情報が記載されています。 このフォルダーには、スキャンのサイクルごとに最大 60 のレポートが格納され、必要なディスク領域を最小限に抑えるために最新のもの以外のすべてのレポートが圧縮されます。
 
-[初期構成](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) では、探索する **情報の種類** を **ポリシーのみ**に設定するように指示されます。 この構成は、自動分類用に構成した条件を満たすファイルのみが詳細レポートに含まれることを意味します。
+[初期構成](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) では、探索する **情報の種類** を **ポリシーのみ** に設定するように指示されます。 この構成は、自動分類用に構成した条件を満たすファイルのみが詳細レポートに含まれることを意味します。
 
 ラベルが適用されていない場合は、ラベルの構成に [推奨分類] ではなく [自動] が含まれていることを確認するか、[推奨される **ラベルを自動で扱う** (スキャナーバージョン 2.7. x. x 以降で使用可能)] をオンにします。
 
@@ -83,7 +83,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 ### <a name="changing-log-levels-or-locations"></a>ログレベルまたは場所の変更
 
-*Reportlevel*パラメーターを[設定](/powershell/module/azureinformationprotection/set-aipscannerconfiguration)して、ログ記録のレベルを変更します。
+*Reportlevel* パラメーターを [設定](/powershell/module/azureinformationprotection/set-aipscannerconfiguration)して、ログ記録のレベルを変更します。
 
 レポートフォルダーの場所または名前を変更することはできません。 レポートを別の場所に保存する場合は、フォルダーに対してディレクトリの接合を使用することを検討してください。
 
@@ -101,7 +101,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 - **PowerShell コマンドを実行します。** 次のコマンドを実行します。
 
-    ```ps
+    ```PowerShell
     Stop-AIPScan 
     ```
 
@@ -128,12 +128,12 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 スキャナーバージョン [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) およびそれ以降では、スキャナーが自動および推奨のラベル設定の新しい設定または変更された設定を検出するたびに、すべてのファイルがスキャンされます。 スキャナーは、4時間ごとにポリシーを自動的に更新します。
 
-テスト中など、ポリシーをすぐに更新するには、 **%LocalAppData%\Microsoft\MSIP\mip \<processname> ** ディレクトリの内容を手動で削除し、Azure Information Protection サービスを再起動します。
+テスト中など、ポリシーをすぐに更新するには、 **%LocalAppData%\Microsoft\MSIP\mip \<processname>** ディレクトリの内容を手動で削除し、Azure Information Protection サービスを再起動します。
 
 ラベルの保護設定を変更した場合は、Azure Information Protection サービスを再起動する前に、更新された保護設定を保存してから15分が経過するのを待ちます。
 
 > [!IMPORTANT]
-> バージョン [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) 以降にアップグレードした場合、AIP によって更新された設定の完全な再スキャンがスキップされ、パフォーマンスが一貫して保たれます。 アップグレードした場合は、必要に応じて [手動で完全な再スキャンを実行](#rescanning-files) してください。 
+> バージョン [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) 以降にアップグレードした場合、AIP によって更新された設定の完全な再スキャンがスキップされ、パフォーマンスが一貫して保たれます。 アップグレードした場合は、必要に応じて [手動で完全な再スキャンを実行](#rescanning-files) してください。 
 >
 > たとえば、 **ポリシー実施** 設定を [ **強制** ] から **[強制]** に変更した場合は、フルスキャンを実行して、コンテンツ全体にラベルを適用してください。
 > 
@@ -144,14 +144,14 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 - **動的ポートの数**。 ファイルをホストしているオペレーティングシステムの動的ポートの数を増やすことが必要になる場合があります。 SharePoint 用にサーバーのセキュリティが強化されている場合、スキャナーが許可されているネットワーク接続の数を超えて、そのために停止する原因の 1 つになる可能性があります。
 
-    これがスキャナーの停止の原因であるかどうかを確認するには、次のエラーメッセージが、そのスキャナーの** % *localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog**ファイルに記録されているかどうかを確認してください。
+    これがスキャナーの停止の原因であるかどうかを確認するには、次のエラーメッセージが、そのスキャナーの **% *localappdata*% \ Microsoft\MSIP\Logs\MSIPScanner.iplog** ファイルに記録されているかどうかを確認してください。
 
     **リモートサーバー---に接続できませんでした。ソケットの > 例外: 各ソケットアドレス (プロトコル/ネットワークアドレス/ポート) の使用は、通常、許可されている IP: ポートの1つのみです**
 
     > [!NOTE]
     > 複数のログがある場合、このファイルは圧縮されます。
 
-    現在のポート範囲を表示し、範囲を拡大する方法について詳しくは、「[ネットワーク パフォーマンスを向上させるために変更可能な設定](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」をご覧ください。
+    現在のポート範囲を表示し、範囲を拡大する方法について詳しくは、「[ネットワーク パフォーマンスを向上させるために変更可能な設定](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance)」をご覧ください。
 
 - **リストビューのしきい値。** 大規模な SharePoint ファームの場合は、リストビューのしきい値を大きくする必要があります。 既定では、リストビューのしきい値は5000に設定されています。
 
@@ -161,7 +161,7 @@ Azure portal には、最後のスキャンに関する情報のみが表示さ�
 
 Azure Information Scanner で問題が発生している場合は、次の PowerShell コマンドを使用してデプロイが正常であるかどうかを確認します。
 
-```ps
+```PowerShell
 Start-AIPScannerDiagnostics
 ```
 

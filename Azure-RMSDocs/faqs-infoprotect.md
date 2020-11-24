@@ -12,19 +12,19 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc4c86c020427066d519fec4ae6363f131ce64c2
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: d22a79a3968e164e2bec8c3852c4ab0c181e5ef8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810263"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95569990"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Azure Information Protection の分類とラベル付けに関してよく寄せられる質問
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection に関して、特に分類とラベル付けに関して質問はございますか。  ここで回答を探してみてください。 
 
@@ -38,21 +38,21 @@ Azure Information Protection に関して、特に分類とラベル付けに関
 
 現在の機能セットと機能がビジネス要件を満たしている場合は、統一されたラベル付けクライアントでテストすることをお勧めします。 それ以外の場合、または [統合ラベルストアにまだ移行](configure-policy-migrate-labels.md)していない Azure portal でラベルを構成した場合は、クラシッククライアントを使用します。 機能の比較表など、詳細については「[使用する Azure Information Protection クライアントを選択する](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)」をご覧ください。
 
-Azure Information Protection クライアントは、Windows でのみサポートされています。 IOS、Android、macOS、および web でドキュメントや電子メールを分類して保護するには、 [組み込みのラベル付けをサポートする Office アプリ](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)を使用します。 
+Azure Information Protection クライアントは、Windows でのみサポートされています。 IOS、Android、macOS、および web でドキュメントや電子メールを分類して保護するには、 [組み込みのラベル付けをサポートする Office アプリ](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)を使用します。 
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Office アプリの秘密度ラベルの使用に関する情報はどこで入手できますか。
 
 次のドキュメントリソースを参照してください。
 
-- [秘密度ラベルについて](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+- [秘密度ラベルについて](/microsoft-365/compliance/sensitivity-labels) 
 
-- [Office アプリ内での機密ラベルの使用](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Office アプリ内での機密ラベルの使用](/microsoft-365/compliance/sensitivity-labels-office-apps)
 
-- [SharePoint と OneDrive で Office ファイルの機密ラベルを有効にする](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
+- [SharePoint と OneDrive で Office ファイルの機密ラベルを有効にする](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
 
 - [Office 内のドキュメントと電子メールに機密ラベルを適用する](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
 
-機密ラベルをサポートするその他のシナリオについては、「 [秘密度ラベルの一般的なシナリオ](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels)」を参照してください。
+機密ラベルをサポートするその他のシナリオについては、「 [秘密度ラベルの一般的なシナリオ](/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels)」を参照してください。
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>1 つのファイルに複数の分類を適用することはできますか?
 

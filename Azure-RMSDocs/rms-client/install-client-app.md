@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 26e9f85a4e5d171232dc8d30f4502557808ac538
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 49d684dc4eb0852d4545abc86f725107732ad6e9
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953186"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95569799"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>ユーザー ガイド: Azure Information Protection クライアントをダウンロードしてインストールする
 
@@ -40,7 +40,7 @@ Azure Information Protection classic クライアントは、2021年3月に非�
 
 AIP クラシック クライアントをデプロイするには、サポート チケットを作成してダウンロード アクセスを取得します。
 
-1. **AzInfoProtection.exe**ファイルを実行して、インストールを開始します。 続行を確認するメッセージが表示されたら、[**はい**] をクリックします。    
+1. **AzInfoProtection.exe** ファイルを実行して、インストールを開始します。 続行を確認するメッセージが表示されたら、[**はい**] をクリックします。    
 
 1. **Azure Information Protection クライアントのインストール** ページで、     
     - クラウドに接続できない場合に、デモンストレーション用にローカル ポリシーを使って Azure Information Protection のクライアント側を表示し、操作するには、デモ ポリシーをインストールするオプションを選択します。 クライアントの Azure Information Protection サービスへの接続時に、このデモ ポリシーは、組織の Azure Information Protection ポリシーに置き換えられます。    

@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d02f0e3e848e4a4743f7e61344f12108cca8c714
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: d7cd108b74d42a9d7bb7aab0480328b642697288
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136920"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95569942"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>個人用 RMS と Azure Information Protection
 
@@ -47,7 +47,7 @@ ms.locfileid: "86136920"
 
     Microsoft では、ユーザーの電子メール アドレスを使用して、組織が既に [Azure Information Protection Premium のサブスクリプション](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)、または [Azure Information Protection を使用したデータ保護を含む Office 365 サブスクリプション](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)を利用しているかどうかを確認します。 これらのサブスクリプションのいずれかが見つかったら、個人用 RMS は必要ありません。 すぐにサインインが行われ、個人用 RMS のセルフ サービス サインアップはキャンセルされます。 これらのサブスクリプションのいずれも見つからない場合は、次の手順に進みます。
 
-4. 入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 このメールの差出人は Office 365 チーム (support@email.microsoftonline.com) で、件名は "**Finish signing up for Microsoft Azure Information Protection**" (Microsoft Azure Information Protection のサインアップ完了) です。
+4. 入力したアドレスに確認の電子メール メッセージが届くまで待ちます。 これは Microsoft 365 チーム () からのものであり、 support@email.microsoftonline.com サブジェクトが **Microsoft Azure Information Protection の** サインアップを完了しています。
 
 5. このメールが届いたら、[**はい、私です**] をクリックすると電子メール アドレスが確認されたことになり、サインアップ プロセスが完了します。
 
@@ -61,6 +61,6 @@ ms.locfileid: "86136920"
 > このアカウントを使用してファイルを保護することもできるようになりましたが、組織が Azure Information Protection の[試用版または有料サブスクリプション](https://azure.microsoft.com/pricing/details/information-protection/)を取得するまでは実行しないでください。 この無料サブスクリプションを使用してファイルや電子メールを保護した後で、組織がアカウントを制御した場合、前に保護したコンテンツにアクセスできなくなる可能性があります。
 
 
-## <a name="next-steps"></a>次の手順
-個人用 RMS は、Azure Active Directory でサポートされているセルフサービスサインアップ機能を使用する例です。 この機能の動作の詳細については、Azure Active Directory のドキュメントの「 [Azure Active Directory のセルフサービスサインアップとは](/azure/active-directory/users-groups-roles/directory-self-service-signup)」を参照してください。
+## <a name="next-steps"></a>次のステップ
+個人用 RMS は、Azure Active Directory でサポートされているセルフサービスサインアップ機能を使用する例です。 この機能の動作の詳細については、Azure Active Directory のドキュメントの「 [Azure Active Directory のサインアップ Self-Service](/azure/active-directory/users-groups-roles/directory-self-service-signup) について」を参照してください。
 

@@ -14,23 +14,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 332054ba4423ff26cf69023cc1ee6723076b253e
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: cfdee38bc12393f130abcbfc5d69b1fbd65f5ecd
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564303"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95570207"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>方法: 明示的な所有者権限の追加
 
-アプリケーションでは、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。
+アプリケーションでは、[IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch) を使って最初からライセンスを作成するときに、"所有者" 権限を明示的に追加する必要があります。
 
 ## <a name="prerequisites"></a>前提条件
 
-アプリケーションで [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使ってライセンス ハンドルを作成するときは、所有者に完全な権限 (アクセス許可) も明示的に付与する必要があります。
+アプリケーションで [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch) を使ってライセンス ハンドルを作成するときは、所有者に完全な権限 (アクセス許可) も明示的に付与する必要があります。
 
 > [!NOTE]
-> [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) と **IPC\_LI\_OWNER** プロパティを使ってユーザーを "所有者" として設定しても、所有者に完全なアクセス許可は付与されません。
+> [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty) と **IPC\_LI\_OWNER** プロパティを使ってユーザーを "所有者" として設定しても、所有者に完全なアクセス許可は付与されません。
 
 次のコード例には、特定の権限を作成して特定のライセンスに割り当てるための手順のみが示されています。
 
@@ -38,12 +38,12 @@ ms.locfileid: "88564303"
  
 ## <a name="step-1-example-scenario"></a>手順 1: シナリオ例
 
-この例では、[IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) を使って作成したライセンスに必要な権限を追加しています。 この例は、権限の作成のほか、権限リストを使用したライセンスへの権限の割り当てを示しています。
+この例では、[IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch) を使って作成したライセンスに必要な権限を追加しています。 この例は、権限の作成のほか、権限リストを使用したライセンスへの権限の割り当てを示しています。
 
 次の 2 つの権限が次のユーザーに追加されます。
 
-- *読み取り*アクセス許可が joe@contoso.com に割り当てられます。
-- Mary に割り当てられた*完全な*権限\_kay@contoso.com
+- *読み取り* アクセス許可が joe@contoso.com に割り当てられます。
+- Mary に割り当てられた *完全な* 権限\_kay@contoso.com
 
 ```cpp
 // Create User Rights structure
@@ -110,5 +110,5 @@ if(FAILED(hr))
 ## <a name="related-topics"></a>関連トピック
 
 - [開発者向けのメモ](developer-notes.md)
-- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
-- [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
+- [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty)
+- [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch)

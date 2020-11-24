@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2020
 ms.author: tommos
-ms.openlocfilehash: 967301e8356b8d0380c9c8b66bc2073de4dd8481
-ms.sourcegitcommit: 3ebc57dde712f44286497b9876af1042066f5d01
+ms.openlocfilehash: fdbcf9d618612021a971af34380b65dc062c2802
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093184"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95570143"
 ---
 # <a name="microsoft-information-protection-sdk---proxy-support"></a>Microsoft Information Protection SDK-プロキシのサポート
 
@@ -42,7 +42,7 @@ Windows で実行されている MIP SDK アプリケーションは、WinHTTP �
 * 手動による静的プロキシ構成:
   * netsh コマンドを使用して構成された WinHTTP
 
-WinHTTP の構成の詳細については、 [winhttp のドキュメント](https://docs.microsoft.com/windows/win32/winhttp/winhttp-start-page)を参照してください。
+WinHTTP の構成の詳細については、 [winhttp のドキュメント](/windows/win32/winhttp/winhttp-start-page)を参照してください。
 
 ## <a name="proxies-on-other-platforms"></a>他のプラットフォームのプロキシ
 
@@ -50,7 +50,7 @@ MIP SDK は、Windows 以外のプラットフォーム上の任意の型の完�
 
 ## <a name="custom-http-delegate"></a>カスタム HTTP デリゲート
 
-Microsoft Information Protection SDK は、SDK の既定の HTTP スタックをオーバーライドできるカスタム HTTP デリゲートの実装をサポートしています。 機能が存在しない場合、または特定の HTTP 実装が必要な場合は、を継承する新しいクラスを追加することによって、このデリゲートを実装でき [`mip::HttpDelegate`](https://docs.microsoft.com/information-protection/develop/reference/class_mip_httpdelegate) ます。
+Microsoft Information Protection SDK は、SDK の既定の HTTP スタックをオーバーライドできるカスタム HTTP デリゲートの実装をサポートしています。 機能が存在しない場合、または特定の HTTP 実装が必要な場合は、を継承する新しいクラスを追加することによって、このデリゲートを実装でき [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) ます。
 
 この `mip::HttpDelegate` 派生クラスは、次の方法で設定され `mip::FileProfile::Settings` ます。
 
@@ -67,11 +67,11 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 ## <a name="other-workarounds"></a>その他の回避策
 
-カスタム HTTP デリゲートがオプションでない場合は、プロキシをバイパスし、MIP ラベルと保護エンドポイントの直接ネットワーク接続を許可し、Azure Active Directory する必要があります。 [監査ログ](https://docs.microsoft.com/azure/information-protection/reports-aip)が必要な場合は、監査ログのエンドポイントも必要です。
+カスタム HTTP デリゲートがオプションでない場合は、プロキシをバイパスし、MIP ラベルと保護エンドポイントの直接ネットワーク接続を許可し、Azure Active Directory する必要があります。 [監査ログ](/azure/information-protection/reports-aip)が必要な場合は、監査ログのエンドポイントも必要です。
 
 | エンドポイント           | hostname                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 保護サービス | https://api.aadrm.com                                                                                                                                                   |
 | ポリシー             | https:// \* protection.outlook.com                                                                                                                                       |
 | 監査ログ      | https:// \* events.data.microsoft.com、https:// \* (iOS のみ)                                                                                          |
-| 認証     | [Azure AD のドキュメントを確認する](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+| 認証     | [Azure AD のドキュメントを確認する](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |

@@ -12,40 +12,40 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c88186c163d1f712c657d9270a7a738289fac6b4
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298242"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95569983"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Azure Information Protection のデータ保護に関してよく寄せられる質問
 
->*適用対象: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、 [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*適用対象:[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)、[Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と**ラベル管理**は、**2021 年 3 月 31 日**で**非推奨**になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
+> 統一された効率的なカスタマー エクスペリエンスを提供するため、Azure portal の **Azure Information Protection クライアント (クラシック)** と **ラベル管理** は、**2021 年 3 月 31 日** で **非推奨** になります。 このタイムフレームにより、現在のすべての Azure Information Protection のお客様は、Microsoft Information Protection 統合ラベル付けプラットフォームを使用する統一されたラベル付けソリューションに移行できます。 詳細については、公式な[非推奨の通知](https://aka.ms/aipclassicsunset)をご覧ください。
 
 Azure Information Protection のデータ保護サービス、Azure Rights Management に関して質問がありますか。 ここで回答を探してみてください。
 
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>ファイルを Azure Rights Management で保護するには、クラウドに置いておく必要があるのでしょうか。
 よくある誤解ですが、そのようなことはありません。 Azure Rights Management サービス (と Microsoft) では、情報保護の一環としてユーザーのデータを閲覧したり、保存したりすることはありません。 ユーザーが保護した情報は、ユーザーが Azure に明示的に保存したり、Azure に情報を保存する別のクラウド サービスを使用しない限り、Azure に送信されたり保存されたりすることはありません。
 
-詳細については、「Azure RMS のしくみ」を参照してください[。内部](./how-does-it-work.md)設置型で格納され、オンプレミスに格納されている secret cola 式が Azure Rights Management サービスによって保護されていても、オンプレミスのままになっていることを理解するためのものです。
+詳細については、「Azure RMS のしくみ」を参照してください [。内部](./how-does-it-work.md) 設置型で格納され、オンプレミスに格納されている secret cola 式が Azure Rights Management サービスによって保護されていても、オンプレミスのままになっていることを理解するためのものです。
 
 ## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>他の Microsoft クラウドサービスでの Azure Rights Management の暗号化と暗号化の違いは何ですか。
 
-Microsoft はさまざまなシナリオでのデータ保護に合わせて多数の暗号化技術を提供していますが、多くの場合はデータ保護のシナリオが相互補完的です。 たとえば、Office 365 の暗号化は Office 365 に保存される静止状態のデータが対象ですが、Azure Information Protection の Azure Rights Management サービスは独立してユーザーのデータを暗号化するものであり、データは格納されている場所や伝送方法にかかわらず保護されます。
+Microsoft はさまざまなシナリオでのデータ保護に合わせて多数の暗号化技術を提供していますが、多くの場合はデータ保護のシナリオが相互補完的です。 たとえば、Microsoft 365 に格納されているデータの保存データの暗号化は、Microsoft 365 によって提供されますが、Azure Information Protection の Azure Rights Management サービスはデータを独立して暗号化し、そのデータがどこに置かれているかまたは送信方法に関係なく保護されるようにします。
 
 これらの暗号化技術は互いに補完するものであり、使用するには各技術を個別に有効にして構成する必要があります。 このときに、暗号化のキーを独自に用意するという選択が可能な場合があり、このようなシナリオは "BYOK" (Bring Your Own Key) とも呼ばれます。 暗号化技術の 1 つについて BYOK を有効にしても、それ以外の技術に影響することはありません。 たとえば、BYOK を Azure Information Protection に使用し、それ以外の暗号化技術には使用しないことも、その逆も可能です。 使用されるキーが暗号化技術ごとに異なるか同一であるかは、管理者が各サービスの暗号化オプションをどのように構成するかによって決まります。
 
 ## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>BYOK と HYOK の違いは何ですか。どのような場合に使用すればよいでしょうか。
 
-Azure Information Protection において**独自キーを持ち込む** (BYOK) のは、Azure Rights Management 保護の独自キーをオンプレミスで作成する場合です。 そのキーを Azure Key Vault のハードウェア セキュリティ モジュール (HSM) に転送し、そこでそのキーの所有と管理を続行します。 このようにしない場合、Azure Rights Management 保護では Azure 内で自動的に作成、管理されるキーが使用されます。 この既定の構成は、"顧客管理" (BYOK オプション) ではなく "マイクロソフト管理" と呼ばれます。
+Azure Information Protection において **独自キーを持ち込む** (BYOK) のは、Azure Rights Management 保護の独自キーをオンプレミスで作成する場合です。 そのキーを Azure Key Vault のハードウェア セキュリティ モジュール (HSM) に転送し、そこでそのキーの所有と管理を続行します。 このようにしない場合、Azure Rights Management 保護では Azure 内で自動的に作成、管理されるキーが使用されます。 この既定の構成は、"顧客管理" (BYOK オプション) ではなく "マイクロソフト管理" と呼ばれます。
 
 BYOK の詳細と、組織でこのキー トポロジを選択するかどうかについては、「[Azure Information Protection テナント キーを計画して実装する](plan-implement-tenant-key.md)」を参照してください。
 
-Azure Information Protection において**独自キーを保持する** (HYOK) 機能は、クラウドに格納されているキーで保護することができないドキュメントや電子メールのサブセットを持つような、少数の組織のためのものです。 こうした組織では、BYOK を使用してキーを作成し管理する場合でも、この制限が適用されます。 この制限は多くの場合、規制やコンプライアンス上の理由によるもので、HYOK 構成は "最高機密" 情報のみに適用されます。つまり、組織外には決して共有されず、内部ネットワークのみで利用され、モバイル デバイスからアクセスする必要のない情報です。
+Azure Information Protection において **独自キーを保持する** (HYOK) 機能は、クラウドに格納されているキーで保護することができないドキュメントや電子メールのサブセットを持つような、少数の組織のためのものです。 こうした組織では、BYOK を使用してキーを作成し管理する場合でも、この制限が適用されます。 この制限は多くの場合、規制やコンプライアンス上の理由によるもので、HYOK 構成は "最高機密" 情報のみに適用されます。つまり、組織外には決して共有されず、内部ネットワークのみで利用され、モバイル デバイスからアクセスする必要のない情報です。
 
 これらの例外 (通常は、保護する必要のあるすべてのコンテンツの 10% 未満) については、オンプレミスのソリューションである Active Directory Rights Management サービスを使用して、オンプレミスのキーを作成することができます。 このソリューションでは、コンピューターはクラウドから Azure Information Protection ポリシーを取得しますが、この識別されたコンテンツはオンプレミスのキーを使用して保護することができます。
 
@@ -53,7 +53,7 @@ HYOK の詳細、制限についての正しい理解、およびどのような
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>現在、Exchange Online で BYOK を使用できますか。
 
-はい。「[Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Azure Information Protection 上に構築される新しい Office 365 Message Encryption 機能の設定)](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)」の手順に従って、Exchange Online で BYOK を使用することができるようになりました。 これらの手順に従うことで、新しい Office 365 Message Encryption と、Azure Information Protection での BYOK の使用をサポートする Exchange Online の新しい機能を使用できるようになります。
+はい。 [Azure Information Protection の上に構築された新しい Microsoft 365 メッセージの暗号化機能のセットアップ](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)に関するページの手順に従って、Exchange ONLINE で byok を使用できるようになりました。 これらの手順に従うことで、新しい Office 365 Message Encryption と、Azure Information Protection での BYOK の使用をサポートする Exchange Online の新しい機能を使用できるようになります。
 
 この変更の詳細については、[Office 365 Message Encryption と新しい機能](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)に関するブログのお知らせを参照してください。
 
@@ -86,10 +86,10 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 ヒント: ドキュメントがテンプレートで保護されているのか、カスタム アクセス許可を使用して保護されているのかを確認するには、[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell コマンドレットを使用します。 カスタム アクセス許可の場合、**[制限されたアクセス]** のテンプレートの説明と、[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) を実行した場合には表示されない一意のテンプレート ID が常に表示されます。
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>一部のユーザーは Exchange Online に登録され、他のユーザーは Exchange Server に登録されている、Exchange のハイブリッド デプロイ構成は、Azure RMS でサポートされていますか。
-はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ](activate-service.md)にし、[IRM for Exchange Online を有効](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)にします。次に、[RMS コネクタをデプロイ](deploy-rms-connector.md)して、Exchange Server 用に構成します。
+はい、サポートされています。また、2 つの Exchange デプロイメント間でシームレスに電子メールと添付ファイルを保護し、保護された電子メールと添付ファイルを使用できることがメリットです。 この構成の場合、[Azure RMS をアクティブ](activate-service.md)にし、[IRM for Exchange Online を有効](/microsoft-365/enterprise/activate-rms-in-microsoft-365)にします。次に、[RMS コネクタをデプロイ](deploy-rms-connector.md)して、Exchange Server 用に構成します。
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>運用環境にこの保護を利用すると、会社の環境がこのソリューションに固定されたり、Azure RMS で保護したコンテンツにアクセスできなくなる危険性が生じたりしますか。
-いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、[Azure Rights Management の使用停止と非アクティブ化](decommission-deactivate.md)に関するページを参照してください。
+いいえ。データを常に制御することができます。また、たとえ Azure Rights Management サービスの使用を停止したとしても、継続してデータにアクセスすることができます。 詳細については、「 [Azure Rights Management の使用停止と非アクティブ](decommission-deactivate.md)化」を参照してください。
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Azure RMS を使用してコンテンツを保護するユーザーを制御できますか。
 はい。Azure Rights Management サービスには、このシナリオのためのユーザー オンボーディング コントロールがあります。 詳細については、「 [Azure Information Protection からの保護サービスのアクティブ化](activate-service.md)」の記事の「[段階的な展開のオンボードコントロールの構成](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment)」セクションを参照してください。
@@ -101,7 +101,7 @@ Azure Portal のテンプレートの詳細については、「[Azure Informati
 
 ## <a name="when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated"></a>保護されたドキュメントを社外のユーザーと共有する場合、そのユーザーはどのようにして認証されますか。
 
-既定では、Azure Rights Management サービスは、ユーザー認証に Azure Active Directory アカウントと関連付けられた電子メール アドレスを使用します。これにより、管理者にとって企業間のコラボレーションがシームレスになります。 他の組織で Azure サービスを使用する場合は、アカウントがオンプレミスで作成、管理されてから Azure に同期される場合でも、ユーザーは既に Azure Active Directory にアカウントを持っています。 組織が Office 365 を所有している場合、このサービスも内部的にユーザー アカウント用に Azure Active Directory を使用します。 ユーザーの組織が Azure に管理アカウントを持っていない場合、ユーザーは個人用[RMS](./rms-for-individuals.md)にサインアップできます。これにより、管理されていない azure テナントとそのユーザーのアカウントを持つ組織のディレクトリが作成され、そのユーザー (およびその後のユーザー) が azure Rights Management サービスに対して認証できるようになります。
+既定では、Azure Rights Management サービスは、ユーザー認証に Azure Active Directory アカウントと関連付けられた電子メール アドレスを使用します。これにより、管理者にとって企業間のコラボレーションがシームレスになります。 他の組織で Azure サービスを使用する場合は、アカウントがオンプレミスで作成、管理されてから Azure に同期される場合でも、ユーザーは既に Azure Active Directory にアカウントを持っています。 組織に Microsoft 365 がある場合、このサービスでは、ユーザーアカウントに Azure Active Directory も使用します。 ユーザーの組織が Azure に管理アカウントを持っていない場合、ユーザーは個人用 [RMS](./rms-for-individuals.md)にサインアップできます。これにより、管理されていない azure テナントとそのユーザーのアカウントを持つ組織のディレクトリが作成され、そのユーザー (およびその後のユーザー) が azure Rights Management サービスに対して認証できるようになります。
 
 このようなアカウントの認証方法は、他の組織の管理者が Azure Active Directory アカウントを構成している方法によって異なります。 たとえば、これらのアカウント用に作成したパスワード、フェデレーション、Active Directory Domain Services で作成した後 Azure Active Directory に同期したパスワードを使用できます。
 
@@ -121,7 +121,7 @@ Azure Information Protection ラベルがある場合は、最初にカスタム
 
 1. [AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)コマンドレットを使用して変数を作成することにより、権限定義オブジェクトで外部電子メールアドレスとその権限を指定します。
 
-2. RightsDefinition パラメーターにこの変数を指定します。これには、 [Set AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)コマンドレットを使用します。
+2. RightsDefinition パラメーターにこの変数を指定します。これには、 [Set AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) コマンドレットを使用します。
 
     ユーザーを既存のテンプレートに追加する場合、新しいユーザーだけでなく、テンプレート内の既存のユーザーにも、権限定義オブジェクトを定義する必要があります。 このシナリオでは、コマンドレットの「[例](/powershell/module/aipservice/set-aipservicetemplateproperty#examples)」セクションにある「**Example 3: Add new users and rights to a custom template (例 3: カスタム テンプレートへの新しいユーザーと権利の追加)**」が役に立ちます。
 
@@ -130,7 +130,7 @@ Azure Information Protection ラベルがある場合は、最初にカスタム
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>保護されたメールを Gmail または Hotmail のアカウントに送信するにはどうすればよいですか。
 
-Exchange Online と Azure Rights Management サービスを使用する場合は、保護メッセージとしてユーザーに電子メールを送信するだけです。 たとえば、Outlook on the Web のコマンド バーにある新しい **[保護]** ボタンを選択するか、Outlook の **[転送不可] **ボタンまたはメニュー オプションを選択できます。 または、Azure Information Protection ラベルを選択して、自動的に転送不可を適用し、電子メールを分類することができます。
+Exchange Online と Azure Rights Management サービスを使用する場合は、保護メッセージとしてユーザーに電子メールを送信するだけです。 たとえば、Outlook on the Web のコマンド バーにある新しい **[保護]** ボタンを選択するか、Outlook の **[転送不可]** ボタンまたはメニュー オプションを選択できます。 または、Azure Information Protection ラベルを選択して、自動的に転送不可を適用し、電子メールを分類することができます。
 
 受信者には Gmail、Yahoo、または Microsoft アカウントにサインインするためのオプションが表示され、保護された電子メールを読むことができます。 また、ブラウザーで電子メールを読むためのワンタイム パスコードのオプションを選択することもできます。
 
@@ -148,13 +148,13 @@ Azure Rights Management でネイティブでサポートされているファ�
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>ドキュメントを保護および追跡するように Mac コンピューターを構成するにはどうすればよいですか。
 
-まず、https://admin.microsoft.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 手順については、「[Office 365 または Office 2019 を PC または Mac にダウンロードしてインストールまたは再インストールします](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
+まず、https://admin.microsoft.com のソフトウェア インストール リンクから Office for Mac がインストールされていることを確認します。 詳しい手順について [は、「PC または Mac で Microsoft 365 または Office 2019 をダウンロードしてインストールまたは再インストールする](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658)」を参照してください。
 
-Office 365 の職場または学校アカウントを使用して、Outlook を開き、プロファイルを作成します。 次に新しいメッセージを作成し、次の操作を行って、Azure Rights Management サービスを使用してドキュメントや電子メールを保護できるように Office を構成します。
+Outlook を開き、Microsoft 365 職場または学校アカウントを使用してプロファイルを作成します。 次に新しいメッセージを作成し、次の操作を行って、Azure Rights Management サービスを使用してドキュメントや電子メールを保護できるように Office を構成します。
 
 1. 新規のメッセージで、**[オプション]** タブの **[アクセス許可]** をクリックし、**[資格情報の確認]** をクリックします。
 
-2. 入力要求が表示されたら、Office 365 の職場または学校アカウントの詳細をもう一度指定し、**[サインイン]** を選択します。
+2. メッセージが表示されたら、Microsoft 365 職場または学校アカウントの詳細をもう一度指定し、[ **サインイン**] を選択します。
 
     これによって Azure Rights Management テンプレートがダウンロードされ、**[資格情報の確認]** が、**[無制限]**、**[転送不可]**、およびテナントに公開されたすべての Azure Rights Management テンプレートを含むオプションで置換されます。 この新しいメッセージは、ここで取り消すことができます。
 
@@ -171,13 +171,13 @@ Office 365 の職場または学校アカウントを使用して、Outlook を�
 まだサポートされていない機能に関する情報については、[Enterprise Mobility and Security チーム ブログ](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services)のお知らせに注意していてください。
 
 ## <a name="how-do-i-configure-one-drive-in-sharepoint-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>SharePoint で1つのドライブを構成して、ユーザーが社内および社外のユーザーとファイルを安全に共有できるようにするには、操作方法ますか。
-既定では、Office 365 管理者として構成されていません。ユーザーが実行します。
+既定では、Microsoft 365 管理者として構成されていません。ユーザーが実行します。
 
-SharePoint サイト管理者が所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive は、ユーザーが自分の OneDrive ライブラリに対して IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、「 [Office 365: クライアントの構成とオンラインサービス](configure-office365.md)」の「 [SharePoint の Microsoft 365 および OneDrive: IRM 構成](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration)」セクションを参照してください。
+SharePoint サイト管理者が所有する SharePoint ライブラリの IRM を有効にして構成するのと同じように、OneDrive は、ユーザーが自分の OneDrive ライブラリに対して IRM を有効にして構成するように設計されています。 ただし、PowerShell を使用して、ユーザーに代わってこの処理を行うことができます。 手順については、「 [Microsoft 365 の SharePoint と OneDrive: IRM の構成](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration)」を参照してください。
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>正常にデプロイするためのヒントやコツはありますか。
 
-これまでに多数のデプロイをサポートし、顧客、パートナー、コンサルタント、サポート エンジニアから話を聞いてきた経験から言える一番のヒントは、**シンプルなポリシーを設計してデプロイすること**です。
+これまでに多数のデプロイをサポートし、顧客、パートナー、コンサルタント、サポート エンジニアから話を聞いてきた経験から言える一番のヒントは、**シンプルなポリシーを設計してデプロイすること** です。
 
 Azure Information Protection では、他のユーザーと情報を安全に共有できるため、データ保護の範囲を詳細に指定することができます。 使用権限の制限の構成は慎重に行ってください。 多くの組織にとって、業務上最も重要な利点は、組織内のユーザーのアクセス許可を制限して、データ漏えいを防止できることです。 もちろん、印刷や編集などを防ぐ必要がある場合に比べて、はるかに詳細な情報を得ることができます。ただし、高レベルのセキュリティが本当に必要なドキュメントについては、例外としてより細かい制限を設け、1日に制限の厳しい使用権限を実装するのではなく、より段階的なアプローチを計画することをお勧めします。
 
@@ -204,4 +204,3 @@ Windows プラットフォーム (Windows 7、Windows 8.1、Windows 10、Windows
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>ユーザーが [転送不可] を使用して電子メールを保護するのと、転送権限のないテンプレートを使用するのとでは、どのような違いがありますか。
 
 名前や外観に反して、**[転送不可]** は転送権限の反対ではなく、テンプレートでもありません。 実際には、電子メールの転送を制限するだけでなく、メールボックス以外のメールのコピー、印刷、保存を制限する権限のセットです。 権限は、選択された受信者に基づき、ユーザーに動的に適用されます。管理者によって静的に割り当てられるものではありません。 詳細については、「 [Azure Information Protection の使用権限を構成する](configure-usage-rights.md)」の「[電子メールの [転送不可] オプション](configure-usage-rights.md#do-not-forward-option-for-emails)」セクションを参照してください。
-
